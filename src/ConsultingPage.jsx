@@ -1,70 +1,110 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// ============ TUTAGORA CONSULTING ============
-// Premium consulting page — Marketing, Branding & Software for Schools
+// ============ TUTAGORA CONSULTING — v3 Editorial ============
 
 const PARTNERS = [
-  { name: 'Whitestar Group of Schools', services: 'Marketing, Software, HR' },
-  { name: 'Crown of Gold School', services: 'Marketing, Software' },
-  { name: 'Utawala Springs School', services: 'Marketing, Software' },
-  { name: 'Ongata Crown School', services: 'Marketing, Software' },
+  { name: 'Whitestar Group of Schools', tag: 'Marketing + Software + HR' },
+  { name: 'Crown of Gold School', tag: 'Marketing + Software' },
+  { name: 'Utawala Springs School', tag: 'Marketing + Software' },
+  { name: 'Ongata Crown School', tag: 'Marketing + Software' },
 ];
 
-// Scroll-reveal hook
-const useReveal = () => {
+// Scroll reveal
+const useReveal = (threshold = 0.12) => {
   const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
+  const [vis, setVis] = useState(false);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold: 0.15 });
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVis(true); obs.disconnect(); } }, { threshold });
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
-  return [ref, visible];
+  return [ref, vis];
 };
 
-const Reveal = ({ children, delay = 0, className = '' }) => {
-  const [ref, visible] = useReveal();
+const R = ({ children, delay = 0, className = '', as: Tag = 'div' }) => {
+  const [ref, vis] = useReveal();
   return (
-    <div ref={ref} className={className} style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(32px)', transition: `opacity 0.7s ease ${delay}s, transform 0.7s ease ${delay}s` }}>
+    <Tag ref={ref} className={className} style={{ opacity: vis ? 1 : 0, transform: vis ? 'translateY(0)' : 'translateY(40px)', transition: `opacity 0.8s cubic-bezier(.16,1,.3,1) ${delay}s, transform 0.8s cubic-bezier(.16,1,.3,1) ${delay}s` }}>
       {children}
-    </div>
+    </Tag>
   );
+};
+
+// Parallax on mouse for hero
+const useParallax = () => {
+  const [pos, setPos] = useState({ x: 0, y: 0 });
+  useEffect(() => {
+    const h = (e) => setPos({ x: (e.clientX / window.innerWidth - 0.5) * 20, y: (e.clientY / window.innerHeight - 0.5) * 20 });
+    window.addEventListener('mousemove', h);
+    return () => window.removeEventListener('mousemove', h);
+  }, []);
+  return pos;
+};
+
+// Counter animation
+const Counter = ({ end, suffix = '', duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const [ref, vis] = useReveal();
+  useEffect(() => {
+    if (!vis) return;
+    let start = 0;
+    const step = end / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= end) { setCount(end); clearInterval(timer); }
+      else setCount(Math.floor(start));
+    }, 16);
+    return () => clearInterval(timer);
+  }, [vis, end, duration]);
+  return <span ref={ref}>{count}{suffix}</span>;
 };
 
 // Contact form
 const ContactForm = () => {
   const [form, setForm] = useState({ name: '', school: '', email: '', phone: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [focused, setFocused] = useState(null);
   const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); };
 
   if (submitted) {
     return (
-      <div className="text-center py-16">
-        <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-5">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
+      <div className="text-center py-20">
+        <div className="w-20 h-20 rounded-full border-2 border-[#e8734a] flex items-center justify-center mx-auto mb-6">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8734a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
         </div>
-        <h3 className="text-xl font-semibold text-white mb-2">We will be in touch.</h3>
-        <p className="text-white/60">Expect to hear from us within 48 hours.</p>
+        <h3 className="text-2xl font-bold text-white mb-3">We will be in touch.</h3>
+        <p className="text-white/40">Expect to hear from us within 48 hours.</p>
       </div>
     );
   }
 
-  const inputCls = "w-full px-4 py-3 bg-white/10 border border-white/10 rounded-lg text-white placeholder-white/30 focus:outline-none focus:border-white/30 focus:bg-white/15 transition-all";
+  const fields = [
+    { key: 'name', label: 'Your Name', type: 'text', req: true, half: true },
+    { key: 'school', label: 'School / Institution', type: 'text', req: true, half: true },
+    { key: 'email', label: 'Email', type: 'email', req: true, half: true },
+    { key: 'phone', label: 'Phone', type: 'tel', req: false, half: true },
+    { key: 'message', label: 'Tell us about your goals', type: 'textarea', req: false, half: false },
+  ];
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <input type="text" required value={form.name} onChange={e => setForm({...form, name: e.target.value})} className={inputCls} placeholder="Your name" />
-        <input type="text" required value={form.school} onChange={e => setForm({...form, school: e.target.value})} className={inputCls} placeholder="School / Institution" />
+    <form onSubmit={handleSubmit}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {fields.map(f => (
+          <div key={f.key} className={f.half ? '' : 'sm:col-span-2'}>
+            <label className={`block text-xs font-medium uppercase tracking-wider mb-2 transition-colors ${focused === f.key ? 'text-[#e8734a]' : 'text-white/30'}`}>{f.label}</label>
+            {f.type === 'textarea' ? (
+              <textarea rows={3} required={f.req} value={form[f.key]} onChange={e => setForm({...form, [f.key]: e.target.value})} onFocus={() => setFocused(f.key)} onBlur={() => setFocused(null)} className="w-full px-0 py-3 bg-transparent border-b border-white/10 text-white focus:outline-none focus:border-[#e8734a] transition-colors resize-none placeholder-white/20" />
+            ) : (
+              <input type={f.type} required={f.req} value={form[f.key]} onChange={e => setForm({...form, [f.key]: e.target.value})} onFocus={() => setFocused(f.key)} onBlur={() => setFocused(null)} className="w-full px-0 py-3 bg-transparent border-b border-white/10 text-white focus:outline-none focus:border-[#e8734a] transition-colors placeholder-white/20" />
+            )}
+          </div>
+        ))}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <input type="email" required value={form.email} onChange={e => setForm({...form, email: e.target.value})} className={inputCls} placeholder="Email address" />
-        <input type="tel" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} className={inputCls} placeholder="+254 7XX XXX XXX" />
-      </div>
-      <textarea rows={3} value={form.message} onChange={e => setForm({...form, message: e.target.value})} className={inputCls + " resize-none"} placeholder="Tell us about your goals" />
-      <button type="submit" className="w-full py-3.5 bg-[#c0392b] text-white font-semibold rounded-lg hover:bg-[#a93226] transition-all hover:shadow-lg hover:shadow-[#c0392b]/20">
-        Request a Discovery Call
+      <button type="submit" className="mt-8 group flex items-center gap-3 text-[#e8734a] font-bold text-sm uppercase tracking-wider hover:gap-5 transition-all">
+        <span>Request Discovery Call</span>
+        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
       </button>
     </form>
   );
@@ -72,430 +112,442 @@ const ContactForm = () => {
 
 export const ConsultingPage = ({ onBack }) => {
   const [scrolled, setScrolled] = useState(false);
-  const [hovered, setHovered] = useState(null);
+  const [activeService, setActiveService] = useState(0);
+  const parallax = useParallax();
 
   useEffect(() => {
-    const h = () => setScrolled(window.scrollY > 60);
+    const h = () => setScrolled(window.scrollY > 80);
     window.addEventListener('scroll', h);
     return () => window.removeEventListener('scroll', h);
   }, []);
 
+  const services = [
+    {
+      num: '01', title: 'Brand Identity & Design',
+      desc: 'Complete visual identity systems — logo, colour, typography, imagery guidelines, and brand standards. Every touchpoint cohesive and crafted.',
+    },
+    {
+      num: '02', title: 'Website & Digital Presence',
+      desc: 'Fast, mobile-first, SEO-optimised websites that capture enquiries and convert interest into applications.',
+    },
+    {
+      num: '03', title: 'Social Media & Content',
+      desc: 'Consistent content strategy across platforms. Student stories, campus life, career outcomes — content that builds community.',
+    },
+    {
+      num: '04', title: 'Recruitment Campaigns',
+      desc: 'Targeted digital campaigns timed to your intake cycles. Google, Meta, and emerging channels — tracked and optimised.',
+    },
+    {
+      num: '05', title: 'School Management Software',
+      desc: 'Student records, fee management, HR workflows, academic tracking, and reporting dashboards — built for Kenyan schools.',
+    },
+    {
+      num: '06', title: 'Tutagora AI',
+      desc: 'Adaptive learning technology that diagnoses each student, finds their gaps, and builds a personal path forward. Real data on real progress.',
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-white" style={{ fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+    <div className="min-h-screen bg-[#0d1117] text-white overflow-x-hidden">
+      {/* Inject custom fonts */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+        .font-body { font-family: 'Inter', sans-serif; }
+      `}</style>
 
       {/* ── NAV ── */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
-          <button onClick={onBack} className="flex items-center gap-3 group">
-            <div className={`w-9 h-9 rounded-lg flex items-center justify-center font-bold text-sm transition-colors ${scrolled ? 'bg-slate-900 text-white' : 'bg-white/15 text-white backdrop-blur-sm'}`}>T</div>
-            <div className="flex items-center gap-2">
-              <span className={`font-semibold transition-colors ${scrolled ? 'text-slate-900' : 'text-white'}`}>Tutagora</span>
-              <span className={`text-xs font-medium px-2 py-0.5 rounded-full transition-colors ${scrolled ? 'bg-slate-100 text-slate-500' : 'bg-white/10 text-white/70'}`}>Consulting</span>
-            </div>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-[#0d1117]/95 backdrop-blur-md border-b border-white/5' : ''}`}>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 h-16 md:h-20 flex items-center justify-between">
+          <button onClick={onBack} className="flex items-center gap-4 group">
+            <span className="font-display font-bold text-[#e8734a] tracking-wider text-sm">TUTAGORA</span>
           </button>
-          <div className="flex items-center gap-6">
-            <a href="#services" className={`text-sm font-medium hidden md:block transition-colors ${scrolled ? 'text-slate-600 hover:text-slate-900' : 'text-white/70 hover:text-white'}`}>Services</a>
-            <a href="#work" className={`text-sm font-medium hidden md:block transition-colors ${scrolled ? 'text-slate-600 hover:text-slate-900' : 'text-white/70 hover:text-white'}`}>Work</a>
-            <a href="#contact" className={`px-5 py-2.5 text-sm font-semibold rounded-full transition-all ${scrolled ? 'bg-[#c0392b] text-white hover:bg-[#a93226]' : 'bg-white text-slate-900 hover:bg-white/90'}`}>
+          <div className="flex items-center gap-8">
+            <a href="#services" className="text-xs font-medium tracking-wider uppercase text-white/40 hover:text-white transition-colors hidden md:block">Services</a>
+            <a href="#work" className="text-xs font-medium tracking-wider uppercase text-white/40 hover:text-white transition-colors hidden md:block">Work</a>
+            <a href="#ai" className="text-xs font-medium tracking-wider uppercase text-white/40 hover:text-white transition-colors hidden md:block">AI</a>
+            <a href="#contact" className="text-xs font-bold tracking-wider uppercase text-[#e8734a] hover:text-[#f09070] transition-colors flex items-center gap-2">
               Get in Touch
+              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M7 17L17 7M17 7H7M17 7v10" /></svg>
             </a>
           </div>
         </div>
       </nav>
 
-      {/* ── HERO — Full-bleed dark with geometric elements ── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)' }}>
-        {/* Geometric shapes */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-[15%] right-[10%] w-[500px] h-[500px] rounded-full opacity-[0.03]" style={{ border: '1px solid white' }} />
-          <div className="absolute top-[20%] right-[12%] w-[400px] h-[400px] rounded-full opacity-[0.05]" style={{ border: '1px solid white' }} />
-          <div className="absolute bottom-[10%] left-[5%] w-[300px] h-[300px] rounded-full opacity-[0.03]" style={{ border: '1px solid white' }} />
-          {/* Accent line */}
-          <div className="absolute top-0 left-[30%] w-px h-full opacity-[0.05]" style={{ background: 'linear-gradient(to bottom, transparent, white, transparent)' }} />
-          <div className="absolute top-0 left-[70%] w-px h-full opacity-[0.03]" style={{ background: 'linear-gradient(to bottom, transparent, white, transparent)' }} />
-          {/* Red accent glow */}
-          <div className="absolute top-[40%] right-[20%] w-[200px] h-[200px] rounded-full opacity-20 blur-[100px]" style={{ background: '#c0392b' }} />
+      {/* ── HERO ── */}
+      <section className="relative min-h-screen flex items-end pb-16 md:pb-24 overflow-hidden">
+        {/* Background layers */}
+        <div className="absolute inset-0">
+          {/* Base gradient */}
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(160deg, #0d1117 0%, #161b22 40%, #0d1117 100%)' }} />
+          {/* Large chevron shapes — like the proposal */}
+          <div style={{ position: 'absolute', top: '10%', right: '-5%', width: '50vw', height: '80vh', opacity: 0.04, transform: `translate(${parallax.x * 0.5}px, ${parallax.y * 0.5}px)` }}>
+            <svg viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
+              <path d="M200 50L350 300L200 550" stroke="white" strokeWidth="2" />
+              <path d="M150 100L300 300L150 500" stroke="white" strokeWidth="1" />
+            </svg>
+          </div>
+          {/* Diagonal accent lines */}
+          <div className="absolute top-0 right-[20%] w-px h-full opacity-[0.03]" style={{ background: 'linear-gradient(to bottom, transparent 0%, white 30%, white 70%, transparent 100%)', transform: 'rotate(3deg)' }} />
+          <div className="absolute top-0 right-[22%] w-px h-full opacity-[0.02]" style={{ background: 'linear-gradient(to bottom, transparent 0%, white 30%, white 70%, transparent 100%)', transform: 'rotate(3deg)' }} />
+          {/* Orange glow */}
+          <div className="absolute top-[30%] right-[15%] w-[300px] h-[300px] rounded-full blur-[150px] opacity-[0.07]" style={{ background: '#e8734a' }} />
+          <div className="absolute bottom-[20%] left-[10%] w-[200px] h-[200px] rounded-full blur-[100px] opacity-[0.04]" style={{ background: '#e8734a' }} />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-32 w-full">
-          <div className="max-w-3xl">
-            <Reveal>
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-8 h-px bg-[#c0392b]" />
-                <span className="text-[#c0392b] text-sm font-semibold tracking-wider uppercase">Tutagora Consulting</span>
-              </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.05] tracking-tight">
-                Your School<br />Deserves <span className="text-[#c0392b]">to Take<br />Flight.</span>
-              </h1>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <p className="mt-8 text-xl text-white/50 max-w-lg leading-relaxed">
-                Marketing, branding, and software built for educational institutions across Kenya and East Africa.
-              </p>
-            </Reveal>
-            <Reveal delay={0.3}>
-              <div className="flex flex-wrap gap-4 mt-10">
-                <a href="#services" className="group px-8 py-4 bg-[#c0392b] text-white font-semibold rounded-full hover:bg-[#a93226] transition-all hover:shadow-xl hover:shadow-[#c0392b]/20 flex items-center gap-2">
-                  Explore Our Services
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+        <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 w-full">
+          <div className="grid md:grid-cols-12 gap-8 items-end">
+            {/* Main heading — left */}
+            <div className="md:col-span-8">
+              <R>
+                <p className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase mb-6 md:mb-10">
+                  Marketing Partnership Proposal — 2025
+                </p>
+              </R>
+              <R delay={0.1}>
+                <h1 className="font-display text-[clamp(3rem,8vw,7rem)] font-bold leading-[0.95] tracking-tight uppercase">
+                  Your School<br />
+                  Deserves to<br />
+                  <span className="text-[#e8734a]">Take Flight.</span>
+                </h1>
+              </R>
+              <R delay={0.25}>
+                <p className="font-body mt-8 text-lg text-white/35 max-w-md leading-relaxed">
+                  A full-spectrum marketing partnership built for institutions that want to recruit the right students, build a commanding brand, and grow with intention.
+                </p>
+              </R>
+              <R delay={0.35}>
+                <a href="#services" className="inline-flex items-center gap-4 mt-10 group">
+                  <span className="w-12 h-px bg-[#e8734a] group-hover:w-20 transition-all" />
+                  <span className="font-display text-xs font-bold tracking-[0.2em] text-[#e8734a] uppercase">Explore Services</span>
                 </a>
-                <a href="#contact" className="px-8 py-4 text-white/70 font-semibold rounded-full border border-white/10 hover:border-white/25 hover:text-white hover:bg-white/5 transition-all">
-                  Book a Discovery Call
-                </a>
-              </div>
-            </Reveal>
+              </R>
+            </div>
 
-            {/* Stats bar */}
-            <Reveal delay={0.4}>
-              <div className="flex gap-10 mt-16 pt-10 border-t border-white/10">
-                {[
-                  { val: '4+', label: 'School Partners' },
-                  { val: '3', label: 'Years in Education' },
-                  { val: '100%', label: 'Client Retention' },
-                ].map(s => (
-                  <div key={s.label}>
-                    <div className="text-3xl font-bold text-white">{s.val}</div>
-                    <div className="text-sm text-white/40 mt-1">{s.label}</div>
-                  </div>
+            {/* Stats sidebar — right */}
+            <div className="md:col-span-3 md:col-start-10">
+              <R delay={0.3}>
+                <div className="space-y-8 md:border-l border-white/10 md:pl-8">
+                  {[
+                    { val: '6+', label: 'Service Areas' },
+                    { val: '4', label: 'School Partners' },
+                    { val: '100%', label: 'Client Retention' },
+                    { val: 'KE', label: 'Market Focus' },
+                  ].map(s => (
+                    <div key={s.label} className="group">
+                      <div className="font-display text-2xl font-bold text-white/90 group-hover:text-[#e8734a] transition-colors">{s.val}</div>
+                      <div className="font-body text-[10px] tracking-[0.15em] uppercase text-white/25 mt-1">{s.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </R>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll line */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
+          <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/10 to-white/20 animate-pulse" />
+        </div>
+      </section>
+
+      {/* ── THE CHALLENGE — Full-width editorial ── */}
+      <section className="relative py-24 md:py-40 px-6 md:px-12" style={{ background: '#f7f5f2' }}>
+        <div className="max-w-[1400px] mx-auto">
+          <div className="grid md:grid-cols-12 gap-12 md:gap-20">
+            <div className="md:col-span-4">
+              <R>
+                <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">The Challenge</span>
+                <h2 className="font-display text-3xl md:text-[2.75rem] font-bold text-[#0d1117] leading-[1.1] mt-4">
+                  Schools are losing students before the first conversation.
+                </h2>
+              </R>
+            </div>
+            <div className="md:col-span-6 md:col-start-6">
+              <R delay={0.15}>
+                <div className="space-y-6 font-body text-[#0d1117]/60 text-lg leading-relaxed">
+                  <p>Parents and students begin their research online. They search, they compare, and they form an impression before picking up the phone. Schools with weak digital presence lose candidates before the conversation starts.</p>
+                  <p>Administrative staff buried in spreadsheets, manual tracking, and disconnected systems only compounds the problem. Wasted hours, data gaps, decisions without the full picture.</p>
+                </div>
+                <div className="mt-10 pl-6 border-l-2 border-[#e8734a]">
+                  <p className="font-display text-xl md:text-2xl font-bold text-[#0d1117] leading-snug">
+                    We fix both. Marketing that builds your brand. Software that runs your school.
+                  </p>
+                </div>
+              </R>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SERVICES — Interactive accordion style ── */}
+      <section id="services" className="relative py-24 md:py-40 px-6 md:px-12 bg-[#0d1117]">
+        {/* Grid pattern */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+        <div className="relative max-w-[1400px] mx-auto">
+          <R>
+            <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">What We Do</span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-white leading-[1.05] mt-4 mb-16 md:mb-24">
+              Six service areas.<br />One partner.
+            </h2>
+          </R>
+
+          <div className="grid md:grid-cols-12 gap-12">
+            {/* Service list — left */}
+            <div className="md:col-span-5">
+              <div className="space-y-0">
+                {services.map((s, i) => (
+                  <R key={s.num} delay={i * 0.05}>
+                    <button
+                      onClick={() => setActiveService(i)}
+                      className={`w-full text-left py-5 border-b transition-all duration-300 flex items-start gap-4 group ${activeService === i ? 'border-[#e8734a]' : 'border-white/5 hover:border-white/15'}`}
+                    >
+                      <span className={`font-display text-xs font-bold mt-1 transition-colors ${activeService === i ? 'text-[#e8734a]' : 'text-white/20'}`}>{s.num}</span>
+                      <span className={`font-display text-lg font-semibold transition-colors ${activeService === i ? 'text-white' : 'text-white/40 group-hover:text-white/70'}`}>{s.title}</span>
+                    </button>
+                  </R>
                 ))}
               </div>
-            </Reveal>
-          </div>
-        </div>
+            </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span className="text-white/20 text-xs tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-white/20 to-transparent" />
-        </div>
-      </section>
-
-      {/* ── PROBLEM STATEMENT — Staggered layout ── */}
-      <section className="py-24 md:py-32 px-6 md:px-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-12 gap-8 md:gap-16">
-            <div className="md:col-span-4">
-              <Reveal>
-                <div className="sticky top-24">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-px bg-[#c0392b]" />
-                    <span className="text-[#c0392b] text-xs font-semibold tracking-wider uppercase">The Reality</span>
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
-                    Most schools are invisible where it matters most.
-                  </h2>
+            {/* Active service detail — right */}
+            <div className="md:col-span-6 md:col-start-7 flex items-center">
+              <div className="w-full">
+                <div className="font-display text-[120px] md:text-[180px] font-bold text-white/[0.02] leading-none select-none">
+                  {services[activeService].num}
                 </div>
-              </Reveal>
-            </div>
-            <div className="md:col-span-7 md:col-start-6">
-              <Reveal delay={0.1}>
-                <div className="space-y-8 text-lg text-slate-500 leading-relaxed">
-                  <p>
-                    Parents and students start their research online. They compare, they judge, and they form an opinion before they ever pick up the phone. If your digital presence does not match the quality of your institution, you are losing candidates before the conversation starts.
+                <div className="-mt-16 md:-mt-24">
+                  <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+                    {services[activeService].title}
+                  </h3>
+                  <p className="font-body text-white/40 text-lg leading-relaxed max-w-md">
+                    {services[activeService].desc}
                   </p>
-                  <p>
-                    Meanwhile, your administrative staff is buried in spreadsheets, manual fee tracking, and disconnected systems. The result: wasted hours, data gaps, and decisions made without the full picture.
-                  </p>
-                  <div className="pl-6 border-l-2 border-[#c0392b]">
-                    <p className="text-slate-900 font-medium text-xl">
-                      We solve both problems. Marketing that builds your brand. Software that runs your school.
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── SERVICES — Bold cards with hover depth ── */}
-      <section id="services" className="py-24 md:py-32 px-6 md:px-10" style={{ background: '#f8f9fa' }}>
-        <div className="max-w-7xl mx-auto">
-          <Reveal>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-px bg-[#c0392b]" />
-              <span className="text-[#c0392b] text-xs font-semibold tracking-wider uppercase">What We Do</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-16 leading-tight">Two pillars.<br />One partner.</h2>
-          </Reveal>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Marketing & Brand */}
-            <Reveal delay={0.1}>
-              <div
-                className="relative bg-white rounded-2xl p-8 md:p-10 transition-all duration-300 cursor-default group overflow-hidden"
-                style={{ boxShadow: hovered === 'mkt' ? '0 25px 60px -12px rgba(0,0,0,0.12)' : '0 1px 3px rgba(0,0,0,0.04)', transform: hovered === 'mkt' ? 'translateY(-4px)' : 'none' }}
-                onMouseEnter={() => setHovered('mkt')}
-                onMouseLeave={() => setHovered(null)}
-              >
-                {/* Accent stripe */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-[#c0392b] opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="text-6xl font-bold text-slate-100 absolute top-6 right-8 select-none">01</div>
-                <div className="relative">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Marketing & Brand</h3>
-                  <p className="text-slate-500 leading-relaxed mb-8">
-                    We build your complete marketing infrastructure — from visual identity to student recruitment campaigns to content that tells your story.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      'Brand Identity & Design',
-                      'Website Development',
-                      'Social Media',
-                      'Recruitment Campaigns',
-                      'Content & Storytelling',
-                      'Email Marketing',
-                    ].map(item => (
-                      <div key={item} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#c0392b]" />
-                        <span className="text-sm text-slate-600">{item}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <a href="#contact" className="inline-flex items-center gap-3 mt-8 group">
+                    <span className="w-8 h-px bg-[#e8734a] group-hover:w-14 transition-all" />
+                    <span className="font-display text-xs font-bold tracking-[0.15em] text-[#e8734a] uppercase">Learn More</span>
+                  </a>
                 </div>
               </div>
-            </Reveal>
-
-            {/* Software & AI */}
-            <Reveal delay={0.2}>
-              <div
-                className="relative bg-slate-900 rounded-2xl p-8 md:p-10 transition-all duration-300 cursor-default group overflow-hidden"
-                style={{ boxShadow: hovered === 'sw' ? '0 25px 60px -12px rgba(0,0,0,0.3)' : '0 1px 3px rgba(0,0,0,0.1)', transform: hovered === 'sw' ? 'translateY(-4px)' : 'none' }}
-                onMouseEnter={() => setHovered('sw')}
-                onMouseLeave={() => setHovered(null)}
-              >
-                <div className="text-6xl font-bold text-white/5 absolute top-6 right-8 select-none">02</div>
-                <div className="relative">
-                  <h3 className="text-2xl font-bold text-white mb-4">Software & AI</h3>
-                  <p className="text-white/50 leading-relaxed mb-8">
-                    Purpose-built school management software and adaptive AI learning technology. Designed for Kenyan schools, maintained by people who understand them.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      'Student Records & Fees',
-                      'HR & Staff Systems',
-                      'Academic Tracking',
-                      'Analytics Dashboards',
-                      'Tutagora AI Tutor',
-                      'Custom Integrations',
-                    ].map(item => (
-                      <div key={item} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#c0392b]" />
-                        <span className="text-sm text-white/60">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </Reveal>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── TUTAGORA AI — Full-bleed spotlight ── */}
-      <section className="relative py-24 md:py-32 px-6 md:px-10 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1a1a2e 100%)' }}>
-        {/* Background grid pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+      {/* ── TUTAGORA AI — Full-bleed feature ── */}
+      <section id="ai" className="relative py-24 md:py-40 px-6 md:px-12 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)' }}>
+        {/* Radial dot grid */}
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
         {/* Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-10 blur-[120px]" style={{ background: '#c0392b' }} />
+        <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-[200px] opacity-[0.08]" style={{ background: '#e8734a' }} />
 
-        <div className="relative max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-12 gap-12 items-center">
+        <div className="relative max-w-[1400px] mx-auto">
+          <div className="grid md:grid-cols-12 gap-16 items-center">
             <div className="md:col-span-6">
-              <Reveal>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full text-white/60 text-sm mb-6 border border-white/5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  Now Available
+              <R>
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="font-display text-xs font-bold tracking-[0.25em] text-emerald-400/70 uppercase">Now Available</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
-                  Tutagora <span className="text-[#c0392b]">AI</span>
+                <h2 className="font-display text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight">
+                  Tutagora<br /><span className="text-[#e8734a]">AI</span>
                 </h2>
-                <p className="text-lg text-white/40 leading-relaxed mb-8">
-                  Every student learns differently. Tutagora AI maps what each one knows, identifies the gaps, and builds a personal learning path that adapts in real time. Built for real classrooms, not demos.
+                <p className="font-body mt-8 text-lg text-white/35 max-w-lg leading-relaxed">
+                  Every student learns differently. Tutagora AI gives each one a personal learning path that adapts in real time — diagnosing gaps, adjusting difficulty, and showing schools exactly where each learner stands.
                 </p>
-                <a href="#contact" className="inline-flex items-center gap-2 text-[#c0392b] font-semibold hover:gap-3 transition-all">
-                  Learn more
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                </a>
-              </Reveal>
+              </R>
             </div>
             <div className="md:col-span-5 md:col-start-8">
-              <Reveal delay={0.2}>
-                <div className="space-y-6">
+              <R delay={0.2}>
+                <div className="space-y-5">
                   {[
-                    { num: '01', title: 'Diagnostic', desc: 'Maps each student in minutes. Finds the exact gaps holding them back.' },
-                    { num: '02', title: 'Adaptive', desc: 'Paths that adjust in real time. Students work on what they actually need.' },
-                    { num: '03', title: 'Measurable', desc: 'Real data on progress. Schools see exactly where each learner stands.' },
+                    { icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', title: 'Diagnostic Engine', desc: 'Maps what each student knows in minutes. Identifies exact knowledge gaps across any subject.' },
+                    { icon: 'M13 10V3L4 14h7v7l9-11h-7z', title: 'Adaptive Paths', desc: 'Learning sequences that adjust in real time based on student performance and mastery patterns.' },
+                    { icon: 'M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', title: 'School Analytics', desc: 'Real data on student progress. Track performance across classes, subjects, and time periods.' },
                   ].map((item, i) => (
-                    <div key={item.num} className="flex gap-5 p-5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/8 transition-colors">
-                      <span className="text-[#c0392b] font-bold text-sm mt-1">{item.num}</span>
+                    <div key={item.title} className="group flex gap-5 p-5 rounded-xl border border-white/5 hover:border-[#e8734a]/20 hover:bg-white/[0.02] transition-all cursor-default">
+                      <div className="w-10 h-10 rounded-lg bg-[#e8734a]/10 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-[#e8734a]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={item.icon} /></svg>
+                      </div>
                       <div>
-                        <h4 className="font-semibold text-white mb-1">{item.title}</h4>
-                        <p className="text-sm text-white/40">{item.desc}</p>
+                        <h4 className="font-display font-bold text-white mb-1 group-hover:text-[#e8734a] transition-colors">{item.title}</h4>
+                        <p className="font-body text-sm text-white/30 leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
                   ))}
                 </div>
-              </Reveal>
+              </R>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── PROCESS — Timeline style ── */}
-      <section className="py-24 md:py-32 px-6 md:px-10">
-        <div className="max-w-7xl mx-auto">
-          <Reveal>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-px bg-[#c0392b]" />
-              <span className="text-[#c0392b] text-xs font-semibold tracking-wider uppercase">How We Work</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-20 leading-tight max-w-xl">Structured for results, not busywork.</h2>
-          </Reveal>
+      {/* ── PROCESS — Horizontal editorial ── */}
+      <section className="relative py-24 md:py-40 px-6 md:px-12" style={{ background: '#f7f5f2' }}>
+        <div className="max-w-[1400px] mx-auto">
+          <R>
+            <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">Our Process</span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-[#0d1117] leading-[1.05] mt-4 mb-16 md:mb-24 max-w-xl">
+              How a partnership with Tutagora works.
+            </h2>
+          </R>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-0">
             {[
-              { phase: '01', title: 'Discovery & Audit', timeline: 'Weeks 1 - 3', desc: 'Full brand and digital audit. Competitor mapping. Goals alignment. We learn everything about your school before proposing anything.' },
-              { phase: '02', title: 'Build', timeline: 'Weeks 4 - 7', desc: 'Visual identity. Website. Messaging. Content strategy. Software setup. Everything designed, built, and tested before it goes live.' },
-              { phase: '03', title: 'Launch', timeline: 'Months 2 - 3', desc: 'Social channels go live. Campaigns launch. Email sequences activate. Systems go into production. We manage the transition.' },
-              { phase: '04', title: 'Grow', timeline: 'Month 4+', desc: 'Monthly reporting. Campaign optimisation. New intake campaigns each cycle. Quarterly strategy reviews. A long-term partnership.' },
-            ].map((step, i) => (
-              <Reveal key={step.phase} delay={i * 0.1}>
-                <div className="relative group">
-                  {/* Connector line */}
-                  {i < 3 && <div className="hidden md:block absolute top-6 left-full w-full h-px bg-slate-200 z-0" />}
-                  <div className="relative">
-                    <div className="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center text-sm font-bold mb-5 group-hover:bg-[#c0392b] transition-colors">
-                      {step.phase}
-                    </div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-1">{step.title}</h3>
-                    <span className="text-xs text-[#c0392b] font-medium">{step.timeline}</span>
-                    <p className="text-sm text-slate-500 leading-relaxed mt-3">{step.desc}</p>
+              { phase: '01', title: 'Discovery', time: 'Weeks 1-3', desc: 'Full brand audit. Competitor mapping. Student persona development. Goals alignment.' },
+              { phase: '02', title: 'Build', time: 'Weeks 4-7', desc: 'Visual identity. Website. Messaging. Software setup. Everything designed and tested.' },
+              { phase: '03', title: 'Launch', time: 'Months 2-3', desc: 'Channels go live. Campaigns launch. Systems into production. Managed transition.' },
+              { phase: '04', title: 'Grow', time: 'Month 4+', desc: 'Monthly reporting. Campaign optimisation. Quarterly strategy. Long-term partnership.' },
+            ].map((s, i) => (
+              <R key={s.phase} delay={i * 0.1}>
+                <div className={`group py-8 md:px-8 ${i > 0 ? 'md:border-l border-[#0d1117]/10' : ''}`}>
+                  <div className="font-display text-[80px] font-bold text-[#0d1117]/[0.04] leading-none mb-2">{s.phase}</div>
+                  <div className="flex items-center gap-3 mb-3 -mt-6">
+                    <h3 className="font-display text-xl font-bold text-[#0d1117]">{s.title}</h3>
+                    <span className="font-body text-xs text-[#e8734a] font-medium">{s.time}</span>
                   </div>
+                  <p className="font-body text-sm text-[#0d1117]/40 leading-relaxed">{s.desc}</p>
                 </div>
-              </Reveal>
+              </R>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── TRACK RECORD — Dark section with partner logos ── */}
-      <section id="work" className="py-24 md:py-32 px-6 md:px-10 bg-slate-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
-        <div className="relative max-w-7xl mx-auto">
+      {/* ── TRACK RECORD ── */}
+      <section id="work" className="relative py-24 md:py-40 px-6 md:px-12 bg-[#0d1117]">
+        <div className="max-w-[1400px] mx-auto">
           <div className="grid md:grid-cols-12 gap-16">
             <div className="md:col-span-5">
-              <Reveal>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-px bg-[#c0392b]" />
-                  <span className="text-[#c0392b] text-xs font-semibold tracking-wider uppercase">Track Record</span>
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
-                  Built for education.<br />Nothing else.
+              <R>
+                <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">Track Record</span>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-white leading-[1.1] mt-4 mb-6">
+                  Built for education. Nothing else.
                 </h2>
-                <p className="text-white/40 leading-relaxed">
-                  Active partnerships with schools across Nairobi delivering marketing, school management software, and now AI-powered learning technology.
+                <p className="font-body text-white/30 leading-relaxed">
+                  Active partnerships delivering marketing, school management software, and AI-powered learning across Nairobi.
                 </p>
-              </Reveal>
+              </R>
             </div>
             <div className="md:col-span-6 md:col-start-7">
-              <Reveal delay={0.1}>
-                <div className="space-y-0">
-                  {PARTNERS.map((p, i) => (
-                    <div key={p.name} className="flex items-center justify-between py-6 border-b border-white/10 group hover:border-white/20 transition-colors">
-                      <div className="flex items-center gap-5">
-                        <span className="text-[#c0392b] font-bold text-sm w-6">{String(i + 1).padStart(2, '0')}</span>
-                        <span className="font-medium text-white group-hover:text-white/90 transition-colors">{p.name}</span>
-                      </div>
-                      <span className="text-sm text-white/30">{p.services}</span>
+              {PARTNERS.map((p, i) => (
+                <R key={p.name} delay={i * 0.08}>
+                  <div className="group flex items-center justify-between py-7 border-b border-white/5 hover:border-[#e8734a]/30 transition-all cursor-default">
+                    <div className="flex items-center gap-5">
+                      <span className="font-display text-sm font-bold text-[#e8734a] w-8">{String(i + 1).padStart(2, '0')}</span>
+                      <span className="font-display font-semibold text-white group-hover:text-[#e8734a] transition-colors">{p.name}</span>
                     </div>
-                  ))}
-                </div>
-              </Reveal>
+                    <span className="font-body text-xs text-white/20 hidden sm:block">{p.tag}</span>
+                  </div>
+                </R>
+              ))}
             </div>
           </div>
+
+          {/* Big number stats */}
+          <R delay={0.2}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-16 border-t border-white/5">
+              {[
+                { val: 4, suffix: '+', label: 'Schools Served' },
+                { val: 3, suffix: ' yrs', label: 'In Education' },
+                { val: 100, suffix: '%', label: 'Client Retention' },
+                { val: 6, suffix: '+', label: 'Service Areas' },
+              ].map(s => (
+                <div key={s.label} className="text-center md:text-left">
+                  <div className="font-display text-4xl md:text-5xl font-bold text-white">
+                    <Counter end={s.val} suffix={s.suffix} />
+                  </div>
+                  <div className="font-body text-xs tracking-[0.15em] uppercase text-white/20 mt-2">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </R>
         </div>
       </section>
 
-      {/* ── WHY TUTAGORA — Grid with red accents ── */}
-      <section className="py-24 md:py-32 px-6 md:px-10">
-        <div className="max-w-7xl mx-auto">
-          <Reveal>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-px bg-[#c0392b]" />
-              <span className="text-[#c0392b] text-xs font-semibold tracking-wider uppercase">Why Us</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-16 leading-tight max-w-lg">Why schools choose Tutagora.</h2>
-          </Reveal>
+      {/* ── WHY US — Minimal and editorial ── */}
+      <section className="relative py-24 md:py-40 px-6 md:px-12" style={{ background: '#f7f5f2' }}>
+        <div className="max-w-[1400px] mx-auto">
+          <R>
+            <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">Why Us</span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-[#0d1117] leading-[1.05] mt-4 mb-16 md:mb-20">
+              Why schools choose Tutagora.
+            </h2>
+          </R>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14">
             {[
-              { title: 'Kenyan, deeply.', desc: 'We understand how families research, shortlist, and choose education across East Africa. No imported playbooks.' },
-              { title: 'Education-first.', desc: 'Enrolment cycles, parent psychology, trust dynamics. This is the space we were built for.' },
-              { title: 'Full-stack.', desc: 'Strategy, design, development, content, campaigns, and software. One partner. No gaps in accountability.' },
-              { title: 'Design-led.', desc: 'Your brand should reflect the quality of your institution. We build for the global stage.' },
-              { title: 'Measurement-driven.', desc: 'Every campaign tracked to clear KPIs. Monthly reports in plain language. Marketing spend made accountable.' },
+              { title: 'Kenyan. Deeply.', desc: 'We understand how families research, shortlist, and choose education across East Africa. No imported playbooks applied to the local market.' },
+              { title: 'Education-first.', desc: 'Enrolment cycles, parent psychology, the trust dynamics of educational decision-making. This is the space we were built for.' },
+              { title: 'Full-stack.', desc: 'Strategy, design, development, content, campaigns, and software. One partner. One point of contact. No gaps in accountability.' },
+              { title: 'Design-led.', desc: 'Institutions that win are the ones whose brand reflects their quality. We produce work that belongs on the global stage.' },
+              { title: 'Measurement-driven.', desc: 'Every campaign tracked to clear KPIs. Monthly plain-language reporting. Marketing spend made accountable.' },
               { title: 'Long-term.', desc: 'Our best partnerships grow with the institution over years. We compound knowledge into better results every cycle.' },
             ].map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.05}>
-                <div className="group p-6 rounded-xl hover:bg-slate-50 transition-colors">
-                  <div className="w-1 h-6 bg-[#c0392b] rounded-full mb-4 group-hover:h-8 transition-all" />
-                  <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+              <R key={item.title} delay={i * 0.06}>
+                <div className="group">
+                  <div className="w-8 h-0.5 bg-[#e8734a] mb-5 group-hover:w-14 transition-all" />
+                  <h3 className="font-display font-bold text-[#0d1117] text-lg mb-3">{item.title}</h3>
+                  <p className="font-body text-sm text-[#0d1117]/40 leading-relaxed">{item.desc}</p>
                 </div>
-              </Reveal>
+              </R>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CONTACT — Dark full-bleed CTA ── */}
-      <section id="contact" className="py-24 md:py-32 px-6 md:px-10 bg-slate-900 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-5 blur-[100px]" style={{ background: '#c0392b' }} />
-        <div className="relative max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-12 gap-16 items-start">
+      {/* ── CONTACT ── */}
+      <section id="contact" className="relative py-24 md:py-40 px-6 md:px-12 bg-[#0d1117] overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-[200px] opacity-[0.04]" style={{ background: '#e8734a' }} />
+        {/* Chevron decoration */}
+        <div className="absolute bottom-0 right-0 opacity-[0.02]" style={{ width: '30vw', height: '60vh' }}>
+          <svg viewBox="0 0 300 500" fill="none" style={{ width: '100%', height: '100%' }}>
+            <path d="M150 50L280 250L150 450" stroke="white" strokeWidth="1.5" />
+          </svg>
+        </div>
+
+        <div className="relative max-w-[1400px] mx-auto">
+          <div className="grid md:grid-cols-12 gap-16 md:gap-24">
             <div className="md:col-span-5">
-              <Reveal>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-px bg-[#c0392b]" />
-                  <span className="text-[#c0392b] text-xs font-semibold tracking-wider uppercase">Get Started</span>
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
+              <R>
+                <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">Get Started</span>
+                <h2 className="font-display text-3xl md:text-[2.75rem] font-bold text-white leading-[1.1] mt-4 mb-6">
                   Let us talk about your school.
                 </h2>
-                <p className="text-white/40 leading-relaxed mb-10">
-                  45-minute discovery call. No pitch deck, no hard sell. Just a conversation about where your institution is and where you want it to be.
+                <p className="font-body text-white/30 leading-relaxed mb-12">
+                  45-minute discovery call. No pitch deck, no pressure. Just a conversation about where your institution is and where it should be.
                 </p>
-                <div className="space-y-5 text-white/30">
-                  <div className="flex items-center gap-4">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    <span className="text-white/50">hello@tutagora.com</span>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4 text-white/25 hover:text-white/50 transition-colors">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span className="font-body text-sm">hello@tutagora.com</span>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span className="text-white/50">Nairobi, Kenya</span>
+                  <div className="flex items-center gap-4 text-white/25 hover:text-white/50 transition-colors">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span className="font-body text-sm">Nairobi, Kenya</span>
+                  </div>
+                  <div className="flex items-center gap-4 text-white/25 hover:text-white/50 transition-colors">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <span className="font-body text-sm">tutagora.com</span>
                   </div>
                 </div>
-              </Reveal>
+              </R>
             </div>
             <div className="md:col-span-6 md:col-start-7">
-              <Reveal delay={0.15}>
+              <R delay={0.15}>
                 <ContactForm />
-              </Reveal>
+              </R>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="py-8 px-6 md:px-10 bg-slate-950">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-7 h-7 rounded bg-white/10 text-white flex items-center justify-center font-bold text-xs">T</div>
-            <span className="text-sm text-white/30">Tutagora Ltd — Marketing & Software Solutions for Education</span>
-          </div>
-          <span className="text-xs text-white/20">Nairobi, Kenya</span>
+      <footer className="py-8 px-6 md:px-12 bg-[#080b10] border-t border-white/5">
+        <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <span className="font-display text-xs font-bold tracking-wider text-[#e8734a]/50">TUTAGORA</span>
+          <span className="font-body text-xs text-white/15">Marketing & Software Solutions for Education — Nairobi, Kenya</span>
         </div>
       </footer>
     </div>
