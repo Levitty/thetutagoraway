@@ -3,6 +3,7 @@ import { supabase } from './supabase';
 import { VideoRoom } from './VideoRoom';
 import { PaymentModal } from './PaymentModal';
 import { Messaging, MessageButton, startConversation } from './Messaging';
+import { AIMastery } from './ai-tutor/AIMastery.jsx';
 
 // ============ LOTTIE ANIMATION COMPONENT ============
 const Lottie = ({ src, width = 200, height = 200, loop = true }) => {
@@ -383,6 +384,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
           </div>
           <div className="flex items-center gap-4">
             <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600">Find Tutors</button>
+            <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>
             <MessageButton onClick={onOpenMessages} />
             <div className="flex items-center gap-2">
               <Avatar src={profile?.avatar_url} name={profile?.full_name} size={32} />
@@ -400,6 +402,23 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
             <h1 className="text-xl font-bold">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
             <p className="text-emerald-100 text-sm">You have {upcoming.length} upcoming lesson{upcoming.length !== 1 ? 's' : ''}</p>
           </div>
+        </div>
+
+        {/* AI Tutor Card */}
+        <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 mb-6 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="text-4xl">🧠</div>
+            <div>
+              <h3 className="text-white font-bold text-lg">AI Math Tutor</h3>
+              <p className="text-slate-300 text-sm">Adaptive learning that finds your gaps and fills them</p>
+            </div>
+          </div>
+          <button
+            onClick={() => onNavigate('ai')}
+            className="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-lg transition-colors"
+          >
+            Start Learning
+          </button>
         </div>
 
         <div className="grid grid-cols-3 gap-4 mb-6">
@@ -2980,6 +2999,11 @@ export default function App() {
   // Active video lesson
   if (activeLesson) {
     return <VideoRoom booking={activeLesson} user={{ id: auth.user?.id, name: auth.profile?.full_name, role: auth.profile?.role }} onEnd={handleEndLesson} />;
+  }
+
+  // AI Tutor
+  if (page === 'ai') {
+    return <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} />;
   }
 
   // Admin Dashboard
