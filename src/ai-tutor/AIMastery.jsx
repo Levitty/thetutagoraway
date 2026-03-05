@@ -14,6 +14,74 @@ import { Icon } from './components/Icons.jsx';
 
 const skillList = Object.values(SKILLS);
 
+// ==================== SMART ANSWER MATCHING ====================
+// Normalizes math expressions so equivalent forms match:
+//   "2(x) = 12"  ↔  "2x = 12"
+//   "5x + 3"     ↔  "5x+3"
+//   "x = -3"     ↔  "x=-3"
+//   "3/4"        ↔  "3 / 4"
+//   "(−2, 5)"    ↔  "(-2, 5)"  ↔  "(-2,5)"
+
+function normalizeMath(str) {
+  let s = str.toString().trim().toLowerCase();
+  // Normalize unicode minus/dash to hyphen
+  s = s.replace(/[−–—]/g, '-');
+  // Remove all spaces
+  s = s.replace(/\s+/g, '');
+  // Remove commas in numbers (1,200 → 1200) but keep commas between values
+  s = s.replace(/(\d),(\d{3})/g, '$1$2');
+  // Remove unnecessary parentheses around single variables: (x) → x, (y) → y
+  s = s.replace(/\(([a-z])\)/g, '$1');
+  // Remove × and * (multiplication signs) between number and variable: 2*x → 2x, 2×x → 2x
+  s = s.replace(/(\d)[*×·]([a-z])/g, '$1$2');
+  // Remove × and * between number and paren: 2*(3) → 2(3)
+  s = s.replace(/(\d)[*×·]\(/g, '$1(');
+  // Expand simple multiplications written as num(var): already handled by removing parens above
+  return s;
+}
+
+function checkAnswerMatch(userAnswer, problem) {
+  const normalizedUser = normalizeMath(userAnswer);
+  const accepts = problem.accepts || [problem.answer];
+
+  // Check if any accepted answer matches after normalization
+  if (accepts.some(a => normalizedUser === normalizeMath(a))) return true;
+
+  // For pure numeric answers, try parsing as number
+  const userNum = parseFloat(normalizedUser);
+  if (!isNaN(userNum)) {
+    if (accepts.some(a => {
+      const aNum = parseFloat(normalizeMath(a));
+      return !isNaN(aNum) && Math.abs(userNum - aNum) < 0.01;
+    })) return true;
+  }
+
+  // For fraction answers: check if 3/4 matches 0.75 etc.
+  const fractionMatch = normalizedUser.match(/^(-?\d+)\/(\d+)$/);
+  if (fractionMatch) {
+    const fracVal = parseInt(fractionMatch[1]) / parseInt(fractionMatch[2]);
+    if (accepts.some(a => {
+      const aNum = parseFloat(normalizeMath(a));
+      return !isNaN(aNum) && Math.abs(fracVal - aNum) < 0.01;
+    })) return true;
+    // Also check if accepted answer is a fraction with same value
+    if (accepts.some(a => {
+      const am = normalizeMath(a).match(/^(-?\d+)\/(\d+)$/);
+      if (am) {
+        const aFrac = parseInt(am[1]) / parseInt(am[2]);
+        return Math.abs(fracVal - aFrac) < 0.001;
+      }
+      return false;
+    })) return true;
+  }
+
+  // For coordinate answers: normalize (x,y) format
+  const coordUser = normalizedUser.replace(/[() ]/g, '');
+  if (accepts.some(a => normalizeMath(a).replace(/[() ]/g, '') === coordUser)) return true;
+
+  return false;
+}
+
 // ==================== MAIN COMPONENT ====================
 
 export function AIMastery({ onBack, userId }) {
@@ -95,9 +163,7 @@ export function AIMastery({ onBack, userId }) {
     const timeTaken = Date.now() - (startTimes[skill.id] || Date.now());
     const timeWeight = getTimeWeight(timeTaken);
 
-    const clean = answer.trim().toLowerCase().replace(/\s+/g, '').replace(/,/g, '');
-    const accepts = problem.accepts || [problem.answer];
-    const correct = accepts.some(a => clean === a.toString().toLowerCase().replace(/\s+/g, '').replace(/,/g, ''));
+    const correct = checkAnswerMatch(answer, problem);
 
     const newBalances = propagateCredit(balances, skill.id, correct, timeWeight);
     const newResults = { ...results, [skill.id]: { correct, timeTaken } };
@@ -151,9 +217,7 @@ export function AIMastery({ onBack, userId }) {
 
   const checkAnswer = () => {
     if (!answer.trim() || feedback) return;
-    const clean = answer.trim().toLowerCase().replace(/\s+/g, '').replace(/,/g, '');
-    const accepts = problem.accepts || [problem.answer];
-    const correct = accepts.some(a => clean === a.toString().toLowerCase().replace(/\s+/g, '').replace(/,/g, ''));
+    const correct = checkAnswerMatch(answer, problem);
 
     setFeedback(correct ? 'correct' : 'incorrect');
     const newSession = {
@@ -247,9 +311,7 @@ export function AIMastery({ onBack, userId }) {
   const handleReviewAnswer = () => {
     if (!answer.trim() || feedback) return;
     const skillId = reviewProblems[reviewIndex];
-    const clean = answer.trim().toLowerCase().replace(/\s+/g, '').replace(/,/g, '');
-    const accepts = problem.accepts || [problem.answer];
-    const correct = accepts.some(a => clean === a.toString().toLowerCase().replace(/\s+/g, '').replace(/,/g, ''));
+    const correct = checkAnswerMatch(answer, problem);
 
     setFeedback(correct ? 'correct' : 'incorrect');
     setSession(s => ({ ...s, correct: s.correct + (correct ? 1 : 0), total: s.total + 1, streak: correct ? s.streak + 1 : 0 }));
