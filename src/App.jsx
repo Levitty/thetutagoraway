@@ -2973,7 +2973,12 @@ export default function App() {
   const tutorId = auth.profile?.tutors?.[0]?.id;
   const { bookings, loading: bookingsLoading, createBooking, refetch: refetchBookings } = useBookings(auth.user?.id, auth.profile?.role, tutorId);
   
-  const [page, setPage] = useState('home');
+  const [page, setPage] = useState(() => {
+    const path = window.location.pathname.replace(/^\//, '');
+    if (path === 'consulting') return 'consulting';
+    if (path === 'tutors') return 'tutors';
+    return 'home';
+  });
   const [showAuth, setShowAuth] = useState(null);
   const [selectedTutor, setSelectedTutor] = useState(null);
   const [scrolled, setScrolled] = useState(false);
@@ -2990,7 +2995,7 @@ export default function App() {
     return () => window.removeEventListener('scroll', h);
   }, []);
 
-  const handleNavigate = (p) => { setPage(p); setSelectedTutor(null); window.scrollTo(0, 0); };
+  const handleNavigate = (p) => { setPage(p); setSelectedTutor(null); window.scrollTo(0, 0); window.history.pushState({}, '', p === 'home' ? '/' : '/' + p); };
   const handleLogout = async () => { await auth.signOut(); setPage('home'); };
   const handleStartLesson = (booking) => setActiveLesson(booking);
   const handleEndLesson = () => setActiveLesson(null);
