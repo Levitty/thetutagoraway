@@ -1,0 +1,44 @@
+# App.jsx Changes for AI Tutor Integration
+# Apply these 2 changes to your existing App.jsx
+
+================================================================================
+CHANGE 1: Add import (at top of file, after line 5)
+================================================================================
+
+FIND THIS:
+-----------
+import { Messaging, MessageButton, startConversation } from './Messaging';
+
+ADD AFTER IT:
+-------------
+import { AIMastery } from './AIMastery';
+
+
+================================================================================
+CHANGE 2: Add route (around line 2900, in the main App function)
+================================================================================
+
+FIND THIS:
+-----------
+  // Admin Dashboard
+  if (page === 'admin' && isAdmin) {
+    return <AdminDashboard onLogout={handleLogout} onBack={() => handleNavigate('home')} />;
+  }
+
+ADD BEFORE IT:
+--------------
+  // AI Tutor
+  if (page === 'ai') {
+    return <AIMastery onBack={() => handleNavigate('home')} />;
+  }
+
+
+================================================================================
+OPTIONAL: Add nav link in StudentDashboard header (already included in component)
+================================================================================
+
+The StudentDashboard already has an "AI Tutor" link and card.
+If you want to add it to the main Nav as well, find the Nav component and add:
+
+<button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>
+

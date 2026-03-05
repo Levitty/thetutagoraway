@@ -4,6 +4,7 @@ import { VideoRoom } from './VideoRoom';
 import { PaymentModal } from './PaymentModal';
 import { Messaging, MessageButton, startConversation } from './Messaging';
 import { AIMastery } from './ai-tutor/AIMastery.jsx';
+import { ConsultingPage } from './ConsultingPage.jsx';
 
 // ============ LOTTIE ANIMATION COMPONENT ============
 const Lottie = ({ src, width = 200, height = 200, loop = true }) => {
@@ -2619,6 +2620,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => (
       </button>
       <div className="flex items-center gap-4">
         <button onClick={() => onNavigate('tutors')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Find Tutors</button>
+        <button onClick={() => onNavigate('consulting')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Consulting</button>
         {isAdmin && (
           <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-purple-600' : 'text-purple-300'}`}>Admin</button>
         )}
@@ -2999,6 +3001,11 @@ export default function App() {
   // Active video lesson
   if (activeLesson) {
     return <VideoRoom booking={activeLesson} user={{ id: auth.user?.id, name: auth.profile?.full_name, role: auth.profile?.role }} onEnd={handleEndLesson} />;
+  }
+
+  // Consulting Page
+  if (page === 'consulting') {
+    return <ConsultingPage onBack={() => handleNavigate('home')} />;
   }
 
   // AI Tutor
