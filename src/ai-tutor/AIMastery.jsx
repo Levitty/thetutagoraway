@@ -1,18 +1,15 @@
 // ============================================================================
 // TUTAGORA AI MASTERY — Main Component
-// Adaptive Math Learning based on "The Math Academy Way"
+// Adaptive learning based on "The Math Academy Way" — supports multiple subjects
 // ============================================================================
 
-import React, { useState, useEffect, useCallback } from 'react';
-import { SKILLS, SKILL_COUNT, STRANDS, GRADES, getSkillsByGrade, getPostRequisites } from './knowledgeGraph.js';
-import { generateProblem, generateWorkedExample } from './problemGenerators.js';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
 import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { Icon } from './components/Icons.jsx';
-
-const skillList = Object.values(SKILLS);
 
 // ==================== SMART ANSWER MATCHING ====================
 // Normalizes math expressions so equivalent forms match:
@@ -85,9 +82,24 @@ function checkAnswerMatch(userAnswer, problem) {
 // ==================== MAIN COMPONENT ====================
 
 export function AIMastery({ onBack, userId }) {
+  const [subjectId, setSubjectId] = useState(null); // null = subject picker
   const [progress, setProgress] = useState(defaultProgress);
   const [view, setView] = useState('loading');
   const [loading, setLoading] = useState(true);
+
+  // Current subject data (derived)
+  const sub = subjectId ? SUBJECTS[subjectId] : null;
+  const SKILLS = sub?.skills || {};
+  const SKILL_COUNT = sub?.skillCount || 0;
+  const STRANDS = sub?.strands || [];
+  const GRADES = sub?.grades || [];
+  const getSkillsByGrade = sub?.getByGrade || (() => []);
+  const getPostRequisites = sub?.getPostReqs || (() => []);
+  const generateProblem = sub?.generate || (() => null);
+  const generateWorkedExample = sub?.generateExample || (() => null);
+
+  // Engine context — passed to adaptive/spaced/diagnostic engines
+  const ctx = useMemo(() => sub ? { skills: sub.skills, getPostReqs: sub.getPostReqs } : null, [sub]);
 
   // Lesson / Practice state
   const [activeSkill, setActiveSkill] = useState(null);
@@ -117,23 +129,35 @@ export function AIMastery({ onBack, userId }) {
 
   // ==================== LOAD PROGRESS ====================
 
+  // When subject changes, load that subject's progress
   useEffect(() => {
+    if (!subjectId) { setLoading(false); setView('subject-picker'); return; }
+    setLoading(true);
     (async () => {
-      const p = await loadProgress(userId);
+      const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
+      const p = await loadProgress(storageKey);
       setProgress(p);
       setView(p.diagnosed ? 'home' : 'welcome');
       setLoading(false);
     })();
-  }, [userId]);
+  }, [userId, subjectId]);
 
   // Auto-save on progress change
   useEffect(() => {
-    if (!loading) saveProgress(userId, progress);
-  }, [progress, userId, loading]);
+    if (!loading && subjectId) {
+      const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
+      saveProgress(storageKey, progress);
+    }
+  }, [progress, userId, loading, subjectId]);
 
   // Save on unmount
   useEffect(() => {
-    return () => { if (!loading) forceSave(userId, progress); };
+    return () => {
+      if (!loading && subjectId) {
+        const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
+        forceSave(storageKey, progress);
+      }
+    };
   }, []);
 
   // Review timer
@@ -148,7 +172,7 @@ export function AIMastery({ onBack, userId }) {
   // ==================== DIAGNOSTIC ====================
 
   const startDiagnostic = () => {
-    const skills = getAdaptiveDiagnosticSkills(progress);
+    const skills = getAdaptiveDiagnosticSkills(progress, ctx);
     setDiagState({ skills, index: 0, balances: {}, results: {}, startTimes: { [skills[0]?.id]: Date.now() } });
     setProblem(generateProblem(skills[0]?.id));
     setAnswer('');
@@ -165,7 +189,7 @@ export function AIMastery({ onBack, userId }) {
 
     const correct = checkAnswerMatch(answer, problem);
 
-    const newBalances = propagateCredit(balances, skill.id, correct, timeWeight);
+    const newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
     const newResults = { ...results, [skill.id]: { correct, timeTaken } };
 
     setFeedback(correct ? 'correct' : 'incorrect');
@@ -179,7 +203,7 @@ export function AIMastery({ onBack, userId }) {
         setFeedback(null);
       } else {
         // Finish diagnostic
-        const skillUpdates = processDiagnosticResults(newBalances);
+        const skillUpdates = processDiagnosticResults(newBalances, ctx);
         setProgress(p => ({
           ...p,
           skills: { ...p.skills, ...skillUpdates },
@@ -237,7 +261,7 @@ export function AIMastery({ onBack, userId }) {
     const shouldMaster = newAttempts >= skill.minProblems && accuracy >= skill.masteryThreshold;
 
     // Apply implicit repetitions to prerequisites
-    let updatedSkills = applyImplicitCredits(progress, activeSkill, correct);
+    let updatedSkills = applyImplicitCredits(progress, activeSkill, correct, ctx);
 
     const updatedSp = processReviewResult(sp, correct);
     updatedSp.attempts = newAttempts;
@@ -254,7 +278,7 @@ export function AIMastery({ onBack, userId }) {
       const newFailCount = lessonFailCount + 1;
       setLessonFailCount(newFailCount);
       if (newFailCount >= 2) {
-        const remSkills = getRemediationSkills(activeSkill, kpIndex, progress);
+        const remSkills = getRemediationSkills(activeSkill, kpIndex, progress, ctx);
         if (remSkills.length > 0) {
           setRemediationSkills(remSkills);
         }
@@ -295,7 +319,7 @@ export function AIMastery({ onBack, userId }) {
   // ==================== REVIEW (TIMED, INTERLEAVED) ====================
 
   const startReview = () => {
-    const problems = selectReviewProblems(progress, 12);
+    const problems = selectReviewProblems(progress, 12, ctx);
     if (problems.length === 0) return;
     setReviewProblems(problems);
     setReviewIndex(0);
@@ -322,7 +346,7 @@ export function AIMastery({ onBack, userId }) {
     updatedSp.attempts = sp.attempts + 1;
     updatedSp.correct = sp.correct + (correct ? 1 : 0);
 
-    let updatedSkills = applyImplicitCredits(progress, skillId, correct);
+    let updatedSkills = applyImplicitCredits(progress, skillId, correct, ctx);
     updatedSkills = { ...updatedSkills, [skillId]: updatedSp };
 
     setProgress(p => updateStreak({
@@ -352,11 +376,50 @@ export function AIMastery({ onBack, userId }) {
   // ==================== NAVIGATION ====================
 
   const goHome = () => { setView('home'); setActiveSkill(null); setCelebration(null); setRemediationSkills(null); };
-  const resetAll = () => { if (confirm('Reset ALL progress? This cannot be undone.')) { const fresh = defaultProgress(); setProgress(fresh); forceSave(userId, fresh); setView('welcome'); } };
+  const switchSubject = () => { setSubjectId(null); setView('subject-picker'); setActiveSkill(null); setProgress(defaultProgress); };
+  const resetAll = () => { if (confirm('Reset ALL progress? This cannot be undone.')) { const fresh = defaultProgress(); setProgress(fresh); const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`; forceSave(storageKey, fresh); setView('welcome'); } };
+
+  // Grade label helper (for ACCA subjects that use level names)
+  const gradeLabel = (grade) => {
+    if (sub?.gradeNames?.[grade]) return `${sub.gradeLabel} ${grade} — ${sub.gradeNames[grade]}`;
+    return `${sub?.gradeLabel || 'Grade'} ${grade}`;
+  };
 
   if (loading) return <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"><div className="text-xl">Loading...</div></div>;
 
-  const stats = getStats(progress);
+  // ==================== RENDER: SUBJECT PICKER ====================
+
+  if (view === 'subject-picker' || !subjectId) return (
+    <div className="min-h-screen bg-slate-900 text-white">
+      <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-3">
+          {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600"><Icon name="back" /></button>}
+          <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">T</div>
+          <h1 className="text-base font-bold text-slate-900">AI Tutor</h1>
+        </div>
+      </div>
+      <div className="bg-gradient-to-b from-slate-100 to-slate-900 pt-8 pb-4" />
+      <div className="max-w-lg mx-auto px-4 -mt-4">
+        <h2 className="text-2xl font-bold text-center mb-2">Choose a Subject</h2>
+        <p className="text-slate-400 text-center text-sm mb-6">Adaptive learning with spaced repetition for each</p>
+        <div className="space-y-3">
+          {SUBJECT_LIST.map(s => (
+            <button key={s.id} onClick={() => setSubjectId(s.id)} className="w-full bg-slate-800 hover:bg-slate-700 rounded-2xl p-5 flex items-center gap-4 transition-colors text-left">
+              <div className="text-4xl">{s.emoji}</div>
+              <div className="flex-1">
+                <div className="font-bold text-lg">{s.name}</div>
+                <div className="text-slate-400 text-sm">{s.description}</div>
+                <div className="text-xs text-slate-500 mt-1">{s.skillCount} skills</div>
+              </div>
+              <Icon name="arrow" className="w-5 h-5 text-slate-500" />
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const stats = getStats(progress, ctx);
   const level = getLevel(progress.totalXP || 0);
 
   // ==================== RENDER: WELCOME ====================
@@ -374,10 +437,10 @@ export function AIMastery({ onBack, userId }) {
       <div className="bg-gradient-to-b from-slate-100 to-slate-900 pt-12 pb-4" />
       <div className="flex items-center justify-center p-4 -mt-8">
         <div className="max-w-md text-center">
-          <div className="text-6xl mb-6">🧠</div>
-          <h1 className="text-3xl font-bold mb-2">Tutagora AI Tutor</h1>
+          <div className="text-6xl mb-6">{sub?.emoji || '🧠'}</div>
+          <h1 className="text-3xl font-bold mb-2">{sub?.name || 'AI Tutor'}</h1>
           <p className="text-emerald-400 text-sm font-medium mb-4">Powered by The Math Academy Way</p>
-          <p className="text-slate-400 mb-6">Adaptive learning that finds your gaps and fills them. Covering Grade 5-12 math with {SKILL_COUNT} skills.</p>
+          <p className="text-slate-400 mb-6">Adaptive learning that finds your gaps and fills them. {sub?.description} — {SKILL_COUNT} skills.</p>
           <div className="bg-slate-800 rounded-xl p-4 mb-6 text-left text-sm text-slate-300 space-y-2">
             <p>🎯 <strong>Diagnostic test</strong> — ~40 questions to find your level</p>
             <p>🧩 <strong>Knowledge graph</strong> — maps all skill connections</p>
@@ -604,12 +667,12 @@ export function AIMastery({ onBack, userId }) {
 
   // ==================== RENDER: HOME DASHBOARD ====================
 
-  const path = getRecommendedPath(progress);
-  const gaps = findGaps(progress);
-  const reviews = getReviews(progress);
-  const strandStats = getStrandStats(progress);
-  const gradeStats = getGradeStats(progress);
-  const estimatedGrade = getEstimatedGradeLevel(progress);
+  const path = getRecommendedPath(progress, ctx);
+  const gaps = findGaps(progress, ctx);
+  const reviews = getReviews(progress, ctx);
+  const strandStats = getStrandStats(progress, ctx);
+  const gradeStats = getGradeStats(progress, ctx);
+  const estimatedGrade = getEstimatedGradeLevel(progress, ctx);
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
@@ -620,8 +683,8 @@ export function AIMastery({ onBack, userId }) {
             {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600"><Icon name="back" /></button>}
             <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">T</div>
             <div>
-              <h1 className="text-base font-bold text-slate-900">AI Tutor</h1>
-              <p className="text-xs text-slate-400">Grade {estimatedGrade} Level</p>
+              <h1 className="text-base font-bold text-slate-900">{sub?.emoji} {sub?.shortName || 'AI Tutor'}</h1>
+              <p className="text-xs text-slate-400">{gradeLabel(estimatedGrade)}</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -630,7 +693,8 @@ export function AIMastery({ onBack, userId }) {
               <div className="text-amber-500 font-bold flex items-center gap-1 text-sm"><Icon name="star" className="w-4 h-4" /> {progress.totalXP || 0}</div>
               <div className="text-xs text-slate-400">Level {level.level}</div>
             </div>
-            <button onClick={resetAll} className="text-slate-300 hover:text-slate-500"><Icon name="refresh" className="w-4 h-4" /></button>
+            <button onClick={switchSubject} className="text-slate-300 hover:text-slate-500" title="Switch subject"><Icon name="book" className="w-4 h-4" /></button>
+            <button onClick={resetAll} className="text-slate-300 hover:text-slate-500" title="Reset progress"><Icon name="refresh" className="w-4 h-4" /></button>
           </div>
         </div>
       </div>
@@ -744,7 +808,7 @@ export function AIMastery({ onBack, userId }) {
                     <div className="flex items-center gap-3">
                       <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg ${grade <= 6 ? 'bg-green-600' : grade <= 8 ? 'bg-blue-600' : grade <= 10 ? 'bg-purple-600' : 'bg-red-600'}`}>{grade}</div>
                       <div className="text-left">
-                        <div className="font-semibold">Grade {grade}</div>
+                        <div className="font-semibold">{gradeLabel(grade)}</div>
                         <div className="text-sm text-slate-400">{mastered}/{gradeSkills.length} mastered</div>
                       </div>
                     </div>
@@ -759,7 +823,7 @@ export function AIMastery({ onBack, userId }) {
                         <div key={strand}>
                           <div className="text-xs text-slate-500 uppercase tracking-wider mb-1 px-2">{strand}</div>
                           <div className="space-y-1">{skills.map(skill => {
-                            const status = getStatus(skill.id, progress);
+                            const status = getStatus(skill.id, progress, ctx);
                             const sp = progress.skills[skill.id];
                             return (
                               <button key={skill.id} onClick={() => status !== 'locked' && startLesson(skill.id)} disabled={status === 'locked'} className={`w-full flex items-center gap-3 p-3 rounded-xl transition-all ${status === 'locked' ? 'bg-slate-800/50 opacity-50 cursor-not-allowed' : status === 'mastered' ? 'bg-emerald-900/20 border border-emerald-800' : status === 'in_progress' ? 'bg-blue-900/20 border border-blue-800' : 'bg-slate-800 hover:bg-slate-700'}`}>
@@ -811,7 +875,7 @@ export function AIMastery({ onBack, userId }) {
               <h3 className="font-semibold mb-3">Grade Progress</h3>
               <div className="space-y-2">{gradeStats.map(gs => (
                 <div key={gs.grade} className="flex items-center gap-3">
-                  <span className="text-sm text-slate-400 w-16">Grade {gs.grade}</span>
+                  <span className="text-sm text-slate-400 w-24">{sub?.gradeNames?.[gs.grade] || `Grade ${gs.grade}`}</span>
                   <div className="flex-1 h-3 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${gs.percent}%` }} /></div>
                   <span className="text-sm font-medium w-12 text-right">{gs.percent}%</span>
                 </div>

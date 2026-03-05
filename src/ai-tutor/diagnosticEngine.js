@@ -1,30 +1,30 @@
 // ============================================================================
 // DIAGNOSTIC ENGINE — Adaptive placement with credit propagation
 // Based on "The Math Academy Way" diagnostic approach
+// Subject-agnostic: accepts optional ctx parameter
 // ============================================================================
 
-import { SKILLS, getPrerequisiteChain, getPostRequisiteChain } from './knowledgeGraph.js';
+import { SKILLS as MATH_SKILLS, getPrerequisiteChain as mathPreChain, getPostRequisiteChain as mathPostChain } from './knowledgeGraph.js';
 
 // ==================== CREDIT PROPAGATION ====================
-// When student answers correctly, credit flows UP to prerequisites
-// When student answers incorrectly, negative credit flows DOWN to post-requisites
 
-export const propagateCredit = (balances, skillId, correct, weight = 1.0) => {
+export const propagateCredit = (balances, skillId, correct, weight = 1.0, ctx) => {
+  const getPreChain = ctx?.getPreChain || mathPreChain;
+  const getPostChain = ctx?.getPostChain || mathPostChain;
   const newBalances = { ...balances };
 
-  // Update the answered skill itself
   newBalances[skillId] = (newBalances[skillId] || 0) + (correct ? weight : -weight);
 
   if (correct) {
-    // Positive credit propagates UP to prerequisites (if I know advanced, I likely know basics)
-    const prereqs = getPrerequisiteChain(skillId);
+    let prereqs;
+    try { prereqs = getPreChain(skillId); } catch(e) { prereqs = []; }
     for (const preId of prereqs) {
-      const discount = 0.6; // Diminishing credit for distant prerequisites
+      const discount = 0.6;
       newBalances[preId] = (newBalances[preId] || 0) + weight * discount;
     }
   } else {
-    // Negative credit propagates DOWN to post-requisites (if I fail basics, likely fail advanced)
-    const postReqs = getPostRequisiteChain(skillId);
+    let postReqs;
+    try { postReqs = getPostChain(skillId); } catch(e) { postReqs = []; }
     for (const postId of postReqs) {
       const discount = 0.5;
       newBalances[postId] = (newBalances[postId] || 0) - weight * discount;
@@ -35,7 +35,6 @@ export const propagateCredit = (balances, skillId, correct, weight = 1.0) => {
 };
 
 // ==================== TIME-WEIGHTED SCORING ====================
-// If answer takes too long, reduce credit weight (Math Academy approach)
 
 export const getTimeWeight = (timeTakenMs, expectedMs = 30000) => {
   if (timeTakenMs <= expectedMs) return 1.0;
@@ -45,22 +44,18 @@ export const getTimeWeight = (timeTakenMs, expectedMs = 30000) => {
 };
 
 // ==================== ADAPTIVE QUESTION SELECTION ====================
-// Choose next diagnostic question based on current confidence levels
 
-export const selectNextQuestion = (balances, availableSkills, answeredSkills) => {
+export const selectNextQuestion = (balances, availableSkills, answeredSkills, ctx) => {
+  const skills = ctx?.skills || MATH_SKILLS;
   const unanswered = availableSkills.filter(s => !answeredSkills.has(s.id));
   if (unanswered.length === 0) return null;
 
-  // Priority: skills with lowest absolute confidence (most uncertain)
-  // But also consider coverage across strands and grades
   const scored = unanswered.map(s => {
     const confidence = Math.abs(balances[s.id] || 0);
-    const strandBonus = getStrandCoverage(answeredSkills, s.strand);
-    const gradeBias = 0; // Could add adaptive difficulty here
-
+    const strandBonus = getStrandCoverage(answeredSkills, s.strand, skills);
     return {
       skill: s,
-      score: -confidence + strandBonus, // Lower confidence = higher priority
+      score: -confidence + strandBonus,
     };
   });
 
@@ -68,25 +63,22 @@ export const selectNextQuestion = (balances, availableSkills, answeredSkills) =>
   return scored[0]?.skill || unanswered[0];
 };
 
-// Helper: bonus for underrepresented strands
-const getStrandCoverage = (answered, strand) => {
-  const strandCount = [...answered].filter(id => SKILLS[id]?.strand === strand).length;
-  return Math.max(0, 3 - strandCount); // Bonus if strand has < 3 questions
+const getStrandCoverage = (answered, strand, skills) => {
+  const strandCount = [...answered].filter(id => skills[id]?.strand === strand).length;
+  return Math.max(0, 3 - strandCount);
 };
 
 // ==================== PROCESS DIAGNOSTIC RESULTS ====================
-// Convert plus-minus balances into initial progress state
 
-export const processDiagnosticResults = (balances) => {
-  const skills = {};
+export const processDiagnosticResults = (balances, ctx) => {
+  const skills = ctx?.skills || MATH_SKILLS;
+  const result = {};
 
   for (const [skillId, balance] of Object.entries(balances)) {
-    if (!SKILLS[skillId]) continue;
-    const skill = SKILLS[skillId];
+    if (!skills[skillId]) continue;
 
     if (balance > 0.5) {
-      // Student likely knows this skill
-      skills[skillId] = {
+      result[skillId] = {
         attempts: Math.round(Math.abs(balance)),
         correct: Math.round(Math.abs(balance)),
         mastered: balance > 1.5,
@@ -98,8 +90,7 @@ export const processDiagnosticResults = (balances) => {
         consecutiveFailures: 0,
       };
     } else if (balance < -0.3) {
-      // Student likely doesn't know this — mark as needs learning
-      skills[skillId] = {
+      result[skillId] = {
         attempts: 1,
         correct: 0,
         mastered: false,
@@ -111,21 +102,20 @@ export const processDiagnosticResults = (balances) => {
         consecutiveFailures: 0,
       };
     }
-    // Skills with near-zero balance: uncertain, leave unassessed
   }
 
-  return skills;
+  return result;
 };
 
 // ==================== CONFLICT DETECTION ====================
-// Detect when student gets advanced skill right but prerequisite wrong
 
-export const detectConflicts = (balances, results) => {
+export const detectConflicts = (balances, results, ctx) => {
+  const skills = ctx?.skills || MATH_SKILLS;
   const conflicts = [];
 
   for (const [skillId, result] of Object.entries(results)) {
     if (!result.correct) continue;
-    const skill = SKILLS[skillId];
+    const skill = skills[skillId];
     if (!skill) continue;
 
     for (const preId of skill.prerequisites) {
@@ -135,7 +125,7 @@ export const detectConflicts = (balances, results) => {
           advancedSkill: skillId,
           prerequisite: preId,
           type: 'prerequisite-postrequisite',
-          message: `Got ${skill.name} right but struggled with prerequisite ${SKILLS[preId]?.name}`,
+          message: `Got ${skill.name} right but struggled with prerequisite ${skills[preId]?.name}`,
         });
       }
     }

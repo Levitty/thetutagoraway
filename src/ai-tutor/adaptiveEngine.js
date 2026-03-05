@@ -1,16 +1,39 @@
 // ============================================================================
 // ADAPTIVE ENGINE — Knowledge frontier, gap detection, learning path
 // Based on "The Math Academy Way" methodology
+// Subject-agnostic: accepts a ctx parameter { skills, getPostReqs, strands }
 // ============================================================================
 
-import { SKILLS, getPostRequisites, getPrerequisiteChain, getPostRequisiteChain, STRANDS } from './knowledgeGraph.js';
+import { SKILLS as MATH_SKILLS, getPostRequisites as mathGetPostReqs, getPrerequisiteChain as mathPreChain, getPostRequisiteChain as mathPostChain, STRANDS as MATH_STRANDS } from './knowledgeGraph.js';
 
-const skillList = Object.values(SKILLS);
+// Default context (math) for backward compatibility
+const defaultCtx = () => ({
+  skills: MATH_SKILLS,
+  skillList: Object.values(MATH_SKILLS),
+  getPostReqs: mathGetPostReqs,
+  getPreChain: mathPreChain,
+  getPostChain: mathPostChain,
+  strands: MATH_STRANDS,
+});
+
+const resolveCtx = (ctx) => {
+  if (!ctx) return defaultCtx();
+  const skills = ctx.skills || MATH_SKILLS;
+  return {
+    skills,
+    skillList: Object.values(skills),
+    getPostReqs: ctx.getPostReqs || mathGetPostReqs,
+    getPreChain: ctx.getPreChain || mathPreChain,
+    getPostChain: ctx.getPostChain || mathPostChain,
+    strands: ctx.strands || MATH_STRANDS,
+  };
+};
 
 // ==================== PREREQUISITE CHECKING ====================
 
-export const prereqsMet = (skillId, progress) => {
-  const skill = SKILLS[skillId];
+export const prereqsMet = (skillId, progress, ctx) => {
+  const c = resolveCtx(ctx);
+  const skill = c.skills[skillId];
   if (!skill || skill.prerequisites.length === 0) return true;
   return skill.prerequisites.every(pid => {
     const sp = progress.skills[pid];
@@ -20,57 +43,52 @@ export const prereqsMet = (skillId, progress) => {
 
 // ==================== SKILL STATUS ====================
 
-export const getStatus = (skillId, progress) => {
+export const getStatus = (skillId, progress, ctx) => {
   const sp = progress.skills[skillId];
   if (sp?.mastered) return 'mastered';
   if (sp?.attempts > 0) return 'in_progress';
-  return prereqsMet(skillId, progress) ? 'available' : 'locked';
+  return prereqsMet(skillId, progress, ctx) ? 'available' : 'locked';
 };
 
 // ==================== KNOWLEDGE FRONTIER ====================
-// The frontier is the set of skills a student is ready to learn
-// (prerequisites met but not yet mastered)
 
-export const getKnowledgeFrontier = (progress) => {
-  return skillList.filter(s => {
+export const getKnowledgeFrontier = (progress, ctx) => {
+  const c = resolveCtx(ctx);
+  return c.skillList.filter(s => {
     const sp = progress.skills[s.id];
     if (sp?.mastered) return false;
-    return prereqsMet(s.id, progress);
+    return prereqsMet(s.id, progress, ctx);
   });
 };
 
 // ==================== GAP DETECTION ====================
-// Identifies foundational gaps: student is struggling with a skill
-// because prerequisites are weak
 
-export const findGaps = (progress) => {
+export const findGaps = (progress, ctx) => {
+  const c = resolveCtx(ctx);
   const gaps = [];
   const seen = new Set();
 
-  for (const skill of skillList) {
+  for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
-    // Student has attempted this skill and is struggling (< 60% accuracy after 3+ attempts)
     if (sp && sp.attempts >= 3 && (sp.correct / sp.attempts) < 0.6) {
-      // Check key prerequisites — these are the most likely cause
       const preReqs = skill.keyPrerequisites || skill.prerequisites;
       for (const pid of preReqs) {
         const pp = progress.skills[pid];
-        // If prerequisite isn't mastered, it's a gap
         if (!pp?.mastered && !seen.has(pid)) {
           seen.add(pid);
-          const preSkill = SKILLS[pid];
+          const preSkill = c.skills[pid];
           if (!preSkill) continue;
 
-          // Calculate priority: how many skills depend on this gap?
-          const dependents = getPostRequisiteChain(pid);
-          const priority = (preSkill.critical ? 15 : 5) + dependents.length * 2;
+          let dependentCount = 0;
+          try { dependentCount = c.getPostChain(pid).length; } catch(e) { dependentCount = 0; }
+          const priority = (preSkill.critical ? 15 : 5) + dependentCount * 2;
 
           gaps.push({
             ...preSkill,
             priority,
             reason: `Needed for ${skill.name}`,
             type: 'gap',
-            blockedSkills: dependents.length,
+            blockedSkills: dependentCount,
           });
         }
       }
@@ -81,25 +99,21 @@ export const findGaps = (progress) => {
 };
 
 // ==================== REVIEW DETECTION ====================
-// Skills due for spaced repetition review
 
-export const getReviews = (progress) => {
+export const getReviews = (progress, ctx) => {
+  const c = resolveCtx(ctx);
   const now = Date.now();
   const reviews = [];
 
-  for (const skill of skillList) {
+  for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
     if (!sp?.mastered || !sp.lastPractice) continue;
 
     const daysSince = (now - new Date(sp.lastPractice).getTime()) / 86400000;
     const repNum = sp.repNum || 0;
-
-    // FIRe-inspired intervals: increases with each successful review
     const baseIntervals = [1, 3, 7, 14, 30, 60, 120, 240];
     const learningSpeed = sp.learningSpeed || 1.0;
     const interval = (baseIntervals[Math.min(repNum, baseIntervals.length - 1)]) / learningSpeed;
-
-    // Memory strength estimation (exponential decay)
     const memoryStrength = Math.exp(-daysSince / Math.max(interval, 1));
 
     if (memoryStrength < 0.6) {
@@ -107,7 +121,7 @@ export const getReviews = (progress) => {
         ...skill,
         daysSince: Math.round(daysSince),
         memoryStrength: Math.round(memoryStrength * 100),
-        urgency: 1 - memoryStrength, // Higher = more urgent
+        urgency: 1 - memoryStrength,
         type: 'review',
       });
     }
@@ -117,20 +131,21 @@ export const getReviews = (progress) => {
 };
 
 // ==================== NEXT SKILLS TO LEARN ====================
-// Prioritized by: critical skills, number of dependents, already started
 
-export const getNextToLearn = (progress) => {
-  return skillList
+export const getNextToLearn = (progress, ctx) => {
+  const c = resolveCtx(ctx);
+  return c.skillList
     .filter(s => {
       const sp = progress.skills[s.id];
-      return !sp?.mastered && prereqsMet(s.id, progress);
+      return !sp?.mastered && prereqsMet(s.id, progress, ctx);
     })
     .map(s => {
-      const dependents = getPostRequisites(s.id).length;
+      let dependents = 0;
+      try { dependents = c.getPostReqs(s.id).length; } catch(e) {}
       const sp = progress.skills[s.id];
       const inProgress = sp?.attempts > 0 ? 8 : 0;
       const criticalBonus = s.critical ? 12 : 0;
-      const gradeProximity = Math.max(0, 8 - Math.abs(s.grade - getEstimatedGradeLevel(progress)));
+      const gradeProximity = Math.max(0, 8 - Math.abs(s.grade - getEstimatedGradeLevel(progress, ctx)));
 
       return {
         ...s,
@@ -142,29 +157,22 @@ export const getNextToLearn = (progress) => {
 };
 
 // ==================== RECOMMENDED LEARNING PATH ====================
-// Combines gaps, reviews, and new skills into an ordered path
-// Following Math Academy's approach: gaps first, then reviews, then new material
 
-export const getRecommendedPath = (progress) => {
+export const getRecommendedPath = (progress, ctx) => {
   const path = [];
   const seen = new Set();
 
-  // Priority 1: Foundation gaps (targeted remediation)
-  const gaps = findGaps(progress);
+  const gaps = findGaps(progress, ctx);
   for (const g of gaps.slice(0, 3)) {
     if (!seen.has(g.id)) { path.push(g); seen.add(g.id); }
   }
 
-  // Priority 2: Spaced repetition reviews (due items)
-  const reviews = getReviews(progress);
+  const reviews = getReviews(progress, ctx);
   for (const r of reviews.slice(0, 2)) {
     if (!seen.has(r.id)) { path.push(r); seen.add(r.id); }
   }
 
-  // Priority 3: New skills to learn (knowledge frontier)
-  const nextSkills = getNextToLearn(progress);
-
-  // Macro-interleaving: pick from different strands
+  const nextSkills = getNextToLearn(progress, ctx);
   const strandPicks = {};
   for (const s of nextSkills) {
     if (seen.has(s.id)) continue;
@@ -175,7 +183,6 @@ export const getRecommendedPath = (progress) => {
     if (path.length < 8) { path.push(s); seen.add(s.id); }
   }
 
-  // Fill remaining spots
   for (const s of nextSkills) {
     if (path.length >= 8 || seen.has(s.id)) continue;
     path.push(s); seen.add(s.id);
@@ -185,30 +192,25 @@ export const getRecommendedPath = (progress) => {
 };
 
 // ==================== DIAGNOSTIC SKILL SELECTION ====================
-// Select skills for diagnostic test using graph compression
-// A skill is "covered" if it has progeny and ancestor within 3 edges
 
-export const getDiagnosticSkills = (progress) => {
-  // Select representative skills across difficulty levels and strands
-  const easy = skillList.filter(s => s.weight <= 2);
-  const medium = skillList.filter(s => s.weight > 2 && s.weight <= 4);
-  const hard = skillList.filter(s => s.weight > 4 && s.weight <= 6);
-  const veryHard = skillList.filter(s => s.weight > 6);
+export const getDiagnosticSkills = (progress, ctx) => {
+  const c = resolveCtx(ctx);
+  const easy = c.skillList.filter(s => s.weight <= 2);
+  const medium = c.skillList.filter(s => s.weight > 2 && s.weight <= 4);
+  const hard = c.skillList.filter(s => s.weight > 4 && s.weight <= 6);
+  const veryHard = c.skillList.filter(s => s.weight > 6);
 
   const shuffleArr = (arr) => [...arr].sort(() => Math.random() - 0.5);
 
-  // Ensure strand coverage
   const selected = [];
   const usedStrands = new Set();
 
-  // Pick critical skills first (gateway skills)
-  const criticals = shuffleArr(skillList.filter(s => s.critical));
+  const criticals = shuffleArr(c.skillList.filter(s => s.critical));
   for (const s of criticals.slice(0, 10)) {
     selected.push(s);
     usedStrands.add(s.strand);
   }
 
-  // Fill with balanced difficulty
   const remaining = [
     ...shuffleArr(easy).slice(0, 6),
     ...shuffleArr(medium).slice(0, 10),
@@ -221,38 +223,37 @@ export const getDiagnosticSkills = (progress) => {
     selected.push(s);
   }
 
-  // Sort by difficulty (start easy, get harder — adaptive)
   return selected.sort((a, b) => a.weight - b.weight);
 };
 
 // ==================== TARGETED REMEDIATION ====================
-// When student fails a KP, find the key prerequisites to remediate
 
-export const getRemediationSkills = (skillId, kpIndex, progress) => {
-  const skill = SKILLS[skillId];
+export const getRemediationSkills = (skillId, kpIndex, progress, ctx) => {
+  const c = resolveCtx(ctx);
+  const skill = c.skills[skillId];
   if (!skill) return [];
 
-  // Use key prerequisites for that skill
   const keyPres = skill.keyPrerequisites || skill.prerequisites;
 
   return keyPres
     .filter(pid => {
       const pp = progress.skills[pid];
-      // Only remediate if not fully mastered or has been struggling
       return !pp?.mastered || (pp.attempts > 0 && pp.correct / pp.attempts < 0.8);
     })
     .map(pid => ({
-      ...SKILLS[pid],
+      ...c.skills[pid],
       type: 'remediation',
       reason: `Foundation for ${skill.name}`,
-    }));
+    }))
+    .filter(s => s.id); // filter out undefined skills
 };
 
 // ==================== STATISTICS ====================
 
-export const getStats = (progress) => {
-  let mastered = 0, total = skillList.length, correct = 0, attempts = 0;
-  for (const s of skillList) {
+export const getStats = (progress, ctx) => {
+  const c = resolveCtx(ctx);
+  let mastered = 0, total = c.skillList.length, correct = 0, attempts = 0;
+  for (const s of c.skillList) {
     if (progress.skills[s.id]?.mastered) mastered++;
     correct += progress.skills[s.id]?.correct || 0;
     attempts += progress.skills[s.id]?.attempts || 0;
@@ -267,9 +268,10 @@ export const getStats = (progress) => {
   };
 };
 
-export const getStrandStats = (progress) => {
+export const getStrandStats = (progress, ctx) => {
+  const c = resolveCtx(ctx);
   const strands = {};
-  for (const s of skillList) {
+  for (const s of c.skillList) {
     if (!strands[s.strand]) strands[s.strand] = { total: 0, mastered: 0, correct: 0, attempts: 0, skills: [] };
     strands[s.strand].total++;
     strands[s.strand].skills.push(s);
@@ -286,9 +288,10 @@ export const getStrandStats = (progress) => {
   }));
 };
 
-export const getGradeStats = (progress) => {
+export const getGradeStats = (progress, ctx) => {
+  const c = resolveCtx(ctx);
   const grades = {};
-  for (const s of skillList) {
+  for (const s of c.skillList) {
     if (!grades[s.grade]) grades[s.grade] = { total: 0, mastered: 0 };
     grades[s.grade].total++;
     if (progress.skills[s.id]?.mastered) grades[s.grade].mastered++;
@@ -300,26 +303,27 @@ export const getGradeStats = (progress) => {
   })).sort((a, b) => a.grade - b.grade);
 };
 
-// Estimate the student's current working grade level
-export const getEstimatedGradeLevel = (progress) => {
-  const gradeStats = getGradeStats(progress);
-  let level = 5;
+export const getEstimatedGradeLevel = (progress, ctx) => {
+  const gradeStats = getGradeStats(progress, ctx);
+  const c = resolveCtx(ctx);
+  const minGrade = c.skillList.reduce((m, s) => Math.min(m, s.grade), Infinity);
+  let level = minGrade;
   for (const gs of gradeStats) {
     if (gs.percent >= 60) level = gs.grade + 1;
     else break;
   }
-  return Math.min(level, 12);
+  const maxGrade = c.skillList.reduce((m, s) => Math.max(m, s.grade), 0);
+  return Math.min(level, maxGrade);
 };
 
 // ==================== XP SYSTEM ====================
 
 export const calculateXP = (accuracy, estimatedMinutes, isPerfect) => {
   const baseXP = estimatedMinutes || 15;
-
-  if (accuracy >= 1.0) return Math.round(baseXP * 1.5); // Perfect: 150%
-  if (accuracy >= 0.9) return Math.round(baseXP * 1.25); // Excellent: 125%
-  if (accuracy >= 0.7) return Math.round(baseXP); // Passing: 100%
-  return Math.round(baseXP * 0.5); // Below passing: 50%
+  if (accuracy >= 1.0) return Math.round(baseXP * 1.5);
+  if (accuracy >= 0.9) return Math.round(baseXP * 1.25);
+  if (accuracy >= 0.7) return Math.round(baseXP);
+  return Math.round(baseXP * 0.5);
 };
 
 export const getTotalXP = (progress) => {
@@ -327,7 +331,6 @@ export const getTotalXP = (progress) => {
 };
 
 export const getLevel = (totalXP) => {
-  // Exponential level curve
   const levels = [0, 50, 150, 300, 500, 800, 1200, 1800, 2600, 3600, 5000, 7000, 10000, 14000, 20000];
   let level = 1;
   for (let i = 1; i < levels.length; i++) {
@@ -345,17 +348,15 @@ export const getLevel = (totalXP) => {
 };
 
 // ==================== INTERLEAVED REVIEW SELECTION ====================
-// Select problems for a review session with micro-interleaving
 
-export const selectReviewProblems = (progress, count = 12) => {
-  const reviews = getReviews(progress);
-  const masteredSkills = skillList.filter(s => progress.skills[s.id]?.mastered);
+export const selectReviewProblems = (progress, count = 12, ctx) => {
+  const c = resolveCtx(ctx);
+  const reviews = getReviews(progress, ctx);
+  const masteredSkills = c.skillList.filter(s => progress.skills[s.id]?.mastered);
 
-  // Prioritize due reviews, then sample from mastered skills
   const selected = [];
   const problemsPerSkill = 3;
 
-  // Due reviews first
   for (const r of reviews) {
     if (selected.length >= count) break;
     for (let i = 0; i < problemsPerSkill && selected.length < count; i++) {
@@ -363,7 +364,6 @@ export const selectReviewProblems = (progress, count = 12) => {
     }
   }
 
-  // Fill with random mastered skills (micro-interleaving)
   const shuffled = [...masteredSkills].sort(() => Math.random() - 0.5);
   for (const s of shuffled) {
     if (selected.length >= count) break;
@@ -374,7 +374,6 @@ export const selectReviewProblems = (progress, count = 12) => {
     }
   }
 
-  // Shuffle for interleaving (don't group same-skill problems together)
   return selected.sort(() => Math.random() - 0.5);
 };
 
