@@ -361,10 +361,11 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
     <div className="min-h-screen bg-slate-50">
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40">
         <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <button onClick={() => onNavigate('home')} className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold">T</div>
-            <span className="font-semibold">Tutagora</span>
-          </div>
+            <span className="font-semibold text-slate-900">Tutagora</span>
+            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-blue-100 text-blue-700 uppercase tracking-wide">Student</span>
+          </button>
           <div className="flex items-center gap-4">
             <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600">Find Tutors</button>
             <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>
@@ -1152,7 +1153,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
 };
 
 // ============ TUTOR DASHBOARD ============
-const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartLesson, onOpenMessages, onRefreshProfile }) => {
+const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, onNavigate }) => {
   const [tab, setTab] = useState('overview');
   const tutor = profile?.tutors?.[0];
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
@@ -1214,13 +1215,13 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
       {/* Sidebar */}
       <aside className="w-64 bg-white border-r border-slate-200 hidden lg:flex flex-col">
         <div className="h-16 px-6 flex items-center border-b border-slate-100">
-          <div className="flex items-center gap-3">
+          <button onClick={() => onNavigate && onNavigate('home')} className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-bold text-sm">T</div>
-            <div>
+            <div className="text-left">
               <div className="font-semibold text-slate-900 text-sm">Tutagora</div>
-              <div className="text-xs text-slate-400">Tutor Portal</div>
+              <div className="text-xs text-emerald-600 font-medium">Tutor Portal</div>
             </div>
-          </div>
+          </button>
         </div>
         
         <nav className="flex-1 p-4 space-y-1">
@@ -1254,8 +1255,13 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
       {/* Main Content */}
       <main className="flex-1 flex flex-col">
         <header className="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between">
-          <div>
+          <div className="flex items-center gap-3">
+            {/* Mobile-only logo + home link (sidebar hidden on mobile) */}
+            <button onClick={() => onNavigate && onNavigate('home')} className="lg:hidden flex items-center gap-2 mr-2">
+              <div className="w-7 h-7 rounded-lg bg-slate-900 flex items-center justify-center text-white font-bold text-xs">T</div>
+            </button>
             <h1 className="text-lg font-semibold text-slate-900">{navItems.find(n => n.id === tab)?.label}</h1>
+            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-emerald-100 text-emerald-700 uppercase tracking-wide">Tutor</span>
           </div>
           <div className="flex items-center gap-4">
             <MessageButton onClick={onOpenMessages} />
@@ -3114,6 +3120,9 @@ export default function App() {
     const path = window.location.pathname.replace(/^\//, '');
     if (path === 'consulting') return 'consulting';
     if (path === 'tutors') return 'tutors';
+    if (path === 'dashboard') return 'dashboard';
+    if (path === 'ai') return 'ai';
+    if (path === 'admin') return 'admin';
     return 'home';
   });
   const [showAuth, setShowAuth] = useState(null);
@@ -3130,6 +3139,23 @@ export default function App() {
     const h = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', h);
     return () => window.removeEventListener('scroll', h);
+  }, []);
+
+  // Browser back/forward button support
+  useEffect(() => {
+    const onPopState = () => {
+      const path = window.location.pathname.replace(/^\//, '');
+      if (path === 'consulting') setPage('consulting');
+      else if (path === 'tutors') setPage('tutors');
+      else if (path === 'dashboard') setPage('dashboard');
+      else if (path === 'ai') setPage('ai');
+      else if (path === 'admin') setPage('admin');
+      else setPage('home');
+      setSelectedTutor(null);
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
   const handleNavigate = (p) => { setPage(p); setSelectedTutor(null); window.scrollTo(0, 0); window.history.pushState({}, '', p === 'home' ? '/' : '/' + p); };
@@ -3176,7 +3202,7 @@ export default function App() {
     if (auth.profile?.role === 'tutor') {
       return (
         <>
-          <TutorDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} />
+          <TutorDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} onNavigate={handleNavigate} />
           {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
         </>
       );
