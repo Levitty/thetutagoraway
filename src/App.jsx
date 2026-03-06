@@ -185,8 +185,9 @@ const useTutors = () => {
     const { data, error } = await supabase
       .from('tutors')
       .select(`*, profiles(full_name, avatar_url, email), availability(*)`)
+      .eq('verification_status', 'approved')
       .order('rating', { ascending: false });
-    
+
     if (error) console.error('Error fetching tutors:', error);
     if (data) setTutors(data);
     setLoading(false);
@@ -240,12 +241,12 @@ const useBookings = (userId, role, tutorId = null) => {
       subject,
       lesson_date: date,
       start_time: time,
-      status: 'confirmed'
+      status: 'pending'
     }).select(`*, tutors(*, profiles(full_name, email)), profiles!bookings_student_id_fkey(full_name, email)`).single();
-    
+
     if (error) throw error;
 
-    // Send notifications (message + email)
+    // Send in-app message to tutor (emails sent after payment in PaymentModal)
     if (data) {
       await sendBookingNotifications(data, userId);
     }
@@ -278,27 +279,8 @@ const sendBookingNotifications = async (booking, studentId) => {
       });
     }
 
-    // 2. Send email notifications via Edge Function (if available)
-    // This calls a Supabase Edge Function to send emails
-    try {
-      await supabase.functions.invoke('send-booking-email', {
-        body: {
-          tutorEmail,
-          tutorName,
-          studentEmail,
-          studentName,
-          subject,
-          lessonDate,
-          lessonTime,
-          bookingId: booking.id
-        }
-      });
-    } catch (emailErr) {
-      // Edge function might not exist yet - that's ok
-      console.log('Email notification skipped (edge function not deployed):', emailErr.message);
-    }
-
-    console.log('Booking notifications sent successfully');
+    // Email notifications are sent after payment success in PaymentModal
+    console.log('Booking in-app notification sent successfully');
   } catch (err) {
     console.error('Error sending booking notifications:', err);
   }
@@ -970,6 +952,7 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
 
 // ============ TUTOR ONBOARDING ============
 const TutorOnboarding = ({ profile, onComplete }) => {
+  const [step, setStep] = useState(1); // 1 = profile info, 2 = document upload
   const [form, setForm] = useState({
     subject: '',
     headline: '',
@@ -977,82 +960,73 @@ const TutorOnboarding = ({ profile, onComplete }) => {
     hourly_rate: 1000,
     degree: '',
   });
+  const [idFile, setIdFile] = useState(null);
+  const [credentialFile, setCredentialFile] = useState(null);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e) => {
+  const uploadFile = async (file, folder) => {
+    const ext = file.name.split('.').pop();
+    const path = `${profile.id}/${folder}-${Date.now()}.${ext}`;
+    const { data, error } = await supabase.storage.from('tutor-documents').upload(path, file);
+    if (error) throw new Error(`Upload failed: ${error.message}`);
+    const { data: urlData } = supabase.storage.from('tutor-documents').getPublicUrl(path);
+    return urlData.publicUrl;
+  };
+
+  const handleSubmitProfile = (e) => {
     e.preventDefault();
-    if (!form.subject) {
-      setError('Please select a subject');
-      return;
-    }
-    
+    if (!form.subject) { setError('Please select a subject'); return; }
+    setError('');
+    setStep(2);
+  };
+
+  const handleSubmitDocuments = async (e) => {
+    e.preventDefault();
+    if (!idFile) { setError('Please upload your national ID'); return; }
+    if (!credentialFile) { setError('Please upload your teaching certificate'); return; }
+
     setSaving(true);
     setError('');
-    
+
     try {
-      // Check if tutor profile already exists
+      const idUrl = await uploadFile(idFile, 'national-id');
+      const credUrl = await uploadFile(credentialFile, 'credential');
+
       const { data: existingTutor } = await supabase
-        .from('tutors')
-        .select('id')
-        .eq('user_id', profile.id)
-        .single();
+        .from('tutors').select('id').eq('user_id', profile.id).single();
+
+      const tutorPayload = {
+        subject: form.subject,
+        headline: form.headline,
+        bio: form.bio,
+        hourly_rate: form.hourly_rate,
+        degree: form.degree,
+        verified: false,
+        verification_status: 'pending',
+        id_document_url: idUrl,
+        credential_url: credUrl,
+      };
 
       let tutorData;
-
       if (existingTutor) {
-        // Update existing tutor
-        const { data, error: updateError } = await supabase
-          .from('tutors')
-          .update({
-            subject: form.subject,
-            headline: form.headline,
-            bio: form.bio,
-            hourly_rate: form.hourly_rate,
-            degree: form.degree,
-            verified: true,
-          })
-          .eq('user_id', profile.id)
-          .select()
-          .single();
-        
-        if (updateError) throw updateError;
+        const { data, error: e } = await supabase.from('tutors').update(tutorPayload)
+          .eq('user_id', profile.id).select().single();
+        if (e) throw e;
         tutorData = data;
       } else {
-        // Create new tutor profile
-        const { data, error: insertError } = await supabase
-          .from('tutors')
-          .insert({
-            user_id: profile.id,
-            subject: form.subject,
-            headline: form.headline,
-            bio: form.bio,
-            hourly_rate: form.hourly_rate,
-            degree: form.degree,
-            verified: true,
-          })
-          .select()
-          .single();
-
-        if (insertError) throw insertError;
+        const { data, error: e } = await supabase.from('tutors')
+          .insert({ user_id: profile.id, ...tutorPayload }).select().single();
+        if (e) throw e;
         tutorData = data;
       }
 
-      // Create default availability (Mon-Fri 9am-5pm) if it doesn't exist
       const { data: existingAvail } = await supabase
-        .from('availability')
-        .select('id')
-        .eq('tutor_id', tutorData.id)
-        .limit(1);
-
+        .from('availability').select('id').eq('tutor_id', tutorData.id).limit(1);
       if (!existingAvail || existingAvail.length === 0) {
-        const defaultAvailability = [1, 2, 3, 4, 5].map(day => ({
-          tutor_id: tutorData.id,
-          day_of_week: day,
-          start_time: '09:00',
-          end_time: '17:00',
-        }));
-        await supabase.from('availability').insert(defaultAvailability);
+        await supabase.from('availability').insert(
+          [1, 2, 3, 4, 5].map(day => ({ tutor_id: tutorData.id, day_of_week: day, start_time: '09:00', end_time: '17:00' }))
+        );
       }
 
       onComplete();
@@ -1065,6 +1039,28 @@ const TutorOnboarding = ({ profile, onComplete }) => {
 
   const subjects = ['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'];
 
+  const FileUpload = ({ label, hint, file, onFile }) => (
+    <div>
+      <label className="block text-sm font-medium text-slate-700 mb-2">{label} *</label>
+      <label className="flex flex-col items-center justify-center w-full h-28 border-2 border-dashed border-slate-200 rounded-xl cursor-pointer hover:border-emerald-400 hover:bg-emerald-50/30 transition-all">
+        {file ? (
+          <div className="flex items-center gap-3 px-4">
+            <svg className="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+            <span className="text-sm text-slate-700 truncate max-w-[200px]">{file.name}</span>
+            <span className="text-xs text-slate-400">({(file.size / 1024).toFixed(0)} KB)</span>
+          </div>
+        ) : (
+          <div className="text-center">
+            <svg className="w-7 h-7 text-slate-300 mx-auto mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>
+            <span className="text-sm text-slate-500">Click to upload</span>
+            <span className="text-xs text-slate-400 block mt-0.5">{hint}</span>
+          </div>
+        )}
+        <input type="file" className="hidden" accept="image/*,.pdf" onChange={(e) => onFile(e.target.files[0])} />
+      </label>
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-500 to-emerald-600 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl w-full max-w-lg p-8 shadow-xl">
@@ -1073,84 +1069,83 @@ const TutorOnboarding = ({ profile, onComplete }) => {
             <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
             </svg>
           </div>
           <h1 className="text-2xl font-bold text-slate-900">Welcome, {profile?.full_name?.split(' ')[0]}</h1>
-          <p className="text-slate-500 mt-1">Let's set up your tutor profile</p>
+          <p className="text-slate-500 mt-1">{step === 1 ? "Let us set up your tutor profile" : "Upload your verification documents"}</p>
+          {/* Step indicator */}
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <div className={`w-8 h-1 rounded-full ${step >= 1 ? 'bg-emerald-500' : 'bg-slate-200'}`} />
+            <div className={`w-8 h-1 rounded-full ${step >= 2 ? 'bg-emerald-500' : 'bg-slate-200'}`} />
+          </div>
         </div>
 
-        {error && (
-          <div className="mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-lg">{error}</div>
+        {error && <div className="mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-lg">{error}</div>}
+
+        {/* Step 1: Profile info */}
+        {step === 1 && (
+          <form onSubmit={handleSubmitProfile} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">What subject do you teach? *</label>
+              <select value={form.subject} onChange={(e) => setForm({ ...form, subject: e.target.value })}
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" required>
+                <option value="">Select a subject</option>
+                {subjects.map(s => <option key={s} value={s}>{s}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Headline</label>
+              <input type="text" value={form.headline} onChange={(e) => setForm({ ...form, headline: e.target.value })}
+                placeholder="e.g. Making calculus intuitive"
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Your qualification</label>
+              <input type="text" value={form.degree} onChange={(e) => setForm({ ...form, degree: e.target.value })}
+                placeholder="e.g. BSc Mathematics, University of Nairobi"
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Hourly Rate (KSh)</label>
+              <input type="number" value={form.hourly_rate} onChange={(e) => setForm({ ...form, hourly_rate: parseInt(e.target.value) || 1000 })}
+                min="500" max="10000"
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">About you</label>
+              <textarea value={form.bio} onChange={(e) => setForm({ ...form, bio: e.target.value })}
+                placeholder="Tell students about your teaching style and experience..." rows={3}
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            </div>
+            <button type="submit" className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+              Next: Upload Documents
+            </button>
+          </form>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">What subject do you teach? *</label>
-            <select
-              value={form.subject}
-              onChange={(e) => setForm({ ...form, subject: e.target.value })}
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
-              required
-            >
-              <option value="">Select a subject</option>
-              {subjects.map(s => <option key={s} value={s}>{s}</option>)}
-            </select>
-          </div>
+        {/* Step 2: Document upload */}
+        {step === 2 && (
+          <form onSubmit={handleSubmitDocuments} className="space-y-5">
+            <button type="button" onClick={() => setStep(1)} className="text-sm text-slate-500 hover:text-slate-700 flex items-center gap-1">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+              Back to profile
+            </button>
 
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">Headline</label>
-            <input
-              type="text"
-              value={form.headline}
-              onChange={(e) => setForm({ ...form, headline: e.target.value })}
-              placeholder="e.g. Making calculus intuitive"
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            />
-          </div>
+            <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-sm text-amber-800">
+              <strong>Why do we need this?</strong> To keep students safe, we verify every tutor before they appear on the platform. Your documents are kept private and only reviewed by our team.
+            </div>
 
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">Your qualification</label>
-            <input
-              type="text"
-              value={form.degree}
-              onChange={(e) => setForm({ ...form, degree: e.target.value })}
-              placeholder="e.g. BSc Mathematics, University of Nairobi"
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            />
-          </div>
+            <FileUpload label="National ID / Passport" hint="Image or PDF, max 5MB" file={idFile} onFile={setIdFile} />
+            <FileUpload label="Teaching Certificate / Qualification" hint="Degree cert, teaching license, etc." file={credentialFile} onFile={setCredentialFile} />
 
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">Hourly Rate (KSh)</label>
-            <input
-              type="number"
-              value={form.hourly_rate}
-              onChange={(e) => setForm({ ...form, hourly_rate: parseInt(e.target.value) || 1000 })}
-              min="500"
-              max="10000"
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            />
-          </div>
+            <button type="submit" disabled={saving}
+              className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors disabled:opacity-50">
+              {saving ? 'Submitting...' : 'Submit for Verification'}
+            </button>
 
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">About you</label>
-            <textarea
-              value={form.bio}
-              onChange={(e) => setForm({ ...form, bio: e.target.value })}
-              placeholder="Tell students about your teaching style and experience..."
-              rows={3}
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            />
-          </div>
-
-          <button
-            type="submit"
-            disabled={saving}
-            className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors disabled:opacity-50"
-          >
-            {saving ? 'Creating Profile...' : 'Start Teaching →'}
-          </button>
-        </form>
+            <p className="text-xs text-center text-slate-400">Your profile will be reviewed within 24 hours</p>
+          </form>
+        )}
       </div>
     </div>
   );
@@ -1167,6 +1162,35 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
   if (!tutor) {
     return <TutorOnboarding profile={profile} onComplete={onRefreshProfile} />;
   }
+
+  // Verification status banner
+  const verificationStatus = tutor.verification_status || (tutor.verified ? 'approved' : 'pending');
+  const VerificationBanner = () => {
+    if (verificationStatus === 'approved') return null;
+    if (verificationStatus === 'rejected') return (
+      <div className="mx-4 lg:mx-0 mb-4 p-4 bg-red-50 border border-red-200 rounded-xl">
+        <div className="flex items-start gap-3">
+          <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
+          <div>
+            <h4 className="font-semibold text-red-800">Verification Rejected</h4>
+            <p className="text-sm text-red-600 mt-1">{tutor.rejection_reason || 'Your application was not approved. Please re-upload your documents.'}</p>
+            <button onClick={() => { /* Could trigger re-onboarding */ }} className="mt-2 text-sm font-medium text-red-700 underline">Re-submit documents</button>
+          </div>
+        </div>
+      </div>
+    );
+    return (
+      <div className="mx-4 lg:mx-0 mb-4 p-4 bg-amber-50 border border-amber-200 rounded-xl">
+        <div className="flex items-start gap-3">
+          <svg className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <div>
+            <h4 className="font-semibold text-amber-800">Profile Under Review</h4>
+            <p className="text-sm text-amber-600 mt-1">Your documents are being reviewed by our team. You will be visible to students once approved. This usually takes less than 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   // SVG Icons
   const icons = {
@@ -1240,6 +1264,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
         </header>
 
         <div className="flex-1 p-6 overflow-auto">
+          <VerificationBanner />
           {tab === 'overview' && (
             <div className="space-y-6">
               {/* Welcome Banner */}
@@ -1779,7 +1804,7 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
                   </div>
                 ) : (
                   <span className="text-slate-400 text-sm">Not available</span>
-                )}}
+                )}
               </div>
             );
           })}
@@ -2344,7 +2369,7 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
 };
 
 // ============ TUTOR PROFILE VIEW ============
-const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth }) => {
+const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [booking, setBooking] = useState(false);
@@ -2398,6 +2423,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth }) => {
         student_id: user.id,
         tutor_id: tutor.id,
         lesson_date: selectedDate.toISOString().split('T')[0],
+        lesson_time: selectedTime,
       });
       setShowPayment(true);
     } catch (err) {
@@ -2409,7 +2435,12 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth }) => {
   const handlePaymentSuccess = () => {
     setShowPayment(false);
     setPendingBooking(null);
-    onBack();
+    // Navigate to student dashboard after successful payment
+    if (onNavigate) {
+      onNavigate('dashboard');
+    } else {
+      onBack();
+    }
   };
 
   return (
@@ -2645,7 +2676,11 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const [stats, setStats] = useState({ tutors: 0, students: 0, bookings: 0, revenue: 0 });
   const [users, setUsers] = useState([]);
   const [bookings, setBookings] = useState([]);
+  const [pendingTutors, setPendingTutors] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [actionLoading, setActionLoading] = useState(null);
+  const [rejectReason, setRejectReason] = useState('');
+  const [rejectingId, setRejectingId] = useState(null);
 
   useEffect(() => {
     fetchAdminData();
@@ -2653,13 +2688,15 @@ const AdminDashboard = ({ onLogout, onBack }) => {
 
   const fetchAdminData = async () => {
     setLoading(true);
-    
-    // Fetch counts
-    const [tutorsRes, studentsRes, bookingsRes, paymentsRes] = await Promise.all([
+
+    const [tutorsRes, studentsRes, bookingsRes, paymentsRes, pendingRes] = await Promise.all([
       supabase.from('tutors').select('id', { count: 'exact' }),
       supabase.from('profiles').select('id', { count: 'exact' }).eq('role', 'student'),
       supabase.from('bookings').select('*').order('created_at', { ascending: false }).limit(50),
       supabase.from('payments').select('amount').eq('status', 'completed'),
+      supabase.from('tutors').select('*, profiles(full_name, avatar_url, email)')
+        .in('verification_status', ['pending', 'under_review'])
+        .order('created_at', { ascending: false }),
     ]);
 
     const totalRevenue = paymentsRes.data?.reduce((sum, p) => sum + (p.amount || 0), 0) || 0;
@@ -2672,16 +2709,33 @@ const AdminDashboard = ({ onLogout, onBack }) => {
     });
 
     setBookings(bookingsRes.data || []);
+    setPendingTutors(pendingRes.data || []);
 
-    // Fetch users
     const { data: usersData } = await supabase
       .from('profiles')
       .select('*, tutors(*)')
       .order('created_at', { ascending: false })
       .limit(100);
-    
+
     setUsers(usersData || []);
     setLoading(false);
+  };
+
+  const handleApproveTutor = async (tutorId) => {
+    setActionLoading(tutorId);
+    await supabase.from('tutors').update({ verification_status: 'approved', verified: true, rejection_reason: null }).eq('id', tutorId);
+    setPendingTutors(prev => prev.filter(t => t.id !== tutorId));
+    setActionLoading(null);
+  };
+
+  const handleRejectTutor = async (tutorId) => {
+    if (!rejectReason.trim()) return;
+    setActionLoading(tutorId);
+    await supabase.from('tutors').update({ verification_status: 'rejected', verified: false, rejection_reason: rejectReason }).eq('id', tutorId);
+    setPendingTutors(prev => prev.filter(t => t.id !== tutorId));
+    setRejectingId(null);
+    setRejectReason('');
+    setActionLoading(null);
   };
 
   return (
@@ -2705,6 +2759,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
         <div className="flex gap-1 mb-6 bg-slate-200/50 p-1 rounded-lg w-fit">
           {[
             { id: 'overview', label: 'Overview' },
+            { id: 'verification', label: `Verification${pendingTutors.length ? ` (${pendingTutors.length})` : ''}` },
             { id: 'users', label: 'Users' },
             { id: 'bookings', label: 'Bookings' },
             { id: 'analytics', label: 'Analytics' },
@@ -2889,6 +2944,88 @@ const AdminDashboard = ({ onLogout, onBack }) => {
               </div>
             )}
 
+            {/* Verification Tab */}
+            {tab === 'verification' && (
+              <div className="space-y-4">
+                <h3 className="font-semibold text-slate-900 text-lg">Pending Tutor Verifications</h3>
+                {pendingTutors.length === 0 ? (
+                  <div className="bg-white rounded-xl p-8 shadow-sm text-center">
+                    <svg className="w-12 h-12 text-emerald-300 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <p className="text-slate-500">No pending verifications. All caught up!</p>
+                  </div>
+                ) : (
+                  pendingTutors.map(t => (
+                    <div key={t.id} className="bg-white rounded-xl shadow-sm overflow-hidden">
+                      <div className="p-5">
+                        <div className="flex items-start justify-between">
+                          <div className="flex items-center gap-4">
+                            <Avatar src={t.profiles?.avatar_url} name={t.profiles?.full_name} size={48} />
+                            <div>
+                              <h4 className="font-semibold text-slate-900">{t.profiles?.full_name}</h4>
+                              <p className="text-sm text-slate-500">{t.profiles?.email}</p>
+                              <div className="flex items-center gap-3 mt-1">
+                                <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">{t.subject}</span>
+                                <span className="text-xs text-slate-400">KSh {t.hourly_rate}/hr</span>
+                              </div>
+                            </div>
+                          </div>
+                          <span className="px-2 py-1 text-xs rounded-full bg-amber-100 text-amber-700">{t.verification_status}</span>
+                        </div>
+
+                        {t.degree && <p className="mt-3 text-sm text-slate-600"><strong>Qualification:</strong> {t.degree}</p>}
+                        {t.bio && <p className="mt-1 text-sm text-slate-500">{t.bio}</p>}
+
+                        {/* Document links */}
+                        <div className="mt-4 flex flex-wrap gap-3">
+                          {t.id_document_url && (
+                            <a href={t.id_document_url} target="_blank" rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-3 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm text-slate-700 transition-colors">
+                              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" /></svg>
+                              View National ID
+                            </a>
+                          )}
+                          {t.credential_url && (
+                            <a href={t.credential_url} target="_blank" rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-3 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm text-slate-700 transition-colors">
+                              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                              View Certificate
+                            </a>
+                          )}
+                        </div>
+
+                        {/* Action buttons */}
+                        <div className="mt-4 flex items-center gap-3">
+                          {rejectingId === t.id ? (
+                            <div className="flex-1 flex items-center gap-2">
+                              <input type="text" value={rejectReason} onChange={(e) => setRejectReason(e.target.value)}
+                                placeholder="Reason for rejection..." className="flex-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
+                              <button onClick={() => handleRejectTutor(t.id)} disabled={!rejectReason.trim() || actionLoading === t.id}
+                                className="px-4 py-2 bg-red-500 text-white text-sm font-medium rounded-lg hover:bg-red-600 disabled:opacity-50">
+                                Confirm
+                              </button>
+                              <button onClick={() => { setRejectingId(null); setRejectReason(''); }}
+                                className="px-3 py-2 text-sm text-slate-500 hover:text-slate-700">Cancel</button>
+                            </div>
+                          ) : (
+                            <>
+                              <button onClick={() => handleApproveTutor(t.id)} disabled={actionLoading === t.id}
+                                className="px-5 py-2 bg-emerald-500 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 disabled:opacity-50">
+                                {actionLoading === t.id ? 'Approving...' : 'Approve'}
+                              </button>
+                              <button onClick={() => setRejectingId(t.id)}
+                                className="px-5 py-2 bg-white border border-red-200 text-red-600 text-sm font-medium rounded-lg hover:bg-red-50">
+                                Reject
+                              </button>
+                            </>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
+            )}
+
             {/* Analytics Tab */}
             {tab === 'analytics' && (
               <div className="space-y-6">
@@ -2998,7 +3135,18 @@ export default function App() {
   const handleNavigate = (p) => { setPage(p); setSelectedTutor(null); window.scrollTo(0, 0); window.history.pushState({}, '', p === 'home' ? '/' : '/' + p); };
   const handleLogout = async () => { await auth.signOut(); setPage('home'); };
   const handleStartLesson = (booking) => setActiveLesson(booking);
-  const handleEndLesson = () => setActiveLesson(null);
+  const handleEndLesson = async () => {
+    // Mark booking as completed when lesson ends
+    if (activeLesson?.id) {
+      try {
+        await supabase.from('bookings').update({ status: 'completed' }).eq('id', activeLesson.id);
+        refetchBookings();
+      } catch (err) {
+        console.error('Error marking lesson as completed:', err);
+      }
+    }
+    setActiveLesson(null);
+  };
   const handleOpenMessages = () => setShowMessages(true);
 
   if (auth.loading) return <div className="min-h-screen flex items-center justify-center"><LoadingSpinner /></div>;
@@ -3047,7 +3195,7 @@ export default function App() {
       
       {page === 'home' && !selectedTutor && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={() => handleNavigate('home')} />}
-      {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} />}
+      {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
       
       {showAuth && <AuthModal mode={showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} />}
     </div>

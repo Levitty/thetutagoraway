@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { initiateSTKPush, querySTKPushStatus } from './mpesa';
 import { initiatePaystackPayment } from './paystack';
 import { supabase } from './supabase';
 
@@ -28,32 +27,32 @@ const Lottie = ({ src, width = 100, height = 100, loop = true }) => {
 // Payment Status Component
 const PaymentStatus = ({ status, message }) => {
   const statusConfig = {
-    pending: { 
+    pending: {
       animation: 'https://assets8.lottiefiles.com/packages/lf20_4XmSkB.json',
-      color: 'text-amber-600', 
-      bg: 'bg-amber-50' 
+      color: 'text-amber-600',
+      bg: 'bg-amber-50'
     },
-    processing: { 
+    processing: {
       animation: 'https://assets8.lottiefiles.com/packages/lf20_4XmSkB.json',
-      color: 'text-blue-600', 
-      bg: 'bg-blue-50' 
+      color: 'text-blue-600',
+      bg: 'bg-blue-50'
     },
-    success: { 
+    success: {
       animation: 'https://assets2.lottiefiles.com/packages/lf20_jbrw3hcz.json',
-      color: 'text-emerald-600', 
+      color: 'text-emerald-600',
       bg: 'bg-emerald-50',
       loop: false
     },
-    failed: { 
+    failed: {
       animation: null,
       icon: <svg className="w-12 h-12 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>,
-      color: 'text-red-600', 
-      bg: 'bg-red-50' 
+      color: 'text-red-600',
+      bg: 'bg-red-50'
     },
   };
-  
+
   const config = statusConfig[status] || statusConfig.pending;
-  
+
   return (
     <div className={`p-6 rounded-xl ${config.bg} text-center`}>
       <div className="flex justify-center mb-2">
@@ -66,44 +65,19 @@ const PaymentStatus = ({ status, message }) => {
   );
 };
 
-// Main Payment Modal
+// Main Payment Modal — Paystack Only
 export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
-  const [step, setStep] = useState('method'); // method, mpesa-phone, processing, status
-  const [paymentMethod, setPaymentMethod] = useState(null);
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [step, setStep] = useState('confirm'); // confirm, processing, status
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [paymentStatus, setPaymentStatus] = useState(null);
-  const [checkoutRequestId, setCheckoutRequestId] = useState(null);
 
   const amount = tutor.hourly_rate || 1000;
   const currency = tutor.currency || 'KSh';
   const userEmail = user?.email || booking?.profiles?.email || '';
 
-  // Poll for M-Pesa payment status
-  useEffect(() => {
-    let interval;
-    if (checkoutRequestId && step === 'processing' && paymentMethod === 'mpesa') {
-      interval = setInterval(async () => {
-        const result = await querySTKPushStatus(checkoutRequestId);
-        if (result.status === 'completed') {
-          setPaymentStatus({ status: 'success', message: 'Payment successful!' });
-          setStep('status');
-          clearInterval(interval);
-          await updatePaymentStatus('completed', 'mpesa', checkoutRequestId);
-          setTimeout(() => onSuccess && onSuccess(), 2000);
-        } else if (result.status === 'cancelled' || result.status === 'timeout') {
-          setPaymentStatus({ status: 'failed', message: result.message });
-          setStep('status');
-          clearInterval(interval);
-        }
-      }, 3000);
-    }
-    return () => clearInterval(interval);
-  }, [checkoutRequestId, step, paymentMethod]);
-
   // Update payment status in Supabase
-  const updatePaymentStatus = async (status, method, reference) => {
+  const updatePaymentStatus = async (status, reference) => {
     try {
       await supabase.from('payments').insert({
         booking_id: booking.id,
@@ -111,7 +85,7 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
         tutor_id: booking.tutor_id,
         amount: amount,
         currency: currency,
-        method: method,
+        method: 'card',
         status: status,
         mpesa_reference: reference,
       });
@@ -124,39 +98,11 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
     }
   };
 
-  // Handle M-Pesa payment
-  const handleMpesaPayment = async () => {
-    if (!phoneNumber || phoneNumber.length < 9) {
-      setError('Please enter a valid phone number');
-      return;
-    }
-
-    setLoading(true);
-    setError('');
-    setStep('processing');
-
-    const result = await initiateSTKPush({
-      phoneNumber,
-      amount,
-      accountReference: `TUT-${booking.id?.slice(0, 8) || 'BOOK'}`,
-      transactionDesc: `${tutor.subject || 'Tutor'} lesson payment`,
-    });
-
-    if (result.success) {
-      setCheckoutRequestId(result.checkoutRequestId);
-      setPaymentStatus({ status: 'pending', message: 'Check your phone and enter M-Pesa PIN' });
-    } else {
-      setError(result.error);
-      setStep('mpesa-phone');
-    }
-    
-    setLoading(false);
-  };
-
-  // Handle Paystack (Card) payment
+  // Handle Paystack payment
   const handlePaystackPayment = async () => {
     setLoading(true);
     setError('');
+    setStep('processing');
 
     const reference = `TUT-${booking.id?.slice(0, 8) || Date.now()}`;
 
@@ -172,29 +118,41 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
       onSuccess: async (response) => {
         setPaymentStatus({ status: 'success', message: 'Payment successful!' });
         setStep('status');
-        await updatePaymentStatus('completed', 'card', response.reference);
+        await updatePaymentStatus('completed', response.reference);
+
+        // Send booking confirmation emails
+        try {
+          await supabase.functions.invoke('send-booking-email', {
+            body: {
+              bookingId: booking.id,
+              studentEmail: userEmail,
+              tutorEmail: tutor.profiles?.email,
+              studentName: user?.user_metadata?.full_name || 'Student',
+              tutorName: tutor.profiles?.full_name || 'Tutor',
+              subject: tutor.subject,
+              lessonDate: booking.lesson_date,
+              lessonTime: booking.lesson_time,
+              amount: amount,
+              currency: currency,
+            },
+          });
+        } catch (emailErr) {
+          console.error('Email notification failed (booking still confirmed):', emailErr);
+        }
+
         setTimeout(() => onSuccess && onSuccess(), 2000);
       },
       onClose: () => {
         setLoading(false);
-        setError('Payment was cancelled');
+        setStep('confirm');
+        setError('Payment was cancelled. You can try again.');
       },
     });
 
     if (!result.success) {
       setError(result.error || 'Failed to initialize payment');
       setLoading(false);
-    }
-  };
-
-  // Select payment method
-  const selectMethod = (method) => {
-    setPaymentMethod(method);
-    setError('');
-    if (method === 'mpesa') {
-      setStep('mpesa-phone');
-    } else if (method === 'card') {
-      handlePaystackPayment();
+      setStep('confirm');
     }
   };
 
@@ -208,7 +166,7 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
               <h2 className="text-lg font-bold">Complete Payment</h2>
               <p className="text-emerald-100 text-sm mt-1">{tutor.subject || 'Tutoring'} Lesson</p>
             </div>
-            <button onClick={onClose} className="text-white/80 hover:text-white text-xl">✕</button>
+            <button onClick={onClose} className="text-white/80 hover:text-white text-xl">&#10005;</button>
           </div>
           <div className="mt-4 flex items-baseline gap-1">
             <span className="text-3xl font-bold">{currency} {amount.toLocaleString()}</span>
@@ -218,88 +176,50 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
 
         {/* Content */}
         <div className="p-5">
-          {/* Step: Select Payment Method */}
-          {step === 'method' && (
+          {/* Step: Confirm & Pay */}
+          {step === 'confirm' && (
             <div className="space-y-4">
-              <h3 className="font-semibold text-slate-900">Select payment method</h3>
-              
-              {/* M-Pesa Option */}
-              <button
-                onClick={() => selectMethod('mpesa')}
-                className="w-full p-4 rounded-xl border-2 border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 flex items-center gap-4 transition-all"
-              >
-                <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center text-white font-bold text-xl">M</div>
-                <div className="text-left flex-1">
-                  <div className="font-semibold text-slate-900">M-Pesa</div>
-                  <div className="text-sm text-slate-500">Pay with your phone</div>
+              {/* Lesson Summary */}
+              <div className="bg-slate-50 rounded-xl p-4 space-y-3">
+                <h3 className="font-semibold text-slate-900 text-sm">Lesson Summary</h3>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">Tutor</span>
+                    <span className="text-slate-900 font-medium">{tutor.profiles?.full_name || 'Tutor'}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">Subject</span>
+                    <span className="text-slate-900 font-medium">{tutor.subject || 'General'}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">Date</span>
+                    <span className="text-slate-900 font-medium">{booking.lesson_date}</span>
+                  </div>
+                  {booking.lesson_time && (
+                    <div className="flex justify-between">
+                      <span className="text-slate-500">Time</span>
+                      <span className="text-slate-900 font-medium">{booking.lesson_time}</span>
+                    </div>
+                  )}
+                  <div className="border-t border-slate-200 pt-2 flex justify-between">
+                    <span className="text-slate-700 font-semibold">Total</span>
+                    <span className="text-emerald-600 font-bold">{currency} {amount.toLocaleString()}</span>
+                  </div>
                 </div>
-                <span className="text-slate-400">→</span>
-              </button>
+              </div>
 
-              {/* Card Option (Paystack) */}
-              <button
-                onClick={() => selectMethod('card')}
-                disabled={loading}
-                className="w-full p-4 rounded-xl border-2 border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 flex items-center gap-4 transition-all disabled:opacity-50"
-              >
-                <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              {/* Payment method info */}
+              <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-xl">
+                <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <rect x="2" y="5" width="20" height="14" rx="2"/>
                     <line x1="2" y1="10" x2="22" y2="10"/>
                   </svg>
                 </div>
-                <div className="text-left flex-1">
-                  <div className="font-semibold text-slate-900">Credit/Debit Card</div>
-                  <div className="text-sm text-slate-500">Visa, Mastercard, Verve</div>
-                </div>
-                <span className="text-slate-400">{loading ? '...' : '→'}</span>
-              </button>
-
-              {/* Paystack Badge */}
-              <div className="flex items-center justify-center gap-2 pt-2">
-                <span className="text-xs text-slate-400">Secured by</span>
-                <span className="text-xs font-semibold text-blue-600">Paystack</span>
-                <span className="text-xs text-slate-400">&</span>
-                <span className="text-xs font-semibold text-green-600">M-Pesa</span>
-              </div>
-
-              {error && (
-                <div className="p-3 bg-red-50 text-red-600 text-sm rounded-lg">{error}</div>
-              )}
-            </div>
-          )}
-
-          {/* Step: Enter M-Pesa Phone Number */}
-          {step === 'mpesa-phone' && (
-            <div className="space-y-4">
-              <button onClick={() => setStep('method')} className="text-slate-500 text-sm flex items-center gap-1">
-                ← Back
-              </button>
-              
-              <div className="flex items-center gap-3 p-3 bg-green-50 rounded-xl">
-                <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold">M</div>
                 <div>
-                  <div className="font-medium text-slate-900">M-Pesa Payment</div>
-                  <div className="text-sm text-slate-500">Enter your phone number</div>
+                  <div className="font-medium text-slate-900 text-sm">Pay with Card</div>
+                  <div className="text-xs text-slate-500">Visa, Mastercard, Verve via Paystack</div>
                 </div>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">M-Pesa Phone Number</label>
-                <div className="flex">
-                  <span className="inline-flex items-center px-4 bg-slate-100 border border-r-0 border-slate-200 rounded-l-xl text-slate-500">
-                    +254
-                  </span>
-                  <input
-                    type="tel"
-                    value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value.replace(/\D/g, ''))}
-                    placeholder="712 345 678"
-                    className="flex-1 px-4 py-3 border border-slate-200 rounded-r-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                    maxLength={9}
-                  />
-                </div>
-                <p className="text-xs text-slate-500 mt-2">You'll receive an STK push to enter your M-Pesa PIN</p>
               </div>
 
               {error && (
@@ -307,12 +227,21 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
               )}
 
               <button
-                onClick={handleMpesaPayment}
-                disabled={loading || phoneNumber.length < 9}
-                className="w-full py-4 bg-green-500 text-white font-semibold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed hover:bg-green-600 transition-colors"
+                onClick={handlePaystackPayment}
+                disabled={loading}
+                className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed hover:bg-emerald-600 transition-colors"
               >
-                {loading ? 'Sending...' : `Pay ${currency} ${amount.toLocaleString()}`}
+                {loading ? 'Processing...' : `Pay ${currency} ${amount.toLocaleString()}`}
               </button>
+
+              {/* Paystack Badge */}
+              <div className="flex items-center justify-center gap-2 pt-1">
+                <svg className="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span className="text-xs text-slate-400">Secured by</span>
+                <span className="text-xs font-semibold text-blue-600">Paystack</span>
+              </div>
             </div>
           )}
 
@@ -323,14 +252,9 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
                 <div className="w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
               </div>
               <div>
-                <h3 className="font-semibold text-slate-900">Waiting for payment</h3>
-                <p className="text-slate-500 text-sm mt-1">
-                  {paymentMethod === 'mpesa' 
-                    ? 'Check your phone and enter your M-Pesa PIN' 
-                    : 'Processing your card payment...'}
-                </p>
+                <h3 className="font-semibold text-slate-900">Processing payment</h3>
+                <p className="text-slate-500 text-sm mt-1">Complete the payment in the Paystack window...</p>
               </div>
-              {paymentMethod === 'mpesa' && <div className="text-4xl animate-bounce">📱</div>}
               <p className="text-xs text-slate-400">Do not close this window</p>
             </div>
           )}
@@ -339,16 +263,16 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
           {step === 'status' && paymentStatus && (
             <div className="py-6 space-y-4">
               <PaymentStatus status={paymentStatus.status} message={paymentStatus.message} />
-              
+
               {paymentStatus.status === 'failed' && (
                 <button
-                  onClick={() => { setStep('method'); setError(''); setPaymentMethod(null); }}
+                  onClick={() => { setStep('confirm'); setError(''); }}
                   className="w-full py-3 bg-slate-100 text-slate-700 font-medium rounded-xl hover:bg-slate-200"
                 >
                   Try Again
                 </button>
               )}
-              
+
               {paymentStatus.status === 'success' && (
                 <div className="text-center text-sm text-slate-500">
                   Redirecting to your dashboard...
