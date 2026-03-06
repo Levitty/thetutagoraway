@@ -35,7 +35,11 @@ const formatFraction = (num, den) => {
 // ==================== WORKED EXAMPLE TEMPLATES ====================
 // Each skill can have multiple KP templates with worked examples
 
-const makeWorkedExample = (problem, steps, solution) => ({ problem, steps, solution });
+const makeWorkedExample = (problem, steps, solution, opts = {}) => ({
+  problem, steps, solution,
+  ...(opts.whySteps ? { whySteps: opts.whySteps } : {}),
+  ...(opts.definitions ? { definitions: opts.definitions } : {}),
+});
 
 // ==================== GENERATORS ====================
 
@@ -85,13 +89,15 @@ const generators = {
     if (askFor.includes('smallest')) answer = factors[1].toString();
     else if (askFor.includes('largest')) answer = factors[factors.length - 2].toString();
     else answer = factors.length.toString();
-    return { question: `What is the ${askFor} of ${n}?`, answer, hint: `Factors of ${n}: ${factors.join(', ')}` };
+    return { question: `What is the ${askFor} of ${n}?`, answer, hint: `Factors of ${n}: ${factors.join(', ')}`,
+      definitions: { 'Factor': 'A number that divides evenly into another number with no remainder. For example, 3 is a factor of 12 because 12 \u00F7 3 = 4 exactly.' } };
   },
 
   G5_MULTIPLES: () => {
     const n = rand(2, 12), nth = rand(3, 10);
     return { question: `What is the ${nth}${nth === 3 ? 'rd' : 'th'} multiple of ${n}?`, answer: (n * nth).toString(),
-      hint: `Multiples of ${n}: ${n}, ${n*2}, ${n*3}, ...` };
+      hint: `Multiples of ${n}: ${n}, ${n*2}, ${n*3}, ...`,
+      definitions: { 'Multiple': `A multiple of ${n} is what you get when you multiply ${n} by a whole number (1, 2, 3...). Think of it as the ${n}-times table.` } };
   },
 
   G5_FRACTIONS_INTRO: () => {
@@ -99,8 +105,27 @@ const generators = {
     const num = rand(1, den - 1);
     const total = den * rand(2, 5);
     const part = num * (total / den);
-    return { question: `What is ${num}/${den} of ${total}?`, answer: part.toString(),
-      workedExample: makeWorkedExample('What is 3/4 of 20?', ['Divide 20 by 4 = 5', 'Multiply 5 by 3 = 15'], '15') };
+    return {
+      question: `What is ${num}/${den} of ${total}?`, answer: part.toString(),
+      hint: 'To find a fraction of a number: divide by the bottom number (denominator), then multiply by the top number (numerator).',
+      definitions: {
+        'Numerator': 'The top number of a fraction. It tells you how many parts you are taking.',
+        'Denominator': 'The bottom number of a fraction. It tells you how many equal parts the whole is divided into.',
+      },
+      workedExample: makeWorkedExample('What is 3/4 of 20?',
+        ['Divide 20 by 4 = 5', 'Multiply 5 by 3 = 15'], '15',
+        {
+          definitions: {
+            'Numerator': 'The top number (3). How many parts we want.',
+            'Denominator': 'The bottom number (4). How many equal parts the whole is split into.',
+          },
+          whySteps: [
+            'We divide by the denominator (4) first to find out how big one part is. 20 split into 4 equal parts = 5 each.',
+            'Then multiply by the numerator (3) because we want 3 of those parts. 3 parts of size 5 = 15.'
+          ]
+        }
+      )
+    };
   },
 
   G5_FRACTIONS_EQUIV: () => {

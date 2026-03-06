@@ -127,6 +127,77 @@ export function AIMastery({ onBack, userId }) {
   const [remediationSkills, setRemediationSkills] = useState(null);
   const [celebration, setCelebration] = useState(null);
 
+  // Layered hints + tooltips state
+  const [attemptCount, setAttemptCount] = useState(0);
+  const [hintLevel, setHintLevel] = useState(0); // 0=none, 1=hint, 2=partial steps, 3=full reveal
+  const [activeTooltip, setActiveTooltip] = useState(null);
+  const [expandedWhySteps, setExpandedWhySteps] = useState({});
+  const [conceptsExpanded, setConceptsExpanded] = useState(true);
+
+  // ==================== INLINE COMPONENTS ====================
+
+  // TermTooltip: renders text with tappable variable definitions
+  const TermTooltip = ({ text, definitions }) => {
+    if (!definitions || Object.keys(definitions).length === 0) return <span>{text}</span>;
+    // Build regex from definition keys, longest first to avoid partial matches
+    const terms = Object.keys(definitions).sort((a, b) => b.length - a.length);
+    const escaped = terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const regex = new RegExp(`(${escaped.join('|')})`, 'gi');
+    const parts = text.split(regex);
+    return (
+      <span>
+        {parts.map((part, i) => {
+          const matchKey = terms.find(t => t.toLowerCase() === part.toLowerCase());
+          if (matchKey) {
+            const isActive = activeTooltip === `${matchKey}-${i}`;
+            return (
+              <span key={i} className="relative inline-block">
+                <button
+                  onClick={(e) => { e.stopPropagation(); setActiveTooltip(isActive ? null : `${matchKey}-${i}`); }}
+                  className="border-b border-dotted border-emerald-400/60 text-emerald-300 hover:text-emerald-200 cursor-help transition-colors"
+                >{part}</button>
+                {isActive && (
+                  <span className="absolute left-0 top-full mt-1 z-50 w-64 p-3 bg-slate-700 border border-emerald-500/30 rounded-lg shadow-xl text-sm text-slate-200 font-normal leading-relaxed" style={{ whiteSpace: 'normal' }}>
+                    <span className="font-bold text-emerald-400">{matchKey}:</span> {definitions[matchKey]}
+                    <span className="absolute -top-1 left-4 w-2 h-2 bg-slate-700 border-l border-t border-emerald-500/30 rotate-45" />
+                  </span>
+                )}
+              </span>
+            );
+          }
+          return <span key={i}>{part}</span>;
+        })}
+      </span>
+    );
+  };
+
+  // ConceptIntro: shows expandable "What you need to know" block
+  const ConceptIntro = ({ definitions }) => {
+    if (!definitions || Object.keys(definitions).length === 0) return null;
+    const entries = Object.entries(definitions);
+    return (
+      <div className="bg-slate-800/50 border border-slate-700 rounded-xl mb-4 overflow-hidden">
+        <button onClick={() => setConceptsExpanded(!conceptsExpanded)} className="w-full px-5 py-3 flex items-center justify-between text-left">
+          <span className="flex items-center gap-2 text-amber-400 text-sm font-semibold">
+            <Icon name="book" className="w-4 h-4" />
+            What you need to know
+          </span>
+          <span className="text-slate-500 text-xs">{conceptsExpanded ? 'Hide' : 'Show'}</span>
+        </button>
+        {conceptsExpanded && (
+          <div className="px-5 pb-4 space-y-2">
+            {entries.map(([term, def]) => (
+              <div key={term} className="flex gap-2 text-sm">
+                <span className="text-emerald-400 font-bold min-w-fit whitespace-nowrap">{term}:</span>
+                <span className="text-slate-300">{def}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  };
+
   // ==================== LOAD PROGRESS ====================
 
   // When subject changes, load that subject's progress
@@ -229,6 +300,11 @@ export function AIMastery({ onBack, userId }) {
     setFeedback(null);
     setShowHint(false);
     setRemediationSkills(null);
+    setAttemptCount(0);
+    setHintLevel(0);
+    setExpandedWhySteps({});
+    setConceptsExpanded(true);
+    setActiveTooltip(null);
     setView('lesson');
   };
 
@@ -237,13 +313,32 @@ export function AIMastery({ onBack, userId }) {
     setProblem(generateProblem(activeSkill));
     setAnswer('');
     setFeedback(null);
+    setAttemptCount(0);
+    setHintLevel(0);
+    setActiveTooltip(null);
   };
 
   const checkAnswer = () => {
     if (!answer.trim() || feedback) return;
     const correct = checkAnswerMatch(answer, problem);
+    const newAttemptCount = attemptCount + 1;
+    setAttemptCount(newAttemptCount);
 
+    // === LAYERED WRONG-ANSWER HANDLING ===
+    // Attempt 1 wrong: show hint, let them retry
+    // Attempt 2 wrong: show partial worked example, let them retry
+    // Attempt 3 wrong: show full answer + worked example, mark as final incorrect
+    if (!correct && newAttemptCount < 3) {
+      // Not final attempt — show escalating hints, clear answer, let them retry
+      setHintLevel(newAttemptCount); // 1 = hint, 2 = partial steps
+      setAnswer('');
+      return; // Don't record in progress yet — only the final result counts
+    }
+
+    // === FINAL RESULT (correct at any attempt, or 3rd-attempt fail) ===
     setFeedback(correct ? 'correct' : 'incorrect');
+    if (!correct) setHintLevel(3); // Full reveal
+
     const newSession = {
       correct: session.correct + (correct ? 1 : 0),
       total: session.total + 1,
@@ -314,6 +409,9 @@ export function AIMastery({ onBack, userId }) {
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
+    setAttemptCount(0);
+    setHintLevel(0);
+    setActiveTooltip(null);
   };
 
   // ==================== REVIEW (TIMED, INTERLEAVED) ====================
@@ -502,7 +600,7 @@ export function AIMastery({ onBack, userId }) {
     const pct = Math.min(100, (session.correct / skill.minProblems) * 100);
 
     return (
-      <div className="min-h-screen bg-slate-900 text-white">
+      <div className="min-h-screen bg-slate-900 text-white" onClick={() => activeTooltip && setActiveTooltip(null)}>
         {/* Light bridging header */}
         <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
           <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -536,12 +634,34 @@ export function AIMastery({ onBack, userId }) {
                 if (!we) return <p className="text-slate-400">No worked example available. Let's practice!</p>;
                 return (
                   <div>
-                    <div className="bg-slate-700/50 rounded-lg p-3 mb-4 font-medium">{we.problem}</div>
+                    {/* Concept Intro — explains key terms before the example */}
+                    <ConceptIntro definitions={we.definitions} />
+
+                    <div className="bg-slate-700/50 rounded-lg p-3 mb-4 font-medium">
+                      <TermTooltip text={we.problem} definitions={we.definitions} />
+                    </div>
                     <div className="space-y-2 mb-4">
                       {we.steps.map((step, i) => (
-                        <div key={i} className="flex gap-3 text-sm">
-                          <span className="text-emerald-400 font-bold min-w-[24px]">{i + 1}.</span>
-                          <span className="text-slate-300">{step}</span>
+                        <div key={i}>
+                          <div className="flex gap-3 text-sm">
+                            <span className="text-emerald-400 font-bold min-w-[24px]">{i + 1}.</span>
+                            <span className="text-slate-300 flex-1">
+                              <TermTooltip text={step} definitions={we.definitions} />
+                            </span>
+                            {we.whySteps && we.whySteps[i] && (
+                              <button
+                                onClick={() => setExpandedWhySteps(prev => ({ ...prev, [i]: !prev[i] }))}
+                                className="text-xs text-amber-400 hover:text-amber-300 whitespace-nowrap transition-colors"
+                              >
+                                {expandedWhySteps[i] ? 'Hide' : 'Why?'}
+                              </button>
+                            )}
+                          </div>
+                          {expandedWhySteps[i] && we.whySteps && we.whySteps[i] && (
+                            <div className="ml-9 mt-1 mb-2 p-2 bg-amber-900/20 border border-amber-700/30 rounded-lg text-xs text-amber-200 leading-relaxed">
+                              {we.whySteps[i]}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -560,13 +680,67 @@ export function AIMastery({ onBack, userId }) {
           {!showWorkedExample && problem && (
             <>
               <div className="bg-slate-800 rounded-2xl p-6 mb-4">
-                <div className="text-lg mb-6 leading-relaxed">{problem.question}</div>
+                <div className="text-lg mb-6 leading-relaxed">
+                  <TermTooltip text={problem.question} definitions={problem.workedExample?.definitions || problem.definitions} />
+                </div>
                 <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50" autoFocus placeholder="Your answer..." />
-                {problem.hint && !feedback && <button onClick={() => setShowHint(!showHint)} className="mt-3 text-sm text-amber-400">{showHint ? '🙈 Hide hint' : '💡 Show hint'}</button>}
-                {showHint && problem.hint && <div className="mt-2 p-3 bg-amber-900/30 rounded-lg text-amber-200 text-sm">💡 {problem.hint}</div>}
+
+                {/* Layered hint display — shown on wrong attempts before final reveal */}
+                {hintLevel >= 1 && !feedback && (
+                  <div className="mt-4 p-3 bg-amber-900/30 border border-amber-700/40 rounded-lg text-amber-200 text-sm">
+                    <span className="font-semibold text-amber-400">Hint:</span> {problem.hint || 'Double-check your calculation — look at each step carefully.'}
+                  </div>
+                )}
+                {hintLevel >= 2 && !feedback && (() => {
+                  const we = generateWorkedExample(activeSkill);
+                  if (!we) return null;
+                  return (
+                    <div className="mt-3 p-3 bg-blue-900/20 border border-blue-700/30 rounded-lg text-sm">
+                      <span className="font-semibold text-blue-400">Here are the first steps to guide you:</span>
+                      <div className="mt-2 space-y-1">
+                        {we.steps.slice(0, 2).map((step, i) => (
+                          <div key={i} className="flex gap-2 text-slate-300">
+                            <span className="text-blue-400 font-bold">{i + 1}.</span>
+                            <TermTooltip text={step} definitions={we.definitions} />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })()}
               </div>
 
-              {feedback && <div className={`rounded-xl p-4 mb-4 ${feedback === 'correct' ? 'bg-emerald-900/50 border border-emerald-500' : 'bg-red-900/50 border border-red-500'}`}>{feedback === 'correct' ? <span className="text-emerald-400 font-semibold">✓ Correct!</span> : <div><span className="text-red-400 font-semibold">✗ Not quite</span><div className="text-slate-300 mt-1">Answer: <span className="font-mono">{problem.answer}</span></div></div>}</div>}
+              {/* Correct answer feedback */}
+              {feedback === 'correct' && (
+                <div className="rounded-xl p-4 mb-4 bg-emerald-900/50 border border-emerald-500">
+                  <span className="text-emerald-400 font-semibold">✓ Correct!</span>
+                  {attemptCount > 1 && <span className="text-slate-400 text-sm ml-2">(attempt {attemptCount})</span>}
+                </div>
+              )}
+
+              {/* Final incorrect feedback — only shown after 3 failed attempts */}
+              {feedback === 'incorrect' && (
+                <div className="rounded-xl p-4 mb-4 bg-red-900/50 border border-red-500">
+                  <span className="text-red-400 font-semibold">Answer: <span className="font-mono">{problem.answer}</span></span>
+                  {(() => {
+                    const we = generateWorkedExample(activeSkill);
+                    if (!we) return null;
+                    return (
+                      <div className="mt-3 pt-3 border-t border-red-700/30">
+                        <span className="text-sm text-slate-400 mb-2 block">Here's the full worked solution:</span>
+                        <div className="space-y-1">
+                          {we.steps.map((step, i) => (
+                            <div key={i} className="flex gap-2 text-sm">
+                              <span className="text-red-400/70 font-bold">{i + 1}.</span>
+                              <span className="text-slate-300">{step}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })()}
+                </div>
+              )}
 
               {/* Remediation alert */}
               {remediationSkills && <div className="bg-red-900/20 border border-red-700 rounded-xl p-4 mb-4">
@@ -580,7 +754,7 @@ export function AIMastery({ onBack, userId }) {
                 ))}</div>
               </div>}
 
-              {!feedback ? <button onClick={checkAnswer} disabled={!answer.trim()} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">Check Answer</button>
+              {!feedback ? <button onClick={checkAnswer} disabled={!answer.trim()} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">{attemptCount > 0 ? 'Try Again' : 'Check Answer'}</button>
                 : <button onClick={nextProblem} className="w-full bg-blue-600 hover:bg-blue-500 rounded-xl py-4 font-semibold flex items-center justify-center gap-2 transition-colors">Next <Icon name="arrow" className="w-5 h-5" /></button>}
             </>
           )}

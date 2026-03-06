@@ -24,7 +24,11 @@ const weightedPick = (items, weights) => {
   return items[items.length - 1];
 };
 
-const makeWorkedExample = (problem, steps, solution) => ({ problem, steps, solution });
+const makeWorkedExample = (problem, steps, solution, opts = {}) => ({
+  problem, steps, solution,
+  ...(opts.whySteps ? { whySteps: opts.whySteps } : {}),
+  ...(opts.definitions ? { definitions: opts.definitions } : {}),
+});
 
 // ==================== GENERATORS ====================
 
@@ -32,19 +36,41 @@ const generators = {
   // ======================== FOUNDATION (Grade 1) ========================
 
   AFM_COST_OF_EQUITY_INTRO: () => {
-    const rf = roundTo(rand(25, 40) / 10, 2); // Risk-free rate 2.5% - 4.0%
-    const rm = roundTo(rand(80, 120) / 10, 2); // Market return 8% - 12%
-    const beta = roundTo(rand(80, 150) / 100, 2); // Beta 0.8 - 1.5
+    const rf = roundTo(rand(25, 40) / 10, 2);
+    const rm = roundTo(rand(80, 120) / 10, 2);
+    const beta = roundTo(rand(80, 150) / 100, 2);
     const ke = roundTo(rf + beta * (rm - rf), 2);
+    const defs = {
+      'Rf': 'Risk-Free Rate \u2014 the return you would earn on a completely safe investment, like government treasury bonds. It is the baseline return with zero risk.',
+      'Rm': 'Market Return \u2014 the average return expected from investing in the entire stock market (e.g. the NSE or S&P 500).',
+      '\u03B2': 'Beta \u2014 measures how volatile a stock is compared to the overall market. \u03B2 = 1 means it moves with the market. \u03B2 > 1 means more volatile. \u03B2 < 1 means less volatile.',
+      'CAPM': 'Capital Asset Pricing Model \u2014 a formula that calculates the return investors expect for taking on risk. It links risk (beta) to expected reward.',
+      'Cost of Equity': 'The return a company must offer its shareholders to compensate them for the risk of investing. Higher risk = higher cost of equity.',
+    };
     return {
       question: `Calculate the cost of equity using CAPM. Risk-free rate = ${rf.toFixed(1)}%, Market return = ${rm.toFixed(1)}%, Beta = ${beta.toFixed(2)}.`,
       answer: ke.toFixed(2),
       accepts: [ke.toFixed(2), `${ke.toFixed(2)}%`, ke.toString()],
-      hint: 'Cost of Equity = Rf + β(Rm - Rf)',
+      hint: 'Cost of Equity = Rf + \u03B2(Rm - Rf). Start by finding the difference between market return and risk-free rate.',
+      definitions: defs,
       workedExample: makeWorkedExample(
-        'Calculate cost of equity: Rf = 3%, Rm = 10%, β = 1.2',
-        ['Cost of Equity = Rf + β(Rm - Rf)', 'Cost of Equity = 3% + 1.2(10% - 3%)', 'Cost of Equity = 3% + 1.2 × 7%', 'Cost of Equity = 3% + 8.4% = 11.4%'],
-        '11.4%'
+        'Calculate cost of equity: Rf = 3%, Rm = 10%, \u03B2 = 1.2',
+        [
+          'Cost of Equity = Rf + \u03B2(Rm - Rf)',
+          'Cost of Equity = 3% + 1.2(10% - 3%)',
+          'Cost of Equity = 3% + 1.2 \u00D7 7%',
+          'Cost of Equity = 3% + 8.4% = 11.4%'
+        ],
+        '11.4%',
+        {
+          definitions: defs,
+          whySteps: [
+            'This is the CAPM formula. It says: expected return = the safe baseline + a premium for taking risk.',
+            'We plug in our values. Rf is 3%, \u03B2 is 1.2, and Rm is 10%.',
+            'First solve the bracket: 10% - 3% = 7%. This is the Market Risk Premium \u2014 the extra return the market gives above the safe rate.',
+            'Multiply the premium by beta (1.2 \u00D7 7% = 8.4%) to adjust for this stock\'s risk level, then add the risk-free rate. The investor expects 11.4% return.'
+          ]
+        }
       )
     };
   },
@@ -58,20 +84,33 @@ const generators = {
       question: `Using CAPM: Risk-free rate = ${rf.toFixed(1)}%, Market risk premium = ${marketPremium.toFixed(1)}%, Beta = ${beta.toFixed(2)}. What is the required return?`,
       answer: ke.toFixed(2),
       accepts: [ke.toFixed(2), `${ke.toFixed(2)}%`],
-      hint: 'Required Return = Risk-free Rate + (Beta × Market Risk Premium)'
+      hint: 'Required Return = Risk-free Rate + (Beta \u00D7 Market Risk Premium). Note: the premium is already given \u2014 you do not need to subtract Rf from Rm.',
+      definitions: {
+        'Risk-free rate': 'The return on a safe investment like government bonds. The baseline with zero risk.',
+        'Market risk premium': 'The extra return the market gives above the risk-free rate. It is already calculated as Rm - Rf.',
+        'Beta': 'How volatile this stock is versus the market. \u03B2 > 1 = more volatile, \u03B2 < 1 = less volatile.',
+        'CAPM': 'Capital Asset Pricing Model \u2014 links risk (beta) to expected return.',
+      }
     };
   },
 
   AFM_BETA_BASICS: () => {
-    const equity = rand(40, 80); // Market cap
+    const equity = rand(40, 80);
     const debt = rand(20, 50);
     const beta_equity = roundTo(rand(90, 130) / 100, 2);
-    const beta_ungeared = roundTo(beta_equity / (1 + (debt / equity) * 0.75), 2); // Simplified
+    const beta_ungeared = roundTo(beta_equity / (1 + (debt / equity) * 0.75), 2);
     return {
-      question: `A company has equity value £${equity}M, debt £${debt}M, and levered beta ${beta_equity.toFixed(2)}. Calculate ungeared beta (assume tax = 25%).`,
+      question: `A company has equity value \u00A3${equity}M, debt \u00A3${debt}M, and levered beta ${beta_equity.toFixed(2)}. Calculate ungeared beta (assume tax = 25%).`,
       answer: beta_ungeared.toFixed(2),
       accepts: [beta_ungeared.toFixed(2), beta_ungeared.toString()],
-      hint: 'Ungeared Beta = Levered Beta / [1 + (1-Tax) × (Debt/Equity)]'
+      hint: 'Ungeared Beta = Levered Beta / [1 + (1-Tax) \u00D7 (Debt/Equity)]',
+      definitions: {
+        'Levered beta': 'The beta of a company that has debt. Debt amplifies risk, so levered beta is always higher than ungeared beta.',
+        'Ungeared beta': 'The beta of a company as if it had zero debt. It isolates pure business risk from financial risk.',
+        'Equity value': 'The total market value of the company\'s shares (market capitalisation).',
+        'Debt': 'The total borrowings of the company (bonds, loans, etc.).',
+        'Tax': 'Corporation tax rate. Debt provides a tax shield, which is why (1-Tax) appears in the formula.',
+      }
     };
   },
 
@@ -83,7 +122,12 @@ const generators = {
       question: `Market return is ${rm.toFixed(1)}%, risk-free rate is ${rf.toFixed(1)}%. What is the market risk premium?`,
       answer: premium.toFixed(2),
       accepts: [premium.toFixed(2), `${premium.toFixed(2)}%`],
-      hint: 'Market Risk Premium = Market Return - Risk-Free Rate'
+      hint: 'Market Risk Premium = Market Return - Risk-Free Rate. Just subtract!',
+      definitions: {
+        'Market return': 'The average annual return expected from investing in the overall stock market.',
+        'Risk-free rate': 'The return on a completely safe investment like government bonds.',
+        'Market risk premium': 'The extra return investors demand for choosing the risky stock market over safe bonds.',
+      }
     };
   },
 

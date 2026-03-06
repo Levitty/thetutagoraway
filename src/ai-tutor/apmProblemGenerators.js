@@ -14,7 +14,11 @@ const roundTo = (n, dp) => Number(n.toFixed(dp));
 const formatCurrency = (n) => `$${roundTo(n, 2).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 const formatPercent = (n) => `${roundTo(n, 2)}%`;
 
-const makeWorkedExample = (problem, steps, solution) => ({ problem, steps, solution });
+const makeWorkedExample = (problem, steps, solution, opts = {}) => ({
+  problem, steps, solution,
+  ...(opts.whySteps ? { whySteps: opts.whySteps } : {}),
+  ...(opts.definitions ? { definitions: opts.definitions } : {}),
+});
 
 // ==================== GENERATORS ====================
 
