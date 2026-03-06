@@ -95,9 +95,9 @@ const ContactForm = () => {
           <div key={f.key} className={f.half ? '' : 'sm:col-span-2'}>
             <label className={`block text-xs font-medium uppercase tracking-wider mb-2 transition-colors ${focused === f.key ? 'text-[#e8734a]' : 'text-white/30'}`}>{f.label}</label>
             {f.type === 'textarea' ? (
-              <textarea rows={3} required={f.req} value={form[f.key]} onChange={e => setForm({...form, [f.key]: e.target.value})} onFocus={() => setFocused(f.key)} onBlur={() => setFocused(null)} className="w-full px-0 py-3 bg-transparent border-b border-white/10 text-white focus:outline-none focus:border-[#e8734a] transition-colors resize-none placeholder-white/20" />
+              <textarea rows={3} required={f.req} value={form[f.key]} onChange={e => setForm({...form, [f.key]: e.target.value})} onFocus={() => setFocused(f.key)} onBlur={() => setFocused(null)} className="w-full px-0 py-3 bg-transparent border-b border-white/10 text-white text-sm sm:text-base focus:outline-none focus:border-[#e8734a] transition-colors resize-none placeholder-white/20" />
             ) : (
-              <input type={f.type} required={f.req} value={form[f.key]} onChange={e => setForm({...form, [f.key]: e.target.value})} onFocus={() => setFocused(f.key)} onBlur={() => setFocused(null)} className="w-full px-0 py-3 bg-transparent border-b border-white/10 text-white focus:outline-none focus:border-[#e8734a] transition-colors placeholder-white/20" />
+              <input type={f.type} required={f.req} value={form[f.key]} onChange={e => setForm({...form, [f.key]: e.target.value})} onFocus={() => setFocused(f.key)} onBlur={() => setFocused(null)} className="w-full px-0 py-3 bg-transparent border-b border-white/10 text-white text-sm sm:text-base focus:outline-none focus:border-[#e8734a] transition-colors placeholder-white/20 min-h-[44px]" />
             )}
           </div>
         ))}
@@ -167,17 +167,18 @@ export const ConsultingPage = ({ onBack }) => {
 
       {/* ── NAV ── */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-[#0d1117]/95 backdrop-blur-md border-b border-white/5' : ''}`}>
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 h-16 md:h-20 flex items-center justify-between">
-          <button onClick={onBack} className="flex items-center gap-4 group">
-            <span className="font-display font-bold text-[#e8734a] tracking-wider text-sm">TUTAGORA</span>
-            <span className="font-body text-[10px] tracking-[0.15em] uppercase text-white/30 ml-1">Consulting</span>
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 h-14 sm:h-16 md:h-20 flex items-center justify-between">
+          <button onClick={onBack} className="flex items-center gap-2 sm:gap-4 group min-h-[44px]">
+            <span className="font-display font-bold text-[#e8734a] tracking-wider text-xs sm:text-sm">TUTAGORA</span>
+            <span className="font-body text-[9px] sm:text-[10px] tracking-[0.15em] uppercase text-white/30 ml-1">Consulting</span>
           </button>
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4 sm:gap-8">
             <a href="#services" className="text-xs font-medium tracking-wider uppercase text-white/40 hover:text-white transition-colors hidden md:block">Services</a>
             <a href="#work" className="text-xs font-medium tracking-wider uppercase text-white/40 hover:text-white transition-colors hidden md:block">Work</a>
             <a href="#ai" className="text-xs font-medium tracking-wider uppercase text-white/40 hover:text-white transition-colors hidden md:block">AI</a>
-            <a href="#contact" className="text-xs font-bold tracking-wider uppercase text-[#e8734a] hover:text-[#f09070] transition-colors flex items-center gap-2">
-              Get in Touch
+            <a href="#contact" className="text-xs font-bold tracking-wider uppercase text-[#e8734a] hover:text-[#f09070] transition-colors flex items-center gap-2 min-h-[44px] items-center">
+              <span className="hidden sm:inline">Get in Touch</span>
+              <span className="sm:hidden">Contact</span>
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M7 17L17 7M17 7H7M17 7v10" /></svg>
             </a>
           </div>
@@ -185,54 +186,50 @@ export const ConsultingPage = ({ onBack }) => {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex items-end pb-16 md:pb-24 overflow-hidden">
+      <section className="relative min-h-screen flex items-end pb-10 sm:pb-16 md:pb-24 overflow-hidden">
         {/* Background layers */}
         <div className="absolute inset-0">
-          {/* Base gradient */}
           <div className="absolute inset-0" style={{ background: 'linear-gradient(160deg, #0d1117 0%, #161b22 40%, #0d1117 100%)' }} />
-          {/* Large chevron shapes — like the proposal */}
-          <div style={{ position: 'absolute', top: '10%', right: '-5%', width: '50vw', height: '80vh', opacity: 0.04, transform: `translate(${parallax.x * 0.5}px, ${parallax.y * 0.5}px)` }}>
+          <div className="hidden sm:block" style={{ position: 'absolute', top: '10%', right: '-5%', width: '50vw', height: '80vh', opacity: 0.04, transform: `translate(${parallax.x * 0.5}px, ${parallax.y * 0.5}px)` }}>
             <svg viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
               <path d="M200 50L350 300L200 550" stroke="white" strokeWidth="2" />
               <path d="M150 100L300 300L150 500" stroke="white" strokeWidth="1" />
             </svg>
           </div>
-          {/* Diagonal accent lines */}
-          <div className="absolute top-0 right-[20%] w-px h-full opacity-[0.03]" style={{ background: 'linear-gradient(to bottom, transparent 0%, white 30%, white 70%, transparent 100%)', transform: 'rotate(3deg)' }} />
-          <div className="absolute top-0 right-[22%] w-px h-full opacity-[0.02]" style={{ background: 'linear-gradient(to bottom, transparent 0%, white 30%, white 70%, transparent 100%)', transform: 'rotate(3deg)' }} />
-          {/* Orange glow */}
-          <div className="absolute top-[30%] right-[15%] w-[300px] h-[300px] rounded-full blur-[150px] opacity-[0.07]" style={{ background: '#e8734a' }} />
-          <div className="absolute bottom-[20%] left-[10%] w-[200px] h-[200px] rounded-full blur-[100px] opacity-[0.04]" style={{ background: '#e8734a' }} />
+          <div className="absolute top-0 right-[20%] w-px h-full opacity-[0.03] hidden sm:block" style={{ background: 'linear-gradient(to bottom, transparent 0%, white 30%, white 70%, transparent 100%)', transform: 'rotate(3deg)' }} />
+          <div className="absolute top-0 right-[22%] w-px h-full opacity-[0.02] hidden sm:block" style={{ background: 'linear-gradient(to bottom, transparent 0%, white 30%, white 70%, transparent 100%)', transform: 'rotate(3deg)' }} />
+          <div className="absolute top-[30%] right-[15%] w-[200px] sm:w-[300px] h-[200px] sm:h-[300px] rounded-full blur-[100px] sm:blur-[150px] opacity-[0.07]" style={{ background: '#e8734a' }} />
+          <div className="absolute bottom-[20%] left-[10%] w-[150px] sm:w-[200px] h-[150px] sm:h-[200px] rounded-full blur-[80px] sm:blur-[100px] opacity-[0.04]" style={{ background: '#e8734a' }} />
         </div>
 
-        <div className="relative max-w-[1400px] mx-auto px-6 md:px-12 w-full">
-          <div className="grid md:grid-cols-12 gap-8 items-end">
+        <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 w-full pt-20 sm:pt-0">
+          <div className="grid md:grid-cols-12 gap-8 md:gap-8 items-end">
             {/* Main heading — left */}
             <div className="md:col-span-8">
               <R>
-                <p className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase mb-6 md:mb-10">
+                <p className="font-display text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] text-[#e8734a] uppercase mb-4 sm:mb-6 md:mb-10">
                   Tutagora Consulting — Nairobi
                 </p>
               </R>
               <R delay={0.1}>
-                <h1 className="font-display text-[clamp(3rem,8vw,7rem)] font-bold leading-[0.95] tracking-tight uppercase">
+                <h1 className="font-display text-[clamp(2.2rem,10vw,7rem)] font-bold leading-[0.95] tracking-tight uppercase">
                   Your School<br />
                   Deserves to<br />
                   <span className="text-[#e8734a]">Take Flight.</span>
                 </h1>
               </R>
               <R delay={0.25}>
-                <p className="font-body mt-8 text-lg text-white/35 max-w-md leading-relaxed">
+                <p className="font-body mt-5 sm:mt-8 text-base sm:text-lg text-white/35 max-w-md leading-relaxed">
                   We help schools build brands that attract the right students, and software that runs the operation behind them. Strategy, design, technology — under one roof.
                 </p>
               </R>
               <R delay={0.35}>
-                <div className="flex flex-wrap items-center gap-6 mt-10">
-                  <a href="#services" className="glow-border inline-flex items-center gap-3 px-7 py-3.5 bg-[#e8734a] text-white font-display font-bold text-xs uppercase tracking-wider rounded-full hover:bg-[#d4633c] transition-all relative z-10">
+                <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-8 sm:mt-10">
+                  <a href="#services" className="glow-border inline-flex items-center gap-3 px-6 sm:px-7 py-3.5 bg-[#e8734a] text-white font-display font-bold text-xs uppercase tracking-wider rounded-full hover:bg-[#d4633c] transition-all relative z-10 min-h-[44px]">
                     Explore Services
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   </a>
-                  <a href="#contact" className="inline-flex items-center gap-4 group">
+                  <a href="#contact" className="inline-flex items-center gap-4 group min-h-[44px]">
                     <span className="w-8 h-px bg-white/20 group-hover:w-14 group-hover:bg-[#e8734a] transition-all" />
                     <span className="font-display text-xs font-bold tracking-[0.15em] text-white/40 group-hover:text-[#e8734a] uppercase transition-colors">Book a Call</span>
                   </a>
@@ -240,10 +237,10 @@ export const ConsultingPage = ({ onBack }) => {
               </R>
             </div>
 
-            {/* Stats sidebar — right */}
+            {/* Stats sidebar — right (horizontal on mobile, vertical on desktop) */}
             <div className="md:col-span-3 md:col-start-10">
               <R delay={0.3}>
-                <div className="space-y-8 md:border-l border-white/10 md:pl-8">
+                <div className="grid grid-cols-4 gap-4 md:grid-cols-1 md:gap-0 md:space-y-8 md:border-l border-t md:border-t-0 border-white/10 pt-6 md:pt-0 md:pl-8 mt-4 md:mt-0">
                   {[
                     { val: '6+', label: 'Service Areas' },
                     { val: '4', label: 'School Partners' },
@@ -251,8 +248,8 @@ export const ConsultingPage = ({ onBack }) => {
                     { val: 'KE', label: 'Market Focus' },
                   ].map(s => (
                     <div key={s.label} className="group">
-                      <div className="font-display text-2xl font-bold text-white/90 group-hover:text-[#e8734a] transition-colors">{s.val}</div>
-                      <div className="font-body text-[10px] tracking-[0.15em] uppercase text-white/25 mt-1">{s.label}</div>
+                      <div className="font-display text-lg sm:text-2xl font-bold text-white/90 group-hover:text-[#e8734a] transition-colors">{s.val}</div>
+                      <div className="font-body text-[8px] sm:text-[10px] tracking-[0.1em] sm:tracking-[0.15em] uppercase text-white/25 mt-1">{s.label}</div>
                     </div>
                   ))}
                 </div>
@@ -261,21 +258,21 @@ export const ConsultingPage = ({ onBack }) => {
           </div>
         </div>
 
-        {/* Scroll line */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
+        {/* Scroll line — hidden on mobile */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex-col items-center hidden sm:flex">
           <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/10 to-white/20 animate-pulse" />
         </div>
       </section>
 
       {/* ── MARQUEE STRIP ── */}
-      <div className="relative py-5 bg-[#e8734a] overflow-hidden">
+      <div className="relative py-3 sm:py-5 bg-[#e8734a] overflow-hidden">
         <div className="flex whitespace-nowrap marquee-track" style={{ width: 'max-content' }}>
           {[...Array(2)].map((_, rep) => (
             <div key={rep} className="flex items-center">
               {['Brand Strategy', 'Web Development', 'Social Media', 'Recruitment Campaigns', 'School Software', 'AI Learning', 'Content Production', 'Email Marketing'].map((t, i) => (
                 <span key={`${rep}-${i}`} className="flex items-center">
-                  <span className="font-display text-sm font-bold text-white/90 uppercase tracking-wider mx-8">{t}</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
+                  <span className="font-display text-[11px] sm:text-sm font-bold text-white/90 uppercase tracking-wider mx-4 sm:mx-8">{t}</span>
+                  <span className="w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-white/40" />
                 </span>
               ))}
             </div>
@@ -284,25 +281,25 @@ export const ConsultingPage = ({ onBack }) => {
       </div>
 
       {/* ── THE CHALLENGE — Full-width editorial ── */}
-      <section className="relative py-24 md:py-40 px-6 md:px-12" style={{ background: '#f7f5f2' }}>
+      <section className="relative py-16 sm:py-24 md:py-40 px-4 sm:px-6 md:px-12" style={{ background: '#f7f5f2' }}>
         <div className="max-w-[1400px] mx-auto">
-          <div className="grid md:grid-cols-12 gap-12 md:gap-20">
+          <div className="grid md:grid-cols-12 gap-8 sm:gap-12 md:gap-20">
             <div className="md:col-span-4">
               <R>
-                <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">The Challenge</span>
-                <h2 className="font-display text-3xl md:text-[2.75rem] font-bold text-[#0d1117] leading-[1.1] mt-4">
+                <span className="font-display text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] text-[#e8734a] uppercase">The Challenge</span>
+                <h2 className="font-display text-2xl sm:text-3xl md:text-[2.75rem] font-bold text-[#0d1117] leading-[1.1] mt-3 sm:mt-4">
                   Schools are losing students before the first conversation.
                 </h2>
               </R>
             </div>
             <div className="md:col-span-6 md:col-start-6">
               <R delay={0.15}>
-                <div className="space-y-6 font-body text-[#0d1117]/60 text-lg leading-relaxed">
+                <div className="space-y-4 sm:space-y-6 font-body text-[#0d1117]/60 text-base sm:text-lg leading-relaxed">
                   <p>Parents and students begin their research online. They search, they compare, and they form an impression before picking up the phone. Schools with weak digital presence lose candidates before the conversation starts.</p>
                   <p>Administrative staff buried in spreadsheets, manual tracking, and disconnected systems only compounds the problem. Wasted hours, data gaps, decisions without the full picture.</p>
                 </div>
-                <div className="mt-10 pl-6 border-l-2 border-[#e8734a]">
-                  <p className="font-display text-xl md:text-2xl font-bold text-[#0d1117] leading-snug">
+                <div className="mt-8 sm:mt-10 pl-5 sm:pl-6 border-l-2 border-[#e8734a]">
+                  <p className="font-display text-lg sm:text-xl md:text-2xl font-bold text-[#0d1117] leading-snug">
                     We fix both. Marketing that builds your brand. Software that runs your school.
                   </p>
                 </div>
@@ -313,19 +310,19 @@ export const ConsultingPage = ({ onBack }) => {
       </section>
 
       {/* ── SERVICES — Interactive accordion style ── */}
-      <section id="services" className="relative py-24 md:py-40 px-6 md:px-12 bg-[#0d1117]">
+      <section id="services" className="relative py-16 sm:py-24 md:py-40 px-4 sm:px-6 md:px-12 bg-[#0d1117]">
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <div className="relative max-w-[1400px] mx-auto">
           <R>
-            <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">What We Do</span>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-white leading-[1.05] mt-4 mb-16 md:mb-24">
+            <span className="font-display text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] text-[#e8734a] uppercase">What We Do</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-[1.05] mt-3 sm:mt-4 mb-10 sm:mb-16 md:mb-24">
               Six service areas.<br />One partner.
             </h2>
           </R>
 
-          <div className="grid md:grid-cols-12 gap-12">
-            {/* Service list — left */}
+          {/* Desktop: split panel layout */}
+          <div className="hidden md:grid md:grid-cols-12 gap-12">
             <div className="md:col-span-5">
               <div className="space-y-0">
                 {services.map((s, i) => (
@@ -341,21 +338,19 @@ export const ConsultingPage = ({ onBack }) => {
                 ))}
               </div>
             </div>
-
-            {/* Active service detail — right */}
             <div className="md:col-span-6 md:col-start-7 flex items-center">
               <div className="w-full">
-                <div className="font-display text-[120px] md:text-[180px] font-bold text-white/[0.02] leading-none select-none">
+                <div className="font-display text-[180px] font-bold text-white/[0.02] leading-none select-none">
                   {services[activeService].num}
                 </div>
-                <div className="-mt-16 md:-mt-24">
-                  <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+                <div className="-mt-24">
+                  <h3 className="font-display text-3xl font-bold text-white mb-4">
                     {services[activeService].title}
                   </h3>
                   <p className="font-body text-white/40 text-lg leading-relaxed max-w-md">
                     {services[activeService].desc}
                   </p>
-                  <a href="#contact" className="inline-flex items-center gap-3 mt-8 group">
+                  <a href="#contact" className="inline-flex items-center gap-3 mt-8 group min-h-[44px]">
                     <span className="w-8 h-px bg-[#e8734a] group-hover:w-14 transition-all" />
                     <span className="font-display text-xs font-bold tracking-[0.15em] text-[#e8734a] uppercase">Learn More</span>
                   </a>
@@ -363,21 +358,42 @@ export const ConsultingPage = ({ onBack }) => {
               </div>
             </div>
           </div>
+
+          {/* Mobile: inline accordion — tap to expand */}
+          <div className="md:hidden space-y-0">
+            {services.map((s, i) => (
+              <R key={s.num} delay={i * 0.05}>
+                <button
+                  onClick={() => setActiveService(activeService === i ? -1 : i)}
+                  className={`w-full text-left py-4 border-b transition-all duration-300 min-h-[48px] ${activeService === i ? 'border-[#e8734a]' : 'border-white/5'}`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className={`font-display text-xs font-bold transition-colors ${activeService === i ? 'text-[#e8734a]' : 'text-white/20'}`}>{s.num}</span>
+                    <span className={`font-display text-base sm:text-lg font-semibold transition-colors flex-1 ${activeService === i ? 'text-white' : 'text-white/40'}`}>{s.title}</span>
+                    <svg className={`w-4 h-4 transition-transform duration-300 ${activeService === i ? 'rotate-180 text-[#e8734a]' : 'text-white/20'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6" /></svg>
+                  </div>
+                  <div className={`overflow-hidden transition-all duration-300 ${activeService === i ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0'}`}>
+                    <p className="font-body text-white/40 text-sm leading-relaxed pl-7">{s.desc}</p>
+                  </div>
+                </button>
+              </R>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section className="relative py-20 md:py-28 px-6 md:px-12 overflow-hidden" style={{ background: '#e8734a' }}>
+      <section className="relative py-14 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 overflow-hidden" style={{ background: '#e8734a' }}>
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
         <div className="relative max-w-[1400px] mx-auto text-center">
           <R>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-white leading-[1.1] mb-6">
-              Ready to transform how<br />your school is seen?
+            <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-[1.1] mb-4 sm:mb-6">
+              Ready to transform how<br className="hidden sm:block" /> your school is seen?
             </h2>
-            <p className="font-body text-white/70 text-lg mb-10 max-w-md mx-auto">
+            <p className="font-body text-white/70 text-base sm:text-lg mb-8 sm:mb-10 max-w-md mx-auto">
               One conversation. No obligation. Let us show you what is possible.
             </p>
-            <a href="#contact" className="glow-border inline-flex items-center gap-3 px-8 py-4 bg-white text-[#0d1117] font-display font-bold text-sm uppercase tracking-wider rounded-full hover:bg-white/95 transition-all relative z-10">
+            <a href="#contact" className="glow-border inline-flex items-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-[#0d1117] font-display font-bold text-xs sm:text-sm uppercase tracking-wider rounded-full hover:bg-white/95 transition-all relative z-10 min-h-[44px]">
               Book Your Discovery Call
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </a>
@@ -386,43 +402,41 @@ export const ConsultingPage = ({ onBack }) => {
       </section>
 
       {/* ── TUTAGORA AI — Full-bleed feature ── */}
-      <section id="ai" className="relative py-24 md:py-40 px-6 md:px-12 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)' }}>
-        {/* Radial dot grid */}
+      <section id="ai" className="relative py-16 sm:py-24 md:py-40 px-4 sm:px-6 md:px-12 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)' }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-        {/* Glow */}
-        <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-[200px] opacity-[0.08]" style={{ background: '#e8734a' }} />
+        <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] rounded-full blur-[120px] sm:blur-[200px] opacity-[0.08]" style={{ background: '#e8734a' }} />
 
         <div className="relative max-w-[1400px] mx-auto">
-          <div className="grid md:grid-cols-12 gap-16 items-center">
+          <div className="grid md:grid-cols-12 gap-10 sm:gap-16 items-center">
             <div className="md:col-span-6">
               <R>
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="font-display text-xs font-bold tracking-[0.25em] text-emerald-400/70 uppercase">Now Available</span>
+                <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                  <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="font-display text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.25em] text-emerald-400/70 uppercase">Now Available</span>
                 </div>
-                <h2 className="font-display text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight">
+                <h2 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight">
                   Tutagora<br /><span className="text-[#e8734a]">AI</span>
                 </h2>
-                <p className="font-body mt-8 text-lg text-white/35 max-w-lg leading-relaxed">
+                <p className="font-body mt-5 sm:mt-8 text-base sm:text-lg text-white/35 max-w-lg leading-relaxed">
                   Every student learns differently. Tutagora AI gives each one a personal learning path that adapts in real time — diagnosing gaps, adjusting difficulty, and showing schools exactly where each learner stands.
                 </p>
               </R>
             </div>
             <div className="md:col-span-5 md:col-start-8">
               <R delay={0.2}>
-                <div className="space-y-5">
+                <div className="space-y-3 sm:space-y-5">
                   {[
                     { icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', title: 'Diagnostic Engine', desc: 'Maps what each student knows in minutes. Identifies exact knowledge gaps across any subject.' },
                     { icon: 'M13 10V3L4 14h7v7l9-11h-7z', title: 'Adaptive Paths', desc: 'Learning sequences that adjust in real time based on student performance and mastery patterns.' },
                     { icon: 'M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', title: 'School Analytics', desc: 'Real data on student progress. Track performance across classes, subjects, and time periods.' },
                   ].map((item, i) => (
-                    <div key={item.title} className="group flex gap-5 p-5 rounded-xl border border-white/5 hover:border-[#e8734a]/20 hover:bg-white/[0.02] transition-all cursor-default">
-                      <div className="w-10 h-10 rounded-lg bg-[#e8734a]/10 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-5 h-5 text-[#e8734a]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={item.icon} /></svg>
+                    <div key={item.title} className="group flex gap-4 sm:gap-5 p-4 sm:p-5 rounded-xl border border-white/5 hover:border-[#e8734a]/20 hover:bg-white/[0.02] transition-all cursor-default">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#e8734a]/10 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#e8734a]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={item.icon} /></svg>
                       </div>
                       <div>
-                        <h4 className="font-display font-bold text-white mb-1 group-hover:text-[#e8734a] transition-colors">{item.title}</h4>
-                        <p className="font-body text-sm text-white/30 leading-relaxed">{item.desc}</p>
+                        <h4 className="font-display font-bold text-sm sm:text-base text-white mb-1 group-hover:text-[#e8734a] transition-colors">{item.title}</h4>
+                        <p className="font-body text-xs sm:text-sm text-white/30 leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -434,16 +448,16 @@ export const ConsultingPage = ({ onBack }) => {
       </section>
 
       {/* ── PROCESS — Horizontal editorial ── */}
-      <section className="relative py-24 md:py-40 px-6 md:px-12" style={{ background: '#f7f5f2' }}>
+      <section className="relative py-16 sm:py-24 md:py-40 px-4 sm:px-6 md:px-12" style={{ background: '#f7f5f2' }}>
         <div className="max-w-[1400px] mx-auto">
           <R>
-            <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">Our Process</span>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-[#0d1117] leading-[1.05] mt-4 mb-16 md:mb-24 max-w-xl">
+            <span className="font-display text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] text-[#e8734a] uppercase">Our Process</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-[#0d1117] leading-[1.05] mt-3 sm:mt-4 mb-10 sm:mb-16 md:mb-24 max-w-xl">
               How a partnership with Tutagora works.
             </h2>
           </R>
 
-          <div className="grid md:grid-cols-4 gap-0">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
             {[
               { phase: '01', title: 'Discovery', time: 'Weeks 1-3', desc: 'Full brand audit. Competitor mapping. Student persona development. Goals alignment.' },
               { phase: '02', title: 'Build', time: 'Weeks 4-7', desc: 'Visual identity. Website. Messaging. Software setup. Everything designed and tested.' },
@@ -451,13 +465,13 @@ export const ConsultingPage = ({ onBack }) => {
               { phase: '04', title: 'Grow', time: 'Month 4+', desc: 'Monthly reporting. Campaign optimisation. Quarterly strategy. Long-term partnership.' },
             ].map((s, i) => (
               <R key={s.phase} delay={i * 0.1}>
-                <div className={`group py-8 md:px-8 ${i > 0 ? 'md:border-l border-[#0d1117]/10' : ''}`}>
-                  <div className="font-display text-[80px] font-bold text-[#0d1117]/[0.04] leading-none mb-2">{s.phase}</div>
-                  <div className="flex items-center gap-3 mb-3 -mt-6">
-                    <h3 className="font-display text-xl font-bold text-[#0d1117]">{s.title}</h3>
-                    <span className="font-body text-xs text-[#e8734a] font-medium">{s.time}</span>
+                <div className={`group py-6 sm:py-8 md:px-8 ${i > 0 ? 'md:border-l border-[#0d1117]/10' : ''} ${i >= 2 ? 'border-t md:border-t-0 border-[#0d1117]/10 pt-6' : ''}`}>
+                  <div className="font-display text-[50px] sm:text-[80px] font-bold text-[#0d1117]/[0.04] leading-none mb-1 sm:mb-2">{s.phase}</div>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-2 sm:mb-3 -mt-4 sm:-mt-6">
+                    <h3 className="font-display text-base sm:text-xl font-bold text-[#0d1117]">{s.title}</h3>
+                    <span className="font-body text-[10px] sm:text-xs text-[#e8734a] font-medium">{s.time}</span>
                   </div>
-                  <p className="font-body text-sm text-[#0d1117]/40 leading-relaxed">{s.desc}</p>
+                  <p className="font-body text-xs sm:text-sm text-[#0d1117]/40 leading-relaxed">{s.desc}</p>
                 </div>
               </R>
             ))}
@@ -466,24 +480,24 @@ export const ConsultingPage = ({ onBack }) => {
       </section>
 
       {/* ── CONTENT INFRASTRUCTURE — Lenns Hub ── */}
-      <section className="relative py-20 md:py-28 px-6 md:px-12 bg-[#0d1117] border-t border-white/5">
+      <section className="relative py-14 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12 bg-[#0d1117] border-t border-white/5">
         <div className="max-w-[1400px] mx-auto">
           <R>
-            <div className="grid md:grid-cols-12 gap-12 items-center">
+            <div className="grid md:grid-cols-12 gap-8 sm:gap-12 items-center">
               <div className="md:col-span-7">
-                <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">Content Infrastructure</span>
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-white leading-tight mt-4 mb-4">
+                <span className="font-display text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] text-[#e8734a] uppercase">Content Infrastructure</span>
+                <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight mt-3 sm:mt-4 mb-3 sm:mb-4">
                   Cinema-grade production.<br />No middlemen.
                 </h3>
-                <p className="font-body text-white/35 leading-relaxed max-w-lg">
+                <p className="font-body text-sm sm:text-base text-white/35 leading-relaxed max-w-lg">
                   Through our partnership with The Lenns Hub, a Nairobi-based professional equipment company, every shoot we run uses cinema-grade gear. Campus tours, student stories, aerial footage, recruitment videos — all produced in-house with no compromises on quality.
                 </p>
               </div>
               <div className="md:col-span-4 md:col-start-9">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   {['Campus Tours', 'Aerial Footage', 'Student Stories', 'Brand Videos'].map(item => (
-                    <div key={item} className="p-4 rounded-lg border border-white/5 hover:border-[#e8734a]/20 transition-colors">
-                      <span className="font-display text-sm font-medium text-white/50">{item}</span>
+                    <div key={item} className="p-3 sm:p-4 rounded-lg border border-white/5 hover:border-[#e8734a]/20 transition-colors">
+                      <span className="font-display text-xs sm:text-sm font-medium text-white/50">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -494,32 +508,32 @@ export const ConsultingPage = ({ onBack }) => {
       </section>
 
       {/* ── TESTIMONIAL ── */}
-      <section className="relative py-20 md:py-28 px-6 md:px-12" style={{ background: '#f7f5f2' }}>
+      <section className="relative py-14 sm:py-20 md:py-28 px-4 sm:px-6 md:px-12" style={{ background: '#f7f5f2' }}>
         <div className="max-w-[900px] mx-auto text-center">
           <R>
-            <svg className="w-10 h-10 text-[#e8734a]/20 mx-auto mb-8" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
-            <p className="font-display text-2xl md:text-3xl font-bold text-[#0d1117] leading-snug mb-8">
+            <svg className="w-8 sm:w-10 h-8 sm:h-10 text-[#e8734a]/20 mx-auto mb-5 sm:mb-8" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
+            <p className="font-display text-lg sm:text-2xl md:text-3xl font-bold text-[#0d1117] leading-snug mb-6 sm:mb-8">
               Since partnering with Tutagora, our digital enquiries have grown consistently and our brand finally matches the quality of education we deliver.
             </p>
             <div>
-              <span className="font-display font-bold text-[#0d1117] text-sm">School Partner</span>
-              <span className="font-body text-[#0d1117]/40 text-sm ml-2">— Nairobi</span>
+              <span className="font-display font-bold text-[#0d1117] text-xs sm:text-sm">School Partner</span>
+              <span className="font-body text-[#0d1117]/40 text-xs sm:text-sm ml-2">— Nairobi</span>
             </div>
           </R>
         </div>
       </section>
 
       {/* ── TRACK RECORD ── */}
-      <section id="work" className="relative py-24 md:py-40 px-6 md:px-12 bg-[#0d1117]">
+      <section id="work" className="relative py-16 sm:py-24 md:py-40 px-4 sm:px-6 md:px-12 bg-[#0d1117]">
         <div className="max-w-[1400px] mx-auto">
-          <div className="grid md:grid-cols-12 gap-16">
+          <div className="grid md:grid-cols-12 gap-10 sm:gap-16">
             <div className="md:col-span-5">
               <R>
-                <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">Track Record</span>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-white leading-[1.1] mt-4 mb-6">
+                <span className="font-display text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] text-[#e8734a] uppercase">Track Record</span>
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-[1.1] mt-3 sm:mt-4 mb-4 sm:mb-6">
                   Built for education. Nothing else.
                 </h2>
-                <p className="font-body text-white/30 leading-relaxed">
+                <p className="font-body text-sm sm:text-base text-white/30 leading-relaxed">
                   Active partnerships delivering marketing, school management software, and AI-powered learning across Nairobi.
                 </p>
               </R>
@@ -527,12 +541,12 @@ export const ConsultingPage = ({ onBack }) => {
             <div className="md:col-span-6 md:col-start-7">
               {PARTNERS.map((p, i) => (
                 <R key={p.name} delay={i * 0.08}>
-                  <div className="group flex items-center justify-between py-7 border-b border-white/5 hover:border-[#e8734a]/30 transition-all cursor-default">
-                    <div className="flex items-center gap-5">
-                      <span className="font-display text-sm font-bold text-[#e8734a] w-8">{String(i + 1).padStart(2, '0')}</span>
-                      <span className="font-display font-semibold text-white group-hover:text-[#e8734a] transition-colors">{p.name}</span>
+                  <div className="group flex items-center justify-between py-5 sm:py-7 border-b border-white/5 hover:border-[#e8734a]/30 transition-all cursor-default">
+                    <div className="flex items-center gap-3 sm:gap-5">
+                      <span className="font-display text-xs sm:text-sm font-bold text-[#e8734a] w-6 sm:w-8">{String(i + 1).padStart(2, '0')}</span>
+                      <span className="font-display text-sm sm:text-base font-semibold text-white group-hover:text-[#e8734a] transition-colors">{p.name}</span>
                     </div>
-                    <span className="font-body text-xs text-white/20 hidden sm:block">{p.tag}</span>
+                    <span className="font-body text-[10px] sm:text-xs text-white/20 hidden sm:block">{p.tag}</span>
                   </div>
                 </R>
               ))}
@@ -541,7 +555,7 @@ export const ConsultingPage = ({ onBack }) => {
 
           {/* Big number stats */}
           <R delay={0.2}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-16 border-t border-white/5">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mt-14 sm:mt-24 pt-10 sm:pt-16 border-t border-white/5">
               {[
                 { val: 4, suffix: '+', label: 'Schools Served' },
                 { val: 3, suffix: ' yrs', label: 'In Education' },
@@ -549,10 +563,10 @@ export const ConsultingPage = ({ onBack }) => {
                 { val: 6, suffix: '+', label: 'Service Areas' },
               ].map(s => (
                 <div key={s.label} className="text-center md:text-left">
-                  <div className="font-display text-4xl md:text-5xl font-bold text-white">
+                  <div className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white">
                     <Counter end={s.val} suffix={s.suffix} />
                   </div>
-                  <div className="font-body text-xs tracking-[0.15em] uppercase text-white/20 mt-2">{s.label}</div>
+                  <div className="font-body text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] uppercase text-white/20 mt-1 sm:mt-2">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -561,16 +575,16 @@ export const ConsultingPage = ({ onBack }) => {
       </section>
 
       {/* ── WHY US — Minimal and editorial ── */}
-      <section className="relative py-24 md:py-40 px-6 md:px-12" style={{ background: '#f7f5f2' }}>
+      <section className="relative py-16 sm:py-24 md:py-40 px-4 sm:px-6 md:px-12" style={{ background: '#f7f5f2' }}>
         <div className="max-w-[1400px] mx-auto">
           <R>
-            <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">Why Us</span>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-[#0d1117] leading-[1.05] mt-4 mb-16 md:mb-20">
+            <span className="font-display text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] text-[#e8734a] uppercase">Why Us</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-[#0d1117] leading-[1.05] mt-3 sm:mt-4 mb-10 sm:mb-16 md:mb-20">
               Why schools choose Tutagora.
             </h2>
           </R>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 sm:gap-x-12 gap-y-10 sm:gap-y-14">
             {[
               { title: 'Kenyan. Deeply.', desc: 'We understand how families research, shortlist, and choose education across East Africa. No imported playbooks applied to the local market.' },
               { title: 'Education-first.', desc: 'Enrolment cycles, parent psychology, the trust dynamics of educational decision-making. This is the space we were built for.' },
@@ -581,9 +595,9 @@ export const ConsultingPage = ({ onBack }) => {
             ].map((item, i) => (
               <R key={item.title} delay={i * 0.06}>
                 <div className="group">
-                  <div className="w-8 h-0.5 bg-[#e8734a] mb-5 group-hover:w-14 transition-all" />
-                  <h3 className="font-display font-bold text-[#0d1117] text-lg mb-3">{item.title}</h3>
-                  <p className="font-body text-sm text-[#0d1117]/40 leading-relaxed">{item.desc}</p>
+                  <div className="w-8 h-0.5 bg-[#e8734a] mb-4 sm:mb-5 group-hover:w-14 transition-all" />
+                  <h3 className="font-display font-bold text-[#0d1117] text-base sm:text-lg mb-2 sm:mb-3">{item.title}</h3>
+                  <p className="font-body text-xs sm:text-sm text-[#0d1117]/40 leading-relaxed">{item.desc}</p>
                 </div>
               </R>
             ))}
@@ -592,38 +606,37 @@ export const ConsultingPage = ({ onBack }) => {
       </section>
 
       {/* ── CONTACT ── */}
-      <section id="contact" className="relative py-24 md:py-40 px-6 md:px-12 bg-[#0d1117] overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-[200px] opacity-[0.04]" style={{ background: '#e8734a' }} />
-        {/* Chevron decoration */}
-        <div className="absolute bottom-0 right-0 opacity-[0.02]" style={{ width: '30vw', height: '60vh' }}>
+      <section id="contact" className="relative py-16 sm:py-24 md:py-40 px-4 sm:px-6 md:px-12 bg-[#0d1117] overflow-hidden">
+        <div className="absolute top-0 right-0 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] rounded-full blur-[150px] sm:blur-[200px] opacity-[0.04]" style={{ background: '#e8734a' }} />
+        <div className="absolute bottom-0 right-0 opacity-[0.02] hidden sm:block" style={{ width: '30vw', height: '60vh' }}>
           <svg viewBox="0 0 300 500" fill="none" style={{ width: '100%', height: '100%' }}>
             <path d="M150 50L280 250L150 450" stroke="white" strokeWidth="1.5" />
           </svg>
         </div>
 
         <div className="relative max-w-[1400px] mx-auto">
-          <div className="grid md:grid-cols-12 gap-16 md:gap-24">
+          <div className="grid md:grid-cols-12 gap-10 sm:gap-16 md:gap-24">
             <div className="md:col-span-5">
               <R>
-                <span className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase">Get Started</span>
-                <h2 className="font-display text-3xl md:text-[2.75rem] font-bold text-white leading-[1.1] mt-4 mb-6">
+                <span className="font-display text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] text-[#e8734a] uppercase">Get Started</span>
+                <h2 className="font-display text-2xl sm:text-3xl md:text-[2.75rem] font-bold text-white leading-[1.1] mt-3 sm:mt-4 mb-4 sm:mb-6">
                   Let us talk about your school.
                 </h2>
-                <p className="font-body text-white/30 leading-relaxed mb-12">
+                <p className="font-body text-sm sm:text-base text-white/30 leading-relaxed mb-8 sm:mb-12">
                   45-minute discovery call. No pitch deck, no pressure. Just a conversation about where your institution is and where it should be.
                 </p>
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4 text-white/25 hover:text-white/50 transition-colors">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    <span className="font-body text-sm">hello@tutagora.com</span>
+                <div className="space-y-5 sm:space-y-6">
+                  <div className="flex items-center gap-3 sm:gap-4 text-white/25 hover:text-white/50 transition-colors">
+                    <svg width="16" height="16" className="sm:w-[18px] sm:h-[18px] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span className="font-body text-xs sm:text-sm">hello@tutagora.com</span>
                   </div>
-                  <div className="flex items-center gap-4 text-white/25 hover:text-white/50 transition-colors">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span className="font-body text-sm">Nairobi, Kenya</span>
+                  <div className="flex items-center gap-3 sm:gap-4 text-white/25 hover:text-white/50 transition-colors">
+                    <svg width="16" height="16" className="sm:w-[18px] sm:h-[18px] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span className="font-body text-xs sm:text-sm">Nairobi, Kenya</span>
                   </div>
-                  <div className="flex items-center gap-4 text-white/25 hover:text-white/50 transition-colors">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                    <span className="font-body text-sm">tutagora.com</span>
+                  <div className="flex items-center gap-3 sm:gap-4 text-white/25 hover:text-white/50 transition-colors">
+                    <svg width="16" height="16" className="sm:w-[18px] sm:h-[18px] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <span className="font-body text-xs sm:text-sm">tutagora.com</span>
                   </div>
                 </div>
               </R>
@@ -638,10 +651,10 @@ export const ConsultingPage = ({ onBack }) => {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="py-8 px-6 md:px-12 bg-[#080b10] border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="font-display text-xs font-bold tracking-wider text-[#e8734a]/50">TUTAGORA <span className="text-white/15">Consulting</span></span>
-          <span className="font-body text-xs text-white/15">Marketing & Software Solutions for Education — Nairobi, Kenya</span>
+      <footer className="py-6 sm:py-8 px-4 sm:px-6 md:px-12 bg-[#080b10] border-t border-white/5">
+        <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+          <span className="font-display text-[10px] sm:text-xs font-bold tracking-wider text-[#e8734a]/50">TUTAGORA <span className="text-white/15">Consulting</span></span>
+          <span className="font-body text-[10px] sm:text-xs text-white/15 text-center sm:text-right">Marketing & Software Solutions for Education — Nairobi, Kenya</span>
         </div>
       </footer>
     </div>
