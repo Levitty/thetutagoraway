@@ -162,6 +162,7 @@ export const ConsultingPage = ({ onBack }) => {
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 h-16 md:h-20 flex items-center justify-between">
           <button onClick={onBack} className="flex items-center gap-4 group">
             <span className="font-display font-bold text-[#e8734a] tracking-wider text-sm">TUTAGORA</span>
+            <span className="font-body text-[10px] tracking-[0.15em] uppercase text-white/30 ml-1">Consulting</span>
           </button>
           <div className="flex items-center gap-8">
             <a href="#services" className="text-xs font-medium tracking-wider uppercase text-white/40 hover:text-white transition-colors hidden md:block">Services</a>
@@ -202,7 +203,7 @@ export const ConsultingPage = ({ onBack }) => {
             <div className="md:col-span-8">
               <R>
                 <p className="font-display text-xs font-bold tracking-[0.3em] text-[#e8734a] uppercase mb-6 md:mb-10">
-                  Marketing Partnership Proposal — 2025
+                  Tutagora Consulting — Nairobi
                 </p>
               </R>
               <R delay={0.1}>
@@ -214,7 +215,7 @@ export const ConsultingPage = ({ onBack }) => {
               </R>
               <R delay={0.25}>
                 <p className="font-body mt-8 text-lg text-white/35 max-w-md leading-relaxed">
-                  A full-spectrum marketing partnership built for institutions that want to recruit the right students, build a commanding brand, and grow with intention.
+                  We help schools build brands that attract the right students, and software that runs the operation behind them. Strategy, design, technology — under one roof.
                 </p>
               </R>
               <R delay={0.35}>
@@ -546,7 +547,7 @@ export const ConsultingPage = ({ onBack }) => {
       {/* ── FOOTER ── */}
       <footer className="py-8 px-6 md:px-12 bg-[#080b10] border-t border-white/5">
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="font-display text-xs font-bold tracking-wider text-[#e8734a]/50">TUTAGORA</span>
+          <span className="font-display text-xs font-bold tracking-wider text-[#e8734a]/50">TUTAGORA <span className="text-white/15">Consulting</span></span>
           <span className="font-body text-xs text-white/15">Marketing & Software Solutions for Education — Nairobi, Kenya</span>
         </div>
       </footer>
