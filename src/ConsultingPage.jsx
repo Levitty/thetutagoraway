@@ -299,6 +299,7 @@ export const ConsultingPage = ({ onBack }) => {
                   <p>Administrative staff buried in spreadsheets, manual tracking, and disconnected systems only compounds the problem. Wasted hours, data gaps, decisions without the full picture.</p>
                 </div>
                 <div className="mt-8 sm:mt-10 pl-5 sm:pl-6 border-l-2 border-[#e8734a]">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#e8734a]/40 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   <p className="font-display text-lg sm:text-xl md:text-2xl font-bold text-[#0d1117] leading-snug">
                     We fix both. Marketing that builds your brand. Software that runs your school.
                   </p>
@@ -459,13 +460,14 @@ export const ConsultingPage = ({ onBack }) => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
             {[
-              { phase: '01', title: 'Discovery', time: 'Weeks 1-3', desc: 'Full brand audit. Competitor mapping. Student persona development. Goals alignment.' },
-              { phase: '02', title: 'Build', time: 'Weeks 4-7', desc: 'Visual identity. Website. Messaging. Software setup. Everything designed and tested.' },
-              { phase: '03', title: 'Launch', time: 'Months 2-3', desc: 'Channels go live. Campaigns launch. Systems into production. Managed transition.' },
-              { phase: '04', title: 'Grow', time: 'Month 4+', desc: 'Monthly reporting. Campaign optimisation. Quarterly strategy. Long-term partnership.' },
+              { phase: '01', title: 'Discovery', time: 'Weeks 1-3', desc: 'Full brand audit. Competitor mapping. Student persona development. Goals alignment.', icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' },
+              { phase: '02', title: 'Build', time: 'Weeks 4-7', desc: 'Visual identity. Website. Messaging. Software setup. Everything designed and tested.', icon: 'M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z' },
+              { phase: '03', title: 'Launch', time: 'Months 2-3', desc: 'Channels go live. Campaigns launch. Systems into production. Managed transition.', icon: 'M5 3l14 9-14 9V3z' },
+              { phase: '04', title: 'Grow', time: 'Month 4+', desc: 'Monthly reporting. Campaign optimisation. Quarterly strategy. Long-term partnership.', icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' },
             ].map((s, i) => (
               <R key={s.phase} delay={i * 0.1}>
                 <div className={`group py-6 sm:py-8 md:px-8 ${i > 0 ? 'md:border-l border-[#0d1117]/10' : ''} ${i >= 2 ? 'border-t md:border-t-0 border-[#0d1117]/10 pt-6' : ''}`}>
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#e8734a]/60 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={s.icon} /></svg>
                   <div className="font-display text-[50px] sm:text-[80px] font-bold text-[#0d1117]/[0.04] leading-none mb-1 sm:mb-2">{s.phase}</div>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-2 sm:mb-3 -mt-4 sm:-mt-6">
                     <h3 className="font-display text-base sm:text-xl font-bold text-[#0d1117]">{s.title}</h3>
@@ -495,9 +497,15 @@ export const ConsultingPage = ({ onBack }) => {
               </div>
               <div className="md:col-span-4 md:col-start-9">
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                  {['Campus Tours', 'Aerial Footage', 'Student Stories', 'Brand Videos'].map(item => (
-                    <div key={item} className="p-3 sm:p-4 rounded-lg border border-white/5 hover:border-[#e8734a]/20 transition-colors">
-                      <span className="font-display text-xs sm:text-sm font-medium text-white/50">{item}</span>
+                  {[
+                    { label: 'Campus Tours', icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' },
+                    { label: 'Aerial Footage', icon: 'M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z M15 13a3 3 0 11-6 0 3 3 0 016 0z' },
+                    { label: 'Student Stories', icon: 'M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z' },
+                    { label: 'Brand Videos', icon: 'M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z' },
+                  ].map(item => (
+                    <div key={item.label} className="p-3 sm:p-4 rounded-lg border border-white/5 hover:border-[#e8734a]/20 transition-colors group">
+                      <svg className="w-4 h-4 text-[#e8734a]/40 mb-2 group-hover:text-[#e8734a]/70 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={item.icon} /></svg>
+                      <span className="font-display text-xs sm:text-sm font-medium text-white/50 block">{item.label}</span>
                     </div>
                   ))}
                 </div>
@@ -586,15 +594,16 @@ export const ConsultingPage = ({ onBack }) => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 sm:gap-x-12 gap-y-10 sm:gap-y-14">
             {[
-              { title: 'Kenyan. Deeply.', desc: 'We understand how families research, shortlist, and choose education across East Africa. No imported playbooks applied to the local market.' },
-              { title: 'Education-first.', desc: 'Enrolment cycles, parent psychology, the trust dynamics of educational decision-making. This is the space we were built for.' },
-              { title: 'Full-stack.', desc: 'Strategy, design, development, content, campaigns, and software. One partner. One point of contact. No gaps in accountability.' },
-              { title: 'Design-led.', desc: 'Institutions that win are the ones whose brand reflects their quality. We produce work that belongs on the global stage.' },
-              { title: 'Measurement-driven.', desc: 'Every campaign tracked to clear KPIs. Monthly plain-language reporting. Marketing spend made accountable.' },
-              { title: 'Long-term.', desc: 'Our best partnerships grow with the institution over years. We compound knowledge into better results every cycle.' },
+              { title: 'Kenyan. Deeply.', desc: 'We understand how families research, shortlist, and choose education across East Africa. No imported playbooks applied to the local market.', icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z' },
+              { title: 'Education-first.', desc: 'Enrolment cycles, parent psychology, the trust dynamics of educational decision-making. This is the space we were built for.', icon: 'M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z M12 14l-9-5v9l9 5' },
+              { title: 'Full-stack.', desc: 'Strategy, design, development, content, campaigns, and software. One partner. One point of contact. No gaps in accountability.', icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10' },
+              { title: 'Design-led.', desc: 'Institutions that win are the ones whose brand reflects their quality. We produce work that belongs on the global stage.', icon: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01' },
+              { title: 'Measurement-driven.', desc: 'Every campaign tracked to clear KPIs. Monthly plain-language reporting. Marketing spend made accountable.', icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' },
+              { title: 'Long-term.', desc: 'Our best partnerships grow with the institution over years. We compound knowledge into better results every cycle.', icon: 'M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4' },
             ].map((item, i) => (
               <R key={item.title} delay={i * 0.06}>
                 <div className="group">
+                  <svg className="w-6 h-6 text-[#e8734a]/50 mb-3 sm:mb-4 group-hover:text-[#e8734a] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={item.icon} /></svg>
                   <div className="w-8 h-0.5 bg-[#e8734a] mb-4 sm:mb-5 group-hover:w-14 transition-all" />
                   <h3 className="font-display font-bold text-[#0d1117] text-base sm:text-lg mb-2 sm:mb-3">{item.title}</h3>
                   <p className="font-body text-xs sm:text-sm text-[#0d1117]/40 leading-relaxed">{item.desc}</p>
