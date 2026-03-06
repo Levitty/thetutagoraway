@@ -354,8 +354,19 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [reviewBooking, setReviewBooking] = useState(null);
   const [showProgress, setShowProgress] = useState(false);
+  const [payments, setPayments] = useState([]);
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
   const past = bookings.filter(b => b.status === 'completed');
+  const nextLesson = [...upcoming].sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
+  const totalSpent = payments.reduce((s, p) => s + (p.amount || 0), 0);
+  const uniqueTutors = [...new Set(past.map(b => b.tutor_id))].length;
+
+  useEffect(() => {
+    if (profile?.id) {
+      supabase.from('payments').select('amount, status, created_at').eq('student_id', profile.id).eq('status', 'completed')
+        .then(({ data }) => setPayments(data || []));
+    }
+  }, [profile?.id]);
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -363,11 +374,11 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
         <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
           <button onClick={() => onNavigate('home')} className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold">T</div>
-            <span className="font-semibold text-slate-900">Tutagora</span>
+            <span className="font-semibold text-slate-900 hidden sm:block">Tutagora</span>
             <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-blue-100 text-blue-700 uppercase tracking-wide">Student</span>
           </button>
-          <div className="flex items-center gap-4">
-            <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600">Find Tutors</button>
+          <div className="flex items-center gap-3 sm:gap-4">
+            <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600 hidden sm:block">Find Tutors</button>
             <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>
             {isAdmin && <button onClick={() => onNavigate('admin')} className="text-sm text-purple-600 font-medium">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
@@ -380,65 +391,90 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
       </header>
 
       <div className="max-w-5xl mx-auto px-5 py-6">
-        {/* Welcome Banner */}
-        <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-5 mb-6 flex items-center gap-4 text-white">
-          <Lottie src={ANIMATIONS.waving} width={70} height={70} />
-          <div>
-            <h1 className="text-xl font-bold">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
-            <p className="text-emerald-100 text-sm">You have {upcoming.length} upcoming lesson{upcoming.length !== 1 ? 's' : ''}</p>
+        {/* Welcome + Next Lesson spotlight */}
+        {nextLesson ? (
+          <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-5 mb-6 text-white">
+            <div className="flex items-center gap-4 mb-4">
+              <Lottie src={ANIMATIONS.waving} width={60} height={60} />
+              <div>
+                <h1 className="text-xl font-bold">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
+                <p className="text-emerald-100 text-sm">{upcoming.length} upcoming lesson{upcoming.length !== 1 ? 's' : ''}</p>
+              </div>
+            </div>
+            <div className="bg-white/15 backdrop-blur rounded-xl p-4 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center text-lg font-bold">{nextLesson.subject?.[0]}</div>
+                <div>
+                  <div className="font-semibold">{nextLesson.subject}</div>
+                  <div className="text-emerald-100 text-sm">with {nextLesson.tutors?.profiles?.full_name} · {nextLesson.lesson_date} at {nextLesson.start_time?.slice(0,5)}</div>
+                </div>
+              </div>
+              {nextLesson.status === 'confirmed' && (
+                <button onClick={() => onStartLesson(nextLesson)} className="px-5 py-2.5 bg-white text-emerald-700 font-semibold rounded-lg hover:bg-emerald-50 transition-colors text-sm">
+                  Join Lesson
+                </button>
+              )}
+              {nextLesson.status === 'pending' && (
+                <span className="px-3 py-1.5 bg-white/20 text-white text-xs font-medium rounded-full">Pending</span>
+              )}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-5 mb-6 flex items-center gap-4 text-white">
+            <Lottie src={ANIMATIONS.waving} width={60} height={60} />
+            <div className="flex-1">
+              <h1 className="text-xl font-bold">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
+              <p className="text-emerald-100 text-sm">No upcoming lessons — ready to book one?</p>
+            </div>
+            <button onClick={() => onNavigate('tutors')} className="px-5 py-2.5 bg-white text-emerald-700 font-semibold rounded-lg hover:bg-emerald-50 transition-colors text-sm">
+              Find a Tutor
+            </button>
+          </div>
+        )}
 
         {/* AI Tutor Card */}
         <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 mb-6 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="text-4xl">🧠</div>
+            <div className="text-3xl sm:text-4xl">🧠</div>
             <div>
               <h3 className="text-white font-bold text-lg">AI Math Tutor</h3>
-              <p className="text-slate-300 text-sm">Adaptive learning that finds your gaps and fills them</p>
+              <p className="text-slate-300 text-sm hidden sm:block">Adaptive learning that finds your gaps and fills them</p>
             </div>
           </div>
-          <button
-            onClick={() => onNavigate('ai')}
-            className="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-lg transition-colors"
-          >
+          <button onClick={() => onNavigate('ai')} className="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-lg transition-colors text-sm">
             Start Learning
           </button>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 mb-6">
+        {/* Stats row */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
           <div className="bg-white rounded-xl p-4 border border-slate-200">
-            <div className="flex items-center justify-between mb-3">
-              <div className="w-9 h-9 bg-emerald-50 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
+            <div className="w-9 h-9 bg-emerald-50 rounded-lg flex items-center justify-center mb-2">
+              <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
             <div className="text-2xl font-bold text-slate-900">{past.length}</div>
-            <div className="text-sm text-slate-500">Completed</div>
+            <div className="text-xs text-slate-500">Lessons Done</div>
           </div>
           <div className="bg-white rounded-xl p-4 border border-slate-200">
-            <div className="flex items-center justify-between mb-3">
-              <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
+            <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center mb-2">
+              <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
             </div>
             <div className="text-2xl font-bold text-slate-900">{upcoming.length}</div>
-            <div className="text-sm text-slate-500">Upcoming</div>
+            <div className="text-xs text-slate-500">Upcoming</div>
           </div>
           <div className="bg-white rounded-xl p-4 border border-slate-200">
-            <div className="flex items-center justify-between mb-3">
-              <div className="w-9 h-9 bg-amber-50 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                </svg>
-              </div>
+            <div className="w-9 h-9 bg-purple-50 rounded-lg flex items-center justify-center mb-2">
+              <svg className="w-5 h-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
             </div>
-            <div className="text-2xl font-bold text-slate-900">4.8</div>
-            <div className="text-sm text-slate-500">Avg Rating</div>
+            <div className="text-2xl font-bold text-slate-900">{uniqueTutors}</div>
+            <div className="text-xs text-slate-500">Tutors Used</div>
+          </div>
+          <div className="bg-white rounded-xl p-4 border border-slate-200">
+            <div className="w-9 h-9 bg-amber-50 rounded-lg flex items-center justify-center mb-2">
+              <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <div className="text-2xl font-bold text-slate-900">KSh {totalSpent.toLocaleString()}</div>
+            <div className="text-xs text-slate-500">Total Spent</div>
           </div>
         </div>
 
@@ -504,7 +540,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
                               <span className="text-xs text-slate-500">Reviewed</span>
                             </div>
                           ) : (
-                            <button 
+                            <button
                               onClick={() => setReviewBooking(b)}
                               className="px-3 py-1.5 text-xs font-medium text-emerald-600 bg-emerald-50 rounded-lg hover:bg-emerald-100"
                             >
@@ -531,13 +567,13 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
               </div>
               <p className="text-slate-300 text-sm mb-3">Get KSh 500 for each friend who books their first lesson</p>
               <div className="bg-white/10 rounded-lg p-2 flex items-center gap-2">
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   value={`tutagora.com/r/${profile?.id?.slice(0,8) || 'invite'}`}
                   readOnly
                   className="flex-1 bg-transparent text-white text-xs outline-none"
                 />
-                <button 
+                <button
                   onClick={() => {
                     navigator.clipboard.writeText(`https://tutagora.com/r/${profile?.id?.slice(0,8) || 'invite'}`);
                     alert('Referral link copied!');
@@ -560,14 +596,6 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                   My Progress
                 </button>
-                <button className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-lg transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
-                  Payments
-                </button>
-                <button className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-lg transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-                  Notifications
-                </button>
                 <button onClick={onLogout} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
                   Sign Out
@@ -580,16 +608,16 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
 
       {/* Edit Profile Modal */}
       {showEditProfile && (
-        <StudentProfileEditor 
-          profile={profile} 
-          onClose={() => setShowEditProfile(false)} 
+        <StudentProfileEditor
+          profile={profile}
+          onClose={() => setShowEditProfile(false)}
           onSave={() => { setShowEditProfile(false); onRefreshProfile && onRefreshProfile(); }}
         />
       )}
 
       {/* Review Modal */}
       {reviewBooking && (
-        <ReviewModal 
+        <ReviewModal
           booking={reviewBooking}
           profile={profile}
           onClose={() => setReviewBooking(null)}
@@ -599,7 +627,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
 
       {/* Progress Modal */}
       {showProgress && (
-        <StudentProgressModal 
+        <StudentProgressModal
           profile={profile}
           bookings={bookings}
           onClose={() => setShowProgress(false)}
@@ -1443,22 +1471,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
           )}
 
           {tab === 'earnings' && (
-            <div className="space-y-5">
-              <div className="grid grid-cols-3 gap-4">
-                <div className="bg-white rounded-xl p-5 border border-slate-200">
-                  <div className="text-sm text-slate-500 mb-1">Total Earned</div>
-                  <div className="text-2xl font-bold">KSh {(completed.length * tutor.hourly_rate).toLocaleString()}</div>
-                </div>
-                <div className="bg-white rounded-xl p-5 border border-slate-200">
-                  <div className="text-sm text-slate-500 mb-1">Hourly Rate</div>
-                  <div className="text-2xl font-bold">KSh {tutor.hourly_rate?.toLocaleString()}</div>
-                </div>
-                <div className="bg-white rounded-xl p-5 border border-slate-200">
-                  <div className="text-sm text-slate-500 mb-1">Lessons Completed</div>
-                  <div className="text-2xl font-bold">{completed.length}</div>
-                </div>
-              </div>
-            </div>
+            <TutorEarningsTab tutor={tutor} completed={completed} />
           )}
 
           {tab === 'profile' && (
@@ -1469,6 +1482,120 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
           )}
         </div>
       </main>
+    </div>
+  );
+};
+
+// ============ TUTOR EARNINGS TAB ============
+const TutorEarningsTab = ({ tutor, completed }) => {
+  const [payments, setPayments] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const PLATFORM_FEE_PERCENT = 15; // Tutagora keeps 15%, tutor gets 85%
+  const tutorSharePercent = 100 - PLATFORM_FEE_PERCENT;
+
+  useEffect(() => {
+    const fetchPayments = async () => {
+      const { data } = await supabase.from('payments')
+        .select('*, bookings(lesson_date, subject, status, profiles:student_id(full_name))')
+        .eq('tutor_id', tutor.id)
+        .eq('status', 'completed')
+        .order('created_at', { ascending: false });
+      setPayments(data || []);
+      setLoading(false);
+    };
+    fetchPayments();
+  }, [tutor.id]);
+
+  const totalRevenue = payments.reduce((s, p) => s + (p.amount || 0), 0);
+  const tutorEarnings = Math.round(totalRevenue * tutorSharePercent / 100);
+  const paidOut = payments.filter(p => p.payout_status === 'paid').reduce((s, p) => s + Math.round((p.amount || 0) * tutorSharePercent / 100), 0);
+  const pendingPayout = tutorEarnings - paidOut;
+
+  if (loading) return <LoadingSpinner />;
+
+  return (
+    <div className="space-y-5">
+      {/* Summary cards */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="bg-white rounded-xl p-5 border border-slate-200">
+          <div className="text-sm text-slate-500 mb-1">Total Earned</div>
+          <div className="text-2xl font-bold text-slate-900">KSh {tutorEarnings.toLocaleString()}</div>
+          <div className="text-xs text-slate-400 mt-1">{tutorSharePercent}% of KSh {totalRevenue.toLocaleString()}</div>
+        </div>
+        <div className="bg-white rounded-xl p-5 border border-slate-200">
+          <div className="text-sm text-slate-500 mb-1">Pending Payout</div>
+          <div className="text-2xl font-bold text-amber-600">KSh {pendingPayout.toLocaleString()}</div>
+          <div className="text-xs text-slate-400 mt-1">Awaiting M-Pesa transfer</div>
+        </div>
+        <div className="bg-white rounded-xl p-5 border border-slate-200">
+          <div className="text-sm text-slate-500 mb-1">Hourly Rate</div>
+          <div className="text-2xl font-bold text-slate-900">KSh {tutor.hourly_rate?.toLocaleString()}</div>
+          <div className="text-xs text-slate-400 mt-1">You receive KSh {Math.round((tutor.hourly_rate || 0) * tutorSharePercent / 100).toLocaleString()}</div>
+        </div>
+        <div className="bg-white rounded-xl p-5 border border-slate-200">
+          <div className="text-sm text-slate-500 mb-1">Lessons Completed</div>
+          <div className="text-2xl font-bold text-slate-900">{completed.length}</div>
+          <div className="text-xs text-slate-400 mt-1">{payments.length} paid</div>
+        </div>
+      </div>
+
+      {/* Payment history */}
+      <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
+          <h3 className="font-semibold text-slate-900">Payment History</h3>
+          <span className="text-sm text-slate-400">{payments.length} payments</span>
+        </div>
+        {payments.length === 0 ? (
+          <div className="p-10 text-center text-slate-500">No payments received yet</div>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead className="bg-slate-50">
+                <tr>
+                  <th className="px-5 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Date</th>
+                  <th className="px-5 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Student</th>
+                  <th className="px-5 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Subject</th>
+                  <th className="px-5 py-3 text-right text-xs font-semibold text-slate-500 uppercase">Lesson Fee</th>
+                  <th className="px-5 py-3 text-right text-xs font-semibold text-slate-500 uppercase">Your Share</th>
+                  <th className="px-5 py-3 text-center text-xs font-semibold text-slate-500 uppercase">Payout</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {payments.map(p => {
+                  const share = Math.round((p.amount || 0) * tutorSharePercent / 100);
+                  const isPaid = p.payout_status === 'paid';
+                  return (
+                    <tr key={p.id} className="hover:bg-slate-50">
+                      <td className="px-5 py-3 text-sm text-slate-600">{p.bookings?.lesson_date || new Date(p.created_at).toLocaleDateString()}</td>
+                      <td className="px-5 py-3 text-sm font-medium text-slate-900">{p.bookings?.profiles?.full_name || '—'}</td>
+                      <td className="px-5 py-3 text-sm text-slate-600">{p.bookings?.subject || '—'}</td>
+                      <td className="px-5 py-3 text-sm text-right text-slate-600">KSh {(p.amount || 0).toLocaleString()}</td>
+                      <td className="px-5 py-3 text-sm text-right font-medium text-slate-900">KSh {share.toLocaleString()}</td>
+                      <td className="px-5 py-3 text-center">
+                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${isPaid ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50 text-amber-700'}`}>
+                          {isPaid ? 'Paid' : 'Pending'}
+                        </span>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+
+      {/* Payout info */}
+      <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+        <div className="flex items-start gap-3">
+          <svg className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <div>
+            <h4 className="font-semibold text-blue-800 text-sm">How payouts work</h4>
+            <p className="text-sm text-blue-600 mt-1">Tutors receive {tutorSharePercent}% of each lesson fee. Payouts are processed weekly via M-Pesa. Tutagora retains {PLATFORM_FEE_PERCENT}% as a platform fee.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -2686,11 +2813,16 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const [stats, setStats] = useState({ tutors: 0, students: 0, bookings: 0, revenue: 0 });
   const [users, setUsers] = useState([]);
   const [bookings, setBookings] = useState([]);
+  const [allPayments, setAllPayments] = useState([]);
   const [pendingTutors, setPendingTutors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState(null);
   const [rejectReason, setRejectReason] = useState('');
   const [rejectingId, setRejectingId] = useState(null);
+  const [payoutLoading, setPayoutLoading] = useState(null);
+
+  const PLATFORM_FEE_PERCENT = 15;
+  const TUTOR_SHARE_PERCENT = 100 - PLATFORM_FEE_PERCENT;
 
   useEffect(() => {
     fetchAdminData();
@@ -2702,8 +2834,8 @@ const AdminDashboard = ({ onLogout, onBack }) => {
     const [tutorsRes, studentsRes, bookingsRes, paymentsRes, pendingRes] = await Promise.all([
       supabase.from('tutors').select('id', { count: 'exact' }),
       supabase.from('profiles').select('id', { count: 'exact' }).eq('role', 'student'),
-      supabase.from('bookings').select('*').order('created_at', { ascending: false }).limit(50),
-      supabase.from('payments').select('amount').eq('status', 'completed'),
+      supabase.from('bookings').select('*, profiles:student_id(full_name, email), tutors(subject, hourly_rate, profiles(full_name, email))').order('created_at', { ascending: false }).limit(100),
+      supabase.from('payments').select('*, bookings(lesson_date, subject, status), tutor:tutor_id(subject, hourly_rate, profiles(full_name, email, phone))').eq('status', 'completed').order('created_at', { ascending: false }),
       supabase.from('tutors').select('*, profiles(full_name, avatar_url, email)')
         .in('verification_status', ['pending', 'under_review'])
         .order('created_at', { ascending: false }),
@@ -2719,6 +2851,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
     });
 
     setBookings(bookingsRes.data || []);
+    setAllPayments(paymentsRes.data || []);
     setPendingTutors(pendingRes.data || []);
 
     const { data: usersData } = await supabase
@@ -2729,6 +2862,23 @@ const AdminDashboard = ({ onLogout, onBack }) => {
 
     setUsers(usersData || []);
     setLoading(false);
+  };
+
+  const handleMarkPaid = async (paymentId) => {
+    setPayoutLoading(paymentId);
+    await supabase.from('payments').update({ payout_status: 'paid', payout_date: new Date().toISOString() }).eq('id', paymentId);
+    setAllPayments(prev => prev.map(p => p.id === paymentId ? { ...p, payout_status: 'paid', payout_date: new Date().toISOString() } : p));
+    setPayoutLoading(null);
+  };
+
+  const handleMarkAllPaidForTutor = async (tutorId) => {
+    setPayoutLoading(tutorId);
+    const unpaid = allPayments.filter(p => p.tutor_id === tutorId && p.payout_status !== 'paid');
+    for (const p of unpaid) {
+      await supabase.from('payments').update({ payout_status: 'paid', payout_date: new Date().toISOString() }).eq('id', p.id);
+    }
+    setAllPayments(prev => prev.map(p => p.tutor_id === tutorId ? { ...p, payout_status: 'paid', payout_date: new Date().toISOString() } : p));
+    setPayoutLoading(null);
   };
 
   const handleApproveTutor = async (tutorId) => {
@@ -2769,6 +2919,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
         <div className="flex gap-1 mb-6 bg-slate-200/50 p-1 rounded-lg w-fit">
           {[
             { id: 'overview', label: 'Overview' },
+            { id: 'payouts', label: `Payouts${allPayments.filter(p => p.payout_status !== 'paid').length ? ` (${allPayments.filter(p => p.payout_status !== 'paid').length})` : ''}` },
             { id: 'verification', label: `Verification${pendingTutors.length ? ` (${pendingTutors.length})` : ''}` },
             { id: 'users', label: 'Users' },
             { id: 'bookings', label: 'Bookings' },
@@ -2831,6 +2982,27 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                     <div className="text-sm text-slate-500">Total Revenue</div>
                   </div>
                 </div>
+
+                {/* Pending Payouts Alert */}
+                {(() => {
+                  const unpaidTotal = allPayments.filter(p => p.payout_status !== 'paid').reduce((s, p) => s + Math.round((p.amount || 0) * TUTOR_SHARE_PERCENT / 100), 0);
+                  const unpaidCount = allPayments.filter(p => p.payout_status !== 'paid').length;
+                  if (unpaidCount === 0) return null;
+                  return (
+                    <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <svg className="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
+                        <div>
+                          <div className="font-semibold text-amber-800">KSh {unpaidTotal.toLocaleString()} in pending tutor payouts</div>
+                          <div className="text-sm text-amber-600">{unpaidCount} lesson{unpaidCount !== 1 ? 's' : ''} need payout via M-Pesa</div>
+                        </div>
+                      </div>
+                      <button onClick={() => setTab('payouts')} className="px-4 py-2 bg-amber-500 text-white text-sm font-medium rounded-lg hover:bg-amber-600">
+                        View Payouts
+                      </button>
+                    </div>
+                  );
+                })()}
 
                 {/* Recent Activity */}
                 <div className="grid md:grid-cols-2 gap-6">
@@ -2916,28 +3088,174 @@ const AdminDashboard = ({ onLogout, onBack }) => {
               </div>
             )}
 
+            {/* Payouts Tab */}
+            {tab === 'payouts' && (() => {
+              // Group payments by tutor
+              const byTutor = {};
+              allPayments.forEach(p => {
+                const tid = p.tutor_id;
+                if (!byTutor[tid]) {
+                  byTutor[tid] = {
+                    tutorId: tid,
+                    tutorName: p.tutor?.profiles?.full_name || 'Unknown',
+                    tutorEmail: p.tutor?.profiles?.email || '',
+                    tutorPhone: p.tutor?.profiles?.phone || '',
+                    payments: [],
+                    totalRevenue: 0,
+                    totalTutorShare: 0,
+                    unpaidShare: 0,
+                    paidShare: 0,
+                  };
+                }
+                const share = Math.round((p.amount || 0) * TUTOR_SHARE_PERCENT / 100);
+                byTutor[tid].payments.push(p);
+                byTutor[tid].totalRevenue += (p.amount || 0);
+                byTutor[tid].totalTutorShare += share;
+                if (p.payout_status === 'paid') {
+                  byTutor[tid].paidShare += share;
+                } else {
+                  byTutor[tid].unpaidShare += share;
+                }
+              });
+              const tutorPayouts = Object.values(byTutor).sort((a, b) => b.unpaidShare - a.unpaidShare);
+              const totalUnpaid = tutorPayouts.reduce((s, t) => s + t.unpaidShare, 0);
+              const totalPaid = tutorPayouts.reduce((s, t) => s + t.paidShare, 0);
+              const platformFees = allPayments.reduce((s, p) => s + Math.round((p.amount || 0) * PLATFORM_FEE_PERCENT / 100), 0);
+
+              return (
+                <div className="space-y-6">
+                  {/* Payout summary cards */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
+                      <div className="text-sm text-slate-500 mb-1">Pending Payouts</div>
+                      <div className="text-2xl font-bold text-amber-600">KSh {totalUnpaid.toLocaleString()}</div>
+                      <div className="text-xs text-slate-400 mt-1">Owed to tutors</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
+                      <div className="text-sm text-slate-500 mb-1">Already Paid Out</div>
+                      <div className="text-2xl font-bold text-emerald-600">KSh {totalPaid.toLocaleString()}</div>
+                      <div className="text-xs text-slate-400 mt-1">Transferred via M-Pesa</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
+                      <div className="text-sm text-slate-500 mb-1">Platform Fees</div>
+                      <div className="text-2xl font-bold text-purple-600">KSh {platformFees.toLocaleString()}</div>
+                      <div className="text-xs text-slate-400 mt-1">{PLATFORM_FEE_PERCENT}% of revenue</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-5 shadow-sm">
+                      <div className="text-sm text-slate-500 mb-1">Total Revenue</div>
+                      <div className="text-2xl font-bold text-slate-900">KSh {stats.revenue.toLocaleString()}</div>
+                      <div className="text-xs text-slate-400 mt-1">{allPayments.length} payments</div>
+                    </div>
+                  </div>
+
+                  {/* Per-tutor payout table */}
+                  {tutorPayouts.length === 0 ? (
+                    <div className="bg-white rounded-xl p-10 shadow-sm text-center text-slate-500">No payments to process yet</div>
+                  ) : (
+                    tutorPayouts.map(tp => (
+                      <div key={tp.tutorId} className="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
+                          <div>
+                            <h3 className="font-semibold text-slate-900">{tp.tutorName}</h3>
+                            <div className="text-sm text-slate-500">{tp.tutorEmail}{tp.tutorPhone ? ` · ${tp.tutorPhone}` : ''}</div>
+                          </div>
+                          <div className="flex items-center gap-4">
+                            <div className="text-right">
+                              <div className="text-sm text-slate-500">Owed</div>
+                              <div className={`font-bold ${tp.unpaidShare > 0 ? 'text-amber-600' : 'text-emerald-600'}`}>
+                                KSh {tp.unpaidShare.toLocaleString()}
+                              </div>
+                            </div>
+                            {tp.unpaidShare > 0 && (
+                              <button
+                                onClick={() => handleMarkAllPaidForTutor(tp.tutorId)}
+                                disabled={payoutLoading === tp.tutorId}
+                                className="px-4 py-2 bg-emerald-500 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 disabled:opacity-50"
+                              >
+                                {payoutLoading === tp.tutorId ? 'Marking...' : 'Mark All Paid'}
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                        <div className="overflow-x-auto">
+                          <table className="w-full">
+                            <thead className="bg-slate-50">
+                              <tr>
+                                <th className="px-4 py-2 text-left text-xs font-semibold text-slate-500 uppercase">Date</th>
+                                <th className="px-4 py-2 text-left text-xs font-semibold text-slate-500 uppercase">Subject</th>
+                                <th className="px-4 py-2 text-right text-xs font-semibold text-slate-500 uppercase">Lesson Fee</th>
+                                <th className="px-4 py-2 text-right text-xs font-semibold text-slate-500 uppercase">Tutor Share ({TUTOR_SHARE_PERCENT}%)</th>
+                                <th className="px-4 py-2 text-center text-xs font-semibold text-slate-500 uppercase">Status</th>
+                                <th className="px-4 py-2 text-center text-xs font-semibold text-slate-500 uppercase">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-100">
+                              {tp.payments.map(p => {
+                                const share = Math.round((p.amount || 0) * TUTOR_SHARE_PERCENT / 100);
+                                const isPaid = p.payout_status === 'paid';
+                                return (
+                                  <tr key={p.id} className="hover:bg-slate-50">
+                                    <td className="px-4 py-3 text-sm text-slate-600">{p.bookings?.lesson_date || new Date(p.created_at).toLocaleDateString()}</td>
+                                    <td className="px-4 py-3 text-sm text-slate-900">{p.bookings?.subject || '—'}</td>
+                                    <td className="px-4 py-3 text-sm text-right text-slate-600">KSh {(p.amount || 0).toLocaleString()}</td>
+                                    <td className="px-4 py-3 text-sm text-right font-medium text-slate-900">KSh {share.toLocaleString()}</td>
+                                    <td className="px-4 py-3 text-center">
+                                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${isPaid ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50 text-amber-700'}`}>
+                                        {isPaid ? 'Paid' : 'Pending'}
+                                      </span>
+                                    </td>
+                                    <td className="px-4 py-3 text-center">
+                                      {!isPaid && (
+                                        <button onClick={() => handleMarkPaid(p.id)} disabled={payoutLoading === p.id}
+                                          className="text-xs text-emerald-600 font-medium hover:text-emerald-700 disabled:opacity-50">
+                                          {payoutLoading === p.id ? '...' : 'Mark Paid'}
+                                        </button>
+                                      )}
+                                      {isPaid && p.payout_date && (
+                                        <span className="text-xs text-slate-400">{new Date(p.payout_date).toLocaleDateString()}</span>
+                                      )}
+                                    </td>
+                                  </tr>
+                                );
+                              })}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+              );
+            })()}
+
             {/* Bookings Tab */}
             {tab === 'bookings' && (
               <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-                <div className="p-4 border-b border-slate-100">
-                  <span className="font-semibold">All Bookings</span>
+                <div className="p-4 border-b border-slate-100 flex items-center justify-between">
+                  <span className="font-semibold">All Bookings ({bookings.length})</span>
                 </div>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead className="bg-slate-50">
                       <tr>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Student</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Tutor</th>
                         <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Subject</th>
                         <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Date</th>
                         <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Time</th>
+                        <th className="px-4 py-3 text-right text-xs font-semibold text-slate-500 uppercase">Rate</th>
                         <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Status</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
                       {bookings.map(b => (
                         <tr key={b.id} className="hover:bg-slate-50">
-                          <td className="px-4 py-3 font-medium">{b.subject}</td>
-                          <td className="px-4 py-3 text-slate-600">{b.lesson_date}</td>
-                          <td className="px-4 py-3 text-slate-600">{b.start_time?.slice(0, 5)}</td>
+                          <td className="px-4 py-3 text-sm font-medium text-slate-900">{b.profiles?.full_name || '—'}</td>
+                          <td className="px-4 py-3 text-sm text-slate-600">{b.tutors?.profiles?.full_name || '—'}</td>
+                          <td className="px-4 py-3 text-sm text-slate-600">{b.subject}</td>
+                          <td className="px-4 py-3 text-sm text-slate-600">{b.lesson_date}</td>
+                          <td className="px-4 py-3 text-sm text-slate-600">{b.start_time?.slice(0, 5)}</td>
+                          <td className="px-4 py-3 text-sm text-right text-slate-600">KSh {(b.tutors?.hourly_rate || 0).toLocaleString()}</td>
                           <td className="px-4 py-3">
                             <span className={`px-2 py-1 text-xs rounded-full ${
                               b.status === 'completed' ? 'bg-emerald-100 text-emerald-700' :
