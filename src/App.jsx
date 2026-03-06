@@ -1264,6 +1264,8 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
             <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-emerald-100 text-emerald-700 uppercase tracking-wide">Tutor</span>
           </div>
           <div className="flex items-center gap-4">
+            <button onClick={() => onNavigate && onNavigate('home')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Home</button>
+            <button onClick={() => onNavigate && onNavigate('tutors')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Find Tutors</button>
             <MessageButton onClick={onOpenMessages} />
             <button onClick={onLogout} className="text-sm text-slate-500 hover:text-slate-700">Sign out</button>
           </div>
@@ -3132,7 +3134,7 @@ export default function App() {
   const [showMessages, setShowMessages] = useState(false);
 
   // Admin emails (add your email here)
-  const adminEmails = ['tutaeducators@gmail.com'];
+  const adminEmails = ['tutaeducators@gmail.com', 'mutualevy@gmail.com'];
   const isAdmin = auth.profile?.email && adminEmails.includes(auth.profile.email);
 
   useEffect(() => {
