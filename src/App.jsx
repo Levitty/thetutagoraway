@@ -349,7 +349,7 @@ const AuthModal = ({ mode, setMode, onClose, onAuth }) => {
 };
 
 // ============ STUDENT DASHBOARD ============
-const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile }) => {
+const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin }) => {
   const [tab, setTab] = useState('upcoming');
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [reviewBooking, setReviewBooking] = useState(null);
@@ -369,6 +369,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
           <div className="flex items-center gap-4">
             <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600">Find Tutors</button>
             <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>
+            {isAdmin && <button onClick={() => onNavigate('admin')} className="text-sm text-purple-600 font-medium">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
             <div className="flex items-center gap-2">
               <Avatar src={profile?.avatar_url} name={profile?.full_name} size={32} />
@@ -1153,7 +1154,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
 };
 
 // ============ TUTOR DASHBOARD ============
-const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, onNavigate }) => {
+const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, onNavigate, isAdmin }) => {
   const [tab, setTab] = useState('overview');
   const tutor = profile?.tutors?.[0];
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
@@ -1266,6 +1267,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
           <div className="flex items-center gap-4">
             <button onClick={() => onNavigate && onNavigate('home')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Home</button>
             <button onClick={() => onNavigate && onNavigate('tutors')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Find Tutors</button>
+            {isAdmin && <button onClick={() => onNavigate && onNavigate('admin')} className="text-sm text-purple-600 font-medium hidden sm:block">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
             <button onClick={onLogout} className="text-sm text-slate-500 hover:text-slate-700">Sign out</button>
           </div>
@@ -3204,14 +3206,14 @@ export default function App() {
     if (auth.profile?.role === 'tutor') {
       return (
         <>
-          <TutorDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} onNavigate={handleNavigate} />
+          <TutorDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} onNavigate={handleNavigate} isAdmin={isAdmin} />
           {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
         </>
       );
     }
     return (
       <>
-        <StudentDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} />
+        <StudentDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} />
         {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
       </>
     );
