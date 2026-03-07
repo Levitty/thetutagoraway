@@ -5,6 +5,7 @@ import { PaymentModal } from './PaymentModal';
 import { Messaging, MessageButton, startConversation } from './Messaging';
 import { AIMastery } from './ai-tutor/AIMastery.jsx';
 import { ConsultingPage } from './ConsultingPage.jsx';
+import { Spreadsheet } from './Spreadsheet.jsx';
 
 // ============ LOTTIE ANIMATION COMPONENT ============
 const Lottie = ({ src, width = 200, height = 200, loop = true }) => {
@@ -380,6 +381,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
           <div className="flex items-center gap-3 sm:gap-4">
             <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600 hidden sm:block">Find Tutors</button>
             <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>
+            <button onClick={() => onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium hidden sm:block">Spreadsheet</button>
             {isAdmin && <button onClick={() => onNavigate('admin')} className="text-sm text-purple-600 font-medium">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
             <div className="flex items-center gap-2">
@@ -1295,6 +1297,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
           <div className="flex items-center gap-4">
             <button onClick={() => onNavigate && onNavigate('home')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Home</button>
             <button onClick={() => onNavigate && onNavigate('tutors')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Find Tutors</button>
+            <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium hidden sm:block">Spreadsheet</button>
             {isAdmin && <button onClick={() => onNavigate && onNavigate('admin')} className="text-sm text-purple-600 font-medium hidden sm:block">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
             <button onClick={onLogout} className="text-sm text-slate-500 hover:text-slate-700">Sign out</button>
@@ -3444,6 +3447,7 @@ export default function App() {
     if (path === 'tutors') return 'tutors';
     if (path === 'dashboard') return 'dashboard';
     if (path === 'ai') return 'ai';
+    if (path === 'spreadsheet') return 'spreadsheet';
     if (path === 'admin') return 'admin';
     return 'home';
   });
@@ -3471,6 +3475,7 @@ export default function App() {
       else if (path === 'tutors') setPage('tutors');
       else if (path === 'dashboard') setPage('dashboard');
       else if (path === 'ai') setPage('ai');
+      else if (path === 'spreadsheet') setPage('spreadsheet');
       else if (path === 'admin') setPage('admin');
       else setPage('home');
       setSelectedTutor(null);
@@ -3512,6 +3517,11 @@ export default function App() {
   // AI Tutor
   if (page === 'ai') {
     return <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} />;
+  }
+
+  // Spreadsheet
+  if (page === 'spreadsheet') {
+    return <Spreadsheet standalone={true} onBack={() => handleNavigate('dashboard')} />;
   }
 
   // Admin Dashboard

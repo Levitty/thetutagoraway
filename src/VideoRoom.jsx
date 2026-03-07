@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import AgoraRTC from 'agora-rtc-sdk-ng';
 import { supabase } from './supabase';
+import { Spreadsheet } from './Spreadsheet';
 
 const AGORA_APP_ID = '35a8f51c866e44bfbb7bd5e3970e75e4';
 
@@ -270,7 +271,7 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
   const [error, setError] = useState(null);
 
   // Panels
-  const [activePanel, setActivePanel] = useState(null); // null | 'chat' | 'whiteboard'
+  const [activePanel, setActivePanel] = useState(null); // null | 'chat' | 'whiteboard' | 'spreadsheet'
 
   // Chat state (synced via Supabase Realtime)
   const [messages, setMessages] = useState([]);
@@ -521,11 +522,11 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
 
         {/* Side Panel: Chat or Whiteboard */}
         {activePanel && (
-          <div className={`${activePanel === 'whiteboard' ? 'w-full sm:w-[55%]' : 'w-full sm:w-80'} border-l border-slate-800 flex flex-col bg-slate-900/80 min-h-0`}>
+          <div className={`${activePanel === 'chat' ? 'w-full sm:w-80' : 'w-full sm:w-[55%]'} border-l border-slate-800 flex flex-col bg-slate-900/80 min-h-0`}>
             {/* Panel header */}
             <div className="flex items-center justify-between p-3 border-b border-slate-800 flex-shrink-0">
               <h3 className="font-semibold text-white text-sm">
-                {activePanel === 'chat' ? '💬 Chat' : '🖊️ Whiteboard'}
+                {activePanel === 'chat' ? '💬 Chat' : activePanel === 'whiteboard' ? '🖊️ Whiteboard' : '📊 Spreadsheet'}
               </h3>
               <button onClick={() => setActivePanel(null)} className="text-slate-400 hover:text-white text-lg">✕</button>
             </div>
@@ -569,6 +570,13 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
                 <Whiteboard channelName={channelName} userName={user.name} />
               </div>
             )}
+
+            {/* Spreadsheet Panel */}
+            {activePanel === 'spreadsheet' && (
+              <div className="flex-1 min-h-0">
+                <Spreadsheet channelName={channelName} />
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -598,6 +606,12 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
           label="Board"
           active={activePanel === 'whiteboard'}
           onClick={() => togglePanel('whiteboard')}
+        />
+        <ControlButton
+          icon="📊"
+          label="Sheet"
+          active={activePanel === 'spreadsheet'}
+          onClick={() => togglePanel('spreadsheet')}
         />
         <ControlButton
           icon="💬"

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutagora — Go-To-Market Strategy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --green: #10B981;
+    --dark-green: #059669;
+    --dark: #0F172A;
+    --slate: #475569;
+    --light-slate: #94A3B8;
+    --bg: #F8FAFC;
+    --card-bg: #FFFFFF;
+    --border: #E2E8F0;
+    --green-bg: #F0FDF4;
+    --amber: #F59E0B;
+    --blue: #3B82F6;
+    --purple: #7C3AED;
+    --red: #EF4444;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--slate);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ===== COVER ===== */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(16,185,129,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(59,130,246,0.1) 0%, transparent 50%);
+    animation: pulse 8s ease-in-out infinite alternate;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.1); opacity: 1; }
+  }
+  .cover-content { position: relative; z-index: 1; }
+  .cover h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--green);
+    letter-spacing: -2px;
+    margin-bottom: 0.5rem;
+  }
+  .cover h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #E2E8F0;
+    margin-bottom: 2rem;
+  }
+  .cover-divider {
+    width: 120px;
+    height: 3px;
+    background: var(--green);
+    margin: 0 auto 2rem;
+    border-radius: 2px;
+  }
+  .cover-tagline {
+    font-size: 1.2rem;
+    color: #94A3B8;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  .cover-features {
+    font-size: 1rem;
+    color: #64748B;
+    letter-spacing: 1px;
+  }
+  .cover-meta {
+    margin-top: 4rem;
+    color: #64748B;
+    font-size: 0.95rem;
+  }
+  .cover-meta span { display: block; margin-top: 0.25rem; }
+
+  /* ===== NAVIGATION ===== */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+  }
+  .nav-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 56px;
+    overflow-x: auto;
+  }
+  .nav-brand {
+    font-weight: 800;
+    color: var(--green);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .nav a {
+    color: var(--light-slate);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+  .nav a:hover { color: var(--green); }
+
+  /* ===== MAIN CONTENT ===== */
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem 6rem;
+  }
+
+  h1.section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin: 4rem 0 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--green);
+    letter-spacing: -0.5px;
+  }
+  h1.section-title:first-child { margin-top: 0; }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 2.5rem 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--dark-green);
+    margin: 2rem 0 0.75rem;
+  }
+
+  p { margin-bottom: 1rem; }
+
+  .bold-label { font-weight: 600; color: var(--dark); }
+
+  /* ===== STAT CARDS ===== */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .stat-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--green);
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--light-slate);
+    margin-top: 0.25rem;
+  }
+
+  /* ===== TABLES ===== */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  thead th {
+    background: var(--dark);
+    color: white;
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+  thead th:first-child { border-radius: 11px 0 0 0; }
+  thead th:last-child { border-radius: 0 11px 0 0; }
+  tbody td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) { background: #F8FAFC; }
+  tbody tr:hover { background: var(--green-bg); }
+  td.bold-cell { font-weight: 600; color: var(--dark); }
+  td.green-cell { font-weight: 700; color: var(--dark-green); }
+  tr.total-row { background: #F1F5F9 !important; }
+  tr.total-row td { font-weight: 700; color: var(--dark); }
+
+  /* ===== NUMBERED / BULLET LISTS ===== */
+  ol.playbook, ul.channel-list {
+    margin: 1rem 0 1.5rem 1.5rem;
+  }
+  ol.playbook li, ul.channel-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.25rem;
+  }
+
+  /* ===== CALLOUT BOXES ===== */
+  .callout {
+    background: var(--green-bg);
+    border-left: 4px solid var(--green);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+  .callout strong { color: var(--dark); }
+
+  /* ===== ENGINE CARDS ===== */
+  .engine-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .engine-card h2 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .engine-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 1rem;
+    color: white;
+    flex-shrink: 0;
+  }
+  .engine-badge.e1 { background: var(--green); }
+  .engine-badge.e2 { background: var(--blue); }
+  .engine-badge.e3 { background: var(--purple); }
+
+  /* ===== TIMELINE ===== */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .phase-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .phase-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+  }
+  .phase-card.p1::before { background: var(--green); }
+  .phase-card.p2::before { background: var(--blue); }
+  .phase-card.p3::before { background: var(--purple); }
+  .phase-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+  .phase-card.p1 .phase-label { color: var(--green); }
+  .phase-card.p2 .phase-label { color: var(--blue); }
+  .phase-card.p3 .phase-label { color: var(--purple); }
+  .phase-card h3 { color: var(--dark); margin: 0 0 0.75rem; }
+  .phase-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .phase-card li {
+    font-size: 0.9rem;
+    padding: 0.35rem 0 0.35rem 1.25rem;
+    position: relative;
+  }
+  .phase-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--light-slate);
+  }
+
+  /* ===== AUDIENCE CARDS ===== */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .audience-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem;
+  }
+  .audience-card h3 {
+    color: var(--dark);
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+  }
+  .audience-card .detail { margin-bottom: 0.6rem; font-size: 0.92rem; }
+
+  /* ===== KPI CARDS ===== */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .kpi-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+  }
+  .kpi-card .kpi-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+  }
+  .kpi-targets {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .kpi-target {
+    text-align: center;
+  }
+  .kpi-target .value {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--green);
+    display: block;
+  }
+  .kpi-target .label {
+    font-size: 0.7rem;
+    color: var(--light-slate);
+  }
+
+  /* ===== NEXT STEPS ===== */
+  .steps-list {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+  .steps-list li {
+    counter-increment: step;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .steps-list li:last-child { border-bottom: none; }
+  .steps-list li::before {
+    content: counter(step);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--green);
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 3px solid var(--green);
+    margin-top: 4rem;
+  }
+  .footer-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--green);
+  }
+  .footer-info {
+    color: var(--light-slate);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    .cover { min-height: auto; padding: 4rem 2rem; page-break-after: always; }
+    .nav { display: none; }
+    .content { max-width: 100%; padding: 1rem; }
+    .stat-card, .engine-card, .phase-card, .audience-card { break-inside: avoid; }
+    body { font-size: 11pt; }
+  }
+
+  @media (max-width: 640px) {
+    .cover h1 { font-size: 2.8rem; }
+    .cover h2 { font-size: 1.4rem; }
+    h1.section-title { font-size: 1.6rem; }
+    .nav-inner { gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<section class="cover">
+  <div class="cover-content">
+    <h1>TUTAGORA</h1>
+    <h2>Go-To-Market Strategy</h2>
+    <div class="cover-divider"></div>
+    <p class="cover-tagline">Connecting Kenyan Students with Verified Tutors</p>
+    <p class="cover-features">Live Lessons · AI Math Tutor · School Partnerships</p>
+    <div class="cover-meta">
+      <span>March 2026</span>
+      <span>Tutagora Ltd · Nairobi, Kenya</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-brand">TUTAGORA</span>
+    <a href="#summary">Summary</a>
+    <a href="#market">Market</a>
+    <a href="#audiences">Audiences</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#budget">Budget</a>
+    <a href="#kpis">KPIs</a>
+    <a href="#risks">Risks</a>
+    <a href="#next">Next Steps</a>
+  </div>
+</nav>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="content">
+
+  <!-- EXECUTIVE SUMMARY -->
+  <h1 class="section-title" id="summary">Executive Summary</h1>
+  <p>Tutagora is a Kenyan ed-tech platform that connects students with verified tutors for live, one-on-one lessons via video, collaborative whiteboard, and an AI-powered Math Tutor. The platform currently serves 4 school partners with 100% retention.</p>
+  <p>This go-to-market strategy outlines how Tutagora will acquire its first <strong>500 students</strong>, <strong>50 tutors</strong>, and <strong>20 school partners</strong> within 12 months. It addresses all three sides of the marketplace simultaneously: students/parents who create demand, tutors who provide supply, and schools that act as trusted distribution channels.</p>
+
+  <div class="callout">
+    <strong>The Opportunity:</strong> Kenya's online learning market is projected to reach $174.8 million by 2029 (20.66% growth). While 80% of Kenyan parents know about online tutoring, only 9% have tried it — a massive awareness-to-adoption gap that Tutagora can exploit.
+  </div>
+  <div class="callout">
+    <strong>The Edge:</strong> Unlike competitors (Eneza, Zeraki, Kytabu), Tutagora offers live 1-on-1 tutoring with verified teachers plus an AI tutor for self-paced practice. This combination of human expertise and AI support doesn't exist in the Kenyan market.
+  </div>
+
+  <!-- MARKET LANDSCAPE -->
+  <h1 class="section-title" id="market">Market Landscape</h1>
+  <h2>The Kenyan Ed-Tech Environment</h2>
+  <p>Kenya is one of Africa's three leading ed-tech markets alongside Nigeria and South Africa. Over 234 ed-tech startups operate in Kenya, but the tutoring sub-segment remains underserved. The government's new Competency-Based Curriculum (CBC) makes digital literacy a core skill from early grades, creating institutional demand for technology-enhanced learning.</p>
+
+  <h3>Key Market Data</h3>
+  <div class="stat-grid">
+    <div class="stat-card">
+      <span class="stat-value">$174.8M</span>
+      <span class="stat-label">Kenya online learning market (2029)</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">20.66%</span>
+      <span class="stat-label">Market CAGR</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">234+</span>
+      <span class="stat-label">Ed-tech startups in Kenya</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">80% → 9%</span>
+      <span class="stat-label">Awareness vs. Adoption Gap</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">42%</span>
+      <span class="stat-label">Internet penetration (urban)</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">$8.75B</span>
+      <span class="stat-label">Global online tutoring (2026)</span>
+    </div>
+  </div>
+
+  <h2>Competitive Landscape</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Competitor</th><th>What They Do</th><th>Strength</th><th>Tutagora Advantage</th></tr></thead>
+      <tbody>
+        <tr><td class="bold-cell">Eneza</td><td>SMS/USSD quizzes and lessons, 800K+ users</td><td>Works on basic phones, massive reach</td><td>No live tutoring, no video, no whiteboard</td></tr>
+        <tr><td class="bold-cell">Zeraki</td><td>LMS for schools, data analytics, $1.8M funded</td><td>Strong school admin tools</td><td>No student-facing tutoring marketplace</td></tr>
+        <tr><td class="bold-cell">Kytabu</td><td>Textbook subscription on tablets</td><td>Digitized curriculum-aligned content</td><td>Static content, no live interaction</td></tr>
+        <tr><td class="bold-cell">Mentornaut</td><td>1-on-1 online tutoring, €200K funding</td><td>Foreign-backed, targeting Kenya</td><td>Local team, verified Kenyan tutors, AI tutor</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">
+    <strong>Tutagora's unique position:</strong> the only Kenyan platform combining live verified tutoring, collaborative whiteboard, video lessons, AND an AI Math Tutor in one product.
+  </div>
+
+  <!-- TARGET AUDIENCES -->
+  <h1 class="section-title" id="audiences">Target Audiences</h1>
+  <div class="audience-grid">
+    <div class="audience-card">
+      <h3>1. Parents & Students</h3>
+      <div class="detail"><span class="bold-label">Primary:</span> Urban middle-class parents in Nairobi, Mombasa, Kisumu, and Nakuru with children in Grades 4–12 and Form 1–4.</div>
+      <div class="detail"><span class="bold-label">Secondary:</span> University students preparing for professional exams (CPA, ACCA).</div>
+      <div class="detail"><span class="bold-label">Pain Points:</span> Difficulty finding reliable, verified tutors; inflexible scheduling; no progress tracking.</div>
+      <div class="detail"><span class="bold-label">Key Message:</span> <em>"Verified tutors, flexible scheduling, real results — all from home."</em></div>
+    </div>
+    <div class="audience-card">
+      <h3>2. Tutors</h3>
+      <div class="detail"><span class="bold-label">Primary:</span> University graduates and working professionals with teaching qualifications who want flexible, supplementary income.</div>
+      <div class="detail"><span class="bold-label">Secondary:</span> Retired teachers and full-time private tutors looking for a platform to find students.</div>
+      <div class="detail"><span class="bold-label">Pain Points:</span> Finding students is hard; collecting payment is unreliable; no digital teaching tools.</div>
+      <div class="detail"><span class="bold-label">Key Message:</span> <em>"Teach from anywhere, get paid weekly via M-Pesa, we handle everything else."</em></div>
+    </div>
+    <div class="audience-card">
+      <h3>3. Schools & Institutions</h3>
+      <div class="detail"><span class="bold-label">Primary:</span> Private primary and secondary schools in urban Kenya that want to offer tutoring as a value-add.</div>
+      <div class="detail"><span class="bold-label">Secondary:</span> International schools and school groups looking for after-school enrichment.</div>
+      <div class="detail"><span class="bold-label">Pain Points:</span> Parents demand supplementary support but schools can't staff it; no technology to manage tutoring at scale.</div>
+      <div class="detail"><span class="bold-label">Key Message:</span> <em>"Give your parents the tutoring support they're asking for — branded as your school's program."</em></div>
+    </div>
+  </div>
+
+  <!-- GTM STRATEGY -->
+  <h1 class="section-title" id="strategy">Go-To-Market Strategy</h1>
+  <p>Tutagora will execute a <strong>three-engine approach</strong>, running all three simultaneously but with phased intensity.</p>
+
+  <!-- Engine 1 -->
+  <div class="engine-card">
+    <h2><span class="engine-badge e1">1</span> School Partnerships <span style="font-weight:400;font-size:0.9rem;color:var(--light-slate)">(Months 1–3 Focus)</span></h2>
+    <p>Schools are the fastest path to trusted distribution. Each school partnership gives access to hundreds of parents who already trust the school's recommendation.</p>
+
+    <h3>Playbook</h3>
+    <ol class="playbook">
+      <li>Identify 30 target private schools in Nairobi and Mombasa. Prioritize schools with 200+ students, active parent WhatsApp groups, and a principal who is open to innovation.</li>
+      <li>Cold outreach via email and LinkedIn to school principals and academic directors. Lead with the free AI Math Tutor as a no-risk trial.</li>
+      <li>In-person demo at the school (30 minutes). Show the AI Tutor, live lesson with whiteboard, and admin dashboard. Leave a one-pager and QR code for teachers to try.</li>
+      <li>Pilot program: offer 20 free AI Tutor seats for one month. Track usage and share progress reports with the school.</li>
+      <li>Convert to paid: after pilot, present results to parents at a school assembly or parent meeting. Offer a school-branded tutoring package.</li>
+    </ol>
+
+    <h3>School Partnership Pricing</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Package</th><th>What's Included</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td class="bold-cell">AI Tutor Only</td><td>Unlimited AI Math Tutor access for all students</td><td class="green-cell">KSh 500/student/term</td></tr>
+          <tr><td class="bold-cell">AI + Live Tutoring</td><td>AI Tutor + 4 live sessions/month with verified tutor</td><td class="green-cell">KSh 2,000/student/term</td></tr>
+          <tr><td class="bold-cell">School Premium</td><td>Everything above + school-branded portal, progress reports, dedicated account manager</td><td class="green-cell">KSh 50,000/term flat + per-student fee</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout"><strong>Target:</strong> 20 school partnerships in 12 months, averaging 50 students each = 1,000 students.</div>
+  </div>
+
+  <!-- Engine 2 -->
+  <div class="engine-card">
+    <h2><span class="engine-badge e2">2</span> Direct-to-Parent Acquisition <span style="font-weight:400;font-size:0.9rem;color:var(--light-slate)">(Months 2–6 Focus)</span></h2>
+    <p>While schools provide trust, direct acquisition builds the brand and captures parents who don't want to wait for their school to offer the service.</p>
+
+    <h3>A. WhatsApp Marketing (Primary Channel)</h3>
+    <p>WhatsApp is the most-used messaging platform in Kenya. Parents are already in school WhatsApp groups and community groups.</p>
+    <ul class="channel-list">
+      <li>Create a "Tutagora Parents" broadcast list. Share weekly study tips, free AI Tutor invites, and success stories.</li>
+      <li>Partner with parent community admins in Nairobi estates (Kilimani, Lavington, South B, South C, Rongai, Kitengela) to share Tutagora in their groups.</li>
+      <li>Run a "First Lesson Free" referral campaign: every parent who shares gets KSh 500 off when their referral books.</li>
+    </ul>
+
+    <h3>B. Facebook & Instagram</h3>
+    <p>Facebook is the dominant social platform for Kenyan parents. Instagram targets younger, aspirational parents.</p>
+    <ul class="channel-list">
+      <li>Run targeted ads: "Your child can have a verified tutor for KSh 1,000/hour" targeting parents aged 28–50 in Nairobi, Mombasa, Kisumu.</li>
+      <li>Post 3x/week: tutor spotlights, student success stories, quick math tips from the AI tutor, behind-the-scenes of lesson prep.</li>
+      <li>Join and contribute to parenting Facebook groups (Nairobi Mums, Kenyan Parents Forum, etc.) with helpful advice — not hard sells.</li>
+    </ul>
+
+    <h3>C. TikTok & YouTube Shorts</h3>
+    <p>Short-form video drives awareness among younger parents and students directly.</p>
+    <ul class="channel-list">
+      <li>Create 30–60 second videos: "Watch the AI Tutor solve this KCSE question", tutor tips, student testimonials.</li>
+      <li>Recruit 2–3 tutor-influencers to post weekly educational content tagged #Tutagora.</li>
+    </ul>
+
+    <h3>D. Google SEO & Ads</h3>
+    <ul class="channel-list">
+      <li>Target keywords: "online tutor Kenya", "maths tutor Nairobi", "KCSE tutor", "private tutor Kenya".</li>
+      <li>Publish SEO blog posts: "How to Choose a Tutor in Kenya", "KCSE Maths Tips", "CBC Grade 5 Math Practice".</li>
+      <li>Run Google Ads on high-intent searches with landing pages tailored to each subject.</li>
+    </ul>
+  </div>
+
+  <!-- Engine 3 -->
+  <div class="engine-card">
+    <h2><span class="engine-badge e3">3</span> Tutor Recruitment <span style="font-weight:400;font-size:0.9rem;color:var(--light-slate)">(Months 1–4 Focus)</span></h2>
+    <p>A marketplace fails without supply. Tutor recruitment runs in parallel with everything else.</p>
+
+    <h3>Recruitment Channels</h3>
+    <ol class="playbook">
+      <li>University career boards: Post on UoN, KU, Strathmore, JKUAT, and Moi University job boards. "Earn KSh 850/hour teaching what you studied."</li>
+      <li>LinkedIn outreach: Target education graduates and working professionals with teaching backgrounds.</li>
+      <li>Teacher WhatsApp groups: Kenya has active teacher communities on WhatsApp. Post opportunities there.</li>
+      <li>Referral bonus: KSh 1,000 to any tutor who refers another verified tutor.</li>
+      <li>School teacher moonlighting: Approach private school teachers who want extra income after school hours.</li>
+    </ol>
+
+    <h3>Tutor Value Proposition</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>What Tutors Get</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td class="bold-cell">Earnings</td><td>85% of lesson fee, paid weekly via M-Pesa</td></tr>
+          <tr><td class="bold-cell">Teaching tools</td><td>HD video, collaborative whiteboard, synced chat — all built in</td></tr>
+          <tr><td class="bold-cell">Flexibility</td><td>Set your own schedule, teach from anywhere</td></tr>
+          <tr><td class="bold-cell">Student pipeline</td><td>Tutagora brings you students — no marketing needed</td></tr>
+          <tr><td class="bold-cell">Verification badge</td><td>Stand out with a verified profile — parents trust verified tutors</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout"><strong>Target:</strong> 50 verified tutors across 10 subjects within 6 months.</div>
+  </div>
+
+  <!-- PRICING -->
+  <h1 class="section-title" id="pricing">Pricing Strategy</h1>
+  <p>Tutagora uses a marketplace model: students pay per lesson, Tutagora takes a <strong>15% platform fee</strong>, and tutors receive <strong>85%</strong>. Payments are processed via Paystack (1.5% transaction fee on M-Pesa, card payments supported via Visa/Mastercard).</p>
+
+  <h3>Consumer Pricing</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Product</th><th>Price</th><th>What's Included</th><th>Margin</th></tr></thead>
+      <tbody>
+        <tr><td class="bold-cell">Live 1-on-1 Lesson</td><td>KSh 800–2,000/hr (tutor sets rate)</td><td>Video call, whiteboard, chat, recording</td><td>15% platform fee</td></tr>
+        <tr><td class="bold-cell">AI Math Tutor</td><td>Free (lead generation)</td><td>Adaptive practice, worked examples, hints</td><td>Drives conversion to paid tutoring</td></tr>
+        <tr><td class="bold-cell">Lesson Bundle (5 pack)</td><td>10% discount on tutor rate</td><td>5 lessons with same tutor, priority booking</td><td>Higher LTV, tutor retention</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><span class="bold-label">Paystack Fees:</span> 1.5% per M-Pesa transaction. Card transactions at standard Paystack rates. Maximum KSh 150,000 per transaction. Settlement in 2 working days.</p>
+
+  <!-- TIMELINE -->
+  <h1 class="section-title" id="timeline">12-Month Launch Timeline</h1>
+  <div class="timeline">
+    <div class="phase-card p1">
+      <div class="phase-label">Phase 1</div>
+      <h3>Foundation (Months 1–3)</h3>
+      <ul>
+        <li>Recruit and verify first 15 tutors across Mathematics, English, Sciences, Kiswahili</li>
+        <li>Close 5 school partnerships with pilot programs</li>
+        <li>Launch social media presence (Facebook, Instagram, WhatsApp broadcast)</li>
+        <li>First 50 students through school pilots and direct referrals</li>
+        <li>Set up Google Business Profile and basic SEO</li>
+      </ul>
+    </div>
+    <div class="phase-card p2">
+      <div class="phase-label">Phase 2</div>
+      <h3>Growth (Months 4–6)</h3>
+      <ul>
+        <li>Scale to 30 tutors, expand subjects (Computer Science, Business Studies)</li>
+        <li>Convert school pilots to paid subscriptions</li>
+        <li>Launch Facebook/Instagram ads (KSh 30,000/month)</li>
+        <li>Start TikTok content with tutor-influencers</li>
+        <li>Reach 200 active students</li>
+      </ul>
+    </div>
+    <div class="phase-card p3">
+      <div class="phase-label">Phase 3</div>
+      <h3>Scale (Months 7–12)</h3>
+      <ul>
+        <li>Expand to Mombasa and Kisumu</li>
+        <li>Close 20 total school partnerships</li>
+        <li>Launch lesson bundles and KCSE exam prep packages</li>
+        <li>Reach 50 verified tutors, 500 active students</li>
+        <li>Introduce Google Ads for high-intent keywords</li>
+        <li>Explore seed funding to accelerate growth</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- BUDGET -->
+  <h1 class="section-title" id="budget">Marketing Budget (Monthly)</h1>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Channel</th><th>Months 1–3</th><th>Months 4–6</th><th>Months 7–12</th></tr></thead>
+      <tbody>
+        <tr><td>Facebook/Instagram Ads</td><td>KSh 10,000</td><td>KSh 30,000</td><td>KSh 50,000</td></tr>
+        <tr><td>Google Ads</td><td>—</td><td>KSh 10,000</td><td>KSh 30,000</td></tr>
+        <tr><td>WhatsApp Business API</td><td>KSh 3,000</td><td>KSh 5,000</td><td>KSh 8,000</td></tr>
+        <tr><td>Content creation (video, design)</td><td>KSh 15,000</td><td>KSh 20,000</td><td>KSh 25,000</td></tr>
+        <tr><td>School visit costs (transport, printing)</td><td>KSh 10,000</td><td>KSh 8,000</td><td>KSh 12,000</td></tr>
+        <tr><td>Referral rewards</td><td>KSh 5,000</td><td>KSh 15,000</td><td>KSh 25,000</td></tr>
+        <tr class="total-row"><td><strong>TOTAL</strong></td><td class="green-cell">KSh 43,000</td><td class="green-cell">KSh 88,000</td><td class="green-cell">KSh 150,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- KPIs -->
+  <h1 class="section-title" id="kpis">Key Performance Indicators</h1>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>KPI</th><th>Month 3</th><th>Month 6</th><th>Month 12</th></tr></thead>
+      <tbody>
+        <tr><td class="bold-cell">Active Students</td><td>50</td><td>200</td><td>500</td></tr>
+        <tr><td class="bold-cell">Verified Tutors</td><td>15</td><td>30</td><td>50</td></tr>
+        <tr><td class="bold-cell">School Partners</td><td>5</td><td>10</td><td>20</td></tr>
+        <tr><td class="bold-cell">Monthly Revenue</td><td>KSh 75,000</td><td>KSh 300,000</td><td>KSh 750,000</td></tr>
+        <tr><td class="bold-cell">Lessons per Week</td><td>30</td><td>120</td><td>300</td></tr>
+        <tr><td class="bold-cell">Student Retention (monthly)</td><td>70%</td><td>75%</td><td>80%</td></tr>
+        <tr><td class="bold-cell">AI Tutor Monthly Users</td><td>200</td><td>500</td><td>1,500</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- RISKS -->
+  <h1 class="section-title" id="risks">Risks & Mitigations</h1>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Risk</th><th>Impact</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr><td class="bold-cell">Low tutor supply</td><td>Students can't find available tutors, churn increases</td><td>Over-recruit by 2x; offer sign-up bonuses; prioritize high-demand subjects first</td></tr>
+        <tr><td class="bold-cell">Payment trust</td><td>Parents hesitant to pay online to unknown platform</td><td>Paystack trust badges; school endorsement; first lesson guarantee (refund if unsatisfied)</td></tr>
+        <tr><td class="bold-cell">Internet reliability</td><td>Dropped calls during lessons frustrate users</td><td>Low-bandwidth video mode; audio-only fallback; lesson rescheduling policy</td></tr>
+        <tr><td class="bold-cell">Competition from global platforms</td><td>Well-funded international platforms enter Kenya</td><td>Local advantage: Kenyan tutors, Kenyan curriculum, M-Pesa payments, local trust</td></tr>
+        <tr><td class="bold-cell">School decision cycles</td><td>Schools take months to approve new vendors</td><td>Start with free AI Tutor pilot (no approval needed); prove value before asking for budget</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- NEXT STEPS -->
+  <h1 class="section-title" id="next">Immediate Next Steps (This Month)</h1>
+  <ol class="steps-list">
+    <li>Approve your own tutor profile in the Admin panel so you appear in Find Tutors</li>
+    <li>Create Tutagora social media accounts: Facebook Page, Instagram, TikTok, LinkedIn</li>
+    <li>Record a 60-second demo video showing the AI Tutor and a live lesson with whiteboard</li>
+    <li>Draft a one-page flyer for schools (can be created as a PDF from the platform)</li>
+    <li>List 30 target schools in Nairobi with principal contact information</li>
+    <li>Post the tutor sign-up link on 5 university job boards and teacher WhatsApp groups</li>
+    <li>Set up Google Business Profile for "Tutagora" to start appearing in local searches</li>
+  </ol>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-brand">tutagora.com</div>
+    <div class="footer-info">Tutagora Ltd — Nairobi, Kenya — info@tutagora.com</div>
+    <div class="footer-info" style="margin-top:0.25rem;font-size:0.8rem;color:#CBD5E1;">Confidential — March 2026</div>
+  </div>
+
+</div>
+
+</body>
+</html>
