@@ -984,14 +984,20 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
 
 // ============ TUTOR ONBOARDING ============
 const TutorOnboarding = ({ profile, onComplete }) => {
-  const [step, setStep] = useState(1); // 1 = profile info, 2 = document upload
+  const [step, setStep] = useState(1); // 1 = photo & basics, 2 = bio & details, 3 = document upload
   const [form, setForm] = useState({
     subject: '',
     headline: '',
     bio: '',
     hourly_rate: 1000,
     degree: '',
+    experience_years: '',
+    teaching_style: '',
+    languages: 'English, Kiswahili',
+    grade_levels: '',
   });
+  const [photoFile, setPhotoFile] = useState(null);
+  const [photoPreview, setPhotoPreview] = useState(profile?.avatar_url || null);
   const [idFile, setIdFile] = useState(null);
   const [credentialFile, setCredentialFile] = useState(null);
   const [saving, setSaving] = useState(false);
@@ -1006,11 +1012,27 @@ const TutorOnboarding = ({ profile, onComplete }) => {
     return urlData.publicUrl;
   };
 
-  const handleSubmitProfile = (e) => {
+  const handlePhotoSelect = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setPhotoFile(file);
+    const reader = new FileReader();
+    reader.onload = (ev) => setPhotoPreview(ev.target.result);
+    reader.readAsDataURL(file);
+  };
+
+  const handleStep1Submit = (e) => {
     e.preventDefault();
     if (!form.subject) { setError('Please select a subject'); return; }
     setError('');
     setStep(2);
+  };
+
+  const handleStep2Submit = (e) => {
+    e.preventDefault();
+    if (!form.bio || form.bio.length < 100) { setError('Please write at least 100 characters about yourself — parents want to know who you are!'); return; }
+    setError('');
+    setStep(3);
   };
 
   const handleSubmitDocuments = async (e) => {
@@ -1022,6 +1044,15 @@ const TutorOnboarding = ({ profile, onComplete }) => {
     setError('');
 
     try {
+      // Upload photo if provided
+      if (photoFile) {
+        const ext = photoFile.name.split('.').pop();
+        const photoPath = `${profile.id}/avatar-${Date.now()}.${ext}`;
+        await supabase.storage.from('avatars').upload(photoPath, photoFile, { upsert: true });
+        const { data: photoUrl } = supabase.storage.from('avatars').getPublicUrl(photoPath);
+        await supabase.from('profiles').update({ avatar_url: photoUrl.publicUrl }).eq('id', profile.id);
+      }
+
       const idUrl = await uploadFile(idFile, 'national-id');
       const credUrl = await uploadFile(credentialFile, 'credential');
 
@@ -1034,6 +1065,10 @@ const TutorOnboarding = ({ profile, onComplete }) => {
         bio: form.bio,
         hourly_rate: form.hourly_rate,
         degree: form.degree,
+        experience_years: form.experience_years ? parseInt(form.experience_years) : null,
+        teaching_style: form.teaching_style,
+        languages: form.languages,
+        grade_levels: form.grade_levels,
         verified: false,
         verification_status: 'pending',
         id_document_url: idUrl,
@@ -1093,6 +1128,8 @@ const TutorOnboarding = ({ profile, onComplete }) => {
     </div>
   );
 
+  const stepLabels = ['Your Info', 'About You', 'Documents'];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-500 to-emerald-600 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl w-full max-w-lg p-8 shadow-xl">
@@ -1104,19 +1141,48 @@ const TutorOnboarding = ({ profile, onComplete }) => {
             </svg>
           </div>
           <h1 className="text-2xl font-bold text-slate-900">Welcome, {profile?.full_name?.split(' ')[0]}</h1>
-          <p className="text-slate-500 mt-1">{step === 1 ? "Let us set up your tutor profile" : "Upload your verification documents"}</p>
+          <p className="text-slate-500 mt-1">
+            {step === 1 ? "Let's set up your tutor profile" : step === 2 ? "Tell parents about yourself" : "Upload your verification documents"}
+          </p>
           {/* Step indicator */}
           <div className="flex items-center justify-center gap-2 mt-4">
-            <div className={`w-8 h-1 rounded-full ${step >= 1 ? 'bg-emerald-500' : 'bg-slate-200'}`} />
-            <div className={`w-8 h-1 rounded-full ${step >= 2 ? 'bg-emerald-500' : 'bg-slate-200'}`} />
+            {stepLabels.map((label, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <div className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium transition-colors ${step >= i + 1 ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-400'}`}>
+                  <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${step >= i + 1 ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-slate-400'}`}>{step > i + 1 ? '✓' : i + 1}</span>
+                  {label}
+                </div>
+                {i < 2 && <div className={`w-4 h-0.5 ${step > i + 1 ? 'bg-emerald-300' : 'bg-slate-200'}`} />}
+              </div>
+            ))}
           </div>
         </div>
 
         {error && <div className="mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-lg">{error}</div>}
 
-        {/* Step 1: Profile info */}
+        {/* Step 1: Photo & basics */}
         {step === 1 && (
-          <form onSubmit={handleSubmitProfile} className="space-y-4">
+          <form onSubmit={handleStep1Submit} className="space-y-4">
+            {/* Photo upload */}
+            <div className="flex flex-col items-center mb-2">
+              <label className="relative cursor-pointer group">
+                <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-slate-100 group-hover:border-emerald-200 transition-colors">
+                  {photoPreview ? (
+                    <img src={photoPreview} alt="Profile" className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="w-full h-full bg-slate-100 flex items-center justify-center">
+                      <svg className="w-10 h-10 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                    </div>
+                  )}
+                </div>
+                <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center border-2 border-white group-hover:bg-emerald-600 transition-colors">
+                  <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                </div>
+                <input type="file" className="hidden" accept="image/*" onChange={handlePhotoSelect} />
+              </label>
+              <p className="text-xs text-slate-400 mt-2">Add a photo — profiles with photos get 3x more bookings</p>
+            </div>
+
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">What subject do you teach? *</label>
               <select value={form.subject} onChange={(e) => setForm({ ...form, subject: e.target.value })}
@@ -1126,41 +1192,104 @@ const TutorOnboarding = ({ profile, onComplete }) => {
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Headline</label>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Headline *</label>
               <input type="text" value={form.headline} onChange={(e) => setForm({ ...form, headline: e.target.value })}
-                placeholder="e.g. Making calculus intuitive"
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                placeholder="e.g. Making calculus intuitive and fun"
+                maxLength={80}
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" required />
+              <p className="text-xs text-slate-400 mt-1">{form.headline.length}/80 — this is the first thing parents see</p>
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Your qualification</label>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Your qualification *</label>
               <input type="text" value={form.degree} onChange={(e) => setForm({ ...form, degree: e.target.value })}
                 placeholder="e.g. BSc Mathematics, University of Nairobi"
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" required />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Hourly Rate (KSh)</label>
-              <input type="number" value={form.hourly_rate} onChange={(e) => setForm({ ...form, hourly_rate: parseInt(e.target.value) || 1000 })}
-                min="500" max="10000"
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Hourly Rate (KSh)</label>
+                <input type="number" value={form.hourly_rate} onChange={(e) => setForm({ ...form, hourly_rate: parseInt(e.target.value) || 1000 })}
+                  min="500" max="10000"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Years of experience</label>
+                <input type="number" value={form.experience_years} onChange={(e) => setForm({ ...form, experience_years: e.target.value })}
+                  placeholder="e.g. 5" min="0" max="50"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              </div>
             </div>
+            <button type="submit" className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+              Next: Tell Parents About You
+            </button>
+          </form>
+        )}
+
+        {/* Step 2: Bio & details */}
+        {step === 2 && (
+          <form onSubmit={handleStep2Submit} className="space-y-4">
+            <button type="button" onClick={() => setStep(1)} className="text-sm text-slate-500 hover:text-slate-700 flex items-center gap-1">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+              Back
+            </button>
+
+            <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-sm text-blue-800">
+              <strong>Your bio is your pitch to parents.</strong> A detailed bio helps parents trust you. Tutors with longer bios get significantly more bookings. Aim for at least 3-4 sentences.
+            </div>
+
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">About you</label>
+              <label className="block text-sm font-medium text-slate-700 mb-1">About you *</label>
               <textarea value={form.bio} onChange={(e) => setForm({ ...form, bio: e.target.value })}
-                placeholder="Tell students about your teaching style and experience..." rows={3}
+                placeholder={"Write about yourself for parents and students. Include:\n\n• Your teaching experience and background\n• What makes your teaching style effective\n• What grades/levels you teach\n• Any notable achievements or results\n• Why you're passionate about your subject\n\nExample: \"I'm a mathematics graduate from the University of Nairobi with 5 years of tutoring experience. I specialize in helping Form 3 and Form 4 students prepare for KCSE, and my students consistently score A's and B's. My approach is patient and step-by-step — I break down complex problems into simple, relatable examples...\""}
+                rows={8}
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" required />
+              <div className="flex justify-between mt-1">
+                <p className={`text-xs ${form.bio.length >= 100 ? 'text-emerald-600' : 'text-amber-600'}`}>
+                  {form.bio.length} characters {form.bio.length < 100 ? `(${100 - form.bio.length} more needed)` : '✓'}
+                </p>
+                <p className="text-xs text-slate-400">Recommended: 200+ characters</p>
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Teaching style</label>
+              <select value={form.teaching_style} onChange={(e) => setForm({ ...form, teaching_style: e.target.value })}
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                <option value="">Select your style</option>
+                <option value="Patient & step-by-step">Patient & step-by-step</option>
+                <option value="Interactive & discussion-based">Interactive & discussion-based</option>
+                <option value="Practice-focused with lots of exercises">Practice-focused with lots of exercises</option>
+                <option value="Visual & creative explanations">Visual & creative explanations</option>
+                <option value="Exam-oriented & results-driven">Exam-oriented & results-driven</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Grade levels you teach</label>
+              <input type="text" value={form.grade_levels} onChange={(e) => setForm({ ...form, grade_levels: e.target.value })}
+                placeholder="e.g. Grade 4-8, Form 1-4, University"
                 className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
             </div>
+
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Languages</label>
+              <input type="text" value={form.languages} onChange={(e) => setForm({ ...form, languages: e.target.value })}
+                placeholder="e.g. English, Kiswahili"
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            </div>
+
             <button type="submit" className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
               Next: Upload Documents
             </button>
           </form>
         )}
 
-        {/* Step 2: Document upload */}
-        {step === 2 && (
+        {/* Step 3: Document upload */}
+        {step === 3 && (
           <form onSubmit={handleSubmitDocuments} className="space-y-5">
-            <button type="button" onClick={() => setStep(1)} className="text-sm text-slate-500 hover:text-slate-700 flex items-center gap-1">
+            <button type="button" onClick={() => setStep(2)} className="text-sm text-slate-500 hover:text-slate-700 flex items-center gap-1">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-              Back to profile
+              Back to bio
             </button>
 
             <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-sm text-amber-800">
@@ -1973,31 +2102,72 @@ const TutorProfileEditor = ({ tutor, profile }) => {
     bio: tutor?.bio || '',
     hourly_rate: tutor?.hourly_rate || 1000,
     degree: tutor?.degree || '',
+    experience_years: tutor?.experience_years || '',
+    teaching_style: tutor?.teaching_style || '',
+    languages: tutor?.languages || 'English, Kiswahili',
+    grade_levels: tutor?.grade_levels || '',
   });
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
+  const [photoFile, setPhotoFile] = useState(null);
+  const [photoPreview, setPhotoPreview] = useState(profile?.avatar_url || null);
+
+  const handlePhotoSelect = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setPhotoFile(file);
+    const reader = new FileReader();
+    reader.onload = (ev) => setPhotoPreview(ev.target.result);
+    reader.readAsDataURL(file);
+  };
 
   const handleSave = async () => {
     setSaving(true);
-    const { error } = await supabase
-      .from('tutors')
-      .update(form)
-      .eq('id', tutor.id);
-    
+
+    try {
+      // Upload new photo if changed
+      if (photoFile) {
+        const ext = photoFile.name.split('.').pop();
+        const photoPath = `${profile.id}/avatar-${Date.now()}.${ext}`;
+        await supabase.storage.from('avatars').upload(photoPath, photoFile, { upsert: true });
+        const { data: photoUrl } = supabase.storage.from('avatars').getPublicUrl(photoPath);
+        await supabase.from('profiles').update({ avatar_url: photoUrl.publicUrl }).eq('id', profile.id);
+      }
+
+      const { error } = await supabase.from('tutors').update(form).eq('id', tutor.id);
+      setMessage(error ? 'Error saving' : 'Saved!');
+    } catch (err) {
+      setMessage('Error saving: ' + err.message);
+    }
+
     setSaving(false);
-    setMessage(error ? 'Error saving' : 'Saved!');
-    setTimeout(() => setMessage(''), 2000);
+    setTimeout(() => setMessage(''), 3000);
   };
 
   return (
     <div className="max-w-xl bg-white rounded-xl border border-slate-200 p-5">
+      {/* Photo section */}
       <div className="flex items-center gap-4 mb-6">
-        <Avatar src={profile?.avatar_url} name={profile?.full_name} size={64} />
+        <label className="relative cursor-pointer group">
+          <div className="w-20 h-20 rounded-full overflow-hidden border-3 border-slate-100 group-hover:border-emerald-200 transition-colors">
+            {photoPreview ? (
+              <img src={photoPreview} alt="Profile" className="w-full h-full object-cover" />
+            ) : (
+              <Avatar src={null} name={profile?.full_name} size={80} />
+            )}
+          </div>
+          <div className="absolute -bottom-1 -right-1 w-7 h-7 bg-emerald-500 rounded-full flex items-center justify-center border-2 border-white">
+            <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          </div>
+          <input type="file" className="hidden" accept="image/*" onChange={handlePhotoSelect} />
+        </label>
         <div>
           <h3 className="font-bold text-lg">{profile?.full_name}</h3>
           <p className="text-slate-500 text-sm">{profile?.email}</p>
+          <p className="text-xs text-emerald-600 mt-0.5">Click photo to change</p>
         </div>
       </div>
+
       <div className="space-y-4">
         <div>
           <label className="block text-sm font-medium mb-1">Subject</label>
@@ -2005,24 +2175,55 @@ const TutorProfileEditor = ({ tutor, profile }) => {
         </div>
         <div>
           <label className="block text-sm font-medium mb-1">Headline</label>
-          <input value={form.headline} onChange={e => setForm({ ...form, headline: e.target.value })} placeholder="e.g. Making calculus intuitive" className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
+          <input value={form.headline} onChange={e => setForm({ ...form, headline: e.target.value })} placeholder="e.g. Making calculus intuitive and fun" maxLength={80} className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
+          <p className="text-xs text-slate-400 mt-0.5">{form.headline.length}/80</p>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Bio</label>
-          <textarea value={form.bio} onChange={e => setForm({ ...form, bio: e.target.value })} rows={3} className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
+          <label className="block text-sm font-medium mb-1">About you (bio)</label>
+          <textarea value={form.bio} onChange={e => setForm({ ...form, bio: e.target.value })} rows={6}
+            placeholder="Tell parents about your teaching experience, what makes you effective, which levels you teach, and why you love your subject. The more detail, the more bookings you'll get!"
+            className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm" />
+          <p className={`text-xs mt-0.5 ${form.bio.length >= 100 ? 'text-emerald-600' : 'text-amber-600'}`}>
+            {form.bio.length} characters {form.bio.length < 100 ? '— aim for at least 100' : '✓'}
+          </p>
         </div>
         <div>
           <label className="block text-sm font-medium mb-1">Degree / Qualification</label>
           <input value={form.degree} onChange={e => setForm({ ...form, degree: e.target.value })} className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
         </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className="block text-sm font-medium mb-1">Hourly Rate (KSh)</label>
+            <input type="number" value={form.hourly_rate} onChange={e => setForm({ ...form, hourly_rate: parseInt(e.target.value) })} className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Years of experience</label>
+            <input type="number" value={form.experience_years} onChange={e => setForm({ ...form, experience_years: e.target.value })} min="0" className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
+          </div>
+        </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Hourly Rate (KSh)</label>
-          <input type="number" value={form.hourly_rate} onChange={e => setForm({ ...form, hourly_rate: parseInt(e.target.value) })} className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
+          <label className="block text-sm font-medium mb-1">Teaching style</label>
+          <select value={form.teaching_style} onChange={e => setForm({ ...form, teaching_style: e.target.value })} className="w-full px-3 py-2 border border-slate-200 rounded-lg">
+            <option value="">Select your style</option>
+            <option value="Patient & step-by-step">Patient & step-by-step</option>
+            <option value="Interactive & discussion-based">Interactive & discussion-based</option>
+            <option value="Practice-focused with lots of exercises">Practice-focused with lots of exercises</option>
+            <option value="Visual & creative explanations">Visual & creative explanations</option>
+            <option value="Exam-oriented & results-driven">Exam-oriented & results-driven</option>
+          </select>
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1">Grade levels</label>
+          <input value={form.grade_levels} onChange={e => setForm({ ...form, grade_levels: e.target.value })} placeholder="e.g. Grade 4-8, Form 1-4" className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1">Languages</label>
+          <input value={form.languages} onChange={e => setForm({ ...form, languages: e.target.value })} className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
         </div>
         <button onClick={handleSave} disabled={saving} className="w-full py-2.5 bg-emerald-500 text-white font-semibold rounded-lg disabled:opacity-50">
           {saving ? 'Saving...' : 'Save Changes'}
         </button>
-        {message && <p className="text-center text-sm text-emerald-600">{message}</p>}
+        {message && <p className={`text-center text-sm ${message.includes('Error') ? 'text-red-600' : 'text-emerald-600'}`}>{message}</p>}
       </div>
     </div>
   );
@@ -2476,27 +2677,51 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
             </button>
           </div>
         ) : (
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filtered.map(t => (
               <div key={t.id} onClick={() => onSelectTutor(t)} className="bg-white rounded-xl border border-slate-200 overflow-hidden cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all">
-                <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-50 flex items-center justify-center relative">
-                  <Avatar src={t.profiles?.avatar_url} name={t.profiles?.full_name} size={80} />
+                {/* Photo banner */}
+                <div className="h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 relative">
                   {t.top_rated && (
-                    <span className="absolute top-2 right-2 px-2 py-1 bg-slate-900 text-white text-xs font-medium rounded-full">Top Rated</span>
+                    <span className="absolute top-2 right-2 px-2 py-1 bg-white/90 text-emerald-700 text-xs font-semibold rounded-full">Top Rated</span>
+                  )}
+                  {t.verified && (
+                    <span className="absolute top-2 left-2 px-2 py-1 bg-white/90 text-emerald-700 text-xs font-semibold rounded-full flex items-center gap-1">
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                      Verified
+                    </span>
                   )}
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-slate-900">{t.profiles?.full_name}</h3>
-                  <p className="text-sm text-emerald-600 font-medium">{t.subject}</p>
-                  {t.headline && <p className="text-sm text-slate-500 mt-1 line-clamp-2">{t.headline}</p>}
+                {/* Avatar overlapping banner */}
+                <div className="px-4 -mt-10 mb-3">
+                  <img
+                    src={t.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(t.profiles?.full_name || 'T')}&background=10b981&color=fff&size=120&bold=true`}
+                    alt={t.profiles?.full_name}
+                    className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md"
+                  />
+                </div>
+                <div className="px-4 pb-4">
+                  <h3 className="font-bold text-slate-900 text-lg">{t.profiles?.full_name}</h3>
+                  <p className="text-sm text-emerald-600 font-medium">{t.subject} Tutor</p>
+                  {t.headline && <p className="text-sm text-slate-500 mt-1">{t.headline}</p>}
+                  {t.bio && <p className="text-sm text-slate-500 mt-1.5 line-clamp-2">{t.bio}</p>}
+
+                  {/* Quick info chips */}
+                  <div className="flex flex-wrap gap-1.5 mt-3">
+                    {t.degree && <span className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full text-xs">{t.degree}</span>}
+                    {t.experience_years && <span className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full text-xs">{t.experience_years}yr exp</span>}
+                    {t.teaching_style && <span className="px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full text-xs">{t.teaching_style}</span>}
+                  </div>
+
                   <div className="flex items-center gap-2 mt-3">
                     <Stars rating={t.rating || 0} size={14} />
                     <span className="text-sm font-medium">{t.rating || 'New'}</span>
                     <span className="text-sm text-slate-400">({t.review_count || 0})</span>
+                    {t.lessons_completed > 0 && <span className="text-sm text-slate-400">· {t.lessons_completed} lessons</span>}
                   </div>
                   <div className="flex justify-between items-center mt-3 pt-3 border-t border-slate-100">
-                    <span className="font-bold text-lg">KSh {t.hourly_rate?.toLocaleString() || '1,000'}</span>
-                    <span className="text-sm text-slate-400">/hr</span>
+                    <span className="font-bold text-lg">KSh {t.hourly_rate?.toLocaleString() || '1,000'}<span className="text-sm font-normal text-slate-400">/hr</span></span>
+                    <span className="px-3 py-1.5 bg-emerald-500 text-white text-xs font-semibold rounded-lg">View Profile</span>
                   </div>
                 </div>
               </div>
@@ -2594,18 +2819,30 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
 
       {/* Main content */}
       <div className="max-w-3xl mx-auto px-5 pb-20">
-        {/* Header - name and photo */}
-        <div className="flex items-start gap-5 mb-8">
-          <img 
-            src={tutor.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(tutor.profiles?.full_name || 'T')}&background=10b981&color=fff&size=120`}
-            alt={tutor.profiles?.full_name}
-            className="w-24 h-24 rounded-full object-cover"
-          />
-          <div className="flex-1 pt-1">
-            <h1 className="text-2xl font-bold text-slate-900">{tutor.profiles?.full_name}</h1>
-            <p className="text-slate-600 mt-1">{tutor.subject} tutor</p>
-            {tutor.degree && <p className="text-slate-500 text-sm mt-0.5">{tutor.degree}</p>}
-            <div className="flex items-center gap-3 mt-3">
+        {/* Header - photo banner + info */}
+        <div className="rounded-2xl overflow-hidden border border-slate-200 mb-8">
+          <div className="h-28 bg-gradient-to-r from-emerald-500 to-emerald-600 relative">
+            {tutor.verified && (
+              <span className="absolute top-3 right-3 px-3 py-1 bg-white/90 text-emerald-700 text-xs font-semibold rounded-full flex items-center gap-1">
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                Verified Tutor
+              </span>
+            )}
+          </div>
+          <div className="px-6 pb-6">
+            <div className="flex items-end gap-5 -mt-14 mb-4">
+              <img
+                src={tutor.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(tutor.profiles?.full_name || 'T')}&background=10b981&color=fff&size=160&bold=true`}
+                alt={tutor.profiles?.full_name}
+                className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-lg"
+              />
+              <div className="flex-1 pb-1">
+                <h1 className="text-2xl font-bold text-slate-900">{tutor.profiles?.full_name}</h1>
+                <p className="text-emerald-600 font-medium">{tutor.subject} Tutor</p>
+                {tutor.headline && <p className="text-slate-500 text-sm mt-0.5">{tutor.headline}</p>}
+              </div>
+            </div>
+            <div className="flex flex-wrap items-center gap-3">
               <div className="flex items-center gap-1">
                 <Stars rating={tutor.rating || 0} size={16} />
                 <span className="font-medium text-sm">{tutor.rating || 'New'}</span>
@@ -2614,6 +2851,19 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
               <span className="text-slate-500 text-sm">{tutor.review_count || 0} reviews</span>
               <span className="text-slate-300">•</span>
               <span className="text-slate-500 text-sm">{tutor.lessons_completed || 0} lessons</span>
+              {tutor.experience_years && (
+                <>
+                  <span className="text-slate-300">•</span>
+                  <span className="text-slate-500 text-sm">{tutor.experience_years} years experience</span>
+                </>
+              )}
+            </div>
+            {/* Quick info chips */}
+            <div className="flex flex-wrap gap-2 mt-4">
+              {tutor.degree && <span className="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm">{tutor.degree}</span>}
+              {tutor.teaching_style && <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">{tutor.teaching_style}</span>}
+              {tutor.languages && <span className="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm">{tutor.languages}</span>}
+              {tutor.grade_levels && <span className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm">{tutor.grade_levels}</span>}
             </div>
           </div>
         </div>
@@ -2625,8 +2875,8 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
             {/* About */}
             {(tutor.bio || tutor.headline) && (
               <div>
-                <h2 className="text-lg font-semibold text-slate-900 mb-3">About</h2>
-                <p className="text-slate-600 leading-relaxed">{tutor.bio || tutor.headline}</p>
+                <h2 className="text-lg font-semibold text-slate-900 mb-3">About me</h2>
+                <p className="text-slate-600 leading-relaxed whitespace-pre-line">{tutor.bio || tutor.headline}</p>
               </div>
             )}
 
@@ -2634,7 +2884,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
             <div>
               <h2 className="text-lg font-semibold text-slate-900 mb-3">What I teach</h2>
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-sm">{tutor.subject}</span>
+                <span className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium">{tutor.subject}</span>
                 {tutor.specialties?.map((s, i) => (
                   <span key={i} className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full text-sm">{s}</span>
                 ))}
