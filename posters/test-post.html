@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1080px; font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif; background: #0a1628; overflow: hidden; position: relative; }
+
+.glow { position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,184,0,0.12), transparent 70%); top: -100px; right: -100px; }
+.glow2 { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,77,141,0.08), transparent 70%); bottom: -50px; left: -50px; }
+.accent-bar { position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #ffb800, #ff4d8d, #2563eb); }
+
+.content { position: relative; z-index: 2; padding: 65px; height: 100%; display: flex; flex-direction: column; }
+
+.top-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; }
+.badge { background: #ff4d8d; color: white; padding: 10px 28px; border-radius: 30px; font-size: 15px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+.logo-row { display: flex; align-items: center; gap: 12px; }
+.logo-circle { width: 48px; height: 48px; background: linear-gradient(135deg, #1a4db5, #2563eb); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.logo-circle span { color: #ffb800; font-size: 26px; font-weight: 900; }
+.logo-text { color: white; font-size: 22px; font-weight: 800; letter-spacing: 1px; }
+
+.main-title { font-size: 74px; font-weight: 900; color: white; line-height: 1.08; margin-bottom: 20px; }
+.main-title .gold { color: #ffb800; font-style: italic; }
+
+.subtitle { font-size: 22px; color: rgba(255,255,255,0.6); font-weight: 400; line-height: 1.5; margin-bottom: 50px; max-width: 700px; }
+
+.steps { display: flex; flex-direction: column; gap: 18px; flex: 1; }
+.step { display: flex; align-items: center; gap: 20px; background: rgba(255,255,255,0.05); border-radius: 16px; padding: 22px 28px; border: 1px solid rgba(255,255,255,0.08); }
+.step-num { width: 50px; height: 50px; background: linear-gradient(135deg, #ffb800, #ff8c00); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 900; color: #0a1628; flex-shrink: 0; }
+.step-text { font-size: 22px; font-weight: 700; color: white; }
+.step-text small { display: block; font-size: 15px; color: rgba(255,255,255,0.5); font-weight: 400; margin-top: 4px; }
+
+.footer { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 25px; border-top: 2px solid rgba(255,255,255,0.08); }
+.cta { background: linear-gradient(135deg, #ff4d8d, #ff2d6d); color: white; padding: 16px 40px; border-radius: 50px; font-size: 20px; font-weight: 800; }
+.website { color: #ffb800; font-size: 20px; font-weight: 700; }
+</style></head>
+<body>
+<div class="glow"></div>
+<div class="glow2"></div>
+<div class="accent-bar"></div>
+<div class="content">
+  <div class="top-row">
+    <div class="badge">HOW IT WORKS</div>
+    <div class="logo-row">
+      <div class="logo-circle"><span>T</span></div>
+      <div class="logo-text">TUTAGORA</div>
+    </div>
+  </div>
+
+  <div class="main-title">Start Learning<br>in <span class="gold">3 Easy Steps</span></div>
+  <div class="subtitle">Getting started with Tutagora is simple. Find your perfect tutor and start learning today.</div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">Browse Verified Tutors<small>Filter by subject, price, and availability</small></div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">Book Your Lesson<small>Pick a date and time that works for you</small></div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">Learn Live Online<small>Join your video lesson with whiteboard and chat</small></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="cta">GET STARTED  ></div>
+    <div class="website">tutagora.com</div>
+  </div>
+</div>
+</body></html>

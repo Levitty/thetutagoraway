@@ -1000,9 +1000,9 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
 
 // ============ TUTOR ONBOARDING ============
 const TutorOnboarding = ({ profile, onComplete }) => {
-  const [step, setStep] = useState(1); // 1 = photo & basics, 2 = bio & details, 3 = document upload
+  const [step, setStep] = useState(1); // 1 = photo & basics, 2 = bio & details, 3 = document upload, 4 = terms
   const [form, setForm] = useState({
-    subject: '',
+    subjects: [],
     headline: '',
     bio: '',
     hourly_rate: 1000,
@@ -1011,7 +1011,9 @@ const TutorOnboarding = ({ profile, onComplete }) => {
     teaching_style: '',
     languages: 'English, Kiswahili',
     grade_levels: '',
+    phone_number: '',
   });
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [photoFile, setPhotoFile] = useState(null);
   const [photoPreview, setPhotoPreview] = useState(profile?.avatar_url || null);
   const [idFile, setIdFile] = useState(null);
@@ -1039,7 +1041,8 @@ const TutorOnboarding = ({ profile, onComplete }) => {
 
   const handleStep1Submit = (e) => {
     e.preventDefault();
-    if (!form.subject) { setError('Please select a subject'); return; }
+    if (!form.subjects || form.subjects.length === 0) { setError('Please select at least one subject'); return; }
+    if (!form.phone_number || !/^(\+254|07|01)\d{8,9}$/.test(form.phone_number.replace(/\s/g, ''))) { setError('Please enter a valid Kenyan phone number (e.g. 0712345678 or +254712345678)'); return; }
     setError('');
     setStep(2);
   };
@@ -1051,10 +1054,17 @@ const TutorOnboarding = ({ profile, onComplete }) => {
     setStep(3);
   };
 
-  const handleSubmitDocuments = async (e) => {
+  const handleStep3Submit = (e) => {
     e.preventDefault();
     if (!idFile) { setError('Please upload your national ID'); return; }
     if (!credentialFile) { setError('Please upload your teaching certificate'); return; }
+    setError('');
+    setStep(4);
+  };
+
+  const handleFinalSubmit = async (e) => {
+    e.preventDefault();
+    if (!agreedToTerms) { setError('You must agree to the Terms of Engagement to continue'); return; }
 
     setSaving(true);
     setError('');
@@ -1076,7 +1086,8 @@ const TutorOnboarding = ({ profile, onComplete }) => {
         .from('tutors').select('id').eq('user_id', profile.id).single();
 
       const tutorPayload = {
-        subject: form.subject,
+        subject: form.subjects[0] || '',
+        subjects: form.subjects,
         headline: form.headline,
         bio: form.bio,
         hourly_rate: form.hourly_rate,
@@ -1085,6 +1096,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
         teaching_style: form.teaching_style,
         languages: form.languages,
         grade_levels: form.grade_levels,
+        phone_number: form.phone_number,
         verified: false,
         verification_status: 'pending',
         id_document_url: idUrl,
@@ -1110,6 +1122,13 @@ const TutorOnboarding = ({ profile, onComplete }) => {
         await supabase.from('availability').insert(
           [1, 2, 3, 4, 5].map(day => ({ tutor_id: tutorData.id, day_of_week: day, start_time: '09:00', end_time: '17:00' }))
         );
+      }
+
+      // Send "under review" email
+      try {
+        await sendEmail('tutor-under-review', profile.email, { name: profile.full_name });
+      } catch (emailErr) {
+        console.error('Failed to send under-review email:', emailErr);
       }
 
       onComplete();
@@ -1144,7 +1163,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
     </div>
   );
 
-  const stepLabels = ['Your Info', 'About You', 'Documents'];
+  const stepLabels = ['Your Info', 'About You', 'Documents', 'Terms'];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-500 to-emerald-600 flex items-center justify-center p-4">
@@ -1158,7 +1177,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
           </div>
           <h1 className="text-2xl font-bold text-slate-900">Welcome, {profile?.full_name?.split(' ')[0]}</h1>
           <p className="text-slate-500 mt-1">
-            {step === 1 ? "Let's set up your tutor profile" : step === 2 ? "Tell parents about yourself" : "Upload your verification documents"}
+            {step === 1 ? "Let's set up your tutor profile" : step === 2 ? "Tell parents about yourself" : step === 3 ? "Upload your verification documents" : "Review and agree to our terms"}
           </p>
           {/* Step indicator */}
           <div className="flex items-center justify-center gap-2 mt-4">
@@ -1168,7 +1187,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
                   <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${step >= i + 1 ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-slate-400'}`}>{step > i + 1 ? '✓' : i + 1}</span>
                   {label}
                 </div>
-                {i < 2 && <div className={`w-4 h-0.5 ${step > i + 1 ? 'bg-emerald-300' : 'bg-slate-200'}`} />}
+                {i < 3 && <div className={`w-4 h-0.5 ${step > i + 1 ? 'bg-emerald-300' : 'bg-slate-200'}`} />}
               </div>
             ))}
           </div>
@@ -1200,12 +1219,30 @@ const TutorOnboarding = ({ profile, onComplete }) => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">What subject do you teach? *</label>
-              <select value={form.subject} onChange={(e) => setForm({ ...form, subject: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" required>
-                <option value="">Select a subject</option>
-                {subjects.map(s => <option key={s} value={s}>{s}</option>)}
-              </select>
+              <label className="block text-sm font-medium text-slate-700 mb-1">What subjects do you teach? *</label>
+              <div className="flex flex-wrap gap-2 p-3 border border-slate-200 rounded-xl min-h-[48px]">
+                {subjects.map(s => (
+                  <button key={s} type="button" onClick={() => {
+                    setForm(prev => ({
+                      ...prev,
+                      subjects: prev.subjects.includes(s) ? prev.subjects.filter(x => x !== s) : [...prev.subjects, s]
+                    }));
+                  }}
+                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                    form.subjects.includes(s) ? 'bg-emerald-500 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  }`}>
+                    {s}
+                  </button>
+                ))}
+              </div>
+              <p className="text-xs text-slate-400 mt-1">{form.subjects.length} selected — tap to add or remove</p>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Phone Number *</label>
+              <input type="tel" value={form.phone_number} onChange={(e) => setForm({ ...form, phone_number: e.target.value })}
+                placeholder="e.g. 0712345678 or +254712345678"
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" required />
+              <p className="text-xs text-slate-400 mt-1">For admin contact only — not shown to students</p>
             </div>
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">Headline *</label>
@@ -1302,7 +1339,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
 
         {/* Step 3: Document upload */}
         {step === 3 && (
-          <form onSubmit={handleSubmitDocuments} className="space-y-5">
+          <form onSubmit={handleStep3Submit} className="space-y-5">
             <button type="button" onClick={() => setStep(2)} className="text-sm text-slate-500 hover:text-slate-700 flex items-center gap-1">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
               Back to bio
@@ -1315,7 +1352,56 @@ const TutorOnboarding = ({ profile, onComplete }) => {
             <FileUpload label="National ID / Passport" hint="Image or PDF, max 5MB" file={idFile} onFile={setIdFile} />
             <FileUpload label="Teaching Certificate / Qualification" hint="Degree cert, teaching license, etc." file={credentialFile} onFile={setCredentialFile} />
 
-            <button type="submit" disabled={saving}
+            <button type="submit"
+              className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+              Next: Review Terms
+            </button>
+          </form>
+        )}
+
+        {/* Step 4: Terms of Engagement */}
+        {step === 4 && (
+          <form onSubmit={handleFinalSubmit} className="space-y-5">
+            <button type="button" onClick={() => setStep(3)} className="text-sm text-slate-500 hover:text-slate-700 flex items-center gap-1">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+              Back to documents
+            </button>
+
+            <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+              <h3 className="font-bold text-slate-900 mb-3">Terms of Engagement</h3>
+              <p className="text-sm text-slate-600 mb-4">Please review the following terms before completing your registration:</p>
+
+              <div className="space-y-3 text-sm text-slate-700">
+                <div className="flex gap-3 items-start">
+                  <span className="w-6 h-6 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">1</span>
+                  <div><strong>Platform Fee:</strong> Tutagora takes a 15% service fee on each lesson. You receive 85% of your hourly rate.</div>
+                </div>
+                <div className="flex gap-3 items-start">
+                  <span className="w-6 h-6 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">2</span>
+                  <div><strong>Weekly Payouts:</strong> Earnings are paid out every Friday via M-Pesa to your registered phone number.</div>
+                </div>
+                <div className="flex gap-3 items-start">
+                  <span className="w-6 h-6 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">3</span>
+                  <div><strong>Platform Exclusivity:</strong> You agree not to solicit students found through Tutagora for off-platform lessons. All bookings and payments must go through the platform.</div>
+                </div>
+                <div className="flex gap-3 items-start">
+                  <span className="w-6 h-6 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">4</span>
+                  <div><strong>Cancellation Policy:</strong> You must give at least 24 hours notice when cancelling a lesson. Repeated no-shows may result in account suspension.</div>
+                </div>
+                <div className="flex gap-3 items-start">
+                  <span className="w-6 h-6 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">5</span>
+                  <div><strong>Code of Conduct:</strong> Maintain professional behaviour. Share of contact information outside the platform is prohibited. Any violation may lead to permanent removal.</div>
+                </div>
+              </div>
+            </div>
+
+            <label className="flex items-start gap-3 cursor-pointer p-3 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
+              <input type="checkbox" checked={agreedToTerms} onChange={(e) => setAgreedToTerms(e.target.checked)}
+                className="w-5 h-5 rounded border-slate-300 text-emerald-500 focus:ring-emerald-500 mt-0.5" />
+              <span className="text-sm text-slate-700">I have read and agree to the <strong>Terms of Engagement</strong>. I understand the platform fee structure and the code of conduct.</span>
+            </label>
+
+            <button type="submit" disabled={saving || !agreedToTerms}
               className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors disabled:opacity-50">
               {saving ? 'Submitting...' : 'Submit for Verification'}
             </button>
@@ -1340,11 +1426,15 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
     return <TutorOnboarding profile={profile} onComplete={onRefreshProfile} />;
   }
 
-  // Verification status banner
+  // Verification status
   const verificationStatus = tutor.verification_status || (tutor.verified ? 'approved' : 'pending');
+  const isPending = verificationStatus === 'pending';
+  const isRejected = verificationStatus === 'rejected';
+  const isApproved = verificationStatus === 'approved';
+
   const VerificationBanner = () => {
-    if (verificationStatus === 'approved') return null;
-    if (verificationStatus === 'rejected') return (
+    if (isApproved) return null;
+    if (isRejected) return (
       <div className="mx-4 lg:mx-0 mb-4 p-4 bg-red-50 border border-red-200 rounded-xl">
         <div className="flex items-start gap-3">
           <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
@@ -1356,17 +1446,68 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
         </div>
       </div>
     );
+    // Pending — show progress steps
     return (
-      <div className="mx-4 lg:mx-0 mb-4 p-4 bg-amber-50 border border-amber-200 rounded-xl">
-        <div className="flex items-start gap-3">
+      <div className="mx-4 lg:mx-0 mb-4 p-5 bg-amber-50 border border-amber-200 rounded-xl">
+        <div className="flex items-start gap-3 mb-4">
           <svg className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
           <div>
             <h4 className="font-semibold text-amber-800">Profile Under Review</h4>
-            <p className="text-sm text-amber-600 mt-1">Your documents are being reviewed by our team. You will be visible to students once approved. This usually takes less than 24 hours.</p>
+            <p className="text-sm text-amber-600 mt-1">Your documents are being reviewed by our team. This usually takes less than 24 hours.</p>
+          </div>
+        </div>
+        {/* Progress steps */}
+        <div className="flex items-center justify-center gap-2 mt-2">
+          <div className="flex items-center gap-2 px-3 py-1.5 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">
+            <span className="w-5 h-5 bg-emerald-500 text-white rounded-full flex items-center justify-center text-[10px]">✓</span>
+            Profile submitted
+          </div>
+          <div className="w-6 h-0.5 bg-amber-300" />
+          <div className="flex items-center gap-2 px-3 py-1.5 bg-amber-100 text-amber-700 rounded-full text-xs font-medium animate-pulse">
+            <span className="w-5 h-5 bg-amber-400 text-white rounded-full flex items-center justify-center text-[10px]">2</span>
+            Under review
+          </div>
+          <div className="w-6 h-0.5 bg-slate-200" />
+          <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 text-slate-400 rounded-full text-xs font-medium">
+            <span className="w-5 h-5 bg-slate-200 text-slate-400 rounded-full flex items-center justify-center text-[10px]">3</span>
+            Go live!
           </div>
         </div>
       </div>
     );
+  };
+
+  // Group classes state
+  const [groupClasses, setGroupClasses] = useState([]);
+  const [showCreateClass, setShowCreateClass] = useState(false);
+  const [classForm, setClassForm] = useState({ title: '', description: '', subject: '', max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
+  const [classLoading, setClassLoading] = useState(false);
+
+  useEffect(() => {
+    if (tutor?.id && isApproved) {
+      supabase.from('group_classes').select('*, group_class_enrollments(id, student_id, profiles:student_id(full_name))').eq('tutor_id', tutor.id).order('lesson_date', { ascending: true }).then(({ data }) => {
+        if (data) setGroupClasses(data);
+      });
+    }
+  }, [tutor?.id, isApproved]);
+
+  const handleCreateGroupClass = async (e) => {
+    e.preventDefault();
+    setClassLoading(true);
+    const { data, error } = await supabase.from('group_classes').insert({
+      tutor_id: tutor.id,
+      ...classForm,
+      price_per_student: parseInt(classForm.price_per_student),
+      max_students: parseInt(classForm.max_students),
+      duration_minutes: parseInt(classForm.duration_minutes),
+    }).select('*, group_class_enrollments(id)').single();
+    if (data) {
+      setGroupClasses(prev => [...prev, data]);
+      setShowCreateClass(false);
+      setClassForm({ title: '', description: '', subject: '', max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
+    }
+    if (error) console.error('Error creating group class:', error);
+    setClassLoading(false);
   };
 
   // SVG Icons
@@ -1375,14 +1516,16 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
     schedule: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>,
     students: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>,
     earnings: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
+    groupClasses: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>,
     profile: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>,
   };
 
   const navItems = [
     { id: 'overview', label: 'Overview' },
-    { id: 'schedule', label: 'Schedule' },
-    { id: 'students', label: 'Students' },
-    { id: 'earnings', label: 'Earnings' },
+    { id: 'schedule', label: 'Schedule', locked: !isApproved },
+    { id: 'students', label: 'Students', locked: !isApproved },
+    { id: 'groupClasses', label: 'Group Classes', locked: !isApproved },
+    { id: 'earnings', label: 'Earnings', locked: !isApproved },
     { id: 'profile', label: 'Profile' },
   ];
 
@@ -1402,12 +1545,15 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
         
         <nav className="flex-1 p-4 space-y-1">
           {navItems.map(item => (
-            <button 
-              key={item.id} 
-              onClick={() => setTab(item.id)} 
+            <button
+              key={item.id}
+              onClick={() => !item.locked && setTab(item.id)}
+              disabled={item.locked}
+              title={item.locked ? 'Available after verification' : ''}
               className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                tab === item.id 
-                  ? 'bg-slate-900 text-white' 
+                item.locked ? 'text-slate-300 cursor-not-allowed' :
+                tab === item.id
+                  ? 'bg-slate-900 text-white'
                   : 'text-slate-600 hover:bg-slate-100'
               }`}
             >
@@ -1620,6 +1766,122 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
 
           {tab === 'earnings' && (
             <TutorEarningsTab tutor={tutor} completed={completed} />
+          )}
+
+          {tab === 'groupClasses' && (
+            <div className="space-y-6">
+              <div className="flex items-center justify-between">
+                <h2 className="text-xl font-bold text-slate-900">Group Classes</h2>
+                <button onClick={() => setShowCreateClass(!showCreateClass)} className="px-4 py-2 bg-emerald-500 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors">
+                  {showCreateClass ? 'Cancel' : '+ Create Class'}
+                </button>
+              </div>
+
+              {showCreateClass && (
+                <form onSubmit={handleCreateGroupClass} className="bg-white rounded-xl border border-slate-200 p-6 space-y-4">
+                  <h3 className="font-semibold text-slate-900">Create a New Group Class</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="col-span-2">
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Class Title *</label>
+                      <input type="text" value={classForm.title} onChange={(e) => setClassForm({ ...classForm, title: e.target.value })}
+                        placeholder="e.g. KCSE Mathematics Revision" required
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                    </div>
+                    <div className="col-span-2">
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Description</label>
+                      <textarea value={classForm.description} onChange={(e) => setClassForm({ ...classForm, description: e.target.value })}
+                        placeholder="What will students learn in this class?" rows={3}
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Subject *</label>
+                      <select value={classForm.subject} onChange={(e) => setClassForm({ ...classForm, subject: e.target.value })} required
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        <option value="">Select subject</option>
+                        {['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'].map(s => <option key={s} value={s}>{s}</option>)}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Max Students (2-20)</label>
+                      <input type="number" value={classForm.max_students} onChange={(e) => setClassForm({ ...classForm, max_students: e.target.value })}
+                        min="2" max="20" className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Price per Student (KSh)</label>
+                      <input type="number" value={classForm.price_per_student} onChange={(e) => setClassForm({ ...classForm, price_per_student: e.target.value })}
+                        min="100" className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Duration (minutes)</label>
+                      <select value={classForm.duration_minutes} onChange={(e) => setClassForm({ ...classForm, duration_minutes: e.target.value })}
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        <option value="30">30 min</option>
+                        <option value="60">1 hour</option>
+                        <option value="90">1.5 hours</option>
+                        <option value="120">2 hours</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Date *</label>
+                      <input type="date" value={classForm.lesson_date} onChange={(e) => setClassForm({ ...classForm, lesson_date: e.target.value })}
+                        min={new Date().toISOString().split('T')[0]} required
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Start Time *</label>
+                      <input type="time" value={classForm.start_time} onChange={(e) => setClassForm({ ...classForm, start_time: e.target.value })} required
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                    </div>
+                  </div>
+                  <button type="submit" disabled={classLoading} className="w-full py-3 bg-emerald-500 text-white font-semibold rounded-lg hover:bg-emerald-600 transition-colors disabled:opacity-50">
+                    {classLoading ? 'Creating...' : 'Create Group Class'}
+                  </button>
+                </form>
+              )}
+
+              {groupClasses.length === 0 ? (
+                <div className="bg-white rounded-xl border border-slate-200 p-8 text-center">
+                  <svg className="w-12 h-12 text-slate-300 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                  <h3 className="font-semibold text-slate-900 mb-1">No group classes yet</h3>
+                  <p className="text-sm text-slate-500">Create your first group class to teach multiple students at once and earn more!</p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {groupClasses.map(gc => {
+                    const enrolled = gc.group_class_enrollments?.length || 0;
+                    const spotsLeft = gc.max_students - enrolled;
+                    return (
+                      <div key={gc.id} className="bg-white rounded-xl border border-slate-200 p-5">
+                        <div className="flex items-start justify-between">
+                          <div>
+                            <h3 className="font-semibold text-slate-900">{gc.title}</h3>
+                            <p className="text-sm text-slate-500 mt-1">{gc.description}</p>
+                          </div>
+                          <span className={`px-2.5 py-1 text-xs rounded-full font-medium ${
+                            gc.status === 'open' ? 'bg-emerald-100 text-emerald-700' :
+                            gc.status === 'full' ? 'bg-amber-100 text-amber-700' :
+                            gc.status === 'completed' ? 'bg-slate-100 text-slate-600' :
+                            'bg-red-100 text-red-700'
+                          }`}>{gc.status}</span>
+                        </div>
+                        <div className="flex flex-wrap gap-4 mt-3 text-sm text-slate-600">
+                          <span className="flex items-center gap-1">
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                            {new Date(gc.lesson_date).toLocaleDateString('en', { weekday: 'short', month: 'short', day: 'numeric' })}
+                          </span>
+                          <span>{gc.start_time} ({gc.duration_minutes} min)</span>
+                          <span className="text-emerald-600 font-medium">KSh {gc.price_per_student}/student</span>
+                          <span>{enrolled}/{gc.max_students} enrolled ({spotsLeft} spots left)</span>
+                        </div>
+                        <div className="flex items-center gap-2 mt-2">
+                          <span className="px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full text-xs">{gc.subject}</span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           )}
 
           {tab === 'profile' && (
@@ -2581,7 +2843,8 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
         t.headline?.toLowerCase().includes(search.toLowerCase());
       
       // Subject filter
-      const matchesSubject = !selectedSubject || selectedSubject === 'All Subjects' || t.subject === selectedSubject;
+      const tutorSubjects = t.subjects || [t.subject];
+      const matchesSubject = !selectedSubject || selectedSubject === 'All Subjects' || tutorSubjects.includes(selectedSubject);
       
       // Price filter
       let matchesPrice = true;
@@ -2718,7 +2981,7 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
                 </div>
                 <div className="px-4 pb-4">
                   <h3 className="font-bold text-slate-900 text-lg">{t.profiles?.full_name}</h3>
-                  <p className="text-sm text-emerald-600 font-medium">{t.subject} Tutor</p>
+                  <p className="text-sm text-emerald-600 font-medium">{(t.subjects || [t.subject]).join(', ')} Tutor</p>
                   {t.headline && <p className="text-sm text-slate-500 mt-1">{t.headline}</p>}
                   {t.bio && <p className="text-sm text-slate-500 mt-1.5 line-clamp-2">{t.bio}</p>}
 
@@ -2744,6 +3007,89 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
             ))}
           </div>
         )}
+
+        {/* Group Classes Section */}
+        <GroupClassesBrowse />
+      </div>
+    </div>
+  );
+};
+
+// ============ GROUP CLASSES BROWSE (Student-facing) ============
+const GroupClassesBrowse = () => {
+  const [classes, setClasses] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [subjectFilter, setSubjectFilter] = useState('');
+
+  useEffect(() => {
+    const fetchClasses = async () => {
+      const { data } = await supabase
+        .from('group_classes')
+        .select('*, profiles:tutor_id(full_name, avatar_url), group_class_enrollments(id)')
+        .eq('status', 'open')
+        .gte('lesson_date', new Date().toISOString().split('T')[0])
+        .order('lesson_date', { ascending: true });
+      if (data) setClasses(data);
+      setLoading(false);
+    };
+    fetchClasses();
+  }, []);
+
+  const filtered = subjectFilter ? classes.filter(c => c.subject === subjectFilter) : classes;
+
+  if (loading) return null;
+  if (classes.length === 0) return null;
+
+  return (
+    <div className="mt-12">
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h2 className="text-2xl font-bold text-slate-900">Group Classes</h2>
+          <p className="text-slate-500 text-sm mt-1">Join a class with other students at a lower price</p>
+        </div>
+        <select value={subjectFilter} onChange={(e) => setSubjectFilter(e.target.value)}
+          className="px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm">
+          <option value="">All Subjects</option>
+          {['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'].map(s => (
+            <option key={s} value={s}>{s}</option>
+          ))}
+        </select>
+      </div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {filtered.map(gc => {
+          const enrolled = gc.group_class_enrollments?.length || 0;
+          const spotsLeft = gc.max_students - enrolled;
+          return (
+            <div key={gc.id} className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-3">
+                <img src={gc.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(gc.profiles?.full_name || 'T')}&background=10b981&color=fff`}
+                  alt={gc.profiles?.full_name} className="w-10 h-10 rounded-full object-cover" />
+                <div>
+                  <p className="font-medium text-slate-900 text-sm">{gc.profiles?.full_name}</p>
+                  <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">{gc.subject}</span>
+                </div>
+              </div>
+              <h3 className="font-bold text-slate-900 mb-1">{gc.title}</h3>
+              {gc.description && <p className="text-sm text-slate-500 line-clamp-2 mb-3">{gc.description}</p>}
+              <div className="flex flex-wrap gap-3 text-sm text-slate-600 mb-3">
+                <span>{new Date(gc.lesson_date).toLocaleDateString('en', { weekday: 'short', month: 'short', day: 'numeric' })}</span>
+                <span>{gc.start_time} ({gc.duration_minutes} min)</span>
+              </div>
+              <div className="flex justify-between items-center pt-3 border-t border-slate-100">
+                <div>
+                  <span className="font-bold text-lg text-slate-900">KSh {gc.price_per_student}</span>
+                  <span className="text-sm text-slate-400">/student</span>
+                </div>
+                <div className="text-right">
+                  <span className={`text-sm font-medium ${spotsLeft <= 3 ? 'text-amber-600' : 'text-emerald-600'}`}>
+                    {spotsLeft} spots left
+                  </span>
+                  <p className="text-xs text-slate-400">{enrolled}/{gc.max_students} enrolled</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -2854,7 +3200,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
               />
               <div className="flex-1 pb-1">
                 <h1 className="text-2xl font-bold text-slate-900">{tutor.profiles?.full_name}</h1>
-                <p className="text-emerald-600 font-medium">{tutor.subject} Tutor</p>
+                <p className="text-emerald-600 font-medium">{(tutor.subjects || [tutor.subject]).join(', ')} Tutor</p>
                 {tutor.headline && <p className="text-slate-500 text-sm mt-0.5">{tutor.headline}</p>}
               </div>
             </div>
@@ -3153,6 +3499,13 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const handleApproveTutor = async (tutorId) => {
     setActionLoading(tutorId);
     await supabase.from('tutors').update({ verification_status: 'approved', verified: true, rejection_reason: null }).eq('id', tutorId);
+    // Send approval email
+    const tutor = pendingTutors.find(t => t.id === tutorId);
+    if (tutor?.profiles?.email) {
+      try {
+        await sendEmail('tutor-approved', tutor.profiles.email, { name: tutor.profiles.full_name });
+      } catch (err) { console.error('Failed to send approval email:', err); }
+    }
     setPendingTutors(prev => prev.filter(t => t.id !== tutorId));
     setActionLoading(null);
   };
@@ -3161,6 +3514,13 @@ const AdminDashboard = ({ onLogout, onBack }) => {
     if (!rejectReason.trim()) return;
     setActionLoading(tutorId);
     await supabase.from('tutors').update({ verification_status: 'rejected', verified: false, rejection_reason: rejectReason }).eq('id', tutorId);
+    // Send rejection email
+    const tutor = pendingTutors.find(t => t.id === tutorId);
+    if (tutor?.profiles?.email) {
+      try {
+        await sendEmail('tutor-rejected', tutor.profiles.email, { name: tutor.profiles.full_name, reason: rejectReason });
+      } catch (err) { console.error('Failed to send rejection email:', err); }
+    }
     setPendingTutors(prev => prev.filter(t => t.id !== tutorId));
     setRejectingId(null);
     setRejectReason('');
@@ -3560,10 +3920,13 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                             <div>
                               <h4 className="font-semibold text-slate-900">{t.profiles?.full_name}</h4>
                               <p className="text-sm text-slate-500">{t.profiles?.email}</p>
-                              <div className="flex items-center gap-3 mt-1">
-                                <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">{t.subject}</span>
+                              <div className="flex items-center gap-3 mt-1 flex-wrap">
+                                {(t.subjects || [t.subject]).map(s => (
+                                  <span key={s} className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">{s}</span>
+                                ))}
                                 <span className="text-xs text-slate-400">KSh {t.hourly_rate}/hr</span>
                               </div>
+                              {t.phone_number && <p className="text-xs text-slate-500 mt-1">Phone: {t.phone_number}</p>}
                             </div>
                           </div>
                           <span className="px-2 py-1 text-xs rounded-full bg-amber-100 text-amber-700">{t.verification_status}</span>
@@ -3790,8 +4153,12 @@ export default function App() {
     return <Spreadsheet standalone={true} onBack={() => handleNavigate('dashboard')} />;
   }
 
-  // Admin Dashboard
-  if (page === 'admin' && isAdmin) {
+  // Admin Dashboard — redirect non-admins
+  if (page === 'admin') {
+    if (!isAdmin) {
+      handleNavigate('home');
+      return null;
+    }
     return <AdminDashboard onLogout={handleLogout} onBack={() => handleNavigate('home')} />;
   }
 

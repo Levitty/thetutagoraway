@@ -254,12 +254,24 @@ export const Messaging = ({ currentUser, onClose }) => {
     inputRef.current?.focus();
   }, [activeConversation, currentUser?.id]);
 
+  // Anti-poaching: filter contact info from messages
+  const filterContactInfo = (text) => {
+    let filtered = text;
+    // Filter Kenyan phone numbers (07XX, 01XX, +254)
+    filtered = filtered.replace(/(\+254|0[17])\s*\d[\d\s\-]{6,12}/g, '[Contact info removed — please use Tutagora to communicate]');
+    // Filter email addresses
+    filtered = filtered.replace(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/g, '[Contact info removed — please use Tutagora to communicate]');
+    // Filter "call me" / "text me" + numbers
+    filtered = filtered.replace(/(?:call|text|whatsapp|telegram|sms)\s*(?:me\s*)?(?:on|at|@)?\s*[\d\+\(][\d\s\-\(\)]{6,}/gi, '[Contact info removed — please use Tutagora to communicate]');
+    return filtered;
+  };
+
   // Send message
   const handleSend = async () => {
     if (!newMessage.trim() || !activeConversation?.participant2?.id || sending) return;
 
     setSending(true);
-    const messageContent = newMessage.trim();
+    const messageContent = filterContactInfo(newMessage.trim());
     setNewMessage('');
 
     const { data, error } = await supabase

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1080px; font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif; background: linear-gradient(160deg, #0a1628 0%, #0f2847 50%, #0a1628 100%); overflow: hidden; position: relative; }
+
+.glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,184,0,0.15), transparent 70%); top: -50px; right: -50px; }
+.glow2 { position: absolute; width: 350px; height: 350px; background: radial-gradient(circle, rgba(37,99,235,0.12), transparent 70%); bottom: 100px; left: -50px; }
+
+.content { position: relative; z-index: 2; padding: 60px; height: 100%; display: flex; flex-direction: column; }
+
+.top-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+.badge { background: #ff4d8d; color: white; padding: 10px 28px; border-radius: 30px; font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.logo-row { display: flex; align-items: center; gap: 10px; }
+.logo-circle { width: 42px; height: 42px; background: linear-gradient(135deg, #1a4db5, #2563eb); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.logo-circle span { color: #ffb800; font-size: 22px; font-weight: 900; }
+.logo-text { color: white; font-size: 20px; font-weight: 800; }
+
+.main-title { font-size: 80px; font-weight: 900; color: white; line-height: 1.05; margin-bottom: 15px; }
+.main-title .highlight { color: #ffb800; font-style: italic; }
+.main-title .pink { color: #ff4d8d; }
+
+.tagline { font-size: 22px; color: rgba(255,255,255,0.6); font-weight: 400; margin-bottom: 40px; line-height: 1.5; }
+
+.subjects { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+.subject { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 50px; padding: 14px 28px; color: white; font-size: 18px; font-weight: 700; }
+.subject.active { background: #ffb800; color: #0a1628; border-color: #ffb800; }
+
+.bottom-section { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; }
+
+.price-box { background: rgba(255,255,255,0.07); border-radius: 20px; padding: 25px 35px; border: 1px solid rgba(255,255,255,0.1); }
+.price-label { font-size: 14px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; font-weight: 400; margin-bottom: 5px; }
+.price { font-size: 42px; font-weight: 900; color: #ffb800; }
+.price small { font-size: 18px; color: rgba(255,255,255,0.5); font-weight: 400; }
+
+.cta-box { text-align: right; }
+.cta { background: linear-gradient(135deg, #ff4d8d, #ff2d6d); color: white; padding: 20px 45px; border-radius: 50px; font-size: 22px; font-weight: 800; display: inline-block; margin-bottom: 10px; }
+.website { color: rgba(255,255,255,0.5); font-size: 18px; font-weight: 400; }
+</style></head>
+<body>
+<div class="glow"></div>
+<div class="glow2"></div>
+<div class="content">
+  <div class="top-row">
+    <div class="badge">KCSE 2026</div>
+    <div class="logo-row">
+      <div class="logo-circle"><span>T</span></div>
+      <div class="logo-text">TUTAGORA</div>
+    </div>
+  </div>
+
+  <div class="main-title">
+    Ace Your<br>
+    <span class="highlight">KCSE</span> <span class="pink">Exams</span>
+  </div>
+
+  <div class="tagline">Get expert one-on-one tutoring in all your subjects.<br>Verified tutors. Proven results.</div>
+
+  <div class="subjects">
+    <div class="subject active">Mathematics</div>
+    <div class="subject">English</div>
+    <div class="subject">Physics</div>
+    <div class="subject">Chemistry</div>
+    <div class="subject">Biology</div>
+    <div class="subject">Kiswahili</div>
+    <div class="subject">History</div>
+  </div>
+
+  <div class="bottom-section">
+    <div class="price-box">
+      <div class="price-label">Starting from</div>
+      <div class="price">KSh 500 <small>/hr</small></div>
+    </div>
+    <div class="cta-box">
+      <div class="cta">BOOK A TUTOR →</div>
+      <div class="website">tutagora.com</div>
+    </div>
+  </div>
+</div>
+</body></html>

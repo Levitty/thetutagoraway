@@ -4,7 +4,7 @@ const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 const RESEND_API_URL = "https://api.resend.com/emails";
 
 interface EmailRequest {
-  type: "welcome" | "booking-confirmation" | "lesson-reminder" | "booking-cancelled";
+  type: "welcome" | "booking-confirmation" | "lesson-reminder" | "booking-cancelled" | "tutor-under-review" | "tutor-approved" | "tutor-rejected";
   to: string;
   data: Record<string, any>;
 }
@@ -250,6 +250,161 @@ function generateEmailTemplate(
       };
     }
 
+    case "tutor-under-review": {
+      const { name } = data;
+      return {
+        subject: "We're Reviewing Your Profile — Tutagora",
+        html: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            </head>
+            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
+              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
+                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
+                  ${logoBox}
+
+                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">Profile Received!</h1>
+
+                  <p style="margin: 0 0 24px 0; font-size: 16px;">
+                    Hi ${name},
+                  </p>
+
+                  <p style="margin: 0 0 24px 0; font-size: 16px;">
+                    Thank you for signing up to teach on Tutagora! We've received your profile and documents, and our team is currently reviewing your application.
+                  </p>
+
+                  <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 20px; margin: 24px 0; border-radius: 4px;">
+                    <p style="margin: 0; color: #92400e; font-weight: 600;">What happens next?</p>
+                    <ul style="margin: 12px 0 0 0; padding-left: 20px; color: #78350f;">
+                      <li style="margin-bottom: 8px;">We'll verify your ID and credentials (usually within 24 hours)</li>
+                      <li style="margin-bottom: 8px;">You'll receive an email once your profile is approved</li>
+                      <li>Once approved, students can find and book lessons with you</li>
+                    </ul>
+                  </div>
+
+                  <p style="margin: 0 0 24px 0; font-size: 16px;">
+                    In the meantime, you can log in to your dashboard to check your verification status.
+                  </p>
+
+                  <a href="https://tutagora.com" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">Go to Dashboard</a>
+
+                  <div style="${footerStyles}">
+                    <p style="margin: 0 0 8px 0;">Questions? Reply to this email anytime.</p>
+                    <p style="margin: 0;">Tutagora Team</p>
+                  </div>
+                </div>
+              </div>
+            </body>
+          </html>
+        `,
+      };
+    }
+
+    case "tutor-approved": {
+      const { name } = data;
+      return {
+        subject: "You're Approved! Start Teaching on Tutagora",
+        html: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            </head>
+            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
+              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
+                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
+                  ${logoBox}
+
+                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">Congratulations, You're Approved!</h1>
+
+                  <p style="margin: 0 0 24px 0; font-size: 16px;">
+                    Hi ${name},
+                  </p>
+
+                  <p style="margin: 0 0 24px 0; font-size: 16px;">
+                    Great news! Your tutor profile has been verified and approved. Your profile is now live and students can find and book lessons with you.
+                  </p>
+
+                  <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 20px; margin: 24px 0; border-radius: 4px;">
+                    <p style="margin: 0; color: #065f46; font-weight: 600;">Next steps to get started:</p>
+                    <ul style="margin: 12px 0 0 0; padding-left: 20px; color: #064e3b;">
+                      <li style="margin-bottom: 8px;">Set your availability so students can book time slots</li>
+                      <li style="margin-bottom: 8px;">Share your profile link to attract students</li>
+                      <li>Respond promptly to booking requests</li>
+                    </ul>
+                  </div>
+
+                  <p style="margin: 0 0 8px 0; font-size: 14px; color: #6b7280;">
+                    <strong>Reminder:</strong> Tutagora takes a 15% platform fee on each lesson. Payouts are processed weekly every Friday via M-Pesa.
+                  </p>
+
+                  <a href="https://tutagora.com" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 16px;">Go to Your Dashboard</a>
+
+                  <div style="${footerStyles}">
+                    <p style="margin: 0 0 8px 0;">Welcome aboard! Let's help students learn.</p>
+                    <p style="margin: 0;">Tutagora Team</p>
+                  </div>
+                </div>
+              </div>
+            </body>
+          </html>
+        `,
+      };
+    }
+
+    case "tutor-rejected": {
+      const { name, reason } = data;
+      return {
+        subject: "Update Needed on Your Tutagora Profile",
+        html: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            </head>
+            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
+              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
+                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
+                  ${logoBox}
+
+                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">Profile Update Required</h1>
+
+                  <p style="margin: 0 0 24px 0; font-size: 16px;">
+                    Hi ${name},
+                  </p>
+
+                  <p style="margin: 0 0 24px 0; font-size: 16px;">
+                    Thank you for your interest in teaching on Tutagora. After reviewing your profile, we need a few updates before we can approve it.
+                  </p>
+
+                  ${reason ? `<div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 20px; margin: 24px 0; border-radius: 4px;">
+                    <p style="margin: 0; color: #991b1b; font-weight: 600;">Reason:</p>
+                    <p style="margin: 8px 0 0 0; color: #7f1d1d;">${reason}</p>
+                  </div>` : ""}
+
+                  <p style="margin: 0 0 24px 0; font-size: 16px;">
+                    Please log in to your dashboard, update the required information, and resubmit your documents. We'll review your updated profile as soon as possible.
+                  </p>
+
+                  <a href="https://tutagora.com" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">Update Your Profile</a>
+
+                  <div style="${footerStyles}">
+                    <p style="margin: 0 0 8px 0;">Need help? Reply to this email.</p>
+                    <p style="margin: 0;">Tutagora Team</p>
+                  </div>
+                </div>
+              </div>
+            </body>
+          </html>
+        `,
+      };
+    }
+
     default:
       throw new Error(`Unknown email type: ${type}`);
   }
@@ -320,6 +475,9 @@ serve(async (req: Request) => {
       "booking-confirmation",
       "lesson-reminder",
       "booking-cancelled",
+      "tutor-under-review",
+      "tutor-approved",
+      "tutor-rejected",
     ];
     if (!validTypes.includes(type)) {
       return new Response(

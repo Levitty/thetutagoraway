@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1080px; font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif; background: #0a1628; overflow: hidden; position: relative; }
+
+.accent-bar { position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, #ffb800, #ff4d8d, #2563eb); }
+.bg-circle { position: absolute; width: 600px; height: 600px; border: 2px solid rgba(255,200,50,0.08); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.bg-circle2 { position: absolute; width: 400px; height: 400px; border: 2px solid rgba(255,100,150,0.06); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.content { position: relative; z-index: 2; padding: 60px; height: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+.badge { display: inline-block; background: #2563eb; color: white; padding: 8px 24px; border-radius: 30px; font-size: 16px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px; }
+
+.headline { font-size: 56px; font-weight: 900; color: white; line-height: 1.15; margin-bottom: 20px; max-width: 800px; }
+.headline span { color: #ffb800; }
+
+.desc { font-size: 22px; color: rgba(255,255,255,0.7); font-weight: 400; margin-bottom: 50px; max-width: 700px; line-height: 1.5; }
+
+.features { display: flex; gap: 30px; margin-bottom: 50px; }
+.feature { background: rgba(255,255,255,0.07); border-radius: 20px; padding: 30px 25px; width: 200px; border: 1px solid rgba(255,255,255,0.1); }
+.feature-icon { font-size: 40px; margin-bottom: 15px; }
+.feature-title { font-size: 18px; font-weight: 800; color: white; margin-bottom: 6px; }
+.feature-desc { font-size: 14px; color: rgba(255,255,255,0.5); font-weight: 400; }
+
+.stats { display: flex; gap: 60px; margin-bottom: 40px; }
+.stat-num { font-size: 48px; font-weight: 900; color: #ffb800; }
+.stat-label { font-size: 14px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; font-weight: 400; }
+
+.cta { background: #ff4d8d; color: white; padding: 18px 50px; border-radius: 50px; font-size: 22px; font-weight: 800; margin-bottom: 30px; }
+
+.footer { display: flex; align-items: center; gap: 15px; margin-top: auto; }
+.logo-circle { width: 45px; height: 45px; background: linear-gradient(135deg, #1a4db5, #2563eb); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.logo-circle span { color: #ffb800; font-size: 24px; font-weight: 900; }
+.logo-text { color: white; font-size: 22px; font-weight: 800; }
+.divider { color: rgba(255,255,255,0.3); }
+.website { color: #ffb800; font-size: 18px; font-weight: 700; }
+</style></head>
+<body>
+<div class="accent-bar"></div>
+<div class="bg-circle"></div>
+<div class="bg-circle2"></div>
+<div class="content">
+  <div class="badge">WHY TUTAGORA</div>
+  <div class="headline">Find Your <span>Perfect Tutor</span> Today</div>
+  <div class="desc">Connect with Kenya's best verified tutors for personalized one-on-one lessons from anywhere</div>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">🎥</div>
+      <div class="feature-title">Live Video</div>
+      <div class="feature-desc">HD lessons with whiteboard</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">✅</div>
+      <div class="feature-title">Verified</div>
+      <div class="feature-desc">All tutors are vetted</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📱</div>
+      <div class="feature-title">M-Pesa</div>
+      <div class="feature-desc">Easy mobile payments</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📅</div>
+      <div class="feature-title">Flexible</div>
+      <div class="feature-desc">Book any time slot</div>
+    </div>
+  </div>
+  <div class="cta">START LEARNING →</div>
+  <div class="footer">
+    <div class="logo-circle"><span>T</span></div>
+    <div class="logo-text">TUTAGORA</div>
+    <div class="divider">|</div>
+    <div class="website">tutagora.com</div>
+  </div>
+</div>
+</body></html>
