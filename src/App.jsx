@@ -6,6 +6,7 @@ import { Messaging, MessageButton, startConversation } from './Messaging';
 import { AIMastery } from './ai-tutor/AIMastery.jsx';
 import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
+import { sendEmail } from './email.js';
 
 // ============ LOTTIE ANIMATION COMPONENT ============
 const Lottie = ({ src, width = 200, height = 200, loop = true }) => {
@@ -155,6 +156,8 @@ const useAuth = () => {
       options: { data: { full_name: fullName, role } }
     });
     if (error) throw error;
+    // Send welcome email
+    sendEmail('welcome', email, { name: fullName }).catch(() => {});
     return data;
   };
 
@@ -247,9 +250,22 @@ const useBookings = (userId, role, tutorId = null) => {
 
     if (error) throw error;
 
-    // Send in-app message to tutor (emails sent after payment in PaymentModal)
+    // Send in-app message to tutor + email notifications
     if (data) {
       await sendBookingNotifications(data, userId);
+      // Send booking confirmation email to student
+      const studentEmail = data.profiles?.email;
+      const tutorName = data.tutors?.profiles?.full_name;
+      if (studentEmail) {
+        sendEmail('booking-confirmation', studentEmail, {
+          studentName: data.profiles?.full_name,
+          tutorName: tutorName || 'your tutor',
+          subject: subject,
+          date: new Date(date).toLocaleDateString('en-KE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
+          time: time,
+          price: `KSh ${data.tutors?.hourly_rate?.toLocaleString() || '1,000'}`
+        }).catch(() => {});
+      }
     }
 
     fetchBookings();

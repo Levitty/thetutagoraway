@@ -3,278 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tutagora — Facebook Auto-Posting Setup Guide</title>
+<title>Tutagora Facebook Auto-Posting Setup</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-  :root { --green: #10B981; --dark: #0F172A; --slate: #475569; --light-slate: #94A3B8; --border: #E2E8F0; --bg: #F8FAFC; --green-bg: #F0FDF4; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--slate); line-height: 1.7; font-size: 16px; }
-
-  .header {
-    background: var(--dark);
-    color: white;
-    padding: 3rem 2rem;
-    text-align: center;
-  }
-  .header h1 { font-size: 2rem; font-weight: 800; color: var(--green); margin-bottom: 0.5rem; }
-  .header p { color: #94A3B8; font-size: 1.1rem; }
-
-  .content { max-width: 760px; margin: 0 auto; padding: 2rem; }
-
-  .status-box {
-    background: #FEF3C7;
-    border: 1px solid #F59E0B;
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
-    margin: 2rem 0;
-    font-size: 0.95rem;
-  }
-  .status-box strong { color: #92400E; }
-
-  h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--dark);
-    margin: 2.5rem 0 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--green);
-  }
-
-  .step {
-    display: flex;
-    gap: 1rem;
-    margin: 1.5rem 0;
-    align-items: flex-start;
-  }
-  .step-num {
-    min-width: 36px;
-    height: 36px;
-    background: var(--green);
-    color: white;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-  }
-  .step-content { flex: 1; }
-  .step-content p { margin-bottom: 0.5rem; }
-
-  a { color: var(--green); font-weight: 500; }
-
-  code {
-    background: #F1F5F9;
-    padding: 0.15rem 0.4rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    color: var(--dark);
-  }
-
-  .code-block {
-    background: var(--dark);
-    color: #E2E8F0;
-    padding: 1rem 1.25rem;
-    border-radius: 10px;
-    font-family: 'Courier New', monospace;
-    font-size: 0.85rem;
-    overflow-x: auto;
-    margin: 0.75rem 0;
-    line-height: 1.5;
-  }
-
-  .callout {
-    background: var(--green-bg);
-    border-left: 4px solid var(--green);
-    border-radius: 0 10px 10px 0;
-    padding: 1rem 1.25rem;
-    margin: 1rem 0;
-    font-size: 0.92rem;
-  }
-
-  .warning {
-    background: #FEF2F2;
-    border-left: 4px solid #EF4444;
-    border-radius: 0 10px 10px 0;
-    padding: 1rem 1.25rem;
-    margin: 1rem 0;
-    font-size: 0.92rem;
-  }
-
-  .summary-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 1.5rem;
-    margin: 2rem 0;
-  }
-  .summary-card h3 { color: var(--dark); margin-bottom: 0.75rem; }
-  .summary-row { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
-  .summary-row:last-child { border-bottom: none; }
-  .summary-label { font-weight: 600; color: var(--dark); }
-
-  .footer { text-align: center; padding: 2rem; color: var(--light-slate); font-size: 0.85rem; margin-top: 3rem; border-top: 1px solid var(--border); }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.7; }
+  .header { background: linear-gradient(135deg, #1877f2, #0d47a1); color: white; padding: 40px 20px; text-align: center; }
+  .header h1 { font-size: 28px; margin-bottom: 8px; }
+  .header p { opacity: 0.9; font-size: 16px; }
+  .container { max-width: 700px; margin: 0 auto; padding: 30px 20px; }
+  .step { background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; border: 1px solid #e2e8f0; }
+  .step-num { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #1877f2; color: white; border-radius: 50%; font-weight: 700; font-size: 14px; margin-right: 12px; }
+  .step h2 { display: inline; font-size: 18px; vertical-align: middle; }
+  .step p { margin-top: 12px; color: #475569; }
+  .step a { color: #1877f2; font-weight: 600; }
+  .step ol { margin-top: 12px; padding-left: 20px; color: #475569; }
+  .step ol li { margin-bottom: 8px; }
+  .warn { background: #fef3c7; border: 1px solid #fbbf24; border-radius: 8px; padding: 12px 16px; margin-top: 12px; color: #92400e; font-size: 14px; }
+  .success { background: #d1fae5; border: 1px solid #10b981; border-radius: 8px; padding: 16px; margin-top: 12px; color: #065f46; }
+  .permissions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .perm { background: #eff6ff; color: #1e40af; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; }
 </style>
 </head>
 <body>
-
 <div class="header">
   <h1>Facebook Auto-Posting Setup</h1>
-  <p>One-time setup to let the Tutagora agent post to your Facebook Page</p>
+  <p>Get your Page Access Token in 5 minutes</p>
 </div>
-
-<div class="content">
-
-  <div class="status-box">
-    <strong>Action needed:</strong> The scheduled task is already created and will run every Monday, Wednesday, and Friday at 10am. But it needs your Facebook Page credentials to actually post. Follow the steps below — it takes about 15 minutes.
-  </div>
-
-  <div class="summary-card">
-    <h3>What's been set up</h3>
-    <div class="summary-row"><span class="summary-label">Task Name</span><span>tutagora-facebook-posts</span></div>
-    <div class="summary-row"><span class="summary-label">Schedule</span><span>Mon, Wed, Fri at 10:00 AM</span></div>
-    <div class="summary-row"><span class="summary-label">Content</span><span>Mon: Study tips / Wed: Tutor spotlights / Fri: Promos & engagement</span></div>
-    <div class="summary-row"><span class="summary-label">Config file</span><span>facebook-config.json (in your Tutagora folder)</span></div>
-    <div class="summary-row"><span class="summary-label">Status</span><span style="color:#F59E0B;font-weight:600;">Waiting for Facebook credentials</span></div>
-  </div>
-
-  <h2>Part 1: Create a Facebook Page (if you don't have one)</h2>
+<div class="container">
 
   <div class="step">
-    <div class="step-num">1</div>
-    <div class="step-content">
-      <p>Go to <a href="https://www.facebook.com/pages/create" target="_blank">facebook.com/pages/create</a></p>
-      <p>Choose <strong>"Business or Brand"</strong>, name it <strong>Tutagora</strong>, category: <strong>Education</strong> or <strong>Tutoring/Teaching Center</strong>.</p>
-    </div>
+    <span class="step-num">1</span>
+    <h2>Create a Meta Developer App</h2>
+    <ol>
+      <li>Go to <a href="https://developers.facebook.com/apps/" target="_blank">developers.facebook.com/apps</a></li>
+      <li>Click <strong>"Create App"</strong></li>
+      <li>Select <strong>"Other"</strong> for use case, then <strong>"Business"</strong> as app type</li>
+      <li>Name it <strong>"Tutagora Posts"</strong> and click Create</li>
+    </ol>
   </div>
 
   <div class="step">
-    <div class="step-num">2</div>
-    <div class="step-content">
-      <p>Add a profile picture (Tutagora logo) and cover photo. Fill in the bio with something like: <em>"Connecting Kenyan students with verified tutors. Live lessons, AI Math Tutor, and school partnerships. tutagora.com"</em></p>
-    </div>
-  </div>
-
-  <h2>Part 2: Create a Meta Developer App</h2>
-
-  <div class="step">
-    <div class="step-num">3</div>
-    <div class="step-content">
-      <p>Go to <a href="https://developers.facebook.com" target="_blank">developers.facebook.com</a> and log in with the same account that owns the Tutagora Facebook Page.</p>
-    </div>
+    <span class="step-num">2</span>
+    <h2>Get Your Page ID</h2>
+    <ol>
+      <li>Go to your <a href="https://www.facebook.com/pages/?category=your_pages" target="_blank">Facebook Tutagora Page</a></li>
+      <li>Click <strong>"About"</strong> on the left sidebar</li>
+      <li>Scroll down — you'll see <strong>"Page ID"</strong> at the bottom</li>
+      <li>Copy that number</li>
+    </ol>
   </div>
 
   <div class="step">
-    <div class="step-num">4</div>
-    <div class="step-content">
-      <p>Click <strong>"My Apps"</strong> (top right) → <strong>"Create App"</strong>.</p>
-      <p>Select <strong>"Business"</strong> as the app type. Name it something like <strong>"Tutagora Auto-Post"</strong>.</p>
+    <span class="step-num">3</span>
+    <h2>Generate a Page Access Token</h2>
+    <ol>
+      <li>Go to the <a href="https://developers.facebook.com/tools/explorer/" target="_blank">Graph API Explorer</a></li>
+      <li>In the top-right dropdown, select your <strong>"Tutagora Posts"</strong> app</li>
+      <li>Click <strong>"Generate Access Token"</strong></li>
+      <li>When prompted, add these permissions:</li>
+    </ol>
+    <div class="permissions">
+      <span class="perm">pages_manage_posts</span>
+      <span class="perm">pages_read_engagement</span>
+      <span class="perm">pages_show_list</span>
     </div>
+    <ol start="5">
+      <li>After granting permissions, click the <strong>"User or Page"</strong> dropdown (next to the token field)</li>
+      <li>Switch to your <strong>Tutagora Page</strong> — this gives you a <strong>Page Access Token</strong></li>
+      <li>Copy the token</li>
+    </ol>
+    <div class="warn">This token expires in ~1 hour. Step 4 makes it permanent.</div>
   </div>
 
   <div class="step">
-    <div class="step-num">5</div>
-    <div class="step-content">
-      <p>Once the app is created, go to the app dashboard. On the left sidebar, click <strong>"Add Product"</strong> and find <strong>"Facebook Login"</strong> → click <strong>"Set Up"</strong>.</p>
-    </div>
-  </div>
-
-  <h2>Part 3: Get Your Page Access Token</h2>
-
-  <div class="step">
-    <div class="step-num">6</div>
-    <div class="step-content">
-      <p>Go to the <a href="https://developers.facebook.com/tools/explorer/" target="_blank">Graph API Explorer</a>.</p>
-      <p>In the top-right dropdown, select your app (<strong>"Tutagora Auto-Post"</strong>).</p>
-    </div>
+    <span class="step-num">4</span>
+    <h2>Make It a Long-Lived Token</h2>
+    <ol>
+      <li>Go to the <a href="https://developers.facebook.com/tools/debug/accesstoken/" target="_blank">Access Token Debugger</a></li>
+      <li>Paste your Page Access Token and click <strong>"Debug"</strong></li>
+      <li>Click <strong>"Extend Access Token"</strong> at the bottom</li>
+      <li>Copy the new long-lived token (lasts ~60 days)</li>
+    </ol>
+    <div class="warn">For a never-expiring token: In the Graph API Explorer, use the long-lived user token to request:<br>
+    <code>GET /me/accounts</code><br>
+    The Page token returned here is permanent.</div>
   </div>
 
   <div class="step">
-    <div class="step-num">7</div>
-    <div class="step-content">
-      <p>Click <strong>"Generate Access Token"</strong>. When prompted for permissions, make sure to check:</p>
-      <div class="code-block">pages_manage_posts<br>pages_read_engagement<br>pages_show_list</div>
-      <p>Click <strong>"Generate Access Token"</strong> and authorize when the Facebook popup appears.</p>
+    <span class="step-num">5</span>
+    <h2>Send Me the Details</h2>
+    <p>Once you have both, share them with me in the chat:</p>
+    <ol>
+      <li>Your <strong>Page ID</strong> (a number like 123456789)</li>
+      <li>Your <strong>Page Access Token</strong> (a long string starting with EAA...)</li>
+    </ol>
+    <p>I'll plug them in and your auto-posting will be live!</p>
+    <div class="success">
+      <strong>What happens next:</strong> Every Monday, Wednesday, and Friday at 10am, the AI will automatically generate and post fresh Tutagora content — educational tips, tutor spotlights, and promotions.
     </div>
-  </div>
-
-  <div class="step">
-    <div class="step-num">8</div>
-    <div class="step-content">
-      <p>Now you have a <strong>User Access Token</strong>. You need to convert it to a <strong>Page Access Token</strong>.</p>
-      <p>In the Graph API Explorer, paste this into the query field and click Submit:</p>
-      <div class="code-block">me/accounts</div>
-      <p>This returns a list of Pages you manage. Find <strong>"Tutagora"</strong> in the results. Copy the <code>access_token</code> value and the <code>id</code> value (that's your Page ID).</p>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-num">9</div>
-    <div class="step-content">
-      <p><strong>Make the token long-lived</strong> (so it doesn't expire in 1 hour). In the Graph API Explorer, paste this URL:</p>
-      <div class="code-block">oauth/access_token?grant_type=fb_exchange_token&client_id=YOUR_APP_ID&client_secret=YOUR_APP_SECRET&fb_exchange_token=YOUR_SHORT_LIVED_TOKEN</div>
-      <p>Replace <code>YOUR_APP_ID</code> and <code>YOUR_APP_SECRET</code> (found in your app's Settings → Basic) and <code>YOUR_SHORT_LIVED_TOKEN</code> with the Page token from step 8.</p>
-      <p>The response gives you a long-lived token that lasts ~60 days.</p>
-    </div>
-  </div>
-
-  <div class="callout">
-    <strong>Tip:</strong> Page Access Tokens obtained through a long-lived User Access Token don't expire. So if you get a long-lived user token first, then call <code>me/accounts</code>, the resulting page token is permanent.
-  </div>
-
-  <h2>Part 4: Update Your Config File</h2>
-
-  <div class="step">
-    <div class="step-num">10</div>
-    <div class="step-content">
-      <p>Open the file <code>facebook-config.json</code> in your Tutagora project folder. It looks like this:</p>
-      <div class="code-block">{<br>  "page_id": "YOUR_PAGE_ID_HERE",<br>  "access_token": "YOUR_PAGE_ACCESS_TOKEN_HERE"<br>}</div>
-      <p>Replace the placeholder values with your actual Page ID and Page Access Token from step 8/9:</p>
-      <div class="code-block">{<br>  "page_id": "123456789012345",<br>  "access_token": "EAABsbCS1iHgBO0vK..."<br>}</div>
-      <p>Save the file. That's it — the agent will use these credentials to post.</p>
-    </div>
-  </div>
-
-  <div class="warning">
-    <strong>Keep your token safe:</strong> Don't share the facebook-config.json file or commit it to GitHub. It contains credentials that give access to post on your Facebook Page.
-  </div>
-
-  <h2>Part 5: Test It</h2>
-
-  <div class="step">
-    <div class="step-num">11</div>
-    <div class="step-content">
-      <p>To test the agent, open Claude and ask: <strong>"Run the tutagora-facebook-posts task"</strong></p>
-      <p>It will generate a post and attempt to publish it. If it works, you'll see a success message with the Facebook post ID. If not, it will tell you exactly what went wrong (usually an expired token or wrong permissions).</p>
-    </div>
-  </div>
-
-  <h2>What the agent posts</h2>
-
-  <div class="summary-card">
-    <h3>Weekly content rotation</h3>
-    <div class="summary-row"><span class="summary-label">Monday</span><span>Study tips, KCSE math problems, revision advice</span></div>
-    <div class="summary-row"><span class="summary-label">Wednesday</span><span>Tutor spotlights, platform features, how Tutagora works</span></div>
-    <div class="summary-row"><span class="summary-label">Friday</span><span>Success stories, promotions, engagement questions</span></div>
-  </div>
-
-  <p>Each post is 80–150 words, includes 2–4 hashtags, a call to action, and occasionally mixes in Swahili phrases naturally. The tone is warm, encouraging, and authentic — never corporate.</p>
-
-  <h2>Troubleshooting</h2>
-
-  <div class="summary-card">
-    <div class="summary-row"><span class="summary-label">"Token expired"</span><span>Generate a new token following steps 6–9</span></div>
-    <div class="summary-row"><span class="summary-label">"Permission denied"</span><span>Make sure pages_manage_posts is enabled</span></div>
-    <div class="summary-row"><span class="summary-label">"Page not found"</span><span>Double-check the page_id in facebook-config.json</span></div>
-    <div class="summary-row"><span class="summary-label">Posts not appearing</span><span>Check if your app is still in Development mode — it still works for Pages you own</span></div>
-  </div>
-
-  <div class="footer">
-    Tutagora Ltd — Nairobi, Kenya — tutagora.com
   </div>
 
 </div>
-
 </body>
 </html>
