@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { initiatePaystackPayment } from './paystack';
 import { supabase } from './supabase';
+import { sendEmail } from './email.js';
 
 // Lottie Animation Component
 const Lottie = ({ src, width = 100, height = 100, loop = true }) => {
@@ -120,22 +121,34 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
         setStep('status');
         await updatePaymentStatus('completed', response.reference);
 
-        // Send booking confirmation emails
+        // Send booking confirmation emails to both student and tutor
+        const lessonDateFormatted = new Date(booking.lesson_date).toLocaleDateString('en-KE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        const studentName = user?.user_metadata?.full_name || 'Student';
+        const tutorName = tutor.profiles?.full_name || 'Tutor';
+        const tutorSubject = (tutor.subjects || [tutor.subject]).join(', ') || 'Lesson';
         try {
-          await supabase.functions.invoke('send-booking-email', {
-            body: {
-              bookingId: booking.id,
-              studentEmail: userEmail,
-              tutorEmail: tutor.profiles?.email,
-              studentName: user?.user_metadata?.full_name || 'Student',
-              tutorName: tutor.profiles?.full_name || 'Tutor',
-              subject: tutor.subject,
-              lessonDate: booking.lesson_date,
-              lessonTime: booking.lesson_time,
-              amount: amount,
-              currency: currency,
-            },
-          });
+          // Email to student
+          if (userEmail) {
+            await sendEmail('booking-confirmation', userEmail, {
+              studentName: studentName,
+              tutorName: tutorName,
+              subject: tutorSubject,
+              date: lessonDateFormatted,
+              time: booking.lesson_time || booking.start_time || '',
+              price: `KSh ${amount?.toLocaleString() || tutor.hourly_rate?.toLocaleString() || '1,000'}`
+            });
+          }
+          // Email to tutor
+          if (tutor.profiles?.email) {
+            await sendEmail('booking-confirmation', tutor.profiles.email, {
+              studentName: tutorName,
+              tutorName: studentName,
+              subject: tutorSubject,
+              date: lessonDateFormatted,
+              time: booking.lesson_time || booking.start_time || '',
+              price: `KSh ${amount?.toLocaleString() || tutor.hourly_rate?.toLocaleString() || '1,000'}`
+            });
+          }
         } catch (emailErr) {
           console.error('Email notification failed (booking still confirmed):', emailErr);
         }
