@@ -1,0 +1,1776 @@
+{
+  "subject": "afm",
+  "strands": [
+    "Investment Appraisal",
+    "Acquisitions & Mergers",
+    "Corporate Reconstruction",
+    "Treasury & Risk",
+    "Cost of Capital"
+  ],
+  "grades": [
+    1,
+    2,
+    3
+  ],
+  "skill_count": 87,
+  "skills": [
+    {
+      "id": "AFM_COST_OF_EQUITY_INTRO",
+      "name": "Cost of Equity Fundamentals",
+      "grade": 1,
+      "strand": "Cost of Capital",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 7,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_CAPM_INTRO",
+      "name": "CAPM Model Introduction",
+      "grade": 1,
+      "strand": "Cost of Capital",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 7,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_BETA_BASICS",
+      "name": "Beta: Concept & Measurement",
+      "grade": 1,
+      "strand": "Cost of Capital",
+      "prerequisites": [
+        "AFM_CAPM_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_CAPM_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_RISK_PREMIUM",
+      "name": "Market Risk Premium & Required Return",
+      "grade": 1,
+      "strand": "Cost of Capital",
+      "prerequisites": [
+        "AFM_CAPM_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_CAPM_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_COST_OF_DEBT",
+      "name": "Cost of Debt & YTM",
+      "grade": 1,
+      "strand": "Cost of Capital",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_PREFERENCE_SHARES",
+      "name": "Cost of Preference Shares",
+      "grade": 1,
+      "strand": "Cost of Capital",
+      "prerequisites": [
+        "AFM_COST_OF_EQUITY_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_COST_OF_EQUITY_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_WACC_BASICS",
+      "name": "WACC Calculation (Basic)",
+      "grade": 1,
+      "strand": "Cost of Capital",
+      "prerequisites": [
+        "AFM_COST_OF_EQUITY_INTRO",
+        "AFM_COST_OF_DEBT"
+      ],
+      "key_prerequisites": [
+        "AFM_COST_OF_EQUITY_INTRO",
+        "AFM_COST_OF_DEBT"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_TAX_SHIELD",
+      "name": "Tax Shield on Debt",
+      "grade": 1,
+      "strand": "Cost of Capital",
+      "prerequisites": [
+        "AFM_WACC_BASICS"
+      ],
+      "key_prerequisites": [
+        "AFM_WACC_BASICS"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_TVM_INTRO",
+      "name": "Time Value of Money Basics",
+      "grade": 1,
+      "strand": "Investment Appraisal",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_NPV_FUNDAMENTALS",
+      "name": "NPV Concept & Calculation",
+      "grade": 1,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_TVM_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_TVM_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_DISCOUNT_RATE",
+      "name": "Selecting Appropriate Discount Rates",
+      "grade": 1,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_NPV_FUNDAMENTALS",
+        "AFM_WACC_BASICS"
+      ],
+      "key_prerequisites": [
+        "AFM_NPV_FUNDAMENTALS",
+        "AFM_WACC_BASICS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_IRR_BASICS",
+      "name": "IRR Calculation & Interpretation",
+      "grade": 1,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_NPV_FUNDAMENTALS"
+      ],
+      "key_prerequisites": [
+        "AFM_NPV_FUNDAMENTALS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_PAYBACK_PERIOD",
+      "name": "Payback Period Method",
+      "grade": 1,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_NPV_FUNDAMENTALS"
+      ],
+      "key_prerequisites": [
+        "AFM_NPV_FUNDAMENTALS"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_PROFITABILITY_INDEX",
+      "name": "Profitability Index",
+      "grade": 1,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_NPV_FUNDAMENTALS"
+      ],
+      "key_prerequisites": [
+        "AFM_NPV_FUNDAMENTALS"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_FINANCIAL_RATIOS_INTRO",
+      "name": "Financial Ratios Analysis",
+      "grade": 1,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_LIQUIDITY_ANALYSIS",
+      "name": "Liquidity & Working Capital Analysis",
+      "grade": 1,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_FINANCIAL_RATIOS_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_FINANCIAL_RATIOS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_SOLVENCY_ANALYSIS",
+      "name": "Solvency & Leverage Analysis",
+      "grade": 1,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_FINANCIAL_RATIOS_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_FINANCIAL_RATIOS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_PROFITABILITY_ANALYSIS",
+      "name": "Profitability Ratios",
+      "grade": 1,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_FINANCIAL_RATIOS_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_FINANCIAL_RATIOS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_GOVERNANCE_INTRO",
+      "name": "Corporate Governance Principles",
+      "grade": 1,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_ETHICAL_FRAMEWORK",
+      "name": "Ethical Framework for Accountants",
+      "grade": 1,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_GOVERNANCE_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_GOVERNANCE_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_AGENCY_THEORY",
+      "name": "Agency Theory & Stakeholder Interests",
+      "grade": 1,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_STAKEHOLDER_ANALYSIS",
+      "name": "Stakeholder Analysis & Theory",
+      "grade": 1,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_TREASURY_INTRO",
+      "name": "Treasury Function Overview",
+      "grade": 1,
+      "strand": "Treasury & Risk",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_MONEY_MARKET_INTRO",
+      "name": "Money Market Instruments",
+      "grade": 1,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_TREASURY_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_TREASURY_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_CAPM_ADVANCED",
+      "name": "CAPM Advanced Applications",
+      "grade": 2,
+      "strand": "Cost of Capital",
+      "prerequisites": [
+        "AFM_CAPM_INTRO",
+        "AFM_BETA_BASICS"
+      ],
+      "key_prerequisites": [
+        "AFM_CAPM_INTRO",
+        "AFM_BETA_BASICS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_UNGEARING_GEARING",
+      "name": "Ungearing & Regearing Beta",
+      "grade": 2,
+      "strand": "Cost of Capital",
+      "prerequisites": [
+        "AFM_BETA_BASICS",
+        "AFM_WACC_BASICS"
+      ],
+      "key_prerequisites": [
+        "AFM_BETA_BASICS",
+        "AFM_WACC_BASICS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_WACC_ADVANCED",
+      "name": "WACC Advanced Calculations",
+      "grade": 2,
+      "strand": "Cost of Capital",
+      "prerequisites": [
+        "AFM_WACC_BASICS",
+        "AFM_UNGEARING_GEARING"
+      ],
+      "key_prerequisites": [
+        "AFM_WACC_BASICS",
+        "AFM_UNGEARING_GEARING"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_FLOTATION_COSTS",
+      "name": "Flotation Costs in WACC",
+      "grade": 2,
+      "strand": "Cost of Capital",
+      "prerequisites": [
+        "AFM_WACC_ADVANCED"
+      ],
+      "key_prerequisites": [
+        "AFM_WACC_ADVANCED"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_DIVIDEND_GROWTH_MODEL",
+      "name": "Dividend Growth Model (DGM)",
+      "grade": 2,
+      "strand": "Cost of Capital",
+      "prerequisites": [
+        "AFM_COST_OF_EQUITY_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_COST_OF_EQUITY_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_COST_OF_EQUITY_ADV",
+      "name": "Multi-Factor Cost of Equity Models",
+      "grade": 2,
+      "strand": "Cost of Capital",
+      "prerequisites": [
+        "AFM_CAPM_ADVANCED"
+      ],
+      "key_prerequisites": [
+        "AFM_CAPM_ADVANCED"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_NPV_SENSITIVITY",
+      "name": "Sensitivity Analysis",
+      "grade": 2,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_NPV_FUNDAMENTALS",
+        "AFM_DISCOUNT_RATE"
+      ],
+      "key_prerequisites": [
+        "AFM_NPV_FUNDAMENTALS",
+        "AFM_DISCOUNT_RATE"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_NPV_SCENARIO",
+      "name": "Scenario Analysis",
+      "grade": 2,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_NPV_SENSITIVITY"
+      ],
+      "key_prerequisites": [
+        "AFM_NPV_SENSITIVITY"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_NPV_SIMULATION",
+      "name": "Simulation & Probability Analysis",
+      "grade": 2,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_NPV_SCENARIO"
+      ],
+      "key_prerequisites": [
+        "AFM_NPV_SCENARIO"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_EVA_ANALYSIS",
+      "name": "Economic Value Added (EVA)",
+      "grade": 2,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_NPV_FUNDAMENTALS",
+        "AFM_WACC_ADVANCED"
+      ],
+      "key_prerequisites": [
+        "AFM_NPV_FUNDAMENTALS",
+        "AFM_WACC_ADVANCED"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_MONTE_CARLO",
+      "name": "Monte Carlo Simulation for Investment Risk",
+      "grade": 2,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_NPV_SIMULATION"
+      ],
+      "key_prerequisites": [
+        "AFM_NPV_SIMULATION"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_REAL_OPTIONS_INTRO",
+      "name": "Real Options Theory",
+      "grade": 2,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_NPV_FUNDAMENTALS"
+      ],
+      "key_prerequisites": [
+        "AFM_NPV_FUNDAMENTALS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_EXPANSION_OPTIONS",
+      "name": "Expansion & Abandonment Options",
+      "grade": 2,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_REAL_OPTIONS_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_REAL_OPTIONS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_TIMING_OPTIONS",
+      "name": "Timing & Flexibility Options",
+      "grade": 2,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_EXPANSION_OPTIONS"
+      ],
+      "key_prerequisites": [
+        "AFM_EXPANSION_OPTIONS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_ASSET_VALUATION",
+      "name": "Asset-Based Valuation",
+      "grade": 2,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_FINANCIAL_RATIOS_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_FINANCIAL_RATIOS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_PE_MULTIPLE",
+      "name": "P/E Multiple Valuation",
+      "grade": 2,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_PROFITABILITY_ANALYSIS"
+      ],
+      "key_prerequisites": [
+        "AFM_PROFITABILITY_ANALYSIS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_DCF_VALUATION",
+      "name": "DCF Business Valuation",
+      "grade": 2,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_NPV_FUNDAMENTALS",
+        "AFM_WACC_ADVANCED"
+      ],
+      "key_prerequisites": [
+        "AFM_NPV_FUNDAMENTALS",
+        "AFM_WACC_ADVANCED"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_DIVIDEND_VALUATION",
+      "name": "Dividend-Based Valuation",
+      "grade": 2,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_DIVIDEND_GROWTH_MODEL"
+      ],
+      "key_prerequisites": [
+        "AFM_DIVIDEND_GROWTH_MODEL"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_MA_STRATEGY",
+      "name": "M&A Strategic Rationale",
+      "grade": 2,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_SYNERGY_TYPES",
+      "name": "Types of Synergies",
+      "grade": 2,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_MA_STRATEGY"
+      ],
+      "key_prerequisites": [
+        "AFM_MA_STRATEGY"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_SYNERGY_VALUATION",
+      "name": "Synergy Valuation & Quantification",
+      "grade": 2,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_SYNERGY_TYPES",
+        "AFM_DCF_VALUATION"
+      ],
+      "key_prerequisites": [
+        "AFM_SYNERGY_TYPES",
+        "AFM_DCF_VALUATION"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_FINANCING_ACQUISITION",
+      "name": "Financing Acquisition Strategies",
+      "grade": 2,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_MA_STRATEGY",
+        "AFM_WACC_ADVANCED"
+      ],
+      "key_prerequisites": [
+        "AFM_MA_STRATEGY",
+        "AFM_WACC_ADVANCED"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_BIDDING_STRATEGY",
+      "name": "Bidding & Offer Strategy",
+      "grade": 2,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_DCF_VALUATION",
+        "AFM_SYNERGY_VALUATION"
+      ],
+      "key_prerequisites": [
+        "AFM_DCF_VALUATION",
+        "AFM_SYNERGY_VALUATION"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_FINANCIAL_DISTRESS",
+      "name": "Indicators of Financial Distress",
+      "grade": 2,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_SOLVENCY_ANALYSIS",
+        "AFM_LIQUIDITY_ANALYSIS"
+      ],
+      "key_prerequisites": [
+        "AFM_SOLVENCY_ANALYSIS",
+        "AFM_LIQUIDITY_ANALYSIS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_BANKRUPTCY_MODELS",
+      "name": "Bankruptcy Prediction Models (Altman Z-Score)",
+      "grade": 2,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_FINANCIAL_DISTRESS"
+      ],
+      "key_prerequisites": [
+        "AFM_FINANCIAL_DISTRESS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_RESTRUCTURING",
+      "name": "Corporate Restructuring & Turnaround",
+      "grade": 2,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_FINANCIAL_DISTRESS",
+        "AFM_BANKRUPTCY_MODELS"
+      ],
+      "key_prerequisites": [
+        "AFM_FINANCIAL_DISTRESS",
+        "AFM_BANKRUPTCY_MODELS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_FORWARD_CONTRACTS",
+      "name": "Forward Contracts Fundamentals",
+      "grade": 2,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_MONEY_MARKET_INTRO"
+      ],
+      "key_prerequisites": [
+        "AFM_MONEY_MARKET_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_MONEY_MARKET_HEDGE",
+      "name": "Money Market Hedges",
+      "grade": 2,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_FORWARD_CONTRACTS"
+      ],
+      "key_prerequisites": [
+        "AFM_FORWARD_CONTRACTS"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_CURRENCY_FUTURES",
+      "name": "Currency Futures Contracts",
+      "grade": 2,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_FORWARD_CONTRACTS"
+      ],
+      "key_prerequisites": [
+        "AFM_FORWARD_CONTRACTS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_INTEREST_RATE_FUTURES",
+      "name": "Interest Rate Futures",
+      "grade": 2,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_FORWARD_CONTRACTS"
+      ],
+      "key_prerequisites": [
+        "AFM_FORWARD_CONTRACTS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_CURRENCY_OPTIONS",
+      "name": "Currency Options for Hedging",
+      "grade": 2,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_FORWARD_CONTRACTS"
+      ],
+      "key_prerequisites": [
+        "AFM_FORWARD_CONTRACTS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_INTEREST_RATE_OPTIONS",
+      "name": "Interest Rate Options (Caps, Floors, Collars)",
+      "grade": 2,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_INTEREST_RATE_FUTURES"
+      ],
+      "key_prerequisites": [
+        "AFM_INTEREST_RATE_FUTURES"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_OPTION_VALUATION",
+      "name": "Option Valuation Models (Binomial, Black-Scholes)",
+      "grade": 2,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_CURRENCY_OPTIONS",
+        "AFM_INTEREST_RATE_OPTIONS"
+      ],
+      "key_prerequisites": [
+        "AFM_CURRENCY_OPTIONS",
+        "AFM_INTEREST_RATE_OPTIONS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_INTEREST_RATE_SWAPS",
+      "name": "Interest Rate Swaps",
+      "grade": 2,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_INTEREST_RATE_FUTURES"
+      ],
+      "key_prerequisites": [
+        "AFM_INTEREST_RATE_FUTURES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_CURRENCY_SWAPS",
+      "name": "Currency Swaps",
+      "grade": 2,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_CURRENCY_FUTURES",
+        "AFM_INTEREST_RATE_SWAPS"
+      ],
+      "key_prerequisites": [
+        "AFM_CURRENCY_FUTURES",
+        "AFM_INTEREST_RATE_SWAPS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_SWAP_VALUATION",
+      "name": "Swap Valuation & Pricing",
+      "grade": 2,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_INTEREST_RATE_SWAPS",
+        "AFM_CURRENCY_SWAPS"
+      ],
+      "key_prerequisites": [
+        "AFM_INTEREST_RATE_SWAPS",
+        "AFM_CURRENCY_SWAPS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_INTERNATIONAL_INVESTMENT",
+      "name": "International Investment Appraisal",
+      "grade": 3,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_DCF_VALUATION",
+        "AFM_CURRENCY_FUTURES"
+      ],
+      "key_prerequisites": [
+        "AFM_DCF_VALUATION",
+        "AFM_CURRENCY_FUTURES"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_POLITICAL_COUNTRY_RISK",
+      "name": "Political & Country Risk Assessment",
+      "grade": 3,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_INTERNATIONAL_INVESTMENT"
+      ],
+      "key_prerequisites": [
+        "AFM_INTERNATIONAL_INVESTMENT"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_TRANSFER_PRICING",
+      "name": "Transfer Pricing in Multinationals",
+      "grade": 3,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_INTERNATIONAL_INVESTMENT"
+      ],
+      "key_prerequisites": [
+        "AFM_INTERNATIONAL_INVESTMENT"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_FOREIGN_CURRENCY_ANALYSIS",
+      "name": "Foreign Currency Analysis & Forecasting",
+      "grade": 3,
+      "strand": "Investment Appraisal",
+      "prerequisites": [
+        "AFM_INTERNATIONAL_INVESTMENT",
+        "AFM_CURRENCY_OPTIONS"
+      ],
+      "key_prerequisites": [
+        "AFM_INTERNATIONAL_INVESTMENT",
+        "AFM_CURRENCY_OPTIONS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_COMPLEX_VALUATION_MA",
+      "name": "Complex Business Valuation in M&A Context",
+      "grade": 3,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_DCF_VALUATION",
+        "AFM_SYNERGY_VALUATION"
+      ],
+      "key_prerequisites": [
+        "AFM_DCF_VALUATION",
+        "AFM_SYNERGY_VALUATION"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_EARN_OUT_PROVISIONS",
+      "name": "Earn-Out Provisions & Contingent Payments",
+      "grade": 3,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_COMPLEX_VALUATION_MA"
+      ],
+      "key_prerequisites": [
+        "AFM_COMPLEX_VALUATION_MA"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_HOSTILE_TAKEOVERS",
+      "name": "Hostile Takeovers & Defense Strategies",
+      "grade": 3,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_BIDDING_STRATEGY"
+      ],
+      "key_prerequisites": [
+        "AFM_BIDDING_STRATEGY"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_DUE_DILIGENCE",
+      "name": "Due Diligence & Risk Assessment",
+      "grade": 3,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_COMPLEX_VALUATION_MA",
+        "AFM_FINANCIAL_DISTRESS"
+      ],
+      "key_prerequisites": [
+        "AFM_COMPLEX_VALUATION_MA",
+        "AFM_FINANCIAL_DISTRESS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_MBO_MBI",
+      "name": "Management Buyouts & Buyins (MBO/MBI)",
+      "grade": 3,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_RESTRUCTURING",
+        "AFM_FINANCING_ACQUISITION"
+      ],
+      "key_prerequisites": [
+        "AFM_RESTRUCTURING",
+        "AFM_FINANCING_ACQUISITION"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_LEVERAGED_BUYOUT",
+      "name": "Leveraged Buyout (LBO) Analysis",
+      "grade": 3,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_MBO_MBI"
+      ],
+      "key_prerequisites": [
+        "AFM_MBO_MBI"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_DEMERGERS",
+      "name": "Demergers & Spin-Offs",
+      "grade": 3,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_DCF_VALUATION",
+        "AFM_RESTRUCTURING"
+      ],
+      "key_prerequisites": [
+        "AFM_DCF_VALUATION",
+        "AFM_RESTRUCTURING"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_JOINT_VENTURES",
+      "name": "Joint Ventures & Strategic Alliances",
+      "grade": 3,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_SYNERGY_TYPES",
+        "AFM_DCF_VALUATION"
+      ],
+      "key_prerequisites": [
+        "AFM_SYNERGY_TYPES",
+        "AFM_DCF_VALUATION"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_CONSOLIDATED_STATEMENTS",
+      "name": "Consolidated Financial Statements Analysis",
+      "grade": 3,
+      "strand": "Corporate Reconstruction",
+      "prerequisites": [
+        "AFM_PROFITABILITY_ANALYSIS",
+        "AFM_SOLVENCY_ANALYSIS"
+      ],
+      "key_prerequisites": [
+        "AFM_PROFITABILITY_ANALYSIS",
+        "AFM_SOLVENCY_ANALYSIS"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_HEDGE_EFFECTIVENESS",
+      "name": "Hedge Effectiveness & Accounting Treatment",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_INTEREST_RATE_SWAPS",
+        "AFM_CURRENCY_SWAPS"
+      ],
+      "key_prerequisites": [
+        "AFM_INTEREST_RATE_SWAPS",
+        "AFM_CURRENCY_SWAPS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_CROSS_CURRENCY_SWAPS",
+      "name": "Cross-Currency Swaps",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_CURRENCY_SWAPS"
+      ],
+      "key_prerequisites": [
+        "AFM_CURRENCY_SWAPS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_COMPLEX_HEDGING",
+      "name": "Complex Multi-Instrument Hedging Strategies",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_CROSS_CURRENCY_SWAPS",
+        "AFM_OPTION_VALUATION",
+        "AFM_SWAP_VALUATION"
+      ],
+      "key_prerequisites": [
+        "AFM_CROSS_CURRENCY_SWAPS",
+        "AFM_OPTION_VALUATION",
+        "AFM_SWAP_VALUATION"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_EMBEDDED_DERIVATIVES",
+      "name": "Embedded Derivatives & Hybrid Instruments",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_COMPLEX_HEDGING"
+      ],
+      "key_prerequisites": [
+        "AFM_COMPLEX_HEDGING"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_VAR_CALCULATION",
+      "name": "Value at Risk (VaR) Calculation",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_COMPLEX_HEDGING"
+      ],
+      "key_prerequisites": [
+        "AFM_COMPLEX_HEDGING"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_EXPECTED_SHORTFALL",
+      "name": "Expected Shortfall & Tail Risk",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_VAR_CALCULATION"
+      ],
+      "key_prerequisites": [
+        "AFM_VAR_CALCULATION"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_STRESS_TESTING",
+      "name": "Stress Testing & Scenario Modeling",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_VAR_CALCULATION"
+      ],
+      "key_prerequisites": [
+        "AFM_VAR_CALCULATION"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_CREDIT_RISK",
+      "name": "Credit Risk Assessment & Management",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_DUE_DILIGENCE"
+      ],
+      "key_prerequisites": [
+        "AFM_DUE_DILIGENCE"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_OPERATIONAL_RISK",
+      "name": "Operational Risk Identification & Mitigation",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_TREASURY_STRATEGY",
+      "name": "Treasury Function & Strategic Planning",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_VAR_CALCULATION",
+        "AFM_COMPLEX_HEDGING"
+      ],
+      "key_prerequisites": [
+        "AFM_VAR_CALCULATION",
+        "AFM_COMPLEX_HEDGING"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_LIQUIDITY_MANAGEMENT",
+      "name": "Liquidity Risk Management",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_TREASURY_STRATEGY"
+      ],
+      "key_prerequisites": [
+        "AFM_TREASURY_STRATEGY"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_FUNDING_STRATEGIES",
+      "name": "Optimal Funding Strategies & Debt Management",
+      "grade": 3,
+      "strand": "Treasury & Risk",
+      "prerequisites": [
+        "AFM_TREASURY_STRATEGY",
+        "AFM_WACC_ADVANCED"
+      ],
+      "key_prerequisites": [
+        "AFM_TREASURY_STRATEGY",
+        "AFM_WACC_ADVANCED"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_PROFESSIONAL_JUDGMENT",
+      "name": "Professional Judgment in Complex Scenarios",
+      "grade": 3,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_DUE_DILIGENCE",
+        "AFM_ETHICAL_FRAMEWORK"
+      ],
+      "key_prerequisites": [
+        "AFM_DUE_DILIGENCE",
+        "AFM_ETHICAL_FRAMEWORK"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "AFM_STAKEHOLDER_MANAGEMENT",
+      "name": "Stakeholder Management in M&A & Reconstruction",
+      "grade": 3,
+      "strand": "Acquisitions & Mergers",
+      "prerequisites": [
+        "AFM_STAKEHOLDER_ANALYSIS",
+        "AFM_PROFESSIONAL_JUDGMENT"
+      ],
+      "key_prerequisites": [
+        "AFM_STAKEHOLDER_ANALYSIS",
+        "AFM_PROFESSIONAL_JUDGMENT"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    }
+  ]
+}

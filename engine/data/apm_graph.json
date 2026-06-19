@@ -1,0 +1,1618 @@
+{
+  "subject": "apm",
+  "strands": [
+    "Strategic Planning",
+    "Performance Systems",
+    "Performance Measurement",
+    "Quality & Cost Mgmt",
+    "Sector Performance"
+  ],
+  "grades": [
+    1,
+    2,
+    3
+  ],
+  "skill_count": 80,
+  "skills": [
+    {
+      "id": "APM_STRATEGY_INTRO",
+      "name": "Introduction to Strategy & Strategic Management",
+      "grade": 1,
+      "strand": "Strategic Planning",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_MISSION_VISION",
+      "name": "Mission, Vision & Values",
+      "grade": 1,
+      "strand": "Strategic Planning",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_SWOT_ANALYSIS",
+      "name": "SWOT Analysis Framework",
+      "grade": 1,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_STRATEGY_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_STRATEGY_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_PESTLE_ANALYSIS",
+      "name": "PESTLE Analysis (Political, Economic, Social, Technological, Legal, Environmental)",
+      "grade": 1,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_STRATEGY_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_STRATEGY_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_PORTERS_FIVE_FORCES",
+      "name": "Porter's Five Forces Model",
+      "grade": 1,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_PESTLE_ANALYSIS"
+      ],
+      "key_prerequisites": [
+        "APM_PESTLE_ANALYSIS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_GENERIC_STRATEGIES",
+      "name": "Porter's Generic Strategies (Cost Leadership, Differentiation, Focus)",
+      "grade": 1,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_PORTERS_FIVE_FORCES"
+      ],
+      "key_prerequisites": [
+        "APM_PORTERS_FIVE_FORCES"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_VALUE_CHAIN",
+      "name": "Porter's Value Chain Analysis",
+      "grade": 1,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_GENERIC_STRATEGIES"
+      ],
+      "key_prerequisites": [
+        "APM_GENERIC_STRATEGIES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_MANAGEMENT_CONTROL",
+      "name": "Fundamentals of Management Control Systems",
+      "grade": 1,
+      "strand": "Performance Systems",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_RESPONSIBILITY_CENTERS",
+      "name": "Types of Responsibility Centers (Cost, Revenue, Profit, Investment)",
+      "grade": 1,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_MANAGEMENT_CONTROL"
+      ],
+      "key_prerequisites": [
+        "APM_MANAGEMENT_CONTROL"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 7,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_ORGANIZATIONAL_STRUCTURE",
+      "name": "Organizational Structure & Divisional Autonomy",
+      "grade": 1,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_RESPONSIBILITY_CENTERS"
+      ],
+      "key_prerequisites": [
+        "APM_RESPONSIBILITY_CENTERS"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_PM_INTRO",
+      "name": "Introduction to Performance Measurement",
+      "grade": 1,
+      "strand": "Performance Measurement",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_KPI_BASICS",
+      "name": "Key Performance Indicators (KPIs) & Metrics Basics",
+      "grade": 1,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_PM_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_PM_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_FINANCIAL_METRICS",
+      "name": "Financial Performance Metrics (ROI, Profit Margin, ROCE)",
+      "grade": 1,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_KPI_BASICS"
+      ],
+      "key_prerequisites": [
+        "APM_KPI_BASICS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_COST_BEHAVIOR",
+      "name": "Cost Behavior (Fixed, Variable, Mixed)",
+      "grade": 1,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 7,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_QUALITY_INTRO",
+      "name": "Introduction to Quality Management",
+      "grade": 1,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_COST_OF_QUALITY_INTRO",
+      "name": "Cost of Quality Framework Overview",
+      "grade": 1,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [
+        "APM_QUALITY_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_QUALITY_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_IT_SYSTEMS",
+      "name": "Information Technology Systems & Data Fundamentals",
+      "grade": 1,
+      "strand": "Performance Systems",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_DATA_QUALITY",
+      "name": "Data Quality & Information Governance",
+      "grade": 1,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_IT_SYSTEMS"
+      ],
+      "key_prerequisites": [
+        "APM_IT_SYSTEMS"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_FEEDBACK_CONTROL",
+      "name": "Feedback Control Systems & Corrective Actions",
+      "grade": 2,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_MANAGEMENT_CONTROL"
+      ],
+      "key_prerequisites": [
+        "APM_MANAGEMENT_CONTROL"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_FEEDFORWARD_CONTROL",
+      "name": "Feedforward Control & Preventive Actions",
+      "grade": 2,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_FEEDBACK_CONTROL"
+      ],
+      "key_prerequisites": [
+        "APM_FEEDBACK_CONTROL"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 7,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_CONTROL_EFFECTIVENESS",
+      "name": "Control Effectiveness & Internal Controls",
+      "grade": 2,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_FEEDFORWARD_CONTROL"
+      ],
+      "key_prerequisites": [
+        "APM_FEEDFORWARD_CONTROL"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BSC_INTRO",
+      "name": "Introduction to Balanced Scorecard (BSC)",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_KPI_BASICS",
+        "APM_FEEDBACK_CONTROL"
+      ],
+      "key_prerequisites": [
+        "APM_KPI_BASICS",
+        "APM_FEEDBACK_CONTROL"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BSC_FINANCIAL",
+      "name": "Balanced Scorecard: Financial Perspective",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_BSC_INTRO",
+        "APM_FINANCIAL_METRICS"
+      ],
+      "key_prerequisites": [
+        "APM_BSC_INTRO",
+        "APM_FINANCIAL_METRICS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BSC_CUSTOMER",
+      "name": "Balanced Scorecard: Customer Perspective",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_BSC_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_BSC_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BSC_INTERNAL",
+      "name": "Balanced Scorecard: Internal Process Perspective",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_BSC_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_BSC_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BSC_LEARNING",
+      "name": "Balanced Scorecard: Learning & Growth Perspective",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_BSC_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_BSC_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BSC_CAUSAL",
+      "name": "Balanced Scorecard: Cause-Effect Relationships & Strategy Map",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_BSC_FINANCIAL",
+        "APM_BSC_CUSTOMER",
+        "APM_BSC_INTERNAL",
+        "APM_BSC_LEARNING"
+      ],
+      "key_prerequisites": [
+        "APM_BSC_FINANCIAL",
+        "APM_BSC_CUSTOMER",
+        "APM_BSC_INTERNAL",
+        "APM_BSC_LEARNING"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BUILDING_BLOCKS",
+      "name": "Building Block Model (Fitzgerald & Moon)",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_PM_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_PM_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BUILDING_BLOCKS_COMPETITIVENESS",
+      "name": "Building Blocks: Competitiveness Measures",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_BUILDING_BLOCKS"
+      ],
+      "key_prerequisites": [
+        "APM_BUILDING_BLOCKS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BUILDING_BLOCKS_FINANCIAL",
+      "name": "Building Blocks: Financial Performance",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_BUILDING_BLOCKS"
+      ],
+      "key_prerequisites": [
+        "APM_BUILDING_BLOCKS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_PERFORMANCE_PYRAMID",
+      "name": "Performance Pyramid Model",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_PM_INTRO",
+        "APM_VALUE_CHAIN"
+      ],
+      "key_prerequisites": [
+        "APM_PM_INTRO",
+        "APM_VALUE_CHAIN"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_EVA_CONCEPT",
+      "name": "Economic Value Added (EVA): Concept & Definition",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_FINANCIAL_METRICS"
+      ],
+      "key_prerequisites": [
+        "APM_FINANCIAL_METRICS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_NOPAT_CALC",
+      "name": "Calculating NOPAT (Net Operating Profit After Tax)",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_EVA_CONCEPT"
+      ],
+      "key_prerequisites": [
+        "APM_EVA_CONCEPT"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_INVESTED_CAPITAL",
+      "name": "Calculating Invested Capital & WACC",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_NOPAT_CALC"
+      ],
+      "key_prerequisites": [
+        "APM_NOPAT_CALC"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_EVA_CALCULATION",
+      "name": "Economic Value Added (EVA) Calculation",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_INVESTED_CAPITAL"
+      ],
+      "key_prerequisites": [
+        "APM_INVESTED_CAPITAL"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_EVA_ADJUSTMENTS",
+      "name": "EVA Adjustments (Accounting, Operating, Strategic)",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_EVA_CALCULATION"
+      ],
+      "key_prerequisites": [
+        "APM_EVA_CALCULATION"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_TQM_PRINCIPLES",
+      "name": "Total Quality Management (TQM) Principles & Philosophy",
+      "grade": 2,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [
+        "APM_QUALITY_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_QUALITY_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_KAIZEN",
+      "name": "Continuous Improvement (Kaizen)",
+      "grade": 2,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [
+        "APM_TQM_PRINCIPLES"
+      ],
+      "key_prerequisites": [
+        "APM_TQM_PRINCIPLES"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_SIX_SIGMA",
+      "name": "Six Sigma & DMAIC Methodology",
+      "grade": 2,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [
+        "APM_TQM_PRINCIPLES"
+      ],
+      "key_prerequisites": [
+        "APM_TQM_PRINCIPLES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_COST_OF_QUALITY",
+      "name": "Cost of Quality (Prevention, Appraisal, Failure)",
+      "grade": 2,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [
+        "APM_COST_OF_QUALITY_INTRO",
+        "APM_TQM_PRINCIPLES"
+      ],
+      "key_prerequisites": [
+        "APM_COST_OF_QUALITY_INTRO",
+        "APM_TQM_PRINCIPLES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_ABC_BASICS",
+      "name": "Activity-Based Costing (ABC) Fundamentals",
+      "grade": 2,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [
+        "APM_COST_BEHAVIOR"
+      ],
+      "key_prerequisites": [
+        "APM_COST_BEHAVIOR"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_ABM",
+      "name": "Activity-Based Management (ABM) & Cost Driver Analysis",
+      "grade": 2,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [
+        "APM_ABC_BASICS"
+      ],
+      "key_prerequisites": [
+        "APM_ABC_BASICS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_TARGET_COSTING",
+      "name": "Target Costing Methodology",
+      "grade": 2,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [
+        "APM_ABM"
+      ],
+      "key_prerequisites": [
+        "APM_ABM"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_VALUE_ENGINEERING",
+      "name": "Value Engineering & Value Analysis",
+      "grade": 2,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [
+        "APM_TARGET_COSTING"
+      ],
+      "key_prerequisites": [
+        "APM_TARGET_COSTING"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BENCHMARKING",
+      "name": "Benchmarking: Types & Process",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_KPI_BASICS"
+      ],
+      "key_prerequisites": [
+        "APM_KPI_BASICS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BENCHMARKING_ANALYSIS",
+      "name": "Benchmarking Analysis & Gap Analysis",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_BENCHMARKING"
+      ],
+      "key_prerequisites": [
+        "APM_BENCHMARKING"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_ERP_SYSTEMS",
+      "name": "Enterprise Resource Planning (ERP) Systems",
+      "grade": 2,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_IT_SYSTEMS"
+      ],
+      "key_prerequisites": [
+        "APM_IT_SYSTEMS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BI_TOOLS",
+      "name": "Business Intelligence (BI) Tools & Analytics",
+      "grade": 2,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_ERP_SYSTEMS",
+        "APM_DATA_QUALITY"
+      ],
+      "key_prerequisites": [
+        "APM_ERP_SYSTEMS",
+        "APM_DATA_QUALITY"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_DASHBOARDS",
+      "name": "Dashboards & Reporting Systems",
+      "grade": 2,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_BI_TOOLS"
+      ],
+      "key_prerequisites": [
+        "APM_BI_TOOLS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_DATA_ANALYTICS",
+      "name": "Data Analytics Techniques & Interpretation",
+      "grade": 2,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_BI_TOOLS"
+      ],
+      "key_prerequisites": [
+        "APM_BI_TOOLS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_VARIANCE_ANALYSIS_ADV",
+      "name": "Advanced Variance Analysis (Sales, Material, Labour, Overhead)",
+      "grade": 2,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_FINANCIAL_METRICS"
+      ],
+      "key_prerequisites": [
+        "APM_FINANCIAL_METRICS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 12,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_STAKEHOLDER_ANALYSIS",
+      "name": "Stakeholder Analysis (Mendelow Matrix)",
+      "grade": 2,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_STRATEGY_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_STRATEGY_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_STAKEHOLDER_COMMUNICATION",
+      "name": "Stakeholder Communication & Reporting",
+      "grade": 2,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_STAKEHOLDER_ANALYSIS"
+      ],
+      "key_prerequisites": [
+        "APM_STAKEHOLDER_ANALYSIS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BSC_PRIVATE_SECTOR",
+      "name": "Balanced Scorecard Adaptation to Private Sector Contexts",
+      "grade": 3,
+      "strand": "Sector Performance",
+      "prerequisites": [
+        "APM_BSC_CAUSAL"
+      ],
+      "key_prerequisites": [
+        "APM_BSC_CAUSAL"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BSC_PUBLIC_SECTOR",
+      "name": "Balanced Scorecard Adaptation to Public Sector",
+      "grade": 3,
+      "strand": "Sector Performance",
+      "prerequisites": [
+        "APM_BSC_CAUSAL"
+      ],
+      "key_prerequisites": [
+        "APM_BSC_CAUSAL"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BSC_NFP",
+      "name": "Balanced Scorecard for Not-For-Profit Organizations",
+      "grade": 3,
+      "strand": "Sector Performance",
+      "prerequisites": [
+        "APM_BSC_CAUSAL"
+      ],
+      "key_prerequisites": [
+        "APM_BSC_CAUSAL"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_VALUE_BASED_MGMT",
+      "name": "Value-Based Management & Shareholder Value Creation",
+      "grade": 3,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_EVA_CALCULATION",
+        "APM_STRATEGY_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_EVA_CALCULATION",
+        "APM_STRATEGY_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_STRATEGIC_CONFLICTS",
+      "name": "Strategic Conflicts: Short-Term vs Long-Term Performance",
+      "grade": 3,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_VALUE_BASED_MGMT"
+      ],
+      "key_prerequisites": [
+        "APM_VALUE_BASED_MGMT"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_PRIVATE_SECTOR_EVAL",
+      "name": "Performance Evaluation in Private Sector",
+      "grade": 3,
+      "strand": "Sector Performance",
+      "prerequisites": [
+        "APM_FINANCIAL_METRICS"
+      ],
+      "key_prerequisites": [
+        "APM_FINANCIAL_METRICS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_PUBLIC_SECTOR_VFM",
+      "name": "Public Sector Performance: Value for Money (3Es: Economy, Efficiency, Effectiveness)",
+      "grade": 3,
+      "strand": "Sector Performance",
+      "prerequisites": [
+        "APM_PM_INTRO"
+      ],
+      "key_prerequisites": [
+        "APM_PM_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_REGULATED_SECTOR",
+      "name": "Performance Metrics in Regulated Industries",
+      "grade": 3,
+      "strand": "Sector Performance",
+      "prerequisites": [
+        "APM_KPI_BASICS"
+      ],
+      "key_prerequisites": [
+        "APM_KPI_BASICS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_NFP_MEASUREMENT",
+      "name": "Performance Measurement in Not-For-Profit Sector",
+      "grade": 3,
+      "strand": "Sector Performance",
+      "prerequisites": [
+        "APM_PUBLIC_SECTOR_VFM"
+      ],
+      "key_prerequisites": [
+        "APM_PUBLIC_SECTOR_VFM"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_BIG_DATA",
+      "name": "Big Data & Advanced Analytics in Performance Management",
+      "grade": 3,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_DATA_ANALYTICS"
+      ],
+      "key_prerequisites": [
+        "APM_DATA_ANALYTICS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_MACHINE_LEARNING",
+      "name": "Machine Learning Applications in Performance Management",
+      "grade": 3,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_BIG_DATA"
+      ],
+      "key_prerequisites": [
+        "APM_BIG_DATA"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 12,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_PREDICTIVE_ANALYTICS",
+      "name": "Predictive Analytics & Forecasting",
+      "grade": 3,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_MACHINE_LEARNING"
+      ],
+      "key_prerequisites": [
+        "APM_MACHINE_LEARNING"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_INTEGRATED_REPORTING",
+      "name": "Integrated Reporting Framework (IIRC)",
+      "grade": 3,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_BSC_CAUSAL",
+        "APM_STAKEHOLDER_COMMUNICATION"
+      ],
+      "key_prerequisites": [
+        "APM_BSC_CAUSAL",
+        "APM_STAKEHOLDER_COMMUNICATION"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_ENVIRONMENTAL_SOCIAL",
+      "name": "Environmental, Social & Governance (ESG) Performance Reporting",
+      "grade": 3,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_INTEGRATED_REPORTING"
+      ],
+      "key_prerequisites": [
+        "APM_INTEGRATED_REPORTING"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_SUSTAINABILITY_METRICS",
+      "name": "Sustainability Metrics & Non-Financial Reporting",
+      "grade": 3,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_ENVIRONMENTAL_SOCIAL"
+      ],
+      "key_prerequisites": [
+        "APM_ENVIRONMENTAL_SOCIAL"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_PROFESSIONAL_JUDGMENT",
+      "name": "Professional Judgment in Performance Management Design",
+      "grade": 3,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_BSC_CAUSAL",
+        "APM_CONTROL_EFFECTIVENESS"
+      ],
+      "key_prerequisites": [
+        "APM_BSC_CAUSAL",
+        "APM_CONTROL_EFFECTIVENESS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_PM_SYSTEM_DESIGN",
+      "name": "Designing Integrated Performance Management Systems",
+      "grade": 3,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_PROFESSIONAL_JUDGMENT"
+      ],
+      "key_prerequisites": [
+        "APM_PROFESSIONAL_JUDGMENT"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 12,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_DASHBOARD_DESIGN",
+      "name": "Strategic Dashboard Design & Information Architecture",
+      "grade": 3,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_DASHBOARDS",
+        "APM_BSC_CAUSAL"
+      ],
+      "key_prerequisites": [
+        "APM_DASHBOARDS",
+        "APM_BSC_CAUSAL"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_REAL_TIME_SYSTEMS",
+      "name": "Real-Time Performance Monitoring Systems",
+      "grade": 3,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_DASHBOARD_DESIGN"
+      ],
+      "key_prerequisites": [
+        "APM_DASHBOARD_DESIGN"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_TRANSFER_PRICING",
+      "name": "Transfer Pricing Methods & Divisional Autonomy",
+      "grade": 3,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_RESPONSIBILITY_CENTERS"
+      ],
+      "key_prerequisites": [
+        "APM_RESPONSIBILITY_CENTERS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_DIVISIONAL_EVALUATION",
+      "name": "Divisional Performance Evaluation & Incentive Systems",
+      "grade": 3,
+      "strand": "Performance Measurement",
+      "prerequisites": [
+        "APM_TRANSFER_PRICING"
+      ],
+      "key_prerequisites": [
+        "APM_TRANSFER_PRICING"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_OPERATIONAL_CONTROL",
+      "name": "Operational Control vs Strategic Control",
+      "grade": 3,
+      "strand": "Performance Systems",
+      "prerequisites": [
+        "APM_CONTROL_EFFECTIVENESS"
+      ],
+      "key_prerequisites": [
+        "APM_CONTROL_EFFECTIVENESS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_CONTINGENCY_PLANNING",
+      "name": "Contingency Planning & Risk-Based Performance Management",
+      "grade": 3,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_STRATEGIC_CONFLICTS"
+      ],
+      "key_prerequisites": [
+        "APM_STRATEGIC_CONFLICTS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_QUALITY_COSTING_ADV",
+      "name": "Advanced Quality Costing & Trade-Offs",
+      "grade": 3,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [
+        "APM_COST_OF_QUALITY"
+      ],
+      "key_prerequisites": [
+        "APM_COST_OF_QUALITY"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_SUPPLY_CHAIN_QUALITY",
+      "name": "Quality Management in Supply Chain Context",
+      "grade": 3,
+      "strand": "Quality & Cost Mgmt",
+      "prerequisites": [
+        "APM_TQM_PRINCIPLES",
+        "APM_VALUE_CHAIN"
+      ],
+      "key_prerequisites": [
+        "APM_TQM_PRINCIPLES",
+        "APM_VALUE_CHAIN"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 8,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_CHANGE_MANAGEMENT",
+      "name": "Change Management & Performance System Implementation",
+      "grade": 3,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_PM_SYSTEM_DESIGN"
+      ],
+      "key_prerequisites": [
+        "APM_PM_SYSTEM_DESIGN"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "APM_STRATEGIC_ALIGNMENT",
+      "name": "Strategy Execution & Organizational Alignment",
+      "grade": 3,
+      "strand": "Strategic Planning",
+      "prerequisites": [
+        "APM_CHANGE_MANAGEMENT",
+        "APM_VALUE_BASED_MGMT"
+      ],
+      "key_prerequisites": [
+        "APM_CHANGE_MANAGEMENT",
+        "APM_VALUE_BASED_MGMT"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 10,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# Render blueprint for the HOREB engine.
+# In Render: New → Blueprint → connect this repo → it reads this file.
+# Render injects PORT automatically; the server already honors it.
+services:
+  - type: web
+    name: horeb-engine
+    runtime: docker
+    dockerfilePath: ./engine/Dockerfile
+    dockerContext: ./engine
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ENGINE_HOST
+        value: 0.0.0.0

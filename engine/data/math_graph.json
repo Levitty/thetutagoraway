@@ -1,0 +1,4275 @@
+{
+  "subject": "math",
+  "strands": [
+    "Numbers",
+    "Algebra",
+    "Geometry",
+    "Measurements",
+    "Statistics"
+  ],
+  "grades": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "skill_count": 202,
+  "skills": [
+    {
+      "id": "G5_PLACE_VALUE",
+      "name": "Place Value (Thousands)",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_ADDITION",
+      "name": "Addition (Multi-digit)",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_SUBTRACTION",
+      "name": "Subtraction (Multi-digit)",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_MULTIPLICATION",
+      "name": "Multiplication (2-digit × 1-digit)",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_DIVISION",
+      "name": "Division (by 1-digit)",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_FACTORS",
+      "name": "Factors of a Number",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_MULTIPLICATION",
+        "G5_DIVISION"
+      ],
+      "key_prerequisites": [
+        "G5_MULTIPLICATION",
+        "G5_DIVISION"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_MULTIPLES",
+      "name": "Multiples of a Number",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_MULTIPLICATION"
+      ],
+      "key_prerequisites": [
+        "G5_MULTIPLICATION"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_FRACTIONS_INTRO",
+      "name": "Understanding Fractions",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_FRACTIONS_EQUIV",
+      "name": "Equivalent Fractions",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_FRACTIONS_INTRO",
+        "G5_MULTIPLICATION"
+      ],
+      "key_prerequisites": [
+        "G5_FRACTIONS_INTRO",
+        "G5_MULTIPLICATION"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_FRACTIONS_ADD_LIKE",
+      "name": "Adding Fractions (Like Denominators)",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_FRACTIONS_INTRO",
+        "G5_ADDITION"
+      ],
+      "key_prerequisites": [
+        "G5_FRACTIONS_INTRO",
+        "G5_ADDITION"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_FRACTIONS_SUB_LIKE",
+      "name": "Subtracting Fractions (Like Denominators)",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_FRACTIONS_INTRO",
+        "G5_SUBTRACTION"
+      ],
+      "key_prerequisites": [
+        "G5_FRACTIONS_INTRO",
+        "G5_SUBTRACTION"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_DECIMALS_INTRO",
+      "name": "Understanding Decimals",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_FRACTIONS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G5_FRACTIONS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_DECIMALS_ADD",
+      "name": "Adding Decimals",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_DECIMALS_INTRO",
+        "G5_ADDITION"
+      ],
+      "key_prerequisites": [
+        "G5_DECIMALS_INTRO",
+        "G5_ADDITION"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_DECIMALS_SUB",
+      "name": "Subtracting Decimals",
+      "grade": 5,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_DECIMALS_INTRO",
+        "G5_SUBTRACTION"
+      ],
+      "key_prerequisites": [
+        "G5_DECIMALS_INTRO",
+        "G5_SUBTRACTION"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_PATTERNS",
+      "name": "Number Patterns",
+      "grade": 5,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G5_ADDITION",
+        "G5_MULTIPLICATION"
+      ],
+      "key_prerequisites": [
+        "G5_ADDITION",
+        "G5_MULTIPLICATION"
+      ],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_MISSING_NUMBER",
+      "name": "Finding the Missing Number",
+      "grade": 5,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G5_ADDITION",
+        "G5_SUBTRACTION"
+      ],
+      "key_prerequisites": [
+        "G5_ADDITION",
+        "G5_SUBTRACTION"
+      ],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_ANGLES_INTRO",
+      "name": "Types of Angles",
+      "grade": 5,
+      "strand": "Geometry",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_TRIANGLES_INTRO",
+      "name": "Types of Triangles",
+      "grade": 5,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G5_ANGLES_INTRO"
+      ],
+      "key_prerequisites": [
+        "G5_ANGLES_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_LINES",
+      "name": "Parallel & Perpendicular Lines",
+      "grade": 5,
+      "strand": "Geometry",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_LENGTH",
+      "name": "Measuring Length (cm, m, km)",
+      "grade": 5,
+      "strand": "Measurements",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_MASS",
+      "name": "Measuring Mass (g, kg)",
+      "grade": 5,
+      "strand": "Measurements",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_TIME",
+      "name": "Telling Time & Duration",
+      "grade": 5,
+      "strand": "Measurements",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_PERIMETER_INTRO",
+      "name": "Perimeter of Rectangles",
+      "grade": 5,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G5_ADDITION",
+        "G5_LENGTH"
+      ],
+      "key_prerequisites": [
+        "G5_ADDITION",
+        "G5_LENGTH"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_AREA_INTRO",
+      "name": "Area of Rectangles (Counting Squares)",
+      "grade": 5,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G5_MULTIPLICATION"
+      ],
+      "key_prerequisites": [
+        "G5_MULTIPLICATION"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_TALLY",
+      "name": "Tally Charts & Frequency Tables",
+      "grade": 5,
+      "strand": "Statistics",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_BAR_GRAPHS",
+      "name": "Reading Bar Graphs",
+      "grade": 5,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G5_TALLY"
+      ],
+      "key_prerequisites": [
+        "G5_TALLY"
+      ],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G5_PICTOGRAPHS",
+      "name": "Reading Pictographs",
+      "grade": 5,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G5_TALLY"
+      ],
+      "key_prerequisites": [
+        "G5_TALLY"
+      ],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_PLACE_VALUE",
+      "name": "Place Value (Millions)",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_PLACE_VALUE"
+      ],
+      "key_prerequisites": [
+        "G5_PLACE_VALUE"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_BODMAS_BASIC",
+      "name": "Order of Operations (BODMAS)",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_ADDITION",
+        "G5_SUBTRACTION",
+        "G5_MULTIPLICATION",
+        "G5_DIVISION"
+      ],
+      "key_prerequisites": [
+        "G5_ADDITION",
+        "G5_SUBTRACTION",
+        "G5_MULTIPLICATION",
+        "G5_DIVISION"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_FRACTIONS_ADD",
+      "name": "Adding Fractions (Unlike Denominators)",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_FRACTIONS_ADD_LIKE",
+        "G5_FRACTIONS_EQUIV",
+        "G5_MULTIPLES"
+      ],
+      "key_prerequisites": [
+        "G5_FRACTIONS_ADD_LIKE",
+        "G5_FRACTIONS_EQUIV",
+        "G5_MULTIPLES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_FRACTIONS_SUB",
+      "name": "Subtracting Fractions (Unlike Denominators)",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_FRACTIONS_SUB_LIKE",
+        "G5_FRACTIONS_EQUIV",
+        "G5_MULTIPLES"
+      ],
+      "key_prerequisites": [
+        "G5_FRACTIONS_SUB_LIKE",
+        "G5_FRACTIONS_EQUIV",
+        "G5_MULTIPLES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_FRACTIONS_MUL",
+      "name": "Multiplying Fractions",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_FRACTIONS_INTRO",
+        "G5_MULTIPLICATION"
+      ],
+      "key_prerequisites": [
+        "G5_FRACTIONS_INTRO",
+        "G5_MULTIPLICATION"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_FRACTIONS_DIV",
+      "name": "Dividing Fractions",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_FRACTIONS_MUL"
+      ],
+      "key_prerequisites": [
+        "G6_FRACTIONS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_MIXED_NUMBERS",
+      "name": "Mixed Numbers & Improper Fractions",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_FRACTIONS_ADD"
+      ],
+      "key_prerequisites": [
+        "G6_FRACTIONS_ADD"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_DECIMALS_MUL",
+      "name": "Multiplying Decimals",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_DECIMALS_INTRO",
+        "G5_MULTIPLICATION"
+      ],
+      "key_prerequisites": [
+        "G5_DECIMALS_INTRO",
+        "G5_MULTIPLICATION"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_DECIMALS_DIV",
+      "name": "Dividing Decimals",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_DECIMALS_MUL"
+      ],
+      "key_prerequisites": [
+        "G6_DECIMALS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_FRACTIONS_DECIMALS",
+      "name": "Converting Fractions & Decimals",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_FRACTIONS_INTRO",
+        "G5_DECIMALS_INTRO",
+        "G5_DIVISION"
+      ],
+      "key_prerequisites": [
+        "G5_FRACTIONS_INTRO",
+        "G5_DECIMALS_INTRO",
+        "G5_DIVISION"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_PERCENTAGES_INTRO",
+      "name": "Understanding Percentages",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_FRACTIONS_DECIMALS"
+      ],
+      "key_prerequisites": [
+        "G6_FRACTIONS_DECIMALS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_RATIOS",
+      "name": "Ratios & Proportions",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_FRACTIONS_MUL",
+        "G5_DIVISION"
+      ],
+      "key_prerequisites": [
+        "G6_FRACTIONS_MUL",
+        "G5_DIVISION"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_INTEGERS_INTRO",
+      "name": "Introduction to Integers",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_INTEGERS_ADD_SUB",
+      "name": "Adding & Subtracting Integers",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_INTEGERS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G6_INTEGERS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_SQUARES",
+      "name": "Squares (1-12)",
+      "grade": 6,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_MULTIPLICATION"
+      ],
+      "key_prerequisites": [
+        "G5_MULTIPLICATION"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.9,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_PATTERNS",
+      "name": "Number Patterns & Sequences",
+      "grade": 6,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G5_PATTERNS",
+        "G5_ADDITION",
+        "G5_MULTIPLICATION"
+      ],
+      "key_prerequisites": [
+        "G5_PATTERNS",
+        "G5_ADDITION",
+        "G5_MULTIPLICATION"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_SIMPLE_EQUATIONS",
+      "name": "Simple Equations (x + a = b)",
+      "grade": 6,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G5_MISSING_NUMBER",
+        "G5_ADDITION",
+        "G5_SUBTRACTION"
+      ],
+      "key_prerequisites": [
+        "G5_MISSING_NUMBER",
+        "G5_ADDITION",
+        "G5_SUBTRACTION"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_ANGLE_MEASURE",
+      "name": "Measuring Angles with Protractor",
+      "grade": 6,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G5_ANGLES_INTRO"
+      ],
+      "key_prerequisites": [
+        "G5_ANGLES_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_ANGLE_PROPERTIES",
+      "name": "Angles on a Line & at a Point",
+      "grade": 6,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G6_ANGLE_MEASURE"
+      ],
+      "key_prerequisites": [
+        "G6_ANGLE_MEASURE"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_TRIANGLE_PROPERTIES",
+      "name": "Triangle Angle Sum",
+      "grade": 6,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G5_TRIANGLES_INTRO",
+        "G6_ANGLE_MEASURE"
+      ],
+      "key_prerequisites": [
+        "G5_TRIANGLES_INTRO",
+        "G6_ANGLE_MEASURE"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_SYMMETRY",
+      "name": "Lines of Symmetry",
+      "grade": 6,
+      "strand": "Geometry",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_PERIMETER",
+      "name": "Perimeter (All Shapes)",
+      "grade": 6,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G5_PERIMETER_INTRO",
+        "G6_DECIMALS_MUL"
+      ],
+      "key_prerequisites": [
+        "G5_PERIMETER_INTRO",
+        "G6_DECIMALS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_AREA_RECT",
+      "name": "Area of Rectangles & Squares",
+      "grade": 6,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G5_AREA_INTRO",
+        "G6_DECIMALS_MUL"
+      ],
+      "key_prerequisites": [
+        "G5_AREA_INTRO",
+        "G6_DECIMALS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_AREA_TRIANGLE",
+      "name": "Area of Triangles",
+      "grade": 6,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G6_AREA_RECT",
+        "G6_FRACTIONS_MUL"
+      ],
+      "key_prerequisites": [
+        "G6_AREA_RECT",
+        "G6_FRACTIONS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_VOLUME_CUBOID",
+      "name": "Volume of Cuboids",
+      "grade": 6,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G6_AREA_RECT"
+      ],
+      "key_prerequisites": [
+        "G6_AREA_RECT"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_UNIT_CONVERSIONS",
+      "name": "Unit Conversions (Length, Mass, Capacity)",
+      "grade": 6,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G6_DECIMALS_MUL",
+        "G6_DECIMALS_DIV"
+      ],
+      "key_prerequisites": [
+        "G6_DECIMALS_MUL",
+        "G6_DECIMALS_DIV"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_MEAN",
+      "name": "Finding the Mean",
+      "grade": 6,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G5_ADDITION",
+        "G5_DIVISION"
+      ],
+      "key_prerequisites": [
+        "G5_ADDITION",
+        "G5_DIVISION"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_PIE_CHARTS",
+      "name": "Reading Pie Charts",
+      "grade": 6,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G6_PERCENTAGES_INTRO",
+        "G6_ANGLE_MEASURE"
+      ],
+      "key_prerequisites": [
+        "G6_PERCENTAGES_INTRO",
+        "G6_ANGLE_MEASURE"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G6_DATA_COLLECTION",
+      "name": "Collecting & Organizing Data",
+      "grade": 6,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G5_TALLY"
+      ],
+      "key_prerequisites": [
+        "G5_TALLY"
+      ],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_PLACE_VALUE",
+      "name": "Place Value (Hundred Millions)",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_PLACE_VALUE"
+      ],
+      "key_prerequisites": [
+        "G6_PLACE_VALUE"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_BODMAS_ADV",
+      "name": "BODMAS (Advanced)",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_BODMAS_BASIC"
+      ],
+      "key_prerequisites": [
+        "G6_BODMAS_BASIC"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_PRIMES",
+      "name": "Prime vs Composite Numbers",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_FACTORS"
+      ],
+      "key_prerequisites": [
+        "G5_FACTORS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_DIVISIBILITY",
+      "name": "Divisibility Tests",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_PRIMES"
+      ],
+      "key_prerequisites": [
+        "G7_PRIMES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_PRIME_FACTORIZATION",
+      "name": "Prime Factorization",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_DIVISIBILITY"
+      ],
+      "key_prerequisites": [
+        "G7_DIVISIBILITY"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_GCD",
+      "name": "Greatest Common Divisor (GCD)",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_PRIME_FACTORIZATION"
+      ],
+      "key_prerequisites": [
+        "G7_PRIME_FACTORIZATION"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_LCM",
+      "name": "Least Common Multiple (LCM)",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_PRIME_FACTORIZATION"
+      ],
+      "key_prerequisites": [
+        "G7_PRIME_FACTORIZATION"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_FRACTIONS_COMPARE",
+      "name": "Comparing & Ordering Fractions",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_FRACTIONS_ADD"
+      ],
+      "key_prerequisites": [
+        "G6_FRACTIONS_ADD"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_FRACTIONS_ADD_UNLIKE",
+      "name": "Adding Fractions (Unlike, Advanced)",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_FRACTIONS_COMPARE",
+        "G7_LCM"
+      ],
+      "key_prerequisites": [
+        "G7_FRACTIONS_COMPARE",
+        "G7_LCM"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_FRACTIONS_MUL",
+      "name": "Multiplying Fractions (Advanced)",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_FRACTIONS_MUL",
+        "G7_FRACTIONS_COMPARE"
+      ],
+      "key_prerequisites": [
+        "G6_FRACTIONS_MUL",
+        "G7_FRACTIONS_COMPARE"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_RECIPROCALS",
+      "name": "Reciprocals",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_FRACTIONS_MUL"
+      ],
+      "key_prerequisites": [
+        "G7_FRACTIONS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_FRACTIONS_DIV",
+      "name": "Dividing Fractions (Advanced)",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_FRACTIONS_MUL",
+        "G7_RECIPROCALS"
+      ],
+      "key_prerequisites": [
+        "G7_FRACTIONS_MUL",
+        "G7_RECIPROCALS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_DECIMAL_PV",
+      "name": "Decimal Place Value (Advanced)",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G5_DECIMALS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G5_DECIMALS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_DECIMALS_MUL",
+      "name": "Multiplying Decimals (Advanced)",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_DECIMALS_MUL",
+        "G7_DECIMAL_PV"
+      ],
+      "key_prerequisites": [
+        "G6_DECIMALS_MUL",
+        "G7_DECIMAL_PV"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_DECIMALS_DIV",
+      "name": "Dividing Decimals (Advanced)",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_DECIMALS_MUL"
+      ],
+      "key_prerequisites": [
+        "G7_DECIMALS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_SQUARES_EXT",
+      "name": "Squares (Extended)",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_SQUARES",
+        "G7_FRACTIONS_MUL",
+        "G7_DECIMALS_MUL"
+      ],
+      "key_prerequisites": [
+        "G6_SQUARES",
+        "G7_FRACTIONS_MUL",
+        "G7_DECIMALS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_SQUARE_ROOTS",
+      "name": "Square Roots",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_SQUARES_EXT",
+        "G7_PRIME_FACTORIZATION"
+      ],
+      "key_prerequisites": [
+        "G7_SQUARES_EXT",
+        "G7_PRIME_FACTORIZATION"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_INTEGERS_MUL_DIV",
+      "name": "Multiplying & Dividing Integers",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_INTEGERS_ADD_SUB",
+        "G5_MULTIPLICATION",
+        "G5_DIVISION"
+      ],
+      "key_prerequisites": [
+        "G6_INTEGERS_ADD_SUB",
+        "G5_MULTIPLICATION",
+        "G5_DIVISION"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_PERCENTAGES",
+      "name": "Percentage Calculations",
+      "grade": 7,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_PERCENTAGES_INTRO",
+        "G7_DECIMALS_MUL"
+      ],
+      "key_prerequisites": [
+        "G6_PERCENTAGES_INTRO",
+        "G7_DECIMALS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_EXPRESSIONS",
+      "name": "Forming Algebraic Expressions",
+      "grade": 7,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G7_BODMAS_ADV"
+      ],
+      "key_prerequisites": [
+        "G7_BODMAS_ADV"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_SIMPLIFY",
+      "name": "Simplifying Expressions",
+      "grade": 7,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G7_EXPRESSIONS"
+      ],
+      "key_prerequisites": [
+        "G7_EXPRESSIONS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_EQUATIONS_FORM",
+      "name": "Forming Equations",
+      "grade": 7,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G7_SIMPLIFY"
+      ],
+      "key_prerequisites": [
+        "G7_SIMPLIFY"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_EQUATIONS_SOLVE",
+      "name": "Solving Linear Equations",
+      "grade": 7,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G7_EQUATIONS_FORM"
+      ],
+      "key_prerequisites": [
+        "G7_EQUATIONS_FORM"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_INEQUALITIES_INTRO",
+      "name": "Introduction to Inequalities",
+      "grade": 7,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G7_EQUATIONS_SOLVE"
+      ],
+      "key_prerequisites": [
+        "G7_EQUATIONS_SOLVE"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_PYTHAGORAS",
+      "name": "Pythagorean Theorem",
+      "grade": 7,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G7_SQUARES_EXT",
+        "G7_SQUARE_ROOTS"
+      ],
+      "key_prerequisites": [
+        "G7_SQUARES_EXT",
+        "G7_SQUARE_ROOTS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_LENGTH_CONV",
+      "name": "Length Conversions (Advanced)",
+      "grade": 7,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G6_UNIT_CONVERSIONS"
+      ],
+      "key_prerequisites": [
+        "G6_UNIT_CONVERSIONS"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_PERIMETER",
+      "name": "Perimeter (Advanced Shapes)",
+      "grade": 7,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G6_PERIMETER",
+        "G7_LENGTH_CONV"
+      ],
+      "key_prerequisites": [
+        "G6_PERIMETER",
+        "G7_LENGTH_CONV"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_CIRCUMFERENCE",
+      "name": "Circumference of Circles",
+      "grade": 7,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G7_DECIMALS_MUL",
+        "G7_PERIMETER"
+      ],
+      "key_prerequisites": [
+        "G7_DECIMALS_MUL",
+        "G7_PERIMETER"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_AREA_RECT",
+      "name": "Area of Rectangles (Advanced)",
+      "grade": 7,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G6_AREA_RECT",
+        "G7_DECIMALS_MUL"
+      ],
+      "key_prerequisites": [
+        "G6_AREA_RECT",
+        "G7_DECIMALS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_AREA_CIRCLE",
+      "name": "Area of Circles",
+      "grade": 7,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G7_CIRCUMFERENCE",
+        "G7_SQUARES_EXT"
+      ],
+      "key_prerequisites": [
+        "G7_CIRCUMFERENCE",
+        "G7_SQUARES_EXT"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_VOLUME_CUBOID",
+      "name": "Volume of Cuboids (Advanced)",
+      "grade": 7,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G6_VOLUME_CUBOID",
+        "G7_AREA_RECT"
+      ],
+      "key_prerequisites": [
+        "G6_VOLUME_CUBOID",
+        "G7_AREA_RECT"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_VOLUME_CYLINDER",
+      "name": "Volume of Cylinders",
+      "grade": 7,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G7_AREA_CIRCLE",
+        "G7_VOLUME_CUBOID"
+      ],
+      "key_prerequisites": [
+        "G7_AREA_CIRCLE",
+        "G7_VOLUME_CUBOID"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_SPEED",
+      "name": "Speed, Distance, Time",
+      "grade": 7,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G7_LENGTH_CONV",
+        "G7_DECIMALS_DIV",
+        "G5_TIME"
+      ],
+      "key_prerequisites": [
+        "G7_LENGTH_CONV",
+        "G7_DECIMALS_DIV",
+        "G5_TIME"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_MEAN_MEDIAN_MODE",
+      "name": "Mean, Median, Mode",
+      "grade": 7,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G6_MEAN"
+      ],
+      "key_prerequisites": [
+        "G6_MEAN"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_DATA_REPRESENT",
+      "name": "Data Representation (Bar, Line, Pie)",
+      "grade": 7,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G6_PIE_CHARTS",
+        "G7_PERCENTAGES"
+      ],
+      "key_prerequisites": [
+        "G6_PIE_CHARTS",
+        "G7_PERCENTAGES"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_INDICES_INTRO",
+      "name": "Introduction to Indices",
+      "grade": 8,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_SQUARES_EXT",
+        "G7_INTEGERS_MUL_DIV"
+      ],
+      "key_prerequisites": [
+        "G7_SQUARES_EXT",
+        "G7_INTEGERS_MUL_DIV"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_INDICES_LAWS",
+      "name": "Laws of Indices",
+      "grade": 8,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G8_INDICES_INTRO"
+      ],
+      "key_prerequisites": [
+        "G8_INDICES_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_STANDARD_FORM",
+      "name": "Standard Form (Scientific Notation)",
+      "grade": 8,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G8_INDICES_INTRO",
+        "G7_DECIMALS_MUL"
+      ],
+      "key_prerequisites": [
+        "G8_INDICES_INTRO",
+        "G7_DECIMALS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_CUBES_CUBE_ROOTS",
+      "name": "Cubes & Cube Roots",
+      "grade": 8,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_SQUARE_ROOTS",
+        "G8_INDICES_INTRO"
+      ],
+      "key_prerequisites": [
+        "G7_SQUARE_ROOTS",
+        "G8_INDICES_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_RATIO_PROPORTION",
+      "name": "Ratio & Proportion (Advanced)",
+      "grade": 8,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G6_RATIOS",
+        "G7_FRACTIONS_DIV"
+      ],
+      "key_prerequisites": [
+        "G6_RATIOS",
+        "G7_FRACTIONS_DIV"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_PERCENTAGE_CHANGE",
+      "name": "Percentage Increase & Decrease",
+      "grade": 8,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_PERCENTAGES"
+      ],
+      "key_prerequisites": [
+        "G7_PERCENTAGES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_PROFIT_LOSS",
+      "name": "Profit, Loss & Discount",
+      "grade": 8,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G8_PERCENTAGE_CHANGE"
+      ],
+      "key_prerequisites": [
+        "G8_PERCENTAGE_CHANGE"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_SIMPLE_INTEREST",
+      "name": "Simple Interest",
+      "grade": 8,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G8_PERCENTAGE_CHANGE"
+      ],
+      "key_prerequisites": [
+        "G8_PERCENTAGE_CHANGE"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_NUMBER_BASES",
+      "name": "Number Bases (Binary, Octal)",
+      "grade": 8,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_PRIME_FACTORIZATION"
+      ],
+      "key_prerequisites": [
+        "G7_PRIME_FACTORIZATION"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_EXPAND_BRACKETS",
+      "name": "Expanding Brackets",
+      "grade": 8,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G7_SIMPLIFY",
+        "G7_INTEGERS_MUL_DIV"
+      ],
+      "key_prerequisites": [
+        "G7_SIMPLIFY",
+        "G7_INTEGERS_MUL_DIV"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_FACTORIZE_COMMON",
+      "name": "Factorizing (Common Factor)",
+      "grade": 8,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_EXPAND_BRACKETS",
+        "G7_GCD"
+      ],
+      "key_prerequisites": [
+        "G8_EXPAND_BRACKETS",
+        "G7_GCD"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_LINEAR_EQ_ADV",
+      "name": "Linear Equations (Advanced)",
+      "grade": 8,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G7_EQUATIONS_SOLVE",
+        "G8_EXPAND_BRACKETS"
+      ],
+      "key_prerequisites": [
+        "G7_EQUATIONS_SOLVE",
+        "G8_EXPAND_BRACKETS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_SIMULTANEOUS_INTRO",
+      "name": "Simultaneous Equations (Introduction)",
+      "grade": 8,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_LINEAR_EQ_ADV"
+      ],
+      "key_prerequisites": [
+        "G8_LINEAR_EQ_ADV"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_INEQUALITIES",
+      "name": "Solving Inequalities",
+      "grade": 8,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G7_INEQUALITIES_INTRO",
+        "G8_LINEAR_EQ_ADV"
+      ],
+      "key_prerequisites": [
+        "G7_INEQUALITIES_INTRO",
+        "G8_LINEAR_EQ_ADV"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_SEQUENCES",
+      "name": "Arithmetic Sequences",
+      "grade": 8,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G6_PATTERNS",
+        "G7_EXPRESSIONS"
+      ],
+      "key_prerequisites": [
+        "G6_PATTERNS",
+        "G7_EXPRESSIONS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_COORDINATES",
+      "name": "Coordinate Geometry Basics",
+      "grade": 8,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G6_INTEGERS_ADD_SUB"
+      ],
+      "key_prerequisites": [
+        "G6_INTEGERS_ADD_SUB"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_LINEAR_GRAPHS",
+      "name": "Plotting Linear Graphs",
+      "grade": 8,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_COORDINATES",
+        "G7_EQUATIONS_SOLVE"
+      ],
+      "key_prerequisites": [
+        "G8_COORDINATES",
+        "G7_EQUATIONS_SOLVE"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_GRADIENT",
+      "name": "Gradient of a Line",
+      "grade": 8,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_LINEAR_GRAPHS",
+        "G7_FRACTIONS_DIV"
+      ],
+      "key_prerequisites": [
+        "G8_LINEAR_GRAPHS",
+        "G7_FRACTIONS_DIV"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_EQUATION_OF_LINE",
+      "name": "Equation of a Straight Line",
+      "grade": 8,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_GRADIENT",
+        "G8_LINEAR_EQ_ADV"
+      ],
+      "key_prerequisites": [
+        "G8_GRADIENT",
+        "G8_LINEAR_EQ_ADV"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_ANGLE_RELATIONSHIPS",
+      "name": "Angle Relationships (Parallel Lines)",
+      "grade": 8,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G6_ANGLE_PROPERTIES"
+      ],
+      "key_prerequisites": [
+        "G6_ANGLE_PROPERTIES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_POLYGON_ANGLES",
+      "name": "Angles in Polygons",
+      "grade": 8,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G6_TRIANGLE_PROPERTIES",
+        "G8_ANGLE_RELATIONSHIPS"
+      ],
+      "key_prerequisites": [
+        "G6_TRIANGLE_PROPERTIES",
+        "G8_ANGLE_RELATIONSHIPS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_CONGRUENCE",
+      "name": "Congruent Triangles",
+      "grade": 8,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G6_TRIANGLE_PROPERTIES"
+      ],
+      "key_prerequisites": [
+        "G6_TRIANGLE_PROPERTIES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_SIMILARITY",
+      "name": "Similar Figures",
+      "grade": 8,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G8_CONGRUENCE",
+        "G8_RATIO_PROPORTION"
+      ],
+      "key_prerequisites": [
+        "G8_CONGRUENCE",
+        "G8_RATIO_PROPORTION"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_TRANSFORMATIONS_INTRO",
+      "name": "Transformations (Reflection, Rotation)",
+      "grade": 8,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G8_COORDINATES",
+        "G6_SYMMETRY"
+      ],
+      "key_prerequisites": [
+        "G8_COORDINATES",
+        "G6_SYMMETRY"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_AREA_COMPOSITE",
+      "name": "Area of Composite Shapes",
+      "grade": 8,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G7_AREA_CIRCLE",
+        "G7_AREA_RECT",
+        "G6_AREA_TRIANGLE"
+      ],
+      "key_prerequisites": [
+        "G7_AREA_CIRCLE",
+        "G7_AREA_RECT",
+        "G6_AREA_TRIANGLE"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_SURFACE_AREA",
+      "name": "Surface Area (Cuboids, Cylinders)",
+      "grade": 8,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G7_AREA_CIRCLE",
+        "G7_AREA_RECT"
+      ],
+      "key_prerequisites": [
+        "G7_AREA_CIRCLE",
+        "G7_AREA_RECT"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_VOLUME_ADV",
+      "name": "Volume (Prisms, Cylinders)",
+      "grade": 8,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G7_VOLUME_CYLINDER"
+      ],
+      "key_prerequisites": [
+        "G7_VOLUME_CYLINDER"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_DENSITY",
+      "name": "Density & Mass",
+      "grade": 8,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G8_VOLUME_ADV",
+        "G7_DECIMALS_DIV",
+        "G5_MASS"
+      ],
+      "key_prerequisites": [
+        "G8_VOLUME_ADV",
+        "G7_DECIMALS_DIV",
+        "G5_MASS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_PROBABILITY_INTRO",
+      "name": "Introduction to Probability",
+      "grade": 8,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G6_FRACTIONS_DECIMALS"
+      ],
+      "key_prerequisites": [
+        "G6_FRACTIONS_DECIMALS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_PROBABILITY_COMBINED",
+      "name": "Combined Events & Tree Diagrams",
+      "grade": 8,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G8_PROBABILITY_INTRO",
+        "G7_FRACTIONS_MUL"
+      ],
+      "key_prerequisites": [
+        "G8_PROBABILITY_INTRO",
+        "G7_FRACTIONS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G8_CUMULATIVE_FREQ",
+      "name": "Cumulative Frequency",
+      "grade": 8,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G7_MEAN_MEDIAN_MODE",
+        "G8_LINEAR_GRAPHS"
+      ],
+      "key_prerequisites": [
+        "G7_MEAN_MEDIAN_MODE",
+        "G8_LINEAR_GRAPHS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_SURDS_INTRO",
+      "name": "Introduction to Surds",
+      "grade": 9,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G7_SQUARE_ROOTS",
+        "G8_INDICES_LAWS"
+      ],
+      "key_prerequisites": [
+        "G7_SQUARE_ROOTS",
+        "G8_INDICES_LAWS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_SURDS_OPERATIONS",
+      "name": "Operations with Surds",
+      "grade": 9,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G9_SURDS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G9_SURDS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_COMPOUND_INTEREST",
+      "name": "Compound Interest",
+      "grade": 9,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G8_SIMPLE_INTEREST",
+        "G8_INDICES_INTRO"
+      ],
+      "key_prerequisites": [
+        "G8_SIMPLE_INTEREST",
+        "G8_INDICES_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_COMMERCIAL_ARITH",
+      "name": "Commercial Arithmetic (Tax, Bills)",
+      "grade": 9,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G8_PERCENTAGE_CHANGE"
+      ],
+      "key_prerequisites": [
+        "G8_PERCENTAGE_CHANGE"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_QUADRATIC_EXPAND",
+      "name": "Expanding Double Brackets",
+      "grade": 9,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_EXPAND_BRACKETS"
+      ],
+      "key_prerequisites": [
+        "G8_EXPAND_BRACKETS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_QUADRATIC_FACTORIZE",
+      "name": "Factorizing Quadratics",
+      "grade": 9,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G9_QUADRATIC_EXPAND",
+        "G8_FACTORIZE_COMMON"
+      ],
+      "key_prerequisites": [
+        "G9_QUADRATIC_EXPAND",
+        "G8_FACTORIZE_COMMON"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_QUADRATIC_SOLVE",
+      "name": "Solving Quadratic Equations",
+      "grade": 9,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G9_QUADRATIC_FACTORIZE"
+      ],
+      "key_prerequisites": [
+        "G9_QUADRATIC_FACTORIZE"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_QUADRATIC_FORMULA",
+      "name": "Quadratic Formula",
+      "grade": 9,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G9_QUADRATIC_SOLVE",
+        "G9_SURDS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G9_QUADRATIC_SOLVE",
+        "G9_SURDS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_COMPLETING_SQUARE",
+      "name": "Completing the Square",
+      "grade": 9,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G9_QUADRATIC_EXPAND",
+        "G7_SQUARES_EXT"
+      ],
+      "key_prerequisites": [
+        "G9_QUADRATIC_EXPAND",
+        "G7_SQUARES_EXT"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_SIMULTANEOUS_ADV",
+      "name": "Simultaneous Equations (Advanced)",
+      "grade": 9,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_SIMULTANEOUS_INTRO",
+        "G9_QUADRATIC_SOLVE"
+      ],
+      "key_prerequisites": [
+        "G8_SIMULTANEOUS_INTRO",
+        "G9_QUADRATIC_SOLVE"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_VARIATION",
+      "name": "Direct & Inverse Variation",
+      "grade": 9,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_RATIO_PROPORTION",
+        "G8_LINEAR_EQ_ADV"
+      ],
+      "key_prerequisites": [
+        "G8_RATIO_PROPORTION",
+        "G8_LINEAR_EQ_ADV"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_FUNCTIONS_INTRO",
+      "name": "Introduction to Functions",
+      "grade": 9,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_LINEAR_GRAPHS",
+        "G7_EXPRESSIONS"
+      ],
+      "key_prerequisites": [
+        "G8_LINEAR_GRAPHS",
+        "G7_EXPRESSIONS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_QUADRATIC_GRAPHS",
+      "name": "Quadratic Graphs",
+      "grade": 9,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G9_QUADRATIC_SOLVE",
+        "G8_LINEAR_GRAPHS"
+      ],
+      "key_prerequisites": [
+        "G9_QUADRATIC_SOLVE",
+        "G8_LINEAR_GRAPHS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_CONSTRUCTION",
+      "name": "Geometric Constructions",
+      "grade": 9,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G8_ANGLE_RELATIONSHIPS",
+        "G6_ANGLE_MEASURE",
+        "G5_LINES"
+      ],
+      "key_prerequisites": [
+        "G8_ANGLE_RELATIONSHIPS",
+        "G6_ANGLE_MEASURE",
+        "G5_LINES"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_LOCI",
+      "name": "Loci & Locus",
+      "grade": 9,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G9_CONSTRUCTION",
+        "G7_CIRCUMFERENCE"
+      ],
+      "key_prerequisites": [
+        "G9_CONSTRUCTION",
+        "G7_CIRCUMFERENCE"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_CIRCLE_THEOREMS_INTRO",
+      "name": "Circle Theorems (Introduction)",
+      "grade": 9,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G8_ANGLE_RELATIONSHIPS",
+        "G6_TRIANGLE_PROPERTIES",
+        "G7_AREA_CIRCLE"
+      ],
+      "key_prerequisites": [
+        "G8_ANGLE_RELATIONSHIPS",
+        "G6_TRIANGLE_PROPERTIES",
+        "G7_AREA_CIRCLE"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_TRIG_INTRO",
+      "name": "Trigonometry (SOH CAH TOA)",
+      "grade": 9,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G7_PYTHAGORAS",
+        "G7_FRACTIONS_DIV"
+      ],
+      "key_prerequisites": [
+        "G7_PYTHAGORAS",
+        "G7_FRACTIONS_DIV"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_TRIG_PROBLEMS",
+      "name": "Trigonometry Word Problems",
+      "grade": 9,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G9_TRIG_INTRO"
+      ],
+      "key_prerequisites": [
+        "G9_TRIG_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_BEARINGS",
+      "name": "Bearings",
+      "grade": 9,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G9_TRIG_INTRO",
+        "G6_ANGLE_MEASURE"
+      ],
+      "key_prerequisites": [
+        "G9_TRIG_INTRO",
+        "G6_ANGLE_MEASURE"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_TRANSFORMATIONS_ADV",
+      "name": "Transformations (Translation, Enlargement)",
+      "grade": 9,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G8_TRANSFORMATIONS_INTRO",
+        "G8_SIMILARITY"
+      ],
+      "key_prerequisites": [
+        "G8_TRANSFORMATIONS_INTRO",
+        "G8_SIMILARITY"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_ARC_LENGTH",
+      "name": "Arc Length & Sector Area",
+      "grade": 9,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G7_CIRCUMFERENCE",
+        "G7_AREA_CIRCLE",
+        "G6_FRACTIONS_MUL"
+      ],
+      "key_prerequisites": [
+        "G7_CIRCUMFERENCE",
+        "G7_AREA_CIRCLE",
+        "G6_FRACTIONS_MUL"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_SURFACE_AREA_ADV",
+      "name": "Surface Area (Cones, Spheres)",
+      "grade": 9,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G8_SURFACE_AREA",
+        "G9_SURDS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G8_SURFACE_AREA",
+        "G9_SURDS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_VOLUME_ADV",
+      "name": "Volume (Cones, Spheres, Pyramids)",
+      "grade": 9,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G8_VOLUME_ADV",
+        "G7_AREA_CIRCLE"
+      ],
+      "key_prerequisites": [
+        "G8_VOLUME_ADV",
+        "G7_AREA_CIRCLE"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_GROUPED_DATA",
+      "name": "Grouped Data & Histograms",
+      "grade": 9,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G8_CUMULATIVE_FREQ",
+        "G7_MEAN_MEDIAN_MODE",
+        "G6_AREA_RECT"
+      ],
+      "key_prerequisites": [
+        "G8_CUMULATIVE_FREQ",
+        "G7_MEAN_MEDIAN_MODE",
+        "G6_AREA_RECT"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_PROBABILITY_ADV",
+      "name": "Probability (With/Without Replacement)",
+      "grade": 9,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G8_PROBABILITY_COMBINED"
+      ],
+      "key_prerequisites": [
+        "G8_PROBABILITY_COMBINED"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_SCATTER_PLOTS",
+      "name": "Scatter Plots & Correlation",
+      "grade": 9,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G8_COORDINATES",
+        "G7_DATA_REPRESENT"
+      ],
+      "key_prerequisites": [
+        "G8_COORDINATES",
+        "G7_DATA_REPRESENT"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_LOGARITHMS_INTRO",
+      "name": "Introduction to Logarithms",
+      "grade": 10,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G8_INDICES_LAWS"
+      ],
+      "key_prerequisites": [
+        "G8_INDICES_LAWS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_LOG_LAWS",
+      "name": "Laws of Logarithms",
+      "grade": 10,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G10_LOGARITHMS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G10_LOGARITHMS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_SURDS_ADV",
+      "name": "Surds (Rationalizing Denominators)",
+      "grade": 10,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G9_SURDS_OPERATIONS",
+        "G9_QUADRATIC_EXPAND"
+      ],
+      "key_prerequisites": [
+        "G9_SURDS_OPERATIONS",
+        "G9_QUADRATIC_EXPAND"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_POLYNOMIALS",
+      "name": "Polynomials & Long Division",
+      "grade": 10,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G9_QUADRATIC_FACTORIZE",
+        "G6_FRACTIONS_DIV"
+      ],
+      "key_prerequisites": [
+        "G9_QUADRATIC_FACTORIZE",
+        "G6_FRACTIONS_DIV"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_REMAINDER_THEOREM",
+      "name": "Remainder & Factor Theorem",
+      "grade": 10,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G10_POLYNOMIALS"
+      ],
+      "key_prerequisites": [
+        "G10_POLYNOMIALS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_PARTIAL_FRACTIONS",
+      "name": "Partial Fractions",
+      "grade": 10,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G10_POLYNOMIALS",
+        "G8_SIMULTANEOUS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G10_POLYNOMIALS",
+        "G8_SIMULTANEOUS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_SEQUENCES_ADV",
+      "name": "Arithmetic & Geometric Sequences",
+      "grade": 10,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_SEQUENCES",
+        "G9_FUNCTIONS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G8_SEQUENCES",
+        "G9_FUNCTIONS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_SERIES",
+      "name": "Arithmetic & Geometric Series",
+      "grade": 10,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G10_SEQUENCES_ADV"
+      ],
+      "key_prerequisites": [
+        "G10_SEQUENCES_ADV"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_BINOMIAL_THEOREM",
+      "name": "Binomial Expansion",
+      "grade": 10,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G10_SEQUENCES_ADV",
+        "G9_QUADRATIC_EXPAND"
+      ],
+      "key_prerequisites": [
+        "G10_SEQUENCES_ADV",
+        "G9_QUADRATIC_EXPAND"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_FUNCTIONS_ADV",
+      "name": "Functions (Composite & Inverse)",
+      "grade": 10,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G9_FUNCTIONS_INTRO",
+        "G8_LINEAR_EQ_ADV"
+      ],
+      "key_prerequisites": [
+        "G9_FUNCTIONS_INTRO",
+        "G8_LINEAR_EQ_ADV"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_EXPONENTIAL_GRAPHS",
+      "name": "Exponential & Log Graphs",
+      "grade": 10,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G10_LOGARITHMS_INTRO",
+        "G9_QUADRATIC_GRAPHS"
+      ],
+      "key_prerequisites": [
+        "G10_LOGARITHMS_INTRO",
+        "G9_QUADRATIC_GRAPHS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_CIRCLE_THEOREMS_ADV",
+      "name": "Circle Theorems (Advanced)",
+      "grade": 10,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G9_CIRCLE_THEOREMS_INTRO",
+        "G8_ANGLE_RELATIONSHIPS"
+      ],
+      "key_prerequisites": [
+        "G9_CIRCLE_THEOREMS_INTRO",
+        "G8_ANGLE_RELATIONSHIPS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_TRIG_IDENTITIES",
+      "name": "Trigonometric Identities",
+      "grade": 10,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G9_TRIG_INTRO",
+        "G9_QUADRATIC_SOLVE"
+      ],
+      "key_prerequisites": [
+        "G9_TRIG_INTRO",
+        "G9_QUADRATIC_SOLVE"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_TRIG_EQUATIONS",
+      "name": "Solving Trigonometric Equations",
+      "grade": 10,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G10_TRIG_IDENTITIES"
+      ],
+      "key_prerequisites": [
+        "G10_TRIG_IDENTITIES"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_SINE_COSINE_RULE",
+      "name": "Sine & Cosine Rule",
+      "grade": 10,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G9_TRIG_INTRO",
+        "G9_QUADRATIC_FORMULA"
+      ],
+      "key_prerequisites": [
+        "G9_TRIG_INTRO",
+        "G9_QUADRATIC_FORMULA"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_3D_TRIG",
+      "name": "3D Trigonometry",
+      "grade": 10,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G10_SINE_COSINE_RULE",
+        "G7_PYTHAGORAS"
+      ],
+      "key_prerequisites": [
+        "G10_SINE_COSINE_RULE",
+        "G7_PYTHAGORAS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_VECTORS_INTRO",
+      "name": "Introduction to Vectors",
+      "grade": 10,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G8_COORDINATES",
+        "G7_PYTHAGORAS"
+      ],
+      "key_prerequisites": [
+        "G8_COORDINATES",
+        "G7_PYTHAGORAS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_VECTORS_OPS",
+      "name": "Vector Operations",
+      "grade": 10,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G10_VECTORS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G10_VECTORS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_PERMUTATIONS",
+      "name": "Permutations",
+      "grade": 10,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G8_INDICES_INTRO",
+        "G5_MULTIPLICATION"
+      ],
+      "key_prerequisites": [
+        "G8_INDICES_INTRO",
+        "G5_MULTIPLICATION"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_COMBINATIONS",
+      "name": "Combinations",
+      "grade": 10,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G10_PERMUTATIONS"
+      ],
+      "key_prerequisites": [
+        "G10_PERMUTATIONS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G10_PROBABILITY_DISTRIBUTIONS",
+      "name": "Probability Distributions",
+      "grade": 10,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G9_PROBABILITY_ADV",
+        "G10_COMBINATIONS"
+      ],
+      "key_prerequisites": [
+        "G9_PROBABILITY_ADV",
+        "G10_COMBINATIONS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_MATRICES_INTRO",
+      "name": "Introduction to Matrices",
+      "grade": 11,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_SIMULTANEOUS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G8_SIMULTANEOUS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_MATRICES_OPS",
+      "name": "Matrix Operations",
+      "grade": 11,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G11_MATRICES_INTRO"
+      ],
+      "key_prerequisites": [
+        "G11_MATRICES_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_MATRICES_INVERSE",
+      "name": "Inverse Matrices (2×2)",
+      "grade": 11,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G11_MATRICES_OPS"
+      ],
+      "key_prerequisites": [
+        "G11_MATRICES_OPS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_LINEAR_PROGRAMMING",
+      "name": "Linear Programming",
+      "grade": 11,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G8_INEQUALITIES",
+        "G8_LINEAR_GRAPHS"
+      ],
+      "key_prerequisites": [
+        "G8_INEQUALITIES",
+        "G8_LINEAR_GRAPHS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_LIMITS",
+      "name": "Limits & Continuity",
+      "grade": 11,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G10_FUNCTIONS_ADV",
+        "G9_QUADRATIC_GRAPHS"
+      ],
+      "key_prerequisites": [
+        "G10_FUNCTIONS_ADV",
+        "G9_QUADRATIC_GRAPHS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_DIFF_FIRST_PRINCIPLES",
+      "name": "Differentiation from First Principles",
+      "grade": 11,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G11_LIMITS"
+      ],
+      "key_prerequisites": [
+        "G11_LIMITS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_DIFF_POWER_RULE",
+      "name": "Differentiation (Power Rule)",
+      "grade": 11,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G11_DIFF_FIRST_PRINCIPLES",
+        "G8_INDICES_LAWS"
+      ],
+      "key_prerequisites": [
+        "G11_DIFF_FIRST_PRINCIPLES",
+        "G8_INDICES_LAWS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_DIFF_CHAIN_RULE",
+      "name": "Chain Rule",
+      "grade": 11,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G11_DIFF_POWER_RULE",
+        "G10_FUNCTIONS_ADV"
+      ],
+      "key_prerequisites": [
+        "G11_DIFF_POWER_RULE",
+        "G10_FUNCTIONS_ADV"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_DIFF_PRODUCT_QUOTIENT",
+      "name": "Product & Quotient Rule",
+      "grade": 11,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G11_DIFF_CHAIN_RULE"
+      ],
+      "key_prerequisites": [
+        "G11_DIFF_CHAIN_RULE"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_DIFF_APPLICATIONS",
+      "name": "Applications of Differentiation",
+      "grade": 11,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G11_DIFF_POWER_RULE",
+        "G9_QUADRATIC_GRAPHS"
+      ],
+      "key_prerequisites": [
+        "G11_DIFF_POWER_RULE",
+        "G9_QUADRATIC_GRAPHS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_STATIONARY_POINTS",
+      "name": "Stationary Points & Curve Sketching",
+      "grade": 11,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G11_DIFF_APPLICATIONS"
+      ],
+      "key_prerequisites": [
+        "G11_DIFF_APPLICATIONS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_TRIG_GRAPHS",
+      "name": "Trigonometric Graphs",
+      "grade": 11,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G10_TRIG_EQUATIONS",
+        "G9_QUADRATIC_GRAPHS"
+      ],
+      "key_prerequisites": [
+        "G10_TRIG_EQUATIONS",
+        "G9_QUADRATIC_GRAPHS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_TRIG_ADDITION",
+      "name": "Addition Formulae (sin, cos, tan)",
+      "grade": 11,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G10_TRIG_IDENTITIES"
+      ],
+      "key_prerequisites": [
+        "G10_TRIG_IDENTITIES"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_TRIG_DOUBLE_ANGLE",
+      "name": "Double Angle Formulae",
+      "grade": 11,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G11_TRIG_ADDITION"
+      ],
+      "key_prerequisites": [
+        "G11_TRIG_ADDITION"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_VECTORS_3D",
+      "name": "3D Vectors",
+      "grade": 11,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G10_VECTORS_OPS"
+      ],
+      "key_prerequisites": [
+        "G10_VECTORS_OPS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_BINOMIAL_DISTRIBUTION",
+      "name": "Binomial Distribution",
+      "grade": 11,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G10_PROBABILITY_DISTRIBUTIONS",
+        "G10_BINOMIAL_THEOREM"
+      ],
+      "key_prerequisites": [
+        "G10_PROBABILITY_DISTRIBUTIONS",
+        "G10_BINOMIAL_THEOREM"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G11_NORMAL_DISTRIBUTION",
+      "name": "Normal Distribution",
+      "grade": 11,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G11_BINOMIAL_DISTRIBUTION",
+        "G7_MEAN_MEDIAN_MODE"
+      ],
+      "key_prerequisites": [
+        "G11_BINOMIAL_DISTRIBUTION",
+        "G7_MEAN_MEDIAN_MODE"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_INTEGRATION_INTRO",
+      "name": "Introduction to Integration",
+      "grade": 12,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G11_DIFF_POWER_RULE"
+      ],
+      "key_prerequisites": [
+        "G11_DIFF_POWER_RULE"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_INTEGRATION_POWER",
+      "name": "Integration (Power Rule)",
+      "grade": 12,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G12_INTEGRATION_INTRO"
+      ],
+      "key_prerequisites": [
+        "G12_INTEGRATION_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_DEFINITE_INTEGRALS",
+      "name": "Definite Integrals",
+      "grade": 12,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G12_INTEGRATION_POWER"
+      ],
+      "key_prerequisites": [
+        "G12_INTEGRATION_POWER"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_AREA_UNDER_CURVE",
+      "name": "Area Under a Curve",
+      "grade": 12,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G12_DEFINITE_INTEGRALS",
+        "G9_QUADRATIC_GRAPHS"
+      ],
+      "key_prerequisites": [
+        "G12_DEFINITE_INTEGRALS",
+        "G9_QUADRATIC_GRAPHS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_INTEGRATION_BY_PARTS",
+      "name": "Integration by Parts",
+      "grade": 12,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G12_DEFINITE_INTEGRALS",
+        "G11_DIFF_PRODUCT_QUOTIENT"
+      ],
+      "key_prerequisites": [
+        "G12_DEFINITE_INTEGRALS",
+        "G11_DIFF_PRODUCT_QUOTIENT"
+      ],
+      "encompassings": [],
+      "weight": 7,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_INTEGRATION_SUBSTITUTION",
+      "name": "Integration by Substitution",
+      "grade": 12,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G12_DEFINITE_INTEGRALS",
+        "G11_DIFF_CHAIN_RULE"
+      ],
+      "key_prerequisites": [
+        "G12_DEFINITE_INTEGRALS",
+        "G11_DIFF_CHAIN_RULE"
+      ],
+      "encompassings": [],
+      "weight": 7,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_DIFF_EQ_INTRO",
+      "name": "Differential Equations (Separable)",
+      "grade": 12,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G12_INTEGRATION_POWER",
+        "G11_DIFF_POWER_RULE"
+      ],
+      "key_prerequisites": [
+        "G12_INTEGRATION_POWER",
+        "G11_DIFF_POWER_RULE"
+      ],
+      "encompassings": [],
+      "weight": 7,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_FURTHER_DIFF",
+      "name": "Further Differentiation (Trig, Exp, Log)",
+      "grade": 12,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G11_DIFF_CHAIN_RULE",
+        "G10_LOGARITHMS_INTRO",
+        "G10_TRIG_IDENTITIES"
+      ],
+      "key_prerequisites": [
+        "G11_DIFF_CHAIN_RULE",
+        "G10_LOGARITHMS_INTRO",
+        "G10_TRIG_IDENTITIES"
+      ],
+      "encompassings": [],
+      "weight": 7,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_FURTHER_INTEGRATION",
+      "name": "Further Integration (Trig, Partial Fractions)",
+      "grade": 12,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G12_INTEGRATION_SUBSTITUTION",
+        "G10_PARTIAL_FRACTIONS",
+        "G10_TRIG_IDENTITIES"
+      ],
+      "key_prerequisites": [
+        "G12_INTEGRATION_SUBSTITUTION",
+        "G10_PARTIAL_FRACTIONS",
+        "G10_TRIG_IDENTITIES"
+      ],
+      "encompassings": [],
+      "weight": 7,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_PROOF",
+      "name": "Mathematical Proof",
+      "grade": 12,
+      "strand": "Algebra",
+      "prerequisites": [
+        "G10_SEQUENCES_ADV",
+        "G8_INDICES_LAWS"
+      ],
+      "key_prerequisites": [
+        "G10_SEQUENCES_ADV",
+        "G8_INDICES_LAWS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_COMPLEX_NUMBERS",
+      "name": "Complex Numbers (Introduction)",
+      "grade": 12,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G9_QUADRATIC_FORMULA",
+        "G9_SURDS_OPERATIONS"
+      ],
+      "key_prerequisites": [
+        "G9_QUADRATIC_FORMULA",
+        "G9_SURDS_OPERATIONS"
+      ],
+      "encompassings": [],
+      "weight": 7,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_PARAMETRIC_EQ",
+      "name": "Parametric Equations",
+      "grade": 12,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G11_DIFF_CHAIN_RULE",
+        "G11_TRIG_GRAPHS"
+      ],
+      "key_prerequisites": [
+        "G11_DIFF_CHAIN_RULE",
+        "G11_TRIG_GRAPHS"
+      ],
+      "encompassings": [],
+      "weight": 7,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_POLAR_COORDS",
+      "name": "Polar Coordinates",
+      "grade": 12,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G12_PARAMETRIC_EQ",
+        "G9_TRIG_INTRO"
+      ],
+      "key_prerequisites": [
+        "G12_PARAMETRIC_EQ",
+        "G9_TRIG_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 7,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_VECTORS_ADV",
+      "name": "Vectors (Dot & Cross Product)",
+      "grade": 12,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G11_VECTORS_3D",
+        "G10_SINE_COSINE_RULE"
+      ],
+      "key_prerequisites": [
+        "G11_VECTORS_3D",
+        "G10_SINE_COSINE_RULE"
+      ],
+      "encompassings": [],
+      "weight": 7,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_HYPOTHESIS_TESTING",
+      "name": "Hypothesis Testing",
+      "grade": 12,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G11_NORMAL_DISTRIBUTION"
+      ],
+      "key_prerequisites": [
+        "G11_NORMAL_DISTRIBUTION"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G12_CORRELATION_REGRESSION",
+      "name": "Correlation & Regression",
+      "grade": 12,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G9_SCATTER_PLOTS",
+        "G8_GRADIENT"
+      ],
+      "key_prerequisites": [
+        "G9_SCATTER_PLOTS",
+        "G8_GRADIENT"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    }
+  ]
+}

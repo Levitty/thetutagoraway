@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tutagora-engine"
+version = "0.1.0"
+description = "Adaptive mastery learning engine (the Python brain for Tutagora)"
+requires-python = ">=3.9"
+dependencies = []  # core is pure stdlib — runs and tests with zero install
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["tutagora_engine*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
