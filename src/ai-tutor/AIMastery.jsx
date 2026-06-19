@@ -3,13 +3,18 @@
 // Adaptive learning based on "The Math Academy Way" — supports multiple subjects
 // ============================================================================
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
 import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
+import { getBrainProfile, getBrainSession } from './engineClient.js';
+import { logResponse } from './telemetry.js';
+import { supabase } from '../supabase.js';
 import { Icon } from './components/Icons.jsx';
+import { InteractiveVisual, SKILL_VISUALS } from './InteractiveVisual.jsx';
+import { checkVisualAnswer } from './content/visual.js';
 
 // ==================== SMART ANSWER MATCHING ====================
 // Normalizes math expressions so equivalent forms match:
@@ -111,6 +116,10 @@ export function AIMastery({ onBack, userId }) {
   const [kpIndex, setKpIndex] = useState(0);
   const [showWorkedExample, setShowWorkedExample] = useState(true);
   const [lessonFailCount, setLessonFailCount] = useState(0);
+  // CPA modality: 'abstract' (symbols) by default; escalates to 'concrete'
+  // (manipulatives / pictures) when the student struggles with a skill.
+  const [modalityLevel, setModalityLevel] = useState('abstract');
+  const [visualAnswer, setVisualAnswer] = useState(null);
 
   // Diagnostic state
   const [diagState, setDiagState] = useState({ skills: [], index: 0, balances: {}, results: {}, startTimes: {} });
@@ -133,6 +142,34 @@ export function AIMastery({ onBack, userId }) {
   const [activeTooltip, setActiveTooltip] = useState(null);
   const [expandedWhySteps, setExpandedWhySteps] = useState({});
   const [conceptsExpanded, setConceptsExpanded] = useState(true);
+
+  // Python "brain" overlay — richer measurement when the engine is reachable.
+  // Falls back silently to the JS engine when it isn't (e.g. in production).
+  const [brainProfile, setBrainProfile] = useState(null);
+  const [brainPath, setBrainPath] = useState(null);
+
+  // Per-problem timer for telemetry (reset whenever the problem changes).
+  const problemStartRef = useRef(Date.now());
+  useEffect(() => { problemStartRef.current = Date.now(); }, [problem]);
+
+  // Join-a-class affordance (student enrolls with a teacher's code).
+  const [showJoin, setShowJoin] = useState(false);
+  const [joinCode, setJoinCode] = useState('');
+  const [joinStatus, setJoinStatus] = useState(null); // null | 'joining' | 'ok' | error string
+
+  const joinClass = async () => {
+    const code = joinCode.trim();
+    if (!code) return;
+    setJoinStatus('joining');
+    const { error } = await supabase.rpc('join_class', { p_code: code });
+    if (error) {
+      setJoinStatus(error.message || 'Could not join');
+    } else {
+      setJoinStatus('ok');
+      setJoinCode('');
+      setTimeout(() => { setShowJoin(false); setJoinStatus(null); }, 1800);
+    }
+  };
 
   // ==================== INLINE COMPONENTS ====================
 
@@ -231,6 +268,42 @@ export function AIMastery({ onBack, userId }) {
     };
   }, []);
 
+  // Brain overlay: when on the home dashboard, ask the Python engine for the
+  // measured level + next-session plan. Null results => JS engine is used.
+  useEffect(() => {
+    let cancelled = false;
+    if (loading || !subjectId || view !== 'home' || !progress.diagnosed) {
+      setBrainProfile(null);
+      setBrainPath(null);
+      return;
+    }
+    (async () => {
+      const [profile, recs] = await Promise.all([
+        getBrainProfile(progress, subjectId),
+        getBrainSession(progress, subjectId, 8),
+      ]);
+      if (cancelled) return;
+      setBrainProfile(profile);
+      if (recs) {
+        // Map brain recommendations into the path-item shape the UI renders.
+        const kindToType = { remediate: 'gap', review: 'review', learn: 'learn', stretch: 'stretch' };
+        setBrainPath(recs.map(r => ({
+          id: r.skill_id,
+          name: r.name,
+          grade: r.grade,
+          strand: r.strand,
+          type: kindToType[r.kind] || 'learn',
+          reason: r.reason,
+          critical: !!(sub?.skills?.[r.skill_id]?.critical),
+          _brain: true,
+        })));
+      } else {
+        setBrainPath(null);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [progress, subjectId, view, loading, sub]);
+
   // Review timer
   useEffect(() => {
     let interval;
@@ -263,6 +336,11 @@ export function AIMastery({ onBack, userId }) {
     const newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
     const newResults = { ...results, [skill.id]: { correct, timeTaken } };
 
+    logResponse({
+      studentId: userId, subject: subjectId, skillId: skill.id,
+      correct, problemType: problem?.type, timeMs: timeTaken, isDiagnostic: true,
+    });
+
     setFeedback(correct ? 'correct' : 'incorrect');
 
     setTimeout(() => {
@@ -293,9 +371,10 @@ export function AIMastery({ onBack, userId }) {
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
     setKpIndex(0);
     setLessonFailCount(0);
+    setModalityLevel('abstract');
     const we = generateWorkedExample(skillId);
     setShowWorkedExample(!!we);
-    setProblem(we ? null : generateProblem(skillId));
+    setProblem(we ? null : generateProblem(skillId, { level: 'abstract' }));
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
@@ -310,17 +389,22 @@ export function AIMastery({ onBack, userId }) {
 
   const startPractice = () => {
     setShowWorkedExample(false);
-    setProblem(generateProblem(activeSkill));
+    setProblem(generateProblem(activeSkill, { level: modalityLevel }));
     setAnswer('');
     setFeedback(null);
     setAttemptCount(0);
     setHintLevel(0);
     setActiveTooltip(null);
+    setVisualAnswer(null);
   };
 
   const checkAnswer = () => {
-    if (!answer.trim() || feedback) return;
-    const correct = checkAnswerMatch(answer, problem);
+    // Visual problems are answered by interaction (or by typing the coordinate).
+    const hasVisualAnswer = problem?.visual && visualAnswer != null;
+    if ((!answer.trim() && !hasVisualAnswer) || feedback) return;
+    const correct = hasVisualAnswer
+      ? checkVisualAnswer(visualAnswer, problem.visual)
+      : checkAnswerMatch(answer, problem);
     const newAttemptCount = attemptCount + 1;
     setAttemptCount(newAttemptCount);
 
@@ -338,6 +422,14 @@ export function AIMastery({ onBack, userId }) {
     // === FINAL RESULT (correct at any attempt, or 3rd-attempt fail) ===
     setFeedback(correct ? 'correct' : 'incorrect');
     if (!correct) setHintLevel(3); // Full reveal
+
+    // Telemetry: capture the response for the HOREB learning loop.
+    logResponse({
+      studentId: userId, subject: subjectId, skillId: activeSkill,
+      correct, problemType: problem?.type,
+      timeMs: Date.now() - problemStartRef.current,
+      hintsUsed: correct ? hintLevel : 3, attemptNo: newAttemptCount,
+    });
 
     const newSession = {
       correct: session.correct + (correct ? 1 : 0),
@@ -368,11 +460,14 @@ export function AIMastery({ onBack, userId }) {
 
     updatedSkills = { ...updatedSkills, [activeSkill]: updatedSp };
 
-    // Check for targeted remediation (2 consecutive failures on same KP)
+    // Struggling (2 failed problems in a row): first try teaching the concept a
+    // more CONCRETE way (manipulatives / pictures) before sending them back to
+    // prerequisites. This is the CPA "drop down a level" move.
     if (!correct) {
       const newFailCount = lessonFailCount + 1;
       setLessonFailCount(newFailCount);
       if (newFailCount >= 2) {
+        if (modalityLevel !== 'concrete') setModalityLevel('concrete');
         const remSkills = getRemediationSkills(activeSkill, kpIndex, progress, ctx);
         if (remSkills.length > 0) {
           setRemediationSkills(remSkills);
@@ -405,13 +500,14 @@ export function AIMastery({ onBack, userId }) {
   };
 
   const nextProblem = () => {
-    setProblem(generateProblem(activeSkill));
+    setProblem(generateProblem(activeSkill, { level: modalityLevel }));
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
     setAttemptCount(0);
     setHintLevel(0);
     setActiveTooltip(null);
+    setVisualAnswer(null);
   };
 
   // ==================== REVIEW (TIMED, INTERLEAVED) ====================
@@ -434,6 +530,12 @@ export function AIMastery({ onBack, userId }) {
     if (!answer.trim() || feedback) return;
     const skillId = reviewProblems[reviewIndex];
     const correct = checkAnswerMatch(answer, problem);
+
+    logResponse({
+      studentId: userId, subject: subjectId, skillId,
+      correct, problemType: problem?.type,
+      timeMs: Date.now() - problemStartRef.current, isReview: true,
+    });
 
     setFeedback(correct ? 'correct' : 'incorrect');
     setSession(s => ({ ...s, correct: s.correct + (correct ? 1 : 0), total: s.total + 1, streak: correct ? s.streak + 1 : 0 }));
@@ -679,11 +781,35 @@ export function AIMastery({ onBack, userId }) {
           {/* Practice Problem */}
           {!showWorkedExample && problem && (
             <>
+              {modalityLevel === 'concrete' && (
+                <div className="bg-indigo-900/30 border border-indigo-600/40 rounded-xl p-3 mb-3 text-sm text-indigo-200 flex items-center gap-2">
+                  <span>💡</span> Let's see this a different way — try it with the picture.
+                </div>
+              )}
               <div className="bg-slate-800 rounded-2xl p-6 mb-4">
                 <div className="text-lg mb-6 leading-relaxed">
                   <TermTooltip text={problem.question} definitions={problem.workedExample?.definitions || problem.definitions} />
                 </div>
-                <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50" autoFocus placeholder="Your answer..." />
+                {/* Visual ANSWER widget (the problem is answered by interaction) */}
+                {problem.visual ? (
+                  <InteractiveVisual
+                    visualType={problem.visual.type}
+                    visualData={problem.visual.data}
+                    onAnswer={setVisualAnswer}
+                    disabled={!!feedback}
+                  />
+                ) : (
+                  /* Otherwise, an exploratory manipulative if the skill has one */
+                  activeSkill && SKILL_VISUALS[activeSkill] && (
+                    <InteractiveVisual
+                      visualType={SKILL_VISUALS[activeSkill].visualType}
+                      visualData={SKILL_VISUALS[activeSkill].visualData}
+                      onAnswer={setVisualAnswer}
+                      disabled={!!feedback}
+                    />
+                  )
+                )}
+                <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50" autoFocus placeholder={problem.visual ? 'Click the grid above, or type the coordinate…' : 'Your answer...'} />
 
                 {/* Layered hint display — shown on wrong attempts before final reveal */}
                 {hintLevel >= 1 && !feedback && (
@@ -692,16 +818,20 @@ export function AIMastery({ onBack, userId }) {
                   </div>
                 )}
                 {hintLevel >= 2 && !feedback && (() => {
-                  const we = generateWorkedExample(activeSkill);
-                  if (!we) return null;
+                  // Prefer THIS problem's own solution steps; fall back to a
+                  // worked example for legacy skills without structured steps.
+                  const ownSteps = problem.solutionSteps;
+                  const we = ownSteps ? null : generateWorkedExample(activeSkill);
+                  const steps = ownSteps || we?.steps;
+                  if (!steps) return null;
                   return (
                     <div className="mt-3 p-3 bg-blue-900/20 border border-blue-700/30 rounded-lg text-sm">
                       <span className="font-semibold text-blue-400">Here are the first steps to guide you:</span>
                       <div className="mt-2 space-y-1">
-                        {we.steps.slice(0, 2).map((step, i) => (
+                        {steps.slice(0, 2).map((step, i) => (
                           <div key={i} className="flex gap-2 text-slate-300">
                             <span className="text-blue-400 font-bold">{i + 1}.</span>
-                            <TermTooltip text={step} definitions={we.definitions} />
+                            <TermTooltip text={step} definitions={we?.definitions} />
                           </div>
                         ))}
                       </div>
@@ -723,13 +853,17 @@ export function AIMastery({ onBack, userId }) {
                 <div className="rounded-xl p-4 mb-4 bg-red-900/50 border border-red-500">
                   <span className="text-red-400 font-semibold">Answer: <span className="font-mono">{problem.answer}</span></span>
                   {(() => {
-                    const we = generateWorkedExample(activeSkill);
-                    if (!we) return null;
+                    // Show how THIS problem is solved when we have its steps;
+                    // otherwise fall back to a worked example (legacy skills).
+                    const ownSteps = problem.solutionSteps;
+                    const we = ownSteps ? null : generateWorkedExample(activeSkill);
+                    const steps = ownSteps || we?.steps;
+                    if (!steps) return null;
                     return (
                       <div className="mt-3 pt-3 border-t border-red-700/30">
                         <span className="text-sm text-slate-400 mb-2 block">Here's the full worked solution:</span>
                         <div className="space-y-1">
-                          {we.steps.map((step, i) => (
+                          {steps.map((step, i) => (
                             <div key={i} className="flex gap-2 text-sm">
                               <span className="text-red-400/70 font-bold">{i + 1}.</span>
                               <span className="text-slate-300">{step}</span>
@@ -754,7 +888,7 @@ export function AIMastery({ onBack, userId }) {
                 ))}</div>
               </div>}
 
-              {!feedback ? <button onClick={checkAnswer} disabled={!answer.trim()} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">{attemptCount > 0 ? 'Try Again' : 'Check Answer'}</button>
+              {!feedback ? <button onClick={checkAnswer} disabled={!answer.trim() && !(problem.visual && visualAnswer != null)} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">{attemptCount > 0 ? 'Try Again' : 'Check Answer'}</button>
                 : <button onClick={nextProblem} className="w-full bg-blue-600 hover:bg-blue-500 rounded-xl py-4 font-semibold flex items-center justify-center gap-2 transition-colors">Next <Icon name="arrow" className="w-5 h-5" /></button>}
             </>
           )}
@@ -841,12 +975,17 @@ export function AIMastery({ onBack, userId }) {
 
   // ==================== RENDER: HOME DASHBOARD ====================
 
-  const path = getRecommendedPath(progress, ctx);
+  const jsPath = getRecommendedPath(progress, ctx);
   const gaps = findGaps(progress, ctx);
   const reviews = getReviews(progress, ctx);
   const strandStats = getStrandStats(progress, ctx);
   const gradeStats = getGradeStats(progress, ctx);
-  const estimatedGrade = getEstimatedGradeLevel(progress, ctx);
+  const jsGrade = getEstimatedGradeLevel(progress, ctx);
+
+  // Prefer the Python brain's measurement when available; else the JS engine.
+  const path = brainPath || jsPath;
+  const estimatedGrade = brainProfile ? Math.round(brainProfile.overall_level) : jsGrade;
+  const brainAccelerated = brainProfile?.accelerated;
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
@@ -882,7 +1021,36 @@ export function AIMastery({ onBack, userId }) {
             <div className="flex-1 h-1.5 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-amber-500 transition-all" style={{ width: `${level.progress}%` }} /></div>
             <span className="text-xs text-slate-400">Lv {level.level + 1}</span>
             <span className="text-xs text-slate-500 ml-2">{SKILL_COUNT} skills</span>
+            <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} className="ml-2 text-xs text-slate-400 hover:text-emerald-400 transition-colors" title="Join your class">
+              + Class
+            </button>
           </div>
+          {showJoin && (
+            <div className="mt-2 bg-slate-800/80 backdrop-blur rounded-xl px-4 py-3">
+              {joinStatus === 'ok' ? (
+                <p className="text-sm text-emerald-400">✓ Joined! Your teacher can now see your progress.</p>
+              ) : (
+                <>
+                  <p className="text-xs text-slate-400 mb-2">Enter the class code from your teacher:</p>
+                  <div className="flex gap-2">
+                    <input
+                      value={joinCode}
+                      onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
+                      onKeyDown={(e) => e.key === 'Enter' && joinClass()}
+                      placeholder="ABC123"
+                      className="flex-1 bg-slate-900 border border-slate-600 rounded-lg px-3 py-2 text-sm font-mono tracking-wider focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    />
+                    <button onClick={joinClass} disabled={joinStatus === 'joining' || !joinCode.trim()} className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 rounded-lg text-sm font-semibold transition-colors">
+                      {joinStatus === 'joining' ? '…' : 'Join'}
+                    </button>
+                  </div>
+                  {joinStatus && joinStatus !== 'joining' && joinStatus !== 'ok' && (
+                    <p className="text-xs text-red-400 mt-1.5">{joinStatus}</p>
+                  )}
+                </>
+              )}
+            </div>
+          )}
         </div>
       </div>
 
@@ -930,7 +1098,7 @@ export function AIMastery({ onBack, userId }) {
                   <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold ${s.type === 'gap' ? 'bg-red-600' : s.type === 'review' ? 'bg-blue-600' : 'bg-emerald-600'}`}>{i + 1}</div>
                   <div className="flex-1 text-left">
                     <div className="font-medium flex items-center gap-2">{s.name}{s.critical && <Icon name="zap" className="w-4 h-4 text-amber-400" />}</div>
-                    <div className="text-xs text-slate-400">{s.type === 'gap' ? `⚠️ ${s.reason}` : s.type === 'review' ? `🔄 Review (${s.daysSince}d ago)` : `Grade ${s.grade} — ${s.strand}`}</div>
+                    <div className="text-xs text-slate-400">{s._brain ? `${s.type === 'gap' ? '⚠️ ' : s.type === 'review' ? '🔄 ' : s.type === 'stretch' ? '🚀 ' : ''}${s.reason}` : s.type === 'gap' ? `⚠️ ${s.reason}` : s.type === 'review' ? `🔄 Review (${s.daysSince}d ago)` : `Grade ${s.grade} — ${s.strand}`}</div>
                   </div>
                   <Icon name="arrow" className="w-5 h-5 text-slate-500" />
                 </button>

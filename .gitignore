@@ -20,3 +20,8 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# HOREB telemetry / calibration transient artifacts
+# (raw event dumps and preview params are local; shipped params.v*.json IS tracked)
+engine/data/events.jsonl
+engine/data/params.preview.json

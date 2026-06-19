@@ -5,6 +5,11 @@
 // ============================================================================
 
 import { SKILLS } from './knowledgeGraph.js';
+import { STRUCTURED_CONTENT } from './content/index.js';
+
+// Structured, pedagogically-complete content (worked example + scaffolded steps
+// + hint ladder + misconception feedback + verified answers) lives in
+// ./content and takes precedence over the legacy generators below.
 
 // ==================== HELPERS ====================
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -1489,7 +1494,14 @@ const generators = {
 
 // ==================== MAIN EXPORT ====================
 
-export const generateProblem = (skillId) => {
+export const generateProblem = (skillId, opts = {}) => {
+  // Prefer authored structured content when present. `opts.level` lets the
+  // lesson request a concrete/pictorial representation (modality escalation).
+  const structured = STRUCTURED_CONTENT[skillId];
+  if (structured) {
+    try { return structured(opts); }
+    catch (e) { console.warn(`Structured content error for ${skillId}:`, e); }
+  }
   const gen = generators[skillId];
   if (!gen) {
     const skill = SKILLS[skillId];

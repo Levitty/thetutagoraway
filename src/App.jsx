@@ -1,15 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 import { VideoRoom } from './VideoRoom';
 import { PaymentModal } from './PaymentModal';
 import { Messaging, MessageButton, startConversation } from './Messaging';
 import { AIMastery } from './ai-tutor/AIMastery.jsx';
+import { TeacherDashboard } from './ai-tutor/TeacherDashboard.jsx';
 import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
 
 // ============ LOTTIE ANIMATION COMPONENT ============
-const Lottie = ({ src, width = 200, height = 200, loop = true }) => {
+const Lottie = ({ src, width = 200, height = 200, loop = true, fallback = null }) => {
+  const [failed, setFailed] = useState(false);
+  const ref = useRef(null);
+
   useEffect(() => {
     if (!document.querySelector('script[src*="lottie-player"]')) {
       const script = document.createElement('script');
@@ -18,13 +22,32 @@ const Lottie = ({ src, width = 200, height = 200, loop = true }) => {
     }
   }, []);
 
+  useEffect(() => {
+    // Check if the animation fails to load
+    const el = ref.current;
+    if (el) {
+      const handleError = () => setFailed(true);
+      el.addEventListener('error', handleError);
+      // Also check after a timeout in case error event doesn't fire
+      const timer = setTimeout(() => {
+        if (el && (!el.shadowRoot || el.shadowRoot.querySelector('.error'))) {
+          setFailed(true);
+        }
+      }, 5000);
+      return () => { el.removeEventListener('error', handleError); clearTimeout(timer); };
+    }
+  }, [src]);
+
+  if (failed && fallback) return fallback;
+
   return (
     <lottie-player
+      ref={ref}
       src={src}
       background="transparent"
       speed="1"
       style={{ width, height }}
-      loop={loop}
+      {...(loop ? { loop: true } : {})}
       autoplay
     />
   );
@@ -91,6 +114,248 @@ const Avatar = ({ src, name, size = 40 }) => (
   <img src={src || `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'U')}&background=10b981&color=fff`} alt={name} className="rounded-full object-cover bg-slate-200" style={{ width: size, height: size }} />
 );
 
+// ============ PRIVACY POLICY PAGE ============
+const PrivacyPolicyPage = ({ onBack }) => (
+  <div className="min-h-screen bg-white">
+    <div className="max-w-3xl mx-auto px-5 py-12">
+      <button onClick={onBack} className="mb-6 text-sm text-emerald-600 hover:text-emerald-700 flex items-center gap-1">
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+        Back
+      </button>
+      <h1 className="text-3xl font-bold text-slate-900 mb-2">Privacy Policy</h1>
+      <p className="text-slate-500 text-sm mb-8">Last updated: 20 March 2026</p>
+
+      <div className="prose prose-slate max-w-none space-y-6 text-slate-700 text-[15px] leading-relaxed">
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">1. Data Controller</h2>
+          <p>Tutagora Ltd ("Tutagora", "we", "us") is the data controller responsible for your personal data. We are registered in Kenya and operate the platform at tutagora.com.</p>
+          <p><strong>Contact:</strong> levitty@tutagora.com | +254 742 410 255 | Nairobi, Kenya</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">2. Data We Collect</h2>
+          <p><strong>For all users:</strong> Full name, email address, password (stored securely hashed), profile photo, and role (student or tutor).</p>
+          <p><strong>For students:</strong> Booking history, payment records, chat messages with tutors, AI learning progress (XP, streaks, practice data), and tutor reviews.</p>
+          <p><strong>For tutors:</strong> Phone number, bio, qualifications, subjects taught, hourly rate, availability schedule, national ID document (for identity verification), teaching certificates, earnings data, and verification status.</p>
+          <p><strong>Automatically collected:</strong> We do not use cookies for tracking. Basic usage data may be collected by our hosting provider.</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">3. How We Use Your Data</h2>
+          <p>We process your personal data for the following purposes: providing the tutoring platform and matching students with tutors; processing payments for lesson bookings; verifying tutor identity and qualifications (KYC); sending booking confirmations and platform notifications; improving the platform experience; and complying with legal obligations.</p>
+          <p>The legal basis for processing is: your consent (for account creation and sensitive data like ID documents), performance of a contract (for lesson bookings and payments), and legitimate interests (for platform security and improvement).</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">4. Third-Party Data Sharing</h2>
+          <p>We share personal data with the following third-party service providers who process data on our behalf:</p>
+          <p><strong>Supabase</strong> (database and authentication) - stores all user data. <strong>Paystack</strong> (payment processing, Nigeria/Global) - receives email and payment amounts for card transactions. <strong>Resend</strong> (email delivery, US) - receives names and email addresses for booking confirmations. <strong>Agora</strong> (video calls, Global) - processes audio/video streams during live lessons.</p>
+          <p>We do not sell your personal data to any third party.</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">5. Cross-Border Data Transfers</h2>
+          <p>Some of our service providers process data outside Kenya. Where data is transferred outside Kenya, we ensure appropriate safeguards are in place in accordance with the Kenya Data Protection Act, 2019. By using Tutagora, you consent to the transfer of your data to these providers for the purposes described above.</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">6. Data Retention</h2>
+          <p>We retain your personal data for as long as your account is active. If you delete your account, we will erase your personal data within 30 days, except where we are required to retain it by law (e.g., payment records for tax purposes, which are kept for 7 years). Tutor verification documents are deleted within 30 days of account deletion or verification rejection.</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">7. Your Rights</h2>
+          <p>Under the Kenya Data Protection Act, 2019 (Part IV), you have the right to: access your personal data; rectify inaccurate data; request erasure of your data (right to be forgotten); request a portable copy of your data; object to processing of your data; and withdraw consent at any time.</p>
+          <p>To exercise any of these rights, email us at <strong>levitty@tutagora.com</strong> or use the account settings in your dashboard. We will respond within 30 days.</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">8. Data Security</h2>
+          <p>We implement technical and organizational measures to protect your data, including: password hashing, row-level database security restricting access to your own data, private storage with signed URLs for sensitive documents, and contact information filtering in messages to prevent data leaks.</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">9. Children's Data</h2>
+          <p>Tutagora is intended for users aged 13 and above. Students under 18 should have parental consent before creating an account. We do not knowingly collect data from children under 13.</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">10. Complaints</h2>
+          <p>If you believe your data protection rights have been violated, you may lodge a complaint with the Office of the Data Protection Commissioner (ODPC) at <strong>complaints@odpc.go.ke</strong> or visit <strong>odpc.go.ke</strong>.</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">11. Changes to This Policy</h2>
+          <p>We may update this privacy policy from time to time. We will notify you of significant changes by email or a prominent notice on the platform. Continued use after changes constitutes acceptance.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+);
+
+// ============ COOKIE / PRIVACY BANNER ============
+const PrivacyBanner = ({ onAccept, onNavigate }) => (
+  <div className="fixed bottom-0 left-0 right-0 bg-slate-900 text-white p-4 z-40 shadow-lg">
+    <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-3">
+      <p className="text-sm text-slate-300 flex-1">
+        We use essential data to provide our tutoring service. By continuing, you agree to our{' '}
+        <button onClick={() => onNavigate('privacy')} className="text-emerald-400 underline hover:text-emerald-300">Privacy Policy</button>{' '}
+        in accordance with Kenya's Data Protection Act, 2019.
+      </p>
+      <div className="flex gap-2 flex-shrink-0">
+        <button onClick={onAccept} className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-medium rounded-lg transition-colors">
+          Accept
+        </button>
+      </div>
+    </div>
+  </div>
+);
+
+// ============ ACCOUNT SETTINGS / DATA RIGHTS ============
+const AccountSettings = ({ profile, user, onClose, onLogout }) => {
+  const [exporting, setExporting] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [deleteConfirm, setDeleteConfirm] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleExportData = async () => {
+    setExporting(true);
+    setMessage('');
+    try {
+      // Gather all user data from Supabase
+      const [profileRes, bookingsRes, paymentsRes, messagesRes, reviewsRes, progressRes] = await Promise.all([
+        supabase.from('profiles').select('*').eq('id', user.id),
+        supabase.from('bookings').select('*').or(`student_id.eq.${user.id},tutor_id.eq.${user.id}`),
+        supabase.from('payments').select('*').or(`student_id.eq.${user.id},tutor_id.eq.${user.id}`),
+        supabase.from('messages').select('*').or(`sender_id.eq.${user.id},receiver_id.eq.${user.id}`),
+        supabase.from('reviews').select('*').or(`student_id.eq.${user.id},tutor_id.eq.${user.id}`),
+        supabase.from('ai_tutor_progress').select('*').eq('user_id', user.id),
+      ]);
+
+      let tutorData = null;
+      if (profile?.role === 'tutor') {
+        const tutorRes = await supabase.from('tutors').select('*').eq('id', user.id);
+        tutorData = tutorRes.data;
+      }
+
+      const exportData = {
+        exported_at: new Date().toISOString(),
+        platform: 'Tutagora',
+        data_subject: profile?.full_name || user.email,
+        profile: profileRes.data,
+        tutor_profile: tutorData,
+        bookings: bookingsRes.data,
+        payments: paymentsRes.data,
+        messages: messagesRes.data,
+        reviews: reviewsRes.data,
+        ai_progress: progressRes.data,
+      };
+
+      const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `tutagora-data-export-${new Date().toISOString().split('T')[0]}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      setMessage('Your data has been downloaded.');
+    } catch (err) {
+      setMessage('Error exporting data. Please try again or contact levitty@tutagora.com');
+    }
+    setExporting(false);
+  };
+
+  const handleDeleteAccount = async () => {
+    if (deleteConfirm !== 'DELETE') return;
+    setDeleting(true);
+    setMessage('');
+    try {
+      // Delete user data from tables
+      await Promise.all([
+        supabase.from('messages').delete().or(`sender_id.eq.${user.id},receiver_id.eq.${user.id}`),
+        supabase.from('reviews').delete().or(`student_id.eq.${user.id},tutor_id.eq.${user.id}`),
+        supabase.from('ai_tutor_progress').delete().eq('user_id', user.id),
+      ]);
+
+      // Delete tutor-specific data
+      if (profile?.role === 'tutor') {
+        // Delete storage files
+        const { data: files } = await supabase.storage.from('tutor-documents').list(user.id);
+        if (files?.length) {
+          await supabase.storage.from('tutor-documents').remove(files.map(f => `${user.id}/${f.name}`));
+        }
+        await supabase.from('availability').delete().eq('tutor_id', user.id);
+        await supabase.from('tutors').delete().eq('id', user.id);
+      }
+
+      // Delete avatar
+      const { data: avatarFiles } = await supabase.storage.from('avatars').list(user.id);
+      if (avatarFiles?.length) {
+        await supabase.storage.from('avatars').remove(avatarFiles.map(f => `${user.id}/${f.name}`));
+      }
+
+      // Mark profile as deleted (keep shell for referential integrity, but clear PII)
+      await supabase.from('profiles').update({
+        full_name: 'Deleted User',
+        avatar_url: null,
+        email: null,
+      }).eq('id', user.id);
+
+      // Sign out
+      await supabase.auth.signOut();
+      onLogout();
+      alert('Your account has been deleted. Some anonymized records may be retained for legal compliance.');
+    } catch (err) {
+      setMessage('Error deleting account. Please contact levitty@tutagora.com for assistance.');
+      setDeleting(false);
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={onClose}>
+      <div className="bg-white rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+        <div className="p-6 border-b border-slate-100 flex justify-between items-center">
+          <h2 className="text-xl font-bold text-slate-900">Account & Data Settings</h2>
+          <button onClick={onClose} className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-400 hover:text-slate-600">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+
+        <div className="p-6 space-y-6">
+          {message && <div className="p-3 bg-blue-50 text-blue-700 text-sm rounded-xl">{message}</div>}
+
+          {/* Data Export */}
+          <div>
+            <h3 className="font-semibold text-slate-900 mb-2">Export Your Data</h3>
+            <p className="text-sm text-slate-500 mb-3">Download a copy of all your personal data stored on Tutagora. This includes your profile, bookings, payments, messages, and learning progress.</p>
+            <button onClick={handleExportData} disabled={exporting}
+              className="px-4 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-xl hover:bg-slate-800 disabled:opacity-50 transition-colors">
+              {exporting ? 'Preparing download...' : 'Download My Data (JSON)'}
+            </button>
+          </div>
+
+          <hr className="border-slate-100" />
+
+          {/* Delete Account */}
+          <div>
+            <h3 className="font-semibold text-red-600 mb-2">Delete Account</h3>
+            <p className="text-sm text-slate-500 mb-3">Permanently delete your account and all associated personal data. This action cannot be undone. Some anonymized transaction records may be retained for legal compliance (up to 7 years for payment records as required by Kenya tax law).</p>
+            <div className="bg-red-50 p-4 rounded-xl space-y-3">
+              <p className="text-sm text-red-700">Type <strong>DELETE</strong> to confirm:</p>
+              <input type="text" value={deleteConfirm} onChange={e => setDeleteConfirm(e.target.value)} placeholder="Type DELETE"
+                className="w-full px-3 py-2 border border-red-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
+              <button onClick={handleDeleteAccount} disabled={deleting || deleteConfirm !== 'DELETE'}
+                className="px-4 py-2.5 bg-red-600 text-white text-sm font-medium rounded-xl hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+                {deleting ? 'Deleting...' : 'Permanently Delete My Account'}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const LoadingSpinner = () => (
   <div className="flex flex-col items-center justify-center p-8">
     <Lottie src={ANIMATIONS.books} width={100} height={100} />
@@ -114,7 +379,20 @@ const useAuth = () => {
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       setUser(session?.user ?? null);
-      if (session?.user) fetchProfile(session.user.id);
+      if (session?.user) {
+        // Check if there's a pending role from Google OAuth signup
+        const pendingRole = localStorage.getItem('tutagora_pending_role');
+        const pendingName = localStorage.getItem('tutagora_pending_name');
+        if (pendingRole && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) {
+          // Update the profile with the selected role
+          const updateData = { role: pendingRole };
+          if (pendingName) updateData.full_name = pendingName;
+          await supabase.from('profiles').update(updateData).eq('id', session.user.id);
+          localStorage.removeItem('tutagora_pending_role');
+          localStorage.removeItem('tutagora_pending_name');
+        }
+        fetchProfile(session.user.id);
+      }
       else { setProfile(null); setLoading(false); }
     });
 
@@ -225,6 +503,17 @@ const useBookings = (userId, role, tutorId = null) => {
     if (userId) fetchBookings();
   }, [userId, tutorId]);
 
+  // Real-time subscription for new/updated bookings
+  useEffect(() => {
+    if (!userId) return;
+    const channel = supabase.channel('bookings-changes')
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'bookings' }, () => {
+        fetchBookings();
+      })
+      .subscribe();
+    return () => { supabase.removeChannel(channel); };
+  }, [userId, tutorId]);
+
   const fetchBookings = async () => {
     let query = supabase
       .from('bookings')
@@ -290,8 +579,9 @@ const sendBookingNotifications = async (booking, studentId) => {
     const lessonDate = booking.lesson_date;
     const lessonTime = booking.start_time?.slice(0, 5);
     const subject = booking.subject;
+    const lessonDateFormatted = new Date(lessonDate).toLocaleDateString('en-KE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
-    // 1. Send in-app message to tutor
+    // Send in-app message to tutor (emails are sent after payment confirmation in PaymentModal)
     if (tutorUserId) {
       await supabase.from('messages').insert({
         sender_id: studentId,
@@ -300,16 +590,51 @@ const sendBookingNotifications = async (booking, studentId) => {
       });
     }
 
-    // Email notifications are sent after payment success in PaymentModal
     console.log('Booking in-app notification sent successfully');
   } catch (err) {
     console.error('Error sending booking notifications:', err);
   }
 };
 
+// ============ LESSON START NOTIFICATION ============
+const sendLessonStartNotification = async (booking) => {
+  try {
+    const studentId = booking.student_id;
+    const studentEmail = booking.profiles?.email;
+    const studentName = booking.profiles?.full_name || 'Student';
+    const tutorName = booking.tutors?.profiles?.full_name || 'Tutor';
+    const subject = booking.subject || 'Lesson';
+    const tutorUserId = booking.tutors?.user_id || booking.tutor_id;
+
+    // 1. Send in-app message to student
+    if (studentId && tutorUserId) {
+      await supabase.from('messages').insert({
+        sender_id: tutorUserId,
+        receiver_id: studentId,
+        content: `Your ${subject} lesson is starting now! Click "Join Lesson" in your dashboard to connect.\n\n- ${tutorName}`
+      });
+    }
+
+    // 2. Send email notification to student
+    if (studentEmail) {
+      await sendEmail('lesson-reminder', studentEmail, {
+        participantName: studentName,
+        otherName: tutorName,
+        subject,
+        time: 'now',
+        participantType: 'student'
+      });
+    }
+
+    console.log('Lesson start notification sent to student');
+  } catch (err) {
+    console.error('Error sending lesson start notification:', err);
+  }
+};
+
 // ============ AUTH MODAL ============
-const AuthModal = ({ mode, setMode, onClose, onAuth }) => {
-  const [form, setForm] = useState({ name: '', email: '', password: '', role: 'student' });
+const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
+  const [form, setForm] = useState({ name: '', email: '', password: '', role: initialRole || 'student' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
@@ -343,8 +668,18 @@ const AuthModal = ({ mode, setMode, onClose, onAuth }) => {
 
   const handleGoogleSignIn = async () => {
     setError('');
+    // If registering, require role selection first
+    if (view === 'register' && !form.role) {
+      setError('Please select whether you are a Student or Tutor before continuing.');
+      return;
+    }
     setLoading(true);
     try {
+      // Store the selected role before OAuth redirect so we can apply it after
+      if (view === 'register' && form.role) {
+        localStorage.setItem('tutagora_pending_role', form.role);
+        localStorage.setItem('tutagora_pending_name', form.name || '');
+      }
       await onAuth.signInWithGoogle();
     } catch (err) {
       setError(err.message);
@@ -372,6 +707,22 @@ const AuthModal = ({ mode, setMode, onClose, onAuth }) => {
         {error && <div className="mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-xl border border-red-100">{error}</div>}
         {success && <div className="mb-4 p-3 bg-emerald-50 text-emerald-700 text-sm rounded-xl border border-emerald-100">{success}</div>}
 
+        {/* Role selection for register view - shown above Google button */}
+        {view === 'register' && (
+          <div className="space-y-3 mb-4">
+            <input placeholder="Full name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
+              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" />
+            <div className="flex gap-2">
+              <button type="button" onClick={() => setForm({ ...form, role: 'student' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'student' ? 'bg-emerald-500 text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                I'm a Student
+              </button>
+              <button type="button" onClick={() => setForm({ ...form, role: 'tutor' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'tutor' ? 'bg-emerald-500 text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                I'm a Tutor
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Google Sign In Button */}
         {view !== 'forgot' && (
           <>
@@ -387,25 +738,17 @@ const AuthModal = ({ mode, setMode, onClose, onAuth }) => {
         )}
 
         <form onSubmit={handleSubmit} className="space-y-3">
-          {view === 'register' && (
-            <>
-              <input placeholder="Full name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" required />
-              <div className="flex gap-2">
-                <button type="button" onClick={() => setForm({ ...form, role: 'student' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'student' ? 'bg-emerald-500 text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
-                  I'm a Student
-                </button>
-                <button type="button" onClick={() => setForm({ ...form, role: 'tutor' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'tutor' ? 'bg-emerald-500 text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
-                  I'm a Tutor
-                </button>
-              </div>
-            </>
-          )}
           <input type="email" placeholder="Email address" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
             className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" />
           {view !== 'forgot' && (
             <input type="password" placeholder="Password (min 6 characters)" required minLength={6} value={form.password} onChange={e => setForm({ ...form, password: e.target.value })}
               className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" />
+          )}
+          {view === 'register' && (
+            <label className="flex items-start gap-2 cursor-pointer">
+              <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-emerald-500 focus:ring-emerald-500" />
+              <span className="text-xs text-slate-500">I agree to Tutagora's <button type="button" onClick={() => window.open('/privacy', '_blank')} className="text-emerald-600 underline">Privacy Policy</button> and consent to the collection and processing of my personal data as described therein, in accordance with Kenya's Data Protection Act, 2019.</span>
+            </label>
           )}
           {view === 'login' && (
             <div className="text-right">
@@ -433,7 +776,7 @@ const AuthModal = ({ mode, setMode, onClose, onAuth }) => {
 };
 
 // ============ STUDENT DASHBOARD ============
-const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin }) => {
+const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings }) => {
   const [tab, setTab] = useState('upcoming');
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [reviewBooking, setReviewBooking] = useState(null);
@@ -681,6 +1024,10 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                   My Progress
                 </button>
+                {onOpenAccountSettings && <button onClick={onOpenAccountSettings} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-lg transition-colors">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573-1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  Account & Data
+                </button>}
                 <button onClick={onLogout} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
                   Sign Out
@@ -1077,7 +1424,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
     experience_years: '',
     teaching_style: '',
     languages: 'English, Kiswahili',
-    grade_levels: '',
+    grade_levels: [],
     phone_number: '',
   });
   const [agreedToTerms, setAgreedToTerms] = useState(false);
@@ -1093,8 +1440,8 @@ const TutorOnboarding = ({ profile, onComplete }) => {
     const path = `${profile.id}/${folder}-${Date.now()}.${ext}`;
     const { data, error } = await supabase.storage.from('tutor-documents').upload(path, file);
     if (error) throw new Error(`Upload failed: ${error.message}`);
-    const { data: urlData } = supabase.storage.from('tutor-documents').getPublicUrl(path);
-    return urlData.publicUrl;
+    // Store the path, not a public URL — documents are private and accessed via signed URLs
+    return path;
   };
 
   const handlePhotoSelect = (e) => {
@@ -1132,6 +1479,12 @@ const TutorOnboarding = ({ profile, onComplete }) => {
   const handleFinalSubmit = async (e) => {
     e.preventDefault();
     if (!agreedToTerms) { setError('You must agree to the Terms of Engagement to continue'); return; }
+    // Final safety check — all required fields must be present
+    if (!form.subjects?.length) { setError('Please select at least one subject'); return; }
+    if (!form.phone_number) { setError('Phone number is required'); return; }
+    if (!form.bio || form.bio.length < 100) { setError('A bio of at least 100 characters is required'); return; }
+    if (!idFile) { setError('National ID document is required'); return; }
+    if (!credentialFile) { setError('Teaching certificate is required'); return; }
 
     setSaving(true);
     setError('');
@@ -1161,7 +1514,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
         degree: form.degree,
         experience_years: form.experience_years ? parseInt(form.experience_years) : null,
         teaching_style: form.teaching_style,
-        languages: form.languages,
+        languages: form.languages ? form.languages.split(',').map(l => l.trim()).filter(Boolean) : [],
         grade_levels: form.grade_levels,
         phone_number: form.phone_number,
         verified: false,
@@ -1207,6 +1560,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
   };
 
   const subjects = ['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'];
+  const gradeOptions = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University'];
 
   const FileUpload = ({ label, hint, file, onFile }) => (
     <div>
@@ -1385,10 +1739,18 @@ const TutorOnboarding = ({ profile, onComplete }) => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Grade levels you teach</label>
-              <input type="text" value={form.grade_levels} onChange={(e) => setForm({ ...form, grade_levels: e.target.value })}
-                placeholder="e.g. Grade 4-8, Form 1-4, University"
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              <label className="block text-sm font-medium text-slate-700 mb-2">Grade levels you teach</label>
+              <div className="flex flex-wrap gap-2">
+                {gradeOptions.map(g => (
+                  <button key={g} type="button" onClick={() => {
+                    const current = form.grade_levels || [];
+                    setForm({ ...form, grade_levels: current.includes(g) ? current.filter(x => x !== g) : [...current, g] });
+                  }}
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${(form.grade_levels || []).includes(g) ? 'bg-emerald-500 text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                    {g}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div>
@@ -1445,7 +1807,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
                 </div>
                 <div className="flex gap-3 items-start">
                   <span className="w-6 h-6 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">2</span>
-                  <div><strong>Weekly Payouts:</strong> Earnings are paid out every Friday via M-Pesa to your registered phone number.</div>
+                  <div><strong>Weekly Payouts:</strong> Earnings are paid out every Friday via mobile money to your registered phone number.</div>
                 </div>
                 <div className="flex gap-3 items-start">
                   <span className="w-6 h-6 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">3</span>
@@ -1465,7 +1827,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
             <label className="flex items-start gap-3 cursor-pointer p-3 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
               <input type="checkbox" checked={agreedToTerms} onChange={(e) => setAgreedToTerms(e.target.checked)}
                 className="w-5 h-5 rounded border-slate-300 text-emerald-500 focus:ring-emerald-500 mt-0.5" />
-              <span className="text-sm text-slate-700">I have read and agree to the <strong>Terms of Engagement</strong>. I understand the platform fee structure and the code of conduct.</span>
+              <span className="text-sm text-slate-700">I have read and agree to the <strong>Terms of Engagement</strong> and <button type="button" onClick={() => window.open('/privacy', '_blank')} className="text-emerald-600 underline font-semibold">Privacy Policy</button>. I understand the platform fee structure and code of conduct. I explicitly consent to the collection and processing of my national ID and teaching certificates for identity verification, in accordance with the Kenya Data Protection Act, 2019.</span>
             </label>
 
             <button type="submit" disabled={saving || !agreedToTerms}
@@ -1482,15 +1844,26 @@ const TutorOnboarding = ({ profile, onComplete }) => {
 };
 
 // ============ TUTOR DASHBOARD ============
-const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, onNavigate, isAdmin }) => {
+const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, onNavigate, isAdmin, onOpenAccountSettings }) => {
   const [tab, setTab] = useState('overview');
+  const [resubmitting, setResubmitting] = useState(false);
   const tutor = profile?.tutors?.[0];
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
   const completed = bookings.filter(b => b.status === 'completed');
 
-  // Show onboarding if no tutor profile exists
-  if (!tutor) {
-    return <TutorOnboarding profile={profile} onComplete={onRefreshProfile} />;
+  // Auto-refresh profile every 30s while waiting for verification
+  useEffect(() => {
+    const status = tutor?.verification_status;
+    if (status === 'pending' || status === 'under_review') {
+      const interval = setInterval(() => onRefreshProfile(), 30000);
+      return () => clearInterval(interval);
+    }
+  }, [tutor?.verification_status]);
+
+  // Show onboarding if: no tutor profile, incomplete profile (no bio or documents), or re-submitting after rejection
+  const needsOnboarding = !tutor || resubmitting || !tutor.bio || !tutor.id_document_url;
+  if (needsOnboarding) {
+    return <TutorOnboarding profile={profile} onComplete={() => { setResubmitting(false); onRefreshProfile(); }} />;
   }
 
   // Verification status
@@ -1508,7 +1881,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
           <div>
             <h4 className="font-semibold text-red-800">Verification Rejected</h4>
             <p className="text-sm text-red-600 mt-1">{tutor.rejection_reason || 'Your application was not approved. Please re-upload your documents.'}</p>
-            <button onClick={() => { /* Could trigger re-onboarding */ }} className="mt-2 text-sm font-medium text-red-700 underline">Re-submit documents</button>
+            <button onClick={() => setResubmitting(true)} className="mt-2 text-sm font-medium text-red-700 underline">Re-submit documents</button>
           </div>
         </div>
       </div>
@@ -1656,8 +2029,12 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
             <button onClick={() => onNavigate && onNavigate('home')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Home</button>
             <button onClick={() => onNavigate && onNavigate('tutors')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Find Tutors</button>
             <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium hidden sm:block">Spreadsheet</button>
+            <button onClick={() => onNavigate && onNavigate('classroom')} className="text-sm text-emerald-600 font-medium hidden sm:block">Class Insights</button>
             {isAdmin && <button onClick={() => onNavigate && onNavigate('admin')} className="text-sm text-purple-600 font-medium hidden sm:block">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
+            {onOpenAccountSettings && <button onClick={onOpenAccountSettings} className="text-sm text-slate-500 hover:text-slate-700" title="Account & Data Settings">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            </button>}
             <button onClick={onLogout} className="text-sm text-slate-500 hover:text-slate-700">Sign out</button>
           </div>
         </header>
@@ -1668,7 +2045,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
             <div className="space-y-6">
               {/* Welcome Banner */}
               <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 flex items-center gap-4 text-white">
-                <Lottie src={ANIMATIONS.teacher} width={80} height={80} />
+                <Lottie src={ANIMATIONS.teacher} width={80} height={80} loop={false} />
                 <div>
                   <h2 className="text-xl font-bold">Welcome back, {profile?.full_name?.split(' ')[0]}!</h2>
                   <p className="text-slate-300 text-sm">You have {upcoming.length} upcoming lesson{upcoming.length !== 1 ? 's' : ''} this week</p>
@@ -2003,7 +2380,7 @@ const TutorEarningsTab = ({ tutor, completed }) => {
         <div className="bg-white rounded-xl p-5 border border-slate-200">
           <div className="text-sm text-slate-500 mb-1">Pending Payout</div>
           <div className="text-2xl font-bold text-amber-600">KSh {pendingPayout.toLocaleString()}</div>
-          <div className="text-xs text-slate-400 mt-1">Awaiting M-Pesa transfer</div>
+          <div className="text-xs text-slate-400 mt-1">Awaiting payout</div>
         </div>
         <div className="bg-white rounded-xl p-5 border border-slate-200">
           <div className="text-sm text-slate-500 mb-1">Hourly Rate</div>
@@ -2069,7 +2446,7 @@ const TutorEarningsTab = ({ tutor, completed }) => {
           <svg className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
           <div>
             <h4 className="font-semibold text-blue-800 text-sm">How payouts work</h4>
-            <p className="text-sm text-blue-600 mt-1">Tutors receive {tutorSharePercent}% of each lesson fee. Payouts are processed weekly via M-Pesa. Tutagora retains {PLATFORM_FEE_PERCENT}% as a platform fee.</p>
+            <p className="text-sm text-blue-600 mt-1">Tutors receive {tutorSharePercent}% of each lesson fee. Payouts are processed weekly via mobile money. Tutagora retains {PLATFORM_FEE_PERCENT}% as a platform fee.</p>
           </div>
         </div>
       </div>
@@ -2450,8 +2827,9 @@ const TutorProfileEditor = ({ tutor, profile }) => {
     experience_years: tutor?.experience_years || '',
     teaching_style: tutor?.teaching_style || '',
     languages: tutor?.languages || 'English, Kiswahili',
-    grade_levels: tutor?.grade_levels || '',
+    grade_levels: tutor?.grade_levels || [],
   });
+  const gradeOptions = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University'];
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
   const [photoFile, setPhotoFile] = useState(null);
@@ -2559,7 +2937,17 @@ const TutorProfileEditor = ({ tutor, profile }) => {
         </div>
         <div>
           <label className="block text-sm font-medium mb-1">Grade levels</label>
-          <input value={form.grade_levels} onChange={e => setForm({ ...form, grade_levels: e.target.value })} placeholder="e.g. Grade 4-8, Form 1-4" className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
+          <div className="flex flex-wrap gap-2">
+            {gradeOptions.map(g => (
+              <button key={g} type="button" onClick={() => {
+                const current = Array.isArray(form.grade_levels) ? form.grade_levels : [];
+                setForm({ ...form, grade_levels: current.includes(g) ? current.filter(x => x !== g) : [...current, g] });
+              }}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${(Array.isArray(form.grade_levels) ? form.grade_levels : []).includes(g) ? 'bg-emerald-500 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                {g}
+              </button>
+            ))}
+          </div>
         </div>
         <div>
           <label className="block text-sm font-medium mb-1">Languages</label>
@@ -2575,6 +2963,283 @@ const TutorProfileEditor = ({ tutor, profile }) => {
 };
 
 // ============ HOME PAGE ============
+// ============ TEACH PAGE — Tutor Recruitment ============
+const TeachPage = ({ onNavigate, setShowAuth }) => {
+  const tutorFaqs = [
+    { q: 'How much can I earn?', a: 'You set your own hourly rate from KSh 500 to KSh 10,000. Tutagora takes a 15% platform fee and you keep 85%. Teaching just 10 hours a week at KSh 1,000/hr means KSh 34,000/month in your pocket.' },
+    { q: 'When do I get paid?', a: 'Payouts are processed every Friday directly to your mobile money. You can track your earnings and payout history from your tutor dashboard.' },
+    { q: 'What documents do I need?', a: 'A valid national ID or passport, and a teaching certificate or relevant academic qualification (degree, diploma, or professional certification).' },
+    { q: 'How long does verification take?', a: 'Our team typically reviews applications within 24 hours. Once approved, your profile goes live and students can start booking you immediately.' },
+    { q: 'Do I need any equipment?', a: 'Just a smartphone or laptop with a stable internet connection. All lessons happen via our built in video call platform with screen sharing and chat.' },
+    { q: 'Can I teach multiple subjects?', a: 'Yes! You can select as many subjects as you are qualified to teach. Many of our tutors teach 2 to 3 related subjects.' },
+  ];
+  const [openFaq, setOpenFaq] = useState(null);
+
+  return (
+    <div>
+      {/* Hero */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 py-16 sm:py-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-emerald-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
+        </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-5 relative flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+          <div className="flex-1 text-center lg:text-left">
+            <span className="inline-block px-4 py-1.5 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-semibold mb-4 border border-emerald-500/30">Now recruiting tutors</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              Teach on <span className="text-emerald-400">Tutagora</span>,<br /> earn on your terms
+            </h1>
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-300 max-w-xl">
+              Join Kenya's growing online tutoring platform. Set your own hours, choose your rate, and get paid weekly via mobile money. We bring the students to you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 mt-6 sm:mt-8 justify-center lg:justify-start">
+              <button onClick={() => setShowAuth({ mode: 'register', role: 'tutor' })} className="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-colors text-base">
+                Apply Now
+              </button>
+              <button onClick={() => { const el = document.getElementById('how-it-works'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }} className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/20 transition-colors text-base">
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div className="hidden lg:block flex-shrink-0">
+            <Lottie src={ANIMATIONS.teacher} width={380} height={380} loop={false} />
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Stats Bar */}
+      <section className="bg-white border-b border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-5 py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div><span className="text-2xl sm:text-3xl font-bold text-slate-900">85%</span><p className="text-slate-500 text-sm mt-1">You keep per lesson</p></div>
+            <div><span className="text-2xl sm:text-3xl font-bold text-slate-900">Weekly</span><p className="text-slate-500 text-sm mt-1">Mobile money payouts</p></div>
+            <div><span className="text-2xl sm:text-3xl font-bold text-slate-900">24hrs</span><p className="text-slate-500 text-sm mt-1">Verification time</p></div>
+            <div><span className="text-2xl sm:text-3xl font-bold text-emerald-600">Free</span><p className="text-slate-500 text-sm mt-1">To join</p></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Tutors Love Tutagora */}
+      <section className="py-12 sm:py-20 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-5">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Why tutors love Tutagora</h2>
+            <p className="text-slate-500 mt-2 sm:mt-3 text-sm sm:text-base">Everything you need to build a tutoring career online</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 text-center">
+              <div className="flex justify-center mb-4">
+                <Lottie src={ANIMATIONS.payment} width={80} height={80} loop={false} />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Earn what you deserve</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">Set your own hourly rate from KSh 500 to 10,000. No cap on how many students you can take. The more you teach, the more you earn.</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 text-center">
+              <div className="flex justify-center mb-4">
+                <Lottie src={ANIMATIONS.calendar} width={80} height={80} loop={false} />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Your schedule, your rules</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">Teach mornings, evenings, or weekends. Block off days when you are busy. Students can only book slots you have made available.</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 text-center">
+              <div className="flex justify-center mb-4">
+                <Lottie src={ANIMATIONS.search} width={80} height={80} loop={false} />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Students come to you</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">No marketing needed. Parents and students find you through our platform, read your profile, check your availability, and book directly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works — Step by Step */}
+      <section id="how-it-works" className="py-12 sm:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-5">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Start teaching in 3 steps</h2>
+            <p className="text-slate-500 mt-2 sm:mt-3 text-sm sm:text-base">The whole process takes less than 10 minutes</p>
+          </div>
+          <div className="space-y-8">
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              <div className="flex-shrink-0">
+                <Lottie src={ANIMATIONS.typing} width={120} height={120} loop={false} />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <div className="flex items-center gap-3 justify-center md:justify-start mb-2">
+                  <span className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</span>
+                  <h3 className="text-lg font-bold text-slate-900">Create your profile</h3>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">Add your subjects, qualifications, teaching style, and hourly rate. Write a short bio that tells parents why you are the right tutor. Upload a photo — profiles with photos get 3x more bookings.</p>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10">
+              <div className="flex-shrink-0">
+                <Lottie src={ANIMATIONS.certificate} width={120} height={120} loop={false} />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <div className="flex items-center gap-3 justify-center md:justify-start mb-2">
+                  <span className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</span>
+                  <h3 className="text-lg font-bold text-slate-900">Get verified</h3>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">Upload your national ID and teaching certificate. Our team reviews every application within 24 hours to keep students safe. Once approved, your profile goes live immediately.</p>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              <div className="flex-shrink-0">
+                <Lottie src={ANIMATIONS.videoCall} width={120} height={120} loop={false} />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <div className="flex items-center gap-3 justify-center md:justify-start mb-2">
+                  <span className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</span>
+                  <h3 className="text-lg font-bold text-slate-900">Teach and earn</h3>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">Students book your available time slots. Teach one on one via our built in video platform with screen sharing and whiteboard. Get paid every Friday via mobile money.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Earnings Calculator */}
+      <section className="py-12 sm:py-20 bg-slate-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-5">
+          <div className="text-center mb-8 sm:mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white">What could you earn?</h2>
+            <p className="text-slate-400 mt-2 text-sm sm:text-base">Here is what Tutagora tutors earn at different commitment levels</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+              <div className="text-center">
+                <p className="text-slate-400 text-sm">Part time</p>
+                <p className="text-sm text-slate-500 mb-3">5 hrs/week</p>
+                <p className="text-3xl font-bold text-white">KSh 17,000</p>
+                <p className="text-slate-500 text-sm mt-1">/month</p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-slate-700 space-y-2 text-sm">
+                <div className="flex justify-between text-slate-400"><span>Rate</span><span className="text-white">KSh 1,000/hr</span></div>
+                <div className="flex justify-between text-slate-400"><span>Weekly hours</span><span className="text-white">5 hrs</span></div>
+                <div className="flex justify-between text-slate-400"><span>Your cut (85%)</span><span className="text-emerald-400">KSh 4,250/wk</span></div>
+              </div>
+            </div>
+            <div className="bg-gradient-to-b from-emerald-900/50 to-slate-800 rounded-2xl p-6 border-2 border-emerald-500 relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-emerald-500 text-white text-xs font-bold rounded-full">Most popular</div>
+              <div className="text-center">
+                <p className="text-emerald-400 text-sm font-medium">Regular</p>
+                <p className="text-sm text-slate-500 mb-3">10 hrs/week</p>
+                <p className="text-4xl font-bold text-white">KSh 34,000</p>
+                <p className="text-slate-500 text-sm mt-1">/month</p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-emerald-800 space-y-2 text-sm">
+                <div className="flex justify-between text-slate-400"><span>Rate</span><span className="text-white">KSh 1,000/hr</span></div>
+                <div className="flex justify-between text-slate-400"><span>Weekly hours</span><span className="text-white">10 hrs</span></div>
+                <div className="flex justify-between text-slate-400"><span>Your cut (85%)</span><span className="text-emerald-400">KSh 8,500/wk</span></div>
+              </div>
+            </div>
+            <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+              <div className="text-center">
+                <p className="text-slate-400 text-sm">Full time</p>
+                <p className="text-sm text-slate-500 mb-3">20 hrs/week</p>
+                <p className="text-3xl font-bold text-white">KSh 68,000</p>
+                <p className="text-slate-500 text-sm mt-1">/month</p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-slate-700 space-y-2 text-sm">
+                <div className="flex justify-between text-slate-400"><span>Rate</span><span className="text-white">KSh 1,000/hr</span></div>
+                <div className="flex justify-between text-slate-400"><span>Weekly hours</span><span className="text-white">20 hrs</span></div>
+                <div className="flex justify-between text-slate-400"><span>Your cut (85%)</span><span className="text-emerald-400">KSh 17,000/wk</span></div>
+              </div>
+            </div>
+          </div>
+          <p className="text-center text-slate-500 text-xs mt-6">Based on KSh 1,000/hr rate. Your actual earnings depend on your rate and hours.</p>
+        </div>
+      </section>
+
+      {/* What We Provide */}
+      <section className="py-12 sm:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-5">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">We handle the rest</h2>
+            <p className="text-slate-500 mt-2 text-sm sm:text-base">Focus on teaching. We take care of everything else.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            {[
+              { icon: '📹', title: 'Video platform', desc: 'Built in HD video calls with screen sharing' },
+              { icon: '💳', title: 'Payment processing', desc: 'Secure card payments via Paystack' },
+              { icon: '📅', title: 'Scheduling', desc: 'Students book your available slots' },
+              { icon: '📊', title: 'Dashboard', desc: 'Track students, lessons, and earnings' },
+              { icon: '🔔', title: 'Notifications', desc: 'Instant alerts for new bookings' },
+              { icon: '⭐', title: 'Reviews', desc: 'Build your reputation with ratings' },
+              { icon: '👥', title: 'Group classes', desc: 'Create and manage group sessions' },
+              { icon: '🛡️', title: 'Verification badge', desc: 'Build trust with parents' },
+            ].map((item, i) => (
+              <div key={i} className="bg-slate-50 rounded-xl p-4 sm:p-5 text-center">
+                <span className="text-2xl">{item.icon}</span>
+                <h3 className="font-semibold text-slate-900 text-sm mt-2">{item.title}</h3>
+                <p className="text-slate-500 text-xs mt-1">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-12 sm:py-20 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-5">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Frequently asked questions</h2>
+            <p className="text-slate-500 mt-2 text-sm sm:text-base">Everything you need to know before joining</p>
+          </div>
+          <div className="space-y-3">
+            {tutorFaqs.map((faq, i) => (
+              <div key={i} className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full p-4 sm:p-5 flex justify-between items-center text-left hover:bg-slate-50">
+                  <span className="font-semibold text-slate-900 text-sm sm:text-base">{faq.q}</span>
+                  <span className="text-slate-400 text-xl ml-4">{openFaq === i ? '−' : '+'}</span>
+                </button>
+                {openFaq === i && <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-slate-600 text-sm leading-relaxed">{faq.a}</div>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-12 sm:py-20 bg-gradient-to-r from-emerald-500 to-emerald-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-5 text-center">
+          <div className="flex justify-center mb-4">
+            <Lottie src={ANIMATIONS.rocket} width={100} height={100} loop={false} />
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">Ready to start teaching?</h2>
+          <p className="text-emerald-100 text-sm sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">It takes less than 10 minutes to set up your profile. Get verified within 24 hours and start earning this week.</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button onClick={() => setShowAuth({ mode: 'register', role: 'tutor' })} className="px-8 py-4 bg-white text-emerald-600 font-semibold rounded-full hover:bg-emerald-50 transition-colors">
+              Apply Now
+            </button>
+            <button onClick={() => onNavigate('home')} className="px-8 py-4 bg-emerald-700 text-white font-semibold rounded-full hover:bg-emerald-800 transition-colors">
+              Back to Homepage
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white py-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center font-bold text-sm">T</div>
+            <span className="font-bold">Tutagora</span>
+          </div>
+          <p className="text-slate-400 text-sm">© 2026 Tutagora. All rights reserved.</p>
+          <div className="flex gap-4 text-sm text-slate-400">
+            <button onClick={() => onNavigate('home')} className="hover:text-white">Home</button>
+            <button onClick={() => onNavigate('tutors')} className="hover:text-white">Find Tutors</button>
+            <button onClick={() => onNavigate('privacy')} className="hover:text-white">Privacy Policy</button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
 const HomePage = ({ onNavigate, setShowAuth }) => {
   const { tutors } = useTutors();
   const [openFaq, setOpenFaq] = useState(null);
@@ -2592,7 +3257,7 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
 
   const steps = [
     { num: '1', title: 'Find a Tutor', desc: 'Browse our verified tutors by subject, price, and availability' },
-    { num: '2', title: 'Book a Lesson', desc: 'Pick a time that works for you and pay securely via M-Pesa or card' },
+    { num: '2', title: 'Book a Lesson', desc: 'Pick a time that works for you and pay securely via card' },
     { num: '3', title: 'Learn Online', desc: 'Join your live video lesson with screen sharing and chat' },
   ];
 
@@ -2610,11 +3275,11 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
   ];
 
   const faqs = [
-    { q: 'How do I book a lesson?', a: 'Simply find a tutor, select an available time slot, and pay via M-Pesa or card. You\'ll receive a confirmation with a link to join the video lesson.' },
+    { q: 'How do I book a lesson?', a: 'Simply find a tutor, select an available time slot, and pay securely via card. You\'ll receive a confirmation with a link to join the video lesson.' },
     { q: 'What if I\'m not satisfied with a lesson?', a: 'We offer a 48-hour money-back guarantee. If you\'re not happy with your first lesson with a tutor, we\'ll refund you in full.' },
     { q: 'How do video lessons work?', a: 'Lessons happen via our built-in video platform. Both you and your tutor can share screens, use a virtual whiteboard, and chat in real-time.' },
     { q: 'Can I reschedule a lesson?', a: 'Yes! You can reschedule up to 24 hours before the lesson starts at no extra cost.' },
-    { q: 'How do tutors get paid?', a: 'Tutors receive payments weekly via M-Pesa. We handle all the payment processing securely.' },
+    { q: 'How do tutors get paid?', a: 'Tutors receive payments weekly via mobile money. We handle all the payment processing securely.' },
   ];
 
   return (
@@ -2639,7 +3304,7 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
               <button onClick={() => onNavigate('tutors')} className="px-6 sm:px-8 py-3.5 sm:py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-colors text-sm sm:text-base">
                 Find a Tutor
               </button>
-              <button onClick={() => setShowAuth('register')} className="px-6 sm:px-8 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/20 transition-colors text-sm sm:text-base">
+              <button onClick={() => onNavigate('teach')} className="px-6 sm:px-8 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/20 transition-colors text-sm sm:text-base">
                 Become a Tutor
               </button>
             </div>
@@ -2691,21 +3356,35 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
               <div className="flex justify-center mb-4">
-                <Lottie src={ANIMATIONS.search} width={120} height={120} />
+                <div className="w-[120px] h-[120px] bg-emerald-50 rounded-full flex items-center justify-center">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                    <path d="M11 8v6M8 11h6"/>
+                  </svg>
+                </div>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Find a Tutor</h3>
               <p className="text-slate-500">Browse our verified tutors by subject, price, and availability</p>
             </div>
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
               <div className="flex justify-center mb-4">
-                <Lottie src={ANIMATIONS.calendar} width={120} height={120} />
+                <div className="w-[120px] h-[120px] bg-blue-50 rounded-full flex items-center justify-center">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                    <path d="m9 16 2 2 4-4"/>
+                  </svg>
+                </div>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Book a Lesson</h3>
-              <p className="text-slate-500">Pick a time that works for you and pay securely via M-Pesa or card</p>
+              <p className="text-slate-500">Pick a time that works for you and pay securely via card</p>
             </div>
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
               <div className="flex justify-center mb-4">
-                <Lottie src={ANIMATIONS.videoCall} width={120} height={120} />
+                <div className="w-[120px] h-[120px] bg-purple-50 rounded-full flex items-center justify-center">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M15.6 11.6L22 7v10l-6.4-4.5v-1zM4 5h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2z"/>
+                  </svg>
+                </div>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Learn Online</h3>
               <p className="text-slate-500">Join your live video lesson with screen sharing and chat</p>
@@ -2858,23 +3537,27 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
             <div>
               <h4 className="font-semibold mb-4">For Tutors</h4>
               <ul className="space-y-2 text-slate-400">
-                <li><button onClick={() => setShowAuth('register')} className="hover:text-white">Become a Tutor</button></li>
-                <li><button className="hover:text-white">Tutor Guidelines</button></li>
-                <li><button className="hover:text-white">Payment Info</button></li>
+                <li><button onClick={() => onNavigate('teach')} className="hover:text-white">Become a Tutor</button></li>
+                <li><button onClick={() => onNavigate('teach')} className="hover:text-white">Why Teach</button></li>
+                <li><button onClick={() => onNavigate('teach')} className="hover:text-white">Payment Info</button></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>📧 hello@tutagora.com</li>
-                <li>📱 +254 700 000 000</li>
+                <li>📧 levitty@tutagora.com</li>
+                <li>📱 +254 742 410 255</li>
                 <li>📍 Nairobi, Kenya</li>
               </ul>
             </div>
           </div>
           <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-400 text-sm">© 2024 Tutagora. All rights reserved.</p>
-            <p className="text-slate-500 text-sm">Made in Nairobi</p>
+            <p className="text-slate-400 text-sm">© 2026 Tutagora. All rights reserved.</p>
+            <div className="flex items-center gap-4">
+              <button onClick={() => onNavigate('privacy')} className="text-slate-400 text-sm hover:text-white transition-colors">Privacy Policy</button>
+              <span className="text-slate-700">|</span>
+              <p className="text-slate-500 text-sm">Made in Nairobi</p>
+            </div>
           </div>
         </div>
       </footer>
@@ -2887,11 +3570,13 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
   const { tutors, loading } = useTutors();
   const [search, setSearch] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('');
+  const [selectedGrade, setSelectedGrade] = useState('');
   const [priceRange, setPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('rating');
   const [showFilters, setShowFilters] = useState(false);
 
   const subjects = ['All Subjects', 'Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'];
+  const grades = ['All Grades', 'Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University'];
   
   const priceRanges = [
     { value: 'all', label: 'Any Price' },
@@ -2913,6 +3598,10 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
       const tutorSubjects = t.subjects || [t.subject];
       const matchesSubject = !selectedSubject || selectedSubject === 'All Subjects' || tutorSubjects.includes(selectedSubject);
       
+      // Grade filter
+      const tutorGrades = Array.isArray(t.grade_levels) ? t.grade_levels : (t.grade_levels ? [t.grade_levels] : []);
+      const matchesGrade = !selectedGrade || selectedGrade === 'All Grades' || tutorGrades.includes(selectedGrade);
+
       // Price filter
       let matchesPrice = true;
       if (priceRange !== 'all') {
@@ -2922,8 +3611,8 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
         else if (priceRange === '1500-2000') matchesPrice = rate >= 1500 && rate < 2000;
         else if (priceRange === '2000+') matchesPrice = rate >= 2000;
       }
-      
-      return matchesSearch && matchesSubject && matchesPrice;
+
+      return matchesSearch && matchesSubject && matchesGrade && matchesPrice;
     })
     .sort((a, b) => {
       if (sortBy === 'rating') return (b.rating || 0) - (a.rating || 0);
@@ -2933,7 +3622,7 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
       return 0;
     });
 
-  const activeFilters = (selectedSubject && selectedSubject !== 'All Subjects' ? 1 : 0) + (priceRange !== 'all' ? 1 : 0);
+  const activeFilters = (selectedSubject && selectedSubject !== 'All Subjects' ? 1 : 0) + (selectedGrade && selectedGrade !== 'All Grades' ? 1 : 0) + (priceRange !== 'all' ? 1 : 0);
 
   return (
     <div className="min-h-screen bg-slate-50 pt-20 pb-10">
@@ -2972,6 +3661,15 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
               {subjects.map(s => <option key={s} value={s}>{s}</option>)}
             </select>
 
+            {/* Grade Filter */}
+            <select
+              value={selectedGrade}
+              onChange={(e) => setSelectedGrade(e.target.value)}
+              className="px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            >
+              {grades.map(g => <option key={g} value={g}>{g}</option>)}
+            </select>
+
             {/* Price Filter */}
             <select
               value={priceRange}
@@ -2996,7 +3694,7 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
             {/* Clear Filters */}
             {activeFilters > 0 && (
               <button
-                onClick={() => { setSelectedSubject(''); setPriceRange('all'); setSearch(''); }}
+                onClick={() => { setSelectedSubject(''); setSelectedGrade(''); setPriceRange('all'); setSearch(''); }}
                 className="px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg"
               >
                 Clear filters ({activeFilters})
@@ -3291,8 +3989,12 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
             <div className="flex flex-wrap gap-2 mt-4">
               {tutor.degree && <span className="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm">{tutor.degree}</span>}
               {tutor.teaching_style && <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">{tutor.teaching_style}</span>}
-              {tutor.languages && <span className="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm">{tutor.languages}</span>}
-              {tutor.grade_levels && <span className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm">{tutor.grade_levels}</span>}
+              {tutor.languages && (Array.isArray(tutor.languages) ? tutor.languages : [tutor.languages]).map(l => (
+                <span key={l} className="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm">{l}</span>
+              ))}
+              {tutor.grade_levels && (Array.isArray(tutor.grade_levels) ? tutor.grade_levels : [tutor.grade_levels]).map(g => (
+                <span key={g} className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm">{g}</span>
+              ))}
             </div>
           </div>
         </div>
@@ -3467,7 +4169,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all ${scrolled ? 'bg-white shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-5 h-14 flex items-center justify-between">
         <button onClick={() => onNavigate('home')} className="flex items-center gap-2">
-          <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold ${scrolled ? 'bg-slate-900 text-white' : 'bg-white/10 text-white'}`}>T</div>
+          <img src="/logo.png" alt="Tutagora" className="w-8 h-8 object-contain" />
           <span className={`font-semibold ${scrolled ? 'text-slate-900' : 'text-white'}`}>Tutagora</span>
         </button>
         {/* Desktop nav */}
@@ -3519,6 +4221,8 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
 };
 
 // ============ ADMIN DASHBOARD ============
+const ADMIN_EMAILS = ['mutualevy@gmail.com'];
+
 const AdminDashboard = ({ onLogout, onBack }) => {
   const [tab, setTab] = useState('overview');
   const [stats, setStats] = useState({ tutors: 0, students: 0, bookings: 0, revenue: 0 });
@@ -3527,6 +4231,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const [allPayments, setAllPayments] = useState([]);
   const [pendingTutors, setPendingTutors] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [authorized, setAuthorized] = useState(false);
   const [actionLoading, setActionLoading] = useState(null);
   const [rejectReason, setRejectReason] = useState('');
   const [rejectingId, setRejectingId] = useState(null);
@@ -3535,8 +4240,20 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const PLATFORM_FEE_PERCENT = 15;
   const TUTOR_SHARE_PERCENT = 100 - PLATFORM_FEE_PERCENT;
 
+  // Verify admin access server-side before loading any data
   useEffect(() => {
-    fetchAdminData();
+    const checkAdmin = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user?.email && ADMIN_EMAILS.includes(user.email.toLowerCase())) {
+        setAuthorized(true);
+        fetchAdminData();
+      } else {
+        setAuthorized(false);
+        setLoading(false);
+        onBack();
+      }
+    };
+    checkAdmin();
   }, []);
 
   const fetchAdminData = async () => {
@@ -3549,6 +4266,8 @@ const AdminDashboard = ({ onLogout, onBack }) => {
       supabase.from('payments').select('*, bookings(lesson_date, subject, status), tutor:tutor_id(subject, hourly_rate, profiles(full_name, email, phone))').eq('status', 'completed').order('created_at', { ascending: false }),
       supabase.from('tutors').select('*, profiles(full_name, avatar_url, email)')
         .in('verification_status', ['pending', 'under_review'])
+        .not('id_document_url', 'is', null)
+        .not('bio', 'is', null)
         .order('created_at', { ascending: false }),
     ]);
 
@@ -3594,7 +4313,11 @@ const AdminDashboard = ({ onLogout, onBack }) => {
 
   const handleApproveTutor = async (tutorId) => {
     setActionLoading(tutorId);
-    await supabase.from('tutors').update({ verification_status: 'approved', verified: true, rejection_reason: null }).eq('id', tutorId);
+    // Try updating by id first, then by user_id as fallback
+    const { error } = await supabase.from('tutors').update({ verification_status: 'approved', verified: true, rejection_reason: null }).eq('id', tutorId);
+    if (error) {
+      await supabase.from('tutors').update({ verification_status: 'approved', verified: true, rejection_reason: null }).eq('user_id', tutorId);
+    }
     // Send approval email
     const tutor = pendingTutors.find(t => t.id === tutorId);
     if (tutor?.profiles?.email) {
@@ -3609,7 +4332,10 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const handleRejectTutor = async (tutorId) => {
     if (!rejectReason.trim()) return;
     setActionLoading(tutorId);
-    await supabase.from('tutors').update({ verification_status: 'rejected', verified: false, rejection_reason: rejectReason }).eq('id', tutorId);
+    const { error } = await supabase.from('tutors').update({ verification_status: 'rejected', verified: false, rejection_reason: rejectReason }).eq('id', tutorId);
+    if (error) {
+      await supabase.from('tutors').update({ verification_status: 'rejected', verified: false, rejection_reason: rejectReason }).eq('user_id', tutorId);
+    }
     // Send rejection email
     const tutor = pendingTutors.find(t => t.id === tutorId);
     if (tutor?.profiles?.email) {
@@ -3622,6 +4348,8 @@ const AdminDashboard = ({ onLogout, onBack }) => {
     setRejectReason('');
     setActionLoading(null);
   };
+
+  if (!authorized) return loading ? <LoadingSpinner /> : null;
 
   return (
     <div className="min-h-screen bg-slate-100">
@@ -3719,7 +4447,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                         <svg className="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
                         <div>
                           <div className="font-semibold text-amber-800">KSh {unpaidTotal.toLocaleString()} in pending tutor payouts</div>
-                          <div className="text-sm text-amber-600">{unpaidCount} lesson{unpaidCount !== 1 ? 's' : ''} need payout via M-Pesa</div>
+                          <div className="text-sm text-amber-600">{unpaidCount} lesson{unpaidCount !== 1 ? 's' : ''} need payout</div>
                         </div>
                       </div>
                       <button onClick={() => setTab('payouts')} className="px-4 py-2 bg-amber-500 text-white text-sm font-medium rounded-lg hover:bg-amber-600">
@@ -3784,11 +4512,16 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                         <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">User</th>
                         <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Email</th>
                         <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Role</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Status</th>
                         <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Joined</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
-                      {users.map(u => (
+                      {users.map(u => {
+                        const tutor = u.tutors?.[0];
+                        const isIncomplete = u.role === 'tutor' && (!tutor?.bio || !tutor?.id_document_url);
+                        const status = u.role === 'student' ? null : !tutor ? 'no profile' : isIncomplete ? 'incomplete' : tutor.verification_status || 'pending';
+                        return (
                         <tr key={u.id} className="hover:bg-slate-50">
                           <td className="px-4 py-3">
                             <div className="flex items-center gap-3">
@@ -3802,11 +4535,23 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                               u.role === 'tutor' ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700'
                             }`}>{u.role}</span>
                           </td>
+                          <td className="px-4 py-3">
+                            {status && (
+                              <span className={`px-2 py-1 text-xs rounded-full ${
+                                status === 'approved' ? 'bg-emerald-100 text-emerald-700' :
+                                status === 'incomplete' ? 'bg-red-100 text-red-600' :
+                                status === 'no profile' ? 'bg-slate-100 text-slate-500' :
+                                status === 'rejected' ? 'bg-red-100 text-red-700' :
+                                'bg-amber-100 text-amber-700'
+                              }`}>{status}</span>
+                            )}
+                          </td>
                           <td className="px-4 py-3 text-slate-500 text-sm">
                             {new Date(u.created_at).toLocaleDateString()}
                           </td>
                         </tr>
-                      ))}
+                        );
+                      })}
                     </tbody>
                   </table>
                 </div>
@@ -3859,7 +4604,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                     <div className="bg-white rounded-xl p-5 shadow-sm">
                       <div className="text-sm text-slate-500 mb-1">Already Paid Out</div>
                       <div className="text-2xl font-bold text-emerald-600">KSh {totalPaid.toLocaleString()}</div>
-                      <div className="text-xs text-slate-400 mt-1">Transferred via M-Pesa</div>
+                      <div className="text-xs text-slate-400 mt-1">Transferred via mobile money</div>
                     </div>
                     <div className="bg-white rounded-xl p-5 shadow-sm">
                       <div className="text-sm text-slate-500 mb-1">Platform Fees</div>
@@ -4031,21 +4776,43 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                         {t.degree && <p className="mt-3 text-sm text-slate-600"><strong>Qualification:</strong> {t.degree}</p>}
                         {t.bio && <p className="mt-1 text-sm text-slate-500">{t.bio}</p>}
 
-                        {/* Document links */}
+                        {/* Document links — uses signed URLs for private bucket */}
                         <div className="mt-4 flex flex-wrap gap-3">
                           {t.id_document_url && (
-                            <a href={t.id_document_url} target="_blank" rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 px-3 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm text-slate-700 transition-colors">
+                            <button onClick={async () => {
+                              let path = t.id_document_url;
+                              // If it's a full URL (legacy), extract the storage path from it
+                              if (path.startsWith('http')) {
+                                const match = path.match(/tutor-documents\/(.+)$/);
+                                if (match) path = match[1];
+                                else { window.open(path, '_blank'); return; }
+                              }
+                              const { data, error } = await supabase.storage.from('tutor-documents').createSignedUrl(path, 300);
+                              if (data?.signedUrl) window.open(data.signedUrl, '_blank');
+                              else alert('Could not load document. ' + (error?.message || ''));
+                            }}
+                              className="inline-flex items-center gap-2 px-3 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm text-slate-700 transition-colors cursor-pointer">
                               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" /></svg>
                               View National ID
-                            </a>
+                            </button>
                           )}
                           {t.credential_url && (
-                            <a href={t.credential_url} target="_blank" rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 px-3 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm text-slate-700 transition-colors">
+                            <button onClick={async () => {
+                              let path = t.credential_url;
+                              // If it's a full URL (legacy), extract the storage path from it
+                              if (path.startsWith('http')) {
+                                const match = path.match(/tutor-documents\/(.+)$/);
+                                if (match) path = match[1];
+                                else { window.open(path, '_blank'); return; }
+                              }
+                              const { data, error } = await supabase.storage.from('tutor-documents').createSignedUrl(path, 300);
+                              if (data?.signedUrl) window.open(data.signedUrl, '_blank');
+                              else alert('Could not load document. ' + (error?.message || ''));
+                            }}
+                              className="inline-flex items-center gap-2 px-3 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm text-slate-700 transition-colors cursor-pointer">
                               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                               View Certificate
-                            </a>
+                            </button>
                           )}
                         </div>
 
@@ -4170,6 +4937,7 @@ export default function App() {
     const path = window.location.pathname.replace(/^\//, '');
     if (path === 'consulting') return 'consulting';
     if (path === 'tutors') return 'tutors';
+    if (path === 'teach') return 'teach';
     if (path === 'dashboard') return 'dashboard';
     if (path === 'ai') return 'ai';
     if (path === 'spreadsheet') return 'spreadsheet';
@@ -4181,10 +4949,14 @@ export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [activeLesson, setActiveLesson] = useState(null);
   const [showMessages, setShowMessages] = useState(false);
+  const [showAccountSettings, setShowAccountSettings] = useState(false);
+  const [showPrivacyBanner, setShowPrivacyBanner] = useState(() => !localStorage.getItem('tutagora_privacy_accepted'));
 
-  // Admin emails (add your email here)
-  const adminEmails = ['tutaeducators@gmail.com', 'mutualevy@gmail.com'];
-  const isAdmin = auth.profile?.email && adminEmails.includes(auth.profile.email);
+  // Admin emails — ONLY these accounts can access the admin dashboard
+  const ADMIN_LIST = ['mutualevy@gmail.com'];
+  // Use auth.user.email (from Supabase auth, always reliable) — never trust profile email for admin checks
+  const currentUserEmail = (auth.user?.email || '').toLowerCase();
+  const isAdmin = currentUserEmail && ADMIN_LIST.includes(currentUserEmail);
 
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 50);
@@ -4198,10 +4970,12 @@ export default function App() {
       const path = window.location.pathname.replace(/^\//, '');
       if (path === 'consulting') setPage('consulting');
       else if (path === 'tutors') setPage('tutors');
+      else if (path === 'teach') setPage('teach');
       else if (path === 'dashboard') setPage('dashboard');
       else if (path === 'ai') setPage('ai');
       else if (path === 'spreadsheet') setPage('spreadsheet');
       else if (path === 'admin') setPage('admin');
+      else if (path === 'privacy') setPage('privacy');
       else setPage('home');
       setSelectedTutor(null);
       window.scrollTo(0, 0);
@@ -4212,7 +4986,13 @@ export default function App() {
 
   const handleNavigate = (p) => { setPage(p); setSelectedTutor(null); window.scrollTo(0, 0); window.history.pushState({}, '', p === 'home' ? '/' : '/' + p); };
   const handleLogout = async () => { await auth.signOut(); setPage('home'); };
-  const handleStartLesson = (booking) => setActiveLesson(booking);
+  const handleStartLesson = (booking) => {
+    setActiveLesson(booking);
+    // If tutor starts the lesson, notify the student
+    if (auth.profile?.role === 'tutor') {
+      sendLessonStartNotification(booking).catch(err => console.error('Lesson notification failed:', err));
+    }
+  };
   const handleEndLesson = async () => {
     // Mark booking as completed when lesson ends
     if (activeLesson?.id) {
@@ -4234,6 +5014,11 @@ export default function App() {
     return <VideoRoom booking={activeLesson} user={{ id: auth.user?.id, name: auth.profile?.full_name, role: auth.profile?.role }} onEnd={handleEndLesson} />;
   }
 
+  // Privacy Policy Page
+  if (page === 'privacy') {
+    return <PrivacyPolicyPage onBack={() => handleNavigate('home')} />;
+  }
+
   // Consulting Page
   if (page === 'consulting') {
     return <ConsultingPage onBack={() => handleNavigate('home')} />;
@@ -4242,6 +5027,11 @@ export default function App() {
   // AI Tutor
   if (page === 'ai') {
     return <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} />;
+  }
+
+  // Teacher / class insights dashboard
+  if (page === 'classroom') {
+    return <TeacherDashboard onBack={() => handleNavigate('dashboard')} teacherProfile={auth.profile} />;
   }
 
   // Spreadsheet
@@ -4263,15 +5053,17 @@ export default function App() {
     if (auth.profile?.role === 'tutor') {
       return (
         <>
-          <TutorDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} onNavigate={handleNavigate} isAdmin={isAdmin} />
+          <TutorDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} onNavigate={handleNavigate} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
           {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
+          {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
         </>
       );
     }
     return (
       <>
-        <StudentDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} />
+        <StudentDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
         {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
+        {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       </>
     );
   }
@@ -4281,10 +5073,13 @@ export default function App() {
       <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />
       
       {page === 'home' && !selectedTutor && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {page === 'teach' && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={() => handleNavigate('home')} />}
       {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
       
-      {showAuth && <AuthModal mode={showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} />}
+      {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : undefined} />}
+      {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
+      {showPrivacyBanner && <PrivacyBanner onAccept={() => { localStorage.setItem('tutagora_privacy_accepted', 'true'); setShowPrivacyBanner(false); }} onNavigate={handleNavigate} />}
     </div>
   );
 }

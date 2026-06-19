@@ -51,6 +51,10 @@ const GRADE_5 = {
   G5_DECIMALS_ADD: skill('G5_DECIMALS_ADD', 'Adding Decimals', 5, S.NUM, { pre: ['G5_DECIMALS_INTRO', 'G5_ADDITION'], w: 2 }),
   G5_DECIMALS_SUB: skill('G5_DECIMALS_SUB', 'Subtracting Decimals', 5, S.NUM, { pre: ['G5_DECIMALS_INTRO', 'G5_SUBTRACTION'], w: 2 }),
 
+  // Algebra readiness (the foundation the Grade-6 algebra strand builds on)
+  G5_PATTERNS: skill('G5_PATTERNS', 'Number Patterns', 5, S.ALG, { pre: ['G5_ADDITION', 'G5_MULTIPLICATION'], w: 1 }),
+  G5_MISSING_NUMBER: skill('G5_MISSING_NUMBER', 'Finding the Missing Number', 5, S.ALG, { pre: ['G5_ADDITION', 'G5_SUBTRACTION'], w: 1 }),
+
   // Geometry
   G5_ANGLES_INTRO: skill('G5_ANGLES_INTRO', 'Types of Angles', 5, S.GEO, { w: 1 }),
   G5_TRIANGLES_INTRO: skill('G5_TRIANGLES_INTRO', 'Types of Triangles', 5, S.GEO, { pre: ['G5_ANGLES_INTRO'], w: 2 }),
@@ -92,8 +96,8 @@ const GRADE_6 = {
   G6_SQUARES: skill('G6_SQUARES', 'Squares (1-12)', 6, S.NUM, { pre: ['G5_MULTIPLICATION'], w: 2, mt: 0.90 }),
 
   // Algebra
-  G6_PATTERNS: skill('G6_PATTERNS', 'Number Patterns & Sequences', 6, S.ALG, { pre: ['G5_ADDITION', 'G5_MULTIPLICATION'], w: 2 }),
-  G6_SIMPLE_EQUATIONS: skill('G6_SIMPLE_EQUATIONS', 'Simple Equations (x + a = b)', 6, S.ALG, { pre: ['G5_ADDITION', 'G5_SUBTRACTION'], w: 3, crit: true }),
+  G6_PATTERNS: skill('G6_PATTERNS', 'Number Patterns & Sequences', 6, S.ALG, { pre: ['G5_PATTERNS', 'G5_ADDITION', 'G5_MULTIPLICATION'], w: 2 }),
+  G6_SIMPLE_EQUATIONS: skill('G6_SIMPLE_EQUATIONS', 'Simple Equations (x + a = b)', 6, S.ALG, { pre: ['G5_MISSING_NUMBER', 'G5_ADDITION', 'G5_SUBTRACTION'], w: 3, crit: true }),
 
   // Geometry
   G6_ANGLE_MEASURE: skill('G6_ANGLE_MEASURE', 'Measuring Angles with Protractor', 6, S.GEO, { pre: ['G5_ANGLES_INTRO'], w: 2 }),
@@ -156,7 +160,7 @@ const GRADE_7 = {
   G7_AREA_CIRCLE: skill('G7_AREA_CIRCLE', 'Area of Circles', 7, S.MEA, { pre: ['G7_CIRCUMFERENCE', 'G7_SQUARES_EXT'], w: 4, crit: true }),
   G7_VOLUME_CUBOID: skill('G7_VOLUME_CUBOID', 'Volume of Cuboids (Advanced)', 7, S.MEA, { pre: ['G6_VOLUME_CUBOID', 'G7_AREA_RECT'], w: 3 }),
   G7_VOLUME_CYLINDER: skill('G7_VOLUME_CYLINDER', 'Volume of Cylinders', 7, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_VOLUME_CUBOID'], w: 4 }),
-  G7_SPEED: skill('G7_SPEED', 'Speed, Distance, Time', 7, S.MEA, { pre: ['G7_LENGTH_CONV', 'G7_DECIMALS_DIV'], w: 5, crit: true }),
+  G7_SPEED: skill('G7_SPEED', 'Speed, Distance, Time', 7, S.MEA, { pre: ['G7_LENGTH_CONV', 'G7_DECIMALS_DIV', 'G5_TIME'], w: 5, crit: true }),
 
   // Statistics
   G7_MEAN_MEDIAN_MODE: skill('G7_MEAN_MEDIAN_MODE', 'Mean, Median, Mode', 7, S.STA, { pre: ['G6_MEAN'], w: 3 }),
@@ -202,7 +206,7 @@ const GRADE_8 = {
   G8_AREA_COMPOSITE: skill('G8_AREA_COMPOSITE', 'Area of Composite Shapes', 8, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_AREA_RECT', 'G6_AREA_TRIANGLE'], w: 4 }),
   G8_SURFACE_AREA: skill('G8_SURFACE_AREA', 'Surface Area (Cuboids, Cylinders)', 8, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_AREA_RECT'], w: 4 }),
   G8_VOLUME_ADV: skill('G8_VOLUME_ADV', 'Volume (Prisms, Cylinders)', 8, S.MEA, { pre: ['G7_VOLUME_CYLINDER'], w: 4 }),
-  G8_DENSITY: skill('G8_DENSITY', 'Density & Mass', 8, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_DECIMALS_DIV'], w: 4 }),
+  G8_DENSITY: skill('G8_DENSITY', 'Density & Mass', 8, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_DECIMALS_DIV', 'G5_MASS'], w: 4 }),
 
   // Statistics
   G8_PROBABILITY_INTRO: skill('G8_PROBABILITY_INTRO', 'Introduction to Probability', 8, S.STA, { pre: ['G6_FRACTIONS_DECIMALS'], w: 3, crit: true }),
@@ -233,9 +237,9 @@ const GRADE_9 = {
   G9_QUADRATIC_GRAPHS: skill('G9_QUADRATIC_GRAPHS', 'Quadratic Graphs', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G8_LINEAR_GRAPHS'], w: 5, crit: true }),
 
   // Geometry
-  G9_CONSTRUCTION: skill('G9_CONSTRUCTION', 'Geometric Constructions', 9, S.GEO, { pre: ['G6_ANGLE_MEASURE', 'G5_LINES'], w: 3 }),
+  G9_CONSTRUCTION: skill('G9_CONSTRUCTION', 'Geometric Constructions', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_ANGLE_MEASURE', 'G5_LINES'], w: 3 }),
   G9_LOCI: skill('G9_LOCI', 'Loci & Locus', 9, S.GEO, { pre: ['G9_CONSTRUCTION', 'G7_CIRCUMFERENCE'], w: 4 }),
-  G9_CIRCLE_THEOREMS_INTRO: skill('G9_CIRCLE_THEOREMS_INTRO', 'Circle Theorems (Introduction)', 9, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES', 'G7_AREA_CIRCLE'], w: 5, crit: true }),
+  G9_CIRCLE_THEOREMS_INTRO: skill('G9_CIRCLE_THEOREMS_INTRO', 'Circle Theorems (Introduction)', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_TRIANGLE_PROPERTIES', 'G7_AREA_CIRCLE'], w: 5, crit: true }),
   G9_TRIG_INTRO: skill('G9_TRIG_INTRO', 'Trigonometry (SOH CAH TOA)', 9, S.GEO, { pre: ['G7_PYTHAGORAS', 'G7_FRACTIONS_DIV'], w: 5, crit: true }),
   G9_TRIG_PROBLEMS: skill('G9_TRIG_PROBLEMS', 'Trigonometry Word Problems', 9, S.GEO, { pre: ['G9_TRIG_INTRO'], w: 5 }),
   G9_BEARINGS: skill('G9_BEARINGS', 'Bearings', 9, S.GEO, { pre: ['G9_TRIG_INTRO', 'G6_ANGLE_MEASURE'], w: 4 }),
@@ -247,7 +251,7 @@ const GRADE_9 = {
   G9_VOLUME_ADV: skill('G9_VOLUME_ADV', 'Volume (Cones, Spheres, Pyramids)', 9, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_AREA_CIRCLE'], w: 5 }),
 
   // Statistics
-  G9_GROUPED_DATA: skill('G9_GROUPED_DATA', 'Grouped Data & Histograms', 9, S.STA, { pre: ['G8_CUMULATIVE_FREQ', 'G6_AREA_RECT'], w: 4 }),
+  G9_GROUPED_DATA: skill('G9_GROUPED_DATA', 'Grouped Data & Histograms', 9, S.STA, { pre: ['G8_CUMULATIVE_FREQ', 'G7_MEAN_MEDIAN_MODE', 'G6_AREA_RECT'], w: 4 }),
   G9_PROBABILITY_ADV: skill('G9_PROBABILITY_ADV', 'Probability (With/Without Replacement)', 9, S.STA, { pre: ['G8_PROBABILITY_COMBINED'], w: 4 }),
   G9_SCATTER_PLOTS: skill('G9_SCATTER_PLOTS', 'Scatter Plots & Correlation', 9, S.STA, { pre: ['G8_COORDINATES', 'G7_DATA_REPRESENT'], w: 3 }),
 };
