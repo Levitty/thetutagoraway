@@ -5,7 +5,7 @@
 // quality gate. Decimal arithmetic uses integer scaling to avoid float drift.
 // ============================================================================
 
-import { accepts, hintLadder, randInt, pick, coin, withWorkedExample } from './schema.js';
+import { accepts, hintLadder, randInt, nonzero, pick, coin, withWorkedExample, withLevels } from './schema.js';
 
 // Render a number cleanly (trim trailing zeros): 1.50 -> "1.5", 2.0 -> "2".
 const numStr = (x) => {
@@ -389,16 +389,194 @@ export function buildMissingNumber() {
   };
 }
 
+// ============================================================================
+// CONCRETE / PICTORIAL builders (CPA) — integers on a number line, decimals on
+// a 10×10 grid. For kids who don't yet have the concept.
+// ============================================================================
+
+// CONCRETE: place an integer on the number line (G6_INTEGERS_INTRO).
+export function buildPlaceInteger() {
+  const v = nonzero(-9, 9);
+  return {
+    type: 'place-integer', instruction: 'Place the integer on the number line.',
+    question: `Place ${v} on the number line.`,
+    answer: `${v}`, accepts: accepts(`${v}`),
+    hints: hintLadder(
+      'Zero is in the middle. Positive numbers go right, negative numbers go left.',
+      `${v} is ${Math.abs(v)} steps to the ${v < 0 ? 'left' : 'right'} of 0.`,
+    ),
+    solution: { steps: [{ text: `Count ${Math.abs(v)} from 0 going ${v < 0 ? 'left' : 'right'}.`, expr: `${v}` }], answer: `${v}` },
+    misconceptions: [{ when: `${-v}`, feedback: 'Check the sign — negatives are to the LEFT of zero.' }],
+    visual: { type: 'integer_line', data: { min: -10, max: 10 }, check: 'number-line', target: v, tolerance: 0.5 },
+    verify: { kind: 'fraction', value: v },
+  };
+}
+
+// CONCRETE: add/subtract integers as a jump on the number line (G6_INTEGERS_ADD_SUB).
+export function buildIntegerJump() {
+  const a = nonzero(-6, 6), b = randInt(2, 7), sub = coin();
+  const result = sub ? a - b : a + b, dir = sub ? 'left' : 'right';
+  return {
+    type: 'integer-jump',
+    instruction: 'Use the number line to find where you land.',
+    question: `Start at ${a}, then ${sub ? 'subtract' : 'add'} ${b} (jump ${b} ${dir}). Where do you land?`,
+    answer: `${result}`, accepts: accepts(`${result}`),
+    hints: hintLadder(
+      `${sub ? 'Subtracting' : 'Adding'} moves you to the ${dir} on the number line.`,
+      `Start at ${a} and count ${b} steps ${dir}.`,
+    ),
+    solution: { steps: [
+      { text: `From ${a}, jump ${b} ${dir}.`, expr: `${a} ${sub ? '−' : '+'} ${b}` },
+      { text: 'Land here.', expr: `${result}` },
+    ], answer: `${result}` },
+    misconceptions: [{ when: `${sub ? a + b : a - b}`, feedback: `Wrong direction — ${sub ? 'subtracting goes LEFT' : 'adding goes RIGHT'}.` }],
+    visual: { type: 'integer_line', data: { min: -13, max: 13, start: a }, check: 'number-line', target: result, tolerance: 0.5 },
+    verify: { kind: 'fraction', value: result },
+  };
+}
+
+// CONCRETE: shade a 10×10 grid to show a decimal (G5_DECIMALS_INTRO).
+export function buildDecimalGrid() {
+  const h = randInt(1, 99), val = h / 100, vs = `${val}`;
+  return {
+    type: 'decimal-grid', instruction: 'Shade the grid to show the decimal.',
+    question: `Shade the grid to show ${vs}.`,
+    answer: vs, accepts: accepts(vs, `${h}/100`),
+    hints: hintLadder(
+      'The whole grid is 1. Each small square is 0.01 (one hundredth).',
+      `${vs} means ${h} hundredths — shade ${h} squares.`,
+      'Each full row is 0.1 (ten hundredths).',
+    ),
+    solution: { steps: [{ text: `${vs} = ${h} hundredths, so shade ${h} of the 100 squares.`, expr: vs }], answer: vs },
+    misconceptions: [],
+    visual: { type: 'decimal_grid', data: { mode: 'make' }, check: 'fraction-bar', target: val, tolerance: 0.001 },
+    verify: { kind: 'fraction', value: val },
+  };
+}
+
+// ABSTRACT: 2-digit × 1-digit multiplication.
+export function buildMultiplyFact() {
+  const a = randInt(11, 49), b = randInt(2, 9), value = a * b;
+  const tens = Math.floor(a / 10) * 10, ones = a % 10;
+  return {
+    type: 'multiply-fact', instruction: 'Work out the product.',
+    question: `${a} × ${b}`, answer: `${value}`, accepts: accepts(`${value}`),
+    hints: hintLadder(
+      'Split the bigger number into tens and ones.',
+      `${tens} × ${b}  and  ${ones} × ${b}, then add.`,
+    ),
+    solution: { steps: [
+      { text: 'Multiply the tens and the ones separately.', expr: `${tens}×${b} + ${ones}×${b}` },
+      { text: 'Add.', expr: `${value}` },
+    ], answer: `${value}` },
+    misconceptions: [], verify: { kind: 'fraction', value },
+  };
+}
+
+// CONCRETE: multiplication as a dot array (rows of columns).
+export function buildMultiplicationArray() {
+  const rows = randInt(2, 6), cols = randInt(2, 6), value = rows * cols;
+  return {
+    type: 'multiply-array', instruction: 'Count the dots.',
+    question: `How many dots altogether?  (${rows} rows of ${cols})`,
+    answer: `${value}`, accepts: accepts(`${value}`),
+    hints: hintLadder(
+      'Multiplication is "rows of" — equal groups.',
+      `${rows} rows, each with ${cols} dots.`,
+      `${rows} × ${cols}.`,
+    ),
+    solution: { steps: [{ text: `${rows} rows of ${cols} = ${rows} × ${cols}.`, expr: `${value}` }], answer: `${value}` },
+    misconceptions: [{ when: `${rows + cols}`, feedback: 'That\'s adding — multiply: count every dot, which is rows × columns.' }],
+    visual: { type: 'array_dots', data: { rows, cols, groupByRow: true } },
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ABSTRACT: exact division fact.
+export function buildDivideFact() {
+  const d = randInt(2, 9), q = randInt(2, 12), a = d * q;
+  return {
+    type: 'divide-fact', instruction: 'Work out the quotient.',
+    question: `${a} ÷ ${d}`, answer: `${q}`, accepts: accepts(`${q}`),
+    hints: hintLadder('How many groups of the divisor fit?', `How many ${d}s make ${a}?`),
+    solution: { steps: [{ text: `${d} × ? = ${a}.`, expr: `${a} ÷ ${d} = ${q}` }], answer: `${q}` },
+    misconceptions: [], verify: { kind: 'fraction', value: q },
+  };
+}
+
+// CONCRETE: division as sharing a dot array into equal rows.
+export function buildDivisionArray() {
+  const rows = randInt(2, 6), cols = randInt(2, 6), total = rows * cols;
+  return {
+    type: 'divide-array', instruction: 'Share equally and count.',
+    question: `${total} dots are arranged in ${rows} equal rows. How many in each row?`,
+    answer: `${cols}`, accepts: accepts(`${cols}`),
+    hints: hintLadder(
+      'Division is sharing into equal groups.',
+      `Share ${total} into ${rows} equal rows — count one row.`,
+      `${total} ÷ ${rows}.`,
+    ),
+    solution: { steps: [{ text: `${total} shared into ${rows} rows = ${total} ÷ ${rows}.`, expr: `${cols}` }], answer: `${cols}` },
+    misconceptions: [], visual: { type: 'array_dots', data: { rows, cols, groupByRow: true } },
+    verify: { kind: 'fraction', value: cols },
+  };
+}
+
+// PICTORIAL: value of a digit shown in a place-value chart (column = value).
+export function buildPlaceValueChart() {
+  const nDigits = pick([4, 5]);
+  const placeVals = [];
+  for (let i = nDigits - 1; i >= 0; i--) placeVals.push(Math.pow(10, i));   // 1000,100,10,1
+  const digits = placeVals.map(() => randInt(1, 9));                         // no zeros, clean questions
+  const hi = randInt(0, nDigits - 1);
+  const digit = digits[hi], place = placeVals[hi], value = digit * place;
+  const numStr = Number(digits.join('')).toLocaleString('en-US');
+  return {
+    type: 'place-value-chart', instruction: 'Find the value of the highlighted digit.',
+    question: `In ${numStr}, what is the value of the highlighted digit (${digit})?`,
+    answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-US')),
+    hints: hintLadder(
+      `The digit ${digit} sits in the ${place}s column.`,
+      `Its value is ${digit} × ${place}.`,
+    ),
+    solution: { steps: [{ text: `That column is worth ${place}.`, expr: `${digit} × ${place} = ${value}` }], answer: `${value}` },
+    misconceptions: [{ when: `${digit}`, feedback: `A digit's value depends on its COLUMN — it's ${digit} × ${place}, not just ${digit}.` }],
+    visual: { type: 'place_value_chart', data: { digits, labels: placeVals.map(String), highlight: hi } },
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const NUMBERS_CONTENT = {
   G5_PATTERNS:           withWorkedExample(buildNumberPattern),
   G5_MISSING_NUMBER:     withWorkedExample(buildMissingNumber),
+
+  // Place value — taught pictorially with a place-value chart.
+  G5_PLACE_VALUE:        withWorkedExample(buildPlaceValueChart),
+  G6_PLACE_VALUE:        withWorkedExample(buildPlaceValueChart),
+
+  // Multiplication & division escalate to the dot-array model on struggle.
+  G5_MULTIPLICATION:     withLevels({
+                            abstract: withWorkedExample(buildMultiplyFact),
+                            concrete: withWorkedExample(buildMultiplicationArray),
+                          }),
+  G5_DIVISION:           withLevels({
+                            abstract: withWorkedExample(buildDivideFact),
+                            concrete: withWorkedExample(buildDivisionArray),
+                          }),
+
+  // Concept-first (concrete): integers on a number line, decimals on a grid.
+  G6_INTEGERS_INTRO:     withWorkedExample(buildPlaceInteger),
+  G5_DECIMALS_INTRO:     withWorkedExample(buildDecimalGrid),
   G5_DECIMALS_ADD:       withWorkedExample(() => buildDecimalAddSub({ sub: false })),
   G5_DECIMALS_SUB:       withWorkedExample(() => buildDecimalAddSub({ sub: true })),
   G6_DECIMALS_MUL:       withWorkedExample(buildDecimalMul),
   G6_DECIMALS_DIV:       withWorkedExample(buildDecimalDiv),
   G7_DECIMALS_MUL:       withWorkedExample(buildDecimalMul),
   G7_DECIMALS_DIV:       withWorkedExample(buildDecimalDiv),
-  G6_INTEGERS_ADD_SUB:   withWorkedExample(buildIntegerAddSub),
+  G6_INTEGERS_ADD_SUB:   withLevels({
+                            abstract: withWorkedExample(buildIntegerAddSub),
+                            concrete: withWorkedExample(buildIntegerJump),
+                          }),
   G7_INTEGERS_MUL_DIV:   withWorkedExample(buildIntegerMulDiv),
   G6_BODMAS_BASIC:       withWorkedExample(() => buildBodmas({ advanced: false })),
   G7_BODMAS_ADV:         withWorkedExample(() => buildBodmas({ advanced: true })),

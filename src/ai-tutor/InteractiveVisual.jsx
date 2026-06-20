@@ -916,6 +916,128 @@ const FractionCompareVisual = ({ data }) => {
   );
 };
 
+// ==================== INTEGER NUMBER LINE (CONCRETE) ====================
+// A number line spanning negatives. Used to (a) place an integer, and (b) model
+// add/subtract as JUMPS: a start marker is shown, the student lands the answer.
+const IntegerLineVisual = ({ data, onAnswer, disabled }) => {
+  const min = data.min ?? -10, max = data.max ?? 10, span = max - min;
+  const [sel, setSel] = useState(null);
+  const W = 460, H = 84, pad = 22, lineY = 42;
+  const xOf = (v) => pad + ((v - min) / span) * (W - 2 * pad);
+
+  const click = (e) => {
+    if (disabled) return;
+    const r = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - r.left) * (W / r.width);
+    const v = Math.max(min, Math.min(max, Math.round(min + ((x - pad) / (W - 2 * pad)) * span)));
+    setSel(v);
+    if (onAnswer) onAnswer({ value: v });
+  };
+
+  return (
+    <div className="mb-4">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full cursor-pointer" style={{ maxWidth: 480 }} onClick={click}>
+        <line x1={pad} y1={lineY} x2={W - pad} y2={lineY} stroke="#64748b" strokeWidth="2" />
+        {Array.from({ length: span + 1 }).map((_, i) => {
+          const v = min + i;
+          return (
+            <g key={v}>
+              <line x1={xOf(v)} y1={lineY - 6} x2={xOf(v)} y2={lineY + 6} stroke={v === 0 ? '#e2e8f0' : '#64748b'} strokeWidth={v === 0 ? 2 : 1} />
+              <text x={xOf(v)} y={lineY + 20} fill="#94a3b8" fontSize="9" textAnchor="middle">{v}</text>
+            </g>
+          );
+        })}
+        {data.start != null && (
+          <g>
+            <circle cx={xOf(data.start)} cy={lineY} r="6" fill="#3b82f6" />
+            <text x={xOf(data.start)} y={lineY - 12} fill="#93c5fd" fontSize="10" textAnchor="middle">start</text>
+          </g>
+        )}
+        {sel != null && <circle cx={xOf(sel)} cy={lineY} r="7" fill="#22c55e" />}
+      </svg>
+      <p className="text-xs text-slate-500 mt-1">Click the number line to land your answer.</p>
+      {sel != null && <p className="text-xs text-emerald-400 mt-0.5">You landed on {sel}.</p>}
+    </div>
+  );
+};
+
+// ==================== DECIMAL GRID (CONCRETE) ====================
+// A 10×10 grid = one whole; each square is 0.01. Shade squares to build a
+// decimal (0.42 = 42 shaded). Makes "tenths and hundredths" tangible.
+const DecimalGridVisual = ({ data, onAnswer, disabled }) => {
+  const isShow = data.mode === 'show';
+  const [shaded, setShaded] = useState(isShow ? (data.shaded || 0) : 0);
+  const W = 240, cell = W / 10;
+
+  const click = (i) => {
+    if (disabled || isShow) return;
+    const next = (i + 1 === shaded) ? i : i + 1;   // fill row-major up to clicked square
+    setShaded(next);
+    if (onAnswer) onAnswer({ shaded: next, total: 100 });
+  };
+
+  return (
+    <div className="mb-4 flex flex-col items-center">
+      <svg viewBox={`0 0 ${W} ${W}`} className="w-full" style={{ maxWidth: 250 }}>
+        {Array.from({ length: 100 }).map((_, i) => {
+          const r = Math.floor(i / 10), c = i % 10;
+          return <rect key={i} x={c * cell} y={r * cell} width={cell - 1} height={cell - 1}
+            fill={i < shaded ? '#22c55e' : '#1e293b'} stroke="#475569" strokeWidth="0.5"
+            onClick={() => click(i)} style={{ cursor: isShow ? 'default' : 'pointer' }} />;
+        })}
+      </svg>
+      {!isShow && <p className="text-xs text-emerald-400 mt-2">Shaded: {shaded}/100 = {shaded / 100}</p>}
+    </div>
+  );
+};
+
+// ==================== ARRAY MODEL (CONCRETE) ====================
+// Dots in rows × columns — multiplication as "rows of", division as "shared
+// into equal rows". Rows are colour-coded so the groups are obvious.
+const ArrayDotsVisual = ({ data }) => {
+  const { rows, cols, groupByRow } = data;
+  const r = 9, gap = 8, pad = 12, step = 2 * r + gap;
+  const W = pad * 2 + cols * step - gap, H = pad * 2 + rows * step - gap;
+  const colors = ['#22c55e', '#3b82f6', '#a855f7', '#f59e0b', '#ec4899', '#14b8a6'];
+  const dots = [];
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      dots.push(<circle key={`${i}-${j}`} cx={pad + r + j * step} cy={pad + r + i * step} r={r}
+        fill={groupByRow ? colors[i % colors.length] : '#22c55e'} />);
+    }
+  }
+  return (
+    <div className="mb-4 flex justify-center">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" style={{ maxWidth: Math.min(W, 340) }}>{dots}</svg>
+    </div>
+  );
+};
+
+// ==================== PLACE-VALUE CHART (PICTORIAL) ====================
+// Shows a number's digits in labelled columns (1000s, 100s, 10s, 1s) with one
+// highlighted — so "the value of a digit depends on its column" is visible.
+const PlaceValueChartVisual = ({ data }) => {
+  const { digits, labels, highlight } = data;
+  const colW = 74, top = 4, headH = 26, cellH = 44, W = digits.length * colW;
+  return (
+    <div className="mb-4 flex justify-center">
+      <svg viewBox={`0 0 ${W} ${top + headH + cellH + 6}`} className="w-full" style={{ maxWidth: Math.min(W + 8, 460) }}>
+        {digits.map((d, i) => {
+          const x = i * colW, hl = i === highlight;
+          return (
+            <g key={i}>
+              <rect x={x + 2} y={top} width={colW - 4} height={headH} fill="#1e293b" stroke="#475569" />
+              <text x={x + colW / 2} y={top + headH / 2 + 4} fill="#94a3b8" fontSize="11" textAnchor="middle">{labels[i]}</text>
+              <rect x={x + 2} y={top + headH + 2} width={colW - 4} height={cellH} fill={hl ? '#a855f7' : '#0f172a'} stroke="#475569" />
+              <text x={x + colW / 2} y={top + headH + 2 + cellH / 2 + 9} fill="#fff" fontSize="26" textAnchor="middle" fontWeight="700">{d}</text>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+  );
+};
+
 // ==================== FRACTION AREA MODEL (PICTORIAL) ====================
 // a/b × c/d shown as overlap on a grid: shade a/b of the columns one way and
 // c/d of the rows another — the doubly-shaded squares ARE the product. The
@@ -960,6 +1082,10 @@ const VISUAL_COMPONENTS = {
   number_line: FractionNumberLineVisual,
   fraction_compare: FractionCompareVisual,
   fraction_area: FractionAreaVisual,
+  integer_line: IntegerLineVisual,
+  decimal_grid: DecimalGridVisual,
+  place_value_chart: PlaceValueChartVisual,
+  array_dots: ArrayDotsVisual,
 };
 
 export const InteractiveVisual = ({ visualType, visualData, onAnswer, disabled }) => {

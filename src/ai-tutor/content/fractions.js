@@ -345,6 +345,25 @@ export function buildPercentageOf() {
   };
 }
 
+// CONCRETE: shade the 10×10 grid to show a percentage (percent = out of 100).
+export function buildShadePercent() {
+  const p = randInt(1, 99);
+  return {
+    type: 'shade-percent', instruction: 'Shade the grid to show the percentage.',
+    question: `Shade the grid to show ${p}%.`,
+    answer: `${p}`, accepts: accepts(`${p}`, `${p}%`),
+    hints: hintLadder(
+      'Percent means "out of 100". The grid has exactly 100 squares.',
+      `${p}% means ${p} out of 100 — shade ${p} squares.`,
+      'Each full row is 10%.',
+    ),
+    solution: { steps: [{ text: `${p}% = ${p} out of 100, so shade ${p} squares.`, expr: `${p}%` }], answer: `${p}` },
+    misconceptions: [],
+    visual: { type: 'decimal_grid', data: { mode: 'make' }, check: 'fraction-bar', target: p / 100, tolerance: 0.001 },
+    verify: { kind: 'fraction', value: p },
+  };
+}
+
 // ============================================================================
 // CONCRETE / PICTORIAL builders — for a kid who doesn't yet have the concept.
 // These teach the IDEA of a fraction by manipulation, before any symbols.
@@ -530,7 +549,10 @@ export const FRACTIONS_CONTENT = {
   G6_FRACTIONS_DIV:      withWorkedExample(buildDivFractions),
   G6_MIXED_NUMBERS:      withWorkedExample(buildMixedToImproper),
   G6_FRACTIONS_DECIMALS: withWorkedExample(buildFractionToDecimal),
-  G6_PERCENTAGES_INTRO:  withWorkedExample(buildPercentageOf),
+  G6_PERCENTAGES_INTRO:  withLevels({
+                            abstract: withWorkedExample(buildPercentageOf),
+                            concrete: withWorkedExample(buildShadePercent),
+                          }),
 
   // Grade 7 — fluency & supporting number skills
   G7_FRACTIONS_MUL:      withLevels({
