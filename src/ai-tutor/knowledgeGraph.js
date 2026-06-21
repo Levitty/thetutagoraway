@@ -125,27 +125,34 @@ const GRADE_6 = {
 // GRADE 7 — Core Skills (~35 skills)
 // ============================================================================
 
+// Curriculum tag shorthands for the Grade 7 Numbers slice (Phase 2 sample).
+// Band placements / Cambridge sub-strand codes (Np/Ni/Nf) are PROVISIONAL,
+// pending the official KICD designs + Cambridge 0862 framework PDFs.
+// See docs/curriculum-alignment.md.
+const cbcNum = (grade, substrand) => ({ grade, strand: 'Numbers', substrand, inScope: true });
+const camNum = (stage, substrand) => ({ stage, strand: 'Number', substrand, inScope: true });
+
 const GRADE_7 = {
   // Numbers
-  G7_PLACE_VALUE: skill('G7_PLACE_VALUE', 'Place Value (Hundred Millions)', 7, S.NUM, { pre: ['G6_PLACE_VALUE'], w: 2 }),
-  G7_BODMAS_ADV: skill('G7_BODMAS_ADV', 'BODMAS (Advanced)', 7, S.NUM, { pre: ['G6_BODMAS_BASIC'], w: 4, crit: true }),
-  G7_PRIMES: skill('G7_PRIMES', 'Prime vs Composite Numbers', 7, S.NUM, { pre: ['G5_FACTORS'], w: 3 }),
-  G7_DIVISIBILITY: skill('G7_DIVISIBILITY', 'Divisibility Tests', 7, S.NUM, { pre: ['G7_PRIMES'], w: 4 }),
-  G7_PRIME_FACTORIZATION: skill('G7_PRIME_FACTORIZATION', 'Prime Factorization', 7, S.NUM, { pre: ['G7_DIVISIBILITY'], w: 5, crit: true }),
-  G7_GCD: skill('G7_GCD', 'Greatest Common Divisor (GCD)', 7, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 4 }),
-  G7_LCM: skill('G7_LCM', 'Least Common Multiple (LCM)', 7, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 4 }),
-  G7_FRACTIONS_COMPARE: skill('G7_FRACTIONS_COMPARE', 'Comparing & Ordering Fractions', 7, S.NUM, { pre: ['G6_FRACTIONS_ADD'], w: 3 }),
-  G7_FRACTIONS_ADD_UNLIKE: skill('G7_FRACTIONS_ADD_UNLIKE', 'Adding Fractions (Unlike, Advanced)', 7, S.NUM, { pre: ['G7_FRACTIONS_COMPARE', 'G7_LCM'], w: 3 }),
-  G7_FRACTIONS_MUL: skill('G7_FRACTIONS_MUL', 'Multiplying Fractions (Advanced)', 7, S.NUM, { pre: ['G6_FRACTIONS_MUL', 'G7_FRACTIONS_COMPARE'], w: 4, crit: true }),
-  G7_RECIPROCALS: skill('G7_RECIPROCALS', 'Reciprocals', 7, S.NUM, { pre: ['G7_FRACTIONS_MUL'], w: 2 }),
-  G7_FRACTIONS_DIV: skill('G7_FRACTIONS_DIV', 'Dividing Fractions (Advanced)', 7, S.NUM, { pre: ['G7_FRACTIONS_MUL', 'G7_RECIPROCALS'], w: 4, crit: true }),
-  G7_DECIMAL_PV: skill('G7_DECIMAL_PV', 'Decimal Place Value (Advanced)', 7, S.NUM, { pre: ['G5_DECIMALS_INTRO'], w: 2 }),
-  G7_DECIMALS_MUL: skill('G7_DECIMALS_MUL', 'Multiplying Decimals (Advanced)', 7, S.NUM, { pre: ['G6_DECIMALS_MUL', 'G7_DECIMAL_PV'], w: 4, crit: true }),
-  G7_DECIMALS_DIV: skill('G7_DECIMALS_DIV', 'Dividing Decimals (Advanced)', 7, S.NUM, { pre: ['G7_DECIMALS_MUL'], w: 4 }),
-  G7_SQUARES_EXT: skill('G7_SQUARES_EXT', 'Squares (Extended)', 7, S.NUM, { pre: ['G6_SQUARES', 'G7_FRACTIONS_MUL', 'G7_DECIMALS_MUL'], w: 3 }),
-  G7_SQUARE_ROOTS: skill('G7_SQUARE_ROOTS', 'Square Roots', 7, S.NUM, { pre: ['G7_SQUARES_EXT', 'G7_PRIME_FACTORIZATION'], w: 4, crit: true }),
-  G7_INTEGERS_MUL_DIV: skill('G7_INTEGERS_MUL_DIV', 'Multiplying & Dividing Integers', 7, S.NUM, { pre: ['G6_INTEGERS_ADD_SUB', 'G5_MULTIPLICATION', 'G5_DIVISION'], w: 3, crit: true }),
-  G7_PERCENTAGES: skill('G7_PERCENTAGES', 'Percentage Calculations', 7, S.NUM, { pre: ['G6_PERCENTAGES_INTRO', 'G7_DECIMALS_MUL'], w: 4, crit: true }),
+  G7_PLACE_VALUE: skill('G7_PLACE_VALUE', 'Place Value (Hundred Millions)', 7, S.NUM, { pre: ['G6_PLACE_VALUE'], w: 2, curricula: { cbc: cbcNum(7, 'Whole Numbers'), cambridge: camNum(7, 'Np') } }),
+  G7_BODMAS_ADV: skill('G7_BODMAS_ADV', 'BODMAS (Advanced)', 7, S.NUM, { pre: ['G6_BODMAS_BASIC'], w: 4, crit: true, curricula: { cbc: cbcNum(7, 'Whole Numbers'), cambridge: camNum(7, 'Ni') } }),
+  G7_PRIMES: skill('G7_PRIMES', 'Prime vs Composite Numbers', 7, S.NUM, { pre: ['G5_FACTORS'], w: 3, curricula: { cbc: cbcNum(7, 'Factors'), cambridge: camNum(7, 'Ni') } }),
+  G7_DIVISIBILITY: skill('G7_DIVISIBILITY', 'Divisibility Tests', 7, S.NUM, { pre: ['G7_PRIMES'], w: 4, curricula: { cbc: cbcNum(7, 'Factors'), cambridge: camNum(7, 'Ni') } }),
+  G7_PRIME_FACTORIZATION: skill('G7_PRIME_FACTORIZATION', 'Prime Factorization', 7, S.NUM, { pre: ['G7_DIVISIBILITY'], w: 5, crit: true, curricula: { cbc: cbcNum(7, 'Factors'), cambridge: camNum(8, 'Ni') } }),
+  G7_GCD: skill('G7_GCD', 'Greatest Common Divisor (GCD)', 7, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 4, curricula: { cbc: cbcNum(7, 'Factors'), cambridge: camNum(8, 'Ni') } }),
+  G7_LCM: skill('G7_LCM', 'Least Common Multiple (LCM)', 7, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 4, curricula: { cbc: cbcNum(7, 'Factors'), cambridge: camNum(8, 'Ni') } }),
+  G7_FRACTIONS_COMPARE: skill('G7_FRACTIONS_COMPARE', 'Comparing & Ordering Fractions', 7, S.NUM, { pre: ['G6_FRACTIONS_ADD'], w: 3, curricula: { cbc: cbcNum(7, 'Fractions'), cambridge: camNum(7, 'Nf') } }),
+  G7_FRACTIONS_ADD_UNLIKE: skill('G7_FRACTIONS_ADD_UNLIKE', 'Adding Fractions (Unlike, Advanced)', 7, S.NUM, { pre: ['G7_FRACTIONS_COMPARE', 'G7_LCM'], w: 3, curricula: { cbc: cbcNum(7, 'Fractions'), cambridge: camNum(7, 'Nf') } }),
+  G7_FRACTIONS_MUL: skill('G7_FRACTIONS_MUL', 'Multiplying Fractions (Advanced)', 7, S.NUM, { pre: ['G6_FRACTIONS_MUL', 'G7_FRACTIONS_COMPARE'], w: 4, crit: true, curricula: { cbc: cbcNum(7, 'Fractions'), cambridge: camNum(8, 'Nf') } }),
+  G7_RECIPROCALS: skill('G7_RECIPROCALS', 'Reciprocals', 7, S.NUM, { pre: ['G7_FRACTIONS_MUL'], w: 2, curricula: { cbc: cbcNum(8, 'Reciprocals'), cambridge: camNum(8, 'Nf') } }),
+  G7_FRACTIONS_DIV: skill('G7_FRACTIONS_DIV', 'Dividing Fractions (Advanced)', 7, S.NUM, { pre: ['G7_FRACTIONS_MUL', 'G7_RECIPROCALS'], w: 4, crit: true, curricula: { cbc: cbcNum(7, 'Fractions'), cambridge: camNum(8, 'Nf') } }),
+  G7_DECIMAL_PV: skill('G7_DECIMAL_PV', 'Decimal Place Value (Advanced)', 7, S.NUM, { pre: ['G5_DECIMALS_INTRO'], w: 2, curricula: { cbc: cbcNum(7, 'Decimals'), cambridge: camNum(7, 'Np') } }),
+  G7_DECIMALS_MUL: skill('G7_DECIMALS_MUL', 'Multiplying Decimals (Advanced)', 7, S.NUM, { pre: ['G6_DECIMALS_MUL', 'G7_DECIMAL_PV'], w: 4, crit: true, curricula: { cbc: cbcNum(7, 'Decimals'), cambridge: camNum(8, 'Nf') } }),
+  G7_DECIMALS_DIV: skill('G7_DECIMALS_DIV', 'Dividing Decimals (Advanced)', 7, S.NUM, { pre: ['G7_DECIMALS_MUL'], w: 4, curricula: { cbc: cbcNum(7, 'Decimals'), cambridge: camNum(8, 'Nf') } }),
+  G7_SQUARES_EXT: skill('G7_SQUARES_EXT', 'Squares (Extended)', 7, S.NUM, { pre: ['G6_SQUARES', 'G7_FRACTIONS_MUL', 'G7_DECIMALS_MUL'], w: 3, curricula: { cbc: cbcNum(7, 'Squares & Square Roots'), cambridge: camNum(7, 'Ni') } }),
+  G7_SQUARE_ROOTS: skill('G7_SQUARE_ROOTS', 'Square Roots', 7, S.NUM, { pre: ['G7_SQUARES_EXT', 'G7_PRIME_FACTORIZATION'], w: 4, crit: true, curricula: { cbc: cbcNum(7, 'Squares & Square Roots'), cambridge: camNum(7, 'Ni') } }),
+  G7_INTEGERS_MUL_DIV: skill('G7_INTEGERS_MUL_DIV', 'Multiplying & Dividing Integers', 7, S.NUM, { pre: ['G6_INTEGERS_ADD_SUB', 'G5_MULTIPLICATION', 'G5_DIVISION'], w: 3, crit: true, curricula: { cbc: cbcNum(7, 'Integers'), cambridge: camNum(8, 'Ni') } }),
+  G7_PERCENTAGES: skill('G7_PERCENTAGES', 'Percentage Calculations', 7, S.NUM, { pre: ['G6_PERCENTAGES_INTRO', 'G7_DECIMALS_MUL'], w: 4, crit: true, curricula: { cbc: cbcNum(8, 'Percentages'), cambridge: camNum(7, 'Nf') } }),
 
   // Algebra
   G7_EXPRESSIONS: skill('G7_EXPRESSIONS', 'Forming Algebraic Expressions', 7, S.ALG, { pre: ['G7_BODMAS_ADV'], w: 3 }),
@@ -223,8 +230,8 @@ const GRADE_8 = {
 
 const GRADE_9 = {
   // Numbers
-  G9_SURDS_INTRO: skill('G9_SURDS_INTRO', 'Introduction to Surds', 9, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_LAWS'], w: 5, crit: true }),
-  G9_SURDS_OPERATIONS: skill('G9_SURDS_OPERATIONS', 'Operations with Surds', 9, S.NUM, { pre: ['G9_SURDS_INTRO'], w: 5 }),
+  G9_SURDS_INTRO: skill('G9_SURDS_INTRO', 'Introduction to Surds', 9, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_LAWS'], w: 5, crit: true, curricula: { cambridge: { strand: 'Number', substrand: 'Ni', inScope: false } } }),
+  G9_SURDS_OPERATIONS: skill('G9_SURDS_OPERATIONS', 'Operations with Surds', 9, S.NUM, { pre: ['G9_SURDS_INTRO'], w: 5, curricula: { cambridge: { strand: 'Number', substrand: 'Ni', inScope: false } } }),
   G9_COMPOUND_INTEREST: skill('G9_COMPOUND_INTEREST', 'Compound Interest', 9, S.NUM, { pre: ['G8_SIMPLE_INTEREST', 'G8_INDICES_INTRO'], w: 5 }),
   G9_COMMERCIAL_ARITH: skill('G9_COMMERCIAL_ARITH', 'Commercial Arithmetic (Tax, Bills)', 9, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4 }),
 
