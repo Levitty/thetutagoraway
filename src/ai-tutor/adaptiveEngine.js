@@ -5,6 +5,7 @@
 // ============================================================================
 
 import { SKILLS as MATH_SKILLS, getPostRequisites as mathGetPostReqs, getPrerequisiteChain as mathPreChain, getPostRequisiteChain as mathPostChain, STRANDS as MATH_STRANDS } from './knowledgeGraph.js';
+import { NATIVE, gradeOf, strandOf } from './curricula.js';
 
 // Default context (math) for backward compatibility
 const defaultCtx = () => ({
@@ -26,6 +27,9 @@ const resolveCtx = (ctx) => {
     getPreChain: ctx.getPreChain || mathPreChain,
     getPostChain: ctx.getPostChain || mathPostChain,
     strands: ctx.strands || MATH_STRANDS,
+    // Active syllabus view. Grade/strand reads route through curricula.js with a
+    // fallback to native, so this is a no-op until skills carry curriculum tags.
+    curriculum: ctx.curriculum || NATIVE,
   };
 };
 
@@ -145,7 +149,7 @@ export const getNextToLearn = (progress, ctx) => {
       const sp = progress.skills[s.id];
       const inProgress = sp?.attempts > 0 ? 8 : 0;
       const criticalBonus = s.critical ? 12 : 0;
-      const gradeProximity = Math.max(0, 8 - Math.abs(s.grade - getEstimatedGradeLevel(progress, ctx)));
+      const gradeProximity = Math.max(0, 8 - Math.abs(gradeOf(s, c.curriculum) - getEstimatedGradeLevel(progress, ctx)));
 
       return {
         ...s,
@@ -272,13 +276,14 @@ export const getStrandStats = (progress, ctx) => {
   const c = resolveCtx(ctx);
   const strands = {};
   for (const s of c.skillList) {
-    if (!strands[s.strand]) strands[s.strand] = { total: 0, mastered: 0, correct: 0, attempts: 0, skills: [] };
-    strands[s.strand].total++;
-    strands[s.strand].skills.push(s);
+    const strand = strandOf(s, c.curriculum);
+    if (!strands[strand]) strands[strand] = { total: 0, mastered: 0, correct: 0, attempts: 0, skills: [] };
+    strands[strand].total++;
+    strands[strand].skills.push(s);
     const sp = progress.skills[s.id];
-    if (sp?.mastered) strands[s.strand].mastered++;
-    strands[s.strand].correct += sp?.correct || 0;
-    strands[s.strand].attempts += sp?.attempts || 0;
+    if (sp?.mastered) strands[strand].mastered++;
+    strands[strand].correct += sp?.correct || 0;
+    strands[strand].attempts += sp?.attempts || 0;
   }
   return Object.entries(strands).map(([name, d]) => ({
     name,
@@ -292,9 +297,10 @@ export const getGradeStats = (progress, ctx) => {
   const c = resolveCtx(ctx);
   const grades = {};
   for (const s of c.skillList) {
-    if (!grades[s.grade]) grades[s.grade] = { total: 0, mastered: 0 };
-    grades[s.grade].total++;
-    if (progress.skills[s.id]?.mastered) grades[s.grade].mastered++;
+    const grade = gradeOf(s, c.curriculum);
+    if (!grades[grade]) grades[grade] = { total: 0, mastered: 0 };
+    grades[grade].total++;
+    if (progress.skills[s.id]?.mastered) grades[grade].mastered++;
   }
   return Object.entries(grades).map(([grade, d]) => ({
     grade: parseInt(grade),
@@ -306,13 +312,13 @@ export const getGradeStats = (progress, ctx) => {
 export const getEstimatedGradeLevel = (progress, ctx) => {
   const gradeStats = getGradeStats(progress, ctx);
   const c = resolveCtx(ctx);
-  const minGrade = c.skillList.reduce((m, s) => Math.min(m, s.grade), Infinity);
+  const minGrade = c.skillList.reduce((m, s) => Math.min(m, gradeOf(s, c.curriculum)), Infinity);
   let level = minGrade;
   for (const gs of gradeStats) {
     if (gs.percent >= 60) level = gs.grade + 1;
     else break;
   }
-  const maxGrade = c.skillList.reduce((m, s) => Math.max(m, s.grade), 0);
+  const maxGrade = c.skillList.reduce((m, s) => Math.max(m, gradeOf(s, c.curriculum)), 0);
   return Math.min(level, maxGrade);
 };
 

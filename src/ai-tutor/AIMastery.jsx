@@ -9,6 +9,7 @@ import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, ge
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
+import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel } from './curricula.js';
 import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
 import { supabase } from '../supabase.js';
@@ -97,14 +98,17 @@ export function AIMastery({ onBack, userId }) {
   const SKILLS = sub?.skills || {};
   const SKILL_COUNT = sub?.skillCount || 0;
   const STRANDS = sub?.strands || [];
-  const GRADES = sub?.grades || [];
-  const getSkillsByGrade = sub?.getByGrade || (() => []);
   const getPostRequisites = sub?.getPostReqs || (() => []);
   const generateProblem = sub?.generate || (() => null);
   const generateWorkedExample = sub?.generateExample || (() => null);
 
+  // Active syllabus view (CBC/CBE, Cambridge, or native). Persisted per subject
+  // inside progress so it survives reloads / other devices.
+  const curriculum = progress.curriculum || NATIVE;
+  const curriculaOptions = useMemo(() => curriculaForSubject(sub), [sub]);
+
   // Engine context — passed to adaptive/spaced/diagnostic engines
-  const ctx = useMemo(() => sub ? { skills: sub.skills, getPostReqs: sub.getPostReqs } : null, [sub]);
+  const ctx = useMemo(() => sub ? { skills: sub.skills, getPostReqs: sub.getPostReqs, curriculum } : null, [sub, curriculum]);
 
   // Lesson / Practice state
   const [activeSkill, setActiveSkill] = useState(null);
@@ -595,10 +599,11 @@ export function AIMastery({ onBack, userId }) {
   const switchSubject = () => { setSubjectId(null); setView('subject-picker'); setActiveSkill(null); setProgress(defaultProgress); };
   const resetAll = () => { if (confirm('Reset ALL progress? This cannot be undone.')) { const fresh = defaultProgress(); setProgress(fresh); const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`; forceSave(storageKey, fresh); setView('welcome'); } };
 
-  // Grade label helper (for ACCA subjects that use level names)
+  // Grade/band label helper. ACCA subjects use named levels; otherwise the
+  // active curriculum decides the wording ("Grade" vs Cambridge "Stage").
   const gradeLabel = (grade) => {
     if (sub?.gradeNames?.[grade]) return `${sub.gradeLabel} ${grade} — ${sub.gradeNames[grade]}`;
-    return `${sub?.gradeLabel || 'Grade'} ${grade}`;
+    return bandLabel(curriculum, grade);
   };
 
   if (loading) return <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"><div className="text-xl">Loading...</div></div>;
@@ -1022,6 +1027,16 @@ export function AIMastery({ onBack, userId }) {
               <div className="text-amber-500 font-bold flex items-center gap-1 text-sm"><Icon name="star" className="w-4 h-4" /> {progress.totalXP || 0}</div>
               <div className="text-xs text-slate-400">Level {level.level}</div>
             </div>
+            {curriculaOptions.length > 1 && (
+              <select
+                value={curriculum}
+                onChange={(e) => setProgress(p => ({ ...p, curriculum: e.target.value }))}
+                title="Curriculum view"
+                className="text-xs bg-slate-100 text-slate-700 rounded-md px-2 py-1 border border-slate-200 focus:outline-none"
+              >
+                {curriculaOptions.map(c => <option key={c.id} value={c.id}>{c.shortName}</option>)}
+              </select>
+            )}
             <button onClick={switchSubject} className="text-slate-300 hover:text-slate-500" title="Switch subject"><Icon name="book" className="w-4 h-4" /></button>
             <button onClick={resetAll} className="text-slate-300 hover:text-slate-500" title="Reset progress"><Icon name="refresh" className="w-4 h-4" /></button>
           </div>
@@ -1148,16 +1163,27 @@ export function AIMastery({ onBack, userId }) {
         {/* ========== SKILLS TAB ========== */}
         {activeTab === 'skills' && (
           <div className="space-y-3">
-            {GRADES.map(grade => {
-              const gradeSkills = getSkillsByGrade(grade);
+            {(() => {
+              // Group all skills by the active curriculum's band (grade/stage),
+              // falling back to native grade for untagged skills so nothing is
+              // hidden — out-of-scope skills are labelled "enrichment" instead.
+              const byBand = {};
+              Object.values(sub.skills).forEach(s => {
+                const g = gradeOf(s, curriculum);
+                (byBand[g] = byBand[g] || []).push(s);
+              });
+              return Object.keys(byBand).map(Number).sort((a, b) => a - b);
+            })().map(grade => {
+              const gradeSkills = Object.values(sub.skills).filter(s => gradeOf(s, curriculum) === grade);
               const mastered = gradeSkills.filter(s => progress.skills[s.id]?.mastered).length;
               const isExp = expanded === grade;
 
-              // Group by strand within grade
+              // Group by the active curriculum's strand within the band
               const byStrand = {};
               gradeSkills.forEach(s => {
-                if (!byStrand[s.strand]) byStrand[s.strand] = [];
-                byStrand[s.strand].push(s);
+                const strand = strandOf(s, curriculum);
+                if (!byStrand[strand]) byStrand[strand] = [];
+                byStrand[strand].push(s);
               });
 
               return (
@@ -1189,7 +1215,7 @@ export function AIMastery({ onBack, userId }) {
                                   {status === 'locked' ? <Icon name="lock" className="w-3.5 h-3.5" /> : status === 'mastered' ? <Icon name="check" className="w-3.5 h-3.5" /> : status === 'in_progress' ? <Icon name="trend" className="w-3.5 h-3.5" /> : <Icon name="play" className="w-3.5 h-3.5" />}
                                 </div>
                                 <div className="flex-1 text-left">
-                                  <div className="text-sm font-medium flex items-center gap-2">{skill.name}{skill.critical && <Icon name="zap" className="w-3.5 h-3.5 text-amber-400" />}</div>
+                                  <div className="text-sm font-medium flex items-center gap-2">{skill.name}{skill.critical && <Icon name="zap" className="w-3.5 h-3.5 text-amber-400" />}{isEnrichment(skill, curriculum) && <span className="text-[10px] uppercase tracking-wide text-amber-300/80 bg-amber-900/30 rounded px-1.5 py-0.5">Enrichment</span>}</div>
                                   {sp?.attempts > 0 && <div className="text-xs text-slate-400">{sp.correct}/{sp.attempts} ({Math.round((sp.correct / sp.attempts) * 100)}%)</div>}
                                 </div>
                               </button>

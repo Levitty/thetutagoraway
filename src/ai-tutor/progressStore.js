@@ -24,6 +24,8 @@ export const defaultProgress = () => ({
   lastPracticeDate: null,
   sessionsCompleted: 0,
   diagnosticBalances: null,
+  // Active syllabus view (curricula.js): 'native' | 'cbc' | 'cambridge'.
+  curriculum: 'native',
 });
 
 // ==================== LOCAL STORAGE (FALLBACK) ====================
@@ -112,6 +114,7 @@ export const saveProgress = async (userId, progress) => {
           progress: {
             skills: progress.skills,
             diagnosticBalances: progress.diagnosticBalances,
+            curriculum: progress.curriculum,
           },
           diagnosed: progress.diagnosed,
           total_xp: progress.totalXP || 0,

@@ -19,6 +19,8 @@ export const SUBJECTS = {
     shortName: 'Math',
     emoji: '🧠',
     description: 'Grade 5-12 adaptive math (CBC Kenya + universal)',
+    // Syllabus views this subject can be shown through (native is implicit).
+    curricula: ['cbc', 'cambridge'],
     skills: SKILLS,
     skillCount: SKILL_COUNT,
     strands: STRANDS,

@@ -28,6 +28,9 @@ const skill = (id, name, grade, strand, opts = {}) => ({
   minProblems: opts.min || 6,
   estimatedMinutes: opts.mins || 15,
   xpValue: opts.xp || 15,
+  // Optional syllabus overlay (CBC/CBE, Cambridge). See curricula.js. Absent =
+  // skill uses its native grade/strand for every curriculum view.
+  curricula: opts.curricula || null,
 });
 
 // ============================================================================
