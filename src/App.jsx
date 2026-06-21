@@ -778,6 +778,28 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
 };
 
 // ============ STUDENT DASHBOARD ============
+// Compact "momentum" chip — surfaces the learner's level + streak in headers,
+// nudging them back into the tutor. Self-contained background so it reads on
+// both the light dashboard header and the transparent marketing nav.
+const MomentumChipView = ({ level, streak, onClick }) => (
+  <button onClick={onClick} title="Open AI Tutor" className="flex items-center gap-1.5 bg-white/90 border border-slate-200 shadow-sm rounded-full pl-2 pr-2.5 py-1 hover:bg-white transition-colors">
+    <span className="text-base leading-none">🧠</span>
+    <span className="text-xs font-semibold text-slate-700">Lv {level}</span>
+    {streak > 0 && <span className="text-xs font-semibold text-orange-500 flex items-center">🔥{streak}</span>}
+  </button>
+);
+
+const MomentumChip = ({ userId, onClick }) => {
+  const [m, setM] = useState(null);
+  useEffect(() => {
+    if (!userId) return;
+    supabase.from('ai_tutor_progress').select('total_xp, current_streak, diagnosed').eq('user_id', userId).maybeSingle()
+      .then(({ data }) => { if (data?.diagnosed) setM({ level: getLevel(data.total_xp || 0).level, streak: data.current_streak || 0 }); });
+  }, [userId]);
+  if (!m) return null;
+  return <MomentumChipView level={m.level} streak={m.streak} onClick={onClick} />;
+};
+
 const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings }) => {
   const [tab, setTab] = useState('upcoming');
   const [showEditProfile, setShowEditProfile] = useState(false);
@@ -819,7 +841,9 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
           </button>
           <div className="flex items-center gap-3 sm:gap-4">
             <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600 hidden sm:block">Find Tutors</button>
-            <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>
+            {aiProgress?.diagnosed
+              ? <MomentumChipView level={getLevel(aiProgress.totalXP).level} streak={aiProgress.currentStreak} onClick={() => onNavigate('ai')} />
+              : <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>}
             <button onClick={() => onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium hidden sm:block">Spreadsheet</button>
             {isAdmin && <button onClick={() => onNavigate('admin')} className="text-sm text-purple-600 font-medium">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
@@ -4221,6 +4245,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
           <button onClick={() => onNavigate('tutors')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Find Tutors</button>
           <button onClick={() => onNavigate('consulting')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Consulting</button>
           {isAdmin && <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-purple-600' : 'text-purple-300'}`}>Admin</button>}
+          {user && profile?.role === 'student' && <MomentumChip userId={profile?.id} onClick={() => onNavigate('ai')} />}
           {user ? (
             <button onClick={() => onNavigate('dashboard')} className="flex items-center gap-2">
               <Avatar src={profile?.avatar_url} name={profile?.full_name} size={32} />
@@ -4234,6 +4259,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
         </div>
         {/* Mobile hamburger */}
         <div className="flex md:hidden items-center gap-3">
+          {user && profile?.role === 'student' && <MomentumChip userId={profile?.id} onClick={() => onNavigate('ai')} />}
           {user && (
             <button onClick={() => onNavigate('dashboard')}>
               <Avatar src={profile?.avatar_url} name={profile?.full_name} size={28} />
