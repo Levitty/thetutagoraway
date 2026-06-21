@@ -4,6 +4,8 @@ import { VideoRoom } from './VideoRoom';
 import { PaymentModal } from './PaymentModal';
 import { Messaging, MessageButton, startConversation } from './Messaging';
 import { AIMastery } from './ai-tutor/AIMastery.jsx';
+import { getLevel } from './ai-tutor/adaptiveEngine.js';
+import { todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP } from './ai-tutor/gamification.js';
 import { TeacherDashboard } from './ai-tutor/TeacherDashboard.jsx';
 import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
@@ -782,6 +784,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
   const [reviewBooking, setReviewBooking] = useState(null);
   const [showProgress, setShowProgress] = useState(false);
   const [payments, setPayments] = useState([]);
+  const [aiProgress, setAiProgress] = useState(null);
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
   const past = bookings.filter(b => b.status === 'completed');
   const nextLesson = [...upcoming].sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
@@ -792,6 +795,16 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
     if (profile?.id) {
       supabase.from('payments').select('amount, status, created_at').eq('student_id', profile.id).eq('status', 'completed')
         .then(({ data }) => setPayments(data || []));
+      supabase.from('ai_tutor_progress').select('total_xp, current_streak, diagnosed, progress').eq('user_id', profile.id).maybeSingle()
+        .then(({ data }) => {
+          if (data) setAiProgress({
+            totalXP: data.total_xp || 0,
+            currentStreak: data.current_streak || 0,
+            diagnosed: !!data.diagnosed,
+            dailyXP: data.progress?.dailyXP || 0,
+            dailyDate: data.progress?.dailyDate || null,
+          });
+        });
     }
   }, [profile?.id]);
 
@@ -860,19 +873,50 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
           </div>
         )}
 
-        {/* AI Tutor Card */}
-        <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 mb-6 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="text-3xl sm:text-4xl">🧠</div>
-            <div>
-              <h3 className="text-white font-bold text-lg">AI Math Tutor</h3>
-              <p className="text-slate-300 text-sm hidden sm:block">Adaptive learning that finds your gaps and fills them</p>
+        {/* AI Tutor Card — momentum-aware, encouraging entry point */}
+        {(() => {
+          const started = aiProgress && aiProgress.diagnosed;
+          const lvl = started ? getLevel(aiProgress.totalXP).level : 0;
+          const lvlInfo = started ? getLevel(aiProgress.totalXP) : null;
+          const streak = aiProgress?.currentStreak || 0;
+          const goalPct = started ? dailyGoalPercent(aiProgress) : 0;
+          const goalMet = started ? dailyGoalMet(aiProgress) : false;
+          const cta = !started ? 'Start Learning' : goalMet ? 'Keep Going' : 'Continue';
+          const headline = !started
+            ? 'Adaptive learning that finds your gaps and fills them'
+            : goalMet ? 'Daily goal done — brilliant! A little more never hurts.'
+            : streak > 0 ? `You’re on a ${streak}-day streak — keep it alive!`
+            : 'Pick up where you left off — small steps add up.';
+          return (
+            <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 mb-6">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-4 min-w-0">
+                  <div className="text-3xl sm:text-4xl">🧠</div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h3 className="text-white font-bold text-lg">AI Math Tutor</h3>
+                      {started && <span className="text-xs font-semibold text-amber-300 bg-amber-500/15 rounded-full px-2 py-0.5">Level {lvl}</span>}
+                      {streak > 0 && <span className="text-xs font-semibold text-orange-300 flex items-center gap-0.5">🔥 {streak}d</span>}
+                    </div>
+                    <p className="text-slate-300 text-sm mt-0.5">{headline}</p>
+                  </div>
+                </div>
+                <button onClick={() => onNavigate('ai')} className="shrink-0 px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-lg transition-colors text-sm">
+                  {cta}
+                </button>
+              </div>
+              {started && (
+                <div className="mt-4 flex items-center gap-3">
+                  <span className="text-xs text-slate-400 shrink-0">{goalMet ? '☀️ Goal' : '🎯 Today'}</span>
+                  <div className="flex-1 h-2 bg-slate-700 rounded-full overflow-hidden">
+                    <div className={`h-full transition-all ${goalMet ? 'bg-emerald-500' : 'bg-amber-500'}`} style={{ width: `${goalPct}%` }} />
+                  </div>
+                  <span className="text-xs text-slate-400 shrink-0">{Math.min(todaysXP(aiProgress), DAILY_GOAL_XP)}/{DAILY_GOAL_XP} XP</span>
+                </div>
+              )}
             </div>
-          </div>
-          <button onClick={() => onNavigate('ai')} className="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-lg transition-colors text-sm">
-            Start Learning
-          </button>
-        </div>
+          );
+        })()}
 
         {/* Stats row */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">

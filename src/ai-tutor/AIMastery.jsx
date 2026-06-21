@@ -10,6 +10,7 @@ import { processReviewResult, applyImplicitCredits, calculateMemoryStrength } fr
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel } from './curricula.js';
+import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
 import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
 import { supabase } from '../supabase.js';
@@ -85,6 +86,45 @@ function checkAnswerMatch(userAnswer, problem) {
   return false;
 }
 
+// ==================== CELEBRATIONS ====================
+
+const CONFETTI_COLORS = ['#34d399', '#fbbf24', '#60a5fa', '#f472b6', '#a78bfa'];
+
+// Lightweight CSS confetti (no dependencies) for celebratory moments.
+const Confetti = () => (
+  <div className="pointer-events-none fixed inset-0 overflow-hidden z-[60]" aria-hidden="true">
+    {Array.from({ length: 28 }).map((_, i) => {
+      const size = 6 + Math.random() * 6;
+      return (
+        <span key={i} style={{
+          position: 'absolute', left: `${Math.random() * 100}%`, top: '-5%',
+          width: size, height: size, borderRadius: 2,
+          background: CONFETTI_COLORS[i % CONFETTI_COLORS.length],
+          animation: `tg-confetti ${1.8 + Math.random() * 1.2}s linear ${Math.random() * 0.3}s forwards`,
+        }} />
+      );
+    })}
+    <style>{`@keyframes tg-confetti{to{transform:translateY(110vh) rotate(540deg);opacity:0}}`}</style>
+  </div>
+);
+
+// Warm, full-screen celebration card. `item` = { type, icon, title, subtitle, xp }.
+const CelebrationOverlay = ({ item, onDismiss }) => {
+  if (!item) return null;
+  return (
+    <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={onDismiss}>
+      <Confetti />
+      <div className="bg-slate-800 rounded-3xl p-8 text-center max-w-sm relative z-[61]" onClick={e => e.stopPropagation()}>
+        <div className="text-5xl mb-3">{item.icon}</div>
+        <h2 className="text-2xl font-bold mb-1">{item.title}</h2>
+        {item.subtitle && <p className="text-slate-300 mb-2">{item.subtitle}</p>}
+        {item.xp != null && <p className="text-emerald-400 font-bold text-lg mb-2">+{item.xp} XP</p>}
+        <button onClick={onDismiss} className="mt-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl px-8 py-3 font-semibold transition-colors">Continue</button>
+      </div>
+    </div>
+  );
+};
+
 // ==================== MAIN COMPONENT ====================
 
 export function AIMastery({ onBack, userId }) {
@@ -138,7 +178,8 @@ export function AIMastery({ onBack, userId }) {
   const [expanded, setExpanded] = useState(null);
   const [activeTab, setActiveTab] = useState('path');
   const [remediationSkills, setRemediationSkills] = useState(null);
-  const [celebration, setCelebration] = useState(null);
+  // Celebration queue: skill mastery, level-ups, achievements, daily goal.
+  const [celebrations, setCelebrations] = useState([]);
 
   // Layered hints + tooltips state
   const [attemptCount, setAttemptCount] = useState(0);
@@ -317,6 +358,44 @@ export function AIMastery({ onBack, userId }) {
     })();
     return () => { cancelled = true; };
   }, [progress, subjectId, view, loading, sub]);
+
+  // Detect level-ups, newly-unlocked achievements and daily-goal hits, and queue
+  // a warm celebration for each. The first run after load seeds the baseline
+  // silently so we never replay past wins when a learner re-opens the tutor.
+  const gamifyRef = useRef({ init: false, level: 0, dailyDoneDate: null });
+  useEffect(() => {
+    if (loading || !subjectId || !ctx) return;
+    const lvl = getLevel(progress.totalXP || 0).level;
+    const st = getStats(progress, ctx);
+    const strandsComplete = getStrandStats(progress, ctx).filter(s => s.total > 0 && s.mastered === s.total).length;
+    const snapshot = { progress, mastered: st.mastered, total: st.total, level: lvl, streak: progress.currentStreak || 0, strandsComplete };
+    const unlocked = evaluateAchievements(snapshot);
+    const stored = progress.achievements || [];
+    const newly = unlocked.filter(id => !stored.includes(id));
+    const goalMet = dailyGoalMet(progress);
+
+    if (!gamifyRef.current.init) {
+      gamifyRef.current = { init: true, level: lvl, dailyDoneDate: goalMet ? progress.dailyDate : null };
+      if (newly.length) setProgress(p => ({ ...p, achievements: Array.from(new Set([...(p.achievements || []), ...unlocked])) }));
+      return;
+    }
+
+    const queue = [];
+    if (lvl > gamifyRef.current.level) {
+      queue.push({ type: 'levelup', icon: '🚀', title: `Level ${lvl}!`, subtitle: encourage('levelup') });
+    }
+    for (const id of newly) {
+      const a = getAchievement(id);
+      if (a) queue.push({ type: 'achievement', icon: a.icon, title: a.name, subtitle: a.desc });
+    }
+    if (goalMet && gamifyRef.current.dailyDoneDate !== progress.dailyDate) {
+      gamifyRef.current.dailyDoneDate = progress.dailyDate;
+      queue.push({ type: 'dailygoal', icon: '☀️', title: 'Daily goal reached!', subtitle: encourage('dailygoal') });
+    }
+    gamifyRef.current.level = lvl;
+    if (newly.length) setProgress(p => ({ ...p, achievements: Array.from(new Set([...(p.achievements || []), ...newly])) }));
+    if (queue.length) setCelebrations(q => [...q, ...queue]);
+  }, [progress.totalXP, progress.skills, progress.dailyXP, loading, subjectId, ctx]);
 
   // Review timer
   useEffect(() => {
@@ -505,17 +584,19 @@ export function AIMastery({ onBack, userId }) {
       xpEarned = 2; // Small XP per correct answer
     }
 
-    const updatedProgress = updateStreak({
+    const updatedProgress = updateStreak(gainXP({
       ...progress,
       skills: updatedSkills,
-      totalXP: (progress.totalXP || 0) + xpEarned,
-    });
+    }, xpEarned));
 
     setProgress(updatedProgress);
 
-    // Celebration on mastery
+    // Celebration on mastery (level-ups / badges are queued by the effect below)
     if (shouldMaster && !sp.mastered) {
-      setTimeout(() => setCelebration({ skill: skill.name, xp: xpEarned }), 500);
+      setTimeout(() => setCelebrations(q => [...q, {
+        type: 'mastery', icon: '🏆', title: 'Skill Mastered!',
+        subtitle: `${skill.name} — ${encourage('mastery')}`, xp: xpEarned,
+      }]), 500);
     }
   };
 
@@ -569,11 +650,10 @@ export function AIMastery({ onBack, userId }) {
     let updatedSkills = applyImplicitCredits(progress, skillId, correct, ctx);
     updatedSkills = { ...updatedSkills, [skillId]: updatedSp };
 
-    setProgress(p => updateStreak({
+    setProgress(p => updateStreak(gainXP({
       ...p,
       skills: updatedSkills,
-      totalXP: (p.totalXP || 0) + (correct ? 3 : 0),
-    }));
+    }, correct ? 3 : 0)));
 
     setTimeout(() => {
       if (reviewIndex < reviewProblems.length - 1) {
@@ -587,7 +667,7 @@ export function AIMastery({ onBack, userId }) {
         setReviewTimerActive(false);
         const accuracy = (session.correct + (correct ? 1 : 0)) / (session.total + 1);
         const xp = calculateXP(accuracy, 10, false);
-        setProgress(p => ({ ...p, totalXP: (p.totalXP || 0) + xp, sessionsCompleted: (p.sessionsCompleted || 0) + 1 }));
+        setProgress(p => updateStreak(gainXP({ ...p, sessionsCompleted: (p.sessionsCompleted || 0) + 1 }, xp)));
         setView('review-complete');
       }
     }, 800);
@@ -595,7 +675,14 @@ export function AIMastery({ onBack, userId }) {
 
   // ==================== NAVIGATION ====================
 
-  const goHome = () => { setView('home'); setActiveSkill(null); setCelebration(null); setRemediationSkills(null); };
+  const goHome = () => { setView('home'); setActiveSkill(null); setCelebrations([]); setRemediationSkills(null); };
+
+  // Dismiss the front celebration; mastery returns the learner to the dashboard.
+  const dismissCelebration = () => {
+    const item = celebrations[0];
+    setCelebrations(q => q.slice(1));
+    if (item?.type === 'mastery') goHome();
+  };
   const switchSubject = () => { setSubjectId(null); setView('subject-picker'); setActiveSkill(null); setProgress(defaultProgress); };
   const resetAll = () => { if (confirm('Reset ALL progress? This cannot be undone.')) { const fresh = defaultProgress(); setProgress(fresh); const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`; forceSave(storageKey, fresh); setView('welcome'); } };
 
@@ -915,16 +1002,8 @@ export function AIMastery({ onBack, userId }) {
           )}
         </div>
 
-        {/* Mastery Celebration */}
-        {celebration && <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={() => { setCelebration(null); goHome(); }}>
-          <div className="bg-slate-800 rounded-3xl p-8 text-center max-w-sm" onClick={e => e.stopPropagation()}>
-            <Icon name="trophy" className="w-16 h-16 text-amber-400 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold mb-2">Skill Mastered! 🎉</h2>
-            <p className="text-slate-400 mb-2">{celebration.skill}</p>
-            <p className="text-emerald-400 font-bold text-lg mb-6">+{celebration.xp} XP</p>
-            <button onClick={() => { setCelebration(null); goHome(); }} className="bg-emerald-600 hover:bg-emerald-500 rounded-xl px-8 py-3 font-semibold transition-colors">Continue</button>
-          </div>
-        </div>}
+        {/* Celebrations (mastery, level-up, achievements, daily goal) */}
+        <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
         </div>
       </div>
     );
@@ -980,6 +1059,7 @@ export function AIMastery({ onBack, userId }) {
 
     return (
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center p-4">
+        <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
         <div className="max-w-md text-center">
           <Icon name="check" className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-2">Review Complete!</h2>
@@ -1010,6 +1090,7 @@ export function AIMastery({ onBack, userId }) {
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
+      <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
       {/* Bridging Header — matches main app's light nav, then transitions to dark */}
       <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
         <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -1056,6 +1137,33 @@ export function AIMastery({ onBack, userId }) {
               + Class
             </button>
           </div>
+
+          {/* Daily goal — warm, returns-focused encouragement */}
+          {(() => {
+            const earned = todaysXP(progress);
+            const pct = dailyGoalPercent(progress);
+            const met = dailyGoalMet(progress);
+            return (
+              <div className="mt-2 bg-slate-800/80 backdrop-blur rounded-xl px-4 py-3">
+                <div className="flex items-center justify-between mb-1.5">
+                  <span className="text-sm font-medium flex items-center gap-1.5">
+                    {met ? '☀️ Daily goal reached!' : '🎯 Today’s goal'}
+                  </span>
+                  <span className="text-xs text-slate-400">{Math.min(earned, DAILY_GOAL_XP)}/{DAILY_GOAL_XP} XP</span>
+                </div>
+                <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
+                  <div className={`h-full transition-all ${met ? 'bg-emerald-500' : 'bg-amber-500'}`} style={{ width: `${pct}%` }} />
+                </div>
+                <p className="text-xs text-slate-400 mt-1.5">
+                  {met
+                    ? 'Wonderful — see you again tomorrow to keep your streak going.'
+                    : progress.currentStreak > 0
+                      ? `You’re on a ${progress.currentStreak}-day streak. A little practice keeps it alive!`
+                      : 'Every small session adds up. Let’s make today count.'}
+                </p>
+              </div>
+            );
+          })()}
           {showJoin && (
             <div className="mt-2 bg-slate-800/80 backdrop-blur rounded-xl px-4 py-3">
               {joinStatus === 'ok' ? (
@@ -1088,7 +1196,7 @@ export function AIMastery({ onBack, userId }) {
       {/* Tabs */}
       <div className="max-w-2xl mx-auto px-4 mt-4">
         <div className="flex gap-1 bg-slate-800 rounded-xl p-1 mb-4">
-          {[['path', 'Learning Path', 'target'], ['skills', 'All Skills', 'map'], ['stats', 'Stats', 'bar']].map(([id, label, icon]) => (
+          {[['path', 'Learning Path', 'target'], ['skills', 'All Skills', 'map'], ['stats', 'Stats', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
             <button key={id} onClick={() => setActiveTab(id)} className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-sm font-medium transition-colors ${activeTab === id ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-white'}`}>
               <Icon name={icon} className="w-4 h-4" />{label}
             </button>
@@ -1284,6 +1392,32 @@ export function AIMastery({ onBack, userId }) {
             </div>
           </div>
         )}
+
+        {/* ========== AWARDS TAB ========== */}
+        {activeTab === 'awards' && (() => {
+          const unlocked = new Set(progress.achievements || []);
+          return (
+            <div className="space-y-4">
+              <div className="bg-slate-800 rounded-2xl p-4 text-center">
+                <div className="text-2xl font-bold text-amber-400">{unlocked.size}<span className="text-slate-500 text-lg">/{ACHIEVEMENTS.length}</span></div>
+                <div className="text-sm text-slate-400">Badges earned — keep going, every one is a win!</div>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {ACHIEVEMENTS.map(a => {
+                  const got = unlocked.has(a.id);
+                  return (
+                    <div key={a.id} className={`rounded-2xl p-4 text-center border transition-colors ${got ? 'bg-amber-900/15 border-amber-700/50' : 'bg-slate-800/60 border-slate-700/50'}`}>
+                      <div className={`text-3xl mb-1 ${got ? '' : 'grayscale opacity-40'}`}>{a.icon}</div>
+                      <div className={`text-sm font-semibold ${got ? 'text-white' : 'text-slate-400'}`}>{a.name}</div>
+                      <div className="text-xs text-slate-500 mt-0.5">{a.desc}</div>
+                      {got && <div className="text-[10px] uppercase tracking-wide text-amber-300/80 mt-1">Earned</div>}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
 
         {/* Footer */}
         <div className="mt-8 text-center text-slate-600 text-xs space-y-1 pb-8">
