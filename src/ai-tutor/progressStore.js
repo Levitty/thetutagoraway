@@ -4,10 +4,15 @@
 
 import { supabase } from '../supabase.js';
 
-const LOCAL_KEY = 'tutagora_ai_v2';
+const LOCAL_KEY_BASE = 'tutagora_ai_v2';
 const DEBOUNCE_MS = 5000;
 
 let saveTimeout = null;
+
+// localStorage is namespaced per user+subject so that different subjects or
+// different users on the same browser don't overwrite each other's cached
+// progress (which previously all shared a single global key).
+const localKey = (key) => (key ? `${LOCAL_KEY_BASE}_${key}` : LOCAL_KEY_BASE);
 
 // Default progress state
 export const defaultProgress = () => ({
@@ -23,18 +28,21 @@ export const defaultProgress = () => ({
 
 // ==================== LOCAL STORAGE (FALLBACK) ====================
 
-const saveLocal = (progress) => {
+const saveLocal = (key, progress) => {
   try {
-    localStorage.setItem(LOCAL_KEY, JSON.stringify(progress));
+    localStorage.setItem(localKey(key), JSON.stringify(progress));
   } catch (e) {
     console.warn('Failed to save to localStorage:', e);
   }
 };
 
-const loadLocal = () => {
+const loadLocal = (key) => {
   try {
-    const data = localStorage.getItem(LOCAL_KEY);
-    return data ? JSON.parse(data) : null;
+    const data = localStorage.getItem(localKey(key));
+    if (data) return JSON.parse(data);
+    // Legacy fallback: older builds stored everything under one global key.
+    const legacy = localStorage.getItem(LOCAL_KEY_BASE);
+    return legacy ? JSON.parse(legacy) : null;
   } catch (e) {
     return null;
   }
@@ -43,7 +51,7 @@ const loadLocal = () => {
 // ==================== SUPABASE STORAGE ====================
 
 export const loadProgress = async (userId) => {
-  if (!userId) return loadLocal() || defaultProgress();
+  if (!userId) return loadLocal(userId) || defaultProgress();
 
   try {
     const { data, error } = await supabase
@@ -54,7 +62,7 @@ export const loadProgress = async (userId) => {
 
     if (error && error.code !== 'PGRST116') {
       console.warn('Supabase load error:', error);
-      return loadLocal() || defaultProgress();
+      return loadLocal(userId) || defaultProgress();
     }
 
     if (data) {
@@ -68,12 +76,12 @@ export const loadProgress = async (userId) => {
         diagnosed: data.diagnosed || false,
       };
       // Also save locally as cache
-      saveLocal(progress);
+      saveLocal(userId, progress);
       return progress;
     }
 
     // No cloud data — check localStorage for migration
-    const local = loadLocal();
+    const local = loadLocal(userId);
     if (local && Object.keys(local.skills || {}).length > 0) {
       // Migrate local data to cloud
       await saveProgress(userId, local);
@@ -83,13 +91,13 @@ export const loadProgress = async (userId) => {
     return defaultProgress();
   } catch (e) {
     console.warn('Failed to load from Supabase:', e);
-    return loadLocal() || defaultProgress();
+    return loadLocal(userId) || defaultProgress();
   }
 };
 
 export const saveProgress = async (userId, progress) => {
   // Always save locally first (instant)
-  saveLocal(progress);
+  saveLocal(userId, progress);
 
   if (!userId) return;
 
@@ -124,7 +132,7 @@ export const saveProgress = async (userId, progress) => {
 
 // Force immediate save (on unmount, lesson complete, etc.)
 export const forceSave = async (userId, progress) => {
-  saveLocal(progress);
+  saveLocal(userId, progress);
   if (!userId) return;
 
   if (saveTimeout) clearTimeout(saveTimeout);

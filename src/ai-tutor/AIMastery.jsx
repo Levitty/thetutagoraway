@@ -258,15 +258,25 @@ export function AIMastery({ onBack, userId }) {
     }
   }, [progress, userId, loading, subjectId]);
 
-  // Save on unmount
+  // Keep a ref of the latest state so the unmount/back handlers flush the most
+  // recent progress instead of a stale snapshot captured at first render.
+  const latestRef = useRef({ progress, loading, subjectId, userId });
   useEffect(() => {
-    return () => {
-      if (!loading && subjectId) {
-        const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
-        forceSave(storageKey, progress);
-      }
-    };
+    latestRef.current = { progress, loading, subjectId, userId };
+  });
+
+  // Flush the latest progress to the cloud immediately (used on exit).
+  const flushSave = useCallback(() => {
+    const { progress, loading, subjectId, userId } = latestRef.current;
+    if (loading || !subjectId) return;
+    const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
+    forceSave(storageKey, progress);
   }, []);
+
+  // Save on unmount (e.g. navigating away from the tutor)
+  useEffect(() => {
+    return () => { flushSave(); };
+  }, [flushSave]);
 
   // Brain overlay: when on the home dashboard, ask the Python engine for the
   // measured level + next-session plan. Null results => JS engine is used.
@@ -353,12 +363,18 @@ export function AIMastery({ onBack, userId }) {
       } else {
         // Finish diagnostic
         const skillUpdates = processDiagnosticResults(newBalances, ctx);
-        setProgress(p => ({
-          ...p,
-          skills: { ...p.skills, ...skillUpdates },
+        const finished = {
+          ...progress,
+          skills: { ...progress.skills, ...skillUpdates },
           diagnosed: true,
           diagnosticBalances: newBalances,
-        }));
+        };
+        setProgress(finished);
+        // Persist the diagnostic result immediately rather than waiting on the
+        // debounced auto-save — closes the window where a quick exit/refresh
+        // would lose the result and force a retake.
+        const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
+        forceSave(storageKey, finished);
         setView('home');
       }
     }, 800);
