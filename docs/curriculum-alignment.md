@@ -194,9 +194,12 @@ Educator review. Est. ~1d eng + 6–10d content.
   judgement calls (bearings, scatter plots, surface area) pending SLO-level review; and the CBC
   content gaps (Temperature, Angles & Geometrical Constructions skills, Matrices, Approximations
   & Errors, the broad Money strand) still need authoring.
-- **Cambridge 0862 Lower Secondary Mathematics Curriculum Framework 2020** (PDF) — for the full
-  objective list per code (`7Np.01` … `9Sp.xx`). Official copy via Cambridge International support site.
-- An **educator/SME** to sign off the CBC and Cambridge tagging before we claim "aligned".
+- ✅ **Cambridge 0862 Lower Secondary Mathematics Framework 2020** — received and applied
+  (`docs/curriculum-sources/`); every skill now carries a Cambridge tag with the real objective
+  code (`7Np.01` … `9Sp.03`). Topics beyond Lower Secondary (trig ratios, quadratics, matrices,
+  loci, simultaneous equations, surd operations, scatter plots) are flagged Cambridge-enrichment.
+  A few geometry/measure codes (perimeter, basic area, plotting graphs) are stage-only where the
+  framework has no single matching objective.
 
 ## Sources consulted
 - Cambridge 0862 framework (official PDF, structure): cambridgeinternational.org / framework PDF.

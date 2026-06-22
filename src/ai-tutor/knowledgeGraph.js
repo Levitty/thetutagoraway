@@ -129,56 +129,61 @@ const GRADE_6 = {
 // Grade 7 Mathematics design (docs/curriculum-sources). Cambridge sub-strand
 // codes (Np/Ni/Nf) and stages remain PROVISIONAL pending the 0862 framework PDF.
 const cbc = (grade, strand, substrand, inScope = true) => ({ grade, strand, substrand, inScope });
-const cam = (stage, strand, substrand, inScope = true) => ({ stage, strand, substrand, inScope });
 // CBC enrichment: topic is outside the CBC Grade 7–9 scope (e.g. quadratics,
 // surds — Senior School / 8-4-4). Shows under its native grade with a badge.
 const cbcEnr = (strand) => ({ strand, inScope: false });
+// Cambridge 0862 (docs/curriculum-sources). cam(stage, sub-strand, objective code);
+// camEnr marks topics beyond Cambridge Lower Secondary (IGCSE+), e.g. trig ratios,
+// quadratics, matrices, loci, simultaneous equations.
+const CAM_STRAND = { Np: 'Number', Ni: 'Number', Nf: 'Number', Ae: 'Algebra', As: 'Algebra', Gg: 'Geometry and Measure', Gp: 'Geometry and Measure', Ss: 'Statistics and Probability', Sp: 'Statistics and Probability' };
+const cam = (stage, sub, code) => ({ stage, strand: CAM_STRAND[sub], substrand: sub, refs: code ? [code] : [], inScope: true });
+const camEnr = (sub) => ({ strand: CAM_STRAND[sub], substrand: sub, inScope: false });
 
 const GRADE_7 = {
   // Numbers
-  G7_PLACE_VALUE: skill('G7_PLACE_VALUE', 'Place Value (Hundred Millions)', 7, S.NUM, { pre: ['G6_PLACE_VALUE'], w: 2, curricula: { cbc: cbc(7, 'Numbers', 'Whole Numbers'), cambridge: cam(7, 'Number', 'Np') } }),
-  G7_BODMAS_ADV: skill('G7_BODMAS_ADV', 'BODMAS (Advanced)', 7, S.NUM, { pre: ['G6_BODMAS_BASIC'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Whole Numbers'), cambridge: cam(7, 'Number', 'Ni') } }),
-  G7_PRIMES: skill('G7_PRIMES', 'Prime vs Composite Numbers', 7, S.NUM, { pre: ['G5_FACTORS'], w: 3, curricula: { cbc: cbc(7, 'Numbers', 'Factors'), cambridge: cam(7, 'Number', 'Ni') } }),
-  G7_DIVISIBILITY: skill('G7_DIVISIBILITY', 'Divisibility Tests', 7, S.NUM, { pre: ['G7_PRIMES'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Factors'), cambridge: cam(7, 'Number', 'Ni') } }),
-  G7_PRIME_FACTORIZATION: skill('G7_PRIME_FACTORIZATION', 'Prime Factorization', 7, S.NUM, { pre: ['G7_DIVISIBILITY'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Factors'), cambridge: cam(8, 'Number', 'Ni') } }),
-  G7_GCD: skill('G7_GCD', 'Greatest Common Divisor (GCD)', 7, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Factors'), cambridge: cam(8, 'Number', 'Ni') } }),
-  G7_LCM: skill('G7_LCM', 'Least Common Multiple (LCM)', 7, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Factors'), cambridge: cam(8, 'Number', 'Ni') } }),
-  G7_FRACTIONS_COMPARE: skill('G7_FRACTIONS_COMPARE', 'Comparing & Ordering Fractions', 7, S.NUM, { pre: ['G6_FRACTIONS_ADD'], w: 3, curricula: { cbc: cbc(7, 'Numbers', 'Fractions'), cambridge: cam(7, 'Number', 'Nf') } }),
-  G7_FRACTIONS_ADD_UNLIKE: skill('G7_FRACTIONS_ADD_UNLIKE', 'Adding Fractions (Unlike, Advanced)', 7, S.NUM, { pre: ['G7_FRACTIONS_COMPARE', 'G7_LCM'], w: 3, curricula: { cbc: cbc(7, 'Numbers', 'Fractions'), cambridge: cam(7, 'Number', 'Nf') } }),
-  G7_FRACTIONS_MUL: skill('G7_FRACTIONS_MUL', 'Multiplying Fractions (Advanced)', 7, S.NUM, { pre: ['G6_FRACTIONS_MUL', 'G7_FRACTIONS_COMPARE'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Fractions'), cambridge: cam(8, 'Number', 'Nf') } }),
-  G7_RECIPROCALS: skill('G7_RECIPROCALS', 'Reciprocals', 7, S.NUM, { pre: ['G7_FRACTIONS_MUL'], w: 2, curricula: { cbc: cbc(7, 'Numbers', 'Fractions'), cambridge: cam(8, 'Number', 'Nf') } }),
-  G7_FRACTIONS_DIV: skill('G7_FRACTIONS_DIV', 'Dividing Fractions (Advanced)', 7, S.NUM, { pre: ['G7_FRACTIONS_MUL', 'G7_RECIPROCALS'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Fractions'), cambridge: cam(8, 'Number', 'Nf') } }),
-  G7_DECIMAL_PV: skill('G7_DECIMAL_PV', 'Decimal Place Value (Advanced)', 7, S.NUM, { pre: ['G5_DECIMALS_INTRO'], w: 2, curricula: { cbc: cbc(7, 'Numbers', 'Decimals'), cambridge: cam(7, 'Number', 'Np') } }),
-  G7_DECIMALS_MUL: skill('G7_DECIMALS_MUL', 'Multiplying Decimals (Advanced)', 7, S.NUM, { pre: ['G6_DECIMALS_MUL', 'G7_DECIMAL_PV'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Decimals'), cambridge: cam(8, 'Number', 'Nf') } }),
-  G7_DECIMALS_DIV: skill('G7_DECIMALS_DIV', 'Dividing Decimals (Advanced)', 7, S.NUM, { pre: ['G7_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Decimals'), cambridge: cam(8, 'Number', 'Nf') } }),
-  G7_SQUARES_EXT: skill('G7_SQUARES_EXT', 'Squares (Extended)', 7, S.NUM, { pre: ['G6_SQUARES', 'G7_FRACTIONS_MUL', 'G7_DECIMALS_MUL'], w: 3, curricula: { cbc: cbc(7, 'Numbers', 'Squares and Square Roots'), cambridge: cam(7, 'Number', 'Ni') } }),
-  G7_SQUARE_ROOTS: skill('G7_SQUARE_ROOTS', 'Square Roots', 7, S.NUM, { pre: ['G7_SQUARES_EXT', 'G7_PRIME_FACTORIZATION'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Squares and Square Roots'), cambridge: cam(7, 'Number', 'Ni') } }),
+  G7_PLACE_VALUE: skill('G7_PLACE_VALUE', 'Place Value (Hundred Millions)', 7, S.NUM, { pre: ['G6_PLACE_VALUE'], w: 2, curricula: { cbc: cbc(7, 'Numbers', 'Whole Numbers'), cambridge: cam(7, 'Np', '7Np.01') } }),
+  G7_BODMAS_ADV: skill('G7_BODMAS_ADV', 'BODMAS (Advanced)', 7, S.NUM, { pre: ['G6_BODMAS_BASIC'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Whole Numbers'), cambridge: cam(7, 'Ni', '7Ni.02') } }),
+  G7_PRIMES: skill('G7_PRIMES', 'Prime vs Composite Numbers', 7, S.NUM, { pre: ['G5_FACTORS'], w: 3, curricula: { cbc: cbc(7, 'Numbers', 'Factors'), cambridge: cam(7, 'Ni', '7Ni.05') } }),
+  G7_DIVISIBILITY: skill('G7_DIVISIBILITY', 'Divisibility Tests', 7, S.NUM, { pre: ['G7_PRIMES'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Factors'), cambridge: cam(7, 'Ni', '7Ni.05') } }),
+  G7_PRIME_FACTORIZATION: skill('G7_PRIME_FACTORIZATION', 'Prime Factorization', 7, S.NUM, { pre: ['G7_DIVISIBILITY'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Factors'), cambridge: cam(8, 'Ni', '8Ni.03') } }),
+  G7_GCD: skill('G7_GCD', 'Greatest Common Divisor (GCD)', 7, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Factors'), cambridge: cam(8, 'Ni', '8Ni.03') } }),
+  G7_LCM: skill('G7_LCM', 'Least Common Multiple (LCM)', 7, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Factors'), cambridge: cam(8, 'Ni', '8Ni.03') } }),
+  G7_FRACTIONS_COMPARE: skill('G7_FRACTIONS_COMPARE', 'Comparing & Ordering Fractions', 7, S.NUM, { pre: ['G6_FRACTIONS_ADD'], w: 3, curricula: { cbc: cbc(7, 'Numbers', 'Fractions'), cambridge: cam(7, 'Nf', '7Nf.06') } }),
+  G7_FRACTIONS_ADD_UNLIKE: skill('G7_FRACTIONS_ADD_UNLIKE', 'Adding Fractions (Unlike, Advanced)', 7, S.NUM, { pre: ['G7_FRACTIONS_COMPARE', 'G7_LCM'], w: 3, curricula: { cbc: cbc(7, 'Numbers', 'Fractions'), cambridge: cam(7, 'Nf', '7Nf.02') } }),
+  G7_FRACTIONS_MUL: skill('G7_FRACTIONS_MUL', 'Multiplying Fractions (Advanced)', 7, S.NUM, { pre: ['G6_FRACTIONS_MUL', 'G7_FRACTIONS_COMPARE'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Fractions'), cambridge: cam(7, 'Nf', '7Nf.03') } }),
+  G7_RECIPROCALS: skill('G7_RECIPROCALS', 'Reciprocals', 7, S.NUM, { pre: ['G7_FRACTIONS_MUL'], w: 2, curricula: { cbc: cbc(7, 'Numbers', 'Fractions'), cambridge: cam(7, 'Nf', '7Nf.03') } }),
+  G7_FRACTIONS_DIV: skill('G7_FRACTIONS_DIV', 'Dividing Fractions (Advanced)', 7, S.NUM, { pre: ['G7_FRACTIONS_MUL', 'G7_RECIPROCALS'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Fractions'), cambridge: cam(7, 'Nf', '7Nf.03') } }),
+  G7_DECIMAL_PV: skill('G7_DECIMAL_PV', 'Decimal Place Value (Advanced)', 7, S.NUM, { pre: ['G5_DECIMALS_INTRO'], w: 2, curricula: { cbc: cbc(7, 'Numbers', 'Decimals'), cambridge: cam(7, 'Np', '7Np.01') } }),
+  G7_DECIMALS_MUL: skill('G7_DECIMALS_MUL', 'Multiplying Decimals (Advanced)', 7, S.NUM, { pre: ['G6_DECIMALS_MUL', 'G7_DECIMAL_PV'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Decimals'), cambridge: cam(8, 'Nf', '8Nf.07') } }),
+  G7_DECIMALS_DIV: skill('G7_DECIMALS_DIV', 'Dividing Decimals (Advanced)', 7, S.NUM, { pre: ['G7_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Decimals'), cambridge: cam(8, 'Nf', '8Nf.08') } }),
+  G7_SQUARES_EXT: skill('G7_SQUARES_EXT', 'Squares (Extended)', 7, S.NUM, { pre: ['G6_SQUARES', 'G7_FRACTIONS_MUL', 'G7_DECIMALS_MUL'], w: 3, curricula: { cbc: cbc(7, 'Numbers', 'Squares and Square Roots'), cambridge: cam(8, 'Ni', '8Ni.06') } }),
+  G7_SQUARE_ROOTS: skill('G7_SQUARE_ROOTS', 'Square Roots', 7, S.NUM, { pre: ['G7_SQUARES_EXT', 'G7_PRIME_FACTORIZATION'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Squares and Square Roots'), cambridge: cam(8, 'Ni', '8Ni.06') } }),
   // Integers are NOT a Grade 7 CBC sub-strand (introduced in Grade 8) — shown as Grade 8 in the CBC view.
-  G7_INTEGERS_MUL_DIV: skill('G7_INTEGERS_MUL_DIV', 'Multiplying & Dividing Integers', 7, S.NUM, { pre: ['G6_INTEGERS_ADD_SUB', 'G5_MULTIPLICATION', 'G5_DIVISION'], w: 3, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Integers'), cambridge: cam(8, 'Number', 'Ni') } }),
+  G7_INTEGERS_MUL_DIV: skill('G7_INTEGERS_MUL_DIV', 'Multiplying & Dividing Integers', 7, S.NUM, { pre: ['G6_INTEGERS_ADD_SUB', 'G5_MULTIPLICATION', 'G5_DIVISION'], w: 3, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Integers'), cambridge: cam(7, 'Ni', '7Ni.03') } }),
   // CBC Grade 7 teaches percentages within the Money sub-strand (discount, profit/loss).
-  G7_PERCENTAGES: skill('G7_PERCENTAGES', 'Percentage Calculations', 7, S.NUM, { pre: ['G6_PERCENTAGES_INTRO', 'G7_DECIMALS_MUL'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Money'), cambridge: cam(7, 'Number', 'Nf') } }),
+  G7_PERCENTAGES: skill('G7_PERCENTAGES', 'Percentage Calculations', 7, S.NUM, { pre: ['G6_PERCENTAGES_INTRO', 'G7_DECIMALS_MUL'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Money'), cambridge: cam(7, 'Nf', '7Nf.05') } }),
 
   // Algebra
-  G7_EXPRESSIONS: skill('G7_EXPRESSIONS', 'Forming Algebraic Expressions', 7, S.ALG, { pre: ['G7_BODMAS_ADV'], w: 3, curricula: { cbc: cbc(7, 'Algebra', 'Algebraic Expressions') } }),
-  G7_SIMPLIFY: skill('G7_SIMPLIFY', 'Simplifying Expressions', 7, S.ALG, { pre: ['G7_EXPRESSIONS'], w: 4, curricula: { cbc: cbc(7, 'Algebra', 'Algebraic Expressions') } }),
-  G7_EQUATIONS_FORM: skill('G7_EQUATIONS_FORM', 'Forming Equations', 7, S.ALG, { pre: ['G7_SIMPLIFY'], w: 3, curricula: { cbc: cbc(7, 'Algebra', 'Linear Equations') } }),
-  G7_EQUATIONS_SOLVE: skill('G7_EQUATIONS_SOLVE', 'Solving Linear Equations', 7, S.ALG, { pre: ['G7_EQUATIONS_FORM'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Algebra', 'Linear Equations') } }),
-  G7_INEQUALITIES_INTRO: skill('G7_INEQUALITIES_INTRO', 'Introduction to Inequalities', 7, S.ALG, { pre: ['G7_EQUATIONS_SOLVE'], w: 3, curricula: { cbc: cbc(7, 'Algebra', 'Linear Inequalities') } }),
+  G7_EXPRESSIONS: skill('G7_EXPRESSIONS', 'Forming Algebraic Expressions', 7, S.ALG, { pre: ['G7_BODMAS_ADV'], w: 3, curricula: { cbc: cbc(7, 'Algebra', 'Algebraic Expressions'), cambridge: cam(7, 'Ae', '7Ae.01') } }),
+  G7_SIMPLIFY: skill('G7_SIMPLIFY', 'Simplifying Expressions', 7, S.ALG, { pre: ['G7_EXPRESSIONS'], w: 4, curricula: { cbc: cbc(7, 'Algebra', 'Algebraic Expressions'), cambridge: cam(7, 'Ae', '7Ae.03') } }),
+  G7_EQUATIONS_FORM: skill('G7_EQUATIONS_FORM', 'Forming Equations', 7, S.ALG, { pre: ['G7_SIMPLIFY'], w: 3, curricula: { cbc: cbc(7, 'Algebra', 'Linear Equations'), cambridge: cam(7, 'Ae', '7Ae.05') } }),
+  G7_EQUATIONS_SOLVE: skill('G7_EQUATIONS_SOLVE', 'Solving Linear Equations', 7, S.ALG, { pre: ['G7_EQUATIONS_FORM'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Algebra', 'Linear Equations'), cambridge: cam(8, 'Ae', '8Ae.04') } }),
+  G7_INEQUALITIES_INTRO: skill('G7_INEQUALITIES_INTRO', 'Introduction to Inequalities', 7, S.ALG, { pre: ['G7_EQUATIONS_SOLVE'], w: 3, curricula: { cbc: cbc(7, 'Algebra', 'Linear Inequalities'), cambridge: cam(7, 'Ae', '7Ae.07') } }),
 
   // Geometry & Measurements — note CBC files Pythagoras, perimeter & circumference under Measurements.
-  G7_PYTHAGORAS: skill('G7_PYTHAGORAS', 'Pythagorean Theorem', 7, S.GEO, { pre: ['G7_SQUARES_EXT', 'G7_SQUARE_ROOTS'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Pythagorean Relationship') } }),
-  G7_LENGTH_CONV: skill('G7_LENGTH_CONV', 'Length Conversions (Advanced)', 7, S.MEA, { pre: ['G6_UNIT_CONVERSIONS'], w: 2, curricula: { cbc: cbc(7, 'Measurements', 'Length') } }),
-  G7_PERIMETER: skill('G7_PERIMETER', 'Perimeter (Advanced Shapes)', 7, S.MEA, { pre: ['G6_PERIMETER', 'G7_LENGTH_CONV'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Length') } }),
-  G7_CIRCUMFERENCE: skill('G7_CIRCUMFERENCE', 'Circumference of Circles', 7, S.MEA, { pre: ['G7_DECIMALS_MUL', 'G7_PERIMETER'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Length') } }),
-  G7_AREA_RECT: skill('G7_AREA_RECT', 'Area of Rectangles (Advanced)', 7, S.MEA, { pre: ['G6_AREA_RECT', 'G7_DECIMALS_MUL'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Area') } }),
-  G7_AREA_CIRCLE: skill('G7_AREA_CIRCLE', 'Area of Circles', 7, S.MEA, { pre: ['G7_CIRCUMFERENCE', 'G7_SQUARES_EXT'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Area') } }),
-  G7_VOLUME_CUBOID: skill('G7_VOLUME_CUBOID', 'Volume of Cuboids (Advanced)', 7, S.MEA, { pre: ['G6_VOLUME_CUBOID', 'G7_AREA_RECT'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Volume and Capacity') } }),
-  G7_VOLUME_CYLINDER: skill('G7_VOLUME_CYLINDER', 'Volume of Cylinders', 7, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_VOLUME_CUBOID'], w: 4, curricula: { cbc: cbc(7, 'Measurements', 'Volume and Capacity') } }),
-  G7_SPEED: skill('G7_SPEED', 'Speed, Distance, Time', 7, S.MEA, { pre: ['G7_LENGTH_CONV', 'G7_DECIMALS_DIV', 'G5_TIME'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Time, Distance and Speed') } }),
+  G7_PYTHAGORAS: skill('G7_PYTHAGORAS', 'Pythagorean Theorem', 7, S.GEO, { pre: ['G7_SQUARES_EXT', 'G7_SQUARE_ROOTS'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Pythagorean Relationship'), cambridge: cam(9, 'Gg', '9Gg.10') } }),
+  G7_LENGTH_CONV: skill('G7_LENGTH_CONV', 'Length Conversions (Advanced)', 7, S.MEA, { pre: ['G6_UNIT_CONVERSIONS'], w: 2, curricula: { cbc: cbc(7, 'Measurements', 'Length'), cambridge: cam(8, 'Gg', '8Gg.03') } }),
+  G7_PERIMETER: skill('G7_PERIMETER', 'Perimeter (Advanced Shapes)', 7, S.MEA, { pre: ['G6_PERIMETER', 'G7_LENGTH_CONV'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Length'), cambridge: cam(7, 'Gg') } }),
+  G7_CIRCUMFERENCE: skill('G7_CIRCUMFERENCE', 'Circumference of Circles', 7, S.MEA, { pre: ['G7_DECIMALS_MUL', 'G7_PERIMETER'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Length'), cambridge: cam(8, 'Gg', '8Gg.02') } }),
+  G7_AREA_RECT: skill('G7_AREA_RECT', 'Area of Rectangles (Advanced)', 7, S.MEA, { pre: ['G6_AREA_RECT', 'G7_DECIMALS_MUL'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Area'), cambridge: cam(7, 'Gg') } }),
+  G7_AREA_CIRCLE: skill('G7_AREA_CIRCLE', 'Area of Circles', 7, S.MEA, { pre: ['G7_CIRCUMFERENCE', 'G7_SQUARES_EXT'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Area'), cambridge: cam(9, 'Gg', '9Gg.01') } }),
+  G7_VOLUME_CUBOID: skill('G7_VOLUME_CUBOID', 'Volume of Cuboids (Advanced)', 7, S.MEA, { pre: ['G6_VOLUME_CUBOID', 'G7_AREA_RECT'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Volume and Capacity'), cambridge: cam(8, 'Gg') } }),
+  G7_VOLUME_CYLINDER: skill('G7_VOLUME_CYLINDER', 'Volume of Cylinders', 7, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_VOLUME_CUBOID'], w: 4, curricula: { cbc: cbc(7, 'Measurements', 'Volume and Capacity'), cambridge: cam(9, 'Gg', '9Gg.05') } }),
+  G7_SPEED: skill('G7_SPEED', 'Speed, Distance, Time', 7, S.MEA, { pre: ['G7_LENGTH_CONV', 'G7_DECIMALS_DIV', 'G5_TIME'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Time, Distance and Speed'), cambridge: cam(9, 'As', '9As.07') } }),
 
   // Statistics
-  G7_MEAN_MEDIAN_MODE: skill('G7_MEAN_MEDIAN_MODE', 'Mean, Median, Mode', 7, S.STA, { pre: ['G6_MEAN'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling') } }),
-  G7_DATA_REPRESENT: skill('G7_DATA_REPRESENT', 'Data Representation (Bar, Line, Pie)', 7, S.STA, { pre: ['G6_PIE_CHARTS', 'G7_PERCENTAGES'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling') } }),
+  G7_MEAN_MEDIAN_MODE: skill('G7_MEAN_MEDIAN_MODE', 'Mean, Median, Mode', 7, S.STA, { pre: ['G6_MEAN'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling'), cambridge: cam(8, 'Ss', '8Ss.04') } }),
+  G7_DATA_REPRESENT: skill('G7_DATA_REPRESENT', 'Data Representation (Bar, Line, Pie)', 7, S.STA, { pre: ['G6_PIE_CHARTS', 'G7_PERCENTAGES'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling'), cambridge: cam(7, 'Ss') } }),
 };
 
 // ============================================================================
@@ -187,45 +192,45 @@ const GRADE_7 = {
 
 const GRADE_8 = {
   // Numbers
-  G8_INDICES_INTRO: skill('G8_INDICES_INTRO', 'Introduction to Indices', 8, S.NUM, { pre: ['G7_SQUARES_EXT', 'G7_INTEGERS_MUL_DIV'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms') } }),
-  G8_INDICES_LAWS: skill('G8_INDICES_LAWS', 'Laws of Indices', 8, S.NUM, { pre: ['G8_INDICES_INTRO'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms') } }),
-  G8_STANDARD_FORM: skill('G8_STANDARD_FORM', 'Standard Form (Scientific Notation)', 8, S.NUM, { pre: ['G8_INDICES_INTRO', 'G7_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms') } }),
-  G8_CUBES_CUBE_ROOTS: skill('G8_CUBES_CUBE_ROOTS', 'Cubes & Cube Roots', 8, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_INTRO'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Cubes and Cube Roots') } }),
-  G8_RATIO_PROPORTION: skill('G8_RATIO_PROPORTION', 'Ratio & Proportion (Advanced)', 8, S.NUM, { pre: ['G6_RATIOS', 'G7_FRACTIONS_DIV'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Rates, Ratio, Proportions and Percentages') } }),
-  G8_PERCENTAGE_CHANGE: skill('G8_PERCENTAGE_CHANGE', 'Percentage Increase & Decrease', 8, S.NUM, { pre: ['G7_PERCENTAGES'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Rates, Ratio, Proportions and Percentages') } }),
-  G8_PROFIT_LOSS: skill('G8_PROFIT_LOSS', 'Profit, Loss & Discount', 8, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4, curricula: { cbc: cbc(8, 'Measurements', 'Money') } }),
-  G8_SIMPLE_INTEREST: skill('G8_SIMPLE_INTEREST', 'Simple Interest', 8, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4, curricula: { cbc: cbc(8, 'Measurements', 'Money') } }),
-  G8_NUMBER_BASES: skill('G8_NUMBER_BASES', 'Number Bases (Binary, Octal)', 8, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 5, curricula: { cbc: cbcEnr('Numbers') } }),
+  G8_INDICES_INTRO: skill('G8_INDICES_INTRO', 'Introduction to Indices', 8, S.NUM, { pre: ['G7_SQUARES_EXT', 'G7_INTEGERS_MUL_DIV'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms'), cambridge: cam(8, 'Ni', '8Ni.05') } }),
+  G8_INDICES_LAWS: skill('G8_INDICES_LAWS', 'Laws of Indices', 8, S.NUM, { pre: ['G8_INDICES_INTRO'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms'), cambridge: cam(8, 'Ni', '8Ni.05') } }),
+  G8_STANDARD_FORM: skill('G8_STANDARD_FORM', 'Standard Form (Scientific Notation)', 8, S.NUM, { pre: ['G8_INDICES_INTRO', 'G7_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms'), cambridge: cam(9, 'Ni', '9Ni.03') } }),
+  G8_CUBES_CUBE_ROOTS: skill('G8_CUBES_CUBE_ROOTS', 'Cubes & Cube Roots', 8, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_INTRO'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Cubes and Cube Roots'), cambridge: cam(8, 'Ni', '8Ni.07') } }),
+  G8_RATIO_PROPORTION: skill('G8_RATIO_PROPORTION', 'Ratio & Proportion (Advanced)', 8, S.NUM, { pre: ['G6_RATIOS', 'G7_FRACTIONS_DIV'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Rates, Ratio, Proportions and Percentages'), cambridge: cam(8, 'Nf', '8Nf.10') } }),
+  G8_PERCENTAGE_CHANGE: skill('G8_PERCENTAGE_CHANGE', 'Percentage Increase & Decrease', 8, S.NUM, { pre: ['G7_PERCENTAGES'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Rates, Ratio, Proportions and Percentages'), cambridge: cam(8, 'Nf', '8Nf.05') } }),
+  G8_PROFIT_LOSS: skill('G8_PROFIT_LOSS', 'Profit, Loss & Discount', 8, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4, curricula: { cbc: cbc(8, 'Measurements', 'Money'), cambridge: cam(8, 'Nf', '8Nf.05') } }),
+  G8_SIMPLE_INTEREST: skill('G8_SIMPLE_INTEREST', 'Simple Interest', 8, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4, curricula: { cbc: cbc(8, 'Measurements', 'Money'), cambridge: camEnr('Nf') } }),
+  G8_NUMBER_BASES: skill('G8_NUMBER_BASES', 'Number Bases (Binary, Octal)', 8, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 5, curricula: { cbc: cbcEnr('Numbers'), cambridge: camEnr('Ni') } }),
 
   // Algebra
-  G8_EXPAND_BRACKETS: skill('G8_EXPAND_BRACKETS', 'Expanding Brackets', 8, S.ALG, { pre: ['G7_SIMPLIFY', 'G7_INTEGERS_MUL_DIV'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Algebra', 'Algebraic Expressions') } }),
-  G8_FACTORIZE_COMMON: skill('G8_FACTORIZE_COMMON', 'Factorizing (Common Factor)', 8, S.ALG, { pre: ['G8_EXPAND_BRACKETS', 'G7_GCD'], w: 4, curricula: { cbc: cbc(8, 'Algebra', 'Algebraic Expressions') } }),
-  G8_LINEAR_EQ_ADV: skill('G8_LINEAR_EQ_ADV', 'Linear Equations (Advanced)', 8, S.ALG, { pre: ['G7_EQUATIONS_SOLVE', 'G8_EXPAND_BRACKETS'], w: 5, crit: true, curricula: { cbc: cbc(8, 'Algebra', 'Linear Equations') } }),
-  G8_SIMULTANEOUS_INTRO: skill('G8_SIMULTANEOUS_INTRO', 'Simultaneous Equations (Introduction)', 8, S.ALG, { pre: ['G8_LINEAR_EQ_ADV'], w: 5, crit: true, curricula: { cbc: cbc(8, 'Algebra', 'Linear Equations') } }),
-  G8_INEQUALITIES: skill('G8_INEQUALITIES', 'Solving Inequalities', 8, S.ALG, { pre: ['G7_INEQUALITIES_INTRO', 'G8_LINEAR_EQ_ADV'], w: 4, curricula: { cbc: cbc(9, 'Algebra', 'Linear Inequalities') } }),
-  G8_SEQUENCES: skill('G8_SEQUENCES', 'Arithmetic Sequences', 8, S.ALG, { pre: ['G6_PATTERNS', 'G7_EXPRESSIONS'], w: 4, curricula: { cbc: cbcEnr('Algebra') } }),
-  G8_COORDINATES: skill('G8_COORDINATES', 'Coordinate Geometry Basics', 8, S.ALG, { pre: ['G6_INTEGERS_ADD_SUB'], w: 3, crit: true, curricula: { cbc: cbc(8, 'Geometry', 'Coordinates and Graphs') } }),
-  G8_LINEAR_GRAPHS: skill('G8_LINEAR_GRAPHS', 'Plotting Linear Graphs', 8, S.ALG, { pre: ['G8_COORDINATES', 'G7_EQUATIONS_SOLVE'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Geometry', 'Coordinates and Graphs') } }),
-  G8_GRADIENT: skill('G8_GRADIENT', 'Gradient of a Line', 8, S.ALG, { pre: ['G8_LINEAR_GRAPHS', 'G7_FRACTIONS_DIV'], w: 4, curricula: { cbc: cbc(9, 'Algebra', 'Equations of a Straight Line') } }),
-  G8_EQUATION_OF_LINE: skill('G8_EQUATION_OF_LINE', 'Equation of a Straight Line', 8, S.ALG, { pre: ['G8_GRADIENT', 'G8_LINEAR_EQ_ADV'], w: 5, curricula: { cbc: cbc(9, 'Algebra', 'Equations of a Straight Line') } }),
+  G8_EXPAND_BRACKETS: skill('G8_EXPAND_BRACKETS', 'Expanding Brackets', 8, S.ALG, { pre: ['G7_SIMPLIFY', 'G7_INTEGERS_MUL_DIV'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Algebra', 'Algebraic Expressions'), cambridge: cam(8, 'Ae', '8Ae.03') } }),
+  G8_FACTORIZE_COMMON: skill('G8_FACTORIZE_COMMON', 'Factorizing (Common Factor)', 8, S.ALG, { pre: ['G8_EXPAND_BRACKETS', 'G7_GCD'], w: 4, curricula: { cbc: cbc(8, 'Algebra', 'Algebraic Expressions'), cambridge: cam(8, 'Ae', '8Ae.03') } }),
+  G8_LINEAR_EQ_ADV: skill('G8_LINEAR_EQ_ADV', 'Linear Equations (Advanced)', 8, S.ALG, { pre: ['G7_EQUATIONS_SOLVE', 'G8_EXPAND_BRACKETS'], w: 5, crit: true, curricula: { cbc: cbc(8, 'Algebra', 'Linear Equations'), cambridge: cam(8, 'Ae', '8Ae.04') } }),
+  G8_SIMULTANEOUS_INTRO: skill('G8_SIMULTANEOUS_INTRO', 'Simultaneous Equations (Introduction)', 8, S.ALG, { pre: ['G8_LINEAR_EQ_ADV'], w: 5, crit: true, curricula: { cbc: cbc(8, 'Algebra', 'Linear Equations'), cambridge: camEnr('Ae') } }),
+  G8_INEQUALITIES: skill('G8_INEQUALITIES', 'Solving Inequalities', 8, S.ALG, { pre: ['G7_INEQUALITIES_INTRO', 'G8_LINEAR_EQ_ADV'], w: 4, curricula: { cbc: cbc(9, 'Algebra', 'Linear Inequalities'), cambridge: cam(8, 'Ae', '8Ae.07') } }),
+  G8_SEQUENCES: skill('G8_SEQUENCES', 'Arithmetic Sequences', 8, S.ALG, { pre: ['G6_PATTERNS', 'G7_EXPRESSIONS'], w: 4, curricula: { cbc: cbcEnr('Algebra'), cambridge: cam(8, 'As', '8As.01') } }),
+  G8_COORDINATES: skill('G8_COORDINATES', 'Coordinate Geometry Basics', 8, S.ALG, { pre: ['G6_INTEGERS_ADD_SUB'], w: 3, crit: true, curricula: { cbc: cbc(8, 'Geometry', 'Coordinates and Graphs'), cambridge: cam(8, 'Gp', '8Gp.02') } }),
+  G8_LINEAR_GRAPHS: skill('G8_LINEAR_GRAPHS', 'Plotting Linear Graphs', 8, S.ALG, { pre: ['G8_COORDINATES', 'G7_EQUATIONS_SOLVE'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Geometry', 'Coordinates and Graphs'), cambridge: cam(8, 'As') } }),
+  G8_GRADIENT: skill('G8_GRADIENT', 'Gradient of a Line', 8, S.ALG, { pre: ['G8_LINEAR_GRAPHS', 'G7_FRACTIONS_DIV'], w: 4, curricula: { cbc: cbc(9, 'Algebra', 'Equations of a Straight Line'), cambridge: cam(9, 'As') } }),
+  G8_EQUATION_OF_LINE: skill('G8_EQUATION_OF_LINE', 'Equation of a Straight Line', 8, S.ALG, { pre: ['G8_GRADIENT', 'G8_LINEAR_EQ_ADV'], w: 5, curricula: { cbc: cbc(9, 'Algebra', 'Equations of a Straight Line'), cambridge: cam(9, 'As') } }),
 
   // Geometry
-  G8_ANGLE_RELATIONSHIPS: skill('G8_ANGLE_RELATIONSHIPS', 'Angle Relationships (Parallel Lines)', 8, S.GEO, { pre: ['G6_ANGLE_PROPERTIES'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Geometry', 'Angles') } }),
-  G8_POLYGON_ANGLES: skill('G8_POLYGON_ANGLES', 'Angles in Polygons', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES', 'G8_ANGLE_RELATIONSHIPS'], w: 4, curricula: { cbc: cbc(7, 'Geometry', 'Angles') } }),
-  G8_CONGRUENCE: skill('G8_CONGRUENCE', 'Congruent Triangles', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement') } }),
-  G8_SIMILARITY: skill('G8_SIMILARITY', 'Similar Figures', 8, S.GEO, { pre: ['G8_CONGRUENCE', 'G8_RATIO_PROPORTION'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement') } }),
-  G8_TRANSFORMATIONS_INTRO: skill('G8_TRANSFORMATIONS_INTRO', 'Transformations (Reflection, Rotation)', 8, S.GEO, { pre: ['G8_COORDINATES', 'G6_SYMMETRY'], w: 3, curricula: { cbc: cbcEnr('Geometry') } }),
+  G8_ANGLE_RELATIONSHIPS: skill('G8_ANGLE_RELATIONSHIPS', 'Angle Relationships (Parallel Lines)', 8, S.GEO, { pre: ['G6_ANGLE_PROPERTIES'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Geometry', 'Angles'), cambridge: cam(7, 'Gg', '7Gg.13') } }),
+  G8_POLYGON_ANGLES: skill('G8_POLYGON_ANGLES', 'Angles in Polygons', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES', 'G8_ANGLE_RELATIONSHIPS'], w: 4, curricula: { cbc: cbc(7, 'Geometry', 'Angles'), cambridge: cam(9, 'Gg', '9Gg.07') } }),
+  G8_CONGRUENCE: skill('G8_CONGRUENCE', 'Congruent Triangles', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement'), cambridge: cam(7, 'Gg', '7Gg.02') } }),
+  G8_SIMILARITY: skill('G8_SIMILARITY', 'Similar Figures', 8, S.GEO, { pre: ['G8_CONGRUENCE', 'G8_RATIO_PROPORTION'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement'), cambridge: cam(9, 'Gp') } }),
+  G8_TRANSFORMATIONS_INTRO: skill('G8_TRANSFORMATIONS_INTRO', 'Transformations (Reflection, Rotation)', 8, S.GEO, { pre: ['G8_COORDINATES', 'G6_SYMMETRY'], w: 3, curricula: { cbc: cbcEnr('Geometry'), cambridge: cam(8, 'Gp', '8Gp.05') } }),
 
   // Measurements
-  G8_AREA_COMPOSITE: skill('G8_AREA_COMPOSITE', 'Area of Composite Shapes', 8, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_AREA_RECT', 'G6_AREA_TRIANGLE'], w: 4, curricula: { cbc: cbc(8, 'Measurements', 'Area') } }),
-  G8_SURFACE_AREA: skill('G8_SURFACE_AREA', 'Surface Area (Cuboids, Cylinders)', 8, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_AREA_RECT'], w: 4, curricula: { cbc: cbc(8, 'Geometry', 'Common Solids') } }),
-  G8_VOLUME_ADV: skill('G8_VOLUME_ADV', 'Volume (Prisms, Cylinders)', 8, S.MEA, { pre: ['G7_VOLUME_CYLINDER'], w: 4, curricula: { cbc: cbc(8, 'Geometry', 'Common Solids') } }),
-  G8_DENSITY: skill('G8_DENSITY', 'Density & Mass', 8, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_DECIMALS_DIV', 'G5_MASS'], w: 4, curricula: { cbc: cbc(9, 'Measurements', 'Mass, Volume, Weight and Density') } }),
+  G8_AREA_COMPOSITE: skill('G8_AREA_COMPOSITE', 'Area of Composite Shapes', 8, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_AREA_RECT', 'G6_AREA_TRIANGLE'], w: 4, curricula: { cbc: cbc(8, 'Measurements', 'Area'), cambridge: cam(9, 'Gg', '9Gg.03') } }),
+  G8_SURFACE_AREA: skill('G8_SURFACE_AREA', 'Surface Area (Cuboids, Cylinders)', 8, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_AREA_RECT'], w: 4, curricula: { cbc: cbc(8, 'Geometry', 'Common Solids'), cambridge: cam(8, 'Gg', '8Gg.08') } }),
+  G8_VOLUME_ADV: skill('G8_VOLUME_ADV', 'Volume (Prisms, Cylinders)', 8, S.MEA, { pre: ['G7_VOLUME_CYLINDER'], w: 4, curricula: { cbc: cbc(8, 'Geometry', 'Common Solids'), cambridge: cam(9, 'Gg', '9Gg.05') } }),
+  G8_DENSITY: skill('G8_DENSITY', 'Density & Mass', 8, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_DECIMALS_DIV', 'G5_MASS'], w: 4, curricula: { cbc: cbc(9, 'Measurements', 'Mass, Volume, Weight and Density'), cambridge: cam(9, 'As', '9As.07') } }),
 
   // Statistics
-  G8_PROBABILITY_INTRO: skill('G8_PROBABILITY_INTRO', 'Introduction to Probability', 8, S.STA, { pre: ['G6_FRACTIONS_DECIMALS'], w: 3, crit: true, curricula: { cbc: cbc(8, 'Data Handling', 'Probability') } }),
-  G8_PROBABILITY_COMBINED: skill('G8_PROBABILITY_COMBINED', 'Combined Events & Tree Diagrams', 8, S.STA, { pre: ['G8_PROBABILITY_INTRO', 'G7_FRACTIONS_MUL'], w: 4, curricula: { cbc: cbc(8, 'Data Handling', 'Probability') } }),
-  G8_CUMULATIVE_FREQ: skill('G8_CUMULATIVE_FREQ', 'Cumulative Frequency', 8, S.STA, { pre: ['G7_MEAN_MEDIAN_MODE', 'G8_LINEAR_GRAPHS'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)') } }),
+  G8_PROBABILITY_INTRO: skill('G8_PROBABILITY_INTRO', 'Introduction to Probability', 8, S.STA, { pre: ['G6_FRACTIONS_DECIMALS'], w: 3, crit: true, curricula: { cbc: cbc(8, 'Data Handling', 'Probability'), cambridge: cam(7, 'Sp', '7Sp.02') } }),
+  G8_PROBABILITY_COMBINED: skill('G8_PROBABILITY_COMBINED', 'Combined Events & Tree Diagrams', 8, S.STA, { pre: ['G8_PROBABILITY_INTRO', 'G7_FRACTIONS_MUL'], w: 4, curricula: { cbc: cbc(8, 'Data Handling', 'Probability'), cambridge: cam(8, 'Sp', '8Sp.02') } }),
+  G8_CUMULATIVE_FREQ: skill('G8_CUMULATIVE_FREQ', 'Cumulative Frequency', 8, S.STA, { pre: ['G7_MEAN_MEDIAN_MODE', 'G8_LINEAR_GRAPHS'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)'), cambridge: camEnr('Ss') } }),
 };
 
 // ============================================================================
@@ -234,40 +239,40 @@ const GRADE_8 = {
 
 const GRADE_9 = {
   // Numbers
-  G9_SURDS_INTRO: skill('G9_SURDS_INTRO', 'Introduction to Surds', 9, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_LAWS'], w: 5, crit: true, curricula: { cbc: cbcEnr('Numbers'), cambridge: { strand: 'Number', substrand: 'Ni', inScope: false } } }),
-  G9_SURDS_OPERATIONS: skill('G9_SURDS_OPERATIONS', 'Operations with Surds', 9, S.NUM, { pre: ['G9_SURDS_INTRO'], w: 5, curricula: { cbc: cbcEnr('Numbers'), cambridge: { strand: 'Number', substrand: 'Ni', inScope: false } } }),
-  G9_COMPOUND_INTEREST: skill('G9_COMPOUND_INTEREST', 'Compound Interest', 9, S.NUM, { pre: ['G8_SIMPLE_INTEREST', 'G8_INDICES_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Money') } }),
-  G9_COMMERCIAL_ARITH: skill('G9_COMMERCIAL_ARITH', 'Commercial Arithmetic (Tax, Bills)', 9, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4, curricula: { cbc: cbc(9, 'Measurements', 'Money') } }),
+  G9_SURDS_INTRO: skill('G9_SURDS_INTRO', 'Introduction to Surds', 9, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_LAWS'], w: 5, crit: true, curricula: { cbc: cbcEnr('Numbers'), cambridge: cam(9, 'Ni', '9Ni.04') } }),
+  G9_SURDS_OPERATIONS: skill('G9_SURDS_OPERATIONS', 'Operations with Surds', 9, S.NUM, { pre: ['G9_SURDS_INTRO'], w: 5, curricula: { cbc: cbcEnr('Numbers'), cambridge: camEnr('Ni') } }),
+  G9_COMPOUND_INTEREST: skill('G9_COMPOUND_INTEREST', 'Compound Interest', 9, S.NUM, { pre: ['G8_SIMPLE_INTEREST', 'G8_INDICES_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Money'), cambridge: cam(9, 'Nf', '9Nf.05') } }),
+  G9_COMMERCIAL_ARITH: skill('G9_COMMERCIAL_ARITH', 'Commercial Arithmetic (Tax, Bills)', 9, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4, curricula: { cbc: cbc(9, 'Measurements', 'Money'), cambridge: camEnr('Nf') } }),
 
   // Algebra
-  G9_QUADRATIC_EXPAND: skill('G9_QUADRATIC_EXPAND', 'Expanding Double Brackets', 9, S.ALG, { pre: ['G8_EXPAND_BRACKETS'], w: 4, crit: true, curricula: { cbc: cbcEnr('Algebra') } }),
-  G9_QUADRATIC_FACTORIZE: skill('G9_QUADRATIC_FACTORIZE', 'Factorizing Quadratics', 9, S.ALG, { pre: ['G9_QUADRATIC_EXPAND', 'G8_FACTORIZE_COMMON'], w: 5, crit: true, curricula: { cbc: cbcEnr('Algebra') } }),
-  G9_QUADRATIC_SOLVE: skill('G9_QUADRATIC_SOLVE', 'Solving Quadratic Equations', 9, S.ALG, { pre: ['G9_QUADRATIC_FACTORIZE'], w: 5, crit: true, curricula: { cbc: cbcEnr('Algebra') } }),
-  G9_QUADRATIC_FORMULA: skill('G9_QUADRATIC_FORMULA', 'Quadratic Formula', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G9_SURDS_INTRO'], w: 5, curricula: { cbc: cbcEnr('Algebra') } }),
-  G9_COMPLETING_SQUARE: skill('G9_COMPLETING_SQUARE', 'Completing the Square', 9, S.ALG, { pre: ['G9_QUADRATIC_EXPAND', 'G7_SQUARES_EXT'], w: 6, curricula: { cbc: cbcEnr('Algebra') } }),
-  G9_SIMULTANEOUS_ADV: skill('G9_SIMULTANEOUS_ADV', 'Simultaneous Equations (Advanced)', 9, S.ALG, { pre: ['G8_SIMULTANEOUS_INTRO', 'G9_QUADRATIC_SOLVE'], w: 5, curricula: { cbc: cbcEnr('Algebra') } }),
-  G9_VARIATION: skill('G9_VARIATION', 'Direct & Inverse Variation', 9, S.ALG, { pre: ['G8_RATIO_PROPORTION', 'G8_LINEAR_EQ_ADV'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Compound Proportions and Rates of Work') } }),
-  G9_FUNCTIONS_INTRO: skill('G9_FUNCTIONS_INTRO', 'Introduction to Functions', 9, S.ALG, { pre: ['G8_LINEAR_GRAPHS', 'G7_EXPRESSIONS'], w: 4, crit: true, curricula: { cbc: cbcEnr('Algebra') } }),
-  G9_QUADRATIC_GRAPHS: skill('G9_QUADRATIC_GRAPHS', 'Quadratic Graphs', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G8_LINEAR_GRAPHS'], w: 5, crit: true, curricula: { cbc: cbcEnr('Algebra') } }),
+  G9_QUADRATIC_EXPAND: skill('G9_QUADRATIC_EXPAND', 'Expanding Double Brackets', 9, S.ALG, { pre: ['G8_EXPAND_BRACKETS'], w: 4, crit: true, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('Ae') } }),
+  G9_QUADRATIC_FACTORIZE: skill('G9_QUADRATIC_FACTORIZE', 'Factorizing Quadratics', 9, S.ALG, { pre: ['G9_QUADRATIC_EXPAND', 'G8_FACTORIZE_COMMON'], w: 5, crit: true, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('Ae') } }),
+  G9_QUADRATIC_SOLVE: skill('G9_QUADRATIC_SOLVE', 'Solving Quadratic Equations', 9, S.ALG, { pre: ['G9_QUADRATIC_FACTORIZE'], w: 5, crit: true, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('Ae') } }),
+  G9_QUADRATIC_FORMULA: skill('G9_QUADRATIC_FORMULA', 'Quadratic Formula', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G9_SURDS_INTRO'], w: 5, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('Ae') } }),
+  G9_COMPLETING_SQUARE: skill('G9_COMPLETING_SQUARE', 'Completing the Square', 9, S.ALG, { pre: ['G9_QUADRATIC_EXPAND', 'G7_SQUARES_EXT'], w: 6, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('Ae') } }),
+  G9_SIMULTANEOUS_ADV: skill('G9_SIMULTANEOUS_ADV', 'Simultaneous Equations (Advanced)', 9, S.ALG, { pre: ['G8_SIMULTANEOUS_INTRO', 'G9_QUADRATIC_SOLVE'], w: 5, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('Ae') } }),
+  G9_VARIATION: skill('G9_VARIATION', 'Direct & Inverse Variation', 9, S.ALG, { pre: ['G8_RATIO_PROPORTION', 'G8_LINEAR_EQ_ADV'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Compound Proportions and Rates of Work'), cambridge: cam(9, 'Nf', '9Nf.07') } }),
+  G9_FUNCTIONS_INTRO: skill('G9_FUNCTIONS_INTRO', 'Introduction to Functions', 9, S.ALG, { pre: ['G8_LINEAR_GRAPHS', 'G7_EXPRESSIONS'], w: 4, crit: true, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('As') } }),
+  G9_QUADRATIC_GRAPHS: skill('G9_QUADRATIC_GRAPHS', 'Quadratic Graphs', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G8_LINEAR_GRAPHS'], w: 5, crit: true, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('As') } }),
 
   // Geometry
-  G9_CONSTRUCTION: skill('G9_CONSTRUCTION', 'Geometric Constructions', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_ANGLE_MEASURE', 'G5_LINES'], w: 3, curricula: { cbc: cbc(8, 'Geometry', 'Geometrical Constructions') } }),
-  G9_LOCI: skill('G9_LOCI', 'Loci & Locus', 9, S.GEO, { pre: ['G9_CONSTRUCTION', 'G7_CIRCUMFERENCE'], w: 4, curricula: { cbc: cbc(8, 'Geometry', 'Geometrical Constructions') } }),
-  G9_CIRCLE_THEOREMS_INTRO: skill('G9_CIRCLE_THEOREMS_INTRO', 'Circle Theorems (Introduction)', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_TRIANGLE_PROPERTIES', 'G7_AREA_CIRCLE'], w: 5, crit: true, curricula: { cbc: cbcEnr('Geometry') } }),
-  G9_TRIG_INTRO: skill('G9_TRIG_INTRO', 'Trigonometry (SOH CAH TOA)', 9, S.GEO, { pre: ['G7_PYTHAGORAS', 'G7_FRACTIONS_DIV'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Trigonometry') } }),
-  G9_TRIG_PROBLEMS: skill('G9_TRIG_PROBLEMS', 'Trigonometry Word Problems', 9, S.GEO, { pre: ['G9_TRIG_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Geometry', 'Trigonometry') } }),
-  G9_BEARINGS: skill('G9_BEARINGS', 'Bearings', 9, S.GEO, { pre: ['G9_TRIG_INTRO', 'G6_ANGLE_MEASURE'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Scale Drawing') } }),
-  G9_TRANSFORMATIONS_ADV: skill('G9_TRANSFORMATIONS_ADV', 'Transformations (Translation, Enlargement)', 9, S.GEO, { pre: ['G8_TRANSFORMATIONS_INTRO', 'G8_SIMILARITY'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement') } }),
+  G9_CONSTRUCTION: skill('G9_CONSTRUCTION', 'Geometric Constructions', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_ANGLE_MEASURE', 'G5_LINES'], w: 3, curricula: { cbc: cbc(8, 'Geometry', 'Geometrical Constructions'), cambridge: cam(8, 'Gg', '8Gg.12') } }),
+  G9_LOCI: skill('G9_LOCI', 'Loci & Locus', 9, S.GEO, { pre: ['G9_CONSTRUCTION', 'G7_CIRCUMFERENCE'], w: 4, curricula: { cbc: cbc(8, 'Geometry', 'Geometrical Constructions'), cambridge: camEnr('Gg') } }),
+  G9_CIRCLE_THEOREMS_INTRO: skill('G9_CIRCLE_THEOREMS_INTRO', 'Circle Theorems (Introduction)', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_TRIANGLE_PROPERTIES', 'G7_AREA_CIRCLE'], w: 5, crit: true, curricula: { cbc: cbcEnr('Geometry'), cambridge: camEnr('Gg') } }),
+  G9_TRIG_INTRO: skill('G9_TRIG_INTRO', 'Trigonometry (SOH CAH TOA)', 9, S.GEO, { pre: ['G7_PYTHAGORAS', 'G7_FRACTIONS_DIV'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Trigonometry'), cambridge: camEnr('Gg') } }),
+  G9_TRIG_PROBLEMS: skill('G9_TRIG_PROBLEMS', 'Trigonometry Word Problems', 9, S.GEO, { pre: ['G9_TRIG_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Geometry', 'Trigonometry'), cambridge: camEnr('Gg') } }),
+  G9_BEARINGS: skill('G9_BEARINGS', 'Bearings', 9, S.GEO, { pre: ['G9_TRIG_INTRO', 'G6_ANGLE_MEASURE'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Scale Drawing'), cambridge: cam(9, 'Gp', '9Gp.01') } }),
+  G9_TRANSFORMATIONS_ADV: skill('G9_TRANSFORMATIONS_ADV', 'Transformations (Translation, Enlargement)', 9, S.GEO, { pre: ['G8_TRANSFORMATIONS_INTRO', 'G8_SIMILARITY'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement'), cambridge: cam(9, 'Gp', '9Gp.03') } }),
 
   // Measurements
-  G9_ARC_LENGTH: skill('G9_ARC_LENGTH', 'Arc Length & Sector Area', 9, S.MEA, { pre: ['G7_CIRCUMFERENCE', 'G7_AREA_CIRCLE', 'G6_FRACTIONS_MUL'], w: 5, curricula: { cbc: cbc(8, 'Measurements', 'Circles') } }),
-  G9_SURFACE_AREA_ADV: skill('G9_SURFACE_AREA_ADV', 'Surface Area (Cones, Spheres)', 9, S.MEA, { pre: ['G8_SURFACE_AREA', 'G9_SURDS_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Area') } }),
-  G9_VOLUME_ADV: skill('G9_VOLUME_ADV', 'Volume (Cones, Spheres, Pyramids)', 9, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_AREA_CIRCLE'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Volume of Solids') } }),
+  G9_ARC_LENGTH: skill('G9_ARC_LENGTH', 'Arc Length & Sector Area', 9, S.MEA, { pre: ['G7_CIRCUMFERENCE', 'G7_AREA_CIRCLE', 'G6_FRACTIONS_MUL'], w: 5, curricula: { cbc: cbc(8, 'Measurements', 'Circles'), cambridge: camEnr('Gg') } }),
+  G9_SURFACE_AREA_ADV: skill('G9_SURFACE_AREA_ADV', 'Surface Area (Cones, Spheres)', 9, S.MEA, { pre: ['G8_SURFACE_AREA', 'G9_SURDS_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Area'), cambridge: camEnr('Gg') } }),
+  G9_VOLUME_ADV: skill('G9_VOLUME_ADV', 'Volume (Cones, Spheres, Pyramids)', 9, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_AREA_CIRCLE'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Volume of Solids'), cambridge: camEnr('Gg') } }),
 
   // Statistics
-  G9_GROUPED_DATA: skill('G9_GROUPED_DATA', 'Grouped Data & Histograms', 9, S.STA, { pre: ['G8_CUMULATIVE_FREQ', 'G7_MEAN_MEDIAN_MODE', 'G6_AREA_RECT'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)') } }),
-  G9_PROBABILITY_ADV: skill('G9_PROBABILITY_ADV', 'Probability (With/Without Replacement)', 9, S.STA, { pre: ['G8_PROBABILITY_COMBINED'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Probability') } }),
-  G9_SCATTER_PLOTS: skill('G9_SCATTER_PLOTS', 'Scatter Plots & Correlation', 9, S.STA, { pre: ['G8_COORDINATES', 'G7_DATA_REPRESENT'], w: 3, curricula: { cbc: cbcEnr('Data Handling') } }),
+  G9_GROUPED_DATA: skill('G9_GROUPED_DATA', 'Grouped Data & Histograms', 9, S.STA, { pre: ['G8_CUMULATIVE_FREQ', 'G7_MEAN_MEDIAN_MODE', 'G6_AREA_RECT'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)'), cambridge: cam(9, 'Ss', '9Ss.04') } }),
+  G9_PROBABILITY_ADV: skill('G9_PROBABILITY_ADV', 'Probability (With/Without Replacement)', 9, S.STA, { pre: ['G8_PROBABILITY_COMBINED'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Probability'), cambridge: cam(9, 'Sp', '9Sp.03') } }),
+  G9_SCATTER_PLOTS: skill('G9_SCATTER_PLOTS', 'Scatter Plots & Correlation', 9, S.STA, { pre: ['G8_COORDINATES', 'G7_DATA_REPRESENT'], w: 3, curricula: { cbc: cbcEnr('Data Handling'), cambridge: camEnr('Ss') } }),
 };
 
 // ============================================================================
