@@ -31,14 +31,25 @@ Five strands across the grade band: **Numbers, Algebra, Measurements, Geometry, 
 Confidence: strand/sub-strand names HIGH; exact per-grade placement MEDIUM until verified against the
 official KICD design PDFs.
 
-### Grade 7
-| Strand | Sub-strands |
+### Grade 7 — CONFIRMED against the official KICD design (HIGH)
+Source: `docs/curriculum-sources/KICD-Grade7-Mathematics-Curriculum-Design.pdf` (150 lessons).
+| Strand | Sub-strands (lessons) |
 |---|---|
-| Numbers | Whole Numbers · Factors · Fractions · Decimals · Squares & Square Roots |
-| Algebra | Algebraic Expressions · Linear Equations · Linear Inequalities |
-| Measurements | Pythagorean Relationship · Length · Area · Volume & Capacity · Mass · Time · Money |
-| Geometry | Angles · Geometrical Constructions |
-| Data Handling | Data Handling (collection, tables, bar/line/pie, pictographs) |
+| 1.0 Numbers | Whole Numbers (20) · Factors (7) · Fractions (9) · Decimals (6) · Squares & Square Roots (5) |
+| 2.0 Algebra | Algebraic Expressions (5) · Linear Equations (6) · Linear Inequalities (8) |
+| 3.0 Measurements | Pythagorean Relationship (4) · Length (6) · Area (8) · Volume & Capacity (8) · Time, Distance & Speed (8) · Temperature (6) · Money (14) |
+| 4.0 Geometry | Angles (8) · Geometrical Constructions (12) |
+| 5.0 Data Handling & Probability | Data Handling (10) |
+
+Key facts that corrected the provisional tags:
+- **No Integers and no standalone Percentages sub-strand in Grade 7.** Integers are a Grade 8
+  topic; percentages are taught inside the **Money** sub-strand (discount, profit/loss).
+- **Perimeter and circumference live under Length** (not Area).
+- **Pythagorean Relationship is filed under Measurements**, not Geometry.
+- **Reciprocals are in Grade 7** (Fractions).
+
+CBC Grade 7 content gaps in our graph (no skill yet → to author): **Temperature, Angles,
+Geometrical Constructions** (and the financial-literacy breadth of the 14-lesson Money sub-strand).
 
 ### Grade 8 (extends Grade 7)
 | Strand | Sub-strands (to verify) |
@@ -170,8 +181,11 @@ Educator review. Est. ~1d eng + 6–10d content.
 ---
 
 ## Open items — needs the official source documents
-- **KICD CBC/CBE Mathematics designs, Grade 7, 8, 9** (PDF) — to confirm exact per-grade sub-strand
-  placement and transcribe Specific Learning Outcomes. (Public mirrors return 403 to automated fetch.)
+- ✅ **KICD CBC/CBE Grade 7 Mathematics design** — received and applied
+  (`docs/curriculum-sources/`); all Grade 7 skills now CBC-tagged from it.
+- **KICD CBC/CBE Mathematics designs, Grade 8 & 9** (PDF) — to confirm per-grade sub-strand
+  placement (e.g. the Integers / Reciprocals / Percentages homes) and transcribe Specific
+  Learning Outcomes.
 - **Cambridge 0862 Lower Secondary Mathematics Curriculum Framework 2020** (PDF) — for the full
   objective list per code (`7Np.01` … `9Sp.xx`). Official copy via Cambridge International support site.
 - An **educator/SME** to sign off the CBC and Cambridge tagging before we claim "aligned".
