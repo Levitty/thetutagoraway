@@ -130,6 +130,9 @@ const GRADE_6 = {
 // codes (Np/Ni/Nf) and stages remain PROVISIONAL pending the 0862 framework PDF.
 const cbc = (grade, strand, substrand, inScope = true) => ({ grade, strand, substrand, inScope });
 const cam = (stage, strand, substrand, inScope = true) => ({ stage, strand, substrand, inScope });
+// CBC enrichment: topic is outside the CBC Grade 7–9 scope (e.g. quadratics,
+// surds — Senior School / 8-4-4). Shows under its native grade with a badge.
+const cbcEnr = (strand) => ({ strand, inScope: false });
 
 const GRADE_7 = {
   // Numbers
@@ -184,45 +187,45 @@ const GRADE_7 = {
 
 const GRADE_8 = {
   // Numbers
-  G8_INDICES_INTRO: skill('G8_INDICES_INTRO', 'Introduction to Indices', 8, S.NUM, { pre: ['G7_SQUARES_EXT', 'G7_INTEGERS_MUL_DIV'], w: 4, crit: true }),
-  G8_INDICES_LAWS: skill('G8_INDICES_LAWS', 'Laws of Indices', 8, S.NUM, { pre: ['G8_INDICES_INTRO'], w: 5, crit: true }),
-  G8_STANDARD_FORM: skill('G8_STANDARD_FORM', 'Standard Form (Scientific Notation)', 8, S.NUM, { pre: ['G8_INDICES_INTRO', 'G7_DECIMALS_MUL'], w: 4 }),
-  G8_CUBES_CUBE_ROOTS: skill('G8_CUBES_CUBE_ROOTS', 'Cubes & Cube Roots', 8, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_INTRO'], w: 4 }),
-  G8_RATIO_PROPORTION: skill('G8_RATIO_PROPORTION', 'Ratio & Proportion (Advanced)', 8, S.NUM, { pre: ['G6_RATIOS', 'G7_FRACTIONS_DIV'], w: 4 }),
-  G8_PERCENTAGE_CHANGE: skill('G8_PERCENTAGE_CHANGE', 'Percentage Increase & Decrease', 8, S.NUM, { pre: ['G7_PERCENTAGES'], w: 4, crit: true }),
-  G8_PROFIT_LOSS: skill('G8_PROFIT_LOSS', 'Profit, Loss & Discount', 8, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4 }),
-  G8_SIMPLE_INTEREST: skill('G8_SIMPLE_INTEREST', 'Simple Interest', 8, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4 }),
-  G8_NUMBER_BASES: skill('G8_NUMBER_BASES', 'Number Bases (Binary, Octal)', 8, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 5 }),
+  G8_INDICES_INTRO: skill('G8_INDICES_INTRO', 'Introduction to Indices', 8, S.NUM, { pre: ['G7_SQUARES_EXT', 'G7_INTEGERS_MUL_DIV'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms') } }),
+  G8_INDICES_LAWS: skill('G8_INDICES_LAWS', 'Laws of Indices', 8, S.NUM, { pre: ['G8_INDICES_INTRO'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms') } }),
+  G8_STANDARD_FORM: skill('G8_STANDARD_FORM', 'Standard Form (Scientific Notation)', 8, S.NUM, { pre: ['G8_INDICES_INTRO', 'G7_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms') } }),
+  G8_CUBES_CUBE_ROOTS: skill('G8_CUBES_CUBE_ROOTS', 'Cubes & Cube Roots', 8, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_INTRO'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Cubes and Cube Roots') } }),
+  G8_RATIO_PROPORTION: skill('G8_RATIO_PROPORTION', 'Ratio & Proportion (Advanced)', 8, S.NUM, { pre: ['G6_RATIOS', 'G7_FRACTIONS_DIV'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Rates, Ratio, Proportions and Percentages') } }),
+  G8_PERCENTAGE_CHANGE: skill('G8_PERCENTAGE_CHANGE', 'Percentage Increase & Decrease', 8, S.NUM, { pre: ['G7_PERCENTAGES'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Rates, Ratio, Proportions and Percentages') } }),
+  G8_PROFIT_LOSS: skill('G8_PROFIT_LOSS', 'Profit, Loss & Discount', 8, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4, curricula: { cbc: cbc(8, 'Measurements', 'Money') } }),
+  G8_SIMPLE_INTEREST: skill('G8_SIMPLE_INTEREST', 'Simple Interest', 8, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4, curricula: { cbc: cbc(8, 'Measurements', 'Money') } }),
+  G8_NUMBER_BASES: skill('G8_NUMBER_BASES', 'Number Bases (Binary, Octal)', 8, S.NUM, { pre: ['G7_PRIME_FACTORIZATION'], w: 5, curricula: { cbc: cbcEnr('Numbers') } }),
 
   // Algebra
-  G8_EXPAND_BRACKETS: skill('G8_EXPAND_BRACKETS', 'Expanding Brackets', 8, S.ALG, { pre: ['G7_SIMPLIFY', 'G7_INTEGERS_MUL_DIV'], w: 4, crit: true }),
-  G8_FACTORIZE_COMMON: skill('G8_FACTORIZE_COMMON', 'Factorizing (Common Factor)', 8, S.ALG, { pre: ['G8_EXPAND_BRACKETS', 'G7_GCD'], w: 4 }),
-  G8_LINEAR_EQ_ADV: skill('G8_LINEAR_EQ_ADV', 'Linear Equations (Advanced)', 8, S.ALG, { pre: ['G7_EQUATIONS_SOLVE', 'G8_EXPAND_BRACKETS'], w: 5, crit: true }),
-  G8_SIMULTANEOUS_INTRO: skill('G8_SIMULTANEOUS_INTRO', 'Simultaneous Equations (Introduction)', 8, S.ALG, { pre: ['G8_LINEAR_EQ_ADV'], w: 5, crit: true }),
-  G8_INEQUALITIES: skill('G8_INEQUALITIES', 'Solving Inequalities', 8, S.ALG, { pre: ['G7_INEQUALITIES_INTRO', 'G8_LINEAR_EQ_ADV'], w: 4 }),
-  G8_SEQUENCES: skill('G8_SEQUENCES', 'Arithmetic Sequences', 8, S.ALG, { pre: ['G6_PATTERNS', 'G7_EXPRESSIONS'], w: 4 }),
-  G8_COORDINATES: skill('G8_COORDINATES', 'Coordinate Geometry Basics', 8, S.ALG, { pre: ['G6_INTEGERS_ADD_SUB'], w: 3, crit: true }),
-  G8_LINEAR_GRAPHS: skill('G8_LINEAR_GRAPHS', 'Plotting Linear Graphs', 8, S.ALG, { pre: ['G8_COORDINATES', 'G7_EQUATIONS_SOLVE'], w: 4, crit: true }),
-  G8_GRADIENT: skill('G8_GRADIENT', 'Gradient of a Line', 8, S.ALG, { pre: ['G8_LINEAR_GRAPHS', 'G7_FRACTIONS_DIV'], w: 4 }),
-  G8_EQUATION_OF_LINE: skill('G8_EQUATION_OF_LINE', 'Equation of a Straight Line', 8, S.ALG, { pre: ['G8_GRADIENT', 'G8_LINEAR_EQ_ADV'], w: 5 }),
+  G8_EXPAND_BRACKETS: skill('G8_EXPAND_BRACKETS', 'Expanding Brackets', 8, S.ALG, { pre: ['G7_SIMPLIFY', 'G7_INTEGERS_MUL_DIV'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Algebra', 'Algebraic Expressions') } }),
+  G8_FACTORIZE_COMMON: skill('G8_FACTORIZE_COMMON', 'Factorizing (Common Factor)', 8, S.ALG, { pre: ['G8_EXPAND_BRACKETS', 'G7_GCD'], w: 4, curricula: { cbc: cbc(8, 'Algebra', 'Algebraic Expressions') } }),
+  G8_LINEAR_EQ_ADV: skill('G8_LINEAR_EQ_ADV', 'Linear Equations (Advanced)', 8, S.ALG, { pre: ['G7_EQUATIONS_SOLVE', 'G8_EXPAND_BRACKETS'], w: 5, crit: true, curricula: { cbc: cbc(8, 'Algebra', 'Linear Equations') } }),
+  G8_SIMULTANEOUS_INTRO: skill('G8_SIMULTANEOUS_INTRO', 'Simultaneous Equations (Introduction)', 8, S.ALG, { pre: ['G8_LINEAR_EQ_ADV'], w: 5, crit: true, curricula: { cbc: cbc(8, 'Algebra', 'Linear Equations') } }),
+  G8_INEQUALITIES: skill('G8_INEQUALITIES', 'Solving Inequalities', 8, S.ALG, { pre: ['G7_INEQUALITIES_INTRO', 'G8_LINEAR_EQ_ADV'], w: 4, curricula: { cbc: cbc(9, 'Algebra', 'Linear Inequalities') } }),
+  G8_SEQUENCES: skill('G8_SEQUENCES', 'Arithmetic Sequences', 8, S.ALG, { pre: ['G6_PATTERNS', 'G7_EXPRESSIONS'], w: 4, curricula: { cbc: cbcEnr('Algebra') } }),
+  G8_COORDINATES: skill('G8_COORDINATES', 'Coordinate Geometry Basics', 8, S.ALG, { pre: ['G6_INTEGERS_ADD_SUB'], w: 3, crit: true, curricula: { cbc: cbc(8, 'Geometry', 'Coordinates and Graphs') } }),
+  G8_LINEAR_GRAPHS: skill('G8_LINEAR_GRAPHS', 'Plotting Linear Graphs', 8, S.ALG, { pre: ['G8_COORDINATES', 'G7_EQUATIONS_SOLVE'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Geometry', 'Coordinates and Graphs') } }),
+  G8_GRADIENT: skill('G8_GRADIENT', 'Gradient of a Line', 8, S.ALG, { pre: ['G8_LINEAR_GRAPHS', 'G7_FRACTIONS_DIV'], w: 4, curricula: { cbc: cbc(9, 'Algebra', 'Equations of a Straight Line') } }),
+  G8_EQUATION_OF_LINE: skill('G8_EQUATION_OF_LINE', 'Equation of a Straight Line', 8, S.ALG, { pre: ['G8_GRADIENT', 'G8_LINEAR_EQ_ADV'], w: 5, curricula: { cbc: cbc(9, 'Algebra', 'Equations of a Straight Line') } }),
 
   // Geometry
-  G8_ANGLE_RELATIONSHIPS: skill('G8_ANGLE_RELATIONSHIPS', 'Angle Relationships (Parallel Lines)', 8, S.GEO, { pre: ['G6_ANGLE_PROPERTIES'], w: 4, crit: true }),
-  G8_POLYGON_ANGLES: skill('G8_POLYGON_ANGLES', 'Angles in Polygons', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES', 'G8_ANGLE_RELATIONSHIPS'], w: 4 }),
-  G8_CONGRUENCE: skill('G8_CONGRUENCE', 'Congruent Triangles', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES'], w: 4 }),
-  G8_SIMILARITY: skill('G8_SIMILARITY', 'Similar Figures', 8, S.GEO, { pre: ['G8_CONGRUENCE', 'G8_RATIO_PROPORTION'], w: 4, crit: true }),
-  G8_TRANSFORMATIONS_INTRO: skill('G8_TRANSFORMATIONS_INTRO', 'Transformations (Reflection, Rotation)', 8, S.GEO, { pre: ['G8_COORDINATES', 'G6_SYMMETRY'], w: 3 }),
+  G8_ANGLE_RELATIONSHIPS: skill('G8_ANGLE_RELATIONSHIPS', 'Angle Relationships (Parallel Lines)', 8, S.GEO, { pre: ['G6_ANGLE_PROPERTIES'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Geometry', 'Angles') } }),
+  G8_POLYGON_ANGLES: skill('G8_POLYGON_ANGLES', 'Angles in Polygons', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES', 'G8_ANGLE_RELATIONSHIPS'], w: 4, curricula: { cbc: cbc(7, 'Geometry', 'Angles') } }),
+  G8_CONGRUENCE: skill('G8_CONGRUENCE', 'Congruent Triangles', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement') } }),
+  G8_SIMILARITY: skill('G8_SIMILARITY', 'Similar Figures', 8, S.GEO, { pre: ['G8_CONGRUENCE', 'G8_RATIO_PROPORTION'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement') } }),
+  G8_TRANSFORMATIONS_INTRO: skill('G8_TRANSFORMATIONS_INTRO', 'Transformations (Reflection, Rotation)', 8, S.GEO, { pre: ['G8_COORDINATES', 'G6_SYMMETRY'], w: 3, curricula: { cbc: cbcEnr('Geometry') } }),
 
   // Measurements
-  G8_AREA_COMPOSITE: skill('G8_AREA_COMPOSITE', 'Area of Composite Shapes', 8, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_AREA_RECT', 'G6_AREA_TRIANGLE'], w: 4 }),
-  G8_SURFACE_AREA: skill('G8_SURFACE_AREA', 'Surface Area (Cuboids, Cylinders)', 8, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_AREA_RECT'], w: 4 }),
-  G8_VOLUME_ADV: skill('G8_VOLUME_ADV', 'Volume (Prisms, Cylinders)', 8, S.MEA, { pre: ['G7_VOLUME_CYLINDER'], w: 4 }),
-  G8_DENSITY: skill('G8_DENSITY', 'Density & Mass', 8, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_DECIMALS_DIV', 'G5_MASS'], w: 4 }),
+  G8_AREA_COMPOSITE: skill('G8_AREA_COMPOSITE', 'Area of Composite Shapes', 8, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_AREA_RECT', 'G6_AREA_TRIANGLE'], w: 4, curricula: { cbc: cbc(8, 'Measurements', 'Area') } }),
+  G8_SURFACE_AREA: skill('G8_SURFACE_AREA', 'Surface Area (Cuboids, Cylinders)', 8, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_AREA_RECT'], w: 4, curricula: { cbc: cbc(8, 'Geometry', 'Common Solids') } }),
+  G8_VOLUME_ADV: skill('G8_VOLUME_ADV', 'Volume (Prisms, Cylinders)', 8, S.MEA, { pre: ['G7_VOLUME_CYLINDER'], w: 4, curricula: { cbc: cbc(8, 'Geometry', 'Common Solids') } }),
+  G8_DENSITY: skill('G8_DENSITY', 'Density & Mass', 8, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_DECIMALS_DIV', 'G5_MASS'], w: 4, curricula: { cbc: cbc(9, 'Measurements', 'Mass, Volume, Weight and Density') } }),
 
   // Statistics
-  G8_PROBABILITY_INTRO: skill('G8_PROBABILITY_INTRO', 'Introduction to Probability', 8, S.STA, { pre: ['G6_FRACTIONS_DECIMALS'], w: 3, crit: true }),
-  G8_PROBABILITY_COMBINED: skill('G8_PROBABILITY_COMBINED', 'Combined Events & Tree Diagrams', 8, S.STA, { pre: ['G8_PROBABILITY_INTRO', 'G7_FRACTIONS_MUL'], w: 4 }),
-  G8_CUMULATIVE_FREQ: skill('G8_CUMULATIVE_FREQ', 'Cumulative Frequency', 8, S.STA, { pre: ['G7_MEAN_MEDIAN_MODE', 'G8_LINEAR_GRAPHS'], w: 4 }),
+  G8_PROBABILITY_INTRO: skill('G8_PROBABILITY_INTRO', 'Introduction to Probability', 8, S.STA, { pre: ['G6_FRACTIONS_DECIMALS'], w: 3, crit: true, curricula: { cbc: cbc(8, 'Data Handling', 'Probability') } }),
+  G8_PROBABILITY_COMBINED: skill('G8_PROBABILITY_COMBINED', 'Combined Events & Tree Diagrams', 8, S.STA, { pre: ['G8_PROBABILITY_INTRO', 'G7_FRACTIONS_MUL'], w: 4, curricula: { cbc: cbc(8, 'Data Handling', 'Probability') } }),
+  G8_CUMULATIVE_FREQ: skill('G8_CUMULATIVE_FREQ', 'Cumulative Frequency', 8, S.STA, { pre: ['G7_MEAN_MEDIAN_MODE', 'G8_LINEAR_GRAPHS'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)') } }),
 };
 
 // ============================================================================
@@ -231,40 +234,40 @@ const GRADE_8 = {
 
 const GRADE_9 = {
   // Numbers
-  G9_SURDS_INTRO: skill('G9_SURDS_INTRO', 'Introduction to Surds', 9, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_LAWS'], w: 5, crit: true, curricula: { cambridge: { strand: 'Number', substrand: 'Ni', inScope: false } } }),
-  G9_SURDS_OPERATIONS: skill('G9_SURDS_OPERATIONS', 'Operations with Surds', 9, S.NUM, { pre: ['G9_SURDS_INTRO'], w: 5, curricula: { cambridge: { strand: 'Number', substrand: 'Ni', inScope: false } } }),
-  G9_COMPOUND_INTEREST: skill('G9_COMPOUND_INTEREST', 'Compound Interest', 9, S.NUM, { pre: ['G8_SIMPLE_INTEREST', 'G8_INDICES_INTRO'], w: 5 }),
-  G9_COMMERCIAL_ARITH: skill('G9_COMMERCIAL_ARITH', 'Commercial Arithmetic (Tax, Bills)', 9, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4 }),
+  G9_SURDS_INTRO: skill('G9_SURDS_INTRO', 'Introduction to Surds', 9, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_LAWS'], w: 5, crit: true, curricula: { cbc: cbcEnr('Numbers'), cambridge: { strand: 'Number', substrand: 'Ni', inScope: false } } }),
+  G9_SURDS_OPERATIONS: skill('G9_SURDS_OPERATIONS', 'Operations with Surds', 9, S.NUM, { pre: ['G9_SURDS_INTRO'], w: 5, curricula: { cbc: cbcEnr('Numbers'), cambridge: { strand: 'Number', substrand: 'Ni', inScope: false } } }),
+  G9_COMPOUND_INTEREST: skill('G9_COMPOUND_INTEREST', 'Compound Interest', 9, S.NUM, { pre: ['G8_SIMPLE_INTEREST', 'G8_INDICES_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Money') } }),
+  G9_COMMERCIAL_ARITH: skill('G9_COMMERCIAL_ARITH', 'Commercial Arithmetic (Tax, Bills)', 9, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4, curricula: { cbc: cbc(9, 'Measurements', 'Money') } }),
 
   // Algebra
-  G9_QUADRATIC_EXPAND: skill('G9_QUADRATIC_EXPAND', 'Expanding Double Brackets', 9, S.ALG, { pre: ['G8_EXPAND_BRACKETS'], w: 4, crit: true }),
-  G9_QUADRATIC_FACTORIZE: skill('G9_QUADRATIC_FACTORIZE', 'Factorizing Quadratics', 9, S.ALG, { pre: ['G9_QUADRATIC_EXPAND', 'G8_FACTORIZE_COMMON'], w: 5, crit: true }),
-  G9_QUADRATIC_SOLVE: skill('G9_QUADRATIC_SOLVE', 'Solving Quadratic Equations', 9, S.ALG, { pre: ['G9_QUADRATIC_FACTORIZE'], w: 5, crit: true }),
-  G9_QUADRATIC_FORMULA: skill('G9_QUADRATIC_FORMULA', 'Quadratic Formula', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G9_SURDS_INTRO'], w: 5 }),
-  G9_COMPLETING_SQUARE: skill('G9_COMPLETING_SQUARE', 'Completing the Square', 9, S.ALG, { pre: ['G9_QUADRATIC_EXPAND', 'G7_SQUARES_EXT'], w: 6 }),
-  G9_SIMULTANEOUS_ADV: skill('G9_SIMULTANEOUS_ADV', 'Simultaneous Equations (Advanced)', 9, S.ALG, { pre: ['G8_SIMULTANEOUS_INTRO', 'G9_QUADRATIC_SOLVE'], w: 5 }),
-  G9_VARIATION: skill('G9_VARIATION', 'Direct & Inverse Variation', 9, S.ALG, { pre: ['G8_RATIO_PROPORTION', 'G8_LINEAR_EQ_ADV'], w: 4 }),
-  G9_FUNCTIONS_INTRO: skill('G9_FUNCTIONS_INTRO', 'Introduction to Functions', 9, S.ALG, { pre: ['G8_LINEAR_GRAPHS', 'G7_EXPRESSIONS'], w: 4, crit: true }),
-  G9_QUADRATIC_GRAPHS: skill('G9_QUADRATIC_GRAPHS', 'Quadratic Graphs', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G8_LINEAR_GRAPHS'], w: 5, crit: true }),
+  G9_QUADRATIC_EXPAND: skill('G9_QUADRATIC_EXPAND', 'Expanding Double Brackets', 9, S.ALG, { pre: ['G8_EXPAND_BRACKETS'], w: 4, crit: true, curricula: { cbc: cbcEnr('Algebra') } }),
+  G9_QUADRATIC_FACTORIZE: skill('G9_QUADRATIC_FACTORIZE', 'Factorizing Quadratics', 9, S.ALG, { pre: ['G9_QUADRATIC_EXPAND', 'G8_FACTORIZE_COMMON'], w: 5, crit: true, curricula: { cbc: cbcEnr('Algebra') } }),
+  G9_QUADRATIC_SOLVE: skill('G9_QUADRATIC_SOLVE', 'Solving Quadratic Equations', 9, S.ALG, { pre: ['G9_QUADRATIC_FACTORIZE'], w: 5, crit: true, curricula: { cbc: cbcEnr('Algebra') } }),
+  G9_QUADRATIC_FORMULA: skill('G9_QUADRATIC_FORMULA', 'Quadratic Formula', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G9_SURDS_INTRO'], w: 5, curricula: { cbc: cbcEnr('Algebra') } }),
+  G9_COMPLETING_SQUARE: skill('G9_COMPLETING_SQUARE', 'Completing the Square', 9, S.ALG, { pre: ['G9_QUADRATIC_EXPAND', 'G7_SQUARES_EXT'], w: 6, curricula: { cbc: cbcEnr('Algebra') } }),
+  G9_SIMULTANEOUS_ADV: skill('G9_SIMULTANEOUS_ADV', 'Simultaneous Equations (Advanced)', 9, S.ALG, { pre: ['G8_SIMULTANEOUS_INTRO', 'G9_QUADRATIC_SOLVE'], w: 5, curricula: { cbc: cbcEnr('Algebra') } }),
+  G9_VARIATION: skill('G9_VARIATION', 'Direct & Inverse Variation', 9, S.ALG, { pre: ['G8_RATIO_PROPORTION', 'G8_LINEAR_EQ_ADV'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Compound Proportions and Rates of Work') } }),
+  G9_FUNCTIONS_INTRO: skill('G9_FUNCTIONS_INTRO', 'Introduction to Functions', 9, S.ALG, { pre: ['G8_LINEAR_GRAPHS', 'G7_EXPRESSIONS'], w: 4, crit: true, curricula: { cbc: cbcEnr('Algebra') } }),
+  G9_QUADRATIC_GRAPHS: skill('G9_QUADRATIC_GRAPHS', 'Quadratic Graphs', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G8_LINEAR_GRAPHS'], w: 5, crit: true, curricula: { cbc: cbcEnr('Algebra') } }),
 
   // Geometry
-  G9_CONSTRUCTION: skill('G9_CONSTRUCTION', 'Geometric Constructions', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_ANGLE_MEASURE', 'G5_LINES'], w: 3 }),
-  G9_LOCI: skill('G9_LOCI', 'Loci & Locus', 9, S.GEO, { pre: ['G9_CONSTRUCTION', 'G7_CIRCUMFERENCE'], w: 4 }),
-  G9_CIRCLE_THEOREMS_INTRO: skill('G9_CIRCLE_THEOREMS_INTRO', 'Circle Theorems (Introduction)', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_TRIANGLE_PROPERTIES', 'G7_AREA_CIRCLE'], w: 5, crit: true }),
-  G9_TRIG_INTRO: skill('G9_TRIG_INTRO', 'Trigonometry (SOH CAH TOA)', 9, S.GEO, { pre: ['G7_PYTHAGORAS', 'G7_FRACTIONS_DIV'], w: 5, crit: true }),
-  G9_TRIG_PROBLEMS: skill('G9_TRIG_PROBLEMS', 'Trigonometry Word Problems', 9, S.GEO, { pre: ['G9_TRIG_INTRO'], w: 5 }),
-  G9_BEARINGS: skill('G9_BEARINGS', 'Bearings', 9, S.GEO, { pre: ['G9_TRIG_INTRO', 'G6_ANGLE_MEASURE'], w: 4 }),
-  G9_TRANSFORMATIONS_ADV: skill('G9_TRANSFORMATIONS_ADV', 'Transformations (Translation, Enlargement)', 9, S.GEO, { pre: ['G8_TRANSFORMATIONS_INTRO', 'G8_SIMILARITY'], w: 4 }),
+  G9_CONSTRUCTION: skill('G9_CONSTRUCTION', 'Geometric Constructions', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_ANGLE_MEASURE', 'G5_LINES'], w: 3, curricula: { cbc: cbc(8, 'Geometry', 'Geometrical Constructions') } }),
+  G9_LOCI: skill('G9_LOCI', 'Loci & Locus', 9, S.GEO, { pre: ['G9_CONSTRUCTION', 'G7_CIRCUMFERENCE'], w: 4, curricula: { cbc: cbc(8, 'Geometry', 'Geometrical Constructions') } }),
+  G9_CIRCLE_THEOREMS_INTRO: skill('G9_CIRCLE_THEOREMS_INTRO', 'Circle Theorems (Introduction)', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_TRIANGLE_PROPERTIES', 'G7_AREA_CIRCLE'], w: 5, crit: true, curricula: { cbc: cbcEnr('Geometry') } }),
+  G9_TRIG_INTRO: skill('G9_TRIG_INTRO', 'Trigonometry (SOH CAH TOA)', 9, S.GEO, { pre: ['G7_PYTHAGORAS', 'G7_FRACTIONS_DIV'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Trigonometry') } }),
+  G9_TRIG_PROBLEMS: skill('G9_TRIG_PROBLEMS', 'Trigonometry Word Problems', 9, S.GEO, { pre: ['G9_TRIG_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Geometry', 'Trigonometry') } }),
+  G9_BEARINGS: skill('G9_BEARINGS', 'Bearings', 9, S.GEO, { pre: ['G9_TRIG_INTRO', 'G6_ANGLE_MEASURE'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Scale Drawing') } }),
+  G9_TRANSFORMATIONS_ADV: skill('G9_TRANSFORMATIONS_ADV', 'Transformations (Translation, Enlargement)', 9, S.GEO, { pre: ['G8_TRANSFORMATIONS_INTRO', 'G8_SIMILARITY'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement') } }),
 
   // Measurements
-  G9_ARC_LENGTH: skill('G9_ARC_LENGTH', 'Arc Length & Sector Area', 9, S.MEA, { pre: ['G7_CIRCUMFERENCE', 'G7_AREA_CIRCLE', 'G6_FRACTIONS_MUL'], w: 5 }),
-  G9_SURFACE_AREA_ADV: skill('G9_SURFACE_AREA_ADV', 'Surface Area (Cones, Spheres)', 9, S.MEA, { pre: ['G8_SURFACE_AREA', 'G9_SURDS_INTRO'], w: 5 }),
-  G9_VOLUME_ADV: skill('G9_VOLUME_ADV', 'Volume (Cones, Spheres, Pyramids)', 9, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_AREA_CIRCLE'], w: 5 }),
+  G9_ARC_LENGTH: skill('G9_ARC_LENGTH', 'Arc Length & Sector Area', 9, S.MEA, { pre: ['G7_CIRCUMFERENCE', 'G7_AREA_CIRCLE', 'G6_FRACTIONS_MUL'], w: 5, curricula: { cbc: cbc(8, 'Measurements', 'Circles') } }),
+  G9_SURFACE_AREA_ADV: skill('G9_SURFACE_AREA_ADV', 'Surface Area (Cones, Spheres)', 9, S.MEA, { pre: ['G8_SURFACE_AREA', 'G9_SURDS_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Area') } }),
+  G9_VOLUME_ADV: skill('G9_VOLUME_ADV', 'Volume (Cones, Spheres, Pyramids)', 9, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_AREA_CIRCLE'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Volume of Solids') } }),
 
   // Statistics
-  G9_GROUPED_DATA: skill('G9_GROUPED_DATA', 'Grouped Data & Histograms', 9, S.STA, { pre: ['G8_CUMULATIVE_FREQ', 'G7_MEAN_MEDIAN_MODE', 'G6_AREA_RECT'], w: 4 }),
-  G9_PROBABILITY_ADV: skill('G9_PROBABILITY_ADV', 'Probability (With/Without Replacement)', 9, S.STA, { pre: ['G8_PROBABILITY_COMBINED'], w: 4 }),
-  G9_SCATTER_PLOTS: skill('G9_SCATTER_PLOTS', 'Scatter Plots & Correlation', 9, S.STA, { pre: ['G8_COORDINATES', 'G7_DATA_REPRESENT'], w: 3 }),
+  G9_GROUPED_DATA: skill('G9_GROUPED_DATA', 'Grouped Data & Histograms', 9, S.STA, { pre: ['G8_CUMULATIVE_FREQ', 'G7_MEAN_MEDIAN_MODE', 'G6_AREA_RECT'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)') } }),
+  G9_PROBABILITY_ADV: skill('G9_PROBABILITY_ADV', 'Probability (With/Without Replacement)', 9, S.STA, { pre: ['G8_PROBABILITY_COMBINED'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Probability') } }),
+  G9_SCATTER_PLOTS: skill('G9_SCATTER_PLOTS', 'Scatter Plots & Correlation', 9, S.STA, { pre: ['G8_COORDINATES', 'G7_DATA_REPRESENT'], w: 3, curricula: { cbc: cbcEnr('Data Handling') } }),
 };
 
 // ============================================================================

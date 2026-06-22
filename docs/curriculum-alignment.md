@@ -51,23 +51,30 @@ Key facts that corrected the provisional tags:
 CBC Grade 7 content gaps in our graph (no skill yet → to author): **Temperature, Angles,
 Geometrical Constructions** (and the financial-literacy breadth of the 14-lesson Money sub-strand).
 
-### Grade 8 (extends Grade 7)
-| Strand | Sub-strands (to verify) |
+### Grade 8 — CONFIRMED against the official KICD design (HIGH)
+Source: `docs/curriculum-sources/KICD-Grade8-Mathematics-Curriculum-Design.pdf`.
+| Strand | Sub-strands (lessons) |
 |---|---|
-| Numbers | Integers · Cubes & Cube Roots · Reciprocals · Indices & Logarithms · Rates, Ratio, Proportion & Percentages |
-| Algebra | Algebraic Expressions · Linear Equations · Linear Inequalities |
-| Measurements | Area · Volume & Capacity · Money (commercial) · Time, Distance & Speed · Temperature |
-| Geometry | Geometrical Constructions · Coordinates & Graphs · Scale Drawing |
-| Data Handling & Probability | Data Handling · Probability (introduction) |
+| 1.0 Numbers | Integers (6) · Fractions (6) · Decimals (8) · Squares & Square Roots (6) · Rates, Ratio, Proportions & Percentages (14) |
+| 2.0 Algebra | Algebraic Expressions (6) · Linear Equations (7) |
+| 3.0 Measurements | Circles (5) · Area (10) · Money (9) |
+| 4.0 Geometry | Geometrical Constructions (12) · Coordinates & Graphs (14) · Scale Drawing (14) · Common Solids (16) |
+| 5.0 Data Handling & Probability | Data Presentation & Interpretation (10) · Probability (7) |
 
-### Grade 9 (extends Grade 8)
-| Strand | Sub-strands (to verify) |
+### Grade 9 — CONFIRMED against the official KICD design (HIGH)
+Source: `docs/curriculum-sources/KICD-Grade9-Mathematics-Curriculum-Design.pdf`.
+| Strand | Sub-strands (lessons) |
 |---|---|
-| Numbers | Integers · Indices & Logarithms · Compound Proportions & Rates of Work · Approximations & Errors |
-| Algebra | Matrices · Equations of Straight Lines · Quadratic Expressions & Equations · Simultaneous (linear) · Inequalities |
-| Measurements | Area (triangle, part of circle) · Surface Area of Solids · Volume & Capacity |
-| Geometry | Coordinates & Graphs · Scale Drawing · Similarity & Enlargement · Circle geometry · Constructions |
-| Data Handling & Probability | Data Handling (mean/median/mode, range) · Probability |
+| 1.0 Numbers | Integers · Cubes & Cube Roots · Indices & Logarithms · Compound Proportions & Rates of Work |
+| 2.0 Algebra | Matrices (8) · Equations of a Straight Line (15) · Linear Inequalities (6) |
+| 3.0 Measurements | Area (8) · Volume of Solids (8) · Mass, Volume, Weight & Density (8) · Time, Distance & Speed (10) · Money (7) · Approximations & Errors (5) |
+| 4.0 Geometry | Coordinates & Graphs (6) · Scale Drawing (14) · Similarity & Enlargement (10) · Trigonometry (8) |
+| 5.0 Data Handling & Probability | Data Interpretation / Grouped Data (8) · Probability (6) |
+
+**NOT in CBC junior (→ tagged enrichment): quadratics, the quadratic formula / completing the
+square, surds, functions, arithmetic sequences, number bases, reflection/rotation transformations,
+circle theorems, scatter plots.** These are Senior School / legacy 8-4-4 topics — shown with an
+"enrichment" badge in the CBC view, not hidden.
 
 > General Grade-7 learning outcomes (verbatim themes from KICD): represent & apply algebraic
 > expressions; apply measurement to real contexts; **use money / carry out financial transactions**;
@@ -181,11 +188,12 @@ Educator review. Est. ~1d eng + 6–10d content.
 ---
 
 ## Open items — needs the official source documents
-- ✅ **KICD CBC/CBE Grade 7 Mathematics design** — received and applied
-  (`docs/curriculum-sources/`); all Grade 7 skills now CBC-tagged from it.
-- **KICD CBC/CBE Mathematics designs, Grade 8 & 9** (PDF) — to confirm per-grade sub-strand
-  placement (e.g. the Integers / Reciprocals / Percentages homes) and transcribe Specific
-  Learning Outcomes.
+- ✅ **KICD CBC/CBE Grade 7, 8 & 9 Mathematics designs** — received and applied
+  (`docs/curriculum-sources/`); the whole Grade 7–9 graph is now CBC-tagged from them, with
+  out-of-scope topics flagged enrichment. Remaining: a few geometry/stats placements are
+  judgement calls (bearings, scatter plots, surface area) pending SLO-level review; and the CBC
+  content gaps (Temperature, Angles & Geometrical Constructions skills, Matrices, Approximations
+  & Errors, the broad Money strand) still need authoring.
 - **Cambridge 0862 Lower Secondary Mathematics Curriculum Framework 2020** (PDF) — for the full
   objective list per code (`7Np.01` … `9Sp.xx`). Official copy via Cambridge International support site.
 - An **educator/SME** to sign off the CBC and Cambridge tagging before we claim "aligned".
