@@ -5,7 +5,7 @@
 // ============================================================================
 
 import { SKILLS as MATH_SKILLS, getPostRequisites as mathGetPostReqs, getPrerequisiteChain as mathPreChain, getPostRequisiteChain as mathPostChain, STRANDS as MATH_STRANDS } from './knowledgeGraph.js';
-import { NATIVE, gradeOf, strandOf } from './curricula.js';
+import { NATIVE, gradeOf, strandOf, isEnrichment } from './curricula.js';
 
 // Default context (math) for backward compatibility
 const defaultCtx = () => ({
@@ -254,10 +254,15 @@ export const getRemediationSkills = (skillId, kpIndex, progress, ctx) => {
 
 // ==================== STATISTICS ====================
 
-export const getStats = (progress, ctx) => {
+// excludeEnrichment: when true, skills out of the active curriculum's scope
+// (enrichment) are dropped from the denominator so in-scope progress isn't
+// diluted. Defaults false to preserve every existing caller's behaviour.
+export const getStats = (progress, ctx, { excludeEnrichment = false } = {}) => {
   const c = resolveCtx(ctx);
-  let mastered = 0, total = c.skillList.length, correct = 0, attempts = 0;
+  let mastered = 0, total = 0, correct = 0, attempts = 0, enrichment = 0;
   for (const s of c.skillList) {
+    if (excludeEnrichment && isEnrichment(s, c.curriculum)) { enrichment++; continue; }
+    total++;
     if (progress.skills[s.id]?.mastered) mastered++;
     correct += progress.skills[s.id]?.correct || 0;
     attempts += progress.skills[s.id]?.attempts || 0;
@@ -265,17 +270,19 @@ export const getStats = (progress, ctx) => {
   return {
     mastered,
     total,
-    percent: Math.round((mastered / total) * 100),
+    enrichment,
+    percent: total > 0 ? Math.round((mastered / total) * 100) : 0,
     accuracy: attempts > 0 ? Math.round((correct / attempts) * 100) : 0,
     totalAttempts: attempts,
     totalCorrect: correct,
   };
 };
 
-export const getStrandStats = (progress, ctx) => {
+export const getStrandStats = (progress, ctx, { excludeEnrichment = false } = {}) => {
   const c = resolveCtx(ctx);
   const strands = {};
   for (const s of c.skillList) {
+    if (excludeEnrichment && isEnrichment(s, c.curriculum)) continue;
     const strand = strandOf(s, c.curriculum);
     if (!strands[strand]) strands[strand] = { total: 0, mastered: 0, correct: 0, attempts: 0, skills: [] };
     strands[strand].total++;
@@ -288,24 +295,28 @@ export const getStrandStats = (progress, ctx) => {
   return Object.entries(strands).map(([name, d]) => ({
     name,
     ...d,
-    percent: Math.round((d.mastered / d.total) * 100),
+    percent: d.total > 0 ? Math.round((d.mastered / d.total) * 100) : 0,
     accuracy: d.attempts > 0 ? Math.round((d.correct / d.attempts) * 100) : null,
+    assessed: d.attempts > 0,
   }));
 };
 
-export const getGradeStats = (progress, ctx) => {
+export const getGradeStats = (progress, ctx, { excludeEnrichment = false } = {}) => {
   const c = resolveCtx(ctx);
   const grades = {};
   for (const s of c.skillList) {
+    const enr = isEnrichment(s, c.curriculum);
+    if (excludeEnrichment && enr) continue;
     const grade = gradeOf(s, c.curriculum);
-    if (!grades[grade]) grades[grade] = { total: 0, mastered: 0 };
+    if (!grades[grade]) grades[grade] = { total: 0, mastered: 0, enrichment: 0 };
     grades[grade].total++;
+    if (enr) grades[grade].enrichment++;
     if (progress.skills[s.id]?.mastered) grades[grade].mastered++;
   }
   return Object.entries(grades).map(([grade, d]) => ({
     grade: parseInt(grade),
     ...d,
-    percent: Math.round((d.mastered / d.total) * 100),
+    percent: d.total > 0 ? Math.round((d.mastered / d.total) * 100) : 0,
   })).sort((a, b) => a.grade - b.grade);
 };
 

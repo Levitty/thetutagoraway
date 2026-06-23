@@ -9,7 +9,7 @@ import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, ge
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
-import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel } from './curricula.js';
+import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
 import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
@@ -1080,13 +1080,21 @@ export function AIMastery({ onBack, userId }) {
   const gaps = findGaps(progress, ctx);
   const reviews = getReviews(progress, ctx);
   const strandStats = getStrandStats(progress, ctx);
-  const gradeStats = getGradeStats(progress, ctx);
   const jsGrade = getEstimatedGradeLevel(progress, ctx);
 
   // Prefer the Python brain's measurement when available; else the JS engine.
   const path = brainPath || jsPath;
   const estimatedGrade = brainProfile ? Math.round(brainProfile.overall_level) : jsGrade;
   const brainAccelerated = brainProfile?.accelerated;
+
+  // Progress-dashboard views are scoped to the active curriculum and exclude
+  // out-of-scope "enrichment" skills, so a CBC/Cambridge learner's in-scope
+  // mastery isn't diluted by topics their syllabus doesn't cover. (Native view
+  // has no enrichment, so these match the unscoped numbers.)
+  const scopedStats = getStats(progress, ctx, { excludeEnrichment: true });
+  const scopedStrandStats = getStrandStats(progress, ctx, { excludeEnrichment: true });
+  const scopedGradeStats = getGradeStats(progress, ctx, { excludeEnrichment: true });
+  const brainStrandLevel = (name) => brainProfile?.strands?.find(b => b.strand === name) || null;
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
@@ -1342,10 +1350,45 @@ export function AIMastery({ onBack, userId }) {
         {/* ========== STATS TAB ========== */}
         {activeTab === 'stats' && (
           <div className="space-y-4">
+            {/* Your Level — surfaces the engine's actual measurement (or a JS estimate) */}
+            <div className="bg-gradient-to-br from-emerald-900/40 to-slate-800 rounded-2xl p-5 border border-emerald-800/40">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <div className="text-[11px] uppercase tracking-wide text-emerald-300/70 mb-1">Your current level</div>
+                  <div className="text-2xl font-bold leading-tight">{gradeLabel(estimatedGrade)}</div>
+                </div>
+                {brainAccelerated && (
+                  <span className="shrink-0 text-[11px] font-semibold text-amber-200 bg-amber-900/40 border border-amber-700/50 rounded-full px-2.5 py-1">
+                    🚀 Working above grade
+                  </span>
+                )}
+              </div>
+              {brainProfile ? (
+                <div className="mt-3">
+                  <div className="flex justify-between text-xs text-slate-400 mb-1">
+                    <span>Measurement confidence</span>
+                    <span>{Math.round((brainProfile.confidence || 0) * 100)}%</span>
+                  </div>
+                  <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                    <div className="h-full bg-emerald-400 transition-all" style={{ width: `${Math.round((brainProfile.confidence || 0) * 100)}%` }} />
+                  </div>
+                  <p className="text-xs text-slate-400 mt-2">
+                    {brainAccelerated && brainProfile.headroom_grades >= 1
+                      ? `You're succeeding about ${Math.round(brainProfile.headroom_grades * 10) / 10} grade${brainProfile.headroom_grades >= 2 ? 's' : ''} above your working level — no ceiling here.`
+                      : brainProfile.confidence < 0.4
+                        ? 'Answer a few more questions to sharpen this estimate.'
+                        : 'Measured live from how you answer — it updates as you learn.'}
+                  </p>
+                </div>
+              ) : (
+                <p className="text-xs text-slate-400 mt-2">Estimated from your mastered skills. Take the diagnostic for a sharper read.</p>
+              )}
+            </div>
+
             {/* Big numbers */}
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-slate-800 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-emerald-400">{stats.mastered}</div>
+                <div className="text-3xl font-bold text-emerald-400">{scopedStats.mastered}</div>
                 <div className="text-sm text-slate-400">Skills Mastered</div>
               </div>
               <div className="bg-slate-800 rounded-xl p-4 text-center">
@@ -1353,7 +1396,7 @@ export function AIMastery({ onBack, userId }) {
                 <div className="text-sm text-slate-400">Total XP</div>
               </div>
               <div className="bg-slate-800 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-blue-400">{stats.accuracy}%</div>
+                <div className="text-3xl font-bold text-blue-400">{scopedStats.accuracy}%</div>
                 <div className="text-sm text-slate-400">Accuracy</div>
               </div>
               <div className="bg-slate-800 rounded-xl p-4 text-center">
@@ -1362,28 +1405,45 @@ export function AIMastery({ onBack, userId }) {
               </div>
             </div>
 
-            {/* Grade breakdown */}
+            {/* In-scope mastery + enrichment note */}
             <div className="bg-slate-800 rounded-xl p-4">
-              <h3 className="font-semibold mb-3">Grade Progress</h3>
-              <div className="space-y-2">{gradeStats.map(gs => (
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-slate-300">{curriculum === NATIVE ? 'Overall mastery' : 'In-syllabus mastery'}</span>
+                <span className="text-emerald-400 font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
+              </div>
+              <div className="h-3 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
+              {scopedStats.enrichment > 0 && (
+                <p className="text-xs text-amber-300/70 mt-2">+ {scopedStats.enrichment} enrichment skill{scopedStats.enrichment === 1 ? '' : 's'} beyond the {curriculaOptions.find(c => c.id === curriculum)?.shortName || ''} syllabus — explore them anytime in All Skills.</p>
+              )}
+            </div>
+
+            {/* Grade/Stage breakdown — curriculum-aware labels */}
+            <div className="bg-slate-800 rounded-xl p-4">
+              <h3 className="font-semibold mb-3">{getCurriculum(curriculum).bandLabel} Progress</h3>
+              <div className="space-y-2">{scopedGradeStats.map(gs => (
                 <div key={gs.grade} className="flex items-center gap-3">
-                  <span className="text-sm text-slate-400 w-24">{sub?.gradeNames?.[gs.grade] || `Grade ${gs.grade}`}</span>
+                  <span className="text-sm text-slate-400 w-28 truncate" title={gradeLabel(gs.grade)}>{gradeLabel(gs.grade)}</span>
                   <div className="flex-1 h-3 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${gs.percent}%` }} /></div>
                   <span className="text-sm font-medium w-12 text-right">{gs.percent}%</span>
                 </div>
               ))}</div>
             </div>
 
-            {/* Strand breakdown */}
+            {/* Strand breakdown — with engine level + "not assessed" clarity */}
             <div className="bg-slate-800 rounded-xl p-4">
               <h3 className="font-semibold mb-3">Strand Mastery</h3>
-              <div className="space-y-2">{strandStats.map(ss => (
-                <div key={ss.name} className="flex items-center gap-3">
-                  <span className="text-sm text-slate-400 w-24">{ss.name}</span>
-                  <div className="flex-1 h-3 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${ss.percent}%` }} /></div>
-                  <span className="text-sm font-medium w-12 text-right">{ss.mastered}/{ss.total}</span>
-                </div>
-              ))}</div>
+              <div className="space-y-2">{scopedStrandStats.map(ss => {
+                const bs = brainStrandLevel(ss.name);
+                return (
+                  <div key={ss.name} className="flex items-center gap-3">
+                    <span className="text-sm text-slate-400 w-24 truncate" title={ss.name}>{ss.name}</span>
+                    <div className="flex-1 h-3 bg-slate-700 rounded-full overflow-hidden"><div className={`h-full transition-all ${ss.assessed ? 'bg-emerald-500' : 'bg-slate-600'}`} style={{ width: `${ss.percent}%` }} /></div>
+                    {ss.assessed
+                      ? <span className="text-sm font-medium w-16 text-right">{bs ? gradeLabel(bs.grade_level).replace(/ —.*/, '') : `${ss.mastered}/${ss.total}`}</span>
+                      : <span className="text-xs text-slate-500 w-16 text-right">not assessed</span>}
+                  </div>
+                );
+              })}</div>
             </div>
 
             {/* Actions */}
