@@ -127,7 +127,7 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 
 // ==================== MAIN COMPONENT ====================
 
-export function AIMastery({ onBack, userId }) {
+export function AIMastery({ onBack, userId, studentName }) {
   const [subjectId, setSubjectId] = useState(null); // null = subject picker
   const [progress, setProgress] = useState(defaultProgress);
   const [view, setView] = useState('loading');
@@ -176,7 +176,7 @@ export function AIMastery({ onBack, userId }) {
 
   // UI state
   const [expanded, setExpanded] = useState(null);
-  const [activeTab, setActiveTab] = useState('path');
+  const [activeTab, setActiveTab] = useState('overview');
   const [remediationSkills, setRemediationSkills] = useState(null);
   // Celebration queue: skill mastery, level-ups, achievements, daily goal.
   const [celebrations, setCelebrations] = useState([]);
@@ -436,28 +436,32 @@ export function AIMastery({ onBack, userId }) {
 
     setFeedback(correct ? 'correct' : 'incorrect');
 
+    const isLast = index >= skills.length - 1;
+
+    // On the final question, compute and PERSIST the finished state immediately —
+    // before the 800ms feedback pause — so navigating away during that pause can
+    // never lose the result and force a retake.
+    if (isLast) {
+      const skillUpdates = processDiagnosticResults(newBalances, ctx);
+      const finished = {
+        ...progress,
+        skills: { ...progress.skills, ...skillUpdates },
+        diagnosed: true,
+        diagnosticBalances: newBalances,
+      };
+      setProgress(finished);
+      const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
+      forceSave(storageKey, finished);
+    }
+
     setTimeout(() => {
-      if (index < skills.length - 1) {
+      if (!isLast) {
         const next = index + 1;
         setDiagState({ skills, index: next, balances: newBalances, results: newResults, startTimes: { ...startTimes, [skills[next].id]: Date.now() } });
         setProblem(generateProblem(skills[next].id));
         setAnswer('');
         setFeedback(null);
       } else {
-        // Finish diagnostic
-        const skillUpdates = processDiagnosticResults(newBalances, ctx);
-        const finished = {
-          ...progress,
-          skills: { ...progress.skills, ...skillUpdates },
-          diagnosed: true,
-          diagnosticBalances: newBalances,
-        };
-        setProgress(finished);
-        // Persist the diagnostic result immediately rather than waiting on the
-        // debounced auto-save — closes the window where a quick exit/refresh
-        // would lose the result and force a retake.
-        const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
-        forceSave(storageKey, finished);
         setView('home');
       }
     }, 800);
@@ -1202,12 +1206,131 @@ export function AIMastery({ onBack, userId }) {
       {/* Tabs */}
       <div className="max-w-2xl mx-auto px-4 mt-4">
         <div className="flex gap-1 bg-slate-800 rounded-xl p-1 mb-4">
-          {[['path', 'Learning Path', 'target'], ['skills', 'All Skills', 'map'], ['stats', 'Stats', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
-            <button key={id} onClick={() => setActiveTab(id)} className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-sm font-medium transition-colors ${activeTab === id ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-white'}`}>
+          {[['overview', 'Home', 'home'], ['path', 'Path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Stats', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
+            <button key={id} onClick={() => setActiveTab(id)} className={`flex-1 flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors ${activeTab === id ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-white'}`}>
               <Icon name={icon} className="w-4 h-4" />{label}
             </button>
           ))}
         </div>
+
+        {/* ========== OVERVIEW (HOME) TAB ========== */}
+        {activeTab === 'overview' && (() => {
+          const firstName = (studentName || '').trim().split(/\s+/)[0];
+          const hour = new Date().getHours();
+          const greeting = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
+          const dueReviews = reviews.length;
+          const nextItem = path[0];
+          const recentBadges = (() => {
+            const got = new Set(progress.achievements || []);
+            return ACHIEVEMENTS.filter(a => got.has(a.id)).slice(-3).reverse();
+          })();
+          return (
+            <div className="space-y-4">
+              {/* Greeting */}
+              <div>
+                <h2 className="text-xl font-bold">{greeting}{firstName ? `, ${firstName}` : ''} 👋</h2>
+                <p className="text-sm text-slate-400">{dueReviews > 0 ? `You have ${dueReviews} skill${dueReviews === 1 ? '' : 's'} to review today.` : nextItem ? 'Ready to pick up where you left off?' : 'You’re all caught up — nice work.'}</p>
+              </div>
+
+              {/* Current level hero */}
+              <div className="bg-gradient-to-br from-emerald-900/40 to-slate-800 rounded-2xl p-5 border border-emerald-800/40">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <div className="text-[11px] uppercase tracking-wide text-emerald-300/70 mb-1">Your current level</div>
+                    <div className="text-2xl font-bold leading-tight">{gradeLabel(estimatedGrade)}</div>
+                  </div>
+                  {brainAccelerated && (
+                    <span className="shrink-0 text-[11px] font-semibold text-amber-200 bg-amber-900/40 border border-amber-700/50 rounded-full px-2.5 py-1">🚀 Above grade</span>
+                  )}
+                </div>
+                {brainProfile ? (
+                  <div className="mt-3">
+                    <div className="flex justify-between text-xs text-slate-400 mb-1"><span>Measurement confidence</span><span>{Math.round((brainProfile.confidence || 0) * 100)}%</span></div>
+                    <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-400 transition-all" style={{ width: `${Math.round((brainProfile.confidence || 0) * 100)}%` }} /></div>
+                  </div>
+                ) : (
+                  <p className="text-xs text-slate-400 mt-2">Estimated from your skills. The more you practise, the sharper it gets.</p>
+                )}
+              </div>
+
+              {/* Primary CTA — continue learning / review */}
+              {dueReviews > 0 ? (
+                <button onClick={startReview} className="w-full bg-blue-600 hover:bg-blue-500 rounded-2xl p-4 flex items-center justify-between transition-colors">
+                  <div className="flex items-center gap-3 text-left">
+                    <div className="w-11 h-11 bg-blue-500/40 rounded-xl flex items-center justify-center"><Icon name="refresh" className="w-5 h-5" /></div>
+                    <div>
+                      <div className="font-semibold">Start your review</div>
+                      <div className="text-xs text-blue-100/80">{dueReviews} skill{dueReviews === 1 ? '' : 's'} due — keeps them from fading</div>
+                    </div>
+                  </div>
+                  <Icon name="arrow" className="w-5 h-5 text-blue-200" />
+                </button>
+              ) : nextItem ? (
+                <button onClick={() => startLesson(nextItem.id)} className="w-full bg-emerald-600 hover:bg-emerald-500 rounded-2xl p-4 flex items-center justify-between transition-colors">
+                  <div className="flex items-center gap-3 text-left min-w-0">
+                    <div className="w-11 h-11 bg-emerald-500/40 rounded-xl flex items-center justify-center"><Icon name="play" className="w-5 h-5" /></div>
+                    <div className="min-w-0">
+                      <div className="font-semibold">Continue learning</div>
+                      <div className="text-xs text-emerald-100/80 truncate">{nextItem.name}</div>
+                    </div>
+                  </div>
+                  <Icon name="arrow" className="w-5 h-5 text-emerald-200" />
+                </button>
+              ) : (
+                <button onClick={startDiagnostic} className="w-full bg-slate-800 hover:bg-slate-700 rounded-2xl p-4 text-emerald-400 font-medium transition-colors">Take the diagnostic to get your plan</button>
+              )}
+
+              {/* Quick stats */}
+              <div className="grid grid-cols-4 gap-2">
+                <div className="bg-slate-800 rounded-xl p-3 text-center"><div className="text-xl font-bold text-emerald-400">{scopedStats.percent}%</div><div className="text-[11px] text-slate-400">Mastery</div></div>
+                <div className="bg-slate-800 rounded-xl p-3 text-center"><div className="text-xl font-bold text-amber-400">{progress.totalXP || 0}</div><div className="text-[11px] text-slate-400">XP</div></div>
+                <div className="bg-slate-800 rounded-xl p-3 text-center"><div className="text-xl font-bold text-purple-400">{progress.currentStreak || 0}</div><div className="text-[11px] text-slate-400">Streak</div></div>
+                <div className="bg-slate-800 rounded-xl p-3 text-center"><div className="text-xl font-bold text-blue-400">{scopedStats.accuracy}%</div><div className="text-[11px] text-slate-400">Accuracy</div></div>
+              </div>
+
+              {/* Gaps */}
+              {gaps.length > 0 && (
+                <button onClick={() => setActiveTab('path')} className="w-full bg-red-900/20 border border-red-700 rounded-xl p-4 text-left hover:bg-red-900/30 transition-colors">
+                  <div className="flex items-center gap-2 text-red-400 font-semibold mb-1"><Icon name="alert" className="w-5 h-5" /> {gaps.length} foundation gap{gaps.length === 1 ? '' : 's'} to fix</div>
+                  <div className="flex flex-wrap gap-2 mt-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2 py-0.5 bg-red-900/30 rounded text-xs text-red-300">{g.name}</span>)}</div>
+                </button>
+              )}
+
+              {/* Strand progress */}
+              <div className="bg-slate-800 rounded-2xl p-4">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-slate-300 font-medium">Your progress</span>
+                  <button onClick={() => setActiveTab('stats')} className="text-xs text-emerald-400 hover:text-emerald-300">Details →</button>
+                </div>
+                <div className="space-y-2">{scopedStrandStats.map(s => (
+                  <div key={s.name} className="flex items-center gap-3">
+                    <span className="text-sm text-slate-400 w-24 truncate" title={s.name}>{s.name}</span>
+                    <div className="flex-1 h-2.5 bg-slate-700 rounded-full overflow-hidden"><div className={`h-full transition-all ${s.assessed ? 'bg-emerald-500' : 'bg-slate-600'}`} style={{ width: `${s.percent}%` }} /></div>
+                    <span className="text-xs font-medium w-14 text-right">{s.assessed ? `${s.percent}%` : '—'}</span>
+                  </div>
+                ))}</div>
+              </div>
+
+              {/* Recent badges */}
+              <div className="bg-slate-800 rounded-2xl p-4">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-slate-300 font-medium">Recent badges</span>
+                  <button onClick={() => setActiveTab('awards')} className="text-xs text-emerald-400 hover:text-emerald-300">All →</button>
+                </div>
+                {recentBadges.length > 0 ? (
+                  <div className="flex gap-3">{recentBadges.map(a => (
+                    <div key={a.id} className="flex-1 bg-amber-900/15 border border-amber-700/40 rounded-xl p-3 text-center">
+                      <div className="text-2xl mb-1">{a.icon}</div>
+                      <div className="text-[11px] font-medium text-amber-100/90 leading-tight">{a.name}</div>
+                    </div>
+                  ))}</div>
+                ) : (
+                  <p className="text-xs text-slate-500">No badges yet — finish a lesson to earn your first one.</p>
+                )}
+              </div>
+            </div>
+          );
+        })()}
 
         {/* ========== PATH TAB ========== */}
         {activeTab === 'path' && (

@@ -56,9 +56,23 @@ const loadLocal = (key) => {
 
 // ==================== SUPABASE STORAGE ====================
 
-export const loadProgress = async (userId) => {
-  if (!userId) return loadLocal(userId) || defaultProgress();
+// Reconcile cloud vs local copies so progress is never lost and, critically, a
+// completed diagnostic is never downgraded to "not diagnosed". We score each
+// copy (diagnosed dominates, then skills, then XP) and keep the richer one.
+const progressScore = (p) =>
+  p ? (p.diagnosed ? 1e9 : 0) + Object.keys(p.skills || {}).length * 1000 + (p.totalXP || 0) : -1;
 
+const reconcileProgress = (a, b) => {
+  if (!a) return b || null;
+  if (!b) return a;
+  return progressScore(a) >= progressScore(b) ? a : b;
+};
+
+export const loadProgress = async (userId) => {
+  const local = loadLocal(userId);
+  if (!userId) return local || defaultProgress();
+
+  let cloud = null;
   try {
     const { data, error } = await supabase
       .from('ai_tutor_progress')
@@ -68,11 +82,10 @@ export const loadProgress = async (userId) => {
 
     if (error && error.code !== 'PGRST116') {
       console.warn('Supabase load error:', error);
-      return loadLocal(userId) || defaultProgress();
     }
 
     if (data) {
-      const progress = {
+      cloud = {
         ...defaultProgress(),
         ...data.progress,
         totalXP: data.total_xp || 0,
@@ -81,24 +94,21 @@ export const loadProgress = async (userId) => {
         lastPracticeDate: data.last_practice_date,
         diagnosed: data.diagnosed || false,
       };
-      // Also save locally as cache
-      saveLocal(userId, progress);
-      return progress;
     }
-
-    // No cloud data — check localStorage for migration
-    const local = loadLocal(userId);
-    if (local && Object.keys(local.skills || {}).length > 0) {
-      // Migrate local data to cloud
-      await saveProgress(userId, local);
-      return local;
-    }
-
-    return defaultProgress();
   } catch (e) {
     console.warn('Failed to load from Supabase:', e);
-    return loadLocal(userId) || defaultProgress();
   }
+
+  // Pick the more-complete copy; never lose a finished diagnostic to a stale
+  // cloud row (the cause of the "redo the test" bug).
+  const chosen = reconcileProgress(cloud, local);
+  if (!chosen) return defaultProgress();
+
+  saveLocal(userId, chosen);
+  // If we trusted local over cloud (cloud missing or behind), push it back up
+  // so the next device sees the finished state too.
+  if (chosen !== cloud) saveProgress(userId, chosen);
+  return chosen;
 };
 
 export const saveProgress = async (userId, progress) => {

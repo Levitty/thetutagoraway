@@ -5096,7 +5096,7 @@ export default function App() {
 
   // AI Tutor
   if (page === 'ai') {
-    return <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} />;
+    return <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} />;
   }
 
   // Teacher / class insights dashboard
