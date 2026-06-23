@@ -727,7 +727,6 @@ export function AIMastery({ onBack, userId }) {
     </div>
   );
 
-  const stats = getStats(progress, ctx);
   const level = getLevel(progress.totalXP || 0);
 
   // ==================== RENDER: WELCOME ====================
@@ -1079,7 +1078,6 @@ export function AIMastery({ onBack, userId }) {
   const jsPath = getRecommendedPath(progress, ctx);
   const gaps = findGaps(progress, ctx);
   const reviews = getReviews(progress, ctx);
-  const strandStats = getStrandStats(progress, ctx);
   const jsGrade = getEstimatedGradeLevel(progress, ctx);
 
   // Prefer the Python brain's measurement when available; else the JS engine.
@@ -1258,17 +1256,17 @@ export function AIMastery({ onBack, userId }) {
               </div>
             )}
 
-            {/* Overall progress */}
+            {/* Overall progress — scoped to the active curriculum (enrichment excluded) */}
             <div className="bg-slate-800 rounded-2xl p-4 mb-4">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-slate-300">Overall Mastery</span>
-                <span className="text-emerald-400 font-bold">{stats.percent}% ({stats.mastered}/{stats.total})</span>
+                <span className="text-slate-300">{curriculum === NATIVE ? 'Overall Mastery' : 'In-syllabus Mastery'}</span>
+                <span className="text-emerald-400 font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
               </div>
-              <div className="h-3 bg-slate-700 rounded-full overflow-hidden mb-4"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${stats.percent}%` }} /></div>
-              <div className="grid grid-cols-3 gap-2 text-center text-sm">{strandStats.map(s => (
+              <div className="h-3 bg-slate-700 rounded-full overflow-hidden mb-4"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
+              <div className="grid grid-cols-3 gap-2 text-center text-sm">{scopedStrandStats.map(s => (
                 <div key={s.name} className="bg-slate-700/50 rounded-lg p-2">
                   <div className="text-slate-400 text-xs">{s.name}</div>
-                  <div className="font-bold">{s.percent}%</div>
+                  <div className="font-bold">{s.assessed ? `${s.percent}%` : '—'}</div>
                   {s.accuracy !== null && s.accuracy < 70 && <div className="text-xs text-red-400">⚠️ {s.accuracy}%</div>}
                 </div>
               ))}</div>
