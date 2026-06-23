@@ -128,7 +128,7 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 // ==================== MAIN COMPONENT ====================
 
 export function AIMastery({ onBack, userId, studentName }) {
-  const [subjectId, setSubjectId] = useState(null); // null = subject picker
+  const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
   const [progress, setProgress] = useState(defaultProgress);
   const [view, setView] = useState('loading');
   const [loading, setLoading] = useState(true);
