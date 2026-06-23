@@ -281,8 +281,11 @@ const GRADE_9 = {
 
 const GRADE_10 = {
   // Numbers
-  G10_LOGARITHMS_INTRO: skill('G10_LOGARITHMS_INTRO', 'Introduction to Logarithms', 10, S.NUM, { pre: ['G8_INDICES_LAWS'], w: 6, crit: true }),
-  G10_LOG_LAWS: skill('G10_LOG_LAWS', 'Laws of Logarithms', 10, S.NUM, { pre: ['G10_LOGARITHMS_INTRO'], w: 6, crit: true }),
+  // Logarithms are a Senior-School skill, but CBC files basic logarithms under Grade 9
+  // (Numbers → Indices and Logarithms). Cross-grade CBC tag surfaces them in the CBC Grade 9
+  // view; no Cambridge tag — logarithms are beyond Cambridge Lower Secondary (IGCSE+).
+  G10_LOGARITHMS_INTRO: skill('G10_LOGARITHMS_INTRO', 'Introduction to Logarithms', 10, S.NUM, { pre: ['G8_INDICES_LAWS'], w: 6, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms') } }),
+  G10_LOG_LAWS: skill('G10_LOG_LAWS', 'Laws of Logarithms', 10, S.NUM, { pre: ['G10_LOGARITHMS_INTRO'], w: 6, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms') } }),
   G10_SURDS_ADV: skill('G10_SURDS_ADV', 'Surds (Rationalizing Denominators)', 10, S.NUM, { pre: ['G9_SURDS_OPERATIONS', 'G9_QUADRATIC_EXPAND'], w: 5 }),
 
   // Algebra
@@ -316,8 +319,11 @@ const GRADE_10 = {
 
 const GRADE_11 = {
   // Algebra
-  G11_MATRICES_INTRO: skill('G11_MATRICES_INTRO', 'Introduction to Matrices', 11, S.ALG, { pre: ['G8_SIMULTANEOUS_INTRO'], w: 5 }),
-  G11_MATRICES_OPS: skill('G11_MATRICES_OPS', 'Matrix Operations', 11, S.ALG, { pre: ['G11_MATRICES_INTRO'], w: 5 }),
+  // CBC introduces matrices in Grade 9 (Algebra → Matrices): order, addition, subtraction,
+  // scalar & matrix multiplication. Determinant/inverse stay Senior in CBC too, so INVERSE is
+  // left untagged. No Cambridge tag — matrices are beyond Cambridge Lower Secondary (IGCSE+).
+  G11_MATRICES_INTRO: skill('G11_MATRICES_INTRO', 'Introduction to Matrices', 11, S.ALG, { pre: ['G8_SIMULTANEOUS_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Algebra', 'Matrices') } }),
+  G11_MATRICES_OPS: skill('G11_MATRICES_OPS', 'Matrix Operations', 11, S.ALG, { pre: ['G11_MATRICES_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Algebra', 'Matrices') } }),
   G11_MATRICES_INVERSE: skill('G11_MATRICES_INVERSE', 'Inverse Matrices (2×2)', 11, S.ALG, { pre: ['G11_MATRICES_OPS'], w: 6 }),
   G11_LINEAR_PROGRAMMING: skill('G11_LINEAR_PROGRAMMING', 'Linear Programming', 11, S.ALG, { pre: ['G8_INEQUALITIES', 'G8_LINEAR_GRAPHS'], w: 5 }),
 

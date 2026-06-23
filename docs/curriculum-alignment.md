@@ -190,10 +190,10 @@ Educator review. Est. ~1d eng + 6–10d content.
 ## Open items — needs the official source documents
 - ✅ **KICD CBC/CBE Grade 7, 8 & 9 Mathematics designs** — received and applied
   (`docs/curriculum-sources/`); the whole Grade 7–9 graph is now CBC-tagged from them, with
-  out-of-scope topics flagged enrichment. Remaining: a few geometry/stats placements are
-  judgement calls (bearings, scatter plots, surface area) pending SLO-level review; and the CBC
-  content gaps (Temperature, Angles & Geometrical Constructions skills, Matrices, Approximations
-  & Errors, the broad Money strand) still need authoring.
+  out-of-scope topics flagged enrichment. Basic **Matrices** and **Logarithms** (CBC Grade 9) were
+  surfaced from existing Senior skills via cross-grade tags. Remaining gaps and judgement calls are
+  tracked in **`docs/curriculum-backlog.md`** (true authoring gaps: Temperature, Approximations &
+  Errors; depth: Money/financial-literacy, Constructions, Scale Drawing; plus SME sign-off).
 - ✅ **Cambridge 0862 Lower Secondary Mathematics Framework 2020** — received and applied
   (`docs/curriculum-sources/`); every skill now carries a Cambridge tag with the real objective
   code (`7Np.01` … `9Sp.03`). Topics beyond Lower Secondary (trig ratios, quadratics, matrices,
