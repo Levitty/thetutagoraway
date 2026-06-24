@@ -41,8 +41,16 @@ jobs:
           server-dir: ./public_html/
           # Only the action's own files are ever removed; server-only files
           # you uploaded by hand (e.g. logo.png) are left untouched.
+          # Brand assets live on the server, not in the repo — never overwrite
+          # them with the repo's placeholder versions.
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
             **/.DS_Store
+            **/favicon.svg
+            **/favicon-*.png
+            **/apple-touch-icon*.png
+            **/logo.png
+            **/logo-*.png
+            **/og-image.png
