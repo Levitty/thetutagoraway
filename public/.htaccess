@@ -6,3 +6,28 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
+
+# Caching strategy so new deploys appear immediately.
+<IfModule mod_headers.c>
+  # The SPA entry HTML must never be cached — it points at the hashed bundles.
+  <FilesMatch "(^|/)(index\.html|\.htaccess)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+  # Hashed JS/CSS/fonts get a new filename every build — cache them forever.
+  <FilesMatch "\.(js|css|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Images (logo, favicon, og-image) keep the same name, so cache only briefly
+  # — a logo swap then shows within a day instead of being stuck for a year.
+  <FilesMatch "\.(png|jpg|jpeg|gif|svg|webp|ico)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+</IfModule>
+
+# Tell LiteSpeed not to server-cache the HTML entry point.
+<IfModule LiteSpeed>
+  CacheLookup off
+</IfModule>
+
