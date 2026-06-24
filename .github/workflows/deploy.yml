@@ -1,0 +1,48 @@
+name: Deploy to Hostinger
+
+# Builds the React app and publishes dist/ to Hostinger over FTP.
+# Runs automatically on every push to main, and can be run manually
+# from the Actions tab ("Run workflow").
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # The built site. Trailing slash matters.
+          local-dir: ./dist/
+          # Web root on Hostinger. If your FTP account is already scoped to
+          # public_html, change this to ./ instead.
+          server-dir: ./public_html/
+          # Only the action's own files are ever removed; server-only files
+          # you uploaded by hand (e.g. logo.png) are left untouched.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.DS_Store
