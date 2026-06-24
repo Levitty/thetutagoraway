@@ -4237,7 +4237,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all ${scrolled ? 'bg-white shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-5 h-14 flex items-center justify-between">
         <button onClick={() => onNavigate('home')} className="flex items-center gap-2">
-          <img src="/logo.png" alt="Tutagora" className="w-8 h-8 object-contain" />
+          <img src="/logo.png" alt="Tutagora" className="w-8 h-8 object-contain rounded-lg" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/favicon.svg'; }} />
           <span className={`font-semibold ${scrolled ? 'text-slate-900' : 'text-white'}`}>Tutagora</span>
         </button>
         {/* Desktop nav */}
