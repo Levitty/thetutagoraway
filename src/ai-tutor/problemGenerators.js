@@ -211,7 +211,8 @@ const generators = {
       { q: 'How many mm in 2.5 cm?', a: '25' },
       { q: 'How many km in 7000 meters?', a: '7' },
     ];
-    return pick(convs);
+    const c = pick(convs);
+    return { question: c.q, answer: c.a };
   },
 
   G5_MASS: () => {
@@ -661,7 +662,8 @@ const generators = {
       { q: 'How many m in 450 cm?', a: '4.5' },
       { q: 'How many km in 3500 m?', a: '3.5' },
     ];
-    return pick(convs);
+    const c = pick(convs);
+    return { question: c.q, answer: c.a };
   },
 
   G7_PERIMETER: () => {
