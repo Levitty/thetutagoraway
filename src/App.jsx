@@ -3797,7 +3797,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filtered.map(t => (
-              <div key={t.id} onClick={() => onSelectTutor(t)} className="bg-white rounded-xl border border-slate-200 overflow-hidden cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all">
+              <div key={t.id} onClick={() => onSelectTutor(t)} className="bg-white rounded-xl border border-slate-200 overflow-hidden cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
                 {/* Photo banner */}
                 <div className="h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 relative">
                   {t.top_rated && (
@@ -3810,15 +3810,16 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
                     </span>
                   )}
                 </div>
-                {/* Avatar overlapping banner */}
-                <div className="px-4 -mt-10 mb-3">
+                {/* Avatar overlapping banner — relative+z lifts it above the
+                    `relative` banner, which otherwise paints over its top half. */}
+                <div className="px-4 -mt-10 mb-3 relative z-10">
                   <img
-                    src={t.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(t.profiles?.full_name || 'T')}&background=10b981&color=fff&size=120&bold=true`}
+                    src={t.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(t.profiles?.full_name || 'T')}&background=0f766e&color=fff&size=120&bold=true`}
                     alt={t.profiles?.full_name}
-                    className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md"
+                    className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md bg-slate-100"
                   />
                 </div>
-                <div className="px-4 pb-4">
+                <div className="px-4 pb-4 flex flex-col flex-1">
                   <h3 className="font-bold text-slate-900 text-lg">{t.profiles?.full_name}</h3>
                   <p className="text-sm text-emerald-600 font-medium">{(t.subjects || [t.subject]).join(', ')} Tutor</p>
                   {t.headline && <p className="text-sm text-slate-500 mt-1">{t.headline}</p>}
@@ -3837,7 +3838,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
                     <span className="text-sm text-slate-400">({t.review_count || 0})</span>
                     {t.lessons_completed > 0 && <span className="text-sm text-slate-400">· {t.lessons_completed} lessons</span>}
                   </div>
-                  <div className="flex justify-between items-center mt-3 pt-3 border-t border-slate-100">
+                  <div className="flex justify-between items-center mt-auto pt-3 border-t border-slate-100">
                     <span className="font-bold text-lg">KSh {t.hourly_rate?.toLocaleString() || '1,000'}<span className="text-sm font-normal text-slate-400">/hr</span></span>
                     <span className="px-3 py-1.5 bg-emerald-500 text-white text-xs font-semibold rounded-lg">View Profile</span>
                   </div>
