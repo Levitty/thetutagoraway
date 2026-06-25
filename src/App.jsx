@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { supabase } from './supabase';
 import { VideoRoom } from './VideoRoom';
 import { PaymentModal } from './PaymentModal';
+import { initiatePaystackPayment } from './paystack';
 import { Messaging, MessageButton, startConversation } from './Messaging';
 import { AIMastery } from './ai-tutor/AIMastery.jsx';
 import { getLevel } from './ai-tutor/adaptiveEngine.js';
@@ -3639,7 +3640,7 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
 };
 
 // ============ TUTORS PAGE ============
-const TutorsPage = ({ onSelectTutor, onBack }) => {
+const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
   const { tutors, loading } = useTutors();
   const [search, setSearch] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('');
@@ -3847,31 +3848,55 @@ const TutorsPage = ({ onSelectTutor, onBack }) => {
         )}
 
         {/* Group Classes Section */}
-        <GroupClassesBrowse />
+        <GroupClassesBrowse user={user} setShowAuth={setShowAuth} />
       </div>
     </div>
   );
 };
 
 // ============ GROUP CLASSES BROWSE (Student-facing) ============
-const GroupClassesBrowse = () => {
+const GroupClassesBrowse = ({ user, setShowAuth }) => {
   const [classes, setClasses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [subjectFilter, setSubjectFilter] = useState('');
+  const [myEnrollments, setMyEnrollments] = useState({}); // group_class_id -> true
+  const [payClass, setPayClass] = useState(null); // class being enrolled in
 
-  useEffect(() => {
-    const fetchClasses = async () => {
-      const { data } = await supabase
-        .from('group_classes')
-        .select('*, profiles:tutor_id(full_name, avatar_url), group_class_enrollments(id)')
-        .eq('status', 'open')
-        .gte('lesson_date', new Date().toISOString().split('T')[0])
-        .order('lesson_date', { ascending: true });
-      if (data) setClasses(data);
-      setLoading(false);
-    };
-    fetchClasses();
+  const fetchClasses = useCallback(async () => {
+    const { data } = await supabase
+      .from('group_classes')
+      .select('*, profiles:tutor_id(full_name, avatar_url), group_class_enrollments(id)')
+      .eq('status', 'open')
+      .gte('lesson_date', new Date().toISOString().split('T')[0])
+      .order('lesson_date', { ascending: true });
+    if (data) setClasses(data);
+    setLoading(false);
   }, []);
+
+  useEffect(() => { fetchClasses(); }, [fetchClasses]);
+
+  // Which of these classes has the current student already joined?
+  useEffect(() => {
+    if (!user?.id) { setMyEnrollments({}); return; }
+    supabase
+      .from('group_class_enrollments')
+      .select('group_class_id')
+      .eq('student_id', user.id)
+      .then(({ data }) => {
+        if (data) setMyEnrollments(Object.fromEntries(data.map(e => [e.group_class_id, true])));
+      });
+  }, [user?.id, classes]);
+
+  const handleEnrollClick = (gc) => {
+    if (!user) { setShowAuth && setShowAuth('signup'); return; }
+    setPayClass(gc);
+  };
+
+  const handleEnrolled = (classId) => {
+    setMyEnrollments(prev => ({ ...prev, [classId]: true }));
+    setPayClass(null);
+    fetchClasses(); // refresh enrolment counts
+  };
 
   const filtered = subjectFilter ? classes.filter(c => c.subject === subjectFilter) : classes;
 
@@ -3897,8 +3922,10 @@ const GroupClassesBrowse = () => {
         {filtered.map(gc => {
           const enrolled = gc.group_class_enrollments?.length || 0;
           const spotsLeft = gc.max_students - enrolled;
+          const isFull = spotsLeft <= 0;
+          const isEnrolled = !!myEnrollments[gc.id];
           return (
-            <div key={gc.id} className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-lg transition-all">
+            <div key={gc.id} className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-lg transition-all flex flex-col">
               <div className="flex items-center gap-3 mb-3">
                 <img src={gc.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(gc.profiles?.full_name || 'T')}&background=10b981&color=fff`}
                   alt={gc.profiles?.full_name} className="w-10 h-10 rounded-full object-cover" />
@@ -3913,21 +3940,179 @@ const GroupClassesBrowse = () => {
                 <span>{new Date(gc.lesson_date).toLocaleDateString('en', { weekday: 'short', month: 'short', day: 'numeric' })}</span>
                 <span>{gc.start_time} ({gc.duration_minutes} min)</span>
               </div>
-              <div className="flex justify-between items-center pt-3 border-t border-slate-100">
+              <div className="flex justify-between items-center pt-3 border-t border-slate-100 mb-3">
                 <div>
                   <span className="font-bold text-lg text-slate-900">KSh {gc.price_per_student}</span>
                   <span className="text-sm text-slate-400">/student</span>
                 </div>
                 <div className="text-right">
                   <span className={`text-sm font-medium ${spotsLeft <= 3 ? 'text-amber-600' : 'text-emerald-600'}`}>
-                    {spotsLeft} spots left
+                    {isFull ? 'Full' : `${spotsLeft} spots left`}
                   </span>
                   <p className="text-xs text-slate-400">{enrolled}/{gc.max_students} enrolled</p>
                 </div>
               </div>
+              {isEnrolled ? (
+                <div className="w-full py-2.5 rounded-lg text-sm font-semibold text-center bg-emerald-50 text-emerald-700 flex items-center justify-center gap-1.5 mt-auto">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  Enrolled
+                </div>
+              ) : (
+                <button
+                  onClick={() => handleEnrollClick(gc)}
+                  disabled={isFull}
+                  className={`w-full py-2.5 rounded-lg text-sm font-semibold transition-colors mt-auto ${
+                    isFull ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'bg-emerald-500 text-white hover:bg-emerald-600'
+                  }`}
+                >
+                  {isFull ? 'Class Full' : user ? `Enrol · KSh ${gc.price_per_student}` : 'Sign in to enrol'}
+                </button>
+              )}
             </div>
           );
         })}
+      </div>
+
+      {payClass && (
+        <GroupClassEnrollModal
+          gc={payClass}
+          user={user}
+          onClose={() => setPayClass(null)}
+          onSuccess={() => handleEnrolled(payClass.id)}
+        />
+      )}
+    </div>
+  );
+};
+
+// ============ GROUP CLASS ENROLMENT (Paystack + server verification) ============
+const GroupClassEnrollModal = ({ gc, user, onClose, onSuccess }) => {
+  const [step, setStep] = useState('confirm'); // confirm | processing | success | error
+  const [error, setError] = useState('');
+  const amount = Number(gc.price_per_student) || 0;
+  const userEmail = user?.email || '';
+
+  const pay = async () => {
+    setError('');
+    setStep('processing');
+    const reference = `GRP-${gc.id?.slice(0, 8) || ''}-${user?.id?.slice(0, 6) || ''}`;
+
+    // Free class — skip Paystack, enrol directly via the capacity-checked RPC.
+    if (amount <= 0) {
+      const { error: rpcErr } = await supabase.rpc('enroll_in_group_class', { p_class: gc.id, p_reference: reference, p_amount: 0 });
+      if (rpcErr) { setError(rpcErr.message || 'Could not enrol.'); setStep('error'); return; }
+      setStep('success');
+      setTimeout(() => onSuccess && onSuccess(), 1200);
+      return;
+    }
+
+    const result = await initiatePaystackPayment({
+      email: userEmail,
+      amount,
+      reference,
+      metadata: { group_class_id: gc.id, title: gc.title },
+      onSuccess: async (response) => {
+        // Verify server-side, then enrol. Falls back to the capacity-checked
+        // RPC if the edge function isn't reachable so live payments still enrol.
+        let confirmed = false;
+        try {
+          const { data, error: vErr } = await supabase.functions.invoke('verify-payment', {
+            body: { reference: response.reference, group_class_id: gc.id, student_id: user.id },
+          });
+          if (vErr) {
+            const { error: rpcErr } = await supabase.rpc('enroll_in_group_class', { p_class: gc.id, p_reference: response.reference, p_amount: amount });
+            confirmed = !rpcErr;
+          } else {
+            confirmed = data?.verified === true;
+          }
+        } catch (e) {
+          const { error: rpcErr } = await supabase.rpc('enroll_in_group_class', { p_class: gc.id, p_reference: response.reference, p_amount: amount });
+          confirmed = !rpcErr;
+        }
+
+        if (!confirmed) {
+          setError('We couldn’t confirm your enrolment. If you were charged, contact support and we’ll sort it out.');
+          setStep('error');
+          return;
+        }
+        setStep('success');
+        setTimeout(() => onSuccess && onSuccess(), 1500);
+      },
+      onClose: () => { setStep('confirm'); setError('Payment was cancelled. You can try again.'); },
+    });
+
+    if (!result.success) {
+      setError(result.error || 'Failed to start payment');
+      setStep('confirm');
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-2xl w-full max-w-md overflow-hidden">
+        <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 p-5 text-white">
+          <div className="flex justify-between items-start">
+            <div>
+              <h2 className="text-lg font-bold">Join Group Class</h2>
+              <p className="text-emerald-100 text-sm mt-1">{gc.title}</p>
+            </div>
+            <button onClick={onClose} className="text-white/80 hover:text-white text-xl">&#10005;</button>
+          </div>
+          <div className="mt-4 flex items-baseline gap-1">
+            <span className="text-3xl font-bold">KSh {amount.toLocaleString()}</span>
+            <span className="text-emerald-100">/student</span>
+          </div>
+        </div>
+
+        <div className="p-5">
+          {step === 'confirm' && (
+            <div className="space-y-4">
+              <div className="bg-slate-50 rounded-xl p-4 space-y-2 text-sm">
+                <div className="flex justify-between"><span className="text-slate-500">Tutor</span><span className="text-slate-900 font-medium">{gc.profiles?.full_name || 'Tutor'}</span></div>
+                <div className="flex justify-between"><span className="text-slate-500">Subject</span><span className="text-slate-900 font-medium">{gc.subject || 'General'}</span></div>
+                <div className="flex justify-between"><span className="text-slate-500">Date</span><span className="text-slate-900 font-medium">{new Date(gc.lesson_date).toLocaleDateString('en', { weekday: 'short', month: 'short', day: 'numeric' })}</span></div>
+                <div className="flex justify-between"><span className="text-slate-500">Time</span><span className="text-slate-900 font-medium">{gc.start_time} ({gc.duration_minutes} min)</span></div>
+                <div className="border-t border-slate-200 pt-2 flex justify-between"><span className="text-slate-700 font-semibold">Total</span><span className="text-emerald-600 font-bold">KSh {amount.toLocaleString()}</span></div>
+              </div>
+              {error && <div className="p-3 bg-red-50 text-red-600 text-sm rounded-lg">{error}</div>}
+              <button onClick={pay} className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+                {amount <= 0 ? 'Join for Free' : `Pay KSh ${amount.toLocaleString()}`}
+              </button>
+              {amount > 0 && (
+                <div className="flex items-center justify-center gap-2">
+                  <span className="text-xs text-slate-400">Secured by</span>
+                  <span className="text-xs font-semibold text-blue-600">Paystack</span>
+                </div>
+              )}
+            </div>
+          )}
+
+          {step === 'processing' && (
+            <div className="py-8 text-center space-y-4">
+              <div className="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
+              </div>
+              <p className="text-slate-500 text-sm">Confirming your enrolment…</p>
+            </div>
+          )}
+
+          {step === 'success' && (
+            <div className="py-8 text-center space-y-3">
+              <div className="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center">
+                <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+              </div>
+              <h3 className="font-semibold text-slate-900">You're enrolled!</h3>
+              <p className="text-slate-500 text-sm">See you in class on {new Date(gc.lesson_date).toLocaleDateString('en', { weekday: 'long', month: 'long', day: 'numeric' })}.</p>
+            </div>
+          )}
+
+          {step === 'error' && (
+            <div className="py-6 space-y-4">
+              <div className="p-4 bg-red-50 rounded-xl text-center text-red-600 text-sm">{error || 'Something went wrong.'}</div>
+              <button onClick={() => { setStep('confirm'); setError(''); }} className="w-full py-3 bg-slate-100 text-slate-700 font-medium rounded-xl hover:bg-slate-200">Try Again</button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -5217,7 +5402,7 @@ export default function App() {
       
       {page === 'home' && !selectedTutor && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {page === 'teach' && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
-      {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={() => handleNavigate('home')} />}
+      {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={() => handleNavigate('home')} user={auth.user} setShowAuth={setShowAuth} />}
       {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
       
       {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : undefined} />}

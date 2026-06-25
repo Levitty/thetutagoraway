@@ -26,8 +26,11 @@ serve(async (req) => {
   if (req.method !== "POST") return json({ verified: false, error: "POST only" }, 405);
 
   try {
-    const { reference, booking_id } = await req.json();
-    if (!reference || !booking_id) return json({ verified: false, error: "missing reference or booking_id" }, 400);
+    const { reference, booking_id, group_class_id, student_id } = await req.json();
+    if (!reference) return json({ verified: false, error: "missing reference" }, 400);
+    if (!booking_id && !group_class_id) {
+      return json({ verified: false, error: "missing booking_id or group_class_id" }, 400);
+    }
 
     const PAYSTACK_SECRET = Deno.env.get("PAYSTACK_SECRET_KEY");
     if (!PAYSTACK_SECRET) return json({ verified: false, error: "server not configured (PAYSTACK_SECRET_KEY)" }, 500);
@@ -42,12 +45,56 @@ serve(async (req) => {
       return json({ verified: false, reason: tx?.gateway_response || "payment not successful" });
     }
 
-    // 2) Service-role client — bypasses RLS to read the booking and write results.
+    // 2) Service-role client — bypasses RLS to read records and write results.
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
     );
 
+    // ---- Group-class enrolment branch ----
+    if (group_class_id) {
+      if (!student_id) return json({ verified: false, error: "missing student_id" }, 400);
+
+      const { data: gc, error: gErr } = await supabase
+        .from("group_classes")
+        .select("id, max_students, price_per_student, status")
+        .eq("id", group_class_id).single();
+      if (gErr || !gc) return json({ verified: false, error: "class not found" }, 404);
+      if (gc.status !== "open") return json({ verified: false, reason: "class is not open" });
+
+      // Amount paid must cover the per-student price.
+      const expectedKobo = Math.round(Number(gc.price_per_student || 0) * 100);
+      if (expectedKobo > 0 && Number(tx.amount) < expectedKobo) {
+        return json({ verified: false, reason: "amount paid is less than the class price" });
+      }
+
+      // Idempotent: if this student already has a row, we're done.
+      const { data: already } = await supabase
+        .from("group_class_enrollments").select("id")
+        .eq("group_class_id", group_class_id).eq("student_id", student_id).maybeSingle();
+      if (already) return json({ verified: true });
+
+      // Capacity check (service role sees every enrolment).
+      const { count } = await supabase
+        .from("group_class_enrollments")
+        .select("id", { count: "exact", head: true })
+        .eq("group_class_id", group_class_id);
+      if ((count ?? 0) >= Number(gc.max_students || 0)) {
+        return json({ verified: false, reason: "class is full" });
+      }
+
+      const { error: insErr } = await supabase.from("group_class_enrollments").insert({
+        group_class_id,
+        student_id,
+        amount_paid: Number(tx.amount) / 100,
+        payment_reference: reference,
+        status: "enrolled",
+      });
+      if (insErr) return json({ verified: false, error: insErr.message }, 500);
+      return json({ verified: true });
+    }
+
+    // ---- 1-on-1 booking branch ----
     const { data: booking, error: bErr } = await supabase
       .from("bookings").select("id, student_id, tutor_id").eq("id", booking_id).single();
     if (bErr || !booking) return json({ verified: false, error: "booking not found" }, 404);
