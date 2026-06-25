@@ -4300,6 +4300,8 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const [bookings, setBookings] = useState([]);
   const [allPayments, setAllPayments] = useState([]);
   const [pendingTutors, setPendingTutors] = useState([]);
+  const [allTutors, setAllTutors] = useState([]);
+  const [verifyFilter, setVerifyFilter] = useState('all');
   const [loading, setLoading] = useState(true);
   const [authorized, setAuthorized] = useState(false);
   const [actionLoading, setActionLoading] = useState(null);
@@ -4385,9 +4387,18 @@ const AdminDashboard = ({ onLogout, onBack }) => {
 
     // Pending verification queue, derived the same robust way (the embedded
     // tutors→profiles query also fails, which emptied the Verification tab).
-    const pending = (allTutorsRes.data || [])
-      .filter(t => ['pending', 'under_review'].includes(t.verification_status) && t.id_document_url && t.bio)
-      .map(t => ({ ...t, profiles: profileById[t.id] || profileById[t.user_id] || null }));
+    // Every tutor with their profile + a derived status, so the admin can
+    // review ALL of them (not just the pending queue).
+    const tutorsDetailed = (allTutorsRes.data || []).map(t => ({
+      ...t,
+      profiles: profileById[t.id] || profileById[t.user_id] || null,
+      _status: (!t.id_document_url || !t.bio)
+        ? 'incomplete'
+        : (t.verification_status || 'pending'),
+    }));
+    setAllTutors(tutorsDetailed);
+
+    const pending = tutorsDetailed.filter(t => ['pending', 'under_review'].includes(t._status));
     setPendingTutors(pending);
 
     setLoading(false);
@@ -4418,13 +4429,14 @@ const AdminDashboard = ({ onLogout, onBack }) => {
       await supabase.from('tutors').update({ verification_status: 'approved', verified: true, rejection_reason: null }).eq('user_id', tutorId);
     }
     // Send approval email
-    const tutor = pendingTutors.find(t => t.id === tutorId);
+    const tutor = allTutors.find(t => t.id === tutorId);
     if (tutor?.profiles?.email) {
       try {
         await sendEmail('tutor-approved', tutor.profiles.email, { name: tutor.profiles.full_name });
       } catch (err) { console.error('Failed to send approval email:', err); }
     }
     setPendingTutors(prev => prev.filter(t => t.id !== tutorId));
+    setAllTutors(prev => prev.map(t => t.id === tutorId ? { ...t, verification_status: 'approved', verified: true, _status: 'approved' } : t));
     setActionLoading(null);
   };
 
@@ -4436,17 +4448,31 @@ const AdminDashboard = ({ onLogout, onBack }) => {
       await supabase.from('tutors').update({ verification_status: 'rejected', verified: false, rejection_reason: rejectReason }).eq('user_id', tutorId);
     }
     // Send rejection email
-    const tutor = pendingTutors.find(t => t.id === tutorId);
+    const tutor = allTutors.find(t => t.id === tutorId);
     if (tutor?.profiles?.email) {
       try {
         await sendEmail('tutor-rejected', tutor.profiles.email, { name: tutor.profiles.full_name, reason: rejectReason });
       } catch (err) { console.error('Failed to send rejection email:', err); }
     }
     setPendingTutors(prev => prev.filter(t => t.id !== tutorId));
+    setAllTutors(prev => prev.map(t => t.id === tutorId ? { ...t, verification_status: 'rejected', verified: false, rejection_reason: rejectReason, _status: 'rejected' } : t));
     setRejectingId(null);
     setRejectReason('');
     setActionLoading(null);
   };
+
+  const verifyCounts = {
+    all: allTutors.length,
+    pending: allTutors.filter(t => t._status === 'pending' || t._status === 'under_review').length,
+    incomplete: allTutors.filter(t => t._status === 'incomplete').length,
+    approved: allTutors.filter(t => t._status === 'approved').length,
+    rejected: allTutors.filter(t => t._status === 'rejected').length,
+  };
+  const shownTutors = allTutors.filter(t =>
+    verifyFilter === 'all' ? true
+    : verifyFilter === 'pending' ? (t._status === 'pending' || t._status === 'under_review')
+    : t._status === verifyFilter
+  );
 
   if (!authorized) return loading ? <LoadingSpinner /> : null;
 
@@ -4844,14 +4870,20 @@ const AdminDashboard = ({ onLogout, onBack }) => {
             {/* Verification Tab */}
             {tab === 'verification' && (
               <div className="space-y-4">
-                <h3 className="font-semibold text-slate-900 text-lg">Pending Tutor Verifications</h3>
-                {pendingTutors.length === 0 ? (
+                <div className="flex items-center justify-between flex-wrap gap-3">
+                  <h3 className="font-semibold text-slate-900 text-lg">Tutor Verifications</h3>
+                  <div className="flex gap-1 bg-slate-200/50 p-1 rounded-lg flex-wrap">
+                    {[['all','All'],['pending','Pending'],['incomplete','Incomplete'],['approved','Approved'],['rejected','Rejected']].map(([k,label]) => (
+                      <button key={k} onClick={() => setVerifyFilter(k)} className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${verifyFilter===k ? 'bg-white shadow-sm text-slate-900' : 'text-slate-600 hover:text-slate-900'}`}>{label} ({verifyCounts[k]})</button>
+                    ))}
+                  </div>
+                </div>
+                {shownTutors.length === 0 ? (
                   <div className="bg-white rounded-xl p-8 shadow-sm text-center">
-                    <svg className="w-12 h-12 text-emerald-300 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <p className="text-slate-500">No pending verifications. All caught up!</p>
+                    <p className="text-slate-500">No tutors in this filter.</p>
                   </div>
                 ) : (
-                  pendingTutors.map(t => (
+                  shownTutors.map(t => (
                     <div key={t.id} className="bg-white rounded-xl shadow-sm overflow-hidden">
                       <div className="p-5">
                         <div className="flex items-start justify-between">
@@ -4869,7 +4901,12 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                               {t.phone_number && <p className="text-xs text-slate-500 mt-1">Phone: {t.phone_number}</p>}
                             </div>
                           </div>
-                          <span className="px-2 py-1 text-xs rounded-full bg-amber-100 text-amber-700">{t.verification_status}</span>
+                          <span className={`px-2 py-1 text-xs rounded-full ${
+                            t._status === 'approved' ? 'bg-emerald-100 text-emerald-700' :
+                            t._status === 'incomplete' ? 'bg-slate-100 text-slate-500' :
+                            t._status === 'rejected' ? 'bg-red-100 text-red-700' :
+                            'bg-amber-100 text-amber-700'
+                          }`}>{t._status}</span>
                         </div>
 
                         {t.degree && <p className="mt-3 text-sm text-slate-600"><strong>Qualification:</strong> {t.degree}</p>}
@@ -4930,13 +4967,15 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                             </div>
                           ) : (
                             <>
-                              <button onClick={() => handleApproveTutor(t.id)} disabled={actionLoading === t.id}
-                                className="px-5 py-2 bg-emerald-500 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 disabled:opacity-50">
-                                {actionLoading === t.id ? 'Approving...' : 'Approve'}
-                              </button>
+                              {t._status !== 'approved' && (
+                                <button onClick={() => handleApproveTutor(t.id)} disabled={actionLoading === t.id}
+                                  className="px-5 py-2 bg-emerald-500 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 disabled:opacity-50">
+                                  {actionLoading === t.id ? 'Approving...' : 'Approve'}
+                                </button>
+                              )}
                               <button onClick={() => setRejectingId(t.id)}
                                 className="px-5 py-2 bg-white border border-red-200 text-red-600 text-sm font-medium rounded-lg hover:bg-red-50">
-                                Reject
+                                {t._status === 'approved' ? 'Revoke' : 'Reject'}
                               </button>
                             </>
                           )}
