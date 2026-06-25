@@ -4354,13 +4354,42 @@ const AdminDashboard = ({ onLogout, onBack }) => {
     setAllPayments(paymentsRes.data || []);
     setPendingTutors(pendingRes.data || []);
 
-    const { data: usersData } = await supabase
-      .from('profiles')
-      .select('*, tutors(*)')
-      .order('created_at', { ascending: false })
-      .limit(100);
+    // Fetch profiles and tutors separately and merge in code. The embedded
+    // form (profiles.select('*, tutors(*)')) errors out when PostgREST can't
+    // resolve the profiles→tutors relationship, which returned an EMPTY users
+    // list even though the data exists. Two plain selects are robust.
+    const [profilesRes, allTutorsRes] = await Promise.all([
+      supabase.from('profiles').select('*').order('created_at', { ascending: false }).limit(500),
+      supabase.from('tutors').select('*'),
+    ]);
 
-    setUsers(usersData || []);
+    if (profilesRes.error) console.warn('Admin profiles load error:', profilesRes.error.message);
+    if (allTutorsRes.error) console.warn('Admin tutors load error:', allTutorsRes.error.message);
+
+    // Index tutor rows by the profile/user id (schema uses tutors.id = user id,
+    // and some rows also carry user_id — cover both).
+    const tutorByUser = {};
+    (allTutorsRes.data || []).forEach(t => {
+      if (t.id) tutorByUser[t.id] = t;
+      if (t.user_id) tutorByUser[t.user_id] = t;
+    });
+    const profileById = {};
+    (profilesRes.data || []).forEach(p => { profileById[p.id] = p; });
+
+    const merged = (profilesRes.data || []).map(p => ({
+      ...p,
+      tutors: tutorByUser[p.id] ? [tutorByUser[p.id]] : [],
+    }));
+
+    setUsers(merged);
+
+    // Pending verification queue, derived the same robust way (the embedded
+    // tutors→profiles query also fails, which emptied the Verification tab).
+    const pending = (allTutorsRes.data || [])
+      .filter(t => ['pending', 'under_review'].includes(t.verification_status) && t.id_document_url && t.bio)
+      .map(t => ({ ...t, profiles: profileById[t.id] || profileById[t.user_id] || null }));
+    setPendingTutors(pending);
+
     setLoading(false);
   };
 
