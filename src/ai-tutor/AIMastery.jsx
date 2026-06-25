@@ -1238,72 +1238,65 @@ export function AIMastery({ onBack, userId, studentName }) {
             const got = new Set(progress.achievements || []);
             return ACHIEVEMENTS.filter(a => got.has(a.id)).slice(-3).reverse();
           })();
+          const cta = dueReviews > 0
+            ? { label: 'Start your review', sub: `${dueReviews} skill${dueReviews === 1 ? '' : 's'} due — keep them from fading`, icon: 'refresh', onClick: startReview }
+            : nextItem
+            ? { label: 'Continue learning', sub: nextItem.name, icon: 'play', onClick: () => startLesson(nextItem.id) }
+            : { label: 'Take the diagnostic', sub: 'Find your level and get your plan', icon: 'target', onClick: startDiagnostic };
+          const confidencePct = brainProfile ? Math.round((brainProfile.confidence || 0) * 100) : null;
           return (
             <div className="space-y-4">
-              {/* Greeting */}
-              <div className="flex items-center justify-between gap-3">
-                <div className="min-w-0">
-                  <h2 className="text-xl font-bold">{greeting}{firstName ? `, ${firstName}` : ''}</h2>
-                  <p className="text-sm text-slate-400">{dueReviews > 0 ? `You have ${dueReviews} skill${dueReviews === 1 ? '' : 's'} to review today.` : nextItem ? 'Ready to pick up where you left off?' : 'You’re all caught up — nice work.'}</p>
-                </div>
-                <Lottie src={LOTTIE.checkin} size={56} fallback={<div className="text-2xl">👋</div>} />
-              </div>
-
-              {/* Current level hero */}
-              <div className="bg-gradient-to-br from-emerald-900/40 to-slate-800 rounded-2xl p-5 border border-emerald-800/40">
-                <div className="flex items-start justify-between gap-3">
+              {/* Hero — greeting, level, and the next action together */}
+              <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-600 via-emerald-700 to-slate-800 p-6 shadow-lg shadow-emerald-950/40">
+                <div className="flex items-start justify-between gap-4">
                   <div className="min-w-0">
-                    <div className="text-[11px] uppercase tracking-wide text-emerald-300/70 mb-1">Your current level</div>
-                    <div className="text-2xl font-bold leading-tight">{gradeLabel(estimatedGrade)}</div>
+                    <p className="text-emerald-100/90 text-sm font-medium">{greeting}{firstName ? `, ${firstName}` : ''}</p>
+                    <div className="mt-1 flex items-baseline gap-2 flex-wrap">
+                      <h2 className="text-2xl font-bold leading-tight">{gradeLabel(estimatedGrade)}</h2>
+                      <span className="text-emerald-100/70 text-sm">your level</span>
+                    </div>
                     {brainAccelerated && (
-                      <span className="inline-block mt-2 text-[11px] font-semibold text-amber-200 bg-amber-900/40 border border-amber-700/50 rounded-full px-2.5 py-1">Above grade</span>
+                      <span className="inline-block mt-2 text-[11px] font-semibold text-amber-50 bg-amber-500/30 border border-amber-200/30 rounded-full px-2.5 py-1">🚀 Above grade</span>
                     )}
                   </div>
-                  <Lottie src={LOTTIE.certificate} size={72} fallback={<div className="text-4xl">🎓</div>} />
-                </div>
-                {brainProfile ? (
-                  <div className="mt-3">
-                    <div className="flex justify-between text-xs text-slate-400 mb-1"><span>Measurement confidence</span><span>{Math.round((brainProfile.confidence || 0) * 100)}%</span></div>
-                    <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-400 transition-all" style={{ width: `${Math.round((brainProfile.confidence || 0) * 100)}%` }} /></div>
+                  <div className="shrink-0 -my-1">
+                    <Lottie src={LOTTIE.academics} size={96} fallback={<div className="text-5xl">🎓</div>} />
                   </div>
-                ) : (
-                  <p className="text-xs text-slate-400 mt-2">Estimated from your skills. The more you practise, the sharper it gets.</p>
+                </div>
+
+                {confidencePct != null && (
+                  <div className="mt-4">
+                    <div className="flex justify-between text-xs text-emerald-100/80 mb-1"><span>Measurement confidence</span><span>{confidencePct}%</span></div>
+                    <div className="h-1.5 bg-white/20 rounded-full overflow-hidden"><div className="h-full bg-white/90 transition-all" style={{ width: `${confidencePct}%` }} /></div>
+                  </div>
                 )}
+
+                <button onClick={cta.onClick} className="mt-5 w-full bg-white text-slate-900 rounded-2xl px-4 py-3 flex items-center justify-between font-semibold hover:bg-emerald-50 transition-colors">
+                  <span className="flex items-center gap-3 min-w-0">
+                    <span className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0"><Icon name={cta.icon} className="w-5 h-5" /></span>
+                    <span className="flex flex-col items-start min-w-0">
+                      <span className="leading-tight">{cta.label}</span>
+                      <span className="text-xs font-normal text-slate-500 truncate max-w-[210px]">{cta.sub}</span>
+                    </span>
+                  </span>
+                  <Icon name="arrow" className="w-5 h-5 text-slate-400 shrink-0" />
+                </button>
               </div>
 
-              {/* Primary CTA — continue learning / review */}
-              {dueReviews > 0 ? (
-                <button onClick={startReview} className="w-full bg-blue-600 hover:bg-blue-500 rounded-2xl p-4 flex items-center justify-between transition-colors">
-                  <div className="flex items-center gap-3 text-left">
-                    <div className="w-11 h-11 bg-blue-500/40 rounded-xl flex items-center justify-center"><Icon name="refresh" className="w-5 h-5" /></div>
-                    <div>
-                      <div className="font-semibold">Start your review</div>
-                      <div className="text-xs text-blue-100/80">{dueReviews} skill{dueReviews === 1 ? '' : 's'} due — keeps them from fading</div>
-                    </div>
-                  </div>
-                  <Icon name="arrow" className="w-5 h-5 text-blue-200" />
-                </button>
-              ) : nextItem ? (
-                <button onClick={() => startLesson(nextItem.id)} className="w-full bg-emerald-600 hover:bg-emerald-500 rounded-2xl p-4 flex items-center justify-between transition-colors">
-                  <div className="flex items-center gap-3 text-left min-w-0">
-                    <div className="w-11 h-11 bg-emerald-500/40 rounded-xl flex items-center justify-center"><Icon name="play" className="w-5 h-5" /></div>
-                    <div className="min-w-0">
-                      <div className="font-semibold">Continue learning</div>
-                      <div className="text-xs text-emerald-100/80 truncate">{nextItem.name}</div>
-                    </div>
-                  </div>
-                  <Icon name="arrow" className="w-5 h-5 text-emerald-200" />
-                </button>
-              ) : (
-                <button onClick={startDiagnostic} className="w-full bg-slate-800 hover:bg-slate-700 rounded-2xl p-4 text-emerald-400 font-medium transition-colors">Take the diagnostic to get your plan</button>
-              )}
-
               {/* Quick stats */}
-              <div className="grid grid-cols-4 gap-2">
-                <div className="bg-slate-800 rounded-xl p-3 text-center"><div className="text-xl font-bold text-emerald-400">{scopedStats.percent}%</div><div className="text-[11px] text-slate-400">Mastery</div></div>
-                <div className="bg-slate-800 rounded-xl p-3 text-center"><div className="text-xl font-bold text-amber-400">{progress.totalXP || 0}</div><div className="text-[11px] text-slate-400">XP</div></div>
-                <div className="bg-slate-800 rounded-xl p-3 text-center"><div className="text-xl font-bold text-purple-400">{progress.currentStreak || 0}</div><div className="text-[11px] text-slate-400">Streak</div></div>
-                <div className="bg-slate-800 rounded-xl p-3 text-center"><div className="text-xl font-bold text-blue-400">{scopedStats.accuracy}%</div><div className="text-[11px] text-slate-400">Accuracy</div></div>
+              <div className="grid grid-cols-4 gap-2.5">
+                {[
+                  { icon: 'target', val: `${scopedStats.percent}%`, label: 'Mastery', color: 'text-emerald-400' },
+                  { icon: 'zap', val: progress.totalXP || 0, label: 'XP', color: 'text-amber-400' },
+                  { icon: 'flame', val: progress.currentStreak || 0, label: 'Streak', color: 'text-orange-400' },
+                  { icon: 'check', val: `${scopedStats.accuracy}%`, label: 'Accuracy', color: 'text-sky-400' },
+                ].map(s => (
+                  <div key={s.label} className="bg-slate-800/80 rounded-2xl p-3 text-center border border-slate-700/50">
+                    <Icon name={s.icon} className={`w-4 h-4 mx-auto mb-1.5 ${s.color}`} />
+                    <div className="text-lg font-bold leading-none">{s.val}</div>
+                    <div className="text-[10px] text-slate-400 uppercase tracking-wide mt-1">{s.label}</div>
+                  </div>
+                ))}
               </div>
 
               {/* Gaps */}
