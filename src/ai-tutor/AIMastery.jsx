@@ -299,7 +299,7 @@ export function AIMastery({ onBack, userId, studentName }) {
       // changes userId), NEVER yank them out of an in-progress diagnostic,
       // lesson, or review — that was sending them back to the welcome screen.
       setView(prev =>
-        (prev === 'diagnostic' || prev === 'lesson' || prev === 'review' || prev === 'review-complete')
+        (prev === 'diagnostic' || prev === 'lesson' || prev === 'review' || prev === 'review-complete' || prev === 'welcome')
           ? prev
           : (p.diagnosed ? 'home' : 'welcome'));
       setLoading(false);
@@ -1371,7 +1371,7 @@ export function AIMastery({ onBack, userId, studentName }) {
               </div>
 
               {/* Retake diagnostic */}
-              <button onClick={startDiagnostic} className="w-full text-center text-xs text-slate-500 hover:text-slate-300 py-2 transition-colors">Retake diagnostic test</button>
+              <button onClick={() => setView('welcome')} className="w-full text-center text-xs text-slate-500 hover:text-slate-300 py-2 transition-colors">Retake diagnostic test</button>
             </div>
           );
         })()}
@@ -1613,7 +1613,7 @@ export function AIMastery({ onBack, userId, studentName }) {
 
             {/* Actions */}
             <div className="space-y-2">
-              <button onClick={startDiagnostic} className="w-full p-3 bg-slate-800 rounded-xl text-emerald-400 hover:bg-slate-700 transition-colors text-sm font-medium">Retake Diagnostic Test</button>
+              <button onClick={() => setView('welcome')} className="w-full p-3 bg-slate-800 rounded-xl text-emerald-400 hover:bg-slate-700 transition-colors text-sm font-medium">Retake Diagnostic Test</button>
             </div>
           </div>
         )}
