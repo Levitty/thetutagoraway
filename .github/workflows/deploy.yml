@@ -36,9 +36,10 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           # The built site. Trailing slash matters.
           local-dir: ./dist/
-          # Web root on Hostinger. If your FTP account is already scoped to
-          # public_html, change this to ./ instead.
-          server-dir: ./public_html/
+          # This FTP account logs in already rooted at public_html, so the
+          # web root IS the login dir. (Using ./public_html/ here nests into
+          # public_html/public_html and the live site never updates.)
+          server-dir: ./
           # Only the action's own files are ever removed; server-only files
           # you uploaded by hand (e.g. logo.png) are left untouched.
           # Brand assets live on the server, not in the repo — never overwrite
