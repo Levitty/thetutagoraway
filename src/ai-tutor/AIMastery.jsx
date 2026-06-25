@@ -285,14 +285,25 @@ export function AIMastery({ onBack, userId, studentName }) {
   // When subject changes, load that subject's progress
   useEffect(() => {
     if (!subjectId) { setLoading(false); setView('subject-picker'); return; }
+    if (!userId) return; // transient auth gap — don't reload with no user / clobber state
+    let cancelled = false;
     setLoading(true);
     (async () => {
       const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
       const p = await loadProgress(storageKey);
+      if (cancelled) return;
       setProgress(p);
-      setView(p.diagnosed ? 'home' : 'welcome');
+      // Only (re)set the entry view on a genuine load. If this effect re-fires
+      // while the student is mid-activity (e.g. an auth token refresh briefly
+      // changes userId), NEVER yank them out of an in-progress diagnostic,
+      // lesson, or review — that was sending them back to the welcome screen.
+      setView(prev =>
+        (prev === 'diagnostic' || prev === 'lesson' || prev === 'review' || prev === 'review-complete')
+          ? prev
+          : (p.diagnosed ? 'home' : 'welcome'));
       setLoading(false);
     })();
+    return () => { cancelled = true; };
   }, [userId, subjectId]);
 
   // Auto-save on progress change
@@ -1330,7 +1341,7 @@ export function AIMastery({ onBack, userId, studentName }) {
               </div>
 
               {/* Retake diagnostic */}
-              <button onClick={() => { if (window.confirm('Retake the diagnostic test? This re-measures your levels from scratch.')) startDiagnostic(); }} className="w-full text-center text-xs text-slate-500 hover:text-slate-300 py-2 transition-colors">Retake diagnostic test</button>
+              <button onClick={startDiagnostic} className="w-full text-center text-xs text-slate-500 hover:text-slate-300 py-2 transition-colors">Retake diagnostic test</button>
             </div>
           );
         })()}
