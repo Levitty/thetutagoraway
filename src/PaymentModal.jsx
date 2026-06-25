@@ -117,9 +117,39 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
         subject: tutor.subject,
       },
       onSuccess: async (response) => {
-        setPaymentStatus({ status: 'success', message: 'Payment successful!' });
         setStep('status');
-        await updatePaymentStatus('completed', response.reference);
+        setPaymentStatus({ status: 'processing', message: 'Confirming your payment…' });
+
+        // Verify server-side before trusting the browser's "success". The
+        // verify-payment edge function asks Paystack directly and records the
+        // payment with the service role. If it's unreachable (e.g. not deployed
+        // yet), fall back to client recording so live payments don't break
+        // during rollout — but a genuine "not verified" is treated as failure.
+        let confirmed = false;
+        try {
+          const { data, error } = await supabase.functions.invoke('verify-payment', {
+            body: { reference: response.reference, booking_id: booking.id },
+          });
+          if (error) {
+            console.warn('verify-payment unreachable, falling back to client recording:', error.message);
+            await updatePaymentStatus('completed', response.reference);
+            confirmed = true;
+          } else {
+            confirmed = data?.verified === true;
+          }
+        } catch (e) {
+          console.warn('verify-payment threw, falling back:', e);
+          await updatePaymentStatus('completed', response.reference);
+          confirmed = true;
+        }
+
+        if (!confirmed) {
+          setPaymentStatus({ status: 'error', message: 'We couldn’t confirm this payment. If you were charged, contact support and we’ll sort it out.' });
+          setError('Payment could not be verified.');
+          return;
+        }
+
+        setPaymentStatus({ status: 'success', message: 'Payment successful!' });
 
         // Send booking confirmation emails to both student and tutor
         const lessonDateFormatted = new Date(booking.lesson_date).toLocaleDateString('en-KE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });

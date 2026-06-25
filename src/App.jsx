@@ -236,7 +236,7 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
 
       let tutorData = null;
       if (profile?.role === 'tutor') {
-        const tutorRes = await supabase.from('tutors').select('*').eq('id', user.id);
+        const tutorRes = await supabase.from('tutors').select('*').eq('user_id', user.id);
         tutorData = tutorRes.data;
       }
 
@@ -286,8 +286,13 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
         if (files?.length) {
           await supabase.storage.from('tutor-documents').remove(files.map(f => `${user.id}/${f.name}`));
         }
-        await supabase.from('availability').delete().eq('tutor_id', user.id);
-        await supabase.from('tutors').delete().eq('id', user.id);
+        // tutors.id is the row's own UUID (not the auth user id); availability
+        // references that. Look it up by user_id, then delete by the real id.
+        const { data: tutorRow } = await supabase.from('tutors').select('id').eq('user_id', user.id).maybeSingle();
+        if (tutorRow?.id) {
+          await supabase.from('availability').delete().eq('tutor_id', tutorRow.id);
+        }
+        await supabase.from('tutors').delete().eq('user_id', user.id);
       }
 
       // Delete avatar
