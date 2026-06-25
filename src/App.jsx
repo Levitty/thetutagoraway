@@ -849,7 +849,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
             {aiProgress?.diagnosed
               ? <MomentumChipView level={getLevel(aiProgress.totalXP).level} streak={aiProgress.currentStreak} onClick={() => onNavigate('ai')} />
               : <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>}
-            <button onClick={() => onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium hidden sm:block">Spreadsheet</button>
+            <button onClick={() => onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium">Spreadsheet</button>
             {isAdmin && <button onClick={() => onNavigate('admin')} className="text-sm text-purple-600 font-medium">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
             <div className="flex items-center gap-2">
@@ -2101,7 +2101,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
           <div className="flex items-center gap-4">
             <button onClick={() => onNavigate && onNavigate('home')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Home</button>
             <button onClick={() => onNavigate && onNavigate('tutors')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Find Tutors</button>
-            <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium hidden sm:block">Spreadsheet</button>
+            <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium">Spreadsheet</button>
             <button onClick={() => onNavigate && onNavigate('classroom')} className="text-sm text-emerald-600 font-medium hidden sm:block">Class Insights</button>
             {isAdmin && <button onClick={() => onNavigate && onNavigate('admin')} className="text-sm text-purple-600 font-medium hidden sm:block">Admin</button>}
             <MessageButton onClick={onOpenMessages} />

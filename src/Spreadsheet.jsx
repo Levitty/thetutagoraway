@@ -184,13 +184,23 @@ export function Spreadsheet({ channelName, standalone = false, onBack }) {
   }, []);
 
   const handleCellClick = (r, c) => {
-    setSelectedCell({ r, c });
+    // Already editing this exact cell — leave the input alone.
     if (editingCell?.r === r && editingCell?.c === c) return;
-    // Commit previous edit
+
+    // Commit any in-progress edit on another cell.
     if (editingCell) {
       updateCell(editingCell.r, editingCell.c, editValue);
+      setEditingCell(null);
     }
-    setEditingCell(null);
+
+    // Touch-friendly: tapping the already-selected cell starts editing it
+    // (no double-tap needed). First tap on a new cell just selects.
+    const alreadySelected = selectedCell?.r === r && selectedCell?.c === c;
+    setSelectedCell({ r, c });
+    if (alreadySelected) {
+      setEditingCell({ r, c });
+      setEditValue(data[r]?.[c] || '');
+    }
   };
 
   const handleCellDoubleClick = (r, c) => {
@@ -198,6 +208,42 @@ export function Spreadsheet({ channelName, standalone = false, onBack }) {
     setEditValue(data[r][c] || '');
     setSelectedCell({ r, c });
   };
+
+  // ---- Touch-friendly editing (no physical keyboard required) ----
+  // Begin/continue editing the selected cell and return its current text.
+  const beginEdit = () => {
+    if (!selectedCell) return '';
+    const { r, c } = selectedCell;
+    const editingThis = editingCell?.r === r && editingCell?.c === c;
+    const base = editingThis ? editValue : (data[r]?.[c] || '');
+    if (!editingThis) setEditingCell({ r, c });
+    return base;
+  };
+
+  // Insert text (operator, function, etc.) into the cell being edited.
+  const insertText = (text) => {
+    if (!selectedCell) return;
+    setEditValue(beginEdit() + text);
+  };
+
+  const backspace = () => {
+    if (!selectedCell) return;
+    setEditValue(beginEdit().slice(0, -1));
+  };
+
+  const commitEdit = (advance = true) => {
+    if (!editingCell) return;
+    updateCell(editingCell.r, editingCell.c, editValue);
+    const { r, c } = editingCell;
+    setEditingCell(null);
+    if (advance && r < data.length - 1) setSelectedCell({ r: r + 1, c });
+  };
+
+  // On-screen math keys for touch devices.
+  const MATH_KEYS = [
+    ['=', '='], ['(', '('], [')', ')'], ['+', '+'], ['−', '-'],
+    ['×', '*'], ['÷', '/'], ['%', '%'], [',', ','], ['SUM', 'SUM('],
+  ];
 
   const handleKeyDown = (e) => {
     if (!selectedCell) return;
@@ -359,11 +405,72 @@ export function Spreadsheet({ channelName, standalone = false, onBack }) {
         </span>
         <div className={`w-px h-5 ${standalone ? 'bg-slate-200' : 'bg-slate-600'}`} />
         <span className={`text-xs font-medium ${standalone ? 'text-slate-400' : 'text-slate-500'}`}>fx</span>
-        <div className={`flex-1 px-2 py-1 rounded text-sm font-mono ${
-          standalone ? 'bg-slate-50 text-slate-700 border border-slate-200' : 'bg-slate-900 text-slate-200 border border-slate-600'
-        }`}>
-          {selectedCell ? (data[selectedCell.r]?.[selectedCell.c] || '') : ''}
-        </div>
+        <input
+          type="text"
+          inputMode="text"
+          value={
+            selectedCell
+              ? (editingCell?.r === selectedCell.r && editingCell?.c === selectedCell.c
+                  ? editValue
+                  : (data[selectedCell.r]?.[selectedCell.c] || ''))
+              : ''
+          }
+          disabled={!selectedCell}
+          placeholder={selectedCell ? 'Type a value or =formula' : 'Select a cell'}
+          onChange={(e) => {
+            if (!selectedCell) return;
+            const { r, c } = selectedCell;
+            if (!(editingCell?.r === r && editingCell?.c === c)) setEditingCell({ r, c });
+            setEditValue(e.target.value);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') { e.preventDefault(); commitEdit(); }
+            else if (e.key === 'Escape') { setEditingCell(null); }
+          }}
+          className={`flex-1 px-2 py-1 rounded text-sm font-mono outline-none ${
+            standalone ? 'bg-slate-50 text-slate-700 border border-slate-200 focus:border-emerald-400' : 'bg-slate-900 text-slate-200 border border-slate-600 focus:border-emerald-500'
+          }`}
+        />
+      </div>
+
+      {/* On-screen math keypad — lets students enter formulas/operators on
+          phones & tablets that have no physical keyboard. onMouseDown/onTouchStart
+          preventDefault keeps the active cell's input from blurring on tap. */}
+      <div className={`flex items-center gap-1 px-2 py-1.5 border-b flex-shrink-0 overflow-x-auto ${
+        standalone ? 'bg-white border-slate-200' : 'bg-slate-800 border-slate-700'
+      }`}>
+        {MATH_KEYS.map(([label, value]) => (
+          <button
+            key={label}
+            onMouseDown={(e) => e.preventDefault()}
+            onClick={() => insertText(value)}
+            className={`shrink-0 min-w-[2.25rem] h-9 px-2 rounded-lg text-sm font-mono font-semibold transition-colors ${
+              standalone
+                ? 'bg-slate-100 hover:bg-emerald-100 text-slate-700 active:bg-emerald-200'
+                : 'bg-slate-700 hover:bg-slate-600 text-slate-200 active:bg-slate-500'
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+        <div className="flex-1 min-w-[4px]" />
+        <button
+          onMouseDown={(e) => e.preventDefault()}
+          onClick={backspace}
+          className={`shrink-0 min-w-[2.5rem] h-9 px-2 rounded-lg text-sm font-semibold transition-colors ${
+            standalone ? 'bg-slate-100 hover:bg-slate-200 text-slate-600' : 'bg-slate-700 hover:bg-slate-600 text-slate-200'
+          }`}
+          aria-label="Backspace"
+        >
+          ⌫
+        </button>
+        <button
+          onMouseDown={(e) => e.preventDefault()}
+          onClick={() => commitEdit()}
+          className="shrink-0 min-w-[3.25rem] h-9 px-3 rounded-lg text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white transition-colors"
+        >
+          Done
+        </button>
       </div>
 
       {/* Formula help */}
