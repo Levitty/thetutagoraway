@@ -15,6 +15,7 @@ import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
 import { supabase } from '../supabase.js';
 import { Icon } from './components/Icons.jsx';
+import { Lottie, LOTTIE } from './components/Lottie.jsx';
 import { InteractiveVisual, SKILL_VISUALS } from './InteractiveVisual.jsx';
 import { checkVisualAnswer } from './content/visual.js';
 
@@ -759,7 +760,9 @@ export function AIMastery({ onBack, userId, studentName }) {
       <div className="bg-gradient-to-b from-slate-100 to-slate-900 pt-12 pb-4" />
       <div className="flex items-center justify-center p-4 -mt-8">
         <div className="max-w-md text-center">
-          <div className="text-6xl mb-6">{sub?.emoji || '🧠'}</div>
+          <div className="flex justify-center mb-4">
+            <Lottie src={LOTTIE.academics} size={140} fallback={<div className="text-6xl">{sub?.emoji || '🧠'}</div>} />
+          </div>
           <h1 className="text-3xl font-bold mb-2">{sub?.name || 'AI Tutor'}</h1>
           <p className="text-emerald-400 text-sm font-medium mb-4">Powered by The Math Academy Way</p>
           <p className="text-slate-400 mb-6">Adaptive learning that finds your gaps and fills them. {sub?.description} — {SKILL_COUNT} skills.</p>
@@ -1238,9 +1241,12 @@ export function AIMastery({ onBack, userId, studentName }) {
           return (
             <div className="space-y-4">
               {/* Greeting */}
-              <div>
-                <h2 className="text-xl font-bold">{greeting}{firstName ? `, ${firstName}` : ''} 👋</h2>
-                <p className="text-sm text-slate-400">{dueReviews > 0 ? `You have ${dueReviews} skill${dueReviews === 1 ? '' : 's'} to review today.` : nextItem ? 'Ready to pick up where you left off?' : 'You’re all caught up — nice work.'}</p>
+              <div className="flex items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <h2 className="text-xl font-bold">{greeting}{firstName ? `, ${firstName}` : ''}</h2>
+                  <p className="text-sm text-slate-400">{dueReviews > 0 ? `You have ${dueReviews} skill${dueReviews === 1 ? '' : 's'} to review today.` : nextItem ? 'Ready to pick up where you left off?' : 'You’re all caught up — nice work.'}</p>
+                </div>
+                <Lottie src={LOTTIE.checkin} size={56} fallback={<div className="text-2xl">👋</div>} />
               </div>
 
               {/* Current level hero */}
@@ -1249,10 +1255,11 @@ export function AIMastery({ onBack, userId, studentName }) {
                   <div className="min-w-0">
                     <div className="text-[11px] uppercase tracking-wide text-emerald-300/70 mb-1">Your current level</div>
                     <div className="text-2xl font-bold leading-tight">{gradeLabel(estimatedGrade)}</div>
+                    {brainAccelerated && (
+                      <span className="inline-block mt-2 text-[11px] font-semibold text-amber-200 bg-amber-900/40 border border-amber-700/50 rounded-full px-2.5 py-1">Above grade</span>
+                    )}
                   </div>
-                  {brainAccelerated && (
-                    <span className="shrink-0 text-[11px] font-semibold text-amber-200 bg-amber-900/40 border border-amber-700/50 rounded-full px-2.5 py-1">🚀 Above grade</span>
-                  )}
+                  <Lottie src={LOTTIE.certificate} size={72} fallback={<div className="text-4xl">🎓</div>} />
                 </div>
                 {brainProfile ? (
                   <div className="mt-3">
