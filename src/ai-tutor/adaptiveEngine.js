@@ -197,23 +197,19 @@ export const getRecommendedPath = (progress, ctx) => {
 
 // ==================== DIAGNOSTIC SKILL SELECTION ====================
 
-export const getDiagnosticSkills = (progress, ctx) => {
-  const c = resolveCtx(ctx);
+const shuffleArr = (arr) => [...arr].sort(() => Math.random() - 0.5);
+
+// Breadth-first fallback (no declared grade): sample across all difficulty
+// bands and let credit propagation infer the rest. (Original behaviour.)
+const getBreadthDiagnosticSkills = (c) => {
   const easy = c.skillList.filter(s => s.weight <= 2);
   const medium = c.skillList.filter(s => s.weight > 2 && s.weight <= 4);
   const hard = c.skillList.filter(s => s.weight > 4 && s.weight <= 6);
   const veryHard = c.skillList.filter(s => s.weight > 6);
 
-  const shuffleArr = (arr) => [...arr].sort(() => Math.random() - 0.5);
-
   const selected = [];
-  const usedStrands = new Set();
-
   const criticals = shuffleArr(c.skillList.filter(s => s.critical));
-  for (const s of criticals.slice(0, 10)) {
-    selected.push(s);
-    usedStrands.add(s.strand);
-  }
+  for (const s of criticals.slice(0, 10)) selected.push(s);
 
   const remaining = [
     ...shuffleArr(easy).slice(0, 6),
@@ -226,8 +222,55 @@ export const getDiagnosticSkills = (progress, ctx) => {
     if (selected.length >= 40) break;
     selected.push(s);
   }
-
   return selected.sort((a, b) => a.weight - b.weight);
+};
+
+// Grade-anchored diagnostic: anchor at the student's declared class, then probe
+// the prerequisite grades below (to surface the foundation gaps that block them)
+// and a little above (to find the ceiling / acceleration). Shorter and far more
+// relevant than a blind sweep; credit propagation fills in everything untested.
+export const getDiagnosticSkills = (progress, ctx) => {
+  const c = resolveCtx(ctx);
+  const target = progress?.declaredGrade;
+  if (target == null) return getBreadthDiagnosticSkills(c);
+
+  // Anchor on the skill's native grade/level (always present, works for every
+  // subject); the chosen curriculum still scopes mastery views elsewhere.
+  const gradeFor = (s) => s.grade;
+  const band = c.skillList.filter(s => {
+    const g = gradeFor(s);
+    return Number.isFinite(g) && g >= target - 3 && g <= target + 1;
+  });
+  if (band.length < 8) return getBreadthDiagnosticSkills(c);
+
+  // How many to test at each grade — emphasise the student's class and the
+  // immediate prerequisites; lighter on deep prereqs and the ceiling probe.
+  const wantFor = (g) => {
+    const d = g - target;
+    if (d === 0) return 6;    // at grade
+    if (d === -1) return 5;   // one below
+    if (d === -2) return 4;
+    if (d === -3) return 3;   // deep prerequisite
+    if (d === 1) return 3;    // ceiling probe
+    return 0;
+  };
+
+  const selected = [];
+  const has = (id) => selected.some(s => s.id === id);
+  for (let g = target - 3; g <= target + 1; g++) {
+    const atGrade = band.filter(s => gradeFor(s) === g);
+    // Prefer critical (load-bearing) skills, then fill with others.
+    const ordered = [...shuffleArr(atGrade.filter(s => s.critical)), ...shuffleArr(atGrade.filter(s => !s.critical))];
+    let added = 0;
+    for (const s of ordered) {
+      if (added >= wantFor(g)) break;
+      if (!has(s.id)) { selected.push(s); added++; }
+    }
+  }
+
+  // Order foundation → grade → ceiling so accessible questions come first and
+  // gaps surface bottom-up.
+  return selected.sort((a, b) => gradeFor(a) - gradeFor(b));
 };
 
 // ==================== TARGETED REMEDIATION ====================

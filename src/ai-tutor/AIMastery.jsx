@@ -766,13 +766,43 @@ export function AIMastery({ onBack, userId, studentName }) {
           <h1 className="text-3xl font-bold mb-2">{sub?.name || 'AI Tutor'}</h1>
           <p className="text-emerald-400 text-sm font-medium mb-4">Powered by The Math Academy Way</p>
           <p className="text-slate-400 mb-6">Adaptive learning that finds your gaps and fills them. {sub?.description} — {SKILL_COUNT} skills.</p>
-          <div className="bg-slate-800 rounded-xl p-4 mb-6 text-left text-sm text-slate-300 space-y-2">
-            <p>🎯 <strong>Diagnostic test</strong> — ~40 questions to find your level</p>
+          <div className="bg-slate-800 rounded-xl p-4 mb-4 text-left text-sm text-slate-300 space-y-2">
+            <p>🎯 <strong>Diagnostic</strong> — a short, targeted check to find your level and gaps</p>
             <p>🧩 <strong>Knowledge graph</strong> — maps all skill connections</p>
             <p>🔁 <strong>Spaced repetition</strong> — reviews skills before you forget</p>
             <p>🎓 <strong>Worked examples</strong> — teaches before testing</p>
           </div>
-          <button onClick={startDiagnostic} className="w-full bg-emerald-600 hover:bg-emerald-500 rounded-xl py-4 font-semibold text-lg transition-colors">Start Diagnostic Test</button>
+
+          {/* Onboarding — class + curriculum anchor the diagnostic to the student */}
+          <div className="bg-slate-800/70 border border-slate-700 rounded-xl p-4 mb-6 text-left">
+            <p className="text-sm font-medium text-slate-200 mb-2">What {(sub?.gradeLabel || 'grade').toLowerCase()} are you in?</p>
+            <div className="flex flex-wrap gap-2">
+              {(sub?.grades || []).map(g => (
+                <button key={g} onClick={() => setProgress(p => ({ ...p, declaredGrade: g }))}
+                  className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${progress.declaredGrade === g ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>
+                  {sub?.gradeLabel || 'Grade'} {g}
+                </button>
+              ))}
+            </div>
+            {curriculaOptions.length > 1 && (
+              <>
+                <p className="text-sm font-medium text-slate-200 mt-4 mb-2">Your curriculum</p>
+                <div className="flex flex-wrap gap-2">
+                  {curriculaOptions.map(co => (
+                    <button key={co.id} onClick={() => setProgress(p => ({ ...p, curriculum: co.id }))}
+                      className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${curriculum === co.id ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>
+                      {co.shortName}
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
+            {progress.declaredGrade != null && (
+              <p className="text-xs text-emerald-400/80 mt-3">We’ll focus the check on {sub?.gradeLabel || 'Grade'} {progress.declaredGrade} and the skills that lead up to it.</p>
+            )}
+          </div>
+
+          <button onClick={startDiagnostic} className="w-full bg-emerald-600 hover:bg-emerald-500 rounded-xl py-4 font-semibold text-lg transition-colors">{progress.declaredGrade != null ? 'Start Diagnostic' : 'Start Diagnostic Test'}</button>
           <button onClick={() => { setProgress(p => ({ ...p, diagnosed: true })); setView('home'); }} className="mt-4 text-slate-500 hover:text-slate-300 text-sm block mx-auto">Skip (start from scratch)</button>
         </div>
       </div>

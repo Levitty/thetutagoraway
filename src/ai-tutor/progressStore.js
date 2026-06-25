@@ -26,6 +26,8 @@ export const defaultProgress = () => ({
   diagnosticBalances: null,
   // Active syllabus view (curricula.js): 'native' | 'cbc' | 'cambridge'.
   curriculum: 'native',
+  // Student-declared class/grade (set at onboarding) — anchors the diagnostic.
+  declaredGrade: null,
   // Gamification (gamification.js): daily goal tracking + unlocked badges.
   dailyXP: 0,
   dailyDate: null,
@@ -129,6 +131,7 @@ export const saveProgress = async (userId, progress) => {
             skills: progress.skills,
             diagnosticBalances: progress.diagnosticBalances,
             curriculum: progress.curriculum,
+            declaredGrade: progress.declaredGrade,
             dailyXP: progress.dailyXP,
             dailyDate: progress.dailyDate,
             achievements: progress.achievements,
@@ -165,6 +168,11 @@ export const forceSave = async (userId, progress) => {
         progress: {
           skills: progress.skills,
           diagnosticBalances: progress.diagnosticBalances,
+          curriculum: progress.curriculum,
+          declaredGrade: progress.declaredGrade,
+          dailyXP: progress.dailyXP,
+          dailyDate: progress.dailyDate,
+          achievements: progress.achievements,
         },
         diagnosed: progress.diagnosed,
         total_xp: progress.totalXP || 0,
