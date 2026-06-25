@@ -1328,6 +1328,9 @@ export function AIMastery({ onBack, userId, studentName }) {
                   <p className="text-xs text-slate-500">No badges yet — finish a lesson to earn your first one.</p>
                 )}
               </div>
+
+              {/* Retake diagnostic */}
+              <button onClick={() => { if (window.confirm('Retake the diagnostic test? This re-measures your levels from scratch.')) startDiagnostic(); }} className="w-full text-center text-xs text-slate-500 hover:text-slate-300 py-2 transition-colors">Retake diagnostic test</button>
             </div>
           );
         })()}
