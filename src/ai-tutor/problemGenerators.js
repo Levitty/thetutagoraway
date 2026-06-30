@@ -805,9 +805,13 @@ const generators = {
   },
 
   G8_LINEAR_EQ_ADV: () => {
-    const x = rand(1, 10), a = rand(2, 5), b = rand(1, 8), c = rand(1, 3), d = rand(1, 10);
+    const x = rand(1, 10), a = rand(2, 5), b = rand(1, 8), d = rand(1, 10);
+    // Keep c < a so (a-c) ≠ 0 — otherwise the equation collapses to an identity
+    // (every x a solution) and the single keyed answer would be wrong.
+    const c = rand(1, Math.min(3, a - 1));
     const rhs = a * x + b - c * x - d;
     return { question: `Solve: ${a}x + ${b} = ${c}x + ${rhs + d}`, answer: x.toString(),
+      accepts: [`x=${x}`, `${x}`],
       hint: 'Collect x terms on one side, numbers on the other' };
   },
 
@@ -1164,9 +1168,13 @@ const generators = {
   },
 
   G10_PARTIAL_FRACTIONS: () => {
-    const a = rand(1, 5), b = rand(1, 5);
-    return { question: `Express ${a + b}/((x+1)(x+2)) as partial fractions if A/(x+1) + B/(x+2)`, answer: `A=${a}, B=${b-a > 0 ? b - a : -(a-b)}`,
-      hint: 'Multiply through by denominator, then substitute convenient x values' };
+    // N/((x+1)(x+2)) = A/(x+1) + B/(x+2). Cover-up: A = N at x=-1, B = N at x=-2.
+    // With constant numerator N: A = N, B = -N.
+    const n = rand(2, 9);
+    return { question: `Express ${n}/((x+1)(x+2)) as partial fractions A/(x+1) + B/(x+2). Find A and B.`,
+      answer: `A=${n}, B=${-n}`,
+      accepts: [`A=${n},B=${-n}`, `A=${n} B=${-n}`, `${n},${-n}`],
+      hint: 'Multiply through by the denominator, then substitute x = -1 and x = -2' };
   },
 
   G10_SEQUENCES_ADV: () => {
@@ -1340,10 +1348,14 @@ const generators = {
   },
 
   G11_STATIONARY_POINTS: () => {
-    const a = rand(1, 3), b = rand(2, 6);
-    return { question: `y = x³ - ${3 * a}x. Find the x-coordinates of the stationary points.`, answer: `x = ${a === 1 ? '' : '±'}√${a === 1 ? 1 : a}`,
-      accepts: [`√${a}`, `x = ±√${a}`, `${roundTo(Math.sqrt(a), 2)}`],
-      hint: 'Set dy/dx = 0 and solve' };
+    // y = x³ - 3a·x → dy/dx = 3x² - 3a = 0 → x = ±√a (BOTH roots).
+    const a = rand(1, 3);
+    const root = a === 1 ? '1' : `√${a}`;
+    const dec = roundTo(Math.sqrt(a), 2);
+    return { question: `y = x³ - ${3 * a}x. Find the x-coordinates of the stationary points.`,
+      answer: `x = ±${root}`,
+      accepts: [`±${root}`, `x=±${root}`, `±${dec}`, `x=±${dec}`, `${root},-${root}`],
+      hint: 'Set dy/dx = 0 and solve — remember a square root has two values' };
   },
 
   G11_TRIG_GRAPHS: () => {
@@ -1507,13 +1519,16 @@ export const generateProblem = (skillId, opts = {}) => {
   const gen = generators[skillId];
   if (!gen) {
     const skill = SKILLS[skillId];
-    return { question: `Practice: ${skill?.name || skillId}`, answer: '1', hint: 'Answer 1 to continue' };
+    // `placeholder: true` tells the lesson loop NOT to grant mastery/credit from
+    // this stand-in problem (a skill with no authored generator must never become
+    // free mastery by typing "1"). Today coverage is 100%, so this is a guard.
+    return { question: `Practice: ${skill?.name || skillId}`, answer: '1', hint: 'Answer 1 to continue', placeholder: true };
   }
   try {
     return gen();
   } catch (e) {
     console.warn(`Problem generator error for ${skillId}:`, e);
-    return { question: `Practice: ${SKILLS[skillId]?.name || skillId}`, answer: '1' };
+    return { question: `Practice: ${SKILLS[skillId]?.name || skillId}`, answer: '1', placeholder: true };
   }
 };
 

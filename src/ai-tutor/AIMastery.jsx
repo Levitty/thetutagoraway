@@ -18,74 +18,17 @@ import { Icon } from './components/Icons.jsx';
 import { Lottie, LOTTIE } from './components/Lottie.jsx';
 import { InteractiveVisual, SKILL_VISUALS } from './InteractiveVisual.jsx';
 import { checkVisualAnswer } from './content/visual.js';
+import { checkAnswerMatch, normalizeMath } from './answerCheck.js';
 
 // ==================== SMART ANSWER MATCHING ====================
+// Tolerant answer grading lives in ./answerCheck.js (so it can be unit-tested).
 // Normalizes math expressions so equivalent forms match:
 //   "2(x) = 12"  ↔  "2x = 12"
 //   "5x + 3"     ↔  "5x+3"
 //   "x = -3"     ↔  "x=-3"
 //   "3/4"        ↔  "3 / 4"
 //   "(−2, 5)"    ↔  "(-2, 5)"  ↔  "(-2,5)"
-
-function normalizeMath(str) {
-  let s = str.toString().trim().toLowerCase();
-  // Normalize unicode minus/dash to hyphen
-  s = s.replace(/[−–—]/g, '-');
-  // Remove all spaces
-  s = s.replace(/\s+/g, '');
-  // Remove commas in numbers (1,200 → 1200) but keep commas between values
-  s = s.replace(/(\d),(\d{3})/g, '$1$2');
-  // Remove unnecessary parentheses around single variables: (x) → x, (y) → y
-  s = s.replace(/\(([a-z])\)/g, '$1');
-  // Remove × and * (multiplication signs) between number and variable: 2*x → 2x, 2×x → 2x
-  s = s.replace(/(\d)[*×·]([a-z])/g, '$1$2');
-  // Remove × and * between number and paren: 2*(3) → 2(3)
-  s = s.replace(/(\d)[*×·]\(/g, '$1(');
-  // Expand simple multiplications written as num(var): already handled by removing parens above
-  return s;
-}
-
-function checkAnswerMatch(userAnswer, problem) {
-  const normalizedUser = normalizeMath(userAnswer);
-  const accepts = problem.accepts || [problem.answer];
-
-  // Check if any accepted answer matches after normalization
-  if (accepts.some(a => normalizedUser === normalizeMath(a))) return true;
-
-  // For pure numeric answers, try parsing as number
-  const userNum = parseFloat(normalizedUser);
-  if (!isNaN(userNum)) {
-    if (accepts.some(a => {
-      const aNum = parseFloat(normalizeMath(a));
-      return !isNaN(aNum) && Math.abs(userNum - aNum) < 0.01;
-    })) return true;
-  }
-
-  // For fraction answers: check if 3/4 matches 0.75 etc.
-  const fractionMatch = normalizedUser.match(/^(-?\d+)\/(\d+)$/);
-  if (fractionMatch) {
-    const fracVal = parseInt(fractionMatch[1]) / parseInt(fractionMatch[2]);
-    if (accepts.some(a => {
-      const aNum = parseFloat(normalizeMath(a));
-      return !isNaN(aNum) && Math.abs(fracVal - aNum) < 0.01;
-    })) return true;
-    // Also check if accepted answer is a fraction with same value
-    if (accepts.some(a => {
-      const am = normalizeMath(a).match(/^(-?\d+)\/(\d+)$/);
-      if (am) {
-        const aFrac = parseInt(am[1]) / parseInt(am[2]);
-        return Math.abs(fracVal - aFrac) < 0.001;
-      }
-      return false;
-    })) return true;
-  }
-
-  // For coordinate answers: normalize (x,y) format
-  const coordUser = normalizedUser.replace(/[() ]/g, '');
-  if (accepts.some(a => normalizeMath(a).replace(/[() ]/g, '') === coordUser)) return true;
-
-  return false;
-}
+// (Implementation in ./answerCheck.js — imported above.)
 
 // ==================== CELEBRATIONS ====================
 
@@ -148,8 +91,35 @@ export function AIMastery({ onBack, userId, studentName }) {
   const curriculum = progress.curriculum || NATIVE;
   const curriculaOptions = useMemo(() => curriculaForSubject(sub), [sub]);
 
-  // Engine context — passed to adaptive/spaced/diagnostic engines
-  const ctx = useMemo(() => sub ? { skills: sub.skills, getPostReqs: sub.getPostReqs, curriculum } : null, [sub, curriculum]);
+  // Engine context — passed to adaptive/spaced/diagnostic engines.
+  // We derive the full prerequisite/post-requisite CHAIN walkers from the
+  // subject's own graph. Without these, the engines silently fell back to the
+  // math chains, so credit propagation / implicit review / gap detection did
+  // nothing for non-math subjects (AFM/APM). Now every subject gets real graph
+  // propagation against its OWN skill ids.
+  const ctx = useMemo(() => {
+    if (!sub) return null;
+    const skills = sub.skills;
+    const postReqs = sub.getPostReqs || (() => []);
+    const getPreChain = (id, visited = new Set()) => {
+      if (visited.has(id)) return [];
+      visited.add(id);
+      const s = skills[id];
+      if (!s) return [];
+      const chain = [...(s.prerequisites || [])];
+      for (const p of (s.prerequisites || [])) chain.push(...getPreChain(p, visited));
+      return [...new Set(chain)];
+    };
+    const getPostChain = (id, visited = new Set()) => {
+      if (visited.has(id)) return [];
+      visited.add(id);
+      const posts = (postReqs(id) || []).map(p => (p && p.id) ? p.id : p);
+      const chain = [...posts];
+      for (const pid of posts) chain.push(...getPostChain(pid, visited));
+      return [...new Set(chain)];
+    };
+    return { skills, getPostReqs: sub.getPostReqs, getPreChain, getPostChain, curriculum };
+  }, [sub, curriculum]);
 
   // Lesson / Practice state
   const [activeSkill, setActiveSkill] = useState(null);
@@ -556,21 +526,30 @@ export function AIMastery({ onBack, userId, studentName }) {
 
     // Update skill progress
     const skill = SKILLS[activeSkill];
+    // A placeholder problem (no authored generator) must never grant mastery or
+    // propagate credit — otherwise typing "1" would falsify the learning signal.
+    const isPlaceholder = !!problem?.placeholder;
     const sp = progress.skills[activeSkill] || { attempts: 0, correct: 0, mastered: false, repNum: 0, learningSpeed: 1.0, consecutiveFailures: 0 };
     const newCorrect = sp.correct + (correct ? 1 : 0);
     const newAttempts = sp.attempts + 1;
     const accuracy = newCorrect / newAttempts;
-    const shouldMaster = newAttempts >= skill.minProblems && accuracy >= skill.masteryThreshold;
+    // Mastery needs enough practice, a high accuracy, AND this final answer to be
+    // correct — so a skill can never tip into "mastered" on a wrong answer just
+    // because cumulative accuracy is still above threshold.
+    const shouldMaster = !isPlaceholder && correct && newAttempts >= skill.minProblems && accuracy >= skill.masteryThreshold;
 
-    // Apply implicit repetitions to prerequisites
-    let updatedSkills = applyImplicitCredits(progress, activeSkill, correct, ctx);
+    // Apply implicit repetitions to prerequisites (skip for placeholder stand-ins)
+    let updatedSkills = isPlaceholder ? { ...progress.skills } : applyImplicitCredits(progress, activeSkill, correct, ctx);
 
     const updatedSp = processReviewResult(sp, correct);
     updatedSp.attempts = newAttempts;
     updatedSp.correct = newCorrect;
     if (shouldMaster && !sp.mastered) {
       updatedSp.mastered = true;
-      updatedSp.repNum = 2;
+      // Keep the spaced-repetition schedule the FIRe model just computed; only
+      // raise it to the mastery floor if it's lower. (Previously this overwrote
+      // repNum with a fixed 2, throwing away the review interval at mastery.)
+      updatedSp.repNum = Math.max(updatedSp.repNum || 0, 2);
     }
 
     updatedSkills = { ...updatedSkills, [activeSkill]: updatedSp };
