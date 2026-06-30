@@ -395,18 +395,23 @@ export function AIMastery({ onBack, userId, studentName }) {
     setDiagState({ skills, index: 0, balances: {}, results: {}, startTimes: { [skills[0]?.id]: Date.now() } });
     setProblem(generateProblem(skills[0]?.id));
     setAnswer('');
+    setVisualAnswer(null);
     setFeedback(null);
     setView('diagnostic');
   };
 
   const handleDiagnosticAnswer = () => {
-    if (!answer.trim()) return;
+    // Allow either a typed answer or an interactive-visual answer (number line etc.)
+    const hasVisualAnswer = problem?.visual && visualAnswer != null;
+    if (!answer.trim() && !hasVisualAnswer) return;
     const { skills, index, balances, results, startTimes } = diagState;
     const skill = skills[index];
     const timeTaken = Date.now() - (startTimes[skill.id] || Date.now());
     const timeWeight = getTimeWeight(timeTaken);
 
-    const correct = checkAnswerMatch(answer, problem);
+    const correct = hasVisualAnswer
+      ? checkVisualAnswer(visualAnswer, problem.visual)
+      : checkAnswerMatch(answer, problem);
 
     const newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
     const newResults = { ...results, [skill.id]: { correct, timeTaken } };
@@ -442,6 +447,7 @@ export function AIMastery({ onBack, userId, studentName }) {
         setDiagState({ skills, index: next, balances: newBalances, results: newResults, startTimes: { ...startTimes, [skills[next].id]: Date.now() } });
         setProblem(generateProblem(skills[next].id));
         setAnswer('');
+        setVisualAnswer(null);
         setFeedback(null);
       } else {
         setView('home');
@@ -818,10 +824,20 @@ export function AIMastery({ onBack, userId, studentName }) {
           <div className="text-xs text-slate-500 mb-2">Grade {skill.grade} — {skill.strand} — {skill.name}</div>
           <div className="bg-slate-800 rounded-2xl p-6 mb-4">
             <div className="text-lg mb-6 leading-relaxed">{problem?.question}</div>
-            <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50" autoFocus placeholder="Your answer..." />
+            {/* Interactive visual (number line / grid / etc.) when the problem
+                needs one — otherwise it would be an unanswerable text box. */}
+            {problem?.visual && (
+              <InteractiveVisual
+                visualType={problem.visual.type}
+                visualData={problem.visual.data}
+                onAnswer={setVisualAnswer}
+                disabled={!!feedback}
+              />
+            )}
+            <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50" autoFocus placeholder={problem?.visual ? 'Use the diagram above, or type your answer…' : 'Your answer...'} />
           </div>
           {feedback && <div className={`rounded-xl p-4 mb-4 ${feedback === 'correct' ? 'bg-emerald-900/50 border border-emerald-500' : 'bg-red-900/50 border border-red-500'}`}>{feedback === 'correct' ? <span className="text-emerald-400">✓ Correct!</span> : <span className="text-red-400">✗ Answer: {problem?.answer}</span>}</div>}
-          {!feedback && <button onClick={handleDiagnosticAnswer} disabled={!answer.trim()} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">Check</button>}
+          {!feedback && <button onClick={handleDiagnosticAnswer} disabled={!answer.trim() && !(problem?.visual && visualAnswer != null)} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">Check</button>}
         </div>
         </div>
       </div>
