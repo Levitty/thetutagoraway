@@ -160,8 +160,17 @@ const Stars = ({ rating, size = 14 }) => (
   </div>
 );
 
+// Fallback avatar (initials) used both as the default src and the onError swap
+// so a broken avatar_url doesn't leave a blank/broken-image box.
+const initialsAvatar = (name, opts = '') =>
+  `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'U')}&background=10b981&color=fff${opts}`;
+
 const Avatar = ({ src, name, size = 40 }) => (
-  <img src={src || `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'U')}&background=10b981&color=fff`} alt={name} className="rounded-full object-cover bg-slate-200" style={{ width: size, height: size }} />
+  <img
+    src={src || initialsAvatar(name)}
+    alt={name}
+    onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(name); }}
+    className="rounded-full object-cover bg-slate-200" style={{ width: size, height: size }} />
 );
 
 // ============ PRIVACY POLICY PAGE ============
@@ -2069,6 +2078,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
   const [showCreateClass, setShowCreateClass] = useState(false);
   const [classForm, setClassForm] = useState({ title: '', description: '', subject: '', max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
   const [classLoading, setClassLoading] = useState(false);
+  const [classError, setClassError] = useState('');
 
   useEffect(() => {
     if (tutor?.id && isApproved) {
@@ -2080,6 +2090,12 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
 
   const handleCreateGroupClass = async (e) => {
     e.preventDefault();
+    setClassError('');
+    // Guard: a class must be scheduled in the future.
+    if (!classForm.lesson_date) { setClassError('Please choose a date for the class.'); return; }
+    const when = new Date(`${classForm.lesson_date}T${classForm.start_time || '00:00'}`);
+    if (when.getTime() < Date.now()) { setClassError('That date and time is in the past — pick a future slot.'); return; }
+
     setClassLoading(true);
     const { data, error } = await supabase.from('group_classes').insert({
       tutor_id: tutor.id,
@@ -2093,7 +2109,16 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
       setShowCreateClass(false);
       setClassForm({ title: '', description: '', subject: '', max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
     }
-    if (error) console.error('Error creating group class:', error);
+    if (error) {
+      console.error('Error creating group class:', error);
+      // Surface the real reason instead of failing silently. The most common
+      // cause is the group_classes table/RLS not being set up yet in Supabase.
+      setClassError(
+        /relation .*group_classes.* does not exist/i.test(error.message || '')
+          ? 'Group classes aren’t set up on the server yet (the group_classes table is missing). Run the group_classes migration in Supabase.'
+          : (error.message || 'Could not create the class. Please try again.')
+      );
+    }
     setClassLoading(false);
   };
 
@@ -2424,6 +2449,9 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                         className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
                     </div>
                   </div>
+                  {classError && (
+                    <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg">{classError}</div>
+                  )}
                   <button type="submit" disabled={classLoading} className="w-full py-3 bg-emerald-500 text-white font-semibold rounded-lg hover:bg-emerald-600 transition-colors disabled:opacity-50">
                     {classLoading ? 'Creating...' : 'Create Group Class'}
                   </button>
@@ -3887,8 +3915,9 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
                     `relative` banner, which otherwise paints over its top half. */}
                 <div className="px-4 -mt-10 mb-3 relative z-10">
                   <img
-                    src={t.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(t.profiles?.full_name || 'T')}&background=0f766e&color=fff&size=120&bold=true`}
+                    src={t.profiles?.avatar_url || initialsAvatar(t.profiles?.full_name || 'T', '&background=0f766e&size=120&bold=true')}
                     alt={t.profiles?.full_name}
+                    onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(t.profiles?.full_name || 'T', '&background=0f766e&size=120&bold=true'); }}
                     className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md bg-slate-100"
                   />
                 </div>
@@ -4001,8 +4030,9 @@ const GroupClassesBrowse = ({ user, setShowAuth }) => {
           return (
             <div key={gc.id} className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-lg transition-all flex flex-col">
               <div className="flex items-center gap-3 mb-3">
-                <img src={gc.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(gc.profiles?.full_name || 'T')}&background=10b981&color=fff`}
-                  alt={gc.profiles?.full_name} className="w-10 h-10 rounded-full object-cover" />
+                <img src={gc.profiles?.avatar_url || initialsAvatar(gc.profiles?.full_name || 'T')}
+                  onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(gc.profiles?.full_name || 'T'); }}
+                  alt={gc.profiles?.full_name} className="w-10 h-10 rounded-full object-cover bg-slate-100" />
                 <div>
                   <p className="font-medium text-slate-900 text-sm">{gc.profiles?.full_name}</p>
                   <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">{gc.subject}</span>
@@ -4224,11 +4254,17 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
   const getSlots = (date) => {
     if (!date || !tutor.availability) return [];
     const dayAvail = tutor.availability.filter(a => a.day_of_week === date.getDay());
+    const now = new Date();
+    const isToday = date.toDateString() === now.toDateString();
     return dayAvail.flatMap(a => {
       const slots = [];
       let h = parseInt(a.start_time.split(':')[0]);
       const end = parseInt(a.end_time.split(':')[0]);
-      while (h < end) { slots.push(`${h.toString().padStart(2, '0')}:00`); h++; }
+      while (h < end) {
+        // Don't offer slots that have already passed today.
+        if (!isToday || h > now.getHours()) slots.push(`${h.toString().padStart(2, '0')}:00`);
+        h++;
+      }
       return slots;
     });
   };
@@ -4291,9 +4327,10 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
           <div className="px-6 pb-6">
             <div className="flex items-end gap-5 -mt-14 mb-4">
               <img
-                src={tutor.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(tutor.profiles?.full_name || 'T')}&background=10b981&color=fff&size=160&bold=true`}
+                src={tutor.profiles?.avatar_url || initialsAvatar(tutor.profiles?.full_name || 'T', '&size=160&bold=true')}
                 alt={tutor.profiles?.full_name}
-                className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-lg"
+                onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(tutor.profiles?.full_name || 'T', '&size=160&bold=true'); }}
+                className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-lg bg-slate-100"
               />
               <div className="flex-1 pb-1">
                 <h1 className="text-2xl font-bold text-slate-900">{tutor.profiles?.full_name}</h1>
