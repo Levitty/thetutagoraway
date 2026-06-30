@@ -4,7 +4,7 @@ const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 const RESEND_API_URL = "https://api.resend.com/emails";
 
 interface EmailRequest {
-  type: "welcome" | "booking-confirmation" | "lesson-reminder" | "booking-cancelled" | "tutor-under-review" | "tutor-approved" | "tutor-rejected";
+  type: "welcome" | "booking-confirmation" | "lesson-reminder" | "booking-cancelled" | "tutor-under-review" | "tutor-approved" | "tutor-rejected" | "tutor-document-reminder";
   to: string;
   data: Record<string, any>;
 }
@@ -405,6 +405,59 @@ function generateEmailTemplate(
       };
     }
 
+    case "tutor-document-reminder": {
+      const { name } = data;
+      return {
+        subject: "Finish your Tutagora application — documents needed",
+        html: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            </head>
+            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
+              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
+                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
+                  ${logoBox}
+
+                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">You're almost a Tutagora tutor!</h1>
+
+                  <p style="margin: 0 0 24px 0; font-size: 16px;">
+                    Hi ${name},
+                  </p>
+
+                  <p style="margin: 0 0 24px 0; font-size: 16px;">
+                    Thanks for starting your tutor application on Tutagora. We noticed you haven't finished uploading your verification documents yet — so your profile isn't live and students can't book you.
+                  </p>
+
+                  <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 20px; margin: 24px 0; border-radius: 4px;">
+                    <p style="margin: 0; color: #92400e; font-weight: 600;">To go live, we just need:</p>
+                    <ul style="margin: 12px 0 0 0; padding-left: 20px; color: #78350f;">
+                      <li style="margin-bottom: 8px;">A photo of your national ID</li>
+                      <li style="margin-bottom: 8px;">Your teaching certificate or qualification</li>
+                      <li>A short bio so parents can get to know you</li>
+                    </ul>
+                  </div>
+
+                  <p style="margin: 0 0 24px 0; font-size: 16px;">
+                    It only takes a couple of minutes. Once your documents are in, our team reviews them (usually within 24 hours) and your profile goes live.
+                  </p>
+
+                  <a href="https://tutagora.com/dashboard" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">Finish my application</a>
+
+                  <div style="${footerStyles}">
+                    <p style="margin: 0 0 8px 0;">Need a hand? Just reply to this email.</p>
+                    <p style="margin: 0;">Tutagora Team</p>
+                  </div>
+                </div>
+              </div>
+            </body>
+          </html>
+        `,
+      };
+    }
+
     default:
       throw new Error(`Unknown email type: ${type}`);
   }
@@ -478,6 +531,7 @@ serve(async (req: Request) => {
       "tutor-under-review",
       "tutor-approved",
       "tutor-rejected",
+      "tutor-document-reminder",
     ];
     if (!validTypes.includes(type)) {
       return new Response(

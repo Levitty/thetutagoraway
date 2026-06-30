@@ -12,6 +12,53 @@ import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
 
+// ============ ERROR BOUNDARY ============
+// Without this, ANY uncaught render error anywhere in the tree unmounts the
+// whole app and the user is left staring at a blank white screen (e.g. the
+// blank screen some tutors saw right after submitting their documents). This
+// catches it, shows a friendly recoverable screen, and surfaces the error.
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { error };
+  }
+  componentDidCatch(error, info) {
+    console.error('App crashed:', error, info);
+  }
+  render() {
+    if (this.state.error) {
+      return (
+        <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6">
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 max-w-md w-full p-8 text-center">
+            <div className="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg className="w-7 h-7 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
+            </div>
+            <h1 className="text-xl font-bold text-slate-900">Something went wrong</h1>
+            <p className="text-slate-500 text-sm mt-2">
+              The page hit an unexpected error. Your data is safe — this is just a display glitch.
+            </p>
+            <div className="flex gap-3 mt-6">
+              <button onClick={() => window.location.reload()} className="flex-1 py-3 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+                Reload page
+              </button>
+              <button onClick={() => { window.location.href = '/'; }} className="flex-1 py-3 bg-slate-100 text-slate-700 font-semibold rounded-xl hover:bg-slate-200 transition-colors">
+                Go home
+              </button>
+            </div>
+            {this.state.error?.message && (
+              <p className="text-xs text-slate-400 mt-4 font-mono break-words">{String(this.state.error.message)}</p>
+            )}
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 // ============ LOTTIE ANIMATION COMPONENT ============
 const Lottie = ({ src, width = 200, height = 200, loop = true, fallback = null }) => {
   const [failed, setFailed] = useState(false);
@@ -1507,6 +1554,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
   const [idFile, setIdFile] = useState(null);
   const [credentialFile, setCredentialFile] = useState(null);
   const [saving, setSaving] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
   const uploadFile = async (file, folder) => {
@@ -1625,7 +1673,9 @@ const TutorOnboarding = ({ profile, onComplete }) => {
         console.error('Failed to send under-review email:', emailErr);
       }
 
-      onComplete();
+      // Show a clear confirmation screen rather than hard-swapping straight
+      // into the dashboard while the profile is still refetching.
+      setSubmitted(true);
     } catch (err) {
       console.error('Error creating tutor profile:', err);
       setError(err.message || 'Failed to create profile');
@@ -1659,6 +1709,29 @@ const TutorOnboarding = ({ profile, onComplete }) => {
   );
 
   const stepLabels = ['Your Info', 'About You', 'Documents', 'Terms'];
+
+  // Confirmation screen after a successful submission.
+  if (submitted) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-emerald-500 to-emerald-600 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl w-full max-w-lg p-8 shadow-xl text-center">
+          <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg className="w-9 h-9 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+          </div>
+          <h1 className="text-2xl font-bold text-slate-900">Documents submitted!</h1>
+          <p className="text-slate-500 mt-2">
+            Thanks, {profile?.full_name?.split(' ')[0]}. Your profile and documents are now with our team for review — this usually takes less than 24 hours. We've emailed you a confirmation.
+          </p>
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mt-5 text-left">
+            <p className="text-sm text-amber-700"><strong>What happens next?</strong> Once you're approved, your profile goes live in Find Tutors and you can start receiving bookings and creating group classes.</p>
+          </div>
+          <button onClick={() => onComplete()} className="w-full mt-6 py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+            Go to my dashboard
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-500 to-emerald-600 flex items-center justify-center p-4">
@@ -4499,6 +4572,20 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const [rejectReason, setRejectReason] = useState('');
   const [rejectingId, setRejectingId] = useState(null);
   const [payoutLoading, setPayoutLoading] = useState(null);
+  const [remindedIds, setRemindedIds] = useState({}); // user id -> 'sending' | 'sent' | 'error'
+
+  // Email a tutor who started signing up but never finished uploading docs.
+  const handleRemindTutor = async (u) => {
+    if (!u?.email) return;
+    setRemindedIds(prev => ({ ...prev, [u.id]: 'sending' }));
+    try {
+      await sendEmail('tutor-document-reminder', u.email, { name: u.full_name || 'there' });
+      setRemindedIds(prev => ({ ...prev, [u.id]: 'sent' }));
+    } catch (e) {
+      console.error('Reminder failed:', e);
+      setRemindedIds(prev => ({ ...prev, [u.id]: 'error' }));
+    }
+  };
 
   const PLATFORM_FEE_PERCENT = 15;
   const TUTOR_SHARE_PERCENT = 100 - PLATFORM_FEE_PERCENT;
@@ -4816,10 +4903,20 @@ const AdminDashboard = ({ onLogout, onBack }) => {
             )}
 
             {/* Users Tab */}
-            {tab === 'users' && (
+            {tab === 'users' && (() => {
+              const incompleteTutors = users.filter(u => u.role === 'tutor' && (() => { const t = u.tutors?.[0]; return !t || !t.bio || !t.id_document_url; })() && u.email);
+              return (
               <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-                <div className="p-4 border-b border-slate-100 flex justify-between items-center">
+                <div className="p-4 border-b border-slate-100 flex flex-wrap gap-3 justify-between items-center">
                   <span className="font-semibold">All Users ({users.length})</span>
+                  {incompleteTutors.length > 0 && (
+                    <button
+                      onClick={async () => { for (const u of incompleteTutors) { if (remindedIds[u.id] !== 'sent') await handleRemindTutor(u); } }}
+                      className="px-3 py-1.5 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-xs font-semibold transition-colors"
+                    >
+                      Remind {incompleteTutors.length} incomplete tutor{incompleteTutors.length !== 1 ? 's' : ''} to upload docs
+                    </button>
+                  )}
                 </div>
                 <div className="overflow-x-auto">
                   <table className="w-full">
@@ -4830,6 +4927,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                         <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Role</th>
                         <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Status</th>
                         <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Joined</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase">Actions</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
@@ -4837,6 +4935,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                         const tutor = u.tutors?.[0];
                         const isIncomplete = u.role === 'tutor' && (!tutor?.bio || !tutor?.id_document_url);
                         const status = u.role === 'student' ? null : !tutor ? 'no profile' : isIncomplete ? 'incomplete' : tutor.verification_status || 'pending';
+                        const reminded = remindedIds[u.id];
                         return (
                         <tr key={u.id} className="hover:bg-slate-50">
                           <td className="px-4 py-3">
@@ -4865,6 +4964,23 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                           <td className="px-4 py-3 text-slate-500 text-sm">
                             {new Date(u.created_at).toLocaleDateString()}
                           </td>
+                          <td className="px-4 py-3">
+                            {isIncomplete && u.email ? (
+                              <button
+                                onClick={() => handleRemindTutor(u)}
+                                disabled={reminded === 'sending' || reminded === 'sent'}
+                                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
+                                  reminded === 'sent' ? 'bg-emerald-50 text-emerald-700 cursor-default' :
+                                  reminded === 'error' ? 'bg-red-50 text-red-600' :
+                                  'bg-amber-100 text-amber-700 hover:bg-amber-200'
+                                }`}
+                              >
+                                {reminded === 'sending' ? 'Sending…' : reminded === 'sent' ? '✓ Reminder sent' : reminded === 'error' ? 'Failed — retry' : 'Send reminder'}
+                              </button>
+                            ) : (
+                              <span className="text-slate-300 text-xs">—</span>
+                            )}
+                          </td>
                         </tr>
                         );
                       })}
@@ -4872,7 +4988,8 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                   </table>
                 </div>
               </div>
-            )}
+              );
+            })()}
 
             {/* Payouts Tab */}
             {tab === 'payouts' && (() => {
@@ -5257,7 +5374,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
 };
 
 // ============ MAIN APP ============
-export default function App() {
+function AppInner() {
   const auth = useAuth();
   const tutorId = auth.profile?.tutors?.[0]?.id;
   const { bookings, loading: bookingsLoading, createBooking, refetch: refetchBookings } = useBookings(auth.user?.id, auth.profile?.role, tutorId);
@@ -5410,5 +5527,13 @@ export default function App() {
       {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       {showPrivacyBanner && <PrivacyBanner onAccept={() => { localStorage.setItem('tutagora_privacy_accepted', 'true'); setShowPrivacyBanner(false); }} onNavigate={handleNavigate} />}
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <ErrorBoundary>
+      <AppInner />
+    </ErrorBoundary>
   );
 }
