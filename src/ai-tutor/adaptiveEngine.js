@@ -312,6 +312,38 @@ export const computePlacementGrade = (skills, results, declaredGrade = null) => 
   return placement;
 };
 
+// The placement acts as a STABLE floor for the displayed level — but a floor
+// that's clearly too high shouldn't stick. This derives an "effective"
+// placement that walks DOWN from the stored placementGrade while the student
+// shows sustained struggle at that grade (enough attempts + low accuracy).
+// It's computed live from skill stats, so it recovers naturally as accuracy
+// improves; the stored placementGrade stays as the diagnostic anchor.
+export const getEffectivePlacement = (progress, ctx) => {
+  const c = resolveCtx(ctx);
+  let placement = progress?.placementGrade;
+  if (placement == null) return null;
+
+  const gradeAccuracy = (g) => {
+    let correct = 0, attempts = 0;
+    for (const s of c.skillList) {
+      if (s.grade !== g) continue;
+      const sp = progress.skills[s.id];
+      if (sp) { correct += sp.correct || 0; attempts += sp.attempts || 0; }
+    }
+    return { correct, attempts };
+  };
+
+  const minGrade = c.skillList.reduce((m, s) => Math.min(m, s.grade), Infinity);
+  // Demote one grade at a time: needs real evidence (≥8 attempts at that grade)
+  // AND poor accuracy (<45%). Stops as soon as a grade isn't clearly failing.
+  while (placement > minGrade) {
+    const { correct, attempts } = gradeAccuracy(placement);
+    if (attempts >= 8 && correct / attempts < 0.45) placement -= 1;
+    else break;
+  }
+  return placement;
+};
+
 // ==================== TARGETED REMEDIATION ====================
 
 export const getRemediationSkills = (skillId, kpIndex, progress, ctx) => {
@@ -486,6 +518,7 @@ export default {
   getRecommendedPath,
   getDiagnosticSkills,
   computePlacementGrade,
+  getEffectivePlacement,
   getRemediationSkills,
   getStats,
   getStrandStats,

@@ -18,7 +18,7 @@ import { generateAfmProblem } from '../src/ai-tutor/afmProblemGenerators.js';
 import { generateApmProblem } from '../src/ai-tutor/apmProblemGenerators.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
 import { propagateCredit } from '../src/ai-tutor/diagnosticEngine.js';
-import { getDiagnosticSkills, computePlacementGrade } from '../src/ai-tutor/adaptiveEngine.js';
+import { getDiagnosticSkills, computePlacementGrade, getEffectivePlacement } from '../src/ai-tutor/adaptiveEngine.js';
 
 let failures = 0;
 const fail = (msg) => { console.log('  ✗ ' + msg); failures++; };
@@ -104,6 +104,15 @@ const p1 = computePlacementGrade(pskills, T({ a: 1, b: 1, c: 1, d: 1, e: 1, f: 1
 const p2 = computePlacementGrade(pskills, T({ a: 1, b: 1, c: 1, d: 1, e: 0, f: 0 }), 6);
 if (p1 === 7 && p2 === 6) ok('placement grade tracks the highest cleared band (7, 6)');
 else fail(`placement wrong: cleared-all=${p1} (want 7), cleared-to-6=${p2} (want 6)`);
+
+// Effective placement decays after sustained struggle, holds otherwise.
+const g7 = Object.values(SKILLS).filter(s => s.grade === 7).slice(0, 3);
+const mk = (attempts, correct) => Object.fromEntries(g7.map(s => [s.id, { attempts, correct }]));
+const dStruggle = getEffectivePlacement({ placementGrade: 7, skills: mk(4, 1) }, null); // 25% over 12
+const dOk = getEffectivePlacement({ placementGrade: 7, skills: mk(4, 3) }, null);       // 75%
+const dThin = getEffectivePlacement({ placementGrade: 7, skills: { [g7[0].id]: { attempts: 3, correct: 0 } } }, null);
+if (dStruggle === 6 && dOk === 7 && dThin === 7) ok('effective placement decays on struggle, holds otherwise (6/7/7)');
+else fail(`effective placement wrong: struggle=${dStruggle}(want 6) ok=${dOk}(want 7) thin=${dThin}(want 7)`);
 
 console.log('\n' + (failures ? `FAILED (${failures})` : 'ALL ENGINE CHECKS PASSED'));
 process.exit(failures ? 1 : 0);

@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
-import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
+import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
@@ -1127,13 +1127,15 @@ export function AIMastery({ onBack, userId, studentName }) {
   const jsGrade = getEstimatedGradeLevel(progress, ctx);
 
   // Prefer the Python brain's measurement when available. Otherwise show a
-  // STABLE level: the diagnostic placement acts as a floor so the level never
-  // drops to the conservative mastery-count estimate when the brain is briefly
-  // unreachable — it can still rise as the student masters higher-grade skills.
+  // STABLE level anchored on the diagnostic placement: it acts as a floor so the
+  // level doesn't drop to the conservative mastery-count estimate when the brain
+  // is briefly unreachable, can rise as the student masters higher-grade skills,
+  // and is walked DOWN by getEffectivePlacement after sustained struggle.
   const path = brainPath || jsPath;
+  const effectivePlacement = getEffectivePlacement(progress, ctx);
   const estimatedGrade = brainProfile
     ? Math.round(brainProfile.overall_level)
-    : (progress.placementGrade != null ? Math.max(progress.placementGrade, jsGrade) : jsGrade);
+    : (effectivePlacement != null ? Math.max(effectivePlacement, jsGrade) : jsGrade);
   const brainAccelerated = brainProfile?.accelerated;
 
   // Progress-dashboard views are scoped to the active curriculum and exclude
