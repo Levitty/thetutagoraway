@@ -4303,6 +4303,25 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
     }
   };
 
+  // Closing the payment modal WITHOUT paying: remove the just-created unpaid
+  // booking so an abandoned checkout doesn't leave a phantom "pending" lesson
+  // that looks booked. Best-effort and safe — only the student's own still
+  // -pending row is removed (the UUID guard skips the non-DB fallback id, and
+  // the status filter means a booking that just got confirmed is never deleted).
+  const handlePaymentCancel = async () => {
+    setShowPayment(false);
+    const id = pendingBooking?.id;
+    if (id && user?.id && /^[0-9a-f-]{36}$/i.test(String(id))) {
+      try {
+        await supabase.from('bookings').delete()
+          .eq('id', id).eq('student_id', user.id).eq('status', 'pending');
+      } catch (e) {
+        console.warn('Could not clean up abandoned booking:', e);
+      }
+    }
+    setPendingBooking(null);
+  };
+
   return (
     <div className="min-h-screen bg-white pt-16">
       {/* Back button */}
@@ -4523,7 +4542,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
           booking={pendingBooking}
           tutor={tutor}
           user={user}
-          onClose={() => setShowPayment(false)}
+          onClose={handlePaymentCancel}
           onSuccess={handlePaymentSuccess}
         />
       )}
