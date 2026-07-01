@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
-import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
+import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
@@ -430,11 +430,14 @@ export function AIMastery({ onBack, userId, studentName }) {
     // never lose the result and force a retake.
     if (isLast) {
       const skillUpdates = processDiagnosticResults(newBalances, ctx);
+      // Persist a stable placement grade from how the student did per grade band.
+      const placementGrade = computePlacementGrade(skills, newResults, progress.declaredGrade);
       const finished = {
         ...progress,
         skills: { ...progress.skills, ...skillUpdates },
         diagnosed: true,
         diagnosticBalances: newBalances,
+        placementGrade,
       };
       setProgress(finished);
       const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
@@ -1123,9 +1126,14 @@ export function AIMastery({ onBack, userId, studentName }) {
   const reviews = getReviews(progress, ctx);
   const jsGrade = getEstimatedGradeLevel(progress, ctx);
 
-  // Prefer the Python brain's measurement when available; else the JS engine.
+  // Prefer the Python brain's measurement when available. Otherwise show a
+  // STABLE level: the diagnostic placement acts as a floor so the level never
+  // drops to the conservative mastery-count estimate when the brain is briefly
+  // unreachable — it can still rise as the student masters higher-grade skills.
   const path = brainPath || jsPath;
-  const estimatedGrade = brainProfile ? Math.round(brainProfile.overall_level) : jsGrade;
+  const estimatedGrade = brainProfile
+    ? Math.round(brainProfile.overall_level)
+    : (progress.placementGrade != null ? Math.max(progress.placementGrade, jsGrade) : jsGrade);
   const brainAccelerated = brainProfile?.accelerated;
 
   // Progress-dashboard views are scoped to the active curriculum and exclude

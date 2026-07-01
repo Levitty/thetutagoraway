@@ -28,6 +28,10 @@ export const defaultProgress = () => ({
   curriculum: 'native',
   // Student-declared class/grade (set at onboarding) — anchors the diagnostic.
   declaredGrade: null,
+  // Grade the diagnostic placed the student at — a STABLE level anchor so the
+  // displayed level doesn't drop to the mastery-count estimate when the ability
+  // engine is briefly unreachable.
+  placementGrade: null,
   // Gamification (gamification.js): daily goal tracking + unlocked badges.
   dailyXP: 0,
   dailyDate: null,
@@ -132,6 +136,7 @@ export const saveProgress = async (userId, progress) => {
             diagnosticBalances: progress.diagnosticBalances,
             curriculum: progress.curriculum,
             declaredGrade: progress.declaredGrade,
+            placementGrade: progress.placementGrade,
             dailyXP: progress.dailyXP,
             dailyDate: progress.dailyDate,
             achievements: progress.achievements,

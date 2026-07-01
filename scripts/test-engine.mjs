@@ -18,6 +18,7 @@ import { generateAfmProblem } from '../src/ai-tutor/afmProblemGenerators.js';
 import { generateApmProblem } from '../src/ai-tutor/apmProblemGenerators.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
 import { propagateCredit } from '../src/ai-tutor/diagnosticEngine.js';
+import { getDiagnosticSkills, computePlacementGrade } from '../src/ai-tutor/adaptiveEngine.js';
 
 let failures = 0;
 const fail = (msg) => { console.log('  ✗ ' + msg); failures++; };
@@ -89,6 +90,20 @@ const bal = propagateCredit({}, withPre.id, true, 1.0, { skills, getPreChain, ge
 const propagated = Object.keys(bal).filter(k => k !== withPre.id);
 if (propagated.length > 0) ok(`AFM correct answer credits prerequisites (${propagated.length})`);
 else fail('AFM credit did not propagate');
+
+// ---- 6. Diagnostic sizing + placement ----
+console.log('6. Diagnostic sizing + placement');
+for (const g of [6, 8, 10]) {
+  const n = getDiagnosticSkills({ declaredGrade: g, skills: {} }).length;
+  if (n >= 18) ok(`grade ${g} diagnostic: ${n} questions`);
+  else fail(`grade ${g} diagnostic only ${n} questions (want ≥18)`);
+}
+const pskills = [{ id: 'a', grade: 5 }, { id: 'b', grade: 5 }, { id: 'c', grade: 6 }, { id: 'd', grade: 6 }, { id: 'e', grade: 7 }, { id: 'f', grade: 7 }];
+const T = (m) => Object.fromEntries(Object.entries(m).map(([k, v]) => [k, { correct: v }]));
+const p1 = computePlacementGrade(pskills, T({ a: 1, b: 1, c: 1, d: 1, e: 1, f: 1 }), 6);
+const p2 = computePlacementGrade(pskills, T({ a: 1, b: 1, c: 1, d: 1, e: 0, f: 0 }), 6);
+if (p1 === 7 && p2 === 6) ok('placement grade tracks the highest cleared band (7, 6)');
+else fail(`placement wrong: cleared-all=${p1} (want 7), cleared-to-6=${p2} (want 6)`);
 
 console.log('\n' + (failures ? `FAILED (${failures})` : 'ALL ENGINE CHECKS PASSED'));
 process.exit(failures ? 1 : 0);

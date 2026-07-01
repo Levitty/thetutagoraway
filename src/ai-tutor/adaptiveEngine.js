@@ -245,12 +245,13 @@ export const getDiagnosticSkills = (progress, ctx) => {
 
   // How many to test at each grade — emphasise the student's class and the
   // immediate prerequisites; lighter on deep prereqs and the ceiling probe.
+  // Tuned for a firmer ~20-question read (was ~14) so placement is more reliable.
   const wantFor = (g) => {
     const d = g - target;
-    if (d === 0) return 6;    // at grade
+    if (d === 0) return 7;    // at grade
     if (d === -1) return 5;   // one below
     if (d === -2) return 4;
-    if (d === -3) return 3;   // deep prerequisite
+    if (d === -3) return 2;   // deep prerequisite
     if (d === 1) return 3;    // ceiling probe
     return 0;
   };
@@ -268,9 +269,47 @@ export const getDiagnosticSkills = (progress, ctx) => {
     }
   }
 
+  // Top up toward a firm minimum. When the band is thin at the low end (e.g. a
+  // Grade-6 student, whose grade 3–4 prerequisites don't exist in the graph),
+  // the per-grade quotas can't reach ~20, so backfill nearest-to-grade first.
+  const MIN_QUESTIONS = 18;
+  if (selected.length < MIN_QUESTIONS) {
+    const nearest = shuffleArr(band).sort((a, b) => Math.abs(gradeFor(a) - target) - Math.abs(gradeFor(b) - target));
+    for (const s of nearest) {
+      if (selected.length >= MIN_QUESTIONS) break;
+      if (!has(s.id)) selected.push(s);
+    }
+  }
+
   // Order foundation → grade → ceiling so accessible questions come first and
   // gaps surface bottom-up.
   return selected.sort((a, b) => gradeFor(a) - gradeFor(b));
+};
+
+// ==================== PLACEMENT (STABLE LEVEL) ====================
+
+// The grade a finished diagnostic places the student at: the highest grade band
+// they cleared (≥50% correct), walking up from the foundation. Persisted so the
+// displayed "level" stays stable instead of falling back to the conservative
+// mastery-count estimate whenever the ability engine is unreachable.
+export const computePlacementGrade = (skills, results, declaredGrade = null) => {
+  const byGrade = {};
+  for (const s of skills || []) {
+    const r = results?.[s.id];
+    if (!r) continue;
+    const g = s.grade;
+    if (!byGrade[g]) byGrade[g] = { correct: 0, total: 0 };
+    byGrade[g].total++;
+    if (r.correct) byGrade[g].correct++;
+  }
+  const grades = Object.keys(byGrade).map(Number).sort((a, b) => a - b);
+  if (!grades.length) return declaredGrade;
+  let placement = grades[0];
+  for (const g of grades) {
+    if (byGrade[g].correct / byGrade[g].total >= 0.5) placement = g; // cleared this grade
+    else break; // first grade they don't clear caps the placement
+  }
+  return placement;
 };
 
 // ==================== TARGETED REMEDIATION ====================
@@ -446,6 +485,7 @@ export default {
   getNextToLearn,
   getRecommendedPath,
   getDiagnosticSkills,
+  computePlacementGrade,
   getRemediationSkills,
   getStats,
   getStrandStats,
