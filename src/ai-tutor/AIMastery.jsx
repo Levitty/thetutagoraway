@@ -542,10 +542,27 @@ export function AIMastery({ onBack, userId, studentName }) {
     const newCorrect = sp.correct + (correct ? 1 : 0);
     const newAttempts = sp.attempts + 1;
     const accuracy = newCorrect / newAttempts;
-    // Mastery needs enough practice, a high accuracy, AND this final answer to be
-    // correct — so a skill can never tip into "mastered" on a wrong answer just
-    // because cumulative accuracy is still above threshold.
-    const shouldMaster = !isPlaceholder && correct && newAttempts >= skill.minProblems && accuracy >= skill.masteryThreshold;
+
+    // --- Desirable-difficulty & automaticity signals ---
+    // A CLEAN solve = correct with NO hints used (unassisted retrieval). A FLUENT
+    // solve = clean AND fast (automaticity). Time budget scales with difficulty.
+    const timeTaken = Date.now() - problemStartRef.current;
+    const automaticityMs = 30000 + (skill.weight || 3) * 15000; // ~45s (easy) … ~120s (hard)
+    const cleanSolve = correct && hintLevel === 0;
+    const fluentSolve = cleanSolve && timeTaken <= automaticityMs;
+    const newCleanCorrect = (sp.cleanCorrect || 0) + (cleanSolve ? 1 : 0);
+    const newFluentCorrect = (sp.fluentCorrect || 0) + (fluentSolve ? 1 : 0);
+
+    // Mastery needs enough practice, high accuracy, a correct final answer, AND
+    // enough CLEAN (hint-free) solves — so hint-assisted answers can't manufacture
+    // an "illusion of comprehension". At least half of minProblems must be
+    // unassisted. (Struggling students are routed to remediation below instead of
+    // being carried to mastery by hints.)
+    const cleanNeeded = Math.max(1, Math.ceil(skill.minProblems / 2));
+    const shouldMaster = !isPlaceholder && correct
+      && newAttempts >= skill.minProblems
+      && accuracy >= skill.masteryThreshold
+      && newCleanCorrect >= cleanNeeded;
 
     // Apply implicit repetitions to prerequisites (skip for placeholder stand-ins)
     let updatedSkills = isPlaceholder ? { ...progress.skills } : applyImplicitCredits(progress, activeSkill, correct, ctx);
@@ -553,6 +570,8 @@ export function AIMastery({ onBack, userId, studentName }) {
     const updatedSp = processReviewResult(sp, correct);
     updatedSp.attempts = newAttempts;
     updatedSp.correct = newCorrect;
+    updatedSp.cleanCorrect = newCleanCorrect;
+    updatedSp.fluentCorrect = newFluentCorrect;
     if (shouldMaster && !sp.mastered) {
       updatedSp.mastered = true;
       // Keep the spaced-repetition schedule the FIRe model just computed; only
@@ -560,6 +579,10 @@ export function AIMastery({ onBack, userId, studentName }) {
       // repNum with a fixed 2, throwing away the review interval at mastery.)
       updatedSp.repNum = Math.max(updatedSp.repNum || 0, 2);
     }
+    // Automaticity: a mastered skill becomes "fluent" once solved correctly,
+    // unassisted AND quickly a couple of times — low-level skills automatic enough
+    // to free up working memory for harder work.
+    updatedSp.fluent = !!sp.fluent || (updatedSp.mastered && newFluentCorrect >= 2);
 
     updatedSkills = { ...updatedSkills, [activeSkill]: updatedSp };
 
@@ -585,7 +608,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     if (shouldMaster && !sp.mastered) {
       xpEarned = calculateXP(accuracy, skill.estimatedMinutes, accuracy >= 1.0);
     } else if (correct) {
-      xpEarned = 2; // Small XP per correct answer
+      xpEarned = fluentSolve ? 3 : 2; // small automaticity bonus for fast, unassisted solves
     }
 
     const updatedProgress = updateStreak(gainXP({

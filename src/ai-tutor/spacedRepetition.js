@@ -113,21 +113,37 @@ const getDepth = (fromId, toId, skills, visited = new Set(), depth = 1) => {
 // ==================== APPLY IMPLICIT CREDIT ====================
 
 export const applyImplicitCredits = (progress, skillId, wasCorrect, ctx) => {
+  // Implicit repetitions come from CORRECTLY exercising an advanced skill — that
+  // is when its prerequisites were genuinely used. A wrong answer implies nothing.
+  if (!wasCorrect) return { ...progress.skills };
+
   const credits = getImplicitRepetitions(skillId, wasCorrect, ctx);
   const updatedSkills = { ...progress.skills };
+  const now = new Date().toISOString();
 
   for (const [preId, credit] of Object.entries(credits)) {
     const sp = updatedSkills[preId];
-    if (!sp?.mastered) continue;
+    // Never conjure mastery from nothing: a prerequisite the student has never
+    // touched can't be credited by an advanced solve (that was the old false-
+    // mastery risk). But BOTH mastered AND in-progress prerequisites should
+    // benefit — this is the FIRe move that was previously skipped for in-progress
+    // skills, leaving the implicit-review engine mostly inert.
+    if (!sp) continue;
 
-    const memory = calculateMemoryStrength(sp);
-    if (memory > 0.8) continue;
-
-    updatedSkills[preId] = {
-      ...sp,
-      repNum: (sp.repNum || 0) + credit,
-      lastPractice: new Date().toISOString(),
-    };
+    if (sp.mastered) {
+      // Refresh the spaced-repetition schedule, unless the memory is already strong.
+      if (calculateMemoryStrength(sp) > 0.85) continue;
+      updatedSkills[preId] = { ...sp, repNum: (sp.repNum || 0) + credit, lastPractice: now };
+    } else if ((sp.attempts || 0) > 0) {
+      // In-progress prerequisite: the advanced solve IS practice — nudge it
+      // forward (schedule + a fractional correct toward mastery evidence).
+      updatedSkills[preId] = {
+        ...sp,
+        repNum: (sp.repNum || 0) + credit,
+        impCorrect: (sp.impCorrect || 0) + credit, // fractional implicit credit
+        lastPractice: now,
+      };
+    }
   }
 
   return updatedSkills;

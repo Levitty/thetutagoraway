@@ -485,27 +485,34 @@ export const selectReviewProblems = (progress, count = 12, ctx) => {
   const reviews = getReviews(progress, ctx);
   const masteredSkills = c.skillList.filter(s => progress.skills[s.id]?.mastered);
 
-  const selected = [];
+  // Build the skill pool: due reviews first (most urgent already sorted), then
+  // top up with other mastered skills.
+  const pool = [];
+  for (const r of reviews) if (!pool.includes(r.id)) pool.push(r.id);
+  for (const s of [...masteredSkills].sort(() => Math.random() - 0.5)) {
+    if (!pool.includes(s.id)) pool.push(s.id);
+  }
+  if (pool.length === 0) return [];
+
+  // TRUE interleaving: round-robin across distinct skills so no two consecutive
+  // problems are the same skill (a random shuffle can still cluster them). This
+  // is the "mixed practice / desirable difficulty" the methodology calls for —
+  // blocked practice (3-in-a-row) gives a false sense of fluency.
   const problemsPerSkill = 3;
-
-  for (const r of reviews) {
-    if (selected.length >= count) break;
-    for (let i = 0; i < problemsPerSkill && selected.length < count; i++) {
-      selected.push(r.id);
-    }
+  const need = Math.min(count, pool.length * problemsPerSkill);
+  const remaining = Object.fromEntries(pool.map(id => [id, problemsPerSkill]));
+  const order = [];
+  let last = null;
+  while (order.length < need) {
+    const avail = pool.filter(id => remaining[id] > 0);
+    if (avail.length === 0) break;
+    // Prefer a skill different from the previous problem; fall back if only one left.
+    const pick = avail.find(id => id !== last) ?? avail[0];
+    order.push(pick);
+    remaining[pick]--;
+    last = pick;
   }
-
-  const shuffled = [...masteredSkills].sort(() => Math.random() - 0.5);
-  for (const s of shuffled) {
-    if (selected.length >= count) break;
-    if (!selected.includes(s.id)) {
-      for (let i = 0; i < problemsPerSkill && selected.length < count; i++) {
-        selected.push(s.id);
-      }
-    }
-  }
-
-  return selected.sort(() => Math.random() - 0.5);
+  return order;
 };
 
 export default {

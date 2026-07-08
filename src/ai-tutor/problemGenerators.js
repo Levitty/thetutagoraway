@@ -188,40 +188,47 @@ const generators = {
 
   G5_TRIANGLES_INTRO: () => {
     const types = [
-      { desc: 'all sides equal', answer: 'equilateral' },
-      { desc: 'two sides equal', answer: 'isosceles' },
+      { desc: 'all three sides equal', answer: 'equilateral' },
+      { desc: 'exactly two sides equal', answer: 'isosceles' },
       { desc: 'no sides equal', answer: 'scalene' },
+      { desc: 'one angle of exactly 90°', answer: 'right' },
+      { desc: 'all three angles less than 90°', answer: 'acute' },
+      { desc: 'one angle greater than 90°', answer: 'obtuse' },
     ];
     const t = pick(types);
-    return { question: `A triangle with ${t.desc} is called...?`, answer: t.answer };
+    return { question: `A triangle with ${t.desc} is called a(n)...?`, answer: t.answer,
+      accepts: [t.answer, `${t.answer} triangle`] };
   },
 
-  G5_LINES: () => {
-    const q = pick([
-      { question: 'Lines that never meet are called...?', answer: 'parallel' },
-      { question: 'Lines that meet at 90° are called...?', answer: 'perpendicular' },
-    ]);
-    return q;
-  },
+  G5_LINES: () => pick([
+    { question: 'Lines that never meet, staying the same distance apart, are called...?', answer: 'parallel', accepts: ['parallel', 'parallel lines'] },
+    { question: 'Lines that meet at a right angle (90°) are called...?', answer: 'perpendicular', accepts: ['perpendicular', 'perpendicular lines'] },
+    { question: 'Lines that cross each other at a point are called...?', answer: 'intersecting', accepts: ['intersecting', 'intersecting lines'] },
+    { question: 'A line that crosses two or more other lines is called a...?', answer: 'transversal', accepts: ['transversal'] },
+  ]),
 
   G5_LENGTH: () => {
-    const convs = [
-      { q: 'How many cm in 3.5 meters?', a: '350' },
-      { q: 'How many meters in 4500 cm?', a: '45' },
-      { q: 'How many mm in 2.5 cm?', a: '25' },
-      { q: 'How many km in 7000 meters?', a: '7' },
+    const forms = [
+      () => { const m = rand(2, 40) * 0.5; return { q: `How many centimetres are in ${m} metres?`, a: m * 100 }; },
+      () => { const m = rand(1, 60) * 100; return { q: `How many metres are in ${m} cm?`, a: m / 100 }; },
+      () => { const cm = rand(1, 40); return { q: `How many millimetres are in ${cm} cm?`, a: cm * 10 }; },
+      () => { const mm = rand(1, 40) * 10; return { q: `How many centimetres are in ${mm} mm?`, a: mm / 10 }; },
+      () => { const m = rand(1, 25) * 1000; return { q: `How many kilometres are in ${m} metres?`, a: m / 1000 }; },
+      () => { const km = rand(1, 25); return { q: `How many metres are in ${km} km?`, a: km * 1000 }; },
     ];
-    const c = pick(convs);
-    return { question: c.q, answer: c.a };
+    const c = pick(forms)();
+    return { question: c.q, answer: String(c.a), accepts: [String(c.a)] };
   },
 
   G5_MASS: () => {
-    const convs = [
-      { q: 'How many grams in 2.5 kg?', a: '2500' },
-      { q: 'How many kg in 4000 g?', a: '4' },
+    const forms = [
+      () => { const kg = rand(2, 40) * 0.5; return { q: `How many grams are in ${kg} kg?`, a: kg * 1000 }; },
+      () => { const g = rand(1, 60) * 100; return { q: `How many kilograms are in ${g} g?`, a: g / 1000 }; },
+      () => { const kg = rand(1, 20); return { q: `How many grams are in ${kg} kg?`, a: kg * 1000 }; },
+      () => { const g = rand(1, 50) * 1000; return { q: `How many kilograms are in ${g} g?`, a: g / 1000 }; },
     ];
-    const c = pick(convs);
-    return { question: c.q, answer: c.a };
+    const c = pick(forms)();
+    return { question: c.q, answer: String(c.a), accepts: [String(c.a)] };
   },
 
   G5_TIME: () => {
