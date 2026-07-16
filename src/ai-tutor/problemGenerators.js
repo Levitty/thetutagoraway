@@ -6,6 +6,7 @@
 
 import { SKILLS } from './knowledgeGraph.js';
 import { STRUCTURED_CONTENT } from './content/index.js';
+import { PRIMARY_ALIAS } from './content/primary.js';
 
 // Structured, pedagogically-complete content (worked example + scaffolded steps
 // + hint ladder + misconception feedback + verified answers) lives in
@@ -1509,6 +1510,8 @@ const generators = {
 // ==================== MAIN EXPORT ====================
 
 export const generateProblem = (skillId, opts = {}) => {
+  // Lower-primary (Grade 1–4) skills reuse an equivalent skill's content.
+  if (PRIMARY_ALIAS[skillId]) skillId = PRIMARY_ALIAS[skillId];
   // Prefer authored structured content when present. `opts.level` lets the
   // lesson request a concrete/pictorial representation (modality escalation).
   const structured = STRUCTURED_CONTENT[skillId];
