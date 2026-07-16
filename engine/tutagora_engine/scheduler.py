@@ -118,6 +118,37 @@ class Scheduler:
             ))
         return sorted(recs, key=lambda r: -r.priority)
 
+    # ---- fluency / automaticity (mastered but still slow) ----
+    def fluency(self, now: Optional[datetime] = None) -> List[Recommendation]:
+        """Skills the student knows but can't yet do FAST. Practising these to
+        automaticity frees up working memory for harder skills."""
+        recs: List[Recommendation] = []
+        for skill in self.graph.all():
+            st = self.student.skills.get(skill.id)
+            if not st or not self.student.is_mastered(skill.id, now):
+                continue
+            if self.student.is_fluent(skill.id, now):
+                continue
+            recs.append(Recommendation(
+                skill_id=skill.id, name=skill.name, grade=skill.grade, strand=skill.strand,
+                kind="fluency", priority=6 + (3 - min(3.0, st.fluent_reps)),
+                reason="Build speed — you know it, now make it automatic",
+                mastery=self.student.effective_mastery(skill.id, now),
+            ))
+        return sorted(recs, key=lambda r: -r.priority)
+
+    # ---- interleaving / non-interference ----
+    @staticmethod
+    def _interleave(plan: List[Recommendation]) -> List[Recommendation]:
+        """Reorder so consecutive items avoid the same strand — conceptually
+        similar material is spaced out (non-interference / mixed practice),
+        while still preferring higher-priority items first."""
+        remaining, out, last = list(plan), [], None
+        while remaining:
+            pick = next((r for r in remaining if r.strand != last), remaining[0])
+            out.append(pick); remaining.remove(pick); last = pick.strand
+        return out
+
     # ---- new learning at the frontier ----
     def to_learn(self, now: Optional[datetime] = None) -> List[Recommendation]:
         profile = AbilityEstimator(self.student).profile(now)
@@ -170,7 +201,8 @@ class Scheduler:
                     return
 
         add(self.gaps(now), limit=3)        # fix what's broken first
-        add(self.reviews(now), limit=2)     # keep memory alive
+        add(self.reviews(now), limit=2)     # keep memory alive (spaced repetition)
+        add(self.fluency(now), limit=1)     # one automaticity rep
 
         learn = self.to_learn(now)
         # Guarantee the reach: a ready student is ALWAYS offered their hardest
@@ -181,4 +213,5 @@ class Scheduler:
             top_stretch = max(stretches, key=lambda r: (r.grade, r.priority))
             add([top_stretch], limit=1)
         add(learn, limit=n)                 # then fill the frontier by priority
-        return plan[:n]
+        # Space out same-strand items so similar concepts don't interfere.
+        return self._interleave(plan[:n])

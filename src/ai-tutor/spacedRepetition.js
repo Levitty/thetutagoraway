@@ -58,11 +58,18 @@ export const processReviewResult = (skillProgress, wasCorrect, timeTakenMs, expe
     sp.repNum = (sp.repNum || 0) + rawDelta;
     sp.learningSpeed = updateLearningSpeed(sp.learningSpeed || 1.0, true, sp.attempts);
     sp.consecutiveFailures = 0;
+    // Automaticity: a FAST correct answer builds fluency; a slow one erodes it.
+    if (expectedTimeMs && timeTakenMs != null) {
+      sp.fluentReps = timeTakenMs <= expectedTimeMs
+        ? (sp.fluentReps || 0) + 1
+        : Math.max(0, (sp.fluentReps || 0) - 0.5);
+    }
   } else {
     const decay = 1.0 + (sp.consecutiveFailures || 0) * 0.5;
     sp.repNum = Math.max(0, (sp.repNum || 0) - decay);
     sp.learningSpeed = updateLearningSpeed(sp.learningSpeed || 1.0, false, sp.attempts);
     sp.consecutiveFailures = (sp.consecutiveFailures || 0) + 1;
+    sp.fluentReps = Math.max(0, (sp.fluentReps || 0) - 1);   // errors break automaticity
 
     if (sp.consecutiveFailures >= 3) {
       sp.mastered = false;
@@ -71,6 +78,11 @@ export const processReviewResult = (skillProgress, wasCorrect, timeTakenMs, expe
 
   return sp;
 };
+
+// A skill is FLUENT when it's mastered AND has been answered fast enough,
+// enough times — recall no longer takes conscious effort (automaticity).
+export const FLUENCY_REPS = 3;
+export const isFluent = (sp) => !!(sp && sp.mastered && (sp.fluentReps || 0) >= FLUENCY_REPS);
 
 // ==================== IMPLICIT REPETITIONS ====================
 // When student practices an advanced skill, prerequisites get partial credit

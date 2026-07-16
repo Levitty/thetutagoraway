@@ -550,7 +550,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     // Apply implicit repetitions to prerequisites (skip for placeholder stand-ins)
     let updatedSkills = isPlaceholder ? { ...progress.skills } : applyImplicitCredits(progress, activeSkill, correct, ctx);
 
-    const updatedSp = processReviewResult(sp, correct);
+    const updatedSp = processReviewResult(sp, correct, Date.now() - problemStartRef.current, 30000);
     updatedSp.attempts = newAttempts;
     updatedSp.correct = newCorrect;
     if (shouldMaster && !sp.mastered) {
@@ -647,7 +647,7 @@ export function AIMastery({ onBack, userId, studentName }) {
 
     // Update skill progress with spaced repetition
     const sp = progress.skills[skillId] || { attempts: 0, correct: 0, mastered: false, repNum: 0, learningSpeed: 1.0 };
-    const updatedSp = processReviewResult(sp, correct);
+    const updatedSp = processReviewResult(sp, correct, Date.now() - problemStartRef.current, 30000);
     updatedSp.attempts = sp.attempts + 1;
     updatedSp.correct = sp.correct + (correct ? 1 : 0);
 

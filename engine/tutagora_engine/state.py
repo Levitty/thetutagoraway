@@ -16,6 +16,9 @@ from .mastery import BKTParams, MasteryModel
 from .params import load_params
 
 
+FLUENCY_REPS = 3.0   # fast-correct answers needed before a skill counts as fluent
+
+
 def _now() -> datetime:
     return datetime.now(timezone.utc)
 
@@ -47,6 +50,8 @@ class SkillState:
     consecutive_failures: int = 0
     last_practice: Optional[str] = None   # ISO timestamp
     from_diagnostic: bool = False
+    # Automaticity: fast, correct answers build fluency; slow/wrong ones erode it.
+    fluent_reps: float = 0.0
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -122,10 +127,16 @@ class StudentModel:
         if correct:
             st.rep += 1.0 * evidence_weight
             st.consecutive_failures = 0
+            # Automaticity: a FAST correct answer builds fluency; a slow one
+            # (knew it, but laboured) erodes it. Needs timing data to count.
+            if time_taken_ms is not None and expected_ms:
+                st.fluent_reps = (st.fluent_reps + 1.0) if time_taken_ms <= expected_ms \
+                    else max(0.0, st.fluent_reps - 0.5)
         else:
             # A miss costs repetitions (memory shaken), worse on repeated misses.
             st.rep = max(0.0, st.rep - (1.0 + st.consecutive_failures * 0.5))
             st.consecutive_failures += 1
+            st.fluent_reps = max(0.0, st.fluent_reps - 1.0)   # errors break automaticity
 
         st.learning_speed = self.model.update_learning_speed(st.learning_speed, correct)
         st.last_practice = now.isoformat()
@@ -168,6 +179,14 @@ class StudentModel:
         if not skill or not skill.prerequisites:
             return True
         return all(self.is_mastered(p, now) for p in skill.prerequisites)
+
+    def is_fluent(self, skill_id: str, now: Optional[datetime] = None) -> bool:
+        """Mastered AND automatic — answered correctly *and quickly* enough
+        times that recall no longer takes conscious effort."""
+        st = self.skills.get(skill_id)
+        if st is None or not self.is_mastered(skill_id, now):
+            return False
+        return st.fluent_reps >= FLUENCY_REPS
 
     # ---- serialization (for the JS UI / Supabase) ----
     def to_dict(self) -> dict:

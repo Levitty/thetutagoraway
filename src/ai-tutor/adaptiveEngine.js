@@ -6,6 +6,7 @@
 
 import { SKILLS as MATH_SKILLS, getPostRequisites as mathGetPostReqs, getPrerequisiteChain as mathPreChain, getPostRequisiteChain as mathPostChain, STRANDS as MATH_STRANDS } from './knowledgeGraph.js';
 import { NATIVE, gradeOf, strandOf, isEnrichment } from './curricula.js';
+import { isFluent } from './spacedRepetition.js';
 
 // Default context (math) for backward compatibility
 const defaultCtx = () => ({
@@ -134,6 +135,26 @@ export const getReviews = (progress, ctx) => {
   return reviews.sort((a, b) => b.urgency - a.urgency);
 };
 
+// ==================== FLUENCY PRACTICE (AUTOMATICITY) ====================
+// Skills the student has mastered but can't yet do FAST — practising these to
+// automaticity frees working memory for harder skills.
+export const getFluencyPractice = (progress, ctx) => {
+  const c = resolveCtx(ctx);
+  const out = [];
+  for (const skill of c.skillList) {
+    const sp = progress.skills[skill.id];
+    if (!sp?.mastered || isFluent(sp)) continue;
+    out.push({
+      ...skill,
+      type: 'fluency',
+      reason: 'Build speed — you know it, now make it automatic',
+      fluentReps: sp.fluentReps || 0,
+    });
+  }
+  // Least-fluent first.
+  return out.sort((a, b) => (a.fluentReps || 0) - (b.fluentReps || 0));
+};
+
 // ==================== NEXT SKILLS TO LEARN ====================
 
 export const getNextToLearn = (progress, ctx) => {
@@ -175,6 +196,10 @@ export const getRecommendedPath = (progress, ctx) => {
   for (const r of reviews.slice(0, 2)) {
     if (!seen.has(r.id)) { path.push(r); seen.add(r.id); }
   }
+
+  // One automaticity rep — a mastered-but-slow skill to speed up.
+  const fluency = getFluencyPractice(progress, ctx);
+  if (fluency.length && !seen.has(fluency[0].id)) { path.push(fluency[0]); seen.add(fluency[0].id); }
 
   const nextSkills = getNextToLearn(progress, ctx);
   const strandPicks = {};

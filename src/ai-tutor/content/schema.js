@@ -101,6 +101,18 @@ export const hintLadder = (...hints) => hints.filter(Boolean);
 export const stepText = (s) =>
   (typeof s === 'string') ? s : (s.expr ? `${s.text}   →   ${s.expr}` : s.text);
 
+// Break a skill into ordered KNOWLEDGE POINTS (tiny sub-steps), taught one at a
+// time to keep cognitive load low. The engine can target a specific KP via
+// opts.kp (advancing as each is mastered); with no kp it cycles through them so
+// a lesson still spans the full range. Each kp is an already-wrapped generator.
+export const withKPs = (kps) => {
+  let auto = 0;
+  return (opts = {}) => {
+    const i = opts.kp != null ? Math.max(0, Math.min(opts.kp, kps.length - 1)) : (auto++ % kps.length);
+    return kps[i]();
+  };
+};
+
 // Bundle multiple representations of a skill at different CONCRETE→PICTORIAL→
 // ABSTRACT levels. The engine asks for a level (default 'abstract'); when a
 // student struggles, the lesson requests 'concrete' to build intuition first.
