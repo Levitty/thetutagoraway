@@ -13,6 +13,7 @@ import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
 import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
+import YoungLearnerLesson, { planYoungLesson } from './YoungLearnerLesson.jsx';
 import { supabase } from '../supabase.js';
 import { Icon } from './components/Icons.jsx';
 import { Lottie, LOTTIE } from './components/Lottie.jsx';
@@ -466,7 +467,10 @@ export function AIMastery({ onBack, userId, studentName }) {
     setKpIndex(0);
     setLessonFailCount(0);
     setModalityLevel('abstract');
-    const we = generateWorkedExample(skillId);
+    // Grades 1–2 never see the text worked example — the young flow teaches by
+    // demonstration (count-together) instead.
+    const young = (SKILLS[skillId]?.grade || 99) <= 2;
+    const we = young ? null : generateWorkedExample(skillId);
     setShowWorkedExample(!!we);
     setProblem(we ? null : generateProblem(skillId, { level: 'abstract' }));
     setAnswer('');
@@ -517,12 +521,22 @@ export function AIMastery({ onBack, userId, studentName }) {
     setFeedback(correct ? 'correct' : 'incorrect');
     if (!correct) setHintLevel(3); // Full reveal
 
+    finalizeResult(correct, {
+      attemptNo: newAttemptCount,
+      hintsUsed: correct ? hintLevel : 3,
+      timeMs: Date.now() - problemStartRef.current,
+    });
+  };
+
+  // The shared post-answer pipeline: telemetry, session, mastery/FIRe credit,
+  // CPA drop-down on struggle, XP. Used by the typed flow and the young flow.
+  const finalizeResult = (correct, { attemptNo, hintsUsed, timeMs, taps = null }) => {
     // Telemetry: capture the response for the HOREB learning loop.
     logResponse({
       studentId: userId, subject: subjectId, skillId: activeSkill,
       correct, problemType: problem?.type,
-      timeMs: Date.now() - problemStartRef.current,
-      hintsUsed: correct ? hintLevel : 3, attemptNo: newAttemptCount,
+      timeMs,
+      hintsUsed, attemptNo, taps,
     });
 
     const newSession = {
@@ -550,7 +564,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     // Apply implicit repetitions to prerequisites (skip for placeholder stand-ins)
     let updatedSkills = isPlaceholder ? { ...progress.skills } : applyImplicitCredits(progress, activeSkill, correct, ctx);
 
-    const updatedSp = processReviewResult(sp, correct, Date.now() - problemStartRef.current, 30000);
+    const updatedSp = processReviewResult(sp, correct, timeMs, 30000);
     updatedSp.attempts = newAttempts;
     updatedSp.correct = newCorrect;
     if (shouldMaster && !sp.mastered) {
@@ -604,6 +618,13 @@ export function AIMastery({ onBack, userId, studentName }) {
     }
   };
 
+  // Young learners (G1–2): one final result per problem from the young UI,
+  // then keep the flow moving — the child already had their celebration.
+  const handleYoungResult = ({ correct, hintsUsed, timeMs, taps }) => {
+    finalizeResult(correct, { attemptNo: hintsUsed + 1, hintsUsed, timeMs, taps });
+    nextProblem();
+  };
+
   const nextProblem = () => {
     setProblem(generateProblem(activeSkill, { level: modalityLevel }));
     setAnswer('');
@@ -647,7 +668,7 @@ export function AIMastery({ onBack, userId, studentName }) {
 
     // Update skill progress with spaced repetition
     const sp = progress.skills[skillId] || { attempts: 0, correct: 0, mastered: false, repNum: 0, learningSpeed: 1.0 };
-    const updatedSp = processReviewResult(sp, correct, Date.now() - problemStartRef.current, 30000);
+    const updatedSp = processReviewResult(sp, correct, timeMs, 30000);
     updatedSp.attempts = sp.attempts + 1;
     updatedSp.correct = sp.correct + (correct ? 1 : 0);
 
@@ -853,6 +874,28 @@ export function AIMastery({ onBack, userId, studentName }) {
     const skill = SKILLS[activeSkill];
     const sp = progress.skills[activeSkill] || { attempts: 0, correct: 0, mastered: false };
     const pct = Math.min(100, (session.correct / skill.minProblems) * 100);
+
+    // Grades 1–2 get the young-learner experience: read-aloud, tappable
+    // counters, count-together scaffolding. Falls back to the standard UI for
+    // problem shapes the young plan can't express.
+    if ((skill.grade || 99) <= 2 && problem) {
+      const plan = planYoungLesson(problem);
+      if (plan) {
+        const cbc = skill.curricula?.cbc;
+        return (
+          <YoungLearnerLesson
+            problem={problem}
+            plan={plan}
+            skillName={skill.name}
+            cbcLabel={cbc ? `CBC · Grade ${cbc.grade} · ${cbc.strand} — ${cbc.substrand}` : `Grade ${skill.grade} · ${skill.strand}`}
+            progressLabel={`${session.correct} of ${skill.minProblems}`}
+            studentName={(studentName || '').trim().split(/\s+/)[0]}
+            onResult={handleYoungResult}
+            onExit={goHome}
+          />
+        );
+      }
+    }
 
     return (
       <div className="min-h-screen bg-slate-900 text-white" onClick={() => activeTooltip && setActiveTooltip(null)}>
