@@ -36,11 +36,12 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           # The built site. Trailing slash matters.
           local-dir: ./dist/
-          # The MAIN Hostinger FTP account (u815511091.tutagora.com) logs in at
-          # the account home, one level ABOVE the web root — so we must target
-          # public_html explicitly. (The old custom FTP account that was rooted
-          # inside public_html was lost in the 2026-07-16 server transfer.)
-          server-dir: ./public_html/
+          # VERIFIED 2026-07-17: the main FTP account (u815511091.tutagora.com)
+          # logs in already rooted at public_html — the web root IS the login
+          # dir. Targeting ./public_html/ here nests into public_html/public_html
+          # and the live site never updates. (hPanel's "Folder to upload files:
+          # public_html" is generic guidance, not this account's login root.)
+          server-dir: ./
           # More tolerance for slow FTP handshakes (default 30s sometimes times
           # out against Hostinger). Milliseconds.
           timeout: 120000
