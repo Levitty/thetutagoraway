@@ -14,6 +14,7 @@ import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEV
 import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
 import YoungLearnerLesson, { planYoungLesson } from './YoungLearnerLesson.jsx';
+import BridgeLesson, { planBridgeLesson } from './BridgeLesson.jsx';
 import { supabase } from '../supabase.js';
 import { Icon } from './components/Icons.jsx';
 import { Lottie, LOTTIE } from './components/Lottie.jsx';
@@ -467,9 +468,9 @@ export function AIMastery({ onBack, userId, studentName }) {
     setKpIndex(0);
     setLessonFailCount(0);
     setModalityLevel('abstract');
-    // Grades 1–2 never see the text worked example — the young flow teaches by
-    // demonstration (count-together) instead.
-    const young = (SKILLS[skillId]?.grade || 99) <= 2;
+    // Grades 1–4 never see the text worked example — the young flow teaches by
+    // demonstration (count-together / column reveal) instead.
+    const young = (SKILLS[skillId]?.grade || 99) <= 4;
     const we = young ? null : generateWorkedExample(skillId);
     setShowWorkedExample(!!we);
     setProblem(we ? null : generateProblem(skillId, { level: 'abstract' }));
@@ -878,22 +879,23 @@ export function AIMastery({ onBack, userId, studentName }) {
     // Grades 1–2 get the young-learner experience: read-aloud, tappable
     // counters, count-together scaffolding. Falls back to the standard UI for
     // problem shapes the young plan can't express.
-    if ((skill.grade || 99) <= 2 && problem) {
-      const plan = planYoungLesson(problem);
-      if (plan) {
-        const cbc = skill.curricula?.cbc;
-        return (
-          <YoungLearnerLesson
-            problem={problem}
-            plan={plan}
-            skillName={skill.name}
-            cbcLabel={cbc ? `CBC · Grade ${cbc.grade} · ${cbc.strand} — ${cbc.substrand}` : `Grade ${skill.grade} · ${skill.strand}`}
-            progressLabel={`${session.correct} of ${skill.minProblems}`}
-            studentName={(studentName || '').trim().split(/\s+/)[0]}
-            onResult={handleYoungResult}
-            onExit={goHome}
-          />
-        );
+    if ((skill.grade || 99) <= 4 && problem) {
+      const cbc = skill.curricula?.cbc;
+      const shared = {
+        problem,
+        skillName: skill.name,
+        cbcLabel: cbc ? `CBC · Grade ${cbc.grade} · ${cbc.strand} — ${cbc.substrand}` : `Grade ${skill.grade} · ${skill.strand}`,
+        progressLabel: `${session.correct} of ${skill.minProblems}`,
+        studentName: (studentName || '').trim().split(/\s+/)[0],
+        onResult: handleYoungResult,
+        onExit: goHome,
+      };
+      if (skill.grade <= 2) {
+        const plan = planYoungLesson(problem);
+        if (plan) return <YoungLearnerLesson {...shared} plan={plan} />;
+      } else {
+        const plan = planBridgeLesson(problem);
+        if (plan) return <BridgeLesson {...shared} plan={plan} />;
       }
     }
 
