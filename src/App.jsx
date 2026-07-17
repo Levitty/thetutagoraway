@@ -4116,26 +4116,22 @@ const GroupClassEnrollModal = ({ gc, user, onClose, onSuccess }) => {
       reference,
       metadata: { group_class_id: gc.id, title: gc.title },
       onSuccess: async (response) => {
-        // Verify server-side, then enrol. Falls back to the capacity-checked
-        // RPC if the edge function isn't reachable so live payments still enrol.
+        // A paid enrolment is confirmed ONLY by the server (verify-payment
+        // checks the Paystack reference + amount with the service role). If the
+        // function can't be reached we do NOT self-confirm — the money is safe
+        // with Paystack and the webhook/retry will reconcile it.
         let confirmed = false;
         try {
           const { data, error: vErr } = await supabase.functions.invoke('verify-payment', {
             body: { reference: response.reference, group_class_id: gc.id, student_id: user.id },
           });
-          if (vErr) {
-            const { error: rpcErr } = await supabase.rpc('enroll_in_group_class', { p_class: gc.id, p_reference: response.reference, p_amount: amount });
-            confirmed = !rpcErr;
-          } else {
-            confirmed = data?.verified === true;
-          }
+          confirmed = !vErr && data?.verified === true;
         } catch (e) {
-          const { error: rpcErr } = await supabase.rpc('enroll_in_group_class', { p_class: gc.id, p_reference: response.reference, p_amount: amount });
-          confirmed = !rpcErr;
+          confirmed = false;
         }
 
         if (!confirmed) {
-          setError('We couldn’t confirm your enrolment. If you were charged, contact support and we’ll sort it out.');
+          setError('Payment received — we’re confirming your place now. If it doesn’t appear in a minute, contact support with your M-Pesa message and we’ll sort it out.');
           setStep('error');
           return;
         }

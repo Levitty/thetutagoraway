@@ -125,27 +125,24 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
         // payment with the service role. If it's unreachable (e.g. not deployed
         // yet), fall back to client recording so live payments don't break
         // during rollout — but a genuine "not verified" is treated as failure.
+        // A payment is confirmed ONLY by the server (verify-payment checks the
+        // Paystack reference + amount with the service role and marks the
+        // booking). The browser never self-confirms — if the function is
+        // unreachable the money is still safe with Paystack to reconcile.
         let confirmed = false;
         try {
           const { data, error } = await supabase.functions.invoke('verify-payment', {
             body: { reference: response.reference, booking_id: booking.id },
           });
-          if (error) {
-            console.warn('verify-payment unreachable, falling back to client recording:', error.message);
-            await updatePaymentStatus('completed', response.reference);
-            confirmed = true;
-          } else {
-            confirmed = data?.verified === true;
-          }
+          confirmed = !error && data?.verified === true;
         } catch (e) {
-          console.warn('verify-payment threw, falling back:', e);
-          await updatePaymentStatus('completed', response.reference);
-          confirmed = true;
+          console.warn('verify-payment unreachable:', e);
+          confirmed = false;
         }
 
         if (!confirmed) {
-          setPaymentStatus({ status: 'error', message: 'We couldn’t confirm this payment. If you were charged, contact support and we’ll sort it out.' });
-          setError('Payment could not be verified.');
+          setPaymentStatus({ status: 'error', message: 'Payment received — we’re confirming your booking now. If it doesn’t appear in a minute, contact support with your M-Pesa message and we’ll sort it out.' });
+          setError('Awaiting payment confirmation.');
           return;
         }
 

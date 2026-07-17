@@ -657,11 +657,12 @@ export function AIMastery({ onBack, userId, studentName }) {
     if (!answer.trim() || feedback) return;
     const skillId = reviewProblems[reviewIndex];
     const correct = checkAnswerMatch(answer, problem);
+    const timeMs = Date.now() - problemStartRef.current;
 
     logResponse({
       studentId: userId, subject: subjectId, skillId,
       correct, problemType: problem?.type,
-      timeMs: Date.now() - problemStartRef.current, isReview: true,
+      timeMs, isReview: true,
     });
 
     setFeedback(correct ? 'correct' : 'incorrect');

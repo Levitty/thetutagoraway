@@ -1,5 +1,5 @@
 // Paystack Integration for Tutagora
-// Supports card payments (Visa, Mastercard, etc.)
+// Supports M-Pesa (mobile money) and cards (Visa, Mastercard) in KES.
 
 const PAYSTACK_PUBLIC_KEY = 'pk_live_cc35ac8647264dd74bd63770c39cce9a18333b90';
 
@@ -37,6 +37,9 @@ export const initiatePaystackPayment = async ({
       email: email,
       amount: amount * 100, // Paystack expects amount in cents/kobo
       currency: 'KES',
+      // Show M-Pesa first (how Kenyan parents pay), then cards. Explicit so the
+      // option set is predictable regardless of dashboard channel ordering.
+      channels: ['mobile_money', 'card', 'bank'],
       ref: reference || `TUT-${Date.now()}`,
       metadata: {
         custom_fields: [
