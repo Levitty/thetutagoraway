@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { supabase } from './supabase';
 import { VideoRoom } from './VideoRoom';
+import { INTEREST_CATEGORIES, categoryLabel, categoryEmoji } from './groupClassCategories.js';
 import { PaymentModal } from './PaymentModal';
 import { initiatePaystackPayment } from './paystack';
 import { Messaging, MessageButton, startConversation } from './Messaging';
@@ -2076,7 +2077,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
   // Group classes state
   const [groupClasses, setGroupClasses] = useState([]);
   const [showCreateClass, setShowCreateClass] = useState(false);
-  const [classForm, setClassForm] = useState({ title: '', description: '', subject: '', max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
+  const [classForm, setClassForm] = useState({ title: '', description: '', subject: '', class_type: 'academic', category: '', age_range: '', recurring: false, max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
   const [classLoading, setClassLoading] = useState(false);
   const [classError, setClassError] = useState('');
 
@@ -2097,9 +2098,16 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
     if (when.getTime() < Date.now()) { setClassError('That date and time is in the past — pick a future slot.'); return; }
 
     setClassLoading(true);
+    const isInterest = classForm.class_type === 'interest';
+    if (isInterest && !classForm.category) { setClassError('Please choose a club category.'); setClassLoading(false); return; }
+    if (!isInterest && !classForm.subject) { setClassError('Please choose a subject.'); setClassLoading(false); return; }
     const { data, error } = await supabase.from('group_classes').insert({
       tutor_id: tutor.id,
       ...classForm,
+      // The DB CHECK enforces this pairing: interest → category (no subject),
+      // academic → subject (no category).
+      subject:  isInterest ? null : classForm.subject,
+      category: isInterest ? classForm.category : null,
       price_per_student: parseInt(classForm.price_per_student),
       max_students: parseInt(classForm.max_students),
       duration_minutes: parseInt(classForm.duration_minutes),
@@ -2107,7 +2115,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
     if (data) {
       setGroupClasses(prev => [...prev, data]);
       setShowCreateClass(false);
-      setClassForm({ title: '', description: '', subject: '', max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
+      setClassForm({ title: '', description: '', subject: '', class_type: 'academic', category: '', age_range: '', recurring: false, max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
     }
     if (error) {
       console.error('Error creating group class:', error);
@@ -2396,11 +2404,24 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
               {showCreateClass && (
                 <form onSubmit={handleCreateGroupClass} className="bg-white rounded-xl border border-slate-200 p-6 space-y-4">
                   <h3 className="font-semibold text-slate-900">Create a New Group Class</h3>
+                  {/* Academic vs interest club */}
+                  <div className="grid grid-cols-2 gap-3">
+                    {[
+                      { v: 'academic', t: 'Academic class', d: 'A school subject — revision, exam prep' },
+                      { v: 'interest', t: 'Interest club', d: 'Chess, coding, art, debate…' },
+                    ].map(o => (
+                      <button type="button" key={o.v} onClick={() => setClassForm({ ...classForm, class_type: o.v })}
+                        className={`text-left rounded-lg border p-3 transition-colors ${classForm.class_type === o.v ? 'border-emerald-500 bg-emerald-50 ring-1 ring-emerald-500' : 'border-slate-200 hover:border-slate-300'}`}>
+                        <div className="font-medium text-slate-900 text-sm">{o.t}</div>
+                        <div className="text-xs text-slate-500 mt-0.5">{o.d}</div>
+                      </button>
+                    ))}
+                  </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="col-span-2">
-                      <label className="block text-sm font-medium text-slate-700 mb-1">Class Title *</label>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">{classForm.class_type === 'interest' ? 'Club Name *' : 'Class Title *'}</label>
                       <input type="text" value={classForm.title} onChange={(e) => setClassForm({ ...classForm, title: e.target.value })}
-                        placeholder="e.g. KCSE Mathematics Revision" required
+                        placeholder={classForm.class_type === 'interest' ? 'e.g. Saturday Chess Club' : 'e.g. KCSE Mathematics Revision'} required
                         className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
                     </div>
                     <div className="col-span-2">
@@ -2409,14 +2430,25 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                         placeholder="What will students learn in this class?" rows={3}
                         className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-1">Subject *</label>
-                      <select value={classForm.subject} onChange={(e) => setClassForm({ ...classForm, subject: e.target.value })} required
-                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                        <option value="">Select subject</option>
-                        {['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'].map(s => <option key={s} value={s}>{s}</option>)}
-                      </select>
-                    </div>
+                    {classForm.class_type === 'interest' ? (
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-1">Category *</label>
+                        <select value={classForm.category} onChange={(e) => setClassForm({ ...classForm, category: e.target.value })}
+                          className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                          <option value="">Choose a club type</option>
+                          {INTEREST_CATEGORIES.map(c => <option key={c.key} value={c.key}>{c.emoji} {c.label}</option>)}
+                        </select>
+                      </div>
+                    ) : (
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-1">Subject *</label>
+                        <select value={classForm.subject} onChange={(e) => setClassForm({ ...classForm, subject: e.target.value })}
+                          className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                          <option value="">Select subject</option>
+                          {['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'].map(s => <option key={s} value={s}>{s}</option>)}
+                        </select>
+                      </div>
+                    )}
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">Max Students (2-20)</label>
                       <input type="number" value={classForm.max_students} onChange={(e) => setClassForm({ ...classForm, max_students: e.target.value })}
@@ -3962,6 +3994,8 @@ const GroupClassesBrowse = ({ user, setShowAuth }) => {
   const [classes, setClasses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [subjectFilter, setSubjectFilter] = useState('');
+  const [typeFilter, setTypeFilter] = useState('all'); // all | academic | interest
+  const [catFilter, setCatFilter] = useState('');
   const [myEnrollments, setMyEnrollments] = useState({}); // group_class_id -> true
   const [payClass, setPayClass] = useState(null); // class being enrolled in
 
@@ -4001,26 +4035,60 @@ const GroupClassesBrowse = ({ user, setShowAuth }) => {
     fetchClasses(); // refresh enrolment counts
   };
 
-  const filtered = subjectFilter ? classes.filter(c => c.subject === subjectFilter) : classes;
+  const filtered = classes.filter(c => {
+    const ctype = c.class_type || 'academic';
+    if (typeFilter !== 'all' && ctype !== typeFilter) return false;
+    if (typeFilter === 'academic' && subjectFilter && c.subject !== subjectFilter) return false;
+    if (typeFilter === 'interest' && catFilter && c.category !== catFilter) return false;
+    return true;
+  });
+  // Which interest categories actually have open clubs right now?
+  const liveCats = INTEREST_CATEGORIES.filter(cat => classes.some(c => c.category === cat.key));
 
   if (loading) return null;
   if (classes.length === 0) return null;
 
   return (
     <div className="mt-12">
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h2 className="text-2xl font-bold text-slate-900">Group Classes</h2>
-          <p className="text-slate-500 text-sm mt-1">Join a class with other students at a lower price</p>
-        </div>
+      <div className="mb-5">
+        <h2 className="text-2xl font-bold text-slate-900">Group Classes & Clubs</h2>
+        <p className="text-slate-500 text-sm mt-1">Learn together for less — academic classes, or interest clubs kids join for fun.</p>
+      </div>
+      {/* Academic / Clubs toggle */}
+      <div className="flex gap-2 mb-4">
+        {[
+          { v: 'all', t: 'All' },
+          { v: 'academic', t: 'Academic' },
+          { v: 'interest', t: '✨ Interest clubs' },
+        ].map(o => (
+          <button key={o.v} onClick={() => { setTypeFilter(o.v); setSubjectFilter(''); setCatFilter(''); }}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${typeFilter === o.v ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:border-slate-300'}`}>
+            {o.t}
+          </button>
+        ))}
+      </div>
+      {/* Secondary filter: subjects for academic, category chips for clubs */}
+      {typeFilter === 'academic' && (
         <select value={subjectFilter} onChange={(e) => setSubjectFilter(e.target.value)}
-          className="px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm">
-          <option value="">All Subjects</option>
+          className="px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm mb-5">
+          <option value="">All subjects</option>
           {['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'].map(s => (
             <option key={s} value={s}>{s}</option>
           ))}
         </select>
-      </div>
+      )}
+      {typeFilter === 'interest' && liveCats.length > 0 && (
+        <div className="flex flex-wrap gap-2 mb-5">
+          <button onClick={() => setCatFilter('')}
+            className={`px-3 py-1.5 rounded-full text-sm transition-colors ${!catFilter ? 'bg-emerald-600 text-white' : 'bg-white border border-slate-200 text-slate-600'}`}>All clubs</button>
+          {liveCats.map(cat => (
+            <button key={cat.key} onClick={() => setCatFilter(cat.key)}
+              className={`px-3 py-1.5 rounded-full text-sm transition-colors ${catFilter === cat.key ? 'bg-emerald-600 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:border-slate-300'}`}>
+              {cat.emoji} {cat.label}
+            </button>
+          ))}
+        </div>
+      )}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {filtered.map(gc => {
           const enrolled = gc.group_class_enrollments?.length || 0;
@@ -4035,10 +4103,12 @@ const GroupClassesBrowse = ({ user, setShowAuth }) => {
                   alt={gc.profiles?.full_name} className="w-10 h-10 rounded-full object-cover bg-slate-100" />
                 <div>
                   <p className="font-medium text-slate-900 text-sm">{gc.profiles?.full_name}</p>
-                  <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">{gc.subject}</span>
+                  {gc.class_type === 'interest'
+                    ? <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">{categoryEmoji(gc.category)} {categoryLabel(gc.category)}</span>
+                    : <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">{gc.subject}</span>}
                 </div>
               </div>
-              <h3 className="font-bold text-slate-900 mb-1">{gc.title}</h3>
+              <h3 className="font-bold text-slate-900 mb-1">{gc.class_type === 'interest' && gc.recurring ? '🔁 ' : ''}{gc.title}</h3>
               {gc.description && <p className="text-sm text-slate-500 line-clamp-2 mb-3">{gc.description}</p>}
               <div className="flex flex-wrap gap-3 text-sm text-slate-600 mb-3">
                 <span>{new Date(gc.lesson_date).toLocaleDateString('en', { weekday: 'short', month: 'short', day: 'numeric' })}</span>
