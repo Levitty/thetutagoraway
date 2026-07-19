@@ -75,7 +75,11 @@ export const findGaps = (progress, ctx) => {
 
   for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
-    if (sp && sp.attempts >= 3 && (sp.correct / sp.attempts) < 0.6) {
+    // Struggling = poor live accuracy OR an outright diagnostic failure — the
+    // diagnostic seeds attempts:1, which the >=3 threshold silently ignored,
+    // so freshly-diagnosed gaps never surfaced to the student or the teacher.
+    const diagnosticFail = sp?.fromDiagnostic && sp?.passed === false;
+    if (sp && ((sp.attempts >= 3 && (sp.correct / sp.attempts) < 0.6) || diagnosticFail)) {
       const preReqs = skill.keyPrerequisites || skill.prerequisites;
       for (const pid of preReqs) {
         const pp = progress.skills[pid];

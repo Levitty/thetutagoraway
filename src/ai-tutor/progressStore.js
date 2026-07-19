@@ -175,6 +175,7 @@ export const forceSave = async (userId, progress) => {
           diagnosticBalances: progress.diagnosticBalances,
           curriculum: progress.curriculum,
           declaredGrade: progress.declaredGrade,
+          placementGrade: progress.placementGrade,
           dailyXP: progress.dailyXP,
           dailyDate: progress.dailyDate,
           achievements: progress.achievements,

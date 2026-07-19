@@ -191,7 +191,7 @@ const PrivacyPolicyPage = ({ onBack }) => (
         <section>
           <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">1. Data Controller</h2>
           <p>Tutagora Ltd ("Tutagora", "we", "us") is the data controller responsible for your personal data. We are registered in Kenya and operate the platform at tutagora.com.</p>
-          <p><strong>Contact:</strong> levitty@tutagora.com | +254 742 410 255 | Nairobi, Kenya</p>
+          <p><strong>Contact:</strong> tutaeducators@gmail.com | +254 759 240 692 | Nairobi, Kenya</p>
         </section>
 
         <section>
@@ -3802,8 +3802,8 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>📧 levitty@tutagora.com</li>
-                <li>📱 +254 742 410 255</li>
+                <li>📧 tutaeducators@gmail.com</li>
+                <li>📱 +254 759 240 692</li>
                 <li>📍 Nairobi, Kenya</li>
               </ul>
             </div>
@@ -4680,6 +4680,8 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
         <div className="hidden md:flex items-center gap-4">
           <button onClick={() => onNavigate('tutors')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Find Tutors</button>
           <button onClick={() => onNavigate('consulting')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Consulting</button>
+          <button onClick={() => onNavigate('clubs')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Clubs</button>
+          <button onClick={() => onNavigate('schools')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>For Schools</button>
           {isAdmin && <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-purple-600' : 'text-purple-300'}`}>Admin</button>}
           {user && profile?.role === 'student' && <MomentumChip userId={profile?.id} onClick={() => onNavigate('ai')} />}
           {user ? (
@@ -4713,6 +4715,8 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
         <div className={`md:hidden ${scrolled ? 'bg-white border-t border-slate-100' : 'bg-slate-900/95 backdrop-blur-sm'} px-4 py-4 space-y-2`}>
           <button onClick={() => { onNavigate('tutors'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Find Tutors</button>
           <button onClick={() => { onNavigate('consulting'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Consulting</button>
+          <button onClick={() => { onNavigate('clubs'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Clubs</button>
+          <button onClick={() => { onNavigate('schools'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>For Schools</button>
           {isAdmin && <button onClick={() => { onNavigate('admin'); setMobileOpen(false); }} className="block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-purple-400 hover:bg-white/10">Admin</button>}
           {!user && (
             <div className="flex gap-2 pt-2">

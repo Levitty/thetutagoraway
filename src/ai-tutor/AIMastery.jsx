@@ -665,13 +665,18 @@ export function AIMastery({ onBack, userId, studentName }) {
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
     setReviewTimer(0);
     setReviewTimerActive(true);
+    setVisualAnswer(null);
     setView('review');
   };
 
   const handleReviewAnswer = () => {
-    if (!answer.trim() || feedback) return;
+    // Visual problems are answered by interaction, same as in lessons.
+    const hasVisualAnswer = problem?.visual && visualAnswer != null;
+    if ((!answer.trim() && !hasVisualAnswer) || feedback) return;
     const skillId = reviewProblems[reviewIndex];
-    const correct = checkAnswerMatch(answer, problem);
+    const correct = hasVisualAnswer
+      ? checkVisualAnswer(visualAnswer, problem.visual)
+      : checkAnswerMatch(answer, problem);
     const timeMs = Date.now() - problemStartRef.current;
 
     logResponse({
@@ -704,6 +709,7 @@ export function AIMastery({ onBack, userId, studentName }) {
         setProblem(generateProblem(reviewProblems[next]));
         setAnswer('');
         setFeedback(null);
+        setVisualAnswer(null);
       } else {
         // Review complete
         setReviewTimerActive(false);
@@ -1145,11 +1151,21 @@ export function AIMastery({ onBack, userId, studentName }) {
 
           <div className="bg-slate-800 rounded-2xl p-6 mb-4">
             <div className="text-lg mb-6">{problem?.question}</div>
-            <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50" autoFocus placeholder="Your answer..." />
+            {problem?.visual && (
+              <div className="mb-4">
+                <InteractiveVisual
+                  visualType={problem.visual.type}
+                  visualData={problem.visual.data}
+                  onAnswer={setVisualAnswer}
+                  disabled={!!feedback}
+                />
+              </div>
+            )}
+            <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50" autoFocus placeholder={problem?.visual ? 'Use the diagram above, or type your answer…' : 'Your answer...'} />
           </div>
 
           {feedback && <div className={`rounded-xl p-4 mb-4 ${feedback === 'correct' ? 'bg-emerald-900/50 border border-emerald-500' : 'bg-red-900/50 border border-red-500'}`}>{feedback === 'correct' ? <span className="text-emerald-400">✓ Correct!</span> : <span className="text-red-400">✗ Answer: {problem?.answer}</span>}</div>}
-          {!feedback && <button onClick={handleReviewAnswer} disabled={!answer.trim()} className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">Check</button>}
+          {!feedback && <button onClick={handleReviewAnswer} disabled={!answer.trim() && !(problem?.visual && visualAnswer != null)} className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">Check</button>}
         </div>
         </div>
       </div>
