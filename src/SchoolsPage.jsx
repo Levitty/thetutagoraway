@@ -158,16 +158,16 @@ export default function SchoolsPage({ onNavigate }) {
         <h2 className="text-[28px] font-extrabold tracking-[-.02em] mb-6">What your school gets</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           {[
-            ['📋', 'Whole-class assignment', 'Assign HOREB to a class in one step; every child gets an adaptive path from wherever they actually are.'],
-            ['🎯', 'The teacher dashboard', 'Each week: who is stuck, on which CBC sub-strand — with a five-minute move to unstick each child.'],
-            ['📊', 'Per-student mastery reports', 'Progress by strand in the official CBC names. Ready for the report card and the head teacher.'],
-            ['💬', 'Parent updates', 'Termly progress in plain language — the message that keeps families enrolled.'],
-            ['🪜', 'Foundations rebuilt', 'Struggling learners are taken back to the missing step, quietly, without shame.'],
-            ['🚀', 'No ceiling above', 'Gifted children keep climbing past their grade instead of waiting for the class.'],
-          ].map(([ic, t, d]) => (
+            ['M4 6 h16 M4 12 h16 M4 18 h10', 'Whole-class assignment', 'Assign HOREB to a class in one step; every child gets an adaptive path from wherever they actually are.'],
+            ['M12 12 m-8 0 a8 8 0 1 0 16 0 a8 8 0 1 0-16 0 M12 12 m-3 0 a3 3 0 1 0 6 0 a3 3 0 1 0-6 0', 'The teacher dashboard', 'Each week: who is stuck, on which CBC sub-strand — with a five-minute move to unstick each child.'],
+            ['M5 19 v-7 M12 19 v-12 M19 19 v-4 M3 21 h18', 'Per-student mastery reports', 'Progress by strand in the official CBC names. Ready for the report card and the head teacher.'],
+            ['M4 5 h16 v11 h-9 l-5 4 v-4 H4z', 'Parent updates', 'Termly progress in plain language — the message that keeps families enrolled.'],
+            ['M7 21 V6 M17 21 V6 M7 17 h10 M7 12 h10 M7 7 h10', 'Foundations rebuilt', 'Struggling learners are taken back to the missing step, quietly, without shame.'],
+            ['M12 3 l3 6 6 1-4.5 4 1 6.5-5.5-3-5.5 3 1-6.5L3 10l6-1z', 'No ceiling above', 'Gifted children keep climbing past their grade instead of waiting for the class.'],
+          ].map(([d0, t, d]) => (
             <div key={t} className="rounded-2xl bg-white/5 border border-white/10 p-5 hover:bg-white/[.07] transition-colors">
-              <div className="text-[22px]">{ic}</div>
-              <h3 className="mt-2 font-bold text-[16.5px]">{t}</h3>
+              <svg viewBox="0 0 24 24" className="w-6 h-6 text-amber-300" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d0} /></svg>
+              <h3 className="mt-3 font-bold text-[16.5px]">{t}</h3>
               <p className="mt-1.5 text-[14px] leading-relaxed text-white/60">{d}</p>
             </div>
           ))}

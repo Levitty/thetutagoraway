@@ -10,7 +10,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { supabase } from './supabase.js';
 import { INTEREST_CATEGORIES, CATEGORY_BY_KEY } from './groupClassCategories.js';
-import ClubArt from './ClubArt.jsx';
+import ClubArt, { ClubGlyph } from './ClubArt.jsx';
 
 const WA = 'https://wa.me/254759240692?text=My%20child%20would%20love%20a%20club%20about...';
 
@@ -30,8 +30,8 @@ function ClubCard({ gc, onJoin, user, setShowAuth }) {
     <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col">
       <div className="relative h-36 overflow-hidden">
         <ClubArt categoryKey={gc.category} className="w-full h-full object-cover" />
-        <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/35 backdrop-blur-sm text-white text-[11px] font-bold tracking-wide">
-          {c.emoji} {c.label}
+        <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white text-[11px] font-bold tracking-wide">
+          <ClubGlyph categoryKey={gc.category} className="w-3.5 h-3.5" /> {c.label}
         </span>
         {gc.recurring && (
           <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/90 text-slate-900 text-[11px] font-bold">
@@ -188,11 +188,11 @@ export default function ClubsPage({ user, onNavigate, setShowAuth, onEnroll }) {
             </button>
             {(liveCats.length ? liveCats : INTEREST_CATEGORIES).map(c => (
               <button key={c.key} onClick={() => setCat(cat === c.key ? '' : c.key)}
-                className="px-4 py-2 rounded-full text-[13px] font-semibold transition-colors"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-[13px] font-semibold transition-colors"
                 style={cat === c.key
                   ? { background: c.c1, color: '#fff' }
                   : { background: '#f1f5f9', color: '#475569' }}>
-                {c.emoji} {c.label}
+                <ClubGlyph categoryKey={c.key} className="w-3.5 h-3.5" /> {c.label}
               </button>
             ))}
           </div>
