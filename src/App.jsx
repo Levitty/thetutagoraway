@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { supabase } from './supabase';
 import { VideoRoom } from './VideoRoom';
-import { INTEREST_CATEGORIES, categoryLabel, categoryEmoji } from './groupClassCategories.js';
+import { INTEREST_CATEGORIES, CATEGORY_BY_KEY, categoryLabel, categoryEmoji } from './groupClassCategories.js';
 import { PaymentModal } from './PaymentModal';
 import { initiatePaystackPayment } from './paystack';
 import { Messaging, MessageButton, startConversation } from './Messaging';
@@ -10,6 +10,7 @@ import { getLevel } from './ai-tutor/adaptiveEngine.js';
 import { todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP } from './ai-tutor/gamification.js';
 import { TeacherDashboard } from './ai-tutor/TeacherDashboard.jsx';
 import SchoolsPage from './SchoolsPage.jsx';
+import ClubsPage from './ClubsPage.jsx';
 import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
@@ -905,6 +906,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
           </button>
           <div className="flex items-center gap-3 sm:gap-4">
             <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600 hidden sm:block">Find Tutors</button>
+            <button onClick={() => onNavigate('clubs')} className="text-sm text-slate-600 hidden sm:block">Clubs</button>
             <button onClick={() => onNavigate('schools')} className="text-sm text-slate-600 hidden sm:block">For Schools</button>
             {aiProgress?.diagnosed
               ? <MomentumChipView level={getLevel(aiProgress.totalXP).level} streak={aiProgress.currentStreak} onClick={() => onNavigate('ai')} />
@@ -2002,6 +2004,22 @@ const TutorOnboarding = ({ profile, onComplete }) => {
   );
 };
 
+// ============ CLUBS ROUTE (discovery + enrolment modal) ============
+const ClubsRoute = ({ user, onNavigate, setShowAuth }) => {
+  const [payClass, setPayClass] = useState(null);
+  const [bump, setBump] = useState(0);           // re-mount ClubsPage after enrolment to refresh counts
+  return (
+    <>
+      <ClubsPage key={bump} user={user} onNavigate={onNavigate} setShowAuth={setShowAuth} onEnroll={setPayClass} />
+      {payClass && (
+        <GroupClassEnrollModal gc={payClass} user={user}
+          onClose={() => setPayClass(null)}
+          onSuccess={() => { setPayClass(null); setBump(b => b + 1); }} />
+      )}
+    </>
+  );
+};
+
 // ============ TUTOR DASHBOARD ============
 const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, onNavigate, isAdmin, onOpenAccountSettings }) => {
   const [tab, setTab] = useState('overview');
@@ -2019,17 +2037,35 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
     }
   }, [tutor?.verification_status]);
 
+  // Verification status (tutor may be null pre-onboarding — derive defensively)
+  const verificationStatus = tutor?.verification_status || (tutor?.verified ? 'approved' : 'pending');
+  const isPending = verificationStatus === 'pending';
+  const isRejected = verificationStatus === 'rejected';
+  const isApproved = verificationStatus === 'approved';
+
+  // Group classes state — MUST live above the onboarding early-return. React
+  // requires an identical hook count every render; when onboarding completes
+  // and the early return stops firing, hooks declared below it would suddenly
+  // start executing → React #310 crash right at "go to dashboard".
+  const [groupClasses, setGroupClasses] = useState([]);
+  const [showCreateClass, setShowCreateClass] = useState(false);
+  const [classForm, setClassForm] = useState({ title: '', description: '', subject: '', class_type: 'academic', category: '', age_range: '', recurring: false, max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
+  const [classLoading, setClassLoading] = useState(false);
+  const [classError, setClassError] = useState('');
+
+  useEffect(() => {
+    if (tutor?.id && isApproved) {
+      supabase.from('group_classes').select('*, group_class_enrollments(id, student_id, profiles:student_id(full_name))').eq('tutor_id', tutor.id).order('lesson_date', { ascending: true }).then(({ data }) => {
+        if (data) setGroupClasses(data);
+      });
+    }
+  }, [tutor?.id, isApproved]);
+
   // Show onboarding if: no tutor profile, incomplete profile (no bio or documents), or re-submitting after rejection
   const needsOnboarding = !tutor || resubmitting || !tutor.bio || !tutor.id_document_url;
   if (needsOnboarding) {
     return <TutorOnboarding profile={profile} onComplete={() => { setResubmitting(false); onRefreshProfile(); }} />;
   }
-
-  // Verification status
-  const verificationStatus = tutor.verification_status || (tutor.verified ? 'approved' : 'pending');
-  const isPending = verificationStatus === 'pending';
-  const isRejected = verificationStatus === 'rejected';
-  const isApproved = verificationStatus === 'approved';
 
   const VerificationBanner = () => {
     if (isApproved) return null;
@@ -2075,21 +2111,6 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
       </div>
     );
   };
-
-  // Group classes state
-  const [groupClasses, setGroupClasses] = useState([]);
-  const [showCreateClass, setShowCreateClass] = useState(false);
-  const [classForm, setClassForm] = useState({ title: '', description: '', subject: '', class_type: 'academic', category: '', age_range: '', recurring: false, max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
-  const [classLoading, setClassLoading] = useState(false);
-  const [classError, setClassError] = useState('');
-
-  useEffect(() => {
-    if (tutor?.id && isApproved) {
-      supabase.from('group_classes').select('*, group_class_enrollments(id, student_id, profiles:student_id(full_name))').eq('tutor_id', tutor.id).order('lesson_date', { ascending: true }).then(({ data }) => {
-        if (data) setGroupClasses(data);
-      });
-    }
-  }, [tutor?.id, isApproved]);
 
   const handleCreateGroupClass = async (e) => {
     e.preventDefault();
@@ -2423,7 +2444,9 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                     <div className="col-span-2">
                       <label className="block text-sm font-medium text-slate-700 mb-1">{classForm.class_type === 'interest' ? 'Club Name *' : 'Class Title *'}</label>
                       <input type="text" value={classForm.title} onChange={(e) => setClassForm({ ...classForm, title: e.target.value })}
-                        placeholder={classForm.class_type === 'interest' ? 'e.g. Saturday Chess Club' : 'e.g. KCSE Mathematics Revision'} required
+                        placeholder={classForm.class_type === 'interest'
+                          ? `e.g. ${(CATEGORY_BY_KEY[classForm.category]?.examples || ['Saturday Chess Masters'])[0]}`
+                          : 'e.g. KCSE Mathematics Revision'} required
                         className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
                     </div>
                     <div className="col-span-2">
@@ -2440,6 +2463,11 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                           <option value="">Choose a club type</option>
                           {INTEREST_CATEGORIES.map(c => <option key={c.key} value={c.key}>{c.emoji} {c.label}</option>)}
                         </select>
+                        {classForm.category && CATEGORY_BY_KEY[classForm.category]?.examples && (
+                          <p className="mt-1.5 text-xs text-slate-400">
+                            Great club names are specific: {CATEGORY_BY_KEY[classForm.category].examples.join(' · ')}
+                          </p>
+                        )}
                       </div>
                     ) : (
                       <div>
@@ -2450,6 +2478,26 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                           {['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'].map(s => <option key={s} value={s}>{s}</option>)}
                         </select>
                       </div>
+                    )}
+                    {classForm.class_type === 'interest' && (
+                      <>
+                        <div>
+                          <label className="block text-sm font-medium text-slate-700 mb-1">Age range</label>
+                          <select value={classForm.age_range} onChange={(e) => setClassForm({ ...classForm, age_range: e.target.value })}
+                            className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            <option value="">Any age</option>
+                            {['6–9', '9–12', '12–15', '15–18'].map(a => <option key={a} value={a}>{a} years</option>)}
+                          </select>
+                        </div>
+                        <div className="flex items-end pb-1">
+                          <label className="flex items-center gap-2.5 cursor-pointer select-none">
+                            <input type="checkbox" checked={classForm.recurring}
+                              onChange={(e) => setClassForm({ ...classForm, recurring: e.target.checked })}
+                              className="w-4 h-4 accent-emerald-600" />
+                            <span className="text-sm text-slate-700">Runs <b>weekly</b> — same day &amp; time each week</span>
+                          </label>
+                        </div>
+                      </>
                     )}
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">Max Students (2-20)</label>
@@ -5511,6 +5559,7 @@ function AppInner() {
     if (path === 'dashboard') return 'dashboard';
     if (path === 'ai') return 'ai';
     if (path === 'schools') return 'schools';
+    if (path === 'clubs') return 'clubs';
     if (path === 'spreadsheet') return 'spreadsheet';
     if (path === 'admin') return 'admin';
     return 'home';
@@ -5545,6 +5594,7 @@ function AppInner() {
       else if (path === 'dashboard') setPage('dashboard');
       else if (path === 'ai') setPage('ai');
       else if (path === 'schools') setPage('schools');
+      else if (path === 'clubs') setPage('clubs');
       else if (path === 'spreadsheet') setPage('spreadsheet');
       else if (path === 'admin') setPage('admin');
       else if (path === 'privacy') setPage('privacy');
@@ -5604,6 +5654,11 @@ function AppInner() {
   // HOREB for Schools — B2B pitch page
   if (page === 'schools') {
     return <SchoolsPage onNavigate={handleNavigate} />;
+  }
+
+  // Interest-led clubs — discovery page
+  if (page === 'clubs') {
+    return <ClubsRoute user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />;
   }
 
   // Teacher / class insights dashboard

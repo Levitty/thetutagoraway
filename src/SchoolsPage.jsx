@@ -103,6 +103,40 @@ export default function SchoolsPage({ onNavigate }) {
           </div>
         </section>
 
+        {/* ── the product, glimpsed ── */}
+        <section className="py-12" style={{ borderTop: `1px solid ${RULE}` }}>
+          <Eyebrow>What the teacher sees, Monday morning</Eyebrow>
+          <h2 className="mt-3 text-[26px] leading-snug max-w-xl" style={{ ...SERIF, fontWeight: 500, color: INK }}>
+            Not a spreadsheet of scores. A short list of children who need you.
+          </h2>
+          {/* an honest glimpse of the dashboard — same information design as the product */}
+          <div className="mt-7 rounded-2xl bg-white p-6 sm:p-7" style={{ border: `1px solid ${RULE}` }}>
+            <div className="flex items-baseline justify-between flex-wrap gap-2">
+              <span className="text-[13px] font-semibold" style={{ color: NAVY }}>Grade 2 Blue · 31 learners</span>
+              <span className="text-[12px]" style={{ color: SOFT }}>this week</span>
+            </div>
+            <div className="mt-4 space-y-4">
+              {[
+                ['Baraka O.', 'Addition — regrouping ones', 'Writes 27 + 6 as 213 — carrying the ten as its own digit.', 'Five-minute move: bundle sticks in tens; trade ten singles for one bundle. Then retry.'],
+                ['Neema K.', 'Subtraction — within 20', 'Counts the take-away group back into her total.', 'Five-minute move: act it out with bottle tops she physically hands to you.'],
+              ].map(([name, skill, why, move]) => (
+                <div key={name} className="pt-4" style={{ borderTop: `1px solid ${RULE}` }}>
+                  <div className="flex flex-wrap items-baseline gap-x-3">
+                    <span className="font-semibold text-[15px]" style={{ color: INK }}>{name}</span>
+                    <span className="text-[13px] font-semibold" style={{ color: '#b5452f' }}>{skill}</span>
+                  </div>
+                  <p className="mt-1 text-[13.5px]" style={{ color: SOFT }}>{why}</p>
+                  <p className="mt-1 text-[13.5px]" style={{ color: INK }}><span className="font-semibold" style={{ color: GOLD }}>→ </span>{move}</p>
+                </div>
+              ))}
+              <div className="pt-4 text-[13px]" style={{ borderTop: `1px solid ${RULE}`, color: SOFT }}>
+                The other 29? On track — the engine is handling them. Addition: 24 of 31 mastered.
+              </div>
+            </div>
+          </div>
+          <p className="mt-3 text-[12.5px]" style={{ color: SOFT }}>Names illustrative; the exact sub-strand language comes from the KICD designs.</p>
+        </section>
+
         {/* ── credibility ── */}
         <section className="py-12" style={{ borderTop: `1px solid ${RULE}` }}>
           <Eyebrow>Built on the real curriculum</Eyebrow>
