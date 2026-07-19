@@ -3,6 +3,11 @@ name: Deploy to Hostinger
 # Builds the React app and publishes dist/ to Hostinger over FTP.
 # Runs automatically on every push to main, and can be run manually
 # from the Actions tab ("Run workflow").
+#
+# The FTP upload gets TWO attempts: Hostinger's FTP occasionally drops the
+# control socket (transient "Timeout (control socket)", seen 2026-07-19),
+# and a 60s pause + retry beats emailing a human about a network blip.
+# The job only fails if BOTH attempts fail.
 
 on:
   push:
@@ -28,7 +33,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to Hostinger via FTP
+      - name: Deploy to Hostinger via FTP (attempt 1)
+        id: deploy1
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -60,3 +67,44 @@ jobs:
             **/logo.png
             **/logo-*.png
             **/og-image.png
+
+      - name: Pause before retry
+        if: steps.deploy1.outcome == 'failure'
+        run: |
+          echo "First FTP attempt failed (usually a transient Hostinger socket timeout). Waiting 60s, then retrying…"
+          sleep 60
+
+      - name: Deploy to Hostinger via FTP (attempt 2)
+        id: deploy2
+        if: steps.deploy1.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ./
+          timeout: 120000
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.DS_Store
+            **/favicon.svg
+            **/favicon-*.png
+            **/apple-touch-icon*.png
+            **/logo.png
+            **/logo-*.png
+            **/og-image.png
+
+      - name: Deploy result
+        if: always()
+        run: |
+          if [ "${{ steps.deploy1.outcome }}" = "success" ]; then
+            echo "Deployed on the first attempt."
+          elif [ "${{ steps.deploy2.outcome }}" = "success" ]; then
+            echo "Deployed on the retry (first attempt hit a transient FTP error)."
+          else
+            echo "Both FTP attempts failed — this is a real problem (credentials or Hostinger outage)."
+            exit 1
+          fi
