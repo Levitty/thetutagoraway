@@ -9,6 +9,7 @@ import { AIMastery } from './ai-tutor/AIMastery.jsx';
 import { getLevel } from './ai-tutor/adaptiveEngine.js';
 import { todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP } from './ai-tutor/gamification.js';
 import { TeacherDashboard } from './ai-tutor/TeacherDashboard.jsx';
+import SchoolsPage from './SchoolsPage.jsx';
 import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
@@ -904,6 +905,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
           </button>
           <div className="flex items-center gap-3 sm:gap-4">
             <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600 hidden sm:block">Find Tutors</button>
+            <button onClick={() => onNavigate('schools')} className="text-sm text-slate-600 hidden sm:block">For Schools</button>
             {aiProgress?.diagnosed
               ? <MomentumChipView level={getLevel(aiProgress.totalXP).level} streak={aiProgress.currentStreak} onClick={() => onNavigate('ai')} />
               : <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>}
@@ -5508,6 +5510,7 @@ function AppInner() {
     if (path === 'teach') return 'teach';
     if (path === 'dashboard') return 'dashboard';
     if (path === 'ai') return 'ai';
+    if (path === 'schools') return 'schools';
     if (path === 'spreadsheet') return 'spreadsheet';
     if (path === 'admin') return 'admin';
     return 'home';
@@ -5541,6 +5544,7 @@ function AppInner() {
       else if (path === 'teach') setPage('teach');
       else if (path === 'dashboard') setPage('dashboard');
       else if (path === 'ai') setPage('ai');
+      else if (path === 'schools') setPage('schools');
       else if (path === 'spreadsheet') setPage('spreadsheet');
       else if (path === 'admin') setPage('admin');
       else if (path === 'privacy') setPage('privacy');
@@ -5595,6 +5599,11 @@ function AppInner() {
   // AI Tutor
   if (page === 'ai') {
     return <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} />;
+  }
+
+  // HOREB for Schools — B2B pitch page
+  if (page === 'schools') {
+    return <SchoolsPage onNavigate={handleNavigate} />;
   }
 
   // Teacher / class insights dashboard
