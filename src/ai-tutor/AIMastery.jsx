@@ -6,7 +6,7 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
 import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
-import { processReviewResult, applyImplicitCredits, calculateMemoryStrength } from './spacedRepetition.js';
+import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
@@ -87,6 +87,7 @@ export function AIMastery({ onBack, userId, studentName }) {
   const getPostRequisites = sub?.getPostReqs || (() => []);
   const generateProblem = sub?.generate || (() => null);
   const generateWorkedExample = sub?.generateExample || (() => null);
+  const getKpCount = sub?.kpCount || (() => 1);
 
   // Active syllabus view (CBC/CBE, Cambridge, or native). Persisted per subject
   // inside progress so it survives reloads / other devices.
@@ -131,6 +132,9 @@ export function AIMastery({ onBack, userId, studentName }) {
   const [showHint, setShowHint] = useState(false);
   const [session, setSession] = useState({ correct: 0, total: 0, streak: 0, startTime: null });
   const [kpIndex, setKpIndex] = useState(0);
+  // Ref mirror so problem generation always reads the CURRENT knowledge-point,
+  // even when nextProblem() runs synchronously right after finalizeResult().
+  const kpIndexRef = useRef(0);
   const [showWorkedExample, setShowWorkedExample] = useState(true);
   const [lessonFailCount, setLessonFailCount] = useState(0);
   // CPA modality: 'abstract' (symbols) by default; escalates to 'concrete'
@@ -465,7 +469,7 @@ export function AIMastery({ onBack, userId, studentName }) {
   const startLesson = (skillId) => {
     setActiveSkill(skillId);
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
-    setKpIndex(0);
+    setKpIndex(0); kpIndexRef.current = 0;
     setLessonFailCount(0);
     setModalityLevel('abstract');
     // Grades 1–4 never see the text worked example — the young flow teaches by
@@ -488,7 +492,7 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   const startPractice = () => {
     setShowWorkedExample(false);
-    setProblem(generateProblem(activeSkill, { level: modalityLevel }));
+    setProblem(generateProblem(activeSkill, { level: modalityLevel, kp: kpIndexRef.current }));
     setAnswer('');
     setFeedback(null);
     setAttemptCount(0);
@@ -532,6 +536,17 @@ export function AIMastery({ onBack, userId, studentName }) {
   // The shared post-answer pipeline: telemetry, session, mastery/FIRe credit,
   // CPA drop-down on struggle, XP. Used by the typed flow and the young flow.
   const finalizeResult = (correct, { attemptNo, hintsUsed, timeMs, taps = null }) => {
+    // Climb the knowledge-point ladder one rung per correct answer (capped at the
+    // top). A skill like G2 addition thus walks no-regroup → regroup → 2-digit →
+    // 2-digit-regroup in order, instead of always sitting on step one. Wrong
+    // answers keep the student on the current KP to re-practise it.
+    if (correct) {
+      const top = getKpCount(activeSkill) - 1;
+      if (kpIndexRef.current < top) {
+        kpIndexRef.current += 1;
+        setKpIndex(kpIndexRef.current);
+      }
+    }
     // Telemetry: capture the response for the HOREB learning loop.
     logResponse({
       studentId: userId, subject: subjectId, skillId: activeSkill,
@@ -565,7 +580,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     // Apply implicit repetitions to prerequisites (skip for placeholder stand-ins)
     let updatedSkills = isPlaceholder ? { ...progress.skills } : applyImplicitCredits(progress, activeSkill, correct, ctx);
 
-    const updatedSp = processReviewResult(sp, correct, timeMs, 30000);
+    const updatedSp = processReviewResult(sp, correct, timeMs, fluencyExpectedMs(SKILLS[activeSkill]));
     updatedSp.attempts = newAttempts;
     updatedSp.correct = newCorrect;
     if (shouldMaster && !sp.mastered) {
@@ -627,7 +642,7 @@ export function AIMastery({ onBack, userId, studentName }) {
   };
 
   const nextProblem = () => {
-    setProblem(generateProblem(activeSkill, { level: modalityLevel }));
+    setProblem(generateProblem(activeSkill, { level: modalityLevel, kp: kpIndexRef.current }));
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
@@ -670,7 +685,7 @@ export function AIMastery({ onBack, userId, studentName }) {
 
     // Update skill progress with spaced repetition
     const sp = progress.skills[skillId] || { attempts: 0, correct: 0, mastered: false, repNum: 0, learningSpeed: 1.0 };
-    const updatedSp = processReviewResult(sp, correct, timeMs, 30000);
+    const updatedSp = processReviewResult(sp, correct, timeMs, fluencyExpectedMs(SKILLS[skillId]));
     updatedSp.attempts = sp.attempts + 1;
     updatedSp.correct = sp.correct + (correct ? 1 : 0);
 

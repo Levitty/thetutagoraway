@@ -84,6 +84,14 @@ export const processReviewResult = (skillProgress, wasCorrect, timeTakenMs, expe
 export const FLUENCY_REPS = 3;
 export const isFluent = (sp) => !!(sp && sp.mastered && (sp.fluentReps || 0) >= FLUENCY_REPS);
 
+// The "fast enough" bar, scaled to skill difficulty. A flat 30s made everything
+// trivially fluent; a single fact should be recalled in a few seconds, a
+// multi-step problem allowed longer. Derived from the skill's difficulty weight:
+//   w≈1 (a fact) → ~5s · w≈3 → ~11s · w≈6 (hard multi-step) → ~18s.
+export const FLUENCY_BASE_MS = 3000;
+export const fluencyExpectedMs = (skill) =>
+  Math.round(FLUENCY_BASE_MS + Math.min(skill?.weight || 2, 6) * 2500);
+
 // ==================== IMPLICIT REPETITIONS ====================
 // When student practices an advanced skill, prerequisites get partial credit
 

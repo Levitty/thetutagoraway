@@ -1509,6 +1509,13 @@ const generators = {
 
 // ==================== MAIN EXPORT ====================
 
+// How many ordered knowledge points a skill's content ladders through (1 if it
+// isn't a withKPs ladder). Lets the lesson loop climb KP0 → KP1 → … in order.
+export const kpCount = (skillId) => {
+  const id = PRIMARY_ALIAS[skillId] || skillId;
+  return STRUCTURED_CONTENT[id]?.kpCount || 1;
+};
+
 export const generateProblem = (skillId, opts = {}) => {
   // Lower-primary (Grade 1–4) skills reuse an equivalent skill's content.
   if (PRIMARY_ALIAS[skillId]) skillId = PRIMARY_ALIAS[skillId];

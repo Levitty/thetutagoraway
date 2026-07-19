@@ -4,7 +4,7 @@
 // ============================================================================
 
 import { SKILLS, SKILL_COUNT, STRANDS, GRADES, getSkillsByGrade, getSkillsByStrand, getPostRequisites } from './knowledgeGraph.js';
-import { generateProblem, generateWorkedExample } from './problemGenerators.js';
+import { generateProblem, generateWorkedExample, kpCount } from './problemGenerators.js';
 
 import { AFM_SKILLS, AFM_SKILL_COUNT, AFM_STRANDS, AFM_GRADES, getAfmSkillsByGrade, getAfmSkillsByStrand, getAfmPostRequisites } from './afmKnowledgeGraph.js';
 import { generateAfmProblem, generateAfmWorkedExample } from './afmProblemGenerators.js';
@@ -37,6 +37,7 @@ export const SUBJECTS = {
     getPostReqs: getPostRequisites,
     generate: generateProblem,
     generateExample: generateWorkedExample,
+    kpCount,
   },
   afm: {
     id: 'afm',

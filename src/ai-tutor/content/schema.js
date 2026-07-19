@@ -107,10 +107,12 @@ export const stepText = (s) =>
 // a lesson still spans the full range. Each kp is an already-wrapped generator.
 export const withKPs = (kps) => {
   let auto = 0;
-  return (opts = {}) => {
+  const gen = (opts = {}) => {
     const i = opts.kp != null ? Math.max(0, Math.min(opts.kp, kps.length - 1)) : (auto++ % kps.length);
     return kps[i]();
   };
+  gen.kpCount = kps.length;   // so the lesson loop can climb the ladder in order
+  return gen;
 };
 
 // Bundle multiple representations of a skill at different CONCRETE→PICTORIAL→
