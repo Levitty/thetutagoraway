@@ -1,184 +1,194 @@
 // ============================================================================
 // HOREB FOR SCHOOLS — the B2B pitch page (route: /schools).
 //
-// This is what a head teacher / director sees when Tutagora is sold to a
-// school. The *learning* is free for individual learners; what a school pays
-// for (50 KSh/student/term) is the institutional layer: whole-class
-// assignment, the teacher dashboard, and per-student CBC mastery reports.
-// So this page sells the OVERSIGHT, not the engine.
+// What a head teacher / director sees when Tutagora is sold to a school.
+// The LEARNING is free for individual learners; a school pays 50 KSh/student
+// /term for the institutional layer — whole-class assignment, the teacher
+// dashboard, per-student CBC mastery reports. This page sells the oversight.
+//
+// Design: the HOREB editorial language — paper ground, serif headlines, the
+// logo's navy + gold, hairline rules. Intentional, not templated.
 // ============================================================================
 
 import React from 'react';
 
-const WHATSAPP = 'https://wa.me/254711344702?text=Hi%20Tutagora%20%E2%80%94%20I%27d%20like%20a%20HOREB%20demo%20for%20my%20school';
-const MAILTO = 'mailto:hello@tutagora.com?subject=HOREB%20for%20Schools%20%E2%80%94%20demo%20request';
+const WHATSAPP = 'https://wa.me/254759240692?text=Hi%20Tutagora%20%E2%80%94%20I%27d%20like%20a%20HOREB%20demo%20for%20my%20school';
+const MAILTO = 'mailto:tutaeducators@gmail.com?subject=HOREB%20for%20Schools%20%E2%80%94%20demo%20request';
 
-const Stat = ({ n, l }) => (
-  <div className="text-center">
-    <div className="text-3xl font-extrabold text-white">{n}</div>
-    <div className="text-xs text-slate-300 mt-1 tracking-wide">{l}</div>
-  </div>
-);
+const SERIF = { fontFamily: "Georgia, 'Times New Roman', serif" };
+const INK = '#171410';
+const NAVY = '#12345c';
+const GOLD = '#b8860b';
+const PAPER = '#faf7f0';
+const RULE = '#e6e0d1';
+const SOFT = '#6f6a5c';
 
-const Check = () => (
-  <svg className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4l3.1 3.1 6.8-6.8a1 1 0 011.4 0z" clipRule="evenodd"/></svg>
+const Eyebrow = ({ children }) => (
+  <p className="text-[11.5px] font-bold uppercase" style={{ letterSpacing: '.16em', color: GOLD }}>{children}</p>
 );
 
 export default function SchoolsPage({ onNavigate }) {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
-      {/* top bar */}
-      <header className="border-b border-slate-100 sticky top-0 bg-white/90 backdrop-blur z-40">
-        <div className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-          <button onClick={() => onNavigate('home')} className="flex items-center gap-2">
-            <img src="/logo.png" alt="Tutagora" className="w-8 h-8" onError={(e)=>{e.currentTarget.style.display='none';}} />
-            <span className="font-bold tracking-widest text-sm text-slate-800">TUTAGORA <span className="text-slate-400 font-semibold">· FOR SCHOOLS</span></span>
+    <div className="min-h-screen" style={{ background: PAPER, color: INK }}>
+
+      {/* ── masthead ── */}
+      <header style={{ borderBottom: `1px solid ${RULE}` }}>
+        <div className="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+          <button onClick={() => onNavigate('home')} className="flex items-center gap-2.5">
+            <img src="/logo.png" alt="" className="w-7 h-7" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+            <span className="font-semibold text-[13px]" style={{ letterSpacing: '.18em', color: INK }}>TUTAGORA</span>
+            <span className="text-[13px]" style={{ letterSpacing: '.14em', color: SOFT }}>· FOR SCHOOLS</span>
           </button>
-          <div className="flex items-center gap-3">
-            <button onClick={() => onNavigate('home')} className="hidden sm:block text-sm text-slate-500 hover:text-slate-800">Main site</button>
-            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold rounded-lg transition-colors">Book a demo</a>
-          </div>
+          <a href={WHATSAPP} target="_blank" rel="noreferrer" className="text-sm font-medium pb-0.5"
+            style={{ color: INK, borderBottom: `1px solid ${GOLD}` }}>Book a demo</a>
         </div>
       </header>
 
-      {/* hero */}
-      <section className="bg-gradient-to-b from-slate-900 to-slate-800 text-white">
-        <div className="max-w-6xl mx-auto px-5 py-20 md:py-28">
-          <div className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-amber-400 mb-5">
-            <span className="w-6 h-px bg-amber-400" /> HOREB · Adaptive CBC Maths
-          </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight max-w-3xl text-balance">
-            An adaptive maths tutor for <span className="text-amber-400">every child</span> in your school.
+      <main className="max-w-3xl mx-auto px-6">
+
+        {/* ── opening ── */}
+        <section className="pt-16 pb-14">
+          <Eyebrow>HOREB · Adaptive CBC mathematics</Eyebrow>
+          <h1 className="mt-4 text-[40px] sm:text-[48px] leading-[1.06]" style={{ ...SERIF, fontWeight: 500, letterSpacing: '-.01em', color: NAVY }}>
+            Every child in your school, taught at <em>their</em> level.
           </h1>
-          <p className="mt-5 text-lg text-slate-300 max-w-2xl leading-relaxed">
-            HOREB measures each learner, rebuilds the gaps below their grade, and lets the strong ones race ahead — all aligned to the KICD CBC curriculum. Your teachers finally see exactly who is stuck, and on what.
+          <p className="mt-6 text-[17px] leading-relaxed max-w-xl" style={{ color: SOFT }}>
+            HOREB measures each learner, quietly rebuilds the gaps beneath their grade, and lets the
+            strong ones advance without a ceiling — all of it mapped to the KICD curriculum designs,
+            grade by grade. Your teachers finally see who is stuck, and on exactly what.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-semibold transition-colors">Book a free demo</a>
-            <a href={MAILTO} className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl font-semibold transition-colors">Get a quote</a>
+          <div className="mt-9 flex flex-wrap items-center gap-6">
+            <a href={WHATSAPP} target="_blank" rel="noreferrer"
+              className="px-7 py-3.5 rounded-xl text-[15px] font-semibold text-white transition-transform hover:-translate-y-px"
+              style={{ background: INK }}>Book a demo</a>
+            <a href={MAILTO} className="text-[15px] pb-0.5" style={{ color: SOFT, borderBottom: `1px solid ${RULE}` }}>
+              or write to us
+            </a>
           </div>
-          <div className="mt-12 grid grid-cols-3 gap-6 max-w-lg border-t border-white/10 pt-8">
-            <Stat n="CBC" l="Aligned to KICD designs" />
-            <Stat n="Grades 1–12" l="Full maths curriculum" />
-            <Stat n="Any phone" l="Runs on low-end devices" />
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* the problem */}
-      <section className="max-w-6xl mx-auto px-5 py-16">
-        <p className="text-xs font-bold tracking-widest uppercase text-emerald-600">The problem every teacher knows</p>
-        <h2 className="text-2xl md:text-3xl font-bold mt-2 max-w-2xl text-balance">One teacher, forty different levels, one lesson.</h2>
-        <div className="mt-8 grid md:grid-cols-3 gap-5">
-          {[
-            ['Hidden gaps', 'A Grade 6 class holds children working anywhere from Grade 2 to Grade 8. The struggling ones fall further behind in silence.'],
-            ['CBC demands mastery', 'Competency-based learning expects every child to actually master each strand — impossible to personalise for 40 at once.'],
-            ['No visibility', 'Teachers can’t see who is stuck, on which sub-strand, until the exam already exposed it.'],
-          ].map(([t, d]) => (
-            <div key={t} className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
-              <div className="font-bold text-lg">{t}</div>
-              <p className="text-slate-600 text-sm mt-2 leading-relaxed">{d}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        {/* ── the problem, said plainly ── */}
+        <section className="py-12" style={{ borderTop: `1px solid ${RULE}` }}>
+          <Eyebrow>The problem every teacher knows</Eyebrow>
+          <h2 className="mt-3 text-[26px] leading-snug max-w-xl" style={{ ...SERIF, fontWeight: 500, color: INK }}>
+            One teacher. Forty children. Forty different levels. One lesson.
+          </h2>
+          <p className="mt-4 text-[15.5px] leading-relaxed max-w-xl" style={{ color: SOFT }}>
+            A Grade 6 classroom quietly holds children working anywhere from Grade 2 to Grade 8.
+            CBC asks for mastery from every one of them — something no teacher can personalise for
+            forty at once, and the exam is usually the first place the gaps become visible.
+            By then it is late.
+          </p>
+        </section>
 
-      {/* what teachers get — the paid value */}
-      <section className="bg-slate-50 border-y border-slate-100">
-        <div className="max-w-6xl mx-auto px-5 py-16">
-          <p className="text-xs font-bold tracking-widest uppercase text-emerald-600">What your school gets</p>
-          <h2 className="text-2xl md:text-3xl font-bold mt-2 max-w-2xl text-balance">The engine teaches the child. The dashboard tells you what to do.</h2>
-          <div className="mt-8 grid md:grid-cols-2 gap-x-10 gap-y-5">
+        {/* ── what the school gets ── */}
+        <section className="py-12" style={{ borderTop: `1px solid ${RULE}` }}>
+          <Eyebrow>What your school gets</Eyebrow>
+          <h2 className="mt-3 text-[26px] leading-snug" style={{ ...SERIF, fontWeight: 500, color: INK }}>
+            The engine teaches the child. The dashboard tells you what to do.
+          </h2>
+          <div className="mt-7">
             {[
-              ['Whole-class assignment', 'Assign HOREB to a class in one step. Every child gets their own adaptive path from wherever they actually are.'],
-              ['The teacher dashboard', 'See at a glance who is stuck and on exactly which CBC sub-strand — with a five-minute move to unstick each child.'],
-              ['Per-student mastery reports', 'Every learner’s progress by strand, mapped to the official CBC sub-strands — ready for the report card.'],
-              ['Parent updates', 'Termly progress in plain language parents understand — the thing that keeps them enrolling.'],
-              ['Rebuilds foundations', 'HOREB quietly fills the gaps below grade level, so the whole class can move forward together.'],
-              ['No ceiling for the gifted', 'Strong learners keep advancing with no grade cap — they never sit bored.'],
+              ['Whole-class assignment', 'Assign HOREB to a class in one step; every child gets an adaptive path from wherever they actually are.'],
+              ['The teacher dashboard', 'Each week: who is stuck, on which CBC sub-strand — with a five-minute move to unstick each child.'],
+              ['Per-student mastery reports', 'Progress by strand, in the official CBC sub-strand names. Ready for the report card and the head teacher.'],
+              ['Parent updates', 'Termly progress in plain language — the message that keeps families enrolled.'],
+              ['Foundations rebuilt, no ceiling above', 'Struggling learners are taken back to the missing step; gifted ones keep climbing past their grade.'],
             ].map(([t, d]) => (
-              <div key={t} className="flex gap-3 py-3 border-t border-slate-200">
-                <Check />
-                <div>
-                  <div className="font-semibold">{t}</div>
-                  <p className="text-slate-600 text-sm mt-0.5 leading-relaxed">{d}</p>
-                </div>
+              <div key={t} className="py-4 flex flex-col sm:flex-row sm:gap-8" style={{ borderBottom: `1px solid ${RULE}` }}>
+                <div className="sm:w-56 shrink-0 font-semibold text-[15.5px]" style={{ color: NAVY }}>{t}</div>
+                <p className="text-[14.5px] leading-relaxed mt-1 sm:mt-0" style={{ color: SOFT }}>{d}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* credibility */}
-      <section className="max-w-6xl mx-auto px-5 py-16">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="text-xs font-bold tracking-widest uppercase text-emerald-600">Built on the real curriculum</p>
-            <h2 className="text-2xl md:text-3xl font-bold mt-2 text-balance">Verified against the KICD CBC designs — grade by grade.</h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              Every skill in HOREB is mapped to an official CBC strand and sub-strand, checked against the actual KICD curriculum documents from Grade 1 to Grade 12. It isn’t generic maths dressed up — it is your syllabus, made adaptive.
-            </p>
-            <ul className="mt-5 space-y-2 text-sm">
-              {['Full CBC maths, Grades 1–12','Every skill tagged to its CBC sub-strand','Concrete → pictorial → abstract teaching, the CBC way','Also available: Cambridge & SAT maths'].map(x => (
-                <li key={x} className="flex gap-2 items-start"><Check /><span className="text-slate-700">{x}</span></li>
-              ))}
-            </ul>
+        {/* ── credibility ── */}
+        <section className="py-12" style={{ borderTop: `1px solid ${RULE}` }}>
+          <Eyebrow>Built on the real curriculum</Eyebrow>
+          <h2 className="mt-3 text-[26px] leading-snug max-w-xl" style={{ ...SERIF, fontWeight: 500, color: INK }}>
+            Verified against the KICD designs — not maths dressed up as CBC.
+          </h2>
+          <p className="mt-4 text-[15.5px] leading-relaxed max-w-xl" style={{ color: SOFT }}>
+            Every skill in HOREB is tagged to its official CBC strand and sub-strand, checked against
+            the KICD curriculum documents from Grade 1 to Grade 12. Lessons teach the CBC way —
+            concrete first, then pictorial, then abstract — and speak to young learners out loud.
+          </p>
+          <div className="mt-8 grid grid-cols-3 max-w-md" style={{ borderTop: `1px solid ${RULE}` }}>
+            {[['Grades 1–12', 'full maths curriculum'], ['CBC', 'KICD sub-strand mapped'], ['Any phone', 'built for low-end devices']].map(([n, l]) => (
+              <div key={n} className="pt-4 pr-6">
+                <div className="text-[22px]" style={{ ...SERIF, color: NAVY }}>{n}</div>
+                <div className="text-[12px] mt-0.5" style={{ color: SOFT }}>{l}</div>
+              </div>
+            ))}
           </div>
-          <div className="bg-slate-900 text-white rounded-2xl p-8">
-            <div className="text-sm text-slate-400 mb-4">How a term looks</div>
-            <ol className="space-y-4">
-              {[
-                ['We set up your classes', 'Send us your class lists — we create logins (no email needed for young pupils).'],
-                ['Students practise', 'On school tablets or their own phones, in class or at home. Just a few minutes a day.'],
-                ['Teachers act on the dashboard', 'Each week, see who needs help and exactly what to do about it.'],
-                ['Reports at term-end', 'Per-student CBC mastery, ready for parents and the head teacher.'],
-              ].map(([t, d], i) => (
-                <li key={t} className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-amber-400 text-slate-900 font-bold flex items-center justify-center shrink-0">{i + 1}</div>
-                  <div><div className="font-semibold">{t}</div><p className="text-slate-400 text-sm mt-0.5">{d}</p></div>
-                </li>
-              ))}
-            </ol>
+        </section>
+
+        {/* ── how a term looks ── */}
+        <section className="py-12" style={{ borderTop: `1px solid ${RULE}` }}>
+          <Eyebrow>How a term looks</Eyebrow>
+          <ol className="mt-6 space-y-6 max-w-xl">
+            {[
+              ['We set up your classes', 'Send us the class lists — we create the logins. Young pupils don’t need email addresses.'],
+              ['Students practise', 'On school tablets or their own phones, in class or at home. A few focused minutes a day is enough.'],
+              ['Teachers act on the dashboard', 'A weekly glance shows who needs help and precisely what to do about it.'],
+              ['Reports at term end', 'Per-student CBC mastery for parents and the head teacher — and the next term picks up where this one ended.'],
+            ].map(([t, d], i) => (
+              <li key={t} className="flex gap-5">
+                <span className="text-[22px] w-8 shrink-0 text-right" style={{ ...SERIF, color: GOLD }}>{i + 1}</span>
+                <div>
+                  <div className="font-semibold text-[15.5px]" style={{ color: INK }}>{t}</div>
+                  <p className="text-[14.5px] leading-relaxed mt-0.5" style={{ color: SOFT }}>{d}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* ── pricing ── */}
+        <section className="py-12" style={{ borderTop: `1px solid ${RULE}` }}>
+          <Eyebrow>Pricing</Eyebrow>
+          <div className="mt-5 flex flex-wrap items-baseline gap-x-3">
+            <span className="text-[52px] leading-none" style={{ ...SERIF, color: NAVY }}>KSh 50</span>
+            <span className="text-[15px]" style={{ color: SOFT }}>per student, per term</span>
           </div>
-        </div>
-      </section>
+          <p className="mt-3 text-[15.5px] max-w-xl leading-relaxed" style={{ color: SOFT }}>
+            Less than a single exercise book — for a term of adaptive teaching, the dashboard, and
+            every report. A 300-student school is KSh 15,000 a term; onboarding is included, and
+            volume terms are available for school groups.
+          </p>
+          <p className="mt-4 text-[13.5px] max-w-xl leading-relaxed" style={{ color: SOFT }}>
+            <span className="font-semibold" style={{ color: INK }}>And for families:</span> individual
+            learners on Tutagora practise on HOREB free. What a school buys is the institutional
+            layer — assignment, oversight, and reporting for the whole class.
+          </p>
+        </section>
 
-      {/* pricing */}
-      <section className="bg-slate-50 border-y border-slate-100">
-        <div className="max-w-6xl mx-auto px-5 py-16">
-          <div className="max-w-md mx-auto bg-white border border-slate-200 rounded-3xl p-8 text-center shadow-sm">
-            <p className="text-xs font-bold tracking-widest uppercase text-emerald-600">Simple, per-student pricing</p>
-            <div className="mt-4 flex items-baseline justify-center gap-1">
-              <span className="text-5xl font-extrabold">KSh 50</span>
-              <span className="text-slate-500 font-medium">/ student / term</span>
-            </div>
-            <p className="text-slate-500 text-sm mt-2">Less than a single textbook — every term, for every child.</p>
-            <div className="mt-6 text-left space-y-2 text-sm">
-              {['Adaptive CBC maths for every learner','Teacher dashboard + per-student reports','Whole-class setup and onboarding','Termly parent progress updates','Works on low-end phones & school tablets'].map(x => (
-                <div key={x} className="flex gap-2"><Check /><span className="text-slate-700">{x}</span></div>
-              ))}
-            </div>
-            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="mt-7 block w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-xl transition-colors">Book a demo for your school</a>
-            <p className="text-xs text-slate-400 mt-3">A 300-student school = KSh 15,000 / term. Volume terms available.</p>
+        {/* ── closing ── */}
+        <section className="py-14 pb-20" style={{ borderTop: `1px solid ${RULE}` }}>
+          <h2 className="text-[30px] leading-snug max-w-lg" style={{ ...SERIF, fontWeight: 500, color: NAVY }}>
+            See it with your own pupils.
+          </h2>
+          <p className="mt-3 text-[15.5px] max-w-xl leading-relaxed" style={{ color: SOFT }}>
+            A demo takes twenty minutes: one class, real children, and the dashboard doing its work.
+            We handle children’s data to the Kenya Data Protection Act — the minimum needed to teach
+            and report, no advertising, ever.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-6">
+            <a href={WHATSAPP} target="_blank" rel="noreferrer"
+              className="px-7 py-3.5 rounded-xl text-[15px] font-semibold text-white transition-transform hover:-translate-y-px"
+              style={{ background: NAVY }}>WhatsApp us — 0759 240 692</a>
+            <a href={MAILTO} className="text-[15px] pb-0.5" style={{ color: SOFT, borderBottom: `1px solid ${RULE}` }}>
+              tutaeducators@gmail.com
+            </a>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
-      {/* trust + final CTA */}
-      <section className="max-w-6xl mx-auto px-5 py-16 text-center">
-        <p className="text-xs font-bold tracking-widest uppercase text-emerald-600">Safe with children’s data</p>
-        <h2 className="text-2xl md:text-3xl font-bold mt-2 max-w-2xl mx-auto text-balance">Aligned with the Kenya Data Protection Act. Minimal data, no ads, ever.</h2>
-        <p className="mt-4 text-slate-600 max-w-xl mx-auto">We collect only what’s needed to teach and report — no advertising, no selling data. Verification and pupil records are handled to the DPA 2019.</p>
-        <div className="mt-8 flex flex-wrap gap-3 justify-center">
-          <a href={WHATSAPP} target="_blank" rel="noreferrer" className="px-7 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-colors">Talk to us on WhatsApp</a>
-          <a href={MAILTO} className="px-7 py-3.5 border border-slate-300 hover:border-slate-400 font-semibold rounded-xl transition-colors">Email us</a>
-        </div>
-      </section>
-
-      <footer className="border-t border-slate-100">
-        <div className="max-w-6xl mx-auto px-5 py-8 flex flex-wrap items-center justify-between gap-4 text-sm text-slate-400">
+      <footer style={{ borderTop: `1px solid ${RULE}` }}>
+        <div className="max-w-3xl mx-auto px-6 py-7 flex flex-wrap items-center justify-between gap-3 text-[13px]" style={{ color: SOFT }}>
           <span>© Tutagora · HOREB for Schools</span>
-          <button onClick={() => onNavigate('home')} className="hover:text-slate-700">Back to main site →</button>
+          <button onClick={() => onNavigate('home')} className="pb-0.5" style={{ borderBottom: `1px solid ${RULE}` }}>Back to main site</button>
         </div>
       </footer>
     </div>
