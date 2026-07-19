@@ -50,8 +50,25 @@ const jsSnapshot = (progress, ctx) => {
     accuracy: stats.accuracy,
     strands: strands.map(s => ({ name: s.name, percent: s.percent, accuracy: s.accuracy })),
     gapCount: gaps.length,
+    // Keep the NAMES — "3 gaps" tells a teacher nothing; "Addition —
+    // regrouping ones" tells them exactly where to sit down.
+    topGaps: gaps.slice(0, 3).map(g => ({ id: g.id, name: g.name, strand: g.strand, grade: g.grade })),
     accelerated: false,
   };
+};
+
+// A concrete, physical-materials suggestion per stuck skill — the KICD
+// designs' own suggested resources (bottle tops, bundles of sticks, cut-outs).
+const fiveMinuteMove = (gap) => {
+  const id = gap?.id || '';
+  if (/ADD/.test(id)) return 'Bundle sticks in tens — build both numbers, trade ten singles for one bundle, then retry on HOREB.';
+  if (/SUB/.test(id)) return 'Act it out with bottle tops the child physically hands to you, counting what remains each time.';
+  if (/MULT/.test(id)) return 'Plates and stones: 3 plates, 4 stones on each — how many plates? how many on each? how many altogether?';
+  if (/DIV/.test(id)) return 'Share real counters into equal groups, one at a time, before writing anything.';
+  if (/FRACTION/.test(id)) return 'Cut a paper circle into equal parts together — fold first, cut second, name each piece.';
+  if (/PLACE|COUNT/.test(id)) return 'Place-value chart on paper: build the number with bottle tops in columns, then read it aloud.';
+  if (/TIME|CLOCK/.test(id)) return 'A paper-plate clock with movable hands — the child sets the times you call out.';
+  return 'Five minutes with physical counters, counting together out loud, then retry the skill on HOREB.';
 };
 
 const bandColor = (level) => {
@@ -222,6 +239,49 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
       </header>
 
       <main className="max-w-4xl mx-auto px-4 py-5">
+        {/* Needs you today — the teacher's first question, answered first.
+            Named stuck skills + a five-minute physical-materials move, not a count. */}
+        {(() => {
+          const needs = students
+            .filter(s => s.snap.topGaps?.length > 0)
+            .sort((a, b) => b.snap.gapCount - a.snap.gapCount)
+            .slice(0, 3);
+          if (!needs.length) return null;
+          return (
+            <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-5">
+              <div className="flex items-baseline justify-between mb-1">
+                <h2 className="font-semibold text-slate-900">
+                  {needs.length === 1 ? 'One child needs you today' : `${needs.length} children need you today`}
+                </h2>
+                <span className="text-xs text-slate-400">stuck on a foundation</span>
+              </div>
+              <div className="divide-y divide-slate-100">
+                {needs.map(st => {
+                  const gap = st.snap.topGaps[0];
+                  return (
+                    <button key={st.id} onClick={() => setSelected(st)} className="w-full text-left py-3 group">
+                      <div className="flex flex-wrap items-baseline gap-x-3">
+                        <span className="font-semibold text-slate-900 group-hover:underline">{st.name}</span>
+                        <span className="text-sm font-semibold text-red-600">{gap.name}</span>
+                        <span className="text-xs text-slate-400">{gap.strand} · Grade {gap.grade}</span>
+                      </div>
+                      <p className="mt-1 text-sm text-slate-600">
+                        <span className="font-semibold text-amber-600">Five-minute move: </span>
+                        {fiveMinuteMove(gap)}
+                      </p>
+                      {st.snap.topGaps.length > 1 && (
+                        <p className="mt-0.5 text-xs text-slate-400">
+                          Also stuck: {st.snap.topGaps.slice(1).map(g => g.name).join(' · ')}
+                        </p>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
+
         {/* Classes & join codes */}
         <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-5">
           <div className="flex items-center justify-between mb-3">

@@ -109,8 +109,34 @@ export default function SchoolsPage({ onNavigate }) {
           <h2 className="mt-3 text-[26px] leading-snug max-w-xl" style={{ ...SERIF, fontWeight: 500, color: INK }}>
             Not a spreadsheet of scores. A short list of children who need you.
           </h2>
-          {/* an honest glimpse of the dashboard — same information design as the product */}
-          <div className="mt-7 rounded-2xl bg-white p-6 sm:p-7" style={{ border: `1px solid ${RULE}` }}>
+
+          {/* the child's side — a Grade-1 lesson, glimpsed */}
+          <div className="mt-7 grid lg:grid-cols-5 gap-5 items-start">
+            <div className="lg:col-span-2 rounded-2xl p-6" style={{ background: '#fdf8ee', border: `1px solid ${RULE}` }}>
+              <div className="text-[11px] font-bold uppercase" style={{ letterSpacing: '.12em', color: GOLD }}>Meanwhile, the child's screen</div>
+              <div className="mt-4 text-center">
+                <div className="text-[30px]" style={{ ...SERIF, color: INK }}>4 + 5 = <span style={{ color: '#b5452f' }}>?</span></div>
+                <div className="mt-4 flex justify-center gap-1.5 flex-wrap max-w-[220px] mx-auto">
+                  {[1,2,3,4].map(n => (
+                    <span key={n} className="w-9 h-9 rounded-full flex items-center justify-center text-[15px] text-white" style={{ background: '#c96a4a', fontFamily: 'Georgia, serif' }}>{n}</span>
+                  ))}
+                  {[5,6,7,8,9].map(n => (
+                    <span key={n} className="w-9 h-9 rounded-full flex items-center justify-center text-[15px]" style={{ background: '#e9b64d', color: '#5a4310', fontFamily: 'Georgia, serif' }}>{n}</span>
+                  ))}
+                </div>
+                <p className="mt-4 text-[14px] italic" style={{ ...SERIF, color: SOFT }}>
+                  “Vizuri sana — that's it exactly.”
+                </p>
+              </div>
+              <p className="mt-4 text-[12px] leading-relaxed" style={{ color: SOFT }}>
+                Questions read aloud for pre-readers, counters they tap to count, praise in a
+                voice a six-year-old trusts. Grades 1–4 get their own lesson modes — not a
+                shrunken adult app.
+              </p>
+            </div>
+
+            {/* the teacher's side — same information design as the product */}
+            <div className="lg:col-span-3 rounded-2xl bg-white p-6 sm:p-7" style={{ border: `1px solid ${RULE}` }}>
             <div className="flex items-baseline justify-between flex-wrap gap-2">
               <span className="text-[13px] font-semibold" style={{ color: NAVY }}>Grade 2 Blue · 31 learners</span>
               <span className="text-[12px]" style={{ color: SOFT }}>this week</span>
@@ -132,6 +158,7 @@ export default function SchoolsPage({ onNavigate }) {
               <div className="pt-4 text-[13px]" style={{ borderTop: `1px solid ${RULE}`, color: SOFT }}>
                 The other 29? On track — the engine is handling them. Addition: 24 of 31 mastered.
               </div>
+            </div>
             </div>
           </div>
           <p className="mt-3 text-[12.5px]" style={{ color: SOFT }}>Names illustrative; the exact sub-strand language comes from the KICD designs.</p>

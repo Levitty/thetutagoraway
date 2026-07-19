@@ -2232,7 +2232,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
             <button onClick={() => onNavigate && onNavigate('home')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Home</button>
             <button onClick={() => onNavigate && onNavigate('tutors')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Find Tutors</button>
             <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium">Spreadsheet</button>
-            <button onClick={() => onNavigate && onNavigate('classroom')} className="text-sm text-emerald-600 font-medium hidden sm:block">Class Insights</button>
+            <button onClick={() => onNavigate && onNavigate('classroom')} className="text-sm text-emerald-600 font-medium">Class Insights</button>
             {isAdmin && <button onClick={() => onNavigate && onNavigate('admin')} className="text-sm text-purple-600 font-medium hidden sm:block">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
             {onOpenAccountSettings && <button onClick={onOpenAccountSettings} className="text-sm text-slate-500 hover:text-slate-700" title="Account & Data Settings">
