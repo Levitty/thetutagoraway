@@ -13,6 +13,7 @@ import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
 import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
+import { SUPPORT, SUPPORT_LABEL, initialSupportLevel, nextSupportLevel, completionPlan, exampleSupport } from './fadedExamples.js';
 import YoungLearnerLesson, { planYoungLesson } from './YoungLearnerLesson.jsx';
 import BridgeLesson, { planBridgeLesson } from './BridgeLesson.jsx';
 import { supabase } from '../supabase.js';
@@ -161,6 +162,18 @@ export function AIMastery({ onBack, userId, studentName }) {
   // Layered hints + tooltips state
   const [attemptCount, setAttemptCount] = useState(0);
   const [hintLevel, setHintLevel] = useState(0); // 0=none, 1=hint, 2=partial steps, 3=full reveal
+
+  // Faded worked examples (Renkl completion problems). `scaffoldLevel` is the
+  // live support level (0 guided … 3 solo); the ref mirrors it for the
+  // synchronous finalize path. `answeredLevel` freezes the level the current
+  // problem was ANSWERED at (for the post-answer self-explanation card), and
+  // `scaffoldableRef` records whether this problem could be scaffolded at all
+  // — the mastery guard only bites when support was actually on offer.
+  const [scaffoldLevel, setScaffoldLevel] = useState(SUPPORT.SOLO);
+  const scaffoldRef = useRef(SUPPORT.SOLO);
+  const scaffoldableRef = useRef(false);
+  const [answeredLevel, setAnsweredLevel] = useState(null);
+  const [selfExplainOpen, setSelfExplainOpen] = useState(false);
   const [activeTooltip, setActiveTooltip] = useState(null);
   const [expandedWhySteps, setExpandedWhySteps] = useState({});
   const [conceptsExpanded, setConceptsExpanded] = useState(true);
@@ -466,18 +479,37 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // ==================== LESSON (KP-BASED) ====================
 
+  // Serve a lesson problem and note whether it can carry a completion scaffold
+  // (grades 1–4 have their own scaffolding, so they are never "scaffoldable"
+  // here and the mastery guard leaves them alone).
+  const serveLessonProblem = (skillId, level) => {
+    const p = generateProblem(skillId, { level, kp: kpIndexRef.current });
+    const young = (SKILLS[skillId]?.grade || 99) <= 4;
+    scaffoldableRef.current = !young && !!completionPlan(p, SUPPORT.FULL);
+    return p;
+  };
+
   const startLesson = (skillId) => {
     setActiveSkill(skillId);
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
     setKpIndex(0); kpIndexRef.current = 0;
     setLessonFailCount(0);
     setModalityLevel('abstract');
+    // Faded worked examples: support starts where this learner's history says
+    // it should (expertise reversal — a practised learner skips support).
+    const startLevel = initialSupportLevel(progress.skills[skillId]);
+    scaffoldRef.current = startLevel;
+    setScaffoldLevel(startLevel);
+    setAnsweredLevel(null);
+    setSelfExplainOpen(false);
     // Grades 1–4 never see the text worked example — the young flow teaches by
-    // demonstration (count-together / column reveal) instead.
+    // demonstration (count-together / column reveal) instead. Past ORIENT the
+    // intro example is skipped too: a learner who no longer needs support goes
+    // straight to solving.
     const young = (SKILLS[skillId]?.grade || 99) <= 4;
-    const we = young ? null : generateWorkedExample(skillId);
+    const we = (young || startLevel >= SUPPORT.ORIENT) ? null : generateWorkedExample(skillId);
     setShowWorkedExample(!!we);
-    setProblem(we ? null : generateProblem(skillId, { level: 'abstract' }));
+    setProblem(we ? null : serveLessonProblem(skillId, 'abstract'));
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
@@ -492,13 +524,15 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   const startPractice = () => {
     setShowWorkedExample(false);
-    setProblem(generateProblem(activeSkill, { level: modalityLevel, kp: kpIndexRef.current }));
+    setProblem(serveLessonProblem(activeSkill, modalityLevel));
     setAnswer('');
     setFeedback(null);
     setAttemptCount(0);
     setHintLevel(0);
     setActiveTooltip(null);
     setVisualAnswer(null);
+    setAnsweredLevel(null);
+    setSelfExplainOpen(false);
   };
 
   const checkAnswer = () => {
@@ -525,6 +559,9 @@ export function AIMastery({ onBack, userId, studentName }) {
     // === FINAL RESULT (correct at any attempt, or 3rd-attempt fail) ===
     setFeedback(correct ? 'correct' : 'incorrect');
     if (!correct) setHintLevel(3); // Full reveal
+    // Freeze the support level this problem was answered at — the post-answer
+    // self-explanation card and telemetry read it after finalize fades it.
+    setAnsweredLevel(scaffoldRef.current);
 
     finalizeResult(correct, {
       attemptNo: newAttemptCount,
@@ -536,23 +573,34 @@ export function AIMastery({ onBack, userId, studentName }) {
   // The shared post-answer pipeline: telemetry, session, mastery/FIRe credit,
   // CPA drop-down on struggle, XP. Used by the typed flow and the young flow.
   const finalizeResult = (correct, { attemptNo, hintsUsed, timeMs, taps = null }) => {
+    // The support level this answer was produced under, before fading moves it.
+    const answeredAt = scaffoldRef.current;
     // Climb the knowledge-point ladder one rung per correct answer (capped at the
     // top). A skill like G2 addition thus walks no-regroup → regroup → 2-digit →
     // 2-digit-regroup in order, instead of always sitting on step one. Wrong
     // answers keep the student on the current KP to re-practise it.
+    let kpAdvanced = false;
     if (correct) {
       const top = getKpCount(activeSkill) - 1;
       if (kpIndexRef.current < top) {
         kpIndexRef.current += 1;
         setKpIndex(kpIndexRef.current);
+        kpAdvanced = true;
       }
     }
+    // Fade the worked-example support: one rung lighter per correct, one rung
+    // heavier per wrong; entering a NEW knowledge point caps at ORIENT so a
+    // fresh variant is never met fully solo.
+    const faded = nextSupportLevel(answeredAt, correct, kpAdvanced);
+    scaffoldRef.current = faded;
+    setScaffoldLevel(faded);
     // Telemetry: capture the response for the HOREB learning loop.
     logResponse({
       studentId: userId, subject: subjectId, skillId: activeSkill,
       correct, problemType: problem?.type,
       timeMs,
       hintsUsed, attemptNo, taps,
+      scaffold: scaffoldableRef.current ? answeredAt : null,
     });
 
     const newSession = {
@@ -574,8 +622,12 @@ export function AIMastery({ onBack, userId, studentName }) {
     const accuracy = newCorrect / newAttempts;
     // Mastery needs enough practice, a high accuracy, AND this final answer to be
     // correct — so a skill can never tip into "mastered" on a wrong answer just
-    // because cumulative accuracy is still above threshold.
-    const shouldMaster = !isPlaceholder && correct && newAttempts >= skill.minProblems && accuracy >= skill.masteryThreshold;
+    // because cumulative accuracy is still above threshold. When completion
+    // scaffolding was available, the mastering answer must also have been given
+    // at light support (ORIENT or SOLO) — assisted answers are practice, not
+    // proof (assistance dilution).
+    const lightSupport = !scaffoldableRef.current || answeredAt >= SUPPORT.ORIENT;
+    const shouldMaster = !isPlaceholder && correct && lightSupport && newAttempts >= skill.minProblems && accuracy >= skill.masteryThreshold;
 
     // Apply implicit repetitions to prerequisites (skip for placeholder stand-ins)
     let updatedSkills = isPlaceholder ? { ...progress.skills } : applyImplicitCredits(progress, activeSkill, correct, ctx);
@@ -642,7 +694,7 @@ export function AIMastery({ onBack, userId, studentName }) {
   };
 
   const nextProblem = () => {
-    setProblem(generateProblem(activeSkill, { level: modalityLevel, kp: kpIndexRef.current }));
+    setProblem(serveLessonProblem(activeSkill, modalityLevel));
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
@@ -650,6 +702,8 @@ export function AIMastery({ onBack, userId, studentName }) {
     setHintLevel(0);
     setActiveTooltip(null);
     setVisualAnswer(null);
+    setAnsweredLevel(null);
+    setSelfExplainOpen(false);
   };
 
   // ==================== REVIEW (TIMED, INTERLEAVED) ====================
@@ -898,6 +952,16 @@ export function AIMastery({ onBack, userId, studentName }) {
     const sp = progress.skills[activeSkill] || { attempts: 0, correct: 0, mastered: false };
     const pct = Math.min(100, (session.correct / skill.minProblems) * 100);
 
+    // Faded worked examples: this problem's completion scaffold at the current
+    // support level (structured content), or a parallel solved example (legacy
+    // content) — and, after a correct answer, the partition the problem was
+    // ANSWERED with, for the self-explanation card.
+    const plan = problem && !feedback ? completionPlan(problem, scaffoldLevel) : null;
+    const legacyExample = problem && !feedback ? exampleSupport(problem, scaffoldLevel) : null;
+    const supportChip = SUPPORT_LABEL[scaffoldLevel];
+    const answeredPlan = (feedback === 'correct' && answeredLevel != null && answeredLevel <= SUPPORT.MOST)
+      ? completionPlan(problem, answeredLevel) : null;
+
     // Grades 1–2 get the young-learner experience: read-aloud, tappable
     // counters, count-together scaffolding. Falls back to the standard UI for
     // problem shapes the young plan can't express.
@@ -1010,6 +1074,55 @@ export function AIMastery({ onBack, userId, studentName }) {
                 <div className="text-lg mb-6 leading-relaxed">
                   <TermTooltip text={problem.question} definitions={problem.workedExample?.definitions || problem.definitions} />
                 </div>
+
+                {/* Completion scaffold — this problem's own solution, started
+                    for the learner, faded from the end (Renkl backward fading).
+                    The learner works the hidden tail and answers as usual. */}
+                {plan && (
+                  <div className="mb-5 rounded-xl border border-emerald-700/40 bg-emerald-900/15 p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-emerald-400 text-sm font-semibold">Solution started for you — finish it</span>
+                      {supportChip && <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-800/60 text-emerald-200">{supportChip}</span>}
+                    </div>
+                    <div className="space-y-1.5">
+                      {plan.shown.map((s, i) => (
+                        <div key={i} className="flex gap-2 text-sm text-slate-300">
+                          <span className="text-emerald-400 font-bold min-w-[20px]">{i + 1}.</span>
+                          <span>{s}</span>
+                        </div>
+                      ))}
+                      {Array.from({ length: plan.hiddenCount }).map((_, i) => (
+                        <div key={`h${i}`} className="flex gap-2 text-sm items-center">
+                          <span className="text-slate-500 font-bold min-w-[20px]">{plan.shown.length + i + 1}.</span>
+                          <span className="flex-1 border-b border-dashed border-slate-600 text-slate-500 text-xs pb-0.5">
+                            {i === 0 ? 'your turn — work this step' : '…'}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Legacy skills without per-problem steps: at high support,
+                    pair the problem with a parallel solved example instead. */}
+                {!plan && legacyExample && (
+                  <details className="mb-5 rounded-xl border border-slate-600/60 bg-slate-700/30 p-3 text-sm open:pb-4">
+                    <summary className="cursor-pointer text-emerald-400 font-semibold select-none">
+                      See a similar solved example
+                    </summary>
+                    <div className="mt-3 text-slate-300 font-medium">{legacyExample.problem}</div>
+                    <div className="mt-2 space-y-1">
+                      {(legacyExample.steps || []).map((s, i) => (
+                        <div key={i} className="flex gap-2 text-slate-300">
+                          <span className="text-emerald-400 font-bold min-w-[20px]">{i + 1}.</span>
+                          <span>{s}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-2 text-emerald-300"><span className="font-semibold">Answer:</span> <span className="font-mono">{legacyExample.solution}</span></div>
+                  </details>
+                )}
+
                 {/* Visual ANSWER widget (the problem is answered by interaction) */}
                 {problem.visual ? (
                   <InteractiveVisual
@@ -1037,9 +1150,10 @@ export function AIMastery({ onBack, userId, studentName }) {
                     <span className="font-semibold text-amber-400">Hint:</span> {problem.hint || 'Double-check your calculation — look at each step carefully.'}
                   </div>
                 )}
-                {hintLevel >= 2 && !feedback && (() => {
+                {hintLevel >= 2 && !feedback && !plan && (() => {
                   // Prefer THIS problem's own solution steps; fall back to a
                   // worked example for legacy skills without structured steps.
+                  // (Skipped when the completion scaffold already shows steps.)
                   const ownSteps = problem.solutionSteps;
                   const we = ownSteps ? null : generateWorkedExample(activeSkill);
                   const steps = ownSteps || we?.steps;
@@ -1065,6 +1179,33 @@ export function AIMastery({ onBack, userId, studentName }) {
                 <div className="rounded-xl p-4 mb-4 bg-emerald-900/50 border border-emerald-500">
                   <span className="text-emerald-400 font-semibold">✓ Correct!</span>
                   {attemptCount > 1 && <span className="text-slate-400 text-sm ml-2">(attempt {attemptCount})</span>}
+                </div>
+              )}
+
+              {/* Self-explanation prompt (Chi) — after finishing a completion
+                  problem, the learner articulates WHY the steps they supplied
+                  work, then checks their thinking against the actual steps. */}
+              {answeredPlan && (
+                <div className="rounded-xl p-4 mb-4 bg-indigo-900/30 border border-indigo-600/40">
+                  <div className="text-indigo-200 text-sm font-semibold mb-1">Teach it back</div>
+                  <p className="text-sm text-slate-300 mb-2">
+                    You worked the last {answeredPlan.hiddenCount === 1 ? 'step' : `${answeredPlan.hiddenCount} steps`} yourself.
+                    Say <em>why</em> {answeredPlan.hiddenCount === 1 ? 'it works' : 'they work'} — out loud or in your head — then check your thinking:
+                  </p>
+                  {!selfExplainOpen ? (
+                    <button onClick={() => setSelfExplainOpen(true)} className="text-sm text-indigo-300 hover:text-indigo-200 font-semibold transition-colors">
+                      Show the thinking
+                    </button>
+                  ) : (
+                    <div className="space-y-1">
+                      {answeredPlan.hidden.map((s, i) => (
+                        <div key={i} className="flex gap-2 text-sm text-slate-300">
+                          <span className="text-indigo-400 font-bold min-w-[20px]">{answeredPlan.shown.length + i + 1}.</span>
+                          <span>{s}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
 

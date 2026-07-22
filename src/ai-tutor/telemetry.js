@@ -28,6 +28,9 @@ const PARAMS_VERSION = 'heuristic-v0';   // bumped when calibrated params ship
  * @param {boolean} [ev.isReview]
  * @param {number}  [ev.taps]  interaction taps before answering (young mode) —
  *                             the concrete-vs-abstract signal for CPA staging
+ * @param {number}  [ev.scaffold]  faded-example support level the problem was
+ *                             answered at (0 guided … 3 solo) — separates
+ *                             assisted from independent performance
  */
 export function logResponse(ev) {
   if (!ev || !ev.studentId || !ev.skillId) return;   // need a real student + skill
@@ -45,12 +48,14 @@ export function logResponse(ev) {
     params_version: PARAMS_VERSION,
   };
   if (Number.isFinite(ev.taps)) row.taps = Math.round(ev.taps);
-  // Intentionally not awaited — fire and forget. If the taps column hasn't been
-  // migrated yet, retry once without it rather than losing the event.
+  if (Number.isFinite(ev.scaffold)) row.scaffold = Math.round(ev.scaffold);
+  // Intentionally not awaited — fire and forget. If an optional column hasn't
+  // been migrated yet, retry once without the optional fields rather than
+  // losing the event.
   supabase.from('response_events').insert(row)
     .then(({ error }) => {
-      if (error && 'taps' in row) {
-        const { taps, ...basic } = row;
+      if (error && ('taps' in row || 'scaffold' in row)) {
+        const { taps, scaffold, ...basic } = row;
         return supabase.from('response_events').insert(basic);
       }
       if (error && import.meta.env?.DEV) console.debug('telemetry drop:', error.message);
