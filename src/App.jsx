@@ -168,6 +168,22 @@ const Stars = ({ rating, size = 14 }) => (
 const initialsAvatar = (name, opts = '') =>
   `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'U')}&background=10b981&color=fff${opts}`;
 
+// grade_levels reached the DB in three shapes over time: a real array, a
+// JSON-stringified array ('["Grade 2","Grade 3"]'), or a plain comma string.
+// Normalize all of them to a clean array so chips and filters never show raw JSON.
+const gradeList = (g) => {
+  if (!g) return [];
+  if (Array.isArray(g)) return g;
+  if (typeof g === 'string') {
+    try {
+      const parsed = JSON.parse(g);
+      if (Array.isArray(parsed)) return parsed;
+    } catch { /* not JSON — fall through */ }
+    return g.split(',').map(s => s.replace(/[[\]"]/g, '').trim()).filter(Boolean);
+  }
+  return [g];
+};
+
 const Avatar = ({ src, name, size = 40 }) => (
   <img
     src={src || initialsAvatar(name)}
@@ -3856,7 +3872,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
       const matchesSubject = !selectedSubject || selectedSubject === 'All Subjects' || tutorSubjects.includes(selectedSubject);
       
       // Grade filter
-      const tutorGrades = Array.isArray(t.grade_levels) ? t.grade_levels : (t.grade_levels ? [t.grade_levels] : []);
+      const tutorGrades = gradeList(t.grade_levels);
       const matchesGrade = !selectedGrade || selectedGrade === 'All Grades' || tutorGrades.includes(selectedGrade);
 
       // Price filter
@@ -4460,12 +4476,12 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
             )}
           </div>
           <div className="px-6 pb-6">
-            <div className="flex items-end gap-5 -mt-14 mb-4">
+            <div className="flex items-end gap-5 mb-4">
               <img
                 src={tutor.profiles?.avatar_url || initialsAvatar(tutor.profiles?.full_name || 'T', '&size=160&bold=true')}
                 alt={tutor.profiles?.full_name}
                 onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(tutor.profiles?.full_name || 'T', '&size=160&bold=true'); }}
-                className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-lg bg-slate-100"
+                className="w-28 h-28 -mt-14 relative z-10 rounded-full object-cover border-4 border-white shadow-lg bg-slate-100"
               />
               <div className="flex-1 pb-1">
                 <h1 className="text-2xl font-bold text-slate-900">{tutor.profiles?.full_name}</h1>
@@ -4496,7 +4512,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
               {tutor.languages && (Array.isArray(tutor.languages) ? tutor.languages : [tutor.languages]).map(l => (
                 <span key={l} className="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm">{l}</span>
               ))}
-              {tutor.grade_levels && (Array.isArray(tutor.grade_levels) ? tutor.grade_levels : [tutor.grade_levels]).map(g => (
+              {gradeList(tutor.grade_levels).map(g => (
                 <span key={g} className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm">{g}</span>
               ))}
             </div>
@@ -4519,7 +4535,9 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
             <div>
               <h2 className="text-lg font-semibold text-slate-900 mb-3">What I teach</h2>
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium">{tutor.subject}</span>
+                {[...new Set((Array.isArray(tutor.subjects) && tutor.subjects.length ? tutor.subjects : [tutor.subject]).filter(Boolean))].map(sub => (
+                  <span key={sub} className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium">{sub}</span>
+                ))}
                 {tutor.specialties?.map((s, i) => (
                   <span key={i} className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full text-sm">{s}</span>
                 ))}
