@@ -4862,7 +4862,6 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-4">
           <button onClick={() => onNavigate('tutors')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Find Tutors</button>
-          <button onClick={() => onNavigate('consulting')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Consulting</button>
           <button onClick={() => onNavigate('clubs')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Clubs</button>
           <button onClick={() => onNavigate('schools')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>For Schools</button>
           {isAdmin && <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-purple-600' : 'text-purple-300'}`}>Admin</button>}
@@ -4897,7 +4896,6 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
       {mobileOpen && (
         <div className={`md:hidden ${scrolled ? 'bg-white border-t border-slate-100' : 'bg-slate-900/95 backdrop-blur-sm'} px-4 py-4 space-y-2`}>
           <button onClick={() => { onNavigate('tutors'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Find Tutors</button>
-          <button onClick={() => { onNavigate('consulting'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Consulting</button>
           <button onClick={() => { onNavigate('clubs'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Clubs</button>
           <button onClick={() => { onNavigate('schools'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>For Schools</button>
           {isAdmin && <button onClick={() => { onNavigate('admin'); setMobileOpen(false); }} className="block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-purple-400 hover:bg-white/10">Admin</button>}
