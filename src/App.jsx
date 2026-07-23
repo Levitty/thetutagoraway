@@ -638,6 +638,7 @@ const useBookings = (userId, role, tutorId = null) => {
       learner_name: context.learner_name || null,
       learner_grade: context.learner_grade || null,
       focus_note: context.focus_note || null,
+      child_id: context.child_id || null,
     }).select(`*, tutors(*, profiles(full_name, email)), profiles!bookings_student_id_fkey(full_name, email)`).single();
 
     if (error) throw error;
@@ -894,6 +895,27 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
   const [showProgress, setShowProgress] = useState(false);
   const [payments, setPayments] = useState([]);
   const [aiProgress, setAiProgress] = useState(null);
+  const [children, setChildren] = useState([]);
+  const [newChildName, setNewChildName] = useState('');
+  const [newChildGrade, setNewChildGrade] = useState('');
+  const CHILD_GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University', 'Adult learner'];
+  const fetchChildren = useCallback(() => {
+    if (!profile?.id) return;
+    supabase.from('children').select('id, name, grade').eq('parent_id', profile.id).order('created_at')
+      .then(({ data }) => setChildren(data || []));
+  }, [profile?.id]);
+  useEffect(() => { fetchChildren(); }, [fetchChildren]);
+  const addChild = async () => {
+    if (!newChildName.trim()) return;
+    const { data } = await supabase.from('children')
+      .insert({ parent_id: profile.id, name: newChildName.trim(), grade: newChildGrade || null })
+      .select('id, name, grade').single();
+    if (data) { setChildren(prev => [...prev, data]); setNewChildName(''); setNewChildGrade(''); }
+  };
+  const removeChild = async (id) => {
+    await supabase.from('children').delete().eq('id', id);
+    setChildren(prev => prev.filter(c => c.id !== id));
+  };
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
   const past = bookings.filter(b => b.status === 'completed');
   const nextLesson = [...upcoming].sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
@@ -1142,6 +1164,40 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
           </div>
 
           <div className="space-y-4">
+            {/* My learners — the parent's roster */}
+            <div className="bg-white rounded-xl border border-slate-200 p-4">
+              <h3 className="font-semibold text-slate-900 mb-1">My learners</h3>
+              <p className="text-xs text-slate-500 mb-3">Save who you book for — tap their name at checkout instead of retyping.</p>
+              {children.length > 0 && (
+                <div className="space-y-2 mb-3">
+                  {children.map(c => (
+                    <div key={c.id} className="flex items-center justify-between bg-slate-50 rounded-lg px-3 py-2">
+                      <div className="text-sm">
+                        <span className="font-medium text-slate-900">{c.name}</span>
+                        {c.grade && <span className="text-slate-400 ml-2">{c.grade}</span>}
+                      </div>
+                      <button onClick={() => removeChild(c.id)} aria-label={`Remove ${c.name}`}
+                        className="text-slate-300 hover:text-red-500 transition-colors">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" /></svg>
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <div className="flex gap-2">
+                <input type="text" value={newChildName} onChange={e => setNewChildName(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && addChild()} placeholder="Add a name"
+                  className="flex-1 min-w-0 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                <select value={newChildGrade} onChange={e => setNewChildGrade(e.target.value)}
+                  className="px-2 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                  <option value="">Grade</option>
+                  {CHILD_GRADES.map(g => <option key={g} value={g}>{g}</option>)}
+                </select>
+                <button onClick={addChild} disabled={!newChildName.trim()}
+                  className="px-3 py-2 bg-emerald-500 hover:bg-emerald-600 disabled:bg-slate-200 disabled:text-slate-400 text-white text-sm font-medium rounded-lg transition-colors">Add</button>
+              </div>
+            </div>
+
             {/* Referral Card */}
             <div className="bg-slate-900 rounded-xl p-4 text-white">
               <div className="flex items-center gap-2 mb-2">
@@ -4385,6 +4441,16 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
   const [learnerGrade, setLearnerGrade] = useState('');
   const [focusNote, setFocusNote] = useState('');
   const GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University', 'Adult learner'];
+  // Saved learners (child profiles) — a returning parent picks instead of retyping.
+  const [children, setChildren] = useState([]);
+  const [selectedChildId, setSelectedChildId] = useState(null); // null = entering someone new
+  useEffect(() => {
+    if (!user?.id) { setChildren([]); return; }
+    supabase.from('children').select('id, name, grade').eq('parent_id', user.id).order('created_at')
+      .then(({ data }) => setChildren(data || []));
+  }, [user?.id]);
+  const pickChild = (c) => { setSelectedChildId(c.id); setLearnerName(c.name); setLearnerGrade(c.grade || ''); };
+  const pickNewLearner = () => { setSelectedChildId(null); setLearnerName(''); setLearnerGrade(''); };
   
   const days = Array.from({ length: 7 }, (_, i) => { const d = new Date(); d.setDate(d.getDate() + i); return d; });
   const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -4429,11 +4495,20 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
     if (!user) { setShowAuth('register'); return; }
     setBooking(true);
     try {
+      // Save a brand-new learner to the parent's roster so next time they just pick.
+      let childId = selectedChildId;
+      if (!childId && learnerName.trim()) {
+        const { data: newChild } = await supabase.from('children')
+          .insert({ parent_id: user.id, name: learnerName.trim(), grade: learnerGrade || null })
+          .select('id, name, grade').single();
+        if (newChild) { childId = newChild.id; setChildren(prev => [...prev, newChild]); setSelectedChildId(newChild.id); }
+      }
       // Create booking first (as pending), carrying the learner context.
       const bookingData = await onBook(tutor.id, selectedSubject || tutor.subject, selectedDate.toISOString().split('T')[0], selectedTime, {
         learner_name: learnerName.trim(),
         learner_grade: learnerGrade || null,
         focus_note: focusNote.trim() || null,
+        child_id: childId || null,
       });
       setPendingBooking({
         ...bookingData,
@@ -4678,21 +4753,42 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                     </div>
                   )}
 
-                  <div>
-                    <label className="block text-xs font-medium text-slate-500 mb-1">Student's name</label>
-                    <input type="text" value={learnerName} onChange={e => setLearnerName(e.target.value)}
-                      placeholder="e.g. your child's name (or your own)"
-                      className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
-                  </div>
+                  {/* Saved learners — pick one, or add someone new */}
+                  {children.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      {children.map(c => (
+                        <button key={c.id} type="button" onClick={() => pickChild(c)}
+                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedChildId === c.id ? 'bg-emerald-500 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}>
+                          {c.name}{c.grade ? ` · ${c.grade}` : ''}
+                        </button>
+                      ))}
+                      <button type="button" onClick={pickNewLearner}
+                        className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedChildId === null ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}>
+                        + Someone new
+                      </button>
+                    </div>
+                  )}
 
-                  <div>
-                    <label className="block text-xs font-medium text-slate-500 mb-1">Grade / level</label>
-                    <select value={learnerGrade} onChange={e => setLearnerGrade(e.target.value)}
-                      className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
-                      <option value="">Select grade…</option>
-                      {GRADES.map(g => <option key={g} value={g}>{g}</option>)}
-                    </select>
-                  </div>
+                  {/* Name + grade inputs — only when adding a new learner */}
+                  {selectedChildId === null && (
+                    <>
+                      <div>
+                        <label className="block text-xs font-medium text-slate-500 mb-1">Student's name</label>
+                        <input type="text" value={learnerName} onChange={e => setLearnerName(e.target.value)}
+                          placeholder="e.g. your child's name (or your own)"
+                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-medium text-slate-500 mb-1">Grade / level</label>
+                        <select value={learnerGrade} onChange={e => setLearnerGrade(e.target.value)}
+                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
+                          <option value="">Select grade…</option>
+                          {GRADES.map(g => <option key={g} value={g}>{g}</option>)}
+                        </select>
+                      </div>
+                      {children.length > 0 && <p className="text-xs text-slate-400">We’ll save them so you can just tap their name next time.</p>}
+                    </>
+                  )}
 
                   <div>
                     <label className="block text-xs font-medium text-slate-500 mb-1">What should the tutor focus on? <span className="text-slate-400 font-normal">(optional)</span></label>
