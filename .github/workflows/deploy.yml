@@ -52,21 +52,17 @@ jobs:
           # More tolerance for slow FTP handshakes (default 30s sometimes times
           # out against Hostinger). Milliseconds.
           timeout: 120000
-          # Only the action's own files are ever removed; server-only files
-          # you uploaded by hand (e.g. logo.png) are left untouched.
-          # Brand assets live on the server, not in the repo — never overwrite
-          # them with the repo's placeholder versions.
+          # The repo is the source of truth for brand assets: public/logo.png
+          # etc. are committed and copied into dist/ by the build, so the deploy
+          # must SHIP them. (A hand-uploaded server copy of logo.png had gone
+          # corrupt — 422 "Invalid source image" — while excluded from deploy;
+          # un-excluding it lets the good repo version overwrite the bad one.)
+          # favicon.svg and og-image.png are known-good on the server already.
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
             **/.DS_Store
-            **/favicon.svg
-            **/favicon-*.png
-            **/apple-touch-icon*.png
-            **/logo.png
-            **/logo-*.png
-            **/og-image.png
 
       - name: Pause before retry
         if: steps.deploy1.outcome == 'failure'
