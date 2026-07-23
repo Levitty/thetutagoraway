@@ -626,7 +626,7 @@ const useBookings = (userId, role, tutorId = null) => {
     setLoading(false);
   };
 
-  const createBooking = async (tutorId, subject, date, time) => {
+  const createBooking = async (tutorId, subject, date, time, context = {}) => {
     // First create the booking
     const { data, error } = await supabase.from('bookings').insert({
       student_id: userId,
@@ -634,7 +634,10 @@ const useBookings = (userId, role, tutorId = null) => {
       subject,
       lesson_date: date,
       start_time: time,
-      status: 'pending'
+      status: 'pending',
+      learner_name: context.learner_name || null,
+      learner_grade: context.learner_grade || null,
+      focus_note: context.focus_note || null,
     }).select(`*, tutors(*, profiles(full_name, email)), profiles!bookings_student_id_fkey(full_name, email)`).single();
 
     if (error) throw error;
@@ -666,10 +669,13 @@ const sendBookingNotifications = async (booking, studentId) => {
 
     // Send in-app message to tutor (emails are sent after payment confirmation in PaymentModal)
     if (tutorUserId) {
+      const learner = booking.learner_name || studentName;
+      const gradeLine = booking.learner_grade ? ` (${booking.learner_grade})` : '';
+      const focusLine = booking.focus_note ? `\n\nWhat to focus on: ${booking.focus_note}` : '';
       await supabase.from('messages').insert({
         sender_id: studentId,
         receiver_id: tutorUserId,
-        content: `New Booking\n\nHi ${tutorName.split(' ')[0]}, I've booked a ${subject} lesson with you on ${lessonDate} at ${lessonTime}.\n\nLooking forward to our session!\n\n- ${studentName}`
+        content: `New Booking\n\nHi ${tutorName.split(' ')[0]}, a ${subject} lesson is booked for ${learner}${gradeLine} on ${lessonDate} at ${lessonTime}.${focusLine}\n\nLooking forward to it!\n\n- ${studentName}`
       });
     }
 
@@ -2350,14 +2356,23 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                   <div className="divide-y divide-slate-100">
                     {upcoming.map(b => (
                       <div key={b.id} className="px-5 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
-                        <div className="flex items-center gap-4">
-                          <Avatar src={b.profiles?.avatar_url} name={b.profiles?.full_name} size={44} />
-                          <div>
-                            <div className="font-medium text-slate-900">{b.profiles?.full_name}</div>
-                            <div className="text-sm text-slate-500">{b.subject}</div>
+                        <div className="flex items-center gap-4 min-w-0">
+                          <Avatar src={b.profiles?.avatar_url} name={b.learner_name || b.profiles?.full_name} size={44} />
+                          <div className="min-w-0">
+                            <div className="font-medium text-slate-900">
+                              {b.learner_name || b.profiles?.full_name}
+                              {b.learner_grade && <span className="ml-2 px-2 py-0.5 bg-purple-50 text-purple-600 rounded-full text-xs font-medium align-middle">{b.learner_grade}</span>}
+                            </div>
+                            <div className="text-sm text-slate-500">
+                              {b.subject}
+                              {b.learner_name && b.profiles?.full_name && b.learner_name.trim() !== b.profiles.full_name.trim() && (
+                                <span className="text-slate-400"> · booked by {b.profiles.full_name}</span>
+                              )}
+                            </div>
+                            {b.focus_note && <div className="text-xs text-amber-700 mt-1 truncate max-w-xs">Focus: {b.focus_note}</div>}
                           </div>
                         </div>
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-4 shrink-0">
                           <div className="text-right">
                             <div className="text-sm font-medium text-slate-900">{b.lesson_date}</div>
                             <div className="text-sm text-slate-400">{b.start_time?.slice(0,5)}</div>
@@ -4363,6 +4378,13 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
   const [pendingBooking, setPendingBooking] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [loadingReviews, setLoadingReviews] = useState(true);
+  // Who the lesson is for + what to work on (the parent-vs-learner context).
+  const bookableSubjects = [...new Set((Array.isArray(tutor.subjects) && tutor.subjects.length ? tutor.subjects : [tutor.subject]).filter(Boolean))];
+  const [selectedSubject, setSelectedSubject] = useState(bookableSubjects[0] || tutor.subject || '');
+  const [learnerName, setLearnerName] = useState('');
+  const [learnerGrade, setLearnerGrade] = useState('');
+  const [focusNote, setFocusNote] = useState('');
+  const GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University', 'Adult learner'];
   
   const days = Array.from({ length: 7 }, (_, i) => { const d = new Date(); d.setDate(d.getDate() + i); return d; });
   const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -4407,8 +4429,12 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
     if (!user) { setShowAuth('register'); return; }
     setBooking(true);
     try {
-      // Create booking first (as pending)
-      const bookingData = await onBook(tutor.id, tutor.subject, selectedDate.toISOString().split('T')[0], selectedTime);
+      // Create booking first (as pending), carrying the learner context.
+      const bookingData = await onBook(tutor.id, selectedSubject || tutor.subject, selectedDate.toISOString().split('T')[0], selectedTime, {
+        learner_name: learnerName.trim(),
+        learner_grade: learnerGrade || null,
+        focus_note: focusNote.trim() || null,
+      });
       setPendingBooking({
         ...bookingData,
         id: bookingData?.id || Date.now().toString(),
@@ -4637,17 +4663,60 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                 </>
               )}
 
+              {/* Who is this lesson for? — appears once a time is chosen */}
+              {selectedTime && (
+                <div className="mb-5 pt-4 border-t border-slate-100 space-y-3">
+                  <p className="text-sm font-semibold text-slate-800">Who is this lesson for?</p>
+
+                  {bookableSubjects.length > 1 && (
+                    <div>
+                      <label className="block text-xs font-medium text-slate-500 mb-1">Subject</label>
+                      <select value={selectedSubject} onChange={e => setSelectedSubject(e.target.value)}
+                        className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
+                        {bookableSubjects.map(sub => <option key={sub} value={sub}>{sub}</option>)}
+                      </select>
+                    </div>
+                  )}
+
+                  <div>
+                    <label className="block text-xs font-medium text-slate-500 mb-1">Student's name</label>
+                    <input type="text" value={learnerName} onChange={e => setLearnerName(e.target.value)}
+                      placeholder="e.g. your child's name (or your own)"
+                      className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-medium text-slate-500 mb-1">Grade / level</label>
+                    <select value={learnerGrade} onChange={e => setLearnerGrade(e.target.value)}
+                      className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
+                      <option value="">Select grade…</option>
+                      {GRADES.map(g => <option key={g} value={g}>{g}</option>)}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-medium text-slate-500 mb-1">What should the tutor focus on? <span className="text-slate-400 font-normal">(optional)</span></label>
+                    <textarea value={focusNote} onChange={e => setFocusNote(e.target.value)} rows={2}
+                      placeholder="e.g. struggling with fractions; preparing for end-term exam"
+                      className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none" />
+                  </div>
+                </div>
+              )}
+
               {/* Book button */}
-              <button 
-                onClick={handleBook} 
-                disabled={!selectedTime || booking} 
+              <button
+                onClick={handleBook}
+                disabled={!selectedTime || !learnerName.trim() || !learnerGrade || booking}
                 className={`w-full py-3 rounded-xl font-semibold transition-colors ${
-                  selectedTime 
-                    ? 'bg-emerald-500 hover:bg-emerald-600 text-white' 
+                  selectedTime && learnerName.trim() && learnerGrade
+                    ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
                     : 'bg-slate-100 text-slate-400 cursor-not-allowed'
                 }`}
               >
-                {booking ? 'Booking...' : selectedTime ? `Book for KSh ${tutor.hourly_rate?.toLocaleString()}` : 'Select a time to book'}
+                {booking ? 'Booking...'
+                  : !selectedTime ? 'Select a time to book'
+                  : (!learnerName.trim() || !learnerGrade) ? 'Add student name & grade'
+                  : `Book for KSh ${tutor.hourly_rate?.toLocaleString()}`}
               </button>
 
               {/* Message button */}
