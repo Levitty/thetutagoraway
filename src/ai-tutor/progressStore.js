@@ -74,7 +74,11 @@ const reconcileProgress = (a, b) => {
   return progressScore(a) >= progressScore(b) ? a : b;
 };
 
-export const loadProgress = async (userId) => {
+// `key` is the profile key (namespaces localStorage + the cloud row per learner
+// and subject). `owner` is the real auth uid that OWNS the row (for the FK + RLS);
+// it defaults to `key` for the account-holder case where the two are identical.
+export const loadProgress = async (key, owner = key) => {
+  const userId = key;
   const local = loadLocal(userId);
   if (!userId) return local || defaultProgress();
 
@@ -83,7 +87,7 @@ export const loadProgress = async (userId) => {
     const { data, error } = await supabase
       .from('ai_tutor_progress')
       .select('*')
-      .eq('user_id', userId)
+      .eq('profile_key', key)
       .single();
 
     if (error && error.code !== 'PGRST116') {
@@ -113,11 +117,12 @@ export const loadProgress = async (userId) => {
   saveLocal(userId, chosen);
   // If we trusted local over cloud (cloud missing or behind), push it back up
   // so the next device sees the finished state too.
-  if (chosen !== cloud) saveProgress(userId, chosen);
+  if (chosen !== cloud) saveProgress(key, chosen, owner);
   return chosen;
 };
 
-export const saveProgress = async (userId, progress) => {
+export const saveProgress = async (key, progress, owner = key, learnerId = null) => {
+  const userId = key;
   // Always save locally first (instant)
   saveLocal(userId, progress);
 
@@ -130,7 +135,9 @@ export const saveProgress = async (userId, progress) => {
       const { error } = await supabase
         .from('ai_tutor_progress')
         .upsert({
-          user_id: userId,
+          user_id: owner,
+          profile_key: key,
+          learner_id: learnerId,
           progress: {
             skills: progress.skills,
             diagnosticBalances: progress.diagnosticBalances,
@@ -147,7 +154,7 @@ export const saveProgress = async (userId, progress) => {
           longest_streak: progress.longestStreak || 0,
           last_practice_date: progress.lastPracticeDate,
           updated_at: new Date().toISOString(),
-        }, { onConflict: 'user_id' });
+        }, { onConflict: 'profile_key' });
 
       if (error) {
         console.warn('Supabase save error:', error);
@@ -159,7 +166,8 @@ export const saveProgress = async (userId, progress) => {
 };
 
 // Force immediate save (on unmount, lesson complete, etc.)
-export const forceSave = async (userId, progress) => {
+export const forceSave = async (key, progress, owner = key, learnerId = null) => {
+  const userId = key;
   saveLocal(userId, progress);
   if (!userId) return;
 
@@ -169,7 +177,9 @@ export const forceSave = async (userId, progress) => {
     await supabase
       .from('ai_tutor_progress')
       .upsert({
-        user_id: userId,
+        user_id: owner,
+        profile_key: key,
+        learner_id: learnerId,
         progress: {
           skills: progress.skills,
           diagnosticBalances: progress.diagnosticBalances,
@@ -186,7 +196,7 @@ export const forceSave = async (userId, progress) => {
         longest_streak: progress.longestStreak || 0,
         last_practice_date: progress.lastPracticeDate,
         updated_at: new Date().toISOString(),
-      }, { onConflict: 'user_id' });
+      }, { onConflict: 'profile_key' });
   } catch (e) {
     console.warn('Force save failed:', e);
   }

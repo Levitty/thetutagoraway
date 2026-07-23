@@ -125,6 +125,24 @@ export function AIMastery({ onBack, userId, studentName }) {
     return { skills, getPostReqs: sub.getPostReqs, getPreChain, getPostChain, curriculum };
   }, [sub, curriculum]);
 
+  // Per-child HOREB: a parent account can run the engine for each of their
+  // children separately. activeLearner === null means the account holder
+  // practises; a child means that child's own namespaced progress (its own
+  // profile key + cloud row), still owned by the parent uid for RLS.
+  const [learners, setLearners] = useState([]);
+  const [activeLearner, setActiveLearner] = useState(null);
+  useEffect(() => {
+    if (!userId) { setLearners([]); return; }
+    supabase.from('children').select('id, name, grade').eq('parent_id', userId).order('created_at')
+      .then(({ data }) => setLearners(data || []));
+  }, [userId]);
+  const learnerBase = activeLearner ? `${userId}_c${activeLearner.id}` : userId;
+  const learnerId = activeLearner?.id || null;
+  const keyFor = useCallback(
+    (subj) => (subj === 'math' ? learnerBase : `${learnerBase}_${subj}`),
+    [learnerBase],
+  );
+
   // Lesson / Practice state
   const [activeSkill, setActiveSkill] = useState(null);
   const [problem, setProblem] = useState(null);
@@ -279,8 +297,8 @@ export function AIMastery({ onBack, userId, studentName }) {
     let cancelled = false;
     setLoading(true);
     (async () => {
-      const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
-      const p = await loadProgress(storageKey);
+      const storageKey = keyFor(subjectId);
+      const p = await loadProgress(storageKey, userId);
       if (cancelled) return;
       setProgress(p);
       // Only (re)set the entry view on a genuine load. If this effect re-fires
@@ -294,29 +312,28 @@ export function AIMastery({ onBack, userId, studentName }) {
       setLoading(false);
     })();
     return () => { cancelled = true; };
-  }, [userId, subjectId]);
+  }, [userId, subjectId, learnerBase, keyFor]);
 
   // Auto-save on progress change
   useEffect(() => {
     if (!loading && subjectId) {
-      const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
-      saveProgress(storageKey, progress);
+      saveProgress(keyFor(subjectId), progress, userId, learnerId);
     }
-  }, [progress, userId, loading, subjectId]);
+  }, [progress, userId, loading, subjectId, keyFor, learnerId]);
 
   // Keep a ref of the latest state so the unmount/back handlers flush the most
   // recent progress instead of a stale snapshot captured at first render.
-  const latestRef = useRef({ progress, loading, subjectId, userId });
+  const latestRef = useRef({ progress, loading, subjectId, userId, learnerBase, learnerId });
   useEffect(() => {
-    latestRef.current = { progress, loading, subjectId, userId };
+    latestRef.current = { progress, loading, subjectId, userId, learnerBase, learnerId };
   });
 
   // Flush the latest progress to the cloud immediately (used on exit).
   const flushSave = useCallback(() => {
-    const { progress, loading, subjectId, userId } = latestRef.current;
+    const { progress, loading, subjectId, userId, learnerBase, learnerId } = latestRef.current;
     if (loading || !subjectId) return;
-    const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
-    forceSave(storageKey, progress);
+    const storageKey = subjectId === 'math' ? learnerBase : `${learnerBase}_${subjectId}`;
+    forceSave(storageKey, progress, userId, learnerId);
   }, []);
 
   // Save on unmount (e.g. navigating away from the tutor)
@@ -459,8 +476,7 @@ export function AIMastery({ onBack, userId, studentName }) {
         placementGrade,
       };
       setProgress(finished);
-      const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
-      forceSave(storageKey, finished);
+      forceSave(keyFor(subjectId), finished, userId, learnerId);
     }
 
     setTimeout(() => {
@@ -786,7 +802,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     if (item?.type === 'mastery') goHome();
   };
   const switchSubject = () => { setSubjectId(null); setView('subject-picker'); setActiveSkill(null); setProgress(defaultProgress); };
-  const resetAll = () => { if (confirm('Reset ALL progress? This cannot be undone.')) { const fresh = defaultProgress(); setProgress(fresh); const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`; forceSave(storageKey, fresh); setView('welcome'); } };
+  const resetAll = () => { if (confirm('Reset ALL progress? This cannot be undone.')) { const fresh = defaultProgress(); setProgress(fresh); forceSave(keyFor(subjectId), fresh, userId, learnerId); setView('welcome'); } };
 
   // Grade/band label helper. ACCA subjects use named levels; otherwise the
   // active curriculum decides the wording ("Grade" vs Cambridge "Stage").
@@ -972,7 +988,7 @@ export function AIMastery({ onBack, userId, studentName }) {
         skillName: skill.name,
         cbcLabel: cbc ? `CBC · Grade ${cbc.grade} · ${cbc.strand} — ${cbc.substrand}` : `Grade ${skill.grade} · ${skill.strand}`,
         progressLabel: `${session.correct} of ${skill.minProblems}`,
-        studentName: (studentName || '').trim().split(/\s+/)[0],
+        studentName: ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0],
         onResult: handleYoungResult,
         onExit: goHome,
       };
@@ -1482,7 +1498,7 @@ export function AIMastery({ onBack, userId, studentName }) {
 
         {/* ========== OVERVIEW (HOME) TAB ========== */}
         {activeTab === 'overview' && (() => {
-          const firstName = (studentName || '').trim().split(/\s+/)[0];
+          const firstName = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
           const hour = new Date().getHours();
           const greeting = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
           const dueReviews = reviews.length;
@@ -1499,6 +1515,24 @@ export function AIMastery({ onBack, userId, studentName }) {
           const confidencePct = brainProfile ? Math.round((brainProfile.confidence || 0) * 100) : null;
           return (
             <div className="space-y-4">
+              {/* Learner switcher — a parent runs HOREB per child. Each learner
+                  has their own diagnostic, level, and progress. */}
+              {learners.length > 0 && (
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs text-slate-400 mr-1">Practising as</span>
+                  <button onClick={() => setActiveLearner(null)}
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${!activeLearner ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}>
+                    You
+                  </button>
+                  {learners.map(c => (
+                    <button key={c.id} onClick={() => setActiveLearner(c)}
+                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${activeLearner?.id === c.id ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}>
+                      {(c.name || '').trim().split(/\s+/)[0]}
+                    </button>
+                  ))}
+                </div>
+              )}
+
               {/* Hero — greeting, level, and the next action together */}
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-600 via-emerald-700 to-slate-800 p-6 shadow-lg shadow-emerald-950/40">
                 <div className="flex items-start justify-between gap-4">
