@@ -1649,11 +1649,41 @@ const TutorOnboarding = ({ profile, onComplete }) => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
+  // Downscale big phone photos before upload. A modern phone camera shot is
+  // often 5–12 MB — enough to hit the storage size limit or time out on mobile
+  // data, which is exactly how a tutor gets stuck "unable to upload". We resize
+  // to a legible max dimension and re-encode as JPEG. PDFs and anything the
+  // browser can't decode (e.g. some HEICs) pass through untouched.
+  const compressImage = (file, maxDim = 1800, quality = 0.82) => new Promise((resolve) => {
+    if (!file || !file.type?.startsWith('image/')) { resolve(file); return; }
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      const scale = Math.min(1, maxDim / Math.max(img.width, img.height));
+      if (scale === 1 && file.size < 1_500_000) { resolve(file); return; }
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(img.width * scale);
+      canvas.height = Math.round(img.height * scale);
+      canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+      canvas.toBlob(
+        (blob) => resolve(blob ? new File([blob], file.name.replace(/\.[^.]+$/, '.jpg'), { type: 'image/jpeg' }) : file),
+        'image/jpeg', quality,
+      );
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); resolve(file); };
+    img.src = url;
+  });
+
   const uploadFile = async (file, folder) => {
-    const ext = file.name.split('.').pop();
+    const compressed = await compressImage(file);
+    if (compressed.size > 10 * 1024 * 1024) {
+      throw new Error('That file is over 10MB. Please upload a clear photo (not a large scan) or a smaller PDF.');
+    }
+    const ext = (compressed.name.split('.').pop() || 'jpg').toLowerCase();
     const path = `${profile.id}/${folder}-${Date.now()}.${ext}`;
-    const { data, error } = await supabase.storage.from('tutor-documents').upload(path, file);
-    if (error) throw new Error(`Upload failed: ${error.message}`);
+    const { error } = await supabase.storage.from('tutor-documents').upload(path, compressed, { contentType: compressed.type, upsert: true });
+    if (error) throw new Error(`Upload failed: ${error.message}. Try a smaller file, or switch to Chrome if you're on another browser.`);
     // Store the path, not a public URL — documents are private and accessed via signed URLs
     return path;
   };
@@ -1704,11 +1734,13 @@ const TutorOnboarding = ({ profile, onComplete }) => {
     setError('');
 
     try {
-      // Upload photo if provided
+      // Upload photo if provided (compressed — see uploadFile rationale)
       if (photoFile) {
-        const ext = photoFile.name.split('.').pop();
+        const photo = await compressImage(photoFile, 1024, 0.85);
+        const ext = (photo.name.split('.').pop() || 'jpg').toLowerCase();
         const photoPath = `${profile.id}/avatar-${Date.now()}.${ext}`;
-        await supabase.storage.from('avatars').upload(photoPath, photoFile, { upsert: true });
+        const { error: photoErr } = await supabase.storage.from('avatars').upload(photoPath, photo, { upsert: true, contentType: photo.type });
+        if (photoErr) throw new Error(`Photo upload failed: ${photoErr.message}`);
         const { data: photoUrl } = supabase.storage.from('avatars').getPublicUrl(photoPath);
         await supabase.from('profiles').update({ avatar_url: photoUrl.publicUrl }).eq('id', profile.id);
       }
