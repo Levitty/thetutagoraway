@@ -4100,29 +4100,26 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filtered.map(t => (
               <div key={t.id} onClick={() => onSelectTutor(t)} className="bg-white rounded-xl border border-slate-200 overflow-hidden cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
-                {/* Photo banner */}
-                <div className="h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 relative">
-                  {t.top_rated && (
-                    <span className="absolute top-2 right-2 px-2 py-1 bg-white/90 text-emerald-700 text-xs font-semibold rounded-full">Top Rated</span>
-                  )}
+                {/* Photo-forward header — the face is the hero. Full-bleed cover
+                    image (real photo, or the initials avatar as a colour tile). */}
+                <div className="relative w-full aspect-[4/3] bg-slate-100 overflow-hidden">
+                  <img
+                    src={t.profiles?.avatar_url || initialsAvatar(t.profiles?.full_name || 'T', '&background=0f766e&size=400&bold=true')}
+                    alt={t.profiles?.full_name}
+                    onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(t.profiles?.full_name || 'T', '&background=0f766e&size=400&bold=true'); }}
+                    className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
+                  />
                   {t.verified && (
-                    <span className="absolute top-2 left-2 px-2 py-1 bg-white/90 text-emerald-700 text-xs font-semibold rounded-full flex items-center gap-1">
+                    <span className="absolute top-2.5 left-2.5 px-2.5 py-1 bg-white/95 text-emerald-700 text-xs font-semibold rounded-full flex items-center gap-1 shadow-sm">
                       <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                       Verified
                     </span>
                   )}
+                  {t.top_rated && (
+                    <span className="absolute top-2.5 right-2.5 px-2.5 py-1 bg-amber-400 text-amber-950 text-xs font-semibold rounded-full shadow-sm">Top Rated</span>
+                  )}
                 </div>
-                {/* Avatar overlapping banner — relative+z lifts it above the
-                    `relative` banner, which otherwise paints over its top half. */}
-                <div className="px-4 -mt-10 mb-3 relative z-10">
-                  <img
-                    src={t.profiles?.avatar_url || initialsAvatar(t.profiles?.full_name || 'T', '&background=0f766e&size=120&bold=true')}
-                    alt={t.profiles?.full_name}
-                    onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(t.profiles?.full_name || 'T', '&background=0f766e&size=120&bold=true'); }}
-                    className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md bg-slate-100"
-                  />
-                </div>
-                <div className="px-4 pb-4 flex flex-col flex-1">
+                <div className="px-4 pt-3 pb-4 flex flex-col flex-1">
                   <h3 className="font-bold text-slate-900 text-lg">{t.profiles?.full_name}</h3>
                   <p className="text-sm text-emerald-600 font-medium">{(t.subjects || [t.subject]).join(', ')} Tutor</p>
                   {t.headline && <p className="text-sm text-slate-500 mt-1">{t.headline}</p>}
@@ -5128,6 +5125,17 @@ const AdminDashboard = ({ onLogout, onBack }) => {
     setActionLoading(null);
   };
 
+  // Silently remove a profile from the public site (ghost/test accounts,
+  // broken photos) WITHOUT emailing the tutor — unlike Reject. Sets it back to
+  // pending so it's reversible: Approve re-publishes it.
+  const handleHideTutor = async (tutorId) => {
+    setActionLoading(tutorId);
+    const { error } = await supabase.from('tutors').update({ verified: false, verification_status: 'pending' }).eq('id', tutorId);
+    if (error) await supabase.from('tutors').update({ verified: false, verification_status: 'pending' }).eq('user_id', tutorId);
+    setAllTutors(prev => prev.map(t => t.id === tutorId ? { ...t, verified: false, verification_status: 'pending', _status: 'pending' } : t));
+    setActionLoading(null);
+  };
+
   const verifyCounts = {
     all: allTutors.length,
     pending: allTutors.filter(t => t._status === 'pending' || t._status === 'under_review').length,
@@ -5667,7 +5675,13 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                               {t._status !== 'approved' && (
                                 <button onClick={() => handleApproveTutor(t.id)} disabled={actionLoading === t.id}
                                   className="px-5 py-2 bg-emerald-500 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 disabled:opacity-50">
-                                  {actionLoading === t.id ? 'Approving...' : 'Approve'}
+                                  {actionLoading === t.id ? (t._status === 'pending' && t.verified === false ? 'Publishing...' : 'Approving...') : (t.verification_status === 'pending' && t.bio ? 'Publish to site' : 'Approve')}
+                                </button>
+                              )}
+                              {t._status === 'approved' && (
+                                <button onClick={() => handleHideTutor(t.id)} disabled={actionLoading === t.id}
+                                  className="px-5 py-2 bg-white border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50 disabled:opacity-50">
+                                  {actionLoading === t.id ? 'Hiding...' : 'Hide from site'}
                                 </button>
                               )}
                               <button onClick={() => setRejectingId(t.id)}
