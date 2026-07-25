@@ -3630,9 +3630,11 @@ const HorebConstellation = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    let raf, W = 0, H = 0, dpr = 1, pts = [], edges = [], stars = [], path = [], reduced = false;
+    let raf, W = 0, H = 0, dpr = 1, pts = [], edges = [], stars = [], paths = [], reduced = false;
     try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { /* ignore */ }
     const rnd = (a, b) => a + Math.random() * (b - a);
+    // Distinct colours for the three learning tracks lighting up at once.
+    const TRACKS = [[242, 168, 40], [52, 211, 153], [96, 165, 250]];
 
     const build = () => {
       const rect = canvas.getBoundingClientRect();
@@ -3641,8 +3643,8 @@ const HorebConstellation = () => {
       W = rect.width; H = rect.height;
       canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const R = Math.min(W, H) * 0.42;
-      const N = 130;
+      const R = Math.min(W, H) * 0.44;
+      const N = 210;
       pts = [];
       // Fibonacci sphere → evenly spread skills over a globe.
       for (let i = 0; i < N; i++) {
@@ -3661,23 +3663,25 @@ const HorebConstellation = () => {
         edges.push([i, d[0][1]]);
         if (Math.random() < 0.55) edges.push([i, d[1][1]]);
       }
-      // A learning path — a chain of prerequisites climbing outward from the
-      // core. We light it up in sequence to show HOREB unlocking one skill at
-      // a time: master this, and the next one opens.
+      // Three learning tracks climbing outward from the core — each a chain of
+      // prerequisites we light in sequence (master this, and the next unlocks).
       const adj = Array.from({ length: N }, () => []);
       for (const [a, b] of edges) { adj[a].push(b); adj[b].push(a); }
       const rad2 = (i) => pts[i].x * pts[i].x + pts[i].y * pts[i].y + pts[i].z * pts[i].z;
-      let startI = 0, minR = Infinity;
-      for (let i = 0; i < N; i++) { const r = rad2(i); if (r < minR) { minR = r; startI = i; } }
-      path = [startI];
-      const used = new Set([startI]);
-      for (let step = 0; step < 6; step++) {
-        const cur = path[path.length - 1], curR = rad2(cur);
-        let best = -1, bestScore = -Infinity;
-        for (const nb of adj[cur]) { if (used.has(nb)) continue; const s = rad2(nb) - curR; if (s > bestScore) { bestScore = s; best = nb; } }
-        if (best < 0) { const cand = adj[cur].filter(n => !used.has(n)); if (!cand.length) break; best = cand[0]; }
-        path.push(best); used.add(best);
-      }
+      const byR = [...Array(N).keys()].sort((a, b) => rad2(a) - rad2(b));
+      const usedAll = new Set();
+      const walk = (seed) => {
+        const p = [seed]; usedAll.add(seed);
+        for (let step = 0; step < 8; step++) {
+          const cur = p[p.length - 1], curR = rad2(cur);
+          let best = -1, bestScore = -Infinity;
+          for (const nb of adj[cur]) { if (usedAll.has(nb)) continue; const s = rad2(nb) - curR; if (s > bestScore) { bestScore = s; best = nb; } }
+          if (best < 0) { const cand = adj[cur].filter(n => !usedAll.has(n)); if (!cand.length) break; best = cand[0]; }
+          p.push(best); usedAll.add(best);
+        }
+        return p;
+      };
+      paths = [byR[0], byR[4], byR[8]].map((seed, i) => ({ nodes: walk(seed), color: TRACKS[i], off: i / 3 }));
       stars = [];
       const cx = W / 2, cy = H / 2, maxR = Math.min(W, H) * 0.5;
       const S = Math.round((W * H) / 2600);
@@ -3718,36 +3722,37 @@ const HorebConstellation = () => {
         ctx.fillStyle = warm ? `rgba(246,204,124,${(0.5 + 0.45 * p.persp) * tw})` : `rgba(168,198,234,${(0.35 + 0.35 * p.persp) * tw})`;
         ctx.beginPath(); ctx.arc(p.sx, p.sy, Math.max(0.6, p.r * p.persp), 0, 6.29); ctx.fill();
       }
-      // Animated learning path — a pulse travels the prerequisite chain,
-      // lighting each skill as it unlocks, then loops.
-      if (path.length > 1) {
-        const segs = path.length - 1;
-        const per = 900;
-        const cycle = per * (segs + 2);
-        const fseg = (reduced ? per * 2.4 : (t % cycle)) / per;
+      // Three learning tracks light up at once, each its own colour, each a
+      // pulse travelling its prerequisite chain and unlocking skills as it goes.
+      for (const track of paths) {
+        const p = track.nodes; if (p.length < 2) continue;
+        const [cr, cg, cb] = track.color;
+        const segs = p.length - 1, per = 820, cycle = per * (segs + 2);
+        const fseg = ((reduced ? per * 2.4 : (t + track.off * cycle) % cycle)) / per;
         const seg = Math.floor(fseg), f = fseg - seg;
         for (let k = 0; k < segs; k++) {
-          const pa = proj[path[k]], pb = proj[path[k + 1]];
+          const pa = proj[p[k]], pb = proj[p[k + 1]];
           const active = k <= seg;
-          ctx.strokeStyle = `rgba(255,214,120,${active ? 0.55 : 0.14})`;
-          ctx.lineWidth = active ? 1.7 : 1;
+          ctx.strokeStyle = `rgba(${cr},${cg},${cb},${active ? 0.5 : 0.12})`;
+          ctx.lineWidth = active ? 1.6 : 0.9;
           ctx.beginPath(); ctx.moveTo(pa.sx, pa.sy); ctx.lineTo(pb.sx, pb.sy); ctx.stroke();
         }
-        const lit = Math.min(seg + 1, path.length);
+        const lit = Math.min(seg + 1, p.length);
         for (let k = 0; k < lit; k++) {
-          const p = proj[path[k]];
-          const gg = ctx.createRadialGradient(p.sx, p.sy, 0, p.sx, p.sy, 11 * p.persp);
-          gg.addColorStop(0, 'rgba(255,214,120,0.5)'); gg.addColorStop(1, 'rgba(255,214,120,0)');
-          ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(p.sx, p.sy, 11 * p.persp, 0, 6.29); ctx.fill();
-          ctx.fillStyle = 'rgba(255,228,158,0.98)'; ctx.beginPath(); ctx.arc(p.sx, p.sy, Math.max(2, 3.2 * p.persp), 0, 6.29); ctx.fill();
+          const pp = proj[p[k]];
+          const gg = ctx.createRadialGradient(pp.sx, pp.sy, 0, pp.sx, pp.sy, 10 * pp.persp);
+          gg.addColorStop(0, `rgba(${cr},${cg},${cb},0.5)`); gg.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
+          ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(pp.sx, pp.sy, 10 * pp.persp, 0, 6.29); ctx.fill();
+          ctx.fillStyle = `rgba(${Math.min(255, cr + 45)},${Math.min(255, cg + 45)},${Math.min(255, cb + 45)},0.96)`;
+          ctx.beginPath(); ctx.arc(pp.sx, pp.sy, Math.max(1.8, 3 * pp.persp), 0, 6.29); ctx.fill();
         }
         if (seg < segs) {
-          const pa = proj[path[seg]], pb = proj[path[seg + 1]];
+          const pa = proj[p[seg]], pb = proj[p[seg + 1]];
           const px = pa.sx + (pb.sx - pa.sx) * f, py = pa.sy + (pb.sy - pa.sy) * f;
-          const gg = ctx.createRadialGradient(px, py, 0, px, py, 10);
-          gg.addColorStop(0, 'rgba(255,246,224,0.95)'); gg.addColorStop(1, 'rgba(255,214,120,0)');
-          ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(px, py, 10, 0, 6.29); ctx.fill();
-          ctx.fillStyle = 'rgba(255,251,240,1)'; ctx.beginPath(); ctx.arc(px, py, 2.6, 0, 6.29); ctx.fill();
+          const gg = ctx.createRadialGradient(px, py, 0, px, py, 9);
+          gg.addColorStop(0, 'rgba(255,255,255,0.95)'); gg.addColorStop(0.4, `rgba(${cr},${cg},${cb},0.7)`); gg.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
+          ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(px, py, 9, 0, 6.29); ctx.fill();
+          ctx.fillStyle = 'rgba(255,255,255,1)'; ctx.beginPath(); ctx.arc(px, py, 2.3, 0, 6.29); ctx.fill();
         }
       }
 
@@ -3797,7 +3802,7 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
             <button onClick={start} className="px-7 py-3.5 rounded-xl bg-amber-400 text-slate-900 font-bold text-[15px] hover:bg-amber-300 transition-colors">
               {user ? 'Open HOREB' : 'Find your child’s gap'}
             </button>
-            <button onClick={() => onNavigate('horebhow')} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/20 font-semibold text-[15px] hover:bg-white/15 transition-colors">
+            <button onClick={() => { const el = document.getElementById('how'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/20 font-semibold text-[15px] hover:bg-white/15 transition-colors">
               How it works
             </button>
           </div>
@@ -3818,7 +3823,7 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
 
 // Page two — a confident, science-forward answer to "what is HOREB?", in the
 // clean bold register the founder likes. Light, high-contrast, one accent.
-const HorebHow = ({ user, onNavigate, setShowAuth }) => {
+const HorebHow = ({ user, onNavigate, setShowAuth, embedded = false }) => {
   const start = () => {
     if (user) { onNavigate('ai'); return; }
     try { sessionStorage.setItem('tg_after_auth', 'ai'); } catch { /* private mode */ }
@@ -3831,10 +3836,10 @@ const HorebHow = ({ user, onNavigate, setShowAuth }) => {
     { k: 'It fights forgetting.', p: 'Each skill returns for a short review at the precise moment it would start to fade. What your child learns, they keep — without you ever nagging about revision.' },
   ];
   return (
-    <div className="min-h-screen bg-white text-slate-900">
-      <div className="max-w-4xl mx-auto px-6 pt-24 pb-24">
-        <button onClick={() => onNavigate('horeb')} className="text-slate-400 hover:text-slate-700 text-sm transition-colors">← Back</button>
-        <div className="mt-8 text-[13px] font-bold tracking-[.16em] text-amber-600">HOW HOREB WORKS</div>
+    <div id="how" className="bg-white text-slate-900">
+      <div className={`max-w-4xl mx-auto px-6 pb-24 ${embedded ? 'pt-20' : 'pt-24'}`}>
+        {!embedded && <button onClick={() => onNavigate('horeb')} className="text-slate-400 hover:text-slate-700 text-sm transition-colors">← Back</button>}
+        <div className={`text-[13px] font-bold tracking-[.16em] text-amber-600 ${embedded ? '' : 'mt-8'}`}>HOW HOREB WORKS</div>
         <h1 className="mt-4 text-[46px] sm:text-[64px] font-extrabold leading-[0.98] tracking-[-.035em]">
           The way maths<br />should be taught.<br /><span className="text-amber-500">One child at a time.</span>
         </h1>
@@ -6116,7 +6121,7 @@ function AppInner() {
   // A logged-in learner who hits the public HOREB intro goes straight to the
   // engine (the intro is only for prospects).
   useEffect(() => {
-    if (page === 'horeb' && auth.user) handleNavigate('ai');
+    if ((page === 'horeb' || page === 'horebhow') && auth.user) handleNavigate('ai');
   }, [page, auth.user]);
 
   // Browser back/forward button support
@@ -6242,8 +6247,12 @@ function AppInner() {
       <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />
       
       {page === 'home' && !selectedTutor && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
-      {page === 'horeb' && !auth.user && <HorebIntro user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
-      {page === 'horebhow' && <HorebHow user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {(page === 'horeb' || page === 'horebhow') && !auth.user && (
+        <>
+          <HorebIntro user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
+          <HorebHow user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} embedded />
+        </>
+      )}
       {page === 'teach' && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={() => handleNavigate('home')} user={auth.user} setShowAuth={setShowAuth} />}
       {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
