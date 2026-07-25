@@ -870,7 +870,7 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
 // nudging them back into the tutor. Self-contained background so it reads on
 // both the light dashboard header and the transparent marketing nav.
 const MomentumChipView = ({ level, streak, onClick }) => (
-  <button onClick={onClick} title="Open AI Tutor" className="flex items-center gap-1.5 bg-white/90 border border-slate-200 shadow-sm rounded-full pl-2 pr-2.5 py-1 hover:bg-white transition-colors">
+  <button onClick={onClick} title="Open HOREB" className="flex items-center gap-1.5 bg-white/90 border border-slate-200 shadow-sm rounded-full pl-2 pr-2.5 py-1 hover:bg-white transition-colors">
     <span className="text-base leading-none">🧠</span>
     <span className="text-xs font-semibold text-slate-700">Lv {level}</span>
     {streak > 0 && <span className="text-xs font-semibold text-orange-500 flex items-center">🔥{streak}</span>}
@@ -954,7 +954,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
             <button onClick={() => onNavigate('schools')} className="text-sm text-slate-600 hidden sm:block">For Schools</button>
             {aiProgress?.diagnosed
               ? <MomentumChipView level={getLevel(aiProgress.totalXP).level} streak={aiProgress.currentStreak} onClick={() => onNavigate('ai')} />
-              : <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>}
+              : <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">HOREB</button>}
             <button onClick={() => onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium">Spreadsheet</button>
             {isAdmin && <button onClick={() => onNavigate('admin')} className="text-sm text-purple-600 font-medium">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
@@ -1029,7 +1029,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
                   <div className="text-3xl sm:text-4xl">🧠</div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="text-white font-bold text-lg">AI Math Tutor</h3>
+                      <h3 className="text-white font-bold text-lg">HOREB · Free practice</h3>
                       {started && <span className="text-xs font-semibold text-amber-300 bg-amber-500/15 rounded-full px-2 py-0.5">Level {lvl}</span>}
                       {streak > 0 && <span className="text-xs font-semibold text-orange-300 flex items-center gap-0.5">🔥 {streak}d</span>}
                     </div>
@@ -3616,6 +3616,64 @@ const TeachPage = ({ onNavigate, setShowAuth }) => {
   );
 };
 
+// HOREB intro — the public front door for parents. The ads/emails promise
+// "free HOREB practice", so a visitor needs one clear page that explains it and
+// starts it. Logged-in students are sent straight into the engine.
+const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
+  const start = () => {
+    if (user) { onNavigate('ai'); return; }
+    // Quick signup, then land in HOREB (App reads this after auth).
+    try { sessionStorage.setItem('tg_after_auth', 'ai'); } catch { /* private mode */ }
+    setShowAuth('register');
+  };
+  const steps = [
+    { n: '1', h: 'We find the gaps', b: 'A short check pinpoints exactly where your child is stuck — no guessing, no wasted time.' },
+    { n: '2', h: 'They practise the right things', b: 'Adaptive CBC maths questions that adjust to your child, getting harder only as they master each step.' },
+    { n: '3', h: 'You see the progress', b: 'Track each child separately and watch the weak spots turn into strengths, lesson by lesson.' },
+  ];
+  return (
+    <div className="min-h-screen" style={{ background: 'radial-gradient(1100px 520px at 80% -6%, rgba(242,168,40,.18), transparent 62%), linear-gradient(165deg,#0a1a30 0%,#12345c 62%,#173a66 100%)' }}>
+      <div className="max-w-4xl mx-auto px-6 pt-24 pb-16 text-white">
+        <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-[12.5px] font-semibold text-amber-200">
+          <span className="w-1.5 h-1.5 rounded-full bg-amber-300" /> Free · Adaptive CBC mathematics
+        </span>
+        <h1 className="mt-5 text-[40px] sm:text-[52px] font-extrabold leading-[1.04] tracking-[-.02em]">
+          HOREB — free maths practice<br />that finds <span className="text-amber-300">exactly</span> where your child is stuck.
+        </h1>
+        <p className="mt-5 text-[17px] leading-relaxed text-white/75 max-w-2xl">
+          HOREB is Tutagora's adaptive practice engine, free for every learner. It measures your child,
+          quietly rebuilds the gaps beneath their grade, and lets the strong ones race ahead — mapped to
+          the KICD curriculum, grade by grade.
+        </p>
+        <div className="mt-7 flex flex-wrap items-center gap-3">
+          <button onClick={start} className="px-7 py-3.5 rounded-xl bg-amber-400 text-slate-900 font-bold text-[15px] hover:bg-amber-300 transition-colors">
+            {user ? 'Open HOREB' : 'Start free'}
+          </button>
+          <button onClick={() => onNavigate('tutors')} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/20 font-semibold text-[15px] hover:bg-white/15 transition-colors">
+            Browse tutors
+          </button>
+        </div>
+
+        <div className="mt-14 grid md:grid-cols-3 gap-4">
+          {steps.map(s => (
+            <div key={s.n} className="rounded-2xl bg-white/5 border border-white/10 p-5">
+              <div className="w-9 h-9 rounded-full bg-amber-400 text-slate-900 font-extrabold flex items-center justify-center">{s.n}</div>
+              <div className="mt-3 text-[17px] font-bold">{s.h}</div>
+              <div className="mt-1.5 text-[13.5px] text-white/65 leading-relaxed">{s.b}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-[14px] text-white/70">
+          <span>✓ Completely free</span>
+          <span>✓ One profile per child</span>
+          <span>✓ Works on any phone</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const HomePage = ({ onNavigate, setShowAuth }) => {
   const { tutors } = useTutors();
   const [openFaq, setOpenFaq] = useState(null);
@@ -4891,6 +4949,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-4">
           <button onClick={() => onNavigate('tutors')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Find Tutors</button>
+          <button onClick={() => onNavigate('horeb')} className={`text-sm font-medium ${scrolled ? 'text-emerald-600' : 'text-amber-300'}`}>HOREB · Free practice</button>
           <button onClick={() => onNavigate('clubs')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Clubs</button>
           <button onClick={() => onNavigate('schools')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>For Schools</button>
           {isAdmin && <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-purple-600' : 'text-purple-300'}`}>Admin</button>}
@@ -4925,6 +4984,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
       {mobileOpen && (
         <div className={`md:hidden ${scrolled ? 'bg-white border-t border-slate-100' : 'bg-slate-900/95 backdrop-blur-sm'} px-4 py-4 space-y-2`}>
           <button onClick={() => { onNavigate('tutors'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Find Tutors</button>
+          <button onClick={() => { onNavigate('horeb'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-emerald-700 hover:bg-slate-100' : 'text-amber-300 hover:bg-white/10'}`}>HOREB · Free practice</button>
           <button onClick={() => { onNavigate('clubs'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Clubs</button>
           <button onClick={() => { onNavigate('schools'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>For Schools</button>
           {isAdmin && <button onClick={() => { onNavigate('admin'); setMobileOpen(false); }} className="block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-purple-400 hover:bg-white/10">Admin</button>}
@@ -5789,6 +5849,7 @@ function AppInner() {
     if (path === 'teach') return 'teach';
     if (path === 'dashboard') return 'dashboard';
     if (path === 'ai') return 'ai';
+    if (path === 'horeb') return 'horeb';
     if (path === 'schools') return 'schools';
     if (path === 'clubs') return 'clubs';
     if (path === 'spreadsheet') return 'spreadsheet';
@@ -5815,6 +5876,23 @@ function AppInner() {
     return () => window.removeEventListener('scroll', h);
   }, []);
 
+  // After a signup started from the HOREB front door, land the new learner in
+  // the engine once they're authenticated (not on the dashboard).
+  useEffect(() => {
+    if (!auth.user) return;
+    let intent; try { intent = sessionStorage.getItem('tg_after_auth'); } catch { intent = null; }
+    if (intent) {
+      try { sessionStorage.removeItem('tg_after_auth'); } catch { /* ignore */ }
+      handleNavigate(intent);
+    }
+  }, [auth.user]);
+
+  // A logged-in learner who hits the public HOREB intro goes straight to the
+  // engine (the intro is only for prospects).
+  useEffect(() => {
+    if (page === 'horeb' && auth.user) handleNavigate('ai');
+  }, [page, auth.user]);
+
   // Browser back/forward button support
   useEffect(() => {
     const onPopState = () => {
@@ -5824,6 +5902,7 @@ function AppInner() {
       else if (path === 'teach') setPage('teach');
       else if (path === 'dashboard') setPage('dashboard');
       else if (path === 'ai') setPage('ai');
+      else if (path === 'horeb') setPage('horeb');
       else if (path === 'schools') setPage('schools');
       else if (path === 'clubs') setPage('clubs');
       else if (path === 'spreadsheet') setPage('spreadsheet');
@@ -5936,6 +6015,7 @@ function AppInner() {
       <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />
       
       {page === 'home' && !selectedTutor && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {page === 'horeb' && !auth.user && <HorebIntro user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {page === 'teach' && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={() => handleNavigate('home')} user={auth.user} setShowAuth={setShowAuth} />}
       {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
