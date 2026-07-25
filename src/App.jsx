@@ -1029,7 +1029,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
                   <div className="text-3xl sm:text-4xl">🧠</div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="text-white font-bold text-lg">HOREB · Free practice</h3>
+                      <h3 className="text-white font-bold text-lg">HOREB</h3>
                       {started && <span className="text-xs font-semibold text-amber-300 bg-amber-500/15 rounded-full px-2 py-0.5">Level {lvl}</span>}
                       {streak > 0 && <span className="text-xs font-semibold text-orange-300 flex items-center gap-0.5">🔥 {streak}d</span>}
                     </div>
@@ -3630,7 +3630,7 @@ const HorebConstellation = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    let raf, W = 0, H = 0, dpr = 1, pts = [], edges = [], stars = [], reduced = false;
+    let raf, W = 0, H = 0, dpr = 1, pts = [], edges = [], stars = [], path = [], reduced = false;
     try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { /* ignore */ }
     const rnd = (a, b) => a + Math.random() * (b - a);
 
@@ -3660,6 +3660,23 @@ const HorebConstellation = () => {
         d.sort((a, b) => a[0] - b[0]);
         edges.push([i, d[0][1]]);
         if (Math.random() < 0.55) edges.push([i, d[1][1]]);
+      }
+      // A learning path — a chain of prerequisites climbing outward from the
+      // core. We light it up in sequence to show HOREB unlocking one skill at
+      // a time: master this, and the next one opens.
+      const adj = Array.from({ length: N }, () => []);
+      for (const [a, b] of edges) { adj[a].push(b); adj[b].push(a); }
+      const rad2 = (i) => pts[i].x * pts[i].x + pts[i].y * pts[i].y + pts[i].z * pts[i].z;
+      let startI = 0, minR = Infinity;
+      for (let i = 0; i < N; i++) { const r = rad2(i); if (r < minR) { minR = r; startI = i; } }
+      path = [startI];
+      const used = new Set([startI]);
+      for (let step = 0; step < 6; step++) {
+        const cur = path[path.length - 1], curR = rad2(cur);
+        let best = -1, bestScore = -Infinity;
+        for (const nb of adj[cur]) { if (used.has(nb)) continue; const s = rad2(nb) - curR; if (s > bestScore) { bestScore = s; best = nb; } }
+        if (best < 0) { const cand = adj[cur].filter(n => !used.has(n)); if (!cand.length) break; best = cand[0]; }
+        path.push(best); used.add(best);
       }
       stars = [];
       const cx = W / 2, cy = H / 2, maxR = Math.min(W, H) * 0.5;
@@ -3701,6 +3718,39 @@ const HorebConstellation = () => {
         ctx.fillStyle = warm ? `rgba(246,204,124,${(0.5 + 0.45 * p.persp) * tw})` : `rgba(168,198,234,${(0.35 + 0.35 * p.persp) * tw})`;
         ctx.beginPath(); ctx.arc(p.sx, p.sy, Math.max(0.6, p.r * p.persp), 0, 6.29); ctx.fill();
       }
+      // Animated learning path — a pulse travels the prerequisite chain,
+      // lighting each skill as it unlocks, then loops.
+      if (path.length > 1) {
+        const segs = path.length - 1;
+        const per = 900;
+        const cycle = per * (segs + 2);
+        const fseg = (reduced ? per * 2.4 : (t % cycle)) / per;
+        const seg = Math.floor(fseg), f = fseg - seg;
+        for (let k = 0; k < segs; k++) {
+          const pa = proj[path[k]], pb = proj[path[k + 1]];
+          const active = k <= seg;
+          ctx.strokeStyle = `rgba(255,214,120,${active ? 0.55 : 0.14})`;
+          ctx.lineWidth = active ? 1.7 : 1;
+          ctx.beginPath(); ctx.moveTo(pa.sx, pa.sy); ctx.lineTo(pb.sx, pb.sy); ctx.stroke();
+        }
+        const lit = Math.min(seg + 1, path.length);
+        for (let k = 0; k < lit; k++) {
+          const p = proj[path[k]];
+          const gg = ctx.createRadialGradient(p.sx, p.sy, 0, p.sx, p.sy, 11 * p.persp);
+          gg.addColorStop(0, 'rgba(255,214,120,0.5)'); gg.addColorStop(1, 'rgba(255,214,120,0)');
+          ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(p.sx, p.sy, 11 * p.persp, 0, 6.29); ctx.fill();
+          ctx.fillStyle = 'rgba(255,228,158,0.98)'; ctx.beginPath(); ctx.arc(p.sx, p.sy, Math.max(2, 3.2 * p.persp), 0, 6.29); ctx.fill();
+        }
+        if (seg < segs) {
+          const pa = proj[path[seg]], pb = proj[path[seg + 1]];
+          const px = pa.sx + (pb.sx - pa.sx) * f, py = pa.sy + (pb.sy - pa.sy) * f;
+          const gg = ctx.createRadialGradient(px, py, 0, px, py, 10);
+          gg.addColorStop(0, 'rgba(255,246,224,0.95)'); gg.addColorStop(1, 'rgba(255,214,120,0)');
+          ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(px, py, 10, 0, 6.29); ctx.fill();
+          ctx.fillStyle = 'rgba(255,251,240,1)'; ctx.beginPath(); ctx.arc(px, py, 2.6, 0, 6.29); ctx.fill();
+        }
+      }
+
       const pulse = 54 + Math.sin(t / 1600) * 7;
       const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, pulse);
       g.addColorStop(0, 'rgba(255,246,220,0.92)');
@@ -3732,7 +3782,7 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-10 lg:gap-6 items-center">
         {/* Left — the pitch */}
         <div>
-          <div className="text-[13px] font-semibold tracking-[.16em] text-amber-300/90">HOREB · FREE FOR EVERY CHILD</div>
+          <div className="text-[13px] font-semibold tracking-[.16em] text-amber-300/90">HOREB · ADAPTIVE MATHEMATICS</div>
           <h1 className="mt-4 text-[40px] sm:text-[52px] font-extrabold leading-[1.03] tracking-[-.03em]">
             No child is bad<br />at maths.
             <span className="block text-amber-300 mt-1">They're missing one step.</span>
@@ -3753,7 +3803,7 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
           </div>
 
           <p className="mt-8 text-[14px] text-white/50 max-w-md leading-relaxed">
-            Free, on any phone. Two minutes to set up, one child at a time.
+            On any phone. Two minutes to set up, one child at a time.
           </p>
         </div>
 
@@ -3766,8 +3816,8 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
   );
 };
 
-// Page two — a proper answer to "what is HOREB?", in a parent's language.
-// Editorial, not a card grid: a claim, then the plain truth beneath it.
+// Page two — a confident, science-forward answer to "what is HOREB?", in the
+// clean bold register the founder likes. Light, high-contrast, one accent.
 const HorebHow = ({ user, onNavigate, setShowAuth }) => {
   const start = () => {
     if (user) { onNavigate('ai'); return; }
@@ -3775,62 +3825,71 @@ const HorebHow = ({ user, onNavigate, setShowAuth }) => {
     setShowAuth('register');
   };
   const beats = [
-    {
-      k: 'Maths is a map, not a list',
-      p: 'Every skill stands on the ones beneath it. You can’t do fractions without division; you can’t do division without your times tables. Miss one connection and everything built on top of it wobbles — even though your child seems to “know” the newer topic. HOREB holds the whole map of the CBC curriculum, every skill and the links between them.',
-    },
-    {
-      k: 'It finds the exact place your child slipped',
-      p: 'A short, gentle check — no red pen, no ranking — shows precisely where the map breaks for your child. Not “weak at maths”, but “stuck on regrouping when subtracting”. That specificity is the whole game: you can’t fix a gap you can’t see.',
-    },
-    {
-      k: 'Then it rebuilds — the right thing, at the right time',
-      p: 'No random worksheets. HOREB hands your child the next skill they’re genuinely ready for, and only moves on once they’ve truly mastered it — measured, not guessed. When a child is flying, it lets them race ahead of their grade instead of holding them back.',
-    },
-    {
-      k: 'And it never lets them forget',
-      p: 'HOREB quietly brings an older skill back for a moment, right before it would have faded. So what your child learns actually stays — the way memory is supposed to work, without you having to nag about revision.',
-    },
+    { k: 'It knows the whole map.', p: 'Every skill in the CBC maths curriculum, and every skill it stands on, wired together. So HOREB always knows exactly what your child is ready to learn next — and what would only confuse them.' },
+    { k: 'It teaches to mastery, not to the bell.', p: 'A skill isn’t “done” because the lesson ended. HOREB only moves on once your child has genuinely mastered it — proven question by question, not assumed.' },
+    { k: 'It keeps them at the edge.', p: 'Too easy is boring; too hard is discouraging. HOREB holds every child right at the edge of what they can do — the one place where learning actually happens fast.' },
+    { k: 'It fights forgetting.', p: 'Each skill returns for a short review at the precise moment it would start to fade. What your child learns, they keep — without you ever nagging about revision.' },
   ];
   return (
-    <div className="min-h-screen text-white" style={{ background: 'linear-gradient(172deg,#0a1a30 0%,#0d2138 70%,#102a49 100%)' }}>
-      <div className="max-w-3xl mx-auto px-6 pt-24 pb-20">
-        <button onClick={() => onNavigate('horeb')} className="text-white/50 hover:text-white/80 text-sm transition-colors">← Back</button>
-        <div className="mt-6 text-[13px] font-semibold tracking-[.16em] text-amber-300/90">WHAT IS HOREB?</div>
-        <h1 className="mt-3 text-[38px] sm:text-[46px] font-extrabold leading-[1.05] tracking-[-.02em]">
-          The way the best schools teach maths — made free for every home in Kenya.
+    <div className="min-h-screen bg-white text-slate-900">
+      <div className="max-w-4xl mx-auto px-6 pt-24 pb-24">
+        <button onClick={() => onNavigate('horeb')} className="text-slate-400 hover:text-slate-700 text-sm transition-colors">← Back</button>
+        <div className="mt-8 text-[13px] font-bold tracking-[.16em] text-amber-600">HOW HOREB WORKS</div>
+        <h1 className="mt-4 text-[46px] sm:text-[64px] font-extrabold leading-[0.98] tracking-[-.035em]">
+          The way maths<br />should be taught.<br /><span className="text-amber-500">One child at a time.</span>
         </h1>
-        <p className="mt-6 text-[18px] leading-relaxed text-white/75">
-          Most maths apps just throw questions and hope. HOREB does the opposite:
-          it works out what your child already understands, finds the one thing
-          holding them back, and teaches from there — the same method behind the
-          world’s strongest maths results, quietly running on your phone.
+        <p className="mt-7 text-[19px] leading-relaxed text-slate-600 max-w-2xl">
+          HOREB runs the techniques cognitive science keeps proving — and a
+          classroom of forty rarely has the time for. It measures what your child
+          truly knows, teaches the exact next thing they’re ready for, and makes
+          it stick.
         </p>
 
-        <div className="mt-14 space-y-12">
+        {/* pace comparison — the Recess-style proof bar, kept honest */}
+        <div className="mt-16">
+          <div className="flex items-baseline justify-between">
+            <span className="text-[12.5px] font-bold tracking-[.12em] text-slate-400">A CLASSROOM</span>
+            <span className="text-[15px] text-slate-500">one pace, forty children</span>
+          </div>
+          <div className="mt-2 h-11 rounded-xl bg-slate-100 overflow-hidden">
+            <div className="h-full rounded-xl bg-slate-300" style={{ width: '52%' }} />
+          </div>
+          <div className="mt-7 flex items-baseline justify-between">
+            <span className="text-[12.5px] font-bold tracking-[.12em] text-amber-600">HOREB</span>
+            <span className="text-[15px] text-slate-700 font-medium">your child’s exact pace</span>
+          </div>
+          <div className="mt-2 h-11 rounded-xl bg-amber-100 overflow-hidden">
+            <div className="h-full rounded-xl flex items-center justify-end pr-4 text-white font-extrabold text-[15px]" style={{ width: '100%', background: 'linear-gradient(90deg,#f2a828,#e0891a)' }}>up to 2× the progress</div>
+          </div>
+          <p className="mt-4 text-[14px] text-slate-500 max-w-2xl leading-relaxed">
+            Taught to mastery at their own pace, children learn far faster — one of the most replicated findings in education. HOREB is how you give that to one child, at home.
+          </p>
+        </div>
+
+        {/* the method */}
+        <div className="mt-20 space-y-11">
           {beats.map((b, i) => (
-            <div key={i} className="border-t border-white/10 pt-8">
+            <div key={i} className="border-t border-slate-200 pt-8">
               <div className="flex items-baseline gap-4">
-                <span className="text-amber-300/80 font-extrabold text-[15px] tabular-nums">0{i + 1}</span>
-                <h2 className="text-[24px] sm:text-[27px] font-bold leading-tight tracking-[-.01em]">{b.k}</h2>
+                <span className="text-amber-500 font-extrabold text-[15px] tabular-nums">0{i + 1}</span>
+                <h2 className="text-[26px] sm:text-[30px] font-extrabold leading-tight tracking-[-.02em]">{b.k}</h2>
               </div>
-              <p className="mt-3 sm:pl-10 text-[16.5px] leading-relaxed text-white/70">{b.p}</p>
+              <p className="mt-3 sm:pl-10 text-[17px] leading-relaxed text-slate-600 max-w-2xl">{b.p}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 rounded-3xl bg-amber-400/[.08] border border-amber-300/25 p-8">
-          <h3 className="text-[22px] font-extrabold text-amber-200">Free. One map per child. On any phone.</h3>
-          <p className="mt-2 text-[16px] leading-relaxed text-white/75 max-w-xl">
-            Every learner in Kenya gets HOREB at no cost. Add each of your children —
-            each one gets their own map, their own pace, their own progress. And when
-            they need a person, a verified Tutagora tutor is one tap away.
+        {/* close */}
+        <div className="mt-20 rounded-3xl bg-slate-900 text-white p-9 sm:p-11">
+          <h3 className="text-[26px] sm:text-[30px] font-extrabold leading-tight">One map per child. On any phone.</h3>
+          <p className="mt-3 text-[16.5px] leading-relaxed text-white/70 max-w-xl">
+            Add each of your children — each gets their own map, their own pace, their own progress. And the moment they need a person, a verified Tutagora tutor is one tap away.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-7 flex flex-wrap gap-3">
             <button onClick={start} className="px-7 py-3.5 rounded-xl bg-amber-400 text-slate-900 font-bold text-[15px] hover:bg-amber-300 transition-colors">
-              {user ? 'Open HOREB' : 'Start free'}
+              {user ? 'Open HOREB' : 'Start now'}
             </button>
-            <button onClick={() => onNavigate('tutors')} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/20 font-semibold text-[15px] hover:bg-white/15 transition-colors">
+            <button onClick={() => onNavigate('tutors')} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/25 font-semibold text-[15px] hover:bg-white/15 transition-colors">
               Browse tutors
             </button>
           </div>
@@ -5115,7 +5174,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-4">
           <button onClick={() => onNavigate('tutors')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Find Tutors</button>
-          <button onClick={() => onNavigate('horeb')} className={`text-sm font-medium ${scrolled ? 'text-emerald-600' : 'text-amber-300'}`}>HOREB · Free practice</button>
+          <button onClick={() => onNavigate('horeb')} className={`text-sm font-medium ${scrolled ? 'text-emerald-600' : 'text-amber-300'}`}>HOREB</button>
           <button onClick={() => onNavigate('clubs')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Clubs</button>
           <button onClick={() => onNavigate('schools')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>For Schools</button>
           {isAdmin && <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-purple-600' : 'text-purple-300'}`}>Admin</button>}
@@ -5150,7 +5209,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
       {mobileOpen && (
         <div className={`md:hidden ${scrolled ? 'bg-white border-t border-slate-100' : 'bg-slate-900/95 backdrop-blur-sm'} px-4 py-4 space-y-2`}>
           <button onClick={() => { onNavigate('tutors'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Find Tutors</button>
-          <button onClick={() => { onNavigate('horeb'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-emerald-700 hover:bg-slate-100' : 'text-amber-300 hover:bg-white/10'}`}>HOREB · Free practice</button>
+          <button onClick={() => { onNavigate('horeb'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-emerald-700 hover:bg-slate-100' : 'text-amber-300 hover:bg-white/10'}`}>HOREB</button>
           <button onClick={() => { onNavigate('clubs'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Clubs</button>
           <button onClick={() => { onNavigate('schools'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>For Schools</button>
           {isAdmin && <button onClick={() => { onNavigate('admin'); setMobileOpen(false); }} className="block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-purple-400 hover:bg-white/10">Admin</button>}
