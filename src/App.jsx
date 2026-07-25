@@ -3619,76 +3619,106 @@ const TeachPage = ({ onNavigate, setShowAuth }) => {
 // HOREB intro — the public front door for parents. The ads/emails promise
 // "free HOREB practice", so a visitor needs one clear page that explains it and
 // starts it. Logged-in students are sent straight into the engine.
-// The learning map — a custom illustration of a child's path through maths:
-// skills already mastered behind them, the exact gap glowing ahead, the summit
-// still to climb. This IS what HOREB does, drawn rather than described.
-const HorebMap = () => {
-  // A skill trail winding up the mountain of the curriculum.
-  const mastered = [
-    { x: 58, y: 436, label: 'Counting' },
-    { x: 150, y: 392, label: 'Add & subtract' },
-    { x: 96, y: 314, label: 'Times tables' },
-  ];
-  const current = { x: 198, y: 262, label: 'Fractions' };
-  const ahead = [
-    { x: 294, y: 206, label: 'Decimals' },
-    { x: 238, y: 126, label: 'Ratio & %' },
-    { x: 344, y: 58, label: 'Top of the class', summit: true },
-  ];
-  const check = (cx, cy) => `M${cx - 5.5},${cy} l3.5,3.6 l7,-7.4`;
-  return (
-    <svg viewBox="0 0 420 480" className="w-full h-auto" aria-label="A child's maths skills mapped as a trail: mastered skills, the current gap, and skills still to come.">
-      <style>{`@keyframes horebPulse{0%{r:24;opacity:.55}70%{r:44;opacity:0}100%{opacity:0}}`}</style>
-      {/* faint topographic contours — the mountain of the curriculum */}
-      <g fill="none" stroke="#ffffff" strokeOpacity=".05">
-        <path d="M-20,300 Q160,240 260,300 T460,270" />
-        <path d="M-20,360 Q170,300 280,360 T460,340" />
-        <path d="M60,200 Q200,150 300,210 T480,180" />
-      </g>
-      {/* trail already climbed (solid gold) */}
-      <path d="M58,436 Q100,410 150,392 Q116,352 96,314 Q150,290 198,262"
-        fill="none" stroke="#f2a828" strokeWidth="4.5" strokeLinecap="round" />
-      {/* trail still to come (dashed, faint) */}
-      <path d="M198,262 Q256,238 294,206 Q272,164 238,126 Q300,96 344,58"
-        fill="none" stroke="#ffffff" strokeOpacity=".28" strokeWidth="3" strokeDasharray="2 9" strokeLinecap="round" />
+// The knowledge constellation — HOREB is literally a graph of skills wired by
+// prerequisites, so we draw it: a glowing mastery core with skills branching
+// outward on gold filaments, gently drifting and twinkling. Self-contained
+// canvas (no heavy graph library) so it stays fast on mobile data.
+const HorebConstellation = () => {
+  const canvasRef = useRef(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let raf, W = 0, H = 0, dpr = 1, nodes = [], edges = [], stars = [], reduced = false;
+    try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { /* ignore */ }
+    const rnd = (a, b) => a + Math.random() * (b - a);
 
-      {/* mastered skills — emerald with a check */}
-      {mastered.map(n => (
-        <g key={n.label}>
-          <circle cx={n.x} cy={n.y} r="16" fill="#10b981" />
-          <path d={check(n.x, n.y)} fill="none" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
-          <text x={n.x + 24} y={n.y + 4} fill="#e2e8f0" fontSize="14" fontWeight="600" fontFamily="Helvetica,Arial,sans-serif">{n.label}</text>
-        </g>
-      ))}
+    const build = () => {
+      const rect = canvas.getBoundingClientRect();
+      if (!rect.width) return;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = rect.width; H = rect.height;
+      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const cx = W / 2, cy = H / 2;
+      const maxR = Math.min(W, H) * 0.5;
+      nodes = [{ core: true, bx: cx, by: cy, x: cx, y: cy, ring: 0, ang: 0 }];
+      edges = [];
+      // The knowledge graph: dense rings of skills branching outward.
+      const rings = [{ n: 9, r: 0.22 }, { n: 15, r: 0.4 }, { n: 22, r: 0.58 }, { n: 30, r: 0.76 }, { n: 38, r: 0.95 }];
+      let prevStart = 0, prevCount = 1;
+      rings.forEach((ring, ri) => {
+        const start = nodes.length;
+        for (let i = 0; i < ring.n; i++) {
+          const ang = (i / ring.n) * Math.PI * 2 + ri * 0.5 + rnd(-0.35, 0.35);
+          const rad = maxR * ring.r * rnd(0.85, 1.15);
+          const bx = cx + Math.cos(ang) * rad, by = cy + Math.sin(ang) * rad;
+          nodes.push({ bx, by, x: bx, y: by, ring: ri + 1, ang, r: Math.max(0.9, 3 - ri * 0.42), phase: rnd(0, 6.28), amp: rnd(1.2, 3.2), tw: rnd(0, 6.28) });
+          let best = 0, bestD = 1e9;
+          for (let p = prevStart; p < prevStart + prevCount; p++) {
+            if (ri === 0) { best = 0; break; }
+            const d = Math.abs(((nodes[p].ang - ang + Math.PI) % (2 * Math.PI)) - Math.PI);
+            if (d < bestD) { bestD = d; best = p; }
+          }
+          edges.push([nodes.length - 1, best]);
+        }
+        prevStart = start; prevCount = ring.n;
+      });
+      for (let k = 0; k < 22; k++) { const a = 1 + ((Math.random() * (nodes.length - 1)) | 0); const b = 1 + ((Math.random() * (nodes.length - 1)) | 0); if (a !== b) edges.push([a, b]); }
+      // Starfield halo — the depth and density Pearson gets from hundreds of motes.
+      stars = [];
+      const N = Math.round((W * H) / 2200);
+      for (let i = 0; i < N; i++) {
+        const ang = rnd(0, 6.28), rad = maxR * Math.sqrt(rnd(0, 1)) * 1.25;
+        stars.push({ x: cx + Math.cos(ang) * rad, y: cy + Math.sin(ang) * rad, r: rnd(0.4, 1.3), tw: rnd(0, 6.28), warm: Math.random() < 0.4 });
+      }
+    };
 
-      {/* skills still to come — faint outline nodes */}
-      {ahead.map(n => (
-        <g key={n.label}>
-          {n.summit ? (
-            <>
-              <circle cx={n.x} cy={n.y} r="17" fill="#0e2340" stroke="#f2a828" strokeWidth="2" />
-              <path d={`M${n.x - 5},${n.y + 7} v-15 l11,4.5 -11,4.5`} fill="#f2a828" stroke="#f2a828" strokeWidth="1.5" strokeLinejoin="round" />
-            </>
-          ) : (
-            <circle cx={n.x} cy={n.y} r="14" fill="#0e2340" stroke="#ffffff" strokeOpacity=".22" strokeWidth="2" />
-          )}
-          <text x={n.x + (n.summit ? -2 : 22)} y={n.summit ? n.y - 26 : n.y + 4} textAnchor={n.summit ? 'middle' : 'start'} fill={n.summit ? '#f2d9a0' : '#94a9c4'} fontSize={n.summit ? '13' : '13.5'} fontWeight={n.summit ? '700' : '500'} fontFamily="Helvetica,Arial,sans-serif">{n.label}</text>
-        </g>
-      ))}
+    const draw = (t) => {
+      if (!W) { raf = requestAnimationFrame(draw); return; }
+      ctx.clearRect(0, 0, W, H);
+      // starfield first (behind everything)
+      for (const s of stars) {
+        const a = 0.18 + 0.35 * (0.5 + 0.5 * Math.sin(t / 1400 + s.tw));
+        ctx.fillStyle = s.warm ? `rgba(244,206,140,${a})` : `rgba(150,180,220,${a * 0.9})`;
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.29); ctx.fill();
+      }
+      for (const n of nodes) {
+        if (n.core) continue;
+        n.x = n.bx + Math.sin(t / 2400 + n.phase) * n.amp;
+        n.y = n.by + Math.cos(t / 2800 + n.phase) * n.amp;
+      }
+      for (const [a, b] of edges) {
+        const na = nodes[a], nb = nodes[b];
+        const alpha = Math.max(0.035, 0.18 * (1 - (na.ring || 0) / 7));
+        ctx.strokeStyle = `rgba(242,178,70,${alpha})`;
+        ctx.lineWidth = 0.7;
+        ctx.beginPath(); ctx.moveTo(na.x, na.y); ctx.lineTo(nb.x, nb.y); ctx.stroke();
+      }
+      for (const n of nodes) {
+        if (n.core) continue;
+        const tw = 0.55 + 0.45 * Math.sin(t / 950 + n.tw);
+        ctx.fillStyle = n.ring <= 2 ? `rgba(246,204,124,${0.9 * tw})` : (n.ring <= 3 ? `rgba(226,196,150,${0.78 * tw})` : `rgba(168,198,234,${0.7 * tw})`);
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, 6.29); ctx.fill();
+      }
+      const c = nodes[0];
+      const pulse = 58 + Math.sin(t / 1500) * 7;
+      const g = ctx.createRadialGradient(c.x, c.y, 0, c.x, c.y, pulse);
+      g.addColorStop(0, 'rgba(255,246,220,0.95)');
+      g.addColorStop(0.2, 'rgba(242,168,40,0.55)');
+      g.addColorStop(1, 'rgba(242,168,40,0)');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(c.x, c.y, pulse, 0, 6.29); ctx.fill();
+      ctx.fillStyle = 'rgba(255,251,238,0.98)'; ctx.beginPath(); ctx.arc(c.x, c.y, 5, 0, 6.29); ctx.fill();
+      if (!reduced) raf = requestAnimationFrame(draw);
+    };
 
-      {/* the gap — where the child is now, glowing gold */}
-      <circle cx={current.x} cy={current.y} r="24" fill="none" stroke="#f2a828" strokeWidth="3">
-        <animate attributeName="r" values="24;44" dur="2.2s" repeatCount="indefinite" />
-        <animate attributeName="stroke-opacity" values=".55;0" dur="2.2s" repeatCount="indefinite" />
-      </circle>
-      <circle cx={current.x} cy={current.y} r="21" fill="#f2a828" />
-      <text x={current.x} y={current.y + 6} textAnchor="middle" fill="#0a1a30" fontSize="16" fontWeight="800" fontFamily="Helvetica,Arial,sans-serif">?</text>
-      <g transform={`translate(${current.x + 34}, ${current.y - 8})`}>
-        <rect x="0" y="-16" width="150" height="34" rx="8" fill="#f2a828" />
-        <text x="14" y="6" fill="#0a1a30" fontSize="14" fontWeight="800" fontFamily="Helvetica,Arial,sans-serif">Stuck here — {current.label}</text>
-      </g>
-    </svg>
-  );
+    build();
+    raf = requestAnimationFrame(draw);
+    const ro = new ResizeObserver(() => build());
+    ro.observe(canvas);
+    return () => { cancelAnimationFrame(raf); ro.disconnect(); };
+  }, []);
+  return <canvas ref={canvasRef} className="w-full h-full block" aria-hidden="true" />;
 };
 
 const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
@@ -3721,24 +3751,16 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
             </button>
           </div>
 
-          {/* legend — reads straight off the map */}
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13.5px] text-white/70">
-            <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-full" style={{ background: '#10b981' }} /> Mastered</span>
-            <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-full" style={{ background: '#f2a828' }} /> Where they are now</span>
-            <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-full border border-white/40" /> Still to climb</span>
-          </div>
-
-          <p className="mt-8 text-[14px] text-white/55 max-w-md leading-relaxed">
-            A five-minute check maps your child; adaptive practice does the rest.
-            Add each of your children and track them separately.
+          <p className="mt-9 text-[14px] text-white/55 max-w-md leading-relaxed">
+            Every dot is a skill. A five-minute check finds where your child sits
+            in the web, then adaptive practice lights up the next one — and the
+            next. Add each of your children and track them separately.
           </p>
         </div>
 
-        {/* Right — the map */}
-        <div className="relative">
-          <div className="rounded-3xl bg-white/[.03] border border-white/10 p-5 sm:p-7">
-            <HorebMap />
-          </div>
+        {/* Right — the living knowledge graph */}
+        <div className="relative h-[380px] sm:h-[480px] lg:h-[560px] lg:-mr-10">
+          <HorebConstellation />
         </div>
       </div>
     </div>
