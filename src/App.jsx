@@ -3619,6 +3619,78 @@ const TeachPage = ({ onNavigate, setShowAuth }) => {
 // HOREB intro — the public front door for parents. The ads/emails promise
 // "free HOREB practice", so a visitor needs one clear page that explains it and
 // starts it. Logged-in students are sent straight into the engine.
+// The learning map — a custom illustration of a child's path through maths:
+// skills already mastered behind them, the exact gap glowing ahead, the summit
+// still to climb. This IS what HOREB does, drawn rather than described.
+const HorebMap = () => {
+  // A skill trail winding up the mountain of the curriculum.
+  const mastered = [
+    { x: 58, y: 436, label: 'Counting' },
+    { x: 150, y: 392, label: 'Add & subtract' },
+    { x: 96, y: 314, label: 'Times tables' },
+  ];
+  const current = { x: 198, y: 262, label: 'Fractions' };
+  const ahead = [
+    { x: 294, y: 206, label: 'Decimals' },
+    { x: 238, y: 126, label: 'Ratio & %' },
+    { x: 344, y: 58, label: 'Top of the class', summit: true },
+  ];
+  const check = (cx, cy) => `M${cx - 5.5},${cy} l3.5,3.6 l7,-7.4`;
+  return (
+    <svg viewBox="0 0 420 480" className="w-full h-auto" aria-label="A child's maths skills mapped as a trail: mastered skills, the current gap, and skills still to come.">
+      <style>{`@keyframes horebPulse{0%{r:24;opacity:.55}70%{r:44;opacity:0}100%{opacity:0}}`}</style>
+      {/* faint topographic contours — the mountain of the curriculum */}
+      <g fill="none" stroke="#ffffff" strokeOpacity=".05">
+        <path d="M-20,300 Q160,240 260,300 T460,270" />
+        <path d="M-20,360 Q170,300 280,360 T460,340" />
+        <path d="M60,200 Q200,150 300,210 T480,180" />
+      </g>
+      {/* trail already climbed (solid gold) */}
+      <path d="M58,436 Q100,410 150,392 Q116,352 96,314 Q150,290 198,262"
+        fill="none" stroke="#f2a828" strokeWidth="4.5" strokeLinecap="round" />
+      {/* trail still to come (dashed, faint) */}
+      <path d="M198,262 Q256,238 294,206 Q272,164 238,126 Q300,96 344,58"
+        fill="none" stroke="#ffffff" strokeOpacity=".28" strokeWidth="3" strokeDasharray="2 9" strokeLinecap="round" />
+
+      {/* mastered skills — emerald with a check */}
+      {mastered.map(n => (
+        <g key={n.label}>
+          <circle cx={n.x} cy={n.y} r="16" fill="#10b981" />
+          <path d={check(n.x, n.y)} fill="none" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+          <text x={n.x + 24} y={n.y + 4} fill="#e2e8f0" fontSize="14" fontWeight="600" fontFamily="Helvetica,Arial,sans-serif">{n.label}</text>
+        </g>
+      ))}
+
+      {/* skills still to come — faint outline nodes */}
+      {ahead.map(n => (
+        <g key={n.label}>
+          {n.summit ? (
+            <>
+              <circle cx={n.x} cy={n.y} r="17" fill="#0e2340" stroke="#f2a828" strokeWidth="2" />
+              <path d={`M${n.x - 5},${n.y + 7} v-15 l11,4.5 -11,4.5`} fill="#f2a828" stroke="#f2a828" strokeWidth="1.5" strokeLinejoin="round" />
+            </>
+          ) : (
+            <circle cx={n.x} cy={n.y} r="14" fill="#0e2340" stroke="#ffffff" strokeOpacity=".22" strokeWidth="2" />
+          )}
+          <text x={n.x + (n.summit ? -2 : 22)} y={n.summit ? n.y - 26 : n.y + 4} textAnchor={n.summit ? 'middle' : 'start'} fill={n.summit ? '#f2d9a0' : '#94a9c4'} fontSize={n.summit ? '13' : '13.5'} fontWeight={n.summit ? '700' : '500'} fontFamily="Helvetica,Arial,sans-serif">{n.label}</text>
+        </g>
+      ))}
+
+      {/* the gap — where the child is now, glowing gold */}
+      <circle cx={current.x} cy={current.y} r="24" fill="none" stroke="#f2a828" strokeWidth="3">
+        <animate attributeName="r" values="24;44" dur="2.2s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values=".55;0" dur="2.2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx={current.x} cy={current.y} r="21" fill="#f2a828" />
+      <text x={current.x} y={current.y + 6} textAnchor="middle" fill="#0a1a30" fontSize="16" fontWeight="800" fontFamily="Helvetica,Arial,sans-serif">?</text>
+      <g transform={`translate(${current.x + 34}, ${current.y - 8})`}>
+        <rect x="0" y="-16" width="150" height="34" rx="8" fill="#f2a828" />
+        <text x="14" y="6" fill="#0a1a30" fontSize="14" fontWeight="800" fontFamily="Helvetica,Arial,sans-serif">Stuck here — {current.label}</text>
+      </g>
+    </svg>
+  );
+};
+
 const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
   const start = () => {
     if (user) { onNavigate('ai'); return; }
@@ -3626,48 +3698,47 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
     try { sessionStorage.setItem('tg_after_auth', 'ai'); } catch { /* private mode */ }
     setShowAuth('register');
   };
-  const steps = [
-    { n: '1', h: 'We find the gaps', b: 'A short check pinpoints exactly where your child is stuck — no guessing, no wasted time.' },
-    { n: '2', h: 'They practise the right things', b: 'Adaptive CBC maths questions that adjust to your child, getting harder only as they master each step.' },
-    { n: '3', h: 'You see the progress', b: 'Track each child separately and watch the weak spots turn into strengths, lesson by lesson.' },
-  ];
   return (
-    <div className="min-h-screen" style={{ background: 'radial-gradient(1100px 520px at 80% -6%, rgba(242,168,40,.18), transparent 62%), linear-gradient(165deg,#0a1a30 0%,#12345c 62%,#173a66 100%)' }}>
-      <div className="max-w-4xl mx-auto px-6 pt-24 pb-16 text-white">
-        <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-[12.5px] font-semibold text-amber-200">
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-300" /> Free · Adaptive CBC mathematics
-        </span>
-        <h1 className="mt-5 text-[40px] sm:text-[52px] font-extrabold leading-[1.04] tracking-[-.02em]">
-          HOREB — free maths practice<br />that finds <span className="text-amber-300">exactly</span> where your child is stuck.
-        </h1>
-        <p className="mt-5 text-[17px] leading-relaxed text-white/75 max-w-2xl">
-          HOREB is Tutagora's adaptive practice engine, free for every learner. It measures your child,
-          quietly rebuilds the gaps beneath their grade, and lets the strong ones race ahead — mapped to
-          the KICD curriculum, grade by grade.
-        </p>
-        <div className="mt-7 flex flex-wrap items-center gap-3">
-          <button onClick={start} className="px-7 py-3.5 rounded-xl bg-amber-400 text-slate-900 font-bold text-[15px] hover:bg-amber-300 transition-colors">
-            {user ? 'Open HOREB' : 'Start free'}
-          </button>
-          <button onClick={() => onNavigate('tutors')} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/20 font-semibold text-[15px] hover:bg-white/15 transition-colors">
-            Browse tutors
-          </button>
+    <div className="min-h-screen text-white" style={{ background: 'linear-gradient(168deg,#0a1a30 0%,#0d2138 60%,#122c4a 100%)' }}>
+      <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-10 lg:gap-6 items-center">
+        {/* Left — the pitch */}
+        <div>
+          <div className="text-[13px] font-bold tracking-[.18em] text-amber-300">FREE PRACTICE · CBC MATHEMATICS</div>
+          <h1 className="mt-4 text-[42px] sm:text-[54px] font-extrabold leading-[1.02] tracking-[-.03em]">
+            Every child's<br />maths, <span className="text-amber-300">mapped.</span>
+          </h1>
+          <p className="mt-5 text-[17px] leading-relaxed text-white/75 max-w-md">
+            HOREB lays out every skill your child needs, finds the exact place they're
+            stuck, and rebuilds it from the ground up — free, on any phone.
+          </p>
+
+          <div className="mt-7 flex flex-wrap items-center gap-3">
+            <button onClick={start} className="px-7 py-3.5 rounded-xl bg-amber-400 text-slate-900 font-bold text-[15px] hover:bg-amber-300 transition-colors">
+              {user ? 'Open HOREB' : 'Start free'}
+            </button>
+            <button onClick={() => onNavigate('tutors')} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/20 font-semibold text-[15px] hover:bg-white/15 transition-colors">
+              Browse tutors
+            </button>
+          </div>
+
+          {/* legend — reads straight off the map */}
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13.5px] text-white/70">
+            <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-full" style={{ background: '#10b981' }} /> Mastered</span>
+            <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-full" style={{ background: '#f2a828' }} /> Where they are now</span>
+            <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-full border border-white/40" /> Still to climb</span>
+          </div>
+
+          <p className="mt-8 text-[14px] text-white/55 max-w-md leading-relaxed">
+            A five-minute check maps your child; adaptive practice does the rest.
+            Add each of your children and track them separately.
+          </p>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-4">
-          {steps.map(s => (
-            <div key={s.n} className="rounded-2xl bg-white/5 border border-white/10 p-5">
-              <div className="w-9 h-9 rounded-full bg-amber-400 text-slate-900 font-extrabold flex items-center justify-center">{s.n}</div>
-              <div className="mt-3 text-[17px] font-bold">{s.h}</div>
-              <div className="mt-1.5 text-[13.5px] text-white/65 leading-relaxed">{s.b}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-[14px] text-white/70">
-          <span>✓ Completely free</span>
-          <span>✓ One profile per child</span>
-          <span>✓ Works on any phone</span>
+        {/* Right — the map */}
+        <div className="relative">
+          <div className="rounded-3xl bg-white/[.03] border border-white/10 p-5 sm:p-7">
+            <HorebMap />
+          </div>
         </div>
       </div>
     </div>
