@@ -3992,7 +3992,7 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
 
         {/* Right — the living knowledge graph */}
         <div className="relative h-[440px] sm:h-[520px] lg:h-[600px] lg:-mr-10">
-          <HorebForceGraph />
+          <HorebConstellation />
         </div>
       </div>
     </div>
