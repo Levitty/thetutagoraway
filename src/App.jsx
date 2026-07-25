@@ -14,6 +14,7 @@ import ClubsPage from './ClubsPage.jsx';
 import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
+import horebGraph from './horebGraph.json';
 
 // ============ ERROR BOUNDARY ============
 // Without this, ANY uncaught render error anywhere in the tree unmounts the
@@ -3624,6 +3625,86 @@ const TeachPage = ({ onNavigate, setShowAuth }) => {
 // mastery core, skills orbiting on gold filaments, a starfield halo for depth.
 // Self-contained animated canvas (no WebGL/graph library) so it stays fast on
 // mobile data; holds still for prefers-reduced-motion.
+// The real CBC-mathematics knowledge graph as a live 3D force map — the same
+// build as math-knowledge-graph-3d.html (202 skills, prerequisites as links,
+// coloured by strand), lazy-loaded and gently auto-rotating. Drag to explore;
+// it resumes spinning after you let go.
+const HOREB_PAL = ['#6366f1', '#22c55e', '#ec4899', '#f59e0b', '#14b8a6', '#a855f7', '#ef4444', '#eab308', '#38bdf8'];
+const HorebForceGraph = () => {
+  const holderRef = useRef(null);
+  useEffect(() => {
+    const el = holderRef.current;
+    if (!el) return;
+    let G = null, raf = 0, disposed = false, ro = null;
+    let spinning = false, angle = 0, dist = 320, last = 0, resumeAt = 0, dragging = false;
+
+    (async () => {
+      const ForceGraph3D = (await import('3d-force-graph')).default;
+      if (disposed || !holderRef.current) return;
+
+      const strands = horebGraph.strands;
+      const col = {}; strands.forEach((s, i) => { col[s] = HOREB_PAL[i % HOREB_PAL.length]; });
+      const byId = {}; horebGraph.skills.forEach(s => { byId[s.id] = s; });
+      const nodes = horebGraph.skills.map(s => ({ id: s.id, name: s.name, strand: s.strand, grade: s.grade, val: s.critical ? 6 : 3 }));
+      const links = [];
+      horebGraph.skills.forEach(s => (s.prerequisites || []).forEach(p => { if (byId[p]) links.push({ source: p, target: s.id }); }));
+
+      G = ForceGraph3D({ controlType: 'orbit' })(el)
+        .backgroundColor('rgba(0,0,0,0)')
+        .graphData({ nodes, links })
+        .nodeLabel(n => `${n.name} — Grade ${n.grade}`)
+        .nodeColor(n => col[n.strand]).nodeVal('val').nodeOpacity(0.92).nodeResolution(12)
+        .linkColor(() => 'rgba(148,163,184,0.28)').linkWidth(0.5)
+        .width(el.clientWidth).height(el.clientHeight)
+        .showNavInfo(false).enableNodeDrag(false);
+      G.d3Force('charge').strength(-90);
+
+      const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const controls = G.controls();
+      controls.addEventListener('start', () => { dragging = true; });
+      controls.addEventListener('end', () => {
+        dragging = false; resumeAt = performance.now() + 2500;
+        const p = G.camera().position; angle = Math.atan2(p.x, p.z); dist = Math.hypot(p.x, p.y, p.z) || dist;
+      });
+
+      let framed = false;
+      G.onEngineStop(() => {
+        if (framed) return; framed = true;
+        G.zoomToFit(600, 60);
+        setTimeout(() => {
+          if (disposed || !G) return;
+          const p = G.camera().position;
+          dist = Math.hypot(p.x, p.y, p.z) || dist; angle = Math.atan2(p.x, p.z);
+          if (!reduced) spinning = true;
+        }, 700);
+      });
+
+      last = performance.now();
+      const tick = (now) => {
+        raf = requestAnimationFrame(tick);
+        const dt = now - last; last = now;
+        if (spinning && !dragging && now > resumeAt) {
+          angle += dt * 0.00011;
+          G.cameraPosition({ x: dist * Math.sin(angle), y: dist * 0.12, z: dist * Math.cos(angle) });
+        }
+      };
+      raf = requestAnimationFrame(tick);
+
+      ro = new ResizeObserver(() => { if (G && holderRef.current) G.width(holderRef.current.clientWidth).height(holderRef.current.clientHeight); });
+      ro.observe(el);
+    })();
+
+    return () => {
+      disposed = true;
+      if (raf) cancelAnimationFrame(raf);
+      if (ro) ro.disconnect();
+      try { if (G && G._destructor) G._destructor(); } catch (e) { /* noop */ }
+      if (el) el.innerHTML = '';
+    };
+  }, []);
+  return <div ref={holderRef} className="w-full h-full" aria-hidden="true" />;
+};
+
 const HorebConstellation = () => {
   const canvasRef = useRef(null);
   useEffect(() => {
@@ -3828,7 +3909,7 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
 
         {/* Right — the living knowledge graph */}
         <div className="relative h-[380px] sm:h-[480px] lg:h-[560px] lg:-mr-10">
-          <HorebConstellation />
+          <HorebForceGraph />
         </div>
       </div>
     </div>
