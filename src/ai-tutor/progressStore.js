@@ -36,6 +36,11 @@ export const defaultProgress = () => ({
   dailyXP: 0,
   dailyDate: null,
   achievements: [],
+  // Resume cursor for an unfinished diagnostic: the exact (shuffled) skill list,
+  // the current question index, answers so far, and the current problem object —
+  // enough to drop the student back on the same question after they leave.
+  // null once the diagnostic is completed. See AIMastery diagnostic flow.
+  diagInProgress: null,
 });
 
 // ==================== LOCAL STORAGE (FALLBACK) ====================
@@ -65,8 +70,13 @@ const loadLocal = (key) => {
 // Reconcile cloud vs local copies so progress is never lost and, critically, a
 // completed diagnostic is never downgraded to "not diagnosed". We score each
 // copy (diagnosed dominates, then skills, then XP) and keep the richer one.
+// The `diagInProgress.index` term breaks the mid-diagnostic tie (no skills/XP
+// yet) toward whichever copy is further into the test — so a same-device reopen
+// resumes at the latest question localStorage saw, not a debounced-behind cloud
+// row. Its max (~40) stays far below the skills/diagnosed weights, so a finished
+// diagnostic still always wins.
 const progressScore = (p) =>
-  p ? (p.diagnosed ? 1e9 : 0) + Object.keys(p.skills || {}).length * 1000 + (p.totalXP || 0) : -1;
+  p ? (p.diagnosed ? 1e9 : 0) + Object.keys(p.skills || {}).length * 1000 + (p.totalXP || 0) + (p.diagInProgress?.index || 0) : -1;
 
 const reconcileProgress = (a, b) => {
   if (!a) return b || null;
@@ -189,6 +199,7 @@ export const forceSave = async (key, progress, owner = key, learnerId = null) =>
           dailyXP: progress.dailyXP,
           dailyDate: progress.dailyDate,
           achievements: progress.achievements,
+          diagInProgress: progress.diagInProgress ?? null,
         },
         diagnosed: progress.diagnosed,
         total_xp: progress.totalXP || 0,

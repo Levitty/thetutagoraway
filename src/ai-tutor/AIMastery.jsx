@@ -301,6 +301,22 @@ export function AIMastery({ onBack, userId, studentName }) {
       const p = await loadProgress(storageKey, userId);
       if (cancelled) return;
       setProgress(p);
+
+      // Resume an unfinished diagnostic exactly where the student left off —
+      // same shuffled skill set, same question, same answers so far.
+      const dip = p.diagInProgress;
+      if (!p.diagnosed && dip && dip.subjectId === subjectId && Array.isArray(dip.skills) && dip.skills[dip.index]) {
+        try {
+          const cur = dip.skills[dip.index];
+          setDiagState({ skills: dip.skills, index: dip.index, balances: dip.balances || {}, results: dip.results || {}, startTimes: { [cur.id]: Date.now() } });
+          setProblem(dip.problem || generateProblem(cur.id));
+          setAnswer(''); setVisualAnswer(null); setFeedback(null);
+          setView('diagnostic');
+          setLoading(false);
+          return;
+        } catch { /* corrupt cursor — fall through to the normal entry view */ }
+      }
+
       // Only (re)set the entry view on a genuine load. If this effect re-fires
       // while the student is mid-activity (e.g. an auth token refresh briefly
       // changes userId), NEVER yank them out of an in-progress diagnostic,
@@ -426,10 +442,18 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // ==================== DIAGNOSTIC ====================
 
+  // Snapshot the live diagnostic so a browser close/reload can resume the exact
+  // question. Stored inside `progress` (→ localStorage instantly + cloud on the
+  // debounced save), keyed to this subject. Cleared when the diagnostic finishes.
+  const diagCursor = (skills, index, balances, results, prob) =>
+    ({ subjectId, index, skills, balances, results, problem: prob });
+
   const startDiagnostic = () => {
     const skills = getAdaptiveDiagnosticSkills(progress, ctx);
+    const first = generateProblem(skills[0]?.id);
     setDiagState({ skills, index: 0, balances: {}, results: {}, startTimes: { [skills[0]?.id]: Date.now() } });
-    setProblem(generateProblem(skills[0]?.id));
+    setProblem(first);
+    setProgress(p => ({ ...p, diagInProgress: diagCursor(skills, 0, {}, {}, first) }));
     setAnswer('');
     setVisualAnswer(null);
     setFeedback(null);
@@ -474,6 +498,7 @@ export function AIMastery({ onBack, userId, studentName }) {
         diagnosed: true,
         diagnosticBalances: newBalances,
         placementGrade,
+        diagInProgress: null, // completed — clear the resume cursor
       };
       setProgress(finished);
       forceSave(keyFor(subjectId), finished, userId, learnerId);
@@ -482,8 +507,11 @@ export function AIMastery({ onBack, userId, studentName }) {
     setTimeout(() => {
       if (!isLast) {
         const next = index + 1;
+        const nextProblem = generateProblem(skills[next].id);
         setDiagState({ skills, index: next, balances: newBalances, results: newResults, startTimes: { ...startTimes, [skills[next].id]: Date.now() } });
-        setProblem(generateProblem(skills[next].id));
+        setProblem(nextProblem);
+        // Advance the resume cursor so a mid-test exit returns to THIS question.
+        setProgress(p => ({ ...p, diagInProgress: diagCursor(skills, next, newBalances, newResults, nextProblem) }));
         setAnswer('');
         setVisualAnswer(null);
         setFeedback(null);
@@ -904,8 +932,8 @@ export function AIMastery({ onBack, userId, studentName }) {
             )}
           </div>
 
-          <button onClick={startDiagnostic} className="w-full bg-emerald-600 hover:bg-emerald-500 rounded-xl py-4 font-semibold text-lg transition-colors">{progress.declaredGrade != null ? 'Start Diagnostic' : 'Start Diagnostic Test'}</button>
-          <button onClick={() => { setProgress(p => ({ ...p, diagnosed: true })); setView('home'); }} className="mt-4 text-slate-500 hover:text-slate-300 text-sm block mx-auto">Skip (start from scratch)</button>
+          <button onClick={startDiagnostic} disabled={progress.declaredGrade == null} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 disabled:cursor-not-allowed rounded-xl py-4 font-semibold text-lg transition-colors">{progress.declaredGrade != null ? 'Start Diagnostic' : `Pick your ${(sub?.gradeLabel || 'class').toLowerCase()} to begin`}</button>
+          {progress.declaredGrade == null && <p className="mt-3 text-xs text-slate-500">A quick check — about 18 questions — so HOREB knows exactly where to start you.</p>}
         </div>
       </div>
     </div>
