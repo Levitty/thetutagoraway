@@ -3684,27 +3684,22 @@ const HorebForceGraph = () => {
       const pathNodes = new Set(pathIds);
       links.forEach(l => { l.onPath = pathEdges.has(key(l.source, l.target)); });
 
-      // Deliberate layout instead of a random force-scatter: stack the grades
-      // into an ascending tower — Grade 5 at the base, Grade 12 at the top —
-      // each grade a ring with same-strand skills grouped together. Positions are
-      // PINNED (fx/fy/fz), so it frames and rotates instantly with no settling,
-      // and prerequisite links read as a clean lattice climbing between rings.
+      // A clean living SPHERE, not a force-scatter or a tower: pin every skill to
+      // an evenly-spaced point on a fibonacci sphere. Nodes are ordered by strand
+      // then grade first, so each strand forms a contiguous region and the
+      // prerequisite links stay short, tracing a graceful web across the surface.
+      // Positions are PINNED (fx/fy/fz) so it frames and rotates instantly.
       const strandOrder = {}; strands.forEach((s, i) => { strandOrder[s] = i; });
-      const grades = [...new Set(nodes.map(n => n.grade))].sort((a, b) => a - b);
-      const LAYER = 52;
-      const byGrade = {}; grades.forEach(g => { byGrade[g] = []; });
-      nodes.forEach(n => byGrade[n.grade].push(n));
-      grades.forEach((g, gi) => {
-        const ring = byGrade[g].sort((a, b) => (strandOrder[a.strand] - strandOrder[b.strand]) || a.name.localeCompare(b.name));
-        const cnt = ring.length || 1;
-        const R = Math.max(78, cnt * 6.6);
-        const yBase = (gi - (grades.length - 1) / 2) * LAYER;
-        ring.forEach((n, k) => {
-          const a = (k / cnt) * Math.PI * 2 + gi * 0.55;
-          n.fx = n.x = R * Math.cos(a);
-          n.fz = n.z = R * Math.sin(a);
-          n.fy = n.y = yBase + (k % 2 ? 5 : -5);
-        });
+      const ordered = nodes.slice().sort((a, b) =>
+        (strandOrder[a.strand] - strandOrder[b.strand]) || (a.grade - b.grade) || a.name.localeCompare(b.name));
+      const N = ordered.length, R = 205, GOLDEN = Math.PI * (3 - Math.sqrt(5));
+      ordered.forEach((n, i) => {
+        const y = 1 - (i / Math.max(1, N - 1)) * 2;      // 1 → -1
+        const rr = Math.sqrt(Math.max(0, 1 - y * y));
+        const th = i * GOLDEN;
+        n.fx = n.x = R * Math.cos(th) * rr;
+        n.fy = n.y = R * y;
+        n.fz = n.z = R * Math.sin(th) * rr;
       });
 
       G = ForceGraph3D({ controlType: 'orbit' })(el)
