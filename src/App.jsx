@@ -3668,20 +3668,25 @@ const HorebConstellation = () => {
       const adj = Array.from({ length: N }, () => []);
       for (const [a, b] of edges) { adj[a].push(b); adj[b].push(a); }
       const rad2 = (i) => pts[i].x * pts[i].x + pts[i].y * pts[i].y + pts[i].z * pts[i].z;
-      const byR = [...Array(N).keys()].sort((a, b) => rad2(a) - rad2(b));
-      const usedAll = new Set();
+      // Each track is a long wandering walk across the whole graph, so its
+      // pulse travels everywhere rather than a short stub. It prefers fresh
+      // nodes but may revisit, snaking through the structure.
       const walk = (seed) => {
-        const p = [seed]; usedAll.add(seed);
-        for (let step = 0; step < 8; step++) {
-          const cur = p[p.length - 1], curR = rad2(cur);
-          let best = -1, bestScore = -Infinity;
-          for (const nb of adj[cur]) { if (usedAll.has(nb)) continue; const s = rad2(nb) - curR; if (s > bestScore) { bestScore = s; best = nb; } }
-          if (best < 0) { const cand = adj[cur].filter(n => !usedAll.has(n)); if (!cand.length) break; best = cand[0]; }
-          p.push(best); usedAll.add(best);
+        const p = [seed]; const local = new Set([seed]);
+        const LEN = Math.min(N - 1, 64);
+        for (let step = 0; step < LEN; step++) {
+          const cur = p[p.length - 1], prev = p[p.length - 2];
+          let cand = adj[cur].filter(n => n !== prev);
+          if (!cand.length) cand = adj[cur];
+          if (!cand.length) break;
+          const fresh = cand.filter(n => !local.has(n));
+          const pool = fresh.length ? fresh : cand;
+          const pick = pool[(Math.random() * pool.length) | 0];
+          p.push(pick); local.add(pick);
         }
         return p;
       };
-      paths = [byR[0], byR[4], byR[8]].map((seed, i) => ({ nodes: walk(seed), color: TRACKS[i], off: i / 3 }));
+      paths = [0, 1, 2].map(i => ({ nodes: walk((Math.random() * N) | 0), color: TRACKS[i], off: i / 3 }));
       stars = [];
       const cx = W / 2, cy = H / 2, maxR = Math.min(W, H) * 0.5;
       const S = Math.round((W * H) / 2600);
@@ -3722,32 +3727,41 @@ const HorebConstellation = () => {
         ctx.fillStyle = warm ? `rgba(246,204,124,${(0.5 + 0.45 * p.persp) * tw})` : `rgba(168,198,234,${(0.35 + 0.35 * p.persp) * tw})`;
         ctx.beginPath(); ctx.arc(p.sx, p.sy, Math.max(0.6, p.r * p.persp), 0, 6.29); ctx.fill();
       }
-      // Three learning tracks light up at once, each its own colour, each a
-      // pulse travelling its prerequisite chain and unlocking skills as it goes.
+      // Three coloured currents run through the WHOLE graph: each track is a
+      // long walk, and a comet (bright head + fading tail) travels it end to
+      // end, so light is always moving across the structure — not one stub.
+      const TAIL = 9;                     // how many segments the glow trails
       for (const track of paths) {
         const p = track.nodes; if (p.length < 2) continue;
         const [cr, cg, cb] = track.color;
-        const segs = p.length - 1, per = 820, cycle = per * (segs + 2);
-        const fseg = ((reduced ? per * 2.4 : (t + track.off * cycle) % cycle)) / per;
-        const seg = Math.floor(fseg), f = fseg - seg;
+        const segs = p.length - 1, per = reduced ? 1e9 : 300, cycle = per * segs;
+        const fseg = (reduced ? per * 4 : (t + track.off * cycle) % cycle) / per;
+        const head = Math.floor(fseg), f = fseg - head;
+        // faint full path so the route is always readable
         for (let k = 0; k < segs; k++) {
           const pa = proj[p[k]], pb = proj[p[k + 1]];
-          const active = k <= seg;
-          ctx.strokeStyle = `rgba(${cr},${cg},${cb},${active ? 0.5 : 0.12})`;
-          ctx.lineWidth = active ? 1.6 : 0.9;
+          ctx.strokeStyle = `rgba(${cr},${cg},${cb},0.10)`; ctx.lineWidth = 0.8;
           ctx.beginPath(); ctx.moveTo(pa.sx, pa.sy); ctx.lineTo(pb.sx, pb.sy); ctx.stroke();
         }
-        const lit = Math.min(seg + 1, p.length);
-        for (let k = 0; k < lit; k++) {
+        // comet: segments and nodes just behind the head glow, fading with distance
+        for (let d = 0; d <= TAIL; d++) {
+          const k = head - d; if (k < 0) continue;
+          const a = 1 - d / (TAIL + 1);
+          if (k < segs) {
+            const pa = proj[p[k]], pb = proj[p[k + 1]];
+            ctx.strokeStyle = `rgba(${cr},${cg},${cb},${0.55 * a})`; ctx.lineWidth = 1.2 * a + 0.4;
+            ctx.beginPath(); ctx.moveTo(pa.sx, pa.sy); ctx.lineTo(pb.sx, pb.sy); ctx.stroke();
+          }
           const pp = proj[p[k]];
           const gg = ctx.createRadialGradient(pp.sx, pp.sy, 0, pp.sx, pp.sy, 10 * pp.persp);
-          gg.addColorStop(0, `rgba(${cr},${cg},${cb},0.5)`); gg.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
+          gg.addColorStop(0, `rgba(${cr},${cg},${cb},${0.5 * a})`); gg.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
           ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(pp.sx, pp.sy, 10 * pp.persp, 0, 6.29); ctx.fill();
-          ctx.fillStyle = `rgba(${Math.min(255, cr + 45)},${Math.min(255, cg + 45)},${Math.min(255, cb + 45)},0.96)`;
-          ctx.beginPath(); ctx.arc(pp.sx, pp.sy, Math.max(1.8, 3 * pp.persp), 0, 6.29); ctx.fill();
+          ctx.fillStyle = `rgba(${Math.min(255, cr + 45)},${Math.min(255, cg + 45)},${Math.min(255, cb + 45)},${0.92 * a})`;
+          ctx.beginPath(); ctx.arc(pp.sx, pp.sy, Math.max(1.5, 3 * pp.persp * a + 0.6), 0, 6.29); ctx.fill();
         }
-        if (seg < segs) {
-          const pa = proj[p[seg]], pb = proj[p[seg + 1]];
+        // bright white-cored head, interpolated along the current segment
+        if (head < segs) {
+          const pa = proj[p[head]], pb = proj[p[head + 1]];
           const px = pa.sx + (pb.sx - pa.sx) * f, py = pa.sy + (pb.sy - pa.sy) * f;
           const gg = ctx.createRadialGradient(px, py, 0, px, py, 9);
           gg.addColorStop(0, 'rgba(255,255,255,0.95)'); gg.addColorStop(0.4, `rgba(${cr},${cg},${cb},0.7)`); gg.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
