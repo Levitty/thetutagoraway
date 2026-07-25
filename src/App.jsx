@@ -3630,13 +3630,28 @@ const TeachPage = ({ onNavigate, setShowAuth }) => {
 // coloured by strand), lazy-loaded and gently auto-rotating. Drag to explore;
 // it resumes spinning after you let go.
 const HOREB_PAL = ['#6366f1', '#22c55e', '#ec4899', '#f59e0b', '#14b8a6', '#a855f7', '#ef4444', '#eab308', '#38bdf8'];
+// project a node's live 3D position to canvas pixels; null if behind the camera
+const tagScreen = (G, n) => {
+  try {
+    const c = G.graph2ScreenCoords(n.x, n.y, n.z);
+    if (!c || !isFinite(c.x) || !isFinite(c.y)) return null;
+    return c;
+  } catch (e) { return null; }
+};
 const HorebForceGraph = () => {
   const holderRef = useRef(null);
   useEffect(() => {
     const el = holderRef.current;
     if (!el) return;
     let G = null, raf = 0, disposed = false, ro = null;
-    let spinning = false, angle = 0, dist = 320, last = 0, resumeAt = 0, dragging = false;
+    let spinning = false, angle = 0, base = 320, last = 0, resumeAt = 0, dragging = false, zoomPhase = 0;
+
+    // floating name tag that pops over one node at a time
+    const tag = document.createElement('div');
+    tag.style.cssText = 'position:absolute;left:0;top:0;pointer-events:none;transform:translate(-50%,-140%);' +
+      'padding:4px 10px;border-radius:999px;font:600 12px/1.2 -apple-system,Inter,sans-serif;white-space:nowrap;' +
+      'background:rgba(10,26,48,.82);color:#ffe6b0;border:1px solid rgba(242,168,40,.5);backdrop-filter:blur(4px);' +
+      'box-shadow:0 4px 14px rgba(0,0,0,.35);opacity:0;transition:opacity .25s;z-index:5;';
 
     (async () => {
       const ForceGraph3D = (await import('3d-force-graph')).default;
@@ -3649,50 +3664,103 @@ const HorebForceGraph = () => {
       const links = [];
       horebGraph.skills.forEach(s => (s.prerequisites || []).forEach(p => { if (byId[p]) links.push({ source: p, target: s.id }); }));
 
+      // One glowing prerequisite path climbing from a foundational skill upward:
+      // start at the lowest-grade skill that stands on nothing, then keep stepping
+      // to the highest-grade thing it unlocks — a single lit spine through the map.
+      const deps = {}; horebGraph.skills.forEach(s => { deps[s.id] = []; });
+      horebGraph.skills.forEach(s => (s.prerequisites || []).forEach(p => { if (deps[p]) deps[p].push(s.id); }));
+      const roots = horebGraph.skills.filter(s => !(s.prerequisites || []).length && deps[s.id].length)
+        .sort((a, b) => a.grade - b.grade || deps[b.id].length - deps[a.id].length);
+      const pathIds = [];
+      if (roots.length) {
+        let cur = roots[0].id; const seen = new Set([cur]); pathIds.push(cur);
+        while (pathIds.length < 16) {
+          const nexts = (deps[cur] || []).filter(x => !seen.has(x)).sort((a, b) => byId[b].grade - byId[a].grade || deps[b].length - deps[a].length);
+          if (!nexts.length) break;
+          cur = nexts[0]; seen.add(cur); pathIds.push(cur);
+        }
+      }
+      const key = (a, b) => a + '>' + b;
+      const pathEdges = new Set();
+      for (let i = 0; i < pathIds.length - 1; i++) pathEdges.add(key(pathIds[i], pathIds[i + 1]));
+      const pathNodes = new Set(pathIds);
+      links.forEach(l => { l.onPath = pathEdges.has(key(l.source, l.target)); });
+
       G = ForceGraph3D({ controlType: 'orbit' })(el)
         .backgroundColor('rgba(0,0,0,0)')
         .graphData({ nodes, links })
         .nodeLabel(n => `${n.name} — Grade ${n.grade}`)
-        .nodeColor(n => col[n.strand]).nodeVal('val').nodeOpacity(0.92).nodeResolution(12)
-        .linkColor(() => 'rgba(148,163,184,0.28)').linkWidth(0.5)
+        .nodeColor(n => pathNodes.has(n.id) ? '#ffd77a' : col[n.strand])
+        .nodeVal(n => pathNodes.has(n.id) ? n.val * 1.6 : n.val)
+        .nodeOpacity(0.94).nodeResolution(12)
+        .linkColor(l => l.onPath ? 'rgba(242,168,40,0.95)' : 'rgba(148,163,184,0.22)')
+        .linkWidth(l => l.onPath ? 1.8 : 0.5)
+        .linkDirectionalParticles(l => l.onPath ? 4 : 0)
+        .linkDirectionalParticleWidth(2.6)
+        .linkDirectionalParticleSpeed(0.006)
+        .linkDirectionalParticleColor(() => '#fff2cc')
         .width(el.clientWidth).height(el.clientHeight)
         .showNavInfo(false).enableNodeDrag(false);
       G.d3Force('charge').strength(-90);
+      el.appendChild(tag); // after construction — the graph resets el's contents on init
 
       const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const controls = G.controls();
       controls.addEventListener('start', () => { dragging = true; });
       controls.addEventListener('end', () => {
         dragging = false; resumeAt = performance.now() + 2500;
-        const p = G.camera().position; angle = Math.atan2(p.x, p.z); dist = Math.hypot(p.x, p.y, p.z) || dist;
+        const p = G.camera().position; angle = Math.atan2(p.x, p.z); base = Math.hypot(p.x, p.y, p.z) || base;
       });
 
       let framed = false;
       G.onEngineStop(() => {
         if (framed) return; framed = true;
-        G.zoomToFit(600, 60);
+        G.zoomToFit(600, 55);
         setTimeout(() => {
           if (disposed || !G) return;
           const p = G.camera().position;
-          dist = Math.hypot(p.x, p.y, p.z) || dist; angle = Math.atan2(p.x, p.z);
+          base = (Math.hypot(p.x, p.y, p.z) || base) * 0.92; // start a touch zoomed in
+          angle = Math.atan2(p.x, p.z);
           if (!reduced) spinning = true;
         }, 700);
       });
+
+      // name-tag cycling: pick a node (favouring the lit path), show its grade+name
+      let tagNode = null, tagStart = 0, nextTagAt = 1500;
+      const pathList = pathIds.map(id => nodes.find(n => n.id === id)).filter(Boolean);
 
       last = performance.now();
       const tick = (now) => {
         raf = requestAnimationFrame(tick);
         const dt = now - last; last = now;
         if (spinning && !dragging && now > resumeAt) {
-          angle += dt * 0.00011;
-          G.cameraPosition({ x: dist * Math.sin(angle), y: dist * 0.12, z: dist * Math.cos(angle) });
+          angle += dt * 0.00010;
+          zoomPhase += dt * 0.00020;
+          const d = base * (0.94 + 0.12 * Math.sin(zoomPhase)); // breathe in and out
+          G.cameraPosition({ x: d * Math.sin(angle), y: d * 0.14, z: d * Math.cos(angle) });
+        }
+        // floating label
+        if (spinning && now > nextTagAt) {
+          const pool = (pathList.length && Math.sin(now * 0.001) > 0) ? pathList : nodes;
+          tagNode = pool[(now * 0.013 | 0) % pool.length];
+          tagStart = now; nextTagAt = now + 3200;
+          tag.textContent = `G${tagNode.grade} · ${tagNode.name}`;
+        }
+        if (tagNode && tagNode.x != null) {
+          const p = tagScreen(G, tagNode);
+          const w = el.clientWidth, h = el.clientHeight;
+          if (p && p.x > 8 && p.x < w - 8 && p.y > 20 && p.y < h - 8) {
+            const prog = Math.min(1, (now - tagStart) / 3200);
+            tag.style.opacity = Math.sin(prog * Math.PI).toFixed(2);
+            tag.style.left = p.x + 'px'; tag.style.top = p.y + 'px';
+          } else { tag.style.opacity = '0'; }
         }
       };
       raf = requestAnimationFrame(tick);
 
       ro = new ResizeObserver(() => { if (G && holderRef.current) G.width(holderRef.current.clientWidth).height(holderRef.current.clientHeight); });
       ro.observe(el);
-    })();
+    })().catch(e => console.error('HOREB graph failed:', e));
 
     return () => {
       disposed = true;
