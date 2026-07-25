@@ -3620,16 +3620,17 @@ const TeachPage = ({ onNavigate, setShowAuth }) => {
 // "free HOREB practice", so a visitor needs one clear page that explains it and
 // starts it. Logged-in students are sent straight into the engine.
 // The knowledge constellation — HOREB is literally a graph of skills wired by
-// prerequisites, so we draw it: a glowing mastery core with skills branching
-// outward on gold filaments, gently drifting and twinkling. Self-contained
-// canvas (no heavy graph library) so it stays fast on mobile data.
+// prerequisites, so we draw it as a slowly rotating 3-D globe of them: a glowing
+// mastery core, skills orbiting on gold filaments, a starfield halo for depth.
+// Self-contained animated canvas (no WebGL/graph library) so it stays fast on
+// mobile data; holds still for prefers-reduced-motion.
 const HorebConstellation = () => {
   const canvasRef = useRef(null);
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    let raf, W = 0, H = 0, dpr = 1, nodes = [], edges = [], stars = [], reduced = false;
+    let raf, W = 0, H = 0, dpr = 1, pts = [], edges = [], stars = [], reduced = false;
     try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { /* ignore */ }
     const rnd = (a, b) => a + Math.random() * (b - a);
 
@@ -3640,75 +3641,73 @@ const HorebConstellation = () => {
       W = rect.width; H = rect.height;
       canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const cx = W / 2, cy = H / 2;
-      const maxR = Math.min(W, H) * 0.5;
-      nodes = [{ core: true, bx: cx, by: cy, x: cx, y: cy, ring: 0, ang: 0 }];
-      edges = [];
-      // The knowledge graph: dense rings of skills branching outward.
-      const rings = [{ n: 9, r: 0.22 }, { n: 15, r: 0.4 }, { n: 22, r: 0.58 }, { n: 30, r: 0.76 }, { n: 38, r: 0.95 }];
-      let prevStart = 0, prevCount = 1;
-      rings.forEach((ring, ri) => {
-        const start = nodes.length;
-        for (let i = 0; i < ring.n; i++) {
-          const ang = (i / ring.n) * Math.PI * 2 + ri * 0.5 + rnd(-0.35, 0.35);
-          const rad = maxR * ring.r * rnd(0.85, 1.15);
-          const bx = cx + Math.cos(ang) * rad, by = cy + Math.sin(ang) * rad;
-          nodes.push({ bx, by, x: bx, y: by, ring: ri + 1, ang, r: Math.max(0.9, 3 - ri * 0.42), phase: rnd(0, 6.28), amp: rnd(1.2, 3.2), tw: rnd(0, 6.28) });
-          let best = 0, bestD = 1e9;
-          for (let p = prevStart; p < prevStart + prevCount; p++) {
-            if (ri === 0) { best = 0; break; }
-            const d = Math.abs(((nodes[p].ang - ang + Math.PI) % (2 * Math.PI)) - Math.PI);
-            if (d < bestD) { bestD = d; best = p; }
-          }
-          edges.push([nodes.length - 1, best]);
-        }
-        prevStart = start; prevCount = ring.n;
-      });
-      for (let k = 0; k < 22; k++) { const a = 1 + ((Math.random() * (nodes.length - 1)) | 0); const b = 1 + ((Math.random() * (nodes.length - 1)) | 0); if (a !== b) edges.push([a, b]); }
-      // Starfield halo — the depth and density Pearson gets from hundreds of motes.
-      stars = [];
-      const N = Math.round((W * H) / 2200);
+      const R = Math.min(W, H) * 0.42;
+      const N = 130;
+      pts = [];
+      // Fibonacci sphere → evenly spread skills over a globe.
       for (let i = 0; i < N; i++) {
-        const ang = rnd(0, 6.28), rad = maxR * Math.sqrt(rnd(0, 1)) * 1.25;
-        stars.push({ x: cx + Math.cos(ang) * rad, y: cy + Math.sin(ang) * rad, r: rnd(0.4, 1.3), tw: rnd(0, 6.28), warm: Math.random() < 0.4 });
+        const y = 1 - (i / (N - 1)) * 2;
+        const ringR = Math.sqrt(Math.max(0, 1 - y * y));
+        const theta = i * 2.399963;
+        const rr = R * rnd(0.7, 1.02);
+        pts.push({ x: Math.cos(theta) * ringR * rr, y: y * rr, z: Math.sin(theta) * ringR * rr, r: rnd(1.1, 2.5), tw: rnd(0, 6.28) });
       }
+      // Prerequisite filaments: each skill wired to its 1–2 nearest neighbours.
+      edges = [];
+      for (let i = 0; i < N; i++) {
+        const d = [];
+        for (let j = 0; j < N; j++) { if (i === j) continue; const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y, dz = pts[i].z - pts[j].z; d.push([dx * dx + dy * dy + dz * dz, j]); }
+        d.sort((a, b) => a[0] - b[0]);
+        edges.push([i, d[0][1]]);
+        if (Math.random() < 0.55) edges.push([i, d[1][1]]);
+      }
+      stars = [];
+      const cx = W / 2, cy = H / 2, maxR = Math.min(W, H) * 0.5;
+      const S = Math.round((W * H) / 2600);
+      for (let i = 0; i < S; i++) { const a = rnd(0, 6.28), rr = maxR * Math.sqrt(rnd(0, 1)) * 1.22; stars.push({ x: cx + Math.cos(a) * rr, y: cy + Math.sin(a) * rr, r: rnd(0.4, 1.2), tw: rnd(0, 6.28), warm: Math.random() < 0.4 }); }
     };
 
     const draw = (t) => {
       if (!W) { raf = requestAnimationFrame(draw); return; }
+      const cx = W / 2, cy = H / 2;
       ctx.clearRect(0, 0, W, H);
-      // starfield first (behind everything)
       for (const s of stars) {
-        const a = 0.18 + 0.35 * (0.5 + 0.5 * Math.sin(t / 1400 + s.tw));
+        const a = 0.14 + 0.3 * (0.5 + 0.5 * Math.sin(t / 1500 + s.tw));
         ctx.fillStyle = s.warm ? `rgba(244,206,140,${a})` : `rgba(150,180,220,${a * 0.9})`;
         ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.29); ctx.fill();
       }
-      for (const n of nodes) {
-        if (n.core) continue;
-        n.x = n.bx + Math.sin(t / 2400 + n.phase) * n.amp;
-        n.y = n.by + Math.cos(t / 2800 + n.phase) * n.amp;
-      }
+      const ay = reduced ? 0.5 : t / 8200;         // slow spin
+      const cyA = Math.cos(ay), syA = Math.sin(ay);
+      const tilt = 0.42, ct = Math.cos(tilt), st = Math.sin(tilt);
+      const fov = Math.min(W, H) * 1.15;
+      const proj = pts.map(p => {
+        const x = p.x * cyA - p.z * syA, z0 = p.x * syA + p.z * cyA;     // rotate Y
+        const y2 = p.y * ct - z0 * st, z2 = p.y * st + z0 * ct;          // tilt X
+        const persp = fov / (fov + z2);
+        return { sx: cx + x * persp, sy: cy + y2 * persp, persp, z: z2, r: p.r, tw: p.tw };
+      });
       for (const [a, b] of edges) {
-        const na = nodes[a], nb = nodes[b];
-        const alpha = Math.max(0.035, 0.18 * (1 - (na.ring || 0) / 7));
-        ctx.strokeStyle = `rgba(242,178,70,${alpha})`;
-        ctx.lineWidth = 0.7;
-        ctx.beginPath(); ctx.moveTo(na.x, na.y); ctx.lineTo(nb.x, nb.y); ctx.stroke();
+        const pa = proj[a], pb = proj[b];
+        const al = 0.11 * ((pa.persp + pb.persp) / 2);
+        ctx.strokeStyle = `rgba(242,178,70,${al})`;
+        ctx.lineWidth = 0.6;
+        ctx.beginPath(); ctx.moveTo(pa.sx, pa.sy); ctx.lineTo(pb.sx, pb.sy); ctx.stroke();
       }
-      for (const n of nodes) {
-        if (n.core) continue;
-        const tw = 0.55 + 0.45 * Math.sin(t / 950 + n.tw);
-        ctx.fillStyle = n.ring <= 2 ? `rgba(246,204,124,${0.9 * tw})` : (n.ring <= 3 ? `rgba(226,196,150,${0.78 * tw})` : `rgba(168,198,234,${0.7 * tw})`);
-        ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, 6.29); ctx.fill();
+      const order = proj.map((_, i) => i).sort((a, b) => proj[a].z - proj[b].z);
+      for (const i of order) {
+        const p = proj[i];
+        const tw = 0.55 + 0.45 * Math.sin(t / 1000 + p.tw);
+        const warm = p.persp > 0.98;
+        ctx.fillStyle = warm ? `rgba(246,204,124,${(0.5 + 0.45 * p.persp) * tw})` : `rgba(168,198,234,${(0.35 + 0.35 * p.persp) * tw})`;
+        ctx.beginPath(); ctx.arc(p.sx, p.sy, Math.max(0.6, p.r * p.persp), 0, 6.29); ctx.fill();
       }
-      const c = nodes[0];
-      const pulse = 58 + Math.sin(t / 1500) * 7;
-      const g = ctx.createRadialGradient(c.x, c.y, 0, c.x, c.y, pulse);
-      g.addColorStop(0, 'rgba(255,246,220,0.95)');
-      g.addColorStop(0.2, 'rgba(242,168,40,0.55)');
+      const pulse = 54 + Math.sin(t / 1600) * 7;
+      const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, pulse);
+      g.addColorStop(0, 'rgba(255,246,220,0.92)');
+      g.addColorStop(0.2, 'rgba(242,168,40,0.5)');
       g.addColorStop(1, 'rgba(242,168,40,0)');
-      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(c.x, c.y, pulse, 0, 6.29); ctx.fill();
-      ctx.fillStyle = 'rgba(255,251,238,0.98)'; ctx.beginPath(); ctx.arc(c.x, c.y, 5, 0, 6.29); ctx.fill();
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, pulse, 0, 6.29); ctx.fill();
+      ctx.fillStyle = 'rgba(255,251,238,0.96)'; ctx.beginPath(); ctx.arc(cx, cy, 5, 0, 6.29); ctx.fill();
       if (!reduced) raf = requestAnimationFrame(draw);
     };
 
@@ -3733,16 +3732,101 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-10 lg:gap-6 items-center">
         {/* Left — the pitch */}
         <div>
-          <div className="text-[13px] font-bold tracking-[.18em] text-amber-300">FREE PRACTICE · CBC MATHEMATICS</div>
-          <h1 className="mt-4 text-[42px] sm:text-[54px] font-extrabold leading-[1.02] tracking-[-.03em]">
-            Every child's<br />maths, <span className="text-amber-300">mapped.</span>
+          <div className="text-[13px] font-semibold tracking-[.16em] text-amber-300/90">HOREB · FREE FOR EVERY CHILD</div>
+          <h1 className="mt-4 text-[40px] sm:text-[52px] font-extrabold leading-[1.03] tracking-[-.03em]">
+            No child is bad<br />at maths.
+            <span className="block text-amber-300 mt-1">They're missing one step.</span>
           </h1>
-          <p className="mt-5 text-[17px] leading-relaxed text-white/75 max-w-md">
-            HOREB lays out every skill your child needs, finds the exact place they're
-            stuck, and rebuilds it from the ground up — free, on any phone.
+          <p className="mt-6 text-[17.5px] leading-relaxed text-white/80 max-w-md">
+            Every “I don’t get it” traces back to a single skill that never quite
+            clicked. HOREB finds that <em>exact</em> skill — and quietly rebuilds
+            everything that stands on it.
           </p>
 
-          <div className="mt-7 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <button onClick={start} className="px-7 py-3.5 rounded-xl bg-amber-400 text-slate-900 font-bold text-[15px] hover:bg-amber-300 transition-colors">
+              {user ? 'Open HOREB' : 'Find your child’s gap'}
+            </button>
+            <button onClick={() => onNavigate('horebhow')} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/20 font-semibold text-[15px] hover:bg-white/15 transition-colors">
+              How it works
+            </button>
+          </div>
+
+          <p className="mt-8 text-[14px] text-white/50 max-w-md leading-relaxed">
+            Free, on any phone. Two minutes to set up, one child at a time.
+          </p>
+        </div>
+
+        {/* Right — the living knowledge graph */}
+        <div className="relative h-[380px] sm:h-[480px] lg:h-[560px] lg:-mr-10">
+          <HorebConstellation />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Page two — a proper answer to "what is HOREB?", in a parent's language.
+// Editorial, not a card grid: a claim, then the plain truth beneath it.
+const HorebHow = ({ user, onNavigate, setShowAuth }) => {
+  const start = () => {
+    if (user) { onNavigate('ai'); return; }
+    try { sessionStorage.setItem('tg_after_auth', 'ai'); } catch { /* private mode */ }
+    setShowAuth('register');
+  };
+  const beats = [
+    {
+      k: 'Maths is a map, not a list',
+      p: 'Every skill stands on the ones beneath it. You can’t do fractions without division; you can’t do division without your times tables. Miss one connection and everything built on top of it wobbles — even though your child seems to “know” the newer topic. HOREB holds the whole map of the CBC curriculum, every skill and the links between them.',
+    },
+    {
+      k: 'It finds the exact place your child slipped',
+      p: 'A short, gentle check — no red pen, no ranking — shows precisely where the map breaks for your child. Not “weak at maths”, but “stuck on regrouping when subtracting”. That specificity is the whole game: you can’t fix a gap you can’t see.',
+    },
+    {
+      k: 'Then it rebuilds — the right thing, at the right time',
+      p: 'No random worksheets. HOREB hands your child the next skill they’re genuinely ready for, and only moves on once they’ve truly mastered it — measured, not guessed. When a child is flying, it lets them race ahead of their grade instead of holding them back.',
+    },
+    {
+      k: 'And it never lets them forget',
+      p: 'HOREB quietly brings an older skill back for a moment, right before it would have faded. So what your child learns actually stays — the way memory is supposed to work, without you having to nag about revision.',
+    },
+  ];
+  return (
+    <div className="min-h-screen text-white" style={{ background: 'linear-gradient(172deg,#0a1a30 0%,#0d2138 70%,#102a49 100%)' }}>
+      <div className="max-w-3xl mx-auto px-6 pt-24 pb-20">
+        <button onClick={() => onNavigate('horeb')} className="text-white/50 hover:text-white/80 text-sm transition-colors">← Back</button>
+        <div className="mt-6 text-[13px] font-semibold tracking-[.16em] text-amber-300/90">WHAT IS HOREB?</div>
+        <h1 className="mt-3 text-[38px] sm:text-[46px] font-extrabold leading-[1.05] tracking-[-.02em]">
+          The way the best schools teach maths — made free for every home in Kenya.
+        </h1>
+        <p className="mt-6 text-[18px] leading-relaxed text-white/75">
+          Most maths apps just throw questions and hope. HOREB does the opposite:
+          it works out what your child already understands, finds the one thing
+          holding them back, and teaches from there — the same method behind the
+          world’s strongest maths results, quietly running on your phone.
+        </p>
+
+        <div className="mt-14 space-y-12">
+          {beats.map((b, i) => (
+            <div key={i} className="border-t border-white/10 pt-8">
+              <div className="flex items-baseline gap-4">
+                <span className="text-amber-300/80 font-extrabold text-[15px] tabular-nums">0{i + 1}</span>
+                <h2 className="text-[24px] sm:text-[27px] font-bold leading-tight tracking-[-.01em]">{b.k}</h2>
+              </div>
+              <p className="mt-3 sm:pl-10 text-[16.5px] leading-relaxed text-white/70">{b.p}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 rounded-3xl bg-amber-400/[.08] border border-amber-300/25 p-8">
+          <h3 className="text-[22px] font-extrabold text-amber-200">Free. One map per child. On any phone.</h3>
+          <p className="mt-2 text-[16px] leading-relaxed text-white/75 max-w-xl">
+            Every learner in Kenya gets HOREB at no cost. Add each of your children —
+            each one gets their own map, their own pace, their own progress. And when
+            they need a person, a verified Tutagora tutor is one tap away.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
             <button onClick={start} className="px-7 py-3.5 rounded-xl bg-amber-400 text-slate-900 font-bold text-[15px] hover:bg-amber-300 transition-colors">
               {user ? 'Open HOREB' : 'Start free'}
             </button>
@@ -3750,17 +3834,6 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
               Browse tutors
             </button>
           </div>
-
-          <p className="mt-9 text-[14px] text-white/55 max-w-md leading-relaxed">
-            Every dot is a skill. A five-minute check finds where your child sits
-            in the web, then adaptive practice lights up the next one — and the
-            next. Add each of your children and track them separately.
-          </p>
-        </div>
-
-        {/* Right — the living knowledge graph */}
-        <div className="relative h-[380px] sm:h-[480px] lg:h-[560px] lg:-mr-10">
-          <HorebConstellation />
         </div>
       </div>
     </div>
@@ -5943,6 +6016,7 @@ function AppInner() {
     if (path === 'dashboard') return 'dashboard';
     if (path === 'ai') return 'ai';
     if (path === 'horeb') return 'horeb';
+    if (path === 'horebhow') return 'horebhow';
     if (path === 'schools') return 'schools';
     if (path === 'clubs') return 'clubs';
     if (path === 'spreadsheet') return 'spreadsheet';
@@ -5996,6 +6070,7 @@ function AppInner() {
       else if (path === 'dashboard') setPage('dashboard');
       else if (path === 'ai') setPage('ai');
       else if (path === 'horeb') setPage('horeb');
+      else if (path === 'horebhow') setPage('horebhow');
       else if (path === 'schools') setPage('schools');
       else if (path === 'clubs') setPage('clubs');
       else if (path === 'spreadsheet') setPage('spreadsheet');
@@ -6109,6 +6184,7 @@ function AppInner() {
       
       {page === 'home' && !selectedTutor && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {page === 'horeb' && !auth.user && <HorebIntro user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {page === 'horebhow' && <HorebHow user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {page === 'teach' && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={() => handleNavigate('home')} user={auth.user} setShowAuth={setShowAuth} />}
       {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
