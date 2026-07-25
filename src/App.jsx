@@ -3660,13 +3660,11 @@ const HorebForceGraph = () => {
       const strands = horebGraph.strands;
       const col = {}; strands.forEach((s, i) => { col[s] = HOREB_PAL[i % HOREB_PAL.length]; });
       const byId = {}; horebGraph.skills.forEach(s => { byId[s.id] = s; });
-      const nodes = horebGraph.skills.map(s => ({ id: s.id, name: s.name, strand: s.strand, grade: s.grade, val: s.critical ? 6 : 3 }));
+      const nodes = horebGraph.skills.map(s => ({ id: s.id, name: s.name, strand: s.strand, grade: s.grade, val: s.critical ? 5 : 3 }));
       const links = [];
       horebGraph.skills.forEach(s => (s.prerequisites || []).forEach(p => { if (byId[p]) links.push({ source: p, target: s.id }); }));
 
-      // One glowing prerequisite path climbing from a foundational skill upward:
-      // start at the lowest-grade skill that stands on nothing, then keep stepping
-      // to the highest-grade thing it unlocks — a single lit spine through the map.
+      // One glowing prerequisite path climbing from a foundational skill upward.
       const deps = {}; horebGraph.skills.forEach(s => { deps[s.id] = []; });
       horebGraph.skills.forEach(s => (s.prerequisites || []).forEach(p => { if (deps[p]) deps[p].push(s.id); }));
       const roots = horebGraph.skills.filter(s => !(s.prerequisites || []).length && deps[s.id].length)
@@ -3674,7 +3672,7 @@ const HorebForceGraph = () => {
       const pathIds = [];
       if (roots.length) {
         let cur = roots[0].id; const seen = new Set([cur]); pathIds.push(cur);
-        while (pathIds.length < 16) {
+        while (pathIds.length < 18) {
           const nexts = (deps[cur] || []).filter(x => !seen.has(x)).sort((a, b) => byId[b].grade - byId[a].grade || deps[b].length - deps[a].length);
           if (!nexts.length) break;
           cur = nexts[0]; seen.add(cur); pathIds.push(cur);
@@ -3686,22 +3684,45 @@ const HorebForceGraph = () => {
       const pathNodes = new Set(pathIds);
       links.forEach(l => { l.onPath = pathEdges.has(key(l.source, l.target)); });
 
+      // Deliberate layout instead of a random force-scatter: stack the grades
+      // into an ascending tower — Grade 5 at the base, Grade 12 at the top —
+      // each grade a ring with same-strand skills grouped together. Positions are
+      // PINNED (fx/fy/fz), so it frames and rotates instantly with no settling,
+      // and prerequisite links read as a clean lattice climbing between rings.
+      const strandOrder = {}; strands.forEach((s, i) => { strandOrder[s] = i; });
+      const grades = [...new Set(nodes.map(n => n.grade))].sort((a, b) => a - b);
+      const LAYER = 52;
+      const byGrade = {}; grades.forEach(g => { byGrade[g] = []; });
+      nodes.forEach(n => byGrade[n.grade].push(n));
+      grades.forEach((g, gi) => {
+        const ring = byGrade[g].sort((a, b) => (strandOrder[a.strand] - strandOrder[b.strand]) || a.name.localeCompare(b.name));
+        const cnt = ring.length || 1;
+        const R = Math.max(78, cnt * 6.6);
+        const yBase = (gi - (grades.length - 1) / 2) * LAYER;
+        ring.forEach((n, k) => {
+          const a = (k / cnt) * Math.PI * 2 + gi * 0.55;
+          n.fx = n.x = R * Math.cos(a);
+          n.fz = n.z = R * Math.sin(a);
+          n.fy = n.y = yBase + (k % 2 ? 5 : -5);
+        });
+      });
+
       G = ForceGraph3D({ controlType: 'orbit' })(el)
         .backgroundColor('rgba(0,0,0,0)')
         .graphData({ nodes, links })
+        .cooldownTicks(0).warmupTicks(0)
         .nodeLabel(n => `${n.name} — Grade ${n.grade}`)
         .nodeColor(n => pathNodes.has(n.id) ? '#ffd77a' : col[n.strand])
-        .nodeVal(n => pathNodes.has(n.id) ? n.val * 1.6 : n.val)
-        .nodeOpacity(0.94).nodeResolution(12)
-        .linkColor(l => l.onPath ? 'rgba(242,168,40,0.95)' : 'rgba(148,163,184,0.22)')
-        .linkWidth(l => l.onPath ? 1.8 : 0.5)
+        .nodeVal(n => pathNodes.has(n.id) ? n.val * 1.7 : n.val)
+        .nodeOpacity(0.96).nodeResolution(14)
+        .linkColor(l => l.onPath ? 'rgba(255,196,72,0.98)' : 'rgba(158,186,230,0.38)')
+        .linkWidth(l => l.onPath ? 2.4 : 1.0)
         .linkDirectionalParticles(l => l.onPath ? 4 : 0)
-        .linkDirectionalParticleWidth(2.6)
+        .linkDirectionalParticleWidth(2.8)
         .linkDirectionalParticleSpeed(0.006)
         .linkDirectionalParticleColor(() => '#fff2cc')
         .width(el.clientWidth).height(el.clientHeight)
         .showNavInfo(false).enableNodeDrag(false);
-      G.d3Force('charge').strength(-90);
       el.appendChild(tag); // after construction — the graph resets el's contents on init
 
       const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -3712,18 +3733,17 @@ const HorebForceGraph = () => {
         const p = G.camera().position; angle = Math.atan2(p.x, p.z); base = Math.hypot(p.x, p.y, p.z) || base;
       });
 
+      // Frame and start rotating right away — the layout is pinned, nothing to settle.
       let framed = false;
-      G.onEngineStop(() => {
-        if (framed) return; framed = true;
-        G.zoomToFit(600, 55);
-        setTimeout(() => {
-          if (disposed || !G) return;
-          const p = G.camera().position;
-          base = (Math.hypot(p.x, p.y, p.z) || base) * 0.92; // start a touch zoomed in
-          angle = Math.atan2(p.x, p.z);
-          if (!reduced) spinning = true;
-        }, 700);
-      });
+      const frameAndSpin = () => {
+        if (framed || disposed || !G) return; framed = true;
+        G.zoomToFit(0, 70);
+        const p = G.camera().position;
+        base = (Math.hypot(p.x, p.y, p.z) || base) * 0.86; // land a touch zoomed in
+        angle = Math.atan2(p.x, p.z) || 0;
+        if (!reduced) spinning = true;
+      };
+      setTimeout(frameAndSpin, 200);
 
       // name-tag cycling: pick a node (favouring the lit path), show its grade+name
       let tagNode = null, tagStart = 0, nextTagAt = 1500;
@@ -3734,10 +3754,10 @@ const HorebForceGraph = () => {
         raf = requestAnimationFrame(tick);
         const dt = now - last; last = now;
         if (spinning && !dragging && now > resumeAt) {
-          angle += dt * 0.00010;
-          zoomPhase += dt * 0.00020;
-          const d = base * (0.94 + 0.12 * Math.sin(zoomPhase)); // breathe in and out
-          G.cameraPosition({ x: d * Math.sin(angle), y: d * 0.14, z: d * Math.cos(angle) });
+          angle += dt * 0.00011;
+          zoomPhase += dt * 0.00022;
+          const d = base * (0.90 + 0.13 * Math.sin(zoomPhase)); // breathe in and out
+          G.cameraPosition({ x: d * Math.sin(angle), y: d * 0.10, z: d * Math.cos(angle) });
         }
         // floating label
         if (spinning && now > nextTagAt) {
@@ -3976,7 +3996,7 @@ const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
         </div>
 
         {/* Right — the living knowledge graph */}
-        <div className="relative h-[380px] sm:h-[480px] lg:h-[560px] lg:-mr-10">
+        <div className="relative h-[440px] sm:h-[520px] lg:h-[600px] lg:-mr-10">
           <HorebForceGraph />
         </div>
       </div>
