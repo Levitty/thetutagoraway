@@ -488,7 +488,9 @@ export const SKILL_COUNT = Object.keys(SKILLS).length;
 
 export const STRANDS = [S.NUM, S.ALG, S.GEO, S.MEA, S.STA];
 
-export const GRADES = [5, 6, 7, 8, 9, 10, 11, 12];
+// The graph carries skills for grades 1–12, so a learner of any age can declare
+// their real class (young grades power the foundations that older grades rest on).
+export const GRADES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 // Get all skills for a specific grade
 export const getSkillsByGrade = (grade) =>

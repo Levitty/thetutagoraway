@@ -163,6 +163,9 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // Diagnostic state (adaptive: running evidence + a moving focus grade, not a fixed list)
   const [diagState, setDiagState] = useState({ answered: [], balances: {}, results: {}, startTimes: {}, current: null, focus: null, perGrade: {} });
+  // Snapshots of each answered question so "Previous" can step back and rollback
+  // the evidence (in-session only — not restored across a reload/resume).
+  const [diagHistory, setDiagHistory] = useState([]);
 
   // Review state
   const [reviewProblems, setReviewProblems] = useState([]);
@@ -311,6 +314,7 @@ export function AIMastery({ onBack, userId, studentName }) {
           const cur = ctx?.skills?.[dip.currentId];
           if (!cur) throw new Error('current skill not found');
           setDiagState({ answered: dip.answered, balances: dip.balances || {}, results: dip.results || {}, startTimes: { [cur.id]: Date.now() }, current: cur, focus: dip.focus ?? p.declaredGrade, perGrade: dip.perGrade || {} });
+          setDiagHistory([]); // snapshots aren't persisted; can't step back past a reload
           setProblem(dip.problem || generateProblem(cur.id));
           setAnswer(''); setVisualAnswer(null); setFeedback(null);
           setView('diagnostic');
@@ -490,12 +494,28 @@ export function AIMastery({ onBack, userId, studentName }) {
     const first = pickAt(list, focus, new Set(), {}) || list[0];
     const firstProblem = generateProblem(first?.id);
     setDiagState({ answered: [], balances: {}, results: {}, startTimes: { [first?.id]: Date.now() }, current: first, focus, perGrade: {} });
+    setDiagHistory([]);
     setProblem(firstProblem);
     setProgress(p => ({ ...p, diagInProgress: diagCursor([], {}, {}, first, firstProblem, focus, {}) }));
     setAnswer('');
     setVisualAnswer(null);
     setFeedback(null);
     setView('diagnostic');
+  };
+
+  // Step back to the previous diagnostic question, rolling the evidence back to
+  // exactly what it was before that question was answered.
+  const diagBack = () => {
+    if (!diagHistory.length) return;
+    const prev = diagHistory[diagHistory.length - 1];
+    setDiagHistory(diagHistory.slice(0, -1));
+    setDiagState(prev.state);
+    setProblem(prev.problem);
+    setAnswer('');
+    setVisualAnswer(null);
+    setFeedback(null);
+    const s = prev.state;
+    setProgress(p => ({ ...p, diagInProgress: diagCursor(s.answered, s.balances, s.results, s.current, prev.problem, s.focus, s.perGrade) }));
   };
 
   const handleDiagnosticAnswer = () => {
@@ -505,6 +525,8 @@ export function AIMastery({ onBack, userId, studentName }) {
     const { answered, balances, results, startTimes, current, focus, perGrade } = diagState;
     const skill = current;
     if (!skill) return;
+    // Remember this question so "Previous" can return to it and undo its evidence.
+    setDiagHistory(h => [...h, { state: diagState, problem }]);
     const timeTaken = Date.now() - (startTimes[skill.id] || Date.now());
     const timeWeight = getTimeWeight(timeTaken);
 
@@ -954,7 +976,6 @@ export function AIMastery({ onBack, userId, studentName }) {
             <Lottie src={LOTTIE.academics} size={140} fallback={<div className="text-6xl">{sub?.emoji || '🧠'}</div>} />
           </div>
           <h1 className="text-3xl font-bold mb-2">{sub?.name || 'AI Tutor'}</h1>
-          <p className="text-emerald-400 text-sm font-medium mb-4">Powered by The Math Academy Way</p>
           <p className="text-slate-400 mb-6">Adaptive learning that finds your gaps and fills them. {sub?.description} — {SKILL_COUNT} skills.</p>
           <div className="bg-slate-800 rounded-xl p-4 mb-4 text-left text-sm text-slate-300 space-y-2">
             <p>🎯 <strong>Diagnostic</strong> — a short, targeted check to find your level and gaps</p>
@@ -1028,6 +1049,9 @@ export function AIMastery({ onBack, userId, studentName }) {
         <div className="bg-gradient-to-b from-slate-100 to-slate-900 h-8" />
         <div className="px-4">
         <div className="max-w-2xl mx-auto">
+          {diagHistory.length > 0 && !feedback && (
+            <button onClick={diagBack} className="text-xs text-slate-400 hover:text-slate-200 mb-2 flex items-center gap-1 transition-colors">← Previous question</button>
+          )}
           <div className="text-xs text-slate-500 mb-2">Grade {skill.grade} — {skill.strand} — {skill.name}</div>
           <div className="bg-slate-800 rounded-2xl p-6 mb-4">
             <div className="text-lg mb-6 leading-relaxed">{problem?.question}</div>
@@ -1678,9 +1702,10 @@ export function AIMastery({ onBack, userId, studentName }) {
 
               {/* Gaps */}
               {gaps.length > 0 && (
-                <button onClick={() => setActiveTab('path')} className="w-full bg-red-900/20 border border-red-700 rounded-xl p-4 text-left hover:bg-red-900/30 transition-colors">
-                  <div className="flex items-center gap-2 text-red-400 font-semibold mb-1"><Icon name="alert" className="w-5 h-5" /> {gaps.length} foundation gap{gaps.length === 1 ? '' : 's'} to fix</div>
-                  <div className="flex flex-wrap gap-2 mt-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2 py-0.5 bg-red-900/30 rounded text-xs text-red-300">{g.name}</span>)}</div>
+                <button onClick={() => setActiveTab('path')} className="w-full bg-slate-800 border border-slate-700 rounded-xl p-4 text-left hover:bg-slate-700/60 transition-colors">
+                  <div className="text-amber-400 font-semibold mb-1">Where we’ll start</div>
+                  <p className="text-xs text-slate-400 mb-2.5">A few foundations to build first — HOREB takes them one step at a time, so nothing piles up.</p>
+                  <div className="flex flex-wrap gap-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2 py-0.5 bg-slate-700 rounded text-xs text-slate-200">{g.name}</span>)}</div>
                 </button>
               )}
 
@@ -1742,10 +1767,10 @@ export function AIMastery({ onBack, userId, studentName }) {
 
             {/* Gaps alert */}
             {gaps.length > 0 && (
-              <div className="bg-red-900/20 border border-red-700 rounded-xl p-4 mb-4">
-                <div className="flex items-center gap-2 text-red-400 font-semibold mb-2"><Icon name="alert" className="w-5 h-5" /> Foundation Gaps Detected</div>
-                <p className="text-sm text-slate-300 mb-3">These prerequisite skills need work:</p>
-                <div className="flex flex-wrap gap-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2 py-1 bg-red-900/30 rounded text-sm text-red-300">{g.name}</span>)}</div>
+              <div className="bg-slate-800 border border-slate-700 rounded-xl p-4 mb-4">
+                <div className="flex items-center gap-2 text-amber-400 font-semibold mb-2"><Icon name="target" className="w-5 h-5" /> Foundations to build first</div>
+                <p className="text-sm text-slate-300 mb-3">HOREB starts here and builds up from these, one step at a time:</p>
+                <div className="flex flex-wrap gap-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2 py-1 bg-slate-700 rounded text-sm text-slate-200">{g.name}</span>)}</div>
               </div>
             )}
 
@@ -1993,7 +2018,6 @@ export function AIMastery({ onBack, userId, studentName }) {
 
         {/* Footer */}
         <div className="mt-8 text-center text-slate-600 text-xs space-y-1 pb-8">
-          <p>Powered by The Math Academy Way methodology</p>
           <p>🎯 Adaptive learning path · 🔁 Spaced repetition · 🧩 Knowledge graph</p>
         </div>
       </div>
