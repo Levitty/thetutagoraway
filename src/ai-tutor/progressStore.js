@@ -76,7 +76,7 @@ const loadLocal = (key) => {
 // row. Its max (~40) stays far below the skills/diagnosed weights, so a finished
 // diagnostic still always wins.
 const progressScore = (p) =>
-  p ? (p.diagnosed ? 1e9 : 0) + Object.keys(p.skills || {}).length * 1000 + (p.totalXP || 0) + (p.diagInProgress?.index || 0) : -1;
+  p ? (p.diagnosed ? 1e9 : 0) + Object.keys(p.skills || {}).length * 1000 + (p.totalXP || 0) + (p.diagInProgress?.answered?.length || 0) : -1;
 
 const reconcileProgress = (a, b) => {
   if (!a) return b || null;

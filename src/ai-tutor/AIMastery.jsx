@@ -161,8 +161,8 @@ export function AIMastery({ onBack, userId, studentName }) {
   const [modalityLevel, setModalityLevel] = useState('abstract');
   const [visualAnswer, setVisualAnswer] = useState(null);
 
-  // Diagnostic state
-  const [diagState, setDiagState] = useState({ skills: [], index: 0, balances: {}, results: {}, startTimes: {} });
+  // Diagnostic state (adaptive: running evidence + a moving focus grade, not a fixed list)
+  const [diagState, setDiagState] = useState({ answered: [], balances: {}, results: {}, startTimes: {}, current: null, focus: null, perGrade: {} });
 
   // Review state
   const [reviewProblems, setReviewProblems] = useState([]);
@@ -302,13 +302,15 @@ export function AIMastery({ onBack, userId, studentName }) {
       if (cancelled) return;
       setProgress(p);
 
-      // Resume an unfinished diagnostic exactly where the student left off —
-      // same shuffled skill set, same question, same answers so far.
+      // Resume an unfinished diagnostic exactly where the student left off — the
+      // same current question, all evidence so far, and the focus grade. The
+      // candidate pool is the full skill list, rebuilt fresh from the subject.
       const dip = p.diagInProgress;
-      if (!p.diagnosed && dip && dip.subjectId === subjectId && Array.isArray(dip.skills) && dip.skills[dip.index]) {
+      if (!p.diagnosed && dip && dip.subjectId === subjectId && dip.currentId && Array.isArray(dip.answered)) {
         try {
-          const cur = dip.skills[dip.index];
-          setDiagState({ skills: dip.skills, index: dip.index, balances: dip.balances || {}, results: dip.results || {}, startTimes: { [cur.id]: Date.now() } });
+          const cur = ctx?.skills?.[dip.currentId];
+          if (!cur) throw new Error('current skill not found');
+          setDiagState({ answered: dip.answered, balances: dip.balances || {}, results: dip.results || {}, startTimes: { [cur.id]: Date.now() }, current: cur, focus: dip.focus ?? p.declaredGrade, perGrade: dip.perGrade || {} });
           setProblem(dip.problem || generateProblem(cur.id));
           setAnswer(''); setVisualAnswer(null); setFeedback(null);
           setView('diagnostic');
@@ -442,18 +444,54 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // ==================== DIAGNOSTIC ====================
 
-  // Snapshot the live diagnostic so a browser close/reload can resume the exact
-  // question. Stored inside `progress` (→ localStorage instantly + cloud on the
-  // debounced save), keyed to this subject. Cleared when the diagnostic finishes.
-  const diagCursor = (skills, index, balances, results, prob) =>
-    ({ subjectId, index, skills, balances, results, problem: prob });
+  // Adaptive, grade-anchored diagnostic. Instead of marching a fixed list, we
+  // start the focus at the student's declared grade and move it — UP when they
+  // clear a grade, DOWN when they fail one — until the frontier between what they
+  // know and don't is bracketed. Credit propagation means each answer also tells
+  // us about that skill's prerequisites/post-requisites, so we don't re-measure
+  // what the graph already implies and spend questions where we're still unsure
+  // (within a grade, we ask the least-certain skill first). The test ends as soon
+  // as the level is pinned down — short for a clear-cut student, longer when the
+  // picture is mixed — the "infer from structure, measure only the gaps" idea.
+  const DIAG_MIN = 8;    // ask at least this many before bracketing can stop us
+  const DIAG_MAX = 20;   // hard ceiling
+
+  const diagList = () => Object.values(ctx?.skills || {}).filter(s => Number.isFinite(s.grade));
+  const gradeSpan = (list) => { const g = list.map(s => s.grade); return [Math.min(...g), Math.max(...g)]; };
+  const clearedG = (pg, g) => pg[g] && pg[g].t >= 2 && pg[g].c / pg[g].t >= 0.5;
+  const failedG = (pg, g) => pg[g] && pg[g].t >= 2 && pg[g].c / pg[g].t < 0.5;
+  // Nearest grade to `focus` that still has an unanswered skill; within a grade,
+  // prefer load-bearing (critical) skills, then the least-certain one.
+  const pickAt = (list, focus, answeredSet, balances) => {
+    const [gmin, gmax] = gradeSpan(list);
+    for (let d = 0; d <= gmax - gmin; d++) {
+      for (const g of (d === 0 ? [focus] : [focus - d, focus + d])) {
+        const cands = list.filter(s => s.grade === g && !answeredSet.has(s.id));
+        if (cands.length) {
+          cands.sort((a, b) => (b.critical ? 1 : 0) - (a.critical ? 1 : 0)
+            || Math.abs(balances[a.id] || 0) - Math.abs(balances[b.id] || 0));
+          return cands[0];
+        }
+      }
+    }
+    return null;
+  };
+
+  // Snapshot the live diagnostic so a browser close/reload resumes the exact
+  // question — answers so far, running evidence, focus grade, and the current
+  // problem. Stored in `progress` (localStorage instantly + cloud on save). The
+  // candidate pool is the full skill list, rebuilt on resume rather than stored.
+  const diagCursor = (answered, balances, results, current, prob, focus, perGrade) =>
+    ({ subjectId, v: 3, answered, balances, results, currentId: current?.id, problem: prob, focus, perGrade });
 
   const startDiagnostic = () => {
-    const skills = getAdaptiveDiagnosticSkills(progress, ctx);
-    const first = generateProblem(skills[0]?.id);
-    setDiagState({ skills, index: 0, balances: {}, results: {}, startTimes: { [skills[0]?.id]: Date.now() } });
-    setProblem(first);
-    setProgress(p => ({ ...p, diagInProgress: diagCursor(skills, 0, {}, {}, first) }));
+    const list = diagList();
+    const focus = progress.declaredGrade; // required before starting
+    const first = pickAt(list, focus, new Set(), {}) || list[0];
+    const firstProblem = generateProblem(first?.id);
+    setDiagState({ answered: [], balances: {}, results: {}, startTimes: { [first?.id]: Date.now() }, current: first, focus, perGrade: {} });
+    setProblem(firstProblem);
+    setProgress(p => ({ ...p, diagInProgress: diagCursor([], {}, {}, first, firstProblem, focus, {}) }));
     setAnswer('');
     setVisualAnswer(null);
     setFeedback(null);
@@ -464,8 +502,9 @@ export function AIMastery({ onBack, userId, studentName }) {
     // Allow either a typed answer or an interactive-visual answer (number line etc.)
     const hasVisualAnswer = problem?.visual && visualAnswer != null;
     if (!answer.trim() && !hasVisualAnswer) return;
-    const { skills, index, balances, results, startTimes } = diagState;
-    const skill = skills[index];
+    const { answered, balances, results, startTimes, current, focus, perGrade } = diagState;
+    const skill = current;
+    if (!skill) return;
     const timeTaken = Date.now() - (startTimes[skill.id] || Date.now());
     const timeWeight = getTimeWeight(timeTaken);
 
@@ -473,25 +512,47 @@ export function AIMastery({ onBack, userId, studentName }) {
       ? checkVisualAnswer(visualAnswer, problem.visual)
       : checkAnswerMatch(answer, problem);
 
+    // How sure the running evidence already was about this skill, BEFORE the
+    // answer — the calibration signal to mine across learners later (idea #2).
+    const priorConfidence = Math.abs(balances[skill.id] || 0);
+
     const newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
     const newResults = { ...results, [skill.id]: { correct, timeTaken } };
+    const newAnswered = [...answered, skill.id];
+    const answeredSet = new Set(newAnswered);
+    const newPerGrade = { ...perGrade, [skill.grade]: {
+      c: (perGrade[skill.grade]?.c || 0) + (correct ? 1 : 0),
+      t: (perGrade[skill.grade]?.t || 0) + 1,
+    } };
 
     logResponse({
       studentId: userId, subject: subjectId, skillId: skill.id,
       correct, problemType: problem?.type, timeMs: timeTaken, isDiagnostic: true,
+      confidence: priorConfidence,
     });
 
     setFeedback(correct ? 'correct' : 'incorrect');
 
-    const isLast = index >= skills.length - 1;
+    // Move the focus toward the frontier, then decide whether it's bracketed.
+    const list = diagList();
+    const [gmin, gmax] = gradeSpan(list);
+    let nextFocus = focus;
+    if (clearedG(newPerGrade, focus)) nextFocus = Math.min(gmax, focus + 1);
+    else if (failedG(newPerGrade, focus)) nextFocus = Math.max(gmin, focus - 1);
+
+    let bracketed = false;
+    if (newAnswered.length >= DIAG_MIN) {
+      for (let g = gmin; g < gmax; g++) if (clearedG(newPerGrade, g) && failedG(newPerGrade, g + 1)) bracketed = true;
+    }
+    const nextSkill = pickAt(list, nextFocus, answeredSet, newBalances);
+    const isLast = newAnswered.length >= DIAG_MAX || !nextSkill || bracketed;
 
     // On the final question, compute and PERSIST the finished state immediately —
-    // before the 800ms feedback pause — so navigating away during that pause can
-    // never lose the result and force a retake.
+    // before the 800ms feedback pause — so navigating away can never lose it.
     if (isLast) {
+      const answeredObjs = newAnswered.map(id => ctx.skills[id]).filter(Boolean);
       const skillUpdates = processDiagnosticResults(newBalances, ctx);
-      // Persist a stable placement grade from how the student did per grade band.
-      const placementGrade = computePlacementGrade(skills, newResults, progress.declaredGrade);
+      const placementGrade = computePlacementGrade(answeredObjs, newResults, progress.declaredGrade);
       const finished = {
         ...progress,
         skills: { ...progress.skills, ...skillUpdates },
@@ -506,12 +567,11 @@ export function AIMastery({ onBack, userId, studentName }) {
 
     setTimeout(() => {
       if (!isLast) {
-        const next = index + 1;
-        const nextProblem = generateProblem(skills[next].id);
-        setDiagState({ skills, index: next, balances: newBalances, results: newResults, startTimes: { ...startTimes, [skills[next].id]: Date.now() } });
+        const nextProblem = generateProblem(nextSkill.id);
+        setDiagState({ answered: newAnswered, balances: newBalances, results: newResults, startTimes: { ...startTimes, [nextSkill.id]: Date.now() }, current: nextSkill, focus: nextFocus, perGrade: newPerGrade });
         setProblem(nextProblem);
         // Advance the resume cursor so a mid-test exit returns to THIS question.
-        setProgress(p => ({ ...p, diagInProgress: diagCursor(skills, next, newBalances, newResults, nextProblem) }));
+        setProgress(p => ({ ...p, diagInProgress: diagCursor(newAnswered, newBalances, newResults, nextSkill, nextProblem, nextFocus, newPerGrade) }));
         setAnswer('');
         setVisualAnswer(null);
         setFeedback(null);
@@ -942,10 +1002,12 @@ export function AIMastery({ onBack, userId, studentName }) {
   // ==================== RENDER: DIAGNOSTIC ====================
 
   if (view === 'diagnostic') {
-    const { skills, index } = diagState;
-    const skill = skills[index];
+    const { answered, current } = diagState;
+    const skill = current;
     if (!skill) return null;
-    const pct = Math.round(((index + 1) / skills.length) * 100);
+    const n = answered.length + 1;
+    // Adaptive test: the length isn't fixed, so show progress toward the ceiling.
+    const pct = Math.min(96, Math.round((answered.length / DIAG_MAX) * 100));
 
     return (
       <div className="min-h-screen bg-slate-900 text-white">
@@ -956,7 +1018,7 @@ export function AIMastery({ onBack, userId, studentName }) {
               <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">T</div>
               <div>
                 <div className="text-sm font-bold text-slate-900">Diagnostic Test</div>
-                <div className="text-xs text-slate-400">Question {index + 1} of {skills.length}</div>
+                <div className="text-xs text-slate-400">Question {n} · finding your level</div>
               </div>
             </div>
             <div className="text-sm text-emerald-600 font-semibold">{pct}%</div>
