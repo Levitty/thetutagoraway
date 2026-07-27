@@ -4127,9 +4127,9 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center bg-gradient-to-b from-slate-900 to-slate-800 relative overflow-hidden">
+      <section className="min-h-screen flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(168deg,#0a1a30 0%,#0d2138 55%,#122c4a 100%)' }}>
         <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
         <div className="max-w-6xl mx-auto px-4 sm:px-5 pt-20 pb-12 sm:py-32 relative flex items-center justify-between">
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-full text-white/90 text-xs sm:text-sm mb-4 sm:mb-6">

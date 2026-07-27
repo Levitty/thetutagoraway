@@ -1642,42 +1642,61 @@ export function AIMastery({ onBack, userId, studentName }) {
 
               {/* ===== LEFT COLUMN — the main flow: what to do, what to fix, progress ===== */}
               <div className="lg:col-span-2 space-y-4">
-              {/* Hero — a calm brand surface: greeting, level, the guide, next action */}
-              <div className="relative overflow-hidden rounded-3xl p-6 sm:p-7 text-white shadow-lg shadow-slate-900/10" style={{ background: 'linear-gradient(155deg,#1a2150 0%,#12183a 55%,#0d1230 100%)' }}>
-                {/* soft gold glow for depth */}
-                <div className="absolute -top-10 -right-8 w-40 h-40 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(242,168,40,0.18), transparent 70%)' }} />
-                <div className="relative flex items-start justify-between gap-4">
-                  <div className="min-w-0">
-                    <p className="text-white/55 text-sm font-medium">{greeting}{firstName ? `, ${firstName}` : ''}</p>
-                    <div className="mt-1.5 flex items-baseline gap-2 flex-wrap">
-                      <h2 className="text-[30px] font-extrabold leading-none tracking-tight">{gradeLabel(estimatedGrade)}</h2>
-                      <span className="text-white/45 text-sm">your level</span>
-                    </div>
-                    {brainAccelerated && (
-                      <span className="inline-block mt-2.5 text-[11px] font-semibold text-amber-200 bg-amber-400/15 border border-amber-300/25 rounded-full px-2.5 py-1">🚀 Above grade</span>
-                    )}
-                  </div>
-                  <HorebBot size={76} className="shrink-0 -mt-1 drop-shadow-md" />
+              {/* Greeting — the guide + who/where */}
+              <div className="flex items-center gap-3">
+                <HorebBot size={44} className="shrink-0" />
+                <div className="min-w-0">
+                  <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 leading-tight">{greeting}{firstName ? `, ${firstName}` : ''} 👋</h2>
+                  <p className="text-sm text-slate-500">{gradeLabel(estimatedGrade)} · your level{brainAccelerated ? ' · 🚀 above grade' : ''}</p>
                 </div>
-
-                {confidencePct != null && (
-                  <div className="relative mt-5">
-                    <div className="flex justify-between text-xs text-white/60 mb-1.5"><span>Measurement confidence</span><span>{confidencePct}%</span></div>
-                    <div className="h-1.5 bg-white/15 rounded-full overflow-hidden"><div className="h-full bg-amber-400 transition-all" style={{ width: `${confidencePct}%` }} /></div>
-                  </div>
-                )}
-
-                <button onClick={cta.onClick} className="relative mt-6 w-full bg-white text-slate-900 rounded-2xl px-4 py-3.5 flex items-center justify-between font-semibold hover:bg-slate-50 transition-colors shadow-sm">
-                  <span className="flex items-center gap-3 min-w-0">
-                    <span className="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0"><Icon name={cta.icon} className="w-5 h-5" /></span>
-                    <span className="flex flex-col items-start min-w-0">
-                      <span className="leading-tight">{cta.label}</span>
-                      <span className="text-xs font-normal text-slate-500 truncate max-w-[220px]">{cta.sub}</span>
-                    </span>
-                  </span>
-                  <Icon name="arrow" className="w-5 h-5 text-slate-400 shrink-0" />
-                </button>
               </div>
+
+              {/* Resume card — light, content-forward (fixes the 'AI' navy hero) */}
+              <button onClick={cta.onClick} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-3xl p-5 flex items-center gap-4 hover:border-slate-300 transition-colors">
+                <div className="w-[68px] h-[68px] rounded-2xl bg-[#f5f6fc] border border-[#e8e9f6] flex items-center justify-center shrink-0 text-[#6d6fcb]">
+                  <Icon name={cta.icon} className="w-7 h-7" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-700">{cta.label}</div>
+                  <div className="text-[18px] font-extrabold tracking-tight text-slate-900 mt-1 leading-tight truncate">{cta.sub}</div>
+                </div>
+                <span className="shrink-0 inline-flex items-center gap-2 bg-amber-400 text-slate-900 font-bold rounded-2xl px-5 py-2.5">
+                  <Icon name="play" className="w-4 h-4" /> Go
+                </span>
+              </button>
+
+              {/* Your path — the next few skills as designed cards with status */}
+              {path.length > 0 && (
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl">
+                  <div className="flex items-center justify-between px-5 pt-4 pb-1">
+                    <span className="text-slate-800 font-semibold text-[15px]">Your path</span>
+                    <button onClick={() => setActiveTab('path')} className="text-xs text-amber-600 hover:text-amber-700">View all →</button>
+                  </div>
+                  <div className="px-2 pb-2">
+                    {path.slice(0, 4).map((it) => {
+                      const sp = progress.skills[it.id] || {};
+                      const status = sp.mastered ? 'done' : (sp.attempts ? 'prog' : 'next');
+                      const min = SKILLS[it.id]?.minProblems || 5;
+                      const pct = status === 'done' ? 100 : (sp.attempts ? Math.min(100, Math.round((sp.correct || 0) / min * 100)) : 0);
+                      const tint = status === 'done' ? 'bg-[#eef4e7] text-[#4f6a30]' : status === 'prog' ? 'bg-[#fff4e2] text-[#a5670a]' : 'bg-slate-100 text-slate-400';
+                      const chipTxt = status === 'done' ? 'Mastered' : status === 'prog' ? 'In progress' : 'Up next';
+                      return (
+                        <button key={it.id} onClick={() => startLesson(it.id)} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-slate-50 transition-colors text-left">
+                          <span className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${tint}`}>
+                            <Icon name={status === 'done' ? 'check' : 'play'} className="w-4 h-4" />
+                          </span>
+                          <span className="flex-1 min-w-0">
+                            <span className="block text-[14px] font-semibold text-slate-900 truncate">{it.name || SKILLS[it.id]?.name}</span>
+                            <span className="block text-xs text-slate-400 truncate">{SKILLS[it.id]?.strand || ''}</span>
+                          </span>
+                          <span className="hidden sm:block w-20 h-1.5 rounded-full bg-slate-100 overflow-hidden shrink-0"><span className="block h-full rounded-full bg-[#8ca86a]" style={{ width: `${pct}%` }} /></span>
+                          <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full shrink-0 ${status === 'next' ? 'bg-slate-100 text-slate-500' : tint}`}>{chipTxt}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
 
               {/* Gaps */}
               {gaps.length > 0 && (
