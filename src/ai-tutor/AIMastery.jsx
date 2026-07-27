@@ -9,6 +9,7 @@ import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, ge
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { HorebBot } from './HorebBot.jsx';
+import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
@@ -1160,7 +1161,8 @@ export function AIMastery({ onBack, userId, studentName }) {
                     <div className="text-[22px] font-bold text-slate-900 mb-5 leading-snug">
                       <TermTooltip text={we.problem} definitions={we.definitions} />
                     </div>
-                    <div className="space-y-3">
+                    {(() => { const am = parseAreaProblem(we.problem); return am ? <AreaModel a={am.a} b={am.b} /> : null; })()}
+                    {!parseAreaProblem(we.problem) && <div className="space-y-3">
                       {we.steps.map((step, i) => (
                         <div key={i}>
                           <div className="flex gap-3 items-start">
@@ -1184,7 +1186,7 @@ export function AIMastery({ onBack, userId, studentName }) {
                           )}
                         </div>
                       ))}
-                    </div>
+                    </div>}
                     <div className="mt-5 flex items-center gap-2 bg-[#eef4e7] border border-[#cfe0bd] rounded-2xl px-4 py-3">
                       <span className="text-[#5a7a3a] font-semibold text-sm">Answer</span>
                       <span className="font-bold text-slate-900 ml-auto text-lg">{we.solution}</span>
