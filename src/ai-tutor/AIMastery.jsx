@@ -1489,119 +1489,57 @@ export function AIMastery({ onBack, userId, studentName }) {
   const brainStrandLevel = (name) => brainProfile?.strands?.find(b => b.strand === name) || null;
 
   return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900">
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900 lg:flex">
       <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
-      {/* Header */}
-      <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600"><Icon name="back" /></button>}
-            <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">T</div>
-            <div>
-              <h1 className="text-base font-bold text-slate-900">{sub?.emoji} {sub?.shortName || 'AI Tutor'}</h1>
-              <p className="text-xs text-slate-400">{gradeLabel(estimatedGrade)}</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            {progress.currentStreak > 0 && <div className="flex items-center gap-1 text-amber-500"><Icon name="flame" className="w-4 h-4" /><span className="text-sm font-bold">{progress.currentStreak}d</span></div>}
-            <div className="text-right">
-              <div className="text-amber-500 font-bold flex items-center gap-1 text-sm"><Icon name="star" className="w-4 h-4" /> {progress.totalXP || 0}</div>
-              <div className="text-xs text-slate-400">Level {level.level}</div>
-            </div>
-            {curriculaOptions.length > 1 && (
-              <select
-                value={curriculum}
-                onChange={(e) => setProgress(p => ({ ...p, curriculum: e.target.value }))}
-                title="Curriculum view"
-                className="text-xs bg-slate-100 text-slate-700 rounded-md px-2 py-1 border border-slate-200 focus:outline-none"
-              >
-                {curriculaOptions.map(c => <option key={c.id} value={c.id}>{c.shortName}</option>)}
-              </select>
-            )}
-            <button onClick={switchSubject} className="text-slate-300 hover:text-slate-500" title="Switch subject"><Icon name="book" className="w-4 h-4" /></button>
-            <button onClick={resetAll} className="text-slate-300 hover:text-slate-500" title="Reset progress"><Icon name="refresh" className="w-4 h-4" /></button>
-          </div>
+
+      {/* ===== SIDEBAR (desktop) ===== */}
+      <aside className="hidden lg:flex lg:flex-col w-[248px] shrink-0 bg-white border-r border-slate-200 sticky top-0 h-screen px-4 py-5">
+        <div className="flex items-center gap-2.5 px-2 pb-5">
+          <HorebBot size={30} />
+          <b className="text-[18px] font-extrabold tracking-tight">HOREB</b>
         </div>
-      </div>
-
-      {/* Summary strip */}
-      <div className="bg-[#eef0f2] pt-5 pb-2 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto lg:grid lg:grid-cols-3 lg:gap-3 lg:items-start">
-          {/* XP Progress */}
-          <div className="flex items-center gap-2 bg-white border border-slate-200 shadow-sm rounded-2xl px-4 py-2.5">
-            <span className="text-xs text-slate-500">Lv {level.level}</span>
-            <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-amber-400 transition-all" style={{ width: `${level.progress}%` }} /></div>
-            <span className="text-xs text-slate-500">Lv {level.level + 1}</span>
-            <span className="text-xs text-slate-400 ml-2">{SKILL_COUNT} skills</span>
-            <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} className="ml-2 text-xs text-slate-400 hover:text-amber-600 transition-colors" title="Join your class">
-              + Class
-            </button>
-          </div>
-
-          {/* Daily goal — warm, returns-focused encouragement */}
-          {(() => {
-            const earned = todaysXP(progress);
-            const pct = dailyGoalPercent(progress);
-            const met = dailyGoalMet(progress);
-            return (
-              <div className="mt-2 lg:mt-0 lg:col-span-2 bg-white border border-slate-200 shadow-sm rounded-2xl px-4 py-3">
-                <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-sm font-medium flex items-center gap-1.5">
-                    {met ? '☀️ Daily goal reached!' : '🎯 Today’s goal'}
-                  </span>
-                  <span className="text-xs text-slate-400">{Math.min(earned, DAILY_GOAL_XP)}/{DAILY_GOAL_XP} XP</span>
-                </div>
-                <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
-                  <div className={`h-full transition-all ${met ? 'bg-[#8ca86a]' : 'bg-amber-400'}`} style={{ width: `${pct}%` }} />
-                </div>
-                <p className="text-xs text-slate-500 mt-1.5">
-                  {met
-                    ? 'Wonderful — see you again tomorrow to keep your streak going.'
-                    : progress.currentStreak > 0
-                      ? `You’re on a ${progress.currentStreak}-day streak. A little practice keeps it alive!`
-                      : 'Every small session adds up. Let’s make today count.'}
-                </p>
-              </div>
-            );
-          })()}
-          {showJoin && (
-            <div className="mt-2 lg:col-span-3 bg-white border border-slate-200 shadow-sm rounded-2xl px-4 py-3">
-              {joinStatus === 'ok' ? (
-                <p className="text-sm text-[#5a7a3a] font-medium">✓ Joined! Your teacher can now see your progress.</p>
-              ) : (
-                <>
-                  <p className="text-xs text-slate-500 mb-2">Enter the class code from your teacher:</p>
-                  <div className="flex gap-2">
-                    <input
-                      value={joinCode}
-                      onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
-                      onKeyDown={(e) => e.key === 'Enter' && joinClass()}
-                      placeholder="ABC123"
-                      className="flex-1 bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-3 py-2 text-sm font-mono tracking-wider focus:outline-none focus:ring-2 focus:ring-amber-400"
-                    />
-                    <button onClick={joinClass} disabled={joinStatus === 'joining' || !joinCode.trim()} className="px-4 py-2 bg-amber-400 text-slate-900 hover:bg-amber-300 disabled:opacity-40 rounded-xl text-sm font-bold transition-colors">
-                      {joinStatus === 'joining' ? '…' : 'Join'}
-                    </button>
-                  </div>
-                  {joinStatus && joinStatus !== 'joining' && joinStatus !== 'ok' && (
-                    <p className="text-xs text-red-400 mt-1.5">{joinStatus}</p>
-                  )}
-                </>
-              )}
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Tabs */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 mt-4 pb-10">
-        <div className="flex gap-1 bg-white border border-slate-200 shadow-sm rounded-2xl p-1 mb-5 max-w-lg">
-          {[['overview', 'Home', 'home'], ['path', 'Path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Stats', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
-            <button key={id} onClick={() => setActiveTab(id)} className={`flex-1 flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1.5 py-2 rounded-xl text-xs sm:text-sm font-medium transition-colors ${activeTab === id ? 'bg-slate-900 text-white' : 'text-slate-500 hover:text-slate-900'}`}>
-              <Icon name={icon} className="w-4 h-4" />{label}
+        <nav className="flex flex-col gap-1">
+          {[['overview', 'Home', 'home'], ['path', 'My path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Progress', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
+            <button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-[14.5px] font-semibold transition-colors ${activeTab === id ? 'bg-slate-900 text-white' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'}`}>
+              <Icon name={icon} className="w-[19px] h-[19px]" />{label}
             </button>
           ))}
+          <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[14.5px] font-semibold text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+            <span className="w-[19px] text-center text-lg leading-none">+</span>Join a class
+          </button>
+        </nav>
+        <div className="flex-1" />
+        <div className="border-t border-slate-100 pt-3 space-y-1">
+          {curriculaOptions.length > 1 && (
+            <select value={curriculum} onChange={(e) => setProgress(p => ({ ...p, curriculum: e.target.value }))} title="Curriculum view" className="w-full text-xs bg-slate-50 text-slate-600 rounded-lg px-2.5 py-2 border border-slate-200 focus:outline-none">
+              {curriculaOptions.map(c => <option key={c.id} value={c.id}>{c.shortName}</option>)}
+            </select>
+          )}
+          <button onClick={switchSubject} className="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] text-slate-500 hover:bg-slate-50 transition-colors"><Icon name="book" className="w-4 h-4" />Switch subject</button>
+          <button onClick={resetAll} className="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] text-slate-500 hover:bg-slate-50 transition-colors"><Icon name="refresh" className="w-4 h-4" />Reset progress</button>
         </div>
+        <div className="flex items-center gap-2.5 mt-3 pt-3 border-t border-slate-100">
+          <HorebBot size={32} />
+          <div className="min-w-0"><b className="text-[13.5px] block truncate">{((activeLearner?.name || studentName) || 'You').trim().split(/\s+/)[0]}</b><span className="text-[12px] text-slate-400">{gradeLabel(estimatedGrade)} · {sub?.shortName}</span></div>
+        </div>
+      </aside>
+
+      {/* ===== MOBILE TOP BAR ===== */}
+      <div className="lg:hidden sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200 flex items-center justify-between px-4 h-14">
+        <div className="flex items-center gap-2">
+          {onBack && <button onClick={onBack} className="text-slate-400 mr-1"><Icon name="back" className="w-5 h-5" /></button>}
+          <HorebBot size={28} /><b className="text-[17px] font-extrabold tracking-tight">HOREB</b>
+        </div>
+        <div className="flex items-center gap-3.5">
+          {progress.currentStreak > 0 && <span className="flex items-center gap-1 text-amber-500 text-sm font-bold"><Icon name="flame" className="w-4 h-4" />{progress.currentStreak}d</span>}
+          <button onClick={switchSubject} className="text-slate-400" title="Switch subject"><Icon name="book" className="w-[18px] h-[18px]" /></button>
+          <button onClick={resetAll} className="text-slate-400" title="Reset progress"><Icon name="refresh" className="w-[18px] h-[18px]" /></button>
+        </div>
+      </div>
+
+      {/* ===== MAIN ===== */}
+      <main className="flex-1 min-w-0">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-28 lg:pb-14">
 
         {/* ========== OVERVIEW (HOME) TAB ========== */}
         {activeTab === 'overview' && (() => {
@@ -1620,6 +1558,36 @@ export function AIMastery({ onBack, userId, studentName }) {
             ? { label: 'Continue learning', sub: nextItem.name, icon: 'play', onClick: () => startLesson(nextItem.id) }
             : { label: 'Take the diagnostic', sub: 'Find your level and get your plan', icon: 'target', onClick: startDiagnostic };
           const confidencePct = brainProfile ? Math.round((brainProfile.confidence || 0) * 100) : null;
+          // Daily-goal ring — rendered near the top on mobile and in the right rail on desktop
+          const goalRing = (() => {
+            const earned = todaysXP(progress);
+            const pct = dailyGoalPercent(progress);
+            const met = dailyGoalMet(progress);
+            const R = 52, C = 2 * Math.PI * R;
+            const off = C * (1 - Math.min(1, pct / 100));
+            return (
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 text-center">
+                <div className="text-slate-800 font-semibold text-[15px] mb-2">{met ? '☀️ Goal reached!' : '🎯 Today’s goal'}</div>
+                <div className="relative w-[128px] h-[128px] mx-auto">
+                  <svg width="128" height="128" viewBox="0 0 128 128">
+                    <circle cx="64" cy="64" r={R} fill="none" stroke="#eef0f3" strokeWidth="11" />
+                    <circle cx="64" cy="64" r={R} fill="none" stroke={met ? '#8ca86a' : '#f2a828'} strokeWidth="11" strokeLinecap="round" strokeDasharray={C} strokeDashoffset={off} transform="rotate(-90 64 64)" style={{ transition: 'stroke-dashoffset .6s ease' }} />
+                  </svg>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <b className="text-[26px] font-extrabold tabular-nums leading-none">{Math.min(earned, DAILY_GOAL_XP)}<span className="text-slate-400 text-[15px]">/{DAILY_GOAL_XP}</span></b>
+                    <span className="text-[11px] text-slate-400 mt-0.5">XP today</span>
+                  </div>
+                </div>
+                <p className="text-[12.5px] text-slate-500 mt-2.5 leading-snug">
+                  {met
+                    ? 'Wonderful — see you tomorrow to keep the streak alive.'
+                    : progress.currentStreak > 0
+                      ? `${Math.max(0, DAILY_GOAL_XP - earned)} XP to go · ${progress.currentStreak}-day streak`
+                      : `${Math.max(0, DAILY_GOAL_XP - earned)} XP to go today.`}
+                </p>
+              </div>
+            );
+          })();
           return (
             <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:items-start">
               {/* Learner switcher — a parent runs HOREB per child. Each learner
@@ -1651,6 +1619,9 @@ export function AIMastery({ onBack, userId, studentName }) {
                 </div>
               </div>
 
+              {/* Daily-goal ring — mobile only, kept near the top so it's the first thing they see */}
+              <div className="lg:hidden">{goalRing}</div>
+
               {/* Resume card — light, content-forward (fixes the 'AI' navy hero) */}
               <button onClick={cta.onClick} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-3xl p-5 flex items-center gap-4 hover:border-slate-300 transition-colors">
                 <div className="w-[68px] h-[68px] rounded-2xl bg-[#f5f6fc] border border-[#e8e9f6] flex items-center justify-center shrink-0 text-[#6d6fcb]">
@@ -1658,7 +1629,7 @@ export function AIMastery({ onBack, userId, studentName }) {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-700">{cta.label}</div>
-                  <div className="text-[18px] font-extrabold tracking-tight text-slate-900 mt-1 leading-tight truncate">{cta.sub}</div>
+                  <div className="text-[18px] font-extrabold tracking-tight text-slate-900 mt-1 leading-tight">{cta.sub}</div>
                 </div>
                 <span className="shrink-0 inline-flex items-center gap-2 bg-amber-400 text-slate-900 font-bold rounded-2xl px-5 py-2.5">
                   <Icon name="play" className="w-4 h-4" /> Go
@@ -1725,6 +1696,38 @@ export function AIMastery({ onBack, userId, studentName }) {
 
               {/* ===== RIGHT COLUMN — the glanceable sidebar ===== */}
               <div className="space-y-4">
+              {/* Join a class — surfaced from the sidebar's "+ Join a class" */}
+              {showJoin && (
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+                  {joinStatus === 'ok' ? (
+                    <p className="text-sm text-[#5a7a3a] font-medium">✓ Joined! Your teacher can now see your progress.</p>
+                  ) : (
+                    <>
+                      <p className="text-sm font-semibold text-slate-800 mb-1">Join your class</p>
+                      <p className="text-xs text-slate-500 mb-2.5">Enter the code from your teacher:</p>
+                      <div className="flex gap-2">
+                        <input
+                          value={joinCode}
+                          onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
+                          onKeyDown={(e) => e.key === 'Enter' && joinClass()}
+                          placeholder="ABC123"
+                          className="flex-1 min-w-0 bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-3 py-2 text-sm font-mono tracking-wider focus:outline-none focus:ring-2 focus:ring-amber-400"
+                        />
+                        <button onClick={joinClass} disabled={joinStatus === 'joining' || !joinCode.trim()} className="px-4 py-2 bg-amber-400 text-slate-900 hover:bg-amber-300 disabled:opacity-40 rounded-xl text-sm font-bold transition-colors">
+                          {joinStatus === 'joining' ? '…' : 'Join'}
+                        </button>
+                      </div>
+                      {joinStatus && joinStatus !== 'joining' && joinStatus !== 'ok' && (
+                        <p className="text-xs text-red-400 mt-1.5">{joinStatus}</p>
+                      )}
+                    </>
+                  )}
+                </div>
+              )}
+
+              {/* Today's goal — ring (desktop rail; the mobile copy sits up top) */}
+              <div className="hidden lg:block">{goalRing}</div>
+
               {/* Quick stats */}
               <div className="grid grid-cols-2 gap-2.5">
                 {[
@@ -2038,7 +2041,17 @@ export function AIMastery({ onBack, userId, studentName }) {
         <div className="mt-8 text-center text-slate-600 text-xs space-y-1 pb-8">
           <p>🎯 Adaptive learning path · 🔁 Spaced repetition · 🧩 Knowledge graph</p>
         </div>
-      </div>
+        </div>
+      </main>
+
+      {/* ===== MOBILE BOTTOM NAV ===== */}
+      <nav className="lg:hidden fixed inset-x-0 bottom-0 z-40 bg-white border-t border-slate-200 flex justify-around px-1 pt-2" style={{ paddingBottom: 'calc(0.5rem + env(safe-area-inset-bottom))' }}>
+        {[['overview', 'Home', 'home'], ['path', 'Path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Progress', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
+          <button key={id} onClick={() => setActiveTab(id)} className={`flex flex-col items-center gap-0.5 flex-1 py-1 transition-colors ${activeTab === id ? 'text-slate-900' : 'text-slate-400'}`}>
+            <Icon name={icon} className="w-[21px] h-[21px]" /><span className="text-[10px] font-semibold">{label}</span>
+          </button>
+        ))}
+      </nav>
     </div>
   );
 }
