@@ -8,6 +8,7 @@ import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
 import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
+import { HorebBot } from './HorebBot.jsx';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
@@ -1143,7 +1144,7 @@ export function AIMastery({ onBack, userId, studentName }) {
           {showWorkedExample && (
             <div>
               <div className="flex items-start gap-3 mb-4">
-                <div className="w-9 h-9 rounded-full bg-amber-400 flex items-center justify-center text-lg shrink-0 shadow-sm">🦉</div>
+                <HorebBot size={40} className="shrink-0" />
                 <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">
                   Let's do one together first{learnerFirst ? `, ${learnerFirst}` : ''} — watch how it works.
                 </div>
@@ -1199,7 +1200,7 @@ export function AIMastery({ onBack, userId, studentName }) {
           {!showWorkedExample && problem && (
             <>
               <div className="flex items-start gap-3 mb-4">
-                <div className="w-9 h-9 rounded-full bg-amber-400 flex items-center justify-center text-lg shrink-0 shadow-sm">🦉</div>
+                <HorebBot size={40} className="shrink-0" />
                 <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">
                   {modalityLevel === 'concrete' ? "Let's see it a different way — use the picture to help." : 'Now you try this one. Take your time.'}
                 </div>
@@ -1486,10 +1487,10 @@ export function AIMastery({ onBack, userId, studentName }) {
   const brainStrandLevel = (name) => brainProfile?.strands?.find(b => b.strand === name) || null;
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900">
       <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
-      {/* Bridging Header — matches main app's light nav, then transitions to dark */}
-      <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
+      {/* Header */}
+      <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600"><Icon name="back" /></button>}
@@ -1521,16 +1522,16 @@ export function AIMastery({ onBack, userId, studentName }) {
         </div>
       </div>
 
-      {/* Gradient bridge from light header into dark content */}
-      <div className="bg-gradient-to-b from-slate-100 to-slate-900 pt-4 pb-2 px-4 sm:px-6">
+      {/* Summary strip */}
+      <div className="bg-[#eef0f2] pt-5 pb-2 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto lg:grid lg:grid-cols-3 lg:gap-3 lg:items-start">
           {/* XP Progress */}
-          <div className="flex items-center gap-2 bg-slate-800/80 backdrop-blur rounded-xl px-4 py-2.5">
-            <span className="text-xs text-slate-400">Lv {level.level}</span>
-            <div className="flex-1 h-1.5 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-amber-500 transition-all" style={{ width: `${level.progress}%` }} /></div>
-            <span className="text-xs text-slate-400">Lv {level.level + 1}</span>
-            <span className="text-xs text-slate-500 ml-2">{SKILL_COUNT} skills</span>
-            <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} className="ml-2 text-xs text-slate-400 hover:text-emerald-400 transition-colors" title="Join your class">
+          <div className="flex items-center gap-2 bg-white border border-slate-200 shadow-sm rounded-2xl px-4 py-2.5">
+            <span className="text-xs text-slate-500">Lv {level.level}</span>
+            <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-amber-400 transition-all" style={{ width: `${level.progress}%` }} /></div>
+            <span className="text-xs text-slate-500">Lv {level.level + 1}</span>
+            <span className="text-xs text-slate-400 ml-2">{SKILL_COUNT} skills</span>
+            <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} className="ml-2 text-xs text-slate-400 hover:text-amber-600 transition-colors" title="Join your class">
               + Class
             </button>
           </div>
@@ -1541,17 +1542,17 @@ export function AIMastery({ onBack, userId, studentName }) {
             const pct = dailyGoalPercent(progress);
             const met = dailyGoalMet(progress);
             return (
-              <div className="mt-2 lg:mt-0 lg:col-span-2 bg-slate-800/80 backdrop-blur rounded-xl px-4 py-3">
+              <div className="mt-2 lg:mt-0 lg:col-span-2 bg-white border border-slate-200 shadow-sm rounded-2xl px-4 py-3">
                 <div className="flex items-center justify-between mb-1.5">
                   <span className="text-sm font-medium flex items-center gap-1.5">
                     {met ? '☀️ Daily goal reached!' : '🎯 Today’s goal'}
                   </span>
                   <span className="text-xs text-slate-400">{Math.min(earned, DAILY_GOAL_XP)}/{DAILY_GOAL_XP} XP</span>
                 </div>
-                <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-                  <div className={`h-full transition-all ${met ? 'bg-emerald-500' : 'bg-amber-500'}`} style={{ width: `${pct}%` }} />
+                <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+                  <div className={`h-full transition-all ${met ? 'bg-[#8ca86a]' : 'bg-amber-400'}`} style={{ width: `${pct}%` }} />
                 </div>
-                <p className="text-xs text-slate-400 mt-1.5">
+                <p className="text-xs text-slate-500 mt-1.5">
                   {met
                     ? 'Wonderful — see you again tomorrow to keep your streak going.'
                     : progress.currentStreak > 0
@@ -1562,21 +1563,21 @@ export function AIMastery({ onBack, userId, studentName }) {
             );
           })()}
           {showJoin && (
-            <div className="mt-2 lg:col-span-3 bg-slate-800/80 backdrop-blur rounded-xl px-4 py-3">
+            <div className="mt-2 lg:col-span-3 bg-white border border-slate-200 shadow-sm rounded-2xl px-4 py-3">
               {joinStatus === 'ok' ? (
-                <p className="text-sm text-emerald-400">✓ Joined! Your teacher can now see your progress.</p>
+                <p className="text-sm text-[#5a7a3a] font-medium">✓ Joined! Your teacher can now see your progress.</p>
               ) : (
                 <>
-                  <p className="text-xs text-slate-400 mb-2">Enter the class code from your teacher:</p>
+                  <p className="text-xs text-slate-500 mb-2">Enter the class code from your teacher:</p>
                   <div className="flex gap-2">
                     <input
                       value={joinCode}
                       onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
                       onKeyDown={(e) => e.key === 'Enter' && joinClass()}
                       placeholder="ABC123"
-                      className="flex-1 bg-slate-900 border border-slate-600 rounded-lg px-3 py-2 text-sm font-mono tracking-wider focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="flex-1 bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-3 py-2 text-sm font-mono tracking-wider focus:outline-none focus:ring-2 focus:ring-amber-400"
                     />
-                    <button onClick={joinClass} disabled={joinStatus === 'joining' || !joinCode.trim()} className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 rounded-lg text-sm font-semibold transition-colors">
+                    <button onClick={joinClass} disabled={joinStatus === 'joining' || !joinCode.trim()} className="px-4 py-2 bg-amber-400 text-slate-900 hover:bg-amber-300 disabled:opacity-40 rounded-xl text-sm font-bold transition-colors">
                       {joinStatus === 'joining' ? '…' : 'Join'}
                     </button>
                   </div>
@@ -1592,9 +1593,9 @@ export function AIMastery({ onBack, userId, studentName }) {
 
       {/* Tabs */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 mt-4 pb-10">
-        <div className="flex gap-1 bg-slate-800 rounded-xl p-1 mb-5 max-w-lg">
+        <div className="flex gap-1 bg-white border border-slate-200 shadow-sm rounded-2xl p-1 mb-5 max-w-lg">
           {[['overview', 'Home', 'home'], ['path', 'Path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Stats', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
-            <button key={id} onClick={() => setActiveTab(id)} className={`flex-1 flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors ${activeTab === id ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-white'}`}>
+            <button key={id} onClick={() => setActiveTab(id)} className={`flex-1 flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1.5 py-2 rounded-xl text-xs sm:text-sm font-medium transition-colors ${activeTab === id ? 'bg-slate-900 text-white' : 'text-slate-500 hover:text-slate-900'}`}>
               <Icon name={icon} className="w-4 h-4" />{label}
             </button>
           ))}
@@ -1625,12 +1626,12 @@ export function AIMastery({ onBack, userId, studentName }) {
                 <div className="flex items-center gap-2 flex-wrap lg:col-span-3">
                   <span className="text-xs text-slate-400 mr-1">Practising as</span>
                   <button onClick={() => setActiveLearner(null)}
-                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${!activeLearner ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}>
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${!activeLearner ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'}`}>
                     You
                   </button>
                   {learners.map(c => (
                     <button key={c.id} onClick={() => setActiveLearner(c)}
-                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${activeLearner?.id === c.id ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}>
+                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${activeLearner?.id === c.id ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'}`}>
                       {(c.name || '').trim().split(/\s+/)[0]}
                     </button>
                   ))}
@@ -1639,37 +1640,37 @@ export function AIMastery({ onBack, userId, studentName }) {
 
               {/* ===== LEFT COLUMN — the main flow: what to do, what to fix, progress ===== */}
               <div className="lg:col-span-2 space-y-4">
-              {/* Hero — greeting, level, and the next action together */}
-              <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-600 via-emerald-700 to-slate-800 p-6 shadow-lg shadow-emerald-950/40">
-                <div className="flex items-start justify-between gap-4">
+              {/* Hero — a calm brand surface: greeting, level, the guide, next action */}
+              <div className="relative overflow-hidden rounded-3xl p-6 sm:p-7 text-white shadow-lg shadow-slate-900/10" style={{ background: 'linear-gradient(155deg,#1a2150 0%,#12183a 55%,#0d1230 100%)' }}>
+                {/* soft gold glow for depth */}
+                <div className="absolute -top-10 -right-8 w-40 h-40 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(242,168,40,0.18), transparent 70%)' }} />
+                <div className="relative flex items-start justify-between gap-4">
                   <div className="min-w-0">
-                    <p className="text-emerald-100/90 text-sm font-medium">{greeting}{firstName ? `, ${firstName}` : ''}</p>
-                    <div className="mt-1 flex items-baseline gap-2 flex-wrap">
-                      <h2 className="text-2xl font-bold leading-tight">{gradeLabel(estimatedGrade)}</h2>
-                      <span className="text-emerald-100/70 text-sm">your level</span>
+                    <p className="text-white/55 text-sm font-medium">{greeting}{firstName ? `, ${firstName}` : ''}</p>
+                    <div className="mt-1.5 flex items-baseline gap-2 flex-wrap">
+                      <h2 className="text-[30px] font-extrabold leading-none tracking-tight">{gradeLabel(estimatedGrade)}</h2>
+                      <span className="text-white/45 text-sm">your level</span>
                     </div>
                     {brainAccelerated && (
-                      <span className="inline-block mt-2 text-[11px] font-semibold text-amber-50 bg-amber-500/30 border border-amber-200/30 rounded-full px-2.5 py-1">🚀 Above grade</span>
+                      <span className="inline-block mt-2.5 text-[11px] font-semibold text-amber-200 bg-amber-400/15 border border-amber-300/25 rounded-full px-2.5 py-1">🚀 Above grade</span>
                     )}
                   </div>
-                  <div className="shrink-0 -my-1">
-                    <Lottie src={LOTTIE.academics} size={96} fallback={<div className="text-5xl">🎓</div>} />
-                  </div>
+                  <HorebBot size={76} className="shrink-0 -mt-1 drop-shadow-md" />
                 </div>
 
                 {confidencePct != null && (
-                  <div className="mt-4">
-                    <div className="flex justify-between text-xs text-emerald-100/80 mb-1"><span>Measurement confidence</span><span>{confidencePct}%</span></div>
-                    <div className="h-1.5 bg-white/20 rounded-full overflow-hidden"><div className="h-full bg-white/90 transition-all" style={{ width: `${confidencePct}%` }} /></div>
+                  <div className="relative mt-5">
+                    <div className="flex justify-between text-xs text-white/60 mb-1.5"><span>Measurement confidence</span><span>{confidencePct}%</span></div>
+                    <div className="h-1.5 bg-white/15 rounded-full overflow-hidden"><div className="h-full bg-amber-400 transition-all" style={{ width: `${confidencePct}%` }} /></div>
                   </div>
                 )}
 
-                <button onClick={cta.onClick} className="mt-5 w-full bg-white text-slate-900 rounded-2xl px-4 py-3 flex items-center justify-between font-semibold hover:bg-emerald-50 transition-colors">
+                <button onClick={cta.onClick} className="relative mt-6 w-full bg-white text-slate-900 rounded-2xl px-4 py-3.5 flex items-center justify-between font-semibold hover:bg-slate-50 transition-colors shadow-sm">
                   <span className="flex items-center gap-3 min-w-0">
-                    <span className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0"><Icon name={cta.icon} className="w-5 h-5" /></span>
+                    <span className="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0"><Icon name={cta.icon} className="w-5 h-5" /></span>
                     <span className="flex flex-col items-start min-w-0">
                       <span className="leading-tight">{cta.label}</span>
-                      <span className="text-xs font-normal text-slate-500 truncate max-w-[210px]">{cta.sub}</span>
+                      <span className="text-xs font-normal text-slate-500 truncate max-w-[220px]">{cta.sub}</span>
                     </span>
                   </span>
                   <Icon name="arrow" className="w-5 h-5 text-slate-400 shrink-0" />
@@ -1678,24 +1679,24 @@ export function AIMastery({ onBack, userId, studentName }) {
 
               {/* Gaps */}
               {gaps.length > 0 && (
-                <button onClick={() => setActiveTab('path')} className="w-full bg-slate-800 border border-slate-700 rounded-xl p-4 text-left hover:bg-slate-700/60 transition-colors">
-                  <div className="text-amber-400 font-semibold mb-1">Where we’ll start</div>
-                  <p className="text-xs text-slate-400 mb-2.5">A few foundations to build first — HOREB takes them one step at a time, so nothing piles up.</p>
-                  <div className="flex flex-wrap gap-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2 py-0.5 bg-slate-700 rounded text-xs text-slate-200">{g.name}</span>)}</div>
+                <button onClick={() => setActiveTab('path')} className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-left hover:border-slate-300 transition-colors">
+                  <div className="text-amber-600 font-semibold mb-1">Where we’ll start</div>
+                  <p className="text-xs text-slate-500 mb-2.5">A few foundations to build first — HOREB takes them one step at a time, so nothing piles up.</p>
+                  <div className="flex flex-wrap gap-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2.5 py-1 bg-slate-100 rounded-lg text-xs text-slate-700">{g.name}</span>)}</div>
                 </button>
               )}
 
               {/* Strand progress */}
-              <div className="bg-slate-800 rounded-2xl p-4">
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-slate-300 font-medium">Your progress</span>
-                  <button onClick={() => setActiveTab('stats')} className="text-xs text-emerald-400 hover:text-emerald-300">Details →</button>
+                  <span className="text-slate-800 font-semibold">Your progress</span>
+                  <button onClick={() => setActiveTab('stats')} className="text-xs text-amber-600 hover:text-amber-700">Details →</button>
                 </div>
-                <div className="space-y-2">{scopedStrandStats.map(s => (
+                <div className="space-y-2.5">{scopedStrandStats.map(s => (
                   <div key={s.name} className="flex items-center gap-3">
-                    <span className="text-sm text-slate-400 w-24 truncate" title={s.name}>{s.name}</span>
-                    <div className="flex-1 h-2.5 bg-slate-700 rounded-full overflow-hidden"><div className={`h-full transition-all ${s.assessed ? 'bg-emerald-500' : 'bg-slate-600'}`} style={{ width: `${s.percent}%` }} /></div>
-                    <span className="text-xs font-medium w-14 text-right">{s.assessed ? `${s.percent}%` : '—'}</span>
+                    <span className="text-sm text-slate-500 w-24 truncate" title={s.name}>{s.name}</span>
+                    <div className="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden"><div className={`h-full transition-all ${s.assessed ? 'bg-[#8ca86a]' : 'bg-slate-200'}`} style={{ width: `${s.percent}%` }} /></div>
+                    <span className="text-xs font-semibold w-14 text-right text-slate-700 tabular-nums">{s.assessed ? `${s.percent}%` : '—'}</span>
                   </div>
                 ))}</div>
               </div>
@@ -1711,34 +1712,34 @@ export function AIMastery({ onBack, userId, studentName }) {
                   { icon: 'flame', val: progress.currentStreak || 0, label: 'Streak', color: 'text-orange-400' },
                   { icon: 'check', val: `${scopedStats.accuracy}%`, label: 'Accuracy', color: 'text-sky-400' },
                 ].map(s => (
-                  <div key={s.label} className="bg-slate-800/80 rounded-2xl p-4 text-center border border-slate-700/50">
+                  <div key={s.label} className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
                     <Icon name={s.icon} className={`w-4 h-4 mx-auto mb-1.5 ${s.color}`} />
-                    <div className="text-xl font-bold leading-none">{s.val}</div>
+                    <div className="text-xl font-bold leading-none text-slate-900 tabular-nums">{s.val}</div>
                     <div className="text-[10px] text-slate-400 uppercase tracking-wide mt-1">{s.label}</div>
                   </div>
                 ))}
               </div>
 
               {/* Recent badges */}
-              <div className="bg-slate-800 rounded-2xl p-4">
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-slate-300 font-medium">Recent badges</span>
-                  <button onClick={() => setActiveTab('awards')} className="text-xs text-emerald-400 hover:text-emerald-300">All →</button>
+                  <span className="text-slate-800 font-semibold">Recent badges</span>
+                  <button onClick={() => setActiveTab('awards')} className="text-xs text-amber-600 hover:text-amber-700">All →</button>
                 </div>
                 {recentBadges.length > 0 ? (
                   <div className="flex gap-3">{recentBadges.map(a => (
-                    <div key={a.id} className="flex-1 bg-amber-900/15 border border-amber-700/40 rounded-xl p-3 text-center">
+                    <div key={a.id} className="flex-1 bg-amber-50 border border-amber-200 rounded-xl p-3 text-center">
                       <div className="text-2xl mb-1">{a.icon}</div>
-                      <div className="text-[11px] font-medium text-amber-100/90 leading-tight">{a.name}</div>
+                      <div className="text-[11px] font-medium text-amber-800 leading-tight">{a.name}</div>
                     </div>
                   ))}</div>
                 ) : (
-                  <p className="text-xs text-slate-500">No badges yet — finish a lesson to earn your first one.</p>
+                  <p className="text-xs text-slate-400">No badges yet — finish a lesson to earn your first one.</p>
                 )}
               </div>
 
               {/* Retake diagnostic */}
-              <button onClick={() => setView('welcome')} className="w-full text-center text-xs text-slate-500 hover:text-slate-300 py-2 transition-colors">Retake diagnostic test</button>
+              <button onClick={() => setView('welcome')} className="w-full text-center text-xs text-slate-400 hover:text-slate-700 py-2 transition-colors">Retake the check</button>
               </div>{/* ===== end RIGHT COLUMN ===== */}
             </div>
           );
