@@ -1115,117 +1115,120 @@ export function AIMastery({ onBack, userId, studentName }) {
       }
     }
 
+    const learnerFirst = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
     return (
-      <div className="min-h-screen bg-slate-900 text-white" onClick={() => activeTooltip && setActiveTooltip(null)}>
-        {/* Light bridging header */}
-        <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
-          <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
-            <button onClick={goHome} className="text-slate-400 hover:text-slate-600 flex items-center gap-1"><Icon name="back" className="w-4 h-4" /> Exit</button>
-            <div className="text-center flex-1">
-              <div className="text-xs text-slate-400">Grade {skill.grade} — {skill.strand}</div>
-              <div className="font-semibold text-slate-900 text-sm">{skill.name}</div>
+      <div className="min-h-screen bg-[#eef0f2] text-slate-900" onClick={() => activeTooltip && setActiveTooltip(null)}>
+        {/* Header */}
+        <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+            <button onClick={goHome} className="text-slate-400 hover:text-slate-700 flex items-center gap-1 text-sm"><Icon name="back" className="w-4 h-4" /> Exit</button>
+            <div className="text-center flex-1 min-w-0">
+              <div className="font-semibold text-slate-900 text-sm truncate">{skill.name}</div>
+              <div className="text-xs text-slate-400">Grade {skill.grade} · {skill.strand}</div>
             </div>
-            <div className="text-right">
-              <div className="text-emerald-600 font-bold text-sm">{session.correct}/{skill.minProblems}</div>
+            <div className="text-right shrink-0">
+              <div className="font-bold text-sm text-slate-900 tabular-nums">{session.correct}/{skill.minProblems}</div>
               <div className="text-xs text-slate-400">to master</div>
             </div>
           </div>
-          <div className="h-1 bg-slate-100"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${pct}%` }} /></div>
+          <div className="h-1 bg-slate-100"><div className="h-full bg-amber-400 transition-all" style={{ width: `${pct}%` }} /></div>
         </div>
-        <div className="bg-gradient-to-b from-slate-100 to-slate-900 h-6" />
-        <div className="px-4">
+
+        <div className="px-4 sm:px-6 pt-6 pb-20">
         <div className="max-w-2xl mx-auto">
 
-          {session.streak >= 3 && <div className="bg-amber-900/30 border border-amber-600 rounded-lg p-2 mb-4 text-center text-amber-400 text-sm">🔥 {session.streak} streak!</div>}
+          {session.streak >= 3 && <div className="mb-4 text-center text-amber-600 text-sm font-semibold">🔥 {session.streak} in a row — you're on fire!</div>}
 
-          {/* Worked Example */}
+          {/* Worked Example — the tutor walks the child through the full working */}
           {showWorkedExample && (
-            <div className="bg-slate-800 rounded-2xl p-6 mb-4">
-              <div className="flex items-center gap-2 text-emerald-400 mb-4">
-                <Icon name="book" className="w-5 h-5" />
-                <span className="font-semibold">Worked Example</span>
+            <div>
+              <div className="flex items-start gap-3 mb-4">
+                <div className="w-9 h-9 rounded-full bg-amber-400 flex items-center justify-center text-lg shrink-0 shadow-sm">🦉</div>
+                <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">
+                  Let's do one together first{learnerFirst ? `, ${learnerFirst}` : ''} — watch how it works.
+                </div>
               </div>
+
               {(() => {
                 const we = generateWorkedExample(activeSkill);
-                if (!we) return <p className="text-slate-400">No worked example available. Let's practice!</p>;
+                if (!we) return null;
                 return (
-                  <div>
-                    {/* Concept Intro — explains key terms before the example */}
+                  <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6">
                     <ConceptIntro definitions={we.definitions} />
 
-                    <div className="bg-slate-700/50 rounded-lg p-3 mb-4 font-medium">
+                    <div className="text-[22px] font-bold text-slate-900 mb-5 leading-snug">
                       <TermTooltip text={we.problem} definitions={we.definitions} />
                     </div>
-                    <div className="space-y-2 mb-4">
+                    <div className="space-y-3">
                       {we.steps.map((step, i) => (
                         <div key={i}>
-                          <div className="flex gap-3 text-sm">
-                            <span className="text-emerald-400 font-bold min-w-[24px]">{i + 1}.</span>
-                            <span className="text-slate-300 flex-1">
+                          <div className="flex gap-3 items-start">
+                            <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-700 text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 tabular-nums">{i + 1}</span>
+                            <span className="text-[15px] text-slate-700 flex-1 leading-relaxed">
                               <TermTooltip text={step} definitions={we.definitions} />
                             </span>
                             {we.whySteps && we.whySteps[i] && (
                               <button
                                 onClick={() => setExpandedWhySteps(prev => ({ ...prev, [i]: !prev[i] }))}
-                                className="text-xs text-amber-400 hover:text-amber-300 whitespace-nowrap transition-colors"
+                                className="text-xs text-amber-600 hover:text-amber-700 whitespace-nowrap font-medium"
                               >
                                 {expandedWhySteps[i] ? 'Hide' : 'Why?'}
                               </button>
                             )}
                           </div>
                           {expandedWhySteps[i] && we.whySteps && we.whySteps[i] && (
-                            <div className="ml-9 mt-1 mb-2 p-2 bg-amber-900/20 border border-amber-700/30 rounded-lg text-xs text-amber-200 leading-relaxed">
+                            <div className="ml-9 mt-1.5 p-2.5 bg-amber-50 border border-amber-200 rounded-xl text-[13px] text-amber-800 leading-relaxed">
                               {we.whySteps[i]}
                             </div>
                           )}
                         </div>
                       ))}
                     </div>
-                    <div className="bg-emerald-900/30 border border-emerald-700 rounded-lg p-3">
-                      <span className="text-emerald-400 font-semibold">Answer: </span>
-                      <span className="font-mono">{we.solution}</span>
+                    <div className="mt-5 flex items-center gap-2 bg-[#eef4e7] border border-[#cfe0bd] rounded-2xl px-4 py-3">
+                      <span className="text-[#5a7a3a] font-semibold text-sm">Answer</span>
+                      <span className="font-bold text-slate-900 ml-auto text-lg">{we.solution}</span>
                     </div>
                   </div>
                 );
               })()}
-              <button onClick={startPractice} className="w-full mt-4 bg-emerald-600 hover:bg-emerald-500 rounded-xl py-3 font-semibold transition-colors">Got it — Let me try!</button>
+              <button onClick={startPractice} className="w-full mt-4 bg-amber-400 text-slate-900 hover:bg-amber-300 rounded-2xl py-3.5 font-bold transition-colors">I'm ready — let me try</button>
             </div>
           )}
 
           {/* Practice Problem */}
           {!showWorkedExample && problem && (
             <>
-              {modalityLevel === 'concrete' && (
-                <div className="bg-indigo-900/30 border border-indigo-600/40 rounded-xl p-3 mb-3 text-sm text-indigo-200 flex items-center gap-2">
-                  <span>💡</span> Let's see this a different way — try it with the picture.
+              <div className="flex items-start gap-3 mb-4">
+                <div className="w-9 h-9 rounded-full bg-amber-400 flex items-center justify-center text-lg shrink-0 shadow-sm">🦉</div>
+                <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">
+                  {modalityLevel === 'concrete' ? "Let's see it a different way — use the picture to help." : 'Now you try this one. Take your time.'}
                 </div>
-              )}
-              <div className="bg-slate-800 rounded-2xl p-6 mb-4">
-                <div className="text-lg mb-6 leading-relaxed">
+              </div>
+              <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
+                <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">
                   <TermTooltip text={problem.question} definitions={problem.workedExample?.definitions || problem.definitions} />
                 </div>
 
-                {/* Completion scaffold — this problem's own solution, started
-                    for the learner, faded from the end (Renkl backward fading).
-                    The learner works the hidden tail and answers as usual. */}
+                {/* Completion scaffold — this problem's own solution, started for
+                    the learner and faded from the end (Renkl backward fading). */}
                 {plan && (
-                  <div className="mb-5 rounded-xl border border-emerald-700/40 bg-emerald-900/15 p-4">
+                  <div className="mb-5 rounded-2xl border border-[#cfe0bd] bg-[#f2f6ec] p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-emerald-400 text-sm font-semibold">Solution started for you — finish it</span>
-                      {supportChip && <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-800/60 text-emerald-200">{supportChip}</span>}
+                      <span className="text-[#5a7a3a] text-sm font-semibold">Solution started for you — finish the last step</span>
+                      {supportChip && <span className="text-[11px] px-2 py-0.5 rounded-full bg-[#e2edd3] text-[#5a7a3a]">{supportChip}</span>}
                     </div>
                     <div className="space-y-1.5">
                       {plan.shown.map((s, i) => (
-                        <div key={i} className="flex gap-2 text-sm text-slate-300">
-                          <span className="text-emerald-400 font-bold min-w-[20px]">{i + 1}.</span>
+                        <div key={i} className="flex gap-2 text-sm text-slate-700">
+                          <span className="text-[#5a7a3a] font-bold min-w-[20px] tabular-nums">{i + 1}.</span>
                           <span>{s}</span>
                         </div>
                       ))}
                       {Array.from({ length: plan.hiddenCount }).map((_, i) => (
                         <div key={`h${i}`} className="flex gap-2 text-sm items-center">
-                          <span className="text-slate-500 font-bold min-w-[20px]">{plan.shown.length + i + 1}.</span>
-                          <span className="flex-1 border-b border-dashed border-slate-600 text-slate-500 text-xs pb-0.5">
-                            {i === 0 ? 'your turn — work this step' : '…'}
+                          <span className="text-slate-400 font-bold min-w-[20px] tabular-nums">{plan.shown.length + i + 1}.</span>
+                          <span className="flex-1 border-b border-dashed border-slate-300 text-slate-400 text-xs pb-0.5">
+                            {i === 0 ? 'your turn — type the answer below' : '…'}
                           </span>
                         </div>
                       ))}
@@ -1233,68 +1236,57 @@ export function AIMastery({ onBack, userId, studentName }) {
                   </div>
                 )}
 
-                {/* Legacy skills without per-problem steps: at high support,
-                    pair the problem with a parallel solved example instead. */}
                 {!plan && legacyExample && (
-                  <details className="mb-5 rounded-xl border border-slate-600/60 bg-slate-700/30 p-3 text-sm open:pb-4">
-                    <summary className="cursor-pointer text-emerald-400 font-semibold select-none">
+                  <details className="mb-5 rounded-2xl border border-slate-200 bg-slate-50 p-3 text-sm open:pb-4">
+                    <summary className="cursor-pointer text-amber-700 font-semibold select-none">
                       See a similar solved example
                     </summary>
-                    <div className="mt-3 text-slate-300 font-medium">{legacyExample.problem}</div>
+                    <div className="mt-3 text-slate-700 font-medium">{legacyExample.problem}</div>
                     <div className="mt-2 space-y-1">
                       {(legacyExample.steps || []).map((s, i) => (
-                        <div key={i} className="flex gap-2 text-slate-300">
-                          <span className="text-emerald-400 font-bold min-w-[20px]">{i + 1}.</span>
+                        <div key={i} className="flex gap-2 text-slate-700">
+                          <span className="text-amber-600 font-bold min-w-[20px] tabular-nums">{i + 1}.</span>
                           <span>{s}</span>
                         </div>
                       ))}
                     </div>
-                    <div className="mt-2 text-emerald-300"><span className="font-semibold">Answer:</span> <span className="font-mono">{legacyExample.solution}</span></div>
+                    <div className="mt-2 text-[#5a7a3a]"><span className="font-semibold">Answer:</span> <span className="font-mono">{legacyExample.solution}</span></div>
                   </details>
                 )}
 
                 {/* Visual ANSWER widget (the problem is answered by interaction) */}
                 {problem.visual ? (
-                  <InteractiveVisual
-                    visualType={problem.visual.type}
-                    visualData={problem.visual.data}
-                    onAnswer={setVisualAnswer}
-                    disabled={!!feedback}
-                  />
+                  <InteractiveVisual visualType={problem.visual.type} visualData={problem.visual.data} onAnswer={setVisualAnswer} disabled={!!feedback} />
                 ) : (
-                  /* Otherwise, an exploratory manipulative if the skill has one */
                   activeSkill && SKILL_VISUALS[activeSkill] && (
-                    <InteractiveVisual
-                      visualType={SKILL_VISUALS[activeSkill].visualType}
-                      visualData={SKILL_VISUALS[activeSkill].visualData}
-                      onAnswer={setVisualAnswer}
-                      disabled={!!feedback}
-                    />
+                    <InteractiveVisual visualType={SKILL_VISUALS[activeSkill].visualType} visualData={SKILL_VISUALS[activeSkill].visualData} onAnswer={setVisualAnswer} disabled={!!feedback} />
                   )
                 )}
-                <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50" autoFocus placeholder={problem.visual ? 'Click the grid above, or type the coordinate…' : 'Your answer...'} />
+                <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Click the grid above, or type the coordinate…' : 'Type your answer…'} />
 
-                {/* Layered hint display — shown on wrong attempts before final reveal */}
+                {/* Gentle 'I'm not sure' — an out that isn't guessing (surfaces a hint) */}
+                {!feedback && hintLevel < 1 && (
+                  <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm not sure — show me a hint</button>
+                )}
+
                 {hintLevel >= 1 && !feedback && (
-                  <div className="mt-4 p-3 bg-amber-900/30 border border-amber-700/40 rounded-lg text-amber-200 text-sm">
-                    <span className="font-semibold text-amber-400">Hint:</span> {problem.hint || 'Double-check your calculation — look at each step carefully.'}
+                  <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-2xl text-amber-800 text-sm">
+                    <span className="font-semibold text-amber-700">Hint:</span> {problem.hint || 'Double-check your calculation — look at each step carefully.'}
+                    {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="ml-2 text-amber-700 underline hover:text-amber-800">still stuck?</button>}
                   </div>
                 )}
                 {hintLevel >= 2 && !feedback && !plan && (() => {
-                  // Prefer THIS problem's own solution steps; fall back to a
-                  // worked example for legacy skills without structured steps.
-                  // (Skipped when the completion scaffold already shows steps.)
                   const ownSteps = problem.solutionSteps;
                   const we = ownSteps ? null : generateWorkedExample(activeSkill);
                   const steps = ownSteps || we?.steps;
                   if (!steps) return null;
                   return (
-                    <div className="mt-3 p-3 bg-blue-900/20 border border-blue-700/30 rounded-lg text-sm">
-                      <span className="font-semibold text-blue-400">Here are the first steps to guide you:</span>
+                    <div className="mt-3 p-3 bg-[#eef1f8] border border-[#d3daf0] rounded-2xl text-sm">
+                      <span className="font-semibold text-[#6d6fcb]">Here are the first steps to guide you:</span>
                       <div className="mt-2 space-y-1">
                         {steps.slice(0, 2).map((step, i) => (
-                          <div key={i} className="flex gap-2 text-slate-300">
-                            <span className="text-blue-400 font-bold">{i + 1}.</span>
+                          <div key={i} className="flex gap-2 text-slate-700">
+                            <span className="text-[#6d6fcb] font-bold tabular-nums">{i + 1}.</span>
                             <TermTooltip text={step} definitions={we?.definitions} />
                           </div>
                         ))}
@@ -1306,8 +1298,8 @@ export function AIMastery({ onBack, userId, studentName }) {
 
               {/* Correct answer feedback */}
               {feedback === 'correct' && (
-                <div className="rounded-xl p-4 mb-4 bg-emerald-900/50 border border-emerald-500">
-                  <span className="text-emerald-400 font-semibold">✓ Correct!</span>
+                <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]">
+                  <span className="text-[#4f7233] font-bold">✓ Nice{learnerFirst ? `, ${learnerFirst}` : ''} — that's right!</span>
                   {attemptCount > 1 && <span className="text-slate-400 text-sm ml-2">(attempt {attemptCount})</span>}
                 </div>
               )}
@@ -1316,21 +1308,21 @@ export function AIMastery({ onBack, userId, studentName }) {
                   problem, the learner articulates WHY the steps they supplied
                   work, then checks their thinking against the actual steps. */}
               {answeredPlan && (
-                <div className="rounded-xl p-4 mb-4 bg-indigo-900/30 border border-indigo-600/40">
-                  <div className="text-indigo-200 text-sm font-semibold mb-1">Teach it back</div>
-                  <p className="text-sm text-slate-300 mb-2">
+                <div className="rounded-2xl p-4 mb-4 bg-[#eef1f8] border border-[#d3daf0]">
+                  <div className="text-[#5658b8] text-sm font-bold mb-1">Teach it back</div>
+                  <p className="text-sm text-slate-600 mb-2">
                     You worked the last {answeredPlan.hiddenCount === 1 ? 'step' : `${answeredPlan.hiddenCount} steps`} yourself.
-                    Say <em>why</em> {answeredPlan.hiddenCount === 1 ? 'it works' : 'they work'} — out loud or in your head — then check your thinking:
+                    Say <em>why</em> {answeredPlan.hiddenCount === 1 ? 'it works' : 'they work'} — out loud or in your head — then check:
                   </p>
                   {!selfExplainOpen ? (
-                    <button onClick={() => setSelfExplainOpen(true)} className="text-sm text-indigo-300 hover:text-indigo-200 font-semibold transition-colors">
+                    <button onClick={() => setSelfExplainOpen(true)} className="text-sm text-[#6d6fcb] hover:text-[#5658b8] font-semibold transition-colors">
                       Show the thinking
                     </button>
                   ) : (
                     <div className="space-y-1">
                       {answeredPlan.hidden.map((s, i) => (
-                        <div key={i} className="flex gap-2 text-sm text-slate-300">
-                          <span className="text-indigo-400 font-bold min-w-[20px]">{answeredPlan.shown.length + i + 1}.</span>
+                        <div key={i} className="flex gap-2 text-sm text-slate-700">
+                          <span className="text-[#6d6fcb] font-bold min-w-[20px] tabular-nums">{answeredPlan.shown.length + i + 1}.</span>
                           <span>{s}</span>
                         </div>
                       ))}
@@ -1339,25 +1331,23 @@ export function AIMastery({ onBack, userId, studentName }) {
                 </div>
               )}
 
-              {/* Final incorrect feedback — only shown after 3 failed attempts */}
+              {/* Missed it — show the answer AND the full working, warmly */}
               {feedback === 'incorrect' && (
-                <div className="rounded-xl p-4 mb-4 bg-red-900/50 border border-red-500">
-                  <span className="text-red-400 font-semibold">Answer: <span className="font-mono">{problem.answer}</span></span>
+                <div className="rounded-2xl p-4 mb-4 bg-[#fdf2ef] border border-[#f2cdc2]">
+                  <span className="text-[#c0663f] font-bold">Not quite — the answer is <span className="font-mono text-slate-900">{problem.answer}</span></span>
                   {(() => {
-                    // Show how THIS problem is solved when we have its steps;
-                    // otherwise fall back to a worked example (legacy skills).
                     const ownSteps = problem.solutionSteps;
                     const we = ownSteps ? null : generateWorkedExample(activeSkill);
                     const steps = ownSteps || we?.steps;
                     if (!steps) return null;
                     return (
-                      <div className="mt-3 pt-3 border-t border-red-700/30">
-                        <span className="text-sm text-slate-400 mb-2 block">Here's the full worked solution:</span>
-                        <div className="space-y-1">
+                      <div className="mt-3 pt-3 border-t border-[#f2cdc2]">
+                        <span className="text-sm text-slate-500 mb-2 block">Here's the full working, step by step:</span>
+                        <div className="space-y-1.5">
                           {steps.map((step, i) => (
                             <div key={i} className="flex gap-2 text-sm">
-                              <span className="text-red-400/70 font-bold">{i + 1}.</span>
-                              <span className="text-slate-300">{step}</span>
+                              <span className="text-[#c0663f] font-bold tabular-nums">{i + 1}.</span>
+                              <span className="text-slate-700">{step}</span>
                             </div>
                           ))}
                         </div>
@@ -1367,20 +1357,20 @@ export function AIMastery({ onBack, userId, studentName }) {
                 </div>
               )}
 
-              {/* Remediation alert */}
-              {remediationSkills && <div className="bg-red-900/20 border border-red-700 rounded-xl p-4 mb-4">
-                <div className="flex items-center gap-2 text-red-400 font-semibold mb-2"><Icon name="alert" className="w-5 h-5" /> Let's strengthen your foundations</div>
-                <p className="text-sm text-slate-300 mb-3">You might need to practice these prerequisite skills first:</p>
+              {/* Remediation — a gentle nudge to shore up a foundation */}
+              {remediationSkills && <div className="bg-[#f2f6ec] border border-[#cfe0bd] rounded-2xl p-4 mb-4">
+                <div className="flex items-center gap-2 text-[#5a7a3a] font-semibold mb-2"><Icon name="target" className="w-5 h-5" /> Let's shore up a foundation first</div>
+                <p className="text-sm text-slate-600 mb-3">A quick warm-up on these will make this one click:</p>
                 <div className="space-y-2">{remediationSkills.map(rs => (
-                  <button key={rs.id} onClick={() => startLesson(rs.id)} className="w-full text-left p-3 bg-red-900/30 rounded-lg hover:bg-red-900/40 transition-colors">
-                    <div className="font-medium text-red-300">{rs.name}</div>
-                    <div className="text-xs text-slate-400">{rs.reason}</div>
+                  <button key={rs.id} onClick={() => startLesson(rs.id)} className="w-full text-left p-3 bg-white border border-[#cfe0bd] rounded-xl hover:bg-[#eef4e7] transition-colors">
+                    <div className="font-medium text-slate-900">{rs.name}</div>
+                    <div className="text-xs text-slate-500">{rs.reason}</div>
                   </button>
                 ))}</div>
               </div>}
 
-              {!feedback ? <button onClick={checkAnswer} disabled={!answer.trim() && !(problem.visual && visualAnswer != null)} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">{attemptCount > 0 ? 'Try Again' : 'Check Answer'}</button>
-                : <button onClick={nextProblem} className="w-full bg-blue-600 hover:bg-blue-500 rounded-xl py-4 font-semibold flex items-center justify-center gap-2 transition-colors">Next <Icon name="arrow" className="w-5 h-5" /></button>}
+              {!feedback ? <button onClick={checkAnswer} disabled={!answer.trim() && !(problem.visual && visualAnswer != null)} className="w-full bg-amber-400 text-slate-900 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 rounded-2xl py-4 font-bold transition-colors">{attemptCount > 0 ? 'Try Again' : 'Check Answer'}</button>
+                : <button onClick={nextProblem} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-2xl py-4 font-bold flex items-center justify-center gap-2 transition-colors">Next <Icon name="arrow" className="w-5 h-5" /></button>}
             </>
           )}
         </div>
