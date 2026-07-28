@@ -1118,7 +1118,7 @@ export function AIMastery({ onBack, userId, studentName }) {
         problem,
         skillName: skill.name,
         cbcLabel: cbc ? `CBC · Grade ${cbc.grade} · ${cbc.strand} — ${cbc.substrand}` : `Grade ${skill.grade} · ${skill.strand}`,
-        progressLabel: `${session.correct} of ${skill.minProblems}`,
+        progressLabel: `${Math.min(session.correct, skill.minProblems)} of ${skill.minProblems}`,
         studentName: ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0],
         onResult: handleYoungResult,
         onExit: goHome,
@@ -1144,7 +1144,7 @@ export function AIMastery({ onBack, userId, studentName }) {
               <div className="text-xs text-slate-400">Grade {skill.grade} · {skill.strand}</div>
             </div>
             <div className="text-right shrink-0">
-              <div className="font-bold text-sm text-slate-900 tabular-nums">{session.correct}/{skill.minProblems}</div>
+              <div className="font-bold text-sm text-slate-900 tabular-nums">{Math.min(session.correct, skill.minProblems)}/{skill.minProblems}</div>
               <div className="text-xs text-slate-400">to master</div>
             </div>
           </div>

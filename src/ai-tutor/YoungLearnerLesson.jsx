@@ -40,10 +40,13 @@ export function planYoungLesson(problem) {
   const m = /^(\d+)\s*\+\s*(\d+)\s*=\s*\?$/.exec(problem.question?.trim() || '');
   const counters = m && +m[1] <= 9 && +m[2] <= 9 ? [+m[1], +m[2]] : null;
 
-  // Choices: three big buttons. Numeric answers get near-miss distractors
-  // (plus the problem's own misconception value when it has one).
+  // Choices: three big buttons. A problem can name its own choices (e.g. a
+  // "which is bigger, a or b" compares the two actual numbers, not near-misses);
+  // otherwise numeric answers get near-miss distractors plus any misconception value.
   let choices = null;
-  if (Number.isFinite(v) && Number.isInteger(v)) {
+  if (Array.isArray(problem.choices) && problem.choices.length >= 2) {
+    choices = shuffle(uniq(problem.choices.map(c => String(c))));
+  } else if (Number.isFinite(v) && Number.isInteger(v)) {
     const mis = parseFloat(problem.misconceptions?.[0]?.when);
     const pool = uniq([v, Number.isFinite(mis) && mis >= 0 && mis !== v ? mis : v + 1, v > 0 ? v - 1 : v + 2, v + 1])
       .filter(n => n >= 0).slice(0, 3);

@@ -207,6 +207,39 @@ from the real problem — only the *steps* are wrong-sourced.
 
 ---
 
+## F14 · 🔴 FIXED — comparison question had nonsensical options
+
+**Found (live, whitestarhighrise):** *"Which number is bigger: 99 or 47?"* → options **99 / 100 / 98**.
+The distractors were answer±1, so 47 wasn't even offered and "pick the biggest" always wins.
+
+**Cause:** young-mode (`YoungLearnerLesson.planYoungLesson`) builds near-miss distractors for
+every integer answer; the compare generator (`content/lowerPrimary.js`) left `misconceptions` empty.
+
+**Fix:** the compare problem now names its own `choices: [a, b]`, and young-mode honours an
+explicit `choices` list. **Verified live:** "Which is bigger 56 or 35?" now offers **35 / 56**.
+
+## F15 · 🔴 FIXED — "8 of 6" counter overflow
+
+**Found:** the young-lesson header read **"8 of 6"** (and standard mode could show "8/5") once
+mastery needed more correct answers than `minProblems`.
+
+**Fix:** cap the numerator (`Math.min(correct, minProblems)`) in both the young and standard
+headers. Verified: counter now reads "1 of 6" and won't exceed the target.
+
+## F16 · 🟠 Young (toddler) UI shown to an older student on a foundational skill
+
+**Found:** an older student practising the Grade-1 "Counting & Numbers (1–50)" skill gets the
+**young-mode** experience — duck mascot, "Listen, then choose your answer", read-aloud. HOREB's
+whole premise is that an older child may have a grade-1 *gap*; but the *presentation* is keyed to
+the skill's grade (`skill.grade <= 2`), not the child's age, so a 10–12-year-old rebuilding a
+foundation gets a toddler interface. Feels condescending. **Design rework — not yet done.**
+
+## F17 · 🟠 Skills / Progress / Awards tabs are off-theme (dark cards on the light canvas)
+
+**Found:** the **Skills** tab renders **dark-navy cards** on the light off-white ground — a jarring
+clash with the reskinned sidebar/home. These tabs predate the light reskin. Progress/Awards likely
+the same. **Design rework — not yet done.**
+
 ## Coverage so far
 Multiplication · Addition · Subtraction · Fractions — worked example, practice, wrong-answer
 arc (×3 attempts), proactive hint, correct-answer, scaffold escalation, input edge cases,

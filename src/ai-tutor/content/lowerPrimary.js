@@ -133,6 +133,7 @@ function buildCounting({ max }) {
       return {
         type: 'count-compare', instruction: 'Compare the numbers.',
         question: `Which number is bigger: ${a} or ${b}?`, answer: `${value}`, accepts: accepts(`${value}`),
+        choices: [a, b], // the two numbers being compared — not near-misses of the answer
         hints: hintLadder('The number that comes later when counting is bigger.', `Count up — which of ${a} and ${b} do you reach last?`),
         solution: { steps: [{ text: 'The later number when counting up is the bigger one.', expr: `${value}` }], answer: `${value}` },
         misconceptions: [], verify: { kind: 'fraction', value },
