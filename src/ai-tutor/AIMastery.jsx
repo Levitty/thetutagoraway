@@ -1112,7 +1112,12 @@ export function AIMastery({ onBack, userId, studentName }) {
     // Grades 1–2 get the young-learner experience: read-aloud, tappable
     // counters, count-together scaffolding. Falls back to the standard UI for
     // problem shapes the young plan can't express.
-    if ((skill.grade || 99) <= 4 && problem) {
+    // Age-appropriate presentation is gated on WHO is sitting there (their declared
+    // grade), not only the skill's grade. An older student rebuilding a Grade-1
+    // foundation gets the normal UI — not a toddler duck; genuine lower-primary
+    // learners (declared grade ≤ 3) keep the read-aloud / tap-to-answer experience.
+    const learnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    if ((skill.grade || 99) <= 4 && problem && learnerGrade <= 3) {
       const cbc = skill.curricula?.cbc;
       const shared = {
         problem,
@@ -1895,34 +1900,34 @@ export function AIMastery({ onBack, userId, studentName }) {
 
               return (
                 <div key={grade}>
-                  <button onClick={() => setExpanded(isExp ? null : grade)} className="w-full flex items-center justify-between bg-slate-800 rounded-xl p-4">
+                  <button onClick={() => setExpanded(isExp ? null : grade)} className="w-full flex items-center justify-between bg-white border border-slate-200 shadow-sm rounded-2xl p-4 hover:border-slate-300 transition-colors">
                     <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg ${grade <= 6 ? 'bg-green-600' : grade <= 8 ? 'bg-blue-600' : grade <= 10 ? 'bg-purple-600' : 'bg-red-600'}`}>{grade}</div>
+                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg text-white ${grade <= 6 ? 'bg-[#8ca86a]' : grade <= 8 ? 'bg-[#6d6fcb]' : grade <= 10 ? 'bg-purple-500' : 'bg-rose-500'}`}>{grade}</div>
                       <div className="text-left">
-                        <div className="font-semibold">{gradeLabel(grade)}</div>
-                        <div className="text-sm text-slate-400">{mastered}/{gradeSkills.length} mastered</div>
+                        <div className="font-semibold text-slate-900">{gradeLabel(grade)}</div>
+                        <div className="text-sm text-slate-500">{mastered}/{gradeSkills.length} mastered</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-16 h-2 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-500" style={{ width: `${(mastered / gradeSkills.length) * 100}%` }} /></div>
-                      <Icon name={isExp ? 'up' : 'down'} className="w-5 h-5" />
+                      <div className="w-16 h-2 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-[#8ca86a]" style={{ width: `${(mastered / gradeSkills.length) * 100}%` }} /></div>
+                      <Icon name={isExp ? 'up' : 'down'} className="w-5 h-5 text-slate-400" />
                     </div>
                   </button>
                   {isExp && (
                     <div className="mt-2 space-y-3 pl-2">
                       {Object.entries(byStrand).map(([strand, skills]) => (
                         <div key={strand}>
-                          <div className="text-xs text-slate-500 uppercase tracking-wider mb-1 px-2">{strand}</div>
+                          <div className="text-xs text-slate-400 uppercase tracking-wider mb-1 px-2">{strand}</div>
                           <div className="space-y-1">{skills.map(skill => {
                             const status = getStatus(skill.id, progress, ctx);
                             const sp = progress.skills[skill.id];
                             return (
-                              <button key={skill.id} onClick={() => status !== 'locked' && startLesson(skill.id)} disabled={status === 'locked'} className={`w-full flex items-center gap-3 p-3 rounded-xl transition-all ${status === 'locked' ? 'bg-slate-800/50 opacity-50 cursor-not-allowed' : status === 'mastered' ? 'bg-emerald-900/20 border border-emerald-800' : status === 'in_progress' ? 'bg-blue-900/20 border border-blue-800' : 'bg-slate-800 hover:bg-slate-700'}`}>
-                                <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${status === 'locked' ? 'bg-slate-700' : status === 'mastered' ? 'bg-emerald-600' : status === 'in_progress' ? 'bg-blue-600' : 'bg-slate-600'}`}>
+                              <button key={skill.id} onClick={() => status !== 'locked' && startLesson(skill.id)} disabled={status === 'locked'} className={`w-full flex items-center gap-3 p-3 rounded-xl transition-colors ${status === 'locked' ? 'bg-slate-50 border border-slate-100 opacity-70 cursor-not-allowed' : status === 'mastered' ? 'bg-[#eef4e7] border border-[#cfe0bd] hover:bg-[#e6efd9]' : status === 'in_progress' ? 'bg-[#f5f6fc] border border-[#e8e9f6] hover:bg-[#eef0fb]' : 'bg-white border border-slate-200 hover:border-slate-300'}`}>
+                                <div className={`w-7 h-7 rounded-lg flex items-center justify-center text-white shrink-0 ${status === 'locked' ? 'bg-slate-300' : status === 'mastered' ? 'bg-[#8ca86a]' : status === 'in_progress' ? 'bg-[#6d6fcb]' : 'bg-slate-300'}`}>
                                   {status === 'locked' ? <Icon name="lock" className="w-3.5 h-3.5" /> : status === 'mastered' ? <Icon name="check" className="w-3.5 h-3.5" /> : status === 'in_progress' ? <Icon name="trend" className="w-3.5 h-3.5" /> : <Icon name="play" className="w-3.5 h-3.5" />}
                                 </div>
                                 <div className="flex-1 text-left">
-                                  <div className="text-sm font-medium flex items-center gap-2">{skill.name}{skill.critical && <Icon name="zap" className="w-3.5 h-3.5 text-amber-400" />}{isEnrichment(skill, curriculum) && <span className="text-[10px] uppercase tracking-wide text-amber-300/80 bg-amber-900/30 rounded px-1.5 py-0.5">Enrichment</span>}</div>
+                                  <div className="text-sm font-medium text-slate-900 flex items-center gap-2">{skill.name}{skill.critical && <Icon name="zap" className="w-3.5 h-3.5 text-amber-500" />}{isEnrichment(skill, curriculum) && <span className="text-[10px] uppercase tracking-wide text-amber-700 bg-amber-100 rounded px-1.5 py-0.5">Enrichment</span>}</div>
                                   {sp?.attempts > 0 && <div className="text-xs text-slate-400">{sp.correct}/{sp.attempts} ({Math.round((sp.correct / sp.attempts) * 100)}%)</div>}
                                 </div>
                               </button>
