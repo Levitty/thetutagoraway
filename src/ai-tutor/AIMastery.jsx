@@ -769,7 +769,14 @@ export function AIMastery({ onBack, userId, studentName }) {
     // at light support (ORIENT or SOLO) — assisted answers are practice, not
     // proof (assistance dilution).
     const lightSupport = !scaffoldableRef.current || answeredAt >= SUPPORT.ORIENT;
-    const shouldMaster = !isPlaceholder && correct && lightSupport && newAttempts >= skill.minProblems && accuracy >= skill.masteryThreshold;
+    // Test-out: a skill 2+ grades below the learner's own grade masters on a single
+    // clean first-attempt correct — a capable child proves a foundation once and
+    // moves on, instead of grinding six trivial reps. A wrong first try drops them
+    // straight back into normal practice (they clearly need it after all).
+    const tgLearnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    const testOutNow = Number.isFinite(skill?.grade) && (tgLearnerGrade - skill.grade) >= 2 && newAttempts === 1;
+    const shouldMaster = !isPlaceholder && correct && accuracy >= skill.masteryThreshold
+      && (testOutNow || (lightSupport && newAttempts >= skill.minProblems));
 
     // Apply implicit repetitions to prerequisites (skip for placeholder stand-ins)
     let updatedSkills = isPlaceholder ? { ...progress.skills } : applyImplicitCredits(progress, activeSkill, correct, ctx);
@@ -1097,7 +1104,13 @@ export function AIMastery({ onBack, userId, studentName }) {
   if (view === 'lesson' && activeSkill) {
     const skill = SKILLS[activeSkill];
     const sp = progress.skills[activeSkill] || { attempts: 0, correct: 0, mastered: false };
-    const pct = Math.min(100, (session.correct / skill.minProblems) * 100);
+    const learnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    // Test-out: a skill well below the learner's own grade only needs ONE clean
+    // correct answer to master — a capable child shouldn't grind six trivial reps
+    // just because the diagnostic never confirmed a foundation it couldn't reach.
+    const testOutSkill = Number.isFinite(skill?.grade) && (learnerGrade - skill.grade) >= 2;
+    const masterTarget = testOutSkill ? 1 : skill.minProblems;
+    const pct = Math.min(100, (session.correct / masterTarget) * 100);
 
     // Faded worked examples: this problem's completion scaffold at the current
     // support level (structured content), or a parallel solved example (legacy
@@ -1116,14 +1129,13 @@ export function AIMastery({ onBack, userId, studentName }) {
     // grade), not only the skill's grade. An older student rebuilding a Grade-1
     // foundation gets the normal UI — not a toddler duck; genuine lower-primary
     // learners (declared grade ≤ 3) keep the read-aloud / tap-to-answer experience.
-    const learnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
     if ((skill.grade || 99) <= 4 && problem && learnerGrade <= 3) {
       const cbc = skill.curricula?.cbc;
       const shared = {
         problem,
         skillName: skill.name,
         cbcLabel: cbc ? `CBC · Grade ${cbc.grade} · ${cbc.strand} — ${cbc.substrand}` : `Grade ${skill.grade} · ${skill.strand}`,
-        progressLabel: `${Math.min(session.correct, skill.minProblems)} of ${skill.minProblems}`,
+        progressLabel: `${Math.min(session.correct, masterTarget)} of ${masterTarget}`,
         studentName: ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0],
         onResult: handleYoungResult,
         onExit: goHome,
@@ -1149,8 +1161,8 @@ export function AIMastery({ onBack, userId, studentName }) {
               <div className="text-xs text-slate-400">Grade {skill.grade} · {skill.strand}</div>
             </div>
             <div className="text-right shrink-0">
-              <div className="font-bold text-sm text-slate-900 tabular-nums">{Math.min(session.correct, skill.minProblems)}/{skill.minProblems}</div>
-              <div className="text-xs text-slate-400">to master</div>
+              <div className="font-bold text-sm text-slate-900 tabular-nums">{Math.min(session.correct, masterTarget)}/{masterTarget}</div>
+              <div className="text-xs text-slate-400">{testOutSkill ? 'quick check' : 'to master'}</div>
             </div>
           </div>
           <div className="h-1 bg-slate-100"><div className="h-full bg-amber-400 transition-all" style={{ width: `${pct}%` }} /></div>
@@ -1812,60 +1824,60 @@ export function AIMastery({ onBack, userId, studentName }) {
           <div>
             {/* Review banner */}
             {reviews.length > 0 && (
-              <button onClick={startReview} className="w-full bg-gradient-to-r from-blue-900/50 to-blue-800/50 border border-blue-600 rounded-xl p-4 mb-4 flex items-center justify-between hover:from-blue-900/70 transition-all">
+              <button onClick={startReview} className="w-full bg-[#f5f6fc] border border-[#d3daf0] rounded-2xl p-4 mb-4 flex items-center justify-between hover:bg-[#eef0fb] transition-colors">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"><Icon name="refresh" className="w-5 h-5" /></div>
+                  <div className="w-10 h-10 bg-[#6d6fcb] text-white rounded-xl flex items-center justify-center"><Icon name="refresh" className="w-5 h-5" /></div>
                   <div className="text-left">
-                    <div className="font-semibold">Review Session</div>
-                    <div className="text-xs text-blue-300">{reviews.length} skills due — timed & interleaved</div>
+                    <div className="font-semibold text-slate-900">Review Session</div>
+                    <div className="text-xs text-[#6d6fcb]">{reviews.length} skills due — timed & interleaved</div>
                   </div>
                 </div>
-                <Icon name="arrow" className="w-5 h-5 text-blue-400" />
+                <Icon name="arrow" className="w-5 h-5 text-[#6d6fcb]" />
               </button>
             )}
 
             {/* Gaps alert */}
             {gaps.length > 0 && (
-              <div className="bg-slate-800 border border-slate-700 rounded-xl p-4 mb-4">
-                <div className="flex items-center gap-2 text-amber-400 font-semibold mb-2"><Icon name="target" className="w-5 h-5" /> Foundations to build first</div>
-                <p className="text-sm text-slate-300 mb-3">HOREB starts here and builds up from these, one step at a time:</p>
-                <div className="flex flex-wrap gap-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2 py-1 bg-slate-700 rounded text-sm text-slate-200">{g.name}</span>)}</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-4">
+                <div className="flex items-center gap-2 text-amber-600 font-semibold mb-2"><Icon name="target" className="w-5 h-5" /> Foundations to build first</div>
+                <p className="text-sm text-slate-500 mb-3">HOREB starts here and builds up from these, one step at a time:</p>
+                <div className="flex flex-wrap gap-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2.5 py-1 bg-slate-100 rounded-lg text-sm text-slate-700">{g.name}</span>)}</div>
               </div>
             )}
 
             {/* Recommended path */}
-            <h2 className="text-lg font-semibold mb-3 flex items-center gap-2"><Icon name="target" className="w-5 h-5 text-emerald-400" /> Your Learning Path</h2>
+            <h2 className="text-lg font-semibold mb-3 flex items-center gap-2 text-slate-900"><Icon name="target" className="w-5 h-5 text-[#8ca86a]" /> Your Learning Path</h2>
             {path.length > 0 ? (
               <div className="space-y-2 mb-6">{path.map((s, i) => (
-                <button key={s.id} onClick={() => startLesson(s.id)} className={`w-full flex items-center gap-3 p-3 rounded-xl transition-all ${s.type === 'gap' ? 'bg-red-900/20 border border-red-800 hover:bg-red-900/30' : s.type === 'review' ? 'bg-blue-900/20 border border-blue-800 hover:bg-blue-900/30' : s.type === 'remediation' ? 'bg-amber-900/20 border border-amber-800' : 'bg-slate-800 hover:bg-slate-700'}`}>
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold ${s.type === 'gap' ? 'bg-red-600' : s.type === 'review' ? 'bg-blue-600' : 'bg-emerald-600'}`}>{i + 1}</div>
+                <button key={s.id} onClick={() => startLesson(s.id)} className={`w-full flex items-center gap-3 p-3 rounded-xl border transition-colors ${s.type === 'gap' ? 'bg-[#fdf2ef] border-[#f2cdc2] hover:bg-[#fbe9e3]' : s.type === 'review' ? 'bg-[#f5f6fc] border-[#d3daf0] hover:bg-[#eef0fb]' : s.type === 'remediation' ? 'bg-[#fff7ec] border-[#f6e2bd]' : 'bg-white border-slate-200 hover:border-slate-300'}`}>
+                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold text-white shrink-0 ${s.type === 'gap' ? 'bg-[#c0663f]' : s.type === 'review' ? 'bg-[#6d6fcb]' : 'bg-[#8ca86a]'}`}>{i + 1}</div>
                   <div className="flex-1 text-left">
-                    <div className="font-medium flex items-center gap-2">{s.name}{s.critical && <Icon name="zap" className="w-4 h-4 text-amber-400" />}</div>
-                    <div className="text-xs text-slate-400">{s._brain ? `${s.type === 'gap' ? '⚠️ ' : s.type === 'review' ? '🔄 ' : s.type === 'stretch' ? '🚀 ' : ''}${s.reason}` : s.type === 'gap' ? `⚠️ ${s.reason}` : s.type === 'review' ? `🔄 Review (${s.daysSince}d ago)` : `Grade ${s.grade} — ${s.strand}`}</div>
+                    <div className="font-medium text-slate-900 flex items-center gap-2">{s.name}{s.critical && <Icon name="zap" className="w-4 h-4 text-amber-500" />}</div>
+                    <div className="text-xs text-slate-500">{s._brain ? `${s.type === 'gap' ? '⚠️ ' : s.type === 'review' ? '🔄 ' : s.type === 'stretch' ? '🚀 ' : ''}${s.reason}` : s.type === 'gap' ? `⚠️ ${s.reason}` : s.type === 'review' ? `🔄 Review (${s.daysSince}d ago)` : `Grade ${s.grade} — ${s.strand}`}</div>
                   </div>
-                  <Icon name="arrow" className="w-5 h-5 text-slate-500" />
+                  <Icon name="arrow" className="w-5 h-5 text-slate-300" />
                 </button>
               ))}</div>
             ) : (
-              <div className="text-center text-slate-400 py-8">
-                <Icon name="trophy" className="w-12 h-12 text-amber-400 mx-auto mb-3" />
-                <p className="font-semibold mb-1">Amazing work!</p>
+              <div className="text-center text-slate-500 py-8">
+                <Icon name="trophy" className="w-12 h-12 text-amber-500 mx-auto mb-3" />
+                <p className="font-semibold mb-1 text-slate-900">Amazing work!</p>
                 <p className="text-sm">All available skills are mastered. Check back for reviews.</p>
               </div>
             )}
 
             {/* Overall progress — scoped to the active curriculum (enrichment excluded) */}
-            <div className="bg-slate-800 rounded-2xl p-4 mb-4">
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-4">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-slate-300">{curriculum === NATIVE ? 'Overall Mastery' : 'In-syllabus Mastery'}</span>
-                <span className="text-emerald-400 font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
+                <span className="text-slate-700">{curriculum === NATIVE ? 'Overall Mastery' : 'In-syllabus Mastery'}</span>
+                <span className="text-[#5a7a3a] font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
               </div>
-              <div className="h-3 bg-slate-700 rounded-full overflow-hidden mb-4"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
+              <div className="h-3 bg-slate-100 rounded-full overflow-hidden mb-4"><div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
               <div className="grid grid-cols-3 gap-2 text-center text-sm">{scopedStrandStats.map(s => (
-                <div key={s.name} className="bg-slate-700/50 rounded-lg p-2">
-                  <div className="text-slate-400 text-xs">{s.name}</div>
-                  <div className="font-bold">{s.assessed ? `${s.percent}%` : '—'}</div>
-                  {s.accuracy !== null && s.accuracy < 70 && <div className="text-xs text-red-400">⚠️ {s.accuracy}%</div>}
+                <div key={s.name} className="bg-slate-50 border border-slate-100 rounded-lg p-2">
+                  <div className="text-slate-500 text-xs">{s.name}</div>
+                  <div className="font-bold text-slate-900">{s.assessed ? `${s.percent}%` : '—'}</div>
+                  {s.accuracy !== null && s.accuracy < 70 && <div className="text-xs text-[#c0663f]">⚠️ {s.accuracy}%</div>}
                 </div>
               ))}</div>
             </div>
@@ -1947,28 +1959,28 @@ export function AIMastery({ onBack, userId, studentName }) {
         {activeTab === 'stats' && (
           <div className="space-y-4">
             {/* Your Level — surfaces the engine's actual measurement (or a JS estimate) */}
-            <div className="bg-gradient-to-br from-emerald-900/40 to-slate-800 rounded-2xl p-5 border border-emerald-800/40">
+            <div className="bg-gradient-to-br from-[#eef4e7] to-white border border-[#cfe0bd] rounded-2xl p-5">
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <div className="text-[11px] uppercase tracking-wide text-emerald-300/70 mb-1">Your current level</div>
-                  <div className="text-2xl font-bold leading-tight">{gradeLabel(estimatedGrade)}</div>
+                  <div className="text-[11px] uppercase tracking-wide text-[#5a7a3a] mb-1">Your current level</div>
+                  <div className="text-2xl font-bold leading-tight text-slate-900">{gradeLabel(estimatedGrade)}</div>
                 </div>
                 {brainAccelerated && (
-                  <span className="shrink-0 text-[11px] font-semibold text-amber-200 bg-amber-900/40 border border-amber-700/50 rounded-full px-2.5 py-1">
+                  <span className="shrink-0 text-[11px] font-semibold text-amber-700 bg-amber-100 border border-amber-200 rounded-full px-2.5 py-1">
                     🚀 Working above grade
                   </span>
                 )}
               </div>
               {brainProfile ? (
                 <div className="mt-3">
-                  <div className="flex justify-between text-xs text-slate-400 mb-1">
+                  <div className="flex justify-between text-xs text-slate-500 mb-1">
                     <span>Measurement confidence</span>
                     <span>{Math.round((brainProfile.confidence || 0) * 100)}%</span>
                   </div>
-                  <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-emerald-400 transition-all" style={{ width: `${Math.round((brainProfile.confidence || 0) * 100)}%` }} />
+                  <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                    <div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${Math.round((brainProfile.confidence || 0) * 100)}%` }} />
                   </div>
-                  <p className="text-xs text-slate-400 mt-2">
+                  <p className="text-xs text-slate-500 mt-2">
                     {brainAccelerated && brainProfile.headroom_grades >= 1
                       ? `You're succeeding about ${Math.round(brainProfile.headroom_grades * 10) / 10} grade${brainProfile.headroom_grades >= 2 ? 's' : ''} above your working level — no ceiling here.`
                       : brainProfile.confidence < 0.4
@@ -1977,66 +1989,66 @@ export function AIMastery({ onBack, userId, studentName }) {
                   </p>
                 </div>
               ) : (
-                <p className="text-xs text-slate-400 mt-2">Estimated from your mastered skills. Take the diagnostic for a sharper read.</p>
+                <p className="text-xs text-slate-500 mt-2">Estimated from your mastered skills. Take the diagnostic for a sharper read.</p>
               )}
             </div>
 
             {/* Big numbers */}
             <div className="grid grid-cols-2 gap-3">
-              <div className="bg-slate-800 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-emerald-400">{scopedStats.mastered}</div>
-                <div className="text-sm text-slate-400">Skills Mastered</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
+                <div className="text-3xl font-bold text-[#5a7a3a]">{scopedStats.mastered}</div>
+                <div className="text-sm text-slate-500">Skills Mastered</div>
               </div>
-              <div className="bg-slate-800 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-amber-400">{progress.totalXP || 0}</div>
-                <div className="text-sm text-slate-400">Total XP</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
+                <div className="text-3xl font-bold text-amber-500">{progress.totalXP || 0}</div>
+                <div className="text-sm text-slate-500">Total XP</div>
               </div>
-              <div className="bg-slate-800 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-blue-400">{scopedStats.accuracy}%</div>
-                <div className="text-sm text-slate-400">Accuracy</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
+                <div className="text-3xl font-bold text-[#6d6fcb]">{scopedStats.accuracy}%</div>
+                <div className="text-sm text-slate-500">Accuracy</div>
               </div>
-              <div className="bg-slate-800 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-purple-400">{progress.currentStreak || 0}</div>
-                <div className="text-sm text-slate-400">Day Streak</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
+                <div className="text-3xl font-bold text-orange-500">{progress.currentStreak || 0}</div>
+                <div className="text-sm text-slate-500">Day Streak</div>
               </div>
             </div>
 
             {/* In-scope mastery + enrichment note */}
-            <div className="bg-slate-800 rounded-xl p-4">
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
               <div className="flex items-center justify-between mb-1">
-                <span className="text-slate-300">{curriculum === NATIVE ? 'Overall mastery' : 'In-syllabus mastery'}</span>
-                <span className="text-emerald-400 font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
+                <span className="text-slate-700">{curriculum === NATIVE ? 'Overall mastery' : 'In-syllabus mastery'}</span>
+                <span className="text-[#5a7a3a] font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
               </div>
-              <div className="h-3 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
+              <div className="h-3 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
               {scopedStats.enrichment > 0 && (
-                <p className="text-xs text-amber-300/70 mt-2">+ {scopedStats.enrichment} enrichment skill{scopedStats.enrichment === 1 ? '' : 's'} beyond the {curriculaOptions.find(c => c.id === curriculum)?.shortName || ''} syllabus — explore them anytime in All Skills.</p>
+                <p className="text-xs text-amber-700 mt-2">+ {scopedStats.enrichment} enrichment skill{scopedStats.enrichment === 1 ? '' : 's'} beyond the {curriculaOptions.find(c => c.id === curriculum)?.shortName || ''} syllabus — explore them anytime in All Skills.</p>
               )}
             </div>
 
             {/* Grade/Stage breakdown — curriculum-aware labels */}
-            <div className="bg-slate-800 rounded-xl p-4">
-              <h3 className="font-semibold mb-3">{getCurriculum(curriculum).bandLabel} Progress</h3>
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+              <h3 className="font-semibold mb-3 text-slate-900">{getCurriculum(curriculum).bandLabel} Progress</h3>
               <div className="space-y-2">{scopedGradeStats.map(gs => (
                 <div key={gs.grade} className="flex items-center gap-3">
-                  <span className="text-sm text-slate-400 w-28 truncate" title={gradeLabel(gs.grade)}>{gradeLabel(gs.grade)}</span>
-                  <div className="flex-1 h-3 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${gs.percent}%` }} /></div>
-                  <span className="text-sm font-medium w-12 text-right">{gs.percent}%</span>
+                  <span className="text-sm text-slate-500 w-28 truncate" title={gradeLabel(gs.grade)}>{gradeLabel(gs.grade)}</span>
+                  <div className="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${gs.percent}%` }} /></div>
+                  <span className="text-sm font-medium w-12 text-right text-slate-700">{gs.percent}%</span>
                 </div>
               ))}</div>
             </div>
 
             {/* Strand breakdown — with engine level + "not assessed" clarity */}
-            <div className="bg-slate-800 rounded-xl p-4">
-              <h3 className="font-semibold mb-3">Strand Mastery</h3>
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+              <h3 className="font-semibold mb-3 text-slate-900">Strand Mastery</h3>
               <div className="space-y-2">{scopedStrandStats.map(ss => {
                 const bs = brainStrandLevel(ss.name);
                 return (
                   <div key={ss.name} className="flex items-center gap-3">
-                    <span className="text-sm text-slate-400 w-24 truncate" title={ss.name}>{ss.name}</span>
-                    <div className="flex-1 h-3 bg-slate-700 rounded-full overflow-hidden"><div className={`h-full transition-all ${ss.assessed ? 'bg-emerald-500' : 'bg-slate-600'}`} style={{ width: `${ss.percent}%` }} /></div>
+                    <span className="text-sm text-slate-500 w-24 truncate" title={ss.name}>{ss.name}</span>
+                    <div className="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div className={`h-full transition-all ${ss.assessed ? 'bg-[#8ca86a]' : 'bg-slate-200'}`} style={{ width: `${ss.percent}%` }} /></div>
                     {ss.assessed
-                      ? <span className="text-sm font-medium w-16 text-right">{bs ? gradeLabel(bs.grade_level).replace(/ —.*/, '') : `${ss.mastered}/${ss.total}`}</span>
-                      : <span className="text-xs text-slate-500 w-16 text-right">not assessed</span>}
+                      ? <span className="text-sm font-medium w-16 text-right text-slate-700">{bs ? gradeLabel(bs.grade_level).replace(/ —.*/, '') : `${ss.mastered}/${ss.total}`}</span>
+                      : <span className="text-xs text-slate-400 w-16 text-right">not assessed</span>}
                   </div>
                 );
               })}</div>
@@ -2044,7 +2056,7 @@ export function AIMastery({ onBack, userId, studentName }) {
 
             {/* Actions */}
             <div className="space-y-2">
-              <button onClick={() => setView('welcome')} className="w-full p-3 bg-slate-800 rounded-xl text-emerald-400 hover:bg-slate-700 transition-colors text-sm font-medium">Retake Diagnostic Test</button>
+              <button onClick={() => setView('welcome')} className="w-full p-3 bg-white border border-slate-200 rounded-2xl text-[#6d6fcb] hover:bg-slate-50 transition-colors text-sm font-medium">Retake Diagnostic Test</button>
             </div>
           </div>
         )}
@@ -2054,19 +2066,19 @@ export function AIMastery({ onBack, userId, studentName }) {
           const unlocked = new Set(progress.achievements || []);
           return (
             <div className="space-y-4">
-              <div className="bg-slate-800 rounded-2xl p-4 text-center">
-                <div className="text-2xl font-bold text-amber-400">{unlocked.size}<span className="text-slate-500 text-lg">/{ACHIEVEMENTS.length}</span></div>
-                <div className="text-sm text-slate-400">Badges earned — keep going, every one is a win!</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
+                <div className="text-2xl font-bold text-amber-500">{unlocked.size}<span className="text-slate-400 text-lg">/{ACHIEVEMENTS.length}</span></div>
+                <div className="text-sm text-slate-500">Badges earned — keep going, every one is a win!</div>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {ACHIEVEMENTS.map(a => {
                   const got = unlocked.has(a.id);
                   return (
-                    <div key={a.id} className={`rounded-2xl p-4 text-center border transition-colors ${got ? 'bg-amber-900/15 border-amber-700/50' : 'bg-slate-800/60 border-slate-700/50'}`}>
+                    <div key={a.id} className={`rounded-2xl p-4 text-center border shadow-sm transition-colors ${got ? 'bg-amber-50 border-amber-200' : 'bg-white border-slate-200'}`}>
                       <div className={`text-3xl mb-1 ${got ? '' : 'grayscale opacity-40'}`}>{a.icon}</div>
-                      <div className={`text-sm font-semibold ${got ? 'text-white' : 'text-slate-400'}`}>{a.name}</div>
-                      <div className="text-xs text-slate-500 mt-0.5">{a.desc}</div>
-                      {got && <div className="text-[10px] uppercase tracking-wide text-amber-300/80 mt-1">Earned</div>}
+                      <div className={`text-sm font-semibold ${got ? 'text-slate-900' : 'text-slate-400'}`}>{a.name}</div>
+                      <div className="text-xs text-slate-400 mt-0.5">{a.desc}</div>
+                      {got && <div className="text-[10px] uppercase tracking-wide text-amber-600 mt-1">Earned</div>}
                     </div>
                   );
                 })}
