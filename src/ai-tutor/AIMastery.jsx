@@ -10,6 +10,7 @@ import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, flu
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { HorebBot } from './HorebBot.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
+import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
@@ -185,6 +186,7 @@ export function AIMastery({ onBack, userId, studentName }) {
   // Layered hints + tooltips state
   const [attemptCount, setAttemptCount] = useState(0);
   const [hintLevel, setHintLevel] = useState(0); // 0=none, 1=hint, 2=partial steps, 3=full reveal
+  const [wrongInfo, setWrongInfo] = useState(null); // { answer, diagnosis } | { needNumber:true } — feedback on the last wrong try
 
   // Faded worked examples (Renkl completion problems). `scaffoldLevel` is the
   // live support level (0 guided … 3 solo); the ref mirrors it for the
@@ -661,24 +663,36 @@ export function AIMastery({ onBack, userId, studentName }) {
     setVisualAnswer(null);
     setAnsweredLevel(null);
     setSelfExplainOpen(false);
+    setWrongInfo(null);
   };
 
   const checkAnswer = () => {
     // Visual problems are answered by interaction (or by typing the coordinate).
     const hasVisualAnswer = problem?.visual && visualAnswer != null;
     if ((!answer.trim() && !hasVisualAnswer) || feedback) return;
+    // A numeric problem with a no-digit entry ("abc") isn't a wrong attempt —
+    // it's "please type a number", so we don't burn one of their three tries.
+    const expectsNumber = /^-?\d/.test(String(problem?.answer ?? ''));
+    if (!hasVisualAnswer && expectsNumber && !/\d/.test(answer)) {
+      setWrongInfo({ needNumber: true });
+      return;
+    }
     const correct = hasVisualAnswer
       ? checkVisualAnswer(visualAnswer, problem.visual)
       : checkAnswerMatch(answer, problem);
     const newAttemptCount = attemptCount + 1;
     setAttemptCount(newAttemptCount);
 
+    // Feedback on THIS answer: name the likely slip (e.g. 42×4→160 = "you found
+    // 40×4 but forgot the ones"), keeping their answer visible.
+    if (!correct) setWrongInfo({ answer: answer.trim(), diagnosis: diagnoseError(problem, answer) });
+    else setWrongInfo(null);
+
     // === LAYERED WRONG-ANSWER HANDLING ===
-    // Attempt 1 wrong: show hint, let them retry
-    // Attempt 2 wrong: show partial worked example, let them retry
-    // Attempt 3 wrong: show full answer + worked example, mark as final incorrect
+    // Attempt 1 wrong: "Not quite" + the diagnosis, let them retry
+    // Attempt 2 wrong: also offer the first steps
+    // Attempt 3 wrong: full answer + full working (for THIS problem), mark incorrect
     if (!correct && newAttemptCount < 3) {
-      // Not final attempt — show escalating hints, clear answer, let them retry
       setHintLevel(newAttemptCount); // 1 = hint, 2 = partial steps
       setAnswer('');
       return; // Don't record in progress yet — only the final result counts
@@ -832,6 +846,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     setVisualAnswer(null);
     setAnsweredLevel(null);
     setSelfExplainOpen(false);
+    setWrongInfo(null);
   };
 
   // ==================== REVIEW (TIMED, INTERLEAVED) ====================
@@ -1265,23 +1280,40 @@ export function AIMastery({ onBack, userId, studentName }) {
                     <InteractiveVisual visualType={SKILL_VISUALS[activeSkill].visualType} visualData={SKILL_VISUALS[activeSkill].visualData} onAnswer={setVisualAnswer} disabled={!!feedback} />
                   )
                 )}
-                <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Click the grid above, or type the coordinate…' : 'Type your answer…'} />
+                <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
 
                 {/* Gentle 'I'm not sure' — an out that isn't guessing (surfaces a hint) */}
-                {!feedback && hintLevel < 1 && (
+                {!feedback && hintLevel < 1 && attemptCount === 0 && (
                   <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm not sure — show me a hint</button>
                 )}
 
-                {hintLevel >= 1 && !feedback && (
+                {/* "type a number" nudge — doesn't cost an attempt */}
+                {!feedback && wrongInfo?.needNumber && (
                   <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-2xl text-amber-800 text-sm">
-                    <span className="font-semibold text-amber-700">Hint:</span> {problem.hint || 'Double-check your calculation — look at each step carefully.'}
+                    Type your answer as a number.
+                  </div>
+                )}
+
+                {/* Proactive hint (asked before trying) — an op-appropriate nudge */}
+                {hintLevel >= 1 && !feedback && attemptCount === 0 && (
+                  <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-2xl text-amber-800 text-sm">
+                    <span className="font-semibold text-amber-700">Hint:</span> {problem.hint || genericNudge(problem)}
                     {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="ml-2 text-amber-700 underline hover:text-amber-800">still stuck?</button>}
                   </div>
                 )}
+
+                {/* Wrong try — name what happened, keep their answer, escalate */}
+                {!feedback && attemptCount > 0 && wrongInfo && !wrongInfo.needNumber && (
+                  <div className="mt-4 p-3 bg-[#fdf2ef] border border-[#f2cdc2] rounded-2xl text-sm">
+                    <span className="text-[#c0663f] font-semibold">Not quite.</span>
+                    {wrongInfo.answer && <span className="text-slate-500"> You wrote <span className="font-mono text-slate-700">{wrongInfo.answer}</span>.</span>}
+                    <div className="mt-1 text-slate-700">{wrongInfo.diagnosis || (problem.hint || genericNudge(problem))}</div>
+                    {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="mt-1.5 text-[#6d6fcb] underline text-xs hover:text-[#5658b8]">show me the first steps</button>}
+                  </div>
+                )}
+
                 {hintLevel >= 2 && !feedback && !plan && (() => {
-                  const ownSteps = problem.solutionSteps;
-                  const we = ownSteps ? null : generateWorkedExample(activeSkill);
-                  const steps = ownSteps || we?.steps;
+                  const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
                   if (!steps) return null;
                   return (
                     <div className="mt-3 p-3 bg-[#eef1f8] border border-[#d3daf0] rounded-2xl text-sm">
@@ -1290,7 +1322,7 @@ export function AIMastery({ onBack, userId, studentName }) {
                         {steps.slice(0, 2).map((step, i) => (
                           <div key={i} className="flex gap-2 text-slate-700">
                             <span className="text-[#6d6fcb] font-bold tabular-nums">{i + 1}.</span>
-                            <TermTooltip text={step} definitions={we?.definitions} />
+                            <TermTooltip text={step} />
                           </div>
                         ))}
                       </div>
@@ -1338,10 +1370,11 @@ export function AIMastery({ onBack, userId, studentName }) {
               {feedback === 'incorrect' && (
                 <div className="rounded-2xl p-4 mb-4 bg-[#fdf2ef] border border-[#f2cdc2]">
                   <span className="text-[#c0663f] font-bold">Not quite — the answer is <span className="font-mono text-slate-900">{problem.answer}</span></span>
+                  {wrongInfo?.diagnosis && <p className="mt-1.5 text-sm text-slate-700">{wrongInfo.diagnosis}</p>}
                   {(() => {
-                    const ownSteps = problem.solutionSteps;
-                    const we = ownSteps ? null : generateWorkedExample(activeSkill);
-                    const steps = ownSteps || we?.steps;
+                    // Working for the LEARNER'S problem (never a stand-in example),
+                    // showing the parts — the moment the missed step becomes visible.
+                    const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
                     if (!steps) return null;
                     return (
                       <div className="mt-3 pt-3 border-t border-[#f2cdc2]">
