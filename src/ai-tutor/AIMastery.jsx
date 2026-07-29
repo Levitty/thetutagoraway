@@ -526,10 +526,14 @@ export function AIMastery({ onBack, userId, studentName }) {
     setProgress(p => ({ ...p, diagInProgress: diagCursor(s.answered, s.balances, s.results, s.current, prev.problem, s.focus, s.perGrade) }));
   };
 
-  const handleDiagnosticAnswer = () => {
+  const handleDiagnosticAnswer = (opts = {}) => {
+    // "I haven't learned this yet" — an honest signal, not a wrong answer. It
+    // counts as not-known for placement (that's exactly what we need to learn)
+    // without forcing the child to guess or type junk.
+    const skip = opts.skip === true;
     // Allow either a typed answer or an interactive-visual answer (number line etc.)
     const hasVisualAnswer = problem?.visual && visualAnswer != null;
-    if (!answer.trim() && !hasVisualAnswer) return;
+    if (!skip && !answer.trim() && !hasVisualAnswer) return;
     const { answered, balances, results, startTimes, current, focus, perGrade } = diagState;
     const skill = current;
     if (!skill) return;
@@ -538,7 +542,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     const timeTaken = Date.now() - (startTimes[skill.id] || Date.now());
     const timeWeight = getTimeWeight(timeTaken);
 
-    const correct = hasVisualAnswer
+    const correct = skip ? false : hasVisualAnswer
       ? checkVisualAnswer(visualAnswer, problem.visual)
       : checkAnswerMatch(answer, problem);
 
@@ -558,7 +562,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     logResponse({
       studentId: userId, subject: subjectId, skillId: skill.id,
       correct, problemType: problem?.type, timeMs: timeTaken, isDiagnostic: true,
-      confidence: priorConfidence,
+      confidence: priorConfidence, skipped: skip || undefined,
     });
 
     setFeedback(correct ? 'correct' : 'incorrect');
@@ -1038,49 +1042,52 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // ==================== RENDER: WELCOME ====================
 
-  if (view === 'welcome') return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      {/* Light bridging header */}
-      <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
-        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-3">
-          {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600"><Icon name="back" /></button>}
-          <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">T</div>
-          <h1 className="text-base font-bold text-slate-900">AI Tutor</h1>
+  if (view === 'welcome') {
+    const welcomeFirst = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
+    return (
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900">
+      <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
+        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-2.5">
+          {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600 mr-1"><Icon name="back" /></button>}
+          <HorebBot size={28} />
+          <h1 className="text-base font-extrabold tracking-tight">HOREB</h1>
         </div>
       </div>
-      <div className="bg-gradient-to-b from-slate-100 to-slate-900 pt-12 pb-4" />
-      <div className="flex items-center justify-center p-4 -mt-8">
-        <div className="max-w-md text-center">
-          <div className="flex justify-center mb-4">
-            <Lottie src={LOTTIE.academics} size={140} fallback={<div className="text-6xl">{sub?.emoji || '🧠'}</div>} />
-          </div>
-          <h1 className="text-3xl font-bold mb-2">{sub?.name || 'AI Tutor'}</h1>
-          <p className="text-slate-400 mb-6">Adaptive learning that finds your gaps and fills them. {sub?.description} — {SKILL_COUNT} skills.</p>
-          <div className="bg-slate-800 rounded-xl p-4 mb-4 text-left text-sm text-slate-300 space-y-2">
-            <p>🎯 <strong>Diagnostic</strong> — a short, targeted check to find your level and gaps</p>
-            <p>🧩 <strong>Knowledge graph</strong> — maps all skill connections</p>
-            <p>🔁 <strong>Spaced repetition</strong> — reviews skills before you forget</p>
-            <p>🎓 <strong>Worked examples</strong> — teaches before testing</p>
+      <div className="flex justify-center px-4 py-10">
+        <div className="max-w-md w-full">
+          <div className="flex justify-center mb-5"><HorebBot size={76} /></div>
+          <h1 className="text-[27px] font-extrabold tracking-tight text-center leading-tight mb-2">
+            {welcomeFirst ? `Hi ${welcomeFirst} — let’s` : 'Let’s'} find your starting point
+          </h1>
+          <p className="text-slate-500 text-center text-[15px] mb-6">
+            This is <strong className="text-slate-700">not a test</strong> — no marks, nothing to revise.
+            Just a few questions so I know exactly where to begin with you.
+          </p>
+
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-4 text-sm text-slate-600 space-y-2.5">
+            <p>⏱️ Around 15–20 quick questions — we stop the moment I know your start.</p>
+            <p>🙋 Meet something you haven’t learned? Tap <strong className="text-slate-800">“I haven’t learned this yet”</strong> — that’s a helpful answer, not a wrong one.</p>
+            <p>🌱 Whatever we find, it’s only a starting line. Everything after it is growth.</p>
           </div>
 
-          {/* Onboarding — class + curriculum anchor the diagnostic to the student */}
-          <div className="bg-slate-800/70 border border-slate-700 rounded-xl p-4 mb-6 text-left">
-            <p className="text-sm font-medium text-slate-200 mb-2">What {(sub?.gradeLabel || 'grade').toLowerCase()} are you in?</p>
+          {/* Onboarding — class + curriculum anchor the check to the student */}
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-5">
+            <p className="text-sm font-semibold text-slate-800 mb-2">What {(sub?.gradeLabel || 'grade').toLowerCase()} are you in?</p>
             <div className="flex flex-wrap gap-2">
               {(sub?.grades || []).map(g => (
                 <button key={g} onClick={() => setProgress(p => ({ ...p, declaredGrade: g }))}
-                  className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${progress.declaredGrade === g ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>
+                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${progress.declaredGrade === g ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
                   {sub?.gradeLabel || 'Grade'} {g}
                 </button>
               ))}
             </div>
             {curriculaOptions.length > 1 && (
               <>
-                <p className="text-sm font-medium text-slate-200 mt-4 mb-2">Your curriculum</p>
+                <p className="text-sm font-semibold text-slate-800 mt-4 mb-2">Your curriculum</p>
                 <div className="flex flex-wrap gap-2">
                   {curriculaOptions.map(co => (
                     <button key={co.id} onClick={() => setProgress(p => ({ ...p, curriculum: co.id }))}
-                      className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${curriculum === co.id ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>
+                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${curriculum === co.id ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
                       {co.shortName}
                     </button>
                   ))}
@@ -1088,16 +1095,18 @@ export function AIMastery({ onBack, userId, studentName }) {
               </>
             )}
             {progress.declaredGrade != null && (
-              <p className="text-xs text-emerald-400/80 mt-3">We’ll focus the check on {sub?.gradeLabel || 'Grade'} {progress.declaredGrade} and the skills that lead up to it.</p>
+              <p className="text-xs text-[#5a7a3a] mt-3">I’ll focus on {sub?.gradeLabel || 'Grade'} {progress.declaredGrade} and the steps that lead up to it.</p>
             )}
           </div>
 
-          <button onClick={startDiagnostic} disabled={progress.declaredGrade == null} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 disabled:cursor-not-allowed rounded-xl py-4 font-semibold text-lg transition-colors">{progress.declaredGrade != null ? 'Start Diagnostic' : `Pick your ${(sub?.gradeLabel || 'class').toLowerCase()} to begin`}</button>
-          {progress.declaredGrade == null && <p className="mt-3 text-xs text-slate-500">A quick check — about 18 questions — so HOREB knows exactly where to start you.</p>}
+          <button onClick={startDiagnostic} disabled={progress.declaredGrade == null} className="w-full bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed text-slate-900 rounded-2xl py-4 font-bold text-lg transition-colors">
+            {progress.declaredGrade != null ? "Let's start" : `Pick your ${(sub?.gradeLabel || 'class').toLowerCase()} first`}
+          </button>
         </div>
       </div>
     </div>
-  );
+    );
+  }
 
   // ==================== RENDER: DIAGNOSTIC ====================
 
@@ -1108,47 +1117,65 @@ export function AIMastery({ onBack, userId, studentName }) {
     const n = answered.length + 1;
     // Adaptive test: the length isn't fixed, so show progress toward the ceiling.
     const pct = Math.min(96, Math.round((answered.length / DIAG_MAX) * 100));
+    // The guide keeps the mood light — this must never feel like an exam. No
+    // grade labels on questions (an older child rebuilding foundations should
+    // never see "Grade 1" stamped on their screen), no red X, no scores.
+    const cheer = [
+      'Take your time — there’s no clock.',
+      'If it’s new to you, just say so. That helps me!',
+      'You’re doing great.',
+      'Remember: not a test. We’re just finding your start.',
+    ][(n - 1) % 4];
 
     return (
-      <div className="min-h-screen bg-slate-900 text-white">
-        {/* Light bridging header */}
-        <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
+      <div className="min-h-screen bg-[#eef0f2] text-slate-900">
+        <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
           <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">T</div>
+            <div className="flex items-center gap-2.5">
+              <HorebBot size={28} />
               <div>
-                <div className="text-sm font-bold text-slate-900">Diagnostic Test</div>
-                <div className="text-xs text-slate-400">Question {n} · finding your level</div>
+                <div className="text-sm font-bold text-slate-900">Finding your start</div>
+                <div className="text-xs text-slate-400">Question {n} · no marks, just mapping</div>
               </div>
             </div>
-            <div className="text-sm text-emerald-600 font-semibold">{pct}%</div>
           </div>
-          <div className="h-1 bg-slate-100"><div className="h-full bg-emerald-500 transition-all duration-300" style={{ width: `${pct}%` }} /></div>
+          <div className="h-1.5 bg-slate-100"><div className="h-full bg-amber-400 transition-all duration-300 rounded-r-full" style={{ width: `${pct}%` }} /></div>
         </div>
-        <div className="bg-gradient-to-b from-slate-100 to-slate-900 h-8" />
-        <div className="px-4">
-        <div className="max-w-2xl mx-auto">
-          {diagHistory.length > 0 && !feedback && (
-            <button onClick={diagBack} className="text-xs text-slate-400 hover:text-slate-200 mb-2 flex items-center gap-1 transition-colors">← Previous question</button>
-          )}
-          <div className="text-xs text-slate-500 mb-2">Grade {skill.grade} — {skill.strand} — {skill.name}</div>
-          <div className="bg-slate-800 rounded-2xl p-6 mb-4">
-            <div className="text-lg mb-6 leading-relaxed">{problem?.question}</div>
-            {/* Interactive visual (number line / grid / etc.) when the problem
-                needs one — otherwise it would be an unanswerable text box. */}
-            {problem?.visual && (
-              <InteractiveVisual
-                visualType={problem.visual.type}
-                visualData={problem.visual.data}
-                onAnswer={setVisualAnswer}
-                disabled={!!feedback}
-              />
+        <div className="px-4 pt-6 pb-16">
+          <div className="max-w-2xl mx-auto">
+            {diagHistory.length > 0 && !feedback && (
+              <button onClick={diagBack} className="text-xs text-slate-400 hover:text-slate-600 mb-3 flex items-center gap-1 transition-colors">← Previous question</button>
             )}
-            <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50" autoFocus placeholder={problem?.visual ? 'Use the diagram above, or type your answer…' : 'Your answer...'} />
+            <div className="flex items-start gap-3 mb-4">
+              <HorebBot size={40} className="shrink-0" />
+              <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">{cheer}</div>
+            </div>
+            <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
+              <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">{problem?.question}</div>
+              {/* Interactive visual (number line / grid / etc.) when the problem
+                  needs one — otherwise it would be an unanswerable text box. */}
+              {problem?.visual && (
+                <InteractiveVisual
+                  visualType={problem.visual.type}
+                  visualData={problem.visual.data}
+                  onAnswer={setVisualAnswer}
+                  disabled={!!feedback}
+                />
+              )}
+              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+              {!feedback && (
+                <button onClick={() => handleDiagnosticAnswer({ skip: true })} className="mt-3 text-sm text-slate-400 hover:text-[#6d6fcb] transition-colors">
+                  🙋 I haven’t learned this yet
+                </button>
+              )}
+            </div>
+            {feedback && (
+              feedback === 'correct'
+                ? <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]"><span className="text-[#4f7233] font-bold">✓ Nice one!</span></div>
+                : <div className="rounded-2xl p-4 mb-4 bg-[#f5f6fc] border border-[#d3daf0]"><span className="text-[#5658b8] font-semibold">👍 Noted — that helps me find your start.</span></div>
+            )}
+            {!feedback && <button onClick={() => handleDiagnosticAnswer()} disabled={!answer.trim() && !(problem?.visual && visualAnswer != null)} className="w-full bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 text-slate-900 rounded-2xl py-4 font-bold transition-colors">Check</button>}
           </div>
-          {feedback && <div className={`rounded-xl p-4 mb-4 ${feedback === 'correct' ? 'bg-emerald-900/50 border border-emerald-500' : 'bg-red-900/50 border border-red-500'}`}>{feedback === 'correct' ? <span className="text-emerald-400">✓ Correct!</span> : <span className="text-red-400">✗ Answer: {problem?.answer}</span>}</div>}
-          {!feedback && <button onClick={handleDiagnosticAnswer} disabled={!answer.trim() && !(problem?.visual && visualAnswer != null)} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">Check</button>}
-        </div>
         </div>
       </div>
     );
