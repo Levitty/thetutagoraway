@@ -20,7 +20,7 @@ export const CURRICULA = {
     name: 'Default (Grade 1–12)',
     shortName: 'Default',
     bandLabel: 'Grade',
-    bands: [5, 6, 7, 8, 9, 10, 11, 12],
+    bands: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
   },
   cbc: {
     id: 'cbc',
