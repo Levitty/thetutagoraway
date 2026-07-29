@@ -63,10 +63,14 @@ Scored HOREB against the 10 evidence-backed practices (✓ have, ◐ partial, �
   lesson answers, one due review from another skill appears as a bare-retrieval "Quick
   review" (one attempt, immediate feedback, credit to the reviewed skill). Young flow
   exempt. Pure logic in `interleave.js`, unit-tested. ⚠️ Needs a live-session UI pass.
-- **B9 · Success-rate telemetry** (practice 1): track per-session accuracy; steer problem
-  difficulty toward ~80%.
-- **B10 · Effort-aware XP** (practice 9): small XP for completed teaching moments (reading
-  the working after a miss), so struggling honestly still visibly pays.
+- **B9 · Success-rate telemetry** (practice 1): re-scoped — the per-answer telemetry
+  (response_events) already captures everything needed to measure session success rates;
+  the steering mechanisms (KP ladder, support fading, modality drop, remediation) already
+  exist. What's needed is an ANALYSIS job over telemetry to check where sessions actually
+  land vs the ~80% target, then tune generator difficulty ranges. Not app code.
+- **B10 · Effort-aware XP** (practice 9): ✅ DONE Jul 29 — a final miss pays 1 XP (the
+  completed teaching moment of reading the working); interleaved reviews pay 3/1. Correct
+  answers and mastery bonuses unchanged, so missing on purpose stays strictly worse.
 
 ## Protect (don't regress)
 Correct-answer warmth + "Teach it back" (F3) · backward-fading scaffold (F4) · area/column
