@@ -456,7 +456,142 @@ export function buildErrors() {
   };
 }
 
+
+// ============================================================================
+// CAMBRIDGE GAP FILL — advanced conversions, composite areas, surface area,
+// prism/cylinder volume.
+// ============================================================================
+
+// ---- G7: length conversions with decimals ----
+export function buildLengthConvAdvanced() {
+  const kind = pick(['km-m', 'm-cm', 'cm-mm', 'mm-cm', 'cm-m', 'm-km']);
+  const up = { 'km-m': 1000, 'm-cm': 100, 'cm-mm': 10 }[kind];
+  if (up) {
+    const n = randInt(11, 89) / 10;                        // 1.1 … 8.9
+    const value = Math.round(n * up);
+    const [from, to] = kind.split('-');
+    const wrongF = up === 1000 ? 100 : up === 100 ? 1000 : 100;
+    return {
+      type: 'length-conv', instruction: 'Convert the units.',
+      question: `Convert ${n} ${from} to ${to}.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}${to}`),
+      hints: hintLadder(`Going to a SMALLER unit means MORE of them — multiply.`,
+        `1 ${from} = ${up} ${to}.`,
+        `${n} × ${up}.`),
+      solution: { steps: [
+        { text: `1 ${from} = ${up} ${to}.`, expr: `× ${up}` },
+        { text: 'Multiply.', expr: `${n} × ${up} = ${value} ${to}` }], answer: `${value}` },
+      misconceptions: Math.round(n * wrongF) !== value ? [{ when: `${Math.round(n * wrongF)}`, feedback: `Wrong factor — 1 ${from} is ${up} ${to}, not ${wrongF}.` }] : [],
+      verify: { kind: 'fraction', value },
+    };
+  }
+  const down = { 'mm-cm': 10, 'cm-m': 100, 'm-km': 1000 }[kind];
+  const [from, to] = kind.split('-');
+  const whole = randInt(2, 89);
+  const raw = whole * down / 10;                            // gives one decimal place
+  const value = raw / down * 10 / 10;
+  const shown = raw;
+  const ans = +(shown / down).toFixed(3);
+  return {
+    type: 'length-conv', instruction: 'Convert the units.',
+    question: `Convert ${shown} ${from} to ${to}.`,
+    answer: `${ans}`, accepts: accepts(`${ans}`, `${ans}${to}`),
+    hints: hintLadder('Going to a BIGGER unit means FEWER of them — divide.',
+      `${down} ${from} make 1 ${to}.`,
+      `${shown} ÷ ${down}.`),
+    solution: { steps: [
+      { text: `${down} ${from} = 1 ${to}.`, expr: `÷ ${down}` },
+      { text: 'Divide.', expr: `${shown} ÷ ${down} = ${ans} ${to}` }], answer: `${ans}` },
+    misconceptions: [{ when: `${+(shown * down).toFixed(2)}`, feedback: `You multiplied — going to the BIGGER unit (${to}) you divide by ${down}.` }],
+    verify: { kind: 'fraction', value: shown / down },
+  };
+}
+
+// ---- G8: composite (L-shape) areas ----
+export function buildCompositeArea() {
+  const L = randInt(8, 16), W = randInt(6, 12);
+  const l = randInt(2, L - 3), w = randInt(2, W - 3);
+  const value = L * W - l * w;
+  return {
+    type: 'composite-area', instruction: 'Big rectangle minus the missing piece.',
+    question: `An L-shaped garden is a ${L} m by ${W} m rectangle with a ${l} m by ${w} m rectangular corner cut out. Find its area.`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value}m²`, `${value}m2`),
+    hints: hintLadder('Two ways: subtract the cut-out from the full rectangle, or split the L into two rectangles.',
+      `Full rectangle: ${L} × ${W} = ${L * W}.`,
+      `Cut-out: ${l} × ${w} = ${l * w}. Subtract.`),
+    solution: { steps: [
+      { text: 'Area of the full rectangle.', expr: `${L} × ${W} = ${L * W} m²` },
+      { text: 'Subtract the cut-out corner.', expr: `${L * W} − ${l * w} = ${value} m²` }], answer: `${value}` },
+    misconceptions: [{ when: `${L * W}`, feedback: `That is the FULL rectangle — the ${l} × ${w} corner is missing, so subtract it.` }],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G8: surface area of a cuboid ----
+export function buildSurfaceAreaCuboid() {
+  const l = randInt(3, 10), w = randInt(2, 8), h = randInt(2, 8);
+  const value = 2 * (l * w + l * h + w * h);
+  const volume = l * w * h;
+  return {
+    type: 'surface-area-cuboid', instruction: 'Six faces, in three equal pairs.',
+    question: `Find the surface area of a cuboid ${l} cm × ${w} cm × ${h} cm.`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value}cm²`, `${value}cm2`),
+    model: { type: 'shape', data: { kind: 'rect', dims: { l, w }, emphasis: 'area', unit: 'cm', caption: `one face is ${l} × ${w} — a cuboid has three PAIRS of faces` } },
+    hints: hintLadder('A cuboid has 6 faces in 3 identical pairs: top/bottom, front/back, sides.',
+      `The pairs: ${l}×${w}, ${l}×${h}, ${w}×${h}.`,
+      `SA = 2(${l * w} + ${l * h} + ${w * h}).`),
+    solution: { steps: [
+      { text: 'Area of each different face.', expr: `${l}×${w}=${l * w},  ${l}×${h}=${l * h},  ${w}×${h}=${w * h}` },
+      { text: 'Each appears twice — double the sum.', expr: `2 × ${l * w + l * h + w * h} = ${value} cm²` }], answer: `${value}` },
+    misconceptions: volume !== value ? [{ when: `${volume}`, feedback: 'That is the VOLUME (l × w × h). Surface area adds up the six FACES.' }] : [],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G8: volume of prisms & cylinders ----
+export function buildVolumePrism() {
+  if (coin()) {
+    let b = randInt(3, 10), h = randInt(2, 8);
+    if ((b * h) % 2 !== 0) b += 1;
+    const len = randInt(5, 15);
+    const value = (b * h / 2) * len;
+    return {
+      type: 'volume-prism', instruction: 'Volume of a prism = area of cross-section × length.',
+      question: `A triangular prism has a cross-section of base ${b} cm and height ${h} cm, and is ${len} cm long. Find its volume.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}cm³`, `${value}cm3`),
+      hints: hintLadder('A prism is its cross-section, stretched.',
+        `Cross-section (triangle): ½ × ${b} × ${h} = ${b * h / 2}.`,
+        `Multiply by the length: ${b * h / 2} × ${len}.`),
+      solution: { steps: [
+        { text: 'Area of the triangular cross-section.', expr: `½ × ${b} × ${h} = ${b * h / 2} cm²` },
+        { text: 'Multiply by the length.', expr: `${b * h / 2} × ${len} = ${value} cm³` }], answer: `${value}` },
+      misconceptions: [{ when: `${b * h * len}`, feedback: 'The cross-section is a TRIANGLE — don\'t forget the ½.' }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+  const r = randInt(2, 7), h = randInt(4, 15);
+  const value = r2(Math.PI * r * r * h);
+  return {
+    type: 'volume-cylinder-adv', instruction: 'Same prism idea: circle area × height. (2 d.p.)',
+    question: `Find the volume of a cylinder with radius ${r} cm and height ${h} cm. (2 d.p.)`,
+    answer: `${value}`, accepts: accepts(`${value}`),
+    hints: hintLadder('A cylinder is a prism with a circular cross-section.',
+      `Circle area: π × ${r}² = π × ${r * r}.`,
+      `Multiply by the height ${h}.`),
+    solution: { steps: [
+      { text: 'Area of the circular cross-section.', expr: `π × ${r * r}` },
+      { text: 'Multiply by the height.', expr: `π × ${r * r} × ${h} = ${value} cm³` }], answer: `${value}` },
+    misconceptions: [{ when: numStr(r2(2 * Math.PI * r * h)), feedback: 'That used the circumference — volume needs the circle\'s AREA (πr²) times height.' }],
+    verify: { kind: 'fraction', value: Math.PI * r * r * h, tol: 0.05 },
+  };
+}
+
 export const MEASUREMENT_CONTENT = {
+  // Cambridge gap fill
+  G7_LENGTH_CONV:     withWorkedExample(buildLengthConvAdvanced),
+  G8_AREA_COMPOSITE:  withWorkedExample(buildCompositeArea),
+  G8_SURFACE_AREA:    withWorkedExample(buildSurfaceAreaCuboid),
+  G8_VOLUME_ADV:      withWorkedExample(buildVolumePrism),
   G5_PERIMETER_INTRO: withWorkedExample(buildRectanglePerimeter),
   G5_AREA_INTRO:      withWorkedExample(buildRectangleArea),
   G6_PERIMETER:       withWorkedExample(buildRectanglePerimeter),

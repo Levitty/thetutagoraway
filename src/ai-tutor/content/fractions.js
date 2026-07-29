@@ -647,6 +647,7 @@ export const FRACTIONS_CONTENT = {
                           }),
 
   // Grade 7 — fluency & supporting number skills
+  G7_FRACTIONS_ADD_UNLIKE: withWorkedExample(() => buildAddSubUnlike({ sub: Math.random() < 0.4 })),
   G7_FRACTIONS_MUL:      withLevels({
                             abstract: withWorkedExample(buildMulFractions),
                             concrete: withWorkedExample(buildMulFractionsPictorial),

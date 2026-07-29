@@ -609,8 +609,425 @@ export function buildRatioShare() {
   };
 }
 
+
+// ============================================================================
+// CAMBRIDGE GAP FILL — Number strand (Stages 7-9). Authored to the full bar:
+// worked examples, hint ladders, NAMED misconceptions, verified answers.
+// ============================================================================
+
+// ---- G7: place value in large numbers (to hundred millions) ----
+export function buildBigPlaceValue() {
+  const len = pick([6, 7, 8, 9]);
+  const digits = [randInt(1, 9), ...Array.from({ length: len - 1 }, () => randInt(0, 9))];
+  const pos = pick(digits.map((d, i) => d !== 0 ? i : null).filter(i => i !== null));
+  const digit = digits[pos];
+  const placeVal = Math.pow(10, len - 1 - pos);
+  const value = digit * placeVal;
+  const nStr = digits.join('');
+  const pretty = Number(nStr).toLocaleString('en-KE');
+  const NAMES = { 1: 'ones', 10: 'tens', 100: 'hundreds', 1000: 'thousands', 10000: 'ten thousands', 100000: 'hundred thousands', 1000000: 'millions', 10000000: 'ten millions', 100000000: 'hundred millions' };
+  return {
+    type: 'big-place-value', instruction: 'Think about the digit\'s column.',
+    question: `In the number ${pretty}, what is the VALUE of the digit ${digit}${digits.filter(d => d === digit).length > 1 ? ` in the ${NAMES[placeVal]} place` : ''}?`,
+    answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE')),
+    hints: hintLadder('Read the number in groups of three from the right: ones, thousands, millions.',
+      `Count the digits after the ${digit}: each one multiplies its value by 10.`,
+      `The ${digit} sits in the ${NAMES[placeVal]} place.`),
+    solution: { steps: [
+      { text: 'Find the digit\'s place.', expr: `${digit} is in the ${NAMES[placeVal]}` },
+      { text: 'Multiply digit × place.', expr: `${digit} × ${placeVal.toLocaleString('en-KE')} = ${value.toLocaleString('en-KE')}` }], answer: `${value}` },
+    misconceptions: [{ when: `${digit}`, feedback: `${digit} is just the digit. Its VALUE depends on the column: ${digit} ${NAMES[placeVal]} = ${value.toLocaleString('en-KE')}.` }],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G7: divisibility tests ----
+export function buildDivisibility() {
+  const rule = pick([2, 3, 4, 5, 9, 10]);
+  const kind = pick(['yesno', 'digit']);
+  if (kind === 'digit') {
+    // "What is the smallest digit that makes 51_ divisible by 3?"
+    const base = randInt(10, 98);
+    const target = pick([3, 9]);
+    let value = 0;
+    const digitSum = `${base}`.split('').reduce((t, d) => t + +d, 0);
+    while ((digitSum + value) % target !== 0) value++;
+    return {
+      type: 'divisibility-digit', instruction: 'Use the digit-sum rule.',
+      question: `What is the SMALLEST digit that can replace _ so that ${base}_ is divisible by ${target}?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(`A number is divisible by ${target} when its DIGIT SUM is divisible by ${target}.`,
+        `The digits so far add to ${digitSum}.`,
+        `What is the smallest digit that lifts ${digitSum} to a multiple of ${target}?`),
+      solution: { steps: [
+        { text: 'Add the known digits.', expr: `${'${base}'.split('').join(' + ')} = ${digitSum}` },
+        { text: `Find the smallest digit reaching a multiple of ${target}.`, expr: `${digitSum} + ${value} = ${digitSum + value}` }], answer: `${value}` },
+      misconceptions: [],
+      verify: { kind: 'fraction', value },
+    };
+  }
+  // yes/no with an engineered near-miss
+  const divisible = coin();
+  let n;
+  do {
+    n = randInt(120, 9800);
+    if (divisible) n = n - (n % rule);
+    else if (n % rule === 0) n += 1;
+  } while (rule === 4 && n < 100);
+  const value = n % rule === 0 ? 'yes' : 'no';
+  const RULES = {
+    2: 'its last digit is even', 3: 'its digit sum is divisible by 3',
+    4: 'its last TWO digits form a number divisible by 4', 5: 'it ends in 0 or 5',
+    9: 'its digit sum is divisible by 9', 10: 'it ends in 0',
+  };
+  const evidence = rule === 3 || rule === 9
+    ? `digit sum = ${'${n}'.split('').join(' + ')} = ${`${n}`.split('').reduce((t, d) => t + +d, 0)}`
+    : rule === 4 ? `last two digits: ${`${n}`.slice(-2)}` : `last digit: ${n % 10}`;
+  return {
+    type: 'divisibility', instruction: 'Answer yes or no — no long division needed.',
+    question: `Is ${n.toLocaleString('en-KE')} divisible by ${rule}?`,
+    answer: value, accepts: accepts(value),
+    hints: hintLadder(`There is a shortcut: a number is divisible by ${rule} when ${RULES[rule]}.`,
+      `Check: ${evidence}.`, 'No long division needed — just the test.'),
+    solution: { steps: [
+      { text: `Test for ${rule}: ${RULES[rule]}.`, expr: evidence },
+      { text: 'Conclude.', expr: value }], answer: value },
+    misconceptions: (rule === 3 || rule === 9)
+      ? [{ when: value === 'yes' ? 'no' : 'yes', feedback: `Don't judge by the last digit — for ${rule} you must add ALL the digits.` }]
+      : [],
+    verify: { kind: 'exact', value },
+  };
+}
+
+// ---- G7: prime factorization ----
+export function buildPrimeFactorization() {
+  const exps = { 2: randInt(1, 3), 3: randInt(0, 2), 5: coin() ? 1 : 0, 7: coin() ? 1 : 0 };
+  let n = 1;
+  for (const [p, e] of Object.entries(exps)) n *= Math.pow(+p, e);
+  if (n < 12 || n > 900) return buildPrimeFactorization();
+  const primes = Object.entries(exps).filter(([, e]) => e > 0).map(([p]) => +p);
+  const largest = Math.max(...primes);
+  const count = Object.values(exps).reduce((t, e) => t + e, 0);
+  const askLargest = coin();
+  const value = askLargest ? largest : count;
+  const tree = Object.entries(exps).filter(([, e]) => e > 0).map(([p, e]) => e > 1 ? `${p}^${e}` : `${p}`).join(' × ');
+  return {
+    type: 'prime-factorization', instruction: 'Break it into primes first.',
+    question: askLargest
+      ? `What is the LARGEST prime factor of ${n}?`
+      : `How many prime factors does ${n} have in total (counting repeats)?`,
+    answer: `${value}`, accepts: accepts(`${value}`),
+    hints: hintLadder('Divide by the smallest primes first: 2, then 3, then 5…',
+      'Keep dividing until every branch of the factor tree ends in a prime.',
+      `${n} = ${tree}.`),
+    solution: { steps: [
+      { text: 'Build the factor tree (divide by small primes repeatedly).', expr: `${n} = ${tree}` },
+      { text: askLargest ? 'Pick the largest prime in the product.' : 'Count every prime, including repeats.', expr: `${value}` }], answer: `${value}` },
+    misconceptions: askLargest
+      ? [{ when: `${n}`, feedback: `${n} is the whole number — we want the largest PRIME in its factor tree.` }]
+      : [{ when: `${primes.length}`, feedback: primes.length !== count ? 'Count repeats too: 2 × 2 × 3 has THREE prime factors.' : 'Recount carefully.' }].filter(m => m.when !== `${value}`),
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G7: decimal place value — the "longer means larger" killer ----
+export function buildDecimalPV() {
+  if (coin()) {
+    // Compare: engineered so the SHORTER decimal is often the larger one.
+    const a = randInt(3, 9) / 10;                       // e.g. 0.4
+    const b = +(a - 0.1 + randInt(1, 9) / 100).toFixed(2);   // e.g. 0.35
+    if (b >= a || b <= 0) return buildDecimalPV();
+    const value = a;
+    return {
+      type: 'decimal-compare', instruction: 'Answer with the number.',
+      question: `Which is larger: ${b} or ${a}?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      model: { type: 'place-value', data: { numbers: [`${b}`, `${a}`], caption: 'line up the tenths column and compare there first' } },
+      hints: hintLadder('Compare place by place, starting from the TENTHS.',
+        `Tenths: ${Math.floor(b * 10) % 10} against ${Math.floor(a * 10) % 10}.`,
+        'More digits does NOT mean bigger.'),
+      solution: { steps: [
+        { text: 'Compare the tenths first.', expr: `${Math.floor(b * 10) % 10} < ${Math.floor(a * 10) % 10}` },
+        { text: 'The larger tenths digit wins.', expr: `${value}` }], answer: `${value}` },
+      misconceptions: [{ when: `${b}`, feedback: `${b} has more digits but they sit in SMALLER columns. ${a} wins in the tenths — longer is not larger.` }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+  const intPart = randInt(1, 9), d1 = randInt(1, 9), d2 = randInt(1, 9), d3 = randInt(1, 9);
+  const x = `${intPart}.${d1}${d2}${d3}`;
+  const which = pick([1, 2, 3]);
+  const digit = [d1, d2, d3][which - 1];
+  const value = digit / Math.pow(10, which);
+  const NAME = { 1: 'tenths', 2: 'hundredths', 3: 'thousandths' }[which];
+  return {
+    type: 'decimal-digit-value', instruction: 'Think about the column after the point.',
+    question: `In ${x}, what is the VALUE of the digit ${digit}${[d1, d2, d3].filter(d => d === digit).length > 1 ? ` in the ${NAME} place` : ''}?`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${digit}/${Math.pow(10, which)}`),
+    model: { type: 'place-value', data: { numbers: [x] } },
+    hints: hintLadder('After the point the columns shrink: tenths, hundredths, thousandths.',
+      `Count the places after the point up to the ${digit}.`,
+      `The ${digit} is in the ${NAME} column.`),
+    solution: { steps: [
+      { text: 'Locate the column.', expr: `${digit} is in the ${NAME}` },
+      { text: 'Write its value.', expr: `${digit} ÷ ${Math.pow(10, which)} = ${value}` }], answer: `${value}` },
+    misconceptions: [{ when: `${digit}`, feedback: `${digit} is the digit; its VALUE in the ${NAME} column is ${value}.` }],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G7: squares of decimals and fractions ----
+export function buildSquaresExtended() {
+  if (coin()) {
+    const d = randInt(2, 9);
+    const x = d / 10;
+    const value = +(x * x).toFixed(2);
+    return {
+      type: 'square-decimal', instruction: 'Square it.',
+      question: `Work out (${x})²`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder('Squaring means multiplying the number by ITSELF.',
+        `${x} × ${x} — multiply ${d} × ${d}, then place the decimal.`,
+        `${d} × ${d} = ${d * d}, and tenths × tenths = hundredths.`),
+      solution: { steps: [
+        { text: 'Multiply the digits.', expr: `${d} × ${d} = ${d * d}` },
+        { text: 'Tenths × tenths gives hundredths (two decimal places).', expr: `${value}` }], answer: `${value}` },
+      misconceptions: [{ when: `${+(2 * x).toFixed(1)}`, feedback: 'That is DOUBLING. Squaring multiplies the number by itself.' }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+  let a = randInt(1, 7), b = randInt(2, 9);
+  while (a >= b) { a = randInt(1, 7); b = randInt(2, 9); }
+  const g = (x, y) => { let p = x, q = y; while (q) [p, q] = [q, p % q]; return p; };
+  const gg = g(a, b); a /= gg; b /= gg;
+  const value = (a * a) / (b * b);
+  return {
+    type: 'square-fraction', instruction: 'Square it.',
+    question: `Work out (${a}/${b})²`,
+    answer: `${a * a}/${b * b}`, accepts: accepts(`${a * a}/${b * b}`),
+    hints: hintLadder('Squaring a fraction squares BOTH the top and the bottom.',
+      `(${a}/${b})² = (${a} × ${a})/(${b} × ${b}).`,
+      `Top: ${a * a}. Bottom: ${b * b}.`),
+    solution: { steps: [
+      { text: 'Square numerator and denominator separately.', expr: `${a}²/${b}² = ${a * a}/${b * b}` }], answer: `${a * a}/${b * b}` },
+    misconceptions: [{ when: `${a * a}/${b}`, feedback: 'You squared only the top — the DENOMINATOR gets squared too.' }],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G8: standard form ----
+export function buildStandardForm() {
+  const mant = randInt(11, 99) / 10;                    // 1.1 … 9.9
+  const exp = randInt(3, 6);
+  const ordinary = Math.round(mant * Math.pow(10, exp));
+  if (coin()) {
+    return {
+      type: 'standard-to-ordinary', instruction: 'Write it out in full.',
+      question: `Write ${mant} × 10^${exp} as an ordinary number.`,
+      answer: `${ordinary}`, accepts: accepts(`${ordinary}`, ordinary.toLocaleString('en-KE')),
+      hints: hintLadder(`10^${exp} means the point moves ${exp} places to the RIGHT.`,
+        `Start at ${mant} and shift the decimal point ${exp} places, filling with zeros.`,
+        `${mant} → ${mant * 10} → ${mant * 100} → …`),
+      solution: { steps: [
+        { text: `Shift the decimal point ${exp} places right.`, expr: `${mant} × 10^${exp} = ${ordinary.toLocaleString('en-KE')}` }], answer: `${ordinary}` },
+      misconceptions: [{ when: `${Math.round(mant * Math.pow(10, exp - 1))}`, feedback: `Count again — the power says ${exp} shifts, one for every factor of 10.` }],
+      verify: { kind: 'fraction', value: ordinary },
+    };
+  }
+  const answer = `${mant}×10^${exp}`;
+  return {
+    type: 'ordinary-to-standard', instruction: 'One digit before the point, times a power of 10.',
+    question: `Write ${ordinary.toLocaleString('en-KE')} in standard form.`,
+    answer,
+    accepts: accepts(answer, `${mant}x10^${exp}`, `${mant}*10^${exp}`, `${mant} × 10^${exp}`, `${mant}e${exp}`),
+    hints: hintLadder('Standard form is  a × 10^n  with 1 ≤ a < 10.',
+      `Place the point after the first digit: ${mant}.`,
+      `Count how many places the point moved — that is the power.`),
+    solution: { steps: [
+      { text: 'Put the point after the first significant digit.', expr: `${mant}` },
+      { text: `Count the shifts back to the original number.`, expr: `${exp} places → ${answer}` }], answer },
+    misconceptions: [{ when: `${mant}×10^${exp + 1}`, feedback: 'Off by one — count the point\'s moves carefully, not the number of digits.' }],
+    verify: { kind: 'exact', value: answer },
+  };
+}
+
+// ---- G8: proportion (unitary method) — with the additive-error trap ----
+export function buildProportion() {
+  const unit = pick([15, 20, 25, 30, 40, 50]);
+  const n1 = randInt(3, 8);
+  let n2 = randInt(3, 12);
+  while (n2 === n1) n2 = randInt(3, 12);
+  const cost1 = unit * n1, value = unit * n2;
+  const item = pick(['exercise books', 'pens', 'mandazi', 'oranges', 'chapati']);
+  const additive = cost1 + (n2 - n1);
+  return {
+    type: 'proportion', instruction: 'Find the value of ONE first.',
+    question: `${n1} ${item} cost ${cost1} shillings. How much do ${n2} ${item} cost?`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value}/-`),
+    hints: hintLadder('Unitary method: find the price of ONE first.',
+      `One costs ${cost1} ÷ ${n1}.`,
+      `Then multiply by ${n2}.`),
+    solution: { steps: [
+      { text: 'Price of one.', expr: `${cost1} ÷ ${n1} = ${unit}` },
+      { text: `Price of ${n2}.`, expr: `${unit} × ${n2} = ${value}` }], answer: `${value}` },
+    misconceptions: additive !== value ? [{ when: `${additive}`, feedback: `Prices don't grow by ADDING the extra count — each ${item.slice(0, -1)} costs ${unit}/-, so scale by multiplying.` }] : [],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G8: profit, loss & percentage — always on the COST price ----
+export function buildProfitLoss() {
+  const cp = pick([200, 400, 500, 800, 1000, 1200, 2000]);
+  const pct = pick([5, 10, 15, 20, 25, 30]);
+  const isProfit = coin();
+  const change = (cp * pct) / 100;
+  const sp = isProfit ? cp + change : cp - change;
+  const askPct = coin();
+  if (askPct) {
+    const wrongOnSP = Math.round((change / sp) * 100);
+    return {
+      type: 'profit-percent', instruction: 'Percentage change is measured on the BUYING price.',
+      question: `A trader buys a radio for ${cp}/- and sells it for ${sp}/-. Find the percentage ${isProfit ? 'profit' : 'loss'}.`,
+      answer: `${pct}`, accepts: accepts(`${pct}`, `${pct}%`),
+      hints: hintLadder(`First find the actual ${isProfit ? 'profit' : 'loss'} in shillings.`,
+        `${isProfit ? 'Profit' : 'Loss'} = ${isProfit ? `${sp} − ${cp}` : `${cp} − ${sp}`} = ${change}.`,
+        `Percentage = (${change} ÷ ${cp}) × 100 — divide by what was PAID.`),
+      solution: { steps: [
+        { text: `Find the ${isProfit ? 'profit' : 'loss'}.`, expr: `${change}/-` },
+        { text: 'Divide by the COST price and make it a percentage.', expr: `(${change} ÷ ${cp}) × 100 = ${pct}%` }], answer: `${pct}` },
+      misconceptions: wrongOnSP !== pct ? [{ when: `${wrongOnSP}`, feedback: `You divided by the SELLING price. Percentage profit/loss is always measured against the COST price (${cp}/-).` }] : [],
+      verify: { kind: 'fraction', value: pct },
+    };
+  }
+  return {
+    type: 'selling-price', instruction: 'Work out the selling price.',
+    question: `A shopkeeper buys a bag for ${cp}/- and sells it at a ${pct}% ${isProfit ? 'profit' : 'loss'}. Find the selling price.`,
+    answer: `${sp}`, accepts: accepts(`${sp}`, `${sp}/-`),
+    hints: hintLadder(`${pct}% of the cost price is the ${isProfit ? 'profit' : 'loss'} in shillings.`,
+      `${pct}% of ${cp} = ${change}.`,
+      `${isProfit ? 'Add it to' : 'Subtract it from'} the cost price.`),
+    solution: { steps: [
+      { text: `Find ${pct}% of the cost.`, expr: `${pct}% × ${cp} = ${change}` },
+      { text: isProfit ? 'Add the profit.' : 'Subtract the loss.', expr: `${cp} ${isProfit ? '+' : '−'} ${change} = ${sp}` }], answer: `${sp}` },
+    misconceptions: [{ when: `${change}`, feedback: `${change}/- is only the ${isProfit ? 'profit' : 'loss'}. The question asks the full SELLING price.` }],
+    verify: { kind: 'fraction', value: sp },
+  };
+}
+
+// ---- G9: compound interest — taught year by year, not by formula magic ----
+export function buildCompoundInterest() {
+  const combo = pick([
+    { P: 10000, r: 10, n: 2 }, { P: 20000, r: 10, n: 2 }, { P: 5000, r: 10, n: 3 },
+    { P: 10000, r: 10, n: 3 }, { P: 8000, r: 5, n: 2 }, { P: 40000, r: 5, n: 2 },
+    { P: 2500, r: 20, n: 2 }, { P: 5000, r: 20, n: 2 },
+  ]);
+  const { P, r, n } = combo;
+  const years = [];
+  let amount = P;
+  for (let y = 1; y <= n; y++) {
+    const interest = (amount * r) / 100;
+    years.push({ y, start: amount, interest, end: amount + interest });
+    amount += interest;
+  }
+  const value = amount;
+  const simple = P + (P * r * n) / 100;
+  return {
+    type: 'compound-interest', instruction: 'Interest earns interest — work year by year.',
+    question: `${P.toLocaleString('en-KE')} shillings is saved at ${r}% COMPOUND interest per year. How much is in the account after ${n} years?`,
+    answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE')),
+    hints: hintLadder('Each year\'s interest is calculated on the NEW balance, not the original.',
+      `Year 1: ${r}% of ${P.toLocaleString('en-KE')} = ${years[0].interest.toLocaleString('en-KE')} → balance ${years[0].end.toLocaleString('en-KE')}.`,
+      `Now repeat on ${years[0].end.toLocaleString('en-KE')}, not on ${P.toLocaleString('en-KE')}.`),
+    solution: { steps: [
+      ...years.map(({ y, start, interest, end }) => (
+        { text: `Year ${y}: ${r}% of ${start.toLocaleString('en-KE')}.`, expr: `+${interest.toLocaleString('en-KE')} → ${end.toLocaleString('en-KE')}` }
+      ))], answer: `${value}` },
+    misconceptions: simple !== value ? [{ when: `${simple}`, feedback: `That is SIMPLE interest (${r}% of the original every year). Compound interest grows on the growing balance.` }] : [],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G9: surds — simplify √N ----
+export function buildSurds() {
+  const k = pick([2, 2, 3, 3, 4, 5]);
+  const m = pick([2, 3, 5, 6, 7]);
+  const N = k * k * m;
+  const answer = `${k}√${m}`;
+  return {
+    type: 'surd-simplify', instruction: 'Pull out the largest square factor.',
+    question: `Simplify √${N}`,
+    answer,
+    accepts: accepts(answer, `${k}sqrt(${m})`, `${k}sqrt${m}`, `${k}root${m}`, `${k} √${m}`),
+    hints: hintLadder('Look for the largest SQUARE number that divides it.',
+      `${N} = ${k * k} × ${m}, and ${k * k} is a perfect square.`,
+      `√(${k * k} × ${m}) = √${k * k} × √${m}.`),
+    solution: { steps: [
+      { text: 'Split out the square factor.', expr: `√${N} = √(${k * k} × ${m})` },
+      { text: 'Take the square root of the square.', expr: `${k}√${m}` }], answer },
+    misconceptions: [
+      { when: `${N / 2}`, feedback: 'A square root is not "half of" — it asks what number MULTIPLIES BY ITSELF to give this.' },
+      ...(k === 4 ? [{ when: `2√${4 * m}`, feedback: `Keep going — ${4 * m} still has a square factor of 4 inside.` }] : []),
+    ],
+    verify: { kind: 'numeric', f: () => k * Math.sqrt(m), at: 0, value: Math.sqrt(N) },
+  };
+}
+
+// ---- G9: direct & inverse variation ----
+export function buildVariation() {
+  const inverse = coin();
+  if (!inverse) {
+    const k = randInt(2, 8), x1 = randInt(2, 6);
+    let x2 = randInt(2, 12);
+    while (x2 === x1) x2 = randInt(2, 12);
+    const y1 = k * x1, value = k * x2;
+    return {
+      type: 'direct-variation', instruction: 'Find the constant first.',
+      question: `y varies DIRECTLY as x, and y = ${y1} when x = ${x1}. Find y when x = ${x2}.`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder('Direct variation: y = kx for some constant k.',
+        `Find k from the given pair: k = ${y1} ÷ ${x1}.`,
+        `k = ${k}; now use y = ${k} × ${x2}.`),
+      solution: { steps: [
+        { text: 'Find the constant of variation.', expr: `k = ${y1}/${x1} = ${k}` },
+        { text: 'Apply it to the new x.', expr: `y = ${k} × ${x2} = ${value}` }], answer: `${value}` },
+      misconceptions: [{ when: `${y1 + (x2 - x1)}`, feedback: 'y doesn\'t grow by ADDING what x added — direct variation SCALES: y = kx.' }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+  const k = pick([24, 36, 48, 60, 72]);
+  const divisors = [2, 3, 4, 6, 8, 12].filter(d => k % d === 0);
+  const x1 = pick(divisors);
+  let x2 = pick(divisors);
+  while (x2 === x1) x2 = pick(divisors);
+  const y1 = k / x1, value = k / x2;
+  return {
+    type: 'inverse-variation', instruction: 'The PRODUCT stays constant.',
+    question: `y varies INVERSELY as x, and y = ${y1} when x = ${x1}. Find y when x = ${x2}.`,
+    answer: `${value}`, accepts: accepts(`${value}`),
+    hints: hintLadder('Inverse variation: y = k/x, so x × y is always the same.',
+      `k = x × y = ${x1} × ${y1} = ${k}.`,
+      `y = ${k} ÷ ${x2}.`),
+    solution: { steps: [
+      { text: 'Find the constant product.', expr: `k = ${x1} × ${y1} = ${k}` },
+      { text: 'Divide by the new x.', expr: `y = ${k}/${x2} = ${value}` }], answer: `${value}` },
+    misconceptions: [{ when: `${(y1 * x2) / x1 === Math.round((y1 * x2) / x1) ? (y1 * x2) / x1 : ''}`, feedback: 'That is DIRECT variation. Inversely means as x grows, y SHRINKS — their product stays fixed.' }].filter(m => m.when !== '' && m.when !== `${value}`),
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const NUMBERS_CONTENT = {
   G6_RATIOS:             withWorkedExample(buildRatioShare),
+  // Cambridge gap fill (Stages 7-9)
+  G7_PLACE_VALUE:        withWorkedExample(buildBigPlaceValue),
+  G7_DIVISIBILITY:       withWorkedExample(buildDivisibility),
+  G7_PRIME_FACTORIZATION: withWorkedExample(buildPrimeFactorization),
+  G7_DECIMAL_PV:         withWorkedExample(buildDecimalPV),
+  G7_SQUARES_EXT:        withWorkedExample(buildSquaresExtended),
+  G8_STANDARD_FORM:      withWorkedExample(buildStandardForm),
+  G8_RATIO_PROPORTION:   withWorkedExample(buildProportion),
+  G8_PROFIT_LOSS:        withWorkedExample(buildProfitLoss),
+  G9_COMPOUND_INTEREST:  withWorkedExample(buildCompoundInterest),
+  G9_SURDS_INTRO:        withWorkedExample(buildSurds),
+  G9_VARIATION:          withWorkedExample(buildVariation),
   G5_PATTERNS:           withWorkedExample(buildNumberPattern),
   G5_MISSING_NUMBER:     withWorkedExample(buildMissingNumber),
 
