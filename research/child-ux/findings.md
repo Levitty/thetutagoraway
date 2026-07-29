@@ -240,6 +240,26 @@ foundation gets a toddler interface. Feels condescending. **Design rework — no
 clash with the reskinned sidebar/home. These tabs predate the light reskin. Progress/Awards likely
 the same. **Design rework — not yet done.**
 
+## F18 · Automated content audit (scripts/audit-content.mjs) — 47 issues found & fixed
+
+**What I did:** with the live session expired, moved testing to engine level — a new audit
+script that samples every math skill's generator 30× and checks the bug classes found by
+hand: steps-match-their-problem (F11), comparison choices (F14), remediation consistency,
+worked-example self-consistency, and hint coverage.
+
+**Found:**
+- 🟠 G5 addition/subtraction worked examples never stated their own final answer in the
+  steps (ended at digit-work like "2+5+1=8" without "= 801"). **Fixed** — both now close
+  with "Read the digits: … = answer".
+- 🟠 **45 skills had no specific hint at all** (time, mass, length, capacity, tally,
+  graphs, lines, angles, conversions, ratio, inequalities, matrices…) — every wrong answer
+  there fell to the canned line (the F1/F2 gap, quantified). **Fixed: all 45** now carry
+  procedure-cueing hints using the problem's own numbers where possible. Audit reports
+  full coverage; engine regression suite still green.
+
+**Verdict:** the audit is now a permanent guard — run `node scripts/audit-content.mjs`
+before shipping content changes.
+
 ## Coverage so far
 Multiplication · Addition · Subtraction · Fractions — worked example, practice, wrong-answer
 arc (×3 attempts), proactive hint, correct-answer, scaffold escalation, input edge cases,

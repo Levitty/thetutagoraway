@@ -35,6 +35,36 @@ so gibberish doesn't burn an attempt; nudge "type a number" instead of a maths h
 From F1, F8. Every "full working" / "teach it back" should show the partial products
 (40×4 = 160, 2×4 = 8, 160 + 8 = 168), not the collapsed "Add → 168".
 
+## Gap analysis vs the evidence (see [platform-research.md](platform-research.md))
+
+Scored HOREB against the 10 evidence-backed practices (✓ have, ◐ partial, ✗ gap):
+
+| # | Practice | HOREB today |
+|---|---|---|
+| 1 | ~80% success rate in practice | ◐ unmeasured — KP ladder adapts but nothing tracks/steers session success rate |
+| 2 | Wrong answer triggers teaching | ✓ (diagnosis + own-numbers working, built Jul 28) |
+| 3 | Hints scaffold process; numbers regenerate on retry | ◐ hints stop short of the answer ✓, but retry keeps the same numbers (Khan hint-farm trap) |
+| 4 | No visible point loss on errors | ✓ (never had it; keep it that way) |
+| 5 | Mastery certified on a delayed, mixed check | ✗ mastery lands in-session at minProblems; reviews exist but don't gate the "Mastered" badge |
+| 6 | Review scheduled by forgetting + graph propagation | ✓ FIRe + spaced repetition |
+| 7 | Interleave old skills into every session | ◐ review sessions interleave, but lessons are blocked single-skill |
+| 8 | Fade scaffolding per learner | ✓ Renkl backward-fading |
+| 9 | Reward effort-time and process | ◐ XP is per-correct; no credit for honest time / reading solutions |
+| 10 | Safe, specific, blame-free tone | ✓ (after the Jul 28 remediation work) |
+
+### New backlog from the gaps
+- **B6 · Regenerate numbers on retry** (practice 3): after a wrong attempt, re-pose the
+  same KP with fresh numbers so "first steps" help can't be farmed into the answer.
+- **B7 · Delayed mastery check** (practice 5): a skill reaching minProblems becomes
+  "Proficient"; "Mastered" is confirmed by 2–3 questions in a later mixed review — cheap
+  to re-prove (avoid Khan's leveling-down pain).
+- **B8 · Interleave into lessons** (practice 7): mix 1–2 due-review questions from other
+  skills into every lesson session.
+- **B9 · Success-rate telemetry** (practice 1): track per-session accuracy; steer problem
+  difficulty toward ~80%.
+- **B10 · Effort-aware XP** (practice 9): small XP for completed teaching moments (reading
+  the working after a miss), so struggling honestly still visibly pays.
+
 ## Protect (don't regress)
 Correct-answer warmth + "Teach it back" (F3) · backward-fading scaffold (F4) · area/column
 animated worked example (F5) · decimal normalisation (F7) · mid-lesson resume (F9).
