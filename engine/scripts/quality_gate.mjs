@@ -189,7 +189,7 @@ function validateModel(m, where) {
       return null;
     }
     case 'shape': {
-      if (!['rect', 'triangle', 'circle'].includes(d.kind)) return `${where}: unknown shape kind ${d.kind}`;
+      if (!['rect', 'square', 'triangle', 'circle', 'oval'].includes(d.kind)) return `${where}: unknown shape kind ${d.kind}`;
       const dims = Object.values(d.dims || {});
       if (!dims.length || dims.some(v => !Number.isFinite(v) || v <= 0)) return `${where}: shape dims must be positive numbers`;
       return null;
@@ -197,6 +197,43 @@ function validateModel(m, where) {
     case 'numberline-interval': {
       if (!Number.isFinite(d.lo) || !Number.isFinite(d.hi) || d.lo >= d.hi) return `${where}: interval lo/hi invalid`;
       if (!Number.isFinite(d.value) || d.value < d.lo || d.value > d.hi) return `${where}: stated value outside its interval`;
+      return null;
+    }
+    case 'ten-frame': {
+      const total = d.op === '+' ? (d.a + d.b) : d.a;
+      if (!Number.isFinite(d.a) || !Number.isFinite(d.b) || d.a < 0 || d.b < 0) return `${where}: ten-frame a/b invalid`;
+      if (total > 20) return `${where}: ten-frame overflows two frames (${total})`;
+      if (d.op === '−' && d.b > d.a) return `${where}: ten-frame subtracts more than shown`;
+      return null;
+    }
+    case 'dot-array': {
+      if (d.rows != null) {
+        if (d.rows < 1 || d.cols < 1 || d.rows > 12 || d.cols > 12) return `${where}: dot-array ${d.rows}×${d.cols} undrawable`;
+      } else {
+        if (!Number.isFinite(d.total) || !Number.isFinite(d.groupSize) || d.groupSize < 1 || d.total < 1) return `${where}: dot-array share data invalid`;
+        if (d.groupSize > 12 || d.total / d.groupSize > 12) return `${where}: dot-array share too large to draw`;
+      }
+      return null;
+    }
+    case 'clock': {
+      if (!Number.isFinite(d.h) || !Number.isFinite(d.m) || d.h < 0 || d.h > 23 || d.m < 0 || d.m > 59) return `${where}: clock time ${d.h}:${d.m} invalid`;
+      return null;
+    }
+    case 'money': {
+      if (!d.items?.length) return `${where}: money has no items`;
+      const DENOMS = [1, 5, 10, 20, 50, 100, 200, 500, 1000];
+      for (const it of d.items) {
+        if (!DENOMS.includes(it.value) || !Number.isFinite(it.count) || it.count < 1) return `${where}: money item ${it.value}×${it.count} invalid (not a Kenyan denomination)`;
+      }
+      if (d.items.reduce((s, it) => s + Math.min(it.count, 12), 0) > 24) return `${where}: too many money pieces to draw`;
+      return null;
+    }
+    case 'base-ten': {
+      if (!Number.isFinite(d.value) || d.value < 1 || d.value > 999) return `${where}: base-ten value ${d.value} out of drawable range (1-999)`;
+      return null;
+    }
+    case 'formula-triangle': {
+      if (!d.top || !d.left || !d.right) return `${where}: formula-triangle needs top/left/right`;
       return null;
     }
     default: return `${where}: unknown model type ${m.type}`;

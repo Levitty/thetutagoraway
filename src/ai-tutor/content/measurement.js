@@ -134,6 +134,7 @@ export function buildSpeed() {
   function mk(kind, q, value, rule, expr, unit) {
     return {
       type: 'speed', instruction: 'Work it out.', question: q, answer: `${value}`, accepts: accepts(`${value}`, `${value}${unit}`),
+      model: { type: 'formula-triangle', data: { top: 'D', left: 'S', right: 'T', caption: `cover the one you want: D = S×T, S = D÷T, T = D÷S` } },
       hints: hintLadder(rule, 'Remember the distance–speed–time triangle.', expr),
       solution: { steps: [{ text: rule, expr }, { text: 'Evaluate.', expr: `${value} ${unit}` }], answer: `${value}` },
       misconceptions: [], verify: { kind: 'fraction', value },
@@ -269,6 +270,7 @@ export function buildDensity() {
     type: 'density', instruction: 'Find the density.',
     question: `An object has mass ${mass} g and volume ${volume} cm³. Find its density.`,
     answer: `${density}`, accepts: accepts(`${density}`, `${density}g/cm³`),
+    model: { type: 'formula-triangle', data: { top: 'M', left: 'D', right: 'V', caption: 'cover the one you want: M = D×V, D = M÷V, V = M÷D' } },
     hints: hintLadder('Density = mass ÷ volume.', `${mass} ÷ ${volume}.`),
     solution: { steps: [{ text: 'Use density = mass ÷ volume.', expr: `${mass} ÷ ${volume} = ${density} g/cm³` }], answer: `${density}` },
     misconceptions: [], verify: { kind: 'fraction', value: density },

@@ -17,7 +17,7 @@ export const NATIVE = 'native';
 export const CURRICULA = {
   native: {
     id: 'native',
-    name: 'Default (Grade 5–12)',
+    name: 'Default (Grade 1–12)',
     shortName: 'Default',
     bandLabel: 'Grade',
     bands: [5, 6, 7, 8, 9, 10, 11, 12],

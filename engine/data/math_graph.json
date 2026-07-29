@@ -8,6 +8,10 @@
     "Statistics"
   ],
   "grades": [
+    1,
+    2,
+    3,
+    4,
     5,
     6,
     7,
@@ -17,15 +21,795 @@
     11,
     12
   ],
-  "skill_count": 206,
+  "skill_count": 244,
   "skills": [
+    {
+      "id": "G1_COUNT_20",
+      "name": "Counting Objects (to 20)",
+      "grade": 1,
+      "strand": "Numbers",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G1_NUMBER_ORDER",
+      "name": "Number Order (to 100)",
+      "grade": 1,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "key_prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G1_COMPARE",
+      "name": "More or Less (to 20)",
+      "grade": 1,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "key_prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G1_ADD_10",
+      "name": "Addition within 10",
+      "grade": 1,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "key_prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G1_SUB_10",
+      "name": "Subtraction within 10",
+      "grade": 1,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G1_ADD_10"
+      ],
+      "key_prerequisites": [
+        "G1_ADD_10"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G1_SHAPES",
+      "name": "Naming Shapes",
+      "grade": 1,
+      "strand": "Geometry",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G1_LENGTH_COMPARE",
+      "name": "Longer or Shorter",
+      "grade": 1,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G1_COMPARE"
+      ],
+      "key_prerequisites": [
+        "G1_COMPARE"
+      ],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G1_MONEY_COINS",
+      "name": "Counting Money (Coins)",
+      "grade": 1,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "key_prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G2_PLACE_VALUE_100",
+      "name": "Tens and Ones (Blocks)",
+      "grade": 2,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G1_NUMBER_ORDER"
+      ],
+      "key_prerequisites": [
+        "G1_NUMBER_ORDER"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G2_ADD_100",
+      "name": "Addition within 100",
+      "grade": 2,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G1_ADD_10",
+        "G2_PLACE_VALUE_100"
+      ],
+      "key_prerequisites": [
+        "G1_ADD_10",
+        "G2_PLACE_VALUE_100"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G2_SUB_100",
+      "name": "Subtraction within 100",
+      "grade": 2,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G1_SUB_10",
+        "G2_PLACE_VALUE_100"
+      ],
+      "key_prerequisites": [
+        "G1_SUB_10",
+        "G2_PLACE_VALUE_100"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G2_SKIP_COUNT",
+      "name": "Skip Counting (2s, 5s, 10s)",
+      "grade": 2,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G1_NUMBER_ORDER"
+      ],
+      "key_prerequisites": [
+        "G1_NUMBER_ORDER"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G2_MULT_INTRO",
+      "name": "Multiplication as Groups",
+      "grade": 2,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G2_SKIP_COUNT",
+        "G1_ADD_10"
+      ],
+      "key_prerequisites": [
+        "G2_SKIP_COUNT",
+        "G1_ADD_10"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G2_FRACTIONS_HALVES",
+      "name": "Halves, Thirds & Quarters",
+      "grade": 2,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "key_prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G2_TIME_HOURS",
+      "name": "Clock: Hours & Half-hours",
+      "grade": 2,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "key_prerequisites": [
+        "G1_COUNT_20"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G2_MONEY_ADD",
+      "name": "Money Totals (Shillings)",
+      "grade": 2,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G1_MONEY_COINS",
+        "G1_ADD_10"
+      ],
+      "key_prerequisites": [
+        "G1_MONEY_COINS",
+        "G1_ADD_10"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G2_SHAPES_PROPERTIES",
+      "name": "Sides & Corners of Shapes",
+      "grade": 2,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G1_SHAPES"
+      ],
+      "key_prerequisites": [
+        "G1_SHAPES"
+      ],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G3_PLACE_VALUE_1000",
+      "name": "Hundreds, Tens and Ones",
+      "grade": 3,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G2_PLACE_VALUE_100"
+      ],
+      "key_prerequisites": [
+        "G2_PLACE_VALUE_100"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G3_ADD_1000",
+      "name": "Addition (3-digit)",
+      "grade": 3,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G2_ADD_100",
+        "G3_PLACE_VALUE_1000"
+      ],
+      "key_prerequisites": [
+        "G2_ADD_100",
+        "G3_PLACE_VALUE_1000"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G3_SUB_1000",
+      "name": "Subtraction (3-digit)",
+      "grade": 3,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G2_SUB_100",
+        "G3_PLACE_VALUE_1000"
+      ],
+      "key_prerequisites": [
+        "G2_SUB_100",
+        "G3_PLACE_VALUE_1000"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G3_TIMES_TABLES",
+      "name": "Multiplication Tables (2–9)",
+      "grade": 3,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G2_MULT_INTRO"
+      ],
+      "key_prerequisites": [
+        "G2_MULT_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G3_DIVISION_SHARE",
+      "name": "Division as Sharing",
+      "grade": 3,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G3_TIMES_TABLES"
+      ],
+      "key_prerequisites": [
+        "G3_TIMES_TABLES"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G3_FRACTIONS_UNIT",
+      "name": "A Fraction of an Amount",
+      "grade": 3,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G2_FRACTIONS_HALVES",
+        "G3_DIVISION_SHARE"
+      ],
+      "key_prerequisites": [
+        "G2_FRACTIONS_HALVES",
+        "G3_DIVISION_SHARE"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G3_TIME_5MIN",
+      "name": "Clock: 5-minute Times",
+      "grade": 3,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G2_TIME_HOURS",
+        "G2_SKIP_COUNT"
+      ],
+      "key_prerequisites": [
+        "G2_TIME_HOURS",
+        "G2_SKIP_COUNT"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G3_MONEY_CHANGE",
+      "name": "Money: Paying & Change",
+      "grade": 3,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G2_MONEY_ADD",
+        "G2_SUB_100"
+      ],
+      "key_prerequisites": [
+        "G2_MONEY_ADD",
+        "G2_SUB_100"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G3_UNIT_CONVERT",
+      "name": "Units: m/cm, kg/g, L/ml",
+      "grade": 3,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G3_PLACE_VALUE_1000"
+      ],
+      "key_prerequisites": [
+        "G3_PLACE_VALUE_1000"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_PLACE_VALUE_10000",
+      "name": "Place Value (to 10 000)",
+      "grade": 4,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G3_PLACE_VALUE_1000"
+      ],
+      "key_prerequisites": [
+        "G3_PLACE_VALUE_1000"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_ADD_SUB_BIG",
+      "name": "Add & Subtract (4-digit)",
+      "grade": 4,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G3_ADD_1000",
+        "G3_SUB_1000"
+      ],
+      "key_prerequisites": [
+        "G3_ADD_1000",
+        "G3_SUB_1000"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_MULT_2DIGIT",
+      "name": "Multiply (2-digit × 1-digit)",
+      "grade": 4,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G3_TIMES_TABLES",
+        "G4_PLACE_VALUE_10000"
+      ],
+      "key_prerequisites": [
+        "G3_TIMES_TABLES",
+        "G4_PLACE_VALUE_10000"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_DIVISION_REMAINDER",
+      "name": "Division with Remainders",
+      "grade": 4,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G3_DIVISION_SHARE"
+      ],
+      "key_prerequisites": [
+        "G3_DIVISION_SHARE"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_FRACTIONS_OF_SET",
+      "name": "Fractions of a Set",
+      "grade": 4,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G3_FRACTIONS_UNIT",
+        "G3_TIMES_TABLES"
+      ],
+      "key_prerequisites": [
+        "G3_FRACTIONS_UNIT",
+        "G3_TIMES_TABLES"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_FRACTIONS_COMPARE",
+      "name": "Comparing Fractions (Like)",
+      "grade": 4,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G2_FRACTIONS_HALVES"
+      ],
+      "key_prerequisites": [
+        "G2_FRACTIONS_HALVES"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_DECIMALS_TENTHS",
+      "name": "Tenths as Decimals",
+      "grade": 4,
+      "strand": "Numbers",
+      "prerequisites": [
+        "G3_FRACTIONS_UNIT"
+      ],
+      "key_prerequisites": [
+        "G3_FRACTIONS_UNIT"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_TIME_DURATION",
+      "name": "Time: How Long? (Duration)",
+      "grade": 4,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G3_TIME_5MIN"
+      ],
+      "key_prerequisites": [
+        "G3_TIME_5MIN"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_MONEY_BUDGET",
+      "name": "Money: Shopping Problems",
+      "grade": 4,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G3_MONEY_CHANGE"
+      ],
+      "key_prerequisites": [
+        "G3_MONEY_CHANGE"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_ANGLES_TURNS",
+      "name": "Turns & Right Angles",
+      "grade": 4,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G2_SHAPES_PROPERTIES"
+      ],
+      "key_prerequisites": [
+        "G2_SHAPES_PROPERTIES"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_SYMMETRY",
+      "name": "Lines of Symmetry",
+      "grade": 4,
+      "strand": "Geometry",
+      "prerequisites": [
+        "G2_SHAPES_PROPERTIES"
+      ],
+      "key_prerequisites": [
+        "G2_SHAPES_PROPERTIES"
+      ],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G4_DATA_SCALED",
+      "name": "Reading Scaled Charts",
+      "grade": 4,
+      "strand": "Statistics",
+      "prerequisites": [
+        "G3_TIMES_TABLES"
+      ],
+      "key_prerequisites": [
+        "G3_TIMES_TABLES"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
     {
       "id": "G5_PLACE_VALUE",
       "name": "Place Value (Thousands)",
       "grade": 5,
       "strand": "Numbers",
-      "prerequisites": [],
-      "key_prerequisites": [],
+      "prerequisites": [
+        "G4_PLACE_VALUE_10000"
+      ],
+      "key_prerequisites": [
+        "G4_PLACE_VALUE_10000"
+      ],
       "encompassings": [],
       "weight": 1,
       "critical": false,
@@ -40,8 +824,12 @@
       "name": "Addition (Multi-digit)",
       "grade": 5,
       "strand": "Numbers",
-      "prerequisites": [],
-      "key_prerequisites": [],
+      "prerequisites": [
+        "G4_ADD_SUB_BIG"
+      ],
+      "key_prerequisites": [
+        "G4_ADD_SUB_BIG"
+      ],
       "encompassings": [],
       "weight": 1,
       "critical": false,
@@ -56,8 +844,12 @@
       "name": "Subtraction (Multi-digit)",
       "grade": 5,
       "strand": "Numbers",
-      "prerequisites": [],
-      "key_prerequisites": [],
+      "prerequisites": [
+        "G4_ADD_SUB_BIG"
+      ],
+      "key_prerequisites": [
+        "G4_ADD_SUB_BIG"
+      ],
       "encompassings": [],
       "weight": 1,
       "critical": false,
@@ -72,8 +864,12 @@
       "name": "Multiplication (2-digit × 1-digit)",
       "grade": 5,
       "strand": "Numbers",
-      "prerequisites": [],
-      "key_prerequisites": [],
+      "prerequisites": [
+        "G4_MULT_2DIGIT"
+      ],
+      "key_prerequisites": [
+        "G4_MULT_2DIGIT"
+      ],
       "encompassings": [],
       "weight": 2,
       "critical": false,
@@ -88,8 +884,12 @@
       "name": "Division (by 1-digit)",
       "grade": 5,
       "strand": "Numbers",
-      "prerequisites": [],
-      "key_prerequisites": [],
+      "prerequisites": [
+        "G4_DIVISION_REMAINDER"
+      ],
+      "key_prerequisites": [
+        "G4_DIVISION_REMAINDER"
+      ],
       "encompassings": [],
       "weight": 2,
       "critical": false,
@@ -146,8 +946,12 @@
       "name": "Understanding Fractions",
       "grade": 5,
       "strand": "Numbers",
-      "prerequisites": [],
-      "key_prerequisites": [],
+      "prerequisites": [
+        "G4_FRACTIONS_COMPARE"
+      ],
+      "key_prerequisites": [
+        "G4_FRACTIONS_COMPARE"
+      ],
       "encompassings": [],
       "weight": 2,
       "critical": false,
@@ -229,10 +1033,12 @@
       "grade": 5,
       "strand": "Numbers",
       "prerequisites": [
-        "G5_FRACTIONS_INTRO"
+        "G5_FRACTIONS_INTRO",
+        "G4_DECIMALS_TENTHS"
       ],
       "key_prerequisites": [
-        "G5_FRACTIONS_INTRO"
+        "G5_FRACTIONS_INTRO",
+        "G4_DECIMALS_TENTHS"
       ],
       "encompassings": [],
       "weight": 2,
@@ -336,8 +1142,12 @@
       "name": "Types of Angles",
       "grade": 5,
       "strand": "Geometry",
-      "prerequisites": [],
-      "key_prerequisites": [],
+      "prerequisites": [
+        "G4_ANGLES_TURNS"
+      ],
+      "key_prerequisites": [
+        "G4_ANGLES_TURNS"
+      ],
       "encompassings": [],
       "weight": 1,
       "critical": false,
@@ -388,8 +1198,12 @@
       "name": "Measuring Length (cm, m, km)",
       "grade": 5,
       "strand": "Measurements",
-      "prerequisites": [],
-      "key_prerequisites": [],
+      "prerequisites": [
+        "G3_UNIT_CONVERT"
+      ],
+      "key_prerequisites": [
+        "G3_UNIT_CONVERT"
+      ],
       "encompassings": [],
       "weight": 1,
       "critical": false,
@@ -404,8 +1218,12 @@
       "name": "Measuring Mass (g, kg)",
       "grade": 5,
       "strand": "Measurements",
-      "prerequisites": [],
-      "key_prerequisites": [],
+      "prerequisites": [
+        "G3_UNIT_CONVERT"
+      ],
+      "key_prerequisites": [
+        "G3_UNIT_CONVERT"
+      ],
       "encompassings": [],
       "weight": 1,
       "critical": false,
@@ -420,8 +1238,12 @@
       "name": "Telling Time & Duration",
       "grade": 5,
       "strand": "Measurements",
-      "prerequisites": [],
-      "key_prerequisites": [],
+      "prerequisites": [
+        "G4_TIME_DURATION"
+      ],
+      "key_prerequisites": [
+        "G4_TIME_DURATION"
+      ],
       "encompassings": [],
       "weight": 1,
       "critical": false,
@@ -495,10 +1317,12 @@
       "grade": 5,
       "strand": "Statistics",
       "prerequisites": [
-        "G5_TALLY"
+        "G5_TALLY",
+        "G4_DATA_SCALED"
       ],
       "key_prerequisites": [
-        "G5_TALLY"
+        "G5_TALLY",
+        "G4_DATA_SCALED"
       ],
       "encompassings": [],
       "weight": 1,
@@ -964,8 +1788,12 @@
       "name": "Lines of Symmetry",
       "grade": 6,
       "strand": "Geometry",
-      "prerequisites": [],
-      "key_prerequisites": [],
+      "prerequisites": [
+        "G4_SYMMETRY"
+      ],
+      "key_prerequisites": [
+        "G4_SYMMETRY"
+      ],
       "encompassings": [],
       "weight": 1,
       "critical": false,

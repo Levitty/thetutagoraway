@@ -359,6 +359,12 @@ export function buildFactorizeCommon() {
     question: `Factorise:   ${fmtLinear(A, C)}`,
     answer: ans,
     accepts: accepts(ans, ans.replace(/\s/g, '')),
+    // The area model in REVERSE: the two part-areas are known; find the sides.
+    model: { type: 'area-model', data: {
+      rows: ['?'], cols: ['?', '?'],
+      cells: [[fmtTerm(A, 'x', true), `${C}`]],
+      caption: 'the areas are given — what side lengths made them?',
+    } },
     hints: hintLadder(
       'Find the highest common factor of both terms.',
       `What number divides both ${A} and ${C}?`,
@@ -367,7 +373,12 @@ export function buildFactorizeCommon() {
     solution: {
       steps: [
         { text: `Highest common factor of ${A} and ${C} is ${a}.`, expr: `${a}( … )` },
-        { text: `Divide each term by ${a}.`, expr: `${a}(${fmtLinear(b, c)})` },
+        { text: `Divide each term by ${a}.`, expr: `${a}(${fmtLinear(b, c)})`,
+          model: { type: 'area-model', data: {
+            rows: [`${a}`], cols: [fmtTerm(b, 'x', true), `${c}`],
+            cells: [[fmtTerm(A, 'x', true), `${C}`]],
+            caption: `${fmtLinear(A, C)} = ${a}(${fmtLinear(b, c)})`,
+          } } },
       ],
       answer: ans,
     },
@@ -392,6 +403,13 @@ export function buildFactorizeQuadratic() {
     question: `Factorise:   ${orig.caret}`,
     answer: ans,
     accepts: accepts(ans, ansSwap, ans.replace(/\s/g, ''), ansSwap.replace(/\s/g, '')),
+    // Reverse area model: the corner cells (x² and the constant) are fixed;
+    // splitting the middle term into the two '?' cells IS the factorising.
+    model: { type: 'area-model', data: {
+      rows: ['x', '?'], cols: ['x', '?'],
+      cells: [['x²', '?'], ['?', `${c}`]],
+      caption: `the two ? cells must add to ${fmtTerm(b, 'x', true) || '0x'}`,
+    } },
     hints: hintLadder(
       'Find two numbers that MULTIPLY to the constant and ADD to the middle coefficient.',
       `Multiply to ${c}, add to ${b}.`,

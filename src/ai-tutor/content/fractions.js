@@ -257,6 +257,16 @@ export function buildMixedToImproper() {
     question: `Convert to an improper fraction:   ${w} ${n}/${d}`,
     answer: fracStr(num, d),
     accepts: fracAccepts(num, d),
+    // Each whole is a fully-shaded bar of d pieces; the last bar holds n more.
+    // Cut every whole into d pieces and count — that IS w×d + n. (Only drawn
+    // while the stack stays compact.)
+    model: w <= 3 ? { type: 'bar-model', data: {
+      bars: [
+        ...Array.from({ length: w }, () => ({ n: d, d, label: '1' })),
+        { n, d, label: `${n}/${d}` },
+      ],
+      caption: `every whole is ${d} pieces of size 1/${d}`,
+    } } : undefined,
     hints: hintLadder(
       'Multiply the whole number by the denominator, then add the numerator.',
       `${w} × ${d} = ${w * d}, then + ${n}.`,
@@ -289,6 +299,11 @@ export function buildCompareFractions() {
     question: `Insert <, > or =:   ${a}/${b}  ?  ${c}/${d}`,
     answer: sym,
     accepts: accepts(sym),
+    // Two bars of the same length — the comparison is literally visible.
+    model: { type: 'bar-model', data: {
+      bars: [{ n: a, d: b, label: `${a}/${b}` }, { n: c, d, label: `${c}/${d}` }],
+      caption: 'both bars are the same whole — compare the shaded amounts',
+    } },
     hints: hintLadder(
       'Cross-multiply: compare a×d with c×b.',
       `Compare ${a}×${d} = ${a * d}  with  ${c}×${b} = ${c * b}.`,

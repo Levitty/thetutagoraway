@@ -2,6 +2,7 @@
 // CONTENT INDEX — single merge point for all authored, structured content.
 // problemGenerators.js and the quality gate both read from here.
 // ============================================================================
+import { PRIMARY_CONTENT } from './primary.js';
 import { ALGEBRA_CONTENT } from './algebra.js';
 import { CALCULUS_CONTENT } from './calculus.js';
 import { FRACTIONS_CONTENT } from './fractions.js';
@@ -12,6 +13,7 @@ import { GEOMETRY_CONTENT } from './geometry.js';
 import { VISUAL_CONTENT } from './visual.js';
 
 export const STRUCTURED_CONTENT = {
+  ...PRIMARY_CONTENT,
   ...ALGEBRA_CONTENT,
   ...CALCULUS_CONTENT,
   ...FRACTIONS_CONTENT,

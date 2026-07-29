@@ -34,23 +34,79 @@ const skill = (id, name, grade, strand, opts = {}) => ({
 });
 
 // ============================================================================
+// GRADE 1–4 — Early Primary (CBC lower primary). Every skill here ships with
+// its manipulative (ten frames, base-ten blocks, arrays, clocks, money) —
+// content in content/primary.js. These feed the Grade-5 foundation skills.
+// ============================================================================
+
+const GRADE_1 = {
+  G1_COUNT_20: skill('G1_COUNT_20', 'Counting Objects (to 20)', 1, S.NUM, { w: 1, min: 5 }),
+  G1_NUMBER_ORDER: skill('G1_NUMBER_ORDER', 'Number Order (to 100)', 1, S.NUM, { pre: ['G1_COUNT_20'], w: 1, min: 5 }),
+  G1_COMPARE: skill('G1_COMPARE', 'More or Less (to 20)', 1, S.NUM, { pre: ['G1_COUNT_20'], w: 1, min: 5 }),
+  G1_ADD_10: skill('G1_ADD_10', 'Addition within 10', 1, S.NUM, { pre: ['G1_COUNT_20'], w: 2, crit: true, min: 5 }),
+  G1_SUB_10: skill('G1_SUB_10', 'Subtraction within 10', 1, S.NUM, { pre: ['G1_ADD_10'], w: 2, crit: true, min: 5 }),
+  G1_SHAPES: skill('G1_SHAPES', 'Naming Shapes', 1, S.GEO, { w: 1, min: 5 }),
+  G1_LENGTH_COMPARE: skill('G1_LENGTH_COMPARE', 'Longer or Shorter', 1, S.MEA, { pre: ['G1_COMPARE'], w: 1, min: 5 }),
+  G1_MONEY_COINS: skill('G1_MONEY_COINS', 'Counting Money (Coins)', 1, S.MEA, { pre: ['G1_COUNT_20'], w: 2, min: 5 }),
+};
+
+const GRADE_2 = {
+  G2_PLACE_VALUE_100: skill('G2_PLACE_VALUE_100', 'Tens and Ones (Blocks)', 2, S.NUM, { pre: ['G1_NUMBER_ORDER'], w: 2, crit: true, min: 5 }),
+  G2_ADD_100: skill('G2_ADD_100', 'Addition within 100', 2, S.NUM, { pre: ['G1_ADD_10', 'G2_PLACE_VALUE_100'], w: 2, crit: true, min: 5 }),
+  G2_SUB_100: skill('G2_SUB_100', 'Subtraction within 100', 2, S.NUM, { pre: ['G1_SUB_10', 'G2_PLACE_VALUE_100'], w: 2, crit: true, min: 5 }),
+  G2_SKIP_COUNT: skill('G2_SKIP_COUNT', 'Skip Counting (2s, 5s, 10s)', 2, S.NUM, { pre: ['G1_NUMBER_ORDER'], w: 2, min: 5 }),
+  G2_MULT_INTRO: skill('G2_MULT_INTRO', 'Multiplication as Groups', 2, S.NUM, { pre: ['G2_SKIP_COUNT', 'G1_ADD_10'], w: 2, crit: true, min: 5 }),
+  G2_FRACTIONS_HALVES: skill('G2_FRACTIONS_HALVES', 'Halves, Thirds & Quarters', 2, S.NUM, { pre: ['G1_COUNT_20'], w: 2, min: 5 }),
+  G2_TIME_HOURS: skill('G2_TIME_HOURS', 'Clock: Hours & Half-hours', 2, S.MEA, { pre: ['G1_COUNT_20'], w: 2, min: 5 }),
+  G2_MONEY_ADD: skill('G2_MONEY_ADD', 'Money Totals (Shillings)', 2, S.MEA, { pre: ['G1_MONEY_COINS', 'G1_ADD_10'], w: 2, min: 5 }),
+  G2_SHAPES_PROPERTIES: skill('G2_SHAPES_PROPERTIES', 'Sides & Corners of Shapes', 2, S.GEO, { pre: ['G1_SHAPES'], w: 1, min: 5 }),
+};
+
+const GRADE_3 = {
+  G3_PLACE_VALUE_1000: skill('G3_PLACE_VALUE_1000', 'Hundreds, Tens and Ones', 3, S.NUM, { pre: ['G2_PLACE_VALUE_100'], w: 2, crit: true, min: 5 }),
+  G3_ADD_1000: skill('G3_ADD_1000', 'Addition (3-digit)', 3, S.NUM, { pre: ['G2_ADD_100', 'G3_PLACE_VALUE_1000'], w: 2, crit: true, min: 5 }),
+  G3_SUB_1000: skill('G3_SUB_1000', 'Subtraction (3-digit)', 3, S.NUM, { pre: ['G2_SUB_100', 'G3_PLACE_VALUE_1000'], w: 2, crit: true, min: 5 }),
+  G3_TIMES_TABLES: skill('G3_TIMES_TABLES', 'Multiplication Tables (2–9)', 3, S.NUM, { pre: ['G2_MULT_INTRO'], w: 3, crit: true, min: 6 }),
+  G3_DIVISION_SHARE: skill('G3_DIVISION_SHARE', 'Division as Sharing', 3, S.NUM, { pre: ['G3_TIMES_TABLES'], w: 2, crit: true, min: 5 }),
+  G3_FRACTIONS_UNIT: skill('G3_FRACTIONS_UNIT', 'A Fraction of an Amount', 3, S.NUM, { pre: ['G2_FRACTIONS_HALVES', 'G3_DIVISION_SHARE'], w: 2, min: 5 }),
+  G3_TIME_5MIN: skill('G3_TIME_5MIN', 'Clock: 5-minute Times', 3, S.MEA, { pre: ['G2_TIME_HOURS', 'G2_SKIP_COUNT'], w: 2, min: 5 }),
+  G3_MONEY_CHANGE: skill('G3_MONEY_CHANGE', 'Money: Paying & Change', 3, S.MEA, { pre: ['G2_MONEY_ADD', 'G2_SUB_100'], w: 2, min: 5 }),
+  G3_UNIT_CONVERT: skill('G3_UNIT_CONVERT', 'Units: m/cm, kg/g, L/ml', 3, S.MEA, { pre: ['G3_PLACE_VALUE_1000'], w: 2, min: 5 }),
+};
+
+const GRADE_4 = {
+  G4_PLACE_VALUE_10000: skill('G4_PLACE_VALUE_10000', 'Place Value (to 10 000)', 4, S.NUM, { pre: ['G3_PLACE_VALUE_1000'], w: 2, crit: true, min: 5 }),
+  G4_ADD_SUB_BIG: skill('G4_ADD_SUB_BIG', 'Add & Subtract (4-digit)', 4, S.NUM, { pre: ['G3_ADD_1000', 'G3_SUB_1000'], w: 2, crit: true, min: 5 }),
+  G4_MULT_2DIGIT: skill('G4_MULT_2DIGIT', 'Multiply (2-digit × 1-digit)', 4, S.NUM, { pre: ['G3_TIMES_TABLES', 'G4_PLACE_VALUE_10000'], w: 3, crit: true, min: 5 }),
+  G4_DIVISION_REMAINDER: skill('G4_DIVISION_REMAINDER', 'Division with Remainders', 4, S.NUM, { pre: ['G3_DIVISION_SHARE'], w: 3, min: 5 }),
+  G4_FRACTIONS_OF_SET: skill('G4_FRACTIONS_OF_SET', 'Fractions of a Set', 4, S.NUM, { pre: ['G3_FRACTIONS_UNIT', 'G3_TIMES_TABLES'], w: 2, min: 5 }),
+  G4_FRACTIONS_COMPARE: skill('G4_FRACTIONS_COMPARE', 'Comparing Fractions (Like)', 4, S.NUM, { pre: ['G2_FRACTIONS_HALVES'], w: 2, min: 5 }),
+  G4_DECIMALS_TENTHS: skill('G4_DECIMALS_TENTHS', 'Tenths as Decimals', 4, S.NUM, { pre: ['G3_FRACTIONS_UNIT'], w: 2, min: 5 }),
+  G4_TIME_DURATION: skill('G4_TIME_DURATION', 'Time: How Long? (Duration)', 4, S.MEA, { pre: ['G3_TIME_5MIN'], w: 2, min: 5 }),
+  G4_MONEY_BUDGET: skill('G4_MONEY_BUDGET', 'Money: Shopping Problems', 4, S.MEA, { pre: ['G3_MONEY_CHANGE'], w: 2, min: 5 }),
+  G4_ANGLES_TURNS: skill('G4_ANGLES_TURNS', 'Turns & Right Angles', 4, S.GEO, { pre: ['G2_SHAPES_PROPERTIES'], w: 2, min: 5 }),
+  G4_SYMMETRY: skill('G4_SYMMETRY', 'Lines of Symmetry', 4, S.GEO, { pre: ['G2_SHAPES_PROPERTIES'], w: 1, min: 5 }),
+  G4_DATA_SCALED: skill('G4_DATA_SCALED', 'Reading Scaled Charts', 4, S.STA, { pre: ['G3_TIMES_TABLES'], w: 2, min: 5 }),
+};
+
+// ============================================================================
 // GRADE 5 — Foundation (~25 skills)
 // ============================================================================
 
 const GRADE_5 = {
   // Numbers
-  G5_PLACE_VALUE: skill('G5_PLACE_VALUE', 'Place Value (Thousands)', 5, S.NUM, { w: 1, min: 5 }),
-  G5_ADDITION: skill('G5_ADDITION', 'Addition (Multi-digit)', 5, S.NUM, { w: 1, min: 5 }),
-  G5_SUBTRACTION: skill('G5_SUBTRACTION', 'Subtraction (Multi-digit)', 5, S.NUM, { w: 1, min: 5 }),
-  G5_MULTIPLICATION: skill('G5_MULTIPLICATION', 'Multiplication (2-digit × 1-digit)', 5, S.NUM, { w: 2, min: 5 }),
-  G5_DIVISION: skill('G5_DIVISION', 'Division (by 1-digit)', 5, S.NUM, { w: 2, min: 5 }),
+  G5_PLACE_VALUE: skill('G5_PLACE_VALUE', 'Place Value (Thousands)', 5, S.NUM, { pre: ['G4_PLACE_VALUE_10000'], w: 1, min: 5 }),
+  G5_ADDITION: skill('G5_ADDITION', 'Addition (Multi-digit)', 5, S.NUM, { pre: ['G4_ADD_SUB_BIG'], w: 1, min: 5 }),
+  G5_SUBTRACTION: skill('G5_SUBTRACTION', 'Subtraction (Multi-digit)', 5, S.NUM, { pre: ['G4_ADD_SUB_BIG'], w: 1, min: 5 }),
+  G5_MULTIPLICATION: skill('G5_MULTIPLICATION', 'Multiplication (2-digit × 1-digit)', 5, S.NUM, { pre: ['G4_MULT_2DIGIT'], w: 2, min: 5 }),
+  G5_DIVISION: skill('G5_DIVISION', 'Division (by 1-digit)', 5, S.NUM, { pre: ['G4_DIVISION_REMAINDER'], w: 2, min: 5 }),
   G5_FACTORS: skill('G5_FACTORS', 'Factors of a Number', 5, S.NUM, { pre: ['G5_MULTIPLICATION', 'G5_DIVISION'], w: 2 }),
   G5_MULTIPLES: skill('G5_MULTIPLES', 'Multiples of a Number', 5, S.NUM, { pre: ['G5_MULTIPLICATION'], w: 2 }),
-  G5_FRACTIONS_INTRO: skill('G5_FRACTIONS_INTRO', 'Understanding Fractions', 5, S.NUM, { w: 2 }),
+  G5_FRACTIONS_INTRO: skill('G5_FRACTIONS_INTRO', 'Understanding Fractions', 5, S.NUM, { pre: ['G4_FRACTIONS_COMPARE'], w: 2 }),
   G5_FRACTIONS_EQUIV: skill('G5_FRACTIONS_EQUIV', 'Equivalent Fractions', 5, S.NUM, { pre: ['G5_FRACTIONS_INTRO', 'G5_MULTIPLICATION'], w: 2 }),
   G5_FRACTIONS_ADD_LIKE: skill('G5_FRACTIONS_ADD_LIKE', 'Adding Fractions (Like Denominators)', 5, S.NUM, { pre: ['G5_FRACTIONS_INTRO', 'G5_ADDITION'], w: 2 }),
   G5_FRACTIONS_SUB_LIKE: skill('G5_FRACTIONS_SUB_LIKE', 'Subtracting Fractions (Like Denominators)', 5, S.NUM, { pre: ['G5_FRACTIONS_INTRO', 'G5_SUBTRACTION'], w: 2 }),
-  G5_DECIMALS_INTRO: skill('G5_DECIMALS_INTRO', 'Understanding Decimals', 5, S.NUM, { pre: ['G5_FRACTIONS_INTRO'], w: 2 }),
+  G5_DECIMALS_INTRO: skill('G5_DECIMALS_INTRO', 'Understanding Decimals', 5, S.NUM, { pre: ['G5_FRACTIONS_INTRO', 'G4_DECIMALS_TENTHS'], w: 2 }),
   G5_DECIMALS_ADD: skill('G5_DECIMALS_ADD', 'Adding Decimals', 5, S.NUM, { pre: ['G5_DECIMALS_INTRO', 'G5_ADDITION'], w: 2 }),
   G5_DECIMALS_SUB: skill('G5_DECIMALS_SUB', 'Subtracting Decimals', 5, S.NUM, { pre: ['G5_DECIMALS_INTRO', 'G5_SUBTRACTION'], w: 2 }),
 
@@ -59,20 +115,20 @@ const GRADE_5 = {
   G5_MISSING_NUMBER: skill('G5_MISSING_NUMBER', 'Finding the Missing Number', 5, S.ALG, { pre: ['G5_ADDITION', 'G5_SUBTRACTION'], w: 1 }),
 
   // Geometry
-  G5_ANGLES_INTRO: skill('G5_ANGLES_INTRO', 'Types of Angles', 5, S.GEO, { w: 1 }),
+  G5_ANGLES_INTRO: skill('G5_ANGLES_INTRO', 'Types of Angles', 5, S.GEO, { pre: ['G4_ANGLES_TURNS'], w: 1 }),
   G5_TRIANGLES_INTRO: skill('G5_TRIANGLES_INTRO', 'Types of Triangles', 5, S.GEO, { pre: ['G5_ANGLES_INTRO'], w: 2 }),
   G5_LINES: skill('G5_LINES', 'Parallel & Perpendicular Lines', 5, S.GEO, { w: 1 }),
 
   // Measurements
-  G5_LENGTH: skill('G5_LENGTH', 'Measuring Length (cm, m, km)', 5, S.MEA, { w: 1 }),
-  G5_MASS: skill('G5_MASS', 'Measuring Mass (g, kg)', 5, S.MEA, { w: 1 }),
-  G5_TIME: skill('G5_TIME', 'Telling Time & Duration', 5, S.MEA, { w: 1 }),
+  G5_LENGTH: skill('G5_LENGTH', 'Measuring Length (cm, m, km)', 5, S.MEA, { pre: ['G3_UNIT_CONVERT'], w: 1 }),
+  G5_MASS: skill('G5_MASS', 'Measuring Mass (g, kg)', 5, S.MEA, { pre: ['G3_UNIT_CONVERT'], w: 1 }),
+  G5_TIME: skill('G5_TIME', 'Telling Time & Duration', 5, S.MEA, { pre: ['G4_TIME_DURATION'], w: 1 }),
   G5_PERIMETER_INTRO: skill('G5_PERIMETER_INTRO', 'Perimeter of Rectangles', 5, S.MEA, { pre: ['G5_ADDITION', 'G5_LENGTH'], w: 2 }),
   G5_AREA_INTRO: skill('G5_AREA_INTRO', 'Area of Rectangles (Counting Squares)', 5, S.MEA, { pre: ['G5_MULTIPLICATION'], w: 2 }),
 
   // Statistics
   G5_TALLY: skill('G5_TALLY', 'Tally Charts & Frequency Tables', 5, S.STA, { w: 1 }),
-  G5_BAR_GRAPHS: skill('G5_BAR_GRAPHS', 'Reading Bar Graphs', 5, S.STA, { pre: ['G5_TALLY'], w: 1 }),
+  G5_BAR_GRAPHS: skill('G5_BAR_GRAPHS', 'Reading Bar Graphs', 5, S.STA, { pre: ['G5_TALLY', 'G4_DATA_SCALED'], w: 1 }),
   G5_PICTOGRAPHS: skill('G5_PICTOGRAPHS', 'Reading Pictographs', 5, S.STA, { pre: ['G5_TALLY'], w: 1 }),
 };
 
@@ -106,7 +162,7 @@ const GRADE_6 = {
   G6_ANGLE_MEASURE: skill('G6_ANGLE_MEASURE', 'Measuring Angles with Protractor', 6, S.GEO, { pre: ['G5_ANGLES_INTRO'], w: 2 }),
   G6_ANGLE_PROPERTIES: skill('G6_ANGLE_PROPERTIES', 'Angles on a Line & at a Point', 6, S.GEO, { pre: ['G6_ANGLE_MEASURE'], w: 3 }),
   G6_TRIANGLE_PROPERTIES: skill('G6_TRIANGLE_PROPERTIES', 'Triangle Angle Sum', 6, S.GEO, { pre: ['G5_TRIANGLES_INTRO', 'G6_ANGLE_MEASURE'], w: 3, crit: true }),
-  G6_SYMMETRY: skill('G6_SYMMETRY', 'Lines of Symmetry', 6, S.GEO, { w: 1 }),
+  G6_SYMMETRY: skill('G6_SYMMETRY', 'Lines of Symmetry', 6, S.GEO, { pre: ['G4_SYMMETRY'], w: 1 }),
 
   // Measurements
   G6_PERIMETER: skill('G6_PERIMETER', 'Perimeter (All Shapes)', 6, S.MEA, { pre: ['G5_PERIMETER_INTRO', 'G6_DECIMALS_MUL'], w: 3 }),
@@ -390,6 +446,10 @@ const GRADE_12 = {
 // ============================================================================
 
 export const SKILLS = {
+  ...GRADE_1,
+  ...GRADE_2,
+  ...GRADE_3,
+  ...GRADE_4,
   ...GRADE_5,
   ...GRADE_6,
   ...GRADE_7,
@@ -404,7 +464,7 @@ export const SKILL_COUNT = Object.keys(SKILLS).length;
 
 export const STRANDS = [S.NUM, S.ALG, S.GEO, S.MEA, S.STA];
 
-export const GRADES = [5, 6, 7, 8, 9, 10, 11, 12];
+export const GRADES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 // Get all skills for a specific grade
 export const getSkillsByGrade = (grade) =>
