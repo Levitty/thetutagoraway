@@ -166,7 +166,21 @@ function validateModel(m, where) {
       if (!d.bars?.length) return `${where}: bar-model has no bars`;
       for (const b of d.bars) {
         if (!Number.isFinite(b.n) || !Number.isFinite(b.d) || b.d <= 0 || b.n < 0 || b.n > b.d) return `${where}: bar ${b.n}/${b.d} out of range`;
+        if (b.parts && b.parts.reduce((s, p) => s + p.count, 0) !== b.d) return `${where}: bar parts don't sum to ${b.d}`;
       }
+      return null;
+    }
+    case 'place-value': {
+      if (!d.numbers?.length) return `${where}: place-value has no numbers`;
+      for (const n of [...d.numbers, ...(d.result != null ? [d.result] : [])]) {
+        if (!/^\d+(\.\d+)?$/.test(String(n))) return `${where}: place-value entry ${n} is not a plain decimal`;
+      }
+      return null;
+    }
+    case 'pattern-growth': {
+      if (!Number.isFinite(d.start) || !Number.isFinite(d.diff) || d.start < 1 || d.diff < 1) return `${where}: pattern-growth needs positive start/diff`;
+      const count = d.count ?? 4;
+      if (count < 3 || count > 6 || d.start + (count - 1) * d.diff > 24) return `${where}: pattern-growth towers too tall/short to draw`;
       return null;
     }
     case 'fraction-grid': {

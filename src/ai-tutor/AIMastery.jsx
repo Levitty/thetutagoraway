@@ -1050,8 +1050,15 @@ export function AIMastery({ onBack, userId, studentName }) {
                   />
                 ) : problem.model ? (
                   /* Teaching picture (dual coding) — shows the structure of the
-                     problem without giving the answer away */
-                  <TeachingVisual model={problem.model} className="mb-4" />
+                     problem without giving the answer away. After repeated
+                     struggle (concrete modality) it becomes a manipulative —
+                     working it to the answer books the solve as scaffolded. */
+                  <TeachingVisual
+                    model={problem.model}
+                    className="mb-4"
+                    interactive={modalityLevel === 'concrete' && !feedback}
+                    onEvent={(e) => { if (e === 'solved') setHintLevel(h => Math.max(h, 1)); }}
+                  />
                 ) : (
                   /* Otherwise, an exploratory manipulative if the skill has one */
                   activeSkill && SKILL_VISUALS[activeSkill] && (

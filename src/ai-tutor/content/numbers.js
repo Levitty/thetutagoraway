@@ -27,6 +27,10 @@ export function buildDecimalAddSub({ sub = false } = {}) {
     question: `${x} ${op} ${y}`,
     answer: numStr(res),
     accepts: accepts(numStr(res)),
+    // Place-value chart: the whole game is ALIGNMENT — points stacked in one
+    // column. Practice shows the two numbers lined up; the reveal adds the
+    // result row under the line.
+    model: { type: 'place-value', data: { numbers: [x, y], op } },
     hints: hintLadder(
       'Line up the decimal points.',
       'Keep the decimal point in the same column in your answer.',
@@ -35,7 +39,8 @@ export function buildDecimalAddSub({ sub = false } = {}) {
     solution: {
       steps: [
         { text: 'Line up the decimal points and the place values.', expr: `${x} ${op} ${y}` },
-        { text: `${sub ? 'Subtract' : 'Add'} column by column.`, expr: numStr(res) },
+        { text: `${sub ? 'Subtract' : 'Add'} column by column.`, expr: numStr(res),
+          model: { type: 'place-value', data: { numbers: [x, y], op, result: numStr(res) } } },
       ],
       answer: numStr(res),
     },
@@ -555,7 +560,57 @@ export function buildPlaceValueChart() {
   };
 }
 
+// ---- share a quantity in a ratio (G6) — taught with a two-colour ratio bar ----
+export function buildRatioShare() {
+  const [a, b] = pick([[1, 2], [1, 3], [2, 3], [2, 5], [3, 4], [3, 5], [4, 5], [2, 7]]);
+  const per = randInt(2, 9);
+  const total = (a + b) * per;
+  const [name1, name2] = pick([['Amina', 'Baraka'], ['Wanjiku', 'Otieno'], ['Zawadi', 'Kiprop'], ['Njeri', 'Mwangi']]);
+  const item = pick(['sweets', 'mangoes', 'shillings', 'marbles']);
+  const askFirst = coin();
+  const share1 = a * per, share2 = b * per;
+  const value = askFirst ? share1 : share2;
+  const asked = askFirst ? name1 : name2;
+  const parts = askFirst ? a : b;
+  const barData = (labeled) => ({ type: 'bar-model', data: {
+    bars: [{ n: 0, d: a + b, label: `${total}`, parts: [
+      { count: a, color: '#34d399', label: labeled ? `${name1}: ${share1}` : name1 },
+      { count: b, color: '#38bdf8', label: labeled ? `${name2}: ${share2}` : name2 },
+    ] }],
+    caption: labeled
+      ? `${a + b} equal parts of ${per} each — ${name1} takes ${a} parts, ${name2} takes ${b}`
+      : `${total} ${item} cut into ${a} + ${b} = ${a + b} equal parts`,
+  } });
+  return {
+    type: 'ratio-share',
+    instruction: 'Share in the given ratio.',
+    question: `${name1} and ${name2} share ${total} ${item} in the ratio ${a}:${b}. How many does ${asked} get?`,
+    answer: `${value}`, accepts: accepts(`${value}`),
+    model: barData(false),
+    hints: hintLadder(
+      'The ratio tells you how many equal parts each person gets.',
+      `Total parts = ${a} + ${b} = ${a + b}. One part = ${total} ÷ ${a + b}.`,
+      `${asked} gets ${parts} part${parts > 1 ? 's' : ''} of ${per} each.`,
+    ),
+    solution: {
+      steps: [
+        { text: `Add the ratio numbers to get the total parts.`, expr: `${a} + ${b} = ${a + b} parts` },
+        { text: `Divide to find one part.`, expr: `${total} ÷ ${a + b} = ${per}` },
+        { text: `${asked} gets ${parts} part${parts > 1 ? 's' : ''}.`, expr: `${parts} × ${per} = ${value}`,
+          model: barData(true) },
+      ],
+      answer: `${value}`,
+    },
+    misconceptions: [
+      ...(total / 2 !== value ? [{ when: `${total / 2}`, feedback: `Halving shares it equally — but the ratio ${a}:${b} is NOT equal. Split into ${a + b} parts first.` }] : []),
+      { when: `${askFirst ? share2 : share1}`, feedback: `That is ${askFirst ? name2 : name1}'s share — the question asks for ${asked}, who gets ${parts} part${parts > 1 ? 's' : ''}.` },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const NUMBERS_CONTENT = {
+  G6_RATIOS:             withWorkedExample(buildRatioShare),
   G5_PATTERNS:           withWorkedExample(buildNumberPattern),
   G5_MISSING_NUMBER:     withWorkedExample(buildMissingNumber),
 

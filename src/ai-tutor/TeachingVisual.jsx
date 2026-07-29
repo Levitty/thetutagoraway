@@ -16,7 +16,7 @@
 // Everything is pure SVG — no dependencies, scales to phone width.
 // ============================================================================
 
-import React from 'react';
+import React, { useState } from 'react';
 
 // ---------------------------------------------------------------- balance
 // data: { left: { x: 2, units: 3 }, right: { x: 0, units: 11 }, caption }
@@ -77,36 +77,86 @@ function PanContents({ x, units, panCx, panY }) {
   return <g>{items}</g>;
 }
 
-const BalanceScale = ({ data }) => {
-  const { left = { x: 0, units: 0 }, right = { x: 0, units: 0 }, caption } = data || {};
+const BalanceSvg = ({ left, right }) => {
   const W = 340, H = 150;
   const beamY = 96, leftCx = 88, rightCx = 252;
   return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Balance scale showing the equation">
+      {/* stand */}
+      <rect x={W / 2 - 3} y={beamY} width="6" height="34" rx="2" fill="#475569" />
+      <rect x={W / 2 - 30} y={H - 18} width="60" height="6" rx="3" fill="#475569" />
+      <polygon points={`${W / 2},${beamY - 10} ${W / 2 - 8},${beamY + 2} ${W / 2 + 8},${beamY + 2}`} fill="#94a3b8" />
+      {/* beam */}
+      <rect x={leftCx - 40} y={beamY - 8} width={rightCx - leftCx + 80} height="5" rx="2.5" fill="#94a3b8" />
+      {/* pans */}
+      {[leftCx, rightCx].map((cx, i) => (
+        <g key={i}>
+          <line x1={cx - 34} y1={beamY - 6} x2={cx - 26} y2={beamY + 14} stroke="#64748b" strokeWidth="1.5" />
+          <line x1={cx + 34} y1={beamY - 6} x2={cx + 26} y2={beamY + 14} stroke="#64748b" strokeWidth="1.5" />
+          <path d={`M ${cx - 34} ${beamY + 14} Q ${cx} ${beamY + 30} ${cx + 34} ${beamY + 14} Z`} fill="#334155" stroke="#64748b" strokeWidth="1" />
+        </g>
+      ))}
+      <PanContents x={left.x || 0} units={left.units || 0} panCx={leftCx} panY={beamY + 8} />
+      <PanContents x={right.x || 0} units={right.units || 0} panCx={rightCx} panY={beamY + 8} />
+    </svg>
+  );
+};
+
+const BalanceScale = ({ data, interactive = false, onEvent }) => {
+  const { left = { x: 0, units: 0 }, right = { x: 0, units: 0 }, caption } = data || {};
+  // Interactive mode (the CPA manipulative): the student performs the legal
+  // balance moves themselves and watches both pans change together.
+  const initial = { left: { x: left.x || 0, units: left.units || 0 }, right: { x: right.x || 0, units: right.units || 0 }, note: null };
+  const [s, setS] = useState(initial);
+  const solved = interactive && s.left.x === 1 && !s.left.units && !s.right.x;
+  const apply = (next, note) => {
+    const ns = { ...next, note };
+    setS(ns);
+    if (ns.left.x === 1 && !ns.left.units && !ns.right.x && onEvent) onEvent('solved');
+  };
+  const moves = [];
+  if (interactive && !solved) {
+    const { left: L, right: R } = s;
+    if (R.x) moves.push({
+      label: R.x > 0 ? `Take ${R.x === 1 ? '' : R.x}x off both pans` : `Add ${-R.x === 1 ? '' : -R.x}x to both pans`,
+      go: () => apply({ left: { x: L.x - R.x, units: L.units }, right: { x: 0, units: R.units } }, 'x-terms collected on the left'),
+    });
+    if (L.units) moves.push({
+      label: L.units > 0 ? `Take ${L.units} off both pans` : `Add ${-L.units} to both pans`,
+      go: () => apply({ left: { x: L.x, units: 0 }, right: { x: R.x, units: R.units - L.units } }, 'numbers collected on the right'),
+    });
+    if (L.x && L.x !== 1 && !L.units && !R.x && R.units % L.x === 0) moves.push({
+      label: `Share both pans into ${Math.abs(L.x)} groups`,
+      go: () => apply({ left: { x: 1, units: 0 }, right: { x: 0, units: R.units / L.x } }, `each group: x on one side, ${R.units / L.x} on the other`),
+    });
+  }
+  const view = interactive ? s : { left, right };
+  return (
     <div className="w-full">
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Balance scale showing the equation">
-        {/* stand */}
-        <rect x={W / 2 - 3} y={beamY} width="6" height="34" rx="2" fill="#475569" />
-        <rect x={W / 2 - 30} y={H - 18} width="60" height="6" rx="3" fill="#475569" />
-        <polygon points={`${W / 2},${beamY - 10} ${W / 2 - 8},${beamY + 2} ${W / 2 + 8},${beamY + 2}`} fill="#94a3b8" />
-        {/* beam */}
-        <rect x={leftCx - 40} y={beamY - 8} width={rightCx - leftCx + 80} height="5" rx="2.5" fill="#94a3b8" />
-        {/* pans */}
-        {[leftCx, rightCx].map((cx, i) => (
-          <g key={i}>
-            <line x1={cx - 34} y1={beamY - 6} x2={cx - 26} y2={beamY + 14} stroke="#64748b" strokeWidth="1.5" />
-            <line x1={cx + 34} y1={beamY - 6} x2={cx + 26} y2={beamY + 14} stroke="#64748b" strokeWidth="1.5" />
-            <path d={`M ${cx - 34} ${beamY + 14} Q ${cx} ${beamY + 30} ${cx + 34} ${beamY + 14} Z`} fill="#334155" stroke="#64748b" strokeWidth="1" />
-          </g>
-        ))}
-        <PanContents x={left.x || 0} units={left.units || 0} panCx={leftCx} panY={beamY + 8} />
-        <PanContents x={right.x || 0} units={right.units || 0} panCx={rightCx} panY={beamY + 8} />
-      </svg>
+      <BalanceSvg left={view.left} right={view.right} />
       <div className="flex justify-between text-[11px] text-slate-400 px-6 -mt-1">
         <span>left side</span>
         <span className="text-slate-500">both sides stay equal</span>
         <span>right side</span>
       </div>
-      {caption && <p className="text-center text-xs text-indigo-300 mt-1">{caption}</p>}
+      {!interactive && caption && <p className="text-center text-xs text-indigo-300 mt-1">{caption}</p>}
+      {interactive && (
+        <div className="mt-2">
+          {s.note && !solved && <p className="text-center text-xs text-indigo-300 mb-2">{s.note}</p>}
+          {solved ? (
+            <p className="text-center text-sm font-semibold text-emerald-400">One x left, balancing {s.right.units} — so x = {s.right.units}.</p>
+          ) : (
+            <div className="flex flex-wrap gap-2 justify-center">
+              {moves.map((mv, i) => (
+                <button key={i} onClick={mv.go} className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-700 hover:bg-slate-600 border border-emerald-600/40 text-emerald-300 transition-colors">{mv.label}</button>
+              ))}
+            </div>
+          )}
+          <div className="text-center mt-1">
+            <button onClick={() => setS(initial)} className="text-[11px] text-slate-500 hover:text-slate-300">reset</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -222,14 +272,32 @@ const BarModel = ({ data }) => {
           const y = bi * (barH + gap) + 4;
           const segW = bw / bar.d;
           const color = bar.color || BAR_COLORS[bi % BAR_COLORS.length];
+          // parts: [{count, color, label}] colors the bar in runs (ratio bars);
+          // otherwise the first n of d segments are shaded (fraction bars).
+          const runColor = (s) => {
+            if (!bar.parts) return s < bar.n ? color : null;
+            let acc = 0;
+            for (const part of bar.parts) { acc += part.count; if (s < acc) return part.color || color; }
+            return null;
+          };
           return (
             <g key={bi}>
-              {Array.from({ length: bar.d }).map((_, s) => (
-                <rect key={s} x={bx + s * segW} y={y} width={segW} height={barH}
-                  fill={s < bar.n ? color : 'transparent'} fillOpacity={s < bar.n ? 0.65 : 1}
-                  stroke="#94a3b8" strokeWidth="1.2" />
-              ))}
-              <text x={bx + bw + 8} y={y + barH / 2 + 4} fontSize="13" fontWeight="700" fill={color}>{bar.label || `${bar.n}/${bar.d}`}</text>
+              {Array.from({ length: bar.d }).map((_, s) => {
+                const c = runColor(s);
+                return (
+                  <rect key={s} x={bx + s * segW} y={y} width={segW} height={barH}
+                    fill={c || 'transparent'} fillOpacity={c ? 0.65 : 1}
+                    stroke="#94a3b8" strokeWidth="1.2" />
+                );
+              })}
+              {bar.parts && bar.parts.map((part, pi) => {
+                const before = bar.parts.slice(0, pi).reduce((s, p) => s + p.count, 0);
+                return part.label ? (
+                  <text key={pi} x={bx + (before + part.count / 2) * segW} y={y + barH / 2 + 4}
+                    textAnchor="middle" fontSize="11" fontWeight="700" fill="#f1f5f9">{part.label}</text>
+                ) : null;
+              })}
+              <text x={bx + bw + 8} y={y + barH / 2 + 4} fontSize="13" fontWeight="700" fill={color}>{bar.label || (bar.parts ? '' : `${bar.n}/${bar.d}`)}</text>
             </g>
           );
         })}
@@ -239,6 +307,96 @@ const BarModel = ({ data }) => {
         )}
       </svg>
       {caption && <p className="text-center text-xs text-indigo-300 mt-1">{caption}</p>}
+    </div>
+  );
+};
+
+// ---------------------------------------------------------------- place-value
+// data: { numbers: ['12.34', '5.6'], op: '+', result: '17.94'|undefined, caption }
+// The decimal-alignment chart: digits in place-value columns, points in ONE
+// column. Practice omits `result`; the reveal includes it (emerald row).
+const PV_HEADS = { 2: 'H', 1: 'T', 0: 'O', '-1': 't', '-2': 'h', '-3': 'th' };
+const splitNum = (s) => {
+  const [int, frac = ''] = String(s).split('.');
+  return { int: int.split(''), frac: frac.split('') };
+};
+const PlaceValueChart = ({ data }) => {
+  const { numbers = [], op = '', result, caption } = data || {};
+  const rows = [...numbers.map(n => ({ v: n, cls: 'plain' })), ...(result != null ? [{ v: result, cls: 'result' }] : [])];
+  if (!rows.length) return null;
+  const parts = rows.map(r => splitNum(r.v));
+  const intLen = Math.max(...parts.map(p => p.int.length));
+  const fracLen = Math.max(...parts.map(p => p.frac.length));
+  const cols = intLen + fracLen;
+  const W = 340, cw = Math.min(34, 250 / (cols + 0.5)), rh = 26;
+  const gx = (W - cw * (cols + 0.6)) / 2, gy = 24;
+  const H = gy + rows.length * rh + 14;
+  const colX = (i) => gx + i * cw + (i >= intLen ? cw * 0.6 : 0);   // gap for the point column
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Place value chart">
+        {Array.from({ length: cols }).map((_, i) => {
+          const place = i < intLen ? intLen - 1 - i : -(i - intLen + 1);
+          return <text key={i} x={colX(i) + cw / 2} y={gy - 8} textAnchor="middle" fontSize="10" fill={place < 0 ? '#38bdf8' : '#94a3b8'} fontWeight="700">{PV_HEADS[place] || ''}</text>;
+        })}
+        {/* decimal point column marker */}
+        <line x1={gx + intLen * cw + cw * 0.3} y1={gy - 14} x2={gx + intLen * cw + cw * 0.3} y2={gy + rows.length * rh} stroke="#fbbf24" strokeWidth="1.5" strokeDasharray="3 3" />
+        {rows.map((row, r) => {
+          const p = parts[r];
+          const y = gy + r * rh + rh / 2 + 4;
+          const color = row.cls === 'result' ? '#34d399' : '#f1f5f9';
+          return (
+            <g key={r}>
+              {row.cls === 'result' && <line x1={gx - 16} y1={gy + r * rh + 1} x2={gx + cols * cw + cw} y2={gy + r * rh + 1} stroke="#64748b" strokeWidth="1.5" />}
+              {r === rows.length - (result != null ? 2 : 1) && op && (
+                <text x={gx - 16} y={y} fontSize="14" fontWeight="700" fill="#fbbf24">{op}</text>
+              )}
+              {p.int.map((dgt, i) => (
+                <text key={`i${i}`} x={colX(intLen - p.int.length + i) + cw / 2} y={y} textAnchor="middle" fontSize="15" fontWeight="700" fill={color}>{dgt}</text>
+              ))}
+              <text x={gx + intLen * cw + cw * 0.3} y={y} textAnchor="middle" fontSize="15" fontWeight="800" fill="#fbbf24">.</text>
+              {p.frac.map((dgt, i) => (
+                <text key={`f${i}`} x={colX(intLen + i) + cw / 2} y={y} textAnchor="middle" fontSize="15" fontWeight="700" fill={color}>{dgt}</text>
+              ))}
+            </g>
+          );
+        })}
+      </svg>
+      <p className="text-center text-xs text-indigo-300 mt-1">{caption || 'decimal points stacked in one column — every digit in its place'}</p>
+    </div>
+  );
+};
+
+// ---------------------------------------------------------------- pattern-growth
+// data: { start, diff, count, caption } — an arithmetic sequence as growing
+// block towers with "+d" arrows: the constant difference made visible.
+const PatternGrowth = ({ data }) => {
+  const { start = 1, diff = 1, count = 4, caption } = data || {};
+  const heights = Array.from({ length: count }, (_, i) => start + i * diff);
+  const maxH = Math.max(...heights);
+  const W = 340, unit = Math.min(14, 100 / maxH), bw = 34, gap = (W - 40 - count * bw) / (count - 1);
+  const baseY = 12 + maxH * unit + 4, H = baseY + 24;
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Growing pattern of blocks">
+        {heights.map((h, t) => {
+          const x = 20 + t * (bw + gap);
+          return (
+            <g key={t}>
+              {Array.from({ length: h }).map((_, b) => (
+                <rect key={b} x={x} y={baseY - (b + 1) * unit} width={bw} height={unit - 1.5}
+                  fill={b < h - diff || t === 0 ? '#0c4a6e' : '#065f46'}
+                  stroke={b < h - diff || t === 0 ? '#38bdf8' : '#34d399'} strokeWidth="0.8" rx="1.5" />
+              ))}
+              <text x={x + bw / 2} y={baseY + 14} textAnchor="middle" fontSize="11" fontWeight="700" fill="#f1f5f9">{h}</text>
+              {t < count - 1 && (
+                <text x={x + bw + gap / 2} y={baseY - Math.max(heights[t], heights[t + 1]) * unit / 2} textAnchor="middle" fontSize="11" fontWeight="700" fill="#34d399">+{diff}</text>
+              )}
+            </g>
+          );
+        })}
+      </svg>
+      <p className="text-center text-xs text-indigo-300 mt-1">{caption || `each term adds the same ${diff} — that constant step is d`}</p>
     </div>
   );
 };
@@ -386,17 +544,23 @@ const MODELS = {
   'fraction-grid': FractionGrid,
   'shape': ShapeDiagram,
   'numberline-interval': NumberLineInterval,
+  'place-value': PlaceValueChart,
+  'pattern-growth': PatternGrowth,
 };
 
 export const TEACHING_MODEL_TYPES = Object.keys(MODELS);
 
-export const TeachingVisual = ({ model, className = '' }) => {
+// `interactive` upgrades models that support it (currently the balance scale)
+// into a manipulative; `onEvent('solved')` fires when the student works it to
+// completion so the lesson can book the solve as scaffolded. The key remounts
+// the component when the underlying data changes, resetting manipulative state.
+export const TeachingVisual = ({ model, className = '', interactive = false, onEvent }) => {
   if (!model?.type) return null;
   const Cmp = MODELS[model.type];
   if (!Cmp) return null;
   return (
     <div className={`bg-slate-900/60 border border-slate-700 rounded-xl p-3 ${className}`}>
-      <Cmp data={model.data} />
+      <Cmp key={JSON.stringify(model.data)} data={model.data} interactive={interactive} onEvent={onEvent} />
     </div>
   );
 };

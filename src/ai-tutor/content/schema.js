@@ -665,6 +665,11 @@ export function buildArithmeticSequence() {
     question: `Sequence:  ${terms}, …   Find the ${ordinal(n)} term.`,
     answer: `${Un}`,
     accepts: accepts(`${Un}`),
+    // Growing block towers (only when they draw sensibly: positive, small).
+    // The green top-blocks are the constant +d step — d made visible.
+    model: (a1 >= 1 && d >= 1 && a1 + 3 * d <= 18)
+      ? { type: 'pattern-growth', data: { start: a1, diff: d, count: 4 } }
+      : undefined,
     hints: hintLadder(
       'Find the common difference d = (any term) − (the one before).',
       `Use Uₙ = a + (n−1)d, with a = ${a1}.`,
