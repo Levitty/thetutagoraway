@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { supabase } from './supabase';
+import { captureReferralFromURL, getStoredReferralCode, clearStoredReferralCode, referralLink, referralCodeFor, myReferralStats, shareOnWhatsApp, shareMessages } from './growth.js';
 import { VideoRoom } from './VideoRoom';
 import { PaymentModal } from './PaymentModal';
 import { initiatePaystackPayment } from './paystack';
@@ -491,13 +492,16 @@ const useAuth = () => {
     setLoading(false);
   };
 
-  const signUp = async (email, password, fullName, role) => {
+  const signUp = async (email, password, fullName, role, referralCode) => {
+    const refCode = (referralCode || getStoredReferralCode() || '').trim().toLowerCase();
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { full_name: fullName, role } }
+      // referred_by_code is resolved to a referrals row by a DB trigger.
+      options: { data: { full_name: fullName, role, ...(refCode ? { referred_by_code: refCode } : {}) } }
     });
     if (error) throw error;
+    if (refCode) clearStoredReferralCode();
     // Send welcome email
     sendEmail('welcome', email, { name: fullName }).catch(() => {});
     return data;
@@ -696,9 +700,51 @@ const sendLessonStartNotification = async (booking) => {
   }
 };
 
+// Remember any referral code that brought this visitor here (runs once on load).
+captureReferralFromURL();
+
+// ============ REFERRAL CARD (Holiday Blitz engine) ============
+const ReferralCard = ({ profile }) => {
+  const [stats, setStats] = useState({ total: 0, activated: 0 });
+  const code = profile?.referral_code || referralCodeFor(profile?.id);
+  const link = referralLink(profile?.id);
+  useEffect(() => {
+    let live = true;
+    if (profile?.id) myReferralStats(profile.id).then(s => { if (live) setStats(s); });
+    return () => { live = false; };
+  }, [profile?.id]);
+  return (
+    <div className="bg-slate-900 rounded-xl p-4 text-white">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="font-semibold">🎁 Bring your friends</h3>
+        {stats.activated > 0 && (
+          <span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full font-semibold">{stats.activated} joined & active</span>
+        )}
+      </div>
+      <p className="text-slate-300 text-sm mb-3">
+        Every friend who joins with your code and finishes their level check earns you an entry in the weekly airtime & data draw. Your code: <span className="font-mono font-bold text-emerald-300">{code}</span>
+      </p>
+      <div className="flex gap-2">
+        <button
+          onClick={() => shareOnWhatsApp(shareMessages.invite(profile?.id))}
+          className="flex-1 py-2 bg-emerald-500 hover:bg-emerald-400 text-white text-sm font-semibold rounded-lg transition-colors"
+        >
+          Share on WhatsApp
+        </button>
+        <button
+          onClick={() => { navigator.clipboard.writeText(link); alert('Referral link copied!'); }}
+          className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg transition-colors"
+        >
+          Copy link
+        </button>
+      </div>
+    </div>
+  );
+};
+
 // ============ AUTH MODAL ============
 const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
-  const [form, setForm] = useState({ name: '', email: '', password: '', role: initialRole || 'student' });
+  const [form, setForm] = useState({ name: '', email: '', password: '', role: initialRole || 'student', refCode: getStoredReferralCode() });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
@@ -715,7 +761,7 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
 
     try {
       if (view === 'register') {
-        await onAuth.signUp(form.email, form.password, form.name, form.role);
+        await onAuth.signUp(form.email, form.password, form.name, form.role, form.refCode);
         setSuccess('Account created! Check your email for a confirmation link.');
       } else if (view === 'forgot') {
         await onAuth.resetPassword(form.email);
@@ -806,6 +852,10 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
             className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" />
           {view !== 'forgot' && (
             <input type="password" placeholder="Password (min 6 characters)" required minLength={6} value={form.password} onChange={e => setForm({ ...form, password: e.target.value })}
+              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" />
+          )}
+          {view === 'register' && (
+            <input placeholder="Referral code (optional)" value={form.refCode} onChange={e => setForm({ ...form, refCode: e.target.value })}
               className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" />
           )}
           {view === 'register' && (
@@ -1115,33 +1165,9 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
           </div>
 
           <div className="space-y-4">
-            {/* Referral Card */}
-            <div className="bg-slate-900 rounded-xl p-4 text-white">
-              <div className="flex items-center gap-2 mb-2">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-                </svg>
-                <h3 className="font-semibold">Refer & Earn</h3>
-              </div>
-              <p className="text-slate-300 text-sm mb-3">Get KSh 500 for each friend who books their first lesson</p>
-              <div className="bg-white/10 rounded-lg p-2 flex items-center gap-2">
-                <input
-                  type="text"
-                  value={`tutagora.com/r/${profile?.id?.slice(0,8) || 'invite'}`}
-                  readOnly
-                  className="flex-1 bg-transparent text-white text-xs outline-none"
-                />
-                <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(`https://tutagora.com/r/${profile?.id?.slice(0,8) || 'invite'}`);
-                    alert('Referral link copied!');
-                  }}
-                  className="px-3 py-1 bg-white text-slate-900 text-xs font-medium rounded"
-                >
-                  Copy
-                </button>
-              </div>
-            </div>
+            {/* Referral Card — tracked codes; a referral counts once the friend
+                completes the diagnostic (see supabase/migrations/20260729_referrals.sql) */}
+            <ReferralCard profile={profile} />
 
             <div className="bg-white rounded-xl border border-slate-200 p-4">
               <h3 className="font-semibold text-slate-900 mb-3">Account</h3>

@@ -13,6 +13,7 @@ import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
 import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
+import { activateReferral, shareOnWhatsApp, shareMessages } from '../growth.js';
 import { supabase } from '../supabase.js';
 import { Icon } from './components/Icons.jsx';
 import { Lottie, LOTTIE } from './components/Lottie.jsx';
@@ -64,6 +65,14 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
         <h2 className="text-2xl font-bold mb-1">{item.title}</h2>
         {item.subtitle && <p className="text-slate-300 mb-2">{item.subtitle}</p>}
         {item.xp != null && <p className="text-emerald-400 font-bold text-lg mb-2">+{item.xp} XP</p>}
+        {item.shareText && (
+          <button
+            onClick={() => shareOnWhatsApp(item.shareText)}
+            className="mt-1 mb-1 w-full bg-[#25D366] hover:bg-[#1ebe5b] text-white rounded-xl px-6 py-3 font-semibold transition-colors"
+          >
+            📲 Share on WhatsApp
+          </button>
+        )}
         <button onClick={onDismiss} className="mt-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl px-8 py-3 font-semibold transition-colors">Continue</button>
       </div>
     </div>
@@ -448,6 +457,9 @@ export function AIMastery({ onBack, userId, studentName }) {
       setProgress(finished);
       const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
       forceSave(storageKey, finished);
+      // Referral activation gate: the referred student is now genuinely
+      // onboarded — their referrer's draw entry becomes real.
+      activateReferral(userId);
     }
 
     setTimeout(() => {
@@ -652,6 +664,8 @@ export function AIMastery({ onBack, userId, studentName }) {
       setTimeout(() => setCelebrations(q => [...q, {
         type: 'mastery', icon: '🏆', title: 'Skill Mastered!',
         subtitle: `${skill.name} — ${encourage('mastery')}`, xp: xpEarned,
+        // The proudest moment is the share moment (Holiday Blitz loop).
+        shareText: shareMessages.mastery(skill.name, userId),
       }]), 500);
     }
   };
@@ -1359,6 +1373,32 @@ export function AIMastery({ onBack, userId, studentName }) {
               + Class
             </button>
           </div>
+
+          {/* Holiday Challenge banner (Aug 2026 blitz) — the weekly drumbeat +
+              the share loop, one tap from the most-visited screen. */}
+          {(() => {
+            const now = new Date();
+            const start = new Date('2026-08-01'), end = new Date('2026-08-31T23:59:59');
+            if (now < start || now > end) return null;
+            const week = Math.min(4, Math.floor((now - start) / (7 * 24 * 3600 * 1000)) + 1);
+            const themes = { 1: '🔍 Find Your Level week', 2: '🔥 Streak Wars week', 3: '🏁 Mastery Race week', 4: '🎒 Back-to-School Ready week' };
+            return (
+              <div className="mt-2 bg-gradient-to-r from-emerald-900/70 to-sky-900/60 border border-emerald-600/40 rounded-xl px-4 py-3">
+                <div className="flex items-center justify-between gap-2">
+                  <div>
+                    <div className="text-sm font-bold text-emerald-300">🏖️ Holiday Challenge — {themes[week]}</div>
+                    <p className="text-xs text-slate-300 mt-0.5">Free all August. Bring friends with your code — every active friend is an entry in Friday's airtime & data draw.</p>
+                  </div>
+                  <button
+                    onClick={() => shareOnWhatsApp(shareMessages.invite(userId))}
+                    className="shrink-0 px-3 py-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white text-xs font-bold rounded-lg transition-colors"
+                  >
+                    Invite
+                  </button>
+                </div>
+              </div>
+            );
+          })()}
 
           {/* Daily goal — warm, returns-focused encouragement */}
           {(() => {
