@@ -141,8 +141,10 @@ export const diagnoseError = (problem, studentAnswer) => {
     if (a < 10 && b >= 10) { big = b; small = a; }
     if (big >= 10 && big <= 99 && small >= 2 && small <= 9) {
       const tens = Math.floor(big / 10) * 10, ones = big % 10;
-      if (sa === tens * small) return `So close — ${tens} × ${small} = ${tens * small} is only the tens part. Now add the ones: ${ones} × ${small} = ${ones * small}, giving ${total}.`;
-      if (sa === ones * small) return `That's ${ones} × ${small} = ${ones * small}, just the ones part. Don't forget the tens: ${tens} × ${small} = ${tens * small}. Together that's ${total}.`;
+      // Name the missing piece but leave the assembly to the child — a diagnosis
+      // that states the final answer becomes a free-answer machine (hint farming).
+      if (sa === tens * small) return `So close — that's only the tens part (${tens} × ${small}). Now work out the ones part too, ${ones} × ${small}, and add the two parts together.`;
+      if (sa === ones * small) return `That's just the ones part (${ones} × ${small}). The tens are missing — work out ${tens} × ${small}, then add the two parts together.`;
     }
     if (sa === a + b) return `Careful — this one is times, not plus. ${a} × ${b} means ${b} groups of ${a}.`;
     return null;
@@ -152,7 +154,7 @@ export const diagnoseError = (problem, studentAnswer) => {
     const total = a + b;
     if (sa === total) return null;
     if (sa === a - b || sa === b - a) return `This one is plus, not minus — we're putting the numbers together.`;
-    if (sa === forgotCarrySum(a, b) && forgotCarrySum(a, b) !== total) return `Looks like a carry got missed. When a column adds up to 10 or more, write the ones digit and carry the 1 into the next column.`;
+    if (sa === forgotCarrySum(a, b) && forgotCarrySum(a, b) !== total) return `Looks like a carry got missed. When a column adds up to ten or more, write the ones digit and carry the one into the next column.`;
     return null;
   }
 
@@ -179,7 +181,7 @@ export const diagnoseError = (problem, studentAnswer) => {
 export const genericNudge = (problem) => {
   const p = parseArithmetic(problem?.question);
   if (!p) return 'Work through it one step at a time — check each part.';
-  return { '+': 'Add one column at a time, right to left, and carry when a column reaches 10.',
+  return { '+': 'Add one column at a time, right to left, and carry when a column reaches ten.',
     '-': 'Subtract one column at a time, right to left, and borrow when the top digit is smaller.',
     '*': 'Split the bigger number into tens and ones, multiply each, then add the parts.',
     '/': 'Ask how many of the second number fit into the first.' }[p.op];

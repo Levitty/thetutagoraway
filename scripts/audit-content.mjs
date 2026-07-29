@@ -79,7 +79,10 @@ console.log('2. Comparison problems offer the numbers being compared');
 // ---- 3. Remediation engine consistency --------------------------------------
 console.log('3. Remediation engine (computeSteps / diagnoseError)');
 {
-  let arith = 0, stepBad = 0, diagFalse = 0, threw = 0; const badList = [];
+  const dg = (n, l) => String(n).padStart(l, '0').split('').map(Number);
+  const forgotCarry = (a, b) => { const L = Math.max(String(a).length, String(b).length); const d1 = dg(a, L), d2 = dg(b, L); return +d1.map((d, i) => (d + d2[i]) % 10).join(''); };
+  const smallerFromLarger = (a, b) => { const L = Math.max(String(a).length, String(b).length); const d1 = dg(a, L), d2 = dg(b, L); return +d1.map((d, i) => Math.abs(d - d2[i])).join(''); };
+  let arith = 0, stepBad = 0, diagFalse = 0, threw = 0, revealed = 0; const badList = [];
   for (const id of Object.keys(SKILLS)) {
     for (let i = 0; i < N; i++) {
       const p = generateProblem(id);
@@ -105,13 +108,34 @@ console.log('3. Remediation engine (computeSteps / diagnoseError)');
         }
         // And must never throw on junk.
         diagnoseError(p, 'abc'); diagnoseError(p, ''); diagnoseError(p, 999999);
+        // And must never REVEAL the final answer (Khan hint-farming trap):
+        // a diagnosis names the mistake and cues the repair, but the child
+        // must still assemble the result themselves.
+        // (skip when the answer equals an operand — mentioning "take 2 away from 4"
+        // must not count as revealing the answer 2 of 4−2)
+        if (/^-?\d+$/.test(String(p.answer).trim()) && +p.answer !== parsed.a && +p.answer !== parsed.b) {
+          const { a, b, op } = parsed;
+          const wrongs = op === '*'
+            ? [Math.floor(a / 10) * 10 * b, (a % 10) * b, a + b]
+            : op === '+' ? [a - b, forgotCarry(a, b)]
+            : op === '-' ? [a + b, smallerFromLarger(a, b)]
+            : [a - b, a * b];
+          for (const w of wrongs) {
+            const d = diagnoseError(p, w);
+            if (d && new RegExp(`(^|[^0-9.])${p.answer}([^0-9]|$)`).test(d)) {
+              revealed++;
+              if (badList.length < 5) badList.push(`${id}: diagnosis for ${w} REVEALS answer ${p.answer}: "${d}"`);
+              break;
+            }
+          }
+        }
       } catch (e) { threw++; if (badList.length < 5) badList.push(`${id}: threw ${e.message}`); }
     }
   }
-  if (stepBad || diagFalse || threw) {
-    fail(`arith=${arith}: wrong-ending steps=${stepBad}, false diagnoses=${diagFalse}, throws=${threw}`);
+  if (stepBad || diagFalse || threw || revealed) {
+    fail(`arith=${arith}: wrong-ending steps=${stepBad}, false diagnoses=${diagFalse}, throws=${threw}, answer-revealing diagnoses=${revealed}`);
     badList.forEach(b => console.log('      ' + b));
-  } else ok(`${arith} arithmetic problems: steps end correctly, no false diagnoses, no throws`);
+  } else ok(`${arith} arithmetic problems: steps end correctly, no false diagnoses, no reveals, no throws`);
 }
 
 // ---- 4. Worked examples are self-consistent ---------------------------------
