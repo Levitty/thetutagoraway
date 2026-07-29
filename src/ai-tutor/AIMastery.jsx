@@ -11,6 +11,7 @@ import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticRe
 import { HorebBot } from './HorebBot.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
+import { shouldInterleave, pickInterleavedReview } from './interleave.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
@@ -153,6 +154,9 @@ export function AIMastery({ onBack, userId, studentName }) {
   const [feedback, setFeedback] = useState(null);
   const [showHint, setShowHint] = useState(false);
   const [session, setSession] = useState({ correct: 0, total: 0, streak: 0, startTime: null });
+  // Interleaved review interlude inside a lesson (Rohrer): { skillId, name } | null.
+  const [interleave, setInterleave] = useState(null);
+  const interleaveCountRef = useRef(0);
   const [kpIndex, setKpIndex] = useState(0);
   // Ref mirror so problem generation always reads the CURRENT knowledge-point,
   // even when nextProblem() runs synchronously right after finalizeResult().
@@ -622,6 +626,8 @@ export function AIMastery({ onBack, userId, studentName }) {
   const startLesson = (skillId) => {
     setActiveSkill(skillId);
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
+    setInterleave(null);
+    interleaveCountRef.current = 0;
     setKpIndex(0); kpIndexRef.current = 0;
     setLessonFailCount(0);
     setModalityLevel('abstract');
@@ -666,7 +672,38 @@ export function AIMastery({ onBack, userId, studentName }) {
     setWrongInfo(null);
   };
 
+  // An interleaved review is retrieval practice: ONE attempt, immediate
+  // feedback, credit to the reviewed skill's spaced-repetition schedule.
+  // The lesson skill's mastery count and session totals are untouched.
+  const handleInterleaveAnswer = () => {
+    const hasVisualAnswer = problem?.visual && visualAnswer != null;
+    if ((!answer.trim() && !hasVisualAnswer) || feedback) return;
+    const skillId = interleave.skillId;
+    const correct = hasVisualAnswer
+      ? checkVisualAnswer(visualAnswer, problem.visual)
+      : checkAnswerMatch(answer, problem);
+    const timeMs = Date.now() - problemStartRef.current;
+    logResponse({
+      studentId: userId, subject: subjectId, skillId,
+      correct, problemType: problem?.type, timeMs, isReview: true,
+    });
+    if (!correct) {
+      setWrongInfo({ answer: answer.trim(), diagnosis: diagnoseError(problem, answer) });
+      setHintLevel(3); // full reveal — the teaching moment still happens
+    }
+    setFeedback(correct ? 'correct' : 'incorrect');
+    const sp = progress.skills[skillId] || { attempts: 0, correct: 0, mastered: false, repNum: 0, learningSpeed: 1.0 };
+    const updatedSp = processReviewResult(sp, correct, timeMs, fluencyExpectedMs(SKILLS[skillId]));
+    updatedSp.attempts = sp.attempts + 1;
+    updatedSp.correct = sp.correct + (correct ? 1 : 0);
+    let updatedSkills = applyImplicitCredits(progress, skillId, correct, ctx);
+    updatedSkills = { ...updatedSkills, [skillId]: updatedSp };
+    // Small XP either way: showing up for a memory check pays (effort-aware).
+    setProgress(p => updateStreak(gainXP({ ...p, skills: updatedSkills }, correct ? 3 : 1)));
+  };
+
   const checkAnswer = () => {
+    if (interleave) return handleInterleaveAnswer();
     // Visual problems are answered by interaction (or by typing the coordinate).
     const hasVisualAnswer = problem?.visual && visualAnswer != null;
     if ((!answer.trim() && !hasVisualAnswer) || feedback) return;
@@ -843,7 +880,20 @@ export function AIMastery({ onBack, userId, studentName }) {
   };
 
   const nextProblem = () => {
-    setProblem(serveLessonProblem(activeSkill, modalityLevel));
+    // Interleave a due review from ANOTHER skill after the 3rd and 7th answers
+    // (mixed practice ≈ doubles delayed retention vs blocked — Rohrer). Standard
+    // flow only: young learners keep their uninterrupted count-together rhythm.
+    const lg = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    const due = (lg > 3 && shouldInterleave(session.total, interleaveCountRef.current))
+      ? pickInterleavedReview(getReviews(progress, ctx), activeSkill) : null;
+    if (due) {
+      interleaveCountRef.current += 1;
+      setInterleave({ skillId: due.id, name: due.name || SKILLS[due.id]?.name || 'earlier skill' });
+      setProblem(generateProblem(due.id));
+    } else {
+      setInterleave(null);
+      setProblem(serveLessonProblem(activeSkill, modalityLevel));
+    }
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
@@ -1116,8 +1166,10 @@ export function AIMastery({ onBack, userId, studentName }) {
     // support level (structured content), or a parallel solved example (legacy
     // content) — and, after a correct answer, the partition the problem was
     // ANSWERED with, for the self-explanation card.
-    const plan = problem && !feedback ? completionPlan(problem, scaffoldLevel) : null;
-    const legacyExample = problem && !feedback ? exampleSupport(problem, scaffoldLevel) : null;
+    // An interleaved review is bare retrieval — no completion scaffold, no
+    // similar-example crutch. The point is recalling it from memory.
+    const plan = problem && !feedback && !interleave ? completionPlan(problem, scaffoldLevel) : null;
+    const legacyExample = problem && !feedback && !interleave ? exampleSupport(problem, scaffoldLevel) : null;
     const supportChip = SUPPORT_LABEL[scaffoldLevel];
     const answeredPlan = (feedback === 'correct' && answeredLevel != null && answeredLevel <= SUPPORT.MOST)
       ? completionPlan(problem, answeredLevel) : null;
@@ -1236,10 +1288,15 @@ export function AIMastery({ onBack, userId, studentName }) {
               <div className="flex items-start gap-3 mb-4">
                 <HorebBot size={40} className="shrink-0" />
                 <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">
-                  {modalityLevel === 'concrete' ? "Let's see it a different way — use the picture to help." : 'Now you try this one. Take your time.'}
+                  {interleave ? 'Quick memory check — do you still remember this one?' : modalityLevel === 'concrete' ? "Let's see it a different way — use the picture to help." : 'Now you try this one. Take your time.'}
                 </div>
               </div>
               <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
+                {interleave && (
+                  <div className="inline-flex items-center gap-1.5 mb-3 text-xs font-bold text-[#6d6fcb] bg-[#f5f6fc] border border-[#e8e9f6] rounded-full px-3 py-1.5">
+                    <Icon name="refresh" className="w-3.5 h-3.5" /> Quick review · {interleave.name}
+                  </div>
+                )}
                 <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">
                   <TermTooltip text={problem.question} definitions={problem.workedExample?.definitions || problem.definitions} />
                 </div>

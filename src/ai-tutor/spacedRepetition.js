@@ -58,6 +58,11 @@ export const processReviewResult = (skillProgress, wasCorrect, timeTakenMs, expe
     sp.repNum = (sp.repNum || 0) + rawDelta;
     sp.learningSpeed = updateLearningSpeed(sp.learningSpeed || 1.0, true, sp.attempts);
     sp.consecutiveFailures = 0;
+    // Delayed mastery confirmation (Khan-style certification, without the
+    // leveling-down pain): the first time a mastered skill is answered
+    // correctly in a LATER review — a spaced, mixed retrieval check — stamp it
+    // confirmed. Never unset on a miss; the scheduler handles decay invisibly.
+    if (sp.mastered && !sp.confirmedAt) sp.confirmedAt = new Date().toISOString();
     // Automaticity: a FAST correct answer builds fluency; a slow one erodes it.
     if (expectedTimeMs && timeTakenMs != null) {
       sp.fluentReps = timeTakenMs <= expectedTimeMs
