@@ -39,6 +39,14 @@ export function buildEquivalentFraction() {
     question: `Fill in the blank:   ${a}/${b} = ?/${newDen}`,
     answer: `${ans}`,
     accepts: accepts(`${ans}`, `${ans}/${newDen}`),
+    // Bar model: the SAME amount cut into smaller pieces. The second bar stays
+    // unshaded in practice (its count IS the answer); the dashed guide marks
+    // "the same amount" so the student reasons it out visually.
+    model: { type: 'bar-model', data: {
+      bars: [{ n: a, d: b, label: `${a}/${b}` }, { n: 0, d: newDen, label: `?/${newDen}` }],
+      guideAt: a / b,
+      caption: 'both bars must shade up to the dashed line — the pieces are just smaller',
+    } },
     hints: hintLadder(
       'What do you multiply the bottom by to get the new denominator?',
       `${b} × ${k} = ${newDen}, so multiply the TOP by the same ${k}.`,
@@ -47,7 +55,11 @@ export function buildEquivalentFraction() {
     solution: {
       steps: [
         { text: `The denominator was multiplied by ${k} (${b}×${k}=${newDen}).`, expr: `×${k}` },
-        { text: 'Multiply the numerator by the same number.', expr: `${a} × ${k} = ${ans}` },
+        { text: 'Multiply the numerator by the same number.', expr: `${a} × ${k} = ${ans}`,
+          model: { type: 'bar-model', data: {
+            bars: [{ n: a, d: b, label: `${a}/${b}` }, { n: ans, d: newDen, label: `${ans}/${newDen}` }],
+            guideAt: a / b,
+          } } },
       ],
       answer: `${ans}`,
     },
@@ -72,6 +84,12 @@ export function buildAddSubLike({ sub = false } = {}) {
     question: `${a}/${d} ${op} ${c}/${d}`,
     answer: fracStr(num, d),
     accepts: fracAccepts(num, d),
+    // Bar model: same-size pieces. Practice shows the two operands (the result
+    // bar would BE the answer); the final solution step carries the full picture.
+    model: { type: 'bar-model', data: {
+      bars: [{ n: a, d, label: `${a}/${d}` }, { n: c, d, label: `${op} ${c}/${d}` }],
+      caption: `same denominator = same-size pieces, so just ${sub ? 'take away' : 'count'} the pieces`,
+    } },
     hints: hintLadder(
       'The denominators are the same, so the bottom number stays the same.',
       `Just ${sub ? 'subtract' : 'add'} the numerators: ${a} ${op} ${c}.`,
@@ -79,7 +97,16 @@ export function buildAddSubLike({ sub = false } = {}) {
     ),
     solution: {
       steps: [
-        { text: `Same denominator — ${sub ? 'subtract' : 'add'} the numerators only.`, expr: `${num}/${d}` },
+        { text: `Same denominator — ${sub ? 'subtract' : 'add'} the numerators only.`, expr: `${num}/${d}`,
+          // The result bar only fits when the sum stays within one whole; an
+          // improper result (e.g. 7/9 + 4/9 = 11/9) spills past the bar, so we
+          // show the operands and let the caption carry the total.
+          model: { type: 'bar-model', data: {
+            bars: num <= d
+              ? [{ n: a, d, label: `${a}/${d}` }, { n: c, d, label: `${op} ${c}/${d}` }, { n: num, d, label: `= ${num}/${d}` }]
+              : [{ n: a, d, label: `${a}/${d}` }, { n: c, d, label: `${op} ${c}/${d}` }],
+            caption: num > d ? `${a} + ${c} = ${num} pieces — more than one whole bar (${num}/${d})` : undefined,
+          } } },
         { text: 'Simplify if possible.', expr: fracStr(num, d) },
       ],
       answer: fracStr(num, d),

@@ -103,6 +103,14 @@ export function buildIntegerAddSub() {
     question: `${a} ${op} ${signed(b)}`,
     answer: `${res}`,
     accepts: accepts(`${res}`),
+    // Number-line picture: start at a, jump by ±b. Subtracting a negative
+    // becomes a visible jump to the RIGHT — the model shows why. During
+    // practice the landing value is hidden (that IS the answer); the worked
+    // example / reveal shows the complete jump via the final step's model.
+    model: { type: 'numberline-jump', data: {
+      from: a, delta: sub ? -b : b, to: res, hideResult: true,
+      caption: sub && b < 0 ? 'subtracting a negative moves you RIGHT' : undefined,
+    } },
     hints: hintLadder(
       'Subtracting a negative is the same as adding; adding a negative is the same as subtracting.',
       'Think of a number line: which direction do you move?',
@@ -111,7 +119,8 @@ export function buildIntegerAddSub() {
     solution: {
       steps: [
         { text: 'Rewrite double signs (− − becomes +, + − becomes −).', expr: `${a} ${sub ? (b < 0 ? '+' : '−') : (b < 0 ? '−' : '+')} ${Math.abs(b)}` },
-        { text: 'Compute.', expr: `${res}` },
+        { text: 'Compute.', expr: `${res}`,
+          model: { type: 'numberline-jump', data: { from: a, delta: sub ? -b : b, to: res } } },
       ],
       answer: `${res}`,
     },

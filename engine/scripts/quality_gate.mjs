@@ -136,12 +136,49 @@ function verifyProblem(p) {
   return { ok: null, reason: `unknown verify kind ${v.kind}` };
 }
 
+// ---- teaching-visual model validation ----
+// A malformed model renders a broken picture mid-lesson — treat it as a defect.
+function validateModel(m, where) {
+  if (!m) return null;
+  const d = m.data;
+  if (!d) return `${where}: model has no data`;
+  switch (m.type) {
+    case 'balance': {
+      for (const side of ['left', 'right']) {
+        const s = d[side];
+        if (!s || !Number.isFinite(s.x ?? 0) || !Number.isFinite(s.units ?? 0)) return `${where}: balance ${side} pan malformed`;
+      }
+      return null;
+    }
+    case 'numberline-jump': {
+      if (!Number.isFinite(d.from) || !Number.isFinite(d.delta)) return `${where}: numberline from/delta not numeric`;
+      const to = d.to ?? d.from + d.delta;
+      if (to !== d.from + d.delta) return `${where}: numberline to ≠ from + delta`;
+      return null;
+    }
+    case 'area-model': {
+      if (!d.rows?.length || !d.cols?.length) return `${where}: area-model missing rows/cols`;
+      if (!Array.isArray(d.cells) || d.cells.length !== d.rows.length) return `${where}: area-model cells rows mismatch`;
+      if (d.cells.some(r => !Array.isArray(r) || r.length !== d.cols.length)) return `${where}: area-model cells cols mismatch`;
+      return null;
+    }
+    case 'bar-model': {
+      if (!d.bars?.length) return `${where}: bar-model has no bars`;
+      for (const b of d.bars) {
+        if (!Number.isFinite(b.n) || !Number.isFinite(b.d) || b.d <= 0 || b.n < 0 || b.n > b.d) return `${where}: bar ${b.n}/${b.d} out of range`;
+      }
+      return null;
+    }
+    default: return `${where}: unknown model type ${m.type}`;
+  }
+}
+
 // ---- score one skill ----
 function scoreSkill(id) {
   const issues = [];
   let sample;
   const questions = new Set();
-  let verifyFails = 0, verifyChecked = 0;
+  let verifyFails = 0, verifyChecked = 0, modelBad = 0;
 
   for (let i = 0; i < SAMPLES; i++) {
     let p;
@@ -151,6 +188,13 @@ function scoreSkill(id) {
     const v = verifyProblem(p);
     if (v.ok === true) verifyChecked++;
     else if (v.ok === false) { verifyFails++; if (issues.length < 3) issues.push(`WRONG ANSWER: ${v.reason}`); }
+    // Teaching-visual models must be well-formed wherever they appear.
+    const mErrs = [
+      validateModel(p?.model, 'problem'),
+      ...(p?.solution?.steps || []).map((s, si) => validateModel(s?.model, `step ${si + 1}`)),
+      ...((p?.workedExample?.richSteps) || []).map((s, si) => validateModel(s?.model, `example step ${si + 1}`)),
+    ].filter(Boolean);
+    if (mErrs.length) { modelBad++; if (issues.length < 6) issues.push(`BAD MODEL: ${mErrs[0]}`); }
   }
   if (!sample) return { id, score: 0, issues, fatal: true };
 
@@ -180,6 +224,7 @@ function scoreSkill(id) {
   score += has.misconceptions ? 5 : 0;
   score += Math.min(has.variety, VARIETY_MIN) / VARIETY_MIN * 10;
   score = Math.round(score);
+  if (modelBad > 0) score = Math.min(score, 60);   // a broken picture fails the bar
 
   return { id, score, has, issues, sample };
 }

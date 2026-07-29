@@ -203,11 +203,13 @@ export function buildTemperatureChange() {
       type: 'temp-change', instruction: 'Find the new temperature.',
       question: `At 6 a.m. the temperature was ${t}°C. By noon it had risen by ${r}°C. What was the temperature at noon?`,
       answer: `${value}`, accepts: accepts(`${value}`, `${value}°C`, `${value}C`),
+      model: { type: 'numberline-jump', data: { from: t, delta: r, to: value, unit: '°C', hideResult: true } },
       hints: hintLadder('A rise means the temperature goes UP the scale.',
         'Add the rise to the starting temperature.', `${t} + ${r}.`),
       solution: { steps: [
         { text: 'A rise is an addition.', expr: `${t} + ${r}` },
-        { text: 'Evaluate.', expr: `${value}°C` }], answer: `${value}` },
+        { text: 'Evaluate.', expr: `${value}°C`,
+          model: { type: 'numberline-jump', data: { from: t, delta: r, to: value, unit: '°C' } } }], answer: `${value}` },
       misconceptions: [{ when: `${t - r}`, feedback: 'You subtracted — but the temperature ROSE, so add the change.' }],
       verify: { kind: 'fraction', value },
     };
@@ -221,11 +223,13 @@ export function buildTemperatureChange() {
       type: 'temp-change', instruction: 'Find the new temperature.',
       question: `In the evening the temperature was ${t}°C. Overnight it fell by ${f}°C. What was the temperature by morning?`,
       answer: `${value}`, accepts: accepts(`${value}`, `${value}°C`, `${value}C`),
+      model: { type: 'numberline-jump', data: { from: t, delta: -f, to: value, unit: '°C', hideResult: true, caption: 'falling temperature moves LEFT — past zero into negatives' } },
       hints: hintLadder('A fall means the temperature goes DOWN the scale.',
         'Subtract the fall from the starting temperature — it may pass below zero.', `${t} − ${f}.`),
       solution: { steps: [
         { text: 'A fall is a subtraction.', expr: `${t} − ${f}` },
-        { text: 'Evaluate (crossing zero if needed).', expr: `${value}°C` }], answer: `${value}` },
+        { text: 'Evaluate (crossing zero if needed).', expr: `${value}°C`,
+          model: { type: 'numberline-jump', data: { from: t, delta: -f, to: value, unit: '°C' } } }], answer: `${value}` },
       misconceptions: [{ when: `${f - t}`, feedback: `Sign slip: ${t} − ${f} lands BELOW zero at ${value}, not at ${f - t}. Count down the scale past 0.` }],
       verify: { kind: 'fraction', value },
     };
@@ -237,11 +241,13 @@ export function buildTemperatureChange() {
     type: 'temp-diff', instruction: 'Find the change in temperature.',
     question: `The temperature rose from ${a}°C to ${b}°C. By how many degrees did it rise?`,
     answer: `${value}`, accepts: accepts(`${value}`, `${value}°C`, `${value}C`),
+    model: { type: 'numberline-jump', data: { from: a, delta: value, to: b, unit: '°C', hideDelta: true, caption: 'the answer is the SIZE of the jump' } },
     hints: hintLadder('The change is the gap between the two temperatures on the scale.',
       'Change = final − start. Subtracting a negative adds.', `${b} − (${a}).`),
     solution: { steps: [
       { text: 'Change = final − start.', expr: `${b} − (${a})` },
-      { text: 'Evaluate.', expr: `${value}°C` }], answer: `${value}` },
+      { text: 'Evaluate.', expr: `${value}°C`,
+        model: { type: 'numberline-jump', data: { from: a, delta: value, to: b, unit: '°C' } } }], answer: `${value}` },
     misconceptions: (a < 0 && wrong !== value)
       ? [{ when: `${wrong}`, feedback: `You ignored the minus sign on ${a}. From ${a} up to 0 is ${-a} degrees, then 0 up to ${b} is ${b} more: ${value} in total.` }]
       : [],

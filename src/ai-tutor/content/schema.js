@@ -125,7 +125,9 @@ export const withWorkedExample = (gen) => () => {
     steps: ex.solution.steps.map(stepText),
     solution: ex.solution.answer,
     instruction: ex.instruction,
-    richSteps: ex.solution.steps,
+    richSteps: ex.solution.steps,      // step.model (if present) drives the visual
+    model: ex.model,                   // the example's own teaching visual
+    definitions: ex.definitions,
   };
   return p;
 };
@@ -174,12 +176,33 @@ export function buildLinearEquation({ tier = 2 } = {}) {
     steps.push({ text: `${undoConst(b)} on both sides.`, expr: `x = ${x}` });
   }
 
+  // Balance-scale states (the CPA picture of an equation): one state per step,
+  // so the visual moves in lockstep with the algebra. bal(step i) = pans AFTER
+  // that step. The initial state is the equation as posed.
+  const bal = (l, r, caption) => ({ type: 'balance', data: { left: l, right: r, caption } });
+  const initialModel = tier === 3
+    ? bal({ x: a, units: b }, { x: c, units: d }, 'An equation is a balance — both sides weigh the same.')
+    : bal({ x: a, units: b }, { x: 0, units: c }, 'An equation is a balance — both sides weigh the same.');
+  const stepModels = [];
+  if (tier === 3) {
+    stepModels.push(bal({ x: A, units: b }, { x: 0, units: d }, `Took ${c}x off both pans.`));
+    stepModels.push(bal({ x: A, units: 0 }, { x: 0, units: d - b }, `${b >= 0 ? 'Removed' : 'Added'} ${Math.abs(b)} from both pans.`));
+    if (A !== 1) stepModels.push(bal({ x: 1, units: 0 }, { x: 0, units: x }, `Shared both pans into ${A} equal groups.`));
+  } else if (tier === 2) {
+    stepModels.push(bal({ x: a, units: 0 }, { x: 0, units: c - b }, `${b >= 0 ? 'Removed' : 'Added'} ${Math.abs(b)} from both pans.`));
+    stepModels.push(bal({ x: 1, units: 0 }, { x: 0, units: x }, `Shared both pans into ${a} equal groups.`));
+  } else {
+    stepModels.push(bal({ x: 1, units: 0 }, { x: 0, units: x }, `${b >= 0 ? 'Removed' : 'Added'} ${Math.abs(b)} from both pans.`));
+  }
+  steps.forEach((s, i) => { if (stepModels[i]) s.model = stepModels[i]; });
+
   return {
     type: 'linear-equation',
     instruction: 'Solve for x.',
     question,
     answer: `x = ${x}`,
     accepts: accepts(`x=${x}`, `x = ${x}`, `${x}`),
+    model: initialModel,
     hints: hintLadder(
       'Aim to get x by itself on one side.',
       tier === 3 ? 'First collect the x-terms together, then the numbers.' : 'Undo the +/− first, then undo the ×.',
@@ -246,6 +269,14 @@ export function buildDistribute() {
     instruction: 'Expand the bracket.',
     question: `Expand:   ${a}(${fmtLinear(b, c)})`,
     answer: ans,
+    // Area model: a(bx + c) is a rectangle a tall, split into bx and c wide.
+    // Practice shows the empty grid (structure without the products — those ARE
+    // the answer); the final solution step carries the filled-in model.
+    model: { type: 'area-model', data: {
+      rows: [`${a}`], cols: [fmtTerm(b, 'x', true), `${c}`],
+      cells: [['?', '?']],
+      caption: 'multiply the outside number by EACH part',
+    } },
     accepts: accepts(ans, ans.replace(/\s/g, '')),
     hints: hintLadder(
       'Multiply everything inside the bracket by the number outside.',
@@ -256,7 +287,12 @@ export function buildDistribute() {
       steps: [
         { text: `Multiply the x-term: ${a} × ${b}x.`, expr: `${A}x` },
         { text: `Multiply the constant: ${a} × (${c}).`, expr: `${fmtTerm(C, '')}`.trim() },
-        { text: 'Write the result.', expr: ans },
+        { text: 'Write the result.', expr: ans,
+          model: { type: 'area-model', data: {
+            rows: [`${a}`], cols: [fmtTerm(b, 'x', true), `${c}`],
+            cells: [[fmtTerm(A, 'x', true), `${C}`]],
+            caption: `${a}(${fmtLinear(b, c)}) = ${ans}`,
+          } } },
       ],
       answer: ans,
     },
@@ -277,6 +313,13 @@ export function buildBinomial() {
     instruction: 'Expand and simplify.',
     question: `Expand:   (x${fmtTerm(p, '')})(x${fmtTerm(q, '')})`,
     answer: f.caret,
+    // Area model: (x+p)(x+q) as a 2×2 grid — every part multiplies every part.
+    // Practice shows the empty grid; the final step fills the four products in.
+    model: { type: 'area-model', data: {
+      rows: ['x', `${q}`], cols: ['x', `${p}`],
+      cells: [['?', '?'], ['?', '?']],
+      caption: 'every part along the top multiplies every part down the side',
+    } },
     accepts: accepts(f.caret, f.uni, f.caret.replace(/\s/g, ''), f.uni.replace(/\s/g, '')),
     hints: hintLadder(
       'Use FOIL: First, Outer, Inner, Last.',
@@ -288,7 +331,12 @@ export function buildBinomial() {
         { text: 'First terms: x · x.', expr: 'x²' },
         { text: `Outer + Inner: ${p}x + ${q}x.`, expr: `${fmtTerm(b, 'x')}`.trim() },
         { text: `Last terms: (${p})(${q}).`, expr: `${fmtTerm(c, '')}`.trim() },
-        { text: 'Combine.', expr: f.caret },
+        { text: 'Combine.', expr: f.caret,
+          model: { type: 'area-model', data: {
+            rows: ['x', `${q}`], cols: ['x', `${p}`],
+            cells: [['x²', fmtTerm(p, 'x', true)], [fmtTerm(q, 'x', true), `${p * q}`]],
+            caption: 'four small areas add up to the expansion',
+          } } },
       ],
       answer: f.caret,
     },

@@ -17,6 +17,7 @@ import { supabase } from '../supabase.js';
 import { Icon } from './components/Icons.jsx';
 import { Lottie, LOTTIE } from './components/Lottie.jsx';
 import { InteractiveVisual, SKILL_VISUALS } from './InteractiveVisual.jsx';
+import { TeachingVisual } from './TeachingVisual.jsx';
 import { checkVisualAnswer } from './content/visual.js';
 import { checkAnswerMatch, normalizeMath } from './answerCheck.js';
 
@@ -155,6 +156,11 @@ export function AIMastery({ onBack, userId, studentName }) {
   // Layered hints + tooltips state
   const [attemptCount, setAttemptCount] = useState(0);
   const [hintLevel, setHintLevel] = useState(0); // 0=none, 1=hint, 2=partial steps, 3=full reveal
+  // --- Teaching flow (worked-example effect + fading + specific feedback) ---
+  const [workedEx, setWorkedEx] = useState(null);  // stable example instance (NOT regenerated per render)
+  const [weStep, setWeStep] = useState(0);         // steps revealed so far (learner-paced segmenting)
+  const [guided, setGuided] = useState(false);     // completion problem: steps shown, student finishes
+  const [misconception, setMisconception] = useState(null); // named feedback for a recognised wrong answer
   const [activeTooltip, setActiveTooltip] = useState(null);
   const [expandedWhySteps, setExpandedWhySteps] = useState({});
   const [conceptsExpanded, setConceptsExpanded] = useState(true);
@@ -466,7 +472,13 @@ export function AIMastery({ onBack, userId, studentName }) {
     setKpIndex(0);
     setLessonFailCount(0);
     setModalityLevel('abstract');
+    // Generate the worked example ONCE and keep it in state — regenerating it
+    // per render would shuffle its numbers mid-study.
     const we = generateWorkedExample(skillId);
+    setWorkedEx(we);
+    setWeStep(0);
+    setGuided(false);
+    setMisconception(null);
     setShowWorkedExample(!!we);
     setProblem(we ? null : generateProblem(skillId, { level: 'abstract' }));
     setAnswer('');
@@ -483,7 +495,13 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   const startPractice = () => {
     setShowWorkedExample(false);
-    setProblem(generateProblem(activeSkill, { level: modalityLevel }));
+    const p = generateProblem(activeSkill, { level: modalityLevel });
+    setProblem(p);
+    // FADING (example → completion → independent): the FIRST problem after the
+    // worked example is a completion problem — its early steps are shown and the
+    // student supplies only the finish. Guided solves never count as clean.
+    setGuided(session.total === 0 && (p?.solution?.steps?.length || 0) >= 2);
+    setMisconception(null);
     setAnswer('');
     setFeedback(null);
     setAttemptCount(0);
@@ -502,8 +520,17 @@ export function AIMastery({ onBack, userId, studentName }) {
     const newAttemptCount = attemptCount + 1;
     setAttemptCount(newAttemptCount);
 
+    // === SPECIFIC-ERROR FEEDBACK (the "teacher looked at your work" moment) ===
+    // Content authors name the classic wrong answers (sign slips, added instead
+    // of multiplied, forgot the ½ …). If the student's wrong answer IS one of
+    // them, say so specifically — far more instructive than a generic hint.
+    const mHit = !correct && answer.trim()
+      ? (problem.misconceptions || []).find(m => normalizeMath(String(answer)) === normalizeMath(String(m.when)))
+      : null;
+    setMisconception(mHit ? mHit.feedback : null);
+
     // === LAYERED WRONG-ANSWER HANDLING ===
-    // Attempt 1 wrong: show hint, let them retry
+    // Attempt 1 wrong: show hint (or the named misconception), let them retry
     // Attempt 2 wrong: show partial worked example, let them retry
     // Attempt 3 wrong: show full answer + worked example, mark as final incorrect
     if (!correct && newAttemptCount < 3) {
@@ -522,7 +549,9 @@ export function AIMastery({ onBack, userId, studentName }) {
       studentId: userId, subject: subjectId, skillId: activeSkill,
       correct, problemType: problem?.type,
       timeMs: Date.now() - problemStartRef.current,
-      hintsUsed: correct ? hintLevel : 3, attemptNo: newAttemptCount,
+      // A guided (completion) solve is assisted by definition — never log it as
+      // hint-free, or the calibration loop would over-rate the skill's ease.
+      hintsUsed: correct ? Math.max(hintLevel, guided ? 1 : 0) : 3, attemptNo: newAttemptCount,
     });
 
     const newSession = {
@@ -548,7 +577,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     // solve = clean AND fast (automaticity). Time budget scales with difficulty.
     const timeTaken = Date.now() - problemStartRef.current;
     const automaticityMs = 30000 + (skill.weight || 3) * 15000; // ~45s (easy) … ~120s (hard)
-    const cleanSolve = correct && hintLevel === 0;
+    const cleanSolve = correct && hintLevel === 0 && !guided;
     const fluentSolve = cleanSolve && timeTaken <= automaticityMs;
     const newCleanCorrect = (sp.cleanCorrect || 0) + (cleanSolve ? 1 : 0);
     const newFluentCorrect = (sp.fluentCorrect || 0) + (fluentSolve ? 1 : 0);
@@ -629,6 +658,8 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   const nextProblem = () => {
     setProblem(generateProblem(activeSkill, { level: modalityLevel }));
+    setGuided(false);            // only the first post-example problem is guided
+    setMisconception(null);
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
@@ -900,33 +931,56 @@ export function AIMastery({ onBack, userId, studentName }) {
 
           {session.streak >= 3 && <div className="bg-amber-900/30 border border-amber-600 rounded-lg p-2 mb-4 text-center text-amber-400 text-sm">🔥 {session.streak} streak!</div>}
 
-          {/* Worked Example */}
+          {/* Worked Example — learner-paced: one step at a time, picture in sync.
+              (Segmenting principle: a student who CLICKS through the reasoning
+              processes it; a student shown a finished solution skims it.) */}
           {showWorkedExample && (
             <div className="bg-slate-800 rounded-2xl p-6 mb-4">
-              <div className="flex items-center gap-2 text-emerald-400 mb-4">
-                <Icon name="book" className="w-5 h-5" />
-                <span className="font-semibold">Worked Example</span>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2 text-emerald-400">
+                  <Icon name="book" className="w-5 h-5" />
+                  <span className="font-semibold">Watch one first</span>
+                </div>
+                {workedEx && workedEx.steps.length > 0 && (
+                  <div className="flex gap-1.5" aria-label={`step ${Math.min(weStep, workedEx.steps.length)} of ${workedEx.steps.length}`}>
+                    {workedEx.steps.map((_, i) => (
+                      <span key={i} className={`w-2 h-2 rounded-full ${i < weStep ? 'bg-emerald-400' : 'bg-slate-600'}`} />
+                    ))}
+                  </div>
+                )}
               </div>
-              {(() => {
-                const we = generateWorkedExample(activeSkill);
-                if (!we) return <p className="text-slate-400">No worked example available. Let's practice!</p>;
+              {!workedEx ? (
+                <p className="text-slate-400">No worked example available. Let's practice!</p>
+              ) : (() => {
+                const steps = workedEx.steps || [];
+                const rich = workedEx.richSteps || [];
+                const allShown = weStep >= steps.length;
+                // The picture tracks the most recent revealed step that has one.
+                let liveModel = workedEx.model;
+                for (let i = Math.min(weStep, rich.length) - 1; i >= 0; i--) {
+                  if (rich[i]?.model) { liveModel = rich[i].model; break; }
+                }
                 return (
                   <div>
                     {/* Concept Intro — explains key terms before the example */}
-                    <ConceptIntro definitions={we.definitions} />
+                    <ConceptIntro definitions={workedEx.definitions} />
 
                     <div className="bg-slate-700/50 rounded-lg p-3 mb-4 font-medium">
-                      <TermTooltip text={we.problem} definitions={we.definitions} />
+                      <TermTooltip text={workedEx.problem} definitions={workedEx.definitions} />
                     </div>
+
+                    {/* Dual coding: the words explain, the picture shows */}
+                    {liveModel && <TeachingVisual model={liveModel} className="mb-4" />}
+
                     <div className="space-y-2 mb-4">
-                      {we.steps.map((step, i) => (
-                        <div key={i}>
+                      {steps.slice(0, weStep).map((step, i) => (
+                        <div key={i} className={i === weStep - 1 ? 'animate-[tg-fadein_0.3s_ease-out]' : ''}>
                           <div className="flex gap-3 text-sm">
                             <span className="text-emerald-400 font-bold min-w-[24px]">{i + 1}.</span>
-                            <span className="text-slate-300 flex-1">
-                              <TermTooltip text={step} definitions={we.definitions} />
+                            <span className={`flex-1 ${i === weStep - 1 ? 'text-white font-medium' : 'text-slate-400'}`}>
+                              <TermTooltip text={step} definitions={workedEx.definitions} />
                             </span>
-                            {we.whySteps && we.whySteps[i] && (
+                            {workedEx.whySteps && workedEx.whySteps[i] && (
                               <button
                                 onClick={() => setExpandedWhySteps(prev => ({ ...prev, [i]: !prev[i] }))}
                                 className="text-xs text-amber-400 hover:text-amber-300 whitespace-nowrap transition-colors"
@@ -935,22 +989,37 @@ export function AIMastery({ onBack, userId, studentName }) {
                               </button>
                             )}
                           </div>
-                          {expandedWhySteps[i] && we.whySteps && we.whySteps[i] && (
+                          {expandedWhySteps[i] && workedEx.whySteps && workedEx.whySteps[i] && (
                             <div className="ml-9 mt-1 mb-2 p-2 bg-amber-900/20 border border-amber-700/30 rounded-lg text-xs text-amber-200 leading-relaxed">
-                              {we.whySteps[i]}
+                              {workedEx.whySteps[i]}
                             </div>
                           )}
                         </div>
                       ))}
                     </div>
-                    <div className="bg-emerald-900/30 border border-emerald-700 rounded-lg p-3">
-                      <span className="text-emerald-400 font-semibold">Answer: </span>
-                      <span className="font-mono">{we.solution}</span>
-                    </div>
+                    <style>{`@keyframes tg-fadein{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}`}</style>
+
+                    {!allShown ? (
+                      <>
+                        {weStep === 0 && <p className="text-slate-400 text-sm mb-3">Step through it at your own pace — try to guess each next move before you reveal it.</p>}
+                        <button onClick={() => setWeStep(weStep + 1)} className="w-full bg-slate-700 hover:bg-slate-600 border border-emerald-600/40 rounded-xl py-3 font-semibold text-emerald-300 transition-colors">
+                          {weStep === 0 ? 'Show the first step' : 'Show the next step'} →
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <div className="bg-emerald-900/30 border border-emerald-700 rounded-lg p-3">
+                          <span className="text-emerald-400 font-semibold">Answer: </span>
+                          <span className="font-mono">{workedEx.solution}</span>
+                        </div>
+                        {/* Self-explanation nudge — the step that makes examples stick */}
+                        <p className="text-slate-400 text-sm mt-3">Before you try one: could you say <span className="text-slate-200">why each step happened</span>? Tap "Why?" on any step you're unsure about.</p>
+                        <button onClick={startPractice} className="w-full mt-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl py-3 font-semibold transition-colors">Got it — Let me try!</button>
+                      </>
+                    )}
                   </div>
                 );
               })()}
-              <button onClick={startPractice} className="w-full mt-4 bg-emerald-600 hover:bg-emerald-500 rounded-xl py-3 font-semibold transition-colors">Got it — Let me try!</button>
             </div>
           )}
 
@@ -960,6 +1029,11 @@ export function AIMastery({ onBack, userId, studentName }) {
               {modalityLevel === 'concrete' && (
                 <div className="bg-indigo-900/30 border border-indigo-600/40 rounded-xl p-3 mb-3 text-sm text-indigo-200 flex items-center gap-2">
                   <span>💡</span> Let's see this a different way — try it with the picture.
+                </div>
+              )}
+              {guided && (
+                <div className="bg-emerald-900/20 border border-emerald-700/40 rounded-xl p-3 mb-3 text-sm text-emerald-200 flex items-center gap-2">
+                  <span>🤝</span> Guided try — the first steps are done for you. You finish it.
                 </div>
               )}
               <div className="bg-slate-800 rounded-2xl p-6 mb-4">
@@ -974,6 +1048,10 @@ export function AIMastery({ onBack, userId, studentName }) {
                     onAnswer={setVisualAnswer}
                     disabled={!!feedback}
                   />
+                ) : problem.model ? (
+                  /* Teaching picture (dual coding) — shows the structure of the
+                     problem without giving the answer away */
+                  <TeachingVisual model={problem.model} className="mb-4" />
                 ) : (
                   /* Otherwise, an exploratory manipulative if the skill has one */
                   activeSkill && SKILL_VISUALS[activeSkill] && (
@@ -985,12 +1063,43 @@ export function AIMastery({ onBack, userId, studentName }) {
                     />
                   )
                 )}
+                {/* Completion problem: earlier steps are given; the student
+                    supplies the finish (Renkl's example→practice fade). */}
+                {guided && (problem.solutionSteps?.length || 0) >= 2 && (
+                  <div className="mb-4 p-3 bg-slate-700/40 border border-slate-600 rounded-lg">
+                    <div className="text-xs text-slate-400 mb-2">Done for you:</div>
+                    <div className="space-y-1">
+                      {problem.solutionSteps.slice(0, -1).map((step, i) => (
+                        <div key={i} className="flex gap-2 text-sm text-slate-300">
+                          <span className="text-emerald-400 font-bold">{i + 1}.</span>
+                          <span>{step}</span>
+                        </div>
+                      ))}
+                      <div className="flex gap-2 text-sm text-emerald-300 font-medium">
+                        <span className="font-bold">{problem.solutionSteps.length}.</span>
+                        <span>Your turn — finish it and type the answer below.</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50" autoFocus placeholder={problem.visual ? 'Click the grid above, or type the coordinate…' : 'Your answer...'} />
 
+                {/* Specific-error feedback: the wrong answer was a RECOGNISED
+                    mistake — name it. This replaces the generic hint. */}
+                {misconception && !feedback && (
+                  <div className="mt-4 p-3 bg-rose-900/30 border border-rose-600/50 rounded-lg text-rose-100 text-sm">
+                    <span className="font-semibold text-rose-300">Almost — look closely:</span> {misconception}
+                  </div>
+                )}
                 {/* Layered hint display — shown on wrong attempts before final reveal */}
-                {hintLevel >= 1 && !feedback && (
+                {hintLevel >= 1 && !feedback && !misconception && (
                   <div className="mt-4 p-3 bg-amber-900/30 border border-amber-700/40 rounded-lg text-amber-200 text-sm">
-                    <span className="font-semibold text-amber-400">Hint:</span> {problem.hint || 'Double-check your calculation — look at each step carefully.'}
+                    <span className="font-semibold text-amber-400">Hint:</span> {(problem.hints && problem.hints[0]) || problem.hint || 'Double-check your calculation — look at each step carefully.'}
+                  </div>
+                )}
+                {hintLevel >= 2 && !feedback && problem.hints && problem.hints[1] && (
+                  <div className="mt-3 p-3 bg-amber-900/30 border border-amber-700/40 rounded-lg text-amber-200 text-sm">
+                    <span className="font-semibold text-amber-400">Method:</span> {problem.hints[1]}
                   </div>
                 )}
                 {hintLevel >= 2 && !feedback && (() => {
@@ -1021,6 +1130,17 @@ export function AIMastery({ onBack, userId, studentName }) {
                 <div className="rounded-xl p-4 mb-4 bg-emerald-900/50 border border-emerald-500">
                   <span className="text-emerald-400 font-semibold">✓ Correct!</span>
                   {attemptCount > 1 && <span className="text-slate-400 text-sm ml-2">(attempt {attemptCount})</span>}
+                  {(() => {
+                    // If the practice picture hid the result, complete it now —
+                    // seeing the finished model confirms WHY the answer is right.
+                    if (!problem.model) return null;
+                    const rich = problem.solution?.steps || [];
+                    let finalModel = null;
+                    for (let i = rich.length - 1; i >= 0; i--) {
+                      if (rich[i]?.model) { finalModel = rich[i].model; break; }
+                    }
+                    return finalModel ? <TeachingVisual model={finalModel} className="mt-3" /> : null;
+                  })()}
                 </div>
               )}
 
@@ -1028,6 +1148,11 @@ export function AIMastery({ onBack, userId, studentName }) {
               {feedback === 'incorrect' && (
                 <div className="rounded-xl p-4 mb-4 bg-red-900/50 border border-red-500">
                   <span className="text-red-400 font-semibold">Answer: <span className="font-mono">{problem.answer}</span></span>
+                  {misconception && (
+                    <div className="mt-2 p-2 bg-rose-900/40 border border-rose-600/40 rounded-lg text-sm text-rose-100">
+                      <span className="font-semibold text-rose-300">What happened:</span> {misconception}
+                    </div>
+                  )}
                   {(() => {
                     // Show how THIS problem is solved when we have its steps;
                     // otherwise fall back to a worked example (legacy skills).
@@ -1035,9 +1160,17 @@ export function AIMastery({ onBack, userId, studentName }) {
                     const we = ownSteps ? null : generateWorkedExample(activeSkill);
                     const steps = ownSteps || we?.steps;
                     if (!steps) return null;
+                    // The completed picture (e.g. the full number-line jump or
+                    // final balance state) — dual-coded reveal.
+                    const rich = problem.solution?.steps || [];
+                    let finalModel = null;
+                    for (let i = rich.length - 1; i >= 0; i--) {
+                      if (rich[i]?.model) { finalModel = rich[i].model; break; }
+                    }
                     return (
                       <div className="mt-3 pt-3 border-t border-red-700/30">
                         <span className="text-sm text-slate-400 mb-2 block">Here's the full worked solution:</span>
+                        {finalModel && <TeachingVisual model={finalModel} className="mb-3" />}
                         <div className="space-y-1">
                           {steps.map((step, i) => (
                             <div key={i} className="flex gap-2 text-sm">
