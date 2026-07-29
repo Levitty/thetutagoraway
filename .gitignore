@@ -22,6 +22,10 @@ Thumbs.db
 *.log
 npm-debug.log*
 
+# Python bytecode
+__pycache__/
+*.pyc
+
 # HOREB telemetry / calibration transient artifacts
 # (raw event dumps and preview params are local; shipped params.v*.json IS tracked)
 engine/data/events.jsonl
