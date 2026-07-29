@@ -11,6 +11,11 @@
 export function normalizeMath(str) {
   let s = str.toString().trim().toLowerCase();
   s = s.replace(/[−–—]/g, '-');          // unicode minus/dash → hyphen
+  // Kid-typed decorations (before spaces collapse, so word boundaries work):
+  s = s.replace(/^(ksh|kes|sh|shs)\.?\s+/, '');   // currency prefix
+  s = s.replace(/\/[=-]\s*$/, '');                 // Kenyan "4500/=" or "/-"
+  s = s.replace(/\bremainder\b/g, 'r');            // "5 remainder 2" → "5 r 2"
+  s = s.replace(/\.\s*$/, '');                     // trailing full stop
   s = s.replace(/\s+/g, '');             // drop spaces
   s = s.replace(/(\d),(\d{3})/g, '$1$2'); // 1,200 → 1200 (keep value commas)
   s = s.replace(/\(([a-z])\)/g, '$1');   // (x) → x
@@ -27,6 +32,12 @@ const UNIT_SUFFIX = /(cm²|cm³|m²|m³|cm2|cm3|m2|m3|cm|mm|km|kg|ml|°|deg|degr
 // string matching).
 export function mathValue(raw) {
   let s = raw.toString().trim().toLowerCase().replace(/[−–—]/g, '-').replace(/,/g, '');
+  // Kid-typed decorations that shouldn't change a numeric answer:
+  s = s.replace(/^(ksh|kes|sh|shs)\.?\s*/, '');   // currency prefix: "KSh 4500"
+  s = s.replace(/\/[=-]$/, '');                    // Kenyan shilling suffix: "4500/=" or "4500/-"
+  s = s.replace(/^[a-z]\s*=\s*/, '');              // "x = 5" on a Find-x question
+  s = s.replace(/\.$/, '');                        // trailing full stop: "45."
+  s = s.replace(/\bremainder\b/, 'r');             // "5 remainder 2" → "5 r 2"
   // Mixed number "1 1/6" → 1 + 1/6  (BEFORE collapsing whitespace)
   const mixed = s.match(/^(-?\d+)\s+(\d+)\/(\d+)$/);
   if (mixed) {

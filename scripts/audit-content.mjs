@@ -180,5 +180,27 @@ console.log('5. Hint coverage (soft): problems that would fall back to a canned 
   } else ok('every skill has specific hints/steps for most problems');
 }
 
+// ---- 6. Grader tolerance for kid-typed formats ------------------------------
+console.log('6. Grader accepts real kid-typed formats (and rejects near-misses)');
+{
+  const cases = [
+    ['KSh 4500', { answer: '4500' }, true], ['sh 4500', { answer: '4500' }, true],
+    ['4500/=', { answer: '4500' }, true], ['4500/-', { answer: '4500' }, true],
+    ['45.', { answer: '45' }, true], ['x=5', { answer: '5' }, true], ['x = 5', { answer: '5' }, true],
+    ['5 remainder 2', { answer: '5 r 2' }, true], ['5r2', { answer: '5 r 2' }, true],
+    ['1,000', { answer: '1000' }, true], ['26 cm', { answer: '26' }, true],
+    ['0.5', { answer: '1/2' }, true], ['2/4', { answer: '1/2' }, true], ['392.0', { answer: '392' }, true],
+    // near-misses must still be wrong:
+    ['46.', { answer: '45' }, false], ['x=6', { answer: '5' }, false],
+    ['ksh 44', { answer: '4500' }, false], ['shear', { answer: '4500' }, false],
+  ];
+  let bad = 0;
+  for (const [typed, prob, expect] of cases) {
+    if (!!checkAnswerMatch(typed, prob) !== expect) { bad++; console.log(`      MISS "${typed}" vs ${prob.answer} (want ${expect})`); }
+  }
+  if (bad) fail(`${bad}/${cases.length} tolerance cases wrong`);
+  else ok(`${cases.length} kid-format cases all graded correctly`);
+}
+
 console.log(failures ? `\nFAILURES: ${failures}` : '\nAll hard checks passed.');
 process.exit(failures ? 1 : 0);
