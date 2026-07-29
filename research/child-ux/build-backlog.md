@@ -53,13 +53,16 @@ Scored HOREB against the 10 evidence-backed practices (✓ have, ◐ partial, �
 | 10 | Safe, specific, blame-free tone | ✓ (after the Jul 28 remediation work) |
 
 ### New backlog from the gaps
-- **B6 · Regenerate numbers on retry** (practice 3): after a wrong attempt, re-pose the
-  same KP with fresh numbers so "first steps" help can't be farmed into the answer.
-- **B7 · Delayed mastery check** (practice 5): a skill reaching minProblems becomes
-  "Proficient"; "Mastered" is confirmed by 2–3 questions in a later mixed review — cheap
-  to re-prove (avoid Khan's leveling-down pain).
-- **B8 · Interleave into lessons** (practice 7): mix 1–2 due-review questions from other
-  skills into every lesson session.
+- **B6 · Regenerate numbers on retry** (practice 3): largely mitigated Jul 29 — diagnoses
+  no longer reveal the answer (F19), and the attempt-3 reveal is already marked incorrect
+  with fresh numbers on Next. Remaining nice-to-have: fresh numbers on attempt 2–3.
+- **B7 · Delayed mastery check** (practice 5): ✅ data layer DONE Jul 29 — a mastered
+  skill answered correctly in a later review gets `confirmedAt` stamped (never unset on a
+  miss). REMAINING: surface it (e.g. "Mastered ✓" vs "Mastered") — needs a design call.
+- **B8 · Interleave into lessons** (practice 7): ✅ DONE Jul 29 — after the 3rd and 7th
+  lesson answers, one due review from another skill appears as a bare-retrieval "Quick
+  review" (one attempt, immediate feedback, credit to the reviewed skill). Young flow
+  exempt. Pure logic in `interleave.js`, unit-tested. ⚠️ Needs a live-session UI pass.
 - **B9 · Success-rate telemetry** (practice 1): track per-session accuracy; steer problem
   difficulty toward ~80%.
 - **B10 · Effort-aware XP** (practice 9): small XP for completed teaching moments (reading
