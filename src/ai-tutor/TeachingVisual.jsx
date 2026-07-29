@@ -243,12 +243,149 @@ const BarModel = ({ data }) => {
   );
 };
 
+// ---------------------------------------------------------------- fraction-grid
+// data: { rows, cols, shadeRows, shadeCols, showOverlap, caption }
+// The classic "fraction of a fraction" picture: shade a/b of the rows one way,
+// c/d of the columns the other way — the double-shaded overlap IS the product.
+const FractionGrid = ({ data }) => {
+  const { rows = 1, cols = 1, shadeRows = 0, shadeCols = 0, showOverlap = false, caption } = data || {};
+  const W = 340, gw = 240, gh = Math.min(150, gw * (rows / cols) * 0.8 + 40);
+  const gx = (W - gw) / 2, gy = 8;
+  const cw = gw / cols, ch = Math.max(18, Math.min(34, 120 / rows));
+  const H = gy + rows * ch + 40;
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Fraction of a fraction grid">
+        {Array.from({ length: rows }).map((_, r) => Array.from({ length: cols }).map((_, c) => {
+          const inRows = r < shadeRows, inCols = c < shadeCols;
+          return (
+            <g key={`${r}-${c}`}>
+              <rect x={gx + c * cw} y={gy + r * ch} width={cw} height={ch} fill="transparent" stroke="#94a3b8" strokeWidth="1" />
+              {inRows && <rect x={gx + c * cw} y={gy + r * ch} width={cw} height={ch} fill="#34d399" fillOpacity="0.35" />}
+              {inCols && <rect x={gx + c * cw} y={gy + r * ch} width={cw} height={ch} fill="#38bdf8" fillOpacity="0.35" />}
+              {showOverlap && inRows && inCols && (
+                <rect x={gx + c * cw + 1} y={gy + r * ch + 1} width={cw - 2} height={ch - 2} fill="none" stroke="#fbbf24" strokeWidth="2" />
+              )}
+            </g>
+          );
+        }))}
+        <text x={gx - 8} y={gy + (shadeRows * ch) / 2 + 4} textAnchor="end" fontSize="12" fontWeight="700" fill="#34d399">{shadeRows}/{rows}</text>
+        <text x={gx + (shadeCols * cw) / 2} y={gy + rows * ch + 16} textAnchor="middle" fontSize="12" fontWeight="700" fill="#38bdf8">{shadeCols}/{cols}</text>
+        {showOverlap && (
+          <text x={gx + gw + 8} y={gy + 16} fontSize="12" fontWeight="700" fill="#fbbf24">{shadeRows * shadeCols}/{rows * cols}</text>
+        )}
+      </svg>
+      {caption && <p className="text-center text-xs text-indigo-300 mt-1">{caption}</p>}
+    </div>
+  );
+};
+
+// ---------------------------------------------------------------- shape
+// data: { kind: 'rect'|'triangle'|'circle', dims, emphasis, unit, caption }
+// The labeled diagram a teacher draws before any formula: dimensions on the
+// figure, with the asked-about quantity emphasised (dashed outline = around,
+// shaded fill = surface).
+const ShapeDiagram = ({ data }) => {
+  const { kind, dims = {}, emphasis, unit = 'cm', caption } = data || {};
+  const W = 340, H = 150;
+  const around = emphasis === 'perimeter' || emphasis === 'circumference';
+  const fill = around ? 'transparent' : '#065f46';
+  const stroke = around ? '#fbbf24' : '#94a3b8';
+  const dash = around ? '6 4' : undefined;
+  let body = null;
+  if (kind === 'rect') {
+    const { l = 4, w = 3 } = dims;
+    const scale = Math.min(200 / l, 90 / w);
+    const rw = l * scale, rh = w * scale, x = (W - rw) / 2, y = (H - 30 - rh) / 2 + 10;
+    body = (
+      <g>
+        <rect x={x} y={y} width={rw} height={rh} fill={fill} fillOpacity={around ? 1 : 0.4} stroke={stroke} strokeWidth="2.5" strokeDasharray={dash} />
+        <text x={x + rw / 2} y={y - 8} textAnchor="middle" fontSize="13" fontWeight="700" fill="#f1f5f9">{l} {unit}</text>
+        <text x={x - 10} y={y + rh / 2 + 4} textAnchor="end" fontSize="13" fontWeight="700" fill="#f1f5f9">{w} {unit}</text>
+      </g>
+    );
+  } else if (kind === 'triangle') {
+    const { base = 6, h = 4 } = dims;
+    const scale = Math.min(200 / base, 90 / h);
+    const bw = base * scale, bh = h * scale, x = (W - bw) / 2, yb = (H - 30 + bh) / 2 + 4;
+    const apex = x + bw * 0.38;
+    body = (
+      <g>
+        <polygon points={`${x},${yb} ${x + bw},${yb} ${apex},${yb - bh}`} fill={fill} fillOpacity={around ? 1 : 0.4} stroke={stroke} strokeWidth="2.5" strokeDasharray={dash} />
+        <line x1={apex} y1={yb} x2={apex} y2={yb - bh} stroke="#38bdf8" strokeWidth="1.5" strokeDasharray="4 3" />
+        <text x={x + bw / 2} y={yb + 16} textAnchor="middle" fontSize="13" fontWeight="700" fill="#f1f5f9">{base} {unit}</text>
+        <text x={apex + 8} y={yb - bh / 2} fontSize="13" fontWeight="700" fill="#38bdf8">{h} {unit}</text>
+      </g>
+    );
+  } else if (kind === 'circle') {
+    const { r = 5 } = dims;
+    const R = 52, cx = W / 2, cy = (H - 24) / 2 + 6;
+    body = (
+      <g>
+        <circle cx={cx} cy={cy} r={R} fill={fill} fillOpacity={around ? 1 : 0.4} stroke={stroke} strokeWidth="2.5" strokeDasharray={dash} />
+        <line x1={cx} y1={cy} x2={cx + R} y2={cy} stroke="#38bdf8" strokeWidth="2" />
+        <circle cx={cx} cy={cy} r="2.5" fill="#38bdf8" />
+        <text x={cx + R / 2} y={cy - 8} textAnchor="middle" fontSize="13" fontWeight="700" fill="#38bdf8">r = {r} {unit}</text>
+      </g>
+    );
+  }
+  const emphasisNote = emphasis === 'perimeter' ? 'perimeter = the dashed distance AROUND'
+    : emphasis === 'circumference' ? 'circumference = the dashed distance AROUND'
+    : emphasis === 'area' ? 'area = the shaded surface INSIDE' : null;
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={`${kind} diagram`}>{body}</svg>
+      {(caption || emphasisNote) && <p className="text-center text-xs text-indigo-300 mt-1">{caption || emphasisNote}</p>}
+    </div>
+  );
+};
+
+// ---------------------------------------------------------------- numberline-interval
+// data: { value, lo, hi, unit, ask: 'lower'|'upper'|null, caption }
+// Bounds of a rounded measurement: the stated value sits mid-interval with
+// brackets at the lower/upper bounds. The asked bound shows '?' in practice.
+const NumberLineInterval = ({ data }) => {
+  const { value = 0, lo = 0, hi = 1, unit = '', ask = null, caption } = data || {};
+  const half = hi - lo, min = lo - half * 0.6, max = hi + half * 0.6, span = max - min;
+  const W = 340, H = 104, x0 = 26, x1 = W - 26, lineY = 62;
+  const px = (v) => x0 + ((v - min) / span) * (x1 - x0);
+  const fmt = (v) => `${Math.round(v * 100) / 100}`;
+  const bracket = (v, side) => {
+    const hidden = ask === side;
+    const color = hidden ? '#94a3b8' : '#fbbf24';
+    return (
+      <g>
+        <line x1={px(v)} y1={lineY - 16} x2={px(v)} y2={lineY + 16} stroke={color} strokeWidth="2.5" strokeDasharray={hidden ? '3 2' : undefined} />
+        <line x1={px(v)} y1={lineY - 16} x2={px(v) + (side === 'lower' ? 7 : -7)} y2={lineY - 16} stroke={color} strokeWidth="2.5" />
+        <line x1={px(v)} y1={lineY + 16} x2={px(v) + (side === 'lower' ? 7 : -7)} y2={lineY + 16} stroke={color} strokeWidth="2.5" />
+        <text x={px(v)} y={lineY - 24} textAnchor="middle" fontSize="12" fontWeight="700" fill={color}>{hidden ? '?' : `${fmt(v)}${unit}`}</text>
+      </g>
+    );
+  };
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Bounds of the rounded measurement">
+        <line x1={x0 - 8} y1={lineY} x2={x1 + 8} y2={lineY} stroke="#64748b" strokeWidth="2" />
+        <rect x={px(lo)} y={lineY - 5} width={px(hi) - px(lo)} height="10" fill="#065f46" fillOpacity="0.45" />
+        {bracket(lo, 'lower')}
+        {bracket(hi, 'upper')}
+        <circle cx={px(value)} cy={lineY} r="5" fill="#0c4a6e" stroke="#38bdf8" strokeWidth="2" />
+        <text x={px(value)} y={lineY + 30} textAnchor="middle" fontSize="12" fontWeight="700" fill="#38bdf8">{fmt(value)}{unit} (stated)</text>
+      </svg>
+      <p className="text-center text-xs text-indigo-300 mt-1">{caption || 'the true value could be anywhere in the shaded band'}</p>
+    </div>
+  );
+};
+
 // ---------------------------------------------------------------- dispatcher
 const MODELS = {
   'balance': BalanceScale,
   'numberline-jump': NumberLineJump,
   'area-model': AreaModel,
   'bar-model': BarModel,
+  'fraction-grid': FractionGrid,
+  'shape': ShapeDiagram,
+  'numberline-interval': NumberLineInterval,
 };
 
 export const TEACHING_MODEL_TYPES = Object.keys(MODELS);

@@ -169,6 +169,22 @@ function validateModel(m, where) {
       }
       return null;
     }
+    case 'fraction-grid': {
+      if (!Number.isFinite(d.rows) || !Number.isFinite(d.cols) || d.rows < 1 || d.cols < 1) return `${where}: fraction-grid rows/cols invalid`;
+      if (d.shadeRows < 0 || d.shadeRows > d.rows || d.shadeCols < 0 || d.shadeCols > d.cols) return `${where}: fraction-grid shading out of range`;
+      return null;
+    }
+    case 'shape': {
+      if (!['rect', 'triangle', 'circle'].includes(d.kind)) return `${where}: unknown shape kind ${d.kind}`;
+      const dims = Object.values(d.dims || {});
+      if (!dims.length || dims.some(v => !Number.isFinite(v) || v <= 0)) return `${where}: shape dims must be positive numbers`;
+      return null;
+    }
+    case 'numberline-interval': {
+      if (!Number.isFinite(d.lo) || !Number.isFinite(d.hi) || d.lo >= d.hi) return `${where}: interval lo/hi invalid`;
+      if (!Number.isFinite(d.value) || d.value < d.lo || d.value > d.hi) return `${where}: stated value outside its interval`;
+      return null;
+    }
     default: return `${where}: unknown model type ${m.type}`;
   }
 }

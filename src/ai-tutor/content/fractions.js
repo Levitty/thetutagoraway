@@ -132,6 +132,12 @@ export function buildAddSubUnlike({ sub = false } = {}) {
     question: `${a}/${b} ${op} ${c}/${d}`,
     answer: fracStr(num, L),
     accepts: fracAccepts(num, L),
+    // The WHY of common denominators, visible: the two bars have different-size
+    // pieces, so counting them together is meaningless until both are re-cut.
+    model: { type: 'bar-model', data: {
+      bars: [{ n: a, d: b, label: `${a}/${b}` }, { n: c, d, label: `${op} ${c}/${d}` }],
+      caption: `different-size pieces — you can't just count them together`,
+    } },
     hints: hintLadder(
       `You need a common denominator before you can ${sub ? 'subtract' : 'add'}.`,
       `The lowest common denominator of ${b} and ${d} is ${L}.`,
@@ -140,8 +146,21 @@ export function buildAddSubUnlike({ sub = false } = {}) {
     solution: {
       steps: [
         { text: `Find the lowest common denominator of ${b} and ${d}.`, expr: `LCD = ${L}` },
-        { text: 'Rewrite both fractions over it.', expr: `${a2}/${L} ${op} ${c2}/${L}` },
-        { text: `${sub ? 'Subtract' : 'Add'} the numerators (keep the denominator).`, expr: `${num}/${L}` },
+        { text: 'Rewrite both fractions over it.', expr: `${a2}/${L} ${op} ${c2}/${L}`,
+          // Same amounts, re-cut into same-size pieces — NOW they can be
+          // counted. Only drawn when the pieces stay countable (a 72-sliver
+          // bar teaches nothing); past that the algebra carries the step.
+          model: L <= 24 ? { type: 'bar-model', data: {
+            bars: [{ n: a2, d: L, label: `${a2}/${L}` }, { n: c2, d: L, label: `${op} ${c2}/${L}` }],
+            caption: `same amounts, re-cut into ${L}ths — now the pieces match`,
+          } } : undefined },
+        { text: `${sub ? 'Subtract' : 'Add'} the numerators (keep the denominator).`, expr: `${num}/${L}`,
+          model: L <= 24 ? { type: 'bar-model', data: {
+            bars: num <= L
+              ? [{ n: a2, d: L, label: `${a2}/${L}` }, { n: c2, d: L, label: `${op} ${c2}/${L}` }, { n: num, d: L, label: `= ${num}/${L}` }]
+              : [{ n: a2, d: L, label: `${a2}/${L}` }, { n: c2, d: L, label: `${op} ${c2}/${L}` }],
+            caption: num > L ? `${a2} ${op} ${c2} = ${num} pieces — more than one whole (${num}/${L})` : undefined,
+          } } : undefined },
         ...(simplifies ? [{ text: 'Simplify.', expr: fracStr(num, L) }] : []),
       ],
       answer: fracStr(num, L),
@@ -163,6 +182,16 @@ export function buildMulFractions() {
     question: `${a}/${b} × ${c}/${d}`,
     answer: fracStr(num, den),
     accepts: fracAccepts(num, den),
+    // "A fraction OF a fraction": shade a/b of the rows and c/d of the columns;
+    // the double-shaded overlap IS the product. The grid picture only exists
+    // for PROPER fractions — improper ones (8/3 × 5/2) overflow it, so those
+    // problems go without a model rather than with a wrong one.
+    model: (a <= b && c <= d)
+      ? { type: 'fraction-grid', data: {
+          rows: b, cols: d, shadeRows: a, shadeCols: c,
+          caption: `${a}/${b} of the rows, ${c}/${d} of the columns — where do they overlap?`,
+        } }
+      : undefined,
     hints: hintLadder(
       'To multiply fractions, multiply straight across — no common denominator needed.',
       `Numerators: ${a} × ${c}.   Denominators: ${b} × ${d}.`,
@@ -170,7 +199,13 @@ export function buildMulFractions() {
     ),
     solution: {
       steps: [
-        { text: 'Multiply numerators, and denominators.', expr: `${num}/${den}` },
+        { text: 'Multiply numerators, and denominators.', expr: `${num}/${den}`,
+          model: (a <= b && c <= d)
+            ? { type: 'fraction-grid', data: {
+                rows: b, cols: d, shadeRows: a, shadeCols: c, showOverlap: true,
+                caption: `${a}×${c} overlap cells out of ${b}×${d} — that is ${num}/${den}`,
+              } }
+            : undefined },
         { text: 'Simplify.', expr: fracStr(num, den) },
       ],
       answer: fracStr(num, den),
@@ -355,6 +390,14 @@ export function buildPercentageOf() {
     question: `What is ${p}% of ${base}?`,
     answer: `${v}`,
     accepts: accepts(`${v}`),
+    // Percent bar: the whole bar IS the amount; the shaded part is the percent.
+    model: (() => {
+      const g = gcd(p, 100), segs = 100 / g, shade = p / g;
+      return { type: 'bar-model', data: {
+        bars: [{ n: shade, d: segs, label: `${p}% = ?` }],
+        caption: `the whole bar is ${base} — what is the shaded part worth?`,
+      } };
+    })(),
     hints: hintLadder(
       'Percent means “out of 100”. Convert to a fraction or decimal first.',
       `${p}% = ${p}/100 = ${p / 100}.`,
@@ -363,7 +406,14 @@ export function buildPercentageOf() {
     solution: {
       steps: [
         { text: `Write ${p}% as a decimal.`, expr: `${p / 100}` },
-        { text: `Multiply by ${base}.`, expr: `${v}` },
+        { text: `Multiply by ${base}.`, expr: `${v}`,
+          model: (() => {
+            const g = gcd(p, 100), segs = 100 / g, shade = p / g;
+            return { type: 'bar-model', data: {
+              bars: [{ n: shade, d: segs, label: `${p}% = ${v}` }],
+              caption: `whole bar = ${base}, each piece = ${base / segs}, shaded = ${v}`,
+            } };
+          })() },
       ],
       answer: `${v}`,
     },

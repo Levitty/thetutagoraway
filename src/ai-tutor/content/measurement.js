@@ -17,6 +17,7 @@ export function buildRectanglePerimeter() {
     type: 'rect-perimeter', instruction: 'Find the perimeter.',
     question: `A rectangle is ${l} cm long and ${w} cm wide. Find its perimeter.`,
     answer: `${value}`, accepts: accepts(`${value}`, `${value}cm`),
+    model: { type: 'shape', data: { kind: 'rect', dims: { l, w }, emphasis: 'perimeter', unit: 'cm' } },
     hints: hintLadder('Perimeter is the total distance around the edge.',
       'Add all four sides, or use P = 2(l + w).', `2 × (${l} + ${w}).`),
     solution: { steps: [
@@ -35,6 +36,7 @@ export function buildRectangleArea() {
     type: 'rect-area', instruction: 'Find the area.',
     question: `Find the area of a rectangle ${l} cm by ${w} cm.`,
     answer: `${value}`, accepts: accepts(`${value}`),
+    model: { type: 'shape', data: { kind: 'rect', dims: { l, w }, emphasis: 'area', unit: 'cm' } },
     hints: hintLadder('Area of a rectangle = length × width.', `${l} × ${w}.`),
     solution: { steps: [{ text: 'Area = length × width.', expr: `${l} × ${w} = ${value} cm²` }], answer: `${value}` },
     misconceptions: [{ when: `${2 * (l + w)}`, feedback: 'That is the perimeter. Area = length × width.' }],
@@ -52,6 +54,7 @@ export function buildTriangleArea() {
     type: 'triangle-area', instruction: 'Find the area.',
     question: `Find the area of a triangle with base ${base} cm and height ${h} cm.`,
     answer: `${value}`, accepts: accepts(`${value}`),
+    model: { type: 'shape', data: { kind: 'triangle', dims: { base, h }, emphasis: 'area', unit: 'cm', caption: 'the dashed blue line is the height — half of base × height' } },
     hints: hintLadder('Area of a triangle = ½ × base × height.', `½ × ${base} × ${h}.`),
     solution: { steps: [{ text: 'Area = ½ × base × height.', expr: `½ × ${base} × ${h} = ${value} cm²` }], answer: `${value}` },
     misconceptions: [{ when: `${base * h}`, feedback: 'Don’t forget the ½ — a triangle is half of the rectangle.' }],
@@ -67,6 +70,7 @@ export function buildCircumference() {
     type: 'circumference', instruction: 'Find the circumference (to 2 d.p.).',
     question: `Find the circumference of a circle with radius ${r} cm. (2 d.p.)`,
     answer: `${value}`, accepts: accepts(`${value}`),
+    model: { type: 'shape', data: { kind: 'circle', dims: { r }, emphasis: 'circumference', unit: 'cm' } },
     hints: hintLadder('Circumference = 2πr.', `2 × π × ${r}.`),
     solution: { steps: [{ text: 'Use C = 2πr.', expr: `2 × π × ${r}` }, { text: 'Evaluate.', expr: `${value} cm` }], answer: `${value}` },
     misconceptions: [{ when: numStr(Math.PI * r * r), feedback: 'That is the area (πr²). Circumference is 2πr.' }],
@@ -82,6 +86,7 @@ export function buildCircleArea() {
     type: 'circle-area', instruction: 'Find the area (to 2 d.p.).',
     question: `Find the area of a circle with radius ${r} cm. (2 d.p.)`,
     answer: `${value}`, accepts: accepts(`${value}`),
+    model: { type: 'shape', data: { kind: 'circle', dims: { r }, emphasis: 'area', unit: 'cm' } },
     hints: hintLadder('Area = πr².', `π × ${r}².`, `π × ${r * r}.`),
     solution: { steps: [{ text: 'Use A = πr².', expr: `π × ${r}²` }, { text: 'Evaluate.', expr: `${value} cm²` }], answer: `${value}` },
     misconceptions: [{ when: numStr(2 * Math.PI * r), feedback: 'That is the circumference (2πr). Area is πr².' }],
@@ -429,12 +434,21 @@ export function buildErrors() {
     type: 'error-bound', instruction: `Find the ${side} bound.`,
     question: `The length of a plank is ${M} cm to the nearest ${nearest === 1 ? 'cm' : '10 cm'}. What is the ${side} bound of the actual length?`,
     answer: `${value}`, accepts: accepts(`${value}`, `${value}cm`),
+    // The rounding interval made visible: the stated value sits mid-band; the
+    // asked bound is the '?' bracket. Reveal shows both bounds labeled.
+    model: { type: 'numberline-interval', data: {
+      value: M, lo: M - nearest / 2, hi: M + nearest / 2, unit: 'cm', ask: side,
+    } },
     hints: hintLadder('A rounded measurement could be up to HALF a unit out either way.',
       `Half of ${nearest === 1 ? '1 cm' : '10 cm'} is ${nearest / 2} cm.`,
       `${side === 'lower' ? 'Subtract' : 'Add'} ${nearest / 2} ${side === 'lower' ? 'from' : 'to'} ${M}.`),
     solution: { steps: [
       { text: `Rounding to the nearest ${nearest === 1 ? 'cm' : '10 cm'} means the true value lies within ±${nearest / 2} cm.`, expr: `${M} ± ${nearest / 2}` },
-      { text: `Take the ${side} end.`, expr: `${value} cm` }], answer: `${value}` },
+      { text: `Take the ${side} end.`, expr: `${value} cm`,
+        model: { type: 'numberline-interval', data: {
+          value: M, lo: M - nearest / 2, hi: M + nearest / 2, unit: 'cm',
+          caption: `anything below ${M - nearest / 2} or at/above ${M + nearest / 2} would round elsewhere`,
+        } } }], answer: `${value}` },
     misconceptions: [{ when: `${naive}`, feedback: `A whole ${nearest === 1 ? 'cm' : '10 cm'} off would round to a different value — the bound is HALF a unit away: ${M} ${side === 'lower' ? '−' : '+'} ${nearest / 2}.` }],
     verify: { kind: 'fraction', value: side === 'lower' ? M - nearest * 0.5 : M + nearest * 0.5 },
   };
