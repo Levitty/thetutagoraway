@@ -202,5 +202,31 @@ console.log('6. Grader accepts real kid-typed formats (and rejects near-misses)'
   else ok(`${cases.length} kid-format cases all graded correctly`);
 }
 
+// ---- 7. Fraction remediation (the adds-tops-AND-bottoms misconception) ------
+console.log('7. Fraction remediation diagnoses the classic misconceptions');
+{
+  const P = (q) => ({ question: q });
+  const cases = [
+    // [question, typed, expectDiagnosis?]
+    ['1/6 + 2/6 = ?', '3/12', true],   // added the bottoms too
+    ['1/6 + 2/6 = ?', '3/6', false],   // unsimplified but CORRECT — never flag
+    ['1/6 + 2/6 = ?', '1/2', false],   // simplified correct
+    ['1/6 + 2/6 = ?', '2/6', true],    // top slip
+    ['1/3 + 1/4 = ?', '2/7', true],    // worked straight across unlike bottoms
+    ['5/8 - 1/8 = ?', '4/16', true],   // combined bottoms on subtraction
+    ['5/8 - 1/8 = ?', '4/8', false],   // equivalent correct
+  ];
+  let bad = 0;
+  for (const [q, typed, expect] of cases) {
+    const d = diagnoseError(P(q), typed);
+    if (!!d !== expect) { bad++; console.log(`      MISS "${q}" typed "${typed}" → ${d} (want ${expect ? 'a diagnosis' : 'null'})`); }
+  }
+  // steps for a fraction problem must exist and end at the (possibly simplified) answer
+  const st = computeSteps(P('1/6 + 2/6 = ?'));
+  if (!st || !/1\/2/.test(st[st.length - 1])) { bad++; console.log('      MISS fraction steps do not end at 1/2:', st); }
+  if (bad) fail(`${bad} fraction remediation cases wrong`);
+  else ok(`${cases.length} fraction cases + steps all correct`);
+}
+
 console.log(failures ? `\nFAILURES: ${failures}` : '\nAll hard checks passed.');
 process.exit(failures ? 1 : 0);

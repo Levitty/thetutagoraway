@@ -38,6 +38,8 @@ const place = (r) => ['Ones', 'Tens', 'Hundreds', 'Thousands'][r] || 'Next colum
 
 // ---- correct working, showing the parts, for the learner's own numbers -------
 export const computeSteps = (problem) => {
+  const f = parseFractionArithmetic(problem?.question);
+  if (f) return fractionSteps(f);
   const p = parseArithmetic(problem?.question);
   if (!p) return null;
   const { a, b, op } = p;
@@ -128,6 +130,8 @@ const smallerFromLargerDiff = (a, b) => {
 
 // ---- name the likely mistake behind THIS specific answer ---------------------
 export const diagnoseError = (problem, studentAnswer) => {
+  const f = parseFractionArithmetic(problem?.question);
+  if (f) return diagnoseFraction(f, studentAnswer);
   const p = parseArithmetic(problem?.question);
   if (!p) return null;
   const sa = Number(String(studentAnswer).trim());
@@ -177,8 +181,83 @@ export const diagnoseError = (problem, studentAnswer) => {
   return null;
 };
 
+// ---- fractions: "n1/d1 + n2/d2" — the add-tops-AND-bottoms misconception ----
+// "1/6 + 2/6 = ?" → { n1, d1, n2, d2, op }; anything else null.
+export const parseFractionArithmetic = (question) => {
+  if (!question) return null;
+  const clean = String(question).replace(/=\s*\??\s*$/, '').replace(/\s+/g, '');
+  const m = clean.match(/^(\d+)\/(\d+)([+\-−])(\d+)\/(\d+)$/);
+  if (!m) return null;
+  const [, n1, d1, opRaw, n2, d2] = m;
+  if (+d1 === 0 || +d2 === 0) return null;
+  return { n1: +n1, d1: +d1, n2: +n2, d2: +d2, op: opRaw === '+' ? '+' : '-' };
+};
+
+const parseFracValue = (s) => {
+  const m = String(s).trim().match(/^(\d+)\s*\/\s*(\d+)$/);
+  if (m && +m[2] !== 0) return (+m[1]) / (+m[2]);
+  const n = Number(String(s).trim());
+  return Number.isFinite(n) ? n : null;
+};
+
+// Diagnose a typed fraction answer. Returns a message or null.
+const diagnoseFraction = (f, studentAnswer) => {
+  const { n1, d1, n2, d2, op } = f;
+  const correct = op === '+' ? n1 / d1 + n2 / d2 : n1 / d1 - n2 / d2;
+  const saVal = parseFracValue(studentAnswer);
+  if (saVal !== null && Math.abs(saVal - correct) < 1e-9) return null; // equivalent form — not a mistake
+  const sm = String(studentAnswer).trim().match(/^(\d+)\s*\/\s*(\d+)$/);
+  if (!sm) return null;
+  const sn = +sm[1], sd = +sm[2];
+  const acrossTop = op === '+' ? n1 + n2 : Math.abs(n1 - n2);
+  if (sn === acrossTop && sd === d1 + d2) {
+    return d1 === d2
+      ? `The bottoms got ${op === '+' ? 'added' : 'combined'} too — but the denominator says what SIZE the pieces are, and the size doesn't change. ${op === '+' ? 'Add' : 'Subtract'} only the tops; the bottom stays ${d1}.`
+      : `Careful — you can't work straight across when the bottoms are different. Make the denominators match first, then ${op === '+' ? 'add' : 'subtract'} only the tops.`;
+  }
+  if (d1 === d2 && sd === d1 && sn !== acrossTop) {
+    return `The bottom is right — the pieces stay ${d1}ths. Check the top: ${n1} ${op} ${n2}.`;
+  }
+  return null;
+};
+
+// Steps for the learner's own fraction sum (used by hints and the reveal).
+const fractionSteps = (f) => {
+  const { n1, d1, n2, d2, op } = f;
+  const g = (x, y) => (y ? g(y, x % y) : x);
+  if (d1 === d2) {
+    const top = op === '+' ? n1 + n2 : n1 - n2;
+    const cd = g(Math.abs(top), d1);
+    const steps = [
+      `The bottoms match — both are ${d1} — so the piece size stays the same.`,
+      // the "first steps" hint shows the first two lines only, so this one names
+      // the operation without computing it — the child does the sum
+      `${op === '+' ? 'Add' : 'Subtract'} only the tops: ${n1} ${op === '+' ? '+' : '−'} ${n2}.`,
+      `That makes ${top} — the bottom stays ${d1}.`,
+    ];
+    steps.push(cd > 1
+      ? `So the answer is ${top}/${d1}, which simplifies to ${top / cd}/${d1 / cd}.`
+      : `So the answer is ${top}/${d1}.`);
+    return steps;
+  }
+  const lcmD = (d1 * d2) / g(d1, d2);
+  const c1 = n1 * (lcmD / d1), c2 = n2 * (lcmD / d2);
+  const top = op === '+' ? c1 + c2 : c1 - c2;
+  const cd = g(Math.abs(top), lcmD);
+  return [
+    `The bottoms are different (${d1} and ${d2}) — find a common one: ${lcmD}.`,
+    `Convert both: ${n1}/${d1} = ${c1}/${lcmD} and ${n2}/${d2} = ${c2}/${lcmD}.`,
+    `Now ${op === '+' ? 'add' : 'subtract'} the tops: ${c1} ${op === '+' ? '+' : '−'} ${c2} = ${top}.`,
+    cd > 1 ? `So the answer is ${top}/${lcmD}, which simplifies to ${top / cd}/${lcmD / cd}.` : `So the answer is ${top}/${lcmD}.`,
+  ];
+};
+
 // A short, op-appropriate nudge when we can't diagnose the exact slip.
 export const genericNudge = (problem) => {
+  const f = parseFractionArithmetic(problem?.question);
+  if (f) return f.d1 === f.d2
+    ? `The bottoms match, so ${f.op === '+' ? 'add' : 'subtract'} only the tops — the denominator stays the same.`
+    : 'Make the denominators match first, then work with the tops only.';
   const p = parseArithmetic(problem?.question);
   if (!p) return 'Work through it one step at a time — check each part.';
   return { '+': 'Add one column at a time, right to left, and carry when a column reaches ten.',
