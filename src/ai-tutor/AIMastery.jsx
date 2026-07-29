@@ -854,6 +854,11 @@ export function AIMastery({ onBack, userId, studentName }) {
       xpEarned = calculateXP(accuracy, skill.estimatedMinutes, accuracy >= 1.0);
     } else if (correct) {
       xpEarned = 2; // Small XP per correct answer
+    } else if (!isPlaceholder) {
+      // Effort-aware (Math Academy): a final miss still ends in reading the
+      // full working — a completed teaching moment. Honest struggle never
+      // pays zero, so a hard session still moves the daily goal.
+      xpEarned = 1;
     }
 
     const updatedProgress = updateStreak(gainXP({
