@@ -136,6 +136,119 @@ export function buildSpeed() {
   }
 }
 
+// ---- temperature: read, compare, convert °C ↔ K (CBC G7 Measurements) ----
+// KICD Grade 7 outcomes: compare temperature conditions, identify °C and K,
+// convert between them (K = °C + 273), work out temperatures in real life.
+export function buildTemperatureRead() {
+  const kind = pick(['toK', 'toC', 'colder']);
+  if (kind === 'toK') {
+    const c = randInt(-10, 35);
+    const value = c + 273;
+    return {
+      type: 'temp-convert', instruction: 'Convert the temperature.',
+      question: `Convert ${c}°C to kelvin.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}K`, `${value} K`),
+      hints: hintLadder('Kelvin and Celsius use the same size of degree — the scales just start at different points.',
+        'To change °C to K, add 273.', `${c} + 273.`),
+      solution: { steps: [
+        { text: 'Use K = °C + 273.', expr: `${c} + 273` },
+        { text: 'Evaluate.', expr: `${value} K` }], answer: `${value}` },
+      misconceptions: [{ when: `${c - 273}`, feedback: 'You subtracted 273. Going from °C to K you ADD 273 (kelvin values are bigger).' }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+  if (kind === 'toC') {
+    const k = randInt(263, 308);
+    const value = k - 273;
+    return {
+      type: 'temp-convert', instruction: 'Convert the temperature.',
+      question: `Convert ${k} K to degrees Celsius.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}°C`, `${value}C`),
+      hints: hintLadder('Kelvin and Celsius use the same size of degree — the scales just start at different points.',
+        'To change K to °C, subtract 273.', `${k} − 273.`),
+      solution: { steps: [
+        { text: 'Use °C = K − 273.', expr: `${k} − 273` },
+        { text: 'Evaluate.', expr: `${value}°C` }], answer: `${value}` },
+      misconceptions: [{ when: `${k + 273}`, feedback: 'You added 273. Going from K to °C you SUBTRACT 273 (Celsius values are smaller).' }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+  // colder/warmer comparison, including negatives
+  let a = randInt(-9, 30), b = randInt(-9, 30);
+  while (b === a) b = randInt(-9, 30);
+  const value = Math.min(a, b), other = Math.max(a, b);
+  const [placeA, placeB] = pick([['Nairobi', 'Mt Kenya'], ['Mombasa', 'Limuru'], ['Kisumu', 'Nyahururu'], ['Eldoret', 'Malindi']]);
+  return {
+    type: 'temp-compare', instruction: 'Answer with the temperature (the number).',
+    question: `One morning it is ${a}°C in ${placeA} and ${b}°C in ${placeB}. Which temperature is colder?`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value}°C`, `${value}C`),
+    hints: hintLadder('Picture both temperatures on a thermometer scale.',
+      'The temperature lower down the scale is colder — negative values are below zero.',
+      `Compare ${a} and ${b}: which is lower?`),
+    solution: { steps: [
+      { text: 'Put both on the thermometer scale.', expr: `${value} is below ${other}` },
+      { text: 'The lower temperature is colder.', expr: `${value}°C` }], answer: `${value}` },
+    misconceptions: [{ when: `${other}`, feedback: `${other} is HIGHER on the scale, so it is warmer. The colder temperature is the lower number — remember negatives sit below zero.` }],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- temperature change: rises, falls and differences across zero ----
+export function buildTemperatureChange() {
+  const kind = pick(['rise', 'fall', 'diff']);
+  if (kind === 'rise') {
+    const t = randInt(-10, 5), r = randInt(3, 15);
+    const value = t + r;
+    return {
+      type: 'temp-change', instruction: 'Find the new temperature.',
+      question: `At 6 a.m. the temperature was ${t}°C. By noon it had risen by ${r}°C. What was the temperature at noon?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}°C`, `${value}C`),
+      hints: hintLadder('A rise means the temperature goes UP the scale.',
+        'Add the rise to the starting temperature.', `${t} + ${r}.`),
+      solution: { steps: [
+        { text: 'A rise is an addition.', expr: `${t} + ${r}` },
+        { text: 'Evaluate.', expr: `${value}°C` }], answer: `${value}` },
+      misconceptions: [{ when: `${t - r}`, feedback: 'You subtracted — but the temperature ROSE, so add the change.' }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+  if (kind === 'fall') {
+    const t = randInt(2, 12);
+    let f = randInt(3, 18);
+    while (f === t) f = randInt(3, 18);   // keep answer ≠ 0 so the sign-slip misconception stays distinct
+    const value = t - f;
+    return {
+      type: 'temp-change', instruction: 'Find the new temperature.',
+      question: `In the evening the temperature was ${t}°C. Overnight it fell by ${f}°C. What was the temperature by morning?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}°C`, `${value}C`),
+      hints: hintLadder('A fall means the temperature goes DOWN the scale.',
+        'Subtract the fall from the starting temperature — it may pass below zero.', `${t} − ${f}.`),
+      solution: { steps: [
+        { text: 'A fall is a subtraction.', expr: `${t} − ${f}` },
+        { text: 'Evaluate (crossing zero if needed).', expr: `${value}°C` }], answer: `${value}` },
+      misconceptions: [{ when: `${f - t}`, feedback: `Sign slip: ${t} − ${f} lands BELOW zero at ${value}, not at ${f - t}. Count down the scale past 0.` }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+  const a = randInt(-10, 3), b = a + randInt(3, 18);
+  const value = b - a;
+  const wrong = b - Math.abs(a);
+  return {
+    type: 'temp-diff', instruction: 'Find the change in temperature.',
+    question: `The temperature rose from ${a}°C to ${b}°C. By how many degrees did it rise?`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value}°C`, `${value}C`),
+    hints: hintLadder('The change is the gap between the two temperatures on the scale.',
+      'Change = final − start. Subtracting a negative adds.', `${b} − (${a}).`),
+    solution: { steps: [
+      { text: 'Change = final − start.', expr: `${b} − (${a})` },
+      { text: 'Evaluate.', expr: `${value}°C` }], answer: `${value}` },
+    misconceptions: (a < 0 && wrong !== value)
+      ? [{ when: `${wrong}`, feedback: `You ignored the minus sign on ${a}. From ${a} up to 0 is ${-a} degrees, then 0 up to ${b} is ${b} more: ${value} in total.` }]
+      : [],
+    verify: { kind: 'fraction', value },
+  };
+}
+
 // ---- density = mass / volume ----
 export function buildDensity() {
   const density = pick([2, 3, 4, 5, 8, 10]);
@@ -148,6 +261,176 @@ export function buildDensity() {
     hints: hintLadder('Density = mass ÷ volume.', `${mass} ÷ ${volume}.`),
     solution: { steps: [{ text: 'Use density = mass ÷ volume.', expr: `${mass} ÷ ${volume} = ${density} g/cm³` }], answer: `${density}` },
     misconceptions: [], verify: { kind: 'fraction', value: density },
+  };
+}
+
+// ---- rounding & estimation: d.p., s.f., estimate-by-rounding (CBC G9) ----
+// Answers are built by integer/digit arithmetic; the verify hook recomputes the
+// value through the float route (toFixed/toPrecision) so the two are independent.
+export function buildRounding() {
+  const kind = pick(['dp', 'sfInt', 'sfDec', 'estimate']);
+  if (kind === 'dp') {
+    const k = pick([1, 2]);
+    const intPart = randInt(1, 99);
+    // Exclude exact ties (a dropped 5 with only zeros after it): binary floats
+    // sit a hair below the tie, so the toFixed verify route would round the
+    // other way. Non-tie 5s (e.g. .457 → .5) still exercise the ≥5 rule.
+    let d3 = randInt(1, 999);
+    while ((k === 1 && d3 % 100 === 50) || (k === 2 && d3 % 10 === 5)) d3 = randInt(1, 999);
+    const xStr = `${intPart}.${String(d3).padStart(3, '0')}`;
+    const n = intPart * 1000 + d3;                        // exact integer form
+    const factor = Math.pow(10, 3 - k);
+    const roundedScaled = Math.round(n / factor);
+    const value = roundedScaled / Math.pow(10, k);
+    const shown = value.toFixed(k);
+    const truncated = Math.floor(n / factor) / Math.pow(10, k);
+    return {
+      type: 'round-dp', instruction: `Round to ${k} decimal place${k > 1 ? 's' : ''}.`,
+      question: `Round ${xStr} to ${k} decimal place${k > 1 ? 's' : ''}.`,
+      answer: shown, accepts: accepts(shown, `${value}`),
+      hints: hintLadder(`Keep ${k} digit${k > 1 ? 's' : ''} after the decimal point.`,
+        'Look at the NEXT digit: 5 or more rounds up, less than 5 rounds down.',
+        `The digit after the cut is ${xStr.replace('.', '')[String(intPart).length + k]}.`),
+      solution: { steps: [
+        { text: `Cut after ${k} decimal place${k > 1 ? 's' : ''}.`, expr: `${xStr} → ${xStr.slice(0, String(intPart).length + 1 + k)}…` },
+        { text: 'Check the next digit: ≥5 rounds up.', expr: shown }], answer: shown },
+      misconceptions: truncated !== value
+        ? [{ when: truncated.toFixed(k), feedback: 'You cut the number off (truncated). Rounding looks at the next digit — 5 or more rounds UP.' }]
+        : [],
+      verify: { kind: 'fraction', value: parseFloat((n / 1000).toFixed(k)) },
+    };
+  }
+  if (kind === 'sfInt') {
+    const d = pick([3, 4]);
+    const n = randInt(Math.pow(10, d - 1) + 1, Math.pow(10, d) - 1);
+    const k = pick([1, 2]);
+    const factor = Math.pow(10, d - k);
+    const value = Math.round(n / factor) * factor;
+    const bare = Math.round(n / factor);                  // classic wrong answer: drops place value
+    return {
+      type: 'round-sf', instruction: `Round to ${k} significant figure${k > 1 ? 's' : ''}.`,
+      question: `Round ${n} to ${k} significant figure${k > 1 ? 's' : ''}.`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder('Significant figures count from the FIRST non-zero digit.',
+        `Keep ${k} digit${k > 1 ? 's' : ''}, then replace the rest with zeros to hold the size.`,
+        `The digit after the first ${k} decides: 5 or more rounds up.`),
+      solution: { steps: [
+        { text: `Keep the first ${k} digit${k > 1 ? 's' : ''}; the next digit decides up or down.`, expr: `${n} → ${bare} × ${factor}` },
+        { text: 'Pad with zeros so the number keeps its size.', expr: `${value}` }], answer: `${value}` },
+      misconceptions: bare !== value
+        ? [{ when: `${bare}`, feedback: `Keep the SIZE of the number — ${n} is in the ${factor >= 1000 ? 'thousands' : 'hundreds'}, so pad with zeros: ${value}, not ${bare}.` }]
+        : [],
+      verify: { kind: 'fraction', value: parseFloat(n.toPrecision(k)) },
+    };
+  }
+  if (kind === 'sfDec') {
+    let n = randInt(102, 987);
+    // Skip trailing 0 (ambiguous s.f.) and trailing 5 (exact tie — float repr
+    // sits below the tie, so the toPrecision verify route rounds the other way).
+    while (n % 10 === 0 || n % 10 === 5) n = randInt(102, 987);
+    const x = n / 100000;                                  // 0.00102 … 0.00987
+    const xStr = x.toFixed(5).replace(/0+$/, '');
+    const k = 2;
+    const rounded2 = Math.round(n / 10);                  // first 2 significant digits
+    const value = rounded2 / 10000;
+    const shown = value.toFixed(4);
+    return {
+      type: 'round-sf', instruction: 'Round to 2 significant figures.',
+      question: `Round ${xStr} to 2 significant figures.`,
+      answer: shown, accepts: accepts(shown, `${value}`),
+      hints: hintLadder('Leading zeros are NOT significant — find the first non-zero digit.',
+        'Count 2 digits starting there, then look at the next digit to round.',
+        `Start counting at the ${xStr[3] === '0' ? 'fourth' : 'third'} decimal place.`),
+      solution: { steps: [
+        { text: 'First significant digit is the first non-zero digit.', expr: `${xStr}` },
+        { text: 'Keep 2 significant digits; next digit decides.', expr: shown }], answer: shown },
+      misconceptions: [{ when: '0.00', feedback: 'Leading zeros are not significant figures — they only place the decimal point. Count from the first non-zero digit.' }],
+      verify: { kind: 'fraction', value: parseFloat(x.toPrecision(k)) },
+    };
+  }
+  // estimate a product by rounding each factor to 1 s.f.
+  const a = randInt(21, 89) / 10, b = randInt(21, 89) / 10;
+  const ra = Math.round(a), rb = Math.round(b);
+  const value = ra * rb;
+  const exact = Math.round(a * b * 100) / 100;
+  return {
+    type: 'estimate', instruction: 'Estimate by rounding first.',
+    question: `Estimate ${a} × ${b} by first rounding each number to 1 significant figure.`,
+    answer: `${value}`, accepts: accepts(`${value}`),
+    hints: hintLadder('An estimate uses easy, rounded numbers — not the exact ones.',
+      'Round each number to 1 significant figure first.', `${ra} × ${rb}.`),
+    solution: { steps: [
+      { text: 'Round each factor to 1 s.f.', expr: `${a} ≈ ${ra},  ${b} ≈ ${rb}` },
+      { text: 'Multiply the rounded values.', expr: `${ra} × ${rb} = ${value}` }], answer: `${value}` },
+    misconceptions: exact !== value
+      ? [{ when: `${exact}`, feedback: 'That is the exact answer. An ESTIMATE rounds first — round each number to 1 s.f., then multiply.' }]
+      : [],
+    verify: { kind: 'fraction', value: parseFloat(a.toPrecision(1)) * parseFloat(b.toPrecision(1)) },
+  };
+}
+
+// ---- errors: absolute error, percentage error, bounds (CBC G9 / 9Np.02) ----
+export function buildErrors() {
+  const kind = pick(['abs', 'pct', 'bound']);
+  if (kind === 'abs') {
+    const A = randInt(20, 200), err = randInt(2, 15);
+    const E = coin() ? A + err : A - err;
+    const item = pick([['rope', 'length', 'cm'], ['parcel', 'mass', 'g'], ['bucket', 'capacity', 'litres'], ['desk', 'length', 'cm']]);
+    return {
+      type: 'error-abs', instruction: 'Find the error.',
+      question: `The actual ${item[1]} of a ${item[0]} is ${A} ${item[2]}. A learner estimates it as ${E} ${item[2]}. Find the error in the estimate.`,
+      answer: `${err}`, accepts: accepts(`${err}`, `${err}${item[2]}`),
+      hints: hintLadder('Error = the gap between the estimate and the actual measurement.',
+        'Subtract the smaller from the larger — error is a positive size.', `|${A} − ${E}|.`),
+      solution: { steps: [
+        { text: 'Error = |actual − estimate|.', expr: `|${A} − ${E}|` },
+        { text: 'Evaluate.', expr: `${err} ${item[2]}` }], answer: `${err}` },
+      misconceptions: E > A
+        ? [{ when: `${A - E}`, feedback: 'Error is a SIZE, so give it as a positive number — how far off the estimate is, regardless of direction.' }]
+        : [],
+      verify: { kind: 'fraction', value: Math.abs(A - E) },
+    };
+  }
+  if (kind === 'pct') {
+    let A, p, err;
+    do {
+      A = pick([20, 40, 50, 80, 100, 200, 400]);
+      p = pick([2, 4, 5, 10, 15, 20, 25]);
+      err = (A * p) / 100;
+    } while (!Number.isInteger(err));
+    const E = coin() ? A + err : A - err;
+    return {
+      type: 'error-pct', instruction: 'Find the percentage error.',
+      question: `The actual mass of a bag of maize is ${A} kg. A trader estimates it as ${E} kg. Find the percentage error.`,
+      answer: `${p}`, accepts: accepts(`${p}`, `${p}%`),
+      hints: hintLadder('Percentage error compares the error with the ACTUAL value.',
+        'Percentage error = (error ÷ actual) × 100.', `(|${A} − ${E}| ÷ ${A}) × 100.`),
+      solution: { steps: [
+        { text: 'Find the error.', expr: `|${A} − ${E}| = ${err}` },
+        { text: 'Divide by the actual value and make it a percentage.', expr: `(${err} ÷ ${A}) × 100 = ${p}%` }], answer: `${p}` },
+      misconceptions: err !== p
+        ? [{ when: `${err}`, feedback: `${err} is the absolute error. For PERCENTAGE error, divide by the actual value and multiply by 100.` }]
+        : [],
+      verify: { kind: 'fraction', value: (Math.abs(A - E) / A) * 100 },
+    };
+  }
+  const nearest = pick([1, 10]);
+  const M = nearest === 1 ? randInt(12, 96) : randInt(2, 9) * 10;
+  const side = pick(['lower', 'upper']);
+  const value = side === 'lower' ? M - nearest / 2 : M + nearest / 2;
+  const naive = side === 'lower' ? M - nearest : M + nearest;
+  return {
+    type: 'error-bound', instruction: `Find the ${side} bound.`,
+    question: `The length of a plank is ${M} cm to the nearest ${nearest === 1 ? 'cm' : '10 cm'}. What is the ${side} bound of the actual length?`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value}cm`),
+    hints: hintLadder('A rounded measurement could be up to HALF a unit out either way.',
+      `Half of ${nearest === 1 ? '1 cm' : '10 cm'} is ${nearest / 2} cm.`,
+      `${side === 'lower' ? 'Subtract' : 'Add'} ${nearest / 2} ${side === 'lower' ? 'from' : 'to'} ${M}.`),
+    solution: { steps: [
+      { text: `Rounding to the nearest ${nearest === 1 ? 'cm' : '10 cm'} means the true value lies within ±${nearest / 2} cm.`, expr: `${M} ± ${nearest / 2}` },
+      { text: `Take the ${side} end.`, expr: `${value} cm` }], answer: `${value}` },
+    misconceptions: [{ when: `${naive}`, feedback: `A whole ${nearest === 1 ? 'cm' : '10 cm'} off would round to a different value — the bound is HALF a unit away: ${M} ${side === 'lower' ? '−' : '+'} ${nearest / 2}.` }],
+    verify: { kind: 'fraction', value: side === 'lower' ? M - nearest * 0.5 : M + nearest * 0.5 },
   };
 }
 
@@ -165,7 +448,11 @@ export const MEASUREMENT_CONTENT = {
   G7_VOLUME_CUBOID:   withWorkedExample(buildCuboidVolume),
   G7_VOLUME_CYLINDER: withWorkedExample(buildCylinderVolume),
   G7_SPEED:           withWorkedExample(buildSpeed),
+  G7_TEMPERATURE_READ:   withWorkedExample(buildTemperatureRead),
+  G7_TEMPERATURE_CHANGE: withWorkedExample(buildTemperatureChange),
   G8_DENSITY:         withWorkedExample(buildDensity),
+  G9_ROUNDING:        withWorkedExample(buildRounding),
+  G9_ERRORS:          withWorkedExample(buildErrors),
 };
 
 export const MEASUREMENT_SKILL_IDS = Object.keys(MEASUREMENT_CONTENT);

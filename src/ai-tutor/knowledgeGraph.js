@@ -180,6 +180,10 @@ const GRADE_7 = {
   G7_VOLUME_CUBOID: skill('G7_VOLUME_CUBOID', 'Volume of Cuboids (Advanced)', 7, S.MEA, { pre: ['G6_VOLUME_CUBOID', 'G7_AREA_RECT'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Volume and Capacity'), cambridge: cam(8, 'Gg') } }),
   G7_VOLUME_CYLINDER: skill('G7_VOLUME_CYLINDER', 'Volume of Cylinders', 7, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_VOLUME_CUBOID'], w: 4, curricula: { cbc: cbc(7, 'Measurements', 'Volume and Capacity'), cambridge: cam(9, 'Gg', '9Gg.05') } }),
   G7_SPEED: skill('G7_SPEED', 'Speed, Distance, Time', 7, S.MEA, { pre: ['G7_LENGTH_CONV', 'G7_DECIMALS_DIV', 'G5_TIME'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Time, Distance and Speed'), cambridge: cam(9, 'As', '9As.07') } }),
+  // CBC G7 Measurements / Temperature (6 lessons): °C & K units, °C↔K conversion,
+  // temperature change in context. Not a Cambridge Lower Secondary topic (CBC-only).
+  G7_TEMPERATURE_READ: skill('G7_TEMPERATURE_READ', 'Temperature: Units & °C↔K Conversion', 7, S.MEA, { pre: ['G6_INTEGERS_INTRO'], w: 2, curricula: { cbc: cbc(7, 'Measurements', 'Temperature') } }),
+  G7_TEMPERATURE_CHANGE: skill('G7_TEMPERATURE_CHANGE', 'Temperature Change (Integers in Context)', 7, S.MEA, { pre: ['G7_TEMPERATURE_READ', 'G6_INTEGERS_ADD_SUB'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Temperature') } }),
 
   // Statistics
   G7_MEAN_MEDIAN_MODE: skill('G7_MEAN_MEDIAN_MODE', 'Mean, Median, Mode', 7, S.STA, { pre: ['G6_MEAN'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling'), cambridge: cam(8, 'Ss', '8Ss.04') } }),
@@ -268,6 +272,10 @@ const GRADE_9 = {
   G9_ARC_LENGTH: skill('G9_ARC_LENGTH', 'Arc Length & Sector Area', 9, S.MEA, { pre: ['G7_CIRCUMFERENCE', 'G7_AREA_CIRCLE', 'G6_FRACTIONS_MUL'], w: 5, curricula: { cbc: cbc(8, 'Measurements', 'Circles'), cambridge: camEnr('Gg') } }),
   G9_SURFACE_AREA_ADV: skill('G9_SURFACE_AREA_ADV', 'Surface Area (Cones, Spheres)', 9, S.MEA, { pre: ['G8_SURFACE_AREA', 'G9_SURDS_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Area'), cambridge: camEnr('Gg') } }),
   G9_VOLUME_ADV: skill('G9_VOLUME_ADV', 'Volume (Cones, Spheres, Pyramids)', 9, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_AREA_CIRCLE'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Volume of Solids'), cambridge: camEnr('Gg') } }),
+  // CBC G9 Measurements / Approximations and Errors (5 lessons). Cambridge:
+  // rounding to d.p./s.f. is 7Np.02/8Np.02; upper/lower limits is 9Np.02.
+  G9_ROUNDING: skill('G9_ROUNDING', 'Rounding & Estimation (d.p., s.f.)', 9, S.MEA, { pre: ['G7_DECIMAL_PV'], w: 3, curricula: { cbc: cbc(9, 'Measurements', 'Approximations and Errors'), cambridge: cam(8, 'Np', '8Np.02') } }),
+  G9_ERRORS: skill('G9_ERRORS', 'Approximation Errors & Bounds', 9, S.MEA, { pre: ['G9_ROUNDING', 'G7_PERCENTAGES'], w: 4, curricula: { cbc: cbc(9, 'Measurements', 'Approximations and Errors'), cambridge: cam(9, 'Np', '9Np.02') } }),
 
   // Statistics
   G9_GROUPED_DATA: skill('G9_GROUPED_DATA', 'Grouped Data & Histograms', 9, S.STA, { pre: ['G8_CUMULATIVE_FREQ', 'G7_MEAN_MEDIAN_MODE', 'G6_AREA_RECT'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)'), cambridge: cam(9, 'Ss', '9Ss.04') } }),

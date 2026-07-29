@@ -17,7 +17,7 @@
     11,
     12
   ],
-  "skill_count": 202,
+  "skill_count": 206,
   "skills": [
     {
       "id": "G5_PLACE_VALUE",
@@ -1846,6 +1846,48 @@
       "xp_value": 15
     },
     {
+      "id": "G7_TEMPERATURE_READ",
+      "name": "Temperature: Units & °C↔K Conversion",
+      "grade": 7,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G6_INTEGERS_INTRO"
+      ],
+      "key_prerequisites": [
+        "G6_INTEGERS_INTRO"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G7_TEMPERATURE_CHANGE",
+      "name": "Temperature Change (Integers in Context)",
+      "grade": 7,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G7_TEMPERATURE_READ",
+        "G6_INTEGERS_ADD_SUB"
+      ],
+      "key_prerequisites": [
+        "G7_TEMPERATURE_READ",
+        "G6_INTEGERS_ADD_SUB"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
       "id": "G7_MEAN_MEDIAN_MODE",
       "name": "Mean, Median, Mode",
       "grade": 7,
@@ -3046,6 +3088,48 @@
       ],
       "encompassings": [],
       "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_ROUNDING",
+      "name": "Rounding & Estimation (d.p., s.f.)",
+      "grade": 9,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G7_DECIMAL_PV"
+      ],
+      "key_prerequisites": [
+        "G7_DECIMAL_PV"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_ERRORS",
+      "name": "Approximation Errors & Bounds",
+      "grade": 9,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G9_ROUNDING",
+        "G7_PERCENTAGES"
+      ],
+      "key_prerequisites": [
+        "G9_ROUNDING",
+        "G7_PERCENTAGES"
+      ],
+      "encompassings": [],
+      "weight": 4,
       "critical": false,
       "knowledge_points": 3,
       "mastery_threshold": 0.85,

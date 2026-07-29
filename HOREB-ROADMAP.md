@@ -58,8 +58,8 @@ used**.
 | **Teacher dashboard** | Class roster, per-student level/strands, ⚡/⚠️ flags; classes + RLS migration; create-class / join-class UI. |
 | **Content system** | Pedagogical schema (worked example + scaffolded steps + hint ladder + misconception feedback + variety + verify hook); quality gate that **independently verifies answers**. |
 | **Symbolic layer** | Mini-CAS (expression trees, evaluate, differentiate) powering the hard calculus with verified numeric answers. |
-| **Authored content** | **44 skills, all gate-verified** — Algebra spine G6→G12 (27) + Fractions/Number G5→G7 (17). |
-| **Curriculum graph** | 200 math skills G5–12 (+ ACCA AFM 87, APM 80). Structurally clean (no broken refs/cycles). |
+| **Authored content** | **103 skills, all gate-verified** across Numbers, Algebra, Fractions, Geometry, Measurement, Statistics & Calculus — incl. the CBC-gap topics Temperature (G7) and Approximations & Errors (G9). |
+| **Curriculum graph** | 206 math skills G5–12 (+ ACCA AFM 87, APM 80). Structurally clean (no broken refs/cycles). |
 | **Audits** | Content audit + graph-integrity audit scripts. |
 | **Telemetry + calibration loop** | `response_events` table (+RLS), fire-and-forget client logging on every answer (diagnostic/practice/review), engine `/event` ingest, and `calibrate.py` (events → per-skill difficulty + BKT slip/guess + content-health flags). Engine loads calibrated `params.vN.json` and prefers them over heuristics; preview-by-default, `--commit` to ship. **The data loop is closed end-to-end.** |
 
@@ -67,8 +67,8 @@ used**.
 
 | Area | Gap |
 |---|---|
-| **Content coverage** | 44/200 math skills authored to the bar (worked examples/steps at 31%). The rest still use legacy generators (correct but thin). |
-| **Curriculum graph** | Enriched (2026-06-16): orphaned skills 2→0; Algebra now starts at G5 (added G5_PATTERNS, G5_MISSING_NUMBER + content); thickened prerequisites on circle-theorems/grouped-data/construction/density/speed. 202 skills, avg 1.59 prereqs. Most remaining "grade jumps" are legitimate foundational links, not errors — data-driven prerequisite validation (Phase 3) will refine the rest. |
+| **Content coverage** | 103/206 math skills authored to the bar. The rest still use legacy generators (correct but thin). |
+| **Curriculum graph** | Enriched (2026-06-16): orphaned skills 2→0; Algebra now starts at G5 (added G5_PATTERNS, G5_MISSING_NUMBER + content); thickened prerequisites on circle-theorems/grouped-data/construction/density/speed. P1 CBC gaps closed (2026-07-29): Temperature G7 + Approximations & Errors G9 (4 skills — see docs/curriculum-backlog.md). 206 skills, avg 1.59 prereqs. Most remaining "grade jumps" are legitimate foundational links, not errors — data-driven prerequisite validation (Phase 3) will refine the rest. |
 | **Engine as source of truth** | Telemetry now captures every event (✅) and calibration consumes them (✅). Remaining sub-piece: per-student BKT state isn't yet the *canonical* persisted record (UI still keeps its progress shape; brain re-derives). Finishing this is coupled to deployment (item 4). |
 | **Deployment** | Python engine not yet hosted; set `VITE_ENGINE_URL` to a deployed instance. |
 
