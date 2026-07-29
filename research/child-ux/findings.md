@@ -260,6 +260,31 @@ worked-example self-consistency, and hint coverage.
 **Verdict:** the audit is now a permanent guard — run `node scripts/audit-content.mjs`
 before shipping content changes.
 
+## F19 · 🟠 FIXED — our own diagnoses revealed the answer (hint-farming trap)
+
+**Found by:** the platform research (Khan's hint-abuse history) + a new audit guard.
+The multiplication diagnoses ended with the assembled result ("…2×4 = 8, giving **168**")
+on attempt 1 — so a child who typed the near-miss could read the answer and re-type it for
+full mastery credit. 79 revealing diagnoses caught across sampled problems.
+
+**Fix:** diagnoses now name the missing piece and leave the assembly to the child
+("work out the ones part too, 2 × 4, and add the two parts together"). The audit
+permanently asserts no diagnosis contains the final answer (operand coincidences and the
+carry-threshold "ten" handled). The full answer still appears only at the attempt-3
+reveal, which is already marked incorrect and followed by fresh numbers.
+
+## F20 · 🟠 FIXED — grader rejected how Kenyan kids actually type
+
+**What I did:** probed `checkAnswerMatch` with 18 realistic typed formats.
+
+**Found:** five would mark a correct child WRONG:
+`KSh 4500` (currency prefix — copied from the question's own wording!), `4500/=` and
+`4500/-` (Kenyan shilling notation), `x = 5` on a Find-x question, `45.` (trailing stop),
+`5 remainder 2` (the key was "5 r 2").
+
+**Fix:** the normalizer strips these decorations; near-misses ("x=6", "46.", "ksh 44")
+still grade wrong. 18-case tolerance suite added to the audit permanently.
+
 ## Coverage so far
 Multiplication · Addition · Subtraction · Fractions — worked example, practice, wrong-answer
 arc (×3 attempts), proactive hint, correct-answer, scaffold escalation, input edge cases,
