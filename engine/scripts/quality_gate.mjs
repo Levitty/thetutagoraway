@@ -247,6 +247,11 @@ function validateModel(m, where) {
       if (!d.top || !d.left || !d.right) return `${where}: formula-triangle needs top/left/right`;
       return null;
     }
+    case 'transpose': {
+      if (!d.start?.lhs || d.start?.rhs == null || !d.moved || !d.becomes) return `${where}: transpose missing parts`;
+      if (!Array.isArray(d.after) || !d.after.length) return `${where}: transpose has no working lines`;
+      return null;
+    }
     default: return `${where}: unknown model type ${m.type}`;
   }
 }

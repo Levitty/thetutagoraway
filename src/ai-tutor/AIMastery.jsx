@@ -17,6 +17,8 @@ import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
 import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
+import { TeachingVisual } from './TeachingVisual.jsx';
+import { activateReferral, shareOnWhatsApp, shareMessages } from '../growth.js';
 import { SUPPORT, SUPPORT_LABEL, initialSupportLevel, nextSupportLevel, completionPlan, exampleSupport } from './fadedExamples.js';
 import YoungLearnerLesson, { planYoungLesson } from './YoungLearnerLesson.jsx';
 import BridgeLesson, { planBridgeLesson } from './BridgeLesson.jsx';
@@ -597,6 +599,8 @@ export function AIMastery({ onBack, userId, studentName }) {
       };
       setProgress(finished);
       forceSave(keyFor(subjectId), finished, userId, learnerId);
+      // Referral activation gate: the referred student is now genuinely onboarded.
+      activateReferral(userId);
     }
 
     setTimeout(() => {
@@ -620,6 +624,16 @@ export function AIMastery({ onBack, userId, studentName }) {
   // Serve a lesson problem and note whether it can carry a completion scaffold
   // (grades 1–4 have their own scaffolding, so they are never "scaffoldable"
   // here and the mastery guard leaves them alone).
+  // Never serve the exact same question twice in a row (the "3 times the same
+  // question" report): reroll a few times, then accept whatever variety exists.
+  const lastQuestionRef = useRef(null);
+  const freshProblem = (gen) => {
+    let p = gen();
+    for (let i = 0; i < 6 && p?.question && p.question === lastQuestionRef.current; i++) p = gen();
+    lastQuestionRef.current = p?.question ?? lastQuestionRef.current;
+    return p;
+  };
+
   const serveLessonProblem = (skillId, level) => {
     const p = generateProblem(skillId, { level, kp: kpIndexRef.current });
     const young = (SKILLS[skillId]?.grade || 99) <= 4;
@@ -649,7 +663,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     const young = (SKILLS[skillId]?.grade || 99) <= 4;
     const we = (young || startLevel >= SUPPORT.ORIENT) ? null : generateWorkedExample(skillId);
     setShowWorkedExample(!!we);
-    setProblem(we ? null : serveLessonProblem(skillId, 'abstract'));
+    setProblem(we ? null : freshProblem(() => serveLessonProblem(skillId, 'abstract')));
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
@@ -662,9 +676,17 @@ export function AIMastery({ onBack, userId, studentName }) {
     setView('lesson');
   };
 
+  // The worked example must be STABLE across re-renders — regenerating it on
+  // every state change silently swapped its numbers mid-study.
+  const workedEx = useMemo(
+    () => (showWorkedExample && activeSkill ? generateWorkedExample(activeSkill) : null),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [showWorkedExample, activeSkill]
+  );
+
   const startPractice = () => {
     setShowWorkedExample(false);
-    setProblem(serveLessonProblem(activeSkill, modalityLevel));
+    setProblem(freshProblem(() => serveLessonProblem(activeSkill, modalityLevel)));
     setAnswer('');
     setFeedback(null);
     setAttemptCount(0);
@@ -898,10 +920,10 @@ export function AIMastery({ onBack, userId, studentName }) {
     if (due) {
       interleaveCountRef.current += 1;
       setInterleave({ skillId: due.id, name: due.name || SKILLS[due.id]?.name || 'earlier skill' });
-      setProblem(generateProblem(due.id));
+      setProblem(freshProblem(() => generateProblem(due.id)));
     } else {
       setInterleave(null);
-      setProblem(serveLessonProblem(activeSkill, modalityLevel));
+      setProblem(freshProblem(() => serveLessonProblem(activeSkill, modalityLevel)));
     }
     setAnswer('');
     setFeedback(null);
@@ -1268,7 +1290,7 @@ export function AIMastery({ onBack, userId, studentName }) {
               </div>
 
               {(() => {
-                const we = generateWorkedExample(activeSkill);
+                const we = workedEx;
                 if (!we) return null;
                 return (
                   <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6">
@@ -1277,6 +1299,7 @@ export function AIMastery({ onBack, userId, studentName }) {
                     <div className="text-[22px] font-bold text-slate-900 mb-5 leading-snug">
                       <TermTooltip text={we.problem} definitions={we.definitions} />
                     </div>
+                    {we.model && <TeachingVisual model={we.model} className="mb-4" />}
                     {(() => { const am = parseAreaProblem(we.problem); return am ? <AreaModel a={am.a} b={am.b} /> : null; })()}
                     {!parseAreaProblem(we.problem) && <div className="space-y-3">
                       {we.steps.map((step, i) => (
@@ -1332,6 +1355,18 @@ export function AIMastery({ onBack, userId, studentName }) {
                 <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">
                   <TermTooltip text={problem.question} definitions={problem.workedExample?.definitions || problem.definitions} />
                 </div>
+
+                {/* The board picture (dual coding): scaffolds the thinking without
+                    giving the answer; on the concrete modality it becomes a
+                    manipulative and working it books the solve as scaffolded. */}
+                {problem.model && !problem.visual && (
+                  <TeachingVisual
+                    model={problem.model}
+                    className="mb-5"
+                    interactive={modalityLevel === 'concrete' && !feedback && !interleave}
+                    onEvent={(e) => { if (e === 'solved') setHintLevel(h => Math.max(h, 1)); }}
+                  />
+                )}
 
                 {/* Completion scaffold — this problem's own solution, started for
                     the learner and faded from the end (Renkl backward fading). */}
@@ -1419,7 +1454,7 @@ export function AIMastery({ onBack, userId, studentName }) {
                 )}
 
                 {hintLevel >= 2 && !feedback && !plan && (() => {
-                  const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
+                  const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(interleave ? interleave.skillId : activeSkill)?.steps;
                   if (!steps) return null;
                   return (
                     <div className="mt-3 p-3 bg-[#eef1f8] border border-[#d3daf0] rounded-2xl text-sm">
@@ -1480,11 +1515,17 @@ export function AIMastery({ onBack, userId, studentName }) {
                   {(() => {
                     // Working for the LEARNER'S problem (never a stand-in example),
                     // showing the parts — the moment the missed step becomes visible.
-                    const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
+                    const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(interleave ? interleave.skillId : activeSkill)?.steps;
                     if (!steps) return null;
+                    const rich = problem.solution?.steps || [];
+                    let finalModel = null;
+                    for (let i = rich.length - 1; i >= 0; i--) {
+                      if (rich[i]?.model) { finalModel = rich[i].model; break; }
+                    }
                     return (
                       <div className="mt-3 pt-3 border-t border-[#f2cdc2]">
                         <span className="text-sm text-slate-500 mb-2 block">Here's the full working, step by step:</span>
+                        {finalModel && <TeachingVisual model={finalModel} className="mb-3" />}
                         <div className="space-y-1.5">
                           {steps.map((step, i) => (
                             <div key={i} className="flex gap-2 text-sm">
@@ -1697,6 +1738,27 @@ export function AIMastery({ onBack, userId, studentName }) {
             ? { label: 'Continue learning', sub: nextItem.name, icon: 'play', onClick: () => startLesson(nextItem.id) }
             : { label: 'Take the diagnostic', sub: 'Find your level and get your plan', icon: 'target', onClick: startDiagnostic };
           const confidencePct = brainProfile ? Math.round((brainProfile.confidence || 0) * 100) : null;
+          // Holiday Challenge banner (Aug 2026 blitz) — weekly theme + one-tap invite.
+          const holidayBanner = (() => {
+            const now = new Date();
+            if (now < new Date('2026-08-01') || now > new Date('2026-08-31T23:59:59')) return null;
+            const week = Math.min(4, Math.floor((now - new Date('2026-08-01')) / (7 * 24 * 3600 * 1000)) + 1);
+            const themes = { 1: '🔍 Find Your Level week', 2: '🔥 Streak Wars week', 3: '🏁 Mastery Race week', 4: '🎒 Back-to-School Ready week' };
+            return (
+              <div className="bg-gradient-to-r from-emerald-50 to-sky-50 border border-emerald-200 rounded-2xl px-4 py-3 mb-4 flex items-center justify-between gap-3">
+                <div>
+                  <div className="text-sm font-bold text-emerald-700">🏖️ Holiday Challenge — {themes[week]}</div>
+                  <p className="text-xs text-slate-600 mt-0.5">Free all August. Every friend who joins with your code and finishes their level check is an entry in Friday's airtime & data draw.</p>
+                </div>
+                <button
+                  onClick={() => shareOnWhatsApp(shareMessages.invite(userId))}
+                  className="shrink-0 px-3 py-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white text-xs font-bold rounded-xl transition-colors"
+                >
+                  Invite
+                </button>
+              </div>
+            );
+          })();
           // Daily-goal ring — rendered near the top on mobile and in the right rail on desktop
           const goalRing = (() => {
             const earned = todaysXP(progress);
@@ -1760,6 +1822,8 @@ export function AIMastery({ onBack, userId, studentName }) {
 
               {/* Daily-goal ring — mobile only, kept near the top so it's the first thing they see */}
               <div className="lg:hidden">{goalRing}</div>
+
+              {holidayBanner}
 
               {/* Resume card — light, content-forward (fixes the 'AI' navy hero) */}
               <button onClick={cta.onClick} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-3xl p-5 flex items-center gap-4 hover:border-slate-300 transition-colors">

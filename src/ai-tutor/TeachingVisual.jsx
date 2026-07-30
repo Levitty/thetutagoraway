@@ -738,6 +738,52 @@ const NumberLineInterval = ({ data }) => {
   );
 };
 
+
+// ---------------------------------------------------------------- transpose
+// data: { start: { lhs, rhs }, moved, becomes, after: [lines], caption }
+// The board working a teacher actually writes: the moved term is highlighted
+// and an arrow carries it ACROSS the equals sign, flipping its sign; the
+// remaining lines follow underneath, the last one emphasised.
+const TransposeWork = ({ data }) => {
+  const { start = { lhs: '', rhs: '' }, moved = '', becomes = '', after = [], caption } = data || {};
+  const keep = start.lhs.endsWith(moved) ? start.lhs.slice(0, -moved.length).trim() : start.lhs;
+  const fs = 26, CH = fs * 0.62;                     // monospace advance
+  const W = 340, x0 = 24, y0 = 66, lineH = 46;
+  const H = y0 + lineH * (after.length + 1) + 6;
+  // segments laid out on one monospace baseline: keep · moved · = rhs · ghost
+  const seg1 = keep + ' ';
+  const seg2 = moved;
+  const seg3 = ' = ' + start.rhs;
+  const x1 = x0;
+  const x2 = x1 + seg1.length * CH;
+  const x3 = x2 + seg2.length * CH;
+  const x4 = x3 + seg3.length * CH + CH * 0.6;       // ghost lands after a gap
+  const movedMid = x2 + (seg2.length * CH) / 2;
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 ${Math.max(W, x4 + (becomes.length + 1) * CH)} ${H}`} className="w-full" role="img" aria-label="Working: the term moves across the equals sign and its sign flips">
+        <text x={x1} y={y0} fontSize={fs} fontWeight="700" fill="#e8eef5" fontFamily="ui-monospace, Menlo, monospace" xmlSpace="preserve">{seg1}</text>
+        <rect x={x2 - 5} y={y0 - fs + 3} width={seg2.length * CH + 10} height={fs + 10} rx="7" fill="none" stroke="#f5b224" strokeWidth="1.8" strokeDasharray="4 3" />
+        <text x={x2} y={y0} fontSize={fs} fontWeight="700" fill="#f5b224" fontFamily="ui-monospace, Menlo, monospace" xmlSpace="preserve">{seg2}</text>
+        <text x={x3} y={y0} fontSize={fs} fontWeight="700" fill="#e8eef5" fontFamily="ui-monospace, Menlo, monospace" xmlSpace="preserve">{seg3}</text>
+        <path d={`M ${movedMid} ${y0 - fs - 4} C ${movedMid} ${y0 - fs - 28}, ${x4} ${y0 - fs - 28}, ${x4 + 8} ${y0 - fs - 6}`}
+          fill="none" stroke="#34d399" strokeWidth="2.5" markerEnd="url(#tp-arrow)" />
+        <defs>
+          <marker id="tp-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#34d399" />
+          </marker>
+        </defs>
+        <text x={x4} y={y0} fontSize={fs} fontWeight="700" fill="#34d399" fontFamily="ui-monospace, Menlo, monospace" xmlSpace="preserve">{becomes}</text>
+        {after.map((ln, i) => (
+          <text key={i} x={x0 + 14} y={y0 + lineH * (i + 1)} fontSize={fs} fontWeight={i === after.length - 1 ? '800' : '600'}
+            fill={i === after.length - 1 ? '#34d399' : '#cbd5e1'} fontFamily="ui-monospace, Menlo, monospace" xmlSpace="preserve">{ln}</text>
+        ))}
+      </svg>
+      <p className="text-center text-xs text-indigo-300 mt-1">{caption || 'crossing the = flips the sign — it is really the same move done to both sides'}</p>
+    </div>
+  );
+};
+
 // ---------------------------------------------------------------- dispatcher
 const MODELS = {
   'balance': BalanceScale,
@@ -755,6 +801,7 @@ const MODELS = {
   'money': MoneyModel,
   'base-ten': BaseTenBlocks,
   'formula-triangle': FormulaTriangle,
+  'transpose': TransposeWork,
 };
 
 export const TEACHING_MODEL_TYPES = Object.keys(MODELS);

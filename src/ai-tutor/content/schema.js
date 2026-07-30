@@ -209,6 +209,20 @@ export function buildLinearEquation({ tier = 2 } = {}) {
     stepModels.push(bal({ x: 1, units: 0 }, { x: 0, units: x }, `${b >= 0 ? 'Removed' : 'Added'} ${Math.abs(b)} from both pans.`));
   }
   steps.forEach((s, i) => { if (stepModels[i]) s.model = stepModels[i]; });
+  // The HOW picture (transposition, the way it's written on a Kenyan board):
+  // the constant crosses the = and flips sign. Tiers 1-2, first step.
+  if (tier !== 3) {
+    const movedTok = b >= 0 ? `+ ${b}` : `− ${Math.abs(b)}`;
+    const becomesTok = b >= 0 ? `− ${b}` : `+ ${Math.abs(b)}`;
+    const lhsShown = `${fmtLinear(a, 0)} ${movedTok}`;
+    steps[0].model = { type: 'transpose', data: {
+      start: { lhs: lhsShown, rhs: `${c}` },
+      moved: movedTok, becomes: becomesTok,
+      after: tier === 1
+        ? [`x = ${c} ${becomesTok}`, `x = ${x}`]
+        : [`${fmtLinear(a, 0)} = ${c} ${becomesTok}`, `${fmtLinear(a, 0)} = ${c - b}`],
+    } };
+  }
 
   return {
     type: 'linear-equation',
