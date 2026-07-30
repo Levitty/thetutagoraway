@@ -6,6 +6,7 @@
 
 import { SKILLS as MATH_SKILLS, getPostRequisites as mathGetPostReqs, getPrerequisiteChain as mathPreChain, getPostRequisiteChain as mathPostChain, STRANDS as MATH_STRANDS } from './knowledgeGraph.js';
 import { NATIVE, gradeOf, strandOf, isEnrichment } from './curricula.js';
+import { isFluent } from './spacedRepetition.js';
 
 // Default context (math) for backward compatibility
 const defaultCtx = () => ({
@@ -74,7 +75,11 @@ export const findGaps = (progress, ctx) => {
 
   for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
-    if (sp && sp.attempts >= 3 && (sp.correct / sp.attempts) < 0.6) {
+    // Struggling = poor live accuracy OR an outright diagnostic failure — the
+    // diagnostic seeds attempts:1, which the >=3 threshold silently ignored,
+    // so freshly-diagnosed gaps never surfaced to the student or the teacher.
+    const diagnosticFail = sp?.fromDiagnostic && sp?.passed === false;
+    if (sp && ((sp.attempts >= 3 && (sp.correct / sp.attempts) < 0.6) || diagnosticFail)) {
       const preReqs = skill.keyPrerequisites || skill.prerequisites;
       for (const pid of preReqs) {
         const pp = progress.skills[pid];
@@ -134,6 +139,26 @@ export const getReviews = (progress, ctx) => {
   return reviews.sort((a, b) => b.urgency - a.urgency);
 };
 
+// ==================== FLUENCY PRACTICE (AUTOMATICITY) ====================
+// Skills the student has mastered but can't yet do FAST — practising these to
+// automaticity frees working memory for harder skills.
+export const getFluencyPractice = (progress, ctx) => {
+  const c = resolveCtx(ctx);
+  const out = [];
+  for (const skill of c.skillList) {
+    const sp = progress.skills[skill.id];
+    if (!sp?.mastered || isFluent(sp)) continue;
+    out.push({
+      ...skill,
+      type: 'fluency',
+      reason: 'Build speed — you know it, now make it automatic',
+      fluentReps: sp.fluentReps || 0,
+    });
+  }
+  // Least-fluent first.
+  return out.sort((a, b) => (a.fluentReps || 0) - (b.fluentReps || 0));
+};
+
 // ==================== NEXT SKILLS TO LEARN ====================
 
 export const getNextToLearn = (progress, ctx) => {
@@ -175,6 +200,10 @@ export const getRecommendedPath = (progress, ctx) => {
   for (const r of reviews.slice(0, 2)) {
     if (!seen.has(r.id)) { path.push(r); seen.add(r.id); }
   }
+
+  // One automaticity rep — a mastered-but-slow skill to speed up.
+  const fluency = getFluencyPractice(progress, ctx);
+  if (fluency.length && !seen.has(fluency[0].id)) { path.push(fluency[0]); seen.add(fluency[0].id); }
 
   const nextSkills = getNextToLearn(progress, ctx);
   const strandPicks = {};
@@ -480,39 +509,57 @@ export const getLevel = (totalXP) => {
 
 // ==================== INTERLEAVED REVIEW SELECTION ====================
 
+// Proper unbiased shuffle (Array.sort(()=>Math.random()-0.5) is NOT uniform).
+const fisherYates = (arr) => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+};
+
+// Interleave a multiset of skill ids so the SAME skill is never adjacent when it
+// can be avoided (spaced/interleaved practice beats blocked — the whole point of
+// review). Greedy: always place the skill with the most remaining that isn't the
+// one we just placed.
+const interleaveSkills = (ids) => {
+  const counts = {};
+  ids.forEach(id => { counts[id] = (counts[id] || 0) + 1; });
+  const out = []; let last = null;
+  while (out.length < ids.length) {
+    const cands = Object.keys(counts).filter(k => counts[k] > 0).sort((a, b) => counts[b] - counts[a]);
+    const pick = cands.find(k => k !== last) ?? cands[0];
+    if (pick == null) break;
+    out.push(pick); counts[pick]--; last = pick;
+  }
+  return out;
+};
+
+// Build a spaced, interleaved review set. Spreads across as MANY distinct skills
+// as possible (retention comes from breadth + spacing, not drilling one skill),
+// double-weights the most-forgotten, and never blocks the same skill back-to-back.
 export const selectReviewProblems = (progress, count = 12, ctx) => {
   const c = resolveCtx(ctx);
-  const reviews = getReviews(progress, ctx);
-  const masteredSkills = c.skillList.filter(s => progress.skills[s.id]?.mastered);
+  const reviews = getReviews(progress, ctx);   // already sorted by urgency (most overdue first)
 
-  // Build the skill pool: due reviews first (most urgent already sorted), then
-  // top up with other mastered skills.
-  const pool = [];
-  for (const r of reviews) if (!pool.includes(r.id)) pool.push(r.id);
-  for (const s of [...masteredSkills].sort(() => Math.random() - 0.5)) {
-    if (!pool.includes(s.id)) pool.push(s.id);
+  const bag = [];
+  // 1) Due reviews: the most-forgotten (urgency > 0.5, i.e. memory < ~50%) get
+  //    two problems; mildly-due skills get one. Widens coverage vs the old 3-each.
+  for (const r of reviews) {
+    const reps = r.urgency > 0.5 ? 2 : 1;
+    for (let i = 0; i < reps; i++) bag.push(r.id);
   }
-  if (pool.length === 0) return [];
+  // 2) Not enough due? Top up with mastered skills that haven't been reviewed,
+  //    least-recently-practised first, one each — keeps everything warm.
+  if (bag.length < count) {
+    const inBag = new Set(bag);
+    const filler = c.skillList
+      .filter(s => progress.skills[s.id]?.mastered && !inBag.has(s.id))
+      .sort((a, b) => new Date(progress.skills[a.id].lastPractice || 0) - new Date(progress.skills[b.id].lastPractice || 0));
+    for (const s of filler) { if (bag.length >= count) break; bag.push(s.id); }
+  }
 
-  // TRUE interleaving: round-robin across distinct skills so no two consecutive
-  // problems are the same skill (a random shuffle can still cluster them). This
-  // is the "mixed practice / desirable difficulty" the methodology calls for —
-  // blocked practice (3-in-a-row) gives a false sense of fluency.
-  const problemsPerSkill = 3;
-  const need = Math.min(count, pool.length * problemsPerSkill);
-  const remaining = Object.fromEntries(pool.map(id => [id, problemsPerSkill]));
-  const order = [];
-  let last = null;
-  while (order.length < need) {
-    const avail = pool.filter(id => remaining[id] > 0);
-    if (avail.length === 0) break;
-    // Prefer a skill different from the previous problem; fall back if only one left.
-    const pick = avail.find(id => id !== last) ?? avail[0];
-    order.push(pick);
-    remaining[pick]--;
-    last = pick;
-  }
-  return order;
+  // Trim to count, keeping urgency order, then interleave so no skill repeats
+  // adjacently. (Distinct-skill breadth is preserved because urgent skills lead.)
+  return interleaveSkills(bag.slice(0, count));
 };
 
 export default {

@@ -175,6 +175,44 @@ def test_diagnostic_walks_down_after_failures():
     assert grades_asked[-1] < grades_asked[0], "diagnostic should ease down after failures"
 
 
+# ------------------------------------------------------------- automaticity
+def test_fast_answers_build_fluency():
+    sm = StudentModel(GRAPH)
+    sid = "G5_ADDITION"
+    for _ in range(6):
+        sm.record_response(sid, True, time_taken_ms=8000, expected_ms=20000, now=T0)
+    assert sm.is_mastered(sid, now=T0)
+    assert sm.is_fluent(sid, now=T0), "fast correct answers should build fluency"
+
+
+def test_slow_answers_are_not_fluent():
+    sm = StudentModel(GRAPH)
+    sid = "G5_ADDITION"
+    for _ in range(6):
+        sm.record_response(sid, True, time_taken_ms=30000, expected_ms=20000, now=T0)
+    assert sm.is_mastered(sid, now=T0), "should still master with correct answers"
+    assert not sm.is_fluent(sid, now=T0), "slow answers shouldn't count as automatic"
+
+
+def test_fluency_practice_surfaces_slow_skills():
+    sm = StudentModel(GRAPH)
+    sid = "G5_ADDITION"
+    for _ in range(6):
+        sm.record_response(sid, True, time_taken_ms=30000, expected_ms=20000, now=T0)
+    fids = [r.skill_id for r in Scheduler(sm).fluency(now=T0)]
+    assert sid in fids, "mastered-but-slow skills should surface for speed practice"
+
+
+def test_interleave_spaces_strands():
+    from tutagora_engine.scheduler import Recommendation
+    mk = lambda i, st: Recommendation(skill_id=str(i), name="x", grade=5, strand=st,
+                                      kind="learn", priority=1, reason="", mastery=0)
+    plan = [mk(1, "A"), mk(2, "A"), mk(3, "B"), mk(4, "B")]
+    strands = [r.strand for r in Scheduler._interleave(plan)]
+    adj = sum(1 for i in range(1, len(strands)) if strands[i] == strands[i - 1])
+    assert adj == 0, f"interleaving should space same-strand items: {strands}"
+
+
 def test_serialization_roundtrip():
     sm = StudentModel(GRAPH)
     for _ in range(4):

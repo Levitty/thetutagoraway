@@ -17,7 +17,7 @@ import {
   buildEvaluateFunction, buildDifferentiate, buildIntegrate, buildDefiniteIntegral,
   buildQuadraticFormula, buildCompleteSquare, buildArithmeticSequence,
   buildGeometricSequence, buildArithmeticSeries, buildStationaryPoints,
-  withWorkedExample, coin, accepts, hintLadder, randInt, nonzero, pick, fmtLinear,
+  withWorkedExample, withKPs, coin, accepts, hintLadder, randInt, nonzero, pick, fmtLinear,
 } from './schema.js';
 
 // ============================================================================
@@ -201,6 +201,12 @@ export function buildEquationOfLine() {
 }
 
 export const ALGEBRA_CONTENT = {
+  // Cambridge gap fill — inequalities + the Stage-8 straight-line spine
+  G7_INEQUALITIES_INTRO: withWorkedExample(buildInequalityIntro),
+  G8_INEQUALITIES:      withWorkedExample(buildInequalitySolve),
+  G8_LINEAR_GRAPHS:     withWorkedExample(buildLinearGraphRead),
+  G8_GRADIENT:          withWorkedExample(buildGradient),
+  G8_EQUATION_OF_LINE:  withWorkedExample(buildEquationOfLine),
   // Forming & collecting
   G7_EXPRESSIONS:      withWorkedExample(() => buildSimplify({ tier: 1 })),
   G7_SIMPLIFY:         withWorkedExample(() => buildSimplify({ tier: 2 })),
@@ -213,7 +219,13 @@ export const ALGEBRA_CONTENT = {
   // Solving linear equations — increasing difficulty up the spine
   G6_SIMPLE_EQUATIONS: withWorkedExample(() => buildLinearEquation({ tier: 1 })),
   G7_EQUATIONS_FORM:   withWorkedExample(() => buildLinearEquation({ tier: 2 })),
-  G7_EQUATIONS_SOLVE:  withWorkedExample(() => buildLinearEquation({ tier: coin() ? 2 : 3 })),
+  // Taught as ordered knowledge points (one tiny step at a time):
+  //   KP1 one-step → KP2 two-step → KP3 variables on both sides.
+  G7_EQUATIONS_SOLVE:  withKPs([
+                          withWorkedExample(() => buildLinearEquation({ tier: 1 })),
+                          withWorkedExample(() => buildLinearEquation({ tier: 2 })),
+                          withWorkedExample(() => buildLinearEquation({ tier: 3 })),
+                        ]),
   G8_LINEAR_EQ_ADV:    withWorkedExample(() => buildLinearEquation({ tier: 3 })),
 
   // Quadratics & functions (G9)
@@ -222,13 +234,6 @@ export const ALGEBRA_CONTENT = {
   G9_QUADRATIC_FORMULA:   withWorkedExample(buildQuadraticFormula),
   G9_COMPLETING_SQUARE:   withWorkedExample(buildCompleteSquare),
   G9_FUNCTIONS_INTRO:     withWorkedExample(() => buildEvaluateFunction({ quadratic: coin() })),
-
-  // Cambridge gap fill — inequalities + the straight-line spine
-  G7_INEQUALITIES_INTRO: withWorkedExample(buildInequalityIntro),
-  G8_INEQUALITIES:      withWorkedExample(buildInequalitySolve),
-  G8_LINEAR_GRAPHS:     withWorkedExample(buildLinearGraphRead),
-  G8_GRADIENT:          withWorkedExample(buildGradient),
-  G8_EQUATION_OF_LINE:  withWorkedExample(buildEquationOfLine),
 
   // Sequences & series (G8/G10)
   G8_SEQUENCES:       withWorkedExample(buildArithmeticSequence),

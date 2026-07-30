@@ -1,0 +1,1358 @@
+{
+  "subject": "cambridge",
+  "strands": [
+    "Number",
+    "Algebra & Graphs",
+    "Coordinate Geometry",
+    "Geometry",
+    "Mensuration",
+    "Trigonometry",
+    "Transformations & Vectors",
+    "Probability",
+    "Statistics"
+  ],
+  "grades": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "skill_count": 64,
+  "skills": [
+    {
+      "id": "CP_COUNTING",
+      "name": "Counting & Number to 100",
+      "grade": 1,
+      "strand": "Number",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 5,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_PLACE_VALUE",
+      "name": "Place Value (to 10,000)",
+      "grade": 3,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_COUNTING"
+      ],
+      "key_prerequisites": [
+        "CP_COUNTING"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_ADD_SUB",
+      "name": "Addition & Subtraction",
+      "grade": 2,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_COUNTING"
+      ],
+      "key_prerequisites": [
+        "CP_COUNTING"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_MULTIPLY",
+      "name": "Multiplication (Times Tables)",
+      "grade": 3,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_ADD_SUB"
+      ],
+      "key_prerequisites": [
+        "CP_ADD_SUB"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_DIVIDE",
+      "name": "Division",
+      "grade": 4,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_MULTIPLY"
+      ],
+      "key_prerequisites": [
+        "CP_MULTIPLY"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_FACTORS",
+      "name": "Factors, Multiples & Primes",
+      "grade": 5,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_MULTIPLY",
+        "CP_DIVIDE"
+      ],
+      "key_prerequisites": [
+        "CP_MULTIPLY",
+        "CP_DIVIDE"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_NEGATIVES",
+      "name": "Negative Numbers",
+      "grade": 5,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_ADD_SUB"
+      ],
+      "key_prerequisites": [
+        "CP_ADD_SUB"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_FRACTIONS",
+      "name": "Understanding Fractions",
+      "grade": 3,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_DIVIDE"
+      ],
+      "key_prerequisites": [
+        "CP_DIVIDE"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_FRACTIONS_OPS",
+      "name": "Adding & Subtracting Fractions",
+      "grade": 5,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_FRACTIONS",
+        "CP_FACTORS"
+      ],
+      "key_prerequisites": [
+        "CP_FRACTIONS",
+        "CP_FACTORS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_FRACTIONS_MD",
+      "name": "Multiplying & Dividing Fractions",
+      "grade": 6,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_FRACTIONS_OPS"
+      ],
+      "key_prerequisites": [
+        "CP_FRACTIONS_OPS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_DECIMALS",
+      "name": "Decimals",
+      "grade": 4,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_PLACE_VALUE",
+        "CP_FRACTIONS"
+      ],
+      "key_prerequisites": [
+        "CP_PLACE_VALUE",
+        "CP_FRACTIONS"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_DECIMALS_OPS",
+      "name": "Decimal Operations",
+      "grade": 6,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_DECIMALS",
+        "CP_MULTIPLY"
+      ],
+      "key_prerequisites": [
+        "CP_DECIMALS",
+        "CP_MULTIPLY"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_PERCENT",
+      "name": "Percentages",
+      "grade": 6,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_FRACTIONS",
+        "CP_DECIMALS"
+      ],
+      "key_prerequisites": [
+        "CP_FRACTIONS",
+        "CP_DECIMALS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_SHAPES",
+      "name": "2D & 3D Shapes",
+      "grade": 2,
+      "strand": "Geometry",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 1,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_ANGLES",
+      "name": "Angles & Turns",
+      "grade": 4,
+      "strand": "Geometry",
+      "prerequisites": [
+        "CP_SHAPES"
+      ],
+      "key_prerequisites": [
+        "CP_SHAPES"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_PERIMETER_AREA",
+      "name": "Perimeter & Area",
+      "grade": 5,
+      "strand": "Mensuration",
+      "prerequisites": [
+        "CP_MULTIPLY",
+        "CP_SHAPES"
+      ],
+      "key_prerequisites": [
+        "CP_MULTIPLY",
+        "CP_SHAPES"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_MEASURE",
+      "name": "Measure (Length, Mass, Time)",
+      "grade": 3,
+      "strand": "Mensuration",
+      "prerequisites": [
+        "CP_ADD_SUB"
+      ],
+      "key_prerequisites": [
+        "CP_ADD_SUB"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_DATA",
+      "name": "Handling Data (Charts)",
+      "grade": 4,
+      "strand": "Statistics",
+      "prerequisites": [
+        "CP_COUNTING"
+      ],
+      "key_prerequisites": [
+        "CP_COUNTING"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "CP_AVERAGES",
+      "name": "Mode, Median & Mean",
+      "grade": 6,
+      "strand": "Statistics",
+      "prerequisites": [
+        "CP_ADD_SUB",
+        "CP_DIVIDE"
+      ],
+      "key_prerequisites": [
+        "CP_ADD_SUB",
+        "CP_DIVIDE"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "LS_INTEGERS",
+      "name": "Integer Operations",
+      "grade": 7,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_NEGATIVES",
+        "CP_MULTIPLY"
+      ],
+      "key_prerequisites": [
+        "CP_NEGATIVES",
+        "CP_MULTIPLY"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "LS_INDICES",
+      "name": "Indices (Powers & Roots)",
+      "grade": 8,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_MULTIPLY",
+        "CP_FACTORS"
+      ],
+      "key_prerequisites": [
+        "CP_MULTIPLY",
+        "CP_FACTORS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "LS_ROUNDING",
+      "name": "Rounding & Significant Figures",
+      "grade": 7,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_DECIMALS"
+      ],
+      "key_prerequisites": [
+        "CP_DECIMALS"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "LS_RATIO",
+      "name": "Ratio & Proportion",
+      "grade": 8,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_FRACTIONS_MD",
+        "CP_DIVIDE"
+      ],
+      "key_prerequisites": [
+        "CP_FRACTIONS_MD",
+        "CP_DIVIDE"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "LS_EXPRESSIONS",
+      "name": "Algebraic Expressions",
+      "grade": 7,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "LS_INTEGERS"
+      ],
+      "key_prerequisites": [
+        "LS_INTEGERS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "LS_EQUATIONS",
+      "name": "Linear Equations",
+      "grade": 8,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "LS_EXPRESSIONS"
+      ],
+      "key_prerequisites": [
+        "LS_EXPRESSIONS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "LS_COORDINATES",
+      "name": "Coordinates & Straight Lines",
+      "grade": 8,
+      "strand": "Coordinate Geometry",
+      "prerequisites": [
+        "LS_INTEGERS"
+      ],
+      "key_prerequisites": [
+        "LS_INTEGERS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "LS_ANGLES",
+      "name": "Angle Rules & Parallel Lines",
+      "grade": 7,
+      "strand": "Geometry",
+      "prerequisites": [
+        "CP_ANGLES"
+      ],
+      "key_prerequisites": [
+        "CP_ANGLES"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "LS_TRANSFORM",
+      "name": "Transformations (Basic)",
+      "grade": 9,
+      "strand": "Transformations & Vectors",
+      "prerequisites": [
+        "LS_COORDINATES"
+      ],
+      "key_prerequisites": [
+        "LS_COORDINATES"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_STANDARD_FORM",
+      "name": "Standard Form",
+      "grade": 10,
+      "strand": "Number",
+      "prerequisites": [
+        "LS_INDICES",
+        "LS_ROUNDING"
+      ],
+      "key_prerequisites": [
+        "LS_INDICES",
+        "LS_ROUNDING"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_PERCENT_APP",
+      "name": "Percentage Applications (Interest, Change)",
+      "grade": 10,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_PERCENT",
+        "LS_RATIO"
+      ],
+      "key_prerequisites": [
+        "CP_PERCENT",
+        "LS_RATIO"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_BOUNDS",
+      "name": "Bounds & Estimation",
+      "grade": 10,
+      "strand": "Number",
+      "prerequisites": [
+        "LS_ROUNDING"
+      ],
+      "key_prerequisites": [
+        "LS_ROUNDING"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_LCM_HCF",
+      "name": "LCM, HCF & Prime Factorisation",
+      "grade": 10,
+      "strand": "Number",
+      "prerequisites": [
+        "CP_FACTORS"
+      ],
+      "key_prerequisites": [
+        "CP_FACTORS"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_EXPAND",
+      "name": "Expanding Brackets",
+      "grade": 10,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "LS_EXPRESSIONS"
+      ],
+      "key_prerequisites": [
+        "LS_EXPRESSIONS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_FACTORISE",
+      "name": "Factorising (Common Factor)",
+      "grade": 10,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "IG_EXPAND"
+      ],
+      "key_prerequisites": [
+        "IG_EXPAND"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_EQUATIONS_ADV",
+      "name": "Equations (Brackets, Both Sides)",
+      "grade": 10,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "LS_EQUATIONS",
+        "IG_EXPAND"
+      ],
+      "key_prerequisites": [
+        "LS_EQUATIONS",
+        "IG_EXPAND"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_SIMULTANEOUS",
+      "name": "Simultaneous Equations",
+      "grade": 10,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "IG_EQUATIONS_ADV"
+      ],
+      "key_prerequisites": [
+        "IG_EQUATIONS_ADV"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_INEQUALITIES",
+      "name": "Inequalities",
+      "grade": 10,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "IG_EQUATIONS_ADV"
+      ],
+      "key_prerequisites": [
+        "IG_EQUATIONS_ADV"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_SEQUENCES",
+      "name": "Sequences & nth Term",
+      "grade": 10,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "LS_EXPRESSIONS"
+      ],
+      "key_prerequisites": [
+        "LS_EXPRESSIONS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_LINEAR_GRAPHS",
+      "name": "Linear Graphs (y = mx + c)",
+      "grade": 10,
+      "strand": "Coordinate Geometry",
+      "prerequisites": [
+        "LS_COORDINATES",
+        "LS_EQUATIONS"
+      ],
+      "key_prerequisites": [
+        "LS_COORDINATES",
+        "LS_EQUATIONS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_POLYGONS",
+      "name": "Angles in Polygons",
+      "grade": 10,
+      "strand": "Geometry",
+      "prerequisites": [
+        "LS_ANGLES"
+      ],
+      "key_prerequisites": [
+        "LS_ANGLES"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_AREA_PERIMETER",
+      "name": "Area & Perimeter (Circle, Composite)",
+      "grade": 10,
+      "strand": "Mensuration",
+      "prerequisites": [
+        "CP_PERIMETER_AREA"
+      ],
+      "key_prerequisites": [
+        "CP_PERIMETER_AREA"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_VOLUME",
+      "name": "Volume & Surface Area",
+      "grade": 10,
+      "strand": "Mensuration",
+      "prerequisites": [
+        "IG_AREA_PERIMETER"
+      ],
+      "key_prerequisites": [
+        "IG_AREA_PERIMETER"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_PYTHAGORAS",
+      "name": "Pythagoras’ Theorem",
+      "grade": 10,
+      "strand": "Trigonometry",
+      "prerequisites": [
+        "LS_INDICES",
+        "IG_AREA_PERIMETER"
+      ],
+      "key_prerequisites": [
+        "LS_INDICES",
+        "IG_AREA_PERIMETER"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_TRIG_BASIC",
+      "name": "Right-Angled Trigonometry (SOHCAHTOA)",
+      "grade": 10,
+      "strand": "Trigonometry",
+      "prerequisites": [
+        "IG_PYTHAGORAS",
+        "LS_RATIO"
+      ],
+      "key_prerequisites": [
+        "IG_PYTHAGORAS",
+        "LS_RATIO"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_PROBABILITY",
+      "name": "Probability",
+      "grade": 10,
+      "strand": "Probability",
+      "prerequisites": [
+        "CP_FRACTIONS_OPS"
+      ],
+      "key_prerequisites": [
+        "CP_FRACTIONS_OPS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_AVERAGES",
+      "name": "Averages & Range",
+      "grade": 10,
+      "strand": "Statistics",
+      "prerequisites": [
+        "CP_AVERAGES"
+      ],
+      "key_prerequisites": [
+        "CP_AVERAGES"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_STATS_DIAGRAMS",
+      "name": "Statistical Diagrams",
+      "grade": 10,
+      "strand": "Statistics",
+      "prerequisites": [
+        "CP_DATA",
+        "IG_AVERAGES"
+      ],
+      "key_prerequisites": [
+        "CP_DATA",
+        "IG_AVERAGES"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_SURDS",
+      "name": "Surds",
+      "grade": 11,
+      "strand": "Number",
+      "prerequisites": [
+        "LS_INDICES",
+        "IG_STANDARD_FORM"
+      ],
+      "key_prerequisites": [
+        "LS_INDICES",
+        "IG_STANDARD_FORM"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_INDICES_FRAC",
+      "name": "Fractional & Negative Indices",
+      "grade": 11,
+      "strand": "Number",
+      "prerequisites": [
+        "LS_INDICES",
+        "CP_FRACTIONS_MD"
+      ],
+      "key_prerequisites": [
+        "LS_INDICES",
+        "CP_FRACTIONS_MD"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_EXP_GROWTH",
+      "name": "Exponential Growth & Decay",
+      "grade": 11,
+      "strand": "Number",
+      "prerequisites": [
+        "IG_PERCENT_APP",
+        "LS_INDICES"
+      ],
+      "key_prerequisites": [
+        "IG_PERCENT_APP",
+        "LS_INDICES"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_QUAD_EXPAND",
+      "name": "Expanding Quadratics",
+      "grade": 11,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "IG_EXPAND"
+      ],
+      "key_prerequisites": [
+        "IG_EXPAND"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_QUAD_FACTOR",
+      "name": "Factorising Quadratics",
+      "grade": 11,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "IG_QUAD_EXPAND",
+        "IG_FACTORISE"
+      ],
+      "key_prerequisites": [
+        "IG_QUAD_EXPAND",
+        "IG_FACTORISE"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_QUAD_SOLVE",
+      "name": "Solving Quadratics (Factorising)",
+      "grade": 11,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "IG_QUAD_FACTOR"
+      ],
+      "key_prerequisites": [
+        "IG_QUAD_FACTOR"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_QUAD_FORMULA",
+      "name": "Quadratic Formula",
+      "grade": 11,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "IG_QUAD_SOLVE",
+        "IG_SURDS"
+      ],
+      "key_prerequisites": [
+        "IG_QUAD_SOLVE",
+        "IG_SURDS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_COMPLETE_SQ",
+      "name": "Completing the Square",
+      "grade": 11,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "IG_QUAD_EXPAND"
+      ],
+      "key_prerequisites": [
+        "IG_QUAD_EXPAND"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_ALG_FRACTIONS",
+      "name": "Algebraic Fractions",
+      "grade": 11,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "IG_QUAD_FACTOR",
+        "CP_FRACTIONS_OPS"
+      ],
+      "key_prerequisites": [
+        "IG_QUAD_FACTOR",
+        "CP_FRACTIONS_OPS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_FUNCTIONS",
+      "name": "Functions (Composite & Inverse)",
+      "grade": 11,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "IG_EQUATIONS_ADV"
+      ],
+      "key_prerequisites": [
+        "IG_EQUATIONS_ADV"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_VARIATION",
+      "name": "Direct & Inverse Variation",
+      "grade": 11,
+      "strand": "Algebra & Graphs",
+      "prerequisites": [
+        "LS_RATIO",
+        "IG_EQUATIONS_ADV"
+      ],
+      "key_prerequisites": [
+        "LS_RATIO",
+        "IG_EQUATIONS_ADV"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_QUAD_GRAPHS",
+      "name": "Quadratic & Cubic Graphs",
+      "grade": 11,
+      "strand": "Coordinate Geometry",
+      "prerequisites": [
+        "IG_QUAD_SOLVE",
+        "IG_LINEAR_GRAPHS"
+      ],
+      "key_prerequisites": [
+        "IG_QUAD_SOLVE",
+        "IG_LINEAR_GRAPHS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_CIRCLE_THEOREMS",
+      "name": "Circle Theorems",
+      "grade": 11,
+      "strand": "Geometry",
+      "prerequisites": [
+        "IG_POLYGONS"
+      ],
+      "key_prerequisites": [
+        "IG_POLYGONS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_SIMILAR",
+      "name": "Similar Shapes (Area & Volume)",
+      "grade": 11,
+      "strand": "Geometry",
+      "prerequisites": [
+        "LS_RATIO",
+        "IG_VOLUME"
+      ],
+      "key_prerequisites": [
+        "LS_RATIO",
+        "IG_VOLUME"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_SINE_COSINE",
+      "name": "Sine & Cosine Rules",
+      "grade": 11,
+      "strand": "Trigonometry",
+      "prerequisites": [
+        "IG_TRIG_BASIC",
+        "IG_QUAD_FORMULA"
+      ],
+      "key_prerequisites": [
+        "IG_TRIG_BASIC",
+        "IG_QUAD_FORMULA"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_VECTORS",
+      "name": "Vectors",
+      "grade": 11,
+      "strand": "Transformations & Vectors",
+      "prerequisites": [
+        "LS_TRANSFORM",
+        "IG_PYTHAGORAS"
+      ],
+      "key_prerequisites": [
+        "LS_TRANSFORM",
+        "IG_PYTHAGORAS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "IG_CUMULATIVE",
+      "name": "Cumulative Frequency & Histograms",
+      "grade": 11,
+      "strand": "Statistics",
+      "prerequisites": [
+        "IG_STATS_DIAGRAMS"
+      ],
+      "key_prerequisites": [
+        "IG_STATS_DIAGRAMS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    }
+  ]
+}

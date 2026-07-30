@@ -58,11 +58,23 @@ export const processReviewResult = (skillProgress, wasCorrect, timeTakenMs, expe
     sp.repNum = (sp.repNum || 0) + rawDelta;
     sp.learningSpeed = updateLearningSpeed(sp.learningSpeed || 1.0, true, sp.attempts);
     sp.consecutiveFailures = 0;
+    // Delayed mastery confirmation (Khan-style certification, without the
+    // leveling-down pain): the first time a mastered skill is answered
+    // correctly in a LATER review — a spaced, mixed retrieval check — stamp it
+    // confirmed. Never unset on a miss; the scheduler handles decay invisibly.
+    if (sp.mastered && !sp.confirmedAt) sp.confirmedAt = new Date().toISOString();
+    // Automaticity: a FAST correct answer builds fluency; a slow one erodes it.
+    if (expectedTimeMs && timeTakenMs != null) {
+      sp.fluentReps = timeTakenMs <= expectedTimeMs
+        ? (sp.fluentReps || 0) + 1
+        : Math.max(0, (sp.fluentReps || 0) - 0.5);
+    }
   } else {
     const decay = 1.0 + (sp.consecutiveFailures || 0) * 0.5;
     sp.repNum = Math.max(0, (sp.repNum || 0) - decay);
     sp.learningSpeed = updateLearningSpeed(sp.learningSpeed || 1.0, false, sp.attempts);
     sp.consecutiveFailures = (sp.consecutiveFailures || 0) + 1;
+    sp.fluentReps = Math.max(0, (sp.fluentReps || 0) - 1);   // errors break automaticity
 
     if (sp.consecutiveFailures >= 3) {
       sp.mastered = false;
@@ -71,6 +83,19 @@ export const processReviewResult = (skillProgress, wasCorrect, timeTakenMs, expe
 
   return sp;
 };
+
+// A skill is FLUENT when it's mastered AND has been answered fast enough,
+// enough times — recall no longer takes conscious effort (automaticity).
+export const FLUENCY_REPS = 3;
+export const isFluent = (sp) => !!(sp && sp.mastered && (sp.fluentReps || 0) >= FLUENCY_REPS);
+
+// The "fast enough" bar, scaled to skill difficulty. A flat 30s made everything
+// trivially fluent; a single fact should be recalled in a few seconds, a
+// multi-step problem allowed longer. Derived from the skill's difficulty weight:
+//   w≈1 (a fact) → ~5s · w≈3 → ~11s · w≈6 (hard multi-step) → ~18s.
+export const FLUENCY_BASE_MS = 3000;
+export const fluencyExpectedMs = (skill) =>
+  Math.round(FLUENCY_BASE_MS + Math.min(skill?.weight || 2, 6) * 2500);
 
 // ==================== IMPLICIT REPETITIONS ====================
 // When student practices an advanced skill, prerequisites get partial credit

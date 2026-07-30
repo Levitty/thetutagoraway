@@ -1,0 +1,526 @@
+{
+  "subject": "sat",
+  "strands": [
+    "Algebra",
+    "Advanced Math",
+    "Problem Solving & Data Analysis",
+    "Geometry & Trigonometry"
+  ],
+  "grades": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "skill_count": 25,
+  "skills": [
+    {
+      "id": "SAT_ARITHMETIC",
+      "name": "Fractions, Decimals & Integers",
+      "grade": 1,
+      "strand": "Problem Solving & Data Analysis",
+      "prerequisites": [],
+      "key_prerequisites": [],
+      "encompassings": [],
+      "weight": 2,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_RATIOS",
+      "name": "Ratios, Rates & Proportions",
+      "grade": 1,
+      "strand": "Problem Solving & Data Analysis",
+      "prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "key_prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_PERCENT",
+      "name": "Percentages",
+      "grade": 1,
+      "strand": "Problem Solving & Data Analysis",
+      "prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "key_prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_UNITS",
+      "name": "Units & Conversions",
+      "grade": 1,
+      "strand": "Problem Solving & Data Analysis",
+      "prerequisites": [
+        "SAT_RATIOS"
+      ],
+      "key_prerequisites": [
+        "SAT_RATIOS"
+      ],
+      "encompassings": [],
+      "weight": 2,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_LINEAR_EQ",
+      "name": "Linear Equations (1 variable)",
+      "grade": 2,
+      "strand": "Algebra",
+      "prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "key_prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_LINEAR_2V",
+      "name": "Linear Equations (2 variables)",
+      "grade": 2,
+      "strand": "Algebra",
+      "prerequisites": [
+        "SAT_LINEAR_EQ"
+      ],
+      "key_prerequisites": [
+        "SAT_LINEAR_EQ"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_LINEAR_FUNC",
+      "name": "Linear Functions & Graphs",
+      "grade": 2,
+      "strand": "Algebra",
+      "prerequisites": [
+        "SAT_LINEAR_2V"
+      ],
+      "key_prerequisites": [
+        "SAT_LINEAR_2V"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_SYSTEMS",
+      "name": "Systems of Linear Equations",
+      "grade": 2,
+      "strand": "Algebra",
+      "prerequisites": [
+        "SAT_LINEAR_2V"
+      ],
+      "key_prerequisites": [
+        "SAT_LINEAR_2V"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_INEQUALITIES",
+      "name": "Linear Inequalities",
+      "grade": 2,
+      "strand": "Algebra",
+      "prerequisites": [
+        "SAT_LINEAR_EQ"
+      ],
+      "key_prerequisites": [
+        "SAT_LINEAR_EQ"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_PERCENT_CHANGE",
+      "name": "Percent Change",
+      "grade": 2,
+      "strand": "Problem Solving & Data Analysis",
+      "prerequisites": [
+        "SAT_PERCENT"
+      ],
+      "key_prerequisites": [
+        "SAT_PERCENT"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_STATISTICS",
+      "name": "Mean, Median, Mode & Range",
+      "grade": 2,
+      "strand": "Problem Solving & Data Analysis",
+      "prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "key_prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_PROBABILITY",
+      "name": "Probability",
+      "grade": 2,
+      "strand": "Problem Solving & Data Analysis",
+      "prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "key_prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_SCATTER",
+      "name": "Scatterplots & Models",
+      "grade": 3,
+      "strand": "Problem Solving & Data Analysis",
+      "prerequisites": [
+        "SAT_LINEAR_FUNC",
+        "SAT_STATISTICS"
+      ],
+      "key_prerequisites": [
+        "SAT_LINEAR_FUNC",
+        "SAT_STATISTICS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_EXPONENTS",
+      "name": "Exponents & Radicals",
+      "grade": 3,
+      "strand": "Advanced Math",
+      "prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "key_prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_EQUIV_EXPR",
+      "name": "Equivalent Expressions (Expand/Simplify)",
+      "grade": 3,
+      "strand": "Advanced Math",
+      "prerequisites": [
+        "SAT_LINEAR_EQ"
+      ],
+      "key_prerequisites": [
+        "SAT_LINEAR_EQ"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_FACTOR",
+      "name": "Factoring Quadratics",
+      "grade": 3,
+      "strand": "Advanced Math",
+      "prerequisites": [
+        "SAT_EQUIV_EXPR"
+      ],
+      "key_prerequisites": [
+        "SAT_EQUIV_EXPR"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_QUADRATICS",
+      "name": "Quadratic Equations",
+      "grade": 3,
+      "strand": "Advanced Math",
+      "prerequisites": [
+        "SAT_FACTOR"
+      ],
+      "key_prerequisites": [
+        "SAT_FACTOR"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_QUAD_FORMULA",
+      "name": "The Quadratic Formula",
+      "grade": 4,
+      "strand": "Advanced Math",
+      "prerequisites": [
+        "SAT_QUADRATICS"
+      ],
+      "key_prerequisites": [
+        "SAT_QUADRATICS"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_NONLINEAR",
+      "name": "Nonlinear Functions & Graphs",
+      "grade": 4,
+      "strand": "Advanced Math",
+      "prerequisites": [
+        "SAT_QUADRATICS",
+        "SAT_LINEAR_FUNC"
+      ],
+      "key_prerequisites": [
+        "SAT_QUADRATICS",
+        "SAT_LINEAR_FUNC"
+      ],
+      "encompassings": [],
+      "weight": 6,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_ANGLES",
+      "name": "Lines, Angles & Triangles",
+      "grade": 2,
+      "strand": "Geometry & Trigonometry",
+      "prerequisites": [
+        "SAT_LINEAR_EQ"
+      ],
+      "key_prerequisites": [
+        "SAT_LINEAR_EQ"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_AREA_VOLUME",
+      "name": "Area & Volume",
+      "grade": 2,
+      "strand": "Geometry & Trigonometry",
+      "prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "key_prerequisites": [
+        "SAT_ARITHMETIC"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_PYTHAGORAS",
+      "name": "Pythagorean Theorem",
+      "grade": 3,
+      "strand": "Geometry & Trigonometry",
+      "prerequisites": [
+        "SAT_EXPONENTS",
+        "SAT_ANGLES"
+      ],
+      "key_prerequisites": [
+        "SAT_EXPONENTS",
+        "SAT_ANGLES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": true,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_TRIG",
+      "name": "Right-Triangle Trigonometry",
+      "grade": 3,
+      "strand": "Geometry & Trigonometry",
+      "prerequisites": [
+        "SAT_PYTHAGORAS",
+        "SAT_RATIOS"
+      ],
+      "key_prerequisites": [
+        "SAT_PYTHAGORAS",
+        "SAT_RATIOS"
+      ],
+      "encompassings": [],
+      "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_CIRCLES",
+      "name": "Circles",
+      "grade": 3,
+      "strand": "Geometry & Trigonometry",
+      "prerequisites": [
+        "SAT_AREA_VOLUME",
+        "SAT_ANGLES"
+      ],
+      "key_prerequisites": [
+        "SAT_AREA_VOLUME",
+        "SAT_ANGLES"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "SAT_SIMILAR",
+      "name": "Similar Triangles",
+      "grade": 3,
+      "strand": "Geometry & Trigonometry",
+      "prerequisites": [
+        "SAT_ANGLES",
+        "SAT_RATIOS"
+      ],
+      "key_prerequisites": [
+        "SAT_ANGLES",
+        "SAT_RATIOS"
+      ],
+      "encompassings": [],
+      "weight": 4,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    }
+  ]
+}

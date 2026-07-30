@@ -3,6 +3,11 @@ name: Deploy to Hostinger
 # Builds the React app and publishes dist/ to Hostinger over FTP.
 # Runs automatically on every push to main, and can be run manually
 # from the Actions tab ("Run workflow").
+#
+# The FTP upload gets TWO attempts: Hostinger's FTP occasionally drops the
+# control socket (transient "Timeout (control socket)", seen 2026-07-19),
+# and a 60s pause + retry beats emailing a human about a network blip.
+# The job only fails if BOTH attempts fail.
 
 on:
   push:
@@ -28,7 +33,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to Hostinger via FTP
+      - name: Deploy to Hostinger via FTP (attempt 1)
+        id: deploy1
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -36,17 +43,44 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           # The built site. Trailing slash matters.
           local-dir: ./dist/
-          # This FTP account logs in already rooted at public_html, so the
-          # web root IS the login dir. (Using ./public_html/ here nests into
-          # public_html/public_html and the live site never updates.)
+          # VERIFIED 2026-07-17: the main FTP account (u815511091.tutagora.com)
+          # logs in already rooted at public_html — the web root IS the login
+          # dir. Targeting ./public_html/ here nests into public_html/public_html
+          # and the live site never updates. (hPanel's "Folder to upload files:
+          # public_html" is generic guidance, not this account's login root.)
           server-dir: ./
           # More tolerance for slow FTP handshakes (default 30s sometimes times
           # out against Hostinger). Milliseconds.
           timeout: 120000
-          # Only the action's own files are ever removed; server-only files
-          # you uploaded by hand (e.g. logo.png) are left untouched.
-          # Brand assets live on the server, not in the repo — never overwrite
-          # them with the repo's placeholder versions.
+          # The repo is the source of truth for brand assets: public/logo.png
+          # etc. are committed and copied into dist/ by the build, so the deploy
+          # must SHIP them. (A hand-uploaded server copy of logo.png had gone
+          # corrupt — 422 "Invalid source image" — while excluded from deploy;
+          # un-excluding it lets the good repo version overwrite the bad one.)
+          # favicon.svg and og-image.png are known-good on the server already.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.DS_Store
+
+      - name: Pause before retry
+        if: steps.deploy1.outcome == 'failure'
+        run: |
+          echo "First FTP attempt failed (usually a transient Hostinger socket timeout). Waiting 60s, then retrying…"
+          sleep 60
+
+      - name: Deploy to Hostinger via FTP (attempt 2)
+        id: deploy2
+        if: steps.deploy1.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ./
+          timeout: 120000
           exclude: |
             **/.git*
             **/.git*/**
@@ -58,3 +92,15 @@ jobs:
             **/logo.png
             **/logo-*.png
             **/og-image.png
+
+      - name: Deploy result
+        if: always()
+        run: |
+          if [ "${{ steps.deploy1.outcome }}" = "success" ]; then
+            echo "Deployed on the first attempt."
+          elif [ "${{ steps.deploy2.outcome }}" = "success" ]; then
+            echo "Deployed on the retry (first attempt hit a transient FTP error)."
+          else
+            echo "Both FTP attempts failed — this is a real problem (credentials or Hostinger outage)."
+            exit 1
+          fi

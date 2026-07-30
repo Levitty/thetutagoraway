@@ -605,8 +605,8 @@ export const MEASUREMENT_CONTENT = {
   G7_VOLUME_CUBOID:   withWorkedExample(buildCuboidVolume),
   G7_VOLUME_CYLINDER: withWorkedExample(buildCylinderVolume),
   G7_SPEED:           withWorkedExample(buildSpeed),
-  G7_TEMPERATURE_READ:   withWorkedExample(buildTemperatureRead),
-  G7_TEMPERATURE_CHANGE: withWorkedExample(buildTemperatureChange),
+  // Main's graph models temperature as ONE skill — mix reading/units with change.
+  G7_TEMPERATURE:     withWorkedExample(() => Math.random() < 0.45 ? buildTemperatureRead() : buildTemperatureChange()),
   G8_DENSITY:         withWorkedExample(buildDensity),
   G9_ROUNDING:        withWorkedExample(buildRounding),
   G9_ERRORS:          withWorkedExample(buildErrors),

@@ -6,6 +6,7 @@
 
 import { SKILLS } from './knowledgeGraph.js';
 import { STRUCTURED_CONTENT } from './content/index.js';
+import { PRIMARY_ALIAS } from './content/primary.js';
 
 // Structured, pedagogically-complete content (worked example + scaffolded steps
 // + hint ladder + misconception feedback + verified answers) lives in
@@ -63,13 +64,13 @@ const generators = {
   G5_ADDITION: () => {
     const a = rand(100, 999), b = rand(100, 999);
     return { question: `${a} + ${b} = ?`, answer: (a + b).toString(),
-      workedExample: makeWorkedExample('234 + 567 = ?', ['Line up the digits by place value', '4 + 7 = 11, write 1 carry 1', '3 + 6 + 1 = 10, write 0 carry 1', '2 + 5 + 1 = 8'], '801') };
+      workedExample: makeWorkedExample('234 + 567 = ?', ['Line up the digits by place value', '4 + 7 = 11, write 1 carry 1', '3 + 6 + 1 = 10, write 0 carry 1', '2 + 5 + 1 = 8', 'Read the digits: 234 + 567 = 801'], '801') };
   },
 
   G5_SUBTRACTION: () => {
     const a = rand(200, 999), b = rand(100, a - 1);
     return { question: `${a} - ${b} = ?`, answer: (a - b).toString(),
-      workedExample: makeWorkedExample('543 - 278 = ?', ['Line up digits. Start from ones: 3 - 8, need to borrow', '13 - 8 = 5', '3 (was 4, borrowed 1) - 7, borrow again: 13 - 7 = 6', '4 (was 5, borrowed 1) - 2 = 2'], '265') };
+      workedExample: makeWorkedExample('543 - 278 = ?', ['Line up digits. Start from ones: 3 - 8, need to borrow', '13 - 8 = 5', '3 (was 4, borrowed 1) - 7, borrow again: 13 - 7 = 6', '4 (was 5, borrowed 1) - 2 = 2', 'Read the digits: 543 - 278 = 265'], '265') };
   },
 
   G5_MULTIPLICATION: () => {
@@ -237,7 +238,8 @@ const generators = {
     let h2 = h1 + durH, m2 = m1 + durM;
     if (m2 >= 60) { h2++; m2 -= 60; }
     return { question: `A lesson starts at ${h1}:${m1.toString().padStart(2, '0')} and lasts ${durH} hour${durH > 1 ? 's' : ''}${durM > 0 ? ` ${durM} minutes` : ''}. When does it end?`,
-      answer: `${h2}:${m2.toString().padStart(2, '0')}`, accepts: [`${h2}:${m2.toString().padStart(2, '0')}`, `${h2 > 12 ? h2 - 12 : h2}:${m2.toString().padStart(2, '0')}`] };
+      answer: `${h2}:${m2.toString().padStart(2, '0')}`, accepts: [`${h2}:${m2.toString().padStart(2, '0')}`, `${h2 > 12 ? h2 - 12 : h2}:${m2.toString().padStart(2, '0')}`],
+      hint: `Add the hours first (${h1} + ${durH}), then add the minutes${durM ? ` (${m1} + ${durM})` : ''} — if minutes reach 60, that's one more hour.` };
   },
 
   G5_PERIMETER_INTRO: () => {
@@ -257,18 +259,21 @@ const generators = {
     const items = ['apples', 'bananas', 'oranges', 'mangoes'];
     const counts = items.map(() => rand(3, 15));
     const ask = rand(0, items.length - 1);
-    return { question: `In a survey: ${items.map((it, i) => `${it}: ${counts[i]}`).join(', ')}. How many ${items[ask]} were counted?`, answer: counts[ask].toString() };
+    return { question: `In a survey: ${items.map((it, i) => `${it}: ${counts[i]}`).join(', ')}. How many ${items[ask]} were counted?`, answer: counts[ask].toString(),
+      hint: `Find "${items[ask]}" in the list and read the number right after it.` };
   },
 
   G5_BAR_GRAPHS: () => {
     const a = rand(10, 30), b = rand(10, 30), c = rand(10, 30);
-    return { question: `A bar graph shows: Mon=${a}, Tue=${b}, Wed=${c} visitors. What is the total?`, answer: (a + b + c).toString() };
+    return { question: `A bar graph shows: Mon=${a}, Tue=${b}, Wed=${c} visitors. What is the total?`, answer: (a + b + c).toString(),
+      hint: `Total means add all three bars: ${a} + ${b} + ${c}.` };
   },
 
   G5_PICTOGRAPHS: () => {
     const val = pick([2, 5, 10]);
     const symbols = rand(3, 8);
-    return { question: `In a pictograph, each symbol = ${val} items. If there are ${symbols} symbols, how many items?`, answer: (val * symbols).toString() };
+    return { question: `In a pictograph, each symbol = ${val} items. If there are ${symbols} symbols, how many items?`, answer: (val * symbols).toString(),
+      hint: `Each symbol stands for ${val}, so multiply: ${symbols} × ${val}.` };
   },
 
   // ======================== GRADE 6 ========================
@@ -387,7 +392,8 @@ const generators = {
 
   G6_SQUARES: () => {
     const n = rand(2, 12);
-    return { question: `${n}² = ?`, answer: (n * n).toString() };
+    return { question: `${n}² = ?`, answer: (n * n).toString(),
+      hint: `Squaring means multiplying a number by itself: ${n} × ${n}.` };
   },
 
   G6_PATTERNS: () => {
@@ -399,14 +405,15 @@ const generators = {
   G6_SIMPLE_EQUATIONS: () => {
     const x = rand(2, 15), a = rand(2, 10);
     const type = rand(0, 1);
-    if (type === 0) return { question: `x + ${a} = ${x + a}. Find x.`, answer: x.toString() };
-    return { question: `x - ${a} = ${x - a}. Find x.`, answer: x.toString() };
+    if (type === 0) return { question: `x + ${a} = ${x + a}. Find x.`, answer: x.toString(), hint: `Undo the +${a}: subtract ${a} from both sides.` };
+    return { question: `x - ${a} = ${x - a}. Find x.`, answer: x.toString(), hint: `Undo the -${a}: add ${a} to both sides.` };
   },
 
   G6_ANGLE_MEASURE: () => {
     const angle = rand(20, 160);
     const type = angle < 90 ? 'acute' : angle === 90 ? 'right' : 'obtuse';
-    return { question: `An angle measures ${angle}°. Is it acute, right, or obtuse?`, answer: type };
+    return { question: `An angle measures ${angle}°. Is it acute, right, or obtuse?`, answer: type,
+      hint: 'Acute is less than 90°, right is exactly 90°, obtuse is more than 90°.' };
   },
 
   G6_ANGLE_PROPERTIES: () => {
@@ -425,7 +432,8 @@ const generators = {
   G6_SYMMETRY: () => {
     const shapes = [{ s: 'square', l: 4 }, { s: 'equilateral triangle', l: 3 }, { s: 'rectangle', l: 2 }, { s: 'circle', l: 'infinite' }, { s: 'isosceles triangle', l: 1 }];
     const shape = pick(shapes);
-    return { question: `How many lines of symmetry does a ${shape.s} have?`, answer: shape.l.toString() };
+    return { question: `How many lines of symmetry does a ${shape.s} have?`, answer: shape.l.toString(),
+      hint: 'A line of symmetry folds the shape onto itself exactly. Try folding it in your head — count every fold that works.' };
   },
 
   G6_PERIMETER: () => {
@@ -452,12 +460,12 @@ const generators = {
 
   G6_UNIT_CONVERSIONS: () => {
     const convs = [
-      () => { const v = roundTo(rand(1, 10) + rand(1, 9) / 10, 1); return { q: `Convert ${v} km to meters`, a: (v * 1000).toString() }; },
-      () => { const v = rand(100, 9000); return { q: `Convert ${v} g to kg`, a: (v / 1000).toString() }; },
-      () => { const v = rand(100, 5000); return { q: `Convert ${v} ml to litres`, a: (v / 1000).toString() }; },
+      () => { const v = roundTo(rand(1, 10) + rand(1, 9) / 10, 1); return { q: `Convert ${v} km to meters`, a: (v * 1000).toString(), h: '1 km = 1000 m, so multiply by 1000.' }; },
+      () => { const v = rand(100, 9000); return { q: `Convert ${v} g to kg`, a: (v / 1000).toString(), h: '1000 g = 1 kg, so divide by 1000.' }; },
+      () => { const v = rand(100, 5000); return { q: `Convert ${v} ml to litres`, a: (v / 1000).toString(), h: '1000 ml = 1 litre, so divide by 1000.' }; },
     ];
     const c = pick(convs)();
-    return { question: c.q, answer: c.a };
+    return { question: c.q, answer: c.a, hint: c.h };
   },
 
   G6_MEAN: () => {
@@ -478,7 +486,8 @@ const generators = {
   G6_DATA_COLLECTION: () => {
     const total = rand(30, 50), cat1 = rand(5, 15), cat2 = rand(5, 15);
     const cat3 = total - cat1 - cat2;
-    return { question: `Survey of ${total} students: football=${cat1}, basketball=${cat2}, volleyball=? Find volleyball.`, answer: cat3.toString() };
+    return { question: `Survey of ${total} students: football=${cat1}, basketball=${cat2}, volleyball=? Find volleyball.`, answer: cat3.toString(),
+      hint: `All three groups add up to ${total}. Add the two you know (${cat1} + ${cat2}), then subtract from ${total}.` };
   },
 
   // ======================== GRADE 7 ========================
@@ -487,7 +496,8 @@ const generators = {
     const num = rand(100000000, 999999999);
     const pos = pick(['hundred millions', 'ten millions']);
     const mult = pos === 'hundred millions' ? 100000000 : 10000000;
-    return { question: `What digit is in the ${pos} place of ${num.toLocaleString()}?`, answer: (Math.floor(num / mult) % 10).toString() };
+    return { question: `What digit is in the ${pos} place of ${num.toLocaleString()}?`, answer: (Math.floor(num / mult) % 10).toString(),
+      hint: 'Write out the place names from the right: ones, tens, hundreds, thousands… and count carefully to the place asked for.' };
   },
 
   G7_BODMAS_ADV: () => {
@@ -523,6 +533,7 @@ const generators = {
     const n = pick(nums);
     const f = primeFactorize(n);
     return { question: `Write ${n} as a product of prime factors`, answer: f.join('×'),
+      hint: `Keep dividing ${n} by the smallest prime that fits (2, then 3, then 5…) until you reach 1.`,
       accepts: [f.join('×'), f.join('*'), f.join(' × '), f.join(' x ')],
       workedExample: makeWorkedExample('Prime factorization of 60', ['60 ÷ 2 = 30', '30 ÷ 2 = 15', '15 ÷ 3 = 5', '5 is prime'], '2×2×3×5') };
   },
@@ -554,7 +565,8 @@ const generators = {
     const n1 = rand(1, d1 - 1), n2 = rand(1, d2 - 1);
     const cd = lcm(d1, d2);
     const sum = n1 * (cd / d1) + n2 * (cd / d2);
-    return { question: `${n1}/${d1} + ${n2}/${d2} = ?`, answer: formatFraction(sum, cd) };
+    return { question: `${n1}/${d1} + ${n2}/${d2} = ?`, answer: formatFraction(sum, cd),
+      hint: `The denominators are different — find a common one first (${cd} works for ${d1} and ${d2}), convert both fractions, then add the tops.` };
   },
 
   G7_FRACTIONS_MUL: () => {
@@ -579,7 +591,8 @@ const generators = {
     const pos = pick(['tenths', 'hundredths']);
     const str = num.toFixed(2);
     const digit = pos === 'tenths' ? str.split('.')[1][0] : str.split('.')[1][1];
-    return { question: `What is the ${pos} digit of ${str}?`, answer: digit };
+    return { question: `What is the ${pos} digit of ${str}?`, answer: digit,
+      hint: 'After the decimal point the places are: tenths first, then hundredths.' };
   },
 
   G7_DECIMALS_MUL: () => {
@@ -594,7 +607,8 @@ const generators = {
 
   G7_SQUARES_EXT: () => {
     const n = rand(2, 20);
-    return { question: `${n}² = ?`, answer: (n * n).toString() };
+    return { question: `${n}² = ?`, answer: (n * n).toString(),
+      hint: `Squaring means multiplying a number by itself: ${n} × ${n}.` };
   },
 
   G7_SQUARE_ROOTS: () => {
@@ -665,12 +679,12 @@ const generators = {
 
   G7_LENGTH_CONV: () => {
     const convs = [
-      { q: 'How many cm in 2.5 m?', a: '250' },
-      { q: 'How many m in 450 cm?', a: '4.5' },
-      { q: 'How many km in 3500 m?', a: '3.5' },
+      { q: 'How many cm in 2.5 m?', a: '250', h: '1 m = 100 cm, so multiply by 100.' },
+      { q: 'How many m in 450 cm?', a: '4.5', h: '100 cm = 1 m, so divide by 100.' },
+      { q: 'How many km in 3500 m?', a: '3.5', h: '1000 m = 1 km, so divide by 1000.' },
     ];
     const c = pick(convs);
-    return { question: c.q, answer: c.a };
+    return { question: c.q, answer: c.a, hint: c.h };
   },
 
   G7_PERIMETER: () => {
@@ -730,7 +744,8 @@ const generators = {
     const vals = Array.from({ length: 4 }, () => rand(10, 50));
     const total = vals.reduce((s, v) => s + v, 0);
     const labels = ['Mon', 'Tue', 'Wed', 'Thu'];
-    return { question: `Bar graph shows: ${labels.map((l, i) => `${l}=${vals[i]}`).join(', ')}. Total?`, answer: total.toString() };
+    return { question: `Bar graph shows: ${labels.map((l, i) => `${l}=${vals[i]}`).join(', ')}. Total?`, answer: total.toString(),
+      hint: 'Total means add every bar together, one by one.' };
   },
 
   // ======================== GRADE 8 ========================
@@ -755,8 +770,8 @@ const generators = {
     const sig = roundTo(rand(10, 99) / 10, 1), exp = rand(2, 7);
     const num = sig * Math.pow(10, exp);
     return rand(0, 1)
-      ? { question: `Write ${num.toLocaleString()} in standard form`, answer: `${sig} × 10^${exp}`, accepts: [`${sig} × 10^${exp}`, `${sig}×10^${exp}`, `${sig}e${exp}`] }
-      : { question: `${sig} × 10^${exp} = ?`, answer: num.toString() };
+      ? { question: `Write ${num.toLocaleString()} in standard form`, answer: `${sig} × 10^${exp}`, accepts: [`${sig} × 10^${exp}`, `${sig}×10^${exp}`, `${sig}e${exp}`], hint: 'Move the decimal point until one digit is left of it — the number of moves is the power of 10.' }
+      : { question: `${sig} × 10^${exp} = ?`, answer: num.toString(), hint: `10^${exp} means move the decimal point ${exp} places to the right.` };
   },
 
   G8_CUBES_CUBE_ROOTS: () => {
@@ -768,7 +783,8 @@ const generators = {
 
   G8_RATIO_PROPORTION: () => {
     const a = rand(2, 6), b = rand(2, 6), total = (a + b) * rand(3, 8);
-    return { question: `Divide ${total} in the ratio ${a}:${b}. Find the larger part.`, answer: (Math.max(a, b) / (a + b) * total).toString() };
+    return { question: `Divide ${total} in the ratio ${a}:${b}. Find the larger part.`, answer: (Math.max(a, b) / (a + b) * total).toString(),
+      hint: `The ratio ${a}:${b} makes ${a + b} equal shares. One share = ${total} ÷ ${a + b}; the larger part gets ${Math.max(a, b)} shares.` };
   },
 
   G8_PERCENTAGE_CHANGE: () => {
@@ -796,6 +812,7 @@ const generators = {
   G8_NUMBER_BASES: () => {
     const n = rand(2, 15);
     return { question: `Convert ${n} (base 10) to binary`, answer: n.toString(2),
+      hint: `Divide ${n} by 2 again and again, keeping each remainder — then read the remainders from bottom to top.`,
       workedExample: makeWorkedExample('Convert 13 to binary', ['13 ÷ 2 = 6 remainder 1', '6 ÷ 2 = 3 remainder 0', '3 ÷ 2 = 1 remainder 1', '1 ÷ 2 = 0 remainder 1', 'Read remainders upward: 1101'], '1101') };
   },
 
@@ -832,7 +849,8 @@ const generators = {
 
   G8_INEQUALITIES: () => {
     const a = rand(2, 5), b = rand(2, 15), bound = rand(3, 10);
-    return { question: `Solve: ${a}x - ${b} < ${a * bound - b}`, answer: `x < ${bound}`, accepts: [`x < ${bound}`, `x<${bound}`] };
+    return { question: `Solve: ${a}x - ${b} < ${a * bound - b}`, answer: `x < ${bound}`, accepts: [`x < ${bound}`, `x<${bound}`],
+      hint: `Treat it like an equation: add ${b} to both sides, then divide by ${a}. The < sign stays the same (dividing by a positive number).` };
   },
 
   G8_SEQUENCES: () => {
@@ -915,7 +933,8 @@ const generators = {
 
   G8_VOLUME_ADV: () => {
     const r = rand(2, 6), h = rand(5, 12);
-    return { question: `Volume of a cylinder: r=${r} cm, h=${h} cm? (π=3.14)`, answer: roundTo(3.14 * r * r * h, 2).toString() };
+    return { question: `Volume of a cylinder: r=${r} cm, h=${h} cm? (π=3.14)`, answer: roundTo(3.14 * r * r * h, 2).toString(),
+      hint: `V = π × r² × h — square the radius first (${r} × ${r}), then multiply by π and the height.` };
   },
 
   G8_DENSITY: () => {
@@ -939,7 +958,8 @@ const generators = {
   G8_CUMULATIVE_FREQ: () => {
     const freqs = [rand(3, 8), rand(5, 12), rand(8, 15), rand(4, 10), rand(2, 7)];
     const cumFreqs = freqs.reduce((acc, f) => { acc.push((acc.length ? acc[acc.length - 1] : 0) + f); return acc; }, []);
-    return { question: `Frequencies: ${freqs.join(', ')}. What is the total cumulative frequency?`, answer: cumFreqs[cumFreqs.length - 1].toString() };
+    return { question: `Frequencies: ${freqs.join(', ')}. What is the total cumulative frequency?`, answer: cumFreqs[cumFreqs.length - 1].toString(),
+      hint: 'Cumulative frequency keeps a running total — the final one is simply all the frequencies added together.' };
   },
 
   // ======================== GRADE 9 ========================
@@ -977,7 +997,8 @@ const generators = {
   G9_COMMERCIAL_ARITH: () => {
     const salary = rand(30, 80) * 1000, taxRate = pick([10, 15, 20, 25]);
     const tax = salary * taxRate / 100;
-    return { question: `Monthly salary: KSh ${salary.toLocaleString()}. Tax rate: ${taxRate}%. Find tax amount.`, answer: tax.toString() };
+    return { question: `Monthly salary: KSh ${salary.toLocaleString()}. Tax rate: ${taxRate}%. Find tax amount.`, answer: tax.toString(),
+      hint: `${taxRate}% means ${taxRate} out of every 100 — multiply the salary by ${taxRate}, then divide by 100.` };
   },
 
   G9_QUADRATIC_EXPAND: () => {
@@ -1021,6 +1042,7 @@ const generators = {
   G9_SIMULTANEOUS_ADV: () => {
     const x = rand(1, 5), y = rand(1, 5);
     return { question: `Solve: x + y = ${x + y}, x² + y² = ${x * x + y * y}`, answer: `x=${x}, y=${y}`,
+      hint: `From the first equation y = ${x + y} − x. Substitute that into the second and solve the quadratic.`,
       accepts: [`x=${x}, y=${y}`, `x=${y}, y=${x}`, `(${x},${y})`, `(${y},${x})`] };
   },
 
@@ -1046,11 +1068,13 @@ const generators = {
   G9_CONSTRUCTION: () => {
     const angle = pick([60, 90, 120]);
     return { question: `What compass construction gives you a ${angle}° angle?`, answer: angle === 60 ? 'equilateral triangle construction' : angle === 90 ? 'perpendicular bisector' : 'two 60° angles',
+      hint: '60° comes from an equilateral triangle (all arcs equal), 90° from a perpendicular bisector, and 120° from stacking two 60° angles.',
       accepts: ['equilateral triangle construction', 'perpendicular bisector', 'two 60° angles', 'equilateral triangle', 'perpendicular'] };
   },
 
   G9_LOCI: () => {
     return { question: `The locus of points equidistant from two fixed points is a...?`, answer: 'perpendicular bisector',
+      hint: 'Picture every point that is the same distance from both points — they line up along the cut exactly halfway between them, at right angles.',
       accepts: ['perpendicular bisector', 'line'] };
   },
 
@@ -1116,7 +1140,8 @@ const generators = {
     const intervals = ['0-10', '10-20', '20-30', '30-40'];
     const freqs = intervals.map(() => rand(3, 12));
     const total = freqs.reduce((s, f) => s + f, 0);
-    return { question: `Grouped data frequencies: ${intervals.map((iv, i) => `${iv}: ${freqs[i]}`).join(', ')}. Total frequency?`, answer: total.toString() };
+    return { question: `Grouped data frequencies: ${intervals.map((iv, i) => `${iv}: ${freqs[i]}`).join(', ')}. Total frequency?`, answer: total.toString(),
+      hint: 'Total frequency = add the frequency of every interval.' };
   },
 
   G9_PROBABILITY_ADV: () => {
@@ -1128,8 +1153,8 @@ const generators = {
 
   G9_SCATTER_PLOTS: () => {
     return pick([
-      { question: 'Temperature increases, ice cream sales increase. What type of correlation?', answer: 'positive', accepts: ['positive', 'positive correlation'] },
-      { question: 'Hours of study increases, test errors decrease. What type of correlation?', answer: 'negative', accepts: ['negative', 'negative correlation'] },
+      { question: 'Temperature increases, ice cream sales increase. What type of correlation?', answer: 'positive', accepts: ['positive', 'positive correlation'], hint: 'Both go UP together → positive. One goes up while the other goes down → negative.' },
+      { question: 'Hours of study increases, test errors decrease. What type of correlation?', answer: 'negative', accepts: ['negative', 'negative correlation'], hint: 'Both go UP together → positive. One goes up while the other goes down → negative.' },
     ]);
   },
 
@@ -1233,8 +1258,8 @@ const generators = {
   G10_TRIG_EQUATIONS: () => {
     const vals = [{ sin: 0.5, angle: 30 }, { sin: 0.866, angle: 60 }, { cos: 0.5, angle: 60 }];
     const v = pick(vals);
-    if (v.sin !== undefined) return { question: `Solve sin(θ) = ${v.sin} for 0° ≤ θ ≤ 180°`, answer: `${v.angle}° and ${180 - v.angle}°` };
-    return { question: `Solve cos(θ) = ${v.cos} for 0° ≤ θ ≤ 360°`, answer: `${v.angle}° and ${360 - v.angle}°` };
+    if (v.sin !== undefined) return { question: `Solve sin(θ) = ${v.sin} for 0° ≤ θ ≤ 180°`, answer: `${v.angle}° and ${180 - v.angle}°`, hint: 'Find the first angle from the sine table, then use sin(180° − θ) = sin(θ) for the second.' };
+    return { question: `Solve cos(θ) = ${v.cos} for 0° ≤ θ ≤ 360°`, answer: `${v.angle}° and ${360 - v.angle}°`, hint: 'Find the first angle from the cosine table, then use cos(360° − θ) = cos(θ) for the second.' };
   },
 
   G10_SINE_COSINE_RULE: () => {
@@ -1262,6 +1287,7 @@ const generators = {
   G10_VECTORS_OPS: () => {
     const x1 = rand(-5, 5), y1 = rand(-5, 5), x2 = rand(-5, 5), y2 = rand(-5, 5);
     return { question: `(${x1}, ${y1}) + (${x2}, ${y2}) = ?`, answer: `(${x1 + x2}, ${y1 + y2})`,
+      hint: `Add the matching parts separately: x with x (${x1} + ${x2}), then y with y (${y1} + ${y2}).`,
       accepts: [`(${x1 + x2}, ${y1 + y2})`, `(${x1 + x2},${y1 + y2})`] };
   },
 
@@ -1299,7 +1325,8 @@ const generators = {
   G11_MATRICES_OPS: () => {
     const a = rand(1, 5), b = rand(1, 5), c = rand(1, 5), d = rand(1, 5);
     const e = rand(1, 5), f = rand(1, 5), g = rand(1, 5), h = rand(1, 5);
-    return { question: `[${a} ${b}; ${c} ${d}] + [${e} ${f}; ${g} ${h}] = ?`, answer: `[${a + e} ${b + f}; ${c + g} ${d + h}]` };
+    return { question: `[${a} ${b}; ${c} ${d}] + [${e} ${f}; ${g} ${h}] = ?`, answer: `[${a + e} ${b + f}; ${c + g} ${d + h}]`,
+      hint: 'Add each position to its matching position: top-left with top-left, top-right with top-right, and so on.' };
   },
 
   G11_MATRICES_INVERSE: () => {
@@ -1515,7 +1542,16 @@ const generators = {
 
 // ==================== MAIN EXPORT ====================
 
+// How many ordered knowledge points a skill's content ladders through (1 if it
+// isn't a withKPs ladder). Lets the lesson loop climb KP0 → KP1 → … in order.
+export const kpCount = (skillId) => {
+  const id = PRIMARY_ALIAS[skillId] || skillId;
+  return STRUCTURED_CONTENT[id]?.kpCount || 1;
+};
+
 export const generateProblem = (skillId, opts = {}) => {
+  // Lower-primary (Grade 1–4) skills reuse an equivalent skill's content.
+  if (PRIMARY_ALIAS[skillId]) skillId = PRIMARY_ALIAS[skillId];
   // Prefer authored structured content when present. `opts.level` lets the
   // lesson request a concrete/pictorial representation (modality escalation).
   const structured = STRUCTURED_CONTENT[skillId];

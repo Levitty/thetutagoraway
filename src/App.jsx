@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { supabase } from './supabase';
 import { captureReferralFromURL, getStoredReferralCode, clearStoredReferralCode, referralLink, referralCodeFor, myReferralStats, shareOnWhatsApp, shareMessages } from './growth.js';
 import { VideoRoom } from './VideoRoom';
+import { INTEREST_CATEGORIES, CATEGORY_BY_KEY, categoryLabel, categoryEmoji } from './groupClassCategories.js';
 import { PaymentModal } from './PaymentModal';
 import { initiatePaystackPayment } from './paystack';
 import { Messaging, MessageButton, startConversation } from './Messaging';
@@ -9,9 +10,12 @@ import { AIMastery } from './ai-tutor/AIMastery.jsx';
 import { getLevel } from './ai-tutor/adaptiveEngine.js';
 import { todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP } from './ai-tutor/gamification.js';
 import { TeacherDashboard } from './ai-tutor/TeacherDashboard.jsx';
+import SchoolsPage from './SchoolsPage.jsx';
+import ClubsPage from './ClubsPage.jsx';
 import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
+import horebGraph from './horebGraph.json';
 
 // ============ ERROR BOUNDARY ============
 // Without this, ANY uncaught render error anywhere in the tree unmounts the
@@ -166,6 +170,22 @@ const Stars = ({ rating, size = 14 }) => (
 const initialsAvatar = (name, opts = '') =>
   `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'U')}&background=10b981&color=fff${opts}`;
 
+// grade_levels reached the DB in three shapes over time: a real array, a
+// JSON-stringified array ('["Grade 2","Grade 3"]'), or a plain comma string.
+// Normalize all of them to a clean array so chips and filters never show raw JSON.
+const gradeList = (g) => {
+  if (!g) return [];
+  if (Array.isArray(g)) return g;
+  if (typeof g === 'string') {
+    try {
+      const parsed = JSON.parse(g);
+      if (Array.isArray(parsed)) return parsed;
+    } catch { /* not JSON — fall through */ }
+    return g.split(',').map(s => s.replace(/[[\]"]/g, '').trim()).filter(Boolean);
+  }
+  return [g];
+};
+
 const Avatar = ({ src, name, size = 40 }) => (
   <img
     src={src || initialsAvatar(name)}
@@ -189,7 +209,7 @@ const PrivacyPolicyPage = ({ onBack }) => (
         <section>
           <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">1. Data Controller</h2>
           <p>Tutagora Ltd ("Tutagora", "we", "us") is the data controller responsible for your personal data. We are registered in Kenya and operate the platform at tutagora.com.</p>
-          <p><strong>Contact:</strong> levitty@tutagora.com | +254 742 410 255 | Nairobi, Kenya</p>
+          <p><strong>Contact:</strong> tutaeducators@gmail.com | +254 759 240 692 | Nairobi, Kenya</p>
         </section>
 
         <section>
@@ -611,7 +631,7 @@ const useBookings = (userId, role, tutorId = null) => {
     setLoading(false);
   };
 
-  const createBooking = async (tutorId, subject, date, time) => {
+  const createBooking = async (tutorId, subject, date, time, context = {}) => {
     // First create the booking
     const { data, error } = await supabase.from('bookings').insert({
       student_id: userId,
@@ -619,7 +639,11 @@ const useBookings = (userId, role, tutorId = null) => {
       subject,
       lesson_date: date,
       start_time: time,
-      status: 'pending'
+      status: 'pending',
+      learner_name: context.learner_name || null,
+      learner_grade: context.learner_grade || null,
+      focus_note: context.focus_note || null,
+      child_id: context.child_id || null,
     }).select(`*, tutors(*, profiles(full_name, email)), profiles!bookings_student_id_fkey(full_name, email)`).single();
 
     if (error) throw error;
@@ -651,10 +675,13 @@ const sendBookingNotifications = async (booking, studentId) => {
 
     // Send in-app message to tutor (emails are sent after payment confirmation in PaymentModal)
     if (tutorUserId) {
+      const learner = booking.learner_name || studentName;
+      const gradeLine = booking.learner_grade ? ` (${booking.learner_grade})` : '';
+      const focusLine = booking.focus_note ? `\n\nWhat to focus on: ${booking.focus_note}` : '';
       await supabase.from('messages').insert({
         sender_id: studentId,
         receiver_id: tutorUserId,
-        content: `New Booking\n\nHi ${tutorName.split(' ')[0]}, I've booked a ${subject} lesson with you on ${lessonDate} at ${lessonTime}.\n\nLooking forward to our session!\n\n- ${studentName}`
+        content: `New Booking\n\nHi ${tutorName.split(' ')[0]}, a ${subject} lesson is booked for ${learner}${gradeLine} on ${lessonDate} at ${lessonTime}.${focusLine}\n\nLooking forward to it!\n\n- ${studentName}`
       });
     }
 
@@ -700,6 +727,7 @@ const sendLessonStartNotification = async (booking) => {
   }
 };
 
+// ============ AUTH MODAL ============
 // Remember any referral code that brought this visitor here (runs once on load).
 captureReferralFromURL();
 
@@ -742,7 +770,6 @@ const ReferralCard = ({ profile }) => {
   );
 };
 
-// ============ AUTH MODAL ============
 const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
   const [form, setForm] = useState({ name: '', email: '', password: '', role: initialRole || 'student', refCode: getStoredReferralCode() });
   const [error, setError] = useState('');
@@ -894,7 +921,7 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
 // nudging them back into the tutor. Self-contained background so it reads on
 // both the light dashboard header and the transparent marketing nav.
 const MomentumChipView = ({ level, streak, onClick }) => (
-  <button onClick={onClick} title="Open AI Tutor" className="flex items-center gap-1.5 bg-white/90 border border-slate-200 shadow-sm rounded-full pl-2 pr-2.5 py-1 hover:bg-white transition-colors">
+  <button onClick={onClick} title="Open HOREB" className="flex items-center gap-1.5 bg-white/90 border border-slate-200 shadow-sm rounded-full pl-2 pr-2.5 py-1 hover:bg-white transition-colors">
     <span className="text-base leading-none">🧠</span>
     <span className="text-xs font-semibold text-slate-700">Lv {level}</span>
     {streak > 0 && <span className="text-xs font-semibold text-orange-500 flex items-center">🔥{streak}</span>}
@@ -919,6 +946,27 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
   const [showProgress, setShowProgress] = useState(false);
   const [payments, setPayments] = useState([]);
   const [aiProgress, setAiProgress] = useState(null);
+  const [children, setChildren] = useState([]);
+  const [newChildName, setNewChildName] = useState('');
+  const [newChildGrade, setNewChildGrade] = useState('');
+  const CHILD_GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University', 'Adult learner'];
+  const fetchChildren = useCallback(() => {
+    if (!profile?.id) return;
+    supabase.from('children').select('id, name, grade').eq('parent_id', profile.id).order('created_at')
+      .then(({ data }) => setChildren(data || []));
+  }, [profile?.id]);
+  useEffect(() => { fetchChildren(); }, [fetchChildren]);
+  const addChild = async () => {
+    if (!newChildName.trim()) return;
+    const { data } = await supabase.from('children')
+      .insert({ parent_id: profile.id, name: newChildName.trim(), grade: newChildGrade || null })
+      .select('id, name, grade').single();
+    if (data) { setChildren(prev => [...prev, data]); setNewChildName(''); setNewChildGrade(''); }
+  };
+  const removeChild = async (id) => {
+    await supabase.from('children').delete().eq('id', id);
+    setChildren(prev => prev.filter(c => c.id !== id));
+  };
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
   const past = bookings.filter(b => b.status === 'completed');
   const nextLesson = [...upcoming].sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
@@ -953,9 +1001,11 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
           </button>
           <div className="flex items-center gap-3 sm:gap-4">
             <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600 hidden sm:block">Find Tutors</button>
+            <button onClick={() => onNavigate('clubs')} className="text-sm text-slate-600 hidden sm:block">Clubs</button>
+            <button onClick={() => onNavigate('schools')} className="text-sm text-slate-600 hidden sm:block">For Schools</button>
             {aiProgress?.diagnosed
               ? <MomentumChipView level={getLevel(aiProgress.totalXP).level} streak={aiProgress.currentStreak} onClick={() => onNavigate('ai')} />
-              : <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">AI Tutor</button>}
+              : <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">HOREB</button>}
             <button onClick={() => onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium">Spreadsheet</button>
             {isAdmin && <button onClick={() => onNavigate('admin')} className="text-sm text-purple-600 font-medium">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
@@ -1030,7 +1080,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
                   <div className="text-3xl sm:text-4xl">🧠</div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="text-white font-bold text-lg">AI Math Tutor</h3>
+                      <h3 className="text-white font-bold text-lg">HOREB</h3>
                       {started && <span className="text-xs font-semibold text-amber-300 bg-amber-500/15 rounded-full px-2 py-0.5">Level {lvl}</span>}
                       {streak > 0 && <span className="text-xs font-semibold text-orange-300 flex items-center gap-0.5">🔥 {streak}d</span>}
                     </div>
@@ -1165,8 +1215,42 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
           </div>
 
           <div className="space-y-4">
+            {/* My learners — the parent's roster */}
+            <div className="bg-white rounded-xl border border-slate-200 p-4">
+              <h3 className="font-semibold text-slate-900 mb-1">My learners</h3>
+              <p className="text-xs text-slate-500 mb-3">Save who you book for — tap their name at checkout instead of retyping.</p>
+              {children.length > 0 && (
+                <div className="space-y-2 mb-3">
+                  {children.map(c => (
+                    <div key={c.id} className="flex items-center justify-between bg-slate-50 rounded-lg px-3 py-2">
+                      <div className="text-sm">
+                        <span className="font-medium text-slate-900">{c.name}</span>
+                        {c.grade && <span className="text-slate-400 ml-2">{c.grade}</span>}
+                      </div>
+                      <button onClick={() => removeChild(c.id)} aria-label={`Remove ${c.name}`}
+                        className="text-slate-300 hover:text-red-500 transition-colors">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" /></svg>
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <div className="flex gap-2">
+                <input type="text" value={newChildName} onChange={e => setNewChildName(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && addChild()} placeholder="Add a name"
+                  className="flex-1 min-w-0 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                <select value={newChildGrade} onChange={e => setNewChildGrade(e.target.value)}
+                  className="px-2 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                  <option value="">Grade</option>
+                  {CHILD_GRADES.map(g => <option key={g} value={g}>{g}</option>)}
+                </select>
+                <button onClick={addChild} disabled={!newChildName.trim()}
+                  className="px-3 py-2 bg-emerald-500 hover:bg-emerald-600 disabled:bg-slate-200 disabled:text-slate-400 text-white text-sm font-medium rounded-lg transition-colors">Add</button>
+              </div>
+            </div>
+
             {/* Referral Card — tracked codes; a referral counts once the friend
-                completes the diagnostic (see supabase/migrations/20260729_referrals.sql) */}
+                completes the diagnostic (supabase/migrations/20260729_referrals.sql) */}
             <ReferralCard profile={profile} />
 
             <div className="bg-white rounded-xl border border-slate-200 p-4">
@@ -1592,11 +1676,41 @@ const TutorOnboarding = ({ profile, onComplete }) => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
+  // Downscale big phone photos before upload. A modern phone camera shot is
+  // often 5–12 MB — enough to hit the storage size limit or time out on mobile
+  // data, which is exactly how a tutor gets stuck "unable to upload". We resize
+  // to a legible max dimension and re-encode as JPEG. PDFs and anything the
+  // browser can't decode (e.g. some HEICs) pass through untouched.
+  const compressImage = (file, maxDim = 1800, quality = 0.82) => new Promise((resolve) => {
+    if (!file || !file.type?.startsWith('image/')) { resolve(file); return; }
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      const scale = Math.min(1, maxDim / Math.max(img.width, img.height));
+      if (scale === 1 && file.size < 1_500_000) { resolve(file); return; }
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(img.width * scale);
+      canvas.height = Math.round(img.height * scale);
+      canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+      canvas.toBlob(
+        (blob) => resolve(blob ? new File([blob], file.name.replace(/\.[^.]+$/, '.jpg'), { type: 'image/jpeg' }) : file),
+        'image/jpeg', quality,
+      );
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); resolve(file); };
+    img.src = url;
+  });
+
   const uploadFile = async (file, folder) => {
-    const ext = file.name.split('.').pop();
+    const compressed = await compressImage(file);
+    if (compressed.size > 10 * 1024 * 1024) {
+      throw new Error('That file is over 10MB. Please upload a clear photo (not a large scan) or a smaller PDF.');
+    }
+    const ext = (compressed.name.split('.').pop() || 'jpg').toLowerCase();
     const path = `${profile.id}/${folder}-${Date.now()}.${ext}`;
-    const { data, error } = await supabase.storage.from('tutor-documents').upload(path, file);
-    if (error) throw new Error(`Upload failed: ${error.message}`);
+    const { error } = await supabase.storage.from('tutor-documents').upload(path, compressed, { contentType: compressed.type, upsert: true });
+    if (error) throw new Error(`Upload failed: ${error.message}. Try a smaller file, or switch to Chrome if you're on another browser.`);
     // Store the path, not a public URL — documents are private and accessed via signed URLs
     return path;
   };
@@ -1647,11 +1761,13 @@ const TutorOnboarding = ({ profile, onComplete }) => {
     setError('');
 
     try {
-      // Upload photo if provided
+      // Upload photo if provided (compressed — see uploadFile rationale)
       if (photoFile) {
-        const ext = photoFile.name.split('.').pop();
+        const photo = await compressImage(photoFile, 1024, 0.85);
+        const ext = (photo.name.split('.').pop() || 'jpg').toLowerCase();
         const photoPath = `${profile.id}/avatar-${Date.now()}.${ext}`;
-        await supabase.storage.from('avatars').upload(photoPath, photoFile, { upsert: true });
+        const { error: photoErr } = await supabase.storage.from('avatars').upload(photoPath, photo, { upsert: true, contentType: photo.type });
+        if (photoErr) throw new Error(`Photo upload failed: ${photoErr.message}`);
         const { data: photoUrl } = supabase.storage.from('avatars').getPublicUrl(photoPath);
         await supabase.from('profiles').update({ avatar_url: photoUrl.publicUrl }).eq('id', profile.id);
       }
@@ -2025,6 +2141,22 @@ const TutorOnboarding = ({ profile, onComplete }) => {
   );
 };
 
+// ============ CLUBS ROUTE (discovery + enrolment modal) ============
+const ClubsRoute = ({ user, onNavigate, setShowAuth }) => {
+  const [payClass, setPayClass] = useState(null);
+  const [bump, setBump] = useState(0);           // re-mount ClubsPage after enrolment to refresh counts
+  return (
+    <>
+      <ClubsPage key={bump} user={user} onNavigate={onNavigate} setShowAuth={setShowAuth} onEnroll={setPayClass} />
+      {payClass && (
+        <GroupClassEnrollModal gc={payClass} user={user}
+          onClose={() => setPayClass(null)}
+          onSuccess={() => { setPayClass(null); setBump(b => b + 1); }} />
+      )}
+    </>
+  );
+};
+
 // ============ TUTOR DASHBOARD ============
 const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, onNavigate, isAdmin, onOpenAccountSettings }) => {
   const [tab, setTab] = useState('overview');
@@ -2042,17 +2174,35 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
     }
   }, [tutor?.verification_status]);
 
+  // Verification status (tutor may be null pre-onboarding — derive defensively)
+  const verificationStatus = tutor?.verification_status || (tutor?.verified ? 'approved' : 'pending');
+  const isPending = verificationStatus === 'pending';
+  const isRejected = verificationStatus === 'rejected';
+  const isApproved = verificationStatus === 'approved';
+
+  // Group classes state — MUST live above the onboarding early-return. React
+  // requires an identical hook count every render; when onboarding completes
+  // and the early return stops firing, hooks declared below it would suddenly
+  // start executing → React #310 crash right at "go to dashboard".
+  const [groupClasses, setGroupClasses] = useState([]);
+  const [showCreateClass, setShowCreateClass] = useState(false);
+  const [classForm, setClassForm] = useState({ title: '', description: '', subject: '', class_type: 'academic', category: '', age_range: '', recurring: false, max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
+  const [classLoading, setClassLoading] = useState(false);
+  const [classError, setClassError] = useState('');
+
+  useEffect(() => {
+    if (tutor?.id && isApproved) {
+      supabase.from('group_classes').select('*, group_class_enrollments(id, student_id, profiles:student_id(full_name))').eq('tutor_id', tutor.id).order('lesson_date', { ascending: true }).then(({ data }) => {
+        if (data) setGroupClasses(data);
+      });
+    }
+  }, [tutor?.id, isApproved]);
+
   // Show onboarding if: no tutor profile, incomplete profile (no bio or documents), or re-submitting after rejection
   const needsOnboarding = !tutor || resubmitting || !tutor.bio || !tutor.id_document_url;
   if (needsOnboarding) {
     return <TutorOnboarding profile={profile} onComplete={() => { setResubmitting(false); onRefreshProfile(); }} />;
   }
-
-  // Verification status
-  const verificationStatus = tutor.verification_status || (tutor.verified ? 'approved' : 'pending');
-  const isPending = verificationStatus === 'pending';
-  const isRejected = verificationStatus === 'rejected';
-  const isApproved = verificationStatus === 'approved';
 
   const VerificationBanner = () => {
     if (isApproved) return null;
@@ -2099,21 +2249,6 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
     );
   };
 
-  // Group classes state
-  const [groupClasses, setGroupClasses] = useState([]);
-  const [showCreateClass, setShowCreateClass] = useState(false);
-  const [classForm, setClassForm] = useState({ title: '', description: '', subject: '', max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
-  const [classLoading, setClassLoading] = useState(false);
-  const [classError, setClassError] = useState('');
-
-  useEffect(() => {
-    if (tutor?.id && isApproved) {
-      supabase.from('group_classes').select('*, group_class_enrollments(id, student_id, profiles:student_id(full_name))').eq('tutor_id', tutor.id).order('lesson_date', { ascending: true }).then(({ data }) => {
-        if (data) setGroupClasses(data);
-      });
-    }
-  }, [tutor?.id, isApproved]);
-
   const handleCreateGroupClass = async (e) => {
     e.preventDefault();
     setClassError('');
@@ -2123,9 +2258,16 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
     if (when.getTime() < Date.now()) { setClassError('That date and time is in the past — pick a future slot.'); return; }
 
     setClassLoading(true);
+    const isInterest = classForm.class_type === 'interest';
+    if (isInterest && !classForm.category) { setClassError('Please choose a club category.'); setClassLoading(false); return; }
+    if (!isInterest && !classForm.subject) { setClassError('Please choose a subject.'); setClassLoading(false); return; }
     const { data, error } = await supabase.from('group_classes').insert({
       tutor_id: tutor.id,
       ...classForm,
+      // The DB CHECK enforces this pairing: interest → category (no subject),
+      // academic → subject (no category).
+      subject:  isInterest ? null : classForm.subject,
+      category: isInterest ? classForm.category : null,
       price_per_student: parseInt(classForm.price_per_student),
       max_students: parseInt(classForm.max_students),
       duration_minutes: parseInt(classForm.duration_minutes),
@@ -2133,7 +2275,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
     if (data) {
       setGroupClasses(prev => [...prev, data]);
       setShowCreateClass(false);
-      setClassForm({ title: '', description: '', subject: '', max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
+      setClassForm({ title: '', description: '', subject: '', class_type: 'academic', category: '', age_range: '', recurring: false, max_students: 10, price_per_student: 500, lesson_date: '', start_time: '09:00', duration_minutes: 60 });
     }
     if (error) {
       console.error('Error creating group class:', error);
@@ -2227,7 +2369,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
             <button onClick={() => onNavigate && onNavigate('home')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Home</button>
             <button onClick={() => onNavigate && onNavigate('tutors')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Find Tutors</button>
             <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium">Spreadsheet</button>
-            <button onClick={() => onNavigate && onNavigate('classroom')} className="text-sm text-emerald-600 font-medium hidden sm:block">Class Insights</button>
+            <button onClick={() => onNavigate && onNavigate('classroom')} className="text-sm text-emerald-600 font-medium">Class Insights</button>
             {isAdmin && <button onClick={() => onNavigate && onNavigate('admin')} className="text-sm text-purple-600 font-medium hidden sm:block">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
             {onOpenAccountSettings && <button onClick={onOpenAccountSettings} className="text-sm text-slate-500 hover:text-slate-700" title="Account & Data Settings">
@@ -2329,14 +2471,23 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                   <div className="divide-y divide-slate-100">
                     {upcoming.map(b => (
                       <div key={b.id} className="px-5 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
-                        <div className="flex items-center gap-4">
-                          <Avatar src={b.profiles?.avatar_url} name={b.profiles?.full_name} size={44} />
-                          <div>
-                            <div className="font-medium text-slate-900">{b.profiles?.full_name}</div>
-                            <div className="text-sm text-slate-500">{b.subject}</div>
+                        <div className="flex items-center gap-4 min-w-0">
+                          <Avatar src={b.profiles?.avatar_url} name={b.learner_name || b.profiles?.full_name} size={44} />
+                          <div className="min-w-0">
+                            <div className="font-medium text-slate-900">
+                              {b.learner_name || b.profiles?.full_name}
+                              {b.learner_grade && <span className="ml-2 px-2 py-0.5 bg-purple-50 text-purple-600 rounded-full text-xs font-medium align-middle">{b.learner_grade}</span>}
+                            </div>
+                            <div className="text-sm text-slate-500">
+                              {b.subject}
+                              {b.learner_name && b.profiles?.full_name && b.learner_name.trim() !== b.profiles.full_name.trim() && (
+                                <span className="text-slate-400"> · booked by {b.profiles.full_name}</span>
+                              )}
+                            </div>
+                            {b.focus_note && <div className="text-xs text-amber-700 mt-1 truncate max-w-xs">Focus: {b.focus_note}</div>}
                           </div>
                         </div>
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-4 shrink-0">
                           <div className="text-right">
                             <div className="text-sm font-medium text-slate-900">{b.lesson_date}</div>
                             <div className="text-sm text-slate-400">{b.start_time?.slice(0,5)}</div>
@@ -2422,11 +2573,26 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
               {showCreateClass && (
                 <form onSubmit={handleCreateGroupClass} className="bg-white rounded-xl border border-slate-200 p-6 space-y-4">
                   <h3 className="font-semibold text-slate-900">Create a New Group Class</h3>
+                  {/* Academic vs interest club */}
+                  <div className="grid grid-cols-2 gap-3">
+                    {[
+                      { v: 'academic', t: 'Academic class', d: 'A school subject — revision, exam prep' },
+                      { v: 'interest', t: 'Interest club', d: 'Chess, coding, art, debate…' },
+                    ].map(o => (
+                      <button type="button" key={o.v} onClick={() => setClassForm({ ...classForm, class_type: o.v })}
+                        className={`text-left rounded-lg border p-3 transition-colors ${classForm.class_type === o.v ? 'border-emerald-500 bg-emerald-50 ring-1 ring-emerald-500' : 'border-slate-200 hover:border-slate-300'}`}>
+                        <div className="font-medium text-slate-900 text-sm">{o.t}</div>
+                        <div className="text-xs text-slate-500 mt-0.5">{o.d}</div>
+                      </button>
+                    ))}
+                  </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="col-span-2">
-                      <label className="block text-sm font-medium text-slate-700 mb-1">Class Title *</label>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">{classForm.class_type === 'interest' ? 'Club Name *' : 'Class Title *'}</label>
                       <input type="text" value={classForm.title} onChange={(e) => setClassForm({ ...classForm, title: e.target.value })}
-                        placeholder="e.g. KCSE Mathematics Revision" required
+                        placeholder={classForm.class_type === 'interest'
+                          ? `e.g. ${(CATEGORY_BY_KEY[classForm.category]?.examples || ['Saturday Chess Masters'])[0]}`
+                          : 'e.g. KCSE Mathematics Revision'} required
                         className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
                     </div>
                     <div className="col-span-2">
@@ -2435,14 +2601,50 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                         placeholder="What will students learn in this class?" rows={3}
                         className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-1">Subject *</label>
-                      <select value={classForm.subject} onChange={(e) => setClassForm({ ...classForm, subject: e.target.value })} required
-                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                        <option value="">Select subject</option>
-                        {['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'].map(s => <option key={s} value={s}>{s}</option>)}
-                      </select>
-                    </div>
+                    {classForm.class_type === 'interest' ? (
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-1">Category *</label>
+                        <select value={classForm.category} onChange={(e) => setClassForm({ ...classForm, category: e.target.value })}
+                          className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                          <option value="">Choose a club type</option>
+                          {INTEREST_CATEGORIES.map(c => <option key={c.key} value={c.key}>{c.emoji} {c.label}</option>)}
+                        </select>
+                        {classForm.category && CATEGORY_BY_KEY[classForm.category]?.examples && (
+                          <p className="mt-1.5 text-xs text-slate-400">
+                            Great club names are specific: {CATEGORY_BY_KEY[classForm.category].examples.join(' · ')}
+                          </p>
+                        )}
+                      </div>
+                    ) : (
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-1">Subject *</label>
+                        <select value={classForm.subject} onChange={(e) => setClassForm({ ...classForm, subject: e.target.value })}
+                          className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                          <option value="">Select subject</option>
+                          {['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'].map(s => <option key={s} value={s}>{s}</option>)}
+                        </select>
+                      </div>
+                    )}
+                    {classForm.class_type === 'interest' && (
+                      <>
+                        <div>
+                          <label className="block text-sm font-medium text-slate-700 mb-1">Age range</label>
+                          <select value={classForm.age_range} onChange={(e) => setClassForm({ ...classForm, age_range: e.target.value })}
+                            className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            <option value="">Any age</option>
+                            {['6–9', '9–12', '12–15', '15–18'].map(a => <option key={a} value={a}>{a} years</option>)}
+                          </select>
+                        </div>
+                        <div className="flex items-end pb-1">
+                          <label className="flex items-center gap-2.5 cursor-pointer select-none">
+                            <input type="checkbox" checked={classForm.recurring}
+                              onChange={(e) => setClassForm({ ...classForm, recurring: e.target.checked })}
+                              className="w-4 h-4 accent-emerald-600" />
+                            <span className="text-sm text-slate-700">Runs <b>weekly</b> — same day &amp; time each week</span>
+                          </label>
+                        </div>
+                      </>
+                    )}
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">Max Students (2-20)</label>
                       <input type="number" value={classForm.max_students} onChange={(e) => setClassForm({ ...classForm, max_students: e.target.value })}
@@ -3441,6 +3643,471 @@ const TeachPage = ({ onNavigate, setShowAuth }) => {
   );
 };
 
+// HOREB intro — the public front door for parents. The ads/emails promise
+// "free HOREB practice", so a visitor needs one clear page that explains it and
+// starts it. Logged-in students are sent straight into the engine.
+// The knowledge constellation — HOREB is literally a graph of skills wired by
+// prerequisites, so we draw it as a slowly rotating 3-D globe of them: a glowing
+// mastery core, skills orbiting on gold filaments, a starfield halo for depth.
+// Self-contained animated canvas (no WebGL/graph library) so it stays fast on
+// mobile data; holds still for prefers-reduced-motion.
+// The real CBC-mathematics knowledge graph as a live 3D force map — the same
+// build as math-knowledge-graph-3d.html (202 skills, prerequisites as links,
+// coloured by strand), lazy-loaded and gently auto-rotating. Drag to explore;
+// it resumes spinning after you let go.
+const HOREB_PAL = ['#6366f1', '#22c55e', '#ec4899', '#f59e0b', '#14b8a6', '#a855f7', '#ef4444', '#eab308', '#38bdf8'];
+// project a node's live 3D position to canvas pixels; null if behind the camera
+const tagScreen = (G, n) => {
+  try {
+    const c = G.graph2ScreenCoords(n.x, n.y, n.z);
+    if (!c || !isFinite(c.x) || !isFinite(c.y)) return null;
+    return c;
+  } catch (e) { return null; }
+};
+const HorebForceGraph = () => {
+  const holderRef = useRef(null);
+  useEffect(() => {
+    const el = holderRef.current;
+    if (!el) return;
+    let G = null, raf = 0, disposed = false, ro = null;
+    let spinning = false, angle = 0, base = 320, last = 0, resumeAt = 0, dragging = false, zoomPhase = 0;
+
+    // floating name tag that pops over one node at a time
+    const tag = document.createElement('div');
+    tag.style.cssText = 'position:absolute;left:0;top:0;pointer-events:none;transform:translate(-50%,-140%);' +
+      'padding:4px 10px;border-radius:999px;font:600 12px/1.2 -apple-system,Inter,sans-serif;white-space:nowrap;' +
+      'background:rgba(10,26,48,.82);color:#ffe6b0;border:1px solid rgba(242,168,40,.5);backdrop-filter:blur(4px);' +
+      'box-shadow:0 4px 14px rgba(0,0,0,.35);opacity:0;transition:opacity .25s;z-index:5;';
+
+    (async () => {
+      const ForceGraph3D = (await import('3d-force-graph')).default;
+      if (disposed || !holderRef.current) return;
+
+      const strands = horebGraph.strands;
+      const col = {}; strands.forEach((s, i) => { col[s] = HOREB_PAL[i % HOREB_PAL.length]; });
+      const byId = {}; horebGraph.skills.forEach(s => { byId[s.id] = s; });
+      const nodes = horebGraph.skills.map(s => ({ id: s.id, name: s.name, strand: s.strand, grade: s.grade, val: s.critical ? 5 : 3 }));
+      const links = [];
+      horebGraph.skills.forEach(s => (s.prerequisites || []).forEach(p => { if (byId[p]) links.push({ source: p, target: s.id }); }));
+
+      // One glowing prerequisite path climbing from a foundational skill upward.
+      const deps = {}; horebGraph.skills.forEach(s => { deps[s.id] = []; });
+      horebGraph.skills.forEach(s => (s.prerequisites || []).forEach(p => { if (deps[p]) deps[p].push(s.id); }));
+      const roots = horebGraph.skills.filter(s => !(s.prerequisites || []).length && deps[s.id].length)
+        .sort((a, b) => a.grade - b.grade || deps[b.id].length - deps[a.id].length);
+      const pathIds = [];
+      if (roots.length) {
+        let cur = roots[0].id; const seen = new Set([cur]); pathIds.push(cur);
+        while (pathIds.length < 18) {
+          const nexts = (deps[cur] || []).filter(x => !seen.has(x)).sort((a, b) => byId[b].grade - byId[a].grade || deps[b].length - deps[a].length);
+          if (!nexts.length) break;
+          cur = nexts[0]; seen.add(cur); pathIds.push(cur);
+        }
+      }
+      const key = (a, b) => a + '>' + b;
+      const pathEdges = new Set();
+      for (let i = 0; i < pathIds.length - 1; i++) pathEdges.add(key(pathIds[i], pathIds[i + 1]));
+      const pathNodes = new Set(pathIds);
+      links.forEach(l => { l.onPath = pathEdges.has(key(l.source, l.target)); });
+
+      // A clean living SPHERE, not a force-scatter or a tower: pin every skill to
+      // an evenly-spaced point on a fibonacci sphere. Nodes are ordered by strand
+      // then grade first, so each strand forms a contiguous region and the
+      // prerequisite links stay short, tracing a graceful web across the surface.
+      // Positions are PINNED (fx/fy/fz) so it frames and rotates instantly.
+      const strandOrder = {}; strands.forEach((s, i) => { strandOrder[s] = i; });
+      const ordered = nodes.slice().sort((a, b) =>
+        (strandOrder[a.strand] - strandOrder[b.strand]) || (a.grade - b.grade) || a.name.localeCompare(b.name));
+      const N = ordered.length, R = 205, GOLDEN = Math.PI * (3 - Math.sqrt(5));
+      ordered.forEach((n, i) => {
+        const y = 1 - (i / Math.max(1, N - 1)) * 2;      // 1 → -1
+        const rr = Math.sqrt(Math.max(0, 1 - y * y));
+        const th = i * GOLDEN;
+        n.fx = n.x = R * Math.cos(th) * rr;
+        n.fy = n.y = R * y;
+        n.fz = n.z = R * Math.sin(th) * rr;
+      });
+
+      G = ForceGraph3D({ controlType: 'orbit' })(el)
+        .backgroundColor('rgba(0,0,0,0)')
+        .graphData({ nodes, links })
+        .cooldownTicks(0).warmupTicks(0)
+        .nodeLabel(n => `${n.name} — Grade ${n.grade}`)
+        .nodeColor(n => pathNodes.has(n.id) ? '#ffd77a' : col[n.strand])
+        .nodeVal(n => pathNodes.has(n.id) ? n.val * 1.7 : n.val)
+        .nodeOpacity(0.96).nodeResolution(14)
+        .linkColor(l => l.onPath ? 'rgba(255,196,72,0.98)' : 'rgba(158,186,230,0.38)')
+        .linkWidth(l => l.onPath ? 2.4 : 1.0)
+        .linkDirectionalParticles(l => l.onPath ? 4 : 0)
+        .linkDirectionalParticleWidth(2.8)
+        .linkDirectionalParticleSpeed(0.006)
+        .linkDirectionalParticleColor(() => '#fff2cc')
+        .width(el.clientWidth).height(el.clientHeight)
+        .showNavInfo(false).enableNodeDrag(false);
+      el.appendChild(tag); // after construction — the graph resets el's contents on init
+
+      const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const controls = G.controls();
+      controls.addEventListener('start', () => { dragging = true; });
+      controls.addEventListener('end', () => {
+        dragging = false; resumeAt = performance.now() + 2500;
+        const p = G.camera().position; angle = Math.atan2(p.x, p.z); base = Math.hypot(p.x, p.y, p.z) || base;
+      });
+
+      // Frame and start rotating right away — the layout is pinned, nothing to settle.
+      let framed = false;
+      const frameAndSpin = () => {
+        if (framed || disposed || !G) return; framed = true;
+        G.zoomToFit(0, 70);
+        const p = G.camera().position;
+        base = (Math.hypot(p.x, p.y, p.z) || base) * 0.86; // land a touch zoomed in
+        angle = Math.atan2(p.x, p.z) || 0;
+        if (!reduced) spinning = true;
+      };
+      setTimeout(frameAndSpin, 200);
+
+      // name-tag cycling: pick a node (favouring the lit path), show its grade+name
+      let tagNode = null, tagStart = 0, nextTagAt = 1500;
+      const pathList = pathIds.map(id => nodes.find(n => n.id === id)).filter(Boolean);
+
+      last = performance.now();
+      const tick = (now) => {
+        raf = requestAnimationFrame(tick);
+        const dt = now - last; last = now;
+        if (spinning && !dragging && now > resumeAt) {
+          angle += dt * 0.00011;
+          zoomPhase += dt * 0.00022;
+          const d = base * (0.90 + 0.13 * Math.sin(zoomPhase)); // breathe in and out
+          G.cameraPosition({ x: d * Math.sin(angle), y: d * 0.10, z: d * Math.cos(angle) });
+        }
+        // floating label
+        if (spinning && now > nextTagAt) {
+          const pool = (pathList.length && Math.sin(now * 0.001) > 0) ? pathList : nodes;
+          tagNode = pool[(now * 0.013 | 0) % pool.length];
+          tagStart = now; nextTagAt = now + 3200;
+          tag.textContent = `G${tagNode.grade} · ${tagNode.name}`;
+        }
+        if (tagNode && tagNode.x != null) {
+          const p = tagScreen(G, tagNode);
+          const w = el.clientWidth, h = el.clientHeight;
+          if (p && p.x > 8 && p.x < w - 8 && p.y > 20 && p.y < h - 8) {
+            const prog = Math.min(1, (now - tagStart) / 3200);
+            tag.style.opacity = Math.sin(prog * Math.PI).toFixed(2);
+            tag.style.left = p.x + 'px'; tag.style.top = p.y + 'px';
+          } else { tag.style.opacity = '0'; }
+        }
+      };
+      raf = requestAnimationFrame(tick);
+
+      ro = new ResizeObserver(() => { if (G && holderRef.current) G.width(holderRef.current.clientWidth).height(holderRef.current.clientHeight); });
+      ro.observe(el);
+    })().catch(e => console.error('HOREB graph failed:', e));
+
+    return () => {
+      disposed = true;
+      if (raf) cancelAnimationFrame(raf);
+      if (ro) ro.disconnect();
+      try { if (G && G._destructor) G._destructor(); } catch (e) { /* noop */ }
+      if (el) el.innerHTML = '';
+    };
+  }, []);
+  return <div ref={holderRef} className="w-full h-full" aria-hidden="true" />;
+};
+
+const HorebConstellation = () => {
+  const canvasRef = useRef(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let raf, W = 0, H = 0, dpr = 1, pts = [], edges = [], stars = [], paths = [], reduced = false;
+    try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { /* ignore */ }
+    const rnd = (a, b) => a + Math.random() * (b - a);
+    // Distinct colours for the three learning tracks lighting up at once.
+    const TRACKS = [[242, 168, 40], [52, 211, 153], [96, 165, 250]];
+
+    const build = () => {
+      const rect = canvas.getBoundingClientRect();
+      if (!rect.width) return;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = rect.width; H = rect.height;
+      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const R = Math.min(W, H) * 0.44;
+      const N = 210;
+      pts = [];
+      // Fibonacci sphere → evenly spread skills over a globe.
+      for (let i = 0; i < N; i++) {
+        const y = 1 - (i / (N - 1)) * 2;
+        const ringR = Math.sqrt(Math.max(0, 1 - y * y));
+        const theta = i * 2.399963;
+        const rr = R * rnd(0.7, 1.02);
+        pts.push({ x: Math.cos(theta) * ringR * rr, y: y * rr, z: Math.sin(theta) * ringR * rr, r: rnd(1.1, 2.5), tw: rnd(0, 6.28) });
+      }
+      // Prerequisite filaments: each skill wired to its 1–2 nearest neighbours.
+      edges = [];
+      for (let i = 0; i < N; i++) {
+        const d = [];
+        for (let j = 0; j < N; j++) { if (i === j) continue; const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y, dz = pts[i].z - pts[j].z; d.push([dx * dx + dy * dy + dz * dz, j]); }
+        d.sort((a, b) => a[0] - b[0]);
+        edges.push([i, d[0][1]]);
+        if (Math.random() < 0.55) edges.push([i, d[1][1]]);
+      }
+      // Three learning tracks climbing outward from the core — each a chain of
+      // prerequisites we light in sequence (master this, and the next unlocks).
+      const adj = Array.from({ length: N }, () => []);
+      for (const [a, b] of edges) { adj[a].push(b); adj[b].push(a); }
+      const rad2 = (i) => pts[i].x * pts[i].x + pts[i].y * pts[i].y + pts[i].z * pts[i].z;
+      // Each track is a long wandering walk across the whole graph, so its
+      // pulse travels everywhere rather than a short stub. It prefers fresh
+      // nodes but may revisit, snaking through the structure.
+      const walk = (seed) => {
+        const p = [seed]; const local = new Set([seed]);
+        const LEN = Math.min(N - 1, 64);
+        for (let step = 0; step < LEN; step++) {
+          const cur = p[p.length - 1], prev = p[p.length - 2];
+          let cand = adj[cur].filter(n => n !== prev);
+          if (!cand.length) cand = adj[cur];
+          if (!cand.length) break;
+          const fresh = cand.filter(n => !local.has(n));
+          const pool = fresh.length ? fresh : cand;
+          const pick = pool[(Math.random() * pool.length) | 0];
+          p.push(pick); local.add(pick);
+        }
+        return p;
+      };
+      paths = [0, 1, 2].map(i => ({ nodes: walk((Math.random() * N) | 0), color: TRACKS[i], off: i / 3 }));
+      stars = [];
+      const cx = W / 2, cy = H / 2, maxR = Math.min(W, H) * 0.5;
+      const S = Math.round((W * H) / 2600);
+      for (let i = 0; i < S; i++) { const a = rnd(0, 6.28), rr = maxR * Math.sqrt(rnd(0, 1)) * 1.22; stars.push({ x: cx + Math.cos(a) * rr, y: cy + Math.sin(a) * rr, r: rnd(0.4, 1.2), tw: rnd(0, 6.28), warm: Math.random() < 0.4 }); }
+    };
+
+    const draw = (t) => {
+      if (!W) { raf = requestAnimationFrame(draw); return; }
+      const cx = W / 2, cy = H / 2;
+      ctx.clearRect(0, 0, W, H);
+      for (const s of stars) {
+        const a = 0.14 + 0.3 * (0.5 + 0.5 * Math.sin(t / 1500 + s.tw));
+        ctx.fillStyle = s.warm ? `rgba(244,206,140,${a})` : `rgba(150,180,220,${a * 0.9})`;
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.29); ctx.fill();
+      }
+      const ay = reduced ? 0.5 : t / 8200;         // slow spin
+      const cyA = Math.cos(ay), syA = Math.sin(ay);
+      const tilt = 0.42, ct = Math.cos(tilt), st = Math.sin(tilt);
+      const fov = Math.min(W, H) * 1.15;
+      const proj = pts.map(p => {
+        const x = p.x * cyA - p.z * syA, z0 = p.x * syA + p.z * cyA;     // rotate Y
+        const y2 = p.y * ct - z0 * st, z2 = p.y * st + z0 * ct;          // tilt X
+        const persp = fov / (fov + z2);
+        return { sx: cx + x * persp, sy: cy + y2 * persp, persp, z: z2, r: p.r, tw: p.tw };
+      });
+      for (const [a, b] of edges) {
+        const pa = proj[a], pb = proj[b];
+        const al = 0.11 * ((pa.persp + pb.persp) / 2);
+        ctx.strokeStyle = `rgba(242,178,70,${al})`;
+        ctx.lineWidth = 0.6;
+        ctx.beginPath(); ctx.moveTo(pa.sx, pa.sy); ctx.lineTo(pb.sx, pb.sy); ctx.stroke();
+      }
+      const order = proj.map((_, i) => i).sort((a, b) => proj[a].z - proj[b].z);
+      for (const i of order) {
+        const p = proj[i];
+        const tw = 0.55 + 0.45 * Math.sin(t / 1000 + p.tw);
+        const warm = p.persp > 0.98;
+        ctx.fillStyle = warm ? `rgba(246,204,124,${(0.5 + 0.45 * p.persp) * tw})` : `rgba(168,198,234,${(0.35 + 0.35 * p.persp) * tw})`;
+        ctx.beginPath(); ctx.arc(p.sx, p.sy, Math.max(0.6, p.r * p.persp), 0, 6.29); ctx.fill();
+      }
+      // Three coloured currents run through the WHOLE graph: each track is a
+      // long walk, and a comet (bright head + fading tail) travels it end to
+      // end, so light is always moving across the structure — not one stub.
+      const TAIL = 9;                     // how many segments the glow trails
+      for (const track of paths) {
+        const p = track.nodes; if (p.length < 2) continue;
+        const [cr, cg, cb] = track.color;
+        const segs = p.length - 1, per = reduced ? 1e9 : 300, cycle = per * segs;
+        const fseg = (reduced ? per * 4 : (t + track.off * cycle) % cycle) / per;
+        const head = Math.floor(fseg), f = fseg - head;
+        // faint full path so the route is always readable
+        for (let k = 0; k < segs; k++) {
+          const pa = proj[p[k]], pb = proj[p[k + 1]];
+          ctx.strokeStyle = `rgba(${cr},${cg},${cb},0.10)`; ctx.lineWidth = 0.8;
+          ctx.beginPath(); ctx.moveTo(pa.sx, pa.sy); ctx.lineTo(pb.sx, pb.sy); ctx.stroke();
+        }
+        // comet: segments and nodes just behind the head glow, fading with distance
+        for (let d = 0; d <= TAIL; d++) {
+          const k = head - d; if (k < 0) continue;
+          const a = 1 - d / (TAIL + 1);
+          if (k < segs) {
+            const pa = proj[p[k]], pb = proj[p[k + 1]];
+            ctx.strokeStyle = `rgba(${cr},${cg},${cb},${0.55 * a})`; ctx.lineWidth = 1.2 * a + 0.4;
+            ctx.beginPath(); ctx.moveTo(pa.sx, pa.sy); ctx.lineTo(pb.sx, pb.sy); ctx.stroke();
+          }
+          const pp = proj[p[k]];
+          const gg = ctx.createRadialGradient(pp.sx, pp.sy, 0, pp.sx, pp.sy, 10 * pp.persp);
+          gg.addColorStop(0, `rgba(${cr},${cg},${cb},${0.5 * a})`); gg.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
+          ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(pp.sx, pp.sy, 10 * pp.persp, 0, 6.29); ctx.fill();
+          ctx.fillStyle = `rgba(${Math.min(255, cr + 45)},${Math.min(255, cg + 45)},${Math.min(255, cb + 45)},${0.92 * a})`;
+          ctx.beginPath(); ctx.arc(pp.sx, pp.sy, Math.max(1.5, 3 * pp.persp * a + 0.6), 0, 6.29); ctx.fill();
+        }
+        // bright white-cored head, interpolated along the current segment
+        if (head < segs) {
+          const pa = proj[p[head]], pb = proj[p[head + 1]];
+          const px = pa.sx + (pb.sx - pa.sx) * f, py = pa.sy + (pb.sy - pa.sy) * f;
+          const gg = ctx.createRadialGradient(px, py, 0, px, py, 9);
+          gg.addColorStop(0, 'rgba(255,255,255,0.95)'); gg.addColorStop(0.4, `rgba(${cr},${cg},${cb},0.7)`); gg.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
+          ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(px, py, 9, 0, 6.29); ctx.fill();
+          ctx.fillStyle = 'rgba(255,255,255,1)'; ctx.beginPath(); ctx.arc(px, py, 2.3, 0, 6.29); ctx.fill();
+        }
+      }
+
+      const pulse = 54 + Math.sin(t / 1600) * 7;
+      const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, pulse);
+      g.addColorStop(0, 'rgba(255,246,220,0.92)');
+      g.addColorStop(0.2, 'rgba(242,168,40,0.5)');
+      g.addColorStop(1, 'rgba(242,168,40,0)');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, pulse, 0, 6.29); ctx.fill();
+      ctx.fillStyle = 'rgba(255,251,238,0.96)'; ctx.beginPath(); ctx.arc(cx, cy, 5, 0, 6.29); ctx.fill();
+      if (!reduced) raf = requestAnimationFrame(draw);
+    };
+
+    build();
+    raf = requestAnimationFrame(draw);
+    const ro = new ResizeObserver(() => build());
+    ro.observe(canvas);
+    return () => { cancelAnimationFrame(raf); ro.disconnect(); };
+  }, []);
+  return <canvas ref={canvasRef} className="w-full h-full block" aria-hidden="true" />;
+};
+
+const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
+  const start = () => {
+    if (user) { onNavigate('ai'); return; }
+    // Quick signup, then land in HOREB (App reads this after auth).
+    try { sessionStorage.setItem('tg_after_auth', 'ai'); } catch { /* private mode */ }
+    setShowAuth('register');
+  };
+  return (
+    <div className="min-h-screen text-white" style={{ background: 'linear-gradient(168deg,#0a1a30 0%,#0d2138 60%,#122c4a 100%)' }}>
+      <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-10 lg:gap-6 items-center">
+        {/* Left — the pitch */}
+        <div>
+          <div className="text-[13px] font-semibold tracking-[.16em] text-amber-300/90">HOREB · ADAPTIVE MATHEMATICS</div>
+          <h1 className="mt-4 text-[40px] sm:text-[52px] font-extrabold leading-[1.03] tracking-[-.03em]">
+            No child is bad<br />at maths.
+            <span className="block text-amber-300 mt-1">They're missing one step.</span>
+          </h1>
+          <p className="mt-6 text-[17.5px] leading-relaxed text-white/80 max-w-md">
+            Every “I don’t get it” traces back to a single skill that never quite
+            clicked. HOREB finds that <em>exact</em> skill — and quietly rebuilds
+            everything that stands on it.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <button onClick={start} className="px-7 py-3.5 rounded-xl bg-amber-400 text-slate-900 font-bold text-[15px] hover:bg-amber-300 transition-colors">
+              {user ? 'Open HOREB' : 'Find your child’s gap'}
+            </button>
+            <button onClick={() => { const el = document.getElementById('how'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/20 font-semibold text-[15px] hover:bg-white/15 transition-colors">
+              How it works
+            </button>
+          </div>
+
+          <p className="mt-8 text-[14px] text-white/50 max-w-md leading-relaxed">
+            On any phone. Two minutes to set up, one child at a time.
+          </p>
+        </div>
+
+        {/* Right — the living knowledge graph */}
+        <div className="relative h-[440px] sm:h-[520px] lg:h-[600px] lg:-mr-10">
+          <HorebConstellation />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Page two — a confident, science-forward answer to "what is HOREB?", in the
+// clean bold register the founder likes. Light, high-contrast, one accent.
+const HorebHow = ({ user, onNavigate, setShowAuth, embedded = false }) => {
+  const start = () => {
+    if (user) { onNavigate('ai'); return; }
+    try { sessionStorage.setItem('tg_after_auth', 'ai'); } catch { /* private mode */ }
+    setShowAuth('register');
+  };
+  const beats = [
+    { k: 'It knows the whole map.', p: 'Every skill in the CBC maths curriculum, and every skill it stands on, wired together. So HOREB always knows exactly what your child is ready to learn next — and what would only confuse them.' },
+    { k: 'It teaches to mastery, not to the bell.', p: 'A skill isn’t “done” because the lesson ended. HOREB only moves on once your child has genuinely mastered it — proven question by question, not assumed.' },
+    { k: 'It keeps them at the edge.', p: 'Too easy is boring; too hard is discouraging. HOREB holds every child right at the edge of what they can do — the one place where learning actually happens fast.' },
+    { k: 'It fights forgetting.', p: 'Each skill returns for a short review at the precise moment it would start to fade. What your child learns, they keep — without you ever nagging about revision.' },
+  ];
+  return (
+    <div id="how" className="bg-white text-slate-900">
+      <div className={`max-w-4xl mx-auto px-6 pb-24 ${embedded ? 'pt-20' : 'pt-24'}`}>
+        {!embedded && <button onClick={() => onNavigate('horeb')} className="text-slate-400 hover:text-slate-700 text-sm transition-colors">← Back</button>}
+        <div className={`text-[13px] font-bold tracking-[.16em] text-amber-600 ${embedded ? '' : 'mt-8'}`}>HOW HOREB WORKS</div>
+        <h1 className="mt-4 text-[46px] sm:text-[64px] font-extrabold leading-[0.98] tracking-[-.035em]">
+          The way maths<br />should be taught.<br /><span className="text-amber-500">One child at a time.</span>
+        </h1>
+        <p className="mt-7 text-[19px] leading-relaxed text-slate-600 max-w-2xl">
+          HOREB runs the techniques cognitive science keeps proving — and a
+          classroom of forty rarely has the time for. It measures what your child
+          truly knows, teaches the exact next thing they’re ready for, and makes
+          it stick.
+        </p>
+
+        {/* pace comparison — the Recess-style proof bar, kept honest */}
+        <div className="mt-16">
+          <div className="flex items-baseline justify-between">
+            <span className="text-[12.5px] font-bold tracking-[.12em] text-slate-400">A CLASSROOM</span>
+            <span className="text-[15px] text-slate-500">one pace, forty children</span>
+          </div>
+          <div className="mt-2 h-11 rounded-xl bg-slate-100 overflow-hidden">
+            <div className="h-full rounded-xl bg-slate-300" style={{ width: '52%' }} />
+          </div>
+          <div className="mt-7 flex items-baseline justify-between">
+            <span className="text-[12.5px] font-bold tracking-[.12em] text-amber-600">HOREB</span>
+            <span className="text-[15px] text-slate-700 font-medium">your child’s exact pace</span>
+          </div>
+          <div className="mt-2 h-11 rounded-xl bg-amber-100 overflow-hidden">
+            <div className="h-full rounded-xl flex items-center justify-end pr-4 text-white font-extrabold text-[15px]" style={{ width: '100%', background: 'linear-gradient(90deg,#f2a828,#e0891a)' }}>up to 2× the progress</div>
+          </div>
+          <p className="mt-4 text-[14px] text-slate-500 max-w-2xl leading-relaxed">
+            Taught to mastery at their own pace, children learn far faster — one of the most replicated findings in education. HOREB is how you give that to one child, at home.
+          </p>
+        </div>
+
+        {/* the method */}
+        <div className="mt-20 space-y-11">
+          {beats.map((b, i) => (
+            <div key={i} className="border-t border-slate-200 pt-8">
+              <div className="flex items-baseline gap-4">
+                <span className="text-amber-500 font-extrabold text-[15px] tabular-nums">0{i + 1}</span>
+                <h2 className="text-[26px] sm:text-[30px] font-extrabold leading-tight tracking-[-.02em]">{b.k}</h2>
+              </div>
+              <p className="mt-3 sm:pl-10 text-[17px] leading-relaxed text-slate-600 max-w-2xl">{b.p}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* close */}
+        <div className="mt-20 rounded-3xl bg-slate-900 text-white p-9 sm:p-11">
+          <h3 className="text-[26px] sm:text-[30px] font-extrabold leading-tight">One map per child. On any phone.</h3>
+          <p className="mt-3 text-[16.5px] leading-relaxed text-white/70 max-w-xl">
+            Add each of your children — each gets their own map, their own pace, their own progress. And the moment they need a person, a verified Tutagora tutor is one tap away.
+          </p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <button onClick={start} className="px-7 py-3.5 rounded-xl bg-amber-400 text-slate-900 font-bold text-[15px] hover:bg-amber-300 transition-colors">
+              {user ? 'Open HOREB' : 'Start now'}
+            </button>
+            <button onClick={() => onNavigate('tutors')} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/25 font-semibold text-[15px] hover:bg-white/15 transition-colors">
+              Browse tutors
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const HomePage = ({ onNavigate, setShowAuth }) => {
   const { tutors } = useTutors();
   const [openFaq, setOpenFaq] = useState(null);
@@ -3486,9 +4153,9 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center bg-gradient-to-b from-slate-900 to-slate-800 relative overflow-hidden">
+      <section className="min-h-screen flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(168deg,#0a1a30 0%,#0d2138 55%,#122c4a 100%)' }}>
         <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
         <div className="max-w-6xl mx-auto px-4 sm:px-5 pt-20 pb-12 sm:py-32 relative flex items-center justify-between">
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-full text-white/90 text-xs sm:text-sm mb-4 sm:mb-6">
@@ -3746,8 +4413,8 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>📧 levitty@tutagora.com</li>
-                <li>📱 +254 742 410 255</li>
+                <li>📧 tutaeducators@gmail.com</li>
+                <li>📱 +254 759 240 692</li>
                 <li>📍 Nairobi, Kenya</li>
               </ul>
             </div>
@@ -3800,7 +4467,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
       const matchesSubject = !selectedSubject || selectedSubject === 'All Subjects' || tutorSubjects.includes(selectedSubject);
       
       // Grade filter
-      const tutorGrades = Array.isArray(t.grade_levels) ? t.grade_levels : (t.grade_levels ? [t.grade_levels] : []);
+      const tutorGrades = gradeList(t.grade_levels);
       const matchesGrade = !selectedGrade || selectedGrade === 'All Grades' || tutorGrades.includes(selectedGrade);
 
       // Price filter
@@ -3925,29 +4592,26 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filtered.map(t => (
               <div key={t.id} onClick={() => onSelectTutor(t)} className="bg-white rounded-xl border border-slate-200 overflow-hidden cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
-                {/* Photo banner */}
-                <div className="h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 relative">
-                  {t.top_rated && (
-                    <span className="absolute top-2 right-2 px-2 py-1 bg-white/90 text-emerald-700 text-xs font-semibold rounded-full">Top Rated</span>
-                  )}
+                {/* Photo-forward header — the face is the hero. Full-bleed cover
+                    image (real photo, or the initials avatar as a colour tile). */}
+                <div className="relative w-full aspect-[4/3] bg-slate-100 overflow-hidden">
+                  <img
+                    src={t.profiles?.avatar_url || initialsAvatar(t.profiles?.full_name || 'T', '&background=0f766e&size=400&bold=true')}
+                    alt={t.profiles?.full_name}
+                    onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(t.profiles?.full_name || 'T', '&background=0f766e&size=400&bold=true'); }}
+                    className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
+                  />
                   {t.verified && (
-                    <span className="absolute top-2 left-2 px-2 py-1 bg-white/90 text-emerald-700 text-xs font-semibold rounded-full flex items-center gap-1">
+                    <span className="absolute top-2.5 left-2.5 px-2.5 py-1 bg-white/95 text-emerald-700 text-xs font-semibold rounded-full flex items-center gap-1 shadow-sm">
                       <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                       Verified
                     </span>
                   )}
+                  {t.top_rated && (
+                    <span className="absolute top-2.5 right-2.5 px-2.5 py-1 bg-amber-400 text-amber-950 text-xs font-semibold rounded-full shadow-sm">Top Rated</span>
+                  )}
                 </div>
-                {/* Avatar overlapping banner — relative+z lifts it above the
-                    `relative` banner, which otherwise paints over its top half. */}
-                <div className="px-4 -mt-10 mb-3 relative z-10">
-                  <img
-                    src={t.profiles?.avatar_url || initialsAvatar(t.profiles?.full_name || 'T', '&background=0f766e&size=120&bold=true')}
-                    alt={t.profiles?.full_name}
-                    onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(t.profiles?.full_name || 'T', '&background=0f766e&size=120&bold=true'); }}
-                    className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md bg-slate-100"
-                  />
-                </div>
-                <div className="px-4 pb-4 flex flex-col flex-1">
+                <div className="px-4 pt-3 pb-4 flex flex-col flex-1">
                   <h3 className="font-bold text-slate-900 text-lg">{t.profiles?.full_name}</h3>
                   <p className="text-sm text-emerald-600 font-medium">{(t.subjects || [t.subject]).join(', ')} Tutor</p>
                   {t.headline && <p className="text-sm text-slate-500 mt-1">{t.headline}</p>}
@@ -3988,6 +4652,8 @@ const GroupClassesBrowse = ({ user, setShowAuth }) => {
   const [classes, setClasses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [subjectFilter, setSubjectFilter] = useState('');
+  const [typeFilter, setTypeFilter] = useState('all'); // all | academic | interest
+  const [catFilter, setCatFilter] = useState('');
   const [myEnrollments, setMyEnrollments] = useState({}); // group_class_id -> true
   const [payClass, setPayClass] = useState(null); // class being enrolled in
 
@@ -4027,26 +4693,60 @@ const GroupClassesBrowse = ({ user, setShowAuth }) => {
     fetchClasses(); // refresh enrolment counts
   };
 
-  const filtered = subjectFilter ? classes.filter(c => c.subject === subjectFilter) : classes;
+  const filtered = classes.filter(c => {
+    const ctype = c.class_type || 'academic';
+    if (typeFilter !== 'all' && ctype !== typeFilter) return false;
+    if (typeFilter === 'academic' && subjectFilter && c.subject !== subjectFilter) return false;
+    if (typeFilter === 'interest' && catFilter && c.category !== catFilter) return false;
+    return true;
+  });
+  // Which interest categories actually have open clubs right now?
+  const liveCats = INTEREST_CATEGORIES.filter(cat => classes.some(c => c.category === cat.key));
 
   if (loading) return null;
   if (classes.length === 0) return null;
 
   return (
     <div className="mt-12">
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h2 className="text-2xl font-bold text-slate-900">Group Classes</h2>
-          <p className="text-slate-500 text-sm mt-1">Join a class with other students at a lower price</p>
-        </div>
+      <div className="mb-5">
+        <h2 className="text-2xl font-bold text-slate-900">Group Classes & Clubs</h2>
+        <p className="text-slate-500 text-sm mt-1">Learn together for less — academic classes, or interest clubs kids join for fun.</p>
+      </div>
+      {/* Academic / Clubs toggle */}
+      <div className="flex gap-2 mb-4">
+        {[
+          { v: 'all', t: 'All' },
+          { v: 'academic', t: 'Academic' },
+          { v: 'interest', t: '✨ Interest clubs' },
+        ].map(o => (
+          <button key={o.v} onClick={() => { setTypeFilter(o.v); setSubjectFilter(''); setCatFilter(''); }}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${typeFilter === o.v ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:border-slate-300'}`}>
+            {o.t}
+          </button>
+        ))}
+      </div>
+      {/* Secondary filter: subjects for academic, category chips for clubs */}
+      {typeFilter === 'academic' && (
         <select value={subjectFilter} onChange={(e) => setSubjectFilter(e.target.value)}
-          className="px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm">
-          <option value="">All Subjects</option>
+          className="px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm mb-5">
+          <option value="">All subjects</option>
           {['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'].map(s => (
             <option key={s} value={s}>{s}</option>
           ))}
         </select>
-      </div>
+      )}
+      {typeFilter === 'interest' && liveCats.length > 0 && (
+        <div className="flex flex-wrap gap-2 mb-5">
+          <button onClick={() => setCatFilter('')}
+            className={`px-3 py-1.5 rounded-full text-sm transition-colors ${!catFilter ? 'bg-emerald-600 text-white' : 'bg-white border border-slate-200 text-slate-600'}`}>All clubs</button>
+          {liveCats.map(cat => (
+            <button key={cat.key} onClick={() => setCatFilter(cat.key)}
+              className={`px-3 py-1.5 rounded-full text-sm transition-colors ${catFilter === cat.key ? 'bg-emerald-600 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:border-slate-300'}`}>
+              {cat.emoji} {cat.label}
+            </button>
+          ))}
+        </div>
+      )}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {filtered.map(gc => {
           const enrolled = gc.group_class_enrollments?.length || 0;
@@ -4061,10 +4761,12 @@ const GroupClassesBrowse = ({ user, setShowAuth }) => {
                   alt={gc.profiles?.full_name} className="w-10 h-10 rounded-full object-cover bg-slate-100" />
                 <div>
                   <p className="font-medium text-slate-900 text-sm">{gc.profiles?.full_name}</p>
-                  <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">{gc.subject}</span>
+                  {gc.class_type === 'interest'
+                    ? <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">{categoryEmoji(gc.category)} {categoryLabel(gc.category)}</span>
+                    : <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">{gc.subject}</span>}
                 </div>
               </div>
-              <h3 className="font-bold text-slate-900 mb-1">{gc.title}</h3>
+              <h3 className="font-bold text-slate-900 mb-1">{gc.class_type === 'interest' && gc.recurring ? '🔁 ' : ''}{gc.title}</h3>
               {gc.description && <p className="text-sm text-slate-500 line-clamp-2 mb-3">{gc.description}</p>}
               <div className="flex flex-wrap gap-3 text-sm text-slate-600 mb-3">
                 <span>{new Date(gc.lesson_date).toLocaleDateString('en', { weekday: 'short', month: 'short', day: 'numeric' })}</span>
@@ -4142,26 +4844,22 @@ const GroupClassEnrollModal = ({ gc, user, onClose, onSuccess }) => {
       reference,
       metadata: { group_class_id: gc.id, title: gc.title },
       onSuccess: async (response) => {
-        // Verify server-side, then enrol. Falls back to the capacity-checked
-        // RPC if the edge function isn't reachable so live payments still enrol.
+        // A paid enrolment is confirmed ONLY by the server (verify-payment
+        // checks the Paystack reference + amount with the service role). If the
+        // function can't be reached we do NOT self-confirm — the money is safe
+        // with Paystack and the webhook/retry will reconcile it.
         let confirmed = false;
         try {
           const { data, error: vErr } = await supabase.functions.invoke('verify-payment', {
             body: { reference: response.reference, group_class_id: gc.id, student_id: user.id },
           });
-          if (vErr) {
-            const { error: rpcErr } = await supabase.rpc('enroll_in_group_class', { p_class: gc.id, p_reference: response.reference, p_amount: amount });
-            confirmed = !rpcErr;
-          } else {
-            confirmed = data?.verified === true;
-          }
+          confirmed = !vErr && data?.verified === true;
         } catch (e) {
-          const { error: rpcErr } = await supabase.rpc('enroll_in_group_class', { p_class: gc.id, p_reference: response.reference, p_amount: amount });
-          confirmed = !rpcErr;
+          confirmed = false;
         }
 
         if (!confirmed) {
-          setError('We couldn’t confirm your enrolment. If you were charged, contact support and we’ll sort it out.');
+          setError('Payment received — we’re confirming your place now. If it doesn’t appear in a minute, contact support with your M-Pesa message and we’ll sort it out.');
           setStep('error');
           return;
         }
@@ -4257,6 +4955,23 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
   const [pendingBooking, setPendingBooking] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [loadingReviews, setLoadingReviews] = useState(true);
+  // Who the lesson is for + what to work on (the parent-vs-learner context).
+  const bookableSubjects = [...new Set((Array.isArray(tutor.subjects) && tutor.subjects.length ? tutor.subjects : [tutor.subject]).filter(Boolean))];
+  const [selectedSubject, setSelectedSubject] = useState(bookableSubjects[0] || tutor.subject || '');
+  const [learnerName, setLearnerName] = useState('');
+  const [learnerGrade, setLearnerGrade] = useState('');
+  const [focusNote, setFocusNote] = useState('');
+  const GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University', 'Adult learner'];
+  // Saved learners (child profiles) — a returning parent picks instead of retyping.
+  const [children, setChildren] = useState([]);
+  const [selectedChildId, setSelectedChildId] = useState(null); // null = entering someone new
+  useEffect(() => {
+    if (!user?.id) { setChildren([]); return; }
+    supabase.from('children').select('id, name, grade').eq('parent_id', user.id).order('created_at')
+      .then(({ data }) => setChildren(data || []));
+  }, [user?.id]);
+  const pickChild = (c) => { setSelectedChildId(c.id); setLearnerName(c.name); setLearnerGrade(c.grade || ''); };
+  const pickNewLearner = () => { setSelectedChildId(null); setLearnerName(''); setLearnerGrade(''); };
   
   const days = Array.from({ length: 7 }, (_, i) => { const d = new Date(); d.setDate(d.getDate() + i); return d; });
   const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -4301,8 +5016,21 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
     if (!user) { setShowAuth('register'); return; }
     setBooking(true);
     try {
-      // Create booking first (as pending)
-      const bookingData = await onBook(tutor.id, tutor.subject, selectedDate.toISOString().split('T')[0], selectedTime);
+      // Save a brand-new learner to the parent's roster so next time they just pick.
+      let childId = selectedChildId;
+      if (!childId && learnerName.trim()) {
+        const { data: newChild } = await supabase.from('children')
+          .insert({ parent_id: user.id, name: learnerName.trim(), grade: learnerGrade || null })
+          .select('id, name, grade').single();
+        if (newChild) { childId = newChild.id; setChildren(prev => [...prev, newChild]); setSelectedChildId(newChild.id); }
+      }
+      // Create booking first (as pending), carrying the learner context.
+      const bookingData = await onBook(tutor.id, selectedSubject || tutor.subject, selectedDate.toISOString().split('T')[0], selectedTime, {
+        learner_name: learnerName.trim(),
+        learner_grade: learnerGrade || null,
+        focus_note: focusNote.trim() || null,
+        child_id: childId || null,
+      });
       setPendingBooking({
         ...bookingData,
         id: bookingData?.id || Date.now().toString(),
@@ -4370,12 +5098,12 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
             )}
           </div>
           <div className="px-6 pb-6">
-            <div className="flex items-end gap-5 -mt-14 mb-4">
+            <div className="flex items-end gap-5 mb-4">
               <img
                 src={tutor.profiles?.avatar_url || initialsAvatar(tutor.profiles?.full_name || 'T', '&size=160&bold=true')}
                 alt={tutor.profiles?.full_name}
                 onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(tutor.profiles?.full_name || 'T', '&size=160&bold=true'); }}
-                className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-lg bg-slate-100"
+                className="w-28 h-28 -mt-14 relative z-10 rounded-full object-cover border-4 border-white shadow-lg bg-slate-100"
               />
               <div className="flex-1 pb-1">
                 <h1 className="text-2xl font-bold text-slate-900">{tutor.profiles?.full_name}</h1>
@@ -4406,7 +5134,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
               {tutor.languages && (Array.isArray(tutor.languages) ? tutor.languages : [tutor.languages]).map(l => (
                 <span key={l} className="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm">{l}</span>
               ))}
-              {tutor.grade_levels && (Array.isArray(tutor.grade_levels) ? tutor.grade_levels : [tutor.grade_levels]).map(g => (
+              {gradeList(tutor.grade_levels).map(g => (
                 <span key={g} className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm">{g}</span>
               ))}
             </div>
@@ -4429,7 +5157,9 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
             <div>
               <h2 className="text-lg font-semibold text-slate-900 mb-3">What I teach</h2>
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium">{tutor.subject}</span>
+                {[...new Set((Array.isArray(tutor.subjects) && tutor.subjects.length ? tutor.subjects : [tutor.subject]).filter(Boolean))].map(sub => (
+                  <span key={sub} className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium">{sub}</span>
+                ))}
                 {tutor.specialties?.map((s, i) => (
                   <span key={i} className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full text-sm">{s}</span>
                 ))}
@@ -4529,17 +5259,81 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                 </>
               )}
 
+              {/* Who is this lesson for? — appears once a time is chosen */}
+              {selectedTime && (
+                <div className="mb-5 pt-4 border-t border-slate-100 space-y-3">
+                  <p className="text-sm font-semibold text-slate-800">Who is this lesson for?</p>
+
+                  {bookableSubjects.length > 1 && (
+                    <div>
+                      <label className="block text-xs font-medium text-slate-500 mb-1">Subject</label>
+                      <select value={selectedSubject} onChange={e => setSelectedSubject(e.target.value)}
+                        className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
+                        {bookableSubjects.map(sub => <option key={sub} value={sub}>{sub}</option>)}
+                      </select>
+                    </div>
+                  )}
+
+                  {/* Saved learners — pick one, or add someone new */}
+                  {children.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      {children.map(c => (
+                        <button key={c.id} type="button" onClick={() => pickChild(c)}
+                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedChildId === c.id ? 'bg-emerald-500 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}>
+                          {c.name}{c.grade ? ` · ${c.grade}` : ''}
+                        </button>
+                      ))}
+                      <button type="button" onClick={pickNewLearner}
+                        className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedChildId === null ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}>
+                        + Someone new
+                      </button>
+                    </div>
+                  )}
+
+                  {/* Name + grade inputs — only when adding a new learner */}
+                  {selectedChildId === null && (
+                    <>
+                      <div>
+                        <label className="block text-xs font-medium text-slate-500 mb-1">Student's name</label>
+                        <input type="text" value={learnerName} onChange={e => setLearnerName(e.target.value)}
+                          placeholder="e.g. your child's name (or your own)"
+                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-medium text-slate-500 mb-1">Grade / level</label>
+                        <select value={learnerGrade} onChange={e => setLearnerGrade(e.target.value)}
+                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
+                          <option value="">Select grade…</option>
+                          {GRADES.map(g => <option key={g} value={g}>{g}</option>)}
+                        </select>
+                      </div>
+                      {children.length > 0 && <p className="text-xs text-slate-400">We’ll save them so you can just tap their name next time.</p>}
+                    </>
+                  )}
+
+                  <div>
+                    <label className="block text-xs font-medium text-slate-500 mb-1">What should the tutor focus on? <span className="text-slate-400 font-normal">(optional)</span></label>
+                    <textarea value={focusNote} onChange={e => setFocusNote(e.target.value)} rows={2}
+                      placeholder="e.g. struggling with fractions; preparing for end-term exam"
+                      className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none" />
+                  </div>
+                </div>
+              )}
+
               {/* Book button */}
-              <button 
-                onClick={handleBook} 
-                disabled={!selectedTime || booking} 
+              <button
+                onClick={handleBook}
+                disabled={!selectedTime || !learnerName.trim() || !learnerGrade || booking}
                 className={`w-full py-3 rounded-xl font-semibold transition-colors ${
-                  selectedTime 
-                    ? 'bg-emerald-500 hover:bg-emerald-600 text-white' 
+                  selectedTime && learnerName.trim() && learnerGrade
+                    ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
                     : 'bg-slate-100 text-slate-400 cursor-not-allowed'
                 }`}
               >
-                {booking ? 'Booking...' : selectedTime ? `Book for KSh ${tutor.hourly_rate?.toLocaleString()}` : 'Select a time to book'}
+                {booking ? 'Booking...'
+                  : !selectedTime ? 'Select a time to book'
+                  : (!learnerName.trim() || !learnerGrade) ? 'Add student name & grade'
+                  : `Book for KSh ${tutor.hourly_rate?.toLocaleString()}`}
               </button>
 
               {/* Message button */}
@@ -4589,7 +5383,9 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-4">
           <button onClick={() => onNavigate('tutors')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Find Tutors</button>
-          <button onClick={() => onNavigate('consulting')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Consulting</button>
+          <button onClick={() => onNavigate('horeb')} className={`text-sm font-medium ${scrolled ? 'text-emerald-600' : 'text-amber-300'}`}>HOREB</button>
+          <button onClick={() => onNavigate('clubs')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Clubs</button>
+          <button onClick={() => onNavigate('schools')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>For Schools</button>
           {isAdmin && <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-purple-600' : 'text-purple-300'}`}>Admin</button>}
           {user && profile?.role === 'student' && <MomentumChip userId={profile?.id} onClick={() => onNavigate('ai')} />}
           {user ? (
@@ -4622,7 +5418,9 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
       {mobileOpen && (
         <div className={`md:hidden ${scrolled ? 'bg-white border-t border-slate-100' : 'bg-slate-900/95 backdrop-blur-sm'} px-4 py-4 space-y-2`}>
           <button onClick={() => { onNavigate('tutors'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Find Tutors</button>
-          <button onClick={() => { onNavigate('consulting'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Consulting</button>
+          <button onClick={() => { onNavigate('horeb'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-emerald-700 hover:bg-slate-100' : 'text-amber-300 hover:bg-white/10'}`}>HOREB</button>
+          <button onClick={() => { onNavigate('clubs'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Clubs</button>
+          <button onClick={() => { onNavigate('schools'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>For Schools</button>
           {isAdmin && <button onClick={() => { onNavigate('admin'); setMobileOpen(false); }} className="block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-purple-400 hover:bg-white/10">Admin</button>}
           {!user && (
             <div className="flex gap-2 pt-2">
@@ -4818,6 +5616,17 @@ const AdminDashboard = ({ onLogout, onBack }) => {
     setAllTutors(prev => prev.map(t => t.id === tutorId ? { ...t, verification_status: 'rejected', verified: false, rejection_reason: rejectReason, _status: 'rejected' } : t));
     setRejectingId(null);
     setRejectReason('');
+    setActionLoading(null);
+  };
+
+  // Silently remove a profile from the public site (ghost/test accounts,
+  // broken photos) WITHOUT emailing the tutor — unlike Reject. Sets it back to
+  // pending so it's reversible: Approve re-publishes it.
+  const handleHideTutor = async (tutorId) => {
+    setActionLoading(tutorId);
+    const { error } = await supabase.from('tutors').update({ verified: false, verification_status: 'pending' }).eq('id', tutorId);
+    if (error) await supabase.from('tutors').update({ verified: false, verification_status: 'pending' }).eq('user_id', tutorId);
+    setAllTutors(prev => prev.map(t => t.id === tutorId ? { ...t, verified: false, verification_status: 'pending', _status: 'pending' } : t));
     setActionLoading(null);
   };
 
@@ -5360,7 +6169,13 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                               {t._status !== 'approved' && (
                                 <button onClick={() => handleApproveTutor(t.id)} disabled={actionLoading === t.id}
                                   className="px-5 py-2 bg-emerald-500 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 disabled:opacity-50">
-                                  {actionLoading === t.id ? 'Approving...' : 'Approve'}
+                                  {actionLoading === t.id ? (t._status === 'pending' && t.verified === false ? 'Publishing...' : 'Approving...') : (t.verification_status === 'pending' && t.bio ? 'Publish to site' : 'Approve')}
+                                </button>
+                              )}
+                              {t._status === 'approved' && (
+                                <button onClick={() => handleHideTutor(t.id)} disabled={actionLoading === t.id}
+                                  className="px-5 py-2 bg-white border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-50 disabled:opacity-50">
+                                  {actionLoading === t.id ? 'Hiding...' : 'Hide from site'}
                                 </button>
                               )}
                               <button onClick={() => setRejectingId(t.id)}
@@ -5468,6 +6283,10 @@ function AppInner() {
     if (path === 'teach') return 'teach';
     if (path === 'dashboard') return 'dashboard';
     if (path === 'ai') return 'ai';
+    if (path === 'horeb') return 'horeb';
+    if (path === 'horebhow') return 'horebhow';
+    if (path === 'schools') return 'schools';
+    if (path === 'clubs') return 'clubs';
     if (path === 'spreadsheet') return 'spreadsheet';
     if (path === 'admin') return 'admin';
     return 'home';
@@ -5492,6 +6311,23 @@ function AppInner() {
     return () => window.removeEventListener('scroll', h);
   }, []);
 
+  // After a signup started from the HOREB front door, land the new learner in
+  // the engine once they're authenticated (not on the dashboard).
+  useEffect(() => {
+    if (!auth.user) return;
+    let intent; try { intent = sessionStorage.getItem('tg_after_auth'); } catch { intent = null; }
+    if (intent) {
+      try { sessionStorage.removeItem('tg_after_auth'); } catch { /* ignore */ }
+      handleNavigate(intent);
+    }
+  }, [auth.user]);
+
+  // A logged-in learner who hits the public HOREB intro goes straight to the
+  // engine (the intro is only for prospects).
+  useEffect(() => {
+    if ((page === 'horeb' || page === 'horebhow') && auth.user) handleNavigate('ai');
+  }, [page, auth.user]);
+
   // Browser back/forward button support
   useEffect(() => {
     const onPopState = () => {
@@ -5501,6 +6337,10 @@ function AppInner() {
       else if (path === 'teach') setPage('teach');
       else if (path === 'dashboard') setPage('dashboard');
       else if (path === 'ai') setPage('ai');
+      else if (path === 'horeb') setPage('horeb');
+      else if (path === 'horebhow') setPage('horebhow');
+      else if (path === 'schools') setPage('schools');
+      else if (path === 'clubs') setPage('clubs');
       else if (path === 'spreadsheet') setPage('spreadsheet');
       else if (path === 'admin') setPage('admin');
       else if (path === 'privacy') setPage('privacy');
@@ -5557,6 +6397,16 @@ function AppInner() {
     return <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} />;
   }
 
+  // HOREB for Schools — B2B pitch page
+  if (page === 'schools') {
+    return <SchoolsPage onNavigate={handleNavigate} />;
+  }
+
+  // Interest-led clubs — discovery page
+  if (page === 'clubs') {
+    return <ClubsRoute user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />;
+  }
+
   // Teacher / class insights dashboard
   if (page === 'classroom') {
     return <TeacherDashboard onBack={() => handleNavigate('dashboard')} teacherProfile={auth.profile} />;
@@ -5601,6 +6451,12 @@ function AppInner() {
       <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />
       
       {page === 'home' && !selectedTutor && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {(page === 'horeb' || page === 'horebhow') && !auth.user && (
+        <>
+          <HorebIntro user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
+          <HorebHow user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} embedded />
+        </>
+      )}
       {page === 'teach' && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={() => handleNavigate('home')} user={auth.user} setShowAuth={setShowAuth} />}
       {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}

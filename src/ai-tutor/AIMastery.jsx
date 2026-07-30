@@ -6,19 +6,24 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
 import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
-import { processReviewResult, applyImplicitCredits, calculateMemoryStrength } from './spacedRepetition.js';
+import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
+import { HorebBot } from './HorebBot.jsx';
+import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
+import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
+import { shouldInterleave, pickInterleavedReview } from './interleave.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
 import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
-import { activateReferral, shareOnWhatsApp, shareMessages } from '../growth.js';
+import { SUPPORT, SUPPORT_LABEL, initialSupportLevel, nextSupportLevel, completionPlan, exampleSupport } from './fadedExamples.js';
+import YoungLearnerLesson, { planYoungLesson } from './YoungLearnerLesson.jsx';
+import BridgeLesson, { planBridgeLesson } from './BridgeLesson.jsx';
 import { supabase } from '../supabase.js';
 import { Icon } from './components/Icons.jsx';
 import { Lottie, LOTTIE } from './components/Lottie.jsx';
 import { InteractiveVisual, SKILL_VISUALS } from './InteractiveVisual.jsx';
-import { TeachingVisual } from './TeachingVisual.jsx';
 import { checkVisualAnswer } from './content/visual.js';
 import { checkAnswerMatch, normalizeMath } from './answerCheck.js';
 
@@ -65,14 +70,6 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
         <h2 className="text-2xl font-bold mb-1">{item.title}</h2>
         {item.subtitle && <p className="text-slate-300 mb-2">{item.subtitle}</p>}
         {item.xp != null && <p className="text-emerald-400 font-bold text-lg mb-2">+{item.xp} XP</p>}
-        {item.shareText && (
-          <button
-            onClick={() => shareOnWhatsApp(item.shareText)}
-            className="mt-1 mb-1 w-full bg-[#25D366] hover:bg-[#1ebe5b] text-white rounded-xl px-6 py-3 font-semibold transition-colors"
-          >
-            📲 Share on WhatsApp
-          </button>
-        )}
         <button onClick={onDismiss} className="mt-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl px-8 py-3 font-semibold transition-colors">Continue</button>
       </div>
     </div>
@@ -95,6 +92,7 @@ export function AIMastery({ onBack, userId, studentName }) {
   const getPostRequisites = sub?.getPostReqs || (() => []);
   const generateProblem = sub?.generate || (() => null);
   const generateWorkedExample = sub?.generateExample || (() => null);
+  const getKpCount = sub?.kpCount || (() => 1);
 
   // Active syllabus view (CBC/CBE, Cambridge, or native). Persisted per subject
   // inside progress so it survives reloads / other devices.
@@ -131,6 +129,24 @@ export function AIMastery({ onBack, userId, studentName }) {
     return { skills, getPostReqs: sub.getPostReqs, getPreChain, getPostChain, curriculum };
   }, [sub, curriculum]);
 
+  // Per-child HOREB: a parent account can run the engine for each of their
+  // children separately. activeLearner === null means the account holder
+  // practises; a child means that child's own namespaced progress (its own
+  // profile key + cloud row), still owned by the parent uid for RLS.
+  const [learners, setLearners] = useState([]);
+  const [activeLearner, setActiveLearner] = useState(null);
+  useEffect(() => {
+    if (!userId) { setLearners([]); return; }
+    supabase.from('children').select('id, name, grade').eq('parent_id', userId).order('created_at')
+      .then(({ data }) => setLearners(data || []));
+  }, [userId]);
+  const learnerBase = activeLearner ? `${userId}_c${activeLearner.id}` : userId;
+  const learnerId = activeLearner?.id || null;
+  const keyFor = useCallback(
+    (subj) => (subj === 'math' ? learnerBase : `${learnerBase}_${subj}`),
+    [learnerBase],
+  );
+
   // Lesson / Practice state
   const [activeSkill, setActiveSkill] = useState(null);
   const [problem, setProblem] = useState(null);
@@ -138,7 +154,13 @@ export function AIMastery({ onBack, userId, studentName }) {
   const [feedback, setFeedback] = useState(null);
   const [showHint, setShowHint] = useState(false);
   const [session, setSession] = useState({ correct: 0, total: 0, streak: 0, startTime: null });
+  // Interleaved review interlude inside a lesson (Rohrer): { skillId, name } | null.
+  const [interleave, setInterleave] = useState(null);
+  const interleaveCountRef = useRef(0);
   const [kpIndex, setKpIndex] = useState(0);
+  // Ref mirror so problem generation always reads the CURRENT knowledge-point,
+  // even when nextProblem() runs synchronously right after finalizeResult().
+  const kpIndexRef = useRef(0);
   const [showWorkedExample, setShowWorkedExample] = useState(true);
   const [lessonFailCount, setLessonFailCount] = useState(0);
   // CPA modality: 'abstract' (symbols) by default; escalates to 'concrete'
@@ -146,8 +168,11 @@ export function AIMastery({ onBack, userId, studentName }) {
   const [modalityLevel, setModalityLevel] = useState('abstract');
   const [visualAnswer, setVisualAnswer] = useState(null);
 
-  // Diagnostic state
-  const [diagState, setDiagState] = useState({ skills: [], index: 0, balances: {}, results: {}, startTimes: {} });
+  // Diagnostic state (adaptive: running evidence + a moving focus grade, not a fixed list)
+  const [diagState, setDiagState] = useState({ answered: [], balances: {}, results: {}, startTimes: {}, current: null, focus: null, perGrade: {} });
+  // Snapshots of each answered question so "Previous" can step back and rollback
+  // the evidence (in-session only — not restored across a reload/resume).
+  const [diagHistory, setDiagHistory] = useState([]);
 
   // Review state
   const [reviewProblems, setReviewProblems] = useState([]);
@@ -165,11 +190,19 @@ export function AIMastery({ onBack, userId, studentName }) {
   // Layered hints + tooltips state
   const [attemptCount, setAttemptCount] = useState(0);
   const [hintLevel, setHintLevel] = useState(0); // 0=none, 1=hint, 2=partial steps, 3=full reveal
-  // --- Teaching flow (worked-example effect + fading + specific feedback) ---
-  const [workedEx, setWorkedEx] = useState(null);  // stable example instance (NOT regenerated per render)
-  const [weStep, setWeStep] = useState(0);         // steps revealed so far (learner-paced segmenting)
-  const [guided, setGuided] = useState(false);     // completion problem: steps shown, student finishes
-  const [misconception, setMisconception] = useState(null); // named feedback for a recognised wrong answer
+  const [wrongInfo, setWrongInfo] = useState(null); // { answer, diagnosis } | { needNumber:true } — feedback on the last wrong try
+
+  // Faded worked examples (Renkl completion problems). `scaffoldLevel` is the
+  // live support level (0 guided … 3 solo); the ref mirrors it for the
+  // synchronous finalize path. `answeredLevel` freezes the level the current
+  // problem was ANSWERED at (for the post-answer self-explanation card), and
+  // `scaffoldableRef` records whether this problem could be scaffolded at all
+  // — the mastery guard only bites when support was actually on offer.
+  const [scaffoldLevel, setScaffoldLevel] = useState(SUPPORT.SOLO);
+  const scaffoldRef = useRef(SUPPORT.SOLO);
+  const scaffoldableRef = useRef(false);
+  const [answeredLevel, setAnsweredLevel] = useState(null);
+  const [selfExplainOpen, setSelfExplainOpen] = useState(false);
   const [activeTooltip, setActiveTooltip] = useState(null);
   const [expandedWhySteps, setExpandedWhySteps] = useState({});
   const [conceptsExpanded, setConceptsExpanded] = useState(true);
@@ -275,10 +308,29 @@ export function AIMastery({ onBack, userId, studentName }) {
     let cancelled = false;
     setLoading(true);
     (async () => {
-      const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
-      const p = await loadProgress(storageKey);
+      const storageKey = keyFor(subjectId);
+      const p = await loadProgress(storageKey, userId);
       if (cancelled) return;
       setProgress(p);
+
+      // Resume an unfinished diagnostic exactly where the student left off — the
+      // same current question, all evidence so far, and the focus grade. The
+      // candidate pool is the full skill list, rebuilt fresh from the subject.
+      const dip = p.diagInProgress;
+      if (!p.diagnosed && dip && dip.subjectId === subjectId && dip.currentId && Array.isArray(dip.answered)) {
+        try {
+          const cur = ctx?.skills?.[dip.currentId];
+          if (!cur) throw new Error('current skill not found');
+          setDiagState({ answered: dip.answered, balances: dip.balances || {}, results: dip.results || {}, startTimes: { [cur.id]: Date.now() }, current: cur, focus: dip.focus ?? p.declaredGrade, perGrade: dip.perGrade || {} });
+          setDiagHistory([]); // snapshots aren't persisted; can't step back past a reload
+          setProblem(dip.problem || generateProblem(cur.id));
+          setAnswer(''); setVisualAnswer(null); setFeedback(null);
+          setView('diagnostic');
+          setLoading(false);
+          return;
+        } catch { /* corrupt cursor — fall through to the normal entry view */ }
+      }
+
       // Only (re)set the entry view on a genuine load. If this effect re-fires
       // while the student is mid-activity (e.g. an auth token refresh briefly
       // changes userId), NEVER yank them out of an in-progress diagnostic,
@@ -290,29 +342,28 @@ export function AIMastery({ onBack, userId, studentName }) {
       setLoading(false);
     })();
     return () => { cancelled = true; };
-  }, [userId, subjectId]);
+  }, [userId, subjectId, learnerBase, keyFor]);
 
   // Auto-save on progress change
   useEffect(() => {
     if (!loading && subjectId) {
-      const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
-      saveProgress(storageKey, progress);
+      saveProgress(keyFor(subjectId), progress, userId, learnerId);
     }
-  }, [progress, userId, loading, subjectId]);
+  }, [progress, userId, loading, subjectId, keyFor, learnerId]);
 
   // Keep a ref of the latest state so the unmount/back handlers flush the most
   // recent progress instead of a stale snapshot captured at first render.
-  const latestRef = useRef({ progress, loading, subjectId, userId });
+  const latestRef = useRef({ progress, loading, subjectId, userId, learnerBase, learnerId });
   useEffect(() => {
-    latestRef.current = { progress, loading, subjectId, userId };
+    latestRef.current = { progress, loading, subjectId, userId, learnerBase, learnerId };
   });
 
   // Flush the latest progress to the cloud immediately (used on exit).
   const flushSave = useCallback(() => {
-    const { progress, loading, subjectId, userId } = latestRef.current;
+    const { progress, loading, subjectId, userId, learnerBase, learnerId } = latestRef.current;
     if (loading || !subjectId) return;
-    const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
-    forceSave(storageKey, progress);
+    const storageKey = subjectId === 'math' ? learnerBase : `${learnerBase}_${subjectId}`;
+    forceSave(storageKey, progress, userId, learnerId);
   }, []);
 
   // Save on unmount (e.g. navigating away from the tutor)
@@ -405,68 +456,156 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // ==================== DIAGNOSTIC ====================
 
+  // Adaptive, grade-anchored diagnostic. Instead of marching a fixed list, we
+  // start the focus at the student's declared grade and move it — UP when they
+  // clear a grade, DOWN when they fail one — until the frontier between what they
+  // know and don't is bracketed. Credit propagation means each answer also tells
+  // us about that skill's prerequisites/post-requisites, so we don't re-measure
+  // what the graph already implies and spend questions where we're still unsure
+  // (within a grade, we ask the least-certain skill first). The test ends as soon
+  // as the level is pinned down — short for a clear-cut student, longer when the
+  // picture is mixed — the "infer from structure, measure only the gaps" idea.
+  const DIAG_MIN = 8;    // ask at least this many before bracketing can stop us
+  const DIAG_MAX = 20;   // hard ceiling
+
+  const diagList = () => Object.values(ctx?.skills || {}).filter(s => Number.isFinite(s.grade));
+  const gradeSpan = (list) => { const g = list.map(s => s.grade); return [Math.min(...g), Math.max(...g)]; };
+  const clearedG = (pg, g) => pg[g] && pg[g].t >= 2 && pg[g].c / pg[g].t >= 0.5;
+  const failedG = (pg, g) => pg[g] && pg[g].t >= 2 && pg[g].c / pg[g].t < 0.5;
+  // Nearest grade to `focus` that still has an unanswered skill; within a grade,
+  // prefer load-bearing (critical) skills, then the least-certain one.
+  const pickAt = (list, focus, answeredSet, balances) => {
+    const [gmin, gmax] = gradeSpan(list);
+    for (let d = 0; d <= gmax - gmin; d++) {
+      for (const g of (d === 0 ? [focus] : [focus - d, focus + d])) {
+        const cands = list.filter(s => s.grade === g && !answeredSet.has(s.id));
+        if (cands.length) {
+          cands.sort((a, b) => (b.critical ? 1 : 0) - (a.critical ? 1 : 0)
+            || Math.abs(balances[a.id] || 0) - Math.abs(balances[b.id] || 0));
+          return cands[0];
+        }
+      }
+    }
+    return null;
+  };
+
+  // Snapshot the live diagnostic so a browser close/reload resumes the exact
+  // question — answers so far, running evidence, focus grade, and the current
+  // problem. Stored in `progress` (localStorage instantly + cloud on save). The
+  // candidate pool is the full skill list, rebuilt on resume rather than stored.
+  const diagCursor = (answered, balances, results, current, prob, focus, perGrade) =>
+    ({ subjectId, v: 3, answered, balances, results, currentId: current?.id, problem: prob, focus, perGrade });
+
   const startDiagnostic = () => {
-    const skills = getAdaptiveDiagnosticSkills(progress, ctx);
-    setDiagState({ skills, index: 0, balances: {}, results: {}, startTimes: { [skills[0]?.id]: Date.now() } });
-    setProblem(generateProblem(skills[0]?.id));
+    const list = diagList();
+    const focus = progress.declaredGrade; // required before starting
+    const first = pickAt(list, focus, new Set(), {}) || list[0];
+    const firstProblem = generateProblem(first?.id);
+    setDiagState({ answered: [], balances: {}, results: {}, startTimes: { [first?.id]: Date.now() }, current: first, focus, perGrade: {} });
+    setDiagHistory([]);
+    setProblem(firstProblem);
+    setProgress(p => ({ ...p, diagInProgress: diagCursor([], {}, {}, first, firstProblem, focus, {}) }));
     setAnswer('');
     setVisualAnswer(null);
     setFeedback(null);
     setView('diagnostic');
   };
 
-  const handleDiagnosticAnswer = () => {
+  // Step back to the previous diagnostic question, rolling the evidence back to
+  // exactly what it was before that question was answered.
+  const diagBack = () => {
+    if (!diagHistory.length) return;
+    const prev = diagHistory[diagHistory.length - 1];
+    setDiagHistory(diagHistory.slice(0, -1));
+    setDiagState(prev.state);
+    setProblem(prev.problem);
+    setAnswer('');
+    setVisualAnswer(null);
+    setFeedback(null);
+    const s = prev.state;
+    setProgress(p => ({ ...p, diagInProgress: diagCursor(s.answered, s.balances, s.results, s.current, prev.problem, s.focus, s.perGrade) }));
+  };
+
+  const handleDiagnosticAnswer = (opts = {}) => {
+    // "I haven't learned this yet" — an honest signal, not a wrong answer. It
+    // counts as not-known for placement (that's exactly what we need to learn)
+    // without forcing the child to guess or type junk.
+    const skip = opts.skip === true;
     // Allow either a typed answer or an interactive-visual answer (number line etc.)
     const hasVisualAnswer = problem?.visual && visualAnswer != null;
-    if (!answer.trim() && !hasVisualAnswer) return;
-    const { skills, index, balances, results, startTimes } = diagState;
-    const skill = skills[index];
+    if (!skip && !answer.trim() && !hasVisualAnswer) return;
+    const { answered, balances, results, startTimes, current, focus, perGrade } = diagState;
+    const skill = current;
+    if (!skill) return;
+    // Remember this question so "Previous" can return to it and undo its evidence.
+    setDiagHistory(h => [...h, { state: diagState, problem }]);
     const timeTaken = Date.now() - (startTimes[skill.id] || Date.now());
     const timeWeight = getTimeWeight(timeTaken);
 
-    const correct = hasVisualAnswer
+    const correct = skip ? false : hasVisualAnswer
       ? checkVisualAnswer(visualAnswer, problem.visual)
       : checkAnswerMatch(answer, problem);
 
+    // How sure the running evidence already was about this skill, BEFORE the
+    // answer — the calibration signal to mine across learners later (idea #2).
+    const priorConfidence = Math.abs(balances[skill.id] || 0);
+
     const newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
     const newResults = { ...results, [skill.id]: { correct, timeTaken } };
+    const newAnswered = [...answered, skill.id];
+    const answeredSet = new Set(newAnswered);
+    const newPerGrade = { ...perGrade, [skill.grade]: {
+      c: (perGrade[skill.grade]?.c || 0) + (correct ? 1 : 0),
+      t: (perGrade[skill.grade]?.t || 0) + 1,
+    } };
 
     logResponse({
       studentId: userId, subject: subjectId, skillId: skill.id,
       correct, problemType: problem?.type, timeMs: timeTaken, isDiagnostic: true,
+      confidence: priorConfidence, skipped: skip || undefined,
     });
 
     setFeedback(correct ? 'correct' : 'incorrect');
 
-    const isLast = index >= skills.length - 1;
+    // Move the focus toward the frontier, then decide whether it's bracketed.
+    const list = diagList();
+    const [gmin, gmax] = gradeSpan(list);
+    let nextFocus = focus;
+    if (clearedG(newPerGrade, focus)) nextFocus = Math.min(gmax, focus + 1);
+    else if (failedG(newPerGrade, focus)) nextFocus = Math.max(gmin, focus - 1);
+
+    let bracketed = false;
+    if (newAnswered.length >= DIAG_MIN) {
+      for (let g = gmin; g < gmax; g++) if (clearedG(newPerGrade, g) && failedG(newPerGrade, g + 1)) bracketed = true;
+    }
+    const nextSkill = pickAt(list, nextFocus, answeredSet, newBalances);
+    const isLast = newAnswered.length >= DIAG_MAX || !nextSkill || bracketed;
 
     // On the final question, compute and PERSIST the finished state immediately —
-    // before the 800ms feedback pause — so navigating away during that pause can
-    // never lose the result and force a retake.
+    // before the 800ms feedback pause — so navigating away can never lose it.
     if (isLast) {
+      const answeredObjs = newAnswered.map(id => ctx.skills[id]).filter(Boolean);
       const skillUpdates = processDiagnosticResults(newBalances, ctx);
-      // Persist a stable placement grade from how the student did per grade band.
-      const placementGrade = computePlacementGrade(skills, newResults, progress.declaredGrade);
+      const placementGrade = computePlacementGrade(answeredObjs, newResults, progress.declaredGrade);
       const finished = {
         ...progress,
         skills: { ...progress.skills, ...skillUpdates },
         diagnosed: true,
         diagnosticBalances: newBalances,
         placementGrade,
+        diagInProgress: null, // completed — clear the resume cursor
       };
       setProgress(finished);
-      const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`;
-      forceSave(storageKey, finished);
-      // Referral activation gate: the referred student is now genuinely
-      // onboarded — their referrer's draw entry becomes real.
-      activateReferral(userId);
+      forceSave(keyFor(subjectId), finished, userId, learnerId);
     }
 
     setTimeout(() => {
       if (!isLast) {
-        const next = index + 1;
-        setDiagState({ skills, index: next, balances: newBalances, results: newResults, startTimes: { ...startTimes, [skills[next].id]: Date.now() } });
-        setProblem(generateProblem(skills[next].id));
+        const nextProblem = generateProblem(nextSkill.id);
+        setDiagState({ answered: newAnswered, balances: newBalances, results: newResults, startTimes: { ...startTimes, [nextSkill.id]: Date.now() }, current: nextSkill, focus: nextFocus, perGrade: newPerGrade });
+        setProblem(nextProblem);
+        // Advance the resume cursor so a mid-test exit returns to THIS question.
+        setProgress(p => ({ ...p, diagInProgress: diagCursor(newAnswered, newBalances, newResults, nextSkill, nextProblem, nextFocus, newPerGrade) }));
         setAnswer('');
         setVisualAnswer(null);
         setFeedback(null);
@@ -478,21 +617,39 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // ==================== LESSON (KP-BASED) ====================
 
+  // Serve a lesson problem and note whether it can carry a completion scaffold
+  // (grades 1–4 have their own scaffolding, so they are never "scaffoldable"
+  // here and the mastery guard leaves them alone).
+  const serveLessonProblem = (skillId, level) => {
+    const p = generateProblem(skillId, { level, kp: kpIndexRef.current });
+    const young = (SKILLS[skillId]?.grade || 99) <= 4;
+    scaffoldableRef.current = !young && !!completionPlan(p, SUPPORT.FULL);
+    return p;
+  };
+
   const startLesson = (skillId) => {
     setActiveSkill(skillId);
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
-    setKpIndex(0);
+    setInterleave(null);
+    interleaveCountRef.current = 0;
+    setKpIndex(0); kpIndexRef.current = 0;
     setLessonFailCount(0);
     setModalityLevel('abstract');
-    // Generate the worked example ONCE and keep it in state — regenerating it
-    // per render would shuffle its numbers mid-study.
-    const we = generateWorkedExample(skillId);
-    setWorkedEx(we);
-    setWeStep(0);
-    setGuided(false);
-    setMisconception(null);
+    // Faded worked examples: support starts where this learner's history says
+    // it should (expertise reversal — a practised learner skips support).
+    const startLevel = initialSupportLevel(progress.skills[skillId]);
+    scaffoldRef.current = startLevel;
+    setScaffoldLevel(startLevel);
+    setAnsweredLevel(null);
+    setSelfExplainOpen(false);
+    // Grades 1–4 never see the text worked example — the young flow teaches by
+    // demonstration (count-together / column reveal) instead. Past ORIENT the
+    // intro example is skipped too: a learner who no longer needs support goes
+    // straight to solving.
+    const young = (SKILLS[skillId]?.grade || 99) <= 4;
+    const we = (young || startLevel >= SUPPORT.ORIENT) ? null : generateWorkedExample(skillId);
     setShowWorkedExample(!!we);
-    setProblem(we ? null : generateProblem(skillId, { level: 'abstract' }));
+    setProblem(we ? null : serveLessonProblem(skillId, 'abstract'));
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
@@ -507,46 +664,76 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   const startPractice = () => {
     setShowWorkedExample(false);
-    const p = generateProblem(activeSkill, { level: modalityLevel });
-    setProblem(p);
-    // FADING (example → completion → independent): the FIRST problem after the
-    // worked example is a completion problem — its early steps are shown and the
-    // student supplies only the finish. Guided solves never count as clean.
-    setGuided(session.total === 0 && (p?.solution?.steps?.length || 0) >= 2);
-    setMisconception(null);
+    setProblem(serveLessonProblem(activeSkill, modalityLevel));
     setAnswer('');
     setFeedback(null);
     setAttemptCount(0);
     setHintLevel(0);
     setActiveTooltip(null);
     setVisualAnswer(null);
+    setAnsweredLevel(null);
+    setSelfExplainOpen(false);
+    setWrongInfo(null);
+  };
+
+  // An interleaved review is retrieval practice: ONE attempt, immediate
+  // feedback, credit to the reviewed skill's spaced-repetition schedule.
+  // The lesson skill's mastery count and session totals are untouched.
+  const handleInterleaveAnswer = () => {
+    const hasVisualAnswer = problem?.visual && visualAnswer != null;
+    if ((!answer.trim() && !hasVisualAnswer) || feedback) return;
+    const skillId = interleave.skillId;
+    const correct = hasVisualAnswer
+      ? checkVisualAnswer(visualAnswer, problem.visual)
+      : checkAnswerMatch(answer, problem);
+    const timeMs = Date.now() - problemStartRef.current;
+    logResponse({
+      studentId: userId, subject: subjectId, skillId,
+      correct, problemType: problem?.type, timeMs, isReview: true,
+    });
+    if (!correct) {
+      setWrongInfo({ answer: answer.trim(), diagnosis: diagnoseError(problem, answer) });
+      setHintLevel(3); // full reveal — the teaching moment still happens
+    }
+    setFeedback(correct ? 'correct' : 'incorrect');
+    const sp = progress.skills[skillId] || { attempts: 0, correct: 0, mastered: false, repNum: 0, learningSpeed: 1.0 };
+    const updatedSp = processReviewResult(sp, correct, timeMs, fluencyExpectedMs(SKILLS[skillId]));
+    updatedSp.attempts = sp.attempts + 1;
+    updatedSp.correct = sp.correct + (correct ? 1 : 0);
+    let updatedSkills = applyImplicitCredits(progress, skillId, correct, ctx);
+    updatedSkills = { ...updatedSkills, [skillId]: updatedSp };
+    // Small XP either way: showing up for a memory check pays (effort-aware).
+    setProgress(p => updateStreak(gainXP({ ...p, skills: updatedSkills }, correct ? 3 : 1)));
   };
 
   const checkAnswer = () => {
+    if (interleave) return handleInterleaveAnswer();
     // Visual problems are answered by interaction (or by typing the coordinate).
     const hasVisualAnswer = problem?.visual && visualAnswer != null;
     if ((!answer.trim() && !hasVisualAnswer) || feedback) return;
+    // A numeric problem with a no-digit entry ("abc") isn't a wrong attempt —
+    // it's "please type a number", so we don't burn one of their three tries.
+    const expectsNumber = /^-?\d/.test(String(problem?.answer ?? ''));
+    if (!hasVisualAnswer && expectsNumber && !/\d/.test(answer)) {
+      setWrongInfo({ needNumber: true });
+      return;
+    }
     const correct = hasVisualAnswer
       ? checkVisualAnswer(visualAnswer, problem.visual)
       : checkAnswerMatch(answer, problem);
     const newAttemptCount = attemptCount + 1;
     setAttemptCount(newAttemptCount);
 
-    // === SPECIFIC-ERROR FEEDBACK (the "teacher looked at your work" moment) ===
-    // Content authors name the classic wrong answers (sign slips, added instead
-    // of multiplied, forgot the ½ …). If the student's wrong answer IS one of
-    // them, say so specifically — far more instructive than a generic hint.
-    const mHit = !correct && answer.trim()
-      ? (problem.misconceptions || []).find(m => normalizeMath(String(answer)) === normalizeMath(String(m.when)))
-      : null;
-    setMisconception(mHit ? mHit.feedback : null);
+    // Feedback on THIS answer: name the likely slip (e.g. 42×4→160 = "you found
+    // 40×4 but forgot the ones"), keeping their answer visible.
+    if (!correct) setWrongInfo({ answer: answer.trim(), diagnosis: diagnoseError(problem, answer) });
+    else setWrongInfo(null);
 
     // === LAYERED WRONG-ANSWER HANDLING ===
-    // Attempt 1 wrong: show hint (or the named misconception), let them retry
-    // Attempt 2 wrong: show partial worked example, let them retry
-    // Attempt 3 wrong: show full answer + worked example, mark as final incorrect
+    // Attempt 1 wrong: "Not quite" + the diagnosis, let them retry
+    // Attempt 2 wrong: also offer the first steps
+    // Attempt 3 wrong: full answer + full working (for THIS problem), mark incorrect
     if (!correct && newAttemptCount < 3) {
-      // Not final attempt — show escalating hints, clear answer, let them retry
       setHintLevel(newAttemptCount); // 1 = hint, 2 = partial steps
       setAnswer('');
       return; // Don't record in progress yet — only the final result counts
@@ -555,15 +742,48 @@ export function AIMastery({ onBack, userId, studentName }) {
     // === FINAL RESULT (correct at any attempt, or 3rd-attempt fail) ===
     setFeedback(correct ? 'correct' : 'incorrect');
     if (!correct) setHintLevel(3); // Full reveal
+    // Freeze the support level this problem was answered at — the post-answer
+    // self-explanation card and telemetry read it after finalize fades it.
+    setAnsweredLevel(scaffoldRef.current);
 
+    finalizeResult(correct, {
+      attemptNo: newAttemptCount,
+      hintsUsed: correct ? hintLevel : 3,
+      timeMs: Date.now() - problemStartRef.current,
+    });
+  };
+
+  // The shared post-answer pipeline: telemetry, session, mastery/FIRe credit,
+  // CPA drop-down on struggle, XP. Used by the typed flow and the young flow.
+  const finalizeResult = (correct, { attemptNo, hintsUsed, timeMs, taps = null }) => {
+    // The support level this answer was produced under, before fading moves it.
+    const answeredAt = scaffoldRef.current;
+    // Climb the knowledge-point ladder one rung per correct answer (capped at the
+    // top). A skill like G2 addition thus walks no-regroup → regroup → 2-digit →
+    // 2-digit-regroup in order, instead of always sitting on step one. Wrong
+    // answers keep the student on the current KP to re-practise it.
+    let kpAdvanced = false;
+    if (correct) {
+      const top = getKpCount(activeSkill) - 1;
+      if (kpIndexRef.current < top) {
+        kpIndexRef.current += 1;
+        setKpIndex(kpIndexRef.current);
+        kpAdvanced = true;
+      }
+    }
+    // Fade the worked-example support: one rung lighter per correct, one rung
+    // heavier per wrong; entering a NEW knowledge point caps at ORIENT so a
+    // fresh variant is never met fully solo.
+    const faded = nextSupportLevel(answeredAt, correct, kpAdvanced);
+    scaffoldRef.current = faded;
+    setScaffoldLevel(faded);
     // Telemetry: capture the response for the HOREB learning loop.
     logResponse({
       studentId: userId, subject: subjectId, skillId: activeSkill,
       correct, problemType: problem?.type,
-      timeMs: Date.now() - problemStartRef.current,
-      // A guided (completion) solve is assisted by definition — never log it as
-      // hint-free, or the calibration loop would over-rate the skill's ease.
-      hintsUsed: correct ? Math.max(hintLevel, guided ? 1 : 0) : 3, attemptNo: newAttemptCount,
+      timeMs,
+      hintsUsed, attemptNo, taps,
+      scaffold: scaffoldableRef.current ? answeredAt : null,
     });
 
     const newSession = {
@@ -583,36 +803,28 @@ export function AIMastery({ onBack, userId, studentName }) {
     const newCorrect = sp.correct + (correct ? 1 : 0);
     const newAttempts = sp.attempts + 1;
     const accuracy = newCorrect / newAttempts;
-
-    // --- Desirable-difficulty & automaticity signals ---
-    // A CLEAN solve = correct with NO hints used (unassisted retrieval). A FLUENT
-    // solve = clean AND fast (automaticity). Time budget scales with difficulty.
-    const timeTaken = Date.now() - problemStartRef.current;
-    const automaticityMs = 30000 + (skill.weight || 3) * 15000; // ~45s (easy) … ~120s (hard)
-    const cleanSolve = correct && hintLevel === 0 && !guided;
-    const fluentSolve = cleanSolve && timeTaken <= automaticityMs;
-    const newCleanCorrect = (sp.cleanCorrect || 0) + (cleanSolve ? 1 : 0);
-    const newFluentCorrect = (sp.fluentCorrect || 0) + (fluentSolve ? 1 : 0);
-
-    // Mastery needs enough practice, high accuracy, a correct final answer, AND
-    // enough CLEAN (hint-free) solves — so hint-assisted answers can't manufacture
-    // an "illusion of comprehension". At least half of minProblems must be
-    // unassisted. (Struggling students are routed to remediation below instead of
-    // being carried to mastery by hints.)
-    const cleanNeeded = Math.max(1, Math.ceil(skill.minProblems / 2));
-    const shouldMaster = !isPlaceholder && correct
-      && newAttempts >= skill.minProblems
-      && accuracy >= skill.masteryThreshold
-      && newCleanCorrect >= cleanNeeded;
+    // Mastery needs enough practice, a high accuracy, AND this final answer to be
+    // correct — so a skill can never tip into "mastered" on a wrong answer just
+    // because cumulative accuracy is still above threshold. When completion
+    // scaffolding was available, the mastering answer must also have been given
+    // at light support (ORIENT or SOLO) — assisted answers are practice, not
+    // proof (assistance dilution).
+    const lightSupport = !scaffoldableRef.current || answeredAt >= SUPPORT.ORIENT;
+    // Test-out: a skill 2+ grades below the learner's own grade masters on a single
+    // clean first-attempt correct — a capable child proves a foundation once and
+    // moves on, instead of grinding six trivial reps. A wrong first try drops them
+    // straight back into normal practice (they clearly need it after all).
+    const tgLearnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    const testOutNow = Number.isFinite(skill?.grade) && (tgLearnerGrade - skill.grade) >= 2 && newAttempts === 1;
+    const shouldMaster = !isPlaceholder && correct && accuracy >= skill.masteryThreshold
+      && (testOutNow || (lightSupport && newAttempts >= skill.minProblems));
 
     // Apply implicit repetitions to prerequisites (skip for placeholder stand-ins)
     let updatedSkills = isPlaceholder ? { ...progress.skills } : applyImplicitCredits(progress, activeSkill, correct, ctx);
 
-    const updatedSp = processReviewResult(sp, correct);
+    const updatedSp = processReviewResult(sp, correct, timeMs, fluencyExpectedMs(SKILLS[activeSkill]));
     updatedSp.attempts = newAttempts;
     updatedSp.correct = newCorrect;
-    updatedSp.cleanCorrect = newCleanCorrect;
-    updatedSp.fluentCorrect = newFluentCorrect;
     if (shouldMaster && !sp.mastered) {
       updatedSp.mastered = true;
       // Keep the spaced-repetition schedule the FIRe model just computed; only
@@ -620,10 +832,6 @@ export function AIMastery({ onBack, userId, studentName }) {
       // repNum with a fixed 2, throwing away the review interval at mastery.)
       updatedSp.repNum = Math.max(updatedSp.repNum || 0, 2);
     }
-    // Automaticity: a mastered skill becomes "fluent" once solved correctly,
-    // unassisted AND quickly a couple of times — low-level skills automatic enough
-    // to free up working memory for harder work.
-    updatedSp.fluent = !!sp.fluent || (updatedSp.mastered && newFluentCorrect >= 2);
 
     updatedSkills = { ...updatedSkills, [activeSkill]: updatedSp };
 
@@ -649,7 +857,12 @@ export function AIMastery({ onBack, userId, studentName }) {
     if (shouldMaster && !sp.mastered) {
       xpEarned = calculateXP(accuracy, skill.estimatedMinutes, accuracy >= 1.0);
     } else if (correct) {
-      xpEarned = fluentSolve ? 3 : 2; // small automaticity bonus for fast, unassisted solves
+      xpEarned = 2; // Small XP per correct answer
+    } else if (!isPlaceholder) {
+      // Effort-aware (Math Academy): a final miss still ends in reading the
+      // full working — a completed teaching moment. Honest struggle never
+      // pays zero, so a hard session still moves the daily goal.
+      xpEarned = 1;
     }
 
     const updatedProgress = updateStreak(gainXP({
@@ -664,16 +877,32 @@ export function AIMastery({ onBack, userId, studentName }) {
       setTimeout(() => setCelebrations(q => [...q, {
         type: 'mastery', icon: '🏆', title: 'Skill Mastered!',
         subtitle: `${skill.name} — ${encourage('mastery')}`, xp: xpEarned,
-        // The proudest moment is the share moment (Holiday Blitz loop).
-        shareText: shareMessages.mastery(skill.name, userId),
       }]), 500);
     }
   };
 
+  // Young learners (G1–2): one final result per problem from the young UI,
+  // then keep the flow moving — the child already had their celebration.
+  const handleYoungResult = ({ correct, hintsUsed, timeMs, taps }) => {
+    finalizeResult(correct, { attemptNo: hintsUsed + 1, hintsUsed, timeMs, taps });
+    nextProblem();
+  };
+
   const nextProblem = () => {
-    setProblem(generateProblem(activeSkill, { level: modalityLevel }));
-    setGuided(false);            // only the first post-example problem is guided
-    setMisconception(null);
+    // Interleave a due review from ANOTHER skill after the 3rd and 7th answers
+    // (mixed practice ≈ doubles delayed retention vs blocked — Rohrer). Standard
+    // flow only: young learners keep their uninterrupted count-together rhythm.
+    const lg = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    const due = (lg > 3 && shouldInterleave(session.total, interleaveCountRef.current))
+      ? pickInterleavedReview(getReviews(progress, ctx), activeSkill) : null;
+    if (due) {
+      interleaveCountRef.current += 1;
+      setInterleave({ skillId: due.id, name: due.name || SKILLS[due.id]?.name || 'earlier skill' });
+      setProblem(generateProblem(due.id));
+    } else {
+      setInterleave(null);
+      setProblem(serveLessonProblem(activeSkill, modalityLevel));
+    }
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
@@ -681,6 +910,9 @@ export function AIMastery({ onBack, userId, studentName }) {
     setHintLevel(0);
     setActiveTooltip(null);
     setVisualAnswer(null);
+    setAnsweredLevel(null);
+    setSelfExplainOpen(false);
+    setWrongInfo(null);
   };
 
   // ==================== REVIEW (TIMED, INTERLEAVED) ====================
@@ -696,18 +928,24 @@ export function AIMastery({ onBack, userId, studentName }) {
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
     setReviewTimer(0);
     setReviewTimerActive(true);
+    setVisualAnswer(null);
     setView('review');
   };
 
   const handleReviewAnswer = () => {
-    if (!answer.trim() || feedback) return;
+    // Visual problems are answered by interaction, same as in lessons.
+    const hasVisualAnswer = problem?.visual && visualAnswer != null;
+    if ((!answer.trim() && !hasVisualAnswer) || feedback) return;
     const skillId = reviewProblems[reviewIndex];
-    const correct = checkAnswerMatch(answer, problem);
+    const correct = hasVisualAnswer
+      ? checkVisualAnswer(visualAnswer, problem.visual)
+      : checkAnswerMatch(answer, problem);
+    const timeMs = Date.now() - problemStartRef.current;
 
     logResponse({
       studentId: userId, subject: subjectId, skillId,
       correct, problemType: problem?.type,
-      timeMs: Date.now() - problemStartRef.current, isReview: true,
+      timeMs, isReview: true,
     });
 
     setFeedback(correct ? 'correct' : 'incorrect');
@@ -715,7 +953,7 @@ export function AIMastery({ onBack, userId, studentName }) {
 
     // Update skill progress with spaced repetition
     const sp = progress.skills[skillId] || { attempts: 0, correct: 0, mastered: false, repNum: 0, learningSpeed: 1.0 };
-    const updatedSp = processReviewResult(sp, correct);
+    const updatedSp = processReviewResult(sp, correct, timeMs, fluencyExpectedMs(SKILLS[skillId]));
     updatedSp.attempts = sp.attempts + 1;
     updatedSp.correct = sp.correct + (correct ? 1 : 0);
 
@@ -734,6 +972,7 @@ export function AIMastery({ onBack, userId, studentName }) {
         setProblem(generateProblem(reviewProblems[next]));
         setAnswer('');
         setFeedback(null);
+        setVisualAnswer(null);
       } else {
         // Review complete
         setReviewTimerActive(false);
@@ -756,7 +995,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     if (item?.type === 'mastery') goHome();
   };
   const switchSubject = () => { setSubjectId(null); setView('subject-picker'); setActiveSkill(null); setProgress(defaultProgress); };
-  const resetAll = () => { if (confirm('Reset ALL progress? This cannot be undone.')) { const fresh = defaultProgress(); setProgress(fresh); const storageKey = subjectId === 'math' ? userId : `${userId}_${subjectId}`; forceSave(storageKey, fresh); setView('welcome'); } };
+  const resetAll = () => { if (confirm('Reset ALL progress? This cannot be undone.')) { const fresh = defaultProgress(); setProgress(fresh); forceSave(keyFor(subjectId), fresh, userId, learnerId); setView('welcome'); } };
 
   // Grade/band label helper. ACCA subjects use named levels; otherwise the
   // active curriculum decides the wording ("Grade" vs Cambridge "Stage").
@@ -803,50 +1042,52 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // ==================== RENDER: WELCOME ====================
 
-  if (view === 'welcome') return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      {/* Light bridging header */}
-      <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
-        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-3">
-          {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600"><Icon name="back" /></button>}
-          <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">T</div>
-          <h1 className="text-base font-bold text-slate-900">AI Tutor</h1>
+  if (view === 'welcome') {
+    const welcomeFirst = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
+    return (
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900">
+      <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
+        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-2.5">
+          {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600 mr-1"><Icon name="back" /></button>}
+          <HorebBot size={28} />
+          <h1 className="text-base font-extrabold tracking-tight">HOREB</h1>
         </div>
       </div>
-      <div className="bg-gradient-to-b from-slate-100 to-slate-900 pt-12 pb-4" />
-      <div className="flex items-center justify-center p-4 -mt-8">
-        <div className="max-w-md text-center">
-          <div className="flex justify-center mb-4">
-            <Lottie src={LOTTIE.academics} size={140} fallback={<div className="text-6xl">{sub?.emoji || '🧠'}</div>} />
-          </div>
-          <h1 className="text-3xl font-bold mb-2">{sub?.name || 'AI Tutor'}</h1>
-          <p className="text-emerald-400 text-sm font-medium mb-4">Powered by The Math Academy Way</p>
-          <p className="text-slate-400 mb-6">Adaptive learning that finds your gaps and fills them. {sub?.description} — {SKILL_COUNT} skills.</p>
-          <div className="bg-slate-800 rounded-xl p-4 mb-4 text-left text-sm text-slate-300 space-y-2">
-            <p>🎯 <strong>Diagnostic</strong> — a short, targeted check to find your level and gaps</p>
-            <p>🧩 <strong>Knowledge graph</strong> — maps all skill connections</p>
-            <p>🔁 <strong>Spaced repetition</strong> — reviews skills before you forget</p>
-            <p>🎓 <strong>Worked examples</strong> — teaches before testing</p>
+      <div className="flex justify-center px-4 py-10">
+        <div className="max-w-md w-full">
+          <div className="flex justify-center mb-5"><HorebBot size={76} /></div>
+          <h1 className="text-[27px] font-extrabold tracking-tight text-center leading-tight mb-2">
+            {welcomeFirst ? `Hi ${welcomeFirst} — let’s` : 'Let’s'} find your starting point
+          </h1>
+          <p className="text-slate-500 text-center text-[15px] mb-6">
+            This is <strong className="text-slate-700">not a test</strong> — no marks, nothing to revise.
+            Just a few questions so I know exactly where to begin with you.
+          </p>
+
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-4 text-sm text-slate-600 space-y-2.5">
+            <p>Around 15–20 quick questions — we stop the moment I know your start.</p>
+            <p>Meet something you haven’t learned? Tap <strong className="text-slate-800">“I haven’t learned this yet”</strong> — that’s a helpful answer, not a wrong one.</p>
+            <p>Whatever we find, it’s only a starting line. Everything after it is growth.</p>
           </div>
 
-          {/* Onboarding — class + curriculum anchor the diagnostic to the student */}
-          <div className="bg-slate-800/70 border border-slate-700 rounded-xl p-4 mb-6 text-left">
-            <p className="text-sm font-medium text-slate-200 mb-2">What {(sub?.gradeLabel || 'grade').toLowerCase()} are you in?</p>
+          {/* Onboarding — class + curriculum anchor the check to the student */}
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-5">
+            <p className="text-sm font-semibold text-slate-800 mb-2">What {(sub?.gradeLabel || 'grade').toLowerCase()} are you in?</p>
             <div className="flex flex-wrap gap-2">
               {(sub?.grades || []).map(g => (
                 <button key={g} onClick={() => setProgress(p => ({ ...p, declaredGrade: g }))}
-                  className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${progress.declaredGrade === g ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>
+                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${progress.declaredGrade === g ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
                   {sub?.gradeLabel || 'Grade'} {g}
                 </button>
               ))}
             </div>
             {curriculaOptions.length > 1 && (
               <>
-                <p className="text-sm font-medium text-slate-200 mt-4 mb-2">Your curriculum</p>
+                <p className="text-sm font-semibold text-slate-800 mt-4 mb-2">Your curriculum</p>
                 <div className="flex flex-wrap gap-2">
                   {curriculaOptions.map(co => (
                     <button key={co.id} onClick={() => setProgress(p => ({ ...p, curriculum: co.id }))}
-                      className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${curriculum === co.id ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>
+                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${curriculum === co.id ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
                       {co.shortName}
                     </button>
                   ))}
@@ -854,62 +1095,87 @@ export function AIMastery({ onBack, userId, studentName }) {
               </>
             )}
             {progress.declaredGrade != null && (
-              <p className="text-xs text-emerald-400/80 mt-3">We’ll focus the check on {sub?.gradeLabel || 'Grade'} {progress.declaredGrade} and the skills that lead up to it.</p>
+              <p className="text-xs text-[#5a7a3a] mt-3">I’ll focus on {sub?.gradeLabel || 'Grade'} {progress.declaredGrade} and the steps that lead up to it.</p>
             )}
           </div>
 
-          <button onClick={startDiagnostic} className="w-full bg-emerald-600 hover:bg-emerald-500 rounded-xl py-4 font-semibold text-lg transition-colors">{progress.declaredGrade != null ? 'Start Diagnostic' : 'Start Diagnostic Test'}</button>
-          <button onClick={() => { setProgress(p => ({ ...p, diagnosed: true })); setView('home'); }} className="mt-4 text-slate-500 hover:text-slate-300 text-sm block mx-auto">Skip (start from scratch)</button>
+          <button onClick={startDiagnostic} disabled={progress.declaredGrade == null} className="w-full bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed text-slate-900 rounded-2xl py-4 font-bold text-lg transition-colors">
+            {progress.declaredGrade != null ? "Let's start" : `Pick your ${(sub?.gradeLabel || 'class').toLowerCase()} first`}
+          </button>
         </div>
       </div>
     </div>
-  );
+    );
+  }
 
   // ==================== RENDER: DIAGNOSTIC ====================
 
   if (view === 'diagnostic') {
-    const { skills, index } = diagState;
-    const skill = skills[index];
+    const { answered, current } = diagState;
+    const skill = current;
     if (!skill) return null;
-    const pct = Math.round(((index + 1) / skills.length) * 100);
+    const n = answered.length + 1;
+    // Adaptive test: the length isn't fixed, so show progress toward the ceiling.
+    const pct = Math.min(96, Math.round((answered.length / DIAG_MAX) * 100));
+    // The guide keeps the mood light — this must never feel like an exam. No
+    // grade labels on questions (an older child rebuilding foundations should
+    // never see "Grade 1" stamped on their screen), no red X, no scores.
+    const cheer = [
+      'Take your time — there’s no clock.',
+      'If it’s new to you, just say so. That helps me!',
+      'You’re doing great.',
+      'Remember: not a test. We’re just finding your start.',
+    ][(n - 1) % 4];
 
     return (
-      <div className="min-h-screen bg-slate-900 text-white">
-        {/* Light bridging header */}
-        <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
+      <div className="min-h-screen bg-[#eef0f2] text-slate-900">
+        <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
           <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">T</div>
+            <div className="flex items-center gap-2.5">
+              <HorebBot size={28} />
               <div>
-                <div className="text-sm font-bold text-slate-900">Diagnostic Test</div>
-                <div className="text-xs text-slate-400">Question {index + 1} of {skills.length}</div>
+                <div className="text-sm font-bold text-slate-900">Finding your start</div>
+                <div className="text-xs text-slate-400">Question {n} · no marks, just mapping</div>
               </div>
             </div>
-            <div className="text-sm text-emerald-600 font-semibold">{pct}%</div>
           </div>
-          <div className="h-1 bg-slate-100"><div className="h-full bg-emerald-500 transition-all duration-300" style={{ width: `${pct}%` }} /></div>
+          <div className="h-1.5 bg-slate-100"><div className="h-full bg-amber-400 transition-all duration-300 rounded-r-full" style={{ width: `${pct}%` }} /></div>
         </div>
-        <div className="bg-gradient-to-b from-slate-100 to-slate-900 h-8" />
-        <div className="px-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-xs text-slate-500 mb-2">Grade {skill.grade} — {skill.strand} — {skill.name}</div>
-          <div className="bg-slate-800 rounded-2xl p-6 mb-4">
-            <div className="text-lg mb-6 leading-relaxed">{problem?.question}</div>
-            {/* Interactive visual (number line / grid / etc.) when the problem
-                needs one — otherwise it would be an unanswerable text box. */}
-            {problem?.visual && (
-              <InteractiveVisual
-                visualType={problem.visual.type}
-                visualData={problem.visual.data}
-                onAnswer={setVisualAnswer}
-                disabled={!!feedback}
-              />
+        <div className="px-4 pt-6 pb-16">
+          <div className="max-w-2xl mx-auto">
+            {diagHistory.length > 0 && !feedback && (
+              <button onClick={diagBack} className="text-xs text-slate-400 hover:text-slate-600 mb-3 flex items-center gap-1 transition-colors">← Previous question</button>
             )}
-            <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50" autoFocus placeholder={problem?.visual ? 'Use the diagram above, or type your answer…' : 'Your answer...'} />
+            <div className="flex items-start gap-3 mb-4">
+              <HorebBot size={40} className="shrink-0" />
+              <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">{cheer}</div>
+            </div>
+            <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
+              <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">{problem?.question}</div>
+              {/* Interactive visual (number line / grid / etc.) when the problem
+                  needs one — otherwise it would be an unanswerable text box. */}
+              {problem?.visual && (
+                <InteractiveVisual
+                  visualType={problem.visual.type}
+                  visualData={problem.visual.data}
+                  onAnswer={setVisualAnswer}
+                  disabled={!!feedback}
+                />
+              )}
+              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+              {!feedback && (
+                <button onClick={() => handleDiagnosticAnswer({ skip: true })} className="mt-3 text-sm text-slate-400 hover:text-[#6d6fcb] transition-colors">
+                  I haven’t learned this yet
+                </button>
+              )}
+            </div>
+            {feedback && (
+              feedback === 'correct'
+                ? <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]"><span className="text-[#4f7233] font-bold">✓ Nice one!</span></div>
+                : <div className="rounded-2xl p-4 mb-4 bg-[#f5f6fc] border border-[#d3daf0]"><span className="text-[#5658b8] font-semibold">Noted — that helps me find your start.</span></div>
+            )}
+            {!feedback && <button onClick={() => handleDiagnosticAnswer()} disabled={!answer.trim() && !(problem?.visual && visualAnswer != null)} className="w-full bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 text-slate-900 rounded-2xl py-4 font-bold transition-colors">Check</button>}
           </div>
-          {feedback && <div className={`rounded-xl p-4 mb-4 ${feedback === 'correct' ? 'bg-emerald-900/50 border border-emerald-500' : 'bg-red-900/50 border border-red-500'}`}>{feedback === 'correct' ? <span className="text-emerald-400">✓ Correct!</span> : <span className="text-red-400">✗ Answer: {problem?.answer}</span>}</div>}
-          {!feedback && <button onClick={handleDiagnosticAnswer} disabled={!answer.trim() && !(problem?.visual && visualAnswer != null)} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">Check</button>}
-        </div>
         </div>
       </div>
     );
@@ -920,224 +1186,249 @@ export function AIMastery({ onBack, userId, studentName }) {
   if (view === 'lesson' && activeSkill) {
     const skill = SKILLS[activeSkill];
     const sp = progress.skills[activeSkill] || { attempts: 0, correct: 0, mastered: false };
-    const pct = Math.min(100, (session.correct / skill.minProblems) * 100);
+    const learnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    // Test-out: a skill well below the learner's own grade only needs ONE clean
+    // correct answer to master — a capable child shouldn't grind six trivial reps
+    // just because the diagnostic never confirmed a foundation it couldn't reach.
+    const testOutSkill = Number.isFinite(skill?.grade) && (learnerGrade - skill.grade) >= 2;
+    const masterTarget = testOutSkill ? 1 : skill.minProblems;
+    const pct = Math.min(100, (session.correct / masterTarget) * 100);
 
+    // Faded worked examples: this problem's completion scaffold at the current
+    // support level (structured content), or a parallel solved example (legacy
+    // content) — and, after a correct answer, the partition the problem was
+    // ANSWERED with, for the self-explanation card.
+    // An interleaved review is bare retrieval — no completion scaffold, no
+    // similar-example crutch. The point is recalling it from memory.
+    const plan = problem && !feedback && !interleave ? completionPlan(problem, scaffoldLevel) : null;
+    const legacyExample = problem && !feedback && !interleave ? exampleSupport(problem, scaffoldLevel) : null;
+    const supportChip = SUPPORT_LABEL[scaffoldLevel];
+    const answeredPlan = (feedback === 'correct' && answeredLevel != null && answeredLevel <= SUPPORT.MOST)
+      ? completionPlan(problem, answeredLevel) : null;
+
+    // Grades 1–2 get the young-learner experience: read-aloud, tappable
+    // counters, count-together scaffolding. Falls back to the standard UI for
+    // problem shapes the young plan can't express.
+    // Age-appropriate presentation is gated on WHO is sitting there (their declared
+    // grade), not only the skill's grade. An older student rebuilding a Grade-1
+    // foundation gets the normal UI — not a toddler duck; genuine lower-primary
+    // learners (declared grade ≤ 3) keep the read-aloud / tap-to-answer experience.
+    if ((skill.grade || 99) <= 4 && problem && learnerGrade <= 3) {
+      const cbc = skill.curricula?.cbc;
+      const shared = {
+        problem,
+        skillName: skill.name,
+        cbcLabel: cbc ? `CBC · Grade ${cbc.grade} · ${cbc.strand} — ${cbc.substrand}` : `Grade ${skill.grade} · ${skill.strand}`,
+        progressLabel: `${Math.min(session.correct, masterTarget)} of ${masterTarget}`,
+        studentName: ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0],
+        onResult: handleYoungResult,
+        onExit: goHome,
+      };
+      if (skill.grade <= 2) {
+        const plan = planYoungLesson(problem);
+        if (plan) return <YoungLearnerLesson {...shared} plan={plan} />;
+      } else {
+        const plan = planBridgeLesson(problem);
+        if (plan) return <BridgeLesson {...shared} plan={plan} />;
+      }
+    }
+
+    const learnerFirst = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
     return (
-      <div className="min-h-screen bg-slate-900 text-white" onClick={() => activeTooltip && setActiveTooltip(null)}>
-        {/* Light bridging header */}
-        <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
-          <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
-            <button onClick={goHome} className="text-slate-400 hover:text-slate-600 flex items-center gap-1"><Icon name="back" className="w-4 h-4" /> Exit</button>
-            <div className="text-center flex-1">
-              <div className="text-xs text-slate-400">Grade {skill.grade} — {skill.strand}</div>
-              <div className="font-semibold text-slate-900 text-sm">{skill.name}</div>
+      <div className="min-h-screen bg-[#eef0f2] text-slate-900" onClick={() => activeTooltip && setActiveTooltip(null)}>
+        {/* Header */}
+        <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+            <button onClick={goHome} className="text-slate-400 hover:text-slate-700 flex items-center gap-1 text-sm"><Icon name="back" className="w-4 h-4" /> Exit</button>
+            <div className="text-center flex-1 min-w-0">
+              <div className="font-semibold text-slate-900 text-sm truncate">{skill.name}</div>
+              <div className="text-xs text-slate-400">Grade {skill.grade} · {skill.strand}</div>
             </div>
-            <div className="text-right">
-              <div className="text-emerald-600 font-bold text-sm">{session.correct}/{skill.minProblems}</div>
-              <div className="text-xs text-slate-400">to master</div>
+            <div className="text-right shrink-0">
+              <div className="font-bold text-sm text-slate-900 tabular-nums">{Math.min(session.correct, masterTarget)}/{masterTarget}</div>
+              <div className="text-xs text-slate-400">{testOutSkill ? 'quick check' : 'to master'}</div>
             </div>
           </div>
-          <div className="h-1 bg-slate-100"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${pct}%` }} /></div>
+          <div className="h-1 bg-slate-100"><div className="h-full bg-amber-400 transition-all" style={{ width: `${pct}%` }} /></div>
         </div>
-        <div className="bg-gradient-to-b from-slate-100 to-slate-900 h-6" />
-        <div className="px-4">
+
+        <div className="px-4 sm:px-6 pt-6 pb-20">
         <div className="max-w-2xl mx-auto">
 
-          {session.streak >= 3 && <div className="bg-amber-900/30 border border-amber-600 rounded-lg p-2 mb-4 text-center text-amber-400 text-sm">🔥 {session.streak} streak!</div>}
+          {session.streak >= 3 && <div className="mb-4 text-center text-amber-600 text-sm font-semibold">{session.streak} in a row — keep it going!</div>}
 
-          {/* Worked Example — learner-paced: one step at a time, picture in sync.
-              (Segmenting principle: a student who CLICKS through the reasoning
-              processes it; a student shown a finished solution skims it.) */}
+          {/* Worked Example — the tutor walks the child through the full working */}
           {showWorkedExample && (
-            <div className="bg-slate-800 rounded-2xl p-6 mb-4">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2 text-emerald-400">
-                  <Icon name="book" className="w-5 h-5" />
-                  <span className="font-semibold">Watch one first</span>
+            <div>
+              <div className="flex items-start gap-3 mb-4">
+                <HorebBot size={40} className="shrink-0" />
+                <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">
+                  Let's do one together first{learnerFirst ? `, ${learnerFirst}` : ''} — watch how it works.
                 </div>
-                {workedEx && workedEx.steps.length > 0 && (
-                  <div className="flex gap-1.5" aria-label={`step ${Math.min(weStep, workedEx.steps.length)} of ${workedEx.steps.length}`}>
-                    {workedEx.steps.map((_, i) => (
-                      <span key={i} className={`w-2 h-2 rounded-full ${i < weStep ? 'bg-emerald-400' : 'bg-slate-600'}`} />
-                    ))}
-                  </div>
-                )}
               </div>
-              {!workedEx ? (
-                <p className="text-slate-400">No worked example available. Let's practice!</p>
-              ) : (() => {
-                const steps = workedEx.steps || [];
-                const rich = workedEx.richSteps || [];
-                const allShown = weStep >= steps.length;
-                // The picture tracks the most recent revealed step that has one.
-                let liveModel = workedEx.model;
-                for (let i = Math.min(weStep, rich.length) - 1; i >= 0; i--) {
-                  if (rich[i]?.model) { liveModel = rich[i].model; break; }
-                }
+
+              {(() => {
+                const we = generateWorkedExample(activeSkill);
+                if (!we) return null;
                 return (
-                  <div>
-                    {/* Concept Intro — explains key terms before the example */}
-                    <ConceptIntro definitions={workedEx.definitions} />
+                  <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6">
+                    <ConceptIntro definitions={we.definitions} />
 
-                    <div className="bg-slate-700/50 rounded-lg p-3 mb-4 font-medium">
-                      <TermTooltip text={workedEx.problem} definitions={workedEx.definitions} />
+                    <div className="text-[22px] font-bold text-slate-900 mb-5 leading-snug">
+                      <TermTooltip text={we.problem} definitions={we.definitions} />
                     </div>
-
-                    {/* Dual coding: the words explain, the picture shows */}
-                    {liveModel && <TeachingVisual model={liveModel} className="mb-4" />}
-
-                    <div className="space-y-2 mb-4">
-                      {steps.slice(0, weStep).map((step, i) => (
-                        <div key={i} className={i === weStep - 1 ? 'animate-[tg-fadein_0.3s_ease-out]' : ''}>
-                          <div className="flex gap-3 text-sm">
-                            <span className="text-emerald-400 font-bold min-w-[24px]">{i + 1}.</span>
-                            <span className={`flex-1 ${i === weStep - 1 ? 'text-white font-medium' : 'text-slate-400'}`}>
-                              <TermTooltip text={step} definitions={workedEx.definitions} />
+                    {(() => { const am = parseAreaProblem(we.problem); return am ? <AreaModel a={am.a} b={am.b} /> : null; })()}
+                    {!parseAreaProblem(we.problem) && <div className="space-y-3">
+                      {we.steps.map((step, i) => (
+                        <div key={i}>
+                          <div className="flex gap-3 items-start">
+                            <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-700 text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 tabular-nums">{i + 1}</span>
+                            <span className="text-[15px] text-slate-700 flex-1 leading-relaxed">
+                              <TermTooltip text={step} definitions={we.definitions} />
                             </span>
-                            {workedEx.whySteps && workedEx.whySteps[i] && (
+                            {we.whySteps && we.whySteps[i] && (
                               <button
                                 onClick={() => setExpandedWhySteps(prev => ({ ...prev, [i]: !prev[i] }))}
-                                className="text-xs text-amber-400 hover:text-amber-300 whitespace-nowrap transition-colors"
+                                className="text-xs text-amber-600 hover:text-amber-700 whitespace-nowrap font-medium"
                               >
                                 {expandedWhySteps[i] ? 'Hide' : 'Why?'}
                               </button>
                             )}
                           </div>
-                          {expandedWhySteps[i] && workedEx.whySteps && workedEx.whySteps[i] && (
-                            <div className="ml-9 mt-1 mb-2 p-2 bg-amber-900/20 border border-amber-700/30 rounded-lg text-xs text-amber-200 leading-relaxed">
-                              {workedEx.whySteps[i]}
+                          {expandedWhySteps[i] && we.whySteps && we.whySteps[i] && (
+                            <div className="ml-9 mt-1.5 p-2.5 bg-amber-50 border border-amber-200 rounded-xl text-[13px] text-amber-800 leading-relaxed">
+                              {we.whySteps[i]}
                             </div>
                           )}
                         </div>
                       ))}
+                    </div>}
+                    <div className="mt-5 flex items-center gap-2 bg-[#eef4e7] border border-[#cfe0bd] rounded-2xl px-4 py-3">
+                      <span className="text-[#5a7a3a] font-semibold text-sm">Answer</span>
+                      <span className="font-bold text-slate-900 ml-auto text-lg">{we.solution}</span>
                     </div>
-                    <style>{`@keyframes tg-fadein{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}`}</style>
-
-                    {!allShown ? (
-                      <>
-                        {weStep === 0 && <p className="text-slate-400 text-sm mb-3">Step through it at your own pace — try to guess each next move before you reveal it.</p>}
-                        <button onClick={() => setWeStep(weStep + 1)} className="w-full bg-slate-700 hover:bg-slate-600 border border-emerald-600/40 rounded-xl py-3 font-semibold text-emerald-300 transition-colors">
-                          {weStep === 0 ? 'Show the first step' : 'Show the next step'} →
-                        </button>
-                      </>
-                    ) : (
-                      <>
-                        <div className="bg-emerald-900/30 border border-emerald-700 rounded-lg p-3">
-                          <span className="text-emerald-400 font-semibold">Answer: </span>
-                          <span className="font-mono">{workedEx.solution}</span>
-                        </div>
-                        {/* Self-explanation nudge — the step that makes examples stick */}
-                        <p className="text-slate-400 text-sm mt-3">Before you try one: could you say <span className="text-slate-200">why each step happened</span>? Tap "Why?" on any step you're unsure about.</p>
-                        <button onClick={startPractice} className="w-full mt-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl py-3 font-semibold transition-colors">Got it — Let me try!</button>
-                      </>
-                    )}
                   </div>
                 );
               })()}
+              <button onClick={startPractice} className="w-full mt-4 bg-amber-400 text-slate-900 hover:bg-amber-300 rounded-2xl py-3.5 font-bold transition-colors">I'm ready — let me try</button>
             </div>
           )}
 
           {/* Practice Problem */}
           {!showWorkedExample && problem && (
             <>
-              {modalityLevel === 'concrete' && (
-                <div className="bg-indigo-900/30 border border-indigo-600/40 rounded-xl p-3 mb-3 text-sm text-indigo-200 flex items-center gap-2">
-                  <span>💡</span> Let's see this a different way — try it with the picture.
+              <div className="flex items-start gap-3 mb-4">
+                <HorebBot size={40} className="shrink-0" />
+                <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">
+                  {interleave ? 'Quick memory check — do you still remember this one?' : modalityLevel === 'concrete' ? "Let's see it a different way — use the picture to help." : 'Now you try this one. Take your time.'}
                 </div>
-              )}
-              {guided && (
-                <div className="bg-emerald-900/20 border border-emerald-700/40 rounded-xl p-3 mb-3 text-sm text-emerald-200 flex items-center gap-2">
-                  <span>🤝</span> Guided try — the first steps are done for you. You finish it.
-                </div>
-              )}
-              <div className="bg-slate-800 rounded-2xl p-6 mb-4">
-                <div className="text-lg mb-6 leading-relaxed">
+              </div>
+              <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
+                {interleave && (
+                  <div className="inline-flex items-center gap-1.5 mb-3 text-xs font-bold text-[#6d6fcb] bg-[#f5f6fc] border border-[#e8e9f6] rounded-full px-3 py-1.5">
+                    <Icon name="refresh" className="w-3.5 h-3.5" /> Quick review · {interleave.name}
+                  </div>
+                )}
+                <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">
                   <TermTooltip text={problem.question} definitions={problem.workedExample?.definitions || problem.definitions} />
                 </div>
-                {/* Visual ANSWER widget (the problem is answered by interaction) */}
-                {problem.visual ? (
-                  <InteractiveVisual
-                    visualType={problem.visual.type}
-                    visualData={problem.visual.data}
-                    onAnswer={setVisualAnswer}
-                    disabled={!!feedback}
-                  />
-                ) : problem.model ? (
-                  /* Teaching picture (dual coding) — shows the structure of the
-                     problem without giving the answer away. After repeated
-                     struggle (concrete modality) it becomes a manipulative —
-                     working it to the answer books the solve as scaffolded. */
-                  <TeachingVisual
-                    model={problem.model}
-                    className="mb-4"
-                    interactive={modalityLevel === 'concrete' && !feedback}
-                    onEvent={(e) => { if (e === 'solved') setHintLevel(h => Math.max(h, 1)); }}
-                  />
-                ) : (
-                  /* Otherwise, an exploratory manipulative if the skill has one */
-                  activeSkill && SKILL_VISUALS[activeSkill] && (
-                    <InteractiveVisual
-                      visualType={SKILL_VISUALS[activeSkill].visualType}
-                      visualData={SKILL_VISUALS[activeSkill].visualData}
-                      onAnswer={setVisualAnswer}
-                      disabled={!!feedback}
-                    />
-                  )
-                )}
-                {/* Completion problem: earlier steps are given; the student
-                    supplies the finish (Renkl's example→practice fade). */}
-                {guided && (problem.solutionSteps?.length || 0) >= 2 && (
-                  <div className="mb-4 p-3 bg-slate-700/40 border border-slate-600 rounded-lg">
-                    <div className="text-xs text-slate-400 mb-2">Done for you:</div>
-                    <div className="space-y-1">
-                      {problem.solutionSteps.slice(0, -1).map((step, i) => (
-                        <div key={i} className="flex gap-2 text-sm text-slate-300">
-                          <span className="text-emerald-400 font-bold">{i + 1}.</span>
-                          <span>{step}</span>
+
+                {/* Completion scaffold — this problem's own solution, started for
+                    the learner and faded from the end (Renkl backward fading). */}
+                {plan && (
+                  <div className="mb-5 rounded-2xl border border-[#cfe0bd] bg-[#f2f6ec] p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[#5a7a3a] text-sm font-semibold">Solution started for you — finish the last step</span>
+                      {supportChip && <span className="text-[11px] px-2 py-0.5 rounded-full bg-[#e2edd3] text-[#5a7a3a]">{supportChip}</span>}
+                    </div>
+                    <div className="space-y-1.5">
+                      {plan.shown.map((s, i) => (
+                        <div key={i} className="flex gap-2 text-sm text-slate-700">
+                          <span className="text-[#5a7a3a] font-bold min-w-[20px] tabular-nums">{i + 1}.</span>
+                          <span>{s}</span>
                         </div>
                       ))}
-                      <div className="flex gap-2 text-sm text-emerald-300 font-medium">
-                        <span className="font-bold">{problem.solutionSteps.length}.</span>
-                        <span>Your turn — finish it and type the answer below.</span>
-                      </div>
+                      {Array.from({ length: plan.hiddenCount }).map((_, i) => (
+                        <div key={`h${i}`} className="flex gap-2 text-sm items-center">
+                          <span className="text-slate-400 font-bold min-w-[20px] tabular-nums">{plan.shown.length + i + 1}.</span>
+                          <span className="flex-1 border-b border-dashed border-slate-300 text-slate-400 text-xs pb-0.5">
+                            {i === 0 ? 'your turn — type the answer below' : '…'}
+                          </span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )}
-                <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50" autoFocus placeholder={problem.visual ? 'Click the grid above, or type the coordinate…' : 'Your answer...'} />
 
-                {/* Specific-error feedback: the wrong answer was a RECOGNISED
-                    mistake — name it. This replaces the generic hint. */}
-                {misconception && !feedback && (
-                  <div className="mt-4 p-3 bg-rose-900/30 border border-rose-600/50 rounded-lg text-rose-100 text-sm">
-                    <span className="font-semibold text-rose-300">Almost — look closely:</span> {misconception}
+                {!plan && legacyExample && (
+                  <details className="mb-5 rounded-2xl border border-slate-200 bg-slate-50 p-3 text-sm open:pb-4">
+                    <summary className="cursor-pointer text-amber-700 font-semibold select-none">
+                      See a similar solved example
+                    </summary>
+                    <div className="mt-3 text-slate-700 font-medium">{legacyExample.problem}</div>
+                    <div className="mt-2 space-y-1">
+                      {(legacyExample.steps || []).map((s, i) => (
+                        <div key={i} className="flex gap-2 text-slate-700">
+                          <span className="text-amber-600 font-bold min-w-[20px] tabular-nums">{i + 1}.</span>
+                          <span>{s}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-2 text-[#5a7a3a]"><span className="font-semibold">Answer:</span> <span className="font-mono">{legacyExample.solution}</span></div>
+                  </details>
+                )}
+
+                {/* Visual ANSWER widget (the problem is answered by interaction) */}
+                {problem.visual ? (
+                  <InteractiveVisual visualType={problem.visual.type} visualData={problem.visual.data} onAnswer={setVisualAnswer} disabled={!!feedback} />
+                ) : (
+                  activeSkill && SKILL_VISUALS[activeSkill] && (
+                    <InteractiveVisual visualType={SKILL_VISUALS[activeSkill].visualType} visualData={SKILL_VISUALS[activeSkill].visualData} onAnswer={setVisualAnswer} disabled={!!feedback} />
+                  )
+                )}
+                <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+
+                {/* Gentle 'I'm not sure' — an out that isn't guessing (surfaces a hint) */}
+                {!feedback && hintLevel < 1 && attemptCount === 0 && (
+                  <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm not sure — show me a hint</button>
+                )}
+
+                {/* "type a number" nudge — doesn't cost an attempt */}
+                {!feedback && wrongInfo?.needNumber && (
+                  <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-2xl text-amber-800 text-sm">
+                    Type your answer as a number.
                   </div>
                 )}
-                {/* Layered hint display — shown on wrong attempts before final reveal */}
-                {hintLevel >= 1 && !feedback && !misconception && (
-                  <div className="mt-4 p-3 bg-amber-900/30 border border-amber-700/40 rounded-lg text-amber-200 text-sm">
-                    <span className="font-semibold text-amber-400">Hint:</span> {(problem.hints && problem.hints[0]) || problem.hint || 'Double-check your calculation — look at each step carefully.'}
+
+                {/* Proactive hint (asked before trying) — an op-appropriate nudge */}
+                {hintLevel >= 1 && !feedback && attemptCount === 0 && (
+                  <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-2xl text-amber-800 text-sm">
+                    <span className="font-semibold text-amber-700">Hint:</span> {problem.hint || genericNudge(problem)}
+                    {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="ml-2 text-amber-700 underline hover:text-amber-800">still stuck?</button>}
                   </div>
                 )}
-                {hintLevel >= 2 && !feedback && problem.hints && problem.hints[1] && (
-                  <div className="mt-3 p-3 bg-amber-900/30 border border-amber-700/40 rounded-lg text-amber-200 text-sm">
-                    <span className="font-semibold text-amber-400">Method:</span> {problem.hints[1]}
+
+                {/* Wrong try — name what happened, keep their answer, escalate */}
+                {!feedback && attemptCount > 0 && wrongInfo && !wrongInfo.needNumber && (
+                  <div className="mt-4 p-3 bg-[#fdf2ef] border border-[#f2cdc2] rounded-2xl text-sm">
+                    <span className="text-[#c0663f] font-semibold">Not quite.</span>
+                    {wrongInfo.answer && <span className="text-slate-500"> You wrote <span className="font-mono text-slate-700">{wrongInfo.answer}</span>.</span>}
+                    <div className="mt-1 text-slate-700">{wrongInfo.diagnosis || (problem.hint || genericNudge(problem))}</div>
+                    {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="mt-1.5 text-[#6d6fcb] underline text-xs hover:text-[#5658b8]">show me the first steps</button>}
                   </div>
                 )}
-                {hintLevel >= 2 && !feedback && (() => {
-                  // Prefer THIS problem's own solution steps; fall back to a
-                  // worked example for legacy skills without structured steps.
-                  const ownSteps = problem.solutionSteps;
-                  const we = ownSteps ? null : generateWorkedExample(activeSkill);
-                  const steps = ownSteps || we?.steps;
+
+                {hintLevel >= 2 && !feedback && !plan && (() => {
+                  const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
                   if (!steps) return null;
                   return (
-                    <div className="mt-3 p-3 bg-blue-900/20 border border-blue-700/30 rounded-lg text-sm">
-                      <span className="font-semibold text-blue-400">Here are the first steps to guide you:</span>
+                    <div className="mt-3 p-3 bg-[#eef1f8] border border-[#d3daf0] rounded-2xl text-sm">
+                      <span className="font-semibold text-[#6d6fcb]">Here are the first steps to guide you:</span>
                       <div className="mt-2 space-y-1">
                         {steps.slice(0, 2).map((step, i) => (
-                          <div key={i} className="flex gap-2 text-slate-300">
-                            <span className="text-blue-400 font-bold">{i + 1}.</span>
-                            <TermTooltip text={step} definitions={we?.definitions} />
+                          <div key={i} className="flex gap-2 text-slate-700">
+                            <span className="text-[#6d6fcb] font-bold tabular-nums">{i + 1}.</span>
+                            <TermTooltip text={step} />
                           </div>
                         ))}
                       </div>
@@ -1148,55 +1439,57 @@ export function AIMastery({ onBack, userId, studentName }) {
 
               {/* Correct answer feedback */}
               {feedback === 'correct' && (
-                <div className="rounded-xl p-4 mb-4 bg-emerald-900/50 border border-emerald-500">
-                  <span className="text-emerald-400 font-semibold">✓ Correct!</span>
+                <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]">
+                  <span className="text-[#4f7233] font-bold">✓ Nice{learnerFirst ? `, ${learnerFirst}` : ''} — that's right!</span>
                   {attemptCount > 1 && <span className="text-slate-400 text-sm ml-2">(attempt {attemptCount})</span>}
-                  {(() => {
-                    // If the practice picture hid the result, complete it now —
-                    // seeing the finished model confirms WHY the answer is right.
-                    if (!problem.model) return null;
-                    const rich = problem.solution?.steps || [];
-                    let finalModel = null;
-                    for (let i = rich.length - 1; i >= 0; i--) {
-                      if (rich[i]?.model) { finalModel = rich[i].model; break; }
-                    }
-                    return finalModel ? <TeachingVisual model={finalModel} className="mt-3" /> : null;
-                  })()}
                 </div>
               )}
 
-              {/* Final incorrect feedback — only shown after 3 failed attempts */}
-              {feedback === 'incorrect' && (
-                <div className="rounded-xl p-4 mb-4 bg-red-900/50 border border-red-500">
-                  <span className="text-red-400 font-semibold">Answer: <span className="font-mono">{problem.answer}</span></span>
-                  {misconception && (
-                    <div className="mt-2 p-2 bg-rose-900/40 border border-rose-600/40 rounded-lg text-sm text-rose-100">
-                      <span className="font-semibold text-rose-300">What happened:</span> {misconception}
+              {/* Self-explanation prompt (Chi) — after finishing a completion
+                  problem, the learner articulates WHY the steps they supplied
+                  work, then checks their thinking against the actual steps. */}
+              {answeredPlan && (
+                <div className="rounded-2xl p-4 mb-4 bg-[#eef1f8] border border-[#d3daf0]">
+                  <div className="text-[#5658b8] text-sm font-bold mb-1">Teach it back</div>
+                  <p className="text-sm text-slate-600 mb-2">
+                    You worked the last {answeredPlan.hiddenCount === 1 ? 'step' : `${answeredPlan.hiddenCount} steps`} yourself.
+                    Say <em>why</em> {answeredPlan.hiddenCount === 1 ? 'it works' : 'they work'} — out loud or in your head — then check:
+                  </p>
+                  {!selfExplainOpen ? (
+                    <button onClick={() => setSelfExplainOpen(true)} className="text-sm text-[#6d6fcb] hover:text-[#5658b8] font-semibold transition-colors">
+                      Show the thinking
+                    </button>
+                  ) : (
+                    <div className="space-y-1">
+                      {answeredPlan.hidden.map((s, i) => (
+                        <div key={i} className="flex gap-2 text-sm text-slate-700">
+                          <span className="text-[#6d6fcb] font-bold min-w-[20px] tabular-nums">{answeredPlan.shown.length + i + 1}.</span>
+                          <span>{s}</span>
+                        </div>
+                      ))}
                     </div>
                   )}
+                </div>
+              )}
+
+              {/* Missed it — show the answer AND the full working, warmly */}
+              {feedback === 'incorrect' && (
+                <div className="rounded-2xl p-4 mb-4 bg-[#fdf2ef] border border-[#f2cdc2]">
+                  <span className="text-[#c0663f] font-bold">Not quite — the answer is <span className="font-mono text-slate-900">{problem.answer}</span></span>
+                  {wrongInfo?.diagnosis && <p className="mt-1.5 text-sm text-slate-700">{wrongInfo.diagnosis}</p>}
                   {(() => {
-                    // Show how THIS problem is solved when we have its steps;
-                    // otherwise fall back to a worked example (legacy skills).
-                    const ownSteps = problem.solutionSteps;
-                    const we = ownSteps ? null : generateWorkedExample(activeSkill);
-                    const steps = ownSteps || we?.steps;
+                    // Working for the LEARNER'S problem (never a stand-in example),
+                    // showing the parts — the moment the missed step becomes visible.
+                    const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
                     if (!steps) return null;
-                    // The completed picture (e.g. the full number-line jump or
-                    // final balance state) — dual-coded reveal.
-                    const rich = problem.solution?.steps || [];
-                    let finalModel = null;
-                    for (let i = rich.length - 1; i >= 0; i--) {
-                      if (rich[i]?.model) { finalModel = rich[i].model; break; }
-                    }
                     return (
-                      <div className="mt-3 pt-3 border-t border-red-700/30">
-                        <span className="text-sm text-slate-400 mb-2 block">Here's the full worked solution:</span>
-                        {finalModel && <TeachingVisual model={finalModel} className="mb-3" />}
-                        <div className="space-y-1">
+                      <div className="mt-3 pt-3 border-t border-[#f2cdc2]">
+                        <span className="text-sm text-slate-500 mb-2 block">Here's the full working, step by step:</span>
+                        <div className="space-y-1.5">
                           {steps.map((step, i) => (
                             <div key={i} className="flex gap-2 text-sm">
-                              <span className="text-red-400/70 font-bold">{i + 1}.</span>
-                              <span className="text-slate-300">{step}</span>
+                              <span className="text-[#c0663f] font-bold tabular-nums">{i + 1}.</span>
+                              <span className="text-slate-700">{step}</span>
                             </div>
                           ))}
                         </div>
@@ -1206,20 +1499,20 @@ export function AIMastery({ onBack, userId, studentName }) {
                 </div>
               )}
 
-              {/* Remediation alert */}
-              {remediationSkills && <div className="bg-red-900/20 border border-red-700 rounded-xl p-4 mb-4">
-                <div className="flex items-center gap-2 text-red-400 font-semibold mb-2"><Icon name="alert" className="w-5 h-5" /> Let's strengthen your foundations</div>
-                <p className="text-sm text-slate-300 mb-3">You might need to practice these prerequisite skills first:</p>
+              {/* Remediation — a gentle nudge to shore up a foundation */}
+              {remediationSkills && <div className="bg-[#f2f6ec] border border-[#cfe0bd] rounded-2xl p-4 mb-4">
+                <div className="flex items-center gap-2 text-[#5a7a3a] font-semibold mb-2"><Icon name="target" className="w-5 h-5" /> Let's shore up a foundation first</div>
+                <p className="text-sm text-slate-600 mb-3">A quick warm-up on these will make this one click:</p>
                 <div className="space-y-2">{remediationSkills.map(rs => (
-                  <button key={rs.id} onClick={() => startLesson(rs.id)} className="w-full text-left p-3 bg-red-900/30 rounded-lg hover:bg-red-900/40 transition-colors">
-                    <div className="font-medium text-red-300">{rs.name}</div>
-                    <div className="text-xs text-slate-400">{rs.reason}</div>
+                  <button key={rs.id} onClick={() => startLesson(rs.id)} className="w-full text-left p-3 bg-white border border-[#cfe0bd] rounded-xl hover:bg-[#eef4e7] transition-colors">
+                    <div className="font-medium text-slate-900">{rs.name}</div>
+                    <div className="text-xs text-slate-500">{rs.reason}</div>
                   </button>
                 ))}</div>
               </div>}
 
-              {!feedback ? <button onClick={checkAnswer} disabled={!answer.trim() && !(problem.visual && visualAnswer != null)} className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">{attemptCount > 0 ? 'Try Again' : 'Check Answer'}</button>
-                : <button onClick={nextProblem} className="w-full bg-blue-600 hover:bg-blue-500 rounded-xl py-4 font-semibold flex items-center justify-center gap-2 transition-colors">Next <Icon name="arrow" className="w-5 h-5" /></button>}
+              {!feedback ? <button onClick={checkAnswer} disabled={!answer.trim() && !(problem.visual && visualAnswer != null)} className="w-full bg-amber-400 text-slate-900 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 rounded-2xl py-4 font-bold transition-colors">{attemptCount > 0 ? 'Try Again' : 'Check Answer'}</button>
+                : <button onClick={nextProblem} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-2xl py-4 font-bold flex items-center justify-center gap-2 transition-colors">Next <Icon name="arrow" className="w-5 h-5" /></button>}
             </>
           )}
         </div>
@@ -1261,11 +1554,21 @@ export function AIMastery({ onBack, userId, studentName }) {
 
           <div className="bg-slate-800 rounded-2xl p-6 mb-4">
             <div className="text-lg mb-6">{problem?.question}</div>
-            <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50" autoFocus placeholder="Your answer..." />
+            {problem?.visual && (
+              <div className="mb-4">
+                <InteractiveVisual
+                  visualType={problem.visual.type}
+                  visualData={problem.visual.data}
+                  onAnswer={setVisualAnswer}
+                  disabled={!!feedback}
+                />
+              </div>
+            )}
+            <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50" autoFocus placeholder={problem?.visual ? 'Use the diagram above, or type your answer…' : 'Your answer...'} />
           </div>
 
           {feedback && <div className={`rounded-xl p-4 mb-4 ${feedback === 'correct' ? 'bg-emerald-900/50 border border-emerald-500' : 'bg-red-900/50 border border-red-500'}`}>{feedback === 'correct' ? <span className="text-emerald-400">✓ Correct!</span> : <span className="text-red-400">✗ Answer: {problem?.answer}</span>}</div>}
-          {!feedback && <button onClick={handleReviewAnswer} disabled={!answer.trim()} className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">Check</button>}
+          {!feedback && <button onClick={handleReviewAnswer} disabled={!answer.trim() && !(problem?.visual && visualAnswer != null)} className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">Check</button>}
         </div>
         </div>
       </div>
@@ -1325,149 +1628,61 @@ export function AIMastery({ onBack, userId, studentName }) {
   const brainStrandLevel = (name) => brainProfile?.strands?.find(b => b.strand === name) || null;
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900 lg:flex">
       <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
-      {/* Bridging Header — matches main app's light nav, then transitions to dark */}
-      <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
-        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600"><Icon name="back" /></button>}
-            <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">T</div>
-            <div>
-              <h1 className="text-base font-bold text-slate-900">{sub?.emoji} {sub?.shortName || 'AI Tutor'}</h1>
-              <p className="text-xs text-slate-400">{gradeLabel(estimatedGrade)}</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            {progress.currentStreak > 0 && <div className="flex items-center gap-1 text-amber-500"><Icon name="flame" className="w-4 h-4" /><span className="text-sm font-bold">{progress.currentStreak}d</span></div>}
-            <div className="text-right">
-              <div className="text-amber-500 font-bold flex items-center gap-1 text-sm"><Icon name="star" className="w-4 h-4" /> {progress.totalXP || 0}</div>
-              <div className="text-xs text-slate-400">Level {level.level}</div>
-            </div>
-            {curriculaOptions.length > 1 && (
-              <select
-                value={curriculum}
-                onChange={(e) => setProgress(p => ({ ...p, curriculum: e.target.value }))}
-                title="Curriculum view"
-                className="text-xs bg-slate-100 text-slate-700 rounded-md px-2 py-1 border border-slate-200 focus:outline-none"
-              >
-                {curriculaOptions.map(c => <option key={c.id} value={c.id}>{c.shortName}</option>)}
-              </select>
-            )}
-            <button onClick={switchSubject} className="text-slate-300 hover:text-slate-500" title="Switch subject"><Icon name="book" className="w-4 h-4" /></button>
-            <button onClick={resetAll} className="text-slate-300 hover:text-slate-500" title="Reset progress"><Icon name="refresh" className="w-4 h-4" /></button>
-          </div>
+
+      {/* ===== SIDEBAR (desktop) ===== */}
+      <aside className="hidden lg:flex lg:flex-col w-[248px] shrink-0 bg-white border-r border-slate-200 sticky top-0 h-screen px-4 py-5">
+        <div className="flex items-center gap-2.5 px-2 pb-5">
+          <HorebBot size={30} />
+          <b className="text-[18px] font-extrabold tracking-tight">HOREB</b>
         </div>
-      </div>
-
-      {/* Gradient bridge from light header into dark content */}
-      <div className="bg-gradient-to-b from-slate-100 to-slate-900 pt-4 pb-2 px-4">
-        <div className="max-w-2xl mx-auto">
-          {/* XP Progress */}
-          <div className="flex items-center gap-2 bg-slate-800/80 backdrop-blur rounded-xl px-4 py-2.5">
-            <span className="text-xs text-slate-400">Lv {level.level}</span>
-            <div className="flex-1 h-1.5 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-amber-500 transition-all" style={{ width: `${level.progress}%` }} /></div>
-            <span className="text-xs text-slate-400">Lv {level.level + 1}</span>
-            <span className="text-xs text-slate-500 ml-2">{SKILL_COUNT} skills</span>
-            <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} className="ml-2 text-xs text-slate-400 hover:text-emerald-400 transition-colors" title="Join your class">
-              + Class
-            </button>
-          </div>
-
-          {/* Holiday Challenge banner (Aug 2026 blitz) — the weekly drumbeat +
-              the share loop, one tap from the most-visited screen. */}
-          {(() => {
-            const now = new Date();
-            const start = new Date('2026-08-01'), end = new Date('2026-08-31T23:59:59');
-            if (now < start || now > end) return null;
-            const week = Math.min(4, Math.floor((now - start) / (7 * 24 * 3600 * 1000)) + 1);
-            const themes = { 1: '🔍 Find Your Level week', 2: '🔥 Streak Wars week', 3: '🏁 Mastery Race week', 4: '🎒 Back-to-School Ready week' };
-            return (
-              <div className="mt-2 bg-gradient-to-r from-emerald-900/70 to-sky-900/60 border border-emerald-600/40 rounded-xl px-4 py-3">
-                <div className="flex items-center justify-between gap-2">
-                  <div>
-                    <div className="text-sm font-bold text-emerald-300">🏖️ Holiday Challenge — {themes[week]}</div>
-                    <p className="text-xs text-slate-300 mt-0.5">Free all August. Bring friends with your code — every active friend is an entry in Friday's airtime & data draw.</p>
-                  </div>
-                  <button
-                    onClick={() => shareOnWhatsApp(shareMessages.invite(userId))}
-                    className="shrink-0 px-3 py-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white text-xs font-bold rounded-lg transition-colors"
-                  >
-                    Invite
-                  </button>
-                </div>
-              </div>
-            );
-          })()}
-
-          {/* Daily goal — warm, returns-focused encouragement */}
-          {(() => {
-            const earned = todaysXP(progress);
-            const pct = dailyGoalPercent(progress);
-            const met = dailyGoalMet(progress);
-            return (
-              <div className="mt-2 bg-slate-800/80 backdrop-blur rounded-xl px-4 py-3">
-                <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-sm font-medium flex items-center gap-1.5">
-                    {met ? '☀️ Daily goal reached!' : '🎯 Today’s goal'}
-                  </span>
-                  <span className="text-xs text-slate-400">{Math.min(earned, DAILY_GOAL_XP)}/{DAILY_GOAL_XP} XP</span>
-                </div>
-                <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-                  <div className={`h-full transition-all ${met ? 'bg-emerald-500' : 'bg-amber-500'}`} style={{ width: `${pct}%` }} />
-                </div>
-                <p className="text-xs text-slate-400 mt-1.5">
-                  {met
-                    ? 'Wonderful — see you again tomorrow to keep your streak going.'
-                    : progress.currentStreak > 0
-                      ? `You’re on a ${progress.currentStreak}-day streak. A little practice keeps it alive!`
-                      : 'Every small session adds up. Let’s make today count.'}
-                </p>
-              </div>
-            );
-          })()}
-          {showJoin && (
-            <div className="mt-2 bg-slate-800/80 backdrop-blur rounded-xl px-4 py-3">
-              {joinStatus === 'ok' ? (
-                <p className="text-sm text-emerald-400">✓ Joined! Your teacher can now see your progress.</p>
-              ) : (
-                <>
-                  <p className="text-xs text-slate-400 mb-2">Enter the class code from your teacher:</p>
-                  <div className="flex gap-2">
-                    <input
-                      value={joinCode}
-                      onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
-                      onKeyDown={(e) => e.key === 'Enter' && joinClass()}
-                      placeholder="ABC123"
-                      className="flex-1 bg-slate-900 border border-slate-600 rounded-lg px-3 py-2 text-sm font-mono tracking-wider focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                    />
-                    <button onClick={joinClass} disabled={joinStatus === 'joining' || !joinCode.trim()} className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 rounded-lg text-sm font-semibold transition-colors">
-                      {joinStatus === 'joining' ? '…' : 'Join'}
-                    </button>
-                  </div>
-                  {joinStatus && joinStatus !== 'joining' && joinStatus !== 'ok' && (
-                    <p className="text-xs text-red-400 mt-1.5">{joinStatus}</p>
-                  )}
-                </>
-              )}
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Tabs */}
-      <div className="max-w-2xl mx-auto px-4 mt-4">
-        <div className="flex gap-1 bg-slate-800 rounded-xl p-1 mb-4">
-          {[['overview', 'Home', 'home'], ['path', 'Path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Stats', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
-            <button key={id} onClick={() => setActiveTab(id)} className={`flex-1 flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1.5 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors ${activeTab === id ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-white'}`}>
-              <Icon name={icon} className="w-4 h-4" />{label}
+        <nav className="flex flex-col gap-1">
+          {[['overview', 'Home', 'home'], ['path', 'My path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Progress', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
+            <button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-[14.5px] font-semibold transition-colors ${activeTab === id ? 'bg-slate-900 text-white' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'}`}>
+              <Icon name={icon} className="w-[19px] h-[19px]" />{label}
             </button>
           ))}
+          <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[14.5px] font-semibold text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+            <span className="w-[19px] text-center text-lg leading-none">+</span>Join a class
+          </button>
+        </nav>
+        <div className="flex-1" />
+        <div className="border-t border-slate-100 pt-3 space-y-1">
+          {curriculaOptions.length > 1 && (
+            <select value={curriculum} onChange={(e) => setProgress(p => ({ ...p, curriculum: e.target.value }))} title="Curriculum view" className="w-full text-xs bg-slate-50 text-slate-600 rounded-lg px-2.5 py-2 border border-slate-200 focus:outline-none">
+              {curriculaOptions.map(c => <option key={c.id} value={c.id}>{c.shortName}</option>)}
+            </select>
+          )}
+          <button onClick={switchSubject} className="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] text-slate-500 hover:bg-slate-50 transition-colors"><Icon name="book" className="w-4 h-4" />Switch subject</button>
+          <button onClick={resetAll} className="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] text-slate-500 hover:bg-slate-50 transition-colors"><Icon name="refresh" className="w-4 h-4" />Reset progress</button>
         </div>
+        <div className="flex items-center gap-2.5 mt-3 pt-3 border-t border-slate-100">
+          <HorebBot size={32} />
+          <div className="min-w-0"><b className="text-[13.5px] block truncate">{((activeLearner?.name || studentName) || 'You').trim().split(/\s+/)[0]}</b><span className="text-[12px] text-slate-400">{gradeLabel(estimatedGrade)} · {sub?.shortName}</span></div>
+        </div>
+      </aside>
+
+      {/* ===== MOBILE TOP BAR ===== */}
+      <div className="lg:hidden sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200 flex items-center justify-between px-4 h-14">
+        <div className="flex items-center gap-2">
+          {onBack && <button onClick={onBack} className="text-slate-400 mr-1"><Icon name="back" className="w-5 h-5" /></button>}
+          <HorebBot size={28} /><b className="text-[17px] font-extrabold tracking-tight">HOREB</b>
+        </div>
+        <div className="flex items-center gap-3.5">
+          {progress.currentStreak > 0 && <span className="flex items-center gap-1 text-amber-500 text-sm font-bold"><Icon name="flame" className="w-4 h-4" />{progress.currentStreak}d</span>}
+          <button onClick={switchSubject} className="text-slate-400" title="Switch subject"><Icon name="book" className="w-[18px] h-[18px]" /></button>
+          <button onClick={resetAll} className="text-slate-400" title="Reset progress"><Icon name="refresh" className="w-[18px] h-[18px]" /></button>
+        </div>
+      </div>
+
+      {/* ===== MAIN ===== */}
+      <main className="flex-1 min-w-0">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-28 lg:pb-14">
 
         {/* ========== OVERVIEW (HOME) TAB ========== */}
         {activeTab === 'overview' && (() => {
-          const firstName = (studentName || '').trim().split(/\s+/)[0];
+          const firstName = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
           const hour = new Date().getHours();
           const greeting = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
           const dueReviews = reviews.length;
@@ -1482,104 +1697,213 @@ export function AIMastery({ onBack, userId, studentName }) {
             ? { label: 'Continue learning', sub: nextItem.name, icon: 'play', onClick: () => startLesson(nextItem.id) }
             : { label: 'Take the diagnostic', sub: 'Find your level and get your plan', icon: 'target', onClick: startDiagnostic };
           const confidencePct = brainProfile ? Math.round((brainProfile.confidence || 0) * 100) : null;
-          return (
-            <div className="space-y-4">
-              {/* Hero — greeting, level, and the next action together */}
-              <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-600 via-emerald-700 to-slate-800 p-6 shadow-lg shadow-emerald-950/40">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="min-w-0">
-                    <p className="text-emerald-100/90 text-sm font-medium">{greeting}{firstName ? `, ${firstName}` : ''}</p>
-                    <div className="mt-1 flex items-baseline gap-2 flex-wrap">
-                      <h2 className="text-2xl font-bold leading-tight">{gradeLabel(estimatedGrade)}</h2>
-                      <span className="text-emerald-100/70 text-sm">your level</span>
-                    </div>
-                    {brainAccelerated && (
-                      <span className="inline-block mt-2 text-[11px] font-semibold text-amber-50 bg-amber-500/30 border border-amber-200/30 rounded-full px-2.5 py-1">🚀 Above grade</span>
-                    )}
-                  </div>
-                  <div className="shrink-0 -my-1">
-                    <Lottie src={LOTTIE.academics} size={96} fallback={<div className="text-5xl">🎓</div>} />
+          // Daily-goal ring — rendered near the top on mobile and in the right rail on desktop
+          const goalRing = (() => {
+            const earned = todaysXP(progress);
+            const pct = dailyGoalPercent(progress);
+            const met = dailyGoalMet(progress);
+            const R = 52, C = 2 * Math.PI * R;
+            const off = C * (1 - Math.min(1, pct / 100));
+            return (
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 text-center">
+                <div className="text-slate-800 font-semibold text-[15px] mb-2">{met ? 'Goal reached!' : 'Today’s goal'}</div>
+                <div className="relative w-[128px] h-[128px] mx-auto">
+                  <svg width="128" height="128" viewBox="0 0 128 128">
+                    <circle cx="64" cy="64" r={R} fill="none" stroke="#eef0f3" strokeWidth="11" />
+                    <circle cx="64" cy="64" r={R} fill="none" stroke={met ? '#8ca86a' : '#f2a828'} strokeWidth="11" strokeLinecap="round" strokeDasharray={C} strokeDashoffset={off} transform="rotate(-90 64 64)" style={{ transition: 'stroke-dashoffset .6s ease' }} />
+                  </svg>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <b className="text-[26px] font-extrabold tabular-nums leading-none">{Math.min(earned, DAILY_GOAL_XP)}<span className="text-slate-400 text-[15px]">/{DAILY_GOAL_XP}</span></b>
+                    <span className="text-[11px] text-slate-400 mt-0.5">XP today</span>
                   </div>
                 </div>
+                <p className="text-[12.5px] text-slate-500 mt-2.5 leading-snug">
+                  {met
+                    ? 'Wonderful — see you tomorrow to keep the streak alive.'
+                    : progress.currentStreak > 0
+                      ? `${Math.max(0, DAILY_GOAL_XP - earned)} XP to go · ${progress.currentStreak}-day streak`
+                      : `${Math.max(0, DAILY_GOAL_XP - earned)} XP to go today.`}
+                </p>
+              </div>
+            );
+          })();
+          return (
+            <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:items-start">
+              {/* Learner switcher — a parent runs HOREB per child. Each learner
+                  has their own diagnostic, level, and progress. */}
+              {learners.length > 0 && (
+                <div className="flex items-center gap-2 flex-wrap lg:col-span-3">
+                  <span className="text-xs text-slate-400 mr-1">Practising as</span>
+                  <button onClick={() => setActiveLearner(null)}
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${!activeLearner ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'}`}>
+                    You
+                  </button>
+                  {learners.map(c => (
+                    <button key={c.id} onClick={() => setActiveLearner(c)}
+                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${activeLearner?.id === c.id ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'}`}>
+                      {(c.name || '').trim().split(/\s+/)[0]}
+                    </button>
+                  ))}
+                </div>
+              )}
 
-                {confidencePct != null && (
-                  <div className="mt-4">
-                    <div className="flex justify-between text-xs text-emerald-100/80 mb-1"><span>Measurement confidence</span><span>{confidencePct}%</span></div>
-                    <div className="h-1.5 bg-white/20 rounded-full overflow-hidden"><div className="h-full bg-white/90 transition-all" style={{ width: `${confidencePct}%` }} /></div>
-                  </div>
-                )}
-
-                <button onClick={cta.onClick} className="mt-5 w-full bg-white text-slate-900 rounded-2xl px-4 py-3 flex items-center justify-between font-semibold hover:bg-emerald-50 transition-colors">
-                  <span className="flex items-center gap-3 min-w-0">
-                    <span className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0"><Icon name={cta.icon} className="w-5 h-5" /></span>
-                    <span className="flex flex-col items-start min-w-0">
-                      <span className="leading-tight">{cta.label}</span>
-                      <span className="text-xs font-normal text-slate-500 truncate max-w-[210px]">{cta.sub}</span>
-                    </span>
-                  </span>
-                  <Icon name="arrow" className="w-5 h-5 text-slate-400 shrink-0" />
-                </button>
+              {/* ===== LEFT COLUMN — the main flow: what to do, what to fix, progress ===== */}
+              <div className="lg:col-span-2 space-y-4">
+              {/* Greeting — the guide + who/where */}
+              <div className="flex items-center gap-3">
+                <HorebBot size={44} className="shrink-0" />
+                <div className="min-w-0">
+                  <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 leading-tight">{greeting}{firstName ? `, ${firstName}` : ''}</h2>
+                  <p className="text-sm text-slate-500">{gradeLabel(estimatedGrade)} · your level{brainAccelerated ? ' · above grade' : ''}</p>
+                </div>
               </div>
 
+              {/* Daily-goal ring — mobile only, kept near the top so it's the first thing they see */}
+              <div className="lg:hidden">{goalRing}</div>
+
+              {/* Resume card — light, content-forward (fixes the 'AI' navy hero) */}
+              <button onClick={cta.onClick} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-3xl p-5 flex items-center gap-4 hover:border-slate-300 transition-colors">
+                <div className="w-[68px] h-[68px] rounded-2xl bg-[#f5f6fc] border border-[#e8e9f6] flex items-center justify-center shrink-0 text-[#6d6fcb]">
+                  <Icon name={cta.icon} className="w-7 h-7" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-700">{cta.label}</div>
+                  <div className="text-[18px] font-extrabold tracking-tight text-slate-900 mt-1 leading-tight">{cta.sub}</div>
+                </div>
+                <span className="shrink-0 inline-flex items-center gap-2 bg-amber-400 text-slate-900 font-bold rounded-2xl px-5 py-2.5">
+                  <Icon name="play" className="w-4 h-4" /> Go
+                </span>
+              </button>
+
+              {/* Your path — the next few skills as designed cards with status */}
+              {path.length > 0 && (
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl">
+                  <div className="flex items-center justify-between px-5 pt-4 pb-1">
+                    <span className="text-slate-800 font-semibold text-[15px]">Your path</span>
+                    <button onClick={() => setActiveTab('path')} className="text-xs text-amber-600 hover:text-amber-700">View all →</button>
+                  </div>
+                  <div className="px-2 pb-2">
+                    {path.slice(0, 4).map((it) => {
+                      const sp = progress.skills[it.id] || {};
+                      const status = sp.mastered ? 'done' : (sp.attempts ? 'prog' : 'next');
+                      const min = SKILLS[it.id]?.minProblems || 5;
+                      const pct = status === 'done' ? 100 : (sp.attempts ? Math.min(100, Math.round((sp.correct || 0) / min * 100)) : 0);
+                      const tint = status === 'done' ? 'bg-[#eef4e7] text-[#4f6a30]' : status === 'prog' ? 'bg-[#fff4e2] text-[#a5670a]' : 'bg-slate-100 text-slate-400';
+                      const chipTxt = status === 'done' ? 'Mastered' : status === 'prog' ? 'In progress' : 'Up next';
+                      return (
+                        <button key={it.id} onClick={() => startLesson(it.id)} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-slate-50 transition-colors text-left">
+                          <span className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${tint}`}>
+                            <Icon name={status === 'done' ? 'check' : 'play'} className="w-4 h-4" />
+                          </span>
+                          <span className="flex-1 min-w-0">
+                            <span className="block text-[14px] font-semibold text-slate-900 truncate">{it.name || SKILLS[it.id]?.name}</span>
+                            <span className="block text-xs text-slate-400 truncate">{SKILLS[it.id]?.strand || ''}</span>
+                          </span>
+                          <span className="hidden sm:block w-20 h-1.5 rounded-full bg-slate-100 overflow-hidden shrink-0"><span className="block h-full rounded-full bg-[#8ca86a]" style={{ width: `${pct}%` }} /></span>
+                          <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full shrink-0 ${status === 'next' ? 'bg-slate-100 text-slate-500' : tint}`}>{chipTxt}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Gaps */}
+              {gaps.length > 0 && (
+                <button onClick={() => setActiveTab('path')} className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-left hover:border-slate-300 transition-colors">
+                  <div className="text-amber-600 font-semibold mb-1">Where we’ll start</div>
+                  <p className="text-xs text-slate-500 mb-2.5">A few foundations to build first — HOREB takes them one step at a time, so nothing piles up.</p>
+                  <div className="flex flex-wrap gap-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2.5 py-1 bg-slate-100 rounded-lg text-xs text-slate-700">{g.name}</span>)}</div>
+                </button>
+              )}
+
+              {/* Strand progress */}
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-slate-800 font-semibold">Your progress</span>
+                  <button onClick={() => setActiveTab('stats')} className="text-xs text-amber-600 hover:text-amber-700">Details →</button>
+                </div>
+                <div className="space-y-2.5">{scopedStrandStats.map(s => (
+                  <div key={s.name} className="flex items-center gap-3">
+                    <span className="text-sm text-slate-500 w-24 truncate" title={s.name}>{s.name}</span>
+                    <div className="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden"><div className={`h-full transition-all ${s.assessed ? 'bg-[#8ca86a]' : 'bg-slate-200'}`} style={{ width: `${s.percent}%` }} /></div>
+                    <span className="text-xs font-semibold w-14 text-right text-slate-700 tabular-nums">{s.assessed ? `${s.percent}%` : '—'}</span>
+                  </div>
+                ))}</div>
+              </div>
+              </div>{/* ===== end LEFT COLUMN ===== */}
+
+              {/* ===== RIGHT COLUMN — the glanceable sidebar ===== */}
+              <div className="space-y-4">
+              {/* Join a class — surfaced from the sidebar's "+ Join a class" */}
+              {showJoin && (
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+                  {joinStatus === 'ok' ? (
+                    <p className="text-sm text-[#5a7a3a] font-medium">✓ Joined! Your teacher can now see your progress.</p>
+                  ) : (
+                    <>
+                      <p className="text-sm font-semibold text-slate-800 mb-1">Join your class</p>
+                      <p className="text-xs text-slate-500 mb-2.5">Enter the code from your teacher:</p>
+                      <div className="flex gap-2">
+                        <input
+                          value={joinCode}
+                          onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
+                          onKeyDown={(e) => e.key === 'Enter' && joinClass()}
+                          placeholder="ABC123"
+                          className="flex-1 min-w-0 bg-slate-50 border border-slate-200 text-slate-900 rounded-xl px-3 py-2 text-sm font-mono tracking-wider focus:outline-none focus:ring-2 focus:ring-amber-400"
+                        />
+                        <button onClick={joinClass} disabled={joinStatus === 'joining' || !joinCode.trim()} className="px-4 py-2 bg-amber-400 text-slate-900 hover:bg-amber-300 disabled:opacity-40 rounded-xl text-sm font-bold transition-colors">
+                          {joinStatus === 'joining' ? '…' : 'Join'}
+                        </button>
+                      </div>
+                      {joinStatus && joinStatus !== 'joining' && joinStatus !== 'ok' && (
+                        <p className="text-xs text-red-400 mt-1.5">{joinStatus}</p>
+                      )}
+                    </>
+                  )}
+                </div>
+              )}
+
+              {/* Today's goal — ring (desktop rail; the mobile copy sits up top) */}
+              <div className="hidden lg:block">{goalRing}</div>
+
               {/* Quick stats */}
-              <div className="grid grid-cols-4 gap-2.5">
+              <div className="grid grid-cols-2 gap-2.5">
                 {[
                   { icon: 'target', val: `${scopedStats.percent}%`, label: 'Mastery', color: 'text-emerald-400' },
                   { icon: 'zap', val: progress.totalXP || 0, label: 'XP', color: 'text-amber-400' },
                   { icon: 'flame', val: progress.currentStreak || 0, label: 'Streak', color: 'text-orange-400' },
                   { icon: 'check', val: `${scopedStats.accuracy}%`, label: 'Accuracy', color: 'text-sky-400' },
                 ].map(s => (
-                  <div key={s.label} className="bg-slate-800/80 rounded-2xl p-3 text-center border border-slate-700/50">
+                  <div key={s.label} className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
                     <Icon name={s.icon} className={`w-4 h-4 mx-auto mb-1.5 ${s.color}`} />
-                    <div className="text-lg font-bold leading-none">{s.val}</div>
+                    <div className="text-xl font-bold leading-none text-slate-900 tabular-nums">{s.val}</div>
                     <div className="text-[10px] text-slate-400 uppercase tracking-wide mt-1">{s.label}</div>
                   </div>
                 ))}
               </div>
 
-              {/* Gaps */}
-              {gaps.length > 0 && (
-                <button onClick={() => setActiveTab('path')} className="w-full bg-red-900/20 border border-red-700 rounded-xl p-4 text-left hover:bg-red-900/30 transition-colors">
-                  <div className="flex items-center gap-2 text-red-400 font-semibold mb-1"><Icon name="alert" className="w-5 h-5" /> {gaps.length} foundation gap{gaps.length === 1 ? '' : 's'} to fix</div>
-                  <div className="flex flex-wrap gap-2 mt-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2 py-0.5 bg-red-900/30 rounded text-xs text-red-300">{g.name}</span>)}</div>
-                </button>
-              )}
-
-              {/* Strand progress */}
-              <div className="bg-slate-800 rounded-2xl p-4">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-slate-300 font-medium">Your progress</span>
-                  <button onClick={() => setActiveTab('stats')} className="text-xs text-emerald-400 hover:text-emerald-300">Details →</button>
-                </div>
-                <div className="space-y-2">{scopedStrandStats.map(s => (
-                  <div key={s.name} className="flex items-center gap-3">
-                    <span className="text-sm text-slate-400 w-24 truncate" title={s.name}>{s.name}</span>
-                    <div className="flex-1 h-2.5 bg-slate-700 rounded-full overflow-hidden"><div className={`h-full transition-all ${s.assessed ? 'bg-emerald-500' : 'bg-slate-600'}`} style={{ width: `${s.percent}%` }} /></div>
-                    <span className="text-xs font-medium w-14 text-right">{s.assessed ? `${s.percent}%` : '—'}</span>
-                  </div>
-                ))}</div>
-              </div>
-
               {/* Recent badges */}
-              <div className="bg-slate-800 rounded-2xl p-4">
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-slate-300 font-medium">Recent badges</span>
-                  <button onClick={() => setActiveTab('awards')} className="text-xs text-emerald-400 hover:text-emerald-300">All →</button>
+                  <span className="text-slate-800 font-semibold">Recent badges</span>
+                  <button onClick={() => setActiveTab('awards')} className="text-xs text-amber-600 hover:text-amber-700">All →</button>
                 </div>
                 {recentBadges.length > 0 ? (
                   <div className="flex gap-3">{recentBadges.map(a => (
-                    <div key={a.id} className="flex-1 bg-amber-900/15 border border-amber-700/40 rounded-xl p-3 text-center">
+                    <div key={a.id} className="flex-1 bg-amber-50 border border-amber-200 rounded-xl p-3 text-center">
                       <div className="text-2xl mb-1">{a.icon}</div>
-                      <div className="text-[11px] font-medium text-amber-100/90 leading-tight">{a.name}</div>
+                      <div className="text-[11px] font-medium text-amber-800 leading-tight">{a.name}</div>
                     </div>
                   ))}</div>
                 ) : (
-                  <p className="text-xs text-slate-500">No badges yet — finish a lesson to earn your first one.</p>
+                  <p className="text-xs text-slate-400">No badges yet — finish a lesson to earn your first one.</p>
                 )}
               </div>
 
               {/* Retake diagnostic */}
-              <button onClick={() => setView('welcome')} className="w-full text-center text-xs text-slate-500 hover:text-slate-300 py-2 transition-colors">Retake diagnostic test</button>
+              <button onClick={() => setView('welcome')} className="w-full text-center text-xs text-slate-400 hover:text-slate-700 py-2 transition-colors">Retake the check</button>
+              </div>{/* ===== end RIGHT COLUMN ===== */}
             </div>
           );
         })()}
@@ -1589,60 +1913,60 @@ export function AIMastery({ onBack, userId, studentName }) {
           <div>
             {/* Review banner */}
             {reviews.length > 0 && (
-              <button onClick={startReview} className="w-full bg-gradient-to-r from-blue-900/50 to-blue-800/50 border border-blue-600 rounded-xl p-4 mb-4 flex items-center justify-between hover:from-blue-900/70 transition-all">
+              <button onClick={startReview} className="w-full bg-[#f5f6fc] border border-[#d3daf0] rounded-2xl p-4 mb-4 flex items-center justify-between hover:bg-[#eef0fb] transition-colors">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"><Icon name="refresh" className="w-5 h-5" /></div>
+                  <div className="w-10 h-10 bg-[#6d6fcb] text-white rounded-xl flex items-center justify-center"><Icon name="refresh" className="w-5 h-5" /></div>
                   <div className="text-left">
-                    <div className="font-semibold">Review Session</div>
-                    <div className="text-xs text-blue-300">{reviews.length} skills due — timed & interleaved</div>
+                    <div className="font-semibold text-slate-900">Review Session</div>
+                    <div className="text-xs text-[#6d6fcb]">{reviews.length} skills due — timed & interleaved</div>
                   </div>
                 </div>
-                <Icon name="arrow" className="w-5 h-5 text-blue-400" />
+                <Icon name="arrow" className="w-5 h-5 text-[#6d6fcb]" />
               </button>
             )}
 
             {/* Gaps alert */}
             {gaps.length > 0 && (
-              <div className="bg-red-900/20 border border-red-700 rounded-xl p-4 mb-4">
-                <div className="flex items-center gap-2 text-red-400 font-semibold mb-2"><Icon name="alert" className="w-5 h-5" /> Foundation Gaps Detected</div>
-                <p className="text-sm text-slate-300 mb-3">These prerequisite skills need work:</p>
-                <div className="flex flex-wrap gap-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2 py-1 bg-red-900/30 rounded text-sm text-red-300">{g.name}</span>)}</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-4">
+                <div className="flex items-center gap-2 text-amber-600 font-semibold mb-2"><Icon name="target" className="w-5 h-5" /> Foundations to build first</div>
+                <p className="text-sm text-slate-500 mb-3">HOREB starts here and builds up from these, one step at a time:</p>
+                <div className="flex flex-wrap gap-2">{gaps.slice(0, 3).map(g => <span key={g.id} className="px-2.5 py-1 bg-slate-100 rounded-lg text-sm text-slate-700">{g.name}</span>)}</div>
               </div>
             )}
 
             {/* Recommended path */}
-            <h2 className="text-lg font-semibold mb-3 flex items-center gap-2"><Icon name="target" className="w-5 h-5 text-emerald-400" /> Your Learning Path</h2>
+            <h2 className="text-lg font-semibold mb-3 flex items-center gap-2 text-slate-900"><Icon name="target" className="w-5 h-5 text-[#8ca86a]" /> Your Learning Path</h2>
             {path.length > 0 ? (
               <div className="space-y-2 mb-6">{path.map((s, i) => (
-                <button key={s.id} onClick={() => startLesson(s.id)} className={`w-full flex items-center gap-3 p-3 rounded-xl transition-all ${s.type === 'gap' ? 'bg-red-900/20 border border-red-800 hover:bg-red-900/30' : s.type === 'review' ? 'bg-blue-900/20 border border-blue-800 hover:bg-blue-900/30' : s.type === 'remediation' ? 'bg-amber-900/20 border border-amber-800' : 'bg-slate-800 hover:bg-slate-700'}`}>
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold ${s.type === 'gap' ? 'bg-red-600' : s.type === 'review' ? 'bg-blue-600' : 'bg-emerald-600'}`}>{i + 1}</div>
+                <button key={s.id} onClick={() => startLesson(s.id)} className={`w-full flex items-center gap-3 p-3 rounded-xl border transition-colors ${s.type === 'gap' ? 'bg-[#fdf2ef] border-[#f2cdc2] hover:bg-[#fbe9e3]' : s.type === 'review' ? 'bg-[#f5f6fc] border-[#d3daf0] hover:bg-[#eef0fb]' : s.type === 'remediation' ? 'bg-[#fff7ec] border-[#f6e2bd]' : 'bg-white border-slate-200 hover:border-slate-300'}`}>
+                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold text-white shrink-0 ${s.type === 'gap' ? 'bg-[#c0663f]' : s.type === 'review' ? 'bg-[#6d6fcb]' : 'bg-[#8ca86a]'}`}>{i + 1}</div>
                   <div className="flex-1 text-left">
-                    <div className="font-medium flex items-center gap-2">{s.name}{s.critical && <Icon name="zap" className="w-4 h-4 text-amber-400" />}</div>
-                    <div className="text-xs text-slate-400">{s._brain ? `${s.type === 'gap' ? '⚠️ ' : s.type === 'review' ? '🔄 ' : s.type === 'stretch' ? '🚀 ' : ''}${s.reason}` : s.type === 'gap' ? `⚠️ ${s.reason}` : s.type === 'review' ? `🔄 Review (${s.daysSince}d ago)` : `Grade ${s.grade} — ${s.strand}`}</div>
+                    <div className="font-medium text-slate-900 flex items-center gap-2">{s.name}{s.critical && <Icon name="zap" className="w-4 h-4 text-amber-500" />}</div>
+                    <div className="text-xs text-slate-500">{s._brain ? s.reason : s.type === 'gap' ? s.reason : s.type === 'review' ? `Review (${s.daysSince}d ago)` : `Grade ${s.grade} — ${s.strand}`}</div>
                   </div>
-                  <Icon name="arrow" className="w-5 h-5 text-slate-500" />
+                  <Icon name="arrow" className="w-5 h-5 text-slate-300" />
                 </button>
               ))}</div>
             ) : (
-              <div className="text-center text-slate-400 py-8">
-                <Icon name="trophy" className="w-12 h-12 text-amber-400 mx-auto mb-3" />
-                <p className="font-semibold mb-1">Amazing work!</p>
+              <div className="text-center text-slate-500 py-8">
+                <Icon name="trophy" className="w-12 h-12 text-amber-500 mx-auto mb-3" />
+                <p className="font-semibold mb-1 text-slate-900">Amazing work!</p>
                 <p className="text-sm">All available skills are mastered. Check back for reviews.</p>
               </div>
             )}
 
             {/* Overall progress — scoped to the active curriculum (enrichment excluded) */}
-            <div className="bg-slate-800 rounded-2xl p-4 mb-4">
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-4">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-slate-300">{curriculum === NATIVE ? 'Overall Mastery' : 'In-syllabus Mastery'}</span>
-                <span className="text-emerald-400 font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
+                <span className="text-slate-700">{curriculum === NATIVE ? 'Overall Mastery' : 'In-syllabus Mastery'}</span>
+                <span className="text-[#5a7a3a] font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
               </div>
-              <div className="h-3 bg-slate-700 rounded-full overflow-hidden mb-4"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
+              <div className="h-3 bg-slate-100 rounded-full overflow-hidden mb-4"><div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
               <div className="grid grid-cols-3 gap-2 text-center text-sm">{scopedStrandStats.map(s => (
-                <div key={s.name} className="bg-slate-700/50 rounded-lg p-2">
-                  <div className="text-slate-400 text-xs">{s.name}</div>
-                  <div className="font-bold">{s.assessed ? `${s.percent}%` : '—'}</div>
-                  {s.accuracy !== null && s.accuracy < 70 && <div className="text-xs text-red-400">⚠️ {s.accuracy}%</div>}
+                <div key={s.name} className="bg-slate-50 border border-slate-100 rounded-lg p-2">
+                  <div className="text-slate-500 text-xs">{s.name}</div>
+                  <div className="font-bold text-slate-900">{s.assessed ? `${s.percent}%` : '—'}</div>
+                  {s.accuracy !== null && s.accuracy < 70 && <div className="text-xs text-[#c0663f]">{s.accuracy}%</div>}
                 </div>
               ))}</div>
             </div>
@@ -1677,34 +2001,34 @@ export function AIMastery({ onBack, userId, studentName }) {
 
               return (
                 <div key={grade}>
-                  <button onClick={() => setExpanded(isExp ? null : grade)} className="w-full flex items-center justify-between bg-slate-800 rounded-xl p-4">
+                  <button onClick={() => setExpanded(isExp ? null : grade)} className="w-full flex items-center justify-between bg-white border border-slate-200 shadow-sm rounded-2xl p-4 hover:border-slate-300 transition-colors">
                     <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg ${grade <= 6 ? 'bg-green-600' : grade <= 8 ? 'bg-blue-600' : grade <= 10 ? 'bg-purple-600' : 'bg-red-600'}`}>{grade}</div>
+                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg text-white ${grade <= 6 ? 'bg-[#8ca86a]' : grade <= 8 ? 'bg-[#6d6fcb]' : grade <= 10 ? 'bg-purple-500' : 'bg-rose-500'}`}>{grade}</div>
                       <div className="text-left">
-                        <div className="font-semibold">{gradeLabel(grade)}</div>
-                        <div className="text-sm text-slate-400">{mastered}/{gradeSkills.length} mastered</div>
+                        <div className="font-semibold text-slate-900">{gradeLabel(grade)}</div>
+                        <div className="text-sm text-slate-500">{mastered}/{gradeSkills.length} mastered</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-16 h-2 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-500" style={{ width: `${(mastered / gradeSkills.length) * 100}%` }} /></div>
-                      <Icon name={isExp ? 'up' : 'down'} className="w-5 h-5" />
+                      <div className="w-16 h-2 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-[#8ca86a]" style={{ width: `${(mastered / gradeSkills.length) * 100}%` }} /></div>
+                      <Icon name={isExp ? 'up' : 'down'} className="w-5 h-5 text-slate-400" />
                     </div>
                   </button>
                   {isExp && (
                     <div className="mt-2 space-y-3 pl-2">
                       {Object.entries(byStrand).map(([strand, skills]) => (
                         <div key={strand}>
-                          <div className="text-xs text-slate-500 uppercase tracking-wider mb-1 px-2">{strand}</div>
+                          <div className="text-xs text-slate-400 uppercase tracking-wider mb-1 px-2">{strand}</div>
                           <div className="space-y-1">{skills.map(skill => {
                             const status = getStatus(skill.id, progress, ctx);
                             const sp = progress.skills[skill.id];
                             return (
-                              <button key={skill.id} onClick={() => status !== 'locked' && startLesson(skill.id)} disabled={status === 'locked'} className={`w-full flex items-center gap-3 p-3 rounded-xl transition-all ${status === 'locked' ? 'bg-slate-800/50 opacity-50 cursor-not-allowed' : status === 'mastered' ? 'bg-emerald-900/20 border border-emerald-800' : status === 'in_progress' ? 'bg-blue-900/20 border border-blue-800' : 'bg-slate-800 hover:bg-slate-700'}`}>
-                                <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${status === 'locked' ? 'bg-slate-700' : status === 'mastered' ? 'bg-emerald-600' : status === 'in_progress' ? 'bg-blue-600' : 'bg-slate-600'}`}>
+                              <button key={skill.id} onClick={() => status !== 'locked' && startLesson(skill.id)} disabled={status === 'locked'} className={`w-full flex items-center gap-3 p-3 rounded-xl transition-colors ${status === 'locked' ? 'bg-slate-50 border border-slate-100 opacity-70 cursor-not-allowed' : status === 'mastered' ? 'bg-[#eef4e7] border border-[#cfe0bd] hover:bg-[#e6efd9]' : status === 'in_progress' ? 'bg-[#f5f6fc] border border-[#e8e9f6] hover:bg-[#eef0fb]' : 'bg-white border border-slate-200 hover:border-slate-300'}`}>
+                                <div className={`w-7 h-7 rounded-lg flex items-center justify-center text-white shrink-0 ${status === 'locked' ? 'bg-slate-300' : status === 'mastered' ? 'bg-[#8ca86a]' : status === 'in_progress' ? 'bg-[#6d6fcb]' : 'bg-slate-300'}`}>
                                   {status === 'locked' ? <Icon name="lock" className="w-3.5 h-3.5" /> : status === 'mastered' ? <Icon name="check" className="w-3.5 h-3.5" /> : status === 'in_progress' ? <Icon name="trend" className="w-3.5 h-3.5" /> : <Icon name="play" className="w-3.5 h-3.5" />}
                                 </div>
                                 <div className="flex-1 text-left">
-                                  <div className="text-sm font-medium flex items-center gap-2">{skill.name}{skill.critical && <Icon name="zap" className="w-3.5 h-3.5 text-amber-400" />}{isEnrichment(skill, curriculum) && <span className="text-[10px] uppercase tracking-wide text-amber-300/80 bg-amber-900/30 rounded px-1.5 py-0.5">Enrichment</span>}</div>
+                                  <div className="text-sm font-medium text-slate-900 flex items-center gap-2">{skill.name}{skill.critical && <Icon name="zap" className="w-3.5 h-3.5 text-amber-500" />}{isEnrichment(skill, curriculum) && <span className="text-[10px] uppercase tracking-wide text-amber-700 bg-amber-100 rounded px-1.5 py-0.5">Enrichment</span>}</div>
                                   {sp?.attempts > 0 && <div className="text-xs text-slate-400">{sp.correct}/{sp.attempts} ({Math.round((sp.correct / sp.attempts) * 100)}%)</div>}
                                 </div>
                               </button>
@@ -1724,28 +2048,28 @@ export function AIMastery({ onBack, userId, studentName }) {
         {activeTab === 'stats' && (
           <div className="space-y-4">
             {/* Your Level — surfaces the engine's actual measurement (or a JS estimate) */}
-            <div className="bg-gradient-to-br from-emerald-900/40 to-slate-800 rounded-2xl p-5 border border-emerald-800/40">
+            <div className="bg-gradient-to-br from-[#eef4e7] to-white border border-[#cfe0bd] rounded-2xl p-5">
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <div className="text-[11px] uppercase tracking-wide text-emerald-300/70 mb-1">Your current level</div>
-                  <div className="text-2xl font-bold leading-tight">{gradeLabel(estimatedGrade)}</div>
+                  <div className="text-[11px] uppercase tracking-wide text-[#5a7a3a] mb-1">Your current level</div>
+                  <div className="text-2xl font-bold leading-tight text-slate-900">{gradeLabel(estimatedGrade)}</div>
                 </div>
                 {brainAccelerated && (
-                  <span className="shrink-0 text-[11px] font-semibold text-amber-200 bg-amber-900/40 border border-amber-700/50 rounded-full px-2.5 py-1">
-                    🚀 Working above grade
+                  <span className="shrink-0 text-[11px] font-semibold text-amber-700 bg-amber-100 border border-amber-200 rounded-full px-2.5 py-1">
+                    Working above grade
                   </span>
                 )}
               </div>
               {brainProfile ? (
                 <div className="mt-3">
-                  <div className="flex justify-between text-xs text-slate-400 mb-1">
+                  <div className="flex justify-between text-xs text-slate-500 mb-1">
                     <span>Measurement confidence</span>
                     <span>{Math.round((brainProfile.confidence || 0) * 100)}%</span>
                   </div>
-                  <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-emerald-400 transition-all" style={{ width: `${Math.round((brainProfile.confidence || 0) * 100)}%` }} />
+                  <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                    <div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${Math.round((brainProfile.confidence || 0) * 100)}%` }} />
                   </div>
-                  <p className="text-xs text-slate-400 mt-2">
+                  <p className="text-xs text-slate-500 mt-2">
                     {brainAccelerated && brainProfile.headroom_grades >= 1
                       ? `You're succeeding about ${Math.round(brainProfile.headroom_grades * 10) / 10} grade${brainProfile.headroom_grades >= 2 ? 's' : ''} above your working level — no ceiling here.`
                       : brainProfile.confidence < 0.4
@@ -1754,66 +2078,66 @@ export function AIMastery({ onBack, userId, studentName }) {
                   </p>
                 </div>
               ) : (
-                <p className="text-xs text-slate-400 mt-2">Estimated from your mastered skills. Take the diagnostic for a sharper read.</p>
+                <p className="text-xs text-slate-500 mt-2">Estimated from your mastered skills. Take the diagnostic for a sharper read.</p>
               )}
             </div>
 
             {/* Big numbers */}
             <div className="grid grid-cols-2 gap-3">
-              <div className="bg-slate-800 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-emerald-400">{scopedStats.mastered}</div>
-                <div className="text-sm text-slate-400">Skills Mastered</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
+                <div className="text-3xl font-bold text-[#5a7a3a]">{scopedStats.mastered}</div>
+                <div className="text-sm text-slate-500">Skills Mastered</div>
               </div>
-              <div className="bg-slate-800 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-amber-400">{progress.totalXP || 0}</div>
-                <div className="text-sm text-slate-400">Total XP</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
+                <div className="text-3xl font-bold text-amber-500">{progress.totalXP || 0}</div>
+                <div className="text-sm text-slate-500">Total XP</div>
               </div>
-              <div className="bg-slate-800 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-blue-400">{scopedStats.accuracy}%</div>
-                <div className="text-sm text-slate-400">Accuracy</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
+                <div className="text-3xl font-bold text-[#6d6fcb]">{scopedStats.accuracy}%</div>
+                <div className="text-sm text-slate-500">Accuracy</div>
               </div>
-              <div className="bg-slate-800 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-purple-400">{progress.currentStreak || 0}</div>
-                <div className="text-sm text-slate-400">Day Streak</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
+                <div className="text-3xl font-bold text-orange-500">{progress.currentStreak || 0}</div>
+                <div className="text-sm text-slate-500">Day Streak</div>
               </div>
             </div>
 
             {/* In-scope mastery + enrichment note */}
-            <div className="bg-slate-800 rounded-xl p-4">
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
               <div className="flex items-center justify-between mb-1">
-                <span className="text-slate-300">{curriculum === NATIVE ? 'Overall mastery' : 'In-syllabus mastery'}</span>
-                <span className="text-emerald-400 font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
+                <span className="text-slate-700">{curriculum === NATIVE ? 'Overall mastery' : 'In-syllabus mastery'}</span>
+                <span className="text-[#5a7a3a] font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
               </div>
-              <div className="h-3 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
+              <div className="h-3 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
               {scopedStats.enrichment > 0 && (
-                <p className="text-xs text-amber-300/70 mt-2">+ {scopedStats.enrichment} enrichment skill{scopedStats.enrichment === 1 ? '' : 's'} beyond the {curriculaOptions.find(c => c.id === curriculum)?.shortName || ''} syllabus — explore them anytime in All Skills.</p>
+                <p className="text-xs text-amber-700 mt-2">+ {scopedStats.enrichment} enrichment skill{scopedStats.enrichment === 1 ? '' : 's'} beyond the {curriculaOptions.find(c => c.id === curriculum)?.shortName || ''} syllabus — explore them anytime in All Skills.</p>
               )}
             </div>
 
             {/* Grade/Stage breakdown — curriculum-aware labels */}
-            <div className="bg-slate-800 rounded-xl p-4">
-              <h3 className="font-semibold mb-3">{getCurriculum(curriculum).bandLabel} Progress</h3>
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+              <h3 className="font-semibold mb-3 text-slate-900">{getCurriculum(curriculum).bandLabel} Progress</h3>
               <div className="space-y-2">{scopedGradeStats.map(gs => (
                 <div key={gs.grade} className="flex items-center gap-3">
-                  <span className="text-sm text-slate-400 w-28 truncate" title={gradeLabel(gs.grade)}>{gradeLabel(gs.grade)}</span>
-                  <div className="flex-1 h-3 bg-slate-700 rounded-full overflow-hidden"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${gs.percent}%` }} /></div>
-                  <span className="text-sm font-medium w-12 text-right">{gs.percent}%</span>
+                  <span className="text-sm text-slate-500 w-28 truncate" title={gradeLabel(gs.grade)}>{gradeLabel(gs.grade)}</span>
+                  <div className="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${gs.percent}%` }} /></div>
+                  <span className="text-sm font-medium w-12 text-right text-slate-700">{gs.percent}%</span>
                 </div>
               ))}</div>
             </div>
 
             {/* Strand breakdown — with engine level + "not assessed" clarity */}
-            <div className="bg-slate-800 rounded-xl p-4">
-              <h3 className="font-semibold mb-3">Strand Mastery</h3>
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+              <h3 className="font-semibold mb-3 text-slate-900">Strand Mastery</h3>
               <div className="space-y-2">{scopedStrandStats.map(ss => {
                 const bs = brainStrandLevel(ss.name);
                 return (
                   <div key={ss.name} className="flex items-center gap-3">
-                    <span className="text-sm text-slate-400 w-24 truncate" title={ss.name}>{ss.name}</span>
-                    <div className="flex-1 h-3 bg-slate-700 rounded-full overflow-hidden"><div className={`h-full transition-all ${ss.assessed ? 'bg-emerald-500' : 'bg-slate-600'}`} style={{ width: `${ss.percent}%` }} /></div>
+                    <span className="text-sm text-slate-500 w-24 truncate" title={ss.name}>{ss.name}</span>
+                    <div className="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div className={`h-full transition-all ${ss.assessed ? 'bg-[#8ca86a]' : 'bg-slate-200'}`} style={{ width: `${ss.percent}%` }} /></div>
                     {ss.assessed
-                      ? <span className="text-sm font-medium w-16 text-right">{bs ? gradeLabel(bs.grade_level).replace(/ —.*/, '') : `${ss.mastered}/${ss.total}`}</span>
-                      : <span className="text-xs text-slate-500 w-16 text-right">not assessed</span>}
+                      ? <span className="text-sm font-medium w-16 text-right text-slate-700">{bs ? gradeLabel(bs.grade_level).replace(/ —.*/, '') : `${ss.mastered}/${ss.total}`}</span>
+                      : <span className="text-xs text-slate-400 w-16 text-right">not assessed</span>}
                   </div>
                 );
               })}</div>
@@ -1821,7 +2145,7 @@ export function AIMastery({ onBack, userId, studentName }) {
 
             {/* Actions */}
             <div className="space-y-2">
-              <button onClick={() => setView('welcome')} className="w-full p-3 bg-slate-800 rounded-xl text-emerald-400 hover:bg-slate-700 transition-colors text-sm font-medium">Retake Diagnostic Test</button>
+              <button onClick={() => setView('welcome')} className="w-full p-3 bg-white border border-slate-200 rounded-2xl text-[#6d6fcb] hover:bg-slate-50 transition-colors text-sm font-medium">Retake Diagnostic Test</button>
             </div>
           </div>
         )}
@@ -1831,19 +2155,19 @@ export function AIMastery({ onBack, userId, studentName }) {
           const unlocked = new Set(progress.achievements || []);
           return (
             <div className="space-y-4">
-              <div className="bg-slate-800 rounded-2xl p-4 text-center">
-                <div className="text-2xl font-bold text-amber-400">{unlocked.size}<span className="text-slate-500 text-lg">/{ACHIEVEMENTS.length}</span></div>
-                <div className="text-sm text-slate-400">Badges earned — keep going, every one is a win!</div>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
+                <div className="text-2xl font-bold text-amber-500">{unlocked.size}<span className="text-slate-400 text-lg">/{ACHIEVEMENTS.length}</span></div>
+                <div className="text-sm text-slate-500">Badges earned — keep going, every one is a win!</div>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {ACHIEVEMENTS.map(a => {
                   const got = unlocked.has(a.id);
                   return (
-                    <div key={a.id} className={`rounded-2xl p-4 text-center border transition-colors ${got ? 'bg-amber-900/15 border-amber-700/50' : 'bg-slate-800/60 border-slate-700/50'}`}>
+                    <div key={a.id} className={`rounded-2xl p-4 text-center border shadow-sm transition-colors ${got ? 'bg-amber-50 border-amber-200' : 'bg-white border-slate-200'}`}>
                       <div className={`text-3xl mb-1 ${got ? '' : 'grayscale opacity-40'}`}>{a.icon}</div>
-                      <div className={`text-sm font-semibold ${got ? 'text-white' : 'text-slate-400'}`}>{a.name}</div>
-                      <div className="text-xs text-slate-500 mt-0.5">{a.desc}</div>
-                      {got && <div className="text-[10px] uppercase tracking-wide text-amber-300/80 mt-1">Earned</div>}
+                      <div className={`text-sm font-semibold ${got ? 'text-slate-900' : 'text-slate-400'}`}>{a.name}</div>
+                      <div className="text-xs text-slate-400 mt-0.5">{a.desc}</div>
+                      {got && <div className="text-[10px] uppercase tracking-wide text-amber-600 mt-1">Earned</div>}
                     </div>
                   );
                 })}
@@ -1854,10 +2178,19 @@ export function AIMastery({ onBack, userId, studentName }) {
 
         {/* Footer */}
         <div className="mt-8 text-center text-slate-600 text-xs space-y-1 pb-8">
-          <p>Powered by The Math Academy Way methodology</p>
-          <p>🎯 Adaptive learning path · 🔁 Spaced repetition · 🧩 Knowledge graph</p>
+          <p>Adaptive learning path · Spaced repetition · Knowledge graph</p>
         </div>
-      </div>
+        </div>
+      </main>
+
+      {/* ===== MOBILE BOTTOM NAV ===== */}
+      <nav className="lg:hidden fixed inset-x-0 bottom-0 z-40 bg-white border-t border-slate-200 flex justify-around px-1 pt-2" style={{ paddingBottom: 'calc(0.5rem + env(safe-area-inset-bottom))' }}>
+        {[['overview', 'Home', 'home'], ['path', 'Path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Progress', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
+          <button key={id} onClick={() => setActiveTab(id)} className={`flex flex-col items-center gap-0.5 flex-1 py-1 transition-colors ${activeTab === id ? 'text-slate-900' : 'text-slate-400'}`}>
+            <Icon name={icon} className="w-[21px] h-[21px]" /><span className="text-[10px] font-semibold">{label}</span>
+          </button>
+        ))}
+      </nav>
     </div>
   );
 }

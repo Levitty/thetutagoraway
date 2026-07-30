@@ -133,6 +133,17 @@ function verifyProblem(p) {
     return close(approx, v.value)
       ? { ok: true } : { ok: false, reason: `∫ = ${approx.toFixed(3)} ≠ stated ${v.value}` };
   }
+  if (v.kind === 'angle_class') {
+    // Independently re-derive the classification from the degree measure.
+    const derived = v.deg < 90 ? 'acute' : v.deg === 90 ? 'right' : v.deg < 180 ? 'obtuse' : 'reflex';
+    return derived === v.value
+      ? { ok: true } : { ok: false, reason: `${v.deg}° is ${derived}, not ${v.value}` };
+  }
+  if (v.kind === 'text') {
+    // Fact-style answer: the stated answer must match the verify value.
+    return v.value != null && String(p.answer).trim().toLowerCase() === String(v.value).trim().toLowerCase()
+      ? { ok: true } : { ok: false, reason: `answer "${p.answer}" ≠ verify value "${v.value}"` };
+  }
   return { ok: null, reason: `unknown verify kind ${v.kind}` };
 }
 
