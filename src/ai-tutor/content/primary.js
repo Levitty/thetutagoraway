@@ -30,11 +30,12 @@ export const PRIMARY_ALIAS = {
   G5_VOLUME: 'G6_VOLUME_CUBOID',
   G5_CAPACITY: 'G5_MASS',
   G5_3D_OBJECTS: 'G6_VOLUME_CUBOID',
-  G7_MONEY: 'G8_PERCENTAGE_CHANGE',      // profit/loss/discount = % change
-  G7_TEMPERATURE: 'G6_INTEGERS_ADD_SUB', // rises/falls on an integer scale
+  G7_MONEY: 'G8_PROFIT_LOSS',            // profit/loss/discount — the money builder proper
+  // (G7_TEMPERATURE alias removed: it was hijacking the authored temperature
+  //  content in measurement.js — aliases resolve before structured content.)
   G7_ANGLES: 'G8_ANGLE_RELATIONSHIPS',   // angles on transversals/parallels
   G7_CONSTRUCTIONS: 'G9_CONSTRUCTION',
   G8_SCALE_DRAWING: 'G8_RATIO_PROPORTION',
-  G9_APPROX_ERRORS: 'G8_PERCENTAGE_CHANGE',
+  G9_APPROX_ERRORS: 'G9_ERRORS',   // real approximation/error content, not % change
   G9_SPEED_VELOCITY: 'G7_SPEED',   // perpendiculars, bisectors
 };

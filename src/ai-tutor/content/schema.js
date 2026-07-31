@@ -702,8 +702,11 @@ export function buildCompleteSquare() {
 
 // ---- arithmetic sequence: find the nth term ----
 export function buildArithmeticSequence() {
-  const a1 = nonzero(-9, 9), d = nonzero(-6, 6), n = randInt(6, 14);
-  const Un = a1 + (n - 1) * d;
+  let a1, d, n, Un;
+  do {
+    a1 = nonzero(-9, 9); d = nonzero(-6, 6); n = randInt(6, 14);
+    Un = a1 + (n - 1) * d;
+  } while (Un === d || Un === a1 || Un === n);   // answer must not equal a number shown in the hints
   const terms = [0, 1, 2, 3].map((i) => a1 + i * d).join(', ');
   return {
     type: 'arithmetic-sequence',

@@ -95,14 +95,14 @@ const generators = {
     if (askFor.includes('smallest')) answer = factors[1].toString();
     else if (askFor.includes('largest')) answer = factors[factors.length - 2].toString();
     else answer = factors.length.toString();
-    return { question: `What is the ${askFor} of ${n}?`, answer, hint: `Factors of ${n}: ${factors.join(', ')}`,
+    return { question: `What is the ${askFor} of ${n}?`, answer, hint: `A factor divides ${n} exactly, with no remainder. Hunt in pairs, starting from 1 × ${n}.`,
       definitions: { 'Factor': 'A number that divides evenly into another number with no remainder. For example, 3 is a factor of 12 because 12 \u00F7 3 = 4 exactly.' } };
   },
 
   G5_MULTIPLES: () => {
     const n = rand(2, 12), nth = rand(3, 10);
     return { question: `What is the ${nth}${nth === 3 ? 'rd' : 'th'} multiple of ${n}?`, answer: (n * nth).toString(),
-      hint: `Multiples of ${n}: ${n}, ${n*2}, ${n*3}, ...`,
+      hint: `Multiples of ${n}: ${n}, ${n*2}, … keep skip-counting.`,
       definitions: { 'Multiple': `A multiple of ${n} is what you get when you multiply ${n} by a whole number (1, 2, 3...). Think of it as the ${n}-times table.` } };
   },
 
@@ -383,8 +383,8 @@ const generators = {
 
   G6_INTEGERS_ADD_SUB: () => {
     const templates = [
-      () => { const a = rand(-10, 10), b = rand(-10, 10); return { q: `${a} + (${b})`, a: a + b }; },
-      () => { const a = rand(-10, 10), b = rand(-10, 10); return { q: `${a} - (${b})`, a: a - b }; },
+      () => { const a = rand(-10, 10), b = rand(-10, 10) || 3; return { q: `${a} + (${b})`, a: a + b }; },
+      () => { const a = rand(-10, 10), b = rand(-10, 10) || 3; return { q: `${a} - (${b})`, a: a - b }; },
     ];
     const t = pick(templates)();
     return { question: `Calculate: ${t.q}`, answer: t.a.toString() };
@@ -424,7 +424,8 @@ const generators = {
   },
 
   G6_TRIANGLE_PROPERTIES: () => {
-    const a = rand(30, 80), b = rand(30, 80);
+    let a, b, third;
+    do { a = rand(30, 80); b = rand(30, 80); third = 180 - a - b; } while (third === a || third === b);
     return { question: `Two angles of a triangle are ${a}° and ${b}°. Find the third angle.`, answer: (180 - a - b).toString(),
       hint: 'Angles in a triangle sum to 180°' };
   },
@@ -484,8 +485,11 @@ const generators = {
   },
 
   G6_DATA_COLLECTION: () => {
-    const total = rand(30, 50), cat1 = rand(5, 15), cat2 = rand(5, 15);
-    const cat3 = total - cat1 - cat2;
+    let total, cat1, cat2, cat3;
+    do {
+      total = rand(30, 50); cat1 = rand(5, 15); cat2 = rand(5, 15);
+      cat3 = total - cat1 - cat2;
+    } while (cat3 <= 0 || cat3 === cat1 || cat3 === cat2);
     return { question: `Survey of ${total} students: football=${cat1}, basketball=${cat2}, volleyball=? Find volleyball.`, answer: cat3.toString(),
       hint: `All three groups add up to ${total}. Add the two you know (${cat1} + ${cat2}), then subtract from ${total}.` };
   },
@@ -1075,7 +1079,7 @@ const generators = {
   G9_LOCI: () => {
     return { question: `The locus of points equidistant from two fixed points is a...?`, answer: 'perpendicular bisector',
       hint: 'Picture every point that is the same distance from both points — they line up along the cut exactly halfway between them, at right angles.',
-      accepts: ['perpendicular bisector', 'line'] };
+      accepts: ['perpendicular bisector', 'the perpendicular bisector', 'perpendicular bisector of the segment'] };
   },
 
   G9_CIRCLE_THEOREMS_INTRO: () => {
@@ -1238,7 +1242,7 @@ const generators = {
   G10_EXPONENTIAL_GRAPHS: () => {
     const base = rand(2, 3);
     return { question: `For y = ${base}^x, what is y when x = 0?`, answer: '1',
-      hint: 'Any number raised to the power 0 equals 1' };
+      hint: 'What does the zero-power rule say happens to ANY base?' };
   },
 
   G10_CIRCLE_THEOREMS_ADV: () => {
@@ -1377,7 +1381,7 @@ const generators = {
 
   G11_DIFF_APPLICATIONS: () => {
     const a = rand(1, 3), b = rand(2, 8), c = rand(1, 10);
-    return { question: `f(x) = ${a}x² - ${b}x + ${c}. Find the minimum value of f(x).`, answer: roundTo(c - b * b / (4 * a), 2).toString(),
+    return { question: `f(x) = ${a === 1 ? '' : a}x² - ${b}x + ${c}. Find the minimum value of f(x).`, answer: roundTo(c - b * b / (4 * a), 2).toString(),
       hint: 'Find f\'(x) = 0, solve for x, then substitute back' };
   },
 
@@ -1428,7 +1432,7 @@ const generators = {
   G11_NORMAL_DISTRIBUTION: () => {
     return { question: `Normal distribution: mean=100, std=15. What percentage is within 1 standard deviation?`, answer: '68',
       accepts: ['68', '68%', '68.27'],
-      hint: '68-95-99.7 rule' };
+      hint: 'Use the empirical rule for 1, 2 and 3 standard deviations.' };
   },
 
   // ======================== GRADE 12 ========================
@@ -1490,12 +1494,12 @@ const generators = {
   G12_FURTHER_INTEGRATION: () => {
     return { question: `∫1/x dx = ?`, answer: `ln|x| + C`,
       accepts: ['ln|x| + C', 'ln(x) + C', 'lnx + C'],
-      hint: '∫(1/x) dx = ln|x| + C' };
+      hint: 'Which function has derivative 1/x? Remember the constant.' };
   },
 
   G12_PROOF: () => {
     return { question: `Prove by mathematical induction: 1 + 2 + ... + n = n(n+1)/2. What is the base case when n=1?`, answer: '1',
-      hint: 'Check: left side = 1, right side = 1(2)/2 = 1' };
+      hint: 'Substitute n = 1 into each side separately and compare.' };
   },
 
   G12_COMPLEX_NUMBERS: () => {

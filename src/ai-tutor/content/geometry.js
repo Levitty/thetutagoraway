@@ -10,8 +10,10 @@ const r1 = (x) => Math.round(x * 10) / 10;
 
 // ---- missing angle in a triangle (sum = 180) ----
 export function buildTriangleAngle() {
-  const a = randInt(30, 80), b = randInt(30, 80);
-  const value = 180 - a - b;
+  let a, b, value;
+  do {
+    a = randInt(30, 80); b = randInt(30, 80); value = 180 - a - b;
+  } while (value === a || value === b);   // the answer must not equal a given angle
   return {
     type: 'triangle-angle', instruction: 'Find the missing angle.',
     question: `Two angles of a triangle are ${a}° and ${b}°. Find the third angle.`,
@@ -45,8 +47,9 @@ export function buildAnglesLine() {
 
 // ---- polygon interior angle sum / each interior angle ----
 export function buildPolygonAngles() {
-  const n = randInt(3, 10);
   const askEach = coin();
+  // for the sum question, n = 3 gives 180° — the same 180° printed in the formula hint
+  const n = askEach ? randInt(3, 10) : randInt(4, 10);
   const total = (n - 2) * 180;
   const value = askEach ? total / n : total;
   return {
@@ -57,7 +60,8 @@ export function buildPolygonAngles() {
       : `Find the sum of the interior angles of a ${n}-sided polygon.`,
     answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
     hints: hintLadder('Interior angle sum = (n − 2) × 180°.',
-      `n = ${n}, so sum = ${total}°.`, askEach ? `Divide by ${n} (regular polygon).` : 'That is the total.'),
+      askEach ? `n = ${n}, so the sum is ${total}°.` : `n = ${n} — substitute into (n − 2) × 180°.`,
+      askEach ? `Divide the sum by ${n} (regular polygon).` : 'Work the formula out step by step.'),
     solution: { steps: [
       { text: 'Sum = (n − 2) × 180°.', expr: `(${n} − 2) × 180 = ${total}°` },
       ...(askEach ? [{ text: `Each angle = sum ÷ ${n}.`, expr: `${total} ÷ ${n} = ${value}°` }] : [])], answer: `${value}` },
@@ -131,8 +135,8 @@ export function buildParallelAngles() {
     question: `Two parallel lines are crossed by a straight line. One angle is ${a}°. Find the ${rel} angle.`,
     answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
     hints: hintLadder(`Picture the letter: ${NICK}.`,
-      equal ? `${rel[0].toUpperCase() + rel.slice(1)} angles are EQUAL.` : 'Co-interior angles ADD UP TO 180°.',
-      equal ? `So it is also ${a}°.` : `180 − ${a}.`),
+      equal ? 'Do the two angles look the same size, or do they make a straight line together?' : 'Co-interior angles ADD UP TO 180°.',
+      equal ? `${rel[0].toUpperCase() + rel.slice(1)} angles are EQUAL.` : `180 − ${a}.`),
     solution: { steps: [
       { text: `Identify the pair: ${NICK}.`, expr: rel },
       { text: equal ? 'These are equal.' : 'These are supplementary (sum 180°).', expr: equal ? `${value}°` : `180 − ${a} = ${value}°` }], answer: `${value}` },
@@ -171,8 +175,11 @@ export function buildCongruenceTest() {
 export function buildSimilarity() {
   const k = pick([2, 3, 1.5, 2.5]);
   const a = pick([4, 6, 8, 10]);
-  const b = randInt(3, 9);
+  let b = randInt(3, 9);
   const A = a * k;                      // matching pair reveals the scale factor
+  // the asked side must differ from the given pair, and its answer must not
+  // equal any length already printed in the question
+  while (b === a || b * k === a || b * k === A) b = randInt(3, 9);
   const value = b * k;
   if (!Number.isInteger(A) || !Number.isInteger(value)) return buildSimilarity();
   const additive = b + (A - a);
@@ -231,8 +238,8 @@ export function buildBearings() {
       question: `A ship sails ${c.desc}. Write this as a three-figure bearing.`,
       answer: three, accepts: accepts(three, `${c.v}`, `${c.v}°`, `${three}°`),
       hints: hintLadder('Start facing North and turn clockwise.',
-        'East is 090°, South is 180°, West is 270°.',
-        `Work out how far clockwise from North "${c.desc}" is.`),
+        'A quarter turn clockwise is 090°, a half turn is 180°, three quarters is 270°.',
+        `Work out how far clockwise from North "${c.desc}" is, then write it with three figures.`),
       solution: { steps: [
         { text: 'Measure clockwise from North.', expr: c.desc },
         { text: 'Write with three figures.', expr: `${three}°` }], answer: three },

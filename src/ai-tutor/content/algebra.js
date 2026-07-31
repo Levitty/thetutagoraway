@@ -134,7 +134,7 @@ export function buildLinearGraphRead() {
 export function buildGradient() {
   const m = nonzero(-4, 4);
   const x1 = randInt(-5, 3);
-  const dx = randInt(1, 5);
+  const dx = randInt(2, 5);   // run of 1 would make the final hint "rise ÷ 1" — the answer
   const x2 = x1 + dx;
   const y1 = randInt(-6, 6);
   const y2 = y1 + m * dx;

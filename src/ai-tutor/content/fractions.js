@@ -30,7 +30,9 @@ const fracAccepts = (n, d) => {
 // ---- equivalent fractions: a/b = ?/(b·k) ----
 export function buildEquivalentFraction() {
   let a, b;
-  do { b = randInt(2, 9); a = randInt(1, b - 1); } while (gcd(a, b) !== 1);  // start in lowest terms
+  // a >= 2: with a numerator of 1 the missing numerator IS the scale factor,
+  // and any hint about the multiplier hands it over
+  do { b = randInt(3, 9); a = randInt(2, b - 1); } while (gcd(a, b) !== 1);
   const k = randInt(2, 6);
   const ans = a * k, newDen = b * k;
   return {
@@ -49,8 +51,8 @@ export function buildEquivalentFraction() {
     } },
     hints: hintLadder(
       'What do you multiply the bottom by to get the new denominator?',
-      `${b} × ${k} = ${newDen}, so multiply the TOP by the same ${k}.`,
-      `${a} × ${k} = ?`,
+      `${b} × ? = ${newDen} — find that multiplier first.`,
+      'Multiply the top by the same multiplier.',
     ),
     solution: {
       steps: [
@@ -77,6 +79,8 @@ export function buildAddSubLike({ sub = false } = {}) {
   const d = randInt(3, 12);
   let a = randInt(1, d - 1), c = randInt(1, d - 1);
   if (sub && a < c) [a, c] = [c, a];           // keep result ≥ 0
+  // a − c must not equal c: the answer would be an operand already on the page
+  while (sub && a - c === c) { c = randInt(1, d - 1); if (a < c) [a, c] = [c, a]; }
   const num = sub ? a - c : a + c, op = sub ? '−' : '+';
   return {
     type: sub ? 'subtract-like' : 'add-like',
@@ -120,11 +124,16 @@ export function buildAddSubLike({ sub = false } = {}) {
 
 // ---- add/subtract with UNLIKE denominators (G6) — the big one ----
 export function buildAddSubUnlike({ sub = false } = {}) {
-  let b = randInt(2, 9), d; do { d = randInt(2, 9); } while (d === b);
-  let a = randInt(1, b), c = randInt(1, d);
-  if (sub && a * d < c * b) { [a, b, c, d] = [c, d, a, b]; }    // keep result ≥ 0
-  const L = lcm(b, d), a2 = a * (L / b), c2 = c * (L / d);
-  const num = sub ? a2 - c2 : a2 + c2, op = sub ? '−' : '+';
+  let b, d, a, c, L, a2, c2, num;
+  do {
+    b = randInt(2, 9); do { d = randInt(2, 9); } while (d === b);
+    a = randInt(1, Math.max(1, b - 1)); c = randInt(1, Math.max(1, d - 1));  // no whole-number operands (3/3)
+    if (sub && a * d < c * b) { [a, b, c, d] = [c, d, a, b]; }    // keep result ≥ 0
+    L = lcm(b, d); a2 = a * (L / b); c2 = c * (L / d);
+    num = sub ? a2 - c2 : a2 + c2;
+    // the result must not equal an operand (1/3 − 1/6 = 1/6 hands the answer over)
+  } while (sub && (num * b === a * L || num * d === c * L));
+  const op = sub ? '−' : '+';
   const simplifies = reduce(num, L)[1] !== L;
   return {
     type: sub ? 'subtract-unlike' : 'add-unlike',
@@ -174,7 +183,11 @@ export function buildAddSubUnlike({ sub = false } = {}) {
 
 // ---- multiply fractions ----
 export function buildMulFractions() {
-  const a = randInt(1, 8), b = randInt(2, 9), c = randInt(1, 8), d = randInt(2, 9);
+  let a, b, c, d;
+  do {
+    a = randInt(1, 8); b = randInt(2, 9); c = randInt(1, 8); d = randInt(2, 9);
+  } while (a === b || c === d || (a === c && b === d)
+    || ((a * c) % (b * d) === 0 && [a, b, c, d].includes((a * c) / (b * d))));   // no trivial operands; result must not equal a number on the page
   const num = a * c, den = b * d;
   return {
     type: 'multiply-fractions',
@@ -219,7 +232,14 @@ export function buildMulFractions() {
 
 // ---- divide fractions ----
 export function buildDivFractions() {
-  const a = randInt(1, 8), b = randInt(2, 9), c = randInt(1, 8), d = randInt(2, 9);
+  let a, b, c, d;
+  do {
+    a = randInt(1, 8); b = randInt(2, 9); c = randInt(1, 8); d = randInt(2, 9);
+    // a===b or c===d makes one operand equal 1, so the hint's flipped fraction or
+    // restated dividend IS the answer; identical operands make the answer 1;
+    // a·d² = b·c² makes the simplified result equal the divisor on the page.
+  } while (a === b || c === d || (a === c && b === d) || a * d * d === b * c * c
+    || ((a * d) % (b * c) === 0 && [a, b, c, d].includes((a * d) / (b * c))));   // whole-number result must not equal a number on the page
   const num = a * d, den = b * c;
   return {
     type: 'divide-fractions',
@@ -332,7 +352,7 @@ export function buildReciprocal() {
     question: `What is the reciprocal of ${a}/${b}?`,
     answer: fracStr(b, a),
     accepts: fracAccepts(b, a),
-    hints: hintLadder('The reciprocal flips the fraction upside down.', `${a}/${b} becomes ${b}/${a}.`),
+    hints: hintLadder('The reciprocal flips the fraction upside down.', 'Swap the top number and the bottom number.'),
     solution: { steps: [{ text: 'Swap numerator and denominator.', expr: fracStr(b, a) }], answer: fracStr(b, a) },
     misconceptions: [],
     verify: { kind: 'fraction', value: b / a },
@@ -385,9 +405,9 @@ export function buildFractionToDecimal() {
     instruction: 'Write as a decimal.',
     question: `Write ${a}/${d} as a decimal.`,
     answer: `${dec}`,
-    accepts: accepts(`${dec}`, fracStr(rn, rd)),
+    accepts: accepts(`${dec}`),   // never accept the fraction itself — the question asks for a decimal
     hints: hintLadder('Divide the numerator by the denominator.',
-      `Or scale to a denominator of 10, 100, …  ${a}/${d} = ?`),
+      'Or scale the fraction to a denominator of 10 or 100 first.'),
     solution: { steps: [{ text: 'Numerator ÷ denominator.', expr: `${a} ÷ ${d} = ${dec}` }], answer: `${dec}` },
     misconceptions: [],
     verify: { kind: 'fraction', value: rn / rd },
@@ -397,7 +417,8 @@ export function buildFractionToDecimal() {
 // ---- percentage of a quantity ----
 export function buildPercentageOf() {
   const p = pick([5, 10, 15, 20, 25, 30, 40, 50, 60, 75]);
-  const base = pick([20, 40, 60, 80, 100, 120, 200, 240]);
+  // no base of 100: the hint "p% = p/100" would state the answer
+  const base = pick([20, 40, 60, 80, 120, 200, 240]);
   const v = (p * base) / 100;
   return {
     type: 'percentage-of',
@@ -439,14 +460,15 @@ export function buildPercentageOf() {
 
 // CONCRETE: shade the 10×10 grid to show a percentage (percent = out of 100).
 export function buildShadePercent() {
-  const p = randInt(1, 99);
+  let p = randInt(2, 99);
+  while (p === 10) p = randInt(2, 99);   // "each full row is 10%" would hand 10 over
   return {
     type: 'shade-percent', instruction: 'Shade the grid to show the percentage.',
     question: `Shade the grid to show ${p}%.`,
     answer: `${p}`, accepts: accepts(`${p}`, `${p}%`),
     hints: hintLadder(
       'Percent means "out of 100". The grid has exactly 100 squares.',
-      `${p}% means ${p} out of 100 — shade ${p} squares.`,
+      'How many "out of 100" is that? Shade one square for each.',
       'Each full row is 10%.',
     ),
     solution: { steps: [{ text: `${p}% = ${p} out of 100, so shade ${p} squares.`, expr: `${p}%` }], answer: `${p}` },
@@ -491,7 +513,7 @@ export function buildPlaceOnNumberLine() {
     answer: `${n}/${d}`, accepts: fracAccepts(n, d),
     hints: hintLadder(
       'The line runs from 0 to 1.',
-      `Split it into ${d} equal steps (each step is 1/${d}).`,
+      `Split the line into ${d} equal steps — the bottom number tells you how many.`,
       `Count ${n} steps from 0.`,
     ),
     solution: { steps: [{ text: `Each step is 1/${d}; count ${n} steps from 0.`, expr: `${n}/${d}` }], answer: `${n}/${d}` },

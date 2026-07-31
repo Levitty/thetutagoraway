@@ -51,7 +51,9 @@ export function buildDecimalAddSub({ sub = false } = {}) {
 
 // ---- decimals: multiply ----
 export function buildDecimalMul() {
-  const A = randInt(11, 99), B = randInt(2, 19);     // a.b  ×  c.d / c
+  let A = randInt(11, 99), B = randInt(2, 19);       // a.b  ×  c.d / c
+  while (A % 10 === 0) A = randInt(11, 99);          // whole-number factors would break
+  while (B % 10 === 0) B = randInt(2, 19);           // the "2 decimal places" teaching
   const a = A / 10, b = B / 10;
   const res = (A * B) / 100;
   return {
@@ -80,7 +82,8 @@ export function buildDecimalMul() {
 // ---- decimals: divide (engineered to terminate) ----
 export function buildDecimalDiv() {
   const divisor = randInt(2, 9);
-  const Q = randInt(11, 99);              // quotient in tenths
+  let Q = randInt(11, 99);                // quotient in tenths
+  while (Q % 10 === 0) Q = randInt(11, 99);   // keep the quotient genuinely decimal
   const dividend = (Q / 10) * divisor;
   return {
     type: 'decimal-div',
@@ -100,8 +103,12 @@ export function buildDecimalDiv() {
 
 // ---- integers: add / subtract (signed) ----
 export function buildIntegerAddSub() {
-  const a = randInt(-12, 12), b = randInt(-12, 12), sub = coin();
-  const res = sub ? a - b : a + b, op = sub ? '−' : '+';
+  let a, b, sub, res;
+  do {
+    a = randInt(-12, 12); b = randInt(-12, 12); sub = coin();
+    res = sub ? a - b : a + b;
+  } while (b === 0 || a === 0 || res === a || res === b);   // answer must not be an operand on the page
+  const op = sub ? '−' : '+';
   return {
     type: 'integer-add-sub',
     instruction: 'Work out the answer.',
@@ -308,10 +315,14 @@ export function buildPrime() {
 
 // ---- percentage increase / decrease ----
 export function buildPercentageChange() {
-  const base = pick([20, 40, 60, 80, 120, 160, 200, 240, 400]);
-  const p = pick([5, 10, 15, 20, 25, 50]);
-  const up = coin();
-  const value = up ? base + (base * p) / 100 : base - (base * p) / 100;
+  let base, up, p, value;
+  do {
+    base = pick([20, 40, 60, 80, 120, 160, 200, 240, 400]);
+    up = coin();
+    // decreasing by 50% would make the hint's "50% of base = …" the answer itself
+    p = pick(up ? [5, 10, 15, 20, 25, 50] : [5, 10, 15, 20, 25]);
+    value = up ? base + (base * p) / 100 : base - (base * p) / 100;
+  } while (value === p);   // "Increase 20 by 25%" = 25 — answer already on the page
   return {
     type: 'percentage-change',
     instruction: 'Work out the new amount.',
@@ -451,14 +462,18 @@ export function buildIntegerJump() {
 
 // CONCRETE: shade a 10×10 grid to show a decimal (G5_DECIMALS_INTRO).
 export function buildDecimalGrid() {
-  const h = randInt(1, 99), val = h / 100, vs = `${val}`;
+  // Avoid 0.01 and 0.10: the teaching hints ("each square is 0.01", "each row
+  // is 0.1") would state those answers outright.
+  let h = randInt(2, 99);
+  while (h === 10) h = randInt(2, 99);
+  const val = h / 100, vs = `${val}`;
   return {
     type: 'decimal-grid', instruction: 'Shade the grid to show the decimal.',
     question: `Shade the grid to show ${vs}.`,
     answer: vs, accepts: accepts(vs, `${h}/100`),
     hints: hintLadder(
       'The whole grid is 1. Each small square is 0.01 (one hundredth).',
-      `${vs} means ${h} hundredths — shade ${h} squares.`,
+      'Read the digits after the point as hundredths — that counts your squares.',
       'Each full row is 0.1 (ten hundredths).',
     ),
     solution: { steps: [{ text: `${vs} = ${h} hundredths, so shade ${h} of the 100 squares.`, expr: vs }], answer: vs },
@@ -508,7 +523,10 @@ export function buildMultiplicationArray() {
 
 // ABSTRACT: exact division fact.
 export function buildDivideFact() {
-  const d = randInt(2, 9), q = randInt(2, 12), a = d * q;
+  const d = randInt(2, 9);
+  let q = randInt(2, 12);
+  while (q === d) q = randInt(2, 12);   // q === d would put the answer in the hint ("how many 3s make 9?")
+  const a = d * q;
   return {
     type: 'divide-fact', instruction: 'Work out the quotient.',
     question: `${a} ÷ ${d}`, answer: `${q}`, accepts: accepts(`${q}`),
@@ -520,7 +538,10 @@ export function buildDivideFact() {
 
 // CONCRETE: division as sharing a dot array into equal rows.
 export function buildDivisionArray() {
-  const rows = randInt(2, 6), cols = randInt(2, 6), total = rows * cols;
+  const rows = randInt(2, 6);
+  let cols = randInt(2, 6);
+  while (cols === rows) cols = randInt(2, 6);   // rows === cols would make the hint's row count the answer
+  const total = rows * cols;
   return {
     type: 'divide-array', instruction: 'Share equally and count.',
     question: `${total} dots are arranged in ${rows} equal rows. How many in each row?`,
@@ -542,7 +563,8 @@ export function buildPlaceValueChart() {
   const placeVals = [];
   for (let i = nDigits - 1; i >= 0; i--) placeVals.push(Math.pow(10, i));   // 1000,100,10,1
   const digits = placeVals.map(() => randInt(1, 9));                         // no zeros, clean questions
-  const hi = randInt(0, nDigits - 1);
+  const hi = randInt(0, nDigits - 2);       // skip the ones column (value = digit is no test)
+  digits[hi] = randInt(2, 9);               // digit 1 would make the column name in the hint the answer
   const digit = digits[hi], place = placeVals[hi], value = digit * place;
   const numStr = Number(digits.join('')).toLocaleString('en-US');
   return {
@@ -551,7 +573,7 @@ export function buildPlaceValueChart() {
     answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-US')),
     hints: hintLadder(
       `The digit ${digit} sits in the ${place}s column.`,
-      `Its value is ${digit} × ${place}.`,
+      'Multiply the digit by what its column is worth.',
     ),
     solution: { steps: [{ text: `That column is worth ${place}.`, expr: `${digit} × ${place} = ${value}` }], answer: `${value}` },
     misconceptions: [{ when: `${digit}`, feedback: `A digit's value depends on its COLUMN — it's ${digit} × ${place}, not just ${digit}.` }],
@@ -567,7 +589,8 @@ export function buildRatioShare() {
   const total = (a + b) * per;
   const [name1, name2] = pick([['Amina', 'Baraka'], ['Wanjiku', 'Otieno'], ['Zawadi', 'Kiprop'], ['Njeri', 'Mwangi']]);
   const item = pick(['sweets', 'mangoes', 'shillings', 'marbles']);
-  const askFirst = coin();
+  // never ask about a 1-part share: "one part = total ÷ parts" would BE the answer
+  const askFirst = a === 1 ? false : b === 1 ? true : coin();
   const share1 = a * per, share2 = b * per;
   const value = askFirst ? share1 : share2;
   const asked = askFirst ? name1 : name2;
@@ -590,7 +613,7 @@ export function buildRatioShare() {
     hints: hintLadder(
       'The ratio tells you how many equal parts each person gets.',
       `Total parts = ${a} + ${b} = ${a + b}. One part = ${total} ÷ ${a + b}.`,
-      `${asked} gets ${parts} part${parts > 1 ? 's' : ''} of ${per} each.`,
+      `How many parts does ${asked} get? Multiply that by the size of one part.`,
     ),
     solution: {
       steps: [
@@ -622,6 +645,9 @@ export function buildBigPlaceValue() {
   const pos = pick(digits.map((d, i) => d !== 0 ? i : null).filter(i => i !== null));
   const digit = digits[pos];
   const placeVal = Math.pow(10, len - 1 - pos);
+  // ones place (value = digit) and digit 1 (value = place named in the hint)
+  // both put the answer on the page — reroll
+  if (placeVal === 1 || digit === 1) return buildBigPlaceValue();
   const value = digit * placeVal;
   const nStr = digits.join('');
   const pretty = Number(nStr).toLocaleString('en-KE');
@@ -719,7 +745,7 @@ export function buildPrimeFactorization() {
     answer: `${value}`, accepts: accepts(`${value}`),
     hints: hintLadder('Divide by the smallest primes first: 2, then 3, then 5…',
       'Keep dividing until every branch of the factor tree ends in a prime.',
-      `${n} = ${tree}.`),
+      askLargest ? 'Divide out the small primes completely — the prime left standing at the end is the one.' : `${n} = ${tree}.`),
     solution: { steps: [
       { text: 'Build the factor tree (divide by small primes repeatedly).', expr: `${n} = ${tree}` },
       { text: askLargest ? 'Pick the largest prime in the product.' : 'Count every prime, including repeats.', expr: `${value}` }], answer: `${value}` },

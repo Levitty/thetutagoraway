@@ -1423,9 +1423,15 @@ export function AIMastery({ onBack, userId, studentName }) {
                 )}
                 <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
 
-                {/* Gentle 'I'm not sure' — an out that isn't guessing (surfaces a hint) */}
-                {!feedback && hintLevel < 1 && attemptCount === 0 && (
-                  <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm not sure — show me a hint</button>
+                {/* Gentle 'I'm not sure' — an out that isn't guessing (surfaces a hint).
+                    Retrieval gating: memory checks get no hints at all (they test recall),
+                    and once a streak is going the student must attempt before hints unlock. */}
+                {!feedback && hintLevel < 1 && attemptCount === 0 && !interleave && (
+                  session.streak >= 2 ? (
+                    <div className="mt-3 text-sm text-slate-400">You're on a roll — try this one on your own first. A hint appears if your try doesn't land.</div>
+                  ) : (
+                    <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm not sure — show me a hint</button>
+                  )
                 )}
 
                 {/* "type a number" nudge — doesn't cost an attempt */}

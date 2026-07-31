@@ -46,7 +46,7 @@ export function buildRectangleArea() {
 
 // ---- triangle area ----
 export function buildTriangleArea() {
-  const b = randInt(2, 20), h = randInt(2, 18);
+  const b = randInt(3, 20), h = randInt(3, 18);   // h or b of 2 makes the area equal the other side
   // ensure ½bh is clean by making b·h even
   const base = b * h % 2 === 0 ? b : b + 1;
   const value = (base * h) / 2;
@@ -386,8 +386,11 @@ export function buildRounding() {
 export function buildErrors() {
   const kind = pick(['abs', 'pct', 'bound']);
   if (kind === 'abs') {
-    const A = randInt(20, 200), err = randInt(2, 15);
-    const E = coin() ? A + err : A - err;
+    let A, err, E;
+    do {
+      A = randInt(20, 200); err = randInt(2, 15);
+      E = coin() ? A + err : A - err;
+    } while (E === err);   // estimate equal to the error puts the answer on the page
     const item = pick([['rope', 'length', 'cm'], ['parcel', 'mass', 'g'], ['bucket', 'capacity', 'litres'], ['desk', 'length', 'cm']]);
     return {
       type: 'error-abs', instruction: 'Find the error.',
@@ -410,7 +413,7 @@ export function buildErrors() {
       A = pick([20, 40, 50, 80, 100, 200, 400]);
       p = pick([2, 4, 5, 10, 15, 20, 25]);
       err = (A * p) / 100;
-    } while (!Number.isInteger(err));
+    } while (!Number.isInteger(err) || A + err === p || A - err === p);
     const E = coin() ? A + err : A - err;
     return {
       type: 'error-pct', instruction: 'Find the percentage error.',

@@ -58,9 +58,9 @@ export function buildProbability() {
   const ans = ansD === 1 ? `${ansN}` : `${ansN}/${ansD}`;
   return {
     type: 'probability', instruction: 'Give the probability as a fraction in simplest form.',
-    question: `A bag has ${total} equally likely outcomes; ${fav} are favourable. What is the probability of a favourable outcome?`,
+    question: `A bag has ${total} equally likely outcomes; ${fav} ${fav === 1 ? 'is' : 'are'} favourable. What is the probability of a favourable outcome?`,
     answer: ans, accepts: accepts(ans, `${+(fav / total).toFixed(6)}`),
-    hints: hintLadder('Probability = favourable ÷ total.', `${fav}/${total}, then simplify.`),
+    hints: hintLadder('Probability = favourable ÷ total.', 'Write favourable over total as a fraction, then simplify it.'),
     solution: { steps: [
       { text: 'Probability = favourable ÷ total.', expr: `${fav}/${total}` },
       { text: 'Simplify.', expr: ans }], answer: ans },
