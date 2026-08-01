@@ -802,9 +802,99 @@ const MODELS = {
   'base-ten': BaseTenBlocks,
   'formula-triangle': FormulaTriangle,
   'transpose': TransposeWork,
+  'column-op': ColumnOp,
 };
 
 export const TEACHING_MODEL_TYPES = Object.keys(MODELS);
+
+// The classroom vertical algorithm, drawn the way a teacher writes it on the
+// board: addition carries as small honey digits above their columns;
+// subtraction borrows as crossed-out digits with the reduced digit rewritten
+// above, and a small "1" in front of the column that received the ten
+// (cascades through zeros the classic way: 0 crossed out becomes 9).
+// Practice hides exactly the answer row; the reveal completes the picture.
+function ColumnOp({ data }) {
+  const { a, b, op = '+', showResult = false, caption } = data || {};
+  if (a == null || b == null) return null;
+  const sub = op === '−' || op === '-';
+  const result = sub ? a - b : a + b;
+  const da = String(a).split('').reverse().map(Number);
+  const db = String(b).split('').reverse().map(Number);
+  const dr = String(result).split('').reverse().map(Number);
+  const cols = Math.max(da.length, db.length, dr.length);
+
+  const carryIn = [];                   // + : carry arriving at column i
+  const crossed = [], newDigit = [], prefix = [];   // − : borrow bookkeeping
+  if (!sub) {
+    let c = 0;
+    for (let i = 0; i < cols; i++) { carryIn[i] = c; c = (da[i] || 0) + (db[i] || 0) + c >= 10 ? 1 : 0; }
+  } else {
+    let borrow = 0;
+    for (let i = 0; i < cols; i++) {
+      const orig = da[i] || 0;
+      const wasReduced = borrow === 1;
+      let top = orig - borrow;
+      let reBorrow = 0;
+      if (top < (db[i] || 0)) { top += 10; reBorrow = 1; }
+      if (wasReduced) { crossed[i] = orig; newDigit[i] = (orig + 9) % 10; }   // 4→3, 0→9
+      if (reBorrow && !(wasReduced && orig === 0)) prefix[i] = true;          // 0→9 absorbs its ten
+      borrow = reBorrow;
+    }
+  }
+
+  const CW = 32;
+  const W = Math.max(230, (cols + 2.4) * CW + 30);
+  const yTop = 20, yA = 46, yB = 74, yRule = 84, yR = 104;
+  const H = yR + 12 + (caption ? 18 : 0);
+  const colX = (i) => W - 34 - (i + 0.5) * CW;    // ones on the right
+  const opX = colX(cols - 1) - CW * 0.95;
+
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" style={{ maxWidth: 300, margin: '0 auto', display: 'block' }} role="img" aria-label={`Column ${sub ? 'subtraction' : 'addition'} working`}>
+        {/* addition carries — only on the reveal: deciding where to carry IS the practice */}
+        {!sub && showResult && carryIn.map((c, i) => c ? (
+          <text key={`c${i}`} x={colX(i)} y={yTop + 4} textAnchor="middle" fontSize="12" fontWeight="800" fill="#c98a14">1</text>
+        ) : null)}
+        {/* top number with borrow marks (reveal only) */}
+        {Array.from({ length: cols }).map((_, i) => {
+          const dgt = da[i];
+          if (dgt == null) return null;
+          const x = colX(i);
+          return (
+            <g key={`a${i}`}>
+              {sub && showResult && crossed[i] != null ? (
+                <>
+                  <text x={x} y={yA} textAnchor="middle" fontSize="18" fontWeight="700" fill="#94a3b8">{crossed[i]}</text>
+                  <line x1={x - 7} y1={yA - 3} x2={x + 7} y2={yA - 13} stroke="#c0663f" strokeWidth="1.7" strokeLinecap="round" />
+                  <text x={x} y={yTop + 2} textAnchor="middle" fontSize="12" fontWeight="800" fill="#c0663f">{newDigit[i]}</text>
+                </>
+              ) : (
+                <text x={x} y={yA} textAnchor="middle" fontSize="18" fontWeight="700" fill="#1e293b">{dgt}</text>
+              )}
+              {sub && showResult && prefix[i] && <text x={x - 12} y={yA - 6} fontSize="11" fontWeight="800" fill="#c0663f">1</text>}
+            </g>
+          );
+        })}
+        {/* second number + operator */}
+        <text x={opX} y={yB} textAnchor="middle" fontSize="17" fontWeight="800" fill="#c98a14">{sub ? '−' : '+'}</text>
+        {Array.from({ length: cols }).map((_, i) => db[i] == null ? null : (
+          <text key={`b${i}`} x={colX(i)} y={yB} textAnchor="middle" fontSize="18" fontWeight="700" fill="#1e293b">{db[i]}</text>
+        ))}
+        {/* the rule */}
+        <line x1={opX - CW * 0.5} y1={yRule} x2={colX(0) + CW * 0.7} y2={yRule} stroke="#64748b" strokeWidth="1.8" />
+        {/* result row — hidden in practice */}
+        {Array.from({ length: cols }).map((_, i) => {
+          if (!showResult) {
+            return dr[i] == null ? null : <text key={`r${i}`} x={colX(i)} y={yR} textAnchor="middle" fontSize="17" fontWeight="700" fill="#cbd5e1">?</text>;
+          }
+          return dr[i] == null ? null : <text key={`r${i}`} x={colX(i)} y={yR} textAnchor="middle" fontSize="18" fontWeight="800" fill="#5a7a3a">{dr[i]}</text>;
+        })}
+        {caption && <text x={W / 2} y={H - 4} textAnchor="middle" fontSize="11" fill="#64748b">{caption}</text>}
+      </svg>
+    </div>
+  );
+}
 
 // `interactive` upgrades models that support it (currently the balance scale)
 // into a manipulative; `onEvent('solved')` fires when the student works it to

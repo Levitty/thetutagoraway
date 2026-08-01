@@ -9,7 +9,7 @@
 // shown to a Grade-1 learner).
 // ============================================================================
 
-import { accepts, hintLadder, randInt, pick, coin, withWorkedExample, withKPs } from './schema.js';
+import { accepts, hintLadder, randInt, pick, coin, withWorkedExample, withKPs, columnOpModel, columnSteps } from './schema.js';
 
 // ---------------------------------------------------------------------------
 // Shared arithmetic cores, parameterised by grade band
@@ -40,8 +40,17 @@ function buildBandedAdd({ maxOperand, maxTotal, minTotal = 0, digitsA = null, di
       question: q, answer: `${value}`, accepts: accepts(`${value}`),
       hints: hintLadder(
         maxOperand <= 9 ? 'Count on from the bigger number.' : 'Add the ones first, then the tens (regroup if the ones make ten or more).',
-        `Start from ${Math.max(a, b)} and count up ${Math.min(a, b)}.`),
-      solution: { steps: [{ text: maxOperand <= 9 ? `Count on: start at ${a}, count up ${b}.` : 'Add column by column from the ones.', expr: `${a} + ${b} = ${value}` }], answer: `${value}` },
+        maxOperand <= 9 ? `Start from ${Math.max(a, b)} and count up ${Math.min(a, b)}.` : 'Work column by column, starting from the ones on the right.'),
+      // Multi-digit sums get the column-algorithm board picture (carry digits
+      // written above their columns) and per-column working.
+      model: maxOperand > 20 ? columnOpModel(a, b, false) : undefined,
+      solution: {
+        steps: maxOperand > 20
+          ? [...columnSteps(a, b, false),
+             { text: 'Read the answer off the bottom row.', expr: `${value}`, model: columnOpModel(a, b, false, { showResult: true }) }]
+          : [{ text: maxOperand <= 9 ? `Count on: start at ${a}, count up ${b}.` : 'Add column by column from the ones.', expr: `${a} + ${b} = ${value}` }],
+        answer: `${value}`,
+      },
       misconceptions: [{ when: `${Math.abs(a - b)}`, feedback: 'That is the difference — this question asks for the total (add, don\'t subtract).' }],
       visual: maxOperand <= 9 ? { type: 'number_line', data: { from: 0, to: 20, start: a, jump: b } } : undefined,
       verify: { kind: 'fraction', value },
@@ -67,8 +76,15 @@ function buildBandedSub({ maxOperand, digitsA = null, digitsB = null, borrow = n
       question: q, answer: `${value}`, accepts: accepts(`${value}`),
       hints: hintLadder(
         maxOperand <= 9 ? 'Count back from the bigger number.' : 'Subtract the ones first, then the tens (borrow if you need to).',
-        `Start at ${a} and count back ${b}.`),
-      solution: { steps: [{ text: maxOperand <= 9 ? `Count back: start at ${a}, go down ${b}.` : 'Subtract column by column from the ones.', expr: `${a} − ${b} = ${value}` }], answer: `${value}` },
+        maxOperand <= 9 ? `Start at ${a} and count back ${b}.` : 'Work column by column from the ones — borrow when the top digit is smaller.'),
+      model: maxOperand > 20 ? columnOpModel(a, b, true) : undefined,
+      solution: {
+        steps: maxOperand > 20
+          ? [...columnSteps(a, b, true),
+             { text: 'Read the answer off the bottom row.', expr: `${value}`, model: columnOpModel(a, b, true, { showResult: true }) }]
+          : [{ text: maxOperand <= 9 ? `Count back: start at ${a}, go down ${b}.` : 'Subtract column by column from the ones.', expr: `${a} − ${b} = ${value}` }],
+        answer: `${value}`,
+      },
       misconceptions: [{ when: `${a + b}`, feedback: 'That is the total — this question asks what is left (subtract, don\'t add).' }],
       verify: { kind: 'fraction', value },
     };

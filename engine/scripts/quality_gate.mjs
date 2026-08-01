@@ -252,6 +252,12 @@ function validateModel(m, where) {
       if (!Array.isArray(d.after) || !d.after.length) return `${where}: transpose has no working lines`;
       return null;
     }
+    case 'column-op': {
+      if (!Number.isFinite(d.a) || !Number.isFinite(d.b)) return `${where}: column-op needs numeric a and b`;
+      if (d.op !== '+' && d.op !== '−' && d.op !== '-') return `${where}: column-op op must be + or −`;
+      if ((d.op === '−' || d.op === '-') && d.b > d.a) return `${where}: column-op would go negative`;
+      return null;
+    }
     default: return `${where}: unknown model type ${m.type}`;
   }
 }

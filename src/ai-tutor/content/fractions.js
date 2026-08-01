@@ -155,7 +155,10 @@ export function buildAddSubUnlike({ sub = false } = {}) {
     solution: {
       steps: [
         { text: `Find the lowest common denominator of ${b} and ${d}.`, expr: `LCD = ${L}` },
-        { text: 'Rewrite both fractions over it.', expr: `${a2}/${L} ${op} ${c2}/${L}`,
+        // The "how do you get there" the jump used to hide: each fraction's
+        // top and bottom are multiplied by the same number to reach the LCD.
+        { text: `Rewrite ${a}/${b}: the bottom needs ×${L / b} to reach ${L}, so the top gets ×${L / b} too.`, expr: `${a}/${b} = ${a}×${L / b}/${b}×${L / b} = ${a2}/${L}` },
+        { text: `Rewrite ${c}/${d} the same way, with ×${L / d}.`, expr: `${c}/${d} = ${c}×${L / d}/${d}×${L / d} = ${c2}/${L}`,
           // Same amounts, re-cut into same-size pieces — NOW they can be
           // counted. Only drawn when the pieces stay countable (a 72-sliver
           // bar teaches nothing); past that the algebra carries the step.

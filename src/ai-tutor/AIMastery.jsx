@@ -1110,10 +1110,11 @@ export function AIMastery({ onBack, userId, studentName }) {
                   {curriculaOptions.map(co => (
                     <button key={co.id} onClick={() => setProgress(p => ({ ...p, curriculum: co.id }))}
                       className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${curriculum === co.id ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
-                      {co.shortName}
+                      {co.shortName}{co.id === NATIVE ? ' · default' : ''}
                     </button>
                   ))}
                 </div>
+                <p className="text-xs text-slate-400 mt-2">Not sure? Leave it on the default — the full Kenyan school path. You can change it any time.</p>
               </>
             )}
             {progress.declaredGrade != null && (
@@ -1224,6 +1225,25 @@ export function AIMastery({ onBack, userId, studentName }) {
     // similar-example crutch. The point is recalling it from memory.
     const plan = problem && !feedback && !interleave ? completionPlan(problem, scaffoldLevel) : null;
     const legacyExample = problem && !feedback && !interleave ? exampleSupport(problem, scaffoldLevel) : null;
+
+    // "First steps" guide material, computed once: the escalation buttons only
+    // render when there is actually something to show (some legacy skills have
+    // no steps — the button used to silently do nothing).
+    const guideSteps = problem && !feedback
+      ? (problem.solutionSteps || computeSteps(problem) || generateWorkedExample(interleave ? interleave.skillId : activeSkill)?.steps || null)
+      : null;
+    // A guide step must never finish the problem: strip/mask the final answer
+    // ("The pattern adds 1 each time. → 4 + 1 = 5" becomes "… → 4 + 1 = ?").
+    const maskAnswer = (step) => {
+      let s = String(step);
+      const forms = [problem?.answer, ...(problem?.accepts || [])].map(f => String(f ?? '').trim()).filter(f => f.length > 0);
+      for (const f of forms) {
+        const esc = f.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        s = s.replace(new RegExp(`(=|→|is)\\s*${esc}(?![\\d.\\w])`, 'g'), '$1 ?');
+        s = s.replace(new RegExp(`(^|[^\\d.\\w])${esc}(?![\\d.\\w])`, 'g'), '$1?');
+      }
+      return s;
+    };
     const supportChip = SUPPORT_LABEL[scaffoldLevel];
     const answeredPlan = (feedback === 'correct' && answeredLevel != null && answeredLevel <= SUPPORT.MOST)
       ? completionPlan(problem, answeredLevel) : null;
@@ -1445,7 +1465,7 @@ export function AIMastery({ onBack, userId, studentName }) {
                 {hintLevel >= 1 && !feedback && attemptCount === 0 && (
                   <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-2xl text-amber-800 text-sm">
                     <span className="font-semibold text-amber-700">Hint:</span> {problem.hint || genericNudge(problem)}
-                    {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="ml-2 text-amber-700 underline hover:text-amber-800">still stuck?</button>}
+                    {hintLevel < 2 && !plan && guideSteps && <button onClick={() => setHintLevel(2)} className="ml-2 text-amber-700 underline hover:text-amber-800">still stuck?</button>}
                   </div>
                 )}
 
@@ -1455,27 +1475,23 @@ export function AIMastery({ onBack, userId, studentName }) {
                     <span className="text-[#c0663f] font-semibold">Not quite.</span>
                     {wrongInfo.answer && <span className="text-slate-500"> You wrote <span className="font-mono text-slate-700">{wrongInfo.answer}</span>.</span>}
                     <div className="mt-1 text-slate-700">{wrongInfo.diagnosis || (problem.hint || genericNudge(problem))}</div>
-                    {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="mt-1.5 text-[#6d6fcb] underline text-xs hover:text-[#5658b8]">show me the first steps</button>}
+                    {hintLevel < 2 && !plan && guideSteps && <button onClick={() => setHintLevel(2)} className="mt-1.5 text-[#6d6fcb] underline text-xs hover:text-[#5658b8]">show me the first steps</button>}
                   </div>
                 )}
 
-                {hintLevel >= 2 && !feedback && !plan && (() => {
-                  const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(interleave ? interleave.skillId : activeSkill)?.steps;
-                  if (!steps) return null;
-                  return (
-                    <div className="mt-3 p-3 bg-[#eef1f8] border border-[#d3daf0] rounded-2xl text-sm">
-                      <span className="font-semibold text-[#6d6fcb]">Here are the first steps to guide you:</span>
-                      <div className="mt-2 space-y-1">
-                        {steps.slice(0, 2).map((step, i) => (
-                          <div key={i} className="flex gap-2 text-slate-700">
-                            <span className="text-[#6d6fcb] font-bold tabular-nums">{i + 1}.</span>
-                            <TermTooltip text={step} />
-                          </div>
-                        ))}
-                      </div>
+                {hintLevel >= 2 && !feedback && !plan && guideSteps && (
+                  <div className="mt-3 p-3 bg-[#eef1f8] border border-[#d3daf0] rounded-2xl text-sm">
+                    <span className="font-semibold text-[#6d6fcb]">Here are the first steps to guide you:</span>
+                    <div className="mt-2 space-y-1">
+                      {guideSteps.slice(0, 2).map((step, i) => (
+                        <div key={i} className="flex gap-2 text-slate-700">
+                          <span className="text-[#6d6fcb] font-bold tabular-nums">{i + 1}.</span>
+                          <TermTooltip text={maskAnswer(step)} />
+                        </div>
+                      ))}
                     </div>
-                  );
-                })()}
+                  </div>
+                )}
               </div>
 
               {/* Correct answer feedback */}

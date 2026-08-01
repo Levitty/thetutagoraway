@@ -5,7 +5,7 @@
 // quality gate. Decimal arithmetic uses integer scaling to avoid float drift.
 // ============================================================================
 
-import { accepts, hintLadder, randInt, nonzero, pick, coin, withWorkedExample, withLevels } from './schema.js';
+import { accepts, hintLadder, randInt, nonzero, pick, coin, withWorkedExample, withLevels, columnOpModel, columnSteps } from './schema.js';
 
 // Render a number cleanly (trim trailing zeros): 1.50 -> "1.5", 2.0 -> "2".
 const numStr = (x) => {
@@ -1040,7 +1040,69 @@ export function buildVariation() {
   };
 }
 
+// ---- G5: column addition / subtraction with carrying & borrowing ----------
+// The board picture levitty asked for: the vertical algorithm with the carry
+// written above the column, and borrows crossed out the way a teacher does it.
+const digitwiseWrong = (a, b, sub) => {
+  // The classic error: working each column alone (writing 13 without carrying,
+  // or always subtracting the smaller digit from the larger).
+  const da = String(a).split('').reverse().map(Number);
+  const db = String(b).split('').reverse().map(Number);
+  const n = Math.max(da.length, db.length);
+  let out = '';
+  for (let i = 0; i < n; i++) {
+    const x = da[i] || 0, y = db[i] || 0;
+    out = String(sub ? Math.abs(x - y) : x + y) + out;
+  }
+  return String(Number(out));
+};
+
+export function buildColumnAddSub({ sub = false } = {}) {
+  const needsCarry = (a, b) => { while (a > 0 && b > 0) { if (a % 10 + b % 10 >= 10) return true; a = Math.floor(a / 10); b = Math.floor(b / 10); } return false; };
+  const needsBorrow = (a, b) => { while (b > 0) { if (b % 10 > a % 10) return true; a = Math.floor(a / 10); b = Math.floor(b / 10); } return false; };
+  const wantRegroup = Math.random() < 0.7;          // mostly the interesting case
+  let a, b, value;
+  for (let i = 0; ; i++) {
+    a = randInt(214, 8985);
+    b = sub ? randInt(103, a - 7) : randInt(103, 979);
+    value = sub ? a - b : a + b;
+    const regroups = sub ? needsBorrow(a, b) : needsCarry(a, b);
+    if ((regroups === wantRegroup && value !== b && value !== a) || i > 400) break;
+  }
+  const wrong = digitwiseWrong(a, b, sub);
+  const steps = columnSteps(a, b, sub).map(s => ({ text: s.text, expr: s.expr }));
+  return {
+    type: sub ? 'column-sub' : 'column-add',
+    instruction: `Use column ${sub ? 'subtraction' : 'addition'} — start from the ones.`,
+    question: `${a} ${sub ? '−' : '+'} ${b} = ?`,
+    answer: `${value}`, accepts: accepts(`${value}`),
+    model: columnOpModel(a, b, sub),
+    hints: hintLadder(
+      'Line the numbers up by place value — ones under ones, tens under tens.',
+      'Work one column at a time, starting from the ones on the right.',
+      sub ? 'If the top digit is smaller, borrow a ten from the next column to the left.'
+          : 'If a column makes ten or more, write the ones digit and carry the 1 to the next column.',
+    ),
+    solution: {
+      steps: [
+        ...steps,
+        { text: 'Read the answer off the bottom row.', expr: `${value}`,
+          model: columnOpModel(a, b, sub, { showResult: true }) },
+      ],
+      answer: `${value}`,
+    },
+    misconceptions: wrong !== `${value}`
+      ? [{ when: wrong, feedback: sub
+          ? 'Each column was worked alone — when the top digit is smaller you must BORROW from the next column, not swap the digits around.'
+          : 'The carries were dropped — when a column makes ten or more, the 1 moves to the next column.' }]
+      : [],
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const NUMBERS_CONTENT = {
+  G5_ADDITION:           withWorkedExample(() => buildColumnAddSub()),
+  G5_SUBTRACTION:        withWorkedExample(() => buildColumnAddSub({ sub: true })),
   G6_RATIOS:             withWorkedExample(buildRatioShare),
   // Cambridge gap fill (Stages 7-9)
   G7_PLACE_VALUE:        withWorkedExample(buildBigPlaceValue),
