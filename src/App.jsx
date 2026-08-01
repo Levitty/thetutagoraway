@@ -4689,7 +4689,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <select
               value={selectedSubject}
               onChange={(e) => setSelectedSubject(e.target.value)}
-              className="px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer transition-colors ${selectedSubject && selectedSubject !== 'All Subjects' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
             >
               {subjects.map(s => <option key={s} value={s}>{s}</option>)}
             </select>
@@ -4698,7 +4698,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <select
               value={selectedGrade}
               onChange={(e) => setSelectedGrade(e.target.value)}
-              className="px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer transition-colors ${selectedGrade && selectedGrade !== 'All Grades' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
             >
               {grades.map(g => <option key={g} value={g}>{g}</option>)}
             </select>
@@ -4707,7 +4707,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
-              className="px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer transition-colors ${priceRange !== 'all' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
             >
               {priceRanges.map(p => <option key={p.value} value={p.value}>{p.label}</option>)}
             </select>
@@ -4716,7 +4716,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer transition-colors bg-white text-slate-700 border-slate-200`}
             >
               <option value="rating">Highest Rated</option>
               <option value="reviews">Most Reviews</option>
