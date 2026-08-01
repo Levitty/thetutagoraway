@@ -20,3 +20,9 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Native app: keep content clear of the status bar / Dynamic Island. The web
+   build is unaffected (the inset is 0 in a browser). Applied to the app shell
+   surfaces that sit at the very top of the screen. */
+.native-safe-top { padding-top: env(safe-area-inset-top); }
+body.native-app { padding-top: env(safe-area-inset-top); }

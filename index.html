@@ -7,6 +7,19 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Inside the iOS/Android shell, lock the viewport scale. WKWebView zooms
+      // the page whenever a focused input renders below 16px — including inside
+      // Paystack's hosted checkout iframe, which left the payment screen stuck
+      // at huge magnification and impossible to fill in. Native only: the web
+      // build keeps pinch-zoom for accessibility.
+      if (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) {
+        document.querySelector('meta[name=viewport]').setAttribute(
+          'content',
+          'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover'
+        );
+      }
+    </script>
     <meta name="description" content="Tutagora - Learn from Kenya's best tutors. One-on-one lessons and group classes with verified tutors." />
     <meta name="keywords" content="tutoring, Kenya, online learning, tutor, education, Nairobi, verified tutors, one-on-one lessons, group classes, educational platform" />
     <meta name="author" content="Tutagora" />

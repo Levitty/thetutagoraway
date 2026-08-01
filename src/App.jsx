@@ -21,6 +21,7 @@ import { HorebBot } from './ai-tutor/HorebBot.jsx';
 // The app IS the product: no marketing landing, no cookie banner — it opens
 // straight into learning, with live tutoring as a co-equal front-door path.
 const IS_NATIVE = typeof window !== 'undefined' && !!window.Capacitor?.isNativePlatform?.();
+if (IS_NATIVE && typeof document !== 'undefined') document.body.classList.add('native-app');
 
 // ============ ERROR BOUNDARY ============
 // Without this, ANY uncaught render error anywhere in the tree unmounts the
