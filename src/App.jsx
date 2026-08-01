@@ -5133,7 +5133,17 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
   useEffect(() => {
     if (!user?.id) { setChildren([]); return; }
     supabase.from('children').select('id, name, grade').eq('parent_id', user.id).order('created_at')
-      .then(({ data }) => setChildren(data || []));
+      .then(({ data }) => {
+        const kids = data || [];
+        setChildren(kids);
+        // A parent who already saved a learner shouldn't have to retype them:
+        // preselect the only one (or the first), so booking is pick-time-and-go.
+        if (kids.length) {
+          setSelectedChildId(kids[0].id);
+          setLearnerName(kids[0].name);
+          setLearnerGrade(kids[0].grade || '');
+        }
+      });
   }, [user?.id]);
   const pickChild = (c) => { setSelectedChildId(c.id); setLearnerName(c.name); setLearnerGrade(c.grade || ''); };
   const pickNewLearner = () => { setSelectedChildId(null); setLearnerName(''); setLearnerGrade(''); };
@@ -5307,9 +5317,9 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
         </div>
 
         {/* Two column layout */}
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid lg:grid-cols-5 gap-8 min-w-0">
           {/* Left - main content */}
-          <div className="lg:col-span-3 space-y-8">
+          <div className="lg:col-span-3 space-y-8 min-w-0">
             {/* About */}
             {(tutor.bio || tutor.headline) && (
               <div>
@@ -5367,8 +5377,8 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
           </div>
 
           {/* Right - booking card */}
-          <div className="lg:col-span-2">
-            <div className="sticky top-20 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+          <div className="lg:col-span-2 min-w-0">
+            <div className="sticky top-20 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm min-w-0">
               <div className="flex items-baseline justify-between mb-5">
                 <div>
                   <span className="text-2xl font-bold text-slate-900">KSh {tutor.hourly_rate?.toLocaleString()}</span>
@@ -5378,7 +5388,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
 
               {/* Date picker */}
               <p className="text-sm font-medium text-slate-700 mb-2">Pick a day</p>
-              <div className="flex gap-1 mb-4 overflow-x-auto pb-1">
+              <div className="flex gap-1 mb-4 overflow-x-auto pb-1 min-w-0 -mx-1 px-1">
                 {days.map((d, i) => {
                   const hasSlots = getSlots(d).length > 0;
                   const isSelected = selectedDate?.toDateString() === d.toDateString();
