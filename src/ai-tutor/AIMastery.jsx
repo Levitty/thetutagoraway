@@ -78,7 +78,7 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 
 // ==================== MAIN COMPONENT ====================
 
-export function AIMastery({ onBack, userId, studentName }) {
+export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
   const [progress, setProgress] = useState(defaultProgress);
   const [view, setView] = useState('loading');
@@ -1866,6 +1866,16 @@ export function AIMastery({ onBack, userId, studentName }) {
 
               {/* Today's goal — ring (desktop rail; the mobile copy sits up top) */}
               <div className="hidden lg:block">{goalRing}</div>
+
+              {/* Live tutoring — a first-class door, not a footnote. Practice
+                  and a real tutor are the two halves of the same promise. */}
+              {onFindTutor && (
+                <div className="bg-gradient-to-br from-[#f5f6fc] to-white border border-[#d3daf0] shadow-sm rounded-2xl p-4">
+                  <div className="text-slate-900 font-semibold text-[15px]">Live help, any time</div>
+                  <p className="text-[13px] text-slate-500 mt-1 mb-3">Stuck on something, or want a person to walk it through with you? Kenya's best tutors are one tap away.</p>
+                  <button onClick={onFindTutor} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-xl py-2.5 text-sm font-bold transition-colors">Find a live tutor</button>
+                </div>
+              )}
 
               {/* Quick stats */}
               <div className="grid grid-cols-2 gap-2.5">

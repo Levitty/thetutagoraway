@@ -1,0 +1,28 @@
+{
+  "appId": "com.tutagora.app",
+  "appName": "Tutagora",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https",
+    "iosScheme": "https"
+  },
+  "backgroundColor": "#0a1a30",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "backgroundColor": "#0a1a30",
+      "showSpinner": false,
+      "androidSplashResourceName": "splash"
+    },
+    "Keyboard": {
+      "resize": "native"
+    },
+    "StatusBar": {
+      "style": "LIGHT",
+      "backgroundColor": "#0a1a30"
+    }
+  },
+  "ios": {
+    "contentInset": "always"
+  }
+}

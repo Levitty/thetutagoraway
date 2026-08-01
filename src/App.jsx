@@ -15,6 +15,12 @@ import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
 import horebGraph from './horebGraph.json';
+import { HorebBot } from './ai-tutor/HorebBot.jsx';
+
+// Running inside the iOS/Android shell (Capacitor injects window.Capacitor).
+// The app IS the product: no marketing landing, no cookie banner — it opens
+// straight into learning, with live tutoring as a co-equal front-door path.
+const IS_NATIVE = typeof window !== 'undefined' && !!window.Capacitor?.isNativePlatform?.();
 
 // ============ ERROR BOUNDARY ============
 // Without this, ANY uncaught render error anywhere in the tree unmounts the
@@ -3953,6 +3959,42 @@ const HorebConstellation = () => {
   return <canvas ref={canvasRef} className="w-full h-full block" aria-hidden="true" />;
 };
 
+// The app's front door (native only): two equal ways in — free practice or a
+// live tutor. No pitch, no banner; installing the app was the yes.
+const NativeWelcome = ({ user, onNavigate, setShowAuth }) => {
+  const startPractice = () => {
+    if (user) { onNavigate('ai'); return; }
+    try { sessionStorage.setItem('tg_after_auth', 'ai'); } catch { /* private mode */ }
+    setShowAuth('register');
+  };
+  return (
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900 flex flex-col">
+      <div className="flex-1 flex flex-col justify-center px-6 pb-6 pt-14 max-w-md w-full mx-auto">
+        <div className="flex justify-center mb-6"><HorebBot size={84} /></div>
+        <h1 className="text-[30px] font-extrabold tracking-tight leading-[1.1] text-center">
+          Every maths struggle traces back to <span className="text-amber-600">one missing step.</span>
+        </h1>
+        <p className="mt-4 text-[15.5px] text-slate-500 text-center">
+          Practise free with HOREB, or work live with one of Kenya's best tutors — both start right here.
+        </p>
+        <div className="mt-9 space-y-3">
+          <button onClick={startPractice} className="w-full bg-amber-400 hover:bg-amber-300 text-slate-900 rounded-2xl py-4 font-bold text-[17px] transition-colors">
+            Start free practice
+          </button>
+          <button onClick={() => onNavigate('tutors')} className="w-full bg-white border-2 border-slate-900 text-slate-900 rounded-2xl py-4 font-bold text-[17px] hover:bg-slate-50 transition-colors">
+            Find a live tutor
+          </button>
+        </div>
+        <p className="mt-6 text-center text-sm text-slate-500">
+          Already with us?{' '}
+          <button onClick={() => setShowAuth('login')} className="font-semibold text-slate-900 underline">Sign in</button>
+        </p>
+      </div>
+      <p className="pb-8 text-center text-xs text-slate-400">Adaptive CBC maths · Verified tutors · Built in Kenya</p>
+    </div>
+  );
+};
+
 const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
   const start = () => {
     if (user) { onNavigate('ai'); return; }
@@ -6251,6 +6293,7 @@ function AppInner() {
   const { bookings, loading: bookingsLoading, createBooking, refetch: refetchBookings } = useBookings(auth.user?.id, auth.profile?.role, tutorId);
   
   const [page, setPage] = useState(() => {
+    if (IS_NATIVE) return 'native-welcome';
     const path = window.location.pathname.replace(/^\//, '');
     if (path === 'consulting') return 'consulting';
     if (path === 'tutors') return 'tutors';
@@ -6271,7 +6314,7 @@ function AppInner() {
   const [activeLesson, setActiveLesson] = useState(null);
   const [showMessages, setShowMessages] = useState(false);
   const [showAccountSettings, setShowAccountSettings] = useState(false);
-  const [showPrivacyBanner, setShowPrivacyBanner] = useState(() => !localStorage.getItem('tutagora_privacy_accepted'));
+  const [showPrivacyBanner, setShowPrivacyBanner] = useState(() => !IS_NATIVE && !localStorage.getItem('tutagora_privacy_accepted'));
 
   // Admin emails — ONLY these accounts can access the admin dashboard
   const ADMIN_LIST = ['mutualevy@gmail.com'];
@@ -6299,7 +6342,7 @@ function AppInner() {
   // A logged-in learner who hits the public HOREB intro goes straight to the
   // engine (the intro is only for prospects).
   useEffect(() => {
-    if ((page === 'horeb' || page === 'horebhow') && auth.user) handleNavigate('ai');
+    if ((page === 'horeb' || page === 'horebhow' || page === 'native-welcome') && auth.user) handleNavigate('ai');
   }, [page, auth.user]);
 
   // Browser back/forward button support
@@ -6366,9 +6409,19 @@ function AppInner() {
     return <ConsultingPage onBack={() => handleNavigate('home')} />;
   }
 
+  // Native front door — the app opens here, never on the marketing site.
+  if (page === 'native-welcome') {
+    return (
+      <>
+        <NativeWelcome user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
+        {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : 'student'} />}
+      </>
+    );
+  }
+
   // AI Tutor
   if (page === 'ai') {
-    return <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} />;
+    return <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} onFindTutor={() => handleNavigate('tutors')} />;
   }
 
   // HOREB for Schools — B2B pitch page
