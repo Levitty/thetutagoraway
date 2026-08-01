@@ -21,7 +21,7 @@
     11,
     12
   ],
-  "skill_count": 276,
+  "skill_count": 278,
   "skills": [
     {
       "id": "G1_PRENUMBER",
@@ -4550,6 +4550,48 @@
       ],
       "encompassings": [],
       "weight": 5,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_ROUNDING",
+      "name": "Rounding & Estimation (d.p., s.f.)",
+      "grade": 9,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G7_DECIMAL_PV"
+      ],
+      "key_prerequisites": [
+        "G7_DECIMAL_PV"
+      ],
+      "encompassings": [],
+      "weight": 3,
+      "critical": false,
+      "knowledge_points": 3,
+      "mastery_threshold": 0.85,
+      "min_problems": 6,
+      "estimated_minutes": 15,
+      "xp_value": 15
+    },
+    {
+      "id": "G9_ERRORS",
+      "name": "Approximation Errors & Bounds",
+      "grade": 9,
+      "strand": "Measurements",
+      "prerequisites": [
+        "G9_ROUNDING",
+        "G7_PERCENTAGES"
+      ],
+      "key_prerequisites": [
+        "G9_ROUNDING",
+        "G7_PERCENTAGES"
+      ],
+      "encompassings": [],
+      "weight": 4,
       "critical": false,
       "knowledge_points": 3,
       "mastery_threshold": 0.85,

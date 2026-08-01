@@ -17,6 +17,8 @@ import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
 import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
+import { TeachingVisual } from './TeachingVisual.jsx';
+import { activateReferral, shareOnWhatsApp, shareMessages } from '../growth.js';
 import { SUPPORT, SUPPORT_LABEL, initialSupportLevel, nextSupportLevel, completionPlan, exampleSupport } from './fadedExamples.js';
 import YoungLearnerLesson, { planYoungLesson } from './YoungLearnerLesson.jsx';
 import BridgeLesson, { planBridgeLesson } from './BridgeLesson.jsx';
@@ -597,6 +599,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
       };
       setProgress(finished);
       forceSave(keyFor(subjectId), finished, userId, learnerId);
+      // Referral activation gate: the referred student is now genuinely onboarded.
+      activateReferral(userId);
     }
 
     setTimeout(() => {
@@ -620,6 +624,16 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
   // Serve a lesson problem and note whether it can carry a completion scaffold
   // (grades 1–4 have their own scaffolding, so they are never "scaffoldable"
   // here and the mastery guard leaves them alone).
+  // Never serve the exact same question twice in a row (the "3 times the same
+  // question" report): reroll a few times, then accept whatever variety exists.
+  const lastQuestionRef = useRef(null);
+  const freshProblem = (gen) => {
+    let p = gen();
+    for (let i = 0; i < 6 && p?.question && p.question === lastQuestionRef.current; i++) p = gen();
+    lastQuestionRef.current = p?.question ?? lastQuestionRef.current;
+    return p;
+  };
+
   const serveLessonProblem = (skillId, level) => {
     const p = generateProblem(skillId, { level, kp: kpIndexRef.current });
     const young = (SKILLS[skillId]?.grade || 99) <= 4;
@@ -649,7 +663,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
     const young = (SKILLS[skillId]?.grade || 99) <= 4;
     const we = (young || startLevel >= SUPPORT.ORIENT) ? null : generateWorkedExample(skillId);
     setShowWorkedExample(!!we);
-    setProblem(we ? null : serveLessonProblem(skillId, 'abstract'));
+    setProblem(we ? null : freshProblem(() => serveLessonProblem(skillId, 'abstract')));
     setAnswer('');
     setFeedback(null);
     setShowHint(false);
@@ -662,9 +676,17 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
     setView('lesson');
   };
 
+  // The worked example must be STABLE across re-renders — regenerating it on
+  // every state change silently swapped its numbers mid-study.
+  const workedEx = useMemo(
+    () => (showWorkedExample && activeSkill ? generateWorkedExample(activeSkill) : null),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [showWorkedExample, activeSkill]
+  );
+
   const startPractice = () => {
     setShowWorkedExample(false);
-    setProblem(serveLessonProblem(activeSkill, modalityLevel));
+    setProblem(freshProblem(() => serveLessonProblem(activeSkill, modalityLevel)));
     setAnswer('');
     setFeedback(null);
     setAttemptCount(0);
@@ -898,10 +920,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
     if (due) {
       interleaveCountRef.current += 1;
       setInterleave({ skillId: due.id, name: due.name || SKILLS[due.id]?.name || 'earlier skill' });
-      setProblem(generateProblem(due.id));
+      setProblem(freshProblem(() => generateProblem(due.id)));
     } else {
       setInterleave(null);
-      setProblem(serveLessonProblem(activeSkill, modalityLevel));
+      setProblem(freshProblem(() => serveLessonProblem(activeSkill, modalityLevel)));
     }
     setAnswer('');
     setFeedback(null);
@@ -1088,10 +1110,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                   {curriculaOptions.map(co => (
                     <button key={co.id} onClick={() => setProgress(p => ({ ...p, curriculum: co.id }))}
                       className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${curriculum === co.id ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
-                      {co.shortName}
+                      {co.shortName}{co.id === NATIVE ? ' · default' : ''}
                     </button>
                   ))}
                 </div>
+                <p className="text-xs text-slate-400 mt-2">Not sure? Leave it on the default — the full Kenyan school path. You can change it any time.</p>
               </>
             )}
             {progress.declaredGrade != null && (
@@ -1163,6 +1186,20 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                 />
               )}
               <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+              {!feedback && (() => {
+                const pool = [String(problem?.answer ?? ''), ...(problem?.accepts || []).map(String)].join(' ');
+                const chips = ['√', 'π', '²', '³', '°'].filter(ch => pool.includes(ch));
+                if (!chips.length) return null;
+                return (
+                  <div className="flex items-center gap-2 mt-2">
+                    <span className="text-xs text-slate-400">Tap to type:</span>
+                    {chips.map(ch => (
+                      <button key={ch} type="button" onClick={() => setAnswer(a => a + ch)}
+                        className="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-lg text-base font-semibold text-slate-700 transition-colors">{ch}</button>
+                    ))}
+                  </div>
+                );
+              })()}
               {!feedback && (
                 <button onClick={() => handleDiagnosticAnswer({ skip: true })} className="mt-3 text-sm text-slate-400 hover:text-[#6d6fcb] transition-colors">
                   I haven’t learned this yet
@@ -1202,6 +1239,27 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
     // similar-example crutch. The point is recalling it from memory.
     const plan = problem && !feedback && !interleave ? completionPlan(problem, scaffoldLevel) : null;
     const legacyExample = problem && !feedback && !interleave ? exampleSupport(problem, scaffoldLevel) : null;
+
+    // "First steps" guide material, computed once: the escalation buttons only
+    // render when there is actually something to show (some legacy skills have
+    // no steps — the button used to silently do nothing).
+    // Own-problem steps only: a regenerated example has different numbers and
+    // must never be presented as this problem's first steps.
+    const guideSteps = problem && !feedback
+      ? (problem.solutionSteps || computeSteps(problem) || null)
+      : null;
+    // A guide step must never finish the problem: strip/mask the final answer
+    // ("The pattern adds 1 each time. → 4 + 1 = 5" becomes "… → 4 + 1 = ?").
+    const maskAnswer = (step) => {
+      let s = String(step);
+      const forms = [problem?.answer, ...(problem?.accepts || [])].map(f => String(f ?? '').trim()).filter(f => f.length > 0);
+      for (const f of forms) {
+        const esc = f.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        s = s.replace(new RegExp(`(=|→|is)\\s*${esc}(?![\\d.\\w])`, 'g'), '$1 ?');
+        s = s.replace(new RegExp(`(^|[^\\d.\\w])${esc}(?![\\d.\\w])`, 'g'), '$1?');
+      }
+      return s;
+    };
     const supportChip = SUPPORT_LABEL[scaffoldLevel];
     const answeredPlan = (feedback === 'correct' && answeredLevel != null && answeredLevel <= SUPPORT.MOST)
       ? completionPlan(problem, answeredLevel) : null;
@@ -1268,7 +1326,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
               </div>
 
               {(() => {
-                const we = generateWorkedExample(activeSkill);
+                const we = workedEx;
                 if (!we) return null;
                 return (
                   <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6">
@@ -1277,6 +1335,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                     <div className="text-[22px] font-bold text-slate-900 mb-5 leading-snug">
                       <TermTooltip text={we.problem} definitions={we.definitions} />
                     </div>
+                    {we.model && <TeachingVisual model={we.model} className="mb-4" />}
                     {(() => { const am = parseAreaProblem(we.problem); return am ? <AreaModel a={am.a} b={am.b} /> : null; })()}
                     {!parseAreaProblem(we.problem) && <div className="space-y-3">
                       {we.steps.map((step, i) => (
@@ -1333,6 +1392,18 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                   <TermTooltip text={problem.question} definitions={problem.workedExample?.definitions || problem.definitions} />
                 </div>
 
+                {/* The board picture (dual coding): scaffolds the thinking without
+                    giving the answer; on the concrete modality it becomes a
+                    manipulative and working it books the solve as scaffolded. */}
+                {problem.model && !problem.visual && (
+                  <TeachingVisual
+                    model={problem.model}
+                    className="mb-5"
+                    interactive={modalityLevel === 'concrete' && !feedback && !interleave}
+                    onEvent={(e) => { if (e === 'solved') setHintLevel(h => Math.max(h, 1)); }}
+                  />
+                )}
+
                 {/* Completion scaffold — this problem's own solution, started for
                     the learner and faded from the end (Renkl backward fading). */}
                 {plan && (
@@ -1388,9 +1459,32 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                 )}
                 <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
 
-                {/* Gentle 'I'm not sure' — an out that isn't guessing (surfaces a hint) */}
-                {!feedback && hintLevel < 1 && attemptCount === 0 && (
-                  <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm not sure — show me a hint</button>
+                {/* Phone keyboards have no math symbols — offer the ones this
+                    answer needs as tap-to-insert chips (typing "2root5" works too). */}
+                {!feedback && (() => {
+                  const pool = [String(problem.answer ?? ''), ...(problem.accepts || []).map(String)].join(' ');
+                  const chips = ['√', 'π', '²', '³', '°'].filter(ch => pool.includes(ch));
+                  if (!chips.length) return null;
+                  return (
+                    <div className="flex items-center gap-2 mt-2">
+                      <span className="text-xs text-slate-400">Tap to type:</span>
+                      {chips.map(ch => (
+                        <button key={ch} type="button" onClick={() => setAnswer(a => a + ch)}
+                          className="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 active:bg-amber-100 border border-slate-200 rounded-lg text-base font-semibold text-slate-700 transition-colors">{ch}</button>
+                      ))}
+                    </div>
+                  );
+                })()}
+
+                {/* Gentle 'I'm not sure' — an out that isn't guessing (surfaces a hint).
+                    Retrieval gating: memory checks get no hints at all (they test recall),
+                    and once a streak is going the student must attempt before hints unlock. */}
+                {!feedback && hintLevel < 1 && attemptCount === 0 && !interleave && (
+                  session.streak >= 2 ? (
+                    <div className="mt-3 text-sm text-slate-400">You're on a roll — try this one on your own first. A hint appears if your try doesn't land.</div>
+                  ) : (
+                    <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm not sure — show me a hint</button>
+                  )
                 )}
 
                 {/* "type a number" nudge — doesn't cost an attempt */}
@@ -1404,7 +1498,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                 {hintLevel >= 1 && !feedback && attemptCount === 0 && (
                   <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-2xl text-amber-800 text-sm">
                     <span className="font-semibold text-amber-700">Hint:</span> {problem.hint || genericNudge(problem)}
-                    {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="ml-2 text-amber-700 underline hover:text-amber-800">still stuck?</button>}
+                    {hintLevel < 2 && !plan && guideSteps && <button onClick={() => setHintLevel(2)} className="ml-2 text-amber-700 underline hover:text-amber-800">still stuck?</button>}
                   </div>
                 )}
 
@@ -1414,27 +1508,23 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                     <span className="text-[#c0663f] font-semibold">Not quite.</span>
                     {wrongInfo.answer && <span className="text-slate-500"> You wrote <span className="font-mono text-slate-700">{wrongInfo.answer}</span>.</span>}
                     <div className="mt-1 text-slate-700">{wrongInfo.diagnosis || (problem.hint || genericNudge(problem))}</div>
-                    {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="mt-1.5 text-[#6d6fcb] underline text-xs hover:text-[#5658b8]">show me the first steps</button>}
+                    {hintLevel < 2 && !plan && guideSteps && <button onClick={() => setHintLevel(2)} className="mt-1.5 text-[#6d6fcb] underline text-xs hover:text-[#5658b8]">show me the first steps</button>}
                   </div>
                 )}
 
-                {hintLevel >= 2 && !feedback && !plan && (() => {
-                  const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
-                  if (!steps) return null;
-                  return (
-                    <div className="mt-3 p-3 bg-[#eef1f8] border border-[#d3daf0] rounded-2xl text-sm">
-                      <span className="font-semibold text-[#6d6fcb]">Here are the first steps to guide you:</span>
-                      <div className="mt-2 space-y-1">
-                        {steps.slice(0, 2).map((step, i) => (
-                          <div key={i} className="flex gap-2 text-slate-700">
-                            <span className="text-[#6d6fcb] font-bold tabular-nums">{i + 1}.</span>
-                            <TermTooltip text={step} />
-                          </div>
-                        ))}
-                      </div>
+                {hintLevel >= 2 && !feedback && !plan && guideSteps && (
+                  <div className="mt-3 p-3 bg-[#eef1f8] border border-[#d3daf0] rounded-2xl text-sm">
+                    <span className="font-semibold text-[#6d6fcb]">Here are the first steps to guide you:</span>
+                    <div className="mt-2 space-y-1">
+                      {guideSteps.slice(0, 2).map((step, i) => (
+                        <div key={i} className="flex gap-2 text-slate-700">
+                          <span className="text-[#6d6fcb] font-bold tabular-nums">{i + 1}.</span>
+                          <TermTooltip text={maskAnswer(step)} />
+                        </div>
+                      ))}
                     </div>
-                  );
-                })()}
+                  </div>
+                )}
               </div>
 
               {/* Correct answer feedback */}
@@ -1478,13 +1568,25 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                   <span className="text-[#c0663f] font-bold">Not quite — the answer is <span className="font-mono text-slate-900">{problem.answer}</span></span>
                   {wrongInfo?.diagnosis && <p className="mt-1.5 text-sm text-slate-700">{wrongInfo.diagnosis}</p>}
                   {(() => {
-                    // Working for the LEARNER'S problem (never a stand-in example),
-                    // showing the parts — the moment the missed step becomes visible.
-                    const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
+                    // Working for the LEARNER'S problem when we have it. When we
+                    // don't (some legacy skills), a freshly generated example has
+                    // DIFFERENT numbers — presenting it as "the full working" reads
+                    // as a bug (√18 working under a √20 question). Label it as the
+                    // similar example it actually is, question included.
+                    const own = problem.solutionSteps || computeSteps(problem);
+                    const ex = own ? null : generateWorkedExample(interleave ? interleave.skillId : activeSkill);
+                    const steps = own || ex?.steps;
                     if (!steps) return null;
+                    const rich = problem.solution?.steps || [];
+                    let finalModel = null;
+                    for (let i = rich.length - 1; i >= 0; i--) {
+                      if (rich[i]?.model) { finalModel = rich[i].model; break; }
+                    }
                     return (
                       <div className="mt-3 pt-3 border-t border-[#f2cdc2]">
-                        <span className="text-sm text-slate-500 mb-2 block">Here's the full working, step by step:</span>
+                        <span className="text-sm text-slate-500 mb-2 block">{own ? "Here's the full working, step by step:" : 'Watch the same method on a similar one:'}</span>
+                        {!own && ex?.problem && <div className="text-sm font-semibold text-slate-800 mb-2">{ex.problem}</div>}
+                        {own && finalModel && <TeachingVisual model={finalModel} className="mb-3" />}
                         <div className="space-y-1.5">
                           {steps.map((step, i) => (
                             <div key={i} className="flex gap-2 text-sm">
@@ -1493,6 +1595,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                             </div>
                           ))}
                         </div>
+                        {!own && ex?.solution != null && <div className="mt-1.5 text-sm text-slate-600">Answer to that one: <span className="font-mono font-semibold">{ex.solution}</span> — now trace yours the same way.</div>}
                       </div>
                     );
                   })()}
@@ -1565,6 +1668,20 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
               </div>
             )}
             <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50" autoFocus placeholder={problem?.visual ? 'Use the diagram above, or type your answer…' : 'Your answer...'} />
+            {!feedback && (() => {
+              const pool = [String(problem?.answer ?? ''), ...(problem?.accepts || []).map(String)].join(' ');
+              const chips = ['√', 'π', '²', '³', '°'].filter(ch => pool.includes(ch));
+              if (!chips.length) return null;
+              return (
+                <div className="flex items-center gap-2 mt-2">
+                  <span className="text-xs text-slate-400">Tap to type:</span>
+                  {chips.map(ch => (
+                    <button key={ch} type="button" onClick={() => setAnswer(a => a + ch)}
+                      className="px-3.5 py-1.5 bg-slate-700 hover:bg-slate-600 border border-slate-600 rounded-lg text-base font-semibold text-white transition-colors">{ch}</button>
+                  ))}
+                </div>
+              );
+            })()}
           </div>
 
           {feedback && <div className={`rounded-xl p-4 mb-4 ${feedback === 'correct' ? 'bg-emerald-900/50 border border-emerald-500' : 'bg-red-900/50 border border-red-500'}`}>{feedback === 'correct' ? <span className="text-emerald-400">✓ Correct!</span> : <span className="text-red-400">✗ Answer: {problem?.answer}</span>}</div>}
@@ -1697,6 +1814,27 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
             ? { label: 'Continue learning', sub: nextItem.name, icon: 'play', onClick: () => startLesson(nextItem.id) }
             : { label: 'Take the diagnostic', sub: 'Find your level and get your plan', icon: 'target', onClick: startDiagnostic };
           const confidencePct = brainProfile ? Math.round((brainProfile.confidence || 0) * 100) : null;
+          // Holiday Challenge banner (Aug 2026 blitz) — weekly theme + one-tap invite.
+          const holidayBanner = (() => {
+            const now = new Date();
+            if (now < new Date('2026-08-01') || now > new Date('2026-08-31T23:59:59')) return null;
+            const week = Math.min(4, Math.floor((now - new Date('2026-08-01')) / (7 * 24 * 3600 * 1000)) + 1);
+            const themes = { 1: '🔍 Find Your Level week', 2: '🔥 Streak Wars week', 3: '🏁 Mastery Race week', 4: '🎒 Back-to-School Ready week' };
+            return (
+              <div className="bg-gradient-to-r from-emerald-50 to-sky-50 border border-emerald-200 rounded-2xl px-4 py-3 mb-4 flex items-center justify-between gap-3">
+                <div>
+                  <div className="text-sm font-bold text-emerald-700">🏖️ Holiday Challenge — {themes[week]}</div>
+                  <p className="text-xs text-slate-600 mt-0.5">Free all August. Every friend who joins with your code and finishes their level check is an entry in Friday's airtime & data draw.</p>
+                </div>
+                <button
+                  onClick={() => shareOnWhatsApp(shareMessages.invite(userId))}
+                  className="shrink-0 px-3 py-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white text-xs font-bold rounded-xl transition-colors"
+                >
+                  Invite
+                </button>
+              </div>
+            );
+          })();
           // Daily-goal ring — rendered near the top on mobile and in the right rail on desktop
           const goalRing = (() => {
             const earned = todaysXP(progress);
@@ -1760,6 +1898,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
 
               {/* Daily-goal ring — mobile only, kept near the top so it's the first thing they see */}
               <div className="lg:hidden">{goalRing}</div>
+
+              {holidayBanner}
 
               {/* Resume card — light, content-forward (fixes the 'AI' navy hero) */}
               <button onClick={cta.onClick} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-3xl p-5 flex items-center gap-4 hover:border-slate-300 transition-colors">

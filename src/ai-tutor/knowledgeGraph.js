@@ -359,6 +359,10 @@ const GRADE_9 = {
   G9_APPROX_ERRORS: skill('G9_APPROX_ERRORS', 'Approximations & Errors', 9, S.MEA, { pre: ['G7_DECIMALS_MUL', 'G7_PERCENTAGES'], w: 3, curricula: { cbc: cbc(9, 'Measurements', 'Approximations and Errors') } }),
   G9_SPEED_VELOCITY: skill('G9_SPEED_VELOCITY', 'Velocity & Acceleration', 9, S.MEA, { pre: ['G7_SPEED'], w: 4, curricula: { cbc: cbc(9, 'Measurements', 'Time, Distance, and Speed') } }),
   G9_VOLUME_ADV: skill('G9_VOLUME_ADV', 'Volume (Cones, Spheres, Pyramids)', 9, S.MEA, { pre: ['G8_VOLUME_ADV', 'G7_AREA_CIRCLE'], w: 5, curricula: { cbc: cbc(9, 'Measurements', 'Volume of Solids'), cambridge: camEnr('Gg') } }),
+  // CBC G9 Measurements / Approximations and Errors (5 lessons). Cambridge:
+  // s.f. rounding is 8Np.02; upper/lower limits is 9Np.02 (0862 framework).
+  G9_ROUNDING: skill('G9_ROUNDING', 'Rounding & Estimation (d.p., s.f.)', 9, S.MEA, { pre: ['G7_DECIMAL_PV'], w: 3, curricula: { cbc: cbc(9, 'Measurements', 'Approximations and Errors'), cambridge: cam(8, 'Np', '8Np.02') } }),
+  G9_ERRORS: skill('G9_ERRORS', 'Approximation Errors & Bounds', 9, S.MEA, { pre: ['G9_ROUNDING', 'G7_PERCENTAGES'], w: 4, curricula: { cbc: cbc(9, 'Measurements', 'Approximations and Errors'), cambridge: cam(9, 'Np', '9Np.02') } }),
 
   // Statistics
   G9_GROUPED_DATA: skill('G9_GROUPED_DATA', 'Grouped Data & Histograms', 9, S.STA, { pre: ['G8_CUMULATIVE_FREQ', 'G7_MEAN_MEDIAN_MODE', 'G6_AREA_RECT'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)'), cambridge: cam(9, 'Ss', '9Ss.04') } }),

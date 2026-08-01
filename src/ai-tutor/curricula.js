@@ -17,15 +17,15 @@ export const NATIVE = 'native';
 export const CURRICULA = {
   native: {
     id: 'native',
-    name: 'Default (Grade 5–12)',
-    shortName: 'Default',
+    name: 'Kenya CBC — full path (Grade 1–12)',
+    shortName: 'CBC · Grade 1–12',
     bandLabel: 'Grade',
-    bands: [5, 6, 7, 8, 9, 10, 11, 12],
+    bands: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
   },
   cbc: {
     id: 'cbc',
-    name: 'CBC / CBE — Junior School',
-    shortName: 'CBC/CBE',
+    name: 'CBC/CBE — Junior School syllabus only (Grade 7–9)',
+    shortName: 'Junior School 7–9',
     bandLabel: 'Grade',
     bands: [7, 8, 9],
     strands: ['Numbers', 'Algebra', 'Measurements', 'Geometry', 'Data Handling'],

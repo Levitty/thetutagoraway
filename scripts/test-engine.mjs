@@ -114,5 +114,21 @@ const dThin = getEffectivePlacement({ placementGrade: 7, skills: { [g7[0].id]: {
 if (dStruggle === 6 && dOk === 7 && dThin === 7) ok('effective placement decays on struggle, holds otherwise (6/7/7)');
 else fail(`effective placement wrong: struggle=${dStruggle}(want 6) ok=${dOk}(want 7) thin=${dThin}(want 7)`);
 
+// ---- 7. Content variety (anti "watered-down") — warn, don't fail ----
+console.log('7. Content variety (advisory)');
+{
+  const N = 40, thin = [];
+  for (const id of Object.keys(SKILLS)) {
+    const qs = new Set();
+    for (let i = 0; i < N; i++) { let p; try { p = generateProblem(id); } catch { continue; } if (!p || p.placeholder) { qs.clear(); break; } qs.add(String(p.question)); }
+    if (qs.size > 0 && qs.size <= 3) thin.push(`${id}(${qs.size})`);
+  }
+  // The enriched foundational skills must not be thin anymore.
+  const stillThinFoundational = ['G5_LINES', 'G5_MASS', 'G5_TRIANGLES_INTRO', 'G5_LENGTH'].filter(id => thin.some(t => t.startsWith(id)));
+  if (stillThinFoundational.length) fail(`enriched skills still thin: ${stillThinFoundational.join(', ')}`);
+  else ok('enriched foundational skills now varied');
+  console.log(`  ℹ ${thin.length} skills still thin (≤3 distinct) — content backlog, mostly senior topics`);
+}
+
 console.log('\n' + (failures ? `FAILED (${failures})` : 'ALL ENGINE CHECKS PASSED'));
 process.exit(failures ? 1 : 0);

@@ -96,6 +96,55 @@ export const accepts = (...forms) => {
 // Graduated hints: orient -> method -> next concrete step. Never the answer.
 export const hintLadder = (...hints) => hints.filter(Boolean);
 
+// ---------------------------------------------------------------------------
+// Column arithmetic (the classroom vertical algorithm), shared by the primary
+// addition/subtraction builders. Returns per-column teaching steps and the
+// 'column-op' board picture — carries/borrows drawn the way a teacher writes
+// them: carry digits small above the columns, borrowed tens crossed out.
+// ---------------------------------------------------------------------------
+export const columnOpModel = (a, b, sub, { showResult = false } = {}) => ({
+  type: 'column-op',
+  data: { a, b, op: sub ? '−' : '+', showResult },
+});
+
+export const columnSteps = (a, b, sub) => {
+  const NAMES = ['ones', 'tens', 'hundreds', 'thousands', 'ten-thousands'];
+  const da = String(a).split('').reverse().map(Number);
+  const db = String(b).split('').reverse().map(Number);
+  const n = Math.max(da.length, db.length);
+  const steps = [];
+  if (!sub) {
+    let carry = 0;
+    for (let i = 0; i < n; i++) {
+      const x = da[i] || 0, y = db[i] || 0, s = x + y + carry;
+      const carried = carry;
+      carry = s >= 10 ? 1 : 0;
+      steps.push({
+        text: `${NAMES[i][0].toUpperCase() + NAMES[i].slice(1)}: ${x} + ${y}${carried ? ` + ${carried} carried` : ''} = ${s}${s >= 10 ? ` — write ${s % 10}, carry 1` : ''}.`,
+        expr: `${s >= 10 ? `${s % 10}, carry 1` : s}`,
+      });
+    }
+    if (carry) steps.push({ text: 'The final carry becomes the leading digit.', expr: '1' });
+  } else {
+    let borrow = 0;
+    for (let i = 0; i < n; i++) {
+      let x = (da[i] || 0) - borrow;
+      const y = db[i] || 0;
+      if (x < y) {
+        steps.push({
+          text: `${NAMES[i][0].toUpperCase() + NAMES[i].slice(1)}: ${x} is less than ${y} — borrow a ${NAMES[i + 1] ? NAMES[i + 1].slice(0, -1) : 'ten'}, making it ${x + 10}. ${x + 10} − ${y} = ${x + 10 - y}.`,
+          expr: `${x + 10} − ${y} = ${x + 10 - y}`,
+        });
+        x += 10; borrow = 1;
+      } else {
+        steps.push({ text: `${NAMES[i][0].toUpperCase() + NAMES[i].slice(1)}: ${x} − ${y} = ${x - y}.`, expr: `${x - y}` });
+        borrow = 0;
+      }
+    }
+  }
+  return steps;
+};
+
 // Render a {text, expr} solution step as a single human string (the form the
 // current lesson UI renders for worked examples and reveals).
 export const stepText = (s) =>
@@ -139,7 +188,9 @@ export const withWorkedExample = (gen) => () => {
     steps: ex.solution.steps.map(stepText),
     solution: ex.solution.answer,
     instruction: ex.instruction,
-    richSteps: ex.solution.steps,
+    richSteps: ex.solution.steps,      // step.model (if present) drives the visual
+    model: ex.model,                   // the example's own teaching visual
+    definitions: ex.definitions,
   };
   return p;
 };
@@ -188,12 +239,47 @@ export function buildLinearEquation({ tier = 2 } = {}) {
     steps.push({ text: `${undoConst(b)} on both sides.`, expr: `x = ${x}` });
   }
 
+  // Balance-scale states (the CPA picture of an equation): one state per step,
+  // so the visual moves in lockstep with the algebra. bal(step i) = pans AFTER
+  // that step. The initial state is the equation as posed.
+  const bal = (l, r, caption) => ({ type: 'balance', data: { left: l, right: r, caption } });
+  const initialModel = tier === 3
+    ? bal({ x: a, units: b }, { x: c, units: d }, 'An equation is a balance — both sides weigh the same.')
+    : bal({ x: a, units: b }, { x: 0, units: c }, 'An equation is a balance — both sides weigh the same.');
+  const stepModels = [];
+  if (tier === 3) {
+    stepModels.push(bal({ x: A, units: b }, { x: 0, units: d }, `Took ${c}x off both pans.`));
+    stepModels.push(bal({ x: A, units: 0 }, { x: 0, units: d - b }, `${b >= 0 ? 'Removed' : 'Added'} ${Math.abs(b)} from both pans.`));
+    if (A !== 1) stepModels.push(bal({ x: 1, units: 0 }, { x: 0, units: x }, `Shared both pans into ${A} equal groups.`));
+  } else if (tier === 2) {
+    stepModels.push(bal({ x: a, units: 0 }, { x: 0, units: c - b }, `${b >= 0 ? 'Removed' : 'Added'} ${Math.abs(b)} from both pans.`));
+    stepModels.push(bal({ x: 1, units: 0 }, { x: 0, units: x }, `Shared both pans into ${a} equal groups.`));
+  } else {
+    stepModels.push(bal({ x: 1, units: 0 }, { x: 0, units: x }, `${b >= 0 ? 'Removed' : 'Added'} ${Math.abs(b)} from both pans.`));
+  }
+  steps.forEach((s, i) => { if (stepModels[i]) s.model = stepModels[i]; });
+  // The HOW picture (transposition, the way it's written on a Kenyan board):
+  // the constant crosses the = and flips sign. Tiers 1-2, first step.
+  if (tier !== 3) {
+    const movedTok = b >= 0 ? `+ ${b}` : `− ${Math.abs(b)}`;
+    const becomesTok = b >= 0 ? `− ${b}` : `+ ${Math.abs(b)}`;
+    const lhsShown = `${fmtLinear(a, 0)} ${movedTok}`;
+    steps[0].model = { type: 'transpose', data: {
+      start: { lhs: lhsShown, rhs: `${c}` },
+      moved: movedTok, becomes: becomesTok,
+      after: tier === 1
+        ? [`x = ${c} ${becomesTok}`, `x = ${x}`]
+        : [`${fmtLinear(a, 0)} = ${c} ${becomesTok}`, `${fmtLinear(a, 0)} = ${c - b}`],
+    } };
+  }
+
   return {
     type: 'linear-equation',
     instruction: 'Solve for x.',
     question,
     answer: `x = ${x}`,
     accepts: accepts(`x=${x}`, `x = ${x}`, `${x}`),
+    model: initialModel,
     hints: hintLadder(
       'Aim to get x by itself on one side.',
       tier === 3 ? 'First collect the x-terms together, then the numbers.' : 'Undo the +/− first, then undo the ×.',
@@ -260,6 +346,14 @@ export function buildDistribute() {
     instruction: 'Expand the bracket.',
     question: `Expand:   ${a}(${fmtLinear(b, c)})`,
     answer: ans,
+    // Area model: a(bx + c) is a rectangle a tall, split into bx and c wide.
+    // Practice shows the empty grid (structure without the products — those ARE
+    // the answer); the final solution step carries the filled-in model.
+    model: { type: 'area-model', data: {
+      rows: [`${a}`], cols: [fmtTerm(b, 'x', true), `${c}`],
+      cells: [['?', '?']],
+      caption: 'multiply the outside number by EACH part',
+    } },
     accepts: accepts(ans, ans.replace(/\s/g, '')),
     hints: hintLadder(
       'Multiply everything inside the bracket by the number outside.',
@@ -270,7 +364,12 @@ export function buildDistribute() {
       steps: [
         { text: `Multiply the x-term: ${a} × ${b}x.`, expr: `${A}x` },
         { text: `Multiply the constant: ${a} × (${c}).`, expr: `${fmtTerm(C, '')}`.trim() },
-        { text: 'Write the result.', expr: ans },
+        { text: 'Write the result.', expr: ans,
+          model: { type: 'area-model', data: {
+            rows: [`${a}`], cols: [fmtTerm(b, 'x', true), `${c}`],
+            cells: [[fmtTerm(A, 'x', true), `${C}`]],
+            caption: `${a}(${fmtLinear(b, c)}) = ${ans}`,
+          } } },
       ],
       answer: ans,
     },
@@ -291,6 +390,13 @@ export function buildBinomial() {
     instruction: 'Expand and simplify.',
     question: `Expand:   (x${fmtTerm(p, '')})(x${fmtTerm(q, '')})`,
     answer: f.caret,
+    // Area model: (x+p)(x+q) as a 2×2 grid — every part multiplies every part.
+    // Practice shows the empty grid; the final step fills the four products in.
+    model: { type: 'area-model', data: {
+      rows: ['x', `${q}`], cols: ['x', `${p}`],
+      cells: [['?', '?'], ['?', '?']],
+      caption: 'every part along the top multiplies every part down the side',
+    } },
     accepts: accepts(f.caret, f.uni, f.caret.replace(/\s/g, ''), f.uni.replace(/\s/g, '')),
     hints: hintLadder(
       'Use FOIL: First, Outer, Inner, Last.',
@@ -302,7 +408,12 @@ export function buildBinomial() {
         { text: 'First terms: x · x.', expr: 'x²' },
         { text: `Outer + Inner: ${p}x + ${q}x.`, expr: `${fmtTerm(b, 'x')}`.trim() },
         { text: `Last terms: (${p})(${q}).`, expr: `${fmtTerm(c, '')}`.trim() },
-        { text: 'Combine.', expr: f.caret },
+        { text: 'Combine.', expr: f.caret,
+          model: { type: 'area-model', data: {
+            rows: ['x', `${q}`], cols: ['x', `${p}`],
+            cells: [['x²', fmtTerm(p, 'x', true)], [fmtTerm(q, 'x', true), `${p * q}`]],
+            caption: 'four small areas add up to the expansion',
+          } } },
       ],
       answer: f.caret,
     },
@@ -325,6 +436,12 @@ export function buildFactorizeCommon() {
     question: `Factorise:   ${fmtLinear(A, C)}`,
     answer: ans,
     accepts: accepts(ans, ans.replace(/\s/g, '')),
+    // The area model in REVERSE: the two part-areas are known; find the sides.
+    model: { type: 'area-model', data: {
+      rows: ['?'], cols: ['?', '?'],
+      cells: [[fmtTerm(A, 'x', true), `${C}`]],
+      caption: 'the areas are given — what side lengths made them?',
+    } },
     hints: hintLadder(
       'Find the highest common factor of both terms.',
       `What number divides both ${A} and ${C}?`,
@@ -333,7 +450,12 @@ export function buildFactorizeCommon() {
     solution: {
       steps: [
         { text: `Highest common factor of ${A} and ${C} is ${a}.`, expr: `${a}( … )` },
-        { text: `Divide each term by ${a}.`, expr: `${a}(${fmtLinear(b, c)})` },
+        { text: `Divide each term by ${a}.`, expr: `${a}(${fmtLinear(b, c)})`,
+          model: { type: 'area-model', data: {
+            rows: [`${a}`], cols: [fmtTerm(b, 'x', true), `${c}`],
+            cells: [[fmtTerm(A, 'x', true), `${C}`]],
+            caption: `${fmtLinear(A, C)} = ${a}(${fmtLinear(b, c)})`,
+          } } },
       ],
       answer: ans,
     },
@@ -358,6 +480,13 @@ export function buildFactorizeQuadratic() {
     question: `Factorise:   ${orig.caret}`,
     answer: ans,
     accepts: accepts(ans, ansSwap, ans.replace(/\s/g, ''), ansSwap.replace(/\s/g, '')),
+    // Reverse area model: the corner cells (x² and the constant) are fixed;
+    // splitting the middle term into the two '?' cells IS the factorising.
+    model: { type: 'area-model', data: {
+      rows: ['x', '?'], cols: ['x', '?'],
+      cells: [['x²', '?'], ['?', `${c}`]],
+      caption: `the two ? cells must add to ${fmtTerm(b, 'x', true) || '0x'}`,
+    } },
     hints: hintLadder(
       'Find two numbers that MULTIPLY to the constant and ADD to the middle coefficient.',
       `Multiply to ${c}, add to ${b}.`,
@@ -622,8 +751,11 @@ export function buildCompleteSquare() {
 
 // ---- arithmetic sequence: find the nth term ----
 export function buildArithmeticSequence() {
-  const a1 = nonzero(-9, 9), d = nonzero(-6, 6), n = randInt(6, 14);
-  const Un = a1 + (n - 1) * d;
+  let a1, d, n, Un;
+  do {
+    a1 = nonzero(-9, 9); d = nonzero(-6, 6); n = randInt(6, 14);
+    Un = a1 + (n - 1) * d;
+  } while (Un === d || Un === a1 || Un === n);   // answer must not equal a number shown in the hints
   const terms = [0, 1, 2, 3].map((i) => a1 + i * d).join(', ');
   return {
     type: 'arithmetic-sequence',
@@ -631,6 +763,11 @@ export function buildArithmeticSequence() {
     question: `Sequence:  ${terms}, …   Find the ${ordinal(n)} term.`,
     answer: `${Un}`,
     accepts: accepts(`${Un}`),
+    // Growing block towers (only when they draw sensibly: positive, small).
+    // The green top-blocks are the constant +d step — d made visible.
+    model: (a1 >= 1 && d >= 1 && a1 + 3 * d <= 18)
+      ? { type: 'pattern-growth', data: { start: a1, diff: d, count: 4 } }
+      : undefined,
     hints: hintLadder(
       'Find the common difference d = (any term) − (the one before).',
       `Use Uₙ = a + (n−1)d, with a = ${a1}.`,

@@ -9,7 +9,7 @@
 // shown to a Grade-1 learner).
 // ============================================================================
 
-import { accepts, hintLadder, randInt, pick, coin, withWorkedExample, withKPs } from './schema.js';
+import { accepts, hintLadder, randInt, pick, coin, withWorkedExample, withKPs, columnOpModel, columnSteps } from './schema.js';
 
 // ---------------------------------------------------------------------------
 // Shared arithmetic cores, parameterised by grade band
@@ -40,8 +40,17 @@ function buildBandedAdd({ maxOperand, maxTotal, minTotal = 0, digitsA = null, di
       question: q, answer: `${value}`, accepts: accepts(`${value}`),
       hints: hintLadder(
         maxOperand <= 9 ? 'Count on from the bigger number.' : 'Add the ones first, then the tens (regroup if the ones make ten or more).',
-        `Start from ${Math.max(a, b)} and count up ${Math.min(a, b)}.`),
-      solution: { steps: [{ text: maxOperand <= 9 ? `Count on: start at ${a}, count up ${b}.` : 'Add column by column from the ones.', expr: `${a} + ${b} = ${value}` }], answer: `${value}` },
+        maxOperand <= 9 ? `Start from ${Math.max(a, b)} and count up ${Math.min(a, b)}.` : 'Work column by column, starting from the ones on the right.'),
+      // Multi-digit sums get the column-algorithm board picture (carry digits
+      // written above their columns) and per-column working.
+      model: maxOperand > 20 ? columnOpModel(a, b, false) : undefined,
+      solution: {
+        steps: maxOperand > 20
+          ? [...columnSteps(a, b, false),
+             { text: 'Read the answer off the bottom row.', expr: `${value}`, model: columnOpModel(a, b, false, { showResult: true }) }]
+          : [{ text: maxOperand <= 9 ? `Count on: start at ${a}, count up ${b}.` : 'Add column by column from the ones.', expr: `${a} + ${b} = ${value}` }],
+        answer: `${value}`,
+      },
       misconceptions: [{ when: `${Math.abs(a - b)}`, feedback: 'That is the difference — this question asks for the total (add, don\'t subtract).' }],
       visual: maxOperand <= 9 ? { type: 'number_line', data: { from: 0, to: 20, start: a, jump: b } } : undefined,
       verify: { kind: 'fraction', value },
@@ -67,8 +76,15 @@ function buildBandedSub({ maxOperand, digitsA = null, digitsB = null, borrow = n
       question: q, answer: `${value}`, accepts: accepts(`${value}`),
       hints: hintLadder(
         maxOperand <= 9 ? 'Count back from the bigger number.' : 'Subtract the ones first, then the tens (borrow if you need to).',
-        `Start at ${a} and count back ${b}.`),
-      solution: { steps: [{ text: maxOperand <= 9 ? `Count back: start at ${a}, go down ${b}.` : 'Subtract column by column from the ones.', expr: `${a} − ${b} = ${value}` }], answer: `${value}` },
+        maxOperand <= 9 ? `Start at ${a} and count back ${b}.` : 'Work column by column from the ones — borrow when the top digit is smaller.'),
+      model: maxOperand > 20 ? columnOpModel(a, b, true) : undefined,
+      solution: {
+        steps: maxOperand > 20
+          ? [...columnSteps(a, b, true),
+             { text: 'Read the answer off the bottom row.', expr: `${value}`, model: columnOpModel(a, b, true, { showResult: true }) }]
+          : [{ text: maxOperand <= 9 ? `Count back: start at ${a}, go down ${b}.` : 'Subtract column by column from the ones.', expr: `${a} − ${b} = ${value}` }],
+        answer: `${value}`,
+      },
       misconceptions: [{ when: `${a + b}`, feedback: 'That is the total — this question asks what is left (subtract, don\'t add).' }],
       verify: { kind: 'fraction', value },
     };
@@ -107,7 +123,10 @@ function buildBandedMul({ tables, maxFactor = 10, asRepeatedAddition = false }) 
 /** Exact division (sharing) with divisors from a fixed set. */
 function buildBandedDiv({ divisors, maxQuotient = 10, sharing = false }) {
   return () => {
-    const d = pick(divisors), q = randInt(2, maxQuotient), total = d * q;
+    const d = pick(divisors);
+    let q = randInt(2, maxQuotient);
+    while (q === d) q = randInt(2, maxQuotient);   // "how many 5s make 25?" must not answer itself
+    const total = d * q;
     const question = (sharing === 'always' || (sharing && coin()))
       ? `Share ${total} sweets equally among ${d} children. How many does each child get?`
       : `${total} ÷ ${d} = ?`;
@@ -146,7 +165,10 @@ function buildCounting({ max }) {
     return {
       type: 'count-order', instruction: 'Think about counting order.',
       question: spec.q, answer: `${spec.value}`, accepts: accepts(`${spec.value}`),
-      hints: hintLadder('Say the numbers out loud in counting order.', `Count: ${n - 1}, ${n}, ${n + 1}, ${n + 2}…`),
+      hints: hintLadder('Say the numbers out loud in counting order.',
+        kind === 'after' ? `Say ${n}, then the very next number.`
+          : kind === 'before' ? `Count up to ${n} — what did you say just before it?`
+          : `Count from ${n} to ${n + 2} — what do you say in the middle?`),
       solution: { steps: [{ text: 'Count through the numbers in order.', expr: `${spec.value}` }], answer: `${spec.value}` },
       misconceptions: [], verify: { kind: 'fraction', value: spec.value },
     };
@@ -165,7 +187,7 @@ function buildBandedPlaceValue({ digits }) {
       type: 'place-value', instruction: 'Use place value.',
       question: `In the number ${n}, what is the VALUE of the digit in the ${places[pos]} place?`,
       answer: `${value}`, accepts: accepts(`${value}`),
-      hints: hintLadder('Find the digit in that column first.', `The digit is ${digit}; its value is ${digit} × ${Math.pow(10, pos)}.`),
+      hints: hintLadder('Find the digit in that column first.', 'Multiply that digit by what its column is worth.'),
       solution: { steps: [{ text: `Digit ${digit} sits in the ${places[pos]} column.`, expr: `${digit} × ${Math.pow(10, pos)} = ${value}` }], answer: `${value}` },
       misconceptions: [{ when: `${digit}`, feedback: `That's the digit — its VALUE is ${digit} × ${Math.pow(10, pos)}.` }],
       visual: { type: 'place_value_chart', data: { digits: String(n).split('').map(Number), labels: places.slice(0, digits).reverse().map(String), highlight: digits - 1 - pos } },
@@ -177,7 +199,10 @@ function buildBandedPlaceValue({ digits }) {
 /** Unit fraction of a set (G2: ½ ¼ · G3: ½ ⅓ ¼ ⅕ ⅒). */
 function buildFractionOfSet({ denominators, maxResult = 10 }) {
   return () => {
-    const d = pick(denominators), r = randInt(2, maxResult), total = d * r;
+    const d = pick(denominators);
+    let r = randInt(2, maxResult);
+    while (r === d) r = randInt(2, maxResult);   // "share into d groups" must not equal the answer
+    const total = d * r;
     const name = { 2: 'half', 3: 'a third', 4: 'a quarter', 5: 'a fifth', 10: 'a tenth' }[d];
     return {
       type: 'fraction-of-set', instruction: 'Find the fraction of the set.',
@@ -195,20 +220,23 @@ function buildFractionOfSet({ denominators, maxResult = 10 }) {
 function buildBandedMoney({ maxAmount, kind }) {
   return () => {
     if (kind === 'count') {           // G1: counting coins
-      const coins = pick([5, 10]), n = randInt(2, Math.floor(maxAmount / coins));
+      const coins = pick([5, 10]), n = randInt(3, Math.max(3, Math.floor(maxAmount / coins)));
       const value = coins * n;
       return {
         type: 'money-count', instruction: 'Count the money.',
         question: `You have ${n} coins of ${coins} shillings each. How much money is that?`,
         answer: `${value}`, accepts: accepts(`${value}`, `${value} shillings`, `sh ${value}`),
-        hints: hintLadder(`Skip-count in ${coins}s.`, `${coins}, ${coins * 2}, ${coins * 3}…`),
+        hints: hintLadder(`Skip-count in ${coins}s.`, `${coins}, ${coins * 2}, … keep going, once for each coin.`),
         solution: { steps: [{ text: `${n} coins of ${coins} bob = ${n} × ${coins}.`, expr: `${value}` }], answer: `${value}` },
         misconceptions: [], verify: { kind: 'fraction', value },
       };
     }
     if (kind === 'change') {          // G2: shopping change
-      const price = randInt(10, maxAmount - 10), paid = Math.min(maxAmount, Math.ceil(price / 10) * 10 + pick([0, 10, 20]));
-      const value = paid - price;
+      let price, paid, value;
+      do {
+        price = randInt(10, maxAmount - 10); paid = Math.min(maxAmount, Math.ceil(price / 10) * 10 + pick([0, 10, 20]));
+        value = paid - price;
+      } while (value === price || value === 0);
       return {
         type: 'money-change', instruction: 'Work out the change.',
         question: `A pencil costs ${price} shillings. You pay with ${paid} shillings. How much change do you get?`,
@@ -220,8 +248,11 @@ function buildBandedMoney({ maxAmount, kind }) {
       };
     }
     if (kind === 'profit' || kind === 'loss') {   // G3: profit & loss
-      const buy = randInt(20, maxAmount - 20), diff = randInt(5, Math.min(50, kind === 'profit' ? maxAmount - buy : buy - 5));
-      const sell = kind === 'profit' ? buy + diff : buy - diff;
+      let buy, diff, sell;
+      do {
+        buy = randInt(20, maxAmount - 20); diff = randInt(5, Math.min(50, kind === 'profit' ? maxAmount - buy : buy - 5));
+        sell = kind === 'profit' ? buy + diff : buy - diff;
+      } while (diff === sell || diff === buy);
       const word = kind === 'profit' ? 'profit' : 'loss';
       return {
         type: `money-${word}`, instruction: `Work out the ${word}.`,
@@ -251,7 +282,9 @@ function buildBandedMoney({ maxAmount, kind }) {
 /** Measurement comparison/word problems in context units, banded. */
 function buildMeasureCompare({ unit, thing, maxOperand }) {
   return () => {
-    const a = randInt(Math.max(3, Math.floor(maxOperand / 3)), maxOperand), b = randInt(1, a - 1);
+    const a = randInt(Math.max(3, Math.floor(maxOperand / 3)), maxOperand);
+    let b = randInt(1, a - 1);
+    while (a - b === b) b = randInt(1, a - 1);   // "4 − 2" would make the answer a number already shown
     const value = a - b;
     return {
       type: 'measure-compare', instruction: 'Compare the measurements.',
@@ -487,7 +520,7 @@ function buildTwoByOneMul({ minA, maxA, maxB, tensOnly = false }) {
       question: `${a} × ${b} = ?`, answer: `${value}`, accepts: accepts(`${value}`),
       hints: hintLadder(
         tensOnly ? 'Multiply the tens digit, then put the zero back.' : 'Split the 2-digit number into tens and ones.',
-        tensOnly ? `${a / 10} × ${b} = ${a / 10 * b}, so ${a} × ${b} = ${value}.` : `(${Math.floor(a / 10) * 10} × ${b}) + (${a % 10} × ${b}) = ?`),
+        tensOnly ? `${a / 10} × ${b} = ${a / 10 * b} — now put the zero back.` : `(${Math.floor(a / 10) * 10} × ${b}) + (${a % 10} × ${b}) = ?`),
       solution: { steps: [{ text: tensOnly ? 'Multiply the tens, then append the zero.' : 'Multiply tens, multiply ones, then add.', expr: `${a} × ${b} = ${value}` }], answer: `${value}` },
       misconceptions: [{ when: `${a + b}`, feedback: 'That\'s adding — this is multiplication.' }],
       verify: { kind: 'fraction', value },
@@ -502,7 +535,7 @@ function buildLongDiv({ minQ, maxQ }) {
     return {
       type: 'div-long', instruction: 'Work out the division.',
       question: `${total} ÷ ${d} = ?`, answer: `${q}`, accepts: accepts(`${q}`),
-      hints: hintLadder(`How many ${d}s in ${total}? Work digit by digit.`, `${d} × ${q} = ${total}.`),
+      hints: hintLadder(`How many ${d}s in ${total}? Work digit by digit.`, `${d} × ? = ${total}.`),
       solution: { steps: [{ text: `Divide step by step: ${d} × ${q} = ${total}.`, expr: `${q}` }], answer: `${q}` },
       misconceptions: [], verify: { kind: 'fraction', value: q },
     };

@@ -41,17 +41,18 @@ This closes the two largest CBC Grade-9 sub-strand gaps without writing any new 
 
 ---
 
-## P1 — true authoring gaps (no skill anywhere in the graph)
+## P1 — true authoring gaps ✅ DONE (2026-07-29)
 
-These CBC sub-strands have **zero** covering skill at any grade. Real content to author.
+Both P1 sub-strands are now covered — 4 new skills, all authored to the structured content bar
+(worked example + steps + 3-hint ladder + misconceptions + independently verified answers, 100/100
+on the quality gate) in `content/measurement.js`:
 
-| # | Topic | CBC placement | Lessons | Notes |
-|---|---|---|---|---|
-| 1 | **Temperature** | G7 Measurements | 6 | Read thermometers; °C; temperature **change/difference** using integers (bridges to G6/G7 integer add/sub). Small, self-contained. Likely 1–2 skills: `G7_TEMPERATURE_READ`, `G7_TEMPERATURE_CHANGE`. |
-| 2 | **Approximations & Errors** | G9 Measurements | 5 | Rounding to s.f./d.p., estimation, **absolute/relative error & percentage error**, error bounds. No dedicated rounding-as-topic skill exists. 1–2 skills; pre = decimals + percentages. Maps to Cambridge `9Np`-rounding too (could be in-scope for Cambridge). |
+| # | Topic | Skills added | Notes |
+|---|---|---|---|
+| 1 | **Temperature** (G7 Measurements, 6 lessons) | `G7_TEMPERATURE_READ`, `G7_TEMPERATURE_CHANGE` | Per the KICD G7 design: compare temperature conditions, °C & K units and **°C↔K conversion** (K = °C + 273), temperature rise/fall/difference across zero (pre: G6 integers). CBC-only tag (not a Cambridge Lower Secondary topic). |
+| 2 | **Approximations & Errors** (G9 Measurements, 5 lessons) | `G9_ROUNDING`, `G9_ERRORS` | Rounding to d.p./s.f., estimation by rounding to 1 s.f.; absolute error, percentage error (error ÷ **actual** × 100, as in the KICD design), upper/lower bounds. Cambridge tags: `8Np.02` (s.f. rounding), `9Np.02` (limits). |
 
-Recommend doing P1 first — it's the only work that changes what the graph can *teach*, and both are
-small, low-prerequisite topics.
+Graph impact: math graph 202 → 206 skills; 0 broken refs / cycles / isolated nodes.
 
 ---
 

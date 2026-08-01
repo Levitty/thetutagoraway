@@ -147,12 +147,127 @@ function verifyProblem(p) {
   return { ok: null, reason: `unknown verify kind ${v.kind}` };
 }
 
+// ---- teaching-visual model validation ----
+// A malformed model renders a broken picture mid-lesson — treat it as a defect.
+function validateModel(m, where) {
+  if (!m) return null;
+  const d = m.data;
+  if (!d) return `${where}: model has no data`;
+  switch (m.type) {
+    case 'balance': {
+      for (const side of ['left', 'right']) {
+        const s = d[side];
+        if (!s || !Number.isFinite(s.x ?? 0) || !Number.isFinite(s.units ?? 0)) return `${where}: balance ${side} pan malformed`;
+      }
+      return null;
+    }
+    case 'numberline-jump': {
+      if (!Number.isFinite(d.from) || !Number.isFinite(d.delta)) return `${where}: numberline from/delta not numeric`;
+      const to = d.to ?? d.from + d.delta;
+      if (to !== d.from + d.delta) return `${where}: numberline to ≠ from + delta`;
+      return null;
+    }
+    case 'area-model': {
+      if (!d.rows?.length || !d.cols?.length) return `${where}: area-model missing rows/cols`;
+      if (!Array.isArray(d.cells) || d.cells.length !== d.rows.length) return `${where}: area-model cells rows mismatch`;
+      if (d.cells.some(r => !Array.isArray(r) || r.length !== d.cols.length)) return `${where}: area-model cells cols mismatch`;
+      return null;
+    }
+    case 'bar-model': {
+      if (!d.bars?.length) return `${where}: bar-model has no bars`;
+      for (const b of d.bars) {
+        if (!Number.isFinite(b.n) || !Number.isFinite(b.d) || b.d <= 0 || b.n < 0 || b.n > b.d) return `${where}: bar ${b.n}/${b.d} out of range`;
+        if (b.parts && b.parts.reduce((s, p) => s + p.count, 0) !== b.d) return `${where}: bar parts don't sum to ${b.d}`;
+      }
+      return null;
+    }
+    case 'place-value': {
+      if (!d.numbers?.length) return `${where}: place-value has no numbers`;
+      for (const n of [...d.numbers, ...(d.result != null ? [d.result] : [])]) {
+        if (!/^\d+(\.\d+)?$/.test(String(n))) return `${where}: place-value entry ${n} is not a plain decimal`;
+      }
+      return null;
+    }
+    case 'pattern-growth': {
+      if (!Number.isFinite(d.start) || !Number.isFinite(d.diff) || d.start < 1 || d.diff < 1) return `${where}: pattern-growth needs positive start/diff`;
+      const count = d.count ?? 4;
+      if (count < 3 || count > 6 || d.start + (count - 1) * d.diff > 24) return `${where}: pattern-growth towers too tall/short to draw`;
+      return null;
+    }
+    case 'fraction-grid': {
+      if (!Number.isFinite(d.rows) || !Number.isFinite(d.cols) || d.rows < 1 || d.cols < 1) return `${where}: fraction-grid rows/cols invalid`;
+      if (d.shadeRows < 0 || d.shadeRows > d.rows || d.shadeCols < 0 || d.shadeCols > d.cols) return `${where}: fraction-grid shading out of range`;
+      return null;
+    }
+    case 'shape': {
+      if (!['rect', 'square', 'triangle', 'circle', 'oval'].includes(d.kind)) return `${where}: unknown shape kind ${d.kind}`;
+      const dims = Object.values(d.dims || {});
+      if (!dims.length || dims.some(v => !Number.isFinite(v) || v <= 0)) return `${where}: shape dims must be positive numbers`;
+      return null;
+    }
+    case 'numberline-interval': {
+      if (!Number.isFinite(d.lo) || !Number.isFinite(d.hi) || d.lo >= d.hi) return `${where}: interval lo/hi invalid`;
+      if (!Number.isFinite(d.value) || d.value < d.lo || d.value > d.hi) return `${where}: stated value outside its interval`;
+      return null;
+    }
+    case 'ten-frame': {
+      const total = d.op === '+' ? (d.a + d.b) : d.a;
+      if (!Number.isFinite(d.a) || !Number.isFinite(d.b) || d.a < 0 || d.b < 0) return `${where}: ten-frame a/b invalid`;
+      if (total > 20) return `${where}: ten-frame overflows two frames (${total})`;
+      if (d.op === '−' && d.b > d.a) return `${where}: ten-frame subtracts more than shown`;
+      return null;
+    }
+    case 'dot-array': {
+      if (d.rows != null) {
+        if (d.rows < 1 || d.cols < 1 || d.rows > 12 || d.cols > 12) return `${where}: dot-array ${d.rows}×${d.cols} undrawable`;
+      } else {
+        if (!Number.isFinite(d.total) || !Number.isFinite(d.groupSize) || d.groupSize < 1 || d.total < 1) return `${where}: dot-array share data invalid`;
+        if (d.groupSize > 12 || d.total / d.groupSize > 12) return `${where}: dot-array share too large to draw`;
+      }
+      return null;
+    }
+    case 'clock': {
+      if (!Number.isFinite(d.h) || !Number.isFinite(d.m) || d.h < 0 || d.h > 23 || d.m < 0 || d.m > 59) return `${where}: clock time ${d.h}:${d.m} invalid`;
+      return null;
+    }
+    case 'money': {
+      if (!d.items?.length) return `${where}: money has no items`;
+      const DENOMS = [1, 5, 10, 20, 50, 100, 200, 500, 1000];
+      for (const it of d.items) {
+        if (!DENOMS.includes(it.value) || !Number.isFinite(it.count) || it.count < 1) return `${where}: money item ${it.value}×${it.count} invalid (not a Kenyan denomination)`;
+      }
+      if (d.items.reduce((s, it) => s + Math.min(it.count, 12), 0) > 24) return `${where}: too many money pieces to draw`;
+      return null;
+    }
+    case 'base-ten': {
+      if (!Number.isFinite(d.value) || d.value < 1 || d.value > 999) return `${where}: base-ten value ${d.value} out of drawable range (1-999)`;
+      return null;
+    }
+    case 'formula-triangle': {
+      if (!d.top || !d.left || !d.right) return `${where}: formula-triangle needs top/left/right`;
+      return null;
+    }
+    case 'transpose': {
+      if (!d.start?.lhs || d.start?.rhs == null || !d.moved || !d.becomes) return `${where}: transpose missing parts`;
+      if (!Array.isArray(d.after) || !d.after.length) return `${where}: transpose has no working lines`;
+      return null;
+    }
+    case 'column-op': {
+      if (!Number.isFinite(d.a) || !Number.isFinite(d.b)) return `${where}: column-op needs numeric a and b`;
+      if (d.op !== '+' && d.op !== '−' && d.op !== '-') return `${where}: column-op op must be + or −`;
+      if ((d.op === '−' || d.op === '-') && d.b > d.a) return `${where}: column-op would go negative`;
+      return null;
+    }
+    default: return `${where}: unknown model type ${m.type}`;
+  }
+}
+
 // ---- score one skill ----
 function scoreSkill(id) {
   const issues = [];
   let sample;
   const questions = new Set();
-  let verifyFails = 0, verifyChecked = 0;
+  let verifyFails = 0, verifyChecked = 0, modelBad = 0;
 
   for (let i = 0; i < SAMPLES; i++) {
     let p;
@@ -162,6 +277,13 @@ function scoreSkill(id) {
     const v = verifyProblem(p);
     if (v.ok === true) verifyChecked++;
     else if (v.ok === false) { verifyFails++; if (issues.length < 3) issues.push(`WRONG ANSWER: ${v.reason}`); }
+    // Teaching-visual models must be well-formed wherever they appear.
+    const mErrs = [
+      validateModel(p?.model, 'problem'),
+      ...(p?.solution?.steps || []).map((s, si) => validateModel(s?.model, `step ${si + 1}`)),
+      ...((p?.workedExample?.richSteps) || []).map((s, si) => validateModel(s?.model, `example step ${si + 1}`)),
+    ].filter(Boolean);
+    if (mErrs.length) { modelBad++; if (issues.length < 6) issues.push(`BAD MODEL: ${mErrs[0]}`); }
   }
   if (!sample) return { id, score: 0, issues, fatal: true };
 
@@ -191,6 +313,7 @@ function scoreSkill(id) {
   score += has.misconceptions ? 5 : 0;
   score += Math.min(has.variety, VARIETY_MIN) / VARIETY_MIN * 10;
   score = Math.round(score);
+  if (modelBad > 0) score = Math.min(score, 60);   // a broken picture fails the bar
 
   return { id, score, has, issues, sample };
 }

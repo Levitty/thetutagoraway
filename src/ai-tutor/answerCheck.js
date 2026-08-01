@@ -17,6 +17,14 @@ export function normalizeMath(str) {
   s = s.replace(/\bremainder\b/g, 'r');            // "5 remainder 2" → "5 r 2"
   s = s.replace(/\.\s*$/, '');                     // trailing full stop
   s = s.replace(/\s+/g, '');             // drop spaces
+  // Phone keyboards have no √/π — accept the typed words (both sides are
+  // normalized, so authored answers with the glyphs still match).
+  s = s.replace(/cuberoot(of)?/g, '∛');
+  s = s.replace(/(squareroot(of)?|sqrt|root)/g, '√');
+  s = s.replace(/√\((\d+)\)/g, '√$1');   // sqrt(5) → √5
+  s = s.replace(/(^|\d)pi(?![a-z])/g, '$1π');   // 2pi → 2π ("\b" fails between digit and letter)
+  s = s.replace(/\^2(?!\d)/g, '²');      // x^2 → x²
+  s = s.replace(/\^3(?!\d)/g, '³');
   s = s.replace(/(\d),(\d{3})/g, '$1$2'); // 1,200 → 1200 (keep value commas)
   s = s.replace(/\(([a-z])\)/g, '$1');   // (x) → x
   s = s.replace(/(\d)[*×·]([a-z])/g, '$1$2'); // 2*x → 2x
