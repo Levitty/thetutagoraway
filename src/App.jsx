@@ -4033,6 +4033,20 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
   const upcoming = (bookings || []).filter(b => b.status === 'confirmed' || b.status === 'pending');
   const next = [...upcoming].sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
   const first = (profile?.full_name || '').trim().split(/\s+/)[0];
+  // Some tutor names are stored ALL CAPS; shouting reads badly on a phone.
+  const tidyName = (n) => !n ? '' : (n === n.toUpperCase()
+    ? n.toLowerCase().replace(/\b[a-z]/g, ch => ch.toUpperCase())
+    : n);
+  // Join opens 10 minutes before the start and stays open for 2 hours.
+  const joinState = (b) => {
+    if (!b?.lesson_date || !b?.start_time) return { open: false, label: 'Lesson details' };
+    const start = new Date(`${b.lesson_date}T${b.start_time}`);
+    if (isNaN(start)) return { open: false, label: 'Lesson details' };
+    const now = Date.now(), mins = (start - now) / 60000;
+    if (mins > 10) return { open: false, label: 'Lesson details' };
+    if (mins < -120) return { open: false, label: 'Lesson details' };
+    return { open: true, label: mins > 0 ? 'Join now' : 'Join lesson' };
+  };
   const prettyDate = (d) => {
     if (!d) return '';
     const dt = new Date(d + 'T00:00:00'); const today = new Date();
@@ -4067,10 +4081,20 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
             <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-700">Next lesson</div>
             <div className="text-[17px] font-extrabold tracking-tight mt-1">{next.subject}</div>
             <div className="text-sm text-slate-500 mt-0.5">
-              {next.tutors?.profiles?.full_name ? `with ${next.tutors.profiles.full_name} · ` : ''}
+              {next.tutors?.profiles?.full_name ? `with ${tidyName(next.tutors.profiles.full_name)} · ` : ''}
               {prettyDate(next.lesson_date)} at {next.start_time?.slice(0, 5)}
             </div>
-            <button onClick={() => onStartLesson(next)} className="w-full mt-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Join lesson</button>
+            {(() => {
+              const j = joinState(next);
+              return j.open
+                ? <button onClick={() => onStartLesson(next)} className="w-full mt-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl py-3 font-bold text-[15px] transition-colors">{j.label}</button>
+                : (
+                  <div className="mt-3 flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5">
+                    <svg viewBox="0 0 24 24" className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                    <span className="text-[13.5px] text-slate-500">The room opens 10 minutes before your lesson.</span>
+                  </div>
+                );
+            })()}
           </div>
         ) : (
           <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-3">
