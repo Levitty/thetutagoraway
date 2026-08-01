@@ -4016,6 +4016,110 @@ const NativeTabs = ({ page, user, onNavigate, setShowAuth }) => {
   );
 };
 
+// The app's account surface. Not the web dashboard: a phone-shaped view of the
+// three things that matter here — the next lesson, practice momentum, and the
+// people learning. Tutoring sits at the top, never buried.
+const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMessages, onOpenAccountSettings, onLogout }) => {
+  const [ai, setAi] = useState(null);
+  const [children, setChildren] = useState([]);
+  useEffect(() => {
+    if (!profile?.id) return;
+    supabase.from('ai_tutor_progress').select('total_xp, current_streak, diagnosed').eq('user_id', profile.id).maybeSingle()
+      .then(({ data }) => data && setAi({ xp: data.total_xp || 0, streak: data.current_streak || 0, diagnosed: !!data.diagnosed }));
+    supabase.from('children').select('id, name, grade').eq('parent_id', profile.id).order('created_at')
+      .then(({ data }) => setChildren(data || []));
+  }, [profile?.id]);
+
+  const upcoming = (bookings || []).filter(b => b.status === 'confirmed' || b.status === 'pending');
+  const next = [...upcoming].sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
+  const first = (profile?.full_name || '').trim().split(/\s+/)[0];
+  const prettyDate = (d) => {
+    if (!d) return '';
+    const dt = new Date(d + 'T00:00:00'); const today = new Date();
+    const days = Math.round((dt - new Date(today.getFullYear(), today.getMonth(), today.getDate())) / 86400000);
+    if (days === 0) return 'Today'; if (days === 1) return 'Tomorrow';
+    return dt.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' });
+  };
+  const Row = ({ label, sub, onTap }) => (
+    <button onClick={onTap} className="w-full flex items-center gap-3 px-4 py-3.5 text-left hover:bg-slate-50 transition-colors">
+      <span className="flex-1 min-w-0">
+        <span className="block text-[15px] font-semibold text-slate-900">{label}</span>
+        {sub && <span className="block text-[13px] text-slate-400">{sub}</span>}
+      </span>
+      <svg viewBox="0 0 24 24" className="w-4 h-4 text-slate-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+  );
+
+  return (
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900">
+      <div className="max-w-md mx-auto px-4 pt-12 pb-28">
+        <div className="flex items-center gap-3 mb-6">
+          <Avatar src={profile?.avatar_url} name={profile?.full_name} size={52} />
+          <div className="min-w-0">
+            <div className="text-[22px] font-extrabold tracking-tight leading-tight truncate">{first || 'Your space'}</div>
+            <div className="text-sm text-slate-500 truncate">{profile?.email}</div>
+          </div>
+        </div>
+
+        {/* Next lesson — the most time-critical thing a learner owns */}
+        {next ? (
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-3">
+            <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-700">Next lesson</div>
+            <div className="text-[17px] font-extrabold tracking-tight mt-1">{next.subject}</div>
+            <div className="text-sm text-slate-500 mt-0.5">
+              {next.tutors?.profiles?.full_name ? `with ${next.tutors.profiles.full_name} · ` : ''}
+              {prettyDate(next.lesson_date)} at {next.start_time?.slice(0, 5)}
+            </div>
+            <button onClick={() => onStartLesson(next)} className="w-full mt-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Join lesson</button>
+          </div>
+        ) : (
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-3">
+            <div className="text-[15px] font-semibold">No lessons booked</div>
+            <p className="text-[13.5px] text-slate-500 mt-1 mb-3">Work through something tricky with one of Kenya's verified tutors.</p>
+            <button onClick={() => onNavigate('tutors')} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Find a tutor</button>
+          </div>
+        )}
+
+        {/* Practice momentum */}
+        <button onClick={() => onNavigate('ai')} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-3 hover:border-slate-300 transition-colors">
+          <div className="flex items-center justify-between gap-3">
+            <div className="min-w-0">
+              <div className="text-[15px] font-semibold">HOREB practice</div>
+              <div className="text-[13.5px] text-slate-500 mt-0.5">
+                {ai?.diagnosed ? `${ai.xp} XP${ai.streak ? ` · ${ai.streak}-day streak` : ''}` : 'Find your starting point — free'}
+              </div>
+            </div>
+            <span className="shrink-0 bg-amber-400 text-slate-900 font-bold rounded-xl px-4 py-2 text-sm">{ai?.diagnosed ? 'Continue' : 'Start'}</span>
+          </div>
+        </button>
+
+        {/* Learners on this account */}
+        {children.length > 0 && (
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-3">
+            <div className="text-[15px] font-semibold mb-2">Learners</div>
+            <div className="flex flex-wrap gap-2">
+              {children.map(c => (
+                <span key={c.id} className="px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
+                  {c.name}{c.grade ? ` · ${c.grade}` : ''}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="bg-white border border-slate-200 shadow-sm rounded-2xl divide-y divide-slate-100 overflow-hidden">
+          <Row label="Messages" sub="Talk to your tutors" onTap={onOpenMessages} />
+          <Row label="My lessons" sub={`${upcoming.length} upcoming`} onTap={() => onNavigate('tutors')} />
+          <Row label="Clubs" sub="Group classes" onTap={() => onNavigate('clubs')} />
+          <Row label="Account settings" onTap={onOpenAccountSettings} />
+        </div>
+
+        <button onClick={onLogout} className="w-full mt-4 py-3 text-sm font-semibold text-slate-400 hover:text-slate-600 transition-colors">Sign out</button>
+      </div>
+    </div>
+  );
+};
+
 const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
   const start = () => {
     if (user) { onNavigate('ai'); return; }
@@ -6484,6 +6588,16 @@ function AppInner() {
       return (
         <>
           <TutorDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} onNavigate={handleNavigate} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
+          {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
+          {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
+        </>
+      );
+    }
+    if (IS_NATIVE) {
+      return (
+        <>
+          <NativeMySpace profile={auth.profile} bookings={bookings} onNavigate={handleNavigate} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onOpenAccountSettings={() => setShowAccountSettings(true)} onLogout={handleLogout} />
+          <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
           {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
           {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
         </>
