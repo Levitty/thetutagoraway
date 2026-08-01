@@ -3995,6 +3995,27 @@ const NativeWelcome = ({ user, onNavigate, setShowAuth }) => {
   );
 };
 
+// App-level bottom tabs (native only) — navigation lives at the thumb, not in
+// a hamburger. Shown on marketplace/account pages; HOREB has its own nav.
+const NativeTabs = ({ page, user, onNavigate, setShowAuth }) => {
+  const Item = ({ id, label, active, onTap, d }) => (
+    <button onClick={onTap} className={`flex-1 flex flex-col items-center gap-1 py-1 transition-colors ${active ? 'text-slate-900' : 'text-slate-400'}`}>
+      <svg viewBox="0 0 24 24" className="w-[22px] h-[22px]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{d}</svg>
+      <span className="text-[10px] font-semibold">{label}</span>
+    </button>
+  );
+  return (
+    <nav className="fixed inset-x-0 bottom-0 z-50 bg-white border-t border-slate-200 flex justify-around px-1 pt-2" style={{ paddingBottom: 'calc(0.5rem + env(safe-area-inset-bottom))' }}>
+      <Item id="ai" label="Practice" active={page === 'ai'} onTap={() => onNavigate('ai')}
+        d={<><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1 2.7 3 6 3s6-2 6-3v-5.5"/></>} />
+      <Item id="tutors" label="Tutors" active={page === 'tutors'} onTap={() => onNavigate('tutors')}
+        d={<><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.3 2.9-5.5 6.5-5.5s6.5 2.2 6.5 5.5"/><circle cx="17.5" cy="9.5" r="2.6"/><path d="M15.5 14.7c2.9.2 6 2 6 4.8"/></>} />
+      <Item id="dashboard" label="My space" active={page === 'dashboard'} onTap={() => user ? onNavigate('dashboard') : setShowAuth('login')}
+        d={<><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5c0-3.6 3.3-6 7.5-6s7.5 2.4 7.5 6"/></>} />
+    </nav>
+  );
+};
+
 const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
   const start = () => {
     if (user) { onNavigate('ai'); return; }
@@ -6343,6 +6364,10 @@ function AppInner() {
   // engine (the intro is only for prospects).
   useEffect(() => {
     if ((page === 'horeb' || page === 'horebhow' || page === 'native-welcome') && auth.user) handleNavigate('ai');
+    // The app has no marketing pages: any route to them becomes the front door.
+    if (IS_NATIVE && (page === 'home' || page === 'horeb' || page === 'horebhow' || page === 'teach' || page === 'schools' || page === 'consulting')) {
+      setPage(auth.user ? 'ai' : 'native-welcome');
+    }
   }, [page, auth.user]);
 
   // Browser back/forward button support
@@ -6475,7 +6500,8 @@ function AppInner() {
 
   return (
     <div className="min-h-screen">
-      <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />
+      {!IS_NATIVE && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
+      {IS_NATIVE && <div className="h-2" />}
       
       {page === 'home' && !selectedTutor && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {(page === 'horeb' || page === 'horebhow') && !auth.user && (
@@ -6485,12 +6511,14 @@ function AppInner() {
         </>
       )}
       {page === 'teach' && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
-      {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={() => handleNavigate('home')} user={auth.user} setShowAuth={setShowAuth} />}
+      {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={() => handleNavigate(IS_NATIVE ? (auth.user ? 'ai' : 'native-welcome') : 'home')} user={auth.user} setShowAuth={setShowAuth} />}
       {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
       
       {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : undefined} />}
       {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       {showPrivacyBanner && <PrivacyBanner onAccept={() => { localStorage.setItem('tutagora_privacy_accepted', 'true'); setShowPrivacyBanner(false); }} onNavigate={handleNavigate} />}
+      {IS_NATIVE && <div className="h-24" />}
+      {IS_NATIVE && <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
     </div>
   );
 }
