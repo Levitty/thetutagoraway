@@ -1186,6 +1186,20 @@ export function AIMastery({ onBack, userId, studentName }) {
                 />
               )}
               <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+              {!feedback && (() => {
+                const pool = [String(problem?.answer ?? ''), ...(problem?.accepts || []).map(String)].join(' ');
+                const chips = ['√', 'π', '²', '³', '°'].filter(ch => pool.includes(ch));
+                if (!chips.length) return null;
+                return (
+                  <div className="flex items-center gap-2 mt-2">
+                    <span className="text-xs text-slate-400">Tap to type:</span>
+                    {chips.map(ch => (
+                      <button key={ch} type="button" onClick={() => setAnswer(a => a + ch)}
+                        className="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-lg text-base font-semibold text-slate-700 transition-colors">{ch}</button>
+                    ))}
+                  </div>
+                );
+              })()}
               {!feedback && (
                 <button onClick={() => handleDiagnosticAnswer({ skip: true })} className="mt-3 text-sm text-slate-400 hover:text-[#6d6fcb] transition-colors">
                   I haven’t learned this yet
@@ -1229,8 +1243,10 @@ export function AIMastery({ onBack, userId, studentName }) {
     // "First steps" guide material, computed once: the escalation buttons only
     // render when there is actually something to show (some legacy skills have
     // no steps — the button used to silently do nothing).
+    // Own-problem steps only: a regenerated example has different numbers and
+    // must never be presented as this problem's first steps.
     const guideSteps = problem && !feedback
-      ? (problem.solutionSteps || computeSteps(problem) || generateWorkedExample(interleave ? interleave.skillId : activeSkill)?.steps || null)
+      ? (problem.solutionSteps || computeSteps(problem) || null)
       : null;
     // A guide step must never finish the problem: strip/mask the final answer
     // ("The pattern adds 1 each time. → 4 + 1 = 5" becomes "… → 4 + 1 = ?").
@@ -1443,6 +1459,23 @@ export function AIMastery({ onBack, userId, studentName }) {
                 )}
                 <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
 
+                {/* Phone keyboards have no math symbols — offer the ones this
+                    answer needs as tap-to-insert chips (typing "2root5" works too). */}
+                {!feedback && (() => {
+                  const pool = [String(problem.answer ?? ''), ...(problem.accepts || []).map(String)].join(' ');
+                  const chips = ['√', 'π', '²', '³', '°'].filter(ch => pool.includes(ch));
+                  if (!chips.length) return null;
+                  return (
+                    <div className="flex items-center gap-2 mt-2">
+                      <span className="text-xs text-slate-400">Tap to type:</span>
+                      {chips.map(ch => (
+                        <button key={ch} type="button" onClick={() => setAnswer(a => a + ch)}
+                          className="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 active:bg-amber-100 border border-slate-200 rounded-lg text-base font-semibold text-slate-700 transition-colors">{ch}</button>
+                      ))}
+                    </div>
+                  );
+                })()}
+
                 {/* Gentle 'I'm not sure' — an out that isn't guessing (surfaces a hint).
                     Retrieval gating: memory checks get no hints at all (they test recall),
                     and once a streak is going the student must attempt before hints unlock. */}
@@ -1535,9 +1568,14 @@ export function AIMastery({ onBack, userId, studentName }) {
                   <span className="text-[#c0663f] font-bold">Not quite — the answer is <span className="font-mono text-slate-900">{problem.answer}</span></span>
                   {wrongInfo?.diagnosis && <p className="mt-1.5 text-sm text-slate-700">{wrongInfo.diagnosis}</p>}
                   {(() => {
-                    // Working for the LEARNER'S problem (never a stand-in example),
-                    // showing the parts — the moment the missed step becomes visible.
-                    const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(interleave ? interleave.skillId : activeSkill)?.steps;
+                    // Working for the LEARNER'S problem when we have it. When we
+                    // don't (some legacy skills), a freshly generated example has
+                    // DIFFERENT numbers — presenting it as "the full working" reads
+                    // as a bug (√18 working under a √20 question). Label it as the
+                    // similar example it actually is, question included.
+                    const own = problem.solutionSteps || computeSteps(problem);
+                    const ex = own ? null : generateWorkedExample(interleave ? interleave.skillId : activeSkill);
+                    const steps = own || ex?.steps;
                     if (!steps) return null;
                     const rich = problem.solution?.steps || [];
                     let finalModel = null;
@@ -1546,8 +1584,9 @@ export function AIMastery({ onBack, userId, studentName }) {
                     }
                     return (
                       <div className="mt-3 pt-3 border-t border-[#f2cdc2]">
-                        <span className="text-sm text-slate-500 mb-2 block">Here's the full working, step by step:</span>
-                        {finalModel && <TeachingVisual model={finalModel} className="mb-3" />}
+                        <span className="text-sm text-slate-500 mb-2 block">{own ? "Here's the full working, step by step:" : 'Watch the same method on a similar one:'}</span>
+                        {!own && ex?.problem && <div className="text-sm font-semibold text-slate-800 mb-2">{ex.problem}</div>}
+                        {own && finalModel && <TeachingVisual model={finalModel} className="mb-3" />}
                         <div className="space-y-1.5">
                           {steps.map((step, i) => (
                             <div key={i} className="flex gap-2 text-sm">
@@ -1556,6 +1595,7 @@ export function AIMastery({ onBack, userId, studentName }) {
                             </div>
                           ))}
                         </div>
+                        {!own && ex?.solution != null && <div className="mt-1.5 text-sm text-slate-600">Answer to that one: <span className="font-mono font-semibold">{ex.solution}</span> — now trace yours the same way.</div>}
                       </div>
                     );
                   })()}
@@ -1628,6 +1668,20 @@ export function AIMastery({ onBack, userId, studentName }) {
               </div>
             )}
             <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50" autoFocus placeholder={problem?.visual ? 'Use the diagram above, or type your answer…' : 'Your answer...'} />
+            {!feedback && (() => {
+              const pool = [String(problem?.answer ?? ''), ...(problem?.accepts || []).map(String)].join(' ');
+              const chips = ['√', 'π', '²', '³', '°'].filter(ch => pool.includes(ch));
+              if (!chips.length) return null;
+              return (
+                <div className="flex items-center gap-2 mt-2">
+                  <span className="text-xs text-slate-400">Tap to type:</span>
+                  {chips.map(ch => (
+                    <button key={ch} type="button" onClick={() => setAnswer(a => a + ch)}
+                      className="px-3.5 py-1.5 bg-slate-700 hover:bg-slate-600 border border-slate-600 rounded-lg text-base font-semibold text-white transition-colors">{ch}</button>
+                  ))}
+                </div>
+              );
+            })()}
           </div>
 
           {feedback && <div className={`rounded-xl p-4 mb-4 ${feedback === 'correct' ? 'bg-emerald-900/50 border border-emerald-500' : 'bg-red-900/50 border border-red-500'}`}>{feedback === 'correct' ? <span className="text-emerald-400">✓ Correct!</span> : <span className="text-red-400">✗ Answer: {problem?.answer}</span>}</div>}
