@@ -1877,21 +1877,35 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                 </div>
               )}
 
-              {/* Quick stats */}
-              <div className="grid grid-cols-2 gap-2.5">
-                {[
-                  { icon: 'target', val: `${scopedStats.percent}%`, label: 'Mastery', color: 'text-emerald-400' },
-                  { icon: 'zap', val: progress.totalXP || 0, label: 'XP', color: 'text-amber-400' },
-                  { icon: 'flame', val: progress.currentStreak || 0, label: 'Streak', color: 'text-orange-400' },
-                  { icon: 'check', val: `${scopedStats.accuracy}%`, label: 'Accuracy', color: 'text-sky-400' },
-                ].map(s => (
+              {/* Quick stats. On a phone these sit under the real content and a
+                  zero reads as failure, so only earned numbers show; the full
+                  set stays in the desktop rail (and always in Progress). */}
+              {(() => {
+                const all = [
+                  { icon: 'target', val: `${scopedStats.percent}%`, label: 'Mastery', color: 'text-[#5a7a3a]', earned: scopedStats.percent > 0 },
+                  { icon: 'zap', val: progress.totalXP || 0, label: 'XP', color: 'text-amber-500', earned: (progress.totalXP || 0) > 0 },
+                  { icon: 'flame', val: progress.currentStreak || 0, label: 'Streak', color: 'text-orange-500', earned: (progress.currentStreak || 0) > 0 },
+                  { icon: 'check', val: `${scopedStats.accuracy}%`, label: 'Accuracy', color: 'text-[#6d6fcb]', earned: scopedStats.accuracy > 0 },
+                ];
+                const Tile = ({ s }) => (
                   <div key={s.label} className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
                     <Icon name={s.icon} className={`w-4 h-4 mx-auto mb-1.5 ${s.color}`} />
                     <div className="text-xl font-bold leading-none text-slate-900 tabular-nums">{s.val}</div>
                     <div className="text-[10px] text-slate-400 uppercase tracking-wide mt-1">{s.label}</div>
                   </div>
-                ))}
-              </div>
+                );
+                const earned = all.filter(s => s.earned);
+                return (
+                  <>
+                    <div className="hidden lg:grid grid-cols-2 gap-2.5">{all.map(s => <Tile key={s.label} s={s} />)}</div>
+                    {earned.length > 0 && (
+                      <div className={`lg:hidden grid gap-2.5 ${earned.length === 1 ? 'grid-cols-1' : 'grid-cols-2'}`}>
+                        {earned.map(s => <Tile key={s.label} s={s} />)}
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
 
               {/* Recent badges */}
               <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5">
