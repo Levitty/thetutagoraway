@@ -14,6 +14,7 @@ import ClubsPage from './ClubsPage.jsx';
 import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
+import { initPush, clearPush } from './push.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 
@@ -707,6 +708,18 @@ const sendLessonStartNotification = async (booking) => {
     const tutorName = booking.tutors?.profiles?.full_name || 'Tutor';
     const subject = booking.subject || 'Lesson';
     const tutorUserId = booking.tutors?.user_id || booking.tutor_id;
+
+    // 0. Push to the student's phone — the app is almost certainly closed.
+    if (studentId) {
+      supabase.functions.invoke('send-push', {
+        body: {
+          user_id: studentId,
+          title: `Your ${subject} lesson is starting`,
+          body: `${tutorName} is waiting for you in the room.`,
+          route: 'dashboard',
+        },
+      }).catch(() => { /* push is best-effort */ });
+    }
 
     // 1. Send in-app message to student
     if (studentId && tutorUserId) {
@@ -6718,6 +6731,10 @@ function AppInner() {
     return () => window.removeEventListener('scroll', h);
   }, []);
 
+  // Register this device for push once we know who is using it. The moment
+  // that matters — "your lesson is starting" — happens while the app is shut.
+  useEffect(() => { if (auth.user?.id) initPush(auth.user.id); }, [auth.user?.id]);
+
   // After a signup started from the HOREB front door, land the new learner in
   // the engine once they're authenticated (not on the dashboard).
   useEffect(() => {
@@ -6764,7 +6781,7 @@ function AppInner() {
   }, []);
 
   const handleNavigate = (p) => { setPage(p); setSelectedTutor(null); window.scrollTo(0, 0); window.history.pushState({}, '', p === 'home' ? '/' : '/' + p); };
-  const handleLogout = async () => { await auth.signOut(); setPage('home'); };
+  const handleLogout = async () => { try { await clearPush(auth.user?.id); } catch { /* ignore */ } await auth.signOut(); setPage(IS_NATIVE ? 'native-welcome' : 'home'); };
   const handleStartLesson = (booking) => {
     setActiveLesson(booking);
     // If tutor starts the lesson, notify the student

@@ -23,6 +23,6 @@
     }
   },
   "ios": {
-    "contentInset": "always"
+    "contentInset": "never"
   }
 }
