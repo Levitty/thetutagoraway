@@ -2739,7 +2739,7 @@ const TutorEarningsTab = ({ tutor, completed }) => {
   useEffect(() => {
     const fetchPayments = async () => {
       const { data } = await supabase.from('payments')
-        .select('*, bookings(lesson_date, subject, status, profiles:student_id(full_name))')
+        .select('*, bookings(lesson_date, subject, status, learner_name, learner_grade, profiles:student_id(full_name)), payer:student_id(full_name)')
         .eq('tutor_id', tutor.id)
         .eq('status', 'completed')
         .order('created_at', { ascending: false });
@@ -2810,7 +2810,12 @@ const TutorEarningsTab = ({ tutor, completed }) => {
                   return (
                     <tr key={p.id} className="hover:bg-slate-50">
                       <td className="px-5 py-3 text-sm text-slate-600">{p.bookings?.lesson_date || new Date(p.created_at).toLocaleDateString()}</td>
-                      <td className="px-5 py-3 text-sm font-medium text-slate-900">{p.bookings?.profiles?.full_name || '—'}</td>
+                      <td className="px-5 py-3 text-sm font-medium text-slate-900">
+                        {p.bookings?.learner_name || p.bookings?.profiles?.full_name || p.payer?.full_name || 'Student'}
+                        {p.bookings?.learner_name && p.bookings?.learner_grade && (
+                          <span className="block text-xs font-normal text-slate-400">{p.bookings.learner_grade}</span>
+                        )}
+                      </td>
                       <td className="px-5 py-3 text-sm text-slate-600">{p.bookings?.subject || '—'}</td>
                       <td className="px-5 py-3 text-sm text-right text-slate-600">KSh {(p.amount || 0).toLocaleString()}</td>
                       <td className="px-5 py-3 text-sm text-right font-medium text-slate-900">KSh {share.toLocaleString()}</td>
@@ -4011,6 +4016,8 @@ const NativeTabs = ({ page, user, onNavigate, setShowAuth }) => {
   );
   return (
     <nav className="fixed inset-x-0 bottom-0 z-50 bg-white border-t border-slate-200 flex justify-around px-1 pt-2" style={{ paddingBottom: 'calc(0.5rem + env(safe-area-inset-bottom))' }}>
+      <Item id="home" label="Home" active={page === 'native-home'} onTap={() => onNavigate('native-home')}
+        d={<><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V21h13V9.5"/></>} />
       <Item id="ai" label="Practice" active={page === 'ai'} onTap={() => onNavigate('ai')}
         d={<><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1 2.7 3 6 3s6-2 6-3v-5.5"/></>} />
       <Item id="tutors" label="Tutors" active={page === 'tutors'} onTap={() => onNavigate('tutors')}
@@ -4152,6 +4159,153 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
 };
 
 // The learner's own lessons — what "My lessons" should always have opened.
+// Home: the one screen that answers "what should I do right now?" — today's
+// goal, the next lesson, the next practice step. The only place the two halves
+// of Tutagora sit together.
+const NativeLessonBanner = ({ bookings, onStartLesson }) => {
+  const [, tick] = useState(0);
+  useEffect(() => { const t = setInterval(() => tick(n => n + 1), 30000); return () => clearInterval(t); }, []);
+  const live = (bookings || []).find(b => {
+    if (b.status !== 'confirmed' || !b.lesson_date || !b.start_time) return false;
+    const start = new Date(`${b.lesson_date}T${b.start_time}`);
+    if (isNaN(start)) return false;
+    const mins = (start - Date.now()) / 60000;
+    return mins <= 15 && mins > -90;
+  });
+  if (!live) return null;
+  return (
+    <div className="fixed inset-x-0 z-[55] px-3" style={{ bottom: 'calc(4.6rem + env(safe-area-inset-bottom))' }}>
+      <button onClick={() => onStartLesson(live)} className="w-full max-w-md mx-auto flex items-center gap-3 bg-[#5a7a3a] hover:bg-[#4f6a30] text-white rounded-2xl px-4 py-3 shadow-lg transition-colors">
+        <span className="w-2.5 h-2.5 rounded-full bg-white/90 animate-pulse shrink-0" />
+        <span className="flex-1 text-left min-w-0">
+          <span className="block text-[14.5px] font-extrabold tracking-tight">{live.subject} is starting</span>
+          <span className="block text-[12.5px] text-white/80">Tap to join your lesson</span>
+        </span>
+        <span className="text-[13px] font-bold bg-white/15 rounded-lg px-3 py-1.5 shrink-0">Join</span>
+      </button>
+    </div>
+  );
+};
+
+const NativeHome = ({ profile, bookings, onNavigate, onStartLesson, setShowAuth, user }) => {
+  const [ai, setAi] = useState(null);
+  useEffect(() => {
+    if (!profile?.id) return;
+    supabase.from('ai_tutor_progress').select('total_xp, current_streak, diagnosed, progress')
+      .eq('user_id', profile.id).maybeSingle()
+      .then(({ data }) => data && setAi({
+        xp: data.total_xp || 0, streak: data.current_streak || 0, diagnosed: !!data.diagnosed,
+        dailyXP: (data.progress?.dailyDate === new Date().toISOString().slice(0, 10)) ? (data.progress?.dailyXP || 0) : 0,
+      }));
+  }, [profile?.id]);
+
+  const tidyName = (n) => !n ? '' : (n === n.toUpperCase()
+    ? n.toLowerCase().replace(/\b[a-z]/g, ch => ch.toUpperCase()) : n);
+  const first = (profile?.full_name || '').trim().split(/\s+/)[0];
+  const hour = new Date().getHours();
+  const greeting = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
+
+  const upcoming = (bookings || []).filter(b => b.status === 'confirmed' || b.status === 'pending')
+    .sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`));
+  const next = upcoming[0];
+  const prettyDate = (d) => {
+    if (!d) return '';
+    const dt = new Date(d + 'T00:00:00'); const t = new Date();
+    const days = Math.round((dt - new Date(t.getFullYear(), t.getMonth(), t.getDate())) / 86400000);
+    if (days === 0) return 'Today'; if (days === 1) return 'Tomorrow';
+    return dt.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' });
+  };
+  const startsSoon = (b) => {
+    if (!b?.lesson_date || !b?.start_time) return false;
+    const start = new Date(`${b.lesson_date}T${b.start_time}`);
+    return !isNaN(start) && (start - Date.now()) / 60000 < 45;
+  };
+
+  const GOAL = 30;
+  const done = Math.min(ai?.dailyXP || 0, GOAL);
+  const R = 31, C = 2 * Math.PI * R;
+
+  if (!user) return (
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
+      <div className="app-scroll"><div className="max-w-md mx-auto px-4 pt-16 pb-28 native-safe-top text-center">
+        <div className="text-[22px] font-extrabold tracking-tight">Welcome to Tutagora</div>
+        <p className="text-slate-500 mt-2 mb-5">Sign in to see your lessons and your practice.</p>
+        <button onClick={() => setShowAuth('login')} className="w-full bg-amber-400 text-slate-900 rounded-2xl py-3.5 font-bold">Sign in</button>
+      </div></div>
+    </div>
+  );
+
+  return (
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
+      <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
+        <div className="max-w-md mx-auto px-4 py-3 flex items-center justify-between">
+          <span className="text-[15px] font-extrabold tracking-tight">TUTAGORA</span>
+          {ai?.streak > 0 && <span className="text-[12.5px] font-bold text-amber-700">{ai.streak}-day streak</span>}
+        </div>
+      </div>
+      <div className="app-scroll">
+        <div className="max-w-md mx-auto px-4 pt-5 pb-28 space-y-3">
+          <div>
+            <div className="text-[21px] font-extrabold tracking-tight leading-tight">{greeting}{first ? `, ${first}` : ''}</div>
+            <div className="text-sm text-slate-500">{next ? `${upcoming.length} lesson${upcoming.length === 1 ? '' : 's'} booked` : 'No lessons booked yet'}</div>
+          </div>
+
+          {/* today's goal */}
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+            <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-700">Today</div>
+            <div className="flex items-center gap-4 mt-2">
+              <svg width="82" height="82" viewBox="0 0 80 80" className="shrink-0">
+                <circle cx="40" cy="40" r={R} fill="none" stroke="#eef0f3" strokeWidth="9" />
+                <circle cx="40" cy="40" r={R} fill="none" stroke={done >= GOAL ? '#8ca86a' : '#fbbf24'} strokeWidth="9" strokeLinecap="round"
+                        strokeDasharray={C} strokeDashoffset={C * (1 - done / GOAL)} transform="rotate(-90 40 40)" />
+                <text x="40" y="38" textAnchor="middle" fontSize="17" fontWeight="800" fill="#0f2033">{done}</text>
+                <text x="40" y="51" textAnchor="middle" fontSize="9" fill="#94a3b8">of {GOAL} XP</text>
+              </svg>
+              <div className="min-w-0">
+                <div className="text-[15px] font-extrabold tracking-tight">{done >= GOAL ? 'Goal reached' : `${GOAL - done} XP to go`}</div>
+                <p className="text-[13px] text-slate-500 mt-0.5">{done >= GOAL ? 'Lovely work — see you again tomorrow.' : 'About ten minutes of practice does it.'}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* next lesson */}
+          {next ? (
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+              <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Next lesson</div>
+              <div className="text-[16px] font-extrabold tracking-tight mt-1">{next.subject}</div>
+              <div className="text-sm text-slate-500">
+                {next.tutors?.profiles?.full_name ? `with ${tidyName(next.tutors.profiles.full_name)} · ` : ''}
+                {prettyDate(next.lesson_date)} at {next.start_time?.slice(0, 5)}
+              </div>
+              {next.status === 'confirmed'
+                ? <button onClick={() => onStartLesson(next)} className={`w-full mt-3 rounded-xl py-3 font-bold text-[15px] text-white transition-colors ${startsSoon(next) ? 'bg-[#5a7a3a] hover:bg-[#4f6a30]' : 'bg-slate-900 hover:bg-slate-800'}`}>{startsSoon(next) ? 'Join now' : 'Enter the room early'}</button>
+                : <div className="mt-3 text-[13px] text-slate-400">Waiting for the tutor to confirm this booking.</div>}
+            </div>
+          ) : (
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+              <div className="text-[15px] font-semibold">Work with a tutor</div>
+              <p className="text-[13.5px] text-slate-500 mt-1 mb-3">One-to-one help from Kenya's verified tutors, whenever something won't click.</p>
+              <button onClick={() => onNavigate('tutors')} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Find a tutor</button>
+            </div>
+          )}
+
+          {/* practice */}
+          <button onClick={() => onNavigate('ai')} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-2xl p-4 hover:border-slate-300 transition-colors">
+            <div className="flex items-center justify-between gap-3">
+              <div className="min-w-0">
+                <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-700">{ai?.diagnosed ? 'Continue practice' : 'Start practising'}</div>
+                <div className="text-[15px] font-extrabold tracking-tight mt-0.5">HOREB</div>
+                <div className="text-[13px] text-slate-500">{ai?.diagnosed ? `${ai.xp} XP earned so far` : 'Find your starting point — free'}</div>
+              </div>
+              <span className="shrink-0 bg-amber-400 text-slate-900 font-bold rounded-xl px-4 py-2 text-sm">{ai?.diagnosed ? 'Continue' : 'Start'}</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const NativeMyLessons = ({ bookings, onBack, onStartLesson, onNavigate }) => {
   const tidyName = (n) => !n ? '' : (n === n.toUpperCase()
     ? n.toLowerCase().replace(/\b[a-z]/g, ch => ch.toUpperCase()) : n);
@@ -6578,10 +6732,10 @@ function AppInner() {
   // A logged-in learner who hits the public HOREB intro goes straight to the
   // engine (the intro is only for prospects).
   useEffect(() => {
-    if ((page === 'horeb' || page === 'horebhow' || page === 'native-welcome') && auth.user) handleNavigate('ai');
+    if ((page === 'horeb' || page === 'horebhow' || page === 'native-welcome') && auth.user) handleNavigate(IS_NATIVE ? 'native-home' : 'ai');
     // The app has no marketing pages: any route to them becomes the front door.
     if (IS_NATIVE && (page === 'home' || page === 'horeb' || page === 'horebhow' || page === 'teach' || page === 'schools' || page === 'consulting')) {
-      setPage(auth.user ? 'ai' : 'native-welcome');
+      setPage(auth.user ? 'native-home' : 'native-welcome');
     }
   }, [page, auth.user]);
 
@@ -6649,11 +6803,24 @@ function AppInner() {
     return <ConsultingPage onBack={() => handleNavigate('home')} />;
   }
 
+  // Home (native only).
+  if (IS_NATIVE && page === 'native-home') {
+    return (
+      <>
+        <NativeHome profile={auth.profile} user={auth.user} bookings={bookings} onNavigate={handleNavigate} onStartLesson={handleStartLesson} setShowAuth={setShowAuth} />
+        <NativeLessonBanner bookings={bookings} onStartLesson={handleStartLesson} />
+        <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
+        {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : 'student'} />}
+      </>
+    );
+  }
+
   // The learner's lessons (native only).
   if (IS_NATIVE && page === 'my-lessons') {
     return (
       <>
         <NativeMyLessons bookings={bookings} onBack={() => handleNavigate('dashboard')} onStartLesson={handleStartLesson} onNavigate={handleNavigate} />
+        <NativeLessonBanner bookings={bookings} onStartLesson={handleStartLesson} />
         <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
       </>
     );
@@ -6718,6 +6885,7 @@ function AppInner() {
       return (
         <>
           <NativeMySpace profile={auth.profile} bookings={bookings} onNavigate={handleNavigate} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onOpenAccountSettings={() => setShowAccountSettings(true)} onLogout={handleLogout} />
+          <NativeLessonBanner bookings={bookings} onStartLesson={handleStartLesson} />
           <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
           {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
           {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}

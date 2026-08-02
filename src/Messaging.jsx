@@ -317,10 +317,10 @@ export const Messaging = ({ currentUser, onClose }) => {
   );
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl w-full max-w-4xl h-[80vh] flex overflow-hidden shadow-2xl">
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-stretch justify-center p-0 lg:items-center lg:p-4">
+      <div className="bg-white w-full h-full rounded-none lg:rounded-2xl lg:max-w-4xl lg:h-[80vh] flex overflow-hidden shadow-2xl native-safe-top">
         {/* Sidebar - Conversations List */}
-        <div className="w-80 border-r border-slate-200 flex flex-col bg-white">
+        <div className={`w-full lg:w-80 border-r border-slate-200 flex-col bg-white ${activeConversation ? 'hidden lg:flex' : 'flex'}`}>
           {/* Header */}
           <div className="p-4 border-b border-slate-200">
             <div className="flex items-center justify-between mb-3">
@@ -374,7 +374,7 @@ export const Messaging = ({ currentUser, onClose }) => {
         </div>
 
         {/* Main - Chat Area */}
-        <div className="flex-1 flex flex-col bg-slate-50">
+        <div className={`flex-1 flex-col bg-slate-50 ${activeConversation ? 'flex' : 'hidden lg:flex'}`}>
           {activeConversation ? (
             <>
               {/* Chat Header */}
