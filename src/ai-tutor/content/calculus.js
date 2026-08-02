@@ -21,7 +21,7 @@ export function buildProductRule() {
   const u = linear(1, p), v = quad(1, q, r), f = mul(u, v);
   const at = nonzero(-3, 3);
   const value = evaluate(differentiate(f), at);
-  const uStr = `(${fmtLinear(1, p)})`, vStr = `(${fmtQuadratic(1, q, r).caret})`, vD = fmtLinear(2, q);
+  const uStr = `(${fmtLinear(1, p)})`, vStr = `(${fmtQuadratic(1, q, r).uni})`, vD = fmtLinear(2, q);
   return {
     type: 'product-rule',
     instruction: 'Differentiate with the product rule, then evaluate.',
@@ -53,7 +53,7 @@ export function buildQuotientRule() {
   const u = quad(1, q, r), v = linear(1, b), f = mul(u, pow(v, -1));
   const at = 1 - b;                              // v(at) = 1 → clean integer answer
   const value = evaluate(differentiate(f), at);
-  const uStr = `(${fmtQuadratic(1, q, r).caret})`, vStr = `(${fmtLinear(1, b)})`, uD = fmtLinear(2, q);
+  const uStr = `(${fmtQuadratic(1, q, r).uni})`, vStr = `(${fmtLinear(1, b)})`, uD = fmtLinear(2, q);
   return {
     type: 'quotient-rule',
     instruction: 'Differentiate with the quotient rule, then evaluate.',
@@ -147,7 +147,7 @@ export function buildIntegrationSubstitution() {
   const F = pow(quad(1, 0, c), k);               // antiderivative (x²+c)^k
   const integrand = differentiate(F);            // 2k·x·(x²+c)^(k-1)
   const value = evaluate(F, hi) - evaluate(F, lo);
-  const innerStr = fmtQuadratic(1, 0, c).caret;  // x² + c
+  const innerStr = fmtQuadratic(1, 0, c).uni;  // x² + c
   const powStr = (k - 1) === 1 ? `(${innerStr})` : `(${innerStr})^${k - 1}`;
   const inStr = `${2 * k}x${powStr}`;
   return {

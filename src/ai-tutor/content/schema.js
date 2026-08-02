@@ -383,43 +383,57 @@ export function buildDistribute() {
 // ---- expand two binomials: (x + p)(x + q) ----
 export function buildBinomial() {
   const p = nonzero(-7, 7), q = nonzero(-7, 7);
-  const b = p + q, c = p * q;       // x^2 + b x + c
+  const b = p + q, c = p * q;       // x² + bx + c
   const f = fmtQuadratic(1, b, c);
+  // Taught by DISTRIBUTION, not FOIL: split the first bracket, let each of its
+  // terms multiply the whole second bracket — two rows of working, all four
+  // terms visible, middle terms collected (or cancelling) in plain sight.
+  // One rule that scales to any polynomial product; FOIL is a dead-end trick.
+  const inner = fmtLinear(1, q);                                  // "x − 2"
+  const sgn = (v) => (v < 0 ? '−' : '+');
+  const split = `x(${inner}) ${sgn(p)} ${Math.abs(p)}(${inner})`;
+  const row1 = fmtPoly([[1, 2], [q, 1]]).uni;                     // x² + qx
+  const row2 = fmtPoly([[p, 1], [c, 0]]).uni;                     // px + pq
+  const fourTerms = `x² ${sgn(q)} ${Math.abs(q)}x ${sgn(p)} ${Math.abs(p)}x ${sgn(c)} ${Math.abs(c)}`;
   return {
     type: 'expand-binomial',
     instruction: 'Expand and simplify.',
     question: `Expand:   (x${fmtTerm(p, '')})(x${fmtTerm(q, '')})`,
-    answer: f.caret,
-    // Area model: (x+p)(x+q) as a 2×2 grid — every part multiplies every part.
+    answer: f.uni,
+    // Area model: the two rows of the grid ARE the two rows of the working.
     // Practice shows the empty grid; the final step fills the four products in.
     model: { type: 'area-model', data: {
-      rows: ['x', `${q}`], cols: ['x', `${p}`],
+      rows: ['x', `${p}`], cols: ['x', `${q}`],
       cells: [['?', '?'], ['?', '?']],
       caption: 'every part along the top multiplies every part down the side',
     } },
     accepts: accepts(f.caret, f.uni, f.caret.replace(/\s/g, ''), f.uni.replace(/\s/g, '')),
     hints: hintLadder(
-      'Use FOIL: First, Outer, Inner, Last.',
-      `First: x·x = x². Last: (${p})·(${q}) = ${c}.`,
-      `Outer + Inner give the middle term: ${p}x + ${q}x = ${b}x.`,
+      'Split the FIRST bracket — each of its terms multiplies the whole second bracket.',
+      `Two rows of working: ${split}.`,
+      'Expand each row, then collect the two middle terms.',
     ),
     solution: {
       steps: [
-        { text: 'First terms: x · x.', expr: 'x²' },
-        { text: `Outer + Inner: ${p}x + ${q}x.`, expr: `${fmtTerm(b, 'x')}`.trim() },
-        { text: `Last terms: (${p})(${q}).`, expr: `${fmtTerm(c, '')}`.trim() },
-        { text: 'Combine.', expr: f.caret,
+        { text: 'Split the first bracket: each term multiplies the whole second bracket.', expr: split },
+        { text: 'First row — x times the bracket.', expr: `x(${inner}) = ${row1}` },
+        { text: `Second row — ${p} times the bracket.`, expr: `${p}(${inner}) = ${row2}` },
+        { text: 'Write all four terms together.', expr: fourTerms },
+        { text: b === 0
+            ? `The middle terms cancel: ${q}x ${sgn(p)} ${Math.abs(p)}x = 0.`
+            : `Collect the middle terms: ${q}x ${sgn(p)} ${Math.abs(p)}x = ${fmtTerm(b, 'x', true)}.`,
+          expr: f.uni,
           model: { type: 'area-model', data: {
-            rows: ['x', `${q}`], cols: ['x', `${p}`],
-            cells: [['x²', fmtTerm(p, 'x', true)], [fmtTerm(q, 'x', true), `${p * q}`]],
-            caption: 'four small areas add up to the expansion',
+            rows: ['x', `${p}`], cols: ['x', `${q}`],
+            cells: [['x²', fmtTerm(q, 'x', true)], [fmtTerm(p, 'x', true), `${c}`]],
+            caption: 'each grid row is one row of the working',
           } } },
       ],
-      answer: f.caret,
+      answer: f.uni,
     },
     misconceptions: [
-      { when: fmtQuadratic(1, 0, c).caret, feedback: 'You forgot the middle term — add the Outer and Inner products.' },
-      { when: fmtQuadratic(1, b, 0).caret, feedback: 'Multiply the two constants for the last term.' },
+      { when: fmtQuadratic(1, 0, c).uni, feedback: 'You only multiplied the matching pairs. Split the first bracket — BOTH of its terms multiply BOTH parts of the second bracket (four products in all).' },
+      { when: fmtQuadratic(1, b, 0).uni, feedback: `The constants multiply too: (${p})(${q}) = ${c}.` },
     ],
     verify: { kind: 'identity', original: (t) => (t + p) * (t + q), answerExpr: (t) => t * t + b * t + c },
   };
@@ -477,7 +491,7 @@ export function buildFactorizeQuadratic() {
   return {
     type: 'factorize-quadratic',
     instruction: 'Factorise into two brackets.',
-    question: `Factorise:   ${orig.caret}`,
+    question: `Factorise:   ${orig.uni}`,
     answer: ans,
     accepts: accepts(ans, ansSwap, ans.replace(/\s/g, ''), ansSwap.replace(/\s/g, '')),
     // Reverse area model: the corner cells (x² and the constant) are fixed;
@@ -517,7 +531,7 @@ export function buildSolveQuadratic() {
   return {
     type: 'solve-quadratic',
     instruction: 'Solve for x.',
-    question: `Solve:   ${orig.caret} = 0`,
+    question: `Solve:   ${orig.uni} = 0`,
     answer: ans,
     accepts: accepts(ans, `x=${r1} or x=${r2}`, `x=${r2} or x=${r1}`,
       `${r1}, ${r2}`, `${r2}, ${r1}`, `${r1},${r2}`, `${r2},${r1}`),
@@ -550,17 +564,17 @@ export function buildEvaluateFunction({ quadratic = true } = {}) {
   return {
     type: 'evaluate-function',
     instruction: 'Substitute and evaluate.',
-    question: `Given f(x) = ${fStr.caret},   find f(${k}).`,
+    question: `Given f(x) = ${fStr.uni},   find f(${k}).`,
     answer: `${value}`,
     accepts: accepts(`${value}`, `f(${k})=${value}`),
     hints: hintLadder(
       `Replace every x with ${k}.`,
       'Work out powers first, then multiply, then add (BODMAS).',
-      `Compute ${fStr.caret.replace(/x/g, `(${k})`)}.`,
+      `Compute ${fStr.uni.replace(/x/g, `(${k})`)}.`,
     ),
     solution: {
       steps: [
-        { text: `Substitute x = ${k}.`, expr: fStr.caret.replace(/x/g, `(${k})`) },
+        { text: `Substitute x = ${k}.`, expr: fStr.uni.replace(/x/g, `(${k})`) },
         { text: 'Evaluate.', expr: `${value}` },
       ],
       answer: `${value}`,
@@ -582,8 +596,8 @@ export function buildDifferentiate() {
   return {
     type: 'differentiate',
     instruction: 'Differentiate with respect to x.',
-    question: `Differentiate:   y = ${fStr.caret}`,
-    answer: dStr.caret,
+    question: `Differentiate:   y = ${fStr.uni}`,
+    answer: dStr.uni,
     accepts: accepts(dStr.caret, dStr.uni, dStr.caret.replace(/\s/g, ''), dStr.uni.replace(/\s/g, '')),
     hints: hintLadder(
       'Power rule: bring the power down as a multiplier, then reduce the power by 1.',
@@ -593,12 +607,12 @@ export function buildDifferentiate() {
     solution: {
       steps: [
         ...fTerms.filter(([c, p]) => p >= 1).map(([c, p]) => ({
-          text: `Term ${fmtPoly([[c, p]]).caret}: multiply by ${p}, drop the power.`,
-          expr: fmtPoly([[c * p, p - 1]]).caret,
+          text: `Term ${fmtPoly([[c, p]]).uni}: multiply by ${p}, drop the power.`,
+          expr: fmtPoly([[c * p, p - 1]]).uni,
         })),
-        { text: 'Combine.', expr: dStr.caret },
+        { text: 'Combine.', expr: dStr.uni },
       ],
-      answer: dStr.caret,
+      answer: dStr.uni,
     },
     misconceptions: [],
     verify: { kind: 'derivative', f: (x) => evalPoly(fTerms, x), df: (x) => evalPoly(dTerms, x) },
@@ -614,14 +628,14 @@ export function buildIntegrate() {
   const FTerms = chosen.map((p) => [nonzero(-5, 5), p + 1]);
   const integrand = FTerms.map(([m, P]) => [m * P, P - 1]);   // d/dx of F
   const inStr = fmtPoly(integrand), FStr = fmtPoly(FTerms);
-  const ans = `${FStr.caret} + C`;
+  const ans = `${FStr.uni} + C`;
   return {
     type: 'integrate',
     instruction: 'Integrate with respect to x. Remember + C.',
-    question: `Integrate:   ∫ (${inStr.caret}) dx`,
+    question: `Integrate:   ∫ (${inStr.uni}) dx`,
     answer: ans,
     accepts: accepts(ans, `${FStr.uni} + C`, `${FStr.caret}+C`, `${FStr.caret} + c`,
-      FStr.caret, FStr.uni),   // also accept without +C (note it in feedback)
+      FStr.uni, FStr.uni),   // also accept without +C (note it in feedback)
     hints: hintLadder(
       'Reverse the power rule: raise the power by 1, then divide by the new power.',
       '∫xⁿ dx = xⁿ⁺¹/(n+1) + C.',
@@ -630,8 +644,8 @@ export function buildIntegrate() {
     solution: {
       steps: [
         ...integrand.map(([c, p]) => ({
-          text: `Term ${fmtPoly([[c, p]]).caret}: raise power to ${p + 1}, divide by ${p + 1}.`,
-          expr: fmtPoly([[c / (p + 1), p + 1]]).caret,
+          text: `Term ${fmtPoly([[c, p]]).uni}: raise power to ${p + 1}, divide by ${p + 1}.`,
+          expr: fmtPoly([[c / (p + 1), p + 1]]).uni,
         })),
         { text: 'Add the constant of integration.', expr: ans },
       ],
@@ -652,17 +666,17 @@ export function buildDefiniteIntegral() {
   return {
     type: 'definite-integral',
     instruction: 'Evaluate the definite integral.',
-    question: `Evaluate:   ∫ from ${a} to ${b} of (${inStr.caret}) dx`,
+    question: `Evaluate:   ∫ from ${a} to ${b} of (${inStr.uni}) dx`,
     answer: `${value}`,
     accepts: accepts(`${value}`),
     hints: hintLadder(
       'First integrate, then substitute the upper and lower limits and subtract.',
-      `Antiderivative F(x) = ${FStr.caret}.`,
+      `Antiderivative F(x) = ${FStr.uni}.`,
       `Compute F(${b}) − F(${a}).`,
     ),
     solution: {
       steps: [
-        { text: 'Integrate (no + C needed for a definite integral).', expr: `[ ${FStr.caret} ]` },
+        { text: 'Integrate (no + C needed for a definite integral).', expr: `[ ${FStr.uni} ]` },
         { text: `Substitute the limits and subtract: F(${b}) − F(${a}).`, expr: `${evalPoly(FTerms, b)} − (${evalPoly(FTerms, a)})` },
         { text: 'Evaluate.', expr: `${value}` },
       ],
@@ -692,7 +706,7 @@ export function buildQuadraticFormula() {
   return {
     type: 'quadratic-formula',
     instruction: 'Solve using the quadratic formula.',
-    question: `Use the quadratic formula to solve:   ${quad.caret} = 0`,
+    question: `Use the quadratic formula to solve:   ${quad.uni} = 0`,
     answer: ans,
     accepts: accepts(ans, `x=${r1} or x=${r2}`, `x=${r2} or x=${r1}`,
       `${r1}, ${r2}`, `${r2}, ${r1}`, `${r1},${r2}`, `${r2},${r1}`),
@@ -727,7 +741,7 @@ export function buildCompleteSquare() {
   return {
     type: 'complete-square',
     instruction: 'Write in completed-square form (x + a)² + b.',
-    question: `Complete the square:   ${quad.caret}`,
+    question: `Complete the square:   ${quad.uni}`,
     answer: ansCaret,
     accepts: accepts(ansCaret, ansUni, ansCaret.replace(/\s/g, ''), ansUni.replace(/\s/g, '')),
     hints: hintLadder(
@@ -738,7 +752,7 @@ export function buildCompleteSquare() {
     solution: {
       steps: [
         { text: `Half the x-coefficient: ${b} ÷ 2 = ${h}.`, expr: `(${inner})²` },
-        { text: `(${inner})² = ${fmtPoly([[1, 2], [b, 1], [h * h, 0]]).caret}, which is ${h * h} too big — subtract it.`, expr: ansCaret },
+        { text: `(${inner})² = ${fmtPoly([[1, 2], [b, 1], [h * h, 0]]).uni}, which is ${h * h} too big — subtract it.`, expr: ansCaret },
       ],
       answer: ansCaret,
     },
@@ -858,17 +872,17 @@ export function buildStationaryPoints() {
   return {
     type: 'stationary-point',
     instruction: 'Find the coordinates of the stationary point.',
-    question: `Find the stationary point of   y = ${quad.caret}.`,
+    question: `Find the stationary point of   y = ${quad.uni}.`,
     answer: ans,
     accepts: accepts(ans, `(${x0},${y0})`, `x=${x0}, y=${y0}`, `x=${x0},y=${y0}`),
     hints: hintLadder(
       'A stationary point is where the gradient dy/dx = 0.',
-      `Differentiate: dy/dx = ${fmtPoly([[2 * a, 1], [b, 0]]).caret}. Set it to 0.`,
+      `Differentiate: dy/dx = ${fmtPoly([[2 * a, 1], [b, 0]]).uni}. Set it to 0.`,
       `Solve for x, then substitute back to get y.`,
     ),
     solution: {
       steps: [
-        { text: 'Differentiate.', expr: `dy/dx = ${fmtPoly([[2 * a, 1], [b, 0]]).caret}` },
+        { text: 'Differentiate.', expr: `dy/dx = ${fmtPoly([[2 * a, 1], [b, 0]]).uni}` },
         { text: 'Set dy/dx = 0 and solve.', expr: `x = ${x0}` },
         { text: 'Substitute back for y.', expr: `y = ${y0}` },
         { text: `Since a ${a > 0 ? '> 0' : '< 0'}, it is a ${nature}.`, expr: `${ans}  (${nature})` },
