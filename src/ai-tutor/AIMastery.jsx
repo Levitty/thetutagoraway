@@ -191,6 +191,12 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
   const [attemptCount, setAttemptCount] = useState(0);
   const [hintLevel, setHintLevel] = useState(0); // 0=none, 1=hint, 2=partial steps, 3=full reveal
   const [wrongInfo, setWrongInfo] = useState(null); // { answer, diagnosis } | { needNumber:true } — feedback on the last wrong try
+  // "GPS brain" (Skycak): reaching for help before trying means you never build
+  // the internal map. The worked example is the map — shown first. During
+  // practice, help is roadside assistance: it appears once the child has sat
+  // with the problem (or after any attempt), never as a reflex tap.
+  const HINT_UNLOCK_MS = 20000;
+  const [hintUnlocked, setHintUnlocked] = useState(false);
 
   // Faded worked examples (Renkl completion problems). `scaffoldLevel` is the
   // live support level (0 guided … 3 solo); the ref mirrors it for the
@@ -215,6 +221,12 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
   // Per-problem timer for telemetry (reset whenever the problem changes).
   const problemStartRef = useRef(Date.now());
   useEffect(() => { problemStartRef.current = Date.now(); }, [problem]);
+  useEffect(() => {
+    setHintUnlocked(false);
+    if (!problem) return undefined;
+    const t = setTimeout(() => setHintUnlocked(true), HINT_UNLOCK_MS);
+    return () => clearTimeout(t);
+  }, [problem]);
 
   // Join-a-class affordance (student enrolls with a teacher's code).
   const [showJoin, setShowJoin] = useState(false);
@@ -1388,9 +1400,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                 )}
                 <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
 
-                {/* Gentle 'I'm not sure' — an out that isn't guessing (surfaces a hint) */}
-                {!feedback && hintLevel < 1 && attemptCount === 0 && (
-                  <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm not sure — show me a hint</button>
+                {/* Roadside assistance, not GPS: only offered once the child has
+                    actually sat with the problem — never as a reflex tap. */}
+                {!feedback && hintLevel < 1 && attemptCount === 0 && hintUnlocked && (
+                  <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm stuck — give me a nudge</button>
                 )}
 
                 {/* "type a number" nudge — doesn't cost an attempt */}
@@ -1534,42 +1547,54 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
     const secs = reviewTimer % 60;
 
     return (
-      <div className="min-h-screen bg-slate-900 text-white">
-        {/* Light bridging header */}
-        <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
+      <div className="min-h-screen bg-[#eef0f2] text-slate-900">
+        <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
           <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
-            <button onClick={() => { setReviewTimerActive(false); goHome(); }} className="text-slate-400 hover:text-slate-600 flex items-center gap-1"><Icon name="back" className="w-4 h-4" /> Exit</button>
-            <div className="flex items-center gap-2 text-slate-500">
+            <button onClick={() => { setReviewTimerActive(false); goHome(); }} className="text-slate-400 hover:text-slate-700 flex items-center gap-1 text-sm"><Icon name="back" className="w-4 h-4" /> Exit</button>
+            <div className="flex items-center gap-2 text-slate-400">
               <Icon name="clock" className="w-4 h-4" />
-              <span className="font-mono text-sm">{mins}:{secs.toString().padStart(2, '0')}</span>
+              <span className="font-mono text-sm tabular-nums">{mins}:{secs.toString().padStart(2, '0')}</span>
             </div>
-            <div className="text-blue-600 font-bold text-sm">{reviewIndex + 1}/{reviewProblems.length}</div>
+            <div className="text-slate-500 font-semibold text-sm tabular-nums">{reviewIndex + 1}/{reviewProblems.length}</div>
           </div>
-          <div className="h-1 bg-slate-100"><div className="h-full bg-blue-500 transition-all" style={{ width: `${pct}%` }} /></div>
+          <div className="h-1.5 bg-slate-100"><div className="h-full bg-[#6d6fcb] transition-all rounded-r-full" style={{ width: `${pct}%` }} /></div>
         </div>
-        <div className="bg-gradient-to-b from-slate-100 to-slate-900 h-6" />
-        <div className="px-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-xs text-blue-400 mb-4 text-center font-medium">TIMED REVIEW — {skill?.name}</div>
-
-          <div className="bg-slate-800 rounded-2xl p-6 mb-4">
-            <div className="text-lg mb-6">{problem?.question}</div>
-            {problem?.visual && (
-              <div className="mb-4">
-                <InteractiveVisual
-                  visualType={problem.visual.type}
-                  visualData={problem.visual.data}
-                  onAnswer={setVisualAnswer}
-                  disabled={!!feedback}
-                />
+        <div className="px-4 pt-6 pb-16">
+          <div className="max-w-2xl mx-auto">
+            <div className="flex items-start gap-3 mb-4">
+              <HorebBot size={40} className="shrink-0" />
+              <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">
+                Memory check — {skill?.name}. Straight from memory, no notes.
               </div>
-            )}
-            <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-slate-700 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50" autoFocus placeholder={problem?.visual ? 'Use the diagram above, or type your answer…' : 'Your answer...'} />
-          </div>
+            </div>
 
-          {feedback && <div className={`rounded-xl p-4 mb-4 ${feedback === 'correct' ? 'bg-emerald-900/50 border border-emerald-500' : 'bg-red-900/50 border border-red-500'}`}>{feedback === 'correct' ? <span className="text-emerald-400">✓ Correct!</span> : <span className="text-red-400">✗ Answer: {problem?.answer}</span>}</div>}
-          {!feedback && <button onClick={handleReviewAnswer} disabled={!answer.trim() && !(problem?.visual && visualAnswer != null)} className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 disabled:text-slate-500 rounded-xl py-4 font-semibold transition-colors">Check</button>}
-        </div>
+            <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
+              <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">{problem?.question}</div>
+              {problem?.visual && (
+                <div className="mb-4">
+                  <InteractiveVisual
+                    visualType={problem.visual.type}
+                    visualData={problem.visual.data}
+                    onAnswer={setVisualAnswer}
+                    disabled={!!feedback}
+                  />
+                </div>
+              )}
+              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+            </div>
+
+            {feedback && (
+              feedback === 'correct'
+                ? <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]"><span className="text-[#4f7233] font-bold">✓ Still got it!</span></div>
+                : (
+                  <div className="rounded-2xl p-4 mb-4 bg-[#fdf2ef] border border-[#f2cdc2]">
+                    <span className="text-[#c0663f] font-bold">Not this time — it&rsquo;s <span className="font-mono text-slate-900">{problem?.answer}</span></span>
+                    <p className="text-sm text-slate-600 mt-1">That&rsquo;s exactly what a review is for — I&rsquo;ll bring this one back sooner.</p>
+                  </div>
+                )
+            )}
+            {!feedback && <button onClick={handleReviewAnswer} disabled={!answer.trim() && !(problem?.visual && visualAnswer != null)} className="w-full bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 text-slate-900 rounded-2xl py-4 font-bold transition-colors">Check</button>}
+          </div>
         </div>
       </div>
     );
