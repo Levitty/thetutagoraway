@@ -1247,7 +1247,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
 
     const learnerFirst = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
     return (
-      <div className="min-h-screen bg-[#eef0f2] text-slate-900" onClick={() => activeTooltip && setActiveTooltip(null)}>
+      <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell" onClick={() => activeTooltip && setActiveTooltip(null)}>
         {/* Header */}
         <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
@@ -1264,7 +1264,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
           <div className="h-1 bg-slate-100"><div className="h-full bg-amber-400 transition-all" style={{ width: `${pct}%` }} /></div>
         </div>
 
-        <div className="px-4 sm:px-6 pt-6 pb-20">
+        <div className="px-4 sm:px-6 pt-6 pb-20 app-scroll">
         <div className="max-w-2xl mx-auto">
 
           {session.streak >= 3 && <div className="mb-4 text-center text-amber-600 text-sm font-semibold">{session.streak} in a row — keep it going!</div>}
@@ -1653,7 +1653,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
   const brainStrandLevel = (name) => brainProfile?.strands?.find(b => b.strand === name) || null;
 
   return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900 lg:flex">
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900 lg:flex app-shell">
       <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
 
       {/* ===== SIDEBAR (desktop) ===== */}
@@ -1702,7 +1702,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
       </div>
 
       {/* ===== MAIN ===== */}
-      <main className="flex-1 min-w-0">
+      <main className="flex-1 min-w-0 app-scroll">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-28 lg:pb-14">
 
         {/* ========== OVERVIEW (HOME) TAB ========== */}

@@ -28,6 +28,15 @@ body {
    its own background fills the notch. The web build is untouched (inset = 0).
    Any screen that has no sticky header opts in with .native-safe-top. */
 body.native-app { background: #eef0f2; overscroll-behavior-y: none; }
+/* Phone app shell: the document does not scroll — the header is a fixed flex
+   row and the content below it owns the only scroll container. Guarded to the
+   phone layout so the desktop sidebar (lg:flex) is untouched. */
+@media (max-width: 1023px) {
+  body.native-app .app-shell { height: 100dvh; overflow: hidden; display: flex; flex-direction: column; }
+  body.native-app .app-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto;
+    -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+}
+
 /* The status-bar strip itself: painted white so it meets the sticky header
    above every screen, instead of leaving a band of ground colour. */
 body.native-app::before {
