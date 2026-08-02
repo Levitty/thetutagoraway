@@ -87,6 +87,10 @@ const reconcileProgress = (a, b) => {
 // `key` is the profile key (namespaces localStorage + the cloud row per learner
 // and subject). `owner` is the real auth uid that OWNS the row (for the FK + RLS);
 // it defaults to `key` for the account-holder case where the two are identical.
+// Synchronous local read — lets the UI paint the cached copy instantly while
+// the cloud copy reconciles in the background (see AIMastery load effect).
+export const loadLocalProgress = (key) => loadLocal(key);
+
 export const loadProgress = async (key, owner = key) => {
   const userId = key;
   const local = loadLocal(userId);

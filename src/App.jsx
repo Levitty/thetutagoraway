@@ -14,7 +14,7 @@ import ClubsPage from './ClubsPage.jsx';
 import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
-import { initPush, clearPush } from './push.js';
+import { initPush, requestPush, clearPush } from './push.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 
@@ -5468,6 +5468,10 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
   const handlePaymentSuccess = () => {
     setShowPayment(false);
     setPendingBooking(null);
+    // The lesson is booked — now the honest moment to ask about notifications:
+    // "we'll tell you the moment it starts." Deferred so the system prompt
+    // doesn't fight the closing payment sheet. No-op on web / if already asked.
+    setTimeout(() => { requestPush(user?.id); }, 700);
     // Navigate to student dashboard after successful payment
     if (onNavigate) {
       onNavigate('dashboard');

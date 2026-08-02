@@ -13,7 +13,7 @@ import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { ColumnAddition, parseAddProblem } from './ColumnAddition.jsx';
 import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
-import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
+import { defaultProgress, loadProgress, loadLocalProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
 import { getBrainProfile, getBrainSession } from './engineClient.js';
@@ -319,11 +319,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
     if (!subjectId) { setLoading(false); setView('subject-picker'); return; }
     if (!userId) return; // transient auth gap — don't reload with no user / clobber state
     let cancelled = false;
-    setLoading(true);
-    (async () => {
-      const storageKey = keyFor(subjectId);
-      const p = await loadProgress(storageKey, userId);
-      if (cancelled) return;
+    const storageKey = keyFor(subjectId);
+
+    // Apply a loaded progress object: resume an in-progress diagnostic, or pick
+    // the entry view. Shared by the instant local paint and the cloud path.
+    const apply = (p) => {
       setProgress(p);
 
       // Resume an unfinished diagnostic exactly where the student left off — the
@@ -353,6 +353,30 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
           ? prev
           : (p.diagnosed ? 'home' : 'welcome'));
       setLoading(false);
+    };
+
+    // Fast path: a returning learner already has a local copy. Paint it at once
+    // so the screen never waits on the network, then reconcile the cloud copy in
+    // the background and adopt it only if the learner is still on the landing
+    // view (never yank them out of an activity they've since started).
+    const local = loadLocalProgress(storageKey);
+    if (local) {
+      apply(local);
+      loadProgress(storageKey, userId).then(merged => {
+        if (cancelled || !merged || merged === local) return;
+        setProgress(merged);
+        setView(prev => prev === 'welcome' && merged.diagnosed ? 'home'
+                       : prev === 'home' && !merged.diagnosed ? 'welcome' : prev);
+      }).catch(() => { /* offline — local stands */ });
+      return () => { cancelled = true; };
+    }
+
+    // First run on this device: there is nothing to show but the loader.
+    setLoading(true);
+    (async () => {
+      const p = await loadProgress(storageKey, userId);
+      if (cancelled) return;
+      apply(p);
     })();
     return () => { cancelled = true; };
   }, [userId, subjectId, learnerBase, keyFor]);

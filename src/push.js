@@ -20,25 +20,18 @@ const isNative = () =>
 
 let registered = false;
 
-/** Ask for permission, register, and persist the token for this user. */
-export async function initPush(userId) {
-  if (!isNative() || !userId || registered) return;
-  let PushNotifications;
+async function loadPlugin() {
   try {
-    ({ PushNotifications } = await import('@capacitor/push-notifications'));
+    const mod = await import('@capacitor/push-notifications');
+    return mod.PushNotifications;
   } catch {
-    return; // plugin not installed in this build
+    return null; // plugin not installed in this build
   }
+}
 
-  try {
-    let perm = await PushNotifications.checkPermissions();
-    if (perm.receive === 'prompt' || perm.receive === 'prompt-with-rationale') {
-      perm = await PushNotifications.requestPermissions();
-    }
-    if (perm.receive !== 'granted') return; // the learner said no — respect it
-
-    // Token arrives asynchronously after register().
-    await PushNotifications.removeAllListeners();
+async function wireAndRegister(PushNotifications, userId) {
+  // Token arrives asynchronously after register().
+  await PushNotifications.removeAllListeners();
 
     PushNotifications.addListener('registration', async ({ value }) => {
       if (!value) return;
@@ -63,9 +56,45 @@ export async function initPush(userId) {
       }
     });
 
-    await PushNotifications.register();
-    registered = true;
+  await PushNotifications.register();
+  registered = true;
+}
+
+/**
+ * On launch: register silently ONLY if the learner has already granted push.
+ * Never prompts — a cold "Allow notifications?" on the home screen means a
+ * confused Don't Allow (permanent on iOS) before push even matters.
+ */
+export async function initPush(userId) {
+  if (!isNative() || !userId || registered) return;
+  const PushNotifications = await loadPlugin();
+  if (!PushNotifications) return;
+  try {
+    const perm = await PushNotifications.checkPermissions();
+    if (perm.receive === 'granted') await wireAndRegister(PushNotifications, userId);
   } catch { /* push is an enhancement, never a dependency */ }
+}
+
+/**
+ * Ask for permission at a moment the value is obvious — e.g. just after
+ * booking a lesson ("we'll tell you the moment it starts"). Safe to call more
+ * than once; iOS only shows the system prompt the first time.
+ */
+export async function requestPush(userId) {
+  if (!isNative() || !userId) return false;
+  const PushNotifications = await loadPlugin();
+  if (!PushNotifications) return false;
+  try {
+    let perm = await PushNotifications.checkPermissions();
+    if (perm.receive === 'prompt' || perm.receive === 'prompt-with-rationale') {
+      perm = await PushNotifications.requestPermissions();
+    }
+    if (perm.receive !== 'granted') return false;
+    if (!registered) await wireAndRegister(PushNotifications, userId);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 /** Forget this device on sign-out so a shared phone doesn't leak lessons. */
@@ -79,4 +108,4 @@ export async function clearPush(userId) {
   } catch { /* ignore */ }
 }
 
-export default { initPush, clearPush };
+export default { initPush, requestPush, clearPush };
