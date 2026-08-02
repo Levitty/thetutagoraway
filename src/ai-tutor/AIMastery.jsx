@@ -10,6 +10,7 @@ import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, flu
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { HorebBot } from './HorebBot.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
+import { ColumnAddition, parseAddProblem } from './ColumnAddition.jsx';
 import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
@@ -398,7 +399,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
         getBrainSession(progress, subjectId, 8),
       ]);
       if (cancelled) return;
-      setBrainProfile(profile);
+      if (profile) setBrainProfile(profile);
       if (recs) {
         // Map brain recommendations into the path-item shape the UI renders.
         const kindToType = { remediate: 'gap', review: 'review', learn: 'learn', stretch: 'stretch' };
@@ -1298,7 +1299,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                       <TermTooltip text={we.problem} definitions={we.definitions} />
                     </div>
                     {(() => { const am = parseAreaProblem(we.problem); return am ? <AreaModel a={am.a} b={am.b} /> : null; })()}
-                    {!parseAreaProblem(we.problem) && <div className="space-y-3">
+                    {(() => { const ad = !parseAreaProblem(we.problem) && parseAddProblem(we.problem); return ad ? <ColumnAddition a={ad.a} b={ad.b} /> : null; })()}
+                    {!parseAreaProblem(we.problem) && !parseAddProblem(we.problem) && <div className="space-y-3">
                       {we.steps.map((step, i) => (
                         <div key={i}>
                           <div className="flex gap-3 items-start">
@@ -1724,10 +1726,21 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
             const got = new Set(progress.achievements || []);
             return ACHIEVEMENTS.filter(a => got.has(a.id)).slice(-3).reverse();
           })();
+          // The next step must not move under the child's feet: keep the skill
+          // we last pointed at until it is mastered (or gone from the path).
+          const pinnedId = progress.focusSkillId;
+          const pinned = pinnedId && !progress.skills[pinnedId]?.mastered
+            ? (path.find(p => p.id === pinnedId) || (SKILLS[pinnedId] ? { id: pinnedId, name: SKILLS[pinnedId].name } : null))
+            : null;
+          const nextPick = pinned || nextItem;
+          if (nextPick && nextPick.id !== pinnedId) {
+            // remember it for next time (write-behind; harmless if it repeats)
+            setTimeout(() => setProgress(pr => pr.focusSkillId === nextPick.id ? pr : { ...pr, focusSkillId: nextPick.id }), 0);
+          }
           const cta = dueReviews > 0
             ? { label: 'Start your review', sub: `${dueReviews} skill${dueReviews === 1 ? '' : 's'} due — keep them from fading`, icon: 'refresh', onClick: startReview }
-            : nextItem
-            ? { label: 'Continue learning', sub: nextItem.name, icon: 'play', onClick: () => startLesson(nextItem.id) }
+            : nextPick
+            ? { label: 'Continue learning', sub: nextPick.name, icon: 'play', onClick: () => startLesson(nextPick.id) }
             : { label: 'Take the diagnostic', sub: 'Find your level and get your plan', icon: 'target', onClick: startDiagnostic };
           const confidencePct = brainProfile ? Math.round((brainProfile.confidence || 0) * 100) : null;
           // Daily-goal ring — rendered near the top on mobile and in the right rail on desktop

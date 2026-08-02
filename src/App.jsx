@@ -4042,15 +4042,16 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
   const tidyName = (n) => !n ? '' : (n === n.toUpperCase()
     ? n.toLowerCase().replace(/\b[a-z]/g, ch => ch.toUpperCase())
     : n);
-  // Join opens 10 minutes before the start and stays open for 2 hours.
+  // A confirmed lesson can always be entered: a tutor may start early, and an
+  // empty room is harmless — being locked out of a paid lesson is not.
   const joinState = (b) => {
-    if (!b?.lesson_date || !b?.start_time) return { open: false, label: 'Lesson details' };
+    if (b?.status !== 'confirmed') return { open: false, note: 'Waiting for the tutor to confirm this booking.' };
+    if (!b?.lesson_date || !b?.start_time) return { open: true, label: 'Join lesson' };
     const start = new Date(`${b.lesson_date}T${b.start_time}`);
-    if (isNaN(start)) return { open: false, label: 'Lesson details' };
-    const now = Date.now(), mins = (start - now) / 60000;
-    if (mins > 10) return { open: false, label: 'Lesson details' };
-    if (mins < -120) return { open: false, label: 'Lesson details' };
-    return { open: true, label: mins > 0 ? 'Join now' : 'Join lesson' };
+    if (isNaN(start)) return { open: true, label: 'Join lesson' };
+    const mins = (start - Date.now()) / 60000;
+    if (mins > 45) return { open: true, label: 'Enter the room early', soon: false };
+    return { open: true, label: mins > 2 ? 'Join now' : 'Join lesson', soon: true };
   };
   const prettyDate = (d) => {
     if (!d) return '';
@@ -4091,14 +4092,15 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
             </div>
             {(() => {
               const j = joinState(next);
-              return j.open
-                ? <button onClick={() => onStartLesson(next)} className="w-full mt-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl py-3 font-bold text-[15px] transition-colors">{j.label}</button>
-                : (
-                  <div className="mt-3 flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5">
-                    <svg viewBox="0 0 24 24" className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-                    <span className="text-[13.5px] text-slate-500">The room opens 10 minutes before your lesson.</span>
-                  </div>
-                );
+              if (!j.open) return (
+                <div className="mt-3 flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5">
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                  <span className="text-[13.5px] text-slate-500">{j.note}</span>
+                </div>
+              );
+              return (
+                <button onClick={() => onStartLesson(next)} className={`w-full mt-3 rounded-xl py-3 font-bold text-[15px] transition-colors ${j.soon ? 'bg-[#5a7a3a] hover:bg-[#4f6a30] text-white' : 'bg-slate-900 hover:bg-slate-800 text-white'}`}>{j.label}</button>
+              );
             })()}
           </div>
         ) : (
@@ -4160,13 +4162,7 @@ const NativeMyLessons = ({ bookings, onBack, onStartLesson, onNavigate }) => {
     if (days === 0) return 'Today'; if (days === 1) return 'Tomorrow'; if (days === -1) return 'Yesterday';
     return dt.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' });
   };
-  const joinOpen = (b) => {
-    if (!b?.lesson_date || !b?.start_time) return false;
-    const start = new Date(`${b.lesson_date}T${b.start_time}`);
-    if (isNaN(start)) return false;
-    const mins = (start - Date.now()) / 60000;
-    return mins <= 10 && mins > -120;
-  };
+  const joinOpen = (b) => b?.status === 'confirmed';
   const all = bookings || [];
   const upcoming = all.filter(b => b.status === 'confirmed' || b.status === 'pending')
     .sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`));
@@ -4191,8 +4187,8 @@ const NativeMyLessons = ({ bookings, onBack, onStartLesson, onNavigate }) => {
         )}
       </div>
       {!isPast && (joinOpen(b)
-        ? <button onClick={() => onStartLesson(b)} className="w-full mt-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Join now</button>
-        : <div className="mt-3 text-[13px] text-slate-400">The room opens 10 minutes before the lesson.</div>)}
+        ? <button onClick={() => onStartLesson(b)} className="w-full mt-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Join lesson</button>
+        : <div className="mt-3 text-[13px] text-slate-400">Waiting for the tutor to confirm this booking.</div>)}
     </div>
   );
 
