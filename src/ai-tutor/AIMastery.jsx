@@ -333,6 +333,29 @@ export function AIMastery({ onBack, userId, studentName }) {
         } catch { /* corrupt cursor — fall through to the normal entry view */ }
       }
 
+      // Resume an in-progress lesson at the SAME question ("when I come back
+      // the question is different"). The cursor is cleared on deliberate exit,
+      // so this only fires when the app was closed mid-question. startLesson
+      // rebuilds the full lesson state; then the saved problem replaces the
+      // freshly generated one (React batches, so no flash of the wrong one).
+      const lip = p.lessonInProgress;
+      if (lip?.problem && lip.skillId && ctx?.skills?.[lip.skillId]
+          && lip.subjectId === subjectId && Date.now() - (lip.at || 0) < 86400000) {
+        try {
+          startLesson(lip.skillId);
+          // startLesson read the stale (pre-load) progress for the support
+          // level — recompute it from the progress we just loaded.
+          const sl = initialSupportLevel(p.skills[lip.skillId]);
+          scaffoldRef.current = sl;
+          setScaffoldLevel(sl);
+          setShowWorkedExample(false);
+          setProblem(lip.problem);
+          setInterleave(lip.interleave || null);
+          setLoading(false);
+          return;
+        } catch { /* corrupt cursor — fall through to the normal entry view */ }
+      }
+
       // Only (re)set the entry view on a genuine load. If this effect re-fires
       // while the student is mid-activity (e.g. an auth token refresh briefly
       // changes userId), NEVER yank them out of an in-progress diagnostic,
@@ -676,6 +699,20 @@ export function AIMastery({ onBack, userId, studentName }) {
     setView('lesson');
   };
 
+  // Snapshot the live lesson question so closing the app resumes the SAME
+  // problem (parallels the diagnostic cursor). Cleared on exit/completion, so
+  // it only survives when the app was closed mid-question.
+  useEffect(() => {
+    if (view === 'lesson' && activeSkill && problem && !problem.placeholder && !showWorkedExample) {
+      setProgress(p => ({ ...p, lessonInProgress: {
+        subjectId, skillId: activeSkill, problem,
+        interleave: interleave ? { skillId: interleave.skillId, name: interleave.name } : null,
+        at: Date.now(),
+      } }));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [view, problem, activeSkill, showWorkedExample]);
+
   // The worked example must be STABLE across re-renders — regenerating it on
   // every state change silently swapped its numbers mid-study.
   const workedEx = useMemo(
@@ -1008,7 +1045,11 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // ==================== NAVIGATION ====================
 
-  const goHome = () => { setView('home'); setActiveSkill(null); setCelebrations([]); setRemediationSkills(null); };
+  const goHome = () => {
+    setView('home'); setActiveSkill(null); setCelebrations([]); setRemediationSkills(null);
+    // Leaving on purpose — drop the resume cursor so next entry starts clean.
+    setProgress(p => (p.lessonInProgress ? { ...p, lessonInProgress: null } : p));
+  };
 
   // Dismiss the front celebration; mastery returns the learner to the dashboard.
   const dismissCelebration = () => {

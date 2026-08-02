@@ -36,13 +36,30 @@ const resolveCtx = (ctx) => {
 
 // ==================== PREREQUISITE CHECKING ====================
 
+// Assumed foundation: a teacher doesn't quiz a Grade 8 student on counting.
+// A prerequisite more than 3 grades below the learner's level counts as met
+// UNLESS the student has actually shown struggle on it (tried and not
+// mastered). Without this, a fresh Grade 8 account's only "learnable" skills
+// are the Grade 1 roots, and the path marches them up from pre-number
+// activities one quick-check at a time.
+const ASSUMED_FOUNDATION_GAP = 3;
+const learnerLevel = (progress) =>
+  progress?.placementGrade ?? progress?.declaredGrade ?? null;
+const assumedKnown = (skill, progress) => {
+  const lvl = learnerLevel(progress);
+  if (lvl == null || !Number.isFinite(skill?.grade)) return false;
+  if (skill.grade > lvl - ASSUMED_FOUNDATION_GAP) return false;
+  const sp = progress.skills[skill.id];
+  return !(sp?.attempts > 0 && !sp.mastered);   // struggle evidence cancels the assumption
+};
+
 export const prereqsMet = (skillId, progress, ctx) => {
   const c = resolveCtx(ctx);
   const skill = c.skills[skillId];
   if (!skill || skill.prerequisites.length === 0) return true;
   return skill.prerequisites.every(pid => {
     const sp = progress.skills[pid];
-    return sp?.mastered || (sp?.passed && sp?.attempts >= 3);
+    return sp?.mastered || (sp?.passed && sp?.attempts >= 3) || assumedKnown(c.skills[pid], progress);
   });
 };
 
@@ -166,7 +183,16 @@ export const getNextToLearn = (progress, ctx) => {
   return c.skillList
     .filter(s => {
       const sp = progress.skills[s.id];
-      return !sp?.mastered && prereqsMet(s.id, progress, ctx);
+      // Assumed-known foundations never appear as lessons to take — a Grade 8
+      // student is not sent to "Pre-number Activities". (Still openable from
+      // the library, and still surfaced by findGaps on real struggle.)
+      if (sp?.mastered || assumedKnown(s, progress) || !prereqsMet(s.id, progress, ctx)) return false;
+      // And the mirror guard: prerequisite-free skills from far ABOVE the
+      // learner's level (G5 division is a graph root) must not outrank a
+      // Grade 1 learner's counting. Two grades of stretch is plenty.
+      const lvl = learnerLevel(progress);
+      if (lvl != null && Number.isFinite(s.grade) && s.grade > lvl + 2) return false;
+      return true;
     })
     .map(s => {
       let dependents = 0;
@@ -174,11 +200,14 @@ export const getNextToLearn = (progress, ctx) => {
       const sp = progress.skills[s.id];
       const inProgress = sp?.attempts > 0 ? 8 : 0;
       const criticalBonus = s.critical ? 12 : 0;
-      const gradeProximity = Math.max(0, 8 - Math.abs(gradeOf(s, c.curriculum) - getEstimatedGradeLevel(progress, ctx)));
+      // Grade proximity must dominate raw dependent-count, or graph roots from
+      // far above/below the learner (G5 division has dozens of dependents)
+      // outrank the skills at their actual level.
+      const gradeProximity = Math.max(0, 8 - 2 * Math.abs(gradeOf(s, c.curriculum) - getEstimatedGradeLevel(progress, ctx))) * 2;
 
       return {
         ...s,
-        priority: criticalBonus + dependents * 2 + inProgress + gradeProximity,
+        priority: criticalBonus + Math.min(dependents, 5) * 2 + inProgress + gradeProximity,
         type: 'learn',
       };
     })
