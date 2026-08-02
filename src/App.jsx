@@ -447,9 +447,13 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
   );
 };
 
+// A loading indicator must never itself wait on the network: the old version
+// fetched a Lottie from a CDN, so on a phone the "loading" state was blank
+// until a round-trip finished. Pure CSS, instant, on the app's own ground.
 const LoadingSpinner = () => (
-  <div className="flex flex-col items-center justify-center p-8">
-    <Lottie src={ANIMATIONS.books} width={100} height={100} />
+  <div className="flex flex-col items-center justify-center p-10 gap-3">
+    <div className="w-8 h-8 rounded-full border-[3px] border-slate-200 border-t-amber-400 animate-spin" />
+    <span className="text-sm text-slate-400 font-medium">Loading…</span>
   </div>
 );
 

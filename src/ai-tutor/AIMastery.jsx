@@ -1016,35 +1016,43 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
     return bandLabel(curriculum, grade);
   };
 
-  if (loading) return <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"><div className="text-xl">Loading...</div></div>;
+  if (loading) return (
+    <div className="min-h-screen bg-[#eef0f2] flex flex-col items-center justify-center gap-4">
+      <HorebBot size={56} />
+      <div className="h-1.5 w-32 bg-slate-200 rounded-full overflow-hidden">
+        <div className="h-full w-1/3 bg-amber-400 rounded-full animate-pulse" />
+      </div>
+    </div>
+  );
 
   // ==================== RENDER: SUBJECT PICKER ====================
 
   if (view === 'subject-picker' || !subjectId) return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
-        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-3">
-          {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600"><Icon name="back" /></button>}
-          <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">T</div>
-          <h1 className="text-base font-bold text-slate-900">AI Tutor</h1>
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
+      <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
+        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-2.5">
+          {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-700 mr-1"><Icon name="back" /></button>}
+          <HorebBot size={28} />
+          <h1 className="text-base font-extrabold tracking-tight">HOREB</h1>
         </div>
       </div>
-      <div className="bg-gradient-to-b from-slate-100 to-slate-900 pt-8 pb-4" />
-      <div className="max-w-lg mx-auto px-4 -mt-4">
-        <h2 className="text-2xl font-bold text-center mb-2">Choose a Subject</h2>
-        <p className="text-slate-400 text-center text-sm mb-6">Adaptive learning with spaced repetition for each</p>
-        <div className="space-y-3">
-          {SUBJECT_LIST.map(s => (
-            <button key={s.id} onClick={() => setSubjectId(s.id)} className="w-full bg-slate-800 hover:bg-slate-700 rounded-2xl p-5 flex items-center gap-4 transition-colors text-left">
-              <div className="text-4xl">{s.emoji}</div>
-              <div className="flex-1">
-                <div className="font-bold text-lg">{s.name}</div>
-                <div className="text-slate-400 text-sm">{s.description}</div>
-                <div className="text-xs text-slate-500 mt-1">{s.skillCount} skills</div>
-              </div>
-              <Icon name="arrow" className="w-5 h-5 text-slate-500" />
-            </button>
-          ))}
+      <div className="app-scroll">
+        <div className="max-w-lg mx-auto px-4 pt-8 pb-16">
+          <h2 className="text-[26px] font-extrabold tracking-tight text-center mb-1">What shall we work on?</h2>
+          <p className="text-slate-500 text-center text-sm mb-6">Each subject adapts to you and brings skills back before you forget them.</p>
+          <div className="space-y-3">
+            {SUBJECT_LIST.map(s => (
+              <button key={s.id} onClick={() => setSubjectId(s.id)} className="w-full bg-white border border-slate-200 shadow-sm hover:border-slate-300 rounded-2xl p-5 flex items-center gap-4 transition-colors text-left">
+                <div className="text-4xl">{s.emoji}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-bold text-[17px] text-slate-900">{s.name}</div>
+                  <div className="text-slate-500 text-sm">{s.description}</div>
+                  <div className="text-xs text-slate-400 mt-1">{s.skillCount} skills</div>
+                </div>
+                <Icon name="arrow" className="w-5 h-5 text-slate-300 shrink-0" />
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -1141,7 +1149,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
 
     return (
       <div className="min-h-screen bg-[#eef0f2] text-slate-900">
-        <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
+        <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
           <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <HorebBot size={28} />
@@ -1249,7 +1257,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
     return (
       <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell" onClick={() => activeTooltip && setActiveTooltip(null)}>
         {/* Header */}
-        <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
+        <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
             <button onClick={goHome} className="text-slate-400 hover:text-slate-700 flex items-center gap-1 text-sm"><Icon name="back" className="w-4 h-4" /> Exit</button>
             <div className="text-center flex-1 min-w-0">
@@ -1548,7 +1556,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
 
     return (
       <div className="min-h-screen bg-[#eef0f2] text-slate-900">
-        <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
+        <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
           <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
             <button onClick={() => { setReviewTimerActive(false); goHome(); }} className="text-slate-400 hover:text-slate-700 flex items-center gap-1 text-sm"><Icon name="back" className="w-4 h-4" /> Exit</button>
             <div className="flex items-center gap-2 text-slate-400">
@@ -1608,15 +1616,15 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
     const secs = reviewTimer % 60;
 
     return (
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center p-4">
+      <div className="min-h-screen bg-[#eef0f2] text-slate-900 flex items-center justify-center p-4">
         <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
         <div className="max-w-md text-center">
-          <Icon name="check" className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold mb-2">Review Complete!</h2>
-          <div className="bg-slate-800 rounded-xl p-4 mb-6 space-y-3">
-            <div className="flex justify-between"><span className="text-slate-400">Accuracy</span><span className={`font-bold ${accuracy >= 80 ? 'text-emerald-400' : accuracy >= 60 ? 'text-amber-400' : 'text-red-400'}`}>{accuracy}%</span></div>
-            <div className="flex justify-between"><span className="text-slate-400">Questions</span><span className="font-bold">{session.correct}/{session.total}</span></div>
-            <div className="flex justify-between"><span className="text-slate-400">Time</span><span className="font-bold">{mins}m {secs}s</span></div>
+          <Icon name="check" className="w-16 h-16 text-[#5a7a3a] mx-auto mb-4" />
+          <h2 className="text-2xl font-extrabold tracking-tight mb-2">Review complete</h2>
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-6 space-y-3">
+            <div className="flex justify-between"><span className="text-slate-500">Accuracy</span><span className={`font-bold ${accuracy >= 80 ? 'text-[#5a7a3a]' : accuracy >= 60 ? 'text-amber-600' : 'text-[#c0663f]'}`}>{accuracy}%</span></div>
+            <div className="flex justify-between"><span className="text-slate-500">Questions</span><span className="font-bold text-slate-900">{session.correct}/{session.total}</span></div>
+            <div className="flex justify-between"><span className="text-slate-500">Time</span><span className="font-bold text-slate-900">{mins}m {secs}s</span></div>
           </div>
           <button onClick={goHome} className="w-full bg-emerald-600 hover:bg-emerald-500 rounded-xl py-4 font-semibold transition-colors">Continue</button>
         </div>
@@ -1689,7 +1697,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
       </aside>
 
       {/* ===== MOBILE TOP BAR ===== */}
-      <div className="lg:hidden sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200 flex items-center justify-between px-4 min-h-14 py-2">
+      <div className="lg:hidden sticky top-0 z-40 shrink-0 bg-white/90 backdrop-blur border-b border-slate-200 flex items-center justify-between px-4 min-h-14 py-2">
         <div className="flex items-center gap-2">
           {onBack && <button onClick={onBack} className="text-slate-400 mr-1"><Icon name="back" className="w-5 h-5" /></button>}
           <HorebBot size={28} /><b className="text-[17px] font-extrabold tracking-tight">HOREB</b>
