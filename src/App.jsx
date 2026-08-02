@@ -4067,7 +4067,7 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
 
   return (
     <div className="min-h-screen bg-[#eef0f2] text-slate-900">
-      <div className="max-w-md mx-auto px-4 pt-12 pb-28">
+      <div className="max-w-md mx-auto px-4 pt-12 pb-28 native-safe-top">
         <div className="flex items-center gap-3 mb-6">
           <Avatar src={profile?.avatar_url} name={profile?.full_name} size={52} />
           <div className="min-w-0">

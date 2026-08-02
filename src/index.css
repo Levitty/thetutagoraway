@@ -21,8 +21,18 @@ body {
   scrollbar-width: none;
 }
 
-/* Native app: keep content clear of the status bar / Dynamic Island. The web
-   build is unaffected (the inset is 0 in a browser). Applied to the app shell
-   surfaces that sit at the very top of the screen. */
+/* Native app safe areas. Padding the BODY left the webview's own background
+   showing through behind the status bar — and iOS rubber-band scrolling
+   exposed the same colour at both ends of every screen. Instead: paint the
+   body with the app's ground colour, and let each sticky header pad itself so
+   its own background fills the notch. The web build is untouched (inset = 0).
+   Any screen that has no sticky header opts in with .native-safe-top. */
+body.native-app { background: #eef0f2; overscroll-behavior-y: none; }
+/* The status-bar strip itself: painted white so it meets the sticky header
+   above every screen, instead of leaving a band of ground colour. */
+body.native-app::before {
+  content: ''; position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+  height: env(safe-area-inset-top); background: #ffffff;
+}
+body.native-app .sticky.top-0 { padding-top: env(safe-area-inset-top); }
 .native-safe-top { padding-top: env(safe-area-inset-top); }
-body.native-app { padding-top: env(safe-area-inset-top); }

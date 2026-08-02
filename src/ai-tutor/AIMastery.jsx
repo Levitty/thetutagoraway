@@ -1689,7 +1689,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
       </aside>
 
       {/* ===== MOBILE TOP BAR ===== */}
-      <div className="lg:hidden sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200 flex items-center justify-between px-4 h-14">
+      <div className="lg:hidden sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200 flex items-center justify-between px-4 min-h-14 py-2">
         <div className="flex items-center gap-2">
           {onBack && <button onClick={onBack} className="text-slate-400 mr-1"><Icon name="back" className="w-5 h-5" /></button>}
           <HorebBot size={28} /><b className="text-[17px] font-extrabold tracking-tight">HOREB</b>

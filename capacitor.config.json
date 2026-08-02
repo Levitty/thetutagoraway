@@ -6,7 +6,7 @@
     "androidScheme": "https",
     "iosScheme": "https"
   },
-  "backgroundColor": "#0a1a30",
+  "backgroundColor": "#eef0f2",
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 1200,
