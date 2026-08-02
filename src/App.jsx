@@ -448,12 +448,21 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
   );
 };
 
-// A loading indicator must never itself wait on the network: the old version
-// fetched a Lottie from a CDN, so on a phone the "loading" state was blank
-// until a round-trip finished. Pure CSS, instant, on the app's own ground.
+// The book loader — the app's own mark, and it keeps the character the user
+// liked in the old book animation. Pure CSS (styles in index.css), so it paints
+// instantly with zero network on both web and native — unlike the old remote
+// Lottie, which pulled a player library AND an animation JSON off CDNs before
+// it could show anything, and sometimes never rendered at all.
 const LoadingSpinner = () => (
-  <div className="flex flex-col items-center justify-center p-10 gap-3">
-    <div className="w-8 h-8 rounded-full border-[3px] border-slate-200 border-t-amber-400 animate-spin" />
+  <div className="flex flex-col items-center justify-center p-8 gap-4">
+    <div className="tg-book" role="status" aria-label="Loading">
+      <div className="tg-book__base" />
+      <div className="tg-book__page" />
+      <div className="tg-book__page" />
+      <div className="tg-book__page" />
+      <div className="tg-book__spine" />
+      <div className="tg-book__mark" />
+    </div>
     <span className="text-sm text-slate-400 font-medium">Loading…</span>
   </div>
 );

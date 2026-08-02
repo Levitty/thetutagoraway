@@ -39,3 +39,21 @@ body.native-app { background: #eef0f2; overscroll-behavior-y: none; }
 
 body.native-app .sticky.top-0 { padding-top: env(safe-area-inset-top); }
 .native-safe-top { padding-top: env(safe-area-inset-top); }
+
+/* Book loader — the app's own loading mark. Pure CSS, so it paints instantly
+   with zero network (the old book was a remote Lottie that also needed a
+   player library off a CDN — two round-trips before anything showed). */
+.tg-book { --c:#6d6fcb; --pg:#fff; --edge:#d7dbe6; width:92px; height:66px; position:relative; perspective:520px; }
+.tg-book__base { position:absolute; inset:0; border:3px solid var(--c); border-radius:6px; background:var(--pg);
+  box-shadow:0 6px 16px rgba(15,32,51,.12); }
+.tg-book__spine { position:absolute; left:50%; top:2px; bottom:2px; width:3px; background:var(--c);
+  transform:translateX(-1.5px); border-radius:2px; }
+.tg-book__mark { position:absolute; left:50%; top:0; width:9px; height:19px; background:#fbbf24;
+  transform:translateX(-4.5px); border-radius:0 0 3px 3px; }
+.tg-book__page { position:absolute; top:4px; bottom:4px; left:50%; width:calc(50% - 5px); background:var(--pg);
+  border:1px solid var(--edge); border-left:none; border-radius:0 4px 4px 0; transform-origin:left center;
+  backface-visibility:hidden; animation:tg-flip 1.6s infinite ease-in-out; }
+.tg-book__page:nth-child(2){ animation-delay:.2s; }
+.tg-book__page:nth-child(3){ animation-delay:.4s; }
+@keyframes tg-flip { 0%{ transform:rotateY(0deg); } 20%,100%{ transform:rotateY(-158deg); } }
+@media (prefers-reduced-motion:reduce){ .tg-book__page{ animation-duration:3.2s; } }
