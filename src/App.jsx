@@ -4138,12 +4138,88 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
 
         <div className="bg-white border border-slate-200 shadow-sm rounded-2xl divide-y divide-slate-100 overflow-hidden">
           <Row label="Messages" sub="Talk to your tutors" onTap={onOpenMessages} />
-          <Row label="My lessons" sub={`${upcoming.length} upcoming`} onTap={() => onNavigate('tutors')} />
+          <Row label="My lessons" sub={`${upcoming.length} upcoming`} onTap={() => onNavigate('my-lessons')} />
           <Row label="Clubs" sub="Group classes" onTap={() => onNavigate('clubs')} />
           <Row label="Account settings" onTap={onOpenAccountSettings} />
         </div>
 
         <button onClick={onLogout} className="w-full mt-4 py-3 text-sm font-semibold text-slate-400 hover:text-slate-600 transition-colors">Sign out</button>
+      </div>
+    </div>
+  );
+};
+
+// The learner's own lessons — what "My lessons" should always have opened.
+const NativeMyLessons = ({ bookings, onBack, onStartLesson, onNavigate }) => {
+  const tidyName = (n) => !n ? '' : (n === n.toUpperCase()
+    ? n.toLowerCase().replace(/\b[a-z]/g, ch => ch.toUpperCase()) : n);
+  const prettyDate = (d) => {
+    if (!d) return '';
+    const dt = new Date(d + 'T00:00:00'); const today = new Date();
+    const days = Math.round((dt - new Date(today.getFullYear(), today.getMonth(), today.getDate())) / 86400000);
+    if (days === 0) return 'Today'; if (days === 1) return 'Tomorrow'; if (days === -1) return 'Yesterday';
+    return dt.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' });
+  };
+  const joinOpen = (b) => {
+    if (!b?.lesson_date || !b?.start_time) return false;
+    const start = new Date(`${b.lesson_date}T${b.start_time}`);
+    if (isNaN(start)) return false;
+    const mins = (start - Date.now()) / 60000;
+    return mins <= 10 && mins > -120;
+  };
+  const all = bookings || [];
+  const upcoming = all.filter(b => b.status === 'confirmed' || b.status === 'pending')
+    .sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`));
+  const past = all.filter(b => b.status === 'completed')
+    .sort((a, b) => `${b.lesson_date}${b.start_time}`.localeCompare(`${a.lesson_date}${a.start_time}`));
+
+  const Card = ({ b, isPast }) => (
+    <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <div className="text-[16px] font-extrabold tracking-tight text-slate-900">{b.subject}</div>
+          <div className="text-sm text-slate-500 mt-0.5">
+            {b.tutors?.profiles?.full_name ? `with ${tidyName(b.tutors.profiles.full_name)}` : 'Tutor to be confirmed'}
+          </div>
+          <div className="text-sm text-slate-500">{prettyDate(b.lesson_date)} at {b.start_time?.slice(0, 5)}</div>
+          {b.learner_name && <div className="text-[13px] text-slate-400 mt-1">For {b.learner_name}{b.learner_grade ? ` · ${b.learner_grade}` : ''}</div>}
+        </div>
+        {!isPast && (
+          <span className={`shrink-0 text-[11px] font-bold px-2.5 py-1 rounded-full ${b.status === 'confirmed' ? 'bg-[#eef4e7] text-[#4f7233]' : 'bg-amber-50 text-amber-700'}`}>
+            {b.status === 'confirmed' ? 'Confirmed' : 'Awaiting tutor'}
+          </span>
+        )}
+      </div>
+      {!isPast && (joinOpen(b)
+        ? <button onClick={() => onStartLesson(b)} className="w-full mt-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Join now</button>
+        : <div className="mt-3 text-[13px] text-slate-400">The room opens 10 minutes before the lesson.</div>)}
+    </div>
+  );
+
+  return (
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
+      <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
+        <div className="max-w-md mx-auto px-4 py-3 flex items-center gap-2">
+          <button onClick={onBack} aria-label="Back" className="text-slate-400 hover:text-slate-700">
+            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <h1 className="text-[17px] font-extrabold tracking-tight">My lessons</h1>
+        </div>
+      </div>
+      <div className="app-scroll">
+        <div className="max-w-md mx-auto px-4 pt-5 pb-28 space-y-3">
+          {upcoming.length === 0 && past.length === 0 && (
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 text-center">
+              <div className="text-[15px] font-semibold">No lessons yet</div>
+              <p className="text-[13.5px] text-slate-500 mt-1 mb-3">Book a tutor and your lessons will live here.</p>
+              <button onClick={() => onNavigate('tutors')} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Find a tutor</button>
+            </div>
+          )}
+          {upcoming.length > 0 && <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-slate-400 px-1 pt-1">Upcoming</div>}
+          {upcoming.map(b => <Card key={b.id} b={b} />)}
+          {past.length > 0 && <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-slate-400 px-1 pt-3">Past</div>}
+          {past.map(b => <Card key={b.id} b={b} isPast />)}
+        </div>
       </div>
     </div>
   );
@@ -4665,7 +4741,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
   return (
     <div className="min-h-screen bg-slate-50 pt-20 pb-10">
       <div className="max-w-6xl mx-auto px-5">
-        <button onClick={onBack} className="text-slate-500 mb-4 flex items-center gap-1"><span>←</span> Back</button>
+        {onBack && <button onClick={onBack} className="text-slate-500 mb-4 flex items-center gap-1"><span>←</span> Back</button>}
         
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
           <div>
@@ -6577,6 +6653,16 @@ function AppInner() {
     return <ConsultingPage onBack={() => handleNavigate('home')} />;
   }
 
+  // The learner's lessons (native only).
+  if (IS_NATIVE && page === 'my-lessons') {
+    return (
+      <>
+        <NativeMyLessons bookings={bookings} onBack={() => handleNavigate('dashboard')} onStartLesson={handleStartLesson} onNavigate={handleNavigate} />
+        <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
+      </>
+    );
+  }
+
   // Native front door — the app opens here, never on the marketing site.
   if (page === 'native-welcome') {
     return (
@@ -6664,7 +6750,7 @@ function AppInner() {
         </>
       )}
       {page === 'teach' && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
-      {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={() => handleNavigate(IS_NATIVE ? (auth.user ? 'ai' : 'native-welcome') : 'home')} user={auth.user} setShowAuth={setShowAuth} />}
+      {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={IS_NATIVE ? null : () => handleNavigate('home')} user={auth.user} setShowAuth={setShowAuth} />}
       {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
       
       {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : undefined} />}
