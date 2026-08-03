@@ -204,6 +204,7 @@ export const forceSave = async (key, progress, owner = key, learnerId = null) =>
           dailyDate: progress.dailyDate,
           achievements: progress.achievements,
           diagInProgress: progress.diagInProgress ?? null,
+          lessonInProgress: progress.lessonInProgress ?? null,
         },
         diagnosed: progress.diagnosed,
         total_xp: progress.totalXP || 0,

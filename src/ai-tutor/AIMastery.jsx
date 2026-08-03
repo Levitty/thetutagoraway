@@ -10,7 +10,6 @@ import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, flu
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { HorebBot } from './HorebBot.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
-import { ColumnAddition, parseAddProblem } from './ColumnAddition.jsx';
 import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
 import { defaultProgress, loadProgress, loadLocalProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
@@ -344,6 +343,29 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
         } catch { /* corrupt cursor — fall through to the normal entry view */ }
       }
 
+      // Resume an in-progress LESSON at the same point. Leaving mid-skill — a web
+      // refresh, or the native app being backgrounded/killed — used to drop the
+      // learner back to the start (the "3/6, come back, start over" bug). The
+      // diagnostic already saved a cursor; regular lessons never did. Restores
+      // the mastery count, the knowledge-point position and the support level;
+      // serves a fresh problem rather than reviving the exact one on screen.
+      const lip = p.lessonInProgress;
+      if (p.diagnosed && lip && lip.skillId && SKILLS[lip.skillId] && ctx?.skills?.[lip.skillId] && (lip.session?.total > 0)) {
+        try {
+          setActiveSkill(lip.skillId);
+          setSession(lip.session);
+          setKpIndex(lip.kpIndex || 0); kpIndexRef.current = lip.kpIndex || 0;
+          setModalityLevel(lip.modalityLevel || 'abstract');
+          if (lip.scaffoldLevel != null) { scaffoldRef.current = lip.scaffoldLevel; setScaffoldLevel(lip.scaffoldLevel); }
+          setShowWorkedExample(false);
+          setProblem(serveLessonProblem(lip.skillId, lip.modalityLevel || 'abstract'));
+          setAnswer(''); setVisualAnswer(null); setFeedback(null); setAttemptCount(0); setHintLevel(0);
+          setView(prev => (prev === 'diagnostic' || prev === 'review' || prev === 'review-complete') ? prev : 'lesson');
+          setLoading(false);
+          return;
+        } catch { /* corrupt cursor — fall through to the normal entry view */ }
+      }
+
       // Only (re)set the entry view on a genuine load. If this effect re-fires
       // while the student is mid-activity (e.g. an auth token refresh briefly
       // changes userId), NEVER yank them out of an in-progress diagnostic,
@@ -387,6 +409,16 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
       saveProgress(keyFor(subjectId), progress, userId, learnerId);
     }
   }, [progress, userId, loading, subjectId, keyFor, learnerId]);
+
+  // Save an in-progress lesson cursor as the learner advances, so leaving
+  // mid-skill and returning resumes at the same point (see the resume branch
+  // in the load effect). Only once they've actually answered something.
+  useEffect(() => {
+    if (loading || !subjectId) return;
+    if (view === 'lesson' && activeSkill && session.total > 0) {
+      setProgress(p => ({ ...p, lessonInProgress: { skillId: activeSkill, session, kpIndex, modalityLevel, scaffoldLevel } }));
+    }
+  }, [view, activeSkill, session, kpIndex, modalityLevel, scaffoldLevel, loading, subjectId]);
 
   // Keep a ref of the latest state so the unmount/back handlers flush the most
   // recent progress instead of a stale snapshot captured at first render.
@@ -1023,7 +1055,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
 
   // ==================== NAVIGATION ====================
 
-  const goHome = () => { setView('home'); setActiveSkill(null); setCelebrations([]); setRemediationSkills(null); };
+  const goHome = () => { setView('home'); setActiveSkill(null); setCelebrations([]); setRemediationSkills(null); setProgress(p => p.lessonInProgress ? { ...p, lessonInProgress: null } : p); };
 
   // Dismiss the front celebration; mastery returns the learner to the dashboard.
   const dismissCelebration = () => {
@@ -1323,8 +1355,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
                       <TermTooltip text={we.problem} definitions={we.definitions} />
                     </div>
                     {(() => { const am = parseAreaProblem(we.problem); return am ? <AreaModel a={am.a} b={am.b} /> : null; })()}
-                    {(() => { const ad = !parseAreaProblem(we.problem) && parseAddProblem(we.problem); return ad ? <ColumnAddition a={ad.a} b={ad.b} /> : null; })()}
-                    {!parseAreaProblem(we.problem) && !parseAddProblem(we.problem) && <div className="space-y-3">
+                    {!parseAreaProblem(we.problem) && <div className="space-y-3">
                       {we.steps.map((step, i) => (
                         <div key={i}>
                           <div className="flex gap-3 items-start">
