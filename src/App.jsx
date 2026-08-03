@@ -23,6 +23,40 @@ import { HorebBot } from './ai-tutor/HorebBot.jsx';
 // The app IS the product: no marketing landing, no cookie banner — it opens
 // straight into learning, with live tutoring as a co-equal front-door path.
 const IS_NATIVE = typeof window !== 'undefined' && !!window.Capacitor?.isNativePlatform?.();
+
+// ---- per-route SEO (web only) ----------------------------------------------
+// The SPA served ONE title/description for every route. This gives each public
+// route its own, and marks the private app screens noindex so they never rank.
+// (Social crawlers still won't run the JS — the static /guide pages cover that;
+// this mainly lets Google tell the routes apart.)
+const ORIGIN = 'https://tutagora.com';
+const ROUTE_SEO = {
+  home:       { t: "Tutagora — Learn from Kenya's Best Tutors", d: "One-on-one lessons with verified Kenyan tutors, plus free adaptive maths practice mapped to the CBC curriculum.", path: '/' },
+  tutors:     { t: "Find a Verified Tutor in Kenya | Tutagora", d: "Browse verified tutors by subject, grade and price. Book a one-on-one online lesson and pay securely.", path: '/tutors' },
+  horeb:      { t: "HOREB — Free Adaptive Maths Practice (CBC) | Tutagora", d: "A free maths check finds your child's exact gap, then rebuilds it — adaptive practice mapped to the Kenyan CBC curriculum.", path: '/horeb' },
+  ai:         { t: "HOREB — Adaptive Maths Practice | Tutagora", d: "Practice maths at your real level. HOREB finds the gap and rebuilds from it, watching the working — free to start.", path: '/ai' },
+  schools:    { t: "HOREB for Schools — Adaptive CBC Maths | Tutagora", d: "Give every child in your school maths at their own level, with a teacher dashboard and per-student CBC reports.", path: '/schools' },
+  clubs:      { t: "Group Classes & Clubs | Tutagora", d: "Live group classes and interest-led clubs for Kenyan learners, led by verified tutors.", path: '/clubs' },
+  teach:      { t: "Become a Tutor on Tutagora", d: "Teach online, set your own rate, and reach students across Kenya. Apply to become a verified Tutagora tutor.", path: '/teach' },
+  consulting: { t: "Education Consulting | Tutagora", d: "Education consulting and advisory from the Tutagora team.", path: '/consulting' },
+};
+const NOINDEX_ROUTES = new Set(['admin', 'dashboard', 'spreadsheet', 'classroom', 'my-lessons', 'native-home', 'native-welcome']);
+
+const applyRouteSEO = (page) => {
+  if (IS_NATIVE || typeof document === 'undefined') return;
+  const seo = ROUTE_SEO[page];
+  const setMeta = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };
+  const robots = NOINDEX_ROUTES.has(page) ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
+  setMeta('meta[name="robots"]', 'content', robots);
+  if (seo) {
+    document.title = seo.t;
+    setMeta('meta[name="description"]', 'content', seo.d);
+    setMeta('meta[property="og:title"]', 'content', seo.t);
+    setMeta('meta[property="og:description"]', 'content', seo.d);
+    setMeta('meta[property="og:url"]', 'content', ORIGIN + seo.path);
+    setMeta('link[rel="canonical"]', 'href', ORIGIN + seo.path);
+  }
+};
 if (IS_NATIVE && typeof document !== 'undefined') document.body.classList.add('native-app');
 
 // ============ ERROR BOUNDARY ============
@@ -6823,6 +6857,9 @@ function AppInner() {
   // Register this device for push once we know who is using it. The moment
   // that matters — "your lesson is starting" — happens while the app is shut.
   useEffect(() => { if (auth.user?.id) initPush(auth.user.id); }, [auth.user?.id]);
+
+  // Keep the document's title / description / canonical in step with the route.
+  useEffect(() => { applyRouteSEO(page); }, [page]);
 
   // After a signup started from the HOREB front door, land the new learner in
   // the engine once they're authenticated (not on the dashboard).
