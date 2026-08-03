@@ -448,21 +448,25 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
   );
 };
 
-// The book loader — the app's own mark, and it keeps the character the user
-// liked in the old book animation. Pure CSS (styles in index.css), so it paints
-// instantly with zero network on both web and native — unlike the old remote
-// Lottie, which pulled a player library AND an animation JSON off CDNs before
-// it could show anything, and sometimes never rendered at all.
+// Instant CSS book-stack — used as the fallback under the Lottie so there's
+// never a blank moment while the animation loads (or if the player fails).
+const BookStack = () => (
+  <div className="tg-books" role="status" aria-label="Loading">
+    <div className="tg-books__b b1" />
+    <div className="tg-books__b b2" />
+    <div className="tg-books__b b3" />
+    <div className="tg-books__b b4" />
+    <div className="tg-books__shelf" />
+  </div>
+);
+
+// The loading mark: the chosen book-idea Lottie, SELF-HOSTED at /lottie/book.json
+// (963KB raw but ~71KB gzipped over the wire, cached after first load, and a
+// local asset in the native app — so it can't die on a CDN like the old one).
+// Falls back to the instant CSS stack if the player can't load.
 const LoadingSpinner = () => (
-  <div className="flex flex-col items-center justify-center p-8 gap-4">
-    <div className="tg-book" role="status" aria-label="Loading">
-      <div className="tg-book__base" />
-      <div className="tg-book__page" />
-      <div className="tg-book__page" />
-      <div className="tg-book__page" />
-      <div className="tg-book__spine" />
-      <div className="tg-book__mark" />
-    </div>
+  <div className="flex flex-col items-center justify-center p-8 gap-3">
+    <Lottie src="/lottie/book.json" width={128} height={128} fallback={<BookStack />} />
     <span className="text-sm text-slate-400 font-medium">Loading…</span>
   </div>
 );
