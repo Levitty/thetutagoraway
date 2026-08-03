@@ -15,6 +15,7 @@ import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
 import { initPush, requestPush, clearPush } from './push.js';
+import { PRICE_KES, PASS_DAYS } from './subscription.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 
@@ -471,11 +472,79 @@ const LoadingSpinner = () => (
   </div>
 );
 
+// ============ PAYWALL MODAL ============
+// Shown when a free learner has used today's free practice (only ever appears
+// once PAYWALL_ENABLED is flipped on). Charges the KSh 200 30-day pass via
+// Paystack; the pass is granted only by the verify-subscription function.
+const PaywallModal = ({ user, onClose, onUnlocked }) => {
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState('');
+
+  const goUnlimited = async () => {
+    if (!user?.id || !user?.email) { setErr('Please sign in first.'); return; }
+    setBusy(true); setErr('');
+    try {
+      await initiatePaystackPayment({
+        email: user.email,
+        amount: PRICE_KES,
+        reference: `sub_${user.id.slice(0, 8)}_${Date.now()}`,
+        metadata: { type: 'subscription', user_id: user.id },
+        onSuccess: async (response) => {
+          try {
+            const { data } = await supabase.functions.invoke('verify-subscription', {
+              body: { reference: response.reference, user_id: user.id },
+            });
+            if (data?.verified) { onUnlocked?.(); onClose?.(); }
+            else setErr('We could not confirm the payment. If you were charged, contact support.');
+          } catch { setErr('Verification failed. If you were charged, contact support.'); }
+          setBusy(false);
+        },
+        onClose: () => setBusy(false),
+      });
+    } catch { setErr('Could not start payment. Try again.'); setBusy(false); }
+  };
+
+  return (
+    <div className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div className="bg-white w-full sm:max-w-sm rounded-t-3xl sm:rounded-3xl p-6 native-safe-top" style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }}>
+        <div className="w-10 h-1 bg-slate-200 rounded-full mx-auto mb-5 sm:hidden" />
+        <div className="text-[11px] font-bold tracking-[.12em] uppercase text-amber-600">Nice work today</div>
+        <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 mt-1">You've done today's free practice</h2>
+        <p className="text-[15px] text-slate-500 mt-2">Come back tomorrow for more free practice — or go unlimited and keep going now.</p>
+        <ul className="mt-4 space-y-2">
+          {['Unlimited daily practice', 'The full learning path', 'Every skill, every review'].map(t => (
+            <li key={t} className="flex items-center gap-2.5 text-[15px] text-slate-700">
+              <svg viewBox="0 0 24 24" className="w-4 h-4 text-[#5a7a3a] shrink-0" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>{t}
+            </li>
+          ))}
+        </ul>
+        <div className="flex items-baseline gap-2 mt-5">
+          <span className="text-[30px] font-extrabold tracking-tight text-slate-900">KSh {PRICE_KES}</span>
+          <span className="text-sm text-slate-500">/ month · {PASS_DAYS}-day pass</span>
+        </div>
+        {err && <div className="mt-3 text-[13px] text-[#c0663f]">{err}</div>}
+        <button onClick={goUnlimited} disabled={busy} className="w-full mt-4 bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-slate-900 rounded-2xl py-3.5 font-bold text-[15px] transition-colors">
+          {busy ? 'Opening payment…' : 'Go unlimited'}
+        </button>
+        <button onClick={onClose} className="w-full mt-2 text-slate-400 text-sm font-medium py-2">Maybe tomorrow</button>
+      </div>
+    </div>
+  );
+};
+
 // ============ AUTH CONTEXT ============
 const useAuth = () => {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
+  const [subscription, setSubscription] = useState(null); // paywall entitlement
   const [loading, setLoading] = useState(true);
+
+  const fetchSubscription = async (userId) => {
+    try {
+      const { data } = await supabase.from('subscriptions').select('*').eq('user_id', userId).maybeSingle();
+      setSubscription(data || null);
+    } catch { setSubscription(null); } // table may not exist yet — treated as free
+  };
 
   useEffect(() => {
     // Get initial session
@@ -533,6 +602,7 @@ const useAuth = () => {
     }
     
     setProfile(profileData);
+    fetchSubscription(userId);
     setLoading(false);
   };
 
@@ -575,9 +645,10 @@ const useAuth = () => {
     await supabase.auth.signOut();
     setUser(null);
     setProfile(null);
+    setSubscription(null);
   };
 
-  return { user, profile, loading, signUp, signIn, signInWithGoogle, resetPassword, signOut, refetchProfile: () => user && fetchProfile(user.id) };
+  return { user, profile, subscription, loading, signUp, signIn, signInWithGoogle, resetPassword, signOut, refetchProfile: () => user && fetchProfile(user.id), refetchSubscription: () => user && fetchSubscription(user.id) };
 };
 
 // ============ DATABASE HOOKS ============
@@ -6734,6 +6805,7 @@ function AppInner() {
   const [activeLesson, setActiveLesson] = useState(null);
   const [showMessages, setShowMessages] = useState(false);
   const [showAccountSettings, setShowAccountSettings] = useState(false);
+  const [showPaywall, setShowPaywall] = useState(false);
   const [showPrivacyBanner, setShowPrivacyBanner] = useState(() => !IS_NATIVE && !localStorage.getItem('tutagora_privacy_accepted'));
 
   // Admin emails — ONLY these accounts can access the admin dashboard
@@ -6872,7 +6944,13 @@ function AppInner() {
 
   // AI Tutor
   if (page === 'ai') {
-    return <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} onFindTutor={() => handleNavigate('tutors')} />;
+    return (
+      <>
+        <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} onFindTutor={() => handleNavigate('tutors')}
+          subscription={auth.subscription} onPaywall={() => setShowPaywall(true)} />
+        {showPaywall && <PaywallModal user={auth.user} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
+      </>
+    );
   }
 
   // HOREB for Schools — B2B pitch page

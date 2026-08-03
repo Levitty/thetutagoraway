@@ -26,6 +26,7 @@ import { Lottie, LOTTIE } from './components/Lottie.jsx';
 import { InteractiveVisual, SKILL_VISUALS } from './InteractiveVisual.jsx';
 import { checkVisualAnswer } from './content/visual.js';
 import { checkAnswerMatch, normalizeMath } from './answerCheck.js';
+import { canPractice } from '../subscription.js';
 
 // ==================== SMART ANSWER MATCHING ====================
 // Tolerant answer grading lives in ./answerCheck.js (so it can be unit-tested).
@@ -78,7 +79,7 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 
 // ==================== MAIN COMPONENT ====================
 
-export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
+export function AIMastery({ onBack, userId, studentName, onFindTutor, subscription = null, onPaywall }) {
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
   const [progress, setProgress] = useState(defaultProgress);
   const [view, setView] = useState('loading');
@@ -697,6 +698,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor }) {
   };
 
   const startLesson = (skillId) => {
+    // Freemium gate (inert until the paywall is switched on): a free learner
+    // who has used today's practice allowance is offered the pass instead of a
+    // new lesson. The diagnostic is never gated. canPractice() returns true
+    // while the paywall is off, so this changes nothing until launch.
+    if (onPaywall && !canPractice(subscription, progress)) { onPaywall(); return; }
     setActiveSkill(skillId);
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
     setInterleave(null);
