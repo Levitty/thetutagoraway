@@ -223,6 +223,18 @@ export function AIMastery({ onBack, userId, studentName }) {
   const [joinCode, setJoinCode] = useState('');
   const [joinStatus, setJoinStatus] = useState(null); // null | 'joining' | 'ok' | error string
 
+  // Which classes this learner belongs to. RLS returns only their own (a
+  // student can read a class they are a member of), so this doubles as the
+  // "am I connected to my teacher?" answer — otherwise joining is a silent
+  // act of faith and a student can't tell whether it worked.
+  const [myClasses, setMyClasses] = useState([]);
+  const loadMyClasses = useCallback(async () => {
+    if (!userId) return;
+    const { data } = await supabase.from('classes').select('id, name');
+    setMyClasses(data || []);
+  }, [userId]);
+  useEffect(() => { loadMyClasses(); }, [loadMyClasses]);
+
   const joinClass = async () => {
     const code = joinCode.trim();
     if (!code) return;
@@ -233,7 +245,8 @@ export function AIMastery({ onBack, userId, studentName }) {
     } else {
       setJoinStatus('ok');
       setJoinCode('');
-      setTimeout(() => { setShowJoin(false); setJoinStatus(null); }, 1800);
+      loadMyClasses();
+      setTimeout(() => { setShowJoin(false); setJoinStatus(null); }, 2200);
     }
   };
 
@@ -1802,7 +1815,8 @@ export function AIMastery({ onBack, userId, studentName }) {
             </button>
           ))}
           <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[14.5px] font-semibold text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-            <span className="w-[19px] text-center text-lg leading-none">+</span>Join a class
+            <span className="w-[19px] text-center text-lg leading-none">+</span>
+            {myClasses.length ? (myClasses.length === 1 ? myClasses[0].name : `${myClasses.length} classes`) : 'Join a class'}
           </button>
         </nav>
         <div className="flex-1" />
@@ -2020,10 +2034,17 @@ export function AIMastery({ onBack, userId, studentName }) {
               {showJoin && (
                 <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
                   {joinStatus === 'ok' ? (
-                    <p className="text-sm text-[#5a7a3a] font-medium">✓ Joined! Your teacher can now see your progress.</p>
+                    <p className="text-sm text-[#5a7a3a] font-medium">
+                      ✓ Joined{myClasses.length ? ` ${myClasses[myClasses.length - 1].name}` : ''}! Your teacher can now see your progress.
+                    </p>
                   ) : (
                     <>
                       <p className="text-sm font-semibold text-slate-800 mb-1">Join your class</p>
+                      {myClasses.length > 0 && (
+                        <p className="text-xs text-[#5a7a3a] mb-2">
+                          You're in {myClasses.map(c => c.name).join(', ')}. Enter another code to join a second class.
+                        </p>
+                      )}
                       <p className="text-xs text-slate-500 mb-2.5">Enter the code from your teacher:</p>
                       <div className="flex gap-2">
                         <input
