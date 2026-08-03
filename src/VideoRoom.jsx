@@ -5,29 +5,51 @@ import { Spreadsheet } from './Spreadsheet';
 
 const AGORA_APP_ID = '35a8f51c866e44bfbb7bd5e3970e75e4';
 
+// ==================== ICONS (SVG, not emoji) ====================
+const ICONS = {
+  mic: 'M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3zM5 10v1a7 7 0 0 0 14 0v-1M12 19v3',
+  video: 'M4 6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 10l5-3v10l-5-3',
+  screen: 'M3 4h18v12H3zM8 20h8M12 16v4',
+  board: 'M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z',
+  sheet: 'M3 4h18v16H3zM3 9h18M3 14h18M9 4v16M15 4v16',
+  chat: 'M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z',
+  end: 'M3 5a2 2 0 0 1 2-2h2l1.5 4.5-2 1.4a12 12 0 0 0 5.6 5.6l1.4-2L20 18v2a2 2 0 0 1-2 2A16 16 0 0 1 3 5z',
+  close: 'M6 6l12 12M18 6L6 18',
+  user: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0',
+};
+const Icon = ({ name, className = 'w-5 h-5', slash }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+    <path d={ICONS[name]} />
+    {slash && <path d="M4 4l16 16" />}
+  </svg>
+);
+
 // ==================== VIDEO PLAYER ====================
-const VideoPlayer = ({ track }) => {
+// fit: 'contain' shows the WHOLE frame (right for a shared screen — the old
+// default 'cover' cropped it, so a laptop screen came through zoomed in on the
+// student's phone). 'cover' fills nicely for a face-cam PiP.
+const VideoPlayer = ({ track, fit = 'cover' }) => {
   const ref = useRef(null);
   useEffect(() => {
     if (ref.current && track) {
-      track.play(ref.current);
+      track.play(ref.current, { fit });
     }
     return () => track?.stop();
-  }, [track]);
+  }, [track, fit]);
   return <div ref={ref} className="w-full h-full bg-slate-900 rounded-2xl overflow-hidden" />;
 };
 
 // ==================== CONTROL BUTTON ====================
-const ControlButton = ({ icon, label, active, danger, onClick }) => (
+const ControlButton = ({ name, label, active, danger, onClick, slash }) => (
   <button
     onClick={onClick}
-    className={`flex flex-col items-center gap-1 px-4 py-3 rounded-xl transition-all ${
-      danger ? 'bg-red-500 hover:bg-red-600 text-white' :
-      active ? 'bg-slate-700 text-white' : 'bg-slate-800 hover:bg-slate-700 text-slate-300'
+    className={`flex flex-col items-center gap-1 px-2 sm:px-3 py-2 rounded-xl transition-colors shrink-0 min-w-0 ${
+      danger ? 'bg-red-500 active:bg-red-600 text-white' :
+      active ? 'bg-slate-700 text-white' : 'bg-slate-800 active:bg-slate-700 text-slate-300'
     }`}
   >
-    <span className="text-xl">{icon}</span>
-    <span className="text-xs">{label}</span>
+    <Icon name={name} slash={slash} className="w-5 h-5" />
+    <span className="text-[10px] font-medium leading-none">{label}</span>
   </button>
 );
 
@@ -447,27 +469,26 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
 
   return (
     <div className="fixed inset-0 bg-slate-950 z-50 flex flex-col">
-      {/* Header */}
-      <header className="h-14 px-4 flex items-center justify-between border-b border-slate-800 bg-slate-900/50 flex-shrink-0">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-bold text-sm">T</div>
-          <div className="flex items-center gap-2 px-2 py-1 bg-emerald-500/20 rounded-full">
+      {/* Header — pads under the status bar / Dynamic Island; the subject is
+          hidden on phones (where it used to overlap the live badge and role). */}
+      <header className="px-3 sm:px-4 flex items-center justify-between gap-2 border-b border-slate-800 bg-slate-900/60 flex-shrink-0"
+        style={{ paddingTop: 'calc(env(safe-area-inset-top) + 0.5rem)', paddingBottom: '0.5rem' }}>
+        <div className="flex items-center gap-2 min-w-0">
+          <div className="flex items-center gap-1.5 px-2 py-1 bg-emerald-500/20 rounded-full shrink-0">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-emerald-400 text-xs font-medium">Live</span>
+            <span className="text-emerald-400 text-xs font-semibold">Live</span>
           </div>
-          <span className="text-slate-400 font-mono text-sm">{formatTime(elapsed)}</span>
+          <span className="text-slate-300 font-mono text-sm tabular-nums shrink-0">{formatTime(elapsed)}</span>
         </div>
 
-        <div className="text-center">
-          <div className="text-white font-medium text-sm">{booking.subject}</div>
-          <div className="text-slate-400 text-xs">with {otherPerson}</div>
+        <div className="hidden sm:block text-center min-w-0">
+          <div className="text-white font-medium text-sm truncate">{booking.subject}</div>
+          <div className="text-slate-400 text-xs truncate">with {otherPerson}</div>
         </div>
 
-        <div className="flex items-center gap-1">
-          <span className={`px-2 py-0.5 text-[10px] font-semibold rounded-full uppercase tracking-wide ${isTutor ? 'bg-emerald-900/50 text-emerald-400' : 'bg-blue-900/50 text-blue-400'}`}>
-            {isTutor ? 'Tutor' : 'Student'}
-          </span>
-        </div>
+        <span className={`px-2 py-0.5 text-[10px] font-bold rounded-full uppercase tracking-wide shrink-0 ${isTutor ? 'bg-emerald-900/50 text-emerald-400' : 'bg-blue-900/50 text-blue-300'}`}>
+          {isTutor ? 'Tutor' : 'Student'}
+        </span>
       </header>
 
       {/* Main Content */}
@@ -484,16 +505,19 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
             </div>
           ) : (
             <div className="flex-1 relative rounded-2xl overflow-hidden bg-slate-900">
-              {/* Main Video (Remote or Screen Share) */}
+              {/* Main Video (Remote or Screen Share) — 'contain' so a shared
+                  screen is shown whole, not cropped/zoomed. */}
               {remoteUsers.length > 0 && remoteUsers[0].videoTrack ? (
-                <VideoPlayer track={remoteUsers[0].videoTrack} />
+                <VideoPlayer track={remoteUsers[0].videoTrack} fit="contain" />
               ) : isScreenSharing && screenTrack ? (
-                <VideoPlayer track={screenTrack} />
+                <VideoPlayer track={screenTrack} fit="contain" />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-20 h-20 rounded-full bg-slate-800 flex items-center justify-center text-3xl mx-auto mb-3">👤</div>
-                    <div className="text-slate-400 text-sm">Waiting for {otherPerson} to join...</div>
+                    <div className="w-16 h-16 rounded-full bg-slate-800 text-slate-500 flex items-center justify-center mx-auto mb-3">
+                      <Icon name="user" className="w-8 h-8" />
+                    </div>
+                    <div className="text-slate-400 text-sm">Waiting for {otherPerson} to join…</div>
                   </div>
                 </div>
               )}
@@ -506,14 +530,14 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
               {/* Self View (PiP) */}
               <div className="absolute bottom-3 right-3 w-36 h-28 sm:w-44 sm:h-32 rounded-xl overflow-hidden border-2 border-slate-700 shadow-xl">
                 {localTracks.video && !isVideoOff ? (
-                  <VideoPlayer track={localTracks.video} />
+                  <VideoPlayer track={localTracks.video} fit="cover" />
                 ) : (
                   <div className="w-full h-full bg-slate-800 flex items-center justify-center">
-                    <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-lg">{user.name?.[0] || '👤'}</div>
+                    <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-lg font-semibold text-slate-300 uppercase">{user.name?.[0] || '?'}</div>
                   </div>
                 )}
-                <div className="absolute bottom-1 left-1 px-1.5 py-0.5 bg-black/60 rounded text-white text-[10px]">
-                  You {isMuted && '🔇'}
+                <div className="absolute bottom-1 left-1 flex items-center gap-1 px-1.5 py-0.5 bg-black/60 rounded text-white text-[10px]">
+                  You {isMuted && <Icon name="mic" slash className="w-3 h-3" />}
                 </div>
               </div>
             </div>
@@ -526,9 +550,9 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
             {/* Panel header */}
             <div className="flex items-center justify-between p-3 border-b border-slate-800 flex-shrink-0">
               <h3 className="font-semibold text-white text-sm">
-                {activePanel === 'chat' ? '💬 Chat' : activePanel === 'whiteboard' ? '🖊️ Whiteboard' : '📊 Spreadsheet'}
+                {activePanel === 'chat' ? 'Chat' : activePanel === 'whiteboard' ? 'Whiteboard' : 'Spreadsheet'}
               </h3>
-              <button onClick={() => setActivePanel(null)} className="text-slate-400 hover:text-white text-lg">✕</button>
+              <button onClick={() => setActivePanel(null)} aria-label="Close" className="text-slate-400 hover:text-white"><Icon name="close" className="w-5 h-5" /></button>
             </div>
 
             {/* Chat Panel */}
@@ -581,51 +605,18 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
         )}
       </div>
 
-      {/* Controls Bar */}
-      <div className="h-20 px-4 flex items-center justify-center gap-2 border-t border-slate-800 bg-slate-900/50 flex-shrink-0">
-        <ControlButton
-          icon={isMuted ? '🔇' : '🎤'}
-          label={isMuted ? 'Unmute' : 'Mute'}
-          active={isMuted}
-          onClick={toggleMute}
-        />
-        <ControlButton
-          icon={isVideoOff ? '📷' : '📹'}
-          label={isVideoOff ? 'Start' : 'Stop'}
-          active={isVideoOff}
-          onClick={toggleVideo}
-        />
-        <ControlButton
-          icon="🖥️"
-          label="Screen"
-          active={isScreenSharing}
-          onClick={toggleScreenShare}
-        />
-        <ControlButton
-          icon="🖊️"
-          label="Board"
-          active={activePanel === 'whiteboard'}
-          onClick={() => togglePanel('whiteboard')}
-        />
-        <ControlButton
-          icon="📊"
-          label="Sheet"
-          active={activePanel === 'spreadsheet'}
-          onClick={() => togglePanel('spreadsheet')}
-        />
-        <ControlButton
-          icon="💬"
-          label="Chat"
-          active={activePanel === 'chat'}
-          onClick={() => togglePanel('chat')}
-        />
-        <div className="w-px h-10 bg-slate-700 mx-1" />
-        <ControlButton
-          icon="📞"
-          label="End"
-          danger
-          onClick={handleEnd}
-        />
+      {/* Controls Bar — compact so all seven fit on a narrow phone (the End
+          button used to overflow off-screen, stranding the student). Scrolls
+          horizontally as a last resort, and pads under the home indicator. */}
+      <div className="flex items-center justify-center gap-1.5 sm:gap-2 px-2 py-2 border-t border-slate-800 bg-slate-900/60 flex-shrink-0 overflow-x-auto"
+        style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.5rem)' }}>
+        <ControlButton name="mic" slash={isMuted} label={isMuted ? 'Unmute' : 'Mute'} active={isMuted} onClick={toggleMute} />
+        <ControlButton name="video" slash={isVideoOff} label={isVideoOff ? 'Start' : 'Stop'} active={isVideoOff} onClick={toggleVideo} />
+        <ControlButton name="screen" label="Screen" active={isScreenSharing} onClick={toggleScreenShare} />
+        <ControlButton name="board" label="Board" active={activePanel === 'whiteboard'} onClick={() => togglePanel('whiteboard')} />
+        <ControlButton name="sheet" label="Sheet" active={activePanel === 'spreadsheet'} onClick={() => togglePanel('spreadsheet')} />
+        <ControlButton name="chat" label="Chat" active={activePanel === 'chat'} onClick={() => togglePanel('chat')} />
+        <ControlButton name="end" label="Leave" danger onClick={handleEnd} />
       </div>
     </div>
   );
