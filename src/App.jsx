@@ -107,35 +107,64 @@ class ErrorBoundary extends React.Component {
 }
 
 // ============ LOTTIE ANIMATION COMPONENT ============
-const Lottie = ({ src, width = 200, height = 200, loop = true, fallback = null }) => {
+// The player is SELF-HOSTED (public/lottie/lottie-player.js) so it ships inside
+// the native app and works offline — no CDN round-trip. It is also kicked off at
+// module load, not at first <Lottie> mount, so the custom element is already
+// defined by the time any loading state appears.
+const playerReady = () =>
+  typeof customElements !== 'undefined' && !!customElements.get('lottie-player');
+
+let _playerPromise = null;
+const ensureLottiePlayer = () => {
+  if (typeof document === 'undefined') return Promise.resolve(false);
+  if (_playerPromise) return _playerPromise;
+  _playerPromise = new Promise((resolve) => {
+    if (playerReady()) return resolve(true);
+    if (!document.querySelector('script[src*="lottie-player"]')) {
+      const script = document.createElement('script');
+      script.src = '/lottie/lottie-player.js';
+      script.onerror = () => resolve(false);
+      document.head.appendChild(script);
+    }
+    customElements.whenDefined('lottie-player').then(() => resolve(true));
+    setTimeout(() => resolve(playerReady()), 4000);   // never hang forever
+  });
+  return _playerPromise;
+};
+if (typeof window !== 'undefined') ensureLottiePlayer();   // warm at app boot
+
+const Lottie = ({ src, width = 200, height = 200, loop = true, fallback = null, segment = null }) => {
+  const [ready, setReady] = useState(playerReady);
   const [failed, setFailed] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
-    if (!document.querySelector('script[src*="lottie-player"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js';
-      document.body.appendChild(script);
-    }
+    let cancelled = false;
+    ensureLottiePlayer().then(ok => {
+      if (cancelled) return;
+      ok ? setReady(true) : setFailed(true);
+    });
+    return () => { cancelled = true; };
   }, []);
 
+  // Optional frame window. Some animations open on an empty canvas and take
+  // most of a second to draw themselves in — longer than a typical load — so
+  // the viewer only ever sees blank. `segment` skips the build-up and loops the
+  // part that actually shows something.
   useEffect(() => {
-    // Check if the animation fails to load
     const el = ref.current;
-    if (el) {
-      const handleError = () => setFailed(true);
-      el.addEventListener('error', handleError);
-      // Also check after a timeout in case error event doesn't fire
-      const timer = setTimeout(() => {
-        if (el && (!el.shadowRoot || el.shadowRoot.querySelector('.error'))) {
-          setFailed(true);
-        }
-      }, 5000);
-      return () => { el.removeEventListener('error', handleError); clearTimeout(timer); };
-    }
-  }, [src]);
+    if (!el || !ready || !segment) return undefined;
+    const play = () => { try { el.getLottie()?.playSegments(segment, true); } catch { /* ignore */ } };
+    el.addEventListener('ready', play);
+    play();                       // in case 'ready' already fired
+    return () => el.removeEventListener('ready', play);
+  }, [ready, segment, src]);
 
-  if (failed && fallback) return fallback;
+  // Until the player is genuinely defined, render the fallback — NEVER an
+  // undefined <lottie-player>, which paints nothing. That invisible gap is why
+  // the book never appeared: loading states finish in well under a second, so
+  // the animation unmounted before the CDN script had even arrived.
+  if (!ready || failed) return fallback;
 
   return (
     <lottie-player
@@ -501,7 +530,7 @@ const BookStack = () => (
 // Falls back to the instant CSS stack if the player can't load.
 const LoadingSpinner = () => (
   <div className="flex flex-col items-center justify-center p-8 gap-3">
-    <Lottie src="/lottie/book.json" width={128} height={128} fallback={<BookStack />} />
+    <Lottie src="/lottie/book.json" width={128} height={128} fallback={<BookStack />} segment={[20, 100]} />
     <span className="text-sm text-slate-400 font-medium">Loading…</span>
   </div>
 );
