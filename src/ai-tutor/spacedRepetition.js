@@ -9,6 +9,14 @@ import { SKILLS as MATH_SKILLS, getPrerequisiteChain as mathPreChain } from './k
 // Base intervals in days for each repetition level
 const BASE_INTERVALS = [1, 3, 7, 14, 30, 60, 120, 240, 365];
 
+// repNum is FRACTIONAL by design (a slow-but-correct answer earns partial
+// credit, and the failure decay steps by 1.5). Indexing the ladder directly
+// with it returns undefined — which poisons every downstream interval to NaN
+// and silently drops the skill out of the review queue for good. Always land
+// on a real rung.
+const rung = (repNum) =>
+  BASE_INTERVALS[Math.min(Math.max(0, Math.floor(repNum || 0)), BASE_INTERVALS.length - 1)];
+
 // ==================== MEMORY STRENGTH ====================
 
 export const calculateMemoryStrength = (skillProgress) => {
@@ -18,7 +26,7 @@ export const calculateMemoryStrength = (skillProgress) => {
   const repNum = skillProgress.repNum || 0;
   const learningSpeed = skillProgress.learningSpeed || 1.0;
 
-  const baseInterval = BASE_INTERVALS[Math.min(repNum, BASE_INTERVALS.length - 1)];
+  const baseInterval = rung(repNum);
   const adjustedInterval = baseInterval / learningSpeed;
 
   return Math.exp(-daysSince / Math.max(adjustedInterval, 0.5));
@@ -27,7 +35,7 @@ export const calculateMemoryStrength = (skillProgress) => {
 // ==================== REVIEW INTERVAL ====================
 
 export const getNextReviewInterval = (repNum, learningSpeed = 1.0) => {
-  const base = BASE_INTERVALS[Math.min(repNum, BASE_INTERVALS.length - 1)];
+  const base = rung(repNum);
   return base / learningSpeed;
 };
 

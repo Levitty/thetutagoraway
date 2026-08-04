@@ -122,7 +122,10 @@ export const getReviews = (progress, ctx) => {
     const repNum = sp.repNum || 0;
     const baseIntervals = [1, 3, 7, 14, 30, 60, 120, 240];
     const learningSpeed = sp.learningSpeed || 1.0;
-    const interval = (baseIntervals[Math.min(repNum, baseIntervals.length - 1)]) / learningSpeed;
+    // floor: repNum is fractional (partial credit / 1.5-step decay) and a raw
+    // fractional index returns undefined -> NaN -> the skill never comes due.
+    const rungIdx = Math.min(Math.max(0, Math.floor(repNum)), baseIntervals.length - 1);
+    const interval = baseIntervals[rungIdx] / learningSpeed;
     const memoryStrength = Math.exp(-daysSince / Math.max(interval, 1));
 
     if (memoryStrength < 0.6) {
