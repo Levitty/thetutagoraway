@@ -17,6 +17,10 @@ const PARAMS_VERSION = 'heuristic-v0';   // bumped when calibrated params ship
  * Log one answered problem.
  * @param {object} ev
  * @param {string} ev.studentId   auth user id (required; anonymous → skipped)
+ * @param {string} [ev.learnerId]  which CHILD answered (null = the account
+ *                             holder). Without this every child's answers land
+ *                             under the parent id and per-child history is
+ *                             unrecoverable.
  * @param {string} ev.subject     e.g. 'math'
  * @param {string} ev.skillId
  * @param {boolean} ev.correct
@@ -50,6 +54,7 @@ export function logResponse(ev) {
     is_review: !!ev.isReview,
     params_version: PARAMS_VERSION,
   };
+  if (ev.learnerId) row.learner_id = ev.learnerId;
   if (Number.isFinite(ev.taps)) row.taps = Math.round(ev.taps);
   if (Number.isFinite(ev.scaffold)) row.scaffold = Math.round(ev.scaffold);
   // How sure the engine already was about this skill BEFORE the answer (0 = no
@@ -61,8 +66,8 @@ export function logResponse(ev) {
   // losing the event.
   supabase.from('response_events').insert(row)
     .then(({ error }) => {
-      if (error && ('taps' in row || 'scaffold' in row || 'confidence' in row)) {
-        const { taps, scaffold, confidence, ...basic } = row;
+      if (error && ('taps' in row || 'scaffold' in row || 'confidence' in row || 'learner_id' in row)) {
+        const { taps, scaffold, confidence, learner_id, ...basic } = row;
         return supabase.from('response_events').insert(basic);
       }
       if (error && import.meta.env?.DEV) console.debug('telemetry drop:', error.message);

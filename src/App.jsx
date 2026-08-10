@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { supabase } from './supabase';
+import { SKILLS as AI_SKILLS } from './ai-tutor/knowledgeGraph.js';
 import { VideoRoom } from './VideoRoom';
 import { INTEREST_CATEGORIES, CATEGORY_BY_KEY, categoryLabel, categoryEmoji } from './groupClassCategories.js';
 import { PaymentModal } from './PaymentModal';
@@ -4191,7 +4192,7 @@ const NativeTabs = ({ page, user, onNavigate, setShowAuth }) => {
 // The app's account surface. Not the web dashboard: a phone-shaped view of the
 // three things that matter here — the next lesson, practice momentum, and the
 // people learning. Tutoring sits at the top, never buried.
-const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMessages, onOpenAccountSettings, onLogout }) => {
+const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMessages, onOpenAccountSettings, onLogout, onOpenProgress }) => {
   const [ai, setAi] = useState(null);
   const [children, setChildren] = useState([]);
   useEffect(() => {
@@ -4291,19 +4292,26 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
           </div>
         </button>
 
-        {/* Learners on this account */}
-        {children.length > 0 && (
-          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-3">
-            <div className="text-[15px] font-semibold mb-2">Learners</div>
-            <div className="flex flex-wrap gap-2">
-              {children.map(c => (
-                <span key={c.id} className="px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
-                  {c.name}{c.grade ? ` · ${c.grade}` : ''}
+        {/* Learners on this account — tap for their progress */}
+        <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-3">
+          <div className="text-[15px] font-semibold mb-1">Progress</div>
+          <p className="text-[13px] text-slate-500 mb-2.5">See what they've been working on and where they're stuck.</p>
+          <div className="space-y-1">
+            {[{ id: null, name: 'You', grade: null }, ...children].map(c => (
+              <button key={c.id || 'self'} onClick={() => onOpenProgress(c.id ? c : null)}
+                className="w-full flex items-center gap-3 py-2.5 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-colors text-left">
+                <span className="w-9 h-9 rounded-full bg-[#f5f6fc] border border-[#e2e5f6] text-[#6d6fcb] font-bold text-[14px] flex items-center justify-center shrink-0">
+                  {(c.name || '?')[0].toUpperCase()}
                 </span>
-              ))}
-            </div>
+                <span className="flex-1 min-w-0">
+                  <span className="block text-[15px] font-semibold text-slate-900 truncate">{c.name}</span>
+                  {c.grade && <span className="block text-[12.5px] text-slate-500">{c.grade}</span>}
+                </span>
+                <svg viewBox="0 0 24 24" className="w-4 h-4 text-slate-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            ))}
           </div>
-        )}
+        </div>
 
         <div className="bg-white border border-slate-200 shadow-sm rounded-2xl divide-y divide-slate-100 overflow-hidden">
           <Row label="Messages" sub="Talk to your tutors" onTap={onOpenMessages} />
@@ -4460,6 +4468,152 @@ const NativeHome = ({ profile, bookings, onNavigate, onStartLesson, setShowAuth,
               <span className="shrink-0 bg-amber-400 text-slate-900 font-bold rounded-xl px-4 py-2 text-sm">{ai?.diagnosed ? 'Continue' : 'Start'}</span>
             </div>
           </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ============ LEARNER PROGRESS (the parent's view) ============
+// What a parent actually asks: what has she been doing, and what is she stuck
+// on? All of it is derived from the per-learner ai_tutor_progress row — the
+// skills map already carries attempts/correct/mastered/lastPractice per skill.
+const LearnerProgress = ({ parentId, learner, onBack }) => {
+  const [state, setState] = useState({ loading: true, data: null });
+
+  // profile_key: the account id for the parent themselves, `${id}_c${childId}`
+  // for a child (mirrors AIMastery's learnerBase).
+  const profileKey = learner?.id ? `${parentId}_c${learner.id}` : parentId;
+
+  useEffect(() => {
+    let cancelled = false;
+    supabase.from('ai_tutor_progress')
+      .select('total_xp, current_streak, diagnosed, last_practice_date, progress')
+      .eq('profile_key', profileKey).maybeSingle()
+      .then(({ data }) => { if (!cancelled) setState({ loading: false, data }); })
+      .catch(() => { if (!cancelled) setState({ loading: false, data: null }); });
+    return () => { cancelled = true; };
+  }, [profileKey]);
+
+  const view = useMemo(() => {
+    const skills = state.data?.progress?.skills || {};
+    const rows = Object.entries(skills).map(([id, sp]) => ({ id, ...sp }));
+    const named = (id) => AI_SKILLS[id]?.name || id;
+
+    const mastered = rows.filter(r => r.mastered);
+    // "Stuck" = they keep coming back to it and it still isn't holding.
+    const struggling = rows
+      .filter(r => !r.mastered && (r.attempts || 0) >= 3 && ((r.correct || 0) / (r.attempts || 1)) < 0.6)
+      .sort((a, b) => ((a.correct || 0) / (a.attempts || 1)) - ((b.correct || 0) / (b.attempts || 1)));
+    const recent = rows
+      .filter(r => r.lastPractice)
+      .sort((a, b) => new Date(b.lastPractice) - new Date(a.lastPractice))
+      .slice(0, 6);
+
+    // Days practised in the last 7, from the per-skill timestamps.
+    const days = new Set();
+    const weekAgo = Date.now() - 7 * 86400000;
+    rows.forEach(r => {
+      if (!r.lastPractice) return;
+      const t = new Date(r.lastPractice).getTime();
+      if (t >= weekAgo) days.add(new Date(t).toISOString().slice(0, 10));
+    });
+
+    return { mastered, struggling, recent, daysThisWeek: days.size, named, total: rows.length };
+  }, [state.data]);
+
+  const pretty = (iso) => {
+    if (!iso) return '—';
+    const d = new Date(iso), today = new Date();
+    const diff = Math.round((new Date(today.getFullYear(), today.getMonth(), today.getDate()) -
+                             new Date(d.getFullYear(), d.getMonth(), d.getDate())) / 86400000);
+    if (diff === 0) return 'today'; if (diff === 1) return 'yesterday';
+    if (diff < 7) return `${diff} days ago`;
+    return d.toLocaleDateString(undefined, { day: 'numeric', month: 'short' });
+  };
+
+  const Stat = ({ n, l }) => (
+    <div className="bg-white border border-slate-200 rounded-2xl px-4 py-3 flex-1 min-w-0">
+      <div className="text-[22px] font-extrabold tracking-tight text-slate-900 tabular-nums">{n}</div>
+      <div className="text-[12.5px] text-slate-500 leading-tight">{l}</div>
+    </div>
+  );
+
+  const name = learner?.name || 'You';
+
+  return (
+    <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
+      <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
+        <div className="max-w-md mx-auto px-4 py-3 flex items-center gap-2">
+          <button onClick={onBack} aria-label="Back" className="text-slate-400 hover:text-slate-700">
+            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
+          </button>
+          <h1 className="text-[17px] font-extrabold tracking-tight">{name}'s progress</h1>
+        </div>
+      </div>
+
+      <div className="app-scroll">
+        <div className="max-w-md mx-auto px-4 pt-5 pb-28 space-y-3">
+          {state.loading ? <LoadingSpinner /> : !state.data ? (
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 text-center">
+              <div className="text-[15px] font-semibold">No practice yet</div>
+              <p className="text-[13.5px] text-slate-500 mt-1">Once {name} starts practising, their progress shows up here.</p>
+            </div>
+          ) : (
+            <>
+              <div className="flex gap-2.5">
+                <Stat n={view.daysThisWeek} l="days practised this week" />
+                <Stat n={view.mastered.length} l="skills mastered" />
+                <Stat n={state.data.current_streak || 0} l="day streak" />
+              </div>
+              <div className="text-[13px] text-slate-500 px-1">
+                Last practised {pretty(state.data.last_practice_date)}
+                {state.data.total_xp ? ` · ${state.data.total_xp} XP earned` : ''}
+              </div>
+
+              {/* what a parent actually wants: where is she stuck */}
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+                <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#c0663f]">Struggling with</div>
+                {view.struggling.length === 0 ? (
+                  <p className="text-[14px] text-slate-500 mt-2">Nothing is stuck right now — everything she's attempted is holding.</p>
+                ) : (
+                  <div className="mt-2 space-y-2">
+                    {view.struggling.slice(0, 5).map(s => (
+                      <div key={s.id} className="flex items-center gap-3">
+                        <span className="flex-1 min-w-0 text-[14.5px] text-slate-800 truncate">{view.named(s.id)}</span>
+                        <span className="shrink-0 text-[12.5px] text-slate-400 tabular-nums">
+                          {s.correct || 0}/{s.attempts || 0} right
+                        </span>
+                      </div>
+                    ))}
+                    <p className="text-[12.5px] text-slate-400 pt-1">These are the ones worth a tutor session.</p>
+                  </div>
+                )}
+              </div>
+
+              {/* what she's been working on */}
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+                <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#5a7a3a]">Recently worked on</div>
+                {view.recent.length === 0 ? (
+                  <p className="text-[14px] text-slate-500 mt-2">Nothing yet.</p>
+                ) : (
+                  <div className="mt-2 space-y-2">
+                    {view.recent.map(s => (
+                      <div key={s.id} className="flex items-center gap-3">
+                        <span className={`w-2 h-2 rounded-full shrink-0 ${s.mastered ? 'bg-[#5a7a3a]' : 'bg-amber-400'}`} />
+                        <span className="flex-1 min-w-0 text-[14.5px] text-slate-800 truncate">{view.named(s.id)}</span>
+                        <span className="shrink-0 text-[12.5px] text-slate-400">{pretty(s.lastPractice)}</span>
+                      </div>
+                    ))}
+                    <p className="text-[12.5px] text-slate-400 pt-1">
+                      <span className="inline-block w-2 h-2 rounded-full bg-[#5a7a3a] mr-1.5" />mastered
+                      <span className="inline-block w-2 h-2 rounded-full bg-amber-400 ml-3 mr-1.5" />still learning
+                    </p>
+                  </div>
+                )}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -6869,6 +7023,7 @@ function AppInner() {
   const [showMessages, setShowMessages] = useState(false);
   const [showAccountSettings, setShowAccountSettings] = useState(false);
   const [showPaywall, setShowPaywall] = useState(false);
+  const [progressLearner, setProgressLearner] = useState(undefined); // undefined = closed, null = self, obj = child
   const [showPrivacyBanner, setShowPrivacyBanner] = useState(() => !IS_NATIVE && !localStorage.getItem('tutagora_privacy_accepted'));
 
   // Admin emails — ONLY these accounts can access the admin dashboard
@@ -6987,6 +7142,16 @@ function AppInner() {
     );
   }
 
+  // A learner's progress — the parent-facing view (native only).
+  if (IS_NATIVE && progressLearner !== undefined) {
+    return (
+      <>
+        <LearnerProgress parentId={auth.user?.id} learner={progressLearner} onBack={() => setProgressLearner(undefined)} />
+        <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
+      </>
+    );
+  }
+
   // The learner's lessons (native only).
   if (IS_NATIVE && page === 'my-lessons') {
     return (
@@ -7062,7 +7227,7 @@ function AppInner() {
     if (IS_NATIVE) {
       return (
         <>
-          <NativeMySpace profile={auth.profile} bookings={bookings} onNavigate={handleNavigate} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onOpenAccountSettings={() => setShowAccountSettings(true)} onLogout={handleLogout} />
+          <NativeMySpace profile={auth.profile} bookings={bookings} onNavigate={handleNavigate} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onOpenAccountSettings={() => setShowAccountSettings(true)} onLogout={handleLogout} onOpenProgress={setProgressLearner} />
           <NativeLessonBanner bookings={bookings} onStartLesson={handleStartLesson} />
           <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
           {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}

@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
-import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
+import { prereqsMet, getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { HorebBot } from './HorebBot.jsx';
@@ -630,7 +630,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     } };
 
     logResponse({
-      studentId: userId, subject: subjectId, skillId: skill.id,
+      studentId: userId, learnerId, subject: subjectId, skillId: skill.id,
       correct, problemType: problem?.type, timeMs: timeTaken, isDiagnostic: true,
       confidence: priorConfidence, skipped: skip || undefined,
     });
@@ -763,7 +763,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       : checkAnswerMatch(answer, problem);
     const timeMs = Date.now() - problemStartRef.current;
     logResponse({
-      studentId: userId, subject: subjectId, skillId,
+      studentId: userId, learnerId, subject: subjectId, skillId,
       correct, problemType: problem?.type, timeMs, isReview: true,
     });
     if (!correct) {
@@ -854,7 +854,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     setScaffoldLevel(faded);
     // Telemetry: capture the response for the HOREB learning loop.
     logResponse({
-      studentId: userId, subject: subjectId, skillId: activeSkill,
+      studentId: userId, learnerId, subject: subjectId, skillId: activeSkill,
       correct, problemType: problem?.type,
       timeMs,
       hintsUsed, attemptNo, taps,
@@ -1018,7 +1018,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     const timeMs = Date.now() - problemStartRef.current;
 
     logResponse({
-      studentId: userId, subject: subjectId, skillId,
+      studentId: userId, learnerId, subject: subjectId, skillId,
       correct, problemType: problem?.type,
       timeMs, isReview: true,
     });
@@ -1803,6 +1803,40 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
             : nextPick
             ? { label: 'Continue learning', sub: nextPick.name, icon: 'play', onClick: () => startLesson(nextPick.id) }
             : { label: 'Take the diagnostic', sub: 'Find your level and get your plan', icon: 'target', onClick: startDiagnostic };
+
+          // ---- TODAY'S SESSION -------------------------------------------
+          // A finite, ordered list with an end. "Continue learning" is an open
+          // tap that never finishes; a learner opening the app needs to know
+          // exactly what today is and when they're done.
+          const todaySession = [
+            ...reviews.slice(0, 3).map(r => ({ id: r.id, name: r.name, kind: 'review' })),
+            ...(nextPick ? [{ id: nextPick.id, name: nextPick.name, kind: 'learn' }] : []),
+          ];
+          const sessionMins = todaySession.reduce((m, s) => m + (s.kind === 'review' ? 2 : 8), 0);
+          const nReview = todaySession.filter(s => s.kind === 'review').length;
+          const nLearn = todaySession.filter(s => s.kind === 'learn').length;
+          const sessionSummary = [
+            nReview ? `${nReview} review${nReview === 1 ? '' : 's'}` : null,
+            nLearn ? `${nLearn} new skill${nLearn === 1 ? '' : 's'}` : null,
+          ].filter(Boolean).join(' + ');
+          const startSessionItem = (item) => item.kind === 'review' ? startReview() : startLesson(item.id);
+
+          // ---- PLACEMENT, EXPLAINED --------------------------------------
+          // A Grade 9 learner placed at Grade 7 reads "Grade 7 · your level" as
+          // a demotion. It isn't — it's the frontier. Say which grade they're
+          // IN, where they're solid to, and exactly what closes the gap.
+          const declaredG = progress.declaredGrade;
+          const behindBy = (Number.isFinite(declaredG) && Number.isFinite(estimatedGrade))
+            ? declaredG - estimatedGrade : 0;
+          // Only what they can actually START today. Listing every unmastered
+          // skill in the band produces "60 skills stand between you and Grade 9"
+          // — the exact verdict this card exists to replace.
+          const catchUpSkills = behindBy > 0
+            ? Object.values(SKILLS)
+                .filter(s => Number.isFinite(s.grade) && s.grade > estimatedGrade && s.grade <= declaredG
+                             && !progress.skills[s.id]?.mastered && prereqsMet(s.id, progress, ctx))
+                .sort((a, b) => a.grade - b.grade || (b.critical ? 1 : 0) - (a.critical ? 1 : 0))
+            : [];
           const confidencePct = brainProfile ? Math.round((brainProfile.confidence || 0) * 100) : null;
           // Daily-goal ring — rendered near the top on mobile and in the right rail on desktop
           const goalRing = (() => {
@@ -1861,7 +1895,14 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 <HorebBot size={44} className="shrink-0" />
                 <div className="min-w-0">
                   <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 leading-tight">{greeting}{firstName ? `, ${firstName}` : ''}</h2>
-                  <p className="text-sm text-slate-500">{gradeLabel(estimatedGrade)} · your level{brainAccelerated ? ' · above grade' : ''}</p>
+                  {/* Never show a bare lower grade to a learner who declared a
+                      higher one — "Grade 7 · your level" to a Grade 9 reads as a
+                      demotion. Name their grade first, then where they're solid. */}
+                  <p className="text-sm text-slate-500">
+                    {behindBy > 0
+                      ? <>{gradeLabel(declaredG)} · solid to {gradeLabel(estimatedGrade)}</>
+                      : <>{gradeLabel(estimatedGrade)} · your level{brainAccelerated ? ' · above grade' : ''}</>}
+                  </p>
                 </div>
               </div>
 
@@ -1869,18 +1910,82 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               <div className="lg:hidden">{goalRing}</div>
 
               {/* Resume card — light, content-forward (fixes the 'AI' navy hero) */}
-              <button onClick={cta.onClick} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-3xl p-5 flex items-center gap-4 hover:border-slate-300 transition-colors">
-                <div className="w-[68px] h-[68px] rounded-2xl bg-[#f5f6fc] border border-[#e8e9f6] flex items-center justify-center shrink-0 text-[#6d6fcb]">
-                  <Icon name={cta.icon} className="w-7 h-7" />
+              {/* ===== TODAY'S SESSION — finite, ordered, with an end ===== */}
+              {todaySession.length > 0 ? (
+                <div className="bg-white border border-slate-200 shadow-sm rounded-3xl overflow-hidden">
+                  <div className="px-5 pt-4 pb-3">
+                    <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-700">Today's session</div>
+                    <div className="text-[18px] font-extrabold tracking-tight text-slate-900 mt-0.5 leading-tight">
+                      {sessionSummary} · about {sessionMins} min
+                    </div>
+                  </div>
+                  <div className="px-3 pb-3 space-y-1.5">
+                    {todaySession.map((item, idx) => (
+                      <button key={`${item.kind}-${item.id}`} onClick={() => startSessionItem(item)}
+                        className={`w-full text-left rounded-2xl px-3 py-3 flex items-center gap-3 transition-colors ${
+                          idx === 0 ? 'bg-[#f5f6fc] border border-[#e2e5f6] hover:bg-[#eef0fb]' : 'hover:bg-slate-50'}`}>
+                        <span className={`w-8 h-8 rounded-full shrink-0 flex items-center justify-center text-[13px] font-extrabold ${
+                          idx === 0 ? 'bg-amber-400 text-slate-900' : 'bg-slate-100 text-slate-400'}`}>{idx + 1}</span>
+                        <span className="flex-1 min-w-0">
+                          <span className={`block text-[10.5px] font-bold tracking-[.08em] uppercase ${
+                            item.kind === 'review' ? 'text-[#6d6fcb]' : 'text-amber-700'}`}>
+                            {item.kind === 'review' ? 'Review' : 'New skill'}
+                          </span>
+                          <span className="block text-[15px] font-bold text-slate-900 truncate leading-tight">{item.name}</span>
+                        </span>
+                        {idx === 0 && (
+                          <span className="shrink-0 inline-flex items-center gap-1.5 bg-amber-400 text-slate-900 font-bold rounded-xl px-3.5 py-2 text-[13.5px]">
+                            <Icon name="play" className="w-3.5 h-3.5" /> Start
+                          </span>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="px-5 py-2.5 border-t border-slate-100 text-[12.5px] text-slate-400">
+                    Finish these and you're done for today.
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-700">{cta.label}</div>
-                  <div className="text-[18px] font-extrabold tracking-tight text-slate-900 mt-1 leading-tight">{cta.sub}</div>
+              ) : (
+                <button onClick={cta.onClick} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-3xl p-5 flex items-center gap-4 hover:border-slate-300 transition-colors">
+                  <div className="w-[68px] h-[68px] rounded-2xl bg-[#f5f6fc] border border-[#e8e9f6] flex items-center justify-center shrink-0 text-[#6d6fcb]">
+                    <Icon name={cta.icon} className="w-7 h-7" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-700">{cta.label}</div>
+                    <div className="text-[18px] font-extrabold tracking-tight text-slate-900 mt-1 leading-tight">{cta.sub}</div>
+                  </div>
+                  <span className="shrink-0 inline-flex items-center gap-2 bg-amber-400 text-slate-900 font-bold rounded-2xl px-5 py-2.5">
+                    <Icon name="play" className="w-4 h-4" /> Go
+                  </span>
+                </button>
+              )}
+
+              {/* ===== PLACEMENT, EXPLAINED — a plan, not a verdict ===== */}
+              {behindBy > 0 && catchUpSkills.length > 0 && (
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5">
+                  <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Where you stand</div>
+                  <p className="text-[16px] text-slate-800 mt-1.5 leading-snug">
+                    You're in <b>{gradeLabel(declaredG)}</b>, and you're solid all the way to <b>{gradeLabel(estimatedGrade)}</b>.
+                    {' '}Here's what to close next — start at the top.
+                  </p>
+                  <div className="mt-3 space-y-1">
+                    {catchUpSkills.slice(0, 4).map(s => (
+                      <button key={s.id} onClick={() => startLesson(s.id)}
+                        className="w-full text-left flex items-center gap-2.5 py-1.5 px-2 -mx-2 rounded-lg hover:bg-slate-50 transition-colors">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
+                        <span className="text-[14.5px] text-slate-700 truncate flex-1">{s.name}</span>
+                        <span className="text-[12px] text-slate-400 shrink-0">{gradeLabel(s.grade)}</span>
+                      </button>
+                    ))}
+                  </div>
+                  {catchUpSkills.length > 4 && (
+                    <div className="text-[13px] text-slate-400 mt-2">More open up as you go.</div>
+                  )}
+                  <p className="text-[13px] text-slate-500 mt-3 pt-3 border-t border-slate-100">
+                    Nothing here is a step backwards — it's the shortest route forward.
+                  </p>
                 </div>
-                <span className="shrink-0 inline-flex items-center gap-2 bg-amber-400 text-slate-900 font-bold rounded-2xl px-5 py-2.5">
-                  <Icon name="play" className="w-4 h-4" /> Go
-                </span>
-              </button>
+              )}
 
               {/* Your path — the next few skills as designed cards with status */}
               {path.length > 0 && (
