@@ -153,10 +153,25 @@ export const getClassSyllabus = (progress, ctx, band = null) => {
   const inBand = c.skillList.filter(s => gradeOf(s, c.curriculum) === grade);
   if (!inBand.length) return null;
 
+  // Under a real syllabus (CBC, Cambridge) a skill only belongs to a grade if
+  // it is TAGGED to it. gradeOf falls back to HOREB's own grade for anything
+  // untagged, which quietly mixes senior work — the whole quadratics chain,
+  // surds, circle theorems — into a CBC Grade 9 view. Keep it visible, but
+  // label it honestly rather than counting it as part of her syllabus.
+  // A tag object alone is not enough — several skills carry a cbc entry with a
+  // strand but no grade. It counts as this grade only if it SAYS so.
+  const tagged = (s) => {
+    if (c.curriculum === NATIVE) return true;
+    const t = s.curricula?.[c.curriculum];
+    return !!t && (t.grade === grade || t.stage === grade);
+  };
+  const core = inBand.filter(tagged);
+  const beyond = inBand.filter(s => !tagged(s));
+
   const byStrand = {};
   let mastered = 0;
 
-  for (const s of inBand) {
+  for (const s of core) {
     const sp = progress.skills[s.id];
     const isMastered = !!sp?.mastered;
     if (isMastered) mastered++;
@@ -186,9 +201,14 @@ export const getClassSyllabus = (progress, ctx, band = null) => {
 
   return {
     grade,
-    total: inBand.length,
+    total: core.length,
     mastered,
-    percent: Math.round((mastered / inBand.length) * 100),
+    percent: core.length ? Math.round((mastered / core.length) * 100) : 0,
+    // Available to her, but not part of this syllabus's Grade 9.
+    beyond: beyond.map(s => ({
+      id: s.id, name: s.name,
+      mastered: !!progress.skills[s.id]?.mastered,
+    })),
     strands: Object.entries(byStrand)
       .map(([name, skills]) => ({
         name,

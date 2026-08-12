@@ -60,12 +60,12 @@ export const AreaModel = ({ a, b }) => {
         <text x={X0 - 16} y={Y0 + RH / 2 + 5} textAnchor="middle" className="fill-slate-500" style={{ fontSize: 13, fontWeight: 700 }}>{b}</text>
 
         {/* tens region */}
-        <rect x={X0} y={Y0} width={tensW} height={RH} rx="4" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1.5" style={fade(step >= 2)} />
-        <text x={X0 + tensW / 2} y={Y0 + RH / 2 + 7} textAnchor="middle" fill="#1d4ed8" style={{ fontSize: 22, fontWeight: 800, ...fade(step >= 2) }}>{p1}</text>
+        <rect x={X0} y={Y0} width={tensW} height={RH} rx="4" fill="#eef1f8" stroke="#6d6fcb" strokeWidth="1.5" style={fade(step >= 2)} />
+        <text x={X0 + tensW / 2} y={Y0 + RH / 2 + 7} textAnchor="middle" fill="#5658b8" style={{ fontSize: 22, fontWeight: 800, ...fade(step >= 2) }}>{p1}</text>
 
         {/* ones region */}
-        <rect x={splitX} y={Y0} width={onesW} height={RH} rx="4" fill="#dcfce7" stroke="#22c55e" strokeWidth="1.5" style={fade(step >= 3)} />
-        <text x={splitX + onesW / 2} y={Y0 + RH / 2 + 6} textAnchor="middle" fill="#15803d" style={{ fontSize: 16, fontWeight: 800, ...fade(step >= 3) }}>{p2}</text>
+        <rect x={splitX} y={Y0} width={onesW} height={RH} rx="4" fill="#f2f6ec" stroke="#7ca355" strokeWidth="1.5" style={fade(step >= 3)} />
+        <text x={splitX + onesW / 2} y={Y0 + RH / 2 + 6} textAnchor="middle" fill="#5a7a3a" style={{ fontSize: 16, fontWeight: 800, ...fade(step >= 3) }}>{p2}</text>
 
         {/* outline + split line */}
         <rect x={X0} y={Y0} width={RW} height={RH} rx="4" fill="none" stroke="#94a3b8" strokeWidth="1.5" />
@@ -75,12 +75,12 @@ export const AreaModel = ({ a, b }) => {
       {/* the arithmetic, revealed in step with the picture */}
       <div className="mt-2 space-y-1.5 text-[15px] tabular-nums" style={{ minHeight: 78 }}>
         <div className="flex items-center gap-2" style={fade(step >= 2)}>
-          <span className="w-2.5 h-2.5 rounded-sm bg-[#3b82f6]" />
-          <span className="text-slate-700">{tens} × {b} = <b className="text-[#1d4ed8]">{p1}</b></span>
+          <span className="w-2.5 h-2.5 rounded-sm bg-[#6d6fcb]" />
+          <span className="text-slate-700">{tens} × {b} = <b className="text-[#5658b8]">{p1}</b></span>
         </div>
         <div className="flex items-center gap-2" style={fade(step >= 3)}>
-          <span className="w-2.5 h-2.5 rounded-sm bg-[#22c55e]" />
-          <span className="text-slate-700">{ones} × {b} = <b className="text-[#15803d]">{p2}</b></span>
+          <span className="w-2.5 h-2.5 rounded-sm bg-[#7ca355]" />
+          <span className="text-slate-700">{ones} × {b} = <b className="text-[#5a7a3a]">{p2}</b></span>
         </div>
         <div className="pt-1.5 border-t border-slate-200 flex items-center justify-between" style={fade(step >= 4)}>
           <span className="text-slate-700">{p1} + {p2} =</span>

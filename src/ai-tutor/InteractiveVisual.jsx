@@ -63,13 +63,13 @@ const LinearGraphVisual = ({ data, onAnswer, disabled }) => {
     const ctx = canvas.getContext('2d');
     const w = canvas.width, h = canvas.height;
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = '#0f172a';
+    ctx.fillStyle = '#fdfcf8';
     ctx.fillRect(0, 0, w, h);
     drawGrid(ctx, bounds, w, h);
 
     // Draw the target line (dashed, faint)
     if (data.showTarget) {
-      ctx.strokeStyle = 'rgba(239, 68, 68, 0.4)';
+      ctx.strokeStyle = 'rgba(192, 102, 63, 0.75)';
       ctx.lineWidth = 2;
       ctx.setLineDash([6, 4]);
       ctx.beginPath();
@@ -82,7 +82,7 @@ const LinearGraphVisual = ({ data, onAnswer, disabled }) => {
     }
 
     // Draw user's line
-    ctx.strokeStyle = '#22c55e';
+    ctx.strokeStyle = '#5a7a3a';
     ctx.lineWidth = 2.5;
     ctx.beginPath();
     const uy1 = m * bounds.xMin + c;
@@ -92,7 +92,7 @@ const LinearGraphVisual = ({ data, onAnswer, disabled }) => {
     ctx.moveTo(up1.cx, up1.cy); ctx.lineTo(up2.cx, up2.cy); ctx.stroke();
 
     // Equation label
-    ctx.fillStyle = '#22c55e';
+    ctx.fillStyle = '#5a7a3a';
     ctx.font = 'bold 14px Inter, monospace';
     ctx.textAlign = 'left';
     const sign = c >= 0 ? '+' : '';
@@ -107,17 +107,17 @@ const LinearGraphVisual = ({ data, onAnswer, disabled }) => {
 
   return (
     <div className="mb-4">
-      <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
+      <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-200" style={{ maxWidth: 400 }} />
       <div className="mt-3 space-y-3">
         <div className="flex items-center gap-3">
-          <label className="text-sm text-slate-400 w-24">Gradient (m):</label>
-          <input type="range" min={-5} max={5} step={0.5} value={m} onChange={e => setM(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-emerald-500" />
-          <span className="text-emerald-400 font-mono w-10 text-right">{m}</span>
+          <label className="text-sm text-slate-500 w-24">Gradient (m):</label>
+          <input type="range" min={-5} max={5} step={0.5} value={m} onChange={e => setM(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-[#7ca355]" />
+          <span className="text-[#5a7a3a] font-mono w-10 text-right">{m}</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-slate-400 w-24">y-intercept (c):</label>
-          <input type="range" min={-6} max={6} step={0.5} value={c} onChange={e => setC(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-emerald-500" />
-          <span className="text-emerald-400 font-mono w-10 text-right">{c}</span>
+          <label className="text-sm text-slate-500 w-24">y-intercept (c):</label>
+          <input type="range" min={-6} max={6} step={0.5} value={c} onChange={e => setC(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-[#7ca355]" />
+          <span className="text-[#5a7a3a] font-mono w-10 text-right">{c}</span>
         </div>
       </div>
       {data.showTarget && <p className="text-xs text-slate-500 mt-2">Adjust the sliders to match the red dashed target line</p>}
@@ -137,7 +137,7 @@ const CoordinatePlotterVisual = ({ data, onAnswer, disabled }) => {
     const ctx = canvas.getContext('2d');
     const w = canvas.width, h = canvas.height;
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = '#0f172a';
+    ctx.fillStyle = '#fdfcf8';
     ctx.fillRect(0, 0, w, h);
     drawGrid(ctx, bounds, w, h);
 
@@ -155,8 +155,8 @@ const CoordinatePlotterVisual = ({ data, onAnswer, disabled }) => {
     plotted.forEach(pt => {
       const { cx, cy } = toCanvas(pt.x, pt.y, bounds, { width: w, height: h });
       ctx.beginPath(); ctx.arc(cx, cy, 6, 0, Math.PI * 2);
-      ctx.fillStyle = '#22c55e'; ctx.fill();
-      ctx.fillStyle = '#fff'; ctx.font = '10px Inter'; ctx.textAlign = 'center';
+      ctx.fillStyle = '#5a7a3a'; ctx.fill();
+      ctx.fillStyle = '#1e293b'; ctx.font = '10px Inter'; ctx.textAlign = 'center';
       ctx.fillText(`(${pt.x},${pt.y})`, cx, cy - 12);
     });
   }, [plotted, bounds, data]);
@@ -189,9 +189,9 @@ const CoordinatePlotterVisual = ({ data, onAnswer, disabled }) => {
 
   return (
     <div className="mb-4">
-      <canvas ref={canvasRef} width={360} height={360} onClick={handleClick} className="w-full rounded-xl border border-slate-700 cursor-crosshair" style={{ maxWidth: 400 }} />
+      <canvas ref={canvasRef} width={360} height={360} onClick={handleClick} className="w-full rounded-xl border border-slate-200 cursor-crosshair" style={{ maxWidth: 400 }} />
       <p className="text-xs text-slate-500 mt-2">Tap/click on the grid to plot points. Tap again to remove.</p>
-      {plotted.length > 0 && <p className="text-xs text-emerald-400 mt-1">Plotted: {plotted.map(p => `(${p.x}, ${p.y})`).join(', ')}</p>}
+      {plotted.length > 0 && <p className="text-xs text-[#5a7a3a] mt-1">Plotted: {plotted.map(p => `(${p.x}, ${p.y})`).join(', ')}</p>}
     </div>
   );
 };
@@ -210,13 +210,13 @@ const QuadraticGraphVisual = ({ data, onAnswer, disabled }) => {
     const ctx = canvas.getContext('2d');
     const w = canvas.width, ht = canvas.height;
     ctx.clearRect(0, 0, w, ht);
-    ctx.fillStyle = '#0f172a';
+    ctx.fillStyle = '#fdfcf8';
     ctx.fillRect(0, 0, w, ht);
     drawGrid(ctx, bounds, w, ht);
 
     // Target parabola (dashed)
     if (data.showTarget) {
-      ctx.strokeStyle = 'rgba(239, 68, 68, 0.4)';
+      ctx.strokeStyle = 'rgba(192, 102, 63, 0.75)';
       ctx.lineWidth = 2;
       ctx.setLineDash([6, 4]);
       ctx.beginPath();
@@ -234,7 +234,7 @@ const QuadraticGraphVisual = ({ data, onAnswer, disabled }) => {
     }
 
     // User parabola
-    ctx.strokeStyle = '#22c55e';
+    ctx.strokeStyle = '#5a7a3a';
     ctx.lineWidth = 2.5;
     ctx.beginPath();
     let first = true;
@@ -251,10 +251,10 @@ const QuadraticGraphVisual = ({ data, onAnswer, disabled }) => {
     // Vertex marker
     const vtx = toCanvas(h, k, bounds, { width: w, height: ht });
     ctx.beginPath(); ctx.arc(vtx.cx, vtx.cy, 5, 0, Math.PI * 2);
-    ctx.fillStyle = '#f97316'; ctx.fill();
+    ctx.fillStyle = '#c98a14'; ctx.fill();
 
     // Equation label
-    ctx.fillStyle = '#22c55e';
+    ctx.fillStyle = '#5a7a3a';
     ctx.font = 'bold 13px Inter, monospace';
     ctx.textAlign = 'left';
     const hs = h >= 0 ? `- ${h}` : `+ ${Math.abs(h)}`;
@@ -268,22 +268,22 @@ const QuadraticGraphVisual = ({ data, onAnswer, disabled }) => {
 
   return (
     <div className="mb-4">
-      <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
+      <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-200" style={{ maxWidth: 400 }} />
       <div className="mt-3 space-y-2">
         <div className="flex items-center gap-3">
-          <label className="text-sm text-slate-400 w-20">Stretch (a):</label>
-          <input type="range" min={-3} max={3} step={0.5} value={a} onChange={e => setA(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-emerald-500" />
-          <span className="text-emerald-400 font-mono w-10 text-right">{a}</span>
+          <label className="text-sm text-slate-500 w-20">Stretch (a):</label>
+          <input type="range" min={-3} max={3} step={0.5} value={a} onChange={e => setA(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-[#7ca355]" />
+          <span className="text-[#5a7a3a] font-mono w-10 text-right">{a}</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-slate-400 w-20">Vertex x (h):</label>
-          <input type="range" min={-5} max={5} step={0.5} value={h} onChange={e => setH(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-          <span className="text-orange-400 font-mono w-10 text-right">{h}</span>
+          <label className="text-sm text-slate-500 w-20">Vertex x (h):</label>
+          <input type="range" min={-5} max={5} step={0.5} value={h} onChange={e => setH(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-[#c98a14]" />
+          <span className="text-[#c98a14] font-mono w-10 text-right">{h}</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-slate-400 w-20">Vertex y (k):</label>
-          <input type="range" min={-8} max={8} step={0.5} value={k} onChange={e => setK(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-          <span className="text-orange-400 font-mono w-10 text-right">{k}</span>
+          <label className="text-sm text-slate-500 w-20">Vertex y (k):</label>
+          <input type="range" min={-8} max={8} step={0.5} value={k} onChange={e => setK(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-[#c98a14]" />
+          <span className="text-[#c98a14] font-mono w-10 text-right">{k}</span>
         </div>
       </div>
     </div>
@@ -303,7 +303,7 @@ const AngleExplorerVisual = ({ data, onAnswer, disabled }) => {
     const ctx = canvas.getContext('2d');
     const w = canvas.width, h = canvas.height;
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = '#0f172a';
+    ctx.fillStyle = '#fdfcf8';
     ctx.fillRect(0, 0, w, h);
 
     const rad = (angle * Math.PI) / 180;
@@ -313,7 +313,7 @@ const AngleExplorerVisual = ({ data, onAnswer, disabled }) => {
     // Arc
     ctx.beginPath();
     ctx.arc(center.x, center.y, 40, 0, -rad, angle > 0);
-    ctx.strokeStyle = '#f97316'; ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.strokeStyle = '#c98a14'; ctx.lineWidth = 2.5; ctx.stroke();
 
     // Fill arc
     ctx.beginPath();
@@ -332,15 +332,15 @@ const AngleExplorerVisual = ({ data, onAnswer, disabled }) => {
     ctx.beginPath();
     ctx.moveTo(center.x, center.y);
     ctx.lineTo(endX, endY);
-    ctx.strokeStyle = '#22c55e'; ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.strokeStyle = '#5a7a3a'; ctx.lineWidth = 2.5; ctx.stroke();
 
     // Draggable endpoint
     ctx.beginPath(); ctx.arc(endX, endY, 8, 0, Math.PI * 2);
-    ctx.fillStyle = '#22c55e'; ctx.fill();
-    ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.fillStyle = '#5a7a3a'; ctx.fill();
+    ctx.strokeStyle = '#1e293b'; ctx.lineWidth = 1.5; ctx.stroke();
 
     // Angle label
-    ctx.fillStyle = '#f97316';
+    ctx.fillStyle = '#c98a14';
     ctx.font = 'bold 16px Inter';
     ctx.textAlign = 'center';
     const labelRad = (-rad) / 2;
@@ -366,11 +366,11 @@ const AngleExplorerVisual = ({ data, onAnswer, disabled }) => {
 
   return (
     <div className="mb-4">
-      <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
+      <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-200" style={{ maxWidth: 400 }} />
       <div className="mt-3 flex items-center gap-3">
-        <label className="text-sm text-slate-400 w-20">Angle:</label>
-        <input type="range" min={0} max={360} step={1} value={angle} onChange={e => setAngle(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-        <span className="text-orange-400 font-mono w-14 text-right">{angle}°</span>
+        <label className="text-sm text-slate-500 w-20">Angle:</label>
+        <input type="range" min={0} max={360} step={1} value={angle} onChange={e => setAngle(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-[#c98a14]" />
+        <span className="text-[#c98a14] font-mono w-14 text-right">{angle}°</span>
       </div>
     </div>
   );
@@ -389,11 +389,11 @@ const TriangleExplorerVisual = ({ data, onAnswer, disabled }) => {
     const ctx = canvas.getContext('2d');
     const w = canvas.width, h = canvas.height;
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = '#0f172a';
+    ctx.fillStyle = '#fdfcf8';
     ctx.fillRect(0, 0, w, h);
 
     if (angleC <= 0 || angleA <= 0 || angleB <= 0) {
-      ctx.fillStyle = '#ef4444';
+      ctx.fillStyle = '#c0663f';
       ctx.font = '14px Inter';
       ctx.textAlign = 'center';
       ctx.fillText('Invalid triangle (angles must sum to 180°)', w / 2, h / 2);
@@ -417,22 +417,22 @@ const TriangleExplorerVisual = ({ data, onAnswer, disabled }) => {
     ctx.beginPath();
     ctx.moveTo(ax, ay); ctx.lineTo(bx, by); ctx.lineTo(cx2, cy2); ctx.closePath();
     ctx.fillStyle = 'rgba(34, 197, 94, 0.1)'; ctx.fill();
-    ctx.strokeStyle = '#22c55e'; ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.strokeStyle = '#5a7a3a'; ctx.lineWidth = 2.5; ctx.stroke();
 
     // Vertices
     [[ax, ay], [bx, by], [cx2, cy2]].forEach(([vx, vy]) => {
       ctx.beginPath(); ctx.arc(vx, vy, 4, 0, Math.PI * 2);
-      ctx.fillStyle = '#f97316'; ctx.fill();
+      ctx.fillStyle = '#c98a14'; ctx.fill();
     });
 
     // Angle labels
     ctx.font = 'bold 13px Inter';
     ctx.textAlign = 'center';
-    ctx.fillStyle = '#f97316';
+    ctx.fillStyle = '#c98a14';
     ctx.fillText(`A = ${angleA}°`, ax - 10, ay + 20);
-    ctx.fillStyle = '#3b82f6';
+    ctx.fillStyle = '#6d6fcb';
     ctx.fillText(`B = ${angleB}°`, bx + 10, by + 20);
-    ctx.fillStyle = '#a855f7';
+    ctx.fillStyle = '#7d7fd4';
     ctx.fillText(`C = ${angleC}°`, cx2, cy2 - 12);
 
     // Sum label
@@ -447,22 +447,22 @@ const TriangleExplorerVisual = ({ data, onAnswer, disabled }) => {
 
   return (
     <div className="mb-4">
-      <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
+      <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-200" style={{ maxWidth: 400 }} />
       <div className="mt-3 space-y-2">
         <div className="flex items-center gap-3">
-          <label className="text-sm text-orange-400 w-20">Angle A:</label>
-          <input type="range" min={10} max={150} step={1} value={angleA} onChange={e => setAngleA(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-          <span className="text-orange-400 font-mono w-12 text-right">{angleA}°</span>
+          <label className="text-sm text-[#c98a14] w-20">Angle A:</label>
+          <input type="range" min={10} max={150} step={1} value={angleA} onChange={e => setAngleA(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-[#c98a14]" />
+          <span className="text-[#c98a14] font-mono w-12 text-right">{angleA}°</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-blue-400 w-20">Angle B:</label>
+          <label className="text-sm text-[#6d6fcb] w-20">Angle B:</label>
           <input type="range" min={10} max={Math.min(150, 170 - angleA)} step={1} value={Math.min(angleB, 170 - angleA)} onChange={e => setAngleB(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-blue-500" />
-          <span className="text-blue-400 font-mono w-12 text-right">{angleB}°</span>
+          <span className="text-[#6d6fcb] font-mono w-12 text-right">{angleB}°</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-purple-400 w-20">Angle C:</label>
+          <label className="text-sm text-[#7d7fd4] w-20">Angle C:</label>
           <span className="flex-1 text-sm text-slate-500">auto-calculated</span>
-          <span className="text-purple-400 font-mono w-12 text-right">{angleC}°</span>
+          <span className="text-[#7d7fd4] font-mono w-12 text-right">{angleC}°</span>
         </div>
       </div>
     </div>
@@ -482,7 +482,7 @@ const PythagorasVisual = ({ data, onAnswer, disabled }) => {
     const ctx = canvas.getContext('2d');
     const w = canvas.width, h = canvas.height;
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = '#0f172a';
+    ctx.fillStyle = '#fdfcf8';
     ctx.fillRect(0, 0, w, h);
 
     const scale = 22;
@@ -495,7 +495,7 @@ const PythagorasVisual = ({ data, onAnswer, disabled }) => {
     ctx.beginPath();
     ctx.moveTo(ax, ay); ctx.lineTo(bx, by); ctx.lineTo(cx2, cy2); ctx.closePath();
     ctx.fillStyle = 'rgba(34, 197, 94, 0.08)'; ctx.fill();
-    ctx.strokeStyle = '#22c55e'; ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.strokeStyle = '#5a7a3a'; ctx.lineWidth = 2.5; ctx.stroke();
 
     // Right angle marker
     const sq = 12;
@@ -506,11 +506,11 @@ const PythagorasVisual = ({ data, onAnswer, disabled }) => {
 
     // Side labels
     ctx.font = 'bold 14px Inter'; ctx.textAlign = 'center';
-    ctx.fillStyle = '#f97316';
+    ctx.fillStyle = '#c98a14';
     ctx.fillText(`a = ${sideA}`, ax - 25, (ay + cy2) / 2);
-    ctx.fillStyle = '#3b82f6';
+    ctx.fillStyle = '#6d6fcb';
     ctx.fillText(`b = ${sideB}`, (ax + bx) / 2, ay + 22);
-    ctx.fillStyle = '#22c55e';
+    ctx.fillStyle = '#5a7a3a';
     ctx.fillText(`c = ${sideC.toFixed(2)}`, (bx + cx2) / 2 + 20, (by + cy2) / 2 - 5);
 
     // Squares visualization
@@ -539,17 +539,17 @@ const PythagorasVisual = ({ data, onAnswer, disabled }) => {
 
   return (
     <div className="mb-4">
-      <canvas ref={canvasRef} width={360} height={340} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
+      <canvas ref={canvasRef} width={360} height={340} className="w-full rounded-xl border border-slate-200" style={{ maxWidth: 400 }} />
       <div className="mt-3 space-y-2">
         <div className="flex items-center gap-3">
-          <label className="text-sm text-orange-400 w-16">Side a:</label>
-          <input type="range" min={1} max={10} step={0.5} value={sideA} onChange={e => setSideA(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-          <span className="text-orange-400 font-mono w-10 text-right">{sideA}</span>
+          <label className="text-sm text-[#c98a14] w-16">Side a:</label>
+          <input type="range" min={1} max={10} step={0.5} value={sideA} onChange={e => setSideA(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-[#c98a14]" />
+          <span className="text-[#c98a14] font-mono w-10 text-right">{sideA}</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-blue-400 w-16">Side b:</label>
+          <label className="text-sm text-[#6d6fcb] w-16">Side b:</label>
           <input type="range" min={1} max={10} step={0.5} value={sideB} onChange={e => setSideB(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-blue-500" />
-          <span className="text-blue-400 font-mono w-10 text-right">{sideB}</span>
+          <span className="text-[#6d6fcb] font-mono w-10 text-right">{sideB}</span>
         </div>
       </div>
     </div>
@@ -570,7 +570,7 @@ const AreaExplorerVisual = ({ data, onAnswer, disabled }) => {
     const ctx = canvas.getContext('2d');
     const w = canvas.width, h = canvas.height;
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = '#0f172a';
+    ctx.fillStyle = '#fdfcf8';
     ctx.fillRect(0, 0, w, h);
 
     const scale = 25;
@@ -579,7 +579,7 @@ const AreaExplorerVisual = ({ data, onAnswer, disabled }) => {
     if (shape === 'circle') {
       const r = radius * scale;
       // Grid overlay
-      ctx.strokeStyle = '#1e293b'; ctx.lineWidth = 0.5;
+      ctx.strokeStyle = '#475569'; ctx.lineWidth = 0.5;
       for (let gx = cx - r - scale; gx <= cx + r + scale; gx += scale) {
         ctx.beginPath(); ctx.moveTo(gx, cy - r - scale); ctx.lineTo(gx, cy + r + scale); ctx.stroke();
       }
@@ -589,12 +589,12 @@ const AreaExplorerVisual = ({ data, onAnswer, disabled }) => {
       // Circle
       ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2);
       ctx.fillStyle = 'rgba(34, 197, 94, 0.1)'; ctx.fill();
-      ctx.strokeStyle = '#22c55e'; ctx.lineWidth = 2.5; ctx.stroke();
+      ctx.strokeStyle = '#5a7a3a'; ctx.lineWidth = 2.5; ctx.stroke();
       // Radius line
       ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx + r, cy);
-      ctx.strokeStyle = '#f97316'; ctx.lineWidth = 2; ctx.setLineDash([4, 3]); ctx.stroke(); ctx.setLineDash([]);
+      ctx.strokeStyle = '#c98a14'; ctx.lineWidth = 2; ctx.setLineDash([4, 3]); ctx.stroke(); ctx.setLineDash([]);
       // Labels
-      ctx.fillStyle = '#f97316'; ctx.font = 'bold 14px Inter'; ctx.textAlign = 'center';
+      ctx.fillStyle = '#c98a14'; ctx.font = 'bold 14px Inter'; ctx.textAlign = 'center';
       ctx.fillText(`r = ${radius}`, cx + r / 2, cy - 10);
       ctx.fillStyle = '#94a3b8'; ctx.font = '13px Inter';
       const area = Math.PI * radius * radius;
@@ -606,14 +606,14 @@ const AreaExplorerVisual = ({ data, onAnswer, disabled }) => {
       ctx.beginPath();
       ctx.moveTo(lx, ly); ctx.lineTo(lx + bw, ly); ctx.lineTo(lx + bw / 2, ly - bh); ctx.closePath();
       ctx.fillStyle = 'rgba(34, 197, 94, 0.1)'; ctx.fill();
-      ctx.strokeStyle = '#22c55e'; ctx.lineWidth = 2.5; ctx.stroke();
+      ctx.strokeStyle = '#5a7a3a'; ctx.lineWidth = 2.5; ctx.stroke();
       // Height dashed
       ctx.beginPath(); ctx.moveTo(lx + bw / 2, ly); ctx.lineTo(lx + bw / 2, ly - bh);
-      ctx.strokeStyle = '#f97316'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 3]); ctx.stroke(); ctx.setLineDash([]);
+      ctx.strokeStyle = '#c98a14'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 3]); ctx.stroke(); ctx.setLineDash([]);
       // Labels
-      ctx.fillStyle = '#3b82f6'; ctx.font = 'bold 13px Inter'; ctx.textAlign = 'center';
+      ctx.fillStyle = '#6d6fcb'; ctx.font = 'bold 13px Inter'; ctx.textAlign = 'center';
       ctx.fillText(`base = ${base}`, cx, ly + 18);
-      ctx.fillStyle = '#f97316';
+      ctx.fillStyle = '#c98a14';
       ctx.fillText(`h = ${height}`, lx + bw / 2 + 28, cy);
       ctx.fillStyle = '#94a3b8'; ctx.font = '13px Inter';
       const area = 0.5 * base * height;
@@ -624,26 +624,26 @@ const AreaExplorerVisual = ({ data, onAnswer, disabled }) => {
 
   return (
     <div className="mb-4">
-      <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
+      <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-200" style={{ maxWidth: 400 }} />
       <div className="mt-3 space-y-2">
         {shape === 'circle' && (
           <div className="flex items-center gap-3">
-            <label className="text-sm text-orange-400 w-16">Radius:</label>
-            <input type="range" min={1} max={6} step={0.5} value={radius} onChange={e => setRadius(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-            <span className="text-orange-400 font-mono w-10 text-right">{radius}</span>
+            <label className="text-sm text-[#c98a14] w-16">Radius:</label>
+            <input type="range" min={1} max={6} step={0.5} value={radius} onChange={e => setRadius(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-[#c98a14]" />
+            <span className="text-[#c98a14] font-mono w-10 text-right">{radius}</span>
           </div>
         )}
         {shape === 'triangle' && (
           <>
             <div className="flex items-center gap-3">
-              <label className="text-sm text-blue-400 w-16">Base:</label>
+              <label className="text-sm text-[#6d6fcb] w-16">Base:</label>
               <input type="range" min={2} max={10} step={1} value={base} onChange={e => setBase(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-blue-500" />
-              <span className="text-blue-400 font-mono w-10 text-right">{base}</span>
+              <span className="text-[#6d6fcb] font-mono w-10 text-right">{base}</span>
             </div>
             <div className="flex items-center gap-3">
-              <label className="text-sm text-orange-400 w-16">Height:</label>
-              <input type="range" min={2} max={10} step={1} value={height} onChange={e => setHeight(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-              <span className="text-orange-400 font-mono w-10 text-right">{height}</span>
+              <label className="text-sm text-[#c98a14] w-16">Height:</label>
+              <input type="range" min={2} max={10} step={1} value={height} onChange={e => setHeight(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-[#c98a14]" />
+              <span className="text-[#c98a14] font-mono w-10 text-right">{height}</span>
             </div>
           </>
         )}
@@ -669,7 +669,7 @@ const GradientExplorerVisual = ({ data, onAnswer, disabled }) => {
     const ctx = canvas.getContext('2d');
     const w = canvas.width, h = canvas.height;
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = '#0f172a';
+    ctx.fillStyle = '#fdfcf8';
     ctx.fillRect(0, 0, w, h);
     drawGrid(ctx, bounds, w, h);
 
@@ -683,35 +683,35 @@ const GradientExplorerVisual = ({ data, onAnswer, disabled }) => {
       const ly2 = gradient * bounds.xMax + c;
       const lp1 = toCanvas(bounds.xMin, ly1, bounds, { width: w, height: h });
       const lp2 = toCanvas(bounds.xMax, ly2, bounds, { width: w, height: h });
-      ctx.strokeStyle = '#22c55e'; ctx.lineWidth = 2;
+      ctx.strokeStyle = '#5a7a3a'; ctx.lineWidth = 2;
       ctx.beginPath(); ctx.moveTo(lp1.cx, lp1.cy); ctx.lineTo(lp2.cx, lp2.cy); ctx.stroke();
     }
 
     // Rise/run triangle
-    ctx.strokeStyle = '#f97316'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 3]);
+    ctx.strokeStyle = '#c98a14'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 3]);
     ctx.beginPath(); ctx.moveTo(p1.cx, p1.cy); ctx.lineTo(p2.cx, p1.cy); ctx.lineTo(p2.cx, p2.cy); ctx.stroke();
     ctx.setLineDash([]);
 
     // Rise/run labels
-    ctx.fillStyle = '#3b82f6'; ctx.font = '12px Inter'; ctx.textAlign = 'center';
+    ctx.fillStyle = '#6d6fcb'; ctx.font = '12px Inter'; ctx.textAlign = 'center';
     ctx.fillText(`run = ${x2 - x1}`, (p1.cx + p2.cx) / 2, p1.cy + 16);
-    ctx.fillStyle = '#f97316'; ctx.textAlign = 'left';
+    ctx.fillStyle = '#c98a14'; ctx.textAlign = 'left';
     ctx.fillText(`rise = ${y2 - y1}`, p2.cx + 6, (p1.cy + p2.cy) / 2);
 
     // Points
     [p1, p2].forEach(p => {
       ctx.beginPath(); ctx.arc(p.cx, p.cy, 6, 0, Math.PI * 2);
-      ctx.fillStyle = '#f97316'; ctx.fill();
-      ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.stroke();
+      ctx.fillStyle = '#c98a14'; ctx.fill();
+      ctx.strokeStyle = '#1e293b'; ctx.lineWidth = 1.5; ctx.stroke();
     });
 
     // Point labels
-    ctx.fillStyle = '#fff'; ctx.font = '11px Inter'; ctx.textAlign = 'center';
+    ctx.fillStyle = '#1e293b'; ctx.font = '11px Inter'; ctx.textAlign = 'center';
     ctx.fillText(`(${x1}, ${y1})`, p1.cx, p1.cy - 12);
     ctx.fillText(`(${x2}, ${y2})`, p2.cx, p2.cy - 12);
 
     // Gradient label
-    ctx.fillStyle = '#22c55e'; ctx.font = 'bold 14px Inter'; ctx.textAlign = 'left';
+    ctx.fillStyle = '#5a7a3a'; ctx.font = 'bold 14px Inter'; ctx.textAlign = 'left';
     ctx.fillText(`Gradient = rise/run = ${y2 - y1}/${x2 - x1} = ${isFinite(gradient) ? gradient.toFixed(2) : '∞'}`, 12, 24);
   }, [x1, y1, x2, y2, gradient, bounds]);
 
@@ -721,28 +721,28 @@ const GradientExplorerVisual = ({ data, onAnswer, disabled }) => {
 
   return (
     <div className="mb-4">
-      <canvas ref={canvasRef} width={360} height={360} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
+      <canvas ref={canvasRef} width={360} height={360} className="w-full rounded-xl border border-slate-200" style={{ maxWidth: 400 }} />
       <div className="mt-3 space-y-2 text-xs">
         <div className="grid grid-cols-2 gap-2">
           <div className="flex items-center gap-2">
-            <label className="text-slate-400">x₁:</label>
-            <input type="range" min={-5} max={5} step={1} value={x1} onChange={e => setX1(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-            <span className="text-orange-400 font-mono">{x1}</span>
+            <label className="text-slate-500">x₁:</label>
+            <input type="range" min={-5} max={5} step={1} value={x1} onChange={e => setX1(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-[#c98a14]" />
+            <span className="text-[#c98a14] font-mono">{x1}</span>
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-slate-400">y₁:</label>
-            <input type="range" min={-5} max={5} step={1} value={y1} onChange={e => setY1(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-            <span className="text-orange-400 font-mono">{y1}</span>
+            <label className="text-slate-500">y₁:</label>
+            <input type="range" min={-5} max={5} step={1} value={y1} onChange={e => setY1(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-[#c98a14]" />
+            <span className="text-[#c98a14] font-mono">{y1}</span>
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-slate-400">x₂:</label>
+            <label className="text-slate-500">x₂:</label>
             <input type="range" min={-5} max={5} step={1} value={x2} onChange={e => setX2(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-blue-500" />
-            <span className="text-blue-400 font-mono">{x2}</span>
+            <span className="text-[#6d6fcb] font-mono">{x2}</span>
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-slate-400">y₂:</label>
+            <label className="text-slate-500">y₂:</label>
             <input type="range" min={-5} max={5} step={1} value={y2} onChange={e => setY2(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-blue-500" />
-            <span className="text-blue-400 font-mono">{y2}</span>
+            <span className="text-[#6d6fcb] font-mono">{y2}</span>
           </div>
         </div>
       </div>
@@ -765,7 +765,7 @@ const PointPlotterVisual = ({ data, onAnswer, disabled }) => {
     const ctx = canvas.getContext('2d');
     const w = canvas.width, h = canvas.height;
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = '#0f172a';
+    ctx.fillStyle = '#fdfcf8';
     ctx.fillRect(0, 0, w, h);
     drawGrid(ctx, bounds, w, h);
 
@@ -774,7 +774,7 @@ const PointPlotterVisual = ({ data, onAnswer, disabled }) => {
       const { cx, cy } = toCanvas(mk.x, mk.y, bounds, { width: w, height: h });
       ctx.beginPath(); ctx.arc(cx, cy, 7, 0, Math.PI * 2);
       ctx.fillStyle = 'rgba(59, 130, 246, 0.85)'; ctx.fill();
-      ctx.fillStyle = '#fff'; ctx.font = '11px Inter'; ctx.textAlign = 'center';
+      ctx.fillStyle = '#1e293b'; ctx.font = '11px Inter'; ctx.textAlign = 'center';
       ctx.fillText(mk.label || `(${mk.x},${mk.y})`, cx, cy - 12);
     });
 
@@ -782,8 +782,8 @@ const PointPlotterVisual = ({ data, onAnswer, disabled }) => {
     if (point) {
       const { cx, cy } = toCanvas(point.x, point.y, bounds, { width: w, height: h });
       ctx.beginPath(); ctx.arc(cx, cy, 7, 0, Math.PI * 2);
-      ctx.fillStyle = '#22c55e'; ctx.fill();
-      ctx.fillStyle = '#fff'; ctx.font = '11px Inter'; ctx.textAlign = 'center';
+      ctx.fillStyle = '#5a7a3a'; ctx.fill();
+      ctx.fillStyle = '#1e293b'; ctx.font = '11px Inter'; ctx.textAlign = 'center';
       ctx.fillText(`(${point.x},${point.y})`, cx, cy - 12);
     }
   }, [point, bounds, data]);
@@ -805,9 +805,9 @@ const PointPlotterVisual = ({ data, onAnswer, disabled }) => {
   return (
     <div className="mb-4">
       <canvas ref={canvasRef} width={360} height={360} onClick={handleClick}
-        className="w-full rounded-xl border border-slate-700 cursor-crosshair" style={{ maxWidth: 400 }} />
+        className="w-full rounded-xl border border-slate-200 cursor-crosshair" style={{ maxWidth: 400 }} />
       <p className="text-xs text-slate-500 mt-2">Click the grid to place your point.</p>
-      {point && <p className="text-xs text-emerald-400 mt-1">Your point: ({point.x}, {point.y})</p>}
+      {point && <p className="text-xs text-[#5a7a3a] mt-1">Your point: ({point.x}, {point.y})</p>}
     </div>
   );
 };
@@ -833,14 +833,14 @@ const FractionBarVisual = ({ data, onAnswer, disabled }) => {
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full" style={{ maxWidth: 420 }}>
         {Array.from({ length: total }).map((_, i) => (
           <rect key={i} x={i * seg + 1} y={6} width={seg - 2} height={H - 12} rx="4"
-            fill={i < shaded ? '#22c55e' : '#1e293b'} stroke="#475569" strokeWidth="1.5"
+            fill={i < shaded ? '#7ca355' : '#eef1f5'} stroke="#cbd5e1" strokeWidth="1.5"
             onClick={() => click(i)} style={{ cursor: isShow ? 'default' : 'pointer' }} />
         ))}
       </svg>
       {!isShow && (
         <>
           <p className="text-xs text-slate-500 mt-2">Click to shade parts of the bar.</p>
-          <p className="text-xs text-emerald-400 mt-1">Shaded: {shaded}/{total}</p>
+          <p className="text-xs text-[#5a7a3a] mt-1">Shaded: {shaded}/{total}</p>
         </>
       )}
     </div>
@@ -882,7 +882,7 @@ const FractionNumberLineVisual = ({ data, onAnswer, disabled }) => {
             <text x={xOf(j)} y={lineY + 22} fill="#94a3b8" fontSize="9" textAnchor="middle">{label(j)}</text>
           </g>
         ))}
-        {k != null && <circle cx={xOf(k)} cy={lineY} r="7" fill="#22c55e" />}
+        {k != null && <circle cx={xOf(k)} cy={lineY} r="7" fill="#7ca355" />}
       </svg>
       <p className="text-xs text-slate-500 mt-1">Click the number line to place the fraction.</p>
     </div>
@@ -904,9 +904,9 @@ const FractionCompareVisual = ({ data }) => {
             <g key={row}>
               {Array.from({ length: f.d }).map((_, i) => (
                 <rect key={i} x={i * seg + 1} y={y} width={seg - 2} height={barH} rx="3"
-                  fill={i < f.n ? (f.color || '#22c55e') : '#1e293b'} stroke="#475569" strokeWidth="1" />
+                  fill={i < f.n ? (f.color || '#7ca355') : '#eef1f5'} stroke="#cbd5e1" strokeWidth="1" />
               ))}
-              <text x={W - 4} y={y + barH / 2 + 4} fill="#cbd5e1" fontSize="13" textAnchor="end" fontWeight="600">{f.n}/{f.d}</text>
+              <text x={W - 4} y={y + barH / 2 + 4} fill="#334155" fontSize="13" textAnchor="end" fontWeight="600">{f.n}/{f.d}</text>
             </g>
           );
         })}
@@ -942,21 +942,21 @@ const IntegerLineVisual = ({ data, onAnswer, disabled }) => {
           const v = min + i;
           return (
             <g key={v}>
-              <line x1={xOf(v)} y1={lineY - 6} x2={xOf(v)} y2={lineY + 6} stroke={v === 0 ? '#e2e8f0' : '#64748b'} strokeWidth={v === 0 ? 2 : 1} />
+              <line x1={xOf(v)} y1={lineY - 6} x2={xOf(v)} y2={lineY + 6} stroke={v === 0 ? '#475569' : '#64748b'} strokeWidth={v === 0 ? 2 : 1} />
               <text x={xOf(v)} y={lineY + 20} fill="#94a3b8" fontSize="9" textAnchor="middle">{v}</text>
             </g>
           );
         })}
         {data.start != null && (
           <g>
-            <circle cx={xOf(data.start)} cy={lineY} r="6" fill="#3b82f6" />
+            <circle cx={xOf(data.start)} cy={lineY} r="6" fill="#6d6fcb" />
             <text x={xOf(data.start)} y={lineY - 12} fill="#93c5fd" fontSize="10" textAnchor="middle">start</text>
           </g>
         )}
-        {sel != null && <circle cx={xOf(sel)} cy={lineY} r="7" fill="#22c55e" />}
+        {sel != null && <circle cx={xOf(sel)} cy={lineY} r="7" fill="#7ca355" />}
       </svg>
       <p className="text-xs text-slate-500 mt-1">Click the number line to land your answer.</p>
-      {sel != null && <p className="text-xs text-emerald-400 mt-0.5">You landed on {sel}.</p>}
+      {sel != null && <p className="text-xs text-[#5a7a3a] mt-0.5">You landed on {sel}.</p>}
     </div>
   );
 };
@@ -982,11 +982,11 @@ const DecimalGridVisual = ({ data, onAnswer, disabled }) => {
         {Array.from({ length: 100 }).map((_, i) => {
           const r = Math.floor(i / 10), c = i % 10;
           return <rect key={i} x={c * cell} y={r * cell} width={cell - 1} height={cell - 1}
-            fill={i < shaded ? '#22c55e' : '#1e293b'} stroke="#475569" strokeWidth="0.5"
+            fill={i < shaded ? '#7ca355' : '#eef1f5'} stroke="#cbd5e1" strokeWidth="0.5"
             onClick={() => click(i)} style={{ cursor: isShow ? 'default' : 'pointer' }} />;
         })}
       </svg>
-      {!isShow && <p className="text-xs text-emerald-400 mt-2">Shaded: {shaded}/100 = {shaded / 100}</p>}
+      {!isShow && <p className="text-xs text-[#5a7a3a] mt-2">Shaded: {shaded}/100 = {shaded / 100}</p>}
     </div>
   );
 };
@@ -998,12 +998,12 @@ const ArrayDotsVisual = ({ data }) => {
   const { rows, cols, groupByRow } = data;
   const r = 9, gap = 8, pad = 12, step = 2 * r + gap;
   const W = pad * 2 + cols * step - gap, H = pad * 2 + rows * step - gap;
-  const colors = ['#22c55e', '#3b82f6', '#a855f7', '#f59e0b', '#ec4899', '#14b8a6'];
+  const colors = ['#5a7a3a', '#6d6fcb', '#7d7fd4', '#f2a828', '#cf7a52', '#14b8a6'];
   const dots = [];
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
       dots.push(<circle key={`${i}-${j}`} cx={pad + r + j * step} cy={pad + r + i * step} r={r}
-        fill={groupByRow ? colors[i % colors.length] : '#22c55e'} />);
+        fill={groupByRow ? colors[i % colors.length] : '#5a7a3a'} />);
     }
   }
   return (
@@ -1026,10 +1026,10 @@ const PlaceValueChartVisual = ({ data }) => {
           const x = i * colW, hl = i === highlight;
           return (
             <g key={i}>
-              <rect x={x + 2} y={top} width={colW - 4} height={headH} fill="#1e293b" stroke="#475569" />
+              <rect x={x + 2} y={top} width={colW - 4} height={headH} fill="#eef1f5" stroke="#cbd5e1" />
               <text x={x + colW / 2} y={top + headH / 2 + 4} fill="#94a3b8" fontSize="11" textAnchor="middle">{labels[i]}</text>
-              <rect x={x + 2} y={top + headH + 2} width={colW - 4} height={cellH} fill={hl ? '#a855f7' : '#0f172a'} stroke="#475569" />
-              <text x={x + colW / 2} y={top + headH + 2 + cellH / 2 + 9} fill="#fff" fontSize="26" textAnchor="middle" fontWeight="700">{d}</text>
+              <rect x={x + 2} y={top + headH + 2} width={colW - 4} height={cellH} fill={hl ? '#7d7fd4' : '#fdfcf8'} stroke="#cbd5e1" />
+              <text x={x + colW / 2} y={top + headH + 2 + cellH / 2 + 9} fill={hl ? '#ffffff' : '#1e293b'} fontSize="26" textAnchor="middle" fontWeight="700">{d}</text>
             </g>
           );
         })}
@@ -1049,12 +1049,12 @@ const FractionAreaVisual = ({ data }) => {
   for (let col = 0; col < b; col++) {
     for (let row = 0; row < d; row++) {
       const inCol = col < a, inRow = row < c;
-      let fill = '#0f172a';
-      if (inCol && inRow) fill = '#a855f7';            // overlap = product
+      let fill = '#fdfcf8';
+      if (inCol && inRow) fill = '#7d7fd4';            // overlap = product
       else if (inCol) fill = 'rgba(34,197,94,0.4)';    // a/b of columns
       else if (inRow) fill = 'rgba(59,130,246,0.4)';   // c/d of rows
       cells.push(<rect key={`${col}-${row}`} x={col * cw} y={row * ch} width={cw} height={ch}
-        fill={fill} stroke="#475569" strokeWidth="1" />);
+        fill={fill} stroke="#cbd5e1" strokeWidth="1" />);
     }
   }
   return (
@@ -1092,8 +1092,8 @@ export const InteractiveVisual = ({ visualType, visualData, onAnswer, disabled }
   const Component = VISUAL_COMPONENTS[visualType];
   if (!Component) return null;
   return (
-    <div className="bg-slate-800/50 rounded-2xl p-4 mb-4 border border-slate-700">
-      <div className="flex items-center gap-2 text-emerald-400 mb-3">
+    <div className="bg-[#fdfcf8] rounded-2xl p-4 mb-4 border border-slate-200">
+      <div className="flex items-center gap-2 text-[#5a7a3a] mb-3">
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
         <span className="text-sm font-semibold">A picture to help</span>
       </div>

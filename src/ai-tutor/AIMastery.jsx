@@ -99,7 +99,12 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // Active syllabus view (CBC/CBE, Cambridge, or native). Persisted per subject
   // inside progress so it survives reloads / other devices.
-  const curriculum = progress.curriculum || NATIVE;
+  // A Kenyan learner in Junior School (Grades 7-9) is taught the CBC syllabus,
+  // so that is the view she should land on — the native Grade 1-12 path is
+  // HOREB's own ordering, not what her school follows. She can still switch,
+  // and an explicit choice always wins.
+  const curriculum = progress.curriculum
+    || ((progress.declaredGrade >= 7 && progress.declaredGrade <= 9) ? 'cbc' : NATIVE);
   const curriculaOptions = useMemo(() => curriculaForSubject(sub), [sub]);
 
   // Engine context — passed to adaptive/spaced/diagnostic engines.
@@ -2189,6 +2194,25 @@ export function AIMastery({ onBack, userId, studentName }) {
                     </div>
                   ))}
                 </div>
+                {/* Available to her, but not part of this syllabus's Grade 9 —
+                    shown so nothing is hidden, labelled so nothing misleads. */}
+                {syllabus.beyond?.length > 0 && (
+                  <div className="mt-3 pt-3 border-t border-slate-100">
+                    <div className="text-xs font-semibold text-slate-500 mb-1.5">
+                      Beyond {getCurriculum(curriculum).bandLabel} {syllabus.grade} — ready when you are
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {syllabus.beyond.map(sk => (
+                        <button key={sk.id} onClick={() => startLesson(sk.id)}
+                          className={`px-2.5 py-1 rounded-lg border text-xs font-medium transition-colors hover:brightness-95 ${
+                            sk.mastered ? 'bg-[#f2f6ec] border-[#cfe0bd] text-[#5a7a3a]' : 'bg-slate-50 border-slate-200 text-slate-500'
+                          }`}>
+                          {sk.name}{sk.mastered && ' ✓'}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 
