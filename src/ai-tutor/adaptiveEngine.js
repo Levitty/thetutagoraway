@@ -502,7 +502,21 @@ export const getEstimatedGradeLevel = (progress, ctx) => {
     else break;
   }
   const maxGrade = c.skillList.reduce((m, s) => Math.max(m, gradeOf(s, c.curriculum)), 0);
-  return Math.min(level, maxGrade);
+
+  // The walk above measures COVERAGE — how much of each grade this learner has
+  // personally worked through — and it climbs only while each grade is 60%
+  // mastered. A diagnostic answers a different question: how far along IS this
+  // child? Eight questions can never mark 60% of Grade 1 as mastered, so a
+  // freshly-placed Grade 9 student scored as Grade 1 here: the app displayed
+  // that, and served lessons around it. ("She took it as a Grade 9 and it says
+  // Grade 6, and the work is too easy.")
+  //
+  // So the measured placement is a FLOOR. getEffectivePlacement already walks
+  // that floor back down when a learner shows sustained struggle at it, so a
+  // wrong placement still self-corrects — it just no longer starts wrong.
+  const placement = getEffectivePlacement(progress, ctx);
+  const floor = Number.isFinite(placement) ? placement : null;
+  return Math.min(maxGrade, floor != null ? Math.max(level, floor) : level);
 };
 
 // ==================== XP SYSTEM ====================

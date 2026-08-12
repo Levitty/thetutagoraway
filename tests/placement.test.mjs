@@ -13,7 +13,7 @@
 // ============================================================================
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { getNextToLearn } from '../src/ai-tutor/adaptiveEngine.js';
+import { getNextToLearn, getEstimatedGradeLevel } from '../src/ai-tutor/adaptiveEngine.js';
 
 const TOP = 8;   // the recommended path only ever shows a handful
 const top = (progress) => getNextToLearn(progress, null).slice(0, TOP);
@@ -70,4 +70,38 @@ test('demonstrated struggle cancels the assumption of mastery', () => {
 test('a learner with no declared grade still gets a sane list', () => {
   const picks = top({ skills: {} });
   assert.ok(picks.length > 0, 'expected suggestions even with no grade information');
+});
+
+// Reported by a real Grade 9 student: "she took the diagnostic as a Grade 9,
+// the page says Grade 6, and the work is too easy."
+//
+// The diagnostic measured her correctly. The DISPLAYED level was computed from
+// coverage instead — what fraction of each grade she has personally worked
+// through — and a short test can never mark 60% of Grade 1 as mastered, so it
+// reported the bottom of the graph. That number then drove lesson selection.
+test('a measured placement anchors both the displayed level and the lessons', () => {
+  // Exactly the state a student is in one second after finishing the
+  // diagnostic: placement measured, almost nothing marked mastered yet.
+  const justDiagnosed = { skills: {}, diagnosed: true, declaredGrade: 9, placementGrade: 9 };
+
+  const shown = getEstimatedGradeLevel(justDiagnosed, null);
+  assert.ok(
+    shown >= 8,
+    `a student the diagnostic placed at Grade 9 was shown as Grade ${shown}`,
+  );
+
+  const grades = top(justDiagnosed).map(s => s.grade);
+  assert.ok(grades.length > 0, 'expected lessons to be suggested');
+  assert.ok(
+    !grades.some(g => g <= 5),
+    `Grade 9 placement served lower-primary lessons: [${grades.join(', ')}]`,
+  );
+});
+
+test('a low placement is still respected — the floor works downwards too', () => {
+  // The floor must not become a way to inflate every learner: a student
+  // measured at Grade 3 stays at Grade 3.
+  const placedLow = { skills: {}, diagnosed: true, declaredGrade: 9, placementGrade: 3 };
+  const shown = getEstimatedGradeLevel(placedLow, null);
+  assert.ok(shown <= 4, `a student placed at Grade 3 was shown as Grade ${shown}`);
 });
