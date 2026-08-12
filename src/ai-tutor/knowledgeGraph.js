@@ -241,6 +241,13 @@ const GRADE_7 = {
   G7_DECIMALS_MUL: skill('G7_DECIMALS_MUL', 'Multiplying Decimals (Advanced)', 7, S.NUM, { pre: ['G6_DECIMALS_MUL', 'G7_DECIMAL_PV'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Decimals'), cambridge: cam(8, 'Nf', '8Nf.07') } }),
   G7_DECIMALS_DIV: skill('G7_DECIMALS_DIV', 'Dividing Decimals (Advanced)', 7, S.NUM, { pre: ['G7_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Decimals'), cambridge: cam(8, 'Nf', '8Nf.08') } }),
   G7_SQUARES_EXT: skill('G7_SQUARES_EXT', 'Squares (Extended)', 7, S.NUM, { pre: ['G6_SQUARES', 'G7_FRACTIONS_MUL', 'G7_DECIMALS_MUL'], w: 3, curricula: { cbc: cbc(7, 'Numbers', 'Squares and Square Roots'), cambridge: cam(8, 'Ni', '8Ni.06') } }),
+  // CBC Grade 7 Numbers 1.1 Whole Numbers is a 20-lesson sub-strand — the
+  // largest in the grade — and had only place value and BODMAS behind it.
+  // The design also names reading and writing numbers in words, rounding off,
+  // and number sequences.
+  G7_NUMBERS_WORDS: skill('G7_NUMBERS_WORDS', 'Reading & Writing Numbers, Total Value', 7, S.NUM, { pre: ['G7_PLACE_VALUE'], w: 3, curricula: { cbc: cbc(7, 'Numbers', 'Whole Numbers'), cambridge: cam(7, 'Np', '7Np.01') } }),
+  G7_ROUNDING_WHOLE: skill('G7_ROUNDING_WHOLE', 'Rounding Whole Numbers', 7, S.NUM, { pre: ['G7_PLACE_VALUE'], w: 3, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Whole Numbers'), cambridge: cam(7, 'Np', '7Np.02') } }),
+  G7_NUMBER_SEQUENCES: skill('G7_NUMBER_SEQUENCES', 'Number Sequences', 7, S.NUM, { pre: ['G6_BODMAS_BASIC'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Whole Numbers'), cambridge: cam(7, 'As') } }),
   G7_SQUARE_ROOTS: skill('G7_SQUARE_ROOTS', 'Square Roots', 7, S.NUM, { pre: ['G7_SQUARES_EXT', 'G7_PRIME_FACTORIZATION'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Squares and Square Roots'), cambridge: cam(8, 'Ni', '8Ni.06') } }),
   // Integers are NOT a Grade 7 CBC sub-strand (introduced in Grade 8) — shown as Grade 8 in the CBC view.
   G7_INTEGERS_MUL_DIV: skill('G7_INTEGERS_MUL_DIV', 'Multiplying & Dividing Integers', 7, S.NUM, { pre: ['G6_INTEGERS_ADD_SUB', 'G5_MULTIPLICATION', 'G5_DIVISION'], w: 3, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Integers'), cambridge: cam(7, 'Ni', '7Ni.03') } }),
@@ -257,6 +264,9 @@ const GRADE_7 = {
   // Geometry & Measurements — note CBC files Pythagoras, perimeter & circumference under Measurements.
   G7_PYTHAGORAS: skill('G7_PYTHAGORAS', 'Pythagorean Theorem', 7, S.GEO, { pre: ['G7_SQUARES_EXT', 'G7_SQUARE_ROOTS'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Pythagorean Relationship'), cambridge: cam(9, 'Gg', '9Gg.10') } }),
   G7_ANGLES: skill('G7_ANGLES', 'Angles (at a Point, Transversals, Parallelograms)', 7, S.GEO, { pre: ['G6_ANGLE_PROPERTIES'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Geometry', 'Angles'), cambridge: cam(7, 'Gg') } }),
+  // CBC Grade 7 4.2 is 12 lessons and names bisection and the constructible
+  // family (90, 45, 60, 30 and multiples of 7.5) explicitly.
+  G7_ANGLE_CONSTRUCTION: skill('G7_ANGLE_CONSTRUCTION', 'Bisecting & Constructing Angles', 7, S.GEO, { pre: ['G7_ANGLES', 'G6_ANGLE_MEASURE'], w: 4, curricula: { cbc: cbc(7, 'Geometry', 'Geometrical Constructions'), cambridge: cam(8, 'Gg') } }),
   G7_CONSTRUCTIONS: skill('G7_CONSTRUCTIONS', 'Geometrical Constructions (Perpendiculars, Bisectors)', 7, S.GEO, { pre: ['G7_ANGLES'], w: 5, curricula: { cbc: cbc(7, 'Geometry', 'Geometrical Constructions'), cambridge: cam(8, 'Gg') } }),
   G7_LENGTH_CONV: skill('G7_LENGTH_CONV', 'Length Conversions (Advanced)', 7, S.MEA, { pre: ['G6_UNIT_CONVERSIONS'], w: 2, curricula: { cbc: cbc(7, 'Measurements', 'Length'), cambridge: cam(8, 'Gg', '8Gg.03') } }),
   G7_PERIMETER: skill('G7_PERIMETER', 'Perimeter (Advanced Shapes)', 7, S.MEA, { pre: ['G6_PERIMETER', 'G7_LENGTH_CONV'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Length'), cambridge: cam(7, 'Gg') } }),
@@ -267,10 +277,16 @@ const GRADE_7 = {
   G7_VOLUME_CYLINDER: skill('G7_VOLUME_CYLINDER', 'Volume of Cylinders', 7, S.MEA, { pre: ['G7_AREA_CIRCLE', 'G7_VOLUME_CUBOID'], w: 4, curricula: { cbc: cbc(7, 'Measurements', 'Volume and Capacity'), cambridge: cam(9, 'Gg', '9Gg.05') } }),
   G7_SPEED: skill('G7_SPEED', 'Speed, Distance, Time', 7, S.MEA, { pre: ['G7_LENGTH_CONV', 'G7_DECIMALS_DIV', 'G5_TIME'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Time, Distance and Speed'), cambridge: cam(9, 'As', '9As.07') } }),
   G7_TEMPERATURE: skill('G7_TEMPERATURE', 'Temperature (Rise, Fall, Scales)', 7, S.MEA, { pre: ['G6_INTEGERS_ADD_SUB'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Temperature') } }),
+  // CBC Grade 7 Money 3.7 is 12 lessons and names discount, commission, bills,
+  // postal charges and mobile money services — none of which had a skill.
+  G7_MONEY_TRANSACTIONS: skill('G7_MONEY_TRANSACTIONS', 'Discount, Commission, Bills & Mobile Money', 7, S.MEA, { pre: ['G7_PERCENTAGES'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Money') } }),
   G7_MONEY: skill('G7_MONEY', 'Money (Profit, Loss, Discount, Bills)', 7, S.MEA, { pre: ['G7_PERCENTAGES'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Money') } }),
 
   // Statistics
   G7_MEAN_MEDIAN_MODE: skill('G7_MEAN_MEDIAN_MODE', 'Mean, Median, Mode', 7, S.STA, { pre: ['G6_MEAN'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling'), cambridge: cam(8, 'Ss', '8Ss.04') } }),
+  // CBC Grade 7 Data Handling 5.1 names pie charts and travel graphs; neither
+  // had a skill of its own.
+  G7_PIE_CHARTS: skill('G7_PIE_CHARTS', 'Pie Charts & Travel Graphs', 7, S.STA, { pre: ['G7_PERCENTAGES', 'G6_ANGLE_MEASURE'], w: 4, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling'), cambridge: cam(7, 'Ss') } }),
   G7_DATA_REPRESENT: skill('G7_DATA_REPRESENT', 'Data Representation (Bar, Line, Pie)', 7, S.STA, { pre: ['G6_PIE_CHARTS', 'G7_PERCENTAGES'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling'), cambridge: cam(7, 'Ss') } }),
 };
 
@@ -282,9 +298,17 @@ const GRADE_8 = {
   // Numbers
   G8_INDICES_INTRO: skill('G8_INDICES_INTRO', 'Introduction to Indices', 8, S.NUM, { pre: ['G7_SQUARES_EXT', 'G7_INTEGERS_MUL_DIV'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms'), cambridge: cam(8, 'Ni', '8Ni.05') } }),
   G8_INDICES_LAWS: skill('G8_INDICES_LAWS', 'Laws of Indices', 8, S.NUM, { pre: ['G8_INDICES_INTRO'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms'), cambridge: cam(8, 'Ni', '8Ni.05') } }),
-  G8_STANDARD_FORM: skill('G8_STANDARD_FORM', 'Standard Form (Scientific Notation)', 8, S.NUM, { pre: ['G8_INDICES_INTRO', 'G7_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms'), cambridge: cam(9, 'Ni', '9Ni.03') } }),
+  G8_STANDARD_FORM: skill('G8_STANDARD_FORM', 'Standard Form (Scientific Notation)', 8, S.NUM, { pre: ['G8_INDICES_INTRO', 'G7_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Decimals'), cambridge: cam(9, 'Ni', '9Ni.03') } }),
   G8_CUBES_CUBE_ROOTS: skill('G8_CUBES_CUBE_ROOTS', 'Cubes & Cube Roots', 8, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_INTRO'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Cubes and Cube Roots'), cambridge: cam(8, 'Ni', '8Ni.07') } }),
   G8_RATIO_PROPORTION: skill('G8_RATIO_PROPORTION', 'Ratio & Proportion (Advanced)', 8, S.NUM, { pre: ['G6_RATIOS', 'G7_FRACTIONS_DIV'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Rates, Ratio, Proportions and Percentages'), cambridge: cam(8, 'Nf', '8Nf.10') } }),
+  // Four CBC Grade 8 sub-strands had nothing behind them: Fractions (1.2),
+  // Decimals (1.3), Squares and Square Roots (1.4) and Data Presentation
+  // (5.1) — thirty lessons of syllabus with no content in the graph.
+  G8_FRACTIONS_COMBINED: skill('G8_FRACTIONS_COMBINED', 'Combined Operations on Fractions', 8, S.NUM, { pre: ['G7_FRACTIONS_DIV', 'G7_BODMAS_ADV'], w: 5, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Fractions'), cambridge: cam(8, 'Nf') } }),
+  G8_DECIMALS_COMBINED: skill('G8_DECIMALS_COMBINED', 'Combined Operations on Decimals', 8, S.NUM, { pre: ['G7_DECIMALS_DIV', 'G7_BODMAS_ADV'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Decimals'), cambridge: cam(8, 'Np') } }),
+  G8_RECURRING_DECIMALS: skill('G8_RECURRING_DECIMALS', 'Recurring Decimals & Conversion', 8, S.NUM, { pre: ['G7_FRACTIONS_DIV', 'G7_DECIMAL_PV'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Decimals'), cambridge: cam(8, 'Nf', '8Nf.02') } }),
+  G8_SQUARES_TABLES: skill('G8_SQUARES_TABLES', 'Squares & Square Roots (Decimals, Tables)', 8, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G6_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Squares and Square roots'), cambridge: cam(8, 'Ni', '8Ni.06') } }),
+  G8_DATA_GRAPHS: skill('G8_DATA_GRAPHS', 'Bar & Line Graphs', 8, S.STA, { pre: ['G7_DATA_REPRESENT'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Data Handling', 'Data Presentation and Interpretation'), cambridge: cam(8, 'Ss') } }),
   G8_PERCENTAGE_CHANGE: skill('G8_PERCENTAGE_CHANGE', 'Percentage Increase & Decrease', 8, S.NUM, { pre: ['G7_PERCENTAGES'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Rates, Ratio, Proportions and Percentages'), cambridge: cam(8, 'Nf', '8Nf.05') } }),
   G8_PROFIT_LOSS: skill('G8_PROFIT_LOSS', 'Profit, Loss & Discount', 8, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4, curricula: { cbc: cbc(8, 'Measurements', 'Money'), cambridge: cam(8, 'Nf', '8Nf.05') } }),
   G8_SIMPLE_INTEREST: skill('G8_SIMPLE_INTEREST', 'Simple Interest', 8, S.NUM, { pre: ['G8_PERCENTAGE_CHANGE'], w: 4, curricula: { cbc: cbc(8, 'Measurements', 'Money'), cambridge: camEnr('Nf') } }),
@@ -311,6 +335,9 @@ const GRADE_8 = {
   // syllabus she is accountable for.
   G8_CONGRUENCE: skill('G8_CONGRUENCE', 'Congruent Triangles', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES'], w: 4, curricula: { cbc: cbcEnr('Geometry'), cambridge: cam(7, 'Gg', '7Gg.02') } }),
   G8_SIMILARITY: skill('G8_SIMILARITY', 'Similar Figures', 8, S.GEO, { pre: ['G8_CONGRUENCE', 'G8_RATIO_PROPORTION'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement'), cambridge: cam(9, 'Gp') } }),
+  // CBC Grade 8 4.3 is 14 lessons and is mostly about the two FORMS a scale is
+  // written in — statement and ratio — and converting between them.
+  G8_SCALE_FORMS: skill('G8_SCALE_FORMS', 'Scales in Statement & Ratio Form', 8, S.GEO, { pre: ['G8_RATIO_PROPORTION', 'G7_LENGTH_CONV'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Geometry', 'Scale Drawing') } }),
   G8_SCALE_DRAWING: skill('G8_SCALE_DRAWING', 'Scale Drawing (Simple Scales)', 8, S.GEO, { pre: ['G8_RATIO_PROPORTION', 'G7_LENGTH_CONV'], w: 3, curricula: { cbc: cbc(8, 'Geometry', 'Scale Drawing') } }),
   G8_TRANSFORMATIONS_INTRO: skill('G8_TRANSFORMATIONS_INTRO', 'Transformations (Reflection, Rotation)', 8, S.GEO, { pre: ['G8_COORDINATES', 'G6_SYMMETRY'], w: 3, curricula: { cbc: cbcEnr('Geometry'), cambridge: cam(8, 'Gp', '8Gp.05') } }),
 

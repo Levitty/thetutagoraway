@@ -650,7 +650,200 @@ export function buildAddSubLikePictorial({ sub = false } = {}) {
   };
 }
 
+// ============================================================================
+// CBC GRADE 8 — 1.2 FRACTIONS (6 lessons) and 1.3 DECIMALS (8 lessons)
+// Both sub-strands lead with the same outcome: COMBINED operations, done in
+// the correct order. That is the Grade 8 step up — not new operations, but
+// several of them in one expression.
+// ============================================================================
+
+const g_ = (a, b) => (b === 0 ? (a || 1) : g_(b, a % b));
+const red = (n, d) => { const k = g_(Math.abs(n), Math.abs(d)) || 1; return [n / k, d / k]; };
+const fs = (n, d) => { const [a, b] = red(n, d); return b === 1 ? `${a}` : `${a}/${b}`; };
+
+// ---- G8 1.2: combined operations on fractions ----
+export function buildFractionsCombined() {
+  const shape = pick(['mul-then-add', 'brackets-first', 'div-then-sub', 'of-then-add']);
+
+  if (shape === 'mul-then-add') {
+    const a = randInt(1, 3), b = pick([2, 4, 5]);
+    const c = randInt(1, 2), d = pick([3, 4]);
+    const e = randInt(1, 2), f = pick([2, 3, 5]);
+    // a/b + (c/d × e/f)
+    const pn = c * e, pd = d * f;
+    const n = a * pd + pn * b, dd = b * pd;
+    const value = fs(n, dd);
+    return {
+      type: 'frac-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  ${a}/${b} + ${c}/${d} × ${e}/${f}`,
+      answer: value, accepts: accepts(value, value.replace('/', ' / ')),
+      hints: hintLadder(
+        'Multiplication is settled before addition, fractions or not.',
+        'Do the multiplying pair first, on its own.',
+        'Only then bring in the first fraction — and that step needs a common denominator.'),
+      solution: { steps: [
+        { text: 'Multiply first (straight across).', expr: `${c}/${d} × ${e}/${f} = ${fs(pn, pd)}` },
+        { text: 'Now add, over a common denominator.', expr: `${a}/${b} + ${fs(pn, pd)}` },
+        { text: 'Simplify.', expr: value }], answer: value },
+      misconceptions: [
+        { when: fs((a * d + c * b) * e, b * d * f), feedback: 'You added before multiplying. Multiplication comes first unless brackets say otherwise.' },
+      ],
+      verify: { kind: 'fraction', value: a / b + (c / d) * (e / f) },
+    };
+  }
+
+  if (shape === 'brackets-first') {
+    const a = randInt(1, 3), b = pick([2, 4, 6]);
+    const c = randInt(1, 2), d = pick([3, 4]);
+    const e = randInt(2, 4);
+    // (a/b + c/d) × e
+    const sn = a * d + c * b, sd = b * d;
+    const value = fs(sn * e, sd);
+    return {
+      type: 'frac-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  (${a}/${b} + ${c}/${d}) × ${e}`,
+      answer: value, accepts: accepts(value, value.replace('/', ' / ')),
+      hints: hintLadder(
+        'Brackets are settled before anything else.',
+        'Adding inside the brackets needs a common denominator first.',
+        'Multiplying a fraction by a whole number affects only the top.'),
+      solution: { steps: [
+        { text: 'Add inside the brackets.', expr: `${a}/${b} + ${c}/${d} = ${fs(sn, sd)}` },
+        { text: 'Multiply by the whole number.', expr: `${fs(sn, sd)} × ${e} = ${value}` }], answer: value },
+      misconceptions: [
+        { when: fs(a * d + c * b * e, b * d), feedback: 'Only one of the two fractions was multiplied. The brackets group them, so the multiplier applies to the whole total.' },
+      ],
+      verify: { kind: 'fraction', value: (a / b + c / d) * e },
+    };
+  }
+
+  if (shape === 'div-then-sub') {
+    const a = randInt(3, 5), b = pick([4, 6, 8]);
+    const c = randInt(1, 2), d = pick([2, 4]);
+    const e = randInt(1, 2), f = pick([2, 3]);
+    // a/b − (c/d ÷ e/f) = a/b − (c*f)/(d*e)
+    const qn = c * f, qd = d * e;
+    const n = a * qd - qn * b, dd = b * qd;
+    if (n <= 0) return buildFractionsCombined();
+    const value = fs(n, dd);
+    return {
+      type: 'frac-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  ${a}/${b} − ${c}/${d} ÷ ${e}/${f}`,
+      answer: value, accepts: accepts(value, value.replace('/', ' / ')),
+      hints: hintLadder(
+        'Division is settled before subtraction.',
+        'To divide by a fraction, turn the second one upside down and multiply.',
+        'Only then subtract, over a common denominator.'),
+      solution: { steps: [
+        { text: 'Divide first — flip the second fraction.', expr: `${c}/${d} ÷ ${e}/${f} = ${c}/${d} × ${f}/${e} = ${fs(qn, qd)}` },
+        { text: 'Now subtract.', expr: `${a}/${b} − ${fs(qn, qd)} = ${value}` }], answer: value },
+      misconceptions: [
+        { when: fs(c * e, d * f), feedback: 'The second fraction was not turned upside down — dividing by a fraction means multiplying by its reciprocal.' },
+      ],
+      verify: { kind: 'fraction', value: a / b - (c / d) / (e / f) },
+    };
+  }
+
+  // "of" is multiplication — a phrase Grade 8 meets constantly in word problems
+  const whole = pick([120, 180, 240, 300, 360]);
+  const b = pick([3, 4, 5, 6]);
+  const a = randInt(1, b - 1);
+  const extra = pick([10, 15, 20, 25]);
+  const value = `${whole * a / b + extra}`;
+  if (!Number.isInteger(whole * a / b)) return buildFractionsCombined();
+  return {
+    type: 'frac-of-combined', instruction: 'Use the correct order of operations.',
+    question: `Work out:  ${a}/${b} of ${whole} + ${extra}`,
+    answer: value, accepts: accepts(value),
+    hints: hintLadder(
+      'In mathematics, "of" is an instruction to multiply.',
+      'That multiplication is settled before the addition.',
+      `So find the fraction of ${whole} first, then bring in the ${extra}.`),
+    solution: { steps: [
+      { text: '"of" means multiply.', expr: `${a}/${b} × ${whole} = ${whole * a / b}` },
+      { text: 'Now add.', expr: `${whole * a / b} + ${extra} = ${value}` }], answer: value },
+    misconceptions: [
+      { when: `${(whole + extra) * a / b}`, feedback: 'You added before taking the fraction. "of" binds to the number right beside it, and multiplication comes first.' },
+    ],
+    verify: { kind: 'fraction', value: whole * a / b + extra },
+  };
+}
+
+// ---- G8 1.3: combined operations on decimals ----
+export function buildDecimalsCombined() {
+  const shape = pick(['mul-then-add', 'brackets-first', 'div-then-sub']);
+  const r2 = (x) => Math.round(x * 100) / 100;
+  const trim = (x) => `${r2(x)}`;
+
+  if (shape === 'mul-then-add') {
+    const a = randInt(11, 99) / 10, b = randInt(11, 49) / 10, c = randInt(2, 9);
+    const value = r2(a + b * c);
+    return {
+      type: 'dec-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  ${a} + ${b} × ${c}`,
+      answer: trim(value), accepts: accepts(trim(value)),
+      hints: hintLadder(
+        'Multiplication is settled before addition.',
+        'Do the multiplying part first, keeping the decimal point in the right place.',
+        'Then line the decimal points up to add.'),
+      solution: { steps: [
+        { text: 'Multiply first.', expr: `${b} × ${c} = ${trim(r2(b * c))}` },
+        { text: 'Now add.', expr: `${a} + ${trim(r2(b * c))} = ${trim(value)}` }], answer: trim(value) },
+      misconceptions: [
+        { when: trim(r2((a + b) * c)), feedback: 'You added before multiplying. Multiplication comes first unless brackets say otherwise.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (shape === 'brackets-first') {
+    const a = randInt(21, 99) / 10, b = randInt(11, 49) / 10, c = randInt(2, 6);
+    const value = r2((a - b) * c);
+    return {
+      type: 'dec-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  (${a} − ${b}) × ${c}`,
+      answer: trim(value), accepts: accepts(trim(value)),
+      hints: hintLadder(
+        'Brackets are settled before anything else.',
+        'Line the decimal points up before subtracting.',
+        'Then multiply the single number you are left with.'),
+      solution: { steps: [
+        { text: 'Do the brackets.', expr: `${a} − ${b} = ${trim(r2(a - b))}` },
+        { text: 'Multiply.', expr: `${trim(r2(a - b))} × ${c} = ${trim(value)}` }], answer: trim(value) },
+      misconceptions: [
+        { when: trim(r2(a - b * c)), feedback: 'The brackets came first here — they group the subtraction, so it must be done before multiplying.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  const q = randInt(2, 9), d = pick([0.2, 0.4, 0.5, 2, 4, 5]);
+  const n = r2(q * d);
+  const a = randInt(50, 199) / 10;
+  const value = r2(a - q);
+  if (value <= 0) return buildDecimalsCombined();
+  return {
+    type: 'dec-combined', instruction: 'Use the correct order of operations.',
+    question: `Work out:  ${a} − ${n} ÷ ${d}`,
+    answer: trim(value), accepts: accepts(trim(value)),
+    hints: hintLadder(
+      'Division is settled before subtraction.',
+      d < 1 ? 'Dividing by a number smaller than 1 makes the result BIGGER — check your answer against that.' : 'Divide first, keeping track of the decimal point.',
+      'Then line the points up to subtract.'),
+    solution: { steps: [
+      { text: 'Divide first.', expr: `${n} ÷ ${d} = ${q}` },
+      { text: 'Now subtract.', expr: `${a} − ${q} = ${trim(value)}` }], answer: trim(value) },
+    misconceptions: [
+      { when: trim(r2((a - n) / d)), feedback: 'You subtracted before dividing. Division is settled first.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const FRACTIONS_CONTENT = {
+  // CBC Grade 8 Numbers 1.2 Fractions and 1.3 Decimals — combined operations
+  G8_FRACTIONS_COMBINED: withWorkedExample(buildFractionsCombined),
+  G8_DECIMALS_COMBINED:  withWorkedExample(buildDecimalsCombined),
   // Concept-first: "understanding fractions" is taught concretely (bar / number line).
   G5_FRACTIONS_INTRO:    withWorkedExample(() => (coin() ? buildShadeFraction() : buildPlaceOnNumberLine())),
 

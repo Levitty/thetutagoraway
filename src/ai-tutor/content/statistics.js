@@ -588,6 +588,272 @@ export function buildGroupedMeasures() {
   };
 }
 
+// ============================================================================
+// CBC GRADE 7 & 8 — DATA HANDLING
+//   G7 5.1 Data Handling (10 lessons)                 — pie charts and travel
+//          graphs, the two representations the design names that nothing
+//          in the graph covered
+//   G8 5.1 Data Presentation and Interpretation (10)  — bar and line graphs,
+//          drawn and interpreted
+// ============================================================================
+
+// ---- G7 5.1: pie charts and travel graphs ----
+export function buildPieAndTravel() {
+  const kind = pick(['pie-angle', 'pie-quantity', 'pie-fraction', 'travel']);
+
+  if (kind === 'pie-angle') {
+    const total = pick([40, 60, 72, 90, 120, 180]);
+    const part = pick([5, 10, 15, 20, 30]);
+    if (part >= total) return buildPieAndTravel();
+    const value = Math.round((part / total) * 360);
+    if (value * total !== 360 * part) return buildPieAndTravel();   // whole degrees only
+    const thing = pick(['learners who walk to school', 'households keeping goats', 'shoppers paying by mobile money']);
+    return {
+      type: 'pie-angle', instruction: 'Give the angle in degrees.',
+      question: `A survey of ${total} people found that ${part} of them are ${thing}. On a pie chart, what angle represents that group?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
+      hints: hintLadder(
+        'A whole pie chart is one full turn.',
+        'A full turn is 360°, and it must be shared out in the same proportion as the people.',
+        `So work out what share of the ${total} this group is, then take that share of the full turn.`),
+      solution: { steps: [
+        { text: 'Find the group as a fraction of the whole.', expr: `${part}/${total}` },
+        { text: 'Take that share of a full turn.', expr: `${part}/${total} × 360° = ${value}°` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${Math.round((part / total) * 100)}`, feedback: 'That is the percentage. A pie chart is measured in degrees, so the share is taken of 360°, not of 100.' },
+        { when: `${part}`, feedback: 'That is how many people are in the group. The angle is that group’s share of a full turn.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'pie-quantity') {
+    const total = pick([60, 90, 120, 180, 240]);
+    const ang = pick([30, 45, 60, 90, 120]);
+    const value = (ang / 360) * total;
+    if (!Number.isInteger(value)) return buildPieAndTravel();
+    return {
+      type: 'pie-quantity', instruction: 'Give the number of people.',
+      question: `A pie chart shows how ${total} learners travel to school. The sector for those who cycle has an angle of ${ang}°. How many learners cycle?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'This is the reverse of drawing the chart — the angle is given, the count is wanted.',
+        'Compare the sector’s angle with a full turn to find what share it is.',
+        `Then take that share of the ${total} learners.`),
+      solution: { steps: [
+        { text: 'Find the sector as a share of the full turn.', expr: `${ang}/360` },
+        { text: 'Take that share of the learners.', expr: `${ang}/360 × ${total} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${ang}`, feedback: 'That is the angle in degrees, not a number of learners. Convert the share of the turn into a share of the group.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'pie-fraction') {
+    const others = [pick([60, 90, 120]), pick([30, 45, 60])];
+    const value = 360 - others[0] - others[1];
+    if (value <= 0) return buildPieAndTravel();
+    return {
+      type: 'pie-missing', instruction: 'Give the missing angle in degrees.',
+      question: `A pie chart has three sectors. Two of them measure ${others[0]}° and ${others[1]}°. What is the angle of the third?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
+      hints: hintLadder(
+        'The sectors of a pie chart together make one complete turn.',
+        'So all three angles must add to that complete turn.',
+        'Work out how much of the turn the two known sectors already use.'),
+      solution: { steps: [
+        { text: 'Add the known sectors.', expr: `${others[0]} + ${others[1]} = ${others[0] + others[1]}` },
+        { text: 'Take that from a full turn.', expr: `360 − ${others[0] + others[1]} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${180 - others[0] - others[1]}`, feedback: 'A pie chart is a full turn, not a half turn — the sectors add to 360°, not 180°.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  // Travel graph: distance against time, read a speed or a stop.
+  const legs = [pick([20, 30, 40, 60]), 0, pick([20, 30, 45])];
+  const hrs = [pick([1, 2]), pick([1, 2]), pick([1, 2])];
+  const askKind = pick(['speed', 'stop', 'total']);
+  if (askKind === 'stop') {
+    const value = `${hrs[1]}`;
+    return {
+      type: 'travel-stop', instruction: 'Give the time in hours.',
+      question: `A travel graph shows a matatu going ${legs[0]} km in the first ${hrs[0]} hour(s), then staying at the same distance for the next ${hrs[1]} hour(s), then going a further ${legs[2]} km. For how long was the matatu at rest?`,
+      answer: value, accepts: accepts(value, `${hrs[1]} hours`, `${hrs[1]} hour`),
+      hints: hintLadder(
+        'On a travel graph, distance is plotted against time.',
+        'While a vehicle is moving, the distance keeps changing.',
+        'So a rest shows up as a stretch where the distance does not change at all.'),
+      solution: { steps: [
+        { text: 'Find where the distance stops changing.', expr: `the middle stretch` },
+        { text: 'Read its length in time.', expr: `${value} hour(s)` }], answer: value },
+      misconceptions: [
+        { when: `${hrs[0] + hrs[1] + hrs[2]}`, feedback: 'That is the whole journey. Only the flat stretch counts as rest.' },
+      ],
+      verify: { kind: 'fraction', value: hrs[1] },
+    };
+  }
+  if (askKind === 'total') {
+    const value = legs[0] + legs[2];
+    return {
+      type: 'travel-total', instruction: 'Give the distance in kilometres.',
+      question: `A travel graph shows a matatu covering ${legs[0]} km, then resting, then covering a further ${legs[2]} km. What total distance did it travel?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}km`, `${value} km`),
+      hints: hintLadder(
+        'Resting adds time to the journey but not distance.',
+        'So only the moving stretches contribute.',
+        'Combine the distances covered while it was actually moving.'),
+      solution: { steps: [
+        { text: 'Ignore the rest — no distance is covered.', expr: `${legs[0]} and ${legs[2]}` },
+        { text: 'Add the moving stretches.', expr: `${legs[0]} + ${legs[2]} = ${value}` }], answer: `${value}` },
+      misconceptions: [],
+      verify: { kind: 'fraction', value },
+    };
+  }
+  const value = legs[0] / hrs[0];
+  return {
+    type: 'travel-speed', instruction: 'Give the speed in km/h.',
+    question: `On a travel graph, a matatu covers ${legs[0]} km in the first ${hrs[0]} hour(s). What is its average speed over that stretch?`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value}km/h`, `${value} km/h`),
+    hints: hintLadder(
+      'Speed compares how far something went with how long it took.',
+      'On a travel graph that is the steepness of the line.',
+      'Read the distance covered and the time taken, then compare them.'),
+    solution: { steps: [
+      { text: 'Read the distance and the time.', expr: `${legs[0]} km in ${hrs[0]} h` },
+      { text: 'Compare them.', expr: `${legs[0]} ÷ ${hrs[0]} = ${value} km/h` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${legs[0] * hrs[0]}`, feedback: 'Distance and time are compared by dividing, not multiplying — otherwise a longer journey would always look faster.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G8 5.1: bar graphs and line graphs, drawn and interpreted ----
+export function buildBarLineGraphs() {
+  const kind = pick(['bar-read', 'bar-difference', 'scale', 'line-trend', 'line-read']);
+  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+  const vals = days.map(() => randInt(2, 20));
+
+  if (kind === 'bar-read') {
+    const i = randInt(0, 4);
+    if (vals.filter(v => v === vals[i]).length > 1) return buildBarLineGraphs();
+    const value = vals[i];
+    return {
+      type: 'bar-read', instruction: 'Read the value off the graph.',
+      question: `A bar graph shows books borrowed each day —  ${days.map((d, k) => `${d}: ${vals[k]}`).join(',  ')}.  How many more books were borrowed on the busiest day than on the quietest?`,
+      answer: `${Math.max(...vals) - Math.min(...vals)}`,
+      accepts: accepts(`${Math.max(...vals) - Math.min(...vals)}`),
+      hints: hintLadder(
+        'Find the tallest bar and the shortest bar first.',
+        'The question asks how much MORE, so the two readings must be compared.',
+        'Comparing two amounts like this is a subtraction.'),
+      solution: { steps: [
+        { text: 'Read the tallest and shortest bars.', expr: `${Math.max(...vals)} and ${Math.min(...vals)}` },
+        { text: 'Find the difference.', expr: `${Math.max(...vals)} − ${Math.min(...vals)} = ${Math.max(...vals) - Math.min(...vals)}` }],
+        answer: `${Math.max(...vals) - Math.min(...vals)}` },
+      misconceptions: [
+        { when: `${Math.max(...vals) + Math.min(...vals)}`, feedback: '"How many more" compares the two — that is a subtraction, not a total.' },
+        { when: `${Math.max(...vals)}`, feedback: 'That is the busiest day on its own. The question asks how much more it was than the quietest.' },
+      ],
+      verify: { kind: 'fraction', value: Math.max(...vals) - Math.min(...vals) },
+    };
+  }
+
+  if (kind === 'bar-difference') {
+    const value = vals.reduce((a, b) => a + b, 0);
+    return {
+      type: 'bar-total', instruction: 'Give the total.',
+      question: `A bar graph shows books borrowed each day —  ${days.map((d, k) => `${d}: ${vals[k]}`).join(',  ')}.  How many books were borrowed in the whole week?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Every bar stands for one day.',
+        'A weekly total needs every one of them accounted for.',
+        'Read each bar and gather them together.'),
+      solution: { steps: [
+        { text: 'Read every bar.', expr: vals.join(', ') },
+        { text: 'Add them.', expr: `${vals.join(' + ')} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${Math.round(value / 5)}`, feedback: 'That is roughly the average per day. The question asks for the total across the week.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'scale') {
+    const step = pick([2, 5, 10, 20]);
+    const squares = randInt(3, 8);
+    const value = step * squares;
+    return {
+      type: 'graph-scale', instruction: 'Give the value the bar represents.',
+      question: `On a bar graph, 1 square on the vertical axis represents ${step} learners. A bar reaches ${squares} squares. How many learners does it represent?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'The scale tells you what ONE square is worth.',
+        'The bar is several squares tall, and each one is worth the same.',
+        'Combine the height of the bar with the value of a single square.'),
+      solution: { steps: [
+        { text: 'One square is worth the scale.', expr: `${step} learners` },
+        { text: 'The bar is that many squares tall.', expr: `${squares} × ${step} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${squares}`, feedback: 'That counts the squares. Each square stands for more than one learner, so the reading must be scaled up.' },
+        { when: `${step}`, feedback: 'That is what a single square is worth. The bar is several squares tall.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'line-trend') {
+    const rising = coin();
+    const base = randInt(10, 30);
+    const step = randInt(2, 6);
+    const series = [0, 1, 2, 3, 4].map(k => base + (rising ? k * step : -k * step));
+    if (series.some(v => v <= 0)) return buildBarLineGraphs();
+    const value = rising ? 'increasing' : 'decreasing';
+    return {
+      type: 'line-trend', instruction: 'Answer increasing or decreasing.',
+      question: `A line graph shows monthly rainfall —  ${series.join(', ')} mm.  Is the trend increasing or decreasing?`,
+      answer: value, accepts: accepts(value, rising ? 'rising' : 'falling', rising ? 'up' : 'down'),
+      hints: hintLadder(
+        'A trend is about the overall direction, not any single point.',
+        'Compare the later readings with the earlier ones.',
+        'Follow the line from left to right and note which way it goes.'),
+      solution: { steps: [
+        { text: 'Compare first and last.', expr: `${series[0]} → ${series[4]}` },
+        { text: 'Name the direction.', expr: value }], answer: value },
+      misconceptions: [
+        { when: rising ? 'decreasing' : 'increasing', feedback: 'Read the graph from LEFT to right — the earliest month is on the left.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  const months = ['January', 'February', 'March', 'April'];
+  const series = months.map(() => randInt(20, 90));
+  const i = randInt(1, 3);
+  const value = series[i] - series[i - 1];
+  if (value === 0) return buildBarLineGraphs();
+  return {
+    type: 'line-change', instruction: 'Give the change as a number (positive if it rose).',
+    question: `A line graph shows monthly sales —  ${months.map((m, k) => `${m}: ${series[k]}`).join(',  ')}.  By how much did sales change from ${months[i - 1]} to ${months[i]}?`,
+    answer: `${value}`, accepts: accepts(`${value}`, value > 0 ? `+${value}` : `${value}`),
+    hints: hintLadder(
+      'A change compares two readings — the later one against the earlier one.',
+      'Read both months off the graph first.',
+      'Take the earlier reading away from the later one, and keep the sign.'),
+    solution: { steps: [
+      { text: 'Read both months.', expr: `${months[i - 1]}: ${series[i - 1]},  ${months[i]}: ${series[i]}` },
+      { text: 'Later minus earlier.', expr: `${series[i]} − ${series[i - 1]} = ${value}` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${-value}`, feedback: 'The subtraction is the wrong way round — take the EARLIER reading away from the later one, so a rise comes out positive.' },
+      { when: `${series[i] + series[i - 1]}`, feedback: 'A change is a comparison, not a total.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const STATISTICS_CONTENT = {
   // Cambridge gap fill
   G7_DATA_REPRESENT:      withWorkedExample(buildDataRepresent),
@@ -596,6 +862,9 @@ export const STATISTICS_CONTENT = {
   // CBC Grade 9 Data Handling 5.1 — grouped data measures
   G8_CUMULATIVE_FREQ:     withWorkedExample(buildCumulativeFrequency),
   G9_GROUPED_MEASURES:    withWorkedExample(buildGroupedMeasures),
+  // CBC Grade 7 5.1 (pie charts, travel graphs) and Grade 8 5.1 (bar, line)
+  G7_PIE_CHARTS:          withWorkedExample(buildPieAndTravel),
+  G8_DATA_GRAPHS:         withWorkedExample(buildBarLineGraphs),
   G6_MEAN:              withWorkedExample(buildMean),
   G7_MEAN_MEDIAN_MODE:  withWorkedExample(buildAverages),
   G8_PROBABILITY_INTRO: withWorkedExample(buildProbability),

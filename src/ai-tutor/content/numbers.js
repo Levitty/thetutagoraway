@@ -1867,6 +1867,580 @@ export function buildRatesOfWork() {
   };
 }
 
+// ============================================================================
+// CBC GRADE 7 & 8 — NUMBERS AND MONEY
+// Authored against the KICD Grade 7 and Grade 8 Mathematics Curriculum Designs:
+//   G7 1.1 Whole Numbers (20 lessons)  — the largest sub-strand in Grade 7:
+//          place/total value, reading and writing in words, rounding off,
+//          classifying naturals, operations, and number sequences
+//   G7 3.7 Money (12 lessons)          — profit/loss, discount, commission,
+//          bills, postal charges, mobile money services
+//   G8 1.3 Decimals (8 lessons)        — recurring decimals and combined
+//          operations
+//   G8 1.4 Squares and Square Roots (6 lessons) — of decimals and larger
+//          numbers, as read from tables or a calculator
+// ============================================================================
+
+const ONES = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
+  'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen',
+  'eighteen', 'nineteen'];
+const TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
+// Number to words, to the millions the Grade 7 design asks for.
+function inWords(n) {
+  if (n === 0) return 'zero';
+  const under1000 = (x) => {
+    let s = '';
+    if (x >= 100) { s += `${ONES[Math.floor(x / 100)]} hundred`; x %= 100; if (x) s += ' and '; }
+    if (x >= 20) { s += TENS[Math.floor(x / 10)]; if (x % 10) s += `-${ONES[x % 10]}`; }
+    else if (x > 0) s += ONES[x];
+    return s;
+  };
+  const parts = [];
+  const millions = Math.floor(n / 1e6), thousands = Math.floor((n % 1e6) / 1000), rest = n % 1000;
+  if (millions) parts.push(`${under1000(millions)} million`);
+  if (thousands) parts.push(`${under1000(thousands)} thousand`);
+  if (rest) parts.push(under1000(rest));
+  return parts.join(' ').trim();
+}
+
+const PLACE_NAMES = [
+  [1, 'ones'], [10, 'tens'], [100, 'hundreds'], [1000, 'thousands'],
+  [10000, 'ten thousands'], [100000, 'hundred thousands'], [1000000, 'millions'],
+];
+
+// ---- G7 1.1: reading, writing and the TOTAL value of a digit ----
+export function buildNumbersInWords() {
+  const kind = pick(['to-words', 'to-symbols', 'total-value', 'place-name']);
+
+  if (kind === 'to-words') {
+    const n = pick([randInt(1001, 9999), randInt(10001, 99999), randInt(100001, 999999)]);
+    const value = inWords(n);
+    return {
+      type: 'num-to-words', instruction: 'Write the number in words.',
+      question: `Write ${n.toLocaleString('en-KE')} in words.`,
+      answer: value,
+      accepts: accepts(value, value.replace(/-/g, ' '), value.replace(/ and /g, ' ')),
+      hints: hintLadder(
+        'Break the number into groups of three digits from the right.',
+        'Name each group, then say which group it is — thousand, million.',
+        'Write the smallest group last, exactly as you would say it aloud.'),
+      solution: { steps: [
+        { text: 'Split into groups of three from the right.', expr: n.toLocaleString('en-KE') },
+        { text: 'Say each group with its name.', expr: value }], answer: value },
+      misconceptions: [],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'to-symbols') {
+    const n = pick([randInt(1001, 9999), randInt(10001, 99999), randInt(100001, 999999)]);
+    const value = `${n}`;
+    return {
+      type: 'num-to-symbols', instruction: 'Write the number in symbols (digits only).',
+      question: `Write in symbols:  ${inWords(n)}.`,
+      answer: value, accepts: accepts(value, n.toLocaleString('en-KE')),
+      hints: hintLadder(
+        'Work through the words in the order they are said.',
+        'Each named group — million, thousand — fills exactly three digit places.',
+        'Where a group is not mentioned, those places are held by zeros.'),
+      solution: { steps: [
+        { text: 'Take each named group in turn.', expr: inWords(n) },
+        { text: 'Fill every place, using zeros where nothing is said.', expr: n.toLocaleString('en-KE') }], answer: value },
+      misconceptions: [],
+      verify: { kind: 'fraction', value: n },
+    };
+  }
+
+  if (kind === 'total-value') {
+    // The distinction the design keeps separate: the DIGIT versus its value.
+    const idx = randInt(2, 5);
+    const digits = Array.from({ length: idx + 1 }, () => randInt(1, 9));
+    const n = Number(digits.join(''));
+    const pos = randInt(0, idx);                       // 0 = ones place
+    const digit = digits[idx - pos];
+    const value = digit * PLACE_NAMES[pos][0];
+    return {
+      type: 'num-total-value', instruction: 'Give the TOTAL value, not the digit.',
+      question: `In the number ${n.toLocaleString('en-KE')}, what is the TOTAL VALUE of the digit ${digit} in the ${PLACE_NAMES[pos][1]} place?`,
+      answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE')),
+      hints: hintLadder(
+        'Place value and total value are two different things.',
+        'The digit tells you HOW MANY; the column tells you how many OF WHAT.',
+        `So put the digit together with what one ${PLACE_NAMES[pos][1].replace(/s$/, '')} is worth.`),
+      solution: { steps: [
+        { text: 'Name the place.', expr: `${PLACE_NAMES[pos][1]} — worth ${PLACE_NAMES[pos][0].toLocaleString('en-KE')} each` },
+        { text: 'Multiply the digit by that.', expr: `${digit} × ${PLACE_NAMES[pos][0].toLocaleString('en-KE')} = ${value.toLocaleString('en-KE')}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${digit}`, feedback: 'That is the digit itself — its PLACE value. The total value also counts the column it sits in.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  const idx = randInt(3, 6);
+  const digits = Array.from({ length: idx + 1 }, () => randInt(1, 9));
+  const n = Number(digits.join(''));
+  const pos = randInt(1, idx);
+  const digit = digits[idx - pos];
+  const value = PLACE_NAMES[pos][1];
+  return {
+    type: 'num-place-name', instruction: 'Name the place, e.g. thousands.',
+    question: `In ${n.toLocaleString('en-KE')}, which place does the digit ${digit} occupy? (counting from the right)`,
+    answer: value, accepts: accepts(value, value.replace(/s$/, '')),
+    hints: hintLadder(
+      'Places are counted from the RIGHT-hand end of the number.',
+      'Each step to the left is worth 10 times as much as the column before it.',
+      `Count how many digits stand to the right of the ${digit} — that is how many steps left it sits.`),
+    solution: { steps: [
+      { text: 'Count places from the right.', expr: `${pos} place${pos === 1 ? '' : 's'} across` },
+      { text: 'Name it.', expr: value }], answer: value },
+    misconceptions: [],
+    verify: { kind: 'exact', value },
+  };
+}
+
+// ---- G7 1.1: rounding whole numbers ----
+export function buildRoundWholeNumbers() {
+  const places = [[10, 'ten'], [100, 'hundred'], [1000, 'thousand'], [10000, 'ten thousand'], [1000000, 'million']];
+  const [unit, name] = pick(places);
+  const n = randInt(unit * 2, unit * 40);
+  // Never land exactly on a boundary — there is nothing to decide then.
+  if (n % unit === 0) return buildRoundWholeNumbers();
+  const value = Math.round(n / unit) * unit;
+  const down = Math.floor(n / unit) * unit;
+  const up = down + unit;
+  return {
+    type: 'round-whole', instruction: 'Round the number as asked.',
+    question: `Round ${n.toLocaleString('en-KE')} to the nearest ${name}.`,
+    answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE')),
+    hints: hintLadder(
+      `The answer is one of the two nearest ${name}s — one below, one above.`,
+      'Look at the digit immediately to the RIGHT of the place you are rounding to.',
+      'That single digit decides which way you go: 5 or more goes up, less than 5 stays.'),
+    solution: { steps: [
+      { text: 'Find the two candidates.', expr: `${down.toLocaleString('en-KE')} and ${up.toLocaleString('en-KE')}` },
+      { text: 'Check the deciding digit.', expr: `the digit after the ${name}s place` },
+      { text: 'Round.', expr: value.toLocaleString('en-KE') }], answer: `${value}` },
+    misconceptions: [
+      { when: `${value === down ? up : down}`, feedback: `That is the other candidate. Only the digit immediately to the right of the ${name}s place decides the direction — 5 or more rounds up.` },
+      { when: `${n}`, feedback: 'Rounding must change the number to end in zeros at that place — this is the original.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G7 1.1: number sequences ----
+export function buildNumberSequences() {
+  const kind = pick(['linear', 'multiply', 'square-ish', 'rule']);
+
+  if (kind === 'multiply') {
+    const a = randInt(2, 5), r = randInt(2, 4);
+    const terms = [a, a * r, a * r * r, a * r * r * r];
+    const value = terms[3] * r;
+    return {
+      type: 'seq-multiply', instruction: 'Find the next term.',
+      question: `What is the next number in the sequence  ${terms.join(', ')},  … ?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Check what happens between one term and the next.',
+        'Try dividing a term by the one before it — is it always the same?',
+        'The sequence grows by repeated multiplying, not by adding a fixed amount.'),
+      solution: { steps: [
+        { text: 'Compare consecutive terms.', expr: `${terms[1]} ÷ ${terms[0]} = ${r}` },
+        { text: 'Apply the same step again.', expr: `${terms[3]} × ${r} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${terms[3] + (terms[3] - terms[2])}`, feedback: 'You continued by adding the last gap. The gaps here are growing — the rule multiplies.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'square-ish') {
+    const start = randInt(1, 4);
+    const terms = [0, 1, 2, 3].map(k => start + k * (k + 1) / 2 * 0 + start + (k * (k + 1)) / 2).slice(0, 4);
+    const gaps = terms.slice(1).map((t, i) => t - terms[i]);
+    const value = terms[3] + (gaps[2] + 1);
+    return {
+      type: 'seq-growing', instruction: 'Find the next term.',
+      question: `What is the next number in the sequence  ${terms.join(', ')},  … ?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Write down the gap between each pair of terms.',
+        'The gaps are not all the same — look at how the gaps themselves change.',
+        'Continue the pattern in the gaps, then add the next one on.'),
+      solution: { steps: [
+        { text: 'Find the gaps.', expr: gaps.join(', ') },
+        { text: 'The gaps grow by 1 each time, so the next gap follows.', expr: `${gaps[2] + 1}` },
+        { text: 'Add it to the last term.', expr: `${terms[3]} + ${gaps[2] + 1} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${terms[3] + gaps[2]}`, feedback: 'You repeated the last gap. The gaps themselves are increasing, so the next one is bigger.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'rule') {
+    const a = randInt(2, 9), d = randInt(2, 9);
+    const terms = [0, 1, 2, 3].map(k => a + k * d);
+    const value = `${d}`;
+    return {
+      type: 'seq-rule', instruction: 'Give the constant difference as a number.',
+      question: `In the sequence  ${terms.join(', ')},  …  by how much does each term increase?`,
+      answer: value, accepts: accepts(value, `+${d}`),
+      hints: hintLadder(
+        'Compare any term with the one immediately before it.',
+        'Subtract, and check you get the same result for every pair.',
+        'That constant step is what the question is asking for.'),
+      solution: { steps: [
+        { text: 'Subtract consecutive terms.', expr: `${terms[1]} − ${terms[0]} = ${d}` },
+        { text: 'Check it holds throughout.', expr: `${terms[3]} − ${terms[2]} = ${d}` }], answer: value },
+      misconceptions: [
+        { when: `${a}`, feedback: 'That is the first term, not the step between terms.' },
+      ],
+      verify: { kind: 'fraction', value: d },
+    };
+  }
+
+  const a = randInt(3, 30), d = pick([3, 4, 5, 6, 7, 8, 9, 11, 12, -3, -4, -5]);
+  const terms = [0, 1, 2, 3].map(k => a + k * d);
+  if (terms.some(t => t < 0)) return buildNumberSequences();
+  const value = a + 4 * d;
+  return {
+    type: 'seq-linear', instruction: 'Find the next term.',
+    question: `What is the next number in the sequence  ${terms.join(', ')},  … ?`,
+    answer: `${value}`, accepts: accepts(`${value}`),
+    hints: hintLadder(
+      'Look at what is done to get from one term to the next.',
+      'Subtract each term from the one after it and see if the step is constant.',
+      d < 0 ? 'The sequence is going down, so the step is a subtraction.' : 'Apply that same step once more.'),
+    solution: { steps: [
+      { text: 'Find the step.', expr: `${terms[1]} − ${terms[0]} = ${d}` },
+      { text: 'Apply it to the last term.', expr: `${terms[3]} ${d < 0 ? '−' : '+'} ${Math.abs(d)} = ${value}` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${a + 3 * d}`, feedback: 'That is the term already shown at the end of the list — go one step further.' },
+      ...(d > 0 ? [{ when: `${terms[3] * 2}`, feedback: 'The sequence steps by a fixed amount each time; it does not double.' }] : []),
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G7 3.7: discount, commission, bills and mobile money ----
+// The design names mobile money services explicitly, and M-Pesa charges are
+// the arithmetic these learners actually meet.
+export function buildMoneyTransactions() {
+  const kind = pick(['discount', 'pct-discount', 'commission', 'bill', 'mobile-money']);
+
+  if (kind === 'discount') {
+    const marked = pick([800, 1200, 1500, 2400, 3000, 4500, 6000]);
+    const rate = pick([5, 10, 15, 20, 25]);
+    const disc = marked * rate / 100;
+    const askPaid = coin();
+    const value = askPaid ? marked - disc : disc;
+    return {
+      type: 'money-discount', instruction: 'Work in shillings.',
+      question: askPaid
+        ? `A jacket is marked KSh ${marked.toLocaleString('en-KE')}. The shop gives a ${rate}% discount. How much does a customer PAY?`
+        : `A jacket is marked KSh ${marked.toLocaleString('en-KE')}. The shop gives a ${rate}% discount. How much is the DISCOUNT?`,
+      answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE'), `KSh ${value}`),
+      hints: hintLadder(
+        'A discount is an amount taken OFF the marked price.',
+        `Work out ${rate}% of the marked price first.`,
+        askPaid ? 'Then take that off what was marked.' : 'That amount is what the question wants.'),
+      solution: { steps: [
+        { text: `Find ${rate}% of the marked price.`, expr: `${rate}/100 × ${marked} = ${disc}` },
+        ...(askPaid ? [{ text: 'Subtract it from the marked price.', expr: `${marked} − ${disc} = ${value}` }] : [])], answer: `${value}` },
+      misconceptions: askPaid
+        ? [{ when: `${disc}`, feedback: 'That is the discount itself. The customer pays what is LEFT after it is taken off.' }]
+        : [{ when: `${marked - disc}`, feedback: 'That is what the customer pays. The question asks only for the amount taken off.' }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'pct-discount') {
+    const marked = pick([500, 800, 1000, 1500, 2000, 2500]);
+    const rate = pick([5, 10, 20, 25, 40]);
+    const paid = marked * (100 - rate) / 100;
+    const value = rate;
+    return {
+      type: 'money-pct-discount', instruction: 'Give the percentage.',
+      question: `An item marked KSh ${marked.toLocaleString('en-KE')} is sold for KSh ${paid.toLocaleString('en-KE')}. What is the percentage discount?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}%`),
+      hints: hintLadder(
+        'First find the actual amount taken off in shillings.',
+        'A percentage discount is always measured against the MARKED price.',
+        'So compare the amount taken off with the marked price.'),
+      solution: { steps: [
+        { text: 'Find the discount in shillings.', expr: `${marked} − ${paid} = ${marked - paid}` },
+        { text: 'Compare with the marked price.', expr: `${marked - paid}/${marked} × 100 = ${value}%` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${Math.round((marked - paid) / paid * 10000) / 100}`, feedback: 'A discount is measured against the MARKED price, not against what was actually paid.' },
+        { when: `${marked - paid}`, feedback: 'That is the discount in shillings. The question asks for it as a percentage.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'commission') {
+    const sales = pick([20000, 35000, 50000, 80000, 120000]);
+    const rate = pick([2, 3, 4, 5, 8]);
+    const value = sales * rate / 100;
+    return {
+      type: 'money-commission', instruction: 'Work in shillings.',
+      question: `An agent is paid ${rate}% commission on all sales. In one month she sells goods worth KSh ${sales.toLocaleString('en-KE')}. How much commission does she earn?`,
+      answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE'), `KSh ${value}`),
+      hints: hintLadder(
+        'Commission is a share of what was SOLD.',
+        `So the percentage is taken of the sales figure.`,
+        'Nothing is added or subtracted here — it is a single percentage.'),
+      solution: { steps: [
+        { text: `Find ${rate}% of the sales.`, expr: `${rate}/100 × ${sales.toLocaleString('en-KE')} = ${value.toLocaleString('en-KE')}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${sales - value}`, feedback: 'Commission is what she EARNS, not what is left after it.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'bill') {
+    // An electricity bill: fixed charge + units at a rate.
+    const fixed = pick([150, 200, 250, 300]);
+    const rate = pick([12, 15, 18, 20, 25]);
+    const units = pick([30, 45, 60, 80, 120]);
+    const value = fixed + units * rate;
+    return {
+      type: 'money-bill', instruction: 'Work in shillings.',
+      question: `An electricity bill has a fixed charge of KSh ${fixed} plus KSh ${rate} for every unit used. A household uses ${units} units in a month. What is the TOTAL bill?`,
+      answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE'), `KSh ${value}`),
+      hints: hintLadder(
+        'A bill like this has two separate parts.',
+        'One part is charged no matter how much is used; the other depends on the units.',
+        'Work out the part that depends on units first, then bring in the fixed charge.'),
+      solution: { steps: [
+        { text: 'Cost of the units used.', expr: `${units} × ${rate} = ${units * rate}` },
+        { text: 'Add the fixed charge.', expr: `${units * rate} + ${fixed} = ${value.toLocaleString('en-KE')}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${units * rate}`, feedback: 'That covers only the units. The fixed charge is payable on top of it.' },
+        { when: `${(fixed + rate) * units}`, feedback: 'The fixed charge is paid ONCE for the month, not on every unit.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  const amount = pick([500, 1000, 2500, 5000, 10000]);
+  const charge = pick([10, 25, 55, 100]);
+  const askTotal = coin();
+  const value = askTotal ? amount + charge : amount - charge;
+  return {
+    type: 'money-mobile', instruction: 'Work in shillings.',
+    question: askTotal
+      ? `Achieng sends KSh ${amount.toLocaleString('en-KE')} by mobile money. The sending charge is KSh ${charge}, paid by her. How much is deducted from her account altogether?`
+      : `Achieng withdraws KSh ${amount.toLocaleString('en-KE')} from her mobile money account. A withdrawal charge of KSh ${charge} is deducted from the account as well. If she had exactly KSh ${amount.toLocaleString('en-KE')} plus the charge, how much cash does she receive?`,
+    answer: `${askTotal ? value : amount}`,
+    accepts: accepts(`${askTotal ? value : amount}`, (askTotal ? value : amount).toLocaleString('en-KE')),
+    hints: hintLadder(
+      'The amount moved and the charge for moving it are two separate sums.',
+      askTotal ? 'The charge is paid on TOP of what is sent.' : 'The cash handed over is the amount withdrawn; the charge comes out of the account separately.',
+      'Decide which of the two the question is actually asking about.'),
+    solution: { steps: [
+      { text: 'Separate the amount from the charge.', expr: `KSh ${amount.toLocaleString('en-KE')} and KSh ${charge}` },
+      { text: askTotal ? 'The account loses both.' : 'The cash received is the amount itself.', expr: `${askTotal ? value : amount}` }], answer: `${askTotal ? value : amount}` },
+    misconceptions: askTotal
+      ? [{ when: `${amount}`, feedback: 'That is what she sent. The charge leaves her account as well, so more than that is deducted.' }]
+      : [{ when: `${amount - charge}`, feedback: 'The charge is taken from the account, not out of the cash she is handed.' }],
+    verify: { kind: 'fraction', value: askTotal ? value : amount },
+  };
+}
+
+// ---- G8 1.3: recurring decimals, and converting both ways ----
+export function buildRecurringDecimals() {
+  const kind = pick(['classify', 'fraction-to-decimal', 'recurring-to-fraction', 'notation']);
+
+  if (kind === 'classify') {
+    const terminating = [[1, 2, '0.5'], [3, 4, '0.75'], [1, 5, '0.2'], [7, 8, '0.875'], [3, 10, '0.3'], [1, 4, '0.25']];
+    const recurring = [[1, 3], [2, 3], [1, 6], [5, 6], [1, 9], [4, 9], [1, 7], [2, 11]];
+    const isRec = coin();
+    const f = isRec ? pick(recurring) : pick(terminating);
+    const value = isRec ? 'recurring' : 'terminating';
+    return {
+      type: 'dec-classify', instruction: 'Answer recurring or terminating.',
+      question: `Written as a decimal, is  ${f[0]}/${f[1]}  recurring or terminating?`,
+      answer: value, accepts: accepts(value, isRec ? 'repeating' : 'terminates'),
+      hints: hintLadder(
+        'A terminating decimal stops; a recurring one repeats forever.',
+        'It depends entirely on the denominator once the fraction is in simplest form.',
+        'Ask whether the denominator can be built out of 2s and 5s alone.'),
+      solution: { steps: [
+        { text: 'Look at the denominator in simplest form.', expr: `${f[1]}` },
+        { text: isRec ? 'It has a factor other than 2 or 5, so the division never ends.' : 'It is made only of 2s and 5s, so the division ends.', expr: value }], answer: value },
+      misconceptions: [
+        { when: isRec ? 'terminating' : 'recurring', feedback: 'Check the denominator: only denominators built from 2s and 5s give a decimal that stops.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'fraction-to-decimal') {
+    const f = pick([[1, 2, '0.5'], [1, 4, '0.25'], [3, 4, '0.75'], [1, 5, '0.2'], [2, 5, '0.4'],
+      [3, 5, '0.6'], [1, 8, '0.125'], [5, 8, '0.625'], [7, 20, '0.35'], [9, 25, '0.36']]);
+    const value = f[2];
+    return {
+      type: 'dec-from-fraction', instruction: 'Give the decimal.',
+      question: `Convert  ${f[0]}/${f[1]}  to a decimal.`,
+      answer: value, accepts: accepts(value, value.replace(/^0/, '')),
+      hints: hintLadder(
+        'A fraction bar means divide.',
+        `So this is ${f[0]} shared into ${f[1]} equal parts.`,
+        'Carry the division past the decimal point, adding zeros as needed.'),
+      solution: { steps: [
+        { text: 'Treat the fraction as a division.', expr: `${f[0]} ÷ ${f[1]}` },
+        { text: 'Divide.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${f[1] / f[0]}`, feedback: 'The division has gone the wrong way round — the top number is divided BY the bottom.' },
+      ],
+      verify: { kind: 'fraction', value: parseFloat(value) },
+    };
+  }
+
+  if (kind === 'recurring-to-fraction') {
+    // Single-digit recurrence: 0.ẋ = x/9 — the case Grade 8 is asked for.
+    const d = randInt(1, 8);
+    const g = (a, b) => (b === 0 ? a : g(b, a % b));
+    const k = g(d, 9);
+    const value = `${d / k}/${9 / k}`;
+    return {
+      type: 'dec-to-fraction', instruction: 'Give the fraction in simplest form.',
+      question: `Express the recurring decimal  0.${d}${d}${d}…  as a fraction in its simplest form.`,
+      answer: value, accepts: accepts(value, `${d}/9`),
+      hints: hintLadder(
+        'Call the decimal x, then make a second copy of it with the repeating part shifted.',
+        'Multiplying by 10 moves the point one place — and the tail still repeats identically.',
+        'Subtract the two so the endless tail cancels, then solve for x and simplify.'),
+      solution: { steps: [
+        { text: 'Let x be the decimal.', expr: `x = 0.${d}${d}${d}…` },
+        { text: 'Multiply by 10.', expr: `10x = ${d}.${d}${d}${d}…` },
+        { text: 'Subtract — the tails cancel.', expr: `9x = ${d}` },
+        { text: 'Solve and simplify.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${d}/10`, feedback: `${d}/10 is the terminating decimal 0.${d}, which stops. The recurring one is slightly larger because the digits never end.` },
+        ...(k > 1 ? [{ when: `${d}/9`, feedback: 'Correct before simplifying — but this fraction still cancels down.' }] : []),
+      ],
+      verify: { kind: 'fraction', value: d / 9 },
+    };
+  }
+
+  const d = randInt(1, 9);
+  const value = `0.${d}`;
+  return {
+    type: 'dec-notation', instruction: 'Write the decimal the dot stands for, to 1 decimal place.',
+    question: `The notation 0.${d}̇ means the digit ${d} repeats forever. Written out to ONE decimal place, what is this number?`,
+    answer: value, accepts: accepts(value, `.${d}`),
+    hints: hintLadder(
+      'The dot above a digit is a shorthand for "this repeats without end".',
+      'Writing to one decimal place means keeping only the first digit after the point.',
+      'The repeating tail sits beyond the place you are asked for.'),
+    solution: { steps: [
+      { text: 'Expand the notation.', expr: `0.${d}${d}${d}…` },
+      { text: 'Keep one decimal place.', expr: value }], answer: value },
+    misconceptions: [],
+    verify: { kind: 'fraction', value: parseFloat(value) },
+  };
+}
+
+// ---- G8 1.4: squares and square roots beyond the perfect squares ----
+// The design assumes tables or a calculator, so decimals and larger numbers
+// are fair game — the skill is knowing which operation is wanted and how the
+// size of the answer should behave.
+export function buildSquaresTables() {
+  const kind = pick(['square-decimal', 'root-larger', 'between', 'root-decimal']);
+
+  if (kind === 'square-decimal') {
+    const a = randInt(11, 99) / 10;
+    const value = Math.round(a * a * 100) / 100;
+    return {
+      type: 'sq-decimal', instruction: 'Give your answer to 2 decimal places.',
+      question: `Work out  ${a}²`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}`.replace(/0+$/, '').replace(/\.$/, '')),
+      hints: hintLadder(
+        'Squaring means multiplying the number by itself.',
+        'Multiply as though there were no decimal point first.',
+        'Then count the decimal places in BOTH numbers to place the point.'),
+      solution: { steps: [
+        { text: 'Multiply the number by itself.', expr: `${a} × ${a}` },
+        { text: 'Place the decimal point.', expr: `${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${Math.round(a * 2 * 100) / 100}`, feedback: 'That doubles the number. Squaring multiplies it by ITSELF.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'root-larger') {
+    const r = randInt(13, 40);
+    const value = r;
+    return {
+      type: 'sq-root-larger', instruction: 'Give the square root.',
+      question: `Find  √${r * r}`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'A square root asks which number multiplied by itself gives this.',
+        `The answer is smaller than ${r * r} — considerably smaller.`,
+        'Try squaring a few likely two-digit numbers to close in on it.'),
+      solution: { steps: [
+        { text: 'Look for the number that squares to it.', expr: `? × ? = ${r * r}` },
+        { text: 'Check.', expr: `${value} × ${value} = ${r * r}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${(r * r) / 2}`, feedback: 'Halving is not the same as taking a square root — check by multiplying your answer by itself.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'root-decimal') {
+    const base = pick([1.2, 1.5, 2.5, 3.5, 0.4, 0.6, 0.8]);
+    const sq = Math.round(base * base * 100) / 100;
+    const value = base;
+    return {
+      type: 'sq-root-decimal', instruction: 'Give the square root.',
+      question: `Find  √${sq}`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Ask which number multiplied by itself gives this.',
+        base < 1
+          ? 'Careful — squaring a number below 1 makes it SMALLER, so the root is bigger than the number you were given.'
+          : 'The answer has fewer decimal places than the number you were given.',
+        'Try squaring a candidate and compare.'),
+      solution: { steps: [
+        { text: 'Look for the number that squares to it.', expr: `? × ? = ${sq}` },
+        { text: 'Check.', expr: `${value} × ${value} = ${sq}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${sq / 2}`, feedback: 'Halving is not a square root — multiply your answer by itself and compare with what you were given.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  const r = randInt(5, 20);
+  const n = randInt(r * r + 1, (r + 1) * (r + 1) - 1);
+  const value = r;
+  return {
+    type: 'sq-between', instruction: 'Give the whole number just below it.',
+    question: `√${n} lies between two whole numbers. What is the SMALLER one?`,
+    answer: `${value}`, accepts: accepts(`${value}`),
+    hints: hintLadder(
+      'Find the perfect squares that this number sits between.',
+      'Their square roots are the two whole numbers you want.',
+      'The lower perfect square gives the smaller of the two.'),
+    solution: { steps: [
+      { text: 'Trap it between perfect squares.', expr: `${r * r} < ${n} < ${(r + 1) * (r + 1)}` },
+      { text: 'Take the root of the lower one.', expr: `${value}` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${r + 1}`, feedback: 'That is the UPPER whole number — the question asks for the one below.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const NUMBERS_CONTENT = {
   G5_ADDITION:           withWorkedExample(() => buildColumnAddSub()),
   G5_SUBTRACTION:        withWorkedExample(() => buildColumnAddSub({ sub: true })),
@@ -1931,6 +2505,14 @@ export const NUMBERS_CONTENT = {
   G9_INTEGERS_COMBINED:  withWorkedExample(buildIntegersCombined),
   G9_COMPOUND_PROPORTION: withWorkedExample(buildCompoundProportion),
   G9_RATES_OF_WORK:      withWorkedExample(buildRatesOfWork),
+  // CBC Grade 7 Numbers 1.1 (20 lessons) and Money 3.7 (12 lessons)
+  G7_NUMBERS_WORDS:      withWorkedExample(buildNumbersInWords),
+  G7_ROUNDING_WHOLE:     withWorkedExample(buildRoundWholeNumbers),
+  G7_NUMBER_SEQUENCES:   withWorkedExample(buildNumberSequences),
+  G7_MONEY_TRANSACTIONS: withWorkedExample(buildMoneyTransactions),
+  // CBC Grade 8 Numbers 1.3 Decimals and 1.4 Squares and Square Roots
+  G8_RECURRING_DECIMALS: withWorkedExample(buildRecurringDecimals),
+  G8_SQUARES_TABLES:     withWorkedExample(buildSquaresTables),
 };
 
 export const NUMBERS_SKILL_IDS = Object.keys(NUMBERS_CONTENT);

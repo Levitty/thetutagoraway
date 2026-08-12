@@ -887,11 +887,263 @@ export function buildElevationDepression() {
   };
 }
 
+// ============================================================================
+// CBC GRADE 7 4.2 GEOMETRICAL CONSTRUCTIONS (12 lessons)
+// The design is explicit: bisect angles, construct 90°, 45°, 60°, 30° "and
+// other angles that are multiples of 7.5°", and construct triangles and
+// circles — all with ruler and compasses only. A typed-answer lesson cannot
+// mark a drawing, so what is tested here is the reasoning that governs the
+// construction: which angle a bisection yields, which angles are reachable,
+// and how a target angle is built from the ones you can already make.
+// ============================================================================
+export function buildAngleConstruction() {
+  const kind = pick(['bisect', 'bisect-twice', 'reachable', 'build-from', 'triangle-angle']);
+
+  if (kind === 'bisect') {
+    const a = pick([90, 60, 120, 45, 30, 150]);
+    const value = a / 2;
+    return {
+      type: 'constr-bisect', instruction: 'Give the angle in degrees.',
+      question: `An angle of ${a}° is bisected with a ruler and a pair of compasses. What is the size of EACH of the two new angles?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
+      hints: hintLadder(
+        'To bisect is to cut into two equal parts.',
+        'The two new angles are equal, and together they make up the original.',
+        'So the original is shared equally between them.'),
+      solution: { steps: [
+        { text: 'Bisecting makes two equal angles.', expr: `${a}° in two` },
+        { text: 'Share it equally.', expr: `${a} ÷ 2 = ${value}°` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${a * 2}`, feedback: 'Bisecting makes each angle SMALLER than the original, not larger.' },
+        { when: `${a}`, feedback: 'That is the original angle. Each of the two new ones is only part of it.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'bisect-twice') {
+    const a = pick([120, 60, 90, 180]);
+    const value = a / 4;
+    return {
+      type: 'constr-bisect2', instruction: 'Give the angle in degrees.',
+      question: `An angle of ${a}° is bisected, and one of the halves is then bisected again. What is the size of the smallest angle produced?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
+      hints: hintLadder(
+        'Work one bisection at a time rather than trying to see the whole thing at once.',
+        'The first bisection gives you an angle to carry into the second.',
+        'Each bisection halves whatever it is applied to.'),
+      solution: { steps: [
+        { text: 'First bisection.', expr: `${a} ÷ 2 = ${a / 2}°` },
+        { text: 'Bisect that half again.', expr: `${a / 2} ÷ 2 = ${value}°` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${a / 2}`, feedback: 'That is the result of the FIRST bisection only — it is halved once more.' },
+        { when: `${a - a / 4}`, feedback: 'The question asks for the small angle produced, not what is left over.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'reachable') {
+    // Multiples of 7.5° are exactly what ruler-and-compass work reaches here.
+    const yes = coin();
+    const ang = yes ? pick([7.5, 15, 22.5, 37.5, 52.5, 67.5, 82.5, 105]) : pick([10, 20, 25, 40, 50, 70, 80, 100]);
+    const value = yes ? 'yes' : 'no';
+    return {
+      type: 'constr-reachable', instruction: 'Answer yes or no.',
+      question: `Using only a ruler and a pair of compasses, and working from 90° and 60° by bisecting, can an angle of ${ang}° be constructed?`,
+      answer: value, accepts: accepts(value, yes ? 'y' : 'n'),
+      hints: hintLadder(
+        'Start from what compasses give you directly: a right angle and an equilateral triangle’s angle.',
+        'Bisecting those repeatedly, and adding or subtracting the results, reaches a fixed family of angles.',
+        'Every angle in that family is a multiple of the same small step — work out what that step is and test the angle against it.'),
+      solution: { steps: [
+        { text: 'Halving 90° and 60° repeatedly reaches 45°, 30°, 22.5°, 15°, 7.5°.', expr: 'the smallest step is 7.5°' },
+        { text: 'Test the angle against that step.', expr: `${ang} ÷ 7.5 = ${ang / 7.5}${Number.isInteger(ang / 7.5) ? '' : '…'}` },
+        { text: Number.isInteger(ang / 7.5) ? 'It is a whole number of steps.' : 'It is not a whole number of steps.', expr: value }], answer: value },
+      misconceptions: [
+        { when: yes ? 'no' : 'yes', feedback: 'Test the angle against the smallest step that repeated bisection reaches — anything that is a whole number of those steps can be built.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'build-from') {
+    const combos = [
+      { target: 105, parts: '60 + 45' }, { target: 75, parts: '30 + 45' },
+      { target: 135, parts: '90 + 45' }, { target: 150, parts: '90 + 60' },
+      { target: 15, parts: '45 − 30' }, { target: 120, parts: '90 + 30' },
+    ];
+    const c = pick(combos);
+    const value = c.parts;
+    return {
+      type: 'constr-build', instruction: 'Answer using two of 30, 45, 60, 90 — for example 60 + 30.',
+      question: `You can already construct 30°, 45°, 60° and 90°. How would you construct ${c.target}° from two of them?`,
+      answer: value,
+      accepts: accepts(value, value.replace(/\s+/g, ''), value.replace('−', '-'), value.replace('−', '-').replace(/\s+/g, ''),
+        ...(value.includes('+') ? [value.split(' + ').reverse().join(' + ')] : [])),
+      hints: hintLadder(
+        'Angles can be laid next to each other to add, or taken away to subtract.',
+        `Ask which of 30, 45, 60 and 90 sit either side of ${c.target}.`,
+        c.target > 90 ? 'The target is larger than any single one you have, so two must be combined.' : 'The target is smaller than one you have, so something must be taken off.'),
+      solution: { steps: [
+        { text: 'Choose two constructible angles.', expr: value },
+        { text: 'Check the total.', expr: `= ${c.target}°` }], answer: value },
+      misconceptions: [],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  const which = pick([
+    { q: 'Constructing an equilateral triangle with compasses gives each of its angles as what?', a: '60' },
+    { q: 'A perpendicular is constructed at a point on a line. What angle does it make with the line?', a: '90' },
+    { q: 'The perpendicular bisector of a line segment cuts it at what angle?', a: '90' },
+  ]);
+  return {
+    type: 'constr-fact', instruction: 'Give the angle in degrees.',
+    question: which.q,
+    answer: which.a, accepts: accepts(which.a, `${which.a}°`),
+    hints: hintLadder(
+      'Think about what the construction guarantees, not what it looks like.',
+      which.a === '60' ? 'All three sides are made equal by the compasses — so all three angles must match too.' : 'The word perpendicular is itself the clue.',
+      which.a === '60' ? 'Three equal angles must share the triangle’s total between them.' : 'Perpendicular lines meet in a square corner.'),
+    solution: { steps: [
+      { text: 'Name what the construction fixes.', expr: which.a === '60' ? 'three equal sides, so three equal angles' : 'a square corner' },
+      { text: 'Give the angle.', expr: `${which.a}°` }], answer: which.a },
+    misconceptions: [
+      ...(which.a === '60' ? [{ when: '180', feedback: 'That is the total of all three angles. Each single angle is a share of it.' }] : []),
+    ],
+    verify: { kind: 'fraction', value: Number(which.a) },
+  };
+}
+
+// ============================================================================
+// CBC GRADE 8 4.3 SCALE DRAWING (14 lessons)
+// The outcomes are almost entirely about the two FORMS a scale is written in —
+// statement form ("1 cm represents 5 m") and ratio form (1:500) — converting
+// between them, and converting between actual and scale length.
+// ============================================================================
+export function buildScaleForms() {
+  const kind = pick(['statement-to-ratio', 'ratio-to-statement', 'actual-from-drawing', 'drawing-from-actual', 'map-km']);
+
+  if (kind === 'statement-to-ratio') {
+    const m = pick([2, 5, 10, 20, 50, 100]);
+    const value = `1:${m * 100}`;
+    return {
+      type: 'scale-to-ratio', instruction: 'Write the scale in ratio form, e.g. 1:500.',
+      question: `A scale is given as "1 cm represents ${m} m". Write it in ratio form.`,
+      answer: value, accepts: accepts(value, `1 : ${m * 100}`, `1/${m * 100}`),
+      hints: hintLadder(
+        'A ratio has no units, so both sides must first be measured in the SAME unit.',
+        'Centimetres are the natural choice, since one side is already in centimetres.',
+        `So convert ${m} m into centimetres before writing the ratio.`),
+      solution: { steps: [
+        { text: 'Put both sides in the same unit.', expr: `${m} m = ${m * 100} cm` },
+        { text: 'Write as a ratio.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `1:${m}`, feedback: 'The two sides are in different units — metres and centimetres. A ratio only works once both are the same.' },
+        { when: `1:${m * 1000}`, feedback: 'That converts metres to millimetres. The drawing measurement is in centimetres, so match that.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'ratio-to-statement') {
+    const m = pick([2, 5, 10, 20, 50, 100, 500]);
+    const value = `${m}`;
+    return {
+      type: 'scale-to-statement', instruction: 'Give the number of metres only.',
+      question: `A map has a scale of 1:${m * 100}. Complete the statement form: 1 cm represents ___ m.`,
+      answer: value, accepts: accepts(value, `${m}m`, `${m} m`),
+      hints: hintLadder(
+        'A ratio scale means 1 unit on the drawing stands for that many of the SAME units in reality.',
+        'So the second number is a length in centimetres.',
+        'The statement wants metres, so that centimetre figure needs converting.'),
+      solution: { steps: [
+        { text: 'Read the ratio in centimetres.', expr: `1 cm represents ${m * 100} cm` },
+        { text: 'Convert to metres.', expr: `${m * 100} ÷ 100 = ${value} m` }], answer: value },
+      misconceptions: [
+        { when: `${m * 100}`, feedback: 'That figure is in centimetres. The statement asks for metres.' },
+      ],
+      verify: { kind: 'fraction', value: m },
+    };
+  }
+
+  if (kind === 'actual-from-drawing') {
+    const m = pick([2, 5, 10, 20]);
+    const drawn = pick([3, 4, 6, 7, 8, 12]);
+    const value = drawn * m;
+    return {
+      type: 'scale-actual', instruction: 'Give the actual length in metres.',
+      question: `A plan is drawn to a scale of 1 cm to ${m} m. A wall measures ${drawn} cm on the plan. What is its ACTUAL length?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}m`, `${value} m`),
+      hints: hintLadder(
+        'Every single centimetre on the plan stands for the same real distance.',
+        'The wall is several centimetres long on the plan.',
+        'Decide whether the real length should come out bigger or smaller than the drawing.'),
+      solution: { steps: [
+        { text: 'One centimetre stands for the scale.', expr: `${m} m` },
+        { text: 'The wall is that many centimetres.', expr: `${drawn} × ${m} = ${value} m` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${drawn / m}`, feedback: 'That makes the real wall smaller than the drawing. Going from plan to reality scales UP.' },
+        { when: `${drawn}`, feedback: 'That is the measurement on the plan, not the real wall.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'drawing-from-actual') {
+    const m = pick([2, 5, 10, 20]);
+    const drawn = pick([3, 4, 6, 8, 9]);
+    const actual = drawn * m;
+    const value = drawn;
+    return {
+      type: 'scale-drawing-len', instruction: 'Give the length on the drawing in centimetres.',
+      question: `A field is ${actual} m long. It is to be drawn to a scale of 1 cm to ${m} m. How long will it be on the drawing?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}cm`, `${value} cm`),
+      hints: hintLadder(
+        'This is the reverse of reading a plan — reality is known, the drawing is wanted.',
+        `Each centimetre of the drawing accounts for ${m} m of the field.`,
+        'So ask how many of those the field is worth.'),
+      solution: { steps: [
+        { text: 'One centimetre covers the scale.', expr: `${m} m` },
+        { text: 'Share the real length into those.', expr: `${actual} ÷ ${m} = ${value} cm` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${actual * m}`, feedback: 'That makes the drawing bigger than the field. Going from reality to a plan scales DOWN.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  const denom = pick([50000, 100000, 25000, 200000]);
+  const cm = pick([2, 3, 4, 5, 6, 8]);
+  const value = (cm * denom) / 100000;                 // cm → km
+  return {
+    type: 'scale-map-km', instruction: 'Give the actual distance in kilometres.',
+    question: `On a map of scale 1:${denom.toLocaleString('en-KE')}, two towns are ${cm} cm apart. What is the actual distance between them, in kilometres?`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value}km`, `${value} km`),
+    hints: hintLadder(
+      'Work in centimetres first — the ratio is in centimetres on both sides.',
+      'Find the real distance in centimetres before worrying about kilometres.',
+      'Then convert: there are 100 cm in a metre and 1000 m in a kilometre.'),
+    solution: { steps: [
+      { text: 'Real distance in centimetres.', expr: `${cm} × ${denom.toLocaleString('en-KE')} = ${(cm * denom).toLocaleString('en-KE')} cm` },
+      { text: 'Convert to kilometres.', expr: `÷ 100 000 = ${value} km` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${cm * denom / 100}`, feedback: 'That stops at metres. One more conversion is needed to reach kilometres.' },
+      { when: `${cm}`, feedback: 'That is the distance on the map, not on the ground.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const GEOMETRY_CONTENT = {
   // Cambridge gap fill
   G8_ANGLE_RELATIONSHIPS: withWorkedExample(buildParallelAngles),
   G8_CONGRUENCE:          withWorkedExample(buildCongruenceTest),
   // CBC Grade 9 Geometry 4.1 / 4.2
+  // CBC Grade 7 4.2 Constructions and Grade 8 4.3 Scale Drawing
+  G7_ANGLE_CONSTRUCTION:     withWorkedExample(buildAngleConstruction),
+  G8_SCALE_FORMS:            withWorkedExample(buildScaleForms),
   G9_PARALLEL_PERPENDICULAR: withWorkedExample(buildParallelPerpendicular),
   G9_ELEVATION_DEPRESSION:   withWorkedExample(buildElevationDepression),
   G8_SIMILARITY:          withWorkedExample(buildSimilarity),
