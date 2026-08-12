@@ -177,9 +177,24 @@ export function buildAddSubUnlike({ sub = false } = {}) {
       ],
       answer: fracStr(num, L),
     },
+    // The four ways this actually goes wrong. Only one of them — adding
+    // straight across — used to be caught, so a learner who kept the numerator
+    // and added the bottoms (1/5 + 1/2 = 1/7) got the generic "you need a
+    // common denominator" instead of being told what she had done. Anything
+    // that happens to equal the right answer is dropped rather than shown.
     misconceptions: [
-      { when: `${a + c}/${b + d}`, feedback: `Don’t add across! ${a}/${b} ${op} ${c}/${d} is NOT (${a}${op}${c})/(${b}${op}${d}). Use a common denominator first.` },
-    ],
+      { when: `${sub ? a - c : a + c}/${b + d}`,
+        feedback: `You ${sub ? 'subtracted' : 'added'} straight across — tops together and bottoms together. The bottom says how big the pieces ARE; ${sub ? 'taking one denominator from the other' : 'adding the denominators'} changes the size of the pieces instead of counting them.` },
+      { when: `${a}/${b + d}`,
+        feedback: `The bottoms have been ${sub ? 'combined' : 'added'} and the top left as it was. A denominator is a piece SIZE, not a quantity — ${b} pieces and ${d} pieces don't make ${b + d}ths. Re-cut both fractions to the same size first.` },
+      { when: `${sub ? a - c : a + c}/${b * d}`,
+        feedback: `You found a common denominator by multiplying (${b} × ${d} = ${b * d}) — that part is legitimate. But then the tops must be rescaled to match, not carried over unchanged.` },
+      ...(!sub ? [{ when: `${a * c}/${b * d}`,
+        feedback: 'That is what you would do to MULTIPLY these fractions. Adding needs the pieces made the same size first.' }] : []),
+    ].filter(m => {
+      const [mn, md] = m.when.split('/').map(Number);
+      return md !== 0 && Number.isFinite(mn) && Math.abs(mn / md - (sub ? a / b - c / d : a / b + c / d)) > 1e-9;
+    }),
     verify: { kind: 'fraction', value: sub ? a / b - c / d : a / b + c / d },
   };
 }
