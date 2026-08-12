@@ -420,6 +420,248 @@ export function buildLoci() {
   };
 }
 
+
+// ---- G9: circle theorems (introduction) — CRITICAL -------------------------
+// Was a legacy one-liner. Circle theorems are a small set of rules that must
+// be NAMED and then applied; the naming is half the skill, because an exam
+// asks "giving reasons".
+export function buildCircleTheorems() {
+  const kind = pick(['centre', 'semicircle', 'same-segment', 'cyclic', 'tangent', 'name']);
+
+  if (kind === 'centre') {
+    const circ = randInt(20, 75);
+    const value = 2 * circ;
+    return {
+      type: 'circle-centre', instruction: 'Use the angle-at-the-centre theorem.',
+      question: `An angle at the circumference of a circle is ${circ}°, standing on the same arc as an angle at the centre. Find the angle at the CENTRE.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
+      hints: hintLadder(
+        'There is a fixed relationship between an angle at the centre and one at the circumference on the SAME arc.',
+        'The angle at the centre is twice the angle at the circumference.',
+        `So double ${circ}°.`),
+      solution: { steps: [
+        { text: 'Angle at the centre = 2 × angle at the circumference (same arc).', expr: `2 × ${circ}°` },
+        { text: 'Evaluate.', expr: `${value}°` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${Math.round(circ / 2)}`, feedback: 'You halved instead of doubling. The CENTRE angle is the bigger one — it is twice the circumference angle.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'semicircle') {
+    const other = randInt(25, 65);
+    const askRight = coin();
+    const value = askRight ? 90 : 90 - other;
+    return {
+      type: 'circle-semicircle', instruction: 'Use the angle-in-a-semicircle theorem.',
+      question: askRight
+        ? 'A triangle is drawn in a circle with one side as the DIAMETER. What is the angle at the circumference, opposite the diameter?'
+        : `A triangle is drawn in a circle with the diameter as one side. One of the other angles is ${other}°. Find the third angle.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
+      hints: hintLadder(
+        'A triangle standing on the diameter always has one special angle.',
+        'The angle in a semicircle is a right angle.',
+        askRight ? 'That is the whole answer.' : `So the three angles are 90°, ${other}° and the one you want — and they total 180°.`),
+      solution: { steps: [
+        { text: 'The angle in a semicircle is 90°.', expr: '90°' },
+        ...(askRight ? [] : [{ text: 'Angles in a triangle sum to 180°.', expr: `180 − 90 − ${other} = ${value}°` }])], answer: `${value}` },
+      misconceptions: askRight ? [
+        { when: '180', feedback: '180° is a straight line. The angle standing on the diameter is a RIGHT angle, 90°.' },
+      ] : [
+        { when: `${180 - other}`, feedback: 'You forgot the right angle. The diameter forces a 90° angle, so subtract BOTH 90° and the given angle from 180°.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'same-segment') {
+    const a = randInt(22, 70);
+    return {
+      type: 'circle-same-segment', instruction: 'Use the same-segment theorem.',
+      question: `Two angles at the circumference of a circle stand on the same arc. One of them is ${a}°. Find the other.`,
+      answer: `${a}`, accepts: accepts(`${a}`, `${a}°`),
+      hints: hintLadder(
+        'Both angles look at the same arc from the edge of the circle.',
+        'Angles in the same segment, standing on the same arc, are equal.'),
+      solution: { steps: [
+        { text: 'Angles in the same segment are equal.', expr: `${a}°` }], answer: `${a}` },
+      misconceptions: [
+        { when: `${2 * a}`, feedback: 'Doubling is for the angle at the CENTRE. Two angles at the circumference on the same arc are simply EQUAL.' },
+        { when: `${180 - a}`, feedback: 'Supplementary is for OPPOSITE angles of a cyclic quadrilateral. Same segment means equal.' },
+      ],
+      verify: { kind: 'fraction', value: a },
+    };
+  }
+
+  if (kind === 'cyclic') {
+    const a = randInt(60, 130);
+    const value = 180 - a;
+    return {
+      type: 'circle-cyclic', instruction: 'Use the cyclic-quadrilateral theorem.',
+      question: `A quadrilateral has all four vertices on a circle. One angle is ${a}°. Find the angle OPPOSITE it.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
+      hints: hintLadder(
+        'All four corners lie on the circle — that is a cyclic quadrilateral.',
+        'Opposite angles of a cyclic quadrilateral add up to 180°.',
+        `So 180 − ${a}.`),
+      solution: { steps: [
+        { text: 'Opposite angles of a cyclic quadrilateral are supplementary.', expr: `${a}° + x = 180°` },
+        { text: 'Solve.', expr: `x = ${value}°` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${a}`, feedback: 'Equal angles come from the SAME SEGMENT. In a cyclic quadrilateral, opposite angles ADD to 180°.' },
+        { when: `${360 - a}`, feedback: 'Opposite angles sum to 180°, not 360°.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'tangent') {
+    const r = randInt(20, 70);
+    const askAngle = coin();
+    const value = askAngle ? 90 : 90 - r;
+    return {
+      type: 'circle-tangent', instruction: 'Use the tangent–radius theorem.',
+      question: askAngle
+        ? 'A tangent touches a circle at point P, and the radius OP is drawn. What is the angle between the tangent and the radius?'
+        : `A tangent touches a circle at P and the radius OP is drawn. A chord from P makes an angle of ${r}° with the radius. What angle does the chord make with the tangent?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
+      hints: hintLadder(
+        'Think about how a tangent meets the circle — it touches at exactly one point.',
+        'A tangent is perpendicular to the radius at the point of contact.',
+        askAngle ? 'That is the answer.' : `The radius and tangent make 90°, and ${r}° of it is taken by the chord.`),
+      solution: { steps: [
+        { text: 'Tangent ⊥ radius at the point of contact.', expr: '90°' },
+        ...(askAngle ? [] : [{ text: 'Subtract the part the chord already takes.', expr: `90 − ${r} = ${value}°` }])], answer: `${value}` },
+      misconceptions: [],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  // naming the theorem — exams ask for the REASON, not just the number
+  const cases = [
+    { q: 'Two angles at the circumference stand on the same arc. What can you say about them? (one word)', a: 'equal',
+      why: 'Angles in the same segment, standing on the same arc, are equal.' },
+    { q: 'What is the size, in degrees, of the angle in a semicircle?', a: '90',
+      why: 'The angle subtended by a diameter at the circumference is always a right angle.' },
+    { q: 'Opposite angles of a cyclic quadrilateral add up to how many degrees?', a: '180',
+      why: 'Opposite angles of a cyclic quadrilateral are supplementary.' },
+    { q: 'At the point where a tangent touches a circle, what angle does it make with the radius?', a: '90',
+      why: 'A tangent is perpendicular to the radius at the point of contact.' },
+    { q: 'The angle at the centre is how many times the angle at the circumference on the same arc?', a: '2',
+      why: 'The angle at the centre is twice the angle at the circumference standing on the same arc.' },
+  ];
+  const c = pick(cases);
+  return {
+    type: 'circle-theorem-name', instruction: 'Recall the theorem.',
+    question: c.q, answer: c.a, accepts: accepts(c.a, `${c.a}°`),
+    hints: hintLadder('Picture the diagram this theorem belongs to and what stays fixed in it.',
+      'These are the five circle theorems — each ties an angle to a specific feature: arc, diameter, tangent or centre.'),
+    solution: { steps: [{ text: c.why, expr: c.a }], answer: c.a },
+    misconceptions: [],
+    verify: { kind: 'text', value: c.a },
+  };
+}
+
+// ---- G9: trigonometry word problems ---------------------------------------
+// Angle of elevation / depression — the applied half of SOH CAH TOA, and the
+// place students actually lose marks: choosing the wrong ratio for the sides
+// they were given.
+export function buildTrigProblems() {
+  const angle = pick([30, 45, 60]);
+  const kind = pick(['elevation-height', 'depression-distance', 'ladder', 'find-angle']);
+  const rad = angle * Math.PI / 180;
+  const r1d = (x) => Math.round(x * 10) / 10;
+
+  if (kind === 'elevation-height') {
+    const d = randInt(10, 60);
+    const value = r1d(d * Math.tan(rad));
+    return {
+      type: 'trig-elevation', instruction: 'Draw the right-angled triangle first.',
+      question: `From a point ${d} m from the foot of a tower, the angle of elevation of the top is ${angle}°. Find the height of the tower. (1 d.p.)`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}m`),
+      hints: hintLadder(
+        'Sketch it: the tower is vertical, the ground is horizontal, and your line of sight is the slope.',
+        `Relative to the ${angle}° angle, the ground (${d} m) is ADJACENT and the height is OPPOSITE.`,
+        'Opposite and adjacent together means tangent: height = d × tan(angle).'),
+      solution: { steps: [
+        { text: 'Opposite (height) and adjacent (ground) → use tan.', expr: `tan ${angle}° = h / ${d}` },
+        { text: 'Rearrange and evaluate.', expr: `h = ${d} × tan ${angle}° = ${value} m` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${r1d(d * Math.sin(rad))}`, feedback: 'sin uses the HYPOTENUSE. Here you were given the adjacent side and want the opposite, so it is tan.' },
+      ],
+      verify: { kind: 'fraction', value: d * Math.tan(rad), tol: 0.11 },
+    };
+  }
+
+  if (kind === 'depression-distance') {
+    const h = randInt(15, 80);
+    const value = r1d(h / Math.tan(rad));
+    return {
+      type: 'trig-depression', instruction: 'Angle of depression equals the angle of elevation from below.',
+      question: `From the top of a cliff ${h} m high, the angle of depression of a boat at sea is ${angle}°. How far is the boat from the foot of the cliff? (1 d.p.)`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}m`),
+      hints: hintLadder(
+        'The angle of depression from the top equals the angle of elevation from the boat — alternate angles.',
+        `In that triangle the cliff (${h} m) is OPPOSITE the ${angle}° angle and the sea distance is ADJACENT.`,
+        'tan(angle) = opposite ÷ adjacent, so distance = height ÷ tan(angle).'),
+      solution: { steps: [
+        { text: 'Depression from the top = elevation from the boat.', expr: `${angle}°` },
+        { text: 'Opposite over adjacent → tan.', expr: `tan ${angle}° = ${h} / d` },
+        { text: 'Rearrange and evaluate.', expr: `d = ${h} ÷ tan ${angle}° = ${value} m` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${r1d(h * Math.tan(rad))}`, feedback: 'You multiplied instead of dividing. The height is OPPOSITE the angle, so d = height ÷ tan(angle).' },
+      ],
+      verify: { kind: 'fraction', value: h / Math.tan(rad), tol: 0.11 },
+    };
+  }
+
+  if (kind === 'ladder') {
+    const L = randInt(4, 14);
+    const askHeight = coin();
+    const value = r1d(askHeight ? L * Math.sin(rad) : L * Math.cos(rad));
+    return {
+      type: 'trig-ladder', instruction: 'The ladder is the hypotenuse.',
+      question: `A ladder ${L} m long leans against a wall, making an angle of ${angle}° with the ground. ${askHeight ? 'How high up the wall does it reach?' : 'How far is its foot from the wall?'} (1 d.p.)`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}m`),
+      hints: hintLadder(
+        'The ladder itself is the longest side — the hypotenuse.',
+        askHeight ? 'The height up the wall is OPPOSITE the angle, and you know the hypotenuse.'
+                  : 'The distance along the ground is ADJACENT to the angle, and you know the hypotenuse.',
+        askHeight ? 'Opposite with hypotenuse → sin.' : 'Adjacent with hypotenuse → cos.'),
+      solution: { steps: [
+        { text: askHeight ? 'Opposite and hypotenuse → sin.' : 'Adjacent and hypotenuse → cos.',
+          expr: `${askHeight ? 'sin' : 'cos'} ${angle}° = x / ${L}` },
+        { text: 'Rearrange and evaluate.', expr: `x = ${L} × ${askHeight ? 'sin' : 'cos'} ${angle}° = ${value} m` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${r1d(askHeight ? L * Math.cos(rad) : L * Math.sin(rad))}`,
+          feedback: askHeight ? 'That is the distance along the GROUND. Height is opposite the angle, so use sin.' : 'That is the height up the WALL. The ground distance is adjacent, so use cos.' },
+      ],
+      verify: { kind: 'fraction', value: askHeight ? L * Math.sin(rad) : L * Math.cos(rad), tol: 0.11 },
+    };
+  }
+
+  // find the angle from two sides (a 3-4-5 style triangle keeps it exact-ish)
+  const [o, a] = pick([[3, 4], [6, 8], [5, 12], [8, 15]]);
+  const value = Math.round(Math.atan(o / a) * 180 / Math.PI);
+  return {
+    type: 'trig-find-angle', instruction: 'Find the angle.',
+    question: `A ramp rises ${o} m over a horizontal distance of ${a} m. Find the angle it makes with the ground, to the nearest degree.`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
+    hints: hintLadder(
+      'You have the rise (opposite) and the horizontal run (adjacent).',
+      'Opposite over adjacent is tan, so tan(angle) = rise ÷ run.',
+      `Work out ${o} ÷ ${a}, then use tan⁻¹ (inverse tan) on your calculator.`),
+    solution: { steps: [
+      { text: 'Opposite over adjacent → tan.', expr: `tan θ = ${o}/${a}` },
+      { text: 'Take the inverse tangent.', expr: `θ = tan⁻¹(${(o / a).toFixed(3)}) ≈ ${value}°` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${Math.round(Math.atan(a / o) * 180 / Math.PI)}`, feedback: 'You divided the wrong way round. tan = OPPOSITE ÷ ADJACENT — rise over run.' },
+    ],
+    verify: { kind: 'fraction', value, tol: 1.1 },
+  };
+}
+
 export const GEOMETRY_CONTENT = {
   // Cambridge gap fill
   G8_ANGLE_RELATIONSHIPS: withWorkedExample(buildParallelAngles),
@@ -433,6 +675,8 @@ export const GEOMETRY_CONTENT = {
   G7_PYTHAGORAS:          withWorkedExample(buildPythagoras),
   G9_TRIG_INTRO:          withWorkedExample(buildTrigRatio),
   G9_LOCI:                withWorkedExample(buildLoci),
+  G9_CIRCLE_THEOREMS_INTRO: withWorkedExample(buildCircleTheorems),
+  G9_TRIG_PROBLEMS:       withWorkedExample(buildTrigProblems),
 };
 
 export const GEOMETRY_SKILL_IDS = Object.keys(GEOMETRY_CONTENT);

@@ -1100,6 +1100,279 @@ export function buildColumnAddSub({ sub = false } = {}) {
   };
 }
 
+
+// ---- G9: operations with surds --------------------------------------------
+export function buildSurdsOps() {
+  const kind = pick(['multiply', 'add-like', 'simplify-add', 'rationalise', 'square']);
+  const SQ = { 4: 2, 9: 3, 16: 4, 25: 5, 36: 6, 49: 7, 64: 8, 100: 10 };
+
+  if (kind === 'multiply') {
+    const a = pick([2, 3, 5, 6, 7, 10]), b = pick([2, 3, 5, 6, 7, 10]);
+    const prod = a * b;
+    // If the product is a perfect square the answer is a whole number.
+    const whole = SQ[prod];
+    const value = whole ? `${whole}` : `√${prod}`;
+    return {
+      type: 'surds-multiply', instruction: 'Multiply the surds.',
+      question: `Simplify:   √${a} × √${b}`,
+      answer: value, accepts: accepts(value, whole ? null : `root${prod}`),
+      hints: hintLadder('Surds multiply straight across under one root sign.',
+        '√a × √b = √(ab).', `So this is √(${a} × ${b}).`),
+      solution: { steps: [
+        { text: 'Combine under a single root.', expr: `√(${a} × ${b}) = √${prod}` },
+        ...(whole ? [{ text: `${prod} is a perfect square.`, expr: `${whole}` }] : [])], answer: value },
+      misconceptions: [
+        { when: `√${a + b}`, feedback: 'Roots do NOT add like that. √a × √b = √(ab) — multiply what is under the roots.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'add-like') {
+    const n = pick([2, 3, 5, 6, 7, 11]);
+    const p1 = randInt(2, 9), p2 = randInt(1, p1 - 1);
+    const add = coin();
+    const coef = add ? p1 + p2 : p1 - p2;
+    const value = coef === 1 ? `√${n}` : `${coef}√${n}`;
+    return {
+      type: 'surds-add', instruction: 'Collect like surds.',
+      question: `Simplify:   ${p1}√${n} ${add ? '+' : '−'} ${p2}√${n}`,
+      answer: value, accepts: accepts(value, value.replace('√', 'root')),
+      hints: hintLadder(
+        'Treat √' + n + ' like a letter — it is the same "thing" in both terms.',
+        `Just as ${p1}x ${add ? '+' : '−'} ${p2}x = ${coef}x, collect the counts.`),
+      solution: { steps: [
+        { text: `Both terms are multiples of the same surd, √${n}.`, expr: `(${p1} ${add ? '+' : '−'} ${p2})√${n}` },
+        { text: 'Collect.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${coef}√${n * 2}`, feedback: 'Only the COUNTS in front combine — the surd itself stays as √' + n + '.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'simplify-add') {
+    // e.g. √50 + √8 = 5√2 + 2√2 = 7√2
+    const base = pick([2, 3, 5]);
+    const k1 = pick([2, 3, 4, 5]), k2 = pick([2, 3, 4, 5]);
+    const n1 = base * k1 * k1, n2 = base * k2 * k2;
+    const coef = k1 + k2;
+    const value = `${coef}√${base}`;
+    return {
+      type: 'surds-simplify-add', instruction: 'Simplify each surd first, then collect.',
+      question: `Simplify:   √${n1} + √${n2}`,
+      answer: value, accepts: accepts(value, value.replace('√', 'root')),
+      hints: hintLadder(
+        'They look unlike, but each one hides a square factor — pull it out first.',
+        `Split each number into a perfect square times something: ${n1} = ${k1 * k1} × ${base}.`,
+        'Once both are multiples of the same surd, collect them like terms.'),
+      solution: { steps: [
+        { text: 'Take the square factor out of each.', expr: `√${n1} = ${k1}√${base},  √${n2} = ${k2}√${base}` },
+        { text: 'Now they are like terms — collect.', expr: `(${k1} + ${k2})√${base} = ${value}` }], answer: value },
+      misconceptions: [
+        { when: `√${n1 + n2}`, feedback: 'You cannot add under the root: √a + √b is NOT √(a+b). Simplify each surd first, then collect like terms.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'square') {
+    const n = pick([2, 3, 5, 6, 7, 10, 11, 13]);
+    return {
+      type: 'surds-square', instruction: 'Square the surd.',
+      question: `Simplify:   (√${n})²`,
+      answer: `${n}`, accepts: accepts(`${n}`),
+      hints: hintLadder('Squaring undoes a square root — they are opposite operations.',
+        `√${n} × √${n} = √(${n} × ${n}).`),
+      solution: { steps: [
+        { text: 'Squaring and square-rooting cancel out.', expr: `(√${n})² = ${n}` }], answer: `${n}` },
+      misconceptions: [
+        { when: `${n * n}`, feedback: `You squared ${n} itself. But (√${n})² just removes the root, leaving ${n}.` },
+      ],
+      verify: { kind: 'fraction', value: n },
+    };
+  }
+
+  // rationalise a simple denominator
+  const n = pick([2, 3, 5, 7, 11]);
+  const p1 = randInt(1, 6);
+  const value = p1 % n === 0 ? `${p1 / n}√${n}` : `${p1}√${n}/${n}`;
+  return {
+    type: 'surds-rationalise', instruction: 'Rationalise the denominator.',
+    question: `Rationalise the denominator:   ${p1}/√${n}`,
+    answer: value, accepts: accepts(value, value.replace('√', 'root')),
+    hints: hintLadder(
+      'A surd is not left on the bottom of a fraction — it must be cleared.',
+      `Multiply top and bottom by √${n}. That changes how it looks, not its value.`,
+      `The bottom becomes √${n} × √${n} = ${n}.`),
+    solution: { steps: [
+      { text: `Multiply numerator and denominator by √${n}.`, expr: `(${p1} × √${n}) / (√${n} × √${n})` },
+      { text: 'The denominator loses its root.', expr: `${p1}√${n} / ${n}` },
+      ...(p1 % n === 0 ? [{ text: 'Simplify.', expr: value }] : [])], answer: value },
+    misconceptions: [],
+    verify: { kind: 'exact', value },
+  };
+}
+
+// ---- G9: commercial arithmetic — tax, bills, wages -------------------------
+// CBC G9 Money: PAYE, VAT, utility bills, commission, hire purchase. The
+// contextual financial literacy the curriculum actually centres on.
+export function buildCommercialArith() {
+  const kind = pick(['vat', 'commission', 'hire-purchase', 'bill', 'paye', 'discount-then-vat']);
+
+  if (kind === 'vat') {
+    const net = pick([1200, 2400, 3600, 5000, 8000, 12000, 20000]);
+    const rate = 16;                       // Kenya's standard VAT rate
+    const vat = net * rate / 100;
+    const askTotal = coin();
+    const value = askTotal ? net + vat : vat;
+    return {
+      type: 'ca-vat', instruction: 'Work out the VAT.',
+      question: askTotal
+        ? `A television is marked KSh ${net.toLocaleString('en-KE')} before VAT. VAT is charged at ${rate}%. What is the total price?`
+        : `A shopkeeper sells goods worth KSh ${net.toLocaleString('en-KE')} before VAT. How much VAT is charged at ${rate}%?`,
+      answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE'), `KSh ${value}`),
+      hints: hintLadder(
+        'VAT is a percentage ADDED on top of the marked price.',
+        `Find ${rate}% of ${net.toLocaleString('en-KE')} first.`,
+        askTotal ? 'Then add it to the original price.' : 'That percentage IS the answer.'),
+      solution: { steps: [
+        { text: `Find ${rate}% of the price.`, expr: `${rate}/100 × ${net} = ${vat}` },
+        ...(askTotal ? [{ text: 'Add it to the marked price.', expr: `${net} + ${vat} = ${value}` }] : [])], answer: `${value}` },
+      misconceptions: askTotal
+        ? [{ when: `${vat}`, feedback: 'That is the VAT alone. The TOTAL price is the marked price plus the VAT.' }]
+        : [{ when: `${net + vat}`, feedback: 'That is the total including VAT. The question asks only for the VAT charged.' }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'commission') {
+    const sales = pick([40000, 60000, 80000, 120000, 150000, 200000]);
+    const rate = pick([2, 3, 4, 5, 8, 10]);
+    const basic = pick([8000, 10000, 12000, 15000]);
+    const comm = sales * rate / 100;
+    const askTotal = coin();
+    const value = askTotal ? basic + comm : comm;
+    return {
+      type: 'ca-commission', instruction: 'Work out the earnings.',
+      question: askTotal
+        ? `A salesperson earns a basic wage of KSh ${basic.toLocaleString('en-KE')} plus ${rate}% commission on sales. In a month she sells goods worth KSh ${sales.toLocaleString('en-KE')}. What are her TOTAL earnings?`
+        : `A salesperson is paid ${rate}% commission on sales. She sells goods worth KSh ${sales.toLocaleString('en-KE')}. How much commission does she earn?`,
+      answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE'), `KSh ${value}`),
+      hints: hintLadder(
+        'Commission is a percentage of what was SOLD, not of the wage.',
+        `Find ${rate}% of ${sales.toLocaleString('en-KE')}.`,
+        askTotal ? 'Then add the basic wage.' : 'That is the commission.'),
+      solution: { steps: [
+        { text: `Commission = ${rate}% of sales.`, expr: `${rate}/100 × ${sales} = ${comm}` },
+        ...(askTotal ? [{ text: 'Add the basic wage.', expr: `${basic} + ${comm} = ${value}` }] : [])], answer: `${value}` },
+      misconceptions: askTotal
+        ? [{ when: `${comm}`, feedback: 'That is the commission only — she also receives her basic wage.' }]
+        : [{ when: `${basic + comm}`, feedback: 'The question asks for the COMMISSION alone, not her total earnings.' }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'hire-purchase') {
+    const cash = pick([24000, 36000, 48000, 60000, 75000]);
+    const deposit = Math.round(cash * pick([0.1, 0.2, 0.25]) / 100) * 100;
+    const months = pick([6, 10, 12]);
+    const monthly = pick([2500, 3000, 3500, 4000, 5000]);
+    const hp = deposit + months * monthly;
+    const askExtra = coin();
+    const value = askExtra ? hp - cash : hp;
+    return {
+      type: 'ca-hire-purchase', instruction: 'Compare hire purchase with cash.',
+      question: `A fridge costs KSh ${cash.toLocaleString('en-KE')} cash. On hire purchase it needs a deposit of KSh ${deposit.toLocaleString('en-KE')} and ${months} monthly instalments of KSh ${monthly.toLocaleString('en-KE')}. ${askExtra ? 'How much MORE than the cash price is the hire-purchase price?' : 'What is the total hire-purchase price?'}`,
+      answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE'), `KSh ${value}`),
+      hints: hintLadder(
+        'Hire purchase means a deposit up front plus a fixed payment each month.',
+        `Instalments total ${months} × ${monthly.toLocaleString('en-KE')}.`,
+        askExtra ? 'Add the deposit to get the HP price, then compare with the cash price.' : 'Add the deposit to the instalment total.'),
+      solution: { steps: [
+        { text: 'Total of the instalments.', expr: `${months} × ${monthly} = ${months * monthly}` },
+        { text: 'Add the deposit for the hire-purchase price.', expr: `${deposit} + ${months * monthly} = ${hp}` },
+        ...(askExtra ? [{ text: 'Compare with the cash price.', expr: `${hp} − ${cash} = ${value}` }] : [])], answer: `${value}` },
+      misconceptions: askExtra
+        ? [{ when: `${hp}`, feedback: 'That is the hire-purchase price. The question asks how much MORE it is than paying cash — subtract the cash price.' }]
+        : [{ when: `${months * monthly}`, feedback: 'You left out the deposit — the hire-purchase price is deposit PLUS all the instalments.' }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'bill') {
+    const units = randInt(60, 400);
+    const rate = pick([12, 15, 18, 20, 25]);
+    const standing = pick([150, 200, 300]);
+    const value = units * rate + standing;
+    return {
+      type: 'ca-bill', instruction: 'Work out the bill.',
+      question: `An electricity bill has a standing charge of KSh ${standing} plus KSh ${rate} for each unit used. A household uses ${units} units. What is the total bill?`,
+      answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE'), `KSh ${value}`),
+      hints: hintLadder(
+        'A bill has two parts: a fixed charge you always pay, and a charge for what you actually used.',
+        `Units cost ${units} × ${rate}.`,
+        `Then add the standing charge of ${standing}.`),
+      solution: { steps: [
+        { text: 'Cost of the units used.', expr: `${units} × ${rate} = ${units * rate}` },
+        { text: 'Add the fixed standing charge.', expr: `${units * rate} + ${standing} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${units * rate}`, feedback: 'You forgot the standing charge — it is paid on top of the units used.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'discount-then-vat') {
+    const marked = pick([4000, 5000, 8000, 10000, 20000]);
+    const disc = pick([5, 10, 20, 25]);
+    const afterDisc = marked * (100 - disc) / 100;
+    const value = Math.round(afterDisc * 1.16);
+    return {
+      type: 'ca-discount-vat', instruction: 'Order matters — discount first, then VAT.',
+      question: `A shop offers ${disc}% discount on an item marked KSh ${marked.toLocaleString('en-KE')}. VAT of 16% is then added to the discounted price. What does the customer pay?`,
+      answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE'), `KSh ${value}`),
+      hints: hintLadder(
+        'Do the two steps in the order the question states them.',
+        `First take ${disc}% off ${marked.toLocaleString('en-KE')}.`,
+        'Then add 16% VAT to THAT figure, not to the original.'),
+      solution: { steps: [
+        { text: `Take off the ${disc}% discount.`, expr: `${marked} × ${(100 - disc)}/100 = ${afterDisc}` },
+        { text: 'Add 16% VAT to the discounted price.', expr: `${afterDisc} × 1.16 = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${Math.round(marked * 1.16 * (100 - disc) / 100)}`, feedback: 'Close — but apply the discount FIRST, then charge VAT on the reduced price, as the question says.' },
+        { when: `${afterDisc}`, feedback: 'You stopped after the discount. VAT of 16% still has to be added.' },
+      ],
+      verify: { kind: 'fraction', value, tol: 1.1 },
+    };
+  }
+
+  // PAYE on a simple two-band scale
+  const income = pick([24000, 30000, 36000, 48000, 60000]);
+  const band1 = 24000, r1r = 10, r2r = 25;
+  const tax = income <= band1 ? income * r1r / 100 : band1 * r1r / 100 + (income - band1) * r2r / 100;
+  const relief = 2400;
+  const value = Math.max(0, Math.round(tax - relief));
+  return {
+    type: 'ca-paye', instruction: 'Work through the tax bands in order.',
+    question: `PAYE is charged at ${r1r}% on the first KSh ${band1.toLocaleString('en-KE')} of monthly income and ${r2r}% on anything above that. A worker earns KSh ${income.toLocaleString('en-KE')} a month and gets a personal relief of KSh ${relief.toLocaleString('en-KE')}. How much tax does she actually pay?`,
+    answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE'), `KSh ${value}`),
+    hints: hintLadder(
+      'Tax bands are charged in slices — the higher rate applies only to the part ABOVE the band, not to everything.',
+      `First slice: ${r1r}% of ${band1.toLocaleString('en-KE')}.`,
+      'Add the tax on the remainder, then subtract the personal relief at the very end.'),
+    solution: { steps: [
+      { text: `Tax on the first ${band1.toLocaleString('en-KE')}.`, expr: `${r1r}% × ${band1} = ${band1 * r1r / 100}` },
+      ...(income > band1 ? [{ text: `Tax on the rest (${(income - band1).toLocaleString('en-KE')}).`, expr: `${r2r}% × ${income - band1} = ${(income - band1) * r2r / 100}` }] : []),
+      { text: 'Subtract the personal relief.', expr: `${tax} − ${relief} = ${value}` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${Math.round(income * r2r / 100)}`, feedback: `You charged ${r2r}% on the WHOLE income. The higher rate applies only to the part above KSh ${band1.toLocaleString('en-KE')}.` },
+      { when: `${Math.round(tax)}`, feedback: 'That is the tax before relief. Personal relief is subtracted to give what is actually paid.' },
+    ],
+    verify: { kind: 'fraction', value, tol: 1.1 },
+  };
+}
+
 export const NUMBERS_CONTENT = {
   G5_ADDITION:           withWorkedExample(() => buildColumnAddSub()),
   G5_SUBTRACTION:        withWorkedExample(() => buildColumnAddSub({ sub: true })),
@@ -1156,6 +1429,8 @@ export const NUMBERS_CONTENT = {
   G8_CUBES_CUBE_ROOTS:   withWorkedExample(buildCubeRoot),
   G7_PRIMES:             withWorkedExample(buildPrime),
   G8_PERCENTAGE_CHANGE:  withWorkedExample(buildPercentageChange),
+  G9_SURDS_OPERATIONS:   withWorkedExample(buildSurdsOps),
+  G9_COMMERCIAL_ARITH:   withWorkedExample(buildCommercialArith),
   G8_SIMPLE_INTEREST:    withWorkedExample(buildSimpleInterest),
 };
 

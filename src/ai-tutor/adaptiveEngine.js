@@ -144,7 +144,7 @@ export const findGaps = (progress, ctx) => {
 // foundation does.
 //
 // `band` defaults to the class the learner declared, because that is a fact
-// about her ("I am in Form 3"), not a measurement the app may quietly revise.
+// about her ("I am in Grade 9"), not a measurement the app may quietly revise.
 export const getClassSyllabus = (progress, ctx, band = null) => {
   const c = resolveCtx(ctx);
   const grade = band ?? progress?.declaredGrade ?? getEffectivePlacement(progress, ctx);

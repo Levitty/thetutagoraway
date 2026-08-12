@@ -17,7 +17,7 @@ import {
   buildEvaluateFunction, buildDifferentiate, buildIntegrate, buildDefiniteIntegral,
   buildQuadraticFormula, buildCompleteSquare, buildArithmeticSequence,
   buildGeometricSequence, buildArithmeticSeries, buildStationaryPoints,
-  withWorkedExample, withKPs, coin, accepts, hintLadder, randInt, nonzero, pick, fmtLinear,
+  withWorkedExample, withKPs, coin, accepts, hintLadder, randInt, nonzero, pick, fmtLinear, fmtQuadratic,
 } from './schema.js';
 
 // ============================================================================
@@ -200,6 +200,175 @@ export function buildEquationOfLine() {
   };
 }
 
+
+// ---- G9: simultaneous equations (elimination & substitution) ---------------
+export function buildSimultaneousAdv() {
+  // Engineer integer solutions so the arithmetic never obscures the method.
+  const x = nonzero(-6, 8), y = nonzero(-6, 8);
+  const a1 = nonzero(1, 5), b1 = nonzero(1, 5);
+  let a2 = nonzero(1, 5), b2 = nonzero(1, 5);
+  // avoid proportional equations (no unique solution) and identical ones
+  while (a1 * b2 - a2 * b1 === 0) { a2 = nonzero(1, 5); b2 = nonzero(1, 5); }
+  const c1 = a1 * x + b1 * y, c2 = a2 * x + b2 * y;
+  const askX = coin();
+  const value = askX ? x : y;
+  const eq = (a, b, c) => `${a === 1 ? '' : a === -1 ? '-' : a}x ${b < 0 ? '−' : '+'} ${Math.abs(b) === 1 ? '' : Math.abs(b)}y = ${c}`;
+  return {
+    type: 'simultaneous-adv', instruction: 'Solve the pair of equations.',
+    question: `Solve simultaneously:   ${eq(a1, b1, c1)}   and   ${eq(a2, b2, c2)}.   Find ${askX ? 'x' : 'y'}.`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${askX ? 'x' : 'y'}=${value}`),
+    hints: hintLadder(
+      'Two unknowns need two equations — the plan is to get rid of one of them.',
+      'Multiply one or both equations so that the coefficients of the SAME letter match, then add or subtract.',
+      `To remove ${askX ? 'y' : 'x'}, scale the equations so its coefficients match.`),
+    solution: { steps: [
+      { text: `Scale both equations so the ${askX ? 'y' : 'x'}-terms match.`,
+        expr: askX ? `×${Math.abs(b2)} and ×${Math.abs(b1)}` : `×${Math.abs(a2)} and ×${Math.abs(a1)}` },
+      { text: 'Add or subtract to eliminate that letter.', expr: `leaves one unknown` },
+      { text: 'Solve, then substitute back for the other.', expr: `x = ${x}, y = ${y}` },
+      { text: `The question asked for ${askX ? 'x' : 'y'}.`, expr: `${value}` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${askX ? y : x}`, feedback: `That is ${askX ? 'y' : 'x'} — the question asked for ${askX ? 'x' : 'y'}. Both come out of the same working, so read the question again at the end.` },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G9: quadratic graphs — CRITICAL --------------------------------------
+// A parabola is read, not just solved: roots, y-intercept, line of symmetry,
+// turning point, and which way it opens.
+export function buildQuadraticGraph() {
+  const kind = pick(['roots', 'yintercept', 'symmetry', 'turning', 'shape', 'evaluate']);
+  // y = (x − r1)(x − r2) = x² − (r1+r2)x + r1·r2
+  let r1v = nonzero(-6, 6), r2v = nonzero(-6, 6);
+  while (r1v === r2v) r2v = nonzero(-6, 6);
+  if (r1v > r2v) [r1v, r2v] = [r2v, r1v];
+  const b = -(r1v + r2v), c = r1v * r2v;
+  const fStr = fmtQuadratic(1, b, c).uni;
+
+  if (kind === 'roots') {
+    return {
+      type: 'quadgraph-roots', instruction: 'Read the roots from the equation.',
+      question: `The curve y = ${fStr} is drawn. At which values of x does it CROSS the x-axis?`,
+      answer: `${r1v} and ${r2v}`,
+      accepts: accepts(`${r1v} and ${r2v}`, `${r1v},${r2v}`, `${r1v}, ${r2v}`, `${r2v}, ${r1v}`, `x=${r1v}, x=${r2v}`, `${r1v} ${r2v}`),
+      hints: hintLadder(
+        'On the x-axis, y is zero — so set the expression equal to 0.',
+        'Factorise into two brackets; each bracket gives one crossing point.',
+        `Find two numbers multiplying to ${c} and adding to ${b}.`),
+      solution: { steps: [
+        { text: 'The curve meets the x-axis where y = 0.', expr: `${fStr} = 0` },
+        { text: 'Factorise.', expr: `(${fmtLinear(1, -r1v)})(${fmtLinear(1, -r2v)}) = 0` },
+        { text: 'Each bracket gives a root.', expr: `x = ${r1v} or x = ${r2v}` }], answer: `${r1v} and ${r2v}` },
+      misconceptions: [
+        { when: `${-r1v} and ${-r2v}`, feedback: `Sign slip: if (x − ${r1v}) = 0 then x = ${r1v}, not ${-r1v}.` },
+      ],
+      verify: { kind: 'roots', poly: (t) => t * t + b * t + c, roots: [r1v, r2v] },
+    };
+  }
+
+  if (kind === 'yintercept') {
+    return {
+      type: 'quadgraph-yint', instruction: 'Find where the curve meets the y-axis.',
+      question: `At what value of y does the curve y = ${fStr} cross the y-AXIS?`,
+      answer: `${c}`, accepts: accepts(`${c}`, `(0, ${c})`, `y=${c}`),
+      hints: hintLadder(
+        'Every point on the y-axis has x = 0.',
+        'Substitute x = 0 into the equation.',
+        'The x-terms vanish, leaving just the constant.'),
+      solution: { steps: [
+        { text: 'On the y-axis, x = 0.', expr: 'x = 0' },
+        { text: 'Substitute.', expr: `y = 0² ${b < 0 ? '−' : '+'} ${Math.abs(b)}(0) ${c < 0 ? '−' : '+'} ${Math.abs(c)} = ${c}` }], answer: `${c}` },
+      misconceptions: [
+        { when: `${b}`, feedback: 'That is the x-coefficient. Setting x = 0 leaves only the CONSTANT term.' },
+      ],
+      verify: { kind: 'fraction', value: c },
+    };
+  }
+
+  if (kind === 'symmetry') {
+    const axis = (r1v + r2v) / 2;
+    return {
+      type: 'quadgraph-symmetry', instruction: 'Find the line of symmetry.',
+      question: `The curve y = ${fStr} crosses the x-axis at x = ${r1v} and x = ${r2v}. Find the equation of its line of symmetry.`,
+      answer: `x = ${axis}`, accepts: accepts(`x = ${axis}`, `x=${axis}`, `${axis}`),
+      hints: hintLadder(
+        'A parabola is symmetrical — the two crossing points sit at equal distances either side of one vertical line.',
+        'That line passes exactly midway between the roots.',
+        `Find the midpoint of ${r1v} and ${r2v}.`),
+      solution: { steps: [
+        { text: 'The axis of symmetry is midway between the roots.', expr: `(${r1v} + ${r2v}) ÷ 2` },
+        { text: 'It is a VERTICAL line, so the answer is x = that value.', expr: `x = ${axis}` }], answer: `x = ${axis}` },
+      misconceptions: [
+        { when: `y = ${axis}`, feedback: 'The line of symmetry of a parabola is VERTICAL, so it is x = a number, not y = a number.' },
+      ],
+      verify: { kind: 'exact', value: `x = ${axis}` },
+    };
+  }
+
+  if (kind === 'turning') {
+    const axis = (r1v + r2v) / 2;
+    const yMin = axis * axis + b * axis + c;
+    return {
+      type: 'quadgraph-turning', instruction: 'Find the turning point.',
+      question: `Find the MINIMUM value of y on the curve y = ${fStr}.`,
+      answer: `${yMin}`, accepts: accepts(`${yMin}`),
+      hints: hintLadder(
+        'The lowest point of a parabola sits on its line of symmetry.',
+        `That line is midway between the roots ${r1v} and ${r2v}, at x = ${axis}.`,
+        `Substitute x = ${axis} back into the equation.`),
+      solution: { steps: [
+        { text: 'The turning point lies on the line of symmetry.', expr: `x = ${axis}` },
+        { text: 'Substitute to get the y-value.', expr: `y = ${yMin}` }], answer: `${yMin}` },
+      misconceptions: [
+        { when: `${axis}`, feedback: `${axis} is the x-coordinate of the turning point. The question asks for the minimum VALUE of y there.` },
+      ],
+      verify: { kind: 'fraction', value: yMin },
+    };
+  }
+
+  if (kind === 'shape') {
+    const neg = coin();
+    const a = neg ? -1 : 1;
+    const shown = fmtQuadratic(a, b, c).uni;
+    return {
+      type: 'quadgraph-shape', instruction: 'Which way does it open?',
+      question: `Does the curve y = ${shown} open upwards or downwards?`,
+      answer: neg ? 'downwards' : 'upwards',
+      accepts: accepts(neg ? 'downwards' : 'upwards', neg ? 'down' : 'up'),
+      hints: hintLadder(
+        'Only one thing decides which way a parabola opens.',
+        'Look at the sign in front of the x² term.'),
+      solution: { steps: [
+        { text: neg ? 'The x² term is negative, so the curve is upside down.' : 'The x² term is positive, so the curve opens upwards like a valley.',
+          expr: neg ? 'downwards (∩)' : 'upwards (∪)' }], answer: neg ? 'downwards' : 'upwards' },
+      misconceptions: [
+        { when: neg ? 'upwards' : 'downwards', feedback: 'Check the sign of the x² term — a NEGATIVE x² coefficient turns the curve upside down.' },
+      ],
+      verify: { kind: 'text', value: neg ? 'downwards' : 'upwards' },
+    };
+  }
+
+  // evaluate a point on the curve
+  const k = nonzero(-4, 5);
+  const value = k * k + b * k + c;
+  return {
+    type: 'quadgraph-evaluate', instruction: 'Find a point on the curve.',
+    question: `Find the value of y on the curve y = ${fStr} when x = ${k}.`,
+    answer: `${value}`, accepts: accepts(`${value}`, `(${k}, ${value})`),
+    hints: hintLadder('Substitute the given x everywhere it appears.',
+      `Replace every x with (${k}) — brackets matter when x is negative.`,
+      `Work out (${k})² first, then the rest.`),
+    solution: { steps: [
+      { text: `Substitute x = ${k}.`, expr: `(${k})² ${b < 0 ? '−' : '+'} ${Math.abs(b)}(${k}) ${c < 0 ? '−' : '+'} ${Math.abs(c)}` },
+      { text: 'Evaluate.', expr: `${value}` }], answer: `${value}` },
+    misconceptions: k < 0 ? [
+      { when: `${-(k * k) + b * k + c}`, feedback: `Careful with the square of a negative: (${k})² = ${k * k}, which is POSITIVE.` },
+    ] : [],
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const ALGEBRA_CONTENT = {
   // Cambridge gap fill — inequalities + the Stage-8 straight-line spine
   G7_INEQUALITIES_INTRO: withWorkedExample(buildInequalityIntro),
@@ -214,6 +383,8 @@ export const ALGEBRA_CONTENT = {
   // Expanding & factorising
   G8_EXPAND_BRACKETS:  withWorkedExample(buildDistribute),
   G9_QUADRATIC_EXPAND: withWorkedExample(buildBinomial),
+  G9_SIMULTANEOUS_ADV: withWorkedExample(buildSimultaneousAdv),
+  G9_QUADRATIC_GRAPHS: withWorkedExample(buildQuadraticGraph),
   G8_FACTORIZE_COMMON: withWorkedExample(buildFactorizeCommon),
 
   // Solving linear equations — increasing difficulty up the spine

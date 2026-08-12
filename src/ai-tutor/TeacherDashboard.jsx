@@ -398,7 +398,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
             </div>
           </div>
 
-          {/* Class switcher — a teacher with Form 1, 2 and 3 must never see
+          {/* Class switcher — a teacher with three Grade 8 streams must never see
               them blended into one average. */}
           {classes.length > 1 && (
             <div className="flex gap-2 mt-2.5 overflow-x-auto pb-0.5">
@@ -426,7 +426,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
                 value={newClassName}
                 onChange={(e) => setNewClassName(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && createClass()}
-                placeholder="e.g. Form 2 Blue"
+                placeholder="e.g. Grade 9 Blue"
                 className="flex-1 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400"
               />
               <button
@@ -627,7 +627,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
                 value={newClassName}
                 onChange={(e) => setNewClassName(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && createClass()}
-                placeholder="New class name (e.g. Form 2 Math)"
+                placeholder="New class name (e.g. Grade 8 Maths)"
                 className="flex-1 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400"
               />
               <button
