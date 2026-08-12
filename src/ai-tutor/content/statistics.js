@@ -236,6 +236,134 @@ export function buildGroupedData() {
   };
 }
 
+
+// ---- G9: scatter plots & correlation --------------------------------------
+// Was two hard-coded questions. Correlation is really five ideas: reading the
+// direction, judging the strength, spotting an outlier, using a line of best
+// fit, and — the one that matters most for a citizen — knowing that
+// correlation is not causation.
+export function buildScatter() {
+  const kind = pick(['direction', 'strength', 'outlier', 'bestfit', 'causation']);
+
+  if (kind === 'direction') {
+    const cases = [
+      { ctx: 'Hours spent revising and marks scored in the exam', a: 'positive' },
+      { ctx: 'Hours spent revising and the number of mistakes made', a: 'negative' },
+      { ctx: 'The age of a car and its resale price', a: 'negative' },
+      { ctx: 'The height of a plant and the number of weeks it has grown', a: 'positive' },
+      { ctx: 'Daily temperature in Mombasa and sales of cold drinks', a: 'positive' },
+      { ctx: 'The price of maize and the quantity households buy', a: 'negative' },
+      { ctx: "A learner's shoe size and their score in a maths test", a: 'no correlation' },
+      { ctx: 'The number of matatus on a road and the average speed of traffic', a: 'negative' },
+    ];
+    const c = pick(cases);
+    return {
+      type: 'scatter-direction', instruction: 'Describe the correlation.',
+      question: `${c.ctx}. What type of correlation would you expect?`,
+      answer: c.a,
+      accepts: accepts(c.a, `${c.a} correlation`, c.a === 'no correlation' ? 'none' : null, c.a === 'no correlation' ? 'zero' : null),
+      hints: hintLadder(
+        'Ask what happens to the SECOND quantity as the first one increases.',
+        'Rising together, one rising while the other falls, or no clear pattern at all?'),
+      solution: { steps: [{
+        text: c.a === 'positive' ? 'As one increases the other increases too, so the points rise to the right.'
+          : c.a === 'negative' ? 'As one increases the other decreases, so the points fall to the right.'
+          : 'There is no reason for one to affect the other, so the points are scattered with no trend.',
+        expr: c.a }], answer: c.a },
+      misconceptions: c.a === 'negative'
+        ? [{ when: 'positive', feedback: 'Check the direction: here one quantity goes DOWN as the other goes up, which is negative correlation.' }]
+        : c.a === 'positive'
+        ? [{ when: 'negative', feedback: 'Check the direction: both quantities rise together here, which is positive correlation.' }]
+        : [{ when: 'positive', feedback: 'There is no real link between these two — scattered points with no trend means NO correlation.' }],
+      verify: { kind: 'text', value: c.a },
+    };
+  }
+
+  if (kind === 'strength') {
+    const cases = [
+      { desc: 'the points lie very close to a straight line rising to the right', a: 'strong positive' },
+      { desc: 'the points lie very close to a straight line falling to the right', a: 'strong negative' },
+      { desc: 'the points rise to the right but are quite spread out', a: 'weak positive' },
+      { desc: 'the points fall to the right but are widely scattered', a: 'weak negative' },
+    ];
+    const c = pick(cases);
+    return {
+      type: 'scatter-strength', instruction: 'Describe the correlation fully.',
+      question: `On a scatter diagram, ${c.desc}. Describe the correlation (strength and direction).`,
+      answer: c.a, accepts: accepts(c.a, `${c.a} correlation`),
+      hints: hintLadder(
+        'Two things to say: which way the trend goes, and how tightly the points hug it.',
+        'Close to the line = strong; widely spread = weak.'),
+      solution: { steps: [
+        { text: 'Direction comes from which way the trend runs.', expr: c.a.split(' ')[1] },
+        { text: 'Strength comes from how tightly the points cluster about it.', expr: c.a }], answer: c.a },
+      misconceptions: [],
+      verify: { kind: 'text', value: c.a },
+    };
+  }
+
+  if (kind === 'outlier') {
+    // A tidy near-linear set with one obvious stray point.
+    const m = randInt(2, 5), cIn = randInt(1, 6);
+    const xs = [1, 2, 3, 4, 5];
+    const pts = xs.map(x => [x, m * x + cIn]);
+    const badIdx = randInt(0, 4);
+    const badY = pts[badIdx][1] + pick([-1, 1]) * randInt(9, 15);
+    const shown = pts.map((p, i) => i === badIdx ? [p[0], badY] : p);
+    return {
+      type: 'scatter-outlier', instruction: 'Find the point that does not fit.',
+      question: `A scatter diagram has the points ${shown.map(p => `(${p[0]}, ${p[1]})`).join(', ')}. Which x-value gives the outlier?`,
+      answer: `${shown[badIdx][0]}`, accepts: accepts(`${shown[badIdx][0]}`),
+      hints: hintLadder(
+        'All but one of these points follow the same steady pattern.',
+        'Work out the step between consecutive y-values — one of them breaks the rhythm.'),
+      solution: { steps: [
+        { text: 'The other points climb by a constant step, so they lie on a straight line.', expr: `step of ${m}` },
+        { text: 'One point sits far off that line — its x-value is the answer.', expr: `x = ${shown[badIdx][0]}` }], answer: `${shown[badIdx][0]}` },
+      misconceptions: [],
+      verify: { kind: 'fraction', value: shown[badIdx][0] },
+    };
+  }
+
+  if (kind === 'bestfit') {
+    const m = randInt(2, 6), cIn = randInt(2, 10), x = randInt(6, 12);
+    const value = m * x + cIn;
+    return {
+      type: 'scatter-bestfit', instruction: 'Use the line of best fit.',
+      question: `The line of best fit for a set of data is y = ${m}x + ${cIn}. Use it to estimate y when x = ${x}.`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'A line of best fit lets you predict: put the x you were given into the equation.',
+        `Substitute x = ${x} into y = ${m}x + ${cIn}.`),
+      solution: { steps: [
+        { text: `Substitute x = ${x}.`, expr: `y = ${m}(${x}) + ${cIn}` },
+        { text: 'Evaluate.', expr: `y = ${value}` }], answer: `${value}` },
+      misconceptions: [{ when: `${m * x}`, feedback: `Do not forget the intercept — after ${m} × ${x} you still add ${cIn}.` }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  // correlation is not causation
+  const cases = [
+    { q: 'Ice-cream sales and cases of sunburn both rise together in January. Does eating ice cream CAUSE sunburn? (yes/no)', a: 'no',
+      why: 'Both are driven by a third factor — hot, sunny weather. A correlation on its own never proves cause.' },
+    { q: 'Villages with more mobile phones also record more electricity connections. Do phones CAUSE electricity supply? (yes/no)', a: 'no',
+      why: 'Both rise with the wealth and development of the village; neither causes the other.' },
+    { q: 'A strong correlation is found between two quantities. Is that enough to prove one causes the other? (yes/no)', a: 'no',
+      why: 'Correlation shows they move together. Proving cause needs a controlled experiment or a clear mechanism.' },
+  ];
+  const c = pick(cases);
+  return {
+    type: 'scatter-causation', instruction: 'Think carefully about cause.',
+    question: c.q, answer: c.a, accepts: accepts(c.a),
+    hints: hintLadder('Two things moving together can both be driven by something else entirely.',
+      'Ask yourself: is there a third factor that would explain both?'),
+    solution: { steps: [{ text: c.why, expr: c.a }], answer: c.a },
+    misconceptions: [{ when: 'yes', feedback: 'Correlation is not causation — look for a third factor driving both quantities.' }],
+    verify: { kind: 'text', value: c.a },
+  };
+}
+
 export const STATISTICS_CONTENT = {
   // Cambridge gap fill
   G7_DATA_REPRESENT:      withWorkedExample(buildDataRepresent),
@@ -247,6 +375,7 @@ export const STATISTICS_CONTENT = {
   G9_PROBABILITY_ADV:   withWorkedExample(buildProbability),
   G10_PERMUTATIONS:     withWorkedExample(buildPermutations),
   G10_COMBINATIONS:     withWorkedExample(buildCombinations),
+  G9_SCATTER_PLOTS:     withWorkedExample(buildScatter),
 };
 
 export const STATISTICS_SKILL_IDS = Object.keys(STATISTICS_CONTENT);

@@ -85,10 +85,19 @@ export const getKnowledgeFrontier = (progress, ctx) => {
 
 // ==================== GAP DETECTION ====================
 
+// How far below a learner's own class a foundation gap may reach. A Grade 9
+// student who fumbles a question does not need Grade 1 counting — sending her
+// there is both useless and insulting, and it is not what a teacher would do.
+// Two grades back covers every genuine prerequisite chain in the graph; below
+// that the problem is not a missing skill, it is that the placement is wrong.
+const GAP_DEPTH_GRADES = 2;
+
 export const findGaps = (progress, ctx) => {
   const c = resolveCtx(ctx);
   const gaps = [];
   const seen = new Set();
+  const lvl = learnerLevel(progress);
+  const gapFloor = lvl != null ? lvl - GAP_DEPTH_GRADES : null;
 
   for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
@@ -104,6 +113,8 @@ export const findGaps = (progress, ctx) => {
           seen.add(pid);
           const preSkill = c.skills[pid];
           if (!preSkill) continue;
+          // Never drag a learner more than GAP_DEPTH_GRADES below their class.
+          if (gapFloor != null && Number.isFinite(preSkill.grade) && preSkill.grade < gapFloor) continue;
 
           let dependentCount = 0;
           try { dependentCount = c.getPostChain(pid).length; } catch(e) { dependentCount = 0; }
@@ -122,6 +133,70 @@ export const findGaps = (progress, ctx) => {
   }
 
   return gaps.sort((a, b) => b.priority - a.priority);
+};
+
+// ==================== THE LEARNER'S OWN CLASS SYLLABUS ====================
+
+// What a Grade 9 student actually wants to see: the Grade 9 syllabus, strand
+// by strand, with where she stands on each topic — and, where a topic is not
+// yet open to her, WHICH earlier skill is holding it shut. Progress alone
+// ("58% mastered") tells her nothing she can act on; a named missing
+// foundation does.
+//
+// `band` defaults to the class the learner declared, because that is a fact
+// about her ("I am in Form 3"), not a measurement the app may quietly revise.
+export const getClassSyllabus = (progress, ctx, band = null) => {
+  const c = resolveCtx(ctx);
+  const grade = band ?? progress?.declaredGrade ?? getEffectivePlacement(progress, ctx);
+  if (grade == null) return null;
+
+  const inBand = c.skillList.filter(s => gradeOf(s, c.curriculum) === grade);
+  if (!inBand.length) return null;
+
+  const byStrand = {};
+  let mastered = 0;
+
+  for (const s of inBand) {
+    const sp = progress.skills[s.id];
+    const isMastered = !!sp?.mastered;
+    if (isMastered) mastered++;
+
+    // Which prerequisites are still missing, named — the actionable part.
+    // "Missing" must mean what the engine itself means by it: a foundation
+    // well below this learner's class counts as met unless she has actually
+    // struggled with it. Otherwise every topic reads as blocked on day one,
+    // which is both false and demoralising.
+    const missing = (s.keyPrerequisites || s.prerequisites || [])
+      .filter(pid => c.skills[pid]
+        && !progress.skills[pid]?.mastered
+        && !assumedKnown(c.skills[pid], progress))
+      .map(pid => ({ id: pid, name: c.skills[pid].name, grade: c.skills[pid].grade }));
+
+    const status = isMastered ? 'mastered'
+      : sp?.attempts > 0 ? 'in_progress'
+      : missing.length ? 'needs_foundation'
+      : 'ready';
+
+    const strand = strandOf(s, c.curriculum) || s.strand;
+    (byStrand[strand] ||= []).push({
+      id: s.id, name: s.name, critical: !!s.critical, status, missing,
+      accuracy: sp?.attempts ? Math.round((sp.correct / sp.attempts) * 100) : null,
+    });
+  }
+
+  return {
+    grade,
+    total: inBand.length,
+    mastered,
+    percent: Math.round((mastered / inBand.length) * 100),
+    strands: Object.entries(byStrand)
+      .map(([name, skills]) => ({
+        name,
+        skills,
+        mastered: skills.filter(s => s.status === 'mastered').length,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name)),
+  };
 };
 
 // ==================== REVIEW DETECTION ====================
@@ -616,6 +691,7 @@ export default {
   getDiagnosticSkills,
   computePlacementGrade,
   getEffectivePlacement,
+  getClassSyllabus,
   getRemediationSkills,
   getStats,
   getStrandStats,

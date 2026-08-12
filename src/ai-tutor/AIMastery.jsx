@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
-import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
+import { getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, getClassSyllabus, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { HorebBot } from './HorebBot.jsx';
@@ -1775,6 +1775,8 @@ export function AIMastery({ onBack, userId, studentName }) {
   const jsPath = getRecommendedPath(progress, ctx);
   const gaps = findGaps(progress, ctx);
   const reviews = getReviews(progress, ctx);
+  // Her own class syllabus — the Grade 9 view a Grade 9 student came for.
+  const syllabus = getClassSyllabus(progress, ctx);
   const jsGrade = getEstimatedGradeLevel(progress, ctx);
 
   // Prefer the Python brain's measurement when available. Otherwise show a
@@ -2113,6 +2115,53 @@ export function AIMastery({ onBack, userId, studentName }) {
         {/* ========== PATH TAB ========== */}
         {activeTab === 'path' && (
           <div>
+            {/* Her class, stated plainly. The measured level moves around as she
+                works; the class she is IN does not, and seeing it disagree with
+                the page ("I'm in Grade 9 but it says Grade 6") destroys trust. */}
+            {syllabus && (
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-4">
+                <div className="flex items-baseline justify-between mb-1">
+                  <h2 className="font-bold text-slate-900">
+                    {getCurriculum(curriculum).bandLabel} {syllabus.grade} · {getCurriculum(curriculum).shortName}
+                  </h2>
+                  <span className="text-xs text-slate-500 tabular-nums">
+                    {syllabus.mastered}/{syllabus.total} topics
+                  </span>
+                </div>
+                <div className="h-2 bg-slate-100 rounded-full overflow-hidden mb-3">
+                  <div className="h-full bg-[#7ca355]" style={{ width: `${syllabus.percent}%` }} />
+                </div>
+                <div className="space-y-2.5">
+                  {syllabus.strands.map(st => (
+                    <div key={st.name}>
+                      <div className="flex items-baseline justify-between">
+                        <span className="text-sm font-semibold text-slate-700">{st.name}</span>
+                        <span className="text-xs text-slate-400 tabular-nums">{st.mastered}/{st.skills.length}</span>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5 mt-1">
+                        {st.skills.map(sk => {
+                          const tone = sk.status === 'mastered' ? 'bg-[#f2f6ec] border-[#cfe0bd] text-[#5a7a3a]'
+                            : sk.status === 'in_progress' ? 'bg-amber-50 border-amber-200 text-amber-700'
+                            : sk.status === 'needs_foundation' ? 'bg-[#fdf2ef] border-[#f2cdc2] text-[#c0663f]'
+                            : 'bg-slate-50 border-slate-200 text-slate-600';
+                          const blocker = sk.missing[0];
+                          return (
+                            <button key={sk.id} onClick={() => startLesson(sk.id)}
+                              title={blocker ? `Needs ${blocker.name} first` : sk.name}
+                              className={`px-2.5 py-1 rounded-lg border text-xs font-medium text-left transition-colors hover:brightness-95 ${tone}`}>
+                              {sk.name}
+                              {sk.status === 'mastered' && ' ✓'}
+                              {blocker && <span className="block text-[10px] opacity-80 font-normal">needs {blocker.name}</span>}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Review banner */}
             {reviews.length > 0 && (
               <button onClick={startReview} className="w-full bg-[#f5f6fc] border border-[#d3daf0] rounded-2xl p-4 mb-4 flex items-center justify-between hover:bg-[#eef0fb] transition-colors">

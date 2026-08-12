@@ -271,6 +271,155 @@ export function buildBearings() {
   };
 }
 
+
+// ---- G9: loci — the set of points satisfying a condition -------------------
+// Was a single hard-coded question ("the locus equidistant from two points is
+// a...?"), so a student saw the identical prompt every time. Loci is really
+// four rules plus their intersections, taught through real situations — a goat
+// tethered to a post, a path kept equidistant from two walls.
+export function buildLoci() {
+  const kind = pick(['rule', 'context', 'distance', 'intersect', 'region']);
+
+  if (kind === 'rule') {
+    const cases = [
+      { q: 'What is the locus of points that are the same distance from two fixed points A and B?',
+        a: 'perpendicular bisector',
+        accepts: ['perpendicular bisector', 'the perpendicular bisector', 'perpendicular bisector of AB'],
+        hint: 'Picture every point that is equally far from both — they form a straight cut across the middle of AB.',
+        why: 'Every such point sits halfway across AB, at right angles to it.',
+        wrong: ['circle', 'A circle is the locus of points a fixed distance from ONE point, not equidistant from two.'] },
+      { q: 'What is the locus of points that are the same distance from two intersecting straight lines?',
+        a: 'angle bisector',
+        accepts: ['angle bisector', 'the angle bisector', 'angle bisectors'],
+        hint: 'Equal distance from both arms of an angle — what line cuts that angle in half?',
+        why: 'The bisector of the angle between the lines is equally far from each arm.',
+        wrong: ['perpendicular bisector', 'That is for two POINTS. For two LINES, it is the angle bisector.'] },
+      { q: 'What is the locus of points exactly 5 cm from a fixed point O?',
+        a: 'circle',
+        accepts: ['circle', 'a circle', 'circle of radius 5 cm', 'circle radius 5'],
+        hint: 'Fixed distance from one point, in every direction.',
+        why: 'A fixed distance from a single point traces a circle of that radius.',
+        wrong: ['sphere', 'In two dimensions it is a circle — a sphere is the 3-D version.'] },
+      { q: 'What is the locus of points exactly 3 cm from a long straight line?',
+        a: 'two parallel lines',
+        accepts: ['two parallel lines', 'a pair of parallel lines', 'two parallel lines 3 cm from it', 'pair of parallel lines'],
+        hint: 'You can be 3 cm away on either side of the line.',
+        why: 'One parallel line 3 cm above and one 3 cm below — both count.',
+        wrong: ['one parallel line', 'Do not forget the other side — the locus is a PAIR of parallel lines.'] },
+    ];
+    const c = pick(cases);
+    return {
+      type: 'locus-rule', instruction: 'Name the locus.',
+      question: c.q, answer: c.a, accepts: accepts(...c.accepts),
+      hints: hintLadder('A locus is simply the set of ALL points obeying a rule — picture them appearing one by one.', c.hint),
+      solution: { steps: [{ text: c.why, expr: c.a }], answer: c.a },
+      misconceptions: [{ when: c.wrong[0], feedback: c.wrong[1] }],
+      verify: { kind: 'text', value: c.a },
+    };
+  }
+
+  if (kind === 'context') {
+    const cases = [
+      { q: 'A goat is tied to a post in an open field by a 4 m rope. What shape is the boundary of the ground it can reach?',
+        a: 'circle', accepts: ['circle', 'a circle', 'circle of radius 4 m'],
+        why: 'Every point it can reach is at most 4 m from the post, so the edge is a circle of radius 4 m.' },
+      { q: 'A path is to be laid so that it is always the same distance from two straight boundary walls that meet at a corner. What line does the path follow?',
+        a: 'angle bisector', accepts: ['angle bisector', 'the angle bisector'],
+        why: 'Equal distance from both walls means the path bisects the angle between them.' },
+      { q: 'Two boreholes stand in a field. A fence must be built so that every point on it is the same distance from both boreholes. What line does the fence follow?',
+        a: 'perpendicular bisector', accepts: ['perpendicular bisector', 'the perpendicular bisector'],
+        why: 'Equidistant from two points is exactly the perpendicular bisector of the line joining them.' },
+      { q: 'A cow walks so that it is always exactly 2 m from a long straight fence. Describe its path.',
+        a: 'two parallel lines', accepts: ['two parallel lines', 'a pair of parallel lines', 'parallel lines'],
+        why: 'It can walk 2 m from the fence on either side — a parallel line on each side.' },
+    ];
+    const c = pick(cases);
+    return {
+      type: 'locus-context', instruction: 'Describe the locus in this situation.',
+      question: c.q, answer: c.a, accepts: accepts(...c.accepts),
+      // The hint must NOT recite the rule table — it lists every possible
+      // answer, so whichever one is being asked for is handed over.
+      hints: hintLadder('Ask: what is being held constant here — a distance from a point, or a distance from a line?',
+        'Then ask how many fixed things it is measured from: one, or two? Those two questions pin the locus down.'),
+      solution: { steps: [{ text: c.why, expr: c.a }], answer: c.a },
+      misconceptions: [],
+      verify: { kind: 'text', value: c.a },
+    };
+  }
+
+  if (kind === 'distance') {
+    // The radius/diameter of the region a tether traces.
+    const r = randInt(3, 12);
+    const askArea = coin();
+    const value = askArea ? Math.round(Math.PI * r * r) : 2 * r;
+    return {
+      type: 'locus-measure', instruction: 'Work with the region a locus encloses.',
+      question: askArea
+        ? `A goat is tethered to a post by a rope ${r} m long in open ground. What area of grass can it reach? (Use π = 3.142, answer to the nearest m².)`
+        : `A dog is tied to a post by a ${r} m lead in an open field. What is the greatest distance it can be from where it starts, walking round the post?`,
+      answer: `${value}`, accepts: accepts(`${value}`, askArea ? `${value}m²` : `${value}m`),
+      hints: hintLadder(
+        askArea ? 'The reachable ground is a full circle whose radius is the rope.'
+                : 'The two furthest-apart points on a circle are opposite ends of it.',
+        askArea ? `Area of a circle = πr², with r = ${r}.`
+                : `That distance is the diameter, and the rope is the radius (${r} m).`),
+      solution: { steps: [
+        { text: askArea ? 'The locus of the goat is a circle of radius equal to the rope.' : 'The locus is a circle of radius equal to the lead.',
+          expr: `r = ${r} m` },
+        { text: askArea ? 'Area = πr².' : 'Greatest separation = the diameter = 2r.',
+          expr: askArea ? `3.142 × ${r}² ≈ ${value} m²` : `2 × ${r} = ${value} m` }], answer: `${value}` },
+      misconceptions: askArea
+        ? [{ when: `${Math.round(2 * Math.PI * r)}`, feedback: 'That is the circumference (2πr) — the question asks for the AREA it can graze, which is πr².' }]
+        : [{ when: `${r}`, feedback: 'The rope is the RADIUS. The greatest distance across the circle is the diameter, which is twice the rope.' }],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'intersect') {
+    const cases = [
+      { q: 'A point must be equidistant from two fixed points A and B, AND exactly 6 cm from A. How many positions are possible (in general)?',
+        a: '2', why: 'The perpendicular bisector of AB cuts the circle of radius 6 cm about A in two places.',
+        wrong: ['1', 'A straight line crossing a circle meets it TWICE, not once — unless it only touches.'] },
+      { q: 'A treasure is equidistant from two trees AND equidistant from two straight paths that cross. How many points satisfy both conditions (in general)?',
+        a: '1', why: 'One perpendicular bisector and one angle bisector are two straight lines — two lines generally cross at a single point.',
+        wrong: ['2', 'Two straight lines meet at ONE point unless they are parallel.'] },
+      { q: 'A point is 5 cm from point P and also 5 cm from point Q, where PQ = 8 cm. How many such points are there?',
+        a: '2', why: 'Two circles of radius 5 cm whose centres are 8 cm apart overlap, and overlapping circles cross at two points.',
+        wrong: ['0', 'The circles do overlap: 5 + 5 = 10 cm is more than the 8 cm between the centres, so they cross twice.'] },
+    ];
+    const c = pick(cases);
+    return {
+      type: 'locus-intersect', instruction: 'Where do the two loci meet?',
+      question: c.q, answer: c.a, accepts: accepts(c.a),
+      hints: hintLadder('Draw each condition as its own locus first, then look at where they cross.',
+        'A line crossing a circle meets it twice; two lines that are not parallel meet once; two overlapping circles cross twice.'),
+      solution: { steps: [{ text: c.why, expr: c.a }], answer: c.a },
+      misconceptions: [{ when: c.wrong[0], feedback: c.wrong[1] }],
+      verify: { kind: 'fraction', value: +c.a },
+    };
+  }
+
+  // region: inside / outside a boundary
+  const cases = [
+    { q: 'A sprinkler waters everything within 7 m of itself. Is a flower 9 m away watered? (yes/no)', a: 'no',
+      why: '9 m is outside the circle of radius 7 m, so it falls beyond the watered region.' },
+    { q: 'A watchman must stay within 20 m of a gate. Is a point 14 m from the gate allowed? (yes/no)', a: 'yes',
+      why: '14 m is less than 20 m, so the point lies inside the permitted circle.' },
+    { q: 'A goat tied by a 6 m rope wants to reach grass 6 m away from the post. Can it? (yes/no)', a: 'yes',
+      why: 'The locus includes the boundary itself — at exactly 6 m the rope is straight but it just reaches.' },
+  ];
+  const c = pick(cases);
+  return {
+    type: 'locus-region', instruction: 'Inside or outside the locus?',
+    question: c.q, answer: c.a, accepts: accepts(c.a),
+    hints: hintLadder('The locus is the BOUNDARY; the region it encloses is everything nearer than that.',
+      'Compare the distance given with the fixed distance in the rule.'),
+    solution: { steps: [{ text: c.why, expr: c.a }], answer: c.a },
+    misconceptions: [],
+    verify: { kind: 'text', value: c.a },
+  };
+}
+
 export const GEOMETRY_CONTENT = {
   // Cambridge gap fill
   G8_ANGLE_RELATIONSHIPS: withWorkedExample(buildParallelAngles),
@@ -283,6 +432,7 @@ export const GEOMETRY_CONTENT = {
   G8_POLYGON_ANGLES:      withWorkedExample(buildPolygonAngles),
   G7_PYTHAGORAS:          withWorkedExample(buildPythagoras),
   G9_TRIG_INTRO:          withWorkedExample(buildTrigRatio),
+  G9_LOCI:                withWorkedExample(buildLoci),
 };
 
 export const GEOMETRY_SKILL_IDS = Object.keys(GEOMETRY_CONTENT);
