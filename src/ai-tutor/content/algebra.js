@@ -369,6 +369,207 @@ export function buildQuadraticGraph() {
   };
 }
 
+// ============================================================================
+// CBC GRADE 9 — ALGEBRA 2.1 MATRICES (8 lessons)
+//
+// The KICD outcomes are deliberately concrete: identify a matrix, give its
+// ORDER, locate an ELEMENT by row and column, judge COMPATIBILITY for addition
+// and subtraction, and add or subtract. Determinants and inverses are NOT part
+// of Grade 9 and are not generated here. The contexts are the ones the design
+// names — league tables, shopping lists, travel schedules.
+// ============================================================================
+
+// Render a matrix in the row-separated form the app's answer checker accepts.
+const mat = (rows) => `[${rows.map(r => r.join(' ')).join('; ')}]`;
+const randRows = (r, c, lo = 1, hi = 9) =>
+  Array.from({ length: r }, () => Array.from({ length: c }, () => randInt(lo, hi)));
+
+const ORDINAL = ['', 'first', 'second', 'third', 'fourth'];
+
+// ---- G9: identify a matrix, its order, and the position of an element ----
+export function buildMatrixIntro() {
+  const kind = pick(['order', 'element', 'position', 'order-from-table']);
+  const r = randInt(2, 3), c = randInt(2, 3);
+  const rows = randRows(r, c);
+
+  if (kind === 'order') {
+    const value = `${r} × ${c}`;
+    return {
+      type: 'matrix-order', instruction: 'Give the order as rows × columns.',
+      question: `What is the ORDER of the matrix ${mat(rows)}?`,
+      answer: value,
+      accepts: accepts(value, `${r}x${c}`, `${r}*${c}`, `${r} by ${c}`, `${r}×${c}`),
+      hints: hintLadder(
+        'The order of a matrix is a pair of numbers, not a single one.',
+        'Rows run across; columns run down.',
+        'Count the rows first — the order is always written rows before columns.'),
+      solution: { steps: [
+        { text: 'Count the rows (across).', expr: `${r} rows` },
+        { text: 'Count the columns (down).', expr: `${c} columns` },
+        { text: 'Write rows × columns.', expr: value }], answer: value },
+      misconceptions: [
+        ...(r !== c ? [{ when: `${c} × ${r}`, feedback: 'The two numbers are the right ones but the wrong way round — order is always ROWS first, then columns.' }] : []),
+        { when: `${r * c}`, feedback: 'That is how many elements there are. The order keeps the rows and columns as a separate pair.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'element') {
+    const i = randInt(1, r), j = randInt(1, c);
+    const value = `${rows[i - 1][j - 1]}`;
+    // The element must be identifiable — if the same number sits everywhere the
+    // question tests nothing.
+    const flat = rows.flat();
+    if (new Set(flat).size < flat.length - 1) return buildMatrixIntro();
+    return {
+      type: 'matrix-element', instruction: 'Read off the element.',
+      question: `In the matrix A = ${mat(rows)}, what is the element a${'₀₁₂₃₄'[i]}${'₀₁₂₃₄'[j]}?`,
+      answer: value, accepts: accepts(value),
+      hints: hintLadder(
+        'The two small numbers are an address: the first is the row, the second is the column.',
+        `So you are looking in the ${ORDINAL[i]} row.`,
+        `Then count across to the ${ORDINAL[j]} column.`),
+      solution: { steps: [
+        { text: 'Read the address.', expr: `row ${i}, column ${j}` },
+        { text: 'Go to that position.', expr: value }], answer: value },
+      misconceptions: [
+        ...(i !== j && rows[j - 1] && rows[j - 1][i - 1] != null && `${rows[j - 1][i - 1]}` !== value
+          ? [{ when: `${rows[j - 1][i - 1]}`, feedback: 'Row and column have been swapped — the FIRST small number is always the row.' }] : []),
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'position') {
+    const i = randInt(1, r), j = randInt(1, c);
+    const target = rows[i - 1][j - 1];
+    const flat = rows.flat();
+    if (flat.filter(v => v === target).length !== 1) return buildMatrixIntro();
+    const value = `${i},${j}`;
+    return {
+      type: 'matrix-position', instruction: 'Answer as row,column — for example 2,1.',
+      question: `In the matrix ${mat(rows)}, in which row and column does the element ${target} sit?`,
+      answer: value,
+      accepts: accepts(value, `${i}, ${j}`, `(${i},${j})`, `(${i}, ${j})`, `row ${i} column ${j}`),
+      hints: hintLadder(
+        'Find the number in the grid first, then describe where it is.',
+        'Rows are counted from the top; columns from the left.',
+        'Write the row number before the column number.'),
+      solution: { steps: [
+        { text: 'Locate the element.', expr: `${target}` },
+        { text: 'Name its row, then its column.', expr: value }], answer: value },
+      misconceptions: [
+        ...(i !== j ? [{ when: `${j},${i}`, feedback: 'Right position, wrong order — say the row first, then the column.' }] : []),
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  // A real table, as the design suggests: a league table IS a matrix.
+  const teams = pick([['Gor Mahia', 'AFC Leopards', 'Tusker'], ['Bandari', 'Ulinzi', 'Sofapaka']]);
+  const cols = ['Won', 'Drawn', 'Lost'];
+  const body = randRows(3, 3, 0, 9);
+  const value = '3 × 3';
+  return {
+    type: 'matrix-from-table', instruction: 'Give the order as rows × columns.',
+    question: `A league table lists ${teams.join(', ')} against the columns ${cols.join(', ')}:\n${teams.map((t, k) => `${t}: ${body[k].join('  ')}`).join('\n')}\nWritten as a matrix of the numbers only, what is its ORDER?`,
+    answer: value, accepts: accepts(value, '3x3', '3*3', '3 by 3', '3×3'),
+    hints: hintLadder(
+      'Only the numbers form the matrix — the names and headings are labels.',
+      'One row per team; one column per heading.',
+      'Count each, and write rows before columns.'),
+    solution: { steps: [
+      { text: 'Count the teams — these are the rows.', expr: '3 rows' },
+      { text: 'Count the headings — these are the columns.', expr: '3 columns' },
+      { text: 'Write the order.', expr: value }], answer: value },
+    misconceptions: [
+      { when: '4 × 4', feedback: 'The team names and the headings are labels, not part of the matrix — count only the numbers.' },
+      { when: '9', feedback: 'That is how many numbers there are. The order keeps rows and columns separate.' },
+    ],
+    verify: { kind: 'exact', value },
+  };
+}
+
+// ---- G9: compatibility, addition and subtraction of matrices ----
+export function buildMatrixOps() {
+  const kind = pick(['add', 'subtract', 'compatible', 'add-context']);
+
+  if (kind === 'compatible') {
+    const same = coin();
+    const r1 = randInt(2, 3), c1 = randInt(2, 3);
+    const r2 = same ? r1 : pick([1, 2, 3].filter(x => x !== r1));
+    const c2 = same ? c1 : c1;
+    const value = same ? 'yes' : 'no';
+    return {
+      type: 'matrix-compatible', instruction: 'Answer yes or no.',
+      question: `Matrix A has order ${r1} × ${c1} and matrix B has order ${r2} × ${c2}. Can A + B be worked out?`,
+      answer: value, accepts: accepts(value, same ? 'y' : 'n'),
+      hints: hintLadder(
+        'Adding matrices means adding each position to its matching position.',
+        'For every position in A there must be one in exactly the same place in B.',
+        'Compare the two orders, number against number.'),
+      solution: { steps: [
+        { text: 'Compare the orders.', expr: `${r1} × ${c1}  and  ${r2} × ${c2}` },
+        { text: same ? 'They match, so every position has a partner.' : 'They differ, so some positions have no partner.', expr: value }], answer: value },
+      misconceptions: [
+        { when: same ? 'no' : 'yes', feedback: 'Addition needs the orders to be identical — the same number of rows AND the same number of columns.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'add-context') {
+    // Two shops, two weeks of sales — the design's "shopping list" context.
+    const w1 = randRows(2, 2, 5, 40), w2 = randRows(2, 2, 5, 40);
+    const sum = w1.map((row, i) => row.map((v, j) => v + w2[i][j]));
+    const value = mat(sum);
+    return {
+      type: 'matrix-add-context', instruction: 'Give your answer as a matrix, rows separated by ;',
+      question: `A shop records sales of maize and beans over two weeks.\nWeek 1: ${mat(w1)}   Week 2: ${mat(w2)}\nEach row is a product and each column is a branch. Find the TOTAL sales matrix.`,
+      answer: value, accepts: accepts(value, value.replace(/\s+/g, ''), value.replace(/;/g, ',')),
+      hints: hintLadder(
+        'A total over two weeks means the two matrices are added.',
+        'Each position keeps its meaning — top-left is the same product and branch in both.',
+        'So add each number to the one in the matching position.'),
+      solution: { steps: [
+        { text: 'Check the orders match.', expr: 'both 2 × 2' },
+        { text: 'Add matching positions.', expr: `${w1[0][0]} + ${w2[0][0]} = ${sum[0][0]}, and so on` },
+        { text: 'Write the result.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${sum.flat().reduce((a, b) => a + b, 0)}`, feedback: 'Adding matrices gives another MATRIX, not a single total — keep the rows and columns.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  const r = randInt(2, 2), c = randInt(2, 3);
+  const A = randRows(r, c, 2, 12);
+  const B = randRows(r, c, 1, 9);
+  const sub = kind === 'subtract';
+  const R = A.map((row, i) => row.map((v, j) => (sub ? v - B[i][j] : v + B[i][j])));
+  const value = mat(R);
+  const wrongWay = mat(A.map((row, i) => row.map((v, j) => (sub ? B[i][j] - v : v))));
+  return {
+    type: sub ? 'matrix-subtract' : 'matrix-add',
+    instruction: 'Give your answer as a matrix, rows separated by ;',
+    question: `${mat(A)} ${sub ? '−' : '+'} ${mat(B)} = ?`,
+    answer: value, accepts: accepts(value, value.replace(/\s+/g, ''), value.replace(/;/g, ',')),
+    hints: hintLadder(
+      'Check the two orders match before doing anything else.',
+      `Each position is worked out on its own: top-left with top-left, and so on.`,
+      sub ? 'Keep the order of the subtraction the same as in the question.' : 'The result has exactly the same order as the two you started with.'),
+    solution: { steps: [
+      { text: 'Both have the same order, so this can be done.', expr: `${r} × ${c}` },
+      { text: 'Work position by position.', expr: `${A[0][0]} ${sub ? '−' : '+'} ${B[0][0]} = ${R[0][0]}, and so on` },
+      { text: 'Collect into a matrix.', expr: value }], answer: value },
+    misconceptions: [
+      ...(sub && wrongWay !== value ? [{ when: wrongWay, feedback: 'The subtraction has been done the other way round — take the second matrix FROM the first.' }] : []),
+    ],
+    verify: { kind: 'exact', value },
+  };
+}
+
 export const ALGEBRA_CONTENT = {
   // Cambridge gap fill — inequalities + the Stage-8 straight-line spine
   G7_INEQUALITIES_INTRO: withWorkedExample(buildInequalityIntro),
@@ -376,6 +577,9 @@ export const ALGEBRA_CONTENT = {
   G8_LINEAR_GRAPHS:     withWorkedExample(buildLinearGraphRead),
   G8_GRADIENT:          withWorkedExample(buildGradient),
   G8_EQUATION_OF_LINE:  withWorkedExample(buildEquationOfLine),
+  // CBC Grade 9 Algebra 2.1 — Matrices (order, position, compatibility, ±)
+  G11_MATRICES_INTRO:   withWorkedExample(buildMatrixIntro),
+  G11_MATRICES_OPS:     withWorkedExample(buildMatrixOps),
   // Forming & collecting
   G7_EXPRESSIONS:      withWorkedExample(() => buildSimplify({ tier: 1 })),
   G7_SIMPLIFY:         withWorkedExample(() => buildSimplify({ tier: 2 })),

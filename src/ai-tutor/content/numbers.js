@@ -1373,6 +1373,500 @@ export function buildCommercialArith() {
   };
 }
 
+// ============================================================================
+// CBC GRADE 9 — NUMBERS
+// Authored against the KICD Grade 9 Mathematics Curriculum Design:
+//   1.1 Integers (5 lessons)                     — combined operations
+//   1.3 Indices and Logarithms (6 lessons)       — relate powers of 10 to
+//                                                  common logarithms
+//   1.4 Compound Proportions and Rates of Work (12 lessons)
+// ============================================================================
+
+// ---- G9 1.3: common logarithms — a logarithm IS the power of ten ----
+// The KICD outcome is "relate powers of 10 to common logarithms", so base 10
+// carries the work and other bases appear only as a stretch. Every variant is
+// the same idea read in a different direction, which is the point: log and
+// index form say one thing two ways.
+export function buildCommonLogs() {
+  const pows = [[1, 10], [2, 100], [3, 1000], [4, 10000], [5, 100000]];
+  const kind = pick(['log-of-power', 'to-index-form', 'to-log-form', 'other-base', 'between']);
+
+  if (kind === 'log-of-power') {
+    const [p, v] = pick(pows);
+    return {
+      type: 'log-common', instruction: 'Answer with the power of ten.',
+      question: `What is log ${v.toLocaleString('en-KE')}?  (common logarithm, base 10)`,
+      answer: `${p}`, accepts: accepts(`${p}`),
+      hints: hintLadder(
+        'A common logarithm asks one question: ten to WHAT power gives this number?',
+        `So you are solving 10^? = ${v.toLocaleString('en-KE')}.`,
+        'Count the zeros after the 1.'),
+      solution: { steps: [
+        { text: 'Write the number as a power of ten.', expr: `${v.toLocaleString('en-KE')} = 10^${p}` },
+        { text: 'The logarithm IS that power.', expr: `log ${v.toLocaleString('en-KE')} = ${p}` }], answer: `${p}` },
+      misconceptions: [
+        { when: `${v}`, feedback: 'That is the number itself. The logarithm is the POWER you raise 10 to, not the number.' },
+        { when: `${p + 1}`, feedback: 'Careful counting the zeros — log 10 is 1, not 2. The power counts the zeros exactly.' },
+      ],
+      verify: { kind: 'fraction', value: p },
+    };
+  }
+
+  if (kind === 'to-index-form') {
+    const [p, v] = pick(pows);
+    const ans = `10^${p}`;
+    return {
+      type: 'log-to-index', instruction: 'Write it as a power of ten.',
+      question: `log ${v.toLocaleString('en-KE')} = ${p}.  Write this in index form.`,
+      answer: ans, accepts: accepts(ans, `10^${p} = ${v}`, `10**${p}`, `${v} = 10^${p}`),
+      hints: hintLadder(
+        'Index form and logarithm form say the SAME thing, read in opposite directions.',
+        'log (number) = power  means  10 raised to that power gives the number.',
+        'Start your answer with 10.'),
+      solution: { steps: [
+        { text: 'Name the base, the power and the number.', expr: `base 10, power ${p}` },
+        { text: 'Write base to the power.', expr: `10^${p} = ${v.toLocaleString('en-KE')}` }], answer: ans },
+      misconceptions: [
+        { when: `${p}^10`, feedback: 'The base and the power have swapped places — 10 is the base of a COMMON logarithm.' },
+      ],
+      verify: { kind: 'exact', value: ans },
+    };
+  }
+
+  if (kind === 'to-log-form') {
+    const [p, v] = pick(pows);
+    const ans = `log ${v} = ${p}`;
+    return {
+      type: 'index-to-log', instruction: 'Write it as a common logarithm.',
+      question: `10^${p} = ${v.toLocaleString('en-KE')}.  Write this in logarithm form.`,
+      answer: ans,
+      accepts: accepts(ans, `log${v}=${p}`, `log(${v}) = ${p}`, `log ${v.toLocaleString('en-KE')} = ${p}`),
+      hints: hintLadder(
+        'Logarithm form starts with the word log and ends with the power.',
+        'The number that 10 produced goes inside the log; the power goes on the right.',
+        'Lay it out as  log (number) = power.'),
+      solution: { steps: [
+        { text: 'The power becomes the value of the logarithm.', expr: `power = ${p}` },
+        { text: 'The result goes inside the log.', expr: ans }], answer: ans },
+      misconceptions: [
+        { when: `log ${p} = ${v}`, feedback: 'These are the wrong way round — the big number goes INSIDE the log, the power is the answer.' },
+      ],
+      verify: { kind: 'exact', value: ans },
+    };
+  }
+
+  if (kind === 'between') {
+    // Estimation without tables — a real KICD habit before reaching for logs.
+    const [p, v] = pick(pows.slice(1, 4));
+    const n = randInt(v + 1, v * 9);
+    return {
+      type: 'log-between', instruction: 'Give the whole number just below it.',
+      question: `log ${n.toLocaleString('en-KE')} lies between two whole numbers. What is the SMALLER one?`,
+      answer: `${p}`, accepts: accepts(`${p}`),
+      hints: hintLadder(
+        'Find the two powers of ten this number sits between.',
+        `Is ${n.toLocaleString('en-KE')} bigger or smaller than 10, 100, 1000, 10000?`,
+        'The smaller power of ten gives the smaller whole number.'),
+      solution: { steps: [
+        { text: 'Trap the number between powers of ten.', expr: `10^${p} < ${n} < 10^${p + 1}` },
+        { text: 'Read off the lower power.', expr: `${p}` }], answer: `${p}` },
+      misconceptions: [
+        { when: `${p + 1}`, feedback: 'That is the UPPER whole number — the question asks for the one below.' },
+      ],
+      verify: { kind: 'fraction', value: p },
+    };
+  }
+
+  const [base, val, res] = pick([[2, 8, 3], [2, 16, 4], [2, 32, 5], [3, 9, 2], [3, 27, 3], [5, 25, 2], [5, 125, 3]]);
+  return {
+    type: 'log-other-base', instruction: 'Answer with the power.',
+    question: `log₍${base}₎ ${val} = ?`,
+    answer: `${res}`, accepts: accepts(`${res}`),
+    hints: hintLadder(
+      'The little number is the base — the number being raised to a power.',
+      `So you are solving ${base}^? = ${val}.`,
+      `Keep multiplying by ${base} and count how many times you did it.`),
+    solution: { steps: [
+      { text: 'Turn it into an index question.', expr: `${base}^? = ${val}` },
+      { text: 'Find the power.', expr: `${base}^${res} = ${val}` }], answer: `${res}` },
+    misconceptions: [
+      { when: `${val / base}`, feedback: `That is ${val} ÷ ${base}. A logarithm counts how many times you MULTIPLY by ${base}, it is not a division.` },
+    ],
+    verify: { kind: 'fraction', value: res },
+  };
+}
+
+// ---- G9 1.3: laws of logarithms, grounded in powers of ten ----
+// The laws are the laws of INDICES wearing different clothes, so the hints
+// point back to indices rather than reciting the rule being tested.
+export function buildLogLaws() {
+  const kind = pick(['product', 'quotient', 'power', 'evaluate-product', 'from-known']);
+
+  if (kind === 'product') {
+    const a = pick([2, 3, 4, 5, 6, 7]), b = pick([2, 3, 5, 8, 9]);
+    const ans = `log ${a * b}`;
+    return {
+      type: 'log-product', instruction: 'Write it as a single logarithm.',
+      question: `Express as a single logarithm:  log ${a} + log ${b}`,
+      answer: ans, accepts: accepts(ans, `log(${a * b})`, `log${a * b}`),
+      hints: hintLadder(
+        'Behind every log is a power of ten, and adding powers means multiplying the numbers.',
+        'So ADDING two logs collapses into ONE log of a single number.',
+        `Decide what to do with ${a} and ${b} to get that number.`),
+      solution: { steps: [
+        { text: 'Adding logs combines the numbers by multiplying.', expr: `log ${a} + log ${b} = log (${a} × ${b})` },
+        { text: 'Work out the inside.', expr: ans }], answer: ans },
+      misconceptions: [
+        { when: `log ${a + b}`, feedback: `You added the numbers inside. Adding the LOGS multiplies what is inside — ${a} × ${b}, not ${a} + ${b}.` },
+      ],
+      verify: { kind: 'exact', value: ans },
+    };
+  }
+
+  if (kind === 'quotient') {
+    const b = pick([2, 3, 4, 5]), q = pick([2, 3, 4, 5, 6, 7, 8]);
+    const a = b * q;
+    const ans = `log ${q}`;
+    return {
+      type: 'log-quotient', instruction: 'Write it as a single logarithm.',
+      question: `Express as a single logarithm:  log ${a} − log ${b}`,
+      answer: ans, accepts: accepts(ans, `log(${q})`, `log${q}`),
+      hints: hintLadder(
+        'Behind every log is a power of ten, and subtracting powers means dividing the numbers.',
+        'So SUBTRACTING logs collapses into ONE log of a single number.',
+        `Decide what to do with ${a} and ${b} to get that number.`),
+      solution: { steps: [
+        { text: 'Subtracting logs divides what is inside.', expr: `log ${a} − log ${b} = log (${a} ÷ ${b})` },
+        { text: 'Work out the inside.', expr: ans }], answer: ans },
+      misconceptions: [
+        { when: `log ${a - b}`, feedback: `You subtracted the numbers inside. Subtracting the LOGS divides what is inside — ${a} ÷ ${b}.` },
+        { when: `log ${b}/log ${a}`, feedback: 'A difference of logs is one log of a quotient, not a quotient of two logs.' },
+      ],
+      verify: { kind: 'exact', value: ans },
+    };
+  }
+
+  if (kind === 'power') {
+    const a = pick([2, 3, 5]), n = randInt(2, 4);
+    const ans = `log ${Math.pow(a, n)}`;
+    return {
+      type: 'log-power', instruction: 'Write it as a single logarithm.',
+      question: `Express as a single logarithm:  ${n} log ${a}`,
+      answer: ans, accepts: accepts(ans, `log(${Math.pow(a, n)})`, `log${Math.pow(a, n)}`),
+      hints: hintLadder(
+        `${n} log ${a} is just log ${a} added to itself ${n} times.`,
+        'And adding logs multiplies what is inside.',
+        `So ${a} gets multiplied by itself — how many times?`),
+      solution: { steps: [
+        { text: 'A multiplier in front becomes a power inside.', expr: `${n} log ${a} = log (${a}^${n})` },
+        { text: 'Work out the power.', expr: ans }], answer: ans },
+      misconceptions: [
+        { when: `log ${a * n}`, feedback: `The ${n} does not multiply ${a} — it becomes a POWER, so ${a} is multiplied by itself ${n} times.` },
+      ],
+      verify: { kind: 'exact', value: ans },
+    };
+  }
+
+  if (kind === 'evaluate-product') {
+    const [p1, v1] = pick([[1, 10], [2, 100], [3, 1000]]);
+    const [p2, v2] = pick([[1, 10], [2, 100]]);
+    const value = p1 + p2;
+    return {
+      type: 'log-evaluate', instruction: 'Give a number, not a log.',
+      question: `Evaluate:  log ${v1.toLocaleString('en-KE')} + log ${v2.toLocaleString('en-KE')}`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Each of these is a common logarithm you can read straight off — a power of ten.',
+        'Work out each one on its own first.',
+        'Then do what the sign between them says.'),
+      solution: { steps: [
+        { text: 'Read each logarithm as a power of ten.', expr: `log ${v1} = ${p1},  log ${v2} = ${p2}` },
+        { text: 'Add them.', expr: `${p1} + ${p2} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${v1 * v2}`, feedback: 'You multiplied the numbers instead of adding their logarithms. The answer is a small whole number.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  // The KICD "use mathematical tables" habit, without needing the tables.
+  const known = pick([[2, '0.3010'], [3, '0.4771'], [5, '0.6990'], [7, '0.8451']]);
+  const [base, logv] = known;
+  const n = randInt(2, 3);
+  const target = Math.pow(base, n);
+  const value = (parseFloat(logv) * n).toFixed(4);
+  return {
+    type: 'log-from-known', instruction: 'Give your answer to 4 decimal places.',
+    question: `Given that log ${base} = ${logv}, find log ${target}.`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${parseFloat(value)}`),
+    hints: hintLadder(
+      `First write ${target} as a power of ${base}.`,
+      'A power inside a log comes out to the front as a multiplier.',
+      `So you need ${logv} multiplied by that power.`),
+    solution: { steps: [
+      { text: `Write ${target} as a power of ${base}.`, expr: `${target} = ${base}^${n}` },
+      { text: 'Bring the power out in front.', expr: `log ${target} = ${n} × log ${base}` },
+      { text: 'Substitute the given value.', expr: `${n} × ${logv} = ${value}` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${(parseFloat(logv) + n).toFixed(4)}`, feedback: `The power is a MULTIPLIER of log ${base}, not something you add to it.` },
+    ],
+    verify: { kind: 'fraction', value: parseFloat(value) },
+  };
+}
+
+// ---- G9 1.1: combined operations on integers ----
+// Order of operations where every number can be negative — the two rules the
+// learner already has, now colliding. Answers are checked as plain integers.
+export function buildIntegersCombined() {
+  const shape = pick(['mul-then-add', 'brackets-first', 'div-then-sub', 'three-term']);
+
+  if (shape === 'mul-then-add') {
+    const a = nonzero(-12, 12), b = nonzero(-9, 9), c = nonzero(-9, 9);
+    const value = a + b * c;
+    return {
+      type: 'int-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  ${a} + (${b}) × (${c})`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Multiplication is settled before addition — always.',
+        'Do the multiplying part on its own first, sign and all.',
+        'Two negatives multiplied give a positive; one negative gives a negative.'),
+      solution: { steps: [
+        { text: 'Multiply first.', expr: `(${b}) × (${c}) = ${b * c}` },
+        { text: 'Now add.', expr: `${a} + (${b * c}) = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${(a + b) * c}`, feedback: 'You added before multiplying. Multiplication comes first unless brackets say otherwise.' },
+        { when: `${a - b * c}`, feedback: 'Check the sign of the product before you combine it.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (shape === 'brackets-first') {
+    const a = nonzero(-9, 9), b = nonzero(-9, 9), c = nonzero(-8, 8);
+    const value = (a + b) * c;
+    return {
+      type: 'int-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  (${a} + (${b})) × (${c})`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Brackets are settled before anything else.',
+        'Combine what is inside the brackets into a single signed number first.',
+        'Then multiply that by the number outside, watching the signs.'),
+      solution: { steps: [
+        { text: 'Do the brackets.', expr: `${a} + (${b}) = ${a + b}` },
+        { text: 'Multiply.', expr: `(${a + b}) × (${c}) = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${a + b * c}`, feedback: 'The brackets came first here — they group the addition, so it must be done before multiplying.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (shape === 'div-then-sub') {
+    const q = nonzero(-8, 8), d = nonzero(-6, 6);
+    const n = q * d;
+    const a = nonzero(-15, 15);
+    const value = a - q;
+    return {
+      type: 'int-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  ${a} − (${n}) ÷ (${d})`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Division outranks subtraction — settle it first.',
+        'Divide, keeping track of the sign, before you take anything away.',
+        'Same signs divide to a positive; different signs to a negative.'),
+      solution: { steps: [
+        { text: 'Divide first.', expr: `(${n}) ÷ (${d}) = ${q}` },
+        { text: 'Now subtract.', expr: `${a} − (${q}) = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${a + q}`, feedback: `Watch the subtraction: you are taking ${q} away, and subtracting a negative is what turns into adding.` },
+        { when: `${(a - n) / d}`, feedback: 'You subtracted before dividing. Division is settled first.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  const a = nonzero(-10, 10), b = nonzero(-6, 6), c = nonzero(-6, 6), d = nonzero(-9, 9);
+  const value = a - b * c + d;
+  return {
+    type: 'int-combined', instruction: 'Use the correct order of operations.',
+    question: `Work out:  ${a} − (${b}) × (${c}) + (${d})`,
+    answer: `${value}`, accepts: accepts(`${value}`),
+    hints: hintLadder(
+      'One multiplication is hiding between two additions/subtractions.',
+      'Settle the multiplication first, then work left to right.',
+      'Keep the sign that belongs to each term attached to it.'),
+    solution: { steps: [
+      { text: 'Multiply first.', expr: `(${b}) × (${c}) = ${b * c}` },
+      { text: 'Then left to right.', expr: `${a} − (${b * c}) = ${a - b * c}` },
+      { text: 'Finish.', expr: `${a - b * c} + (${d}) = ${value}` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${(a - b) * c + d}`, feedback: 'You worked strictly left to right. Multiplication jumps the queue.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G9 1.4: compound proportion (ratio method) + proportional parts ----
+// KICD asks for the RATIO method: change one factor at a time and ask, each
+// time, whether more of it means more or less of the answer.
+export function buildCompoundProportion() {
+  const kind = pick(['parts', 'compound', 'compound-3']);
+
+  if (kind === 'parts') {
+    const r = pick([[2, 3], [3, 5], [1, 4], [4, 5], [2, 7], [3, 7]]);
+    const unit = pick([300, 400, 500, 600, 800, 1200]);
+    const total = (r[0] + r[1]) * unit;
+    const which = coin() ? 0 : 1;
+    const value = r[which] * unit;
+    const thing = pick(['a piece of land', 'a sum of money', 'a harvest of maize']);
+    const units = thing === 'a sum of money' ? 'KSh ' : '';
+    return {
+      type: 'prop-parts', instruction: 'Share it in the given ratio.',
+      question: `${thing[0].toUpperCase()}${thing.slice(1)} of ${units}${total.toLocaleString('en-KE')} is shared between Amina and Otieno in the ratio ${r[0]}:${r[1]}. How much does ${which === 0 ? 'Amina' : 'Otieno'} get?`,
+      answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-KE'), `${units}${value}`),
+      hints: hintLadder(
+        'A ratio tells you how many equal parts to cut the whole into.',
+        `Add the ratio numbers to find the total number of parts.`,
+        'Find what ONE part is worth, then take as many parts as that person’s share.'),
+      solution: { steps: [
+        { text: 'Count the parts.', expr: `${r[0]} + ${r[1]} = ${r[0] + r[1]} parts` },
+        { text: 'Find one part.', expr: `${total} ÷ ${r[0] + r[1]} = ${unit}` },
+        { text: 'Take that share.', expr: `${r[which]} × ${unit} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${r[1 - which] * unit}`, feedback: 'That is the other person’s share — check which of the two ratio numbers belongs to the person asked about.' },
+        { when: `${total / 2}`, feedback: 'A ratio share is only an equal split when the two numbers are the same. Here they are not.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'compound') {
+    // men × days × hours is constant work
+    const m1 = pick([4, 5, 6, 8]), d1 = pick([6, 8, 9, 10, 12]), h1 = pick([4, 5, 6]);
+    const m2 = pick([2, 3, 4, 6, 10, 12].filter(x => x !== m1));
+    const h2 = pick([3, 4, 5, 6, 8].filter(x => x !== h1));
+    const work = m1 * d1 * h1;
+    if (work % (m2 * h2) !== 0) return buildCompoundProportion();
+    const value = work / (m2 * h2);
+    if (value <= 0 || value > 60) return buildCompoundProportion();
+    return {
+      type: 'prop-compound', instruction: 'Change one thing at a time.',
+      question: `${m1} workers dig a trench in ${d1} days, working ${h1} hours a day. How many days would ${m2} workers take, working ${h2} hours a day?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value} days`),
+      hints: hintLadder(
+        'Deal with the change in workers first, then the change in hours — one at a time.',
+        `Ask each time: with ${m2 > m1 ? 'MORE' : 'FEWER'} workers, should the job take more days or fewer?`,
+        'The total amount of work does not change; only how it is spread does.'),
+      solution: { steps: [
+        { text: 'The total work stays the same.', expr: `${m1} × ${d1} × ${h1} = ${work} worker-hours` },
+        { text: 'Spread it over the new workers and hours.', expr: `${work} ÷ (${m2} × ${h2})` },
+        { text: 'That is the number of days.', expr: `${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${(d1 * m2 * h2 / (m1 * h1)).toFixed(2).replace(/\.?0+$/, '')}`, feedback: 'The ratios have gone in the wrong direction — more workers means FEWER days, not more.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  const p1 = pick([3, 4, 5, 6]), d1 = pick([4, 6, 8, 10]);
+  const p2 = pick([2, 6, 8, 10, 12].filter(x => x !== p1));
+  const work = p1 * d1;
+  if (work % p2 !== 0) return buildCompoundProportion();
+  const value = work / p2;
+  return {
+    type: 'prop-inverse', instruction: 'Think about which way the answer moves.',
+    question: `${p1} taps fill a tank in ${d1} hours. How long would ${p2} taps of the same size take?`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value} hours`),
+    hints: hintLadder(
+      'More taps do not take longer — this is an inverse proportion.',
+      'Work out the total tap-hours the tank needs.',
+      'Then share that total among the new number of taps.'),
+    solution: { steps: [
+      { text: 'Find the total work.', expr: `${p1} × ${d1} = ${work} tap-hours` },
+      { text: 'Divide among the new taps.', expr: `${work} ÷ ${p2} = ${value}` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${(d1 * p2 / p1).toFixed(2).replace(/\.?0+$/, '')}`, feedback: 'That scales the wrong way — check whether more taps should mean more hours or fewer.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G9 1.4: rates of work ----
+// The heart of it is the per-hour (or per-day) rate: what fraction of the job
+// does each worker finish in one unit of time?
+export function buildRatesOfWork() {
+  const kind = pick(['together', 'one-rate', 'remaining']);
+
+  if (kind === 'together') {
+    // Chosen so the combined time is exact.
+    const pairs = [[2, 2, 1], [3, 6, 2], [4, 4, 2], [6, 3, 2], [12, 4, 3], [10, 15, 6], [6, 12, 4], [20, 5, 4], [8, 8, 4]];
+    const [a, b, value] = pick(pairs);
+    return {
+      type: 'work-together', instruction: 'Work with what each does in ONE hour.',
+      question: `Wanjiku can paint a room in ${a} hours. Kamau can paint the same room in ${b} hours. Working together, how many hours do they take?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value} hours`),
+      hints: hintLadder(
+        'Do not add the times — two people working together are FASTER than either alone.',
+        `Ask what fraction of the room each one paints in a single hour.`,
+        'Add those two fractions to get what they paint together in one hour, then turn it upside down.'),
+      solution: { steps: [
+        { text: 'Rate of each per hour.', expr: `1/${a}  and  1/${b} of the room` },
+        { text: 'Add the rates.', expr: `1/${a} + 1/${b} = 1/${value}` },
+        { text: 'Invert to get the time.', expr: `${value} hours` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${a + b}`, feedback: 'You added the two times. Working together must come out FASTER than either person alone.' },
+        { when: `${(a + b) / 2}`, feedback: 'The average of the two times is not the answer — add the RATES, not the times.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'one-rate') {
+    const total = pick([12, 18, 24, 30, 36, 48]);
+    const hrs = pick([2, 3, 4, 6]);
+    const value = total / hrs;
+    if (!Number.isInteger(value)) return buildRatesOfWork();
+    const job = pick(['bricks', 'chairs', 'loaves']);
+    return {
+      type: 'work-rate', instruction: 'Find the rate per hour.',
+      question: `A machine makes ${total} ${job} in ${hrs} hours. Working at the same rate, how many ${job} does it make in ONE hour?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'A rate per hour means "how many in a single hour".',
+        `You know the amount for ${hrs} hours — share it out evenly.`,
+        'This is a division, not a multiplication.'),
+      solution: { steps: [
+        { text: 'Share the total over the hours.', expr: `${total} ÷ ${hrs} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${total * hrs}`, feedback: 'Multiplying makes the rate bigger than the total — to find a rate per hour you divide.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  const a = pick([6, 8, 10, 12]);
+  const worked = randInt(2, a - 2);
+  const value = a - worked;
+  return {
+    type: 'work-remaining', instruction: 'How much of the job is left?',
+    question: `A tap fills a tank in ${a} hours. It has already run for ${worked} hours. How many more hours are needed to fill the tank?`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value} hours`),
+    hints: hintLadder(
+      'The tap works at a steady rate the whole way through.',
+      `In ${worked} hours it has done ${worked} hours’ worth of the ${a} hours needed.`,
+      'The rest is what remains of the total time.'),
+    solution: { steps: [
+      { text: 'Fraction filled so far.', expr: `${worked}/${a}` },
+      { text: 'Time still needed.', expr: `${a} − ${worked} = ${value} hours` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${worked}`, feedback: 'That is how long it has already run. The question asks how much longer it still needs.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const NUMBERS_CONTENT = {
   G5_ADDITION:           withWorkedExample(() => buildColumnAddSub()),
   G5_SUBTRACTION:        withWorkedExample(() => buildColumnAddSub({ sub: true })),
@@ -1432,6 +1926,11 @@ export const NUMBERS_CONTENT = {
   G9_SURDS_OPERATIONS:   withWorkedExample(buildSurdsOps),
   G9_COMMERCIAL_ARITH:   withWorkedExample(buildCommercialArith),
   G8_SIMPLE_INTEREST:    withWorkedExample(buildSimpleInterest),
+  G10_LOGARITHMS_INTRO:  withWorkedExample(buildCommonLogs),
+  G10_LOG_LAWS:          withWorkedExample(buildLogLaws),
+  G9_INTEGERS_COMBINED:  withWorkedExample(buildIntegersCombined),
+  G9_COMPOUND_PROPORTION: withWorkedExample(buildCompoundProportion),
+  G9_RATES_OF_WORK:      withWorkedExample(buildRatesOfWork),
 };
 
 export const NUMBERS_SKILL_IDS = Object.keys(NUMBERS_CONTENT);

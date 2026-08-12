@@ -305,7 +305,11 @@ const GRADE_8 = {
   // Geometry
   G8_ANGLE_RELATIONSHIPS: skill('G8_ANGLE_RELATIONSHIPS', 'Angle Relationships (Parallel Lines)', 8, S.GEO, { pre: ['G6_ANGLE_PROPERTIES'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Geometry', 'Angles'), cambridge: cam(7, 'Gg', '7Gg.13') } }),
   G8_POLYGON_ANGLES: skill('G8_POLYGON_ANGLES', 'Angles in Polygons', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES', 'G8_ANGLE_RELATIONSHIPS'], w: 4, curricula: { cbc: cbc(7, 'Geometry', 'Angles'), cambridge: cam(9, 'Gg', '9Gg.07') } }),
-  G8_CONGRUENCE: skill('G8_CONGRUENCE', 'Congruent Triangles', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement'), cambridge: cam(7, 'Gg', '7Gg.02') } }),
+  // Congruence appears in none of the KICD Junior School designs (Grade 7, 8
+  // or 9) — it is a Cambridge / 8-4-4 topic. It stays in the graph because it
+  // supports similarity, but a CBC learner meets it as enrichment, not as
+  // syllabus she is accountable for.
+  G8_CONGRUENCE: skill('G8_CONGRUENCE', 'Congruent Triangles', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES'], w: 4, curricula: { cbc: cbcEnr('Geometry'), cambridge: cam(7, 'Gg', '7Gg.02') } }),
   G8_SIMILARITY: skill('G8_SIMILARITY', 'Similar Figures', 8, S.GEO, { pre: ['G8_CONGRUENCE', 'G8_RATIO_PROPORTION'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement'), cambridge: cam(9, 'Gp') } }),
   G8_SCALE_DRAWING: skill('G8_SCALE_DRAWING', 'Scale Drawing (Simple Scales)', 8, S.GEO, { pre: ['G8_RATIO_PROPORTION', 'G7_LENGTH_CONV'], w: 3, curricula: { cbc: cbc(8, 'Geometry', 'Scale Drawing') } }),
   G8_TRANSFORMATIONS_INTRO: skill('G8_TRANSFORMATIONS_INTRO', 'Transformations (Reflection, Rotation)', 8, S.GEO, { pre: ['G8_COORDINATES', 'G6_SYMMETRY'], w: 3, curricula: { cbc: cbcEnr('Geometry'), cambridge: cam(8, 'Gp', '8Gp.05') } }),
@@ -340,6 +344,13 @@ const GRADE_9 = {
   G9_QUADRATIC_FORMULA: skill('G9_QUADRATIC_FORMULA', 'Quadratic Formula', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G9_SURDS_INTRO'], w: 5, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('Ae') } }),
   G9_COMPLETING_SQUARE: skill('G9_COMPLETING_SQUARE', 'Completing the Square', 9, S.ALG, { pre: ['G9_QUADRATIC_EXPAND', 'G7_SQUARES_EXT'], w: 6, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('Ae') } }),
   G9_SIMULTANEOUS_ADV: skill('G9_SIMULTANEOUS_ADV', 'Simultaneous Equations (Advanced)', 9, S.ALG, { pre: ['G8_SIMULTANEOUS_INTRO', 'G9_QUADRATIC_SOLVE'], w: 5, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('Ae') } }),
+  // ---- CBC Grade 9 sub-strands the graph previously had no skill for ----
+  // KICD G9 1.1 Integers (5 lessons): combined operations on signed numbers.
+  G9_INTEGERS_COMBINED: skill('G9_INTEGERS_COMBINED', 'Combined Operations on Integers', 9, S.NUM, { pre: ['G7_INTEGERS_MUL_DIV', 'G7_BODMAS_ADV'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Integers'), cambridge: cam(9, 'Ni') } }),
+  // KICD G9 1.4 Compound Proportions and Rates of Work (12 lessons) — the
+  // largest Numbers sub-strand in Grade 9, and it needs two skills.
+  G9_COMPOUND_PROPORTION: skill('G9_COMPOUND_PROPORTION', 'Compound Proportion & Proportional Parts', 9, S.NUM, { pre: ['G8_RATIO_PROPORTION'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Compound Proportions and Rates of Work'), cambridge: cam(9, 'Nf') } }),
+  G9_RATES_OF_WORK: skill('G9_RATES_OF_WORK', 'Rates of Work', 9, S.NUM, { pre: ['G9_COMPOUND_PROPORTION', 'G7_FRACTIONS_ADD_UNLIKE'], w: 5, curricula: { cbc: cbc(9, 'Numbers', 'Compound Proportions and Rates of Work'), cambridge: camEnr('Nf') } }),
   G9_VARIATION: skill('G9_VARIATION', 'Direct & Inverse Variation', 9, S.ALG, { pre: ['G8_RATIO_PROPORTION', 'G8_LINEAR_EQ_ADV'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Compound Proportions and Rates of Work'), cambridge: cam(9, 'Nf', '9Nf.07') } }),
   G9_FUNCTIONS_INTRO: skill('G9_FUNCTIONS_INTRO', 'Introduction to Functions', 9, S.ALG, { pre: ['G8_LINEAR_GRAPHS', 'G7_EXPRESSIONS'], w: 4, crit: true, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('As') } }),
   G9_QUADRATIC_GRAPHS: skill('G9_QUADRATIC_GRAPHS', 'Quadratic Graphs', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G8_LINEAR_GRAPHS'], w: 5, crit: true, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('As') } }),
@@ -350,6 +361,12 @@ const GRADE_9 = {
   G9_CIRCLE_THEOREMS_INTRO: skill('G9_CIRCLE_THEOREMS_INTRO', 'Circle Theorems (Introduction)', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_TRIANGLE_PROPERTIES', 'G7_AREA_CIRCLE'], w: 5, crit: true, curricula: { cbc: cbcEnr('Geometry'), cambridge: camEnr('Gg') } }),
   G9_TRIG_INTRO: skill('G9_TRIG_INTRO', 'Trigonometry (SOH CAH TOA)', 9, S.GEO, { pre: ['G7_PYTHAGORAS', 'G7_FRACTIONS_DIV'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Trigonometry'), cambridge: camEnr('Gg') } }),
   G9_TRIG_PROBLEMS: skill('G9_TRIG_PROBLEMS', 'Trigonometry Word Problems', 9, S.GEO, { pre: ['G9_TRIG_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Geometry', 'Trigonometry'), cambridge: camEnr('Gg') } }),
+  // KICD G9 4.1 Coordinates and Graphs: gradients of parallel and
+  // perpendicular lines — named outcomes (d) and (f), previously uncovered.
+  G9_PARALLEL_PERPENDICULAR: skill('G9_PARALLEL_PERPENDICULAR', 'Parallel & Perpendicular Lines', 9, S.ALG, { pre: ['G8_GRADIENT', 'G8_EQUATION_OF_LINE'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Coordinates and Graphs'), cambridge: cam(9, 'As') } }),
+  // KICD G9 4.2 Scale Drawing: angles of elevation and depression, outcomes
+  // (d) through (g) — half the sub-strand, and bearings alone did not cover it.
+  G9_ELEVATION_DEPRESSION: skill('G9_ELEVATION_DEPRESSION', 'Angles of Elevation & Depression', 9, S.GEO, { pre: ['G9_TRIG_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Geometry', 'Scale Drawing'), cambridge: camEnr('Gg') } }),
   G9_BEARINGS: skill('G9_BEARINGS', 'Bearings', 9, S.GEO, { pre: ['G9_TRIG_INTRO', 'G6_ANGLE_MEASURE'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Scale Drawing'), cambridge: cam(9, 'Gp', '9Gp.01') } }),
   G9_TRANSFORMATIONS_ADV: skill('G9_TRANSFORMATIONS_ADV', 'Transformations (Translation, Enlargement)', 9, S.GEO, { pre: ['G8_TRANSFORMATIONS_INTRO', 'G8_SIMILARITY'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement'), cambridge: cam(9, 'Gp', '9Gp.03') } }),
 
@@ -366,6 +383,10 @@ const GRADE_9 = {
 
   // Statistics
   G9_GROUPED_DATA: skill('G9_GROUPED_DATA', 'Grouped Data & Histograms', 9, S.STA, { pre: ['G8_CUMULATIVE_FREQ', 'G7_MEAN_MEDIAN_MODE', 'G6_AREA_RECT'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)'), cambridge: cam(9, 'Ss', '9Ss.04') } }),
+  // KICD G9 5.1: class width, and the MEAN and MEDIAN of grouped data —
+  // outcomes (a), (d) and (e). The existing grouped-data skill stopped at the
+  // modal class.
+  G9_GROUPED_MEASURES: skill('G9_GROUPED_MEASURES', 'Mean & Median of Grouped Data', 9, S.STA, { pre: ['G9_GROUPED_DATA', 'G8_CUMULATIVE_FREQ'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)'), cambridge: cam(9, 'Ss') } }),
   G9_PROBABILITY_ADV: skill('G9_PROBABILITY_ADV', 'Probability (With/Without Replacement)', 9, S.STA, { pre: ['G8_PROBABILITY_COMBINED'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Probability'), cambridge: cam(9, 'Sp', '9Sp.03') } }),
   G9_SCATTER_PLOTS: skill('G9_SCATTER_PLOTS', 'Scatter Plots & Correlation', 9, S.STA, { pre: ['G8_COORDINATES', 'G7_DATA_REPRESENT'], w: 3, curricula: { cbc: cbcEnr('Data Handling'), cambridge: camEnr('Ss') } }),
 };
@@ -417,7 +438,7 @@ const GRADE_11 = {
   // CBC introduces matrices in Grade 9 (Algebra → Matrices): order, addition, subtraction,
   // scalar & matrix multiplication. Determinant/inverse stay Senior in CBC too, so INVERSE is
   // left untagged. No Cambridge tag — matrices are beyond Cambridge Lower Secondary (IGCSE+).
-  G11_MATRICES_INTRO: skill('G11_MATRICES_INTRO', 'Introduction to Matrices', 11, S.ALG, { pre: ['G8_SIMULTANEOUS_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Algebra', 'Matrices') } }),
+  G11_MATRICES_INTRO: skill('G11_MATRICES_INTRO', 'Introduction to Matrices', 11, S.ALG, { pre: ['G6_INTEGERS_ADD_SUB', 'G7_DATA_REPRESENT'], w: 5, curricula: { cbc: cbc(9, 'Algebra', 'Matrices') } }),
   G11_MATRICES_OPS: skill('G11_MATRICES_OPS', 'Matrix Operations', 11, S.ALG, { pre: ['G11_MATRICES_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Algebra', 'Matrices') } }),
   G11_MATRICES_INVERSE: skill('G11_MATRICES_INVERSE', 'Inverse Matrices (2×2)', 11, S.ALG, { pre: ['G11_MATRICES_OPS'], w: 6 }),
   G11_LINEAR_PROGRAMMING: skill('G11_LINEAR_PROGRAMMING', 'Linear Programming', 11, S.ALG, { pre: ['G8_INEQUALITIES', 'G8_LINEAR_GRAPHS'], w: 5 }),

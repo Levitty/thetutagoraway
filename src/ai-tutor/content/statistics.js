@@ -364,11 +364,238 @@ export function buildScatter() {
   };
 }
 
+// ============================================================================
+// CBC GRADE 9 — DATA HANDLING 5.1 Data Interpretation, Grouped Data (8 lessons)
+//
+// KICD outcomes: choose an appropriate CLASS WIDTH, build a frequency
+// distribution table, identify the MODAL CLASS, and calculate the MEAN and
+// MEDIAN of grouped data. Cumulative frequency is the running total that the
+// median class is read from, which is why it sits in this sub-strand.
+// ============================================================================
+
+// A grouped table with clean class boundaries: 10-19, 20-29, ...
+const groupedTable = (nClasses = 4, width = 10, start = 10) => {
+  const classes = [], mids = [], freqs = [];
+  for (let i = 0; i < nClasses; i++) {
+    const lo = start + i * width;
+    const hi = lo + width - 1;
+    classes.push(`${lo}–${hi}`);
+    mids.push(lo + (width - 1) / 2);
+    freqs.push(randInt(2, 9));
+  }
+  return { classes, mids, freqs, width, start };
+};
+const cumulate = (freqs) => freqs.reduce((acc, f) => { acc.push((acc.at(-1) || 0) + f); return acc; }, []);
+const tableStr = (classes, freqs) => classes.map((c, i) => `${c}: ${freqs[i]}`).join(',  ');
+
+// ---- G9: cumulative frequency — the running total, and what it is FOR ----
+export function buildCumulativeFrequency() {
+  const kind = pick(['running-total', 'upto', 'median-class', 'below-value']);
+  const { classes, freqs } = groupedTable(4);
+  const cum = cumulate(freqs);
+  const total = cum.at(-1);
+
+  if (kind === 'running-total') {
+    const i = randInt(1, 3);          // never the first (trivial) or beyond
+    const value = cum[i];
+    return {
+      type: 'cf-running', instruction: 'Build the running total.',
+      question: `Marks are grouped as —  ${tableStr(classes, freqs)}.  What is the cumulative frequency of the class ${classes[i]}?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Cumulative frequency is a running total, not a single class’s frequency.',
+        'It answers "how many altogether up to and including this class?"',
+        `So gather every frequency from the first class down to ${classes[i]}.`),
+      solution: { steps: [
+        { text: 'List the frequencies down to that class.', expr: freqs.slice(0, i + 1).join(' + ') },
+        { text: 'Add them.', expr: `${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${freqs[i]}`, feedback: 'That is the frequency of that class alone. Cumulative means everything up to it as well.' },
+        { when: `${total}`, feedback: 'That is the running total for the LAST class — the grand total. Stop at the class you were asked about.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'upto') {
+    const i = randInt(0, 2);
+    const value = cum[i];
+    const upper = classes[i].split('–')[1];
+    return {
+      type: 'cf-upto', instruction: 'Read it from the running total.',
+      question: `Marks are grouped as —  ${tableStr(classes, freqs)}.  How many learners scored ${upper} marks or fewer?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        '"Or fewer" tells you this is a running total question.',
+        `Find which class ends at ${upper}.`,
+        'Then gather every frequency from the start up to and including it.'),
+      solution: { steps: [
+        { text: `${upper} is the top of the class ${classes[i]}.`, expr: classes[i] },
+        { text: 'Add all frequencies up to there.', expr: `${freqs.slice(0, i + 1).join(' + ')} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${freqs[i]}`, feedback: 'That counts only the learners inside that one class — "or fewer" includes everyone below it too.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'median-class') {
+    // This is what cumulative frequency is actually for in the KICD design.
+    const half = total / 2;
+    const idx = cum.findIndex(v => v >= half);
+    if (idx < 0) return buildCumulativeFrequency();
+    const value = classes[idx];
+    return {
+      type: 'cf-median-class', instruction: 'Name the class, e.g. 20–29.',
+      question: `Marks are grouped as —  ${tableStr(classes, freqs)}.  Which class contains the MEDIAN?`,
+      answer: value, accepts: accepts(value, value.replace('–', '-')),
+      hints: hintLadder(
+        'The median is the middle value once everything is in order.',
+        `Work out the total frequency, then halve it to find the middle position.`,
+        'Run the cumulative total down the classes until it first reaches that position.'),
+      solution: { steps: [
+        { text: 'Total frequency.', expr: `${freqs.join(' + ')} = ${total}` },
+        { text: 'The middle position.', expr: `${total} ÷ 2 = ${half}` },
+        { text: 'Run the cumulative total to that position.', expr: value }], answer: value },
+      misconceptions: [
+        { when: classes[freqs.indexOf(Math.max(...freqs))], feedback: 'That is the class with the biggest frequency — the MODAL class. The median is about position, not size.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  const value = total;
+  return {
+    type: 'cf-total', instruction: 'How many altogether?',
+    question: `The cumulative frequency column of a grouped table ends at the last class. Frequencies are ${freqs.join(', ')}. What is the FINAL cumulative frequency?`,
+    answer: `${value}`, accepts: accepts(`${value}`),
+    hints: hintLadder(
+      'The running total finishes when every class has been counted.',
+      'So the last entry accounts for the whole data set.',
+      'Gather all the frequencies together.'),
+    solution: { steps: [
+      { text: 'Add every frequency.', expr: `${freqs.join(' + ')} = ${value}` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${freqs.at(-1)}`, feedback: 'That is the last class on its own. The final cumulative frequency counts everyone.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
+// ---- G9: class width, mean and median of grouped data ----
+export function buildGroupedMeasures() {
+  const kind = pick(['class-width', 'mean', 'median-value', 'why-estimate']);
+
+  if (kind === 'class-width') {
+    const width = pick([5, 10, 20]);
+    const start = pick([0, 10, 20]);
+    const lo = start, hi = start + width - 1;
+    const value = `${width}`;
+    return {
+      type: 'grouped-width', instruction: 'Give the class width as a number.',
+      question: `A frequency table uses the classes ${lo}–${hi}, ${lo + width}–${hi + width}, ${lo + 2 * width}–${hi + 2 * width}, … What is the CLASS WIDTH?`,
+      answer: value, accepts: accepts(value),
+      hints: hintLadder(
+        'The class width is how much ground each class covers, not how many values are listed in it.',
+        'Compare where one class starts with where the NEXT one starts.',
+        'The gap between those two starting points is the width.'),
+      solution: { steps: [
+        { text: 'Compare consecutive lower limits.', expr: `${lo} and ${lo + width}` },
+        { text: 'The difference is the width.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${width - 1}`, feedback: `Subtracting ${lo} from ${hi} misses the last value in the class. Measure from one class's start to the next class's start.` },
+      ],
+      verify: { kind: 'fraction', value: width },
+    };
+  }
+
+  if (kind === 'mean') {
+    const { classes, mids, freqs } = groupedTable(4);
+    const total = freqs.reduce((a, b) => a + b, 0);
+    const sumfx = mids.reduce((s, m, i) => s + m * freqs[i], 0);
+    const value = Math.round((sumfx / total) * 100) / 100;
+    return {
+      type: 'grouped-mean', instruction: 'Give your answer to 2 decimal places.',
+      question: `Estimate the MEAN of this grouped data —  ${tableStr(classes, freqs)}.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}`.replace(/\.?0+$/, '')),
+      hints: hintLadder(
+        'The raw values are gone, so each class has to be represented by a single number.',
+        'Use the midpoint of each class to stand for everything in it.',
+        'Multiply each midpoint by its frequency, total those, and share by how many there are altogether.'),
+      solution: { steps: [
+        { text: 'Find each class midpoint.', expr: mids.join(', ') },
+        { text: 'Multiply midpoint by frequency and total.', expr: `Σfx = ${sumfx}` },
+        { text: 'Divide by the total frequency.', expr: `${sumfx} ÷ ${total} = ${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${Math.round((mids.reduce((a, b) => a + b, 0) / mids.length) * 100) / 100}`, feedback: 'That averages the midpoints alone. Classes with more learners in them must count for more — weight each midpoint by its frequency.' },
+        { when: `${total}`, feedback: 'That is how many learners there are, not their average.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'median-value') {
+    // Median by interpolation — the Grade 9 method.
+    const width = 10;
+    const { classes, freqs } = groupedTable(4, width, 10);
+    const cum = cumulate(freqs);
+    const total = cum.at(-1);
+    const half = total / 2;
+    const idx = cum.findIndex(v => v >= half);
+    if (idx < 1) return buildGroupedMeasures();
+    const L = 10 + idx * width - 0.5;         // lower boundary
+    const cfBefore = cum[idx - 1];
+    const fm = freqs[idx];
+    const value = Math.round((L + ((half - cfBefore) / fm) * width) * 100) / 100;
+    return {
+      type: 'grouped-median', instruction: 'Give your answer to 2 decimal places.',
+      question: `Find the MEDIAN of this grouped data —  ${tableStr(classes, freqs)}.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}`.replace(/\.?0+$/, '')),
+      hints: hintLadder(
+        'First find which class the middle value falls in, using a running total.',
+        'The median is somewhere INSIDE that class, so you have to estimate how far in.',
+        'How far in depends on how many are still needed to reach the middle, out of that class’s frequency.'),
+      solution: { steps: [
+        { text: 'Middle position.', expr: `${total} ÷ 2 = ${half}` },
+        { text: 'The class it falls in.', expr: `${classes[idx]}, lower boundary ${L}` },
+        { text: 'How far into the class.', expr: `(${half} − ${cfBefore}) ÷ ${fm} × ${width}` },
+        { text: 'Add to the lower boundary.', expr: `${value}` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${L}`, feedback: 'That is the lower boundary of the median class. The median sits somewhere inside it — you still have to work out how far in.' },
+        { when: `${half}`, feedback: 'That is the middle POSITION, not the middle value. Use it to find where in the table to look.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  const { classes, freqs } = groupedTable(4);
+  const value = 'estimate';
+  return {
+    type: 'grouped-why', instruction: 'Answer with one word: exact or estimate.',
+    question: `From the grouped table  ${tableStr(classes, freqs)}  a mean is calculated. Is that mean the exact mean of the original data, or an estimate?`,
+    answer: value, accepts: accepts(value, 'an estimate', 'estimated'),
+    hints: hintLadder(
+      'Look at what the table still tells you about any individual learner.',
+      'Grouping records which class someone landed in, but not their actual mark.',
+      'Ask whether you could rebuild the original marks from this table alone.'),
+    solution: { steps: [
+      { text: 'The table keeps classes, not individual values.', expr: classes.join(', ') },
+      { text: 'Midpoints stand in for real values, so the result is an estimate.', expr: value }], answer: value },
+    misconceptions: [
+      { when: 'exact', feedback: 'The original marks are lost once data is grouped — the midpoint is only a stand-in, so the mean can only be an estimate.' },
+    ],
+    verify: { kind: 'exact', value },
+  };
+}
+
 export const STATISTICS_CONTENT = {
   // Cambridge gap fill
   G7_DATA_REPRESENT:      withWorkedExample(buildDataRepresent),
   G8_PROBABILITY_COMBINED: withWorkedExample(buildCombinedProbability),
   G9_GROUPED_DATA:        withWorkedExample(buildGroupedData),
+  // CBC Grade 9 Data Handling 5.1 — grouped data measures
+  G8_CUMULATIVE_FREQ:     withWorkedExample(buildCumulativeFrequency),
+  G9_GROUPED_MEASURES:    withWorkedExample(buildGroupedMeasures),
   G6_MEAN:              withWorkedExample(buildMean),
   G7_MEAN_MEDIAN_MODE:  withWorkedExample(buildAverages),
   G8_PROBABILITY_INTRO: withWorkedExample(buildProbability),

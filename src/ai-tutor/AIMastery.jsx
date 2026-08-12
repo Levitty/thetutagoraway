@@ -14,7 +14,7 @@ import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
 import { matchMisconception, recordMisconception, topPatterns } from './misconceptions.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
-import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
+import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum, SYSTEMS, resolveView, systemOf } from './curricula.js';
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
 import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
@@ -99,13 +99,19 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // Active syllabus view (CBC/CBE, Cambridge, or native). Persisted per subject
   // inside progress so it survives reloads / other devices.
-  // A Kenyan learner in Junior School (Grades 7-9) is taught the CBC syllabus,
-  // so that is the view she should land on — the native Grade 1-12 path is
-  // HOREB's own ordering, not what her school follows. She can still switch,
-  // and an explicit choice always wins.
+  //
+  // What the student picks at the start is her SCHOOL SYSTEM, and that choice
+  // is what decides what she sees — not her grade. The grade only selects
+  // which of that system's designs applies. `progress.curriculum` is the
+  // manual view override from Settings, so it still wins when set.
   const curriculum = progress.curriculum
-    || ((progress.declaredGrade >= 7 && progress.declaredGrade <= 9) ? 'cbc' : NATIVE);
+    || resolveView(progress.curriculumSystem, progress.declaredGrade);
+  const activeSystem = progress.curriculumSystem || systemOf(curriculum);
   const curriculaOptions = useMemo(() => curriculaForSubject(sub), [sub]);
+  // Both answers are needed before the check can start. A subject with only one
+  // syllabus (SAT, say) has nothing to ask, so grade alone is enough there.
+  const readyToStart = progress.declaredGrade != null
+    && (curriculaOptions.length <= 1 || !!progress.curriculumSystem || !!progress.curriculum);
 
   // Engine context — passed to adaptive/spaced/diagnostic engines.
   // We derive the full prerequisite/post-requisite CHAIN walkers from the
@@ -161,7 +167,7 @@ export function AIMastery({ onBack, userId, studentName }) {
   const [answer, setAnswer] = useState('');
   const [feedback, setFeedback] = useState(null);
   const [showHint, setShowHint] = useState(false);
-  const [session, setSession] = useState({ correct: 0, total: 0, streak: 0, startTime: null });
+  const [session, setSession] = useState({ correct: 0, total: 0, streak: 0, lessonStreak: 0, startTime: null });
   // Interleaved review interlude inside a lesson (Rohrer): { skillId, name } | null.
   const [interleave, setInterleave] = useState(null);
   const interleaveCountRef = useRef(0);
@@ -685,7 +691,7 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   const startLesson = (skillId) => {
     setActiveSkill(skillId);
-    setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
+    setSession({ correct: 0, total: 0, streak: 0, lessonStreak: 0, startTime: Date.now() });
     setInterleave(null);
     interleaveCountRef.current = 0;
     setKpIndex(0); kpIndexRef.current = 0;
@@ -876,6 +882,10 @@ export function AIMastery({ onBack, userId, studentName }) {
       correct: session.correct + (correct ? 1 : 0),
       total: session.total + 1,
       streak: correct ? session.streak + 1 : 0,
+      // `lessonStreak` counts only NEW work on the lesson skill. It gates the
+      // ask-before-trying hint, and a spaced review of something she already
+      // knows must not count as evidence that she needs no help here.
+      lessonStreak: correct ? session.lessonStreak + 1 : 0,
       startTime: session.startTime,
     };
     setSession(newSession);
@@ -1011,7 +1021,7 @@ export function AIMastery({ onBack, userId, studentName }) {
     setProblem(generateProblem(problems[0]));
     setAnswer('');
     setFeedback(null);
-    setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
+    setSession({ correct: 0, total: 0, streak: 0, lessonStreak: 0, startTime: Date.now() });
     setReviewTimer(0);
     setReviewTimerActive(true);
     setVisualAnswer(null);
@@ -1173,25 +1183,29 @@ export function AIMastery({ onBack, userId, studentName }) {
             </div>
             {curriculaOptions.length > 1 && (
               <>
-                <p className="text-sm font-semibold text-slate-800 mt-4 mb-2">Your curriculum</p>
+                <p className="text-sm font-semibold text-slate-800 mt-4 mb-2">Which curriculum does your school follow?</p>
                 <div className="flex flex-wrap gap-2">
-                  {curriculaOptions.map(co => (
-                    <button key={co.id} onClick={() => setProgress(p => ({ ...p, curriculum: co.id }))}
-                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${curriculum === co.id ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
-                      {co.shortName}{co.id === NATIVE ? ' · default' : ''}
+                  {SYSTEMS.map(sy => (
+                    <button key={sy.id} onClick={() => setProgress(p => ({ ...p, curriculumSystem: sy.id, curriculum: null }))}
+                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${progress.curriculumSystem === sy.id ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                      {sy.label}
                     </button>
                   ))}
                 </div>
-                <p className="text-xs text-slate-400 mt-2">Not sure? Leave it on the default — the full Kenyan school path. You can change it any time.</p>
+                <p className="text-xs text-slate-400 mt-2">This decides the syllabus I teach you against — not just the questions, but which topics count as yours.</p>
               </>
             )}
-            {progress.declaredGrade != null && (
-              <p className="text-xs text-[#5a7a3a] mt-3">I’ll focus on {sub?.gradeLabel || 'Grade'} {progress.declaredGrade} and the steps that lead up to it.</p>
+            {readyToStart && (
+              <p className="text-xs text-[#5a7a3a] mt-3">
+                I’ll teach the {getCurriculum(curriculum).name} — {getCurriculum(curriculum).bandLabel} {progress.declaredGrade} and the steps that lead up to it.
+              </p>
             )}
           </div>
 
-          <button onClick={startDiagnostic} disabled={progress.declaredGrade == null} className="w-full bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed text-slate-900 rounded-2xl py-4 font-bold text-lg transition-colors">
-            {progress.declaredGrade != null ? "Let's start" : `Pick your ${(sub?.gradeLabel || 'class').toLowerCase()} first`}
+          <button onClick={startDiagnostic} disabled={!readyToStart} className="w-full bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed text-slate-900 rounded-2xl py-4 font-bold text-lg transition-colors">
+            {readyToStart ? "Let's start"
+              : progress.declaredGrade == null ? `Pick your ${(sub?.gradeLabel || 'class').toLowerCase()} first`
+              : 'Pick your curriculum'}
           </button>
         </div>
       </div>
@@ -1316,6 +1330,16 @@ export function AIMastery({ onBack, userId, studentName }) {
     const guideSteps = problem && !feedback
       ? (problem.solutionSteps || computeSteps(problem) || null)
       : null;
+
+    // Retrieval gating for the ask-before-trying hint. It is withheld once the
+    // learner has footing ON THIS SKILL — either her scaffolding has already
+    // faded past the guided rungs (history says she can), or she has a run
+    // going in this lesson. The old gate read the whole-session streak, which
+    // counted spaced reviews of skills she already knew: two easy reviews
+    // could lock the hint on a skill she was meeting for the first time.
+    // She can still try, be wrong, and get the diagnosis — the hint is delayed
+    // until after an attempt, not removed.
+    const hintLockedPreAttempt = scaffoldLevel >= SUPPORT.ORIENT || session.lessonStreak >= 2;
     // A guide step must never finish the problem: strip/mask the final answer
     // ("The pattern adds 1 each time. → 4 + 1 = 5" becomes "… → 4 + 1 = ?").
     const maskAnswer = (step) => {
@@ -1548,7 +1572,7 @@ export function AIMastery({ onBack, userId, studentName }) {
                     Retrieval gating: memory checks get no hints at all (they test recall),
                     and once a streak is going the student must attempt before hints unlock. */}
                 {!feedback && hintLevel < 1 && attemptCount === 0 && !interleave && (
-                  session.streak >= 2 ? (
+                  hintLockedPreAttempt ? (
                     <div className="mt-3 text-sm text-slate-400">You're on a roll — try this one on your own first. A hint appears if your try doesn't land.</div>
                   ) : (
                     <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm not sure — show me a hint</button>

@@ -662,10 +662,238 @@ export function buildTrigProblems() {
   };
 }
 
+// ============================================================================
+// CBC GRADE 9 — GEOMETRY
+//   4.1 Coordinates and Graphs (6 lessons)  — gradients of parallel and
+//                                             perpendicular lines
+//   4.2 Scale Drawing (14 lessons)          — angles of elevation and
+//                                             depression
+// ============================================================================
+
+// Format a gradient that may be fractional, e.g. -1/3, 2, -5/2.
+const gradStr = (num, den) => {
+  if (den === 0) return 'undefined';
+  const g = gcdOf(Math.abs(num), Math.abs(den));
+  let n = num / g, d = den / g;
+  if (d < 0) { n = -n; d = -d; }
+  return d === 1 ? `${n}` : `${n}/${d}`;
+};
+const gcdOf = (a, b) => (b === 0 ? (a || 1) : gcdOf(b, a % b));
+
+// ---- G9 4.1: gradients of parallel and perpendicular lines ----
+export function buildParallelPerpendicular() {
+  const kind = pick(['parallel', 'perpendicular', 'decide', 'through-point']);
+
+  if (kind === 'parallel') {
+    const m = pick([2, 3, -2, -3, 4, -4]);
+    const c1 = pick([1, 2, 3, 5, -1, -4]);
+    const value = `${m}`;
+    return {
+      type: 'grad-parallel', instruction: 'Give the gradient only.',
+      question: `A line is parallel to  y = ${m}x + ${c1}.  What is its gradient?`,
+      answer: value, accepts: accepts(value),
+      hints: hintLadder(
+        'Parallel lines never meet, so they must climb at exactly the same steepness.',
+        'In y = mx + c, one of the two numbers controls the steepness.',
+        'It is the number attached to x, not the one on its own.'),
+      solution: { steps: [
+        { text: 'Read the gradient of the given line.', expr: `the number multiplying x` },
+        { text: 'Parallel means the same gradient.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${c1}`, feedback: 'That is where the line crosses the y-axis, not its steepness. The gradient is the number multiplying x.' },
+        { when: `${-m}`, feedback: 'A parallel line has the SAME gradient — flipping the sign would tilt it the other way.' },
+      ],
+      verify: { kind: 'fraction', value: m },
+    };
+  }
+
+  if (kind === 'perpendicular') {
+    const num = pick([2, 3, 4, 5, -2, -3, -5]);
+    const value = gradStr(-1, num);
+    return {
+      type: 'grad-perp', instruction: 'Give the gradient only.',
+      question: `A line is perpendicular to a line of gradient ${num}. What is its gradient?`,
+      answer: value,
+      accepts: accepts(value, value.replace('/', ' / '), `${(-1 / num)}`),
+      hints: hintLadder(
+        'Perpendicular lines cross at a right angle, so one climbs as steeply as the other falls.',
+        'Two things happen to the gradient: it turns upside down, and it changes sign.',
+        'Multiply your answer by the original gradient — it should come to −1.'),
+      solution: { steps: [
+        { text: 'Turn the gradient upside down.', expr: `1/${num}` },
+        { text: 'Change its sign.', expr: value },
+        { text: 'Check.', expr: `${num} × (${value}) = −1` }], answer: value },
+      misconceptions: [
+        { when: `${-num}`, feedback: 'You changed the sign but did not turn it upside down. Both steps are needed.' },
+        { when: gradStr(1, num), feedback: 'You turned it upside down but kept the sign. Perpendicular gradients multiply to −1, so one of them must be negative.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'decide') {
+    const m1 = pick([2, 3, 4, -2, -3]);
+    const relation = pick(['parallel', 'perpendicular', 'neither']);
+    let m2;
+    if (relation === 'parallel') m2 = m1;
+    else if (relation === 'perpendicular') m2 = -1 / m1;
+    else { m2 = m1 + pick([1, 2, -1]); if (m2 === m1 || m2 === -1 / m1 || m2 === 0) m2 = m1 + 3; }
+    const shown = Number.isInteger(m2) ? `${m2}` : gradStr(-1, m1);
+    return {
+      type: 'grad-decide', instruction: 'Answer parallel, perpendicular, or neither.',
+      question: `Line A has gradient ${m1} and line B has gradient ${shown}. How are the two lines related?`,
+      answer: relation, accepts: accepts(relation),
+      hints: hintLadder(
+        'There are only three answers, and two quick tests decide between them.',
+        'Equal gradients point one way; gradients whose product is −1 point another.',
+        'Try multiplying the two gradients together and see what you get.'),
+      solution: { steps: [
+        { text: 'Compare them.', expr: `${m1}  and  ${shown}` },
+        { text: 'Test: equal? product −1?', expr: `${m1} × ${shown} = ${Number.isInteger(m2) ? m1 * m2 : -1}` },
+        { text: 'Name the relationship.', expr: relation }], answer: relation },
+      misconceptions: [
+        { when: relation === 'neither' ? 'parallel' : 'neither', feedback: 'Run both tests before deciding: same gradient means parallel, and a product of −1 means perpendicular.' },
+      ],
+      verify: { kind: 'exact', value: relation },
+    };
+  }
+
+  const m = pick([2, 3, -2, -3]);
+  const x0 = pick([1, 2, 3, -1, -2]), y0 = pick([1, 2, 4, -3]);
+  const c = y0 - m * x0;
+  const value = `y = ${m}x ${c < 0 ? '− ' + Math.abs(c) : '+ ' + c}`;
+  return {
+    type: 'grad-through-point', instruction: 'Give the equation in the form y = mx + c.',
+    question: `Find the equation of the line parallel to  y = ${m}x + ${pick([1, 5, 7])}  passing through the point (${x0}, ${y0}).`,
+    answer: value,
+    accepts: accepts(value, value.replace(/\s+/g, ''), `y=${m}x${c < 0 ? c : '+' + c}`),
+    hints: hintLadder(
+      'Parallel fixes one of the two numbers in y = mx + c straight away.',
+      'The point tells you the other one — the line has to pass through it.',
+      'Substitute the point’s x and y into your equation and solve for what is left.'),
+    solution: { steps: [
+      { text: 'Parallel lines share a gradient.', expr: `m = ${m}` },
+      { text: 'Substitute the point.', expr: `${y0} = ${m}(${x0}) + c` },
+      { text: 'Solve for c.', expr: `c = ${c}` },
+      { text: 'Write the equation.', expr: value }], answer: value },
+    misconceptions: [
+      { when: `y = ${m}x + ${y0}`, feedback: 'The y-coordinate of the point is not the intercept — substitute BOTH coordinates and solve for c.' },
+    ],
+    verify: { kind: 'exact', value },
+  };
+}
+
+// ---- G9 4.2: angles of elevation and depression ----
+// The two are equal alternate angles, and the commonest error is choosing the
+// wrong pair of sides — so the misconceptions carry the wrong-ratio answers.
+export function buildElevationDepression() {
+  const kind = pick(['elevation', 'depression', 'name-it', 'find-height']);
+
+  if (kind === 'name-it') {
+    const cases = [
+      { desc: 'A learner on the ground looks UP at the top of a flagpost', ans: 'elevation' },
+      { desc: 'A bird on a tall tree looks DOWN at a goat on the ground', ans: 'depression' },
+      { desc: 'A surveyor at the foot of a hill sights the peak above her', ans: 'elevation' },
+      { desc: 'A pilot looks DOWN from the cockpit at the airstrip', ans: 'depression' },
+    ];
+    const c = pick(cases);
+    return {
+      type: 'elev-name', instruction: 'Answer elevation or depression.',
+      question: `${c.desc}. The angle between the line of sight and the horizontal is an angle of what?`,
+      answer: c.ans, accepts: accepts(c.ans, `angle of ${c.ans}`),
+      hints: hintLadder(
+        'Both angles are measured from the HORIZONTAL, never from the vertical.',
+        'The name depends on which way the line of sight travels from the observer.',
+        'Ask yourself: is the observer raising their eyes or lowering them?'),
+      solution: { steps: [
+        { text: 'Start at the observer and follow the line of sight.', expr: c.desc },
+        { text: 'Name the angle from the horizontal.', expr: `angle of ${c.ans}` }], answer: c.ans },
+      misconceptions: [
+        { when: c.ans === 'elevation' ? 'depression' : 'elevation', feedback: 'Read the direction of the LOOK — looking up gives one of these, looking down gives the other.' },
+      ],
+      verify: { kind: 'exact', value: c.ans },
+    };
+  }
+
+  if (kind === 'find-height') {
+    const dist = pick([20, 30, 40, 50, 60]);
+    const ang = pick([30, 45, 60]);
+    const tan = { 30: 0.5774, 45: 1, 60: 1.7321 }[ang];
+    const value = r1(dist * tan);
+    return {
+      type: 'elev-height', instruction: 'Give your answer in metres to 1 decimal place.',
+      question: `A learner stands ${dist} m from the foot of a tower on level ground. The angle of elevation of the top of the tower from her eyes is ${ang}°. How tall is the tower above eye level?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}m`, `${value} m`),
+      hints: hintLadder(
+        'Sketch it: the ground, the tower and the line of sight make a right-angled triangle.',
+        'The distance along the ground is next to the angle; the height is across from it.',
+        'Choose the ratio that connects those two particular sides.'),
+      solution: { steps: [
+        { text: 'Label the triangle.', expr: `adjacent = ${dist} m, angle = ${ang}°, opposite = height` },
+        { text: 'Opposite and adjacent means tangent.', expr: `tan ${ang}° = height ÷ ${dist}` },
+        { text: 'Rearrange and work it out.', expr: `height = ${dist} × tan ${ang}° = ${value} m` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${r1(dist / tan)}`, feedback: 'The ratio has been used upside down — the height is opposite the angle, so it is distance × tan, not distance ÷ tan.' },
+        { when: `${r1(dist * Math.sin(ang * Math.PI / 180))}`, feedback: 'That uses the sloping line of sight. You were given the distance along the GROUND, which is the adjacent side.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (kind === 'depression') {
+    const h = pick([20, 30, 45, 60]);
+    const ang = pick([30, 45, 60]);
+    const tan = { 30: 0.5774, 45: 1, 60: 1.7321 }[ang];
+    const value = r1(h / tan);
+    return {
+      type: 'elev-depression', instruction: 'Give your answer in metres to 1 decimal place.',
+      question: `From the top of a cliff ${h} m high, the angle of depression of a boat at sea is ${ang}°. How far is the boat from the foot of the cliff?`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value}m`, `${value} m`),
+      hints: hintLadder(
+        'The angle of depression is measured from the horizontal at the TOP — it is not inside the triangle where you need it.',
+        'The angle at the boat, looking up, is equal to it (alternate angles between parallel horizontals).',
+        'Now you have a right-angled triangle with the height opposite that angle and the distance next to it.'),
+      solution: { steps: [
+        { text: 'Move the angle down to the boat.', expr: `angle of elevation at the boat = ${ang}°` },
+        { text: 'Height is opposite, distance is adjacent — use tangent.', expr: `tan ${ang}° = ${h} ÷ distance` },
+        { text: 'Rearrange.', expr: `distance = ${h} ÷ tan ${ang}° = ${value} m` }], answer: `${value}` },
+      misconceptions: [
+        { when: `${r1(h * tan)}`, feedback: 'The ratio is upside down — the height is opposite the angle, so distance = height ÷ tan.' },
+        { when: `${h}`, feedback: 'That is the height of the cliff. The question asks for the distance along the sea to the boat.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  const h = pick([12, 15, 18, 24, 30]);
+  const d = pick([12, 15, 18, 24, 30]);
+  const value = r1(Math.atan(h / d) * 180 / Math.PI);
+  return {
+    type: 'elev-angle', instruction: 'Give the angle in degrees to 1 decimal place.',
+    question: `A tree is ${h} m tall. A learner stands ${d} m from its foot on level ground. What is the angle of elevation of the top of the tree from the ground where she stands?`,
+    answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
+    hints: hintLadder(
+      'You know both the height and the distance along the ground — that is two sides of a right-angled triangle.',
+      'One is opposite the angle you want, the other is next to it.',
+      'The ratio of those two gives the tangent of the angle; then work backwards to the angle itself.'),
+    solution: { steps: [
+      { text: 'Identify the sides.', expr: `opposite = ${h} m, adjacent = ${d} m` },
+      { text: 'Form the ratio.', expr: `tan θ = ${h}/${d}` },
+      { text: 'Invert the tangent.', expr: `θ = ${value}°` }], answer: `${value}` },
+    misconceptions: [
+      { when: `${r1(Math.atan(d / h) * 180 / Math.PI)}`, feedback: 'Opposite and adjacent have been swapped — the height is opposite the angle at the ground.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const GEOMETRY_CONTENT = {
   // Cambridge gap fill
   G8_ANGLE_RELATIONSHIPS: withWorkedExample(buildParallelAngles),
   G8_CONGRUENCE:          withWorkedExample(buildCongruenceTest),
+  // CBC Grade 9 Geometry 4.1 / 4.2
+  G9_PARALLEL_PERPENDICULAR: withWorkedExample(buildParallelPerpendicular),
+  G9_ELEVATION_DEPRESSION:   withWorkedExample(buildElevationDepression),
   G8_SIMILARITY:          withWorkedExample(buildSimilarity),
   G9_CONSTRUCTION:        withWorkedExample(buildConstructionFacts),
   G9_BEARINGS:            withWorkedExample(buildBearings),

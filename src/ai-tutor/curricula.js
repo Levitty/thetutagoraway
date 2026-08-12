@@ -42,6 +42,28 @@ export const CURRICULA = {
 
 export const getCurriculum = (id) => CURRICULA[id] || CURRICULA.native;
 
+// ---------------------------------------------------------- school systems
+// What a family actually says out loud is "she's in CBC" or "she's at a
+// Cambridge school" — nobody picks a syllabus *view*. So that is the question
+// we ask, once, at the start; the views above are what it resolves to.
+export const SYSTEMS = [
+  { id: 'kenya',     label: 'Kenyan CBC',  note: 'CBC / CBE — the KICD syllabus' },
+  { id: 'cambridge', label: 'Cambridge',   note: 'Cambridge Lower Secondary' },
+];
+
+// The system is the student's choice and it is what decides what she sees.
+// Her grade only picks WHICH of that system's designs applies: KICD publishes
+// a Junior School design covering Grades 7–9, so a Grade 7–9 CBC learner is
+// taught that; above and below it the full Kenyan path is the Kenyan path.
+export const resolveView = (system, grade) => {
+  if (system === 'cambridge') return 'cambridge';
+  if (system === 'kenya') return (grade >= 7 && grade <= 9) ? 'cbc' : NATIVE;
+  return NATIVE;
+};
+
+// Which system a view belongs to — so the chip stays lit after a view switch.
+export const systemOf = (view) => (view === 'cambridge' ? 'cambridge' : 'kenya');
+
 // The curricula a subject offers (native is always first). A subject declares
 // extra views via `subject.curricula = ['cbc', 'cambridge']` in subjects.js.
 export const curriculaForSubject = (subject) =>
