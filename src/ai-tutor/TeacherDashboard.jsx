@@ -27,6 +27,7 @@ import { SUBJECTS } from './subjects.js';
 import { getStats, getStrandStats, getEstimatedGradeLevel, findGaps } from './adaptiveEngine.js';
 import { getBrainProfile, isEngineAvailable } from './engineClient.js';
 import { Icon } from './components/Icons.jsx';
+import { topPatterns } from './misconceptions.js';
 
 const SUBJECT_ID = 'math';
 const ACTIVITY_DAYS = 7;          // "this week" window for engagement
@@ -74,6 +75,8 @@ const jsSnapshot = (progress, ctx) => {
     // Keep the NAMES — "3 gaps" tells a teacher nothing; "Addition —
     // regrouping ones" tells them exactly where to sit down.
     topGaps: gaps.slice(0, 3).map(g => ({ id: g.id, name: g.name, strand: g.strand, grade: g.grade })),
+    // The habit behind the mistakes, not just which skills are weak.
+    patterns: topPatterns(progress.misconceptions, 2),
     accelerated: false,
   };
 };
@@ -775,6 +778,24 @@ function StudentDetail({ student, onBack, onRemove, engineLive, className }) {
                 {streak > 0 ? `${streak}-day streak · ` : ''}{xp} XP total
               </div>
             </div>
+
+            {snap.patterns?.length > 0 && (
+              <div className="bg-white rounded-2xl border border-slate-200 p-5">
+                <h2 className="font-semibold text-slate-900 mb-1">The pattern behind the mistakes</h2>
+                <p className="text-xs text-slate-500 mb-3">The same error showing up across different topics.</p>
+                <div className="divide-y divide-slate-100">
+                  {snap.patterns.map(pt => (
+                    <div key={pt.tag} className="py-3 first:pt-0 last:pb-0">
+                      <div className="flex flex-wrap items-baseline gap-x-2.5">
+                        <span className="font-semibold text-amber-700 text-sm">{pt.label}</span>
+                        <span className="text-xs text-slate-400">{pt.count}× across {pt.skillCount} topics</span>
+                      </div>
+                      <p className="mt-1 text-sm text-slate-600">{pt.advice}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {snap.topGaps?.length > 0 && (
               <div className="bg-white rounded-2xl border border-slate-200 p-5">

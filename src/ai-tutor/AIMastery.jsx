@@ -11,6 +11,7 @@ import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticRe
 import { HorebBot } from './HorebBot.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
+import { matchMisconception, recordMisconception, topPatterns } from './misconceptions.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
 import { defaultProgress, loadProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
@@ -764,7 +765,15 @@ export function AIMastery({ onBack, userId, studentName }) {
       correct, problemType: problem?.type, timeMs, isReview: true,
     });
     if (!correct) {
-      setWrongInfo({ answer: answer.trim(), diagnosis: diagnoseError(problem, answer) });
+      // The author of this skill anticipated specific wrong answers and wrote
+      // feedback naming each one. Those beat the generic arithmetic diagnoser —
+      // and until now they were never shown to anyone.
+      const hit = matchMisconception(problem, answer);
+      setWrongInfo({ answer: answer.trim(), diagnosis: hit?.feedback || diagnoseError(problem, answer) });
+      if (hit?.tag) {
+        const sid = interleave ? interleave.skillId : activeSkill;
+        setProgress(pr => ({ ...pr, misconceptions: recordMisconception(pr.misconceptions, hit.tag, sid) }));
+      }
       setHintLevel(3); // full reveal — the teaching moment still happens
     }
     setFeedback(correct ? 'correct' : 'incorrect');
@@ -1777,6 +1786,8 @@ export function AIMastery({ onBack, userId, studentName }) {
   const reviews = getReviews(progress, ctx);
   // Her own class syllabus — the Grade 9 view a Grade 9 student came for.
   const syllabus = getClassSyllabus(progress, ctx);
+  // Patterns behind the mistakes — the same error across several topics.
+  const patterns = topPatterns(progress.misconceptions, 2);
   const jsGrade = getEstimatedGradeLevel(progress, ctx);
 
   // Prefer the Python brain's measurement when available. Otherwise show a
@@ -2115,6 +2126,25 @@ export function AIMastery({ onBack, userId, studentName }) {
         {/* ========== PATH TAB ========== */}
         {activeTab === 'path' && (
           <div>
+            {/* A habit, not a topic. BKT sees three weak skills; this names the
+                one error underneath them — and says what to do about it. */}
+            {patterns.length > 0 && (
+              <div className="bg-[#fff7ec] border border-[#f6e2bd] rounded-2xl p-4 mb-4">
+                <div className="flex items-center gap-2 text-[#c98a14] font-semibold mb-2">
+                  <Icon name="brain" className="w-5 h-5" /> A pattern worth fixing
+                </div>
+                {patterns.map(pt => (
+                  <div key={pt.tag} className="mb-2 last:mb-0">
+                    <div className="text-sm font-semibold text-slate-900">{pt.label}</div>
+                    <div className="text-xs text-slate-500 mb-1">
+                      Seen {pt.count} times across {pt.skillCount} different topics — so it is the habit, not the topic.
+                    </div>
+                    <p className="text-sm text-slate-700">{pt.advice}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+
             {/* Her class, stated plainly. The measured level moves around as she
                 works; the class she is IN does not, and seeing it disagree with
                 the page ("I'm in Grade 9 but it says Grade 6") destroys trust. */}
