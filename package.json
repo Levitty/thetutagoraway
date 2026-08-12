@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test:engine": "node scripts/test-engine.mjs"
+    "test:engine": "node scripts/test-engine.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:content": "node engine/scripts/quality_gate.mjs --authored",
+    "check:engine": "node scripts/check-engine.mjs"
   },
   "dependencies": {
     "@fontsource-variable/plus-jakarta-sans": "^5.3.0",

@@ -238,7 +238,12 @@ export function buildBearings() {
       question: `A ship sails ${c.desc}. Write this as a three-figure bearing.`,
       answer: three, accepts: accepts(three, `${c.v}`, `${c.v}°`, `${three}°`),
       hints: hintLadder('Start facing North and turn clockwise.',
-        'A quarter turn clockwise is 090°, a half turn is 180°, three quarters is 270°.',
+        // The quarter/half/three-quarter table names 090, 180 and 270 — which
+        // ARE the answers for due East/South/West, so it can only be shown
+        // when the answer isn't one of them.
+        [90, 180, 270].includes(c.v)
+          ? 'Face North, then turn clockwise until you face that way. How much of a full turn was it?'
+          : 'A quarter turn clockwise is 090°, a half turn is 180°, three quarters is 270°.',
         `Work out how far clockwise from North "${c.desc}" is, then write it with three figures.`),
       solution: { steps: [
         { text: 'Measure clockwise from North.', expr: c.desc },

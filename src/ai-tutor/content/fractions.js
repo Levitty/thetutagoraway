@@ -419,10 +419,14 @@ export function buildFractionToDecimal() {
 
 // ---- percentage of a quantity ----
 export function buildPercentageOf() {
-  const p = pick([5, 10, 15, 20, 25, 30, 40, 50, 60, 75]);
-  // no base of 100: the hint "p% = p/100" would state the answer
-  const base = pick([20, 40, 60, 80, 120, 200, 240]);
-  const v = (p * base) / 100;
+  // Every hint here says "percent means out of 100", so neither the amount
+  // nor the answer may itself be 100 — otherwise the hint hands it over.
+  let p, base, v;
+  do {
+    p = pick([5, 10, 15, 20, 25, 30, 40, 50, 60, 75]);
+    base = pick([20, 40, 60, 80, 120, 200, 240]);
+    v = (p * base) / 100;
+  } while (v === 100 || v === p);
   return {
     type: 'percentage-of',
     instruction: 'Find the percentage of the amount.',

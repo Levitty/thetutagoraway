@@ -388,7 +388,12 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
               <p className="text-xs text-slate-500">
                 {SUBJECTS[SUBJECT_ID].name}
                 {summary ? ` · ${summary.count} student${summary.count === 1 ? '' : 's'}` : ''}
-                {engineLive ? ' · live engine' : ''}
+                {/* Say which brain answered, BOTH ways. Silence on the offline
+                    case made a degraded measurement look identical to a good
+                    one — the operator could not tell without reading code. */}
+                <span className={engineLive ? 'text-emerald-600' : 'text-amber-600'}>
+                  {engineLive ? ' · full engine' : ' · estimate only'}
+                </span>
               </p>
             </div>
           </div>

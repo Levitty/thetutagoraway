@@ -378,16 +378,22 @@ function buildTurnsAndCompass({ withCompass = false }) {
         misconceptions: [], verify: { kind: 'text', value },
       };
     }
+    // Enough phrasings that a child practising this skill isn't answering the
+    // same three questions over and over.
     const spec = pick([
-      { q: 'How many quarter turns make a full turn?', value: 4 },
-      { q: 'How many quarter turns make a half turn?', value: 2 },
-      { q: 'How many right angles are there in a full turn?', value: 4 },
+      { q: 'How many quarter turns make a full turn?', value: 4, why: 'A full turn is four quarter turns.' },
+      { q: 'How many quarter turns make a half turn?', value: 2, why: 'Half of four quarter turns is two.' },
+      { q: 'How many quarter turns make a three-quarter turn?', value: 3, why: 'Three quarters means three of the four quarter turns.' },
+      { q: 'How many right angles are there in a full turn?', value: 4, why: 'Each quarter turn is one right angle, and a full turn has four.' },
+      { q: 'How many right angles are there in a half turn?', value: 2, why: 'A half turn is two quarter turns, so two right angles.' },
+      { q: 'How many half turns make a full turn?', value: 2, why: 'Two halves make one whole turn.' },
+      { q: 'You make a half turn, then another half turn. How many quarter turns is that altogether?', value: 4, why: 'Each half turn is two quarter turns: 2 + 2.' },
     ]);
     return {
       type: 'turns', instruction: 'Think about turns.',
       question: spec.q, answer: `${spec.value}`, accepts: accepts(`${spec.value}`),
       hints: hintLadder('A full turn brings you back to where you started.', 'A quarter turn is one right angle.'),
-      solution: { steps: [{ text: 'A full turn = 4 quarter turns = 4 right angles.', expr: `${spec.value}` }], answer: `${spec.value}` },
+      solution: { steps: [{ text: spec.why, expr: `${spec.value}` }], answer: `${spec.value}` },
       misconceptions: [], verify: { kind: 'fraction', value: spec.value },
     };
   };

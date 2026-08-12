@@ -490,7 +490,10 @@ export function buildLengthConvAdvanced() {
   }
   const down = { 'mm-cm': 10, 'cm-m': 100, 'm-km': 1000 }[kind];
   const [from, to] = kind.split('-');
-  const whole = randInt(2, 89);
+  // whole === 10 converts to exactly 1 of the bigger unit ("1000 m to km"),
+  // which the "1000 m make 1 km" hint would answer outright.
+  let whole = randInt(2, 89);
+  while (whole === 10) whole = randInt(2, 89);
   const raw = whole * down / 10;                            // gives one decimal place
   const value = raw / down * 10 / 10;
   const shown = raw;
