@@ -570,6 +570,301 @@ export function buildMatrixOps() {
   };
 }
 
+// ============================================================================
+// FORMING expressions and equations — CBC G7 2.1 and 2.2.
+//
+// These two skills existed in the graph and were named "Forming Algebraic
+// Expressions" and "Forming Equations", but both were wired to the SIMPLIFY
+// and SOLVE builders. A learner who worked through "Forming Equations" met
+// exactly the questions she had just met in "Solving Equations", which is why
+// the two felt like the same skill.
+//
+// Forming is its own competence and the harder one: reading a situation in
+// words and writing the algebra for it. Nothing is solved here — the answer IS
+// the expression or the equation.
+// ============================================================================
+
+// A tolerant accept-list for algebra typed by a child: spacing, the implicit
+// multiplication sign, and the order of an addition.
+const algAccepts = (...forms) => {
+  const out = new Set();
+  for (const f of forms.filter(Boolean)) {
+    const base = String(f);
+    for (const v of [base, base.replace(/\s+/g, ''), base.replace(/\*/g, ''), base.replace(/\s*\+\s*/g, ' + ')]) {
+      out.add(v);
+      out.add(v.replace(/\s+/g, ''));
+    }
+  }
+  return accepts(...out);
+};
+
+// ---- G7 2.1: form an expression from a situation ----
+export function buildFormExpression() {
+  const v = pick(['x', 'n', 'y', 'k']);
+  const kind = pick(['add', 'subtract', 'multiply', 'two-step', 'perimeter', 'divide']);
+
+  if (kind === 'add') {
+    const k = randInt(2, 15);
+    const item = pick(['oranges', 'goats', 'exercise books', 'shillings']);
+    const value = `${v} + ${k}`;
+    return {
+      type: 'form-expr', instruction: 'Write the expression. Do not solve.',
+      question: `Amina has ${v} ${item}. She is given ${k} more. Write an expression for how many she has now.`,
+      answer: value, accepts: algAccepts(value, `${k} + ${v}`),
+      hints: hintLadder(
+        'The letter already stands for the amount she started with — you do not need to work it out.',
+        'Ask what the situation DOES to that amount: does it grow or shrink?',
+        `So the expression is the letter and the ${k} joined by the right sign.`),
+      solution: { steps: [
+        { text: 'Name what is unknown.', expr: `${v} = what she started with` },
+        { text: 'Being given more increases it.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${v}${k}`, feedback: `Writing them side by side means ${v} multiplied by ${k}. Being GIVEN more is an addition, and it needs its sign.` },
+        { when: `${v} - ${k}`, feedback: 'She is given more, not asked for some back — so the amount goes up.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'subtract') {
+    const k = randInt(2, 12);
+    const item = pick(['mangoes', 'pencils', 'sweets']);
+    const value = `${v} - ${k}`;
+    return {
+      type: 'form-expr', instruction: 'Write the expression. Do not solve.',
+      question: `Otieno had ${v} ${item}. He gave away ${k}. Write an expression for how many are left.`,
+      answer: value, accepts: algAccepts(value, `${v} − ${k}`),
+      hints: hintLadder(
+        'The letter stands for how many he began with — it stays a letter.',
+        'Giving some away makes the amount smaller.',
+        'Write the starting amount first, then what happened to it.'),
+      solution: { steps: [
+        { text: 'Name what is unknown.', expr: `${v} = what he began with` },
+        { text: 'Giving away reduces it.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${k} - ${v}`, feedback: `That takes his whole starting amount away from ${k}. He starts with ${v} and loses ${k} of them, so ${v} comes first.` },
+        { when: `${v} + ${k}`, feedback: 'Giving away makes the amount go down, not up.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'multiply') {
+    const k = randInt(2, 9);
+    const thing = pick(['a matatu carries', 'a crate holds', 'a bag contains']);
+    const unit = pick(['passengers', 'bottles', 'maize cobs']);
+    const value = `${k}${v}`;
+    return {
+      type: 'form-expr', instruction: 'Write the expression. Do not solve.',
+      question: `If ${thing} ${v} ${unit}, write an expression for how many ${unit} are in ${k} of them.`,
+      answer: value, accepts: algAccepts(value, `${k} × ${v}`, `${k}*${v}`, `${v}${k}`, `${v} × ${k}`),
+      hints: hintLadder(
+        'The same unknown amount is being repeated several times over.',
+        'Repeated equal groups are handled by one operation.',
+        'In algebra that operation needs no sign at all — the number is written against the letter.'),
+      solution: { steps: [
+        { text: 'One of them holds the unknown amount.', expr: `${v}` },
+        { text: `${k} of them repeat it.`, expr: value }], answer: value },
+      misconceptions: [
+        { when: `${v} + ${k}`, feedback: `Adding ${k} would mean ${k} extra items in total. Here the whole amount repeats ${k} times.` },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'divide') {
+    const k = randInt(2, 8);
+    const value = `${v}/${k}`;
+    return {
+      type: 'form-expr', instruction: 'Write the expression. Do not solve.',
+      question: `${v} shillings is shared equally among ${k} children. Write an expression for how much each child gets.`,
+      answer: value, accepts: algAccepts(value, `${v} ÷ ${k}`, `${v} / ${k}`),
+      hints: hintLadder(
+        'Sharing equally splits one amount into equal parts.',
+        'Each child ends up with less than the whole, so the expression must make it smaller.',
+        'A fraction bar is how that is written in algebra.'),
+      solution: { steps: [
+        { text: 'The whole amount is unknown.', expr: `${v}` },
+        { text: `Split equally among ${k}.`, expr: value }], answer: value },
+      misconceptions: [
+        { when: `${k}/${v}`, feedback: 'That shares the number of children among the money. It is the money that is being split up.' },
+        { when: `${k}${v}`, feedback: 'That would make each child’s share bigger than the whole amount. Sharing divides.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'perimeter') {
+    const k = randInt(2, 9);
+    const value = `4${v}`;
+    const rect = coin();
+    const rectVal = `2${v} + ${2 * k}`;
+    return {
+      type: 'form-expr', instruction: 'Write the expression. Do not solve.',
+      question: rect
+        ? `A rectangle is ${v} metres long and ${k} metres wide. Write an expression for its perimeter.`
+        : `A square has sides of ${v} centimetres. Write an expression for its perimeter.`,
+      answer: rect ? rectVal : value,
+      accepts: rect
+        ? algAccepts(rectVal, `${2 * k} + 2${v}`, `2(${v} + ${k})`, `2 × (${v} + ${k})`)
+        : algAccepts(value, `${v} + ${v} + ${v} + ${v}`, `4 × ${v}`),
+      hints: hintLadder(
+        'Perimeter is the distance all the way round the outside.',
+        rect ? 'A rectangle has two long sides and two short ones.' : 'All four sides of a square are the same length.',
+        'Add every side, then collect what is the same.'),
+      solution: { steps: [
+        { text: 'Go round the shape.', expr: rect ? `${v} + ${k} + ${v} + ${k}` : `${v} + ${v} + ${v} + ${v}` },
+        { text: 'Collect like terms.', expr: rect ? rectVal : value }], answer: rect ? rectVal : value },
+      misconceptions: rect
+        ? [{ when: `${v}${k}`, feedback: 'Multiplying the two sides gives the AREA. Perimeter goes round the edge, so the sides are added.' }]
+        : [{ when: `${v}²`, feedback: 'That is the area of the square. Perimeter is the distance round the outside.' }],
+      verify: { kind: 'exact', value: rect ? rectVal : value },
+    };
+  }
+
+  const k = randInt(2, 6), c = randInt(1, 12);
+  const value = `${k}${v} + ${c}`;
+  return {
+    type: 'form-expr', instruction: 'Write the expression. Do not solve.',
+    question: `A number is multiplied by ${k}, and then ${c} is added. Write an expression for the result, using ${v} for the number.`,
+    answer: value, accepts: algAccepts(value, `${c} + ${k}${v}`, `${k} × ${v} + ${c}`),
+    hints: hintLadder(
+      'Two things happen to the number, and the order they are described in matters.',
+      'Deal with the first instruction before the second.',
+      'Write the multiplying part, then attach what is added to it.'),
+    solution: { steps: [
+      { text: 'Call the number the letter.', expr: `${v}` },
+      { text: `Multiply by ${k}.`, expr: `${k}${v}` },
+      { text: `Then add ${c}.`, expr: value }], answer: value },
+    misconceptions: [
+      { when: `${k}(${v} + ${c})`, feedback: `That adds ${c} FIRST and then multiplies. Here the number is multiplied before anything is added.` },
+      { when: `${k + c}${v}`, feedback: 'The two numbers cannot be combined — one multiplies the letter, the other stands on its own.' },
+    ],
+    verify: { kind: 'exact', value },
+  };
+}
+
+// ---- G7 2.2: form an equation from a situation ----
+// The answer is the equation, never its solution — that is the next skill.
+export function buildFormEquation() {
+  const v = pick(['x', 'n', 'y']);
+  const kind = pick(['two-step', 'total', 'consecutive', 'sharing', 'age']);
+
+  if (kind === 'two-step') {
+    const k = randInt(2, 6), c = randInt(1, 15), r = k * randInt(2, 9) + c;
+    const value = `${k}${v} + ${c} = ${r}`;
+    return {
+      type: 'form-eq', instruction: 'Write the equation. Do not solve it.',
+      question: `A number is multiplied by ${k} and ${c} is added. The answer is ${r}. Write an equation, using ${v} for the number.`,
+      answer: value, accepts: algAccepts(value, `${c} + ${k}${v} = ${r}`, `${r} = ${k}${v} + ${c}`),
+      hints: hintLadder(
+        'An equation is an expression with an equals sign and a known result.',
+        'Build the left-hand side first, following the instructions in order.',
+        'Then set it equal to the result you were told.'),
+      solution: { steps: [
+        { text: 'Let the letter stand for the number.', expr: `${v}` },
+        { text: 'Follow the instructions in order.', expr: `${k}${v} + ${c}` },
+        { text: 'Set it equal to the answer given.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${k}${v} + ${c}`, feedback: 'That is the expression. An equation also needs the equals sign and what it comes to.' },
+        { when: `${(r - c) / k}`, feedback: 'That is the number itself. The question asks you to WRITE the equation, not solve it.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'total') {
+    const a = randInt(2, 9), b = randInt(3, 12), total = randInt(30, 90);
+    const value = `${a}${v} + ${b} = ${total}`;
+    const item = pick(['exercise books', 'seedlings', 'chairs']);
+    return {
+      type: 'form-eq', instruction: 'Write the equation. Do not solve it.',
+      question: `A school buys ${a} boxes of ${item} with ${v} in each box, plus ${b} loose ones. Altogether there are ${total}. Write an equation.`,
+      answer: value, accepts: algAccepts(value, `${b} + ${a}${v} = ${total}`, `${total} = ${a}${v} + ${b}`),
+      hints: hintLadder(
+        'Work out what each part of the situation contributes.',
+        'The boxes contribute a repeated unknown amount; the loose ones are a plain number.',
+        'Their total is what the equals sign points at.'),
+      solution: { steps: [
+        { text: 'The boxes.', expr: `${a}${v}` },
+        { text: 'The loose ones.', expr: `${b}` },
+        { text: 'Together they make the total.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${a}${v} = ${total}`, feedback: `The ${b} loose ones are part of the total too — they belong in the equation.` },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'sharing') {
+    const k = randInt(2, 8), each = randInt(3, 15);
+    const value = `${v}/${k} = ${each}`;
+    return {
+      type: 'form-eq', instruction: 'Write the equation. Do not solve it.',
+      question: `${v} sweets are shared equally among ${k} children and each child gets ${each}. Write an equation.`,
+      answer: value, accepts: algAccepts(value, `${v} ÷ ${k} = ${each}`, `${each} = ${v}/${k}`),
+      hints: hintLadder(
+        'Start from the action in the story: what is being done to the unknown?',
+        'Sharing equally is a division, and it makes the amount smaller.',
+        'Set the result of that division equal to what each child ends up with.'),
+      solution: { steps: [
+        { text: 'The unknown total.', expr: `${v}` },
+        { text: `Shared among ${k}.`, expr: `${v}/${k}` },
+        { text: 'Each child gets the stated amount.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${k}${v} = ${each}`, feedback: 'Sharing divides the total, it does not multiply it — each child ends up with less than the whole.' },
+        { when: `${k * each}`, feedback: 'That is how many sweets there were. The question asks for the equation, not the answer.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  if (kind === 'consecutive') {
+    const start = randInt(3, 25);
+    const total = start + (start + 1);
+    const value = `${v} + ${v} + 1 = ${total}`;
+    return {
+      type: 'form-eq', instruction: 'Write the equation. Do not solve it.',
+      question: `Two consecutive whole numbers add up to ${total}. Taking ${v} as the smaller one, write an equation.`,
+      answer: value,
+      accepts: algAccepts(value, `2${v} + 1 = ${total}`, `${v} + (${v} + 1) = ${total}`, `${total} = 2${v} + 1`),
+      hints: hintLadder(
+        'Consecutive means one follows straight after the other.',
+        `So if the smaller is ${v}, the next one is described in terms of ${v} too.`,
+        'Add your two descriptions and set them equal to the total.'),
+      solution: { steps: [
+        { text: 'The smaller number.', expr: `${v}` },
+        { text: 'The next one up.', expr: `${v} + 1` },
+        { text: 'They add to the total.', expr: value }], answer: value },
+      misconceptions: [
+        { when: `${v} + ${v} = ${total}`, feedback: 'That treats both numbers as the same. Consecutive numbers differ by one.' },
+      ],
+      verify: { kind: 'exact', value },
+    };
+  }
+
+  const diff = randInt(3, 20), childAge = randInt(8, 16);
+  const value = `${v} + ${diff} = ${childAge + diff}`;
+  return {
+    type: 'form-eq', instruction: 'Write the equation. Do not solve it.',
+    question: `Wanjiru is ${diff} years older than her brother. She is ${childAge + diff} years old. Taking ${v} as her brother's age, write an equation.`,
+    answer: value, accepts: algAccepts(value, `${diff} + ${v} = ${childAge + diff}`, `${childAge + diff} = ${v} + ${diff}`),
+    hints: hintLadder(
+      'Decide first whose age the letter stands for — the question tells you.',
+      'Then describe the OTHER person’s age using that letter.',
+      'Set your description equal to the age you were actually told.'),
+    solution: { steps: [
+      { text: 'The brother’s age.', expr: `${v}` },
+      { text: 'Wanjiru is older by the difference.', expr: `${v} + ${diff}` },
+      { text: 'And her age is known.', expr: value }], answer: value },
+    misconceptions: [
+      { when: `${v} - ${diff} = ${childAge + diff}`, feedback: `The letter stands for the YOUNGER one, so Wanjiru's age is found by adding the difference, not subtracting it.` },
+      { when: `${childAge}`, feedback: 'That is the brother’s age. The question asks for the equation, not its solution.' },
+    ],
+    verify: { kind: 'exact', value },
+  };
+}
+
 export const ALGEBRA_CONTENT = {
   // Cambridge gap fill — inequalities + the Stage-8 straight-line spine
   G7_INEQUALITIES_INTRO: withWorkedExample(buildInequalityIntro),
@@ -581,7 +876,7 @@ export const ALGEBRA_CONTENT = {
   G11_MATRICES_INTRO:   withWorkedExample(buildMatrixIntro),
   G11_MATRICES_OPS:     withWorkedExample(buildMatrixOps),
   // Forming & collecting
-  G7_EXPRESSIONS:      withWorkedExample(() => buildSimplify({ tier: 1 })),
+  G7_EXPRESSIONS:      withWorkedExample(buildFormExpression),
   G7_SIMPLIFY:         withWorkedExample(() => buildSimplify({ tier: 2 })),
 
   // Expanding & factorising
@@ -593,7 +888,7 @@ export const ALGEBRA_CONTENT = {
 
   // Solving linear equations — increasing difficulty up the spine
   G6_SIMPLE_EQUATIONS: withWorkedExample(() => buildLinearEquation({ tier: 1 })),
-  G7_EQUATIONS_FORM:   withWorkedExample(() => buildLinearEquation({ tier: 2 })),
+  G7_EQUATIONS_FORM:   withWorkedExample(buildFormEquation),
   // Taught as ordered knowledge points (one tiny step at a time):
   //   KP1 one-step → KP2 two-step → KP3 variables on both sides.
   G7_EQUATIONS_SOLVE:  withKPs([

@@ -81,6 +81,20 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 
 // ==================== MAIN COMPONENT ====================
 
+// How much evidence mastery actually needs.
+//
+// TEST_OUT_PROBLEMS: a skill well below the learner's own grade can be cleared
+// faster than the full six reps — but "faster" used to mean ONE correct
+// answer, which is not evidence of anything. A single lucky or half-remembered
+// answer marked a whole skill mastered and told the learner so. Three in a row
+// with none wrong is a quick check that still means something.
+//
+// PRACTICE_SESSION: revisiting a skill she has already mastered is practice,
+// not assessment, and it needs a finish line. Without one the questions simply
+// kept coming while the counter sat at 1/1 — so it read as endless.
+const TEST_OUT_PROBLEMS = 3;
+const PRACTICE_SESSION = 5;
+
 export function AIMastery({ onBack, userId, studentName }) {
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
   const [progress, setProgress] = useState(defaultProgress);
@@ -225,6 +239,13 @@ export function AIMastery({ onBack, userId, studentName }) {
   // Falls back silently to the JS engine when it isn't (e.g. in production).
   const [brainProfile, setBrainProfile] = useState(null);
   const [brainPath, setBrainPath] = useState(null);
+  // The dashboard's "Continue learning" target, PINNED for as long as it is
+  // still unfinished. It used to read the live plan, and the plan is computed
+  // twice: the JS engine paints immediately, then the Python engine's answer
+  // arrives a moment later and replaces it. The learner saw the card change
+  // skill while she was looking at it. Every progress save re-ran that fetch,
+  // so it could swap again and again.
+  const [pinnedNext, setPinnedNext] = useState(null);
 
   // Per-problem timer for telemetry (reset whenever the problem changes).
   const problemStartRef = useRef(Date.now());
@@ -456,6 +477,20 @@ export function AIMastery({ onBack, userId, studentName }) {
     })();
     return () => { cancelled = true; };
   }, [progress, subjectId, view, loading, sub]);
+
+  // Hold the "Continue learning" target steady. It only moves when the pinned
+  // skill is mastered, disappears from the graph, or there was none to begin
+  // with — never merely because a second opinion on the plan arrived late.
+  useEffect(() => {
+    if (view !== 'home' || loading || !ctx) return;
+    const live = (brainPath || getRecommendedPath(progress, ctx))[0] || null;
+    setPinnedNext((prev) => {
+      if (!prev) return live;
+      if (!SKILLS[prev.id]) return live;
+      if (progress.skills[prev.id]?.mastered) return live;
+      return prev;
+    });
+  }, [view, loading, ctx, brainPath, progress]);
 
   // Detect level-ups, newly-unlocked achievements and daily-goal hits, and queue
   // a warm celebration for each. The first run after load seeds the baseline
@@ -906,12 +941,15 @@ export function AIMastery({ onBack, userId, studentName }) {
     // at light support (ORIENT or SOLO) — assisted answers are practice, not
     // proof (assistance dilution).
     const lightSupport = !scaffoldableRef.current || answeredAt >= SUPPORT.ORIENT;
-    // Test-out: a skill 2+ grades below the learner's own grade masters on a single
-    // clean first-attempt correct — a capable child proves a foundation once and
-    // moves on, instead of grinding six trivial reps. A wrong first try drops them
-    // straight back into normal practice (they clearly need it after all).
+    // Test-out: a skill 2+ grades below the learner's own grade masters on a
+    // short unbroken run rather than the full six reps — a capable child proves
+    // a foundation quickly instead of grinding. Any wrong answer ends the run
+    // and drops them into normal practice (they clearly need it after all).
     const tgLearnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
-    const testOutNow = Number.isFinite(skill?.grade) && (tgLearnerGrade - skill.grade) >= 2 && newAttempts === 1;
+    // An unbroken run, not a single answer: every attempt so far correct, and
+    // at least TEST_OUT_PROBLEMS of them.
+    const testOutNow = Number.isFinite(skill?.grade) && (tgLearnerGrade - skill.grade) >= 2
+      && newAttempts >= TEST_OUT_PROBLEMS && newCorrect === newAttempts;
     const shouldMaster = !isPlaceholder && correct && accuracy >= skill.masteryThreshold
       && (testOutNow || (lightSupport && newAttempts >= skill.minProblems));
 
@@ -985,6 +1023,15 @@ export function AIMastery({ onBack, userId, studentName }) {
   };
 
   const nextProblem = () => {
+    // A sitting on an ALREADY-MASTERED skill is practice, and practice ends.
+    // Nothing used to stop it: the counter pinned at its target and questions
+    // kept arriving, which is what made it feel infinite. Mastery itself still
+    // ends the other case, via the mastery celebration.
+    if (progress.skills[activeSkill]?.mastered && session.correct >= PRACTICE_SESSION) {
+      setProgress(p => (p.lessonInProgress ? { ...p, lessonInProgress: null } : p));
+      setView('practice-complete');
+      return;
+    }
     // Interleave a due review from ANOTHER skill after the 3rd and 7th answers
     // (mixed practice ≈ doubles delayed retention vs blocked — Rohrer). Standard
     // flow only: young learners keep their uninterrupted count-together rhythm.
@@ -1306,11 +1353,13 @@ export function AIMastery({ onBack, userId, studentName }) {
     const skill = SKILLS[activeSkill];
     const sp = progress.skills[activeSkill] || { attempts: 0, correct: 0, mastered: false };
     const learnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
-    // Test-out: a skill well below the learner's own grade only needs ONE clean
-    // correct answer to master — a capable child shouldn't grind six trivial reps
-    // just because the diagnostic never confirmed a foundation it couldn't reach.
+    // Test-out: a skill well below the learner's own grade clears on a short
+    // unbroken run rather than the full six reps.
     const testOutSkill = Number.isFinite(skill?.grade) && (learnerGrade - skill.grade) >= 2;
-    const masterTarget = testOutSkill ? 1 : skill.minProblems;
+    // Already mastered? Then this sitting is practice and carries its own
+    // finish line. Otherwise the target is what mastery actually requires.
+    const practising = !!sp.mastered;
+    const masterTarget = practising ? PRACTICE_SESSION : (testOutSkill ? TEST_OUT_PROBLEMS : skill.minProblems);
     const pct = Math.min(100, (session.correct / masterTarget) * 100);
 
     // Faded worked examples: this problem's completion scaffold at the current
@@ -1396,7 +1445,7 @@ export function AIMastery({ onBack, userId, studentName }) {
             </div>
             <div className="text-right shrink-0">
               <div className="font-bold text-sm text-slate-900 tabular-nums">{Math.min(session.correct, masterTarget)}/{masterTarget}</div>
-              <div className="text-xs text-slate-400">{testOutSkill ? 'quick check' : 'to master'}</div>
+              <div className="text-xs text-slate-400">{practising ? 'practice' : testOutSkill ? 'quick check' : 'to master'}</div>
             </div>
           </div>
           <div className="h-1 bg-slate-100"><div className="h-full bg-amber-400 transition-all" style={{ width: `${pct}%` }} /></div>
@@ -1786,6 +1835,27 @@ export function AIMastery({ onBack, userId, studentName }) {
 
   // ==================== RENDER: REVIEW COMPLETE ====================
 
+  if (view === 'practice-complete') {
+    const accuracy = session.total > 0 ? Math.round((session.correct / session.total) * 100) : 0;
+    const name = SKILLS[activeSkill]?.name || 'that skill';
+    return (
+      <div className="min-h-screen bg-[#fdfcf8] text-slate-900 flex items-center justify-center p-4">
+        <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
+        <div className="max-w-md w-full text-center">
+          <Icon name="check" className="w-14 h-14 text-[#5a7a3a] mx-auto mb-4" />
+          <h2 className="text-2xl font-bold mb-1">Practice done</h2>
+          <p className="text-sm text-slate-500 mb-5">{name} — still yours.</p>
+          <div className="bg-white border border-slate-200 rounded-2xl p-4 mb-6 space-y-3 text-sm">
+            <div className="flex justify-between"><span className="text-slate-500">Correct</span><span className="font-bold tabular-nums">{session.correct} of {session.total}</span></div>
+            <div className="flex justify-between"><span className="text-slate-500">Accuracy</span><span className={`font-bold tabular-nums ${accuracy >= 80 ? 'text-[#5a7a3a]' : accuracy >= 60 ? 'text-[#c98a14]' : 'text-[#c0663f]'}`}>{accuracy}%</span></div>
+          </div>
+          <button onClick={goHome} className="w-full bg-amber-400 hover:bg-amber-300 text-slate-900 rounded-2xl py-4 font-bold transition-colors">Back to my path</button>
+          <button onClick={() => startLesson(activeSkill)} className="w-full mt-2 py-3 text-sm text-slate-500 hover:text-slate-800 transition-colors">Practise this again</button>
+        </div>
+      </div>
+    );
+  }
+
   if (view === 'review-complete') {
     const accuracy = session.total > 0 ? Math.round((session.correct / session.total) * 100) : 0;
     const mins = Math.floor(reviewTimer / 60);
@@ -1900,7 +1970,8 @@ export function AIMastery({ onBack, userId, studentName }) {
           const hour = new Date().getHours();
           const greeting = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
           const dueReviews = reviews.length;
-          const nextItem = path[0];
+          // The pin, not the live plan — see `pinnedNext`.
+          const nextItem = (pinnedNext && SKILLS[pinnedNext.id]) ? pinnedNext : path[0];
           const recentBadges = (() => {
             const got = new Set(progress.achievements || []);
             return ACHIEVEMENTS.filter(a => got.has(a.id)).slice(-3).reverse();
