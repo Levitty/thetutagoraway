@@ -57,3 +57,19 @@ Check function logs:
 ```bash
 supabase functions logs send-booking-email
 ```
+
+
+## Mark Composition Function
+
+`mark-composition` marks an English composition or Kiswahili insha (the Writing
+tool). It verifies the caller's JWT, enforces a daily cap (5 free / 20 with a
+pass), asks Claude for marks via a forced tool call, and writes the piece +
+feedback to `compositions` with the service role.
+
+```bash
+supabase secrets set ANTHROPIC_API_KEY=sk-ant-...
+supabase functions deploy mark-composition
+```
+
+Run `supabase/migrations/20260911_compositions.sql` first. Until the secret is
+set the function returns 503 and the app shows "Marking isn't switched on yet".

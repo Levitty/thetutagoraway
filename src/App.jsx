@@ -19,6 +19,7 @@ import { initPush, requestPush, clearPush } from './push.js';
 import { PRICE_KES, PASS_DAYS } from './subscription.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
+import { Writing } from './writing/Writing.jsx';
 
 // Running inside the iOS/Android shell (Capacitor injects window.Capacitor).
 // The app IS the product: no marketing landing, no cookie banner — it opens
@@ -35,6 +36,7 @@ const ROUTE_SEO = {
   home:       { t: "Tutagora — Learn from Kenya's Best Tutors", d: "One-on-one lessons with verified Kenyan tutors, plus free adaptive maths practice mapped to the CBC curriculum.", path: '/' },
   tutors:     { t: "Find a Verified Tutor in Kenya | Tutagora", d: "Browse verified tutors by subject, grade and price. Book a one-on-one online lesson and pay securely.", path: '/tutors' },
   horeb:      { t: "HOREB — Free Adaptive Maths Practice (CBC) | Tutagora", d: "A free maths check finds your child's exact gap, then rebuilds it — adaptive practice mapped to the Kenyan CBC curriculum.", path: '/horeb' },
+  writing:    { t: "Composition & Insha Practice, Marked | Tutagora", d: "Write an English composition or Kiswahili insha, get it marked out of 20 like a teacher would — the exact lines to fix, then revise. Grades 4–12.", path: '/writing' },
   ai:         { t: "HOREB — Adaptive Maths Practice | Tutagora", d: "Practice maths at your real level. HOREB finds the gap and rebuilds from it, watching the working — free to start.", path: '/ai' },
   schools:    { t: "HOREB for Schools — Adaptive CBC Maths | Tutagora", d: "Give every child in your school maths at their own level, with a teacher dashboard and per-student CBC reports.", path: '/schools' },
   clubs:      { t: "Group Classes & Clubs | Tutagora", d: "Live group classes and interest-led clubs for Kenyan learners, led by verified tutors.", path: '/clubs' },
@@ -1225,6 +1227,18 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
             </div>
           );
         })()}
+
+        {/* Writing — composition / insha marking */}
+        <button onClick={() => onNavigate('writing')} className="w-full text-left bg-white border border-slate-200 rounded-2xl p-5 mb-6 hover:border-slate-300 transition-colors">
+          <div className="flex items-center justify-between gap-4">
+            <div className="min-w-0">
+              <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Writing</div>
+              <h3 className="text-slate-900 font-bold text-lg mt-0.5">Composition & Insha</h3>
+              <p className="text-slate-500 text-sm mt-0.5">Write it, get it marked out of 20 like a teacher would, then fix the exact lines.</p>
+            </div>
+            <span className="shrink-0 px-5 py-2.5 bg-slate-900 text-white font-semibold rounded-lg text-sm">Write</span>
+          </div>
+        </button>
 
         {/* Stats row */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
@@ -4181,6 +4195,8 @@ const NativeTabs = ({ page, user, onNavigate, setShowAuth }) => {
         d={<><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V21h13V9.5"/></>} />
       <Item id="ai" label="Practice" active={page === 'ai'} onTap={() => onNavigate('ai')}
         d={<><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1 2.7 3 6 3s6-2 6-3v-5.5"/></>} />
+      <Item id="writing" label="Write" active={page === 'writing'} onTap={() => user ? onNavigate('writing') : setShowAuth('login')}
+        d={<><path d="M4 20h4l10.5-10.5a2.1 2.1 0 0 0-3-3L5 17v3Z"/><path d="m13.5 6.5 3 3"/></>} />
       <Item id="tutors" label="Tutors" active={page === 'tutors'} onTap={() => onNavigate('tutors')}
         d={<><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.3 2.9-5.5 6.5-5.5s6.5 2.2 6.5 5.5"/><circle cx="17.5" cy="9.5" r="2.6"/><path d="M15.5 14.7c2.9.2 6 2 6 4.8"/></>} />
       <Item id="dashboard" label="My space" active={page === 'dashboard'} onTap={() => user ? onNavigate('dashboard') : setShowAuth('login')}
@@ -4316,6 +4332,7 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
         <div className="bg-white border border-slate-200 shadow-sm rounded-2xl divide-y divide-slate-100 overflow-hidden">
           <Row label="Messages" sub="Talk to your tutors" onTap={onOpenMessages} />
           <Row label="My lessons" sub={`${upcoming.length} upcoming`} onTap={() => onNavigate('my-lessons')} />
+          <Row label="Writing" sub="Composition & insha, marked" onTap={() => onNavigate('writing')} />
           <Row label="Clubs" sub="Group classes" onTap={() => onNavigate('clubs')} />
           <Row label="Account settings" onTap={onOpenAccountSettings} />
         </div>
@@ -4468,6 +4485,18 @@ const NativeHome = ({ profile, bookings, onNavigate, onStartLesson, setShowAuth,
               <span className="shrink-0 bg-amber-400 text-slate-900 font-bold rounded-xl px-4 py-2 text-sm">{ai?.diagnosed ? 'Continue' : 'Start'}</span>
             </div>
           </button>
+
+          {/* writing */}
+          <button onClick={() => onNavigate('writing')} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-2xl p-4 hover:border-slate-300 transition-colors">
+            <div className="flex items-center justify-between gap-3">
+              <div className="min-w-0">
+                <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Writing</div>
+                <div className="text-[15px] font-extrabold tracking-tight mt-0.5">Composition & Insha</div>
+                <div className="text-[13px] text-slate-500">Write it, get it marked out of 20, fix the exact lines.</div>
+              </div>
+              <span className="shrink-0 bg-slate-900 text-white font-bold rounded-xl px-4 py-2 text-sm">Write</span>
+            </div>
+          </button>
         </div>
       </div>
     </div>
@@ -4494,6 +4523,16 @@ const LearnerProgress = ({ parentId, learner, onBack }) => {
       .catch(() => { if (!cancelled) setState({ loading: false, data: null }); });
     return () => { cancelled = true; };
   }, [profileKey]);
+
+  // Their writing: the last few marked pieces.
+  const [pieces, setPieces] = useState([]);
+  useEffect(() => {
+    if (!parentId) return;
+    let q = supabase.from('compositions').select('id, language, title, prompt, score, feedback, created_at')
+      .eq('user_id', parentId).order('created_at', { ascending: false }).limit(5);
+    q = learner?.id ? q.eq('learner_id', learner.id) : q.is('learner_id', null);
+    q.then(({ data }) => setPieces(data || []));
+  }, [parentId, learner?.id]);
 
   const view = useMemo(() => {
     const skills = state.data?.progress?.skills || {};
@@ -4556,7 +4595,7 @@ const LearnerProgress = ({ parentId, learner, onBack }) => {
         <div className="max-w-md mx-auto px-4 pt-5 pb-28 space-y-3">
           {state.loading ? <LoadingSpinner /> : !state.data ? (
             <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 text-center">
-              <div className="text-[15px] font-semibold">No practice yet</div>
+              <div className="text-[15px] font-semibold">No maths practice yet</div>
               <p className="text-[13.5px] text-slate-500 mt-1">Once {name} starts practising, their progress shows up here.</p>
             </div>
           ) : (
@@ -4613,6 +4652,25 @@ const LearnerProgress = ({ parentId, learner, onBack }) => {
                 )}
               </div>
             </>
+          )}
+
+          {/* writing — the marks, and what the marker said to work on */}
+          {!state.loading && pieces.length > 0 && (
+            <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
+              <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Writing</div>
+              <div className="mt-2 space-y-2.5">
+                {pieces.map(p => (
+                  <div key={p.id} className="flex items-start gap-3">
+                    <span className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center font-extrabold tabular-nums text-[14px] ${p.score == null ? 'bg-slate-100 text-slate-400' : p.score >= 16 ? 'bg-[#e8efdc] text-[#5a7a3a]' : p.score >= 11 ? 'bg-amber-100 text-amber-800' : 'bg-[#fde7e3] text-[#c0663f]'}`}>{p.score == null ? '—' : p.score}</span>
+                    <span className="flex-1 min-w-0">
+                      <span className="block text-[14.5px] text-slate-800 truncate">{p.title || p.prompt}</span>
+                      <span className="block text-[12.5px] text-slate-400">{p.language === 'sw' ? 'Kiswahili' : 'English'} · {pretty(p.created_at)}{p.feedback?.next_step ? ` · next: ${p.feedback.next_step}` : ''}</span>
+                    </span>
+                  </div>
+                ))}
+                <p className="text-[12.5px] text-slate-400 pt-1">Marked out of 20, the way school does it.</p>
+              </div>
+            </div>
           )}
         </div>
       </div>
@@ -7008,6 +7066,7 @@ function AppInner() {
     if (path === 'teach') return 'teach';
     if (path === 'dashboard') return 'dashboard';
     if (path === 'ai') return 'ai';
+    if (path === 'writing') return 'writing';
     if (path === 'horeb') return 'horeb';
     if (path === 'horebhow') return 'horebhow';
     if (path === 'schools') return 'schools';
@@ -7075,6 +7134,7 @@ function AppInner() {
       else if (path === 'teach') setPage('teach');
       else if (path === 'dashboard') setPage('dashboard');
       else if (path === 'ai') setPage('ai');
+      else if (path === 'writing') setPage('writing');
       else if (path === 'horeb') setPage('horeb');
       else if (path === 'horebhow') setPage('horebhow');
       else if (path === 'schools') setPage('schools');
@@ -7168,6 +7228,18 @@ function AppInner() {
     return (
       <>
         <NativeWelcome user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
+        {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : 'student'} />}
+      </>
+    );
+  }
+
+  // Writing — composition / insha practice with marking.
+  if (page === 'writing') {
+    return (
+      <>
+        <Writing userId={auth.user?.id} studentName={auth.profile?.full_name} isNative={IS_NATIVE}
+          onBack={() => handleNavigate(IS_NATIVE ? 'native-home' : auth.user ? 'dashboard' : 'home')} onSignIn={() => setShowAuth('login')} />
+        {IS_NATIVE && <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
         {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : 'student'} />}
       </>
     );
