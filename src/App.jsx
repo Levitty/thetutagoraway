@@ -7236,7 +7236,7 @@ function AppInner() {
       onStart={(g) => { setCheckGrade(g); setPage('check-run'); window.scrollTo(0, 0); }} />;
   }
   if (page === 'check-run' && !IS_NATIVE) {
-    return <AIMastery guest userId={undefined} autoStartGrade={checkGrade || getCheck()?.grade || null}
+    return <AIMastery guest userId={undefined} autoStartGrade={checkGrade || getCheck()?.grade || null} autoStartCurriculum={getCheck()?.curriculum || null}
       studentName={getCheck()?.name || undefined}
       onBack={() => handleNavigate('home')}
       onDiagnosed={() => handleNavigate('check-result')} />;

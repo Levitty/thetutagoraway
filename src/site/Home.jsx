@@ -158,7 +158,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
       </div></section>
 
       {featured.length > 0 && (
-        <section className="sec tight"><div className="in">
+        <section className="sec tutorband"><div className="in">
           <div className="head-row">
             <div><div className="kicker">When practice isn't enough</div><h2 className="display" style={{ marginTop: 10 }}>Tutors we've checked ourselves.</h2></div>
             <button type="button" className="btn line" onClick={() => onNavigate('tutors')}>See all tutors <SiteIcon name="arrow" /></button>
@@ -177,7 +177,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
         </div></section>
       )}
 
-      <section className="sec tight"><div className="in duo">
+      <section className="sec tight"><div className="in duo signpost">
         <div className="c t"><div className="kicker">For tutors</div><h3>Teach on Tutagora</h3><p>Set your hours and your rate. Families find you, pay through M-Pesa, and join you in the app.</p><button type="button" className="btn" onClick={() => onNavigate('teach')}>Apply to teach</button></div>
         <div className="c s"><div className="kicker">For schools</div><h3>Every learner's real level</h3><p>Each learner is mapped skill by skill, so teachers can target the gaps. KSh 50 per learner per term.</p><button type="button" className="btn" onClick={() => onNavigate('schools')}>See how it works</button></div>
       </div></section>

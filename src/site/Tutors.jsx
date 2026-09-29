@@ -51,7 +51,7 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
     }), [tutors, search, subject, grade, price, sort]);
 
   return (
-    <div className="tg">
+    <div className="tg t-amber">
       <header className="thero">
         <SiteNav onNavigate={onNavigate} onSignIn={onSignIn} user={user} current="tutors" />
         <div className="in">
@@ -203,7 +203,7 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
   };
 
   return (
-    <div className="tg">
+    <div className="tg t-amber">
       <SiteNav onNavigate={onNavigate} onSignIn={onSignIn} user={user} current="tutors" onBrand={false} />
       <div className="in prof">
         <div style={{ minWidth: 0 }}>

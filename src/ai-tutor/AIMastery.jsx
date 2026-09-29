@@ -83,7 +83,7 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 // stays on this device. autoStartGrade skips the welcome screen and starts the
 // check at that grade; onDiagnosed(progress) replaces the usual "home" view when
 // the check finishes.
-export function AIMastery({ onBack, userId, studentName, onFindTutor, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, onDiagnosed = null }) {
+export function AIMastery({ onBack, userId, studentName, onFindTutor, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, autoStartCurriculum = null, onDiagnosed = null }) {
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
   const [progress, setProgress] = useState(defaultProgress);
   const [view, setView] = useState('loading');
@@ -103,6 +103,12 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // inside progress so it survives reloads / other devices.
   const curriculum = progress.curriculum || NATIVE;
   const curriculaOptions = useMemo(() => curriculaForSubject(sub), [sub]);
+  // The parent or learner must pick the school's curriculum; there is no
+  // "Default" to fall back on. NATIVE stays in the registry only because older
+  // saved progress may still hold it. Subjects with no curriculum views
+  // (only native) skip the question.
+  const choosableCurricula = curriculaOptions.filter(c => c.id !== NATIVE);
+  const curriculumChosen = choosableCurricula.length === 0 || (curriculum !== NATIVE && choosableCurricula.some(c => c.id === curriculum));
 
   // Engine context — passed to adaptive/spaced/diagnostic engines.
   // We derive the full prerequisite/post-requisite CHAIN walkers from the
@@ -699,10 +705,15 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   const autoStarted = useRef(false);
   useEffect(() => {
     if (!autoStartGrade || autoStarted.current || loading || view !== 'welcome') return;
-    if (progress.declaredGrade !== autoStartGrade) { setProgress(p => ({ ...p, declaredGrade: autoStartGrade })); return; }
+    const wantCurr = autoStartCurriculum && choosableCurricula.some(c => c.id === autoStartCurriculum) ? autoStartCurriculum : null;
+    if (progress.declaredGrade !== autoStartGrade || (wantCurr && progress.curriculum !== wantCurr)) {
+      setProgress(p => ({ ...p, declaredGrade: autoStartGrade, ...(wantCurr ? { curriculum: wantCurr } : {}) }));
+      return;
+    }
+    if (!curriculumChosen) return; // wait for a choice on the welcome screen
     autoStarted.current = true;
     startDiagnostic();
-  }, [autoStartGrade, loading, view, progress.declaredGrade]);
+  }, [autoStartGrade, autoStartCurriculum, loading, view, progress.declaredGrade, progress.curriculum, curriculumChosen]);
 
   // ==================== LESSON (KP-BASED) ====================
 
@@ -1187,15 +1198,16 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
             </div>
             {curriculaOptions.length > 1 && (
               <>
-                <p className="text-sm font-semibold text-slate-800 mt-4 mb-2">Your curriculum</p>
+                <p className="text-sm font-semibold text-slate-800 mt-4 mb-2">Which curriculum does your school follow?</p>
                 <div className="flex flex-wrap gap-2">
-                  {curriculaOptions.map(co => (
+                  {choosableCurricula.map(co => (
                     <button key={co.id} onClick={() => setProgress(p => ({ ...p, curriculum: co.id }))}
                       className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${curriculum === co.id ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
                       {co.shortName}
                     </button>
                   ))}
                 </div>
+                {!curriculumChosen && <p className="text-xs text-slate-500 mt-2">Not sure? Check the school report, or ask the class teacher.</p>}
               </>
             )}
             {progress.declaredGrade != null && (
@@ -1203,8 +1215,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
             )}
           </div>
 
-          <button onClick={startDiagnostic} disabled={progress.declaredGrade == null} className="w-full bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed text-slate-900 rounded-2xl py-4 font-bold text-lg transition-colors">
-            {progress.declaredGrade != null ? "Let's start" : `Pick your ${(sub?.gradeLabel || 'class').toLowerCase()} first`}
+          <button onClick={startDiagnostic} disabled={progress.declaredGrade == null || !curriculumChosen} className="w-full bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed text-slate-900 rounded-2xl py-4 font-bold text-lg transition-colors">
+            {progress.declaredGrade == null ? `Pick your ${(sub?.gradeLabel || 'class').toLowerCase()} first` : !curriculumChosen ? 'Pick your curriculum first' : "Let's start"}
           </button>
         </div>
       </div>
@@ -1769,7 +1781,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
         <div className="border-t border-slate-100 pt-3 space-y-1">
           {curriculaOptions.length > 1 && (
             <select value={curriculum} onChange={(e) => setProgress(p => ({ ...p, curriculum: e.target.value }))} title="Curriculum view" className="w-full text-xs bg-slate-50 text-slate-600 rounded-lg px-2.5 py-2 border border-slate-200 focus:outline-none">
-              {curriculaOptions.map(c => <option key={c.id} value={c.id}>{c.shortName}</option>)}
+              {!curriculumChosen && <option value={NATIVE} disabled>Choose curriculum</option>}
+              {choosableCurricula.map(c => <option key={c.id} value={c.id}>{c.shortName}</option>)}
             </select>
           )}
           <button onClick={switchSubject} className="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] text-slate-500 hover:bg-slate-50 transition-colors"><Icon name="book" className="w-4 h-4" />Switch subject</button>

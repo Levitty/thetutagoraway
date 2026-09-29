@@ -23,7 +23,7 @@ export default function Teach({ onNavigate, onSignIn, onApply, user }) {
   const monthly = weekly * 4;
 
   return (
-    <div className="tg">
+    <div className="tg t-indigo">
       <header className="hero">
         <SiteNav onNavigate={onNavigate} onSignIn={onSignIn} user={user} />
         <div className="in hero-in" style={{ paddingBottom: 70 }}>

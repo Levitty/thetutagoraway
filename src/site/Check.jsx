@@ -20,6 +20,12 @@ export const clearGuestCheck = () => {
 export const getFocus = () => read(FOCUS_KEY, sessionStorage);
 export const setFocus = (v) => { if (v) write(FOCUS_KEY, v, sessionStorage); else { try { sessionStorage.removeItem(FOCUS_KEY); } catch { /* ignore */ } } };
 
+// The school's curriculum. The parent must choose; there is no default.
+const CURRICULA = [
+  { id: 'cbc', name: 'CBC / CBE', note: 'Most Kenyan public and private schools' },
+  { id: 'cambridge', name: 'Cambridge', note: 'International schools' },
+];
+
 const FlowBar = ({ label, onLeave }) => (
   <div className="flowbar"><div className="in">
     <Logo onClick={onLeave} />
@@ -33,14 +39,15 @@ export function CheckStart({ initialGrade, onStart, onLeave }) {
   const prev = getCheck();
   const [name, setName] = useState(prev?.name || '');
   const [grade, setGrade] = useState(initialGrade || prev?.grade || null);
+  const [curriculum, setCurriculum] = useState(prev?.curriculum || null);
   const who = name.trim() || 'your child';
 
   const start = () => {
-    if (!grade) return;
+    if (!grade || !curriculum) return;
     // A new check always starts clean on this device.
     clearGuestCheck();
-    write(CHECK_KEY, { name: name.trim(), grade, startedAt: new Date().toISOString() });
-    onStart(grade);
+    write(CHECK_KEY, { name: name.trim(), grade, curriculum, startedAt: new Date().toISOString() });
+    onStart(grade, curriculum);
   };
 
   return (
@@ -60,8 +67,16 @@ export function CheckStart({ initialGrade, onStart, onLeave }) {
               ))}
             </div>
           </div>
-          <button type="button" className="btn full" onClick={start} disabled={!grade}>
-            {grade ? <>Start the check <SiteIcon name="arrow" /></> : 'Pick a grade first'}
+          <div className="field"><span>Which curriculum does their school follow?</span>
+            <div className="curpick" role="group" aria-label="Curriculum">
+              {CURRICULA.map(c => (
+                <button key={c.id} type="button" aria-pressed={curriculum === c.id} onClick={() => setCurriculum(c.id)}><b>{c.name}</b><small>{c.note}</small></button>
+              ))}
+            </div>
+            <p className="fine" style={{ margin: '8px 0 0' }}>Not sure? Check the school report, or ask the class teacher.</p>
+          </div>
+          <button type="button" className="btn full" onClick={start} disabled={!grade || !curriculum}>
+            {!grade ? 'Pick a grade first' : !curriculum ? 'Pick a curriculum first' : <>Start the check <SiteIcon name="arrow" /></>}
           </button>
           <div className="handnote"><SiteIcon name="phone" /><div>Now hand the phone to <b>{who}</b>. Let them answer on their own. Guessing is fine, and "I haven't learned this yet" is a good answer too.</div></div>
         </div>

@@ -24,7 +24,7 @@ export default function SchoolsPage({ onNavigate, onSignIn, user }) {
   const total = Math.max(0, Number(size) || 0) * PER_LEARNER;
 
   return (
-    <div className="tg">
+    <div className="tg t-indigo">
       <header className="shero">
         <SiteNav onNavigate={onNavigate} onSignIn={onSignIn || (() => onNavigate('dashboard'))} user={user} current="schools" />
         <div className="in">
