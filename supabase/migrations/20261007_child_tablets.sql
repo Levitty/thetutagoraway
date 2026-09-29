@@ -70,6 +70,7 @@ language plpgsql
 security definer
 set search_path = public
 as $$
+#variable_conflict use_column
 declare
   l child_links;
 begin
@@ -107,4 +108,4 @@ create policy "Linked tablet: the family's pass" on public.subscriptions
 drop policy if exists "Linked tablet: practice answers" on public.response_events;
 create policy "Linked tablet: practice answers" on public.response_events
   for insert with check (exists (select 1 from child_devices d where d.device_uid = auth.uid()
-                 and d.parent_id = response_events.student_id and d.child_id = response_events.learner_id));
+                 and d.parent_id::text = response_events.student_id::text and d.child_id = response_events.learner_id));
