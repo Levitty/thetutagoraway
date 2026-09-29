@@ -208,6 +208,13 @@ for (const [bank, S] of CHECKED) {
       const choices = p.choices || p.options;
       if (Array.isArray(choices) && choices.length && !choices.map(c => str(c.value ?? c.label ?? c)).some(c => checkAnswerMatch(c, p))) note('A. key not among the choices', key, `${q} => ${a} | ${choices.map(c => str(c.label ?? c)).join(', ')}`);
       if (a && !checkAnswerMatch(a, p)) note('A. own key rejected', key, `${q} => ${a}`);
+      // E. The worked solution must end on an answer the key accepts.
+      if (p.solution && p.solution.answer != null && str(p.solution.answer).trim() && !checkAnswerMatch(str(p.solution.answer), p))
+        note("E. worked solution's answer is marked wrong", key, `${q} => key "${a}", solution says "${p.solution.answer}"`);
+      // A. The first hint should nudge, not give the answer away.
+      const firstHint = str((p.hints && p.hints[0]) || p.hint);
+      if (/^-?\d{2,}(\.\d+)?$/.test(a) && new RegExp(`(^|[^\\d.])${a.replace('.', '\\.')}([^\\d]|$)`).test(firstHint) && !q.includes(a))
+        note('A. first hint gives the answer away', key, `${q} => ${a} | hint: ${firstHint}`);
       // E. Is the key actually right?
       if (p.verify && p.verify.kind === 'fraction' && Number.isFinite(Number(p.verify.value)) && !checkAnswerMatch(String(p.verify.value), p))
         note('E. key disagrees with its own verify value', key, `${q} => key "${a}", verify ${p.verify.value}`);
