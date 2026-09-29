@@ -163,6 +163,17 @@ export const getFluencyPractice = (progress, ctx) => {
   return out.sort((a, b) => (a.fluentReps || 0) - (b.fluentReps || 0));
 };
 
+// ==================== MASTERY ====================
+
+// A skill is mastered on RECENT evidence: at least `minProblems` answers, the
+// last 3 right, and 7 of the last 8 right. (Cumulative accuracy made early
+// learning mistakes count forever; see docs/qa/answer-audit-log.md, round 9.)
+export const recentMastery = (recent = [], minProblems = 6) => {
+  const r = recent.slice(-10);
+  return r.length >= minProblems && r.slice(-3).length === 3 && r.slice(-3).every(Boolean)
+    && r.slice(-8).filter(Boolean).length >= Math.min(7, r.length - 1);
+};
+
 // ==================== NEXT SKILLS TO LEARN ====================
 
 export const getNextToLearn = (progress, ctx) => {

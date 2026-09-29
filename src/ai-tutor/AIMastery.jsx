@@ -6,7 +6,7 @@
 import { useHorebLook } from './horebLook.js';
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
-import { prereqsMet, getStatus, getRecommendedPath, leadWithMissingStep, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
+import { prereqsMet, getStatus, getRecommendedPath, leadWithMissingStep, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { HorebBot } from './HorebBot.jsx';
@@ -956,8 +956,14 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // straight back into normal practice (they clearly need it after all).
     const tgLearnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
     const testOutNow = Number.isFinite(skill?.grade) && (tgLearnerGrade - skill.grade) >= 2 && newAttempts === 1;
-    const shouldMaster = !isPlaceholder && correct && accuracy >= skill.masteryThreshold
-      && (testOutNow || (lightSupport && newAttempts >= skill.minProblems));
+    // Mastery is judged on RECENT answers: 7 of the last 8 right, including the
+    // last 3, after at least minProblems. It used to be 85% of every attempt
+    // ever made, so early mistakes while learning counted forever: simulated
+    // slow learners needed ~40 questions and 29% were still stuck after 60.
+    // The recent rule: ~14 questions, none stuck, no more lenient than before.
+    const recent = [...(sp.recent || []), !!correct].slice(-10);
+    const shouldMaster = !isPlaceholder && correct
+      && (testOutNow || (lightSupport && recentMastery(recent, skill.minProblems)));
 
     // Apply implicit repetitions to prerequisites (skip for placeholder stand-ins)
     let updatedSkills = isPlaceholder ? { ...progress.skills } : applyImplicitCredits(progress, activeSkill, correct, ctx);
@@ -965,6 +971,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     const updatedSp = processReviewResult(sp, correct, timeMs, fluencyExpectedMs(SKILLS[activeSkill]));
     updatedSp.attempts = newAttempts;
     updatedSp.correct = newCorrect;
+    updatedSp.recent = recent;
     if (shouldMaster && !sp.mastered) {
       updatedSp.mastered = true;
       // When it was mastered: the weekly parent report lists this week's.
@@ -1349,7 +1356,12 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // just because the diagnostic never confirmed a foundation it couldn't reach.
     const testOutSkill = Number.isFinite(skill?.grade) && (learnerGrade - skill.grade) >= 2;
     const masterTarget = testOutSkill ? 1 : skill.minProblems;
-    const pct = Math.min(100, (session.correct / masterTarget) * 100);
+    // Progress shown the way mastery is judged: recent right answers, and one
+    // short of the end until the last three are right (never "6 of 6" and not done).
+    const rec = sp.recent || [];
+    const shownDone = testOutSkill ? Math.min(1, session.correct)
+      : Math.min(masterTarget - (rec.length >= 3 && rec.slice(-3).every(Boolean) ? 0 : 1), rec.slice(-8).filter(Boolean).length);
+    const pct = Math.min(100, (shownDone / masterTarget) * 100);
 
     // Faded worked examples: this problem's completion scaffold at the current
     // support level (structured content), or a parallel solved example (legacy
@@ -1376,7 +1388,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
         problem,
         skillName: skill.name,
         cbcLabel: cbc ? `CBC · Grade ${cbc.grade} · ${cbc.strand} — ${cbc.substrand}` : `Grade ${skill.grade} · ${skill.strand}`,
-        progressLabel: `${Math.min(session.correct, masterTarget)} of ${masterTarget}`,
+        progressLabel: `${shownDone} of ${masterTarget}`,
         studentName: ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0],
         onResult: handleYoungResult,
         onExit: goHome,
@@ -1402,7 +1414,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               <div className="text-xs text-slate-400">Grade {skill.grade} · {skill.strand}</div>
             </div>
             <div className="text-right shrink-0">
-              <div className="font-bold text-sm text-slate-900 tabular-nums">{Math.min(session.correct, masterTarget)}/{masterTarget}</div>
+              <div className="font-bold text-sm text-slate-900 tabular-nums">{shownDone}/{masterTarget}</div>
               <div className="text-xs text-slate-400">{testOutSkill ? 'quick check' : 'to master'}</div>
             </div>
           </div>

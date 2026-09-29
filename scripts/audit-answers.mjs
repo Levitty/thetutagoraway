@@ -186,6 +186,7 @@ for (const [bank, S] of CHECKED) {
     if (ONLY && id !== ONLY) continue;
     const key = `${bank}/${id} (G${skill.grade})`;
     const seen = new Set();
+    const byQuestion = new Map(); // question -> its key, to spot accepts that belong to another question
     let made = 0;
     for (let i = 0; i < N; i++) {
       let p;
@@ -196,11 +197,12 @@ for (const [bank, S] of CHECKED) {
       made++; problems++;
       const q = str(p.question), a = str(p.answer);
       seen.add(q);
+      byQuestion.set(q, p);
       const all = [q, a, str(p.hint), ...(p.hints || []).map(str), ...(p.accepts || []).map(str)].join(' | ');
       if (/\bNaN\b|undefined|\[object|Infinity|\bnull\b/.test(all)) note('A. broken text (NaN/undefined/null)', key, `${q} => ${a}`);
       if (/\d\.\d{7,}/.test(a) || /\d\.\d{7,}/.test(q)) note('A. float noise', key, `${q} => ${a}`);
       if (!a.trim()) note('A. empty answer', key, q);
-      if (/(^|[^\d])(\d+)\/\2(?!\d)/.test(q)) note('A. n/n fraction in the question (just 1)', key, q);
+      if (/(^|[^\d√])(\d+)\/\2(?!\d)/.test(q)) note('A. n/n fraction in the question (just 1)', key, q);
       if (skill.grade <= 4 && /^-\d/.test(a)) note('A. negative answer in lower primary', key, `${q} => ${a}`);
       if (skill.grade <= 3 && /^\d+\.\d+$/.test(a) && !/\bm\b|kg|litre|money|sh/i.test(q)) note('A. decimal answer in Grade 1-3', key, `${q} => ${a}`);
       const choices = p.choices || p.options;
@@ -226,6 +228,15 @@ for (const [bank, S] of CHECKED) {
       }
     }
     if (made >= 20 && seen.size / made < 0.25) note('A. low variety (questions repeat)', key, `${seen.size} different out of ${made}`);
+    // C. A question that accepts the answer to a DIFFERENT question of the same
+    // skill (e.g. every construction's answer accepted for every angle).
+    const all = [...byQuestion.values()];
+    for (const p of all) for (const o of all) {
+      if (p === o || str(o.answer).trim().toLowerCase() === str(p.answer).trim().toLowerCase()) continue;
+      if (checkAnswerMatch(str(o.answer), o) && checkAnswerMatch(str(o.answer), p) && !checkAnswerMatch(str(p.answer), o)) {
+        note("C. accepts another question's answer", key, `"${p.question}" (key "${p.answer}") also accepts "${o.answer}"`); break;
+      }
+    }
   }
 }
 

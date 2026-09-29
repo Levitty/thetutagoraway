@@ -1128,18 +1128,28 @@ const generators = {
       hint: 'For y = (x-h)² + k, vertex is at (h, k)' };
   },
 
-  G9_CONSTRUCTION: () => {
-    const angle = pick([60, 90, 120]);
-    return { question: `What compass construction gives you a ${angle}° angle?`, answer: angle === 60 ? 'equilateral triangle construction' : angle === 90 ? 'perpendicular bisector' : 'two 60° angles',
-      hint: '60° comes from an equilateral triangle (all arcs equal), 90° from a perpendicular bisector, and 120° from stacking two 60° angles.',
-      accepts: ['equilateral triangle construction', 'perpendicular bisector', 'two 60° angles', 'equilateral triangle', 'perpendicular'] };
-  },
+  // Rewritten after the audit: every construction's answer used to be accepted
+  // for every angle, and the answers were phrases no child types exactly.
+  G9_CONSTRUCTION: () => pick([
+    () => { const a = pick([40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150]); return { question: `You bisect an angle of ${a}° with a ruler and compasses. What size is each half?`, answer: String(a / 2), hint: 'Bisect means cut exactly in half.' }; },
+    () => { const l = rand(3, 9) * 2; return { question: `The perpendicular bisector of a ${l} cm line cuts it into two equal parts. How long is each part?`, answer: String(l / 2), hint: 'A bisector cuts it exactly in half.' }; },
+    () => ({ question: 'A perpendicular bisector crosses the line at what angle, in degrees?', answer: '90', accepts: ['90', '90°', 'right angle'], hint: 'Perpendicular means at a right angle.' }),
+    () => ({ question: 'Each angle of an equilateral triangle is how many degrees? (This is how you construct 60°.)', answer: '60', hint: 'The three equal angles add up to 180°.' }),
+    () => ({ question: 'To construct 120°, you put two angles of how many degrees side by side?', answer: '60', hint: '120 = 60 + 60.' }),
+    () => ({ question: 'To construct 30°, you construct 60° and then bisect it. To construct 45°, you construct which angle and bisect it?', answer: '90', accepts: ['90', '90°'], hint: 'Half of it must be 45°.' }),
+    () => ({ question: 'Which construction cuts an angle exactly in half: the angle bisector or the perpendicular bisector?', answer: 'angle bisector', accepts: ['angle bisector', 'the angle bisector'], hint: 'It is named after what it cuts.' }),
+    () => ({ question: 'Which construction gives a line at 90° through the middle of another line: the angle bisector or the perpendicular bisector?', answer: 'perpendicular bisector', accepts: ['perpendicular bisector', 'the perpendicular bisector'], hint: 'Perpendicular means at 90°.' }),
+  ])(),
 
-  G9_LOCI: () => {
-    return { question: `The locus of points equidistant from two fixed points is a...?`, answer: 'perpendicular bisector',
-      hint: 'Picture every point that is the same distance from both points — they line up along the cut exactly halfway between them, at right angles.',
-      accepts: ['perpendicular bisector', 'line'] };
-  },
+  G9_LOCI: () => pick([
+    () => ({ question: 'The locus of points the same distance from two fixed points is the perpendicular bisector or the angle bisector?', answer: 'perpendicular bisector', accepts: ['perpendicular bisector', 'the perpendicular bisector'], hint: 'Every such point is halfway between the two points, on a line at right angles to the line joining them.' }),
+    () => ({ question: 'The locus of points the same distance from two lines that cross is the perpendicular bisector or the angle bisector?', answer: 'angle bisector', accepts: ['angle bisector', 'the angle bisector', 'angle bisectors'], hint: 'Points equally far from both lines sit on the line that halves the angle between them.' }),
+    () => { const r = rand(2, 9); return { question: `The locus of points ${r} cm from a fixed point is a circle. What is its radius, in cm?`, answer: String(r), hint: 'Every point is the same distance from the centre: that distance is the radius.' }; },
+    () => ({ question: 'The locus of points a fixed distance from a single point is a circle or a straight line?', answer: 'circle', accepts: ['circle', 'a circle'], hint: 'All the points are the same distance from the centre.' }),
+    () => { const r = rand(2, 8); return { question: `A goat is tied to a peg with a rope ${r} m long. The edge of the grass it can reach is a circle. What is its diameter, in m?`, answer: String(2 * r), hint: `The rope is the radius. Diameter = 2 × radius.` }; },
+    () => { const r = pick([2, 3, 4, 5, 10]); return { question: `A goat is tied to a peg with a rope ${r} m long. What area of grass can it reach? (π = 3.14)`, answer: (3.14 * r * r).toFixed(2), accepts: [(3.14 * r * r).toFixed(2), String(Number((3.14 * r * r).toFixed(2)))], hint: `Area of a circle = πr², with r = ${r}.` }; },
+    () => ({ question: 'The locus of points 3 cm from a straight line (on both sides) is a pair of parallel lines or a circle?', answer: 'parallel lines', accepts: ['parallel lines', 'parallel', 'a pair of parallel lines', 'two parallel lines'], hint: 'On each side, the points form a line that never meets the first one.' }),
+  ])(),
 
   G9_CIRCLE_THEOREMS_INTRO: () => {
     const angle = rand(30, 80);
@@ -1187,11 +1197,13 @@ const generators = {
       hint: 'Arc length = (θ/360) × 2πr' };
   },
 
-  G9_SURFACE_AREA_ADV: () => {
-    const r = rand(3, 7);
-    return { question: `Surface area of a sphere with radius ${r} cm? (π=3.14)`, answer: roundTo(4 * 3.14 * r * r, 2).toString(),
-      hint: 'SA = 4πr²' };
-  },
+  G9_SURFACE_AREA_ADV: () => pick([
+    () => { const r = rand(3, 9); const v = 4 * 3.14 * r * r; return { question: `Find the surface area of a sphere with radius ${r} cm. (π = 3.14)`, answer: v.toFixed(2), accepts: [v.toFixed(2), String(Number(v.toFixed(2)))], hint: 'Surface area of a sphere = 4πr².' }; },
+    () => { const r = rand(2, 7), h = rand(4, 12); const v = 2 * 3.14 * r * r + 2 * 3.14 * r * h; return { question: `Find the total surface area of a closed cylinder with radius ${r} cm and height ${h} cm. (π = 3.14)`, answer: v.toFixed(2), accepts: [v.toFixed(2), String(Number(v.toFixed(2)))], hint: 'Two circles (2πr²) plus the curved side (2πrh).' }; },
+    () => { const a = rand(2, 12); return { question: `Find the surface area of a cube with edges of ${a} cm.`, answer: String(6 * a * a), hint: 'A cube has 6 square faces: 6 × a².' }; },
+    () => { const l = rand(3, 12), b = rand(2, 9), h = rand(2, 9); return { question: `Find the surface area of a cuboid ${l} cm long, ${b} cm wide and ${h} cm high.`, answer: String(2 * (l * b + b * h + l * h)), hint: 'Three pairs of rectangles: 2(lb + bh + lh).' }; },
+    () => { const r = rand(3, 8), l = r + rand(2, 8); const v = 3.14 * r * l; return { question: `Find the curved surface area of a cone with radius ${r} cm and slant height ${l} cm. (π = 3.14)`, answer: v.toFixed(2), accepts: [v.toFixed(2), String(Number(v.toFixed(2)))], hint: 'Curved surface of a cone = πrl.' }; },
+  ])(),
 
   G9_VOLUME_ADV: () => {
     const r = rand(3, 7), h = rand(6, 12);
@@ -1215,10 +1227,20 @@ const generators = {
   },
 
   G9_SCATTER_PLOTS: () => {
-    return pick([
-      { question: 'Temperature increases, ice cream sales increase. What type of correlation?', answer: 'positive', accepts: ['positive', 'positive correlation'], hint: 'Both go UP together → positive. One goes up while the other goes down → negative.' },
-      { question: 'Hours of study increases, test errors decrease. What type of correlation?', answer: 'negative', accepts: ['negative', 'negative correlation'], hint: 'Both go UP together → positive. One goes up while the other goes down → negative.' },
+    const c = pick([
+      ['the temperature', 'cold drink sales', 'positive'], ['a child\'s height', 'their shoe size', 'positive'],
+      ['the rainfall', 'umbrella sales', 'positive'], ['the distance from school', 'the time taken to walk there', 'positive'],
+      ['the hours spent revising', 'the mistakes made in a test', 'negative'], ['the age of a car', 'its value', 'negative'],
+      ['the temperature', 'sweater sales', 'negative'], ['the speed of a matatu', 'the time a journey takes', 'negative'],
+      ['a pupil\'s house number', 'their height', 'none'], ['a person\'s shoe size', 'their exam score', 'none'],
     ]);
+    const acc = { positive: ['positive', 'positive correlation'], negative: ['negative', 'negative correlation'], none: ['none', 'no correlation', 'no', 'zero', 'no relationship'] }[c[2]];
+    if (rand(0, 3) === 0) {
+      const up = rand(0, 1);
+      return { question: `On a scatter graph, the line of best fit goes ${up ? 'up' : 'down'} from left to right. Is the correlation positive, negative or none?`, answer: up ? 'positive' : 'negative', accepts: up ? ['positive', 'positive correlation'] : ['negative', 'negative correlation'], hint: 'Up from left to right: both grow together (positive). Down: one grows as the other falls (negative).' };
+    }
+    return { question: `As ${c[0]} goes up, what happens to ${c[1]}? Is the correlation positive, negative or none?`, answer: c[2], accepts: acc,
+      hint: 'Both go up together: positive. One goes up while the other goes down: negative. No pattern: none.' };
   },
 
   // ======================== GRADE 10 ========================
@@ -1286,9 +1308,10 @@ const generators = {
   },
 
   G10_BINOMIAL_THEOREM: () => {
-    const n = rand(3, 5);
-    return { question: `Find the coefficient of x² in (1 + x)^${n}`, answer: (n * (n - 1) / 2).toString(),
-      hint: 'Use C(n, r) = n! / (r!(n-r)!)' };
+    const n = rand(3, 8), r = rand(1, n - 1), k = pick([1, 1, 2, 3]);
+    let c = 1; for (let i = 0; i < r; i++) c = c * (n - i) / (i + 1);
+    return { question: `Find the coefficient of x^${r} in (1 + ${k === 1 ? '' : k}x)^${n}.`, answer: String(c * k ** r),
+      hint: k === 1 ? `C(${n}, ${r}) = ${n}! / (${r}! × ${n - r}!).` : `C(${n}, ${r}) × ${k}^${r}.` };
   },
 
   G10_FUNCTIONS_ADV: () => {
@@ -1300,9 +1323,12 @@ const generators = {
   },
 
   G10_EXPONENTIAL_GRAPHS: () => {
-    const base = rand(2, 3);
-    return { question: `For y = ${base}^x, what is y when x = 0?`, answer: '1',
-      hint: 'Any number raised to the power 0 equals 1' };
+    const b = rand(2, 5), x = rand(0, 4), a = rand(1, 6);
+    return pick([
+      { question: `For y = ${b}^x, what is y when x = ${x}?`, answer: String(b ** x), hint: `${b}^${x} means ${x === 0 ? 'any number to the power 0, which is 1' : `${b} multiplied by itself ${x} times`}.` },
+      { question: `Where does y = ${a} × ${b}^x cross the y-axis? Give the value of y.`, answer: String(a), hint: 'On the y-axis, x = 0, and anything to the power 0 is 1.' },
+      { question: `For y = ${b}^x, what is y when x = −1? Give a fraction.`, answer: `1/${b}`, hint: `A negative power means 1 over: ${b}^−1 = 1/${b}.` },
+    ]);
   },
 
   G10_CIRCLE_THEOREMS_ADV: () => {
@@ -1320,10 +1346,16 @@ const generators = {
   },
 
   G10_TRIG_EQUATIONS: () => {
-    const vals = [{ sin: 0.5, angle: 30 }, { sin: 0.866, angle: 60 }, { cos: 0.5, angle: 60 }];
-    const v = pick(vals);
-    if (v.sin !== undefined) return { question: `Solve sin(θ) = ${v.sin} for 0° ≤ θ ≤ 180°`, answer: `${v.angle}° and ${180 - v.angle}°`, hint: 'Find the first angle from the sine table, then use sin(180° − θ) = sin(θ) for the second.' };
-    return { question: `Solve cos(θ) = ${v.cos} for 0° ≤ θ ≤ 360°`, answer: `${v.angle}° and ${360 - v.angle}°`, hint: 'Find the first angle from the cosine table, then use cos(360° − θ) = cos(θ) for the second.' };
+    const v = pick([
+      { f: 'sin', val: '0.5', a: 30 }, { f: 'sin', val: '√3/2', a: 60 }, { f: 'sin', val: '√2/2', a: 45 },
+      { f: 'cos', val: '0.5', a: 60 }, { f: 'cos', val: '√3/2', a: 30 }, { f: 'cos', val: '√2/2', a: 45 },
+      { f: 'tan', val: '1', a: 45 }, { f: 'tan', val: '√3', a: 60 },
+    ]);
+    const second = v.f === 'sin' ? 180 - v.a : v.f === 'cos' ? 360 - v.a : 180 + v.a;
+    const range = v.f === 'sin' ? '0° ≤ θ ≤ 180°' : '0° ≤ θ ≤ 360°';
+    return { question: `Solve ${v.f}(θ) = ${v.val} for ${range}.`, answer: `${v.a}° and ${second}°`,
+      accepts: [`${v.a}° and ${second}°`, `${v.a} and ${second}`],
+      hint: v.f === 'sin' ? 'sin(180° − θ) = sin(θ) gives the second answer.' : v.f === 'cos' ? 'cos(360° − θ) = cos(θ) gives the second answer.' : 'tan repeats every 180°.' };
   },
 
   G10_SINE_COSINE_RULE: () => {
@@ -1401,9 +1433,15 @@ const generators = {
   },
 
   G11_LINEAR_PROGRAMMING: () => {
-    return { question: `Maximize P = 3x + 2y subject to x + y ≤ 10, x ≥ 0, y ≥ 0. Maximum P at which vertex?`, answer: `(10, 0)`,
-      accepts: ['(10, 0)', '(10,0)', '10,0'],
-      hint: 'Test each vertex of the feasible region' };
+    // Feasible region x + y <= k, x >= 0, y >= 0: vertices (0,0), (k,0), (0,k).
+    const k = rand(4, 15), a = rand(2, 9);
+    let b = rand(2, 9); while (b === a) b = rand(2, 9);
+    const best = a > b ? `(${k}, 0)` : `(0, ${k})`;
+    return rand(0, 1)
+      ? { question: `Maximise P = ${a}x + ${b}y subject to x + y ≤ ${k}, x ≥ 0, y ≥ 0. What is the maximum value of P?`, answer: String(Math.max(a, b) * k),
+          hint: `Test the corners (0, 0), (${k}, 0) and (0, ${k}).` }
+      : { question: `Maximise P = ${a}x + ${b}y subject to x + y ≤ ${k}, x ≥ 0, y ≥ 0. At which corner is P largest?`, answer: best,
+          accepts: [best, best.replace(' ', '')], hint: `Work out P at (0, 0), (${k}, 0) and (0, ${k}).` };
   },
 
   G11_LIMITS: () => {
@@ -1413,10 +1451,12 @@ const generators = {
   },
 
   G11_DIFF_FIRST_PRINCIPLES: () => {
-    const n = rand(2, 4);
-    return { question: `Differentiate f(x) = x^${n} from first principles. What is f'(x)?`, answer: `${n}x^${n - 1}`,
-      accepts: [`${n}x^${n - 1}`, `${n}x^${n-1}`],
-      hint: 'f\'(x) = lim(h→0) [f(x+h) - f(x)] / h' };
+    const n = rand(2, 5), a = rand(1, 6), x = rand(1, 4);
+    const co = a * n, pw = n - 1;
+    const d = pw === 1 ? `${co}x` : `${co}x^${pw}`;
+    return rand(0, 1)
+      ? { question: `Differentiate f(x) = ${a === 1 ? '' : a}x^${n} from first principles. What is f'(x)?`, answer: d, accepts: [d, d.replace('^', '**')], hint: `The limit of [f(x+h) − f(x)] / h works out to ${n} × ${a} x^${pw}.` }
+      : { question: `f(x) = ${a === 1 ? '' : a}x^${n}. Using the derivative from first principles, find the gradient f'(${x}).`, answer: String(co * x ** pw), hint: `f'(x) = ${d}; put x = ${x}.` };
   },
 
   G11_DIFF_POWER_RULE: () => {
@@ -1462,14 +1502,22 @@ const generators = {
   },
 
   G11_TRIG_ADDITION: () => {
-    return { question: `Using sin(A+B) = sinAcosB + cosAsinB, find sin(75°) as sin(45°+30°)`, answer: `(√6+√2)/4`,
-      accepts: ['(√6+√2)/4', '0.966'],
-      hint: 'sin(45+30) = sin45cos30 + cos45sin30' };
+    const [A, B, op] = pick([[45, 30, '+'], [60, 45, '+'], [45, 30, '-'], [60, 45, '-'], [90, 45, '+'], [120, 45, '+']]); // never 90° (cos 90° = 0)
+    const fn = pick(['sin', 'cos']);
+    const ang = op === '+' ? A + B : A - B;
+    const v = (fn === 'sin' ? Math.sin : Math.cos)(ang * Math.PI / 180);
+    const ans = v.toFixed(3);
+    return { question: `Use the ${fn} ${op === '+' ? 'addition' : 'subtraction'} formula to find ${fn}(${ang}°) as ${fn}(${A}° ${op === '+' ? '+' : '−'} ${B}°). Give your answer to 3 decimal places.`, answer: ans,
+      hint: fn === 'sin' ? `sin(A ${op} B) = sinA cosB ${op} cosA sinB` : `cos(A ${op} B) = cosA cosB ${op === '+' ? '−' : '+'} sinA sinB` };
   },
 
   G11_TRIG_DOUBLE_ANGLE: () => {
-    return { question: `If sin(θ) = 3/5, find sin(2θ)`, answer: `24/25`,
-      hint: 'sin(2θ) = 2sin(θ)cos(θ)' };
+    const [a, b, c] = pick([[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25], [20, 21, 29]]);
+    const g = (x, y) => { x = Math.abs(x); while (y) [x, y] = [y, x % y]; return x; };
+    const frac = (n, d) => { const k = g(n, d); return `${n / k}/${d / k}`; };
+    return rand(0, 1)
+      ? { question: `θ is acute and sin(θ) = ${a}/${c}. Find sin(2θ) as a fraction.`, answer: frac(2 * a * b, c * c), hint: `sin(2θ) = 2 sinθ cosθ, and cosθ = ${b}/${c}.` }
+      : { question: `θ is acute and sin(θ) = ${a}/${c}. Find cos(2θ) as a fraction.`, answer: frac(b * b - a * a, c * c), hint: `cos(2θ) = cos²θ − sin²θ, with cosθ = ${b}/${c}.` };
   },
 
   G11_VECTORS_3D: () => {
@@ -1489,9 +1537,13 @@ const generators = {
   },
 
   G11_NORMAL_DISTRIBUTION: () => {
-    return { question: `Normal distribution: mean=100, std=15. What percentage is within 1 standard deviation?`, answer: '68',
-      accepts: ['68', '68%', '68.27'],
-      hint: '68-95-99.7 rule' };
+    const m = pick([50, 60, 100, 120, 170]), sd = pick([2, 4, 5, 10, 15]), k = pick([1, 2, 3]);
+    const pctIn = { 1: '68', 2: '95', 3: '99.7' }[k];
+    return rand(0, 1)
+      ? { question: `Heights are normally distributed with mean ${m} and standard deviation ${sd}. About what percentage lie between ${m - k * sd} and ${m + k * sd}?`, answer: pctIn,
+          accepts: [pctIn, `${pctIn}%`], hint: 'The 68-95-99.7 rule: within 1, 2 and 3 standard deviations of the mean.' }
+      : { question: `Marks are normally distributed with mean ${m} and standard deviation ${sd}. About what percentage are above ${m + k * sd}?`, answer: { 1: '16', 2: '2.5', 3: '0.15' }[k],
+          accepts: [{ 1: '16', 2: '2.5', 3: '0.15' }[k], { 1: '16%', 2: '2.5%', 3: '0.15%' }[k], ...(k === 1 ? ['15.9', '15.85'] : [])], hint: `${pctIn}% lie within ${k} SD of the mean; the rest is split equally between the two tails.` };
   },
 
   // ======================== GRADE 12 ========================
@@ -1551,15 +1603,21 @@ const generators = {
   },
 
   G12_FURTHER_INTEGRATION: () => {
-    return { question: `∫1/x dx = ?`, answer: `ln|x| + C`,
-      accepts: ['ln|x| + C', 'ln(x) + C', 'lnx + C'],
-      hint: '∫(1/x) dx = ln|x| + C' };
+    const k = rand(2, 9);
+    return pick([
+      { question: `Evaluate the integral of ${k}/x dx from x = 1 to x = e.`, answer: String(k), hint: `The integral of ${k}/x is ${k} ln|x|, and ln(e) − ln(1) = 1.` },
+      { question: `Evaluate the integral of eˣ dx from x = 0 to x = ln(${k}).`, answer: String(k - 1), hint: `The integral of eˣ is eˣ: e^(ln ${k}) − e⁰.` },
+      { question: `Evaluate the integral of ${k}/x dx from x = 1 to x = e².`, answer: String(2 * k), hint: `${k} ln|x| from 1 to e²: ln(e²) = 2.` },
+    ]);
   },
 
-  G12_PROOF: () => {
-    return { question: `Prove by mathematical induction: 1 + 2 + ... + n = n(n+1)/2. What is the base case when n=1?`, answer: '1',
-      hint: 'Check: left side = 1, right side = 1(2)/2 = 1' };
-  },
+  G12_PROOF: () => pick([
+    () => { const n = rand(2, 8); return { question: `The sum of the first n odd numbers is n². Check it for n = ${n}: what is 1 + 3 + ... + ${2 * n - 1}?`, answer: String(n * n), hint: `Add them, or use n² with n = ${n}.` }; },
+    () => { const n = rand(2, 9); return { question: `Check 1 + 2 + ... + n = n(n+1)/2 for n = ${n}. What is the sum?`, answer: String(n * (n + 1) / 2), hint: `${n} × ${n + 1} ÷ 2.` }; },
+    () => ({ question: 'In proof by induction, you assume the statement is true for n = k. For which value of n do you then prove it?', answer: 'k+1', accepts: ['k+1', 'k + 1', 'n = k + 1', 'n=k+1'], hint: 'The next one after k.' }),
+    () => ({ question: 'In proof by induction, what is the first case you usually check? n = ?', answer: '1', accepts: ['1', 'n = 1', 'n=1'], hint: 'The base case: the smallest n the statement is about.' }),
+    () => { const n = rand(1, 6); return { question: `Check 2ⁿ − 1 = 1 + 2 + 4 + ... + 2ⁿ⁻¹ for n = ${n}. What is 2^${n} − 1?`, answer: String(2 ** n - 1), hint: `2^${n} = ${2 ** n}.` }; },
+  ])(),
 
   G12_COMPLEX_NUMBERS: () => {
     const a = rand(1, 5), b = rand(1, 5);
@@ -1568,10 +1626,10 @@ const generators = {
   },
 
   G12_PARAMETRIC_EQ: () => {
-    const t = rand(1, 4);
-    return { question: `x = 2t, y = t². Find y in terms of x.`, answer: `y = x²/4`,
-      accepts: ['y = x²/4', 'y=x^2/4', 'y = x²/ 4'],
-      hint: 'Express t in terms of x, substitute into y' };
+    const a = rand(2, 5), b = rand(1, 4), t = rand(1, 6);
+    return rand(0, 1)
+      ? { question: `x = ${a}t and y = ${b}t². Find y when x = ${a * t}.`, answer: String(b * t * t), hint: `First find t from x = ${a}t, then put it into y.` }
+      : { question: `x = t + ${a} and y = ${b}t. Find y when x = ${t + a}.`, answer: String(b * t), hint: `t = x − ${a}.` };
   },
 
   G12_POLAR_COORDS: () => {
@@ -1591,15 +1649,21 @@ const generators = {
   },
 
   G12_HYPOTHESIS_TESTING: () => {
-    return { question: `In a hypothesis test, if p-value = 0.03 and significance level = 0.05, do we reject H₀?`, answer: 'yes',
-      accepts: ['yes', 'reject'],
-      hint: 'Reject H₀ if p-value < significance level' };
+    const alpha = pick([0.01, 0.05, 0.1]);
+    let p = rand(1, 150) / 1000; while (Math.abs(p - alpha) < 1e-9) p = rand(1, 150) / 1000;
+    const reject = p < alpha;
+    return { question: `A test gives a p-value of ${p}. The significance level is ${alpha}. Do we reject H₀? (yes or no)`, answer: reject ? 'yes' : 'no',
+      accepts: reject ? ['yes', 'reject', 'reject h0', 'yes, reject'] : ['no', 'do not reject', "don't reject", 'accept', 'no, do not reject'],
+      hint: 'Reject H₀ when the p-value is smaller than the significance level.' };
   },
 
   G12_CORRELATION_REGRESSION: () => {
-    return { question: `If r = -0.92, describe the correlation.`, answer: 'strong negative',
-      accepts: ['strong negative', 'strong negative correlation'],
-      hint: 'r close to -1 = strong negative, r close to +1 = strong positive' };
+    const r = (rand(0, 1) ? 1 : -1) * rand(5, 98) / 100;
+    const strength = Math.abs(r) >= 0.7 ? 'strong' : Math.abs(r) >= 0.4 ? 'moderate' : 'weak';
+    const dir = r > 0 ? 'positive' : 'negative';
+    return { question: `A correlation coefficient is r = ${r}. Describe the correlation (strong, moderate or weak; positive or negative).`, answer: `${strength} ${dir}`,
+      accepts: [`${strength} ${dir}`, `${strength} ${dir} correlation`, `${strength}, ${dir}`],
+      hint: 'The sign gives the direction. Size: 0.7 to 1 strong, 0.4 to 0.7 moderate, below 0.4 weak.' };
   },
 };
 

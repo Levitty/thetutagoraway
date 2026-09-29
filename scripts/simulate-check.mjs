@@ -43,13 +43,33 @@ const DIAG_MIN = MIN, DIAG_MAX = 20;
 const gradeSpan = (list) => { const g = list.map(s => s.grade); return [Math.min(...g), Math.max(...g)]; };
 const clearedG = (pg, g) => pg[g] && pg[g].t >= 2 && pg[g].c / pg[g].t >= 0.5;
 const failedG = (pg, g) => pg[g] && pg[g].t >= 2 && pg[g].c / pg[g].t < 0.5;
+const STRANDS = args.includes('--strands');
 const pickAt = (list, focus, answeredSet, balances) => {
+  if (STRANDS) return pickAtStrands(list, focus, answeredSet, balances);
   const [gmin, gmax] = gradeSpan(list);
   for (let d = 0; d <= gmax - gmin; d++) {
     for (const g of (d === 0 ? [focus] : [focus - d, focus + d])) {
       const cands = list.filter(s => s.grade === g && !answeredSet.has(s.id));
       if (cands.length) {
         cands.sort((a, b) => (b.critical ? 1 : 0) - (a.critical ? 1 : 0) || Math.abs(balances[a.id] || 0) - Math.abs(balances[b.id] || 0));
+        return cands[0];
+      }
+    }
+  }
+  return null;
+};
+
+// Candidate: within the nearest grade, prefer a topic (strand) asked least so far.
+const pickAtStrands = (list, focus, answeredSet, balances) => {
+  const [gmin, gmax] = gradeSpan(list);
+  const asked = {};
+  for (const id of answeredSet) { const st = SKILLS[id]?.strand; if (st) asked[st] = (asked[st] || 0) + 1; }
+  for (let d = 0; d <= gmax - gmin; d++) {
+    for (const g of (d === 0 ? [focus] : [focus - d, focus + d])) {
+      const cands = list.filter(s => s.grade === g && !answeredSet.has(s.id));
+      if (cands.length) {
+        cands.sort((a, b) => (b.critical ? 1 : 0) - (a.critical ? 1 : 0) || (asked[a.strand] || 0) - (asked[b.strand] || 0)
+          || Math.abs(balances[a.id] || 0) - Math.abs(balances[b.id] || 0));
         return cands[0];
       }
     }

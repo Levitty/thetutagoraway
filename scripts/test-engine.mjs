@@ -16,7 +16,7 @@ import { SAT_SKILLS } from '../src/ai-tutor/satKnowledgeGraph.js';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
 import { propagateCredit } from '../src/ai-tutor/diagnosticEngine.js';
-import { getDiagnosticSkills, computePlacementGrade, getEffectivePlacement } from '../src/ai-tutor/adaptiveEngine.js';
+import { getDiagnosticSkills, computePlacementGrade, getEffectivePlacement, recentMastery } from '../src/ai-tutor/adaptiveEngine.js';
 
 let failures = 0;
 const fail = (msg) => { console.log('  ✗ ' + msg); failures++; };
@@ -97,12 +97,39 @@ const cases = [
   ['short day', 'Tue', { answer: 'Tuesday' }, true],
   ['short month', 'Sept', { answer: 'September' }, true],
   ['ambiguous short', 'Ma', { answer: 'March' }, false],
+  ['superscript power', '3x²', { answer: '3x^2' }, true],
+  ['double-star power', '3x**2', { answer: '3x^2' }, true],
+  ['wrong power', '3x³', { answer: '3x^2' }, false],
+  ['two answers as list', '30, 150', { answer: '30° and 150°' }, true],
+  ['two answers reversed', '150 and 30', { answer: '30° and 150°' }, true],
+  ['two answers with θ =', 'θ = 30° or θ = 150°', { answer: '30° and 150°' }, true],
+  ['one of two answers only', '30', { answer: '30° and 150°' }, false],
+  ['two answers, one wrong', '30, 120', { answer: '30° and 150°' }, false],
+  ['coordinate is not a number', '60', { answer: '(6, 0)' }, false],
+  ['coordinate order matters', '(0, 6)', { answer: '(6, 0)' }, false],
+  ['coordinate without brackets', '6,0', { answer: '(6, 0)' }, true],
+  ['thousands comma still fine', '1,200', { answer: '1200' }, true],
 ];
 for (const [label, user, prob, expect] of cases) {
   const got = checkAnswerMatch(user, prob);
   if (got !== expect) fail(`${label}: got ${got}, expected ${expect}`);
 }
 if (!cases.some(([l, u, p, e]) => checkAnswerMatch(u, p) !== e)) ok(`all ${cases.length} tolerant cases`);
+
+// ---- 4b. Mastery on recent answers ----
+console.log('4b. Mastery on recent answers');
+const Y = true, N = false;
+const mcases = [
+  ['6 right', [Y, Y, Y, Y, Y, Y], true],
+  ['5 answers only', [Y, Y, Y, Y, Y], false],
+  ['early mistakes then 7 of 8', [N, N, N, Y, Y, Y, Y, N, Y, Y, Y, Y], true],
+  ['last answer wrong', [Y, Y, Y, Y, Y, Y, N], false],
+  ['two misses in last 8', [Y, Y, N, Y, N, Y, Y, Y], false],
+  ['slip, then 3 right', [Y, Y, Y, N, Y, Y, Y], true],
+];
+let mfail = 0;
+for (const [label, h, expect] of mcases) if (recentMastery(h, 6) !== expect) { fail(`mastery ${label}: got ${!expect}`); mfail++; }
+if (!mfail) ok(`all ${mcases.length} mastery cases`);
 
 // ---- 5. Per-subject credit propagation ----
 console.log('5. Per-subject credit propagation (Cambridge)');

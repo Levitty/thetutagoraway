@@ -11,6 +11,9 @@
 export function normalizeMath(str) {
   let s = str.toString().trim().toLowerCase();
   s = s.replace(/[−–—]/g, '-');          // unicode minus/dash → hyphen
+  // Superscript powers the way phones type them: x² → x^2, x¹⁰ → x^10.
+  s = s.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, (m) => '^' + [...m].map(c => '⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c)).join(''));
+  s = s.replace(/\*\*/g, '^');           // x**2 → x^2
   // Kid-typed decorations (before spaces collapse, so word boundaries work):
   s = s.replace(/^(ksh|kes|sh|shs)\.?\s+/, '');   // currency prefix
   s = s.replace(/\/[=-]\s*$/, '');                 // Kenyan "4500/=" or "/-"
@@ -39,7 +42,9 @@ const CHILD_UNIT_WORDS = /(percent(age)?|per cent|shillings?|shs?|bob|hours?|hrs
 // quantity; otherwise null (so "A=2, B=1", "(2,5)", "x=3y" fall through to
 // string matching). `child` also strips the unit words a child might add.
 export function mathValue(raw, child = false) {
-  let s = raw.toString().trim().toLowerCase().replace(/[−–—]/g, '-').replace(/,/g, '');
+  // Commas only as thousands separators ("1,200"): "6, 0" is not sixty.
+  let s = raw.toString().trim().toLowerCase().replace(/[−–—]/g, '-').replace(/(\d),(\d{3})(?!\d)/g, '$1$2');
+  if (/\d\s*,\s*\d/.test(s)) return null;
   // Kid-typed decorations that shouldn't change a numeric answer:
   s = s.replace(/^(ksh|kes|sh|shs)\.?\s*/, '');   // currency prefix: "KSh 4500"
   s = s.replace(/\/[=-]$/, '');                    // Kenyan shilling suffix: "4500/=" or "4500/-"
@@ -143,6 +148,21 @@ export function checkAnswerMatch(userAnswer, problem) {
     const u = expandShort(userAnswer.toString().trim());
     if (accepts.some(a => /^[a-z][a-z\s-]*$/i.test(String(a).trim()) && expandShort(String(a).trim()) === u && u.length > 2)) return true;
   }
+
+  // 1e) Several numbers, in any order: "30° and 150°" also as "30, 150",
+  //     "150 and 30", "θ = 30 or θ = 150", "x = -4, x = 6".
+  const numList = (t) => {
+    const x = t.toString().toLowerCase().replace(/[−–—]/g, '-').replace(/°|degrees?/g, '')
+      .replace(/(^|[\s,])[a-zθ]\s*=\s*/g, '$1').replace(/\s+(and|or|&)\s+/g, ',').replace(/;/g, ',');
+    if (!/^[\s\d.,-]+$/.test(x)) return null;
+    const parts = x.split(',').map(v => v.trim()).filter(Boolean);
+    if (parts.length < 2 || parts.some(v => !/^-?\d*\.?\d+$/.test(v))) return null;
+    return parts.map(Number).sort((a, b) => a - b);
+  };
+  const userList = numList(userAnswer);
+  // Only for answers written as a set ("30° and 150°"), never coordinates, where order matters.
+  const isSet = (a) => /\s(and|or)\s|°/.test(String(a));
+  if (userList && accepts.some(a => { if (!isSet(a)) return false; const k = numList(a); return k && k.length === userList.length && k.every((v, i) => Math.abs(v - userList[i]) < 1e-9); })) return true;
 
   // 2) Single-number match by value — covers integers, decimals, fractions,
   //    mixed numbers, %, and units. A typed DECIMAL is graded at the key's
