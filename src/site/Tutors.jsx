@@ -4,7 +4,7 @@ import { supabase } from '../supabase.js';
 import { PaymentModal } from '../PaymentModal.jsx';
 import { startConversation } from '../Messaging.jsx';
 import { requestPush } from '../push.js';
-import { SiteNav, SiteFooter, SiteIcon, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh } from './ui.jsx';
+import { SiteNav, SiteFooter, SiteIcon, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh, photoFirst } from './ui.jsx';
 import { getFocus, setFocus } from './Check.jsx';
 
 const SUBJECTS = ['Mathematics', 'English', 'Kiswahili', 'Physics', 'Chemistry', 'Biology', 'History', 'Geography', 'Computer Science', 'Business Studies'];
@@ -46,6 +46,8 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
       return true;
     })
     .sort((a, b) => {
+      const byPhoto = photoFirst(a, b);
+      if (byPhoto) return byPhoto;
       if (sort === 'price-low') return (a.hourly_rate || 0) - (b.hourly_rate || 0);
       if (sort === 'price-high') return (b.hourly_rate || 0) - (a.hourly_rate || 0);
       return (b.lessons_completed || 0) - (a.lessons_completed || 0);

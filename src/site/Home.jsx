@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { HALF_HOUR_LESSONS } from './features.js';
 import { SKILLS } from '../ai-tutor/knowledgeGraph.js';
-import { SiteNav, SiteFooter, SiteIcon, StandIn, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh } from './ui.jsx';
+import { SiteNav, SiteFooter, SiteIcon, StandIn, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh, photoFirst } from './ui.jsx';
 
 // Real photos for the hero scrapbook go in public/images/home/ and are listed
 // here. Until then the drawn stand-ins show, with no invented names.
@@ -34,7 +34,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
   const skillCount = Object.keys(SKILLS).length;
   const bandCounts = useMemo(() => BANDS.map(b => Object.values(SKILLS).filter(s => s.grade >= b.lo && s.grade <= b.hi).length), []);
   const featured = useMemo(() => [...tutors]
-    .sort((a, b) => (b.lessons_completed || 0) - (a.lessons_completed || 0))
+    .sort((a, b) => photoFirst(a, b) || (b.lessons_completed || 0) - (a.lessons_completed || 0))
     .slice(0, 4), [tutors]);
 
   const go = (e) => {

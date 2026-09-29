@@ -139,4 +139,8 @@ export const gradeLevels = (g) => {
   return [String(g)];
 };
 
+// Tutors with a real profile photo are listed first: parents trust a face.
+export const hasPhoto = (t) => !!(t?.profiles?.avatar_url && String(t.profiles.avatar_url).trim());
+export const photoFirst = (a, b) => Number(hasPhoto(b)) - Number(hasPhoto(a));
+
 export const ksh = (n) => `KSh ${Math.round(Number(n) || 0).toLocaleString('en-KE')}`;
