@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test:engine": "node scripts/test-engine.mjs"
+    "test:engine": "node scripts/test-engine.mjs",
+    "build:report-fn": "node scripts/build-weekly-report-fn.mjs"
   },
   "dependencies": {
     "@fontsource-variable/plus-jakarta-sans": "^5.3.0",

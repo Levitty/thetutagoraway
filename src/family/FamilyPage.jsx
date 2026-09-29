@@ -11,9 +11,12 @@ import { supabase } from '../supabase';
 import { Shell, Header, Card, Eyebrow, PrimaryButton, BackIcon, LearnerAvatar } from './StudentSpace.jsx';
 import { isOlderLearner, getLook } from './studentMode.js';
 import { weekDates } from '../ai-tutor/gamification.js';
+import { SKILLS as MATH_SKILLS } from '../ai-tutor/knowledgeGraph.js';
+import { buildWeeklyReport, normalisePhone } from './weeklyReport.js';
 import {
   MESSAGE_PRESETS, REWARD_PRESETS, SIGN_OFFS, isMissingTable, getSignOff, setSignOff,
   sendMessage, lastMessage, markSeen, getGoal, saveGoal, removeGoal, learnerPracticeDays,
+  getReportSettings, saveReportSettings, recentReports, sendTestReport, learnerReportData,
 } from './family.js';
 
 const firstName = (n) => (n || '').trim().split(/\s+/)[0] || '';
@@ -72,6 +75,15 @@ const ChildPanel = ({ parentId, kid, onMissingTables }) => {
   const [status, setStatus] = useState('');
   const [err, setErr] = useState('');
   const [busy, setBusy] = useState(false);
+  const [preview, setPreview] = useState(null);
+
+  const showPreview = async () => {
+    if (preview) { setPreview(null); return; }
+    try {
+      const d = await learnerReportData(parentId, kid.id);
+      setPreview(buildWeeklyReport({ name: kid.name, ...d, goal, skillName: (id) => MATH_SKILLS[id]?.name || id }).text);
+    } catch { setErr("Couldn't build the preview. Check your connection."); }
+  };
 
   const fail = useCallback((e) => {
     if (isMissingTable(e)) onMissingTables();
@@ -181,8 +193,132 @@ const ChildPanel = ({ parentId, kid, onMissingTables }) => {
         )}
       </div>
 
+      {/* Sunday report preview */}
+      <div className="border-t border-slate-100 pt-4 space-y-3">
+        <button onClick={showPreview} className="text-[13px] font-semibold text-[#6d6fcb]">
+          {preview ? 'Hide the Sunday report' : `Preview ${n}'s Sunday report`}
+        </button>
+        {preview && (
+          <div className="bg-[#efe7dd] rounded-2xl p-3">
+            <div className="bg-white rounded-[0_12px_12px_12px] px-3 py-2.5 text-[13.5px] leading-relaxed text-[#111b21] whitespace-pre-line shadow-sm">{preview}</div>
+          </div>
+        )}
+      </div>
+
       <div aria-live="polite" className="text-[13px] font-semibold">
         {err ? <span className="text-[#c0663f]">{err}</span> : status ? <span className="text-[#5a7a3a]">{status}</span> : null}
+      </div>
+    </Card>
+  );
+};
+
+// ---- Sunday report settings ----------------------------------------------
+
+const ReportSettings = ({ parentId, kids, onMissingTables }) => {
+  const [settings, setSettings] = useState(undefined);  // undefined = loading
+  const [editing, setEditing] = useState(false);
+  const [phone, setPhone] = useState('');
+  const [channel, setChannel] = useState('whatsapp');
+  const [agree, setAgree] = useState(false);
+  const [history, setHistory] = useState([]);
+  const [msg, setMsg] = useState({ ok: '', err: '' });
+  const [busy, setBusy] = useState(false);
+
+  useEffect(() => {
+    getReportSettings(parentId)
+      .then(sv => { setSettings(sv); if (sv) { setPhone(sv.phone); setChannel(sv.channel); } else setEditing(true); })
+      .catch(e => { setSettings(null); if (isMissingTable(e)) onMissingTables(); });
+    recentReports(parentId).then(setHistory).catch(() => {});
+  }, [parentId, onMissingTables]);
+
+  const save = async (active = true) => {
+    const e164 = normalisePhone(phone);
+    if (!e164) { setMsg({ ok: '', err: 'Enter a mobile number, for example 0712 345 678.' }); return; }
+    if (!settings && !agree) { setMsg({ ok: '', err: 'Tick the box to agree to the weekly message.' }); return; }
+    setBusy(true); setMsg({ ok: '', err: '' });
+    try {
+      const sv = await saveReportSettings(parentId, { phone: e164, channel, active });
+      setSettings(sv); setPhone(sv.phone); setEditing(false);
+      setMsg({ ok: active ? 'Saved. Your first report arrives on Sunday evening.' : 'Weekly reports turned off.', err: '' });
+    } catch (e) {
+      if (isMissingTable(e)) onMissingTables(); else setMsg({ ok: '', err: "Couldn't save. Check your connection and try again." });
+    }
+    setBusy(false);
+  };
+
+  const test = async () => {
+    setBusy(true); setMsg({ ok: '', err: '' });
+    try {
+      const r = await sendTestReport();
+      const sent = (r.results || []).filter(x => x.status === 'sent').length;
+      setMsg(sent ? { ok: `Sent ${sent} ${sent === 1 ? 'report' : 'reports'} to ${settings.phone}.`, err: '' } : { ok: '', err: 'Nothing was sent. Check the number and try again later.' });
+    } catch (e) {
+      setMsg({ ok: '', err: /(not|isn't) set up|non-2xx|Failed to send|Failed to fetch/i.test(e.message) ? "Sending isn't switched on yet. Your settings are saved, and reports will start once it is." : e.message });
+    }
+    setBusy(false);
+  };
+
+  const kidName = (id) => firstName(kids.find(k => k.id === id)?.name) || 'Child';
+
+  return (
+    <Card className="space-y-3">
+      <Eyebrow tone="text-[#5a7a3a]">Sunday report</Eyebrow>
+      <div className="text-[16px] font-extrabold tracking-tight">A short message every Sunday evening</div>
+      <p className="text-sm text-slate-500">For each child: days practised, skills mastered, what they are finding hard and how the goal is going. You don't need to open the app.</p>
+
+      {settings === undefined && <div className="text-sm text-slate-400">Loading…</div>}
+
+      {settings && !editing && (
+        <>
+          <div className="text-[14px] font-semibold">
+            {settings.active ? `Goes to ${settings.phone} by ${settings.channel === 'whatsapp' ? 'WhatsApp' : 'SMS'}.` : 'Turned off.'}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <Chip onClick={() => setEditing(true)}>Change number</Chip>
+            <Chip onClick={() => save(!settings.active)} disabled={busy}>{settings.active ? 'Turn off' : 'Turn on'}</Chip>
+            {settings.active && <Chip onClick={test} disabled={busy}>Send me a test now</Chip>}
+          </div>
+        </>
+      )}
+
+      {editing && (
+        <div className="space-y-3">
+          <label className="block text-[12.5px] font-bold text-slate-700">Your mobile number
+            <input value={phone} onChange={e => setPhone(e.target.value)} inputMode="tel" placeholder="0712 345 678"
+              className="mt-1.5 w-full bg-white border-[1.5px] border-slate-200 rounded-xl px-3 py-2.5 text-[15px] font-semibold focus:outline-none focus:border-[#6d6fcb]" />
+          </label>
+          <div className="flex flex-wrap items-center gap-2 text-[13px] text-slate-500">
+            Send by
+            <Chip active={channel === 'whatsapp'} onClick={() => setChannel('whatsapp')}>WhatsApp</Chip>
+            <Chip active={channel === 'sms'} onClick={() => setChannel('sms')}>SMS</Chip>
+          </div>
+          {!settings && (
+            <label className="flex gap-2.5 items-start text-[13.5px] text-slate-600">
+              <input type="checkbox" checked={agree} onChange={e => setAgree(e.target.checked)} className="mt-1 w-4 h-4 accent-[#6d6fcb]" />
+              <span>I agree to get one message a week from Tutagora about my children's practice. I can turn it off here at any time.</span>
+            </label>
+          )}
+          <PrimaryButton onClick={() => save(true)} disabled={busy}>{busy ? 'Saving…' : 'Save'}</PrimaryButton>
+          {settings && <button onClick={() => { setEditing(false); setPhone(settings.phone); setChannel(settings.channel); }} className="text-[13px] font-semibold text-slate-500">Cancel</button>}
+        </div>
+      )}
+
+      {history.length > 0 && (
+        <div className="border-t border-slate-100 pt-3 space-y-1">
+          <div className="text-[12px] font-bold uppercase tracking-[.06em] text-slate-400">Recent reports</div>
+          {history.map(h => (
+            <div key={h.id} className="flex justify-between text-[13px]">
+              <span className="text-slate-600">{kidName(h.learner_id)} · week of {h.week_start}</span>
+              <span className={h.status === 'sent' ? 'text-[#5a7a3a] font-semibold' : h.status === 'failed' ? 'text-[#c0663f] font-semibold' : 'text-slate-400'}>
+                {h.status === 'sent' ? 'Sent' : h.status === 'failed' ? 'Not delivered' : 'Not sent'}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div aria-live="polite" className="text-[13px] font-semibold">
+        {msg.err ? <span className="text-[#c0663f]">{msg.err}</span> : msg.ok ? <span className="text-[#5a7a3a]">{msg.ok}</span> : null}
       </div>
     </Card>
   );
@@ -211,7 +347,7 @@ export const FamilyPage = ({ user, onBack, onHandOver }) => {
       {missing && (
         <Card className="border-amber-300 bg-amber-50">
           <div className="font-bold text-[14px]">One database update needed</div>
-          <p className="text-[13.5px] text-slate-600 mt-1">Messages and goals need two new tables. Run the latest SQL update in Supabase, then reopen this page.</p>
+          <p className="text-[13.5px] text-slate-600 mt-1">Some of this page needs new database tables. Run the latest SQL update in Supabase, then reopen this page.</p>
         </Card>
       )}
       {kids === null && <div className="text-center text-sm text-slate-400 py-6">Loading…</div>}
@@ -222,6 +358,7 @@ export const FamilyPage = ({ user, onBack, onHandOver }) => {
           <PrimaryButton onClick={onHandOver}>Hand over to your child</PrimaryButton>
         </Card>
       )}
+      {kids && kids.length > 0 && <ReportSettings parentId={user.id} kids={kids} onMissingTables={onMissingTables} />}
       {kids?.map(k => <ChildPanel key={k.id} parentId={user.id} kid={k} onMissingTables={onMissingTables} />)}
     </Shell>
   );
