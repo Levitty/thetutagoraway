@@ -469,7 +469,7 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
                 </div>
               )}
 
-              {note && <div className="absolute left-1/2 -translate-x-1/2 top-16 z-30 px-4 py-2 rounded-full text-sm font-bold text-white shadow-lg whitespace-nowrap" style={{ background: C.ink }}>{note}</div>}
+              {note && <div className="absolute left-1/2 -translate-x-1/2 bottom-[112px] lg:bottom-4 z-30 px-4 py-2 rounded-full text-sm font-bold text-white shadow-lg whitespace-nowrap" style={{ background: C.ink }}>{note}</div>}
             </div>
 
             {/* Desktop: faces and chat beside the board. */}

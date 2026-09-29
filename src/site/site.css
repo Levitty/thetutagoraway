@@ -522,3 +522,43 @@
 .tg .passbar b { display: block; font-size: 16px; }
 .tg .passbar span { font-size: 14px; color: var(--ink2); font-weight: 600; }
 .tg .passbar.warn { background: #ffe6c7; }
+
+/* Homepage: Why Tutagora */
+.tg .why { background: #fff8ec; }
+.tg .whys { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 34px; }
+.tg .whys .w { background: #fff; border-radius: 12px; padding: 22px; border: 1.5px solid #f1e6d2; }
+.tg .whys .ic { width: 44px; height: 44px; border-radius: 12px; background: #ffc53d; display: grid; place-items: center; color: var(--ink); }
+.tg .whys .ic .i { width: 22px; height: 22px; }
+.tg .whys h3 { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -.02em; line-height: 1.1; margin: 14px 0 8px; }
+.tg .whys p { margin: 0; color: var(--ink2); font-size: 15.5px; }
+
+/* Homepage: a live lesson */
+.tg .lesson .ticks { list-style: none; padding: 0; margin: 22px 0 28px; display: grid; gap: 12px; }
+.tg .lesson .ticks li { display: flex; gap: 10px; align-items: flex-start; font-weight: 700; font-size: 17px; }
+.tg .lesson .ticks .i { color: #ffc53d; width: 22px; height: 22px; margin-top: 1px; }
+.tg .lesson .shot { margin: 0; border-radius: 14px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); border: 1px solid rgba(255,255,255,.12); }
+.tg .lesson .shot img { display: block; width: 100%; height: auto; }
+
+/* Homepage: prices */
+.tg .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 34px; }
+.tg .plans .pl { border: 2px solid var(--line); border-radius: 12px; padding: 24px; background: #fff; }
+.tg .plans .pl.hot { border-color: var(--ink); background: #fff3d1; }
+.tg .plans h3 { margin: 0; font-size: 17px; }
+.tg .plans .amt { font-family: var(--display); font-weight: 900; font-size: 34px; letter-spacing: -.03em; margin: 8px 0 10px; }
+.tg .plans .amt small { font-family: var(--body); font-size: 15px; font-weight: 700; color: var(--mute); letter-spacing: 0; }
+.tg .plans p { margin: 0; color: var(--ink2); }
+
+/* Tutor cards: next free time */
+.tg .tc .nf { font-size: 13.5px; font-weight: 700; color: #14532d; background: #e7f6ee; border-radius: 999px; padding: 4px 10px; align-self: flex-start; }
+
+@media (max-width: 1000px) {
+  .tg .whys { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tg .plans { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .tg .whys { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .tg .lesson .shot { max-width: 300px; margin-inline: auto; border-radius: 22px; }
+  .tg .tc .pic { aspect-ratio: 4 / 3; }
+}

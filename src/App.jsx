@@ -297,7 +297,7 @@ const PrivacyPolicyPage = ({ onBack }) => (
         <section>
           <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">1. Data Controller</h2>
           <p>Tutagora Ltd ("Tutagora", "we", "us") is the data controller responsible for your personal data. We are registered in Kenya and operate the platform at tutagora.com.</p>
-          <p><strong>Contact:</strong> tutaeducators@gmail.com | +254 759 240 692 | Nairobi, Kenya</p>
+          <p><strong>Contact:</strong> hello@tutagora.com | +254 759 240 692 | Nairobi, Kenya</p>
         </section>
 
         <section>
@@ -334,7 +334,7 @@ const PrivacyPolicyPage = ({ onBack }) => (
         <section>
           <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">7. Your Rights</h2>
           <p>Under the Kenya Data Protection Act, 2019 (Part IV), you have the right to: access your personal data; rectify inaccurate data; request erasure of your data (right to be forgotten); request a portable copy of your data; object to processing of your data; and withdraw consent at any time.</p>
-          <p>To exercise any of these rights, email us at <strong>levitty@tutagora.com</strong> or use the account settings in your dashboard. We will respond within 30 days.</p>
+          <p>To exercise any of these rights, email us at <strong>hello@tutagora.com</strong> or use the account settings in your dashboard. We will respond within 30 days.</p>
         </section>
 
         <section>
@@ -426,7 +426,7 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
       URL.revokeObjectURL(url);
       setMessage('Your data has been downloaded.');
     } catch (err) {
-      setMessage('Error exporting data. Please try again or contact levitty@tutagora.com');
+      setMessage('Error exporting data. Please try again or contact hello@tutagora.com');
     }
     setExporting(false);
   };
@@ -486,7 +486,7 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
       onLogout();
       alert('Your account has been deleted. Some anonymized records may be retained for legal compliance.');
     } catch (err) {
-      setMessage('Error deleting account. Please contact levitty@tutagora.com for assistance.');
+      setMessage('Error deleting account. Please contact hello@tutagora.com for assistance.');
       setDeleting(false);
     }
   };
@@ -618,14 +618,14 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
                 <button key={p.id} type="button" role="radio" aria-checked={plan === p.id} onClick={() => setPlan(p.id)}
                   className={`text-left rounded-2xl p-4 border-2 transition-colors ${plan === p.id ? 'border-slate-900 bg-amber-50' : 'border-slate-200 bg-white'}`}>
                   <div className="text-[13px] font-bold text-slate-500">{p.label}</div>
-                  <div className="text-[24px] font-extrabold tracking-tight text-slate-900 mt-0.5">KES {p.kes}</div>
+                  <div className="text-[24px] font-extrabold tracking-tight text-slate-900 mt-0.5">KSh {p.kes}</div>
                   <div className="text-[12px] font-semibold text-slate-500 mt-1 leading-snug">{p.note || 'Pay as you go'}</div>
                 </button>
               ))}
             </div>
             {err && <div className="mt-3 text-[13.5px] text-[#b3261e] leading-snug">{err}</div>}
             <button onClick={pay} disabled={busy} className="w-full mt-5 bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-slate-900 rounded-2xl py-3.5 font-bold text-[15px] transition-colors">
-              {busy ? 'Opening M-Pesa…' : `Pay KES ${PLANS[plan].kes} with M-Pesa or card`}
+              {busy ? 'Opening M-Pesa…' : `Pay KSh ${PLANS[plan].kes} with M-Pesa or card`}
             </button>
             <button onClick={onClose} className="w-full mt-2 text-slate-500 text-sm font-semibold py-2">Not now</button>
           </>
@@ -1294,7 +1294,7 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
             return (
               <div className={`passbar ${left > 2 ? '' : 'warn'}`}>
                 <div><b>{left > 0 ? (trial ? `Free week: ${left} day${left === 1 ? '' : 's'} left` : `Practice pass: ${left} day${left === 1 ? '' : 's'} left`) : 'Practice is paused'}</b>
-                  <span>{left > 0 ? (trial ? `Then KES ${PLANS.week.kes} a week or KES ${PLANS.month.kes} a month.` : 'Every child on your account can practise.') : 'Get a pass to keep the daily 15 minutes going.'}</span></div>
+                  <span>{left > 0 ? (trial ? `Then KSh ${PLANS.week.kes} a week or KSh ${PLANS.month.kes} a month.` : 'Every child on your account can practise.') : 'Get a pass to keep the daily 15 minutes going.'}</span></div>
                 {(left <= 2) && <button type="button" className="btn sm" onClick={onGetPass}>{left > 0 ? 'Get a pass' : 'Get a pass'}</button>}
               </div>
             );
@@ -5197,9 +5197,9 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>📧 tutaeducators@gmail.com</li>
-                <li>📱 +254 759 240 692</li>
-                <li>📍 Nairobi, Kenya</li>
+                <li>hello@tutagora.com</li>
+                <li>+254 759 240 692</li>
+                <li>Nairobi, Kenya</li>
               </ul>
             </div>
           </div>

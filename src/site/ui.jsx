@@ -66,7 +66,7 @@ export const SiteFooter = ({ onNavigate }) => (
     <div className="in">
       <div>
         <div className="logo" style={{ cursor: 'default' }}>tutagora<i /></div>
-        <div style={{ marginTop: 8 }}>Nairobi, Kenya · tutaeducators@gmail.com · WhatsApp 0759 240 692</div>
+        <div style={{ marginTop: 8 }}>Nairobi, Kenya · hello@tutagora.com · WhatsApp 0759 240 692</div>
       </div>
       <nav aria-label="Footer">
         <button type="button" onClick={() => onNavigate('tutors')}>Find a tutor</button>

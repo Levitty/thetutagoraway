@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 import { SiteNav, SiteFooter, SiteIcon } from './site/ui.jsx';
 
 const WA = 'https://wa.me/254759240692?text=Hi%20Tutagora%20%E2%80%94%20I%27d%20like%20a%20demo%20for%20my%20school';
-const MAIL = 'mailto:tutaeducators@gmail.com?subject=Tutagora%20for%20Schools%20%E2%80%94%20demo%20request';
+const MAIL = 'mailto:hello@tutagora.com?subject=Tutagora%20for%20Schools%20%E2%80%94%20demo%20request';
 const PER_LEARNER = 50;
 
 // An example of the teacher's screen. Names and gaps are illustrative.
@@ -92,7 +92,7 @@ export default function SchoolsPage({ onNavigate, onSignIn, user }) {
           <details open><summary>What devices do learners need?</summary><p>Any phone or tablet with a browser. Many schools use a shared set of tablets for the check and let learners practise at home.</p></details>
           <details><summary>Does it follow the CBC?</summary><p>Yes. 276 maths skills from Grade 1 to 12 are mapped to the CBC, plus Cambridge.</p></details>
           <details><summary>Can we see it first?</summary><p>Yes. Book a demo and we'll set up one class, so you see it with your own learners before you decide.</p></details>
-          <details><summary>How do we get in touch?</summary><p>WhatsApp 0759 240 692, or email <a href={MAIL}>tutaeducators@gmail.com</a>.</p></details>
+          <details><summary>How do we get in touch?</summary><p>WhatsApp 0759 240 692, or email <a href={MAIL}>hello@tutagora.com</a>.</p></details>
         </div>
       </div></section>
 

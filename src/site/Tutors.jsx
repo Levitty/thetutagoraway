@@ -28,7 +28,7 @@ const DAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const fmtTime = (hhmm) => { const [h] = hhmm.split(':').map(Number); const ap = h >= 12 ? 'pm' : 'am'; return `${((h + 11) % 12) + 1}:00 ${ap}`; };
 // The tutor's next open hour in the coming week, from their weekly hours.
 // (Booked slots aren't known here; the profile page hides those.)
-const nextFree = (t) => {
+export const nextFree = (t) => {
   if (!Array.isArray(t.availability) || !t.availability.length) return null;
   const now = new Date();
   for (let i = 0; i < 8; i++) {

@@ -18,7 +18,7 @@ export const PAYWALL_START_ISO = '2026-12-31'; // paid practice starts on this d
 export const FREE_DAYS = 7;
 export const PLANS = {
   week: { id: 'week', kes: 100, days: 7, label: '1 week' },
-  month: { id: 'month', kes: 350, days: 30, label: '1 month', note: 'About KES 82 a week' },
+  month: { id: 'month', kes: 350, days: 30, label: '1 month', note: 'About KSh 82 a week' },
 };
 // Kept for older screens that show a single price.
 export const PRICE_KES = PLANS.week.kes;
