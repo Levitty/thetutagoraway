@@ -1194,6 +1194,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
           {/* Onboarding — class + curriculum anchor the check to the student */}
           <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-5">
+            {/* The grade is already known when a parent set it; don't ask the child. */}
+            {!(lockedLearner && autoStartGrade) && <>
             <p className="text-sm font-semibold text-slate-800 mb-2">What {(sub?.gradeLabel || 'grade').toLowerCase()} are you in?</p>
             <div className="flex flex-wrap gap-2">
               {(sub?.grades || []).map(g => (
@@ -1203,9 +1205,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 </button>
               ))}
             </div>
+            </>}
             {curriculaOptions.length > 1 && (
               <>
-                <p className="text-sm font-semibold text-slate-800 mt-4 mb-2">Which curriculum does your school follow?</p>
+                <p className={`text-sm font-semibold text-slate-800 ${lockedLearner && autoStartGrade ? '' : 'mt-4'} mb-2`}>Which curriculum does your school follow?</p>
                 <div className="flex flex-wrap gap-2">
                   {choosableCurricula.map(co => (
                     <button key={co.id} onClick={() => setProgress(p => ({ ...p, curriculum: co.id }))}

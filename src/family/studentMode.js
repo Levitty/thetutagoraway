@@ -150,3 +150,11 @@ export const openChildLink = async (token) => {
   lsSet(MODE_KEY, JSON.stringify(m));
   return m;
 };
+
+// ---- A family tablet ---------------------------------------------------------
+// A device the parent has signed in on and set aside for the children. It
+// opens on "Who's practising?"; the parent side is behind the parent PIN.
+const FAMILY_KEY = 'tg_family_device';
+export const getFamilyDevice = () => { try { return JSON.parse(lsGet(FAMILY_KEY) || 'null'); } catch { return null; } };
+export const setFamilyDevice = (parentId) => lsSet(FAMILY_KEY, JSON.stringify({ parentId, since: Date.now() }));
+export const clearFamilyDevice = () => lsDel(FAMILY_KEY);

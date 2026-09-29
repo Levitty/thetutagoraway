@@ -22,9 +22,9 @@ import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Icon } from './ai-tutor/components/Icons.jsx';
 import { Writing } from './writing/Writing.jsx';
-import { HandOver, StudentHome, PinGate } from './family/StudentSpace.jsx';
+import { HandOver, StudentHome, PinGate, WhoIsPractising, FamilyTabletSetup } from './family/StudentSpace.jsx';
 import { TabletLinkSheet, TabletLinkPage } from './family/ChildTablet.jsx';
-import { getStudentMode, startStudentMode, endStudentMode, isOlderLearner, gradeNumber, hasPin } from './family/studentMode.js';
+import { getStudentMode, startStudentMode, endStudentMode, isOlderLearner, gradeNumber, hasPin, getFamilyDevice, clearFamilyDevice } from './family/studentMode.js';
 import { FamilyPage, FamilyCards } from './family/FamilyPage.jsx';
 import './site/site.css';
 import SiteHome from './site/Home.jsx';
@@ -1136,7 +1136,7 @@ const MomentumChip = ({ userId, onClick }) => {
 // The signed-in family's home (web). Parents first: their children, handing
 // over the phone, and lessons. Students use the same screen without the
 // children section. On the public site's coral design.
-const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings, onStartPractice }) => {
+const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings, onStartPractice, familyTablet = false, onFamilyTablet, onLockFamilyTablet, onStopFamilyTablet }) => {
   const [tab, setTab] = useState('upcoming');
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [reviewBooking, setReviewBooking] = useState(null);
@@ -1330,6 +1330,15 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
                   <button type="button" className="btn" onClick={addChild} disabled={!newChildName.trim()}>Add</button>
                   <button type="button" className="linkbtn" onClick={() => { setAdding(false); setNewChildName(''); }}>Cancel</button>
                 </div>
+              )}
+              {children.length > 0 && (
+                <p className="muted" style={{ margin: '0 0 12px', fontWeight: 600 }}>
+                  {familyTablet ? (
+                    <>This is the children's tablet. <button type="button" className="linkbtn" onClick={onLockFamilyTablet}>Lock and hand it over</button> · <button type="button" className="linkbtn" onClick={onStopFamilyTablet}>Stop using it for the children</button></>
+                  ) : (
+                    <>Children share a tablet? <button type="button" className="linkbtn" onClick={onFamilyTablet}>Make this the children's tablet</button></>
+                  )}
+                </p>
               )}
               {children.length > 0 && (
                 <div className="kids">
@@ -7116,6 +7125,7 @@ function AppInner() {
     if (path === 'spreadsheet') return 'spreadsheet';
     if (path === 'admin') return 'admin';
     if (path === 'handover') return 'handover';
+    if (path === 'family-tablet') return 'family-tablet';
     if (path === 'family') return 'family';
     if (path === 'check' || path === 'check-result') return path;
     if (path === 'privacy') return 'privacy';
@@ -7142,6 +7152,12 @@ function AppInner() {
   // lives on the device, so it survives restarts until the parent PIN is entered.
   const [studentMode, setStudentMode] = useState(() => getStudentMode());
   const [showPinGate, setShowPinGate] = useState(false);
+  // Family tablet: this device opens on "Who's practising?"; the parent side
+  // needs the parent PIN, once per visit.
+  const [familyDevice, setFamilyDevice] = useState(() => getFamilyDevice());
+  const [parentUnlocked, setParentUnlocked] = useState(false);
+  const [showParentGate, setShowParentGate] = useState(false);
+  const isFamilyTablet = !!(familyDevice && auth.user && !auth.user.is_anonymous && familyDevice.parentId === auth.user.id);
   const [showPrivacyBanner, setShowPrivacyBanner] = useState(() => !IS_NATIVE && !localStorage.getItem('tutagora_privacy_accepted'));
 
   // Admin emails — ONLY these accounts can access the admin dashboard
@@ -7166,6 +7182,11 @@ function AppInner() {
     if (auth.loading || !studentMode) return;
     const owner = studentMode.tablet ? studentMode.deviceUid : studentMode.parentId;
     if (!auth.user || auth.user.id !== owner) { endStudentMode(); setStudentMode(null); }
+  }, [auth.loading, auth.user?.id]);
+
+  // Signing out ends the children's tablet on this device.
+  useEffect(() => {
+    if (!auth.loading && !auth.user && familyDevice) { clearFamilyDevice(); setFamilyDevice(null); }
   }, [auth.loading, auth.user?.id]);
 
   // Keep the document's title / description / canonical in step with the route.
@@ -7298,15 +7319,37 @@ function AppInner() {
       onReady={(m) => { setStudentMode(m); handleNavigate('ai'); }} />;
   }
 
+  // Setting this device up as the children's tablet.
+  if (page === 'family-tablet' && auth.user && !auth.user.is_anonymous) {
+    return <FamilyTabletSetup user={auth.user} onCancel={() => handleNavigate('dashboard')}
+      onDone={() => { setFamilyDevice(getFamilyDevice()); setParentUnlocked(false); handleNavigate('dashboard'); }} />;
+  }
+
+  // The children's tablet: each child taps their own name; the parent side is
+  // behind the parent PIN.
+  if (isFamilyTablet && !studentMode && !parentUnlocked) {
+    return (<>
+      <WhoIsPractising user={auth.user}
+        onPick={(k) => { setStudentMode(startStudentMode(auth.user.id, k)); handleNavigate('ai'); }}
+        onParent={() => hasPin().then(p => { if (p) setShowParentGate(true); else { setParentUnlocked(true); handleNavigate('dashboard'); } }).catch(() => setShowParentGate(true))} />
+      {showParentGate && <PinGate userId={auth.user.id} learnerName={null}
+        onCancel={() => setShowParentGate(false)}
+        onUnlock={() => { setShowParentGate(false); setParentUnlocked(true); handleNavigate('dashboard'); }}
+        onSignOut={() => { setShowParentGate(false); clearFamilyDevice(); setFamilyDevice(null); handleLogout(); }} />}
+    </>);
+  }
+
   // ---- Student mode: only the child's space is reachable ----
   if (studentMode && auth.user) {
     const onTablet = !!studentMode.tablet;
     const learner = { id: studentMode.learnerId, name: studentMode.name, grade: studentMode.grade };
     const backToSpace = () => handleNavigate('student');
     // Back to the parent: straight away, unless the parent has set a PIN.
-    const leaveStudentMode = () => hasPin()
+    const leaveStudentMode = () => (isFamilyTablet
+      ? Promise.resolve(endStudentMode()).then(() => setStudentMode(null)) // back to "Who's practising?"
+      : hasPin()
       .then(p => { if (p) setShowPinGate(true); else { endStudentMode(); setStudentMode(null); handleNavigate('dashboard'); } })
-      .catch(() => setShowPinGate(true));
+      .catch(() => setShowPinGate(true)));
     const gate = showPinGate && (
       <PinGate userId={auth.user.id} learnerName={studentMode.name}
         onCancel={() => setShowPinGate(false)}
@@ -7326,7 +7369,7 @@ function AppInner() {
     return (<>
       <StudentHome mode={studentMode} bookings={bookings}
         onPractice={() => handleNavigate('ai')} onWriting={onTablet ? null : () => handleNavigate('writing')}
-        onJoin={handleStartLesson} onLock={onTablet ? null : leaveStudentMode}
+        onJoin={handleStartLesson} onLock={onTablet ? null : leaveStudentMode} lockLabel={isFamilyTablet ? 'Done' : 'Back to parent'}
         extra={onTablet ? null : <FamilyCards parentId={auth.user.id} learnerId={studentMode.learnerId} name={studentMode.name} older={isOlderLearner(studentMode.grade)} />} />
       {gate}
     </>);
@@ -7519,7 +7562,10 @@ function AppInner() {
     return (
       <>
         <StudentDashboard key={dashKey} profile={auth.profile} user={auth.user} subscription={auth.subscription} onGetPass={() => setShowPaywall(true)} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)}
-          onStartPractice={(c) => { setStudentMode(startStudentMode(auth.user.id, c)); handleNavigate('ai'); }} />
+          onStartPractice={(c) => { setStudentMode(startStudentMode(auth.user.id, c)); handleNavigate('ai'); }}
+          familyTablet={isFamilyTablet} onFamilyTablet={() => handleNavigate('family-tablet')}
+          onLockFamilyTablet={() => { setParentUnlocked(false); window.scrollTo(0, 0); }}
+          onStopFamilyTablet={() => { clearFamilyDevice(); setFamilyDevice(null); }} />
         {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
         {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
         {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}

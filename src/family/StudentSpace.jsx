@@ -15,7 +15,7 @@ import { supabase } from '../supabase';
 import { HorebBot } from '../ai-tutor/HorebBot.jsx';
 import {
   startStudentMode, isOlderLearner, getLook, setLook,
-  hasPin, setPin, checkPin, pinLockedFor,
+  hasPin, setPin, checkPin, pinLockedFor, setFamilyDevice,
 } from './studentMode.js';
 
 const firstName = (n) => (n || '').trim().split(/\s+/)[0] || '';
@@ -303,7 +303,7 @@ const prettyDate = (d) => {
   return dt.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' });
 };
 
-export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onLock, extra = null }) => {
+export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onLock, lockLabel = 'Back to parent', extra = null }) => {
   const [look, setLookState] = useState(() => getLook(mode.learnerId));
   if (!look) return <LookPicker mode={mode} onDone={setLookState} />;
 
@@ -322,7 +322,7 @@ export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onL
         <LearnerAvatar name={mode.name} look={look} size={34} />
         <h1 className="flex-1 min-w-0 text-[17px] font-extrabold tracking-tight truncate">{older ? n : `${n}'s space`}</h1>
         {onLock && <button onClick={onLock}
-          className="h-9 px-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-[13px] font-bold">Back to parent</button>}
+          className="h-9 px-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-[13px] font-bold">{lockLabel}</button>}
       </Header>
     }>
       <div className="flex items-center gap-3 pt-1">
@@ -406,7 +406,7 @@ export const PinGate = ({ userId, learnerName, onUnlock, onCancel, onSignOut }) 
       </Header>
       <div className="app-scroll">
         <div className="max-w-sm mx-auto px-4 pt-8 pb-16 space-y-5">
-          <p className="text-center text-slate-500">Enter the parent PIN to leave {firstName(learnerName)}'s space.</p>
+          <p className="text-center text-slate-500">{learnerName ? `Enter the parent PIN to leave ${firstName(learnerName)}'s space.` : 'Enter the parent PIN to open the parent side.'}</p>
           {lockMs > 0
             ? <div className="text-center font-semibold text-[#c0663f]">Too many tries. Try again in {Math.ceil(lockMs / 1000)} seconds.</div>
             : <PinPad onComplete={submit} error={err} busy={busy} />}
@@ -414,10 +414,103 @@ export const PinGate = ({ userId, learnerName, onUnlock, onCancel, onSignOut }) 
             <button onClick={() => setForgot(true)} className="block mx-auto text-[13px] font-semibold text-slate-500 underline underline-offset-4">Forgot the PIN?</button>
           ) : (
             <Card className="space-y-2 text-sm">
-              <p className="text-slate-600">Sign out, then sign back in with your account password. You can choose a new PIN the next time you hand over.</p>
+              <p className="text-slate-600">Sign out, then sign back in with your account password. You can then choose a new PIN.</p>
               <button onClick={onSignOut} className="w-full bg-white border border-slate-200 hover:bg-slate-50 rounded-xl py-2.5 font-bold text-slate-800">Sign out</button>
             </Card>
           )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ---- A family tablet ----------------------------------------------------------
+// The parent signs in on the tablet once and sets it up for the children. From
+// then on it opens on "Who's practising?": each child taps their own tile; the
+// parent side is behind the parent PIN.
+
+export const FamilyTabletSetup = ({ user, onDone, onCancel }) => {
+  const [step, setStep] = useState('intro'); // intro | pin | confirm
+  const [pinSet, setPinSet] = useState(null);
+  const [firstPin, setFirstPin] = useState('');
+  const [err, setErr] = useState('');
+  const [busy, setBusy] = useState(false);
+  useEffect(() => { hasPin().then(setPinSet).catch(() => setPinSet(false)); }, []);
+
+  const finish = () => { setFamilyDevice(user.id); onDone(); };
+  const onPin = async (pin) => {
+    if (step === 'pin') { setFirstPin(pin); setErr(''); setStep('confirm'); return; }
+    if (pin !== firstPin) { setErr("The PINs didn't match. Start again."); setFirstPin(''); setStep('pin'); return; }
+    setBusy(true);
+    try { await setPin(user.id, pin); finish(); }
+    catch { setErr("Couldn't save the PIN. Check your connection."); setStep('pin'); }
+    setBusy(false);
+  };
+  const header = (
+    <Header>
+      <button onClick={step === 'intro' ? onCancel : () => { setErr(''); setStep('intro'); }} aria-label="Back" className="text-slate-400 hover:text-slate-700"><BackIcon /></button>
+      <h1 className="text-[17px] font-extrabold tracking-tight">Children's tablet</h1>
+    </Header>
+  );
+
+  if (step === 'pin' || step === 'confirm') {
+    return (
+      <Shell header={header}>
+        <Card className="text-center">
+          <Eyebrow>Parent PIN</Eyebrow>
+          <div className="text-[19px] font-extrabold tracking-tight mt-1">{step === 'pin' ? 'Choose a 4-digit PIN' : 'Enter it again'}</div>
+          <p className="text-sm text-slate-500 mt-1">Only you need this. It opens the parent side, where payments, tutors and messages are. You choose it once.</p>
+        </Card>
+        <PinPad key={step} onComplete={onPin} error={err} busy={busy} />
+      </Shell>
+    );
+  }
+  return (
+    <Shell header={header}>
+      <Card className="space-y-3">
+        <HorebBot size={56} mood="cheer" />
+        <div className="text-[19px] font-extrabold tracking-tight">Make this the children's tablet</div>
+        <p className="text-sm text-slate-500">This {deviceWord()} will open on <b>"Who's practising?"</b>. Each child taps their own name and goes straight into their practice. Nothing that costs money.</p>
+        <p className="text-sm text-slate-500">The parent side stays locked with your parent PIN.</p>
+        <PrimaryButton onClick={() => (pinSet ? finish() : setStep('pin'))} disabled={pinSet === null}>{pinSet ? 'Start' : 'Choose a parent PIN'}</PrimaryButton>
+      </Card>
+    </Shell>
+  );
+};
+
+export const WhoIsPractising = ({ user, onPick, onParent }) => {
+  const [kids, setKids] = useState(null);
+  useEffect(() => {
+    if (!user?.id) return;
+    supabase.from('children').select('id, name, grade').eq('parent_id', user.id).order('created_at')
+      .then(({ data }) => setKids(data || []));
+  }, [user?.id]);
+  return (
+    <div className="min-h-screen app-shell text-slate-900" style={{ background: 'linear-gradient(180deg,#ecedfa,#eef0f2)' }}>
+      <div className="app-scroll">
+        <div className="max-w-2xl mx-auto px-5 pt-14 pb-16 flex flex-col items-center gap-6">
+          <HorebBot size={72} mood="cheer" />
+          <h1 className="text-[30px] font-extrabold tracking-tight text-center">Who's practising?</h1>
+          {kids === null && <div className="text-sm text-slate-400 py-6">Loading…</div>}
+          {kids && kids.length === 0 && (
+            <p className="text-center text-slate-500 max-w-sm">No children added yet. Open the parent side and add them, or take the free check.</p>
+          )}
+          {kids && kids.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-4 w-full max-w-lg">
+              {kids.map(k => (
+                <button key={k.id} onClick={() => onPick(k)}
+                  className="w-[150px] bg-white border border-slate-200 shadow-sm hover:border-[#6d6fcb] hover:shadow-md rounded-2xl p-5 flex flex-col items-center gap-3 transition">
+                  <LearnerAvatar name={k.name} look={getLook(k.id)} size={72} />
+                  <span className="text-[18px] font-extrabold tracking-tight">{firstName(k.name)}</span>
+                  {k.grade && <span className="text-[13px] text-slate-400 -mt-2">{k.grade}</span>}
+                </button>
+              ))}
+            </div>
+          )}
+          <button onClick={onParent}
+            className="mt-4 inline-flex items-center gap-2 h-11 px-5 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-[14px] font-bold">
+            <LockIcon /> Parent
+          </button>
         </div>
       </div>
     </div>
