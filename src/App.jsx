@@ -34,6 +34,7 @@ import SiteWhy from './site/Why.jsx';
 import { HALF_HOUR_LESSONS } from './site/features.js';
 import { SiteIcon } from './site/ui.jsx';
 import { CheckStart, CheckResult, getCheck, setFocus } from './site/Check.jsx';
+import { findMissingStep, skillLabel } from './site/missingStep.js';
 import { claimGuestCheck, markWantsSave, wantsSave } from './site/claim.js';
 
 // Running inside the iOS/Android shell (Capacitor injects window.Capacitor).
@@ -664,7 +665,10 @@ const useAuth = () => {
       // Paid practice is on and this family has never had a pass: their
       // free week starts now (once per account, decided by the database).
       const { data: started, error } = await supabase.rpc('start_free_week');
-      setSubscription(!error && started?.user_id ? started : null);
+      // If the free-week setup isn't in the database yet, never lock a family
+      // out: treat it as open until it is (checked again on the next visit).
+      if (error) { console.warn('start_free_week unavailable:', error.message); setSubscription({ plan: 'setup_pending', pro_until: new Date(Date.now() + 86400000).toISOString() }); return; }
+      setSubscription(started?.user_id ? started : null);
     } catch { setSubscription(null); } // table may not exist yet: treated as free
   };
 
@@ -1136,7 +1140,7 @@ const MomentumChip = ({ userId, onClick }) => {
 // The signed-in family's home (web). Parents first: their children, handing
 // over the phone, and lessons. Students use the same screen without the
 // children section. On the public site's coral design.
-const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings, onStartPractice, familyTablet = false, onFamilyTablet, onLockFamilyTablet, onStopFamilyTablet }) => {
+const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings, onStartPractice, familyTablet = false, onFamilyTablet, onLockFamilyTablet, onStopFamilyTablet, onOpenPlan }) => {
   const [tab, setTab] = useState('upcoming');
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [reviewBooking, setReviewBooking] = useState(null);
@@ -1223,7 +1227,7 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
           dailyXP: own.progress?.dailyXP || 0, dailyDate: own.progress?.dailyDate || null,
         });
         const kids = {};
-        rows.filter(r => r.learner_id).forEach(r => { kids[r.learner_id] = { diagnosed: !!r.diagnosed, totalXP: r.total_xp || 0, streak: r.current_streak || 0 }; });
+        rows.filter(r => r.learner_id).forEach(r => { kids[r.learner_id] = { diagnosed: !!r.diagnosed, totalXP: r.total_xp || 0, streak: r.current_streak || 0, progress: r.progress ? { ...r.progress, diagnosed: !!r.diagnosed } : null }; });
         setKidProgress(kids);
       });
   }, [profile?.id]);
@@ -1300,13 +1304,13 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
       <div className="in dgrid">
         <main style={{ minWidth: 0 }}>
           {/* Practice pass: how long is left, and a way to keep going. */}
-          {paywallActive() && (() => {
+          {paywallActive() && subscription?.plan !== 'setup_pending' && (() => {
             const left = passDaysLeft(subscription);
             const trial = isFreeWeek(subscription);
             return (
               <div className={`passbar ${left > 2 ? '' : 'warn'}`}>
                 <div><b>{left > 0 ? (trial ? `Free week: ${left} day${left === 1 ? '' : 's'} left` : `Practice pass: ${left} day${left === 1 ? '' : 's'} left`) : 'Practice is paused'}</b>
-                  <span>{left > 0 ? (trial ? `Then KSh ${PLANS.week.kes} a week or KSh ${PLANS.month.kes} a month.` : 'Every child on your account can practise.') : 'Get a pass to keep the daily 15 minutes going.'}</span></div>
+                  <span>{left > 0 ? (trial ? `Then KSh ${PLANS.week.kes} a week or KSh ${PLANS.month.kes} a month. One pass covers all your children.` : 'Every child on your account can practise.') : 'Get a pass to keep the daily 15 minutes going.'}</span></div>
                 {(left <= 2) && <button type="button" className="btn sm" onClick={onGetPass}>{left > 0 ? 'Get a pass' : 'Get a pass'}</button>}
               </div>
             );
@@ -1344,20 +1348,32 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
                 <div className="kids">
                   {children.map(c => {
                     const kp = kidProgress[c.id];
+                    const first = c.name.trim().split(/\s+/)[0];
+                    const step = kp?.diagnosed && kp.progress ? (() => { try { const r = findMissingStep(kp.progress); return r.missing ? { ...skillLabel(r.missing), next: r.next.map(id => skillLabel(id)).filter(Boolean)[0], clear: r.allClear } : null; } catch { return null; } })() : null;
                     return (
                       <div key={c.id} className="kid">
                         <div className="ktop">
                           <div><b>{c.name}</b><span>{c.grade || 'Grade not set'}</span></div>
                           <button type="button" className="kx" onClick={() => removeChild(c)} aria-label={`Remove ${c.name}`}><SiteIcon name="x" style={{ width: 16, height: 16 }} /></button>
                         </div>
-                        <div className="kstat">
-                          {kp?.diagnosed
-                            ? <><span><SiteIcon name="check" style={{ width: 16, height: 16 }} />Check done</span><span>Level {getLevel(kp.totalXP).level}</span>{kp.streak > 0 && <span>{kp.streak}-day streak</span>}</>
-                            : <span>No check yet. It starts with their first practice.</span>}
-                        </div>
-                        <div className="kbtns">
-                          <button type="button" className="btn sm" onClick={() => onStartPractice(c)}>Start {c.name.trim().split(/\s+/)[0]}'s practice<SiteIcon name="arrow" style={{ width: 16, height: 16 }} /></button>
-                          <button type="button" className="btn line sm" onClick={() => setTabletFor(c)}>Open on {c.name.trim().split(/\s+/)[0]}'s tablet</button>
+                        {step ? (
+                          <div className="kstep">
+                            <div className="kicker">{step.clear ? 'Next step' : 'Missing step'}</div>
+                            <b>{step.name}</b>
+                            <span>A Grade {step.grade} skill.{step.next ? ` ${step.next.name} stands on it.` : ''}</span>
+                          </div>
+                        ) : (
+                          <div className="kstat">
+                            {kp?.diagnosed
+                              ? <><span><SiteIcon name="check" style={{ width: 16, height: 16 }} />Check done</span><span>Level {getLevel(kp.totalXP).level}</span></>
+                              : <span>No check yet. It starts with their first practice.</span>}
+                          </div>
+                        )}
+                        {kp?.streak > 0 && <div className="kstat"><span>{kp.streak}-day streak</span><span>Level {getLevel(kp.totalXP).level}</span></div>}
+                        <button type="button" className="btn full" onClick={() => onStartPractice(c)}>Start {first}'s practice<SiteIcon name="arrow" style={{ width: 18, height: 18 }} /></button>
+                        <div className="klinks">
+                          {kp?.diagnosed && <button type="button" className="linkbtn" onClick={() => onOpenPlan(c)}>See {first}'s plan</button>}
+                          <button type="button" className="linkbtn" onClick={() => setTabletFor(c)}>Open on {first}'s tablet</button>
                         </div>
                       </div>
                     );
@@ -1451,6 +1467,32 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
       )}
     </div>
   );
+};
+
+// ============ A CHILD'S SAVED PLAN ============
+// The free-check result page, built from the child's saved progress, so it
+// follows their practice. Pricing shows here, next to "Start practice".
+const priceLineFor = (sub) => {
+  if (!paywallActive() || sub?.plan === 'setup_pending') return null;
+  const left = passDaysLeft(sub);
+  const price = `KSh ${PLANS.week.kes} a week or KSh ${PLANS.month.kes} a month`;
+  if (left > 0 && isFreeWeek(sub)) return `Free week: ${left} day${left === 1 ? '' : 's'} left. Then ${price}.`;
+  if (left > 0) return null;
+  if (!sub) return `First week free. Then ${price}.`;
+  return `Practice needs a pass: ${price}.`;
+};
+const SavedPlan = ({ user, child, subscription, onBack, onStart, onFindTutor }) => {
+  const [row, setRow] = useState(undefined);
+  useEffect(() => {
+    supabase.from('ai_tutor_progress').select('diagnosed, progress').eq('profile_key', `${user.id}_c${child.id}`).maybeSingle()
+      .then(({ data }) => setRow(data || null)).catch(() => setRow(null));
+  }, [user.id, child.id]);
+  if (row === undefined) return <div className="min-h-screen flex items-center justify-center"><LoadingSpinner /></div>;
+  const progress = row ? { ...(row.progress || {}), diagnosed: !!row.diagnosed } : { diagnosed: false };
+  const g = String(child.grade || '').match(/\d+/);
+  return <CheckResult saved={{ progress, name: child.name.trim().split(/\s+/)[0], grade: progress.declaredGrade || (g ? Number(g[0]) : null) }}
+    practisedDays={(progress.practiceDays || []).length} priceLine={priceLineFor(subscription)}
+    onLeave={onBack} onStart={onStart} onRetake={onStart} onFindTutor={onFindTutor} />;
 };
 
 // ============ STUDENT PROGRESS MODAL ============
@@ -7156,6 +7198,7 @@ function AppInner() {
   // needs the parent PIN, once per visit.
   const [familyDevice, setFamilyDevice] = useState(() => getFamilyDevice());
   const [parentUnlocked, setParentUnlocked] = useState(false);
+  const [planChild, setPlanChild] = useState(null); // child whose saved plan is open
   const [showParentGate, setShowParentGate] = useState(false);
   const isFamilyTablet = !!(familyDevice && auth.user && !auth.user.is_anonymous && familyDevice.parentId === auth.user.id);
   const [showPrivacyBanner, setShowPrivacyBanner] = useState(() => !IS_NATIVE && !localStorage.getItem('tutagora_privacy_accepted'));
@@ -7317,6 +7360,14 @@ function AppInner() {
     const token = window.location.pathname.replace(/^\/t\//, '').replace(/\/.*$/, '');
     return <TabletLinkPage token={token} onLeave={() => handleNavigate('home')}
       onReady={(m) => { setStudentMode(m); handleNavigate('ai'); }} />;
+  }
+
+  // A child's saved plan, from the parent's dashboard.
+  if (page === 'plan' && auth.user && planChild && !studentMode) {
+    return <SavedPlan user={auth.user} child={planChild} subscription={auth.subscription}
+      onBack={() => handleNavigate('dashboard')}
+      onStart={() => { setStudentMode(startStudentMode(auth.user.id, planChild)); handleNavigate('ai'); }}
+      onFindTutor={(skill, learner) => { setFocus({ skill, learner }); handleNavigate('tutors'); }} />;
   }
 
   // Setting this device up as the children's tablet.
@@ -7565,7 +7616,8 @@ function AppInner() {
           onStartPractice={(c) => { setStudentMode(startStudentMode(auth.user.id, c)); handleNavigate('ai'); }}
           familyTablet={isFamilyTablet} onFamilyTablet={() => handleNavigate('family-tablet')}
           onLockFamilyTablet={() => { setParentUnlocked(false); window.scrollTo(0, 0); }}
-          onStopFamilyTablet={() => { clearFamilyDevice(); setFamilyDevice(null); }} />
+          onStopFamilyTablet={() => { clearFamilyDevice(); setFamilyDevice(null); }}
+          onOpenPlan={(c) => { setPlanChild(c); handleNavigate('plan'); }} />
         {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
         {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
         {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}

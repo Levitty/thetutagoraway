@@ -11,8 +11,8 @@
 // ============================================================================
 
 // ---- master switches -------------------------------------------------------
-export const PAYWALL_ENABLED = false;          // turn on for launch
-export const PAYWALL_START_ISO = '2026-12-31'; // paid practice starts on this date
+export const PAYWALL_ENABLED = true;           // paid practice is on
+export const PAYWALL_START_ISO = '2026-09-29'; // paid practice starts on this date
 
 // ---- plans -----------------------------------------------------------------
 export const FREE_DAYS = 7;

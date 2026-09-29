@@ -99,9 +99,12 @@ export function CheckStart({ initialGrade, onStart, onResume, onLeave, onSeeResu
 }
 
 // Step 3: the result. One missing step, what it rests on, what rests on it.
-export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user }) {
-  const check = getCheck();
-  const progress = useMemo(() => getGuestProgress(), []);
+// With `saved` ({ progress, name, grade }) it shows a child's saved plan from
+// their account instead: it follows their practice, and its button starts
+// practice instead of saving.
+export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user, saved = null, onStart, priceLine = null, practisedDays = 0 }) {
+  const check = saved ? { name: saved.name, grade: saved.grade } : getCheck();
+  const progress = useMemo(() => (saved ? saved.progress : getGuestProgress()), [saved]);
   const r = useMemo(() => findMissingStep(progress), [progress]);
   const [showAnyway, setShowAnyway] = useState(false);
 
@@ -110,9 +113,9 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user }) {
       <div className="tg flow">
         <FlowBar label="Free maths check" onLeave={onLeave} />
         <div className="stage"><div className="card">
-          <h1 className="display">No check on this device yet.</h1>
-          <p className="lead">It takes about ten minutes and it's free.</p>
-          <button type="button" className="btn" onClick={onRetake}>Start the free check <SiteIcon name="arrow" /></button>
+          <h1 className="display">{saved ? `No check for ${check.name} yet.` : 'No check on this device yet.'}</h1>
+          <p className="lead">{saved ? `It runs at the start of ${check.name}'s first practice and takes about ten minutes. The plan appears here after it.` : "It takes about ten minutes and it's free."}</p>
+          <button type="button" className="btn" onClick={saved ? onStart : onRetake}>{saved ? `Start ${check.name}'s check` : 'Start the free check'} <SiteIcon name="arrow" /></button>
         </div></div>
       </div>
     );
@@ -160,12 +163,14 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user }) {
   return (
     <div className="tg">
       <nav className="nav onbrand"><div className="in">
-        <Logo onClick={onLeave} />
-        <div className="right"><button type="button" className="txt" onClick={onRetake}>Retake</button></div>
+        {saved
+          ? <button type="button" className="txt" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'none', border: 0, padding: 0, cursor: 'pointer', fontWeight: 700 }} onClick={onLeave}><SiteIcon name="back" style={{ width: 18, height: 18 }} />Dashboard</button>
+          : <Logo onClick={onLeave} />}
+        {!saved && <div className="right"><button type="button" className="txt" onClick={onRetake}>Retake</button></div>}
       </div></nav>
       <section className="rhero"><div className="in">
         <div>
-          <div className="kicker">{check?.name ? `${check.name}'s check` : 'Your check'}{grade ? ` · Grade ${grade}` : ''}</div>
+          <div className="kicker">{saved ? `${check.name}'s plan` : check?.name ? `${check.name}'s check` : 'Your check'}{grade ? ` · Grade ${grade}` : ''}</div>
           <h1 className="display" style={{ marginTop: 12 }}>{headline}</h1>
           <p>{r.allClear
             ? 'Nothing below this is missing. The daily plan starts here and keeps building.'
@@ -173,9 +178,11 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user }) {
             : `It's likely the reason ${next.length ? next[0].name.toLowerCase() : 'the next topics'} feel${next.length ? 's' : ''} hard right now. Fix this one, and the work built on it gets easier.`}</p>
         </div>
         <div className="found">
-          <div className="kicker">{r.allClear ? 'The next step' : 'The missing step'}</div>
+          <div className="kicker">{saved ? 'Working on now' : r.allClear ? 'The next step' : 'The missing step'}</div>
           <b>{missing.name}</b>
-          <span>A Grade {missing.grade} skill. 15 minutes a day on a phone or tablet.</span>
+          <span>{saved
+            ? `A Grade ${missing.grade} skill · ${practisedDays > 0 ? `practised on ${practisedDays} day${practisedDays === 1 ? '' : 's'} so far` : 'starts with the first practice'}`
+            : `A Grade ${missing.grade} skill. 15 minutes a day on a phone or tablet.`}</span>
         </div>
       </div></section>
 
@@ -195,26 +202,33 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user }) {
         <p className="sub">15 minutes a day. Each day ends, so {check?.name || 'your child'} knows when they're done.</p>
         <div className="plan">
           <div className="pl">
-            <div className="kicker muted">Starting today</div>
+            <div className="kicker muted">{saved ? 'Now' : 'Starting today'}</div>
             <h3>{missing.name}</h3>
             <ol><li>Short reviews of what's already solid, so every day starts with wins</li><li>One new idea at a time, with pictures first where it helps</li><li>A quick re-check once it sticks</li></ol>
           </div>
-          <div className="pl locked">
-            <div className="blur" aria-hidden="true">
+          <div className={`pl${saved ? '' : ' locked'}`}>
+            <div className={saved ? '' : 'blur'} aria-hidden={saved ? undefined : 'true'}>
               <div className="kicker muted">After that</div>
               <h3>{others.length ? `${others.length} more gap${others.length === 1 ? '' : 's'} we found` : 'Your full plan'}</h3>
               <ul>{(others.length ? others : [{ id: 'a', name: 'The next skills in order' }, { id: 'b', name: 'Reviews to keep it solid' }]).slice(0, 4).map(o => <li key={o.id}>{o.name}</li>)}</ul>
             </div>
-            <div className="over"><div><SiteIcon name="lock" />Save the plan to see the full list</div></div>
+            {!saved && <div className="over"><div><SiteIcon name="lock" />Save the plan to see the full list</div></div>}
           </div>
         </div>
         <p className="fine" style={{ marginTop: 14 }}>Want help faster? A tutor can take this exact skill in a live lesson. <button type="button" className="linkbtn" onClick={() => onFindTutor(missing.name, check?.name)}>See tutors</button></p>
       </div></section>
 
-      <div className="stickybar"><div className="in">
-        <div><b>{user ? `Save ${check?.name ? `${check.name}'s` : 'the'} plan to your account.` : `Save ${check?.name ? `${check.name}'s` : 'the'} plan.`}</b> <span className="muted">Free. Google or email.</span></div>
-        <button type="button" className="btn" onClick={onSave}>Save the plan <SiteIcon name="arrow" /></button>
-      </div></div>
+      {saved ? (
+        <div className="stickybar"><div className="in">
+          <div><b>15 minutes today.</b> {priceLine && <span className="muted">{priceLine}</span>}</div>
+          <button type="button" className="btn" onClick={onStart}>Start {check.name}'s practice <SiteIcon name="arrow" /></button>
+        </div></div>
+      ) : (
+        <div className="stickybar"><div className="in">
+          <div><b>{user ? `Save ${check?.name ? `${check.name}'s` : 'the'} plan to your account.` : `Save ${check?.name ? `${check.name}'s` : 'the'} plan.`}</b> <span className="muted">Free. Google or email.</span></div>
+          <button type="button" className="btn" onClick={onSave}>Save the plan <SiteIcon name="arrow" /></button>
+        </div></div>
+      )}
     </div>
   );
 }
