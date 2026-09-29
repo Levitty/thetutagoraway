@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { HALF_HOUR_LESSONS } from './features.js';
 import { supabase } from '../supabase.js';
 import { PaymentModal } from '../PaymentModal.jsx';
 import { startConversation } from '../Messaging.jsx';
@@ -90,7 +91,7 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
               </div>
               <div className="side">
                 <div className="price">{ksh(t.hourly_rate)} <small>/ hour</small></div>
-                <div className="stat">{t.lessons_completed ? `${t.lessons_completed} lessons on Tutagora` : 'New on Tutagora'}{t.offers_30_min ? ` · 30 min from ${ksh(lessonPrice(t.hourly_rate, 30))}` : ''}</div>
+                <div className="stat">{t.lessons_completed ? `${t.lessons_completed} lessons on Tutagora` : 'New on Tutagora'}{HALF_HOUR_LESSONS && t.offers_30_min ? ` · 30 min from ${ksh(lessonPrice(t.hourly_rate, 30))}` : ''}</div>
                 <button type="button" className="btn" onClick={() => onSelect(t)}>Book</button>
               </div>
             </div>
@@ -125,7 +126,7 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
   const [pending, setPending] = useState(null);
   // Lessons are an hour. A tutor can also offer 30 minutes (their choice, in
   // their profile); the flag only exists once the lesson-length SQL has run.
-  const halfHourOk = tutor.offers_30_min === true;
+  const halfHourOk = HALF_HOUR_LESSONS && tutor.offers_30_min === true;
 
   useEffect(() => {
     supabase.from('reviews').select('*, profiles:student_id(full_name)').eq('tutor_id', tutor.id)
