@@ -15,6 +15,7 @@ import { CAMBRIDGE_SKILLS, getCambridgePostRequisites } from '../src/ai-tutor/ca
 import { SAT_SKILLS } from '../src/ai-tutor/satKnowledgeGraph.js';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
+import { planYoungLesson } from '../src/ai-tutor/youngPlan.js';
 import { propagateCredit } from '../src/ai-tutor/diagnosticEngine.js';
 import { getDiagnosticSkills, computePlacementGrade, getEffectivePlacement, recentMastery } from '../src/ai-tutor/adaptiveEngine.js';
 
@@ -130,6 +131,19 @@ const mcases = [
 let mfail = 0;
 for (const [label, h, expect] of mcases) if (recentMastery(h, 6) !== expect) { fail(`mastery ${label}: got ${!expect}`); mfail++; }
 if (!mfail) ok(`all ${mcases.length} mastery cases`);
+
+// ---- 4c. Young learners: the right answer is always one of the buttons ----
+console.log('4c. Young-learner buttons (Grades 1-4)');
+let ybad = 0, yseen = 0;
+for (const [id, sk] of Object.entries(SKILLS)) {
+  if (sk.grade > 4) continue;
+  for (let i = 0; i < 30; i++) {
+    const p = generateProblem(id); const plan = planYoungLesson(p);
+    if (!plan) continue; yseen++;
+    if (!plan.choices.map(String).includes(String(plan.answer))) { fail(`${id}: answer "${plan.answer}" not among buttons [${plan.choices.join(', ')}]`); ybad++; break; }
+  }
+}
+if (!ybad) ok(`right answer is a button in all ${yseen} young-learner questions`);
 
 // ---- 5. Per-subject credit propagation ----
 console.log('5. Per-subject credit propagation (Cambridge)');

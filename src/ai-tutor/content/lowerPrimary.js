@@ -339,8 +339,10 @@ function buildShapeProperties({ shapes }) {
     const mode = randInt(0, 2);
     if (mode === 1) {
       const [q, value] = pick(riddles);
+      const names = [...new Set(riddles.map(([, n]) => n))].filter(n => n !== value);
+      const wrong = []; while (wrong.length < 2 && names.length) wrong.push(names.splice(randInt(0, names.length - 1), 1)[0]);
       return { type: 'shape-name', instruction: 'Name the shape.', question: q,
-        answer: value, accepts: accepts(value, `a ${value}`),
+        answer: value, accepts: accepts(value, `a ${value}`), choices: [value, ...wrong],
         hints: hintLadder('Count the sides and corners.', 'Squares have 4 equal sides; rectangles have 2 long and 2 short.'),
         solution: { steps: [{ text: `That is a ${value}.`, expr: value }], answer: value },
         misconceptions: [], verify: { kind: 'text', value } };
@@ -408,7 +410,7 @@ function buildTurnsAndCompass({ withCompass = false }) {
       return {
         type: 'compass-turn', instruction: 'Work out the new direction.',
         question: `You are facing ${compass[start]} and make ${turnName}. Which direction are you facing now?`,
-        answer: value, accepts: accepts(value, value.toLowerCase()),
+        answer: value, accepts: accepts(value, value.toLowerCase()), choices: [value, ...compass.filter(c => c !== value && c !== compass[start]).slice(0, 2)],
         hints: hintLadder('Each quarter turn moves one step: N → E → S → W.', `Count ${quarters} step(s) around from ${compass[start]}.`),
         solution: { steps: [{ text: `Move ${quarters} step(s) clockwise from ${compass[start]}.`, expr: value }], answer: value },
         misconceptions: [], verify: { kind: 'text', value },
@@ -418,8 +420,9 @@ function buildTurnsAndCompass({ withCompass = false }) {
       const hands = pick([['3', 'quarter'], ['6', 'half'], ['9', 'three quarter'], ['12', 'full']]);
       const startAt12 = hands[0] === '12' ? 'goes all the way round from 12 back to 12' : `moves from 12 to ${hands[0]}`;
       const value = hands[1];
+      const turnChoices = [value, ...['quarter', 'half', 'full', 'three quarter'].filter(t => t !== value).slice(0, 2)];
       return {
-        type: 'turn-name', instruction: 'Name the turn.',
+        type: 'turn-name', instruction: 'Name the turn.', choices: turnChoices,
         question: `The minute hand of a clock ${startAt12}. Is that a quarter, half, three quarter or full turn?`,
         answer: value, accepts: accepts(value, `${value} turn`, `a ${value} turn`, value === 'three quarter' ? '3/4' : value === 'half' ? '1/2' : value === 'quarter' ? '1/4' : 'full'),
         hints: hintLadder('12 to 3 is a quarter of the way round.', 'Count the quarters: 12 to 3, 3 to 6, 6 to 9, 9 to 12.'),
@@ -458,7 +461,7 @@ function buildAngleClassify() {
     return {
       type: 'angle-classify', instruction: 'Classify the angle.',
       question: phrasing,
-      answer: kind, accepts: accepts(kind),
+      answer: kind, accepts: accepts(kind), choices: ['acute', 'right', 'obtuse'],
       hints: hintLadder('Compare the angle with 90°.', 'Less than 90° = acute · exactly 90° = right · more than 90° = obtuse.'),
       solution: { steps: [{ text: `${deg}° compared with 90° → ${kind}.`, expr: kind }], answer: kind },
       misconceptions: [
@@ -491,11 +494,12 @@ function buildBandedTime({ withMonths = false }) {
     }
     if (mode === 'clock') {
       const h = randInt(1, 12);
-      const value = `${h}:00`;
+      const value = `${h} o'clock`;
+      const others = [(h % 12) + 1, ((h + 9) % 12) + 1].map(x => `${x} o'clock`);
       return {
         type: 'time-oclock', instruction: 'Read the clock.',
         question: `The long hand points to 12 and the short hand points to ${h}. What time is it?`,
-        answer: value, accepts: accepts(value, `${h} o'clock`, `${h}.00`),
+        answer: value, accepts: accepts(value, `${h}:00`, `${h}.00`), choices: [value, ...others],
         hints: hintLadder("When the long hand points to 12, it is something o'clock.", `The short hand shows the hour: ${h}.`),
         solution: { steps: [{ text: `Short hand on ${h}, long hand on 12.`, expr: `${h} o'clock` }], answer: value },
         misconceptions: [], verify: { kind: 'text', value },

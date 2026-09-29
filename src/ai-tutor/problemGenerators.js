@@ -256,7 +256,7 @@ const generators = {
     () => { const it = pick([['a bag of maize', 'kilograms'], ['a sack of potatoes', 'kilograms'], ['a child', 'kilograms'], ['a pencil', 'grams'], ['a sweet', 'grams'], ['an egg', 'grams'], ['a jerrycan of water', 'litres'], ['a cup of tea', 'millilitres'], ['a spoon of medicine', 'millilitres'], ['a water tank', 'litres']]);
       const unitsFor = /litres|millilitres/.test(it[1]) ? 'litres or millilitres' : 'grams or kilograms';
       const acc = { kilograms: ['kilograms', 'kilogram', 'kg'], grams: ['grams', 'gram', 'g'], litres: ['litres', 'litre', 'liters', 'l'], millilitres: ['millilitres', 'millilitre', 'milliliters', 'ml'] }[it[1]];
-      return { question: `Would you measure ${it[0]} in ${unitsFor}?`, answer: it[1], accepts: acc, hint: 'Small, light things use the small unit. Big, heavy things use the big unit.' }; },
+      return { question: `Would you measure ${it[0]} in ${unitsFor}?`, answer: it[1], accepts: acc, choices: unitsFor.split(' or '), hint: 'Small, light things use the small unit. Big, heavy things use the big unit.' }; },
     () => { const k = rand(2, 9); return { question: `How many grams are in ${k} kg?`, answer: String(k * 1000), hint: '1 kg = 1000 g.' }; },
     () => { const l = rand(2, 9); return { question: `How many millilitres are in ${l} litres?`, answer: String(l * 1000), hint: '1 litre = 1000 ml.' }; },
     () => { const k = rand(2, 9); return { question: `How many kilograms are in ${(k * 1000).toLocaleString('en-US')} g?`, answer: String(k), hint: '1000 g = 1 kg.' }; },
