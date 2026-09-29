@@ -95,7 +95,8 @@ export function buildAddSubLike({ sub = false } = {}) {
 export function buildAddSubUnlike({ sub = false } = {}) {
   let b = randInt(2, 9), d; do { d = randInt(2, 9); } while (d === b);
   let a = randInt(1, b - 1), c = randInt(1, d - 1);   // proper fractions: never "2/2"
-  while (sub && a * d === c * b) c = randInt(1, d - 1); // never "1/2 − 2/4" = 0
+  // never "1/2 − 2/4" = 0; redraw both (in 2/4 − ?/2 the only c gives 0, so redrawing c alone never ends)
+  while (sub && a * d === c * b) { a = randInt(1, b - 1); c = randInt(1, d - 1); }
   if (sub && a * d < c * b) { [a, b, c, d] = [c, d, a, b]; }    // keep result ≥ 0
   const L = lcm(b, d), a2 = a * (L / b), c2 = c * (L / d);
   const num = sub ? a2 - c2 : a2 + c2, op = sub ? '−' : '+';
@@ -423,7 +424,8 @@ export function buildPlaceOnNumberLine() {
 export function buildAddSubFractionsPictorial({ sub = false } = {}) {
   let b = randInt(2, 6), d; do { d = randInt(2, 6); } while (d === b);
   let a = randInt(1, b - 1), c = randInt(1, d - 1);   // proper fractions: never "2/2"
-  while (sub && a * d === c * b) c = randInt(1, d - 1); // never "1/2 − 2/4" = 0
+  // never "1/2 − 2/4" = 0; redraw both (in 2/4 − ?/2 the only c gives 0, so redrawing c alone never ends)
+  while (sub && a * d === c * b) { a = randInt(1, b - 1); c = randInt(1, d - 1); }
   if (sub && a * d < c * b) { [a, b, c, d] = [c, d, a, b]; }      // keep result ≥ 0
   const L = lcm(b, d), a2 = a * (L / b), c2 = c * (L / d);
   const num = sub ? a2 - c2 : a2 + c2, op = sub ? '−' : '+';
