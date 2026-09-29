@@ -15,8 +15,9 @@ import { CAMBRIDGE_SKILLS, getCambridgePostRequisites } from '../src/ai-tutor/ca
 import { SAT_SKILLS } from '../src/ai-tutor/satKnowledgeGraph.js';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
+import { planYoungLesson } from '../src/ai-tutor/youngPlan.js';
 import { propagateCredit } from '../src/ai-tutor/diagnosticEngine.js';
-import { getDiagnosticSkills, computePlacementGrade, getEffectivePlacement } from '../src/ai-tutor/adaptiveEngine.js';
+import { getDiagnosticSkills, computePlacementGrade, getEffectivePlacement, recentMastery } from '../src/ai-tutor/adaptiveEngine.js';
 
 let failures = 0;
 const fail = (msg) => { console.log('  ✗ ' + msg); failures++; };
@@ -69,12 +70,80 @@ const cases = [
   ['percent sign', '15%', { answer: '15' }, true],
   ['wrong answer rejected', '13', { answer: '12' }, false],
   ['coordinate spacing', '(2,5)', { answer: '(2, 5)' }, true],
+  // Found by scripts/audit-answers.mjs:
+  ['exact fraction vs decimal key: wrong', '1/20', { answer: '1/10', accepts: ['1/10', '0.1'] }, false],
+  ['exact fraction vs decimal key: right', '2/20', { answer: '1/10', accepts: ['1/10', '0.1'] }, true],
+  ['whole number vs rounded key', '12', { answer: '12.3' }, false],
+  ['word percent', '40 percent', { answer: '40' }, true],
+  ['word shillings', '8600 shillings', { answer: '8600' }, true],
+  ['KSh with comma and /=', 'KSh 8,600/=', { answer: '8600' }, true],
+  ['hours word', '3 hrs', { answer: '3' }, true],
+  ['sq cm', '24 sq cm', { answer: '24' }, true],
+  ['algebra key keeps its letter', '3', { answer: '3m' }, false],
+  ['unit on wrong number still wrong', '41 percent', { answer: '40' }, false],
+  ['word answer + noun', 'parallel lines', { answer: 'parallel' }, true],
+  ['word answer + article', 'an obtuse angle', { answer: 'obtuse' }, true],
+  ['word answer "it is"', 'It is scalene', { answer: 'scalene' }, true],
+  ['hyphen vs space', 'Right angled', { answer: 'right-angled' }, true],
+  ['wrong word still wrong', 'acute angle', { answer: 'obtuse' }, false],
+  ['time with dot', '1.30', { answer: '13:30', accepts: ['13:30', '1:30'] }, true],
+  ['time with pm', '1:30 p.m.', { answer: '13:30', accepts: ['13:30', '1:30'] }, true],
+  ['time 24h dot', '13.30', { answer: '13:30', accepts: ['13:30', '1:30'] }, true],
+  ['half past', 'half past one', { answer: '13:30', accepts: ['13:30', '1:30'] }, true],
+  ['o clock', "11 o'clock", { answer: '11:00' }, true],
+  ['quarter to', 'quarter to twelve', { answer: '11:45' }, true],
+  ['wrong time', '1:45', { answer: '13:30', accepts: ['13:30', '1:30'] }, false],
+  ['compass letter', 'S', { answer: 'South' }, true],
+  ['wrong compass letter', 'N', { answer: 'South' }, false],
+  ['short day', 'Tue', { answer: 'Tuesday' }, true],
+  ['short month', 'Sept', { answer: 'September' }, true],
+  ['ambiguous short', 'Ma', { answer: 'March' }, false],
+  ['superscript power', '3x²', { answer: '3x^2' }, true],
+  ['double-star power', '3x**2', { answer: '3x^2' }, true],
+  ['wrong power', '3x³', { answer: '3x^2' }, false],
+  ['two answers as list', '30, 150', { answer: '30° and 150°' }, true],
+  ['two answers reversed', '150 and 30', { answer: '30° and 150°' }, true],
+  ['two answers with θ =', 'θ = 30° or θ = 150°', { answer: '30° and 150°' }, true],
+  ['one of two answers only', '30', { answer: '30° and 150°' }, false],
+  ['two answers, one wrong', '30, 120', { answer: '30° and 150°' }, false],
+  ['coordinate is not a number', '60', { answer: '(6, 0)' }, false],
+  ['coordinate order matters', '(0, 6)', { answer: '(6, 0)' }, false],
+  ['coordinate without brackets', '6,0', { answer: '(6, 0)' }, true],
+  ['thousands comma still fine', '1,200', { answer: '1200' }, true],
 ];
 for (const [label, user, prob, expect] of cases) {
   const got = checkAnswerMatch(user, prob);
   if (got !== expect) fail(`${label}: got ${got}, expected ${expect}`);
 }
 if (!cases.some(([l, u, p, e]) => checkAnswerMatch(u, p) !== e)) ok(`all ${cases.length} tolerant cases`);
+
+// ---- 4b. Mastery on recent answers ----
+console.log('4b. Mastery on recent answers');
+const Y = true, N = false;
+const mcases = [
+  ['6 right', [Y, Y, Y, Y, Y, Y], true],
+  ['5 answers only', [Y, Y, Y, Y, Y], false],
+  ['early mistakes then 7 of 8', [N, N, N, Y, Y, Y, Y, N, Y, Y, Y, Y], true],
+  ['last answer wrong', [Y, Y, Y, Y, Y, Y, N], false],
+  ['two misses in last 8', [Y, Y, N, Y, N, Y, Y, Y], false],
+  ['slip, then 3 right', [Y, Y, Y, N, Y, Y, Y], true],
+];
+let mfail = 0;
+for (const [label, h, expect] of mcases) if (recentMastery(h, 6) !== expect) { fail(`mastery ${label}: got ${!expect}`); mfail++; }
+if (!mfail) ok(`all ${mcases.length} mastery cases`);
+
+// ---- 4c. Young learners: the right answer is always one of the buttons ----
+console.log('4c. Young-learner buttons (Grades 1-4)');
+let ybad = 0, yseen = 0;
+for (const [id, sk] of Object.entries(SKILLS)) {
+  if (sk.grade > 4) continue;
+  for (let i = 0; i < 30; i++) {
+    const p = generateProblem(id); const plan = planYoungLesson(p);
+    if (!plan) continue; yseen++;
+    if (!plan.choices.map(String).includes(String(plan.answer))) { fail(`${id}: answer "${plan.answer}" not among buttons [${plan.choices.join(', ')}]`); ybad++; break; }
+  }
+}
+if (!ybad) ok(`right answer is a button in all ${yseen} young-learner questions`);
 
 // ---- 5. Per-subject credit propagation ----
 console.log('5. Per-subject credit propagation (Cambridge)');

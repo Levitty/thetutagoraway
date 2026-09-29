@@ -434,6 +434,11 @@
 .tg .kstat { display: flex; flex-wrap: wrap; gap: 6px; }
 .tg .kstat span { display: inline-flex; gap: 5px; align-items: center; background: var(--gray); border-radius: 4px; padding: 4px 8px; font-weight: 700; font-size: 13.5px; }
 .tg .kbtns { display: flex; gap: 8px; flex-wrap: wrap; }
+.tg .kstep { background: var(--brand-soft); border-radius: 6px; padding: 11px 12px; }
+.tg .kstep .kicker { font-size: 11px; }
+.tg .kstep b { display: block; font-size: 17px; margin-top: 2px; }
+.tg .kstep span { font-size: 13.5px; color: var(--ink2); font-weight: 600; }
+.tg .klinks { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14.5px; }
 .tg .tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .tg .tool { text-align: left; border: 0; border-radius: 8px; padding: 20px; background: var(--gray); cursor: pointer; display: flex; flex-direction: column; gap: 8px; min-height: 190px; }
 .tg .tool b { font-family: var(--display); font-size: 24px; letter-spacing: -.02em; line-height: 1.1; }

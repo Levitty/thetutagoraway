@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { HALF_HOUR_LESSONS } from './features.js';
 import { SKILLS } from '../ai-tutor/knowledgeGraph.js';
-import { SiteNav, SiteFooter, SiteIcon, StandIn, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh, photoFirst } from './ui.jsx';
+import { SiteNav, SiteFooter, SiteIcon, StandIn, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh, photoFirst, usePhotoCheck } from './ui.jsx';
 import { paywallActive } from '../subscription.js';
 import { nextFree } from './Tutors.jsx';
 
@@ -40,9 +40,10 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
 
   const skillCount = Object.keys(SKILLS).length;
   const bandCounts = useMemo(() => BANDS.map(b => Object.values(SKILLS).filter(s => s.grade >= b.lo && s.grade <= b.hi).length), []);
+  const photosChecked = usePhotoCheck(tutors);
   const featured = useMemo(() => [...tutors]
     .sort((a, b) => photoFirst(a, b) || (b.lessons_completed || 0) - (a.lessons_completed || 0))
-    .slice(0, 4), [tutors]);
+    .slice(0, 4), [tutors, photosChecked]);
 
   // Subjects the tutors on the site actually teach, for the tutors section.
   const subjectLine = useMemo(() => {
@@ -191,7 +192,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
             ? "The check and your child's plan are always free, and so is the first week of daily practice. Tutor lessons are paid per lesson."
             : "The check and your child's plan are free, and daily practice is free while we launch. Tutor lessons are paid per lesson."}</p></details>
           <details><summary>Do I need an account?</summary><p>Not to take the check. To save the result and the plan, you create a free account with Google or your email.</p></details>
-          <details><summary>Is it safe to hand my phone to my child?</summary><p>Yes. Your child gets their own space with no payments or messages, and leaving it needs your PIN.</p></details>
+          <details><summary>Is it safe to hand my phone to my child?</summary><p>Yes. Your child gets their own space with no payments or messages. On a children's tablet, the parent side stays locked with your PIN.</p></details>
           <details><summary>Which grades and curriculum?</summary><p>CBC and Cambridge, Grade 1 to 12. Maths practice for every grade, and composition and insha writing for Grades 4 to 12.</p></details>
           <details><summary>How do tutor lessons work?</summary><p>Pick a tutor and a time. Lessons are an hour{HALF_HOUR_LESSONS ? ', and some tutors also offer 30 minutes' : ''}. Pay with M-Pesa or card. The lesson happens live inside Tutagora, with a shared whiteboard for homework, and you get the notes afterwards.</p></details>
           <details><summary>What if the tutor doesn't turn up?</summary><p>If your tutor is more than 10 minutes late, you get a full refund. The lesson screen shows you how to ask for it.</p></details>

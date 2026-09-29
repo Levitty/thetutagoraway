@@ -4,6 +4,7 @@
 // Subject-agnostic: accepts a ctx parameter { skills, getPostReqs, strands }
 // ============================================================================
 
+import { findMissingStep } from '../site/missingStep.js';
 import { SKILLS as MATH_SKILLS, getPostRequisites as mathGetPostReqs, getPrerequisiteChain as mathPreChain, getPostRequisiteChain as mathPostChain, STRANDS as MATH_STRANDS } from './knowledgeGraph.js';
 import { NATIVE, gradeOf, strandOf, isEnrichment } from './curricula.js';
 import { isFluent } from './spacedRepetition.js';
@@ -162,6 +163,17 @@ export const getFluencyPractice = (progress, ctx) => {
   return out.sort((a, b) => (a.fluentReps || 0) - (b.fluentReps || 0));
 };
 
+// ==================== MASTERY ====================
+
+// A skill is mastered on RECENT evidence: at least `minProblems` answers, the
+// last 3 right, and 7 of the last 8 right. (Cumulative accuracy made early
+// learning mistakes count forever; see docs/qa/answer-audit-log.md, round 9.)
+export const recentMastery = (recent = [], minProblems = 6) => {
+  const r = recent.slice(-10);
+  return r.length >= minProblems && r.slice(-3).length === 3 && r.slice(-3).every(Boolean)
+    && r.slice(-8).filter(Boolean).length >= Math.min(7, r.length - 1);
+};
+
 // ==================== NEXT SKILLS TO LEARN ====================
 
 export const getNextToLearn = (progress, ctx) => {
@@ -190,9 +202,28 @@ export const getNextToLearn = (progress, ctx) => {
 
 // ==================== RECOMMENDED LEARNING PATH ====================
 
+// The plan a parent reads after the check names ONE missing step. Practice must
+// start there: simulated with virtual children (scripts/simulate-check.mjs),
+// the path started on that step only 20% of the time and on a skill the child
+// already knew 50% of the time. Applied to whichever engine built the path.
+export const leadWithMissingStep = (path, progress, ctx) => {
+  if (!progress?.diagnosed || !Array.isArray(path)) return path;
+  const c = resolveCtx(ctx);
+  let r;
+  try { r = findMissingStep(progress, c.skills); } catch { return path; }
+  const id = r?.missing;
+  const skill = id && c.skills[id];
+  if (!skill || progress.skills?.[id]?.mastered) return path;
+  if (path[0]?.id === id) return path;
+  const lead = { ...(path.find(p => p.id === id) || skill), type: r.allClear ? 'learn' : 'gap', reason: 'The missing step from the check' };
+  return [lead, ...path.filter(p => p.id !== id)];
+};
+
 export const getRecommendedPath = (progress, ctx) => {
   const path = [];
   const seen = new Set();
+  const lead = leadWithMissingStep([], progress, ctx)[0];
+  if (lead) { path.push(lead); seen.add(lead.id); }
 
   const gaps = findGaps(progress, ctx);
   for (const g of gaps.slice(0, 3)) {

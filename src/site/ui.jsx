@@ -109,7 +109,7 @@ export const TutorPhoto = ({ tutor }) => {
   const [broken, setBroken] = React.useState(false);
   const name = tutor?.profiles?.full_name || 'Tutor';
   const url = tutor?.profiles?.avatar_url;
-  if (url && !broken) return <img src={url} alt={name} loading="lazy" onError={() => setBroken(true)} />;
+  if (url && !broken && !BROKEN_PHOTOS.has(url)) return <img src={url} alt={name} loading="lazy" onError={() => { BROKEN_PHOTOS.add(url); setBroken(true); }} />;
   const initials = name.split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
   const bg = INITIAL_BG[(name.charCodeAt(0) || 0) % INITIAL_BG.length];
   return (
@@ -131,7 +131,7 @@ export const tutorSubjects = (t) =>
 
 // grade_levels reached the DB as a real array, a JSON-stringified array, or a
 // plain comma string. Normalise all three.
-export const gradeLevels = (g) => {
+const rawGradeLevels = (g) => {
   if (!g) return [];
   if (Array.isArray(g)) return g.filter(Boolean);
   if (typeof g === 'string') {
@@ -140,9 +140,43 @@ export const gradeLevels = (g) => {
   }
   return [String(g)];
 };
+// School order, so a range reads "Grade 8 to Form 4", never "Form 4 to Grade 8".
+const gradeRank = (s) => {
+  const t = String(s).toLowerCase();
+  const n = Number((t.match(/\d+/) || [])[0]);
+  if (t.startsWith('grade') && n) return n;
+  if (t.startsWith('form') && n) return 100 + n;
+  if (t.includes('univers') || t.includes('college')) return 200;
+  if (t.includes('adult')) return 300;
+  return 400;
+};
+export const gradeLevels = (g) => rawGradeLevels(g).map((s, i) => [s, i])
+  .sort((a, b) => gradeRank(a[0]) - gradeRank(b[0]) || a[1] - b[1]).map(([s]) => s);
 
 // Tutors with a real profile photo are listed first: parents trust a face.
-export const hasPhoto = (t) => !!(t?.profiles?.avatar_url && String(t.profiles.avatar_url).trim());
+// A saved link that doesn't open counts as no photo.
+const BROKEN_PHOTOS = new Set();
+export const hasPhoto = (t) => {
+  const url = t?.profiles?.avatar_url && String(t.profiles.avatar_url).trim();
+  return !!url && !BROKEN_PHOTOS.has(url);
+};
+// Try every tutor photo once; returns a number that changes as broken ones
+// are found, so lists can re-sort.
+export const usePhotoCheck = (tutors) => {
+  const [found, setFound] = React.useState(0);
+  React.useEffect(() => {
+    let alive = true;
+    (tutors || []).forEach(t => {
+      const url = t?.profiles?.avatar_url && String(t.profiles.avatar_url).trim();
+      if (!url || BROKEN_PHOTOS.has(url)) return;
+      const img = new Image();
+      img.onerror = () => { BROKEN_PHOTOS.add(url); if (alive) setFound(n => n + 1); };
+      img.src = url;
+    });
+    return () => { alive = false; };
+  }, [tutors]);
+  return found;
+};
 export const hasHours = (t) => !Array.isArray(t?.availability) || t.availability.length > 0;
 // Tutors families can actually book come first, then those with a real photo.
 export const photoFirst = (a, b) => (Number(hasHours(b)) - Number(hasHours(a))) || (Number(hasPhoto(b)) - Number(hasPhoto(a)));

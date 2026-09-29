@@ -11,6 +11,9 @@
 export function normalizeMath(str) {
   let s = str.toString().trim().toLowerCase();
   s = s.replace(/[−–—]/g, '-');          // unicode minus/dash → hyphen
+  // Superscript powers the way phones type them: x² → x^2, x¹⁰ → x^10.
+  s = s.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, (m) => '^' + [...m].map(c => '⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c)).join(''));
+  s = s.replace(/\*\*/g, '^');           // x**2 → x^2
   // Kid-typed decorations (before spaces collapse, so word boundaries work):
   s = s.replace(/^(ksh|kes|sh|shs)\.?\s+/, '');   // currency prefix
   s = s.replace(/\/[=-]\s*$/, '');                 // Kenyan "4500/=" or "/-"
@@ -26,12 +29,22 @@ export function normalizeMath(str) {
 
 // Common unit suffixes students append that shouldn't affect a numeric answer.
 const UNIT_SUFFIX = /(cm²|cm³|m²|m³|cm2|cm3|m2|m3|cm|mm|km|kg|ml|°|deg|degrees|units?|sq|squareunits?|%|m|l|g)+$/;
+// Keys never end in a bare m / l / g (checked by scripts/audit-answers.mjs), so
+// a key like "3m" is algebra, not 3 metres.
+const KEY_UNIT_SUFFIX = /(cm²|cm³|m²|m³|cm2|cm3|m2|m3|cm|mm|km|kg|ml|°|deg|degrees|units?|sq|squareunits?|%)+$/;
+
+// Words and units children type after a correct number ("40 percent",
+// "8600 shillings", "3 hrs", "12 sq cm"). Only ever stripped from what the
+// CHILD typed, never from a key, so an algebra key like "3m" keeps its letter.
+const CHILD_UNIT_WORDS = /(percent(age)?|per cent|shillings?|shs?|bob|hours?|hrs?|minutes?|mins?|seconds?|secs?|years?|yrs?|days?|weeks?|months?|km\/h|kmh|kph|m\/s|litres?|liters?|millilit(re|er)s?|kilograms?|grams?|kilomet(re|er)s?|centimet(re|er)s?|millimet(re|er)s?|met(re|er)s?|sq\.?(cm|m|km|mm|units?)|square(cm|m|km|mm|units?|centimet(re|er)s?|met(re|er)s?)|(cm|m|km|mm)sq|cubic(cm|m)|cc|people|pupils|children|students|marks|goats|cows|books|pencils|sweets|apples|oranges|mangoes|eggs|items|pieces|boxes|bags|trees|cars|buses|days)$/;
 
 // Parse an answer string into ONE number when it represents a single pure
 // quantity; otherwise null (so "A=2, B=1", "(2,5)", "x=3y" fall through to
-// string matching).
-export function mathValue(raw) {
-  let s = raw.toString().trim().toLowerCase().replace(/[−–—]/g, '-').replace(/,/g, '');
+// string matching). `child` also strips the unit words a child might add.
+export function mathValue(raw, child = false) {
+  // Commas only as thousands separators ("1,200"): "6, 0" is not sixty.
+  let s = raw.toString().trim().toLowerCase().replace(/[−–—]/g, '-').replace(/(\d),(\d{3})(?!\d)/g, '$1$2');
+  if (/\d\s*,\s*\d/.test(s)) return null;
   // Kid-typed decorations that shouldn't change a numeric answer:
   s = s.replace(/^(ksh|kes|sh|shs)\.?\s*/, '');   // currency prefix: "KSh 4500"
   s = s.replace(/\/[=-]$/, '');                    // Kenyan shilling suffix: "4500/=" or "4500/-"
@@ -51,9 +64,10 @@ export function mathValue(raw) {
     const d = parseInt(frac[2]);
     return d === 0 ? null : parseInt(frac[1]) / d;
   }
+  if (child) s = s.replace(CHILD_UNIT_WORDS, '').replace(/\/[=-]$/, '');
   const pct = s.match(/^(-?\d*\.?\d+)%$/);
   if (pct) return parseFloat(pct[1]);
-  const stripped = s.replace(UNIT_SUFFIX, '');
+  const stripped = s.replace(child ? UNIT_SUFFIX : KEY_UNIT_SUFFIX, '');
   if (/^-?\d*\.?\d+$/.test(stripped)) return parseFloat(stripped);
   return null;
 }
@@ -73,6 +87,37 @@ export function numbersMatch(userVal, acceptRaw, acceptVal) {
   return Math.abs(userVal - acceptVal) <= tol;
 }
 
+// ---- Times, compass points, days and months, the way children write them ----
+const NUM_WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12 };
+const hourOf = (w) => (/^\d+$/.test(w) ? Number(w) : NUM_WORDS[w]);
+// Minutes past midnight, folded onto a 12-hour clock; null if not a time.
+export function timeValue(raw) {
+  let t = raw.toString().trim().toLowerCase().replace(/\s+/g, ' ').replace(/\.$/, '');
+  t = t.replace(/\b(a\.?\s?m\.?|p\.?\s?m\.?|hrs|hours|h)$/, '').trim();
+  let m = t.match(/^(\d{1,2})\s*[:.]\s*(\d{2})$/);
+  if (m && Number(m[2]) < 60 && Number(m[1]) <= 24) return ((Number(m[1]) % 12) * 60 + Number(m[2]));
+  m = t.match(/^(\d{1,2}|[a-z]+)\s*(o'?clock|o clock|oclock)?$/);
+  if (m && m[2] && hourOf(m[1]) != null) return (hourOf(m[1]) % 12) * 60;
+  m = t.match(/^half past (\d{1,2}|[a-z]+)$/);
+  if (m && hourOf(m[1]) != null) return (hourOf(m[1]) % 12) * 60 + 30;
+  m = t.match(/^(a )?quarter past (\d{1,2}|[a-z]+)$/);
+  if (m && hourOf(m[2]) != null) return (hourOf(m[2]) % 12) * 60 + 15;
+  m = t.match(/^(a )?quarter to (\d{1,2}|[a-z]+)$/);
+  if (m && hourOf(m[2]) != null) return ((hourOf(m[2]) + 11) % 12) * 60 + 45;
+  return null;
+}
+const isClockKey = (a) => /^\d{1,2}:\d{2}$/.test(String(a).trim());
+const COMPASS = { n: 'north', s: 'south', e: 'east', w: 'west', ne: 'north east', nw: 'north west', se: 'south east', sw: 'south west' };
+const SHORT_NAMES = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday',
+  'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+// "S" -> "south", "Tue"/"Tues" -> "tuesday", "Sept" -> "september".
+const expandShort = (w) => {
+  const x = w.toLowerCase().replace(/[.\s-]/g, '');
+  if (COMPASS[x]) return COMPASS[x].replace(' ', '');
+  if (x.length >= 3) { const hit = SHORT_NAMES.filter(n => n.startsWith(x)); if (hit.length === 1) return hit[0]; }
+  return x;
+};
+
 export function checkAnswerMatch(userAnswer, problem) {
   const normalizedUser = normalizeMath(userAnswer);
   const accepts = problem.accepts || [problem.answer];
@@ -80,13 +125,57 @@ export function checkAnswerMatch(userAnswer, problem) {
   // 1) Exact match after normalization (handles "x=-3", algebra, words).
   if (accepts.some(a => normalizedUser === normalizeMath(a))) return true;
 
-  // 2) Single-number match by value, graded at the key's displayed precision —
-  //    covers integers, decimals, fractions, mixed numbers, %, and units.
-  const userVal = mathValue(userAnswer);
+  // 1b) Word answers, the way children phrase them: "parallel lines",
+  //     "an obtuse angle", "It is scalene", "Right angled" for "right-angled".
+  const wordy = (t) => t.toString().trim().toLowerCase().replace(/[-_]/g, ' ').replace(/[.!]+$/, '')
+    .replace(/^(it is|it's|its|they are|they're|this is|the answer is|answer:?)\s+/, '')
+    .replace(/^(a|an|the)\s+/, '')
+    .replace(/\s+(lines?|angles?|angled|triangles?|shapes?|polygons?)$/, '')
+    .replace(/\s+/g, '');
+  if (/^[a-z][a-z\s'-]*$/i.test(userAnswer.toString().trim())) {
+    const w = wordy(userAnswer);
+    if (w && accepts.some(a => /^[a-z][a-z\s'-]*$/i.test(String(a).trim()) && wordy(a) === w)) return true;
+  }
+
+  // 1c) Clock times: "1:30", "1.30 pm", "13.30", "half past one" for a 13:30 key.
+  if (accepts.some(isClockKey)) {
+    const tv = timeValue(userAnswer);
+    if (tv != null && accepts.some(a => isClockKey(a) && timeValue(a) === tv)) return true;
+  }
+
+  // 1d) Compass points and day/month names, shortened: "S", "Tue", "Sept".
+  if (/^[a-z][a-z.\s-]{0,10}$/i.test(userAnswer.toString().trim())) {
+    const u = expandShort(userAnswer.toString().trim());
+    if (accepts.some(a => /^[a-z][a-z\s-]*$/i.test(String(a).trim()) && expandShort(String(a).trim()) === u && u.length > 2)) return true;
+  }
+
+  // 1e) Several numbers, in any order: "30° and 150°" also as "30, 150",
+  //     "150 and 30", "θ = 30 or θ = 150", "x = -4, x = 6".
+  const numList = (t) => {
+    const x = t.toString().toLowerCase().replace(/[−–—]/g, '-').replace(/°|degrees?/g, '')
+      .replace(/(^|[\s,])[a-zθ]\s*=\s*/g, '$1').replace(/\s+(and|or|&)\s+/g, ',').replace(/;/g, ',');
+    if (!/^[\s\d.,-]+$/.test(x)) return null;
+    const parts = x.split(',').map(v => v.trim()).filter(Boolean);
+    if (parts.length < 2 || parts.some(v => !/^-?\d*\.?\d+$/.test(v))) return null;
+    return parts.map(Number).sort((a, b) => a - b);
+  };
+  const userList = numList(userAnswer);
+  // Only for answers written as a set ("30° and 150°"), never coordinates, where order matters.
+  const isSet = (a) => /\s(and|or)\s|°/.test(String(a));
+  if (userList && accepts.some(a => { if (!isSet(a)) return false; const k = numList(a); return k && k.length === userList.length && k.every((v, i) => Math.abs(v - userList[i]) < 1e-9); })) return true;
+
+  // 2) Single-number match by value — covers integers, decimals, fractions,
+  //    mixed numbers, %, and units. A typed DECIMAL is graded at the key's
+  //    displayed precision (3.14159 for a key of 3.14). A typed fraction, mixed
+  //    number or whole number is exact, so a wrong 1/20 can't pass for a key
+  //    shown as 0.1.
+  const userVal = mathValue(userAnswer, true);
   if (userVal != null) {
+    const typedDecimal = /\d*\.\d/.test(userAnswer.toString());
     if (accepts.some(a => {
       const aVal = mathValue(a);
-      return aVal != null && numbersMatch(userVal, a, aVal);
+      if (aVal == null) return false;
+      return typedDecimal ? numbersMatch(userVal, a, aVal) : Math.abs(userVal - aVal) <= 1e-9 * Math.max(1, Math.abs(aVal));
     })) return true;
   }
 
