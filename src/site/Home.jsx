@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { HALF_HOUR_LESSONS } from './features.js';
 import { SKILLS } from '../ai-tutor/knowledgeGraph.js';
 import { SiteNav, SiteFooter, SiteIcon, StandIn, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh, photoFirst } from './ui.jsx';
-import { paywallActive, PLANS } from '../subscription.js';
+import { paywallActive } from '../subscription.js';
 import { nextFree } from './Tutors.jsx';
 
 // Real photos for the hero scrapbook go in public/images/home/ and are listed
@@ -50,7 +50,6 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
     return all.length > 1 ? `${all.slice(0, 4).join(', ')}${all.length > 4 ? ' and more' : ''}.` : '';
   }, [tutors]);
   const live = paywallActive(); // prices show from the day paid practice starts
-  const fromRate = useMemo(() => Math.min(...tutors.map(t => Number(t.hourly_rate) || Infinity)), [tutors]);
 
   const go = (e) => {
     e.preventDefault();
@@ -163,19 +162,6 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
         </div></section>
       )}
 
-      <section className="sec prices"><div className="in">
-        <div className="kicker">What it costs</div>
-        <h2 className="display" style={{ marginTop: 10 }}>{live ? 'Start free. Pay as you go.' : 'Free while we launch.'}</h2>
-        <div className="plans">
-          <div className="pl"><h3>The check</h3><div className="amt">Free</div><p>The 10-minute check and your child's plan. Always free, no card.</p></div>
-          <div className="pl hot"><h3>Daily practice</h3>
-            {live ? <><div className="amt">KSh {PLANS.week.kes}<small> / week</small></div><p>or KSh {PLANS.month.kes} a month. The first week is free. One pass covers every child on your account.</p></>
-              : <><div className="amt">Free<small> for now</small></div><p>Maths and writing practice is free while we launch. We'll tell you before that changes.</p></>}
-          </div>
-          <div className="pl"><h3>Live tutors</h3><div className="amt">{Number.isFinite(fromRate) ? <>From {ksh(fromRate)}<small> / hour</small></> : 'Per lesson'}</div><p>Pay per lesson with M-Pesa or card. Full refund if your tutor is more than 10 minutes late.</p></div>
-        </div>
-      </div></section>
-
       <section className="sec safe"><div className="in safe-row">
         <figure className="art">
           <div className="pic"><img src="/images/home/hand-over.webp" width="736" height="920" alt="A laptop on a sunlit desk with chalk drawings of two children around it" /></div>
@@ -201,8 +187,8 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
       <section className="sec tight"><div className="in">
         <h2 className="display" style={{ marginBottom: 30 }}>Questions parents ask</h2>
         <div className="faq">
-          <details open><summary>What's free, and what do I pay for?</summary><p>{live
-            ? `The check and your child's plan are always free, and the first week of practice is free. After that, practice is KSh ${PLANS.week.kes} a week or KSh ${PLANS.month.kes} a month for every child on your account. Tutor lessons are paid per lesson.`
+          <details open><summary>What's free?</summary><p>{live
+            ? "The check and your child's plan are always free, and so is the first week of daily practice. Tutor lessons are paid per lesson."
             : "The check and your child's plan are free, and daily practice is free while we launch. Tutor lessons are paid per lesson."}</p></details>
           <details><summary>Do I need an account?</summary><p>Not to take the check. To save the result and the plan, you create a free account with Google or your email.</p></details>
           <details><summary>Is it safe to hand my phone to my child?</summary><p>Yes. Your child gets their own space with no payments or messages, and leaving it needs your PIN.</p></details>

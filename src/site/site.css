@@ -523,20 +523,11 @@
 .tg .passbar span { font-size: 14px; color: var(--ink2); font-weight: 600; }
 .tg .passbar.warn { background: #ffe6c7; }
 
-/* Homepage: prices */
-.tg .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 34px; }
-.tg .plans .pl { border: 2px solid var(--line); border-radius: 12px; padding: 24px; background: #fff; }
-.tg .plans .pl.hot { border-color: var(--ink); background: #fff3d1; }
-.tg .plans h3 { margin: 0; font-size: 17px; }
-.tg .plans .amt { font-family: var(--display); font-weight: 900; font-size: 34px; letter-spacing: -.03em; margin: 8px 0 10px; }
-.tg .plans .amt small { font-family: var(--body); font-size: 15px; font-weight: 700; color: var(--mute); letter-spacing: 0; }
-.tg .plans p { margin: 0; color: var(--ink2); }
 
 /* Tutor cards: next free time */
 .tg .tc .nf { font-size: 13.5px; font-weight: 700; color: #14532d; background: #e7f6ee; border-radius: 999px; padding: 4px 10px; align-self: flex-start; }
 
 @media (max-width: 1000px) {
-  .tg .plans { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 600px) {
   .tg .tc .pic { aspect-ratio: 4 / 3; }
@@ -585,3 +576,6 @@
 .tg.vision .vsignoff span { display: block; font-style: italic; color: var(--ink2); }
 .tg.vision .vsignoff b { display: block; font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: -.02em; margin-top: 4px; }
 .tg.vision .vhero { padding-bottom: 64px; }
+.tg.vision .vsignoff .sig { font-family: "Mrs Saint Delafield", cursive; font-size: clamp(52px, 7vw, 68px); line-height: 1.1; margin: 8px 0 -4px; color: var(--ink); transform: rotate(-3deg); transform-origin: left center; }
+.tg.vision .vsignoff b { font-size: 18px; margin-top: 6px; font-family: var(--body); letter-spacing: 0; }
+.tg.vision .vsignoff small { display: block; color: var(--mute); font-weight: 600; font-size: 15px; }
