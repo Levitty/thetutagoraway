@@ -45,8 +45,9 @@ export function buildAnglesLine() {
 
 // ---- polygon interior angle sum / each interior angle ----
 export function buildPolygonAngles() {
-  const n = randInt(3, 10);
   const askEach = coin();
+  // "Each angle" only for polygons whose angle is a whole number of degrees.
+  const n = askEach ? [3, 4, 5, 6, 8, 9, 10, 12][randInt(0, 7)] : randInt(3, 10);
   const total = (n - 2) * 180;
   const value = askEach ? total / n : total;
   return {

@@ -7,6 +7,7 @@
 import { SKILLS } from './knowledgeGraph.js';
 import { STRUCTURED_CONTENT } from './content/index.js';
 import { PRIMARY_ALIAS } from './content/primary.js';
+import { checkAnswerMatch } from './answerCheck.js';
 
 // Structured, pedagogically-complete content (worked example + scaffolded steps
 // + hint ladder + misconception feedback + verified answers) lives in
@@ -762,7 +763,7 @@ const generators = {
 
   G8_STANDARD_FORM: () => {
     const sig = roundTo(rand(10, 99) / 10, 1), exp = rand(2, 7);
-    const num = sig * Math.pow(10, exp);
+    const num = Math.round(sig * 10) * Math.pow(10, exp - 1); // exact: no 980000.0000000001
     return rand(0, 1)
       ? { question: `Write ${num.toLocaleString()} in standard form`, answer: `${sig} × 10^${exp}`, accepts: [`${sig} × 10^${exp}`, `${sig}×10^${exp}`, `${sig}e${exp}`], hint: 'Move the decimal point until one digit is left of it — the number of moves is the power of 10.' }
       : { question: `${sig} × 10^${exp} = ?`, answer: num.toString(), hint: `10^${exp} means move the decimal point ${exp} places to the right.` };
@@ -777,7 +778,7 @@ const generators = {
 
   G8_RATIO_PROPORTION: () => {
     const a = rand(2, 6), b = rand(2, 6), total = (a + b) * rand(3, 8);
-    return { question: `Divide ${total} in the ratio ${a}:${b}. Find the larger part.`, answer: (Math.max(a, b) / (a + b) * total).toString(),
+    return { question: `Divide ${total} in the ratio ${a}:${b}. Find the larger part.`, answer: (Math.max(a, b) * (total / (a + b))).toString(),
       hint: `The ratio ${a}:${b} makes ${a + b} equal shares. One share = ${total} ÷ ${a + b}; the larger part gets ${Math.max(a, b)} shares.` };
   },
 
@@ -1165,7 +1166,7 @@ const generators = {
   G10_LOG_LAWS: () => {
     const templates = [
       () => { const a = rand(2, 5), b = rand(2, 5); return { q: `Simplify: log(${a}) + log(${b})`, a: `log(${a * b})`, hint: 'log(a) + log(b) = log(ab)' }; },
-      () => { const a = rand(10, 50), b = rand(2, 5); return { q: `Simplify: log(${a}) - log(${b})`, a: `log(${a / b})`, hint: 'log(a) - log(b) = log(a/b)' }; },
+      () => { const b = rand(2, 5), a = b * rand(3, 12); return { q: `Simplify: log(${a}) - log(${b})`, a: `log(${a / b})`, hint: 'log(a) - log(b) = log(a/b)' }; },
       () => { const a = rand(2, 5), n = rand(2, 4); return { q: `Simplify: ${n}log(${a})`, a: `log(${Math.pow(a, n)})`, hint: 'nlog(a) = log(aⁿ)' }; },
     ];
     const t = pick(templates)();
@@ -1224,9 +1225,10 @@ const generators = {
 
   G10_FUNCTIONS_ADV: () => {
     const a = rand(2, 4), b = rand(1, 5), x = rand(1, 5);
-    return { question: `f(x) = ${a}x + ${b}. Find f⁻¹(x) and f⁻¹(${a * x + b}).`, answer: `f⁻¹(x) = (x - ${b})/${a}, f⁻¹(${a * x + b}) = ${x}`,
+    // One answer per question: the inverse at a point (the expression is in the hint).
+    return { question: `f(x) = ${a}x + ${b}. Find f⁻¹(${a * x + b}).`, answer: `${x}`,
       accepts: [`${x}`, `f⁻¹(${a * x + b}) = ${x}`],
-      hint: 'For inverse: swap x and y, solve for y' };
+      hint: `For the inverse, swap x and y and solve: f⁻¹(x) = (x - ${b})/${a}.` };
   },
 
   G10_EXPONENTIAL_GRAPHS: () => {
@@ -1303,7 +1305,7 @@ const generators = {
 
   G10_PROBABILITY_DISTRIBUTIONS: () => {
     const n = rand(3, 5), p = pick([0.2, 0.3, 0.4, 0.5]);
-    const mean = n * p;
+    const mean = Math.round(n * p * 10) / 10;
     return { question: `Binomial: n=${n}, p=${p}. Find the mean.`, answer: mean.toString(),
       hint: 'Mean = np' };
   },
@@ -1543,7 +1545,25 @@ export const kpCount = (skillId) => {
   return STRUCTURED_CONTENT[id]?.kpCount || 1;
 };
 
-export const generateProblem = (skillId, opts = {}) => {
+// Last safety net on every question (found by scripts/audit-answers.mjs):
+// tidy computer float noise ("0.8999999999999999" -> "0.9") wherever a child
+// would see it, and drop any listed misconception that is really the answer.
+const FLOAT_NOISE = /-?\d+\.\d*?(?:0{6,}|9{6,})\d{0,3}(?!\d)/g;
+const tidyNum = (t) => (typeof t === 'string' ? t.replace(FLOAT_NOISE, (m) => String(Number(Number(m).toPrecision(12)))) : t);
+const tidy = (p) => {
+  if (!p || typeof p !== 'object') return p;
+  for (const k of ['question', 'answer', 'hint']) p[k] = tidyNum(p[k]);
+  if (Array.isArray(p.accepts)) p.accepts = p.accepts.map(tidyNum);
+  if (Array.isArray(p.hints)) p.hints = p.hints.map(tidyNum);
+  if (p.solution && typeof p.solution.answer === 'string') p.solution.answer = tidyNum(p.solution.answer);
+  if (Array.isArray(p.misconceptions)) {
+    p.misconceptions = p.misconceptions.filter(m => !m || m.when == null || !checkAnswerMatch(String(m.when), p));
+  }
+  return p;
+};
+
+export const generateProblem = (skillId, opts = {}) => tidy(generateRaw(skillId, opts));
+const generateRaw = (skillId, opts = {}) => {
   // Lower-primary (Grade 1–4) skills reuse an equivalent skill's content.
   if (PRIMARY_ALIAS[skillId]) skillId = PRIMARY_ALIAS[skillId];
   // Prefer authored structured content when present. `opts.level` lets the

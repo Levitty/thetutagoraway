@@ -69,6 +69,17 @@ const cases = [
   ['percent sign', '15%', { answer: '15' }, true],
   ['wrong answer rejected', '13', { answer: '12' }, false],
   ['coordinate spacing', '(2,5)', { answer: '(2, 5)' }, true],
+  // Found by scripts/audit-answers.mjs:
+  ['exact fraction vs decimal key: wrong', '1/20', { answer: '1/10', accepts: ['1/10', '0.1'] }, false],
+  ['exact fraction vs decimal key: right', '2/20', { answer: '1/10', accepts: ['1/10', '0.1'] }, true],
+  ['whole number vs rounded key', '12', { answer: '12.3' }, false],
+  ['word percent', '40 percent', { answer: '40' }, true],
+  ['word shillings', '8600 shillings', { answer: '8600' }, true],
+  ['KSh with comma and /=', 'KSh 8,600/=', { answer: '8600' }, true],
+  ['hours word', '3 hrs', { answer: '3' }, true],
+  ['sq cm', '24 sq cm', { answer: '24' }, true],
+  ['algebra key keeps its letter', '3', { answer: '3m' }, false],
+  ['unit on wrong number still wrong', '41 percent', { answer: '40' }, false],
 ];
 for (const [label, user, prob, expect] of cases) {
   const got = checkAnswerMatch(user, prob);

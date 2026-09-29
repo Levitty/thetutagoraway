@@ -64,7 +64,7 @@ export function buildEquivalentFraction() {
 export function buildAddSubLike({ sub = false } = {}) {
   const d = randInt(3, 12);
   let a = randInt(1, d - 1), c = randInt(1, d - 1);
-  if (sub && a < c) [a, c] = [c, a];           // keep result ≥ 0
+  if (sub) { c = randInt(1, d - 2); a = randInt(c + 1, d - 1); } // a > c: never "3/6 − 3/6" 
   const num = sub ? a - c : a + c, op = sub ? '−' : '+';
   return {
     type: sub ? 'subtract-like' : 'add-like',
@@ -491,7 +491,7 @@ export function buildEquivConcrete() {
 export function buildAddSubLikePictorial({ sub = false } = {}) {
   const d = randInt(4, 8);
   let a = randInt(1, d - 1), c = randInt(1, d - 1);
-  if (sub && a < c) [a, c] = [c, a];
+  if (sub) { c = randInt(1, d - 2); a = randInt(c + 1, d - 1); }
   if (!sub && a + c > d) { a = randInt(1, d - 2); c = randInt(1, d - a); }
   const num = sub ? a - c : a + c, op = sub ? '−' : '+';
   return {
