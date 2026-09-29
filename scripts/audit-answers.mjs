@@ -109,6 +109,16 @@ function kidVariants(p) {
     add(`${rem[1]} rem ${rem[2]}`, 'remainder "rem"');
     add(`${rem[1]} remainder ${rem[2]}`, 'remainder word');
   }
+  const clock = a.match(/^(\d{1,2}):(\d{2})$/);
+  if (clock) {
+    const h = Number(clock[1]), mm = clock[2], h12 = ((h + 11) % 12) + 1;
+    add(`${h}.${mm}`, 'time with dot'); add(`${h12}:${mm} ${h >= 12 ? 'pm' : 'am'}`, 'time with am/pm'); add(`${h12}.${mm} ${h >= 12 ? 'p.m.' : 'a.m.'}`, 'time p.m. dotted');
+    const words = ['twelve', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
+    if (mm === '30') add(`half past ${words[h12]}`, 'half past'); if (mm === '00') add(`${h12} o'clock`, "o'clock");
+    if (mm === '15') add(`quarter past ${h12}`, 'quarter past'); if (mm === '45') add(`quarter to ${h12 % 12 + 1}`, 'quarter to');
+  }
+  if (/^(north|south|east|west)$/i.test(a)) add(a[0].toUpperCase(), 'compass letter');
+  if (/^(monday|tuesday|wednesday|thursday|friday|saturday|sunday)$/i.test(a)) add(a.slice(0, 3), 'short day');
   const ratio = a.match(/^(\d+)\s*:\s*(\d+)$/);
   if (ratio) { add(`${ratio[1]} : ${ratio[2]}`, 'ratio spaced'); }
   const coord = a.match(/^\((-?\d+),\s*(-?\d+)\)$/);

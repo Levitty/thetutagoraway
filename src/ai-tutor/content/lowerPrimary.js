@@ -270,6 +270,37 @@ function buildUnitConvert({ pairs }) {
   return () => {
     const [big, small, factor] = pick(pairs);
     const n = randInt(2, 9);
+    const mode = randInt(0, 3);
+    const one = big.replace(/s$/, '');
+    if (mode === 1) {           // small -> big
+      return { type: 'unit-convert', instruction: 'Convert the units.',
+        question: `How many ${big} are there in ${(n * factor).toLocaleString('en-US')} ${small}?`,
+        answer: `${n}`, accepts: accepts(`${n}`, `${n} ${big}`),
+        hints: hintLadder(`${factor} ${small} make 1 ${one}.`, `${n * factor} ÷ ${factor} = ?`),
+        solution: { steps: [{ text: `Divide by ${factor}.`, expr: `${n * factor} ÷ ${factor} = ${n}` }], answer: `${n}` },
+        misconceptions: [], verify: { kind: 'fraction', value: n } };
+    }
+    if (mode === 2) {           // which is longer / heavier
+      const other = n * factor + pick([-1, 1]) * randInt(1, Math.max(1, factor / 2 - 1)) * (factor >= 100 ? 10 : 1);
+      const bigger = n * factor > other ? `${n} ${big}` : `${other} ${small}`;
+      return { type: 'unit-compare', instruction: 'Compare the measurements.',
+        question: `Which is more: ${n} ${big} or ${other} ${small}?`,
+        answer: bigger, accepts: accepts(bigger, bigger.replace(' ', ''), n * factor > other ? `${n}${big.slice(0, 1)}` : `${other}`),
+        choices: [`${n} ${big}`, `${other} ${small}`],
+        hints: hintLadder(`Change ${n} ${big} into ${small} first.`, `${n} ${big} = ${n * factor} ${small}.`),
+        solution: { steps: [{ text: `${n} ${big} = ${n * factor} ${small}.`, expr: bigger }], answer: bigger },
+        misconceptions: [], verify: { kind: 'text', value: bigger } };
+    }
+    if (mode === 3) {           // n big and m small, in small
+      const m = factor >= 1000 ? randInt(1, 9) * 100 : randInt(5, 95);
+      const value = n * factor + m;
+      return { type: 'unit-convert', instruction: 'Convert the units.',
+        question: `Write ${n} ${big} and ${m} ${small} in ${small}.`,
+        answer: `${value}`, accepts: accepts(`${value}`, `${value} ${small}`),
+        hints: hintLadder(`${n} ${big} = ${n * factor} ${small}.`, `Then add the ${m} ${small}.`),
+        solution: { steps: [{ text: `${n} × ${factor} + ${m}.`, expr: `${n * factor} + ${m} = ${value}` }], answer: `${value}` },
+        misconceptions: [], verify: { kind: 'fraction', value } };
+    }
     const value = n * factor;
     return {
       type: 'unit-convert', instruction: 'Convert the units.',
@@ -284,8 +315,46 @@ function buildUnitConvert({ pairs }) {
 }
 
 /** Shape properties: sides & corners (G1–G4 geometry). */
+const SHAPE_RIDDLES = [
+  ['I have 3 sides and 3 corners. What shape am I?', 'triangle'],
+  ['I have 4 equal sides and 4 corners. What shape am I?', 'square'],
+  ['I have 2 long sides, 2 short sides and 4 corners. What shape am I?', 'rectangle'],
+  ['I am round and I have no corners. What shape am I?', 'circle'],
+  ['A chapati is shaped like a ...?', 'circle'],
+  ['A door is shaped like a ...?', 'rectangle'],
+  ['A slice cut from the middle of a round cake to the edge, is shaped like a ...?', 'triangle'],
+  ['A face of a dice is shaped like a ...?', 'square'],
+  ['A coin is shaped like a ...?', 'circle'],
+  ['An exercise book cover is shaped like a ...?', 'rectangle'],
+];
+const SHAPE_RIDDLES_MORE = [
+  ['I have 5 sides and 5 corners. What shape am I?', 'pentagon'],
+  ['I have 6 sides and 6 corners. What shape am I?', 'hexagon'],
+  ['A honeycomb cell is shaped like a ...?', 'hexagon'],
+];
 function buildShapeProperties({ shapes }) {
+  const bigShapes = shapes.some(([, n]) => n >= 5);
+  const riddles = bigShapes ? [...SHAPE_RIDDLES, ...SHAPE_RIDDLES_MORE] : SHAPE_RIDDLES;
   return () => {
+    const mode = randInt(0, 2);
+    if (mode === 1) {
+      const [q, value] = pick(riddles);
+      return { type: 'shape-name', instruction: 'Name the shape.', question: q,
+        answer: value, accepts: accepts(value, `a ${value}`),
+        hints: hintLadder('Count the sides and corners.', 'Squares have 4 equal sides; rectangles have 2 long and 2 short.'),
+        solution: { steps: [{ text: `That is a ${value}.`, expr: value }], answer: value },
+        misconceptions: [], verify: { kind: 'text', value } };
+    }
+    if (mode === 2) {
+      const [name, sides] = pick(shapes), k = randInt(2, 4);
+      const value = sides * k;
+      return { type: 'shape-props', instruction: 'Think about the shapes.',
+        question: `How many sides do ${k} ${name}s have altogether?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(`One ${name} has ${sides} sides.`, `Add ${sides} ${k} times.`),
+        solution: { steps: [{ text: `${k} × ${sides}.`, expr: `${value}` }], answer: `${value}` },
+        misconceptions: [], verify: { kind: 'fraction', value } };
+    }
     const [name, sides] = pick(shapes);
     const askCorners = coin();
     const value = sides;   // for these shapes corners = sides
@@ -345,10 +414,26 @@ function buildTurnsAndCompass({ withCompass = false }) {
         misconceptions: [], verify: { kind: 'text', value },
       };
     }
+    if (coin()) {
+      const hands = pick([['3', 'quarter'], ['6', 'half'], ['9', 'three quarter'], ['12', 'full']]);
+      const startAt12 = hands[0] === '12' ? 'goes all the way round from 12 back to 12' : `moves from 12 to ${hands[0]}`;
+      const value = hands[1];
+      return {
+        type: 'turn-name', instruction: 'Name the turn.',
+        question: `The minute hand of a clock ${startAt12}. Is that a quarter, half, three quarter or full turn?`,
+        answer: value, accepts: accepts(value, `${value} turn`, `a ${value} turn`, value === 'three quarter' ? '3/4' : value === 'half' ? '1/2' : value === 'quarter' ? '1/4' : 'full'),
+        hints: hintLadder('12 to 3 is a quarter of the way round.', 'Count the quarters: 12 to 3, 3 to 6, 6 to 9, 9 to 12.'),
+        solution: { steps: [{ text: 'Each quarter of the clock face is a quarter turn.', expr: value }], answer: value },
+        misconceptions: [], verify: { kind: 'text', value },
+      };
+    }
     const spec = pick([
       { q: 'How many quarter turns make a full turn?', value: 4 },
       { q: 'How many quarter turns make a half turn?', value: 2 },
       { q: 'How many right angles are there in a full turn?', value: 4 },
+      { q: 'How many half turns make a full turn?', value: 2 },
+      { q: 'How many right angles are there in a half turn?', value: 2 },
+      { q: 'How many quarter turns make three quarters of a turn?', value: 3 },
     ]);
     return {
       type: 'turns', instruction: 'Think about turns.',
@@ -389,7 +474,33 @@ function buildBandedTime({ withMonths = false }) {
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   return () => {
-    const mode = withMonths && coin() ? 'month' : pick(['day', 'count']);
+    const mode = withMonths && coin() ? 'month' : pick(['day', 'day', 'count', 'before', 'tomorrow', 'clock']);
+    if (mode === 'before' || mode === 'tomorrow') {
+      const i = randInt(1, 5);
+      const yesterday = mode === 'before' || coin();
+      const q = mode === 'before' ? `What day comes just before ${days[i]}?`
+        : yesterday ? `Today is ${days[i]}. What day was yesterday?` : `Today is ${days[i]}. What day is tomorrow?`;
+      const value = yesterday ? days[i - 1] : days[i + 1];
+      return {
+        type: 'time-day', instruction: 'Think about the days of the week.', question: q,
+        answer: value, accepts: accepts(value, value.toLowerCase()),
+        hints: hintLadder('Say the days of the week in order.', yesterday ? 'Go back one day.' : 'Go forward one day.'),
+        solution: { steps: [{ text: yesterday ? 'One day back.' : 'One day forward.', expr: value }], answer: value },
+        misconceptions: [], verify: { kind: 'text', value },
+      };
+    }
+    if (mode === 'clock') {
+      const h = randInt(1, 12);
+      const value = `${h}:00`;
+      return {
+        type: 'time-oclock', instruction: 'Read the clock.',
+        question: `The long hand points to 12 and the short hand points to ${h}. What time is it?`,
+        answer: value, accepts: accepts(value, `${h} o'clock`, `${h}.00`),
+        hints: hintLadder("When the long hand points to 12, it is something o'clock.", `The short hand shows the hour: ${h}.`),
+        solution: { steps: [{ text: `Short hand on ${h}, long hand on 12.`, expr: `${h} o'clock` }], answer: value },
+        misconceptions: [], verify: { kind: 'text', value },
+      };
+    }
     if (mode === 'month') {
       const i = randInt(0, 10);
       const value = months[i + 1];

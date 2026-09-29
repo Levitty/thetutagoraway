@@ -85,6 +85,18 @@ const cases = [
   ['word answer "it is"', 'It is scalene', { answer: 'scalene' }, true],
   ['hyphen vs space', 'Right angled', { answer: 'right-angled' }, true],
   ['wrong word still wrong', 'acute angle', { answer: 'obtuse' }, false],
+  ['time with dot', '1.30', { answer: '13:30', accepts: ['13:30', '1:30'] }, true],
+  ['time with pm', '1:30 p.m.', { answer: '13:30', accepts: ['13:30', '1:30'] }, true],
+  ['time 24h dot', '13.30', { answer: '13:30', accepts: ['13:30', '1:30'] }, true],
+  ['half past', 'half past one', { answer: '13:30', accepts: ['13:30', '1:30'] }, true],
+  ['o clock', "11 o'clock", { answer: '11:00' }, true],
+  ['quarter to', 'quarter to twelve', { answer: '11:45' }, true],
+  ['wrong time', '1:45', { answer: '13:30', accepts: ['13:30', '1:30'] }, false],
+  ['compass letter', 'S', { answer: 'South' }, true],
+  ['wrong compass letter', 'N', { answer: 'South' }, false],
+  ['short day', 'Tue', { answer: 'Tuesday' }, true],
+  ['short month', 'Sept', { answer: 'September' }, true],
+  ['ambiguous short', 'Ma', { answer: 'March' }, false],
 ];
 for (const [label, user, prob, expect] of cases) {
   const got = checkAnswerMatch(user, prob);

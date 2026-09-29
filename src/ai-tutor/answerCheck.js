@@ -82,6 +82,37 @@ export function numbersMatch(userVal, acceptRaw, acceptVal) {
   return Math.abs(userVal - acceptVal) <= tol;
 }
 
+// ---- Times, compass points, days and months, the way children write them ----
+const NUM_WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12 };
+const hourOf = (w) => (/^\d+$/.test(w) ? Number(w) : NUM_WORDS[w]);
+// Minutes past midnight, folded onto a 12-hour clock; null if not a time.
+export function timeValue(raw) {
+  let t = raw.toString().trim().toLowerCase().replace(/\s+/g, ' ').replace(/\.$/, '');
+  t = t.replace(/\b(a\.?\s?m\.?|p\.?\s?m\.?|hrs|hours|h)$/, '').trim();
+  let m = t.match(/^(\d{1,2})\s*[:.]\s*(\d{2})$/);
+  if (m && Number(m[2]) < 60 && Number(m[1]) <= 24) return ((Number(m[1]) % 12) * 60 + Number(m[2]));
+  m = t.match(/^(\d{1,2}|[a-z]+)\s*(o'?clock|o clock|oclock)?$/);
+  if (m && m[2] && hourOf(m[1]) != null) return (hourOf(m[1]) % 12) * 60;
+  m = t.match(/^half past (\d{1,2}|[a-z]+)$/);
+  if (m && hourOf(m[1]) != null) return (hourOf(m[1]) % 12) * 60 + 30;
+  m = t.match(/^(a )?quarter past (\d{1,2}|[a-z]+)$/);
+  if (m && hourOf(m[2]) != null) return (hourOf(m[2]) % 12) * 60 + 15;
+  m = t.match(/^(a )?quarter to (\d{1,2}|[a-z]+)$/);
+  if (m && hourOf(m[2]) != null) return ((hourOf(m[2]) + 11) % 12) * 60 + 45;
+  return null;
+}
+const isClockKey = (a) => /^\d{1,2}:\d{2}$/.test(String(a).trim());
+const COMPASS = { n: 'north', s: 'south', e: 'east', w: 'west', ne: 'north east', nw: 'north west', se: 'south east', sw: 'south west' };
+const SHORT_NAMES = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday',
+  'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+// "S" -> "south", "Tue"/"Tues" -> "tuesday", "Sept" -> "september".
+const expandShort = (w) => {
+  const x = w.toLowerCase().replace(/[.\s-]/g, '');
+  if (COMPASS[x]) return COMPASS[x].replace(' ', '');
+  if (x.length >= 3) { const hit = SHORT_NAMES.filter(n => n.startsWith(x)); if (hit.length === 1) return hit[0]; }
+  return x;
+};
+
 export function checkAnswerMatch(userAnswer, problem) {
   const normalizedUser = normalizeMath(userAnswer);
   const accepts = problem.accepts || [problem.answer];
@@ -99,6 +130,18 @@ export function checkAnswerMatch(userAnswer, problem) {
   if (/^[a-z][a-z\s'-]*$/i.test(userAnswer.toString().trim())) {
     const w = wordy(userAnswer);
     if (w && accepts.some(a => /^[a-z][a-z\s'-]*$/i.test(String(a).trim()) && wordy(a) === w)) return true;
+  }
+
+  // 1c) Clock times: "1:30", "1.30 pm", "13.30", "half past one" for a 13:30 key.
+  if (accepts.some(isClockKey)) {
+    const tv = timeValue(userAnswer);
+    if (tv != null && accepts.some(a => isClockKey(a) && timeValue(a) === tv)) return true;
+  }
+
+  // 1d) Compass points and day/month names, shortened: "S", "Tue", "Sept".
+  if (/^[a-z][a-z.\s-]{0,10}$/i.test(userAnswer.toString().trim())) {
+    const u = expandShort(userAnswer.toString().trim());
+    if (accepts.some(a => /^[a-z][a-z\s-]*$/i.test(String(a).trim()) && expandShort(String(a).trim()) === u && u.length > 2)) return true;
   }
 
   // 2) Single-number match by value — covers integers, decimals, fractions,
