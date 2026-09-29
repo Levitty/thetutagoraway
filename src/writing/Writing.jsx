@@ -115,6 +115,7 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
   const [result, setResult] = useState(null); // marked piece: { id, score, feedback, body, ... }
   const [history, setHistory] = useState([]);
   const [err, setErr] = useState('');
+  const [pasteNote, setPasteNote] = useState(false);
   const [draft, setDraft] = useState(null);
   const [remaining, setRemaining] = useState(null);
 
@@ -367,10 +368,22 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
         <div className="bg-white border border-slate-200 shadow-sm rounded-2xl overflow-hidden">
           <input value={piece.title} onChange={e => setPiece(p => ({ ...p, title: e.target.value }))} placeholder={pl ? 'Anwani (si lazima)' : 'Title (optional)'}
             className="w-full px-4 pt-4 pb-2 text-[17px] font-extrabold tracking-tight placeholder:text-slate-300 placeholder:font-semibold focus:outline-none" />
-          <textarea ref={taRef} value={piece.body} onChange={e => setPiece(p => ({ ...p, body: e.target.value }))} disabled={view === 'marking'}
+          <textarea ref={taRef} value={piece.body} disabled={view === 'marking'}
+            // The writing has to be the child's own: no pasting, dropping, or
+            // keyboard clipboard chips. A jump of many characters in one go is
+            // treated as a paste; normal typing and word suggestions are small.
+            onPaste={e => { e.preventDefault(); setPasteNote(true); }}
+            onDrop={e => { e.preventDefault(); setPasteNote(true); }}
+            onBeforeInput={e => { const t = e.nativeEvent?.inputType || ''; if (/^insertFrom(Paste|Drop|Yank)/.test(t)) { e.preventDefault(); setPasteNote(true); } }}
+            onChange={e => {
+              const next = e.target.value;
+              if (next.length - piece.body.length > 40) { setPasteNote(true); return; }
+              setPiece(p => ({ ...p, body: next }));
+            }}
             placeholder={pl ? 'Anza hapa…' : 'Start here…'} spellCheck={false} autoCorrect="off"
             className="w-full px-4 pb-4 text-[16px] leading-[1.7] text-slate-800 placeholder:text-slate-300 focus:outline-none resize-none" />
         </div>
+        {pasteNote && <div className="bg-amber-50 border border-amber-200 text-amber-900 rounded-xl px-3.5 py-2.5 text-[13.5px]">{pl ? 'Kubandika kumezimwa. Andika kwa maneno yako mwenyewe.' : 'Pasting is turned off. Type it in your own words.'}</div>}
         <p className="text-[12px] text-slate-400 px-1">{pl ? 'Ukaguzi wa tahajia umezimwa kimakusudi — mwalimu wako anataka kuona tahajia yako halisi.' : "Spell-check is off on purpose: the marker needs to see your real spelling."}</p>
 
         {err && <div className="bg-[#fde7e3] border border-[#f3c9c0] text-[#8a3d22] rounded-xl px-3.5 py-2.5 text-[13.5px]">{err}</div>}

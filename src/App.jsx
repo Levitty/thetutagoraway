@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { supabase } from './supabase';
 import { SKILLS as AI_SKILLS } from './ai-tutor/knowledgeGraph.js';
 import { VideoRoom } from './VideoRoom';
+import { useLessonNotes, LessonNotesModal } from './lesson/LessonNotes.jsx';
 import { INTEREST_CATEGORIES, CATEGORY_BY_KEY, categoryLabel, categoryEmoji } from './groupClassCategories.js';
 import { PaymentModal } from './PaymentModal';
 import { initiatePaystackPayment } from './paystack';
@@ -16,7 +17,7 @@ import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
 import { initPush, requestPush, clearPush } from './push.js';
-import { PRICE_KES, PASS_DAYS } from './subscription.js';
+import { PLANS, paywallActive, isFreeWeek, passDaysLeft } from './subscription.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Icon } from './ai-tutor/components/Icons.jsx';
@@ -28,6 +29,7 @@ import './site/site.css';
 import SiteHome from './site/Home.jsx';
 import { TutorList, TutorProfile } from './site/Tutors.jsx';
 import SiteTeach from './site/Teach.jsx';
+import SiteWhy from './site/Why.jsx';
 import { HALF_HOUR_LESSONS } from './site/features.js';
 import { SiteIcon } from './site/ui.jsx';
 import { CheckStart, CheckResult, getCheck, setFocus } from './site/Check.jsx';
@@ -45,7 +47,7 @@ const IS_NATIVE = typeof window !== 'undefined' && !!window.Capacitor?.isNativeP
 // this mainly lets Google tell the routes apart.)
 const ORIGIN = 'https://tutagora.com';
 const ROUTE_SEO = {
-  home:       { t: "Tutagora — Find the one maths step your child is missing", d: "A free 10-minute maths check finds the exact step your child is missing, then 15 minutes a day rebuilds it. CBC Grade 1 to 12, plus tutors when it's stuck.", path: '/' },
+  home:       { t: "Tutagora — Find the one maths step your child is missing", d: "A free 10-minute maths check finds the exact step your child is missing, then 15 minutes a day rebuilds it. CBC and Cambridge, Grade 1 to 12, plus tutors when it's stuck.", path: '/' },
   check:      { t: "Free 10-minute Maths Check (CBC Grade 1–12) | Tutagora", d: "Find the exact maths step your child is missing. Free, adaptive, no account needed.", path: '/check' },
   tutors:     { t: "Find a Verified Tutor in Kenya | Tutagora", d: "Browse verified tutors by subject, grade and price. Book a one-on-one online lesson and pay securely.", path: '/tutors' },
   horeb:      { t: "HOREB — Free Adaptive Maths Practice (CBC) | Tutagora", d: "A free maths check finds your child's exact gap, then rebuilds it — adaptive practice mapped to the Kenyan CBC curriculum.", path: '/horeb' },
@@ -53,6 +55,7 @@ const ROUTE_SEO = {
   ai:         { t: "HOREB — Adaptive Maths Practice | Tutagora", d: "Practice maths at your real level. HOREB finds the gap and rebuilds from it, watching the working — free to start.", path: '/ai' },
   schools:    { t: "HOREB for Schools — Adaptive CBC Maths | Tutagora", d: "Give every child in your school maths at their own level, with a teacher dashboard and per-student CBC reports.", path: '/schools' },
   clubs:      { t: "Group Classes & Clubs | Tutagora", d: "Live group classes and interest-led clubs for Kenyan learners, led by verified tutors.", path: '/clubs' },
+  why:        { t: "Why Tutagora", d: "Why Tutagora exists and where it is going.", path: '/why' },
   teach:      { t: "Become a Tutor on Tutagora", d: "Teach online, set your own rate, and reach students across Kenya. Apply to become a verified Tutagora tutor.", path: '/teach' },
   consulting: { t: "Education Consulting | Tutagora", d: "Education consulting and advisory from the Tutagora team.", path: '/consulting' },
 };
@@ -296,7 +299,7 @@ const PrivacyPolicyPage = ({ onBack }) => (
         <section>
           <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">1. Data Controller</h2>
           <p>Tutagora Ltd ("Tutagora", "we", "us") is the data controller responsible for your personal data. We are registered in Kenya and operate the platform at tutagora.com.</p>
-          <p><strong>Contact:</strong> tutaeducators@gmail.com | +254 759 240 692 | Nairobi, Kenya</p>
+          <p><strong>Contact:</strong> hello@tutagora.com | +254 759 240 692 | Nairobi, Kenya</p>
         </section>
 
         <section>
@@ -333,7 +336,7 @@ const PrivacyPolicyPage = ({ onBack }) => (
         <section>
           <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">7. Your Rights</h2>
           <p>Under the Kenya Data Protection Act, 2019 (Part IV), you have the right to: access your personal data; rectify inaccurate data; request erasure of your data (right to be forgotten); request a portable copy of your data; object to processing of your data; and withdraw consent at any time.</p>
-          <p>To exercise any of these rights, email us at <strong>levitty@tutagora.com</strong> or use the account settings in your dashboard. We will respond within 30 days.</p>
+          <p>To exercise any of these rights, email us at <strong>hello@tutagora.com</strong> or use the account settings in your dashboard. We will respond within 30 days.</p>
         </section>
 
         <section>
@@ -362,18 +365,16 @@ const PrivacyPolicyPage = ({ onBack }) => (
 
 // ============ COOKIE / PRIVACY BANNER ============
 const PrivacyBanner = ({ onAccept, onNavigate }) => (
-  <div className="fixed bottom-0 left-0 right-0 bg-slate-900 text-white p-4 z-40 shadow-lg">
-    <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-3">
-      <p className="text-sm text-slate-300 flex-1">
-        We use essential data to provide our tutoring service. By continuing, you agree to our{' '}
-        <button onClick={() => onNavigate('privacy')} className="text-amber-300 underline hover:text-amber-200">Privacy Policy</button>{' '}
-        in accordance with Kenya's Data Protection Act, 2019.
+  // One slim line, so it doesn't cover the first screen a parent sees.
+  <div className="fixed bottom-0 left-0 right-0 bg-slate-900 text-white px-4 py-2.5 z-40 shadow-lg" role="region" aria-label="Privacy">
+    <div className="max-w-4xl mx-auto flex items-center gap-3">
+      <p className="text-xs sm:text-sm text-slate-300 flex-1 leading-snug">
+        We use essential data to run Tutagora, under Kenya's Data Protection Act.{' '}
+        <button onClick={() => onNavigate('privacy')} className="text-amber-300 underline hover:text-amber-200">Privacy Policy</button>
       </p>
-      <div className="flex gap-2 flex-shrink-0">
-        <button onClick={onAccept} className="px-5 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-medium rounded-xl transition-colors">
-          Accept
-        </button>
-      </div>
+      <button onClick={onAccept} className="shrink-0 px-4 py-1.5 bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-semibold rounded-lg transition-colors">
+        OK
+      </button>
     </div>
   </div>
 );
@@ -427,7 +428,7 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
       URL.revokeObjectURL(url);
       setMessage('Your data has been downloaded.');
     } catch (err) {
-      setMessage('Error exporting data. Please try again or contact levitty@tutagora.com');
+      setMessage('Error exporting data. Please try again or contact hello@tutagora.com');
     }
     setExporting(false);
   };
@@ -460,6 +461,15 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
         await supabase.from('tutors').delete().eq('user_id', user.id);
       }
 
+      // Delete the whiteboard notes from this family's lessons.
+      try {
+        const { data: myLessons } = await supabase.from('bookings').select('id').eq('student_id', user.id);
+        for (const { id } of myLessons || []) {
+          const { data: pages } = await supabase.storage.from('lesson-notes').list(id);
+          if (pages?.length) await supabase.storage.from('lesson-notes').remove(pages.map(f => `${id}/${f.name}`));
+        }
+      } catch { /* notes are optional; carry on deleting the rest */ }
+
       // Delete avatar
       const { data: avatarFiles } = await supabase.storage.from('avatars').list(user.id);
       if (avatarFiles?.length) {
@@ -478,7 +488,7 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
       onLogout();
       alert('Your account has been deleted. Some anonymized records may be retained for legal compliance.');
     } catch (err) {
-      setMessage('Error deleting account. Please contact levitty@tutagora.com for assistance.');
+      setMessage('Error deleting account. Please contact hello@tutagora.com for assistance.');
       setDeleting(false);
     }
   };
@@ -552,77 +562,103 @@ const LoadingSpinner = () => (
 );
 
 // ============ PAYWALL MODAL ============
-// Shown when a free learner has used today's free practice (only ever appears
-// once PAYWALL_ENABLED is flipped on). Charges the KSh 200 30-day pass via
-// Paystack; the pass is granted only by the verify-subscription function.
-const PaywallModal = ({ user, onClose, onUnlocked }) => {
+// Shown when the free week (or a pass) has ended and a child tries to
+// practise. Pays by M-Pesa or card through Paystack; the pass is granted only
+// by the verify-subscription function, never by the browser.
+const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
+  const [plan, setPlan] = useState('month');
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
+  const [done, setDone] = useState(null);
+  const endedFreeWeek = isFreeWeek(subscription);
 
-  const goUnlimited = async () => {
+  const pay = async () => {
     if (!user?.id || !user?.email) { setErr('Please sign in first.'); return; }
+    const p = PLANS[plan];
     setBusy(true); setErr('');
     try {
       await initiatePaystackPayment({
         email: user.email,
-        amount: PRICE_KES,
-        reference: `sub_${user.id.slice(0, 8)}_${Date.now()}`,
-        metadata: { type: 'subscription', user_id: user.id },
+        amount: p.kes,
+        reference: `PASS-${user.id.slice(0, 8)}-${Date.now().toString(36)}`,
+        metadata: { type: 'subscription', plan: p.id, user_id: user.id },
         onSuccess: async (response) => {
-          try {
-            const { data } = await supabase.functions.invoke('verify-subscription', {
-              body: { reference: response.reference, user_id: user.id },
-            });
-            if (data?.verified) { onUnlocked?.(); onClose?.(); }
-            else setErr('We could not confirm the payment. If you were charged, contact support.');
-          } catch { setErr('Verification failed. If you were charged, contact support.'); }
+          let ok = false;
+          for (let attempt = 0; attempt < 3 && !ok; attempt++) {
+            try {
+              const { data } = await supabase.functions.invoke('verify-subscription', { body: { reference: response.reference, plan: p.id } });
+              if (data?.verified) { ok = true; setDone(data.pro_until); onUnlocked?.(); }
+            } catch { /* try again */ }
+            if (!ok) await new Promise(r => setTimeout(r, 1500));
+          }
+          if (!ok) setErr(`We couldn't confirm the payment yet. If M-Pesa took the money, WhatsApp us on 0759 240 692 with reference ${response.reference} and we'll switch your pass on.`);
           setBusy(false);
         },
         onClose: () => setBusy(false),
       });
-    } catch { setErr('Could not start payment. Try again.'); setBusy(false); }
+    } catch { setErr("The payment couldn't start. Please try again."); setBusy(false); }
   };
 
+  const until = done ? new Date(done).toLocaleDateString('en-KE', { day: 'numeric', month: 'long' }) : '';
   return (
-    <div className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4">
-      <div className="bg-white w-full sm:max-w-sm rounded-t-3xl sm:rounded-3xl p-6 native-safe-top" style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }}>
+    <div className="fixed inset-0 z-[60] bg-black/50 flex items-end sm:items-center justify-center p-0 sm:p-4" onClick={onClose}>
+      <div className="bg-white w-full sm:max-w-sm rounded-t-3xl sm:rounded-3xl p-6 native-safe-top" style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }} onClick={e => e.stopPropagation()}>
         <div className="w-10 h-1 bg-slate-200 rounded-full mx-auto mb-5 sm:hidden" />
-        <div className="text-[11px] font-bold tracking-[.12em] uppercase text-amber-600">Nice work today</div>
-        <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 mt-1">You've done today's free practice</h2>
-        <p className="text-[15px] text-slate-500 mt-2">Come back tomorrow for more free practice — or go unlimited and keep going now.</p>
-        <ul className="mt-4 space-y-2">
-          {['Unlimited daily practice', 'The full learning path', 'Every skill, every review'].map(t => (
-            <li key={t} className="flex items-center gap-2.5 text-[15px] text-slate-700">
-              <svg viewBox="0 0 24 24" className="w-4 h-4 text-[#5a7a3a] shrink-0" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>{t}
-            </li>
-          ))}
-        </ul>
-        <div className="flex items-baseline gap-2 mt-5">
-          <span className="text-[30px] font-extrabold tracking-tight text-slate-900">KSh {PRICE_KES}</span>
-          <span className="text-sm text-slate-500">/ month · {PASS_DAYS}-day pass</span>
-        </div>
-        {err && <div className="mt-3 text-[13px] text-[#c0663f]">{err}</div>}
-        <button onClick={goUnlimited} disabled={busy} className="w-full mt-4 bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-slate-900 rounded-2xl py-3.5 font-bold text-[15px] transition-colors">
-          {busy ? 'Opening payment…' : 'Go unlimited'}
-        </button>
-        <button onClick={onClose} className="w-full mt-2 text-slate-400 text-sm font-medium py-2">Maybe tomorrow</button>
+        {done ? (
+          <>
+            <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">Practice is unlocked</h2>
+            <p className="text-[15px] text-slate-600 mt-2">Your pass runs until {until}. Every child on your account can practise.</p>
+            <button onClick={onClose} className="w-full mt-5 bg-slate-900 text-white rounded-2xl py-3.5 font-bold text-[15px]">Keep practising</button>
+          </>
+        ) : (
+          <>
+            <div className="text-[11px] font-bold tracking-[.12em] uppercase text-amber-700">{endedFreeWeek ? 'Your free week has ended' : 'Your pass has ended'}</div>
+            <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 mt-1">Keep the daily practice going</h2>
+            <p className="text-[15px] text-slate-500 mt-2">15 minutes a day, picking up exactly where your child left off. One pass covers every child on your account.</p>
+            <div className="grid grid-cols-2 gap-2.5 mt-5" role="radiogroup" aria-label="Choose a pass">
+              {[PLANS.week, PLANS.month].map(p => (
+                <button key={p.id} type="button" role="radio" aria-checked={plan === p.id} onClick={() => setPlan(p.id)}
+                  className={`text-left rounded-2xl p-4 border-2 transition-colors ${plan === p.id ? 'border-slate-900 bg-amber-50' : 'border-slate-200 bg-white'}`}>
+                  <div className="text-[13px] font-bold text-slate-500">{p.label}</div>
+                  <div className="text-[24px] font-extrabold tracking-tight text-slate-900 mt-0.5">KSh {p.kes}</div>
+                  <div className="text-[12px] font-semibold text-slate-500 mt-1 leading-snug">{p.note || 'Pay as you go'}</div>
+                </button>
+              ))}
+            </div>
+            {err && <div className="mt-3 text-[13.5px] text-[#b3261e] leading-snug">{err}</div>}
+            <button onClick={pay} disabled={busy} className="w-full mt-5 bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-slate-900 rounded-2xl py-3.5 font-bold text-[15px] transition-colors">
+              {busy ? 'Opening M-Pesa…' : `Pay KSh ${PLANS[plan].kes} with M-Pesa or card`}
+            </button>
+            <button onClick={onClose} className="w-full mt-2 text-slate-500 text-sm font-semibold py-2">Not now</button>
+          </>
+        )}
       </div>
     </div>
   );
 };
 
 // ============ AUTH CONTEXT ============
+// Where sign-in links and Google return to: the same site the person is on
+// (tutagora.com, www.tutagora.com or a preview), so the free check saved on
+// this device is still there. The app shell has no web origin, so it uses the
+// main domain.
+const AUTH_RETURN = IS_NATIVE || typeof window === 'undefined' ? 'https://tutagora.com/dashboard' : `${window.location.origin}/dashboard`;
+
 const useAuth = () => {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
   const [subscription, setSubscription] = useState(null); // paywall entitlement
   const [loading, setLoading] = useState(true);
 
-  const fetchSubscription = async (userId) => {
+  const fetchSubscription = async (userId, role) => {
     try {
       const { data } = await supabase.from('subscriptions').select('*').eq('user_id', userId).maybeSingle();
-      setSubscription(data || null);
-    } catch { setSubscription(null); } // table may not exist yet — treated as free
+      if (data || !paywallActive() || role === 'tutor') { setSubscription(data || null); return; }
+      // Paid practice is on and this family has never had a pass: their
+      // free week starts now (once per account, decided by the database).
+      const { data: started, error } = await supabase.rpc('start_free_week');
+      setSubscription(!error && started?.user_id ? started : null);
+    } catch { setSubscription(null); } // table may not exist yet: treated as free
   };
 
   useEffect(() => {
@@ -640,7 +676,16 @@ const useAuth = () => {
         // Check if there's a pending role from Google OAuth signup
         const pendingRole = localStorage.getItem('tutagora_pending_role');
         const pendingName = localStorage.getItem('tutagora_pending_name');
-        if (pendingRole && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) {
+        // Only a brand-new account takes the role picked on the sign-up sheet.
+        // Applying it to an existing account demoted tutors who tapped
+        // "Continue with Google" to save a plan for their own child.
+        const isNewAccount = session.user.created_at && (Date.now() - new Date(session.user.created_at).getTime()) < 15 * 60 * 1000;
+        if (pendingRole && !isNewAccount) {
+          localStorage.removeItem('tutagora_pending_role');
+          localStorage.removeItem('tutagora_pending_type');
+          localStorage.removeItem('tutagora_pending_name');
+        }
+        if (pendingRole && isNewAccount && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) {
           // Update the profile with the selected role
           const updateData = { role: pendingRole };
           if (pendingName) updateData.full_name = pendingName;
@@ -684,7 +729,7 @@ const useAuth = () => {
     }
     
     setProfile(profileData);
-    fetchSubscription(userId);
+    fetchSubscription(userId, profileData?.role);
     setLoading(false);
   };
 
@@ -694,7 +739,7 @@ const useAuth = () => {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: meta }
+      options: { data: meta, emailRedirectTo: AUTH_RETURN }
     });
     if (error) throw error;
     // Send welcome email
@@ -711,7 +756,7 @@ const useAuth = () => {
   const signInWithGoogle = async () => {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: 'https://tutagora.com/dashboard' }
+      options: { redirectTo: AUTH_RETURN }
     });
     if (error) throw error;
     return data;
@@ -719,7 +764,7 @@ const useAuth = () => {
 
   const resetPassword = async (email) => {
     const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: 'https://tutagora.com/dashboard'
+      redirectTo: AUTH_RETURN
     });
     if (error) throw error;
     return data;
@@ -732,7 +777,7 @@ const useAuth = () => {
     setSubscription(null);
   };
 
-  return { user, profile, subscription, loading, signUp, signIn, signInWithGoogle, resetPassword, signOut, refetchProfile: () => user && fetchProfile(user.id), refetchSubscription: () => user && fetchSubscription(user.id) };
+  return { user, profile, subscription, loading, signUp, signIn, signInWithGoogle, resetPassword, signOut, refetchProfile: () => user && fetchProfile(user.id), refetchSubscription: () => user && fetchSubscription(user.id, profile?.role) };
 };
 
 // ============ DATABASE HOOKS ============
@@ -830,10 +875,8 @@ const useBookings = (userId, role, tutorId = null) => {
 
     if (error) throw error;
 
-    // Send in-app message to tutor (emails sent after payment in PaymentModal)
-    if (data) {
-      await sendBookingNotifications(data, userId);
-    }
+    // The tutor is told only after payment is confirmed (see onPaid), so an
+    // abandoned checkout never produces a "New booking" message.
 
     fetchBookings();
     return data;
@@ -1001,15 +1044,13 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
         {error && <div className="msg err">{error}</div>}
         {success && <div className="msg ok">{success}</div>}
 
-        {view === 'register' && (
-          <>
-            <div className="roles" role="group" aria-label="I am">
-              {[['parent', "I'm a parent"], ['student', "I'm a student"], ['tutor', "I'm a tutor"]].map(([v, l]) => (
-                <button key={v} type="button" aria-pressed={form.role === v} onClick={() => setForm({ ...form, role: v })}>{l}</button>
-              ))}
-            </div>
-            <input className="inp" style={{ marginBottom: 10 }} placeholder="Your full name" autoComplete="name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
-          </>
+        {/* Saving a check is always a parent, so there's nothing to choose. */}
+        {view === 'register' && reason !== 'plan' && (
+          <div className="roles" role="group" aria-label="I am">
+            {[['parent', "I'm a parent"], ['student', "I'm a student"], ['tutor', "I'm a tutor"]].map(([v, l]) => (
+              <button key={v} type="button" aria-pressed={form.role === v} onClick={() => setForm({ ...form, role: v })}>{l}</button>
+            ))}
+          </div>
         )}
 
         {view !== 'forgot' && (
@@ -1018,11 +1059,15 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
               <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
               {view === 'login' ? 'Sign in with Google' : 'Continue with Google'}
             </button>
+            {view === 'register' && <p className="fine" style={{ margin: '8px 0 0', textAlign: 'center' }}>By continuing with Google you agree to our <button type="button" className="linkbtn" onClick={() => window.open('/privacy', '_blank')}>Privacy Policy</button>.</p>}
             <div className="or">or with email</div>
           </>
         )}
 
         <form onSubmit={handleSubmit} className="stack">
+          {view === 'register' && (
+            <input className="inp" placeholder="Your full name" autoComplete="name" required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
+          )}
           <input className="inp" type="email" placeholder="Email address" autoComplete="email" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
           {view !== 'forgot' && (
             <input className="inp" type="password" placeholder="Password (at least 6 characters)" autoComplete={view === 'login' ? 'current-password' : 'new-password'} required minLength={6} value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} />
@@ -1082,7 +1127,7 @@ const MomentumChip = ({ userId, onClick }) => {
 // The signed-in family's home (web). Parents first: their children, handing
 // over the phone, and lessons. Students use the same screen without the
 // children section. On the public site's coral design.
-const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings }) => {
+const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings }) => {
   const [tab, setTab] = useState('upcoming');
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [reviewBooking, setReviewBooking] = useState(null);
@@ -1111,14 +1156,40 @@ const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate
     if (data) { setChildren(prev => [...prev, data]); setNewChildName(''); setNewChildGrade(''); setAdding(false); }
   };
   const removeChild = async (c) => {
-    if (!window.confirm(`Remove ${c.name}? Their practice stays saved, but they won't appear here.`)) return;
+    if (!window.confirm(`Remove ${c.name}? This also deletes their practice and progress. It can't be undone.`)) return;
     await supabase.from('children').delete().eq('id', c.id);
     setChildren(prev => prev.filter(x => x.id !== c.id));
   };
-  const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
-  const past = bookings.filter(b => b.status === 'completed');
-  const nextLesson = [...upcoming].sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
+  // A lesson's end, in Kenya time. Lessons whose time has passed leave
+  // "upcoming"; an unpaid one that has passed disappears altogether.
+  const [removed, setRemoved] = useState([]);
+  const [reviewed, setReviewed] = useState({});
+  const endsAt = (b) => {
+    const t = new Date(`${b.lesson_date}T${String(b.start_time || '00:00').slice(0, 5)}:00+03:00`).getTime();
+    return isNaN(t) ? Infinity : t + (Number(b.duration_minutes) || 60) * 60000;
+  };
+  const nowMs = Date.now();
+  const visible = bookings.filter(b => !removed.includes(b.id));
+  const upcoming = visible.filter(b => (b.status === 'confirmed' || b.status === 'pending') && endsAt(b) > nowMs);
+  const past = visible.filter(b => b.status === 'completed' || (b.status === 'confirmed' && endsAt(b) <= nowMs))
+    .sort((a, b) => endsAt(b) - endsAt(a));
+  const nextLesson = [...upcoming].filter(b => b.status === 'confirmed').sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
   const totalSpent = payments.reduce((s, p) => s + (p.amount || 0), 0);
+  const removeUnpaid = async (b) => {
+    if (!window.confirm('Remove this unpaid booking? The time will be freed for other families.')) return;
+    setRemoved(r => [...r, b.id]);
+    try { await supabase.from('bookings').delete().eq('id', b.id).eq('student_id', profile.id).eq('status', 'pending'); } catch { /* the list refreshes on its own */ }
+  };
+  // Which finished lessons already have a review (so "Leave a review" goes away).
+  useEffect(() => {
+    const ids = bookings.filter(b => b.status === 'completed' || b.status === 'confirmed').map(b => b.id);
+    if (!ids.length) return;
+    supabase.from('reviews').select('booking_id, rating').in('booking_id', ids)
+      .then(({ data }) => { if (data) setReviewed(Object.fromEntries(data.map(r => [r.booking_id, r]))); });
+  }, [bookings.length]);
+  // Whiteboard notes saved from recent lessons.
+  const [notes, setNotes] = useLessonNotes(past.slice(-12).map(b => b.id));
+  const [notesFor, setNotesFor] = useState(null);
   const uniqueTutors = [...new Set(past.map(b => b.tutor_id))].length;
   const first = profile?.full_name?.split(' ')[0] || 'there';
   const when = (b) => {
@@ -1162,9 +1233,11 @@ const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate
         </div>
       </div>
       <div className="lact">
-        {!done && <span className={`pill ${b.status === 'confirmed' ? 'ok' : ''}`}>{b.status === 'confirmed' ? 'Confirmed' : 'Awaiting payment'}</span>}
+        {!done && <span className={`pill ${b.status === 'confirmed' ? 'ok' : ''}`}>{b.status === 'confirmed' ? 'Confirmed' : 'Not paid'}</span>}
         {!done && b.status === 'confirmed' && <button type="button" className="btn sm" onClick={() => onStartLesson(b)}>Join</button>}
-        {done && (b.review
+        {!done && b.status === 'pending' && <button type="button" className="btn line sm" onClick={() => removeUnpaid(b)}>Remove</button>}
+        {done && notes[b.id] && <button type="button" className="btn sm" onClick={() => setNotesFor(b)}>Lesson notes</button>}
+        {done && ((b.review || reviewed[b.id])
           ? <span className="pill ok">Reviewed</span>
           : <button type="button" className="btn line sm" onClick={() => setReviewBooking(b)}>Leave a review</button>)}
       </div>
@@ -1216,12 +1289,24 @@ const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate
 
       <div className="in dgrid">
         <main style={{ minWidth: 0 }}>
+          {/* Practice pass: how long is left, and a way to keep going. */}
+          {paywallActive() && (() => {
+            const left = passDaysLeft(subscription);
+            const trial = isFreeWeek(subscription);
+            return (
+              <div className={`passbar ${left > 2 ? '' : 'warn'}`}>
+                <div><b>{left > 0 ? (trial ? `Free week: ${left} day${left === 1 ? '' : 's'} left` : `Practice pass: ${left} day${left === 1 ? '' : 's'} left`) : 'Practice is paused'}</b>
+                  <span>{left > 0 ? (trial ? `Then KSh ${PLANS.week.kes} a week or KSh ${PLANS.month.kes} a month.` : 'Every child on your account can practise.') : 'Get a pass to keep the daily 15 minutes going.'}</span></div>
+                {(left <= 2) && <button type="button" className="btn sm" onClick={onGetPass}>{left > 0 ? 'Get a pass' : 'Get a pass'}</button>}
+              </div>
+            );
+          })()}
           {!isStudentAccount && (
             <section className="block">
               <div className="bhead"><h2 className="display">Your children</h2>{!adding && <button type="button" className="btn line sm" onClick={() => setAdding(true)}><SiteIcon name="plus" />Add a child</button>}</div>
               {children.length === 0 && !adding && (
                 <div className="empty-card">
-                  <p><b>No children added yet.</b> Add your child to hand over the phone, set weekly goals and get a Sunday report.</p>
+                  <p><b>No children added yet.</b> Add your child to hand over the phone and set weekly goals.</p>
                   <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
                     <button type="button" className="btn" onClick={() => setAdding(true)}>Add a child</button>
                     <button type="button" className="btn line" onClick={() => onNavigate('check')}>Take the free check</button>
@@ -1334,8 +1419,12 @@ const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate
         <StudentProfileEditor profile={profile} onClose={() => setShowEditProfile(false)}
           onSave={() => { setShowEditProfile(false); onRefreshProfile && onRefreshProfile(); }} />
       )}
+      {notesFor && notes[notesFor.id] && (
+        <LessonNotesModal booking={notesFor} files={notes[notesFor.id]} onClose={() => setNotesFor(null)}
+          onDeleted={() => setNotes(n => { const { [notesFor.id]: _gone, ...rest } = n; return rest; })} />
+      )}
       {reviewBooking && (
-        <ReviewModal booking={reviewBooking} profile={profile} onClose={() => setReviewBooking(null)} onSubmit={() => { setReviewBooking(null); }} />
+        <ReviewModal booking={reviewBooking} profile={profile} onClose={() => setReviewBooking(null)} onSubmit={() => { setReviewed(r => ({ ...r, [reviewBooking.id]: true })); setReviewBooking(null); }} />
       )}
       {showProgress && (
         <StudentProgressModal profile={profile} bookings={bookings} onClose={() => setShowProgress(false)} />
@@ -1844,13 +1933,8 @@ const TutorOnboarding = ({ profile, onComplete }) => {
         tutorData = data;
       }
 
-      const { data: existingAvail } = await supabase
-        .from('availability').select('id').eq('tutor_id', tutorData.id).limit(1);
-      if (!existingAvail || existingAvail.length === 0) {
-        await supabase.from('availability').insert(
-          [1, 2, 3, 4, 5].map(day => ({ tutor_id: tutorData.id, day_of_week: day, start_time: '09:00', end_time: '17:00' }))
-        );
-      }
+      // No made-up hours: families would book times the tutor never offered.
+      // The tutor sets real hours under Schedule once approved.
 
       // Send "under review" email
       try {
@@ -2193,11 +2277,42 @@ const ClubsRoute = ({ user, onNavigate, setShowAuth }) => {
 };
 
 // ============ TUTOR DASHBOARD ============
+// Save a tutor's weekly hours. Checks every step: before, a failed insert
+// after the delete silently wiped the tutor's hours and still said "saved".
+const hhmm = (t) => String(t || '').slice(0, 5);
+const saveTutorHours = async (tutorId, availability) => {
+  const rows = availability.filter(a => a.enabled).map(a => ({
+    tutor_id: tutorId, day_of_week: a.day_of_week, start_time: hhmm(a.start_time), end_time: hhmm(a.end_time),
+  }));
+  const bad = rows.find(r => !r.start_time || !r.end_time || r.end_time <= r.start_time);
+  if (bad) {
+    const day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][bad.day_of_week];
+    throw new Error(`${day}: the end time must be after the start time.`);
+  }
+  const { data: before } = await supabase.from('availability').select('tutor_id, day_of_week, start_time, end_time').eq('tutor_id', tutorId);
+  const { error: delErr } = await supabase.from('availability').delete().eq('tutor_id', tutorId);
+  if (delErr) throw new Error('Could not save your hours. Please try again.');
+  if (rows.length) {
+    const { error: insErr } = await supabase.from('availability').insert(rows);
+    if (insErr) {
+      if (before?.length) await supabase.from('availability').insert(before);
+      throw new Error('Could not save your hours. Your old hours are kept. Please try again.');
+    }
+  }
+};
+
 const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, onNavigate, isAdmin, onOpenAccountSettings }) => {
   const [tab, setTab] = useState('overview');
   const [resubmitting, setResubmitting] = useState(false);
   const tutor = profile?.tutors?.[0];
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
+  // Approved tutors with no weekly hours can't be booked; tell them so.
+  const [hasHours, setHasHours] = useState(true);
+  useEffect(() => {
+    if (!tutor?.id) return;
+    supabase.from('availability').select('id').eq('tutor_id', tutor.id).limit(1)
+      .then(({ data, error }) => { if (!error) setHasHours(!!data?.length); });
+  }, [tutor?.id, tab]);
   const completed = bookings.filter(b => b.status === 'completed');
 
   // Auto-refresh profile every 30s while waiting for verification
@@ -2390,21 +2505,21 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col">
-        <header className="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+      <main className="flex-1 flex flex-col min-w-0">
+        <header className="h-16 bg-white border-b border-slate-200 px-4 sm:px-6 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-3 min-w-0">
             {/* Mobile-only logo + home link (sidebar hidden on mobile) */}
             <button onClick={() => onNavigate && onNavigate('home')} className="lg:hidden flex items-center gap-2 mr-2">
               <div className="w-7 h-7 rounded-lg bg-slate-900 flex items-center justify-center text-white font-bold text-xs">T</div>
             </button>
-            <h1 className="text-lg font-semibold text-slate-900">{navItems.find(n => n.id === tab)?.label}</h1>
-            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-emerald-100 text-emerald-700 uppercase tracking-wide">Tutor</span>
+            <h1 className="text-lg font-semibold text-slate-900 truncate">{navItems.find(n => n.id === tab)?.label}</h1>
+            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-emerald-100 text-emerald-700 uppercase tracking-wide hidden sm:inline">Tutor</span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
             <button onClick={() => onNavigate && onNavigate('home')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Home</button>
             <button onClick={() => onNavigate && onNavigate('tutors')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Find Tutors</button>
-            <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium">Spreadsheet</button>
-            <button onClick={() => onNavigate && onNavigate('classroom')} className="text-sm text-emerald-600 font-medium">Class Insights</button>
+            <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium hidden sm:block">Spreadsheet</button>
+            <button onClick={() => onNavigate && onNavigate('classroom')} className="text-sm text-emerald-600 font-medium hidden sm:block">Class Insights</button>
             {isAdmin && <button onClick={() => onNavigate && onNavigate('admin')} className="text-sm text-purple-600 font-medium hidden sm:block">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
             {onOpenAccountSettings && <button onClick={onOpenAccountSettings} className="text-sm text-slate-500 hover:text-slate-700" title="Account & Data Settings">
@@ -2413,8 +2528,28 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
             <button onClick={onLogout} className="text-sm text-slate-500 hover:text-slate-700">Sign out</button>
           </div>
         </header>
+        {/* Phones: the sidebar is hidden, so the sections sit in a strip here. */}
+        <nav className="lg:hidden bg-white border-b border-slate-200 px-3 py-2 flex gap-1.5 overflow-x-auto scrollbar-hide" aria-label="Tutor sections">
+          {navItems.map(item => (
+            <button key={item.id} onClick={() => !item.locked && setTab(item.id)} disabled={item.locked}
+              className={`shrink-0 px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                item.locked ? 'text-slate-300' : tab === item.id ? 'bg-slate-900 text-white' : 'text-slate-600 bg-slate-100'
+              }`}>
+              {item.label}
+            </button>
+          ))}
+          <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="shrink-0 px-3.5 py-2 rounded-lg text-sm font-semibold text-blue-700 bg-blue-50">Spreadsheet</button>
+          <button onClick={() => onNavigate && onNavigate('classroom')} className="shrink-0 px-3.5 py-2 rounded-lg text-sm font-semibold text-emerald-700 bg-emerald-50">Class Insights</button>
+        </nav>
+        {tutor?.verification_status === 'approved' && !hasHours && tab !== 'schedule' && (
+          <div className="bg-amber-50 border-b border-amber-200 px-4 lg:px-8 py-3 flex flex-wrap items-center gap-3 text-sm text-amber-900">
+            <span className="font-semibold">Families can't book you yet.</span>
+            <span>Set the days and times you teach.</span>
+            <button onClick={() => setTab('schedule')} className="ml-auto px-3 py-1.5 rounded-lg bg-amber-900 text-white font-semibold">Set my hours</button>
+          </div>
+        )}
 
-        <div className="flex-1 p-6 overflow-auto">
+        <div className="flex-1 p-4 sm:p-6 overflow-auto">
           <VerificationBanner />
           {tab === 'overview' && (
             <div className="space-y-6">
@@ -2505,7 +2640,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                 ) : (
                   <div className="divide-y divide-slate-100">
                     {upcoming.map(b => (
-                      <div key={b.id} className="px-5 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                      <div key={b.id} className="px-5 py-4 flex flex-wrap items-center justify-between gap-3 hover:bg-slate-50 transition-colors">
                         <div className="flex items-center gap-4 min-w-0">
                           <Avatar src={b.profiles?.avatar_url} name={b.learner_name || b.profiles?.full_name} size={44} />
                           <div className="min-w-0">
@@ -2936,8 +3071,8 @@ const TutorAvailabilityEditor = ({ tutor }) => {
       return {
         day_of_week: day.value,
         enabled: !!existing,
-        start_time: existing?.start_time || '09:00',
-        end_time: existing?.end_time || '17:00',
+        start_time: existing ? hhmm(existing.start_time) : '09:00',
+        end_time: existing ? hhmm(existing.end_time) : '17:00',
         id: existing?.id || null,
       };
     });
@@ -2963,29 +3098,10 @@ const TutorAvailabilityEditor = ({ tutor }) => {
     setMessage('');
 
     try {
-      // Delete all existing availability
-      await supabase
-        .from('availability')
-        .delete()
-        .eq('tutor_id', tutor.id);
-
-      // Insert enabled days
-      const enabledDays = availability
-        .filter(a => a.enabled)
-        .map(a => ({
-          tutor_id: tutor.id,
-          day_of_week: a.day_of_week,
-          start_time: a.start_time,
-          end_time: a.end_time,
-        }));
-
-      if (enabledDays.length > 0) {
-        await supabase.from('availability').insert(enabledDays);
-      }
-
+      await saveTutorHours(tutor.id, availability);
       setMessage('Availability saved!');
     } catch (err) {
-      setMessage('Error saving availability');
+      setMessage(err.message || 'Error saving availability');
       console.error(err);
     }
 
@@ -3052,7 +3168,7 @@ const TutorAvailabilityEditor = ({ tutor }) => {
         >
           {saving ? 'Saving...' : 'Save Availability'}
         </button>
-        {message && <span className={`text-sm ${message.includes('Error') ? 'text-red-600' : 'text-emerald-600'}`}>{message}</span>}
+        {message && <span className={`text-sm ${/saved!$/i.test(message) ? 'text-emerald-600' : 'text-red-600'}`}>{message}</span>}
       </div>
     </div>
   );
@@ -3097,8 +3213,8 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
       const existing = data?.find(a => a.day_of_week === d.value);
       return {
         day_of_week: d.value,
-        start_time: existing?.start_time || '09:00',
-        end_time: existing?.end_time || '17:00',
+        start_time: existing ? hhmm(existing.start_time) : '09:00',
+        end_time: existing ? hhmm(existing.end_time) : '17:00',
         enabled: !!existing,
       };
     });
@@ -3124,24 +3240,10 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
     setMessage('');
 
     try {
-      await supabase.from('availability').delete().eq('tutor_id', tutor.id);
-
-      const enabledDays = availability
-        .filter(a => a.enabled)
-        .map(a => ({
-          tutor_id: tutor.id,
-          day_of_week: a.day_of_week,
-          start_time: a.start_time,
-          end_time: a.end_time,
-        }));
-
-      if (enabledDays.length > 0) {
-        await supabase.from('availability').insert(enabledDays);
-      }
-
+      await saveTutorHours(tutor.id, availability);
       setMessage('Schedule saved!');
     } catch (err) {
-      setMessage('Error saving');
+      setMessage(err.message || 'Error saving');
     }
 
     setSaving(false);
@@ -3170,16 +3272,16 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
         ) : (
           <div className="divide-y divide-slate-100">
             {upcoming.map(b => (
-              <div key={b.id} className="px-5 py-4 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <Avatar src={b.profiles?.avatar_url} name={b.profiles?.full_name} size={40} />
-                  <div>
-                    <div className="font-medium text-slate-900">{b.profiles?.full_name}</div>
+              <div key={b.id} className="px-5 py-4 flex flex-wrap items-center justify-between gap-3">
+                <div className="flex items-center gap-3 min-w-0">
+                  <Avatar src={b.profiles?.avatar_url} name={b.learner_name || b.profiles?.full_name} size={40} />
+                  <div className="min-w-0">
+                    <div className="font-medium text-slate-900">{b.learner_name || b.profiles?.full_name}</div>
                     <div className="text-sm text-slate-500">{b.subject}</div>
                   </div>
                 </div>
-                <div className="text-right">
-                  <div className="font-medium text-slate-900">{b.lesson_date}</div>
+                <div className="text-right ml-auto">
+                  <div className="font-medium text-slate-900 whitespace-nowrap">{b.lesson_date}</div>
                   <div className="text-sm text-slate-400">{b.start_time?.slice(0,5)}</div>
                 </div>
                 <span className={`px-3 py-1 text-xs font-medium rounded-full ${
@@ -3252,7 +3354,7 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
           >
             {saving ? 'Saving...' : 'Save Schedule'}
           </button>
-          {message && <span className={`text-sm ${message.includes('Error') ? 'text-red-600' : 'text-emerald-600'}`}>{message}</span>}
+          {message && <span className={`text-sm ${/saved!$/i.test(message) ? 'text-emerald-600' : 'text-red-600'}`}>{message}</span>}
         </div>
       </div>
     </div>
@@ -3269,7 +3371,7 @@ const TutorProfileEditor = ({ tutor, profile }) => {
     degree: tutor?.degree || '',
     experience_years: tutor?.experience_years || '',
     teaching_style: tutor?.teaching_style || '',
-    languages: tutor?.languages || 'English, Kiswahili',
+    languages: tutor?.languages || ['English', 'Kiswahili'],
     grade_levels: tutor?.grade_levels || [],
     // Only once the column exists (after the lesson-length SQL), so saving
     // never fails on a database that doesn't have it yet.
@@ -3291,26 +3393,36 @@ const TutorProfileEditor = ({ tutor, profile }) => {
   };
 
   const handleSave = async () => {
-    setSaving(true);
+    // Check before saving: a blank bio used to send an approved tutor back to
+    // onboarding, and a blank rate or experience made the save fail.
+    const rate = Number(form.hourly_rate);
+    const problem = !form.bio.trim() ? 'Your bio cannot be empty. Families read it before booking.'
+      : !Number.isFinite(rate) || rate <= 0 ? 'Enter an hourly rate above zero.'
+      : null;
+    if (problem) { setMessage(problem); return; }
 
+    setSaving(true);
     try {
       // Upload new photo if changed
       if (photoFile) {
         const ext = photoFile.name.split('.').pop();
         const photoPath = `${profile.id}/avatar-${Date.now()}.${ext}`;
-        await supabase.storage.from('avatars').upload(photoPath, photoFile, { upsert: true });
+        const { error: upErr } = await supabase.storage.from('avatars').upload(photoPath, photoFile, { upsert: true });
+        if (upErr) throw new Error('the photo did not upload. Try a JPG or PNG.');
         const { data: photoUrl } = supabase.storage.from('avatars').getPublicUrl(photoPath);
         await supabase.from('profiles').update({ avatar_url: photoUrl.publicUrl }).eq('id', profile.id);
       }
 
-      const { error } = await supabase.from('tutors').update(form).eq('id', tutor.id);
-      setMessage(error ? 'Error saving' : 'Saved!');
+      const years = form.experience_years === '' || form.experience_years == null ? null : parseInt(form.experience_years, 10);
+      const payload = { ...form, bio: form.bio.trim(), hourly_rate: Math.round(rate), experience_years: Number.isFinite(years) ? years : null };
+      const { error } = await supabase.from('tutors').update(payload).eq('id', tutor.id);
+      if (error) throw new Error(error.message);
+      setMessage('Saved!');
+      setTimeout(() => setMessage(''), 3000);
     } catch (err) {
       setMessage('Error saving: ' + err.message);
     }
-
     setSaving(false);
-    setTimeout(() => setMessage(''), 3000);
   };
 
   return (
@@ -3363,7 +3475,7 @@ const TutorProfileEditor = ({ tutor, profile }) => {
         <div className="grid grid-cols-2 gap-3">
           <div>
             <label className="block text-sm font-medium mb-1">Hourly Rate (KSh)</label>
-            <input type="number" value={form.hourly_rate} onChange={e => setForm({ ...form, hourly_rate: parseInt(e.target.value) })} className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
+            <input type="number" value={form.hourly_rate} onChange={e => setForm({ ...form, hourly_rate: e.target.value === '' ? '' : parseInt(e.target.value, 10) })} min="1" className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Years of experience</label>
@@ -3411,7 +3523,7 @@ const TutorProfileEditor = ({ tutor, profile }) => {
         <button onClick={handleSave} disabled={saving} className="w-full py-2.5 bg-emerald-500 text-white font-semibold rounded-lg disabled:opacity-50">
           {saving ? 'Saving...' : 'Save Changes'}
         </button>
-        {message && <p className={`text-center text-sm ${message.includes('Error') ? 'text-red-600' : 'text-emerald-600'}`}>{message}</p>}
+        {message && <p className={`text-center text-sm ${/saved!$/i.test(message) ? 'text-emerald-600' : 'text-red-600'}`}>{message}</p>}
       </div>
     </div>
   );
@@ -5087,9 +5199,9 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>📧 tutaeducators@gmail.com</li>
-                <li>📱 +254 759 240 692</li>
-                <li>📍 Nairobi, Kenya</li>
+                <li>hello@tutagora.com</li>
+                <li>+254 759 240 692</li>
+                <li>Nairobi, Kenya</li>
               </ul>
             </div>
           </div>
@@ -5621,7 +5733,7 @@ const GroupClassEnrollModal = ({ gc, user, onClose, onSuccess }) => {
 };
 
 // ============ TUTOR PROFILE VIEW ============
-const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate }) => {
+const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate, onPaid }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [booking, setBooking] = useState(false);
@@ -5732,6 +5844,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
 
   const handlePaymentSuccess = () => {
     setShowPayment(false);
+    if (pendingBooking && onPaid) onPaid(pendingBooking);
     setPendingBooking(null);
     // The lesson is booked — now the honest moment to ask about notifications:
     // "we'll tell you the moment it starts." Deferred so the system prompt
@@ -5750,8 +5863,9 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
   // that looks booked. Best-effort and safe — only the student's own still
   // -pending row is removed (the UUID guard skips the non-DB fallback id, and
   // the status filter means a booking that just got confirmed is never deleted).
-  const handlePaymentCancel = async () => {
+  const handlePaymentCancel = async (opts) => {
     setShowPayment(false);
+    if (opts?.keep) { setPendingBooking(null); if (onNavigate) onNavigate('dashboard'); return; }
     const id = pendingBooking?.id;
     if (id && user?.id && /^[0-9a-f-]{36}$/i.test(String(id))) {
       try {
@@ -6270,9 +6384,14 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const handleApproveTutor = async (tutorId) => {
     setActionLoading(tutorId);
     // Try updating by id first, then by user_id as fallback
-    const { error } = await supabase.from('tutors').update({ verification_status: 'approved', verified: true, rejection_reason: null }).eq('id', tutorId);
-    if (error) {
-      await supabase.from('tutors').update({ verification_status: 'approved', verified: true, rejection_reason: null }).eq('user_id', tutorId);
+    const approved = { verification_status: 'approved', verified: true, rejection_reason: null };
+    let { data: rows, error } = await supabase.from('tutors').update(approved).eq('id', tutorId).select('id');
+    if (error || !rows?.length) ({ data: rows, error } = await supabase.from('tutors').update(approved).eq('user_id', tutorId).select('id'));
+    // An update blocked by permissions comes back with no error and no rows.
+    if (error || !rows?.length) {
+      alert(`Could not approve this tutor${error ? `: ${error.message}` : ' (no permission to change it)'}. Nothing was changed and no email was sent.`);
+      setActionLoading(null);
+      return;
     }
     // Send approval email
     const tutor = allTutors.find(t => t.id === tutorId);
@@ -6289,9 +6408,13 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const handleRejectTutor = async (tutorId) => {
     if (!rejectReason.trim()) return;
     setActionLoading(tutorId);
-    const { error } = await supabase.from('tutors').update({ verification_status: 'rejected', verified: false, rejection_reason: rejectReason }).eq('id', tutorId);
-    if (error) {
-      await supabase.from('tutors').update({ verification_status: 'rejected', verified: false, rejection_reason: rejectReason }).eq('user_id', tutorId);
+    const rejected = { verification_status: 'rejected', verified: false, rejection_reason: rejectReason };
+    let { data: rows, error } = await supabase.from('tutors').update(rejected).eq('id', tutorId).select('id');
+    if (error || !rows?.length) ({ data: rows, error } = await supabase.from('tutors').update(rejected).eq('user_id', tutorId).select('id'));
+    if (error || !rows?.length) {
+      alert(`Could not reject this tutor${error ? `: ${error.message}` : ' (no permission to change it)'}. Nothing was changed and no email was sent.`);
+      setActionLoading(null);
+      return;
     }
     // Send rejection email
     const tutor = allTutors.find(t => t.id === tutorId);
@@ -6971,6 +7094,7 @@ function AppInner() {
     if (path === 'consulting') return 'consulting';
     if (path === 'tutors') return 'tutors';
     if (path === 'teach') return 'teach';
+    if (path === 'why') return 'why';
     if (path === 'dashboard') return 'dashboard';
     if (path === 'ai') return 'ai';
     if (path === 'writing') return 'writing';
@@ -6987,7 +7111,13 @@ function AppInner() {
     return 'home';
   });
   // The free check: which grade to start at (set by the homepage finder).
-  const [checkGrade, setCheckGrade] = useState(null);
+  // An ad can also preset it: tutagora.com/check?grade=5
+  const [checkGrade, setCheckGrade] = useState(() => {
+    try { const g = Number(new URLSearchParams(window.location.search).get('grade')); return g >= 1 && g <= 12 ? g : null; } catch { return null; }
+  });
+  // Bumped after a free check is saved to the account, so the dashboard
+  // reloads and shows the new child straight away.
+  const [dashKey, setDashKey] = useState(0);
   const [showAuth, setShowAuth] = useState(null);
   const [selectedTutor, setSelectedTutor] = useState(null);
   const [scrolled, setScrolled] = useState(false);
@@ -7044,9 +7174,20 @@ function AppInner() {
   useEffect(() => {
     if (!auth.user || !wantsSave()) return;
     claimGuestCheck(auth.user.id)
-      .then(r => { if (r) { setShowAuth(null); handleNavigate('dashboard'); } })
+      .then(r => { if (r) { setShowAuth(null); setDashKey(k => k + 1); handleNavigate('dashboard'); } })
       .catch(err => console.error('Could not save the check to the account:', err));
   }, [auth.user?.id]);
+
+  // Signed in from a tutor's "Book" button: go back to that tutor, even after
+  // the Google round trip lands on /dashboard.
+  useEffect(() => {
+    if (!auth.user || !publicTutors.tutors.length) return;
+    let id; try { id = sessionStorage.getItem('tg_resume_tutor'); } catch { id = null; }
+    if (!id) return;
+    try { sessionStorage.removeItem('tg_resume_tutor'); } catch { /* ignore */ }
+    const t = publicTutors.tutors.find(x => String(x.id) === String(id));
+    if (t) handleNavigate('tutors', t);
+  }, [auth.user?.id, publicTutors.tutors.length]);
 
   // A logged-in learner who hits the public HOREB intro goes straight to the
   // engine (the intro is only for prospects).
@@ -7065,6 +7206,7 @@ function AppInner() {
       if (path === 'consulting') setPage('consulting');
       else if (path === 'tutors') setPage('tutors');
       else if (path === 'teach') setPage('teach');
+      else if (path === 'why') setPage('why');
       else if (path === 'dashboard') setPage('dashboard');
       else if (path === 'ai') setPage('ai');
       else if (path === 'writing') setPage('writing');
@@ -7105,9 +7247,19 @@ function AppInner() {
       sendLessonStartNotification(booking).catch(err => console.error('Lesson notification failed:', err));
     }
   };
-  const handleEndLesson = async () => {
-    // Mark booking as completed when lesson ends
-    if (activeLesson?.id) {
+  // Leaving the room only marks a lesson done once it has really happened:
+  // at least half its length has passed since the start (Kenya time). Tapping
+  // in early to test, leaving before it starts, or a camera/connection error
+  // never completes a paid lesson.
+  const lessonHasHappened = (b) => {
+    if (!b?.lesson_date || !b?.start_time) return false;
+    const start = new Date(`${b.lesson_date}T${String(b.start_time).slice(0, 5)}:00+03:00`);
+    if (isNaN(start.getTime())) return false;
+    const minutes = Number(b.duration_minutes) || 60;
+    return Date.now() >= start.getTime() + minutes * 30000;
+  };
+  const handleEndLesson = async (opts = {}) => {
+    if (activeLesson?.id && !opts.failed && activeLesson.status === 'confirmed' && lessonHasHappened(activeLesson)) {
       try {
         await supabase.from('bookings').update({ status: 'completed' }).eq('id', activeLesson.id);
         refetchBookings();
@@ -7140,7 +7292,7 @@ function AppInner() {
       return (<>
         <AIMastery onBack={backToSpace} userId={auth.user.id} studentName={studentMode.name} lockedLearner={learner}
           subscription={auth.subscription} onPaywall={() => setShowPaywall(true)} />
-        {showPaywall && <PaywallModal user={auth.user} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
+        {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
       </>);
     }
     if (page === 'writing') {
@@ -7234,6 +7386,8 @@ function AppInner() {
   // ---- The free check (public, no account) ----
   if (page === 'check' && !IS_NATIVE) {
     return <CheckStart initialGrade={checkGrade} onLeave={() => handleNavigate('home')}
+      onResume={() => { setCheckGrade(getCheck()?.grade || null); setPage('check-run'); window.scrollTo(0, 0); }}
+      onSeeResult={() => handleNavigate('check-result')}
       onStart={(g) => { setCheckGrade(g); setPage('check-run'); window.scrollTo(0, 0); }} />;
   }
   if (page === 'check-run' && !IS_NATIVE) {
@@ -7251,7 +7405,7 @@ function AppInner() {
         onSave={() => {
           markWantsSave();
           if (auth.user) {
-            claimGuestCheck(auth.user.id).then(() => handleNavigate('dashboard')).catch(err => alert('Could not save the plan: ' + err.message));
+            claimGuestCheck(auth.user.id).then(() => { setDashKey(k => k + 1); handleNavigate('dashboard'); }).catch(() => alert('We could not save the plan just now. Please check your connection and try again.'));
           } else {
             setShowAuth({ mode: 'register', role: 'parent', reason: 'plan', childName: getCheck()?.name || '' });
           }
@@ -7278,7 +7432,7 @@ function AppInner() {
       <>
         <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} onFindTutor={() => handleNavigate('tutors')}
           subscription={auth.subscription} onPaywall={() => setShowPaywall(true)} />
-        {showPaywall && <PaywallModal user={auth.user} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
+        {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
       </>
     );
   }
@@ -7339,7 +7493,8 @@ function AppInner() {
     }
     return (
       <>
-        <StudentDashboard profile={auth.profile} user={auth.user} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
+        <StudentDashboard key={dashKey} profile={auth.profile} user={auth.user} subscription={auth.subscription} onGetPass={() => setShowPaywall(true)} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
+        {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
         {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
         {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       </>
@@ -7348,7 +7503,7 @@ function AppInner() {
 
   return (
     <div className="min-h-screen">
-      {!IS_NATIVE && page !== 'home' && page !== 'tutors' && page !== 'teach' && !selectedTutor && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
+      {!IS_NATIVE && page !== 'home' && page !== 'tutors' && page !== 'teach' && page !== 'why' && !selectedTutor && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
       {IS_NATIVE && <div className="h-2" />}
       
       {page === 'home' && !selectedTutor && !IS_NATIVE && <SiteHome onNavigate={handleNavigate} onSignIn={openSignIn} onStartCheck={startCheck} user={auth.user} tutors={publicTutors.tutors} />}
@@ -7360,6 +7515,7 @@ function AppInner() {
         </>
       )}
       {page === 'teach' && IS_NATIVE && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {page === 'why' && <SiteWhy onNavigate={handleNavigate} onSignIn={openSignIn} user={auth.user} />}
       {page === 'teach' && !IS_NATIVE && <SiteTeach onNavigate={handleNavigate} onSignIn={openSignIn} user={auth.user} onApply={() => setShowAuth({ mode: 'register', role: 'tutor' })} />}
       {page === 'tutors' && !selectedTutor && IS_NATIVE && <TutorsPage onSelectTutor={setSelectedTutor} onBack={null} user={auth.user} setShowAuth={setShowAuth} />}
       {page === 'tutors' && !selectedTutor && !IS_NATIVE && (
@@ -7367,11 +7523,12 @@ function AppInner() {
           onSelect={(t) => { setSelectedTutor(t); window.scrollTo(0, 0); }} onNavigate={handleNavigate} onSignIn={openSignIn}
           extra={<div className="in" style={{ paddingBottom: 40 }}><GroupClassesBrowse user={auth.user} setShowAuth={setShowAuth} /></div>} />
       )}
-      {selectedTutor && IS_NATIVE && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
+      {selectedTutor && IS_NATIVE && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} onPaid={(b) => sendBookingNotifications(b, auth.user?.id)} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
       {selectedTutor && !IS_NATIVE && (
         <TutorProfile tutor={selectedTutor} user={auth.user} onBook={createBooking} onNavigate={handleNavigate}
+          onPaid={(b) => sendBookingNotifications(b, auth.user?.id)}
           onBack={() => { setSelectedTutor(null); window.scrollTo(0, 0); }}
-          onSignIn={() => setShowAuth({ mode: auth.user ? 'login' : 'register', role: 'parent', reason: 'book' })} />
+          onSignIn={() => { try { sessionStorage.setItem('tg_resume_tutor', String(selectedTutor.id)); } catch { /* ignore */ } setShowAuth({ mode: auth.user ? 'login' : 'register', role: 'parent', reason: 'book' }); }} />
       )}
       
       {renderAuth(undefined)}

@@ -8,8 +8,26 @@ import { getCheck, getGuestProgress, clearGuestCheck, SAVE_FLAG } from './Check.
 export const wantsSave = () => { try { return localStorage.getItem(SAVE_FLAG) === '1'; } catch { return false; } };
 export const markWantsSave = () => { try { localStorage.setItem(SAVE_FLAG, '1'); } catch { /* ignore */ } };
 
+// Two tabs (e.g. the email confirmation link opening a second one) can both
+// run the claim; the first takes a short lock so only one child is created.
+const LOCK = 'tg_check_claiming';
+const takeLock = () => {
+  try {
+    const t = Number(localStorage.getItem(LOCK) || 0);
+    if (Date.now() - t < 30000) return false;
+    localStorage.setItem(LOCK, String(Date.now()));
+    return true;
+  } catch { return true; }
+};
+const dropLock = () => { try { localStorage.removeItem(LOCK); } catch { /* ignore */ } };
+
 export async function claimGuestCheck(userId) {
   if (!userId || !wantsSave()) return null;
+  if (!takeLock()) return null;
+  try { return await claim(userId); } finally { dropLock(); }
+}
+
+async function claim(userId) {
   const progress = getGuestProgress();
   const check = getCheck();
   if (!progress?.diagnosed) { clearGuestCheck(); return null; }

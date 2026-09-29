@@ -389,7 +389,7 @@ export function Spreadsheet({ channelName, standalone = false, onBack }) {
       {/* In-lesson toolbar */}
       {!standalone && (
         <div className="flex items-center gap-2 p-2 bg-slate-800 border-b border-slate-700 flex-shrink-0 flex-wrap">
-          <span className="text-slate-300 text-xs font-medium px-2">📊 Spreadsheet</span>
+          <span className="text-slate-300 text-xs font-medium px-2">Spreadsheet</span>
           <div className="w-px h-5 bg-slate-600" />
           <button onClick={exportCSV} className="px-2 py-1 bg-slate-700 hover:bg-slate-600 text-slate-300 rounded text-xs transition-colors">Export</button>
           <button onClick={addRow} className="px-2 py-1 bg-slate-700 hover:bg-slate-600 text-slate-300 rounded text-xs transition-colors">+ Row</button>

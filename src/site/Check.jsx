@@ -35,15 +35,21 @@ const FlowBar = ({ label, onLeave }) => (
 );
 
 // Step 1: who is taking it, and which grade. Then hand the phone over.
-export function CheckStart({ initialGrade, onStart, onLeave }) {
+export function CheckStart({ initialGrade, onStart, onResume, onLeave, onSeeResult }) {
   const prev = getCheck();
+  // A check left half-way (refresh, phone call, app switch) can carry on
+  // from the same question instead of starting over.
+  const guest = getGuestProgress();
+  const answeredSoFar = guest?.diagInProgress?.answered?.length || 0;
+  const canResume = !!prev && !guest?.diagnosed && answeredSoFar > 0;
+  const hasResult = !!prev && !!guest?.diagnosed;
   const [name, setName] = useState(prev?.name || '');
   const [grade, setGrade] = useState(initialGrade || prev?.grade || null);
   const [curriculum, setCurriculum] = useState(prev?.curriculum || null);
   const who = name.trim() || 'your child';
 
   const start = () => {
-    if (!grade || !curriculum) return;
+    if (!name.trim() || !grade || !curriculum) return;
     // A new check always starts clean on this device.
     clearGuestCheck();
     write(CHECK_KEY, { name: name.trim(), grade, curriculum, startedAt: new Date().toISOString() });
@@ -55,10 +61,17 @@ export function CheckStart({ initialGrade, onStart, onLeave }) {
       <FlowBar label="Free maths check" onLeave={onLeave} />
       <div className="stage">
         <div className="card">
-          <div className="kicker">Free · about 10 minutes · no account</div>
+          {(canResume || hasResult) && (
+            <div className="resume">
+              <div><b>{canResume ? `${prev.name || 'Your child'}'s check is half done` : `${prev.name ? `${prev.name}'s` : 'Your'} result is ready`}</b>
+                <span>{canResume ? `${answeredSoFar} question${answeredSoFar === 1 ? '' : 's'} answered. Carry on from the same question.` : 'See the missing step and the plan.'}</span></div>
+              <button type="button" className="btn" onClick={canResume ? onResume : onSeeResult}>{canResume ? 'Continue' : 'See result'} <SiteIcon name="arrow" /></button>
+            </div>
+          )}
+          <div className="kicker">{canResume || hasResult ? 'Or start a new check' : 'Free · about 10 minutes · no account'}</div>
           <h1 className="display" style={{ marginTop: 10 }}>Let's find the step.</h1>
           <p className="lead">Questions start easy and adapt to each answer. There's no score and no pass or fail. We're only looking for where to start.</p>
-          <label className="field"><span>Child's first name <small>(optional)</small></span>
+          <label className="field"><span>Child's first name</span>
             <input className="inp" value={name} onChange={e => setName(e.target.value)} autoComplete="off" maxLength={40} placeholder="e.g. Amani" /></label>
           <div className="field"><span>Which grade are they in?</span>
             <div className="chips" role="group" aria-label="Grade">
@@ -75,10 +88,10 @@ export function CheckStart({ initialGrade, onStart, onLeave }) {
             </div>
             <p className="fine" style={{ margin: '8px 0 0' }}>Not sure? Check the school report, or ask the class teacher.</p>
           </div>
-          <button type="button" className="btn full" onClick={start} disabled={!grade || !curriculum}>
-            {!grade ? 'Pick a grade first' : !curriculum ? 'Pick a curriculum first' : <>Start the check <SiteIcon name="arrow" /></>}
+          <button type="button" className="btn full startbtn" onClick={start} disabled={!name.trim() || !grade || !curriculum}>
+            {!name.trim() ? "Add your child's name first" : !grade ? 'Pick a grade first' : !curriculum ? 'Pick a curriculum first' : <>Start the check <SiteIcon name="arrow" /></>}
           </button>
-          <div className="handnote"><SiteIcon name="phone" /><div>Now hand the phone to <b>{who}</b>. Let them answer on their own. Guessing is fine, and "I haven't learned this yet" is a good answer too.</div></div>
+          <div className="handnote"><SiteIcon name="phone" /><div>Now hand the phone to <b>{who}</b>. Let them try every question on their own. A wrong answer is fine and helps us. "I haven't learned this yet" is only for something truly new.</div></div>
         </div>
       </div>
     </div>
@@ -90,6 +103,7 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user }) {
   const check = getCheck();
   const progress = useMemo(() => getGuestProgress(), []);
   const r = useMemo(() => findMissingStep(progress), [progress]);
+  const [showAnyway, setShowAnyway] = useState(false);
 
   if (!progress?.diagnosed || !r.missing) {
     return (
@@ -99,6 +113,30 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user }) {
           <h1 className="display">No check on this device yet.</h1>
           <p className="lead">It takes about ten minutes and it's free.</p>
           <button type="button" className="btn" onClick={onRetake}>Start the free check <SiteIcon name="arrow" /></button>
+        </div></div>
+      </div>
+    );
+  }
+
+  // Mostly skipped: we don't know enough to place them, so say that rather
+  // than show a Grade 1 result to the parent of a Grade 5 child.
+  const st = progress.diagStats;
+  if (st && st.answered >= 5 && st.skipped / st.answered >= 0.6 && !showAnyway) {
+    const who = check?.name || 'Your child';
+    return (
+      <div className="tg flow">
+        <FlowBar label="Free maths check" onLeave={onLeave} />
+        <div className="stage"><div className="card">
+          <div className="kicker">{check?.name ? `${check.name}'s check` : 'Your check'}</div>
+          <h1 className="display" style={{ marginTop: 10 }}>{who} skipped most of the questions.</h1>
+          <p className="lead">That's okay, and it happens a lot. It just means we can't tell yet where {check?.name || 'they'} should start. They tapped "I haven't learned this yet" on {st.skipped} of {st.answered} questions.</p>
+          <ol className="tips">
+            <li>Sit next to {check?.name || 'them'} for ten minutes.</li>
+            <li>Let them try each question, even if they're unsure. A wrong answer helps us too.</li>
+            <li>Only tap "I haven't learned this yet" when it's truly new.</li>
+          </ol>
+          <button type="button" className="btn full" onClick={onRetake}>Try again together <SiteIcon name="arrow" /></button>
+          <p className="fine" style={{ marginTop: 14, textAlign: 'center' }}><button type="button" className="linkbtn" onClick={() => setShowAnyway(true)}>See the starting point anyway</button></p>
         </div></div>
       </div>
     );

@@ -58,10 +58,13 @@ const saveLocal = (key, progress) => {
 const loadLocal = (key) => {
   try {
     const data = localStorage.getItem(localKey(key));
-    if (data) return JSON.parse(data);
-    // Legacy fallback: older builds stored everything under one global key.
-    const legacy = localStorage.getItem(LOCAL_KEY_BASE);
-    return legacy ? JSON.parse(legacy) : null;
+    // No fallback to the old single global key: that key now holds the free
+    // check taken without an account, and falling back to it made every new
+    // learner (a child just added, a sibling, the parent) look like they had
+    // already done that check, so saving it to the account was skipped and
+    // siblings could inherit each other's result. Signed-in learners' progress
+    // comes from the cloud copy.
+    return data ? JSON.parse(data) : null;
   } catch (e) {
     return null;
   }

@@ -4,11 +4,11 @@ import { supabase } from '../supabase.js';
 import { PaymentModal } from '../PaymentModal.jsx';
 import { startConversation } from '../Messaging.jsx';
 import { requestPush } from '../push.js';
-import { SiteNav, SiteFooter, SiteIcon, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh } from './ui.jsx';
-import { getFocus, setFocus } from './Check.jsx';
+import { SiteNav, SiteFooter, SiteIcon, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh, photoFirst } from './ui.jsx';
+import { getFocus, setFocus, getCheck } from './Check.jsx';
 
 const SUBJECTS = ['Mathematics', 'English', 'Kiswahili', 'Physics', 'Chemistry', 'Biology', 'History', 'Geography', 'Computer Science', 'Business Studies'];
-const GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University'];
+const GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University'];
 const PRICES = [
   { v: 'all', label: 'Any price' },
   { v: '0-1000', label: 'Under KSh 1,000' },
@@ -23,6 +23,23 @@ export const lessonPrice = (hourlyRate, minutes) => Math.round((Number(hourlyRat
 const FocusBanner = ({ focus, onClear }) => focus ? (
   <div className="fromcheck"><SiteIcon name="target" />From {focus.learner ? `${focus.learner}'s` : 'the'} check: {focus.skill.toLowerCase()} <button type="button" onClick={onClear}>Clear</button></div>
 ) : null;
+
+const DAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const fmtTime = (hhmm) => { const [h] = hhmm.split(':').map(Number); const ap = h >= 12 ? 'pm' : 'am'; return `${((h + 11) % 12) + 1}:00 ${ap}`; };
+// The tutor's next open hour in the coming week, from their weekly hours.
+// (Booked slots aren't known here; the profile page hides those.)
+export const nextFree = (t) => {
+  if (!Array.isArray(t.availability) || !t.availability.length) return null;
+  const now = new Date();
+  for (let i = 0; i < 8; i++) {
+    const d = new Date(now); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + i);
+    const hours = t.availability.filter(a => a.day_of_week === d.getDay())
+      .flatMap(a => { const out = []; for (let h = parseInt(a.start_time, 10); h < parseInt(a.end_time, 10); h++) out.push(h); return out; })
+      .filter(h => i > 0 || h > now.getHours()).sort((a, b) => a - b);
+    if (hours.length) return `${i === 0 ? 'Today' : i === 1 ? 'Tomorrow' : DAY[d.getDay()]} ${fmtTime(`${hours[0]}:00`)}`;
+  }
+  return null;
+};
 
 export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, user, extra }) {
   const [search, setSearch] = useState('');
@@ -46,6 +63,8 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
       return true;
     })
     .sort((a, b) => {
+      const byPhoto = photoFirst(a, b);
+      if (byPhoto) return byPhoto;
       if (sort === 'price-low') return (a.hourly_rate || 0) - (b.hourly_rate || 0);
       if (sort === 'price-high') return (b.hourly_rate || 0) - (a.hourly_rate || 0);
       return (b.lessons_completed || 0) - (a.lessons_completed || 0);
@@ -87,6 +106,7 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
                   {langs.length > 0 && <span><SiteIcon name="globe" />{langs.join(', ')}</span>}
                   {t.experience_years ? <span><SiteIcon name="clock" />{t.experience_years} years teaching</span> : null}
                 </div>
+                {(() => { const nf = nextFree(t); return <div className={`nextfree${nf ? '' : ' none'}`}><SiteIcon name="calendar" />{nf ? <>Next free: <b>{nf}</b></> : 'No open times this week'}</div>; })()}
                 {t.bio && <p className="bio">{t.bio}</p>}
               </div>
               <div className="side">
@@ -105,21 +125,38 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
   );
 }
 
-const DAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-const fmtTime = (hhmm) => { const [h] = hhmm.split(':').map(Number); const ap = h >= 12 ? 'pm' : 'am'; return `${((h + 11) % 12) + 1}:00 ${ap}`; };
 
-export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn }) {
+
+const DRAFT = 'tg_book_draft';
+const readDraft = (tutorId) => {
+  try {
+    const d = JSON.parse(localStorage.getItem(DRAFT) || 'null');
+    if (!d || String(d.tutorId) !== String(tutorId) || Date.now() - d.at > 2 * 3600e3) return null;
+    // A day that has already passed is dropped; the rest is kept.
+    if (d.date && new Date(`${d.date}T23:59:59`) < new Date()) { d.date = null; d.time = null; }
+    return d;
+  } catch { return null; }
+};
+const saveDraft = (tutorId, d) => { try { localStorage.setItem(DRAFT, JSON.stringify({ ...d, tutorId, at: Date.now() })); } catch { /* ignore */ } };
+const clearDraft = () => { try { localStorage.removeItem(DRAFT); } catch { /* ignore */ } };
+
+export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn, onPaid }) {
   const focus = getFocus();
+  const check = getCheck();
+  // A booking started before signing in (day, time, learner) is picked up
+  // again when the parent comes back, so they don't choose everything twice.
+  const draft = useMemo(() => readDraft(tutor.id), [tutor.id]);
   const subjects = tutorSubjects(tutor);
-  const [subject, setSubject] = useState(subjects[0] || tutor.subject || '');
-  const [date, setDate] = useState(null);
-  const [time, setTime] = useState(null);
-  const [minutes, setMinutes] = useState(60);
+  const [subject, setSubject] = useState(draft?.subject || subjects[0] || tutor.subject || '');
+  const [date, setDate] = useState(() => draft?.date ? new Date(`${draft.date}T00:00:00`) : null);
+  const [time, setTime] = useState(draft?.time || null);
+  const [minutes, setMinutes] = useState(draft?.minutes || 60);
   const [children, setChildren] = useState([]);
   const [childId, setChildId] = useState(null);
-  const [learnerName, setLearnerName] = useState(focus?.learner || '');
-  const [learnerGrade, setLearnerGrade] = useState('');
-  const [focusNote, setFocusNote] = useState(focus?.skill ? `${focus.skill} (from the Tutagora check)` : '');
+  // The child from the free check fills in the form, so it isn't asked twice.
+  const [learnerName, setLearnerName] = useState(draft?.name || focus?.learner || check?.name || '');
+  const [learnerGrade, setLearnerGrade] = useState(draft?.grade || (check?.grade ? `Grade ${check.grade}` : ''));
+  const [focusNote, setFocusNote] = useState(draft?.note ?? (focus?.skill ? `${focus.skill} (from the Tutagora check)` : ''));
   const [reviews, setReviews] = useState([]);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
@@ -140,13 +177,24 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
       setChildren(kids);
       if (!kids.length) return;
       // Prefer the child the check was for; otherwise the first saved child.
-      const match = focus?.learner && kids.find(k => k.name.toLowerCase() === focus.learner.toLowerCase());
+      const want = (draft?.name || focus?.learner || check?.name || '').trim().toLowerCase();
+      const match = want && kids.find(k => k.name.trim().toLowerCase() === want);
       const k = match || kids[0];
-      setChildId(k.id); setLearnerName(k.name); setLearnerGrade(k.grade || '');
+      setChildId(k.id); setLearnerName(k.name); setLearnerGrade(k.grade || learnerGrade || '');
     });
   }, [user?.id]);
 
   const days = useMemo(() => Array.from({ length: 8 }, (_, i) => { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + i); return d; }), []);
+  const isoDay = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  // Times already booked (paid, or being paid for right now) are hidden. Needs
+  // the taken_slots database function; without it, nothing is hidden and the
+  // database rule still stops a clash at booking time.
+  const [taken, setTaken] = useState(() => new Set());
+  const loadTaken = () => {
+    supabase.rpc('taken_slots', { p_tutor: String(tutor.id), p_from: isoDay(days[0]), p_to: isoDay(days[days.length - 1]) })
+      .then(({ data, error }) => { if (!error && Array.isArray(data)) setTaken(new Set(data.map(r => `${r.lesson_date}|${String(r.start_time).slice(0, 5)}`))); });
+  };
+  useEffect(loadTaken, [tutor.id]);
   const slotsFor = (d) => {
     if (!d || !Array.isArray(tutor.availability)) return [];
     const now = new Date();
@@ -155,7 +203,10 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
       const out = [];
       let h = parseInt(a.start_time, 10);
       const end = parseInt(a.end_time, 10);
-      for (; h < end; h++) if (!today || h > now.getHours()) out.push(`${String(h).padStart(2, '0')}:00`);
+      for (; h < end; h++) {
+        const t = `${String(h).padStart(2, '0')}:00`;
+        if ((!today || h > now.getHours()) && !taken.has(`${isoDay(d)}|${t}`)) out.push(t);
+      }
       return out;
     }).sort();
   };
@@ -163,11 +214,16 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
   const price = lessonPrice(tutor.hourly_rate, minutes);
   const langs = Array.isArray(tutor.languages) ? tutor.languages : tutor.languages ? [tutor.languages] : [];
   const grades = gradeLevels(tutor.grade_levels);
-  const ready = date && time && learnerName.trim() && learnerGrade;
+  const ready = date && time && slots.includes(time) && learnerName.trim() && learnerGrade;
+
+  const signInKeepingDraft = () => {
+    saveDraft(tutor.id, { subject, date: date ? isoDay(date) : null, time, minutes, name: learnerName, grade: learnerGrade, note: focusNote });
+    onSignIn();
+  };
 
   const book = async () => {
     setErr('');
-    if (!user) { onSignIn(); return; }
+    if (!user) { signInKeepingDraft(); return; }
     if (!ready) return;
     setBusy(true);
     try {
@@ -181,23 +237,31 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
         learner_name: learnerName.trim(), learner_grade: learnerGrade || null,
         focus_note: focusNote.trim() || null, child_id: cid || null, duration_minutes: minutes,
       });
+      clearDraft();
       setPending({ ...b, id: b?.id, student_id: user.id, tutor_id: tutor.id, lesson_date: iso, lesson_time: time, duration_minutes: minutes });
     } catch (e) {
-      setErr(e?.message || 'Could not book that lesson. Please try again.');
+      if (/slot_taken/.test(`${e?.message || ''} ${e?.hint || ''}`)) {
+        setErr('Someone has just booked that time. Please pick another time.');
+        setTime(null); loadTaken();
+      } else {
+        setErr('We could not book that lesson just now. Please check your connection and try again.');
+      }
     }
     setBusy(false);
   };
 
-  const cancelPayment = async () => {
+  const cancelPayment = async (opts) => {
     const id = pending?.id;
     setPending(null);
+    // Paid, still being confirmed: keep the booking and show the dashboard.
+    if (opts?.keep) { onNavigate('dashboard'); return; }
     if (id && user?.id && /^[0-9a-f-]{36}$/i.test(String(id))) {
       try { await supabase.from('bookings').delete().eq('id', id).eq('student_id', user.id).eq('status', 'pending'); } catch { /* best effort */ }
     }
   };
 
   const message = async () => {
-    if (!user) { onSignIn(); return; }
+    if (!user) { signInKeepingDraft(); return; }
     const r = await startConversation(user.id, tutor.user_id, `Hi! I'm interested in ${subject || tutor.subject} lessons.`);
     setErr(r?.success ? '' : 'Could not send the message. Please try again.');
     if (r?.success) alert('Message sent. You can continue the conversation in Messages.');
@@ -228,9 +292,9 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
             {subjects.map(s => <span key={s} className="chip soft">{s}</span>)}
             {(tutor.specialties || []).map(s => <span key={s} className="chip soft">{s}</span>)}
             {grades.map(g => <span key={g} className="chip soft">{g}</span>)}
-            {langs.map(l => <span key={l} className="chip soft">{l}</span>)}
             {tutor.degree && <span className="chip soft">{tutor.degree}</span>}
           </div>
+          {langs.length > 0 && <p className="para" style={{ marginTop: 12 }}><SiteIcon name="globe" style={{ width: 16, height: 16, verticalAlign: '-3px', marginRight: 6 }} />Teaches in {langs.join(' and ')}</p>}
           <h2 className="display">What families say</h2>
           {reviews.length === 0
             ? <p className="para">No reviews yet. Reviews appear here after real, paid lessons.</p>
@@ -287,7 +351,7 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
 
       {pending && (
         <PaymentModal booking={pending} tutor={tutor} user={user} onClose={cancelPayment}
-          onSuccess={() => { setPending(null); setFocus(null); setTimeout(() => requestPush(user?.id), 700); onNavigate('dashboard'); }} />
+          onSuccess={() => { const b = pending; setPending(null); setFocus(null); onPaid && onPaid(b); setTimeout(() => requestPush(user?.id), 700); onNavigate('dashboard'); }} />
       )}
     </div>
   );

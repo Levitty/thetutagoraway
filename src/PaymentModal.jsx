@@ -44,6 +44,13 @@ const PaymentStatus = ({ status, message }) => {
       bg: 'bg-[#eef4e7]',
       loop: false
     },
+    // Paid at Paystack but not yet confirmed by our server: calm, not a spinner.
+    error: {
+      animation: null,
+      icon: <svg className="w-12 h-12 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" strokeWidth={2} /><path strokeLinecap="round" strokeWidth={2} d="M12 7v5l3 2" /></svg>,
+      color: 'text-amber-700',
+      bg: 'bg-amber-50'
+    },
     failed: {
       animation: null,
       icon: <svg className="w-12 h-12 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>,
@@ -108,7 +115,9 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
     setError('');
     setStep('processing');
 
-    const reference = `TUT-${booking.id?.slice(0, 8) || Date.now()}`;
+    // A fresh reference for every attempt: Paystack rejects a reused one, so
+    // "Try again" after cancelling used to fail.
+    const reference = `TUT-${booking.id?.slice(0, 8) || 'x'}-${Date.now().toString(36)}`;
 
     const result = await initiatePaystackPayment({
       email: userEmail,
@@ -144,7 +153,7 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
         }
 
         if (!confirmed) {
-          setPaymentStatus({ status: 'error', message: 'Payment received — we’re confirming your booking now. If it doesn’t appear in a minute, contact support with your M-Pesa message and we’ll sort it out.' });
+          setPaymentStatus({ status: 'error', message: 'Payment received. We’re confirming your booking. It usually takes a minute; you’ll see it on your dashboard. If it hasn’t appeared in 10 minutes, WhatsApp us on 0759 240 692 with your M-Pesa message.' });
           setError('Awaiting payment confirmation.');
           return;
         }
@@ -211,7 +220,7 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
               <h2 className="text-lg font-bold">Complete Payment</h2>
               <p className="text-slate-500 text-sm mt-1">{tutor.subject || 'Tutoring'} Lesson</p>
             </div>
-            <button onClick={onClose} className="text-white/80 hover:text-white text-xl">&#10005;</button>
+            <button onClick={() => onClose(step === 'status' && paymentStatus?.status === 'error' ? { keep: true } : undefined)} aria-label="Close" className="text-slate-500 hover:text-slate-900 text-xl w-9 h-9 rounded-lg hover:bg-slate-100">&#10005;</button>
           </div>
           <div className="mt-4 flex items-baseline gap-1">
             <span className="text-3xl font-extrabold tracking-tight">{currency} {amount.toLocaleString()}</span>
@@ -319,6 +328,13 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
                   className="w-full py-3 bg-slate-100 text-slate-700 font-medium rounded-xl hover:bg-slate-200"
                 >
                   Try Again
+                </button>
+              )}
+
+              {paymentStatus.status === 'error' && (
+                <button onClick={() => onClose({ keep: true })}
+                  className="w-full py-3 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800">
+                  Go to my dashboard
                 </button>
               )}
 

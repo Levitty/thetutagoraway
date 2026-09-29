@@ -37,7 +37,8 @@ Deno.serve(async () => {
     let sent = 0;
     for (const b of bookings || []) {
       if (!b.lesson_date || !b.start_time) continue;
-      const start = new Date(`${b.lesson_date}T${b.start_time}`);
+      // Lesson times are stored in Kenya time; the server runs in UTC.
+      const start = new Date(`${b.lesson_date}T${String(b.start_time).slice(0, 8)}+03:00`);
       if (isNaN(start.getTime())) continue;
       // Only within the window (and not already long past).
       if (start < now || start > soon) continue;

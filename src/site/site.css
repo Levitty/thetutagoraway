@@ -24,9 +24,9 @@
 .tg .display { font-family: var(--display); font-weight: 800; font-stretch: 95%; letter-spacing: -.035em; line-height: .97; margin: 0; text-wrap: balance; }
 .tg .kicker { font-weight: 800; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
 .tg .muted { color: var(--mute); }
-.tg .fine { font-size: 13.5px; color: var(--mute); font-weight: 600; }
+.tg .fine, .tg-modal .fine { font-size: 13.5px; color: var(--mute); font-weight: 600; }
 .tg .i { width: 20px; height: 20px; flex: none; }
-.tg .linkbtn { background: none; border: 0; padding: 0; cursor: pointer; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.tg .linkbtn, .tg-modal .linkbtn { background: none; border: 0; padding: 0; cursor: pointer; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .tg .plain { text-decoration: none; display: inline-flex; gap: 6px; align-items: center; }
 
 /* buttons */
@@ -171,6 +171,7 @@
 .tg .card { width: 100%; max-width: 620px; }
 .tg .card h1 { font-size: clamp(34px, 5vw, 52px); }
 .tg .card .lead { font-size: 19px; color: var(--ink2); margin: 14px 0 26px; }
+.tg .card .tips { margin: -8px 0 24px; padding-left: 22px; display: grid; gap: 8px; font-size: 17px; color: var(--ink); }
 .tg .field { display: block; margin-bottom: 22px; }
 .tg .field > span { display: block; font-weight: 800; margin-bottom: 8px; }
 .tg .field small { font-weight: 600; color: var(--mute); }
@@ -184,6 +185,10 @@
 .tg .curpick button b { display: block; font-size: 16px; }
 .tg .curpick button small { color: var(--mute); font-weight: 600; font-size: 13.5px; }
 .tg .curpick button[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); background: var(--brand-soft); }
+.tg .resume { display: flex; gap: 14px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: var(--ink); color: #fff; border-radius: 8px; padding: 16px; margin-bottom: 26px; }
+.tg .resume b { display: block; font-size: 17px; }
+.tg .resume span { opacity: .8; font-weight: 600; font-size: 14.5px; }
+.tg .resume .btn { background: #fff; color: var(--ink); border-color: #fff; }
 .tg .handnote { display: flex; gap: 12px; align-items: flex-start; background: var(--gray); border-radius: 8px; padding: 14px 16px; margin-top: 22px; font-weight: 600; font-size: 15px; }
 .tg .rhero { background: var(--brand); }
 .tg .rhero > .in { padding-block: 40px 56px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 36px; align-items: center; }
@@ -493,3 +498,84 @@
 .tg .duo.signpost .c.s { background: #e8e8fb; }
 .tg .duo.signpost .c.s .btn { background: #3d3fbf; border-color: #3d3fbf; }
 @media (max-width: 600px) { .tg .sec.tutorband { padding-block: 44px; } .tg .sec.tutorband + .sec.tight { padding-top: 44px; } }
+
+/* Check setup: on phones the Start button stays in view while scrolling. */
+@media (max-width: 720px) {
+  .tg .card .startbtn { position: sticky; bottom: 12px; z-index: 5; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+  .tg .card .startbtn:disabled { opacity: 1; background: #e6e6ea; color: #4a4a55; box-shadow: 0 -8px 16px #fff; }
+}
+.tg .trow .nextfree { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 5px 10px; border-radius: 999px; background: #e7f6ee; color: #14532d; font-weight: 700; font-size: 14px; }
+.tg .trow .nextfree .i { width: 16px; height: 16px; }
+.tg .trow .nextfree.none { background: var(--soft, #f3f3f5); color: var(--mute); }
+
+/* Lesson notes (the saved whiteboard) */
+.tg-modal .sheet.notes { max-width: 620px; }
+.tg-modal .notepage { border: 1.5px solid var(--line); border-radius: 12px; overflow: hidden; background: #fffdf8; }
+.tg-modal .notepage img { display: block; width: 100%; height: auto; }
+.tg-modal .notenav { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 12px; font-weight: 700; color: var(--ink2); font-size: 14px; }
+.tg-modal .noteacts { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; }
+.tg-modal .kicker { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
+.tg-modal .muted { color: var(--mute); }
+
+/* Practice pass strip on the family dashboard */
+.tg .passbar { display: flex; align-items: center; justify-content: space-between; gap: 14px; background: #fff3d1; border-radius: 12px; padding: 14px 16px; margin-bottom: 18px; }
+.tg .passbar b { display: block; font-size: 16px; }
+.tg .passbar span { font-size: 14px; color: var(--ink2); font-weight: 600; }
+.tg .passbar.warn { background: #ffe6c7; }
+
+
+/* Tutor cards: next free time */
+.tg .tc .nf { font-size: 13.5px; font-weight: 700; color: #14532d; background: #e7f6ee; border-radius: 999px; padding: 4px 10px; align-self: flex-start; }
+
+@media (max-width: 1000px) {
+}
+@media (max-width: 600px) {
+  .tg .tc .pic { aspect-ratio: 4 / 3; }
+}
+
+/* Why Tutagora: the founder's vision */
+.tg.vision .vhero { background: var(--brand); color: var(--brand-ink); padding-bottom: 72px; }
+.tg.vision .vhero > .in { max-width: 860px; }
+.tg.vision .vhero .kicker { margin-top: 40px; }
+.tg.vision .vhero h1 { font-size: clamp(40px, 6vw, 72px); margin-top: 12px; }
+.tg.vision .vhero .lead { font-size: clamp(18px, 2vw, 22px); max-width: 680px; margin-top: 22px; }
+.tg.vision .draftnote { display: inline-block; margin-top: 28px; background: var(--ink); color: #fff; font-weight: 700; font-size: 14px; border-radius: 999px; padding: 7px 14px; }
+.tg.vision .vbody { max-width: 720px; }
+.tg.vision .vpart + .vpart { margin-top: 48px; }
+.tg.vision .vpart h2 { font-size: clamp(28px, 3.4vw, 38px); margin-bottom: 14px; }
+.tg.vision .vpart p { font-size: 19px; line-height: 1.65; color: var(--ink2); margin: 0; }
+.tg.vision .vquote { margin: 56px 0; padding: 0 0 0 22px; border-left: 6px solid var(--brand); font-family: var(--display); font-weight: 800; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.15; letter-spacing: -.02em; }
+.tg.vision .vnow { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; margin-top: 56px; background: #fff8ec; border-radius: 14px; padding: 26px; }
+.tg.vision .vnow ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.tg.vision .vnow li { display: flex; gap: 10px; align-items: center; font-weight: 700; }
+.tg.vision .vnow li .i { width: 18px; height: 18px; color: var(--good); flex: none; }
+.tg.vision .vnow .next li { color: var(--ink2); }
+.tg.vision .vnow .next li .i { color: var(--mute); }
+.tg.vision .vsign { display: flex; align-items: center; gap: 16px; margin-top: 48px; }
+.tg.vision .vsign .vphoto { width: 72px; height: 72px; border-radius: 50%; overflow: hidden; display: grid; place-items: center; background: var(--gray); font-weight: 700; font-size: 13px; color: var(--mute); flex: none; }
+.tg.vision .vsign .vphoto img { width: 100%; height: 100%; object-fit: cover; }
+.tg.vision .vsign b { display: block; font-size: 19px; }
+.tg.vision .vsign span { color: var(--mute); font-weight: 600; }
+.tg.vision .vcta { text-align: center; }
+.tg.vision .vcta h2 { font-size: clamp(30px, 4vw, 46px); margin-bottom: 22px; }
+.tg.vision .vcta .row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+/* Placeholder boxes until the founder's words are in */
+.tg.vision .ph { background: rgba(18,17,23,.06); border: 2px dashed rgba(18,17,23,.25); border-radius: 10px; padding: 12px 16px; color: var(--mute) !important; font-style: italic; }
+.tg.vision .vhero .ph { background: rgba(255,255,255,.45); border-color: rgba(18,17,23,.35); color: var(--ink2) !important; }
+.tg.vision .vquote .ph { display: block; }
+@media (max-width: 700px) { .tg.vision .vnow { grid-template-columns: minmax(0, 1fr); } }
+.tg.vision .vpoints { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+.tg.vision .vpoints > div { background: #fff8ec; border-radius: 12px; padding: 18px 20px; border-left: 5px solid var(--brand); }
+.tg.vision .vpoints b { display: block; font-size: 18px; margin-bottom: 4px; }
+.tg.vision .vpoints span { color: var(--ink2); font-size: 16.5px; line-height: 1.5; }
+@media (max-width: 700px) { .tg.vision .vpoints { grid-template-columns: minmax(0, 1fr); } }
+.tg.vision .vpara { font-size: clamp(19px, 2.1vw, 22px); line-height: 1.7; color: var(--ink); margin: 0; }
+.tg.vision .vpromise { margin-top: 48px; background: var(--brand); border-radius: 16px; padding: 28px 30px; }
+.tg.vision .vpromise p { font-family: var(--display); font-weight: 800; font-size: clamp(24px, 3vw, 34px); line-height: 1.15; letter-spacing: -.02em; margin: 10px 0 0; }
+.tg.vision .vsignoff { margin-top: 40px; font-size: 19px; }
+.tg.vision .vsignoff span { display: block; font-style: italic; color: var(--ink2); }
+.tg.vision .vsignoff b { display: block; font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: -.02em; margin-top: 4px; }
+.tg.vision .vhero { padding-bottom: 64px; }
+.tg.vision .vsignoff .sig { font-family: "Mrs Saint Delafield", cursive; font-size: clamp(52px, 7vw, 68px); line-height: 1.1; margin: 8px 0 -4px; color: var(--ink); transform: rotate(-3deg); transform-origin: left center; }
+.tg.vision .vsignoff b { font-size: 18px; margin-top: 6px; font-family: var(--body); letter-spacing: 0; }
+.tg.vision .vsignoff small { display: block; color: var(--mute); font-weight: 600; font-size: 15px; }

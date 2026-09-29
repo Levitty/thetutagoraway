@@ -2,10 +2,18 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import AgoraRTC from 'agora-rtc-sdk-ng';
 import { supabase } from './supabase';
 import { Spreadsheet } from './Spreadsheet';
+import { Whiteboard } from './lesson/Whiteboard.jsx';
 
 const AGORA_APP_ID = '35a8f51c866e44bfbb7bd5e3970e75e4';
 
-// ==================== ICONS (SVG, not emoji) ====================
+// The lesson room: a light "classroom" where the whiteboard is the centre of
+// the lesson and the faces sit beside it. Colours follow the public site.
+const C = {
+  paper: '#f7f3ee', card: '#fffdf8', line: '#ece4d8', ink: '#121117', ink2: '#3f3f4a', mute: '#6c6c78',
+  brand: '#ffc53d', brandDeep: '#7a5200', brandSoft: '#fff3d1', good: '#30a46c', goodSoft: '#e3f3e9', amber: '#b86e00', amberSoft: '#fff1d6',
+};
+
+// ==================== ICONS (drawn, not emoji) ====================
 const ICONS = {
   mic: 'M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3zM5 10v1a7 7 0 0 0 14 0v-1M12 19v3',
   video: 'M4 6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 10l5-3v10l-5-3',
@@ -13,611 +21,513 @@ const ICONS = {
   board: 'M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z',
   sheet: 'M3 4h18v16H3zM3 9h18M3 14h18M9 4v16M15 4v16',
   chat: 'M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z',
-  end: 'M3 5a2 2 0 0 1 2-2h2l1.5 4.5-2 1.4a12 12 0 0 0 5.6 5.6l1.4-2L20 18v2a2 2 0 0 1-2 2A16 16 0 0 1 3 5z',
   close: 'M6 6l12 12M18 6L6 18',
   user: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0',
+  clock: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7v5l3 2',
+  eraser: 'M7 21h10M5.5 13.5l7-7a2 2 0 0 1 2.8 0l3.2 3.2a2 2 0 0 1 0 2.8L12 19H8.5l-3-3a1.8 1.8 0 0 1 0-2.5zM9 10l5 5',
+  trash: 'M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3',
+  photo: 'M3 7a2 2 0 0 1 2-2h2.5l1.5-2h6l1.5 2H19a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM12 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z',
+  back: 'M15 18l-6-6 6-6',
+  target: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM12 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z',
+  faces: 'M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 20a6 6 0 0 1 12 0M17 11a2.5 2.5 0 1 0 0-5M17.5 14.5A5 5 0 0 1 21 19',
 };
-const Icon = ({ name, className = 'w-5 h-5', slash }) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+const Icon = ({ name, className = 'w-5 h-5', slash, sw = 1.9 }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
     <path d={ICONS[name]} />
     {slash && <path d="M4 4l16 16" />}
   </svg>
 );
 
 // ==================== VIDEO PLAYER ====================
-// fit: 'contain' shows the WHOLE frame (right for a shared screen — the old
-// default 'cover' cropped it, so a laptop screen came through zoomed in on the
-// student's phone). 'cover' fills nicely for a face-cam PiP.
+// fit: 'contain' shows the whole frame (right for a shared screen); 'cover'
+// fills the tile (right for a face).
 const VideoPlayer = ({ track, fit = 'cover' }) => {
   const ref = useRef(null);
   useEffect(() => {
-    if (ref.current && track) {
-      track.play(ref.current, { fit });
-    }
+    if (ref.current && track) track.play(ref.current, { fit });
     return () => track?.stop();
   }, [track, fit]);
-  return <div ref={ref} className="w-full h-full bg-slate-900 rounded-2xl overflow-hidden" />;
+  return <div ref={ref} className="w-full h-full overflow-hidden" />;
 };
 
-// ==================== CONTROL BUTTON ====================
-const ControlButton = ({ name, label, active, danger, onClick, slash }) => (
-  <button
-    onClick={onClick}
-    className={`flex flex-col items-center gap-1 px-2 sm:px-3 py-2 rounded-xl transition-colors shrink-0 min-w-0 ${
-      danger ? 'bg-red-500 active:bg-red-600 text-white' :
-      active ? 'bg-slate-700 text-white' : 'bg-slate-800 active:bg-slate-700 text-slate-300'
-    }`}
-  >
-    <Icon name={name} slash={slash} className="w-5 h-5" />
-    <span className="text-[10px] font-medium leading-none">{label}</span>
-  </button>
+// ==================== HELPERS ====================
+const SUPPORT_WA = '254759240692';
+const LATE_MIN = 10; // a tutor this late means the family can ask for a refund
+const firstName = (s) => (s || '').trim().split(/\s+/)[0] || '';
+const lessonStart = (b) => {
+  if (!b?.lesson_date || !b?.start_time) return null;
+  const t = new Date(`${b.lesson_date}T${String(b.start_time).slice(0, 5)}:00+03:00`).getTime();
+  return Number.isFinite(t) ? t : null;
+};
+
+// A photo is shrunk on the phone, then sent to the other person in pieces
+// by the whiteboard. It is only kept if it ends up in the lesson notes.
+const shrinkPhoto = (file) => new Promise((resolve, reject) => {
+  const img = new Image();
+  img.onload = () => {
+    const max = 1400, k = Math.min(1, max / Math.max(img.width, img.height));
+    const c = document.createElement('canvas');
+    c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    URL.revokeObjectURL(img.src);
+    resolve(c.toDataURL('image/jpeg', 0.72));
+  };
+  img.onerror = () => reject(new Error("That photo couldn't be opened. Try a JPG or PNG."));
+  img.src = URL.createObjectURL(file);
+});
+
+// A round face: live video, or the person's first letter when the camera is off.
+const Face = ({ track, name, size, ring, tag, speaking }) => (
+  <div className="relative shrink-0" style={{ width: size, height: size }}>
+    <div className="w-full h-full rounded-full overflow-hidden" style={{
+      border: '4px solid #fff', background: C.brandSoft,
+      boxShadow: `${speaking ? `0 0 0 3px ${C.good},` : ring ? `0 0 0 3px ${ring},` : ''} 0 10px 24px -10px rgba(0,0,0,.35)`,
+    }}>
+      {track ? <VideoPlayer track={track} fit="cover" /> : (
+        <div className="w-full h-full flex items-center justify-center font-extrabold" style={{ color: C.brandDeep, fontSize: size * 0.36 }}>{(name || '?').trim()[0]?.toUpperCase()}</div>
+      )}
+    </div>
+    {tag && <span className="absolute left-1/2 -translate-x-1/2 -bottom-2 px-2.5 py-0.5 rounded-full text-[11.5px] font-bold text-white whitespace-nowrap" style={{ background: C.ink }}>{tag}</span>}
+  </div>
 );
 
-// ==================== COLLABORATIVE WHITEBOARD ====================
-const Whiteboard = ({ channelName, userName }) => {
-  const canvasRef = useRef(null);
-  const isDrawing = useRef(false);
-  const lastPoint = useRef(null);
-  const channelRef = useRef(null);
-  const [color, setColor] = useState('#ffffff');
-  const [lineWidth, setLineWidth] = useState(3);
-  const [tool, setTool] = useState('pen'); // pen | eraser
-  const [history, setHistory] = useState([]);
-
-  const colors = ['#ffffff', '#ef4444', '#22c55e', '#3b82f6', '#eab308', '#f97316', '#a855f7', '#ec4899'];
-  const widths = [2, 4, 8];
-
-  // Set up Supabase Realtime channel for whiteboard
-  useEffect(() => {
-    const channel = supabase.channel(`whiteboard-${channelName}`, {
-      config: { broadcast: { self: false } },
-    });
-
-    channel.on('broadcast', { event: 'draw' }, ({ payload }) => {
-      drawStroke(payload);
-    });
-
-    channel.on('broadcast', { event: 'clear' }, () => {
-      clearCanvas(false);
-    });
-
-    channel.subscribe();
-    channelRef.current = channel;
-
-    return () => {
-      supabase.removeChannel(channel);
-    };
-  }, [channelName]);
-
-  // Initialize canvas
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    // Set canvas size to match display size
-    const rect = canvas.getBoundingClientRect();
-    canvas.width = rect.width * 2; // 2x for retina
-    canvas.height = rect.height * 2;
-    ctx.scale(2, 2);
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
-    // Dark background
-    ctx.fillStyle = '#1e293b';
-    ctx.fillRect(0, 0, rect.width, rect.height);
-  }, []);
-
-  // Handle canvas resize
-  useEffect(() => {
-    const handleResize = () => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      const rect = canvas.getBoundingClientRect();
-      canvas.width = rect.width * 2;
-      canvas.height = rect.height * 2;
-      ctx.scale(2, 2);
-      ctx.putImageData(imageData, 0, 0);
-      ctx.lineCap = 'round';
-      ctx.lineJoin = 'round';
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const getCanvasPoint = (e) => {
-    const canvas = canvasRef.current;
-    const rect = canvas.getBoundingClientRect();
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-    return {
-      x: (clientX - rect.left) / rect.width,
-      y: (clientY - rect.top) / rect.height,
-    };
-  };
-
-  const drawStroke = useCallback(({ fromX, fromY, toX, toY, color: c, width: w, tool: t }) => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const rect = canvas.getBoundingClientRect();
-
-    ctx.beginPath();
-    ctx.strokeStyle = t === 'eraser' ? '#1e293b' : c;
-    ctx.lineWidth = t === 'eraser' ? w * 4 : w;
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
-    ctx.moveTo(fromX * rect.width, fromY * rect.height);
-    ctx.lineTo(toX * rect.width, toY * rect.height);
-    ctx.stroke();
-  }, []);
-
-  const handleStart = (e) => {
-    e.preventDefault();
-    isDrawing.current = true;
-    lastPoint.current = getCanvasPoint(e);
-  };
-
-  const handleMove = (e) => {
-    e.preventDefault();
-    if (!isDrawing.current || !lastPoint.current) return;
-    const point = getCanvasPoint(e);
-    const stroke = {
-      fromX: lastPoint.current.x,
-      fromY: lastPoint.current.y,
-      toX: point.x,
-      toY: point.y,
-      color,
-      width: lineWidth,
-      tool,
-    };
-
-    // Draw locally
-    drawStroke(stroke);
-
-    // Broadcast to other user
-    channelRef.current?.send({
-      type: 'broadcast',
-      event: 'draw',
-      payload: stroke,
-    });
-
-    lastPoint.current = point;
-  };
-
-  const handleEnd = () => {
-    isDrawing.current = false;
-    lastPoint.current = null;
-  };
-
-  const clearCanvas = (broadcast = true) => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const rect = canvas.getBoundingClientRect();
-    ctx.fillStyle = '#1e293b';
-    ctx.fillRect(0, 0, rect.width, rect.height);
-
-    if (broadcast) {
-      channelRef.current?.send({
-        type: 'broadcast',
-        event: 'clear',
-        payload: {},
-      });
-    }
-  };
-
-  return (
-    <div className="flex flex-col h-full">
-      {/* Toolbar */}
-      <div className="flex items-center gap-2 p-3 bg-slate-800 border-b border-slate-700 flex-wrap">
-        {/* Pen / Eraser toggle */}
-        <button
-          onClick={() => setTool('pen')}
-          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${tool === 'pen' ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}
-        >
-          ✏️ Pen
-        </button>
-        <button
-          onClick={() => setTool('eraser')}
-          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${tool === 'eraser' ? 'bg-emerald-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}
-        >
-          🧹 Eraser
-        </button>
-
-        <div className="w-px h-6 bg-slate-600 mx-1" />
-
-        {/* Colors */}
-        {colors.map(c => (
-          <button
-            key={c}
-            onClick={() => { setColor(c); setTool('pen'); }}
-            className={`w-6 h-6 rounded-full border-2 transition-transform ${color === c && tool === 'pen' ? 'border-emerald-400 scale-125' : 'border-slate-600'}`}
-            style={{ backgroundColor: c }}
-          />
-        ))}
-
-        <div className="w-px h-6 bg-slate-600 mx-1" />
-
-        {/* Line widths */}
-        {widths.map(w => (
-          <button
-            key={w}
-            onClick={() => setLineWidth(w)}
-            className={`flex items-center justify-center w-8 h-8 rounded-lg transition-colors ${lineWidth === w ? 'bg-slate-600' : 'hover:bg-slate-700'}`}
-          >
-            <div className="rounded-full bg-white" style={{ width: w * 2, height: w * 2 }} />
-          </button>
-        ))}
-
-        <div className="flex-1" />
-
-        {/* Clear */}
-        <button
-          onClick={() => clearCanvas(true)}
-          className="px-3 py-1.5 bg-red-900/50 hover:bg-red-900/70 text-red-300 rounded-lg text-xs font-medium transition-colors"
-        >
-          🗑️ Clear
-        </button>
+// A rectangular video tile for the desktop side column and the phone faces view.
+const Tile = ({ track, name, label, speaking, fit = 'cover', muted }) => (
+  <div className="relative w-full h-full rounded-3xl overflow-hidden" style={{ background: C.brandSoft, border: `1.5px solid ${C.line}`, boxShadow: speaking ? `inset 0 0 0 3px ${C.good}` : 'none' }}>
+    {track ? <VideoPlayer track={track} fit={fit} /> : (
+      <div className="w-full h-full flex items-center justify-center">
+        <div className="w-20 h-20 rounded-full flex items-center justify-center text-3xl font-extrabold bg-white" style={{ color: C.brandDeep }}>{(name || '?').trim()[0]?.toUpperCase()}</div>
       </div>
+    )}
+    <span className="absolute left-3 bottom-3 px-2.5 py-1 rounded-full text-[13px] font-bold text-white flex items-center gap-1.5" style={{ background: 'rgba(18,17,23,.75)' }}>
+      {speaking && <span className="w-2 h-2 rounded-full" style={{ background: '#4cc38a' }} />}
+      {muted && <Icon name="mic" slash className="w-3.5 h-3.5" />}{label}
+    </span>
+  </div>
+);
 
-      {/* Canvas */}
-      <div className="flex-1 relative">
-        <canvas
-          ref={canvasRef}
-          className="absolute inset-0 w-full h-full cursor-crosshair"
-          onMouseDown={handleStart}
-          onMouseMove={handleMove}
-          onMouseUp={handleEnd}
-          onMouseLeave={handleEnd}
-          onTouchStart={handleStart}
-          onTouchMove={handleMove}
-          onTouchEnd={handleEnd}
-        />
-      </div>
-    </div>
-  );
-};
+// A dock button: rounded square, label underneath.
+const DockButton = ({ name, label, onClick, state = 'normal', slash, badge, className = '' }) => (
+  <button type="button" onClick={onClick} aria-label={label} aria-pressed={state === 'on'} className={`flex flex-col items-center gap-1.5 shrink-0 ${className}`}>
+    <span className="relative w-[52px] h-[52px] rounded-[18px] flex items-center justify-center transition-colors" style={
+      state === 'on' ? { background: C.ink, color: '#fff' }
+      : state === 'hot' ? { background: C.brand, color: C.ink }
+      : state === 'off' ? { background: '#fde7e3', color: '#c4302b', border: '1.5px solid #f5c6bf' }
+      : { background: '#fff', color: C.ink, border: `1.5px solid ${C.line}` }}>
+      <Icon name={name} slash={slash} className="w-[22px] h-[22px]" />
+      {badge ? <span className="absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1.5 rounded-full text-white text-[11px] font-bold flex items-center justify-center" style={{ background: '#e5484d' }}>{badge}</span> : null}
+    </span>
+    <span className="text-[12px] font-bold leading-none" style={{ color: C.ink2 }}>{label}</span>
+  </button>
+);
 
 // ==================== MAIN VIDEO ROOM ====================
 export const VideoRoom = ({ booking, user, onEnd }) => {
   const [client] = useState(() => AgoraRTC.createClient({ mode: 'rtc', codec: 'vp8' }));
-  const [localTracks, setLocalTracks] = useState({ audio: null, video: null });
-  const [remoteUsers, setRemoteUsers] = useState([]);
-  const [isJoined, setIsJoined] = useState(false);
+  const tracksRef = useRef({ audio: null, video: null, screen: null });
+  const [local, setLocal] = useState({ audio: null, video: null });
+  const [noCam, setNoCam] = useState(false);
+  const [remote, setRemote] = useState(null);      // { user, v }: lessons are one to one
+  const [everJoined, setEverJoined] = useState(false);
+  const [speaking, setSpeaking] = useState({ me: false, them: false });
+  const [phase, setPhase] = useState('connecting'); // connecting | live | error
+  const [failure, setFailure] = useState(null);     // { kind, message }
+  const [attempt, setAttempt] = useState(0);
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoOff, setIsVideoOff] = useState(false);
   const [isScreenSharing, setIsScreenSharing] = useState(false);
-  const [screenTrack, setScreenTrack] = useState(null);
-  const [elapsed, setElapsed] = useState(0);
-  const [error, setError] = useState(null);
+  const [view, setView] = useState('board');        // phone: board | faces
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);  // phone only; always shown on desktop
+  const [confirmLeave, setConfirmLeave] = useState(false);
+  const [now, setNow] = useState(Date.now());
+  const [photoBusy, setPhotoBusy] = useState(false);
+  const [leaving, setLeaving] = useState(false);
+  const [isLg, setIsLg] = useState(() => typeof window !== 'undefined' && window.innerWidth >= 1024);
+  useEffect(() => { const f = () => setIsLg(window.innerWidth >= 1024); window.addEventListener('resize', f); return () => window.removeEventListener('resize', f); }, []);
+  const boardRef = useRef(null);
+  const boardDirty = useRef(false);
+  const [note, setNote] = useState('');
 
-  // Panels
-  const [activePanel, setActivePanel] = useState(null); // null | 'chat' | 'whiteboard' | 'spreadsheet'
-
-  // Chat state (synced via Supabase Realtime)
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
+  const [unread, setUnread] = useState(0);
   const chatChannelRef = useRef(null);
   const chatEndRef = useRef(null);
+  const chatOpenRef = useRef(false);
+  chatOpenRef.current = chatOpen;
+  const fileRef = useRef(null);
 
   const channelName = `lesson-${booking.id}`;
+  const isTutor = user.role === 'tutor';
+  const tutorName = booking.tutors?.profiles?.full_name || 'your tutor';
+  const learnerName = booking.learner_name || booking.profiles?.full_name || 'your student';
+  const otherName = isTutor ? learnerName : tutorName;
+  const other = firstName(otherName) || otherName;
+  const subject = (booking.subject || 'Lesson').replace(/^Mathematics$/i, 'Maths');
+  const who = [firstName(learnerName), booking.learner_grade].filter(Boolean).join(' · ');
+  // The step to work on: the parent's focus note, which carries the skill
+  // the free check found when the booking came from a check result.
+  const focusRaw = (booking.focus_note || '').trim();
+  const fromCheck = /\(from the Tutagora check\)/i.test(focusRaw);
+  const focus = focusRaw.replace(/\s*\(from the Tutagora check\)\s*/i, '').trim();
 
-  // Timer
+  // Lesson clock: time left, not time since joining.
+  useEffect(() => { const t = setInterval(() => setNow(Date.now()), 1000); return () => clearInterval(t); }, []);
+  const startMs = lessonStart(booking);
+  const endMs = startMs ? startMs + (Number(booking.duration_minutes) || 60) * 60000 : null;
+  const minsTo = (ms) => Math.max(1, Math.ceil(ms / 60000));
+  const clock = !startMs ? null
+    : now < startMs ? { text: `Starts in ${minsTo(startMs - now)} min`, tone: 'soon' }
+    : now < endMs ? { text: `${minsTo(endMs - now)} min left`, tone: endMs - now <= 5 * 60000 ? 'ending' : 'live' }
+    : { text: "Time's up", tone: 'ending' };
+  const tutorLate = !isTutor && !everJoined && startMs && now > startMs + LATE_MIN * 60000;
+  const startLabel = startMs ? new Date(startMs).toLocaleTimeString('en-KE', { hour: 'numeric', minute: '2-digit', hour12: true, timeZone: 'Africa/Nairobi' }) : '';
+
+  // Chat: live between the two, and saved for 30 days in case of a complaint.
   useEffect(() => {
-    const timer = setInterval(() => setElapsed(e => e + 1), 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  // Set up synced chat via Supabase Realtime
-  useEffect(() => {
-    const channel = supabase.channel(`chat-${channelName}`, {
-      config: { broadcast: { self: false } },
-    });
-
+    supabase.from('lesson_messages').select('sender_id, sender_name, body, created_at').eq('booking_id', booking.id).order('created_at')
+      .then(({ data, error }) => {
+        if (error || !data?.length) return;
+        setMessages(data.map(m => ({ text: m.body, sender: m.sender_name, time: m.created_at, isRemote: m.sender_id !== user.id })));
+      });
+    const channel = supabase.channel(`chat-${channelName}`, { config: { broadcast: { self: false } } });
     channel.on('broadcast', { event: 'message' }, ({ payload }) => {
       setMessages(prev => [...prev, { ...payload, isRemote: true }]);
+      if (!chatOpenRef.current) setUnread(n => n + 1);
     });
-
     channel.subscribe();
     chatChannelRef.current = channel;
-
-    return () => {
-      supabase.removeChannel(channel);
-    };
+    return () => { supabase.removeChannel(channel); };
   }, [channelName]);
+  useEffect(() => { chatEndRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [messages, chatOpen]);
 
-  // Auto-scroll chat
+  useEffect(() => { if (!note) return; const t = setTimeout(() => setNote(''), 3500); return () => clearTimeout(t); }, [note]);
+
+  const sharePhoto = async (file) => {
+    if (!file) return;
+    setPhotoBusy(true);
+    try {
+      const data = await shrinkPhoto(file);
+      setView('board');
+      await boardRef.current?.addPhoto(data);
+      setNote(`${other} can see the photo now`);
+    } catch (e) { setNote(e.message || "The photo couldn't be shared."); }
+    setPhotoBusy(false);
+    if (fileRef.current) fileRef.current.value = '';
+  };
+
+  // Lesson notes: the board's pages, saved as pictures for the parent. Both
+  // people's devices save the same pages, so the notes survive either one
+  // dropping out. Saved every couple of minutes, and when leaving.
+  const saveNotes = async () => {
+    const board = boardRef.current;
+    if (!board || !board.hasContent()) return;
+    const pages = await board.exportPages();
+    const store = supabase.storage.from('lesson-notes');
+    await Promise.all(pages.map(({ page, blob }) => {
+      const path = `${booking.id}/page-${page + 1}.jpg`;
+      return blob ? store.upload(path, blob, { upsert: true, contentType: 'image/jpeg' }) : store.remove([path]);
+    }));
+    boardDirty.current = false;
+  };
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
-
-  // Join Agora room on mount
-  useEffect(() => {
-    const init = async () => {
-      try {
-        client.on('user-published', async (remoteUser, mediaType) => {
-          await client.subscribe(remoteUser, mediaType);
-          if (mediaType === 'video') {
-            setRemoteUsers(prev => {
-              if (prev.find(u => u.uid === remoteUser.uid)) {
-                return prev.map(u => u.uid === remoteUser.uid ? remoteUser : u);
-              }
-              return [...prev, remoteUser];
-            });
-          }
-          if (mediaType === 'audio') {
-            remoteUser.audioTrack?.play();
-          }
-        });
-
-        client.on('user-unpublished', (remoteUser, mediaType) => {
-          if (mediaType === 'video') {
-            setRemoteUsers(prev => prev.map(u =>
-              u.uid === remoteUser.uid ? { ...u, videoTrack: null } : u
-            ));
-          }
-        });
-
-        client.on('user-left', (remoteUser) => {
-          setRemoteUsers(prev => prev.filter(u => u.uid !== remoteUser.uid));
-        });
-
-        await client.join(AGORA_APP_ID, channelName, null, user.id);
-
-        const [audioTrack, videoTrack] = await AgoraRTC.createMicrophoneAndCameraTracks();
-        setLocalTracks({ audio: audioTrack, video: videoTrack });
-        await client.publish([audioTrack, videoTrack]);
-        setIsJoined(true);
-      } catch (err) {
-        console.error('Failed to join:', err);
-        setError(err.message);
-      }
-    };
-
-    init();
-
-    return () => {
-      localTracks.audio?.close();
-      localTracks.video?.close();
-      screenTrack?.close();
-      client.leave();
-    };
+    const t = setInterval(() => { if (boardDirty.current) saveNotes().catch(() => {}); }, 120000);
+    const hide = () => { if (document.visibilityState === 'hidden' && boardDirty.current) saveNotes().catch(() => {}); };
+    document.addEventListener('visibilitychange', hide);
+    return () => { clearInterval(t); document.removeEventListener('visibilitychange', hide); };
   }, []);
 
-  // Toggle mute
-  const toggleMute = async () => {
-    if (localTracks.audio) {
-      await localTracks.audio.setEnabled(isMuted);
-      setIsMuted(!isMuted);
-    }
-  };
+  // The other person coming and going, and who is talking.
+  useEffect(() => {
+    const bump = (u) => setRemote({ user: u, v: Date.now() });
+    client.on('user-joined', (u) => { setEverJoined(true); bump(u); });
+    client.on('user-published', async (u, mediaType) => {
+      await client.subscribe(u, mediaType);
+      if (mediaType === 'audio') u.audioTrack?.play();
+      setEverJoined(true); bump(u);
+    });
+    client.on('user-unpublished', (u) => bump(u));
+    client.on('user-left', () => setRemote(null));
+    client.on('volume-indicator', (vols) => {
+      const me = vols.some(v => String(v.uid) === String(user.id) && v.level > 6);
+      const them = vols.some(v => String(v.uid) !== String(user.id) && v.level > 6);
+      setSpeaking(s => (s.me === me && s.them === them ? s : { me, them }));
+    });
+    try { client.enableAudioVolumeIndicator?.(); } catch { /* optional */ }
+    return () => client.removeAllListeners();
+  }, [client]);
 
-  // Toggle video
-  const toggleVideo = async () => {
-    if (localTracks.video) {
-      await localTracks.video.setEnabled(isVideoOff);
-      setIsVideoOff(!isVideoOff);
-    }
-  };
+  // Join: get a key for this lesson, then camera and microphone.
+  useEffect(() => {
+    let cancelled = false;
+    const join = async () => {
+      setPhase('connecting'); setFailure(null);
+      try { await client.leave(); } catch { /* not joined yet */ }
+      let appId = AGORA_APP_ID, token = null, channel = channelName, uid = user.id;
+      const { data, error } = await supabase.functions.invoke('lesson-token', { body: { booking_id: booking.id } });
+      if (data?.token) ({ appId = appId, token, channel = channel, uid = uid } = data);
+      else if (error && [401, 403, 404].includes(error.context?.status)) {
+        let body = {};
+        try { body = await error.context.json(); } catch { /* no body */ }
+        // Only a refusal from the key service itself closes the room. A 404
+        // from Supabase because the function isn't deployed yet must not.
+        const REFUSALS = ['signed_out', 'not_found', 'not_yours', 'not_confirmed', 'too_early', 'too_late'];
+        if (REFUSALS.includes(body.error)) throw Object.assign(new Error(body.message || "You can't join this lesson."), { kind: 'denied' });
+      }
+      // No key (the key service isn't set up yet): the room still opens while
+      // the video service accepts joins without one.
+      try { await client.join(appId, channel, token, uid); }
+      catch (e) { if (!token) throw e; await client.join(appId, channel, null, uid); }
 
-  // Toggle screen share
+      let audio = null, video = null;
+      try { [audio, video] = await AgoraRTC.createMicrophoneAndCameraTracks(); }
+      catch {
+        try { audio = await AgoraRTC.createMicrophoneAudioTrack(); setNoCam(true); }
+        catch (e) { throw Object.assign(new Error(e?.message || 'permission'), { kind: 'permission' }); }
+      }
+      if (cancelled) { audio?.close(); video?.close(); return; }
+      tracksRef.current = { ...tracksRef.current, audio, video };
+      setLocal({ audio, video });
+      await client.publish([audio, video].filter(Boolean));
+      setPhase('live');
+    };
+    join().catch(e => {
+      console.error('Lesson join failed:', e);
+      if (cancelled) return;
+      const kind = e.kind || (/permission|notallowed|denied/i.test(String(e?.message || e?.name)) ? 'permission' : 'network');
+      setFailure({ kind, message: e.message }); setPhase('error');
+    });
+    return () => { cancelled = true; };
+  }, [attempt]);
+
+  // Leaving the page for any reason turns the camera off.
+  useEffect(() => () => {
+    const t = tracksRef.current;
+    t.audio?.close(); t.video?.close(); t.screen?.close();
+    client.leave().catch(() => {});
+  }, []);
+
+  const toggleMute = async () => { if (!local.audio) return; await local.audio.setEnabled(isMuted); setIsMuted(!isMuted); };
+  const toggleVideo = async () => { if (!local.video) return; await local.video.setEnabled(isVideoOff); setIsVideoOff(!isVideoOff); };
   const toggleScreenShare = async () => {
     try {
-      if (isScreenSharing && screenTrack) {
-        await client.unpublish(screenTrack);
-        screenTrack.close();
-        setScreenTrack(null);
-        if (localTracks.video) await client.publish(localTracks.video);
+      const t = tracksRef.current;
+      if (isScreenSharing && t.screen) {
+        await client.unpublish(t.screen); t.screen.close(); tracksRef.current.screen = null;
+        if (t.video) await client.publish(t.video);
         setIsScreenSharing(false);
       } else {
         const track = await AgoraRTC.createScreenVideoTrack({ encoderConfig: '1080p_1' }, 'disable');
-        if (localTracks.video) await client.unpublish(localTracks.video);
+        if (t.video) await client.unpublish(t.video);
         await client.publish(track);
-
         track.on('track-ended', async () => {
-          await client.unpublish(track);
-          track.close();
-          setScreenTrack(null);
-          if (localTracks.video) await client.publish(localTracks.video);
+          await client.unpublish(track); track.close(); tracksRef.current.screen = null;
+          if (tracksRef.current.video) await client.publish(tracksRef.current.video);
           setIsScreenSharing(false);
         });
-
-        setScreenTrack(track);
-        setIsScreenSharing(true);
+        tracksRef.current.screen = track; setIsScreenSharing(true);
       }
-    } catch (err) {
-      console.error('Screen share error:', err);
+    } catch (err) { console.error('Screen share error:', err); }
+  };
+
+  const handleEnd = async (opts = {}) => {
+    // Save the board for the parent first (but never hold anyone for long).
+    if (!opts.failed) {
+      setLeaving(true);
+      await Promise.race([saveNotes().catch(() => {}), new Promise(r => setTimeout(r, 6000))]);
     }
+    const t = tracksRef.current;
+    t.audio?.close(); t.video?.close(); t.screen?.close();
+    try { await client.leave(); } catch { /* already disconnected */ }
+    onEnd(opts && opts.failed ? { failed: true } : {});
   };
 
-  // End call
-  const handleEnd = async () => {
-    localTracks.audio?.close();
-    localTracks.video?.close();
-    screenTrack?.close();
-    await client.leave();
-    onEnd();
-  };
-
-  // Send chat message (synced)
   const sendMessage = () => {
-    if (!newMessage.trim()) return;
-    const msg = {
-      text: newMessage,
-      sender: user.name || 'You',
-      senderId: user.id,
-      time: new Date().toISOString(),
-    };
+    const text = newMessage.trim();
+    if (!text) return;
+    const msg = { text, sender: user.name || 'You', senderId: user.id, time: new Date().toISOString() };
     setMessages(prev => [...prev, { ...msg, isRemote: false }]);
-    chatChannelRef.current?.send({
-      type: 'broadcast',
-      event: 'message',
-      payload: msg,
-    });
+    chatChannelRef.current?.send({ type: 'broadcast', event: 'message', payload: msg });
+    supabase.from('lesson_messages').insert({ booking_id: booking.id, sender_id: user.id, sender_name: user.name || null, body: text.slice(0, 1000) })
+      .then(({ error }) => { if (error) console.warn('Chat not saved:', error.message); });
     setNewMessage('');
   };
+  const openChat = () => { setChatOpen(o => !o); setUnread(0); };
 
-  const formatTime = (s) => `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, '0')}`;
+  const remoteTrack = remote?.user?.videoTrack || null;
+  const remoteMuted = remote && remote.user?.hasAudio === false;
+  const selfTrack = local.video && !isVideoOff ? local.video : null;
+  const refundLink = `https://wa.me/${SUPPORT_WA}?text=${encodeURIComponent(`Hi Tutagora, my tutor didn't join. Please refund lesson ${String(booking.id).slice(0, 8)}: ${subject} with ${tutorName}, ${booking.lesson_date || ''} ${String(booking.start_time || '').slice(0, 5)}.`)}`;
+  const clockStyle = !clock ? null : clock.tone === 'live' ? { background: C.goodSoft, color: '#1f7a47' } : clock.tone === 'ending' ? { background: C.amberSoft, color: C.amber } : { background: '#fff', color: C.ink2, border: `1.5px solid ${C.line}` };
 
-  const isTutor = user.role === 'tutor';
-  const otherPerson = isTutor ? 'Student' : booking.tutors?.profiles?.full_name || 'Tutor';
+  // Messages shown in both the phone sheet and the desktop column.
+  const chatBody = (
+    <>
+      <div className="flex-1 overflow-y-auto min-h-0 space-y-2 px-4 py-3">
+        {messages.length === 0 ? <div className="text-center text-sm py-8" style={{ color: C.mute }}>No messages yet. Say hello to {other}.</div> : messages.map((m, i) => (
+          <div key={i} className={`flex ${m.isRemote ? 'justify-start' : 'justify-end'}`}>
+            <div className={`max-w-[85%] px-3.5 py-2 rounded-2xl text-[15px] leading-snug ${m.isRemote ? 'rounded-bl-md' : 'rounded-br-md'}`}
+              style={{ background: m.isRemote ? '#f4efe7' : C.brandSoft, color: C.ink }}>{m.text}</div>
+          </div>
+        ))}
+        <div ref={chatEndRef} />
+      </div>
+      <div className="px-3 pb-3 pt-2 shrink-0">
+        <div className="flex gap-2">
+          <input value={newMessage} onChange={e => setNewMessage(e.target.value)} onKeyDown={e => e.key === 'Enter' && sendMessage()} maxLength={1000}
+            placeholder={`Message ${other}`} className="flex-1 min-w-0 h-11 px-4 rounded-full text-[15px] focus:outline-none" style={{ border: `1.5px solid ${C.line}`, background: '#fff', color: C.ink }} />
+          <button type="button" onClick={sendMessage} className="h-11 px-5 rounded-full font-bold" style={{ background: C.ink, color: '#fff' }}>Send</button>
+        </div>
+        <p className="text-[11px] mt-2 px-1" style={{ color: C.mute }}>Chat is kept for 30 days in case there's a problem with the lesson.</p>
+      </div>
+    </>
+  );
 
-  const togglePanel = (panel) => {
-    setActivePanel(prev => prev === panel ? null : panel);
-  };
+  // Over the board: "not started yet", "waiting", and "tutor late".
+  const banner = phase !== 'live' ? null : tutorLate ? (
+    <div className="absolute left-3 right-3 bottom-3 lg:left-auto lg:w-[380px] z-10 rounded-2xl p-4 shadow-lg" style={{ background: C.amberSoft, border: '1.5px solid #f5d9a8' }}>
+      <div className="font-extrabold text-[16px]" style={{ color: C.ink }}>{other} is more than {LATE_MIN} minutes late</div>
+      <p className="text-[14px] mt-1 leading-snug" style={{ color: C.ink2 }}>You get a full refund when a tutor is this late. You can keep waiting: if {other} joins, the lesson goes ahead.</p>
+      <a href={refundLink} target="_blank" rel="noreferrer" className="mt-3 flex items-center justify-center h-11 rounded-xl font-bold" style={{ background: C.ink, color: '#fff' }}>Ask for a refund on WhatsApp</a>
+    </div>
+  ) : !remote ? (
+    <div className="absolute left-1/2 -translate-x-1/2 top-16 z-10 px-4 py-2.5 rounded-full text-[14px] font-bold shadow-sm whitespace-nowrap" style={{ background: '#fff', border: `1.5px solid ${C.line}`, color: C.ink2 }}>
+      {startMs && now < startMs ? `Your lesson starts at ${startLabel}` : `Waiting for ${other} to join`}
+    </div>
+  ) : null;
+
+  const fullCard = (children) => (
+    <div className="flex-1 min-h-0 rounded-[28px] flex items-center justify-center p-6" style={{ background: C.card, border: `1.5px solid ${C.line}` }}>
+      <div className="max-w-sm text-center">{children}</div>
+    </div>
+  );
 
   return (
-    <div className="fixed inset-0 bg-slate-950 z-50 flex flex-col">
-      {/* Header — pads under the status bar / Dynamic Island; the subject is
-          hidden on phones (where it used to overlap the live badge and role). */}
-      <header className="px-3 sm:px-4 flex items-center justify-between gap-2 border-b border-slate-800 bg-slate-900/60 flex-shrink-0"
-        style={{ paddingTop: 'calc(env(safe-area-inset-top) + 0.5rem)', paddingBottom: '0.5rem' }}>
-        <div className="flex items-center gap-2 min-w-0">
-          <div className="flex items-center gap-1.5 px-2 py-1 bg-emerald-500/20 rounded-full shrink-0">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-emerald-400 text-xs font-semibold">Live</span>
-          </div>
-          <span className="text-slate-300 font-mono text-sm tabular-nums shrink-0">{formatTime(elapsed)}</span>
-        </div>
+    <div className="fixed inset-0 z-50 flex flex-col" style={{ background: C.paper, color: C.ink, fontFamily: '"Figtree Variable", -apple-system, "Segoe UI", Roboto, sans-serif' }}>
+      <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={e => sharePhoto(e.target.files?.[0])} />
 
-        <div className="hidden sm:block text-center min-w-0">
-          <div className="text-white font-medium text-sm truncate">{booking.subject}</div>
-          <div className="text-slate-400 text-xs truncate">with {otherPerson}</div>
+      {/* Header: a clear way out, what and with whom, and time left. */}
+      <header className="flex items-center gap-3 px-4 lg:px-6 shrink-0" style={{ paddingTop: 'calc(env(safe-area-inset-top) + 0.75rem)', paddingBottom: '0.75rem' }}>
+        <button type="button" onClick={() => setConfirmLeave(true)} className="h-10 pl-2.5 pr-4 rounded-full font-bold text-[15px] flex items-center gap-1 shrink-0" style={{ background: '#fff', border: `1.5px solid ${C.line}`, color: C.ink2 }}>
+          <Icon name="back" className="w-[18px] h-[18px]" />Leave
+        </button>
+        <div className="min-w-0 flex-1">
+          <div className="font-extrabold text-[17px] tracking-tight truncate" style={{ fontFamily: '"Archivo Variable", "Figtree Variable", sans-serif', fontStretch: '92%' }}>{subject} with {other}</div>
+          {who && <div className="text-[13px] font-semibold truncate" style={{ color: C.mute }}>{who}</div>}
         </div>
-
-        <span className={`px-2 py-0.5 text-[10px] font-bold rounded-full uppercase tracking-wide shrink-0 ${isTutor ? 'bg-emerald-900/50 text-emerald-400' : 'bg-blue-900/50 text-blue-300'}`}>
-          {isTutor ? 'Tutor' : 'Student'}
-        </span>
+        {clock && <span className="h-9 px-3 rounded-full text-[14px] font-extrabold flex items-center gap-1.5 shrink-0" style={clockStyle}><Icon name="clock" className="w-4 h-4" sw={2.2} /><span>{clock.tone === 'soon' ? <><span className="hidden sm:inline">Starts </span>{clock.text.replace('Starts in', 'in')}</> : <>{clock.text.replace(' left', '')}<span className="hidden sm:inline"> left</span></>}</span></span>}
       </header>
 
-      {/* Main Content */}
-      <div className="flex-1 flex min-h-0">
-        {/* Video Area */}
-        <div className={`flex-1 p-3 flex flex-col min-w-0 ${activePanel ? 'hidden sm:flex' : 'flex'}`}>
-          {error ? (
-            <div className="flex-1 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-red-400 text-lg mb-2">Connection Error</div>
-                <div className="text-slate-500 text-sm">{error}</div>
-                <button onClick={handleEnd} className="mt-4 px-4 py-2 bg-slate-700 text-white rounded-lg text-sm">Go Back</button>
-              </div>
-            </div>
-          ) : (
-            <div className="flex-1 relative rounded-2xl overflow-hidden bg-slate-900">
-              {/* Main Video (Remote or Screen Share) — 'contain' so a shared
-                  screen is shown whole, not cropped/zoomed. */}
-              {remoteUsers.length > 0 && remoteUsers[0].videoTrack ? (
-                <VideoPlayer track={remoteUsers[0].videoTrack} fit="contain" />
-              ) : isScreenSharing && screenTrack ? (
-                <VideoPlayer track={screenTrack} fit="contain" />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 rounded-full bg-slate-800 text-slate-500 flex items-center justify-center mx-auto mb-3">
-                      <Icon name="user" className="w-8 h-8" />
-                    </div>
-                    <div className="text-slate-400 text-sm">Waiting for {otherPerson} to join…</div>
-                  </div>
-                </div>
-              )}
-
-              {/* Remote user label */}
-              {remoteUsers.length > 0 && (
-                <div className="absolute bottom-3 left-3 px-2 py-1 bg-black/60 rounded-lg text-white text-xs">{otherPerson}</div>
-              )}
-
-              {/* Self View (PiP) */}
-              <div className="absolute bottom-3 right-3 w-36 h-28 sm:w-44 sm:h-32 rounded-xl overflow-hidden border-2 border-slate-700 shadow-xl">
-                {localTracks.video && !isVideoOff ? (
-                  <VideoPlayer track={localTracks.video} fit="cover" />
-                ) : (
-                  <div className="w-full h-full bg-slate-800 flex items-center justify-center">
-                    <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-lg font-semibold text-slate-300 uppercase">{user.name?.[0] || '?'}</div>
-                  </div>
-                )}
-                <div className="absolute bottom-1 left-1 flex items-center gap-1 px-1.5 py-0.5 bg-black/60 rounded text-white text-[10px]">
-                  You {isMuted && <Icon name="mic" slash className="w-3 h-3" />}
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Side Panel: Chat or Whiteboard */}
-        {activePanel && (
-          <div className={`${activePanel === 'chat' ? 'w-full sm:w-80' : 'w-full sm:w-[55%]'} border-l border-slate-800 flex flex-col bg-slate-900/80 min-h-0`}>
-            {/* Panel header */}
-            <div className="flex items-center justify-between p-3 border-b border-slate-800 flex-shrink-0">
-              <h3 className="font-semibold text-white text-sm">
-                {activePanel === 'chat' ? 'Chat' : activePanel === 'whiteboard' ? 'Whiteboard' : 'Spreadsheet'}
-              </h3>
-              <button onClick={() => setActivePanel(null)} aria-label="Close" className="text-slate-400 hover:text-white"><Icon name="close" className="w-5 h-5" /></button>
-            </div>
-
-            {/* Chat Panel */}
-            {activePanel === 'chat' && (
-              <>
-                <div className="flex-1 p-3 overflow-y-auto space-y-2 min-h-0">
-                  {messages.length === 0 ? (
-                    <div className="text-center text-slate-500 text-xs py-8">No messages yet. Say hello!</div>
-                  ) : (
-                    messages.map((msg, i) => (
-                      <div key={i} className={`flex ${msg.isRemote ? 'justify-start' : 'justify-end'}`}>
-                        <div className={`max-w-[80%] px-3 py-2 rounded-xl text-sm ${msg.isRemote ? 'bg-slate-700 text-white' : 'bg-emerald-600 text-white'}`}>
-                          {msg.isRemote && <div className="text-[10px] text-slate-400 mb-0.5">{msg.sender}</div>}
-                          {msg.text}
-                        </div>
-                      </div>
-                    ))
-                  )}
-                  <div ref={chatEndRef} />
-                </div>
-                <div className="p-3 border-t border-slate-800 flex-shrink-0">
-                  <div className="flex gap-2">
-                    <input
-                      value={newMessage}
-                      onChange={(e) => setNewMessage(e.target.value)}
-                      onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
-                      placeholder="Type a message..."
-                      className="flex-1 px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500"
-                    />
-                    <button onClick={sendMessage} className="px-3 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-sm transition-colors">Send</button>
-                  </div>
-                </div>
-              </>
-            )}
-
-            {/* Whiteboard Panel */}
-            {activePanel === 'whiteboard' && (
-              <div className="flex-1 min-h-0">
-                <Whiteboard channelName={channelName} userName={user.name} />
-              </div>
-            )}
-
-            {/* Spreadsheet Panel */}
-            {activePanel === 'spreadsheet' && (
-              <div className="flex-1 min-h-0">
-                <Spreadsheet channelName={channelName} />
-              </div>
-            )}
+      {/* Today's step: what this lesson is for. */}
+      {focus && (
+        <div className="mx-4 lg:ml-6 lg:mr-[380px] mb-3 rounded-[20px] px-4 py-3 flex items-center gap-3 shrink-0" style={{ background: C.brandSoft }}>
+          <span className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: C.brand, color: C.ink }}><Icon name="target" className="w-5 h-5" sw={2} /></span>
+          <div className="min-w-0">
+            <div className="text-[11.5px] font-extrabold uppercase tracking-[.08em]" style={{ color: C.brandDeep }}>{fromCheck ? `Today's step · from ${firstName(learnerName)}'s check` : 'What to work on'}</div>
+            <div className="text-[15px] font-bold leading-snug line-clamp-2">{focus}</div>
           </div>
+        </div>
+      )}
+
+      {/* Main: the board (and on desktop, the faces and chat beside it). */}
+      <div className="flex-1 min-h-0 flex gap-4 px-4 lg:px-6">
+        {phase === 'error' ? fullCard(<>
+          <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: C.brandSoft, color: C.brandDeep }}><Icon name={failure?.kind === 'permission' ? 'video' : 'user'} className="w-7 h-7" /></div>
+          <h2 className="text-xl font-extrabold tracking-tight">{failure?.kind === 'permission' ? 'Allow your camera and microphone' : failure?.kind === 'denied' ? failure.message : "We couldn't connect to the lesson"}</h2>
+          <p className="text-[15px] mt-2 leading-relaxed" style={{ color: C.ink2 }}>
+            {failure?.kind === 'permission' ? `${other} needs to see and hear you. Tap the camera or lock icon next to the web address, choose Allow, then try again.`
+              : failure?.kind === 'denied' ? 'If you think this is a mistake, message us on WhatsApp.' : 'Check your internet connection, then try again.'}
+          </p>
+          {failure?.kind !== 'denied' && <button type="button" onClick={() => setAttempt(a => a + 1)} className="mt-5 w-full h-12 rounded-xl font-bold" style={{ background: C.ink, color: '#fff' }}>Try again</button>}
+          <button type="button" onClick={() => handleEnd({ failed: true })} className="mt-2 w-full h-12 rounded-xl font-bold" style={{ background: '#fff', border: `1.5px solid ${C.line}` }}>Go back</button>
+        </>) : phase === 'connecting' ? fullCard(<>
+          <div className="w-10 h-10 rounded-full border-[3px] animate-spin mx-auto mb-3" style={{ borderColor: C.line, borderTopColor: C.brand }} />
+          <div className="font-bold" style={{ color: C.ink2 }}>Joining the lesson…</div>
+        </>) : (
+          <>
+            <div className="relative flex-1 min-w-0 rounded-[28px] overflow-hidden" style={{ border: `1.5px solid ${C.line}`, boxShadow: '0 18px 40px -26px rgba(60,40,20,.35)' }}>
+              <Whiteboard ref={boardRef} channelName={channelName} userId={user.id} bottom={isLg ? 60 : 104} onChange={() => { boardDirty.current = true; }} onNote={() => { setView('board'); setNote(`${other} shared a photo on the board`); }} />
+              {sheetOpen && <div className="absolute inset-0 z-20 bg-white"><Spreadsheet channelName={channelName} /></div>}
+              {banner}
+
+              {/* Phone: the two faces sit in the corner of the board. */}
+              {!tutorLate && (
+                <div className="lg:hidden absolute right-3 bottom-4 z-10 flex items-end gap-2">
+                  <button type="button" onClick={() => setView('faces')} aria-label="Show faces"><Face track={selfTrack} name={user.name || 'You'} size={58} tag="You" speaking={speaking.me} /></button>
+                  <button type="button" onClick={() => setView('faces')} aria-label={`Show ${other}`}><Face track={remoteTrack} name={otherName} size={84} tag={remote ? other : 'Waiting'} speaking={!!remote && speaking.them} ring={remote ? null : C.line} /></button>
+                </div>
+              )}
+
+              {/* Phone: faces view, big. */}
+              {view === 'faces' && (
+                <div className="lg:hidden absolute inset-0 z-20 p-3 flex flex-col gap-3" style={{ background: C.paper }}>
+                  <div className="flex-1 min-h-0"><Tile track={remoteTrack} name={otherName} label={remote ? other : `Waiting for ${other}`} speaking={!!remote && speaking.them} muted={remoteMuted} /></div>
+                  <div className="h-[150px] flex gap-3 shrink-0">
+                    <div className="w-[120px]"><Tile track={selfTrack} name={user.name || 'You'} label="You" speaking={speaking.me} muted={isMuted} /></div>
+                    <button type="button" onClick={() => setView('board')} className="flex-1 rounded-3xl font-bold text-[16px] flex flex-col items-center justify-center gap-2" style={{ background: C.ink, color: '#fff' }}>
+                      <Icon name="board" className="w-6 h-6" />Back to the board
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {note && <div className="absolute left-1/2 -translate-x-1/2 bottom-[112px] lg:bottom-4 z-30 px-4 py-2 rounded-full text-sm font-bold text-white shadow-lg whitespace-nowrap" style={{ background: C.ink }}>{note}</div>}
+            </div>
+
+            {/* Desktop: faces and chat beside the board. */}
+            <aside className="hidden lg:flex w-[340px] shrink-0 flex-col gap-3 min-h-0">
+              <div className="h-[230px] shrink-0"><Tile track={remoteTrack} name={otherName} label={remote ? other : `Waiting for ${other}`} speaking={!!remote && speaking.them} muted={remoteMuted} /></div>
+              <div className="h-[150px] shrink-0"><Tile track={selfTrack} name={user.name || 'You'} label="You" speaking={speaking.me} muted={isMuted} /></div>
+              <div className="flex-1 min-h-0 rounded-3xl flex flex-col" style={{ background: '#fff', border: `1.5px solid ${C.line}` }}>
+                <div className="px-4 pt-3 font-extrabold text-[15px]">Chat</div>
+                {chatBody}
+              </div>
+            </aside>
+          </>
         )}
       </div>
 
-      {/* Controls Bar — compact so all seven fit on a narrow phone (the End
-          button used to overflow off-screen, stranding the student). Scrolls
-          horizontally as a last resort, and pads under the home indicator. */}
-      <div className="flex items-center justify-center gap-1.5 sm:gap-2 px-2 py-2 border-t border-slate-800 bg-slate-900/60 flex-shrink-0 overflow-x-auto"
-        style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.5rem)' }}>
-        <ControlButton name="mic" slash={isMuted} label={isMuted ? 'Unmute' : 'Mute'} active={isMuted} onClick={toggleMute} />
-        <ControlButton name="video" slash={isVideoOff} label={isVideoOff ? 'Start' : 'Stop'} active={isVideoOff} onClick={toggleVideo} />
-        <ControlButton name="screen" label="Screen" active={isScreenSharing} onClick={toggleScreenShare} />
-        <ControlButton name="board" label="Board" active={activePanel === 'whiteboard'} onClick={() => togglePanel('whiteboard')} />
-        <ControlButton name="sheet" label="Sheet" active={activePanel === 'spreadsheet'} onClick={() => togglePanel('spreadsheet')} />
-        <ControlButton name="chat" label="Chat" active={activePanel === 'chat'} onClick={() => togglePanel('chat')} />
-        <ControlButton name="end" label="Leave" danger onClick={handleEnd} />
-      </div>
+      {noCam && phase === 'live' && <div className="mx-4 mt-2 text-center text-xs font-semibold" style={{ color: C.mute }}>We couldn't find a camera, so {other} can hear you but not see you.</div>}
+
+      {/* Dock */}
+      {phase === 'live' ? (
+        <div className="shrink-0 px-3 pt-3 flex items-start justify-center gap-3 sm:gap-4" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.9rem)' }}>
+          <DockButton name="mic" label={isMuted ? 'Unmute' : 'Mute'} slash={isMuted} state={isMuted ? 'off' : 'normal'} onClick={toggleMute} />
+          <DockButton name="video" label={isVideoOff || noCam ? 'Camera off' : 'Camera'} slash={isVideoOff || noCam} state={isVideoOff || noCam ? 'off' : 'normal'} onClick={toggleVideo} />
+          <DockButton name={view === 'faces' ? 'board' : 'faces'} label={view === 'faces' ? 'Board' : 'Faces'} onClick={() => setView(v => (v === 'faces' ? 'board' : 'faces'))} className="lg:hidden" />
+          <DockButton name="photo" label={photoBusy ? 'Sending…' : isTutor ? 'Photo' : 'Homework'} state="hot" onClick={() => !photoBusy && fileRef.current?.click()} />
+          <DockButton name="chat" label="Chat" state={chatOpen ? 'on' : 'normal'} badge={unread || null} onClick={openChat} className="lg:hidden" />
+          <DockButton name="screen" label={isScreenSharing ? 'Stop sharing' : 'Share screen'} state={isScreenSharing ? 'on' : 'normal'} onClick={toggleScreenShare} className="hidden lg:flex" />
+          {isTutor && <DockButton name="sheet" label="Sheet" state={sheetOpen ? 'on' : 'normal'} onClick={() => setSheetOpen(o => !o)} className="hidden lg:flex" />}
+        </div>
+      ) : <div className="h-4 shrink-0" />}
+
+      {/* Phone chat: a sheet over the board. */}
+      {chatOpen && (
+        <div className="lg:hidden fixed inset-0 z-[55] flex flex-col justify-end" style={{ background: 'rgba(18,17,23,.35)' }} onClick={() => setChatOpen(false)}>
+          <div className="h-[72%] rounded-t-[28px] flex flex-col" style={{ background: C.card, paddingBottom: 'env(safe-area-inset-bottom)' }} onClick={e => e.stopPropagation()}>
+            <div className="flex items-center justify-between px-5 pt-4 pb-1">
+              <div className="font-extrabold text-[17px]">Chat with {other}</div>
+              <button type="button" onClick={() => setChatOpen(false)} aria-label="Close" className="w-9 h-9 -mr-2 rounded-full flex items-center justify-center" style={{ color: C.ink2 }}><Icon name="close" className="w-5 h-5" /></button>
+            </div>
+            {chatBody}
+          </div>
+        </div>
+      )}
+
+      {/* Leaving is never one accidental tap. */}
+      {confirmLeave && (
+        <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center p-0 sm:p-4" style={{ background: 'rgba(18,17,23,.45)' }} onClick={() => setConfirmLeave(false)}>
+          <div className="w-full sm:max-w-sm rounded-t-[28px] sm:rounded-[28px] p-6" style={{ background: C.card, paddingBottom: 'calc(env(safe-area-inset-bottom) + 1.5rem)' }} onClick={e => e.stopPropagation()}>
+            <h2 className="text-xl font-extrabold tracking-tight">Leave the lesson?</h2>
+            <p className="text-[15px] mt-2" style={{ color: C.ink2 }}>{endMs && now < endMs ? `There ${minsTo(endMs - now) === 1 ? 'is 1 minute' : `are ${minsTo(endMs - now)} minutes`} left. ` : ''}You can come back in from your dashboard until the lesson ends.</p>
+            <button type="button" onClick={() => setConfirmLeave(false)} className="mt-5 w-full h-12 rounded-xl font-bold" style={{ background: C.ink, color: '#fff' }}>Stay in the lesson</button>
+            <button type="button" onClick={() => handleEnd()} disabled={leaving} className="mt-2 w-full h-12 rounded-xl font-bold" style={{ background: '#fff', border: `1.5px solid ${C.line}`, color: '#c4302b' }}>{leaving ? 'Saving the board…' : 'Leave'}</button>
+            <p className="text-[12.5px] mt-3 text-center" style={{ color: C.mute }}>The whiteboard is saved as lesson notes for the family.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

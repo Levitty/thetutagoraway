@@ -1,50 +1,62 @@
 // ============================================================================
-// SUBSCRIPTION / PAYWALL CONFIG  (freemium — built, but INACTIVE)
+// PAID PRACTICE
 //
-// Model (agreed): the diagnostic is always free; free learners get a daily
-// TASTE of practice (up to the daily goal), then a paywall; a 30-day pass
-// (KSh 200) unlocks unlimited practice.
+// The free check is always free. After it, each family account gets one free
+// week of practice, then practice needs a pass: KES 100 for a week or
+// KES 350 for a month. All children on the account share the pass.
 //
-// NOTHING gates until PAYWALL_ENABLED is flipped to true AND the date has
-// reached PAYWALL_START. Until then every helper below reports "unlimited",
-// so this file changes nothing for anyone. Turning it on is a one-line edit.
+// Nothing is charged until PAYWALL_ENABLED is true AND the launch date has
+// come. Before launch, open the site with ?paywalltest=1 on your own phone to
+// try the whole paid flow (real payment); ?paywalltest=0 turns that off.
 // ============================================================================
 
-import { todaysXP } from './ai-tutor/gamification.js';
-
 // ---- master switches -------------------------------------------------------
-export const PAYWALL_ENABLED = false;        // ← the on/off switch. Keep false.
-export const PAYWALL_START_ISO = '2026-08-17'; // gate can only bite on/after this
+export const PAYWALL_ENABLED = false;          // turn on for launch
+export const PAYWALL_START_ISO = '2026-12-31'; // paid practice starts on this date
 
-// ---- the free line + price -------------------------------------------------
-export const FREE_DAILY_XP = 30;   // free practice allowance per day (= daily goal)
-export const PRICE_KES = 200;      // 30-day pass price
-export const PASS_DAYS = 30;       // days a pass grants
+// ---- plans -----------------------------------------------------------------
+export const FREE_DAYS = 7;
+export const PLANS = {
+  week: { id: 'week', kes: 100, days: 7, label: '1 week' },
+  month: { id: 'month', kes: 350, days: 30, label: '1 month', note: 'About KSh 82 a week' },
+};
+// Kept for older screens that show a single price.
+export const PRICE_KES = PLANS.week.kes;
+export const PASS_DAYS = PLANS.week.days;
 
-// ---- derived helpers -------------------------------------------------------
-/** Is the paywall live right now? (switch on AND past the start date) */
+// ---- test switch (this browser only) ----------------------------------------
+const TEST_KEY = 'tg_paywall_test';
+try {
+  const q = new URLSearchParams(window.location.search).get('paywalltest');
+  if (q === '1') localStorage.setItem(TEST_KEY, '1');
+  if (q === '0') localStorage.removeItem(TEST_KEY);
+} catch { /* no storage */ }
+export const paywallTesting = () => { try { return localStorage.getItem(TEST_KEY) === '1'; } catch { return false; } };
+
+// ---- helpers ---------------------------------------------------------------
+/** Is paid practice live for this person right now? */
 export const paywallActive = (now = Date.now()) =>
-  PAYWALL_ENABLED && now >= Date.parse(PAYWALL_START_ISO);
+  paywallTesting() || (PAYWALL_ENABLED && now >= Date.parse(PAYWALL_START_ISO));
 
-/** Does this subscription row grant an active pass? */
+/** Does this subscription row allow practice now (free week or paid pass)? */
 export const isPro = (sub, now = Date.now()) =>
   !!(sub && sub.pro_until && Date.parse(sub.pro_until) > now);
 
-/** How many days of pass remain (0 if none / lapsed). */
+export const isFreeWeek = (sub) => sub?.plan === 'trial';
+
+/** Days left on the free week or pass (0 if none or ended). */
 export const passDaysLeft = (sub, now = Date.now()) => {
   if (!isPro(sub, now)) return 0;
   return Math.ceil((Date.parse(sub.pro_until) - now) / 86400000);
 };
 
 /**
- * May this learner do MORE practice right now? The diagnostic is never gated —
- * this only governs ongoing practice/lessons. Returns true when the paywall is
- * off, the learner is pro, or they're still within today's free allowance.
+ * May this learner practise right now? The check is never gated. Before
+ * launch everyone can; after it, only during the free week or a pass.
  */
-export const canPractice = (sub, progress, now = Date.now()) => {
+export const canPractice = (sub, _progress, now = Date.now()) => {
   if (!paywallActive(now)) return true;
-  if (isPro(sub, now)) return true;
-  return todaysXP(progress) < FREE_DAILY_XP;
+  return isPro(sub, now);
 };
 
-export default { PAYWALL_ENABLED, PAYWALL_START_ISO, FREE_DAILY_XP, PRICE_KES, PASS_DAYS, paywallActive, isPro, passDaysLeft, canPractice };
+export default { PAYWALL_ENABLED, PAYWALL_START_ISO, FREE_DAYS, PLANS, PRICE_KES, PASS_DAYS, paywallActive, paywallTesting, isPro, isFreeWeek, passDaysLeft, canPractice };

@@ -633,7 +633,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     const priorConfidence = Math.abs(balances[skill.id] || 0);
 
     const newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
-    const newResults = { ...results, [skill.id]: { correct, timeTaken } };
+    const newResults = { ...results, [skill.id]: { correct, timeTaken, ...(skip ? { skipped: true } : {}) } };
     const newAnswered = [...answered, skill.id];
     const answeredSet = new Set(newAnswered);
     const newPerGrade = { ...perGrade, [skill.grade]: {
@@ -676,6 +676,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
         diagnosed: true,
         diagnosticBalances: newBalances,
         placementGrade,
+        // How much of the check was actually answered, so a result built
+        // mostly on "I haven't learned this yet" taps isn't shown as fact.
+        diagStats: {
+          answered: newAnswered.length,
+          skipped: Object.values(newResults).filter(r => r?.skipped).length,
+          correct: Object.values(newResults).filter(r => r?.correct).length,
+        },
         diagInProgress: null, // completed — clear the resume cursor
       };
       setProgress(finished);

@@ -118,7 +118,7 @@ export default function Teach({ onNavigate, onSignIn, onApply, user }) {
 
       <section className="sec tight"><div className="in duo">
         <div className="c t"><div className="kicker">Ready?</div><h3>Apply to teach</h3><p>Set up your profile in about ten minutes. We'll review it and let you know by email.</p><button type="button" className="btn" onClick={onApply}>Apply now</button></div>
-        <div className="c s"><div className="kicker">Questions first?</div><h3>Talk to us</h3><p>WhatsApp 0759 240 692 or email tutaeducators@gmail.com.</p><a className="btn" href="https://wa.me/254759240692?text=Hi%20Tutagora%2C%20I%27d%20like%20to%20teach" target="_blank" rel="noreferrer"><SiteIcon name="chat" />WhatsApp us</a></div>
+        <div className="c s"><div className="kicker">Questions first?</div><h3>Talk to us</h3><p>WhatsApp 0759 240 692 or email hello@tutagora.com.</p><a className="btn" href="https://wa.me/254759240692?text=Hi%20Tutagora%2C%20I%27d%20like%20to%20teach" target="_blank" rel="noreferrer"><SiteIcon name="chat" />WhatsApp us</a></div>
       </div></section>
 
       <SiteFooter onNavigate={onNavigate} />

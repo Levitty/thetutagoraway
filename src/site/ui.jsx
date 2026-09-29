@@ -47,6 +47,7 @@ export const SiteNav = ({ onNavigate, onSignIn, user, current, onBrand = true })
         <button type="button" onClick={() => onNavigate('tutors')} aria-current={current === 'tutors' ? 'page' : undefined}>Find a tutor</button>
         <button type="button" onClick={() => onNavigate('check')} aria-current={current === 'check' ? 'page' : undefined}>Maths check</button>
         <button type="button" onClick={() => onNavigate('schools')} aria-current={current === 'schools' ? 'page' : undefined}>For schools</button>
+        <button type="button" onClick={() => onNavigate('why')} aria-current={current === 'why' ? 'page' : undefined}>Why Tutagora</button>
       </div>
       <div className="right">
         <button type="button" className="txt hide" onClick={() => onNavigate('teach')}>Teach with us</button>
@@ -66,9 +67,10 @@ export const SiteFooter = ({ onNavigate }) => (
     <div className="in">
       <div>
         <div className="logo" style={{ cursor: 'default' }}>tutagora<i /></div>
-        <div style={{ marginTop: 8 }}>Nairobi, Kenya · tutaeducators@gmail.com · WhatsApp 0759 240 692</div>
+        <div style={{ marginTop: 8 }}>Nairobi, Kenya · hello@tutagora.com · WhatsApp 0759 240 692</div>
       </div>
       <nav aria-label="Footer">
+        <button type="button" onClick={() => onNavigate('why')}>Why Tutagora</button>
         <button type="button" onClick={() => onNavigate('tutors')}>Find a tutor</button>
         <button type="button" onClick={() => onNavigate('check')}>Maths check</button>
         <button type="button" onClick={() => onNavigate('teach')}>Teach with us</button>
@@ -138,5 +140,11 @@ export const gradeLevels = (g) => {
   }
   return [String(g)];
 };
+
+// Tutors with a real profile photo are listed first: parents trust a face.
+export const hasPhoto = (t) => !!(t?.profiles?.avatar_url && String(t.profiles.avatar_url).trim());
+export const hasHours = (t) => !Array.isArray(t?.availability) || t.availability.length > 0;
+// Tutors families can actually book come first, then those with a real photo.
+export const photoFirst = (a, b) => (Number(hasHours(b)) - Number(hasHours(a))) || (Number(hasPhoto(b)) - Number(hasPhoto(a)));
 
 export const ksh = (n) => `KSh ${Math.round(Number(n) || 0).toLocaleString('en-KE')}`;
