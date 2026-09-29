@@ -578,3 +578,10 @@
 .tg.vision .vpoints b { display: block; font-size: 18px; margin-bottom: 4px; }
 .tg.vision .vpoints span { color: var(--ink2); font-size: 16.5px; line-height: 1.5; }
 @media (max-width: 700px) { .tg.vision .vpoints { grid-template-columns: minmax(0, 1fr); } }
+.tg.vision .vpara { font-size: clamp(19px, 2.1vw, 22px); line-height: 1.7; color: var(--ink); margin: 0; }
+.tg.vision .vpromise { margin-top: 48px; background: var(--brand); border-radius: 16px; padding: 28px 30px; }
+.tg.vision .vpromise p { font-family: var(--display); font-weight: 800; font-size: clamp(24px, 3vw, 34px); line-height: 1.15; letter-spacing: -.02em; margin: 10px 0 0; }
+.tg.vision .vsignoff { margin-top: 40px; font-size: 19px; }
+.tg.vision .vsignoff span { display: block; font-style: italic; color: var(--ink2); }
+.tg.vision .vsignoff b { display: block; font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: -.02em; margin-top: 4px; }
+.tg.vision .vhero { padding-bottom: 64px; }
