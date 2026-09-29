@@ -370,8 +370,8 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
                   <div className="flex-1 min-w-0">
                     <div className="font-semibold text-slate-900 truncate flex items-center gap-2">
                       {st.name}
-                      {st.snap.accelerated && <span title="Working above grade" className="text-emerald-500">⚡</span>}
-                      {st.snap.gapCount > 0 && <span title="Foundation gaps" className="text-red-500">⚠️</span>}
+                      {st.snap.accelerated && <span title="Working above grade" className="text-emerald-500"><Icon name="zap" className="w-3.5 h-3.5 inline" /></span>}
+                      {st.snap.gapCount > 0 && <span title="Foundation gaps" className="text-red-500"><Icon name="alert" className="w-3.5 h-3.5 inline" /></span>}
                     </div>
                     <div className="text-xs text-slate-500">
                       {st.snap.mastered}/{st.snap.total} skills · {st.snap.percent}% mastered
@@ -416,7 +416,7 @@ function StudentDetail({ student, onBack, engineLive }) {
           <div className="text-4xl font-bold">Grade {snap.level.toFixed(snap.brain ? 1 : 0)}</div>
           <div className="text-sm mt-1">
             {snap.mastered}/{snap.total} skills mastered · {snap.percent}%
-            {snap.accelerated && ' · ⚡ working above grade'}
+            {snap.accelerated && ' · working above grade'}
           </div>
         </div>
 
@@ -442,7 +442,7 @@ function StudentDetail({ student, onBack, engineLive }) {
                     )}
                   </div>
                   {s.accuracy != null && s.accuracy < 70 && (
-                    <div className="text-xs text-red-500 mt-0.5">⚠️ accuracy {s.accuracy}%</div>
+                    <div className="text-xs text-red-500 mt-0.5">Accuracy {s.accuracy}%</div>
                   )}
                 </div>
               );

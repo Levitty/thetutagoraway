@@ -98,9 +98,10 @@ const Shell = ({ children, header }) => (
   </div>
 );
 
-export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = false }) => {
+export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = false, lockedLearner = null }) => {
   const [children, setChildren] = useState([]);
-  const [activeLearner, setActiveLearner] = useState(null); // null = account holder
+  // null = account holder. In student mode the learner is fixed (no switcher).
+  const [activeLearner, setActiveLearner] = useState(lockedLearner);
   const learnerKey = activeLearner ? `${userId}_c${activeLearner.id}` : userId;
   const learnerId = activeLearner?.id || null;
   const first = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
@@ -250,7 +251,7 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
           <div className="text-sm text-slate-500 mt-0.5">{sw ? 'Insha inasahihishwa kama mwalimu — alama /20 na sentensi za kurekebisha.' : 'Marked like a teacher would: a mark out of 20 and the exact lines to fix.'}</div>
         </div>
 
-        {children.length > 0 && (
+        {children.length > 0 && !lockedLearner && (
           <div className="flex gap-2 flex-wrap">
             {[{ id: null, name: 'You' }, ...children].map(c => (
               <button key={c.id || 'self'} onClick={() => setActiveLearner(c.id ? c : null)}
