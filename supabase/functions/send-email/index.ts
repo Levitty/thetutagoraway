@@ -193,7 +193,6 @@ function generateEmailTemplate(
               "<b>Open your times.</b> Families can only book the hours you make available.",
               "<b>Finish your profile.</b> A clear photo and a bio that says how you teach.",
               "<b>Reply quickly.</b> Families notice, and it shows in your reviews.",
-              "<b>Optional:</b> switch on 30-minute lessons for a single stuck skill.",
             ]) +
             p(`<span style="color:${MUTE};font-size:14px;">Tutagora keeps a 15% platform fee on each lesson. Payouts go out every Friday by M-Pesa.</span>`) +
             button("Go to my dashboard", "https://tutagora.com/dashboard"),

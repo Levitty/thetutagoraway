@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { HALF_HOUR_LESSONS } from './features.js';
 import { SKILLS } from '../ai-tutor/knowledgeGraph.js';
 import { SiteNav, SiteFooter, SiteIcon, StandIn, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh } from './ui.jsx';
 
@@ -189,7 +190,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
           <details><summary>Do I need an account?</summary><p>Not to take the check. To save the result and the plan, you create a free account with Google or your email.</p></details>
           <details><summary>Is it safe to hand my phone to my child?</summary><p>Yes. Your child gets their own space with no payments or messages, and leaving it needs your PIN.</p></details>
           <details><summary>Which grades and curriculum?</summary><p>CBC Grade 1 to 12, plus Cambridge. Maths first; composition and insha writing too.</p></details>
-          <details><summary>How do tutor lessons work?</summary><p>Pick a tutor and a time. Lessons are an hour, and some tutors also offer 30 minutes. Pay with M-Pesa or card. The lesson happens live inside Tutagora.</p></details>
+          <details><summary>How do tutor lessons work?</summary><p>Pick a tutor and a time. Lessons are an hour{HALF_HOUR_LESSONS ? ', and some tutors also offer 30 minutes' : ''}. Pay with M-Pesa or card. The lesson happens live inside Tutagora.</p></details>
         </div>
       </div></section>
 
