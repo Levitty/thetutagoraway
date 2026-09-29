@@ -94,7 +94,7 @@ const buildWeeklyReport = ({ name, practiceDays = [], skills = {}, skillName = (
       lines.push(`Mastered ${masteredNow.length} ${masteredNow.length === 1 ? 'skill' : 'skills'}: ${listOf(shown)}${more > 0 ? ` and ${more} more` : ''}.`);
     }
   }
-  if (stuck) lines.push(`Finding hard: ${stuck.name}. Tried ${stuck.attempts} times, still under 60% correct. A 30-minute tutor session usually clears this.`);
+  if (stuck) lines.push(`Finding hard: ${stuck.name}. Tried ${stuck.attempts} times, still under 60% correct. A session with a tutor usually clears this.`);
   if (goal) {
     lines.push(days >= goal.target_days
       ? `Goal reached: ${goal.target_days} days. ${n} has earned "${goal.reward}".`

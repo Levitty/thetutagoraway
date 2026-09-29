@@ -130,7 +130,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
         <div className="steps">
           <div className="st"><div className="n">01</div><h3>The free check</h3><p>Ten minutes of questions that adapt as your child answers. It starts easy, so the first answers are right.</p><span className="tag">Free · no account</span></div>
           <div className="st"><div className="n">02</div><h3>15 minutes a day</h3><p>A daily plan: reviews first, then one new skill. It has an end, so your child knows when they're done.</p><span className="tag">Phone or tablet</span></div>
-          <div className="st"><div className="n">03</div><h3>A tutor for the stuck part</h3><p>If one skill won't click, book 30 minutes with a tutor for exactly that skill. Nothing more.</p><span className="tag">Pay with M-Pesa</span></div>
+          <div className="st"><div className="n">03</div><h3>A tutor for the stuck part</h3><p>If one skill won't click, book a live lesson with a tutor for exactly that skill.</p><span className="tag">Pay with M-Pesa</span></div>
         </div>
       </div></section>
 
@@ -143,7 +143,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
         </div>
         <div className="phone" aria-label="Example Sunday report">
           <div className="who"><i />Tutagora</div>
-          <div className="bubble"><b>Amani's week on Tutagora</b><br />Practised maths 4 of 7 days.<br />Mastered 2 skills: Long Division and Equivalent Fractions.<br />Finding hard: Adding Fractions. A 30-minute tutor session usually clears this.<br />Goal: 4 of 5 days towards "Trip to the park".<div className="time">Example</div></div>
+          <div className="bubble"><b>Amani's week on Tutagora</b><br />Practised maths 4 of 7 days.<br />Mastered 2 skills: Long Division and Equivalent Fractions.<br />Finding hard: Adding Fractions. A session with a tutor usually clears this.<br />Goal: 4 of 5 days towards "Trip to the park".<div className="time">Example</div></div>
         </div>
       </div></section>
 
@@ -170,7 +170,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
                 <div className="pic"><TutorPhoto tutor={t} /><span className="badge"><SiteIcon name="check" />Checked</span></div>
                 <div className="nm">{shortName(t.profiles?.full_name)}</div>
                 <div className="sb">{tutorSubjects(t).slice(0, 2).join(' and ')}{gradeLevels(t.grade_levels).length ? ` · ${gradeLevels(t.grade_levels)[0]}${gradeLevels(t.grade_levels).length > 1 ? ' +' : ''}` : ''}</div>
-                <div className="foot"><span>{ksh((t.hourly_rate || 0) / 2)} <small>/ 30 min</small></span><span className="btn sm">Book</span></div>
+                <div className="foot"><span>{ksh(t.hourly_rate)} <small>/ hour</small></span><span className="btn sm">Book</span></div>
               </button>
             ))}
           </div>
@@ -190,7 +190,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
           <details><summary>Do I need an account?</summary><p>Not to take the check. To save the result and the plan, you create a free account with Google or your email.</p></details>
           <details><summary>Is it safe to hand my phone to my child?</summary><p>Yes. Your child gets their own space with no payments or messages, and leaving it needs your PIN.</p></details>
           <details><summary>Which grades and curriculum?</summary><p>CBC Grade 1 to 12, plus Cambridge. Maths first; composition and insha writing too.</p></details>
-          <details><summary>How do tutor lessons work?</summary><p>Pick a tutor, a time, and 30 minutes or an hour. Pay with M-Pesa or card. The lesson happens live inside Tutagora.</p></details>
+          <details><summary>How do tutor lessons work?</summary><p>Pick a tutor and a time. Lessons are an hour, and some tutors also offer 30 minutes. Pay with M-Pesa or card. The lesson happens live inside Tutagora.</p></details>
         </div>
       </div></section>
 

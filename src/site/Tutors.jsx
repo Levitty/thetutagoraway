@@ -10,10 +10,10 @@ const SUBJECTS = ['Mathematics', 'English', 'Kiswahili', 'Physics', 'Chemistry',
 const GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University'];
 const PRICES = [
   { v: 'all', label: 'Any price' },
-  { v: '0-500', label: 'Under KSh 500' },
-  { v: '500-750', label: 'KSh 500 – 750' },
-  { v: '750-1000', label: 'KSh 750 – 1,000' },
-  { v: '1000+', label: 'KSh 1,000+' },
+  { v: '0-1000', label: 'Under KSh 1,000' },
+  { v: '1000-1500', label: 'KSh 1,000 – 1,500' },
+  { v: '1500-2000', label: 'KSh 1,500 – 2,000' },
+  { v: '2000+', label: 'KSh 2,000+' },
 ];
 // Lesson lengths. Price scales with the tutor's hourly rate.
 export const LENGTHS = [{ min: 30, label: '30 min' }, { min: 60, label: '1 hour' }];
@@ -37,11 +37,11 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
       if (q && !(`${t.profiles?.full_name || ''} ${t.subject || ''} ${t.headline || ''} ${tutorSubjects(t).join(' ')}`.toLowerCase().includes(q))) return false;
       if (subject && !tutorSubjects(t).includes(subject)) return false;
       if (grade && !gradeLevels(t.grade_levels).includes(grade)) return false;
-      const half = lessonPrice(t.hourly_rate, 30);
-      if (price === '0-500' && !(half < 500)) return false;
-      if (price === '500-750' && !(half >= 500 && half < 750)) return false;
-      if (price === '750-1000' && !(half >= 750 && half < 1000)) return false;
-      if (price === '1000+' && !(half >= 1000)) return false;
+      const rate = Number(t.hourly_rate) || 0;
+      if (price === '0-1000' && !(rate < 1000)) return false;
+      if (price === '1000-1500' && !(rate >= 1000 && rate < 1500)) return false;
+      if (price === '1500-2000' && !(rate >= 1500 && rate < 2000)) return false;
+      if (price === '2000+' && !(rate >= 2000)) return false;
       return true;
     })
     .sort((a, b) => {
@@ -60,7 +60,7 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
             <label className="fsel" style={{ flex: '2 1 220px' }}><span>Search</span><input value={search} onChange={e => setSearch(e.target.value)} placeholder="Name or subject" /></label>
             <label className="fsel"><span>Subject</span><select value={subject} onChange={e => setSubject(e.target.value)}><option value="">All subjects</option>{SUBJECTS.map(s => <option key={s}>{s}</option>)}</select></label>
             <label className="fsel"><span>Grade</span><select value={grade} onChange={e => setGrade(e.target.value)}><option value="">All grades</option>{GRADES.map(g => <option key={g}>{g}</option>)}</select></label>
-            <label className="fsel"><span>Price per 30 min</span><select value={price} onChange={e => setPrice(e.target.value)}>{PRICES.map(p => <option key={p.v} value={p.v}>{p.label}</option>)}</select></label>
+            <label className="fsel"><span>Price per hour</span><select value={price} onChange={e => setPrice(e.target.value)}>{PRICES.map(p => <option key={p.v} value={p.v}>{p.label}</option>)}</select></label>
             <label className="fsel"><span>Sort by</span><select value={sort} onChange={e => setSort(e.target.value)}><option value="lessons">Most lessons</option><option value="price-low">Price: low first</option><option value="price-high">Price: high first</option></select></label>
           </div>
           <FocusBanner focus={focus} onClear={() => { setFocus(null); setFocusState(null); }} />
@@ -89,8 +89,8 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
                 {t.bio && <p className="bio">{t.bio}</p>}
               </div>
               <div className="side">
-                <div className="price">{ksh(lessonPrice(t.hourly_rate, 30))} <small>/ 30 min</small></div>
-                <div className="stat">{t.lessons_completed ? `${t.lessons_completed} lessons on Tutagora` : 'New on Tutagora'}</div>
+                <div className="price">{ksh(t.hourly_rate)} <small>/ hour</small></div>
+                <div className="stat">{t.lessons_completed ? `${t.lessons_completed} lessons on Tutagora` : 'New on Tutagora'}{t.offers_30_min ? ` · 30 min from ${ksh(lessonPrice(t.hourly_rate, 30))}` : ''}</div>
                 <button type="button" className="btn" onClick={() => onSelect(t)}>Book</button>
               </div>
             </div>
@@ -123,18 +123,9 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
   const [pending, setPending] = useState(null);
-  // 30-minute lessons need the duration_minutes column (and the updated
-  // verify-payment function). Until the database has it, offer 1 hour only.
-  const [halfHourOk, setHalfHourOk] = useState(false);
-  useEffect(() => {
-    let off = false;
-    supabase.from('bookings').select('duration_minutes').limit(1).then(({ error }) => {
-      if (off) return;
-      setHalfHourOk(!error);
-      if (!error) setMinutes(30);
-    });
-    return () => { off = true; };
-  }, []);
+  // Lessons are an hour. A tutor can also offer 30 minutes (their choice, in
+  // their profile); the flag only exists once the lesson-length SQL has run.
+  const halfHourOk = tutor.offers_30_min === true;
 
   useEffect(() => {
     supabase.from('reviews').select('*, profiles:student_id(full_name)').eq('tutor_id', tutor.id)
@@ -228,7 +219,7 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
           <div className="facts">
             <div><b>{tutor.lessons_completed || 0}</b><span>lessons here</span></div>
             <div><b>{tutor.experience_years ? `${tutor.experience_years} yrs` : 'New'}</b><span>teaching</span></div>
-            <div><b>{ksh(lessonPrice(tutor.hourly_rate, 30))}</b><span>per 30 min</span></div>
+            <div><b>{ksh(tutor.hourly_rate)}</b><span>per hour{halfHourOk ? ` · 30 min ${ksh(lessonPrice(tutor.hourly_rate, 30))}` : ''}</span></div>
           </div>
           {(tutor.bio || tutor.headline) && <><h2 className="display">About</h2><p className="para">{tutor.bio || tutor.headline}</p></>}
           <h2 className="display">Teaches</h2>
@@ -253,8 +244,8 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
         <aside className="bookbox" id="book">
           <h3>Book a lesson</h3>
           {focusNote && <div className="focus"><SiteIcon name="target" style={{ width: 18, height: 18 }} /><span>{learnerName ? `For ${learnerName}` : 'Focus'}<br /><span style={{ fontWeight: 600 }}>{focusNote}</span></span></div>}
-          <span className="l">Length</span>
-          <div className="seg2">{LENGTHS.filter(L => halfHourOk || L.min === 60).map(L => <button key={L.min} type="button" className="slot" aria-pressed={minutes === L.min} onClick={() => setMinutes(L.min)}>{L.label}</button>)}</div>
+          {halfHourOk && <span className="l">Length</span>}
+          {halfHourOk && <div className="seg2">{LENGTHS.filter(L => halfHourOk || L.min === 60).map(L => <button key={L.min} type="button" className="slot" aria-pressed={minutes === L.min} onClick={() => setMinutes(L.min)}>{L.label}</button>)}</div>}
           <span className="l">Pick a day</span>
           <div className="days">
             {days.map((d, i) => (
@@ -290,7 +281,7 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
           <p className="fine" style={{ margin: '10px 0 0' }}>Pay with M-Pesa or card. The lesson happens live inside Tutagora.</p>
         </aside>
       </div>
-      <div className="mobilebook"><div className="price" style={{ fontSize: 22 }}>{ksh(lessonPrice(tutor.hourly_rate, 30))} <small>/ 30 min</small></div><a className="btn" href="#book">Book {shortName(tutor.profiles?.full_name).split(' ')[0]}</a></div>
+      <div className="mobilebook"><div className="price" style={{ fontSize: 22 }}>{ksh(tutor.hourly_rate)} <small>/ hour</small></div><a className="btn" href="#book">Book {shortName(tutor.profiles?.full_name).split(' ')[0]}</a></div>
       <SiteFooter onNavigate={onNavigate} />
 
       {pending && (

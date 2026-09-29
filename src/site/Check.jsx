@@ -155,7 +155,7 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user }) {
             <div className="over"><div><SiteIcon name="lock" />Save the plan to see the full list</div></div>
           </div>
         </div>
-        <p className="fine" style={{ marginTop: 14 }}>Want help faster? A tutor can take this exact skill in one 30-minute session. <button type="button" className="linkbtn" onClick={() => onFindTutor(missing.name, check?.name)}>See tutors</button></p>
+        <p className="fine" style={{ marginTop: 14 }}>Want help faster? A tutor can take this exact skill in a live lesson. <button type="button" className="linkbtn" onClick={() => onFindTutor(missing.name, check?.name)}>See tutors</button></p>
       </div></section>
 
       <div className="stickybar"><div className="in">

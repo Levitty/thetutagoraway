@@ -3435,6 +3435,9 @@ const TutorProfileEditor = ({ tutor, profile }) => {
     teaching_style: tutor?.teaching_style || '',
     languages: tutor?.languages || 'English, Kiswahili',
     grade_levels: tutor?.grade_levels || [],
+    // Only once the column exists (after the lesson-length SQL), so saving
+    // never fails on a database that doesn't have it yet.
+    ...(tutor && 'offers_30_min' in tutor ? { offers_30_min: !!tutor.offers_30_min } : {}),
   });
   const gradeOptions = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University'];
   const [saving, setSaving] = useState(false);
@@ -3531,6 +3534,15 @@ const TutorProfileEditor = ({ tutor, profile }) => {
             <input type="number" value={form.experience_years} onChange={e => setForm({ ...form, experience_years: e.target.value })} min="0" className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
           </div>
         </div>
+        {'offers_30_min' in form && (
+          <label className="flex items-start gap-3 p-3 rounded-lg border border-slate-200 cursor-pointer">
+            <input type="checkbox" checked={form.offers_30_min} onChange={e => setForm({ ...form, offers_30_min: e.target.checked })} className="mt-1 w-4 h-4" />
+            <span className="text-sm">
+              <span className="font-semibold block">Also offer 30-minute lessons</span>
+              <span className="text-slate-500">Families can book half an hour for one stuck skill, at half your hourly rate (KSh {Math.round((form.hourly_rate || 0) / 2).toLocaleString()}). Lessons are one hour unless you turn this on.</span>
+            </span>
+          </label>
+        )}
         <div>
           <label className="block text-sm font-medium mb-1">Teaching style</label>
           <select value={form.teaching_style} onChange={e => setForm({ ...form, teaching_style: e.target.value })} className="w-full px-3 py-2 border border-slate-200 rounded-lg">
