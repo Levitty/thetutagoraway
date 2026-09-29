@@ -19,6 +19,7 @@ import { initPush, requestPush, clearPush } from './push.js';
 import { PRICE_KES, PASS_DAYS } from './subscription.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
+import { Icon } from './ai-tutor/components/Icons.jsx';
 import { Writing } from './writing/Writing.jsx';
 import { HandOver, StudentHome, PinGate } from './family/StudentSpace.jsx';
 import { getStudentMode, endStudentMode, isOlderLearner } from './family/studentMode.js';
@@ -245,7 +246,7 @@ const Stars = ({ rating, size = 14 }) => (
 // Fallback avatar (initials) used both as the default src and the onError swap
 // so a broken avatar_url doesn't leave a blank/broken-image box.
 const initialsAvatar = (name, opts = '') =>
-  `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'U')}&background=10b981&color=fff${opts}`;
+  `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'U')}&background=6d6fcb&color=fff${opts}`;
 
 // grade_levels reached the DB in three shapes over time: a real array, a
 // JSON-stringified array ('["Grade 2","Grade 3"]'), or a plain comma string.
@@ -356,11 +357,11 @@ const PrivacyBanner = ({ onAccept, onNavigate }) => (
     <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-3">
       <p className="text-sm text-slate-300 flex-1">
         We use essential data to provide our tutoring service. By continuing, you agree to our{' '}
-        <button onClick={() => onNavigate('privacy')} className="text-emerald-400 underline hover:text-emerald-300">Privacy Policy</button>{' '}
+        <button onClick={() => onNavigate('privacy')} className="text-amber-300 underline hover:text-amber-200">Privacy Policy</button>{' '}
         in accordance with Kenya's Data Protection Act, 2019.
       </p>
       <div className="flex gap-2 flex-shrink-0">
-        <button onClick={onAccept} className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-medium rounded-lg transition-colors">
+        <button onClick={onAccept} className="px-5 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-medium rounded-xl transition-colors">
           Accept
         </button>
       </div>
@@ -477,14 +478,14 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={onClose}>
       <div className="bg-white rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
         <div className="p-6 border-b border-slate-100 flex justify-between items-center">
-          <h2 className="text-xl font-bold text-slate-900">Account & Data Settings</h2>
+          <h2 className="text-xl font-extrabold tracking-tight text-slate-900">Account & Data Settings</h2>
           <button onClick={onClose} className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-400 hover:text-slate-600">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
         </div>
 
         <div className="p-6 space-y-6">
-          {message && <div className="p-3 bg-blue-50 text-blue-700 text-sm rounded-xl">{message}</div>}
+          {message && <div className="p-3 bg-[#ecedfa] text-[#6d6fcb] text-sm rounded-xl">{message}</div>}
 
           {/* Data Export */}
           <div>
@@ -505,7 +506,7 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
             <div className="bg-red-50 p-4 rounded-xl space-y-3">
               <p className="text-sm text-red-700">Type <strong>DELETE</strong> to confirm:</p>
               <input type="text" value={deleteConfirm} onChange={e => setDeleteConfirm(e.target.value)} placeholder="Type DELETE"
-                className="w-full px-3 py-2 border border-red-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
+                className="w-full px-3 py-2 border border-red-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-red-400" />
               <button onClick={handleDeleteAccount} disabled={deleting || deleteConfirm !== 'DELETE'}
                 className="px-4 py-2.5 bg-red-600 text-white text-sm font-medium rounded-xl hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 {deleting ? 'Deleting...' : 'Permanently Delete My Account'}
@@ -963,8 +964,8 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
         </button>
 
         <div className="text-center mb-6">
-          <div className="w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mx-auto mb-4 text-2xl font-bold">T</div>
-          <h2 className="text-2xl font-bold text-slate-900">
+          <div className="w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mx-auto mb-4 text-2xl font-extrabold tracking-tight">T</div>
+          <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">
             {view === 'forgot' ? 'Reset password' : view === 'login' ? 'Welcome back' : 'Create account'}
           </h2>
           <p className="text-slate-500 text-sm mt-1">
@@ -973,18 +974,18 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
         </div>
 
         {error && <div className="mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-xl border border-red-100">{error}</div>}
-        {success && <div className="mb-4 p-3 bg-emerald-50 text-emerald-700 text-sm rounded-xl border border-emerald-100">{success}</div>}
+        {success && <div className="mb-4 p-3 bg-[#eef4e7] text-[#4f7233] text-sm rounded-xl border border-[#cfe0bd]">{success}</div>}
 
         {/* Role selection for register view - shown above Google button */}
         {view === 'register' && (
           <div className="space-y-3 mb-4">
             <input placeholder="Full name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" />
+              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 text-sm" />
             <div className="flex gap-2">
-              <button type="button" onClick={() => setForm({ ...form, role: 'student' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'student' ? 'bg-emerald-500 text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+              <button type="button" onClick={() => setForm({ ...form, role: 'student' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'student' ? 'bg-amber-400 text-slate-900 shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
                 I'm a Student
               </button>
-              <button type="button" onClick={() => setForm({ ...form, role: 'tutor' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'tutor' ? 'bg-emerald-500 text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+              <button type="button" onClick={() => setForm({ ...form, role: 'tutor' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'tutor' ? 'bg-amber-400 text-slate-900 shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
                 I'm a Tutor
               </button>
             </div>
@@ -1007,35 +1008,35 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
 
         <form onSubmit={handleSubmit} className="space-y-3">
           <input type="email" placeholder="Email address" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
-            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" />
+            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 text-sm" />
           {view !== 'forgot' && (
             <input type="password" placeholder="Password (min 6 characters)" required minLength={6} value={form.password} onChange={e => setForm({ ...form, password: e.target.value })}
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" />
+              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 text-sm" />
           )}
           {view === 'register' && (
             <label className="flex items-start gap-2 cursor-pointer">
-              <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-emerald-500 focus:ring-emerald-500" />
-              <span className="text-xs text-slate-500">I agree to Tutagora's <button type="button" onClick={() => window.open('/privacy', '_blank')} className="text-emerald-600 underline">Privacy Policy</button> and consent to the collection and processing of my personal data as described therein, in accordance with Kenya's Data Protection Act, 2019.</span>
+              <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-[#5a7a3a] focus:ring-[#6d6fcb]/30" />
+              <span className="text-xs text-slate-500">I agree to Tutagora's <button type="button" onClick={() => window.open('/privacy', '_blank')} className="text-[#6d6fcb] underline">Privacy Policy</button> and consent to the collection and processing of my personal data as described therein, in accordance with Kenya's Data Protection Act, 2019.</span>
             </label>
           )}
           {view === 'login' && (
             <div className="text-right">
-              <button type="button" onClick={() => { setView('forgot'); setError(''); setSuccess(''); }} className="text-xs text-emerald-600 font-medium hover:text-emerald-700">
+              <button type="button" onClick={() => { setView('forgot'); setError(''); setSuccess(''); }} className="text-xs text-[#6d6fcb] font-medium hover:text-[#5658b8]">
                 Forgot password?
               </button>
             </div>
           )}
-          <button type="submit" disabled={loading} className="w-full py-3.5 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors disabled:opacity-50 text-sm">
+          <button type="submit" disabled={loading} className="w-full py-3.5 bg-amber-400 text-slate-900 font-semibold rounded-xl hover:bg-amber-300 transition-colors disabled:opacity-50 text-sm">
             {loading ? 'Please wait...' : view === 'forgot' ? 'Send Reset Link' : view === 'login' ? 'Sign In' : 'Create Account'}
           </button>
         </form>
         <p className="text-center mt-5 text-sm text-slate-500">
           {view === 'forgot' ? (
-            <button onClick={() => { setView('login'); setError(''); setSuccess(''); }} className="text-emerald-600 font-semibold">Back to sign in</button>
+            <button onClick={() => { setView('login'); setError(''); setSuccess(''); }} className="text-[#6d6fcb] font-semibold">Back to sign in</button>
           ) : view === 'login' ? (
-            <>No account? <button onClick={() => { setView('register'); setMode('register'); setError(''); }} className="text-emerald-600 font-semibold">Sign up</button></>
+            <>No account? <button onClick={() => { setView('register'); setMode('register'); setError(''); }} className="text-[#6d6fcb] font-semibold">Sign up</button></>
           ) : (
-            <>Have an account? <button onClick={() => { setView('login'); setMode('login'); setError(''); }} className="text-emerald-600 font-semibold">Sign in</button></>
+            <>Have an account? <button onClick={() => { setView('login'); setMode('login'); setError(''); }} className="text-[#6d6fcb] font-semibold">Sign in</button></>
           )}
         </p>
       </div>
@@ -1049,9 +1050,9 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
 // both the light dashboard header and the transparent marketing nav.
 const MomentumChipView = ({ level, streak, onClick }) => (
   <button onClick={onClick} title="Open HOREB" className="flex items-center gap-1.5 bg-white/90 border border-slate-200 shadow-sm rounded-full pl-2 pr-2.5 py-1 hover:bg-white transition-colors">
-    <span className="text-base leading-none">🧠</span>
+    <Icon name="brain" className="w-4 h-4 text-[#6d6fcb]" />
     <span className="text-xs font-semibold text-slate-700">Lv {level}</span>
-    {streak > 0 && <span className="text-xs font-semibold text-orange-500 flex items-center">🔥{streak}</span>}
+    {streak > 0 && <span className="text-xs font-semibold text-amber-600 flex items-center gap-0.5"><Icon name="flame" className="w-3.5 h-3.5" />{streak}</span>}
   </button>
 );
 
@@ -1118,13 +1119,13 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
   }, [profile?.id]);
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-[#eef0f2]">
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40">
         <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
           <button onClick={() => onNavigate('home')} className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold">T</div>
+            <div className="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold">T</div>
             <span className="font-semibold text-slate-900 hidden sm:block">Tutagora</span>
-            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-blue-100 text-blue-700 uppercase tracking-wide">Student</span>
+            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-[#ecedfa] text-[#6d6fcb] uppercase tracking-wide">Student</span>
           </button>
           <div className="flex items-center gap-3 sm:gap-4">
             <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600 hidden sm:block">Find Tutors</button>
@@ -1132,9 +1133,9 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
             <button onClick={() => onNavigate('schools')} className="text-sm text-slate-600 hidden sm:block">For Schools</button>
             {aiProgress?.diagnosed
               ? <MomentumChipView level={getLevel(aiProgress.totalXP).level} streak={aiProgress.currentStreak} onClick={() => onNavigate('ai')} />
-              : <button onClick={() => onNavigate('ai')} className="text-sm text-emerald-600 font-medium">HOREB</button>}
-            <button onClick={() => onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium">Spreadsheet</button>
-            {isAdmin && <button onClick={() => onNavigate('admin')} className="text-sm text-purple-600 font-medium">Admin</button>}
+              : <button onClick={() => onNavigate('ai')} className="text-sm text-[#6d6fcb] font-medium">HOREB</button>}
+            <button onClick={() => onNavigate('spreadsheet')} className="text-sm text-[#6d6fcb] font-medium">Spreadsheet</button>
+            {isAdmin && <button onClick={() => onNavigate('admin')} className="text-sm text-[#6d6fcb] font-medium">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
             <div className="flex items-center gap-2">
               <Avatar src={profile?.avatar_url} name={profile?.full_name} size={32} />
@@ -1147,40 +1148,40 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
       <div className="max-w-5xl mx-auto px-5 py-6">
         {/* Welcome + Next Lesson spotlight */}
         {nextLesson ? (
-          <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-5 mb-6 text-white">
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 mb-6 text-slate-900">
             <div className="flex items-center gap-4 mb-4">
               <Lottie src={ANIMATIONS.waving} width={60} height={60} />
               <div>
-                <h1 className="text-xl font-bold">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
-                <p className="text-emerald-100 text-sm">{upcoming.length} upcoming lesson{upcoming.length !== 1 ? 's' : ''}</p>
+                <h1 className="text-xl font-extrabold tracking-tight">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
+                <p className="text-slate-500 text-sm">{upcoming.length} upcoming lesson{upcoming.length !== 1 ? 's' : ''}</p>
               </div>
             </div>
-            <div className="bg-white/15 backdrop-blur rounded-xl p-4 flex items-center justify-between">
+            <div className="bg-[#eef0f2] backdrop-blur rounded-xl p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center text-lg font-bold">{nextLesson.subject?.[0]}</div>
+                <div className="w-11 h-11 rounded-full bg-[#ecedfa] text-[#6d6fcb] flex items-center justify-center text-lg font-bold">{nextLesson.subject?.[0]}</div>
                 <div>
                   <div className="font-semibold">{nextLesson.subject}</div>
-                  <div className="text-emerald-100 text-sm">with {nextLesson.tutors?.profiles?.full_name} · {nextLesson.lesson_date} at {nextLesson.start_time?.slice(0,5)}</div>
+                  <div className="text-slate-500 text-sm">with {nextLesson.tutors?.profiles?.full_name} · {nextLesson.lesson_date} at {nextLesson.start_time?.slice(0,5)}</div>
                 </div>
               </div>
               {nextLesson.status === 'confirmed' && (
-                <button onClick={() => onStartLesson(nextLesson)} className="px-5 py-2.5 bg-white text-emerald-700 font-semibold rounded-lg hover:bg-emerald-50 transition-colors text-sm">
+                <button onClick={() => onStartLesson(nextLesson)} className="px-5 py-2.5 bg-amber-400 text-slate-900 font-semibold rounded-xl hover:bg-[#ecedfa] transition-colors text-sm">
                   Join Lesson
                 </button>
               )}
               {nextLesson.status === 'pending' && (
-                <span className="px-3 py-1.5 bg-white/20 text-white text-xs font-medium rounded-full">Pending</span>
+                <span className="px-3 py-1.5 bg-[#ecedfa] text-[#6d6fcb] text-white text-xs font-medium rounded-full">Pending</span>
               )}
             </div>
           </div>
         ) : (
-          <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-5 mb-6 flex items-center gap-4 text-white">
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 mb-6 flex items-center gap-4 text-slate-900">
             <Lottie src={ANIMATIONS.waving} width={60} height={60} />
             <div className="flex-1">
-              <h1 className="text-xl font-bold">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
-              <p className="text-emerald-100 text-sm">No upcoming lessons — ready to book one?</p>
+              <h1 className="text-xl font-extrabold tracking-tight">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
+              <p className="text-slate-500 text-sm">No upcoming lessons — ready to book one?</p>
             </div>
-            <button onClick={() => onNavigate('tutors')} className="px-5 py-2.5 bg-white text-emerald-700 font-semibold rounded-lg hover:bg-emerald-50 transition-colors text-sm">
+            <button onClick={() => onNavigate('tutors')} className="px-5 py-2.5 bg-amber-400 text-slate-900 font-semibold rounded-xl hover:bg-[#ecedfa] transition-colors text-sm">
               Find a Tutor
             </button>
           </div>
@@ -1230,25 +1231,25 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
             <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 mb-6">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-4 min-w-0">
-                  <div className="text-3xl sm:text-4xl">🧠</div>
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#6d6fcb] text-white flex items-center justify-center shrink-0"><Icon name="brain" className="w-6 h-6 sm:w-7 sm:h-7" /></div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <h3 className="text-white font-bold text-lg">HOREB</h3>
                       {started && <span className="text-xs font-semibold text-amber-300 bg-amber-500/15 rounded-full px-2 py-0.5">Level {lvl}</span>}
-                      {streak > 0 && <span className="text-xs font-semibold text-orange-300 flex items-center gap-0.5">🔥 {streak}d</span>}
+                      {streak > 0 && <span className="text-xs font-semibold text-amber-300 flex items-center gap-0.5"><Icon name="flame" className="w-3.5 h-3.5" />{streak}d</span>}
                     </div>
                     <p className="text-slate-300 text-sm mt-0.5">{headline}</p>
                   </div>
                 </div>
-                <button onClick={() => onNavigate('ai')} className="shrink-0 px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-lg transition-colors text-sm">
+                <button onClick={() => onNavigate('ai')} className="shrink-0 px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-900 font-semibold rounded-xl transition-colors text-sm">
                   {cta}
                 </button>
               </div>
               {started && (
                 <div className="mt-4 flex items-center gap-3">
-                  <span className="text-xs text-slate-400 shrink-0">{goalMet ? '☀️ Goal' : '🎯 Today'}</span>
+                  <span className="text-xs text-slate-400 shrink-0 flex items-center gap-1"><Icon name={goalMet ? 'check' : 'target'} className="w-3.5 h-3.5" />{goalMet ? 'Goal' : 'Today'}</span>
                   <div className="flex-1 h-2 bg-slate-700 rounded-full overflow-hidden">
-                    <div className={`h-full transition-all ${goalMet ? 'bg-emerald-500' : 'bg-amber-500'}`} style={{ width: `${goalPct}%` }} />
+                    <div className={`h-full transition-all ${goalMet ? 'bg-amber-400' : 'bg-amber-500'}`} style={{ width: `${goalPct}%` }} />
                   </div>
                   <span className="text-xs text-slate-400 shrink-0">{Math.min(todaysXP(aiProgress), DAILY_GOAL_XP)}/{DAILY_GOAL_XP} XP</span>
                 </div>
@@ -1258,45 +1259,45 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
         })()}
 
         {/* Writing — composition / insha marking */}
-        <button onClick={() => onNavigate('writing')} className="w-full text-left bg-white border border-slate-200 rounded-2xl p-5 mb-6 hover:border-slate-300 transition-colors">
+        <button onClick={() => onNavigate('writing')} className="w-full text-left bg-white border border-slate-200 rounded-2xl p-5 mb-6 hover:border-slate-300 transition-colors shadow-sm">
           <div className="flex items-center justify-between gap-4">
             <div className="min-w-0">
               <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Writing</div>
               <h3 className="text-slate-900 font-bold text-lg mt-0.5">Composition & Insha</h3>
               <p className="text-slate-500 text-sm mt-0.5">Write it, get it marked out of 20 like a teacher would, then fix the exact lines.</p>
             </div>
-            <span className="shrink-0 px-5 py-2.5 bg-slate-900 text-white font-semibold rounded-lg text-sm">Write</span>
+            <span className="shrink-0 px-5 py-2.5 bg-slate-900 text-white font-semibold rounded-xl text-sm">Write</span>
           </div>
         </button>
 
         {/* Stats row */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-          <div className="bg-white rounded-xl p-4 border border-slate-200">
-            <div className="w-9 h-9 bg-emerald-50 rounded-lg flex items-center justify-center mb-2">
-              <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
+            <div className="w-9 h-9 bg-[#eef4e7] rounded-xl flex items-center justify-center mb-2">
+              <svg className="w-5 h-5 text-[#6d6fcb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
-            <div className="text-2xl font-bold text-slate-900">{past.length}</div>
+            <div className="text-2xl font-extrabold tracking-tight text-slate-900">{past.length}</div>
             <div className="text-xs text-slate-500">Lessons Done</div>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-slate-200">
-            <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center mb-2">
-              <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
+            <div className="w-9 h-9 bg-[#ecedfa] rounded-xl flex items-center justify-center mb-2">
+              <svg className="w-5 h-5 text-[#6d6fcb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
             </div>
-            <div className="text-2xl font-bold text-slate-900">{upcoming.length}</div>
+            <div className="text-2xl font-extrabold tracking-tight text-slate-900">{upcoming.length}</div>
             <div className="text-xs text-slate-500">Upcoming</div>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-slate-200">
-            <div className="w-9 h-9 bg-purple-50 rounded-lg flex items-center justify-center mb-2">
-              <svg className="w-5 h-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
+            <div className="w-9 h-9 bg-[#ecedfa] rounded-xl flex items-center justify-center mb-2">
+              <svg className="w-5 h-5 text-[#6d6fcb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
             </div>
-            <div className="text-2xl font-bold text-slate-900">{uniqueTutors}</div>
+            <div className="text-2xl font-extrabold tracking-tight text-slate-900">{uniqueTutors}</div>
             <div className="text-xs text-slate-500">Tutors Used</div>
           </div>
-          <div className="bg-white rounded-xl p-4 border border-slate-200">
-            <div className="w-9 h-9 bg-amber-50 rounded-lg flex items-center justify-center mb-2">
+          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
+            <div className="w-9 h-9 bg-amber-50 rounded-xl flex items-center justify-center mb-2">
               <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
-            <div className="text-2xl font-bold text-slate-900">KSh {totalSpent.toLocaleString()}</div>
+            <div className="text-2xl font-extrabold tracking-tight text-slate-900">KSh {totalSpent.toLocaleString()}</div>
             <div className="text-xs text-slate-500">Total Spent</div>
           </div>
         </div>
@@ -1317,7 +1318,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
                     </div>
                     <p className="text-slate-600 font-medium">No upcoming lessons</p>
                     <p className="text-sm text-slate-400 mt-1">Book a lesson to get started</p>
-                    <button onClick={() => onNavigate('tutors')} className="mt-4 px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors">Find a Tutor</button>
+                    <button onClick={() => onNavigate('tutors')} className="mt-4 px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-xl hover:bg-slate-800 transition-colors">Find a Tutor</button>
                   </div>
                 ) : (
                   <div className="divide-y divide-slate-100">
@@ -1331,9 +1332,9 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className={`px-2 py-1 text-xs font-medium rounded-full ${b.status === 'confirmed' ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50 text-amber-700'}`}>{b.status}</span>
+                          <span className={`px-2 py-1 text-xs font-medium rounded-full ${b.status === 'confirmed' ? 'bg-[#eef4e7] text-[#4f7233]' : 'bg-amber-50 text-amber-700'}`}>{b.status}</span>
                           {b.status === 'confirmed' && (
-                            <button onClick={() => onStartLesson(b)} className="px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors">
+                            <button onClick={() => onStartLesson(b)} className="px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-xl hover:bg-slate-800 transition-colors">
                               Join
                             </button>
                           )}
@@ -1365,7 +1366,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
                           ) : (
                             <button
                               onClick={() => setReviewBooking(b)}
-                              className="px-3 py-1.5 text-xs font-medium text-emerald-600 bg-emerald-50 rounded-lg hover:bg-emerald-100"
+                              className="px-3 py-1.5 text-xs font-medium text-[#4f7233] bg-[#eef4e7] rounded-xl hover:bg-[#ecedfa]"
                             >
                               Leave Review
                             </button>
@@ -1381,13 +1382,13 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
 
           <div className="space-y-4">
             {/* My learners — the parent's roster */}
-            <div className="bg-white rounded-xl border border-slate-200 p-4">
+            <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm">
               <h3 className="font-semibold text-slate-900 mb-1">My learners</h3>
               <p className="text-xs text-slate-500 mb-3">Save who you book for — tap their name at checkout instead of retyping.</p>
               {children.length > 0 && (
                 <div className="space-y-2 mb-3">
                   {children.map(c => (
-                    <div key={c.id} className="flex items-center justify-between bg-slate-50 rounded-lg px-3 py-2">
+                    <div key={c.id} className="flex items-center justify-between bg-slate-50 rounded-xl px-3 py-2">
                       <div className="text-sm">
                         <span className="font-medium text-slate-900">{c.name}</span>
                         {c.grade && <span className="text-slate-400 ml-2">{c.grade}</span>}
@@ -1403,14 +1404,14 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
               <div className="flex gap-2">
                 <input type="text" value={newChildName} onChange={e => setNewChildName(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && addChild()} placeholder="Add a name"
-                  className="flex-1 min-w-0 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                  className="flex-1 min-w-0 px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30" />
                 <select value={newChildGrade} onChange={e => setNewChildGrade(e.target.value)}
-                  className="px-2 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                  className="px-2 py-2 border border-slate-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30">
                   <option value="">Grade</option>
                   {CHILD_GRADES.map(g => <option key={g} value={g}>{g}</option>)}
                 </select>
                 <button onClick={addChild} disabled={!newChildName.trim()}
-                  className="px-3 py-2 bg-emerald-500 hover:bg-emerald-600 disabled:bg-slate-200 disabled:text-slate-400 text-white text-sm font-medium rounded-lg transition-colors">Add</button>
+                  className="px-3 py-2 bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 text-slate-900 text-sm font-medium rounded-xl transition-colors">Add</button>
               </div>
             </div>
 
@@ -1423,7 +1424,7 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
                 <h3 className="font-semibold">Refer & Earn</h3>
               </div>
               <p className="text-slate-300 text-sm mb-3">Get KSh 500 for each friend who books their first lesson</p>
-              <div className="bg-white/10 rounded-lg p-2 flex items-center gap-2">
+              <div className="bg-white/10 rounded-xl p-2 flex items-center gap-2">
                 <input
                   type="text"
                   value={`tutagora.com/r/${profile?.id?.slice(0,8) || 'invite'}`}
@@ -1442,22 +1443,22 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
               </div>
             </div>
 
-            <div className="bg-white rounded-xl border border-slate-200 p-4">
+            <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm">
               <h3 className="font-semibold text-slate-900 mb-3">Account</h3>
               <div className="space-y-1">
-                <button onClick={() => setShowEditProfile(true)} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-lg transition-colors">
+                <button onClick={() => setShowEditProfile(true)} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
                   Edit Profile
                 </button>
-                <button onClick={() => setShowProgress(true)} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-lg transition-colors">
+                <button onClick={() => setShowProgress(true)} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                   My Progress
                 </button>
-                {onOpenAccountSettings && <button onClick={onOpenAccountSettings} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-lg transition-colors">
+                {onOpenAccountSettings && <button onClick={onOpenAccountSettings} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573-1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                   Account & Data
                 </button>}
-                <button onClick={onLogout} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors">
+                <button onClick={onLogout} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-red-600 hover:bg-red-50 rounded-xl transition-colors">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
                   Sign Out
                 </button>
@@ -1536,23 +1537,23 @@ const StudentProgressModal = ({ profile, bookings, onClose }) => {
             </div>
             <p className="font-bold text-xl text-slate-900">Level {level}</p>
             <div className="mt-3 bg-slate-100 rounded-full h-2 overflow-hidden max-w-[200px] mx-auto">
-              <div className="bg-emerald-500 h-full transition-all" style={{ width: `${progressToNextLevel}%` }} />
+              <div className="bg-amber-400 h-full transition-all" style={{ width: `${progressToNextLevel}%` }} />
             </div>
             <p className="text-sm text-slate-500 mt-2">{5 - (totalHours % 5)} lessons to next level</p>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-3">
-            <div className="bg-emerald-50 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-emerald-600">{totalHours}</div>
+            <div className="bg-[#eef4e7] rounded-xl p-4 text-center">
+              <div className="text-2xl font-extrabold tracking-tight text-[#6d6fcb]">{totalHours}</div>
               <div className="text-xs text-slate-500">Hours</div>
             </div>
-            <div className="bg-blue-50 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-blue-600">{Object.keys(subjectCounts).length}</div>
+            <div className="bg-[#ecedfa] rounded-xl p-4 text-center">
+              <div className="text-2xl font-extrabold tracking-tight text-[#6d6fcb]">{Object.keys(subjectCounts).length}</div>
               <div className="text-xs text-slate-500">Subjects</div>
             </div>
             <div className="bg-amber-50 rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-amber-600">{streakDays}</div>
+              <div className="text-2xl font-extrabold tracking-tight text-amber-600">{streakDays}</div>
               <div className="text-xs text-slate-500">Day Streak</div>
             </div>
           </div>
@@ -1640,7 +1641,7 @@ const ReviewModal = ({ booking, profile, onClose, onSubmit }) => {
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl w-full max-w-md p-6">
         <div className="flex justify-between items-center mb-5">
-          <h2 className="text-xl font-bold">Rate your lesson</h2>
+          <h2 className="text-xl font-extrabold tracking-tight">Rate your lesson</h2>
           <button onClick={onClose} className="text-slate-400 hover:text-slate-600" aria-label="Close"><svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
         </div>
 
@@ -1653,7 +1654,7 @@ const ReviewModal = ({ booking, profile, onClose, onSubmit }) => {
         </div>
 
         {error && (
-          <div className="mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-lg">{error}</div>
+          <div className="mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-xl">{error}</div>
         )}
 
         <div className="mb-6">
@@ -1694,7 +1695,7 @@ const ReviewModal = ({ booking, profile, onClose, onSubmit }) => {
             onChange={(e) => setText(e.target.value)}
             placeholder="What did you like about the lesson? How was the tutor's teaching style?"
             rows={4}
-            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 resize-none"
           />
         </div>
 
@@ -1708,7 +1709,7 @@ const ReviewModal = ({ booking, profile, onClose, onSubmit }) => {
           <button
             onClick={handleSubmit}
             disabled={submitting}
-            className="flex-1 py-3 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 disabled:opacity-50"
+            className="flex-1 py-3 bg-amber-400 text-slate-900 font-semibold rounded-xl hover:bg-amber-300 disabled:opacity-50"
           >
             {submitting ? 'Submitting...' : 'Submit Review'}
           </button>
@@ -1755,24 +1756,24 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl w-full max-w-md p-6">
         <div className="flex justify-between items-center mb-5">
-          <h2 className="text-xl font-bold">Edit Profile</h2>
+          <h2 className="text-xl font-extrabold tracking-tight">Edit Profile</h2>
           <button onClick={onClose} className="text-slate-400 hover:text-slate-600" aria-label="Close"><svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
         </div>
 
         {error && (
-          <div className="mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-lg">{error}</div>
+          <div className="mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-xl">{error}</div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex justify-center mb-4">
             <div className="relative">
               <img 
-                src={form.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(form.full_name || 'U')}&background=10b981&color=fff`}
+                src={form.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(form.full_name || 'U')}&background=6d6fcb&color=fff`}
                 alt="Avatar"
                 className="w-20 h-20 rounded-full object-cover"
               />
-              <button type="button" className="absolute bottom-0 right-0 w-7 h-7 bg-emerald-500 text-white rounded-full flex items-center justify-center text-sm">
-                📷
+              <button type="button" aria-label="Change photo" className="absolute bottom-0 right-0 w-7 h-7 bg-amber-400 text-slate-900 rounded-full flex items-center justify-center">
+                <Icon name="camera" className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -1783,7 +1784,7 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
               type="text"
               value={form.full_name}
               onChange={(e) => setForm({ ...form, full_name: e.target.value })}
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30"
             />
           </div>
 
@@ -1804,7 +1805,7 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               placeholder="+254 712 345 678"
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30"
             />
           </div>
 
@@ -1815,7 +1816,7 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
               value={form.avatar_url}
               onChange={(e) => setForm({ ...form, avatar_url: e.target.value })}
               placeholder="https://example.com/avatar.jpg"
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30"
             />
           </div>
 
@@ -1830,7 +1831,7 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
             <button
               type="submit"
               disabled={saving}
-              className="flex-1 py-3 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 disabled:opacity-50"
+              className="flex-1 py-3 bg-amber-400 text-slate-900 font-semibold rounded-xl hover:bg-amber-300 disabled:opacity-50"
             >
               {saving ? 'Saving...' : 'Save Changes'}
             </button>
@@ -5309,13 +5310,13 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
   const activeFilters = (selectedSubject && selectedSubject !== 'All Subjects' ? 1 : 0) + (selectedGrade && selectedGrade !== 'All Grades' ? 1 : 0) + (priceRange !== 'all' ? 1 : 0);
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-20 pb-10">
+    <div className="min-h-screen bg-[#eef0f2] pt-20 pb-10">
       <div className="max-w-6xl mx-auto px-5">
         {onBack && <button onClick={onBack} className="text-slate-500 mb-4 flex items-center gap-1"><span>←</span> Back</button>}
         
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
           <div>
-            <h1 className="text-2xl font-bold">Find a Tutor</h1>
+            <h1 className="text-2xl font-extrabold tracking-tight">Find a Tutor</h1>
             <p className="text-slate-500 text-sm">{filtered.length} tutors available</p>
           </div>
           
@@ -5328,19 +5329,19 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
               value={search} 
               onChange={e => setSearch(e.target.value)} 
               placeholder="Search by name, subject, or keyword..." 
-              className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500" 
+              className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30" 
             />
           </div>
         </div>
 
         {/* Filters Bar */}
-        <div className="bg-white rounded-xl border border-slate-200 p-4 mb-6">
+        <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-6 shadow-sm">
           <div className="flex flex-wrap items-center gap-3">
             {/* Subject Filter */}
             <select
               value={selectedSubject}
               onChange={(e) => setSelectedSubject(e.target.value)}
-              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer transition-colors ${selectedSubject && selectedSubject !== 'All Subjects' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 cursor-pointer transition-colors ${selectedSubject && selectedSubject !== 'All Subjects' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
             >
               {subjects.map(s => <option key={s} value={s}>{s}</option>)}
             </select>
@@ -5349,7 +5350,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <select
               value={selectedGrade}
               onChange={(e) => setSelectedGrade(e.target.value)}
-              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer transition-colors ${selectedGrade && selectedGrade !== 'All Grades' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 cursor-pointer transition-colors ${selectedGrade && selectedGrade !== 'All Grades' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
             >
               {grades.map(g => <option key={g} value={g}>{g}</option>)}
             </select>
@@ -5358,7 +5359,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
-              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer transition-colors ${priceRange !== 'all' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 cursor-pointer transition-colors ${priceRange !== 'all' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
             >
               {priceRanges.map(p => <option key={p.value} value={p.value}>{p.label}</option>)}
             </select>
@@ -5367,7 +5368,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer transition-colors bg-white text-slate-700 border-slate-200`}
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 cursor-pointer transition-colors bg-white text-slate-700 border-slate-200`}
             >
               <option value="rating">Highest Rated</option>
               <option value="reviews">Most Reviews</option>
@@ -5379,7 +5380,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             {activeFilters > 0 && (
               <button
                 onClick={() => { setSelectedSubject(''); setSelectedGrade(''); setPriceRange('all'); setSearch(''); }}
-                className="px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg"
+                className="px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-xl"
               >
                 Clear filters ({activeFilters})
               </button>
@@ -5399,7 +5400,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <p className="text-slate-500 mb-4">Try adjusting your filters or search terms</p>
             <button 
               onClick={() => { setSelectedSubject(''); setPriceRange('all'); setSearch(''); }}
-              className="px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
+              className="px-4 py-2 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-colors"
             >
               Clear all filters
             </button>
@@ -5418,7 +5419,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
                     className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
                   />
                   {t.verified && (
-                    <span className="absolute top-2.5 left-2.5 px-2.5 py-1 bg-white/95 text-emerald-700 text-xs font-semibold rounded-full flex items-center gap-1 shadow-sm">
+                    <span className="absolute top-2.5 left-2.5 px-2.5 py-1 bg-white/95 text-[#6d6fcb] text-xs font-semibold rounded-full flex items-center gap-1 shadow-sm">
                       <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                       Verified
                     </span>
@@ -5429,7 +5430,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
                 </div>
                 <div className="px-4 pt-3 pb-4 flex flex-col flex-1">
                   <h3 className="font-bold text-slate-900 text-lg">{t.profiles?.full_name}</h3>
-                  <p className="text-sm text-emerald-600 font-medium">{(t.subjects || [t.subject]).join(', ')} Tutor</p>
+                  <p className="text-sm text-[#6d6fcb] font-medium">{(t.subjects || [t.subject]).join(', ')} Tutor</p>
                   {t.headline && <p className="text-sm text-slate-500 mt-1">{t.headline}</p>}
                   {t.bio && <p className="text-sm text-slate-500 mt-1.5 line-clamp-2">{t.bio}</p>}
 
@@ -5437,7 +5438,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
                   <div className="flex flex-wrap gap-1.5 mt-3">
                     {t.degree && <span className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full text-xs">{t.degree}</span>}
                     {t.experience_years && <span className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full text-xs">{t.experience_years}yr exp</span>}
-                    {t.teaching_style && <span className="px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full text-xs">{t.teaching_style}</span>}
+                    {t.teaching_style && <span className="px-2 py-0.5 bg-[#ecedfa] text-[#6d6fcb] rounded-full text-xs">{t.teaching_style}</span>}
                   </div>
 
                   <div className="flex items-center gap-2 mt-3">
@@ -5448,7 +5449,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
                   </div>
                   <div className="flex justify-between items-center mt-auto pt-3 border-t border-slate-100">
                     <span className="font-bold text-lg">KSh {t.hourly_rate?.toLocaleString() || '1,000'}<span className="text-sm font-normal text-slate-400">/hr</span></span>
-                    <span className="px-3 py-1.5 bg-emerald-500 text-white text-xs font-semibold rounded-lg">View Profile</span>
+                    <span className="px-3 py-1.5 bg-amber-400 text-slate-900 text-xs font-semibold rounded-xl">View Profile</span>
                   </div>
                 </div>
               </div>
@@ -5919,9 +5920,9 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
       <div className="max-w-3xl mx-auto px-5 pb-20">
         {/* Header - photo banner + info */}
         <div className="rounded-2xl overflow-hidden border border-slate-200 mb-8">
-          <div className="h-28 bg-gradient-to-r from-emerald-500 to-emerald-600 relative">
+          <div className="h-28 bg-white border border-slate-200 shadow-sm relative">
             {tutor.verified && (
-              <span className="absolute top-3 right-3 px-3 py-1 bg-white/90 text-emerald-700 text-xs font-semibold rounded-full flex items-center gap-1">
+              <span className="absolute top-3 right-3 px-3 py-1 bg-white/90 text-[#6d6fcb] text-xs font-semibold rounded-full flex items-center gap-1">
                 <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                 Verified Tutor
               </span>
@@ -5936,8 +5937,8 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                 className="w-28 h-28 -mt-14 relative z-10 rounded-full object-cover border-4 border-white shadow-lg bg-slate-100"
               />
               <div className="flex-1 pb-1">
-                <h1 className="text-2xl font-bold text-slate-900">{tutor.profiles?.full_name}</h1>
-                <p className="text-emerald-600 font-medium">{(tutor.subjects || [tutor.subject]).join(', ')} Tutor</p>
+                <h1 className="text-2xl font-extrabold tracking-tight text-slate-900">{tutor.profiles?.full_name}</h1>
+                <p className="text-[#6d6fcb] font-medium">{(tutor.subjects || [tutor.subject]).join(', ')} Tutor</p>
                 {tutor.headline && <p className="text-slate-500 text-sm mt-0.5">{tutor.headline}</p>}
               </div>
             </div>
@@ -5960,12 +5961,12 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
             {/* Quick info chips */}
             <div className="flex flex-wrap gap-2 mt-4">
               {tutor.degree && <span className="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm">{tutor.degree}</span>}
-              {tutor.teaching_style && <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm">{tutor.teaching_style}</span>}
+              {tutor.teaching_style && <span className="px-3 py-1 bg-[#ecedfa] text-[#6d6fcb] rounded-full text-sm">{tutor.teaching_style}</span>}
               {tutor.languages && (Array.isArray(tutor.languages) ? tutor.languages : [tutor.languages]).map(l => (
                 <span key={l} className="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm">{l}</span>
               ))}
               {gradeList(tutor.grade_levels).map(g => (
-                <span key={g} className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm">{g}</span>
+                <span key={g} className="px-3 py-1 bg-[#ecedfa] text-[#6d6fcb] rounded-full text-sm">{g}</span>
               ))}
             </div>
           </div>
@@ -5988,7 +5989,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
               <h2 className="text-lg font-semibold text-slate-900 mb-3">What I teach</h2>
               <div className="flex flex-wrap gap-2">
                 {[...new Set((Array.isArray(tutor.subjects) && tutor.subjects.length ? tutor.subjects : [tutor.subject]).filter(Boolean))].map(sub => (
-                  <span key={sub} className="px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium">{sub}</span>
+                  <span key={sub} className="px-3 py-1.5 bg-[#eef4e7] text-[#4f7233] rounded-full text-sm font-medium">{sub}</span>
                 ))}
                 {tutor.specialties?.map((s, i) => (
                   <span key={i} className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full text-sm">{s}</span>
@@ -6036,7 +6037,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
             <div className="sticky top-20 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm min-w-0">
               <div className="flex items-baseline justify-between mb-5">
                 <div>
-                  <span className="text-2xl font-bold text-slate-900">KSh {tutor.hourly_rate?.toLocaleString()}</span>
+                  <span className="text-2xl font-extrabold tracking-tight text-slate-900">KSh {tutor.hourly_rate?.toLocaleString()}</span>
                   <span className="text-slate-500 text-sm ml-1">/ hour</span>
                 </div>
               </div>
@@ -6052,7 +6053,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                       key={i} 
                       onClick={() => { setSelectedDate(d); setSelectedTime(null); }} 
                       disabled={!hasSlots}
-                      className={`flex-shrink-0 w-12 py-2 rounded-lg text-center transition-colors ${
+                      className={`flex-shrink-0 w-12 py-2 rounded-xl text-center transition-colors ${
                         isSelected 
                           ? 'bg-slate-900 text-white' 
                           : hasSlots 
@@ -6076,7 +6077,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                       <button 
                         key={t} 
                         onClick={() => setSelectedTime(t)} 
-                        className={`py-2 rounded-lg text-sm transition-colors ${
+                        className={`py-2 rounded-xl text-sm transition-colors ${
                           selectedTime === t 
                             ? 'bg-slate-900 text-white' 
                             : 'bg-slate-50 hover:bg-slate-100 text-slate-700'
@@ -6098,7 +6099,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                     <div>
                       <label className="block text-xs font-medium text-slate-500 mb-1">Subject</label>
                       <select value={selectedSubject} onChange={e => setSelectedSubject(e.target.value)}
-                        className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
+                        className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 bg-white">
                         {bookableSubjects.map(sub => <option key={sub} value={sub}>{sub}</option>)}
                       </select>
                     </div>
@@ -6109,7 +6110,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                     <div className="flex flex-wrap gap-2">
                       {children.map(c => (
                         <button key={c.id} type="button" onClick={() => pickChild(c)}
-                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedChildId === c.id ? 'bg-emerald-500 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}>
+                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedChildId === c.id ? 'bg-amber-400 text-slate-900' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}>
                           {c.name}{c.grade ? ` · ${c.grade}` : ''}
                         </button>
                       ))}
@@ -6127,12 +6128,12 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                         <label className="block text-xs font-medium text-slate-500 mb-1">Student's name</label>
                         <input type="text" value={learnerName} onChange={e => setLearnerName(e.target.value)}
                           placeholder="e.g. your child's name (or your own)"
-                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                          className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30" />
                       </div>
                       <div>
                         <label className="block text-xs font-medium text-slate-500 mb-1">Grade / level</label>
                         <select value={learnerGrade} onChange={e => setLearnerGrade(e.target.value)}
-                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
+                          className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 bg-white">
                           <option value="">Select grade…</option>
                           {GRADES.map(g => <option key={g} value={g}>{g}</option>)}
                         </select>
@@ -6145,7 +6146,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                     <label className="block text-xs font-medium text-slate-500 mb-1">What should the tutor focus on? <span className="text-slate-400 font-normal">(optional)</span></label>
                     <textarea value={focusNote} onChange={e => setFocusNote(e.target.value)} rows={2}
                       placeholder="e.g. struggling with fractions; preparing for end-term exam"
-                      className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none" />
+                      className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 resize-none" />
                   </div>
                 </div>
               )}
@@ -6156,7 +6157,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                 disabled={!selectedTime || !learnerName.trim() || !learnerGrade || booking}
                 className={`w-full py-3 rounded-xl font-semibold transition-colors ${
                   selectedTime && learnerName.trim() && learnerGrade
-                    ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
+                    ? 'bg-amber-400 hover:bg-amber-300 text-slate-900'
                     : 'bg-slate-100 text-slate-400 cursor-not-allowed'
                 }`}
               >
@@ -6207,16 +6208,16 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all ${scrolled ? 'bg-white shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-5 h-14 flex items-center justify-between">
         <button onClick={() => onNavigate('home')} className="flex items-center gap-2">
-          <img src="/logo.png" alt="Tutagora" className="w-8 h-8 object-contain rounded-lg" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/favicon.svg'; }} />
+          <img src="/logo.png" alt="Tutagora" className="w-8 h-8 object-contain rounded-xl" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/favicon.svg'; }} />
           <span className={`font-semibold ${scrolled ? 'text-slate-900' : 'text-white'}`}>Tutagora</span>
         </button>
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-4">
           <button onClick={() => onNavigate('tutors')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Find Tutors</button>
-          <button onClick={() => onNavigate('horeb')} className={`text-sm font-medium ${scrolled ? 'text-emerald-600' : 'text-amber-300'}`}>HOREB</button>
+          <button onClick={() => onNavigate('horeb')} className={`text-sm font-medium ${scrolled ? 'text-[#6d6fcb]' : 'text-amber-300'}`}>HOREB</button>
           <button onClick={() => onNavigate('clubs')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Clubs</button>
           <button onClick={() => onNavigate('schools')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>For Schools</button>
-          {isAdmin && <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-purple-600' : 'text-purple-300'}`}>Admin</button>}
+          {isAdmin && <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-[#6d6fcb]' : 'text-[#c7cbe8]'}`}>Admin</button>}
           {user && profile?.role === 'student' && <MomentumChip userId={profile?.id} onClick={() => onNavigate('ai')} />}
           {user ? (
             <button onClick={() => onNavigate('dashboard')} className="flex items-center gap-2">
@@ -6247,15 +6248,15 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
       {/* Mobile menu dropdown */}
       {mobileOpen && (
         <div className={`md:hidden ${scrolled ? 'bg-white border-t border-slate-100' : 'bg-slate-900/95 backdrop-blur-sm'} px-4 py-4 space-y-2`}>
-          <button onClick={() => { onNavigate('tutors'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Find Tutors</button>
-          <button onClick={() => { onNavigate('horeb'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-emerald-700 hover:bg-slate-100' : 'text-amber-300 hover:bg-white/10'}`}>HOREB</button>
-          <button onClick={() => { onNavigate('clubs'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Clubs</button>
-          <button onClick={() => { onNavigate('schools'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>For Schools</button>
-          {isAdmin && <button onClick={() => { onNavigate('admin'); setMobileOpen(false); }} className="block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-purple-400 hover:bg-white/10">Admin</button>}
+          <button onClick={() => { onNavigate('tutors'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Find Tutors</button>
+          <button onClick={() => { onNavigate('horeb'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium ${scrolled ? 'text-[#6d6fcb] hover:bg-slate-100' : 'text-amber-300 hover:bg-white/10'}`}>HOREB</button>
+          <button onClick={() => { onNavigate('clubs'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Clubs</button>
+          <button onClick={() => { onNavigate('schools'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>For Schools</button>
+          {isAdmin && <button onClick={() => { onNavigate('admin'); setMobileOpen(false); }} className="block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium text-purple-400 hover:bg-white/10">Admin</button>}
           {!user && (
             <div className="flex gap-2 pt-2">
-              <button onClick={() => { setShowAuth('login'); setMobileOpen(false); }} className={`flex-1 py-2.5 rounded-lg text-sm font-medium ${scrolled ? 'bg-slate-100 text-slate-700' : 'bg-white/10 text-white'}`}>Sign in</button>
-              <button onClick={() => { setShowAuth('register'); setMobileOpen(false); }} className="flex-1 py-2.5 bg-emerald-500 text-white rounded-lg text-sm font-semibold">Get Started</button>
+              <button onClick={() => { setShowAuth('login'); setMobileOpen(false); }} className={`flex-1 py-2.5 rounded-xl text-sm font-medium ${scrolled ? 'bg-slate-100 text-slate-700' : 'bg-white/10 text-white'}`}>Sign in</button>
+              <button onClick={() => { setShowAuth('register'); setMobileOpen(false); }} className="flex-1 py-2.5 bg-amber-400 text-slate-900 rounded-xl text-sm font-semibold">Get Started</button>
             </div>
           )}
         </div>

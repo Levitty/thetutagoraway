@@ -35,13 +35,13 @@ const PaymentStatus = ({ status, message }) => {
     },
     processing: {
       animation: 'https://assets8.lottiefiles.com/packages/lf20_4XmSkB.json',
-      color: 'text-blue-600',
-      bg: 'bg-blue-50'
+      color: 'text-[#6d6fcb]',
+      bg: 'bg-[#ecedfa]'
     },
     success: {
       animation: 'https://assets2.lottiefiles.com/packages/lf20_jbrw3hcz.json',
-      color: 'text-emerald-600',
-      bg: 'bg-emerald-50',
+      color: 'text-[#4f7233]',
+      bg: 'bg-[#eef4e7]',
       loop: false
     },
     failed: {
@@ -200,17 +200,17 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl w-full max-w-md overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 p-5 text-white">
+        <div className="bg-white border border-slate-200 shadow-sm p-5 text-slate-900">
           <div className="flex justify-between items-start">
             <div>
               <h2 className="text-lg font-bold">Complete Payment</h2>
-              <p className="text-emerald-100 text-sm mt-1">{tutor.subject || 'Tutoring'} Lesson</p>
+              <p className="text-slate-500 text-sm mt-1">{tutor.subject || 'Tutoring'} Lesson</p>
             </div>
             <button onClick={onClose} className="text-white/80 hover:text-white text-xl">&#10005;</button>
           </div>
           <div className="mt-4 flex items-baseline gap-1">
-            <span className="text-3xl font-bold">{currency} {amount.toLocaleString()}</span>
-            <span className="text-emerald-100">/hour</span>
+            <span className="text-3xl font-extrabold tracking-tight">{currency} {amount.toLocaleString()}</span>
+            <span className="text-slate-500">/hour</span>
           </div>
         </div>
 
@@ -243,14 +243,14 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
                   )}
                   <div className="border-t border-slate-200 pt-2 flex justify-between">
                     <span className="text-slate-700 font-semibold">Total</span>
-                    <span className="text-emerald-600 font-bold">{currency} {amount.toLocaleString()}</span>
+                    <span className="text-[#6d6fcb] font-bold">{currency} {amount.toLocaleString()}</span>
                   </div>
                 </div>
               </div>
 
               {/* Payment method info */}
-              <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-xl">
-                <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white">
+              <div className="flex items-center gap-3 p-3 bg-[#ecedfa] rounded-xl">
+                <div className="w-10 h-10 bg-[#6d6fcb] rounded-xl flex items-center justify-center text-white">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <rect x="2" y="5" width="20" height="14" rx="2"/>
                     <line x1="2" y1="10" x2="22" y2="10"/>
@@ -263,13 +263,13 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
               </div>
 
               {error && (
-                <div className="p-3 bg-red-50 text-red-600 text-sm rounded-lg">{error}</div>
+                <div className="p-3 bg-red-50 text-red-600 text-sm rounded-xl">{error}</div>
               )}
 
               <button
                 onClick={handlePaystackPayment}
                 disabled={loading}
-                className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed hover:bg-emerald-600 transition-colors"
+                className="w-full py-4 bg-amber-400 text-slate-900 font-semibold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed hover:bg-amber-300 transition-colors"
               >
                 {loading ? 'Processing...' : `Pay ${currency} ${amount.toLocaleString()}`}
               </button>
@@ -280,7 +280,7 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
                 <span className="text-xs text-slate-400">Secured by</span>
-                <span className="text-xs font-semibold text-blue-600">Paystack</span>
+                <span className="text-xs font-semibold text-[#6d6fcb]">Paystack</span>
               </div>
             </div>
           )}
@@ -288,8 +288,8 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
           {/* Step: Processing */}
           {step === 'processing' && (
             <div className="py-8 text-center space-y-4">
-              <div className="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center">
-                <div className="w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-16 h-16 mx-auto bg-[#eef4e7] rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 border-4 border-[#6d6fcb] border-t-transparent rounded-full animate-spin"></div>
               </div>
               <div>
                 <h3 className="font-semibold text-slate-900">Processing payment</h3>
