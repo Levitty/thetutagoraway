@@ -573,3 +573,8 @@
 .tg.vision .vhero .ph { background: rgba(255,255,255,.45); border-color: rgba(18,17,23,.35); color: var(--ink2) !important; }
 .tg.vision .vquote .ph { display: block; }
 @media (max-width: 700px) { .tg.vision .vnow { grid-template-columns: minmax(0, 1fr); } }
+.tg.vision .vpoints { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+.tg.vision .vpoints > div { background: #fff8ec; border-radius: 12px; padding: 18px 20px; border-left: 5px solid var(--brand); }
+.tg.vision .vpoints b { display: block; font-size: 18px; margin-bottom: 4px; }
+.tg.vision .vpoints span { color: var(--ink2); font-size: 16.5px; line-height: 1.5; }
+@media (max-width: 700px) { .tg.vision .vpoints { grid-template-columns: minmax(0, 1fr); } }

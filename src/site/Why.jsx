@@ -7,19 +7,21 @@ import React from 'react';
 import { SiteNav, SiteFooter, SiteIcon } from './ui.jsx';
 
 const VISION = {
-  draft: true,
-  headline: 'Your headline: one line that sums up why Tutagora exists.',
-  intro: 'Your opening: two or three sentences a parent reads first.',
+  draft: false,
+  headline: 'Every great mind started with a spark.',
+  intro: 'Many of the innovators and builders of our generation began with a spark: one moment that lit something in them and made all the difference.',
   sections: [
-    { h: 'Why I started Tutagora', p: 'What you saw happening to children and families that made you start.' },
-    { h: "What's broken today", p: 'How children in Kenya get help with learning now, and what goes wrong.' },
-    { h: 'What we are building', p: 'Where Tutagora is going: practice that starts with maths and writing and grows, tutors, schools.' },
-    { h: 'Our promise to your family', p: 'What every family can count on from Tutagora.' },
+    { h: 'Every child shines differently', p: 'Not every student is gifted in the same way, and that is not a weakness. It means no two children need exactly the same help.' },
+    { h: 'We meet every child where they are', p: "Tutagora starts by finding each child's level of need, then gives them a plan made for them alone.",
+      points: [
+        { b: 'Ready to race ahead?', t: 'Accelerated learning, and expert tutors to make that spark burn brighter.' },
+        { b: 'Missing a foundation?', t: 'We build it with the same enthusiasm, and celebrate it just as loudly.' },
+      ] },
   ],
-  quote: 'A line you want every parent to remember.',
-  name: 'Your name',
+  quote: 'We want to be that spark, so every child can go as far as their curiosity takes them.',
+  name: null,        // your name, e.g. 'Jane Doe'
   role: 'Founder, Tutagora',
-  photo: null, // e.g. '/images/founder.jpg'
+  photo: null,       // e.g. '/images/founder.jpg'
 };
 
 // What exists today and what comes next (facts, not placeholders).
@@ -28,6 +30,14 @@ const NEXT = ['More subjects', 'More ways to practise'];
 
 const Text = ({ children, as: Tag = 'p', className = '' }) => (
   <Tag className={`${className} ${VISION.draft ? 'ph' : ''}`}>{children}</Tag>
+);
+
+const Part = ({ s }) => (
+  <div className="vpart">
+    <h2 className="display">{s.h}</h2>
+    <Text>{s.p}</Text>
+    {s.points && <div className="vpoints">{s.points.map(x => <div key={x.b}><b>{x.b}</b><span>{x.t}</span></div>)}</div>}
+  </div>
 );
 
 export default function Why({ onNavigate, onSignIn, user }) {
@@ -44,15 +54,11 @@ export default function Why({ onNavigate, onSignIn, user }) {
       </header>
 
       <section className="sec"><div className="in vbody">
-        {VISION.sections.slice(0, 2).map(s => (
-          <div key={s.h} className="vpart"><h2 className="display">{s.h}</h2><Text>{s.p}</Text></div>
-        ))}
+        {VISION.sections.slice(0, 1).map(s => <Part key={s.h} s={s} />)}
 
         <blockquote className="vquote"><Text as="span">{VISION.quote}</Text></blockquote>
 
-        {VISION.sections.slice(2).map(s => (
-          <div key={s.h} className="vpart"><h2 className="display">{s.h}</h2><Text>{s.p}</Text></div>
-        ))}
+        {VISION.sections.slice(1).map(s => <Part key={s.h} s={s} />)}
 
         <div className="vnow">
           <div><div className="kicker">On Tutagora today</div><ul>{NOW.map(x => <li key={x}><SiteIcon name="check" />{x}</li>)}</ul></div>
@@ -61,7 +67,7 @@ export default function Why({ onNavigate, onSignIn, user }) {
 
         <div className="vsign">
           <div className={`vphoto ${VISION.photo ? '' : 'ph'}`}>{VISION.photo ? <img src={VISION.photo} alt={VISION.name} /> : 'Photo'}</div>
-          <div><Text as="b">{VISION.name}</Text><span>{VISION.role}</span></div>
+          <div>{VISION.name ? <b>{VISION.name}</b> : <b className="ph">Your name</b>}<span>{VISION.role}</span></div>
         </div>
       </div></section>
 
