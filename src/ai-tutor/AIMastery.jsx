@@ -348,7 +348,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
         try {
           const cur = ctx?.skills?.[dip.currentId];
           if (!cur) throw new Error('current skill not found');
-          setDiagState({ answered: dip.answered, balances: dip.balances || {}, results: dip.results || {}, startTimes: { [cur.id]: Date.now() }, current: cur, focus: dip.focus ?? p.declaredGrade, perGrade: dip.perGrade || {} });
+          setDiagState({ answered: dip.answered, balances: dip.balances || {}, results: dip.results || {}, startTimes: { [cur.id]: Date.now() }, current: cur, focus: dip.focus ?? p.declaredGrade, perGrade: dip.perGrade || {}, pending: dip.pending || null, asked: dip.asked ?? dip.answered.length });
           setDiagHistory([]); // snapshots aren't persisted; can't step back past a reload
           setProblem(dip.problem || generateProblem(cur.id));
           setAnswer(''); setVisualAnswer(null); setFeedback(null);
@@ -549,7 +549,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // (within a grade, we ask the least-certain skill first). The test ends as soon
   // as the level is pinned down — short for a clear-cut student, longer when the
   // picture is mixed — the "infer from structure, measure only the gaps" idea.
-  const DIAG_MIN = 8;    // ask at least this many before bracketing can stop us
+  // Simulated with virtual children (scripts/simulate-check.mjs): at 8 with no
+  // confirmation, 14% of parents were told about a "missing step" the child
+  // actually had, from one careless slip. Confirming each wrong answer with a
+  // second question and asking at least 12 cut that to 1%.
+  const DIAG_MIN = 12;   // ask at least this many before bracketing can stop us
   const DIAG_MAX = 20;   // hard ceiling
 
   const diagList = () => Object.values(ctx?.skills || {}).filter(s => Number.isFinite(s.grade));
@@ -577,15 +581,15 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // question — answers so far, running evidence, focus grade, and the current
   // problem. Stored in `progress` (localStorage instantly + cloud on save). The
   // candidate pool is the full skill list, rebuilt on resume rather than stored.
-  const diagCursor = (answered, balances, results, current, prob, focus, perGrade) =>
-    ({ subjectId, v: 3, answered, balances, results, currentId: current?.id, problem: prob, focus, perGrade });
+  const diagCursor = (answered, balances, results, current, prob, focus, perGrade, extra = {}) =>
+    ({ subjectId, v: 3, answered, balances, results, currentId: current?.id, problem: prob, focus, perGrade, pending: extra.pending || null, asked: extra.asked ?? answered.length });
 
   const startDiagnostic = () => {
     const list = diagList();
     const focus = progress.declaredGrade; // required before starting
     const first = pickAt(list, focus, new Set(), {}) || list[0];
     const firstProblem = generateProblem(first?.id);
-    setDiagState({ answered: [], balances: {}, results: {}, startTimes: { [first?.id]: Date.now() }, current: first, focus, perGrade: {} });
+    setDiagState({ answered: [], balances: {}, results: {}, startTimes: { [first?.id]: Date.now() }, current: first, focus, perGrade: {}, pending: null, asked: 0 });
     setDiagHistory([]);
     setProblem(firstProblem);
     setProgress(p => ({ ...p, diagInProgress: diagCursor([], {}, {}, first, firstProblem, focus, {}) }));
@@ -607,7 +611,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     setVisualAnswer(null);
     setFeedback(null);
     const s = prev.state;
-    setProgress(p => ({ ...p, diagInProgress: diagCursor(s.answered, s.balances, s.results, s.current, prev.problem, s.focus, s.perGrade) }));
+    setProgress(p => ({ ...p, diagInProgress: diagCursor(s.answered, s.balances, s.results, s.current, prev.problem, s.focus, s.perGrade, { pending: s.pending, asked: s.asked }) }));
   };
 
   const handleDiagnosticAnswer = (opts = {}) => {
@@ -618,7 +622,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // Allow either a typed answer or an interactive-visual answer (number line etc.)
     const hasVisualAnswer = problem?.visual && visualAnswer != null;
     if (!skip && !answer.trim() && !hasVisualAnswer) return;
-    const { answered, balances, results, startTimes, current, focus, perGrade } = diagState;
+    const { answered, balances, results, startTimes, current, focus, perGrade, pending = null } = diagState;
+    const asked = diagState.asked ?? answered.length;
     const skill = current;
     if (!skill) return;
     // Remember this question so "Previous" can return to it and undo its evidence.
@@ -634,14 +639,33 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // answer — the calibration signal to mine across learners later (idea #2).
     const priorConfidence = Math.abs(balances[skill.id] || 0);
 
-    const newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
-    const newResults = { ...results, [skill.id]: { correct, timeTaken, ...(skip ? { skipped: true } : {}) } };
-    const newAnswered = [...answered, skill.id];
+    // A wrong answer is confirmed with one more question on the same skill
+    // before it counts as a gap: right the second time means the first was a
+    // slip, so the evidence is rebuilt from before it as a right answer.
+    const bump = (pg, ok) => ({ ...pg, [skill.grade]: { c: (pg[skill.grade]?.c || 0) + (ok ? 1 : 0), t: (pg[skill.grade]?.t || 0) + 1 } });
+    const isConfirm = !!pending && pending.id === skill.id;
+    let newBalances, newResults, newAnswered, newPerGrade, newPending = null;
+    if (isConfirm) {
+      newAnswered = answered;
+      if (correct) {
+        newBalances = propagateCredit(pending.balances, skill.id, true, timeWeight, ctx);
+        newResults = { ...pending.results, [skill.id]: { correct: true, timeTaken, confirmed: true } };
+        newPerGrade = bump(pending.perGrade, true);
+      } else {
+        newBalances = balances;
+        newResults = { ...results, [skill.id]: { ...results[skill.id], confirmed: true } };
+        newPerGrade = perGrade;
+      }
+    } else {
+      newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
+      newResults = { ...results, [skill.id]: { correct, timeTaken, ...(skip ? { skipped: true } : {}) } };
+      newAnswered = [...answered, skill.id];
+      newPerGrade = bump(perGrade, correct);
+      // "I haven't learned this yet" is already a clear signal: no re-ask.
+      if (!correct && !skip) newPending = { id: skill.id, balances, results, perGrade };
+    }
+    const newAsked = asked + 1;
     const answeredSet = new Set(newAnswered);
-    const newPerGrade = { ...perGrade, [skill.grade]: {
-      c: (perGrade[skill.grade]?.c || 0) + (correct ? 1 : 0),
-      t: (perGrade[skill.grade]?.t || 0) + 1,
-    } };
 
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId: skill.id,
@@ -659,11 +683,12 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     else if (failedG(newPerGrade, focus)) nextFocus = Math.max(gmin, focus - 1);
 
     let bracketed = false;
-    if (newAnswered.length >= DIAG_MIN) {
+    if (newAnswered.length >= DIAG_MIN && !newPending) {
       for (let g = gmin; g < gmax; g++) if (clearedG(newPerGrade, g) && failedG(newPerGrade, g + 1)) bracketed = true;
     }
-    const nextSkill = pickAt(list, nextFocus, answeredSet, newBalances);
-    const isLast = newAnswered.length >= DIAG_MAX || !nextSkill || bracketed;
+    const confirmNext = !!newPending && newAsked < DIAG_MAX;
+    const nextSkill = confirmNext ? skill : pickAt(list, nextFocus, answeredSet, newBalances);
+    const isLast = newAsked >= DIAG_MAX || !nextSkill || (bracketed && !confirmNext);
 
     // On the final question, compute and PERSIST the finished state immediately —
     // before the 800ms feedback pause — so navigating away can never lose it.
@@ -695,10 +720,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     setTimeout(() => {
       if (!isLast) {
         const nextProblem = generateProblem(nextSkill.id);
-        setDiagState({ answered: newAnswered, balances: newBalances, results: newResults, startTimes: { ...startTimes, [nextSkill.id]: Date.now() }, current: nextSkill, focus: nextFocus, perGrade: newPerGrade });
+        setDiagState({ answered: newAnswered, balances: newBalances, results: newResults, startTimes: { ...startTimes, [nextSkill.id]: Date.now() }, current: nextSkill, focus: confirmNext ? focus : nextFocus, perGrade: newPerGrade, pending: newPending, asked: newAsked });
         setProblem(nextProblem);
         // Advance the resume cursor so a mid-test exit returns to THIS question.
-        setProgress(p => ({ ...p, diagInProgress: diagCursor(newAnswered, newBalances, newResults, nextSkill, nextProblem, nextFocus, newPerGrade) }));
+        setProgress(p => ({ ...p, diagInProgress: diagCursor(newAnswered, newBalances, newResults, nextSkill, nextProblem, confirmNext ? focus : nextFocus, newPerGrade, { pending: newPending, asked: newAsked }) }));
         setAnswer('');
         setVisualAnswer(null);
         setFeedback(null);
@@ -1242,9 +1267,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     const { answered, current } = diagState;
     const skill = current;
     if (!skill) return null;
-    const n = answered.length + 1;
+    const asked = diagState.asked ?? answered.length;
+    const n = asked + 1;
     // Adaptive test: the length isn't fixed, so show progress toward the ceiling.
-    const pct = Math.min(96, Math.round((answered.length / DIAG_MAX) * 100));
+    const pct = Math.min(96, Math.round((asked / DIAG_MAX) * 100));
     // The guide keeps the mood light — this must never feel like an exam. No
     // grade labels on questions (an older child rebuilding foundations should
     // never see "Grade 1" stamped on their screen), no red X, no scores.
@@ -1254,6 +1280,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       'You’re doing great.',
       'Remember: not a test. We’re just finding your start.',
     ][(n - 1) % 4];
+    const cheerNow = diagState.pending && diagState.pending.id === skill.id ? 'One more like that one. Take your time.' : cheer;
 
     return (
       <div className="min-h-screen bg-[#eef0f2] text-slate-900">
@@ -1277,7 +1304,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
             )}
             <div className="flex items-start gap-3 mb-4">
               <HorebBot size={40} className="shrink-0" />
-              <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">{cheer}</div>
+              <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">{cheerNow}</div>
             </div>
             <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
               <div className={`${String(problem?.question || '').length <= 28 ? 'text-[36px] font-extrabold leading-tight' : 'text-[22px] font-bold leading-snug'} text-slate-900 mb-6`}>{problem?.question}</div>
@@ -1291,7 +1318,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   disabled={!!feedback}
                 />
               )}
-              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
               {!feedback && (
                 <button onClick={() => handleDiagnosticAnswer({ skip: true })} className="mt-3.5 text-[15px] font-bold text-slate-900 underline underline-offset-4 hover:text-[#c2255c] transition-colors">
                   I haven’t learned this yet
@@ -1515,7 +1542,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                     <InteractiveVisual visualType={SKILL_VISUALS[activeSkill].visualType} visualData={SKILL_VISUALS[activeSkill].visualData} onAnswer={setVisualAnswer} disabled={!!feedback} />
                   )
                 )}
-                <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+                <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
 
                 {/* Roadside assistance, not GPS: only offered once the child has
                     actually sat with the problem — never as a reflex tap. */}
@@ -1697,7 +1724,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   />
                 </div>
               )}
-              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
             </div>
 
             {feedback && (

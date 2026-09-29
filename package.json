@@ -8,6 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test:engine": "node scripts/test-engine.mjs",
+    "audit:answers": "node scripts/audit-answers.mjs",
+    "audit:check": "node scripts/simulate-check.mjs",
     "build:report-fn": "node scripts/build-weekly-report-fn.mjs"
   },
   "dependencies": {
