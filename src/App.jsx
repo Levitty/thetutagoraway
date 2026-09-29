@@ -7234,6 +7234,8 @@ function AppInner() {
   // ---- The free check (public, no account) ----
   if (page === 'check' && !IS_NATIVE) {
     return <CheckStart initialGrade={checkGrade} onLeave={() => handleNavigate('home')}
+      onResume={() => { setCheckGrade(getCheck()?.grade || null); setPage('check-run'); window.scrollTo(0, 0); }}
+      onSeeResult={() => handleNavigate('check-result')}
       onStart={(g) => { setCheckGrade(g); setPage('check-run'); window.scrollTo(0, 0); }} />;
   }
   if (page === 'check-run' && !IS_NATIVE) {

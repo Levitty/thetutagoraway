@@ -35,8 +35,14 @@ const FlowBar = ({ label, onLeave }) => (
 );
 
 // Step 1: who is taking it, and which grade. Then hand the phone over.
-export function CheckStart({ initialGrade, onStart, onLeave }) {
+export function CheckStart({ initialGrade, onStart, onResume, onLeave, onSeeResult }) {
   const prev = getCheck();
+  // A check left half-way (refresh, phone call, app switch) can carry on
+  // from the same question instead of starting over.
+  const guest = getGuestProgress();
+  const answeredSoFar = guest?.diagInProgress?.answered?.length || 0;
+  const canResume = !!prev && !guest?.diagnosed && answeredSoFar > 0;
+  const hasResult = !!prev && !!guest?.diagnosed;
   const [name, setName] = useState(prev?.name || '');
   const [grade, setGrade] = useState(initialGrade || prev?.grade || null);
   const [curriculum, setCurriculum] = useState(prev?.curriculum || null);
@@ -55,7 +61,14 @@ export function CheckStart({ initialGrade, onStart, onLeave }) {
       <FlowBar label="Free maths check" onLeave={onLeave} />
       <div className="stage">
         <div className="card">
-          <div className="kicker">Free · about 10 minutes · no account</div>
+          {(canResume || hasResult) && (
+            <div className="resume">
+              <div><b>{canResume ? `${prev.name || 'Your child'}'s check is half done` : `${prev.name ? `${prev.name}'s` : 'Your'} result is ready`}</b>
+                <span>{canResume ? `${answeredSoFar} question${answeredSoFar === 1 ? '' : 's'} answered. Carry on from the same question.` : 'See the missing step and the plan.'}</span></div>
+              <button type="button" className="btn" onClick={canResume ? onResume : onSeeResult}>{canResume ? 'Continue' : 'See result'} <SiteIcon name="arrow" /></button>
+            </div>
+          )}
+          <div className="kicker">{canResume || hasResult ? 'Or start a new check' : 'Free · about 10 minutes · no account'}</div>
           <h1 className="display" style={{ marginTop: 10 }}>Let's find the step.</h1>
           <p className="lead">Questions start easy and adapt to each answer. There's no score and no pass or fail. We're only looking for where to start.</p>
           <label className="field"><span>Child's first name <small>(optional)</small></span>
