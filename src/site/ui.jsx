@@ -15,6 +15,19 @@ const PATHS = {
   clock: <><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2.2" /><path d="M12 7v5l3 2" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" /></>,
   target: <><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2.2" /><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" strokeWidth="2.2" /><circle cx="12" cy="12" r="1.2" fill="currentColor" /></>,
   menu: <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />,
+  video: <><rect x="3" y="6" width="13" height="12" rx="2" fill="none" stroke="currentColor" strokeWidth="2.2" /><path d="M16 10l5-3v10l-5-3z" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" /></>,
+  wallet: <><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" strokeWidth="2.2" /><path d="M16 12.5h2" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" /><path d="M6 6V5a2 2 0 012-2h9" fill="none" stroke="currentColor" strokeWidth="2.2" /></>,
+  calendar: <><rect x="3.5" y="5" width="17" height="15" rx="2" fill="none" stroke="currentColor" strokeWidth="2.2" /><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" /></>,
+  chart: <path d="M5 20V11M12 20V5M19 20v-6M3 20.5h18" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />,
+  bell: <><path d="M6 16V11a6 6 0 0112 0v5l1.5 2h-15z" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" /><path d="M10 20.5h4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" /></>,
+  star: <path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinejoin="round" />,
+  users: <><circle cx="9" cy="8.5" r="3.5" fill="none" stroke="currentColor" strokeWidth="2.2" /><path d="M2.5 20c.5-3.5 3.3-5.5 6.5-5.5s6 2 6.5 5.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" /><path d="M16 5.2a3.3 3.3 0 010 6.6M18 14.8c2 .7 3.3 2.4 3.5 5.2" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" /></>,
+  shield: <><path d="M12 3l7.5 3v6c0 4.5-3.2 7.8-7.5 9-4.3-1.2-7.5-4.5-7.5-9V6z" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" /><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></>,
+  book: <><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5z" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" /><path d="M4 20.5A2.5 2.5 0 016.5 18H20v3H6.5A2.5 2.5 0 014 20.5z" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" /></>,
+  pen: <path d="M4 20l1-4.5L15.5 5a2.1 2.1 0 013 3L8 18.5zM13.5 7l3 3" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" strokeLinecap="round" />,
+  gear: <><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" strokeWidth="2.2" /><path d="M12 2.8v2.6M12 18.6v2.6M21.2 12h-2.6M5.4 12H2.8M18.5 5.5l-1.8 1.8M7.3 16.7l-1.8 1.8M18.5 18.5l-1.8-1.8M7.3 7.3L5.5 5.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" /></>,
+  flag: <path d="M5 21V4M5 4h11l-2 4 2 4H5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" strokeLinecap="round" />,
+  plus: <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" />,
 };
 
 export const SiteIcon = ({ name, className = 'i', style }) => (

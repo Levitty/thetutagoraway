@@ -27,6 +27,8 @@ import { FamilyPage, FamilyCards } from './family/FamilyPage.jsx';
 import './site/site.css';
 import SiteHome from './site/Home.jsx';
 import { TutorList, TutorProfile } from './site/Tutors.jsx';
+import SiteTeach from './site/Teach.jsx';
+import { SiteIcon } from './site/ui.jsx';
 import { CheckStart, CheckResult, getCheck, setFocus } from './site/Check.jsx';
 import { claimGuestCheck, markWantsSave, wantsSave } from './site/claim.js';
 
@@ -1076,17 +1078,24 @@ const MomentumChip = ({ userId, onClick }) => {
   return <MomentumChipView level={m.level} streak={m.streak} onClick={onClick} />;
 };
 
-const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings }) => {
+// The signed-in family's home (web). Parents first: their children, handing
+// over the phone, and lessons. Students use the same screen without the
+// children section. On the public site's coral design.
+const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings }) => {
   const [tab, setTab] = useState('upcoming');
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [reviewBooking, setReviewBooking] = useState(null);
   const [showProgress, setShowProgress] = useState(false);
   const [payments, setPayments] = useState([]);
   const [aiProgress, setAiProgress] = useState(null);
+  const [kidProgress, setKidProgress] = useState({}); // child id -> { diagnosed, totalXP, streak }
   const [children, setChildren] = useState([]);
   const [newChildName, setNewChildName] = useState('');
   const [newChildGrade, setNewChildGrade] = useState('');
+  const [adding, setAdding] = useState(false);
   const CHILD_GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University', 'Adult learner'];
+  const accountType = user?.user_metadata?.account_type || null;
+  const isStudentAccount = accountType === 'student';
   const fetchChildren = useCallback(() => {
     if (!profile?.id) return;
     supabase.from('children').select('id, name, grade').eq('parent_id', profile.id).order('created_at')
@@ -1098,411 +1107,237 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
     const { data } = await supabase.from('children')
       .insert({ parent_id: profile.id, name: newChildName.trim(), grade: newChildGrade || null })
       .select('id, name, grade').single();
-    if (data) { setChildren(prev => [...prev, data]); setNewChildName(''); setNewChildGrade(''); }
+    if (data) { setChildren(prev => [...prev, data]); setNewChildName(''); setNewChildGrade(''); setAdding(false); }
   };
-  const removeChild = async (id) => {
-    await supabase.from('children').delete().eq('id', id);
-    setChildren(prev => prev.filter(c => c.id !== id));
+  const removeChild = async (c) => {
+    if (!window.confirm(`Remove ${c.name}? Their practice stays saved, but they won't appear here.`)) return;
+    await supabase.from('children').delete().eq('id', c.id);
+    setChildren(prev => prev.filter(x => x.id !== c.id));
   };
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
   const past = bookings.filter(b => b.status === 'completed');
   const nextLesson = [...upcoming].sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
   const totalSpent = payments.reduce((s, p) => s + (p.amount || 0), 0);
   const uniqueTutors = [...new Set(past.map(b => b.tutor_id))].length;
+  const first = profile?.full_name?.split(' ')[0] || 'there';
+  const when = (b) => {
+    const d = new Date(`${b.lesson_date}T00:00:00`);
+    const day = isNaN(d) ? b.lesson_date : d.toLocaleDateString('en-KE', { weekday: 'short', day: 'numeric', month: 'short' });
+    return `${day} · ${b.start_time?.slice(0, 5) || ''}${Number(b.duration_minutes) === 30 ? ' · 30 min' : ''}`;
+  };
 
   useEffect(() => {
-    if (profile?.id) {
-      supabase.from('payments').select('amount, status, created_at').eq('student_id', profile.id).eq('status', 'completed')
-        .then(({ data }) => setPayments(data || []));
-      supabase.from('ai_tutor_progress').select('total_xp, current_streak, diagnosed, progress').eq('user_id', profile.id).maybeSingle()
-        .then(({ data }) => {
-          if (data) setAiProgress({
-            totalXP: data.total_xp || 0,
-            currentStreak: data.current_streak || 0,
-            diagnosed: !!data.diagnosed,
-            dailyXP: data.progress?.dailyXP || 0,
-            dailyDate: data.progress?.dailyDate || null,
-          });
+    if (!profile?.id) return;
+    supabase.from('payments').select('amount, status, created_at').eq('student_id', profile.id).eq('status', 'completed')
+      .then(({ data }) => setPayments(data || []));
+    // One row per learner: the account holder's own (profile_key = their id)
+    // and one per child. (A single-row query failed once a child had progress.)
+    supabase.from('ai_tutor_progress').select('profile_key, learner_id, total_xp, current_streak, diagnosed, progress').eq('user_id', profile.id)
+      .then(({ data }) => {
+        const rows = data || [];
+        const own = rows.find(r => r.profile_key === profile.id);
+        if (own) setAiProgress({
+          totalXP: own.total_xp || 0, currentStreak: own.current_streak || 0, diagnosed: !!own.diagnosed,
+          dailyXP: own.progress?.dailyXP || 0, dailyDate: own.progress?.dailyDate || null,
         });
-    }
+        const kids = {};
+        rows.filter(r => r.learner_id).forEach(r => { kids[r.learner_id] = { diagnosed: !!r.diagnosed, totalXP: r.total_xp || 0, streak: r.current_streak || 0 }; });
+        setKidProgress(kids);
+      });
   }, [profile?.id]);
 
-  return (
-    <div className="min-h-screen bg-[#eef0f2]">
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-40">
-        <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
-          <button onClick={() => onNavigate('home')} className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold">T</div>
-            <span className="font-semibold text-slate-900 hidden sm:block">Tutagora</span>
-            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-[#ecedfa] text-[#6d6fcb] uppercase tracking-wide">Student</span>
-          </button>
-          <div className="flex items-center gap-3 sm:gap-4">
-            <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600 hidden sm:block">Find Tutors</button>
-            <button onClick={() => onNavigate('clubs')} className="text-sm text-slate-600 hidden sm:block">Clubs</button>
-            <button onClick={() => onNavigate('schools')} className="text-sm text-slate-600 hidden sm:block">For Schools</button>
-            {aiProgress?.diagnosed
-              ? <MomentumChipView level={getLevel(aiProgress.totalXP).level} streak={aiProgress.currentStreak} onClick={() => onNavigate('ai')} />
-              : <button onClick={() => onNavigate('ai')} className="text-sm text-[#6d6fcb] font-medium">HOREB</button>}
-            <button onClick={() => onNavigate('spreadsheet')} className="text-sm text-[#6d6fcb] font-medium">Spreadsheet</button>
-            {isAdmin && <button onClick={() => onNavigate('admin')} className="text-sm text-[#6d6fcb] font-medium">Admin</button>}
-            <MessageButton onClick={onOpenMessages} />
-            <div className="flex items-center gap-2">
-              <Avatar src={profile?.avatar_url} name={profile?.full_name} size={32} />
-              <span className="text-sm font-medium hidden sm:block">{profile?.full_name}</span>
-            </div>
-          </div>
-        </div>
-      </header>
+  const started = aiProgress && aiProgress.diagnosed;
+  const streak = aiProgress?.currentStreak || 0;
+  const goalPct = started ? dailyGoalPercent(aiProgress) : 0;
+  const goalMet = started ? dailyGoalMet(aiProgress) : false;
 
-      <div className="max-w-5xl mx-auto px-5 py-6">
-        {/* Welcome + Next Lesson spotlight */}
+  const LessonRow = ({ b, done }) => (
+    <div className="lrow">
+      <div className="lwho">
+        <Avatar src={b.tutors?.profiles?.avatar_url} name={b.tutors?.profiles?.full_name} size={44} />
+        <div style={{ minWidth: 0 }}>
+          <b>{b.subject}{b.learner_name ? ` · ${b.learner_name}` : ''}</b>
+          <span>{b.tutors?.profiles?.full_name} · {done ? b.lesson_date : when(b)}</span>
+        </div>
+      </div>
+      <div className="lact">
+        {!done && <span className={`pill ${b.status === 'confirmed' ? 'ok' : ''}`}>{b.status === 'confirmed' ? 'Confirmed' : 'Awaiting payment'}</span>}
+        {!done && b.status === 'confirmed' && <button type="button" className="btn sm" onClick={() => onStartLesson(b)}>Join</button>}
+        {done && (b.review
+          ? <span className="pill ok">Reviewed</span>
+          : <button type="button" className="btn line sm" onClick={() => setReviewBooking(b)}>Leave a review</button>)}
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="tg dashboard">
+      <nav className="nav lined"><div className="in">
+        <button type="button" className="logo" onClick={() => onNavigate('home')} aria-label="Tutagora home">tutagora<i /></button>
+        <div className="links">
+          <button type="button" onClick={() => onNavigate('tutors')}>Find a tutor</button>
+          <button type="button" onClick={() => onNavigate('clubs')}>Clubs</button>
+          <button type="button" onClick={() => onNavigate('spreadsheet')}>Spreadsheet</button>
+          {isAdmin && <button type="button" onClick={() => onNavigate('admin')}>Admin</button>}
+        </div>
+        <div className="right">
+          <MessageButton onClick={onOpenMessages} />
+          <Avatar src={profile?.avatar_url} name={profile?.full_name} size={34} />
+        </div>
+      </div></nav>
+
+      <header className="dhero"><div className="in">
+        <div>
+          <div className="kicker">{isStudentAccount ? 'Your space' : accountType === 'parent' ? 'Parent' : 'Your account'}</div>
+          <h1 className="display">Hi {first}.</h1>
+          <p className="lead">{nextLesson ? `${upcoming.length} lesson${upcoming.length === 1 ? '' : 's'} coming up.` : isStudentAccount ? 'Pick up where you left off.' : children.length ? 'Hand over the phone for today\'s 15 minutes.' : 'Add your child, then hand over the phone.'}</p>
+        </div>
         {nextLesson ? (
-          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 mb-6 text-slate-900">
-            <div className="flex items-center gap-4 mb-4">
-              <Lottie src={ANIMATIONS.waving} width={60} height={60} />
-              <div>
-                <h1 className="text-xl font-extrabold tracking-tight">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
-                <p className="text-slate-500 text-sm">{upcoming.length} upcoming lesson{upcoming.length !== 1 ? 's' : ''}</p>
-              </div>
-            </div>
-            <div className="bg-[#eef0f2] backdrop-blur rounded-xl p-4 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-[#ecedfa] text-[#6d6fcb] flex items-center justify-center text-lg font-bold">{nextLesson.subject?.[0]}</div>
-                <div>
-                  <div className="font-semibold">{nextLesson.subject}</div>
-                  <div className="text-slate-500 text-sm">with {nextLesson.tutors?.profiles?.full_name} · {nextLesson.lesson_date} at {nextLesson.start_time?.slice(0,5)}</div>
-                </div>
-              </div>
-              {nextLesson.status === 'confirmed' && (
-                <button onClick={() => onStartLesson(nextLesson)} className="px-5 py-2.5 bg-amber-400 text-slate-900 font-semibold rounded-xl hover:bg-[#ecedfa] transition-colors text-sm">
-                  Join Lesson
-                </button>
-              )}
-              {nextLesson.status === 'pending' && (
-                <span className="px-3 py-1.5 bg-[#ecedfa] text-[#6d6fcb] text-white text-xs font-medium rounded-full">Pending</span>
-              )}
+          <div className="found next">
+            <div className="kicker">Next lesson</div>
+            <b>{nextLesson.subject}{nextLesson.learner_name ? ` · ${nextLesson.learner_name}` : ''}</b>
+            <span>with {nextLesson.tutors?.profiles?.full_name} · {when(nextLesson)}</span>
+            <div style={{ marginTop: 14 }}>
+              {nextLesson.status === 'confirmed'
+                ? <button type="button" className="btn white" onClick={() => onStartLesson(nextLesson)}>Join lesson</button>
+                : <span className="pill">Awaiting payment</span>}
             </div>
           </div>
         ) : (
-          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 mb-6 flex items-center gap-4 text-slate-900">
-            <Lottie src={ANIMATIONS.waving} width={60} height={60} />
-            <div className="flex-1">
-              <h1 className="text-xl font-extrabold tracking-tight">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
-              <p className="text-slate-500 text-sm">No upcoming lessons — ready to book one?</p>
-            </div>
-            <button onClick={() => onNavigate('tutors')} className="px-5 py-2.5 bg-amber-400 text-slate-900 font-semibold rounded-xl hover:bg-[#ecedfa] transition-colors text-sm">
-              Find a Tutor
-            </button>
+          <div className="found next">
+            <div className="kicker">No lessons booked</div>
+            <b>A tutor for the stuck part</b>
+            <span>Live, one-to-one, inside Tutagora.</span>
+            <div style={{ marginTop: 14 }}><button type="button" className="btn white" onClick={() => onNavigate('tutors')}>Find a tutor</button></div>
           </div>
         )}
+      </div></header>
 
-        {/* Hand this device to a child */}
-        <button onClick={() => onNavigate('handover')}
-          className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-6 flex items-center gap-4 text-left hover:border-slate-300 transition-colors">
-          <span className="w-11 h-11 rounded-xl bg-[#ecedfa] text-[#6d6fcb] flex items-center justify-center shrink-0">
-            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
-          </span>
-          <span className="flex-1 min-w-0">
-            <span className="block font-bold text-slate-900">Hand over to your child</span>
-            <span className="block text-sm text-slate-500">Give them their own space on this device: practice, writing and their lessons. Your PIN to leave.</span>
-          </span>
-          <span className="shrink-0 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold rounded-xl text-sm">Hand over</span>
-        </button>
-
-        {/* Weekly goals and messages for each child */}
-        <button onClick={() => onNavigate('family')}
-          className="w-full -mt-3 bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-6 flex items-center gap-4 text-left hover:border-slate-300 transition-colors">
-          <span className="w-11 h-11 rounded-xl bg-[#eef5e6] text-[#5a7a3a] flex items-center justify-center shrink-0">
-            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
-          </span>
-          <span className="flex-1 min-w-0">
-            <span className="block font-bold text-slate-900">Goals and messages</span>
-            <span className="block text-sm text-slate-500">Set a weekly practice goal with a reward, and send your child a quick word.</span>
-          </span>
-          <svg viewBox="0 0 24 24" className="w-4 h-4 text-slate-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        </button>
-
-        {/* AI Tutor Card — momentum-aware, encouraging entry point */}
-        {(() => {
-          const started = aiProgress && aiProgress.diagnosed;
-          const lvl = started ? getLevel(aiProgress.totalXP).level : 0;
-          const lvlInfo = started ? getLevel(aiProgress.totalXP) : null;
-          const streak = aiProgress?.currentStreak || 0;
-          const goalPct = started ? dailyGoalPercent(aiProgress) : 0;
-          const goalMet = started ? dailyGoalMet(aiProgress) : false;
-          const cta = !started ? 'Start Learning' : goalMet ? 'Keep Going' : 'Continue';
-          const headline = !started
-            ? 'Adaptive learning that finds your gaps and fills them'
-            : goalMet ? 'Daily goal done — brilliant! A little more never hurts.'
-            : streak > 0 ? `You’re on a ${streak}-day streak — keep it alive!`
-            : 'Pick up where you left off — small steps add up.';
-          return (
-            <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 mb-6">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-4 min-w-0">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#6d6fcb] text-white flex items-center justify-center shrink-0"><Icon name="brain" className="w-6 h-6 sm:w-7 sm:h-7" /></div>
-                  <div className="min-w-0">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="text-white font-bold text-lg">HOREB</h3>
-                      {started && <span className="text-xs font-semibold text-amber-300 bg-amber-500/15 rounded-full px-2 py-0.5">Level {lvl}</span>}
-                      {streak > 0 && <span className="text-xs font-semibold text-amber-300 flex items-center gap-0.5"><Icon name="flame" className="w-3.5 h-3.5" />{streak}d</span>}
-                    </div>
-                    <p className="text-slate-300 text-sm mt-0.5">{headline}</p>
+      <div className="in dgrid">
+        <main style={{ minWidth: 0 }}>
+          {!isStudentAccount && (
+            <section className="block">
+              <div className="bhead"><h2 className="display">Your children</h2>{!adding && <button type="button" className="btn line sm" onClick={() => setAdding(true)}><SiteIcon name="plus" />Add a child</button>}</div>
+              {children.length === 0 && !adding && (
+                <div className="empty-card">
+                  <p><b>No children added yet.</b> Add your child to hand over the phone, set weekly goals and get a Sunday report.</p>
+                  <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                    <button type="button" className="btn" onClick={() => setAdding(true)}>Add a child</button>
+                    <button type="button" className="btn line" onClick={() => onNavigate('check')}>Take the free check</button>
                   </div>
-                </div>
-                <button onClick={() => onNavigate('ai')} className="shrink-0 px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-900 font-semibold rounded-xl transition-colors text-sm">
-                  {cta}
-                </button>
-              </div>
-              {started && (
-                <div className="mt-4 flex items-center gap-3">
-                  <span className="text-xs text-slate-400 shrink-0 flex items-center gap-1"><Icon name={goalMet ? 'check' : 'target'} className="w-3.5 h-3.5" />{goalMet ? 'Goal' : 'Today'}</span>
-                  <div className="flex-1 h-2 bg-slate-700 rounded-full overflow-hidden">
-                    <div className={`h-full transition-all ${goalMet ? 'bg-amber-400' : 'bg-amber-500'}`} style={{ width: `${goalPct}%` }} />
-                  </div>
-                  <span className="text-xs text-slate-400 shrink-0">{Math.min(todaysXP(aiProgress), DAILY_GOAL_XP)}/{DAILY_GOAL_XP} XP</span>
                 </div>
               )}
-            </div>
-          );
-        })()}
-
-        {/* Writing — composition / insha marking */}
-        <button onClick={() => onNavigate('writing')} className="w-full text-left bg-white border border-slate-200 rounded-2xl p-5 mb-6 hover:border-slate-300 transition-colors shadow-sm">
-          <div className="flex items-center justify-between gap-4">
-            <div className="min-w-0">
-              <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Writing</div>
-              <h3 className="text-slate-900 font-bold text-lg mt-0.5">Composition & Insha</h3>
-              <p className="text-slate-500 text-sm mt-0.5">Write it, get it marked out of 20 like a teacher would, then fix the exact lines.</p>
-            </div>
-            <span className="shrink-0 px-5 py-2.5 bg-slate-900 text-white font-semibold rounded-xl text-sm">Write</span>
-          </div>
-        </button>
-
-        {/* Stats row */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-            <div className="w-9 h-9 bg-[#eef4e7] rounded-xl flex items-center justify-center mb-2">
-              <svg className="w-5 h-5 text-[#6d6fcb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <div className="text-2xl font-extrabold tracking-tight text-slate-900">{past.length}</div>
-            <div className="text-xs text-slate-500">Lessons Done</div>
-          </div>
-          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-            <div className="w-9 h-9 bg-[#ecedfa] rounded-xl flex items-center justify-center mb-2">
-              <svg className="w-5 h-5 text-[#6d6fcb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-            </div>
-            <div className="text-2xl font-extrabold tracking-tight text-slate-900">{upcoming.length}</div>
-            <div className="text-xs text-slate-500">Upcoming</div>
-          </div>
-          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-            <div className="w-9 h-9 bg-[#ecedfa] rounded-xl flex items-center justify-center mb-2">
-              <svg className="w-5 h-5 text-[#6d6fcb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-            </div>
-            <div className="text-2xl font-extrabold tracking-tight text-slate-900">{uniqueTutors}</div>
-            <div className="text-xs text-slate-500">Tutors Used</div>
-          </div>
-          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-            <div className="w-9 h-9 bg-amber-50 rounded-xl flex items-center justify-center mb-2">
-              <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <div className="text-2xl font-extrabold tracking-tight text-slate-900">KSh {totalSpent.toLocaleString()}</div>
-            <div className="text-xs text-slate-500">Total Spent</div>
-          </div>
-        </div>
-
-        <div className="grid lg:grid-cols-3 gap-5">
-          <div className="lg:col-span-2 bg-white rounded-xl border border-slate-200 overflow-hidden">
-            <div className="flex border-b border-slate-100">
-              <button onClick={() => setTab('upcoming')} className={`flex-1 py-3 text-sm font-medium ${tab === 'upcoming' ? 'text-slate-900 border-b-2 border-slate-900' : 'text-slate-500'}`}>Upcoming ({upcoming.length})</button>
-              <button onClick={() => setTab('history')} className={`flex-1 py-3 text-sm font-medium ${tab === 'history' ? 'text-slate-900 border-b-2 border-slate-900' : 'text-slate-500'}`}>History ({past.length})</button>
-            </div>
-
-            {bookingsLoading ? <LoadingSpinner /> : (
-              tab === 'upcoming' ? (
-                upcoming.length === 0 ? (
-                  <div className="p-8 text-center">
-                    <div className="flex justify-center mb-2">
-                      <Lottie src={ANIMATIONS.empty} width={150} height={150} />
-                    </div>
-                    <p className="text-slate-600 font-medium">No upcoming lessons</p>
-                    <p className="text-sm text-slate-400 mt-1">Book a lesson to get started</p>
-                    <button onClick={() => onNavigate('tutors')} className="mt-4 px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-xl hover:bg-slate-800 transition-colors">Find a Tutor</button>
-                  </div>
-                ) : (
-                  <div className="divide-y divide-slate-100">
-                    {upcoming.map(b => (
-                      <div key={b.id} className="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
-                        <div className="flex items-center gap-3">
-                          <Avatar src={b.tutors?.profiles?.avatar_url} name={b.tutors?.profiles?.full_name} size={44} />
-                          <div>
-                            <div className="font-medium text-slate-900">{b.subject}</div>
-                            <div className="text-sm text-slate-500">{b.tutors?.profiles?.full_name} · {b.lesson_date} at {b.start_time?.slice(0,5)}</div>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className={`px-2 py-1 text-xs font-medium rounded-full ${b.status === 'confirmed' ? 'bg-[#eef4e7] text-[#4f7233]' : 'bg-amber-50 text-amber-700'}`}>{b.status}</span>
-                          {b.status === 'confirmed' && (
-                            <button onClick={() => onStartLesson(b)} className="px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-xl hover:bg-slate-800 transition-colors">
-                              Join
-                            </button>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )
-              ) : (
-                past.length === 0 ? (
-                  <div className="p-10 text-center text-slate-500">No completed lessons yet</div>
-                ) : (
-                  <div className="divide-y divide-slate-100">
-                    {past.map(b => (
-                      <div key={b.id} className="p-4 flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <Avatar src={b.tutors?.profiles?.avatar_url} name={b.tutors?.profiles?.full_name} size={44} />
-                          <div>
-                            <div className="font-medium">{b.subject}</div>
-                            <div className="text-sm text-slate-500">{b.tutors?.profiles?.full_name} • {b.lesson_date}</div>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          {b.review ? (
-                            <div className="flex items-center gap-1">
-                              <Stars rating={b.review.rating} size={12} />
-                              <span className="text-xs text-slate-500">Reviewed</span>
-                            </div>
-                          ) : (
-                            <button
-                              onClick={() => setReviewBooking(b)}
-                              className="px-3 py-1.5 text-xs font-medium text-[#4f7233] bg-[#eef4e7] rounded-xl hover:bg-[#ecedfa]"
-                            >
-                              Leave Review
-                            </button>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )
-              )
-            )}
-          </div>
-
-          <div className="space-y-4">
-            {/* My learners — the parent's roster */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm">
-              <h3 className="font-semibold text-slate-900 mb-1">My learners</h3>
-              <p className="text-xs text-slate-500 mb-3">Save who you book for — tap their name at checkout instead of retyping.</p>
+              {adding && (
+                <div className="addkid">
+                  <input className="inp" value={newChildName} onChange={e => setNewChildName(e.target.value)} onKeyDown={e => e.key === 'Enter' && addChild()} placeholder="Child's first name" aria-label="Child's first name" autoFocus />
+                  <select className="inp" value={newChildGrade} onChange={e => setNewChildGrade(e.target.value)} aria-label="Grade"><option value="">Grade</option>{CHILD_GRADES.map(g => <option key={g} value={g}>{g}</option>)}</select>
+                  <button type="button" className="btn" onClick={addChild} disabled={!newChildName.trim()}>Add</button>
+                  <button type="button" className="linkbtn" onClick={() => { setAdding(false); setNewChildName(''); }}>Cancel</button>
+                </div>
+              )}
               {children.length > 0 && (
-                <div className="space-y-2 mb-3">
-                  {children.map(c => (
-                    <div key={c.id} className="flex items-center justify-between bg-slate-50 rounded-xl px-3 py-2">
-                      <div className="text-sm">
-                        <span className="font-medium text-slate-900">{c.name}</span>
-                        {c.grade && <span className="text-slate-400 ml-2">{c.grade}</span>}
+                <div className="kids">
+                  {children.map(c => {
+                    const kp = kidProgress[c.id];
+                    return (
+                      <div key={c.id} className="kid">
+                        <div className="ktop">
+                          <div><b>{c.name}</b><span>{c.grade || 'Grade not set'}</span></div>
+                          <button type="button" className="kx" onClick={() => removeChild(c)} aria-label={`Remove ${c.name}`}><SiteIcon name="x" style={{ width: 16, height: 16 }} /></button>
+                        </div>
+                        <div className="kstat">
+                          {kp?.diagnosed
+                            ? <><span><SiteIcon name="check" style={{ width: 16, height: 16 }} />Check done</span><span>Level {getLevel(kp.totalXP).level}</span>{kp.streak > 0 && <span>{kp.streak}-day streak</span>}</>
+                            : <span>No check yet. It runs when you hand over.</span>}
+                        </div>
+                        <div className="kbtns">
+                          <button type="button" className="btn sm" onClick={() => onNavigate('handover')}><SiteIcon name="phone" style={{ width: 16, height: 16 }} />Hand over</button>
+                          <button type="button" className="btn line sm" onClick={() => onNavigate('family')}>Goals and messages</button>
+                        </div>
                       </div>
-                      <button onClick={() => removeChild(c.id)} aria-label={`Remove ${c.name}`}
-                        className="text-slate-300 hover:text-red-500 transition-colors">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" /></svg>
-                      </button>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
-              <div className="flex gap-2">
-                <input type="text" value={newChildName} onChange={e => setNewChildName(e.target.value)}
-                  onKeyDown={e => e.key === 'Enter' && addChild()} placeholder="Add a name"
-                  className="flex-1 min-w-0 px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30" />
-                <select value={newChildGrade} onChange={e => setNewChildGrade(e.target.value)}
-                  className="px-2 py-2 border border-slate-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30">
-                  <option value="">Grade</option>
-                  {CHILD_GRADES.map(g => <option key={g} value={g}>{g}</option>)}
-                </select>
-                <button onClick={addChild} disabled={!newChildName.trim()}
-                  className="px-3 py-2 bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 text-slate-900 text-sm font-medium rounded-xl transition-colors">Add</button>
+            </section>
+          )}
+
+          <section className="block">
+            <h2 className="display">{isStudentAccount ? 'Practise' : 'For you'}</h2>
+            <div className="tools">
+              <button type="button" className="tool darkc" onClick={() => onNavigate('ai')}>
+                <span className="kicker" style={{ opacity: .7 }}>Maths practice</span>
+                <b>{!started ? (accountType === 'parent' ? 'Try the practice yourself' : 'Find your level') : goalMet ? "Today's goal done" : streak > 0 ? `${streak}-day streak. Keep it going.` : 'Pick up where you left off'}</b>
+                {started && <span className="bar"><i style={{ width: `${goalPct}%` }} /></span>}
+                {started && <span className="small">{Math.min(todaysXP(aiProgress), DAILY_GOAL_XP)} of {DAILY_GOAL_XP} XP today · Level {getLevel(aiProgress.totalXP).level}</span>}
+                <span className="go">{!started ? 'Start' : 'Continue'} <SiteIcon name="arrow" style={{ width: 18, height: 18 }} /></span>
+              </button>
+              <button type="button" className="tool" onClick={() => onNavigate('writing')}>
+                <span className="kicker muted">Writing</span>
+                <b>Composition and insha</b>
+                <span className="small">Write it, get it marked out of 20 like a teacher would, then fix the exact lines.</span>
+                <span className="go">Write <SiteIcon name="arrow" style={{ width: 18, height: 18 }} /></span>
+              </button>
+            </div>
+          </section>
+
+          <section className="block">
+            <div className="bhead">
+              <h2 className="display">Lessons</h2>
+              <div className="seg" role="tablist" aria-label="Lessons">
+                <button type="button" role="tab" aria-selected={tab === 'upcoming'} onClick={() => setTab('upcoming')}>Upcoming ({upcoming.length})</button>
+                <button type="button" role="tab" aria-selected={tab === 'history'} onClick={() => setTab('history')}>Past ({past.length})</button>
               </div>
             </div>
+            {bookingsLoading ? <LoadingSpinner /> : tab === 'upcoming' ? (
+              upcoming.length === 0
+                ? <div className="empty-card"><p>No upcoming lessons.</p><button type="button" className="btn" onClick={() => onNavigate('tutors')}>Find a tutor</button></div>
+                : <div className="lessons">{upcoming.map(b => <LessonRow key={b.id} b={b} />)}</div>
+            ) : (
+              past.length === 0
+                ? <div className="empty-card"><p>No finished lessons yet.</p></div>
+                : <div className="lessons">{past.map(b => <LessonRow key={b.id} b={b} done />)}</div>
+            )}
+          </section>
 
-            {/* Referral Card */}
-            <div className="bg-slate-900 rounded-xl p-4 text-white">
-              <div className="flex items-center gap-2 mb-2">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-                </svg>
-                <h3 className="font-semibold">Refer & Earn</h3>
-              </div>
-              <p className="text-slate-300 text-sm mb-3">Get KSh 500 for each friend who books their first lesson</p>
-              <div className="bg-white/10 rounded-xl p-2 flex items-center gap-2">
-                <input
-                  type="text"
-                  value={`tutagora.com/r/${profile?.id?.slice(0,8) || 'invite'}`}
-                  readOnly
-                  className="flex-1 bg-transparent text-white text-xs outline-none"
-                />
-                <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(`https://tutagora.com/r/${profile?.id?.slice(0,8) || 'invite'}`);
-                    alert('Referral link copied!');
-                  }}
-                  className="px-3 py-1 bg-white text-slate-900 text-xs font-medium rounded"
-                >
-                  Copy
-                </button>
-              </div>
-            </div>
+          <section className="proof dstats" aria-label="Your numbers"><div className="in" style={{ padding: 0 }}>
+            <div className="s"><b>{past.length}</b><span>lessons done</span></div>
+            <div className="s"><b>{upcoming.length}</b><span>coming up</span></div>
+            <div className="s"><b>{uniqueTutors}</b><span>tutors</span></div>
+            <div className="s"><b>KSh {totalSpent.toLocaleString()}</b><span>spent</span></div>
+          </div></section>
+        </main>
 
-            <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm">
-              <h3 className="font-semibold text-slate-900 mb-3">Account</h3>
-              <div className="space-y-1">
-                <button onClick={() => setShowEditProfile(true)} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                  Edit Profile
-                </button>
-                <button onClick={() => setShowProgress(true)} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                  My Progress
-                </button>
-                {onOpenAccountSettings && <button onClick={onOpenAccountSettings} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573-1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                  Account & Data
-                </button>}
-                <button onClick={onLogout} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-red-600 hover:bg-red-50 rounded-xl transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
-                  Sign Out
-                </button>
-              </div>
+        <aside className="dside">
+          <div className="refer">
+            <div className="kicker" style={{ opacity: .7 }}>Refer and earn</div>
+            <b>KSh 500 for each friend who books their first lesson</b>
+            <div className="copy">
+              <input readOnly value={`tutagora.com/r/${profile?.id?.slice(0, 8) || 'invite'}`} aria-label="Your referral link" />
+              <button type="button" onClick={() => { navigator.clipboard?.writeText(`https://tutagora.com/r/${profile?.id?.slice(0, 8) || 'invite'}`); alert('Referral link copied.'); }}>Copy</button>
             </div>
           </div>
-        </div>
+          <div className="acct">
+            <div className="kicker muted" style={{ marginBottom: 6 }}>Account</div>
+            <button type="button" onClick={() => setShowEditProfile(true)}><SiteIcon name="pen" />Edit profile</button>
+            <button type="button" onClick={() => setShowProgress(true)}><SiteIcon name="chart" />Lesson progress</button>
+            {!isStudentAccount && <button type="button" onClick={() => onNavigate('family')}><SiteIcon name="target" />Goals, messages and Sunday report</button>}
+            {onOpenAccountSettings && <button type="button" onClick={onOpenAccountSettings}><SiteIcon name="gear" />Account and data</button>}
+            <button type="button" className="out" onClick={onLogout}><SiteIcon name="back" />Sign out</button>
+          </div>
+        </aside>
       </div>
+      <div style={{ height: 40 }} />
 
-      {/* Edit Profile Modal */}
       {showEditProfile && (
-        <StudentProfileEditor
-          profile={profile}
-          onClose={() => setShowEditProfile(false)}
-          onSave={() => { setShowEditProfile(false); onRefreshProfile && onRefreshProfile(); }}
-        />
+        <StudentProfileEditor profile={profile} onClose={() => setShowEditProfile(false)}
+          onSave={() => { setShowEditProfile(false); onRefreshProfile && onRefreshProfile(); }} />
       )}
-
-      {/* Review Modal */}
       {reviewBooking && (
-        <ReviewModal
-          booking={reviewBooking}
-          profile={profile}
-          onClose={() => setReviewBooking(null)}
-          onSubmit={() => { setReviewBooking(null); }}
-        />
+        <ReviewModal booking={reviewBooking} profile={profile} onClose={() => setReviewBooking(null)} onSubmit={() => { setReviewBooking(null); }} />
       )}
-
-      {/* Progress Modal */}
       {showProgress && (
-        <StudentProgressModal
-          profile={profile}
-          bookings={bookings}
-          onClose={() => setShowProgress(false)}
-        />
+        <StudentProgressModal profile={profile} bookings={bookings} onClose={() => setShowProgress(false)} />
       )}
     </div>
   );
@@ -7503,7 +7338,7 @@ function AppInner() {
     }
     return (
       <>
-        <StudentDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
+        <StudentDashboard profile={auth.profile} user={auth.user} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
         {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
         {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       </>
@@ -7512,7 +7347,7 @@ function AppInner() {
 
   return (
     <div className="min-h-screen">
-      {!IS_NATIVE && page !== 'home' && page !== 'tutors' && !selectedTutor && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
+      {!IS_NATIVE && page !== 'home' && page !== 'tutors' && page !== 'teach' && !selectedTutor && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
       {IS_NATIVE && <div className="h-2" />}
       
       {page === 'home' && !selectedTutor && !IS_NATIVE && <SiteHome onNavigate={handleNavigate} onSignIn={openSignIn} onStartCheck={startCheck} user={auth.user} tutors={publicTutors.tutors} />}
@@ -7523,7 +7358,8 @@ function AppInner() {
           <HorebHow user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} embedded />
         </>
       )}
-      {page === 'teach' && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {page === 'teach' && IS_NATIVE && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {page === 'teach' && !IS_NATIVE && <SiteTeach onNavigate={handleNavigate} onSignIn={openSignIn} user={auth.user} onApply={() => setShowAuth({ mode: 'register', role: 'tutor' })} />}
       {page === 'tutors' && !selectedTutor && IS_NATIVE && <TutorsPage onSelectTutor={setSelectedTutor} onBack={null} user={auth.user} setShowAuth={setShowAuth} />}
       {page === 'tutors' && !selectedTutor && !IS_NATIVE && (
         <TutorList tutors={publicTutors.tutors} loading={publicTutors.loading} user={auth.user}

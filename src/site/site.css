@@ -387,3 +387,73 @@
   .tg .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tg .mobilebook { display: flex; position: sticky; bottom: 0; background: #fff; border-top: 1px solid var(--line); padding: 12px 16px; justify-content: space-between; align-items: center; gap: 12px; z-index: 5; }
 }
+
+/* ---------- family dashboard ---------- */
+.tg.dashboard { background: var(--paper); }
+.tg .dhero { background: var(--brand); }
+.tg .dhero .in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 30px; align-items: center; padding-block: 34px 44px; }
+.tg .dhero h1 { font-size: clamp(40px, 6vw, 72px); margin-top: 8px; }
+.tg .dhero .lead { font-size: 19px; font-weight: 500; margin: 12px 0 0; }
+.tg .found.next { transform: rotate(-1deg); }
+.tg .found .pill { background: rgba(255,255,255,.14); color: #fff; }
+.tg .dgrid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 36px; align-items: start; padding-top: 36px; }
+.tg .block { margin-bottom: 40px; }
+.tg .block h2 { font-size: clamp(28px, 3.4vw, 38px); margin-bottom: 16px; }
+.tg .bhead { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.tg .bhead h2 { margin: 0; }
+.tg .empty-card { background: var(--gray); border-radius: 8px; padding: 22px; }
+.tg .empty-card p { margin: 0 0 14px; color: var(--ink2); }
+.tg .addkid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) auto auto; gap: 8px; align-items: center; margin-bottom: 14px; }
+.tg .kids { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.tg .kid { border: 2px solid var(--ink); border-radius: 8px; padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+.tg .ktop { display: flex; justify-content: space-between; gap: 8px; }
+.tg .ktop b { display: block; font-family: var(--display); font-size: 26px; letter-spacing: -.02em; line-height: 1.05; }
+.tg .ktop span { color: var(--mute); font-weight: 700; font-size: 14px; }
+.tg .kx { background: none; border: 0; cursor: pointer; color: var(--mute); padding: 4px; height: fit-content; }
+.tg .kstat { display: flex; flex-wrap: wrap; gap: 6px; }
+.tg .kstat span { display: inline-flex; gap: 5px; align-items: center; background: var(--gray); border-radius: 4px; padding: 4px 8px; font-weight: 700; font-size: 13.5px; }
+.tg .kbtns { display: flex; gap: 8px; flex-wrap: wrap; }
+.tg .tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.tg .tool { text-align: left; border: 0; border-radius: 8px; padding: 20px; background: var(--gray); cursor: pointer; display: flex; flex-direction: column; gap: 8px; min-height: 190px; }
+.tg .tool b { font-family: var(--display); font-size: 24px; letter-spacing: -.02em; line-height: 1.1; }
+.tg .tool .small { font-size: 14px; font-weight: 600; opacity: .8; }
+.tg .tool .go { margin-top: auto; font-weight: 800; display: inline-flex; gap: 6px; align-items: center; }
+.tg .tool.darkc { background: var(--ink); color: #fff; }
+.tg .tool .bar { height: 8px; border-radius: 4px; background: rgba(255,255,255,.18); overflow: hidden; }
+.tg .tool .bar i { display: block; height: 100%; background: var(--brand); }
+.tg .seg { display: flex; gap: 4px; background: var(--gray); border-radius: 8px; padding: 4px; }
+.tg .seg button { border: 0; background: transparent; border-radius: 6px; padding: 7px 12px; font-weight: 800; cursor: pointer; font-size: 14px; }
+.tg .seg button[aria-selected="true"] { background: var(--ink); color: #fff; }
+.tg .lessons { border-top: 2px solid var(--ink); }
+.tg .lrow { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.tg .lwho { display: flex; gap: 12px; align-items: center; min-width: 0; }
+.tg .lwho b { display: block; }
+.tg .lwho span { color: var(--mute); font-weight: 600; font-size: 14.5px; }
+.tg .lact { display: flex; gap: 8px; align-items: center; }
+.tg .pill { display: inline-block; border-radius: 4px; padding: 4px 8px; font-weight: 800; font-size: 13px; background: var(--gray); color: var(--ink2); }
+.tg .pill.ok { background: var(--good-soft); color: var(--good); }
+.tg .dstats { border: 1px solid var(--line); border-radius: 8px; }
+.tg .dstats .in { max-width: none; }
+.tg .dstats b { font-size: 30px; }
+.tg .dside { display: grid; gap: 14px; position: sticky; top: 16px; }
+.tg .refer { background: var(--ink); color: #fff; border-radius: 8px; padding: 20px; }
+.tg .refer b { display: block; font-family: var(--display); font-size: 22px; letter-spacing: -.02em; line-height: 1.15; margin: 8px 0 14px; }
+.tg .refer .copy { display: flex; gap: 6px; background: rgba(255,255,255,.1); border-radius: 6px; padding: 6px; }
+.tg .refer .copy input { flex: 1; min-width: 0; background: transparent; border: 0; color: #fff; font-size: 13px; }
+.tg .refer .copy button { background: #fff; color: var(--ink); border: 0; border-radius: 4px; padding: 6px 10px; font-weight: 800; cursor: pointer; }
+.tg .acct { border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: grid; gap: 2px; }
+.tg .acct button { display: flex; gap: 10px; align-items: center; background: none; border: 0; text-align: left; padding: 10px 6px; border-radius: 6px; font-weight: 700; cursor: pointer; }
+.tg .acct button:hover { background: var(--gray); }
+.tg .acct .i { width: 18px; height: 18px; }
+.tg .acct .out { color: #b3261e; }
+@media (max-width: 1000px) {
+  .tg .dhero .in, .tg .dgrid { grid-template-columns: minmax(0, 1fr); }
+  .tg .dside { position: static; }
+}
+@media (max-width: 600px) {
+  .tg .tools { grid-template-columns: minmax(0, 1fr); }
+  .tg .tool { min-height: 0; }
+  .tg .addkid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .tg .dstats b { font-size: 22px; }
+  .tg .dhero .in { padding-block: 22px 30px; }
+}
