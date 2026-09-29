@@ -459,6 +459,15 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
         await supabase.from('tutors').delete().eq('user_id', user.id);
       }
 
+      // Delete the whiteboard notes from this family's lessons.
+      try {
+        const { data: myLessons } = await supabase.from('bookings').select('id').eq('student_id', user.id);
+        for (const { id } of myLessons || []) {
+          const { data: pages } = await supabase.storage.from('lesson-notes').list(id);
+          if (pages?.length) await supabase.storage.from('lesson-notes').remove(pages.map(f => `${id}/${f.name}`));
+        }
+      } catch { /* notes are optional; carry on deleting the rest */ }
+
       // Delete avatar
       const { data: avatarFiles } = await supabase.storage.from('avatars').list(user.id);
       if (avatarFiles?.length) {
