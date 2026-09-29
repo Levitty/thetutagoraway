@@ -904,6 +904,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     updatedSp.correct = newCorrect;
     if (shouldMaster && !sp.mastered) {
       updatedSp.mastered = true;
+      // When it was mastered: the weekly parent report lists this week's.
+      updatedSp.masteredAt = new Date().toISOString();
       // Keep the spaced-repetition schedule the FIRe model just computed; only
       // raise it to the mastery floor if it's lower. (Previously this overwrote
       // repNum with a fixed 2, throwing away the review interval at mastery.)

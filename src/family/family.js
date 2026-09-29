@@ -94,3 +94,56 @@ export const learnerPracticeDays = async (parentId, learnerId) => {
     return local;
   }
 };
+
+// ---- weekly report (see supabase/functions/weekly-report) -------------------
+
+export const getReportSettings = async (parentId) => {
+  const { data, error } = await supabase.from('report_settings')
+    .select('parent_id, phone, channel, active, opted_in_at').eq('parent_id', parentId).maybeSingle();
+  if (error) throw error;
+  return data || null;
+};
+
+export const saveReportSettings = async (parentId, { phone, channel, active = true }) => {
+  const { data, error } = await supabase.from('report_settings')
+    .upsert({ parent_id: parentId, phone, channel, active, updated_at: new Date().toISOString() }, { onConflict: 'parent_id' })
+    .select('parent_id, phone, channel, active, opted_in_at').single();
+  if (error) throw error;
+  return data;
+};
+
+export const recentReports = async (parentId) => {
+  const { data, error } = await supabase.from('weekly_reports')
+    .select('id, learner_id, week_start, status, channel, sent_at, created_at')
+    .eq('parent_id', parentId).order('week_start', { ascending: false }).limit(8);
+  if (error) throw error;
+  return data || [];
+};
+
+// Sends this week's reports to the parent's own number now.
+export const sendTestReport = async () => {
+  const { data, error } = await supabase.functions.invoke('weekly-report', { body: { mode: 'test' } });
+  if (error) {
+    let msg = error.message || 'Sending failed';
+    try { const j = await error.context?.json(); if (j?.error) msg = j.error; } catch { /* no body */ }
+    throw new Error(msg);
+  }
+  return data;
+};
+
+// Everything the report needs for one child, for the in-app preview.
+export const learnerReportData = async (parentId, learnerId) => {
+  const key = `${parentId}_c${learnerId}`;
+  const local = loadLocalProgress(key);
+  const [{ data: prog }, { data: essays }] = await Promise.all([
+    supabase.from('ai_tutor_progress').select('progress').eq('profile_key', key).maybeSingle(),
+    supabase.from('compositions').select('score, created_at').eq('user_id', parentId).eq('learner_id', learnerId)
+      .order('created_at', { ascending: false }).limit(20),
+  ]);
+  const cloud = prog?.progress || {};
+  return {
+    practiceDays: [...new Set([...(local?.practiceDays || []), ...(cloud.practiceDays || [])])],
+    skills: { ...(cloud.skills || {}), ...(local?.skills || {}) },
+    essays: essays || [],
+  };
+};
