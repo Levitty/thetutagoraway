@@ -14,23 +14,25 @@ import { generateProblem, generateWorkedExample } from './problemGenerators.js';
 // Cambridge skill id  ->  existing math skill id (structured or legacy)
 export const CAMBRIDGE_MAP = {
   // ---- Primary ----
-  CP_COUNTING: 'G5_PLACE_VALUE',
-  CP_PLACE_VALUE: 'G6_PLACE_VALUE',          // structured place-value chart
-  CP_ADD_SUB: 'G5_ADDITION',
-  CP_MULTIPLY: 'G5_MULTIPLICATION',          // structured array model
+  // Stages 1-4 use the Kenyan lower-primary content of the same age (the audit
+  // found Stage 1-2 children getting Grade 5 questions). Arrays alternate.
+  CP_COUNTING: 'G1_COUNTING',
+  CP_PLACE_VALUE: 'G3_COUNTING',             // numbers to 1000 and digit values
+  CP_ADD_SUB: ['G2_ADD', 'G2_SUB'],
+  CP_MULTIPLY: 'G3_MULTIPLY',
   CP_DIVIDE: 'G5_DIVISION',                  // structured array model
-  CP_FACTORS: 'G7_PRIMES',                   // structured prime/composite
+  CP_FACTORS: 'G5_FACTORS',
   CP_NEGATIVES: 'G6_INTEGERS_INTRO',         // structured number line
-  CP_FRACTIONS: 'G5_FRACTIONS_INTRO',        // structured shade/place
+  CP_FRACTIONS: 'G3_FRACTIONS',
   CP_FRACTIONS_OPS: 'G6_FRACTIONS_ADD',      // structured (escalates to bars)
   CP_FRACTIONS_MD: 'G6_FRACTIONS_MUL',       // structured (area model)
   CP_DECIMALS: 'G5_DECIMALS_INTRO',          // structured decimal grid
   CP_DECIMALS_OPS: 'G5_DECIMALS_ADD',        // structured
   CP_PERCENT: 'G6_PERCENTAGES_INTRO',        // structured (100-grid)
-  CP_SHAPES: 'G5_TRIANGLES_INTRO',
-  CP_ANGLES: 'G6_TRIANGLE_PROPERTIES',       // structured angle sum
+  CP_SHAPES: 'G2_SHAPES',
+  CP_ANGLES: 'G4_ANGLES',
   CP_PERIMETER_AREA: 'G6_AREA_RECT',         // structured
-  CP_MEASURE: 'G5_LENGTH',
+  CP_MEASURE: ['G3_LENGTH', 'G3_MASS', 'G3_TIME'],
   CP_DATA: 'G5_BAR_GRAPHS',
   CP_AVERAGES: 'G6_MEAN',                    // structured
 
@@ -86,8 +88,11 @@ export const CAMBRIDGE_MAP = {
   IG_CUMULATIVE: 'G8_CUMULATIVE_FREQ',
 };
 
-export const cambridgeGenerate = (skillId, opts = {}) =>
-  generateProblem(CAMBRIDGE_MAP[skillId] || skillId, opts);
+const target = (skillId) => {
+  const t = CAMBRIDGE_MAP[skillId] || skillId;
+  return Array.isArray(t) ? t[Math.floor(Math.random() * t.length)] : t;
+};
 
-export const cambridgeGenerateExample = (skillId) =>
-  generateWorkedExample(CAMBRIDGE_MAP[skillId] || skillId);
+export const cambridgeGenerate = (skillId, opts = {}) => generateProblem(target(skillId), opts);
+
+export const cambridgeGenerateExample = (skillId) => generateWorkedExample(target(skillId));

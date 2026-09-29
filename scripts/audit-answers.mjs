@@ -59,6 +59,12 @@ function kidVariants(p) {
   if (/^[a-z]/i.test(a) && !/\d/.test(a)) {                 // word answers
     add(a[0].toUpperCase() + a.slice(1), 'Capital letter');
     add(a.toUpperCase(), 'ALL CAPS');
+    if (/^[a-z]+(-[a-z]+)?$/i.test(a)) {
+      if (!/angled/.test(a) && /angle|acute|obtuse|reflex|right|straight/.test(q + a)) add(`an ${a} angle`.replace('an r', 'a r').replace('an s', 'a s'), 'with "an ... angle"');
+      if (/lines?\b/i.test(q)) add(`${a} lines`, 'with "lines"');
+      add(`It is ${a}`, '"It is ..."');
+      if (a.includes('-')) add(a.replace('-', ' '), 'hyphen as space');
+    }
   }
   const n = mathValue(a);
   const isInt = /^-?\d+$/.test(a);

@@ -50,6 +50,48 @@ const makeWorkedExample = (problem, steps, solution, opts = {}) => ({
 
 // ==================== GENERATORS ====================
 
+// ---- lines, capacity (found by scripts/audit-answers.mjs: these skills had
+//      only 2-3 questions, and capacity asked about grams) ----
+const LINES_G5 = [
+  { q: 'Lines that never meet, however far they go, are called ___ lines.', a: 'parallel' },
+  { q: 'Lines that meet at a right angle are called ___ lines.', a: 'perpendicular' },
+  { q: 'Lines that cross each other are called ___ lines.', a: 'intersecting', acc: ['intersecting', 'crossing'] },
+  { q: 'The two rails of a railway line are parallel or perpendicular?', a: 'parallel' },
+  { q: 'At the corner of an exercise book page, the two edges meet at 90°. Are they parallel or perpendicular?', a: 'perpendicular' },
+  { q: 'In the letter T, the two lines are parallel or perpendicular?', a: 'perpendicular' },
+  { q: 'In the letter H, the two upright lines are parallel or perpendicular?', a: 'parallel' },
+  { q: 'Two lines cross, but not at a right angle. Are they parallel, perpendicular or intersecting?', a: 'intersecting' },
+  { q: 'A line that goes straight across, like the horizon, is horizontal or vertical?', a: 'horizontal' },
+  { q: 'A line that goes straight up and down, like a flag pole, is horizontal or vertical?', a: 'vertical' },
+  { q: 'Perpendicular lines meet at an angle of how many degrees?', a: '90', acc: ['90', '90°', 'right angle'] },
+  { q: 'Where two perpendicular lines cross, how many right angles are made?', a: '4' },
+];
+const LINES_G6 = [
+  { q: 'The opposite sides of a rectangle are parallel or perpendicular?', a: 'parallel' },
+  { q: 'Two sides of a square that meet at a corner are parallel or perpendicular?', a: 'perpendicular' },
+  { q: 'How many pairs of parallel sides does a rectangle have?', a: '2' },
+  { q: 'How many pairs of parallel sides does a trapezium have?', a: '1' },
+  { q: 'How many pairs of parallel sides does a parallelogram have?', a: '2' },
+  { q: 'A horizontal line and a vertical line meet. Are they parallel or perpendicular?', a: 'perpendicular' },
+];
+const linesQuestion = (bank) => {
+  const t = pick(bank);
+  return { question: t.q, answer: t.a, ...(t.acc ? { accepts: t.acc } : {}),
+    hint: 'Parallel lines run side by side and never meet (like rails). Perpendicular lines cross at a right angle (like a + sign).' };
+};
+const capacityQuestion = (wordProblems) => pick([
+  () => { const l = rand(1, 9) + pick([0, 0.25, 0.5, 0.75]); return { question: `How many millilitres are in ${l} litres?`, answer: String(Math.round(l * 1000)), hint: '1 litre = 1000 ml, so multiply the litres by 1000.' }; },
+  () => { const ml = rand(1, 36) * 250; return { question: `How many litres are in ${ml.toLocaleString('en-US')} ml?`, answer: String(ml / 1000), hint: '1000 ml = 1 litre, so divide the millilitres by 1000.' }; },
+  () => { const l = rand(1, 4), ml = rand(1, 9) * 100 + pick([0, 50]); return { question: `Write ${l} l ${ml} ml in millilitres.`, answer: String(l * 1000 + ml), hint: `${l} l = ${l * 1000} ml. Then add the ${ml} ml.` }; },
+  ...(wordProblems ? [
+    () => { const jc = pick([5, 10, 20]), b = pick([250, 500]); return { question: `A ${jc} litre jerrycan of water fills how many ${b} ml bottles?`, answer: String(jc * 1000 / b), hint: `${jc} litres = ${jc * 1000} ml. How many ${b} ml bottles is that?` }; },
+    () => { const d = pick([250, 500, 750]), n = pick([4, 8, 12]); return { question: `Mama uses ${d} ml of milk a day. How many litres does she use in ${n} days?`, answer: String(d * n / 1000), hint: `${d} ml × ${n} = ${d * n} ml. Divide by 1000 for litres.` }; },
+    () => { const t = rand(2, 9) * 100, u = rand(20, 80); return { question: `A tank holds ${t} litres. ${u} litres are used on Monday and ${u + 15} litres on Tuesday. How many litres are left?`, answer: String(t - u - (u + 15)), hint: 'Take both amounts away from what the tank held.' }; },
+  ] : [
+    () => { const c = pick([250, 500]), n = rand(2, 8); return { question: `A cup holds ${c} ml. How many millilitres are in ${n} cups?`, answer: String(c * n), hint: `Multiply ${c} by ${n}.` }; },
+  ]),
+])();
+
 const generators = {
   // ======================== GRADE 5 ========================
 
@@ -189,43 +231,55 @@ const generators = {
   },
 
   G5_TRIANGLES_INTRO: () => {
-    const types = [
-      { desc: 'all sides equal', answer: 'equilateral' },
-      { desc: 'two sides equal', answer: 'isosceles' },
-      { desc: 'no sides equal', answer: 'scalene' },
-    ];
-    const t = pick(types);
-    return { question: `A triangle with ${t.desc} is called...?`, answer: t.answer,
-      hint: 'Equilateral = all sides equal · isosceles = two sides equal · scalene = no sides equal.' };
+    const kind = rand(0, 5);
+    if (kind === 0) { const a = rand(3, 12); return { question: `A triangle has sides ${a} cm, ${a} cm and ${a} cm. What type of triangle is it?`, answer: 'equilateral', hint: 'All three sides are the same length.' }; }
+    if (kind === 1) { const a = rand(5, 12), b = rand(3, a + 3 === a ? 4 : a - 1); return { question: `A triangle has sides ${a} cm, ${a} cm and ${b} cm. What type of triangle is it?`, answer: 'isosceles', hint: 'Look for two sides that are the same length.' }; }
+    if (kind === 2) { const a = rand(4, 7), b = a + rand(1, 2), c = b + rand(1, 2); return { question: `A triangle has sides ${a} cm, ${b} cm and ${c} cm. What type of triangle is it?`, answer: 'scalene', hint: 'Are any two sides the same length?' }; }
+    if (kind === 3) { const a = rand(20, 70); return { question: `A triangle has angles of 90°, ${a}° and ${90 - a}°. Is it acute-angled, right-angled or obtuse-angled?`, answer: 'right-angled', accepts: ['right-angled', 'right angled', 'right'], hint: 'One of the angles is exactly 90°.' }; }
+    if (kind === 4) { const a = rand(100, 140), b = rand(10, 180 - a - 10); return { question: `A triangle has angles of ${a}°, ${b}° and ${180 - a - b}°. Is it acute-angled, right-angled or obtuse-angled?`, answer: 'obtuse-angled', accepts: ['obtuse-angled', 'obtuse angled', 'obtuse'], hint: 'Is one angle bigger than 90°?' }; }
+    const a = rand(50, 80), b = rand(Math.max(20, 91 - a), 80); return { question: `A triangle has angles of ${a}°, ${b}° and ${180 - a - b}°. Is it acute-angled, right-angled or obtuse-angled?`, answer: 'acute-angled', accepts: ['acute-angled', 'acute angled', 'acute'], hint: 'Are all three angles smaller than 90°?' };
   },
 
-  G5_LINES: () => {
-    const q = pick([
-      { question: 'Lines that never meet are called...?', answer: 'parallel' },
-      { question: 'Lines that meet at 90° are called...?', answer: 'perpendicular' },
-    ]);
-    return { ...q, hint: 'Parallel lines run side by side and never meet (like rails). Perpendicular lines cross at a right angle (like a + sign).' };
-  },
+  G5_LINES: () => linesQuestion(LINES_G5),
+  G6_LINES: () => linesQuestion([...LINES_G5, ...LINES_G6]),
 
-  G5_LENGTH: () => {
-    const convs = [
-      { q: 'How many cm in 3.5 meters?', a: '350', h: '1 metre = 100 cm, so multiply the metres by 100.' },
-      { q: 'How many meters in 4500 cm?', a: '45', h: '100 cm = 1 metre, so divide the cm by 100.' },
-      { q: 'How many mm in 2.5 cm?', a: '25', h: '1 cm = 10 mm, so multiply the cm by 10.' },
-      { q: 'How many km in 7000 meters?', a: '7', h: '1000 m = 1 km, so divide the metres by 1000.' },
-    ];
-    const c = pick(convs);
-    return { question: c.q, answer: c.a, hint: c.h };
-  },
+  G5_LENGTH: () => pick([
+    () => { const m = rand(2, 9) + pick([0, 0.5]); return { question: `How many centimetres are in ${m} m?`, answer: String(Math.round(m * 100)), hint: '1 metre = 100 cm, so multiply the metres by 100.' }; },
+    () => { const m = rand(2, 60); return { question: `How many metres are in ${m * 100} cm?`, answer: String(m), hint: '100 cm = 1 metre, so divide the centimetres by 100.' }; },
+    () => { const c = rand(2, 30) + pick([0, 0.5]); return { question: `How many millimetres are in ${c} cm?`, answer: String(Math.round(c * 10)), hint: '1 cm = 10 mm, so multiply the centimetres by 10.' }; },
+    () => { const k = rand(2, 15); return { question: `How many kilometres are in ${(k * 1000).toLocaleString('en-US')} m?`, answer: String(k), hint: '1000 m = 1 km, so divide the metres by 1000.' }; },
+    () => { const m = rand(1, 5), c = rand(5, 95); return { question: `Write ${m} m ${c} cm in centimetres.`, answer: String(m * 100 + c), hint: `${m} m = ${m * 100} cm. Then add the ${c} cm.` }; },
+    () => { const a = rand(2, 9) * 100 + rand(1, 9) * 10, b = rand(2, 9) * 100; return { question: `Wanjiru walked ${a} m to the shop and ${b} m to school. How many metres did she walk altogether?`, answer: String(a + b), hint: 'Add the two distances.' }; },
+  ])(),
 
-  G5_MASS: () => {
-    const convs = [
-      { q: 'How many grams in 2.5 kg?', a: '2500', h: '1 kg = 1000 g, so multiply the kg by 1000.' },
-      { q: 'How many kg in 4000 g?', a: '4', h: '1000 g = 1 kg, so divide the grams by 1000.' },
-    ];
-    const c = pick(convs);
-    return { question: c.q, answer: c.a, hint: c.h };
-  },
+  G4_MASS: () => pick([
+    () => { const it = pick([['a bag of maize', 'kilograms'], ['a sack of potatoes', 'kilograms'], ['a child', 'kilograms'], ['a pencil', 'grams'], ['a sweet', 'grams'], ['an egg', 'grams'], ['a jerrycan of water', 'litres'], ['a cup of tea', 'millilitres'], ['a spoon of medicine', 'millilitres'], ['a water tank', 'litres']]);
+      const unitsFor = /litres|millilitres/.test(it[1]) ? 'litres or millilitres' : 'grams or kilograms';
+      const acc = { kilograms: ['kilograms', 'kilogram', 'kg'], grams: ['grams', 'gram', 'g'], litres: ['litres', 'litre', 'liters', 'l'], millilitres: ['millilitres', 'millilitre', 'milliliters', 'ml'] }[it[1]];
+      return { question: `Would you measure ${it[0]} in ${unitsFor}?`, answer: it[1], accepts: acc, hint: 'Small, light things use the small unit. Big, heavy things use the big unit.' }; },
+    () => { const k = rand(2, 9); return { question: `How many grams are in ${k} kg?`, answer: String(k * 1000), hint: '1 kg = 1000 g.' }; },
+    () => { const l = rand(2, 9); return { question: `How many millilitres are in ${l} litres?`, answer: String(l * 1000), hint: '1 litre = 1000 ml.' }; },
+    () => { const k = rand(2, 9); return { question: `How many kilograms are in ${(k * 1000).toLocaleString('en-US')} g?`, answer: String(k), hint: '1000 g = 1 kg.' }; },
+  ])(),
+
+  G5_MASS: () => pick([
+    () => { const k = rand(1, 9) + pick([0, 0.25, 0.5, 0.75]); return { question: `How many grams are in ${k} kg?`, answer: String(Math.round(k * 1000)), hint: '1 kg = 1000 g, so multiply the kilograms by 1000.' }; },
+    () => { const g = rand(1, 36) * 250; return { question: `How many kilograms are in ${g.toLocaleString('en-US')} g?`, answer: String(g / 1000), hint: '1000 g = 1 kg, so divide the grams by 1000.' }; },
+    () => { const k = rand(1, 4), g = rand(1, 9) * 100 + pick([0, 50]); return { question: `Write ${k} kg ${g} g in grams.`, answer: String(k * 1000 + g), hint: `${k} kg = ${k * 1000} g. Then add the ${g} g.` }; },
+    () => { const pk = pick([250, 500]), k = rand(2, 5); return { question: `A packet of sugar weighs ${pk} g. How many packets make ${k} kg?`, answer: String(k * 1000 / pk), hint: `${k} kg = ${k * 1000} g. How many ${pk} g packets fit into that?` }; },
+    () => { const a = rand(2, 6) * 250, b = rand(2, 6) * 250; return { question: `Otieno bought ${a} g of rice and ${b} g of beans. What is the total mass in grams?`, answer: String(a + b), hint: 'Add the two masses.' }; },
+  ])(),
+
+  G5_CAPACITY: () => capacityQuestion(false),
+  G6_CAPACITY: () => capacityQuestion(true),
+
+  G6_MASS: () => pick([
+    () => { const t = rand(1, 9) + pick([0, 0.5, 0.25]); return { question: `How many kilograms are in ${t} tonnes?`, answer: String(Math.round(t * 1000)), hint: '1 tonne = 1000 kg.' }; },
+    () => { const kg = rand(1, 30) * 500; return { question: `How many tonnes are in ${kg.toLocaleString('en-US')} kg?`, answer: String(kg / 1000), hint: '1000 kg = 1 tonne, so divide by 1000.' }; },
+    () => { const bag = pick([50, 90, 100]), n = rand(10, 60); const t = bag * n / 1000; return { question: `A lorry carries ${t} tonnes of maize in ${bag} kg bags. How many bags is that?`, answer: String(n), hint: `${t} tonnes = ${bag * n} kg. Divide by ${bag}.` }; },
+    () => { const bag = pick([2, 5]), n = rand(3, 12), pr = pick([150, 180, 200, 250]); return { question: `Flour costs KSh ${pr} for a ${bag} kg packet. How much do ${n * bag} kg cost?`, answer: String(n * pr), hint: `${n * bag} kg is ${n} packets of ${bag} kg.` }; },
+    () => { const a = rand(1, 4), b = rand(1, 9) * 100, c = rand(1, 9) * 100; return { question: `A basket holds ${a} kg ${b} g of mangoes. ${c} g more are added. What is the total in grams?`, answer: String(a * 1000 + b + c), hint: `Change ${a} kg ${b} g into grams first.` }; },
+  ])(),
 
   G5_TIME: () => {
     const h1 = rand(8, 11), m1 = rand(0, 3) * 15;
@@ -425,9 +479,13 @@ const generators = {
   },
 
   G6_SYMMETRY: () => {
-    const shapes = [{ s: 'square', l: 4 }, { s: 'equilateral triangle', l: 3 }, { s: 'rectangle', l: 2 }, { s: 'circle', l: 'infinite' }, { s: 'isosceles triangle', l: 1 }];
+    const n = rand(5, 12);
+    const shapes = [{ s: 'square', l: 4 }, { s: 'equilateral triangle', l: 3 }, { s: 'rectangle', l: 2 }, { s: 'circle', l: 'infinite' }, { s: 'isosceles triangle', l: 1 },
+      { s: 'scalene triangle', l: 0 }, { s: 'rhombus', l: 2 }, { s: 'kite', l: 1 }, { s: 'parallelogram', l: 0 }, { s: 'regular pentagon', l: 5 }, { s: 'regular hexagon', l: 6 }, { s: 'regular octagon', l: 8 },
+      { s: `regular polygon with ${n} sides`, l: n }];
     const shape = pick(shapes);
-    return { question: `How many lines of symmetry does a ${shape.s} have?`, answer: shape.l.toString(),
+    const accepts = shape.l === 'infinite' ? ['infinite', 'infinitely many', 'infinity', 'unlimited', 'countless', 'many', 'endless', '∞'] : shape.l === 0 ? ['0', 'none', 'zero', 'no lines'] : undefined;
+    return { question: `How many lines of symmetry does a ${shape.s} have?`, answer: shape.l.toString(), ...(accepts ? { accepts } : {}),
       hint: 'A line of symmetry folds the shape onto itself exactly. Try folding it in your head — count every fold that works.' };
   },
 
@@ -672,15 +730,15 @@ const generators = {
       : { question: `Right triangle: hypotenuse ${c}, one leg ${a}. Find the other leg.`, answer: b.toString(), hint: 'b² = c² - a²' };
   },
 
-  G7_LENGTH_CONV: () => {
-    const convs = [
-      { q: 'How many cm in 2.5 m?', a: '250', h: '1 m = 100 cm, so multiply by 100.' },
-      { q: 'How many m in 450 cm?', a: '4.5', h: '100 cm = 1 m, so divide by 100.' },
-      { q: 'How many km in 3500 m?', a: '3.5', h: '1000 m = 1 km, so divide by 1000.' },
-    ];
-    const c = pick(convs);
-    return { question: c.q, answer: c.a, hint: c.h };
-  },
+  G7_LENGTH_CONV: () => pick([
+    () => { const m = rand(11, 95) / 10; return { question: `How many centimetres are in ${m} m?`, answer: String(Math.round(m * 100)), hint: '1 m = 100 cm, so multiply by 100.' }; },
+    () => { const c = rand(15, 995); return { question: `How many metres are in ${c} cm?`, answer: String(c / 100), hint: '100 cm = 1 m, so divide by 100.' }; },
+    () => { const m = rand(1050, 9950); return { question: `How many kilometres are in ${m.toLocaleString('en-US')} m?`, answer: String(m / 1000), hint: '1000 m = 1 km, so divide by 1000.' }; },
+    () => { const k = rand(5, 95) / 100; return { question: `How many metres are in ${k} km?`, answer: String(Math.round(k * 1000)), hint: '1 km = 1000 m, so multiply by 1000.' }; },
+    () => { const m = rand(12, 48) / 10; return { question: `How many millimetres are in ${m} m?`, answer: String(Math.round(m * 1000)), hint: '1 m = 1000 mm (100 cm, and 10 mm in each cm).' }; },
+    () => { const k = rand(2, 9) / 4; return { question: `How many centimetres are in ${k} km?`, answer: String(Math.round(k * 100000)), hint: '1 km = 1000 m = 100,000 cm.' }; },
+    () => { const lap = pick([200, 400]), n = rand(3, 12); return { question: `An athlete runs ${n} laps of a ${lap} m track. How many kilometres is that?`, answer: String(n * lap / 1000), hint: `${n} × ${lap} m = ${n * lap} m. Divide by 1000 for km.` }; },
+  ])(),
 
   G7_PERIMETER: () => {
     const l = rand(5, 15), w = rand(3, 10);
@@ -897,9 +955,19 @@ const generators = {
   },
 
   G8_CONGRUENCE: () => {
-    const conditions = ['SSS', 'SAS', 'ASA', 'RHS'];
-    return { question: `Which congruence condition: two sides and the included angle are equal?`, answer: 'SAS',
-      hint: 'SSS, SAS, ASA, RHS' };
+    const c = pick([
+      { d: 'all three sides of one triangle are equal to the three sides of the other', a: 'SSS' },
+      { d: 'two sides and the angle between them are equal', a: 'SAS' },
+      { d: 'two angles and the side between them are equal', a: 'ASA' },
+      { d: 'two angles and a side not between them are equal', a: 'AAS' },
+      { d: 'both have a right angle, and the hypotenuse and one other side are equal', a: 'RHS' },
+      { d: null, a: 'AAA' },
+    ]);
+    if (!c.d) return { question: 'Which of these does NOT prove two triangles are congruent: SSS, SAS, AAA or RHS?', answer: 'AAA',
+      hint: 'Equal angles give the same SHAPE, but the triangles could be different sizes.' };
+    return { question: `Two triangles are congruent because ${c.d}. Which condition is this: SSS, SAS, ASA, AAS or RHS?`, answer: c.a,
+      accepts: c.a === 'ASA' ? ['ASA', 'AAS'] : c.a === 'AAS' ? ['AAS', 'ASA'] : [c.a],
+      hint: 'S stands for a side, A for an angle, R for a right angle, H for the hypotenuse.' };
   },
 
   G8_SIMILARITY: () => {

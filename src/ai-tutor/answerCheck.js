@@ -89,6 +89,18 @@ export function checkAnswerMatch(userAnswer, problem) {
   // 1) Exact match after normalization (handles "x=-3", algebra, words).
   if (accepts.some(a => normalizedUser === normalizeMath(a))) return true;
 
+  // 1b) Word answers, the way children phrase them: "parallel lines",
+  //     "an obtuse angle", "It is scalene", "Right angled" for "right-angled".
+  const wordy = (t) => t.toString().trim().toLowerCase().replace(/[-_]/g, ' ').replace(/[.!]+$/, '')
+    .replace(/^(it is|it's|its|they are|they're|this is|the answer is|answer:?)\s+/, '')
+    .replace(/^(a|an|the)\s+/, '')
+    .replace(/\s+(lines?|angles?|angled|triangles?|shapes?|polygons?)$/, '')
+    .replace(/\s+/g, '');
+  if (/^[a-z][a-z\s'-]*$/i.test(userAnswer.toString().trim())) {
+    const w = wordy(userAnswer);
+    if (w && accepts.some(a => /^[a-z][a-z\s'-]*$/i.test(String(a).trim()) && wordy(a) === w)) return true;
+  }
+
   // 2) Single-number match by value — covers integers, decimals, fractions,
   //    mixed numbers, %, and units. A typed DECIMAL is graded at the key's
   //    displayed precision (3.14159 for a key of 3.14). A typed fraction, mixed

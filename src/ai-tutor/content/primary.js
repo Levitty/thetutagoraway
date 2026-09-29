@@ -13,7 +13,6 @@ export const PRIMARY_ALIAS = {
   G4_FRACTIONS: 'G5_FRACTIONS_EQUIV',
   G4_DECIMALS: 'G5_DECIMALS_INTRO',     // structured decimal grid
   G4_TIME: 'G5_TIME',
-  G4_MASS: 'G5_MASS',
   G4_DATA: 'G5_BAR_GRAPHS',
 
   // ── Grade 7 sub-strands the graph was missing vs the KICD document ──────────
@@ -21,14 +20,10 @@ export const PRIMARY_ALIAS = {
   // Real content today via the closest existing builder; grade-tune later.
   G5_SIMPLE_EQUATIONS: 'G6_SIMPLE_EQUATIONS', // tier-1 linear equation builder
   // Grade 6 additions from the KICD Grade 6 summary (rationalised design)
-  G6_CAPACITY: 'G5_MASS',
-  G6_MASS: 'G5_MASS',
   G6_TIME: 'G5_TIME',
-  G6_LINES: 'G5_TRIANGLES_INTRO',
   G6_3D_OBJECTS: 'G6_VOLUME_CUBOID',
   // Grade 5 additions from the KICD appendix (volume/capacity/money/3-D)
   G5_VOLUME: 'G6_VOLUME_CUBOID',
-  G5_CAPACITY: 'G5_MASS',
   G5_3D_OBJECTS: 'G6_VOLUME_CUBOID',
   G7_MONEY: 'G8_PERCENTAGE_CHANGE',      // profit/loss/discount = % change
   G7_TEMPERATURE: 'G6_INTEGERS_ADD_SUB', // rises/falls on an integer scale

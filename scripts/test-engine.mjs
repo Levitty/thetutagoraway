@@ -80,6 +80,11 @@ const cases = [
   ['sq cm', '24 sq cm', { answer: '24' }, true],
   ['algebra key keeps its letter', '3', { answer: '3m' }, false],
   ['unit on wrong number still wrong', '41 percent', { answer: '40' }, false],
+  ['word answer + noun', 'parallel lines', { answer: 'parallel' }, true],
+  ['word answer + article', 'an obtuse angle', { answer: 'obtuse' }, true],
+  ['word answer "it is"', 'It is scalene', { answer: 'scalene' }, true],
+  ['hyphen vs space', 'Right angled', { answer: 'right-angled' }, true],
+  ['wrong word still wrong', 'acute angle', { answer: 'obtuse' }, false],
 ];
 for (const [label, user, prob, expect] of cases) {
   const got = checkAnswerMatch(user, prob);
