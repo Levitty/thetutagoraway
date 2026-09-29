@@ -17,7 +17,7 @@ import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
 import { initPush, requestPush, clearPush } from './push.js';
-import { PRICE_KES, PASS_DAYS } from './subscription.js';
+import { PLANS, paywallActive, isFreeWeek, passDaysLeft } from './subscription.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Icon } from './ai-tutor/components/Icons.jsx';
@@ -560,60 +560,76 @@ const LoadingSpinner = () => (
 );
 
 // ============ PAYWALL MODAL ============
-// Shown when a free learner has used today's free practice (only ever appears
-// once PAYWALL_ENABLED is flipped on). Charges the KSh 200 30-day pass via
-// Paystack; the pass is granted only by the verify-subscription function.
-const PaywallModal = ({ user, onClose, onUnlocked }) => {
+// Shown when the free week (or a pass) has ended and a child tries to
+// practise. Pays by M-Pesa or card through Paystack; the pass is granted only
+// by the verify-subscription function, never by the browser.
+const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
+  const [plan, setPlan] = useState('month');
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
+  const [done, setDone] = useState(null);
+  const endedFreeWeek = isFreeWeek(subscription);
 
-  const goUnlimited = async () => {
+  const pay = async () => {
     if (!user?.id || !user?.email) { setErr('Please sign in first.'); return; }
+    const p = PLANS[plan];
     setBusy(true); setErr('');
     try {
       await initiatePaystackPayment({
         email: user.email,
-        amount: PRICE_KES,
-        reference: `sub_${user.id.slice(0, 8)}_${Date.now()}`,
-        metadata: { type: 'subscription', user_id: user.id },
+        amount: p.kes,
+        reference: `PASS-${user.id.slice(0, 8)}-${Date.now().toString(36)}`,
+        metadata: { type: 'subscription', plan: p.id, user_id: user.id },
         onSuccess: async (response) => {
-          try {
-            const { data } = await supabase.functions.invoke('verify-subscription', {
-              body: { reference: response.reference, user_id: user.id },
-            });
-            if (data?.verified) { onUnlocked?.(); onClose?.(); }
-            else setErr('We could not confirm the payment. If you were charged, contact support.');
-          } catch { setErr('Verification failed. If you were charged, contact support.'); }
+          let ok = false;
+          for (let attempt = 0; attempt < 3 && !ok; attempt++) {
+            try {
+              const { data } = await supabase.functions.invoke('verify-subscription', { body: { reference: response.reference, plan: p.id } });
+              if (data?.verified) { ok = true; setDone(data.pro_until); onUnlocked?.(); }
+            } catch { /* try again */ }
+            if (!ok) await new Promise(r => setTimeout(r, 1500));
+          }
+          if (!ok) setErr(`We couldn't confirm the payment yet. If M-Pesa took the money, WhatsApp us on 0759 240 692 with reference ${response.reference} and we'll switch your pass on.`);
           setBusy(false);
         },
         onClose: () => setBusy(false),
       });
-    } catch { setErr('Could not start payment. Try again.'); setBusy(false); }
+    } catch { setErr("The payment couldn't start. Please try again."); setBusy(false); }
   };
 
+  const until = done ? new Date(done).toLocaleDateString('en-KE', { day: 'numeric', month: 'long' }) : '';
   return (
-    <div className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4">
-      <div className="bg-white w-full sm:max-w-sm rounded-t-3xl sm:rounded-3xl p-6 native-safe-top" style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }}>
+    <div className="fixed inset-0 z-[60] bg-black/50 flex items-end sm:items-center justify-center p-0 sm:p-4" onClick={onClose}>
+      <div className="bg-white w-full sm:max-w-sm rounded-t-3xl sm:rounded-3xl p-6 native-safe-top" style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }} onClick={e => e.stopPropagation()}>
         <div className="w-10 h-1 bg-slate-200 rounded-full mx-auto mb-5 sm:hidden" />
-        <div className="text-[11px] font-bold tracking-[.12em] uppercase text-amber-600">Nice work today</div>
-        <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 mt-1">You've done today's free practice</h2>
-        <p className="text-[15px] text-slate-500 mt-2">Come back tomorrow for more free practice — or go unlimited and keep going now.</p>
-        <ul className="mt-4 space-y-2">
-          {['Unlimited daily practice', 'The full learning path', 'Every skill, every review'].map(t => (
-            <li key={t} className="flex items-center gap-2.5 text-[15px] text-slate-700">
-              <svg viewBox="0 0 24 24" className="w-4 h-4 text-[#5a7a3a] shrink-0" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>{t}
-            </li>
-          ))}
-        </ul>
-        <div className="flex items-baseline gap-2 mt-5">
-          <span className="text-[30px] font-extrabold tracking-tight text-slate-900">KSh {PRICE_KES}</span>
-          <span className="text-sm text-slate-500">/ month · {PASS_DAYS}-day pass</span>
-        </div>
-        {err && <div className="mt-3 text-[13px] text-[#c0663f]">{err}</div>}
-        <button onClick={goUnlimited} disabled={busy} className="w-full mt-4 bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-slate-900 rounded-2xl py-3.5 font-bold text-[15px] transition-colors">
-          {busy ? 'Opening payment…' : 'Go unlimited'}
-        </button>
-        <button onClick={onClose} className="w-full mt-2 text-slate-400 text-sm font-medium py-2">Maybe tomorrow</button>
+        {done ? (
+          <>
+            <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">Practice is unlocked</h2>
+            <p className="text-[15px] text-slate-600 mt-2">Your pass runs until {until}. Every child on your account can practise.</p>
+            <button onClick={onClose} className="w-full mt-5 bg-slate-900 text-white rounded-2xl py-3.5 font-bold text-[15px]">Keep practising</button>
+          </>
+        ) : (
+          <>
+            <div className="text-[11px] font-bold tracking-[.12em] uppercase text-amber-700">{endedFreeWeek ? 'Your free week has ended' : 'Your pass has ended'}</div>
+            <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 mt-1">Keep the daily practice going</h2>
+            <p className="text-[15px] text-slate-500 mt-2">15 minutes a day, picking up exactly where your child left off. One pass covers every child on your account.</p>
+            <div className="grid grid-cols-2 gap-2.5 mt-5" role="radiogroup" aria-label="Choose a pass">
+              {[PLANS.week, PLANS.month].map(p => (
+                <button key={p.id} type="button" role="radio" aria-checked={plan === p.id} onClick={() => setPlan(p.id)}
+                  className={`text-left rounded-2xl p-4 border-2 transition-colors ${plan === p.id ? 'border-slate-900 bg-amber-50' : 'border-slate-200 bg-white'}`}>
+                  <div className="text-[13px] font-bold text-slate-500">{p.label}</div>
+                  <div className="text-[24px] font-extrabold tracking-tight text-slate-900 mt-0.5">KES {p.kes}</div>
+                  <div className="text-[12px] font-semibold text-slate-500 mt-1 leading-snug">{p.note || 'Pay as you go'}</div>
+                </button>
+              ))}
+            </div>
+            {err && <div className="mt-3 text-[13.5px] text-[#b3261e] leading-snug">{err}</div>}
+            <button onClick={pay} disabled={busy} className="w-full mt-5 bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-slate-900 rounded-2xl py-3.5 font-bold text-[15px] transition-colors">
+              {busy ? 'Opening M-Pesa…' : `Pay KES ${PLANS[plan].kes} with M-Pesa or card`}
+            </button>
+            <button onClick={onClose} className="w-full mt-2 text-slate-500 text-sm font-semibold py-2">Not now</button>
+          </>
+        )}
       </div>
     </div>
   );
@@ -632,11 +648,15 @@ const useAuth = () => {
   const [subscription, setSubscription] = useState(null); // paywall entitlement
   const [loading, setLoading] = useState(true);
 
-  const fetchSubscription = async (userId) => {
+  const fetchSubscription = async (userId, role) => {
     try {
       const { data } = await supabase.from('subscriptions').select('*').eq('user_id', userId).maybeSingle();
-      setSubscription(data || null);
-    } catch { setSubscription(null); } // table may not exist yet — treated as free
+      if (data || !paywallActive() || role === 'tutor') { setSubscription(data || null); return; }
+      // Paid practice is on and this family has never had a pass: their
+      // free week starts now (once per account, decided by the database).
+      const { data: started, error } = await supabase.rpc('start_free_week');
+      setSubscription(!error && started?.user_id ? started : null);
+    } catch { setSubscription(null); } // table may not exist yet: treated as free
   };
 
   useEffect(() => {
@@ -707,7 +727,7 @@ const useAuth = () => {
     }
     
     setProfile(profileData);
-    fetchSubscription(userId);
+    fetchSubscription(userId, profileData?.role);
     setLoading(false);
   };
 
@@ -755,7 +775,7 @@ const useAuth = () => {
     setSubscription(null);
   };
 
-  return { user, profile, subscription, loading, signUp, signIn, signInWithGoogle, resetPassword, signOut, refetchProfile: () => user && fetchProfile(user.id), refetchSubscription: () => user && fetchSubscription(user.id) };
+  return { user, profile, subscription, loading, signUp, signIn, signInWithGoogle, resetPassword, signOut, refetchProfile: () => user && fetchProfile(user.id), refetchSubscription: () => user && fetchSubscription(user.id, profile?.role) };
 };
 
 // ============ DATABASE HOOKS ============
@@ -1105,7 +1125,7 @@ const MomentumChip = ({ userId, onClick }) => {
 // The signed-in family's home (web). Parents first: their children, handing
 // over the phone, and lessons. Students use the same screen without the
 // children section. On the public site's coral design.
-const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings }) => {
+const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings }) => {
   const [tab, setTab] = useState('upcoming');
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [reviewBooking, setReviewBooking] = useState(null);
@@ -1267,12 +1287,24 @@ const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate
 
       <div className="in dgrid">
         <main style={{ minWidth: 0 }}>
+          {/* Practice pass: how long is left, and a way to keep going. */}
+          {paywallActive() && (() => {
+            const left = passDaysLeft(subscription);
+            const trial = isFreeWeek(subscription);
+            return (
+              <div className={`passbar ${left > 2 ? '' : 'warn'}`}>
+                <div><b>{left > 0 ? (trial ? `Free week: ${left} day${left === 1 ? '' : 's'} left` : `Practice pass: ${left} day${left === 1 ? '' : 's'} left`) : 'Practice is paused'}</b>
+                  <span>{left > 0 ? (trial ? `Then KES ${PLANS.week.kes} a week or KES ${PLANS.month.kes} a month.` : 'Every child on your account can practise.') : 'Get a pass to keep the daily 15 minutes going.'}</span></div>
+                {(left <= 2) && <button type="button" className="btn sm" onClick={onGetPass}>{left > 0 ? 'Get a pass' : 'Get a pass'}</button>}
+              </div>
+            );
+          })()}
           {!isStudentAccount && (
             <section className="block">
               <div className="bhead"><h2 className="display">Your children</h2>{!adding && <button type="button" className="btn line sm" onClick={() => setAdding(true)}><SiteIcon name="plus" />Add a child</button>}</div>
               {children.length === 0 && !adding && (
                 <div className="empty-card">
-                  <p><b>No children added yet.</b> Add your child to hand over the phone, set weekly goals and get a Sunday report.</p>
+                  <p><b>No children added yet.</b> Add your child to hand over the phone and set weekly goals.</p>
                   <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
                     <button type="button" className="btn" onClick={() => setAdding(true)}>Add a child</button>
                     <button type="button" className="btn line" onClick={() => onNavigate('check')}>Take the free check</button>
@@ -7256,7 +7288,7 @@ function AppInner() {
       return (<>
         <AIMastery onBack={backToSpace} userId={auth.user.id} studentName={studentMode.name} lockedLearner={learner}
           subscription={auth.subscription} onPaywall={() => setShowPaywall(true)} />
-        {showPaywall && <PaywallModal user={auth.user} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
+        {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
       </>);
     }
     if (page === 'writing') {
@@ -7396,7 +7428,7 @@ function AppInner() {
       <>
         <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} onFindTutor={() => handleNavigate('tutors')}
           subscription={auth.subscription} onPaywall={() => setShowPaywall(true)} />
-        {showPaywall && <PaywallModal user={auth.user} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
+        {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
       </>
     );
   }
@@ -7457,7 +7489,8 @@ function AppInner() {
     }
     return (
       <>
-        <StudentDashboard key={dashKey} profile={auth.profile} user={auth.user} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
+        <StudentDashboard key={dashKey} profile={auth.profile} user={auth.user} subscription={auth.subscription} onGetPass={() => setShowPaywall(true)} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
+        {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
         {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
         {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       </>

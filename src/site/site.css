@@ -516,3 +516,9 @@
 .tg-modal .noteacts { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; }
 .tg-modal .kicker { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
 .tg-modal .muted { color: var(--mute); }
+
+/* Practice pass strip on the family dashboard */
+.tg .passbar { display: flex; align-items: center; justify-content: space-between; gap: 14px; background: #fff3d1; border-radius: 12px; padding: 14px 16px; margin-bottom: 18px; }
+.tg .passbar b { display: block; font-size: 16px; }
+.tg .passbar span { font-size: 14px; color: var(--ink2); font-weight: 600; }
+.tg .passbar.warn { background: #ffe6c7; }
