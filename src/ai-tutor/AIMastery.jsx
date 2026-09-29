@@ -6,7 +6,7 @@
 import { useHorebLook } from './horebLook.js';
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
-import { prereqsMet, getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
+import { prereqsMet, getStatus, getRecommendedPath, leadWithMissingStep, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
 import { HorebBot } from './HorebBot.jsx';
@@ -711,6 +711,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
           correct: Object.values(newResults).filter(r => r?.correct).length,
         },
         diagInProgress: null, // completed — clear the resume cursor
+        focusSkillId: null,   // a new check brings a new plan: its missing step leads
       };
       setProgress(finished);
       forceSave(keyFor(subjectId), finished, userId, learnerId);
@@ -1780,7 +1781,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // level doesn't drop to the conservative mastery-count estimate when the brain
   // is briefly unreachable, can rise as the student masters higher-grade skills,
   // and is walked DOWN by getEffectivePlacement after sustained struggle.
-  const path = brainPath || jsPath;
+  const path = brainPath ? leadWithMissingStep(brainPath, progress, ctx) : jsPath;
   const effectivePlacement = getEffectivePlacement(progress, ctx);
   const estimatedGrade = brainProfile
     ? Math.round(brainProfile.overall_level)

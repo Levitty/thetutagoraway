@@ -15,11 +15,11 @@
 // the child actually has.
 // ============================================================================
 
-import { SKILLS, getPrerequisiteChain, getPostRequisiteChain } from '../src/ai-tutor/knowledgeGraph.js';
+import { SKILLS, getPrerequisiteChain, getPostRequisiteChain, getPostRequisites } from '../src/ai-tutor/knowledgeGraph.js';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
 import { propagateCredit, processDiagnosticResults } from '../src/ai-tutor/diagnosticEngine.js';
-import { computePlacementGrade } from '../src/ai-tutor/adaptiveEngine.js';
+import { computePlacementGrade, getRecommendedPath } from '../src/ai-tutor/adaptiveEngine.js';
 import { findMissingStep } from '../src/site/missingStep.js';
 
 const args = process.argv.slice(2);
@@ -37,7 +37,7 @@ let seed = SEED;
 const rnd = () => { seed = (seed * 1103515245 + 12345) % 2147483648; return seed / 2147483648; };
 const pickR = (a) => a[Math.floor(rnd() * a.length)];
 
-const ctx = { skills: SKILLS, getPreChain: (id) => getPrerequisiteChain(id), getPostChain: (id) => getPostRequisiteChain(id) };
+const ctx = { skills: SKILLS, getPostReqs: getPostRequisites, getPreChain: (id) => getPrerequisiteChain(id), getPostChain: (id) => getPostRequisiteChain(id), curriculum: 'cbc' };
 const LIST = Object.values(SKILLS).filter(s => Number.isFinite(s.grade));
 const DIAG_MIN = MIN, DIAG_MAX = 20;
 const gradeSpan = (list) => { const g = list.map(s => s.grade); return [Math.min(...g), Math.max(...g)]; };
@@ -136,15 +136,25 @@ function runCheck(child) {
   }
   const placementGrade = computePlacementGrade(answered.map(id => SKILLS[id]), results, child.declared);
   const progress = { declaredGrade: child.declared, placementGrade, diagnosed: true, skills: processDiagnosticResults(balances, ctx) };
-  return { answered, asked, placementGrade, r: findMissingStep(progress), markErrors };
+  return { answered, asked, placementGrade, r: findMissingStep(progress), markErrors, progress };
 }
 
 // ---- run many children and score the result ------------------------------------
-const tally = { children: 0, questions: 0, falseGap: 0, rootFound: 0, realGap: 0, withGaps: 0, placeExact: 0, placeWithin1: 0, noResult: 0, markErrors: 0 };
-const examples = { falseGap: [], missedRoot: [], markErrors: [] };
+const tally = { pathStartsAtStep: 0, pathStartsSolid: 0, pathStartsKnown: 0, pathChecked: 0, children: 0, questions: 0, falseGap: 0, rootFound: 0, realGap: 0, withGaps: 0, placeExact: 0, placeWithin1: 0, noResult: 0, markErrors: 0 };
+const examples = { path: [], falseGap: [], missedRoot: [], markErrors: [] };
 for (let i = 0; i < N; i++) {
   const child = makeChild();
-  const { answered, asked, placementGrade, r, markErrors } = runCheck(child);
+  const { answered, asked, placementGrade, r, markErrors, progress } = runCheck(child);
+  // What does practice start with, compared with the plan the parent read?
+  if (r.missing) {
+    const path = getRecommendedPath(progress, ctx);
+    const first = path[0]?.id;
+    tally.pathChecked++;
+    if (first === r.missing) tally.pathStartsAtStep++;
+    if (first && r.solid.includes(first)) tally.pathStartsSolid++;
+    if (first && child.knows(first)) tally.pathStartsKnown++;
+    if (first !== r.missing && examples.path.length < 6) examples.path.push(`plan says ${r.missing}; practice starts ${first}${r.solid.includes(first) ? ' (shown as SOLID on the plan)' : ''}${child.knows(first) ? ' (child knows it)' : ''}`);
+  }
   tally.children++; tally.questions += asked;
   if (markErrors.length) { tally.markErrors++; if (examples.markErrors.length < 5) examples.markErrors.push(markErrors[0]); }
   if (placementGrade === child.level) tally.placeExact++;
@@ -171,7 +181,9 @@ console.log(`FALSE ALARM (told missing a skill they know):     ${pct(tally.false
 console.log(`Child with hidden gaps: gap (or what it blocks) named: ${pct(tally.rootFound, tally.withGaps)}`);
 console.log(`Placement exactly right: ${pct(tally.placeExact, tally.children)} · within one grade: ${pct(tally.placeWithin1, tally.children)}`);
 console.log(`No result at all: ${tally.noResult} · checks with a right answer marked wrong: ${tally.markErrors}`);
+console.log(`Practice starts on the plan's missing step: ${pct(tally.pathStartsAtStep, tally.pathChecked)} · on a skill the plan called SOLID: ${pct(tally.pathStartsSolid, tally.pathChecked)} · on a skill the child already knows: ${pct(tally.pathStartsKnown, tally.pathChecked)}`);
 const show = (t, xs) => { if (xs.length) { console.log(`\n${t}`); for (const x of (FULL ? xs : xs.slice(0, 4))) console.log('  - ' + x); } };
 show('False alarms:', examples.falseGap);
+show('Practice does not start where the plan says:', examples.path);
 show('Gap not named:', examples.missedRoot);
 show('Right answers marked wrong during the check:', examples.markErrors);
