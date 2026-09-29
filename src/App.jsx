@@ -24,6 +24,13 @@ import { Writing } from './writing/Writing.jsx';
 import { HandOver, StudentHome, PinGate } from './family/StudentSpace.jsx';
 import { getStudentMode, endStudentMode, isOlderLearner } from './family/studentMode.js';
 import { FamilyPage, FamilyCards } from './family/FamilyPage.jsx';
+import './site/site.css';
+import SiteHome from './site/Home.jsx';
+import { TutorList, TutorProfile } from './site/Tutors.jsx';
+import SiteTeach from './site/Teach.jsx';
+import { SiteIcon } from './site/ui.jsx';
+import { CheckStart, CheckResult, getCheck, setFocus } from './site/Check.jsx';
+import { claimGuestCheck, markWantsSave, wantsSave } from './site/claim.js';
 
 // Running inside the iOS/Android shell (Capacitor injects window.Capacitor).
 // The app IS the product: no marketing landing, no cookie banner — it opens
@@ -37,7 +44,8 @@ const IS_NATIVE = typeof window !== 'undefined' && !!window.Capacitor?.isNativeP
 // this mainly lets Google tell the routes apart.)
 const ORIGIN = 'https://tutagora.com';
 const ROUTE_SEO = {
-  home:       { t: "Tutagora — Learn from Kenya's Best Tutors", d: "One-on-one lessons with verified Kenyan tutors, plus free adaptive maths practice mapped to the CBC curriculum.", path: '/' },
+  home:       { t: "Tutagora — Find the one maths step your child is missing", d: "A free 10-minute maths check finds the exact step your child is missing, then 15 minutes a day rebuilds it. CBC Grade 1 to 12, plus tutors when it's stuck.", path: '/' },
+  check:      { t: "Free 10-minute Maths Check (CBC Grade 1–12) | Tutagora", d: "Find the exact maths step your child is missing. Free, adaptive, no account needed.", path: '/check' },
   tutors:     { t: "Find a Verified Tutor in Kenya | Tutagora", d: "Browse verified tutors by subject, grade and price. Book a one-on-one online lesson and pay securely.", path: '/tutors' },
   horeb:      { t: "HOREB — Free Adaptive Maths Practice (CBC) | Tutagora", d: "A free maths check finds your child's exact gap, then rebuilds it — adaptive practice mapped to the Kenyan CBC curriculum.", path: '/horeb' },
   writing:    { t: "Composition & Insha Practice, Marked | Tutagora", d: "Write an English composition or Kiswahili insha, get it marked out of 20 like a teacher would — the exact lines to fix, then revise. Grades 4–12.", path: '/writing' },
@@ -47,7 +55,7 @@ const ROUTE_SEO = {
   teach:      { t: "Become a Tutor on Tutagora", d: "Teach online, set your own rate, and reach students across Kenya. Apply to become a verified Tutagora tutor.", path: '/teach' },
   consulting: { t: "Education Consulting | Tutagora", d: "Education consulting and advisory from the Tutagora team.", path: '/consulting' },
 };
-const NOINDEX_ROUTES = new Set(['admin', 'dashboard', 'spreadsheet', 'classroom', 'my-lessons', 'native-home', 'native-welcome']);
+const NOINDEX_ROUTES = new Set(['admin', 'dashboard', 'spreadsheet', 'classroom', 'my-lessons', 'native-home', 'native-welcome', 'check-run', 'check-result']);
 
 const applyRouteSEO = (page) => {
   if (IS_NATIVE || typeof document === 'undefined') return;
@@ -636,7 +644,10 @@ const useAuth = () => {
           const updateData = { role: pendingRole };
           if (pendingName) updateData.full_name = pendingName;
           await supabase.from('profiles').update(updateData).eq('id', session.user.id);
+          const pendingType = localStorage.getItem('tutagora_pending_type');
+          if (pendingType) { try { await supabase.auth.updateUser({ data: { account_type: pendingType } }); } catch { /* not critical */ } }
           localStorage.removeItem('tutagora_pending_role');
+          localStorage.removeItem('tutagora_pending_type');
           localStorage.removeItem('tutagora_pending_name');
         }
         fetchProfile(session.user.id);
@@ -676,15 +687,17 @@ const useAuth = () => {
     setLoading(false);
   };
 
-  const signUp = async (email, password, fullName, role) => {
+  const signUp = async (email, password, fullName, role, accountType = null) => {
+    const meta = { full_name: fullName, role };
+    if (accountType) meta.account_type = accountType; // 'parent' | 'student' | 'tutor'
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { full_name: fullName, role } }
+      options: { data: meta }
     });
     if (error) throw error;
     // Send welcome email
-    sendEmail('welcome', email, { name: fullName }).catch(() => {});
+    sendEmail('welcome', email, { name: fullName, role }).catch(() => {});
     return data;
   };
 
@@ -795,7 +808,7 @@ const useBookings = (userId, role, tutorId = null) => {
 
   const createBooking = async (tutorId, subject, date, time, context = {}) => {
     // First create the booking
-    const { data, error } = await supabase.from('bookings').insert({
+    const row = {
       student_id: userId,
       tutor_id: tutorId,
       subject,
@@ -806,7 +819,13 @@ const useBookings = (userId, role, tutorId = null) => {
       learner_grade: context.learner_grade || null,
       focus_note: context.focus_note || null,
       child_id: context.child_id || null,
-    }).select(`*, tutors(*, profiles(full_name, email)), profiles!bookings_student_id_fkey(full_name, email)`).single();
+    };
+    // Lesson length (30 or 60). Only sent when it isn't the one-hour default,
+    // so hour-long bookings keep working before the column is added.
+    const minutes = Number(context.duration_minutes) || 60;
+    if (minutes !== 60) row.duration_minutes = minutes;
+    const { data, error } = await supabase.from('bookings').insert(row)
+      .select(`*, tutors(*, profiles(full_name, email)), profiles!bookings_student_id_fkey(full_name, email)`).single();
 
     if (error) throw error;
 
@@ -843,7 +862,7 @@ const sendBookingNotifications = async (booking, studentId) => {
       await supabase.from('messages').insert({
         sender_id: studentId,
         receiver_id: tutorUserId,
-        content: `New Booking\n\nHi ${tutorName.split(' ')[0]}, a ${subject} lesson is booked for ${learner}${gradeLine} on ${lessonDate} at ${lessonTime}.${focusLine}\n\nLooking forward to it!\n\n- ${studentName}`
+        content: `New Booking\n\nHi ${tutorName.split(' ')[0]}, a ${Number(booking.duration_minutes) === 30 ? '30-minute' : '1-hour'} ${subject} lesson is booked for ${learner}${gradeLine} on ${lessonDate} at ${lessonTime}.${focusLine}\n\nLooking forward to it!\n\n- ${studentName}`
       });
     }
 
@@ -902,29 +921,36 @@ const sendLessonStartNotification = async (booking) => {
 };
 
 // ============ AUTH MODAL ============
-const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
-  const [form, setForm] = useState({ name: '', email: '', password: '', role: initialRole || 'student' });
+// Sign in / sign up sheet, on the public site's design. Parents are the main
+// buyer, so "I'm a parent" comes first. In the database a parent keeps the
+// 'student' role (the account that books and pays); account_type in the user
+// metadata records that they're a parent. `reason` tailors the heading:
+// 'plan' when saving a free-check result, 'book' when booking a tutor.
+const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null, childName = '' }) => {
+  const startRole = initialRole === 'tutor' ? 'tutor' : initialRole === 'student' ? 'student' : 'parent';
+  const [form, setForm] = useState({ name: '', email: '', password: '', role: startRole });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const [view, setView] = useState(mode); // 'login', 'register', 'forgot'
 
-  // Sync view with mode prop
   React.useEffect(() => { setView(mode); setError(''); setSuccess(''); }, [mode]);
+
+  const dbRole = form.role === 'tutor' ? 'tutor' : 'student';
+  const accountType = form.role;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-    setSuccess('');
-    setLoading(true);
-
+    setError(''); setSuccess(''); setLoading(true);
     try {
       if (view === 'register') {
-        await onAuth.signUp(form.email, form.password, form.name, form.role);
-        setSuccess('Account created! Check your email for a confirmation link.');
+        await onAuth.signUp(form.email, form.password, form.name, dbRole, accountType);
+        setSuccess(reason === 'plan'
+          ? 'Account created. Open the confirmation link we emailed you on this phone, and your plan will be saved.'
+          : 'Account created. Check your email for a confirmation link.');
       } else if (view === 'forgot') {
         await onAuth.resetPassword(form.email);
-        setSuccess('Password reset link sent! Check your email.');
+        setSuccess('Password reset link sent. Check your email.');
       } else {
         await onAuth.signIn(form.email, form.password);
         onClose();
@@ -936,17 +962,11 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
   };
 
   const handleGoogleSignIn = async () => {
-    setError('');
-    // If registering, require role selection first
-    if (view === 'register' && !form.role) {
-      setError('Please select whether you are a Student or Tutor before continuing.');
-      return;
-    }
-    setLoading(true);
+    setError(''); setLoading(true);
     try {
-      // Store the selected role before OAuth redirect so we can apply it after
-      if (view === 'register' && form.role) {
-        localStorage.setItem('tutagora_pending_role', form.role);
+      if (view === 'register') {
+        localStorage.setItem('tutagora_pending_role', dbRole);
+        localStorage.setItem('tutagora_pending_type', accountType);
         localStorage.setItem('tutagora_pending_name', form.name || '');
       }
       await onAuth.signInWithGoogle();
@@ -956,87 +976,78 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
     }
   };
 
+  const who = childName ? `${childName}'s` : 'the';
+  const title = view === 'forgot' ? 'Reset your password'
+    : view === 'login' ? (reason === 'plan' ? `Sign in to save ${who} plan` : 'Welcome back')
+    : reason === 'plan' ? `Save ${who} plan. It's free.`
+    : reason === 'book' ? 'Create an account to book'
+    : 'Create your account';
+  const sub = view === 'forgot' ? "We'll email you a reset link."
+    : view === 'login' ? 'Use Google or your email.'
+    : 'Use Google or your email. It takes a minute.';
+
   return (
-    <div className="fixed inset-0 bg-black/60 z-50 flex items-end sm:items-center justify-center" onClick={onClose}>
-      <div className="bg-white rounded-t-2xl sm:rounded-2xl w-full sm:max-w-sm p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
-        <button onClick={onClose} className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-400 hover:text-slate-600 hover:bg-slate-200 transition-colors" aria-label="Close">
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+    <div className="tg-modal" onClick={onClose}>
+      <div className="tg sheet" role="dialog" aria-modal="true" aria-label={title} onClick={e => e.stopPropagation()}>
+        <button type="button" onClick={onClose} className="close" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" /></svg>
         </button>
+        <div className="kicker muted">tutagora</div>
+        <h2 className="display">{title}</h2>
+        <p className="muted" style={{ margin: '0 0 18px', fontWeight: 600 }}>{sub}</p>
 
-        <div className="text-center mb-6">
-          <div className="w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mx-auto mb-4 text-2xl font-extrabold tracking-tight">T</div>
-          <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">
-            {view === 'forgot' ? 'Reset password' : view === 'login' ? 'Welcome back' : 'Create account'}
-          </h2>
-          <p className="text-slate-500 text-sm mt-1">
-            {view === 'forgot' ? "We'll send you a reset link" : view === 'login' ? 'Sign in to your account' : 'Join Tutagora today'}
-          </p>
-        </div>
+        {reason === 'plan' && view !== 'forgot' && <div className="saved">Your check result is kept on this phone and saved to the account as soon as you're in.</div>}
+        {error && <div className="msg err">{error}</div>}
+        {success && <div className="msg ok">{success}</div>}
 
-        {error && <div className="mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-xl border border-red-100">{error}</div>}
-        {success && <div className="mb-4 p-3 bg-[#eef4e7] text-[#4f7233] text-sm rounded-xl border border-[#cfe0bd]">{success}</div>}
-
-        {/* Role selection for register view - shown above Google button */}
         {view === 'register' && (
-          <div className="space-y-3 mb-4">
-            <input placeholder="Full name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 text-sm" />
-            <div className="flex gap-2">
-              <button type="button" onClick={() => setForm({ ...form, role: 'student' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'student' ? 'bg-amber-400 text-slate-900 shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
-                I'm a Student
-              </button>
-              <button type="button" onClick={() => setForm({ ...form, role: 'tutor' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'tutor' ? 'bg-amber-400 text-slate-900 shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
-                I'm a Tutor
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Google Sign In Button */}
-        {view !== 'forgot' && (
           <>
-            <button onClick={handleGoogleSignIn} disabled={loading} className="w-full flex items-center justify-center gap-3 py-3 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors mb-4 disabled:opacity-50">
-              <svg className="w-5 h-5" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-              <span className="text-sm font-medium text-slate-700">{view === 'login' ? 'Sign in with Google' : 'Sign up with Google'}</span>
-            </button>
-            <div className="relative mb-4">
-              <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-slate-200" /></div>
-              <div className="relative flex justify-center"><span className="bg-white px-3 text-xs text-slate-400 uppercase">or</span></div>
+            <div className="roles" role="group" aria-label="I am">
+              {[['parent', "I'm a parent"], ['student', "I'm a student"], ['tutor', "I'm a tutor"]].map(([v, l]) => (
+                <button key={v} type="button" aria-pressed={form.role === v} onClick={() => setForm({ ...form, role: v })}>{l}</button>
+              ))}
             </div>
+            <input className="inp" style={{ marginBottom: 10 }} placeholder="Your full name" autoComplete="name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
           </>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-3">
-          <input type="email" placeholder="Email address" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
-            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 text-sm" />
+        {view !== 'forgot' && (
+          <>
+            <button type="button" onClick={handleGoogleSignIn} disabled={loading} className="btn line full">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              {view === 'login' ? 'Sign in with Google' : 'Continue with Google'}
+            </button>
+            <div className="or">or with email</div>
+          </>
+        )}
+
+        <form onSubmit={handleSubmit} className="stack">
+          <input className="inp" type="email" placeholder="Email address" autoComplete="email" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
           {view !== 'forgot' && (
-            <input type="password" placeholder="Password (min 6 characters)" required minLength={6} value={form.password} onChange={e => setForm({ ...form, password: e.target.value })}
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 text-sm" />
+            <input className="inp" type="password" placeholder="Password (at least 6 characters)" autoComplete={view === 'login' ? 'current-password' : 'new-password'} required minLength={6} value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} />
           )}
           {view === 'register' && (
-            <label className="flex items-start gap-2 cursor-pointer">
-              <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-[#5a7a3a] focus:ring-[#6d6fcb]/30" />
-              <span className="text-xs text-slate-500">I agree to Tutagora's <button type="button" onClick={() => window.open('/privacy', '_blank')} className="text-[#6d6fcb] underline">Privacy Policy</button> and consent to the collection and processing of my personal data as described therein, in accordance with Kenya's Data Protection Act, 2019.</span>
+            <label className="agree">
+              <input type="checkbox" required />
+              <span>I agree to Tutagora's <button type="button" className="linkbtn" onClick={() => window.open('/privacy', '_blank')}>Privacy Policy</button> and consent to my data being processed as described there, under Kenya's Data Protection Act, 2019.</span>
             </label>
           )}
           {view === 'login' && (
-            <div className="text-right">
-              <button type="button" onClick={() => { setView('forgot'); setError(''); setSuccess(''); }} className="text-xs text-[#6d6fcb] font-medium hover:text-[#5658b8]">
-                Forgot password?
-              </button>
+            <div style={{ textAlign: 'right' }}>
+              <button type="button" className="linkbtn" style={{ fontSize: 14 }} onClick={() => { setView('forgot'); setError(''); setSuccess(''); }}>Forgot password?</button>
             </div>
           )}
-          <button type="submit" disabled={loading} className="w-full py-3.5 bg-amber-400 text-slate-900 font-semibold rounded-xl hover:bg-amber-300 transition-colors disabled:opacity-50 text-sm">
-            {loading ? 'Please wait...' : view === 'forgot' ? 'Send Reset Link' : view === 'login' ? 'Sign In' : 'Create Account'}
+          <button type="submit" disabled={loading} className="btn full">
+            {loading ? 'Please wait…' : view === 'forgot' ? 'Send reset link' : view === 'login' ? 'Sign in' : reason === 'plan' ? 'Create account and save' : 'Create account'}
           </button>
         </form>
-        <p className="text-center mt-5 text-sm text-slate-500">
+        <p style={{ textAlign: 'center', margin: '16px 0 0', fontWeight: 600 }}>
           {view === 'forgot' ? (
-            <button onClick={() => { setView('login'); setError(''); setSuccess(''); }} className="text-[#6d6fcb] font-semibold">Back to sign in</button>
+            <button type="button" className="linkbtn" onClick={() => { setView('login'); setError(''); setSuccess(''); }}>Back to sign in</button>
           ) : view === 'login' ? (
-            <>No account? <button onClick={() => { setView('register'); setMode('register'); setError(''); }} className="text-[#6d6fcb] font-semibold">Sign up</button></>
+            <>New here? <button type="button" className="linkbtn" onClick={() => { setView('register'); setMode('register'); setError(''); }}>Create an account</button></>
           ) : (
-            <>Have an account? <button onClick={() => { setView('login'); setMode('login'); setError(''); }} className="text-[#6d6fcb] font-semibold">Sign in</button></>
+            <>Have an account? <button type="button" className="linkbtn" onClick={() => { setView('login'); setMode('login'); setError(''); }}>Sign in</button></>
           )}
         </p>
       </div>
@@ -1067,17 +1078,24 @@ const MomentumChip = ({ userId, onClick }) => {
   return <MomentumChipView level={m.level} streak={m.streak} onClick={onClick} />;
 };
 
-const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings }) => {
+// The signed-in family's home (web). Parents first: their children, handing
+// over the phone, and lessons. Students use the same screen without the
+// children section. On the public site's coral design.
+const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings }) => {
   const [tab, setTab] = useState('upcoming');
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [reviewBooking, setReviewBooking] = useState(null);
   const [showProgress, setShowProgress] = useState(false);
   const [payments, setPayments] = useState([]);
   const [aiProgress, setAiProgress] = useState(null);
+  const [kidProgress, setKidProgress] = useState({}); // child id -> { diagnosed, totalXP, streak }
   const [children, setChildren] = useState([]);
   const [newChildName, setNewChildName] = useState('');
   const [newChildGrade, setNewChildGrade] = useState('');
+  const [adding, setAdding] = useState(false);
   const CHILD_GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University', 'Adult learner'];
+  const accountType = user?.user_metadata?.account_type || null;
+  const isStudentAccount = accountType === 'student';
   const fetchChildren = useCallback(() => {
     if (!profile?.id) return;
     supabase.from('children').select('id, name, grade').eq('parent_id', profile.id).order('created_at')
@@ -1089,411 +1107,237 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
     const { data } = await supabase.from('children')
       .insert({ parent_id: profile.id, name: newChildName.trim(), grade: newChildGrade || null })
       .select('id, name, grade').single();
-    if (data) { setChildren(prev => [...prev, data]); setNewChildName(''); setNewChildGrade(''); }
+    if (data) { setChildren(prev => [...prev, data]); setNewChildName(''); setNewChildGrade(''); setAdding(false); }
   };
-  const removeChild = async (id) => {
-    await supabase.from('children').delete().eq('id', id);
-    setChildren(prev => prev.filter(c => c.id !== id));
+  const removeChild = async (c) => {
+    if (!window.confirm(`Remove ${c.name}? Their practice stays saved, but they won't appear here.`)) return;
+    await supabase.from('children').delete().eq('id', c.id);
+    setChildren(prev => prev.filter(x => x.id !== c.id));
   };
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
   const past = bookings.filter(b => b.status === 'completed');
   const nextLesson = [...upcoming].sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
   const totalSpent = payments.reduce((s, p) => s + (p.amount || 0), 0);
   const uniqueTutors = [...new Set(past.map(b => b.tutor_id))].length;
+  const first = profile?.full_name?.split(' ')[0] || 'there';
+  const when = (b) => {
+    const d = new Date(`${b.lesson_date}T00:00:00`);
+    const day = isNaN(d) ? b.lesson_date : d.toLocaleDateString('en-KE', { weekday: 'short', day: 'numeric', month: 'short' });
+    return `${day} · ${b.start_time?.slice(0, 5) || ''}${Number(b.duration_minutes) === 30 ? ' · 30 min' : ''}`;
+  };
 
   useEffect(() => {
-    if (profile?.id) {
-      supabase.from('payments').select('amount, status, created_at').eq('student_id', profile.id).eq('status', 'completed')
-        .then(({ data }) => setPayments(data || []));
-      supabase.from('ai_tutor_progress').select('total_xp, current_streak, diagnosed, progress').eq('user_id', profile.id).maybeSingle()
-        .then(({ data }) => {
-          if (data) setAiProgress({
-            totalXP: data.total_xp || 0,
-            currentStreak: data.current_streak || 0,
-            diagnosed: !!data.diagnosed,
-            dailyXP: data.progress?.dailyXP || 0,
-            dailyDate: data.progress?.dailyDate || null,
-          });
+    if (!profile?.id) return;
+    supabase.from('payments').select('amount, status, created_at').eq('student_id', profile.id).eq('status', 'completed')
+      .then(({ data }) => setPayments(data || []));
+    // One row per learner: the account holder's own (profile_key = their id)
+    // and one per child. (A single-row query failed once a child had progress.)
+    supabase.from('ai_tutor_progress').select('profile_key, learner_id, total_xp, current_streak, diagnosed, progress').eq('user_id', profile.id)
+      .then(({ data }) => {
+        const rows = data || [];
+        const own = rows.find(r => r.profile_key === profile.id);
+        if (own) setAiProgress({
+          totalXP: own.total_xp || 0, currentStreak: own.current_streak || 0, diagnosed: !!own.diagnosed,
+          dailyXP: own.progress?.dailyXP || 0, dailyDate: own.progress?.dailyDate || null,
         });
-    }
+        const kids = {};
+        rows.filter(r => r.learner_id).forEach(r => { kids[r.learner_id] = { diagnosed: !!r.diagnosed, totalXP: r.total_xp || 0, streak: r.current_streak || 0 }; });
+        setKidProgress(kids);
+      });
   }, [profile?.id]);
 
-  return (
-    <div className="min-h-screen bg-[#eef0f2]">
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-40">
-        <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
-          <button onClick={() => onNavigate('home')} className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold">T</div>
-            <span className="font-semibold text-slate-900 hidden sm:block">Tutagora</span>
-            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-[#ecedfa] text-[#6d6fcb] uppercase tracking-wide">Student</span>
-          </button>
-          <div className="flex items-center gap-3 sm:gap-4">
-            <button onClick={() => onNavigate('tutors')} className="text-sm text-slate-600 hidden sm:block">Find Tutors</button>
-            <button onClick={() => onNavigate('clubs')} className="text-sm text-slate-600 hidden sm:block">Clubs</button>
-            <button onClick={() => onNavigate('schools')} className="text-sm text-slate-600 hidden sm:block">For Schools</button>
-            {aiProgress?.diagnosed
-              ? <MomentumChipView level={getLevel(aiProgress.totalXP).level} streak={aiProgress.currentStreak} onClick={() => onNavigate('ai')} />
-              : <button onClick={() => onNavigate('ai')} className="text-sm text-[#6d6fcb] font-medium">HOREB</button>}
-            <button onClick={() => onNavigate('spreadsheet')} className="text-sm text-[#6d6fcb] font-medium">Spreadsheet</button>
-            {isAdmin && <button onClick={() => onNavigate('admin')} className="text-sm text-[#6d6fcb] font-medium">Admin</button>}
-            <MessageButton onClick={onOpenMessages} />
-            <div className="flex items-center gap-2">
-              <Avatar src={profile?.avatar_url} name={profile?.full_name} size={32} />
-              <span className="text-sm font-medium hidden sm:block">{profile?.full_name}</span>
-            </div>
-          </div>
-        </div>
-      </header>
+  const started = aiProgress && aiProgress.diagnosed;
+  const streak = aiProgress?.currentStreak || 0;
+  const goalPct = started ? dailyGoalPercent(aiProgress) : 0;
+  const goalMet = started ? dailyGoalMet(aiProgress) : false;
 
-      <div className="max-w-5xl mx-auto px-5 py-6">
-        {/* Welcome + Next Lesson spotlight */}
+  const LessonRow = ({ b, done }) => (
+    <div className="lrow">
+      <div className="lwho">
+        <Avatar src={b.tutors?.profiles?.avatar_url} name={b.tutors?.profiles?.full_name} size={44} />
+        <div style={{ minWidth: 0 }}>
+          <b>{b.subject}{b.learner_name ? ` · ${b.learner_name}` : ''}</b>
+          <span>{b.tutors?.profiles?.full_name} · {done ? b.lesson_date : when(b)}</span>
+        </div>
+      </div>
+      <div className="lact">
+        {!done && <span className={`pill ${b.status === 'confirmed' ? 'ok' : ''}`}>{b.status === 'confirmed' ? 'Confirmed' : 'Awaiting payment'}</span>}
+        {!done && b.status === 'confirmed' && <button type="button" className="btn sm" onClick={() => onStartLesson(b)}>Join</button>}
+        {done && (b.review
+          ? <span className="pill ok">Reviewed</span>
+          : <button type="button" className="btn line sm" onClick={() => setReviewBooking(b)}>Leave a review</button>)}
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="tg dashboard">
+      <nav className="nav lined"><div className="in">
+        <button type="button" className="logo" onClick={() => onNavigate('home')} aria-label="Tutagora home">tutagora<i /></button>
+        <div className="links">
+          <button type="button" onClick={() => onNavigate('tutors')}>Find a tutor</button>
+          <button type="button" onClick={() => onNavigate('clubs')}>Clubs</button>
+          <button type="button" onClick={() => onNavigate('spreadsheet')}>Spreadsheet</button>
+          {isAdmin && <button type="button" onClick={() => onNavigate('admin')}>Admin</button>}
+        </div>
+        <div className="right">
+          <MessageButton onClick={onOpenMessages} />
+          <Avatar src={profile?.avatar_url} name={profile?.full_name} size={34} />
+        </div>
+      </div></nav>
+
+      <header className="dhero"><div className="in">
+        <div>
+          <div className="kicker">{isStudentAccount ? 'Your space' : accountType === 'parent' ? 'Parent' : 'Your account'}</div>
+          <h1 className="display">Hi {first}.</h1>
+          <p className="lead">{nextLesson ? `${upcoming.length} lesson${upcoming.length === 1 ? '' : 's'} coming up.` : isStudentAccount ? 'Pick up where you left off.' : children.length ? 'Hand over the phone for today\'s 15 minutes.' : 'Add your child, then hand over the phone.'}</p>
+        </div>
         {nextLesson ? (
-          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 mb-6 text-slate-900">
-            <div className="flex items-center gap-4 mb-4">
-              <Lottie src={ANIMATIONS.waving} width={60} height={60} />
-              <div>
-                <h1 className="text-xl font-extrabold tracking-tight">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
-                <p className="text-slate-500 text-sm">{upcoming.length} upcoming lesson{upcoming.length !== 1 ? 's' : ''}</p>
-              </div>
-            </div>
-            <div className="bg-[#eef0f2] backdrop-blur rounded-xl p-4 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-[#ecedfa] text-[#6d6fcb] flex items-center justify-center text-lg font-bold">{nextLesson.subject?.[0]}</div>
-                <div>
-                  <div className="font-semibold">{nextLesson.subject}</div>
-                  <div className="text-slate-500 text-sm">with {nextLesson.tutors?.profiles?.full_name} · {nextLesson.lesson_date} at {nextLesson.start_time?.slice(0,5)}</div>
-                </div>
-              </div>
-              {nextLesson.status === 'confirmed' && (
-                <button onClick={() => onStartLesson(nextLesson)} className="px-5 py-2.5 bg-amber-400 text-slate-900 font-semibold rounded-xl hover:bg-[#ecedfa] transition-colors text-sm">
-                  Join Lesson
-                </button>
-              )}
-              {nextLesson.status === 'pending' && (
-                <span className="px-3 py-1.5 bg-[#ecedfa] text-[#6d6fcb] text-white text-xs font-medium rounded-full">Pending</span>
-              )}
+          <div className="found next">
+            <div className="kicker">Next lesson</div>
+            <b>{nextLesson.subject}{nextLesson.learner_name ? ` · ${nextLesson.learner_name}` : ''}</b>
+            <span>with {nextLesson.tutors?.profiles?.full_name} · {when(nextLesson)}</span>
+            <div style={{ marginTop: 14 }}>
+              {nextLesson.status === 'confirmed'
+                ? <button type="button" className="btn white" onClick={() => onStartLesson(nextLesson)}>Join lesson</button>
+                : <span className="pill">Awaiting payment</span>}
             </div>
           </div>
         ) : (
-          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 mb-6 flex items-center gap-4 text-slate-900">
-            <Lottie src={ANIMATIONS.waving} width={60} height={60} />
-            <div className="flex-1">
-              <h1 className="text-xl font-extrabold tracking-tight">Welcome back, {profile?.full_name?.split(' ')[0]}!</h1>
-              <p className="text-slate-500 text-sm">No upcoming lessons — ready to book one?</p>
-            </div>
-            <button onClick={() => onNavigate('tutors')} className="px-5 py-2.5 bg-amber-400 text-slate-900 font-semibold rounded-xl hover:bg-[#ecedfa] transition-colors text-sm">
-              Find a Tutor
-            </button>
+          <div className="found next">
+            <div className="kicker">No lessons booked</div>
+            <b>A tutor for the stuck part</b>
+            <span>Live, one-to-one, inside Tutagora.</span>
+            <div style={{ marginTop: 14 }}><button type="button" className="btn white" onClick={() => onNavigate('tutors')}>Find a tutor</button></div>
           </div>
         )}
+      </div></header>
 
-        {/* Hand this device to a child */}
-        <button onClick={() => onNavigate('handover')}
-          className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-6 flex items-center gap-4 text-left hover:border-slate-300 transition-colors">
-          <span className="w-11 h-11 rounded-xl bg-[#ecedfa] text-[#6d6fcb] flex items-center justify-center shrink-0">
-            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
-          </span>
-          <span className="flex-1 min-w-0">
-            <span className="block font-bold text-slate-900">Hand over to your child</span>
-            <span className="block text-sm text-slate-500">Give them their own space on this device: practice, writing and their lessons. Your PIN to leave.</span>
-          </span>
-          <span className="shrink-0 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold rounded-xl text-sm">Hand over</span>
-        </button>
-
-        {/* Weekly goals and messages for each child */}
-        <button onClick={() => onNavigate('family')}
-          className="w-full -mt-3 bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-6 flex items-center gap-4 text-left hover:border-slate-300 transition-colors">
-          <span className="w-11 h-11 rounded-xl bg-[#eef5e6] text-[#5a7a3a] flex items-center justify-center shrink-0">
-            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
-          </span>
-          <span className="flex-1 min-w-0">
-            <span className="block font-bold text-slate-900">Goals and messages</span>
-            <span className="block text-sm text-slate-500">Set a weekly practice goal with a reward, and send your child a quick word.</span>
-          </span>
-          <svg viewBox="0 0 24 24" className="w-4 h-4 text-slate-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        </button>
-
-        {/* AI Tutor Card — momentum-aware, encouraging entry point */}
-        {(() => {
-          const started = aiProgress && aiProgress.diagnosed;
-          const lvl = started ? getLevel(aiProgress.totalXP).level : 0;
-          const lvlInfo = started ? getLevel(aiProgress.totalXP) : null;
-          const streak = aiProgress?.currentStreak || 0;
-          const goalPct = started ? dailyGoalPercent(aiProgress) : 0;
-          const goalMet = started ? dailyGoalMet(aiProgress) : false;
-          const cta = !started ? 'Start Learning' : goalMet ? 'Keep Going' : 'Continue';
-          const headline = !started
-            ? 'Adaptive learning that finds your gaps and fills them'
-            : goalMet ? 'Daily goal done — brilliant! A little more never hurts.'
-            : streak > 0 ? `You’re on a ${streak}-day streak — keep it alive!`
-            : 'Pick up where you left off — small steps add up.';
-          return (
-            <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 mb-6">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-4 min-w-0">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#6d6fcb] text-white flex items-center justify-center shrink-0"><Icon name="brain" className="w-6 h-6 sm:w-7 sm:h-7" /></div>
-                  <div className="min-w-0">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="text-white font-bold text-lg">HOREB</h3>
-                      {started && <span className="text-xs font-semibold text-amber-300 bg-amber-500/15 rounded-full px-2 py-0.5">Level {lvl}</span>}
-                      {streak > 0 && <span className="text-xs font-semibold text-amber-300 flex items-center gap-0.5"><Icon name="flame" className="w-3.5 h-3.5" />{streak}d</span>}
-                    </div>
-                    <p className="text-slate-300 text-sm mt-0.5">{headline}</p>
+      <div className="in dgrid">
+        <main style={{ minWidth: 0 }}>
+          {!isStudentAccount && (
+            <section className="block">
+              <div className="bhead"><h2 className="display">Your children</h2>{!adding && <button type="button" className="btn line sm" onClick={() => setAdding(true)}><SiteIcon name="plus" />Add a child</button>}</div>
+              {children.length === 0 && !adding && (
+                <div className="empty-card">
+                  <p><b>No children added yet.</b> Add your child to hand over the phone, set weekly goals and get a Sunday report.</p>
+                  <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                    <button type="button" className="btn" onClick={() => setAdding(true)}>Add a child</button>
+                    <button type="button" className="btn line" onClick={() => onNavigate('check')}>Take the free check</button>
                   </div>
-                </div>
-                <button onClick={() => onNavigate('ai')} className="shrink-0 px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-900 font-semibold rounded-xl transition-colors text-sm">
-                  {cta}
-                </button>
-              </div>
-              {started && (
-                <div className="mt-4 flex items-center gap-3">
-                  <span className="text-xs text-slate-400 shrink-0 flex items-center gap-1"><Icon name={goalMet ? 'check' : 'target'} className="w-3.5 h-3.5" />{goalMet ? 'Goal' : 'Today'}</span>
-                  <div className="flex-1 h-2 bg-slate-700 rounded-full overflow-hidden">
-                    <div className={`h-full transition-all ${goalMet ? 'bg-amber-400' : 'bg-amber-500'}`} style={{ width: `${goalPct}%` }} />
-                  </div>
-                  <span className="text-xs text-slate-400 shrink-0">{Math.min(todaysXP(aiProgress), DAILY_GOAL_XP)}/{DAILY_GOAL_XP} XP</span>
                 </div>
               )}
-            </div>
-          );
-        })()}
-
-        {/* Writing — composition / insha marking */}
-        <button onClick={() => onNavigate('writing')} className="w-full text-left bg-white border border-slate-200 rounded-2xl p-5 mb-6 hover:border-slate-300 transition-colors shadow-sm">
-          <div className="flex items-center justify-between gap-4">
-            <div className="min-w-0">
-              <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Writing</div>
-              <h3 className="text-slate-900 font-bold text-lg mt-0.5">Composition & Insha</h3>
-              <p className="text-slate-500 text-sm mt-0.5">Write it, get it marked out of 20 like a teacher would, then fix the exact lines.</p>
-            </div>
-            <span className="shrink-0 px-5 py-2.5 bg-slate-900 text-white font-semibold rounded-xl text-sm">Write</span>
-          </div>
-        </button>
-
-        {/* Stats row */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-            <div className="w-9 h-9 bg-[#eef4e7] rounded-xl flex items-center justify-center mb-2">
-              <svg className="w-5 h-5 text-[#6d6fcb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <div className="text-2xl font-extrabold tracking-tight text-slate-900">{past.length}</div>
-            <div className="text-xs text-slate-500">Lessons Done</div>
-          </div>
-          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-            <div className="w-9 h-9 bg-[#ecedfa] rounded-xl flex items-center justify-center mb-2">
-              <svg className="w-5 h-5 text-[#6d6fcb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-            </div>
-            <div className="text-2xl font-extrabold tracking-tight text-slate-900">{upcoming.length}</div>
-            <div className="text-xs text-slate-500">Upcoming</div>
-          </div>
-          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-            <div className="w-9 h-9 bg-[#ecedfa] rounded-xl flex items-center justify-center mb-2">
-              <svg className="w-5 h-5 text-[#6d6fcb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-            </div>
-            <div className="text-2xl font-extrabold tracking-tight text-slate-900">{uniqueTutors}</div>
-            <div className="text-xs text-slate-500">Tutors Used</div>
-          </div>
-          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-            <div className="w-9 h-9 bg-amber-50 rounded-xl flex items-center justify-center mb-2">
-              <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <div className="text-2xl font-extrabold tracking-tight text-slate-900">KSh {totalSpent.toLocaleString()}</div>
-            <div className="text-xs text-slate-500">Total Spent</div>
-          </div>
-        </div>
-
-        <div className="grid lg:grid-cols-3 gap-5">
-          <div className="lg:col-span-2 bg-white rounded-xl border border-slate-200 overflow-hidden">
-            <div className="flex border-b border-slate-100">
-              <button onClick={() => setTab('upcoming')} className={`flex-1 py-3 text-sm font-medium ${tab === 'upcoming' ? 'text-slate-900 border-b-2 border-slate-900' : 'text-slate-500'}`}>Upcoming ({upcoming.length})</button>
-              <button onClick={() => setTab('history')} className={`flex-1 py-3 text-sm font-medium ${tab === 'history' ? 'text-slate-900 border-b-2 border-slate-900' : 'text-slate-500'}`}>History ({past.length})</button>
-            </div>
-
-            {bookingsLoading ? <LoadingSpinner /> : (
-              tab === 'upcoming' ? (
-                upcoming.length === 0 ? (
-                  <div className="p-8 text-center">
-                    <div className="flex justify-center mb-2">
-                      <Lottie src={ANIMATIONS.empty} width={150} height={150} />
-                    </div>
-                    <p className="text-slate-600 font-medium">No upcoming lessons</p>
-                    <p className="text-sm text-slate-400 mt-1">Book a lesson to get started</p>
-                    <button onClick={() => onNavigate('tutors')} className="mt-4 px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-xl hover:bg-slate-800 transition-colors">Find a Tutor</button>
-                  </div>
-                ) : (
-                  <div className="divide-y divide-slate-100">
-                    {upcoming.map(b => (
-                      <div key={b.id} className="p-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
-                        <div className="flex items-center gap-3">
-                          <Avatar src={b.tutors?.profiles?.avatar_url} name={b.tutors?.profiles?.full_name} size={44} />
-                          <div>
-                            <div className="font-medium text-slate-900">{b.subject}</div>
-                            <div className="text-sm text-slate-500">{b.tutors?.profiles?.full_name} · {b.lesson_date} at {b.start_time?.slice(0,5)}</div>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className={`px-2 py-1 text-xs font-medium rounded-full ${b.status === 'confirmed' ? 'bg-[#eef4e7] text-[#4f7233]' : 'bg-amber-50 text-amber-700'}`}>{b.status}</span>
-                          {b.status === 'confirmed' && (
-                            <button onClick={() => onStartLesson(b)} className="px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-xl hover:bg-slate-800 transition-colors">
-                              Join
-                            </button>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )
-              ) : (
-                past.length === 0 ? (
-                  <div className="p-10 text-center text-slate-500">No completed lessons yet</div>
-                ) : (
-                  <div className="divide-y divide-slate-100">
-                    {past.map(b => (
-                      <div key={b.id} className="p-4 flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <Avatar src={b.tutors?.profiles?.avatar_url} name={b.tutors?.profiles?.full_name} size={44} />
-                          <div>
-                            <div className="font-medium">{b.subject}</div>
-                            <div className="text-sm text-slate-500">{b.tutors?.profiles?.full_name} • {b.lesson_date}</div>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          {b.review ? (
-                            <div className="flex items-center gap-1">
-                              <Stars rating={b.review.rating} size={12} />
-                              <span className="text-xs text-slate-500">Reviewed</span>
-                            </div>
-                          ) : (
-                            <button
-                              onClick={() => setReviewBooking(b)}
-                              className="px-3 py-1.5 text-xs font-medium text-[#4f7233] bg-[#eef4e7] rounded-xl hover:bg-[#ecedfa]"
-                            >
-                              Leave Review
-                            </button>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )
-              )
-            )}
-          </div>
-
-          <div className="space-y-4">
-            {/* My learners — the parent's roster */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm">
-              <h3 className="font-semibold text-slate-900 mb-1">My learners</h3>
-              <p className="text-xs text-slate-500 mb-3">Save who you book for — tap their name at checkout instead of retyping.</p>
+              {adding && (
+                <div className="addkid">
+                  <input className="inp" value={newChildName} onChange={e => setNewChildName(e.target.value)} onKeyDown={e => e.key === 'Enter' && addChild()} placeholder="Child's first name" aria-label="Child's first name" autoFocus />
+                  <select className="inp" value={newChildGrade} onChange={e => setNewChildGrade(e.target.value)} aria-label="Grade"><option value="">Grade</option>{CHILD_GRADES.map(g => <option key={g} value={g}>{g}</option>)}</select>
+                  <button type="button" className="btn" onClick={addChild} disabled={!newChildName.trim()}>Add</button>
+                  <button type="button" className="linkbtn" onClick={() => { setAdding(false); setNewChildName(''); }}>Cancel</button>
+                </div>
+              )}
               {children.length > 0 && (
-                <div className="space-y-2 mb-3">
-                  {children.map(c => (
-                    <div key={c.id} className="flex items-center justify-between bg-slate-50 rounded-xl px-3 py-2">
-                      <div className="text-sm">
-                        <span className="font-medium text-slate-900">{c.name}</span>
-                        {c.grade && <span className="text-slate-400 ml-2">{c.grade}</span>}
+                <div className="kids">
+                  {children.map(c => {
+                    const kp = kidProgress[c.id];
+                    return (
+                      <div key={c.id} className="kid">
+                        <div className="ktop">
+                          <div><b>{c.name}</b><span>{c.grade || 'Grade not set'}</span></div>
+                          <button type="button" className="kx" onClick={() => removeChild(c)} aria-label={`Remove ${c.name}`}><SiteIcon name="x" style={{ width: 16, height: 16 }} /></button>
+                        </div>
+                        <div className="kstat">
+                          {kp?.diagnosed
+                            ? <><span><SiteIcon name="check" style={{ width: 16, height: 16 }} />Check done</span><span>Level {getLevel(kp.totalXP).level}</span>{kp.streak > 0 && <span>{kp.streak}-day streak</span>}</>
+                            : <span>No check yet. It runs when you hand over.</span>}
+                        </div>
+                        <div className="kbtns">
+                          <button type="button" className="btn sm" onClick={() => onNavigate('handover')}><SiteIcon name="phone" style={{ width: 16, height: 16 }} />Hand over</button>
+                          <button type="button" className="btn line sm" onClick={() => onNavigate('family')}>Goals and messages</button>
+                        </div>
                       </div>
-                      <button onClick={() => removeChild(c.id)} aria-label={`Remove ${c.name}`}
-                        className="text-slate-300 hover:text-red-500 transition-colors">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" /></svg>
-                      </button>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
-              <div className="flex gap-2">
-                <input type="text" value={newChildName} onChange={e => setNewChildName(e.target.value)}
-                  onKeyDown={e => e.key === 'Enter' && addChild()} placeholder="Add a name"
-                  className="flex-1 min-w-0 px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30" />
-                <select value={newChildGrade} onChange={e => setNewChildGrade(e.target.value)}
-                  className="px-2 py-2 border border-slate-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30">
-                  <option value="">Grade</option>
-                  {CHILD_GRADES.map(g => <option key={g} value={g}>{g}</option>)}
-                </select>
-                <button onClick={addChild} disabled={!newChildName.trim()}
-                  className="px-3 py-2 bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 text-slate-900 text-sm font-medium rounded-xl transition-colors">Add</button>
+            </section>
+          )}
+
+          <section className="block">
+            <h2 className="display">{isStudentAccount ? 'Practise' : 'For you'}</h2>
+            <div className="tools">
+              <button type="button" className="tool darkc" onClick={() => onNavigate('ai')}>
+                <span className="kicker" style={{ opacity: .7 }}>Maths practice</span>
+                <b>{!started ? (accountType === 'parent' ? 'Try the practice yourself' : 'Find your level') : goalMet ? "Today's goal done" : streak > 0 ? `${streak}-day streak. Keep it going.` : 'Pick up where you left off'}</b>
+                {started && <span className="bar"><i style={{ width: `${goalPct}%` }} /></span>}
+                {started && <span className="small">{Math.min(todaysXP(aiProgress), DAILY_GOAL_XP)} of {DAILY_GOAL_XP} XP today · Level {getLevel(aiProgress.totalXP).level}</span>}
+                <span className="go">{!started ? 'Start' : 'Continue'} <SiteIcon name="arrow" style={{ width: 18, height: 18 }} /></span>
+              </button>
+              <button type="button" className="tool" onClick={() => onNavigate('writing')}>
+                <span className="kicker muted">Writing</span>
+                <b>Composition and insha</b>
+                <span className="small">Write it, get it marked out of 20 like a teacher would, then fix the exact lines.</span>
+                <span className="go">Write <SiteIcon name="arrow" style={{ width: 18, height: 18 }} /></span>
+              </button>
+            </div>
+          </section>
+
+          <section className="block">
+            <div className="bhead">
+              <h2 className="display">Lessons</h2>
+              <div className="seg" role="tablist" aria-label="Lessons">
+                <button type="button" role="tab" aria-selected={tab === 'upcoming'} onClick={() => setTab('upcoming')}>Upcoming ({upcoming.length})</button>
+                <button type="button" role="tab" aria-selected={tab === 'history'} onClick={() => setTab('history')}>Past ({past.length})</button>
               </div>
             </div>
+            {bookingsLoading ? <LoadingSpinner /> : tab === 'upcoming' ? (
+              upcoming.length === 0
+                ? <div className="empty-card"><p>No upcoming lessons.</p><button type="button" className="btn" onClick={() => onNavigate('tutors')}>Find a tutor</button></div>
+                : <div className="lessons">{upcoming.map(b => <LessonRow key={b.id} b={b} />)}</div>
+            ) : (
+              past.length === 0
+                ? <div className="empty-card"><p>No finished lessons yet.</p></div>
+                : <div className="lessons">{past.map(b => <LessonRow key={b.id} b={b} done />)}</div>
+            )}
+          </section>
 
-            {/* Referral Card */}
-            <div className="bg-slate-900 rounded-xl p-4 text-white">
-              <div className="flex items-center gap-2 mb-2">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-                </svg>
-                <h3 className="font-semibold">Refer & Earn</h3>
-              </div>
-              <p className="text-slate-300 text-sm mb-3">Get KSh 500 for each friend who books their first lesson</p>
-              <div className="bg-white/10 rounded-xl p-2 flex items-center gap-2">
-                <input
-                  type="text"
-                  value={`tutagora.com/r/${profile?.id?.slice(0,8) || 'invite'}`}
-                  readOnly
-                  className="flex-1 bg-transparent text-white text-xs outline-none"
-                />
-                <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(`https://tutagora.com/r/${profile?.id?.slice(0,8) || 'invite'}`);
-                    alert('Referral link copied!');
-                  }}
-                  className="px-3 py-1 bg-white text-slate-900 text-xs font-medium rounded"
-                >
-                  Copy
-                </button>
-              </div>
-            </div>
+          <section className="proof dstats" aria-label="Your numbers"><div className="in" style={{ padding: 0 }}>
+            <div className="s"><b>{past.length}</b><span>lessons done</span></div>
+            <div className="s"><b>{upcoming.length}</b><span>coming up</span></div>
+            <div className="s"><b>{uniqueTutors}</b><span>tutors</span></div>
+            <div className="s"><b>KSh {totalSpent.toLocaleString()}</b><span>spent</span></div>
+          </div></section>
+        </main>
 
-            <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm">
-              <h3 className="font-semibold text-slate-900 mb-3">Account</h3>
-              <div className="space-y-1">
-                <button onClick={() => setShowEditProfile(true)} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                  Edit Profile
-                </button>
-                <button onClick={() => setShowProgress(true)} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                  My Progress
-                </button>
-                {onOpenAccountSettings && <button onClick={onOpenAccountSettings} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573-1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                  Account & Data
-                </button>}
-                <button onClick={onLogout} className="w-full flex items-center gap-3 px-3 py-2.5 text-sm text-red-600 hover:bg-red-50 rounded-xl transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
-                  Sign Out
-                </button>
-              </div>
+        <aside className="dside">
+          <div className="refer">
+            <div className="kicker" style={{ opacity: .7 }}>Refer and earn</div>
+            <b>KSh 500 for each friend who books their first lesson</b>
+            <div className="copy">
+              <input readOnly value={`tutagora.com/r/${profile?.id?.slice(0, 8) || 'invite'}`} aria-label="Your referral link" />
+              <button type="button" onClick={() => { navigator.clipboard?.writeText(`https://tutagora.com/r/${profile?.id?.slice(0, 8) || 'invite'}`); alert('Referral link copied.'); }}>Copy</button>
             </div>
           </div>
-        </div>
+          <div className="acct">
+            <div className="kicker muted" style={{ marginBottom: 6 }}>Account</div>
+            <button type="button" onClick={() => setShowEditProfile(true)}><SiteIcon name="pen" />Edit profile</button>
+            <button type="button" onClick={() => setShowProgress(true)}><SiteIcon name="chart" />Lesson progress</button>
+            {!isStudentAccount && <button type="button" onClick={() => onNavigate('family')}><SiteIcon name="target" />Goals, messages and Sunday report</button>}
+            {onOpenAccountSettings && <button type="button" onClick={onOpenAccountSettings}><SiteIcon name="gear" />Account and data</button>}
+            <button type="button" className="out" onClick={onLogout}><SiteIcon name="back" />Sign out</button>
+          </div>
+        </aside>
       </div>
+      <div style={{ height: 40 }} />
 
-      {/* Edit Profile Modal */}
       {showEditProfile && (
-        <StudentProfileEditor
-          profile={profile}
-          onClose={() => setShowEditProfile(false)}
-          onSave={() => { setShowEditProfile(false); onRefreshProfile && onRefreshProfile(); }}
-        />
+        <StudentProfileEditor profile={profile} onClose={() => setShowEditProfile(false)}
+          onSave={() => { setShowEditProfile(false); onRefreshProfile && onRefreshProfile(); }} />
       )}
-
-      {/* Review Modal */}
       {reviewBooking && (
-        <ReviewModal
-          booking={reviewBooking}
-          profile={profile}
-          onClose={() => setReviewBooking(null)}
-          onSubmit={() => { setReviewBooking(null); }}
-        />
+        <ReviewModal booking={reviewBooking} profile={profile} onClose={() => setReviewBooking(null)} onSubmit={() => { setReviewBooking(null); }} />
       )}
-
-      {/* Progress Modal */}
       {showProgress && (
-        <StudentProgressModal
-          profile={profile}
-          bookings={bookings}
-          onClose={() => setShowProgress(false)}
-        />
+        <StudentProgressModal profile={profile} bookings={bookings} onClose={() => setShowProgress(false)} />
       )}
     </div>
   );
@@ -2635,7 +2479,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                     </div>
                   </div>
                   <div className="mt-3">
-                    <div className="text-2xl font-bold text-slate-900">KSh {(completed.length * tutor.hourly_rate).toLocaleString()}</div>
+                    <div className="text-2xl font-bold text-slate-900">KSh {completed.reduce((sum, b) => sum + Math.round((tutor.hourly_rate || 0) * (Number(b.duration_minutes) || 60) / 60), 0).toLocaleString()}</div>
                     <div className="text-sm text-slate-500">Total Earned</div>
                   </div>
                 </div>
@@ -2680,7 +2524,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                         <div className="flex items-center gap-4 shrink-0">
                           <div className="text-right">
                             <div className="text-sm font-medium text-slate-900">{b.lesson_date}</div>
-                            <div className="text-sm text-slate-400">{b.start_time?.slice(0,5)}</div>
+                            <div className="text-sm text-slate-400">{b.start_time?.slice(0,5)} · {Number(b.duration_minutes) === 30 ? '30 min' : '1 hr'}</div>
                           </div>
                           {b.status === 'confirmed' && (
                             <button 
@@ -3426,6 +3270,9 @@ const TutorProfileEditor = ({ tutor, profile }) => {
     teaching_style: tutor?.teaching_style || '',
     languages: tutor?.languages || 'English, Kiswahili',
     grade_levels: tutor?.grade_levels || [],
+    // Only once the column exists (after the lesson-length SQL), so saving
+    // never fails on a database that doesn't have it yet.
+    ...(tutor && 'offers_30_min' in tutor ? { offers_30_min: !!tutor.offers_30_min } : {}),
   });
   const gradeOptions = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University'];
   const [saving, setSaving] = useState(false);
@@ -3522,6 +3369,15 @@ const TutorProfileEditor = ({ tutor, profile }) => {
             <input type="number" value={form.experience_years} onChange={e => setForm({ ...form, experience_years: e.target.value })} min="0" className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
           </div>
         </div>
+        {'offers_30_min' in form && (
+          <label className="flex items-start gap-3 p-3 rounded-lg border border-slate-200 cursor-pointer">
+            <input type="checkbox" checked={form.offers_30_min} onChange={e => setForm({ ...form, offers_30_min: e.target.checked })} className="mt-1 w-4 h-4" />
+            <span className="text-sm">
+              <span className="font-semibold block">Also offer 30-minute lessons</span>
+              <span className="text-slate-500">Families can book half an hour for one stuck skill, at half your hourly rate (KSh {Math.round((form.hourly_rate || 0) / 2).toLocaleString()}). Lessons are one hour unless you turn this on.</span>
+            </span>
+          </label>
+        )}
         <div>
           <label className="block text-sm font-medium mb-1">Teaching style</label>
           <select value={form.teaching_style} onChange={e => setForm({ ...form, teaching_style: e.target.value })} className="w-full px-3 py-2 border border-slate-200 rounded-lg">
@@ -6880,7 +6736,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                           <td className="px-4 py-3 text-sm text-slate-600">{b.subject}</td>
                           <td className="px-4 py-3 text-sm text-slate-600">{b.lesson_date}</td>
                           <td className="px-4 py-3 text-sm text-slate-600">{b.start_time?.slice(0, 5)}</td>
-                          <td className="px-4 py-3 text-sm text-right text-slate-600">KSh {(b.tutors?.hourly_rate || 0).toLocaleString()}</td>
+                          <td className="px-4 py-3 text-sm text-right text-slate-600">KSh {Math.round((b.tutors?.hourly_rate || 0) * (Number(b.duration_minutes) || 60) / 60).toLocaleString()}</td>
                           <td className="px-4 py-3">
                             <span className={`px-2 py-1 text-xs rounded-full ${
                               b.status === 'completed' ? 'bg-emerald-100 text-emerald-700' :
@@ -7106,6 +6962,7 @@ function AppInner() {
   const auth = useAuth();
   const tutorId = auth.profile?.tutors?.[0]?.id;
   const { bookings, loading: bookingsLoading, createBooking, refetch: refetchBookings } = useBookings(auth.user?.id, auth.profile?.role, tutorId);
+  const publicTutors = useTutors();
   
   const [page, setPage] = useState(() => {
     if (IS_NATIVE) return 'native-welcome';
@@ -7124,8 +6981,12 @@ function AppInner() {
     if (path === 'admin') return 'admin';
     if (path === 'handover') return 'handover';
     if (path === 'family') return 'family';
+    if (path === 'check' || path === 'check-result') return path;
+    if (path === 'privacy') return 'privacy';
     return 'home';
   });
+  // The free check: which grade to start at (set by the homepage finder).
+  const [checkGrade, setCheckGrade] = useState(null);
   const [showAuth, setShowAuth] = useState(null);
   const [selectedTutor, setSelectedTutor] = useState(null);
   const [scrolled, setScrolled] = useState(false);
@@ -7177,6 +7038,15 @@ function AppInner() {
     }
   }, [auth.user]);
 
+  // "Save the plan" from the free check: once the parent is signed in, move
+  // the guest check into their account (as a saved child when named).
+  useEffect(() => {
+    if (!auth.user || !wantsSave()) return;
+    claimGuestCheck(auth.user.id)
+      .then(r => { if (r) { setShowAuth(null); handleNavigate('dashboard'); } })
+      .catch(err => console.error('Could not save the check to the account:', err));
+  }, [auth.user?.id]);
+
   // A logged-in learner who hits the public HOREB intro goes straight to the
   // engine (the intro is only for prospects).
   useEffect(() => {
@@ -7206,6 +7076,7 @@ function AppInner() {
       else if (path === 'handover') setPage('handover');
       else if (path === 'family') setPage('family');
       else if (path === 'privacy') setPage('privacy');
+      else if (path === 'check' || path === 'check-result') setPage(path);
       else setPage('home');
       setSelectedTutor(null);
       window.scrollTo(0, 0);
@@ -7214,7 +7085,17 @@ function AppInner() {
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
-  const handleNavigate = (p) => { setPage(p); setSelectedTutor(null); window.scrollTo(0, 0); window.history.pushState({}, '', p === 'home' ? '/' : '/' + p); };
+  const handleNavigate = (p, tutor = null) => { setPage(p); setSelectedTutor(tutor); window.scrollTo(0, 0); window.history.pushState({}, '', p === 'home' ? '/' : '/' + p); };
+  const startCheck = (grade) => { setCheckGrade(grade || null); handleNavigate('check'); };
+  const openSignIn = () => setShowAuth('login');
+  const renderAuth = (defaultRole) => showAuth && (
+    <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth}
+      setMode={(m) => setShowAuth(o => (o && typeof o === 'object') ? { ...o, mode: m } : m)}
+      onClose={() => setShowAuth(null)} onAuth={auth}
+      initialRole={typeof showAuth === 'object' && showAuth.role ? showAuth.role : defaultRole}
+      reason={typeof showAuth === 'object' ? showAuth.reason : null}
+      childName={typeof showAuth === 'object' ? showAuth.childName : ''} />
+  );
   const handleLogout = async () => { try { await clearPush(auth.user?.id); } catch { /* ignore */ } await auth.signOut(); setPage(IS_NATIVE ? 'native-welcome' : 'home'); };
   const handleStartLesson = (booking) => {
     setActiveLesson(booking);
@@ -7288,7 +7169,7 @@ function AppInner() {
             <p className="text-sm text-slate-500">Sign in with your parent account, then choose which child is using this device.</p>
             <button onClick={() => setShowAuth('login')} className="w-full bg-amber-400 hover:bg-amber-300 rounded-xl py-3 font-bold">Sign in</button>
           </div>
-          {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole="student" />}
+          {renderAuth('student')}
         </div>
       );
     }
@@ -7313,7 +7194,7 @@ function AppInner() {
         <NativeHome profile={auth.profile} user={auth.user} bookings={bookings} onNavigate={handleNavigate} onStartLesson={handleStartLesson} setShowAuth={setShowAuth} />
         <NativeLessonBanner bookings={bookings} onStartLesson={handleStartLesson} />
         <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
-        {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : 'student'} />}
+        {renderAuth('student')}
       </>
     );
   }
@@ -7344,9 +7225,38 @@ function AppInner() {
     return (
       <>
         <NativeWelcome user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
-        {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : 'student'} />}
+        {renderAuth('student')}
       </>
     );
+  }
+
+  // ---- The free check (public, no account) ----
+  if (page === 'check' && !IS_NATIVE) {
+    return <CheckStart initialGrade={checkGrade} onLeave={() => handleNavigate('home')}
+      onStart={(g) => { setCheckGrade(g); setPage('check-run'); window.scrollTo(0, 0); }} />;
+  }
+  if (page === 'check-run' && !IS_NATIVE) {
+    return <AIMastery guest userId={undefined} autoStartGrade={checkGrade || getCheck()?.grade || null} autoStartCurriculum={getCheck()?.curriculum || null}
+      studentName={getCheck()?.name || undefined}
+      onBack={() => handleNavigate('home')}
+      onDiagnosed={() => handleNavigate('check-result')} />;
+  }
+  if (page === 'check-result' && !IS_NATIVE) {
+    return (<>
+      <CheckResult user={auth.user}
+        onLeave={() => handleNavigate('home')}
+        onRetake={() => startCheck(getCheck()?.grade)}
+        onFindTutor={(skill, learner) => { setFocus({ skill, learner }); handleNavigate('tutors'); }}
+        onSave={() => {
+          markWantsSave();
+          if (auth.user) {
+            claimGuestCheck(auth.user.id).then(() => handleNavigate('dashboard')).catch(err => alert('Could not save the plan: ' + err.message));
+          } else {
+            setShowAuth({ mode: 'register', role: 'parent', reason: 'plan', childName: getCheck()?.name || '' });
+          }
+        }} />
+      {renderAuth('parent')}
+    </>);
   }
 
   // Writing — composition / insha practice with marking.
@@ -7356,7 +7266,7 @@ function AppInner() {
         <Writing userId={auth.user?.id} studentName={auth.profile?.full_name} isNative={IS_NATIVE}
           onBack={() => handleNavigate(IS_NATIVE ? 'native-home' : auth.user ? 'dashboard' : 'home')} onSignIn={() => setShowAuth('login')} />
         {IS_NATIVE && <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
-        {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : 'student'} />}
+        {renderAuth('student')}
       </>
     );
   }
@@ -7374,7 +7284,10 @@ function AppInner() {
 
   // HOREB for Schools — B2B pitch page
   if (page === 'schools') {
-    return <SchoolsPage onNavigate={handleNavigate} />;
+    return (<>
+      <SchoolsPage onNavigate={handleNavigate} onSignIn={openSignIn} user={auth.user} />
+      {renderAuth(undefined)}
+    </>);
   }
 
   // Interest-led clubs — discovery page
@@ -7425,7 +7338,7 @@ function AppInner() {
     }
     return (
       <>
-        <StudentDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
+        <StudentDashboard profile={auth.profile} user={auth.user} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
         {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
         {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       </>
@@ -7434,21 +7347,33 @@ function AppInner() {
 
   return (
     <div className="min-h-screen">
-      {!IS_NATIVE && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
+      {!IS_NATIVE && page !== 'home' && page !== 'tutors' && page !== 'teach' && !selectedTutor && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
       {IS_NATIVE && <div className="h-2" />}
       
-      {page === 'home' && !selectedTutor && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {page === 'home' && !selectedTutor && !IS_NATIVE && <SiteHome onNavigate={handleNavigate} onSignIn={openSignIn} onStartCheck={startCheck} user={auth.user} tutors={publicTutors.tutors} />}
+      {page === 'home' && !selectedTutor && IS_NATIVE && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {(page === 'horeb' || page === 'horebhow') && !auth.user && (
         <>
           <HorebIntro user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
           <HorebHow user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} embedded />
         </>
       )}
-      {page === 'teach' && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
-      {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={IS_NATIVE ? null : () => handleNavigate('home')} user={auth.user} setShowAuth={setShowAuth} />}
-      {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
+      {page === 'teach' && IS_NATIVE && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {page === 'teach' && !IS_NATIVE && <SiteTeach onNavigate={handleNavigate} onSignIn={openSignIn} user={auth.user} onApply={() => setShowAuth({ mode: 'register', role: 'tutor' })} />}
+      {page === 'tutors' && !selectedTutor && IS_NATIVE && <TutorsPage onSelectTutor={setSelectedTutor} onBack={null} user={auth.user} setShowAuth={setShowAuth} />}
+      {page === 'tutors' && !selectedTutor && !IS_NATIVE && (
+        <TutorList tutors={publicTutors.tutors} loading={publicTutors.loading} user={auth.user}
+          onSelect={(t) => { setSelectedTutor(t); window.scrollTo(0, 0); }} onNavigate={handleNavigate} onSignIn={openSignIn}
+          extra={<div className="in" style={{ paddingBottom: 40 }}><GroupClassesBrowse user={auth.user} setShowAuth={setShowAuth} /></div>} />
+      )}
+      {selectedTutor && IS_NATIVE && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
+      {selectedTutor && !IS_NATIVE && (
+        <TutorProfile tutor={selectedTutor} user={auth.user} onBook={createBooking} onNavigate={handleNavigate}
+          onBack={() => { setSelectedTutor(null); window.scrollTo(0, 0); }}
+          onSignIn={() => setShowAuth({ mode: auth.user ? 'login' : 'register', role: 'parent', reason: 'book' })} />
+      )}
       
-      {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : undefined} />}
+      {renderAuth(undefined)}
       {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       {showPrivacyBanner && <PrivacyBanner onAccept={() => { localStorage.setItem('tutagora_privacy_accepted', 'true'); setShowPrivacyBanner(false); }} onNavigate={handleNavigate} />}
       {IS_NATIVE && <div className="h-24" />}

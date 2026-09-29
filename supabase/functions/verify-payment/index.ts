@@ -96,13 +96,16 @@ serve(async (req) => {
 
     // ---- 1-on-1 booking branch ----
     const { data: booking, error: bErr } = await supabase
-      .from("bookings").select("id, student_id, tutor_id").eq("id", booking_id).single();
+      .from("bookings").select("*").eq("id", booking_id).single();
     if (bErr || !booking) return json({ verified: false, error: "booking not found" }, 404);
 
     // 3) Make sure the amount paid covers the lesson price (stops underpayment).
     const { data: tutorRow } = await supabase
       .from("tutors").select("hourly_rate").eq("id", booking.tutor_id).maybeSingle();
-    const expectedKobo = Math.round(Number(tutorRow?.hourly_rate || 0) * 100);
+    // Lessons are 30 minutes or an hour; the price scales with the hourly rate.
+    // ("*" above keeps this working before the duration_minutes column exists.)
+    const minutes = Number((booking as Record<string, unknown>).duration_minutes) || 60;
+    const expectedKobo = Math.round(Number(tutorRow?.hourly_rate || 0) * minutes / 60 * 100);
     if (expectedKobo > 0 && Number(tx.amount) < expectedKobo) {
       return json({ verified: false, reason: "amount paid is less than the lesson price" });
     }

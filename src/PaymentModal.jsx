@@ -73,7 +73,10 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
   const [error, setError] = useState('');
   const [paymentStatus, setPaymentStatus] = useState(null);
 
-  const amount = tutor.hourly_rate || 1000;
+  // Lessons are 30 minutes or an hour; the price scales with the hourly rate.
+  const minutes = Number(booking?.duration_minutes) || 60;
+  const amount = Math.round((tutor.hourly_rate || 1000) * minutes / 60);
+  const lengthLabel = minutes === 60 ? '1 hour' : `${minutes} minutes`;
   const currency = tutor.currency || 'KSh';
   const userEmail = user?.email || booking?.profiles?.email || '';
 
@@ -162,7 +165,8 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
               subject: tutorSubject,
               date: lessonDateFormatted,
               time: booking.lesson_time || booking.start_time || '',
-              price: `KSh ${amount?.toLocaleString() || tutor.hourly_rate?.toLocaleString() || '1,000'}`
+              price: `KSh ${amount?.toLocaleString() || tutor.hourly_rate?.toLocaleString() || '1,000'}`,
+              length: lengthLabel,
             });
           }
           // Email to tutor
@@ -173,7 +177,8 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
               subject: tutorSubject,
               date: lessonDateFormatted,
               time: booking.lesson_time || booking.start_time || '',
-              price: `KSh ${amount?.toLocaleString() || tutor.hourly_rate?.toLocaleString() || '1,000'}`
+              price: `KSh ${amount?.toLocaleString() || tutor.hourly_rate?.toLocaleString() || '1,000'}`,
+              length: lengthLabel,
             });
           }
         } catch (emailErr) {
@@ -210,7 +215,7 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
           </div>
           <div className="mt-4 flex items-baseline gap-1">
             <span className="text-3xl font-extrabold tracking-tight">{currency} {amount.toLocaleString()}</span>
-            <span className="text-slate-500">/hour</span>
+            <span className="text-slate-500">for {lengthLabel}</span>
           </div>
         </div>
 
@@ -235,6 +240,10 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
                     <span className="text-slate-500">Date</span>
                     <span className="text-slate-900 font-medium">{booking.lesson_date}</span>
                   </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">Length</span>
+                    <span className="text-slate-900 font-medium">{lengthLabel}</span>
+                  </div>
                   {booking.lesson_time && (
                     <div className="flex justify-between">
                       <span className="text-slate-500">Time</span>
@@ -257,8 +266,8 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
                   </svg>
                 </div>
                 <div>
-                  <div className="font-medium text-slate-900 text-sm">Pay with Card</div>
-                  <div className="text-xs text-slate-500">Visa, Mastercard, Verve via Paystack</div>
+                  <div className="font-medium text-slate-900 text-sm">Pay with M-Pesa or card</div>
+                  <div className="text-xs text-slate-500">M-Pesa, Visa or Mastercard, through Paystack</div>
                 </div>
               </div>
 
