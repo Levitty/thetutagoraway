@@ -270,7 +270,10 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
       else if (error && [401, 403, 404].includes(error.context?.status)) {
         let body = {};
         try { body = await error.context.json(); } catch { /* no body */ }
-        throw Object.assign(new Error(body.message || "You can't join this lesson."), { kind: 'denied' });
+        // Only a refusal from the key service itself closes the room. A 404
+        // from Supabase because the function isn't deployed yet must not.
+        const REFUSALS = ['signed_out', 'not_found', 'not_yours', 'not_confirmed', 'too_early', 'too_late'];
+        if (REFUSALS.includes(body.error)) throw Object.assign(new Error(body.message || "You can't join this lesson."), { kind: 'denied' });
       }
       // No key (the key service isn't set up yet): the room still opens while
       // the video service accepts joins without one.
