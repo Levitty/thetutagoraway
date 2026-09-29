@@ -79,7 +79,11 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 
 // ==================== MAIN COMPONENT ====================
 
-export function AIMastery({ onBack, userId, studentName, onFindTutor, subscription = null, onPaywall, lockedLearner = null }) {
+// guest: run without an account (the free check on the public site). Progress
+// stays on this device. autoStartGrade skips the welcome screen and starts the
+// check at that grade; onDiagnosed(progress) replaces the usual "home" view when
+// the check finishes.
+export function AIMastery({ onBack, userId, studentName, onFindTutor, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, onDiagnosed = null }) {
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
   const [progress, setProgress] = useState(defaultProgress);
   const [view, setView] = useState('loading');
@@ -319,7 +323,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // When subject changes, load that subject's progress
   useEffect(() => {
     if (!subjectId) { setLoading(false); setView('subject-picker'); return; }
-    if (!userId) return; // transient auth gap — don't reload with no user / clobber state
+    if (!userId && !guest) return; // transient auth gap — don't reload with no user / clobber state
     let cancelled = false;
     const storageKey = keyFor(subjectId);
 
@@ -655,6 +659,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
     // On the final question, compute and PERSIST the finished state immediately —
     // before the 800ms feedback pause — so navigating away can never lose it.
+    let finishedProgress = null;
     if (isLast) {
       const answeredObjs = newAnswered.map(id => ctx.skills[id]).filter(Boolean);
       const skillUpdates = processDiagnosticResults(newBalances, ctx);
@@ -669,6 +674,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       };
       setProgress(finished);
       forceSave(keyFor(subjectId), finished, userId, learnerId);
+      finishedProgress = finished;
     }
 
     setTimeout(() => {
@@ -681,11 +687,22 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
         setAnswer('');
         setVisualAnswer(null);
         setFeedback(null);
+      } else if (onDiagnosed && finishedProgress) {
+        onDiagnosed(finishedProgress);
       } else {
         setView('home');
       }
     }, 800);
   };
+
+  // Free check: set the grade the parent picked, then start straight away.
+  const autoStarted = useRef(false);
+  useEffect(() => {
+    if (!autoStartGrade || autoStarted.current || loading || view !== 'welcome') return;
+    if (progress.declaredGrade !== autoStartGrade) { setProgress(p => ({ ...p, declaredGrade: autoStartGrade })); return; }
+    autoStarted.current = true;
+    startDiagnostic();
+  }, [autoStartGrade, loading, view, progress.declaredGrade]);
 
   // ==================== LESSON (KP-BASED) ====================
 
@@ -1225,6 +1242,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 <div className="text-xs text-slate-400">Question {n} · no marks, just mapping</div>
               </div>
             </div>
+            {guest && onBack && <button onClick={onBack} className="text-sm font-semibold text-slate-500 hover:text-slate-800 flex items-center gap-1"><Icon name="back" className="w-4 h-4" />Leave</button>}
           </div>
           <div className="h-1.5 bg-slate-100"><div className="h-full bg-amber-400 transition-all duration-300 rounded-r-full" style={{ width: `${pct}%` }} /></div>
         </div>

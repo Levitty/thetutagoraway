@@ -24,6 +24,11 @@ import { Writing } from './writing/Writing.jsx';
 import { HandOver, StudentHome, PinGate } from './family/StudentSpace.jsx';
 import { getStudentMode, endStudentMode, isOlderLearner } from './family/studentMode.js';
 import { FamilyPage, FamilyCards } from './family/FamilyPage.jsx';
+import './site/site.css';
+import SiteHome from './site/Home.jsx';
+import { TutorList, TutorProfile } from './site/Tutors.jsx';
+import { CheckStart, CheckResult, getCheck, setFocus } from './site/Check.jsx';
+import { claimGuestCheck, markWantsSave, wantsSave } from './site/claim.js';
 
 // Running inside the iOS/Android shell (Capacitor injects window.Capacitor).
 // The app IS the product: no marketing landing, no cookie banner — it opens
@@ -37,7 +42,8 @@ const IS_NATIVE = typeof window !== 'undefined' && !!window.Capacitor?.isNativeP
 // this mainly lets Google tell the routes apart.)
 const ORIGIN = 'https://tutagora.com';
 const ROUTE_SEO = {
-  home:       { t: "Tutagora — Learn from Kenya's Best Tutors", d: "One-on-one lessons with verified Kenyan tutors, plus free adaptive maths practice mapped to the CBC curriculum.", path: '/' },
+  home:       { t: "Tutagora — Find the one maths step your child is missing", d: "A free 10-minute maths check finds the exact step your child is missing, then 15 minutes a day rebuilds it. CBC Grade 1 to 12, plus tutors when it's stuck.", path: '/' },
+  check:      { t: "Free 10-minute Maths Check (CBC Grade 1–12) | Tutagora", d: "Find the exact maths step your child is missing. Free, adaptive, no account needed.", path: '/check' },
   tutors:     { t: "Find a Verified Tutor in Kenya | Tutagora", d: "Browse verified tutors by subject, grade and price. Book a one-on-one online lesson and pay securely.", path: '/tutors' },
   horeb:      { t: "HOREB — Free Adaptive Maths Practice (CBC) | Tutagora", d: "A free maths check finds your child's exact gap, then rebuilds it — adaptive practice mapped to the Kenyan CBC curriculum.", path: '/horeb' },
   writing:    { t: "Composition & Insha Practice, Marked | Tutagora", d: "Write an English composition or Kiswahili insha, get it marked out of 20 like a teacher would — the exact lines to fix, then revise. Grades 4–12.", path: '/writing' },
@@ -47,7 +53,7 @@ const ROUTE_SEO = {
   teach:      { t: "Become a Tutor on Tutagora", d: "Teach online, set your own rate, and reach students across Kenya. Apply to become a verified Tutagora tutor.", path: '/teach' },
   consulting: { t: "Education Consulting | Tutagora", d: "Education consulting and advisory from the Tutagora team.", path: '/consulting' },
 };
-const NOINDEX_ROUTES = new Set(['admin', 'dashboard', 'spreadsheet', 'classroom', 'my-lessons', 'native-home', 'native-welcome']);
+const NOINDEX_ROUTES = new Set(['admin', 'dashboard', 'spreadsheet', 'classroom', 'my-lessons', 'native-home', 'native-welcome', 'check-run', 'check-result']);
 
 const applyRouteSEO = (page) => {
   if (IS_NATIVE || typeof document === 'undefined') return;
@@ -636,7 +642,10 @@ const useAuth = () => {
           const updateData = { role: pendingRole };
           if (pendingName) updateData.full_name = pendingName;
           await supabase.from('profiles').update(updateData).eq('id', session.user.id);
+          const pendingType = localStorage.getItem('tutagora_pending_type');
+          if (pendingType) { try { await supabase.auth.updateUser({ data: { account_type: pendingType } }); } catch { /* not critical */ } }
           localStorage.removeItem('tutagora_pending_role');
+          localStorage.removeItem('tutagora_pending_type');
           localStorage.removeItem('tutagora_pending_name');
         }
         fetchProfile(session.user.id);
@@ -676,11 +685,13 @@ const useAuth = () => {
     setLoading(false);
   };
 
-  const signUp = async (email, password, fullName, role) => {
+  const signUp = async (email, password, fullName, role, accountType = null) => {
+    const meta = { full_name: fullName, role };
+    if (accountType) meta.account_type = accountType; // 'parent' | 'student' | 'tutor'
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { full_name: fullName, role } }
+      options: { data: meta }
     });
     if (error) throw error;
     // Send welcome email
@@ -795,7 +806,7 @@ const useBookings = (userId, role, tutorId = null) => {
 
   const createBooking = async (tutorId, subject, date, time, context = {}) => {
     // First create the booking
-    const { data, error } = await supabase.from('bookings').insert({
+    const row = {
       student_id: userId,
       tutor_id: tutorId,
       subject,
@@ -806,7 +817,13 @@ const useBookings = (userId, role, tutorId = null) => {
       learner_grade: context.learner_grade || null,
       focus_note: context.focus_note || null,
       child_id: context.child_id || null,
-    }).select(`*, tutors(*, profiles(full_name, email)), profiles!bookings_student_id_fkey(full_name, email)`).single();
+    };
+    // Lesson length (30 or 60). Only sent when it isn't the one-hour default,
+    // so hour-long bookings keep working before the column is added.
+    const minutes = Number(context.duration_minutes) || 60;
+    if (minutes !== 60) row.duration_minutes = minutes;
+    const { data, error } = await supabase.from('bookings').insert(row)
+      .select(`*, tutors(*, profiles(full_name, email)), profiles!bookings_student_id_fkey(full_name, email)`).single();
 
     if (error) throw error;
 
@@ -843,7 +860,7 @@ const sendBookingNotifications = async (booking, studentId) => {
       await supabase.from('messages').insert({
         sender_id: studentId,
         receiver_id: tutorUserId,
-        content: `New Booking\n\nHi ${tutorName.split(' ')[0]}, a ${subject} lesson is booked for ${learner}${gradeLine} on ${lessonDate} at ${lessonTime}.${focusLine}\n\nLooking forward to it!\n\n- ${studentName}`
+        content: `New Booking\n\nHi ${tutorName.split(' ')[0]}, a ${Number(booking.duration_minutes) === 30 ? '30-minute' : '1-hour'} ${subject} lesson is booked for ${learner}${gradeLine} on ${lessonDate} at ${lessonTime}.${focusLine}\n\nLooking forward to it!\n\n- ${studentName}`
       });
     }
 
@@ -902,29 +919,36 @@ const sendLessonStartNotification = async (booking) => {
 };
 
 // ============ AUTH MODAL ============
-const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
-  const [form, setForm] = useState({ name: '', email: '', password: '', role: initialRole || 'student' });
+// Sign in / sign up sheet, on the public site's design. Parents are the main
+// buyer, so "I'm a parent" comes first. In the database a parent keeps the
+// 'student' role (the account that books and pays); account_type in the user
+// metadata records that they're a parent. `reason` tailors the heading:
+// 'plan' when saving a free-check result, 'book' when booking a tutor.
+const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null, childName = '' }) => {
+  const startRole = initialRole === 'tutor' ? 'tutor' : initialRole === 'student' ? 'student' : 'parent';
+  const [form, setForm] = useState({ name: '', email: '', password: '', role: startRole });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const [view, setView] = useState(mode); // 'login', 'register', 'forgot'
 
-  // Sync view with mode prop
   React.useEffect(() => { setView(mode); setError(''); setSuccess(''); }, [mode]);
+
+  const dbRole = form.role === 'tutor' ? 'tutor' : 'student';
+  const accountType = form.role;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-    setSuccess('');
-    setLoading(true);
-
+    setError(''); setSuccess(''); setLoading(true);
     try {
       if (view === 'register') {
-        await onAuth.signUp(form.email, form.password, form.name, form.role);
-        setSuccess('Account created! Check your email for a confirmation link.');
+        await onAuth.signUp(form.email, form.password, form.name, dbRole, accountType);
+        setSuccess(reason === 'plan'
+          ? 'Account created. Open the confirmation link we emailed you on this phone, and your plan will be saved.'
+          : 'Account created. Check your email for a confirmation link.');
       } else if (view === 'forgot') {
         await onAuth.resetPassword(form.email);
-        setSuccess('Password reset link sent! Check your email.');
+        setSuccess('Password reset link sent. Check your email.');
       } else {
         await onAuth.signIn(form.email, form.password);
         onClose();
@@ -936,17 +960,11 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
   };
 
   const handleGoogleSignIn = async () => {
-    setError('');
-    // If registering, require role selection first
-    if (view === 'register' && !form.role) {
-      setError('Please select whether you are a Student or Tutor before continuing.');
-      return;
-    }
-    setLoading(true);
+    setError(''); setLoading(true);
     try {
-      // Store the selected role before OAuth redirect so we can apply it after
-      if (view === 'register' && form.role) {
-        localStorage.setItem('tutagora_pending_role', form.role);
+      if (view === 'register') {
+        localStorage.setItem('tutagora_pending_role', dbRole);
+        localStorage.setItem('tutagora_pending_type', accountType);
         localStorage.setItem('tutagora_pending_name', form.name || '');
       }
       await onAuth.signInWithGoogle();
@@ -956,87 +974,78 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
     }
   };
 
+  const who = childName ? `${childName}'s` : 'the';
+  const title = view === 'forgot' ? 'Reset your password'
+    : view === 'login' ? (reason === 'plan' ? `Sign in to save ${who} plan` : 'Welcome back')
+    : reason === 'plan' ? `Save ${who} plan. It's free.`
+    : reason === 'book' ? 'Create an account to book'
+    : 'Create your account';
+  const sub = view === 'forgot' ? "We'll email you a reset link."
+    : view === 'login' ? 'Use Google or your email.'
+    : 'Use Google or your email. It takes a minute.';
+
   return (
-    <div className="fixed inset-0 bg-black/60 z-50 flex items-end sm:items-center justify-center" onClick={onClose}>
-      <div className="bg-white rounded-t-2xl sm:rounded-2xl w-full sm:max-w-sm p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
-        <button onClick={onClose} className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-400 hover:text-slate-600 hover:bg-slate-200 transition-colors" aria-label="Close">
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+    <div className="tg-modal" onClick={onClose}>
+      <div className="tg sheet" role="dialog" aria-modal="true" aria-label={title} onClick={e => e.stopPropagation()}>
+        <button type="button" onClick={onClose} className="close" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" /></svg>
         </button>
+        <div className="kicker muted">tutagora</div>
+        <h2 className="display">{title}</h2>
+        <p className="muted" style={{ margin: '0 0 18px', fontWeight: 600 }}>{sub}</p>
 
-        <div className="text-center mb-6">
-          <div className="w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center mx-auto mb-4 text-2xl font-extrabold tracking-tight">T</div>
-          <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">
-            {view === 'forgot' ? 'Reset password' : view === 'login' ? 'Welcome back' : 'Create account'}
-          </h2>
-          <p className="text-slate-500 text-sm mt-1">
-            {view === 'forgot' ? "We'll send you a reset link" : view === 'login' ? 'Sign in to your account' : 'Join Tutagora today'}
-          </p>
-        </div>
+        {reason === 'plan' && view !== 'forgot' && <div className="saved">Your check result is kept on this phone and saved to the account as soon as you're in.</div>}
+        {error && <div className="msg err">{error}</div>}
+        {success && <div className="msg ok">{success}</div>}
 
-        {error && <div className="mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-xl border border-red-100">{error}</div>}
-        {success && <div className="mb-4 p-3 bg-[#eef4e7] text-[#4f7233] text-sm rounded-xl border border-[#cfe0bd]">{success}</div>}
-
-        {/* Role selection for register view - shown above Google button */}
         {view === 'register' && (
-          <div className="space-y-3 mb-4">
-            <input placeholder="Full name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 text-sm" />
-            <div className="flex gap-2">
-              <button type="button" onClick={() => setForm({ ...form, role: 'student' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'student' ? 'bg-amber-400 text-slate-900 shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
-                I'm a Student
-              </button>
-              <button type="button" onClick={() => setForm({ ...form, role: 'tutor' })} className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${form.role === 'tutor' ? 'bg-amber-400 text-slate-900 shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
-                I'm a Tutor
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Google Sign In Button */}
-        {view !== 'forgot' && (
           <>
-            <button onClick={handleGoogleSignIn} disabled={loading} className="w-full flex items-center justify-center gap-3 py-3 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors mb-4 disabled:opacity-50">
-              <svg className="w-5 h-5" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-              <span className="text-sm font-medium text-slate-700">{view === 'login' ? 'Sign in with Google' : 'Sign up with Google'}</span>
-            </button>
-            <div className="relative mb-4">
-              <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-slate-200" /></div>
-              <div className="relative flex justify-center"><span className="bg-white px-3 text-xs text-slate-400 uppercase">or</span></div>
+            <div className="roles" role="group" aria-label="I am">
+              {[['parent', "I'm a parent"], ['student', "I'm a student"], ['tutor', "I'm a tutor"]].map(([v, l]) => (
+                <button key={v} type="button" aria-pressed={form.role === v} onClick={() => setForm({ ...form, role: v })}>{l}</button>
+              ))}
             </div>
+            <input className="inp" style={{ marginBottom: 10 }} placeholder="Your full name" autoComplete="name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
           </>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-3">
-          <input type="email" placeholder="Email address" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
-            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 text-sm" />
+        {view !== 'forgot' && (
+          <>
+            <button type="button" onClick={handleGoogleSignIn} disabled={loading} className="btn line full">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              {view === 'login' ? 'Sign in with Google' : 'Continue with Google'}
+            </button>
+            <div className="or">or with email</div>
+          </>
+        )}
+
+        <form onSubmit={handleSubmit} className="stack">
+          <input className="inp" type="email" placeholder="Email address" autoComplete="email" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
           {view !== 'forgot' && (
-            <input type="password" placeholder="Password (min 6 characters)" required minLength={6} value={form.password} onChange={e => setForm({ ...form, password: e.target.value })}
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 text-sm" />
+            <input className="inp" type="password" placeholder="Password (at least 6 characters)" autoComplete={view === 'login' ? 'current-password' : 'new-password'} required minLength={6} value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} />
           )}
           {view === 'register' && (
-            <label className="flex items-start gap-2 cursor-pointer">
-              <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-slate-300 text-[#5a7a3a] focus:ring-[#6d6fcb]/30" />
-              <span className="text-xs text-slate-500">I agree to Tutagora's <button type="button" onClick={() => window.open('/privacy', '_blank')} className="text-[#6d6fcb] underline">Privacy Policy</button> and consent to the collection and processing of my personal data as described therein, in accordance with Kenya's Data Protection Act, 2019.</span>
+            <label className="agree">
+              <input type="checkbox" required />
+              <span>I agree to Tutagora's <button type="button" className="linkbtn" onClick={() => window.open('/privacy', '_blank')}>Privacy Policy</button> and consent to my data being processed as described there, under Kenya's Data Protection Act, 2019.</span>
             </label>
           )}
           {view === 'login' && (
-            <div className="text-right">
-              <button type="button" onClick={() => { setView('forgot'); setError(''); setSuccess(''); }} className="text-xs text-[#6d6fcb] font-medium hover:text-[#5658b8]">
-                Forgot password?
-              </button>
+            <div style={{ textAlign: 'right' }}>
+              <button type="button" className="linkbtn" style={{ fontSize: 14 }} onClick={() => { setView('forgot'); setError(''); setSuccess(''); }}>Forgot password?</button>
             </div>
           )}
-          <button type="submit" disabled={loading} className="w-full py-3.5 bg-amber-400 text-slate-900 font-semibold rounded-xl hover:bg-amber-300 transition-colors disabled:opacity-50 text-sm">
-            {loading ? 'Please wait...' : view === 'forgot' ? 'Send Reset Link' : view === 'login' ? 'Sign In' : 'Create Account'}
+          <button type="submit" disabled={loading} className="btn full">
+            {loading ? 'Please wait…' : view === 'forgot' ? 'Send reset link' : view === 'login' ? 'Sign in' : reason === 'plan' ? 'Create account and save' : 'Create account'}
           </button>
         </form>
-        <p className="text-center mt-5 text-sm text-slate-500">
+        <p style={{ textAlign: 'center', margin: '16px 0 0', fontWeight: 600 }}>
           {view === 'forgot' ? (
-            <button onClick={() => { setView('login'); setError(''); setSuccess(''); }} className="text-[#6d6fcb] font-semibold">Back to sign in</button>
+            <button type="button" className="linkbtn" onClick={() => { setView('login'); setError(''); setSuccess(''); }}>Back to sign in</button>
           ) : view === 'login' ? (
-            <>No account? <button onClick={() => { setView('register'); setMode('register'); setError(''); }} className="text-[#6d6fcb] font-semibold">Sign up</button></>
+            <>New here? <button type="button" className="linkbtn" onClick={() => { setView('register'); setMode('register'); setError(''); }}>Create an account</button></>
           ) : (
-            <>Have an account? <button onClick={() => { setView('login'); setMode('login'); setError(''); }} className="text-[#6d6fcb] font-semibold">Sign in</button></>
+            <>Have an account? <button type="button" className="linkbtn" onClick={() => { setView('login'); setMode('login'); setError(''); }}>Sign in</button></>
           )}
         </p>
       </div>
@@ -2635,7 +2644,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                     </div>
                   </div>
                   <div className="mt-3">
-                    <div className="text-2xl font-bold text-slate-900">KSh {(completed.length * tutor.hourly_rate).toLocaleString()}</div>
+                    <div className="text-2xl font-bold text-slate-900">KSh {completed.reduce((sum, b) => sum + Math.round((tutor.hourly_rate || 0) * (Number(b.duration_minutes) || 60) / 60), 0).toLocaleString()}</div>
                     <div className="text-sm text-slate-500">Total Earned</div>
                   </div>
                 </div>
@@ -2680,7 +2689,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                         <div className="flex items-center gap-4 shrink-0">
                           <div className="text-right">
                             <div className="text-sm font-medium text-slate-900">{b.lesson_date}</div>
-                            <div className="text-sm text-slate-400">{b.start_time?.slice(0,5)}</div>
+                            <div className="text-sm text-slate-400">{b.start_time?.slice(0,5)} · {Number(b.duration_minutes) === 30 ? '30 min' : '1 hr'}</div>
                           </div>
                           {b.status === 'confirmed' && (
                             <button 
@@ -6880,7 +6889,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                           <td className="px-4 py-3 text-sm text-slate-600">{b.subject}</td>
                           <td className="px-4 py-3 text-sm text-slate-600">{b.lesson_date}</td>
                           <td className="px-4 py-3 text-sm text-slate-600">{b.start_time?.slice(0, 5)}</td>
-                          <td className="px-4 py-3 text-sm text-right text-slate-600">KSh {(b.tutors?.hourly_rate || 0).toLocaleString()}</td>
+                          <td className="px-4 py-3 text-sm text-right text-slate-600">KSh {Math.round((b.tutors?.hourly_rate || 0) * (Number(b.duration_minutes) || 60) / 60).toLocaleString()}</td>
                           <td className="px-4 py-3">
                             <span className={`px-2 py-1 text-xs rounded-full ${
                               b.status === 'completed' ? 'bg-emerald-100 text-emerald-700' :
@@ -7106,6 +7115,7 @@ function AppInner() {
   const auth = useAuth();
   const tutorId = auth.profile?.tutors?.[0]?.id;
   const { bookings, loading: bookingsLoading, createBooking, refetch: refetchBookings } = useBookings(auth.user?.id, auth.profile?.role, tutorId);
+  const publicTutors = useTutors();
   
   const [page, setPage] = useState(() => {
     if (IS_NATIVE) return 'native-welcome';
@@ -7124,8 +7134,12 @@ function AppInner() {
     if (path === 'admin') return 'admin';
     if (path === 'handover') return 'handover';
     if (path === 'family') return 'family';
+    if (path === 'check' || path === 'check-result') return path;
+    if (path === 'privacy') return 'privacy';
     return 'home';
   });
+  // The free check: which grade to start at (set by the homepage finder).
+  const [checkGrade, setCheckGrade] = useState(null);
   const [showAuth, setShowAuth] = useState(null);
   const [selectedTutor, setSelectedTutor] = useState(null);
   const [scrolled, setScrolled] = useState(false);
@@ -7177,6 +7191,15 @@ function AppInner() {
     }
   }, [auth.user]);
 
+  // "Save the plan" from the free check: once the parent is signed in, move
+  // the guest check into their account (as a saved child when named).
+  useEffect(() => {
+    if (!auth.user || !wantsSave()) return;
+    claimGuestCheck(auth.user.id)
+      .then(r => { if (r) { setShowAuth(null); handleNavigate('dashboard'); } })
+      .catch(err => console.error('Could not save the check to the account:', err));
+  }, [auth.user?.id]);
+
   // A logged-in learner who hits the public HOREB intro goes straight to the
   // engine (the intro is only for prospects).
   useEffect(() => {
@@ -7206,6 +7229,7 @@ function AppInner() {
       else if (path === 'handover') setPage('handover');
       else if (path === 'family') setPage('family');
       else if (path === 'privacy') setPage('privacy');
+      else if (path === 'check' || path === 'check-result') setPage(path);
       else setPage('home');
       setSelectedTutor(null);
       window.scrollTo(0, 0);
@@ -7214,7 +7238,17 @@ function AppInner() {
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
-  const handleNavigate = (p) => { setPage(p); setSelectedTutor(null); window.scrollTo(0, 0); window.history.pushState({}, '', p === 'home' ? '/' : '/' + p); };
+  const handleNavigate = (p, tutor = null) => { setPage(p); setSelectedTutor(tutor); window.scrollTo(0, 0); window.history.pushState({}, '', p === 'home' ? '/' : '/' + p); };
+  const startCheck = (grade) => { setCheckGrade(grade || null); handleNavigate('check'); };
+  const openSignIn = () => setShowAuth('login');
+  const renderAuth = (defaultRole) => showAuth && (
+    <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth}
+      setMode={(m) => setShowAuth(o => (o && typeof o === 'object') ? { ...o, mode: m } : m)}
+      onClose={() => setShowAuth(null)} onAuth={auth}
+      initialRole={typeof showAuth === 'object' && showAuth.role ? showAuth.role : defaultRole}
+      reason={typeof showAuth === 'object' ? showAuth.reason : null}
+      childName={typeof showAuth === 'object' ? showAuth.childName : ''} />
+  );
   const handleLogout = async () => { try { await clearPush(auth.user?.id); } catch { /* ignore */ } await auth.signOut(); setPage(IS_NATIVE ? 'native-welcome' : 'home'); };
   const handleStartLesson = (booking) => {
     setActiveLesson(booking);
@@ -7288,7 +7322,7 @@ function AppInner() {
             <p className="text-sm text-slate-500">Sign in with your parent account, then choose which child is using this device.</p>
             <button onClick={() => setShowAuth('login')} className="w-full bg-amber-400 hover:bg-amber-300 rounded-xl py-3 font-bold">Sign in</button>
           </div>
-          {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole="student" />}
+          {renderAuth('student')}
         </div>
       );
     }
@@ -7313,7 +7347,7 @@ function AppInner() {
         <NativeHome profile={auth.profile} user={auth.user} bookings={bookings} onNavigate={handleNavigate} onStartLesson={handleStartLesson} setShowAuth={setShowAuth} />
         <NativeLessonBanner bookings={bookings} onStartLesson={handleStartLesson} />
         <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
-        {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : 'student'} />}
+        {renderAuth('student')}
       </>
     );
   }
@@ -7344,9 +7378,38 @@ function AppInner() {
     return (
       <>
         <NativeWelcome user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
-        {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : 'student'} />}
+        {renderAuth('student')}
       </>
     );
+  }
+
+  // ---- The free check (public, no account) ----
+  if (page === 'check' && !IS_NATIVE) {
+    return <CheckStart initialGrade={checkGrade} onLeave={() => handleNavigate('home')}
+      onStart={(g) => { setCheckGrade(g); setPage('check-run'); window.scrollTo(0, 0); }} />;
+  }
+  if (page === 'check-run' && !IS_NATIVE) {
+    return <AIMastery guest userId={undefined} autoStartGrade={checkGrade || getCheck()?.grade || null}
+      studentName={getCheck()?.name || undefined}
+      onBack={() => handleNavigate('home')}
+      onDiagnosed={() => handleNavigate('check-result')} />;
+  }
+  if (page === 'check-result' && !IS_NATIVE) {
+    return (<>
+      <CheckResult user={auth.user}
+        onLeave={() => handleNavigate('home')}
+        onRetake={() => startCheck(getCheck()?.grade)}
+        onFindTutor={(skill, learner) => { setFocus({ skill, learner }); handleNavigate('tutors'); }}
+        onSave={() => {
+          markWantsSave();
+          if (auth.user) {
+            claimGuestCheck(auth.user.id).then(() => handleNavigate('dashboard')).catch(err => alert('Could not save the plan: ' + err.message));
+          } else {
+            setShowAuth({ mode: 'register', role: 'parent', reason: 'plan', childName: getCheck()?.name || '' });
+          }
+        }} />
+      {renderAuth('parent')}
+    </>);
   }
 
   // Writing — composition / insha practice with marking.
@@ -7356,7 +7419,7 @@ function AppInner() {
         <Writing userId={auth.user?.id} studentName={auth.profile?.full_name} isNative={IS_NATIVE}
           onBack={() => handleNavigate(IS_NATIVE ? 'native-home' : auth.user ? 'dashboard' : 'home')} onSignIn={() => setShowAuth('login')} />
         {IS_NATIVE && <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
-        {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : 'student'} />}
+        {renderAuth('student')}
       </>
     );
   }
@@ -7374,7 +7437,10 @@ function AppInner() {
 
   // HOREB for Schools — B2B pitch page
   if (page === 'schools') {
-    return <SchoolsPage onNavigate={handleNavigate} />;
+    return (<>
+      <SchoolsPage onNavigate={handleNavigate} onSignIn={openSignIn} user={auth.user} />
+      {renderAuth(undefined)}
+    </>);
   }
 
   // Interest-led clubs — discovery page
@@ -7434,10 +7500,11 @@ function AppInner() {
 
   return (
     <div className="min-h-screen">
-      {!IS_NATIVE && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
+      {!IS_NATIVE && page !== 'home' && page !== 'tutors' && !selectedTutor && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
       {IS_NATIVE && <div className="h-2" />}
       
-      {page === 'home' && !selectedTutor && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {page === 'home' && !selectedTutor && !IS_NATIVE && <SiteHome onNavigate={handleNavigate} onSignIn={openSignIn} onStartCheck={startCheck} user={auth.user} tutors={publicTutors.tutors} />}
+      {page === 'home' && !selectedTutor && IS_NATIVE && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {(page === 'horeb' || page === 'horebhow') && !auth.user && (
         <>
           <HorebIntro user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
@@ -7445,10 +7512,20 @@ function AppInner() {
         </>
       )}
       {page === 'teach' && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
-      {page === 'tutors' && !selectedTutor && <TutorsPage onSelectTutor={setSelectedTutor} onBack={IS_NATIVE ? null : () => handleNavigate('home')} user={auth.user} setShowAuth={setShowAuth} />}
-      {selectedTutor && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
+      {page === 'tutors' && !selectedTutor && IS_NATIVE && <TutorsPage onSelectTutor={setSelectedTutor} onBack={null} user={auth.user} setShowAuth={setShowAuth} />}
+      {page === 'tutors' && !selectedTutor && !IS_NATIVE && (
+        <TutorList tutors={publicTutors.tutors} loading={publicTutors.loading} user={auth.user}
+          onSelect={(t) => { setSelectedTutor(t); window.scrollTo(0, 0); }} onNavigate={handleNavigate} onSignIn={openSignIn}
+          extra={<div className="in" style={{ paddingBottom: 40 }}><GroupClassesBrowse user={auth.user} setShowAuth={setShowAuth} /></div>} />
+      )}
+      {selectedTutor && IS_NATIVE && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
+      {selectedTutor && !IS_NATIVE && (
+        <TutorProfile tutor={selectedTutor} user={auth.user} onBook={createBooking} onNavigate={handleNavigate}
+          onBack={() => { setSelectedTutor(null); window.scrollTo(0, 0); }}
+          onSignIn={() => setShowAuth({ mode: auth.user ? 'login' : 'register', role: 'parent', reason: 'book' })} />
+      )}
       
-      {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole={typeof showAuth === 'object' ? showAuth.role : undefined} />}
+      {renderAuth(undefined)}
       {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       {showPrivacyBanner && <PrivacyBanner onAccept={() => { localStorage.setItem('tutagora_privacy_accepted', 'true'); setShowPrivacyBanner(false); }} onNavigate={handleNavigate} />}
       {IS_NATIVE && <div className="h-24" />}
