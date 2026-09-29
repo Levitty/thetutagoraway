@@ -47,6 +47,7 @@ export const SiteNav = ({ onNavigate, onSignIn, user, current, onBrand = true })
         <button type="button" onClick={() => onNavigate('tutors')} aria-current={current === 'tutors' ? 'page' : undefined}>Find a tutor</button>
         <button type="button" onClick={() => onNavigate('check')} aria-current={current === 'check' ? 'page' : undefined}>Maths check</button>
         <button type="button" onClick={() => onNavigate('schools')} aria-current={current === 'schools' ? 'page' : undefined}>For schools</button>
+        <button type="button" onClick={() => onNavigate('why')} aria-current={current === 'why' ? 'page' : undefined}>Why Tutagora</button>
       </div>
       <div className="right">
         <button type="button" className="txt hide" onClick={() => onNavigate('teach')}>Teach with us</button>
@@ -69,6 +70,7 @@ export const SiteFooter = ({ onNavigate }) => (
         <div style={{ marginTop: 8 }}>Nairobi, Kenya · hello@tutagora.com · WhatsApp 0759 240 692</div>
       </div>
       <nav aria-label="Footer">
+        <button type="button" onClick={() => onNavigate('why')}>Why Tutagora</button>
         <button type="button" onClick={() => onNavigate('tutors')}>Find a tutor</button>
         <button type="button" onClick={() => onNavigate('check')}>Maths check</button>
         <button type="button" onClick={() => onNavigate('teach')}>Teach with us</button>

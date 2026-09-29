@@ -142,32 +142,6 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
         </div>
       </div></section>
 
-      <section className="sec why"><div className="in">
-        <div className="kicker">Why Tutagora</div>
-        <h2 className="display" style={{ marginTop: 10 }}>Help that starts in the right place.</h2>
-        <div className="whys">
-          <div className="w"><span className="ic"><SiteIcon name="target" /></span><h3>We find the exact gap</h3><p>A 10-minute check across {skillCount} skills shows where your child really is, not just "needs extra lessons".</p></div>
-          <div className="w"><span className="ic"><SiteIcon name="clock" /></span><h3>Practice they finish</h3><p>15 minutes a day in maths and writing, with a clear end. Their own space on your phone, locked with your PIN.</p></div>
-          <div className="w"><span className="ic"><SiteIcon name="users" /></span><h3>Tutors who know the plan</h3><p>Every tutor is checked by us. They see the step from the check, and you get the lesson notes after every lesson.</p></div>
-          <div className="w"><span className="ic"><SiteIcon name="flag" /></span><h3>Made for Kenyan families</h3><p>CBC and Cambridge, Grade 1 to 12. M-Pesa, any phone{live ? `, and KSh ${PLANS.week.kes} a week for practice` : ''}.</p></div>
-        </div>
-      </div></section>
-
-      <section className="sec dark lesson"><div className="in">
-        <div>
-          <div className="kicker" style={{ color: '#c9c9d3' }}>A live lesson</div>
-          <h2 className="display" style={{ marginTop: 10 }}>Your child's homework, on a shared whiteboard.</h2>
-          <ul className="ticks">
-            <li><SiteIcon name="check" />The tutor sees today's step from the check</li>
-            <li><SiteIcon name="check" />Snap the homework and work through it together</li>
-            <li><SiteIcon name="check" />The whiteboard is saved as notes for you</li>
-            <li><SiteIcon name="check" />Tutor more than 10 minutes late? Full refund</li>
-          </ul>
-          <button type="button" className="btn" onClick={() => onNavigate('tutors')}>Find a tutor <SiteIcon name="arrow" /></button>
-        </div>
-        <figure className="shot"><picture><source media="(max-width: 600px)" srcSet="/images/home/lesson-room-phone.jpg" /><img src="/images/home/lesson-room.jpg" width="1600" height="1000" loading="lazy" alt="A Tutagora lesson: a homework photo on the whiteboard with the tutor's marks, the tutor's and child's video, and chat" /></picture></figure>
-      </div></section>
-
       {featured.length > 0 && (
         <section className="sec tutorband"><div className="in">
           <div className="head-row">

@@ -29,6 +29,7 @@ import './site/site.css';
 import SiteHome from './site/Home.jsx';
 import { TutorList, TutorProfile } from './site/Tutors.jsx';
 import SiteTeach from './site/Teach.jsx';
+import SiteWhy from './site/Why.jsx';
 import { HALF_HOUR_LESSONS } from './site/features.js';
 import { SiteIcon } from './site/ui.jsx';
 import { CheckStart, CheckResult, getCheck, setFocus } from './site/Check.jsx';
@@ -54,6 +55,7 @@ const ROUTE_SEO = {
   ai:         { t: "HOREB — Adaptive Maths Practice | Tutagora", d: "Practice maths at your real level. HOREB finds the gap and rebuilds from it, watching the working — free to start.", path: '/ai' },
   schools:    { t: "HOREB for Schools — Adaptive CBC Maths | Tutagora", d: "Give every child in your school maths at their own level, with a teacher dashboard and per-student CBC reports.", path: '/schools' },
   clubs:      { t: "Group Classes & Clubs | Tutagora", d: "Live group classes and interest-led clubs for Kenyan learners, led by verified tutors.", path: '/clubs' },
+  why:        { t: "Why Tutagora", d: "Why Tutagora exists and where it is going.", path: '/why' },
   teach:      { t: "Become a Tutor on Tutagora", d: "Teach online, set your own rate, and reach students across Kenya. Apply to become a verified Tutagora tutor.", path: '/teach' },
   consulting: { t: "Education Consulting | Tutagora", d: "Education consulting and advisory from the Tutagora team.", path: '/consulting' },
 };
@@ -7092,6 +7094,7 @@ function AppInner() {
     if (path === 'consulting') return 'consulting';
     if (path === 'tutors') return 'tutors';
     if (path === 'teach') return 'teach';
+    if (path === 'why') return 'why';
     if (path === 'dashboard') return 'dashboard';
     if (path === 'ai') return 'ai';
     if (path === 'writing') return 'writing';
@@ -7203,6 +7206,7 @@ function AppInner() {
       if (path === 'consulting') setPage('consulting');
       else if (path === 'tutors') setPage('tutors');
       else if (path === 'teach') setPage('teach');
+      else if (path === 'why') setPage('why');
       else if (path === 'dashboard') setPage('dashboard');
       else if (path === 'ai') setPage('ai');
       else if (path === 'writing') setPage('writing');
@@ -7499,7 +7503,7 @@ function AppInner() {
 
   return (
     <div className="min-h-screen">
-      {!IS_NATIVE && page !== 'home' && page !== 'tutors' && page !== 'teach' && !selectedTutor && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
+      {!IS_NATIVE && page !== 'home' && page !== 'tutors' && page !== 'teach' && page !== 'why' && !selectedTutor && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
       {IS_NATIVE && <div className="h-2" />}
       
       {page === 'home' && !selectedTutor && !IS_NATIVE && <SiteHome onNavigate={handleNavigate} onSignIn={openSignIn} onStartCheck={startCheck} user={auth.user} tutors={publicTutors.tutors} />}
@@ -7511,6 +7515,7 @@ function AppInner() {
         </>
       )}
       {page === 'teach' && IS_NATIVE && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+      {page === 'why' && <SiteWhy onNavigate={handleNavigate} onSignIn={openSignIn} user={auth.user} />}
       {page === 'teach' && !IS_NATIVE && <SiteTeach onNavigate={handleNavigate} onSignIn={openSignIn} user={auth.user} onApply={() => setShowAuth({ mode: 'register', role: 'tutor' })} />}
       {page === 'tutors' && !selectedTutor && IS_NATIVE && <TutorsPage onSelectTutor={setSelectedTutor} onBack={null} user={auth.user} setShowAuth={setShowAuth} />}
       {page === 'tutors' && !selectedTutor && !IS_NATIVE && (

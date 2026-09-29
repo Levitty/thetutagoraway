@@ -523,22 +523,6 @@
 .tg .passbar span { font-size: 14px; color: var(--ink2); font-weight: 600; }
 .tg .passbar.warn { background: #ffe6c7; }
 
-/* Homepage: Why Tutagora */
-.tg .why { background: #fff8ec; }
-.tg .whys { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 34px; }
-.tg .whys .w { background: #fff; border-radius: 12px; padding: 22px; border: 1.5px solid #f1e6d2; }
-.tg .whys .ic { width: 44px; height: 44px; border-radius: 12px; background: #ffc53d; display: grid; place-items: center; color: var(--ink); }
-.tg .whys .ic .i { width: 22px; height: 22px; }
-.tg .whys h3 { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -.02em; line-height: 1.1; margin: 14px 0 8px; }
-.tg .whys p { margin: 0; color: var(--ink2); font-size: 15.5px; }
-
-/* Homepage: a live lesson */
-.tg .lesson .ticks { list-style: none; padding: 0; margin: 22px 0 28px; display: grid; gap: 12px; }
-.tg .lesson .ticks li { display: flex; gap: 10px; align-items: flex-start; font-weight: 700; font-size: 17px; }
-.tg .lesson .ticks .i { color: #ffc53d; width: 22px; height: 22px; margin-top: 1px; }
-.tg .lesson .shot { margin: 0; border-radius: 14px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); border: 1px solid rgba(255,255,255,.12); }
-.tg .lesson .shot img { display: block; width: 100%; height: auto; }
-
 /* Homepage: prices */
 .tg .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 34px; }
 .tg .plans .pl { border: 2px solid var(--line); border-radius: 12px; padding: 24px; background: #fff; }
@@ -552,13 +536,40 @@
 .tg .tc .nf { font-size: 13.5px; font-weight: 700; color: #14532d; background: #e7f6ee; border-radius: 999px; padding: 4px 10px; align-self: flex-start; }
 
 @media (max-width: 1000px) {
-  .tg .whys { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tg .plans { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 600px) {
-  .tg .whys { grid-template-columns: minmax(0, 1fr); }
-}
-@media (max-width: 600px) {
-  .tg .lesson .shot { max-width: 300px; margin-inline: auto; border-radius: 22px; }
   .tg .tc .pic { aspect-ratio: 4 / 3; }
 }
+
+/* Why Tutagora: the founder's vision */
+.tg.vision .vhero { background: var(--brand); color: var(--brand-ink); padding-bottom: 72px; }
+.tg.vision .vhero > .in { max-width: 860px; }
+.tg.vision .vhero .kicker { margin-top: 40px; }
+.tg.vision .vhero h1 { font-size: clamp(40px, 6vw, 72px); margin-top: 12px; }
+.tg.vision .vhero .lead { font-size: clamp(18px, 2vw, 22px); max-width: 680px; margin-top: 22px; }
+.tg.vision .draftnote { display: inline-block; margin-top: 28px; background: var(--ink); color: #fff; font-weight: 700; font-size: 14px; border-radius: 999px; padding: 7px 14px; }
+.tg.vision .vbody { max-width: 720px; }
+.tg.vision .vpart + .vpart { margin-top: 48px; }
+.tg.vision .vpart h2 { font-size: clamp(28px, 3.4vw, 38px); margin-bottom: 14px; }
+.tg.vision .vpart p { font-size: 19px; line-height: 1.65; color: var(--ink2); margin: 0; }
+.tg.vision .vquote { margin: 56px 0; padding: 0 0 0 22px; border-left: 6px solid var(--brand); font-family: var(--display); font-weight: 800; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.15; letter-spacing: -.02em; }
+.tg.vision .vnow { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; margin-top: 56px; background: #fff8ec; border-radius: 14px; padding: 26px; }
+.tg.vision .vnow ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.tg.vision .vnow li { display: flex; gap: 10px; align-items: center; font-weight: 700; }
+.tg.vision .vnow li .i { width: 18px; height: 18px; color: var(--good); flex: none; }
+.tg.vision .vnow .next li { color: var(--ink2); }
+.tg.vision .vnow .next li .i { color: var(--mute); }
+.tg.vision .vsign { display: flex; align-items: center; gap: 16px; margin-top: 48px; }
+.tg.vision .vsign .vphoto { width: 72px; height: 72px; border-radius: 50%; overflow: hidden; display: grid; place-items: center; background: var(--gray); font-weight: 700; font-size: 13px; color: var(--mute); flex: none; }
+.tg.vision .vsign .vphoto img { width: 100%; height: 100%; object-fit: cover; }
+.tg.vision .vsign b { display: block; font-size: 19px; }
+.tg.vision .vsign span { color: var(--mute); font-weight: 600; }
+.tg.vision .vcta { text-align: center; }
+.tg.vision .vcta h2 { font-size: clamp(30px, 4vw, 46px); margin-bottom: 22px; }
+.tg.vision .vcta .row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+/* Placeholder boxes until the founder's words are in */
+.tg.vision .ph { background: rgba(18,17,23,.06); border: 2px dashed rgba(18,17,23,.25); border-radius: 10px; padding: 12px 16px; color: var(--mute) !important; font-style: italic; }
+.tg.vision .vhero .ph { background: rgba(255,255,255,.45); border-color: rgba(18,17,23,.35); color: var(--ink2) !important; }
+.tg.vision .vquote .ph { display: block; }
+@media (max-width: 700px) { .tg.vision .vnow { grid-template-columns: minmax(0, 1fr); } }
