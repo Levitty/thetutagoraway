@@ -15,6 +15,8 @@
 // decimals, and word problems parse to null and keep their existing behaviour.
 // ============================================================================
 
+import { checkAnswerMatch } from './answerCheck.js';
+
 // "42 × 4 = ?" / "727 + 112" / "207 - 174 = ?" / "56 ÷ 8" → { a, b, op }.
 // Only plain two-operand integer arithmetic; anything else returns null.
 export const parseArithmetic = (question) => {
@@ -130,6 +132,13 @@ const smallerFromLargerDiff = (a, b) => {
 
 // ---- name the likely mistake behind THIS specific answer ---------------------
 export const diagnoseError = (problem, studentAnswer) => {
+  // The question's own mistake list first (authored, then the common-mistake
+  // catalogue): the child's answer is matched the same forgiving way answers
+  // are marked, so "1 3/4" and "7/4" both find the same mistake.
+  for (const m of problem?.misconceptions || []) {
+    if (m?.when == null || !m.feedback) continue;
+    if (checkAnswerMatch(String(studentAnswer), { answer: String(m.when) })) return m.feedback;
+  }
   const f = parseFractionArithmetic(problem?.question);
   if (f) return diagnoseFraction(f, studentAnswer);
   const p = parseArithmetic(problem?.question);

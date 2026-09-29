@@ -251,3 +251,41 @@ Fixed:
   checks it: **the right answer is a button in all 1,620 young-learner
   questions tested**. 2% of Grade 4 questions still type (the shaded-grid
   question, which is answered on the picture).
+
+## Round 11: question types and feedback from the research
+Research: `docs/qa/research/` (Cambridge, KPSEA/KJSEA styles, KICD designs,
+learning science). Inventory before: 177 of 276 skills never named a mistake,
+5 of 85 Grade 4-6 skills ever showed choices, 13-17% of questions were word
+problems, nothing was step-marked.
+
+Found on the way:
+- **Fraction subtraction could freeze the screen** (in the last merge): the
+  "no zero answer" rule redrew one fraction forever for 2/4 − ?/2. Fixed.
+- **Mistake feedback written for 483 question types was never shown** in
+  practice (only the young buttons used it). Now shown after a wrong try.
+- Marking: 0.75 was accepted for "4/5 as a decimal" and 3.66 for 7.4 × 0.5
+  (a rounding margin applied to exact keys); "9 metres" for 9 kilometres;
+  "8,200,000" rejected (only every other comma read); "4/5" accepted for the
+  blank in 4/5 = ?/30. All fixed; 9 new engine tests.
+- Six first hints gave the answer away (factor and multiple lists, 120 = 60 +
+  60, f'(x) handed over, the proof sum). Rewritten.
+
+Built (cards 1-7 of the preview):
+1. Four-choice questions, every wrong option a real mistake (`choices.js`);
+   about 1 question in 10, lessons only, never the free check or reviews; a
+   choice answer never proves mastery.
+2. Common-mistake catalogue (`mistakes.js`): skills naming the mistake went
+   from about 1 in 3 to 62 of 85 in Grades 4-6 and 49 of 99 in Grades 7-9.
+3. "Teach it back" asks which step the child just did, as a choice.
+4. Spot the mistake: 22 builders, Kenyan names, served after 2 right answers.
+5. Kenyan word problems with a bar model (10 structures) shown after a wrong
+   try; half can be four-choice.
+6. Always / sometimes / never: 38 statements.
+7. Step-marked questions for Grades 7-9 (12 builders: hire purchase, VAT 16%,
+   SACCO interest, matatu speed, water tank, harambee ratio...), one mark per
+   part, carry on with the right value after a miss.
+Plus read-aloud on every Grade 4+ question. Kiswahili is not done: it needs
+translated text checked by a teacher.
+
+Checks: `npm run audit:items` (47,850 items: 0 findings), engine tests pass,
+full answer audit re-run.

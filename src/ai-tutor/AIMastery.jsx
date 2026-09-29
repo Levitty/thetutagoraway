@@ -27,6 +27,11 @@ import { Lottie, LOTTIE } from './components/Lottie.jsx';
 import { InteractiveVisual, SKILL_VISUALS } from './InteractiveVisual.jsx';
 import { checkVisualAnswer } from './content/visual.js';
 import { checkAnswerMatch, normalizeMath } from './answerCheck.js';
+import { maybeChoices, LETTERS } from './choices.js';
+import { specialItemFor } from './specialItems.js';
+import { BarModel } from './BarModel.jsx';
+import { StepsQuestion } from './StepsQuestion.jsx';
+import { speak, canSpeak, stopSpeaking, questionScript } from './speech.js';
 import { canPractice } from '../subscription.js';
 
 // ==================== SMART ANSWER MATCHING ====================
@@ -205,6 +210,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // Layered hints + tooltips state
   const [attemptCount, setAttemptCount] = useState(0);
   const [hintLevel, setHintLevel] = useState(0); // 0=none, 1=hint, 2=partial steps, 3=full reveal
+  const [selfPick, setSelfPick] = useState(null); // the step the child named in "Teach it back"
+  const [struckChoices, setStruckChoices] = useState([]); // four-choice options already tried and wrong
   const [wrongInfo, setWrongInfo] = useState(null); // { answer, diagnosis } | { needNumber:true } — feedback on the last wrong try
   // "GPS brain" (Skycak): reaching for help before trying means you never build
   // the internal map. The worked example is the map — shown first. During
@@ -756,8 +763,18 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // (grades 1–4 have their own scaffolding, so they are never "scaffoldable"
   // here and the mastery guard leaves them alone).
   const serveLessonProblem = (skillId, level) => {
-    const p = generateProblem(skillId, { level, kp: kpIndexRef.current });
     const young = (SKILLS[skillId]?.grade || 99) <= 4;
+    // Four-choice (KPSEA style) on a minority of questions, never for the young
+    // tap-to-answer flow, which has its own buttons.
+    const lg = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    const youngUI = young && lg <= 3;
+    // Now and then a special question: a Kenyan word problem with a bar model,
+    // a step-marked question (Grades 7-9), or reasoning (spot the mistake,
+    // always/sometimes/never) once the child has this skill right twice.
+    const special = youngUI ? null : specialItemFor(skillId, { correctSoFar: progress.skills[skillId]?.correct || 0 });
+    const raw = special || generateProblem(skillId, { level, kp: kpIndexRef.current });
+    const p = youngUI ? raw : maybeChoices(raw);
+    setStruckChoices([]);
     scaffoldableRef.current = !young && !!completionPlan(p, SUPPORT.FULL);
     return p;
   };
@@ -782,6 +799,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     setScaffoldLevel(startLevel);
     setAnsweredLevel(null);
     setSelfExplainOpen(false);
+    setSelfPick(null);
     // Grades 1–4 never see the text worked example — the young flow teaches by
     // demonstration (count-together / column reveal) instead. Past ORIENT the
     // intro example is skipped too: a learner who no longer needs support goes
@@ -813,6 +831,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     setVisualAnswer(null);
     setAnsweredLevel(null);
     setSelfExplainOpen(false);
+    setSelfPick(null);
     setWrongInfo(null);
   };
 
@@ -873,7 +892,9 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // Attempt 1 wrong: "Not quite" + the diagnosis, let them retry
     // Attempt 2 wrong: also offer the first steps
     // Attempt 3 wrong: full answer + full working (for THIS problem), mark incorrect
-    if (!correct && newAttemptCount < 3) {
+    // A four-choice question gets two tries (a third would be a coin toss).
+    if (!correct && problem?.mc) setStruckChoices(s => [...s, answer]);
+    if (!correct && newAttemptCount < (problem?.mc ? 2 : 3)) {
       setHintLevel(newAttemptCount); // 1 = hint, 2 = partial steps
       setAnswer('');
       return; // Don't record in progress yet — only the final result counts
@@ -962,7 +983,9 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // slow learners needed ~40 questions and 29% were still stuck after 60.
     // The recent rule: ~14 questions, none stuck, no more lenient than before.
     const recent = [...(sp.recent || []), !!correct].slice(-10);
-    const shouldMaster = !isPlaceholder && correct
+    // Picking from four options is practice, not proof: a choice answer never
+    // tips a skill into mastered (recognising is easier than producing).
+    const shouldMaster = !isPlaceholder && correct && !(problem?.mc && !problem?.mcOwn)
       && (testOutNow || (lightSupport && recentMastery(recent, skill.minProblems)));
 
     // Apply implicit repetitions to prerequisites (skip for placeholder stand-ins)
@@ -1037,7 +1060,17 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     nextProblem();
   };
 
+  // Step-marked question finished: marks were shown part by part; the result
+  // counts as right only when every part was right first time.
+  const handleStepsDone = ({ correct, marks, total }) => {
+    setFeedback(correct ? 'correct' : 'incorrect');
+    setAnsweredLevel(scaffoldRef.current);
+    setAttemptCount(1);
+    finalizeResult(correct, { attemptNo: 1, hintsUsed: total - marks, timeMs: Date.now() - problemStartRef.current });
+  };
+
   const nextProblem = () => {
+    stopSpeaking();
     // Interleave a due review from ANOTHER skill after the 3rd and 7th answers
     // (mixed practice ≈ doubles delayed retention vs blocked — Rohrer). Standard
     // flow only: young learners keep their uninterrupted count-together rhythm.
@@ -1061,6 +1094,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     setVisualAnswer(null);
     setAnsweredLevel(null);
     setSelfExplainOpen(false);
+    setSelfPick(null);
     setWrongInfo(null);
   };
 
@@ -1369,8 +1403,9 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // ANSWERED with, for the self-explanation card.
     // An interleaved review is bare retrieval — no completion scaffold, no
     // similar-example crutch. The point is recalling it from memory.
-    const plan = problem && !feedback && !interleave ? completionPlan(problem, scaffoldLevel) : null;
-    const legacyExample = problem && !feedback && !interleave ? exampleSupport(problem, scaffoldLevel) : null;
+    // A four-choice question is its own support: no started solution on top.
+    const plan = problem && !feedback && !interleave && !problem.mc && !problem.parts ? completionPlan(problem, scaffoldLevel) : null;
+    const legacyExample = problem && !feedback && !interleave && !problem.mc && !problem.parts ? exampleSupport(problem, scaffoldLevel) : null;
     const supportChip = SUPPORT_LABEL[scaffoldLevel];
     const answeredPlan = (feedback === 'correct' && answeredLevel != null && answeredLevel <= SUPPORT.MOST)
       ? completionPlan(problem, answeredLevel) : null;
@@ -1498,9 +1533,33 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                     <Icon name="refresh" className="w-3.5 h-3.5" /> Quick review · {interleave.name}
                   </div>
                 )}
+                {canSpeak() && (
+                  <button type="button" onClick={() => speak(questionScript(problem))} aria-label="Read the question to me"
+                    className="float-right ml-3 mb-2 inline-flex items-center gap-1.5 rounded-full border-2 border-[#121117] bg-white px-3 py-1 text-sm font-semibold text-slate-900 hover:bg-slate-50">
+                    <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z" /><path d="M15.5 8.5a5 5 0 0 1 0 7" /><path d="M18.5 5.5a9 9 0 0 1 0 13" /></svg>
+                    Read to me
+                  </button>
+                )}
+                {problem.instruction && /^(spot|always|word|steps)/.test(problem.type || '') && <div className="text-sm font-semibold text-[#e8336d] mb-1.5">{problem.instruction}</div>}
                 <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">
                   <TermTooltip text={problem.question} definitions={problem.workedExample?.definitions || problem.definitions} />
                 </div>
+
+                {/* Spot the mistake: the other child's working, numbered */}
+                {problem.shownSteps && (
+                  <ol className="mb-5 space-y-1.5">
+                    {problem.shownSteps.map((st, i) => (
+                      <li key={i} className="flex gap-3 items-start rounded-lg bg-[#f4f4f6] px-3 py-2 text-[15px] text-slate-800">
+                        <span className="font-bold text-[#e8336d] min-w-[52px]">Step {i + 1}</span><span>{st}</span>
+                      </li>
+                    ))}
+                  </ol>
+                )}
+
+                {/* Bar model: hidden on the first look so the child reads and
+                    thinks first; shown after a wrong try, a hint, or when the
+                    lesson has dropped to the concrete level. */}
+                {problem.diagram && (attemptCount > 0 || hintLevel >= 1 || modalityLevel === 'concrete' || feedback) && <BarModel diagram={problem.diagram} />}
 
                 {/* Completion scaffold — this problem's own solution, started for
                     the learner and faded from the end (Renkl backward fading). */}
@@ -1547,6 +1606,30 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   </details>
                 )}
 
+                {problem.parts ? (
+                  <StepsQuestion key={problem.question} problem={problem} onDone={handleStepsDone} />
+                ) : problem.mc ? (
+                  <div className={`grid gap-2.5 ${problem.mc.length === 3 && problem.mc.every(o => String(o).length <= 10) ? 'grid-cols-3' : problem.mc.every(o => String(o).length <= 12) ? 'grid-cols-2' : 'grid-cols-1'}`} role="radiogroup" aria-label="Choose an answer">
+                    {problem.mc.map((opt, i) => {
+                      const struck = struckChoices.includes(opt);
+                      const chosen = answer === opt;
+                      const right = !!feedback && checkAnswerMatch(opt, problem);
+                      return (
+                        <button key={opt} type="button" role="radio" aria-checked={chosen}
+                          disabled={!!feedback || struck}
+                          onClick={() => setAnswer(opt)}
+                          className={`text-left flex items-center gap-3 rounded-lg border-2 px-4 py-3 text-lg font-bold transition-colors ${
+                            right ? 'bg-[#eef4e7] border-[#4f7233] text-slate-900'
+                            : struck ? 'bg-[#fdf2ef] border-[#f2cdc2] text-slate-400 line-through'
+                            : chosen ? 'bg-amber-300 border-[#121117] text-slate-900 ring-4 ring-[#ff7aac]/40'
+                            : 'bg-amber-400 border-[#121117] text-slate-900 hover:bg-amber-300'}`}>
+                          <span className="text-xs font-bold opacity-60 w-4">{LETTERS[i]}</span>
+                          <span>{opt}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                ) : <>
                 {/* Visual ANSWER widget (the problem is answered by interaction) */}
                 {problem.visual ? (
                   <InteractiveVisual visualType={problem.visual.type} visualData={problem.visual.data} onAnswer={setVisualAnswer} disabled={!!feedback} />
@@ -1556,10 +1639,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   )
                 )}
                 <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+                </>}
 
                 {/* Roadside assistance, not GPS: only offered once the child has
                     actually sat with the problem — never as a reflex tap. */}
-                {!feedback && hintLevel < 1 && attemptCount === 0 && hintUnlocked && (
+                {!feedback && !problem.parts && hintLevel < 1 && attemptCount === 0 && hintUnlocked && (
                   <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm stuck — give me a nudge</button>
                 )}
 
@@ -1582,7 +1666,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 {!feedback && attemptCount > 0 && wrongInfo && !wrongInfo.needNumber && (
                   <div className="mt-4 p-3 bg-[#fdf2ef] border border-[#f2cdc2] rounded-2xl text-sm">
                     <span className="text-[#c0663f] font-semibold">Not quite.</span>
-                    {wrongInfo.answer && <span className="text-slate-500"> You wrote <span className="font-mono text-slate-700">{wrongInfo.answer}</span>.</span>}
+                    {wrongInfo.answer && <span className="text-slate-500"> You {problem.mc ? 'chose' : 'wrote'} <span className="font-mono text-slate-700">{wrongInfo.answer}</span>.</span>}
                     <div className="mt-1 text-slate-700">{wrongInfo.diagnosis || (problem.hint || genericNudge(problem))}</div>
                     {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="mt-1.5 text-[#6d6fcb] underline text-xs hover:text-[#5658b8]">show me the first steps</button>}
                   </div>
@@ -1612,6 +1696,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]">
                   <span className="text-[#4f7233] font-bold">Nice{learnerFirst ? `, ${learnerFirst}` : ''} — that's right!</span>
                   {attemptCount > 1 && <span className="text-slate-400 text-sm ml-2">(attempt {attemptCount})</span>}
+                  {problem.explain && <p className="mt-1.5 text-sm text-slate-700">{problem.explain}</p>}
                 </div>
               )}
 
@@ -1625,7 +1710,28 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                     You worked the last {answeredPlan.hiddenCount === 1 ? 'step' : `${answeredPlan.hiddenCount} steps`} yourself.
                     Say <em>why</em> {answeredPlan.hiddenCount === 1 ? 'it works' : 'they work'} — out loud or in your head — then check:
                   </p>
-                  {!selfExplainOpen ? (
+                  {(() => {
+                    // Self-explanation as a choice (young and second-language
+                    // learners explain better by picking than by writing):
+                    // name the step you just did, from this solution's own steps.
+                    const desc = (t) => String(t).split('→')[0].trim();
+                    const opts = [...new Set([...answeredPlan.shown, ...answeredPlan.hidden].map(desc))].filter(Boolean).sort();
+                    const right = desc(answeredPlan.hidden[0]);
+                    if (opts.length < 3 || selfExplainOpen) return null;
+                    return (
+                      <div className="mb-2">
+                        <div className="text-sm font-semibold text-slate-700 mb-1.5">Which of these did you just do?</div>
+                        <div className="grid gap-1.5">
+                          {opts.map(o => (
+                            <button key={o} type="button" onClick={() => { setSelfPick({ pick: o, right: o === right }); setSelfExplainOpen(true); }}
+                              className="text-left text-sm rounded-lg border-2 border-[#121117] bg-amber-400 hover:bg-amber-300 text-slate-900 font-semibold px-3 py-2">{o}</button>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })()}
+                  {selfPick && <p className={`text-sm font-semibold mb-1.5 ${selfPick.right ? 'text-[#4f7233]' : 'text-[#c0663f]'}`}>{selfPick.right ? 'Yes, that was your step.' : 'Not that one. Here is what you did:'}</p>}
+                  {!selfExplainOpen ? ([...new Set([...answeredPlan.shown, ...answeredPlan.hidden].map(t => String(t).split('→')[0].trim()))].filter(Boolean).length >= 3 ? null :
                     <button onClick={() => setSelfExplainOpen(true)} className="text-sm text-[#6d6fcb] hover:text-[#5658b8] font-semibold transition-colors">
                       Show the thinking
                     </button>
@@ -1643,7 +1749,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               )}
 
               {/* Missed it — show the answer AND the full working, warmly */}
-              {feedback === 'incorrect' && (
+              {feedback === 'incorrect' && !problem.parts && (
                 <div className="rounded-2xl p-4 mb-4 bg-[#fdf2ef] border border-[#f2cdc2]">
                   <span className="text-[#c0663f] font-bold">Not quite — the answer is <span className="font-mono text-slate-900">{problem.answer}</span></span>
                   {wrongInfo?.diagnosis && <p className="mt-1.5 text-sm text-slate-700">{wrongInfo.diagnosis}</p>}
@@ -1681,7 +1787,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 ))}</div>
               </div>}
 
-              {!feedback ? <button onClick={checkAnswer} disabled={!answer.trim() && !(problem.visual && visualAnswer != null)} className="w-full bg-amber-400 text-slate-900 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 rounded-2xl py-4 font-bold transition-colors">{attemptCount > 0 ? 'Try Again' : 'Check Answer'}</button>
+              {!feedback && problem.parts ? null : !feedback ? <button onClick={checkAnswer} disabled={!answer.trim() && !(problem.visual && visualAnswer != null)} className="w-full bg-amber-400 text-slate-900 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 rounded-2xl py-4 font-bold transition-colors">{attemptCount > 0 ? 'Try Again' : 'Check Answer'}</button>
                 : <button onClick={nextProblem} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-2xl py-4 font-bold flex items-center justify-center gap-2 transition-colors">Next <Icon name="arrow" className="w-5 h-5" /></button>}
             </>
           )}
@@ -1746,6 +1852,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 : (
                   <div className="rounded-2xl p-4 mb-4 bg-[#fdf2ef] border border-[#f2cdc2]">
                     <span className="text-[#c0663f] font-bold">Not this time — it&rsquo;s <span className="font-mono text-slate-900">{problem?.answer}</span></span>
+                    {(() => { const d = diagnoseError(problem, answer); return d ? <p className="text-sm text-slate-700 mt-1.5">{d}</p> : null; })()}
                     <p className="text-sm text-slate-600 mt-1">That&rsquo;s exactly what a review is for — I&rsquo;ll bring this one back sooner.</p>
                   </div>
                 )

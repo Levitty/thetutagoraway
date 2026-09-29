@@ -36,7 +36,8 @@ export function planYoungLesson(problem) {
     const fmt = (x) => { x = (x + 1440) % 1440; return `${Math.floor(x / 60)}:${String(x % 60).padStart(2, '0')}`; };
     choices = shuffle(uniq([answer, fmt(t + 15), fmt(t - 15), fmt(t + 60)]).slice(0, 3));
   } else if (/^-?\d+$/.test(answer) && Number.isFinite(v) && Number.isInteger(v)) {
-    const mis = parseFloat(problem.misconceptions?.[0]?.when);
+    // Authored mistakes only: the young lessons stay exactly as they were.
+    const mis = parseFloat(problem.misconceptions?.find(m => m?.source !== 'catalogue')?.when);
     const pool = uniq([v, Number.isFinite(mis) && mis >= 0 && mis !== v ? mis : v + 1, v > 0 ? v - 1 : v + 2, v + 1])
       .filter(n => n >= 0).slice(0, 3);
     while (pool.length < 3) pool.push(v + pool.length);

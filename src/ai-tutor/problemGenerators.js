@@ -8,6 +8,7 @@ import { SKILLS } from './knowledgeGraph.js';
 import { STRUCTURED_CONTENT } from './content/index.js';
 import { PRIMARY_ALIAS } from './content/primary.js';
 import { checkAnswerMatch } from './answerCheck.js';
+import { catalogueMistakes } from './mistakes.js';
 
 // Structured, pedagogically-complete content (worked example + scaffolded steps
 // + hint ladder + misconception feedback + verified answers) lives in
@@ -138,14 +139,14 @@ const generators = {
     if (askFor.includes('smallest')) answer = factors[1].toString();
     else if (askFor.includes('largest')) answer = factors[factors.length - 2].toString();
     else answer = factors.length.toString();
-    return { question: `What is the ${askFor} of ${n}?`, answer, hint: `Factors of ${n}: ${factors.join(', ')}`,
+    return { question: `What is the ${askFor} of ${n}?`, answer, hint: `List the factors in pairs that multiply to ${n}: 1 × ${n}, then 2 × ?, 3 × ?...`,
       definitions: { 'Factor': 'A number that divides evenly into another number with no remainder. For example, 3 is a factor of 12 because 12 \u00F7 3 = 4 exactly.' } };
   },
 
   G5_MULTIPLES: () => {
     const n = rand(2, 12), nth = rand(3, 10);
     return { question: `What is the ${nth}${nth === 3 ? 'rd' : 'th'} multiple of ${n}?`, answer: (n * nth).toString(),
-      hint: `Multiples of ${n}: ${n}, ${n*2}, ${n*3}, ...`,
+      hint: `Count in ${n}s: ${n}, ${n * 2}, ... Which one is in the place asked for?`,
       definitions: { 'Multiple': `A multiple of ${n} is what you get when you multiply ${n} by a whole number (1, 2, 3...). Think of it as the ${n}-times table.` } };
   },
 
@@ -1135,7 +1136,7 @@ const generators = {
     () => { const l = rand(3, 9) * 2; return { question: `The perpendicular bisector of a ${l} cm line cuts it into two equal parts. How long is each part?`, answer: String(l / 2), hint: 'A bisector cuts it exactly in half.' }; },
     () => ({ question: 'A perpendicular bisector crosses the line at what angle, in degrees?', answer: '90', accepts: ['90', '90°', 'right angle'], hint: 'Perpendicular means at a right angle.' }),
     () => ({ question: 'Each angle of an equilateral triangle is how many degrees? (This is how you construct 60°.)', answer: '60', hint: 'The three equal angles add up to 180°.' }),
-    () => ({ question: 'To construct 120°, you put two angles of how many degrees side by side?', answer: '60', hint: '120 = 60 + 60.' }),
+    () => ({ question: 'To construct 120°, you put two angles of how many degrees side by side?', answer: '60', hint: 'Which angle, used twice, makes 120°? It is the angle of an equilateral triangle.' }),
     () => ({ question: 'To construct 30°, you construct 60° and then bisect it. To construct 45°, you construct which angle and bisect it?', answer: '90', accepts: ['90', '90°'], hint: 'Half of it must be 45°.' }),
     () => ({ question: 'Which construction cuts an angle exactly in half: the angle bisector or the perpendicular bisector?', answer: 'angle bisector', accepts: ['angle bisector', 'the angle bisector'], hint: 'It is named after what it cuts.' }),
     () => ({ question: 'Which construction gives a line at 90° through the middle of another line: the angle bisector or the perpendicular bisector?', answer: 'perpendicular bisector', accepts: ['perpendicular bisector', 'the perpendicular bisector'], hint: 'Perpendicular means at 90°.' }),
@@ -1456,7 +1457,7 @@ const generators = {
     const d = pw === 1 ? `${co}x` : `${co}x^${pw}`;
     return rand(0, 1)
       ? { question: `Differentiate f(x) = ${a === 1 ? '' : a}x^${n} from first principles. What is f'(x)?`, answer: d, accepts: [d, d.replace('^', '**')], hint: `The limit of [f(x+h) − f(x)] / h works out to ${n} × ${a} x^${pw}.` }
-      : { question: `f(x) = ${a === 1 ? '' : a}x^${n}. Using the derivative from first principles, find the gradient f'(${x}).`, answer: String(co * x ** pw), hint: `f'(x) = ${d}; put x = ${x}.` };
+      : { question: `f(x) = ${a === 1 ? '' : a}x^${n}. Using the derivative from first principles, find the gradient f'(${x}).`, answer: String(co * x ** pw), hint: `First find f'(x): the limit of [f(x+h) − f(x)] / h. Then put x = ${x}.` };
   },
 
   G11_DIFF_POWER_RULE: () => {
@@ -1613,7 +1614,7 @@ const generators = {
 
   G12_PROOF: () => pick([
     () => { const n = rand(2, 8); return { question: `The sum of the first n odd numbers is n². Check it for n = ${n}: what is 1 + 3 + ... + ${2 * n - 1}?`, answer: String(n * n), hint: `Add them, or use n² with n = ${n}.` }; },
-    () => { const n = rand(2, 9); return { question: `Check 1 + 2 + ... + n = n(n+1)/2 for n = ${n}. What is the sum?`, answer: String(n * (n + 1) / 2), hint: `${n} × ${n + 1} ÷ 2.` }; },
+    () => { const n = rand(2, 9); return { question: `Check 1 + 2 + ... + n = n(n+1)/2 for n = ${n}. What is the sum?`, answer: String(n * (n + 1) / 2), hint: `Add 1 + 2 + ... up to ${n}, or put n = ${n} into n(n+1)/2.` }; },
     () => ({ question: 'In proof by induction, you assume the statement is true for n = k. For which value of n do you then prove it?', answer: 'k+1', accepts: ['k+1', 'k + 1', 'n = k + 1', 'n=k+1'], hint: 'The next one after k.' }),
     () => ({ question: 'In proof by induction, what is the first case you usually check? n = ?', answer: '1', accepts: ['1', 'n = 1', 'n=1'], hint: 'The base case: the smallest n the statement is about.' }),
     () => { const n = rand(1, 6); return { question: `Check 2ⁿ − 1 = 1 + 2 + 4 + ... + 2ⁿ⁻¹ for n = ${n}. What is 2^${n} − 1?`, answer: String(2 ** n - 1), hint: `2^${n} = ${2 ** n}.` }; },
@@ -1687,6 +1688,14 @@ const tidy = (p) => {
   if (Array.isArray(p.accepts)) p.accepts = p.accepts.map(tidyNum);
   if (Array.isArray(p.hints)) p.hints = p.hints.map(tidyNum);
   if (p.solution && typeof p.solution.answer === 'string') p.solution.answer = tidyNum(p.solution.answer);
+  // Common-mistake catalogue (mistakes.js) adds what the authored list misses,
+  // after it, so authored feedback always wins on the same wrong answer.
+  if (!p.placeholder) {
+    const own = Array.isArray(p.misconceptions) ? p.misconceptions : [];
+    const have = new Set(own.map(m => String(m?.when)));
+    const extra = catalogueMistakes(p).filter(m => !have.has(m.when));
+    if (own.length || extra.length) p.misconceptions = [...own, ...extra];
+  }
   if (Array.isArray(p.misconceptions)) {
     p.misconceptions = p.misconceptions.filter(m => !m || m.when == null || !checkAnswerMatch(String(m.when), p));
   }

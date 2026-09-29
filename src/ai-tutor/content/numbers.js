@@ -543,7 +543,7 @@ export function buildPlaceValueChart() {
       `Its value is ${digit} × ${place}.`,
     ),
     solution: { steps: [{ text: `That column is worth ${place}.`, expr: `${digit} × ${place} = ${value}` }], answer: `${value}` },
-    misconceptions: [{ when: `${digit}`, feedback: `A digit's value depends on its COLUMN — it's ${digit} × ${place}, not just ${digit}.` }],
+    misconceptions: [{ when: `${digit}`, feedback: `A digit's value depends on its COLUMN, not just the digit. Which column is the ${digit} in, and what is that column worth?` }],
     visual: { type: 'place_value_chart', data: { digits, labels: placeVals.map(String), highlight: hi } },
     verify: { kind: 'fraction', value },
   };

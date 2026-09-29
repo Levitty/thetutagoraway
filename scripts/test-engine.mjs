@@ -110,6 +110,16 @@ const cases = [
   ['coordinate order matters', '(0, 6)', { answer: '(6, 0)' }, false],
   ['coordinate without brackets', '6,0', { answer: '(6, 0)' }, true],
   ['thousands comma still fine', '1,200', { answer: '1200' }, true],
+  // Round 11 (docs/qa/answer-audit-log.md):
+  ['two thousands commas', '8,200,000', { answer: '8200000' }, true],
+  ['exact decimal key is exact', '0.75', { question: 'Write 4/5 as a decimal.', answer: '0.8' }, false],
+  ['exact decimal key, right', '0.80', { question: 'Write 4/5 as a decimal.', answer: '0.8' }, true],
+  ['exact product is exact', '3.66', { question: '7.4 × 0.5', answer: '3.7' }, false],
+  ['rounded key keeps margin (π)', '153.86', { question: 'Find the area of a circle of radius 7 cm (1 d.p.).', answer: '153.9' }, true],
+  ['wrong unit is wrong', '9 metres', { question: 'How many kilometres are there in 9,000 metres?', answer: '9' }, false],
+  ['right unit is fine', '9 km', { question: 'How many kilometres are there in 9,000 metres?', answer: '9' }, true],
+  ['blank-fill: the question is not the answer', '4/5', { question: 'Fill in the blank: 4/5 = ?/30', answer: '24', accepts: ['24', '24/30'] }, false],
+  ['blank-fill: whole fraction written out', '24/30', { question: 'Fill in the blank: 4/5 = ?/30', answer: '24', accepts: ['24', '24/30'] }, true],
 ];
 for (const [label, user, prob, expect] of cases) {
   const got = checkAnswerMatch(user, prob);

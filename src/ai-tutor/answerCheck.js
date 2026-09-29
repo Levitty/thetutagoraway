@@ -20,7 +20,7 @@ export function normalizeMath(str) {
   s = s.replace(/\bremainder\b/g, 'r');            // "5 remainder 2" → "5 r 2"
   s = s.replace(/\.\s*$/, '');                     // trailing full stop
   s = s.replace(/\s+/g, '');             // drop spaces
-  s = s.replace(/(\d),(\d{3})/g, '$1$2'); // 1,200 → 1200 (keep value commas)
+  while (/(\d),(\d{3})(?!\d)/.test(s)) s = s.replace(/(\d),(\d{3})(?!\d)/, '$1$2'); // 1,200 and 8,200,000 (keep value commas)
   s = s.replace(/\(([a-z])\)/g, '$1');   // (x) → x
   s = s.replace(/(\d)[*×·]([a-z])/g, '$1$2'); // 2*x → 2x
   s = s.replace(/(\d)[*×·]\(/g, '$1(');  // 2*(3) → 2(3)
@@ -43,7 +43,8 @@ const CHILD_UNIT_WORDS = /(percent(age)?|per cent|shillings?|shs?|bob|hours?|hrs
 // string matching). `child` also strips the unit words a child might add.
 export function mathValue(raw, child = false) {
   // Commas only as thousands separators ("1,200"): "6, 0" is not sixty.
-  let s = raw.toString().trim().toLowerCase().replace(/[−–—]/g, '-').replace(/(\d),(\d{3})(?!\d)/g, '$1$2');
+  let s = raw.toString().trim().toLowerCase().replace(/[−–—]/g, '-');
+  while (/(\d),(\d{3})(?!\d)/.test(s)) s = s.replace(/(\d),(\d{3})(?!\d)/, '$1$2');
   if (/\d\s*,\s*\d/.test(s)) return null;
   // Kid-typed decorations that shouldn't change a numeric answer:
   s = s.replace(/^(ksh|kes|sh|shs)\.?\s*/, '');   // currency prefix: "KSh 4500"
@@ -118,6 +119,42 @@ const expandShort = (w) => {
   return x;
 };
 
+// The exact value of the answer when we can know it: the builder's own
+// verified value, or a plain calculation in the question ("7.4 × 0.5",
+// "Write 4/5 as a decimal"). Used so an EXACT key is marked exactly: the
+// rounding margin is only for keys that were rounded (π, square roots).
+function exactValue(problem) {
+  const v = problem?.verify?.value;
+  if (typeof v === 'number' && Number.isFinite(v)) return v;
+  const q = String(problem?.question || '').replace(/[−–]/g, '-').replace(/\s*=\s*\??\s*$/, '').trim();
+  let m = q.match(/^(-?\d+(?:\.\d+)?)\s*([+\-×x*÷/])\s*(-?\d+(?:\.\d+)?)$/);
+  if (m) {
+    const a = +m[1], b = +m[3], op = m[2];
+    const r = op === '+' ? a + b : op === '-' ? a - b : (op === '÷' || op === '/') ? (b ? a / b : NaN) : a * b;
+    return Number.isFinite(r) ? r : null;
+  }
+  m = q.match(/write (\d+)\/(\d+) as a decimal/i);
+  if (m && +m[2]) return +m[1] / +m[2];
+  return null;
+}
+
+// A unit the child wrote that contradicts the unit asked for ("9 metres" when
+// the question asks how many kilometres). Only clear length/mass/capacity words.
+const UNIT_WORDS = [
+  ['mm', /^(mm|millimet(re|er)s?)$/], ['cm', /^(cm|centimet(re|er)s?)$/], ['km', /^(km|kilomet(re|er)s?)$/], ['m', /^(m|met(re|er)s?)$/],
+  ['kg', /^(kg|kilograms?|kilos?)$/], ['g', /^(g|grams?)$/], ['ml', /^(ml|millilit(re|er)s?)$/], ['l', /^(l|lit(re|er)s?)$/],
+];
+const unitOf = (w) => { const x = String(w || '').toLowerCase().replace(/\.$/, ''); const hit = UNIT_WORDS.find(([, re]) => re.test(x)); return hit ? hit[0] : null; };
+function unitConflict(userAnswer, problem) {
+  const um = String(userAnswer).trim().match(/^-?[\d.,\s/]+\s*([a-z]+)\.?$/i);
+  const given = um && unitOf(um[1]);
+  if (!given) return false;
+  const q = String(problem?.question || '');
+  const ask = q.match(/how many ([a-z]+)/i) || q.match(/\b(?:in|to|into)\s+([a-z]+)\s*\??\s*$/i) || q.match(/\(([a-z]+)\)\s*$/i);
+  const asked = ask && unitOf(ask[1]);
+  return !!asked && asked !== given;
+}
+
 export function checkAnswerMatch(userAnswer, problem) {
   const normalizedUser = normalizeMath(userAnswer);
   const accepts = problem.accepts || [problem.answer];
@@ -170,12 +207,21 @@ export function checkAnswerMatch(userAnswer, problem) {
   //    number or whole number is exact, so a wrong 1/20 can't pass for a key
   //    shown as 0.1.
   const userVal = mathValue(userAnswer, true);
-  if (userVal != null) {
+  if (userVal != null && !unitConflict(userAnswer, problem)) {
     const typedDecimal = /\d*\.\d/.test(userAnswer.toString());
+    const exact = exactValue(problem);
+    const wholeKey = /^-?\d+$/.test(String(problem.answer ?? '').trim());
     if (accepts.some(a => {
+      // "24/30" listed for a "?/30" blank is a literal alternative: "4/5" has
+      // the same value but is the question, not the answer.
+      if (wholeKey && /^\s*-?\d+\s*\/\s*\d+\s*$/.test(String(a))) return false;
       const aVal = mathValue(a);
       if (aVal == null) return false;
-      return typedDecimal ? numbersMatch(userVal, a, aVal) : Math.abs(userVal - aVal) <= 1e-9 * Math.max(1, Math.abs(aVal));
+      if (!typedDecimal) return Math.abs(userVal - aVal) <= 1e-9 * Math.max(1, Math.abs(aVal));
+      // An exact key (4/5 = 0.8) must be matched exactly: 0.75 is wrong.
+      // A rounded key (π, √) keeps the half-a-unit margin.
+      if (exact != null && Math.abs(exact - aVal) <= 1e-9 * Math.max(1, Math.abs(aVal))) return Math.abs(userVal - exact) <= 1e-9 * Math.max(1, Math.abs(exact));
+      return numbersMatch(userVal, a, aVal);
     })) return true;
   }
 
