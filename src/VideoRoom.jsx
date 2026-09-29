@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import AgoraRTC from 'agora-rtc-sdk-ng';
 import { supabase } from './supabase';
 import { Spreadsheet } from './Spreadsheet';
+import { Whiteboard } from './lesson/Whiteboard.jsx';
 
 const AGORA_APP_ID = '35a8f51c866e44bfbb7bd5e3970e75e4';
 
@@ -49,122 +50,6 @@ const VideoPlayer = ({ track, fit = 'cover' }) => {
   return <div ref={ref} className="w-full h-full overflow-hidden" />;
 };
 
-// ==================== COLLABORATIVE WHITEBOARD ====================
-// Strokes are drawn on a transparent layer over paper (and over a homework
-// photo when one is shared), and synced to the other person live.
-const PENS = ['#121117', '#e5484d', '#3b5bdb', '#30a46c', '#f08c00'];
-const Whiteboard = ({ channelName, photo, onRemovePhoto }) => {
-  const canvasRef = useRef(null);
-  const isDrawing = useRef(false);
-  const lastPoint = useRef(null);
-  const channelRef = useRef(null);
-  const [color, setColor] = useState(PENS[0]);
-  const [tool, setTool] = useState('pen'); // pen | eraser
-
-  const sizeCanvas = () => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const rect = canvas.getBoundingClientRect();
-    if (!rect.width || !rect.height) return;
-    const ctx = canvas.getContext('2d');
-    const keep = canvas.width ? ctx.getImageData(0, 0, canvas.width, canvas.height) : null;
-    canvas.width = Math.round(rect.width * 2);
-    canvas.height = Math.round(rect.height * 2);
-    ctx.setTransform(2, 0, 0, 2, 0, 0);
-    if (keep) ctx.putImageData(keep, 0, 0);
-  };
-
-  const drawStroke = useCallback(({ fromX, fromY, toX, toY, color: c, width: w, tool: t }) => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const rect = canvas.getBoundingClientRect();
-    ctx.save();
-    ctx.globalCompositeOperation = t === 'eraser' ? 'destination-out' : 'source-over';
-    ctx.beginPath();
-    ctx.strokeStyle = c;
-    ctx.lineWidth = t === 'eraser' ? 26 : (w || 3.5);
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
-    ctx.moveTo(fromX * rect.width, fromY * rect.height);
-    ctx.lineTo(toX * rect.width, toY * rect.height);
-    ctx.stroke();
-    ctx.restore();
-  }, []);
-
-  const clearCanvas = (broadcast = true) => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-    if (broadcast) channelRef.current?.send({ type: 'broadcast', event: 'clear', payload: {} });
-  };
-
-  useEffect(() => {
-    const channel = supabase.channel(`whiteboard-${channelName}`, { config: { broadcast: { self: false } } });
-    channel.on('broadcast', { event: 'draw' }, ({ payload }) => drawStroke(payload));
-    channel.on('broadcast', { event: 'clear' }, () => clearCanvas(false));
-    channel.subscribe();
-    channelRef.current = channel;
-    return () => { supabase.removeChannel(channel); };
-  }, [channelName]);
-
-  // Size to the space it's given, and keep the drawing when that changes.
-  useEffect(() => {
-    sizeCanvas();
-    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(() => sizeCanvas()) : null;
-    if (ro && canvasRef.current) ro.observe(canvasRef.current);
-    return () => ro?.disconnect();
-  }, []);
-
-  const point = (e) => {
-    const rect = canvasRef.current.getBoundingClientRect();
-    const p = e.touches ? e.touches[0] : e;
-    return { x: (p.clientX - rect.left) / rect.width, y: (p.clientY - rect.top) / rect.height };
-  };
-  const start = (e) => { e.preventDefault(); isDrawing.current = true; lastPoint.current = point(e); };
-  const move = (e) => {
-    e.preventDefault();
-    if (!isDrawing.current || !lastPoint.current) return;
-    const p = point(e);
-    const stroke = { fromX: lastPoint.current.x, fromY: lastPoint.current.y, toX: p.x, toY: p.y, color, width: 3.5, tool };
-    drawStroke(stroke);
-    channelRef.current?.send({ type: 'broadcast', event: 'draw', payload: stroke });
-    lastPoint.current = p;
-  };
-  const end = () => { isDrawing.current = false; lastPoint.current = null; };
-
-  return (
-    <div className="absolute inset-0" style={{ background: C.card, backgroundImage: `radial-gradient(${C.line} 1.4px, transparent 1.6px)`, backgroundSize: '26px 26px' }}>
-      {photo && <img src={photo} alt="Shared homework" className="absolute inset-0 w-full h-full object-contain p-3 pointer-events-none select-none" />}
-      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full touch-none" style={{ cursor: tool === 'eraser' ? 'cell' : 'crosshair' }}
-        onMouseDown={start} onMouseMove={move} onMouseUp={end} onMouseLeave={end}
-        onTouchStart={start} onTouchMove={move} onTouchEnd={end} />
-
-      {/* Pens, eraser and clear: one small floating row. */}
-      <div className="absolute top-3 left-3 flex items-center gap-1.5 p-1.5 rounded-full bg-white/95 shadow-sm" style={{ border: `1.5px solid ${C.line}` }}>
-        {PENS.map(p => (
-          <button key={p} type="button" aria-label="Pen colour" onClick={() => { setColor(p); setTool('pen'); }}
-            className="w-7 h-7 rounded-full transition-transform"
-            style={{ background: p, boxShadow: tool === 'pen' && color === p ? `0 0 0 2.5px #fff, 0 0 0 4.5px ${p}` : 'none', transform: tool === 'pen' && color === p ? 'scale(1.05)' : 'none' }} />
-        ))}
-        <span className="w-px h-5 mx-0.5" style={{ background: C.line }} />
-        <button type="button" aria-label="Eraser" aria-pressed={tool === 'eraser'} onClick={() => setTool('eraser')}
-          className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: tool === 'eraser' ? C.ink : 'transparent', color: tool === 'eraser' ? '#fff' : C.ink2 }}>
-          <Icon name="eraser" className="w-[18px] h-[18px]" />
-        </button>
-        <button type="button" aria-label="Clear the board" onClick={() => clearCanvas(true)} className="w-8 h-8 rounded-full flex items-center justify-center" style={{ color: '#c4302b' }}>
-          <Icon name="trash" className="w-[18px] h-[18px]" />
-        </button>
-      </div>
-      {photo && (
-        <button type="button" onClick={onRemovePhoto} className="absolute left-3 bottom-3 lg:bottom-auto lg:left-auto lg:top-3 lg:right-3 h-9 px-3 rounded-full bg-white/95 text-sm font-bold flex items-center gap-1.5 shadow-sm" style={{ border: `1.5px solid ${C.line}`, color: C.ink2 }}>
-          <Icon name="close" className="w-4 h-4" />Remove photo
-        </button>
-      )}
-    </div>
-  );
-};
-
 // ==================== HELPERS ====================
 const SUPPORT_WA = '254759240692';
 const LATE_MIN = 10; // a tutor this late means the family can ask for a refund
@@ -176,7 +61,7 @@ const lessonStart = (b) => {
 };
 
 // A photo is shrunk on the phone, then sent to the other person in pieces
-// (live messages have a size limit). It is never stored.
+// by the whiteboard. It is only kept if it ends up in the lesson notes.
 const shrinkPhoto = (file) => new Promise((resolve, reject) => {
   const img = new Image();
   img.onload = () => {
@@ -190,7 +75,6 @@ const shrinkPhoto = (file) => new Promise((resolve, reject) => {
   img.onerror = () => reject(new Error("That photo couldn't be opened. Try a JPG or PNG."));
   img.src = URL.createObjectURL(file);
 });
-const CHUNK = 24000;
 
 // A round face: live video, or the person's first letter when the camera is off.
 const Face = ({ track, name, size, ring, tag, speaking }) => (
@@ -257,16 +141,18 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
   const [chatOpen, setChatOpen] = useState(false);  // phone only; always shown on desktop
   const [confirmLeave, setConfirmLeave] = useState(false);
   const [now, setNow] = useState(Date.now());
-  const [photo, setPhoto] = useState(null);
   const [photoBusy, setPhotoBusy] = useState(false);
+  const [leaving, setLeaving] = useState(false);
+  const [isLg, setIsLg] = useState(() => typeof window !== 'undefined' && window.innerWidth >= 1024);
+  useEffect(() => { const f = () => setIsLg(window.innerWidth >= 1024); window.addEventListener('resize', f); return () => window.removeEventListener('resize', f); }, []);
+  const boardRef = useRef(null);
+  const boardDirty = useRef(false);
   const [note, setNote] = useState('');
 
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [unread, setUnread] = useState(0);
   const chatChannelRef = useRef(null);
-  const photoChannelRef = useRef(null);
-  const photoParts = useRef({});
   const chatEndRef = useRef(null);
   const chatOpenRef = useRef(false);
   chatOpenRef.current = chatOpen;
@@ -316,23 +202,6 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
   }, [channelName]);
   useEffect(() => { chatEndRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [messages, chatOpen]);
 
-  // Homework photos, sent live in pieces.
-  useEffect(() => {
-    const channel = supabase.channel(`photo-${channelName}`, { config: { broadcast: { self: false } } });
-    channel.on('broadcast', { event: 'part' }, ({ payload: { id, i, n, d } }) => {
-      const got = photoParts.current[id] || (photoParts.current[id] = { n, parts: [] });
-      got.parts[i] = d;
-      if (got.parts.filter(Boolean).length === n) {
-        setPhoto(got.parts.join('')); setView('board');
-        setNote(`${other} shared a photo on the board`);
-        delete photoParts.current[id];
-      }
-    });
-    channel.on('broadcast', { event: 'clear' }, () => setPhoto(null));
-    channel.subscribe();
-    photoChannelRef.current = channel;
-    return () => { supabase.removeChannel(channel); };
-  }, [channelName]);
   useEffect(() => { if (!note) return; const t = setTimeout(() => setNote(''), 3500); return () => clearTimeout(t); }, [note]);
 
   const sharePhoto = async (file) => {
@@ -340,18 +209,34 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
     setPhotoBusy(true);
     try {
       const data = await shrinkPhoto(file);
-      setPhoto(data); setView('board');
-      const id = `${Date.now()}`, n = Math.ceil(data.length / CHUNK);
-      for (let i = 0; i < n; i++) {
-        await photoChannelRef.current?.send({ type: 'broadcast', event: 'part', payload: { id, i, n, d: data.slice(i * CHUNK, (i + 1) * CHUNK) } });
-        await new Promise(r => setTimeout(r, 60));
-      }
+      setView('board');
+      await boardRef.current?.addPhoto(data);
       setNote(`${other} can see the photo now`);
     } catch (e) { setNote(e.message || "The photo couldn't be shared."); }
     setPhotoBusy(false);
     if (fileRef.current) fileRef.current.value = '';
   };
-  const removePhoto = () => { setPhoto(null); photoChannelRef.current?.send({ type: 'broadcast', event: 'clear', payload: {} }); };
+
+  // Lesson notes: the board's pages, saved as pictures for the parent. Both
+  // people's devices save the same pages, so the notes survive either one
+  // dropping out. Saved every couple of minutes, and when leaving.
+  const saveNotes = async () => {
+    const board = boardRef.current;
+    if (!board || !board.hasContent()) return;
+    const pages = await board.exportPages();
+    const store = supabase.storage.from('lesson-notes');
+    await Promise.all(pages.map(({ page, blob }) => {
+      const path = `${booking.id}/page-${page + 1}.jpg`;
+      return blob ? store.upload(path, blob, { upsert: true, contentType: 'image/jpeg' }) : store.remove([path]);
+    }));
+    boardDirty.current = false;
+  };
+  useEffect(() => {
+    const t = setInterval(() => { if (boardDirty.current) saveNotes().catch(() => {}); }, 120000);
+    const hide = () => { if (document.visibilityState === 'hidden' && boardDirty.current) saveNotes().catch(() => {}); };
+    document.addEventListener('visibilitychange', hide);
+    return () => { clearInterval(t); document.removeEventListener('visibilitychange', hide); };
+  }, []);
 
   // The other person coming and going, and who is talking.
   useEffect(() => {
@@ -444,6 +329,11 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
   };
 
   const handleEnd = async (opts = {}) => {
+    // Save the board for the parent first (but never hold anyone for long).
+    if (!opts.failed) {
+      setLeaving(true);
+      await Promise.race([saveNotes().catch(() => {}), new Promise(r => setTimeout(r, 6000))]);
+    }
     const t = tracksRef.current;
     t.audio?.close(); t.video?.close(); t.screen?.close();
     try { await client.leave(); } catch { /* already disconnected */ }
@@ -554,15 +444,15 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
         </>) : (
           <>
             <div className="relative flex-1 min-w-0 rounded-[28px] overflow-hidden" style={{ border: `1.5px solid ${C.line}`, boxShadow: '0 18px 40px -26px rgba(60,40,20,.35)' }}>
-              <Whiteboard channelName={channelName} photo={photo} onRemovePhoto={removePhoto} />
+              <Whiteboard ref={boardRef} channelName={channelName} userId={user.id} bottom={isLg ? 60 : 104} onChange={() => { boardDirty.current = true; }} onNote={() => { setView('board'); setNote(`${other} shared a photo on the board`); }} />
               {sheetOpen && <div className="absolute inset-0 z-20 bg-white"><Spreadsheet channelName={channelName} /></div>}
               {banner}
 
               {/* Phone: the two faces sit in the corner of the board. */}
               {!tutorLate && (
-                <div className="lg:hidden absolute right-3 bottom-4 z-10 flex items-end gap-2.5">
-                  <button type="button" onClick={() => setView('faces')} aria-label="Show faces"><Face track={selfTrack} name={user.name || 'You'} size={70} tag="You" speaking={speaking.me} /></button>
-                  <button type="button" onClick={() => setView('faces')} aria-label={`Show ${other}`}><Face track={remoteTrack} name={otherName} size={108} tag={remote ? other : 'Waiting'} speaking={!!remote && speaking.them} ring={remote ? null : C.line} /></button>
+                <div className="lg:hidden absolute right-3 bottom-4 z-10 flex items-end gap-2">
+                  <button type="button" onClick={() => setView('faces')} aria-label="Show faces"><Face track={selfTrack} name={user.name || 'You'} size={58} tag="You" speaking={speaking.me} /></button>
+                  <button type="button" onClick={() => setView('faces')} aria-label={`Show ${other}`}><Face track={remoteTrack} name={otherName} size={84} tag={remote ? other : 'Waiting'} speaking={!!remote && speaking.them} ring={remote ? null : C.line} /></button>
                 </div>
               )}
 
@@ -630,7 +520,8 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
             <h2 className="text-xl font-extrabold tracking-tight">Leave the lesson?</h2>
             <p className="text-[15px] mt-2" style={{ color: C.ink2 }}>{endMs && now < endMs ? `There ${minsTo(endMs - now) === 1 ? 'is 1 minute' : `are ${minsTo(endMs - now)} minutes`} left. ` : ''}You can come back in from your dashboard until the lesson ends.</p>
             <button type="button" onClick={() => setConfirmLeave(false)} className="mt-5 w-full h-12 rounded-xl font-bold" style={{ background: C.ink, color: '#fff' }}>Stay in the lesson</button>
-            <button type="button" onClick={() => handleEnd()} className="mt-2 w-full h-12 rounded-xl font-bold" style={{ background: '#fff', border: `1.5px solid ${C.line}`, color: '#c4302b' }}>Leave</button>
+            <button type="button" onClick={() => handleEnd()} disabled={leaving} className="mt-2 w-full h-12 rounded-xl font-bold" style={{ background: '#fff', border: `1.5px solid ${C.line}`, color: '#c4302b' }}>{leaving ? 'Saving the board…' : 'Leave'}</button>
+            <p className="text-[12.5px] mt-3 text-center" style={{ color: C.mute }}>The whiteboard is saved as lesson notes for the family.</p>
           </div>
         </div>
       )}

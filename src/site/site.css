@@ -507,3 +507,12 @@
 .tg .trow .nextfree { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 5px 10px; border-radius: 999px; background: #e7f6ee; color: #14532d; font-weight: 700; font-size: 14px; }
 .tg .trow .nextfree .i { width: 16px; height: 16px; }
 .tg .trow .nextfree.none { background: var(--soft, #f3f3f5); color: var(--mute); }
+
+/* Lesson notes (the saved whiteboard) */
+.tg-modal .sheet.notes { max-width: 620px; }
+.tg-modal .notepage { border: 1.5px solid var(--line); border-radius: 12px; overflow: hidden; background: #fffdf8; }
+.tg-modal .notepage img { display: block; width: 100%; height: auto; }
+.tg-modal .notenav { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 12px; font-weight: 700; color: var(--ink2); font-size: 14px; }
+.tg-modal .noteacts { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; }
+.tg-modal .kicker { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
+.tg-modal .muted { color: var(--mute); }

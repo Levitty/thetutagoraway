@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { supabase } from './supabase';
 import { SKILLS as AI_SKILLS } from './ai-tutor/knowledgeGraph.js';
 import { VideoRoom } from './VideoRoom';
+import { useLessonNotes, LessonNotesModal } from './lesson/LessonNotes.jsx';
 import { INTEREST_CATEGORIES, CATEGORY_BY_KEY, categoryLabel, categoryEmoji } from './groupClassCategories.js';
 import { PaymentModal } from './PaymentModal';
 import { initiatePaystackPayment } from './paystack';
@@ -1155,6 +1156,9 @@ const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate
     supabase.from('reviews').select('booking_id, rating').in('booking_id', ids)
       .then(({ data }) => { if (data) setReviewed(Object.fromEntries(data.map(r => [r.booking_id, r]))); });
   }, [bookings.length]);
+  // Whiteboard notes saved from recent lessons.
+  const [notes, setNotes] = useLessonNotes(past.slice(-12).map(b => b.id));
+  const [notesFor, setNotesFor] = useState(null);
   const uniqueTutors = [...new Set(past.map(b => b.tutor_id))].length;
   const first = profile?.full_name?.split(' ')[0] || 'there';
   const when = (b) => {
@@ -1201,6 +1205,7 @@ const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate
         {!done && <span className={`pill ${b.status === 'confirmed' ? 'ok' : ''}`}>{b.status === 'confirmed' ? 'Confirmed' : 'Not paid'}</span>}
         {!done && b.status === 'confirmed' && <button type="button" className="btn sm" onClick={() => onStartLesson(b)}>Join</button>}
         {!done && b.status === 'pending' && <button type="button" className="btn line sm" onClick={() => removeUnpaid(b)}>Remove</button>}
+        {done && notes[b.id] && <button type="button" className="btn sm" onClick={() => setNotesFor(b)}>Lesson notes</button>}
         {done && ((b.review || reviewed[b.id])
           ? <span className="pill ok">Reviewed</span>
           : <button type="button" className="btn line sm" onClick={() => setReviewBooking(b)}>Leave a review</button>)}
@@ -1370,6 +1375,10 @@ const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate
       {showEditProfile && (
         <StudentProfileEditor profile={profile} onClose={() => setShowEditProfile(false)}
           onSave={() => { setShowEditProfile(false); onRefreshProfile && onRefreshProfile(); }} />
+      )}
+      {notesFor && notes[notesFor.id] && (
+        <LessonNotesModal booking={notesFor} files={notes[notesFor.id]} onClose={() => setNotesFor(null)}
+          onDeleted={() => setNotes(n => { const { [notesFor.id]: _gone, ...rest } = n; return rest; })} />
       )}
       {reviewBooking && (
         <ReviewModal booking={reviewBooking} profile={profile} onClose={() => setReviewBooking(null)} onSubmit={() => { setReviewed(r => ({ ...r, [reviewBooking.id]: true })); setReviewBooking(null); }} />
