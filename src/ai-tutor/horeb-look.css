@@ -1,0 +1,34 @@
+/* HOREB in Tutagora's clothes.
+   HOREB keeps its layout, its robot and its yellow buttons for children; it
+   takes Tutagora's type (Archivo headings, Figtree text), flatter corners and
+   pink highlights. Switched on by useHorebLook() while a HOREB screen is open.
+   Element rules sit inside :where() so the lesson screens' own styles (their
+   Georgia type, their colours) always win. */
+@import '@fontsource-variable/archivo/wdth.css';
+@import '@fontsource-variable/figtree';
+
+html.horeb-tg body { font-family: "Figtree Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+:where(html.horeb-tg) h1, :where(html.horeb-tg) h2,
+html.horeb-tg .font-extrabold {
+  font-family: "Archivo Variable", "Figtree Variable", -apple-system, sans-serif;
+  font-stretch: 95%; letter-spacing: -.03em;
+}
+
+/* canvas and corners */
+html.horeb-tg .bg-\[\#eef0f2\] { background-color: #f4f4f6; }
+html.horeb-tg .rounded-3xl { border-radius: 12px; }
+html.horeb-tg .rounded-2xl { border-radius: 10px; }
+html.horeb-tg .rounded-xl { border-radius: 8px; }
+html.horeb-tg .rounded-lg { border-radius: 6px; }
+html.horeb-tg .shadow-sm { box-shadow: none; }
+
+/* yellow highlights become Tutagora pink (yellow buttons stay yellow) */
+html.horeb-tg .text-amber-500 { color: #ff4f91; }
+html.horeb-tg .text-amber-600, html.horeb-tg .text-amber-700, html.horeb-tg .text-amber-800 { color: #c2255c; }
+html.horeb-tg .hover\:text-amber-600:hover, html.horeb-tg .hover\:text-amber-700:hover, html.horeb-tg .hover\:text-amber-800:hover { color: #a61e4d; }
+html.horeb-tg .bg-amber-50 { background-color: #fff0f5; }
+html.horeb-tg .bg-amber-100 { background-color: #ffe3ee; }
+html.horeb-tg .border-amber-200 { border-color: #ffc2d9; }
+
+/* children's buttons: still yellow, Tutagora's weight */
+html.horeb-tg .bg-amber-400 { font-weight: 800; }

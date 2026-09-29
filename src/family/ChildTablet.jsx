@@ -5,6 +5,7 @@
 //   TabletLinkPage   tablet side: tutagora.com/t/<link> opens the child's space
 import React, { useEffect, useState } from 'react';
 import { HorebBot } from '../ai-tutor/HorebBot.jsx';
+import { useHorebLook } from '../ai-tutor/horebLook.js';
 import { SiteIcon } from '../site/ui.jsx';
 import { createChildLink, listChildTablets, switchOffTablet, openChildLink } from './studentMode.js';
 import { Card, Eyebrow, PrimaryButton } from './StudentSpace.jsx';
@@ -79,6 +80,7 @@ const TROUBLE = {
 };
 
 export function TabletLinkPage({ token, onReady, onLeave }) {
+  useHorebLook();
   const [state, setState] = useState('ask'); // ask | busy | trouble
   const [code, setCode] = useState('');
   const go = async () => {

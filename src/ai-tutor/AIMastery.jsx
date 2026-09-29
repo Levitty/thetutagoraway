@@ -3,6 +3,7 @@
 // Adaptive learning based on "The Math Academy Way" — supports multiple subjects
 // ============================================================================
 
+import { useHorebLook } from './horebLook.js';
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
 import { prereqsMet, getStatus, getRecommendedPath, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
@@ -84,6 +85,7 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 // check at that grade; onDiagnosed(progress) replaces the usual "home" view when
 // the check finishes.
 export function AIMastery({ onBack, userId, studentName, onFindTutor, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, autoStartCurriculum = null, onDiagnosed = null }) {
+  useHorebLook();
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
   const [progress, setProgress] = useState(defaultProgress);
   const [view, setView] = useState('loading');
@@ -1122,7 +1124,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     <div className="min-h-screen bg-[#eef0f2] flex flex-col items-center justify-center gap-4">
       <HorebBot size={56} />
       <div className="h-1.5 w-32 bg-slate-200 rounded-full overflow-hidden">
-        <div className="h-full w-1/3 bg-amber-400 rounded-full animate-pulse" />
+        <div className="h-full w-1/3 bg-[#ff7aac] rounded-full animate-pulse" />
       </div>
     </div>
   );
@@ -1260,13 +1262,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
             <div className="flex items-center gap-2.5">
               <HorebBot size={28} />
               <div>
-                <div className="text-sm font-bold text-slate-900">Finding your start</div>
-                <div className="text-xs text-slate-400">Question {n} · no marks, just mapping</div>
+                <div className="text-[17px] font-extrabold text-slate-900 leading-tight">Finding your start</div>
+                <div className="text-xs font-semibold text-slate-500">Question {n} · no marks, just mapping</div>
               </div>
             </div>
             {guest && onBack && <button onClick={onBack} className="text-sm font-semibold text-slate-500 hover:text-slate-800 flex items-center gap-1"><Icon name="back" className="w-4 h-4" />Leave</button>}
           </div>
-          <div className="h-1.5 bg-slate-100"><div className="h-full bg-amber-400 transition-all duration-300 rounded-r-full" style={{ width: `${pct}%` }} /></div>
+          <div className="h-1.5 bg-slate-100"><div className="h-full bg-[#ff7aac] transition-all duration-300 rounded-r-full" style={{ width: `${pct}%` }} /></div>
         </div>
         <div className="px-4 pt-6 pb-16">
           <div className="max-w-2xl mx-auto">
@@ -1278,7 +1280,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">{cheer}</div>
             </div>
             <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
-              <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">{problem?.question}</div>
+              <div className={`${String(problem?.question || '').length <= 28 ? 'text-[36px] font-extrabold leading-tight' : 'text-[22px] font-bold leading-snug'} text-slate-900 mb-6`}>{problem?.question}</div>
               {/* Interactive visual (number line / grid / etc.) when the problem
                   needs one — otherwise it would be an unanswerable text box. */}
               {problem?.visual && (
@@ -1289,9 +1291,9 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   disabled={!!feedback}
                 />
               )}
-              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
               {!feedback && (
-                <button onClick={() => handleDiagnosticAnswer({ skip: true })} className="mt-3 text-sm text-slate-400 hover:text-[#6d6fcb] transition-colors">
+                <button onClick={() => handleDiagnosticAnswer({ skip: true })} className="mt-3.5 text-[15px] font-bold text-slate-900 underline underline-offset-4 hover:text-[#c2255c] transition-colors">
                   I haven’t learned this yet
                 </button>
               )}
@@ -1376,7 +1378,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               <div className="text-xs text-slate-400">{testOutSkill ? 'quick check' : 'to master'}</div>
             </div>
           </div>
-          <div className="h-1 bg-slate-100"><div className="h-full bg-amber-400 transition-all" style={{ width: `${pct}%` }} /></div>
+          <div className="h-1 bg-slate-100"><div className="h-full bg-[#ff7aac] transition-all" style={{ width: `${pct}%` }} /></div>
         </div>
 
         <div className="px-4 sm:px-6 pt-6 pb-20 app-scroll">
@@ -1513,7 +1515,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                     <InteractiveVisual visualType={SKILL_VISUALS[activeSkill].visualType} visualData={SKILL_VISUALS[activeSkill].visualData} onAnswer={setVisualAnswer} disabled={!!feedback} />
                   )
                 )}
-                <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+                <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
 
                 {/* Roadside assistance, not GPS: only offered once the child has
                     actually sat with the problem — never as a reflex tap. */}
@@ -1684,7 +1686,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
             </div>
 
             <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
-              <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">{problem?.question}</div>
+              <div className={`${String(problem?.question || '').length <= 28 ? 'text-[36px] font-extrabold leading-tight' : 'text-[22px] font-bold leading-snug'} text-slate-900 mb-6`}>{problem?.question}</div>
               {problem?.visual && (
                 <div className="mb-4">
                   <InteractiveVisual
@@ -1695,7 +1697,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   />
                 </div>
               )}
-              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-2xl px-4 py-3.5 text-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
+              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture above — or type your answer' : 'Type your answer…'} />
             </div>
 
             {feedback && (
@@ -1811,7 +1813,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
           <HorebBot size={28} /><b className="text-[17px] font-extrabold tracking-tight">HOREB</b>
         </div>
         <div className="flex items-center gap-3.5">
-          {progress.currentStreak > 0 && <span className="flex items-center gap-1 text-amber-500 text-sm font-bold"><Icon name="flame" className="w-4 h-4" />{progress.currentStreak}d</span>}
+          {progress.currentStreak > 0 && <span className="flex items-center gap-1 bg-[#ffe3ee] text-slate-900 rounded px-2 py-0.5 text-sm font-bold"><Icon name="flame" className="w-4 h-4" />{progress.currentStreak} days</span>}
           <button onClick={switchSubject} className="text-slate-400" title="Switch subject"><Icon name="book" className="w-[18px] h-[18px]" /></button>
           <button onClick={resetAll} className="text-slate-400" title="Reset progress"><Icon name="refresh" className="w-[18px] h-[18px]" /></button>
         </div>
@@ -1896,7 +1898,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 <div className="relative w-[128px] h-[128px] mx-auto">
                   <svg width="128" height="128" viewBox="0 0 128 128">
                     <circle cx="64" cy="64" r={R} fill="none" stroke="#eef0f3" strokeWidth="11" />
-                    <circle cx="64" cy="64" r={R} fill="none" stroke={met ? '#8ca86a' : '#f2a828'} strokeWidth="11" strokeLinecap="round" strokeDasharray={C} strokeDashoffset={off} transform="rotate(-90 64 64)" style={{ transition: 'stroke-dashoffset .6s ease' }} />
+                    <circle cx="64" cy="64" r={R} fill="none" stroke={met ? '#8ca86a' : '#ff7aac'} strokeWidth="11" strokeLinecap="round" strokeDasharray={C} strokeDashoffset={off} transform="rotate(-90 64 64)" style={{ transition: 'stroke-dashoffset .6s ease' }} />
                   </svg>
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
                     <b className="text-[26px] font-extrabold tabular-nums leading-none">{Math.min(earned, DAILY_GOAL_XP)}<span className="text-slate-400 text-[15px]">/{DAILY_GOAL_XP}</span></b>
@@ -2017,7 +2019,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                     {catchUpSkills.slice(0, 4).map(s => (
                       <button key={s.id} onClick={() => startLesson(s.id)}
                         className="w-full text-left flex items-center gap-2.5 py-1.5 px-2 -mx-2 rounded-lg hover:bg-slate-50 transition-colors">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#ff7aac] shrink-0" />
                         <span className="text-[14.5px] text-slate-700 truncate flex-1">{s.name}</span>
                         <span className="text-[12px] text-slate-400 shrink-0">{gradeLabel(s.grade)}</span>
                       </button>
@@ -2127,10 +2129,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               {/* Live tutoring — a first-class door, not a footnote. Practice
                   and a real tutor are the two halves of the same promise. */}
               {onFindTutor && (
-                <div className="bg-gradient-to-br from-[#f5f6fc] to-white border border-[#d3daf0] shadow-sm rounded-2xl p-4">
-                  <div className="text-slate-900 font-semibold text-[15px]">Live help, any time</div>
-                  <p className="text-[13px] text-slate-500 mt-1 mb-3">Stuck on something, or want a person to walk it through with you? Kenya's best tutors are one tap away.</p>
-                  <button onClick={onFindTutor} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-xl py-2.5 text-sm font-bold transition-colors">Find a live tutor</button>
+                <div className="bg-[#121117] text-white rounded-lg p-5 -rotate-1">
+                  <div className="text-[12px] font-extrabold tracking-[.1em] uppercase text-[#ff7aac]" style={{ fontFamily: 'inherit', letterSpacing: '.1em' }}>Live help</div>
+                  <div className="text-[22px] font-extrabold leading-tight mt-1">A tutor for the stuck part</div>
+                  <p className="text-[13.5px] text-[#c9c9d1] mt-1 mb-3.5">Stuck on something, or want a person to walk it through with you? A checked Kenyan tutor, live, one to one.</p>
+                  <button onClick={onFindTutor} className="bg-white hover:bg-slate-100 text-[#121117] rounded-lg px-5 py-2.5 text-[15px] font-bold transition-colors">Find a live tutor</button>
                 </div>
               )}
 
@@ -2468,7 +2471,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       <nav className="lg:hidden fixed inset-x-0 bottom-0 z-40 bg-white border-t border-slate-200 flex justify-around px-1 pt-2" style={{ paddingBottom: 'calc(0.5rem + env(safe-area-inset-bottom))' }}>
         {[['overview', 'Home', 'home'], ['path', 'Path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Progress', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
           <button key={id} onClick={() => setActiveTab(id)} className={`flex flex-col items-center gap-0.5 flex-1 py-1 transition-colors ${activeTab === id ? 'text-slate-900' : 'text-slate-400'}`}>
-            <Icon name={icon} className="w-[21px] h-[21px]" /><span className="text-[10px] font-semibold">{label}</span>
+            <Icon name={icon} className="w-[21px] h-[21px]" /><span className="text-[10px] font-semibold">{label}</span><i className={`block h-[3px] w-4 rounded-full ${activeTab === id ? 'bg-[#ff7aac]' : 'bg-transparent'}`} />
           </button>
         ))}
       </nav>

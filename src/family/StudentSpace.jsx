@@ -13,6 +13,7 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../supabase';
 import { HorebBot } from '../ai-tutor/HorebBot.jsx';
+import { useHorebLook } from '../ai-tutor/horebLook.js';
 import {
   startStudentMode, isOlderLearner, getLook, setLook,
   hasPin, setPin, checkPin, pinLockedFor, setFamilyDevice,
@@ -124,6 +125,7 @@ const PinPad = ({ onComplete, error = '', busy = false }) => {
 // ---- Parent: hand the device over -----------------------------------------
 
 export const HandOver = ({ user, onStart, onCancel }) => {
+  useHorebLook();
   const [step, setStep] = useState('pick'); // pick | pin | confirm | ready
   const [kids, setKids] = useState(null);
   const [chosen, setChosen] = useState(null);
@@ -304,6 +306,7 @@ const prettyDate = (d) => {
 };
 
 export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onLock, lockLabel = 'Back to parent', extra = null }) => {
+  useHorebLook();
   const [look, setLookState] = useState(() => getLook(mode.learnerId));
   if (!look) return <LookPicker mode={mode} onDone={setLookState} />;
 
@@ -374,6 +377,7 @@ export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onL
 // ---- The way out -----------------------------------------------------------
 
 export const PinGate = ({ userId, learnerName, onUnlock, onCancel, onSignOut }) => {
+  useHorebLook();
   const [err, setErr] = useState('');
   const [busy, setBusy] = useState(false);
   const [forgot, setForgot] = useState(false);
@@ -430,6 +434,7 @@ export const PinGate = ({ userId, learnerName, onUnlock, onCancel, onSignOut }) 
 // parent side is behind the parent PIN.
 
 export const FamilyTabletSetup = ({ user, onDone, onCancel }) => {
+  useHorebLook();
   const [step, setStep] = useState('intro'); // intro | pin | confirm
   const [pinSet, setPinSet] = useState(null);
   const [firstPin, setFirstPin] = useState('');
@@ -479,6 +484,7 @@ export const FamilyTabletSetup = ({ user, onDone, onCancel }) => {
 };
 
 export const WhoIsPractising = ({ user, onPick, onParent }) => {
+  useHorebLook();
   const [kids, setKids] = useState(null);
   useEffect(() => {
     if (!user?.id) return;
@@ -490,7 +496,7 @@ export const WhoIsPractising = ({ user, onPick, onParent }) => {
       <div className="app-scroll">
         <div className="max-w-2xl mx-auto px-5 pt-14 pb-16 flex flex-col items-center gap-6">
           <HorebBot size={72} mood="cheer" />
-          <h1 className="text-[30px] font-extrabold tracking-tight text-center">Who's practising?</h1>
+          <h1 className="text-[38px] font-extrabold text-center">Who's practising?</h1>
           {kids === null && <div className="text-sm text-slate-400 py-6">Loading…</div>}
           {kids && kids.length === 0 && (
             <p className="text-center text-slate-500 max-w-sm">No children added yet. Open the parent side and add them, or take the free check.</p>
@@ -499,16 +505,16 @@ export const WhoIsPractising = ({ user, onPick, onParent }) => {
             <div className="flex flex-wrap justify-center gap-4 w-full max-w-lg">
               {kids.map(k => (
                 <button key={k.id} onClick={() => onPick(k)}
-                  className="w-[150px] bg-white border border-slate-200 shadow-sm hover:border-[#6d6fcb] hover:shadow-md rounded-2xl p-5 flex flex-col items-center gap-3 transition">
+                  className="w-[150px] bg-white border-2 border-[#121117] hover:bg-[#fff0f5] rounded-lg p-5 flex flex-col items-center gap-3 transition">
                   <LearnerAvatar name={k.name} look={getLook(k.id)} size={72} />
-                  <span className="text-[18px] font-extrabold tracking-tight">{firstName(k.name)}</span>
+                  <span className="text-[22px] font-extrabold">{firstName(k.name)}</span>
                   {k.grade && <span className="text-[13px] text-slate-400 -mt-2">{k.grade}</span>}
                 </button>
               ))}
             </div>
           )}
           <button onClick={onParent}
-            className="mt-4 inline-flex items-center gap-2 h-11 px-5 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-[14px] font-bold">
+            className="mt-4 inline-flex items-center gap-2 h-11 px-5 rounded-lg border-2 border-[#121117] bg-transparent text-[#121117] hover:bg-white text-[15px] font-bold">
             <LockIcon /> Parent
           </button>
         </div>
