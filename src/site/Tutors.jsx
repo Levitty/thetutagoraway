@@ -4,7 +4,7 @@ import { supabase } from '../supabase.js';
 import { PaymentModal } from '../PaymentModal.jsx';
 import { startConversation } from '../Messaging.jsx';
 import { requestPush } from '../push.js';
-import { SiteNav, SiteFooter, SiteIcon, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh, photoFirst } from './ui.jsx';
+import { SiteNav, SiteFooter, SiteIcon, TutorPhoto, shortName, tutorSubjects, gradeLevels, ksh, photoFirst, usePhotoCheck } from './ui.jsx';
 import { getFocus, setFocus, getCheck } from './Check.jsx';
 
 const SUBJECTS = ['Mathematics', 'English', 'Kiswahili', 'Physics', 'Chemistry', 'Biology', 'History', 'Geography', 'Computer Science', 'Business Studies'];
@@ -48,6 +48,7 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
   const [price, setPrice] = useState('all');
   const [sort, setSort] = useState('lessons');
   const [focus, setFocusState] = useState(() => getFocus());
+  const photosChecked = usePhotoCheck(tutors);
 
   const list = useMemo(() => tutors
     .filter(t => {
@@ -68,7 +69,7 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
       if (sort === 'price-low') return (a.hourly_rate || 0) - (b.hourly_rate || 0);
       if (sort === 'price-high') return (b.hourly_rate || 0) - (a.hourly_rate || 0);
       return (b.lessons_completed || 0) - (a.lessons_completed || 0);
-    }), [tutors, search, subject, grade, price, sort]);
+    }), [tutors, search, subject, grade, price, sort, photosChecked]);
 
   return (
     <div className="tg t-amber">
@@ -104,7 +105,7 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
                 <div className="meta">
                   <span><SiteIcon name="cap" />{tutorSubjects(t).slice(0, 3).join(', ')}{grades.length ? ` · ${grades[0]}${grades.length > 1 ? ` to ${grades[grades.length - 1]}` : ''}` : ''}</span>
                   {langs.length > 0 && <span><SiteIcon name="globe" />{langs.join(', ')}</span>}
-                  {t.experience_years ? <span><SiteIcon name="clock" />{t.experience_years} years teaching</span> : null}
+                  {t.experience_years ? <span><SiteIcon name="clock" />{t.experience_years} year{Number(t.experience_years) === 1 ? '' : 's'} teaching</span> : null}
                 </div>
                 {(() => { const nf = nextFree(t); return <div className={`nextfree${nf ? '' : ' none'}`}><SiteIcon name="calendar" />{nf ? <>Next free: <b>{nf}</b></> : 'No open times this week'}</div>; })()}
                 {t.bio && <p className="bio">{t.bio}</p>}
