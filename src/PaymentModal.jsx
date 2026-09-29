@@ -35,13 +35,13 @@ const PaymentStatus = ({ status, message }) => {
     },
     processing: {
       animation: 'https://assets8.lottiefiles.com/packages/lf20_4XmSkB.json',
-      color: 'text-blue-600',
-      bg: 'bg-blue-50'
+      color: 'text-[#6d6fcb]',
+      bg: 'bg-[#ecedfa]'
     },
     success: {
       animation: 'https://assets2.lottiefiles.com/packages/lf20_jbrw3hcz.json',
-      color: 'text-emerald-600',
-      bg: 'bg-emerald-50',
+      color: 'text-[#4f7233]',
+      bg: 'bg-[#eef4e7]',
       loop: false
     },
     failed: {
@@ -250,7 +250,7 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
 
               {/* Payment method info */}
               <div className="flex items-center gap-3 p-3 bg-[#ecedfa] rounded-xl">
-                <div className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center text-white">
+                <div className="w-10 h-10 bg-[#6d6fcb] rounded-xl flex items-center justify-center text-white">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <rect x="2" y="5" width="20" height="14" rx="2"/>
                     <line x1="2" y1="10" x2="22" y2="10"/>

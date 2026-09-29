@@ -29,7 +29,7 @@ def restyle(cls: str) -> str:
     if re.search(r'(?<![\w:/-])bg-emerald-(500|600)(?![\w/-])', s):
         s = re.sub(r'(?<![\w:/-])bg-emerald-(500|600)(?![\w/-])', 'bg-amber-400', s)
         s = re.sub(r'(?<![\w/-])text-white(?![\w/-])', 'text-slate-900', s)
-    s = re.sub(r'hover:bg-emerald-(500|600|700)', 'hover:bg-amber-300', s)
+    s = re.sub(r'hover:bg-emerald-(400|500|600|700)', 'hover:bg-amber-300', s)
     # Success badges stay green, in HOREB's sage.
     badge = 'bg-emerald-50' in s or 'bg-emerald-100' in s
     s = re.sub(r'(?<![\w:-])bg-emerald-(50|100)(?![\w-])', f'bg-[{SAGE_SOFT}]', s)

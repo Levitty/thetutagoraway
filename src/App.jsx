@@ -19,6 +19,7 @@ import { initPush, requestPush, clearPush } from './push.js';
 import { PRICE_KES, PASS_DAYS } from './subscription.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
+import { Icon } from './ai-tutor/components/Icons.jsx';
 import { Writing } from './writing/Writing.jsx';
 import { HandOver, StudentHome, PinGate } from './family/StudentSpace.jsx';
 import { getStudentMode, endStudentMode, isOlderLearner } from './family/studentMode.js';
@@ -356,7 +357,7 @@ const PrivacyBanner = ({ onAccept, onNavigate }) => (
     <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-3">
       <p className="text-sm text-slate-300 flex-1">
         We use essential data to provide our tutoring service. By continuing, you agree to our{' '}
-        <button onClick={() => onNavigate('privacy')} className="text-[#5a7a3a] underline hover:text-emerald-300">Privacy Policy</button>{' '}
+        <button onClick={() => onNavigate('privacy')} className="text-amber-300 underline hover:text-amber-200">Privacy Policy</button>{' '}
         in accordance with Kenya's Data Protection Act, 2019.
       </p>
       <div className="flex gap-2 flex-shrink-0">
@@ -1049,9 +1050,9 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole }) => {
 // both the light dashboard header and the transparent marketing nav.
 const MomentumChipView = ({ level, streak, onClick }) => (
   <button onClick={onClick} title="Open HOREB" className="flex items-center gap-1.5 bg-white/90 border border-slate-200 shadow-sm rounded-full pl-2 pr-2.5 py-1 hover:bg-white transition-colors">
-    <span className="text-base leading-none">🧠</span>
+    <Icon name="brain" className="w-4 h-4 text-[#6d6fcb]" />
     <span className="text-xs font-semibold text-slate-700">Lv {level}</span>
-    {streak > 0 && <span className="text-xs font-semibold text-orange-500 flex items-center">🔥{streak}</span>}
+    {streak > 0 && <span className="text-xs font-semibold text-amber-600 flex items-center gap-0.5"><Icon name="flame" className="w-3.5 h-3.5" />{streak}</span>}
   </button>
 );
 
@@ -1230,23 +1231,23 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
             <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 mb-6">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-4 min-w-0">
-                  <div className="text-3xl sm:text-4xl">🧠</div>
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#6d6fcb] text-white flex items-center justify-center shrink-0"><Icon name="brain" className="w-6 h-6 sm:w-7 sm:h-7" /></div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <h3 className="text-white font-bold text-lg">HOREB</h3>
                       {started && <span className="text-xs font-semibold text-amber-300 bg-amber-500/15 rounded-full px-2 py-0.5">Level {lvl}</span>}
-                      {streak > 0 && <span className="text-xs font-semibold text-orange-300 flex items-center gap-0.5">🔥 {streak}d</span>}
+                      {streak > 0 && <span className="text-xs font-semibold text-amber-300 flex items-center gap-0.5"><Icon name="flame" className="w-3.5 h-3.5" />{streak}d</span>}
                     </div>
                     <p className="text-slate-300 text-sm mt-0.5">{headline}</p>
                   </div>
                 </div>
-                <button onClick={() => onNavigate('ai')} className="shrink-0 px-5 py-2.5 bg-amber-400 hover:bg-emerald-400 text-slate-900 font-semibold rounded-xl transition-colors text-sm">
+                <button onClick={() => onNavigate('ai')} className="shrink-0 px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-900 font-semibold rounded-xl transition-colors text-sm">
                   {cta}
                 </button>
               </div>
               {started && (
                 <div className="mt-4 flex items-center gap-3">
-                  <span className="text-xs text-slate-400 shrink-0">{goalMet ? '☀️ Goal' : '🎯 Today'}</span>
+                  <span className="text-xs text-slate-400 shrink-0 flex items-center gap-1"><Icon name={goalMet ? 'check' : 'target'} className="w-3.5 h-3.5" />{goalMet ? 'Goal' : 'Today'}</span>
                   <div className="flex-1 h-2 bg-slate-700 rounded-full overflow-hidden">
                     <div className={`h-full transition-all ${goalMet ? 'bg-amber-400' : 'bg-amber-500'}`} style={{ width: `${goalPct}%` }} />
                   </div>
@@ -1771,8 +1772,8 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
                 alt="Avatar"
                 className="w-20 h-20 rounded-full object-cover"
               />
-              <button type="button" className="absolute bottom-0 right-0 w-7 h-7 bg-amber-400 text-slate-900 rounded-full flex items-center justify-center text-sm">
-                📷
+              <button type="button" aria-label="Change photo" className="absolute bottom-0 right-0 w-7 h-7 bg-amber-400 text-slate-900 rounded-full flex items-center justify-center">
+                <Icon name="camera" className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -6216,7 +6217,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
           <button onClick={() => onNavigate('horeb')} className={`text-sm font-medium ${scrolled ? 'text-[#6d6fcb]' : 'text-amber-300'}`}>HOREB</button>
           <button onClick={() => onNavigate('clubs')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Clubs</button>
           <button onClick={() => onNavigate('schools')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>For Schools</button>
-          {isAdmin && <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-[#6d6fcb]' : 'text-purple-300'}`}>Admin</button>}
+          {isAdmin && <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-[#6d6fcb]' : 'text-[#c7cbe8]'}`}>Admin</button>}
           {user && profile?.role === 'student' && <MomentumChip userId={profile?.id} onClick={() => onNavigate('ai')} />}
           {user ? (
             <button onClick={() => onNavigate('dashboard')} className="flex items-center gap-2">
