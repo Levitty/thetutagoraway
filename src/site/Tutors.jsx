@@ -110,7 +110,7 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
 const DAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const fmtTime = (hhmm) => { const [h] = hhmm.split(':').map(Number); const ap = h >= 12 ? 'pm' : 'am'; return `${((h + 11) % 12) + 1}:00 ${ap}`; };
 
-export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn }) {
+export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn, onPaid }) {
   const focus = getFocus();
   const subjects = tutorSubjects(tutor);
   const [subject, setSubject] = useState(subjects[0] || tutor.subject || '');
@@ -149,6 +149,16 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
   }, [user?.id]);
 
   const days = useMemo(() => Array.from({ length: 8 }, (_, i) => { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + i); return d; }), []);
+  const isoDay = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  // Times already booked (paid, or being paid for right now) are hidden. Needs
+  // the taken_slots database function; without it, nothing is hidden and the
+  // database rule still stops a clash at booking time.
+  const [taken, setTaken] = useState(() => new Set());
+  const loadTaken = () => {
+    supabase.rpc('taken_slots', { p_tutor: String(tutor.id), p_from: isoDay(days[0]), p_to: isoDay(days[days.length - 1]) })
+      .then(({ data, error }) => { if (!error && Array.isArray(data)) setTaken(new Set(data.map(r => `${r.lesson_date}|${String(r.start_time).slice(0, 5)}`))); });
+  };
+  useEffect(loadTaken, [tutor.id]);
   const slotsFor = (d) => {
     if (!d || !Array.isArray(tutor.availability)) return [];
     const now = new Date();
@@ -157,7 +167,10 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
       const out = [];
       let h = parseInt(a.start_time, 10);
       const end = parseInt(a.end_time, 10);
-      for (; h < end; h++) if (!today || h > now.getHours()) out.push(`${String(h).padStart(2, '0')}:00`);
+      for (; h < end; h++) {
+        const t = `${String(h).padStart(2, '0')}:00`;
+        if ((!today || h > now.getHours()) && !taken.has(`${isoDay(d)}|${t}`)) out.push(t);
+      }
       return out;
     }).sort();
   };
@@ -185,14 +198,21 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
       });
       setPending({ ...b, id: b?.id, student_id: user.id, tutor_id: tutor.id, lesson_date: iso, lesson_time: time, duration_minutes: minutes });
     } catch (e) {
-      setErr(e?.message || 'Could not book that lesson. Please try again.');
+      if (/slot_taken/.test(`${e?.message || ''} ${e?.hint || ''}`)) {
+        setErr('Someone has just booked that time. Please pick another time.');
+        setTime(null); loadTaken();
+      } else {
+        setErr('We could not book that lesson just now. Please check your connection and try again.');
+      }
     }
     setBusy(false);
   };
 
-  const cancelPayment = async () => {
+  const cancelPayment = async (opts) => {
     const id = pending?.id;
     setPending(null);
+    // Paid, still being confirmed: keep the booking and show the dashboard.
+    if (opts?.keep) { onNavigate('dashboard'); return; }
     if (id && user?.id && /^[0-9a-f-]{36}$/i.test(String(id))) {
       try { await supabase.from('bookings').delete().eq('id', id).eq('student_id', user.id).eq('status', 'pending'); } catch { /* best effort */ }
     }
@@ -289,7 +309,7 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
 
       {pending && (
         <PaymentModal booking={pending} tutor={tutor} user={user} onClose={cancelPayment}
-          onSuccess={() => { setPending(null); setFocus(null); setTimeout(() => requestPush(user?.id), 700); onNavigate('dashboard'); }} />
+          onSuccess={() => { const b = pending; setPending(null); setFocus(null); onPaid && onPaid(b); setTimeout(() => requestPush(user?.id), 700); onNavigate('dashboard'); }} />
       )}
     </div>
   );

@@ -49,7 +49,7 @@ export function CheckStart({ initialGrade, onStart, onResume, onLeave, onSeeResu
   const who = name.trim() || 'your child';
 
   const start = () => {
-    if (!grade || !curriculum) return;
+    if (!name.trim() || !grade || !curriculum) return;
     // A new check always starts clean on this device.
     clearGuestCheck();
     write(CHECK_KEY, { name: name.trim(), grade, curriculum, startedAt: new Date().toISOString() });
@@ -71,7 +71,7 @@ export function CheckStart({ initialGrade, onStart, onResume, onLeave, onSeeResu
           <div className="kicker">{canResume || hasResult ? 'Or start a new check' : 'Free · about 10 minutes · no account'}</div>
           <h1 className="display" style={{ marginTop: 10 }}>Let's find the step.</h1>
           <p className="lead">Questions start easy and adapt to each answer. There's no score and no pass or fail. We're only looking for where to start.</p>
-          <label className="field"><span>Child's first name <small>(optional)</small></span>
+          <label className="field"><span>Child's first name</span>
             <input className="inp" value={name} onChange={e => setName(e.target.value)} autoComplete="off" maxLength={40} placeholder="e.g. Amani" /></label>
           <div className="field"><span>Which grade are they in?</span>
             <div className="chips" role="group" aria-label="Grade">
@@ -88,8 +88,8 @@ export function CheckStart({ initialGrade, onStart, onResume, onLeave, onSeeResu
             </div>
             <p className="fine" style={{ margin: '8px 0 0' }}>Not sure? Check the school report, or ask the class teacher.</p>
           </div>
-          <button type="button" className="btn full" onClick={start} disabled={!grade || !curriculum}>
-            {!grade ? 'Pick a grade first' : !curriculum ? 'Pick a curriculum first' : <>Start the check <SiteIcon name="arrow" /></>}
+          <button type="button" className="btn full" onClick={start} disabled={!name.trim() || !grade || !curriculum}>
+            {!name.trim() ? "Add your child's name first" : !grade ? 'Pick a grade first' : !curriculum ? 'Pick a curriculum first' : <>Start the check <SiteIcon name="arrow" /></>}
           </button>
           <div className="handnote"><SiteIcon name="phone" /><div>Now hand the phone to <b>{who}</b>. Let them answer on their own. Guessing is fine, and "I haven't learned this yet" is a good answer too.</div></div>
         </div>

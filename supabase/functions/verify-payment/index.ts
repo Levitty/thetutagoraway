@@ -99,6 +99,13 @@ serve(async (req) => {
       .from("bookings").select("*").eq("id", booking_id).single();
     if (bErr || !booking) return json({ verified: false, error: "booking not found" }, 404);
 
+    // The Paystack payment must be for this booking, so one payment can't be
+    // used to confirm a different lesson.
+    const paidFor = (tx?.metadata as Record<string, unknown> | undefined)?.booking_id;
+    if (paidFor && String(paidFor) !== String(booking_id)) {
+      return json({ verified: false, reason: "payment is for a different booking" });
+    }
+
     // 3) Make sure the amount paid covers the lesson price (stops underpayment).
     const { data: tutorRow } = await supabase
       .from("tutors").select("hourly_rate").eq("id", booking.tutor_id).maybeSingle();

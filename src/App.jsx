@@ -612,6 +612,12 @@ const PaywallModal = ({ user, onClose, onUnlocked }) => {
 };
 
 // ============ AUTH CONTEXT ============
+// Where sign-in links and Google return to: the same site the person is on
+// (tutagora.com, www.tutagora.com or a preview), so the free check saved on
+// this device is still there. The app shell has no web origin, so it uses the
+// main domain.
+const AUTH_RETURN = IS_NATIVE || typeof window === 'undefined' ? 'https://tutagora.com/dashboard' : `${window.location.origin}/dashboard`;
+
 const useAuth = () => {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
@@ -640,7 +646,16 @@ const useAuth = () => {
         // Check if there's a pending role from Google OAuth signup
         const pendingRole = localStorage.getItem('tutagora_pending_role');
         const pendingName = localStorage.getItem('tutagora_pending_name');
-        if (pendingRole && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) {
+        // Only a brand-new account takes the role picked on the sign-up sheet.
+        // Applying it to an existing account demoted tutors who tapped
+        // "Continue with Google" to save a plan for their own child.
+        const isNewAccount = session.user.created_at && (Date.now() - new Date(session.user.created_at).getTime()) < 15 * 60 * 1000;
+        if (pendingRole && !isNewAccount) {
+          localStorage.removeItem('tutagora_pending_role');
+          localStorage.removeItem('tutagora_pending_type');
+          localStorage.removeItem('tutagora_pending_name');
+        }
+        if (pendingRole && isNewAccount && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) {
           // Update the profile with the selected role
           const updateData = { role: pendingRole };
           if (pendingName) updateData.full_name = pendingName;
@@ -694,7 +709,7 @@ const useAuth = () => {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: meta }
+      options: { data: meta, emailRedirectTo: AUTH_RETURN }
     });
     if (error) throw error;
     // Send welcome email
@@ -711,7 +726,7 @@ const useAuth = () => {
   const signInWithGoogle = async () => {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: 'https://tutagora.com/dashboard' }
+      options: { redirectTo: AUTH_RETURN }
     });
     if (error) throw error;
     return data;
@@ -719,7 +734,7 @@ const useAuth = () => {
 
   const resetPassword = async (email) => {
     const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: 'https://tutagora.com/dashboard'
+      redirectTo: AUTH_RETURN
     });
     if (error) throw error;
     return data;
@@ -830,10 +845,8 @@ const useBookings = (userId, role, tutorId = null) => {
 
     if (error) throw error;
 
-    // Send in-app message to tutor (emails sent after payment in PaymentModal)
-    if (data) {
-      await sendBookingNotifications(data, userId);
-    }
+    // The tutor is told only after payment is confirmed (see onPaid), so an
+    // abandoned checkout never produces a "New booking" message.
 
     fetchBookings();
     return data;
@@ -1111,14 +1124,37 @@ const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate
     if (data) { setChildren(prev => [...prev, data]); setNewChildName(''); setNewChildGrade(''); setAdding(false); }
   };
   const removeChild = async (c) => {
-    if (!window.confirm(`Remove ${c.name}? Their practice stays saved, but they won't appear here.`)) return;
+    if (!window.confirm(`Remove ${c.name}? This also deletes their practice and progress. It can't be undone.`)) return;
     await supabase.from('children').delete().eq('id', c.id);
     setChildren(prev => prev.filter(x => x.id !== c.id));
   };
-  const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
-  const past = bookings.filter(b => b.status === 'completed');
-  const nextLesson = [...upcoming].sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
+  // A lesson's end, in Kenya time. Lessons whose time has passed leave
+  // "upcoming"; an unpaid one that has passed disappears altogether.
+  const [removed, setRemoved] = useState([]);
+  const [reviewed, setReviewed] = useState({});
+  const endsAt = (b) => {
+    const t = new Date(`${b.lesson_date}T${String(b.start_time || '00:00').slice(0, 5)}:00+03:00`).getTime();
+    return isNaN(t) ? Infinity : t + (Number(b.duration_minutes) || 60) * 60000;
+  };
+  const nowMs = Date.now();
+  const visible = bookings.filter(b => !removed.includes(b.id));
+  const upcoming = visible.filter(b => (b.status === 'confirmed' || b.status === 'pending') && endsAt(b) > nowMs);
+  const past = visible.filter(b => b.status === 'completed' || (b.status === 'confirmed' && endsAt(b) <= nowMs))
+    .sort((a, b) => endsAt(b) - endsAt(a));
+  const nextLesson = [...upcoming].filter(b => b.status === 'confirmed').sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
   const totalSpent = payments.reduce((s, p) => s + (p.amount || 0), 0);
+  const removeUnpaid = async (b) => {
+    if (!window.confirm('Remove this unpaid booking? The time will be freed for other families.')) return;
+    setRemoved(r => [...r, b.id]);
+    try { await supabase.from('bookings').delete().eq('id', b.id).eq('student_id', profile.id).eq('status', 'pending'); } catch { /* the list refreshes on its own */ }
+  };
+  // Which finished lessons already have a review (so "Leave a review" goes away).
+  useEffect(() => {
+    const ids = bookings.filter(b => b.status === 'completed' || b.status === 'confirmed').map(b => b.id);
+    if (!ids.length) return;
+    supabase.from('reviews').select('booking_id, rating').in('booking_id', ids)
+      .then(({ data }) => { if (data) setReviewed(Object.fromEntries(data.map(r => [r.booking_id, r]))); });
+  }, [bookings.length]);
   const uniqueTutors = [...new Set(past.map(b => b.tutor_id))].length;
   const first = profile?.full_name?.split(' ')[0] || 'there';
   const when = (b) => {
@@ -1162,9 +1198,10 @@ const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate
         </div>
       </div>
       <div className="lact">
-        {!done && <span className={`pill ${b.status === 'confirmed' ? 'ok' : ''}`}>{b.status === 'confirmed' ? 'Confirmed' : 'Awaiting payment'}</span>}
+        {!done && <span className={`pill ${b.status === 'confirmed' ? 'ok' : ''}`}>{b.status === 'confirmed' ? 'Confirmed' : 'Not paid'}</span>}
         {!done && b.status === 'confirmed' && <button type="button" className="btn sm" onClick={() => onStartLesson(b)}>Join</button>}
-        {done && (b.review
+        {!done && b.status === 'pending' && <button type="button" className="btn line sm" onClick={() => removeUnpaid(b)}>Remove</button>}
+        {done && ((b.review || reviewed[b.id])
           ? <span className="pill ok">Reviewed</span>
           : <button type="button" className="btn line sm" onClick={() => setReviewBooking(b)}>Leave a review</button>)}
       </div>
@@ -1335,7 +1372,7 @@ const StudentDashboard = ({ profile, user, bookings, bookingsLoading, onNavigate
           onSave={() => { setShowEditProfile(false); onRefreshProfile && onRefreshProfile(); }} />
       )}
       {reviewBooking && (
-        <ReviewModal booking={reviewBooking} profile={profile} onClose={() => setReviewBooking(null)} onSubmit={() => { setReviewBooking(null); }} />
+        <ReviewModal booking={reviewBooking} profile={profile} onClose={() => setReviewBooking(null)} onSubmit={() => { setReviewed(r => ({ ...r, [reviewBooking.id]: true })); setReviewBooking(null); }} />
       )}
       {showProgress && (
         <StudentProgressModal profile={profile} bookings={bookings} onClose={() => setShowProgress(false)} />
@@ -1844,13 +1881,8 @@ const TutorOnboarding = ({ profile, onComplete }) => {
         tutorData = data;
       }
 
-      const { data: existingAvail } = await supabase
-        .from('availability').select('id').eq('tutor_id', tutorData.id).limit(1);
-      if (!existingAvail || existingAvail.length === 0) {
-        await supabase.from('availability').insert(
-          [1, 2, 3, 4, 5].map(day => ({ tutor_id: tutorData.id, day_of_week: day, start_time: '09:00', end_time: '17:00' }))
-        );
-      }
+      // No made-up hours: families would book times the tutor never offered.
+      // The tutor sets real hours under Schedule once approved.
 
       // Send "under review" email
       try {
@@ -2193,11 +2225,42 @@ const ClubsRoute = ({ user, onNavigate, setShowAuth }) => {
 };
 
 // ============ TUTOR DASHBOARD ============
+// Save a tutor's weekly hours. Checks every step: before, a failed insert
+// after the delete silently wiped the tutor's hours and still said "saved".
+const hhmm = (t) => String(t || '').slice(0, 5);
+const saveTutorHours = async (tutorId, availability) => {
+  const rows = availability.filter(a => a.enabled).map(a => ({
+    tutor_id: tutorId, day_of_week: a.day_of_week, start_time: hhmm(a.start_time), end_time: hhmm(a.end_time),
+  }));
+  const bad = rows.find(r => !r.start_time || !r.end_time || r.end_time <= r.start_time);
+  if (bad) {
+    const day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][bad.day_of_week];
+    throw new Error(`${day}: the end time must be after the start time.`);
+  }
+  const { data: before } = await supabase.from('availability').select('tutor_id, day_of_week, start_time, end_time').eq('tutor_id', tutorId);
+  const { error: delErr } = await supabase.from('availability').delete().eq('tutor_id', tutorId);
+  if (delErr) throw new Error('Could not save your hours. Please try again.');
+  if (rows.length) {
+    const { error: insErr } = await supabase.from('availability').insert(rows);
+    if (insErr) {
+      if (before?.length) await supabase.from('availability').insert(before);
+      throw new Error('Could not save your hours. Your old hours are kept. Please try again.');
+    }
+  }
+};
+
 const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, onNavigate, isAdmin, onOpenAccountSettings }) => {
   const [tab, setTab] = useState('overview');
   const [resubmitting, setResubmitting] = useState(false);
   const tutor = profile?.tutors?.[0];
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
+  // Approved tutors with no weekly hours can't be booked; tell them so.
+  const [hasHours, setHasHours] = useState(true);
+  useEffect(() => {
+    if (!tutor?.id) return;
+    supabase.from('availability').select('id').eq('tutor_id', tutor.id).limit(1)
+      .then(({ data, error }) => { if (!error) setHasHours(!!data?.length); });
+  }, [tutor?.id, tab]);
   const completed = bookings.filter(b => b.status === 'completed');
 
   // Auto-refresh profile every 30s while waiting for verification
@@ -2390,21 +2453,21 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col">
-        <header className="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+      <main className="flex-1 flex flex-col min-w-0">
+        <header className="h-16 bg-white border-b border-slate-200 px-4 sm:px-6 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-3 min-w-0">
             {/* Mobile-only logo + home link (sidebar hidden on mobile) */}
             <button onClick={() => onNavigate && onNavigate('home')} className="lg:hidden flex items-center gap-2 mr-2">
               <div className="w-7 h-7 rounded-lg bg-slate-900 flex items-center justify-center text-white font-bold text-xs">T</div>
             </button>
-            <h1 className="text-lg font-semibold text-slate-900">{navItems.find(n => n.id === tab)?.label}</h1>
-            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-emerald-100 text-emerald-700 uppercase tracking-wide">Tutor</span>
+            <h1 className="text-lg font-semibold text-slate-900 truncate">{navItems.find(n => n.id === tab)?.label}</h1>
+            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-emerald-100 text-emerald-700 uppercase tracking-wide hidden sm:inline">Tutor</span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
             <button onClick={() => onNavigate && onNavigate('home')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Home</button>
             <button onClick={() => onNavigate && onNavigate('tutors')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Find Tutors</button>
-            <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium">Spreadsheet</button>
-            <button onClick={() => onNavigate && onNavigate('classroom')} className="text-sm text-emerald-600 font-medium">Class Insights</button>
+            <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium hidden sm:block">Spreadsheet</button>
+            <button onClick={() => onNavigate && onNavigate('classroom')} className="text-sm text-emerald-600 font-medium hidden sm:block">Class Insights</button>
             {isAdmin && <button onClick={() => onNavigate && onNavigate('admin')} className="text-sm text-purple-600 font-medium hidden sm:block">Admin</button>}
             <MessageButton onClick={onOpenMessages} />
             {onOpenAccountSettings && <button onClick={onOpenAccountSettings} className="text-sm text-slate-500 hover:text-slate-700" title="Account & Data Settings">
@@ -2413,8 +2476,28 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
             <button onClick={onLogout} className="text-sm text-slate-500 hover:text-slate-700">Sign out</button>
           </div>
         </header>
+        {/* Phones: the sidebar is hidden, so the sections sit in a strip here. */}
+        <nav className="lg:hidden bg-white border-b border-slate-200 px-3 py-2 flex gap-1.5 overflow-x-auto scrollbar-hide" aria-label="Tutor sections">
+          {navItems.map(item => (
+            <button key={item.id} onClick={() => !item.locked && setTab(item.id)} disabled={item.locked}
+              className={`shrink-0 px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                item.locked ? 'text-slate-300' : tab === item.id ? 'bg-slate-900 text-white' : 'text-slate-600 bg-slate-100'
+              }`}>
+              {item.label}
+            </button>
+          ))}
+          <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="shrink-0 px-3.5 py-2 rounded-lg text-sm font-semibold text-blue-700 bg-blue-50">Spreadsheet</button>
+          <button onClick={() => onNavigate && onNavigate('classroom')} className="shrink-0 px-3.5 py-2 rounded-lg text-sm font-semibold text-emerald-700 bg-emerald-50">Class Insights</button>
+        </nav>
+        {tutor?.verification_status === 'approved' && !hasHours && tab !== 'schedule' && (
+          <div className="bg-amber-50 border-b border-amber-200 px-4 lg:px-8 py-3 flex flex-wrap items-center gap-3 text-sm text-amber-900">
+            <span className="font-semibold">Families can't book you yet.</span>
+            <span>Set the days and times you teach.</span>
+            <button onClick={() => setTab('schedule')} className="ml-auto px-3 py-1.5 rounded-lg bg-amber-900 text-white font-semibold">Set my hours</button>
+          </div>
+        )}
 
-        <div className="flex-1 p-6 overflow-auto">
+        <div className="flex-1 p-4 sm:p-6 overflow-auto">
           <VerificationBanner />
           {tab === 'overview' && (
             <div className="space-y-6">
@@ -2505,7 +2588,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                 ) : (
                   <div className="divide-y divide-slate-100">
                     {upcoming.map(b => (
-                      <div key={b.id} className="px-5 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                      <div key={b.id} className="px-5 py-4 flex flex-wrap items-center justify-between gap-3 hover:bg-slate-50 transition-colors">
                         <div className="flex items-center gap-4 min-w-0">
                           <Avatar src={b.profiles?.avatar_url} name={b.learner_name || b.profiles?.full_name} size={44} />
                           <div className="min-w-0">
@@ -2936,8 +3019,8 @@ const TutorAvailabilityEditor = ({ tutor }) => {
       return {
         day_of_week: day.value,
         enabled: !!existing,
-        start_time: existing?.start_time || '09:00',
-        end_time: existing?.end_time || '17:00',
+        start_time: existing ? hhmm(existing.start_time) : '09:00',
+        end_time: existing ? hhmm(existing.end_time) : '17:00',
         id: existing?.id || null,
       };
     });
@@ -2963,29 +3046,10 @@ const TutorAvailabilityEditor = ({ tutor }) => {
     setMessage('');
 
     try {
-      // Delete all existing availability
-      await supabase
-        .from('availability')
-        .delete()
-        .eq('tutor_id', tutor.id);
-
-      // Insert enabled days
-      const enabledDays = availability
-        .filter(a => a.enabled)
-        .map(a => ({
-          tutor_id: tutor.id,
-          day_of_week: a.day_of_week,
-          start_time: a.start_time,
-          end_time: a.end_time,
-        }));
-
-      if (enabledDays.length > 0) {
-        await supabase.from('availability').insert(enabledDays);
-      }
-
+      await saveTutorHours(tutor.id, availability);
       setMessage('Availability saved!');
     } catch (err) {
-      setMessage('Error saving availability');
+      setMessage(err.message || 'Error saving availability');
       console.error(err);
     }
 
@@ -3052,7 +3116,7 @@ const TutorAvailabilityEditor = ({ tutor }) => {
         >
           {saving ? 'Saving...' : 'Save Availability'}
         </button>
-        {message && <span className={`text-sm ${message.includes('Error') ? 'text-red-600' : 'text-emerald-600'}`}>{message}</span>}
+        {message && <span className={`text-sm ${/saved!$/i.test(message) ? 'text-emerald-600' : 'text-red-600'}`}>{message}</span>}
       </div>
     </div>
   );
@@ -3097,8 +3161,8 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
       const existing = data?.find(a => a.day_of_week === d.value);
       return {
         day_of_week: d.value,
-        start_time: existing?.start_time || '09:00',
-        end_time: existing?.end_time || '17:00',
+        start_time: existing ? hhmm(existing.start_time) : '09:00',
+        end_time: existing ? hhmm(existing.end_time) : '17:00',
         enabled: !!existing,
       };
     });
@@ -3124,24 +3188,10 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
     setMessage('');
 
     try {
-      await supabase.from('availability').delete().eq('tutor_id', tutor.id);
-
-      const enabledDays = availability
-        .filter(a => a.enabled)
-        .map(a => ({
-          tutor_id: tutor.id,
-          day_of_week: a.day_of_week,
-          start_time: a.start_time,
-          end_time: a.end_time,
-        }));
-
-      if (enabledDays.length > 0) {
-        await supabase.from('availability').insert(enabledDays);
-      }
-
+      await saveTutorHours(tutor.id, availability);
       setMessage('Schedule saved!');
     } catch (err) {
-      setMessage('Error saving');
+      setMessage(err.message || 'Error saving');
     }
 
     setSaving(false);
@@ -3170,16 +3220,16 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
         ) : (
           <div className="divide-y divide-slate-100">
             {upcoming.map(b => (
-              <div key={b.id} className="px-5 py-4 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <Avatar src={b.profiles?.avatar_url} name={b.profiles?.full_name} size={40} />
-                  <div>
-                    <div className="font-medium text-slate-900">{b.profiles?.full_name}</div>
+              <div key={b.id} className="px-5 py-4 flex flex-wrap items-center justify-between gap-3">
+                <div className="flex items-center gap-3 min-w-0">
+                  <Avatar src={b.profiles?.avatar_url} name={b.learner_name || b.profiles?.full_name} size={40} />
+                  <div className="min-w-0">
+                    <div className="font-medium text-slate-900">{b.learner_name || b.profiles?.full_name}</div>
                     <div className="text-sm text-slate-500">{b.subject}</div>
                   </div>
                 </div>
-                <div className="text-right">
-                  <div className="font-medium text-slate-900">{b.lesson_date}</div>
+                <div className="text-right ml-auto">
+                  <div className="font-medium text-slate-900 whitespace-nowrap">{b.lesson_date}</div>
                   <div className="text-sm text-slate-400">{b.start_time?.slice(0,5)}</div>
                 </div>
                 <span className={`px-3 py-1 text-xs font-medium rounded-full ${
@@ -3252,7 +3302,7 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
           >
             {saving ? 'Saving...' : 'Save Schedule'}
           </button>
-          {message && <span className={`text-sm ${message.includes('Error') ? 'text-red-600' : 'text-emerald-600'}`}>{message}</span>}
+          {message && <span className={`text-sm ${/saved!$/i.test(message) ? 'text-emerald-600' : 'text-red-600'}`}>{message}</span>}
         </div>
       </div>
     </div>
@@ -3269,7 +3319,7 @@ const TutorProfileEditor = ({ tutor, profile }) => {
     degree: tutor?.degree || '',
     experience_years: tutor?.experience_years || '',
     teaching_style: tutor?.teaching_style || '',
-    languages: tutor?.languages || 'English, Kiswahili',
+    languages: tutor?.languages || ['English', 'Kiswahili'],
     grade_levels: tutor?.grade_levels || [],
     // Only once the column exists (after the lesson-length SQL), so saving
     // never fails on a database that doesn't have it yet.
@@ -3291,26 +3341,36 @@ const TutorProfileEditor = ({ tutor, profile }) => {
   };
 
   const handleSave = async () => {
-    setSaving(true);
+    // Check before saving: a blank bio used to send an approved tutor back to
+    // onboarding, and a blank rate or experience made the save fail.
+    const rate = Number(form.hourly_rate);
+    const problem = !form.bio.trim() ? 'Your bio cannot be empty. Families read it before booking.'
+      : !Number.isFinite(rate) || rate <= 0 ? 'Enter an hourly rate above zero.'
+      : null;
+    if (problem) { setMessage(problem); return; }
 
+    setSaving(true);
     try {
       // Upload new photo if changed
       if (photoFile) {
         const ext = photoFile.name.split('.').pop();
         const photoPath = `${profile.id}/avatar-${Date.now()}.${ext}`;
-        await supabase.storage.from('avatars').upload(photoPath, photoFile, { upsert: true });
+        const { error: upErr } = await supabase.storage.from('avatars').upload(photoPath, photoFile, { upsert: true });
+        if (upErr) throw new Error('the photo did not upload. Try a JPG or PNG.');
         const { data: photoUrl } = supabase.storage.from('avatars').getPublicUrl(photoPath);
         await supabase.from('profiles').update({ avatar_url: photoUrl.publicUrl }).eq('id', profile.id);
       }
 
-      const { error } = await supabase.from('tutors').update(form).eq('id', tutor.id);
-      setMessage(error ? 'Error saving' : 'Saved!');
+      const years = form.experience_years === '' || form.experience_years == null ? null : parseInt(form.experience_years, 10);
+      const payload = { ...form, bio: form.bio.trim(), hourly_rate: Math.round(rate), experience_years: Number.isFinite(years) ? years : null };
+      const { error } = await supabase.from('tutors').update(payload).eq('id', tutor.id);
+      if (error) throw new Error(error.message);
+      setMessage('Saved!');
+      setTimeout(() => setMessage(''), 3000);
     } catch (err) {
       setMessage('Error saving: ' + err.message);
     }
-
     setSaving(false);
-    setTimeout(() => setMessage(''), 3000);
   };
 
   return (
@@ -3363,7 +3423,7 @@ const TutorProfileEditor = ({ tutor, profile }) => {
         <div className="grid grid-cols-2 gap-3">
           <div>
             <label className="block text-sm font-medium mb-1">Hourly Rate (KSh)</label>
-            <input type="number" value={form.hourly_rate} onChange={e => setForm({ ...form, hourly_rate: parseInt(e.target.value) })} className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
+            <input type="number" value={form.hourly_rate} onChange={e => setForm({ ...form, hourly_rate: e.target.value === '' ? '' : parseInt(e.target.value, 10) })} min="1" className="w-full px-3 py-2 border border-slate-200 rounded-lg" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Years of experience</label>
@@ -3411,7 +3471,7 @@ const TutorProfileEditor = ({ tutor, profile }) => {
         <button onClick={handleSave} disabled={saving} className="w-full py-2.5 bg-emerald-500 text-white font-semibold rounded-lg disabled:opacity-50">
           {saving ? 'Saving...' : 'Save Changes'}
         </button>
-        {message && <p className={`text-center text-sm ${message.includes('Error') ? 'text-red-600' : 'text-emerald-600'}`}>{message}</p>}
+        {message && <p className={`text-center text-sm ${/saved!$/i.test(message) ? 'text-emerald-600' : 'text-red-600'}`}>{message}</p>}
       </div>
     </div>
   );
@@ -5621,7 +5681,7 @@ const GroupClassEnrollModal = ({ gc, user, onClose, onSuccess }) => {
 };
 
 // ============ TUTOR PROFILE VIEW ============
-const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate }) => {
+const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate, onPaid }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [booking, setBooking] = useState(false);
@@ -5732,6 +5792,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
 
   const handlePaymentSuccess = () => {
     setShowPayment(false);
+    if (pendingBooking && onPaid) onPaid(pendingBooking);
     setPendingBooking(null);
     // The lesson is booked — now the honest moment to ask about notifications:
     // "we'll tell you the moment it starts." Deferred so the system prompt
@@ -5750,8 +5811,9 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
   // that looks booked. Best-effort and safe — only the student's own still
   // -pending row is removed (the UUID guard skips the non-DB fallback id, and
   // the status filter means a booking that just got confirmed is never deleted).
-  const handlePaymentCancel = async () => {
+  const handlePaymentCancel = async (opts) => {
     setShowPayment(false);
+    if (opts?.keep) { setPendingBooking(null); if (onNavigate) onNavigate('dashboard'); return; }
     const id = pendingBooking?.id;
     if (id && user?.id && /^[0-9a-f-]{36}$/i.test(String(id))) {
       try {
@@ -6270,9 +6332,14 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const handleApproveTutor = async (tutorId) => {
     setActionLoading(tutorId);
     // Try updating by id first, then by user_id as fallback
-    const { error } = await supabase.from('tutors').update({ verification_status: 'approved', verified: true, rejection_reason: null }).eq('id', tutorId);
-    if (error) {
-      await supabase.from('tutors').update({ verification_status: 'approved', verified: true, rejection_reason: null }).eq('user_id', tutorId);
+    const approved = { verification_status: 'approved', verified: true, rejection_reason: null };
+    let { data: rows, error } = await supabase.from('tutors').update(approved).eq('id', tutorId).select('id');
+    if (error || !rows?.length) ({ data: rows, error } = await supabase.from('tutors').update(approved).eq('user_id', tutorId).select('id'));
+    // An update blocked by permissions comes back with no error and no rows.
+    if (error || !rows?.length) {
+      alert(`Could not approve this tutor${error ? `: ${error.message}` : ' (no permission to change it)'}. Nothing was changed and no email was sent.`);
+      setActionLoading(null);
+      return;
     }
     // Send approval email
     const tutor = allTutors.find(t => t.id === tutorId);
@@ -6289,9 +6356,13 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   const handleRejectTutor = async (tutorId) => {
     if (!rejectReason.trim()) return;
     setActionLoading(tutorId);
-    const { error } = await supabase.from('tutors').update({ verification_status: 'rejected', verified: false, rejection_reason: rejectReason }).eq('id', tutorId);
-    if (error) {
-      await supabase.from('tutors').update({ verification_status: 'rejected', verified: false, rejection_reason: rejectReason }).eq('user_id', tutorId);
+    const rejected = { verification_status: 'rejected', verified: false, rejection_reason: rejectReason };
+    let { data: rows, error } = await supabase.from('tutors').update(rejected).eq('id', tutorId).select('id');
+    if (error || !rows?.length) ({ data: rows, error } = await supabase.from('tutors').update(rejected).eq('user_id', tutorId).select('id'));
+    if (error || !rows?.length) {
+      alert(`Could not reject this tutor${error ? `: ${error.message}` : ' (no permission to change it)'}. Nothing was changed and no email was sent.`);
+      setActionLoading(null);
+      return;
     }
     // Send rejection email
     const tutor = allTutors.find(t => t.id === tutorId);
@@ -6988,6 +7059,9 @@ function AppInner() {
   });
   // The free check: which grade to start at (set by the homepage finder).
   const [checkGrade, setCheckGrade] = useState(null);
+  // Bumped after a free check is saved to the account, so the dashboard
+  // reloads and shows the new child straight away.
+  const [dashKey, setDashKey] = useState(0);
   const [showAuth, setShowAuth] = useState(null);
   const [selectedTutor, setSelectedTutor] = useState(null);
   const [scrolled, setScrolled] = useState(false);
@@ -7044,9 +7118,20 @@ function AppInner() {
   useEffect(() => {
     if (!auth.user || !wantsSave()) return;
     claimGuestCheck(auth.user.id)
-      .then(r => { if (r) { setShowAuth(null); handleNavigate('dashboard'); } })
+      .then(r => { if (r) { setShowAuth(null); setDashKey(k => k + 1); handleNavigate('dashboard'); } })
       .catch(err => console.error('Could not save the check to the account:', err));
   }, [auth.user?.id]);
+
+  // Signed in from a tutor's "Book" button: go back to that tutor, even after
+  // the Google round trip lands on /dashboard.
+  useEffect(() => {
+    if (!auth.user || !publicTutors.tutors.length) return;
+    let id; try { id = sessionStorage.getItem('tg_resume_tutor'); } catch { id = null; }
+    if (!id) return;
+    try { sessionStorage.removeItem('tg_resume_tutor'); } catch { /* ignore */ }
+    const t = publicTutors.tutors.find(x => String(x.id) === String(id));
+    if (t) handleNavigate('tutors', t);
+  }, [auth.user?.id, publicTutors.tutors.length]);
 
   // A logged-in learner who hits the public HOREB intro goes straight to the
   // engine (the intro is only for prospects).
@@ -7105,9 +7190,19 @@ function AppInner() {
       sendLessonStartNotification(booking).catch(err => console.error('Lesson notification failed:', err));
     }
   };
-  const handleEndLesson = async () => {
-    // Mark booking as completed when lesson ends
-    if (activeLesson?.id) {
+  // Leaving the room only marks a lesson done once it has really happened:
+  // at least half its length has passed since the start (Kenya time). Tapping
+  // in early to test, leaving before it starts, or a camera/connection error
+  // never completes a paid lesson.
+  const lessonHasHappened = (b) => {
+    if (!b?.lesson_date || !b?.start_time) return false;
+    const start = new Date(`${b.lesson_date}T${String(b.start_time).slice(0, 5)}:00+03:00`);
+    if (isNaN(start.getTime())) return false;
+    const minutes = Number(b.duration_minutes) || 60;
+    return Date.now() >= start.getTime() + minutes * 30000;
+  };
+  const handleEndLesson = async (opts = {}) => {
+    if (activeLesson?.id && !opts.failed && activeLesson.status === 'confirmed' && lessonHasHappened(activeLesson)) {
       try {
         await supabase.from('bookings').update({ status: 'completed' }).eq('id', activeLesson.id);
         refetchBookings();
@@ -7253,7 +7348,7 @@ function AppInner() {
         onSave={() => {
           markWantsSave();
           if (auth.user) {
-            claimGuestCheck(auth.user.id).then(() => handleNavigate('dashboard')).catch(err => alert('Could not save the plan: ' + err.message));
+            claimGuestCheck(auth.user.id).then(() => { setDashKey(k => k + 1); handleNavigate('dashboard'); }).catch(() => alert('We could not save the plan just now. Please check your connection and try again.'));
           } else {
             setShowAuth({ mode: 'register', role: 'parent', reason: 'plan', childName: getCheck()?.name || '' });
           }
@@ -7341,7 +7436,7 @@ function AppInner() {
     }
     return (
       <>
-        <StudentDashboard profile={auth.profile} user={auth.user} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
+        <StudentDashboard key={dashKey} profile={auth.profile} user={auth.user} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
         {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
         {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       </>
@@ -7369,11 +7464,12 @@ function AppInner() {
           onSelect={(t) => { setSelectedTutor(t); window.scrollTo(0, 0); }} onNavigate={handleNavigate} onSignIn={openSignIn}
           extra={<div className="in" style={{ paddingBottom: 40 }}><GroupClassesBrowse user={auth.user} setShowAuth={setShowAuth} /></div>} />
       )}
-      {selectedTutor && IS_NATIVE && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
+      {selectedTutor && IS_NATIVE && <TutorProfileView tutor={selectedTutor} onBack={() => setSelectedTutor(null)} onBook={createBooking} onPaid={(b) => sendBookingNotifications(b, auth.user?.id)} user={auth.user} setShowAuth={setShowAuth} onNavigate={handleNavigate} />}
       {selectedTutor && !IS_NATIVE && (
         <TutorProfile tutor={selectedTutor} user={auth.user} onBook={createBooking} onNavigate={handleNavigate}
+          onPaid={(b) => sendBookingNotifications(b, auth.user?.id)}
           onBack={() => { setSelectedTutor(null); window.scrollTo(0, 0); }}
-          onSignIn={() => setShowAuth({ mode: auth.user ? 'login' : 'register', role: 'parent', reason: 'book' })} />
+          onSignIn={() => { try { sessionStorage.setItem('tg_resume_tutor', String(selectedTutor.id)); } catch { /* ignore */ } setShowAuth({ mode: auth.user ? 'login' : 'register', role: 'parent', reason: 'book' }); }} />
       )}
       
       {renderAuth(undefined)}

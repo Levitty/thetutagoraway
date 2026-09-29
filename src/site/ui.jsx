@@ -141,6 +141,8 @@ export const gradeLevels = (g) => {
 
 // Tutors with a real profile photo are listed first: parents trust a face.
 export const hasPhoto = (t) => !!(t?.profiles?.avatar_url && String(t.profiles.avatar_url).trim());
-export const photoFirst = (a, b) => Number(hasPhoto(b)) - Number(hasPhoto(a));
+export const hasHours = (t) => !Array.isArray(t?.availability) || t.availability.length > 0;
+// Tutors families can actually book come first, then those with a real photo.
+export const photoFirst = (a, b) => (Number(hasHours(b)) - Number(hasHours(a))) || (Number(hasPhoto(b)) - Number(hasPhoto(a)));
 
 export const ksh = (n) => `KSh ${Math.round(Number(n) || 0).toLocaleString('en-KE')}`;

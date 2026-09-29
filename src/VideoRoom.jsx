@@ -432,12 +432,12 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
   };
 
   // End call
-  const handleEnd = async () => {
+  const handleEnd = async (opts = {}) => {
     localTracks.audio?.close();
     localTracks.video?.close();
     screenTrack?.close();
-    await client.leave();
-    onEnd();
+    try { await client.leave(); } catch { /* already disconnected */ }
+    onEnd(opts && opts.failed ? { failed: true } : {});
   };
 
   // Send chat message (synced)
@@ -500,7 +500,7 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
               <div className="text-center">
                 <div className="text-red-400 text-lg mb-2">Connection Error</div>
                 <div className="text-slate-500 text-sm">{error}</div>
-                <button onClick={handleEnd} className="mt-4 px-4 py-2 bg-slate-700 text-white rounded-lg text-sm">Go Back</button>
+                <button onClick={() => handleEnd({ failed: true })} className="mt-4 px-4 py-2 bg-slate-700 text-white rounded-lg text-sm">Go back</button>
               </div>
             </div>
           ) : (
@@ -616,7 +616,7 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
         <ControlButton name="board" label="Board" active={activePanel === 'whiteboard'} onClick={() => togglePanel('whiteboard')} />
         <ControlButton name="sheet" label="Sheet" active={activePanel === 'spreadsheet'} onClick={() => togglePanel('spreadsheet')} />
         <ControlButton name="chat" label="Chat" active={activePanel === 'chat'} onClick={() => togglePanel('chat')} />
-        <ControlButton name="end" label="Leave" danger onClick={handleEnd} />
+        <ControlButton name="end" label="Leave" danger onClick={() => handleEnd()} />
       </div>
     </div>
   );
