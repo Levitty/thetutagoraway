@@ -59,7 +59,7 @@ used**.
 | **Content system** | Pedagogical schema (worked example + scaffolded steps + hint ladder + misconception feedback + variety + verify hook); quality gate that **independently verifies answers**. |
 | **Symbolic layer** | Mini-CAS (expression trees, evaluate, differentiate) powering the hard calculus with verified numeric answers. |
 | **Authored content** | **44 skills, all gate-verified** — Algebra spine G6→G12 (27) + Fractions/Number G5→G7 (17). |
-| **Curriculum graph** | 200 math skills G5–12 (+ ACCA AFM 87, APM 80). Structurally clean (no broken refs/cycles). |
+| **Curriculum graph** | 200 math skills G5–12 (+ Cambridge and SAT views). Structurally clean (no broken refs/cycles). |
 | **Audits** | Content audit + graph-integrity audit scripts. |
 | **Telemetry + calibration loop** | `response_events` table (+RLS), fire-and-forget client logging on every answer (diagnostic/practice/review), engine `/event` ingest, and `calibrate.py` (events → per-skill difficulty + BKT slip/guess + content-health flags). Engine loads calibrated `params.vN.json` and prefers them over heuristics; preview-by-default, `--commit` to ship. **The data loop is closed end-to-end.** |
 
@@ -76,7 +76,7 @@ used**.
 
 - **HOREB learns from data** (the adaptive loop) — see §3. *This is the headline next phase.*
 - Graph/visual answer mode (for graph-based skills).
-- Other subjects authored to the content bar (AFM/APM only have legacy generators).
+- Other subjects authored to the content bar.
 - Productization: auth/roles hardening, billing, analytics, scale.
 
 ---
@@ -155,7 +155,7 @@ wiring `/event` + the table, even before any calibration runs.
   cause the 22 grade-jumps; add G5 algebra readiness; thicken thin prerequisites
   so gap-detection and FIRe credit are precise. (Phase 3's prerequisite
   validation will *tell us* where the tree is wrong — the two phases reinforce.)
-- **Other subjects** (sciences, languages, and the ACCA verticals) authored to
+- **Other subjects** (sciences, languages) authored to
   the same bar, each gated.
 
 ---

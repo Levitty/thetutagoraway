@@ -14,8 +14,6 @@ mkdirSync(outDir, { recursive: true });
 // Each subject: its graph module + a label for the output file.
 const subjects = [
   { id: 'math', module: '../../src/ai-tutor/knowledgeGraph.js', strandsKey: 'STRANDS', skillsKey: 'SKILLS' },
-  { id: 'afm', module: '../../src/ai-tutor/afmKnowledgeGraph.js', strandsKey: 'AFM_STRANDS', skillsKey: 'AFM_SKILLS' },
-  { id: 'apm', module: '../../src/ai-tutor/apmKnowledgeGraph.js', strandsKey: 'APM_STRANDS', skillsKey: 'APM_SKILLS' },
   { id: 'cambridge', module: '../../src/ai-tutor/cambridgeKnowledgeGraph.js', strandsKey: 'CAMBRIDGE_STRANDS', skillsKey: 'CAMBRIDGE_SKILLS' },
   { id: 'sat', module: '../../src/ai-tutor/satKnowledgeGraph.js', strandsKey: 'SAT_STRANDS', skillsKey: 'SAT_SKILLS' },
 ];

@@ -82,7 +82,7 @@ gets decisions + updated state back.
 | POST | `/next-session` | `{subject, state, n}` | ordered recommendations |
 | POST | `/profile` | `{subject, state}` | knowledge profile (the "level") |
 
-`subject` is one of `math`, `afm`, `apm` (whatever graphs exist in `data/`).
+`subject` is one of `math`, `cambridge`, `sat` (whatever graphs exist in `data/`).
 
 ### Example: calling from the React app
 
@@ -107,6 +107,6 @@ const { state, profile } = await res.json();
 
 ## Adding a subject
 
-1. Add its knowledge graph in JS (like `src/ai-tutor/afmKnowledgeGraph.js`).
+1. Add its knowledge graph in JS (like `src/ai-tutor/cambridgeKnowledgeGraph.js`).
 2. Add it to `engine/scripts/export_graph.mjs` and run the script.
 3. It's immediately usable: `load_graph("yoursubject")`.

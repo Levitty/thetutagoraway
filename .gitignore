@@ -29,3 +29,6 @@ engine/data/params.preview.json
 
 # Facebook page credentials — live token, must never be committed (repo is public)
 facebook-config.json
+
+# Python bytecode (engine tests / local runs)
+__pycache__/
