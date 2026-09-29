@@ -114,17 +114,10 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
             <p className="sub">Most children who "hate maths" are stuck on one skill from years back. The check finds it in ten minutes, and the daily plan starts right there.</p>
             <button type="button" className="btn" onClick={() => onStartCheck(grade)}>Start free check <SiteIcon name="arrow" /></button>
           </div>
-          <figure className="art" aria-label="Example of a check result">
-            <div className="pic" style={{ padding: 22 }}>
-              <div className="kicker" style={{ fontSize: 12, color: 'var(--mute)' }}>Example result · Grade 6</div>
-              <div className="display" style={{ fontSize: 'clamp(26px,3vw,36px)', margin: '8px 0 16px' }}>Solid up to Grade 5. One step is missing.</div>
-              <div className="chain" style={{ background: '#fff', borderRadius: 6 }}>
-                <div className="link ok"><span className="stt"><SiteIcon name="check" style={{ width: 14, height: 14 }} />Solid</span><h3>Adding like fractions</h3><p>Grade 5</p></div>
-                <div className="link gap"><span className="stt">Missing step</span><h3>Equivalent fractions</h3><p>Grade 5</p></div>
-                <div className="link next"><span className="stt"><SiteIcon name="lock" style={{ width: 14, height: 14 }} />Next</span><h3>Adding unlike fractions</h3><p>Grade 6</p></div>
-              </div>
-            </div>
-            <div className="stk">Found it in 10 minutes<small>then 15 minutes a day</small></div>
+          <figure className="art">
+            <div className="pic"><img src="/images/home/lesson-windows.webp" width="1035" height="690" alt="Illustration of two smiling children in lesson windows, with a set square and study cards" /></div>
+            <div className="stk">Found it: adding fractions<small>Grade 4 skill, 10 minutes</small></div>
+            <div className="stk two">Day 5 of 5</div>
           </figure>
         </div>
         <div className="steps">
@@ -147,7 +140,12 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
         </div>
       </div></section>
 
-      <section className="sec safe"><div className="in">
+      <section className="sec safe"><div className="in safe-row">
+        <figure className="art">
+          <div className="pic"><img src="/images/home/hand-over.webp" width="736" height="920" alt="A laptop on a sunlit desk with chalk drawings of two children around it" /></div>
+          <div className="stk">Their space. Your PIN.</div>
+        </figure>
+        <div>
         <div className="kicker">Made for family phones</div>
         <h2 className="display" style={{ margin: '10px 0 30px' }}>Hand over the phone. Relax.</h2>
         <div className="grid">
@@ -155,6 +153,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
           <div className="it"><b>Their own tablet</b><span>Set it up once. It opens straight into their space.</span></div>
           <div className="it"><b>Right for their age</b><span>A friendly buddy for Grade 1 to 8. A straight-talking plan for 9 to 12.</span></div>
           <div className="it"><b>Goals you agree</b><span>"5 days this week, then a trip to the park."</span></div>
+        </div>
         </div>
       </div></section>
 

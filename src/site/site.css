@@ -101,6 +101,11 @@
 .tg .hiw .sub { margin-bottom: 26px; }
 .tg .art { position: relative; margin: 0; }
 .tg .art .pic { border-radius: 8px; border: 2px solid var(--ink); overflow: hidden; background: var(--brand-soft); }
+.tg .art .pic img { display: block; width: 100%; height: auto; }
+.tg .safe-row { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 40px 48px; align-items: center; }
+.tg .safe-row .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tg .safe .art .pic img { aspect-ratio: 4 / 5; object-fit: cover; }
+.tg .safe .art .stk { left: auto; right: -12px; top: 22px; bottom: auto; transform: rotate(3deg); }
 .tg .art .stk { left: -14px; bottom: 22px; transform: rotate(-4deg); }
 .tg .art .stk.two { left: auto; right: -10px; top: 18px; bottom: auto; transform: rotate(3deg); background: var(--brand); color: var(--ink); border: 2px solid var(--ink); }
 .tg .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
@@ -321,6 +326,11 @@
 /* ---------- responsive ---------- */
 @media (max-width: 1000px) {
   .tg .nav .links { display: none; }
+  .tg .safe-row { grid-template-columns: minmax(0, 1fr); }
+  .tg .safe-row .art { order: 2; max-width: 460px; }
+  .tg .safe .art .stk { right: 8px; }
+  .tg .art .stk { left: 8px; }
+  .tg .art .stk.two { right: 8px; }
   .tg .hero-in, .tg .dark .in, .tg .rhero > .in, .tg .shero > .in, .tg .prof, .tg .hiw { grid-template-columns: minmax(0, 1fr); }
   .tg .book { justify-self: center; max-width: 460px; margin-top: 10px; }
   .tg .tiles, .tg .tutors, .tg .safe .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -363,7 +373,8 @@
   .tg .hiw { margin-bottom: 20px; gap: 26px; }
   .tg .st, .tg .st + .st { padding: 16px 0; }
   .tg .st h3 { font-size: 22px; margin: 6px 0; }
-  .tg .safe .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .tg .safe .grid, .tg .safe-row .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .tg .safe .art .pic img { aspect-ratio: 4 / 3; object-position: 50% 62%; }
   .tg .safe .it { padding: 14px; }
   .tg .safe .it b { font-size: 17px; }
   .tg .safe .it span { font-size: 14px; line-height: 1.35; display: block; }
