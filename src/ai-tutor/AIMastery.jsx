@@ -64,14 +64,14 @@ const Confetti = () => (
 const CelebrationOverlay = ({ item, onDismiss }) => {
   if (!item) return null;
   return (
-    <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={onDismiss}>
+    <div className="fixed inset-0 bg-slate-900/60 flex items-center justify-center z-50 p-4" onClick={onDismiss}>
       <Confetti />
-      <div className="bg-slate-800 rounded-3xl p-8 text-center max-w-sm relative z-[61]" onClick={e => e.stopPropagation()}>
-        <div className="text-5xl mb-3">{item.icon}</div>
-        <h2 className="text-2xl font-bold mb-1">{item.title}</h2>
-        {item.subtitle && <p className="text-slate-300 mb-2">{item.subtitle}</p>}
-        {item.xp != null && <p className="text-emerald-400 font-bold text-lg mb-2">+{item.xp} XP</p>}
-        <button onClick={onDismiss} className="mt-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl px-8 py-3 font-semibold transition-colors">Continue</button>
+      <div className="bg-white border border-slate-200 shadow-xl rounded-3xl p-8 text-center max-w-sm w-full relative z-[61] text-slate-900" onClick={e => e.stopPropagation()}>
+        <div className="w-16 h-16 mx-auto mb-3 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center"><Icon name={item.icon} className="w-8 h-8" /></div>
+        <h2 className="text-2xl font-extrabold tracking-tight mb-1">{item.title}</h2>
+        {item.subtitle && <p className="text-slate-500 mb-2">{item.subtitle}</p>}
+        {item.xp != null && <p className="text-[#5a7a3a] font-bold text-lg mb-2">+{item.xp} XP</p>}
+        <button onClick={onDismiss} className="mt-3 w-full bg-amber-400 hover:bg-amber-300 text-slate-900 rounded-xl px-8 py-3 font-bold transition-colors">Continue</button>
       </div>
     </div>
   );
@@ -79,7 +79,7 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 
 // ==================== MAIN COMPONENT ====================
 
-export function AIMastery({ onBack, userId, studentName, onFindTutor, subscription = null, onPaywall }) {
+export function AIMastery({ onBack, userId, studentName, onFindTutor, subscription = null, onPaywall, lockedLearner = null }) {
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
   const [progress, setProgress] = useState(defaultProgress);
   const [view, setView] = useState('loading');
@@ -134,8 +134,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // children separately. activeLearner === null means the account holder
   // practises; a child means that child's own namespaced progress (its own
   // profile key + cloud row), still owned by the parent uid for RLS.
+  // In student mode (a device handed to one child) the learner is fixed and the
+  // switcher is hidden: a child can't practise as a sibling or the parent.
   const [learners, setLearners] = useState([]);
-  const [activeLearner, setActiveLearner] = useState(null);
+  const [activeLearner, setActiveLearner] = useState(lockedLearner);
   useEffect(() => {
     if (!userId) { setLearners([]); return; }
     supabase.from('children').select('id, name, grade').eq('parent_id', userId).order('created_at')
@@ -500,7 +502,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
     const queue = [];
     if (lvl > gamifyRef.current.level) {
-      queue.push({ type: 'levelup', icon: '🚀', title: `Level ${lvl}!`, subtitle: encourage('levelup') });
+      queue.push({ type: 'levelup', icon: 'trend', title: `Level ${lvl}!`, subtitle: encourage('levelup') });
     }
     for (const id of newly) {
       const a = getAchievement(id);
@@ -508,7 +510,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     }
     if (goalMet && gamifyRef.current.dailyDoneDate !== progress.dailyDate) {
       gamifyRef.current.dailyDoneDate = progress.dailyDate;
-      queue.push({ type: 'dailygoal', icon: '☀️', title: 'Daily goal reached!', subtitle: encourage('dailygoal') });
+      queue.push({ type: 'dailygoal', icon: 'target', title: 'Daily goal reached!', subtitle: encourage('dailygoal') });
     }
     gamifyRef.current.level = lvl;
     if (newly.length) setProgress(p => ({ ...p, achievements: Array.from(new Set([...(p.achievements || []), ...newly])) }));
@@ -950,7 +952,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // Celebration on mastery (level-ups / badges are queued by the effect below)
     if (shouldMaster && !sp.mastered) {
       setTimeout(() => setCelebrations(q => [...q, {
-        type: 'mastery', icon: '🏆', title: 'Skill Mastered!',
+        type: 'mastery', icon: 'trophy', title: 'Skill Mastered!',
         subtitle: `${skill.name} — ${encourage('mastery')}`, xp: xpEarned,
       }]), 500);
     }
@@ -1106,7 +1108,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
           <div className="space-y-3">
             {SUBJECT_LIST.map(s => (
               <button key={s.id} onClick={() => setSubjectId(s.id)} className="w-full bg-white border border-slate-200 shadow-sm hover:border-slate-300 rounded-2xl p-5 flex items-center gap-4 transition-colors text-left">
-                <div className="text-4xl">{s.emoji}</div>
+                <div className="w-12 h-12 rounded-2xl bg-[#ecedfa] text-[#6d6fcb] flex items-center justify-center shrink-0"><Icon name={s.icon} className="w-6 h-6" /></div>
                 <div className="flex-1 min-w-0">
                   <div className="font-bold text-[17px] text-slate-900">{s.name}</div>
                   <div className="text-slate-500 text-sm">{s.description}</div>
@@ -1254,7 +1256,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
             </div>
             {feedback && (
               feedback === 'correct'
-                ? <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]"><span className="text-[#4f7233] font-bold">✓ Nice one!</span></div>
+                ? <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]"><span className="text-[#4f7233] font-bold">Nice one!</span></div>
                 : <div className="rounded-2xl p-4 mb-4 bg-[#f5f6fc] border border-[#d3daf0]"><span className="text-[#5658b8] font-semibold">Noted — that helps me find your start.</span></div>
             )}
             {!feedback && <button onClick={() => handleDiagnosticAnswer()} disabled={!answer.trim() && !(problem?.visual && visualAnswer != null)} className="w-full bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 text-slate-900 rounded-2xl py-4 font-bold transition-colors">Check</button>}
@@ -1524,7 +1526,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               {/* Correct answer feedback */}
               {feedback === 'correct' && (
                 <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]">
-                  <span className="text-[#4f7233] font-bold">✓ Nice{learnerFirst ? `, ${learnerFirst}` : ''} — that's right!</span>
+                  <span className="text-[#4f7233] font-bold">Nice{learnerFirst ? `, ${learnerFirst}` : ''} — that's right!</span>
                   {attemptCount > 1 && <span className="text-slate-400 text-sm ml-2">(attempt {attemptCount})</span>}
                 </div>
               )}
@@ -1656,7 +1658,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
             {feedback && (
               feedback === 'correct'
-                ? <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]"><span className="text-[#4f7233] font-bold">✓ Still got it!</span></div>
+                ? <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]"><span className="text-[#4f7233] font-bold">Still got it!</span></div>
                 : (
                   <div className="rounded-2xl p-4 mb-4 bg-[#fdf2ef] border border-[#f2cdc2]">
                     <span className="text-[#c0663f] font-bold">Not this time — it&rsquo;s <span className="font-mono text-slate-900">{problem?.answer}</span></span>
@@ -1872,7 +1874,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
             <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:items-start">
               {/* Learner switcher — a parent runs HOREB per child. Each learner
                   has their own diagnostic, level, and progress. */}
-              {learners.length > 0 && (
+              {learners.length > 0 && !lockedLearner && (
                 <div className="flex items-center gap-2 flex-wrap lg:col-span-3">
                   <span className="text-xs text-slate-400 mr-1">Practising as</span>
                   <button onClick={() => setActiveLearner(null)}
@@ -2051,7 +2053,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               {showJoin && (
                 <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
                   {joinStatus === 'ok' ? (
-                    <p className="text-sm text-[#5a7a3a] font-medium">✓ Joined! Your teacher can now see your progress.</p>
+                    <p className="text-sm text-[#5a7a3a] font-medium">Joined. Your teacher can now see your progress.</p>
                   ) : (
                     <>
                       <p className="text-sm font-semibold text-slate-800 mb-1">Join your class</p>
@@ -2128,7 +2130,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 {recentBadges.length > 0 ? (
                   <div className="flex gap-3">{recentBadges.map(a => (
                     <div key={a.id} className="flex-1 bg-amber-50 border border-amber-200 rounded-xl p-3 text-center">
-                      <div className="text-2xl mb-1">{a.icon}</div>
+                      <Icon name={a.icon} className="w-6 h-6 mx-auto mb-1 text-amber-600" />
                       <div className="text-[11px] font-medium text-amber-800 leading-tight">{a.name}</div>
                     </div>
                   ))}</div>
@@ -2400,7 +2402,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   const got = unlocked.has(a.id);
                   return (
                     <div key={a.id} className={`rounded-2xl p-4 text-center border shadow-sm transition-colors ${got ? 'bg-amber-50 border-amber-200' : 'bg-white border-slate-200'}`}>
-                      <div className={`text-3xl mb-1 ${got ? '' : 'grayscale opacity-40'}`}>{a.icon}</div>
+                      <Icon name={a.icon} className={`w-7 h-7 mx-auto mb-1 ${got ? 'text-amber-600' : 'text-slate-300'}`} />
                       <div className={`text-sm font-semibold ${got ? 'text-slate-900' : 'text-slate-400'}`}>{a.name}</div>
                       <div className="text-xs text-slate-400 mt-0.5">{a.desc}</div>
                       {got && <div className="text-[10px] uppercase tracking-wide text-amber-600 mt-1">Earned</div>}

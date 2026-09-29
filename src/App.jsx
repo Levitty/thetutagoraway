@@ -20,6 +20,8 @@ import { PRICE_KES, PASS_DAYS } from './subscription.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Writing } from './writing/Writing.jsx';
+import { HandOver, StudentHome, PinGate } from './family/StudentSpace.jsx';
+import { getStudentMode, endStudentMode } from './family/studentMode.js';
 
 // Running inside the iOS/Android shell (Capacitor injects window.Capacitor).
 // The app IS the product: no marketing landing, no cookie banner — it opens
@@ -1182,6 +1184,19 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
             </button>
           </div>
         )}
+
+        {/* Hand this device to a child */}
+        <button onClick={() => onNavigate('handover')}
+          className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-6 flex items-center gap-4 text-left hover:border-slate-300 transition-colors">
+          <span className="w-11 h-11 rounded-xl bg-[#ecedfa] text-[#6d6fcb] flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+          </span>
+          <span className="flex-1 min-w-0">
+            <span className="block font-bold text-slate-900">Hand over to your child</span>
+            <span className="block text-sm text-slate-500">Give them their own space on this device: practice, writing and their lessons. Your PIN to leave.</span>
+          </span>
+          <span className="shrink-0 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold rounded-xl text-sm">Hand over</span>
+        </button>
 
         {/* AI Tutor Card — momentum-aware, encouraging entry point */}
         {(() => {
@@ -4308,6 +4323,19 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
           </div>
         </button>
 
+        {/* Hand this device to a child: their own space, no payments or messages */}
+        <button onClick={() => onNavigate('handover')}
+          className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-3 flex items-center gap-3 text-left hover:border-slate-300 transition-colors">
+          <span className="w-10 h-10 rounded-xl bg-[#ecedfa] text-[#6d6fcb] flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+          </span>
+          <span className="flex-1 min-w-0">
+            <span className="block text-[15px] font-semibold text-slate-900">Hand over to your child</span>
+            <span className="block text-[13px] text-slate-500">Their own space on this device. Your PIN to leave.</span>
+          </span>
+          <svg viewBox="0 0 24 24" className="w-4 h-4 text-slate-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+
         {/* Learners on this account — tap for their progress */}
         <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-3">
           <div className="text-[15px] font-semibold mb-1">Progress</div>
@@ -7073,6 +7101,7 @@ function AppInner() {
     if (path === 'clubs') return 'clubs';
     if (path === 'spreadsheet') return 'spreadsheet';
     if (path === 'admin') return 'admin';
+    if (path === 'handover') return 'handover';
     return 'home';
   });
   const [showAuth, setShowAuth] = useState(null);
@@ -7083,6 +7112,10 @@ function AppInner() {
   const [showAccountSettings, setShowAccountSettings] = useState(false);
   const [showPaywall, setShowPaywall] = useState(false);
   const [progressLearner, setProgressLearner] = useState(undefined); // undefined = closed, null = self, obj = child
+  // Student mode: this device was handed to one child (see src/family/). It
+  // lives on the device, so it survives restarts until the parent PIN is entered.
+  const [studentMode, setStudentMode] = useState(() => getStudentMode());
+  const [showPinGate, setShowPinGate] = useState(false);
   const [showPrivacyBanner, setShowPrivacyBanner] = useState(() => !IS_NATIVE && !localStorage.getItem('tutagora_privacy_accepted'));
 
   // Admin emails — ONLY these accounts can access the admin dashboard
@@ -7100,6 +7133,13 @@ function AppInner() {
   // Register this device for push once we know who is using it. The moment
   // that matters — "your lesson is starting" — happens while the app is shut.
   useEffect(() => { if (auth.user?.id) initPush(auth.user.id); }, [auth.user?.id]);
+
+  // Student mode belongs to the account that set it up. If that account signs
+  // out (or someone else signs in), the device leaves student mode.
+  useEffect(() => {
+    if (auth.loading || !studentMode) return;
+    if (!auth.user || auth.user.id !== studentMode.parentId) { endStudentMode(); setStudentMode(null); }
+  }, [auth.loading, auth.user?.id]);
 
   // Keep the document's title / description / canonical in step with the route.
   useEffect(() => { applyRouteSEO(page); }, [page]);
@@ -7141,6 +7181,7 @@ function AppInner() {
       else if (path === 'clubs') setPage('clubs');
       else if (path === 'spreadsheet') setPage('spreadsheet');
       else if (path === 'admin') setPage('admin');
+      else if (path === 'handover') setPage('handover');
       else if (path === 'privacy') setPage('privacy');
       else setPage('home');
       setSelectedTutor(null);
@@ -7177,7 +7218,53 @@ function AppInner() {
 
   // Active video lesson
   if (activeLesson) {
-    return <VideoRoom booking={activeLesson} user={{ id: auth.user?.id, name: auth.profile?.full_name, role: auth.profile?.role }} onEnd={handleEndLesson} />;
+    return <VideoRoom booking={activeLesson} user={{ id: auth.user?.id, name: studentMode?.name || auth.profile?.full_name, role: auth.profile?.role }} onEnd={handleEndLesson} />;
+  }
+
+  // ---- Student mode: only the child's space is reachable ----
+  if (studentMode && auth.user) {
+    const learner = { id: studentMode.learnerId, name: studentMode.name, grade: studentMode.grade };
+    const backToSpace = () => handleNavigate('student');
+    const gate = showPinGate && (
+      <PinGate userId={auth.user.id} learnerName={studentMode.name}
+        onCancel={() => setShowPinGate(false)}
+        onUnlock={() => { endStudentMode(); setStudentMode(null); setShowPinGate(false); handleNavigate('dashboard'); }}
+        onSignOut={() => { setShowPinGate(false); endStudentMode(); setStudentMode(null); handleLogout(); }} />
+    );
+    if (page === 'ai') {
+      return (<>
+        <AIMastery onBack={backToSpace} userId={auth.user.id} studentName={studentMode.name} lockedLearner={learner}
+          subscription={auth.subscription} onPaywall={() => setShowPaywall(true)} />
+        {showPaywall && <PaywallModal user={auth.user} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
+      </>);
+    }
+    if (page === 'writing') {
+      return <Writing userId={auth.user.id} studentName={studentMode.name} isNative={IS_NATIVE} lockedLearner={learner} onBack={backToSpace} onSignIn={() => {}} />;
+    }
+    return (<>
+      <StudentHome mode={studentMode} bookings={bookings}
+        onPractice={() => handleNavigate('ai')} onWriting={() => handleNavigate('writing')}
+        onJoin={handleStartLesson} onLock={() => setShowPinGate(true)} />
+      {gate}
+    </>);
+  }
+
+  // Parent hands this device to a child.
+  if (page === 'handover') {
+    if (!auth.user) {
+      return (
+        <div className="min-h-screen bg-[#eef0f2] flex items-center justify-center p-6 text-slate-900">
+          <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 max-w-sm w-full text-center space-y-3">
+            <div className="text-[18px] font-extrabold tracking-tight">Sign in to hand over</div>
+            <p className="text-sm text-slate-500">Sign in with your parent account, then choose which child is using this device.</p>
+            <button onClick={() => setShowAuth('login')} className="w-full bg-amber-400 hover:bg-amber-300 rounded-xl py-3 font-bold">Sign in</button>
+          </div>
+          {showAuth && <AuthModal mode={typeof showAuth === 'object' ? showAuth.mode : showAuth} setMode={setShowAuth} onClose={() => setShowAuth(null)} onAuth={auth} initialRole="student" />}
+        </div>
+      );
+    }
+    return <HandOver user={auth.user} onCancel={() => handleNavigate('dashboard')}
+      onStart={(m) => { setStudentMode(m); handleNavigate('student'); }} />;
   }
 
   // Privacy Policy Page

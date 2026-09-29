@@ -35,16 +35,16 @@ export const dailyGoalMet = (progress, goal = DAILY_GOAL_XP) =>
 // Each test receives a snapshot:
 //   { progress, mastered, total, level, streak, strandsComplete }
 export const ACHIEVEMENTS = [
-  { id: 'first_lesson', icon: '🌱', name: 'First Steps', desc: 'Complete your very first lesson', test: s => s.mastered >= 1 || (s.progress.sessionsCompleted || 0) >= 1 },
-  { id: 'diagnosed', icon: '🧭', name: 'Know Your Start', desc: 'Finish your diagnostic check-in', test: s => !!s.progress.diagnosed },
-  { id: 'daily_goal', icon: '☀️', name: 'Daily Win', desc: 'Reach your daily goal for the first time', test: s => dailyGoalMet(s.progress) },
-  { id: 'streak_3', icon: '🔥', name: 'Building a Habit', desc: 'Practise 3 days in a row', test: s => (s.progress.longestStreak || 0) >= 3 },
-  { id: 'streak_7', icon: '🔥', name: 'One Week Strong', desc: 'Practise 7 days in a row', test: s => (s.progress.longestStreak || 0) >= 7 },
-  { id: 'master_5', icon: '⭐', name: 'Five Skills', desc: 'Master 5 skills', test: s => s.mastered >= 5 },
-  { id: 'master_25', icon: '🌟', name: 'Twenty-Five Strong', desc: 'Master 25 skills', test: s => s.mastered >= 25 },
-  { id: 'level_5', icon: '🚀', name: 'Level 5', desc: 'Reach Level 5', test: s => s.level >= 5 },
-  { id: 'level_10', icon: '🏆', name: 'Level 10', desc: 'Reach Level 10', test: s => s.level >= 10 },
-  { id: 'strand_complete', icon: '🎯', name: 'Strand Champion', desc: 'Fully master a whole strand', test: s => s.strandsComplete >= 1 },
+  { id: 'first_lesson', icon: 'play', name: 'First Steps', desc: 'Complete your very first lesson', test: s => s.mastered >= 1 || (s.progress.sessionsCompleted || 0) >= 1 },
+  { id: 'diagnosed', icon: 'map', name: 'Know Your Start', desc: 'Finish your diagnostic check-in', test: s => !!s.progress.diagnosed },
+  { id: 'daily_goal', icon: 'target', name: 'Daily Win', desc: 'Reach your daily goal for the first time', test: s => dailyGoalMet(s.progress) },
+  { id: 'streak_3', icon: 'flame', name: 'Building a Habit', desc: 'Practise 3 days in a row', test: s => (s.progress.longestStreak || 0) >= 3 },
+  { id: 'streak_7', icon: 'flame', name: 'One Week Strong', desc: 'Practise 7 days in a row', test: s => (s.progress.longestStreak || 0) >= 7 },
+  { id: 'master_5', icon: 'star', name: 'Five Skills', desc: 'Master 5 skills', test: s => s.mastered >= 5 },
+  { id: 'master_25', icon: 'star', name: 'Twenty-Five Strong', desc: 'Master 25 skills', test: s => s.mastered >= 25 },
+  { id: 'level_5', icon: 'trend', name: 'Level 5', desc: 'Reach Level 5', test: s => s.level >= 5 },
+  { id: 'level_10', icon: 'trophy', name: 'Level 10', desc: 'Reach Level 10', test: s => s.level >= 10 },
+  { id: 'strand_complete', icon: 'target', name: 'Strand Champion', desc: 'Fully master a whole strand', test: s => s.strandsComplete >= 1 },
 ];
 
 export const getAchievement = (id) => ACHIEVEMENTS.find(a => a.id === id);
