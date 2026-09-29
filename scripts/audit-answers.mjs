@@ -151,6 +151,35 @@ function nearMisses(p) {
   return out;
 }
 
+// ---- Independent answers: work the question out ourselves -------------------
+// Exact rational arithmetic with the right order of operations.
+const gcd = (a, b) => { a = Math.abs(a); b = Math.abs(b); while (b) [a, b] = [b, a % b]; return a || 1; };
+const R = (n, d = 1) => { if (d < 0) { n = -n; d = -d; } const g = gcd(n, d); return { n: n / g, d: d / g }; };
+const ops = { '+': (x, y) => R(x.n * y.d + y.n * x.d, x.d * y.d), '-': (x, y) => R(x.n * y.d - y.n * x.d, x.d * y.d),
+  '*': (x, y) => R(x.n * y.n, x.d * y.d), '/': (x, y) => (y.n === 0 ? null : R(x.n * y.d, x.d * y.n)) };
+function evalExpr(src) {
+  // A written fraction a/b binds tighter than ÷, as children read "1/4 ÷ 7/2".
+  const t = src.replace(/(\d+)\/(\d+)/g, '($1/$2)').replace(/[−–]/g, '-').replace(/[×x·]/g, '*').replace(/÷/g, '/').replace(/,(?=\d{3})/g, '').replace(/\s+/g, '');
+  if (!/^[\d+\-*/().]+$/.test(t) || !/[+\-*/]/.test(t.slice(1))) return null;
+  let i = 0;
+  const num = () => { const m = t.slice(i).match(/^\d+(\.\d+)?/); if (!m) return null; i += m[0].length; const [w, f = ''] = m[0].split('.'); return R(Number(w + f), 10 ** f.length); };
+  const atom = () => { if (t[i] === '(') { i++; const v = expr(); if (t[i] !== ')') throw 0; i++; return v; } if (t[i] === '-') { i++; const v = atom(); return v && R(-v.n, v.d); } return num(); };
+  const term = () => { let v = atom(); while (v && (t[i] === '*' || t[i] === '/')) { const o = t[i++]; const w = atom(); if (!w) return null; v = ops[o](v, w); } return v; };
+  const expr = () => { let v = term(); while (v && (t[i] === '+' || t[i] === '-')) { const o = t[i++]; const w = term(); if (!w) return null; v = ops[o](v, w); } return v; };
+  try { const v = expr(); return i === t.length ? v : null; } catch { return null; }
+}
+const fmt = (r) => (r.d === 1 ? String(r.n) : `${r.n}/${r.d}`);
+function independentAnswer(p) {
+  const q = str(p.question).trim();
+  let m = q.match(/^(?:work out:?\s*|calculate:?\s*|what is\s+)?([\d\s+\-−–×x÷*/().,·]+?)\s*(=\s*\?|\?)?$/i);
+  if (m && /\d\s*[+\-−–×x÷*/·]\s*[\d(]/.test(m[1])) { const v = evalExpr(m[1]); if (v) return fmt(v); }
+  m = q.match(/what is (\d+(?:\.\d+)?)% of (\d+(?:\.\d+)?)\??$/i);
+  if (m) { const v = ops['*'](evalExpr(`${m[1]}/100+0`) || R(0), evalExpr(`${m[2]}+0`) || R(0)); return fmt(v); }
+  m = q.match(/find the mean(?: of)?:?\s*([\d,\s.]+)$/i);
+  if (m) { const xs = m[1].split(/[,\s]+/).filter(Boolean).map(Number); if (xs.length > 1) { const s = xs.reduce((a, b) => a + b, 0); const r = R(Math.round(s * 1000), xs.length * 1000); return r.d === 1 ? fmt(r) : String(Number((r.n / r.d).toFixed(1))); } }
+  return null;
+}
+
 const CHECKED = [['MATH', SKILLS], ['CAMBRIDGE', CAMBRIDGE_SKILLS]];
 for (const [bank, S] of CHECKED) {
   for (const [id, skill] of Object.entries(S)) {
@@ -171,11 +200,18 @@ for (const [bank, S] of CHECKED) {
       if (/\bNaN\b|undefined|\[object|Infinity|\bnull\b/.test(all)) note('A. broken text (NaN/undefined/null)', key, `${q} => ${a}`);
       if (/\d\.\d{7,}/.test(a) || /\d\.\d{7,}/.test(q)) note('A. float noise', key, `${q} => ${a}`);
       if (!a.trim()) note('A. empty answer', key, q);
+      if (/(^|[^\d])(\d+)\/\2(?!\d)/.test(q)) note('A. n/n fraction in the question (just 1)', key, q);
       if (skill.grade <= 4 && /^-\d/.test(a)) note('A. negative answer in lower primary', key, `${q} => ${a}`);
       if (skill.grade <= 3 && /^\d+\.\d+$/.test(a) && !/\bm\b|kg|litre|money|sh/i.test(q)) note('A. decimal answer in Grade 1-3', key, `${q} => ${a}`);
       const choices = p.choices || p.options;
       if (Array.isArray(choices) && choices.length && !choices.map(c => str(c.value ?? c.label ?? c)).some(c => checkAnswerMatch(c, p))) note('A. key not among the choices', key, `${q} => ${a} | ${choices.map(c => str(c.label ?? c)).join(', ')}`);
       if (a && !checkAnswerMatch(a, p)) note('A. own key rejected', key, `${q} => ${a}`);
+      // E. Is the key actually right?
+      if (p.verify && p.verify.kind === 'fraction' && Number.isFinite(Number(p.verify.value)) && !checkAnswerMatch(String(p.verify.value), p))
+        note('E. key disagrees with its own verify value', key, `${q} => key "${a}", verify ${p.verify.value}`);
+      const mine = independentAnswer(p);
+      if (mine != null && !checkAnswerMatch(mine, p)) note('E. key disagrees with an independent calculation', key, `${q} => key "${a}", worked out ${mine}`);
+      if (mine != null) note('(info) questions double-checked by calculation', 'all', '');
       for (const [v, kind] of kidVariants(p)) {
         variantsTried++;
         if (!checkAnswerMatch(v, p)) note(`B. rejected correct: ${kind}`, key, `${q} => key "${a}", child typed "${v}"`);

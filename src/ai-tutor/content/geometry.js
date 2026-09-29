@@ -93,7 +93,8 @@ export function buildTrigRatio() {
   const angle = pick([30, 40, 50, 60]);
   const hyp = randInt(6, 20);
   const findOpp = coin();
-  const value = r1(findOpp ? hyp * Math.sin(angle * Math.PI / 180) : hyp * Math.cos(angle * Math.PI / 180));
+  // Shown to 1 d.p. even when it ends in .0, so 13.02 is marked right for 13.0.
+  const value = (findOpp ? hyp * Math.sin(angle * Math.PI / 180) : hyp * Math.cos(angle * Math.PI / 180)).toFixed(1);
   return {
     type: 'trig-ratio', instruction: 'Find the side (to 1 d.p.).',
     question: `In a right-angled triangle the hypotenuse is ${hyp} and one angle is ${angle}°. Find the ${findOpp ? 'opposite' : 'adjacent'} side. (1 d.p.)`,

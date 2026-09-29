@@ -94,7 +94,8 @@ export function buildAddSubLike({ sub = false } = {}) {
 // ---- add/subtract with UNLIKE denominators (G6) — the big one ----
 export function buildAddSubUnlike({ sub = false } = {}) {
   let b = randInt(2, 9), d; do { d = randInt(2, 9); } while (d === b);
-  let a = randInt(1, b), c = randInt(1, d);
+  let a = randInt(1, b - 1), c = randInt(1, d - 1);   // proper fractions: never "2/2"
+  while (sub && a * d === c * b) c = randInt(1, d - 1); // never "1/2 − 2/4" = 0
   if (sub && a * d < c * b) { [a, b, c, d] = [c, d, a, b]; }    // keep result ≥ 0
   const L = lcm(b, d), a2 = a * (L / b), c2 = c * (L / d);
   const num = sub ? a2 - c2 : a2 + c2, op = sub ? '−' : '+';
@@ -128,7 +129,10 @@ export function buildAddSubUnlike({ sub = false } = {}) {
 
 // ---- multiply fractions ----
 export function buildMulFractions() {
-  const a = randInt(1, 8), b = randInt(2, 9), c = randInt(1, 8), d = randInt(2, 9);
+  const b = randInt(2, 9), d = randInt(2, 9);
+  let a = randInt(1, 8), c = randInt(1, 8);
+  while (a === b) a = randInt(1, 8);            // never "4/4", which is just 1
+  while (c === d) c = randInt(1, 8);
   const num = a * c, den = b * d;
   return {
     type: 'multiply-fractions',
@@ -157,7 +161,10 @@ export function buildMulFractions() {
 
 // ---- divide fractions ----
 export function buildDivFractions() {
-  const a = randInt(1, 8), b = randInt(2, 9), c = randInt(1, 8), d = randInt(2, 9);
+  const b = randInt(2, 9), d = randInt(2, 9);
+  let a = randInt(1, 8), c = randInt(1, 8);
+  while (a === b) a = randInt(1, 8);            // never "5/5", which is just 1
+  while (c === d) c = randInt(1, 8);
   const num = a * d, den = b * c;
   return {
     type: 'divide-fractions',
@@ -218,7 +225,7 @@ export function buildMixedToImproper() {
 // ---- compare two fractions ----
 export function buildCompareFractions() {
   let b = randInt(2, 9), d; do { d = randInt(2, 9); } while (d === b);
-  const a = randInt(1, b), c = randInt(1, d);
+  const a = randInt(1, b - 1), c = randInt(1, d - 1);   // never "3/3"
   const diff = a / b - c / d;
   const sym = diff > 1e-9 ? '>' : diff < -1e-9 ? '<' : '=';
   return {
@@ -248,7 +255,9 @@ export function buildCompareFractions() {
 
 // ---- reciprocal of a fraction ----
 export function buildReciprocal() {
-  const a = randInt(2, 9), b = randInt(2, 9);
+  const a = randInt(2, 9);
+  let b = randInt(2, 9);
+  while (b === a) b = randInt(2, 9);            // the reciprocal of 6/6 is a trick question
   return {
     type: 'reciprocal',
     instruction: 'Write the reciprocal.',
@@ -413,7 +422,8 @@ export function buildPlaceOnNumberLine() {
 // different piece-sizes (the reason you need a common denominator) are visible.
 export function buildAddSubFractionsPictorial({ sub = false } = {}) {
   let b = randInt(2, 6), d; do { d = randInt(2, 6); } while (d === b);
-  let a = randInt(1, b), c = randInt(1, d);
+  let a = randInt(1, b - 1), c = randInt(1, d - 1);   // proper fractions: never "2/2"
+  while (sub && a * d === c * b) c = randInt(1, d - 1); // never "1/2 − 2/4" = 0
   if (sub && a * d < c * b) { [a, b, c, d] = [c, d, a, b]; }      // keep result ≥ 0
   const L = lcm(b, d), a2 = a * (L / b), c2 = c * (L / d);
   const num = sub ? a2 - c2 : a2 + c2, op = sub ? '−' : '+';

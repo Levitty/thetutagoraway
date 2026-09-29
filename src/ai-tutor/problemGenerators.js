@@ -1328,9 +1328,8 @@ const generators = {
 
   G10_SINE_COSINE_RULE: () => {
     const a = rand(5, 12), b = rand(5, 12), C = pick([30, 45, 60, 90, 120]);
-    const cosC = { 30: 0.866, 45: 0.707, 60: 0.5, 90: 0, 120: -0.5 }[C];
-    const cSquared = a * a + b * b - 2 * a * b * cosC;
-    return { question: `Cosine rule: a=${a}, b=${b}, C=${C}°. Find c² (to 1 d.p.)`, answer: roundTo(cSquared, 1).toString(),
+    const cSquared = a * a + b * b - 2 * a * b * Math.cos(C * Math.PI / 180); // exact cos, as a calculator gives
+    return { question: `Cosine rule: a=${a}, b=${b}, C=${C}°. Find c² (to 1 d.p.)`, answer: cSquared.toFixed(1),
       hint: 'c² = a² + b² - 2ab cos(C)' };
   },
 
