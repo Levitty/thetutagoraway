@@ -35,6 +35,8 @@ export const defaultProgress = () => ({
   // Gamification (gamification.js): daily goal tracking + unlocked badges.
   dailyXP: 0,
   dailyDate: null,
+  // 'YYYY-MM-DD' for each day with any practice (last 60). Weekly goals count these.
+  practiceDays: [],
   achievements: [],
   // Resume cursor for an unfinished diagnostic: the exact (shuffled) skill list,
   // the current question index, answers so far, and the current problem object —
@@ -160,6 +162,7 @@ export const saveProgress = async (key, progress, owner = key, learnerId = null)
             placementGrade: progress.placementGrade,
             dailyXP: progress.dailyXP,
             dailyDate: progress.dailyDate,
+            practiceDays: progress.practiceDays || [],
             achievements: progress.achievements,
           },
           diagnosed: progress.diagnosed,
@@ -202,6 +205,7 @@ export const forceSave = async (key, progress, owner = key, learnerId = null) =>
           placementGrade: progress.placementGrade,
           dailyXP: progress.dailyXP,
           dailyDate: progress.dailyDate,
+          practiceDays: progress.practiceDays || [],
           achievements: progress.achievements,
           diagInProgress: progress.diagInProgress ?? null,
           lessonInProgress: progress.lessonInProgress ?? null,

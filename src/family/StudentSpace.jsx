@@ -29,7 +29,7 @@ const GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6'
 
 // ---- Shared pieces ---------------------------------------------------------
 
-const Shell = ({ header, children, wide = false }) => (
+export const Shell = ({ header, children, wide = false }) => (
   <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
     {header}
     <div className="app-scroll">
@@ -37,24 +37,24 @@ const Shell = ({ header, children, wide = false }) => (
     </div>
   </div>
 );
-const Header = ({ children }) => (
+export const Header = ({ children }) => (
   <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
     <div className="max-w-3xl mx-auto px-4 min-h-14 py-2.5 flex items-center gap-3">{children}</div>
   </div>
 );
-const Card = ({ className = '', children }) => (
+export const Card = ({ className = '', children }) => (
   <div className={`bg-white border border-slate-200 shadow-sm rounded-2xl p-4 ${className}`}>{children}</div>
 );
-const Eyebrow = ({ tone = 'text-amber-700', children }) => (
+export const Eyebrow = ({ tone = 'text-amber-700', children }) => (
   <div className={`text-[11.5px] font-bold tracking-[.08em] uppercase ${tone}`}>{children}</div>
 );
-const PrimaryButton = ({ children, className = '', ...p }) => (
+export const PrimaryButton = ({ children, className = '', ...p }) => (
   <button {...p} className={`w-full bg-amber-400 hover:bg-amber-300 disabled:opacity-50 text-slate-900 rounded-xl py-3 font-bold text-[15px] transition-colors ${className}`}>{children}</button>
 );
 const IndigoButton = ({ children, className = '', ...p }) => (
   <button {...p} className={`w-full bg-[#6d6fcb] hover:bg-[#5658b8] disabled:opacity-50 text-white rounded-xl py-3 font-bold text-[15px] transition-colors ${className}`}>{children}</button>
 );
-const BackIcon = () => (
+export const BackIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
 );
 const LockIcon = ({ className = 'w-4 h-4' }) => (
@@ -302,7 +302,7 @@ const prettyDate = (d) => {
   return dt.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' });
 };
 
-export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onLock }) => {
+export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onLock, extra = null }) => {
   const [look, setLookState] = useState(() => getLook(mode.learnerId));
   if (!look) return <LookPicker mode={mode} onDone={setLookState} />;
 
@@ -328,6 +328,8 @@ export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onL
         <HorebBot size={44} className="shrink-0" />
         <div className="text-[19px] font-extrabold tracking-tight">{older ? `Hi ${n}.` : `Jambo ${n}! Ready for today?`}</div>
       </div>
+
+      {extra}
 
       <div className="grid gap-3 md:grid-cols-2 md:items-start">
         <Card className="space-y-3 md:row-span-2">

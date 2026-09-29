@@ -21,7 +21,8 @@ import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Writing } from './writing/Writing.jsx';
 import { HandOver, StudentHome, PinGate } from './family/StudentSpace.jsx';
-import { getStudentMode, endStudentMode } from './family/studentMode.js';
+import { getStudentMode, endStudentMode, isOlderLearner } from './family/studentMode.js';
+import { FamilyPage, FamilyCards } from './family/FamilyPage.jsx';
 
 // Running inside the iOS/Android shell (Capacitor injects window.Capacitor).
 // The app IS the product: no marketing landing, no cookie banner — it opens
@@ -1196,6 +1197,19 @@ const StudentDashboard = ({ profile, bookings, bookingsLoading, onNavigate, onLo
             <span className="block text-sm text-slate-500">Give them their own space on this device: practice, writing and their lessons. Your PIN to leave.</span>
           </span>
           <span className="shrink-0 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold rounded-xl text-sm">Hand over</span>
+        </button>
+
+        {/* Weekly goals and messages for each child */}
+        <button onClick={() => onNavigate('family')}
+          className="w-full -mt-3 bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-6 flex items-center gap-4 text-left hover:border-slate-300 transition-colors">
+          <span className="w-11 h-11 rounded-xl bg-[#eef5e6] text-[#5a7a3a] flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
+          </span>
+          <span className="flex-1 min-w-0">
+            <span className="block font-bold text-slate-900">Goals and messages</span>
+            <span className="block text-sm text-slate-500">Set a weekly practice goal with a reward, and send your child a quick word.</span>
+          </span>
+          <svg viewBox="0 0 24 24" className="w-4 h-4 text-slate-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </button>
 
         {/* AI Tutor Card — momentum-aware, encouraging entry point */}
@@ -4358,6 +4372,7 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
         </div>
 
         <div className="bg-white border border-slate-200 shadow-sm rounded-2xl divide-y divide-slate-100 overflow-hidden">
+          <Row label="Goals and messages for your children" sub="Weekly goals, rewards and a quick word" onTap={() => onNavigate('family')} />
           <Row label="Messages" sub="Talk to your tutors" onTap={onOpenMessages} />
           <Row label="My lessons" sub={`${upcoming.length} upcoming`} onTap={() => onNavigate('my-lessons')} />
           <Row label="Writing" sub="Composition & insha, marked" onTap={() => onNavigate('writing')} />
@@ -4577,9 +4592,14 @@ const LearnerProgress = ({ parentId, learner, onBack }) => {
       .sort((a, b) => new Date(b.lastPractice) - new Date(a.lastPractice))
       .slice(0, 6);
 
-    // Days practised in the last 7, from the per-skill timestamps.
+    // Days practised in the last 7. The practice log (progress.practiceDays)
+    // counts every day; older rows without it fall back to per-skill
+    // timestamps, which only keep each skill's latest day.
     const days = new Set();
     const weekAgo = Date.now() - 7 * 86400000;
+    (state.data?.progress?.practiceDays || []).forEach(d => {
+      if (new Date(d + 'T12:00:00Z').getTime() >= weekAgo) days.add(d);
+    });
     rows.forEach(r => {
       if (!r.lastPractice) return;
       const t = new Date(r.lastPractice).getTime();
@@ -7102,6 +7122,7 @@ function AppInner() {
     if (path === 'spreadsheet') return 'spreadsheet';
     if (path === 'admin') return 'admin';
     if (path === 'handover') return 'handover';
+    if (path === 'family') return 'family';
     return 'home';
   });
   const [showAuth, setShowAuth] = useState(null);
@@ -7182,6 +7203,7 @@ function AppInner() {
       else if (path === 'spreadsheet') setPage('spreadsheet');
       else if (path === 'admin') setPage('admin');
       else if (path === 'handover') setPage('handover');
+      else if (path === 'family') setPage('family');
       else if (path === 'privacy') setPage('privacy');
       else setPage('home');
       setSelectedTutor(null);
@@ -7244,9 +7266,15 @@ function AppInner() {
     return (<>
       <StudentHome mode={studentMode} bookings={bookings}
         onPractice={() => handleNavigate('ai')} onWriting={() => handleNavigate('writing')}
-        onJoin={handleStartLesson} onLock={() => setShowPinGate(true)} />
+        onJoin={handleStartLesson} onLock={() => setShowPinGate(true)}
+        extra={<FamilyCards parentId={auth.user.id} learnerId={studentMode.learnerId} name={studentMode.name} older={isOlderLearner(studentMode.grade)} />} />
       {gate}
     </>);
+  }
+
+  // Parent: weekly goals and messages for each child.
+  if (page === 'family' && auth.user) {
+    return <FamilyPage user={auth.user} onBack={() => handleNavigate('dashboard')} onHandOver={() => handleNavigate('handover')} />;
   }
 
   // Parent hands this device to a child.
