@@ -8,17 +8,34 @@ export const DAILY_GOAL_XP = 30;
 
 const todayStr = () => new Date().toISOString().split('T')[0];
 
-// Add XP to progress, also tracking a per-day total that drives the daily goal.
+// Days kept in the practice log: enough for weekly goals and a parent's view.
+const PRACTICE_DAYS_KEPT = 60;
+
+// Add XP to progress, also tracking a per-day total that drives the daily goal,
+// and a log of the days practised (what weekly goals count).
 export const gainXP = (progress, delta) => {
   if (!delta) return progress;
   const today = todayStr();
   const sameDay = progress.dailyDate === today;
+  const days = progress.practiceDays || [];
   return {
     ...progress,
     totalXP: (progress.totalXP || 0) + delta,
     dailyDate: today,
     dailyXP: (sameDay ? (progress.dailyXP || 0) : 0) + delta,
+    practiceDays: days.includes(today) ? days : [...days, today].slice(-PRACTICE_DAYS_KEPT),
   };
+};
+
+// Days practised in the current week (Monday to Sunday), as 'YYYY-MM-DD'.
+export const weekDates = (now = new Date()) => {
+  const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+  const monday = new Date(d.getTime() - ((d.getUTCDay() + 6) % 7) * 86400000);
+  return Array.from({ length: 7 }, (_, i) => new Date(monday.getTime() + i * 86400000).toISOString().slice(0, 10));
+};
+export const daysPractisedThisWeek = (progress, now = new Date()) => {
+  const logged = new Set(progress?.practiceDays || []);
+  return weekDates(now).filter(d => logged.has(d));
 };
 
 // XP earned today (0 if the stored day isn't today).
