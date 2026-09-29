@@ -207,7 +207,7 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
         throw new Error(msg);
       }
       setResult({ ...data, body: piece.body, title: piece.title, prompt: piece.prompt, type: piece.type, language: piece.lang, grade: piece.grade, revision_of: piece.revisionOf, baseScore: piece.baseScore });
-      setRemaining(data.remaining);
+      setRemaining(data.remaining != null ? { n: data.remaining, week: data.period === 'week' } : null);
       lsSet(draftKey(learnerKey), null); setDraft(null);
       loadHistory();
       setView('feedback');
@@ -500,7 +500,9 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
               <button onClick={revise} className="flex-1 bg-amber-400 hover:bg-amber-300 text-slate-900 rounded-xl py-3 font-bold text-[15px]">{pl ? 'Rekebisha rasimu hii' : 'Revise this draft'}</button>
               <button onClick={() => { setResult(null); setView('home'); }} className="px-4 text-[13.5px] font-semibold text-slate-500 hover:text-slate-700">{pl ? 'Mpya' : 'New piece'}</button>
             </div>
-            {remaining != null && <p className="text-[12px] text-slate-400 mt-2">{remaining} {pl ? 'usahihishaji umesalia leo' : `marking${remaining === 1 ? '' : 's'} left today`}</p>}
+            {remaining != null && <p className="text-[12px] text-slate-400 mt-2">{remaining.n} {pl
+              ? (remaining.week ? 'usahihishaji umesalia wiki hii' : 'usahihishaji umesalia leo')
+              : `marking${remaining.n === 1 ? '' : 's'} left ${remaining.week ? 'this week' : 'today'}`}</p>}
           </Card>
         )}
       </Shell>

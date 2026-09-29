@@ -18,9 +18,18 @@ const cors = {
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { ...cors, "Content-Type": "application/json" } });
 
-const MODEL = "claude-sonnet-5";
-const FREE_PER_DAY = 5;
-const PRO_PER_DAY = 20;
+// The marking model. Set the MARKING_MODEL secret to change it without a code
+// change. Tested shapes: "claude-sonnet-5" (default) and "claude-haiku-4-5"
+// (about half the cost). The request forces the "mark" tool, so the model must
+// accept a forced tool_choice with thinking off: Claude Sonnet 5.5, Opus 5.5
+// and Fable 5.1 reject forced tool_choice and would need a different request.
+const MODEL = Deno.env.get("MARKING_MODEL") || "claude-sonnet-5";
+
+// Allowances. Marking costs an AI call per essay, so free accounts get a
+// taste and the 30-day pass gets the full allowance. All learners on one
+// account share it.
+const FREE_PER_WEEK = 1;
+const PRO_PER_DAY = 5;
 const MIN_WORDS = 40;
 const MAX_WORDS = 1200;
 
@@ -91,7 +100,7 @@ How to mark:
 - Be honest. A 20 is rare. Most solid work at this level lands 11–15.
 - Feedback goes to the learner directly, in ${inSw ? "Kiswahili (sanifu, warm, simple)" : "plain English"}. Speak to them as "you". No jargon they wouldn't know.
 - Every band note must point at something in THIS piece — quote their words.
-- corrections: pick the errors that teach the most (a repeated tense slip beats a one-off typo). `original` must be copied EXACTLY from the text so it can be highlighted. Keep each to one sentence or phrase.
+- corrections: pick the errors that teach the most (a repeated tense slip beats a one-off typo). \`original\` must be copied EXACTLY from the text so it can be highlighted. Keep each to one sentence or phrase.
 - Do not rewrite the piece for them. Show the fix and the reason; the next draft is theirs.
 - If the text is not a genuine attempt at the task, set off_task = true, give the reason, and still fill the other fields briefly.`;
 };
@@ -126,15 +135,20 @@ Deno.serve(async (req) => {
 
     const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
 
-    // 2. Daily cap per account (all learners on it share the allowance).
-    const since = new Date(Date.now() - 86400000).toISOString();
-    const [{ count }, { data: sub }] = await Promise.all([
-      admin.from("compositions").select("id", { count: "exact", head: true }).eq("user_id", user.id).gte("created_at", since),
-      admin.from("subscriptions").select("pro_until").eq("user_id", user.id).maybeSingle(),
-    ]);
+    // 2. Allowance per account (all learners on it share it): the pass gets
+    // PRO_PER_DAY a day, a free account FREE_PER_WEEK a week.
+    const { data: sub } = await admin.from("subscriptions").select("pro_until").eq("user_id", user.id).maybeSingle();
     const pro = !!sub?.pro_until && Date.parse(sub.pro_until) > Date.now();
-    const cap = pro ? PRO_PER_DAY : FREE_PER_DAY;
-    if ((count ?? 0) >= cap) return json({ error: `you've used today's ${cap} markings — come back tomorrow`, capped: true }, 429);
+    const cap = pro ? PRO_PER_DAY : FREE_PER_WEEK;
+    const period = pro ? "day" : "week";
+    const since = new Date(Date.now() - (pro ? 1 : 7) * 86400000).toISOString();
+    const { count } = await admin.from("compositions").select("id", { count: "exact", head: true }).eq("user_id", user.id).gte("created_at", since);
+    if ((count ?? 0) >= cap) {
+      const error = pro
+        ? `you've used today's ${cap} markings — come back tomorrow`
+        : `you've used this week's free marking — get the 30-day pass for ${PRO_PER_DAY} a day`;
+      return json({ error, capped: true, pro, period }, 429);
+    }
 
     // 3. Mark it.
     const wordTarget: [number, number] = grade <= 6 ? [120, 220] : grade <= 9 ? [200, 350] : [350, 500];
@@ -144,6 +158,9 @@ Deno.serve(async (req) => {
       body: JSON.stringify({
         model: MODEL,
         max_tokens: 2500,
+        // Forcing the "mark" tool needs thinking off (Claude Sonnet 5 thinks by
+        // default when this is omitted, and forced tool use is refused then).
+        thinking: { type: "disabled" },
         system: systemPrompt(language, grade, type, wordTarget),
         tools: [MARK_TOOL],
         tool_choice: { type: "tool", name: "mark" },
@@ -178,7 +195,7 @@ Deno.serve(async (req) => {
     }).select("id, created_at").single();
     if (insErr) { console.error("insert", insErr); return json({ error: insErr.message }, 500); }
 
-    return json({ id: row.id, created_at: row.created_at, score, feedback: fb, remaining: cap - (count ?? 0) - 1 });
+    return json({ id: row.id, created_at: row.created_at, score, feedback: fb, remaining: cap - (count ?? 0) - 1, period });
   } catch (e) {
     console.error(e);
     return json({ error: String(e) }, 500);
