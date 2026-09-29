@@ -9,7 +9,7 @@ const AGORA_APP_ID = '35a8f51c866e44bfbb7bd5e3970e75e4';
 // the lesson and the faces sit beside it. Colours follow the public site.
 const C = {
   paper: '#f7f3ee', card: '#fffdf8', line: '#ece4d8', ink: '#121117', ink2: '#3f3f4a', mute: '#6c6c78',
-  brand: '#ff7aac', brandDeep: '#e0457b', brandSoft: '#ffe3ee', good: '#30a46c', goodSoft: '#e3f3e9', amber: '#b86e00', amberSoft: '#fff1d6',
+  brand: '#ffc53d', brandDeep: '#7a5200', brandSoft: '#fff3d1', good: '#30a46c', goodSoft: '#e3f3e9', amber: '#b86e00', amberSoft: '#fff1d6',
 };
 
 // ==================== ICONS (drawn, not emoji) ====================
@@ -52,7 +52,7 @@ const VideoPlayer = ({ track, fit = 'cover' }) => {
 // ==================== COLLABORATIVE WHITEBOARD ====================
 // Strokes are drawn on a transparent layer over paper (and over a homework
 // photo when one is shared), and synced to the other person live.
-const PENS = ['#121117', '#e0457b', '#3b5bdb', '#30a46c', '#f08c00'];
+const PENS = ['#121117', '#e5484d', '#3b5bdb', '#30a46c', '#f08c00'];
 const Whiteboard = ({ channelName, photo, onRemovePhoto }) => {
   const canvasRef = useRef(null);
   const isDrawing = useRef(false);
@@ -152,7 +152,7 @@ const Whiteboard = ({ channelName, photo, onRemovePhoto }) => {
           className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: tool === 'eraser' ? C.ink : 'transparent', color: tool === 'eraser' ? '#fff' : C.ink2 }}>
           <Icon name="eraser" className="w-[18px] h-[18px]" />
         </button>
-        <button type="button" aria-label="Clear the board" onClick={() => clearCanvas(true)} className="w-8 h-8 rounded-full flex items-center justify-center" style={{ color: C.brandDeep }}>
+        <button type="button" aria-label="Clear the board" onClick={() => clearCanvas(true)} className="w-8 h-8 rounded-full flex items-center justify-center" style={{ color: '#c4302b' }}>
           <Icon name="trash" className="w-[18px] h-[18px]" />
         </button>
       </div>
@@ -231,7 +231,7 @@ const DockButton = ({ name, label, onClick, state = 'normal', slash, badge, clas
       : state === 'off' ? { background: '#fde7e3', color: '#c4302b', border: '1.5px solid #f5c6bf' }
       : { background: '#fff', color: C.ink, border: `1.5px solid ${C.line}` }}>
       <Icon name={name} slash={slash} className="w-[22px] h-[22px]" />
-      {badge ? <span className="absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1.5 rounded-full text-white text-[11px] font-bold flex items-center justify-center" style={{ background: '#ff4f91' }}>{badge}</span> : null}
+      {badge ? <span className="absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1.5 rounded-full text-white text-[11px] font-bold flex items-center justify-center" style={{ background: '#e5484d' }}>{badge}</span> : null}
     </span>
     <span className="text-[12px] font-bold leading-none" style={{ color: C.ink2 }}>{label}</span>
   </button>
@@ -531,7 +531,7 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
         <div className="mx-4 lg:ml-6 lg:mr-[380px] mb-3 rounded-[20px] px-4 py-3 flex items-center gap-3 shrink-0" style={{ background: C.brandSoft }}>
           <span className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: C.brand, color: C.ink }}><Icon name="target" className="w-5 h-5" sw={2} /></span>
           <div className="min-w-0">
-            <div className="text-[11.5px] font-extrabold uppercase tracking-[.08em]" style={{ color: '#b0306a' }}>{fromCheck ? `Today's step · from ${firstName(learnerName)}'s check` : 'What to work on'}</div>
+            <div className="text-[11.5px] font-extrabold uppercase tracking-[.08em]" style={{ color: C.brandDeep }}>{fromCheck ? `Today's step · from ${firstName(learnerName)}'s check` : 'What to work on'}</div>
             <div className="text-[15px] font-bold leading-snug line-clamp-2">{focus}</div>
           </div>
         </div>
