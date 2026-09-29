@@ -99,7 +99,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
         </div>
         <div className="tiles">
           {BANDS.map((b, i) => (
-            <button key={b.label} type="button" className="tile" onClick={() => onStartCheck(b.hi)}>
+            <button key={b.label} type="button" className="tile" onClick={() => onStartCheck(null)}>
               <span className="g">{b.label}</span><span className="d">{b.d}</span>
               <span className="row">{bandCounts[i]} skills<SiteIcon name="arrow" /></span>
             </button>
