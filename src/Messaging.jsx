@@ -18,7 +18,7 @@ const formatTime = (timestamp) => {
 const Avatar = ({ src, name, size = 40, online = false }) => (
   <div className="relative">
     <img 
-      src={src || `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'U')}&background=10b981&color=fff`} 
+      src={src || `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'U')}&background=6d6fcb&color=fff`} 
       alt={name} 
       className="rounded-full object-cover bg-slate-200" 
       style={{ width: size, height: size }} 
