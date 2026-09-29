@@ -23,6 +23,7 @@ import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Icon } from './ai-tutor/components/Icons.jsx';
 import { Writing } from './writing/Writing.jsx';
 import { HandOver, StudentHome, PinGate } from './family/StudentSpace.jsx';
+import { TabletLinkSheet, TabletLinkPage } from './family/ChildTablet.jsx';
 import { getStudentMode, startStudentMode, endStudentMode, isOlderLearner, gradeNumber, hasPin } from './family/studentMode.js';
 import { FamilyPage, FamilyCards } from './family/FamilyPage.jsx';
 import './site/site.css';
@@ -652,6 +653,12 @@ const useAuth = () => {
 
   const fetchSubscription = async (userId, role) => {
     try {
+      // A child's linked tablet uses the family's pass (read-only).
+      if (user?.is_anonymous || role === 'tablet') {
+        const parentId = getStudentMode()?.parentId;
+        const { data } = parentId ? await supabase.from('subscriptions').select('*').eq('user_id', parentId).maybeSingle() : { data: null };
+        setSubscription(data || null); return;
+      }
       const { data } = await supabase.from('subscriptions').select('*').eq('user_id', userId).maybeSingle();
       if (data || !paywallActive() || role === 'tutor') { setSubscription(data || null); return; }
       // Paid practice is on and this family has never had a pass: their
@@ -713,7 +720,9 @@ const useAuth = () => {
       .single();
     
     if (profileError) {
-      console.error('Error fetching profile:', profileError);
+      // A child's linked tablet has no profile of its own; it still needs the family's pass.
+      if (getStudentMode()?.deviceUid === userId) fetchSubscription(userId, 'tablet');
+      else console.error('Error fetching profile:', profileError);
       setLoading(false);
       return;
     }
@@ -729,7 +738,7 @@ const useAuth = () => {
     }
     
     setProfile(profileData);
-    fetchSubscription(userId, profileData?.role);
+    fetchSubscription(userId, getStudentMode()?.deviceUid === userId ? 'tablet' : profileData?.role);
     setLoading(false);
   };
 
@@ -1135,6 +1144,7 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
   const [payments, setPayments] = useState([]);
   const [aiProgress, setAiProgress] = useState(null);
   const [kidProgress, setKidProgress] = useState({}); // child id -> { diagnosed, totalXP, streak }
+  const [tabletFor, setTabletFor] = useState(null); // child whose "Open on the tablet" sheet is open
   const [children, setChildren] = useState([]);
   const [newChildName, setNewChildName] = useState('');
   const [newChildGrade, setNewChildGrade] = useState('');
@@ -1338,7 +1348,7 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
                         </div>
                         <div className="kbtns">
                           <button type="button" className="btn sm" onClick={() => onStartPractice(c)}>Start {c.name.trim().split(/\s+/)[0]}'s practice<SiteIcon name="arrow" style={{ width: 16, height: 16 }} /></button>
-                          <button type="button" className="btn line sm" onClick={() => onNavigate('family')}>Goals and messages</button>
+                          <button type="button" className="btn line sm" onClick={() => setTabletFor(c)}>Open on {c.name.trim().split(/\s+/)[0]}'s tablet</button>
                         </div>
                       </div>
                     );
@@ -1419,6 +1429,7 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
         <StudentProfileEditor profile={profile} onClose={() => setShowEditProfile(false)}
           onSave={() => { setShowEditProfile(false); onRefreshProfile && onRefreshProfile(); }} />
       )}
+      {tabletFor && <TabletLinkSheet child={tabletFor} onClose={() => setTabletFor(null)} />}
       {notesFor && notes[notesFor.id] && (
         <LessonNotesModal booking={notesFor} files={notes[notesFor.id]} onClose={() => setNotesFor(null)}
           onDeleted={() => setNotes(n => { const { [notesFor.id]: _gone, ...rest } = n; return rest; })} />
@@ -7108,6 +7119,7 @@ function AppInner() {
     if (path === 'family') return 'family';
     if (path === 'check' || path === 'check-result') return path;
     if (path === 'privacy') return 'privacy';
+    if (path.startsWith('t/')) return 'tablet-link';
     return 'home';
   });
   // The free check: which grade to start at (set by the homepage finder).
@@ -7152,7 +7164,8 @@ function AppInner() {
   // out (or someone else signs in), the device leaves student mode.
   useEffect(() => {
     if (auth.loading || !studentMode) return;
-    if (!auth.user || auth.user.id !== studentMode.parentId) { endStudentMode(); setStudentMode(null); }
+    const owner = studentMode.tablet ? studentMode.deviceUid : studentMode.parentId;
+    if (!auth.user || auth.user.id !== owner) { endStudentMode(); setStudentMode(null); }
   }, [auth.loading, auth.user?.id]);
 
   // Keep the document's title / description / canonical in step with the route.
@@ -7278,8 +7291,16 @@ function AppInner() {
     return <VideoRoom booking={activeLesson} user={{ id: auth.user?.id, name: studentMode?.name || auth.profile?.full_name, role: auth.profile?.role }} onEnd={handleEndLesson} />;
   }
 
+  // A child's tablet opening the link from the parent.
+  if (page === 'tablet-link') {
+    const token = window.location.pathname.replace(/^\/t\//, '').replace(/\/.*$/, '');
+    return <TabletLinkPage token={token} onLeave={() => handleNavigate('home')}
+      onReady={(m) => { setStudentMode(m); handleNavigate('ai'); }} />;
+  }
+
   // ---- Student mode: only the child's space is reachable ----
   if (studentMode && auth.user) {
+    const onTablet = !!studentMode.tablet;
     const learner = { id: studentMode.learnerId, name: studentMode.name, grade: studentMode.grade };
     const backToSpace = () => handleNavigate('student');
     // Back to the parent: straight away, unless the parent has set a PIN.
@@ -7294,19 +7315,19 @@ function AppInner() {
     );
     if (page === 'ai') {
       return (<>
-        <AIMastery onBack={backToSpace} userId={auth.user.id} studentName={studentMode.name} lockedLearner={learner} autoStartGrade={gradeNumber(studentMode.grade)}
-          subscription={auth.subscription} onPaywall={() => setShowPaywall(true)} />
+        <AIMastery onBack={backToSpace} userId={studentMode.parentId} studentName={studentMode.name} lockedLearner={learner} autoStartGrade={gradeNumber(studentMode.grade)}
+          subscription={auth.subscription} onPaywall={() => { if (onTablet) window.alert('Practice is paused. Ask your parent to renew the practice pass on their phone.'); else setShowPaywall(true); }} />
         {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
       </>);
     }
-    if (page === 'writing') {
+    if (page === 'writing' && !onTablet) {
       return <Writing userId={auth.user.id} studentName={studentMode.name} isNative={IS_NATIVE} lockedLearner={learner} onBack={backToSpace} onSignIn={() => {}} />;
     }
     return (<>
       <StudentHome mode={studentMode} bookings={bookings}
-        onPractice={() => handleNavigate('ai')} onWriting={() => handleNavigate('writing')}
-        onJoin={handleStartLesson} onLock={leaveStudentMode}
-        extra={<FamilyCards parentId={auth.user.id} learnerId={studentMode.learnerId} name={studentMode.name} older={isOlderLearner(studentMode.grade)} />} />
+        onPractice={() => handleNavigate('ai')} onWriting={onTablet ? null : () => handleNavigate('writing')}
+        onJoin={handleStartLesson} onLock={onTablet ? null : leaveStudentMode}
+        extra={onTablet ? null : <FamilyCards parentId={auth.user.id} learnerId={studentMode.learnerId} name={studentMode.name} older={isOlderLearner(studentMode.grade)} />} />
       {gate}
     </>);
   }

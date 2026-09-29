@@ -104,3 +104,49 @@ export const checkPin = async (userId, pin) => {
   lsSet(TRIES_KEY, JSON.stringify(n >= MAX_TRIES ? { n: 0, until: Date.now() + LOCKOUT_MS } : { n }));
   return false;
 };
+
+// ---- A child's own tablet ----------------------------------------------------
+// The parent makes a one-time link; opening it on the tablet signs the tablet
+// in anonymously and links it to that one child (see
+// supabase/migrations/20261007_child_tablets.sql). The tablet stays in that
+// child's space for good; it has no way into the parent's account.
+
+export const createChildLink = async (childId) => {
+  const { data, error } = await supabase.rpc('create_child_link', { p_child: childId });
+  if (error) throw error;
+  return `${window.location.origin}/t/${data}`;
+};
+
+export const listChildTablets = async (childId) => {
+  const { data, error } = await supabase.from('child_devices').select('device_uid, created_at').eq('child_id', childId).order('created_at');
+  if (error) throw error;
+  return data || [];
+};
+
+export const switchOffTablet = async (deviceUid) => {
+  const { error } = await supabase.from('child_devices').delete().eq('device_uid', deviceUid);
+  if (error) throw error;
+};
+
+// On the tablet. Returns the student mode to start, or throws with .code set
+// to link_used / link_expired / link_not_found / not_enabled.
+export const openChildLink = async (token) => {
+  const { data: { session } } = await supabase.auth.getSession();
+  if (session && !session.user.is_anonymous) await supabase.auth.signOut();
+  let uid = session?.user?.is_anonymous ? session.user.id : null;
+  if (!uid) {
+    const { data, error } = await supabase.auth.signInAnonymously();
+    if (error) throw Object.assign(new Error(error.message), { code: /disabled|not enabled/i.test(error.message || '') ? 'not_enabled' : 'failed' });
+    uid = data.user.id;
+  }
+  const { data, error } = await supabase.rpc('open_child_link', { p_token: token });
+  if (error) {
+    const code = ['link_used', 'link_expired', 'link_not_found'].find(c => (error.message || '').includes(c)) || 'failed';
+    throw Object.assign(new Error(error.message), { code });
+  }
+  const row = Array.isArray(data) ? data[0] : data;
+  if (!row) throw Object.assign(new Error('No child on this link'), { code: 'link_not_found' });
+  const m = { parentId: row.parent_id, learnerId: row.child_id, name: row.name, grade: row.grade || null, deviceUid: uid, tablet: true, since: Date.now() };
+  lsSet(MODE_KEY, JSON.stringify(m));
+  return m;
+};

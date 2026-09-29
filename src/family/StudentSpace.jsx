@@ -321,8 +321,8 @@ export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onL
       <Header>
         <LearnerAvatar name={mode.name} look={look} size={34} />
         <h1 className="flex-1 min-w-0 text-[17px] font-extrabold tracking-tight truncate">{older ? n : `${n}'s space`}</h1>
-        <button onClick={onLock}
-          className="h-9 px-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-[13px] font-bold">Back to parent</button>
+        {onLock && <button onClick={onLock}
+          className="h-9 px-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-[13px] font-bold">Back to parent</button>}
       </Header>
     }>
       <div className="flex items-center gap-3 pt-1">
@@ -342,12 +342,12 @@ export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onL
           <PrimaryButton onClick={onPractice}>Start</PrimaryButton>
         </Card>
 
-        <Card className="space-y-2">
+        {onWriting && <Card className="space-y-2">
           <Eyebrow tone="text-[#6d6fcb]">Writing</Eyebrow>
           <div className="text-[16px] font-bold">Composition and insha</div>
           <p className="text-sm text-slate-500">Write, get a mark out of 20 and the exact lines to fix.</p>
           <button onClick={onWriting} className="w-full bg-white border border-slate-200 hover:bg-slate-50 rounded-xl py-2.5 font-bold text-[14px] text-slate-800 transition-colors">Open writing</button>
-        </Card>
+        </Card>}
 
         <Card className="space-y-2">
           <Eyebrow tone="text-[#5a7a3a]">Your lessons</Eyebrow>
