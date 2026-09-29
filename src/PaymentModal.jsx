@@ -165,7 +165,8 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
               subject: tutorSubject,
               date: lessonDateFormatted,
               time: booking.lesson_time || booking.start_time || '',
-              price: `KSh ${amount?.toLocaleString() || tutor.hourly_rate?.toLocaleString() || '1,000'}`
+              price: `KSh ${amount?.toLocaleString() || tutor.hourly_rate?.toLocaleString() || '1,000'}`,
+              length: lengthLabel,
             });
           }
           // Email to tutor
@@ -176,7 +177,8 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
               subject: tutorSubject,
               date: lessonDateFormatted,
               time: booking.lesson_time || booking.start_time || '',
-              price: `KSh ${amount?.toLocaleString() || tutor.hourly_rate?.toLocaleString() || '1,000'}`
+              price: `KSh ${amount?.toLocaleString() || tutor.hourly_rate?.toLocaleString() || '1,000'}`,
+              length: lengthLabel,
             });
           }
         } catch (emailErr) {

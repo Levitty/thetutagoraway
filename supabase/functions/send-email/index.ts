@@ -14,447 +14,226 @@ interface ResendResponse {
   error?: string;
 }
 
-// Email template generator
+// Email templates, on the site's design: a coral band with the tutagora
+// wordmark, near-black type, one black button, flat panels. Table layout and
+// inline styles so Gmail, Outlook and phone mail apps all render it.
+const esc = (v: unknown) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c] as string));
+const first = (name: unknown) => esc(String(name ?? "").trim().split(/\s+/)[0] || "there");
+
+const INK = "#121117";
+const CORAL = "#ff7aac";
+const MUTE = "#6c6c78";
+const FONT = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+
+const p = (html: string) => `<p style="margin:0 0 16px 0;font-size:16px;line-height:1.55;color:${INK};">${html}</p>`;
+const button = (label: string, href: string) =>
+  `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 8px 0;"><tr><td style="background:${INK};border-radius:8px;">
+    <a href="${href}" style="display:inline-block;padding:14px 26px;font-family:${FONT};font-size:16px;font-weight:700;color:#ffffff;text-decoration:none;">${label}</a>
+  </td></tr></table>`;
+const details = (rows: [string, string][]) =>
+  `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:8px 0 22px 0;border-top:2px solid ${INK};">
+    ${rows.map(([k, v]) => `<tr><td style="padding:11px 0;border-bottom:1px solid #dcdce2;font-size:14px;color:${MUTE};font-weight:600;width:38%;">${k}</td><td style="padding:11px 0;border-bottom:1px solid #dcdce2;font-size:15px;color:${INK};font-weight:700;">${v}</td></tr>`).join("")}
+  </table>`;
+const panel = (title: string, items: string[], tone: "soft" | "dark" = "soft") => {
+  const bg = tone === "dark" ? INK : "#f4f4f6";
+  const fg = tone === "dark" ? "#ffffff" : INK;
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 22px 0;"><tr><td style="background:${bg};border-radius:8px;padding:18px 20px;color:${fg};">
+    <div style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.75;margin-bottom:8px;">${title}</div>
+    ${items.map((i) => `<div style="font-size:15px;line-height:1.5;margin:6px 0;">${i}</div>`).join("")}
+  </td></tr></table>`;
+};
+
+function layout(opts: { kicker: string; title: string; body: string; foot?: string }) {
+  const { kicker, title, body, foot = "Questions? Just reply to this email." } = opts;
+  return `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${esc(title)}</title></head>
+<body style="margin:0;padding:0;background:#f4f4f6;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f6;"><tr><td align="center" style="padding:28px 12px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:8px;overflow:hidden;font-family:${FONT};">
+      <tr><td style="background:${CORAL};padding:26px 28px 28px 28px;">
+        <div style="font-size:24px;font-weight:900;letter-spacing:-.04em;color:${INK};">tutagora<span style="display:inline-block;width:8px;height:8px;background:${INK};border-radius:2px;margin-left:3px;vertical-align:top;margin-top:4px;"></span></div>
+        <div style="margin-top:22px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:${INK};">${kicker}</div>
+        <div style="margin-top:6px;font-size:30px;line-height:1.08;font-weight:800;letter-spacing:-.03em;color:${INK};">${title}</div>
+      </td></tr>
+      <tr><td style="padding:28px;">${body}</td></tr>
+      <tr><td style="padding:0 28px 28px 28px;">
+        <div style="border-top:1px solid #dcdce2;padding-top:18px;font-size:13.5px;line-height:1.55;color:${MUTE};">
+          ${foot}<br>Tutagora · Nairobi, Kenya · WhatsApp 0759 240 692
+        </div>
+      </td></tr>
+    </table>
+  </td></tr></table>
+</body></html>`;
+}
+
 function generateEmailTemplate(
   type: string,
   data: Record<string, any>
 ): { subject: string; html: string } {
-  const baseStyles = `
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color: #1f2937;
-    line-height: 1.6;
-  `;
-
-  const logoBox = `
-    <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 12px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
-      <span style="color: white; font-size: 24px; font-weight: bold;">T</span>
-    </div>
-  `;
-
-  const footerStyles = `
-    border-top: 1px solid #e5e7eb;
-    margin-top: 32px;
-    padding-top: 24px;
-    color: #6b7280;
-    font-size: 14px;
-  `;
-
   switch (type) {
     case "welcome": {
-      const { name } = data;
+      const name = first(data.name);
+      if (data.role === "tutor") {
+        return {
+          subject: "Welcome to Tutagora",
+          html: layout({
+            kicker: "Welcome",
+            title: `Karibu, ${name}.`,
+            body:
+              p("Thanks for signing up to teach on Tutagora.") +
+              panel("To go live", [
+                "<b>Finish your profile.</b> Subjects, grades, your rate and a short bio.",
+                "<b>Upload your documents.</b> Your ID and a teaching certificate or qualification.",
+                "<b>We check it.</b> Usually within 24 hours, then families can book you.",
+              ]) +
+              button("Finish my profile", "https://tutagora.com/dashboard"),
+          }),
+        };
+      }
       return {
-        subject: "Welcome to Tutagora!",
-        html: `
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            </head>
-            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
-              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
-                  ${logoBox}
-
-                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">Welcome to Tutagora!</h1>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Hi ${name},
-                  </p>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    We're excited to have you join Tutagora, your gateway to personalized learning and expert tutoring. Whether you're here to master new skills or share your expertise, you're in the right place.
-                  </p>
-
-                  <p style="margin: 0 0 32px 0; font-size: 16px;">
-                    Start exploring lessons, connect with tutors, and begin your learning journey today.
-                  </p>
-
-                  <a href="https://tutagora.com" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">Explore Tutagora</a>
-
-                  <div style="${footerStyles}">
-                    <p style="margin: 0 0 8px 0;">Questions? We're here to help!</p>
-                    <p style="margin: 0;">Tutagora Support Team</p>
-                  </div>
-                </div>
-              </div>
-            </body>
-          </html>
-        `,
+        subject: "Welcome to Tutagora",
+        html: layout({
+          kicker: "Welcome",
+          title: `Karibu, ${name}.`,
+          body:
+            p("Your Tutagora account is ready.") +
+            panel("Where to start", [
+              "<b>The free maths check.</b> About ten minutes. It finds the exact step your child is missing.",
+              "<b>15 minutes a day.</b> Hand over the phone and they practise in their own space. Your PIN to leave.",
+              "<b>A tutor for the stuck part.</b> Book a live lesson and pay with M-Pesa.",
+            ]) +
+            button("Go to my account", "https://tutagora.com/dashboard"),
+        }),
       };
     }
 
     case "booking-confirmation": {
-      const { studentName, tutorName, subject, date, time, price } = data;
+      const { studentName, tutorName, subject, date, time, price, length } = data;
+      const rows: [string, string][] = [
+        ["Tutor", esc(tutorName)],
+        ["Subject", esc(subject)],
+        ["When", `${esc(date)}${time ? ` at ${esc(time)}` : ""}`],
+      ];
+      if (length) rows.push(["Length", esc(length)]);
+      rows.push(["Paid", esc(price)]);
       return {
-        subject: "Your Booking is Confirmed!",
-        html: `
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            </head>
-            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
-              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
-                  ${logoBox}
-
-                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">Booking Confirmed!</h1>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Hi ${studentName},
-                  </p>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Your lesson has been confirmed. Here are your booking details:
-                  </p>
-
-                  <div style="background: #f3f4f6; border-left: 4px solid #10b981; padding: 20px; margin: 24px 0; border-radius: 4px;">
-                    <div style="margin-bottom: 16px;">
-                      <span style="color: #6b7280; font-weight: 600;">Tutor:</span>
-                      <span style="color: #1f2937;">${tutorName}</span>
-                    </div>
-                    <div style="margin-bottom: 16px;">
-                      <span style="color: #6b7280; font-weight: 600;">Subject:</span>
-                      <span style="color: #1f2937;">${subject}</span>
-                    </div>
-                    <div style="margin-bottom: 16px;">
-                      <span style="color: #6b7280; font-weight: 600;">Date & Time:</span>
-                      <span style="color: #1f2937;">${date} at ${time}</span>
-                    </div>
-                    <div>
-                      <span style="color: #6b7280; font-weight: 600;">Price:</span>
-                      <span style="color: #1f2937; font-weight: 600;">${price}</span>
-                    </div>
-                  </div>
-
-                  <a href="https://tutagora.com/bookings" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; margin: 24px 0;">View Your Booking</a>
-
-                  <div style="${footerStyles}">
-                    <p style="margin: 0 0 8px 0;">Need to reschedule? Visit your bookings page anytime.</p>
-                    <p style="margin: 0;">Tutagora Support Team</p>
-                  </div>
-                </div>
-              </div>
-            </body>
-          </html>
-        `,
+        subject: `Booked: ${subject} with ${tutorName}`,
+        html: layout({
+          kicker: "Lesson booked",
+          title: "You're all set.",
+          body:
+            p(`Hi ${first(studentName)}, your lesson is confirmed.`) +
+            details(rows) +
+            p("The lesson happens live inside Tutagora. When it's time, open your account and tap <b>Join</b>.") +
+            button("See my lessons", "https://tutagora.com/dashboard"),
+          foot: "Need to change the time? Reply to this email or message your tutor in the app.",
+        }),
       };
     }
 
     case "lesson-reminder": {
       const { participantName, otherName, subject, time } = data;
-      const participantType = data.participantType || "student"; // 'student' or 'tutor'
-      const lessonType = participantType === "student" ? "your lesson with" : "your lesson with";
-
+      const now = !time || String(time).toLowerCase() === "now";
       return {
-        subject: `Reminder: Your ${subject} lesson is coming up!`,
-        html: `
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            </head>
-            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
-              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
-                  ${logoBox}
-
-                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">Lesson Reminder!</h1>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Hi ${participantName},
-                  </p>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Your ${subject} lesson ${lessonType} ${otherName} is starting soon!
-                  </p>
-
-                  <div style="background: linear-gradient(135deg, #10b98120 0%, #05966920 100%); border-left: 4px solid #10b981; padding: 20px; margin: 24px 0; border-radius: 4px;">
-                    <div style="margin-bottom: 12px;">
-                      <span style="color: #6b7280; font-weight: 600;">Subject:</span>
-                      <span style="color: #1f2937;">${subject}</span>
-                    </div>
-                    <div>
-                      <span style="color: #6b7280; font-weight: 600;">Starting at:</span>
-                      <span style="color: #1f2937; font-weight: 600;">${time}</span>
-                    </div>
-                  </div>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Make sure you're ready and join on time!
-                  </p>
-
-                  <a href="https://tutagora.com/lessons" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">Join Lesson</a>
-
-                  <div style="${footerStyles}">
-                    <p style="margin: 0;">See you soon!</p>
-                    <p style="margin: 8px 0 0 0;">Tutagora Team</p>
-                  </div>
-                </div>
-              </div>
-            </body>
-          </html>
-        `,
+        subject: now ? `Your ${subject} lesson is starting now` : `Reminder: ${subject} lesson at ${time}`,
+        html: layout({
+          kicker: now ? "Starting now" : "Coming up",
+          title: now ? "Your lesson is starting." : `Your lesson is at ${esc(time)}.`,
+          body:
+            p(`Hi ${first(participantName)}, your ${esc(subject)} lesson with ${esc(otherName)} is ${now ? "starting now" : `at ${esc(time)}`}.`) +
+            button("Join the lesson", "https://tutagora.com/dashboard") +
+            p(`<span style="color:${MUTE};font-size:14px;">Open Tutagora on a phone or laptop with a good connection, and allow the camera and microphone.</span>`),
+        }),
       };
     }
 
     case "booking-cancelled": {
       const { participantName, otherName, subject, reason } = data;
       return {
-        subject: "Your Booking Has Been Cancelled",
-        html: `
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            </head>
-            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
-              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
-                  ${logoBox}
-
-                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">Booking Cancelled</h1>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Hi ${participantName},
-                  </p>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    We wanted to let you know that your ${subject} lesson with ${otherName} has been cancelled.
-                  </p>
-
-                  ${reason ? `<div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 20px; margin: 24px 0; border-radius: 4px;">
-                    <p style="margin: 0; color: #991b1b; font-weight: 600;">Reason:</p>
-                    <p style="margin: 8px 0 0 0; color: #7f1d1d;">${reason}</p>
-                  </div>` : ""}
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    We hope to see you in another lesson soon. Feel free to browse available tutors and reschedule at your convenience.
-                  </p>
-
-                  <a href="https://tutagora.com/tutors" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">Find a New Lesson</a>
-
-                  <div style="${footerStyles}">
-                    <p style="margin: 0 0 8px 0;">Questions about this cancellation?</p>
-                    <p style="margin: 0;">Tutagora Support Team</p>
-                  </div>
-                </div>
-              </div>
-            </body>
-          </html>
-        `,
+        subject: `Cancelled: ${subject} with ${otherName}`,
+        html: layout({
+          kicker: "Lesson cancelled",
+          title: "This lesson won't go ahead.",
+          body:
+            p(`Hi ${first(participantName)}, your ${esc(subject)} lesson with ${esc(otherName)} has been cancelled.`) +
+            (reason ? panel("Reason", [esc(reason)]) : "") +
+            p("You can book another time, or choose a different tutor.") +
+            button("Find a tutor", "https://tutagora.com/tutors"),
+          foot: "Questions about this cancellation? Reply to this email.",
+        }),
       };
     }
 
     case "tutor-under-review": {
-      const { name } = data;
       return {
-        subject: "We're Reviewing Your Profile — Tutagora",
-        html: `
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            </head>
-            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
-              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
-                  ${logoBox}
-
-                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">Profile Received!</h1>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Hi ${name},
-                  </p>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Thank you for signing up to teach on Tutagora! We've received your profile and documents, and our team is currently reviewing your application.
-                  </p>
-
-                  <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 20px; margin: 24px 0; border-radius: 4px;">
-                    <p style="margin: 0; color: #92400e; font-weight: 600;">What happens next?</p>
-                    <ul style="margin: 12px 0 0 0; padding-left: 20px; color: #78350f;">
-                      <li style="margin-bottom: 8px;">We'll verify your ID and credentials (usually within 24 hours)</li>
-                      <li style="margin-bottom: 8px;">You'll receive an email once your profile is approved</li>
-                      <li>Once approved, students can find and book lessons with you</li>
-                    </ul>
-                  </div>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    In the meantime, you can log in to your dashboard to check your verification status.
-                  </p>
-
-                  <a href="https://tutagora.com" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">Go to Dashboard</a>
-
-                  <div style="${footerStyles}">
-                    <p style="margin: 0 0 8px 0;">Questions? Reply to this email anytime.</p>
-                    <p style="margin: 0;">Tutagora Team</p>
-                  </div>
-                </div>
-              </div>
-            </body>
-          </html>
-        `,
+        subject: "We're reviewing your Tutagora profile",
+        html: layout({
+          kicker: "Application received",
+          title: "Thanks. We're checking your profile.",
+          body:
+            p(`Hi ${first(data.name)}, we've received your application to teach on Tutagora.`) +
+            panel("What happens next", [
+              "We check your ID and qualifications, usually within 24 hours.",
+              "We email you as soon as your profile is approved.",
+              "Then families can find you and book lessons.",
+            ]) +
+            button("Go to my dashboard", "https://tutagora.com/dashboard"),
+        }),
       };
     }
 
     case "tutor-approved": {
-      const { name } = data;
       return {
-        subject: "You're Approved! Start Teaching on Tutagora",
-        html: `
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            </head>
-            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
-              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
-                  ${logoBox}
-
-                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">Congratulations, You're Approved!</h1>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Hi ${name},
-                  </p>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Great news! Your tutor profile has been verified and approved. Your profile is now live and students can find and book lessons with you.
-                  </p>
-
-                  <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 20px; margin: 24px 0; border-radius: 4px;">
-                    <p style="margin: 0; color: #065f46; font-weight: 600;">Next steps to get started:</p>
-                    <ul style="margin: 12px 0 0 0; padding-left: 20px; color: #064e3b;">
-                      <li style="margin-bottom: 8px;">Set your availability so students can book time slots</li>
-                      <li style="margin-bottom: 8px;">Share your profile link to attract students</li>
-                      <li>Respond promptly to booking requests</li>
-                    </ul>
-                  </div>
-
-                  <p style="margin: 0 0 8px 0; font-size: 14px; color: #6b7280;">
-                    <strong>Reminder:</strong> Tutagora takes a 15% platform fee on each lesson. Payouts are processed weekly every Friday via M-Pesa.
-                  </p>
-
-                  <a href="https://tutagora.com" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 16px;">Go to Your Dashboard</a>
-
-                  <div style="${footerStyles}">
-                    <p style="margin: 0 0 8px 0;">Welcome aboard! Let's help students learn.</p>
-                    <p style="margin: 0;">Tutagora Team</p>
-                  </div>
-                </div>
-              </div>
-            </body>
-          </html>
-        `,
+        subject: "You're approved to teach on Tutagora",
+        html: layout({
+          kicker: "Approved",
+          title: `You're in, ${first(data.name)}.`,
+          body:
+            p("Your profile is checked and live. Families can now find you and book lessons.") +
+            panel("Get your first booking", [
+              "<b>Open your times.</b> Families can only book the hours you make available.",
+              "<b>Finish your profile.</b> A clear photo and a bio that says how you teach.",
+              "<b>Reply quickly.</b> Families notice, and it shows in your reviews.",
+              "<b>Optional:</b> switch on 30-minute lessons for a single stuck skill.",
+            ]) +
+            p(`<span style="color:${MUTE};font-size:14px;">Tutagora keeps a 15% platform fee on each lesson. Payouts go out every Friday by M-Pesa.</span>`) +
+            button("Go to my dashboard", "https://tutagora.com/dashboard"),
+        }),
       };
     }
 
     case "tutor-rejected": {
       const { name, reason } = data;
       return {
-        subject: "Update Needed on Your Tutagora Profile",
-        html: `
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            </head>
-            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
-              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
-                  ${logoBox}
-
-                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">Profile Update Required</h1>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Hi ${name},
-                  </p>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Thank you for your interest in teaching on Tutagora. After reviewing your profile, we need a few updates before we can approve it.
-                  </p>
-
-                  ${reason ? `<div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 20px; margin: 24px 0; border-radius: 4px;">
-                    <p style="margin: 0; color: #991b1b; font-weight: 600;">Reason:</p>
-                    <p style="margin: 8px 0 0 0; color: #7f1d1d;">${reason}</p>
-                  </div>` : ""}
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Please log in to your dashboard, update the required information, and resubmit your documents. We'll review your updated profile as soon as possible.
-                  </p>
-
-                  <a href="https://tutagora.com" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">Update Your Profile</a>
-
-                  <div style="${footerStyles}">
-                    <p style="margin: 0 0 8px 0;">Need help? Reply to this email.</p>
-                    <p style="margin: 0;">Tutagora Team</p>
-                  </div>
-                </div>
-              </div>
-            </body>
-          </html>
-        `,
+        subject: "An update is needed on your Tutagora profile",
+        html: layout({
+          kicker: "Update needed",
+          title: "One more thing before you go live.",
+          body:
+            p(`Hi ${first(name)}, we couldn't approve your profile yet.`) +
+            (reason ? panel("What to fix", [esc(reason)]) : "") +
+            p("Update your profile and we'll review it again.") +
+            button("Update my profile", "https://tutagora.com/dashboard"),
+          foot: "Need help? Reply to this email.",
+        }),
       };
     }
 
     case "tutor-document-reminder": {
-      const { name } = data;
       return {
-        subject: "Finish your Tutagora application — documents needed",
-        html: `
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            </head>
-            <body style="margin: 0; padding: 0; background-color: #f9fafb;">
-              <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-                <div style="background: white; border-radius: 8px; padding: 32px; ${baseStyles}">
-                  ${logoBox}
-
-                  <h1 style="margin: 0 0 16px 0; font-size: 28px; color: #0f172a;">You're almost a Tutagora tutor!</h1>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Hi ${name},
-                  </p>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    Thanks for starting your tutor application on Tutagora. We noticed you haven't finished uploading your verification documents yet — so your profile isn't live and students can't book you.
-                  </p>
-
-                  <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 20px; margin: 24px 0; border-radius: 4px;">
-                    <p style="margin: 0; color: #92400e; font-weight: 600;">To go live, we just need:</p>
-                    <ul style="margin: 12px 0 0 0; padding-left: 20px; color: #78350f;">
-                      <li style="margin-bottom: 8px;">A photo of your national ID</li>
-                      <li style="margin-bottom: 8px;">Your teaching certificate or qualification</li>
-                      <li>A short bio so parents can get to know you</li>
-                    </ul>
-                  </div>
-
-                  <p style="margin: 0 0 24px 0; font-size: 16px;">
-                    It only takes a couple of minutes. Once your documents are in, our team reviews them (usually within 24 hours) and your profile goes live.
-                  </p>
-
-                  <a href="https://tutagora.com/dashboard" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">Finish my application</a>
-
-                  <div style="${footerStyles}">
-                    <p style="margin: 0 0 8px 0;">Need a hand? Just reply to this email.</p>
-                    <p style="margin: 0;">Tutagora Team</p>
-                  </div>
-                </div>
-              </div>
-            </body>
-          </html>
-        `,
+        subject: "Finish your Tutagora application",
+        html: layout({
+          kicker: "Almost there",
+          title: "You're one step from teaching.",
+          body:
+            p(`Hi ${first(data.name)}, to put your profile live we just need:`) +
+            panel("Still to add", [
+              "A photo of your national ID or passport",
+              "Your teaching certificate or qualification",
+              "A short bio so parents get to know you",
+            ]) +
+            button("Finish my application", "https://tutagora.com/dashboard"),
+          foot: "Need a hand? Just reply to this email.",
+        }),
       };
     }
 
@@ -463,7 +242,6 @@ function generateEmailTemplate(
   }
 }
 
-// Main request handler
 serve(async (req: Request) => {
   // Handle CORS
   if (req.method === "OPTIONS") {

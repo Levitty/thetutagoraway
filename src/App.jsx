@@ -697,7 +697,7 @@ const useAuth = () => {
     });
     if (error) throw error;
     // Send welcome email
-    sendEmail('welcome', email, { name: fullName }).catch(() => {});
+    sendEmail('welcome', email, { name: fullName, role }).catch(() => {});
     return data;
   };
 
