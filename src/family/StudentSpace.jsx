@@ -153,7 +153,8 @@ export const HandOver = ({ user, onStart, onCancel }) => {
     setKids(k => [...(k || []), data]); setChosen(data); setAdding(false); setNewName('');
   };
 
-  const next = () => { setErr(''); setStep(pinSet ? 'ready' : 'pin'); };
+  // No PIN on the way in: handing over should be one tap.
+  const next = () => { setErr(''); setStep('ready'); };
 
   const onPin = async (pin) => {
     if (step === 'pin') { setFirstPin(pin); setStep('confirm'); return; }
@@ -320,8 +321,8 @@ export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onL
       <Header>
         <LearnerAvatar name={mode.name} look={look} size={34} />
         <h1 className="flex-1 min-w-0 text-[17px] font-extrabold tracking-tight truncate">{older ? n : `${n}'s space`}</h1>
-        <button onClick={onLock} aria-label="Parent: leave this space"
-          className="w-9 h-9 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 flex items-center justify-center"><LockIcon /></button>
+        <button onClick={onLock}
+          className="h-9 px-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 text-[13px] font-bold">Back to parent</button>
       </Header>
     }>
       <div className="flex items-center gap-3 pt-1">

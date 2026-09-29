@@ -23,7 +23,7 @@ import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Icon } from './ai-tutor/components/Icons.jsx';
 import { Writing } from './writing/Writing.jsx';
 import { HandOver, StudentHome, PinGate } from './family/StudentSpace.jsx';
-import { getStudentMode, endStudentMode, isOlderLearner } from './family/studentMode.js';
+import { getStudentMode, startStudentMode, endStudentMode, isOlderLearner, gradeNumber, hasPin } from './family/studentMode.js';
 import { FamilyPage, FamilyCards } from './family/FamilyPage.jsx';
 import './site/site.css';
 import SiteHome from './site/Home.jsx';
@@ -1127,7 +1127,7 @@ const MomentumChip = ({ userId, onClick }) => {
 // The signed-in family's home (web). Parents first: their children, handing
 // over the phone, and lessons. Students use the same screen without the
 // children section. On the public site's coral design.
-const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings }) => {
+const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings, onStartPractice }) => {
   const [tab, setTab] = useState('upcoming');
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [reviewBooking, setReviewBooking] = useState(null);
@@ -1334,10 +1334,10 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
                         <div className="kstat">
                           {kp?.diagnosed
                             ? <><span><SiteIcon name="check" style={{ width: 16, height: 16 }} />Check done</span><span>Level {getLevel(kp.totalXP).level}</span>{kp.streak > 0 && <span>{kp.streak}-day streak</span>}</>
-                            : <span>No check yet. It runs when you hand over.</span>}
+                            : <span>No check yet. It starts with their first practice.</span>}
                         </div>
                         <div className="kbtns">
-                          <button type="button" className="btn sm" onClick={() => onNavigate('handover')}><SiteIcon name="phone" style={{ width: 16, height: 16 }} />Hand over</button>
+                          <button type="button" className="btn sm" onClick={() => onStartPractice(c)}>Start {c.name.trim().split(/\s+/)[0]}'s practice<SiteIcon name="arrow" style={{ width: 16, height: 16 }} /></button>
                           <button type="button" className="btn line sm" onClick={() => onNavigate('family')}>Goals and messages</button>
                         </div>
                       </div>
@@ -1351,13 +1351,13 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
           <section className="block">
             <h2 className="display">{isStudentAccount ? 'Practise' : 'For you'}</h2>
             <div className="tools">
-              <button type="button" className="tool darkc" onClick={() => onNavigate('ai')}>
+              {(started || accountType !== 'parent') && <button type="button" className="tool darkc" onClick={() => onNavigate('ai')}>
                 <span className="kicker" style={{ opacity: .7 }}>Maths practice</span>
                 <b>{!started ? (accountType === 'parent' ? 'Try the practice yourself' : 'Find your level') : goalMet ? "Today's goal done" : streak > 0 ? `${streak}-day streak. Keep it going.` : 'Pick up where you left off'}</b>
                 {started && <span className="bar"><i style={{ width: `${goalPct}%` }} /></span>}
                 {started && <span className="small">{Math.min(todaysXP(aiProgress), DAILY_GOAL_XP)} of {DAILY_GOAL_XP} XP today · Level {getLevel(aiProgress.totalXP).level}</span>}
                 <span className="go">{!started ? 'Start' : 'Continue'} <SiteIcon name="arrow" style={{ width: 18, height: 18 }} /></span>
-              </button>
+              </button>}
               <button type="button" className="tool" onClick={() => onNavigate('writing')}>
                 <span className="kicker muted">Writing</span>
                 <b>Composition and insha</b>
@@ -7282,6 +7282,10 @@ function AppInner() {
   if (studentMode && auth.user) {
     const learner = { id: studentMode.learnerId, name: studentMode.name, grade: studentMode.grade };
     const backToSpace = () => handleNavigate('student');
+    // Back to the parent: straight away, unless the parent has set a PIN.
+    const leaveStudentMode = () => hasPin()
+      .then(p => { if (p) setShowPinGate(true); else { endStudentMode(); setStudentMode(null); handleNavigate('dashboard'); } })
+      .catch(() => setShowPinGate(true));
     const gate = showPinGate && (
       <PinGate userId={auth.user.id} learnerName={studentMode.name}
         onCancel={() => setShowPinGate(false)}
@@ -7290,7 +7294,7 @@ function AppInner() {
     );
     if (page === 'ai') {
       return (<>
-        <AIMastery onBack={backToSpace} userId={auth.user.id} studentName={studentMode.name} lockedLearner={learner}
+        <AIMastery onBack={backToSpace} userId={auth.user.id} studentName={studentMode.name} lockedLearner={learner} autoStartGrade={gradeNumber(studentMode.grade)}
           subscription={auth.subscription} onPaywall={() => setShowPaywall(true)} />
         {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
       </>);
@@ -7301,7 +7305,7 @@ function AppInner() {
     return (<>
       <StudentHome mode={studentMode} bookings={bookings}
         onPractice={() => handleNavigate('ai')} onWriting={() => handleNavigate('writing')}
-        onJoin={handleStartLesson} onLock={() => setShowPinGate(true)}
+        onJoin={handleStartLesson} onLock={leaveStudentMode}
         extra={<FamilyCards parentId={auth.user.id} learnerId={studentMode.learnerId} name={studentMode.name} older={isOlderLearner(studentMode.grade)} />} />
       {gate}
     </>);
@@ -7493,7 +7497,8 @@ function AppInner() {
     }
     return (
       <>
-        <StudentDashboard key={dashKey} profile={auth.profile} user={auth.user} subscription={auth.subscription} onGetPass={() => setShowPaywall(true)} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
+        <StudentDashboard key={dashKey} profile={auth.profile} user={auth.user} subscription={auth.subscription} onGetPass={() => setShowPaywall(true)} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)}
+          onStartPractice={(c) => { setStudentMode(startStudentMode(auth.user.id, c)); handleNavigate('ai'); }} />
         {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
         {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
         {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
