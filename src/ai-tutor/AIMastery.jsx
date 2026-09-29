@@ -104,7 +104,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // We derive the full prerequisite/post-requisite CHAIN walkers from the
   // subject's own graph. Without these, the engines silently fell back to the
   // math chains, so credit propagation / implicit review / gap detection did
-  // nothing for non-math subjects (AFM/APM). Now every subject gets real graph
+  // nothing for non-math subjects (Cambridge/SAT). Now every subject gets real graph
   // propagation against its OWN skill ids.
   const ctx = useMemo(() => {
     if (!sub) return null;
@@ -1072,7 +1072,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   const switchSubject = () => { setSubjectId(null); setView('subject-picker'); setActiveSkill(null); setProgress(defaultProgress); };
   const resetAll = () => { if (confirm('Reset ALL progress? This cannot be undone.')) { const fresh = defaultProgress(); setProgress(fresh); forceSave(keyFor(subjectId), fresh, userId, learnerId); setView('welcome'); } };
 
-  // Grade/band label helper. ACCA subjects use named levels; otherwise the
+  // Grade/band label helper. Subjects with named levels (SAT bands) use them; otherwise the
   // active curriculum decides the wording ("Grade" vs Cambridge "Stage").
   const gradeLabel = (grade) => {
     if (sub?.gradeNames?.[grade]) return `${sub.gradeLabel} ${grade} — ${sub.gradeNames[grade]}`;

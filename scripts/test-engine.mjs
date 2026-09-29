@@ -2,7 +2,7 @@
 // ENGINE REGRESSION TEST — run with:  node scripts/test-engine.mjs
 //
 // Guards the learning engine against the bug classes we fixed:
-//  1. Knowledge-graph integrity (no dangling prereqs / cycles, math+AFM+APM)
+//  1. Knowledge-graph integrity (no dangling prereqs / cycles, every subject)
 //  2. 100% generator coverage (no skill silently falls back to "answer: 1")
 //  3. Every generator's own answer key is accepted by the grader
 //  4. Tolerant grading (mixed/improper fractions, rounded decimals, %, units)
@@ -11,11 +11,9 @@
 // ============================================================================
 
 import { SKILLS, getPrerequisiteChain } from '../src/ai-tutor/knowledgeGraph.js';
-import { AFM_SKILLS, getAfmPostRequisites } from '../src/ai-tutor/afmKnowledgeGraph.js';
-import { APM_SKILLS } from '../src/ai-tutor/apmKnowledgeGraph.js';
+import { CAMBRIDGE_SKILLS, getCambridgePostRequisites } from '../src/ai-tutor/cambridgeKnowledgeGraph.js';
+import { SAT_SKILLS } from '../src/ai-tutor/satKnowledgeGraph.js';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
-import { generateAfmProblem } from '../src/ai-tutor/afmProblemGenerators.js';
-import { generateApmProblem } from '../src/ai-tutor/apmProblemGenerators.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
 import { propagateCredit } from '../src/ai-tutor/diagnosticEngine.js';
 import { getDiagnosticSkills, computePlacementGrade, getEffectivePlacement } from '../src/ai-tutor/adaptiveEngine.js';
@@ -37,7 +35,7 @@ function graphAudit(name, S) {
   if (dangling || cycles) fail(`${name}: dangling=${dangling} cycles=${cycles}`);
   else ok(`${name}: ${ids.size} skills, no dangling prereqs, no cycles`);
 }
-graphAudit('MATH', SKILLS); graphAudit('AFM', AFM_SKILLS); graphAudit('APM', APM_SKILLS);
+graphAudit('MATH', SKILLS); graphAudit('CAMBRIDGE', CAMBRIDGE_SKILLS); graphAudit('SAT', SAT_SKILLS);
 
 // ---- 2 & 3. Coverage + every key self-accepts ----
 console.log('2/3. Generator coverage + key self-acceptance');
@@ -57,8 +55,6 @@ function sweep(name, ids, gen) {
   else if (!selfFail) ok(`${name}: full coverage, all keys self-accept`);
 }
 sweep('MATH', SKILLS, generateProblem);
-sweep('AFM', AFM_SKILLS, generateAfmProblem);
-sweep('APM', APM_SKILLS, generateApmProblem);
 
 // ---- 4. Tolerant grading ----
 console.log('4. Tolerant grading');
@@ -81,15 +77,15 @@ for (const [label, user, prob, expect] of cases) {
 if (!cases.some(([l, u, p, e]) => checkAnswerMatch(u, p) !== e)) ok(`all ${cases.length} tolerant cases`);
 
 // ---- 5. Per-subject credit propagation ----
-console.log('5. Per-subject credit propagation (AFM)');
-const skills = AFM_SKILLS;
+console.log('5. Per-subject credit propagation (Cambridge)');
+const skills = CAMBRIDGE_SKILLS;
 const getPreChain = (id, v = new Set()) => { if (v.has(id)) return []; v.add(id); const s = skills[id]; if (!s) return []; const c = [...(s.prerequisites || [])]; for (const p of (s.prerequisites || [])) c.push(...getPreChain(p, v)); return [...new Set(c)]; };
-const getPostChain = (id, v = new Set()) => { if (v.has(id)) return []; v.add(id); const posts = (getAfmPostRequisites(id) || []).map(p => p.id || p); const c = [...posts]; for (const pid of posts) c.push(...getPostChain(pid, v)); return [...new Set(c)]; };
-const withPre = Object.values(AFM_SKILLS).find(s => (s.prerequisites || []).length > 0);
+const getPostChain = (id, v = new Set()) => { if (v.has(id)) return []; v.add(id); const posts = (getCambridgePostRequisites(id) || []).map(p => p.id || p); const c = [...posts]; for (const pid of posts) c.push(...getPostChain(pid, v)); return [...new Set(c)]; };
+const withPre = Object.values(CAMBRIDGE_SKILLS).find(s => (s.prerequisites || []).length > 0);
 const bal = propagateCredit({}, withPre.id, true, 1.0, { skills, getPreChain, getPostChain });
 const propagated = Object.keys(bal).filter(k => k !== withPre.id);
-if (propagated.length > 0) ok(`AFM correct answer credits prerequisites (${propagated.length})`);
-else fail('AFM credit did not propagate');
+if (propagated.length > 0) ok(`Cambridge correct answer credits prerequisites (${propagated.length})`);
+else fail('Cambridge credit did not propagate');
 
 // ---- 6. Diagnostic sizing + placement ----
 console.log('6. Diagnostic sizing + placement');
