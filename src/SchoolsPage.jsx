@@ -29,7 +29,7 @@ export default function SchoolsPage({ onNavigate, onSignIn, user }) {
         <SiteNav onNavigate={onNavigate} onSignIn={onSignIn || (() => onNavigate('dashboard'))} user={user} current="schools" />
         <div className="in">
           <div>
-            <div className="kicker">For schools · CBC Grade 1 to 12</div>
+            <div className="kicker">For schools · CBC and Cambridge, Grade 1 to 12</div>
             <h1 className="display" style={{ marginTop: 12 }}>See every learner's real level. Skill by skill.</h1>
             <p className="lead">One lesson on the school's tablets, and you know exactly which foundations each learner is missing, and what to do about it tomorrow.</p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>

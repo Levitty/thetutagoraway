@@ -69,7 +69,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
             </form>
             <div className="below">
               <span><SiteIcon name="check" />Free, no card</span>
-              <span><SiteIcon name="check" />CBC Grade 1 to 12</span>
+              <span><SiteIcon name="check" />CBC and Cambridge, Grade 1 to 12</span>
               <span><SiteIcon name="check" />Any phone</span>
             </div>
           </div>

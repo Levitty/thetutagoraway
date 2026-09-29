@@ -24,9 +24,9 @@
 .tg .display { font-family: var(--display); font-weight: 800; font-stretch: 95%; letter-spacing: -.035em; line-height: .97; margin: 0; text-wrap: balance; }
 .tg .kicker { font-weight: 800; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
 .tg .muted { color: var(--mute); }
-.tg .fine { font-size: 13.5px; color: var(--mute); font-weight: 600; }
+.tg .fine, .tg-modal .fine { font-size: 13.5px; color: var(--mute); font-weight: 600; }
 .tg .i { width: 20px; height: 20px; flex: none; }
-.tg .linkbtn { background: none; border: 0; padding: 0; cursor: pointer; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.tg .linkbtn, .tg-modal .linkbtn { background: none; border: 0; padding: 0; cursor: pointer; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .tg .plain { text-decoration: none; display: inline-flex; gap: 6px; align-items: center; }
 
 /* buttons */
@@ -171,6 +171,7 @@
 .tg .card { width: 100%; max-width: 620px; }
 .tg .card h1 { font-size: clamp(34px, 5vw, 52px); }
 .tg .card .lead { font-size: 19px; color: var(--ink2); margin: 14px 0 26px; }
+.tg .card .tips { margin: -8px 0 24px; padding-left: 22px; display: grid; gap: 8px; font-size: 17px; color: var(--ink); }
 .tg .field { display: block; margin-bottom: 22px; }
 .tg .field > span { display: block; font-weight: 800; margin-bottom: 8px; }
 .tg .field small { font-weight: 600; color: var(--mute); }
@@ -497,3 +498,12 @@
 .tg .duo.signpost .c.s { background: #e8e8fb; }
 .tg .duo.signpost .c.s .btn { background: #3d3fbf; border-color: #3d3fbf; }
 @media (max-width: 600px) { .tg .sec.tutorband { padding-block: 44px; } .tg .sec.tutorband + .sec.tight { padding-top: 44px; } }
+
+/* Check setup: on phones the Start button stays in view while scrolling. */
+@media (max-width: 720px) {
+  .tg .card .startbtn { position: sticky; bottom: 12px; z-index: 5; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+  .tg .card .startbtn:disabled { opacity: 1; background: #e6e6ea; color: #4a4a55; box-shadow: 0 -8px 16px #fff; }
+}
+.tg .trow .nextfree { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 5px 10px; border-radius: 999px; background: #e7f6ee; color: #14532d; font-weight: 700; font-size: 14px; }
+.tg .trow .nextfree .i { width: 16px; height: 16px; }
+.tg .trow .nextfree.none { background: var(--soft, #f3f3f5); color: var(--mute); }

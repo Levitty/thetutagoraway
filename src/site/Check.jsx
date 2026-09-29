@@ -88,10 +88,10 @@ export function CheckStart({ initialGrade, onStart, onResume, onLeave, onSeeResu
             </div>
             <p className="fine" style={{ margin: '8px 0 0' }}>Not sure? Check the school report, or ask the class teacher.</p>
           </div>
-          <button type="button" className="btn full" onClick={start} disabled={!name.trim() || !grade || !curriculum}>
+          <button type="button" className="btn full startbtn" onClick={start} disabled={!name.trim() || !grade || !curriculum}>
             {!name.trim() ? "Add your child's name first" : !grade ? 'Pick a grade first' : !curriculum ? 'Pick a curriculum first' : <>Start the check <SiteIcon name="arrow" /></>}
           </button>
-          <div className="handnote"><SiteIcon name="phone" /><div>Now hand the phone to <b>{who}</b>. Let them answer on their own. Guessing is fine, and "I haven't learned this yet" is a good answer too.</div></div>
+          <div className="handnote"><SiteIcon name="phone" /><div>Now hand the phone to <b>{who}</b>. Let them try every question on their own. A wrong answer is fine and helps us. "I haven't learned this yet" is only for something truly new.</div></div>
         </div>
       </div>
     </div>
@@ -103,6 +103,7 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user }) {
   const check = getCheck();
   const progress = useMemo(() => getGuestProgress(), []);
   const r = useMemo(() => findMissingStep(progress), [progress]);
+  const [showAnyway, setShowAnyway] = useState(false);
 
   if (!progress?.diagnosed || !r.missing) {
     return (
@@ -112,6 +113,30 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user }) {
           <h1 className="display">No check on this device yet.</h1>
           <p className="lead">It takes about ten minutes and it's free.</p>
           <button type="button" className="btn" onClick={onRetake}>Start the free check <SiteIcon name="arrow" /></button>
+        </div></div>
+      </div>
+    );
+  }
+
+  // Mostly skipped: we don't know enough to place them, so say that rather
+  // than show a Grade 1 result to the parent of a Grade 5 child.
+  const st = progress.diagStats;
+  if (st && st.answered >= 5 && st.skipped / st.answered >= 0.6 && !showAnyway) {
+    const who = check?.name || 'Your child';
+    return (
+      <div className="tg flow">
+        <FlowBar label="Free maths check" onLeave={onLeave} />
+        <div className="stage"><div className="card">
+          <div className="kicker">{check?.name ? `${check.name}'s check` : 'Your check'}</div>
+          <h1 className="display" style={{ marginTop: 10 }}>{who} skipped most of the questions.</h1>
+          <p className="lead">That's okay, and it happens a lot. It just means we can't tell yet where {check?.name || 'they'} should start. They tapped "I haven't learned this yet" on {st.skipped} of {st.answered} questions.</p>
+          <ol className="tips">
+            <li>Sit next to {check?.name || 'them'} for ten minutes.</li>
+            <li>Let them try each question, even if they're unsure. A wrong answer helps us too.</li>
+            <li>Only tap "I haven't learned this yet" when it's truly new.</li>
+          </ol>
+          <button type="button" className="btn full" onClick={onRetake}>Try again together <SiteIcon name="arrow" /></button>
+          <p className="fine" style={{ marginTop: 14, textAlign: 'center' }}><button type="button" className="linkbtn" onClick={() => setShowAnyway(true)}>See the starting point anyway</button></p>
         </div></div>
       </div>
     );

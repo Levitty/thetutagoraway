@@ -45,7 +45,7 @@ const IS_NATIVE = typeof window !== 'undefined' && !!window.Capacitor?.isNativeP
 // this mainly lets Google tell the routes apart.)
 const ORIGIN = 'https://tutagora.com';
 const ROUTE_SEO = {
-  home:       { t: "Tutagora — Find the one maths step your child is missing", d: "A free 10-minute maths check finds the exact step your child is missing, then 15 minutes a day rebuilds it. CBC Grade 1 to 12, plus tutors when it's stuck.", path: '/' },
+  home:       { t: "Tutagora — Find the one maths step your child is missing", d: "A free 10-minute maths check finds the exact step your child is missing, then 15 minutes a day rebuilds it. CBC and Cambridge, Grade 1 to 12, plus tutors when it's stuck.", path: '/' },
   check:      { t: "Free 10-minute Maths Check (CBC Grade 1–12) | Tutagora", d: "Find the exact maths step your child is missing. Free, adaptive, no account needed.", path: '/check' },
   tutors:     { t: "Find a Verified Tutor in Kenya | Tutagora", d: "Browse verified tutors by subject, grade and price. Book a one-on-one online lesson and pay securely.", path: '/tutors' },
   horeb:      { t: "HOREB — Free Adaptive Maths Practice (CBC) | Tutagora", d: "A free maths check finds your child's exact gap, then rebuilds it — adaptive practice mapped to the Kenyan CBC curriculum.", path: '/horeb' },
@@ -362,18 +362,16 @@ const PrivacyPolicyPage = ({ onBack }) => (
 
 // ============ COOKIE / PRIVACY BANNER ============
 const PrivacyBanner = ({ onAccept, onNavigate }) => (
-  <div className="fixed bottom-0 left-0 right-0 bg-slate-900 text-white p-4 z-40 shadow-lg">
-    <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-3">
-      <p className="text-sm text-slate-300 flex-1">
-        We use essential data to provide our tutoring service. By continuing, you agree to our{' '}
-        <button onClick={() => onNavigate('privacy')} className="text-amber-300 underline hover:text-amber-200">Privacy Policy</button>{' '}
-        in accordance with Kenya's Data Protection Act, 2019.
+  // One slim line, so it doesn't cover the first screen a parent sees.
+  <div className="fixed bottom-0 left-0 right-0 bg-slate-900 text-white px-4 py-2.5 z-40 shadow-lg" role="region" aria-label="Privacy">
+    <div className="max-w-4xl mx-auto flex items-center gap-3">
+      <p className="text-xs sm:text-sm text-slate-300 flex-1 leading-snug">
+        We use essential data to run Tutagora, under Kenya's Data Protection Act.{' '}
+        <button onClick={() => onNavigate('privacy')} className="text-amber-300 underline hover:text-amber-200">Privacy Policy</button>
       </p>
-      <div className="flex gap-2 flex-shrink-0">
-        <button onClick={onAccept} className="px-5 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-medium rounded-xl transition-colors">
-          Accept
-        </button>
-      </div>
+      <button onClick={onAccept} className="shrink-0 px-4 py-1.5 bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-semibold rounded-lg transition-colors">
+        OK
+      </button>
     </div>
   </div>
 );
@@ -1014,15 +1012,13 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
         {error && <div className="msg err">{error}</div>}
         {success && <div className="msg ok">{success}</div>}
 
-        {view === 'register' && (
-          <>
-            <div className="roles" role="group" aria-label="I am">
-              {[['parent', "I'm a parent"], ['student', "I'm a student"], ['tutor', "I'm a tutor"]].map(([v, l]) => (
-                <button key={v} type="button" aria-pressed={form.role === v} onClick={() => setForm({ ...form, role: v })}>{l}</button>
-              ))}
-            </div>
-            <input className="inp" style={{ marginBottom: 10 }} placeholder="Your full name" autoComplete="name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
-          </>
+        {/* Saving a check is always a parent, so there's nothing to choose. */}
+        {view === 'register' && reason !== 'plan' && (
+          <div className="roles" role="group" aria-label="I am">
+            {[['parent', "I'm a parent"], ['student', "I'm a student"], ['tutor', "I'm a tutor"]].map(([v, l]) => (
+              <button key={v} type="button" aria-pressed={form.role === v} onClick={() => setForm({ ...form, role: v })}>{l}</button>
+            ))}
+          </div>
         )}
 
         {view !== 'forgot' && (
@@ -1031,11 +1027,15 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
               <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
               {view === 'login' ? 'Sign in with Google' : 'Continue with Google'}
             </button>
+            {view === 'register' && <p className="fine" style={{ margin: '8px 0 0', textAlign: 'center' }}>By continuing with Google you agree to our <button type="button" className="linkbtn" onClick={() => window.open('/privacy', '_blank')}>Privacy Policy</button>.</p>}
             <div className="or">or with email</div>
           </>
         )}
 
         <form onSubmit={handleSubmit} className="stack">
+          {view === 'register' && (
+            <input className="inp" placeholder="Your full name" autoComplete="name" required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
+          )}
           <input className="inp" type="email" placeholder="Email address" autoComplete="email" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
           {view !== 'forgot' && (
             <input className="inp" type="password" placeholder="Password (at least 6 characters)" autoComplete={view === 'login' ? 'current-password' : 'new-password'} required minLength={6} value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} />
@@ -7058,7 +7058,10 @@ function AppInner() {
     return 'home';
   });
   // The free check: which grade to start at (set by the homepage finder).
-  const [checkGrade, setCheckGrade] = useState(null);
+  // An ad can also preset it: tutagora.com/check?grade=5
+  const [checkGrade, setCheckGrade] = useState(() => {
+    try { const g = Number(new URLSearchParams(window.location.search).get('grade')); return g >= 1 && g <= 12 ? g : null; } catch { return null; }
+  });
   // Bumped after a free check is saved to the account, so the dashboard
   // reloads and shows the new child straight away.
   const [dashKey, setDashKey] = useState(0);

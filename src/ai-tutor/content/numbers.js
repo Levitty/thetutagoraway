@@ -527,7 +527,10 @@ export function buildPlaceValueChart() {
   const nDigits = pick([4, 5]);
   const placeVals = [];
   for (let i = nDigits - 1; i >= 0; i--) placeVals.push(Math.pow(10, i));   // 1000,100,10,1
-  const digits = placeVals.map(() => randInt(1, 9));                         // no zeros, clean questions
+  // No zeros, and no repeated digit: "the value of the 4 in 54,421" would
+  // have two right answers if the chart weren't visible.
+  const pool = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const digits = placeVals.map(() => pool.splice(randInt(0, pool.length - 1), 1)[0]);
   const hi = randInt(0, nDigits - 1);
   const digit = digits[hi], place = placeVals[hi], value = digit * place;
   const numStr = Number(digits.join('')).toLocaleString('en-US');
