@@ -1524,7 +1524,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               <div className="flex items-start gap-3 mb-4">
                 <HorebBot size={40} className="shrink-0" />
                 <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">
-                  {interleave ? 'Quick memory check — do you still remember this one?' : modalityLevel === 'concrete' ? "Let's see it a different way — use the picture to help." : 'Now you try this one. Take your time.'}
+                  {interleave ? 'Quick memory check — do you still remember this one?'
+                    : problem.type === 'spot-mistake' ? 'Be the teacher: check this working carefully.'
+                    : problem.type === 'always-sometimes-never' ? 'Think about it. Try a few numbers in your head.'
+                    : problem.parts ? 'One part at a time. Each part earns a mark.'
+                    : problem.story ? 'Read the story slowly. What does it ask?'
+                    : modalityLevel === 'concrete' && (problem.visual || problem.diagram || SKILL_VISUALS[activeSkill]) ? "Let's see it a different way — use the picture to help."
+                    : 'Now you try this one. Take your time.'}
                 </div>
               </div>
               <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
@@ -1609,7 +1615,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 {problem.parts ? (
                   <StepsQuestion key={problem.question} problem={problem} onDone={handleStepsDone} />
                 ) : problem.mc ? (
-                  <div className={`grid gap-2.5 ${problem.mc.length === 3 && problem.mc.every(o => String(o).length <= 10) ? 'grid-cols-3' : problem.mc.every(o => String(o).length <= 12) ? 'grid-cols-2' : 'grid-cols-1'}`} role="radiogroup" aria-label="Choose an answer">
+                  <div className={`grid gap-2.5 ${problem.mc.length === 4 && problem.mc.every(o => String(o).length <= 12) ? 'grid-cols-2' : 'grid-cols-1'}`} role="radiogroup" aria-label="Choose an answer">
                     {problem.mc.map((opt, i) => {
                       const struck = struckChoices.includes(opt);
                       const chosen = answer === opt;
@@ -1658,7 +1664,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 {hintLevel >= 1 && !feedback && attemptCount === 0 && (
                   <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-2xl text-amber-800 text-sm">
                     <span className="font-semibold text-amber-700">Hint:</span> {problem.hint || genericNudge(problem)}
-                    {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="ml-2 text-amber-700 underline hover:text-amber-800">still stuck?</button>}
+                    {hintLevel < 2 && !plan && !problem.explain && <button onClick={() => setHintLevel(2)} className="ml-2 text-amber-700 underline hover:text-amber-800">still stuck?</button>}
                   </div>
                 )}
 
@@ -1666,13 +1672,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 {!feedback && attemptCount > 0 && wrongInfo && !wrongInfo.needNumber && (
                   <div className="mt-4 p-3 bg-[#fdf2ef] border border-[#f2cdc2] rounded-2xl text-sm">
                     <span className="text-[#c0663f] font-semibold">Not quite.</span>
-                    {wrongInfo.answer && <span className="text-slate-500"> You {problem.mc ? 'chose' : 'wrote'} <span className="font-mono text-slate-700">{wrongInfo.answer}</span>.</span>}
+                    {wrongInfo.answer && <span className="text-slate-500"> You {problem.mc ? 'chose' : 'wrote'} <span className={`${problem.mc ? 'font-semibold' : 'font-mono'} text-slate-700`}>{wrongInfo.answer}</span>.</span>}
                     <div className="mt-1 text-slate-700">{wrongInfo.diagnosis || (problem.hint || genericNudge(problem))}</div>
-                    {hintLevel < 2 && !plan && <button onClick={() => setHintLevel(2)} className="mt-1.5 text-[#6d6fcb] underline text-xs hover:text-[#5658b8]">show me the first steps</button>}
+                    {hintLevel < 2 && !plan && !problem.explain && <button onClick={() => setHintLevel(2)} className="mt-1.5 text-[#6d6fcb] underline text-xs hover:text-[#5658b8]">show me the first steps</button>}
                   </div>
                 )}
 
-                {hintLevel >= 2 && !feedback && !plan && (() => {
+                {hintLevel >= 2 && !feedback && !plan && !problem.explain && (() => {
                   const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
                   if (!steps) return null;
                   return (

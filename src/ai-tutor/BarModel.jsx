@@ -14,10 +14,14 @@ export function BarModel({ diagram }) {
   if (!diagram || diagram.type !== 'bar' || !diagram.rows?.length) return null;
   const rows = diagram.rows;
   const hasLabels = rows.some(r => r.label);
-  const LW = hasLabels ? 78 : 0, W = 320, RH = 34, GAP = 12, TOP = 6;
+  const W = 320, LW = hasLabels ? 78 : 0, RH = 34, GAP = 22, TOP = 18;
   // Rows share one scale so a comparison shows the real difference.
   const maxTotal = Math.max(...rows.map(r => r.segs.reduce((s, g) => s + g.w, 0)));
-  const scale = (W - LW - 4) / maxTotal;
+  const scale = (320 - LW - 4) / maxTotal;
+  // Boxes keep their true sizes (equal units must look equal); a label too
+  // long for its box is written just above it instead.
+  const segW = (g) => Math.max(g.w * scale, 14);
+  const fits = (g, w) => g.text.length * 7.4 + 8 <= w;
   const H = TOP + rows.length * (RH + GAP) + (diagram.note ? 18 : 0);
   return (
     <figure className="my-4 rounded-xl border border-slate-200 bg-[#f4f4f6] p-3" aria-label="Bar model picture">
@@ -29,11 +33,13 @@ export function BarModel({ diagram }) {
             <g key={ri}>
               {r.label && <text x={LW - 8} y={y + RH / 2 + 5} textAnchor="end" fontSize="13" fontWeight="600" fill="#334155">{r.label}</text>}
               {r.segs.map((g, gi) => {
-                const w = Math.max(g.w * scale, 14), t = TONE[g.tone] || TONE.a;
+                const w = segW(g), t = TONE[g.tone] || TONE.a;
                 const el = (
                   <g key={gi}>
                     <rect x={x} y={y} width={w} height={RH} fill={t.fill} stroke={t.stroke} strokeWidth="1.5" strokeDasharray={t.dash} />
-                    {g.text && <text x={x + w / 2} y={y + RH / 2 + 5} textAnchor="middle" fontSize={g.text.length > 10 ? 11 : 13} fontWeight="700" fill={g.tone === 'q' ? '#e8336d' : '#121117'}>{g.text}</text>}
+                    {g.text && (fits(g, w)
+                      ? <text x={x + w / 2} y={y + RH / 2 + 5} textAnchor="middle" fontSize="13" fontWeight="700" fill={g.tone === 'q' ? '#e8336d' : '#121117'}>{g.text}</text>
+                      : <text x={Math.min(Math.max(x + w / 2, LW + g.text.length * 3.4), W - g.text.length * 3.4)} y={y - 5} textAnchor="middle" fontSize="12" fontWeight="700" fill={g.tone === 'q' ? '#e8336d' : '#121117'}>{g.text}</text>)}
                   </g>
                 );
                 x += w;

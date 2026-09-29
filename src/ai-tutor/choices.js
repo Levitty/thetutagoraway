@@ -46,7 +46,9 @@ export function buildChoices(problem) {
     else { push(fmt(v * 10)); push(fmt(v / 10)); }
   }
   if (opts.length < 3) return null;
-  return shuffle([answer, ...opts.slice(0, 3)]);
+  // Big whole numbers read the way the question writes them: 21,600.
+  const show = (x) => (/^\d{4,}$/.test(x) ? Number(x).toLocaleString('en-US') : x);
+  return shuffle([answer, ...opts.slice(0, 3)].map(show));
 }
 
 // Serve-time decision: returns the problem with `mc` options attached, or as is.
