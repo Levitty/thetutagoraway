@@ -23,14 +23,14 @@ export const CAMBRIDGE_MAP = {
   CP_DIVIDE: 'G5_DIVISION',                  // structured array model
   CP_FACTORS: 'G5_FACTORS',
   CP_NEGATIVES: 'G6_INTEGERS_INTRO',         // structured number line
-  CP_FRACTIONS: 'G3_FRACTIONS',
+  CP_FRACTIONS: 'CAM_FRACTIONS_SET',        // halves to tenths of a set
   CP_FRACTIONS_OPS: 'G6_FRACTIONS_ADD',      // structured (escalates to bars)
   CP_FRACTIONS_MD: 'G6_FRACTIONS_MUL',       // structured (area model)
   CP_DECIMALS: 'G5_DECIMALS_INTRO',          // structured decimal grid
   CP_DECIMALS_OPS: 'G5_DECIMALS_ADD',        // structured
   CP_PERCENT: 'G6_PERCENTAGES_INTRO',        // structured (100-grid)
   CP_SHAPES: 'G2_SHAPES',
-  CP_ANGLES: 'G4_ANGLES',
+  CP_ANGLES: ['G4_ANGLES', 'CAM_TURNS_COMPASS'],   // angles, and turns with compass points
   CP_PERIMETER_AREA: 'G6_AREA_RECT',         // structured
   CP_MEASURE: ['G3_LENGTH', 'G3_MASS', 'G3_TIME'],
   CP_DATA: 'G5_BAR_GRAPHS',

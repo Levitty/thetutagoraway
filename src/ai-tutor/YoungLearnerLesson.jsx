@@ -20,6 +20,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 import { planYoungLesson, WORDS } from './youngPlan.js';
+import { YoungPicture, PickOption } from './YoungPicture.jsx';
 export { planYoungLesson };
 
 
@@ -191,6 +192,8 @@ export default function YoungLearnerLesson({
           </button>
         </div>
 
+        {problem.picture?.kind !== 'pick' && <YoungPicture picture={problem.picture} />}
+
         {plan.counters && (
           <>
             <div className="yl-work">
@@ -208,10 +211,14 @@ export default function YoungLearnerLesson({
         </div>
 
         <div className={`yl-answers ${locked ? 'lock' : ''}`}>
-          {plan.choices.map(c => (
-            <button key={c} className={`yl-ans ${disabled.includes(c) ? 'wrong' : ''}`}
-              disabled={disabled.includes(c)} onClick={() => choose(c)}>{c}</button>
-          ))}
+          {plan.choices.map((c, i) => {
+            const pic = problem.picture?.kind === 'pick' ? problem.picture.options[i] : null;
+            return (
+              <button key={c} className={`yl-ans ${pic ? 'pic' : ''} ${disabled.includes(c) ? 'wrong' : ''}`}
+                aria-label={pic ? `picture ${c}` : undefined}
+                disabled={disabled.includes(c)} onClick={() => choose(c)}>{pic ? <PickOption spec={pic} /> : c}</button>
+            );
+          })}
         </div>
       </main>
 
@@ -286,6 +293,8 @@ const YL_CSS = `
   border:1px solid var(--rule);border-radius:14px;padding:18px 4px;cursor:pointer;
   transition:transform .12s,border-color .15s,background .15s;-webkit-tap-highlight-color:transparent;}
 .yl-ans:hover{transform:translateY(-1px);border-color:#cfc7b6;}
+.yl-ans.pic{padding:8px 4px;display:flex;align-items:center;justify-content:center;}
+.yl-ans.pic svg{max-width:100%;height:auto;}
 .yl-ans.wrong{border-color:var(--accent);color:var(--accent);background:#f9ece7;}
 .yl-foot{border-top:1px solid var(--rule);padding:14px 24px 20px;display:flex;justify-content:space-between;
   align-items:center;font-size:12px;color:var(--faint);position:relative;}

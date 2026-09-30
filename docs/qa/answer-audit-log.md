@@ -371,3 +371,21 @@ Examples of what the child now hears:
 - the 9th term given when the sum of 9 terms was asked
 Every wrong answer listed is checked not to be marked right, and feedback
 never states the answer (audit:items, 0 findings).
+
+## Round 14: Grade 2-4 fractions and position matched to the KICD designs
+Rebuilt from the 2024 KICD designs in `docs/curriculum-sources/`
+(see `docs/qa/research/low-variety-skills.md`):
+- G2_FRACTIONS: ½ and ¼ of a whole shape (shaded part, equal or not, pick the
+  picture, sharing story). "Half of 16" moved to Grade 3.
+- G3_FRACTIONS: ½, ¼ and ⅛ of a whole, then of a group (circled part, sharing
+  onto plates). Thirds, fifths and tenths now serve Cambridge only
+  (CAM_FRACTIONS_SET, via CP_FRACTIONS).
+- G3_POSITION: walk straight, then turn left or right; walking up the page
+  first, then down towards the child.
+- G4_POSITION: clockwise and anticlockwise; quarter, half and full turns. No
+  three-quarter turns. Compass turns serve Cambridge only (CAM_TURNS_COMPASS,
+  via CP_ANGLES).
+Every item has tap buttons and a picture (YoungPicture.jsx). Checked: 1,500
+draws per skill, right answer always a button, no wrong button marked right,
+no mistake feedback matching the answer; test:engine, audit:items (0
+findings) and the full answer audit (no findings in these skills).

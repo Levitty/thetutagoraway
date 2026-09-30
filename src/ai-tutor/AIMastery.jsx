@@ -30,6 +30,7 @@ import { checkAnswerMatch, normalizeMath } from './answerCheck.js';
 import { maybeChoices, LETTERS } from './choices.js';
 import { specialItemFor } from './specialItems.js';
 import { BarModel } from './BarModel.jsx';
+import { YoungPicture } from './YoungPicture.jsx';
 import { StepsQuestion } from './StepsQuestion.jsx';
 import { speak, canSpeak, stopSpeaking, questionScript } from './speech.js';
 import { canPractice } from '../subscription.js';
@@ -1550,6 +1551,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">
                   <TermTooltip text={problem.question} definitions={problem.workedExample?.definitions || problem.definitions} />
                 </div>
+                {problem.picture && <YoungPicture picture={problem.picture} />}
 
                 {/* Spot the mistake: the other child's working, numbered */}
                 {problem.shownSteps && (
@@ -1629,7 +1631,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                             : struck ? 'bg-[#fdf2ef] border-[#f2cdc2] text-slate-400 line-through'
                             : chosen ? 'bg-amber-300 border-[#121117] text-slate-900 ring-4 ring-[#ff7aac]/40'
                             : 'bg-amber-400 border-[#121117] text-slate-900 hover:bg-amber-300'}`}>
-                          <span className="text-xs font-bold opacity-60 w-4">{LETTERS[i]}</span>
+                          {String(opt) !== LETTERS[i] && <span className="text-xs font-bold opacity-60 w-4">{LETTERS[i]}</span>}
                           <span>{opt}</span>
                         </button>
                       );

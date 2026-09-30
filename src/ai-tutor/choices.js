@@ -57,7 +57,8 @@ export function maybeChoices(problem, { rate = CHOICE_RATE, random = Math.random
   // Naming questions that already carry their own options (acute/obtuse,
   // parallel/perpendicular) always show them.
   if (Array.isArray(problem.choices) && problem.choices.length >= 2 && problem.choices.length <= 4) {
-    return { ...problem, mc: shuffle(problem.choices.map(String)), mcOwn: true };
+    const own = problem.choices.map(String);
+    return { ...problem, mc: problem.choicesFixed ? own : shuffle(own), mcOwn: true };
   }
   if (random() >= rate) return problem;
   const mc = buildChoices(problem);
