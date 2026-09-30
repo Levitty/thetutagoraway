@@ -32,7 +32,7 @@ import { TutorList, TutorProfile } from './site/Tutors.jsx';
 import SiteTeach from './site/Teach.jsx';
 import SiteWhy from './site/Why.jsx';
 import { HALF_HOUR_LESSONS } from './site/features.js';
-import { SiteIcon } from './site/ui.jsx';
+import { SiteIcon, SiteNav, SiteFooter } from './site/ui.jsx';
 import { CheckStart, CheckResult, getCheck, setFocus } from './site/Check.jsx';
 import { findMissingStep, skillLabel } from './site/missingStep.js';
 import { claimGuestCheck, markWantsSave, wantsSave } from './site/claim.js';
@@ -287,25 +287,24 @@ const Avatar = ({ src, name, size = 40 }) => (
 );
 
 // ============ PRIVACY POLICY PAGE ============
-const PrivacyPolicyPage = ({ onBack }) => (
-  <div className="min-h-screen bg-white">
-    <div className="max-w-3xl mx-auto px-5 py-12">
-      <button onClick={onBack} className="mb-6 text-sm text-emerald-600 hover:text-emerald-700 flex items-center gap-1">
-        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-        Back
-      </button>
-      <h1 className="text-3xl font-bold text-slate-900 mb-2">Privacy Policy</h1>
-      <p className="text-slate-500 text-sm mb-8">Last updated: 20 March 2026</p>
+// Styled as the public site (.tg-legal in site/site.css). The wording is the policy: change it only on purpose.
+const PrivacyPolicyPage = ({ onNavigate, onSignIn, user }) => (
+  <div className="tg">
+    <SiteNav onNavigate={onNavigate} onSignIn={onSignIn} user={user} onBrand={false} />
+    <div className="tg-legal">
+      <div className="kicker">Tutagora</div>
+      <h1 className="display">Privacy Policy</h1>
+      <p className="updated">Last updated: 20 March 2026</p>
 
-      <div className="prose prose-slate max-w-none space-y-6 text-slate-700 text-[15px] leading-relaxed">
+      <div className="body">
         <section>
-          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">1. Data Controller</h2>
+          <h2>1. Data Controller</h2>
           <p>Tutagora Ltd ("Tutagora", "we", "us") is the data controller responsible for your personal data. We are registered in Kenya and operate the platform at tutagora.com.</p>
           <p><strong>Contact:</strong> hello@tutagora.com | +254 759 240 692 | Nairobi, Kenya</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">2. Data We Collect</h2>
+          <h2>2. Data We Collect</h2>
           <p><strong>For all users:</strong> Full name, email address, password (stored securely hashed), profile photo, and role (student or tutor).</p>
           <p><strong>For students:</strong> Booking history, payment records, chat messages with tutors, AI learning progress (XP, streaks, practice data), and tutor reviews.</p>
           <p><strong>For tutors:</strong> Phone number, bio, qualifications, subjects taught, hourly rate, availability schedule, national ID document (for identity verification), teaching certificates, earnings data, and verification status.</p>
@@ -313,55 +312,56 @@ const PrivacyPolicyPage = ({ onBack }) => (
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">3. How We Use Your Data</h2>
+          <h2>3. How We Use Your Data</h2>
           <p>We process your personal data for the following purposes: providing the tutoring platform and matching students with tutors; processing payments for lesson bookings; verifying tutor identity and qualifications (KYC); sending booking confirmations and platform notifications; improving the platform experience; and complying with legal obligations.</p>
           <p>The legal basis for processing is: your consent (for account creation and sensitive data like ID documents), performance of a contract (for lesson bookings and payments), and legitimate interests (for platform security and improvement).</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">4. Third-Party Data Sharing</h2>
+          <h2>4. Third-Party Data Sharing</h2>
           <p>We share personal data with the following third-party service providers who process data on our behalf:</p>
           <p><strong>Supabase</strong> (database and authentication) - stores all user data. <strong>Paystack</strong> (payment processing, Nigeria/Global) - receives email and payment amounts for card transactions. <strong>Resend</strong> (email delivery, US) - receives names and email addresses for booking confirmations. <strong>Agora</strong> (video calls, Global) - processes audio/video streams during live lessons.</p>
           <p>We do not sell your personal data to any third party.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">5. Cross-Border Data Transfers</h2>
+          <h2>5. Cross-Border Data Transfers</h2>
           <p>Some of our service providers process data outside Kenya. Where data is transferred outside Kenya, we ensure appropriate safeguards are in place in accordance with the Kenya Data Protection Act, 2019. By using Tutagora, you consent to the transfer of your data to these providers for the purposes described above.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">6. Data Retention</h2>
+          <h2>6. Data Retention</h2>
           <p>We retain your personal data for as long as your account is active. If you delete your account, we will erase your personal data within 30 days, except where we are required to retain it by law (e.g., payment records for tax purposes, which are kept for 7 years). Tutor verification documents are deleted within 30 days of account deletion or verification rejection.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">7. Your Rights</h2>
+          <h2>7. Your Rights</h2>
           <p>Under the Kenya Data Protection Act, 2019 (Part IV), you have the right to: access your personal data; rectify inaccurate data; request erasure of your data (right to be forgotten); request a portable copy of your data; object to processing of your data; and withdraw consent at any time.</p>
           <p>To exercise any of these rights, email us at <strong>hello@tutagora.com</strong> or use the account settings in your dashboard. We will respond within 30 days.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">8. Data Security</h2>
+          <h2>8. Data Security</h2>
           <p>We implement technical and organizational measures to protect your data, including: password hashing, row-level database security restricting access to your own data, private storage with signed URLs for sensitive documents, and contact information filtering in messages to prevent data leaks.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">9. Children's Data</h2>
+          <h2>9. Children's Data</h2>
           <p>Tutagora is intended for users aged 13 and above. Students under 18 should have parental consent before creating an account. We do not knowingly collect data from children under 13.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">10. Complaints</h2>
+          <h2>10. Complaints</h2>
           <p>If you believe your data protection rights have been violated, you may lodge a complaint with the Office of the Data Protection Commissioner (ODPC) at <strong>complaints@odpc.go.ke</strong> or visit <strong>odpc.go.ke</strong>.</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-slate-900 mt-8 mb-3">11. Changes to This Policy</h2>
+          <h2>11. Changes to This Policy</h2>
           <p>We may update this privacy policy from time to time. We will notify you of significant changes by email or a prominent notice on the platform. Continued use after changes constitutes acceptance.</p>
         </section>
       </div>
     </div>
+    <SiteFooter onNavigate={onNavigate} />
   </div>
 );
 
@@ -7389,7 +7389,7 @@ function AppInner() {
 
   // Privacy Policy Page
   if (page === 'privacy') {
-    return <PrivacyPolicyPage onBack={() => handleNavigate('home')} />;
+    return <PrivacyPolicyPage onNavigate={handleNavigate} onSignIn={openSignIn} user={auth.user} />;
   }
 
   // Consulting Page
