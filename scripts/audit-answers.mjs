@@ -216,7 +216,9 @@ for (const [bank, S] of CHECKED) {
       if (p.solution && p.solution.answer != null && str(p.solution.answer).trim() && !checkAnswerMatch(str(p.solution.answer), p))
         note("E. worked solution's answer is marked wrong", key, `${q} => key "${a}", solution says "${p.solution.answer}"`);
       // A. The first hint should nudge, not give the answer away.
-      const firstHint = str((p.hints && p.hints[0]) || p.hint);
+      // General rules are not giveaways: "percent means out of 100",
+      // "(n − 2) × 180°", "back bearing = bearing ± 180°".
+      const firstHint = str((p.hints && p.hints[0]) || p.hint).replace(/out of 100|[×±]\s*180°/g, '');
       if (/^-?\d{2,}(\.\d+)?$/.test(a) && new RegExp(`(^|[^\\d.])${a.replace('.', '\\.')}([^\\d]|$)`).test(firstHint) && !q.includes(a))
         note('A. first hint gives the answer away', key, `${q} => ${a} | hint: ${firstHint}`);
       // E. Is the key actually right?
@@ -247,6 +249,8 @@ for (const [bank, S] of CHECKED) {
       // "9 metres" and "9" are the same answer, not another question's.
       const ov = mathValue(str(o.answer), true), pv = mathValue(str(p.answer), true);
       if (ov != null && pv != null && Math.abs(ov - pv) < 1e-9) continue;
+      // "7" for "7 o'clock" is the same answer from a six-year-old.
+      if (/o'clock$/.test(str(p.answer)) && str(p.answer).startsWith(`${str(o.answer)} `)) continue;
       if (checkAnswerMatch(str(o.answer), o) && checkAnswerMatch(str(o.answer), p) && !checkAnswerMatch(str(p.answer), o)) {
         note("C. accepts another question's answer", key, `"${p.question}" (key "${p.answer}") also accepts "${o.answer}"`); break;
       }

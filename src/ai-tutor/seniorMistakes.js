@@ -142,11 +142,7 @@ const RULES = {
     return /maximum value/.test(q) ? [[Math.min(a, b) * k, 'Check the value of P at EVERY corner and pick the biggest.'], [(a + b) * k, `(${k}, ${k}) is not in the region: x + y must be at most ${k}. Use the corners.`]]
       : [[a > b ? `(0, ${k})` : `(${k}, 0)`, 'Work out P at each corner: the corner with the bigger coefficient wins.']];
   },
-  G11_LIMITS: (q) => {
-    const m = q.match(/lim\(x→(\d+)\) \((\d+)x \+ (\d+)\)/); if (!m) return [];
-    const [a, b] = [num(m[1]), num(m[2])];
-    return [[a * b, 'Substitute into the whole expression, including the added part.']];
-  },
+  // G11_LIMITS: its mistakes are written into each question (problemGenerators.js).
   G11_DIFF_FIRST_PRINCIPLES: (q) => {
     let m;
     if ((m = q.match(/f\(x\) = (\d*)x\^(\d+) from first principles/))) { const a = num(m[1] || 1), n = num(m[2]);

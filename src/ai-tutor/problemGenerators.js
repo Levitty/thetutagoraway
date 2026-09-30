@@ -104,7 +104,7 @@ const linesQuestion = (bank) => {
     hint: 'Parallel lines run side by side and never meet (like rails). Perpendicular lines cross at a right angle (like a + sign).' };
 };
 const capacityQuestion = (wordProblems) => pick([
-  () => { const l = rand(1, 9) + pick([0, 0.25, 0.5, 0.75]); return { question: `How many millilitres are in ${l} litres?`, answer: String(Math.round(l * 1000)), hint: '1 litre = 1000 ml, so multiply the litres by 1000.' }; },
+  () => { let l = rand(1, 9) + pick([0, 0.25, 0.5, 0.75]); if (l === 1) l = 1.5; return { question: `How many millilitres are in ${l} litres?`, answer: String(Math.round(l * 1000)), hint: '1 litre = 1000 ml, so multiply the litres by 1000.' }; },
   () => { const ml = rand(1, 36) * 250; return { question: `How many litres are in ${ml.toLocaleString('en-US')} ml?`, answer: String(ml / 1000), hint: '1000 ml = 1 litre, so divide the millilitres by 1000.' }; },
   () => { const l = rand(1, 4), ml = rand(1, 9) * 100 + pick([0, 50]); return { question: `Write ${l} l ${ml} ml in millilitres.`, answer: String(l * 1000 + ml), hint: `${l} l = ${l * 1000} ml. Then add the ${ml} ml.` }; },
   ...(wordProblems ? [
@@ -287,7 +287,7 @@ const generators = {
   ])(),
 
   G5_MASS: () => pick([
-    () => { const k = rand(1, 9) + pick([0, 0.25, 0.5, 0.75]); return { question: `How many grams are in ${k} kg?`, answer: String(Math.round(k * 1000)), hint: '1 kg = 1000 g, so multiply the kilograms by 1000.' }; },
+    () => { let k = rand(1, 9) + pick([0, 0.25, 0.5, 0.75]); if (k === 1) k = 1.5; return { question: `How many grams are in ${k} kg?`, answer: String(Math.round(k * 1000)), hint: '1 kg = 1000 g, so multiply the kilograms by 1000.' }; },
     () => { const g = rand(1, 36) * 250; return { question: `How many kilograms are in ${g.toLocaleString('en-US')} g?`, answer: String(g / 1000), hint: '1000 g = 1 kg, so divide the grams by 1000.' }; },
     () => { const k = rand(1, 4), g = rand(1, 9) * 100 + pick([0, 50]); return { question: `Write ${k} kg ${g} g in grams.`, answer: String(k * 1000 + g), hint: `${k} kg = ${k * 1000} g. Then add the ${g} g.` }; },
     () => { const pk = pick([250, 500]), k = rand(2, 5); return { question: `A packet of sugar weighs ${pk} g. How many packets make ${k} kg?`, answer: String(k * 1000 / pk), hint: `${k} kg = ${k * 1000} g. How many ${pk} g packets fit into that?` }; },
@@ -298,7 +298,7 @@ const generators = {
   G6_CAPACITY: () => capacityQuestion(true),
 
   G6_MASS: () => pick([
-    () => { const t = rand(1, 9) + pick([0, 0.5, 0.25]); return { question: `How many kilograms are in ${t} tonnes?`, answer: String(Math.round(t * 1000)), hint: '1 tonne = 1000 kg.' }; },
+    () => { let t = rand(1, 9) + pick([0, 0.5, 0.25]); if (t === 1) t = 1.5; return { question: `How many kilograms are in ${t} tonnes?`, answer: String(Math.round(t * 1000)), hint: '1 tonne = 1000 kg.' }; },
     () => { const kg = rand(1, 30) * 500; return { question: `How many tonnes are in ${kg.toLocaleString('en-US')} kg?`, answer: String(kg / 1000), hint: '1000 kg = 1 tonne, so divide by 1000.' }; },
     () => { const bag = pick([50, 90, 100]), n = rand(10, 60); const t = bag * n / 1000; return { question: `A lorry carries ${t} tonnes of maize in ${bag} kg bags. How many bags is that?`, answer: String(n), hint: `${t} tonnes = ${bag * n} kg. Divide by ${bag}.` }; },
     () => { const bag = pick([2, 5]), n = rand(3, 12), pr = pick([150, 180, 200, 250]); return { question: `Flour costs KSh ${pr} for a ${bag} kg packet. How much do ${n * bag} kg cost?`, answer: String(n * pr), hint: `${n * bag} kg is ${n} packets of ${bag} kg.` }; },
@@ -903,9 +903,9 @@ const generators = {
     return pick([
       { question: `Convert ${n} (base 10) to binary.`, answer: n.toString(2), hint: `Divide by 2 again and again, keeping each remainder; read them from bottom to top.`,
         workedExample: makeWorkedExample('Convert 13 to binary', ['13 ÷ 2 = 6 remainder 1', '6 ÷ 2 = 3 remainder 0', '3 ÷ 2 = 1 remainder 1', '1 ÷ 2 = 0 remainder 1', 'Read remainders upward: 1101'], '1101') },
-      { question: `Convert ${n.toString(2)} (base 2) to base 10.`, answer: `${n}`, hint: 'The columns are worth 1, 2, 4, 8, 16, 32 from the right. Add the ones with a 1.' },
+      { question: `Convert ${n.toString(2)} (base 2) to base 10.`, answer: `${n}`, hint: 'The right-hand column is worth 1, and each column is worth 2 times the one to its right. Add the columns that have a 1.' },
       { question: `Convert ${n % 50 + 5} (base 10) to base 5.`, answer: (n % 50 + 5).toString(5), hint: 'Divide by 5 again and again, keeping each remainder.' },
-      { question: `Convert ${(n % 50 + 5).toString(5)} (base 5) to base 10.`, answer: `${n % 50 + 5}`, hint: 'The columns are worth 1, 5, 25 from the right.' },
+      { question: `Convert ${(n % 50 + 5).toString(5)} (base 5) to base 10.`, answer: `${n % 50 + 5}`, hint: 'The right-hand column is worth 1, and each column is worth 5 times the one to its right. Multiply each digit by its column, then add.' },
     ]);
   },
 
@@ -1520,10 +1520,55 @@ const generators = {
           accepts: [best, best.replace(' ', '')], hint: `Work out P at (0, 0), (${k}, 0) and (0, ${k}).` };
   },
 
+  // The informal limit behind differentiation (Cambridge 9709 P1: the gradient
+  // at a point as the limit of chord gradients; KCSE: first principles).
+  // No limits as x → ∞ and no continuity: neither syllabus asks for them.
   G11_LIMITS: () => {
-    const a = rand(1, 5), b = rand(1, 5);
-    return { question: `lim(x→${a}) (${b}x + ${a}) = ?`, answer: (b * a + a).toString(),
-      hint: 'For polynomial functions, substitute directly' };
+    const a = rand(1, 6), cube = !rand(0, 2);
+    const tan = cube ? 3 * a * a : 2 * a, curve = cube ? 'y = x³' : 'y = x²';
+    const zero = { when: '0', feedback: 'Putting h = 0 straight in gives 0/0, which is not an answer. Cancel the h first, then let h → 0.' };
+    const items = [
+      () => ({
+        question: cube
+          ? `On y = x³, the chord from x = ${a} to x = ${a} + h has gradient ${3 * a * a} + ${3 * a}h + h². What value does the gradient approach as h → 0?`
+          : `On y = x², the chord from x = ${a} to x = ${a} + h has gradient ${2 * a} + h. What value does the gradient approach as h → 0?`,
+        answer: String(tan), hint: 'Let h get smaller and smaller. What happens to every term that has an h in it?',
+        misconceptions: [{ when: String(cube ? a ** 3 : a * a), feedback: `That is the value of y at x = ${a}, not the gradient.` }],
+      }),
+      () => {
+        const k = rand(1, 3), K = k === 1 ? '' : k;
+        return {
+          question: `Find lim(h→0) [${K}(${a} + h)² − ${k * a * a}] / h.`, answer: String(2 * k * a),
+          hint: 'Expand the bracket and simplify the top. Divide every term by h, then let h → 0.',
+          misconceptions: [zero, { when: String(k * a * a), feedback: 'That is the height of the curve. The limit of the chord gradient is the gradient.' }],
+        };
+      },
+      () => {
+        const h = pick([0.1, 0.01]), dp = h === 0.1 ? 2 : 4;
+        const g = cube ? 3 * a * a + 3 * a * h + h * h : 2 * a + h;
+        return {
+          question: `On ${curve}, find the gradient of the chord from x = ${a} to x = ${Number((a + h).toFixed(2))}.`,
+          answer: String(Number(g.toFixed(dp))), hint: 'Gradient of a chord = change in y ÷ change in x.',
+          misconceptions: [{ when: String(tan), feedback: 'That is the gradient of the tangent at the first point. The chord joins two points, so its gradient is a little different.' }],
+        };
+      },
+      () => ({
+        question: cube ? `Find lim(x→${a}) (x³ − ${a ** 3}) / (x − ${a}).` : `Find lim(x→${a}) (x² − ${a * a}) / (x − ${a}).`,
+        answer: String(tan), hint: 'Putting x in straight away gives 0/0. Factorise the top first, then cancel the common factor.',
+        misconceptions: [{ when: '0', feedback: '0/0 is not an answer: it means factorise and cancel first.' }],
+      }),
+      () => ({
+        question: `As the second point of a chord slides along the curve towards x = ${a}, the chord gets closer and closer to which line at x = ${a}?`,
+        answer: 'tangent', accepts: ['tangent', 'the tangent', 'tangent line', 'a tangent', 'the tangent line'],
+        hint: 'Picture the chord as the two points it joins come together.',
+        misconceptions: [{ when: 'normal', feedback: 'The normal is at right angles to the curve. The chord ends up touching the curve at one point.' }],
+      }),
+    ];
+    // The idea question (index 4) comes up half as often as the working ones.
+    const item = pick([0, 0, 1, 1, 2, 2, 3, 3, 4].map(n => items[n]))();
+    // Every value here is exact, so mark it exactly: 12.01 (a chord) is not 12.
+    if (/^-?[\d.]+$/.test(item.answer)) item.verify = { kind: 'fraction', value: Number(item.answer) };
+    return item;
   },
 
   G11_DIFF_FIRST_PRINCIPLES: () => {
@@ -1531,7 +1576,7 @@ const generators = {
     const co = a * n, pw = n - 1;
     const d = pw === 1 ? `${co}x` : `${co}x^${pw}`;
     return rand(0, 1)
-      ? { question: `Differentiate f(x) = ${a === 1 ? '' : a}x^${n} from first principles. What is f'(x)?`, answer: d, accepts: [d, d.replace('^', '**')], hint: `The limit of [f(x+h) − f(x)] / h works out to ${n} × ${a} x^${pw}.` }
+      ? { question: `Differentiate f(x) = ${a === 1 ? '' : a}x^${n} from first principles. What is f'(x)?`, answer: d, accepts: [d, d.replace('^', '**')], hint: `Expand f(x + h), subtract f(x), divide every term by h, then let h → 0.` }
       : { question: `f(x) = ${a === 1 ? '' : a}x^${n}. Using the derivative from first principles, find the gradient f'(${x}).`, answer: String(co * x ** pw), hint: `First find f'(x): the limit of [f(x+h) − f(x)] / h. Then put x = ${x}.` };
   },
 
@@ -1627,7 +1672,7 @@ const generators = {
     const pctIn = { 1: '68', 2: '95', 3: '99.7' }[k];
     return rand(0, 1)
       ? { question: `Heights are normally distributed with mean ${m} and standard deviation ${sd}. About what percentage lie between ${m - k * sd} and ${m + k * sd}?`, answer: pctIn,
-          accepts: [pctIn, `${pctIn}%`], hint: 'The 68-95-99.7 rule: within 1, 2 and 3 standard deviations of the mean.' }
+          accepts: [pctIn, `${pctIn}%`], hint: 'Count how many standard deviations each end is from the mean, then recall the empirical rule for that many.' }
       : { question: `Marks are normally distributed with mean ${m} and standard deviation ${sd}. About what percentage are above ${m + k * sd}?`, answer: { 1: '16', 2: '2.5', 3: '0.15' }[k],
           accepts: [{ 1: '16', 2: '2.5', 3: '0.15' }[k], { 1: '16%', 2: '2.5%', 3: '0.15%' }[k], ...(k === 1 ? ['15.9', '15.85'] : [])], hint: `${pctIn}% lie within ${k} SD of the mean; the rest is split equally between the two tails.` };
   },

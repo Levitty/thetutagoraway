@@ -389,3 +389,31 @@ Every item has tap buttons and a picture (YoungPicture.jsx). Checked: 1,500
 draws per skill, right answer always a button, no wrong button marked right,
 no mistake feedback matching the answer; test:engine, audit:items (0
 findings) and the full answer audit (no findings in these skills).
+
+## Round 15: hints that gave the answer away, and Grade 11 limits
+Hints fixed (the first hint no longer contains the answer):
+- Place value (G5, G6, Cambridge LS_ROUNDING): "The digit 1 sits in the
+  1000s column" was the answer when the digit is 1. Now: "Which column is the
+  1 in?"; the column comes at the second hint.
+- Unit conversions (G5/G6 mass and capacity): "How many grams are in 1 kg?"
+  asked the fact the hint states (and read "1 litres"). The amount is never
+  exactly 1 now.
+- Number bases (G8): the hint listed the column values (16, 25). Now it says
+  how the columns grow.
+- Normal distribution (G11): the hint listed 68, 95 and 99.7. Now it asks how
+  many standard deviations each end is from the mean, then to recall the rule.
+- First principles (G11): the hint stated the derivative ("works out to
+  3 × 2 x^2"). Now it gives the method.
+Not giveaways, now skipped by the audit: general rules that contain the
+number ("percent means out of 100", "(n − 2) × 180°", "bearing ± 180°"), and
+"7" for "7 o'clock" (the same answer from a six-year-old).
+
+G11_LIMITS rebuilt (was "lim(x→a) (bx + c)", no syllabus basis): the limit
+of chord gradients (Cambridge 9709 P1; KCSE first principles). Five forms:
+the chord gradient 2a + h as h → 0; lim(h→0) [k(a + h)² − ka²]/h; a chord's
+gradient for h = 0.1 or 0.01 on y = x² or x³; lim(x→a) (x² − a²)/(x − a)
+and the cube version; the chord tends to the tangent. No limits at infinity,
+no continuity. Each form names its mistake (0 from 0/0, the height of the
+curve, the tangent's gradient for a chord's). Marked exactly, so the chord
+answer 12.01 is not accepted for the limit 12. Renamed "Limits (Chord to
+Tangent)".
