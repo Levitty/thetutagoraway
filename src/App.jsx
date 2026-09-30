@@ -4977,24 +4977,9 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
     { num: '3', title: 'Learn Online', desc: 'Join your live video lesson with screen sharing and chat' },
   ];
 
-  const testimonials = [
-    { name: 'James Mwangi', location: 'Nairobi', text: 'My son improved from C+ to A- in mathematics within 3 months. The tutor was patient and explained concepts clearly.', rating: 5 },
-    { name: 'Faith Wambui', location: 'Mombasa', text: 'I was struggling with physics but my tutor made it so easy to understand. Highly recommend Tutagora!', rating: 5 },
-    { name: 'Peter Odhiambo', location: 'Kisumu', text: 'Flexible scheduling and quality tutors. I can learn at my own pace after work.', rating: 4 },
-  ];
-
-  const stats = [
-    { value: '10,847', label: 'Lessons Completed' },
-    { value: '94%', label: 'Student Satisfaction' },
-    { value: '15 min', label: 'Avg Response Time' },
-    { value: '48 hrs', label: 'Money-back Guarantee' },
-  ];
-
   const faqs = [
     { q: 'How do I book a lesson?', a: 'Simply find a tutor, select an available time slot, and pay securely via card. You\'ll receive a confirmation with a link to join the video lesson.' },
-    { q: 'What if I\'m not satisfied with a lesson?', a: 'We offer a 48-hour money-back guarantee. If you\'re not happy with your first lesson with a tutor, we\'ll refund you in full.' },
     { q: 'How do video lessons work?', a: 'Lessons happen via our built-in video platform. Both you and your tutor can share screens, use a virtual whiteboard, and chat in real-time.' },
-    { q: 'Can I reschedule a lesson?', a: 'Yes! You can reschedule up to 24 hours before the lesson starts at no extra cost.' },
     { q: 'How do tutors get paid?', a: 'Tutors receive payments weekly via mobile money. We handle all the payment processing securely.' },
   ];
 
@@ -5006,10 +4991,6 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
         <div className="max-w-6xl mx-auto px-4 sm:px-5 pt-20 pb-12 sm:py-32 relative flex items-center justify-between">
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-full text-white/90 text-xs sm:text-sm mb-4 sm:mb-6">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              Over 10,000 lessons completed
-            </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
               Learn from Kenya's <span className="text-emerald-400">best tutors</span>
             </h1>
@@ -5148,47 +5129,6 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
         </section>
       )}
 
-      {/* Testimonials */}
-      <section className="py-12 sm:py-20 bg-slate-900">
-        <div className="max-w-6xl mx-auto px-4 sm:px-5">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">What our students say</h2>
-            <p className="text-slate-400 mt-2 sm:mt-3 text-sm sm:text-base">Join thousands of satisfied learners</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-slate-800 rounded-2xl p-6">
-                <Stars rating={t.rating} size={16} />
-                <p className="text-slate-300 mt-4 mb-6">"{t.text}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold">
-                    {t.name[0]}
-                  </div>
-                  <div>
-                    <div className="text-white font-medium">{t.name}</div>
-                    <div className="text-slate-400 text-sm">{t.location}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="py-10 sm:py-16 bg-emerald-500">
-        <div className="max-w-6xl mx-auto px-4 sm:px-5">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
-            {stats.map((s, i) => (
-              <div key={i} className="text-center">
-                <div className="text-2xl sm:text-4xl font-bold text-white">{s.value}</div>
-                <div className="text-emerald-100 mt-1 text-xs sm:text-base">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-5">
@@ -5218,8 +5158,7 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
       {/* CTA */}
       <section className="py-12 sm:py-20 bg-gradient-to-r from-emerald-500 to-emerald-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-5 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">Ready to start learning?</h2>
-          <p className="text-emerald-100 text-sm sm:text-lg mb-6 sm:mb-8">Join thousands of students already improving their grades</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8">Ready to start learning?</h2>
           <div className="flex flex-wrap justify-center gap-4">
             <button onClick={() => onNavigate('tutors')} className="px-8 py-4 bg-white text-emerald-600 font-semibold rounded-full hover:bg-emerald-50 transition-colors">
               Find a Tutor
