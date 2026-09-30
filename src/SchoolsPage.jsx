@@ -13,12 +13,13 @@ const WA_SOFTWARE = 'https://wa.me/254759240692?text=Hello%20Tutagora.%20I%20wou
 const SOFTWARE = 'https://school.tutagora.com/';
 
 // What the school software does, in the words of school.tutagora.com.
+// Each card has its own colour and icon.
 const SOFTWARE_POINTS = [
-  ['Fees on M-Pesa', 'Every payment matches its invoice on arrival and posts to the books.'],
-  ['Parents on WhatsApp', 'Balance, a Pay button, the statement and the report card. No app to install.'],
-  ['HR and payroll', 'Every member of staff, from the head teacher to the driver, on one record.'],
-  ['Timetables, exams and report cards', 'From the term\'s plan to a single mark.'],
-  ['The Advisor', 'A plain-language brief on WhatsApp every Monday. It drafts; people decide.'],
+  ['Fees on M-Pesa', 'Every payment matches its invoice on arrival and posts to the books.', 'wallet', 'c-green'],
+  ['Parents on WhatsApp', 'Balance, a Pay button, the statement and the report card. No app to install.', 'chat', 'c-blue'],
+  ['HR and payroll', 'Every member of staff, from the head teacher to the driver, on one record.', 'users', 'c-purple'],
+  ['Timetables, exams and report cards', 'From the term\'s plan to a single mark.', 'calendar', 'c-orange'],
+  ['The Advisor', 'A plain-language brief on WhatsApp every Monday. It drafts; people decide.', 'bell', 'c-pink'],
 ];
 const MAIL = 'mailto:hello@tutagora.com?subject=Tutagora%20for%20Schools%20%E2%80%94%20demo%20request';
 const PER_LEARNER = 50;
@@ -30,12 +31,15 @@ const EXAMPLE = [
   { n: 'Musa A.', gaps: ['Times tables 6–9', 'Equivalent fractions'] },
 ];
 
+// The page scrolls inside the app's container, so a plain #link does nothing.
+const jumpTo = (id) => (e) => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }); };
+
 export default function SchoolsPage({ onNavigate, onSignIn, user }) {
   const [size, setSize] = useState(300);
   const total = Math.max(0, Number(size) || 0) * PER_LEARNER;
 
   return (
-    <div className="tg t-indigo">
+    <div className="tg t-teal">
       <header className="shero">
         <SiteNav onNavigate={onNavigate} onSignIn={onSignIn || (() => onNavigate('dashboard'))} user={user} current="schools" />
         <div className="in one">
@@ -45,13 +49,15 @@ export default function SchoolsPage({ onNavigate, onSignIn, user }) {
             <p className="lead">Two tools from Tutagora: the software that keeps the whole school on one record, and a maths check that shows each learner's real level.</p>
           </div>
           <div className="choose">
-            <a className="pick soft" href="#software">
+            <a className="pick" href={SOFTWARE} target="_blank" rel="noreferrer">
+              <span className="ico c-teal"><SiteIcon name="gear" /></span>
               <span className="kicker">School software</span>
               <b>Run your school</b>
               <span>Fees, parents, staff, report cards and the books, on one record.</span>
               <span className="go">See the software <SiteIcon name="arrow" /></span>
             </a>
-            <a className="pick" href="#horeb">
+            <a className="pick" href="#horeb" onClick={jumpTo('horeb')}>
+              <span className="ico c-indigo"><SiteIcon name="target" /></span>
               <span className="kicker">HOREB maths check</span>
               <b>Know each learner's level</b>
               <span>Which foundations each learner is missing, and what to do tomorrow.</span>
@@ -61,16 +67,18 @@ export default function SchoolsPage({ onNavigate, onSignIn, user }) {
         </div>
       </header>
 
-      <section className="sec teal" id="software"><div className="in">
+      <section className="sec soft-sec" id="software"><div className="in">
         <div className="kicker">Tutagora school software</div>
         <h2 className="display" style={{ margin: '8px 0 14px' }}>One record for the whole school.</h2>
         <p className="sub">Built in Kenya for private primary and secondary schools and school groups. Learners, staff, fees, lessons and marks in one place, so every part of the school knows the rest.</p>
         <div className="points">
-          {SOFTWARE_POINTS.map(([t, d]) => <div key={t}><b>{t}</b><span>{d}</span></div>)}
+          {SOFTWARE_POINTS.map(([t, d, icon, c]) => (
+            <div key={t} className={c}><span className="ico"><SiteIcon name={icon} /></span><b>{t}</b><span>{d}</span></div>
+          ))}
         </div>
         <p className="price-note">A flat licence per term, per branch, with no charge per user. Set up in an afternoon from the spreadsheet you already have.</p>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          <a className="btn white" href={SOFTWARE} target="_blank" rel="noreferrer">See the software<SiteIcon name="arrow" /></a>
+          <a className="btn teal" href={SOFTWARE} target="_blank" rel="noreferrer">See the software<SiteIcon name="arrow" /></a>
           <a className="btn line" href={WA_SOFTWARE} target="_blank" rel="noreferrer"><SiteIcon name="chat" />Talk to us on WhatsApp</a>
         </div>
       </div></section>
@@ -89,7 +97,7 @@ export default function SchoolsPage({ onNavigate, onSignIn, user }) {
           <p className="sub">One lesson on the school's tablets, and you know exactly which foundations each learner is missing, and what to do about it tomorrow.</p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <a className="btn" href={WA} target="_blank" rel="noreferrer"><SiteIcon name="chat" />Book a HOREB demo</a>
-            <a className="btn line" href="#pricing">See pricing</a>
+            <a className="btn line" href="#pricing" onClick={jumpTo('pricing')}>See pricing</a>
           </div>
         </div>
         <div className="dash" aria-label="Example of the teacher view">
@@ -111,9 +119,9 @@ export default function SchoolsPage({ onNavigate, onSignIn, user }) {
         <div className="kicker">How HOREB works</div>
         <h2 className="display" style={{ margin: '8px 0 30px' }}>Set up in one lesson. Useful the next morning.</h2>
         <div className="steps">
-          <div className="st"><div className="n">01</div><h3>Create a class</h3><p>You get a join code. Learners type it once on a school tablet or on their phone at home.</p></div>
-          <div className="st"><div className="n">02</div><h3>Learners take the check</h3><p>About 10 minutes each. It adapts to every learner, so nobody sits through work that's too easy or too hard.</p></div>
-          <div className="st"><div className="n">03</div><h3>You see the gaps</h3><p>Who's stuck, on which foundation, with a 5-minute classroom move for each. Daily practice then closes the gaps.</p></div>
+          <div className="st"><span className="ico c-indigo"><SiteIcon name="users" /></span><div className="n">01</div><h3>Create a class</h3><p>You get a join code. Learners type it once on a school tablet or on their phone at home.</p></div>
+          <div className="st"><span className="ico c-indigo"><SiteIcon name="target" /></span><div className="n">02</div><h3>Learners take the check</h3><p>About 10 minutes each. It adapts to every learner, so nobody sits through work that's too easy or too hard.</p></div>
+          <div className="st"><span className="ico c-indigo"><SiteIcon name="chart" /></span><div className="n">03</div><h3>You see the gaps</h3><p>Who's stuck, on which foundation, with a 5-minute classroom move for each. Daily practice then closes the gaps.</p></div>
         </div>
       </div></section>
 
