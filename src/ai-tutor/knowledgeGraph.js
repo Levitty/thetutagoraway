@@ -419,7 +419,7 @@ const GRADE_11 = {
   G11_LINEAR_PROGRAMMING: skill('G11_LINEAR_PROGRAMMING', 'Linear Programming', 11, S.ALG, { pre: ['G8_INEQUALITIES', 'G8_LINEAR_GRAPHS'], w: 5 }),
 
   // Calculus
-  G11_LIMITS: skill('G11_LIMITS', 'Limits & Continuity', 11, S.ALG, { pre: ['G10_FUNCTIONS_ADV', 'G9_QUADRATIC_GRAPHS'], w: 5, crit: true }),
+  G11_LIMITS: skill('G11_LIMITS', 'Limits (Chord to Tangent)', 11, S.ALG, { pre: ['G10_FUNCTIONS_ADV', 'G9_QUADRATIC_GRAPHS'], w: 5, crit: true }),
   G11_DIFF_FIRST_PRINCIPLES: skill('G11_DIFF_FIRST_PRINCIPLES', 'Differentiation from First Principles', 11, S.ALG, { pre: ['G11_LIMITS'], w: 6, crit: true }),
   G11_DIFF_POWER_RULE: skill('G11_DIFF_POWER_RULE', 'Differentiation (Power Rule)', 11, S.ALG, { pre: ['G11_DIFF_FIRST_PRINCIPLES', 'G8_INDICES_LAWS'], w: 5, crit: true }),
   G11_DIFF_CHAIN_RULE: skill('G11_DIFF_CHAIN_RULE', 'Chain Rule', 11, S.ALG, { pre: ['G11_DIFF_POWER_RULE', 'G10_FUNCTIONS_ADV'], w: 6, crit: true }),

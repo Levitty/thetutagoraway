@@ -559,8 +559,8 @@ export function buildPlaceValueChart() {
     question: `In ${numStr}, what is the value of the highlighted digit (${digit})?`,
     answer: `${value}`, accepts: accepts(`${value}`, value.toLocaleString('en-US')),
     hints: hintLadder(
-      `The digit ${digit} sits in the ${place}s column.`,
-      `Its value is ${digit} × ${place}.`,
+      `Which column is the ${digit} in? Name the columns from the right: ones, tens, hundreds…`,
+      `The ${digit} is in the ${place}s column, so its value is ${digit} × ${place}.`,
     ),
     solution: { steps: [{ text: `That column is worth ${place}.`, expr: `${digit} × ${place} = ${value}` }], answer: `${value}` },
     misconceptions: [{ when: `${digit}`, feedback: `A digit's value depends on its COLUMN, not just the digit. Which column is the ${digit} in, and what is that column worth?` }],
