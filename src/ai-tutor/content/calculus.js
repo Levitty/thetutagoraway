@@ -135,7 +135,10 @@ export function buildFurtherDiff() {
       ],
       answer: `${value}`,
     },
-    misconceptions: [],
+    misconceptions: [
+      { when: `${A}`, feedback: `Use the chain rule: the ${k} inside the bracket comes out as a multiplier.` },
+      ...(kind === 'sin' ? [{ when: '0', feedback: 'The derivative of sin is cos, and cos(0) = 1.' }] : [{ when: `${A * k * k}`, feedback: 'Multiply by the inner number only once.' }]),
+    ],
     verify: { kind: 'derivative-at', f: (x) => evaluate(f, x), at: 0, value },
   };
 }
@@ -169,7 +172,10 @@ export function buildIntegrationSubstitution() {
       ],
       answer: `${value}`,
     },
-    misconceptions: [],
+    misconceptions: [
+      ...(evaluate(F, lo) !== 0 ? [{ when: `${evaluate(F, hi)}`, feedback: `That is the value at ${hi} only. Subtract the value at ${lo}.` }] : []),
+      ...(value !== 0 ? [{ when: `${-value}`, feedback: 'The sign is flipped: top limit minus bottom limit.' }] : []),
+    ],
     verify: { kind: 'definite', integrand: (x) => evaluate(integrand, x), a: lo, b: hi, value },
   };
 }
@@ -193,7 +199,9 @@ export function buildIntegrationByParts() {
     accepts: mode === 'xsin' ? accepts(F.ans, `${(k * Math.PI).toFixed(2)}`) : accepts(F.ans),
     hints: hintLadder(...F.h),
     solution: { steps: F.h.slice(0, 2).map(t => ({ text: t, expr: '' })).concat([{ text: 'Evaluate at the limits.', expr: F.ans }]), answer: F.ans },
-    misconceptions: [],
+    misconceptions: mode === 'xex' ? [{ when: (k * Math.E).toFixed(2), feedback: 'That is only the uv part. Subtract the integral of v du as well.' }]
+      : mode === 'lnx' ? [{ when: (k * Math.E).toFixed(2), feedback: 'x ln x is only the uv part. Subtract the integral of x × (1/x), which is x.' }]
+      : [{ when: `-${k}π`, feedback: 'Watch the sign: the integral of sin x is −cos x, and cos π = −1.' }],
     verify: { kind: 'definite', integrand: F.f, a: F.a, b: F.b, value: F.v },
   };
 }
