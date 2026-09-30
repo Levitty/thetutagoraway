@@ -45,45 +45,62 @@ export function buildAnglesLine() {
 
 // ---- polygon interior angle sum / each interior angle ----
 export function buildPolygonAngles() {
-  const askEach = coin();
-  // "Each angle" only for polygons whose angle is a whole number of degrees.
-  const n = askEach ? [3, 4, 5, 6, 8, 9, 10, 12][randInt(0, 7)] : randInt(3, 10);
-  const total = (n - 2) * 180;
-  const value = askEach ? total / n : total;
+  const regular = [3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36];
+  const mode = pick(['sum', 'each', 'exterior', 'sidesFromExterior', 'sidesFromInterior']);
+  const n = mode === 'sum' ? randInt(3, 20) : pick(regular);
+  const total = (n - 2) * 180, each = total / n, ext = 360 / n;
+  const Q = {
+    sum: [`Find the sum of the interior angles of a ${n}-sided polygon.`, total, 'Interior angle sum = (n − 2) × 180°.'],
+    each: [`Find each interior angle of a regular ${n}-sided polygon.`, each, 'Find the angle sum, then share it equally between the angles.'],
+    exterior: [`Find each exterior angle of a regular ${n}-sided polygon.`, ext, 'The exterior angles of any polygon add up to 360°.'],
+    sidesFromExterior: [`Each exterior angle of a regular polygon is ${ext}°. How many sides does it have?`, n, 'The exterior angles add up to 360°. How many of them are there?'],
+    sidesFromInterior: [`Each interior angle of a regular polygon is ${each}°. How many sides does it have?`, n, 'Find the exterior angle first (180° − interior), then use 360°.'],
+  }[mode];
+  const unitless = mode.startsWith('sides');
   return {
-    type: 'polygon-angles',
-    instruction: askEach ? 'Find each interior angle of the regular polygon.' : 'Find the sum of the interior angles.',
-    question: askEach
-      ? `Find each interior angle of a regular ${n}-sided polygon.`
-      : `Find the sum of the interior angles of a ${n}-sided polygon.`,
-    answer: `${value}`, accepts: accepts(`${value}`, `${value}°`),
-    hints: hintLadder('Interior angle sum = (n − 2) × 180°.',
-      `n = ${n}, so sum = ${total}°.`, askEach ? `Divide by ${n} (regular polygon).` : 'That is the total.'),
+    type: 'polygon-angles', instruction: 'Polygon angles.', question: Q[0],
+    answer: `${Q[1]}`, accepts: unitless ? accepts(`${Q[1]}`) : accepts(`${Q[1]}`, `${Q[1]}°`),
+    hints: hintLadder(Q[2]),
     solution: { steps: [
-      { text: 'Sum = (n − 2) × 180°.', expr: `(${n} − 2) × 180 = ${total}°` },
-      ...(askEach ? [{ text: `Each angle = sum ÷ ${n}.`, expr: `${total} ÷ ${n} = ${value}°` }] : [])], answer: `${value}` },
-    misconceptions: [], verify: { kind: 'fraction', value },
+      mode === 'sum' ? { text: 'Sum = (n − 2) × 180°.', expr: `(${n} − 2) × 180 = ${total}°` }
+      : mode === 'each' ? { text: 'Sum ÷ number of angles.', expr: `${total} ÷ ${n} = ${each}°` }
+      : mode === 'exterior' ? { text: '360° ÷ number of sides.', expr: `360 ÷ ${n} = ${ext}°` }
+      : mode === 'sidesFromExterior' ? { text: 'Sides = 360° ÷ exterior angle.', expr: `360 ÷ ${ext} = ${n}` }
+      : { text: 'Exterior = 180° − interior; sides = 360° ÷ exterior.', expr: `180 − ${each} = ${ext}; 360 ÷ ${ext} = ${n}` },
+    ], answer: `${Q[1]}` },
+    misconceptions: mode === 'sum' ? [{ when: `${n * 180}`, feedback: 'Take 2 away from the number of sides before you multiply: split the shape into triangles from one corner and count them.' }]
+      : mode === 'each' ? [{ when: `${ext}`, feedback: 'That is the exterior angle. The interior angle is 180° minus it.' }]
+      : mode === 'exterior' ? [{ when: `${each}`, feedback: 'That is the interior angle. The exterior angle is 180° minus it.' }] : [],
+    verify: { kind: 'fraction', value: Q[1] },
   };
 }
 
 // ---- Pythagoras (uses triples for clean answers) ----
 const TRIPLES = [[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25], [6, 8, 10], [9, 12, 15], [20, 21, 29]];
 export function buildPythagoras() {
-  const [a, b, c] = pick(TRIPLES);
+  let [a, b, c] = pick(TRIPLES); const k = pick([1, 1, 2, 3]);
+  if (c * k <= 60) { a *= k; b *= k; c *= k; }
+  if (coin()) [a, b] = [b, a];
   const findHyp = coin();
   const value = findHyp ? c : b;
+  const ctx = pick([
+    null, null,
+    findHyp ? `A matatu drives ${a} km east, then ${b} km north. How far is it from where it started, in a straight line (km)?` : `A ladder ${c} m long leans on a wall. Its foot is ${a} m from the wall. How high up the wall does it reach (m)?`,
+    findHyp ? `A rectangular shamba is ${a} m by ${b} m. How long is the path straight across it, corner to corner (m)?` : `A ${c} m rope goes from the top of a pole to a peg ${a} m from its foot. How tall is the pole (m)?`,
+  ]);
   return {
     type: 'pythagoras', instruction: 'Find the missing side.',
-    question: findHyp
+    question: ctx || (findHyp
       ? `A right-angled triangle has the two shorter sides ${a} and ${b}. Find the hypotenuse.`
-      : `A right-angled triangle has hypotenuse ${c} and one shorter side ${a}. Find the other side.`,
+      : `A right-angled triangle has hypotenuse ${c} and one shorter side ${a}. Find the other side.`),
     answer: `${value}`, accepts: accepts(`${value}`),
-    hints: hintLadder('Pythagoras: a² + b² = c² (c is the hypotenuse).',
+    hints: hintLadder('Pythagoras: a² + b² = c² (c is the longest side, opposite the right angle).',
       findHyp ? `${a}² + ${b}² = c².` : `${a}² + b² = ${c}², so b² = ${c}² − ${a}².`),
     solution: { steps: [
       { text: 'Apply a² + b² = c².', expr: findHyp ? `${a}² + ${b}² = ${a * a + b * b}` : `b² = ${c * c} − ${a * a} = ${value * value}` },
       { text: 'Square-root.', expr: `${value}` }], answer: `${value}` },
-    misconceptions: [{ when: findHyp ? `${a + b}` : `${c - a}`, feedback: 'You can’t just add/subtract the sides — square them, then square-root.' }],
+    misconceptions: [{ when: findHyp ? `${a + b}` : `${c - a}`, feedback: 'You can’t just add/subtract the sides — square them, then square-root.' },
+      { when: findHyp ? `${a * a + b * b}` : `${c * c - a * a}`, feedback: 'That is the side squared. Take the square root for the length.' }],
     verify: { kind: 'fraction', value },
   };
 }

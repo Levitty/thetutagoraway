@@ -176,29 +176,25 @@ export function buildIntegrationSubstitution() {
 
 // ---- integration by parts: ∫₀¹ k·x·eˣ dx = k ----
 export function buildIntegrationByParts() {
-  const k = randInt(2, 12);
-  const value = k;   // ∫₀¹ x eˣ dx = [(x−1)eˣ]₀¹ = 0 − (−1) = 1, scaled by k
+  const k = randInt(2, 12), mode = pick(['xex', 'lnx', 'xsin']);
+  const F = {
+    xex: { q: `${k}x·eˣ dx from 0 to 1`, v: k, ans: `${k}`, f: (x) => k * x * Math.exp(x), a: 0, b: 1,
+      h: ['By parts: ∫ u dv = uv − ∫ v du. Let u = x, dv = eˣ dx.', 'Then du = dx, v = eˣ, so ∫ x eˣ dx = x eˣ − ∫ eˣ dx = (x − 1)eˣ.', `Multiply by ${k} and evaluate (x − 1)eˣ from 0 to 1.`] },
+    lnx: { q: `${k} ln(x) dx from 1 to e`, v: k, ans: `${k}`, f: (x) => k * Math.log(x), a: 1, b: Math.E,
+      h: ['By parts with u = ln x, dv = dx: then du = 1/x dx, v = x.', '∫ ln x dx = x ln x − x.', `Multiply by ${k} and evaluate x ln x − x from 1 to e.`] },
+    xsin: { q: `${k}x·sin(x) dx from 0 to π`, v: k * Math.PI, ans: `${k}π`, f: (x) => k * x * Math.sin(x), a: 0, b: Math.PI,
+      h: ['By parts with u = x, dv = sin x dx: du = dx, v = −cos x.', '∫ x sin x dx = −x cos x + sin x.', `Multiply by ${k} and evaluate from 0 to π. Leave π in the answer.`] },
+  }[mode];
   return {
     type: 'integration-by-parts',
     instruction: 'Evaluate the definite integral using integration by parts.',
-    question: `Evaluate:   ∫ from 0 to 1 of ${k}x·eˣ dx`,
-    answer: `${value}`,
-    accepts: accepts(`${value}`),
-    hints: hintLadder(
-      'By parts: ∫ u dv = uv − ∫ v du.   Let u = x, dv = eˣ dx.',
-      'Then du = dx, v = eˣ, so ∫ x eˣ dx = x eˣ − ∫ eˣ dx = (x − 1)eˣ.',
-      `Multiply by ${k} and evaluate (x − 1)eˣ from 0 to 1.`,
-    ),
-    solution: {
-      steps: [
-        { text: 'Let u = x, dv = eˣ dx ⇒ du = dx, v = eˣ.', expr: '∫ x eˣ dx = x eˣ − ∫ eˣ dx' },
-        { text: 'Integrate.', expr: `${k}(x − 1)eˣ` },
-        { text: 'Evaluate from 0 to 1:  k·(0 − (−1)).', expr: `${value}` },
-      ],
-      answer: `${value}`,
-    },
+    question: `Evaluate:   ∫ ${F.q}`,
+    answer: F.ans,
+    accepts: mode === 'xsin' ? accepts(F.ans, `${(k * Math.PI).toFixed(2)}`) : accepts(F.ans),
+    hints: hintLadder(...F.h),
+    solution: { steps: F.h.slice(0, 2).map(t => ({ text: t, expr: '' })).concat([{ text: 'Evaluate at the limits.', expr: F.ans }]), answer: F.ans },
     misconceptions: [],
-    verify: { kind: 'definite', integrand: (x) => k * x * Math.exp(x), a: 0, b: 1, value },
+    verify: { kind: 'definite', integrand: F.f, a: F.a, b: F.b, value: F.v },
   };
 }
 

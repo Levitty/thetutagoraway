@@ -61,30 +61,74 @@ export function buildTriangleArea() {
 
 // ---- circle circumference ----
 export function buildCircumference() {
-  const r = randInt(2, 14);
-  const value = r2(2 * Math.PI * r);
+  // Radius or diameter with a calculator's π (2 d.p.), π = 22/7 with a whole
+  // answer, and the reverse: the distance round, find the radius.
+  const mode = pick(['r', 'd', 'r7', 'rev']);
+  if (mode === 'r7' || mode === 'rev') {
+    const k = randInt(1, 6), r = 7 * k, C = 44 * k;
+    const ctx = pick([['A bicycle wheel', 'cm', 'How far does the wheel roll in one full turn'], ['A round water tank lid', 'cm', 'What is the distance round its edge'], ['A circular flower bed at school', 'm', 'What is the distance round it']]);
+    return mode === 'r7'
+      ? { type: 'circumference', instruction: 'Use π = 22/7.', question: `${ctx[0]} has radius ${r} ${ctx[1]}. ${ctx[2]}? (π = 22/7)`,
+          answer: `${C}`, accepts: accepts(`${C}`),
+          hints: hintLadder('Circumference = 2πr.', `2 × 22/7 × ${r}: divide ${r} by 7 first.`),
+          solution: { steps: [{ text: 'Use C = 2πr with π = 22/7.', expr: `2 × 22/7 × ${r} = ${C}` }], answer: `${C}` },
+          misconceptions: [{ when: `${22 * r * r / 7}`, feedback: 'That is the area (πr²). The distance round is 2πr.' }, { when: `${22 * k}`, feedback: 'You used πr. The distance round is 2πr (or π × diameter).' }],
+          verify: { kind: 'fraction', value: C } }
+      : { type: 'circumference-reverse', instruction: 'Work backwards from the circumference.', question: `${ctx[0]} has a circumference of ${C} ${ctx[1]}. Using π = 22/7, find its radius.`,
+          answer: `${r}`, accepts: accepts(`${r}`),
+          hints: hintLadder('C = 2πr, so r = C ÷ (2π).', `2π = 44/7. Divide ${C} by 44/7.`),
+          solution: { steps: [{ text: 'r = C ÷ 2π.', expr: `${C} ÷ 44/7 = ${C} × 7/44 = ${r}` }], answer: `${r}` },
+          misconceptions: [{ when: `${2 * r}`, feedback: 'That is the diameter. The radius is half of it.' }],
+          verify: { kind: 'fraction', value: r } };
+  }
+  const x = mode === 'r' ? randInt(2, 25) : randInt(3, 40);
+  const C = mode === 'r' ? 2 * Math.PI * x : Math.PI * x;
+  const value = r2(C);
   return {
     type: 'circumference', instruction: 'Find the circumference (to 2 d.p.).',
-    question: `Find the circumference of a circle with radius ${r} cm. (2 d.p.)`,
+    question: `Find the circumference of a circle with ${mode === 'r' ? 'radius' : 'diameter'} ${x} cm. (2 d.p.)`,
     answer: `${value}`, accepts: accepts(`${value}`),
-    hints: hintLadder('Circumference = 2πr.', `2 × π × ${r}.`),
-    solution: { steps: [{ text: 'Use C = 2πr.', expr: `2 × π × ${r}` }, { text: 'Evaluate.', expr: `${value} cm` }], answer: `${value}` },
-    misconceptions: [{ when: numStr(Math.PI * r * r), feedback: 'That is the area (πr²). Circumference is 2πr.' }],
-    verify: { kind: 'fraction', value: 2 * Math.PI * r, tol: 0.05 },
+    hints: hintLadder(mode === 'r' ? 'Circumference = 2πr.' : 'Circumference = π × diameter.', mode === 'r' ? `2 × π × ${x}.` : `π × ${x}.`),
+    solution: { steps: [{ text: mode === 'r' ? 'Use C = 2πr.' : 'Use C = πd.', expr: mode === 'r' ? `2 × π × ${x}` : `π × ${x}` }, { text: 'Evaluate.', expr: `${value} cm` }], answer: `${value}` },
+    misconceptions: mode === 'r'
+      ? [{ when: numStr(Math.PI * x * x), feedback: 'That is the area (πr²). Circumference is 2πr.' }]
+      : [{ when: numStr(2 * Math.PI * x), feedback: `${x} cm is the diameter, not the radius: use π × d.` }],
+    verify: { kind: 'fraction', value: C, tol: 0.05 },
   };
 }
 
 // ---- circle area ----
 export function buildCircleArea() {
-  const r = randInt(2, 14);
+  const mode = pick(['r', 'd', 'r7', 'rev']);
+  if (mode === 'r7' || mode === 'rev') {
+    const k = randInt(1, 4), r = 7 * k, A = 154 * k * k;
+    const what = pick(['a round table top', 'a circular shamba plot', 'a round mat', 'a circular water tank base']);
+    return mode === 'r7'
+      ? { type: 'circle-area', instruction: 'Use π = 22/7.', question: `Find the area of ${what} with radius ${r} ${what.includes('shamba') ? 'm' : 'cm'}. (π = 22/7)`,
+          answer: `${A}`, accepts: accepts(`${A}`),
+          hints: hintLadder('Area = πr².', `22/7 × ${r} × ${r}: divide one ${r} by 7 first.`),
+          solution: { steps: [{ text: 'Use A = πr² with π = 22/7.', expr: `22/7 × ${r} × ${r} = ${A}` }], answer: `${A}` },
+          misconceptions: [{ when: `${44 * k}`, feedback: 'That is the circumference (2πr). Area is πr².' }, { when: `${22 * r * 2 / 7}`, feedback: 'r² means r × r, not r × 2.' }],
+          verify: { kind: 'fraction', value: A } }
+      : { type: 'circle-area-reverse', instruction: 'Work backwards from the area.', question: `The area of ${what} is ${A} ${what.includes('shamba') ? 'm²' : 'cm²'}. Using π = 22/7, find its radius.`,
+          answer: `${r}`, accepts: accepts(`${r}`),
+          hints: hintLadder('A = πr², so r² = A ÷ π.', `${A} ÷ 22/7 = ${A} × 7/22. Then take the square root.`),
+          solution: { steps: [{ text: 'r² = A ÷ π.', expr: `${A} × 7/22 = ${r * r}` }, { text: 'Square root.', expr: `r = ${r}` }], answer: `${r}` },
+          misconceptions: [{ when: `${r * r}`, feedback: 'That is r². Take the square root to find r.' }],
+          verify: { kind: 'fraction', value: r } };
+  }
+  const x = mode === 'r' ? randInt(2, 20) : 2 * randInt(2, 15);
+  const r = mode === 'r' ? x : x / 2;
   const value = r2(Math.PI * r * r);
   return {
     type: 'circle-area', instruction: 'Find the area (to 2 d.p.).',
-    question: `Find the area of a circle with radius ${r} cm. (2 d.p.)`,
+    question: `Find the area of a circle with ${mode === 'r' ? 'radius' : 'diameter'} ${x} cm. (2 d.p.)`,
     answer: `${value}`, accepts: accepts(`${value}`),
-    hints: hintLadder('Area = πr².', `π × ${r}².`, `π × ${r * r}.`),
-    solution: { steps: [{ text: 'Use A = πr².', expr: `π × ${r}²` }, { text: 'Evaluate.', expr: `${value} cm²` }], answer: `${value}` },
-    misconceptions: [{ when: numStr(2 * Math.PI * r), feedback: 'That is the circumference (2πr). Area is πr².' }],
+    hints: hintLadder('Area = πr².', mode === 'r' ? `π × ${r}².` : `The radius is half the diameter: ${r} cm.`),
+    solution: { steps: [...(mode === 'd' ? [{ text: 'Radius = diameter ÷ 2.', expr: `${x} ÷ 2 = ${r}` }] : []), { text: 'Use A = πr².', expr: `π × ${r}²` }, { text: 'Evaluate.', expr: `${value} cm²` }], answer: `${value}` },
+    misconceptions: mode === 'r'
+      ? [{ when: numStr(2 * Math.PI * r), feedback: 'That is the circumference (2πr). Area is πr².' }]
+      : [{ when: numStr(Math.PI * x * x), feedback: `${x} cm is the diameter. Halve it to get the radius first.` }],
     verify: { kind: 'fraction', value: Math.PI * r * r, tol: 0.05 },
   };
 }

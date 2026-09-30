@@ -289,3 +289,63 @@ translated text checked by a teacher.
 
 Checks: `npm run audit:items` (47,850 items: 0 findings), engine tests pass,
 full answer audit re-run.
+
+## Round 12: questions that repeat
+The audit flagged skills where 60 questions held fewer than 15 different ones
+(some had only 3: "If sin θ = 3/5, find cos θ" with three fractions). A child
+practising those sees the same question again within minutes and can learn
+the answer, not the method.
+
+Before: 26 skills below 15 different questions in 60, 44 below 20.
+After: 1 below 15, 5 below 20.
+
+Fixed in two ways:
+- **Wider numbers** where the range was needlessly narrow (circle radius
+  2-14, dy/dx = kx with k 2-5, binary up to 15, squares up to 15).
+- **New question forms**, which also teach better, since the reverse question
+  tests understanding rather than a remembered pattern:
+  - logs: log₂(32) = ?, log₂(x) = 5, 2^x = 32, log(1/8)
+  - circles: radius or diameter, π = 22/7 with whole answers, circumference
+    given → radius, area given → radius (bicycle wheels, tank lids, shamba)
+  - squares and roots: 0.3² (children write 0.9), 30², √(4/9), side from area
+  - cubes: volume of a box, edge from volume, ∛(−27)
+  - indices: 2^0, 2^? = 32, 2^−3
+  - Pythagoras: scaled triangles; a matatu's route, a ladder, a shamba diagonal
+  - polygons: exterior angles, sides from an exterior or interior angle
+  - arrangements: class officers, letters of KENYA, n!; selections: teams,
+    handshakes
+  - trig: all six ratios from Pythagorean triples, negative values in all
+    four quadrants, cleared equations (2sin θ = 1), tan 2θ, period and
+    max/min of y = a sin(kx) + d
+  - statistics: binomial mean, variance, P(X ≤ 1); a missing probability;
+    E(X) from a table
+  - partial fractions with any two linear factors; simultaneous equations
+    x − y, xy; surds both ways; bases 2 and 5 both ways; prime factors built
+    from primes (up to 400) and the reverse
+  - congruence with measurements (SSS/SAS/ASA/RHS), matching sides and
+    angles; symmetry: rotational order and capital letters; scatter graphs:
+    Kenyan contexts, reading a line of best fit, outliers
+  - Grade 1-3: coins of 1, 5, 10 and 20 shillings and mixed coins; 12 more
+    straight/curved objects (sugarcane, chapati, sufuria); clock-hand turns
+    from any quarter. The young lesson screens are unchanged.
+
+The rewritten maths generators were checked by an independent calculation
+from the question text (10,000 questions: 0 wrong), and every key marks itself
+right. The fact-based ones (congruence, symmetry, constructions, lines) were
+checked by reading each fact.
+
+Found on the way:
+- E(X) = 2.1 accepted 2.0625, and a space diagonal of 9.90 (shown as "9.9")
+  accepted 9.85: the rounding margin again. Exact keys now carry their exact
+  value; 2-d.p. keys keep both places.
+- The audit expected "9 cm" to be right for "How many metres are in 900 cm?".
+  Wrong units are rejected on purpose now, so the audit only tries the unit
+  the question asks for.
+The 5 still under 20 are small by nature (placing -9 to 9 on a number line,
+half and quarter of small numbers for Grade 2, the fixed facts of
+constructions and induction).
+- Final full audit: the low-variety section is empty. Two more margin gaps
+  fixed (a 4-d.p. key written "0.041" accepted 0.0413; "4 laps of 400 m =
+  1.6 km" accepted 1.65). Left as is: "12" accepted for "12 o'clock" in
+  Grades 1-2, and hints that state a rule whose number happens to be the
+  answer (the 68-95-99.7 rule, "the 1s column").

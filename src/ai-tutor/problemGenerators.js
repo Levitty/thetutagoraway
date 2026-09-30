@@ -24,6 +24,8 @@ const isPrime = (n) => { if (n < 2) return false; for (let i = 2; i * i <= n; i+
 const primeFactorize = (n) => { const f = []; let d = 2; let num = n; while (num > 1) { while (num % d === 0) { f.push(d); num /= d; } d++; } return f; };
 const simplifyFraction = (n, d) => { const g = gcd(Math.abs(n), Math.abs(d)); return [n / g, d / g]; };
 const roundTo = (n, dp) => Number(n.toFixed(dp));
+// A 2-d.p. key keeps both places (9.90, not 9.9) so marking uses the right margin; whole numbers stay whole.
+const dp2 = (v) => (Math.abs(v - Math.round(v)) < 1e-9 ? String(Math.round(v)) : v.toFixed(2));
 
 // Format fraction answer, handling improper fractions
 const formatFraction = (num, den) => {
@@ -66,6 +68,18 @@ const LINES_G5 = [
   { q: 'A line that goes straight up and down, like a flag pole, is horizontal or vertical?', a: 'vertical' },
   { q: 'Perpendicular lines meet at an angle of how many degrees?', a: '90', acc: ['90', '90°', 'right angle'] },
   { q: 'Where two perpendicular lines cross, how many right angles are made?', a: '4' },
+  { q: 'The two long edges of a ruler are parallel or perpendicular?', a: 'parallel' },
+  { q: 'The lines on a page of an exercise book are parallel or perpendicular?', a: 'parallel' },
+  { q: 'A goal post and the ground it stands on meet at a right angle. Are they parallel or perpendicular?', a: 'perpendicular' },
+  { q: 'The two edges of a straight road are parallel or perpendicular?', a: 'parallel' },
+  { q: 'In a plus sign (+), the two lines are parallel or perpendicular?', a: 'perpendicular' },
+  { q: 'In the letter X, the two lines cross but not at a right angle. Are they parallel, perpendicular or intersecting?', a: 'intersecting' },
+  { q: 'In the letter L, the two lines are parallel or perpendicular?', a: 'perpendicular' },
+  { q: 'In the equals sign (=), the two lines are parallel or perpendicular?', a: 'parallel' },
+  { q: 'The edge of a table top and a table leg meet at a right angle. Are they parallel or perpendicular?', a: 'perpendicular' },
+  { q: 'A wall and the floor of a classroom meet. Are they parallel or perpendicular?', a: 'perpendicular' },
+  { q: 'The surface of still water in a basin is horizontal or vertical?', a: 'horizontal' },
+  { q: 'A plumb line (a string with a weight hanging from it) is horizontal or vertical?', a: 'vertical' },
 ];
 const LINES_G6 = [
   { q: 'The opposite sides of a rectangle are parallel or perpendicular?', a: 'parallel' },
@@ -74,6 +88,14 @@ const LINES_G6 = [
   { q: 'How many pairs of parallel sides does a trapezium have?', a: '1' },
   { q: 'How many pairs of parallel sides does a parallelogram have?', a: '2' },
   { q: 'A horizontal line and a vertical line meet. Are they parallel or perpendicular?', a: 'perpendicular' },
+  { q: 'How many pairs of parallel sides does a square have?', a: '2' },
+  { q: 'How many pairs of parallel sides does a kite have?', a: '0', acc: ['0', 'none', 'zero'] },
+  { q: 'How many pairs of parallel sides does a rhombus have?', a: '2' },
+  { q: 'How many pairs of parallel sides does a regular hexagon have?', a: '3' },
+  { q: 'How many pairs of parallel sides does a triangle have?', a: '0', acc: ['0', 'none', 'zero'] },
+  { q: 'Which quadrilateral has exactly one pair of parallel sides: a trapezium or a parallelogram?', a: 'trapezium', acc: ['trapezium', 'a trapezium'] },
+  { q: 'The diagonals of a square cross at a right angle. Are they perpendicular or parallel?', a: 'perpendicular' },
+  { q: 'Two lines are both perpendicular to the same line. Are they parallel or perpendicular to each other?', a: 'parallel' },
 ];
 const linesQuestion = (bank) => {
   const t = pick(bank);
@@ -320,10 +342,13 @@ const generators = {
   },
 
   G5_PICTOGRAPHS: () => {
-    const val = pick([2, 5, 10]);
-    const symbols = rand(3, 8);
-    return { question: `In a pictograph, each symbol = ${val} items. If there are ${symbols} symbols, how many items?`, answer: (val * symbols).toString(),
-      hint: `Each symbol stands for ${val}, so multiply: ${symbols} × ${val}.` };
+    const val = pick([2, 4, 5, 10, 20, 50]), sym = rand(2, 9), half = val % 2 === 0 && rand(0, 1);
+    const thing = pick(['mangoes', 'learners', 'books', 'bags of maize', 'cows', 'litres of milk']);
+    return pick([
+      { question: `In a pictograph, each symbol stands for ${val} ${thing}. There are ${sym} symbols${half ? ' and a half symbol' : ''}. How many ${thing} is that?`, answer: `${val * sym + (half ? val / 2 : 0)}`, hint: `Each whole symbol stands for ${val}${half ? '; half a symbol stands for half as many' : ''}.` },
+      { question: `In a pictograph, each symbol stands for ${val} ${thing}. How many symbols show ${val * sym} ${thing}?`, answer: `${sym}`, hint: `How many lots of ${val} make ${val * sym}?` },
+      { question: `A pictograph uses one symbol for ${val} ${thing}. Monday has ${sym} symbols and Tuesday has ${sym + 2}. How many more ${thing} on Tuesday?`, answer: `${2 * val}`, hint: 'Count the extra symbols first, then multiply.' },
+    ]);
   },
 
   // ======================== GRADE 6 ========================
@@ -481,13 +506,16 @@ const generators = {
 
   G6_SYMMETRY: () => {
     const n = rand(5, 12);
-    const shapes = [{ s: 'square', l: 4 }, { s: 'equilateral triangle', l: 3 }, { s: 'rectangle', l: 2 }, { s: 'circle', l: 'infinite' }, { s: 'isosceles triangle', l: 1 },
-      { s: 'scalene triangle', l: 0 }, { s: 'rhombus', l: 2 }, { s: 'kite', l: 1 }, { s: 'parallelogram', l: 0 }, { s: 'regular pentagon', l: 5 }, { s: 'regular hexagon', l: 6 }, { s: 'regular octagon', l: 8 },
-      { s: `regular polygon with ${n} sides`, l: n }];
-    const shape = pick(shapes);
-    const accepts = shape.l === 'infinite' ? ['infinite', 'infinitely many', 'infinity', 'unlimited', 'countless', 'many', 'endless', '∞'] : shape.l === 0 ? ['0', 'none', 'zero', 'no lines'] : undefined;
-    return { question: `How many lines of symmetry does a ${shape.s} have?`, answer: shape.l.toString(), ...(accepts ? { accepts } : {}),
-      hint: 'A line of symmetry folds the shape onto itself exactly. Try folding it in your head — count every fold that works.' };
+    const shapes = [{ s: 'square', l: 4, r: 4 }, { s: 'equilateral triangle', l: 3, r: 3 }, { s: 'rectangle', l: 2, r: 2 }, { s: 'isosceles triangle', l: 1, r: 1 },
+      { s: 'scalene triangle', l: 0, r: 1 }, { s: 'rhombus', l: 2, r: 2 }, { s: 'kite', l: 1, r: 1 }, { s: 'parallelogram', l: 0, r: 2 }, { s: 'regular pentagon', l: 5, r: 5 },
+      { s: 'regular hexagon', l: 6, r: 6 }, { s: 'regular octagon', l: 8, r: 8 }, { s: `regular polygon with ${n} sides`, l: n, r: n }];
+    const letters = [['A', 1], ['H', 2], ['M', 1], ['T', 1], ['X', 2], ['E', 1], ['B', 1], ['F', 0], ['N', 0], ['Z', 0], ['W', 1], ['U', 1]];
+    return pick([
+      () => { const sh = pick([...shapes, { s: 'circle', l: 'infinite' }]); const acc = sh.l === 'infinite' ? ['infinite', 'infinitely many', 'infinity', 'unlimited', 'countless', 'many', 'endless', '∞'] : sh.l === 0 ? ['0', 'none', 'zero', 'no lines'] : undefined;
+        return { question: `How many lines of symmetry does a ${sh.s} have?`, answer: String(sh.l), ...(acc ? { accepts: acc } : {}), hint: 'A line of symmetry folds the shape onto itself exactly. Try folding it in your head: count every fold that works.' }; },
+      () => { const sh = pick(shapes); return { question: `What is the order of rotational symmetry of a ${sh.s}?`, answer: String(sh.r), hint: 'Turn it round once. How many times does it look exactly the same (the start counts once)?' }; },
+      () => { const [L, k] = pick(letters); return { question: `How many lines of symmetry does the capital letter ${L} have?`, answer: String(k), ...(k === 0 ? { accepts: ['0', 'none', 'zero'] } : {}), hint: 'Imagine folding the letter. Does one half land exactly on the other?' }; },
+    ])();
   },
 
   G6_PERIMETER: () => {
@@ -583,13 +611,15 @@ const generators = {
   },
 
   G7_PRIME_FACTORIZATION: () => {
-    const nums = [12, 18, 24, 30, 36, 40, 42, 48, 54, 60, 72, 84, 90, 96, 100, 120];
-    const n = pick(nums);
-    const f = primeFactorize(n);
-    return { question: `Write ${n} as a product of prime factors`, answer: f.join('×'),
-      hint: `Keep dividing ${n} by the smallest prime that fits (2, then 3, then 5…) until you reach 1.`,
-      accepts: [f.join('×'), f.join('*'), f.join(' × '), f.join(' x ')],
-      workedExample: makeWorkedExample('Prime factorization of 60', ['60 ÷ 2 = 30', '30 ÷ 2 = 15', '15 ÷ 3 = 5', '5 is prime'], '2×2×3×5') };
+    // Build the number from primes, so every size and shape appears.
+    const pool = [2, 2, 2, 3, 3, 5, 7, 11];
+    let f; do { f = Array.from({ length: rand(2, 5) }, () => pick(pool)).sort((a, b) => a - b); } while (f.reduce((p, x) => p * x, 1) > 400);
+    const n = f.reduce((p, x) => p * x, 1);
+    return rand(0, 3)
+      ? { question: `Write ${n} as a product of prime factors.`, answer: f.join('×'), accepts: [f.join('×'), f.join('*'), f.join(' × '), f.join(' x ')],
+          hint: `Keep dividing ${n} by the smallest prime that fits (2, then 3, then 5…) until you reach 1.`,
+          workedExample: makeWorkedExample('Prime factorization of 60', ['60 ÷ 2 = 30', '30 ÷ 2 = 15', '15 ÷ 3 = 5', '5 is prime'], '2×2×3×5') }
+      : { question: `A number is ${f.join(' × ')}. What is the number?`, answer: `${n}`, hint: 'Multiply the primes together.' };
   },
 
   G7_GCD: () => {
@@ -660,9 +690,13 @@ const generators = {
   },
 
   G7_SQUARES_EXT: () => {
-    const n = rand(2, 20);
-    return { question: `${n}² = ?`, answer: (n * n).toString(),
-      hint: `Squaring means multiplying a number by itself: ${n} × ${n}.` };
+    const n = rand(2, 30);
+    return pick([
+      { question: `${n}² = ?`, answer: `${n * n}`, hint: 'Squaring means multiplying a number by itself.' },
+      { question: `A square has sides of ${n} cm. What is its area in cm²?`, answer: `${n * n}`, hint: 'Area of a square = side × side.' },
+      { question: `Which whole number, squared, gives ${n * n}?`, answer: `${n}`, hint: 'Try numbers near your estimate and square them.' },
+      { question: `${n}² − ${n - 1}² = ?`, answer: `${2 * n - 1}`, hint: 'Work out each square, then subtract.' },
+    ]);
   },
 
   G7_SQUARE_ROOTS: () => {
@@ -738,7 +772,7 @@ const generators = {
     () => { const k = rand(5, 95) / 100; return { question: `How many metres are in ${k} km?`, answer: String(Math.round(k * 1000)), hint: '1 km = 1000 m, so multiply by 1000.' }; },
     () => { const m = rand(12, 48) / 10; return { question: `How many millimetres are in ${m} m?`, answer: String(Math.round(m * 1000)), hint: '1 m = 1000 mm (100 cm, and 10 mm in each cm).' }; },
     () => { const k = rand(2, 9) / 4; return { question: `How many centimetres are in ${k} km?`, answer: String(Math.round(k * 100000)), hint: '1 km = 1000 m = 100,000 cm.' }; },
-    () => { const lap = pick([200, 400]), n = rand(3, 12); return { question: `An athlete runs ${n} laps of a ${lap} m track. How many kilometres is that?`, answer: String(n * lap / 1000), hint: `${n} × ${lap} m = ${n * lap} m. Divide by 1000 for km.` }; },
+    () => { const lap = pick([200, 400]), n = rand(3, 12); return { question: `An athlete runs ${n} laps of a ${lap} m track. How many kilometres is that?`, answer: String(n * lap / 1000), verify: { kind: 'fraction', value: n * lap / 1000 }, hint: `${n} × ${lap} m = ${n * lap} m. Divide by 1000 for km.` }; },
   ])(),
 
   G7_PERIMETER: () => {
@@ -864,10 +898,14 @@ const generators = {
   },
 
   G8_NUMBER_BASES: () => {
-    const n = rand(2, 15);
-    return { question: `Convert ${n} (base 10) to binary`, answer: n.toString(2),
-      hint: `Divide ${n} by 2 again and again, keeping each remainder — then read the remainders from bottom to top.`,
-      workedExample: makeWorkedExample('Convert 13 to binary', ['13 ÷ 2 = 6 remainder 1', '6 ÷ 2 = 3 remainder 0', '3 ÷ 2 = 1 remainder 1', '1 ÷ 2 = 0 remainder 1', 'Read remainders upward: 1101'], '1101') };
+    const n = rand(2, 63);
+    return pick([
+      { question: `Convert ${n} (base 10) to binary.`, answer: n.toString(2), hint: `Divide by 2 again and again, keeping each remainder; read them from bottom to top.`,
+        workedExample: makeWorkedExample('Convert 13 to binary', ['13 ÷ 2 = 6 remainder 1', '6 ÷ 2 = 3 remainder 0', '3 ÷ 2 = 1 remainder 1', '1 ÷ 2 = 0 remainder 1', 'Read remainders upward: 1101'], '1101') },
+      { question: `Convert ${n.toString(2)} (base 2) to base 10.`, answer: `${n}`, hint: 'The columns are worth 1, 2, 4, 8, 16, 32 from the right. Add the ones with a 1.' },
+      { question: `Convert ${n % 50 + 5} (base 10) to base 5.`, answer: (n % 50 + 5).toString(5), hint: 'Divide by 5 again and again, keeping each remainder.' },
+      { question: `Convert ${(n % 50 + 5).toString(5)} (base 5) to base 10.`, answer: `${n % 50 + 5}`, hint: 'The columns are worth 1, 5, 25 from the right.' },
+    ]);
   },
 
   G8_EXPAND_BRACKETS: () => {
@@ -956,19 +994,18 @@ const generators = {
   },
 
   G8_CONGRUENCE: () => {
-    const c = pick([
-      { d: 'all three sides of one triangle are equal to the three sides of the other', a: 'SSS' },
-      { d: 'two sides and the angle between them are equal', a: 'SAS' },
-      { d: 'two angles and the side between them are equal', a: 'ASA' },
-      { d: 'two angles and a side not between them are equal', a: 'AAS' },
-      { d: 'both have a right angle, and the hypotenuse and one other side are equal', a: 'RHS' },
-      { d: null, a: 'AAA' },
-    ]);
-    if (!c.d) return { question: 'Which of these does NOT prove two triangles are congruent: SSS, SAS, AAA or RHS?', answer: 'AAA',
-      hint: 'Equal angles give the same SHAPE, but the triangles could be different sizes.' };
-    return { question: `Two triangles are congruent because ${c.d}. Which condition is this: SSS, SAS, ASA, AAS or RHS?`, answer: c.a,
-      accepts: c.a === 'ASA' ? ['ASA', 'AAS'] : c.a === 'AAS' ? ['AAS', 'ASA'] : [c.a],
-      hint: 'S stands for a side, A for an angle, R for a right angle, H for the hypotenuse.' };
+    const x = rand(3, 12), y = rand(3, 12), z = rand(4, 14), ang = rand(3, 14) * 10, ang2 = rand(2, 6) * 10; // ang2 ≤ 60 keeps the third angle positive
+    const S = ['ABC', 'PQR'];
+    return pick([
+      () => ({ question: `Triangle ABC has AB = ${x} cm, BC = ${y} cm and CA = ${z} cm. Triangle PQR has PQ = ${x} cm, QR = ${y} cm and RP = ${z} cm. Which condition proves they are congruent: SSS, SAS, ASA, AAS or RHS?`, answer: 'SSS', hint: 'Count what is given: sides (S) and angles (A).' }),
+      () => ({ question: `Triangle ABC has AB = ${x} cm, angle B = ${ang}° and BC = ${y} cm. Triangle PQR has PQ = ${x} cm, angle Q = ${ang}° and QR = ${y} cm. Which condition proves they are congruent: SSS, SAS, ASA, AAS or RHS?`, answer: 'SAS', hint: 'Is the angle between the two sides?' }),
+      () => ({ question: `Triangle ABC has angle A = ${ang2}°, AB = ${x} cm and angle B = ${ang2 + 20}°. Triangle PQR has angle P = ${ang2}°, PQ = ${x} cm and angle Q = ${ang2 + 20}°. Which condition proves they are congruent: SSS, SAS, ASA, AAS or RHS?`, answer: 'ASA', accepts: ['ASA', 'AAS'], hint: 'Is the side between the two angles?' }),
+      () => { const [a, b, c] = pick([[3, 4, 5], [5, 12, 13], [6, 8, 10], [8, 15, 17]]); return { question: `Two right-angled triangles both have a hypotenuse of ${c} cm and one other side of ${a} cm. Which condition proves they are congruent: SSS, SAS, ASA, AAS or RHS?`, answer: 'RHS', hint: 'R for the right angle, H for the hypotenuse, S for a side.' }; },
+      () => ({ question: `Triangle ${S[0]} is congruent to triangle ${S[1]} (in that order). AB = ${x} cm. How long is PQ, in cm?`, answer: String(x), hint: 'In ABC ≅ PQR, A matches P, B matches Q and C matches R.' }),
+      () => ({ question: `Triangle ${S[0]} is congruent to triangle ${S[1]} (in that order). Angle B = ${ang}°. What is angle Q, in degrees?`, answer: String(ang), hint: 'Congruent triangles have matching angles equal: B matches Q.' }),
+      () => ({ question: 'Which of these does NOT prove two triangles are congruent: SSS, SAS, AAA or RHS?', answer: 'AAA', hint: 'Equal angles give the same SHAPE, but the triangles could be different sizes.' }),
+      () => ({ question: `Two triangles have angles of ${ang2}°, ${ang2 + 30}° and ${180 - 2 * ang2 - 30}°, but one has sides twice as long as the other. Are they congruent? (yes or no)`, answer: 'no', accepts: ['no', 'not congruent'], hint: 'Congruent means exactly the same size as well as the same shape.' }),
+    ])();
   },
 
   G8_SIMILARITY: () => {
@@ -1029,20 +1066,13 @@ const generators = {
   // ======================== GRADE 9 ========================
 
   G9_SURDS_INTRO: () => {
-    const n = pick([8, 12, 18, 20, 27, 32, 45, 48, 50, 75]);
-    const factors = primeFactorize(n);
-    // Find simplified form
-    let outside = 1, inside = 1;
-    const counts = {};
-    factors.forEach(f => counts[f] = (counts[f] || 0) + 1);
-    Object.entries(counts).forEach(([base, count]) => {
-      outside *= Math.pow(parseInt(base), Math.floor(count / 2));
-      if (count % 2 === 1) inside *= parseInt(base);
-    });
-    return { question: `Simplify √${n}`, answer: outside === 1 ? `√${inside}` : `${outside}√${inside}`,
-      accepts: [outside === 1 ? `√${inside}` : `${outside}√${inside}`, `${outside}√${inside}`, `${outside}*√${inside}`],
-      workedExample: makeWorkedExample('Simplify √18', ['18 = 9 × 2', '√18 = √9 × √2', '= 3√2'], '3√2'),
-      hint: 'Find the largest perfect square factor' };
+    const s = pick([2, 3, 5, 6, 7]), k = rand(2, 7), n = k * k * s;
+    return pick([
+      { question: `Simplify √${n}`, answer: `${k}√${s}`, accepts: [`${k}√${s}`, `${k}*√${s}`], hint: `Look for the biggest square number that divides ${n}.` },
+      { question: `Write ${k}√${s} as the square root of a single number: √?`, answer: `${n}`, accepts: [`${n}`, `√${n}`], hint: `Put the ${k} inside the root as ${k}².` },
+      { question: `Simplify √${k * k * s} + √${s}`, answer: `${k + 1}√${s}`, hint: `Simplify √${k * k * s} first, then collect the √${s} terms like x's.` },
+      { question: `Simplify √${s} × √${s * k * k}`, answer: `${s * k}`, hint: '√a × √b = √(ab).' },
+    ]);
   },
 
   G9_SURDS_OPERATIONS: () => {
@@ -1104,10 +1134,14 @@ const generators = {
   },
 
   G9_SIMULTANEOUS_ADV: () => {
-    const x = rand(1, 5), y = rand(1, 5);
-    return { question: `Solve: x + y = ${x + y}, x² + y² = ${x * x + y * y}`, answer: `x=${x}, y=${y}`,
-      hint: `From the first equation y = ${x + y} − x. Substitute that into the second and solve the quadratic.`,
-      accepts: [`x=${x}, y=${y}`, `x=${y}, y=${x}`, `(${x},${y})`, `(${y},${x})`] };
+    const p = rand(2, 7); let q = rand(1, 6); while (q === p) q = rand(1, 6);
+    return rand(0, 1)
+      ? { question: `Solve: x + y = ${p + q}, x² + y² = ${p * p + q * q}. Give both solutions as (x, y).`, answer: `(${p}, ${q}) and (${q}, ${p})`,
+          accepts: [`(${p}, ${q}) and (${q}, ${p})`, `(${q}, ${p}) and (${p}, ${q})`],
+          hint: 'From the first equation y = (the sum) − x. Put that into the second and solve the quadratic.' }
+      : (() => { const [hi, lo] = p > q ? [p, q] : [q, p]; return { question: `Solve: x − y = ${hi - lo}, xy = ${hi * lo}. Give both solutions as (x, y).`, answer: `(${hi}, ${lo}) and (−${lo}, −${hi})`,
+          accepts: [`(${hi}, ${lo}) and (−${lo}, −${hi})`, `(−${lo}, −${hi}) and (${hi}, ${lo})`, `(${hi}, ${lo}) and (-${lo}, -${hi})`],
+          hint: 'From the first equation x = y + (the difference). Put that into xy and solve the quadratic: there are two answers.' }; })();
   },
 
   G9_VARIATION: () => {
@@ -1132,12 +1166,13 @@ const generators = {
   // Rewritten after the audit: every construction's answer used to be accepted
   // for every angle, and the answers were phrases no child types exactly.
   G9_CONSTRUCTION: () => pick([
-    () => { const a = pick([40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150]); return { question: `You bisect an angle of ${a}° with a ruler and compasses. What size is each half?`, answer: String(a / 2), hint: 'Bisect means cut exactly in half.' }; },
-    () => { const l = rand(3, 9) * 2; return { question: `The perpendicular bisector of a ${l} cm line cuts it into two equal parts. How long is each part?`, answer: String(l / 2), hint: 'A bisector cuts it exactly in half.' }; },
+    () => { const a = rand(4, 17) * 10; return { question: `You bisect an angle of ${a}° with a ruler and compasses. What size is each half?`, answer: String(a / 2), hint: 'Bisect means cut exactly in half.' }; },
+    () => { const l = rand(3, 15) * 2; return { question: `The perpendicular bisector of a ${l} cm line cuts it into two equal parts. How long is each part?`, answer: String(l / 2), hint: 'A bisector cuts it exactly in half.' }; },
     () => ({ question: 'A perpendicular bisector crosses the line at what angle, in degrees?', answer: '90', accepts: ['90', '90°', 'right angle'], hint: 'Perpendicular means at a right angle.' }),
     () => ({ question: 'Each angle of an equilateral triangle is how many degrees? (This is how you construct 60°.)', answer: '60', hint: 'The three equal angles add up to 180°.' }),
     () => ({ question: 'To construct 120°, you put two angles of how many degrees side by side?', answer: '60', hint: 'Which angle, used twice, makes 120°? It is the angle of an equilateral triangle.' }),
-    () => ({ question: 'To construct 30°, you construct 60° and then bisect it. To construct 45°, you construct which angle and bisect it?', answer: '90', accepts: ['90', '90°'], hint: 'Half of it must be 45°.' }),
+    () => { const [target, base] = pick([[30, 60], [45, 90], [15, 30], [22.5, 45]]); return { question: `To construct ${target}°, you construct one angle and bisect it. Which angle do you construct first?`, answer: String(base), accepts: [String(base), `${base}°`], hint: `Half of it must be ${target}°.` }; },
+    () => { const [t, a, b] = pick([[75, 60, 15], [105, 90, 15], [135, 90, 45], [150, 90, 60], [45, 30, 15]]); return { question: `To construct ${t}°, you can put ${a}° and another angle side by side. What is the other angle?`, answer: String(b), hint: 'The two angles add up to the one you want.' }; },
     () => ({ question: 'Which construction cuts an angle exactly in half: the angle bisector or the perpendicular bisector?', answer: 'angle bisector', accepts: ['angle bisector', 'the angle bisector'], hint: 'It is named after what it cuts.' }),
     () => ({ question: 'Which construction gives a line at 90° through the middle of another line: the angle bisector or the perpendicular bisector?', answer: 'perpendicular bisector', accepts: ['perpendicular bisector', 'the perpendicular bisector'], hint: 'Perpendicular means at 90°.' }),
   ])(),
@@ -1145,11 +1180,12 @@ const generators = {
   G9_LOCI: () => pick([
     () => ({ question: 'The locus of points the same distance from two fixed points is the perpendicular bisector or the angle bisector?', answer: 'perpendicular bisector', accepts: ['perpendicular bisector', 'the perpendicular bisector'], hint: 'Every such point is halfway between the two points, on a line at right angles to the line joining them.' }),
     () => ({ question: 'The locus of points the same distance from two lines that cross is the perpendicular bisector or the angle bisector?', answer: 'angle bisector', accepts: ['angle bisector', 'the angle bisector', 'angle bisectors'], hint: 'Points equally far from both lines sit on the line that halves the angle between them.' }),
-    () => { const r = rand(2, 9); return { question: `The locus of points ${r} cm from a fixed point is a circle. What is its radius, in cm?`, answer: String(r), hint: 'Every point is the same distance from the centre: that distance is the radius.' }; },
-    () => ({ question: 'The locus of points a fixed distance from a single point is a circle or a straight line?', answer: 'circle', accepts: ['circle', 'a circle'], hint: 'All the points are the same distance from the centre.' }),
-    () => { const r = rand(2, 8); return { question: `A goat is tied to a peg with a rope ${r} m long. The edge of the grass it can reach is a circle. What is its diameter, in m?`, answer: String(2 * r), hint: `The rope is the radius. Diameter = 2 × radius.` }; },
-    () => { const r = pick([2, 3, 4, 5, 10]); return { question: `A goat is tied to a peg with a rope ${r} m long. What area of grass can it reach? (π = 3.14)`, answer: (3.14 * r * r).toFixed(2), accepts: [(3.14 * r * r).toFixed(2), String(Number((3.14 * r * r).toFixed(2)))], hint: `Area of a circle = πr², with r = ${r}.` }; },
+    () => { const r = rand(2, 15); return { question: `The locus of points ${r} cm from a fixed point is a circle. What is its diameter, in cm?`, answer: String(2 * r), hint: 'Every point is the same distance from the centre: that distance is the radius.' }; },
+    () => { const r = rand(2, 12); return { question: `A goat is tied to a peg with a rope ${r} m long. The edge of the grass it can reach is a circle. What is its diameter, in m?`, answer: String(2 * r), hint: 'The rope is the radius. Diameter = 2 × radius.' }; },
+    () => { const r = pick([7, 14, 21, 28, 35]); return { question: `A goat is tied to a peg with a rope ${r} m long. What area of grass can it reach? (π = 22/7)`, answer: String(22 * r * r / 7), hint: `Area of a circle = πr², with r = ${r}.` }; },
+    () => { const d = rand(3, 12), l = rand(10, 30); return { question: `A path runs along a straight wall ${l} m long. Every point of the path is ${d} m from the wall, on one side. How long is the path, in m?`, answer: String(l), hint: 'Points a fixed distance from a straight line form a parallel line.' }; },
     () => ({ question: 'The locus of points 3 cm from a straight line (on both sides) is a pair of parallel lines or a circle?', answer: 'parallel lines', accepts: ['parallel lines', 'parallel', 'a pair of parallel lines', 'two parallel lines'], hint: 'On each side, the points form a line that never meets the first one.' }),
+    () => { const a = rand(4, 16) * 2; return { question: `Two water points are ${a} m apart. A tap is placed the same distance from both, on the line between them. How far is it from each, in m?`, answer: String(a / 2), hint: 'The same distance from two points: the perpendicular bisector.' }; },
   ])(),
 
   G9_CIRCLE_THEOREMS_INTRO: () => {
@@ -1234,24 +1270,33 @@ const generators = {
       ['the hours spent revising', 'the mistakes made in a test', 'negative'], ['the age of a car', 'its value', 'negative'],
       ['the temperature', 'sweater sales', 'negative'], ['the speed of a matatu', 'the time a journey takes', 'negative'],
       ['a pupil\'s house number', 'their height', 'none'], ['a person\'s shoe size', 'their exam score', 'none'],
+      ['the size of a shamba', 'the maize harvested', 'positive'], ['the number of workers', 'the time to finish a job', 'negative'],
+      ['the altitude of a town', 'its average temperature', 'negative'], ['the hours of sunshine', 'ice cream sales', 'positive'],
+      ['the price of a bag of flour', 'the number of bags sold', 'negative'], ['a learner\'s birth month', 'their maths mark', 'none'],
     ]);
     const acc = { positive: ['positive', 'positive correlation'], negative: ['negative', 'negative correlation'], none: ['none', 'no correlation', 'no', 'zero', 'no relationship'] }[c[2]];
-    if (rand(0, 3) === 0) {
-      const up = rand(0, 1);
-      return { question: `On a scatter graph, the line of best fit goes ${up ? 'up' : 'down'} from left to right. Is the correlation positive, negative or none?`, answer: up ? 'positive' : 'negative', accepts: up ? ['positive', 'positive correlation'] : ['negative', 'negative correlation'], hint: 'Up from left to right: both grow together (positive). Down: one grows as the other falls (negative).' };
-    }
-    return { question: `As ${c[0]} goes up, what happens to ${c[1]}? Is the correlation positive, negative or none?`, answer: c[2], accepts: acc,
-      hint: 'Both go up together: positive. One goes up while the other goes down: negative. No pattern: none.' };
+    const m = rand(2, 6), k = rand(3, 20), x = rand(4, 15);
+    return pick([
+      () => { const up = rand(0, 1); return { question: `On a scatter graph, the line of best fit goes ${up ? 'up' : 'down'} from left to right. Is the correlation positive, negative or none?`, answer: up ? 'positive' : 'negative', accepts: up ? ['positive', 'positive correlation'] : ['negative', 'negative correlation'], hint: 'Up from left to right: both grow together (positive). Down: one grows as the other falls (negative).' }; },
+      () => ({ question: `As ${c[0]} goes up, what happens to ${c[1]}? Is the correlation positive, negative or none?`, answer: c[2], accepts: acc, hint: 'Both go up together: positive. One goes up while the other goes down: negative. No pattern: none.' }),
+      () => ({ question: `A line of best fit is y = ${m}x + ${k}. Use it to estimate y when x = ${x}.`, answer: String(m * x + k), hint: `Put x = ${x} into the equation.` }),
+      () => ({ question: 'On a scatter graph, one point is far away from all the others. What is it called?', answer: 'outlier', accepts: ['outlier', 'an outlier', 'anomaly', 'an anomaly'], hint: 'It lies outside the pattern.' }),
+    ])();
   },
 
   // ======================== GRADE 10 ========================
 
   G10_LOGARITHMS_INTRO: () => {
-    const bases = [[2, 8, 3], [2, 16, 4], [3, 9, 2], [3, 27, 3], [5, 25, 2], [10, 100, 2], [10, 1000, 3]];
-    const [base, val, result] = pick(bases);
-    return { question: `log₍${base}₎(${val}) = ?`, answer: result.toString(),
-      workedExample: makeWorkedExample('log₍₂₎(8) = ?', ['We need: 2^? = 8', '2¹ = 2, 2² = 4, 2³ = 8', 'So log₍₂₎(8) = 3'], '3'),
-      hint: `${base}^? = ${val}` };
+    const base = pick([2, 3, 4, 5, 10]), maxE = { 2: 7, 3: 5, 4: 4, 5: 4, 10: 6 }[base];
+    const e = rand(1, maxE), val = base ** e;
+    return pick([
+      { question: `log₍${base}₎(${val}) = ?`, answer: `${e}`, hint: `${base} to what power gives ${val}?`,
+        workedExample: makeWorkedExample('log₍₂₎(8) = ?', ['We need: 2^? = 8', '2¹ = 2, 2² = 4, 2³ = 8', 'So log₍₂₎(8) = 3'], '3') },
+      { question: `log₍${base}₎(x) = ${e}. Find x.`, answer: `${val}`, hint: 'Rewrite the logarithm as a power of the base.' },
+      { question: `Solve ${base}^x = ${val}.`, answer: `${e}`, accepts: [`${e}`, `x = ${e}`], hint: `Count how many ${base}s multiply to make ${val}.` },
+      { question: `log₍${base}₎(1/${val}) = ?`, answer: `${-e}`, hint: 'One over a power is a negative power.' },
+      { question: `log₍${base}₎(${base}) + log₍${base}₎(1) = ?`, answer: '1', hint: 'What power of the base gives the base itself? What power gives 1?' },
+    ]);
   },
 
   G10_LOG_LAWS: () => {
@@ -1265,10 +1310,12 @@ const generators = {
   },
 
   G10_SURDS_ADV: () => {
-    const a = rand(1, 5), b = pick([2, 3, 5]);
-    return { question: `Rationalize: ${a}/√${b}`, answer: `${a}√${b}/${b}`,
-      accepts: [`${a}√${b}/${b}`, `(${a}√${b})/${b}`],
-      hint: 'Multiply top and bottom by √b' };
+    const b = pick([2, 3, 5, 6, 7, 10, 11]), a = rand(1, 12);
+    const g = gcd(a, b), top = a / g, bot = b / g;
+    const ans = bot === 1 ? `${top === 1 ? '' : top}√${b}` : `${top === 1 ? '' : top}√${b}/${bot}`;
+    return { question: `Rationalise the denominator: ${a}/√${b}`, answer: ans,
+      accepts: [ans, `${a}√${b}/${b}`, `(${a}√${b})/${b}`],
+      hint: `Multiply the top and the bottom by √${b}, then simplify.` };
   },
 
   G10_POLYNOMIALS: () => {
@@ -1286,13 +1333,15 @@ const generators = {
   },
 
   G10_PARTIAL_FRACTIONS: () => {
-    // N/((x+1)(x+2)) = A/(x+1) + B/(x+2). Cover-up: A = N at x=-1, B = N at x=-2.
-    // With constant numerator N: A = N, B = -N.
-    const n = rand(2, 9);
-    return { question: `Express ${n}/((x+1)(x+2)) as partial fractions A/(x+1) + B/(x+2). Find A and B.`,
-      answer: `A=${n}, B=${-n}`,
-      accepts: [`A=${n},B=${-n}`, `A=${n} B=${-n}`, `${n},${-n}`],
-      hint: 'Multiply through by the denominator, then substitute x = -1 and x = -2' };
+    // Choose the answer first: A/(x+p) + B/(x+q) = ((A+B)x + (Aq+Bp)) / ((x+p)(x+q)).
+    const p = rand(1, 5); let q = rand(1, 6); while (q === p) q = rand(1, 6);
+    const nz = () => { const v = rand(-6, 6); return v === 0 ? 1 : v; };
+    const A = nz(), B = nz(), X = A + B, K = A * q + B * p;
+    const num = X === 0 ? `${K}` : `${X === 1 ? '' : X === -1 ? '−' : X}x${K > 0 ? ` + ${K}` : K < 0 ? ` − ${-K}` : ''}`;
+    const bracket = (k) => `(x + ${k})`;
+    return { question: `Express (${num}) / (${bracket(p)}${bracket(q)}) as A/${bracket(p)} + B/${bracket(q)}. Find A and B.`,
+      answer: `A=${A}, B=${B}`, accepts: [`A=${A}, B=${B}`, `A=${A} B=${B}`, `${A},${B}`, `A = ${A}, B = ${B}`],
+      hint: `Multiply through by the denominator, then put x = −${p} to find A and x = −${q} to find B.` };
   },
 
   G10_SEQUENCES_ADV: () => {
@@ -1339,24 +1388,34 @@ const generators = {
   },
 
   G10_TRIG_IDENTITIES: () => {
-    const sinVal = pick(['3/5', '5/13', '8/17']);
-    const [n, d] = sinVal.split('/').map(Number);
-    const cosVal = Math.sqrt(d * d - n * n);
-    return { question: `If sin(θ) = ${sinVal}, find cos(θ) (first quadrant)`, answer: formatFraction(cosVal, d),
-      hint: 'sin²θ + cos²θ = 1' };
+    // Pythagorean triples give exact ratios; either leg can be "opposite".
+    let [a, b, c] = pick([[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25], [20, 21, 29], [9, 40, 41], [12, 35, 37], [11, 60, 61], [28, 45, 53], [33, 56, 65]]);
+    if (rand(0, 1)) [a, b] = [b, a];
+    const f = (n, d) => { const [x, y] = simplifyFraction(n, d); return y === 1 ? `${x}` : `${x}/${y}`; };
+    return pick([
+      { question: `θ is acute and sin(θ) = ${a}/${c}. Find cos(θ).`, answer: f(b, c), hint: 'sin²θ + cos²θ = 1, so cos θ = √(1 − sin²θ).' },
+      { question: `θ is acute and cos(θ) = ${a}/${c}. Find sin(θ).`, answer: f(b, c), hint: 'sin²θ + cos²θ = 1, so sin θ = √(1 − cos²θ).' },
+      { question: `θ is acute and sin(θ) = ${a}/${c}. Find tan(θ).`, answer: f(a, b), hint: 'Find cos θ first, then tan θ = sin θ ÷ cos θ.' },
+      { question: `θ is acute and cos(θ) = ${a}/${c}. Find tan(θ).`, answer: f(b, a), hint: 'Find sin θ first, then tan θ = sin θ ÷ cos θ.' },
+      { question: `θ is acute and tan(θ) = ${a}/${b}. Find cos(θ).`, answer: f(b, c), hint: 'Draw a right-angled triangle with those opposite and adjacent sides. Find the hypotenuse first.' },
+    ]);
   },
 
   G10_TRIG_EQUATIONS: () => {
-    const v = pick([
-      { f: 'sin', val: '0.5', a: 30 }, { f: 'sin', val: '√3/2', a: 60 }, { f: 'sin', val: '√2/2', a: 45 },
-      { f: 'cos', val: '0.5', a: 60 }, { f: 'cos', val: '√3/2', a: 30 }, { f: 'cos', val: '√2/2', a: 45 },
-      { f: 'tan', val: '1', a: 45 }, { f: 'tan', val: '√3', a: 60 },
-    ]);
-    const second = v.f === 'sin' ? 180 - v.a : v.f === 'cos' ? 360 - v.a : 180 + v.a;
-    const range = v.f === 'sin' ? '0° ≤ θ ≤ 180°' : '0° ≤ θ ≤ 360°';
-    return { question: `Solve ${v.f}(θ) = ${v.val} for ${range}.`, answer: `${v.a}° and ${second}°`,
-      accepts: [`${v.a}° and ${second}°`, `${v.a} and ${second}`],
-      hint: v.f === 'sin' ? 'sin(180° − θ) = sin(θ) gives the second answer.' : v.f === 'cos' ? 'cos(360° − θ) = cos(θ) gives the second answer.' : 'tan repeats every 180°.' };
+    const fn = pick(['sin', 'cos', 'tan']), r = pick([30, 45, 60]), neg = rand(0, 1) === 1;
+    const sols = {
+      sin: neg ? [180 + r, 360 - r] : [r, 180 - r],
+      cos: neg ? [180 - r, 180 + r] : [r, 360 - r],
+      tan: neg ? [180 - r, 360 - r] : [r, 180 + r],
+    }[fn].sort((x, y) => x - y);
+    const s = neg ? '−' : '';
+    // Exact value, written plainly or cleared of its fraction (2sin θ = 1).
+    const plain = { sin: { 30: '1/2', 45: '√2/2', 60: '√3/2' }, cos: { 30: '√3/2', 45: '√2/2', 60: '1/2' }, tan: { 30: '1/√3', 45: '1', 60: '√3' } }[fn][r];
+    const cleared = { '1/2': `2${fn}(θ) = ${s}1`, '√3/2': `2${fn}(θ) = ${s}√3`, '√2/2': `√2 ${fn}(θ) = ${s}1`, '1/√3': `√3 tan(θ) = ${s}1`, '1': `tan(θ) = ${s}1`, '√3': `tan(θ) = ${s}√3` }[plain];
+    const eq = rand(0, 1) ? `${fn}(θ) = ${s}${plain}` : cleared;
+    const ans = `${sols[0]}° and ${sols[1]}°`;
+    return { question: `Solve ${eq} for 0° ≤ θ ≤ 360°.`, answer: ans, accepts: [ans, `${sols[0]} and ${sols[1]}`],
+      hint: `Find the acute angle first, then use the ${neg ? 'quadrants where ' + fn + ' is negative' : 'quadrants where ' + fn + ' is positive'} (CAST).` };
   },
 
   G10_SINE_COSINE_RULE: () => {
@@ -1368,14 +1427,14 @@ const generators = {
 
   G10_3D_TRIG: () => {
     const l = rand(3, 8), w = rand(3, 8), h = rand(3, 8);
-    const diag = roundTo(Math.sqrt(l * l + w * w + h * h), 2);
+    const diag = dp2(Math.sqrt(l * l + w * w + h * h));
     return { question: `Space diagonal of cuboid ${l}×${w}×${h}?`, answer: diag.toString(),
       hint: 'd = √(l² + w² + h²)' };
   },
 
   G10_VECTORS_INTRO: () => {
     const x = rand(-5, 5), y = rand(-5, 5);
-    const mag = roundTo(Math.sqrt(x * x + y * y), 2);
+    const mag = dp2(Math.sqrt(x * x + y * y));
     return { question: `Magnitude of vector (${x}, ${y})?`, answer: mag.toString(),
       hint: '|v| = √(x² + y²)' };
   },
@@ -1404,10 +1463,25 @@ const generators = {
   },
 
   G10_PROBABILITY_DISTRIBUTIONS: () => {
-    const n = rand(3, 5), p = pick([0.2, 0.3, 0.4, 0.5]);
-    const mean = Math.round(n * p * 10) / 10;
-    return { question: `Binomial: n=${n}, p=${p}. Find the mean.`, answer: mean.toString(),
-      hint: 'Mean = np' };
+    const n = rand(4, 20), p = pick([0.1, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.75, 0.8]);
+    const t = (x) => String(Number(x.toFixed(4)));
+    return pick([
+      () => ({ question: `X ~ B(${n}, ${p}). Find the mean of X.`, answer: t(n * p), hint: 'For a binomial distribution, the mean is n × p.', verify: { kind: 'fraction', value: n * p } }),
+      () => ({ question: `X ~ B(${n}, ${p}). Find the variance of X.`, answer: t(n * p * (1 - p)), hint: 'Variance = n × p × (1 − p).', verify: { kind: 'fraction', value: n * p * (1 - p) } }),
+      () => {
+        // Four outcomes in tenths that add to 1; one is hidden.
+        let parts; do { parts = [rand(1, 4), rand(1, 4), rand(1, 4)]; } while (parts.reduce((s, x) => s + x, 0) >= 10);
+        parts.push(10 - parts.reduce((s, x) => s + x, 0));
+        const hide = rand(0, 3), shown = parts.map((x, i) => (i === hide ? 'k' : String(x / 10)));
+        return { question: `P(X = 0) = ${shown[0]}, P(X = 1) = ${shown[1]}, P(X = 2) = ${shown[2]}, P(X = 3) = ${shown[3]}. Find k.`, answer: t(parts[hide] / 10), hint: 'All the probabilities add up to 1.', verify: { kind: 'fraction', value: parts[hide] / 10 } };
+      },
+      () => {
+        let parts; do { parts = [rand(1, 4), rand(1, 4), rand(1, 4)]; } while (parts.reduce((s, x) => s + x, 0) >= 10);
+        parts.push(10 - parts.reduce((s, x) => s + x, 0));
+        const e = parts.reduce((s, x, i) => s + i * x, 0) / 10;
+        return { question: `P(X = 0) = ${parts[0] / 10}, P(X = 1) = ${parts[1] / 10}, P(X = 2) = ${parts[2] / 10}, P(X = 3) = ${parts[3] / 10}. Find E(X).`, answer: t(e), hint: 'E(X) = Σ x × P(X = x).', verify: { kind: 'fraction', value: e } };
+      },
+    ])();
   },
 
   // ======================== GRADE 11 ========================
@@ -1497,44 +1571,54 @@ const generators = {
   },
 
   G11_TRIG_GRAPHS: () => {
-    const a = rand(2, 5);
-    return { question: `y = ${a}sin(x). What is the amplitude?`, answer: a.toString(),
-      hint: 'Amplitude = |a| in y = a sin(x)' };
+    const a = rand(2, 9), k = pick([2, 3, 4, 6]), fn = pick(['sin', 'cos']), d = rand(1, 6);
+    return pick([
+      { question: `y = ${a}${fn}(x). What is the amplitude?`, answer: `${a}`, hint: `The amplitude is how far the wave goes above and below its middle line.` },
+      { question: `y = ${a}${fn}(${k}x). What is the amplitude?`, answer: `${a}`, hint: `The number inside the bracket changes the period, not the height.` },
+      { question: `y = ${fn}(${k}x). What is the period, in degrees?`, answer: `${360 / k}`, accepts: [`${360 / k}`, `${360 / k}°`], hint: `One full wave of ${fn}(x) takes a whole turn. Multiplying x squeezes the wave.` },
+      { question: `y = ${a}${fn}(x) + ${d}. What is the maximum value of y?`, answer: `${a + d}`, hint: `The biggest value ${fn} can take is 1.` },
+      { question: `y = ${a}${fn}(x) + ${d}. What is the minimum value of y?`, answer: `${d - a}`, hint: `The smallest value ${fn} can take is −1.` },
+    ]);
   },
 
   G11_TRIG_ADDITION: () => {
-    const [A, B, op] = pick([[45, 30, '+'], [60, 45, '+'], [45, 30, '-'], [60, 45, '-'], [90, 45, '+'], [120, 45, '+']]); // never 90° (cos 90° = 0)
+    const angles = [30, 45, 60, 90, 120, 135, 150];
+    let A, B, op, ang;
+    do { A = pick(angles); B = pick(angles); op = pick(['+', '-']); ang = op === '+' ? A + B : A - B; }
+    while (ang <= 0 || ang >= 360 || ang % 90 === 0);
     const fn = pick(['sin', 'cos']);
-    const ang = op === '+' ? A + B : A - B;
     const v = (fn === 'sin' ? Math.sin : Math.cos)(ang * Math.PI / 180);
-    const ans = v.toFixed(3);
-    return { question: `Use the ${fn} ${op === '+' ? 'addition' : 'subtraction'} formula to find ${fn}(${ang}°) as ${fn}(${A}° ${op === '+' ? '+' : '−'} ${B}°). Give your answer to 3 decimal places.`, answer: ans,
-      hint: fn === 'sin' ? `sin(A ${op} B) = sinA cosB ${op} cosA sinB` : `cos(A ${op} B) = cosA cosB ${op === '+' ? '−' : '+'} sinA sinB` };
+    return { question: `Use the ${fn} ${op === '+' ? 'addition' : 'subtraction'} formula to find ${fn}(${ang}°) as ${fn}(${A}° ${op === '+' ? '+' : '−'} ${B}°). Give your answer to 3 decimal places.`, answer: v.toFixed(3),
+      hint: fn === 'sin' ? `sin(A ${op === '+' ? '+' : '−'} B) = sinA cosB ${op === '+' ? '+' : '−'} cosA sinB` : `cos(A ${op === '+' ? '+' : '−'} B) = cosA cosB ${op === '+' ? '−' : '+'} sinA sinB` };
   },
 
   G11_TRIG_DOUBLE_ANGLE: () => {
-    const [a, b, c] = pick([[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25], [20, 21, 29]]);
-    const g = (x, y) => { x = Math.abs(x); while (y) [x, y] = [y, x % y]; return x; };
-    const frac = (n, d) => { const k = g(n, d); return `${n / k}/${d / k}`; };
-    return rand(0, 1)
-      ? { question: `θ is acute and sin(θ) = ${a}/${c}. Find sin(2θ) as a fraction.`, answer: frac(2 * a * b, c * c), hint: `sin(2θ) = 2 sinθ cosθ, and cosθ = ${b}/${c}.` }
-      : { question: `θ is acute and sin(θ) = ${a}/${c}. Find cos(2θ) as a fraction.`, answer: frac(b * b - a * a, c * c), hint: `cos(2θ) = cos²θ − sin²θ, with cosθ = ${b}/${c}.` };
+    const [p, q, c] = pick([[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25], [20, 21, 29], [9, 40, 41], [12, 35, 37]]);
+    const [s, co] = rand(0, 1) ? [p, q] : [q, p];          // sin θ = s/c, cos θ = co/c
+    const f = (n, d) => { if (d < 0) { n = -n; d = -d; } const [x, y] = simplifyFraction(n, d); return y === 1 ? `${x}` : `${x}/${y}`; };
+    const given = rand(0, 1) ? `sin(θ) = ${s}/${c}` : `cos(θ) = ${co}/${c}`;
+    return pick([
+      { question: `θ is acute and ${given}. Find sin(2θ) as a fraction.`, answer: f(2 * s * co, c * c), hint: 'sin(2θ) = 2 sinθ cosθ. Find the missing ratio with a right-angled triangle.' },
+      { question: `θ is acute and ${given}. Find cos(2θ) as a fraction.`, answer: f(co * co - s * s, c * c), hint: 'cos(2θ) = cos²θ − sin²θ.' },
+      { question: `θ is acute and ${given}. Find tan(2θ) as a fraction.`, answer: f(2 * s * co, co * co - s * s), hint: 'tan(2θ) = 2tanθ / (1 − tan²θ).' },
+    ]);
   },
 
   G11_VECTORS_3D: () => {
     const x = rand(-5, 5), y = rand(-5, 5), z = rand(-5, 5);
-    const mag = roundTo(Math.sqrt(x * x + y * y + z * z), 2);
+    const mag = dp2(Math.sqrt(x * x + y * y + z * z));
     return { question: `Magnitude of (${x}, ${y}, ${z})?`, answer: mag.toString(),
       hint: '|v| = √(x² + y² + z²)' };
   },
 
   G11_BINOMIAL_DISTRIBUTION: () => {
-    const n = rand(4, 8), p = 0.5, k = rand(0, 2);
-    let nCk = 1;
-    for (let i = 0; i < k; i++) nCk = nCk * (n - i) / (i + 1);
-    const prob = roundTo(nCk * Math.pow(p, k) * Math.pow(1 - p, n - k), 4);
-    return { question: `B(${n}, ${p}). P(X = ${k})?`, answer: prob.toString(),
-      hint: 'P(X=k) = C(n,k) × p^k × (1-p)^(n-k)' };
+    const n = rand(4, 10), p = pick([0.1, 0.2, 0.3, 0.4, 0.5, 0.6]), k = rand(0, 3);
+    const C = (a, b) => { let c = 1; for (let i = 0; i < b; i++) c = c * (a - i) / (i + 1); return c; };
+    const P = (j) => C(n, j) * p ** j * (1 - p) ** (n - j);
+    const r4 = (x) => x.toFixed(4); // keep all four places so the marking margin is right
+    return rand(0, 2)
+      ? { question: `X ~ B(${n}, ${p}). Find P(X = ${k}) to 4 decimal places.`, answer: r4(P(k)), hint: 'P(X = k) = C(n, k) × p^k × (1 − p)^(n − k).' }
+      : { question: `X ~ B(${n}, ${p}). Find P(X ≤ 1) to 4 decimal places.`, answer: r4(P(0) + P(1)), hint: 'P(X ≤ 1) = P(X = 0) + P(X = 1).' };
   },
 
   G11_NORMAL_DISTRIBUTION: () => {
@@ -1571,10 +1655,11 @@ const generators = {
   },
 
   G12_AREA_UNDER_CURVE: () => {
-    const b = rand(2, 4);
-    const area = Math.pow(b, 3) / 3;
-    return { question: `Area between y = x² and x-axis from x = 0 to x = ${b}?`, answer: roundTo(area, 2).toString(),
-      hint: 'Area = ∫₀^b x² dx' };
+    const n = pick([1, 2, 2, 3]), k = rand(1, 6), b = rand(1, 4), a = b > 1 && rand(0, 1) ? rand(1, b - 1) : 0;
+    const [x, y] = simplifyFraction(k * (b ** (n + 1) - a ** (n + 1)), n + 1);
+    const term = `${k === 1 ? '' : k}x${n === 1 ? '' : n === 2 ? '²' : '³'}`;
+    return { question: `Find the area between y = ${term} and the x-axis from x = ${a} to x = ${b}. Give an exact answer.`, answer: y === 1 ? `${x}` : `${x}/${y}`,
+      hint: `Area = the integral of ${term} from ${a} to ${b}. Raise the power by 1 and divide by the new power.` };
   },
 
   G12_INTEGRATION_BY_PARTS: () => {
@@ -1591,10 +1676,13 @@ const generators = {
   },
 
   G12_DIFF_EQ_INTRO: () => {
-    const a = rand(2, 5);
-    return { question: `Solve dy/dx = ${a}x, given y(0) = 0`, answer: `y = ${a}x²/2`,
-      accepts: [`y = ${a}x²/2`, `y = ${a/2}x²`, `y=${a}x^2/2`],
-      hint: 'Integrate both sides with respect to x' };
+    const m = rand(1, 5), c = rand(0, 9), x = rand(1, 4), a = 2 * m, b = rand(1, 4);
+    return pick([
+      { question: `dy/dx = ${a}x and y = ${c} when x = 0. Find y when x = ${x}.`, answer: `${m * x * x + c}`, hint: 'Integrate to get y, then use the condition to find the constant.' },
+      { question: `dy/dx = ${a} and y = ${c} when x = 0. Find y when x = ${x}.`, answer: `${a * x + c}`, hint: 'Integrate to get y, then use the condition to find the constant.' },
+      { question: `dy/dx = ${3 * b}x² and y = ${c} when x = 0. Find y when x = ${x}.`, answer: `${b * x ** 3 + c}`, hint: 'Integrate to get y, then use the condition to find the constant.' },
+      { question: `Solve dy/dx = ${a}x, given y(0) = 0. Write y in terms of x.`, answer: `y = ${m === 1 ? '' : m}x²`, accepts: [`y = ${m === 1 ? '' : m}x²`, `y=${m === 1 ? '' : m}x^2`, `${m === 1 ? '' : m}x²`, `${m === 1 ? '' : m}x^2`], hint: 'Integrate both sides with respect to x.' },
+    ]);
   },
 
   G12_FURTHER_DIFF: () => {
@@ -1622,7 +1710,7 @@ const generators = {
 
   G12_COMPLEX_NUMBERS: () => {
     const a = rand(1, 5), b = rand(1, 5);
-    return { question: `If z = ${a} + ${b}i, find |z|`, answer: roundTo(Math.sqrt(a * a + b * b), 2).toString(),
+    return { question: `If z = ${a} + ${b}i, find |z|`, answer: dp2(Math.sqrt(a * a + b * b)),
       hint: '|z| = √(a² + b²)' };
   },
 

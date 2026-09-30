@@ -81,7 +81,11 @@ function kidVariants(p) {
     const asksMoney = /how much|cost|price|profit|loss|interest|tax|change|amount|pay|spen[dt]|earn|salary|save|share/i.test(ask) && !/percent|%|rate|ratio/i.test(ask);
     const asksPercent = /percent|percentage|as a %|what %/i.test(ask);
     const asksTime = /how long|how many (hours|minutes)|time taken/i.test(ask);
-    for (const u of unitsIn(ask)) {
+    // "How many metres are in 900 cm?" asks for metres: "9 cm" is a wrong
+    // unit (marked wrong on purpose), so only the asked unit is tried.
+    const target = ask.match(/how many ([a-z²³]+)/i) || ask.match(/\b(?:to|into|in)\s+([a-z²³]+)\s*\??\s*$/i);
+    const asked = target ? unitsIn(` ${target[1]} `).filter(u => u !== 'money') : [];
+    for (const u of (asked.length ? asked : unitsIn(ask))) {
       if (u === 'money' && !asksMoney) continue;
       if ((u === 'minutes' || u === 'hours') && !asksTime) continue;
       if (u === 'money') { add(`KSh ${a}`, 'KSh prefix'); add(`Ksh.${a}`, 'Ksh. prefix'); add(`${a}/=`, 'Kenyan /='); add(`sh ${a}`, 'sh prefix'); add(`${a} shillings`, 'word shillings'); }
@@ -240,6 +244,9 @@ for (const [bank, S] of CHECKED) {
     const all = [...byQuestion.values()];
     for (const p of all) for (const o of all) {
       if (p === o || str(o.answer).trim().toLowerCase() === str(p.answer).trim().toLowerCase()) continue;
+      // "9 metres" and "9" are the same answer, not another question's.
+      const ov = mathValue(str(o.answer), true), pv = mathValue(str(p.answer), true);
+      if (ov != null && pv != null && Math.abs(ov - pv) < 1e-9) continue;
       if (checkAnswerMatch(str(o.answer), o) && checkAnswerMatch(str(o.answer), p) && !checkAnswerMatch(str(p.answer), o)) {
         note("C. accepts another question's answer", key, `"${p.question}" (key "${p.answer}") also accepts "${o.answer}"`); break;
       }

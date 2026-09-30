@@ -192,17 +192,22 @@ function buildFractionOfSet({ denominators, maxResult = 10 }) {
 }
 
 /** Kenyan money word problems banded by amount. */
+const coinFlip = () => Math.random() < 0.5;
 function buildBandedMoney({ maxAmount, kind }) {
   return () => {
     if (kind === 'count') {           // G1: counting coins
-      const coins = pick([5, 10]), n = randInt(2, Math.floor(maxAmount / coins));
-      const value = coins * n;
+      // Kenyan coins: 1, 5, 10 and 20 shillings; sometimes two kinds together.
+      const coins = pick([1, 5, 5, 10, 10, 20]), n = randInt(2, Math.min(10, Math.floor(maxAmount / coins)));
+      const extra = coins >= 10 && coinFlip() ? randInt(1, 4) : 0;
+      const value = coins * n + extra;
       return {
         type: 'money-count', instruction: 'Count the money.',
-        question: `You have ${n} coins of ${coins} shillings each. How much money is that?`,
+        question: extra
+          ? `You have ${n} coins of ${coins} shillings and ${extra} coin${extra > 1 ? 's' : ''} of 1 shilling. How much money is that?`
+          : `You have ${n} coins of ${coins} shilling${coins > 1 ? 's' : ''} each. How much money is that?`,
         answer: `${value}`, accepts: accepts(`${value}`, `${value} shillings`, `sh ${value}`),
-        hints: hintLadder(`Skip-count in ${coins}s.`, `${coins}, ${coins * 2}, ${coins * 3}…`),
-        solution: { steps: [{ text: `${n} coins of ${coins} bob = ${n} × ${coins}.`, expr: `${value}` }], answer: `${value}` },
+        hints: hintLadder(`Skip-count in ${coins}s.`, extra ? 'Then count on the 1-shilling coins.' : `${coins}, ${coins * 2}, …`),
+        solution: { steps: [{ text: `${n} coins of ${coins} bob = ${n} × ${coins}${extra ? `, plus ${extra}` : ''}.`, expr: `${value}` }], answer: `${value}` },
         misconceptions: [], verify: { kind: 'fraction', value },
       };
     }
@@ -382,6 +387,12 @@ function buildLineTypes() {
     ['the corner-to-corner fold of a page', 'straight'], ['a rainbow', 'curved'],
     ['the top of a table', 'straight'], ['the letter U', 'curved'],
     ['railway tracks on flat ground', 'straight'], ['the outline of an egg', 'curved'],
+    ['a stick of sugarcane', 'straight'], ['the edge of a chapati', 'curved'],
+    ['a new pencil', 'straight'], ['the outline of a football', 'curved'],
+    ['the letter L', 'straight'], ['the letter J', 'curved'],
+    ['the edge of the blackboard', 'straight'], ['a bicycle wheel', 'curved'],
+    ['the letter T', 'straight'], ['a banana', 'curved'],
+    ['the edge of a window', 'straight'], ['the rim of a sufuria', 'curved'],
   ];
   return () => {
     const [thing, value] = pick(items);
@@ -417,15 +428,16 @@ function buildTurnsAndCompass({ withCompass = false }) {
       };
     }
     if (coin()) {
-      const hands = pick([['3', 'quarter'], ['6', 'half'], ['9', 'three quarter'], ['12', 'full']]);
-      const startAt12 = hands[0] === '12' ? 'goes all the way round from 12 back to 12' : `moves from 12 to ${hands[0]}`;
-      const value = hands[1];
+      // The hand can start at 12, 3, 6 or 9 and move 1-4 quarters clockwise.
+      const from = pick([12, 3, 6, 9]), quarters = randInt(1, 4), to = ((from % 12) + 3 * quarters) % 12 || 12;
+      const startAt12 = quarters === 4 ? `goes all the way round from ${from} back to ${from}` : `moves clockwise from ${from} to ${to}`;
+      const value = ['quarter', 'half', 'three quarter', 'full'][quarters - 1];
       const turnChoices = [value, ...['quarter', 'half', 'full', 'three quarter'].filter(t => t !== value).slice(0, 2)];
       return {
         type: 'turn-name', instruction: 'Name the turn.', choices: turnChoices,
         question: `The minute hand of a clock ${startAt12}. Is that a quarter, half, three quarter or full turn?`,
         answer: value, accepts: accepts(value, `${value} turn`, `a ${value} turn`, value === 'three quarter' ? '3/4' : value === 'half' ? '1/2' : value === 'quarter' ? '1/4' : 'full'),
-        hints: hintLadder('12 to 3 is a quarter of the way round.', 'Count the quarters: 12 to 3, 3 to 6, 6 to 9, 9 to 12.'),
+        hints: hintLadder('Each jump of 3 numbers on the clock is a quarter of the way round.', `Count the quarters from ${from}.`),
         solution: { steps: [{ text: 'Each quarter of the clock face is a quarter turn.', expr: value }], answer: value },
         misconceptions: [], verify: { kind: 'text', value },
       };
