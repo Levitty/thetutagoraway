@@ -189,18 +189,27 @@ export function buildBodmas({ advanced = false } = {}) {
 
 // ---- indices: evaluate a power ----
 export function buildIndicesEval() {
-  const base = randInt(2, 6), exp = randInt(2, 4);
-  const value = Math.pow(base, exp);
+  let base, exp; do { base = randInt(2, 10); exp = randInt(0, 5); } while (base ** exp > 100000);
+  const value = base ** exp, mode = pick(['eval', 'eval', 'eval', 'findExp', 'negative']);
+  if (mode === 'findExp' && exp >= 2) {
+    return { type: 'indices-exponent', instruction: 'Find the power.', question: `${base}^? = ${value}`, answer: `${exp}`, accepts: accepts(`${exp}`),
+      hints: hintLadder(`Count how many ${base}s multiply to make ${value}.`),
+      solution: { steps: [{ text: 'Multiply until you reach it.', expr: `${Array(exp).fill(base).join(' × ')} = ${value}` }], answer: `${exp}` },
+      misconceptions: [{ when: numStr(value / base), feedback: `That is ${value} ÷ ${base}. The power is how many ${base}s are multiplied together.` }], verify: { kind: 'fraction', value: exp } };
+  }
+  if (mode === 'negative' && exp >= 1 && value <= 1000) {
+    return { type: 'indices-negative', instruction: 'Evaluate. Give a fraction.', question: `${base}^−${exp}`, answer: `1/${value}`, accepts: accepts(`1/${value}`),
+      hints: hintLadder('A negative power means one over the positive power.'),
+      solution: { steps: [{ text: 'Flip it: one over the positive power.', expr: `1/${base}^${exp} = 1/${value}` }], answer: `1/${value}` },
+      misconceptions: [{ when: `-${value}`, feedback: 'A negative power does not make the number negative: it means one over.' }], verify: { kind: 'fraction', value: 1 / value } };
+  }
   return {
-    type: 'indices-eval',
-    instruction: 'Evaluate.',
-    question: `${base}^${exp}`,
-    answer: `${value}`,
-    accepts: accepts(`${value}`),
-    hints: hintLadder(`${base}^${exp} means ${base} multiplied by itself ${exp} times.`,
-      `${Array(exp).fill(base).join(' × ')}.`),
-    solution: { steps: [{ text: 'Multiply the base repeatedly.', expr: `${Array(exp).fill(base).join(' × ')} = ${value}` }], answer: `${value}` },
-    misconceptions: [{ when: `${base * exp}`, feedback: `${base}^${exp} is NOT ${base}×${exp}. It is ${base} multiplied by itself ${exp} times.` }],
+    type: 'indices-eval', instruction: 'Evaluate.', question: `${base}^${exp}`, answer: `${value}`, accepts: accepts(`${value}`),
+    hints: hintLadder(exp === 0 ? 'Any number (except 0) to the power 0 is special. Think: 2³ ÷ 2³.' : `${base}^${exp} means ${base} multiplied by itself ${exp} times.`,
+      exp > 1 ? `${Array(exp).fill(base).join(' × ')}.` : null),
+    solution: { steps: [{ text: exp === 0 ? 'Anything to the power 0 is 1.' : 'Multiply the base repeatedly.', expr: exp === 0 ? `${base}^0 = 1` : `${Array(exp).fill(base).join(' × ')} = ${value}` }], answer: `${value}` },
+    misconceptions: exp === 0 ? [{ when: '0', feedback: `${base}^0 is not 0. Dividing ${base}³ by ${base}³ gives 1, and that is ${base}^0.` }]
+      : exp === 1 ? [] : [{ when: `${base * exp}`, feedback: `${base}^${exp} is NOT ${base}×${exp}. It is ${base} multiplied by itself ${exp} times.` }],
     verify: { kind: 'fraction', value },
   };
 }
@@ -231,48 +240,59 @@ export function buildIndicesLaws() {
 
 // ---- squares & square roots ----
 export function buildSquare() {
-  const n = randInt(2, 15);
+  const mode = pick(['plain', 'plain', 'area', 'tens', 'decimal']);
+  if (mode === 'decimal') {
+    const d = randInt(1, 9), v = numStr((d * d) / 100);
+    return { type: 'square', instruction: 'Find the square.', question: `0.${d}²`, answer: v, accepts: accepts(v),
+      hints: hintLadder(`0.${d}² means 0.${d} × 0.${d}.`, 'Tenths times tenths gives hundredths.'),
+      solution: { steps: [{ text: 'Multiply the digits, then count decimal places (1 + 1 = 2).', expr: `${d} × ${d} = ${d * d}, so 0.${d}² = ${v}` }], answer: v },
+      misconceptions: [{ when: numStr((d * d) / 10), feedback: 'Tenths times tenths gives hundredths: the answer needs two decimal places.' }, { when: numStr(0.2 * d), feedback: `0.${d}² is 0.${d} × 0.${d}, not 0.${d} × 2.` }],
+      verify: { kind: 'fraction', value: (d * d) / 100 } };
+  }
+  const n = mode === 'tens' ? randInt(2, 9) * 10 : randInt(2, 25);
+  const q = mode === 'area' ? `A square plot has sides of ${n} m. What is its area in m²?` : `${n}²`;
   return {
     type: 'square', instruction: 'Find the square.',
-    question: `${n}²`, answer: `${n * n}`, accepts: accepts(`${n * n}`),
-    hints: hintLadder(`${n}² means ${n} × ${n}.`),
+    question: q, answer: `${n * n}`, accepts: accepts(`${n * n}`),
+    hints: hintLadder(`${n}² means ${n} × ${n}.`, mode === 'tens' ? `${n / 10} × ${n / 10}, then put two zeros on.` : null),
     solution: { steps: [{ text: 'Multiply the number by itself.', expr: `${n} × ${n} = ${n * n}` }], answer: `${n * n}` },
-    misconceptions: [{ when: `${2 * n}`, feedback: `${n}² is ${n}×${n}, not ${n}×2.` }],
+    misconceptions: [{ when: `${2 * n}`, feedback: `${n}² is ${n}×${n}, not ${n}×2.` }, ...(mode === 'area' ? [{ when: `${4 * n}`, feedback: 'That is the perimeter (4 sides). Area is side × side.' }] : [])],
     verify: { kind: 'fraction', value: n * n },
   };
 }
 
 export function buildSquareRoot() {
-  const n = randInt(2, 15);
+  const mode = pick(['plain', 'plain', 'area', 'hundreds', 'fraction']);
+  if (mode === 'fraction') {
+    const a = randInt(1, 9); let b = randInt(2, 12); while (b <= a) b = randInt(2, 12);
+    const g = ((x, y) => { while (y) [x, y] = [y, x % y]; return x; })(a, b), [p, q] = [a / g, b / g];
+    return { type: 'square-root', instruction: 'Find the square root.', question: `√(${p * p}/${q * q})`, answer: `${p}/${q}`, accepts: accepts(`${p}/${q}`),
+      hints: hintLadder('Take the square root of the top and of the bottom.'),
+      solution: { steps: [{ text: 'Root the top and the bottom.', expr: `√${p * p} / √${q * q} = ${p}/${q}` }], answer: `${p}/${q}` },
+      misconceptions: [{ when: `${(p * p) / 2}/${(q * q) / 2}`, feedback: 'A square root is not half.' }], verify: { kind: 'fraction', value: p / q } };
+  }
+  const n = randInt(2, 25), N = mode === 'hundreds' ? n * n * 100 : n * n, v = mode === 'hundreds' ? n * 10 : n;
+  const q = mode === 'area' ? `A square room has an area of ${N} m². How long is each side, in m?` : `√${N}`;
   return {
     type: 'square-root', instruction: 'Find the square root.',
-    question: `√${n * n}`, answer: `${n}`, accepts: accepts(`${n}`),
-    hints: hintLadder('What number times itself gives this?', `? × ? = ${n * n}.`),
-    solution: { steps: [{ text: 'Find the number whose square is this.', expr: `${n} × ${n} = ${n * n}, so √${n * n} = ${n}` }], answer: `${n}` },
-    misconceptions: [{ when: `${(n * n) / 2}`, feedback: 'A square root is not half — find what multiplies by itself to give the number.' }],
-    verify: { kind: 'fraction', value: n },
+    question: q, answer: `${v}`, accepts: accepts(`${v}`),
+    hints: hintLadder('What number times itself gives this?', mode === 'hundreds' ? `√${n * n} = ?, then × 10.` : null),
+    solution: { steps: [{ text: 'Find the number whose square is this.', expr: `${v} × ${v} = ${N}, so √${N} = ${v}` }], answer: `${v}` },
+    misconceptions: [{ when: `${N / 2}`, feedback: 'A square root is not half — find what multiplies by itself to give the number.' }, ...(mode === 'area' ? [{ when: `${N / 4}`, feedback: 'Dividing by 4 works for the perimeter, not the area. Which number times itself gives the area?' }] : [])],
+    verify: { kind: 'fraction', value: v },
   };
 }
 
 // ---- cubes & cube roots ----
 export function buildCubeRoot() {
-  const n = randInt(2, 8), askRoot = coin();
-  return askRoot
-    ? {
-        type: 'cube-root', instruction: 'Find the cube root.',
-        question: `∛${n * n * n}`, answer: `${n}`, accepts: accepts(`${n}`),
-        hints: hintLadder('What number cubed gives this?', `? × ? × ? = ${n * n * n}.`),
-        solution: { steps: [{ text: 'Find the number whose cube is this.', expr: `${n}³ = ${n * n * n}` }], answer: `${n}` },
-        misconceptions: [], verify: { kind: 'fraction', value: n },
-      }
-    : {
-        type: 'cube', instruction: 'Find the cube.',
-        question: `${n}³`, answer: `${n * n * n}`, accepts: accepts(`${n * n * n}`),
-        hints: hintLadder(`${n}³ means ${n} × ${n} × ${n}.`),
-        solution: { steps: [{ text: 'Multiply the number by itself three times.', expr: `${n} × ${n} × ${n} = ${n * n * n}` }], answer: `${n * n * n}` },
-        misconceptions: [{ when: `${3 * n}`, feedback: `${n}³ is ${n}×${n}×${n}, not ${n}×3.` }],
-        verify: { kind: 'fraction', value: n * n * n },
-      };
+  const n = randInt(2, 10), c = n * n * n, mode = pick(['cube', 'root', 'volume', 'side', 'negative']);
+  const make = (question, answer, hint, steps, mis = []) => ({ type: mode === 'cube' || mode === 'volume' ? 'cube' : 'cube-root', instruction: 'Work it out.',
+    question, answer: `${answer}`, accepts: accepts(`${answer}`), hints: hintLadder(hint), solution: { steps, answer: `${answer}` }, misconceptions: mis, verify: { kind: 'fraction', value: answer } });
+  if (mode === 'cube') return make(`${n}³`, c, `${n}³ means ${n} × ${n} × ${n}.`, [{ text: 'Multiply the number by itself three times.', expr: `${n} × ${n} × ${n} = ${c}` }], [{ when: `${3 * n}`, feedback: `${n}³ is ${n}×${n}×${n}, not ${n}×3.` }, { when: `${n * n}`, feedback: `That is ${n}². Cubed means three ${n}s multiplied.` }]);
+  if (mode === 'root') return make(`∛${c}`, n, 'What number cubed gives this?', [{ text: 'Find the number whose cube is this.', expr: `${n}³ = ${c}` }], [{ when: numStr(c / 3), feedback: 'A cube root is not a third. Which number, times itself three times, makes it?' }]);
+  if (mode === 'volume') return make(`A cube-shaped box has edges of ${n} cm. What is its volume in cm³?`, c, 'Volume of a cube = edge × edge × edge.', [{ text: 'Volume = edge³.', expr: `${n}³ = ${c}` }], [{ when: `${6 * n * n}`, feedback: 'That is the surface area (6 faces). Volume is edge × edge × edge.' }]);
+  if (mode === 'side') return make(`A cube has a volume of ${c} cm³. How long is each edge, in cm?`, n, 'Find the cube root of the volume.', [{ text: 'Edge = ∛volume.', expr: `∛${c} = ${n}` }]);
+  return make(`∛(−${c})`, -n, 'A negative number cubed stays negative.', [{ text: 'Cube root, keeping the sign.', expr: `(−${n})³ = −${c}` }], [{ when: `${n}`, feedback: `Check: ${n}³ is positive. What cubes to give −${c}?` }]);
 }
 
 // ---- prime or composite ----

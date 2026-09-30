@@ -71,27 +71,44 @@ export function buildProbability() {
 // ---- nPr / nCr ----
 const fact = (n) => { let f = 1; for (let i = 2; i <= n; i++) f *= i; return f; };
 export function buildPermutations() {
-  const n = randInt(4, 7), r = randInt(2, Math.min(4, n));
+  const mode = pick(['npr', 'npr', 'officers', 'word', 'factorial']);
+  if (mode === 'word') {
+    const w = pick(['KENYA', 'MAIZE', 'LAMU', 'BUSIA', 'EMBU', 'THIKA', 'MERU', 'VOI', 'MANGO', 'BORA']);
+    const value = fact(w.length);
+    return { type: 'permutations', instruction: 'Count the arrangements.', question: `In how many different orders can the letters of the word ${w} be arranged? (All the letters are different.)`,
+      answer: `${value}`, accepts: accepts(`${value}`), hints: hintLadder(`${w.length} choices for the first letter, then ${w.length - 1}, and so on.`),
+      solution: { steps: [{ text: `${w.length}!`, expr: `${Array.from({ length: w.length }, (_, i) => w.length - i).join(' × ')} = ${value}` }], answer: `${value}` },
+      misconceptions: [{ when: `${w.length * (w.length - 1)}`, feedback: 'Keep multiplying all the way down to 1.' }], verify: { kind: 'fraction', value } };
+  }
+  const n = mode === 'factorial' ? randInt(3, 8) : randInt(4, 10), r = mode === 'factorial' ? n : mode === 'officers' ? 3 : randInt(2, Math.min(4, n));
   const value = fact(n) / fact(n - r);
+  const question = mode === 'factorial' ? `Evaluate ${n}!`
+    : mode === 'officers' ? `A class of ${n} learners chooses a captain, a deputy and a secretary. No one can hold two posts. In how many ways can this be done?`
+    : `Evaluate ${n}P${r} (the number of ordered arrangements).`;
   return {
-    type: 'permutations', instruction: 'Evaluate.',
-    question: `Evaluate  ${n}P${r}  (the number of ordered arrangements).`,
+    type: 'permutations', instruction: 'Evaluate.', question,
     answer: `${value}`, accepts: accepts(`${value}`),
-    hints: hintLadder('nPr = n! ÷ (n−r)!', `${n}! ÷ ${n - r}!`, `= ${n} × ${n - 1} × … (${r} factors).`),
-    solution: { steps: [{ text: 'Use nPr = n!/(n−r)!.', expr: `${n}! ÷ ${n - r}! = ${value}` }], answer: `${value}` },
-    misconceptions: [], verify: { kind: 'fraction', value },
+    hints: hintLadder(mode === 'factorial' ? `${n}! = ${n} × ${n - 1} × … × 1.` : 'nPr = n! ÷ (n−r)!: multiply r numbers counting down from n.'),
+    solution: { steps: [{ text: mode === 'factorial' ? 'Multiply down to 1.' : `${r} numbers counting down from ${n}.`, expr: `${Array.from({ length: r }, (_, i) => n - i).join(' × ')} = ${value}` }], answer: `${value}` },
+    misconceptions: mode === 'officers' ? [{ when: `${fact(n) / (fact(3) * fact(n - 3))}`, feedback: 'The posts are different, so order matters: that is an arrangement, not a selection.' }] : [],
+    verify: { kind: 'fraction', value },
   };
 }
 export function buildCombinations() {
-  const n = randInt(4, 8), r = randInt(2, Math.min(4, n));
+  const mode = pick(['ncr', 'ncr', 'team', 'handshakes']);
+  const n = randInt(4, 12), r = mode === 'handshakes' ? 2 : randInt(2, Math.min(4, n - 1));
   const value = fact(n) / (fact(r) * fact(n - r));
+  const question = mode === 'team' ? `A teacher picks ${r} learners from ${n} to carry the class books. Order does not matter. How many different groups are possible?`
+    : mode === 'handshakes' ? `${n} people at a meeting each shake hands once with every other person. How many handshakes are there?`
+    : `Evaluate ${n}C${r} (the number of unordered selections).`;
   return {
-    type: 'combinations', instruction: 'Evaluate.',
-    question: `Evaluate  ${n}C${r}  (the number of unordered selections).`,
+    type: 'combinations', instruction: 'Evaluate.', question,
     answer: `${value}`, accepts: accepts(`${value}`),
     hints: hintLadder('nCr = n! ÷ [r!(n−r)!]', 'Order does NOT matter for combinations.'),
-    solution: { steps: [{ text: 'Use nCr = n!/(r!(n−r)!).', expr: `${value}` }], answer: `${value}` },
-    misconceptions: [], verify: { kind: 'fraction', value },
+    solution: { steps: [{ text: 'Use nCr = n!/(r!(n−r)!).', expr: `${n}C${r} = ${value}` }], answer: `${value}` },
+    misconceptions: [{ when: `${fact(n) / fact(n - r)}`, feedback: 'That counts every order. A group is the same group in any order: divide by r!.' },
+      ...(mode === 'handshakes' ? [{ when: `${n * (n - 1)}`, feedback: 'Each handshake has been counted twice (once for each person).' }] : [])],
+    verify: { kind: 'fraction', value },
   };
 }
 
