@@ -75,6 +75,7 @@ export const SiteFooter = ({ onNavigate }) => (
         <button type="button" onClick={() => onNavigate('check')}>Maths check</button>
         <button type="button" onClick={() => onNavigate('teach')}>Teach with us</button>
         <button type="button" onClick={() => onNavigate('schools')}>For schools</button>
+        <a href="https://school.tutagora.com/" target="_blank" rel="noreferrer">School software</a>
         <button type="button" onClick={() => onNavigate('privacy')}>Privacy</button>
       </nav>
     </div>
