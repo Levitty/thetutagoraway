@@ -19,6 +19,7 @@
 // ============================================================================
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { YoungPicture, PickOption } from './YoungPicture.jsx';
 
 const COMPASS = ['North', 'East', 'South', 'West'];
 const ANGLE_KINDS = ['acute', 'right', 'obtuse'];
@@ -45,6 +46,12 @@ export function planBridgeLesson(problem) {
   }
   if (problem.type === 'line-type') {
     return { mode: 'choices', answer, choices: shuffle(['straight', 'curved']) };
+  }
+
+  // The Grade 3-4 picture lessons (pictureLessons.js) bring their own buttons.
+  if (problem.tapChoices && Array.isArray(problem.choices) && problem.choices.map(String).includes(answer)) {
+    const own = problem.choices.map(String);
+    return { mode: 'choices', answer, choices: problem.choicesFixed ? own : shuffle(own) };
   }
 
   // Number pad for everything the child can key in.
@@ -282,6 +289,7 @@ export default function BridgeLesson({
 
         {plan.mode === 'column' && renderColumn()}
         {plan.mode !== 'column' && dots && <ArrayDots rows={dots.rows} cols={dots.cols} />}
+        {plan.mode !== 'column' && problem.picture?.kind !== 'pick' && <YoungPicture picture={problem.picture} />}
         {plan.mode === 'pad' && (
           <div className="bl-entry" aria-live="polite">{entry || ' '}</div>
         )}
@@ -293,10 +301,14 @@ export default function BridgeLesson({
 
         {plan.mode === 'choices' ? (
           <div className={`bl-choices ${locked ? 'lock' : ''}`}>
-            {plan.choices.map(c => (
-              <button key={c} className={`bl-choice ${disabledChoices.includes(c) ? 'wrong' : ''}`}
-                disabled={disabledChoices.includes(c)} onClick={() => choose(c)}>{c}</button>
-            ))}
+            {plan.choices.map((c, i) => {
+              const pic = problem.picture?.kind === 'pick' ? problem.picture.options[i] : null;
+              return (
+                <button key={c} className={`bl-choice ${disabledChoices.includes(c) ? 'wrong' : ''}`}
+                  aria-label={pic ? `picture ${c}` : undefined}
+                  disabled={disabledChoices.includes(c)} onClick={() => choose(c)}>{pic ? <PickOption spec={pic} /> : c}</button>
+              );
+            })}
           </div>
         ) : (
           <div className={`bl-padwrap ${locked ? 'lock' : ''}`}>
@@ -374,6 +386,7 @@ const BL_CSS = `
 .bl-choices.lock .bl-choice{pointer-events:none;opacity:.55;}
 .bl-choice{flex:1;font-family:Georgia,serif;font-size:19px;color:var(--ink);background:#fffdf8;
   border:1px solid var(--rule);border-radius:14px;padding:16px 4px;cursor:pointer;text-transform:capitalize;}
+.bl-choice svg{max-width:100%;height:auto;display:block;margin:0 auto;}
 .bl-choice.wrong{border-color:var(--accent);color:var(--accent);background:#f9ece7;}
 .bl-padwrap{margin-top:auto;padding-bottom:20px;}
 .bl-padwrap.lock{pointer-events:none;opacity:.6;}

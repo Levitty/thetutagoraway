@@ -1,5 +1,38 @@
 # Curriculum research: the four skills still under 20 different questions
 
+## Verified from the official KICD designs (2024 revised), 30 Sep 2026
+The Grade 2-6 designs are now in `docs/curriculum-sources/` (downloaded from
+a mirror of the KICD files; each is the official "First Published 2017,
+Revised 2024" design). What they say, word for word where quoted:
+
+- **Grade 2, 1.7 Fractions (12 lessons):** "identify ½ as part of a whole",
+  "identify ¼ as part of a whole", "use fractions in day-to-day activities".
+  The activities are folding circular and rectangular paper cut-outs into 2
+  and 4 equal parts. **Parts of a whole shape only; no fraction of a group.**
+  Our G2_FRACTIONS asks "What is half of 16?", which is a fraction of a group:
+  that is Grade 3 content.
+- **Grade 3, 1.7 Fractions (10 lessons):** "identify ½, ¼ and ⅛ as part of a
+  whole", "identify ½, ¼ and ⅛ as part of a group" (divide objects into 2, 4
+  and 8 equal groups). Our G3_FRACTIONS is named "Thirds, Fifths", but CBC
+  Grade 3 has no thirds or fifths; it does have eighths, which we don't ask.
+- **Grade 3, 3.1 Position and Direction (5 lessons):** move along a straight
+  line, identify right and left, turn to the right, turn to the left. **No
+  fractions of a turn.** Our G3_POSITION (quarter/half/three-quarter turns)
+  is not Grade 3 CBC content.
+- **Grade 4, 3.1 Position and Direction (4 lessons):** identify and
+  demonstrate clockwise and anticlockwise turns; identify and demonstrate
+  quarter, half and full turns. **No three-quarter turns, no compass points.**
+- **Compass points (north, east...)** and **three-quarter turns** appear in
+  none of the Grade 2-6 designs. Our G4_POSITION (tagged CBC Grade 4) asks
+  compass questions; that is Cambridge content (Stage 3).
+- **Integers:** none of the Grade 2-6 designs has integers; they start in
+  Grade 8 (verified earlier). Our G6_INTEGERS_INTRO has no CBC tag, so it is
+  not on the CBC path: no placement harm for Kenyan children.
+
+The sections below are the earlier snippet-based research, kept for the
+Cambridge findings.
+
+
 Research, 30 Sep 2026. Question: what do the curricula actually ask for in
 these skills, so new questions are curriculum-backed, not invented?
 

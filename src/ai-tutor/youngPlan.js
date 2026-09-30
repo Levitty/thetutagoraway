@@ -27,7 +27,8 @@ export function planYoungLesson(problem) {
   // otherwise numeric answers get near-miss distractors plus any misconception value.
   let choices = null;
   if (Array.isArray(problem.choices) && problem.choices.length >= 2) {
-    choices = shuffle(uniq(problem.choices.map(c => String(c))));
+    const own = uniq(problem.choices.map(c => String(c)));
+    choices = problem.choicesFixed ? own : shuffle(own);
   } else if (/^\d{1,2}:\d{2}$/.test(answer)) {
     // Clock times ("13:45"): parseFloat would read 13 and the right answer
     // would never be a button. Offer nearby times instead.

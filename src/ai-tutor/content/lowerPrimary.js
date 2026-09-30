@@ -10,6 +10,10 @@
 // ============================================================================
 
 import { accepts, hintLadder, randInt, pick, coin, withWorkedExample, withKPs } from './schema.js';
+import {
+  buildHalvesQuarters, buildEighthsOfWhole, buildFractionOfGroup,
+  buildLeftRight, buildTurnDirection, buildTurnAmount, buildTurnPractice,
+} from './pictureLessons.js';
 
 // ---------------------------------------------------------------------------
 // Shared arithmetic cores, parameterised by grade band
@@ -707,10 +711,11 @@ export const LOWER_PRIMARY_CONTENT = {
                        withWorkedExample(buildBandedDiv({ divisors: [2, 5, 10], maxQuotient: 5, sharing: 'always' })),
                        withWorkedExample(buildBandedDiv({ divisors: [2, 3, 4, 5, 10], maxQuotient: 5 })),
                      ]),
-  // KP ladder (pp.50–51): halves first, then quarters.
+  // KICD Grade 2, 1.7: ½ and ¼ as part of a WHOLE shape (folding circles and
+  // rectangles). Fraction of a group ("half of 16") is Grade 3.
   G2_FRACTIONS:      withKPs([
-                       withWorkedExample(buildFractionOfSet({ denominators: [2], maxResult: 10 })),
-                       withWorkedExample(buildFractionOfSet({ denominators: [4], maxResult: 10 })),
+                       withWorkedExample(buildHalvesQuarters({ level: 1 })),
+                       withWorkedExample(buildHalvesQuarters({ level: 2 })),
                      ]),
   G2_LENGTH:         withWorkedExample(buildMeasureCompare({ unit: 'cm', thing: 'rope', maxOperand: 99 })),
   G2_MASS:           withWorkedExample(buildMeasureCompare({ unit: 'kg', thing: 'sack', maxOperand: 99 })),
@@ -743,11 +748,11 @@ export const LOWER_PRIMARY_CONTENT = {
                        withWorkedExample(buildBandedDiv({ divisors: [6, 7, 8, 9], maxQuotient: 10 })),
                        withWorkedExample(buildBandedDiv({ divisors: [2, 3, 4, 5, 6, 7, 8, 9, 10], maxQuotient: 10, sharing: 'always' })),
                      ]),
-  // KP ladder (pp.89–91): halves/quarters (known) → thirds/fifths (new) → tenths.
+  // KICD Grade 3, 1.7: ½, ¼ and ⅛ as part of a whole, then of a group.
+  // No thirds or fifths in the Grade 3 design (they stay for Cambridge below).
   G3_FRACTIONS:      withKPs([
-                       withWorkedExample(buildFractionOfSet({ denominators: [2, 4], maxResult: 10 })),
-                       withWorkedExample(buildFractionOfSet({ denominators: [3, 5], maxResult: 10 })),
-                       withWorkedExample(buildFractionOfSet({ denominators: [10], maxResult: 10 })),
+                       withWorkedExample(buildEighthsOfWhole()),
+                       withWorkedExample(buildFractionOfGroup()),
                      ]),
   // KP ladder: profit first, then loss (both in the G3 design).
   G3_MONEY:          withKPs([
@@ -757,7 +762,12 @@ export const LOWER_PRIMARY_CONTENT = {
   G3_LENGTH:         withWorkedExample(buildUnitConvert({ pairs: [['metres', 'centimetres', 100]] })),
   G3_MASS:           withWorkedExample(buildMeasureCompare({ unit: 'kg', thing: 'box', maxOperand: 999 })),
   G3_CAPACITY:       withWorkedExample(buildMeasureCompare({ unit: 'litres', thing: 'tank', maxOperand: 999 })),
-  G3_POSITION:       withWorkedExample(buildTurnsAndCompass({ withCompass: false })),
+  // KICD Grade 3, 3.1: walk straight, then turn left or right. Walking up the
+  // page first (her right is our right), then down towards us.
+  G3_POSITION:       withKPs([
+                       withWorkedExample(buildLeftRight({ level: 1 })),
+                       withWorkedExample(buildLeftRight({ level: 2 })),
+                     ]),
   G3_SHAPES:         withWorkedExample(buildShapeProperties({ shapes: [['triangle', 3], ['square', 4], ['rectangle', 4], ['pentagon', 5], ['hexagon', 6], ['octagon', 8]] })),
 
   // ── Grade 4 ──────────────────────────────────────────────────────────────
@@ -786,7 +796,23 @@ export const LOWER_PRIMARY_CONTENT = {
   G4_AREA:           withWorkedExample(buildSmallArea()),
   G4_VOLUME:         withWorkedExample(buildSmallVolume()),
   G4_MONEY:          withWorkedExample(buildBandedMoney({ maxAmount: 5000, kind: 'budget' })),
-  G4_POSITION:       withWorkedExample(buildTurnsAndCompass({ withCompass: true })),
+  // KICD Grade 4, 3.1: clockwise and anticlockwise; quarter, half and full
+  // turns. No compass points and no three-quarter turns (not in the design).
+  G4_POSITION:       withKPs([
+                       withWorkedExample(buildTurnDirection()),
+                       withWorkedExample(buildTurnAmount()),
+                       withWorkedExample(buildTurnPractice()),
+                     ]),
+
+  // ── Cambridge only (mapped in cambridgeContent.js) ──────────────────────
+  // The earlier Grade 3 fractions (thirds, fifths, tenths of a set) and the
+  // compass turns: Cambridge content, not in the KICD Grade 2-6 designs.
+  CAM_FRACTIONS_SET: withKPs([
+                       withWorkedExample(buildFractionOfSet({ denominators: [2, 4], maxResult: 10 })),
+                       withWorkedExample(buildFractionOfSet({ denominators: [3, 5], maxResult: 10 })),
+                       withWorkedExample(buildFractionOfSet({ denominators: [10], maxResult: 10 })),
+                     ]),
+  CAM_TURNS_COMPASS: withWorkedExample(buildTurnsAndCompass({ withCompass: true })),
   G4_ANGLES:         withWorkedExample(buildAngleClassify()),
   G4_PLANE_FIGURES:  withWorkedExample(buildShapeProperties({ shapes: [['triangle', 3], ['square', 4], ['rectangle', 4], ['pentagon', 5], ['hexagon', 6], ['octagon', 8]] })),
 };
