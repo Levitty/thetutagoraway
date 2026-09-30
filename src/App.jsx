@@ -4980,7 +4980,6 @@ const HomePage = ({ onNavigate, setShowAuth }) => {
   const faqs = [
     { q: 'How do I book a lesson?', a: 'Simply find a tutor, select an available time slot, and pay securely via card. You\'ll receive a confirmation with a link to join the video lesson.' },
     { q: 'How do video lessons work?', a: 'Lessons happen via our built-in video platform. Both you and your tutor can share screens, use a virtual whiteboard, and chat in real-time.' },
-    { q: 'Can I reschedule a lesson?', a: 'Yes! You can reschedule up to 24 hours before the lesson starts at no extra cost.' },
     { q: 'How do tutors get paid?', a: 'Tutors receive payments weekly via mobile money. We handle all the payment processing securely.' },
   ];
 
