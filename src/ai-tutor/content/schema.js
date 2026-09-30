@@ -471,7 +471,11 @@ export function buildDifferentiate() {
       ],
       answer: dStr.caret,
     },
-    misconceptions: [],
+    misconceptions: [
+      { when: fmtPoly(fTerms.filter(([, p]) => p >= 1).map(([c, p]) => [c * p, p])).caret, feedback: 'Bring the power down AND reduce the power by 1.' },
+      { when: fmtPoly(fTerms.filter(([, p]) => p >= 1).map(([c, p]) => [c, p - 1])).caret, feedback: 'Multiply by the old power as well: d/dx(c·xⁿ) = n·c·xⁿ⁻¹.' },
+      ...(fTerms.some(([, p]) => p === 0) ? [{ when: fmtPoly([...dTerms, ...fTerms.filter(([, p]) => p === 0)]).caret, feedback: 'A constant on its own does not change, so its derivative is 0: drop it.' }] : []),
+    ],
     verify: { kind: 'derivative', f: (x) => evalPoly(fTerms, x), df: (x) => evalPoly(dTerms, x) },
   };
 }
@@ -508,7 +512,10 @@ export function buildIntegrate() {
       ],
       answer: ans,
     },
-    misconceptions: [],
+    misconceptions: [
+      { when: `${fmtPoly(integrand.map(([c, p]) => [c, p + 1])).caret} + C`, feedback: 'Raise the power by 1 AND divide by the new power.' },
+      { when: `${fmtPoly(integrand.map(([c, p]) => [c * p, p - 1]).filter(([c, p]) => p >= 0 && c !== 0)).caret} + C`, feedback: 'That is the derivative. Integrating goes the other way: raise the power, then divide by it.' },
+    ],
     verify: { kind: 'integral', integrand: (x) => evalPoly(integrand, x), F: (x) => evalPoly(FTerms, x) },
   };
 }
@@ -539,7 +546,10 @@ export function buildDefiniteIntegral() {
       ],
       answer: `${value}`,
     },
-    misconceptions: [],
+    misconceptions: [
+      ...(evalPoly(FTerms, a) !== 0 ? [{ when: `${evalPoly(FTerms, b)}`, feedback: `That is F(${b}) only. Subtract F(${a}), the value at the lower limit.` }] : []),
+      ...(value !== 0 ? [{ when: `${-value}`, feedback: 'The sign is flipped: it is F(top) − F(bottom), not the other way round.' }] : []),
+    ],
     verify: { kind: 'definite', integrand: (x) => evalPoly(integrand, x), a, b, value },
   };
 }
@@ -706,7 +716,11 @@ export function buildArithmeticSeries() {
       ],
       answer: `${Sn}`,
     },
-    misconceptions: [],
+    misconceptions: [
+      { when: `${a1 + (n - 1) * d}`, feedback: `That is the ${n}th term. The question asks for the SUM of the first ${n} terms.` },
+      ...(Number.isInteger((n * (2 * a1 + n * d)) / 2) ? [{ when: `${(n * (2 * a1 + n * d)) / 2}`, feedback: 'Check the bracket: it is (n − 1)d, not nd. The first term has no d added.' }] : []),
+      { when: `${n * a1}`, feedback: 'That adds the first term n times. Each term goes up by the common difference.' },
+    ],
     verify: { kind: 'numeric', f: () => { let s = 0; for (let i = 0; i < n; i++) s += a1 + i * d; return s; }, at: 0, value: Sn },
   };
 }

@@ -349,3 +349,25 @@ constructions and induction).
   1.6 km" accepted 1.65). Left as is: "12" accepted for "12 o'clock" in
   Grades 1-2, and hints that state a rule whose number happens to be the
   answer (the 68-95-99.7 rule, "the 1s column").
+
+## Round 13: Grade 10-12 mistake feedback
+Before: 6 of 54 senior skills ever named a mistake. After: 54 of 54.
+
+Senior mistakes are topic-specific, so they are listed per skill
+(`src/ai-tutor/seniorMistakes.js`, 38 skills) or written into the builder
+where the exact values are known (differentiate, integrate, definite
+integrals, series, further differentiation, substitution, by parts).
+Examples of what the child now hears:
+- log a + log b written as log(a + b): "Adding logs MULTIPLIES the numbers
+  inside."
+- the power not brought down, or not reduced, when differentiating; the
+  derivative given when asked to integrate
+- F(top) only, or F(bottom) − F(top), for a definite integral
+- a² + b² for the cosine rule (that is Pythagoras); the wrong sign on 2ab cos C
+- sin(A + B) = sin A + sin B; sin 2θ = 2 sin θ
+- the 16% tail doubled to 32%; the variance given for the mean
+- f(y) given for f⁻¹(y); the x of a minimum given for the minimum value
+- a₂₁ for a₁₂; ad + bc for a determinant; A and B swapped in partial fractions
+- the 9th term given when the sum of 9 terms was asked
+Every wrong answer listed is checked not to be marked right, and feedback
+never states the answer (audit:items, 0 findings).

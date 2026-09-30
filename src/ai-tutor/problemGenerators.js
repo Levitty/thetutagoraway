@@ -9,6 +9,7 @@ import { STRUCTURED_CONTENT } from './content/index.js';
 import { PRIMARY_ALIAS } from './content/primary.js';
 import { checkAnswerMatch } from './answerCheck.js';
 import { catalogueMistakes } from './mistakes.js';
+import { seniorMistakes } from './seniorMistakes.js';
 
 // Structured, pedagogically-complete content (worked example + scaffolded steps
 // + hint ladder + misconception feedback + verified answers) lives in
@@ -1770,7 +1771,7 @@ export const kpCount = (skillId) => {
 // would see it, and drop any listed misconception that is really the answer.
 const FLOAT_NOISE = /-?\d+\.\d*?(?:0{6,}|9{6,})\d{0,3}(?!\d)/g;
 const tidyNum = (t) => (typeof t === 'string' ? t.replace(FLOAT_NOISE, (m) => String(Number(Number(m).toPrecision(12)))) : t);
-const tidy = (p) => {
+const tidy = (p, skillId) => {
   if (!p || typeof p !== 'object') return p;
   for (const k of ['question', 'answer', 'hint']) p[k] = tidyNum(p[k]);
   if (Array.isArray(p.accepts)) p.accepts = p.accepts.map(tidyNum);
@@ -1781,7 +1782,7 @@ const tidy = (p) => {
   if (!p.placeholder) {
     const own = Array.isArray(p.misconceptions) ? p.misconceptions : [];
     const have = new Set(own.map(m => String(m?.when)));
-    const extra = catalogueMistakes(p).filter(m => !have.has(m.when));
+    const extra = [...catalogueMistakes(p), ...seniorMistakes(skillId, p)].filter(m => !have.has(m.when) && (have.add(m.when), true));
     if (own.length || extra.length) p.misconceptions = [...own, ...extra];
   }
   if (Array.isArray(p.misconceptions)) {
@@ -1790,7 +1791,7 @@ const tidy = (p) => {
   return p;
 };
 
-export const generateProblem = (skillId, opts = {}) => tidy(generateRaw(skillId, opts));
+export const generateProblem = (skillId, opts = {}) => tidy(generateRaw(skillId, opts), PRIMARY_ALIAS[skillId] || skillId);
 const generateRaw = (skillId, opts = {}) => {
   // Lower-primary (Grade 1–4) skills reuse an equivalent skill's content.
   if (PRIMARY_ALIAS[skillId]) skillId = PRIMARY_ALIAS[skillId];
