@@ -572,6 +572,7 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
   const [err, setErr] = useState('');
   const [done, setDone] = useState(null);
   const endedFreeWeek = isFreeWeek(subscription);
+  const daysLeft = passDaysLeft(subscription);
 
   const pay = async () => {
     if (!user?.id || !user?.email) { setErr('Please sign in first.'); return; }
@@ -613,9 +614,11 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
           </>
         ) : (
           <>
-            <div className="text-[11px] font-bold tracking-[.12em] uppercase text-amber-700">{endedFreeWeek ? 'Your free week has ended' : 'Your pass has ended'}</div>
+            <div className="text-[11px] font-bold tracking-[.12em] uppercase text-amber-700">{daysLeft > 0
+              ? `${endedFreeWeek ? 'Free week' : 'Your pass'}: ${daysLeft} day${daysLeft === 1 ? '' : 's'} left`
+              : (endedFreeWeek ? 'Your free week has ended' : 'Your pass has ended')}</div>
             <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 mt-1">Keep the daily practice going</h2>
-            <p className="text-[15px] text-slate-500 mt-2">15 minutes a day, picking up exactly where your child left off. One pass covers every child on your account.</p>
+            <p className="text-[15px] text-slate-500 mt-2">15 minutes a day, picking up exactly where your child left off. One pass covers every child on your account.{daysLeft > 0 ? ' Paying now adds to the days you have left, so you lose nothing.' : ''}</p>
             <div className="grid grid-cols-2 gap-2.5 mt-5" role="radiogroup" aria-label="Choose a pass">
               {[PLANS.week, PLANS.month].map(p => (
                 <button key={p.id} type="button" role="radio" aria-checked={plan === p.id} onClick={() => setPlan(p.id)}
@@ -1310,7 +1313,7 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
               <div className={`passbar ${left > 2 ? '' : 'warn'}`}>
                 <div><b>{left > 0 ? (trial ? `Free week: ${left} day${left === 1 ? '' : 's'} left` : `Practice pass: ${left} day${left === 1 ? '' : 's'} left`) : 'Practice is paused'}</b>
                   <span>{left > 0 ? (trial ? `Then KSh ${PLANS.week.kes} a week or KSh ${PLANS.month.kes} a month. One pass covers all your children.` : 'Every child on your account can practise.') : 'Get a pass to keep the daily 15 minutes going.'}</span></div>
-                {(left <= 2) && <button type="button" className="btn sm" onClick={onGetPass}>{left > 0 ? 'Get a pass' : 'Get a pass'}</button>}
+                <button type="button" className={`btn sm ${left > 2 ? 'line' : ''}`} onClick={onGetPass}>Get a pass</button>
               </div>
             );
           })()}
