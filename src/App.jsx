@@ -368,15 +368,14 @@ const PrivacyPolicyPage = ({ onBack }) => (
 // ============ COOKIE / PRIVACY BANNER ============
 const PrivacyBanner = ({ onAccept, onNavigate }) => (
   // One slim line, so it doesn't cover the first screen a parent sees.
-  <div className="fixed bottom-0 left-0 right-0 bg-slate-900 text-white px-4 py-2.5 z-40 shadow-lg" role="region" aria-label="Privacy">
-    <div className="max-w-4xl mx-auto flex items-center gap-3">
-      <p className="text-xs sm:text-sm text-slate-300 flex-1 leading-snug">
+  // Styled as the public site (.tg-privacy in site/site.css).
+  <div className="tg-privacy" role="region" aria-label="Privacy">
+    <div className="in">
+      <p>
         We use essential data to run Tutagora, under Kenya's Data Protection Act.{' '}
-        <button onClick={() => onNavigate('privacy')} className="text-amber-300 underline hover:text-amber-200">Privacy Policy</button>
+        <button type="button" className="lnk" onClick={() => onNavigate('privacy')}>Privacy Policy</button>
       </p>
-      <button onClick={onAccept} className="shrink-0 px-4 py-1.5 bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-semibold rounded-lg transition-colors">
-        OK
-      </button>
+      <button type="button" className="ok" onClick={onAccept}>OK</button>
     </div>
   </div>
 );
