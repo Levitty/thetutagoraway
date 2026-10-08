@@ -17,7 +17,8 @@ import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
 import { planYoungLesson } from '../src/ai-tutor/youngPlan.js';
 import { propagateCredit } from '../src/ai-tutor/diagnosticEngine.js';
-import { getDiagnosticSkills, computePlacementGrade, getEffectivePlacement, recentMastery } from '../src/ai-tutor/adaptiveEngine.js';
+import { getDiagnosticSkills, getEffectivePlacement, recentMastery } from '../src/ai-tutor/adaptiveEngine.js';
+import { selectQuestion, computePlacement, isComplete, MAX_QUESTIONS } from '../src/ai-tutor/placement.js';
 
 let failures = 0;
 const fail = (msg) => { console.log('  ✗ ' + msg); failures++; };
@@ -173,12 +174,78 @@ for (const g of [6, 8, 10]) {
   if (n >= 18) ok(`grade ${g} diagnostic: ${n} questions`);
   else fail(`grade ${g} diagnostic only ${n} questions (want ≥18)`);
 }
-const pskills = [{ id: 'a', grade: 5 }, { id: 'b', grade: 5 }, { id: 'c', grade: 6 }, { id: 'd', grade: 6 }, { id: 'e', grade: 7 }, { id: 'f', grade: 7 }];
-const T = (m) => Object.fromEntries(Object.entries(m).map(([k, v]) => [k, { correct: v }]));
-const p1 = computePlacementGrade(pskills, T({ a: 1, b: 1, c: 1, d: 1, e: 1, f: 1 }), 6);
-const p2 = computePlacementGrade(pskills, T({ a: 1, b: 1, c: 1, d: 1, e: 0, f: 0 }), 6);
-if (p1 === 7 && p2 === 6) ok('placement grade tracks the highest cleared band (7, 6)');
-else fail(`placement wrong: cleared-all=${p1} (want 7), cleared-to-6=${p2} (want 6)`);
+// Placement regressions. A teacher sat the Grade 6 test in Oct 2026 and hit
+// three faults at once: it served Grade 9/10/calculus questions, it placed them
+// at Grade 11, and it asked indices over and over while barely touching BODMAS.
+// Each fault gets a check here.
+const pool = Object.values(SKILLS).filter(s => Number.isFinite(s.grade));
+// Drive a whole test with a learner who knows everything at or below `frontier`.
+const sit = (declared, frontier) => {
+  const asked = [];
+  while (asked.length < MAX_QUESTIONS) {
+    const q = selectQuestion(asked, declared, pool);
+    if (!q) break;
+    asked.push({ id: q.id, grade: q.grade, strand: q.strand, correct: q.grade <= frontier });
+  }
+  return { asked, placed: computePlacement(asked, declared, pool) };
+};
+
+// (a) the ceiling: never more than one grade above what the learner declared,
+// no matter how much maths they actually know.
+const ceilingBreaches = [[6, 12], [6, 9], [4, 12], [9, 12]].filter(([d, f]) =>
+  sit(d, f).asked.some(a => a.grade > d + 1));
+if (!ceilingBreaches.length) ok('placement never serves more than one grade above the declared grade');
+else fail(`placement served above declared+1 for ${JSON.stringify(ceilingBreaches)}`);
+
+// (b) strand balance: the declared grade's sweep covers every strand taught at
+// that grade. The old test was 98% Numbers.
+const g6Strands = new Set(pool.filter(s => s.grade === 6).map(s => s.strand));
+const swept6 = new Set(sit(6, 6).asked.filter(a => a.grade === 6).map(a => a.strand));
+if (swept6.size === g6Strands.size) ok(`grade 6 sweep covers all ${g6Strands.size} strands`);
+else fail(`grade 6 sweep covered ${swept6.size}/${g6Strands.size} strands: ${[...swept6]}`);
+
+// (c) the teacher's own example: a Grade 6 entry must never be served senior
+// content. Theirs served Introduction to Indices and Laws of Indices back to
+// back at question 5 and 6, then surds, then logarithms.
+const senior = /Indices|Surds|Logarithm|Differentiat|Integrat|Quadratic|Limits/i;
+const g6Senior = [6, 9, 12].flatMap(f => sit(6, f).asked)
+  .map(a => SKILLS[a.id]?.name || '').filter(n => senior.test(n));
+if (!g6Senior.length) ok('a grade 6 entry is never served senior content');
+else fail(`grade 6 entry served senior skills: ${[...new Set(g6Senior)].join(', ')}`);
+
+// (d) placement is capped at the declared grade, and only a PERFECT sweep of
+// the stretch grade goes one above it.
+const placedCaps = [[6, 12, 7], [6, 6, 6], [6, 5, 5], [6, 3, 3], [9, 7, 7]]
+  .filter(([d, f, want]) => sit(d, f).placed !== want)
+  .map(([d, f, want]) => `declared ${d}, knows ${f}: got ${sit(d, f).placed} want ${want}`);
+if (!placedCaps.length) ok('placement lands on the real level, capped at declared+1');
+else fail('placement off: ' + placedCaps.join('; '));
+
+// (e) the bug that sent the teacher to Grade 11: the old code returned the
+// lowest grade TESTED even when that grade was failed, and grades below were
+// never tested at all. A learner who gets nothing right must place BELOW
+// everything asked — or at the floor of the graph if that is where they are.
+const wrongAt = (grades) => grades.map(g => ({ id: 'x' + g, grade: g, strand: 'Numbers', correct: false }));
+const notFloor = computePlacement(wrongAt([7, 6, 5]), 7, pool);       // never reached the bottom
+const atFloor = computePlacement(wrongAt([3, 2, 1]), 3, pool);        // failed grade 1 itself
+if (notFloor === 4 && atFloor === 1) ok('all-wrong places below everything asked (4), floored at grade 1');
+else fail(`all-wrong placement wrong: mid=${notFloor} (want 4), floor=${atFloor} (want 1)`);
+
+// (f) selection is pure, so a test interrupted and resumed asks the same
+// question rather than reshuffling.
+const partial = sit(7, 5).asked.slice(0, 4);
+const a1 = selectQuestion(partial, 7, pool)?.id, a2 = selectQuestion(partial.slice(), 7, pool)?.id;
+if (a1 && a1 === a2) ok('question choice is deterministic — a resumed test continues where it left off');
+else fail(`resume not deterministic: ${a1} vs ${a2}`);
+
+// (g) it always terminates, for every declared grade and ability.
+const runaway = [];
+for (let d = 1; d <= 12; d++) for (const f of [0, 1, d, 12]) {
+  const { asked } = sit(d, f);
+  if (!isComplete(asked, d, pool)) runaway.push(`${d}/${f}`);
+}
+if (!runaway.length) ok('every declared grade × ability terminates within the question cap');
+else fail('did not terminate: ' + runaway.join(', '));
 
 // Effective placement decays after sustained struggle, holds otherwise.
 const g7 = Object.values(SKILLS).filter(s => s.grade === 7).slice(0, 3);

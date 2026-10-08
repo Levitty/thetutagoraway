@@ -351,29 +351,10 @@ export const getDiagnosticSkills = (progress, ctx) => {
 
 // ==================== PLACEMENT (STABLE LEVEL) ====================
 
-// The grade a finished diagnostic places the student at: the highest grade band
-// they cleared (≥50% correct), walking up from the foundation. Persisted so the
-// displayed "level" stays stable instead of falling back to the conservative
-// mastery-count estimate whenever the ability engine is unreachable.
-export const computePlacementGrade = (skills, results, declaredGrade = null) => {
-  const byGrade = {};
-  for (const s of skills || []) {
-    const r = results?.[s.id];
-    if (!r) continue;
-    const g = s.grade;
-    if (!byGrade[g]) byGrade[g] = { correct: 0, total: 0 };
-    byGrade[g].total++;
-    if (r.correct) byGrade[g].correct++;
-  }
-  const grades = Object.keys(byGrade).map(Number).sort((a, b) => a - b);
-  if (!grades.length) return declaredGrade;
-  let placement = grades[0];
-  for (const g of grades) {
-    if (byGrade[g].correct / byGrade[g].total >= 0.5) placement = g; // cleared this grade
-    else break; // first grade they don't clear caps the placement
-  }
-  return placement;
-};
+// The placement grade is computed in placement.js, from the record of the
+// check. It used to live here and walked up from the lowest grade actually
+// TESTED, so it could never return anything below the grade the learner
+// declared — a Grade 6 entry came back as Grade 11.
 
 // The placement acts as a STABLE floor for the displayed level — but a floor
 // that's clearly too high shouldn't stick. This derives an "effective"
@@ -605,7 +586,6 @@ export default {
   getNextToLearn,
   getRecommendedPath,
   getDiagnosticSkills,
-  computePlacementGrade,
   getEffectivePlacement,
   getRemediationSkills,
   getStats,

@@ -80,8 +80,14 @@ const loadLocal = (key) => {
 // resumes at the latest question localStorage saw, not a debounced-behind cloud
 // row. Its max (~40) stays far below the skills/diagnosed weights, so a finished
 // diagnostic still always wins.
+// `record` is the current cursor's account of the check; `answered` was its
+// name before the Oct 2026 placement rewrite. A learner mid-check when that
+// shipped must not have their answers scored as zero and discarded.
+const diagProgressLen = (p) =>
+  (p?.diagInProgress?.record?.length ?? p?.diagInProgress?.answered?.length ?? 0);
+
 const progressScore = (p) =>
-  p ? (p.diagnosed ? 1e9 : 0) + Object.keys(p.skills || {}).length * 1000 + (p.totalXP || 0) + (p.diagInProgress?.answered?.length || 0) : -1;
+  p ? (p.diagnosed ? 1e9 : 0) + Object.keys(p.skills || {}).length * 1000 + (p.totalXP || 0) + diagProgressLen(p) : -1;
 
 const reconcileProgress = (a, b) => {
   if (!a) return b || null;

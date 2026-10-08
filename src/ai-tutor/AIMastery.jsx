@@ -6,9 +6,10 @@
 import { useHorebLook } from './horebLook.js';
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
-import { prereqsMet, getStatus, getRecommendedPath, leadWithMissingStep, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, computePlacementGrade, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
+import { prereqsMet, getStatus, getRecommendedPath, leadWithMissingStep, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
-import { propagateCredit, getTimeWeight, selectNextQuestion, processDiagnosticResults } from './diagnosticEngine.js';
+import { propagateCredit, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
+import { selectQuestion, isComplete as placementComplete, computePlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
 import { HorebBot } from './HorebBot.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
@@ -190,7 +191,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   const [visualAnswer, setVisualAnswer] = useState(null);
 
   // Diagnostic state (adaptive: running evidence + a moving focus grade, not a fixed list)
-  const [diagState, setDiagState] = useState({ answered: [], balances: {}, results: {}, startTimes: {}, current: null, focus: null, perGrade: {} });
+  // `record` is the settled verdict per skill: [{ id, grade, strand, correct,
+  // skipped }]. Every placement decision derives from it, so a resumed check
+  // needs nothing else. A confirmation question updates its skill's entry in
+  // place rather than adding one — one skill, one verdict.
+  const [diagState, setDiagState] = useState({ record: [], balances: {}, startTimes: {}, current: null, pending: null, asked: 0 });
   // Snapshots of each answered question so "Previous" can step back and rollback
   // the evidence (in-session only — not restored across a reload/resume).
   const [diagHistory, setDiagHistory] = useState([]);
@@ -352,11 +357,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       // same current question, all evidence so far, and the focus grade. The
       // candidate pool is the full skill list, rebuilt fresh from the subject.
       const dip = p.diagInProgress;
-      if (!p.diagnosed && dip && dip.subjectId === subjectId && dip.currentId && Array.isArray(dip.answered)) {
+      if (!p.diagnosed && dip && dip.subjectId === subjectId && dip.currentId && dip.v === 4 && Array.isArray(dip.record)) {
         try {
           const cur = ctx?.skills?.[dip.currentId];
           if (!cur) throw new Error('current skill not found');
-          setDiagState({ answered: dip.answered, balances: dip.balances || {}, results: dip.results || {}, startTimes: { [cur.id]: Date.now() }, current: cur, focus: dip.focus ?? p.declaredGrade, perGrade: dip.perGrade || {}, pending: dip.pending || null, asked: dip.asked ?? dip.answered.length });
+          setDiagState({ record: dip.record, balances: dip.balances || {}, startTimes: { [cur.id]: Date.now() }, current: cur, pending: dip.pending || null, asked: dip.asked ?? dip.record.length });
           setDiagHistory([]); // snapshots aren't persisted; can't step back past a reload
           setProblem(dip.problem || generateProblem(cur.id));
           setAnswer(''); setVisualAnswer(null); setFeedback(null);
@@ -561,46 +566,28 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // confirmation, 14% of parents were told about a "missing step" the child
   // actually had, from one careless slip. Confirming each wrong answer with a
   // second question and asking at least 12 cut that to 1%.
-  const DIAG_MIN = 12;   // ask at least this many before bracketing can stop us
-  const DIAG_MAX = 20;   // hard ceiling
-
-  const diagList = () => Object.values(ctx?.skills || {}).filter(s => Number.isFinite(s.grade));
-  const gradeSpan = (list) => { const g = list.map(s => s.grade); return [Math.min(...g), Math.max(...g)]; };
-  const clearedG = (pg, g) => pg[g] && pg[g].t >= 2 && pg[g].c / pg[g].t >= 0.5;
-  const failedG = (pg, g) => pg[g] && pg[g].t >= 2 && pg[g].c / pg[g].t < 0.5;
-  // Nearest grade to `focus` that still has an unanswered skill; within a grade,
-  // prefer load-bearing (critical) skills, then the least-certain one.
-  const pickAt = (list, focus, answeredSet, balances) => {
-    const [gmin, gmax] = gradeSpan(list);
-    for (let d = 0; d <= gmax - gmin; d++) {
-      for (const g of (d === 0 ? [focus] : [focus - d, focus + d])) {
-        const cands = list.filter(s => s.grade === g && !answeredSet.has(s.id));
-        if (cands.length) {
-          cands.sort((a, b) => (b.critical ? 1 : 0) - (a.critical ? 1 : 0)
-            || Math.abs(balances[a.id] || 0) - Math.abs(balances[b.id] || 0));
-          return cands[0];
-        }
-      }
-    }
-    return null;
-  };
+  // The candidate pool. Which question comes next, when to stop and the final
+  // grade all live in placement.js — see its header for why the declared grade
+  // is a ceiling rather than a starting rung.
+  const diagPool = () => Object.values(ctx?.skills || {}).filter(s => Number.isFinite(s.grade));
 
   // Snapshot the live diagnostic so a browser close/reload resumes the exact
   // question — answers so far, running evidence, focus grade, and the current
   // problem. Stored in `progress` (localStorage instantly + cloud on save). The
   // candidate pool is the full skill list, rebuilt on resume rather than stored.
-  const diagCursor = (answered, balances, results, current, prob, focus, perGrade, extra = {}) =>
-    ({ subjectId, v: 3, answered, balances, results, currentId: current?.id, problem: prob, focus, perGrade, pending: extra.pending || null, asked: extra.asked ?? answered.length });
+  const diagCursor = (record, balances, current, prob, extra = {}) =>
+    ({ subjectId, v: 4, record, balances, currentId: current?.id, problem: prob,
+       pending: extra.pending || null, asked: extra.asked ?? record.length });
 
   const startDiagnostic = () => {
-    const list = diagList();
-    const focus = progress.declaredGrade; // required before starting
-    const first = pickAt(list, focus, new Set(), {}) || list[0];
+    const pool = diagPool();
+    const declared = progress.declaredGrade; // required before starting
+    const first = selectQuestion([], declared, pool) || pool[0];
     const firstProblem = generateProblem(first?.id);
-    setDiagState({ answered: [], balances: {}, results: {}, startTimes: { [first?.id]: Date.now() }, current: first, focus, perGrade: {}, pending: null, asked: 0 });
+    setDiagState({ record: [], balances: {}, startTimes: { [first?.id]: Date.now() }, current: first, pending: null, asked: 0 });
     setDiagHistory([]);
     setProblem(firstProblem);
-    setProgress(p => ({ ...p, diagInProgress: diagCursor([], {}, {}, first, firstProblem, focus, {}) }));
+    setProgress(p => ({ ...p, diagInProgress: diagCursor([], {}, first, firstProblem) }));
     setAnswer('');
     setVisualAnswer(null);
     setFeedback(null);
@@ -619,7 +606,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     setVisualAnswer(null);
     setFeedback(null);
     const s = prev.state;
-    setProgress(p => ({ ...p, diagInProgress: diagCursor(s.answered, s.balances, s.results, s.current, prev.problem, s.focus, s.perGrade, { pending: s.pending, asked: s.asked }) }));
+    setProgress(p => ({ ...p, diagInProgress: diagCursor(s.record, s.balances, s.current, prev.problem, { pending: s.pending, asked: s.asked }) }));
   };
 
   const handleDiagnosticAnswer = (opts = {}) => {
@@ -630,8 +617,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // Allow either a typed answer or an interactive-visual answer (number line etc.)
     const hasVisualAnswer = problem?.visual && visualAnswer != null;
     if (!skip && !answer.trim() && !hasVisualAnswer) return;
-    const { answered, balances, results, startTimes, current, focus, perGrade, pending = null } = diagState;
-    const asked = diagState.asked ?? answered.length;
+    const { record, balances, startTimes, current, pending = null } = diagState;
+    const asked = diagState.asked ?? record.length;
     const skill = current;
     if (!skill) return;
     // Remember this question so "Previous" can return to it and undo its evidence.
@@ -650,30 +637,30 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // A wrong answer is confirmed with one more question on the same skill
     // before it counts as a gap: right the second time means the first was a
     // slip, so the evidence is rebuilt from before it as a right answer.
-    const bump = (pg, ok) => ({ ...pg, [skill.grade]: { c: (pg[skill.grade]?.c || 0) + (ok ? 1 : 0), t: (pg[skill.grade]?.t || 0) + 1 } });
     const isConfirm = !!pending && pending.id === skill.id;
-    let newBalances, newResults, newAnswered, newPerGrade, newPending = null;
+    let newBalances, newRecord, newPending = null;
     if (isConfirm) {
-      newAnswered = answered;
       if (correct) {
+        // The first answer was a slip. Rebuild the evidence from before it and
+        // flip this skill's verdict to right — one skill still holds one verdict.
         newBalances = propagateCredit(pending.balances, skill.id, true, timeWeight, ctx);
-        newResults = { ...pending.results, [skill.id]: { correct: true, timeTaken, confirmed: true } };
-        newPerGrade = bump(pending.perGrade, true);
+        newRecord = pending.record.map(r => r.id === skill.id
+          ? { ...r, correct: true, confirmed: true } : r);
+        if (!newRecord.some(r => r.id === skill.id)) {
+          newRecord = [...newRecord, { id: skill.id, grade: skill.grade, strand: skill.strand, correct: true, confirmed: true }];
+        }
       } else {
+        // Wrong twice: the gap is real. Leave the verdict standing.
         newBalances = balances;
-        newResults = { ...results, [skill.id]: { ...results[skill.id], confirmed: true } };
-        newPerGrade = perGrade;
+        newRecord = record.map(r => r.id === skill.id ? { ...r, confirmed: true } : r);
       }
     } else {
       newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
-      newResults = { ...results, [skill.id]: { correct, timeTaken, ...(skip ? { skipped: true } : {}) } };
-      newAnswered = [...answered, skill.id];
-      newPerGrade = bump(perGrade, correct);
+      newRecord = [...record, { id: skill.id, grade: skill.grade, strand: skill.strand, correct, ...(skip ? { skipped: true } : {}) }];
       // "I haven't learned this yet" is already a clear signal: no re-ask.
-      if (!correct && !skip) newPending = { id: skill.id, balances, results, perGrade };
+      if (!correct && !skip) newPending = { id: skill.id, balances, record };
     }
     const newAsked = asked + 1;
-    const answeredSet = new Set(newAnswered);
 
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId: skill.id,
@@ -683,28 +670,22 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
     setFeedback(correct ? 'correct' : 'incorrect');
 
-    // Move the focus toward the frontier, then decide whether it's bracketed.
-    const list = diagList();
-    const [gmin, gmax] = gradeSpan(list);
-    let nextFocus = focus;
-    if (clearedG(newPerGrade, focus)) nextFocus = Math.min(gmax, focus + 1);
-    else if (failedG(newPerGrade, focus)) nextFocus = Math.max(gmin, focus - 1);
-
-    let bracketed = false;
-    if (newAnswered.length >= DIAG_MIN && !newPending) {
-      for (let g = gmin; g < gmax; g++) if (clearedG(newPerGrade, g) && failedG(newPerGrade, g + 1)) bracketed = true;
-    }
+    // A wrong answer is re-asked first; otherwise placement.js decides what
+    // comes next — finish sweeping the declared grade across every strand, then
+    // step down a grade at a time until one clears.
+    const pool = diagPool();
+    const declared = progress.declaredGrade;
     const confirmNext = !!newPending && newAsked < DIAG_MAX;
-    const nextSkill = confirmNext ? skill : pickAt(list, nextFocus, answeredSet, newBalances);
-    const isLast = newAsked >= DIAG_MAX || !nextSkill || (bracketed && !confirmNext);
+    const nextSkill = confirmNext ? skill : selectQuestion(newRecord, declared, pool, newBalances);
+    const isLast = newAsked >= DIAG_MAX || !nextSkill
+      || (!confirmNext && placementComplete(newRecord, declared, pool));
 
     // On the final question, compute and PERSIST the finished state immediately —
     // before the 800ms feedback pause — so navigating away can never lose it.
     let finishedProgress = null;
     if (isLast) {
-      const answeredObjs = newAnswered.map(id => ctx.skills[id]).filter(Boolean);
       const skillUpdates = processDiagnosticResults(newBalances, ctx);
-      const placementGrade = computePlacementGrade(answeredObjs, newResults, progress.declaredGrade);
+      const placementGrade = computePlacement(newRecord, declared, pool);
       const finished = {
         ...progress,
         skills: { ...progress.skills, ...skillUpdates },
@@ -714,9 +695,9 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
         // How much of the check was actually answered, so a result built
         // mostly on "I haven't learned this yet" taps isn't shown as fact.
         diagStats: {
-          answered: newAnswered.length,
-          skipped: Object.values(newResults).filter(r => r?.skipped).length,
-          correct: Object.values(newResults).filter(r => r?.correct).length,
+          answered: newRecord.length,
+          skipped: newRecord.filter(r => r.skipped).length,
+          correct: newRecord.filter(r => r.correct).length,
         },
         diagInProgress: null, // completed — clear the resume cursor
         focusSkillId: null,   // a new check brings a new plan: its missing step leads
@@ -729,10 +710,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     setTimeout(() => {
       if (!isLast) {
         const nextProblem = generateProblem(nextSkill.id);
-        setDiagState({ answered: newAnswered, balances: newBalances, results: newResults, startTimes: { ...startTimes, [nextSkill.id]: Date.now() }, current: nextSkill, focus: confirmNext ? focus : nextFocus, perGrade: newPerGrade, pending: newPending, asked: newAsked });
+        setDiagState({ record: newRecord, balances: newBalances, startTimes: { ...startTimes, [nextSkill.id]: Date.now() }, current: nextSkill, pending: newPending, asked: newAsked });
         setProblem(nextProblem);
         // Advance the resume cursor so a mid-test exit returns to THIS question.
-        setProgress(p => ({ ...p, diagInProgress: diagCursor(newAnswered, newBalances, newResults, nextSkill, nextProblem, confirmNext ? focus : nextFocus, newPerGrade, { pending: newPending, asked: newAsked }) }));
+        setProgress(p => ({ ...p, diagInProgress: diagCursor(newRecord, newBalances, nextSkill, nextProblem, { pending: newPending, asked: newAsked }) }));
         setAnswer('');
         setVisualAnswer(null);
         setFeedback(null);
@@ -1307,10 +1288,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // ==================== RENDER: DIAGNOSTIC ====================
 
   if (view === 'diagnostic') {
-    const { answered, current } = diagState;
+    const { record, current } = diagState;
     const skill = current;
     if (!skill) return null;
-    const asked = diagState.asked ?? answered.length;
+    const asked = diagState.asked ?? record.length;
     const n = asked + 1;
     // Adaptive test: the length isn't fixed, so show progress toward the ceiling.
     const pct = Math.min(96, Math.round((asked / DIAG_MAX) * 100));

@@ -43,30 +43,11 @@ export const getTimeWeight = (timeTakenMs, expectedMs = 30000) => {
   return 0.2;
 };
 
-// ==================== ADAPTIVE QUESTION SELECTION ====================
-
-export const selectNextQuestion = (balances, availableSkills, answeredSkills, ctx) => {
-  const skills = ctx?.skills || MATH_SKILLS;
-  const unanswered = availableSkills.filter(s => !answeredSkills.has(s.id));
-  if (unanswered.length === 0) return null;
-
-  const scored = unanswered.map(s => {
-    const confidence = Math.abs(balances[s.id] || 0);
-    const strandBonus = getStrandCoverage(answeredSkills, s.strand, skills);
-    return {
-      skill: s,
-      score: -confidence + strandBonus,
-    };
-  });
-
-  scored.sort((a, b) => b.score - a.score);
-  return scored[0]?.skill || unanswered[0];
-};
-
-const getStrandCoverage = (answered, strand, skills) => {
-  const strandCount = [...answered].filter(id => skills[id]?.strand === strand).length;
-  return Math.max(0, 3 - strandCount);
-};
+// Question selection for the check lives in placement.js, which sweeps the
+// declared grade across every strand before stepping down a grade. A
+// strand-balancing selector used to live here and was never called by the
+// app — the check was in fact 98% Numbers questions. Don't add a second
+// selector here.
 
 // ==================== PROCESS DIAGNOSTIC RESULTS ====================
 
@@ -137,7 +118,6 @@ export const detectConflicts = (balances, results, ctx) => {
 export default {
   propagateCredit,
   getTimeWeight,
-  selectNextQuestion,
   processDiagnosticResults,
   detectConflicts,
 };
