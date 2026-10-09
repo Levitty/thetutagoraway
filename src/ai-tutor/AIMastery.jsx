@@ -1960,7 +1960,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
           <HorebBot size={28} /><b className="text-[17px] font-extrabold tracking-tight">HOREB</b>
         </div>
         <div className="flex items-center gap-3.5">
-          {progress.currentStreak > 0 && <span className="flex items-center gap-1 bg-[#ffe3ee] text-slate-900 rounded px-2 py-0.5 text-sm font-bold"><Icon name="flame" className="w-4 h-4" />{progress.currentStreak} days</span>}
+          {progress.currentStreak > 0 && <span className="flex items-center gap-1 bg-[#ffe3ee] text-slate-900 rounded px-2 py-0.5 text-sm font-bold"><Icon name="flame" className="w-4 h-4" />{progress.currentStreak} day{progress.currentStreak === 1 ? '' : 's'}</span>}
           <button onClick={switchSubject} className="text-slate-400" title="Switch subject"><Icon name="book" className="w-[18px] h-[18px]" /></button>
           <button onClick={resetAll} className="text-slate-400" title="Reset progress"><Icon name="refresh" className="w-[18px] h-[18px]" /></button>
         </div>
