@@ -141,15 +141,42 @@ const generators = {
   },
 
   G5_MULTIPLICATION: () => {
-    const a = rand(12, 99), b = rand(2, 9);
+    // KICD Grade 5 expects 3-digit × 2-digit. The 2-digit × 1-digit we used to
+    // ask is that design's own "Below Expectations" floor.
+    const a = rand(112, 899), b = rand(12, 49);
     return { question: `${a} × ${b} = ?`, answer: (a * b).toString(),
-      workedExample: makeWorkedExample('34 × 7 = ?', ['Multiply ones: 4 × 7 = 28, write 8 carry 2', 'Multiply tens: 3 × 7 = 21, add carry 2 = 23'], '238') };
+      workedExample: makeWorkedExample('243 × 32 = ?', ['Multiply by the ones: 243 × 2 = 486', 'Multiply by the tens: 243 × 30 = 7290', 'Add the two parts: 486 + 7290 = 7776'], '7776') };
   },
 
   G5_DIVISION: () => {
-    const b = rand(2, 9), result = rand(10, 99), a = b * result;
+    // KICD Grade 5: divide up to a 3-digit number by up to a 2-digit number.
+    const b = rand(12, 39), result = rand(8, 29), a = b * result;
     return { question: `${a} ÷ ${b} = ?`, answer: result.toString(),
-      workedExample: makeWorkedExample('156 ÷ 6 = ?', ['How many 6s in 15? 2 × 6 = 12, remainder 3', 'Bring down 6: 36 ÷ 6 = 6'], '26') };
+      workedExample: makeWorkedExample('672 ÷ 21 = ?', ['How many 21s in 67? 3 × 21 = 63, remainder 4', 'Bring down the 2 to make 42', '42 ÷ 21 = 2, so the answer is 32'], '32') };
+  },
+
+  G5_DIVISIBILITY: () => {
+    const d = pick([2, 5, 10]);
+    const n = rand(20, 400);
+    return { question: `Is ${n} divisible by ${d}? Answer yes or no.`, answer: n % d === 0 ? 'yes' : 'no',
+      hint: d === 2 ? 'A number divides by 2 when its last digit is even.'
+          : d === 5 ? 'A number divides by 5 when it ends in 0 or 5.'
+                    : 'A number divides by 10 when it ends in 0.',
+      workedExample: makeWorkedExample('Is 364 divisible by 2?', ['Look only at the last digit: 4', '4 is even, so 364 divides by 2'], 'yes') };
+  },
+
+  G5_LCM_HCF: () => {
+    const pairs = [[4, 6], [6, 8], [3, 9], [8, 12], [5, 10], [9, 12], [10, 15], [6, 15]];
+    const [a, b] = pick(pairs);
+    const g = (x, y) => y === 0 ? x : g(y, x % y);
+    const hcf = g(a, b);
+    return Math.random() < 0.5
+      ? { question: `What is the lowest common multiple (LCM) of ${a} and ${b}?`, answer: ((a * b) / hcf).toString(),
+          hint: 'List the multiples of each number and find the first one they share.',
+          workedExample: makeWorkedExample('LCM of 4 and 6', ['Multiples of 4: 4, 8, 12, 16…', 'Multiples of 6: 6, 12, 18…', 'The first in both lists is 12'], '12') }
+      : { question: `What is the highest common factor (HCF) of ${a} and ${b}?`, answer: hcf.toString(),
+          hint: 'List the factors of each number and find the biggest one they share.',
+          workedExample: makeWorkedExample('HCF of 8 and 12', ['Factors of 8: 1, 2, 4, 8', 'Factors of 12: 1, 2, 3, 4, 6, 12', 'The biggest in both lists is 4'], '4') };
   },
 
   G5_FACTORS: () => {

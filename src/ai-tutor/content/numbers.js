@@ -475,19 +475,23 @@ export function buildDecimalGrid() {
 }
 
 // ABSTRACT: 2-digit × 1-digit multiplication.
+// KICD Grade 5 expects "up to a 3-digit number by a 2-digit number". Asking
+// 2-digit × 1-digit here is that design's own Below Expectations floor — which
+// is what a Grade 5 learner was actually served (21 × 3) in Oct 2026.
 export function buildMultiplyFact() {
-  const a = randInt(11, 49), b = randInt(2, 9), value = a * b;
-  const tens = Math.floor(a / 10) * 10, ones = a % 10;
+  const a = randInt(112, 899), b = randInt(12, 49), value = a * b;
+  const tens = Math.floor(b / 10) * 10, ones = b % 10;
   return {
     type: 'multiply-fact', instruction: 'Work out the product.',
     question: `${a} × ${b}`, answer: `${value}`, accepts: accepts(`${value}`),
     hints: hintLadder(
-      'Split the bigger number into tens and ones.',
-      `${tens} × ${b}  and  ${ones} × ${b}, then add.`,
+      'Split the second number into tens and ones.',
+      `${a} × ${tens}  and  ${a} × ${ones}, then add.`,
     ),
     solution: { steps: [
-      { text: 'Multiply the tens and the ones separately.', expr: `${tens}×${b} + ${ones}×${b}` },
-      { text: 'Add.', expr: `${value}` },
+      { text: 'Multiply by the ones.', expr: `${a}×${ones} = ${a * ones}` },
+      { text: 'Multiply by the tens.', expr: `${a}×${tens} = ${a * tens}` },
+      { text: 'Add the two parts.', expr: `${a * ones} + ${a * tens} = ${value}` },
     ], answer: `${value}` },
     misconceptions: [], verify: { kind: 'fraction', value },
   };
@@ -513,13 +517,18 @@ export function buildMultiplicationArray() {
 }
 
 // ABSTRACT: exact division fact.
+// KICD Grade 5: divide up to a 3-digit number by up to a 2-digit number.
 export function buildDivideFact() {
-  const d = randInt(2, 9), q = randInt(2, 12), a = d * q;
+  const d = randInt(12, 39), q = randInt(8, 29), a = d * q;
   return {
     type: 'divide-fact', instruction: 'Work out the quotient.',
     question: `${a} ÷ ${d}`, answer: `${q}`, accepts: accepts(`${q}`),
-    hints: hintLadder('How many groups of the divisor fit?', `How many ${d}s make ${a}?`),
-    solution: { steps: [{ text: `${d} × ? = ${a}.`, expr: `${a} ÷ ${d} = ${q}` }], answer: `${q}` },
+    hints: hintLadder('How many groups of the divisor fit?', `How many ${d}s make ${a}?`,
+      `Try tens first: ${d} × 10 = ${d * 10}.`),
+    solution: { steps: [
+      { text: `Start with tens.`, expr: `${d} × 10 = ${d * 10}` },
+      { text: `${d} × ? = ${a}.`, expr: `${a} ÷ ${d} = ${q}` },
+    ], answer: `${q}` },
     misconceptions: [], verify: { kind: 'fraction', value: q },
   };
 }

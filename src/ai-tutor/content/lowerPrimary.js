@@ -660,6 +660,46 @@ function buildCompareSymbols({ max }) {
 // ---------------------------------------------------------------------------
 // The grade-banded content map (KICD-verified ranges)
 // ---------------------------------------------------------------------------
+// KICD Grade 4, Numbers 1.8 "Use of letters": a letter standing in for a
+// number we do not know yet. The graph had no Grade 4 algebra at all.
+function buildUseOfLetters() {
+  return () => {
+    const letter = pick(['a', 'n', 'k', 'm']);
+    if (coin()) {
+      const known = randInt(2, 20), answer = randInt(2, 30);
+      const total = known + answer;
+      const wrong = [...new Set([total, Math.abs(known - answer), answer + 1])].filter(w => w !== answer).slice(0, 2);
+      return { type: 'use-of-letters', instruction: 'Find the number the letter stands for.',
+        question: `If ${letter} + ${known} = ${total}, what is ${letter}?`,
+        answer: `${answer}`, accepts: accepts(`${answer}`), choices: [answer, ...wrong].map(String),
+        hints: hintLadder(`${letter} stands for a number we do not know yet.`,
+                          `What do you add to ${known} to reach ${total}?`,
+                          `Take ${known} away from ${total}.`),
+        solution: { steps: [
+          { text: `${letter} stands for a number we do not know yet.` },
+          { text: `What adds to ${known} to make ${total}?`, expr: `${total} − ${known}` },
+          { text: `So ${letter} = ${answer}.`, expr: `${letter} = ${answer}` }],
+          answer: `${answer}` },
+        misconceptions: [], verify: { kind: 'number', value: answer } };
+    }
+    const each = randInt(2, 9), groups = randInt(2, 9);
+    const value = each * groups;
+    const wrong = [...new Set([each + groups, value + each, value - each])].filter(w => w !== value).slice(0, 2);
+    return { type: 'use-of-letters', instruction: 'Find the number the letter stands for.',
+      question: `If ${groups} × ${letter} = ${value}, what is ${letter}?`,
+      answer: `${each}`, accepts: accepts(`${each}`), choices: [each, ...wrong].map(String),
+      hints: hintLadder(`${letter} stands for a number we do not know yet.`,
+                        `How many ${groups}s make ${value}?`,
+                        `Share ${value} into ${groups} equal groups.`),
+      solution: { steps: [
+        { text: `${letter} stands for a number we do not know yet.` },
+        { text: `How many ${groups}s make ${value}?`, expr: `${value} ÷ ${groups}` },
+        { text: `So ${letter} = ${each}.`, expr: `${letter} = ${each}` }],
+        answer: `${each}` },
+      misconceptions: [], verify: { kind: 'number', value: each } };
+  };
+}
+
 export const LOWER_PRIMARY_CONTENT = {
   // ── Grade 1 ──────────────────────────────────────────────────────────────
   G1_PRENUMBER:      withWorkedExample(buildSimplePattern()),
@@ -792,6 +832,7 @@ export const LOWER_PRIMARY_CONTENT = {
                        withWorkedExample(buildLongDiv({ minQ: 11, maxQ: 30 })),
                        withWorkedExample(buildLongDiv({ minQ: 31, maxQ: 99 })),
                      ]),
+  G4_LETTERS:        withWorkedExample(buildUseOfLetters()),
   G4_LENGTH:         withWorkedExample(buildUnitConvert({ pairs: [['kilometres', 'metres', 1000], ['metres', 'centimetres', 100]] })),
   G4_AREA:           withWorkedExample(buildSmallArea()),
   G4_VOLUME:         withWorkedExample(buildSmallVolume()),
