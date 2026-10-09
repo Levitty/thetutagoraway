@@ -1342,7 +1342,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   disabled={!!feedback}
                 />
               )}
-              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
               {!feedback && (
                 <button onClick={() => handleDiagnosticAnswer({ skip: true })} className="mt-3.5 text-[15px] font-bold text-slate-900 underline underline-offset-4 hover:text-[#c2255c] transition-colors">
                   I haven’t learned this yet
@@ -1627,7 +1627,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                     <InteractiveVisual visualType={SKILL_VISUALS[activeSkill].visualType} visualData={SKILL_VISUALS[activeSkill].visualData} onAnswer={setVisualAnswer} disabled={!!feedback} />
                   )
                 )}
-                <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+                <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
                 </>}
 
                 {/* Roadside assistance, not GPS: only offered once the child has
@@ -1832,7 +1832,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   />
                 </div>
               )}
-              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
             </div>
 
             {feedback && (
