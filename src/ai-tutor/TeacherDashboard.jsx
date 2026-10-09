@@ -16,7 +16,6 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { supabase } from '../supabase.js';
 import { SUBJECTS } from './subjects.js';
 import { getStats, getStrandStats, getEstimatedGradeLevel, findGaps } from './adaptiveEngine.js';
-import { getBrainProfile, isEngineAvailable } from './engineClient.js';
 import { Icon } from './components/Icons.jsx';
 
 const SUBJECT_ID = 'math';
@@ -82,7 +81,6 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   const [error, setError] = useState(null);
   const [students, setStudents] = useState([]);
   const [selected, setSelected] = useState(null);
-  const [engineLive, setEngineLive] = useState(false);
   const [classes, setClasses] = useState([]);
   const [newClassName, setNewClassName] = useState('');
   const [creating, setCreating] = useState(false);
@@ -171,29 +169,6 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
         setStudents(base);
         setLoading(false);
 
-        // 4. If the brain is live, overlay its sharper level asynchronously.
-        const live = await isEngineAvailable();
-        if (cancelled) return;
-        setEngineLive(live);
-        if (live) {
-          const enhanced = await Promise.all(base.map(async (st) => {
-            const p = await getBrainProfile(st.progress, SUBJECT_ID);
-            if (!p) return st;
-            return {
-              ...st,
-              snap: {
-                ...st.snap,
-                level: p.overall_level,
-                mastered: p.mastered,
-                percent: p.percent,
-                accelerated: p.accelerated,
-                strands: p.strands.map(s => ({ name: s.strand, percent: s.percent, level: s.level, confidence: s.confidence })),
-                brain: true,
-              },
-            };
-          }));
-          if (!cancelled) setStudents(enhanced);
-        }
       } catch (err) {
         if (!cancelled) { setError(err.message || 'Failed to load'); setLoading(false); }
       }
@@ -218,7 +193,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
 
   // ---- render ----
   if (selected) {
-    return <StudentDetail student={selected} onBack={() => setSelected(null)} engineLive={engineLive} />;
+    return <StudentDetail student={selected} onBack={() => setSelected(null)} />;
   }
 
   return (
@@ -231,7 +206,6 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
               <h1 className="text-lg font-bold text-slate-900">Class Insights</h1>
               <p className="text-xs text-slate-500">
                 {SUBJECTS[SUBJECT_ID].name}
-                {engineLive ? ' · live engine' : ' · offline estimate'}
               </p>
             </div>
           </div>
@@ -365,7 +339,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
                 >
                   <div className={`w-12 h-12 rounded-xl border flex flex-col items-center justify-center ${bandColor(st.snap.level)}`}>
                     <span className="text-[10px] leading-none opacity-70">level</span>
-                    <span className="font-bold leading-tight">{st.snap.level.toFixed(st.snap.brain ? 1 : 0)}</span>
+                    <span className="font-bold leading-tight">{st.snap.level.toFixed(0)}</span>
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="font-semibold text-slate-900 truncate flex items-center gap-2">
@@ -397,7 +371,7 @@ const SummaryCard = ({ label, value, accent }) => (
 );
 
 // ---- per-student detail ----
-function StudentDetail({ student, onBack, engineLive }) {
+function StudentDetail({ student, onBack }) {
   const { name, snap, diagnosed } = student;
   return (
     <div className="min-h-screen bg-slate-50">
@@ -413,7 +387,7 @@ function StudentDetail({ student, onBack, engineLive }) {
       <main className="max-w-2xl mx-auto px-4 py-5 space-y-4">
         <div className={`rounded-2xl border p-5 ${bandColor(snap.level)}`}>
           <div className="text-sm opacity-70">Overall level</div>
-          <div className="text-4xl font-bold">Grade {snap.level.toFixed(snap.brain ? 1 : 0)}</div>
+          <div className="text-4xl font-bold">Grade {snap.level.toFixed(0)}</div>
           <div className="text-sm mt-1">
             {snap.mastered}/{snap.total} skills mastered · {snap.percent}%
             {snap.accelerated && ' · working above grade'}
@@ -457,11 +431,6 @@ function StudentDetail({ student, onBack, engineLive }) {
           </div>
         )}
 
-        {!engineLive && (
-          <p className="text-xs text-slate-400 text-center">
-            Showing offline estimate. Connect the engine for the sharper continuous level.
-          </p>
-        )}
       </main>
     </div>
   );

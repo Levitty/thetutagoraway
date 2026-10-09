@@ -6,7 +6,7 @@
 import { useHorebLook } from './horebLook.js';
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
-import { prereqsMet, getStatus, getRecommendedPath, leadWithMissingStep, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
+import { prereqsMet, getStatus, getRecommendedPath, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
 import { selectQuestion, isComplete as placementComplete, computePlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
@@ -17,7 +17,6 @@ import { shouldInterleave, pickInterleavedReview } from './interleave.js';
 import { defaultProgress, loadProgress, loadLocalProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
-import { getBrainProfile, getBrainSession } from './engineClient.js';
 import { logResponse } from './telemetry.js';
 import { SUPPORT, SUPPORT_LABEL, initialSupportLevel, nextSupportLevel, completionPlan, exampleSupport } from './fadedExamples.js';
 import YoungLearnerLesson, { planYoungLesson } from './YoungLearnerLesson.jsx';
@@ -243,8 +242,6 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
   // Python "brain" overlay — richer measurement when the engine is reachable.
   // Falls back silently to the JS engine when it isn't (e.g. in production).
-  const [brainProfile, setBrainProfile] = useState(null);
-  const [brainPath, setBrainPath] = useState(null);
 
   // Per-problem timer for telemetry (reset whenever the problem changes).
   const problemStartRef = useRef(Date.now());
@@ -468,41 +465,6 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     return () => { flushSave(); };
   }, [flushSave]);
 
-  // Brain overlay: when on the home dashboard, ask the Python engine for the
-  // measured level + next-session plan. Null results => JS engine is used.
-  useEffect(() => {
-    let cancelled = false;
-    if (loading || !subjectId || view !== 'home' || !progress.diagnosed) {
-      setBrainProfile(null);
-      setBrainPath(null);
-      return;
-    }
-    (async () => {
-      const [profile, recs] = await Promise.all([
-        getBrainProfile(progress, subjectId),
-        getBrainSession(progress, subjectId, 8),
-      ]);
-      if (cancelled) return;
-      if (profile) setBrainProfile(profile);
-      if (recs) {
-        // Map brain recommendations into the path-item shape the UI renders.
-        const kindToType = { remediate: 'gap', review: 'review', learn: 'learn', stretch: 'stretch' };
-        setBrainPath(recs.map(r => ({
-          id: r.skill_id,
-          name: r.name,
-          grade: r.grade,
-          strand: r.strand,
-          type: kindToType[r.kind] || 'learn',
-          reason: r.reason,
-          critical: !!(sub?.skills?.[r.skill_id]?.critical),
-          _brain: true,
-        })));
-      } else {
-        setBrainPath(null);
-      }
-    })();
-    return () => { cancelled = true; };
-  }, [progress, subjectId, view, loading, sub]);
 
   // Detect level-ups, newly-unlocked achievements and daily-goal hits, and queue
   // a warm celebration for each. The first run after load seeds the baseline
@@ -1884,22 +1846,17 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
   // ==================== RENDER: HOME DASHBOARD ====================
 
-  const jsPath = getRecommendedPath(progress, ctx);
+  const path = getRecommendedPath(progress, ctx);
   const gaps = findGaps(progress, ctx);
   const reviews = getReviews(progress, ctx);
   const jsGrade = getEstimatedGradeLevel(progress, ctx);
 
-  // Prefer the Python brain's measurement when available. Otherwise show a
-  // STABLE level anchored on the diagnostic placement: it acts as a floor so the
-  // level doesn't drop to the conservative mastery-count estimate when the brain
-  // is briefly unreachable, can rise as the student masters higher-grade skills,
-  // and is walked DOWN by getEffectivePlacement after sustained struggle.
-  const path = brainPath ? leadWithMissingStep(brainPath, progress, ctx) : jsPath;
+  // The level shown is anchored on the diagnostic placement — a floor, so it
+  // never drops to the conservative mastery-count estimate — and is walked
+  // DOWN by getEffectivePlacement after sustained struggle and UP once a grade
+  // is genuinely outgrown.
   const effectivePlacement = getEffectivePlacement(progress, ctx);
-  const estimatedGrade = brainProfile
-    ? Math.round(brainProfile.overall_level)
-    : (effectivePlacement != null ? Math.max(effectivePlacement, jsGrade) : jsGrade);
-  const brainAccelerated = brainProfile?.accelerated;
+  const estimatedGrade = effectivePlacement != null ? Math.max(effectivePlacement, jsGrade) : jsGrade;
 
   // Progress-dashboard views are scoped to the active curriculum and exclude
   // out-of-scope "enrichment" skills, so a CBC/Cambridge learner's in-scope
@@ -1908,7 +1865,6 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   const scopedStats = getStats(progress, ctx, { excludeEnrichment: true });
   const scopedStrandStats = getStrandStats(progress, ctx, { excludeEnrichment: true });
   const scopedGradeStats = getGradeStats(progress, ctx, { excludeEnrichment: true });
-  const brainStrandLevel = (name) => brainProfile?.strands?.find(b => b.strand === name) || null;
 
   return (
     <div className="min-h-screen bg-[#eef0f2] text-slate-900 lg:flex app-shell">
@@ -2025,7 +1981,6 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                              && !progress.skills[s.id]?.mastered && prereqsMet(s.id, progress, ctx))
                 .sort((a, b) => a.grade - b.grade || (b.critical ? 1 : 0) - (a.critical ? 1 : 0))
             : [];
-          const confidencePct = brainProfile ? Math.round((brainProfile.confidence || 0) * 100) : null;
           // Daily-goal ring — rendered near the top on mobile and in the right rail on desktop
           const goalRing = (() => {
             const earned = todaysXP(progress);
@@ -2089,7 +2044,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   <p className="text-sm text-slate-500">
                     {behindBy > 0
                       ? <>{gradeLabel(declaredG)} · solid to {gradeLabel(estimatedGrade)}</>
-                      : <>{gradeLabel(estimatedGrade)} · your level{brainAccelerated ? ' · above grade' : ''}</>}
+                      : <>{gradeLabel(estimatedGrade)} · your level</>}
                   </p>
                 </div>
               </div>
@@ -2367,7 +2322,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold text-white shrink-0 ${s.type === 'gap' ? 'bg-[#c0663f]' : s.type === 'review' ? 'bg-[#6d6fcb]' : 'bg-[#8ca86a]'}`}>{i + 1}</div>
                   <div className="flex-1 text-left">
                     <div className="font-medium text-slate-900 flex items-center gap-2">{s.name}{s.critical && <Icon name="zap" className="w-4 h-4 text-amber-500" />}</div>
-                    <div className="text-xs text-slate-500">{s._brain ? s.reason : s.type === 'gap' ? s.reason : s.type === 'review' ? `Review (${s.daysSince}d ago)` : `Grade ${s.grade} — ${s.strand}`}</div>
+                    <div className="text-xs text-slate-500">{s.type === 'gap' ? s.reason : s.type === 'review' ? `Review (${s.daysSince}d ago)` : `Grade ${s.grade} — ${s.strand}`}</div>
                   </div>
                   <Icon name="arrow" className="w-5 h-5 text-slate-300" />
                 </button>
@@ -2479,32 +2434,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   <div className="text-[11px] uppercase tracking-wide text-[#5a7a3a] mb-1">Your current level</div>
                   <div className="text-2xl font-bold leading-tight text-slate-900">{gradeLabel(estimatedGrade)}</div>
                 </div>
-                {brainAccelerated && (
-                  <span className="shrink-0 text-[11px] font-semibold text-amber-700 bg-amber-100 border border-amber-200 rounded-full px-2.5 py-1">
-                    Working above grade
-                  </span>
-                )}
               </div>
-              {brainProfile ? (
-                <div className="mt-3">
-                  <div className="flex justify-between text-xs text-slate-500 mb-1">
-                    <span>Measurement confidence</span>
-                    <span>{Math.round((brainProfile.confidence || 0) * 100)}%</span>
-                  </div>
-                  <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${Math.round((brainProfile.confidence || 0) * 100)}%` }} />
-                  </div>
-                  <p className="text-xs text-slate-500 mt-2">
-                    {brainAccelerated && brainProfile.headroom_grades >= 1
-                      ? `You're succeeding about ${Math.round(brainProfile.headroom_grades * 10) / 10} grade${brainProfile.headroom_grades >= 2 ? 's' : ''} above your working level — no ceiling here.`
-                      : brainProfile.confidence < 0.4
-                        ? 'Answer a few more questions to sharpen this estimate.'
-                        : 'Measured live from how you answer — it updates as you learn.'}
-                  </p>
-                </div>
-              ) : (
-                <p className="text-xs text-slate-500 mt-2">Estimated from your mastered skills. Take the diagnostic for a sharper read.</p>
-              )}
+              <p className="text-xs text-slate-500 mt-2">Set by your check and updated as you practise — it moves down if a grade stops holding, and up once you've outgrown one.</p>
             </div>
 
             {/* Big numbers */}
@@ -2555,13 +2486,12 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
             <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
               <h3 className="font-semibold mb-3 text-slate-900">Strand Mastery</h3>
               <div className="space-y-2">{scopedStrandStats.map(ss => {
-                const bs = brainStrandLevel(ss.name);
                 return (
                   <div key={ss.name} className="flex items-center gap-3">
                     <span className="text-sm text-slate-500 w-24 truncate" title={ss.name}>{ss.name}</span>
                     <div className="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div className={`h-full transition-all ${ss.assessed ? 'bg-[#8ca86a]' : 'bg-slate-200'}`} style={{ width: `${ss.percent}%` }} /></div>
                     {ss.assessed
-                      ? <span className="text-sm font-medium w-16 text-right text-slate-700">{bs ? gradeLabel(bs.grade_level).replace(/ —.*/, '') : `${ss.mastered}/${ss.total}`}</span>
+                      ? <span className="text-sm font-medium w-16 text-right text-slate-700">{`${ss.mastered}/${ss.total}`}</span>
                       : <span className="text-xs text-slate-400 w-16 text-right">not assessed</span>}
                   </div>
                 );

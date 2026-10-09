@@ -1,3 +1,10 @@
+> **Status (Oct 2026): reference design, not a running service.**
+> The app no longer calls this engine. Its forgetting curve and slip/guess
+> handling are the spec the JS engine (`src/ai-tutor/`) converges on, and
+> `server.py` is kept so the model can be replayed against the response log
+> for a bake-off. The Render deployment can be deleted. Rationale and the
+> decision record: `research/horeb-engine-audit.md`.
+
 # Tutagora Engine — the Python "brain"
 
 An adaptive **mastery learning engine** inspired by *The Math Academy Way*. It
