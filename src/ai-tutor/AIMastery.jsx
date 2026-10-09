@@ -1355,7 +1355,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // Test-out: a skill well below the learner's own grade only needs ONE clean
     // correct answer to master — a capable child shouldn't grind six trivial reps
     // just because the diagnostic never confirmed a foundation it couldn't reach.
-    const testOutSkill = Number.isFinite(skill?.grade) && (learnerGrade - skill.grade) >= 2;
+    // The quick check is one clean first-attempt answer. Once an answer has
+    // landed and the skill isn't mastered, the chance has passed and this is
+    // normal practice — the header must say so, or it reads "1/1 quick check"
+    // while serving a sixth question.
+    const testOutSkill = Number.isFinite(skill?.grade) && (learnerGrade - skill.grade) >= 2 && session.total === 0;
     const masterTarget = testOutSkill ? 1 : skill.minProblems;
     // Progress shown the way mastery is judged: recent right answers, and one
     // short of the end until the last three are right (never "6 of 6" and not done).
@@ -1762,6 +1766,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 ))}</div>
               </div>}
 
+              {/* After a wrong answer the field is cleared and the CTA sits greyed
+                  as "Try Again" with nothing saying why. Say why. */}
+              {!feedback && !problem.parts && attemptCount > 0 && !answer.trim() && !(problem.visual && visualAnswer != null) && (
+                <p className="text-center text-sm text-slate-500 mb-2">{problem.mc ? 'Pick another answer, then tap Try Again.' : 'Type a new answer, then tap Try Again.'}</p>
+              )}
               {!feedback && problem.parts ? null : !feedback ? <button onClick={checkAnswer} disabled={!answer.trim() && !(problem.visual && visualAnswer != null)} className="w-full bg-amber-400 text-slate-900 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 rounded-2xl py-4 font-bold transition-colors">{attemptCount > 0 ? 'Try Again' : 'Check Answer'}</button>
                 : <button onClick={nextProblem} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-2xl py-4 font-bold flex items-center justify-center gap-2 transition-colors">Next <Icon name="arrow" className="w-5 h-5" /></button>}
             </>
