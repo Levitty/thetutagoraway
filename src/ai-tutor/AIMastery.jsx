@@ -942,7 +942,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // moves on, instead of grinding six trivial reps. A wrong first try drops them
     // straight back into normal practice (they clearly need it after all).
     const tgLearnerGrade = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
-    const testOutNow = Number.isFinite(skill?.grade) && (tgLearnerGrade - skill.grade) >= 2 && newAttempts === 1;
+    // "First attempt" means the first try on the first problem of this sitting.
+    // It used to test newAttempts === 1 — the skill's lifetime count — which
+    // (a) ignored attemptNo, so a hinted third try could test out, and (b) was
+    // already >= 1 for any skill the check had touched, so a diagnosed skill
+    // never could. Both the wrong way round.
+    const testOutNow = Number.isFinite(skill?.grade) && (tgLearnerGrade - skill.grade) >= 2
+      && session.total === 0 && attemptNo === 1;
     // Mastery is judged on RECENT answers: 7 of the last 8 right, including the
     // last 3, after at least minProblems. It used to be 85% of every attempt
     // ever made, so early mistakes while learning counted forever: simulated
@@ -1037,10 +1043,20 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
   const nextProblem = () => {
     stopSpeaking();
+    const lg = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
+    // A won quick check is over. The learner proved the foundation once and
+    // moves on — serving a second question here put a fresh problem under a
+    // "1/1 quick check" header, which is the contradiction the header fix was
+    // for, one screen later.
+    const spNow = progress.skills[activeSkill];
+    const gradeNow = SKILLS[activeSkill]?.grade;
+    if (spNow?.mastered && Number.isFinite(gradeNow) && (lg - gradeNow) >= 2 && session.total === 1 && session.correct === 1) {
+      goHome();
+      return;
+    }
     // Interleave a due review from ANOTHER skill after the 3rd and 7th answers
     // (mixed practice ≈ doubles delayed retention vs blocked — Rohrer). Standard
     // flow only: young learners keep their uninterrupted count-together rhythm.
-    const lg = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx) ?? 99;
     const due = (lg > 3 && shouldInterleave(session.total, interleaveCountRef.current))
       ? pickInterleavedReview(getReviews(progress, ctx), activeSkill) : null;
     if (due) {
@@ -1359,7 +1375,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // landed and the skill isn't mastered, the chance has passed and this is
     // normal practice — the header must say so, or it reads "1/1 quick check"
     // while serving a sixth question.
-    const testOutSkill = Number.isFinite(skill?.grade) && (learnerGrade - skill.grade) >= 2 && session.total === 0;
+    const gapOk = Number.isFinite(skill?.grade) && (learnerGrade - skill.grade) >= 2;
+    // Live while it can still be earned: first problem, first try, and not a
+    // generated four-choice (recognising isn't producing — those never master).
+    const quickCheckLive = gapOk && session.total === 0 && attemptCount === 0 && !(problem?.mc && !problem?.mcOwn);
+    // Or just earned: mastered on that one answer, so the verdict screen reads 1/1.
+    const quickCheckWon = gapOk && !!sp.mastered && session.total === 1 && session.correct === 1;
+    const testOutSkill = quickCheckLive || quickCheckWon;
     const masterTarget = testOutSkill ? 1 : skill.minProblems;
     // Progress shown the way mastery is judged: recent right answers, and one
     // short of the end until the last three are right (never "6 of 6" and not done).
