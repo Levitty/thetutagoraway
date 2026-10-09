@@ -666,6 +666,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       studentId: userId, learnerId, subject: subjectId, skillId: skill.id,
       correct, problemType: problem?.type, timeMs: timeTaken, isDiagnostic: true,
       confidence: priorConfidence, skipped: skip || undefined,
+      submittedValue: skip ? null : (hasVisualAnswer ? JSON.stringify(visualAnswer) : answer),
+      expectedValue: problem?.answer,
     });
 
     setFeedback(correct ? 'correct' : 'incorrect');
@@ -831,6 +833,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId,
       correct, problemType: problem?.type, timeMs, isReview: true,
+      submittedValue: answer, expectedValue: problem?.answer,
     });
     if (!correct) {
       setWrongInfo({ answer: answer.trim(), diagnosis: diagnoseError(problem, answer) });
@@ -927,6 +930,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       timeMs,
       hintsUsed, attemptNo, taps,
       scaffold: scaffoldableRef.current ? answeredAt : null,
+      submittedValue: answer, expectedValue: problem?.answer,
     });
 
     const newSession = {
@@ -1111,6 +1115,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       studentId: userId, learnerId, subject: subjectId, skillId,
       correct, problemType: problem?.type,
       timeMs, isReview: true,
+      submittedValue: answer, expectedValue: problem?.answer,
     });
 
     setFeedback(correct ? 'correct' : 'incorrect');
