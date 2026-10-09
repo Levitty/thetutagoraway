@@ -256,5 +256,19 @@ const dThin = getEffectivePlacement({ placementGrade: 7, skills: { [g7[0].id]: {
 if (dStruggle === 6 && dOk === 7 && dThin === 7) ok('effective placement decays on struggle, holds otherwise (6/7/7)');
 else fail(`effective placement wrong: struggle=${dStruggle}(want 6) ok=${dOk}(want 7) thin=${dThin}(want 7)`);
 
+// The level has to keep tracking the learner AFTER the check, not just fall.
+// Promotion is deliberately harder to earn than demotion: over-placing is the
+// damaging direction.
+const g7all = Object.values(SKILLS).filter(s => s.grade === 7);
+const holdGrade = (share, attempts, correct) => Object.fromEntries(
+  g7all.slice(0, Math.ceil(g7all.length * share)).map(s => [s.id, { attempts, correct, mastered: true }]));
+const outgrown = getEffectivePlacement({ placementGrade: 7, skills: holdGrade(0.7, 5, 5) }, null);
+const partly   = getEffectivePlacement({ placementGrade: 7, skills: holdGrade(0.3, 5, 5) }, null); // too little held
+const sloppy   = getEffectivePlacement({ placementGrade: 7, skills: holdGrade(0.7, 5, 3) }, null); // 60% accuracy
+const untouched = getEffectivePlacement({ placementGrade: 7, skills: {} }, null);      // no practice yet
+if (outgrown === 8 && partly === 7 && sloppy === 7 && untouched === 7)
+  ok('effective placement rises once a grade is outgrown (8), and not on thin evidence');
+else fail(`promotion wrong: outgrown=${outgrown}(want 8) partly=${partly} sloppy=${sloppy} untouched=${untouched} (want 7)`);
+
 console.log('\n' + (failures ? `FAILED (${failures})` : 'ALL ENGINE CHECKS PASSED'));
 process.exit(failures ? 1 : 0);

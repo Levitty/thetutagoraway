@@ -356,37 +356,67 @@ export const getDiagnosticSkills = (progress, ctx) => {
 // TESTED, so it could never return anything below the grade the learner
 // declared — a Grade 6 entry came back as Grade 11.
 
-// The placement acts as a STABLE floor for the displayed level — but a floor
+// The placement is the diagnostic anchor; this derives the level to SHOW and
+// to teach at, recomputed live from practice so it keeps tracking the learner
+// after the check. It walks DOWN on sustained struggle and UP once a grade is
+// genuinely outgrown. Until Oct 2026 it only ever walked down, so a learner
+// who improved stayed pinned at their diagnostic grade until they retook it.
+// The stored placementGrade never moves.
+// (Former note: the placement acts as a STABLE floor for the displayed level — but a floor
 // that's clearly too high shouldn't stick. This derives an "effective"
 // placement that walks DOWN from the stored placementGrade while the student
 // shows sustained struggle at that grade (enough attempts + low accuracy).
 // It's computed live from skill stats, so it recovers naturally as accuracy
-// improves; the stored placementGrade stays as the diagnostic anchor.
+// improves; the stored placementGrade stays as the diagnostic anchor.)
 export const getEffectivePlacement = (progress, ctx) => {
   const c = resolveCtx(ctx);
   let placement = progress?.placementGrade;
   if (placement == null) return null;
 
-  const gradeAccuracy = (g) => {
-    let correct = 0, attempts = 0;
+  // Evidence at one grade: how the learner has actually performed on its
+  // skills, and how much of the grade they now hold outright.
+  const evidenceAt = (g) => {
+    let correct = 0, attempts = 0, mastered = 0, total = 0;
     for (const s of c.skillList) {
       if (s.grade !== g) continue;
+      total++;
       const sp = progress.skills[s.id];
-      if (sp) { correct += sp.correct || 0; attempts += sp.attempts || 0; }
+      if (!sp) continue;
+      correct += sp.correct || 0;
+      attempts += sp.attempts || 0;
+      if (sp.mastered) mastered++;
     }
-    return { correct, attempts };
+    return { correct, attempts, mastered, total,
+             accuracy: attempts ? correct / attempts : 0,
+             held: total ? mastered / total : 0 };
   };
 
-  const minGrade = c.skillList.reduce((m, s) => Math.min(m, s.grade), Infinity);
-  // Demote one grade at a time: needs real evidence (≥8 attempts at that grade)
-  // AND poor accuracy (<45%). Stops as soon as a grade isn't clearly failing.
+  const grades = c.skillList.map(s => s.grade).filter(Number.isFinite);
+  const minGrade = Math.min(...grades), maxGrade = Math.max(...grades);
+
+  // DOWN: the check put them too high. One grade at a time, on real evidence
+  // (>= 8 attempts) and clearly poor accuracy. Stops as soon as a grade isn't
+  // obviously failing.
   while (placement > minGrade) {
-    const { correct, attempts } = gradeAccuracy(placement);
-    if (attempts >= 8 && correct / attempts < 0.45) placement -= 1;
+    const { attempts, accuracy } = evidenceAt(placement);
+    if (attempts >= 8 && accuracy < 0.45) placement -= 1;
+    else break;
+  }
+  if (placement < (progress.placementGrade ?? placement)) return placement;
+
+  // UP: they have outgrown the check. Deliberately harder to earn than the
+  // demotion above — over-placing a learner is the damaging direction, and the
+  // whole point of the check is to stop that happening. A grade is outgrown
+  // only when they have both practised it properly and actually hold most of
+  // it: >= 12 attempts, >= 80% accuracy, and >= 60% of its skills mastered.
+  while (placement < maxGrade) {
+    const { attempts, accuracy, held } = evidenceAt(placement);
+    if (attempts >= 12 && accuracy >= 0.8 && held >= 0.6) placement += 1;
     else break;
   }
   return placement;
 };
+
 
 // ==================== TARGETED REMEDIATION ====================
 
