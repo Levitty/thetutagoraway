@@ -19,6 +19,7 @@ import { planYoungLesson } from '../src/ai-tutor/youngPlan.js';
 import { propagateCredit } from '../src/ai-tutor/diagnosticEngine.js';
 import { getDiagnosticSkills, getEffectivePlacement, recentMastery, prereqsMet, isHeld } from '../src/ai-tutor/adaptiveEngine.js';
 import { selectQuestion, computePlacement, isComplete, MAX_QUESTIONS } from '../src/ai-tutor/placement.js';
+import { strandOf, CURRICULA } from '../src/ai-tutor/curricula.js';
 
 let failures = 0;
 const fail = (msg) => { console.log('  ✗ ' + msg); failures++; };
@@ -38,6 +39,15 @@ function graphAudit(name, S) {
   else ok(`${name}: ${ids.size} skills, no dangling prereqs, no cycles`);
 }
 graphAudit('MATH', SKILLS); graphAudit('CAMBRIDGE', CAMBRIDGE_SKILLS); graphAudit('SAT', SAT_SKILLS);
+
+// ---- 1b. One row per strand in every curriculum view ----
+console.log('1b. One row per strand in every curriculum view');
+{
+  const seen = [...new Set(Object.values(SKILLS).map(s => strandOf(s, 'cbc')))].sort();
+  const want = [...CURRICULA.cbc.strands].sort();
+  if (seen.join('|') === want.join('|')) ok(`CBC view groups all skills into exactly ${want.length} strands`);
+  else fail(`CBC strand rows are ${JSON.stringify(seen)}, want ${JSON.stringify(want)}`);
+}
 
 // ---- 2 & 3. Coverage + every key self-accepts ----
 console.log('2/3. Generator coverage + key self-acceptance');

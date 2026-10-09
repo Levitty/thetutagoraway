@@ -162,9 +162,9 @@ const GRADE_5 = {
   G5_LENGTH: skill('G5_LENGTH', 'Measuring Length (cm, m, km)', 5, S.MEA, { w: 1 }),
   G5_MASS: skill('G5_MASS', 'Measuring Mass (g, kg)', 5, S.MEA, { w: 1 }),
   G5_TIME: skill('G5_TIME', 'Telling Time & Duration', 5, S.MEA, { w: 1 }),
-  G5_VOLUME: skill('G5_VOLUME', 'Volume (Cubic Units)', 5, S.MEA, { pre: ['G4_VOLUME'], w: 2, curricula: { cbc: cbc(5, 'Measurement', 'Volume') } }),
-  G5_CAPACITY: skill('G5_CAPACITY', 'Capacity (Litres & Millilitres)', 5, S.MEA, { pre: ['G3_CAPACITY'], w: 2, curricula: { cbc: cbc(5, 'Measurement', 'Capacity') } }),
-  G5_MONEY: skill('G5_MONEY', 'Money (Profit & Loss)', 5, S.MEA, { pre: ['G4_MONEY', 'G5_MULTIPLICATION'], w: 2, curricula: { cbc: cbc(5, 'Measurement', 'Money') } }),
+  G5_VOLUME: skill('G5_VOLUME', 'Volume (Cubic Units)', 5, S.MEA, { pre: ['G4_VOLUME'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Volume') } }),
+  G5_CAPACITY: skill('G5_CAPACITY', 'Capacity (Litres & Millilitres)', 5, S.MEA, { pre: ['G3_CAPACITY'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Capacity') } }),
+  G5_MONEY: skill('G5_MONEY', 'Money (Profit & Loss)', 5, S.MEA, { pre: ['G4_MONEY', 'G5_MULTIPLICATION'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Money') } }),
   G5_PERIMETER_INTRO: skill('G5_PERIMETER_INTRO', 'Perimeter of Rectangles', 5, S.MEA, { pre: ['G5_ADDITION', 'G5_LENGTH'], w: 2 }),
   G5_AREA_INTRO: skill('G5_AREA_INTRO', 'Area of Rectangles (Counting Squares)', 5, S.MEA, { pre: ['G5_MULTIPLICATION'], w: 2 }),
 
@@ -215,10 +215,10 @@ const GRADE_6 = {
   G6_AREA_TRIANGLE: skill('G6_AREA_TRIANGLE', 'Area of Triangles', 6, S.MEA, { pre: ['G6_AREA_RECT', 'G6_FRACTIONS_MUL'], w: 3 }),
   G6_VOLUME_CUBOID: skill('G6_VOLUME_CUBOID', 'Volume of Cuboids', 6, S.MEA, { pre: ['G6_AREA_RECT'], w: 3 }),
   G6_UNIT_CONVERSIONS: skill('G6_UNIT_CONVERSIONS', 'Unit Conversions (Length, Mass, Capacity)', 6, S.MEA, { pre: ['G6_DECIMALS_MUL', 'G6_DECIMALS_DIV'], w: 3 }),
-  G6_CAPACITY: skill('G6_CAPACITY', 'Capacity (Conversions, Word Problems)', 6, S.MEA, { pre: ['G5_CAPACITY'], w: 2, curricula: { cbc: cbc(6, 'Measurement', 'Capacity') } }),
-  G6_MASS: skill('G6_MASS', 'Mass (Tonnes, Word Problems)', 6, S.MEA, { pre: ['G5_MASS'], w: 2, curricula: { cbc: cbc(6, 'Measurement', 'Mass') } }),
-  G6_TIME: skill('G6_TIME', 'Time (24-hour Clock, Timetables)', 6, S.MEA, { pre: ['G5_TIME'], w: 2, curricula: { cbc: cbc(6, 'Measurement', 'Time') } }),
-  G6_MONEY: skill('G6_MONEY', 'Money (Postal & Bank Charges, Bills)', 6, S.MEA, { pre: ['G5_MONEY'], w: 2, curricula: { cbc: cbc(6, 'Measurement', 'Money') } }),
+  G6_CAPACITY: skill('G6_CAPACITY', 'Capacity (Conversions, Word Problems)', 6, S.MEA, { pre: ['G5_CAPACITY'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Capacity') } }),
+  G6_MASS: skill('G6_MASS', 'Mass (Tonnes, Word Problems)', 6, S.MEA, { pre: ['G5_MASS'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Mass') } }),
+  G6_TIME: skill('G6_TIME', 'Time (24-hour Clock, Timetables)', 6, S.MEA, { pre: ['G5_TIME'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Time') } }),
+  G6_MONEY: skill('G6_MONEY', 'Money (Postal & Bank Charges, Bills)', 6, S.MEA, { pre: ['G5_MONEY'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Money') } }),
 
   // Statistics
   G6_MEAN: skill('G6_MEAN', 'Finding the Mean', 6, S.STA, { pre: ['G5_ADDITION', 'G5_DIVISION'], w: 2 }),

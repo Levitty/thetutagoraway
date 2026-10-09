@@ -61,9 +61,16 @@ export const gradeOf = (skill, curr) => {
 };
 
 // Effective strand for the active curriculum; falls back to native strand.
+// What a curriculum calls the graph's strands. CBC's fifth strand is "Data
+// Handling" where the graph says "Statistics", and a handful of tags were
+// written "Measurement". Without this each spelling became its own row in the
+// progress view — seven strands for five, two of them showing "—".
+const STRAND_ALIAS = { cbc: { Statistics: 'Data Handling', Measurement: 'Measurements' } };
+
 export const strandOf = (skill, curr) => {
   const t = tagOf(skill, curr);
-  return t && t.strand ? t.strand : skill.strand;
+  const name = t && t.strand ? t.strand : skill.strand;
+  return (STRAND_ALIAS[curr] && STRAND_ALIAS[curr][name]) || name;
 };
 
 // A skill is "enrichment" when it is explicitly tagged out of the active

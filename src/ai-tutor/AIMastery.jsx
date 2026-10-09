@@ -90,6 +90,24 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 // stays on this device. autoStartGrade skips the welcome screen and starts the
 // check at that grade; onDiagnosed(progress) replaces the usual "home" view when
 // the check finishes.
+// Partial reveal — "show me the first steps". Never the last step (that is
+// the answer), never more than two, and any step shown that ends in
+// "= <answer>" is cut at the equals sign. Before this, a one- or two-step
+// solution was shown whole: on a four-choice question the "hint" was a free
+// tick, and the first-steps box read "→ 18 × 4 = 72" with 72 sitting in
+// option C.
+const withholdAnswer = (steps, answer) => {
+  if (!Array.isArray(steps) || !steps.length) return steps;
+  const shown = steps.length > 1 ? steps.slice(0, Math.min(2, steps.length - 1)) : steps.slice(0, 1);
+  const a = String(answer ?? '').trim().replace(/\u2212/g, '-');
+  if (!a) return shown;
+  const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/-/g, '[-\u2212]');
+  const tail = new RegExp('\\s*=\\s*' + esc + '\\s*$');
+  const cut = (str) => str.replace(tail, ' = ?');
+  return shown.map(st => typeof st === 'string' ? cut(st)
+    : (st && typeof st.expr === 'string') ? { ...st, expr: cut(st.expr) } : st);
+};
+
 export function AIMastery({ onBack, userId, studentName, onFindTutor, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, autoStartCurriculum = null, onDiagnosed = null }) {
   useHorebLook();
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
@@ -1629,13 +1647,14 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 )}
 
                 {hintLevel >= 2 && !feedback && !plan && !problem.explain && (() => {
-                  const steps = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
-                  if (!steps) return null;
+                  const all = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
+                  if (!all) return null;
+                  const steps = withholdAnswer(all, problem.answer);
                   return (
                     <div className="mt-3 p-3 bg-[#eef1f8] border border-[#d3daf0] rounded-2xl text-sm">
                       <span className="font-semibold text-[#6d6fcb]">Here are the first steps to guide you:</span>
                       <div className="mt-2 space-y-1">
-                        {steps.slice(0, 2).map((step, i) => (
+                        {steps.map((step, i) => (
                           <div key={i} className="flex gap-2 text-slate-700">
                             <span className="text-[#6d6fcb] font-bold tabular-nums">{i + 1}.</span>
                             <TermTooltip text={step} />
