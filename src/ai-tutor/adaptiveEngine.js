@@ -7,7 +7,7 @@
 import { findMissingStep } from '../site/missingStep.js';
 import { SKILLS as MATH_SKILLS, getPostRequisites as mathGetPostReqs, getPrerequisiteChain as mathPreChain, getPostRequisiteChain as mathPostChain, STRANDS as MATH_STRANDS } from './knowledgeGraph.js';
 import { NATIVE, gradeOf, strandOf, isEnrichment } from './curricula.js';
-import { isFluent } from './spacedRepetition.js';
+import { isFluent, calculateMemoryStrength } from './spacedRepetition.js';
 
 // Default context (math) for backward compatibility
 const defaultCtx = () => ({
@@ -37,14 +37,30 @@ const resolveCtx = (ctx) => {
 
 // ==================== PREREQUISITE CHECKING ====================
 
+// A prerequisite is HELD when it was learned and has not been forgotten.
+//
+// Until Oct 2026 this read the `mastered` boolean alone, which only ever comes
+// off through failure: a skill mastered in March and untouched since still
+// unlocked everything built on it in September. The time-decayed memory
+// strength that the review scheduler already uses now gates too. HOLD_FLOOR is
+// below the scheduler's "due for review" line (0.6) on purpose: a fading skill
+// gets reviewed first; only a forgotten one stops holding up the skills above.
+// A learned skill with no timestamp (older data, implicit credit) cannot decay,
+// so it holds — nothing is ever locked by missing data.
+export const HOLD_FLOOR = 0.3;
+export const isHeld = (sp) => {
+  if (!sp) return false;
+  const learned = sp.mastered || (sp.passed && sp.attempts >= 3);
+  if (!learned) return false;
+  if (!sp.lastPractice) return true;
+  return calculateMemoryStrength(sp) >= HOLD_FLOOR;
+};
+
 export const prereqsMet = (skillId, progress, ctx) => {
   const c = resolveCtx(ctx);
   const skill = c.skills[skillId];
   if (!skill || skill.prerequisites.length === 0) return true;
-  return skill.prerequisites.every(pid => {
-    const sp = progress.skills[pid];
-    return sp?.mastered || (sp?.passed && sp?.attempts >= 3);
-  });
+  return skill.prerequisites.every(pid => isHeld(progress.skills[pid]));
 };
 
 // ==================== SKILL STATUS ====================
@@ -609,6 +625,8 @@ export const selectReviewProblems = (progress, count = 12, ctx) => {
 
 export default {
   prereqsMet,
+  isHeld,
+  HOLD_FLOOR,
   getStatus,
   getKnowledgeFrontier,
   findGaps,

@@ -17,7 +17,7 @@ import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
 import { planYoungLesson } from '../src/ai-tutor/youngPlan.js';
 import { propagateCredit } from '../src/ai-tutor/diagnosticEngine.js';
-import { getDiagnosticSkills, getEffectivePlacement, recentMastery } from '../src/ai-tutor/adaptiveEngine.js';
+import { getDiagnosticSkills, getEffectivePlacement, recentMastery, prereqsMet, isHeld } from '../src/ai-tutor/adaptiveEngine.js';
 import { selectQuestion, computePlacement, isComplete, MAX_QUESTIONS } from '../src/ai-tutor/placement.js';
 
 let failures = 0;
@@ -166,6 +166,29 @@ const bal = propagateCredit({}, withPre.id, true, 1.0, { skills, getPreChain, ge
 const propagated = Object.keys(bal).filter(k => k !== withPre.id);
 if (propagated.length > 0) ok(`Cambridge correct answer credits prerequisites (${propagated.length})`);
 else fail('Cambridge credit did not propagate');
+
+// ---- 5b. Prerequisite gate decays with memory ----
+console.log('5b. Prerequisite gate decays with memory');
+{
+  const daysAgo = (d) => new Date(Date.now() - d * 86400000).toISOString();
+  const fresh    = { mastered: true, repNum: 2, lastPractice: daysAgo(1) };     // 7-day rung, seen yesterday
+  const fadedLow = { mastered: true, repNum: 2, lastPractice: daysAgo(60) };    // 7-day rung, 2 months silent
+  const solidOld = { mastered: true, repNum: 8, lastPractice: daysAgo(60) };    // 365-day rung, 2 months silent
+  const noStamp  = { mastered: true, repNum: 2 };                               // legacy / implicit credit
+  const never    = { mastered: false, passed: false, attempts: 2 };
+  const r = [isHeld(fresh), isHeld(fadedLow), isHeld(solidOld), isHeld(noStamp), isHeld(never)];
+  if (r.join() === 'true,false,true,true,false') ok('held: fresh yes, 2-months-silent low rung NO, high rung yes, untimestamped yes, unlearned no');
+  else fail(`isHeld wrong: fresh=${r[0]} fadedLow=${r[1]} solidOld=${r[2]} noStamp=${r[3]} never=${r[4]}`);
+
+  // End to end through the graph: a skill whose only prerequisite has faded
+  // is no longer startable, so the path rebuilds the foundation first.
+  const withPre = Object.values(SKILLS).find(s => s.prerequisites.length === 1);
+  const pid = withPre.prerequisites[0];
+  const okNow  = prereqsMet(withPre.id, { skills: { [pid]: fresh } }, null);
+  const okThen = prereqsMet(withPre.id, { skills: { [pid]: fadedLow } }, null);
+  if (okNow && !okThen) ok(`${withPre.name}: startable on a fresh prerequisite, not on a forgotten one`);
+  else fail(`gate wrong on ${withPre.id}: fresh=${okNow} (want true) faded=${okThen} (want false)`);
+}
 
 // ---- 6. Diagnostic sizing + placement ----
 console.log('6. Diagnostic sizing + placement');
