@@ -289,10 +289,10 @@ export function buildCubeRoot() {
   const make = (question, answer, hint, steps, mis = []) => ({ type: mode === 'cube' || mode === 'volume' ? 'cube' : 'cube-root', instruction: 'Work it out.',
     question, answer: `${answer}`, accepts: accepts(`${answer}`), hints: hintLadder(hint), solution: { steps, answer: `${answer}` }, misconceptions: mis, verify: { kind: 'fraction', value: answer } });
   if (mode === 'cube') return make(`${n}³`, c, `${n}³ means ${n} × ${n} × ${n}.`, [{ text: 'Multiply the number by itself three times.', expr: `${n} × ${n} × ${n} = ${c}` }], [{ when: `${3 * n}`, feedback: `${n}³ is ${n}×${n}×${n}, not ${n}×3.` }, { when: `${n * n}`, feedback: `That is ${n}². Cubed means three ${n}s multiplied.` }]);
-  if (mode === 'root') return make(`∛${c}`, n, 'What number cubed gives this?', [{ text: 'Find the number whose cube is this.', expr: `${n}³ = ${c}` }], [{ when: numStr(c / 3), feedback: 'A cube root is not a third. Which number, times itself three times, makes it?' }]);
+  if (mode === 'root') return make(`∛${c}`, n, 'What number cubed gives this?', [{ text: 'Find the number whose cube is this.', expr: `${n}³ = ${c}` }, { text: 'So the cube root is that number.', expr: `∛${c} = ${n}` }], [{ when: numStr(c / 3), feedback: 'A cube root is not a third. Which number, times itself three times, makes it?' }]);
   if (mode === 'volume') return make(`A cube-shaped box has edges of ${n} cm. What is its volume in cm³?`, c, 'Volume of a cube = edge × edge × edge.', [{ text: 'Volume = edge³.', expr: `${n}³ = ${c}` }], [{ when: `${6 * n * n}`, feedback: 'That is the surface area (6 faces). Volume is edge × edge × edge.' }]);
   if (mode === 'side') return make(`A cube has a volume of ${c} cm³. How long is each edge, in cm?`, n, 'Find the cube root of the volume.', [{ text: 'Edge = ∛volume.', expr: `∛${c} = ${n}` }]);
-  return make(`∛(−${c})`, -n, 'A negative number cubed stays negative.', [{ text: 'Cube root, keeping the sign.', expr: `(−${n})³ = −${c}` }], [{ when: `${n}`, feedback: `Check: ${n}³ is positive. What cubes to give −${c}?` }]);
+  return make(`∛(−${c})`, -n, 'A negative number cubed stays negative.', [{ text: 'A negative number cubed stays negative, so the root is negative too.', expr: `(−${n})³ = −${c}` }, { text: 'Keep the sign.', expr: `∛(−${c}) = −${n}` }], [{ when: `${n}`, feedback: `Check: ${n}³ is positive. What cubes to give −${c}?` }]);
 }
 
 // ---- prime or composite ----

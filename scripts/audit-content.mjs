@@ -23,8 +23,10 @@ let failures = 0;
 const fail = (msg) => { console.log('  ✗ ' + msg); failures++; };
 const ok = (msg) => console.log('  ✓ ' + msg);
 
+// Content writes negatives with a typographic minus (U+2212); answers are typed
+// with a hyphen. Treat them as the same sign or a correct "−6" reads as "6".
 const lastNumber = (s) => {
-  const m = String(s).match(/-?\d+(?:\.\d+)?(?!.*\d)/);
+  const m = String(s).replace(/\u2212/g, '-').match(/-?\d+(?:\.\d+)?(?!.*\d)/);
   return m ? m[0] : null;
 };
 
@@ -148,7 +150,7 @@ console.log('4. Worked examples land on their own solution');
     if (!we || !we.steps?.length || we.solution == null) continue;
     checked++;
     const solNum = lastNumber(we.solution);
-    const joined = we.steps.join(' ');
+    const joined = we.steps.join(' ').replace(/\u2212/g, '-');
     if (solNum != null && !joined.includes(solNum) && lastNumber(we.steps[we.steps.length - 1]) !== solNum) {
       bad++; if (badList.length < 5) badList.push(`${id}: solution=${we.solution} never appears in steps`);
     }
