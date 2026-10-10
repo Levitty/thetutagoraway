@@ -32,3 +32,6 @@ facebook-config.json
 
 # Python bytecode (engine tests / local runs)
 __pycache__/
+
+# Vite writes these while loading the config; never source.
+vite.config.js.timestamp-*

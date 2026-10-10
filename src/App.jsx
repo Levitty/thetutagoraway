@@ -725,7 +725,14 @@ const useAuth = () => {
     if (profileError) {
       // A child's linked tablet has no profile of its own; it still needs the family's pass.
       if (getStudentMode()?.deviceUid === userId) fetchSubscription(userId, 'tablet');
-      else console.error('Error fetching profile:', profileError);
+      else {
+        // Offline (or a blip): fall back to the last profile this device saw,
+        // so the app opens as the right person instead of a role-less shell.
+        let cached = null;
+        try { cached = JSON.parse(localStorage.getItem(`tg_profile_${userId}`) || 'null'); } catch { /* none */ }
+        if (cached) setProfile(cached);
+        else console.error('Error fetching profile:', profileError);
+      }
       setLoading(false);
       return;
     }
@@ -741,6 +748,7 @@ const useAuth = () => {
     }
     
     setProfile(profileData);
+    try { localStorage.setItem(`tg_profile_${userId}`, JSON.stringify(profileData)); } catch { /* storage full or absent */ }
     fetchSubscription(userId, getStudentMode()?.deviceUid === userId ? 'tablet' : profileData?.role);
     setLoading(false);
   };

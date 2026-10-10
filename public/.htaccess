@@ -19,6 +19,12 @@
   <FilesMatch "\.(js|css|woff2?)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
+  # The service worker and web manifest keep a fixed name and change every
+  # build. The .js rule above would freeze sw.js for a year and no update
+  # would ever reach a device; this later rule wins for these two files.
+  <FilesMatch "^(sw\.js|manifest\.webmanifest)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
   # Images (logo, favicon, og-image) keep the same name, so cache only briefly
   # — a logo swap then shows within a day instead of being stuck for a year.
   <FilesMatch "\.(png|jpg|jpeg|gif|svg|webp|ico)$">
