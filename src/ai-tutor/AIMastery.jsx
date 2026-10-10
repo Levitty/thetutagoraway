@@ -1009,12 +1009,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       xpEarned = 1;
     }
 
-    const updatedProgress = updateStreak(gainXP({
-      ...progress,
-      skills: updatedSkills,
-    }, xpEarned));
-
-    setProgress(updatedProgress);
+    // Functional, not a snapshot: the achievements detector writes with a
+    // functional update between renders, and a snapshot built from this
+    // closure's `progress` would overwrite it — the badge would count as new
+    // again and be celebrated twice. (The review path already does this.)
+    setProgress(p => updateStreak(gainXP({ ...p, skills: updatedSkills }, xpEarned)));
 
     // Celebration on mastery (level-ups / badges are queued by the effect below)
     if (shouldMaster && !sp.mastered) {
@@ -1152,14 +1151,20 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
   // ==================== NAVIGATION ====================
 
-  const goHome = () => { setView('home'); setActiveSkill(null); setCelebrations([]); setRemediationSkills(null); setProgress(p => p.lessonInProgress ? { ...p, lessonInProgress: null } : p); };
+  const goHome = () => { setView('home'); setActiveSkill(null); setCelebrations(q => q.filter(c => c.type !== 'mastery')); setRemediationSkills(null); setProgress(p => p.lessonInProgress ? { ...p, lessonInProgress: null } : p); };
 
-  // Dismiss the front celebration; mastery returns the learner to the dashboard.
-  const dismissCelebration = () => {
-    const item = celebrations[0];
-    setCelebrations(q => q.slice(1));
-    if (item?.type === 'mastery') goHome();
+  // Dismiss one celebration; mastery returns the learner to the dashboard.
+  const dismissItem = (item) => {
+    if (!item) return;
+    setCelebrations(q => q.filter(c => c !== item));
+    if (item.type === 'mastery') goHome();
   };
+  const dismissCelebration = () => dismissItem(celebrations[0]);
+  // Inside a lesson only the mastery card may interrupt — it IS the lesson's
+  // end. Level-ups, badges and the daily goal are queued the moment they're
+  // earned, which was mid-question: "Know Your Start" popped over a child's
+  // first problem. They now wait for the home screen.
+  const lessonCelebration = celebrations.find(c => c.type === 'mastery') || null;
   const switchSubject = () => { setSubjectId(null); setView('subject-picker'); setActiveSkill(null); setProgress(defaultProgress); };
   const resetAll = () => { if (confirm('Reset ALL progress? This cannot be undone.')) { const fresh = defaultProgress(); setProgress(fresh); forceSave(keyFor(subjectId), fresh, userId, learnerId); setView('welcome'); } };
 
@@ -1799,8 +1804,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
           )}
         </div>
 
-        {/* Celebrations (mastery, level-up, achievements, daily goal) */}
-        <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
+        {/* In a lesson, only mastery; everything else waits for home. */}
+        <CelebrationOverlay item={lessonCelebration} onDismiss={() => dismissItem(lessonCelebration)} />
         </div>
       </div>
     );
