@@ -59,4 +59,14 @@ export const canPractice = (sub, _progress, now = Date.now()) => {
   return isPro(sub, now);
 };
 
-export default { PAYWALL_ENABLED, PAYWALL_START_ISO, FREE_DAYS, PLANS, PRICE_KES, PASS_DAYS, paywallActive, paywallTesting, isPro, isFreeWeek, passDaysLeft, canPractice };
+/**
+ * Did a Supabase call fail because there was no network, as opposed to the
+ * server answering "no"? Offline, the pass must be judged on the last row
+ * this device saw — never granted (the setup_pending fallback) and never
+ * revoked (a null that locks a paid family out).
+ */
+export const NETWORK_ERROR = /failed to fetch|fetch failed|networkerror|load failed|network request failed|err_internet_disconnected/i;
+export const isNetworkError = (e, online = (typeof navigator === 'undefined' ? true : navigator.onLine !== false)) =>
+  !online || NETWORK_ERROR.test(String(e?.message || e || ''));
+
+export default { PAYWALL_ENABLED, PAYWALL_START_ISO, FREE_DAYS, PLANS, PRICE_KES, PASS_DAYS, paywallActive, paywallTesting, isPro, isFreeWeek, passDaysLeft, canPractice, isNetworkError };

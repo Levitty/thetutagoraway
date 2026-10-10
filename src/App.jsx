@@ -17,7 +17,7 @@ import { ConsultingPage } from './ConsultingPage.jsx';
 import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
 import { initPush, requestPush, clearPush } from './push.js';
-import { PLANS, paywallActive, isFreeWeek, passDaysLeft } from './subscription.js';
+import { PLANS, paywallActive, isFreeWeek, passDaysLeft, isNetworkError } from './subscription.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Icon } from './ai-tutor/components/Icons.jsx';
@@ -651,24 +651,47 @@ const useAuth = () => {
   const [subscription, setSubscription] = useState(null); // paywall entitlement
   const [loading, setLoading] = useState(true);
 
+  // The last REAL pass row this device saw, per account. Offline, the pass is
+  // judged on its pro_until — a safe lower bound, since a pass is only ever
+  // extended, never revoked. The setup_pending stand-in is never cached: it is
+  // not an entitlement.
+  const subCache = {
+    read: (id) => { try { return JSON.parse(localStorage.getItem(`tg_sub_${id}`) || 'null'); } catch { return null; } },
+    write: (id, row) => { try { row ? localStorage.setItem(`tg_sub_${id}`, JSON.stringify(row)) : localStorage.removeItem(`tg_sub_${id}`); } catch { /* no storage */ } },
+  };
   const fetchSubscription = async (userId, role) => {
     try {
       // A child's linked tablet uses the family's pass (read-only).
       if (user?.is_anonymous || role === 'tablet') {
         const parentId = getStudentMode()?.parentId;
-        const { data } = parentId ? await supabase.from('subscriptions').select('*').eq('user_id', parentId).maybeSingle() : { data: null };
+        if (!parentId) { setSubscription(null); return; }
+        const { data, error } = await supabase.from('subscriptions').select('*').eq('user_id', parentId).maybeSingle();
+        if (error && isNetworkError(error)) { setSubscription(subCache.read(parentId)); return; }
+        subCache.write(parentId, data || null);
         setSubscription(data || null); return;
       }
-      const { data } = await supabase.from('subscriptions').select('*').eq('user_id', userId).maybeSingle();
-      if (data || !paywallActive() || role === 'tutor') { setSubscription(data || null); return; }
+      const { data, error } = await supabase.from('subscriptions').select('*').eq('user_id', userId).maybeSingle();
+      // No network: the last row we saw decides. Never a free day, never a lockout.
+      if (error && isNetworkError(error)) { setSubscription(subCache.read(userId)); return; }
+      if (data) { subCache.write(userId, data); setSubscription(data); return; }
+      if (!paywallActive() || role === 'tutor') { setSubscription(null); return; }
       // Paid practice is on and this family has never had a pass: their
       // free week starts now (once per account, decided by the database).
-      const { data: started, error } = await supabase.rpc('start_free_week');
-      // If the free-week setup isn't in the database yet, never lock a family
-      // out: treat it as open until it is (checked again on the next visit).
-      if (error) { console.warn('start_free_week unavailable:', error.message); setSubscription({ plan: 'setup_pending', pro_until: new Date(Date.now() + 86400000).toISOString() }); return; }
-      setSubscription(started?.user_id ? started : null);
-    } catch { setSubscription(null); } // table may not exist yet: treated as free
+      const { data: started, error: rpcError } = await supabase.rpc('start_free_week');
+      if (rpcError) {
+        if (isNetworkError(rpcError)) { setSubscription(subCache.read(userId)); return; }
+        // The free-week function itself is missing from the database (a
+        // deploy gap, not a dead network): never lock a family out for that.
+        console.warn('start_free_week unavailable:', rpcError.message);
+        setSubscription({ plan: 'setup_pending', pro_until: new Date(Date.now() + 86400000).toISOString() }); return;
+      }
+      const row = started?.user_id ? started : null;
+      subCache.write(userId, row);
+      setSubscription(row);
+    } catch (e) {
+      // A thrown network failure lands here; same rule as above.
+      setSubscription(isNetworkError(e) ? subCache.read(userId) : null);
+    }
   };
 
   useEffect(() => {
@@ -730,7 +753,7 @@ const useAuth = () => {
         // so the app opens as the right person instead of a role-less shell.
         let cached = null;
         try { cached = JSON.parse(localStorage.getItem(`tg_profile_${userId}`) || 'null'); } catch { /* none */ }
-        if (cached) setProfile(cached);
+        if (cached) { setProfile(cached); fetchSubscription(userId, cached.role); }
         else console.error('Error fetching profile:', profileError);
       }
       setLoading(false);

@@ -20,6 +20,7 @@ import { propagateCredit } from '../src/ai-tutor/diagnosticEngine.js';
 import { getDiagnosticSkills, getEffectivePlacement, recentMastery, prereqsMet, isHeld } from '../src/ai-tutor/adaptiveEngine.js';
 import { selectQuestion, computePlacement, isComplete, MAX_QUESTIONS } from '../src/ai-tutor/placement.js';
 import { strandOf, CURRICULA } from '../src/ai-tutor/curricula.js';
+import { canPractice, isNetworkError, paywallActive } from '../src/subscription.js';
 
 let failures = 0;
 const fail = (msg) => { console.log('  ✗ ' + msg); failures++; };
@@ -47,6 +48,30 @@ console.log('1b. One row per strand in every curriculum view');
   const want = [...CURRICULA.cbc.strands].sort();
   if (seen.join('|') === want.join('|')) ok(`CBC view groups all skills into exactly ${want.length} strands`);
   else fail(`CBC strand rows are ${JSON.stringify(seen)}, want ${JSON.stringify(want)}`);
+}
+
+// ---- 1c. Offline, the pass is judged on the last real row ----
+console.log('1c. Offline, the pass is judged on the last real row');
+{
+  const day = 86400000, now = Date.now();
+  const paid = { plan: 'month', pro_until: new Date(now + 10 * day).toISOString() };
+  const lapsed = { plan: 'month', pro_until: new Date(now - 2 * day).toISOString() };
+  const trial = { plan: 'trial', pro_until: new Date(now + 3 * day).toISOString() };
+  const live = paywallActive(now);
+  const r = [canPractice(paid, {}, now), canPractice(lapsed, {}, now), canPractice(trial, {}, now), canPractice(null, {}, now)];
+  const want = live ? 'true,false,true,false' : 'true,true,true,true';
+  if (r.join() === want) ok(`cached rows decide: paid yes, lapsed no, free week yes, nothing cached no (paywall ${live ? 'live' : 'off'})`);
+  else fail(`cached-row verdicts ${r.join()} (want ${want})`);
+
+  const net = [
+    isNetworkError({ message: 'TypeError: Failed to fetch' }, true),
+    isNetworkError({ message: 'fetch failed' }, true),
+    isNetworkError({ message: 'anything at all' }, false),            // navigator.onLine false
+    isNetworkError({ message: 'function start_free_week does not exist', code: 'PGRST202' }, true),
+    isNetworkError({ message: 'permission denied for table subscriptions' }, true),
+  ];
+  if (net.join() === 'true,true,true,false,false') ok('network failures are told apart from the server saying no');
+  else fail(`isNetworkError wrong: ${net.join()}`);
 }
 
 // ---- 2 & 3. Coverage + every key self-accepts ----
