@@ -274,6 +274,486 @@ function buildTwoDigitDivRemainder({ dMin, dMax, qMin, qMax }) {
 }
 
 // ---------------------------------------------------------------------------
+// Factors, multiples, divisibility, LCM & HCF (KICD Grade 5, Numbers 1.1)
+// ---------------------------------------------------------------------------
+
+const factorsOf = (n) => {
+  const out = [];
+  for (let i = 1; i <= n; i++) if (n % i === 0) out.push(i);
+  return out;
+};
+const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+
+function buildFactors({ max = 60 }) {
+  return () => {
+    const n = randInt(12, max);
+    const fs = factorsOf(n);
+    const mode = pick(['count', 'pair', 'largest-proper', 'odd-one-out']);
+
+    if (mode === 'count') {
+      const value = fs.length;
+      return {
+        type: 'factors-count', instruction: 'Count the factors.',
+        question: `How many factors does ${n} have altogether?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'A factor divides into the number leaving nothing over.',
+          'Work upwards from 1 and test each number in turn — every one that divides exactly is a factor.',
+          'Factors come in pairs that multiply to give the number, so each one found names its partner too. Remember 1 and the number itself.'),
+        solution: { steps: [
+          { text: `Test each number from 1 upwards.`, expr: fs.join(', ') },
+          { text: 'Count them.', expr: `${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${fs.length - 2}`, feedback: 'Both 1 and the number itself are factors of every number — they must be counted too.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+
+    if (mode === 'pair') {
+      const inner = fs.filter(f => f !== 1 && f !== n);
+      if (!inner.length) return buildFactors({ max })();
+      const f = pick(inner), value = n / f;
+      return {
+        type: 'factors-pair', instruction: 'Find the matching factor.',
+        question: `${f} is a factor of ${n}. What is the factor that multiplies with it to give ${n}?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'Factors come in pairs that multiply to give the number.',
+          `So one of the pair is ${f}, and the pair must multiply to ${n}.`,
+          `Finding the partner means dividing ${n} by ${f}.`),
+        solution: { steps: [
+          { text: 'The pair multiplies to the number.', expr: `${f} × ? = ${n}` },
+          { text: 'So divide.', expr: `${n} ÷ ${f} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${n - f}`, feedback: 'A factor PAIR multiplies to the number, so the partner is found by dividing, not by subtracting.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+
+    if (mode === 'largest-proper') {
+      const value = fs[fs.length - 2];
+      if (value === 1) return buildFactors({ max })();
+      return {
+        type: 'factors-largest', instruction: 'Find the largest factor below the number itself.',
+        question: `What is the largest factor of ${n}, not counting ${n} itself?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'Every number is a factor of itself, but that one is ruled out here.',
+          'The largest factor below the number is the partner of the SMALLEST factor above 1.',
+          `So find the smallest number above 1 that divides ${n} exactly, then divide.`),
+        solution: { steps: [
+          { text: `Smallest factor above 1.`, expr: `${n / value}` },
+          { text: 'Its partner is the largest factor below the number.', expr: `${n} ÷ ${n / value} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${n}`, feedback: `${n} is a factor of itself, but the question rules it out.` },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+
+    // Which of these four numbers is NOT a factor?
+    const inner = fs.filter(f => f !== 1);
+    const shown = [];
+    while (shown.length < 3 && inner.length) shown.push(inner.splice(randInt(0, inner.length - 1), 1)[0]);
+    let value = 0;
+    for (let t = 2; t < n; t++) if (n % t !== 0 && !shown.includes(t)) { value = t; break; }
+    if (!value || shown.length < 3) return buildFactors({ max })();
+    const list = [...shown, value].sort((a, b) => a - b);
+    return {
+      type: 'factors-odd-one-out', instruction: 'Find the number that is not a factor.',
+      question: `Three of these are factors of ${n} and one is not: ${list.join(', ')}. Which one is NOT a factor of ${n}?`,
+      answer: `${value}`, accepts: accepts(`${value}`), choices: list.map(String),
+      hints: hintLadder(
+        'A factor divides the number leaving nothing over.',
+        `Divide ${n} by each one in turn and watch for a remainder.`,
+        'The one that leaves something over is the odd one out.'),
+      solution: { steps: [
+        { text: `Divide ${n} by each.`, expr: list.map(x => `${n} ÷ ${x}`).join(',  ') },
+        { text: 'One of them leaves a remainder.', expr: `${value}` },
+      ], answer: `${value}` },
+      misconceptions: [
+        { when: `${list[0]}`, feedback: `Check by dividing: ${n} ÷ ${list[0]} — if nothing is left over, it IS a factor.` },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+function buildMultiples({ maxBase = 12 }) {
+  return () => {
+    const base = randInt(3, maxBase);
+    const mode = pick(['nth', 'between', 'first-above', 'odd-one-out']);
+
+    if (mode === 'nth') {
+      const k = randInt(4, 12);
+      const value = base * k;
+      return {
+        type: 'multiples-nth', instruction: 'Find the multiple.',
+        question: `What is the ${k}th multiple of ${base}?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'The multiples of a number are what you land on counting up in steps of that size.',
+          `The first multiple of ${base} is ${base} itself, the second is two steps, and so on.`,
+          `So the ${k}th one is ${k} steps of ${base} — that is ${k} × ${base}.`),
+        solution: { steps: [
+          { text: `The ${k}th multiple means ${k} lots of ${base}.`, expr: `${k} × ${base}` },
+          { text: 'Work it out.', expr: `${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${base * (k - 1)}`, feedback: `The FIRST multiple of ${base} is ${base} itself, not ${base} × 2 — so counting starts one step earlier than it looks.` },
+          { when: `${base + k}`, feedback: 'Multiples are made by multiplying, not adding.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+
+    if (mode === 'between') {
+      const k = randInt(5, 14);
+      const value = base * k;
+      const lo = value - randInt(1, Math.max(1, base - 1));
+      const hi = lo + base;        // exactly one multiple of `base` sits inside
+      if (lo <= 0 || Math.floor(hi / base) * base !== value) return buildMultiples({ maxBase })();
+      return {
+        type: 'multiples-between', instruction: 'Find the multiple in the range.',
+        question: `Write the multiple of ${base} that lies between ${lo} and ${hi}.`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          `Count up in steps of ${base} and watch for the step that falls inside the range.`,
+          `Dividing ${lo} by ${base} shows roughly how many steps have been taken already.`,
+          'Only one step of that size can land between two numbers this close together.'),
+        solution: { steps: [
+          { text: `How many ${base}s fit into ${lo}?`, expr: `${lo} ÷ ${base} ≈ ${k - 1}` },
+          { text: 'Take one more step.', expr: `${k} × ${base} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${value - base}`, feedback: 'That multiple falls below the range — take one more step.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+
+    if (mode === 'first-above') {
+      const target = randInt(30, 150);
+      const value = Math.ceil((target + 1) / base) * base;
+      return {
+        type: 'multiples-above', instruction: 'Find the first multiple past the number.',
+        question: `What is the smallest multiple of ${base} that is greater than ${target}?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          `Count up in steps of ${base} until the number is passed.`,
+          `Dividing ${target} by ${base} shows how many whole steps fit inside it.`,
+          'The answer is the very next step after those whole ones.'),
+        solution: { steps: [
+          { text: `How many whole ${base}s fit into ${target}?`, expr: `${target} ÷ ${base} = ${Math.floor(target / base)} remainder ${target % base}` },
+          { text: 'Take the next step up.', expr: `${value / base} × ${base} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${value - base}`, feedback: `That one is not greater than ${target} — the question asks for the first multiple PAST it.` },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+
+    const k = randInt(3, 9);
+    const good = [base * k, base * (k + 1), base * (k + 3)];
+    const value = base * (k + 2) + randInt(1, base - 1);
+    if (good.includes(value)) return buildMultiples({ maxBase })();
+    const list = [...good, value].sort((a, b) => a - b);
+    return {
+      type: 'multiples-odd-one-out', instruction: 'Find the number that is not a multiple.',
+      question: `Three of these are multiples of ${base} and one is not: ${list.join(', ')}. Which one is NOT a multiple of ${base}?`,
+      answer: `${value}`, accepts: accepts(`${value}`), choices: list.map(String),
+      hints: hintLadder(
+        `A multiple of ${base} can be divided by ${base} leaving nothing over.`,
+        `Divide each one by ${base} in turn.`,
+        'The one that leaves a remainder is the odd one out.'),
+      solution: { steps: [
+        { text: `Divide each by ${base}.`, expr: list.map(x => `${x} ÷ ${base}`).join(',  ') },
+        { text: 'One leaves a remainder.', expr: `${value}` },
+      ], answer: `${value}` },
+      misconceptions: [
+        { when: `${list[0]}`, feedback: `Check it: divide ${list[0]} by ${base} and see whether anything is left over.` },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+function buildDivisibility2510() {
+  return () => {
+    const rule = pick([2, 5, 10]);
+    const mode = pick(['which-of', 'count', 'missing-digit', 'last-digit']);
+
+    if (mode === 'last-digit') {
+      const spec = rule === 10
+        ? { q: 'What must the last digit of a number be for it to be divisible by 10?', value: 0 }
+        : rule === 5
+          ? { q: 'A number is divisible by 5 and does not end in 0. What must its last digit be?', value: 5 }
+          : { q: 'A number is divisible by 2. Which of these could be its last digit: 3, 5, 6 or 9?', value: 6 };
+      return {
+        type: 'divisibility-rule', instruction: 'Use the last-digit rule.',
+        question: spec.q, answer: `${spec.value}`, accepts: accepts(`${spec.value}`),
+        hints: hintLadder(
+          'The tests for 2, 5 and 10 only ever look at the LAST digit — the rest of the number does not matter.',
+          'Even numbers end in 0, 2, 4, 6 or 8; multiples of 5 end in 0 or 5; multiples of 10 end in 0.',
+          'Work out which of those endings the question is pointing at.'),
+        solution: { steps: [
+          { text: 'Only the last digit matters for 2, 5 and 10.' },
+          { text: 'Apply the ending rule.', expr: `${spec.value}` },
+        ], answer: `${spec.value}` },
+        misconceptions: [],
+        verify: { kind: 'fraction', value: spec.value },
+      };
+    }
+
+    if (mode === 'which-of') {
+      const value = randInt(11, 99) * rule;
+      const others = [];
+      while (others.length < 3) {
+        const c = randInt(100, 999);
+        if (c % rule !== 0 && !others.includes(c) && c !== value) others.push(c);
+      }
+      const list = [value, ...others].sort((a, b) => a - b);
+      return {
+        type: 'divisibility-which', instruction: 'Apply the divisibility test.',
+        question: `Which one of these is divisible by ${rule}:  ${list.join(',  ')}?`,
+        answer: `${value}`, accepts: accepts(`${value}`), choices: list.map(String),
+        hints: hintLadder(
+          `There is no need to divide — the test for ${rule} only looks at the last digit.`,
+          rule === 2 ? 'A number is divisible by 2 when it ends in 0, 2, 4, 6 or 8.'
+            : rule === 5 ? 'A number is divisible by 5 when it ends in 0 or in 5.'
+            : 'A number is divisible by 10 when it ends in 0.',
+          'Check the last digit of each one against that rule.'),
+        solution: { steps: [
+          { text: `Look at the last digit of each.`, expr: list.map(x => String(x).slice(-1)).join(', ') },
+          { text: `Only one of those endings passes the test for ${rule}.`, expr: `${value}` },
+        ], answer: `${value}` },
+        misconceptions: [],
+        verify: { kind: 'fraction', value },
+      };
+    }
+
+    if (mode === 'count') {
+      const list = Array.from({ length: 6 }, () => randInt(20, 400));
+      const value = list.filter(x => x % rule === 0).length;
+      if (value === 0 || value === 6) return buildDivisibility2510()();
+      return {
+        type: 'divisibility-count', instruction: 'Apply the divisibility test to each.',
+        question: `How many of these are divisible by ${rule}:  ${list.join(',  ')}?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          `The test for ${rule} looks only at the last digit of each number.`,
+          rule === 2 ? 'Numbers divisible by 2 end in 0, 2, 4, 6 or 8.'
+            : rule === 5 ? 'Numbers divisible by 5 end in 0 or 5.'
+            : 'Numbers divisible by 10 end in 0.',
+          'Go along the list once, checking each last digit, and keep a count.'),
+        solution: { steps: [
+          { text: 'Last digits in order.', expr: list.map(x => String(x).slice(-1)).join(', ') },
+          { text: `Count the ones that pass the test for ${rule}.`, expr: `${value}` },
+        ], answer: `${value}` },
+        misconceptions: [],
+        verify: { kind: 'fraction', value },
+      };
+    }
+
+    const base = randInt(21, 98);
+    const want = pick(['smallest', 'largest']);
+    const endings = rule === 2 ? [0, 2, 4, 6, 8] : rule === 5 ? [0, 5] : [0];
+    const value = want === 'smallest' ? endings[0] : endings[endings.length - 1];
+    return {
+      type: 'divisibility-digit', instruction: 'Choose the digit that passes the test.',
+      question: `Replace the ☐ in ${base}☐ with the ${want} digit that makes the number divisible by ${rule}.`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        `Only the digit in the box decides this — the ${base} in front makes no difference to the test for ${rule}.`,
+        rule === 2 ? 'The endings that work for 2 are 0, 2, 4, 6 and 8.'
+          : rule === 5 ? 'The endings that work for 5 are 0 and 5.'
+          : 'The only ending that works for 10 is 0.',
+        `Of those endings, pick the ${want} one.`),
+      solution: { steps: [
+        { text: `Endings that pass the test for ${rule}.`, expr: endings.join(', ') },
+        { text: `Take the ${want}.`, expr: `${value}` },
+      ], answer: `${value}` },
+      misconceptions: [],
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+function buildLcmHcf({ which }) {
+  return () => {
+    // A coprime pair makes "just multiply them" the right answer every time,
+    // which teaches exactly the wrong habit — so insist on a shared factor.
+    let a, b;
+    for (let i = 0; ; i++) {
+      a = randInt(4, 18);
+      b = randInt(4, 24);
+      if ((b !== a && gcd(a, b) > 1) || i > 200) break;
+    }
+    const hcf = gcd(a, b), lcm = (a * b) / hcf;
+
+    if (which === 'hcf') {
+      if (hcf === 1) return buildLcmHcf({ which })();
+      return {
+        type: 'hcf', instruction: 'Find the highest common factor.',
+        question: `What is the highest common factor (HCF) of ${a} and ${b}?`,
+        answer: `${hcf}`, accepts: accepts(`${hcf}`),
+        hints: hintLadder(
+          'A common factor divides into BOTH numbers leaving nothing over.',
+          `Write out the factors of ${a}, then the factors of ${b}, and look for the ones in both lists.`,
+          'Of the factors that appear in both lists, the answer is the biggest.'),
+        solution: { steps: [
+          { text: `Factors of ${a}.`, expr: factorsOf(a).join(', ') },
+          { text: `Factors of ${b}.`, expr: factorsOf(b).join(', ') },
+          { text: 'The biggest one in both lists.', expr: `${hcf}` },
+        ], answer: `${hcf}` },
+        misconceptions: [
+          { when: `${lcm}`, feedback: 'That is the lowest common MULTIPLE. A common factor divides into both numbers; it cannot be bigger than either of them.' },
+          { when: '1', feedback: '1 does divide into both, but it is not the HIGHEST that does — look for a bigger common factor.' },
+        ],
+        verify: { kind: 'fraction', value: hcf },
+      };
+    }
+
+    if (which === 'word') {
+      let m1, m2;
+      for (let i = 0; ; i++) {
+        m1 = randInt(4, 12);
+        m2 = randInt(4, 15);
+        if ((m2 !== m1 && gcd(m1, m2) > 1) || i > 200) break;
+      }
+      const value = (m1 * m2) / gcd(m1, m2);
+      if (value > 120) return buildLcmHcf({ which })();
+      const spec = pick([
+        `One matatu leaves the stage every ${m1} minutes and another every ${m2} minutes. They have just left together. After how many minutes will they next leave together?`,
+        `A posho mill is serviced every ${m1} days and its generator every ${m2} days. Both were serviced today. In how many days will both be serviced on the same day again?`,
+        `A bell rings every ${m1} minutes and a siren every ${m2} minutes. They have just sounded together. After how many minutes do they sound together again?`,
+      ]);
+      return {
+        type: 'lcm-word', instruction: 'Work out when they meet again.',
+        question: spec, answer: `${value}`, accepts: accepts(`${value}`, `${value} minutes`, `${value} days`),
+        hints: hintLadder(
+          'Each one happens on its own multiples, so they meet on a time that is a multiple of BOTH.',
+          `Count up in ${m1}s, and separately in ${m2}s, and look for the first time that appears in both counts.`,
+          'The first time in both counts is the lowest common multiple of the two numbers.'),
+        solution: { steps: [
+          { text: `Multiples of ${m1}.`, expr: Array.from({ length: 6 }, (_, i) => m1 * (i + 1)).join(', ') + '…' },
+          { text: `Multiples of ${m2}.`, expr: Array.from({ length: 6 }, (_, i) => m2 * (i + 1)).join(', ') + '…' },
+          { text: 'The first one in both lists.', expr: `${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${m1 * m2}`, feedback: 'Multiplying the two always gives a time when both happen, but not always the FIRST one — check for an earlier common multiple.' },
+          { when: `${m1 + m2}`, feedback: 'Adding the two gaps does not give a time that is a multiple of either.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+
+    if (lcm > 120) return buildLcmHcf({ which })();
+    return {
+      type: 'lcm', instruction: 'Find the lowest common multiple.',
+      question: `What is the lowest common multiple (LCM) of ${a} and ${b}?`,
+      answer: `${lcm}`, accepts: accepts(`${lcm}`),
+      hints: hintLadder(
+        'A common multiple is a number that BOTH numbers divide into exactly.',
+        `Count up in ${a}s and check each one to see whether ${b} divides into it too.`,
+        'The first one that works is the lowest common multiple — stop there, do not keep going.'),
+      solution: { steps: [
+        { text: `Count up in ${a}s.`, expr: Array.from({ length: 6 }, (_, i) => a * (i + 1)).join(', ') + '…' },
+        { text: `Find the first that ${b} also divides into.`, expr: `${lcm}` },
+      ], answer: `${lcm}` },
+      misconceptions: [
+        { when: `${a * b}`, feedback: 'Multiplying the two always gives A common multiple, but not always the LOWEST one.' },
+        { when: `${hcf}`, feedback: 'That is the highest common FACTOR. A common multiple is at least as big as the bigger of the two numbers.' },
+      ],
+      verify: { kind: 'fraction', value: lcm },
+    };
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Simple equations with one unknown (KICD Grade 5, Numbers 1.9)
+// ---------------------------------------------------------------------------
+
+/** Whole numbers only, and the answer is always positive: the alias to
+ *  G6_SIMPLE_EQUATIONS served a Grade 5 learner things like x − 10 = −13. */
+function buildOneStepEquation({ ops }) {
+  return () => {
+    const letter = pick(['x', 'n', 'a', 'k']);
+    const op = pick(ops);
+    const x = randInt(2, 20);
+
+    if (op === 'add') {
+      const b = randInt(2, 25), c = x + b;
+      return {
+        type: 'g5-equation', instruction: 'Find the value of the letter.',
+        question: `Solve:   ${letter} + ${b} = ${c}`,
+        answer: `${letter} = ${x}`, accepts: accepts(`${letter}=${x}`, `${letter} = ${x}`, `${x}`),
+        hints: hintLadder(
+          `The aim is to leave ${letter} alone on one side.`,
+          `Something is being ADDED to ${letter}, so undo it by taking the same amount off BOTH sides.`,
+          `Take ${b} off each side and see what is left.`),
+        solution: { steps: [
+          { text: `Take ${b} off both sides.`, expr: `${letter} = ${c} − ${b}` },
+          { text: 'Work out the right-hand side.', expr: `${letter} = ${x}` },
+        ], answer: `${letter} = ${x}` },
+        misconceptions: [
+          { when: `${c + b}`, feedback: `${b} was added again. To undo an addition you SUBTRACT the same amount from both sides.` },
+        ],
+        verify: { kind: 'equation', solution: x, residual: (t) => (t + b) - c },
+      };
+    }
+
+    if (op === 'sub') {
+      const b = randInt(2, 15), c = x;          // letter − b = c, so letter = c + b
+      return {
+        type: 'g5-equation', instruction: 'Find the value of the letter.',
+        question: `Solve:   ${letter} − ${b} = ${c}`,
+        answer: `${letter} = ${x + b}`, accepts: accepts(`${letter}=${x + b}`, `${letter} = ${x + b}`, `${x + b}`),
+        hints: hintLadder(
+          `The aim is to leave ${letter} alone on one side.`,
+          `Something has been TAKEN OFF ${letter}, so undo it by putting the same amount back on BOTH sides.`,
+          `Add ${b} to each side and see what is left.`),
+        solution: { steps: [
+          { text: `Add ${b} to both sides.`, expr: `${letter} = ${c} + ${b}` },
+          { text: 'Work out the right-hand side.', expr: `${letter} = ${x + b}` },
+        ], answer: `${letter} = ${x + b}` },
+        misconceptions: [
+          { when: `${c - b}`, feedback: `${b} was taken off again. To undo a subtraction you ADD the same amount to both sides.` },
+        ],
+        verify: { kind: 'equation', solution: x + b, residual: (t) => (t - b) - c },
+      };
+    }
+
+    // a × letter = c, chosen so the answer is a whole number
+    const a = randInt(2, 9), c = a * x;
+    return {
+      type: 'g5-equation', instruction: 'Find the value of the letter.',
+      question: `Solve:   ${a}${letter} = ${c}`,
+      answer: `${letter} = ${x}`, accepts: accepts(`${letter}=${x}`, `${letter} = ${x}`, `${x}`),
+      hints: hintLadder(
+        `${a}${letter} means ${a} lots of ${letter}.`,
+        `${letter} is being MULTIPLIED, so undo it by dividing BOTH sides by the same number.`,
+        `Divide each side by ${a}.`),
+      solution: { steps: [
+        { text: `${a} lots of ${letter} make ${c}.`, expr: `${a} × ${letter} = ${c}` },
+        { text: `Divide both sides by ${a}.`, expr: `${letter} = ${x}` },
+      ], answer: `${letter} = ${x}` },
+      misconceptions: [
+        { when: `${c - a}`, feedback: `${a}${letter} is a multiplication, not an addition — undo it by dividing, not by subtracting.` },
+        { when: `${c * a}`, feedback: 'To undo a multiplication you DIVIDE both sides.' },
+      ],
+      verify: { kind: 'equation', solution: x, residual: (t) => (a * t) - c },
+    };
+  };
+}
+
+// ---------------------------------------------------------------------------
 // The Grade 5 content map
 // ---------------------------------------------------------------------------
 
@@ -302,6 +782,31 @@ export const GRADE5_CONTENT = {
                         withWorkedExample(buildTwoDigitDiv({ dMin: 11, dMax: 20, qMin: 11, qMax: 49 })),
                         withWorkedExample(buildTwoDigitDiv({ dMin: 21, dMax: 45, qMin: 11, qMax: 40 })),
                         withWorkedExample(buildTwoDigitDivRemainder({ dMin: 12, dMax: 30, qMin: 11, qMax: 30 })),
+                      ]),
+
+  // ── Numbers: factors, multiples, divisibility, LCM & HCF ────────────────
+  G5_FACTORS:         withKPs([
+                        withWorkedExample(buildFactors({ max: 40 })),
+                        withWorkedExample(buildFactors({ max: 72 })),
+                      ]),
+  G5_MULTIPLES:       withKPs([
+                        withWorkedExample(buildMultiples({ maxBase: 9 })),
+                        withWorkedExample(buildMultiples({ maxBase: 12 })),
+                      ]),
+  G5_DIVISIBILITY:    withWorkedExample(buildDivisibility2510()),
+  // KP ladder: the two ideas separately, then the word problem that needs one.
+  G5_LCM_HCF:         withKPs([
+                        withWorkedExample(buildLcmHcf({ which: 'lcm' })),
+                        withWorkedExample(buildLcmHcf({ which: 'hcf' })),
+                        withWorkedExample(buildLcmHcf({ which: 'word' })),
+                      ]),
+
+  // ── Algebra: one unknown, whole numbers, never a negative answer ────────
+  G5_SIMPLE_EQUATIONS: withKPs([
+                        withWorkedExample(buildOneStepEquation({ ops: ['add'] })),
+                        withWorkedExample(buildOneStepEquation({ ops: ['sub'] })),
+                        withWorkedExample(buildOneStepEquation({ ops: ['mul'] })),
+                        withWorkedExample(buildOneStepEquation({ ops: ['add', 'sub', 'mul'] })),
                       ]),
 };
 

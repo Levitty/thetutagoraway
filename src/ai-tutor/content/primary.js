@@ -19,7 +19,8 @@ export const PRIMARY_ALIAS = {
   // ── Grade 7 sub-strands the graph was missing vs the KICD document ──────────
   // Verified against "Mathematics Grade 7 – July 2024 – Revised" (KICD).
   // Real content today via the closest existing builder; grade-tune later.
-  G5_SIMPLE_EQUATIONS: 'G6_SIMPLE_EQUATIONS', // tier-1 linear equation builder
+  // G5_SIMPLE_EQUATIONS is authored in grade5.js now. The alias to
+  // G6_SIMPLE_EQUATIONS served a Grade 5 learner equations like x − 10 = −13.
   // Grade 6 additions from the KICD Grade 6 summary (rationalised design)
   G6_TIME: 'G5_TIME',
   G6_3D_OBJECTS: 'G6_VOLUME_CUBOID',
