@@ -163,13 +163,13 @@ const GRADE_5 = {
   G5_DECIMALS_SUB: skill('G5_DECIMALS_SUB', 'Subtracting Decimals', 5, S.NUM, { pre: ['G5_DECIMALS_INTRO', 'G5_SUBTRACTION'], w: 2, curricula: { cbc: cbc(5, 'Numbers', 'Decimals') } }),
 
   // Algebra readiness (the foundation the Grade-6 algebra strand builds on)
-  G5_PATTERNS: skill('G5_PATTERNS', 'Number Patterns', 5, S.ALG, { pre: ['G5_ADDITION', 'G5_MULTIPLICATION'], w: 1 }),
-  G5_MISSING_NUMBER: skill('G5_MISSING_NUMBER', 'Finding the Missing Number', 5, S.ALG, { pre: ['G5_ADDITION', 'G5_SUBTRACTION'], w: 1 }),
+  G5_PATTERNS: skill('G5_PATTERNS', 'Number Patterns', 5, S.ALG, { pre: ['G5_ADDITION', 'G5_MULTIPLICATION'], w: 1, curricula: { cbc: cbc(5, 'Numbers', 'Addition') } }),
+  G5_MISSING_NUMBER: skill('G5_MISSING_NUMBER', 'Finding the Missing Number', 5, S.ALG, { pre: ['G5_ADDITION', 'G5_SUBTRACTION'], w: 1, curricula: { cbc: cbc(5, 'Numbers', 'Simple Equations') } }),
   G5_SIMPLE_EQUATIONS: skill('G5_SIMPLE_EQUATIONS', 'Simple Equations (One Unknown)', 5, S.ALG, { pre: ['G5_MISSING_NUMBER'], w: 3, curricula: { cbc: cbc(5, 'Numbers', 'Simple Equations') } }),
 
   // Geometry
   G5_ANGLES_INTRO: skill('G5_ANGLES_INTRO', 'Types of Angles', 5, S.GEO, { w: 1, curricula: { cbc: cbc(5, 'Geometry', 'Angles') } }),
-  G5_TRIANGLES_INTRO: skill('G5_TRIANGLES_INTRO', 'Types of Triangles', 5, S.GEO, { pre: ['G5_ANGLES_INTRO'], w: 2 }),
+  G5_TRIANGLES_INTRO: skill('G5_TRIANGLES_INTRO', 'Types of Triangles', 5, S.GEO, { pre: ['G5_ANGLES_INTRO'], w: 2, curricula: { cbc: cbcEnr('Geometry') } }),
   G5_3D_OBJECTS: skill('G5_3D_OBJECTS', '3-D Objects (Cubes, Cuboids, Cylinders)', 5, S.GEO, { pre: ['G5_TRIANGLES_INTRO'], w: 2, curricula: { cbc: cbc(5, 'Geometry', 'Three Dimension (3-D) Objects') } }),
   G5_LINES: skill('G5_LINES', 'Parallel & Perpendicular Lines', 5, S.GEO, { w: 1, curricula: { cbc: cbc(5, 'Geometry', 'Lines') } }),
 
@@ -186,7 +186,7 @@ const GRADE_5 = {
   G5_CAPACITY: skill('G5_CAPACITY', 'Capacity (Litres & Millilitres)', 5, S.MEA, { pre: ['G4_CAPACITY'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Capacity') } }),
   G5_CAPACITY_OPS: skill('G5_CAPACITY_OPS', 'Adding & Subtracting Capacity', 5, S.MEA, { pre: ['G5_CAPACITY', 'G5_ADDITION'], w: 3, curricula: { cbc: cbc(5, 'Measurements', 'Capacity') } }),
   G5_MONEY: skill('G5_MONEY', 'Money (Profit & Loss)', 5, S.MEA, { pre: ['G4_MONEY', 'G5_MULTIPLICATION'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Money') } }),
-  G5_PERIMETER_INTRO: skill('G5_PERIMETER_INTRO', 'Perimeter of Rectangles', 5, S.MEA, { pre: ['G5_ADDITION', 'G5_LENGTH'], w: 2 }),
+  G5_PERIMETER_INTRO: skill('G5_PERIMETER_INTRO', 'Perimeter of Rectangles', 5, S.MEA, { pre: ['G5_ADDITION', 'G5_LENGTH'], w: 2, curricula: { cbc: cbc(4, 'Measurements', 'Length') } }),
   G5_AREA_INTRO: skill('G5_AREA_INTRO', 'Area of Rectangles (Counting Squares)', 5, S.MEA, { pre: ['G5_MULTIPLICATION'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Area') } }),
 
   // Statistics
@@ -201,50 +201,52 @@ const GRADE_5 = {
 
 const GRADE_6 = {
   // Numbers
-  G6_PLACE_VALUE: skill('G6_PLACE_VALUE', 'Place Value (Millions)', 6, S.NUM, { pre: ['G5_PLACE_VALUE'], w: 2 }),
+  G6_PLACE_VALUE: skill('G6_PLACE_VALUE', 'Place Value (Millions)', 6, S.NUM, { pre: ['G5_PLACE_VALUE'], w: 2, curricula: { cbc: cbc(6, 'Numbers', 'Whole Numbers') } }),
+  G6_MULTIPLICATION: skill('G6_MULTIPLICATION', 'Multiplication (4-digit × 2-digit)', 6, S.NUM, { pre: ['G5_MULTIPLICATION'], w: 3, crit: true, curricula: { cbc: cbc(6, 'Numbers', 'Multiplication') } }),
+  G6_DIVISION: skill('G6_DIVISION', 'Long Division (up to 4 digits)', 6, S.NUM, { pre: ['G5_DIVISION', 'G6_MULTIPLICATION'], w: 3, crit: true, curricula: { cbc: cbc(6, 'Numbers', 'Division') } }),
   G6_INEQUALITIES: skill('G6_INEQUALITIES', 'Inequalities (Comparing with <, >, =)', 6, S.NUM, { pre: ['G6_PLACE_VALUE'], w: 2, curricula: { cbc: cbc(6, 'Numbers', 'Inequalities') } }),
   G6_BODMAS_BASIC: skill('G6_BODMAS_BASIC', 'Order of Operations (BODMAS)', 5, S.NUM, { pre: ['G5_ADDITION', 'G5_SUBTRACTION', 'G5_MULTIPLICATION', 'G5_DIVISION'], w: 5, crit: true, curricula: { cbc: cbc(5, 'Numbers', 'Division') } }),
-  G6_FRACTIONS_ADD: skill('G6_FRACTIONS_ADD', 'Adding Fractions (Unlike Denominators)', 6, S.NUM, { pre: ['G5_FRACTIONS_ADD_LIKE', 'G5_FRACTIONS_EQUIV', 'G5_MULTIPLES'], w: 4, crit: true }),
-  G6_FRACTIONS_SUB: skill('G6_FRACTIONS_SUB', 'Subtracting Fractions (Unlike Denominators)', 6, S.NUM, { pre: ['G5_FRACTIONS_SUB_LIKE', 'G5_FRACTIONS_EQUIV', 'G5_MULTIPLES'], w: 4 }),
-  G6_FRACTIONS_MUL: skill('G6_FRACTIONS_MUL', 'Multiplying Fractions', 6, S.NUM, { pre: ['G5_FRACTIONS_INTRO', 'G5_MULTIPLICATION'], w: 3, crit: true }),
-  G6_FRACTIONS_DIV: skill('G6_FRACTIONS_DIV', 'Dividing Fractions', 6, S.NUM, { pre: ['G6_FRACTIONS_MUL'], w: 4 }),
-  G6_MIXED_NUMBERS: skill('G6_MIXED_NUMBERS', 'Mixed Numbers & Improper Fractions', 6, S.NUM, { pre: ['G6_FRACTIONS_ADD'], w: 3 }),
-  G6_DECIMALS_MUL: skill('G6_DECIMALS_MUL', 'Multiplying Decimals', 6, S.NUM, { pre: ['G5_DECIMALS_INTRO', 'G5_MULTIPLICATION'], w: 4, crit: true }),
-  G6_DECIMALS_DIV: skill('G6_DECIMALS_DIV', 'Dividing Decimals', 6, S.NUM, { pre: ['G6_DECIMALS_MUL'], w: 4 }),
-  G6_FRACTIONS_DECIMALS: skill('G6_FRACTIONS_DECIMALS', 'Converting Fractions & Decimals', 6, S.NUM, { pre: ['G5_FRACTIONS_INTRO', 'G5_DECIMALS_INTRO', 'G5_DIVISION'], w: 3 }),
-  G6_PERCENTAGES_INTRO: skill('G6_PERCENTAGES_INTRO', 'Understanding Percentages', 6, S.NUM, { pre: ['G6_FRACTIONS_DECIMALS'], w: 3, crit: true }),
-  G6_RATIOS: skill('G6_RATIOS', 'Ratios & Proportions', 6, S.NUM, { pre: ['G6_FRACTIONS_MUL', 'G5_DIVISION'], w: 4 }),
-  G6_INTEGERS_INTRO: skill('G6_INTEGERS_INTRO', 'Introduction to Integers', 6, S.NUM, { w: 2 }),
-  G6_INTEGERS_ADD_SUB: skill('G6_INTEGERS_ADD_SUB', 'Adding & Subtracting Integers', 6, S.NUM, { pre: ['G6_INTEGERS_INTRO'], w: 3, crit: true }),
-  G6_SQUARES: skill('G6_SQUARES', 'Squares (1-12)', 6, S.NUM, { pre: ['G5_MULTIPLICATION'], w: 2, mt: 0.90 }),
+  G6_FRACTIONS_ADD: skill('G6_FRACTIONS_ADD', 'Adding Fractions (Unlike Denominators)', 6, S.NUM, { pre: ['G5_FRACTIONS_ADD_LIKE', 'G5_FRACTIONS_EQUIV', 'G5_MULTIPLES'], w: 4, crit: true, curricula: { cbc: cbc(6, 'Numbers', 'Fractions') } }),
+  G6_FRACTIONS_SUB: skill('G6_FRACTIONS_SUB', 'Subtracting Fractions (Unlike Denominators)', 6, S.NUM, { pre: ['G5_FRACTIONS_SUB_LIKE', 'G5_FRACTIONS_EQUIV', 'G5_MULTIPLES'], w: 4, curricula: { cbc: cbc(6, 'Numbers', 'Fractions') } }),
+  G6_FRACTIONS_MUL: skill('G6_FRACTIONS_MUL', 'Multiplying Fractions', 6, S.NUM, { pre: ['G5_FRACTIONS_INTRO', 'G5_MULTIPLICATION'], w: 3, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Fractions') } }),
+  G6_FRACTIONS_DIV: skill('G6_FRACTIONS_DIV', 'Dividing Fractions', 6, S.NUM, { pre: ['G6_FRACTIONS_MUL'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Fractions') } }),
+  G6_MIXED_NUMBERS: skill('G6_MIXED_NUMBERS', 'Mixed Numbers & Improper Fractions', 6, S.NUM, { pre: ['G6_FRACTIONS_ADD'], w: 3, curricula: { cbc: cbc(6, 'Numbers', 'Fractions') } }),
+  G6_DECIMALS_MUL: skill('G6_DECIMALS_MUL', 'Multiplying Decimals', 6, S.NUM, { pre: ['G5_DECIMALS_INTRO', 'G5_MULTIPLICATION'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Decimals') } }),
+  G6_DECIMALS_DIV: skill('G6_DECIMALS_DIV', 'Dividing Decimals', 6, S.NUM, { pre: ['G6_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Decimals') } }),
+  G6_FRACTIONS_DECIMALS: skill('G6_FRACTIONS_DECIMALS', 'Converting Fractions & Decimals', 6, S.NUM, { pre: ['G5_FRACTIONS_INTRO', 'G5_DECIMALS_INTRO', 'G5_DIVISION'], w: 3, curricula: { cbc: cbc(6, 'Numbers', 'Decimals') } }),
+  G6_PERCENTAGES_INTRO: skill('G6_PERCENTAGES_INTRO', 'Understanding Percentages', 6, S.NUM, { pre: ['G6_FRACTIONS_DECIMALS'], w: 3, crit: true, curricula: { cbc: cbc(6, 'Numbers', 'Fractions') } }),
+  G6_RATIOS: skill('G6_RATIOS', 'Ratios & Proportions', 6, S.NUM, { pre: ['G6_FRACTIONS_MUL', 'G5_DIVISION'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Rates, Ratio, Proportions and Percentages') } }),
+  G6_INTEGERS_INTRO: skill('G6_INTEGERS_INTRO', 'Introduction to Integers', 6, S.NUM, { w: 2, curricula: { cbc: cbc(8, 'Numbers', 'Integers') } }),
+  G6_INTEGERS_ADD_SUB: skill('G6_INTEGERS_ADD_SUB', 'Adding & Subtracting Integers', 6, S.NUM, { pre: ['G6_INTEGERS_INTRO'], w: 3, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Integers') } }),
+  G6_SQUARES: skill('G6_SQUARES', 'Squares (1-12)', 6, S.NUM, { pre: ['G5_MULTIPLICATION'], w: 2, mt: 0.90, curricula: { cbc: cbc(6, 'Numbers', 'Whole Numbers') } }),
 
   // Algebra
-  G6_PATTERNS: skill('G6_PATTERNS', 'Number Patterns & Sequences', 6, S.ALG, { pre: ['G5_PATTERNS', 'G5_ADDITION', 'G5_MULTIPLICATION'], w: 2 }),
-  G6_SIMPLE_EQUATIONS: skill('G6_SIMPLE_EQUATIONS', 'Simple Equations (x + a = b)', 6, S.ALG, { pre: ['G5_SIMPLE_EQUATIONS'], w: 3, crit: true }),
+  G6_PATTERNS: skill('G6_PATTERNS', 'Number Patterns & Sequences', 6, S.ALG, { pre: ['G5_PATTERNS', 'G5_ADDITION', 'G5_MULTIPLICATION'], w: 2, curricula: { cbc: cbc(6, 'Numbers', 'Multiplication') } }),
+  G6_SIMPLE_EQUATIONS: skill('G6_SIMPLE_EQUATIONS', 'Simple Equations (x + a = b)', 6, S.ALG, { pre: ['G5_SIMPLE_EQUATIONS'], w: 3, crit: true, curricula: { cbc: cbc(7, 'Algebra', 'Linear Equations') } }),
 
   // Geometry
-  G6_ANGLE_MEASURE: skill('G6_ANGLE_MEASURE', 'Measuring Angles with Protractor', 6, S.GEO, { pre: ['G5_ANGLES_INTRO'], w: 2 }),
+  G6_ANGLE_MEASURE: skill('G6_ANGLE_MEASURE', 'Measuring Angles with Protractor', 6, S.GEO, { pre: ['G5_ANGLES_INTRO'], w: 2, curricula: { cbc: cbc(6, 'Geometry', 'Angles') } }),
   G6_LINES: skill('G6_LINES', 'Lines (Parallel & Perpendicular)', 6, S.GEO, { pre: ['G5_LINES'], w: 2, curricula: { cbc: cbc(6, 'Geometry', 'Lines') } }),
-  G6_ANGLE_PROPERTIES: skill('G6_ANGLE_PROPERTIES', 'Angles on a Line & at a Point', 6, S.GEO, { pre: ['G6_ANGLE_MEASURE'], w: 3 }),
+  G6_ANGLE_PROPERTIES: skill('G6_ANGLE_PROPERTIES', 'Angles on a Line & at a Point', 6, S.GEO, { pre: ['G6_ANGLE_MEASURE'], w: 3, curricula: { cbc: cbc(6, 'Geometry', 'Angles') } }),
   G6_3D_OBJECTS: skill('G6_3D_OBJECTS', '3-D Objects (Nets, Faces, Edges)', 6, S.GEO, { pre: ['G5_3D_OBJECTS'], w: 2, curricula: { cbc: cbc(6, 'Geometry', '3-D Objects') } }),
-  G6_TRIANGLE_PROPERTIES: skill('G6_TRIANGLE_PROPERTIES', 'Triangle Angle Sum', 6, S.GEO, { pre: ['G5_TRIANGLES_INTRO', 'G6_ANGLE_MEASURE'], w: 3, crit: true }),
-  G6_SYMMETRY: skill('G6_SYMMETRY', 'Lines of Symmetry', 6, S.GEO, { w: 1 }),
+  G6_TRIANGLE_PROPERTIES: skill('G6_TRIANGLE_PROPERTIES', 'Triangle Angle Sum', 6, S.GEO, { pre: ['G5_TRIANGLES_INTRO', 'G6_ANGLE_MEASURE'], w: 3, crit: true, curricula: { cbc: cbc(6, 'Geometry', 'Angles') } }),
+  G6_SYMMETRY: skill('G6_SYMMETRY', 'Lines of Symmetry', 6, S.GEO, { w: 1, curricula: { cbc: cbcEnr('Geometry') } }),
 
   // Measurements
-  G6_PERIMETER: skill('G6_PERIMETER', 'Perimeter (All Shapes)', 6, S.MEA, { pre: ['G5_PERIMETER_INTRO', 'G6_DECIMALS_MUL'], w: 3 }),
-  G6_AREA_RECT: skill('G6_AREA_RECT', 'Area of Rectangles & Squares', 6, S.MEA, { pre: ['G5_AREA_INTRO', 'G6_DECIMALS_MUL'], w: 3 }),
-  G6_AREA_TRIANGLE: skill('G6_AREA_TRIANGLE', 'Area of Triangles', 6, S.MEA, { pre: ['G6_AREA_RECT', 'G6_FRACTIONS_MUL'], w: 3 }),
-  G6_VOLUME_CUBOID: skill('G6_VOLUME_CUBOID', 'Volume of Cuboids', 6, S.MEA, { pre: ['G6_AREA_RECT'], w: 3 }),
-  G6_UNIT_CONVERSIONS: skill('G6_UNIT_CONVERSIONS', 'Unit Conversions (Length, Mass, Capacity)', 6, S.MEA, { pre: ['G6_DECIMALS_MUL', 'G6_DECIMALS_DIV'], w: 3 }),
+  G6_PERIMETER: skill('G6_PERIMETER', 'Perimeter (All Shapes)', 6, S.MEA, { pre: ['G5_PERIMETER_INTRO', 'G6_DECIMALS_MUL'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Length') } }),
+  G6_AREA_RECT: skill('G6_AREA_RECT', 'Area of Rectangles & Squares', 6, S.MEA, { pre: ['G5_AREA_INTRO', 'G6_DECIMALS_MUL'], w: 3, curricula: { cbc: cbc(6, 'Measurements', 'Area') } }),
+  G6_AREA_TRIANGLE: skill('G6_AREA_TRIANGLE', 'Area of Triangles', 6, S.MEA, { pre: ['G6_AREA_RECT', 'G6_FRACTIONS_MUL'], w: 3, curricula: { cbc: cbc(6, 'Measurements', 'Area') } }),
+  G6_VOLUME_CUBOID: skill('G6_VOLUME_CUBOID', 'Volume of Cuboids', 6, S.MEA, { pre: ['G6_AREA_RECT'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Volume and Capacity') } }),
+  G6_UNIT_CONVERSIONS: skill('G6_UNIT_CONVERSIONS', 'Unit Conversions (Length, Mass, Capacity)', 6, S.MEA, { pre: ['G6_DECIMALS_MUL', 'G6_DECIMALS_DIV'], w: 3, curricula: { cbc: cbc(6, 'Measurements', 'Length') } }),
   G6_CAPACITY: skill('G6_CAPACITY', 'Capacity (Conversions, Word Problems)', 6, S.MEA, { pre: ['G5_CAPACITY'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Capacity') } }),
   G6_MASS: skill('G6_MASS', 'Mass (Tonnes, Word Problems)', 6, S.MEA, { pre: ['G5_MASS'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Mass') } }),
   G6_TIME: skill('G6_TIME', 'Time (24-hour Clock, Timetables)', 6, S.MEA, { pre: ['G5_TIME'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Time') } }),
   G6_MONEY: skill('G6_MONEY', 'Money (Postal & Bank Charges, Bills)', 6, S.MEA, { pre: ['G5_MONEY'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Money') } }),
 
   // Statistics
-  G6_MEAN: skill('G6_MEAN', 'Finding the Mean', 6, S.STA, { pre: ['G5_ADDITION', 'G5_DIVISION'], w: 2 }),
-  G6_PIE_CHARTS: skill('G6_PIE_CHARTS', 'Reading Pie Charts', 6, S.STA, { pre: ['G6_PERCENTAGES_INTRO', 'G6_ANGLE_MEASURE'], w: 3 }),
-  G6_DATA_COLLECTION: skill('G6_DATA_COLLECTION', 'Collecting & Organizing Data', 6, S.STA, { pre: ['G5_TALLY'], w: 1 }),
+  G6_MEAN: skill('G6_MEAN', 'Finding the Mean', 6, S.STA, { pre: ['G5_ADDITION', 'G5_DIVISION'], w: 2, curricula: { cbc: cbc(8, 'Data Handling', 'Data Presentation and Interpretation') } }),
+  G6_PIE_CHARTS: skill('G6_PIE_CHARTS', 'Reading Pie Charts', 6, S.STA, { pre: ['G6_PERCENTAGES_INTRO', 'G6_ANGLE_MEASURE'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling') } }),
+  G6_DATA_COLLECTION: skill('G6_DATA_COLLECTION', 'Collecting & Organizing Data', 6, S.STA, { pre: ['G5_TALLY'], w: 1, curricula: { cbc: cbc(6, 'Data Handling', 'Bar Graphs') } }),
 };
 
 const GRADE_7 = {
@@ -294,7 +296,7 @@ const GRADE_7 = {
   G7_MONEY: skill('G7_MONEY', 'Money (Profit, Loss, Discount, Bills)', 7, S.MEA, { pre: ['G7_PERCENTAGES'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Money') } }),
 
   // Statistics
-  G7_MEAN_MEDIAN_MODE: skill('G7_MEAN_MEDIAN_MODE', 'Mean, Median, Mode', 7, S.STA, { pre: ['G6_MEAN'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling'), cambridge: cam(8, 'Ss', '8Ss.04') } }),
+  G7_MEAN_MEDIAN_MODE: skill('G7_MEAN_MEDIAN_MODE', 'Mean, Median, Mode', 7, S.STA, { pre: ['G6_MEAN'], w: 3, curricula: { cbc: cbc(8, 'Data Handling', 'Data Presentation and Interpretation'), cambridge: cam(8, 'Ss', '8Ss.04') } }),
   G7_DATA_REPRESENT: skill('G7_DATA_REPRESENT', 'Data Representation (Bar, Line, Pie)', 7, S.STA, { pre: ['G6_PIE_CHARTS', 'G7_PERCENTAGES'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling'), cambridge: cam(7, 'Ss') } }),
 
   // Ported: CBC Grade 7 sub-strands the KICD design names (Whole Numbers

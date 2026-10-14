@@ -143,3 +143,38 @@ Also noted, not a gap: `G5_TRIANGLES_INTRO` has content but **no** CBC tag, corr
 Geometry in the design is only 3.1 Lines, 3.2 Angles and 3.3 Three Dimension (3-D) Objects. Triangles
 enter the KICD sequence later, so the skill is enrichment at Grade 5 and must not be counted as
 Grade 5 coursework. Grades 1, 2, 3 and 6 still have no contract test.
+
+---
+
+## P1c — Grade 6 (opened 2026-10-14)
+
+Grade 6 had no contract test, and it showed: of the 16 sub-strands in
+`docs/curriculum-sources/KICD-Grade6-Mathematics-Curriculum-Design.pdf`, only 8 had a skill
+tagged, and 28 native Grade 6 skills carried no CBC tag at all. Untagged means "in scope at the
+native grade", so a CBC Grade 6 learner was being swept on integers, ratio and the mean — all
+Grade 8 in the design — and could not be asked a Grade 6 division question, because none existed.
+
+Done:
+
+- All 28 tagged from the design text, not from their names. Fifteen are Grade 6 content; eight
+  the design puts in **Grade 7** (multiplying and dividing fractions and decimals, pie charts,
+  volume of cuboids, perimeter, simple equations); four in **Grade 8** (integers, ratio, the
+  mean); symmetry appears in none of Grades 4-8 and is enrichment.
+- `G7_MEAN_MEDIAN_MODE` moved from Grade 7 to Grade 8: the Grade 7 design never mentions mean,
+  median or mode; the Grade 8 design has them throughout.
+- `G6_MULTIPLICATION` (4-digit × 2-digit) and `G6_DIVISION` (up to 4 digits by up to 3) authored.
+  1.2 Multiplication had only a number-patterns skill behind it and 1.3 Division had nothing.
+- Grade 6 is under the contract test: every sub-strand covered, nothing stray tagged.
+
+Still open — depth, not coverage. The thin-coverage rule (≥12 lessons needs ≥2 skills) is not yet
+asserted for Grade 6, because three sub-strands would fail it:
+
+| Sub-strand | Lessons | Skills |
+|---|---|---|
+| Decimals | 12 | 1 (`G6_FRACTIONS_DECIMALS`) |
+| Length | 14 | 1 (`G6_UNIT_CONVERSIONS`) |
+| Mass | 14 | 1 (`G6_MASS`) |
+
+The design's own outcome lists say what to write: Decimals 1.5 adds and subtracts to four decimal
+places; Length 2.1 introduces the millimetre and the circumference of a circle; Mass 2.4 works in
+tonnes. Add `6` to the thin-coverage loop in `tests/curriculum.test.mjs` once they exist.

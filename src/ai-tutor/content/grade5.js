@@ -203,14 +203,16 @@ const DIV_STORIES = [
 ];
 
 /** Long division of a 3-digit dividend by a 2-digit divisor, exact. */
-function buildTwoDigitDiv({ dMin, dMax, qMin, qMax, story = 0.3 }) {
+// `totalMin`/`totalMax` bound the dividend: 3-digit by default (Grade 5); the
+// Grade 6 design asks for "up to a 4-digit number by up to a 3-digit number".
+function buildTwoDigitDiv({ dMin, dMax, qMin, qMax, story = 0.3, totalMin = 100, totalMax = 999 }) {
   return () => {
     let d, q, total;
     for (let i = 0; ; i++) {
       d = randInt(dMin, dMax);
       q = randInt(qMin, qMax);
       total = d * q;
-      if ((total >= 100 && total <= 999 && q !== d) || i > 400) break;
+      if ((total >= totalMin && total <= totalMax && q !== d) || i > 400) break;
     }
     const asStory = Math.random() < story;
     const question = asStory ? pick(DIV_STORIES)(total, d) : `${total} ÷ ${d} = ?`;
@@ -1703,6 +1705,19 @@ export const GRADE5_CONTENT = {
                         withWorkedExample(buildTwoDigitDiv({ dMin: 11, dMax: 20, qMin: 11, qMax: 49 })),
                         withWorkedExample(buildTwoDigitDiv({ dMin: 21, dMax: 45, qMin: 11, qMax: 40 })),
                         withWorkedExample(buildTwoDigitDivRemainder({ dMin: 12, dMax: 30, qMin: 11, qMax: 30 })),
+                      ]),
+
+  // ── Grade 6 rungs of the same two ladders ───────────────────────────────
+  // KICD Grade 6, 1.2 and 1.3. Neither sub-strand had a skill: Multiplication
+  // was represented only by a number-patterns skill, and Division by nothing at
+  // all, so a Grade 6 check could not ask a Grade 6 long-division question.
+  G6_MULTIPLICATION:  withKPs([
+                        withWorkedExample(buildLongMul({ minA: 1012, maxA: 4999, twoDigitB: true, minB: 12, maxB: 39 })),
+                        withWorkedExample(buildLongMul({ minA: 1012, maxA: 9999, twoDigitB: true, minB: 42, maxB: 99 })),
+                      ]),
+  G6_DIVISION:        withKPs([
+                        withWorkedExample(buildTwoDigitDiv({ dMin: 12, dMax: 99, qMin: 21, qMax: 99, totalMin: 1000, totalMax: 9999 })),
+                        withWorkedExample(buildTwoDigitDiv({ dMin: 101, dMax: 250, qMin: 11, qMax: 49, totalMin: 1000, totalMax: 9999 })),
                       ]),
 
   // ── Numbers: factors, multiples, divisibility, LCM & HCF ────────────────
