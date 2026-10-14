@@ -243,6 +243,8 @@ const sit = (declared, frontier) => {
   while (asked.length < MAX_QUESTIONS) {
     const q = selectQuestion(asked, declared, pool);
     if (!q) break;
+    // The final ask on the headline miss: this learner answers it the same way.
+    if (q.settle) { const r = asked.find(a => a.id === q.id); r.settled = true; continue; }
     // The record shape the app writes: sub-strand, and for a follow-up the
     // sub-strand whose miss it is chasing.
     asked.push({ id: q.id, grade: q.grade, strand: q.strand, unit: q.unit, probeFor: q.probeFor, correct: q.grade <= frontier });

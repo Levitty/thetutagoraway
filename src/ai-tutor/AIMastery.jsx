@@ -8,8 +8,8 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
 import { prereqsMet, getStatus, getRecommendedPath, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
-import { propagateCredit, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
-import { selectQuestion, isComplete as placementComplete, computePlacement, buildPlacementPool, sweepRemaining, roomForAnother, worthConfirming, explainPlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
+import { propagateCredit, withdrawMiss, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
+import { selectQuestion, isComplete as placementComplete, computePlacement, buildPlacementPool, sweepRemaining, roomForAnother, worthConfirming, nextToSettle, explainPlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
 import { HorebBot } from './HorebBot.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { TeachingVisual } from './TeachingVisual.jsx';
@@ -642,9 +642,21 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
         newBalances = balances;
         newRecord = record.map(r => r.id === skill.id ? { ...r, confirmed: true } : r);
       }
+    } else if (record.some(r => r.id === skill.id)) {
+      // A final ask on the missing step about to be named (placement.js,
+      // nextToSettle). Right now: the miss was a slip twice over, and its
+      // evidence is taken back. Wrong again: the gap stands, and is said.
+      const prior = record.find(r => r.id === skill.id);
+      if (correct) {
+        newBalances = propagateCredit(withdrawMiss(balances, skill.id, prior.w ?? 1, ctx), skill.id, true, timeWeight, ctx);
+        newRecord = record.map(r => r.id === skill.id ? { ...r, correct: true, settled: true } : r);
+      } else {
+        newBalances = balances;
+        newRecord = record.map(r => r.id === skill.id ? { ...r, settled: true, ...(skip ? { skipped: true } : {}) } : r);
+      }
     } else {
       newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
-      newRecord = [...record, { id: skill.id, grade: skill.grade, strand: skill.strand, unit: skill.unit, probeFor: skill.probeFor, correct, ...(skip ? { skipped: true } : {}) }];
+      newRecord = [...record, { id: skill.id, grade: skill.grade, strand: skill.strand, unit: skill.unit, probeFor: skill.probeFor, correct, w: timeWeight, ...(skip ? { skipped: true } : {}) }];
       // "I haven't learned this yet" is already a clear signal: no re-ask.
       if (!correct && !skip) newPending = { id: skill.id, balances, record };
     }
@@ -671,7 +683,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // unconfirmed slip — the case that, in simulation, most often told a
     // parent about a step their child actually had.
     const confirmNext = !!newPending && worthConfirming(newRecord) && newAsked + sweepRemaining(newRecord, declared, pool) < DIAG_MAX;
-    const nextSkill = confirmNext ? skill : roomForAnother(newAsked) ? selectQuestion(newRecord, declared, pool, newBalances) : null;
+    // The final ask (no confirm follows it) may use the slot held back for one.
+    const nextSkill = confirmNext ? skill
+      : roomForAnother(newAsked) ? selectQuestion(newRecord, declared, pool, newBalances)
+      : newAsked < DIAG_MAX ? nextToSettle(newRecord, pool) : null;
     const isLast = newAsked >= DIAG_MAX || !nextSkill
       || (!confirmNext && placementComplete(newRecord, declared, pool));
 
@@ -1266,7 +1281,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
           </p>
 
           <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-4 text-sm text-slate-600 space-y-2.5">
-            <p>Around 15–20 quick questions — we stop the moment I know your start.</p>
+            <p>One quick question on each topic of your grade, then a few more wherever something needs a closer look. Usually 20–40 in all.</p>
             <p>Meet something you haven’t learned? Tap <strong className="text-slate-800">“I haven’t learned this yet”</strong> — that’s a helpful answer, not a wrong one.</p>
             <p>Whatever we find, it’s only a starting line. Everything after it is growth.</p>
           </div>

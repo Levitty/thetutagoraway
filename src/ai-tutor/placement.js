@@ -35,7 +35,7 @@ import { gradeOf, strandOf, isEnrichment, NATIVE } from './curricula.js';
 
 export const CLEAR = 0.65;          // share of the declared sweep needed to clear the grade
 export const STRETCH_GATE = 0.9;    // share of the sweep needed before a stretch is offered
-export const MAX_QUESTIONS = 30;    // hard ceiling on the whole test, confirmations included
+export const MAX_QUESTIONS = 40;    // hard ceiling on the whole test, confirmations included
 export const STRETCH_PROBE = 5;     // stretch questions, one per strand of the grade above
 export const MAX_PROBE_DEPTH = 3;   // how many rungs below a miss a thread may follow
 
@@ -59,6 +59,7 @@ export const buildPlacementPool = (skills, curriculum = NATIVE) =>
         // not been mapped onto still gets a balanced (if coarser) sweep.
         unit: (tag && tag.substrand) || strand,
         critical: !!s.critical,
+        weight: s.weight || 0,
         prerequisites: s.prerequisites || [],
       };
     })
@@ -239,7 +240,43 @@ export const selectQuestion = (asked, declared, pool, balances = {}) => {
       }
     }
   }
-  return null;
+
+  // 4. Settle the headline before it is said. See nextToSettle.
+  const settle = nextToSettle(asked, pool);
+  return settle ? { ...settle, settle: true } : null;
+};
+
+/**
+ * The missing step the result page is about to name, if it has not yet been
+ * asked a final time. Every miss is already re-asked once; this is a third ask
+ * for the ONE miss that becomes the headline.
+ *
+ * Why: with every miss confirmed, all the false alarms left in simulation were
+ * the same thing — a child slipping twice on a skill they know. That is rare
+ * per question (about 1 in 300), but a check asks thirty, and the result names
+ * the lowest miss it finds, so a double slip below the child's real gap became
+ * the headline. A third ask costs one question; a real gap still answers wrong.
+ * Right this time and the miss is withdrawn, and the next candidate is settled.
+ *
+ * The candidate is ranked the way the result page ranks it (missingStep.js): a
+ * root miss — nothing wrong beneath it in the record — lowest grade first, then
+ * critical, then weight. "I haven't learned this yet" is not re-asked: the
+ * child has said so.
+ */
+export const nextToSettle = (asked, pool) => {
+  const byId = new Map(pool.map(s => [s.id, s]));
+  const wrong = asked.filter(a => !a.correct);
+  const wrongIds = new Set(wrong.map(a => a.id));
+  const roots = wrong.filter(a => !ancestors(byId, a.id).some(p => wrongIds.has(p.id)));
+  if (!roots.length) return null;
+  const rank = (a) => byId.get(a.id) || a;
+  const head = [...roots].sort((a, b) =>
+    a.grade - b.grade ||
+    (rank(b).critical ? 1 : 0) - (rank(a).critical ? 1 : 0) ||
+    (rank(b).weight || 0) - (rank(a).weight || 0) ||
+    String(a.id).localeCompare(String(b.id)))[0];
+  if (head.skipped || head.settled || !byId.has(head.id)) return null;
+  return { ...byId.get(head.id), probeFor: head.probeFor };
 };
 
 /**
@@ -268,6 +305,43 @@ export const isComplete = (asked, declared, pool) =>
 // be two grades down, and a gap in what was ASKED is not evidence of anything.
 // If nothing below holds, the learner sits one under the lowest grade asked.
 // ---------------------------------------------------------------------------
+// One missing step low down can knock over half a grade. A Grade 5 child who
+// never secured Grade 3 multiplication misses Grade 5 multiplication, division,
+// area and money — and the follow-ups under each of those all bottom out on
+// that same Grade 3 skill. Counted topic by topic that reads as "a grade
+// behind", and in simulation it placed 29% of such on-grade children more than
+// a grade low, giving them a year of work they can already do. It is one gap,
+// and the missing step on the result page is where practice starts anyway.
+//
+// So: find the ROOT failures — wrong answers with nothing wrong beneath them
+// in the record. If at most MAX_SHARED_ROOTS roots, all below the declared
+// grade, account for the sweep's misses (each miss stands on one of them), and
+// the sweep clears once those misses are set aside, the child is placed on
+// their grade. A child genuinely a grade behind does not look like this: their
+// follow-ups one grade down come back right, so each miss is its own root at
+// the declared grade, and many of them.
+export const MAX_SHARED_ROOTS = 2;
+const singleRootGap = (asked, sweep, start, pool) => {
+  const byId = new Map(pool.map(s => [s.id, s]));
+  const wrongIds = new Set(asked.filter(a => !a.correct).map(a => a.id));
+  if (!wrongIds.size) return false;
+  const anc = new Map();
+  const ancOf = (id) => {
+    if (!anc.has(id)) anc.set(id, new Set(ancestors(byId, id).map(s => s.id)));
+    return anc.get(id);
+  };
+  const roots = [...wrongIds].filter(id => ![...ancOf(id)].some(p => wrongIds.has(p)));
+  if (!roots.length || roots.length > MAX_SHARED_ROOTS) return false;
+  if (roots.some(id => (byId.get(id)?.grade ?? start) >= start)) return false;
+  // Every root must be shared — standing under at least two sweep misses — so
+  // one stray slip low down cannot excuse a grade's worth of misses.
+  const misses = sweep.filter(a => !a.correct);
+  const under = (root) => misses.filter(m => ancOf(m.id).has(root)).length;
+  if (roots.some(r => under(r) < 2)) return false;
+  const explained = misses.filter(m => roots.some(r => ancOf(m.id).has(r))).length;
+  return (sweep.length - misses.length + explained) / sweep.length >= CLEAR;
+};
+
 export const computePlacement = (asked, declared, pool) => {
   const start = clampGrade(pool, declared);
   if (start == null) return declared ?? null;
@@ -306,6 +380,7 @@ export const computePlacement = (asked, declared, pool) => {
   // a child missing most of the sweep is exactly the child whose later threads
   // the cap cuts off. The sweep was not cleared, so the result is at most one
   // grade below it whatever the votes say.
+  if (singleRootGap(asked, sweep, start, pool)) return start;
   const holds = [];
   for (const rec of sweep) {
     if (rec.correct) { holds.push(start); continue; }
@@ -322,24 +397,16 @@ export const computePlacement = (asked, declared, pool) => {
 };
 
 /**
- * Whether a wrong answer is worth re-asking before it counts as a gap.
+ * Whether a wrong answer is worth re-asking before it counts as a gap: always.
  *
- * The re-ask protects a child who knows their grade from being told about a
- * gap they do not have because of one careless slip. For a SWEEP question, a
- * child already missing more than a third of what they have been asked is not
- * slipping, and the miss is followed down regardless; the re-ask would spend a
- * question that could follow another thread to where it holds.
+ * An earlier version skipped the re-ask on SWEEP questions once a child had
+ * missed more than a third of the check, to save questions for follow-ups. In
+ * simulation that was half of all false alarms: a single careless slip on a
+ * topic the child knew went unconfirmed and was named as their missing step.
+ * The check is allowed to run longer; a parent told about a gap their child
+ * does not have is the worse outcome.
  */
-export const worthConfirming = (record) => {
-  // A wrong FOLLOW-UP is always re-asked. Follow-ups sit below the declared
-  // grade, and the result names the LOWEST gap it finds, so a slip there
-  // becomes the headline. Skipping their re-ask for struggling children took
-  // the false-alarm rate in simulation from 2% to 13%.
-  const last = record[record.length - 1];
-  if (last?.probeFor) return true;
-  if (record.length < 4) return true;
-  return record.filter(r => !r.correct).length / record.length <= 1 / 3;
-};
+export const worthConfirming = () => true;
 
 // A plain-language account of what the test concluded, for the result screen.
 export const explainPlacement = (asked, declared, pool) => {
@@ -370,6 +437,6 @@ export const explainPlacement = (asked, declared, pool) => {
 
 export default {
   CLEAR, STRETCH_GATE, MAX_QUESTIONS, STRETCH_PROBE, MAX_PROBE_DEPTH,
-  buildPlacementPool, gradesIn, unitsAt, gradeAccuracy, sweepRemaining, roomForAnother, worthConfirming,
+  buildPlacementPool, gradesIn, unitsAt, nextToSettle, gradeAccuracy, sweepRemaining, roomForAnother, worthConfirming,
   selectQuestion, isComplete, computePlacement, explainPlacement,
 };

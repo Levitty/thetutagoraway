@@ -26,7 +26,7 @@
 import { SKILLS, getPrerequisiteChain, getPostRequisiteChain, getPostRequisites } from '../src/ai-tutor/knowledgeGraph.js';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
-import { propagateCredit, processDiagnosticResults } from '../src/ai-tutor/diagnosticEngine.js';
+import { propagateCredit, withdrawMiss, processDiagnosticResults } from '../src/ai-tutor/diagnosticEngine.js';
 import { getRecommendedPath } from '../src/ai-tutor/adaptiveEngine.js';
 import { findMissingStep } from '../src/site/missingStep.js';
 import { pathToFileURL } from 'node:url';
@@ -171,6 +171,12 @@ function runCheck(child) {
         record = record.map(r => r.id === current.id ? { ...r, confirmed: true } : r);
       }
       pending = null;
+    } else if (record.some(r => r.id === current.id)) {
+      // Same as the app: the final ask on the missing step about to be named.
+      if (correct) {
+        balances = propagateCredit(withdrawMiss(balances, current.id, 1.0, ctx), current.id, true, 1.0, ctx);
+        record = record.map(r => r.id === current.id ? { ...r, correct: true, settled: true } : r);
+      } else record = record.map(r => r.id === current.id ? { ...r, settled: true } : r);
     } else {
       const before = { id: current.id, balances, record };
       balances = propagateCredit(balances, current.id, correct, 1.0, ctx);
@@ -181,7 +187,8 @@ function runCheck(child) {
       if (CONFIRM && !correct && !skip && room) { pending = before; continue; }
     }
     // Same as the app: hold the last slot back so a wrong answer can be confirmed.
-    current = !PL.roomForAnother || PL.roomForAnother(asked) ? PL.selectQuestion(record, declared, POOL, balances) : null;
+    current = !PL.roomForAnother || PL.roomForAnother(asked) ? PL.selectQuestion(record, declared, POOL, balances)
+      : PL.nextToSettle && asked < CAP ? PL.nextToSettle(record, POOL) : null;
   }
   const placementGrade = PL.computePlacement(record, declared, POOL);
   const progress = { declaredGrade: declared, placementGrade, diagnosed: true, skills: processDiagnosticResults(balances, ctx) };

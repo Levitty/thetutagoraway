@@ -15,7 +15,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { getNextToLearn, getEstimatedGradeLevel } from '../src/ai-tutor/adaptiveEngine.js';
 import { SKILLS, getPostRequisites, getPrerequisiteChain, getPostRequisiteChain } from '../src/ai-tutor/knowledgeGraph.js';
-import { selectQuestion, computePlacement, buildPlacementPool, roomForAnother, STRETCH_PROBE } from '../src/ai-tutor/placement.js';
+import { selectQuestion, computePlacement, buildPlacementPool, roomForAnother, nextToSettle, STRETCH_PROBE } from '../src/ai-tutor/placement.js';
 import { propagateCredit, processDiagnosticResults } from '../src/ai-tutor/diagnosticEngine.js';
 
 const TOP = 8;   // the recommended path only ever shows a handful
@@ -175,6 +175,8 @@ const sitCheck = (declared, knows) => {
   for (;;) {
     const q = selectQuestion(asked, declared, CBC_POOL);
     if (!q || !roomForAnother(asked.length)) break;
+    // The final ask on the headline miss: this child answers it the same way.
+    if (q.settle) { asked.find(a => a.id === q.id).settled = true; continue; }
     asked.push({ id: q.id, grade: q.grade, strand: q.strand, unit: q.unit, probeFor: q.probeFor, correct: knows(q) });
   }
   return asked;
@@ -214,4 +216,34 @@ test('the check never asks a topic the design leaves out of the grade', () => {
   // coursework, because untagged means "in scope at the native grade".
   const asked = sitCheck(5, () => true);
   assert.ok(!asked.some(a => a.id === 'G5_TRIANGLES_INTRO'), 'Grade 5 was asked about triangles');
+});
+
+test('one missing step low down is one gap, not a grade behind', () => {
+  // A Grade 5 child who never secured Grade 3 multiplication misses every Grade
+  // 5 topic built on it, and each follow-up bottoms out on the same skill.
+  // Counted topic by topic that read as "a grade behind"; it is one gap, and
+  // practice starts on it either way.
+  const blocked = new Set(['G3_MULTIPLY', ...getPostRequisiteChain('G3_MULTIPLY')]);
+  const asked = sitCheck(5, q => SKILLS[q.id].grade <= 5 && !blocked.has(q.id));
+  assert.ok(asked.some(a => a.id === 'G3_MULTIPLY' && !a.correct), 'the follow-ups should reach the gap itself');
+  assert.equal(computePlacement(asked, 5, CBC_POOL), 5);
+});
+
+test('a child two grades behind is not excused as a single gap', () => {
+  const asked = sitCheck(5, q => SKILLS[q.id].grade <= 3);
+  assert.ok(computePlacement(asked, 5, CBC_POOL) <= 4);
+});
+
+test('the missing step is asked a final time before it is named', () => {
+  // A slip on a skill the child knows, made twice: the third ask withdraws it.
+  const blocked = new Set(['G3_MULTIPLY', ...getPostRequisiteChain('G3_MULTIPLY')]);
+  const asked = sitCheck(5, q => SKILLS[q.id].grade <= 5 && !blocked.has(q.id));
+  const head = asked.find(a => a.id === 'G3_MULTIPLY');
+  assert.ok(head?.settled, 'the gap about to be named was not asked a final time');
+  const slip = [{ id: 'G4_MULTIPLY', grade: 4, strand: 'Numbers', unit: 'Multiplication', probeFor: 'Multiplication', correct: false }];
+  const pool = buildPlacementPool(SKILLS, 'cbc');
+  const q = nextToSettle(slip, pool);
+  assert.equal(q?.id, 'G4_MULTIPLY');
+  assert.equal(nextToSettle([{ ...slip[0], settled: true }], pool), null, 'asked once more, then the verdict stands');
+  assert.equal(nextToSettle([{ ...slip[0], skipped: true }], pool), null, '"I haven\'t learned this yet" is not re-asked');
 });

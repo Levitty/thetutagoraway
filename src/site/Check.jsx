@@ -68,7 +68,7 @@ export function CheckStart({ initialGrade, onStart, onResume, onLeave, onSeeResu
               <button type="button" className="btn" onClick={canResume ? onResume : onSeeResult}>{canResume ? 'Continue' : 'See result'} <SiteIcon name="arrow" /></button>
             </div>
           )}
-          <div className="kicker">{canResume || hasResult ? 'Or start a new check' : 'Free · about 10 minutes · no account'}</div>
+          <div className="kicker">{canResume || hasResult ? 'Or start a new check' : 'Free · about 20 minutes · no account'}</div>
           <h1 className="display" style={{ marginTop: 10 }}>Let's find the step.</h1>
           <p className="lead">Questions start easy and adapt to each answer. There's no score and no pass or fail. We're only looking for where to start.</p>
           <label className="field"><span>Child's first name</span>
@@ -114,7 +114,7 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user, save
         <FlowBar label="Free maths check" onLeave={onLeave} />
         <div className="stage"><div className="card">
           <h1 className="display">{saved ? `No check for ${check.name} yet.` : 'No check on this device yet.'}</h1>
-          <p className="lead">{saved ? `It runs at the start of ${check.name}'s first practice and takes about ten minutes. The plan appears here after it.` : "It takes about ten minutes and it's free."}</p>
+          <p className="lead">{saved ? `It runs at the start of ${check.name}'s first practice and takes about twenty minutes. The plan appears here after it.` : "It takes about twenty minutes and it's free."}</p>
           <button type="button" className="btn" onClick={saved ? onStart : onRetake}>{saved ? `Start ${check.name}'s check` : 'Start the free check'} <SiteIcon name="arrow" /></button>
         </div></div>
       </div>
@@ -134,7 +134,7 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user, save
           <h1 className="display" style={{ marginTop: 10 }}>{who} skipped most of the questions.</h1>
           <p className="lead">That's okay, and it happens a lot. It just means we can't tell yet where {check?.name || 'they'} should start. They tapped "I haven't learned this yet" on {st.skipped} of {st.answered} questions.</p>
           <ol className="tips">
-            <li>Sit next to {check?.name || 'them'} for ten minutes.</li>
+            <li>Sit next to {check?.name || 'them'} while they do it.</li>
             <li>Let them try each question, even if they're unsure. A wrong answer helps us too.</li>
             <li>Only tap "I haven't learned this yet" when it's truly new.</li>
           </ol>

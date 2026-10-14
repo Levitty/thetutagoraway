@@ -126,7 +126,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
           <div>
             <div className="kicker">How it works</div>
             <h2 className="display" style={{ marginTop: 10 }}>Find the step. Fix the step. Move on.</h2>
-            <p className="sub">Most children who "hate maths" are stuck on one skill from years back. The check finds it in ten minutes, and the daily plan starts right there.</p>
+            <p className="sub">Most children who "hate maths" are stuck on one skill from years back. The check asks about every topic in their grade to find it, and the daily plan starts right there.</p>
             <button type="button" className="btn" onClick={() => onStartCheck(grade)}>Start free check <SiteIcon name="arrow" /></button>
           </div>
           <figure className="art">
@@ -136,7 +136,7 @@ export default function Home({ onNavigate, onSignIn, onStartCheck, user, tutors 
           </figure>
         </div>
         <div className="steps">
-          <div className="st"><div className="n">01</div><h3>The free check</h3><p>Ten minutes of questions that adapt as your child answers. It starts easy, so the first answers are right.</p><span className="tag">Free · no account</span></div>
+          <div className="st"><div className="n">01</div><h3>The free check</h3><p>About twenty minutes: a question on every topic of their grade, then follow-ups wherever something is missed.</p><span className="tag">Free · no account</span></div>
           <div className="st"><div className="n">02</div><h3>15 minutes a day</h3><p>A daily plan in maths and writing: reviews first, then one new skill. It has an end, so your child knows when they're done.</p><span className="tag">{live ? 'First week free' : 'Free while we launch'}</span></div>
           <div className="st"><div className="n">03</div><h3>A tutor for the stuck part</h3><p>If one skill won't click, book a live lesson with a checked tutor for exactly that skill.</p><span className="tag">Pay with M-Pesa</span></div>
         </div>
