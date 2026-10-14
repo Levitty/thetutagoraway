@@ -693,7 +693,7 @@ function buildUseOfLetters() {
         misconceptions: [
           { when: `${total}`, feedback: `${total} is the total the two sides add up to, not the missing number — take ${known} away from it.` },
           { when: `${total + known}`, feedback: `${known} was added again. To undo an addition you take the same amount away.` },
-        ], verify: { kind: 'fraction', value: answer } };
+        ], verify: { kind: 'number', value: answer } };
     }
     const each = randInt(2, 9), groups = randInt(2, 9);
     const value = each * groups;
@@ -712,7 +712,7 @@ function buildUseOfLetters() {
       misconceptions: [
         { when: `${value}`, feedback: `${value} is the answer to the multiplication, not the number ${letter} stands for — share it into ${groups} equal groups.` },
         { when: `${value - groups}`, feedback: `${groups} × ${letter} is a multiplication, so undo it by dividing, not by subtracting.` },
-      ], verify: { kind: 'fraction', value: each } };
+      ], verify: { kind: 'number', value: each } };
   };
 }
 
