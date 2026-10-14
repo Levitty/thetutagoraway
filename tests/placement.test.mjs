@@ -14,8 +14,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { getNextToLearn, getEstimatedGradeLevel } from '../src/ai-tutor/adaptiveEngine.js';
-import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
-import { selectQuestion, MAX_QUESTIONS } from '../src/ai-tutor/placement.js';
+import { SKILLS, getPostRequisites, getPrerequisiteChain, getPostRequisiteChain } from '../src/ai-tutor/knowledgeGraph.js';
+import { selectQuestion, computePlacement, buildPlacementPool, roomForAnother, STRETCH_PROBE } from '../src/ai-tutor/placement.js';
+import { propagateCredit, processDiagnosticResults } from '../src/ai-tutor/diagnosticEngine.js';
 
 const TOP = 8;   // the recommended path only ever shows a handful
 const top = (progress) => getNextToLearn(progress, null).slice(0, TOP);
@@ -138,27 +139,79 @@ test('the result page does not certify a grade it never covered', () => {
     'the headline claims a grade is "solid" — the sweep samples one skill per strand and cannot support that');
 });
 
-test('the result page states how much it actually asked', () => {
+test('the result page states how much it actually asked, counted from the questions', () => {
   // The scope sentence is what keeps the claim honest, so it is load-bearing.
-  assert.ok(/askedCount/.test(checkSrc), 'the page must count the questions it asked');
-  assert.ok(/strandsChecked/.test(checkSrc), 'the page must count the areas it covered');
-  assert.ok(/not a full report/i.test(checkSrc),
+  const code = checkSrc.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '');
+  assert.ok(/diagStats/.test(code), 'the page must read the counts the check saved');
+  assert.ok(/not a full report/i.test(code),
     'the page must say plainly that the check is a starting point rather than a full report');
+  // An earlier version counted the skills the diagnostic FLAGGED. Credit
+  // propagation flags about five per question asked, so "Based on 26
+  // questions" appeared after five.
+  assert.ok(!/fromDiagnostic/.test(code), 'the question count must not come from flagged skills');
 });
 
-test('a placement sweep really does leave most of the graph unasked', () => {
-  // The number behind the wording above: if a future change made the sweep
-  // broad enough to justify a stronger claim, this test should be revisited
-  // deliberately rather than the wording quietly loosened.
-  const pool = Object.values(SKILLS).map(s => ({ id: s.id, grade: s.grade, strand: s.strand }));
+test('the diagnostic flags far more skills than it asks — which is why the count comes from the record', () => {
+  // The fact the test above depends on, measured rather than asserted in a comment.
+  const ctx = { skills: SKILLS, getPostReqs: getPostRequisites, getPreChain: id => getPrerequisiteChain(id), getPostChain: id => getPostRequisiteChain(id) };
+  let b = {};
+  const asked = ['G5_ADDITION', 'G5_FRACTIONS_INTRO', 'G5_LENGTH', 'G5_ANGLES_INTRO', 'G5_TALLY'];
+  for (const id of asked) b = propagateCredit(b, id, true, 1, ctx);
+  const flagged = Object.values(processDiagnosticResults(b, ctx)).filter(v => v.fromDiagnostic).length;
+  assert.ok(flagged > asked.length * 2, `5 questions flagged only ${flagged} skills; if that changed, revisit the result page`);
+});
+
+// ---------------------------------------------------------------------------
+// ONE QUESTION ON EVERY TOPIC OF THE LEARNER'S GRADE
+//
+// The sweep that preceded this asked one question per STRAND: five questions
+// against 101 skills. Simulated with children whose gaps can sit anywhere, only
+// 38% of Grade 4-5 children with a gap were asked anything in the gap's own
+// sub-strand. One question per sub-strand raised that to about 91%.
+// ---------------------------------------------------------------------------
+const CBC_POOL = buildPlacementPool(SKILLS, 'cbc');
+const sitCheck = (declared, knows) => {
   const asked = [];
-  for (let i = 0; i < MAX_QUESTIONS; i++) {
-    const q = selectQuestion(asked, 5, pool, {});
-    if (!q) break;
-    asked.push({ id: q.id, grade: q.grade, strand: q.strand, correct: true });
+  for (;;) {
+    const q = selectQuestion(asked, declared, CBC_POOL);
+    if (!q || !roomForAnother(asked.length)) break;
+    asked.push({ id: q.id, grade: q.grade, strand: q.strand, unit: q.unit, probeFor: q.probeFor, correct: knows(q) });
   }
-  const belowOrAt = Object.values(SKILLS).filter(s => s.grade <= 5).length;
-  const share = asked.length / belowOrAt;
-  assert.ok(share < 0.25,
-    `the sweep now covers ${(share * 100).toFixed(0)}% of Grades 1-5; if that is deliberate, the result page may be able to claim more`);
+  return asked;
+};
+
+for (const grade of [4, 5]) {
+  test(`a Grade ${grade} check asks about every topic in the Grade ${grade} syllabus`, () => {
+    const designTopics = new Set(Object.values(SKILLS)
+      .filter(s => s.curricula?.cbc?.grade === grade).map(s => s.curricula.cbc.substrand));
+    const asked = sitCheck(grade, () => true);
+    const swept = new Set(asked.filter(a => a.grade === grade && !a.probeFor).map(a => a.unit));
+    const missing = [...designTopics].filter(t => !swept.has(t));
+    assert.deepEqual(missing, [], `Grade ${grade} topics never asked: ${missing.join(', ')}`);
+    assert.equal(swept.size, designTopics.size, 'exactly one sweep question per topic');
+  });
+}
+
+test('a child who knows their grade is not kept long', () => {
+  // The sweep, plus at most a short stretch above it.
+  const asked = sitCheck(5, q => SKILLS[q.id].grade <= 5);
+  assert.ok(asked.length <= 19 + STRETCH_PROBE, `asked ${asked.length}`);
+  assert.equal(computePlacement(asked, 5, CBC_POOL), 5);
+});
+
+test('every miss is followed down before the check ends', () => {
+  // A Grade 5 child working at Grade 4 misses the sweep, and each thread should
+  // find Grade 4 holding where the budget allows.
+  const asked = sitCheck(5, q => SKILLS[q.id].grade <= 4);
+  const followUps = asked.filter(a => a.probeFor);
+  assert.ok(followUps.length >= 5, `only ${followUps.length} follow-ups`);
+  assert.ok(followUps.every(a => a.grade < 5), 'a follow-up is always below the miss it chases');
+  assert.equal(computePlacement(asked, 5, CBC_POOL), 4);
+});
+
+test('the check never asks a topic the design leaves out of the grade', () => {
+  // Triangles are enrichment at Grade 5. Untagged, they were swept as Grade 5
+  // coursework, because untagged means "in scope at the native grade".
+  const asked = sitCheck(5, () => true);
+  assert.ok(!asked.some(a => a.id === 'G5_TRIANGLES_INTRO'), 'Grade 5 was asked about triangles');
 });

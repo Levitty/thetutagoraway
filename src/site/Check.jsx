@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { loadLocalProgress } from '../ai-tutor/progressStore.js';
 import { findMissingStep, skillLabel } from './missingStep.js';
-import { SKILLS } from '../ai-tutor/knowledgeGraph.js';
 import { SiteIcon, Logo } from './ui.jsx';
 
 // The free check runs HOREB as a guest: progress lives on this device only,
@@ -152,25 +151,27 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user, save
   const solid = r.solid.map(id => skillLabel(id)).filter(Boolean);
   const next = r.next.map(id => skillLabel(id)).filter(Boolean);
   const others = r.otherGaps.map(id => skillLabel(id)).filter(Boolean);
-  // What the check actually asked. The placement sweep takes ONE skill per
-  // strand at a grade — five questions against the hundred-odd skills of
-  // Grades 1-5 — which is enough to find a starting point and nowhere near
-  // enough to certify a year.
+  // What the check actually covered, from the counts the check itself saved.
   //
-  // This used to read "solid up to Grade 5" on the strength of a single passed
-  // Grade 5 answer, which a parent reads as a verdict on the whole grade. It
-  // was not one. The headline now states what was checked; the claim about
-  // everything that was not checked is gone.
-  const diagnosed = Object.entries(progress.skills || {}).filter(([, v]) => v?.fromDiagnostic);
-  const askedCount = diagnosed.length;
-  const strandsChecked = new Set(diagnosed.map(([id]) => SKILLS[id]?.strand).filter(Boolean)).size;
+  // The check now asks one question on every topic (sub-strand) of the
+  // learner's grade, then follows each miss down to where it holds. That is a
+  // real sweep of the syllabus — and still one question per topic, so it finds
+  // a starting point rather than certifying a year. The headline says what
+  // happened; this line says how much was looked at.
+  //
+  // It must NOT be counted from the skills the diagnostic flagged: credit
+  // propagation flags about five skills per question asked, and an earlier
+  // version of this line counted those, overstating the questions fivefold.
+  const ds = progress.diagStats || {};
   const headline = r.allClear
     ? `${name} answered everything we asked. Here's the next step.`
     : `Here's the first gap we found for ${name}.`;
-  // One honest sentence about the scope, so the result is read for what it is.
-  const scopeLine = askedCount
-    ? `Based on ${askedCount} question${askedCount === 1 ? '' : 's'} across ${strandsChecked} area${strandsChecked === 1 ? '' : 's'} — enough to find a starting point, not a full report. The daily practice keeps checking as ${name} goes.`
-    : null;
+  const coverage = ds.subStrandsInGrade && ds.sweptGrade
+    ? `: ${ds.subStrandsSwept === ds.subStrandsInGrade ? 'one on each of the' : `one on ${ds.subStrandsSwept} of the`} ${ds.subStrandsInGrade} topics in the Grade ${ds.sweptGrade} syllabus, then follow-ups wherever something was missed`
+    : '';
+  const scopeLine = ds.questions
+    ? `Based on ${ds.questions} question${ds.questions === 1 ? '' : 's'}${coverage}. That finds a starting point, not a full report — the daily practice keeps checking as ${name} goes.`
+    : `This check finds a starting point, not a full report. The daily practice keeps checking as ${name} goes.`;
 
   return (
     <div className="tg">
