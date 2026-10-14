@@ -12,6 +12,7 @@ import { propagateCredit, getTimeWeight, processDiagnosticResults } from './diag
 import { selectQuestion, isComplete as placementComplete, computePlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
 import { HorebBot } from './HorebBot.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
+import { TeachingVisual } from './TeachingVisual.jsx';
 import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
 import { defaultProgress, loadProgress, loadLocalProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
@@ -1479,6 +1480,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                     <div className="text-[22px] font-bold text-slate-900 mb-5 leading-snug">
                       <TermTooltip text={we.problem} definitions={we.definitions} />
                     </div>
+                    {we.model && <TeachingVisual model={we.model} className="mb-4" />}
                     {(() => { const am = parseAreaProblem(we.problem); return am ? <AreaModel a={am.a} b={am.b} /> : null; })()}
                     {!parseAreaProblem(we.problem) && <div className="space-y-3">
                       {we.steps.map((step, i) => (
@@ -1559,6 +1561,20 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                       </li>
                     ))}
                   </ol>
+                )}
+
+                {/* The board picture (dual coding): the same idea in words and in
+                    a drawing, side by side. It scaffolds the thinking without
+                    giving the answer away — a fraction bar, a number line jump,
+                    a column sum with its carries. An interactive visual answers
+                    the question instead, so the two never appear together. */}
+                {problem.model && !problem.visual && (
+                  <TeachingVisual
+                    model={problem.model}
+                    className="mb-5"
+                    interactive={modalityLevel === 'concrete' && !feedback && !interleave}
+                    onEvent={(e) => { if (e === 'solved') setHintLevel(h => Math.max(h, 1)); }}
+                  />
                 )}
 
                 {/* Bar model: hidden on the first look so the child reads and
@@ -1767,6 +1783,17 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                     return (
                       <div className="mt-3 pt-3 border-t border-[#f2cdc2]">
                         <span className="text-sm text-slate-500 mb-2 block">Here's the full working, step by step:</span>
+                        {(() => {
+                          // The picture from the LAST step that carries one: the
+                          // finished column sum, the completed bar. Shown only for
+                          // the learner's own problem, never a stand-in example.
+                          const rich = problem.solution?.steps;
+                          if (!Array.isArray(rich)) return null;
+                          for (let i = rich.length - 1; i >= 0; i--) {
+                            if (rich[i]?.model) return <TeachingVisual model={rich[i].model} className="mb-3" />;
+                          }
+                          return null;
+                        })()}
                         <div className="space-y-1.5">
                           {steps.map((step, i) => (
                             <div key={i} className="flex gap-2 text-sm">
