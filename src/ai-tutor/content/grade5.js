@@ -1751,19 +1751,28 @@ export const GRADE5_CONTENT = {
 
   // ── Measurement ─────────────────────────────────────────────────────────
   // Grade 4 converts between units; Grade 5 does arithmetic with them.
+  // Each of these three sub-strands runs to TWELVE lessons in the KICD design,
+  // and the design splits each one the same way: outcomes (a)-(e) are the unit
+  // and converting between units, (f)-(i) are the four operations on it. One
+  // skill carrying all of that is twelve lessons behind a single node, so the
+  // learner's progress on "can you convert litres to millilitres" and "can you
+  // subtract 1 l 950 ml from 4 l 107 ml" was a single number. Split on the
+  // design's own seam, each half is tracked, reviewed and remediated on its own.
   G5_LENGTH:          withKPs([
                         withWorkedExample(buildMeasureMixedUnits({ kind: 'length' })),
-                        withWorkedExample(buildMeasureArithmetic({ kind: 'length', ops: ['add', 'sub'] })),
-                        withWorkedExample(buildMeasureArithmetic({ kind: 'length', ops: ['mul', 'div'] })),
                         withWorkedExample(buildKilometres()),
                       ]),
-  G5_MASS:            withKPs([
-                        withWorkedExample(buildMeasureMixedUnits({ kind: 'mass' })),
+  G5_LENGTH_OPS:      withKPs([
+                        withWorkedExample(buildMeasureArithmetic({ kind: 'length', ops: ['add', 'sub'] })),
+                        withWorkedExample(buildMeasureArithmetic({ kind: 'length', ops: ['mul', 'div'] })),
+                      ]),
+  G5_MASS:            withWorkedExample(buildMeasureMixedUnits({ kind: 'mass' })),
+  G5_MASS_OPS:        withKPs([
                         withWorkedExample(buildMeasureArithmetic({ kind: 'mass', ops: ['add', 'sub'] })),
                         withWorkedExample(buildMeasureArithmetic({ kind: 'mass', ops: ['mul', 'div'] })),
                       ]),
-  G5_CAPACITY:        withKPs([
-                        withWorkedExample(buildMeasureMixedUnits({ kind: 'capacity' })),
+  G5_CAPACITY:        withWorkedExample(buildMeasureMixedUnits({ kind: 'capacity' })),
+  G5_CAPACITY_OPS:    withKPs([
                         withWorkedExample(buildMeasureArithmetic({ kind: 'capacity', ops: ['add', 'sub'] })),
                         withWorkedExample(buildMeasureArithmetic({ kind: 'capacity', ops: ['mul', 'div'] })),
                       ]),

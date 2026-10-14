@@ -174,11 +174,17 @@ const GRADE_5 = {
   G5_LINES: skill('G5_LINES', 'Parallel & Perpendicular Lines', 5, S.GEO, { w: 1, curricula: { cbc: cbc(5, 'Geometry', 'Lines') } }),
 
   // Measurements
-  G5_LENGTH: skill('G5_LENGTH', 'Measuring Length (cm, m, km)', 5, S.MEA, { w: 1, curricula: { cbc: cbc(5, 'Measurements', 'Length') } }),
-  G5_MASS: skill('G5_MASS', 'Measuring Mass (g, kg)', 5, S.MEA, { w: 1, curricula: { cbc: cbc(5, 'Measurements', 'Mass') } }),
+  // KICD gives Length, Capacity and Mass twelve lessons each at Grade 5, and
+  // splits each the same way: the unit and its conversions, then the four
+  // operations on it. One skill for both halves tracked them as one number.
+  G5_LENGTH: skill('G5_LENGTH', 'Measuring Length (cm, m, km)', 5, S.MEA, { pre: ['G4_LENGTH'], w: 1, curricula: { cbc: cbc(5, 'Measurements', 'Length') } }),
+  G5_LENGTH_OPS: skill('G5_LENGTH_OPS', 'Adding & Subtracting Length', 5, S.MEA, { pre: ['G5_LENGTH', 'G5_ADDITION'], w: 3, curricula: { cbc: cbc(5, 'Measurements', 'Length') } }),
+  G5_MASS: skill('G5_MASS', 'Measuring Mass (g, kg)', 5, S.MEA, { pre: ['G4_MASS'], w: 1, curricula: { cbc: cbc(5, 'Measurements', 'Mass') } }),
+  G5_MASS_OPS: skill('G5_MASS_OPS', 'Adding & Subtracting Mass', 5, S.MEA, { pre: ['G5_MASS', 'G5_ADDITION'], w: 3, curricula: { cbc: cbc(5, 'Measurements', 'Mass') } }),
   G5_TIME: skill('G5_TIME', 'Telling Time & Duration', 5, S.MEA, { w: 1, curricula: { cbc: cbc(5, 'Measurements', 'Time') } }),
   G5_VOLUME: skill('G5_VOLUME', 'Volume (Cubic Units)', 5, S.MEA, { pre: ['G4_VOLUME'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Volume') } }),
-  G5_CAPACITY: skill('G5_CAPACITY', 'Capacity (Litres & Millilitres)', 5, S.MEA, { pre: ['G3_CAPACITY'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Capacity') } }),
+  G5_CAPACITY: skill('G5_CAPACITY', 'Capacity (Litres & Millilitres)', 5, S.MEA, { pre: ['G4_CAPACITY'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Capacity') } }),
+  G5_CAPACITY_OPS: skill('G5_CAPACITY_OPS', 'Adding & Subtracting Capacity', 5, S.MEA, { pre: ['G5_CAPACITY', 'G5_ADDITION'], w: 3, curricula: { cbc: cbc(5, 'Measurements', 'Capacity') } }),
   G5_MONEY: skill('G5_MONEY', 'Money (Profit & Loss)', 5, S.MEA, { pre: ['G4_MONEY', 'G5_MULTIPLICATION'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Money') } }),
   G5_PERIMETER_INTRO: skill('G5_PERIMETER_INTRO', 'Perimeter of Rectangles', 5, S.MEA, { pre: ['G5_ADDITION', 'G5_LENGTH'], w: 2 }),
   G5_AREA_INTRO: skill('G5_AREA_INTRO', 'Area of Rectangles (Counting Squares)', 5, S.MEA, { pre: ['G5_MULTIPLICATION'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Area') } }),

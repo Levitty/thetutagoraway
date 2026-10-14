@@ -102,16 +102,13 @@ skill behind **2.4 Capacity** (6 lessons), and `G6_BODMAS_BASIC` claimed a Grade
 "Combined Operations", which the design does not have — combined operations is outcome (d) inside
 1.5 Division.
 
-What is **not** asserted for Grades 4–5 is the thin-coverage rule the Junior School grades carry
-(a sub-strand of ≥12 lessons needs ≥2 skills behind it). Upper primary deliberately has fewer,
-broader skills, so switching it on would assert a content-expansion decision rather than a syllabus
-fact. The sub-strands it would flag today, for whoever works through them:
+The thin-coverage rule the Junior School grades carry (a sub-strand of ≥12 lessons needs ≥2 skills
+behind it) was initially left off for Grades 4–5, because switching it on would have asserted a
+content decision rather than a syllabus fact. The decision has since been taken and the work done,
+so the rule is now on for all five graded years. What it used to flag:
 
-| Grade | Sub-strand | Lessons | Skills tagged |
-|---|---|---|---|
-| 5 | Length | 12 | 1 (`G5_LENGTH`) |
-| 5 | Capacity | 12 | 1 (`G5_CAPACITY`) |
-| 5 | Mass | 12 | 1 (`G5_MASS`) |
+**This section is now closed, and the thin-coverage rule is asserted for Grades 4 and 5 too**
+(`tests/curriculum.test.mjs`), so it cannot quietly come back.
 
 **Grade 4 Whole Numbers is now closed** (20 lessons, 6 skills). Read against the design's own
 outcome list, nine of its ten outcomes had no skill at all — only (a) place and total value did.
@@ -125,9 +122,22 @@ and Grade 5 to the nearest hundred and thousand (1.1d) — and it did not exist 
 below `G7_ROUNDING_WHOLE`. A CBC learner met rounding three years after the syllabus introduces it.
 `G4_ORDER_ROUND` and the new `G5_ROUNDING` close that.
 
-Grade 5's three twelve-lesson measurement sub-strands each have one skill carrying a 3–5 rung KP
-ladder — `G5_LENGTH` alone generates five distinct question types — so the *content* is broader than
-the skill count suggests; the fix there may be splitting skills rather than authoring more.
+Grade 5's three twelve-lesson measurement sub-strands each carried one skill with a 3–4 rung KP
+ladder, so the *content* was broader than the skill count suggested and the fix was splitting rather
+than authoring more. Each is now split on the seam the design itself uses — KICD lists outcomes
+(a)–(e) as the unit and converting between units, and (f)–(i) as the four operations on it:
+
+| Was | Is now |
+|---|---|
+| `G5_LENGTH` | `G5_LENGTH` (m, cm, km and conversions) + `G5_LENGTH_OPS` |
+| `G5_CAPACITY` | `G5_CAPACITY` (l, ml and conversions) + `G5_CAPACITY_OPS` |
+| `G5_MASS` | `G5_MASS` (g, kg and conversions) + `G5_MASS_OPS` |
+
+This is worth more than a tidier count. Converting 764 cm to metres and subtracting 2 m 94 cm from
+6 m 14 cm are different competencies that fail for different reasons, and behind one node they shared
+a single mastery number: a learner fluent at conversion but lost in the subtraction read as half-way
+through "Length", and the review scheduler could not bring back the half they were actually missing.
+All six score 100 at the gate.
 
 Also noted, not a gap: `G5_TRIANGLES_INTRO` has content but **no** CBC tag, correctly — Grade 5
 Geometry in the design is only 3.1 Lines, 3.2 Angles and 3.3 Three Dimension (3-D) Objects. Triangles

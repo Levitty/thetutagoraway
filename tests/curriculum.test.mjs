@@ -121,13 +121,14 @@ for (const grade of [4, 5, 7, 8, 9]) {
   });
 }
 
-// The thin-coverage rule is asserted for Junior School only. Upper primary has
-// deliberately fewer, broader skills per sub-strand — Grade 5 Length, Capacity
-// and Mass are twelve lessons each behind one skill apiece — so turning it on
-// for Grades 4 and 5 would be asserting a content-expansion decision that is
-// the owner's to make, not a fact about the syllabus. The list is recorded in
-// docs/curriculum-backlog.md instead, where it can be worked through.
-for (const grade of [7, 8, 9]) {
+// The thin-coverage rule now holds for upper primary too. It was off while
+// Grade 5's three twelve-lesson measurement sub-strands sat behind one skill
+// apiece and Grade 4 Whole Numbers behind one — turning it on then would have
+// asserted a content decision rather than a syllabus fact. Both have since been
+// worked through: Grade 4 Whole Numbers was authored out to its ten outcomes,
+// and Length, Capacity and Mass were each split on the seam the design itself
+// uses, the unit and its conversions apart from the operations on it.
+for (const grade of [4, 5, 7, 8, 9]) {
   const design = DESIGNS[grade];
 
   test(`Grade ${grade}'s biggest sub-strands are not left with a single token skill`, () => {
