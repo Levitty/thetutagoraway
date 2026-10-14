@@ -104,7 +104,10 @@ export const columnOpModel = (a, b, sub, { showResult = false } = {}) => ({
 });
 
 export const columnSteps = (a, b, sub) => {
-  const NAMES = ['ones', 'tens', 'hundreds', 'thousands', 'ten-thousands'];
+  // Up to the ten-millions column: Grade 5 adds and subtracts to six digits,
+  // so a five-name list ran off the end and threw.
+  const NAMES = ['ones', 'tens', 'hundreds', 'thousands', 'ten-thousands',
+                 'hundred-thousands', 'millions', 'ten-millions'];
   const da = String(a).split('').reverse().map(Number);
   const db = String(b).split('').reverse().map(Number);
   const n = Math.max(da.length, db.length);

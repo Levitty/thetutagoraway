@@ -11,6 +11,7 @@ import { STATISTICS_CONTENT } from './statistics.js';
 import { GEOMETRY_CONTENT } from './geometry.js';
 import { VISUAL_CONTENT } from './visual.js';
 import { LOWER_PRIMARY_CONTENT } from './lowerPrimary.js';
+import { GRADE5_CONTENT } from './grade5.js';
 
 export const STRUCTURED_CONTENT = {
   ...ALGEBRA_CONTENT,
@@ -22,6 +23,7 @@ export const STRUCTURED_CONTENT = {
   ...GEOMETRY_CONTENT,
   ...VISUAL_CONTENT,
   ...LOWER_PRIMARY_CONTENT,
+  ...GRADE5_CONTENT,
 };
 
 export const STRUCTURED_IDS = Object.keys(STRUCTURED_CONTENT);

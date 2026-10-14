@@ -2442,8 +2442,12 @@ export function buildSquaresTables() {
 }
 
 export const NUMBERS_CONTENT = {
-  G5_ADDITION:           withWorkedExample(() => buildColumnAddSub()),
-  G5_SUBTRACTION:        withWorkedExample(() => buildColumnAddSub({ sub: true })),
+  // G5_ADDITION / G5_SUBTRACTION / G5_MULTIPLICATION / G5_DIVISION now live in
+  // grade5.js, banded to the difficulty their names claim. The generic
+  // builders below (buildColumnAddSub, buildMultiplyFact, buildDivideFact)
+  // generated four-digit sums, `44 × 5` and `80 ÷ 8` for them — at or below
+  // Grade 4 — which let a learner be credited with the Grade 5 skill and
+  // placed too high.
   G6_RATIOS:             withWorkedExample(buildRatioShare),
   // Cambridge gap fill (Stages 7-9)
   G7_PLACE_VALUE:        withWorkedExample(buildBigPlaceValue),
@@ -2463,16 +2467,6 @@ export const NUMBERS_CONTENT = {
   // Place value — taught pictorially with a place-value chart.
   G5_PLACE_VALUE:        withWorkedExample(buildPlaceValueChart),
   G6_PLACE_VALUE:        withWorkedExample(buildPlaceValueChart),
-
-  // Multiplication & division escalate to the dot-array model on struggle.
-  G5_MULTIPLICATION:     withLevels({
-                            abstract: withWorkedExample(buildMultiplyFact),
-                            concrete: withWorkedExample(buildMultiplicationArray),
-                          }),
-  G5_DIVISION:           withLevels({
-                            abstract: withWorkedExample(buildDivideFact),
-                            concrete: withWorkedExample(buildDivisionArray),
-                          }),
 
   // Concept-first (concrete): integers on a number line, decimals on a grid.
   G6_INTEGERS_INTRO:     withWorkedExample(buildPlaceInteger),
