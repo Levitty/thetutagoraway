@@ -633,7 +633,10 @@ function buildLongDiv({ minQ, maxQ }) {
     return {
       type: 'div-long', instruction: 'Work out the division.',
       question: `${total} ÷ ${d} = ?`, answer: `${q}`, accepts: accepts(`${q}`),
-      hints: hintLadder(`How many ${d}s in ${total}? Work digit by digit.`, `${d} × ${q} = ${total}.`),
+      hints: hintLadder(
+        `How many ${d}s in ${total}? Work digit by digit, left to right.`,
+        `Start with the front of the number: how many ${d}s fit into ${String(total).slice(0, String(total).length - 1) || String(total)}? Write that above, then bring the last digit down.`,
+        `Check as you go: multiply what you wrote by ${d} and take it away, then carry on.`),
       solution: { steps: [{ text: `Divide step by step: ${d} × ${q} = ${total}.`, expr: `${q}` }], answer: `${q}` },
       misconceptions: [], verify: { kind: 'fraction', value: q },
     };
