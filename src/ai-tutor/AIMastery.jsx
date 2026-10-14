@@ -13,6 +13,7 @@ import { selectQuestion, isComplete as placementComplete, computePlacement, MAX_
 import { HorebBot } from './HorebBot.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { TeachingVisual } from './TeachingVisual.jsx';
+import { QuestionMedia, ChoiceGrid } from './QuestionMedia.jsx';
 import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
 import { defaultProgress, loadProgress, loadLocalProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
@@ -28,7 +29,7 @@ import { Lottie, LOTTIE } from './components/Lottie.jsx';
 import { InteractiveVisual, SKILL_VISUALS } from './InteractiveVisual.jsx';
 import { checkVisualAnswer } from './content/visual.js';
 import { checkAnswerMatch, normalizeMath } from './answerCheck.js';
-import { maybeChoices, LETTERS } from './choices.js';
+import { maybeChoices, ownChoicesOnly, LETTERS } from './choices.js';
 import { specialItemFor } from './specialItems.js';
 import { BarModel } from './BarModel.jsx';
 import { YoungPicture } from './YoungPicture.jsx';
@@ -379,7 +380,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
           if (!cur) throw new Error('current skill not found');
           setDiagState({ record: dip.record, balances: dip.balances || {}, startTimes: { [cur.id]: Date.now() }, current: cur, pending: dip.pending || null, asked: dip.asked ?? dip.record.length });
           setDiagHistory([]); // snapshots aren't persisted; can't step back past a reload
-          setProblem(dip.problem || generateProblem(cur.id));
+          setProblem(dip.problem || ownChoicesOnly(generateProblem(cur.id)));
           setAnswer(''); setVisualAnswer(null); setFeedback(null);
           setView('diagnostic');
           setLoading(false);
@@ -564,7 +565,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     const pool = diagPool();
     const declared = progress.declaredGrade; // required before starting
     const first = selectQuestion([], declared, pool) || pool[0];
-    const firstProblem = generateProblem(first?.id);
+    const firstProblem = ownChoicesOnly(generateProblem(first?.id));
     setDiagState({ record: [], balances: {}, startTimes: { [first?.id]: Date.now() }, current: first, pending: null, asked: 0 });
     setDiagHistory([]);
     setProblem(firstProblem);
@@ -692,7 +693,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
     setTimeout(() => {
       if (!isLast) {
-        const nextProblem = generateProblem(nextSkill.id);
+        const nextProblem = ownChoicesOnly(generateProblem(nextSkill.id));
         setDiagState({ record: newRecord, balances: newBalances, startTimes: { ...startTimes, [nextSkill.id]: Date.now() }, current: nextSkill, pending: newPending, asked: newAsked });
         setProblem(nextProblem);
         // Advance the resume cursor so a mid-test exit returns to THIS question.
@@ -1062,7 +1063,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     if (due) {
       interleaveCountRef.current += 1;
       setInterleave({ skillId: due.id, name: due.name || SKILLS[due.id]?.name || 'earlier skill' });
-      setProblem(generateProblem(due.id));
+      setProblem(ownChoicesOnly(generateProblem(due.id)));
     } else {
       setInterleave(null);
       setProblem(serveLessonProblem(activeSkill, modalityLevel));
@@ -1087,7 +1088,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     if (problems.length === 0) return;
     setReviewProblems(problems);
     setReviewIndex(0);
-    setProblem(generateProblem(problems[0]));
+    setProblem(ownChoicesOnly(generateProblem(problems[0])));
     setAnswer('');
     setFeedback(null);
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
@@ -1135,7 +1136,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       if (reviewIndex < reviewProblems.length - 1) {
         const next = reviewIndex + 1;
         setReviewIndex(next);
-        setProblem(generateProblem(reviewProblems[next]));
+        setProblem(ownChoicesOnly(generateProblem(reviewProblems[next])));
         setAnswer('');
         setFeedback(null);
         setVisualAnswer(null);
@@ -1339,6 +1340,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
             </div>
             <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
               <div className={`${String(problem?.question || '').length <= 28 ? 'text-[36px] font-extrabold leading-tight' : 'text-[22px] font-bold leading-snug'} text-slate-900 mb-6`}>{problem?.question}</div>
+              {/* The picture the question is ABOUT ("what fraction of the sheet
+                  of paper is coloured?"). Without it the question cannot be
+                  answered at all — the placement would read as a gap in
+                  fractions when the child simply had nothing to look at. */}
+              <QuestionMedia problem={problem} />
               {/* Interactive visual (number line / grid / etc.) when the problem
                   needs one — otherwise it would be an unanswerable text box. */}
               {problem?.visual && (
@@ -1349,7 +1355,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   disabled={!!feedback}
                 />
               )}
+              {problem?.mc ? (
+                <ChoiceGrid problem={problem} answer={answer} onPick={setAnswer} disabled={!!feedback} />
+              ) : (
               <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+              )}
               {!feedback && (
                 <button onClick={() => handleDiagnosticAnswer({ skip: true })} className="mt-3.5 text-[15px] font-bold text-slate-900 underline underline-offset-4 hover:text-[#c2255c] transition-colors">
                   I haven’t learned this yet
@@ -1871,6 +1881,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
             <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
               <div className={`${String(problem?.question || '').length <= 28 ? 'text-[36px] font-extrabold leading-tight' : 'text-[22px] font-bold leading-snug'} text-slate-900 mb-6`}>{problem?.question}</div>
+              {/* A memory check still has to SHOW the thing it asks about. This
+                  screen used to render only an interactive visual, so a picture
+                  question arrived as a bare text box and the learner was marked
+                  wrong on a question nobody could answer. */}
+              <QuestionMedia problem={problem} />
               {problem?.visual && (
                 <div className="mb-4">
                   <InteractiveVisual
@@ -1881,7 +1896,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   />
                 </div>
               )}
+              {problem?.mc ? (
+                <ChoiceGrid problem={problem} answer={answer} onPick={setAnswer} disabled={!!feedback} showAnswer={!!feedback} />
+              ) : (
               <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+              )}
             </div>
 
             {feedback && (

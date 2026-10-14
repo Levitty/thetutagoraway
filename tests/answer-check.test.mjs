@@ -60,3 +60,34 @@ test('a wrong number is still wrong however it is written', () => {
   assert.equal(checkAnswer('KSh 4,600', '4500', []), false);
   assert.equal(checkAnswer('13 cm', '12', []), false);
 });
+
+// ---------------------------------------------------------------------------
+// Addition commutes. Reported from live testing: "It's recognizing 5x+3 and
+// 3+5x as different answers which is wrong. Both of them are accurate."
+//
+// This bites hardest in Grades 4-6, where WRITING the expression is the skill
+// being assessed, so marking the terms in the other order wrong teaches the
+// child to guess our preferred spelling rather than the mathematics.
+// ---------------------------------------------------------------------------
+test('the terms of a sum may be written in either order', () => {
+  const same = (a, b) => checkAnswerMatch(a, { answer: b });
+  assert.ok(same('3+5x', '5x+3'));
+  assert.ok(same('5x+3', '3+5x'));
+  assert.ok(same('3 + 5x', '5x+3'));      // spaces and order together
+  assert.ok(same('7+2a', '2a+7'));
+  assert.ok(same('1+x', 'x+1'));
+  assert.ok(same('-2+3y', '3y-2'));       // the sign travels with its term
+  assert.ok(same('3y+2x', '2x+3y'));      // two unknowns
+  assert.ok(same('3+x=8', 'x+3=8'));      // each side of an equation
+});
+
+test('subtraction does not commute, and reordering never invents a match', () => {
+  const same = (a, b) => checkAnswerMatch(a, { answer: b });
+  assert.ok(!same('5-x', 'x-5'));         // the whole point of the sign rule
+  assert.ok(!same('x-3', '3-x'));
+  assert.ok(!same('2x+3', '2x+4'));       // still the wrong number
+  assert.ok(!same('x+y', 'x+z'));         // still the wrong unknown
+  assert.ok(!same('3x', 'x+3'));          // a product is not a sum
+  assert.ok(!same('2x+3y', '2y+3x'));     // coefficients belong to their letters
+  assert.ok(!same('x+3=9', 'x+3=8'));
+});

@@ -211,6 +211,36 @@ export function checkAnswerMatch(userAnswer, problem) {
   const isSet = (a) => /\s(and|or)\s|°/.test(String(a));
   if (userList && accepts.some(a => { if (!isSet(a)) return false; const k = numList(a); return k && k.length === userList.length && k.every((v, i) => Math.abs(v - userList[i]) < 1e-9); })) return true;
 
+  // 1f) Addition commutes, so "3 + 5x" is the same answer as "5x + 3".
+  //
+  //     A child who writes the terms in the other order has not made a mistake,
+  //     and marking it wrong teaches them to guess at our preferred spelling
+  //     instead of at the mathematics. This matters most in Grades 4-6, where
+  //     forming an expression IS the skill being assessed.
+  //
+  //     Only the top-level sum is reordered, and the sign travels with its term,
+  //     so subtraction is still ordered: "5 - x" and "x - 5" stay different.
+  //     Brackets are left alone, since they can hide a sum of their own.
+  const sumKey = (s) => {
+    if (!/[a-z]/.test(s)) return null;      // pure arithmetic is matched by value below
+    if (/[()]/.test(s)) return null;        // 2(x+3) — do not take apart
+    if (/\^-/.test(s)) return null;         // x^-2: the minus is an exponent, not a term
+    if (/\de[-+]?\d/.test(s)) return null;  // 1e-5 is one number, not a subtraction
+    const terms = s.replace(/-/g, '+-').split('+').filter(Boolean);
+    if (terms.length < 2 || terms.some(t => t === '-')) return null;
+    return terms.sort().join('|');
+  };
+  // An equation is compared side by side, so "x + 3 = 8" accepts "3 + x = 8"
+  // without also accepting the sides swapped.
+  const sidesKey = (s) => {
+    const parts = s.split('=');
+    if (parts.length < 2) { const k = sumKey(s); return k && `|${k}`; }
+    const keys = parts.map(p => sumKey(p) ?? p);
+    return keys.some((k, i) => k !== parts[i]) ? keys.join('=') : null;
+  };
+  const userKey = sidesKey(normalizedUser);
+  if (userKey && accepts.some(a => sidesKey(normalizeMath(a)) === userKey)) return true;
+
   // 2) Single-number match by value — covers integers, decimals, fractions,
   //    mixed numbers, %, and units. A typed DECIMAL is graded at the key's
   //    displayed precision (3.14159 for a key of 3.14). A typed fraction, mixed
