@@ -275,6 +275,15 @@ const GRADE_7 = {
   // Statistics
   G7_MEAN_MEDIAN_MODE: skill('G7_MEAN_MEDIAN_MODE', 'Mean, Median, Mode', 7, S.STA, { pre: ['G6_MEAN'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling'), cambridge: cam(8, 'Ss', '8Ss.04') } }),
   G7_DATA_REPRESENT: skill('G7_DATA_REPRESENT', 'Data Representation (Bar, Line, Pie)', 7, S.STA, { pre: ['G6_PIE_CHARTS', 'G7_PERCENTAGES'], w: 3, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling'), cambridge: cam(7, 'Ss') } }),
+
+  // Ported: CBC Grade 7 sub-strands the KICD design names (Whole Numbers
+  // 1.1, Money 3.7, Data Handling 5.1, Constructions 4.2) that had no skill.
+G7_ANGLE_CONSTRUCTION: skill('G7_ANGLE_CONSTRUCTION', 'Bisecting & Constructing Angles', 7, S.GEO, { pre: ['G7_ANGLES', 'G6_ANGLE_MEASURE'], w: 4, curricula: { cbc: cbc(7, 'Geometry', 'Geometrical Constructions'), cambridge: cam(8, 'Gg') } }),
+  G7_MONEY_TRANSACTIONS: skill('G7_MONEY_TRANSACTIONS', 'Discount, Commission, Bills & Mobile Money', 7, S.MEA, { pre: ['G7_PERCENTAGES'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Money') } }),
+  G7_NUMBERS_WORDS: skill('G7_NUMBERS_WORDS', 'Reading & Writing Numbers, Total Value', 7, S.NUM, { pre: ['G7_PLACE_VALUE'], w: 3, curricula: { cbc: cbc(7, 'Numbers', 'Whole Numbers'), cambridge: cam(7, 'Np', '7Np.01') } }),
+  G7_NUMBER_SEQUENCES: skill('G7_NUMBER_SEQUENCES', 'Number Sequences', 7, S.NUM, { pre: ['G6_BODMAS_BASIC'], w: 4, curricula: { cbc: cbc(7, 'Numbers', 'Whole Numbers'), cambridge: cam(7, 'As') } }),
+  G7_PIE_CHARTS: skill('G7_PIE_CHARTS', 'Pie Charts & Travel Graphs', 7, S.STA, { pre: ['G7_PERCENTAGES', 'G6_ANGLE_MEASURE'], w: 4, curricula: { cbc: cbc(7, 'Data Handling', 'Data Handling'), cambridge: cam(7, 'Ss') } }),
+  G7_ROUNDING_WHOLE: skill('G7_ROUNDING_WHOLE', 'Rounding Whole Numbers', 7, S.NUM, { pre: ['G7_PLACE_VALUE'], w: 3, crit: true, curricula: { cbc: cbc(7, 'Numbers', 'Whole Numbers'), cambridge: cam(7, 'Np', '7Np.02') } }),
 };
 
 // ============================================================================
@@ -323,6 +332,15 @@ const GRADE_8 = {
   G8_PROBABILITY_INTRO: skill('G8_PROBABILITY_INTRO', 'Introduction to Probability', 8, S.STA, { pre: ['G6_FRACTIONS_DECIMALS'], w: 3, crit: true, curricula: { cbc: cbc(8, 'Data Handling', 'Probability'), cambridge: cam(7, 'Sp', '7Sp.02') } }),
   G8_PROBABILITY_COMBINED: skill('G8_PROBABILITY_COMBINED', 'Combined Events & Tree Diagrams', 8, S.STA, { pre: ['G8_PROBABILITY_INTRO', 'G7_FRACTIONS_MUL'], w: 4, curricula: { cbc: cbc(8, 'Data Handling', 'Probability'), cambridge: cam(8, 'Sp', '8Sp.02') } }),
   G8_CUMULATIVE_FREQ: skill('G8_CUMULATIVE_FREQ', 'Cumulative Frequency', 8, S.STA, { pre: ['G7_MEAN_MEDIAN_MODE', 'G8_LINEAR_GRAPHS'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)'), cambridge: camEnr('Ss') } }),
+
+  // Ported: CBC Grade 8 sub-strands with no skill at all (Fractions 1.2,
+  // Decimals 1.3, Squares 1.4, Data Presentation 5.1) plus Scale Drawing 4.3.
+  G8_DATA_GRAPHS: skill('G8_DATA_GRAPHS', 'Bar & Line Graphs', 8, S.STA, { pre: ['G7_DATA_REPRESENT'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Data Handling', 'Data Presentation and Interpretation'), cambridge: cam(8, 'Ss') } }),
+  G8_DECIMALS_COMBINED: skill('G8_DECIMALS_COMBINED', 'Combined Operations on Decimals', 8, S.NUM, { pre: ['G7_DECIMALS_DIV', 'G7_BODMAS_ADV'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Decimals'), cambridge: cam(8, 'Np') } }),
+  G8_FRACTIONS_COMBINED: skill('G8_FRACTIONS_COMBINED', 'Combined Operations on Fractions', 8, S.NUM, { pre: ['G7_FRACTIONS_DIV', 'G7_BODMAS_ADV'], w: 5, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Fractions'), cambridge: cam(8, 'Nf') } }),
+  G8_RECURRING_DECIMALS: skill('G8_RECURRING_DECIMALS', 'Recurring Decimals & Conversion', 8, S.NUM, { pre: ['G7_FRACTIONS_DIV', 'G7_DECIMAL_PV'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Decimals'), cambridge: cam(8, 'Nf', '8Nf.02') } }),
+  G8_SCALE_FORMS: skill('G8_SCALE_FORMS', 'Scales in Statement & Ratio Form', 8, S.GEO, { pre: ['G8_RATIO_PROPORTION', 'G7_LENGTH_CONV'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Geometry', 'Scale Drawing') } }),
+  G8_SQUARES_TABLES: skill('G8_SQUARES_TABLES', 'Squares & Square Roots (Decimals, Tables)', 8, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G6_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Squares and Square roots'), cambridge: cam(8, 'Ni', '8Ni.06') } }),
 };
 
 // ============================================================================
@@ -367,6 +385,18 @@ const GRADE_9 = {
   G9_GROUPED_DATA: skill('G9_GROUPED_DATA', 'Grouped Data & Histograms', 9, S.STA, { pre: ['G8_CUMULATIVE_FREQ', 'G7_MEAN_MEDIAN_MODE', 'G6_AREA_RECT'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)'), cambridge: cam(9, 'Ss', '9Ss.04') } }),
   G9_PROBABILITY_ADV: skill('G9_PROBABILITY_ADV', 'Probability (With/Without Replacement)', 9, S.STA, { pre: ['G8_PROBABILITY_COMBINED'], w: 4, curricula: { cbc: cbc(9, 'Data Handling', 'Probability'), cambridge: cam(9, 'Sp', '9Sp.03') } }),
   G9_SCATTER_PLOTS: skill('G9_SCATTER_PLOTS', 'Scatter Plots & Correlation', 9, S.STA, { pre: ['G8_COORDINATES', 'G7_DATA_REPRESENT'], w: 3, curricula: { cbc: cbcEnr('Data Handling'), cambridge: camEnr('Ss') } }),
+
+  // Ported: CBC Grade 9 Integers 1.1, Compound Proportions and Rates of Work
+  // 1.4, Coordinates and Graphs 4.1, Scale Drawing 4.2, grouped-data measures
+  // 5.1, and the Approximations and Errors pair.
+  G9_COMPOUND_PROPORTION: skill('G9_COMPOUND_PROPORTION', 'Compound Proportion & Proportional Parts', 9, S.NUM, { pre: ['G8_RATIO_PROPORTION'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Compound Proportions and Rates of Work'), cambridge: cam(9, 'Nf') } }),
+  G9_ELEVATION_DEPRESSION: skill('G9_ELEVATION_DEPRESSION', 'Angles of Elevation & Depression', 9, S.GEO, { pre: ['G9_TRIG_INTRO'], w: 5, curricula: { cbc: cbc(9, 'Geometry', 'Scale Drawing'), cambridge: camEnr('Gg') } }),
+  G9_ERRORS: skill('G9_ERRORS', 'Approximation Errors & Bounds', 9, S.MEA, { pre: ['G9_ROUNDING', 'G7_PERCENTAGES'], w: 4, curricula: { cbc: cbc(9, 'Measurements', 'Approximations and Errors'), cambridge: cam(9, 'Np', '9Np.02') } }),
+  G9_GROUPED_MEASURES: skill('G9_GROUPED_MEASURES', 'Mean & Median of Grouped Data', 9, S.STA, { pre: ['G9_GROUPED_DATA', 'G8_CUMULATIVE_FREQ'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Data Handling', 'Data Interpretation (Grouped Data)'), cambridge: cam(9, 'Ss') } }),
+  G9_INTEGERS_COMBINED: skill('G9_INTEGERS_COMBINED', 'Combined Operations on Integers', 9, S.NUM, { pre: ['G7_INTEGERS_MUL_DIV', 'G7_BODMAS_ADV'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Integers'), cambridge: cam(9, 'Ni') } }),
+  G9_PARALLEL_PERPENDICULAR: skill('G9_PARALLEL_PERPENDICULAR', 'Parallel & Perpendicular Lines', 9, S.ALG, { pre: ['G8_GRADIENT', 'G8_EQUATION_OF_LINE'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Coordinates and Graphs'), cambridge: cam(9, 'As') } }),
+  G9_RATES_OF_WORK: skill('G9_RATES_OF_WORK', 'Rates of Work', 9, S.NUM, { pre: ['G9_COMPOUND_PROPORTION', 'G7_FRACTIONS_ADD_UNLIKE'], w: 5, curricula: { cbc: cbc(9, 'Numbers', 'Compound Proportions and Rates of Work'), cambridge: camEnr('Nf') } }),
+  G9_ROUNDING: skill('G9_ROUNDING', 'Rounding & Estimation (d.p., s.f.)', 9, S.MEA, { pre: ['G7_DECIMAL_PV'], w: 3, curricula: { cbc: cbc(9, 'Measurements', 'Approximations and Errors'), cambridge: cam(8, 'Np', '8Np.02') } }),
 };
 
 // ============================================================================

@@ -30,7 +30,9 @@ const fracAccepts = (n, d) => {
 // ---- equivalent fractions: a/b = ?/(b·k) ----
 export function buildEquivalentFraction() {
   let a, b;
-  do { b = randInt(2, 9); a = randInt(1, b - 1); } while (gcd(a, b) !== 1);  // start in lowest terms
+  // a >= 2: with a numerator of 1 the missing numerator IS the scale factor,
+  // and any hint about the multiplier hands it over
+  do { b = randInt(3, 9); a = randInt(2, b - 1); } while (gcd(a, b) !== 1);
   const k = randInt(2, 6);
   const ans = a * k, newDen = b * k;
   return {
@@ -39,15 +41,27 @@ export function buildEquivalentFraction() {
     question: `Fill in the blank:   ${a}/${b} = ?/${newDen}`,
     answer: `${ans}`,
     accepts: accepts(`${ans}`, `${ans}/${newDen}`),
+    // Bar model: the SAME amount cut into smaller pieces. The second bar stays
+    // unshaded in practice (its count IS the answer); the dashed guide marks
+    // "the same amount" so the student reasons it out visually.
+    model: { type: 'bar-model', data: {
+      bars: [{ n: a, d: b, label: `${a}/${b}` }, { n: 0, d: newDen, label: `?/${newDen}` }],
+      guideAt: a / b,
+      caption: 'both bars must shade up to the dashed line — the pieces are just smaller',
+    } },
     hints: hintLadder(
       'What do you multiply the bottom by to get the new denominator?',
-      `${b} × ${k} = ${newDen}, so multiply the TOP by the same ${k}.`,
-      `${a} × ${k} = ?`,
+      `${b} × ? = ${newDen} — find that multiplier first.`,
+      'Multiply the top by the same multiplier.',
     ),
     solution: {
       steps: [
         { text: `The denominator was multiplied by ${k} (${b}×${k}=${newDen}).`, expr: `×${k}` },
-        { text: 'Multiply the numerator by the same number.', expr: `${a} × ${k} = ${ans}` },
+        { text: 'Multiply the numerator by the same number.', expr: `${a} × ${k} = ${ans}`,
+          model: { type: 'bar-model', data: {
+            bars: [{ n: a, d: b, label: `${a}/${b}` }, { n: ans, d: newDen, label: `${ans}/${newDen}` }],
+            guideAt: a / b,
+          } } },
       ],
       answer: `${ans}`,
     },
@@ -64,7 +78,9 @@ export function buildEquivalentFraction() {
 export function buildAddSubLike({ sub = false } = {}) {
   const d = randInt(3, 12);
   let a = randInt(1, d - 1), c = randInt(1, d - 1);
-  if (sub) { c = randInt(1, d - 2); a = randInt(c + 1, d - 1); } // a > c: never "3/6 − 3/6" 
+  if (sub && a < c) [a, c] = [c, a];           // keep result ≥ 0
+  // a − c must not equal c: the answer would be an operand already on the page
+  while (sub && a - c === c) { c = randInt(1, d - 1); if (a < c) [a, c] = [c, a]; }
   const num = sub ? a - c : a + c, op = sub ? '−' : '+';
   return {
     type: sub ? 'subtract-like' : 'add-like',
@@ -72,6 +88,12 @@ export function buildAddSubLike({ sub = false } = {}) {
     question: `${a}/${d} ${op} ${c}/${d}`,
     answer: fracStr(num, d),
     accepts: fracAccepts(num, d),
+    // Bar model: same-size pieces. Practice shows the two operands (the result
+    // bar would BE the answer); the final solution step carries the full picture.
+    model: { type: 'bar-model', data: {
+      bars: [{ n: a, d, label: `${a}/${d}` }, { n: c, d, label: `${op} ${c}/${d}` }],
+      caption: `same denominator = same-size pieces, so just ${sub ? 'take away' : 'count'} the pieces`,
+    } },
     hints: hintLadder(
       'The denominators are the same, so the bottom number stays the same.',
       `Just ${sub ? 'subtract' : 'add'} the numerators: ${a} ${op} ${c}.`,
@@ -79,7 +101,16 @@ export function buildAddSubLike({ sub = false } = {}) {
     ),
     solution: {
       steps: [
-        { text: `Same denominator — ${sub ? 'subtract' : 'add'} the numerators only.`, expr: `${num}/${d}` },
+        { text: `Same denominator — ${sub ? 'subtract' : 'add'} the numerators only.`, expr: `${num}/${d}`,
+          // The result bar only fits when the sum stays within one whole; an
+          // improper result (e.g. 7/9 + 4/9 = 11/9) spills past the bar, so we
+          // show the operands and let the caption carry the total.
+          model: { type: 'bar-model', data: {
+            bars: num <= d
+              ? [{ n: a, d, label: `${a}/${d}` }, { n: c, d, label: `${op} ${c}/${d}` }, { n: num, d, label: `= ${num}/${d}` }]
+              : [{ n: a, d, label: `${a}/${d}` }, { n: c, d, label: `${op} ${c}/${d}` }],
+            caption: num > d ? `${a} + ${c} = ${num} pieces — more than one whole bar (${num}/${d})` : undefined,
+          } } },
         { text: 'Simplify if possible.', expr: fracStr(num, d) },
       ],
       answer: fracStr(num, d),
@@ -93,13 +124,16 @@ export function buildAddSubLike({ sub = false } = {}) {
 
 // ---- add/subtract with UNLIKE denominators (G6) — the big one ----
 export function buildAddSubUnlike({ sub = false } = {}) {
-  let b = randInt(2, 9), d; do { d = randInt(2, 9); } while (d === b);
-  let a = randInt(1, b - 1), c = randInt(1, d - 1);   // proper fractions: never "2/2"
-  // never "1/2 − 2/4" = 0; redraw both (in 2/4 − ?/2 the only c gives 0, so redrawing c alone never ends)
-  while (sub && a * d === c * b) { a = randInt(1, b - 1); c = randInt(1, d - 1); }
-  if (sub && a * d < c * b) { [a, b, c, d] = [c, d, a, b]; }    // keep result ≥ 0
-  const L = lcm(b, d), a2 = a * (L / b), c2 = c * (L / d);
-  const num = sub ? a2 - c2 : a2 + c2, op = sub ? '−' : '+';
+  let b, d, a, c, L, a2, c2, num;
+  do {
+    b = randInt(2, 9); do { d = randInt(2, 9); } while (d === b);
+    a = randInt(1, Math.max(1, b - 1)); c = randInt(1, Math.max(1, d - 1));  // no whole-number operands (3/3)
+    if (sub && a * d < c * b) { [a, b, c, d] = [c, d, a, b]; }    // keep result ≥ 0
+    L = lcm(b, d); a2 = a * (L / b); c2 = c * (L / d);
+    num = sub ? a2 - c2 : a2 + c2;
+    // the result must not equal an operand (1/3 − 1/6 = 1/6 hands the answer over)
+  } while (sub && (num * b === a * L || num * d === c * L));
+  const op = sub ? '−' : '+';
   const simplifies = reduce(num, L)[1] !== L;
   return {
     type: sub ? 'subtract-unlike' : 'add-unlike',
@@ -107,6 +141,12 @@ export function buildAddSubUnlike({ sub = false } = {}) {
     question: `${a}/${b} ${op} ${c}/${d}`,
     answer: fracStr(num, L),
     accepts: fracAccepts(num, L),
+    // The WHY of common denominators, visible: the two bars have different-size
+    // pieces, so counting them together is meaningless until both are re-cut.
+    model: { type: 'bar-model', data: {
+      bars: [{ n: a, d: b, label: `${a}/${b}` }, { n: c, d, label: `${op} ${c}/${d}` }],
+      caption: `different-size pieces — you can't just count them together`,
+    } },
     hints: hintLadder(
       `You need a common denominator before you can ${sub ? 'subtract' : 'add'}.`,
       `The lowest common denominator of ${b} and ${d} is ${L}.`,
@@ -115,25 +155,57 @@ export function buildAddSubUnlike({ sub = false } = {}) {
     solution: {
       steps: [
         { text: `Find the lowest common denominator of ${b} and ${d}.`, expr: `LCD = ${L}` },
-        { text: 'Rewrite both fractions over it.', expr: `${a2}/${L} ${op} ${c2}/${L}` },
-        { text: `${sub ? 'Subtract' : 'Add'} the numerators (keep the denominator).`, expr: `${num}/${L}` },
+        // The "how do you get there" the jump used to hide: each fraction's
+        // top and bottom are multiplied by the same number to reach the LCD.
+        { text: `Rewrite ${a}/${b}: the bottom needs ×${L / b} to reach ${L}, so the top gets ×${L / b} too.`, expr: `${a}/${b} = ${a}×${L / b}/${b}×${L / b} = ${a2}/${L}` },
+        { text: `Rewrite ${c}/${d} the same way, with ×${L / d}.`, expr: `${c}/${d} = ${c}×${L / d}/${d}×${L / d} = ${c2}/${L}`,
+          // Same amounts, re-cut into same-size pieces — NOW they can be
+          // counted. Only drawn when the pieces stay countable (a 72-sliver
+          // bar teaches nothing); past that the algebra carries the step.
+          model: L <= 24 ? { type: 'bar-model', data: {
+            bars: [{ n: a2, d: L, label: `${a2}/${L}` }, { n: c2, d: L, label: `${op} ${c2}/${L}` }],
+            caption: `same amounts, re-cut into ${L}ths — now the pieces match`,
+          } } : undefined },
+        { text: `${sub ? 'Subtract' : 'Add'} the numerators (keep the denominator).`, expr: `${num}/${L}`,
+          model: L <= 24 ? { type: 'bar-model', data: {
+            bars: num <= L
+              ? [{ n: a2, d: L, label: `${a2}/${L}` }, { n: c2, d: L, label: `${op} ${c2}/${L}` }, { n: num, d: L, label: `= ${num}/${L}` }]
+              : [{ n: a2, d: L, label: `${a2}/${L}` }, { n: c2, d: L, label: `${op} ${c2}/${L}` }],
+            caption: num > L ? `${a2} ${op} ${c2} = ${num} pieces — more than one whole (${num}/${L})` : undefined,
+          } } : undefined },
         ...(simplifies ? [{ text: 'Simplify.', expr: fracStr(num, L) }] : []),
       ],
       answer: fracStr(num, L),
     },
+    // The four ways this actually goes wrong. Only one of them — adding
+    // straight across — used to be caught, so a learner who kept the numerator
+    // and added the bottoms (1/5 + 1/2 = 1/7) got the generic "you need a
+    // common denominator" instead of being told what she had done. Anything
+    // that happens to equal the right answer is dropped rather than shown.
     misconceptions: [
-      { when: `${a + c}/${b + d}`, feedback: `Don’t add across! ${a}/${b} ${op} ${c}/${d} is NOT (${a}${op}${c})/(${b}${op}${d}). Use a common denominator first.` },
-    ],
+      { when: `${sub ? a - c : a + c}/${b + d}`,
+        feedback: `You ${sub ? 'subtracted' : 'added'} straight across — tops together and bottoms together. The bottom says how big the pieces ARE; ${sub ? 'taking one denominator from the other' : 'adding the denominators'} changes the size of the pieces instead of counting them.` },
+      { when: `${a}/${b + d}`,
+        feedback: `The bottoms have been ${sub ? 'combined' : 'added'} and the top left as it was. A denominator is a piece SIZE, not a quantity — ${b} pieces and ${d} pieces don't make ${b + d}ths. Re-cut both fractions to the same size first.` },
+      { when: `${sub ? a - c : a + c}/${b * d}`,
+        feedback: `You found a common denominator by multiplying (${b} × ${d} = ${b * d}) — that part is legitimate. But then the tops must be rescaled to match, not carried over unchanged.` },
+      ...(!sub ? [{ when: `${a * c}/${b * d}`,
+        feedback: 'That is what you would do to MULTIPLY these fractions. Adding needs the pieces made the same size first.' }] : []),
+    ].filter(m => {
+      const [mn, md] = m.when.split('/').map(Number);
+      return md !== 0 && Number.isFinite(mn) && Math.abs(mn / md - (sub ? a / b - c / d : a / b + c / d)) > 1e-9;
+    }),
     verify: { kind: 'fraction', value: sub ? a / b - c / d : a / b + c / d },
   };
 }
 
 // ---- multiply fractions ----
 export function buildMulFractions() {
-  const b = randInt(2, 9), d = randInt(2, 9);
-  let a = randInt(1, 8), c = randInt(1, 8);
-  while (a === b) a = randInt(1, 8);            // never "4/4", which is just 1
-  while (c === d) c = randInt(1, 8);
+  let a, b, c, d;
+  do {
+    a = randInt(1, 8); b = randInt(2, 9); c = randInt(1, 8); d = randInt(2, 9);
+  } while (a === b || c === d || (a === c && b === d)
+    || ((a * c) % (b * d) === 0 && [a, b, c, d].includes((a * c) / (b * d))));   // no trivial operands; result must not equal a number on the page
   const num = a * c, den = b * d;
   return {
     type: 'multiply-fractions',
@@ -141,6 +213,16 @@ export function buildMulFractions() {
     question: `${a}/${b} × ${c}/${d}`,
     answer: fracStr(num, den),
     accepts: fracAccepts(num, den),
+    // "A fraction OF a fraction": shade a/b of the rows and c/d of the columns;
+    // the double-shaded overlap IS the product. The grid picture only exists
+    // for PROPER fractions — improper ones (8/3 × 5/2) overflow it, so those
+    // problems go without a model rather than with a wrong one.
+    model: (a <= b && c <= d)
+      ? { type: 'fraction-grid', data: {
+          rows: b, cols: d, shadeRows: a, shadeCols: c,
+          caption: `${a}/${b} of the rows, ${c}/${d} of the columns — where do they overlap?`,
+        } }
+      : undefined,
     hints: hintLadder(
       'To multiply fractions, multiply straight across — no common denominator needed.',
       `Numerators: ${a} × ${c}.   Denominators: ${b} × ${d}.`,
@@ -148,7 +230,13 @@ export function buildMulFractions() {
     ),
     solution: {
       steps: [
-        { text: 'Multiply numerators, and denominators.', expr: `${num}/${den}` },
+        { text: 'Multiply numerators, and denominators.', expr: `${num}/${den}`,
+          model: (a <= b && c <= d)
+            ? { type: 'fraction-grid', data: {
+                rows: b, cols: d, shadeRows: a, shadeCols: c, showOverlap: true,
+                caption: `${a}×${c} overlap cells out of ${b}×${d} — that is ${num}/${den}`,
+              } }
+            : undefined },
         { text: 'Simplify.', expr: fracStr(num, den) },
       ],
       answer: fracStr(num, den),
@@ -162,10 +250,14 @@ export function buildMulFractions() {
 
 // ---- divide fractions ----
 export function buildDivFractions() {
-  const b = randInt(2, 9), d = randInt(2, 9);
-  let a = randInt(1, 8), c = randInt(1, 8);
-  while (a === b) a = randInt(1, 8);            // never "5/5", which is just 1
-  while (c === d) c = randInt(1, 8);
+  let a, b, c, d;
+  do {
+    a = randInt(1, 8); b = randInt(2, 9); c = randInt(1, 8); d = randInt(2, 9);
+    // a===b or c===d makes one operand equal 1, so the hint's flipped fraction or
+    // restated dividend IS the answer; identical operands make the answer 1;
+    // a·d² = b·c² makes the simplified result equal the divisor on the page.
+  } while (a === b || c === d || (a === c && b === d) || a * d * d === b * c * c
+    || ((a * d) % (b * c) === 0 && [a, b, c, d].includes((a * d) / (b * c))));   // whole-number result must not equal a number on the page
   const num = a * d, den = b * c;
   return {
     type: 'divide-fractions',
@@ -203,6 +295,16 @@ export function buildMixedToImproper() {
     question: `Convert to an improper fraction:   ${w} ${n}/${d}`,
     answer: fracStr(num, d),
     accepts: fracAccepts(num, d),
+    // Each whole is a fully-shaded bar of d pieces; the last bar holds n more.
+    // Cut every whole into d pieces and count — that IS w×d + n. (Only drawn
+    // while the stack stays compact.)
+    model: w <= 3 ? { type: 'bar-model', data: {
+      bars: [
+        ...Array.from({ length: w }, () => ({ n: d, d, label: '1' })),
+        { n, d, label: `${n}/${d}` },
+      ],
+      caption: `every whole is ${d} pieces of size 1/${d}`,
+    } } : undefined,
     hints: hintLadder(
       'Multiply the whole number by the denominator, then add the numerator.',
       `${w} × ${d} = ${w * d}, then + ${n}.`,
@@ -226,7 +328,7 @@ export function buildMixedToImproper() {
 // ---- compare two fractions ----
 export function buildCompareFractions() {
   let b = randInt(2, 9), d; do { d = randInt(2, 9); } while (d === b);
-  const a = randInt(1, b - 1), c = randInt(1, d - 1);   // never "3/3"
+  const a = randInt(1, b), c = randInt(1, d);
   const diff = a / b - c / d;
   const sym = diff > 1e-9 ? '>' : diff < -1e-9 ? '<' : '=';
   return {
@@ -235,6 +337,11 @@ export function buildCompareFractions() {
     question: `Insert <, > or =:   ${a}/${b}  ?  ${c}/${d}`,
     answer: sym,
     accepts: accepts(sym),
+    // Two bars of the same length — the comparison is literally visible.
+    model: { type: 'bar-model', data: {
+      bars: [{ n: a, d: b, label: `${a}/${b}` }, { n: c, d, label: `${c}/${d}` }],
+      caption: 'both bars are the same whole — compare the shaded amounts',
+    } },
     hints: hintLadder(
       'Cross-multiply: compare a×d with c×b.',
       `Compare ${a}×${d} = ${a * d}  with  ${c}×${b} = ${c * b}.`,
@@ -256,16 +363,14 @@ export function buildCompareFractions() {
 
 // ---- reciprocal of a fraction ----
 export function buildReciprocal() {
-  const a = randInt(2, 9);
-  let b = randInt(2, 9);
-  while (b === a) b = randInt(2, 9);            // the reciprocal of 6/6 is a trick question
+  const a = randInt(2, 9), b = randInt(2, 9);
   return {
     type: 'reciprocal',
     instruction: 'Write the reciprocal.',
     question: `What is the reciprocal of ${a}/${b}?`,
     answer: fracStr(b, a),
     accepts: fracAccepts(b, a),
-    hints: hintLadder('The reciprocal flips the fraction upside down.', `${a}/${b} becomes ${b}/${a}.`),
+    hints: hintLadder('The reciprocal flips the fraction upside down.', 'Swap the top number and the bottom number.'),
     solution: { steps: [{ text: 'Swap numerator and denominator.', expr: fracStr(b, a) }], answer: fracStr(b, a) },
     misconceptions: [],
     verify: { kind: 'fraction', value: b / a },
@@ -318,9 +423,9 @@ export function buildFractionToDecimal() {
     instruction: 'Write as a decimal.',
     question: `Write ${a}/${d} as a decimal.`,
     answer: `${dec}`,
-    accepts: accepts(`${dec}`, fracStr(rn, rd)),
+    accepts: accepts(`${dec}`),   // never accept the fraction itself — the question asks for a decimal
     hints: hintLadder('Divide the numerator by the denominator.',
-      `Or scale to a denominator of 10, 100, …  ${a}/${d} = ?`),
+      'Or scale the fraction to a denominator of 10 or 100 first.'),
     solution: { steps: [{ text: 'Numerator ÷ denominator.', expr: `${a} ÷ ${d} = ${dec}` }], answer: `${dec}` },
     misconceptions: [],
     verify: { kind: 'fraction', value: rn / rd },
@@ -329,15 +434,28 @@ export function buildFractionToDecimal() {
 
 // ---- percentage of a quantity ----
 export function buildPercentageOf() {
-  const p = pick([5, 10, 15, 20, 25, 30, 40, 50, 60, 75]);
-  const base = pick([20, 40, 60, 80, 100, 120, 200, 240]);
-  const v = (p * base) / 100;
+  // Every hint here says "percent means out of 100", so neither the amount
+  // nor the answer may itself be 100 — otherwise the hint hands it over.
+  let p, base, v;
+  do {
+    p = pick([5, 10, 15, 20, 25, 30, 40, 50, 60, 75]);
+    base = pick([20, 40, 60, 80, 120, 200, 240]);
+    v = (p * base) / 100;
+  } while (v === 100 || v === p);
   return {
     type: 'percentage-of',
     instruction: 'Find the percentage of the amount.',
     question: `What is ${p}% of ${base}?`,
     answer: `${v}`,
     accepts: accepts(`${v}`),
+    // Percent bar: the whole bar IS the amount; the shaded part is the percent.
+    model: (() => {
+      const g = gcd(p, 100), segs = 100 / g, shade = p / g;
+      return { type: 'bar-model', data: {
+        bars: [{ n: shade, d: segs, label: `${p}% = ?` }],
+        caption: `the whole bar is ${base} — what is the shaded part worth?`,
+      } };
+    })(),
     hints: hintLadder(
       'Percent means “out of 100”. Convert to a fraction or decimal first.',
       `${p}% = ${p}/100 = ${p / 100}.`,
@@ -346,7 +464,14 @@ export function buildPercentageOf() {
     solution: {
       steps: [
         { text: `Write ${p}% as a decimal.`, expr: `${p / 100}` },
-        { text: `Multiply by ${base}.`, expr: `${v}` },
+        { text: `Multiply by ${base}.`, expr: `${v}`,
+          model: (() => {
+            const g = gcd(p, 100), segs = 100 / g, shade = p / g;
+            return { type: 'bar-model', data: {
+              bars: [{ n: shade, d: segs, label: `${p}% = ${v}` }],
+              caption: `whole bar = ${base}, each piece = ${base / segs}, shaded = ${v}`,
+            } };
+          })() },
       ],
       answer: `${v}`,
     },
@@ -357,14 +482,15 @@ export function buildPercentageOf() {
 
 // CONCRETE: shade the 10×10 grid to show a percentage (percent = out of 100).
 export function buildShadePercent() {
-  const p = randInt(1, 99);
+  let p = randInt(2, 99);
+  while (p === 10) p = randInt(2, 99);   // "each full row is 10%" would hand 10 over
   return {
     type: 'shade-percent', instruction: 'Shade the grid to show the percentage.',
     question: `Shade the grid to show ${p}%.`,
     answer: `${p}`, accepts: accepts(`${p}`, `${p}%`),
     hints: hintLadder(
       'Percent means "out of 100". The grid has exactly 100 squares.',
-      `${p}% means ${p} out of 100 — shade ${p} squares.`,
+      'How many "out of 100" is that? Shade one square for each.',
       'Each full row is 10%.',
     ),
     solution: { steps: [{ text: `${p}% = ${p} out of 100, so shade ${p} squares.`, expr: `${p}%` }], answer: `${p}` },
@@ -409,7 +535,7 @@ export function buildPlaceOnNumberLine() {
     answer: `${n}/${d}`, accepts: fracAccepts(n, d),
     hints: hintLadder(
       'The line runs from 0 to 1.',
-      `Split it into ${d} equal steps (each step is 1/${d}).`,
+      `Split the line into ${d} equal steps — the bottom number tells you how many.`,
       `Count ${n} steps from 0.`,
     ),
     solution: { steps: [{ text: `Each step is 1/${d}; count ${n} steps from 0.`, expr: `${n}/${d}` }], answer: `${n}/${d}` },
@@ -423,9 +549,7 @@ export function buildPlaceOnNumberLine() {
 // different piece-sizes (the reason you need a common denominator) are visible.
 export function buildAddSubFractionsPictorial({ sub = false } = {}) {
   let b = randInt(2, 6), d; do { d = randInt(2, 6); } while (d === b);
-  let a = randInt(1, b - 1), c = randInt(1, d - 1);   // proper fractions: never "2/2"
-  // never "1/2 − 2/4" = 0; redraw both (in 2/4 − ?/2 the only c gives 0, so redrawing c alone never ends)
-  while (sub && a * d === c * b) { a = randInt(1, b - 1); c = randInt(1, d - 1); }
+  let a = randInt(1, b), c = randInt(1, d);
   if (sub && a * d < c * b) { [a, b, c, d] = [c, d, a, b]; }      // keep result ≥ 0
   const L = lcm(b, d), a2 = a * (L / b), c2 = c * (L / d);
   const num = sub ? a2 - c2 : a2 + c2, op = sub ? '−' : '+';
@@ -503,7 +627,7 @@ export function buildEquivConcrete() {
 export function buildAddSubLikePictorial({ sub = false } = {}) {
   const d = randInt(4, 8);
   let a = randInt(1, d - 1), c = randInt(1, d - 1);
-  if (sub) { c = randInt(1, d - 2); a = randInt(c + 1, d - 1); }
+  if (sub && a < c) [a, c] = [c, a];
   if (!sub && a + c > d) { a = randInt(1, d - 2); c = randInt(1, d - a); }
   const num = sub ? a - c : a + c, op = sub ? '−' : '+';
   return {
@@ -526,7 +650,200 @@ export function buildAddSubLikePictorial({ sub = false } = {}) {
   };
 }
 
+// ============================================================================
+// CBC GRADE 8 — 1.2 FRACTIONS (6 lessons) and 1.3 DECIMALS (8 lessons)
+// Both sub-strands lead with the same outcome: COMBINED operations, done in
+// the correct order. That is the Grade 8 step up — not new operations, but
+// several of them in one expression.
+// ============================================================================
+
+const g_ = (a, b) => (b === 0 ? (a || 1) : g_(b, a % b));
+const red = (n, d) => { const k = g_(Math.abs(n), Math.abs(d)) || 1; return [n / k, d / k]; };
+const fs = (n, d) => { const [a, b] = red(n, d); return b === 1 ? `${a}` : `${a}/${b}`; };
+
+// ---- G8 1.2: combined operations on fractions ----
+export function buildFractionsCombined() {
+  const shape = pick(['mul-then-add', 'brackets-first', 'div-then-sub', 'of-then-add']);
+
+  if (shape === 'mul-then-add') {
+    const a = randInt(1, 3), b = pick([2, 4, 5]);
+    const c = randInt(1, 2), d = pick([3, 4]);
+    const e = randInt(1, 2), f = pick([2, 3, 5]);
+    // a/b + (c/d × e/f)
+    const pn = c * e, pd = d * f;
+    const n = a * pd + pn * b, dd = b * pd;
+    const value = fs(n, dd);
+    return {
+      type: 'frac-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  ${a}/${b} + ${c}/${d} × ${e}/${f}`,
+      answer: value, accepts: accepts(value, value.replace('/', ' / ')),
+      hints: hintLadder(
+        'Multiplication is settled before addition, fractions or not.',
+        'Do the multiplying pair first, on its own.',
+        'Only then bring in the first fraction — and that step needs a common denominator.'),
+      solution: { steps: [
+        { text: 'Multiply first (straight across).', expr: `${c}/${d} × ${e}/${f} = ${fs(pn, pd)}` },
+        { text: 'Now add, over a common denominator.', expr: `${a}/${b} + ${fs(pn, pd)}` },
+        { text: 'Simplify.', expr: value }], answer: value },
+      misconceptions: [
+        { when: fs((a * d + c * b) * e, b * d * f), feedback: 'You added before multiplying. Multiplication comes first unless brackets say otherwise.' },
+      ],
+      verify: { kind: 'fraction', value: a / b + (c / d) * (e / f) },
+    };
+  }
+
+  if (shape === 'brackets-first') {
+    const a = randInt(1, 3), b = pick([2, 4, 6]);
+    const c = randInt(1, 2), d = pick([3, 4]);
+    const e = randInt(2, 4);
+    // (a/b + c/d) × e
+    const sn = a * d + c * b, sd = b * d;
+    const value = fs(sn * e, sd);
+    return {
+      type: 'frac-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  (${a}/${b} + ${c}/${d}) × ${e}`,
+      answer: value, accepts: accepts(value, value.replace('/', ' / ')),
+      hints: hintLadder(
+        'Brackets are settled before anything else.',
+        'Adding inside the brackets needs a common denominator first.',
+        'Multiplying a fraction by a whole number affects only the top.'),
+      solution: { steps: [
+        { text: 'Add inside the brackets.', expr: `${a}/${b} + ${c}/${d} = ${fs(sn, sd)}` },
+        { text: 'Multiply by the whole number.', expr: `${fs(sn, sd)} × ${e} = ${value}` }], answer: value },
+      misconceptions: [
+        { when: fs(a * d + c * b * e, b * d), feedback: 'Only one of the two fractions was multiplied. The brackets group them, so the multiplier applies to the whole total.' },
+      ],
+      verify: { kind: 'fraction', value: (a / b + c / d) * e },
+    };
+  }
+
+  if (shape === 'div-then-sub') {
+    const a = randInt(3, 5), b = pick([4, 6, 8]);
+    const c = randInt(1, 2), d = pick([2, 4]);
+    const e = randInt(1, 2), f = pick([2, 3]);
+    // a/b − (c/d ÷ e/f) = a/b − (c*f)/(d*e)
+    const qn = c * f, qd = d * e;
+    const n = a * qd - qn * b, dd = b * qd;
+    if (n <= 0) return buildFractionsCombined();
+    const value = fs(n, dd);
+    return {
+      type: 'frac-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  ${a}/${b} − ${c}/${d} ÷ ${e}/${f}`,
+      answer: value, accepts: accepts(value, value.replace('/', ' / ')),
+      hints: hintLadder(
+        'Division is settled before subtraction.',
+        'To divide by a fraction, turn the second one upside down and multiply.',
+        'Only then subtract, over a common denominator.'),
+      solution: { steps: [
+        { text: 'Divide first — flip the second fraction.', expr: `${c}/${d} ÷ ${e}/${f} = ${c}/${d} × ${f}/${e} = ${fs(qn, qd)}` },
+        { text: 'Now subtract.', expr: `${a}/${b} − ${fs(qn, qd)} = ${value}` }], answer: value },
+      misconceptions: [
+        { when: fs(c * e, d * f), feedback: 'The second fraction was not turned upside down — dividing by a fraction means multiplying by its reciprocal.' },
+      ],
+      verify: { kind: 'fraction', value: a / b - (c / d) / (e / f) },
+    };
+  }
+
+  // "of" is multiplication — a phrase Grade 8 meets constantly in word problems
+  const whole = pick([120, 180, 240, 300, 360]);
+  const b = pick([3, 4, 5, 6]);
+  const a = randInt(1, b - 1);
+  const extra = pick([10, 15, 20, 25]);
+  const value = `${whole * a / b + extra}`;
+  if (!Number.isInteger(whole * a / b)) return buildFractionsCombined();
+  return {
+    type: 'frac-of-combined', instruction: 'Use the correct order of operations.',
+    question: `Work out:  ${a}/${b} of ${whole} + ${extra}`,
+    answer: value, accepts: accepts(value),
+    hints: hintLadder(
+      'In mathematics, "of" is an instruction to multiply.',
+      'That multiplication is settled before the addition.',
+      `So find the fraction of ${whole} first, then bring in the ${extra}.`),
+    solution: { steps: [
+      { text: '"of" means multiply.', expr: `${a}/${b} × ${whole} = ${whole * a / b}` },
+      { text: 'Now add.', expr: `${whole * a / b} + ${extra} = ${value}` }], answer: value },
+    misconceptions: [
+      { when: `${(whole + extra) * a / b}`, feedback: 'You added before taking the fraction. "of" binds to the number right beside it, and multiplication comes first.' },
+    ],
+    verify: { kind: 'fraction', value: whole * a / b + extra },
+  };
+}
+
+// ---- G8 1.3: combined operations on decimals ----
+export function buildDecimalsCombined() {
+  const shape = pick(['mul-then-add', 'brackets-first', 'div-then-sub']);
+  const r2 = (x) => Math.round(x * 100) / 100;
+  const trim = (x) => `${r2(x)}`;
+
+  if (shape === 'mul-then-add') {
+    const a = randInt(11, 99) / 10, b = randInt(11, 49) / 10, c = randInt(2, 9);
+    const value = r2(a + b * c);
+    return {
+      type: 'dec-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  ${a} + ${b} × ${c}`,
+      answer: trim(value), accepts: accepts(trim(value)),
+      hints: hintLadder(
+        'Multiplication is settled before addition.',
+        'Do the multiplying part first, keeping the decimal point in the right place.',
+        'Then line the decimal points up to add.'),
+      solution: { steps: [
+        { text: 'Multiply first.', expr: `${b} × ${c} = ${trim(r2(b * c))}` },
+        { text: 'Now add.', expr: `${a} + ${trim(r2(b * c))} = ${trim(value)}` }], answer: trim(value) },
+      misconceptions: [
+        { when: trim(r2((a + b) * c)), feedback: 'You added before multiplying. Multiplication comes first unless brackets say otherwise.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  if (shape === 'brackets-first') {
+    const a = randInt(21, 99) / 10, b = randInt(11, 49) / 10, c = randInt(2, 6);
+    const value = r2((a - b) * c);
+    return {
+      type: 'dec-combined', instruction: 'Use the correct order of operations.',
+      question: `Work out:  (${a} − ${b}) × ${c}`,
+      answer: trim(value), accepts: accepts(trim(value)),
+      hints: hintLadder(
+        'Brackets are settled before anything else.',
+        'Line the decimal points up before subtracting.',
+        'Then multiply the single number you are left with.'),
+      solution: { steps: [
+        { text: 'Do the brackets.', expr: `${a} − ${b} = ${trim(r2(a - b))}` },
+        { text: 'Multiply.', expr: `${trim(r2(a - b))} × ${c} = ${trim(value)}` }], answer: trim(value) },
+      misconceptions: [
+        { when: trim(r2(a - b * c)), feedback: 'The brackets came first here — they group the subtraction, so it must be done before multiplying.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  }
+
+  const q = randInt(2, 9), d = pick([0.2, 0.4, 0.5, 2, 4, 5]);
+  const n = r2(q * d);
+  const a = randInt(50, 199) / 10;
+  const value = r2(a - q);
+  if (value <= 0) return buildDecimalsCombined();
+  return {
+    type: 'dec-combined', instruction: 'Use the correct order of operations.',
+    question: `Work out:  ${a} − ${n} ÷ ${d}`,
+    answer: trim(value), accepts: accepts(trim(value)),
+    hints: hintLadder(
+      'Division is settled before subtraction.',
+      d < 1 ? 'Dividing by a number smaller than 1 makes the result BIGGER — check your answer against that.' : 'Divide first, keeping track of the decimal point.',
+      'Then line the points up to subtract.'),
+    solution: { steps: [
+      { text: 'Divide first.', expr: `${n} ÷ ${d} = ${q}` },
+      { text: 'Now subtract.', expr: `${a} − ${q} = ${trim(value)}` }], answer: trim(value) },
+    misconceptions: [
+      { when: trim(r2((a - n) / d)), feedback: 'You subtracted before dividing. Division is settled first.' },
+    ],
+    verify: { kind: 'fraction', value },
+  };
+}
+
 export const FRACTIONS_CONTENT = {
+  // CBC Grade 8 Numbers 1.2 Fractions and 1.3 Decimals — combined operations
+  G8_FRACTIONS_COMBINED: withWorkedExample(buildFractionsCombined),
+  G8_DECIMALS_COMBINED:  withWorkedExample(buildDecimalsCombined),
   // Concept-first: "understanding fractions" is taught concretely (bar / number line).
   G5_FRACTIONS_INTRO:    withWorkedExample(() => (coin() ? buildShadeFraction() : buildPlaceOnNumberLine())),
 
@@ -567,6 +884,7 @@ export const FRACTIONS_CONTENT = {
                           }),
 
   // Grade 7 — fluency & supporting number skills
+  G7_FRACTIONS_ADD_UNLIKE: withWorkedExample(() => buildAddSubUnlike({ sub: Math.random() < 0.4 })),
   G7_FRACTIONS_MUL:      withLevels({
                             abstract: withWorkedExample(buildMulFractions),
                             concrete: withWorkedExample(buildMulFractionsPictorial),

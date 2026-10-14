@@ -21,7 +21,7 @@ export function buildProductRule() {
   const u = linear(1, p), v = quad(1, q, r), f = mul(u, v);
   const at = nonzero(-3, 3);
   const value = evaluate(differentiate(f), at);
-  const uStr = `(${fmtLinear(1, p)})`, vStr = `(${fmtQuadratic(1, q, r).caret})`, vD = fmtLinear(2, q);
+  const uStr = `(${fmtLinear(1, p)})`, vStr = `(${fmtQuadratic(1, q, r).uni})`, vD = fmtLinear(2, q);
   return {
     type: 'product-rule',
     instruction: 'Differentiate with the product rule, then evaluate.',
@@ -53,7 +53,7 @@ export function buildQuotientRule() {
   const u = quad(1, q, r), v = linear(1, b), f = mul(u, pow(v, -1));
   const at = 1 - b;                              // v(at) = 1 → clean integer answer
   const value = evaluate(differentiate(f), at);
-  const uStr = `(${fmtQuadratic(1, q, r).caret})`, vStr = `(${fmtLinear(1, b)})`, uD = fmtLinear(2, q);
+  const uStr = `(${fmtQuadratic(1, q, r).uni})`, vStr = `(${fmtLinear(1, b)})`, uD = fmtLinear(2, q);
   return {
     type: 'quotient-rule',
     instruction: 'Differentiate with the quotient rule, then evaluate.',
@@ -135,10 +135,7 @@ export function buildFurtherDiff() {
       ],
       answer: `${value}`,
     },
-    misconceptions: [
-      { when: `${A}`, feedback: `Use the chain rule: the ${k} inside the bracket comes out as a multiplier.` },
-      ...(kind === 'sin' ? [{ when: '0', feedback: 'The derivative of sin is cos, and cos(0) = 1.' }] : [{ when: `${A * k * k}`, feedback: 'Multiply by the inner number only once.' }]),
-    ],
+    misconceptions: [],
     verify: { kind: 'derivative-at', f: (x) => evaluate(f, x), at: 0, value },
   };
 }
@@ -150,7 +147,7 @@ export function buildIntegrationSubstitution() {
   const F = pow(quad(1, 0, c), k);               // antiderivative (x²+c)^k
   const integrand = differentiate(F);            // 2k·x·(x²+c)^(k-1)
   const value = evaluate(F, hi) - evaluate(F, lo);
-  const innerStr = fmtQuadratic(1, 0, c).caret;  // x² + c
+  const innerStr = fmtQuadratic(1, 0, c).uni;  // x² + c
   const powStr = (k - 1) === 1 ? `(${innerStr})` : `(${innerStr})^${k - 1}`;
   const inStr = `${2 * k}x${powStr}`;
   return {
@@ -172,37 +169,36 @@ export function buildIntegrationSubstitution() {
       ],
       answer: `${value}`,
     },
-    misconceptions: [
-      ...(evaluate(F, lo) !== 0 ? [{ when: `${evaluate(F, hi)}`, feedback: `That is the value at ${hi} only. Subtract the value at ${lo}.` }] : []),
-      ...(value !== 0 ? [{ when: `${-value}`, feedback: 'The sign is flipped: top limit minus bottom limit.' }] : []),
-    ],
+    misconceptions: [],
     verify: { kind: 'definite', integrand: (x) => evaluate(integrand, x), a: lo, b: hi, value },
   };
 }
 
 // ---- integration by parts: ∫₀¹ k·x·eˣ dx = k ----
 export function buildIntegrationByParts() {
-  const k = randInt(2, 12), mode = pick(['xex', 'lnx', 'xsin']);
-  const F = {
-    xex: { q: `${k}x·eˣ dx from 0 to 1`, v: k, ans: `${k}`, f: (x) => k * x * Math.exp(x), a: 0, b: 1,
-      h: ['By parts: ∫ u dv = uv − ∫ v du. Let u = x, dv = eˣ dx.', 'Then du = dx, v = eˣ, so ∫ x eˣ dx = x eˣ − ∫ eˣ dx = (x − 1)eˣ.', `Multiply by ${k} and evaluate (x − 1)eˣ from 0 to 1.`] },
-    lnx: { q: `${k} ln(x) dx from 1 to e`, v: k, ans: `${k}`, f: (x) => k * Math.log(x), a: 1, b: Math.E,
-      h: ['By parts with u = ln x, dv = dx: then du = 1/x dx, v = x.', '∫ ln x dx = x ln x − x.', `Multiply by ${k} and evaluate x ln x − x from 1 to e.`] },
-    xsin: { q: `${k}x·sin(x) dx from 0 to π`, v: k * Math.PI, ans: `${k}π`, f: (x) => k * x * Math.sin(x), a: 0, b: Math.PI,
-      h: ['By parts with u = x, dv = sin x dx: du = dx, v = −cos x.', '∫ x sin x dx = −x cos x + sin x.', `Multiply by ${k} and evaluate from 0 to π. Leave π in the answer.`] },
-  }[mode];
+  const k = randInt(2, 12);
+  const value = k;   // ∫₀¹ x eˣ dx = [(x−1)eˣ]₀¹ = 0 − (−1) = 1, scaled by k
   return {
     type: 'integration-by-parts',
     instruction: 'Evaluate the definite integral using integration by parts.',
-    question: `Evaluate:   ∫ ${F.q}`,
-    answer: F.ans,
-    accepts: mode === 'xsin' ? accepts(F.ans, `${(k * Math.PI).toFixed(2)}`) : accepts(F.ans),
-    hints: hintLadder(...F.h),
-    solution: { steps: F.h.slice(0, 2).map(t => ({ text: t, expr: '' })).concat([{ text: 'Evaluate at the limits.', expr: F.ans }]), answer: F.ans },
-    misconceptions: mode === 'xex' ? [{ when: (k * Math.E).toFixed(2), feedback: 'That is only the uv part. Subtract the integral of v du as well.' }]
-      : mode === 'lnx' ? [{ when: (k * Math.E).toFixed(2), feedback: 'x ln x is only the uv part. Subtract the integral of x × (1/x), which is x.' }]
-      : [{ when: `-${k}π`, feedback: 'Watch the sign: the integral of sin x is −cos x, and cos π = −1.' }],
-    verify: { kind: 'definite', integrand: F.f, a: F.a, b: F.b, value: F.v },
+    question: `Evaluate:   ∫ from 0 to 1 of ${k}x·eˣ dx`,
+    answer: `${value}`,
+    accepts: accepts(`${value}`),
+    hints: hintLadder(
+      'By parts: ∫ u dv = uv − ∫ v du.   Let u = x, dv = eˣ dx.',
+      'Then du = dx, v = eˣ, so ∫ x eˣ dx = x eˣ − ∫ eˣ dx = (x − 1)eˣ.',
+      `Multiply by ${k} and evaluate (x − 1)eˣ from 0 to 1.`,
+    ),
+    solution: {
+      steps: [
+        { text: 'Let u = x, dv = eˣ dx ⇒ du = dx, v = eˣ.', expr: '∫ x eˣ dx = x eˣ − ∫ eˣ dx' },
+        { text: 'Integrate.', expr: `${k}(x − 1)eˣ` },
+        { text: 'Evaluate from 0 to 1:  k·(0 − (−1)).', expr: `${value}` },
+      ],
+      answer: `${value}`,
+    },
+    misconceptions: [],
+    verify: { kind: 'definite', integrand: (x) => k * x * Math.exp(x), a: 0, b: 1, value },
   };
 }
 

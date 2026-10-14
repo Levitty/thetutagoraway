@@ -98,6 +98,48 @@ export const hintLadder = (...hints) => hints.filter(Boolean);
 
 // Render a {text, expr} solution step as a single human string (the form the
 // current lesson UI renders for worked examples and reveals).
+export const columnOpModel = (a, b, sub, { showResult = false } = {}) => ({
+  type: 'column-op',
+  data: { a, b, op: sub ? '−' : '+', showResult },
+});
+
+export const columnSteps = (a, b, sub) => {
+  const NAMES = ['ones', 'tens', 'hundreds', 'thousands', 'ten-thousands'];
+  const da = String(a).split('').reverse().map(Number);
+  const db = String(b).split('').reverse().map(Number);
+  const n = Math.max(da.length, db.length);
+  const steps = [];
+  if (!sub) {
+    let carry = 0;
+    for (let i = 0; i < n; i++) {
+      const x = da[i] || 0, y = db[i] || 0, s = x + y + carry;
+      const carried = carry;
+      carry = s >= 10 ? 1 : 0;
+      steps.push({
+        text: `${NAMES[i][0].toUpperCase() + NAMES[i].slice(1)}: ${x} + ${y}${carried ? ` + ${carried} carried` : ''} = ${s}${s >= 10 ? ` — write ${s % 10}, carry 1` : ''}.`,
+        expr: `${s >= 10 ? `${s % 10}, carry 1` : s}`,
+      });
+    }
+    if (carry) steps.push({ text: 'The final carry becomes the leading digit.', expr: '1' });
+  } else {
+    let borrow = 0;
+    for (let i = 0; i < n; i++) {
+      let x = (da[i] || 0) - borrow;
+      const y = db[i] || 0;
+      if (x < y) {
+        steps.push({
+          text: `${NAMES[i][0].toUpperCase() + NAMES[i].slice(1)}: ${x} is less than ${y} — borrow a ${NAMES[i + 1] ? NAMES[i + 1].slice(0, -1) : 'ten'}, making it ${x + 10}. ${x + 10} − ${y} = ${x + 10 - y}.`,
+          expr: `${x + 10} − ${y} = ${x + 10 - y}`,
+        });
+        x += 10; borrow = 1;
+      } else {
+        steps.push({ text: `${NAMES[i][0].toUpperCase() + NAMES[i].slice(1)}: ${x} − ${y} = ${x - y}.`, expr: `${x - y}` });
+        borrow = 0;
+      }
+    }
+  }
+  return steps;
+};
 export const stepText = (s) =>
   (typeof s === 'string') ? s : (s.expr ? `${s.text}   →   ${s.expr}` : s.text);
 

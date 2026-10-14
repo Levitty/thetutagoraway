@@ -88,7 +88,7 @@ export function buildReflectPoint() {
     hints: hintLadder(
       `Reflecting in the ${axis}-axis flips the ${axis === 'x' ? 'y' : 'x'}-coordinate's sign.`,
       axis === 'x' ? 'The x stays the same; the y becomes its opposite.' : 'The y stays the same; the x becomes its opposite.',
-      `So ${coordStr(a, b)} → ${coordStr(target.x, target.y)}.`,
+      `Change just one sign of ${coordStr(a, b)} — which one?`,
     ),
     steps: [
       { text: `Reflection in the ${axis}-axis negates the ${axis === 'x' ? 'y' : 'x'}-coordinate.`, expr: `${axis === 'x' ? `y: ${b} → ${-b}` : `x: ${a} → ${-a}`}` },
@@ -115,7 +115,7 @@ export function buildTranslatePoint() {
     hints: hintLadder(
       'A translation adds the vector to the coordinates.',
       `Add ${dx} to x and ${dy} to y.`,
-      `${coordStr(a, b)} + (${dx}, ${dy}) = ${coordStr(tx, ty)}.`,
+      `Work out (${a} + ${dx}, ${b} + ${dy}).`,
     ),
     steps: [
       { text: 'Add the translation vector to the point.', expr: `(${a}+${dx}, ${b}+${dy})` },
