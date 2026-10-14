@@ -294,7 +294,9 @@ const GRADE_8 = {
   // Numbers
   G8_INDICES_INTRO: skill('G8_INDICES_INTRO', 'Introduction to Indices', 8, S.NUM, { pre: ['G7_SQUARES_EXT', 'G7_INTEGERS_MUL_DIV'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms'), cambridge: cam(8, 'Ni', '8Ni.05') } }),
   G8_INDICES_LAWS: skill('G8_INDICES_LAWS', 'Laws of Indices', 8, S.NUM, { pre: ['G8_INDICES_INTRO'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms'), cambridge: cam(8, 'Ni', '8Ni.05') } }),
-  G8_STANDARD_FORM: skill('G8_STANDARD_FORM', 'Standard Form (Scientific Notation)', 8, S.NUM, { pre: ['G8_INDICES_INTRO', 'G7_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Indices and Logarithms'), cambridge: cam(9, 'Ni', '9Ni.03') } }),
+  // KICD lists standard form under Grade 8 Decimals (1.3f). The Grade 9 Indices
+  // and Logarithms outcomes never mention it.
+  G8_STANDARD_FORM: skill('G8_STANDARD_FORM', 'Standard Form (Scientific Notation)', 8, S.NUM, { pre: ['G8_INDICES_INTRO', 'G7_DECIMALS_MUL'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Decimals'), cambridge: cam(9, 'Ni', '9Ni.03') } }),
   G8_CUBES_CUBE_ROOTS: skill('G8_CUBES_CUBE_ROOTS', 'Cubes & Cube Roots', 8, S.NUM, { pre: ['G7_SQUARE_ROOTS', 'G8_INDICES_INTRO'], w: 4, curricula: { cbc: cbc(9, 'Numbers', 'Cubes and Cube Roots'), cambridge: cam(8, 'Ni', '8Ni.07') } }),
   G8_RATIO_PROPORTION: skill('G8_RATIO_PROPORTION', 'Ratio & Proportion (Advanced)', 8, S.NUM, { pre: ['G6_RATIOS', 'G7_FRACTIONS_DIV'], w: 4, curricula: { cbc: cbc(8, 'Numbers', 'Rates, Ratio, Proportions and Percentages'), cambridge: cam(8, 'Nf', '8Nf.10') } }),
   G8_PERCENTAGE_CHANGE: skill('G8_PERCENTAGE_CHANGE', 'Percentage Increase & Decrease', 8, S.NUM, { pre: ['G7_PERCENTAGES'], w: 4, crit: true, curricula: { cbc: cbc(8, 'Numbers', 'Rates, Ratio, Proportions and Percentages'), cambridge: cam(8, 'Nf', '8Nf.05') } }),
@@ -317,7 +319,11 @@ const GRADE_8 = {
   // Geometry
   G8_ANGLE_RELATIONSHIPS: skill('G8_ANGLE_RELATIONSHIPS', 'Angle Relationships (Parallel Lines)', 8, S.GEO, { pre: ['G6_ANGLE_PROPERTIES'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Geometry', 'Angles'), cambridge: cam(7, 'Gg', '7Gg.13') } }),
   G8_POLYGON_ANGLES: skill('G8_POLYGON_ANGLES', 'Angles in Polygons', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES', 'G8_ANGLE_RELATIONSHIPS'], w: 4, curricula: { cbc: cbc(7, 'Geometry', 'Angles'), cambridge: cam(9, 'Gg', '9Gg.07') } }),
-  G8_CONGRUENCE: skill('G8_CONGRUENCE', 'Congruent Triangles', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES'], w: 4, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement'), cambridge: cam(7, 'Gg', '7Gg.02') } }),
+  // Congruence appears in none of the KICD Junior School designs (Grade 7, 8 or
+  // 9) — it is a Cambridge / 8-4-4 topic. It stays in the graph because
+  // similarity depends on it, but a CBC learner meets it as enrichment rather
+  // than as syllabus she is accountable for.
+  G8_CONGRUENCE: skill('G8_CONGRUENCE', 'Congruent Triangles', 8, S.GEO, { pre: ['G6_TRIANGLE_PROPERTIES'], w: 4, curricula: { cbc: cbcEnr('Geometry'), cambridge: cam(7, 'Gg', '7Gg.02') } }),
   G8_SIMILARITY: skill('G8_SIMILARITY', 'Similar Figures', 8, S.GEO, { pre: ['G8_CONGRUENCE', 'G8_RATIO_PROPORTION'], w: 4, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Similarity and Enlargement'), cambridge: cam(9, 'Gp') } }),
   G8_SCALE_DRAWING: skill('G8_SCALE_DRAWING', 'Scale Drawing (Simple Scales)', 8, S.GEO, { pre: ['G8_RATIO_PROPORTION', 'G7_LENGTH_CONV'], w: 3, curricula: { cbc: cbc(8, 'Geometry', 'Scale Drawing') } }),
   G8_TRANSFORMATIONS_INTRO: skill('G8_TRANSFORMATIONS_INTRO', 'Transformations (Reflection, Rotation)', 8, S.GEO, { pre: ['G8_COORDINATES', 'G6_SYMMETRY'], w: 3, curricula: { cbc: cbcEnr('Geometry'), cambridge: cam(8, 'Gp', '8Gp.05') } }),

@@ -245,7 +245,7 @@ export function buildTurnAmount() {
     const common = {
       type: 'turn-name', tapChoices: true, choices: [...TURNS],
       answer: value, accepts: turnAccepts(value),
-      hints: hintLadder('A full turn goes all the way round. A half turn faces the opposite way.', 'A quarter turn is one right angle, like 12 to 3 on a clock.'),
+      hints: hintLadder('Picture where she ends up facing, compared with where she began.', 'Count how many right angles she turns through — one, two, or all four.'),
       misconceptions: [], verify: { kind: 'text', value },
     };
     if (coin()) {
@@ -285,7 +285,7 @@ export function buildTurnPractice() {
         question: `${name} faces the door and makes ${turn}. What does ${pr} face now?`,
         picture: { kind: 'room', quarters: 0, dir },
         answer: value, accepts: accepts(value, `the ${value}`), choices: ROOM.slice(1),
-        hints: hintLadder('Stand up and try it: face the door, then turn.', 'Clockwise from the door is towards the cupboard.'),
+        hints: hintLadder('Stand up and try it: face the door, then turn.', 'The picture shows where everything is. Put a finger on the door, then move it round the way the question says.', 'A quarter turn moves one place round; a half turn moves two.'),
         solution: { steps: [{ text: `${turn[0].toUpperCase()}${turn.slice(1)} from the door ends facing the ${value}.`, expr: value }], answer: value },
         misconceptions: [], verify: { kind: 'text', value },
       };

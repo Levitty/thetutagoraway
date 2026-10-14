@@ -352,7 +352,7 @@ function buildShapeProperties({ shapes }) {
       const wrong = []; while (wrong.length < 2 && names.length) wrong.push(names.splice(randInt(0, names.length - 1), 1)[0]);
       return { type: 'shape-name', instruction: 'Name the shape.', question: q,
         answer: value, accepts: accepts(value, `a ${value}`), choices: [value, ...wrong],
-        hints: hintLadder('Count the sides and corners.', 'Squares have 4 equal sides; rectangles have 2 long and 2 short.'),
+        hints: hintLadder('Count the sides and corners.', 'Then ask whether all the sides are the same length, or whether some are longer than others.'),
         solution: { steps: [{ text: `That is a ${value}.`, expr: value }], answer: value },
         misconceptions: [], verify: { kind: 'text', value } };
     }

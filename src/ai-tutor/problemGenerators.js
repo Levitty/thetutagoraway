@@ -101,7 +101,7 @@ const LINES_G6 = [
 const linesQuestion = (bank) => {
   const t = pick(bank);
   return { question: t.q, answer: t.a, ...(t.acc ? { accepts: t.acc } : {}),
-    hint: 'Parallel lines run side by side and never meet (like rails). Perpendicular lines cross at a right angle (like a + sign).' };
+    hint: 'One of the two words is for lines that stay the same distance apart for ever, like rails; the other is for lines that meet at a square corner, like a + sign. Decide which the question describes.' };
 };
 const capacityQuestion = (wordProblems) => pick([
   () => { let l = rand(1, 9) + pick([0, 0.25, 0.5, 0.75]); if (l === 1) l = 1.5; return { question: `How many millilitres are in ${l} litres?`, answer: String(Math.round(l * 1000)), hint: '1 litre = 1000 ml, so multiply the litres by 1000.' }; },

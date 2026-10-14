@@ -20,6 +20,16 @@ export function normalizeMath(str) {
   s = s.replace(/\bremainder\b/g, 'r');            // "5 remainder 2" → "5 r 2"
   s = s.replace(/\.\s*$/, '');                     // trailing full stop
   s = s.replace(/\s+/g, '');             // drop spaces
+  // Phone keyboards have no √ or π, so a child who knows the answer is 2√5 has
+  // no way to type it. Accept the words instead. Both sides are normalised, so
+  // authored answers written with the glyphs still match. Ported from the
+  // content branch, where live testing turned it up: "they can't find symbols
+  // like the square root one". Powers are left alone — the superscript rule
+  // above already folds x² and x^2 together, in the other direction.
+  s = s.replace(/cuberoot(of)?/g, '∛');
+  s = s.replace(/(squareroot(of)?|sqrt|root)/g, '√');
+  s = s.replace(/√\((\d+)\)/g, '√$1');          // sqrt(5) → √5
+  s = s.replace(/(^|\d)pi(?![a-z])/g, '$1π');   // 2pi → 2π
   while (/(\d),(\d{3})(?!\d)/.test(s)) s = s.replace(/(\d),(\d{3})(?!\d)/, '$1$2'); // 1,200 and 8,200,000 (keep value commas)
   s = s.replace(/\(([a-z])\)/g, '$1');   // (x) → x
   s = s.replace(/(\d)[*×·]([a-z])/g, '$1$2'); // 2*x → 2x
