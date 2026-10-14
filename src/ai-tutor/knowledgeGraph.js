@@ -105,6 +105,13 @@ const LOWER_PRIMARY = {
 
   // ---- Grade 4 ----
   G4_PLACE_VALUE: skill('G4_PLACE_VALUE', 'Place Value (to 10,000)', 4, S.NUM, { pre: ['G3_COUNTING'], w: 2, crit: true, curricula: { cbc: cbc(4, 'Numbers', 'Whole Numbers') } }),
+  // KICD Grade 4, 1.1 Whole Numbers runs to 20 lessons and ten outcomes. Place
+  // value is outcome (a); these are (b) through (j), which had no skill at all.
+  G4_NUMBER_WORDS: skill('G4_NUMBER_WORDS', 'Reading & Writing Numbers', 4, S.NUM, { pre: ['G4_PLACE_VALUE'], w: 2, curricula: { cbc: cbc(4, 'Numbers', 'Whole Numbers') } }),
+  G4_ORDER_ROUND: skill('G4_ORDER_ROUND', 'Ordering & Rounding to the Nearest Ten', 4, S.NUM, { pre: ['G4_PLACE_VALUE'], w: 2, curricula: { cbc: cbc(4, 'Numbers', 'Whole Numbers') } }),
+  G4_FACTORS_MULTIPLES: skill('G4_FACTORS_MULTIPLES', 'Factors & Multiples', 4, S.NUM, { pre: ['G4_MULTIPLY'], w: 2, curricula: { cbc: cbc(4, 'Numbers', 'Whole Numbers') } }),
+  G4_ODD_EVEN: skill('G4_ODD_EVEN', 'Even & Odd Numbers', 4, S.NUM, { pre: ['G4_PLACE_VALUE'], w: 1, curricula: { cbc: cbc(4, 'Numbers', 'Whole Numbers') } }),
+  G4_ROMAN_NUMERALS: skill('G4_ROMAN_NUMERALS', 'Roman Numerals', 4, S.NUM, { pre: ['G4_PLACE_VALUE'], w: 1, curricula: { cbc: cbc(4, 'Numbers', 'Whole Numbers') } }),
   G4_ADD: skill('G4_ADD', 'Addition (up to 4 digits)', 4, S.NUM, { pre: ['G3_ADD', 'G4_PLACE_VALUE'], w: 2, curricula: { cbc: cbc(4, 'Numbers', 'Addition') } }),
   G4_SUB: skill('G4_SUB', 'Subtraction (up to 4 digits)', 4, S.NUM, { pre: ['G3_SUB', 'G4_PLACE_VALUE'], w: 2, curricula: { cbc: cbc(4, 'Numbers', 'Subtraction') } }),
   G4_MULTIPLY: skill('G4_MULTIPLY', 'Multiplication (2-digit)', 4, S.NUM, { pre: ['G3_MULTIPLY'], w: 2, crit: true, curricula: { cbc: cbc(4, 'Numbers', 'Multiplication') } }),
@@ -141,6 +148,9 @@ const GRADE_5 = {
   G5_MULTIPLICATION: skill('G5_MULTIPLICATION', 'Multiplication (3-digit × 2-digit)', 5, S.NUM, { pre: ['G4_MULTIPLY'], w: 3, crit: true, min: 5, curricula: { cbc: cbc(5, 'Numbers', 'Multiplication') } }),
   G5_DIVISION: skill('G5_DIVISION', 'Division (3-digit by 2-digit)', 5, S.NUM, { pre: ['G4_DIVIDE'], w: 3, crit: true, min: 5, curricula: { cbc: cbc(5, 'Numbers', 'Division') } }),
   G5_DIVISIBILITY: skill('G5_DIVISIBILITY', 'Divisibility Tests (2, 5, 10)', 5, S.NUM, { pre: ['G5_DIVISION'], w: 3, curricula: { cbc: cbc(5, 'Numbers', 'Whole Numbers') } }),
+  // KICD Grade 5, 1.1 d: round to the nearest hundred and thousand. Before
+  // this, rounding first appeared at Grade 7 — three years late.
+  G5_ROUNDING: skill('G5_ROUNDING', 'Rounding to the Nearest Hundred & Thousand', 5, S.NUM, { pre: ['G4_ORDER_ROUND', 'G5_PLACE_VALUE'], w: 3, curricula: { cbc: cbc(5, 'Numbers', 'Whole Numbers') } }),
   G5_LCM_HCF: skill('G5_LCM_HCF', 'Lowest Common Multiple & Highest Common Factor', 5, S.NUM, { pre: ['G5_FACTORS', 'G5_MULTIPLES'], w: 4, crit: true, curricula: { cbc: cbc(5, 'Numbers', 'Whole Numbers') } }),
   G5_FACTORS: skill('G5_FACTORS', 'Factors of a Number', 5, S.NUM, { pre: ['G5_MULTIPLICATION', 'G5_DIVISION'], w: 2, curricula: { cbc: cbc(5, 'Numbers', 'Whole Numbers') } }),
   G5_MULTIPLES: skill('G5_MULTIPLES', 'Multiples of a Number', 5, S.NUM, { pre: ['G5_MULTIPLICATION'], w: 2, curricula: { cbc: cbc(5, 'Numbers', 'Whole Numbers') } }),

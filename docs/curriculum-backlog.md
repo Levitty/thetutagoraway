@@ -109,17 +109,25 @@ fact. The sub-strands it would flag today, for whoever works through them:
 
 | Grade | Sub-strand | Lessons | Skills tagged |
 |---|---|---|---|
-| 4 | Whole Numbers | 20 | 1 (`G4_PLACE_VALUE`) |
-| 5 | Whole Numbers | 20 | 4 |
 | 5 | Length | 12 | 1 (`G5_LENGTH`) |
 | 5 | Capacity | 12 | 1 (`G5_CAPACITY`) |
 | 5 | Mass | 12 | 1 (`G5_MASS`) |
 
-Grade 4 Whole Numbers is the weakest: 20 lessons of the design (place value, rounding, number
-patterns, roman numerals in some editions) behind a single place-value skill. Grade 5's three
-twelve-lesson measurement sub-strands each have one skill carrying a 3–4 rung KP ladder, so the
-*content* is broader than the skill count suggests; the fix there may be splitting skills rather than
-authoring more.
+**Grade 4 Whole Numbers is now closed** (20 lessons, 6 skills). Read against the design's own
+outcome list, nine of its ten outcomes had no skill at all — only (a) place and total value did.
+The rest are now authored: `G4_NUMBER_WORDS` (b, c — reading and writing numbers in symbols to
+10,000 and in words to 1,000), `G4_ORDER_ROUND` (d, e — ordering to 1,000 and rounding to the
+nearest ten), `G4_FACTORS_MULTIPLES` (f, g — factors to 50, multiples to 100), `G4_ODD_EVEN`
+(h, i — even and odd to 100 and the patterns made from them) and `G4_ROMAN_NUMERALS` (j).
+
+Rounding deserves its own note. The design asks for it twice — Grade 4 to the nearest ten (1.1e)
+and Grade 5 to the nearest hundred and thousand (1.1d) — and it did not exist anywhere in the graph
+below `G7_ROUNDING_WHOLE`. A CBC learner met rounding three years after the syllabus introduces it.
+`G4_ORDER_ROUND` and the new `G5_ROUNDING` close that.
+
+Grade 5's three twelve-lesson measurement sub-strands each have one skill carrying a 3–5 rung KP
+ladder — `G5_LENGTH` alone generates five distinct question types — so the *content* is broader than
+the skill count suggests; the fix there may be splitting skills rather than authoring more.
 
 Also noted, not a gap: `G5_TRIANGLES_INTRO` has content but **no** CBC tag, correctly — Grade 5
 Geometry in the design is only 3.1 Lines, 3.2 Angles and 3.3 Three Dimension (3-D) Objects. Triangles
