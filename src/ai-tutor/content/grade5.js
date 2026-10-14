@@ -1016,6 +1016,657 @@ function buildLineRelationships({ withHorizontalVertical = false }) {
 }
 
 // ---------------------------------------------------------------------------
+// Measurement (KICD Grade 5, 2.x) — Grade 4 converts between units; Grade 5
+// does arithmetic WITH them, which is where the difficulty actually is.
+// ---------------------------------------------------------------------------
+
+const MEASURES = {
+  length: { big: 'm', small: 'cm', factor: 100, bigWord: 'metres', smallWord: 'centimetres' },
+  mass: { big: 'kg', small: 'g', factor: 1000, bigWord: 'kilogrammes', smallWord: 'grams' },
+  capacity: { big: 'l', small: 'ml', factor: 1000, bigWord: 'litres', smallWord: 'millilitres' },
+};
+
+const MEASURE_STORIES = {
+  length: {
+    add: (x, y) => `A tailor uses ${x} of cloth for a school dress and ${y} for a shirt. How much cloth is that in all?`,
+    sub: (x, y) => `A rope is ${x} long. ${y} is cut off for a swing. How much rope is left?`,
+    mul: (x, n) => `Each desk is ${x} wide. How wide are ${n} desks placed side by side?`,
+    div: (x, n) => `A plank ${x} long is cut into ${n} equal pieces. How long is each piece?`,
+  },
+  mass: {
+    add: (x, y) => `A sack holds ${x} of maize and another holds ${y}. What is their total mass?`,
+    sub: (x, y) => `A tin of beans has a mass of ${x}. After ${y} is sold, what mass is left?`,
+    mul: (x, n) => `One packet of sugar has a mass of ${x}. What is the mass of ${n} packets?`,
+    div: (x, n) => `${x} of flour is shared equally into ${n} bags. What is the mass of each bag?`,
+  },
+  capacity: {
+    add: (x, y) => `A jerrican holds ${x} of water and a bucket holds ${y}. How much is that altogether?`,
+    sub: (x, y) => `A tank holds ${x} of milk. ${y} is taken to the market. How much milk is left?`,
+    mul: (x, n) => `One bottle holds ${x} of juice. How much do ${n} bottles hold?`,
+    div: (x, n) => `${x} of milk is poured equally into ${n} cans. How much is in each can?`,
+  },
+};
+
+/** Arithmetic on a measurement, answered in the smaller unit (one number). */
+function buildMeasureArithmetic({ kind, ops = ['add', 'sub'] }) {
+  return () => {
+    const u = MEASURES[kind];
+    const op = pick(ops);
+    const fmt = (small) => {
+      const b = Math.floor(small / u.factor), s = small % u.factor;
+      return b ? (s ? `${b} ${u.big} ${s} ${u.small}` : `${b} ${u.big}`) : `${s} ${u.small}`;
+    };
+    let a, b, value, story, steps, hints;
+
+    if (op === 'mul' || op === 'div') {
+      const n = randInt(3, 8);
+      if (op === 'mul') {
+        a = randInt(1, 4) * u.factor + randInt(1, u.factor - 1);
+        value = a * n;
+        story = MEASURE_STORIES[kind].mul(fmt(a), n);
+        steps = [
+          { text: `Change ${fmt(a)} into ${u.smallWord} first.`, expr: `${a} ${u.small}` },
+          { text: `Multiply by ${n}.`, expr: `${a} × ${n} = ${value} ${u.small}` },
+        ];
+        hints = hintLadder(
+          `Mixed units are awkward to multiply — change the whole measurement into ${u.smallWord} first.`,
+          `1 ${u.big} is ${u.factor} ${u.small}, so the ${u.big} part becomes ${u.smallWord} and the two parts join up.`,
+          `Then multiply that single number by ${n}.`);
+      } else {
+        const each = randInt(1, 3) * u.factor + randInt(1, u.factor - 1);
+        a = each * n;
+        value = each;
+        story = MEASURE_STORIES[kind].div(fmt(a), n);
+        steps = [
+          { text: `Change ${fmt(a)} into ${u.smallWord} first.`, expr: `${a} ${u.small}` },
+          { text: `Divide by ${n}.`, expr: `${a} ÷ ${n} = ${value} ${u.small}` },
+        ];
+        hints = hintLadder(
+          `Mixed units are awkward to divide — change the whole measurement into ${u.smallWord} first.`,
+          `1 ${u.big} is ${u.factor} ${u.small}, so the ${u.big} part becomes ${u.smallWord} and the two parts join up.`,
+          `Then share that single number into ${n} equal parts.`);
+      }
+    } else if (op === 'add') {
+      a = randInt(1, 5) * u.factor + randInt(Math.floor(u.factor / 2), u.factor - 1);
+      b = randInt(1, 4) * u.factor + randInt(Math.floor(u.factor / 2), u.factor - 1);
+      value = a + b;                      // the small parts always carry over
+      story = MEASURE_STORIES[kind].add(fmt(a), fmt(b));
+      steps = [
+        { text: `Change both into ${u.smallWord}.`, expr: `${a} ${u.small} and ${b} ${u.small}` },
+        { text: 'Add.', expr: `${a} + ${b} = ${value} ${u.small}` },
+      ];
+      hints = hintLadder(
+        `Add like with like: the ${u.smallWord} go with the ${u.smallWord} and the ${u.bigWord} with the ${u.bigWord}.`,
+        `${u.factor} ${u.small} make 1 ${u.big}, so if the ${u.smallWord} reach ${u.factor} they carry over into the ${u.bigWord}.`,
+        `The simplest way is to change both measurements into ${u.smallWord} and add the two numbers.`);
+    } else {
+      a = randInt(3, 6) * u.factor + randInt(1, Math.floor(u.factor / 2));
+      b = randInt(1, 2) * u.factor + randInt(Math.floor(u.factor / 2) + 1, u.factor - 1);
+      value = a - b;                      // always needs a borrow from the big unit
+      story = MEASURE_STORIES[kind].sub(fmt(a), fmt(b));
+      steps = [
+        { text: `Change both into ${u.smallWord}.`, expr: `${a} ${u.small} and ${b} ${u.small}` },
+        { text: 'Subtract.', expr: `${a} − ${b} = ${value} ${u.small}` },
+      ];
+      hints = hintLadder(
+        `Subtract like from like: ${u.smallWord} from ${u.smallWord}, ${u.bigWord} from ${u.bigWord}.`,
+        `If there are not enough ${u.smallWord} to take from, borrow 1 ${u.big} and turn it into ${u.factor} ${u.small}.`,
+        `The simplest way is to change both measurements into ${u.smallWord} and subtract the two numbers.`);
+    }
+
+    return {
+      type: `g5-${kind}-arith`, instruction: `Give the answer in ${u.smallWord}.`,
+      question: `${story} Give your answer in ${u.smallWord}.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value} ${u.small}`),
+      hints,
+      solution: { steps, answer: `${value}` },
+      misconceptions: [
+        { when: `${Math.floor(value / u.factor)}`, feedback: `That is only the ${u.bigWord} part. The question asks for the whole amount in ${u.smallWord}.` },
+        { when: `${op === 'sub' ? a + b : op === 'add' ? Math.abs(a - b) : value}`,
+          feedback: op === 'sub' ? 'That is the total of the two. The question asks what is left.'
+            : op === 'add' ? 'That is the difference between the two. The question asks for the total.'
+            : 'Check which operation the story needs.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+/** The same measurement written in mixed units — the Grade 5 answer form. */
+function buildMeasureMixedUnits({ kind }) {
+  return () => {
+    const u = MEASURES[kind];
+    const toward = coin() ? 'to-mixed' : 'to-small';
+    const b = randInt(2, 9), s = randInt(1, u.factor - 1);
+    const total = b * u.factor + s;
+    if (toward === 'to-mixed') {
+      const value = `${b} ${u.big} ${s} ${u.small}`;
+      return {
+        type: `g5-${kind}-mixed`, instruction: `Write it in ${u.bigWord} and ${u.smallWord}.`,
+        question: `Write ${total} ${u.small} in ${u.bigWord} and ${u.smallWord}.`,
+        answer: value,
+        accepts: accepts(value, `${b}${u.big}${s}${u.small}`, `${b} ${u.big} and ${s} ${u.small}`),
+        hints: hintLadder(
+          `${u.factor} ${u.small} make 1 ${u.big}.`,
+          `So ask how many whole lots of ${u.factor} fit into the number.`,
+          `Those whole lots are the ${u.bigWord}, and whatever is left over stays as ${u.smallWord}.`),
+        solution: { steps: [
+          { text: `Divide by ${u.factor} to find the whole ${u.bigWord}.`, expr: `${total} ÷ ${u.factor} = ${b} remainder ${s}` },
+          { text: 'The remainder stays in the smaller unit.', expr: value },
+        ], answer: value },
+        misconceptions: [
+          { when: `${b} ${u.big}`, feedback: `The ${s} ${u.small} left over are part of the measurement too — they must be written as well.` },
+        ],
+        verify: { kind: 'text', value },
+      };
+    }
+    return {
+      type: `g5-${kind}-mixed`, instruction: `Write it in ${u.smallWord}.`,
+      question: `Write ${b} ${u.big} ${s} ${u.small} in ${u.smallWord}.`,
+      answer: `${total}`, accepts: accepts(`${total}`, `${total} ${u.small}`),
+      hints: hintLadder(
+        `1 ${u.big} is ${u.factor} ${u.small}.`,
+        `So the ${u.bigWord} have to be turned into ${u.smallWord} first.`,
+        `Then the ${u.smallWord} already there are added on.`),
+      solution: { steps: [
+        { text: `Change the ${u.bigWord}.`, expr: `${b} × ${u.factor} = ${b * u.factor} ${u.small}` },
+        { text: `Add the loose ${u.smallWord}.`, expr: `${b * u.factor} + ${s} = ${total}` },
+      ], answer: `${total}` },
+      misconceptions: [
+        { when: `${b * u.factor}`, feedback: `The ${s} ${u.small} still have to be added on.` },
+        { when: `${b + s}`, feedback: `Converting means MULTIPLYING the ${u.bigWord} by ${u.factor}, not adding the two numbers.` },
+      ],
+      verify: { kind: 'fraction', value: total },
+    };
+  };
+}
+
+/** Kilometres and metres (KICD Grade 5, 2.1 — journeys, not just conversion). */
+function buildKilometres() {
+  return () => {
+    const mode = pick(['journey', 'convert', 'compare']);
+    if (mode === 'journey') {
+      const legs = [randInt(2, 9) * 1000 + randInt(100, 900), randInt(1, 7) * 1000 + randInt(100, 900)];
+      const value = legs[0] + legs[1];
+      const fmt = (m) => `${Math.floor(m / 1000)} km ${m % 1000} m`;
+      return {
+        type: 'g5-km-journey', instruction: 'Give the answer in metres.',
+        question: `A matatu travels ${fmt(legs[0])} from the stage to the market, then ${fmt(legs[1])} to the next town. How far has it travelled in metres?`,
+        answer: `${value}`, accepts: accepts(`${value}`, `${value} m`),
+        hints: hintLadder(
+          '1 km is 1000 m, so both distances can be written as a single number of metres.',
+          'Change each leg of the journey into metres on its own first.',
+          'Then add the two numbers of metres together.'),
+        solution: { steps: [
+          { text: 'Change each leg into metres.', expr: `${legs[0]} m and ${legs[1]} m` },
+          { text: 'Add.', expr: `${legs[0]} + ${legs[1]} = ${value} m` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${Math.floor(value / 1000)}`, feedback: 'That is only the whole kilometres. The question asks for the whole distance in metres.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+    if (mode === 'compare') {
+      const km = randInt(2, 9), m = km * 1000 + pick([-1, 1]) * randInt(50, 900);
+      const value = km * 1000 > m ? `${km} km` : `${m} m`;
+      return {
+        type: 'g5-km-compare', instruction: 'Compare the two distances.',
+        question: `Which is further: ${km} km or ${m} m?`,
+        answer: value, accepts: accepts(value, value.replace(' ', '')),
+        choices: [`${km} km`, `${m} m`],
+        hints: hintLadder(
+          'Two measurements can only be compared once they are in the SAME unit.',
+          '1 km is 1000 m, so the kilometres can be written as metres.',
+          'Then it is just a matter of which number is bigger.'),
+        solution: { steps: [
+          { text: 'Put both in metres.', expr: `${km} km = ${km * 1000} m` },
+          { text: 'Compare.', expr: value },
+        ], answer: value },
+        misconceptions: [
+          { when: km * 1000 > m ? `${m} m` : `${km} km`, feedback: 'Change the kilometres into metres before comparing — a bigger-looking number in a smaller unit can still be less.' },
+        ],
+        verify: { kind: 'text', value },
+      };
+    }
+    const km = randInt(2, 9), m = randInt(1, 999);
+    const value = km * 1000 + m;
+    return {
+      type: 'g5-km-convert', instruction: 'Convert to metres.',
+      question: `Write ${km} km ${m} m in metres.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value} m`),
+      hints: hintLadder(
+        '1 km is 1000 m.',
+        'So the kilometres have to be turned into metres first.',
+        'Then the loose metres are added on.'),
+      solution: { steps: [
+        { text: 'Change the kilometres.', expr: `${km} × 1000 = ${km * 1000} m` },
+        { text: 'Add the loose metres.', expr: `${km * 1000} + ${m} = ${value}` },
+      ], answer: `${value}` },
+      misconceptions: [
+        { when: `${km * 1000}`, feedback: `The ${m} m still have to be added on.` },
+        { when: `${km + m}`, feedback: 'Converting kilometres to metres means multiplying by 1000, not adding.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+/** Duration arithmetic and seconds (KICD Grade 5, 2.5). Grade 4 stops at
+ *  a.m./p.m. and a single duration; Grade 5 adds and subtracts them. */
+function buildTimeArithmetic({ withSeconds = false }) {
+  return () => {
+    const mode = withSeconds ? pick(['add', 'sub', 'seconds', 'minutes']) : pick(['add', 'sub', 'minutes']);
+
+    if (mode === 'seconds') {
+      const m = randInt(3, 15), s = randInt(5, 55);
+      const value = m * 60 + s;
+      return {
+        type: 'g5-time-seconds', instruction: 'Change the time to seconds.',
+        question: `An athlete runs 800 m in ${m} minutes ${s} seconds. How many seconds is that?`,
+        answer: `${value}`, accepts: accepts(`${value}`, `${value} seconds`),
+        hints: hintLadder(
+          'One minute is sixty seconds.',
+          'So the minutes have to be turned into seconds first.',
+          'Then the loose seconds are added on.'),
+        solution: { steps: [
+          { text: 'Change the minutes.', expr: `${m} × 60 = ${m * 60} s` },
+          { text: 'Add the loose seconds.', expr: `${m * 60} + ${s} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${m * 100 + s}`, feedback: 'A minute is 60 seconds, not 100 — multiply the minutes by 60.' },
+          { when: `${m * 60}`, feedback: `The ${s} loose seconds still have to be added on.` },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+
+    if (mode === 'minutes') {
+      const h = randInt(2, 9), m = randInt(5, 55);
+      const value = h * 60 + m;
+      return {
+        type: 'g5-time-minutes', instruction: 'Change the time to minutes.',
+        question: `A journey to Kisumu takes ${h} hours ${m} minutes. How many minutes is that?`,
+        answer: `${value}`, accepts: accepts(`${value}`, `${value} minutes`),
+        hints: hintLadder(
+          'One hour is sixty minutes.',
+          'So the hours have to be turned into minutes first.',
+          'Then the loose minutes are added on.'),
+        solution: { steps: [
+          { text: 'Change the hours.', expr: `${h} × 60 = ${h * 60} min` },
+          { text: 'Add the loose minutes.', expr: `${h * 60} + ${m} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${h * 100 + m}`, feedback: 'An hour is 60 minutes, not 100 — multiply the hours by 60.' },
+          { when: `${h * 60}`, feedback: `The ${m} loose minutes still have to be added on.` },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+
+    // Add or subtract two durations given in hours and minutes.
+    const h1 = randInt(1, 4), m1 = randInt(35, 55);
+    const h2 = randInt(1, 3), m2 = randInt(35, 55);
+    const t1 = h1 * 60 + m1, t2 = h2 * 60 + m2;
+    const fmt = (t) => `${Math.floor(t / 60)} h ${t % 60} min`;
+    if (mode === 'add') {
+      const value = t1 + t2;
+      return {
+        type: 'g5-time-add', instruction: 'Add the two times. Give the answer in hours and minutes.',
+        question: `Wanjiru works ${fmt(t1)} in the morning and ${fmt(t2)} in the afternoon. How long does she work altogether? (Give hours and minutes.)`,
+        answer: fmt(value),
+        accepts: accepts(fmt(value), fmt(value).replace(/ /g, ''),
+          `${Math.floor(value / 60)} hours ${value % 60} minutes`, `${value}`),
+        hints: hintLadder(
+          'Add the minutes to the minutes and the hours to the hours, kept apart.',
+          'Sixty minutes make one more hour, so minutes past sixty have to be carried.',
+          'Carry the extra hour across and leave only what is under sixty in the minutes column.'),
+        solution: { steps: [
+          { text: 'Add the minutes.', expr: `${m1} + ${m2} = ${m1 + m2} min` },
+          { text: 'Carry sixty minutes into the hours.', expr: `${m1 + m2} min = 1 h ${m1 + m2 - 60} min` },
+          { text: 'Add the hours.', expr: fmt(value) },
+        ], answer: fmt(value) },
+        misconceptions: [
+          { when: `${h1 + h2} h ${m1 + m2} min`, feedback: 'The minutes have gone past sixty — sixty of them make another hour, which has to be carried over.' },
+        ],
+        verify: { kind: 'text', value: fmt(value) },
+      };
+    }
+    const big = Math.max(t1, t2) + 60, small = Math.min(t1, t2);
+    const value = big - small;
+    return {
+      type: 'g5-time-sub', instruction: 'Subtract the two times. Give the answer in hours and minutes.',
+      question: `A film lasts ${fmt(big)}. Otieno has already watched ${fmt(small)} of it. How much is left? (Give hours and minutes.)`,
+      answer: fmt(value),
+      accepts: accepts(fmt(value), fmt(value).replace(/ /g, ''),
+        `${Math.floor(value / 60)} hours ${value % 60} minutes`, `${value}`),
+      hints: hintLadder(
+        'Take minutes from minutes and hours from hours, kept apart.',
+        'If there are not enough minutes to take from, borrow one hour and turn it into sixty minutes.',
+        'Another way is to change both times into minutes, subtract, and change back at the end.'),
+      solution: { steps: [
+        { text: 'Change both into minutes.', expr: `${big} min − ${small} min` },
+        { text: 'Subtract.', expr: `${value} min` },
+        { text: 'Change back into hours and minutes.', expr: fmt(value) },
+      ], answer: fmt(value) },
+      misconceptions: [
+        { when: `${Math.floor(big / 60) - Math.floor(small / 60)} h ${Math.abs(big % 60 - small % 60)} min`,
+          feedback: 'Each column was worked on its own. When there are not enough minutes you must borrow an hour, not just take the smaller number from the bigger.' },
+      ],
+      verify: { kind: 'text', value: fmt(value) },
+    };
+  };
+}
+
+/** Volume of cubes and cuboids, and the cm³/ml link (KICD Grade 5, 2.6). */
+function buildVolumeCubic({ withMlLink = false }) {
+  return () => {
+    if (withMlLink && coin()) {
+      const l = randInt(2, 10), w = randInt(2, 10), h = randInt(2, 10);
+      const value = l * w * h;
+      return {
+        type: 'g5-volume-ml', instruction: 'Use the link between cubic centimetres and millilitres.',
+        question: `A closed tin measures ${l} cm by ${w} cm by ${h} cm. How many millilitres of water does it hold when full?`,
+        answer: `${value}`, accepts: accepts(`${value}`, `${value} ml`),
+        hints: hintLadder(
+          'Work out the space inside the tin first: that is length × width × height, in cubic centimetres.',
+          'One cubic centimetre of space holds exactly one millilitre of water.',
+          'So the number of cubic centimetres and the number of millilitres are the same number.'),
+        solution: { steps: [
+          { text: 'Volume of a cuboid.', expr: `${l} × ${w} × ${h} = ${value} cm³` },
+          { text: '1 cm³ holds 1 ml.', expr: `${value} ml` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${l + w + h}`, feedback: 'Volume multiplies the three measurements; adding them gives nothing useful.' },
+          { when: `${value * 1000}`, feedback: '1 cm³ is 1 ml, not 1 litre — the number does not change when cm³ becomes ml.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+    const cube = coin();
+    const l = randInt(3, 12), w = cube ? l : randInt(3, 12), h = cube ? l : randInt(3, 12);
+    const value = l * w * h;
+    return {
+      type: 'g5-volume', instruction: 'Find the volume in cubic centimetres.',
+      question: cube
+        ? `Find the volume of a cube of side ${l} cm.`
+        : `A matchbox measures ${l} cm long, ${w} cm wide and ${h} cm high. Find its volume in cubic centimetres.`,
+      answer: `${value}`, accepts: accepts(`${value}`, `${value} cm³`, `${value} cm3`),
+      hints: hintLadder(
+        'Volume is the space inside, measured in cubes of 1 cm each way.',
+        'One layer of those cubes covers length × width.',
+        'Then count how many such layers are stacked up — that is the height.'),
+      solution: { steps: [
+        { text: 'One layer.', expr: `${l} × ${w} = ${l * w} cubes` },
+        { text: `There are ${h} layers.`, expr: `${l * w} × ${h} = ${value} cm³` },
+      ], answer: `${value}` },
+      misconceptions: [
+        { when: `${l + w + h}`, feedback: 'Volume multiplies the three measurements — it does not add them.' },
+        { when: `${l * w}`, feedback: 'That is the area of one face. Volume needs the height as well, to count the layers.' },
+        ...(cube ? [{ when: `${l * 6}`, feedback: 'A cube has six faces, but volume is about the space inside, not the faces — multiply the side by itself three times.' }] : []),
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Statistics (KICD Grade 5, 5.1) — nought out of three authored.
+// ---------------------------------------------------------------------------
+
+const DATA_SETS = [
+  { label: 'the fruits sold at the school gate', keys: ['Mangoes', 'Bananas', 'Oranges', 'Avocados'], noun: 'fruits' },
+  { label: 'the vehicles counted at the junction', keys: ['Matatus', 'Lorries', 'Boda bodas', 'Cars'], noun: 'vehicles' },
+  { label: 'the trees planted by each class', keys: ['Grade 4', 'Grade 5', 'Grade 6', 'Grade 7'], noun: 'trees' },
+  { label: 'the bags of maize harvested each week', keys: ['Week 1', 'Week 2', 'Week 3', 'Week 4'], noun: 'bags' },
+];
+
+/** Tally marks into a frequency table (KICD Grade 5, 5.1). */
+function buildTally() {
+  return () => {
+    const set = pick(DATA_SETS);
+    const counts = set.keys.map(() => randInt(4, 23));
+    if (new Set(counts).size !== counts.length) return buildTally()();
+    const tally = (n) => `${'|||| '.repeat(Math.floor(n / 5))}${'|'.repeat(n % 5)}`.trim();
+    const rows = set.keys.map((k, i) => `${k}: ${tally(counts[i])}`).join('   ·   ');
+    const stem = `A tally chart of ${set.label} (each complete group of five is written ||||):   ${rows}.`;
+    const mode = pick(['read', 'total', 'most', 'difference']);
+
+    if (mode === 'read') {
+      const i = randInt(0, set.keys.length - 1);
+      const value = counts[i];
+      return {
+        type: 'tally-read', instruction: 'Turn the tally marks into a number.',
+        question: `${stem}   What is the frequency for ${set.keys[i]}?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'Each stroke stands for one, and a complete group stands for five.',
+          `Find the row for ${set.keys[i]} and count its complete groups of five first.`,
+          'Then count the loose strokes left after the groups, and join the two counts.'),
+        solution: { steps: [
+          { text: 'Count the complete groups of five.', expr: `${Math.floor(value / 5)} groups = ${Math.floor(value / 5) * 5}` },
+          { text: 'Add the loose strokes.', expr: `${Math.floor(value / 5) * 5} + ${value % 5} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${Math.floor(value / 5) + (value % 5)}`, feedback: 'Each complete group is worth FIVE, not one — count the groups in fives before adding the loose strokes.' },
+          { when: `${Math.floor(value / 5) * 5}`, feedback: 'The loose strokes after the last complete group count too.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+    if (mode === 'total') {
+      const value = counts.reduce((a, b) => a + b, 0);
+      return {
+        type: 'tally-total', instruction: 'Give the total frequency.',
+        question: `${stem}   How many ${set.noun} were counted altogether?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'Turn each row of tally marks into a number first, before adding anything.',
+          'A complete group is worth five; loose strokes are worth one each.',
+          'Then add the row frequencies together, checking that no row is left out.'),
+        solution: { steps: [
+          { text: 'Frequencies row by row.', expr: counts.join(', ') },
+          { text: 'Add them.', expr: `${counts.join(' + ')} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${value - counts[counts.length - 1]}`, feedback: 'A row was left out — every row of the chart belongs in the total.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+    if (mode === 'difference') {
+      const hi = Math.max(...counts), lo = Math.min(...counts), value = hi - lo;
+      return {
+        type: 'tally-difference', instruction: 'Compare the longest and shortest rows.',
+        question: `${stem}   How many more ${set.noun} are in the longest row than in the shortest?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'Turn the longest row and the shortest row into numbers first.',
+          '"How many more" compares two frequencies rather than joining them.',
+          'Comparing two amounts like this is a subtraction.'),
+        solution: { steps: [
+          { text: 'Longest and shortest rows.', expr: `${hi} and ${lo}` },
+          { text: 'Find the difference.', expr: `${hi} − ${lo} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${hi + lo}`, feedback: '"How many more" is a comparison — subtract the smaller frequency from the bigger.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+    const value = set.keys[counts.indexOf(Math.max(...counts))];
+    return {
+      type: 'tally-most', instruction: 'Name the commonest item.',
+      question: `${stem}   Which was counted most often?`,
+      answer: value, accepts: accepts(value), choices: set.keys,
+      hints: hintLadder(
+        'The longest row of tally marks is the commonest item.',
+        'Count the complete groups of five in each row before judging — a row with more loose strokes can still be shorter.',
+        'Compare the row frequencies and keep the biggest so far in mind.'),
+      solution: { steps: [
+        { text: 'Frequencies row by row.', expr: counts.join(', ') },
+        { text: 'The biggest names the answer.', expr: value },
+      ], answer: value },
+      misconceptions: [
+        { when: set.keys[counts.indexOf(Math.min(...counts))], feedback: 'That row is the shortest. The question asks which was counted MOST often.' },
+      ],
+      verify: { kind: 'text', value },
+    };
+  };
+}
+
+/** Bar graphs with a SCALE on the axis — Grade 4 reads bars worth one each. */
+function buildScaledBarGraph() {
+  return () => {
+    const set = pick(DATA_SETS);
+    const step = pick([2, 5, 10, 20]);
+    const squares = set.keys.map(() => randInt(2, 9));
+    if (new Set(squares).size !== squares.length) return buildScaledBarGraph()();
+    const vals = squares.map(s => s * step);
+    const rows = set.keys.map((k, i) => `${k}: ${squares[i]} squares`).join(',   ');
+    const stem = `A bar graph of ${set.label} has a vertical axis on which 1 square stands for ${step} ${set.noun}. The bars reach —  ${rows}.`;
+    const mode = pick(['read', 'total', 'difference']);
+
+    if (mode === 'read') {
+      const i = randInt(0, set.keys.length - 1);
+      const value = vals[i];
+      return {
+        type: 'bar-scaled-read', instruction: 'Use the scale to read the bar.',
+        question: `${stem}   How many ${set.noun} does the ${set.keys[i]} bar stand for?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'The scale tells you what ONE square on the axis is worth — the bar is not read off directly.',
+          `Here every single square is worth ${step}, not 1.`,
+          `So the height of the bar in squares has to be combined with the ${step} that each square is worth.`),
+        solution: { steps: [
+          { text: 'One square is worth the scale.', expr: `${step} ${set.noun}` },
+          { text: `The bar is ${squares[i]} squares tall.`, expr: `${squares[i]} × ${step} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${squares[i]}`, feedback: `That is the height in squares. Each square stands for ${step}, so the squares must be multiplied by ${step}.` },
+          { when: `${squares[i] + step}`, feedback: 'The scale multiplies the height; it is not added to it.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+    if (mode === 'total') {
+      const value = vals.reduce((a, b) => a + b, 0);
+      return {
+        type: 'bar-scaled-total', instruction: 'Use the scale, then total.',
+        question: `${stem}   How many ${set.noun} altogether?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'Every bar has to be turned into a real amount using the scale before anything is added.',
+          `One square is worth ${step}, so each bar is its height in squares multiplied by ${step}.`,
+          'Another way: add all the square heights first, then multiply the total by the scale once.'),
+        solution: { steps: [
+          { text: 'Heights in squares.', expr: squares.join(' + ') + ` = ${squares.reduce((a, b) => a + b, 0)}` },
+          { text: 'Multiply by the scale once.', expr: `${squares.reduce((a, b) => a + b, 0)} × ${step} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${squares.reduce((a, b) => a + b, 0)}`, feedback: `That is the total height in squares. Each square stands for ${step} ${set.noun}.` },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+    const hi = Math.max(...vals), lo = Math.min(...vals), value = hi - lo;
+    return {
+      type: 'bar-scaled-difference', instruction: 'Use the scale, then compare.',
+      question: `${stem}   How many more ${set.noun} does the tallest bar stand for than the shortest?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Find the tallest and the shortest bar, and turn both into real amounts using the scale.',
+        `One square is worth ${step}, so each height in squares has to be multiplied by ${step}.`,
+        '"How many more" then asks for the difference between the two amounts.'),
+      solution: { steps: [
+        { text: 'The two bars in real amounts.', expr: `${hi} and ${lo}` },
+        { text: 'Find the difference.', expr: `${hi} − ${lo} = ${value}` },
+      ], answer: `${value}` },
+      misconceptions: [
+        { when: `${(hi - lo) / step}`, feedback: `That is the difference in SQUARES. Each square stands for ${step} ${set.noun}.` },
+        { when: `${hi + lo}`, feedback: '"How many more" is a comparison — subtract, do not add.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+/** Pictographs where one symbol stands for several, including half symbols. */
+function buildPictograph({ halves = false }) {
+  return () => {
+    const set = pick(DATA_SETS);
+    const each = pick([2, 4, 5, 10, 20]);
+    const symbols = set.keys.map(() => (halves && coin() ? randInt(2, 7) + 0.5 : randInt(2, 8)));
+    const vals = symbols.map(s => s * each);
+    if (new Set(vals).size !== vals.length) return buildPictograph({ halves })();
+    const sym = (n) => (Number.isInteger(n) ? `${n} symbols` : `${Math.floor(n)} and a half symbols`);
+    const rows = set.keys.map((k, i) => `${k}: ${sym(symbols[i])}`).join(',   ');
+    const stem = `A pictograph of ${set.label} uses a symbol that stands for ${each} ${set.noun}${halves ? ' (a half symbol stands for half as many)' : ''}. The rows show —  ${rows}.`;
+    const mode = pick(['read', 'total', 'symbols']);
+
+    if (mode === 'symbols') {
+      const n = randInt(3, 9), value = n * each;
+      return {
+        type: 'pictograph-symbols', instruction: 'Work out how many symbols are needed.',
+        question: `On a pictograph of ${set.label}, one symbol stands for ${each} ${set.noun}. How many ${set.noun} would ${n} symbols stand for?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'The key tells you what ONE symbol is worth.',
+          `Here one symbol is worth ${each} ${set.noun}.`,
+          `So the number of symbols has to be combined with the ${each} that each one stands for.`),
+        solution: { steps: [
+          { text: 'One symbol is worth the key.', expr: `${each} ${set.noun}` },
+          { text: `There are ${n} symbols.`, expr: `${n} × ${each} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${n + each}`, feedback: 'The key multiplies the number of symbols; it is not added to it.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+    if (mode === 'read') {
+      const i = randInt(0, set.keys.length - 1);
+      const value = vals[i];
+      return {
+        type: 'pictograph-read', instruction: 'Use the key to read the row.',
+        question: `${stem}   How many ${set.noun} for ${set.keys[i]}?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'The key says what one symbol is worth — the symbols are not counted as ones.',
+          `One whole symbol is worth ${each} ${set.noun}${halves ? `, and a half symbol is worth ${each / 2}` : ''}.`,
+          `So the row's symbols have to be combined with the ${each} each one stands for.`),
+        solution: { steps: [
+          { text: `The ${set.keys[i]} row has ${sym(symbols[i])}.` },
+          { text: 'Multiply by the key.', expr: `${symbols[i]} × ${each} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${symbols[i]}`, feedback: `That is the number of symbols. Each one stands for ${each} ${set.noun}.` },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+    const value = vals.reduce((a, b) => a + b, 0);
+    return {
+      type: 'pictograph-total', instruction: 'Use the key, then total.',
+      question: `${stem}   How many ${set.noun} altogether?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Every row must be turned into a real amount with the key before anything is added.',
+        `One symbol is worth ${each} ${set.noun}${halves ? `, and a half symbol half of that` : ''}.`,
+        'Another way: count all the symbols first, then multiply the total by the key once.'),
+      solution: { steps: [
+        { text: 'Symbols in each row.', expr: symbols.join(' + ') + ` = ${symbols.reduce((a, b) => a + b, 0)}` },
+        { text: 'Multiply by the key once.', expr: `${symbols.reduce((a, b) => a + b, 0)} × ${each} = ${value}` },
+      ], answer: `${value}` },
+      misconceptions: [
+        { when: `${symbols.reduce((a, b) => a + b, 0)}`, feedback: `That is the number of symbols. Each symbol stands for ${each} ${set.noun}.` },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+// ---------------------------------------------------------------------------
 // The Grade 5 content map
 // ---------------------------------------------------------------------------
 
@@ -1088,6 +1739,41 @@ export const GRADE5_CONTENT = {
   G5_LINES:           withKPs([
                         withWorkedExample(buildLineRelationships({ withHorizontalVertical: false })),
                         withWorkedExample(buildLineRelationships({ withHorizontalVertical: true })),
+                      ]),
+
+  // ── Measurement ─────────────────────────────────────────────────────────
+  // Grade 4 converts between units; Grade 5 does arithmetic with them.
+  G5_LENGTH:          withKPs([
+                        withWorkedExample(buildMeasureMixedUnits({ kind: 'length' })),
+                        withWorkedExample(buildMeasureArithmetic({ kind: 'length', ops: ['add', 'sub'] })),
+                        withWorkedExample(buildMeasureArithmetic({ kind: 'length', ops: ['mul', 'div'] })),
+                        withWorkedExample(buildKilometres()),
+                      ]),
+  G5_MASS:            withKPs([
+                        withWorkedExample(buildMeasureMixedUnits({ kind: 'mass' })),
+                        withWorkedExample(buildMeasureArithmetic({ kind: 'mass', ops: ['add', 'sub'] })),
+                        withWorkedExample(buildMeasureArithmetic({ kind: 'mass', ops: ['mul', 'div'] })),
+                      ]),
+  G5_CAPACITY:        withKPs([
+                        withWorkedExample(buildMeasureMixedUnits({ kind: 'capacity' })),
+                        withWorkedExample(buildMeasureArithmetic({ kind: 'capacity', ops: ['add', 'sub'] })),
+                        withWorkedExample(buildMeasureArithmetic({ kind: 'capacity', ops: ['mul', 'div'] })),
+                      ]),
+  G5_TIME:            withKPs([
+                        withWorkedExample(buildTimeArithmetic({ withSeconds: false })),
+                        withWorkedExample(buildTimeArithmetic({ withSeconds: true })),
+                      ]),
+  G5_VOLUME:          withKPs([
+                        withWorkedExample(buildVolumeCubic({ withMlLink: false })),
+                        withWorkedExample(buildVolumeCubic({ withMlLink: true })),
+                      ]),
+
+  // ── Statistics ──────────────────────────────────────────────────────────
+  G5_TALLY:           withWorkedExample(buildTally()),
+  G5_BAR_GRAPHS:      withWorkedExample(buildScaledBarGraph()),
+  G5_PICTOGRAPHS:     withKPs([
+                        withWorkedExample(buildPictograph({ halves: false })),
+                        withWorkedExample(buildPictograph({ halves: true })),
                       ]),
 };
 

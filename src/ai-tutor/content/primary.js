@@ -24,11 +24,11 @@ export const PRIMARY_ALIAS = {
   // Grade 6 additions from the KICD Grade 6 summary (rationalised design)
   G6_TIME: 'G5_TIME',
   G6_3D_OBJECTS: 'G6_VOLUME_CUBOID',
-  // Grade 5 additions from the KICD appendix (volume/capacity/money/3-D).
-  // G5_3D_OBJECTS is authored in grade5.js now: it aliased to
-  // G6_VOLUME_CUBOID, which asks for the volume of a cuboid — a different
-  // skill from naming 3-D objects and counting their faces and edges.
-  G5_VOLUME: 'G6_VOLUME_CUBOID',
+  // G5_3D_OBJECTS and G5_VOLUME are authored in grade5.js now. G5_3D_OBJECTS
+  // aliased to G6_VOLUME_CUBOID, which asks for the volume of a cuboid — a
+  // different skill from naming 3-D objects and counting their faces and
+  // edges. G5_VOLUME shared that alias and so had no cubic-units content of
+  // its own, and nothing on the 1 cm³ = 1 ml link.
   G7_MONEY: 'G8_PERCENTAGE_CHANGE',      // profit/loss/discount = % change
   G7_TEMPERATURE: 'G6_INTEGERS_ADD_SUB', // rises/falls on an integer scale
   G7_ANGLES: 'G8_ANGLE_RELATIONSHIPS',   // angles on transversals/parallels
