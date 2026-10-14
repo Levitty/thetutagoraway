@@ -123,16 +123,21 @@ const MUL_STORIES = [
 
 /** Long multiplication. A 2-digit multiplier splits into tens and ones; a
  *  1-digit multiplier splits the multiplicand into hundreds, tens and ones. */
-function buildLongMul({ minA, maxA, twoDigitB, minB = 3, maxB = 9, story = 0.3 }) {
+function buildLongMul({ minA, maxA, twoDigitB, minB = null, maxB = null, story = 0.3 }) {
+  // The multiplier's range depends on which path we are on, so the defaults
+  // cannot be shared: a two-digit multiplier defaulting to 3–9 can never
+  // satisfy the two-digit filter below, and the loop would never end.
+  const lo = minB ?? (twoDigitB ? 12 : 3);
+  const hi = maxB ?? (twoDigitB ? 99 : 9);
   return () => {
     const a = randInt(minA, maxA);
     let b;
     if (twoDigitB) {
       // A multiplier of 20, 30… hides the ones step, and ×11, ×21 makes it
       // trivial; keep both digits doing real work.
-      do { b = randInt(12, 99); } while (b % 10 < 2);
+      do { b = randInt(lo, hi); } while (b % 10 < 2 || b < 10);
     } else {
-      b = randInt(minB, maxB);
+      b = randInt(lo, hi);
     }
     const value = a * b;
     const asStory = Math.random() < story;
@@ -1684,11 +1689,14 @@ export const GRADE5_CONTENT = {
                         withWorkedExample(buildWideColumnAddSub({ digitsA: 6, digitsB: 6, sub: true, regroup: true })),
                       ]),
   // KP ladder: two-digit × two-digit (the new idea: two partial products) →
-  // three-digit × one-digit → three-digit × two-digit, which is the label.
+  // three-digit × a teens multiplier → three-digit × two-digit, full range.
+  // Every rung keeps a TWO-digit multiplier, because the diagnostic serves
+  // whichever rung the ladder happens to be on and must not credit
+  // "3-digit × 2-digit" off a one-digit multiplier.
   G5_MULTIPLICATION:  withKPs([
                         withWorkedExample(buildLongMul({ minA: 12, maxA: 99, twoDigitB: true })),
-                        withWorkedExample(buildLongMul({ minA: 112, maxA: 999, twoDigitB: false })),
-                        withWorkedExample(buildLongMul({ minA: 112, maxA: 999, twoDigitB: true })),
+                        withWorkedExample(buildLongMul({ minA: 112, maxA: 999, twoDigitB: true, minB: 12, maxB: 19 })),
+                        withWorkedExample(buildLongMul({ minA: 112, maxA: 999, twoDigitB: true, minB: 22, maxB: 99 })),
                       ]),
   // KP ladder: friendly two-digit divisors → the full range → remainders.
   G5_DIVISION:        withKPs([

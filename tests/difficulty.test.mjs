@@ -103,6 +103,20 @@ test('a skill that promises a digit band in its name generates that band', () =>
       faults.push(`${id} "${s.name}" exceeds its own label: generated ${over[0][0]}-digit by ${over[0][1]}-digit (${over.length}/${sides.length} draws)`);
     }
 
+    // A two-sided claim pins BOTH sides on EVERY draw, not just the hardest
+    // one. The diagnostic serves whichever rung of a KP ladder the ladder
+    // happens to be on, so one easy rung is enough to credit the whole skill:
+    // a "3-digit × 2-digit" ladder with a 3-digit × 1-digit rung would let a
+    // learner be credited for long multiplication without ever meeting a
+    // two-digit multiplier. "Up to N digits" makes no such promise, and is
+    // checked only for its ceiling.
+    if (claim.kind === 'pair') {
+      const under = sides.filter(([, small]) => small < claim.small);
+      if (under.length) {
+        faults.push(`${id} "${s.name}" drops below its own label on ${under.length}/${sides.length} draws: ${under[0][0]}-digit by ${under[0][1]}-digit`);
+      }
+    }
+
     const reaches = claim.kind === 'pair'
       ? sides.some(([big, small]) => big === claim.big && small === claim.small)
       : sides.some(([big]) => big === claim.big);
