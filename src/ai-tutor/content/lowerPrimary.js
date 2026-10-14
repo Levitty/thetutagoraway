@@ -650,6 +650,83 @@ function buildLongDiv({ minQ, maxQ }) {
   };
 }
 
+/** 2-digit × 2-digit (KICD Grade 4, 1.4b: "multiply up to a two-digit number
+ *  by two-digit number with and without regrouping"). The ladder stopped at a
+ *  one-digit multiplier, so the two-partial-product method the design asks for
+ *  was never practised at Grade 4 at all. */
+function buildTwoByTwoMul({ minA, maxA, minB, maxB }) {
+  return () => {
+    const a = randInt(minA, maxA);
+    let b;
+    // ×10, ×20… hides the ones step (the tensOnly rung already covers it) and
+    // ×11, ×21 makes the ones step trivial.
+    do { b = randInt(minB, maxB); } while (b % 10 < 2);
+    const value = a * b;
+    const bT = Math.floor(b / 10) * 10, bO = b % 10;
+    return {
+      type: 'mul-2x2', instruction: 'Work out the multiplication.',
+      question: `${a} × ${b} = ?`, answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Split the second number into its tens and its ones, and multiply by each part on its own.',
+        `That means working out ${a} × ${bO} and ${a} × ${bT}.`,
+        'Then add the two answers together — keeping each lined up in its own place-value columns.'),
+      solution: { steps: [
+        { text: `Split ${b} into tens and ones.`, expr: `${bT} + ${bO}` },
+        { text: 'Multiply by the ones.', expr: `${a} × ${bO} = ${a * bO}` },
+        { text: 'Multiply by the tens.', expr: `${a} × ${bT} = ${a * bT}` },
+        { text: 'Add the two partial products.', expr: `${a * bO} + ${a * bT} = ${value}` },
+      ], answer: `${value}` },
+      misconceptions: [
+        { when: `${a * bO + a * (bT / 10)}`, feedback: `The tens row was multiplied as ${bT / 10} instead of ${bT} — that row must shift one column to the left (or be written with a zero in the ones place).` },
+        { when: `${a * bO}`, feedback: 'That is only the ones part of the second number. The tens part still has to be multiplied and added on.' },
+        { when: `${a + b}`, feedback: 'That\'s adding — this is multiplication.' },
+      ],
+      band: { op: 'mul', a, b },
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+/** 2-digit ÷ 1-digit leaving a remainder (KICD Grade 4, 1.5a: "divide up to a
+ *  two-digit number by a one-digit number WITH and without remainder"). Every
+ *  Grade 4 division divided exactly, so remainders were never met. */
+function buildDivWithRemainder({ minTotal, maxTotal }) {
+  return () => {
+    let d, total, r;
+    for (let i = 0; ; i++) {
+      d = randInt(3, 9);
+      total = randInt(minTotal, maxTotal);
+      r = total % d;
+      if (r !== 0 || i > 300) break;
+    }
+    const q = Math.floor(total / d);
+    const spec = pick([
+      `${total} mangoes are shared equally among ${d} children. How many are left over?`,
+      `${total} exercise books are tied into bundles of ${d}. How many books are left over?`,
+      `${total} eggs are packed into trays of ${d}. How many eggs are left over?`,
+      `${total} ÷ ${d} — what is the remainder?`,
+    ]);
+    return {
+      type: 'div-remainder', instruction: 'Divide and give the remainder.',
+      question: spec, answer: `${r}`, accepts: accepts(`${r}`),
+      hints: hintLadder(
+        'Share out as many WHOLE groups as you can first.',
+        `Use the ${d} times table: find the biggest multiple of ${d} that still fits.`,
+        'Whatever is left in your hand after that is the remainder — and it is always smaller than one group.'),
+      solution: { steps: [
+        { text: `The biggest multiple of ${d} that fits.`, expr: `${d} × ${q} = ${d * q}` },
+        { text: 'Take it away to see what is left.', expr: `${total} − ${d * q} = ${r}` },
+      ], answer: `${r}` },
+      misconceptions: [
+        { when: `${q}`, feedback: 'That is the number of whole groups. The question asks how many are LEFT OVER once those groups are made.' },
+        { when: `${d - r}`, feedback: 'That is how many more would be needed to fill another group, not how many are left over.' },
+      ],
+      band: { op: 'div', a: total, b: d, q },
+      verify: { kind: 'fraction', value: r },
+    };
+  };
+}
+
 /** Choose the symbol <, > or = (G6 Inequalities, rationalised design). */
 function buildCompareSymbols({ max }) {
   return () => {
@@ -1234,15 +1311,23 @@ export const LOWER_PRIMARY_CONTENT = {
                        withWorkedExample(buildBandedSub({ maxOperand: 9999, digitsA: 4, digitsB: 3, borrow: false })),
                        withWorkedExample(buildBandedSub({ maxOperand: 9999, digitsA: 4, digitsB: 4, borrow: true })),
                      ]),
-  // KP ladder from the G4 design: teens × small → any 2-digit × 1-digit → tens shortcut.
+  // KICD Grade 4, 1.4 (verified against the design, p.9): (a) 2-digit by
+  // multiples of 10, (b) 2-digit by 2-digit with and without regrouping.
+  // The ladder used to stop at a ONE-digit multiplier, so outcome (b) — the
+  // two-partial-product method — was never practised at Grade 4 at all.
   G4_MULTIPLY:       withKPs([
                        withWorkedExample(buildTwoByOneMul({ minA: 12, maxA: 19, maxB: 5 })),
                        withWorkedExample(buildTwoByOneMul({ minA: 12, maxA: 99, maxB: 9 })),
                        withWorkedExample(buildTwoByOneMul({ minA: 12, maxA: 99, maxB: 9, tensOnly: true })),
+                       withWorkedExample(buildTwoByTwoMul({ minA: 12, maxA: 49, minB: 12, maxB: 29 })),
                      ]),
-  // KP ladder: 2-digit quotients first, then full range long division.
+  // KICD Grade 4, 1.5a (design p.10): "divide up to a two-digit number by a
+  // one-digit number WITH and without remainder". Every Grade 4 division
+  // divided exactly, so remainders were never met; the long-division rungs
+  // (3-digit dividends) stay on as the stretch above the design.
   G4_DIVIDE:         withKPs([
                        withWorkedExample(buildLongDiv({ minQ: 11, maxQ: 30 })),
+                       withWorkedExample(buildDivWithRemainder({ minTotal: 13, maxTotal: 99 })),
                        withWorkedExample(buildLongDiv({ minQ: 31, maxQ: 99 })),
                      ]),
   G4_LETTERS:        withWorkedExample(buildUseOfLetters()),
