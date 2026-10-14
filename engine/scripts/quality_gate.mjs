@@ -139,6 +139,14 @@ function verifyProblem(p) {
     return derived === v.value
       ? { ok: true } : { ok: false, reason: `${v.deg}° is ${derived}, not ${v.value}` };
   }
+  if (v.kind === 'number') {
+    // Plain numeric answer: the stated answer must parse to the verify value.
+    // Children's answers are compared elsewhere; here we only check the content
+    // author's own answer against the number they said it should be.
+    const got = parseFloat(String(p.answer).replace(/[\s,]/g, ''));
+    return Number.isFinite(got) && Math.abs(got - v.value) < EPS
+      ? { ok: true } : { ok: false, reason: `answer ${p.answer} ≠ ${v.value}` };
+  }
   if (v.kind === 'text') {
     // Fact-style answer: the stated answer must match the verify value.
     return v.value != null && String(p.answer).trim().toLowerCase() === String(v.value).trim().toLowerCase()
@@ -181,6 +189,13 @@ function scoreSkill(id) {
   if (has.hints < 2) issues.push(`only ${has.hints} hint(s) (need ≥2)`);
   if (has.variety < VARIETY_MIN) issues.push(`low variety: ${has.variety}/${SAMPLES} distinct`);
   if (verifyFails > 0) issues.push(`${verifyFails}/${SAMPLES} generated answers UNVERIFIED/WRONG`);
+  // A skill that CARRIES a verify hook the checker does not understand was
+  // silently scored as if it had no hook at all, and still printed "verified"
+  // below because an unknown kind records no failure. That is how G4_LETTERS
+  // sat unchecked: it asked for `kind: 'number'`, which nothing implemented.
+  if (sample.verify && verifyChecked === 0 && verifyFails === 0) {
+    issues.push(`verify hook "${sample.verify.kind}" is not implemented — answers NEVER CHECKED`);
+  }
 
   // Weighted score (correctness dominates).
   let score = 0;
@@ -213,7 +228,8 @@ console.log(`\n--- Authored vertical (the strand we're proving) ---`);
 for (const r of authored.sort((a, b) => a.id.localeCompare(b.id))) {
   const mark = r.score >= 85 ? 'PASS' : 'FAIL';
   console.log(`  [${mark}] ${r.score.toString().padStart(3)}  ${r.id.padEnd(22)} ` +
-    `${r.issues.length ? '— ' + r.issues.join('; ') : `verified, ${r.has.variety} variety, ${r.has.hints} hints`}`);
+    `${r.issues.length ? '— ' + r.issues.join('; ')
+      : `${r.has.verified ? 'verified' : 'not verifiable'}, ${r.has.variety} variety, ${r.has.hints} hints`}`);
 }
 
 if (VERBOSE && authored[0]) {
