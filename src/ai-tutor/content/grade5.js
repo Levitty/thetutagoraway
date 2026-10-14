@@ -16,7 +16,7 @@
 // ============================================================================
 
 import {
-  accepts, hintLadder, randInt, pick,
+  accepts, hintLadder, randInt, pick, coin,
   withWorkedExample, withKPs, columnSteps, columnOpModel,
 } from './schema.js';
 
@@ -754,6 +754,268 @@ function buildOneStepEquation({ ops }) {
 }
 
 // ---------------------------------------------------------------------------
+// Geometry (KICD Grade 5, 4.1 Lines · 4.2 Angles · 4.3 Triangles · 4.4 3-D)
+// Grade 5 geometry was nought out of four authored. Angles stopped at
+// acute/right/obtuse (the Grade 4 band); triangles answered "equilateral"
+// whatever was asked, because the legacy generator only ever drew three equal
+// sides; 3-D objects aliased to G6_VOLUME_CUBOID, a different skill entirely.
+// ---------------------------------------------------------------------------
+
+/** Five named angle types — Grade 4 covers three, Grade 5 adds straight and reflex. */
+function buildAngleTypes({ withReflex = true }) {
+  return () => {
+    const kinds = withReflex
+      ? ['acute', 'right', 'obtuse', 'straight', 'reflex']
+      : ['acute', 'right', 'obtuse'];
+    const mode = pick(['measure', 'measure', 'turn']);
+
+    if (mode === 'turn') {
+      const spec = pick([
+        { q: 'A door swings through a quarter turn.', value: 'right' },
+        { q: 'A matatu makes a half turn to head back the way it came.', value: 'straight' },
+        { q: 'A dancer turns three quarters of the way round.', value: 'reflex' },
+        { q: 'A gate opens only a little way, less than a quarter turn.', value: 'acute' },
+        { q: 'A hoe handle is tipped past a quarter turn but not as far as a half turn.', value: 'obtuse' },
+      ].filter(s => kinds.includes(s.value)));
+      return {
+        type: 'angle-type-turn', instruction: 'Name the type of angle.',
+        question: `${spec.q} What type of angle has it turned through?`,
+        answer: spec.value, accepts: accepts(spec.value, `${spec.value} angle`), choices: kinds,
+        hints: hintLadder(
+          'Work out how many degrees the turn is worth first — a quarter turn is 90° and a half turn is 180°.',
+          'Then compare that measure with 90° and with 180°.',
+          'Each band — under 90°, exactly 90°, between 90° and 180°, exactly 180°, over 180° — carries its own name.'),
+        solution: { steps: [
+          { text: 'Turn the description into degrees (quarter = 90°, half = 180°).' },
+          { text: 'Compare with 90° and 180° and name the band.', expr: spec.value },
+        ], answer: spec.value },
+        misconceptions: [
+          { when: spec.value === 'acute' ? 'obtuse' : 'acute', feedback: 'Check against 90°: an angle smaller than a quarter turn and one bigger than it have different names.' },
+        ],
+        verify: { kind: 'text', value: spec.value },
+      };
+    }
+
+    const kind = pick(kinds);
+    const deg = kind === 'acute' ? randInt(12, 88)
+      : kind === 'right' ? 90
+      : kind === 'obtuse' ? randInt(94, 176)
+      : kind === 'straight' ? 180
+      : randInt(190, 350);
+    return {
+      type: 'angle-type', instruction: 'Name the type of angle.',
+      question: pick([
+        `An angle measures ${deg}°. What type of angle is it?`,
+        `What type of angle measures ${deg}°?`,
+        `A roof truss has an angle of ${deg}° at one joint. What type of angle is that?`,
+      ]),
+      answer: kind, accepts: accepts(kind, `${kind} angle`), choices: kinds,
+      hints: hintLadder(
+        'Compare the measure with 90° and with 180°.',
+        'A quarter turn is 90° and a half turn is 180°; those are the two fences to check against.',
+        'Each band — under 90°, exactly 90°, between 90° and 180°, exactly 180°, over 180° — carries its own name.'),
+      solution: { steps: [
+        { text: `Compare ${deg}° with 90° and 180°.` },
+        { text: 'Name the band it falls in.', expr: kind },
+      ], answer: kind },
+      misconceptions: [
+        { when: kind === 'reflex' ? 'obtuse' : 'reflex', feedback: 'An obtuse angle is still less than a half turn (180°); past 180° the angle is reflex.' },
+        { when: kind === 'acute' ? 'obtuse' : 'acute', feedback: 'Check against 90°: below it and above it have different names.' },
+      ],
+      verify: { kind: 'text', value: kind },
+    };
+  };
+}
+
+/** Triangles by sides, then by angles (KICD Grade 5, 4.3). */
+function buildTriangleTypes({ byAngles = false }) {
+  return () => {
+    if (!byAngles) {
+      const kind = pick(['equilateral', 'isosceles', 'scalene']);
+      let s1, s2, s3;
+      if (kind === 'equilateral') { s1 = s2 = s3 = randInt(4, 14); }
+      else if (kind === 'isosceles') {
+        s1 = s2 = randInt(6, 14);
+        do { s3 = randInt(3, 2 * s1 - 1); } while (s3 === s1);
+      } else {
+        // Scalene, and the three must still close into a triangle.
+        for (;;) {
+          s1 = randInt(4, 9); s2 = randInt(5, 12); s3 = randInt(6, 15);
+          if (new Set([s1, s2, s3]).size === 3 && s1 + s2 > s3 && s1 + s3 > s2 && s2 + s3 > s1) break;
+        }
+      }
+      return {
+        type: 'triangle-sides', instruction: 'Name the triangle from its sides.',
+        question: `A triangle has sides ${s1} cm, ${s2} cm and ${s3} cm. What type of triangle is it?`,
+        answer: kind, accepts: accepts(kind, `${kind} triangle`),
+        choices: ['equilateral', 'isosceles', 'scalene'],
+        hints: hintLadder(
+          'Triangles are named by their sides according to how many of the sides are equal.',
+          'Compare the three measurements: count how many of them are the same length.',
+          'All three the same, exactly two the same, and none the same each have their own name.'),
+        solution: { steps: [
+          { text: 'Compare the three side lengths.', expr: `${s1}, ${s2}, ${s3}` },
+          { text: `${kind === 'equilateral' ? 'All three are equal' : kind === 'isosceles' ? 'Exactly two are equal' : 'No two are equal'}.`, expr: kind },
+        ], answer: kind },
+        misconceptions: [
+          { when: kind === 'isosceles' ? 'equilateral' : 'isosceles',
+            feedback: 'Count the equal sides carefully: ALL three equal and exactly TWO equal are different names.' },
+          { when: 'scalene', feedback: 'Scalene means no two sides are the same length — check the measurements again.' },
+        ],
+        verify: { kind: 'text', value: kind },
+      };
+    }
+    const kind = pick(['right-angled', 'acute-angled', 'obtuse-angled']);
+    let a, b, c;
+    if (kind === 'right-angled') { a = 90; b = randInt(20, 69); c = 90 - b; }
+    else if (kind === 'obtuse-angled') { a = randInt(95, 150); b = randInt(10, 180 - a - 10); c = 180 - a - b; }
+    else { for (;;) { a = randInt(50, 85); b = randInt(50, 85); c = 180 - a - b; if (c > 0 && c < 90) break; } }
+    return {
+      type: 'triangle-angles', instruction: 'Name the triangle from its angles.',
+      question: `A triangle has angles ${a}°, ${b}° and ${c}°. What type of triangle is it?`,
+      answer: kind, accepts: accepts(kind, kind.replace('-angled', ''), `${kind} triangle`),
+      choices: ['right-angled', 'acute-angled', 'obtuse-angled'],
+      hints: hintLadder(
+        'Triangles are also named by their angles — look at the BIGGEST angle only.',
+        'Compare that biggest angle with 90°.',
+        'Exactly 90°, less than 90°, and more than 90° each give the triangle a different name.'),
+      solution: { steps: [
+        { text: 'Find the biggest angle.', expr: `${Math.max(a, b, c)}°` },
+        { text: 'Compare it with 90°.', expr: kind },
+      ], answer: kind },
+      misconceptions: [
+        { when: kind === 'acute-angled' ? 'obtuse-angled' : 'acute-angled',
+          feedback: 'Only the BIGGEST angle decides this. An obtuse-angled triangle still has two small angles in it.' },
+      ],
+      verify: { kind: 'text', value: kind },
+    };
+  };
+}
+
+/** Cubes, cuboids and cylinders: name them, then count their parts. */
+const SOLIDS = {
+  cube:     { faces: 6, edges: 12, vertices: 8, desc: 'six square faces, all the same size' },
+  cuboid:   { faces: 6, edges: 12, vertices: 8, desc: 'six rectangular faces, with opposite faces matching' },
+  cylinder: { faces: 2, edges: 2, vertices: 0, desc: 'two circular ends joined by one curved surface' },
+};
+
+function buildSolids({ counting = false }) {
+  return () => {
+    const names = Object.keys(SOLIDS);
+    if (!counting) {
+      const value = pick(names);
+      const s = SOLIDS[value];
+      const everyday = {
+        cube: ['a dice', 'a stock cube', 'a Rubik box with all sides equal'],
+        cuboid: ['a packet of tea leaves', 'a brick', 'an exercise book box'],
+        cylinder: ['a tin of tomato paste', 'a jiko charcoal tin', 'a roller for flattening a pitch'],
+      }[value];
+      const askEveryday = coin();
+      return {
+        type: 'solid-name', instruction: 'Name the 3-D object.',
+        question: askEveryday
+          ? `What is the mathematical name for the shape of ${pick(everyday)}?`
+          : `A 3-D object has ${s.desc}. What is it called?`,
+        answer: value, accepts: accepts(value), choices: names,
+        hints: hintLadder(
+          'Start with the faces: are they all flat, or is one of them curved?',
+          'If the faces are all flat, check whether they are squares or rectangles.',
+          'If a surface curves right round, the ends of the object tell you what it is.'),
+        solution: { steps: [
+          { text: 'Check for a curved surface first, then look at the shape of the flat faces.' },
+          { text: 'Match that against the named objects.', expr: value },
+        ], answer: value },
+        misconceptions: [
+          { when: value === 'cube' ? 'cuboid' : 'cube',
+            feedback: 'Both have six flat faces — the difference is whether every face is a square or some are rectangles.' },
+        ],
+        verify: { kind: 'text', value },
+      };
+    }
+    const name = pick(names);
+    const s = SOLIDS[name];
+    const part = pick(['faces', 'edges', 'vertices']);
+    const value = s[part];
+    const what = part === 'vertices' ? 'vertices (corners)' : part === 'faces' ? 'flat faces' : 'edges';
+    return {
+      type: 'solid-count', instruction: 'Count the parts of the object.',
+      question: `How many ${what} does a ${name} have?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        part === 'faces' ? 'A face is a flat surface you could stand the object on.'
+          : part === 'edges' ? 'An edge is the line where two surfaces meet.'
+          : 'A vertex is a sharp corner where edges come together.',
+        name === 'cylinder'
+          ? 'A cylinder has round ends and one surface that curves all the way round — the curved surface is not a flat face, and it has no sharp corners at all.'
+          : 'Work round the object in an order — top, bottom, then the sides — so nothing is counted twice and nothing is missed.',
+        name === 'cylinder' ? 'Picture a tin: what is flat, what is curved, and where do the surfaces meet?'
+          : 'Picture a box in your hands and count the top and bottom first, then the four sides.'),
+      solution: { steps: [
+        { text: `A ${name} has ${s.desc}.` },
+        { text: `Counting its ${what}.`, expr: `${value}` },
+      ], answer: `${value}` },
+      misconceptions: [
+        { when: `${part === 'faces' ? 4 : part === 'edges' ? 8 : 4}`,
+          feedback: 'The faces, edges and corners on the hidden side of the object count too — work right round it.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+/** Parallel, perpendicular, intersecting, horizontal, vertical (KICD G5 4.1). */
+function buildLineRelationships({ withHorizontalVertical = false }) {
+  return () => {
+    const relational = [
+      { q: 'Two lines run side by side across a page and never meet, however far they are drawn.', value: 'parallel' },
+      { q: 'The two long rails of a railway line stay exactly the same distance apart all the way.', value: 'parallel' },
+      { q: 'Two lines cross each other and make a square corner where they meet.', value: 'perpendicular' },
+      { q: 'The corner of an exercise book is made by two straight edges meeting.', value: 'perpendicular' },
+      { q: 'Two lines cross at a point, but the corners they make are not square ones.', value: 'intersecting' },
+      { q: 'The opposite edges of a ruler are drawn on a page.', value: 'parallel' },
+      { q: 'A goalpost upright meets the crossbar at the top of the goal.', value: 'perpendicular' },
+    ];
+    const orientation = [
+      { q: 'The surface of still water in a basin.', value: 'horizontal' },
+      { q: 'A flagpole standing in the school field.', value: 'vertical' },
+      { q: 'The top edge of a closed door.', value: 'horizontal' },
+      { q: 'A plumb line hanging from a builder\'s hand.', value: 'vertical' },
+      { q: 'A line drawn along the floor of a classroom.', value: 'horizontal' },
+    ];
+    const useOrientation = withHorizontalVertical && coin();
+    const pool = useOrientation ? orientation : relational;
+    const spec = pick(pool);
+    const choices = useOrientation ? ['horizontal', 'vertical'] : ['parallel', 'perpendicular', 'intersecting'];
+    return {
+      type: useOrientation ? 'line-orientation' : 'line-relationship',
+      instruction: useOrientation ? 'Say whether the line is horizontal or vertical.' : 'Name the relationship between the lines.',
+      question: `${spec.q} ${useOrientation ? 'Is that line horizontal or vertical?' : 'What are such lines called?'}`,
+      answer: spec.value, accepts: accepts(spec.value, `${spec.value} lines`), choices,
+      hints: useOrientation
+        ? hintLadder(
+            'Think which way the line lies compared with the ground.',
+            'A line that lies flat, the way a calm water surface does, runs one way; a line that stands straight up and down runs the other.',
+            'Picture the line in the real object and ask: flat like the ground, or upright like a pole?')
+        : hintLadder(
+            'The first question is always whether the two lines ever meet at all.',
+            'If they never meet, that settles it. If they do meet, look at the corner they make.',
+            'A square corner where they cross has its own name; any other crossing has a more general one.'),
+      solution: { steps: [
+        { text: useOrientation ? 'Compare the line with the ground.' : 'Decide whether the lines meet, and if so what corner they make.' },
+        { text: 'Name it.', expr: spec.value },
+      ], answer: spec.value },
+      misconceptions: [
+        { when: useOrientation ? (spec.value === 'horizontal' ? 'vertical' : 'horizontal') : (spec.value === 'parallel' ? 'perpendicular' : 'parallel'),
+          feedback: useOrientation
+            ? 'Horizontal lies flat, like the surface of still water; vertical stands straight up, like a flagpole.'
+            : 'Lines that never meet and lines that cross at a square corner are opposites — check first whether these lines meet at all.' },
+      ],
+      verify: { kind: 'text', value: spec.value },
+    };
+  };
+}
+
+// ---------------------------------------------------------------------------
 // The Grade 5 content map
 // ---------------------------------------------------------------------------
 
@@ -807,6 +1069,25 @@ export const GRADE5_CONTENT = {
                         withWorkedExample(buildOneStepEquation({ ops: ['sub'] })),
                         withWorkedExample(buildOneStepEquation({ ops: ['mul'] })),
                         withWorkedExample(buildOneStepEquation({ ops: ['add', 'sub', 'mul'] })),
+                      ]),
+
+  // ── Geometry ────────────────────────────────────────────────────────────
+  // Grade 4 classifies acute/right/obtuse; Grade 5 adds straight and reflex.
+  G5_ANGLES_INTRO:    withKPs([
+                        withWorkedExample(buildAngleTypes({ withReflex: false })),
+                        withWorkedExample(buildAngleTypes({ withReflex: true })),
+                      ]),
+  G5_TRIANGLES_INTRO: withKPs([
+                        withWorkedExample(buildTriangleTypes({ byAngles: false })),
+                        withWorkedExample(buildTriangleTypes({ byAngles: true })),
+                      ]),
+  G5_3D_OBJECTS:      withKPs([
+                        withWorkedExample(buildSolids({ counting: false })),
+                        withWorkedExample(buildSolids({ counting: true })),
+                      ]),
+  G5_LINES:           withKPs([
+                        withWorkedExample(buildLineRelationships({ withHorizontalVertical: false })),
+                        withWorkedExample(buildLineRelationships({ withHorizontalVertical: true })),
                       ]),
 };
 
