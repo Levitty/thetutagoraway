@@ -48,6 +48,7 @@ function buildBandedAdd({ maxOperand, maxTotal, minTotal = 0, digitsA = null, di
       solution: { steps: [{ text: maxOperand <= 9 ? `Count on: start at ${a}, count up ${b}.` : 'Add column by column from the ones.', expr: `${a} + ${b} = ${value}` }], answer: `${value}` },
       misconceptions: [{ when: `${Math.abs(a - b)}`, feedback: 'That is the difference — this question asks for the total (add, don\'t subtract).' }],
       visual: maxOperand <= 9 ? { type: 'number_line', data: { from: 0, to: 20, start: a, jump: b } } : undefined,
+      band: { op: 'add', a, b },
       verify: { kind: 'fraction', value },
     };
   };
@@ -74,6 +75,7 @@ function buildBandedSub({ maxOperand, digitsA = null, digitsB = null, borrow = n
         `Start at ${a} and count back ${b}.`),
       solution: { steps: [{ text: maxOperand <= 9 ? `Count back: start at ${a}, go down ${b}.` : 'Subtract column by column from the ones.', expr: `${a} − ${b} = ${value}` }], answer: `${value}` },
       misconceptions: [{ when: `${a + b}`, feedback: 'That is the total — this question asks what is left (subtract, don\'t add).' }],
+      band: { op: 'sub', a, b },
       verify: { kind: 'fraction', value },
     };
   };
@@ -93,6 +95,7 @@ function buildBandedMul({ tables, maxFactor = 10, asRepeatedAddition = false }) 
         solution: { steps: [{ text: `${n} groups of ${t} = ${n} × ${t}.`, expr: `${value}` }], answer: `${value}` },
         misconceptions: [{ when: `${t + n}`, feedback: 'Don\'t add the two numbers — count ALL the groups.' }],
         visual: { type: 'array_dots', data: { rows: n, cols: t, groupByRow: true } },
+        band: { op: 'mul', a: t, b: n },
         verify: { kind: 'fraction', value },
       };
     }
@@ -103,6 +106,7 @@ function buildBandedMul({ tables, maxFactor = 10, asRepeatedAddition = false }) 
       solution: { steps: [{ text: `Skip-count in ${t}s: ${Array.from({ length: Math.min(n, 5) }, (_, i) => t * (i + 1)).join(', ')}…`, expr: `${t} × ${n} = ${value}` }], answer: `${value}` },
       misconceptions: [{ when: `${t + n}`, feedback: 'That\'s adding — multiplication means repeated groups.' }],
       visual: { type: 'array_dots', data: { rows: t, cols: n, groupByRow: true } },
+      band: { op: 'mul', a: t, b: n },
       verify: { kind: 'fraction', value },
     };
   };
@@ -122,6 +126,7 @@ function buildBandedDiv({ divisors, maxQuotient = 10, sharing = false }) {
       solution: { steps: [{ text: `${d} × ${q} = ${total}, so ${total} ÷ ${d} = ${q}.`, expr: `${q}` }], answer: `${q}` },
       misconceptions: [{ when: `${total - d}`, feedback: 'Division is not subtraction — it asks how many equal groups fit.' }],
       visual: { type: 'array_dots', data: { rows: d, cols: q, groupByRow: true } },
+      band: { op: 'div', a: total, b: d, q },
       verify: { kind: 'fraction', value: q },
     };
   };
@@ -621,6 +626,7 @@ function buildTwoByOneMul({ minA, maxA, maxB, tensOnly = false }) {
         tensOnly ? `${a / 10} × ${b} = ${a / 10 * b}, so ${a} × ${b} = ${value}.` : `(${Math.floor(a / 10) * 10} × ${b}) + (${a % 10} × ${b}) = ?`),
       solution: { steps: [{ text: tensOnly ? 'Multiply the tens, then append the zero.' : 'Multiply tens, multiply ones, then add.', expr: `${a} × ${b} = ${value}` }], answer: `${value}` },
       misconceptions: [{ when: `${a + b}`, feedback: 'That\'s adding — this is multiplication.' }],
+      band: { op: 'mul', a, b },
       verify: { kind: 'fraction', value },
     };
   };
@@ -638,7 +644,8 @@ function buildLongDiv({ minQ, maxQ }) {
         `Start with the front of the number: how many ${d}s fit into ${String(total).slice(0, String(total).length - 1) || String(total)}? Write that above, then bring the last digit down.`,
         `Check as you go: multiply what you wrote by ${d} and take it away, then carry on.`),
       solution: { steps: [{ text: `Divide step by step: ${d} × ${q} = ${total}.`, expr: `${q}` }], answer: `${q}` },
-      misconceptions: [], verify: { kind: 'fraction', value: q },
+      misconceptions: [], band: { op: 'div', a: total, b: d, q },
+      verify: { kind: 'fraction', value: q },
     };
   };
 }
