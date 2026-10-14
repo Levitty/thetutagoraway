@@ -8,12 +8,13 @@ export const PRIMARY_ALIAS = {
   // Grade 1
   // Grade 2
   // Grade 3
-  G3_TIME: 'G5_TIME',
-  // Grade 4
-  G4_FRACTIONS: 'G5_FRACTIONS_EQUIV',
-  G4_DECIMALS: 'G5_DECIMALS_INTRO',     // structured decimal grid
-  G4_TIME: 'G5_TIME',
-  G4_DATA: 'G5_BAR_GRAPHS',
+  // G3_TIME pointed at G5_TIME, so a Grade 3 learner got Grade 5 durations on
+  // a 24-hour clock. The Grade 2 clock/days/months content is the level.
+  G3_TIME: 'G2_TIME',
+  // Grade 4: FRACTIONS, DECIMALS, TIME, MASS and DATA are now authored in
+  // lowerPrimary.js at the Grade 4 bar. They used to alias up to Grade 5/6
+  // content (or fall through to a thin legacy generator with no hints, no
+  // steps and no misconception feedback).
 
   // ── Grade 7 sub-strands the graph was missing vs the KICD document ──────────
   // Verified against "Mathematics Grade 7 – July 2024 – Revised" (KICD).

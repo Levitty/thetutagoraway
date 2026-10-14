@@ -710,6 +710,403 @@ function buildUseOfLetters() {
   };
 }
 
+// ---------------------------------------------------------------------------
+// Grade 4 sub-strands that had no authored content and fell back to the thin
+// legacy generators (a bare question and answer, no hints, no steps, no
+// misconceptions) or to a Grade 5/6 alias that ran above level.
+// ---------------------------------------------------------------------------
+
+const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+
+/** KICD Grade 4, 1.6: equivalent fractions by multiplying/dividing both parts. */
+function buildEquivalentFraction({ maxDen = 10, divideToo = false }) {
+  return () => {
+    const den = randInt(2, maxDen);
+    const num = randInt(1, den - 1);
+    const k = randInt(2, 6);
+    if (divideToo && coin()) {
+      // The other direction: cancel down to the simplest form.
+      const bigN = num * k, bigD = den * k;
+      const g = gcd(bigN, bigD);
+      const sn = bigN / g, sd = bigD / g;
+      return {
+        type: 'fraction-simplify', instruction: 'Write the fraction in its simplest form.',
+        question: `Write ${bigN}/${bigD} in its simplest form.`,
+        answer: `${sn}/${sd}`, accepts: accepts(`${sn}/${sd}`, `${sn} / ${sd}`),
+        hints: hintLadder(
+          'Look for a number that divides into BOTH the top and the bottom.',
+          'Keep dividing top and bottom by the same number until no number but 1 goes into both.',
+          `Try the biggest number that goes into both ${bigN} and ${bigD}.`),
+        solution: { steps: [
+          { text: `${g} divides into both.`, expr: `${bigN} ÷ ${g} = ${sn},  ${bigD} ÷ ${g} = ${sd}` },
+          { text: 'Nothing but 1 divides into both now.', expr: `${sn}/${sd}` },
+        ], answer: `${sn}/${sd}` },
+        misconceptions: [
+          { when: `${bigN - g}/${bigD - g}`, feedback: 'Simplifying means DIVIDING top and bottom by the same number, not taking the same number away from each.' },
+        ],
+        verify: { kind: 'fraction', value: sn / sd },
+      };
+    }
+    const value = num * k;
+    return {
+      type: 'fraction-equiv', instruction: 'Find the missing number.',
+      question: `Fill in the blank:   ${num}/${den} = ?/${den * k}`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(
+        'Equivalent fractions are the same amount cut into more, smaller pieces.',
+        `Ask what ${den} was multiplied by to become ${den * k}.`,
+        'Whatever the bottom was multiplied by, the top must be multiplied by the same.'),
+      solution: { steps: [
+        { text: 'See what happened to the bottom.', expr: `${den} × ${k} = ${den * k}` },
+        { text: 'Do the same to the top.', expr: `${num} × ${k} = ${value}` },
+      ], answer: `${value}` },
+      misconceptions: [
+        { when: `${num + (den * k - den)}`, feedback: `The bottom was MULTIPLIED by ${k}, not added to — so the top must be multiplied by ${k} as well.` },
+        { when: `${num}`, feedback: 'The top cannot stay the same: the pieces got smaller, so more of them are needed to make the same amount.' },
+      ],
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+/** KICD Grade 4, 1.6: compare fractions — same bottom, same top, then halves. */
+function buildCompareFractions({ unlike = false }) {
+  return () => {
+    const mode = unlike ? pick(['same-num', 'vs-half']) : 'same-den';
+    let n1, d1, n2, d2, why;
+    if (mode === 'same-den') {
+      d1 = d2 = randInt(3, 10);
+      n1 = randInt(1, d1 - 1);
+      do { n2 = randInt(1, d1 - 1); } while (n2 === n1);
+      why = 'The pieces are the same size, so the fraction with more pieces is bigger.';
+    } else if (mode === 'same-num') {
+      n1 = n2 = randInt(1, 4);
+      d1 = randInt(n1 + 1, 9);
+      do { d2 = randInt(n1 + 1, 12); } while (d2 === d1);
+      why = 'The same number of pieces, but cutting a whole into more parts makes every part smaller.';
+    } else {
+      d1 = randInt(3, 12); n1 = randInt(1, d1 - 1);
+      n2 = 1; d2 = 2;
+      if (n1 * 2 === d1) { n1 = n1 === 1 ? 1 : n1 - 1; }     // never ask half vs half
+      why = 'Compare each one with a half: is the top more or less than half of the bottom?';
+    }
+    const diff = n1 / d1 - n2 / d2;
+    const value = diff > 1e-9 ? '>' : diff < -1e-9 ? '<' : '=';
+    return {
+      type: 'fraction-compare', instruction: 'Choose <, > or = .',
+      question: `Which symbol makes this true:   ${n1}/${d1} ☐ ${n2}/${d2}?   (<, > or =)`,
+      answer: value, accepts: accepts(value), choices: ['<', '>', '='],
+      hints: hintLadder(
+        'The open side of the symbol always faces the bigger amount.',
+        why,
+        mode === 'same-den' ? 'The bottoms match, so only the tops need comparing.'
+          : mode === 'same-num' ? 'The tops match, so look at how many pieces each whole was cut into.'
+          : 'Half of the bottom number is the mark to compare the top against.'),
+      solution: { steps: [
+        { text: why },
+        { text: 'So the symbol opens towards the bigger fraction.', expr: `${n1}/${d1} ${value} ${n2}/${d2}` },
+      ], answer: value },
+      misconceptions: [
+        { when: value === '<' ? '>' : '<', feedback: mode === 'same-num'
+            ? 'A BIGGER bottom number means SMALLER pieces — 1/8 is less than 1/4, even though 8 is more than 4.'
+            : 'The open (wide) side of the symbol faces the bigger amount.' },
+      ],
+      verify: { kind: 'compare', diff },
+    };
+  };
+}
+
+/** KICD Grade 4, 1.7: tenths and hundredths — fraction to decimal and back. */
+function buildDecimalsIntro({ hundredths = false }) {
+  return () => {
+    const den = hundredths ? 100 : 10;
+    const num = hundredths ? randInt(11, 99) : randInt(1, 9);
+    const dec = (num / den).toFixed(hundredths ? 2 : 1);
+    const mode = pick(['to-decimal', 'to-fraction', 'place']);
+    if (mode === 'to-fraction') {
+      return {
+        type: 'decimal-to-fraction', instruction: 'Write the decimal as a fraction.',
+        question: `Write ${dec} as a fraction over ${den}.`,
+        answer: `${num}/${den}`, accepts: accepts(`${num}/${den}`, `${num} / ${den}`, `${num}`),
+        hints: hintLadder(
+          hundredths ? 'Two digits after the point means hundredths.' : 'One digit after the point means tenths.',
+          `So the bottom of the fraction is ${den}.`,
+          'The digits after the point become the top of the fraction.'),
+        solution: { steps: [
+          { text: `${hundredths ? 'Two places' : 'One place'} after the point means ${hundredths ? 'hundredths' : 'tenths'}.`, expr: `over ${den}` },
+          { text: 'The digits after the point go on top.', expr: `${num}/${den}` },
+        ], answer: `${num}/${den}` },
+        misconceptions: [
+          { when: `${num}/${hundredths ? 10 : 100}`, feedback: `Count the places after the point: ${hundredths ? 'two places is hundredths' : 'one place is tenths'}.` },
+        ],
+        verify: { kind: 'fraction', value: num / den },
+      };
+    }
+    if (mode === 'place') {
+      // Which place is a named digit in? (Place value of decimals.)
+      const digitsAfter = dec.split('.')[1];
+      const idx = hundredths ? randInt(0, 1) : 0;
+      const d = digitsAfter[idx];
+      const value = idx === 0 ? 'tenths' : 'hundredths';
+      return {
+        type: 'decimal-place', instruction: 'Name the place value.',
+        question: `In the number ${dec}, the digit ${d} is in which place?`,
+        answer: value, accepts: accepts(value), choices: ['tenths', 'hundredths'],
+        hints: hintLadder(
+          'Read the places going right from the point.',
+          'The first place after the point is one of ten equal parts of a whole; the next is one of a hundred.',
+          `Count how many steps past the point the digit ${d} sits.`),
+        solution: { steps: [
+          { text: 'Places after the point, in order: first, then second.', expr: 'tenths, hundredths' },
+          { text: `The digit ${d} is ${idx === 0 ? 'first' : 'second'} after the point.`, expr: value },
+        ], answer: value },
+        misconceptions: [
+          { when: value === 'tenths' ? 'hundredths' : 'tenths', feedback: 'Count from the point outwards: the FIRST place is tenths, the SECOND is hundredths.' },
+        ],
+        verify: { kind: 'text', value },
+      };
+    }
+    return {
+      type: 'fraction-to-decimal', instruction: 'Write the fraction as a decimal.',
+      question: `Write ${num}/${den} as a decimal.`,
+      answer: dec, accepts: accepts(dec, dec.replace(/^0/, '')),
+      hints: hintLadder(
+        `A bottom number of ${den} means ${hundredths ? 'hundredths' : 'tenths'}.`,
+        `${hundredths ? 'Hundredths' : 'Tenths'} need ${hundredths ? 'two digits' : 'one digit'} after the decimal point.`,
+        'Write a zero and a point for the whole part, then fill the places after it.'),
+      solution: { steps: [
+        { text: `${num} out of ${den} is ${hundredths ? 'hundredths' : 'tenths'}.`, expr: `${hundredths ? 'two places' : 'one place'} after the point` },
+        { text: 'Write it with the point.', expr: dec },
+      ], answer: dec },
+      misconceptions: [
+        { when: `0.${num}`, feedback: hundredths
+            ? 'Hundredths need TWO places after the point — check how many places were written.'
+            : 'Tenths need exactly one place after the point.' },
+        { when: `${num}`, feedback: 'The point matters: this is part of one whole, so it is less than 1.' },
+      ],
+      verify: { kind: 'fraction', value: num / den },
+    };
+  };
+}
+
+/** KICD Grade 4, Measurement 2.5: a.m./p.m. and duration inside one day. */
+function buildAmPmDuration({ withDuration = true }) {
+  return () => {
+    const mode = withDuration ? pick(['duration', 'duration', 'ampm', 'minutes']) : 'ampm';
+    if (mode === 'ampm') {
+      const spec = pick([
+        { q: 'Learners arrive at school at 7:20 in the morning.', value: 'am' },
+        { q: 'The Friday assembly ends at 8:00 in the morning.', value: 'am' },
+        { q: 'Games start at 4:15 in the afternoon.', value: 'pm' },
+        { q: 'The evening news is at 9:00 at night.', value: 'pm' },
+        { q: 'Lunch is served at 1:00 in the afternoon.', value: 'pm' },
+        { q: 'The milk is delivered at 5:30 before sunrise.', value: 'am' },
+        { q: 'The shop closes at 7:45 in the evening.', value: 'pm' },
+        { q: 'Mathematics is the first lesson, at 8:30 in the morning.', value: 'am' },
+      ]);
+      return {
+        type: 'time-ampm', instruction: 'Write a.m. or p.m.',
+        question: `${spec.q} Is that time a.m. or p.m.?`,
+        answer: spec.value, accepts: accepts(spec.value, `${spec.value[0]}.${spec.value[1]}.`),
+        choices: ['am', 'pm'],
+        hints: hintLadder(
+          'The day is split at midday into two halves of twelve hours each.',
+          'Midnight to noon is the first half; noon to midnight is the second.',
+          'Decide which half of the day the time described falls in.'),
+        solution: { steps: [
+          { text: 'Midnight to noon is the first twelve hours; noon to midnight the second.' },
+          { text: 'Place the time in its half of the day.', expr: spec.value },
+        ], answer: spec.value },
+        misconceptions: [
+          { when: spec.value === 'am' ? 'pm' : 'am', feedback: 'a.m. runs from midnight up to noon; p.m. runs from noon up to midnight.' },
+        ],
+        verify: { kind: 'text', value: spec.value },
+      };
+    }
+    if (mode === 'minutes') {
+      const h = randInt(2, 6), m = pick([15, 20, 30, 40, 45]);
+      const value = h * 60 + m;
+      return {
+        type: 'time-to-minutes', instruction: 'Change the time to minutes.',
+        question: `How many minutes are there in ${h} hours and ${m} minutes?`,
+        answer: `${value}`, accepts: accepts(`${value}`, `${value} minutes`),
+        hints: hintLadder(
+          'One hour is sixty minutes.',
+          `So the hours have to be changed into minutes first: ${h} × 60.`,
+          `Then the extra ${m} minutes are added on.`),
+        solution: { steps: [
+          { text: 'Change the hours to minutes.', expr: `${h} × 60 = ${h * 60}` },
+          { text: 'Add the loose minutes.', expr: `${h * 60} + ${m} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${h * 100 + m}`, feedback: 'An hour is 60 minutes, not 100 — the hours must be multiplied by 60.' },
+          { when: `${h * 60}`, feedback: `The extra ${m} minutes still have to be added on.` },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+    // Duration inside one day, 12-hour clock with a.m./p.m.
+    const startH = randInt(8, 11), startM = pick([0, 10, 15, 20, 30, 40, 45]);
+    const runH = randInt(1, 3), runM = pick([0, 15, 20, 30, 45]);
+    let endMin = startH * 60 + startM + runH * 60 + runM;
+    const endH24 = Math.floor(endMin / 60), endM = endMin % 60;
+    const endH12 = endH24 > 12 ? endH24 - 12 : endH24;
+    const half = endH24 >= 12 ? 'p.m.' : 'a.m.';
+    const value = `${endH12}:${String(endM).padStart(2, '0')} ${half}`;
+    const spec = pick([
+      `A matatu leaves Nakuru at ${startH}:${String(startM).padStart(2, '0')} a.m. and the journey takes ${runH} hour${runH > 1 ? 's' : ''}${runM ? ` ${runM} minutes` : ''}.`,
+      `A Mathematics lesson starts at ${startH}:${String(startM).padStart(2, '0')} a.m. and lasts ${runH} hour${runH > 1 ? 's' : ''}${runM ? ` ${runM} minutes` : ''}.`,
+      `Maize is put out to dry at ${startH}:${String(startM).padStart(2, '0')} a.m. for ${runH} hour${runH > 1 ? 's' : ''}${runM ? ` ${runM} minutes` : ''}.`,
+    ]);
+    return {
+      type: 'time-duration', instruction: 'Give the finishing time with a.m. or p.m.',
+      question: `${spec} At what time does it finish? (Give a.m. or p.m.)`,
+      answer: value,
+      accepts: accepts(value, value.replace(/\./g, ''), value.replace(' ', ''), `${endH12}:${String(endM).padStart(2, '0')}${half.replace(/\./g, '')}`),
+      hints: hintLadder(
+        'Add the whole hours on first, then the loose minutes.',
+        'Sixty minutes make one more hour, so if the minutes pass sixty, carry an hour.',
+        'Then check whether the finishing time has passed noon, which decides a.m. or p.m.'),
+      solution: { steps: [
+        { text: 'Add the hours.', expr: `${startH}:${String(startM).padStart(2, '0')} + ${runH} h` },
+        { text: 'Add the minutes, carrying an hour for every sixty.', expr: `+ ${runM} min` },
+        { text: 'Past noon means p.m.', expr: value },
+      ], answer: value },
+      misconceptions: [
+        { when: `${endH12}:${String(endM).padStart(2, '0')} ${half === 'a.m.' ? 'p.m.' : 'a.m.'}`,
+          feedback: 'The clock time is right, but check the half of the day: noon is where a.m. becomes p.m.' },
+      ],
+      verify: { kind: 'text', value },
+    };
+  };
+}
+
+/** KICD Grade 4, Measurement 2.3/2.4: choose the sensible unit for the job. */
+function buildUnitChoice({ pairs }) {
+  return () => {
+    const [small, big, items] = pick(pairs);
+    const [thing, want] = pick(items);
+    const value = want === 'small' ? small : big;
+    return {
+      type: 'unit-choice', instruction: 'Choose the sensible unit.',
+      question: `Would you measure ${thing} in ${small} or in ${big}?`,
+      answer: value, accepts: accepts(value), choices: [small, big],
+      hints: hintLadder(
+        'Picture the thing itself before picking a unit.',
+        'The bigger unit is a thousand times the smaller one.',
+        'A sensible unit gives a small, easy number — not a few thousandths and not tens of thousands.'),
+      solution: { steps: [
+        { text: `Think how much ${thing} really is.` },
+        { text: 'Pick the unit that gives an easy, everyday number.', expr: value },
+      ], answer: value },
+      misconceptions: [
+        { when: want === 'small' ? big : small, feedback: 'That unit gives an awkward number here — a sensible unit keeps the measurement easy to say.' },
+      ],
+      verify: { kind: 'text', value },
+    };
+  };
+}
+
+/** KICD Grade 4, Data Handling 5.1: read a table, total it, compare two bars. */
+function buildTablesAndBars() {
+  return () => {
+    const sets = [
+      { label: 'exercise books sold', keys: ['Mon', 'Tue', 'Wed', 'Thu'], noun: 'books' },
+      { label: 'pupils present', keys: ['Grade 4', 'Grade 5', 'Grade 6'], noun: 'pupils' },
+      { label: 'litres of milk collected', keys: ['Mon', 'Tue', 'Wed', 'Thu'], noun: 'litres' },
+      { label: 'mango trees counted', keys: ['Kamau', 'Achieng', 'Mwikali', 'Otieno'], noun: 'trees' },
+    ];
+    const set = pick(sets);
+    const vals = set.keys.map(() => randInt(3, 20));
+    // Distinct values keep "which is biggest" and the readings unambiguous.
+    if (new Set(vals).size !== vals.length) return buildTablesAndBars()();
+    const table = set.keys.map((k, i) => `${k}: ${vals[i]}`).join(',  ');
+    const mode = pick(['read', 'total', 'difference', 'most']);
+    const stem = `A table shows ${set.label} —  ${table}.`;
+
+    if (mode === 'read') {
+      const i = randInt(0, set.keys.length - 1);
+      return {
+        type: 'table-read', instruction: 'Read the value out of the table.',
+        question: `${stem}  How many ${set.noun} for ${set.keys[i]}?`,
+        answer: `${vals[i]}`, accepts: accepts(`${vals[i]}`),
+        hints: hintLadder(
+          'Each row of the table names one group and gives its count.',
+          `Find the row labelled ${set.keys[i]}.`,
+          'Read the number written beside that label — no working out is needed.'),
+        solution: { steps: [
+          { text: `Find the row for ${set.keys[i]}.` },
+          { text: 'Read its number.', expr: `${vals[i]}` },
+        ], answer: `${vals[i]}` },
+        misconceptions: [
+          { when: `${vals.reduce((a, b) => a + b, 0)}`, feedback: 'That is every row added together. This question asks about one row only.' },
+        ],
+        verify: { kind: 'fraction', value: vals[i] },
+      };
+    }
+    if (mode === 'total') {
+      const value = vals.reduce((a, b) => a + b, 0);
+      return {
+        type: 'table-total', instruction: 'Give the total.',
+        question: `${stem}  How many ${set.noun} altogether?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'Every row stands for part of the whole.',
+          'A total needs every row accounted for, none left out.',
+          'Gather the rows together one at a time so none is missed.'),
+        solution: { steps: [
+          { text: 'Read every row.', expr: vals.join(', ') },
+          { text: 'Add them.', expr: `${vals.join(' + ')} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${value - vals[vals.length - 1]}`, feedback: 'One row was left out — check that every row in the table was added.' },
+        ],
+        verify: { kind: 'fraction', value },
+      };
+    }
+    if (mode === 'difference') {
+      const hi = Math.max(...vals), lo = Math.min(...vals), value = hi - lo;
+      return {
+        type: 'bar-difference', instruction: 'Compare the tallest and shortest bars.',
+        question: `A bar graph shows ${set.label} —  ${table}.  How many more ${set.noun} has the biggest bar than the smallest?`,
+        answer: `${value}`, accepts: accepts(`${value}`),
+        hints: hintLadder(
+          'Find the tallest bar and the shortest bar first.',
+          '"How many more" compares two readings rather than joining them.',
+          'Comparing two amounts like this is a subtraction.'),
+        solution: { steps: [
+          { text: 'Read the tallest and the shortest.', expr: `${hi} and ${lo}` },
+          { text: 'Take the smaller from the bigger.', expr: `${hi} − ${lo} = ${value}` },
+        ], answer: `${value}` },
+        misconceptions: [
+          { when: `${hi + lo}`, feedback: '"How many more" is a comparison — subtract the smaller from the bigger.' },
+          { when: `${hi}`, feedback: 'That is the biggest bar on its own. The question asks how much MORE it is than the smallest.' },
+        ],
+        verify: { kind: 'fraction', value: hi - lo },
+      };
+    }
+    const hi = Math.max(...vals);
+    const value = set.keys[vals.indexOf(hi)];
+    return {
+      type: 'bar-most', instruction: 'Name the biggest bar.',
+      question: `A bar graph shows ${set.label} —  ${table}.  Which has the most?`,
+      answer: value, accepts: accepts(value), choices: set.keys,
+      hints: hintLadder(
+        'The tallest bar always stands for the biggest count.',
+        'Compare the numbers rather than the labels.',
+        'Work along the rows keeping the biggest so far in mind.'),
+      solution: { steps: [
+        { text: 'Compare every reading.', expr: vals.join(', ') },
+        { text: 'The biggest reading names the answer.', expr: value },
+      ], answer: value },
+      misconceptions: [
+        { when: set.keys[vals.indexOf(Math.min(...vals))], feedback: 'That is the smallest bar. The question asks which has the MOST.' },
+      ],
+      verify: { kind: 'text', value },
+    };
+  };
+}
+
 export const LOWER_PRIMARY_CONTENT = {
   // ── Grade 1 ──────────────────────────────────────────────────────────────
   G1_PRENUMBER:      withWorkedExample(buildSimplePattern()),
@@ -843,7 +1240,43 @@ export const LOWER_PRIMARY_CONTENT = {
                        withWorkedExample(buildLongDiv({ minQ: 31, maxQ: 99 })),
                      ]),
   G4_LETTERS:        withWorkedExample(buildUseOfLetters()),
+  // KICD Grade 4, 1.6: equivalent fractions, then comparing. The alias to
+  // G5_FRACTIONS_EQUIV gave only the "fill in the blank" half of the label.
+  G4_FRACTIONS:      withKPs([
+                       withWorkedExample(buildEquivalentFraction({ maxDen: 8 })),
+                       withWorkedExample(buildEquivalentFraction({ maxDen: 10, divideToo: true })),
+                       withWorkedExample(buildCompareFractions({ unlike: false })),
+                       withWorkedExample(buildCompareFractions({ unlike: true })),
+                     ]),
+  // KICD Grade 4, 1.7: tenths first, then hundredths, with place value.
+  G4_DECIMALS:       withKPs([
+                       withWorkedExample(buildDecimalsIntro({ hundredths: false })),
+                       withWorkedExample(buildDecimalsIntro({ hundredths: true })),
+                     ]),
   G4_LENGTH:         withWorkedExample(buildUnitConvert({ pairs: [['kilometres', 'metres', 1000], ['metres', 'centimetres', 100]] })),
+  // KICD Grade 4, 2.5: a.m./p.m. first, then duration across the hour.
+  G4_TIME:           withKPs([
+                       withWorkedExample(buildAmPmDuration({ withDuration: false })),
+                       withWorkedExample(buildAmPmDuration({ withDuration: true })),
+                     ]),
+  // KICD Grade 4, 2.3/2.4: choose the unit, then convert. Grade 5 takes this
+  // on to multi-step word problems in mixed units.
+  G4_MASS:           withKPs([
+                       withWorkedExample(buildUnitChoice({ pairs: [
+                         ['grams', 'kilograms', [
+                           ['a sweet', 'small'], ['a bag of cement', 'big'], ['a pencil', 'small'],
+                           ['a sack of maize', 'big'], ['a letter', 'small'], ['a cow', 'big'],
+                           ['a spoonful of salt', 'small'], ['a motorbike', 'big'],
+                         ]],
+                         ['millilitres', 'litres', [
+                           ['a spoonful of cough syrup', 'small'], ['a jerrican of water', 'big'],
+                           ['the ink in a pen', 'small'], ['a water tank', 'big'],
+                           ['a dose of medicine', 'small'], ['a drum of paraffin', 'big'],
+                         ]],
+                       ] })),
+                       withWorkedExample(buildUnitConvert({ pairs: [['kilograms', 'grams', 1000], ['litres', 'millilitres', 1000]] })),
+                     ]),
+
   G4_AREA:           withWorkedExample(buildSmallArea()),
   G4_VOLUME:         withWorkedExample(buildSmallVolume()),
   G4_MONEY:          withWorkedExample(buildBandedMoney({ maxAmount: 5000, kind: 'budget' })),
@@ -864,6 +1297,9 @@ export const LOWER_PRIMARY_CONTENT = {
                        withWorkedExample(buildFractionOfSet({ denominators: [10], maxResult: 10 })),
                      ]),
   CAM_TURNS_COMPASS: withWorkedExample(buildTurnsAndCompass({ withCompass: true })),
+  // KICD Grade 4, 5.1: read a table, total it, compare two bars. Grade 5 then
+  // adds a scale to the axis, which is where the real difficulty sits.
+  G4_DATA:           withWorkedExample(buildTablesAndBars()),
   G4_ANGLES:         withWorkedExample(buildAngleClassify()),
   G4_PLANE_FIGURES:  withWorkedExample(buildShapeProperties({ shapes: [['triangle', 3], ['square', 4], ['rectangle', 4], ['pentagon', 5], ['hexagon', 6], ['octagon', 8]] })),
 };
