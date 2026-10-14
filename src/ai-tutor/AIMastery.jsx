@@ -178,7 +178,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   const [activeLearner, setActiveLearner] = useState(lockedLearner);
   useEffect(() => {
     if (!userId) { setLearners([]); return; }
-    supabase.from('children').select('id, name, grade').eq('parent_id', userId).order('created_at')
+    supabase.from('children').select('id, name, grade, avatar').eq('parent_id', userId).order('created_at')
       .then(({ data }) => setLearners(data || []));
   }, [userId]);
   const learnerBase = activeLearner ? `${userId}_c${activeLearner.id}` : userId;

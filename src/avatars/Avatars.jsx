@@ -164,22 +164,27 @@ export function AvatarArt({ id, size = 40, className = '', title }) {
  * The picker on the sign-up sheet. A radio group, because a grid of unlabelled
  * pictures is otherwise unreachable from a keyboard or a screen reader.
  */
-export function AvatarPicker({ value, onChange, columns = 6 }) {
+export function AvatarPicker({ value, onChange, min = 72 }) {
   return (
+    // auto-fit rather than a fixed column count: six across a phone leaves each
+    // figure about 47px, under the 44px tap target once the ring is inside it,
+    // and a child is the one tapping. This gives three or four to a row on a
+    // phone and all six on a wider sheet.
     <div role="radiogroup" aria-label="Choose your avatar"
-      style={{ display: 'grid', gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`, gap: 10 }}>
+      style={{ display: 'grid', gridTemplateColumns: `repeat(auto-fit, minmax(${min}px, 1fr))`, gap: 12 }}>
       {AVATARS.map(a => {
         const picked = value === a.id;
         return (
           <button key={a.id} type="button" role="radio" aria-checked={picked} aria-label={a.label}
             onClick={() => onChange(a.id)}
             style={{
-              padding: 0, border: 'none', background: 'none', cursor: 'pointer',
+              padding: 0, background: 'none', cursor: 'pointer',
               borderRadius: '50%', lineHeight: 0, overflow: 'hidden', width: '100%', aspectRatio: '1',
-              outline: picked ? '3px solid #c98a14' : '2px solid rgba(0,0,0,0.10)',
-              outlineOffset: 2,
-              transform: picked ? 'scale(1.05)' : 'none',
-              transition: 'transform .12s ease, outline-color .12s ease',
+              // A border rather than an outline: an outline is drawn OUTSIDE the
+              // box and overflowed the grid cell, clipping the last column.
+              border: picked ? '3px solid #c98a14' : '2px solid rgba(0,0,0,0.10)',
+              boxShadow: picked ? '0 0 0 3px rgba(201,138,20,0.22)' : 'none',
+              transition: 'border-color .12s ease, box-shadow .12s ease',
             }}>
             <AvatarArt id={a.id} size="100%" title={a.label} />
           </button>
