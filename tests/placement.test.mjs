@@ -14,6 +14,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { getNextToLearn, getEstimatedGradeLevel } from '../src/ai-tutor/adaptiveEngine.js';
+import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
+import { selectQuestion, MAX_QUESTIONS } from '../src/ai-tutor/placement.js';
 
 const TOP = 8;   // the recommended path only ever shows a handful
 const top = (progress) => getNextToLearn(progress, null).slice(0, TOP);
@@ -104,4 +106,59 @@ test('a low placement is still respected — the floor works downwards too', () 
   const placedLow = { skills: {}, diagnosed: true, declaredGrade: 9, placementGrade: 3 };
   const shown = getEstimatedGradeLevel(placedLow, null);
   assert.ok(shown <= 4, `a student placed at Grade 3 was shown as Grade ${shown}`);
+});
+
+// ---------------------------------------------------------------------------
+// THE RESULT MUST NOT CLAIM MORE THAN IT CHECKED
+//
+// Reported from live testing, of a real sample learner's result page:
+// "this report is a lie it says i only miss this tally chart step it doesn't
+// know because it hasn't checked".
+//
+// It was right. The placement sweep asks ONE skill per strand at a grade —
+// five questions against the 101 skills of Grades 1-5, about 5% of them, and
+// one of 47 in Numbers. On that evidence the page announced "<name> is solid
+// up to Grade 5. One step is missing.", because a single passed skill at or
+// above the placement grade was enough to license the phrase. A parent reads
+// that as a verdict on the whole year.
+//
+// The check is still worth taking — it finds a starting point, which is what
+// it is for. What it may not do is report that starting point as a finding
+// about everything it never asked.
+// ---------------------------------------------------------------------------
+import { readFileSync } from 'node:fs';
+
+const checkSrc = readFileSync(new URL('../src/site/Check.jsx', import.meta.url), 'utf8');
+
+test('the result page does not certify a grade it never covered', () => {
+  // Comments are stripped first: this file's own history explains the phrase,
+  // and a test that cannot tell code from commentary fails on the explanation.
+  const code = checkSrc.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '');
+  assert.ok(!/solid up to/i.test(code),
+    'the headline claims a grade is "solid" — the sweep samples one skill per strand and cannot support that');
+});
+
+test('the result page states how much it actually asked', () => {
+  // The scope sentence is what keeps the claim honest, so it is load-bearing.
+  assert.ok(/askedCount/.test(checkSrc), 'the page must count the questions it asked');
+  assert.ok(/strandsChecked/.test(checkSrc), 'the page must count the areas it covered');
+  assert.ok(/not a full report/i.test(checkSrc),
+    'the page must say plainly that the check is a starting point rather than a full report');
+});
+
+test('a placement sweep really does leave most of the graph unasked', () => {
+  // The number behind the wording above: if a future change made the sweep
+  // broad enough to justify a stronger claim, this test should be revisited
+  // deliberately rather than the wording quietly loosened.
+  const pool = Object.values(SKILLS).map(s => ({ id: s.id, grade: s.grade, strand: s.strand }));
+  const asked = [];
+  for (let i = 0; i < MAX_QUESTIONS; i++) {
+    const q = selectQuestion(asked, 5, pool, {});
+    if (!q) break;
+    asked.push({ id: q.id, grade: q.grade, strand: q.strand, correct: true });
+  }
+  const belowOrAt = Object.values(SKILLS).filter(s => s.grade <= 5).length;
+  const share = asked.length / belowOrAt;
+  assert.ok(share < 0.25,
+    `the sweep now covers ${(share * 100).toFixed(0)}% of Grades 1-5; if that is deliberate, the result page may be able to claim more`);
 });

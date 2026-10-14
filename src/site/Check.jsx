@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { loadLocalProgress } from '../ai-tutor/progressStore.js';
 import { findMissingStep, skillLabel } from './missingStep.js';
+import { SKILLS } from '../ai-tutor/knowledgeGraph.js';
 import { SiteIcon, Logo } from './ui.jsx';
 
 // The free check runs HOREB as a guest: progress lives on this device only,
@@ -151,14 +152,25 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user, save
   const solid = r.solid.map(id => skillLabel(id)).filter(Boolean);
   const next = r.next.map(id => skillLabel(id)).filter(Boolean);
   const others = r.otherGaps.map(id => skillLabel(id)).filter(Boolean);
-  // Only claim "solid up to Grade N" when the answers show it: at least one
-  // skill passed at or above that grade.
-  const passedGrades = Object.entries(progress.skills || {}).filter(([, v]) => v?.passed).map(([id]) => skillLabel(id)?.grade).filter(Boolean);
-  const upTo = r.placement && passedGrades.some(g => g >= r.placement) ? `solid up to Grade ${r.placement}` : null;
+  // What the check actually asked. The placement sweep takes ONE skill per
+  // strand at a grade — five questions against the hundred-odd skills of
+  // Grades 1-5 — which is enough to find a starting point and nowhere near
+  // enough to certify a year.
+  //
+  // This used to read "solid up to Grade 5" on the strength of a single passed
+  // Grade 5 answer, which a parent reads as a verdict on the whole grade. It
+  // was not one. The headline now states what was checked; the claim about
+  // everything that was not checked is gone.
+  const diagnosed = Object.entries(progress.skills || {}).filter(([, v]) => v?.fromDiagnostic);
+  const askedCount = diagnosed.length;
+  const strandsChecked = new Set(diagnosed.map(([id]) => SKILLS[id]?.strand).filter(Boolean)).size;
   const headline = r.allClear
-    ? `${name} is ${upTo || 'on track'}. Here's the next step.`
-    : upTo ? `${name} is ${upTo}. One step is missing.`
-    : `Here's where ${check?.name || 'your child'} should start.`;
+    ? `${name} answered everything we asked. Here's the next step.`
+    : `Here's the first gap we found for ${name}.`;
+  // One honest sentence about the scope, so the result is read for what it is.
+  const scopeLine = askedCount
+    ? `Based on ${askedCount} question${askedCount === 1 ? '' : 's'} across ${strandsChecked} area${strandsChecked === 1 ? '' : 's'} — enough to find a starting point, not a full report. The daily practice keeps checking as ${name} goes.`
+    : null;
 
   return (
     <div className="tg">
@@ -173,9 +185,9 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user, save
           <div className="kicker">{saved ? `${check.name}'s plan` : check?.name ? `${check.name}'s check` : 'Your check'}{grade ? ` · Grade ${grade}` : ''}</div>
           <h1 className="display" style={{ marginTop: 12 }}>{headline}</h1>
           <p>{r.allClear
-            ? 'Nothing below this is missing. The daily plan starts here and keeps building.'
-            : !upTo ? 'The plan starts at this step and moves quickly through anything that turns out to be easy.'
-            : `It's likely the reason ${next.length ? next[0].name.toLowerCase() : 'the next topics'} feel${next.length ? 's' : ''} hard right now. Fix this one, and the work built on it gets easier.`}</p>
+            ? 'Nothing we asked about came back missing. The daily plan starts here and keeps building.'
+            : `Of what we asked, this is the lowest step that broke. Fix it and the work built on it gets easier.`}</p>
+          {scopeLine && <p className="fine" style={{ marginTop: 10, opacity: 0.85 }}>{scopeLine}</p>}
         </div>
         <div className="found">
           <div className="kicker">{saved ? 'Working on now' : r.allClear ? 'The next step' : 'The missing step'}</div>
