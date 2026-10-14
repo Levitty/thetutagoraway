@@ -56,11 +56,33 @@ export const isHeld = (sp) => {
   return calculateMemoryStrength(sp) >= HOLD_FLOOR;
 };
 
+// Assumed foundation: a teacher does not quiz a Grade 8 student on counting.
+// A prerequisite more than ASSUMED_FOUNDATION_GAP grades below the learner's
+// own level counts as met UNLESS she has actually shown struggle on it (tried
+// and not mastered). Without this, a fresh senior account's only "learnable"
+// skills are the Grade 1 graph roots, and the path marches her up from
+// pre-number activities one quick check at a time — which is what a Grade 9
+// learner reported: the work was far below her and she could not get past it.
+//
+// This is deliberately weaker than isHeld: it never claims the skill is
+// REMEMBERED, only that it is not worth making her prove. Real struggle
+// cancels it, and findGaps still surfaces the skill if she stumbles later.
+const ASSUMED_FOUNDATION_GAP = 3;
+const learnerLevel = (progress) =>
+  progress?.placementGrade ?? progress?.declaredGrade ?? null;
+const assumedKnown = (skill, progress) => {
+  const lvl = learnerLevel(progress);
+  if (lvl == null || !Number.isFinite(skill?.grade)) return false;
+  if (skill.grade > lvl - ASSUMED_FOUNDATION_GAP) return false;
+  const sp = progress?.skills?.[skill.id];
+  return !(sp?.attempts > 0 && !sp.mastered);   // struggle cancels the assumption
+};
+
 export const prereqsMet = (skillId, progress, ctx) => {
   const c = resolveCtx(ctx);
   const skill = c.skills[skillId];
   if (!skill || skill.prerequisites.length === 0) return true;
-  return skill.prerequisites.every(pid => isHeld(progress.skills[pid]));
+  return skill.prerequisites.every(pid => isHeld(progress.skills[pid]) || assumedKnown(c.skills[pid], progress));
 };
 
 // ==================== SKILL STATUS ====================
@@ -197,7 +219,17 @@ export const getNextToLearn = (progress, ctx) => {
   return c.skillList
     .filter(s => {
       const sp = progress.skills[s.id];
-      return !sp?.mastered && prereqsMet(s.id, progress, ctx);
+      if (sp?.mastered || !prereqsMet(s.id, progress, ctx)) return false;
+      // An assumed-known foundation is never offered AS A LESSON — a Grade 8
+      // student is not sent to "Pre-number Activities". It stays openable from
+      // the library, and findGaps still raises it on real struggle.
+      if (assumedKnown(s, progress)) return false;
+      // The mirror guard: a prerequisite-free skill far ABOVE the learner (a
+      // graph root like Grade 5 division has no prerequisites at all) must not
+      // outrank a young learner's own work. Two grades of stretch is plenty.
+      const lvl = learnerLevel(progress);
+      if (lvl != null && Number.isFinite(s.grade) && s.grade > lvl + 2) return false;
+      return true;
     })
     .map(s => {
       let dependents = 0;
@@ -205,11 +237,11 @@ export const getNextToLearn = (progress, ctx) => {
       const sp = progress.skills[s.id];
       const inProgress = sp?.attempts > 0 ? 8 : 0;
       const criticalBonus = s.critical ? 12 : 0;
-      const gradeProximity = Math.max(0, 8 - Math.abs(gradeOf(s, c.curriculum) - getEstimatedGradeLevel(progress, ctx)));
+      const gradeProximity = Math.max(0, 8 - 2 * Math.abs(gradeOf(s, c.curriculum) - getEstimatedGradeLevel(progress, ctx))) * 2;
 
       return {
         ...s,
-        priority: criticalBonus + dependents * 2 + inProgress + gradeProximity,
+        priority: criticalBonus + Math.min(dependents, 5) * 2 + inProgress + gradeProximity,
         type: 'learn',
       };
     })

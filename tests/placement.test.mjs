@@ -10,11 +10,6 @@
 // The mirror bug matters just as much: Grade 5 division has no prerequisites
 // in the graph, so a raw dependent-count ranking floated it to the top of a
 // Grade 1 learner's list.
-//
-// FOUR OF THESE ARE SKIPPED on this branch. They are not wrong and they are not
-// obsolete: they describe real behaviour the content branch fixed and this one
-// has not, and they fail today. They are kept, skipped, with the reason on each
-// so the gap is recorded in the repo rather than remembered by somebody.
 // ============================================================================
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -23,7 +18,7 @@ import { getNextToLearn, getEstimatedGradeLevel } from '../src/ai-tutor/adaptive
 const TOP = 8;   // the recommended path only ever shows a handful
 const top = (progress) => getNextToLearn(progress, null).slice(0, TOP);
 
-test('a fresh Grade 8 learner is never sent to lower-primary counting', { skip: 'KNOWN GAP on this branch: getNextToLearn has no rule assuming foundations several grades below the learner are already known, and no band filter, so a freshly-placed senior learner is still ranked toward primary work. The content branch had both. Porting them is an engine change for the owner to decide.' }, () => {
+test('a fresh Grade 8 learner is never sent to lower-primary counting', () => {
   const picks = top({ skills: {}, declaredGrade: 8, placementGrade: null });
   assert.ok(picks.length > 0, 'expected some suggestions');
   const tooLow = picks.filter(s => s.grade <= 5);
@@ -33,7 +28,7 @@ test('a fresh Grade 8 learner is never sent to lower-primary counting', { skip: 
   );
 });
 
-test('a fresh Grade 1 learner is not sent to upper-primary roots', { skip: 'KNOWN GAP on this branch: getNextToLearn has no rule assuming foundations several grades below the learner are already known, and no band filter, so a freshly-placed senior learner is still ranked toward primary work. The content branch had both. Porting them is an engine change for the owner to decide.' }, () => {
+test('a fresh Grade 1 learner is not sent to upper-primary roots', () => {
   const picks = top({ skills: {}, declaredGrade: 1, placementGrade: null });
   assert.ok(picks.length > 0, 'expected some suggestions');
   const tooHigh = picks.filter(s => s.grade > 3);
@@ -57,7 +52,7 @@ test('the diagnostic overrides the declared grade in BOTH directions', () => {
   );
 });
 
-test('demonstrated struggle cancels the assumption of mastery', { skip: 'KNOWN GAP on this branch: getNextToLearn has no rule assuming foundations several grades below the learner are already known, and no band filter, so a freshly-placed senior learner is still ranked toward primary work. The content branch had both. Porting them is an engine change for the owner to decide.' }, () => {
+test('demonstrated struggle cancels the assumption of mastery', () => {
   // A Grade 8 learner who has actually failed a Grade 2 skill should see it
   // again — "assumed known" is a shortcut for the untested, not a blindfold.
   const struggled = {
@@ -84,7 +79,7 @@ test('a learner with no declared grade still gets a sane list', () => {
 // coverage instead — what fraction of each grade she has personally worked
 // through — and a short test can never mark 60% of Grade 1 as mastered, so it
 // reported the bottom of the graph. That number then drove lesson selection.
-test('a measured placement anchors both the displayed level and the lessons', { skip: 'KNOWN GAP on this branch: getNextToLearn has no rule assuming foundations several grades below the learner are already known, and no band filter, so a freshly-placed senior learner is still ranked toward primary work. The content branch had both. Porting them is an engine change for the owner to decide.' }, () => {
+test('a measured placement anchors both the displayed level and the lessons', () => {
   // Exactly the state a student is in one second after finishing the
   // diagnostic: placement measured, almost nothing marked mastered yet.
   const justDiagnosed = { skills: {}, diagnosed: true, declaredGrade: 9, placementGrade: 9 };
