@@ -1,15 +1,15 @@
 // ============================================================================
 // MISCONCEPTION LAYER — the diagnosis above the mastery model.
 //
-// BKT answers "does she know this skill?", one skill at a time. It cannot see
-// that the SAME error is behind three different failures — that she mishandles
-// negative signs in algebra, in geometry and in arithmetic. A human tutor spots
-// that in one sitting. This layer is what lets the app spot it too.
+// BKT answers "does this learner know this skill?", one skill at a time. It
+// cannot see that the SAME error is behind three different failures — that they
+// mishandle negative signs in algebra, in geometry and in arithmetic. A human
+// tutor spots that in one sitting. This layer is what lets the app spot it too.
 //
 // Three jobs:
 //   1. MATCH   a wrong answer against the misconceptions the content author
-//              anticipated ("if she answers 360 − a − b she has confused the
-//              triangle rule with angles at a point").
+//              anticipated ("an answer of 360 − a − b confuses the triangle
+//              rule with angles at a point").
 //   2. TAG     that specific message into a cross-skill category, so the same
 //              underlying error committed in different topics counts as one
 //              pattern rather than three unrelated weak skills.
@@ -38,7 +38,7 @@ export const TAXONOMY = {
   },
   'place-value': {
     label: 'Confusing a digit with its value',
-    advice: 'Keep a place-value chart beside her: the digit tells you WHICH, the column tells you HOW MUCH.',
+    advice: 'Keep a place-value chart beside the learner: the digit tells you WHICH, the column tells you HOW MUCH.',
   },
   'area-perimeter': {
     label: 'Mixing up area and perimeter',
