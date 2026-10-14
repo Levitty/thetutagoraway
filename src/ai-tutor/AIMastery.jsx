@@ -380,7 +380,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
         try {
           const found = buildPlacementPool(ctx?.skills || {}, p.curriculum || NATIVE).find(s => s.id === dip.currentId);
           if (!found) throw new Error('current skill not found');
-          const cur = dip.currentProbeFor ? { ...found, probeFor: dip.currentProbeFor } : found;
+          const cur = { ...found, ...(dip.currentProbeFor ? { probeFor: dip.currentProbeFor } : {}), ...(dip.currentHunt ? { hunt: true } : {}) };
           setDiagState({ record: dip.record, balances: dip.balances || {}, startTimes: { [cur.id]: Date.now() }, current: cur, pending: dip.pending || null, asked: dip.asked ?? dip.record.length });
           setDiagHistory([]); // snapshots aren't persisted; can't step back past a reload
           setProblem(dip.problem || ownChoicesOnly(generateProblem(cur.id)));
@@ -564,7 +564,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // problem. Stored in `progress` (localStorage instantly + cloud on save). The
   // candidate pool is the full skill list, rebuilt on resume rather than stored.
   const diagCursor = (record, balances, current, prob, extra = {}) =>
-    ({ subjectId, v: 5, record, balances, currentId: current?.id, currentProbeFor: current?.probeFor || null, problem: prob,
+    ({ subjectId, v: 5, record, balances, currentId: current?.id, currentProbeFor: current?.probeFor || null, currentHunt: !!current?.hunt, problem: prob,
        pending: extra.pending || null, asked: extra.asked ?? record.length });
 
   const startDiagnostic = () => {
@@ -635,7 +635,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
         newRecord = pending.record.map(r => r.id === skill.id
           ? { ...r, correct: true, confirmed: true } : r);
         if (!newRecord.some(r => r.id === skill.id)) {
-          newRecord = [...newRecord, { id: skill.id, grade: skill.grade, strand: skill.strand, unit: skill.unit, probeFor: skill.probeFor, correct: true, confirmed: true }];
+          newRecord = [...newRecord, { id: skill.id, grade: skill.grade, strand: skill.strand, unit: skill.unit, probeFor: skill.probeFor, ...(skill.hunt ? { hunt: true } : {}), correct: true, confirmed: true }];
         }
       } else {
         // Wrong twice: the gap is real. Leave the verdict standing.
@@ -656,7 +656,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       }
     } else {
       newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
-      newRecord = [...record, { id: skill.id, grade: skill.grade, strand: skill.strand, unit: skill.unit, probeFor: skill.probeFor, correct, w: timeWeight, ...(skip ? { skipped: true } : {}) }];
+      newRecord = [...record, { id: skill.id, grade: skill.grade, strand: skill.strand, unit: skill.unit, probeFor: skill.probeFor, ...(skill.hunt ? { hunt: true } : {}), correct, w: timeWeight, ...(skip ? { skipped: true } : {}) }];
       // "I haven't learned this yet" is already a clear signal: no re-ask.
       if (!correct && !skip) newPending = { id: skill.id, balances, record };
     }

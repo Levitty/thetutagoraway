@@ -162,7 +162,7 @@ function runCheck(child) {
   while (current && asked < CAP) {
     asked++;
     const { correct, skip } = answerOnce(current);
-    const rec = { id: current.id, grade: current.grade, strand: current.strand, unit: current.unit, probeFor: current.probeFor, correct, ...(skip ? { skipped: true } : {}) };
+    const rec = { id: current.id, grade: current.grade, strand: current.strand, unit: current.unit, probeFor: current.probeFor, hunt: current.hunt, correct, ...(skip ? { skipped: true } : {}) };
     if (pending && pending.id === current.id) {
       if (correct) {
         balances = propagateCredit(pending.balances, current.id, true, 1.0, ctx);
@@ -210,6 +210,7 @@ for (const child of CHILDREN) {
   // Who sits how long, and who is placed where, by kind of child.
   const kind = child.level < child.declared ? 'below their grade' : child.level > child.declared ? 'above their grade' : child.gaps.size ? 'on grade, with gaps' : 'on grade, no gaps';
   const k = (tally.byKind ||= {})[kind] ||= { n: 0, q: 0, exact: 0, within1: 0 };
+  if (process.env.DUMP && placementGrade < child.level && (examples.low ||= []).length < 12) examples.low.push(`${kind}: declared ${child.declared}, level ${child.level}, placed ${placementGrade}, gaps [${[...child.gaps].join(', ')}], ${asked} asked; wrong: ${record.filter(r => !r.correct).map(r => `${r.id}${r.probeFor ? '' : '*'}`).join(' ')}; sweep misses with no follow-up: ${record.filter(r => !r.correct && !r.probeFor && r.grade === child.declared && !record.some(f => f.probeFor === r.unit)).length}`);
   k.n++; k.q += asked; (k.off ||= {})[placementGrade - child.level] = (k.off[placementGrade - child.level] || 0) + 1; if (placementGrade === child.level) k.exact++; if (Math.abs(placementGrade - child.level) <= 1) k.within1++;
   // Coverage: did the check put any question into the sub-strand of a gap?
   if (child.gaps.size) {
@@ -272,4 +273,5 @@ show('False alarms:', examples.falseGap);
 show('False alarms that were asked and missed:', examples.askedWrong || []);
 show('Practice does not start where the plan says:', examples.path);
 show('Gap not named:', examples.missedRoot);
+show('Placed too low:', examples.low || []);
 show('Right answers marked wrong during the check:', examples.markErrors);

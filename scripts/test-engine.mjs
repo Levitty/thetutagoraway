@@ -247,7 +247,7 @@ const sit = (declared, frontier) => {
     if (q.settle) { const r = asked.find(a => a.id === q.id); r.settled = true; continue; }
     // The record shape the app writes: sub-strand, and for a follow-up the
     // sub-strand whose miss it is chasing.
-    asked.push({ id: q.id, grade: q.grade, strand: q.strand, unit: q.unit, probeFor: q.probeFor, correct: q.grade <= frontier });
+    asked.push({ id: q.id, grade: q.grade, strand: q.strand, unit: q.unit, probeFor: q.probeFor, hunt: q.hunt, correct: q.grade <= frontier });
   }
   return { asked, placed: computePlacement(asked, declared, pool) };
 };

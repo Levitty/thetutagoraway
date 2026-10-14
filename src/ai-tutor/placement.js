@@ -24,7 +24,7 @@
 //      one rung further. Every thread gets its first follow-up before any gets
 //      its second, so the cap trims the deepest probes, never a whole thread.
 //   3. A near-flawless sweep earns a short stretch above the declared grade —
-//      one question per strand, all right to count. Never more than one grade.
+//      five questions across its strands, four right to count. Never more than one grade.
 //
 // Every function derives its answer from the questions asked so far, so there
 // is no phase state to persist and a half-finished test resumes from its
@@ -36,7 +36,13 @@ import { gradeOf, strandOf, isEnrichment, NATIVE } from './curricula.js';
 export const CLEAR = 0.65;          // share of the declared sweep needed to clear the grade
 export const STRETCH_GATE = 0.9;    // share of the sweep needed before a stretch is offered
 export const MAX_QUESTIONS = 40;    // hard ceiling on the whole test, confirmations included
-export const STRETCH_PROBE = 5;     // stretch questions, one per strand of the grade above
+export const STRETCH_PROBE = 5;     // stretch questions, one per sub-strand of the grade above
+// Misses a full five-question stretch may carry and still count. Asking for
+// five out of five missed one child in three who really is a grade ahead: a
+// single gap anywhere in five strands blocked it. A miss is re-asked first, so
+// this is a real miss, and four strands of the grade above still have to hold.
+export const STRETCH_MISSES = 1;
+const stretchAllowance = (need) => (need >= STRETCH_PROBE ? STRETCH_MISSES : 0);
 export const MAX_PROBE_DEPTH = 3;   // how many rungs below a miss a thread may follow
 
 // ---------------------------------------------------------------------------
@@ -106,9 +112,6 @@ export const unitsAt = (pool, grade) => {
   }
   return out;
 };
-
-const strandsAt = (pool, grade) =>
-  [...new Set(pool.filter(s => s.grade === grade).map(s => s.strand))].sort();
 
 // The best question among candidates: the most load-bearing skill, then the one
 // the running evidence is least sure about.
@@ -215,6 +218,12 @@ export const selectQuestion = (asked, declared, pool, balances = {}) => {
   const byId = new Map(pool.map(s => [s.id, s]));
   const misses = sweep.filter(a => !a.correct);
   for (let depth = 1; depth <= MAX_PROBE_DEPTH; depth++) {
+    // After every thread has its first follow-up: go straight for a missing
+    // step they share, before spending questions on second and third rungs.
+    if (depth === 2) {
+      const hunt = huntSharedRoot(asked, pool, byId, start);
+      if (hunt) return hunt;
+    }
     for (const m of misses) {
       const thread = asked.filter(a => a.probeFor === unitOf(m));
       if (thread.length !== depth - 1) continue;
@@ -225,17 +234,21 @@ export const selectQuestion = (asked, declared, pool, balances = {}) => {
     }
   }
 
-  // 3. A near-flawless sweep earns a short stretch, stopping at the first miss.
+  // 3. A near-flawless sweep earns a short stretch, stopping once it cannot count.
   const gmax = gradesIn(pool).slice(-1)[0];
   if ((accuracy(sweep) ?? 0) >= STRETCH_GATE && start + 1 <= gmax) {
     const up = start + 1;
     const stretch = sweepRows(asked, up);
-    const strands = strandsAt(pool, up);
-    if (stretch.every(a => a.correct) && stretch.length < Math.min(STRETCH_PROBE, strands.length)) {
-      const done = new Set(stretch.map(a => a.strand));
-      for (const st of strands) {
-        if (done.has(st)) continue;
-        const pick = best(pool, pool.filter(s => s.grade === up && s.strand === st && !answered.has(s.id)), balances);
+    // One question per sub-strand of the grade above, strands interleaved, so
+    // five questions reach every strand. One per STRAND was four questions in
+    // CBC, which has four strands, and four-of-four left no room for a miss.
+    const units = unitsAt(pool, up);
+    const need = Math.min(STRETCH_PROBE, units.length);
+    if (stretch.filter(a => !a.correct).length <= stretchAllowance(need) && stretch.length < need) {
+      const done = new Set(stretch.map(unitOf));
+      for (const u of units) {
+        if (done.has(u)) continue;
+        const pick = best(pool, pool.filter(s => s.grade === up && unitOf(s) === u && !answered.has(s.id)), balances);
         if (pick) return pick;
       }
     }
@@ -244,6 +257,43 @@ export const selectQuestion = (asked, declared, pool, balances = {}) => {
   // 4. Settle the headline before it is said. See nextToSettle.
   const settle = nextToSettle(asked, pool);
   return settle ? { ...settle, settle: true } : null;
+};
+
+/**
+ * The one skill most of the wrong answers stand on, asked directly.
+ *
+ * A gap deep down — Grade 2 counting, Grade 1 addition — fails nearly every
+ * arithmetic question above it. The follow-ups go down one rung at a time, so
+ * each thread fails at Grade 4, then Grade 3, and runs out of depth or of
+ * questions before reaching Grade 2. Every failure then looks like its own gap,
+ * and in simulation such children came out a grade or two low. Asking the
+ * shared ancestor directly settles it in one question: wrong, and the misses
+ * above it are one gap (see sharedRootsBelow); right, and the next candidate
+ * is tried, up to MAX_HUNTS.
+ *
+ * A candidate stands under at least three wrong answers below the declared
+ * grade's sweep, and under nothing the child answered right — answering a
+ * skill right is evidence for everything it stands on.
+ */
+export const MAX_HUNTS = 4;
+const huntSharedRoot = (asked, pool, byId, start) => {
+  if (asked.filter(a => a.hunt).length >= MAX_HUNTS) return null;
+  const answered = new Set(asked.map(a => a.id));
+  const wrong = asked.filter(a => !a.correct);
+  const vouched = new Set();
+  for (const a of asked) if (a.correct) for (const p of ancestors(byId, a.id)) vouched.add(p.id);
+  const counts = new Map();
+  for (const w of wrong) {
+    for (const p of ancestors(byId, w.id)) {
+      if (p.grade >= start || answered.has(p.id) || vouched.has(p.id)) continue;
+      counts.set(p.id, (counts.get(p.id) || 0) + 1);
+    }
+  }
+  const cands = [...counts.entries()].filter(([, n]) => n >= 3);
+  if (!cands.length) return null;
+  // Most explanatory first; among equals the highest grade, the nearest rung.
+  cands.sort((a, b) => b[1] - a[1] || byId.get(b[0]).grade - byId.get(a[0]).grade || String(a[0]).localeCompare(String(b[0])));
+  return { ...byId.get(cands[0][0]), hunt: true };
 };
 
 /**
@@ -298,8 +348,8 @@ export const isComplete = (asked, declared, pool) =>
 // ---------------------------------------------------------------------------
 // The placement itself.
 //
-// Cleared the declared sweep: the declared grade, or one above it on a full,
-// flawless stretch. Didn't: walk down the grades the follow-ups reached and
+// Cleared the declared sweep: the declared grade, or one above it on a full
+// stretch with at most STRETCH_MISSES misses. Didn't: walk down the grades the follow-ups reached and
 // stop at the first that holds. Grades with no questions are stepped over, not
 // taken as the floor — a follow-up goes to what a skill stands on, which can
 // be two grades down, and a gap in what was ASKED is not evidence of anything.
@@ -342,6 +392,33 @@ const singleRootGap = (asked, sweep, start, pool) => {
   return (sweep.length - misses.length + explained) / sweep.length >= CLEAR;
 };
 
+// The same mistake one grade down. A child working at Grade 4 who is entered
+// as Grade 5 misses the sweep, and each miss is followed into Grade 4. The
+// follow-ups prefer the most load-bearing skills, which is exactly where a gap
+// sits, so one Grade 3 gap failed Grade 4 follow-up after follow-up and the
+// child came out at Grade 3: in simulation, 125 of 346 such children in Grades
+// 4-5. A follow-up that failed only because it stands on a shared root miss
+// below it — and there are at most MAX_SHARED_ROOTS of those under the
+// declared grade — says that one step is missing, not that its grade is. It
+// counts as holding, and the root is the step the result page names.
+const sharedRootsBelow = (asked, start, pool) => {
+  const byId = new Map(pool.map(s => [s.id, s]));
+  const wrongIds = new Set(asked.filter(a => !a.correct).map(a => a.id));
+  const anc = new Map();
+  const ancOf = (id) => {
+    if (!anc.has(id)) anc.set(id, new Set(ancestors(byId, id).map(s => s.id)));
+    return anc.get(id);
+  };
+  const below = [...wrongIds].filter(id => (byId.get(id)?.grade ?? start) < start
+    && ![...ancOf(id)].some(p => wrongIds.has(p)));
+  if (!below.length || below.length > MAX_SHARED_ROOTS) return { explains: () => false };
+  const shared = below.filter(r => [...wrongIds].filter(id => ancOf(id).has(r)).length >= 2);
+  return {
+    explains: (rec) => shared.some(r => r !== rec.id
+      && (byId.get(r)?.grade ?? rec.grade) < rec.grade && ancOf(rec.id).has(r)),
+  };
+};
+
 export const computePlacement = (asked, declared, pool) => {
   const start = clampGrade(pool, declared);
   if (start == null) return declared ?? null;
@@ -352,8 +429,8 @@ export const computePlacement = (asked, declared, pool) => {
   if (accuracy(sweep) >= CLEAR) {
     const up = start + 1;
     const stretch = sweepRows(asked, up);
-    const need = Math.min(STRETCH_PROBE, strandsAt(pool, up).length);
-    return need > 0 && stretch.length >= need && stretch.every(a => a.correct) ? up : start;
+    const need = Math.min(STRETCH_PROBE, unitsAt(pool, up).length);
+    return need > 0 && stretch.length >= need && stretch.filter(a => !a.correct).length <= stretchAllowance(need) ? up : start;
   }
   // Each sub-strand of the sweep "holds" at some grade: the declared grade if
   // it was answered right; otherwise the first rung down its follow-ups found
@@ -381,12 +458,13 @@ export const computePlacement = (asked, declared, pool) => {
   // the cap cuts off. The sweep was not cleared, so the result is at most one
   // grade below it whatever the votes say.
   if (singleRootGap(asked, sweep, start, pool)) return start;
+  const roots = sharedRootsBelow(asked, start, pool);
   const holds = [];
   for (const rec of sweep) {
     if (rec.correct) { holds.push(start); continue; }
     const thread = asked.filter(a => a.probeFor === unitOf(rec));
     if (!thread.length) continue;
-    const right = thread.find(a => a.correct);
+    const right = thread.find(a => a.correct || roots.explains(a));
     if (right) { holds.push(right.grade); continue; }
     holds.push(Math.min(rec.grade, ...thread.map(a => a.grade)) - 1);
   }
@@ -403,8 +481,9 @@ export const computePlacement = (asked, declared, pool) => {
  * missed more than a third of the check, to save questions for follow-ups. In
  * simulation that was half of all false alarms: a single careless slip on a
  * topic the child knew went unconfirmed and was named as their missing step.
- * The check is allowed to run longer; a parent told about a gap their child
- * does not have is the worse outcome.
+ * Bringing it back once the final ask (nextToSettle) existed was tried too:
+ * false alarms rose from 0% to 3% and placement did not improve, because a
+ * child missing most of the sweep runs into the cap either way.
  */
 export const worthConfirming = () => true;
 
@@ -436,7 +515,7 @@ export const explainPlacement = (asked, declared, pool) => {
 };
 
 export default {
-  CLEAR, STRETCH_GATE, MAX_QUESTIONS, STRETCH_PROBE, MAX_PROBE_DEPTH,
-  buildPlacementPool, gradesIn, unitsAt, nextToSettle, gradeAccuracy, sweepRemaining, roomForAnother, worthConfirming,
+  CLEAR, STRETCH_GATE, MAX_QUESTIONS, STRETCH_PROBE, STRETCH_MISSES, MAX_PROBE_DEPTH,
+  buildPlacementPool, gradesIn, unitsAt, nextToSettle, MAX_HUNTS, gradeAccuracy, sweepRemaining, roomForAnother, worthConfirming,
   selectQuestion, isComplete, computePlacement, explainPlacement,
 };

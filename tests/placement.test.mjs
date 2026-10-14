@@ -177,7 +177,7 @@ const sitCheck = (declared, knows) => {
     if (!q || !roomForAnother(asked.length)) break;
     // The final ask on the headline miss: this child answers it the same way.
     if (q.settle) { asked.find(a => a.id === q.id).settled = true; continue; }
-    asked.push({ id: q.id, grade: q.grade, strand: q.strand, unit: q.unit, probeFor: q.probeFor, correct: knows(q) });
+    asked.push({ id: q.id, grade: q.grade, strand: q.strand, unit: q.unit, probeFor: q.probeFor, hunt: q.hunt, correct: knows(q) });
   }
   return asked;
 };
@@ -246,4 +246,26 @@ test('the missing step is asked a final time before it is named', () => {
   assert.equal(q?.id, 'G4_MULTIPLY');
   assert.equal(nextToSettle([{ ...slip[0], settled: true }], pool), null, 'asked once more, then the verdict stands');
   assert.equal(nextToSettle([{ ...slip[0], skipped: true }], pool), null, '"I haven\'t learned this yet" is not re-asked');
+});
+
+test('a child a grade ahead is not held back by one missed strand above it', () => {
+  // All-right was the old bar for the grade above, and one gap anywhere in it
+  // blocked a third of children who really are a grade ahead.
+  const all = sitCheck(5, q => SKILLS[q.id].grade <= 6);
+  const missed = all.find(a => a.grade === 6).id;
+  const asked = sitCheck(5, q => SKILLS[q.id].grade <= 6 && q.id !== missed);
+  assert.equal(asked.filter(a => a.grade === 6 && !a.correct).length, 1);
+  assert.equal(computePlacement(asked, 5, CBC_POOL), 6);
+  // Two misses above is not a grade ahead.
+  const two = new Set(all.filter(a => a.grade === 6).slice(0, 2).map(a => a.id));
+  const asked2 = sitCheck(5, q => SKILLS[q.id].grade <= 6 && !two.has(q.id));
+  assert.equal(computePlacement(asked2, 5, CBC_POOL), 5);
+});
+
+test('a deep gap is asked directly instead of being chased one grade at a time', () => {
+  // Grade 2 counting under everything: the follow-ups alone ran out of depth
+  // before reaching it, and each failure looked like a separate gap.
+  const blocked = new Set(['G2_COUNTING', ...getPostRequisiteChain('G2_COUNTING')]);
+  const asked = sitCheck(5, q => SKILLS[q.id].grade <= 5 && !blocked.has(q.id));
+  assert.ok(asked.some(a => a.hunt), 'no shared missing step was asked');
 });
