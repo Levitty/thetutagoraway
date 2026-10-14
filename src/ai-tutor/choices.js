@@ -65,4 +65,19 @@ export function maybeChoices(problem, { rate = CHOICE_RATE, random = Math.random
   return mc ? { ...problem, mc } : problem;
 }
 
+/**
+ * The question's OWN options only — never a generated four-choice item.
+ *
+ * The rule above ("never in the free check, reviews or memory checks") is about
+ * options BUILT from misconceptions: handing a learner four answers to choose
+ * between would make a memory check easier than the recall it is testing.
+ *
+ * It was never meant to cover a question that ships its own options. "Is this
+ * cut into eight equal parts?" has exactly two answers, and "What fraction is
+ * shaded?" offers ½, ¼ and ⅛ — a child cannot type those on a phone keyboard,
+ * so without the buttons the question is simply unanswerable. Reviews and the
+ * diagnostic therefore get these, and still never get the generated ones.
+ */
+export const ownChoicesOnly = (problem) => maybeChoices(problem, { rate: 0 });
+
 export const LETTERS = ['A', 'B', 'C', 'D'];
