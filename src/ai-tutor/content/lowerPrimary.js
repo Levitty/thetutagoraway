@@ -690,7 +690,10 @@ function buildUseOfLetters() {
           { text: `What adds to ${known} to make ${total}?`, expr: `${total} − ${known}` },
           { text: `So ${letter} = ${answer}.`, expr: `${letter} = ${answer}` }],
           answer: `${answer}` },
-        misconceptions: [], verify: { kind: 'number', value: answer } };
+        misconceptions: [
+          { when: `${total}`, feedback: `${total} is the total the two sides add up to, not the missing number — take ${known} away from it.` },
+          { when: `${total + known}`, feedback: `${known} was added again. To undo an addition you take the same amount away.` },
+        ], verify: { kind: 'fraction', value: answer } };
     }
     const each = randInt(2, 9), groups = randInt(2, 9);
     const value = each * groups;
@@ -706,7 +709,10 @@ function buildUseOfLetters() {
         { text: `How many ${groups}s make ${value}?`, expr: `${value} ÷ ${groups}` },
         { text: `So ${letter} = ${each}.`, expr: `${letter} = ${each}` }],
         answer: `${each}` },
-      misconceptions: [], verify: { kind: 'number', value: each } };
+      misconceptions: [
+        { when: `${value}`, feedback: `${value} is the answer to the multiplication, not the number ${letter} stands for — share it into ${groups} equal groups.` },
+        { when: `${value - groups}`, feedback: `${groups} × ${letter} is a multiplication, so undo it by dividing, not by subtracting.` },
+      ], verify: { kind: 'fraction', value: each } };
   };
 }
 
