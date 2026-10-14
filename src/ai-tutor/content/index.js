@@ -12,6 +12,7 @@ import { GEOMETRY_CONTENT } from './geometry.js';
 import { VISUAL_CONTENT } from './visual.js';
 import { LOWER_PRIMARY_CONTENT } from './lowerPrimary.js';
 import { GRADE5_CONTENT } from './grade5.js';
+import { DATA_DISPLAY_CONTENT } from './dataDisplays.js';
 
 export const STRUCTURED_CONTENT = {
   ...ALGEBRA_CONTENT,
@@ -24,6 +25,9 @@ export const STRUCTURED_CONTENT = {
   ...VISUAL_CONTENT,
   ...LOWER_PRIMARY_CONTENT,
   ...GRADE5_CONTENT,
+  // After GRADE5_CONTENT so the authored tally/bar/pictograph content wins over
+  // the legacy stubs that described a chart without drawing one.
+  ...DATA_DISPLAY_CONTENT,
 };
 
 export const STRUCTURED_IDS = Object.keys(STRUCTURED_CONTENT);

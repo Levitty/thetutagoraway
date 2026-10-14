@@ -191,8 +191,8 @@ const GRADE_5 = {
 
   // Statistics
   G5_TALLY: skill('G5_TALLY', 'Tally Charts & Frequency Tables', 5, S.STA, { w: 1, curricula: { cbc: cbc(5, 'Data Handling', 'Data Representation') } }),
-  G5_BAR_GRAPHS: skill('G5_BAR_GRAPHS', 'Reading Bar Graphs', 5, S.STA, { pre: ['G5_TALLY'], w: 1, curricula: { cbc: cbc(5, 'Data Handling', 'Data Representation') } }),
-  G5_PICTOGRAPHS: skill('G5_PICTOGRAPHS', 'Reading Pictographs', 5, S.STA, { pre: ['G5_TALLY'], w: 1, curricula: { cbc: cbc(5, 'Data Handling', 'Data Representation') } }),
+  G5_BAR_GRAPHS: skill('G5_BAR_GRAPHS', 'Reading Bar Graphs', 5, S.STA, { pre: ['G5_TALLY'], w: 1, curricula: { cbc: cbc(6, 'Data Handling', 'Bar Graphs') } }),
+  G5_PICTOGRAPHS: skill('G5_PICTOGRAPHS', 'Reading Pictographs', 5, S.STA, { pre: ['G5_TALLY'], w: 1, curricula: { cbc: cbc(6, 'Data Handling', 'Bar Graphs') } }),
 };
 
 // ============================================================================

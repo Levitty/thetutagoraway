@@ -136,3 +136,72 @@ test('the diagnostic and the review attach a question’s own options', () => {
   const unwrapped = [...src.matchAll(/setProblem\(\s*generateProblem\(/g)].length;
   assert.equal(unwrapped, 0, 'a diagnostic or review problem is served without its own options attached');
 });
+
+// ---------------------------------------------------------------------------
+// A QUESTION THAT SAYS A CHART IS THERE MUST DRAW ONE
+//
+// Found in live testing, in the diagnostic:
+//
+//   "In a survey: apples: 15, bananas: 10, oranges: 4, mangoes: 15.
+//    How many apples were counted?"
+//
+// There was no survey and no chart. The answer sat in the question, labelled
+// with the very word being asked about, and the hint said so out loud: "find
+// apples in the list and read the number right after it". Seven questions
+// across Grades 4 to 8 worked this way — "a bar graph shows Mon: 15, Tue: 17"
+// with no graph anywhere — which turns reading a display, the skill the design
+// actually names, into arithmetic on a sentence.
+//
+// The rule is narrow on purpose. A question MAY mention a chart while being
+// self-contained ("1 square on the axis represents 5 learners; a bar reaches 7
+// squares"), and that is fine. What it may not do is ASSERT that a display is
+// in front of the learner and then not draw it.
+// ---------------------------------------------------------------------------
+
+// "The bar graph shows…", "The tally chart shows…" — an assertion that
+// something is on screen, as opposed to a mention in passing.
+const ASSERTS_A_DISPLAY = /\b(the|this)\s+(bar graph|tally chart|pictograph|pie chart|table|graph|chart)\s+(shows|gives)\b/i;
+
+test('a question that says a chart is shown actually draws it', () => {
+  const undrawn = new Map();
+  for (const id of Object.keys(SKILLS)) {
+    for (let i = 0; i < DRAWS; i++) {
+      let p;
+      try { p = generateProblem(id); } catch { break; }
+      if (!p || p.placeholder) break;
+      if (ASSERTS_A_DISPLAY.test(p.question || '') && !p.model && !p.picture && !p.visual) {
+        if (!undrawn.has(id)) undrawn.set(id, p.question);
+      }
+    }
+  }
+  const report = [...undrawn].map(([id, q]) => `${id}: ${q}`);
+  assert.deepEqual(report, [], `\n  ${report.join('\n  ')}\n`);
+});
+
+test('a drawn display is not also spelled out in the question', () => {
+  // The other half of the same fault: drawing the chart but ALSO listing the
+  // numbers leaves the chart decorative and the lookup intact.
+  const spelled = new Map();
+  for (const id of Object.keys(SKILLS)) {
+    for (let i = 0; i < DRAWS; i++) {
+      let p;
+      try { p = generateProblem(id); } catch { break; }
+      if (!p || !p.model) break;
+      const d = p.model.data || {};
+      // `rows` is an array of {label, value} on a table or tally, but a plain
+      // COUNT on fraction-grid ({ rows: 6, cols: 2 }). Spreading that throws, so
+      // only genuine lists are read.
+      const list = (v) => (Array.isArray(v) ? v : []);
+      const values = [...list(d.rows), ...list(d.bars)]
+        .map(r => r?.value ?? r?.count).filter(v => v != null);
+      // Three or more of the display's own values repeated in the stem means
+      // the data was written out as well as drawn.
+      if (values.length >= 3) {
+        const inStem = values.filter(v => new RegExp(`(?<![\\d.])${v}(?![\\d.])`).test(p.question || '')).length;
+        if (inStem >= 3 && !spelled.has(id)) spelled.set(id, p.question);
+      }
+    }
+  }
+  const report = [...spelled].map(([id, q]) => `${id}: ${q}`);
+  assert.deepEqual(report, [], `\n  ${report.join('\n  ')}\n`);
+});

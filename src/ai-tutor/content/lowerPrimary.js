@@ -1110,15 +1110,20 @@ function buildTablesAndBars() {
     const vals = set.keys.map(() => randInt(3, 20));
     // Distinct values keep "which is biggest" and the readings unambiguous.
     if (new Set(vals).size !== vals.length) return buildTablesAndBars()();
-    const table = set.keys.map((k, i) => `${k}: ${vals[i]}`).join(',  ');
     const mode = pick(['read', 'total', 'difference', 'most']);
-    const stem = `A table shows ${set.label} —  ${table}.`;
+    // The data is DRAWN, never written into the question. Spelled out as
+    // "Mon: 7, Tue: 9, Wed: 20", reading a table collapses into finding the
+    // label and copying the number beside it — which is not the skill.
+    const rows = set.keys.map((k, i) => ({ label: k, value: vals[i] }));
+    const tableModel = { type: 'table', data: { head: ['', set.noun], rows } };
+    const barModel = { type: 'bar-chart', data: { bars: rows } };
 
     if (mode === 'read') {
       const i = randInt(0, set.keys.length - 1);
       return {
         type: 'table-read', instruction: 'Read the value out of the table.',
-        question: `${stem}  How many ${set.noun} for ${set.keys[i]}?`,
+        question: `The table shows ${set.label}. How many ${set.noun} for ${set.keys[i]}?`,
+        model: tableModel,
         answer: `${vals[i]}`, accepts: accepts(`${vals[i]}`),
         hints: hintLadder(
           'Each row of the table names one group and gives its count.',
@@ -1138,7 +1143,8 @@ function buildTablesAndBars() {
       const value = vals.reduce((a, b) => a + b, 0);
       return {
         type: 'table-total', instruction: 'Give the total.',
-        question: `${stem}  How many ${set.noun} altogether?`,
+        question: `The table shows ${set.label}. How many ${set.noun} altogether?`,
+        model: tableModel,
         answer: `${value}`, accepts: accepts(`${value}`),
         hints: hintLadder(
           'Every row stands for part of the whole.',
@@ -1158,7 +1164,8 @@ function buildTablesAndBars() {
       const hi = Math.max(...vals), lo = Math.min(...vals), value = hi - lo;
       return {
         type: 'bar-difference', instruction: 'Compare the tallest and shortest bars.',
-        question: `A bar graph shows ${set.label} —  ${table}.  How many more ${set.noun} has the biggest bar than the smallest?`,
+        question: `The bar graph shows ${set.label}. How many more ${set.noun} has the tallest bar than the shortest?`,
+        model: barModel,
         answer: `${value}`, accepts: accepts(`${value}`),
         hints: hintLadder(
           'Find the tallest bar and the shortest bar first.',
@@ -1179,7 +1186,8 @@ function buildTablesAndBars() {
     const value = set.keys[vals.indexOf(hi)];
     return {
       type: 'bar-most', instruction: 'Name the biggest bar.',
-      question: `A bar graph shows ${set.label} —  ${table}.  Which has the most?`,
+      question: `The bar graph shows ${set.label}. Which has the most?`,
+      model: barModel,
       answer: value, accepts: accepts(value), choices: set.keys,
       hints: hintLadder(
         'The tallest bar always stands for the biggest count.',

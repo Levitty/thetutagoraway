@@ -828,7 +828,7 @@ const BarChart = ({ data }) => {
           return (
             <g key={i}>
               <rect x={cx - bw / 2} y={y(b.value)} width={bw} height={bottom - y(b.value)}
-                fill={CAT_COLORS[i % CAT_COLORS.length]} fillOpacity={on ? 1 : 0.35} rx="2" />
+                fill={CAT_COLORS[i % CAT_COLORS.length]} fillOpacity={on ? 1 : 0.6} rx="2" />
               <text x={cx} y={bottom + 14} textAnchor="middle" fontSize="10.5" fill="#334155">{b.label}</text>
             </g>
           );
@@ -939,6 +939,38 @@ const PieChart = ({ data }) => {
   );
 };
 
+// A plain two-column frequency table, drawn. Reading a value out of a table is
+// a Grade 4 outcome in its own right, but only when there is a table: written
+// into the question as "Mon: 7, Tue: 9, Wed: 20" it collapses into finding the
+// label and copying the number beside it.
+const DataTable = ({ data }) => {
+  const { rows = [], head = ['', ''], caption, highlight } = data || {};
+  if (!rows.length) return null;
+  const H = 30 + rows.length * 24;
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 340 ${H}`} className="w-full" role="img" aria-label="Table">
+        <text x="14" y="15" fontSize="10" fill="#94a3b8" fontWeight="700">{String(head[0]).toUpperCase()}</text>
+        <text x="210" y="15" fontSize="10" fill="#94a3b8" fontWeight="700">{String(head[1]).toUpperCase()}</text>
+        <line x1="8" y1="21" x2="332" y2="21" stroke="#64748b" strokeWidth="1.2" />
+        {rows.map((r, i) => {
+          const y = 39 + i * 24;
+          const on = highlight === r.label;
+          return (
+            <g key={i}>
+              {on && <rect x="8" y={y - 14} width="324" height="22" fill="#c98a14" fillOpacity="0.12" rx="3" />}
+              <text x="14" y={y} fontSize="12.5" fill="#1e293b" fontWeight={on ? 700 : 600}>{r.label}</text>
+              <text x="210" y={y} fontSize="12.5" fill="#1e293b" fontWeight={on ? 700 : 600}>{r.value}</text>
+              <line x1="8" y1={y + 8} x2="332" y2={y + 8} stroke="#e2e8f0" strokeWidth="1" />
+            </g>
+          );
+        })}
+      </svg>
+      {caption && <p className="text-center text-xs text-slate-500 mt-1">{caption}</p>}
+    </div>
+  );
+};
+
 const MODELS = {
   'balance': BalanceScale,
   'numberline-jump': NumberLineJump,
@@ -961,6 +993,7 @@ const MODELS = {
   'tally': TallyChart,
   'pictograph': Pictograph,
   'pie-chart': PieChart,
+  'table': DataTable,
 };
 
 export const TEACHING_MODEL_TYPES = Object.keys(MODELS);
