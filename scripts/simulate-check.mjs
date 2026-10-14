@@ -210,7 +210,7 @@ for (const child of CHILDREN) {
   // Who sits how long, and who is placed where, by kind of child.
   const kind = child.level < child.declared ? 'below their grade' : child.level > child.declared ? 'above their grade' : child.gaps.size ? 'on grade, with gaps' : 'on grade, no gaps';
   const k = (tally.byKind ||= {})[kind] ||= { n: 0, q: 0, exact: 0, within1: 0 };
-  k.n++; k.q += asked; if (placementGrade === child.level) k.exact++; if (Math.abs(placementGrade - child.level) <= 1) k.within1++;
+  k.n++; k.q += asked; (k.off ||= {})[placementGrade - child.level] = (k.off[placementGrade - child.level] || 0) + 1; if (placementGrade === child.level) k.exact++; if (Math.abs(placementGrade - child.level) <= 1) k.within1++;
   // Coverage: did the check put any question into the sub-strand of a gap?
   if (child.gaps.size) {
     const areas = new Set(answered.map(unitOfId));
@@ -267,7 +267,7 @@ console.log(`No result at all: ${tally.noResult} · checks with a right answer m
 console.log(`Practice starts on the plan's missing step: ${pct(tally.pathStartsAtStep, tally.pathChecked)} · on a skill the plan called SOLID: ${pct(tally.pathStartsSolid, tally.pathChecked)} · on a skill the child already knows: ${pct(tally.pathStartsKnown, tally.pathChecked)}`);
 const show = (t, xs) => { if (xs.length) { console.log(`\n${t}`); for (const x of (FULL ? xs : xs.slice(0, 4))) console.log('  - ' + x); } };
 console.log('\nBy kind of child:');
-for (const [kind, k] of Object.entries(tally.byKind || {})) console.log(`  ${kind.padEnd(22)} ${String(k.n).padStart(4)} children · ${(k.q / k.n).toFixed(1)} questions · placed exactly ${pct(k.exact, k.n)} · within one ${pct(k.within1, k.n)}`);
+for (const [kind, k] of Object.entries(tally.byKind || {})) console.log(`  ${kind.padEnd(22)} ${String(k.n).padStart(4)} children · ${(k.q / k.n).toFixed(1)} questions · placed exactly ${pct(k.exact, k.n)} · within one ${pct(k.within1, k.n)} · off by ${Object.keys(k.off).map(Number).sort((a, b) => a - b).map(d => `${d > 0 ? '+' : ''}${d}: ${k.off[d]}`).join(', ')}`);
 show('False alarms:', examples.falseGap);
 show('False alarms that were asked and missed:', examples.askedWrong || []);
 show('Practice does not start where the plan says:', examples.path);
