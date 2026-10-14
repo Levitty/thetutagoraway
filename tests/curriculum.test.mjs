@@ -56,7 +56,44 @@ const KICD_GRADE8 = [
   ['Data Presentation and Interpretation', 10], ['Probability', 7],
 ];
 
-const DESIGNS = { 7: KICD_GRADE7, 8: KICD_GRADE8, 9: KICD_GRADE9 };
+// ---------------------------------------------------------------------------
+// UPPER PRIMARY. Grades 1-6 had no contract test at all, so nothing proved the
+// Grade 4 and 5 work matched the designs the way Junior School does. Both
+// designs are in docs/curriculum-sources/ and were read for these tables.
+//
+// Reading them turned up two things no test could have caught before: Grade 4
+// had no skill behind 2.4 Capacity (a six-lesson sub-strand, and the only gap
+// in a chain that has capacity at Grades 1, 2, 3, 5 and 6), and G6_BODMAS_BASIC
+// claimed a Grade 5 sub-strand called "Combined Operations", which the design
+// does not have — combined operations is outcome (d) inside 1.5 Division.
+// ---------------------------------------------------------------------------
+
+// KICD Grade 4: four strands, nineteen sub-strands, 150 lessons. Lesson counts
+// are verbatim; Whole Numbers prints none in the sub-strand table, and 20 is
+// what the other eighteen leave out of the design's 150-lesson total.
+// The design numbers Money "3.7" under STRAND 2.0 — a typo in the document for
+// 2.7, since the strand is Measurement and the count fits its total.
+const KICD_GRADE4 = [
+  ['Whole Numbers', 20], ['Addition', 8], ['Subtraction', 8], ['Multiplication', 8],
+  ['Division', 8], ['Fractions', 6], ['Decimals', 10], ['Use of Letters', 6],
+  ['Length', 10], ['Area', 8], ['Volume', 6], ['Capacity', 6], ['Mass', 6],
+  ['Time', 10], ['Money', 8],
+  ['Position and Direction', 4], ['Angles', 4], ['Plane Figures', 6],
+  ['Data', 8],
+];
+
+// KICD Grade 5: four strands, nineteen sub-strands, 150 lessons, verbatim from
+// the design's own "SUMMARY OF STRANDS AND SUB STRANDS" table (p.xii).
+const KICD_GRADE5 = [
+  ['Whole Numbers', 20], ['Addition', 6], ['Subtraction', 6], ['Multiplication', 6],
+  ['Division', 6], ['Fractions', 8], ['Decimals', 6], ['Simple Equations', 6],
+  ['Length', 12], ['Area', 6], ['Volume', 6], ['Capacity', 12], ['Mass', 12],
+  ['Time', 8], ['Money', 8],
+  ['Lines', 4], ['Angles', 6], ['Three Dimension (3-D) Objects', 6],
+  ['Data Representation', 6],
+];
+
+const DESIGNS = { 4: KICD_GRADE4, 5: KICD_GRADE5, 7: KICD_GRADE7, 8: KICD_GRADE8, 9: KICD_GRADE9 };
 
 const cbcGrade = (grade) => {
   const bySub = {};
@@ -68,7 +105,7 @@ const cbcGrade = (grade) => {
 };
 const cbcGrade9 = () => cbcGrade(9);
 
-for (const grade of [7, 8, 9]) {
+for (const grade of [4, 5, 7, 8, 9]) {
   const design = DESIGNS[grade];
 
   test(`every KICD Grade ${grade} sub-strand has at least one skill behind it`, () => {
@@ -77,6 +114,22 @@ for (const grade of [7, 8, 9]) {
     assert.deepEqual(missing, [], `Grade ${grade} sub-strands with no content: ${missing.join(', ')}`);
   });
 
+  test(`nothing is tagged CBC Grade ${grade} that the design does not list`, () => {
+    const named = new Set(design.map(([n]) => n));
+    const strays = Object.keys(cbcGrade(grade)).filter(sub => !named.has(sub));
+    assert.deepEqual(strays, [], `a sub-strand tagged Grade ${grade} that KICD does not name`);
+  });
+}
+
+// The thin-coverage rule is asserted for Junior School only. Upper primary has
+// deliberately fewer, broader skills per sub-strand — Grade 5 Length, Capacity
+// and Mass are twelve lessons each behind one skill apiece — so turning it on
+// for Grades 4 and 5 would be asserting a content-expansion decision that is
+// the owner's to make, not a fact about the syllabus. The list is recorded in
+// docs/curriculum-backlog.md instead, where it can be worked through.
+for (const grade of [7, 8, 9]) {
+  const design = DESIGNS[grade];
+
   test(`Grade ${grade}'s biggest sub-strands are not left with a single token skill`, () => {
     // A twelve-lesson sub-strand covered by one skill is coverage on paper only.
     const have = cbcGrade(grade);
@@ -84,12 +137,6 @@ for (const grade of [7, 8, 9]) {
       .filter(([name, lessons]) => lessons >= 12 && (have[name] || []).length < 2)
       .map(([name, lessons]) => `${name} (${lessons} lessons, ${(have[name] || []).length} skill)`);
     assert.deepEqual(thin, [], `sub-strands too thin for their lesson count: ${thin.join(', ')}`);
-  });
-
-  test(`nothing is tagged CBC Grade ${grade} that the design does not list`, () => {
-    const named = new Set(design.map(([n]) => n));
-    const strays = Object.keys(cbcGrade(grade)).filter(sub => !named.has(sub));
-    assert.deepEqual(strays, [], `a sub-strand tagged Grade ${grade} that KICD does not name`);
   });
 }
 

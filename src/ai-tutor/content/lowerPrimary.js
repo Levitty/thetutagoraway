@@ -1350,7 +1350,7 @@ export const LOWER_PRIMARY_CONTENT = {
                        withWorkedExample(buildAmPmDuration({ withDuration: false })),
                        withWorkedExample(buildAmPmDuration({ withDuration: true })),
                      ]),
-  // KICD Grade 4, 2.3/2.4: choose the unit, then convert. Grade 5 takes this
+  // KICD Grade 4, 2.5 Mass: choose the unit, then convert. Grade 5 takes this
   // on to multi-step word problems in mixed units.
   G4_MASS:           withKPs([
                        withWorkedExample(buildUnitChoice({ pairs: [
@@ -1359,13 +1359,22 @@ export const LOWER_PRIMARY_CONTENT = {
                            ['a sack of maize', 'big'], ['a letter', 'small'], ['a cow', 'big'],
                            ['a spoonful of salt', 'small'], ['a motorbike', 'big'],
                          ]],
+                       ] })),
+                       withWorkedExample(buildUnitConvert({ pairs: [['kilograms', 'grams', 1000]] })),
+                     ]),
+  // KICD Grade 4, 2.4 Capacity — its own six-lesson sub-strand in the design,
+  // which had no skill behind it at all. It used to ride along inside
+  // G4_MASS's title while the tag said Mass, so nothing counted it.
+  G4_CAPACITY:       withKPs([
+                       withWorkedExample(buildUnitChoice({ pairs: [
                          ['millilitres', 'litres', [
                            ['a spoonful of cough syrup', 'small'], ['a jerrican of water', 'big'],
                            ['the ink in a pen', 'small'], ['a water tank', 'big'],
                            ['a dose of medicine', 'small'], ['a drum of paraffin', 'big'],
+                           ['a teaspoon of vanilla', 'small'], ['a lorry fuel tank', 'big'],
                          ]],
                        ] })),
-                       withWorkedExample(buildUnitConvert({ pairs: [['kilograms', 'grams', 1000], ['litres', 'millilitres', 1000]] })),
+                       withWorkedExample(buildUnitConvert({ pairs: [['litres', 'millilitres', 1000]] })),
                      ]),
 
   G4_AREA:           withWorkedExample(buildSmallArea()),

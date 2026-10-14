@@ -90,3 +90,38 @@ and `Gp` for stage-level completeness.
 3. **P2** money/constructions/scale-drawing breadth — larger, aligns the graph with CBC's
    competency framing.
 4. **P3** only if a product decision calls for teaching beyond Cambridge LS.
+
+---
+
+## P1b — Upper primary breadth (Grades 4 & 5), opened 2026-10-14
+
+Grades 1–6 had no KICD contract test. `tests/curriculum.test.mjs` now covers Grades 4 and 5 against
+`docs/curriculum-sources/KICD-Grade{4,5}-Mathematics-Curriculum-Design.pdf`, and both grades cover
+all **19** of their sub-strands. Two faults it found on the way in are already fixed: Grade 4 had no
+skill behind **2.4 Capacity** (6 lessons), and `G6_BODMAS_BASIC` claimed a Grade 5 sub-strand called
+"Combined Operations", which the design does not have — combined operations is outcome (d) inside
+1.5 Division.
+
+What is **not** asserted for Grades 4–5 is the thin-coverage rule the Junior School grades carry
+(a sub-strand of ≥12 lessons needs ≥2 skills behind it). Upper primary deliberately has fewer,
+broader skills, so switching it on would assert a content-expansion decision rather than a syllabus
+fact. The sub-strands it would flag today, for whoever works through them:
+
+| Grade | Sub-strand | Lessons | Skills tagged |
+|---|---|---|---|
+| 4 | Whole Numbers | 20 | 1 (`G4_PLACE_VALUE`) |
+| 5 | Whole Numbers | 20 | 4 |
+| 5 | Length | 12 | 1 (`G5_LENGTH`) |
+| 5 | Capacity | 12 | 1 (`G5_CAPACITY`) |
+| 5 | Mass | 12 | 1 (`G5_MASS`) |
+
+Grade 4 Whole Numbers is the weakest: 20 lessons of the design (place value, rounding, number
+patterns, roman numerals in some editions) behind a single place-value skill. Grade 5's three
+twelve-lesson measurement sub-strands each have one skill carrying a 3–4 rung KP ladder, so the
+*content* is broader than the skill count suggests; the fix there may be splitting skills rather than
+authoring more.
+
+Also noted, not a gap: `G5_TRIANGLES_INTRO` has content but **no** CBC tag, correctly — Grade 5
+Geometry in the design is only 3.1 Lines, 3.2 Angles and 3.3 Three Dimension (3-D) Objects. Triangles
+enter the KICD sequence later, so the skill is enrichment at Grade 5 and must not be counted as
+Grade 5 coursework. Grades 1, 2, 3 and 6 still have no contract test.
