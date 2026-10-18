@@ -707,12 +707,18 @@ export const selectReviewProblems = (progress, count = 12, ctx) => {
   //    least-recently-practised first, one each — keeps everything warm.
   if (bag.length < count) {
     const inBag = new Set(bag);
-    // Same tie as in getReviews: everything the check credited carries one
-    // timestamp, so least-recently-practised ties across all of it and the
-    // sort falls through to skill-list order — ascending grade. Without the
-    // grade tie-break the top-up quietly fills the session from Grade 1 up.
+    // This top-up is where "80 + 3 = ?" reached a Grade 5. getReviews applies
+    // a grade floor; this filter did not, so it drew from EVERY mastered
+    // skill — and because the floor removed the genuine reviews, the bag was
+    // short more often and the unfiltered top-up ran harder. Filtering one
+    // and not the other made the symptom worse, not better. Same floor here.
+    //
+    // Same tie, too: everything the check credited carries one timestamp, so
+    // least-recently-practised ties across all of it and the sort falls
+    // through to skill-list order, which is ascending grade.
     const filler = c.skillList
       .filter(s => progress.skills[s.id]?.mastered && !inBag.has(s.id))
+      .filter(s => progress.skills[s.id].practisedHere || !assumedKnown(s, progress))
       .sort((a, b) =>
         (new Date(progress.skills[a.id].lastPractice || 0) - new Date(progress.skills[b.id].lastPractice || 0))
         || ((b.grade || 0) - (a.grade || 0)));

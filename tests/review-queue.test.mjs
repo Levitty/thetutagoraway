@@ -20,7 +20,7 @@
 // ============================================================================
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { getReviews } from '../src/ai-tutor/adaptiveEngine.js';
+import { getReviews, selectReviewProblems } from '../src/ai-tutor/adaptiveEngine.js';
 import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
 
 const DAY = 86400000;
@@ -205,5 +205,45 @@ test('real struggle cancels the assumption and the skill is reviewed again', () 
   assert.ok(
     ids(getReviews(progress, undefined)).includes('G2_COUNTING'),
     'a Grade 5 who has worked at Grade 2 counting here still gets it reviewed',
+  );
+});
+
+// ---- selectReviewProblems: what the session ACTUALLY serves ---------------
+// getReviews drives the dashboard list; this picks the problems once a review
+// starts. Filtering only the first is what put "80 + 3 = ?" in front of a
+// Grade 5: the floor emptied the due list, so the bag ran short more often,
+// so the UNFILTERED top-up below it ran harder. Both need the same floor.
+
+test('a review session serves a Grade 5 nothing from Grade 1 or 2', () => {
+  const progress = checkedAt(['G1_PRENUMBER', 'G1_COUNTING', 'G1_ADD', 'G2_COUNTING', 'G2_ADD'], 5);
+  progress.declaredGrade = 5;
+  const served = selectReviewProblems(progress, 12, undefined);
+  const grades = served.map((id) => SKILLS[id]?.grade);
+  assert.deepEqual(
+    served, [],
+    `a Grade 5 was served grade ${JSON.stringify(grades)} problems: ${served.join(', ')}`,
+  );
+});
+
+test('the top-up still fills a session with work at the learner’s own level', () => {
+  // The floor must not starve the session: skills at or near the learner's
+  // level are still fair game even when nothing is strictly due.
+  const progress = checkedAt(['G5_PLACE_VALUE', 'G5_ADDITION', 'G5_SUBTRACTION'], 1);
+  progress.declaredGrade = 5;
+  const served = selectReviewProblems(progress, 6, undefined);
+  assert.ok(served.length > 0, 'a Grade 5 with Grade 5 work mastered still gets a review session');
+  for (const id of served) {
+    assert.ok(SKILLS[id].grade >= 4, `served ${id} (grade ${SKILLS[id].grade})`);
+  }
+});
+
+test('a struggling learner is still served the foundation they struggle with', () => {
+  const progress = { declaredGrade: 5, skills: { G2_COUNTING: {
+    attempts: 9, correct: 3, mastered: true, repNum: 1, learningSpeed: 1.0,
+    lastPractice: ago(20), fromDiagnostic: true, practisedHere: true, consecutiveFailures: 2,
+  } } };
+  assert.ok(
+    selectReviewProblems(progress, 6, undefined).includes('G2_COUNTING'),
+    'practised-here work is never floored away, whatever its grade',
   );
 });

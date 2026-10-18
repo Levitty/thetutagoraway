@@ -1,34 +1,161 @@
-/* HOREB in Tutagora's clothes.
-   HOREB keeps its layout, its robot and its yellow buttons for children; it
-   takes Tutagora's type (Archivo headings, Figtree text), flatter corners and
-   pink highlights. Switched on by useHorebLook() while a HOREB screen is open.
-   Element rules sit inside :where() so the lesson screens' own styles (their
-   Georgia type, their colours) always win. */
+/* ============================================================================
+   HOREB — the student look.
+
+   Bold editorial type on a soft neutral canvas, with saturated blocks doing
+   the navigating. Switched on by useHorebLook() while a HOREB screen is open,
+   so it reaches the dashboard, the lesson, the diagnostic and the review at
+   once without any of them being rewritten.
+
+   It works by RESTATING Tailwind utilities rather than replacing the markup.
+   That is deliberate: AIMastery.jsx carries the whole adaptive engine's UI —
+   multiple-choice, interactive visuals, step questions, bar models, the hint
+   ladder, wrong-answer diagnosis — and re-cutting that markup to change how
+   it looks would risk the one screen a child actually uses. The geometry,
+   type and colour live here; the structure stays where it is.
+
+   Tokens are declared once on the root so a later component can use them
+   directly instead of hunting for a hex.
+   ============================================================================ */
 @import '@fontsource-variable/archivo/wdth.css';
 @import '@fontsource-variable/figtree';
 
-html.horeb-tg body { font-family: "Figtree Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-:where(html.horeb-tg) h1, :where(html.horeb-tg) h2,
-html.horeb-tg .font-extrabold {
-  font-family: "Archivo Variable", "Figtree Variable", -apple-system, sans-serif;
-  font-stretch: 95%; letter-spacing: -.03em;
+html.horeb-tg {
+  --hb-canvas: #E8E8EC;
+  --hb-card: #FFFFFF;
+  --hb-ink: #16161A;
+  --hb-muted: #5C5C66;
+  --hb-faint: #8A8A94;
+  --hb-line: #D3D3DA;
+  --hb-track: #ECECF0;
+  --hb-sun: #FFC93C;        /* the one big button a child presses */
+  --hb-sun-ink: #6B5309;
+  --hb-pink: #FF4F91;
+  --hb-pink-deep: #C2255C;
+  --hb-pink-tint: #FFF0F5;
+  --hb-violet: #6C4BF4;
+  --hb-mint: #9BE3C4;
+  --hb-display: "Archivo Variable", "Figtree Variable", -apple-system, sans-serif;
 }
 
-/* canvas and corners */
-html.horeb-tg .bg-\[\#eef0f2\] { background-color: #f4f4f6; }
-html.horeb-tg .rounded-3xl { border-radius: 12px; }
-html.horeb-tg .rounded-2xl { border-radius: 10px; }
-html.horeb-tg .rounded-xl { border-radius: 8px; }
-html.horeb-tg .rounded-lg { border-radius: 6px; }
-html.horeb-tg .shadow-sm { box-shadow: none; }
+html.horeb-tg body {
+  font-family: "Figtree Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
 
-/* yellow highlights become Tutagora pink (yellow buttons stay yellow) */
-html.horeb-tg .text-amber-500 { color: #ff4f91; }
-html.horeb-tg .text-amber-600, html.horeb-tg .text-amber-700, html.horeb-tg .text-amber-800 { color: #c2255c; }
-html.horeb-tg .hover\:text-amber-600:hover, html.horeb-tg .hover\:text-amber-700:hover, html.horeb-tg .hover\:text-amber-800:hover { color: #a61e4d; }
-html.horeb-tg .bg-amber-50 { background-color: #fff0f5; }
-html.horeb-tg .bg-amber-100 { background-color: #ffe3ee; }
-html.horeb-tg .border-amber-200 { border-color: #ffc2d9; }
+/* ---- type -----------------------------------------------------------------
+   Archivo carries the display sizes. The tighter tracking is what makes a
+   heading read as a statement rather than a label; it only works at weight,
+   so the display face is always 700+. */
+:where(html.horeb-tg) h1,
+:where(html.horeb-tg) h2,
+:where(html.horeb-tg) h3,
+html.horeb-tg .font-extrabold,
+html.horeb-tg .font-black {
+  font-family: var(--hb-display);
+  font-stretch: 95%;
+  letter-spacing: -.03em;
+  font-weight: 800;
+}
+html.horeb-tg .text-3xl,
+html.horeb-tg .text-4xl,
+html.horeb-tg .text-5xl { letter-spacing: -.035em; line-height: 1.05; }
+/* Numbers that are read at a glance — XP, streak, scores — line up only if
+   they are tabular. */
+html.horeb-tg .tabular-nums { font-variant-numeric: tabular-nums; }
 
-/* children's buttons: still yellow, Tutagora's weight */
-html.horeb-tg .bg-amber-400 { font-weight: 800; }
+/* ---- canvas and surfaces --------------------------------------------------
+   Generous radii. The previous look flattened everything to 6-12px; this
+   direction goes the other way, because a soft shape on a soft canvas is what
+   stops a dense practice screen reading as a form. */
+html.horeb-tg .bg-\[\#eef0f2\] { background-color: var(--hb-canvas); }
+html.horeb-tg .rounded-3xl { border-radius: 26px; }
+html.horeb-tg .rounded-2xl { border-radius: 22px; }
+html.horeb-tg .rounded-xl  { border-radius: 18px; }
+html.horeb-tg .rounded-lg  { border-radius: 16px; }
+html.horeb-tg .shadow-sm,
+html.horeb-tg .shadow,
+html.horeb-tg .shadow-md { box-shadow: none; }
+
+/* Ink, not slate: a single near-black keeps the saturated blocks honest. */
+html.horeb-tg .text-slate-900 { color: var(--hb-ink); }
+html.horeb-tg .text-slate-700 { color: #3A3A44; }
+html.horeb-tg .text-slate-500 { color: var(--hb-muted); }
+html.horeb-tg .text-slate-400 { color: var(--hb-faint); }
+html.horeb-tg .border-\[\#121117\] { border-color: var(--hb-ink); }
+html.horeb-tg .bg-slate-900 { background-color: var(--hb-ink); }
+
+/* ---- the big button -------------------------------------------------------
+   One warm, obvious, press-me shape. A child should never have to look for
+   what to do next, so Check / Continue / Start are the only thing on the
+   screen in this colour. */
+html.horeb-tg .bg-amber-400 { background-color: var(--hb-sun); }
+html.horeb-tg .bg-amber-300 { background-color: #FFD76A; }
+html.horeb-tg .hover\:bg-amber-300:hover { background-color: #FFD76A; }
+html.horeb-tg button.bg-amber-400,
+html.horeb-tg button.bg-amber-300,
+html.horeb-tg a.bg-amber-400 {
+  border-radius: 999px;
+  font-family: var(--hb-display);
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+/* Full-width actions get real height — the primary tap target on a phone. */
+html.horeb-tg button.w-full.bg-amber-400,
+html.horeb-tg a.w-full.bg-amber-400 { min-height: 58px; font-size: 17px; }
+
+/* ---- accents --------------------------------------------------------------
+   Amber is reserved for the action, so every amber *highlight* becomes pink.
+   Hints in particular: a hint is not a warning, and the pink tint reads as an
+   aside rather than an error. */
+html.horeb-tg .text-amber-500 { color: var(--hb-pink); }
+html.horeb-tg .text-amber-600,
+html.horeb-tg .text-amber-700,
+html.horeb-tg .text-amber-800 { color: var(--hb-pink-deep); }
+html.horeb-tg .hover\:text-amber-600:hover,
+html.horeb-tg .hover\:text-amber-700:hover,
+html.horeb-tg .hover\:text-amber-800:hover { color: #A61E4D; }
+html.horeb-tg .bg-amber-50 { background-color: var(--hb-pink-tint); }
+html.horeb-tg .bg-amber-100 { background-color: #FFE3EE; }
+html.horeb-tg .border-amber-200 { border-color: #FFC2D9; }
+html.horeb-tg .ring-amber-300 { --tw-ring-color: rgba(255, 79, 145, .35); }
+
+/* ---- the answer field -----------------------------------------------------
+   The one place a child types. Big, inked, and in the display face so what
+   they have entered is unmistakable at arm's length on a shared tablet. */
+html.horeb-tg input[type="text"].border-2 {
+  border-radius: 18px;
+  border-color: var(--hb-ink);
+  min-height: 62px;
+  font-family: var(--hb-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+html.horeb-tg input[type="text"].border-2::placeholder {
+  font-family: "Figtree Variable", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #B4B4BE;
+}
+
+/* ---- multiple choice ------------------------------------------------------
+   The same press-me language as the big button, so choosing an option feels
+   like the same gesture as checking an answer. */
+html.horeb-tg [role="radio"] { border-radius: 999px; font-weight: 700; }
+
+/* ---- progress -------------------------------------------------------------
+   Thin, rounded, pink where it is filled. */
+html.horeb-tg .bg-slate-200,
+html.horeb-tg .bg-slate-100 { background-color: var(--hb-track); }
+
+/* ---- the sidebar / tabs ---------------------------------------------------
+   The selected tab is the ink block; everything else recedes. */
+html.horeb-tg nav button.bg-slate-900,
+html.horeb-tg aside button.bg-slate-900 { border-radius: 14px; }
+
+/* ---- wrong answers --------------------------------------------------------
+   Kept warm rather than red. Getting it wrong is the ordinary case in
+   practice, and the screen should not flinch. */
+html.horeb-tg .bg-\[\#fdf2ef\] { background-color: #FFF4EE; }
+html.horeb-tg .border-\[\#f2cdc2\] { border-color: #F6D3C4; }
