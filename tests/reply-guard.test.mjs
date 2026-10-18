@@ -132,6 +132,12 @@ const ACCEPTED = new Map([
   ['G8_LINEAR_GRAPHS', 'the gradient shown in the substitution sometimes equals y'],
   ['G9_QUADRATIC_GRAPHS', 'the line of symmetry sometimes equals the minimum y'],
   ['G11_LINEAR_PROGRAMMING', 'lists every corner to test; naming all gives none away'],
+  // Turned up only once the check stopped sampling and started enumerating.
+  // Same coincidence class: the common difference of 6, 5, 4, 3… is −1, and so
+  // is the 8th term; the antiderivative's leading coefficient sometimes equals
+  // the definite integral. Both values have to be shown to teach the method.
+  ['G10_SEQUENCES_ADV', 'the common difference sometimes equals the term asked for'],
+  ['G12_DEFINITE_INTEGRALS', 'the antiderivative coefficient sometimes equals the integral'],
 ]);
 
 // Leaks found but not yet fixed. Deliberately EMPTY: the thirteen this guard
@@ -140,11 +146,26 @@ const ACCEPTED = new Map([
 // entry on it has stopped leaking, so the list can only shrink.
 const UNFIXED_HINT_LEAKS = new Map([]);
 
-const SEEDS = [1, 7, 42, 2026];
-const DRAWS = 30;
+// ---- the corpus, enumerated rather than sampled ------------------------
+// Random draws answer "probably fine". This keeps drawing from each skill
+// until it stops producing hints it has not already produced, so the claim is
+// "every hint this skill can make", not "a few we happened to see".
+//
+// The key is the hint TEMPLATE (its numbers blanked) plus the numbers that
+// filled it, plus the answer when the answer is a word. That is exactly what
+// decides a leak, and it collapses the space enormously: a hint with no
+// numbers in it ("Line the digits up by place value") is one key however many
+// different sums it accompanies, because no numeric answer can match text
+// with no digits in it.
+//
+// engine/scripts/audit_hint_leaks.mjs is the deeper version of this check: it
+// runs the same enumeration with a far larger patience and cap (~4 minutes,
+// 3.3M problems, 1,962 templates) and is the one to run before a release.
+const PATIENCE = 400;
+const CAP = 6000;
 
 function seeded(seed) {
-  let s = seed >>> 0;
+  let s = seed >>> 0 || 1;
   return () => {
     s ^= s << 13; s >>>= 0;
     s ^= s >> 17;
@@ -152,43 +173,44 @@ function seeded(seed) {
     return s / 4294967296;
   };
 }
-function withSeed(seed, fn) {
-  const real = Math.random;
-  Math.random = seeded(seed);
-  try { return fn(); } finally { Math.random = real; }
-}
 
-test('no authored hint names its own answer', () => {
-  // namesAnswer, not leaksAnswer: the one-step-away rule is for model replies
-  // only. A hint ladder's LAST rung is meant to put the calculation in front
-  // of the child ("2 × 100 = ?") after two gentler tries — holding our own
-  // hints to the model's rule would condemn the design, not find a bug.
+const keyFor = (answer, hint) => {
+  const tpl = String(hint).replace(/-?\d+(?:\.\d+)?/g, '#');
+  const nums = (String(hint).match(/-?\d+(?:\.\d+)?/g) || []).join(',');
+  const isNumeric = /^-?[\d\s,]*\.?\d+$/.test(String(answer ?? '').trim());
+  return `${tpl}\u0000${nums}\u0000${isNumeric ? '' : answer}`;
+};
+
+test('no hint any skill can produce names its own answer', () => {
   const offenders = [];
   for (const id of Object.keys(SKILLS)) {
     if (ACCEPTED.has(id) || UNFIXED_HINT_LEAKS.has(id)) continue;
-    for (const seed of SEEDS) {
-      if (offenders.length > 6) break;
-      withSeed(seed, () => {
-        for (let i = 0; i < DRAWS; i++) {
-          let p;
-          try { p = generateProblem(id); } catch { continue; }
-          if (!p || p.placeholder) continue;
-          const answers = [p.answer, ...(p.accepts || [])];
-          for (const hint of (p.hints || [p.hint]).filter(Boolean)) {
-            // Skip what the existing rule already calls a leak (the reviewed
-            // classification skills): this test is only about NEW flags.
-            if (answers.some((a) => revealed(a, hint, p.question))) continue;
-            const why = namesAnswer({
-              answer: p.answer, accepts: p.accepts, question: p.question, reply: hint,
-            });
-            if (why) {
-              offenders.push(`${id}: ${why}\n    hint: ${hint}\n    Q: ${p.question}`);
-              break;
-            }
-          }
+    const seen = new Set();
+    let sinceNew = 0, draws = 0, found = null;
+    const real = Math.random;
+    Math.random = seeded([...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7));
+    try {
+      while (sinceNew < PATIENCE && draws < CAP && !found) {
+        draws++;
+        let p;
+        try { p = generateProblem(id); } catch { sinceNew++; continue; }
+        if (!p || p.placeholder) { sinceNew++; continue; }
+        let fresh = false;
+        for (const hint of (p.hints || [p.hint]).filter(Boolean)) {
+          const k = keyFor(p.answer, hint);
+          if (seen.has(k)) continue;
+          seen.add(k);
+          fresh = true;
+          const why = namesAnswer({
+            answer: p.answer, accepts: p.accepts, question: p.question, reply: hint,
+          });
+          if (why) { found = `${id}: ${why}\n    hint: ${hint}\n    Q: ${p.question}`; break; }
         }
-      });
-    }
+        sinceNew = fresh ? 0 : sinceNew + 1;
+      }
+    } finally { Math.random = real; }
+    if (found) offenders.push(found);
+    if (offenders.length > 6) break;
   }
   assert.deepEqual(offenders, [], `\n  ${offenders.join('\n  ')}\n`);
 });
@@ -204,7 +226,10 @@ test('the list of unfixed leaks is real, and only shrinks', () => {
     // Several seeds, not one: some of these leak only on the draw that makes
     // them leak (the place-value hints only when the digit is 1), and a single
     // seed that happens to miss would report a live leak as fixed.
-    for (const seed of [7, ...SEEDS]) withSeed(seed, () => {
+    for (const seed of [7, 1, 42, 2026]) {
+      const real = Math.random;
+      Math.random = seeded(seed);
+      try {
       for (let i = 0; i < 120 && !leaks; i++) {
         let p;
         try { p = generateProblem(id); } catch { continue; }
@@ -215,7 +240,8 @@ test('the list of unfixed leaks is real, and only shrinks', () => {
           }
         }
       }
-    });
+      } finally { Math.random = real; }
+    }
     if (!leaks) stale.push(`${id} no longer leaks — remove it from UNFIXED_HINT_LEAKS`);
   }
   assert.deepEqual(stale, [], `\n  ${stale.join('\n  ')}\n`);
