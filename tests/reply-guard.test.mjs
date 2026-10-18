@@ -146,23 +146,16 @@ const ACCEPTED = new Map([
 // entry on it has stopped leaking, so the list can only shrink.
 const UNFIXED_HINT_LEAKS = new Map([]);
 
-// ---- the corpus, enumerated rather than sampled ------------------------
-// Random draws answer "probably fine". This keeps drawing from each skill
-// until it stops producing hints it has not already produced, so the claim is
-// "every hint this skill can make", not "a few we happened to see".
+// ---- the corpus ----------------------------------------------------------
+// The check that every hint of every skill clears namesAnswer is an
+// ENUMERATION, not a sample, and it costs about a minute. That is too slow to
+// pay on every `npm test`, so it lives in the quality gate instead:
 //
-// The key is the hint TEMPLATE (its numbers blanked) plus the numbers that
-// filled it, plus the answer when the answer is a word. That is exactly what
-// decides a leak, and it collapses the space enormously: a hint with no
-// numbers in it ("Line the digits up by place value") is one key however many
-// different sums it accompanies, because no numeric answer can match text
-// with no digits in it.
+//     node engine/scripts/quality_gate.mjs              (part of the gate)
+//     node engine/scripts/audit_hint_leaks.mjs --deep   (the longer sweep)
 //
-// engine/scripts/audit_hint_leaks.mjs is the deeper version of this check: it
-// runs the same enumeration with a far larger patience and cap (~4 minutes,
-// 3.3M problems, 1,962 templates) and is the one to run before a release.
-const PATIENCE = 400;
-const CAP = 6000;
+// What stays here is the guard's own behaviour, which is fast and is what
+// breaks if someone edits src/ai/replyGuard.js.
 
 function seeded(seed) {
   let s = seed >>> 0 || 1;
@@ -173,47 +166,6 @@ function seeded(seed) {
     return s / 4294967296;
   };
 }
-
-const keyFor = (answer, hint) => {
-  const tpl = String(hint).replace(/-?\d+(?:\.\d+)?/g, '#');
-  const nums = (String(hint).match(/-?\d+(?:\.\d+)?/g) || []).join(',');
-  const isNumeric = /^-?[\d\s,]*\.?\d+$/.test(String(answer ?? '').trim());
-  return `${tpl}\u0000${nums}\u0000${isNumeric ? '' : answer}`;
-};
-
-test('no hint any skill can produce names its own answer', () => {
-  const offenders = [];
-  for (const id of Object.keys(SKILLS)) {
-    if (ACCEPTED.has(id) || UNFIXED_HINT_LEAKS.has(id)) continue;
-    const seen = new Set();
-    let sinceNew = 0, draws = 0, found = null;
-    const real = Math.random;
-    Math.random = seeded([...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7));
-    try {
-      while (sinceNew < PATIENCE && draws < CAP && !found) {
-        draws++;
-        let p;
-        try { p = generateProblem(id); } catch { sinceNew++; continue; }
-        if (!p || p.placeholder) { sinceNew++; continue; }
-        let fresh = false;
-        for (const hint of (p.hints || [p.hint]).filter(Boolean)) {
-          const k = keyFor(p.answer, hint);
-          if (seen.has(k)) continue;
-          seen.add(k);
-          fresh = true;
-          const why = namesAnswer({
-            answer: p.answer, accepts: p.accepts, question: p.question, reply: hint,
-          });
-          if (why) { found = `${id}: ${why}\n    hint: ${hint}\n    Q: ${p.question}`; break; }
-        }
-        sinceNew = fresh ? 0 : sinceNew + 1;
-      }
-    } finally { Math.random = real; }
-    if (found) offenders.push(found);
-    if (offenders.length > 6) break;
-  }
-  assert.deepEqual(offenders, [], `\n  ${offenders.join('\n  ')}\n`);
-});
 
 test('the list of unfixed leaks is real, and only shrinks', () => {
   // A leak that has been fixed should come off the list, not sit on it

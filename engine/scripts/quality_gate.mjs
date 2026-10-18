@@ -20,6 +20,7 @@ const root = resolve(__dirname, '..', '..');
 const { SKILLS } = await import(resolve(root, 'src/ai-tutor/knowledgeGraph.js'));
 const { generateProblem } = await import(resolve(root, 'src/ai-tutor/problemGenerators.js'));
 const { STRUCTURED_IDS } = await import(resolve(root, 'src/ai-tutor/content/index.js'));
+const { auditHints, reportHints } = await import(resolve(root, 'engine/scripts/audit_hint_leaks.mjs'));
 
 const args = process.argv.slice(2);
 const VERBOSE = args.includes('--verbose');
@@ -242,8 +243,22 @@ if (VERBOSE && authored[0]) {
   console.log('  Worked example:', s.workedExample.question, '=>', s.workedExample.answer);
 }
 
+// ---- no hint may name its own answer ----
+// Enumerated, not sampled: each skill is generated until it stops producing
+// hints it has not already produced. This lives in the gate rather than in
+// `npm test` because it costs about a minute — too slow to pay on every test
+// run, and exactly the sort of thing a release should pay for.
+// `node engine/scripts/audit_hint_leaks.mjs --deep --verbose` goes further.
+console.log(`\n--- Hints (enumerated${VERBOSE ? '' : '; --verbose for the templates'}) ---`);
+const hintAudit = auditHints();
+console.log(reportHints(hintAudit, { verbose: VERBOSE }));
+
 // Exit non-zero if any authored skill fails — usable as a CI gate.
 const authoredFails = authored.filter(r => r.score < 85);
+if (hintAudit.leaking.length) {
+  console.log(`\n${hintAudit.leaking.length} skill(s) leak an answer through a hint.`);
+  process.exit(1);
+}
 if (authoredFails.length) {
   console.log(`\n${authoredFails.length} authored skill(s) below bar.`);
   process.exit(1);
