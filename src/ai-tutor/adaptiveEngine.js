@@ -153,6 +153,16 @@ export const getReviews = (progress, ctx) => {
   const now = Date.now();
   const reviews = [];
 
+  // The learner's working level: the highest grade they have mastered
+  // anything at. Used to tell "secure long before they met us" apart from
+  // "just learned" — see the diagnostic stretch below.
+  let workingGrade = 0;
+  for (const skill of c.skillList) {
+    if (progress.skills[skill.id]?.mastered && Number.isFinite(skill.grade)) {
+      workingGrade = Math.max(workingGrade, skill.grade);
+    }
+  }
+
   for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
     if (!sp?.mastered || !sp.lastPractice) continue;
@@ -164,7 +174,18 @@ export const getReviews = (progress, ctx) => {
     // floor: repNum is fractional (partial credit / 1.5-step decay) and a raw
     // fractional index returns undefined -> NaN -> the skill never comes due.
     const rungIdx = Math.min(Math.max(0, Math.floor(repNum)), baseIntervals.length - 1);
-    const interval = baseIntervals[rungIdx] / learningSpeed;
+    let interval = baseIntervals[rungIdx] / learningSpeed;
+
+    // A skill the PLACEMENT CHECK credited, never practised since, sitting
+    // well below the learner's working level, was consolidated long before
+    // this app existed. processDiagnosticResults enters it at rung 2 — the
+    // same rung a skill reaches by being ground out to mastery here — so a
+    // Grade 5 who sailed through counting to 50 is asked to review it three
+    // days later. Stretch the interval by how far below the frontier it sits,
+    // so the session is spent on what is actually at risk of fading.
+    const below = Number.isFinite(skill.grade) ? workingGrade - skill.grade : 0;
+    if (sp.fromDiagnostic && repNum <= 2 && below >= 2) interval *= 1 + below;
+
     const memoryStrength = Math.exp(-daysSince / Math.max(interval, 1));
 
     if (memoryStrength < 0.6) {
@@ -178,7 +199,13 @@ export const getReviews = (progress, ctx) => {
     }
   }
 
-  return reviews.sort((a, b) => b.urgency - a.urgency);
+  // Urgency first — but every skill credited by one sitting of the check
+  // shares a single lastPractice, so their urgencies are EXACTLY equal and
+  // the sort collapses to array order, which is ascending grade. That put
+  // Grade 1 sorting at the top of a Grade 5's session every evening. Break
+  // the tie on the grade instead: among equally-faded skills, the one nearest
+  // the learner's level is the one whose fading actually costs them.
+  return reviews.sort((a, b) => (b.urgency - a.urgency) || ((b.grade || 0) - (a.grade || 0)));
 };
 
 // ==================== FLUENCY PRACTICE (AUTOMATICITY) ====================
@@ -659,9 +686,15 @@ export const selectReviewProblems = (progress, count = 12, ctx) => {
   //    least-recently-practised first, one each — keeps everything warm.
   if (bag.length < count) {
     const inBag = new Set(bag);
+    // Same tie as in getReviews: everything the check credited carries one
+    // timestamp, so least-recently-practised ties across all of it and the
+    // sort falls through to skill-list order — ascending grade. Without the
+    // grade tie-break the top-up quietly fills the session from Grade 1 up.
     const filler = c.skillList
       .filter(s => progress.skills[s.id]?.mastered && !inBag.has(s.id))
-      .sort((a, b) => new Date(progress.skills[a.id].lastPractice || 0) - new Date(progress.skills[b.id].lastPractice || 0));
+      .sort((a, b) =>
+        (new Date(progress.skills[a.id].lastPractice || 0) - new Date(progress.skills[b.id].lastPractice || 0))
+        || ((b.grade || 0) - (a.grade || 0)));
     for (const s of filler) { if (bag.length >= count) break; bag.push(s.id); }
   }
 
