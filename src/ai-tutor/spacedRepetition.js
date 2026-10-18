@@ -56,6 +56,17 @@ export const processReviewResult = (skillProgress, wasCorrect, timeTakenMs, expe
   sp.correct = (sp.correct || 0) + (wasCorrect ? 1 : 0);
   sp.lastPractice = new Date().toISOString();
 
+  // The learner has now actually answered this skill HERE, so the record is
+  // no longer a bare placement-check credit. getReviews stretches the review
+  // interval of checked-but-never-practised foundations; the moment they work
+  // at one it must go back on the ordinary schedule. Note this cannot be
+  // inferred from repNum: a WRONG answer lowers it, so a learner who just
+  // got the skill wrong would still look unpractised and have their review
+  // pushed further away — the opposite of what they need. A separate flag,
+  // rather than clearing fromDiagnostic, because that field also marks the
+  // "failed the check" case that isHeld and missingStep.js read.
+  sp.practisedHere = true;
+
   let creditWeight = 1.0;
   if (expectedTimeMs && timeTakenMs > expectedTimeMs * 2) {
     creditWeight = Math.max(0.3, expectedTimeMs / timeTakenMs);

@@ -153,15 +153,25 @@ export const getReviews = (progress, ctx) => {
   const now = Date.now();
   const reviews = [];
 
-  // The learner's working level: the highest grade they have mastered
-  // anything at. Used to tell "secure long before they met us" apart from
-  // "just learned" — see the diagnostic stretch below.
-  let workingGrade = 0;
+  // The learner's working level, used below to tell "secure long before they
+  // met us" apart from "just learned".
+  //
+  // This must come from the grade they are IN, not from the highest grade
+  // they have mastered here. Those are the same number only for a learner who
+  // is already up to date. A Grade 5 placed on foundations has mastered
+  // nothing above Grade 2 yet, so a highest-mastered reading returns 2 and
+  // every Grade 1-2 skill then looks like it is AT their level — which is
+  // exactly how "What number comes just after 35?" kept reaching a Grade 5.
+  // learnerLevel() is placementGrade ?? declaredGrade, which the diagnostic
+  // and sign-up both set. Fall back to highest-mastered only when neither is
+  // known (a guest who skipped the check).
+  let masteredTop = 0;
   for (const skill of c.skillList) {
     if (progress.skills[skill.id]?.mastered && Number.isFinite(skill.grade)) {
-      workingGrade = Math.max(workingGrade, skill.grade);
+      masteredTop = Math.max(masteredTop, skill.grade);
     }
   }
+  const workingGrade = Math.max(learnerLevel(progress) ?? 0, masteredTop);
 
   for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
@@ -184,7 +194,7 @@ export const getReviews = (progress, ctx) => {
     // days later. Stretch the interval by how far below the frontier it sits,
     // so the session is spent on what is actually at risk of fading.
     const below = Number.isFinite(skill.grade) ? workingGrade - skill.grade : 0;
-    if (sp.fromDiagnostic && repNum <= 2 && below >= 2) interval *= 1 + below;
+    if (sp.fromDiagnostic && !sp.practisedHere && below >= 2) interval *= 1 + below;
 
     const memoryStrength = Math.exp(-daysSince / Math.max(interval, 1));
 

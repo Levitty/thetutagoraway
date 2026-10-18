@@ -118,6 +118,44 @@ test('a skill mastered by PRACTICE is never stretched, however low its grade', (
   );
 });
 
+test('the working level is the grade they are IN, not the top of what they have mastered', () => {
+  // The live case. A Grade 5 placed on foundations has mastered nothing above
+  // Grade 2, so reading the working level off the mastered set returns 2 and
+  // every Grade 1-2 skill looks like it sits AT their level. That is how
+  // "What number comes just after 35?" reached a Grade 5 mid-session.
+  const progress = checkedAt(['G1_PRENUMBER', 'G1_COUNTING', 'G2_COUNTING'], 5);
+  progress.declaredGrade = 5;
+  assert.deepEqual(
+    ids(getReviews(progress, undefined)), [],
+    'nothing Grade 1-2 should be served to a declared Grade 5 five days after the check',
+  );
+  // Without the declared grade there is nothing better to go on, so the
+  // highest-mastered reading stands and the skills are served as before.
+  const guest = checkedAt(['G1_PRENUMBER', 'G1_COUNTING', 'G2_COUNTING'], 5);
+  assert.ok(ids(getReviews(guest, undefined)).length > 0, 'a guest with no declared grade still gets reviews');
+});
+
+test('practising a skill puts it back on the normal schedule — even after a wrong answer', () => {
+  // The dangerous direction. A wrong answer LOWERS repNum, so any rule keyed
+  // on repNum would still read the skill as unpractised and push its review
+  // further away, under-reviewing the learner who just proved they need it.
+  const progress = checkedAt(['G2_COUNTING'], 5);
+  progress.declaredGrade = 5;
+  assert.deepEqual(ids(getReviews(progress, undefined)), [], 'precondition: stretched while untouched');
+
+  const wrong = checkedAt(['G2_COUNTING'], 5);
+  wrong.declaredGrade = 5;
+  wrong.skills.G2_COUNTING = {
+    ...wrong.skills.G2_COUNTING,
+    practisedHere: true,   // set by processReviewResult on EVERY answer
+    repNum: 1,             // a wrong answer pushed the rung DOWN
+  };
+  assert.ok(
+    ids(getReviews(wrong, undefined)).includes('G2_COUNTING'),
+    'a Grade 5 who genuinely struggles with Grade 2 counting must still be reviewed on it',
+  );
+});
+
 test('a skill still comes due eventually, stretch or no stretch', () => {
   // The stretch delays; it must never park a skill forever.
   const progress = checkedAt(['G1_PRENUMBER'], 400);
