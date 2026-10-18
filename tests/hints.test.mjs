@@ -20,7 +20,7 @@ import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
 // revealed() moved to src/ai-tutor/answerGuard.js so this test and the runtime
 // guard on model replies share one implementation instead of drifting apart.
-import { revealed } from '../src/ai-tutor/answerGuard.js';
+import { revealed } from '../src/ai-tutor/answerRule.js';
 
 // Problems are randomly generated, so an unseeded test is a lottery: a leak
 // that appears in one parameter draw out of hundreds makes CI fail on Tuesday

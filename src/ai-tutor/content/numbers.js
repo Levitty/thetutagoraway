@@ -1974,7 +1974,7 @@ export function buildNumbersInWords() {
       hints: hintLadder(
         'Place value and total value are two different things.',
         'The digit tells you HOW MANY; the column tells you how many OF WHAT.',
-        `So put the digit together with what one ${PLACE_NAMES[pos][1].replace(/s$/, '')} is worth.`),
+        'So multiply the digit by what its own column is worth.'),
       solution: { steps: [
         { text: 'Name the place.', expr: `${PLACE_NAMES[pos][1]} — worth ${PLACE_NAMES[pos][0].toLocaleString('en-KE')} each` },
         { text: 'Multiply the digit by that.', expr: `${digit} × ${PLACE_NAMES[pos][0].toLocaleString('en-KE')} = ${value.toLocaleString('en-KE')}` }], answer: `${value}` },

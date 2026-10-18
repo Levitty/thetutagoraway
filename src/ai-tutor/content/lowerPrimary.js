@@ -102,7 +102,9 @@ function buildBandedMul({ tables, maxFactor = 10, asRepeatedAddition = false }) 
     return {
       type: 'mul-fact', instruction: 'Work out the multiplication.',
       question: `${t} × ${n} = ?`, answer: `${value}`, accepts: accepts(`${value}`),
-      hints: hintLadder(`Skip-count in ${t}s, ${n} times.`, `${t}, ${t * 2}, ${t * 3}…`),
+      // The list stops short of the answer: at n = 2 or 3 it used to land on it.
+      hints: hintLadder(`Skip-count in ${t}s, ${n} times.`,
+        `${Array.from({ length: Math.max(1, Math.min(3, n - 1)) }, (_, i) => t * (i + 1)).join(', ')}, …`),
       solution: { steps: [{ text: `Skip-count in ${t}s: ${Array.from({ length: Math.min(n, 5) }, (_, i) => t * (i + 1)).join(', ')}…`, expr: `${t} × ${n} = ${value}` }], answer: `${value}` },
       misconceptions: [{ when: `${t + n}`, feedback: 'That\'s adding — multiplication means repeated groups.' }],
       visual: { type: 'array_dots', data: { rows: t, cols: n, groupByRow: true } },
@@ -155,7 +157,10 @@ function buildCounting({ max }) {
     return {
       type: 'count-order', instruction: 'Think about counting order.',
       question: spec.q, answer: `${spec.value}`, accepts: accepts(`${spec.value}`),
-      hints: hintLadder('Say the numbers out loud in counting order.', `Count: ${n - 1}, ${n}, ${n + 1}, ${n + 2}…`),
+      hints: hintLadder('Say the numbers out loud in counting order.',
+        kind === 'after' ? `Start at ${n} and take one step forward.`
+          : kind === 'before' ? `Start at ${n} and take one step back.`
+          : `Say the numbers in order from ${n} to ${n + 2} — the answer is the one in the middle.`),
       solution: { steps: [{ text: 'Count through the numbers in order.', expr: `${spec.value}` }], answer: `${spec.value}` },
       misconceptions: [], verify: { kind: 'fraction', value: spec.value },
     };
@@ -174,7 +179,8 @@ function buildBandedPlaceValue({ digits }) {
       type: 'place-value', instruction: 'Use place value.',
       question: `In the number ${n}, what is the VALUE of the digit in the ${places[pos]} place?`,
       answer: `${value}`, accepts: accepts(`${value}`),
-      hints: hintLadder('Find the digit in that column first.', `The digit is ${digit}; its value is ${digit} × ${Math.pow(10, pos)}.`),
+      hints: hintLadder('Find the digit in that column first.',
+        `The digit is ${digit}, and it sits in the ${places[pos]} column — so its value is that many ${places[pos]}.`),
       solution: { steps: [{ text: `Digit ${digit} sits in the ${places[pos]} column.`, expr: `${digit} × ${Math.pow(10, pos)} = ${value}` }], answer: `${value}` },
       misconceptions: [{ when: `${digit}`, feedback: `That's the digit — its VALUE is ${digit} × ${Math.pow(10, pos)}.` }],
       visual: { type: 'place_value_chart', data: { digits: String(n).split('').map(Number), labels: places.slice(0, digits).reverse().map(String), highlight: digits - 1 - pos } },
@@ -215,7 +221,8 @@ function buildBandedMoney({ maxAmount, kind }) {
           ? `You have ${n} coins of ${coins} shillings and ${extra} coin${extra > 1 ? 's' : ''} of 1 shilling. How much money is that?`
           : `You have ${n} coins of ${coins} shilling${coins > 1 ? 's' : ''} each. How much money is that?`,
         answer: `${value}`, accepts: accepts(`${value}`, `${value} shillings`, `sh ${value}`),
-        hints: hintLadder(`Skip-count in ${coins}s.`, extra ? 'Then count on the 1-shilling coins.' : `${coins}, ${coins * 2}, …`),
+        hints: hintLadder(`Skip-count in ${coins}s.`,
+          extra ? 'Then count on the 1-shilling coins.' : `Start at ${coins} and keep adding ${coins}, once for each coin.`),
         solution: { steps: [{ text: `${n} coins of ${coins} bob = ${n} × ${coins}${extra ? `, plus ${extra}` : ''}.`, expr: `${value}` }], answer: `${value}` },
         misconceptions: [], verify: { kind: 'fraction', value },
       };
@@ -630,7 +637,7 @@ function buildTwoByOneMul({ minA, maxA, maxB, tensOnly = false }) {
       question: `${a} × ${b} = ?`, answer: `${value}`, accepts: accepts(`${value}`),
       hints: hintLadder(
         tensOnly ? 'Multiply the tens digit, then put the zero back.' : 'Split the 2-digit number into tens and ones.',
-        tensOnly ? `${a / 10} × ${b} = ${a / 10 * b}, so ${a} × ${b} = ${value}.` : `(${Math.floor(a / 10) * 10} × ${b}) + (${a % 10} × ${b}) = ?`),
+        tensOnly ? `${a / 10} × ${b} = ${a / 10 * b}, and then the zero goes back on the end.` : `(${Math.floor(a / 10) * 10} × ${b}) + (${a % 10} × ${b}) = ?`),
       solution: { steps: [{ text: tensOnly ? 'Multiply the tens, then append the zero.' : 'Multiply tens, multiply ones, then add.', expr: `${a} × ${b} = ${value}` }], answer: `${value}` },
       misconceptions: [{ when: `${a + b}`, feedback: 'That\'s adding — this is multiplication.' }],
       band: { op: 'mul', a, b },
@@ -1269,7 +1276,7 @@ function buildNumberWords() {
       question: `Write ${th} thousand ${rest ? `${rest} ` : ''}in symbols.`,
       answer: `${n}`, accepts: accepts(`${n}`, n.toLocaleString('en-US')),
       hints: hintLadder('Thousands come first, then the rest of the number.',
-        `${th} thousand is ${th * 1000}.`),
+        'Four places to fill: thousands, hundreds, tens, ones. Put the thousands digit down first and work along to the right.'),
       solution: { steps: [
         { text: `${th} thousand is ${th * 1000}${rest ? `, and ${rest} more` : ''}.`, expr: `${n}` }], answer: `${n}` },
       misconceptions: [], verify: { kind: 'fraction', value: n },
@@ -1455,7 +1462,7 @@ function buildRomanNumerals() {
         question: `Write ${n} in Roman numerals.`,
         answer: r, accepts: accepts(r, r.toLowerCase()),
         hints: hintLadder('I is 1, V is 5, X is 10, L is 50, C is 100.',
-          'A smaller letter BEFORE a bigger one means take it away: IV is 4.'),
+          'A smaller letter BEFORE a bigger one is taken away from it; after it, it is added on. That is how the fours and the nines are written.'),
         solution: { steps: [{ text: `${n} is written ${r}.`, expr: r }], answer: r },
         misconceptions: [], verify: { kind: 'text', value: r },
       };
@@ -1465,7 +1472,7 @@ function buildRomanNumerals() {
       question: `What number is ${r}?`,
       answer: `${n}`, accepts: accepts(`${n}`),
       hints: hintLadder('I is 1, V is 5, X is 10, L is 50, C is 100.',
-        'A smaller letter BEFORE a bigger one is taken away: IX is 9.'),
+        'A smaller letter BEFORE a bigger one is taken away from it; after it, it is added on. Read the letters left to right.'),
       solution: { steps: [{ text: `${r} is ${n}.`, expr: `${n}` }], answer: `${n}` },
       misconceptions: [], verify: { kind: 'fraction', value: n },
     };

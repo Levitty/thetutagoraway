@@ -21,7 +21,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
-import { revealed, digitsForWords, leaksAnswer } from '../src/ai-tutor/answerGuard.js';
+import { revealed } from '../src/ai-tutor/answerRule.js';
+import { digitsForWords, leaksAnswer, namesAnswer } from '../src/ai/replyGuard.js';
 
 // The worked example used throughout: HOREB generates this one for real
 // (content/grade5.js, buildLongMul). 385 × 24 = 9240, partial products 1540
@@ -125,37 +126,22 @@ const ACCEPTED = new Map([
   // sentence opener, not the answer. The guard cannot tell them apart, which is
   // the reason a yes/no question should never be handed to the model at all.
   ['G7_DIVISIBILITY', 'answer is "no"; unmatchable against prose that opens with "No"'],
+  // Already reviewed in tests/hints.test.mjs for exactly this: a value the
+  // hint must show (a gradient, a line of symmetry, the corners to test)
+  // coincides with the answer on some draws.
+  ['G8_LINEAR_GRAPHS', 'the gradient shown in the substitution sometimes equals y'],
+  ['G9_QUADRATIC_GRAPHS', 'the line of symmetry sometimes equals the minimum y'],
+  ['G11_LINEAR_PROGRAMMING', 'lists every corner to test; naming all gives none away'],
 ]);
 
-// REAL LEAKS, found by this guard, NOT yet fixed. Every one of these hands a
-// learner the answer, and the existing rule missed them for two reasons it
-// could not see past: norm() strips commas, so "Count: 95, 96, 97, 98…" became
-// one long digit run with no boundary around the answer; and a full stop after
-// a number blocked the digit boundary, hiding "so 90 × 5 = 450."
-//
-// They are listed rather than silenced: the test fails on anything NEW, and
-// this list must only ever shrink. Fixing them is a content change to the
-// hints themselves, deliberately not bundled into the guard.
-const UNFIXED_HINT_LEAKS = new Map([
-  ['G1_COUNTING', 'the count-on list includes the answer: "Count: 95, 96, 97, 98…"'],
-  ['G2_COUNTING', 'same count-on list'],
-  ['G1_MONEY', 'the skip-count "20, 40, …" lands on the answer'],
-  ['G2_MULTIPLY_INTRO', 'the skip-count list reaches the product: "5, 10, 15…"'],
-  ['G3_MULTIPLY', 'same skip-count list'],
-  ['G2_PLACE_VALUE', 'states the value outright: "its value is 1 × 10"'],
-  ['G3_COUNTING', 'same place-value hint, one multiplication away'],
-  ['G4_PLACE_VALUE', 'same place-value hint'],
-  ['G4_MULTIPLY', 'states the product: "9 × 5 = 45, so 90 × 5 = 450."'],
-  ['G10_EXPONENTIAL_GRAPHS', 'works the answer out in the hint: "4^−1 = 1/4"'],
-  ['G7_NUMBERS_WORDS', '"what one hundred is worth" IS the answer when the digit is 1'],
-  // Both landed with the new Grade 4 Whole Numbers work and make their own
-  // question pointless. Newest, smallest, and on the incoming learner's path.
-  ['G4_NUMBER_WORDS', '"Write 2 thousand in symbols" hinted "2 thousand is 2000."'],
-  ['G4_ROMAN_NUMERALS', '"Write 4 in Roman numerals" hinted "IV is 4."'],
-]);
+// Leaks found but not yet fixed. Deliberately EMPTY: the thirteen this guard
+// first turned up are all fixed in the content. Add an id here only with a
+// reason and a plan, never to quieten the test — the check below fails if an
+// entry on it has stopped leaking, so the list can only shrink.
+const UNFIXED_HINT_LEAKS = new Map([]);
 
-const SEEDS = [1, 42, 2026];
-const DRAWS = 12;
+const SEEDS = [1, 7, 42, 2026];
+const DRAWS = 30;
 
 function seeded(seed) {
   let s = seed >>> 0;
@@ -172,11 +158,11 @@ function withSeed(seed, fn) {
   try { return fn(); } finally { Math.random = real; }
 }
 
-test('the guard raises nothing new against the authored hints', () => {
-  // The precise property: every flag the guard raises on our own content is
-  // either a leak we have already written down, or a false positive this test
-  // exists to catch. A new name appearing here means one of the two — and
-  // either way somebody has to look.
+test('no authored hint names its own answer', () => {
+  // namesAnswer, not leaksAnswer: the one-step-away rule is for model replies
+  // only. A hint ladder's LAST rung is meant to put the calculation in front
+  // of the child ("2 × 100 = ?") after two gentler tries — holding our own
+  // hints to the model's rule would condemn the design, not find a bug.
   const offenders = [];
   for (const id of Object.keys(SKILLS)) {
     if (ACCEPTED.has(id) || UNFIXED_HINT_LEAKS.has(id)) continue;
@@ -192,7 +178,7 @@ test('the guard raises nothing new against the authored hints', () => {
             // Skip what the existing rule already calls a leak (the reviewed
             // classification skills): this test is only about NEW flags.
             if (answers.some((a) => revealed(a, hint, p.question))) continue;
-            const why = leaksAnswer({
+            const why = namesAnswer({
               answer: p.answer, accepts: p.accepts, question: p.question, reply: hint,
             });
             if (why) {
@@ -224,7 +210,7 @@ test('the list of unfixed leaks is real, and only shrinks', () => {
         try { p = generateProblem(id); } catch { continue; }
         if (!p || p.placeholder) continue;
         for (const hint of (p.hints || [p.hint]).filter(Boolean)) {
-          if (leaksAnswer({ answer: p.answer, accepts: p.accepts, question: p.question, reply: hint })) {
+          if (namesAnswer({ answer: p.answer, accepts: p.accepts, question: p.question, reply: hint })) {
             leaks = true; break;
           }
         }

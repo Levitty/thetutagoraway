@@ -1,20 +1,23 @@
 // ============================================================================
-// ANSWER GUARD — nothing shown to a learner may hand over the answer.
+// REPLY GUARD — the rule a model's reply must clear before a child sees it.
 //
-// `revealed()` was written for tests/hints.test.mjs, where it holds every
-// authored hint to that rule. It lives here now so the test and the runtime
-// share ONE implementation: the moment a model writes a reply for a child, the
-// same check has to run on it, and a second copy of this logic would drift.
+// This is the AI layer, deliberately outside src/ai-tutor: the tutor engine
+// knows nothing about it, imports nothing from it, and works unchanged with
+// the model switched off. Everything here is pure and offline — no network, no
+// API key, no model. It takes a reply and answers one question: would showing
+// this hand the learner the answer?
 //
 // A system prompt asking a model not to give the answer is a request. This is
-// the rule: run `leaksAnswer()` on the reply, and if it fails, throw the reply
-// away and serve the authored hint instead.
+// the rule: run leaksAnswer(), and when it fails, throw the reply away and
+// serve the authored hint instead.
 //
-// Three ways an answer gets out, and all three are checked:
+// Four ways an answer gets out, and all four are checked:
 //   1. plainly               — "so the total is 9240"
-//   2. spelled out           — "nine thousand two hundred and forty"
-//   3. one trivial step away — "work out 1540 and 7700, then add them"
-// The third is the one a human reviewer misses: no guard trips, and the child
+//   2. ending a sentence     — "you are left with x=7."  (the digit boundary
+//                              cannot tell that full stop from the point in 0.84)
+//   3. spelled out           — "nine thousand two hundred and forty"
+//   4. one trivial step away — "work out 1540 and 7700, then add them"
+// The fourth is the one a human reviewer misses: no guard trips, and the child
 // types the total without doing any of the thinking the question was for.
 //
 // Note on threat model: the answer is ALREADY on the device — generateProblem
@@ -22,44 +25,7 @@
 // we do. This is not anti-cheat. It stops the tutor handing the answer to the
 // vast majority of children who were not trying to cheat.
 // ============================================================================
-
-export const norm = (s) => String(s ?? '').toLowerCase()
-  .replace(/−/g, '-').replace(/\s+/g, '').replace(/,/g, '');
-
-// Digit-boundary containment: "144" must not match inside "1440".
-// A hint that merely QUOTES THE QUESTION reveals nothing the child cannot
-// already see ("Work out how far clockwise N 14° E is" restates the prompt),
-// so a match that also appears in the question does not count as a leak.
-export const revealed = (answer, hint, question) => {
-  const a = norm(answer);
-  // Only a SINGLE character is too collision-prone to judge. Skipping every
-  // 1-2 character answer hid a real leak for months — Grade 4 and 5 answers are
-  // mostly two digits ("98 ÷ 7 = ?" with the hint "7 × 14 = 98.").
-  if (a.length < 2) return false;
-  const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
-  // Boundaries depend on what kind of answer it is, or the looser rule reports
-  // noise instead of leaks:
-  //   a word     — whole words only, so "no" does not match inside "No long
-  //                division needed".
-  //   a negative — the sign must not be a subtraction or a formula's own minus,
-  //                so "-1" does not match inside "(n-1)" or "a = -9".
-  //   a number   — digit boundaries, so "144" does not match inside "1440".
-  const isWord = /^[a-z][a-z\s'-]*$/.test(a);
-  const isNeg = /^-/.test(a);
-  const pre = isWord ? '\\b' : isNeg ? '(?<![\\w.])' : /^[\d.]/.test(a) ? '(?<![\\d./])' : '';
-  const post = isWord ? '\\b' : /[\d.]$/.test(a) ? '(?![\\d.])' : '';
-  const re = new RegExp(pre + esc + post);
-
-  // A hint that merely QUOTES THE QUESTION reveals nothing the child cannot
-  // already see, so a match that also appears in the question does not count.
-  // The question side is deliberately LOOSE — a plain containment check. The
-  // strict boundaries above exist to avoid false alarms in the hint; applying
-  // them to the question has the opposite effect, refusing to excuse a number
-  // the child is plainly looking at ("Place -1 on the number line" hinting
-  // "-1 is 1 step to the left of 0").
-  return re.test(norm(hint)) && !norm(question).includes(a);
-};
+import { revealed } from '../ai-tutor/answerRule.js';
 
 // ------------------------------------------------- 1b. word answers, spaced
 // norm() strips whitespace, which is right for digits ("9 240" is 9240) but
@@ -137,14 +103,28 @@ const combinesToAnswer = (reply, question, target) => {
   // coincidence often enough to drown the real signal, and an answer that
   // small is caught by being named outright anyway.
   if (!Number.isInteger(target) || Math.abs(target) < 100) return null;
-  const inQuestion = new Set(numbersIn(question));
+
+  // Numbers the child can already see, or read straight off what they can see.
+  // Splitting a question number into its places is the method itself —
+  // "(20 × 4) + (5 × 4)" for 25 × 4 — so 20 and 5 are not new information.
+  const derived = new Set(numbersIn(question));
+  for (const q of numbersIn(question)) {
+    const s = String(Math.trunc(Math.abs(q)));
+    for (let i = 0; i < s.length; i++) {
+      if (+s[i]) derived.add(+s[i] * Math.pow(10, s.length - 1 - i));
+    }
+  }
   // Digits only, not spelled-out words: "a two-digit divisor … round to the
   // nearest ten" is prose, not two quantities a child can combine.
-  const parts = [...new Set(numbersIn(reply))]
-    .filter((n) => !inQuestion.has(n) && n !== target);
+  const parts = [...new Set(numbersIn(reply))].filter((n) => n !== target);
   for (let i = 0; i < parts.length; i++) {
     for (let j = i + 1; j < parts.length; j++) {
       const a = parts[i], b = parts[j];
+      // At least one has to be NEW. Two numbers the child was already looking
+      // at landing on the answer together is arithmetic coincidence (20 and 5
+      // from 25 multiply to 100, which is also 25 × 4); a number the reply
+      // introduced is the one that carries the work.
+      if (derived.has(a) && derived.has(b)) continue;
       if (a >= 1 && b >= 1 && a + b === target) return `${a} + ${b}`;
       if (a >= 2 && b >= 2 && a * b === target) return `${a} × ${b}`;
     }
@@ -160,7 +140,7 @@ const combinesToAnswer = (reply, question, target) => {
  *   leaksAnswer({ answer: '9240', question: 'A school buys 24 desks…',
  *                 accepts: ['9240'], reply: modelText })
  */
-export const leaksAnswer = ({ answer, accepts = [], question = '', reply = '' }) => {
+export const namesAnswer = ({ answer, accepts = [], question = '', reply = '' }) => {
   if (!reply) return null;
   // A full stop that ENDS a sentence is not part of a number, but revealed()'s
   // digit boundary cannot tell it from the point in "0.84" — so "you are left
@@ -187,6 +167,26 @@ export const leaksAnswer = ({ answer, accepts = [], question = '', reply = '' })
     return `spells out the answer (${answer})`;
   }
 
+  return null;
+};
+
+/**
+ * The full guard for a MODEL reply: namesAnswer, plus the stricter rule that
+ * the reply must not leave the answer a single operation away.
+ *
+ * That last rule deliberately does NOT hold for our own hints, and the two
+ * are separate functions for that reason. A hint ladder is graded — orient,
+ * then method, then a concrete step — and its last rung is *supposed* to put
+ * the calculation in front of the child ("2 × 100 = ?"), because they have
+ * already had two gentler tries and still have to do the arithmetic. A model
+ * reply has no ladder: it is one shot, and handing over "1540 and 7700, add
+ * them" ends the thinking the question existed for.
+ */
+export const leaksAnswer = (args) => {
+  const named = namesAnswer(args);
+  if (named) return named;
+  const { answer, question = '', reply = '' } = args;
+  if (!reply) return null;
   const target = Number(String(answer).replace(/[\s,]/g, ''));
   if (Number.isFinite(target)) {
     const pair = combinesToAnswer(reply, question, target);
@@ -195,4 +195,4 @@ export const leaksAnswer = ({ answer, accepts = [], question = '', reply = '' })
   return null;
 };
 
-export default { norm, revealed, revealedWord, digitsForWords, leaksAnswer };
+export default { revealedWord, digitsForWords, namesAnswer, leaksAnswer };

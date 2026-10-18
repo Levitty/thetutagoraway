@@ -1405,7 +1405,7 @@ const generators = {
     return pick([
       { question: `For y = ${b}^x, what is y when x = ${x}?`, answer: String(b ** x), hint: `${b}^${x} means ${x === 0 ? 'any number to the power 0, which is 1' : `${b} multiplied by itself ${x} times`}.` },
       { question: `Where does y = ${a} × ${b}^x cross the y-axis? Give the value of y.`, answer: String(a), hint: 'On the y-axis, x = 0, and anything to the power 0 is 1.' },
-      { question: `For y = ${b}^x, what is y when x = −1? Give a fraction.`, answer: `1/${b}`, hint: `A negative power means 1 over: ${b}^−1 = 1/${b}.` },
+      { question: `For y = ${b}^x, what is y when x = −1? Give a fraction.`, answer: `1/${b}`, hint: 'A negative power means one over the positive power. Work out the positive power first, then flip it.' },
     ]);
   },
 

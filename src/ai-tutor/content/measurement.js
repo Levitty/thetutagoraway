@@ -534,7 +534,7 @@ export function buildCompositeArea() {
     answer: `${value}`, accepts: accepts(`${value}`, `${value}m²`, `${value}m2`),
     hints: hintLadder('Two ways: subtract the cut-out from the full rectangle, or split the L into two rectangles.',
       `Full rectangle: ${L} × ${W} = ${L * W}.`,
-      `Cut-out: ${l} × ${w} = ${l * w}. Subtract.`),
+      `Work out the cut-out piece on its own (${l} × ${w}), then take it off the whole.`),
     solution: { steps: [
       { text: 'Area of the full rectangle.', expr: `${L} × ${W} = ${L * W} m²` },
       { text: 'Subtract the cut-out corner.', expr: `${L * W} − ${l * w} = ${value} m²` }], answer: `${value}` },
