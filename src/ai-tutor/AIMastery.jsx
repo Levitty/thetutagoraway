@@ -2101,6 +2101,25 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
           ].filter(Boolean).join(' + ');
           const startSessionItem = (item) => item.kind === 'review' ? startReview() : startLesson(item.id);
 
+          // ---- THE HERO --------------------------------------------------
+          // The reference design opens with "choose a category". HOREB already
+          // knows what comes next, so the top of the screen NAMES it and the
+          // only large button is the one that starts it. The list below stays
+          // as the finite plan; this is just its first item, said out loud.
+          //
+          // A skill name carries its own second line — "Multiplication
+          // (4-digit × 2-digit)" is a subject and a qualifier — so split on the
+          // bracket and set the qualifier in grey underneath, rather than
+          // truncating a long name to one line.
+          const heroItem = todaySession[0] || null;
+          const heroParts = heroItem ? String(heroItem.name).match(/^(.*?)\s*\((.+)\)\s*$/) : null;
+          const heroTitle = heroParts ? heroParts[1] : (heroItem?.name || '');
+          const heroQualifier = heroParts ? heroParts[2] : '';
+          // Truthful, or absent. `recent` is the last answers on this skill, so
+          // "4 of 5" is a real count — if there is no history we say nothing
+          // rather than invent encouragement.
+          const heroRecent = heroItem ? (progress.skills[heroItem.id]?.recent || []).slice(-5) : [];
+
           // ---- PLACEMENT, EXPLAINED --------------------------------------
           // A Grade 9 learner placed at Grade 7 reads "Grade 7 · your level" as
           // a demotion. It isn't — it's the frontier. Say which grade they're
@@ -2189,14 +2208,40 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               <div className="lg:hidden">{goalRing}</div>
 
               {/* Resume card — light, content-forward (fixes the 'AI' navy hero) */}
-              {/* ===== TODAY'S SESSION — finite, ordered, with an end ===== */}
-              {todaySession.length > 0 ? (
+              {/* ===== THE HERO — the one thing to do now, named ===== */}
+              {heroItem && (
+                <div className="bg-white rounded-3xl px-5 pt-5 pb-5">
+                  <div className="text-[10.5px] font-bold tracking-[.12em] uppercase text-slate-500">
+                    {heroItem.kind === 'review' ? 'Keep it fresh' : 'Carry on'}
+                  </div>
+                  <h1 className="mt-2 text-[31px] leading-[1.04] font-extrabold text-slate-900">
+                    {heroTitle}
+                    {heroQualifier && <><br /><span className="text-slate-400">{heroQualifier}</span></>}
+                  </h1>
+                  <div className="mt-2.5 text-[13px] font-medium text-slate-500">
+                    {sessionSummary} · about {sessionMins} min
+                    {heroRecent.length > 0 && ` · last time you got ${heroRecent.filter(Boolean).length} of ${heroRecent.length}`}
+                  </div>
+                  <button onClick={() => startSessionItem(heroItem)}
+                    className="mt-4 w-full h-14 bg-amber-400 text-slate-900 font-extrabold text-[17px] flex items-center justify-center gap-2 rounded-full">
+                    {heroItem.kind === 'review' ? 'Start your review' : 'Continue'}
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M5 12h13M12 5.5 18.5 12 12 18.5" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+              )}
+
+              {/* ===== TODAY'S SESSION — finite, ordered, with an end =====
+                  Only worth showing when there is more than one thing in it:
+                  with a single item the hero above has already named it, and
+                  the list underneath just says the same words again. */}
+              {todaySession.length > 1 ? (
                 <div className="bg-white border border-slate-200 shadow-sm rounded-3xl overflow-hidden">
                   <div className="px-5 pt-4 pb-3">
+                    {/* The hero above already says what today is and how long
+                        it takes, so this is just the list's label. */}
                     <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-700">Today's session</div>
-                    <div className="text-[18px] font-extrabold tracking-tight text-slate-900 mt-0.5 leading-tight">
-                      {sessionSummary} · about {sessionMins} min
-                    </div>
                   </div>
                   <div className="px-3 pb-3 space-y-1.5">
                     {todaySession.map((item, idx) => (
@@ -2224,7 +2269,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                     Finish these and you're done for today.
                   </div>
                 </div>
-              ) : (
+              ) : todaySession.length === 1 ? null : (
+                /* Nothing planned at all — offer the one next step instead. */
                 <button onClick={cta.onClick} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-3xl p-5 flex items-center gap-4 hover:border-slate-300 transition-colors">
                   <div className="w-[68px] h-[68px] rounded-2xl bg-[#f5f6fc] border border-[#e8e9f6] flex items-center justify-center shrink-0 text-[#6d6fcb]">
                     <Icon name={cta.icon} className="w-7 h-7" />
