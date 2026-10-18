@@ -243,7 +243,11 @@ const sit = (declared, frontier) => {
   while (asked.length < MAX_QUESTIONS) {
     const q = selectQuestion(asked, declared, pool);
     if (!q) break;
-    asked.push({ id: q.id, grade: q.grade, strand: q.strand, correct: q.grade <= frontier });
+    // The final ask on the headline miss: this learner answers it the same way.
+    if (q.settle) { const r = asked.find(a => a.id === q.id); r.settled = true; continue; }
+    // The record shape the app writes: sub-strand, and for a follow-up the
+    // sub-strand whose miss it is chasing.
+    asked.push({ id: q.id, grade: q.grade, strand: q.strand, unit: q.unit, probeFor: q.probeFor, hunt: q.hunt, correct: q.grade <= frontier });
   }
   return { asked, placed: computePlacement(asked, declared, pool) };
 };
@@ -283,7 +287,12 @@ else fail('placement off: ' + placedCaps.join('; '));
 // lowest grade TESTED even when that grade was failed, and grades below were
 // never tested at all. A learner who gets nothing right must place BELOW
 // everything asked — or at the floor of the graph if that is where they are.
-const wrongAt = (grades) => grades.map(g => ({ id: 'x' + g, grade: g, strand: 'Numbers', correct: false }));
+// Records in the shape the per-sub-strand sweep writes: the first is the
+// declared grade's sweep question, the rest are its follow-ups down the ladder.
+const wrongAt = (grades) => grades.map((g, i) => ({
+  id: 'x' + g, grade: g, strand: 'Numbers', unit: 'Whole Numbers', correct: false,
+  ...(i ? { probeFor: 'Whole Numbers' } : {}),
+}));
 const notFloor = computePlacement(wrongAt([7, 6, 5]), 7, pool);       // never reached the bottom
 const atFloor = computePlacement(wrongAt([3, 2, 1]), 3, pool);        // failed grade 1 itself
 if (notFloor === 4 && atFloor === 1) ok('all-wrong places below everything asked (4), floored at grade 1');

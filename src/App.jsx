@@ -33,6 +33,7 @@ import SiteTeach from './site/Teach.jsx';
 import SiteWhy from './site/Why.jsx';
 import { HALF_HOUR_LESSONS } from './site/features.js';
 import { SiteIcon, SiteNav, SiteFooter } from './site/ui.jsx';
+import { AvatarArt, AvatarPicker, isAvatarId, DEFAULT_AVATAR } from './avatars/Avatars.jsx';
 import { CheckStart, CheckResult, getCheck, setFocus } from './site/Check.jsx';
 import { findMissingStep, skillLabel } from './site/missingStep.js';
 import { claimGuestCheck, markWantsSave, wantsSave } from './site/claim.js';
@@ -278,13 +279,29 @@ const gradeList = (g) => {
   return [g];
 };
 
-const Avatar = ({ src, name, size = 40 }) => (
-  <img
-    src={src || initialsAvatar(name)}
-    alt={name}
-    onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(name); }}
-    className="rounded-full object-cover bg-slate-200" style={{ width: size, height: size }} />
-);
+// Three ways a person can appear, in order of preference:
+//   1. a photograph they uploaded,
+//   2. the figure they picked when they signed up,
+//   3. their initials, drawn by a third party.
+// The preset is drawn in the app, so it costs no request and cannot 404; the
+// initials fallback stays for accounts that predate the picker.
+const Avatar = ({ src, name, preset, size = 40 }) => {
+  if (!src && isAvatarId(preset)) {
+    return (
+      <span className="rounded-full overflow-hidden bg-slate-200 inline-block align-middle"
+        style={{ width: size, height: size, lineHeight: 0 }}>
+        <AvatarArt id={preset} size={size} title={name} />
+      </span>
+    );
+  }
+  return (
+    <img
+      src={src || initialsAvatar(name)}
+      alt={name}
+      onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(name); }}
+      className="rounded-full object-cover bg-slate-200" style={{ width: size, height: size }} />
+  );
+};
 
 // ============ PRIVACY POLICY PAGE ============
 // Styled as the public site (.tg-legal in site/site.css). The wording is the policy: change it only on purpose.
@@ -717,6 +734,7 @@ const useAuth = () => {
           localStorage.removeItem('tutagora_pending_role');
           localStorage.removeItem('tutagora_pending_type');
           localStorage.removeItem('tutagora_pending_name');
+          localStorage.removeItem('tutagora_pending_avatar');
         }
         if (pendingRole && isNewAccount && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) {
           // Update the profile with the selected role
@@ -728,6 +746,19 @@ const useAuth = () => {
           localStorage.removeItem('tutagora_pending_role');
           localStorage.removeItem('tutagora_pending_type');
           localStorage.removeItem('tutagora_pending_name');
+        }
+        // The avatar is applied on its own, NOT inside the block above. That
+        // block only runs for a Google sign-up, which is the only flow that
+        // stashes a pending role — an email sign-up would have left the avatar
+        // behind and the learner would never see the figure they picked.
+        if (isNewAccount && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) {
+          let pendingAvatar = null;
+          try { pendingAvatar = localStorage.getItem('tutagora_pending_avatar'); } catch { /* private window */ }
+          pendingAvatar = pendingAvatar || session.user.user_metadata?.avatar || null;
+          if (pendingAvatar) {
+            await supabase.from('profiles').update({ avatar: pendingAvatar }).eq('id', session.user.id);
+          }
+          try { localStorage.removeItem('tutagora_pending_avatar'); } catch { /* private window */ }
         }
         fetchProfile(session.user.id);
       }
@@ -776,9 +807,17 @@ const useAuth = () => {
     setLoading(false);
   };
 
-  const signUp = async (email, password, fullName, role, accountType = null) => {
+  const signUp = async (email, password, fullName, role, accountType = null, avatar = null) => {
     const meta = { full_name: fullName, role };
     if (accountType) meta.account_type = accountType; // 'parent' | 'student' | 'tutor'
+    // The avatar goes two ways on purpose. Into the user metadata, so it is
+    // attached to the account from the moment it exists; and into localStorage,
+    // because sign-up ends at "check your email" with no session, so there is
+    // nobody to write the profile row as yet. Whichever arrives first wins.
+    if (avatar) {
+      meta.avatar = avatar;
+      try { localStorage.setItem('tutagora_pending_avatar', avatar); } catch { /* private window */ }
+    }
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
@@ -1015,7 +1054,7 @@ const sendLessonStartNotification = async (booking) => {
 // 'plan' when saving a free-check result, 'book' when booking a tutor.
 const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null, childName = '' }) => {
   const startRole = initialRole === 'tutor' ? 'tutor' : initialRole === 'student' ? 'student' : 'parent';
-  const [form, setForm] = useState({ name: '', email: '', password: '', role: startRole });
+  const [form, setForm] = useState({ name: '', email: '', password: '', role: startRole, avatar: DEFAULT_AVATAR });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
@@ -1031,7 +1070,7 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
     setError(''); setSuccess(''); setLoading(true);
     try {
       if (view === 'register') {
-        await onAuth.signUp(form.email, form.password, form.name, dbRole, accountType);
+        await onAuth.signUp(form.email, form.password, form.name, dbRole, accountType, form.avatar);
         setSuccess(reason === 'plan'
           ? 'Account created. Open the confirmation link we emailed you on this phone, and your plan will be saved.'
           : 'Account created. Check your email for a confirmation link.');
@@ -1055,6 +1094,7 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
         localStorage.setItem('tutagora_pending_role', dbRole);
         localStorage.setItem('tutagora_pending_type', accountType);
         localStorage.setItem('tutagora_pending_name', form.name || '');
+        localStorage.setItem('tutagora_pending_avatar', form.avatar || '');
       }
       await onAuth.signInWithGoogle();
     } catch (err) {
@@ -1110,6 +1150,12 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
         <form onSubmit={handleSubmit} className="stack">
           {view === 'register' && (
             <input className="inp" placeholder="Your full name" autoComplete="name" required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
+          )}
+          {view === 'register' && (
+            <div>
+              <p style={{ margin: '2px 0 8px', fontWeight: 600, fontSize: 15 }}>Pick your avatar</p>
+              <AvatarPicker value={form.avatar} onChange={(id) => setForm(f => ({ ...f, avatar: id }))} />
+            </div>
           )}
           <input className="inp" type="email" placeholder="Email address" autoComplete="email" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
           {view !== 'forgot' && (
@@ -1182,22 +1228,23 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
   const [children, setChildren] = useState([]);
   const [newChildName, setNewChildName] = useState('');
   const [newChildGrade, setNewChildGrade] = useState('');
+  const [newChildAvatar, setNewChildAvatar] = useState(DEFAULT_AVATAR);
   const [adding, setAdding] = useState(false);
   const CHILD_GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Form 1', 'Form 2', 'Form 3', 'Form 4', 'University', 'Adult learner'];
   const accountType = user?.user_metadata?.account_type || null;
   const isStudentAccount = accountType === 'student';
   const fetchChildren = useCallback(() => {
     if (!profile?.id) return;
-    supabase.from('children').select('id, name, grade').eq('parent_id', profile.id).order('created_at')
+    supabase.from('children').select('id, name, grade, avatar').eq('parent_id', profile.id).order('created_at')
       .then(({ data }) => setChildren(data || []));
   }, [profile?.id]);
   useEffect(() => { fetchChildren(); }, [fetchChildren]);
   const addChild = async () => {
     if (!newChildName.trim()) return;
     const { data } = await supabase.from('children')
-      .insert({ parent_id: profile.id, name: newChildName.trim(), grade: newChildGrade || null })
-      .select('id, name, grade').single();
-    if (data) { setChildren(prev => [...prev, data]); setNewChildName(''); setNewChildGrade(''); setAdding(false); }
+      .insert({ parent_id: profile.id, name: newChildName.trim(), grade: newChildGrade || null, avatar: newChildAvatar })
+      .select('id, name, grade, avatar').single();
+    if (data) { setChildren(prev => [...prev, data]); setNewChildName(''); setNewChildGrade(''); setNewChildAvatar(DEFAULT_AVATAR); setAdding(false); }
   };
   const removeChild = async (c) => {
     if (!window.confirm(`Remove ${c.name}? This also deletes their practice and progress. It can't be undone.`)) return;
@@ -1300,7 +1347,7 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
         </div>
         <div className="right">
           <MessageButton onClick={onOpenMessages} />
-          <Avatar src={profile?.avatar_url} name={profile?.full_name} size={34} />
+          <Avatar src={profile?.avatar_url} preset={profile?.avatar} name={profile?.full_name} size={34} />
         </div>
       </div></nav>
 
@@ -1361,8 +1408,14 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
                 <div className="addkid">
                   <input className="inp" value={newChildName} onChange={e => setNewChildName(e.target.value)} onKeyDown={e => e.key === 'Enter' && addChild()} placeholder="Child's first name" aria-label="Child's first name" autoFocus />
                   <select className="inp" value={newChildGrade} onChange={e => setNewChildGrade(e.target.value)} aria-label="Grade"><option value="">Grade</option>{CHILD_GRADES.map(g => <option key={g} value={g}>{g}</option>)}</select>
+                  {/* HOREB is used BY the child, so this is the avatar that
+                      actually appears in a lesson — let them choose it. */}
+                  <div style={{ gridColumn: '1 / -1', margin: '4px 0 2px' }}>
+                    <p className="muted" style={{ margin: '0 0 8px', fontWeight: 600 }}>Pick an avatar</p>
+                    <AvatarPicker value={newChildAvatar} onChange={setNewChildAvatar} min={60} />
+                  </div>
                   <button type="button" className="btn" onClick={addChild} disabled={!newChildName.trim()}>Add</button>
-                  <button type="button" className="linkbtn" onClick={() => { setAdding(false); setNewChildName(''); }}>Cancel</button>
+                  <button type="button" className="linkbtn" onClick={() => { setAdding(false); setNewChildName(''); setNewChildAvatar(DEFAULT_AVATAR); }}>Cancel</button>
                 </div>
               )}
               {children.length > 0 && (
@@ -1383,7 +1436,12 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
                     return (
                       <div key={c.id} className="kid">
                         <div className="ktop">
-                          <div><b>{c.name}</b><span>{c.grade || 'Grade not set'}</span></div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                            <span style={{ borderRadius: '50%', overflow: 'hidden', lineHeight: 0, flexShrink: 0 }}>
+                              <AvatarArt id={c.avatar || DEFAULT_AVATAR} size={38} title={c.name} />
+                            </span>
+                            <div><b>{c.name}</b><span>{c.grade || 'Grade not set'}</span></div>
+                          </div>
                           <button type="button" className="kx" onClick={() => removeChild(c)} aria-label={`Remove ${c.name}`}><SiteIcon name="x" style={{ width: 16, height: 16 }} /></button>
                         </div>
                         {step ? (
@@ -1751,6 +1809,7 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
     full_name: profile?.full_name || '',
     phone: profile?.phone || '',
     avatar_url: profile?.avatar_url || '',
+    avatar: profile?.avatar || DEFAULT_AVATAR,
   });
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
@@ -1767,6 +1826,7 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
           full_name: form.full_name,
           phone: form.phone,
           avatar_url: form.avatar_url,
+          avatar: form.avatar,
         })
         .eq('id', profile.id);
 
@@ -1793,16 +1853,25 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex justify-center mb-4">
             <div className="relative">
-              <img 
-                src={form.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(form.full_name || 'U')}&background=6d6fcb&color=fff`}
-                alt="Avatar"
-                className="w-20 h-20 rounded-full object-cover"
-              />
+              {/* An uploaded photo still wins; the picked figure is what shows
+                  when there is none, so the preview matches what others see. */}
+              {form.avatar_url
+                ? <img src={form.avatar_url} alt="Avatar" className="w-20 h-20 rounded-full object-cover" />
+                : <span className="w-20 h-20 rounded-full overflow-hidden inline-block" style={{ lineHeight: 0 }}>
+                    <AvatarArt id={form.avatar} size={80} />
+                  </span>}
               <button type="button" aria-label="Change photo" className="absolute bottom-0 right-0 w-7 h-7 bg-amber-400 text-slate-900 rounded-full flex items-center justify-center">
                 <Icon name="camera" className="w-4 h-4" />
               </button>
             </div>
           </div>
+
+          {!form.avatar_url && (
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-2">Your avatar</label>
+              <AvatarPicker value={form.avatar} onChange={(id) => setForm(f => ({ ...f, avatar: id }))} />
+            </div>
+          )}
 
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
@@ -2587,7 +2656,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
 
         <div className="p-4 border-t border-slate-100">
           <div className="flex items-center gap-3 px-3 py-2">
-            <Avatar src={profile?.avatar_url} name={profile?.full_name} size={36} />
+            <Avatar src={profile?.avatar_url} preset={profile?.avatar} name={profile?.full_name} size={36} />
             <div className="flex-1 min-w-0">
               <div className="text-sm font-medium text-slate-900 truncate">{profile?.full_name}</div>
               <div className="text-xs text-slate-400 truncate">{tutor?.subject}</div>
@@ -4306,7 +4375,7 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
     if (!profile?.id) return;
     supabase.from('ai_tutor_progress').select('total_xp, current_streak, diagnosed').eq('user_id', profile.id).maybeSingle()
       .then(({ data }) => data && setAi({ xp: data.total_xp || 0, streak: data.current_streak || 0, diagnosed: !!data.diagnosed }));
-    supabase.from('children').select('id, name, grade').eq('parent_id', profile.id).order('created_at')
+    supabase.from('children').select('id, name, grade, avatar').eq('parent_id', profile.id).order('created_at')
       .then(({ data }) => setChildren(data || []));
   }, [profile?.id]);
 
@@ -4349,7 +4418,7 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
     <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
       <div className="max-w-md mx-auto px-4 pt-12 pb-28 native-safe-top app-scroll w-full">
         <div className="flex items-center gap-3 mb-6">
-          <Avatar src={profile?.avatar_url} name={profile?.full_name} size={52} />
+          <Avatar src={profile?.avatar_url} preset={profile?.avatar} name={profile?.full_name} size={52} />
           <div className="min-w-0">
             <div className="text-[22px] font-extrabold tracking-tight leading-tight truncate">{first || 'Your space'}</div>
             <div className="text-sm text-slate-500 truncate">{profile?.email}</div>
@@ -5784,7 +5853,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
   const [selectedChildId, setSelectedChildId] = useState(null); // null = entering someone new
   useEffect(() => {
     if (!user?.id) { setChildren([]); return; }
-    supabase.from('children').select('id, name, grade').eq('parent_id', user.id).order('created_at')
+    supabase.from('children').select('id, name, grade, avatar').eq('parent_id', user.id).order('created_at')
       .then(({ data }) => {
         const kids = data || [];
         setChildren(kids);
@@ -6113,7 +6182,12 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                       {children.map(c => (
                         <button key={c.id} type="button" onClick={() => pickChild(c)}
                           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedChildId === c.id ? 'bg-amber-400 text-slate-900' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}>
-                          {c.name}{c.grade ? ` · ${c.grade}` : ''}
+                          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                            <span style={{ borderRadius: '50%', overflow: 'hidden', lineHeight: 0 }}>
+                              <AvatarArt id={c.avatar || DEFAULT_AVATAR} size={20} title={c.name} />
+                            </span>
+                            {c.name}{c.grade ? ` · ${c.grade}` : ''}
+                          </span>
                         </button>
                       ))}
                       <button type="button" onClick={pickNewLearner}
@@ -6223,7 +6297,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
           {user && profile?.role === 'student' && <MomentumChip userId={profile?.id} onClick={() => onNavigate('ai')} />}
           {user ? (
             <button onClick={() => onNavigate('dashboard')} className="flex items-center gap-2">
-              <Avatar src={profile?.avatar_url} name={profile?.full_name} size={32} />
+              <Avatar src={profile?.avatar_url} preset={profile?.avatar} name={profile?.full_name} size={32} />
             </button>
           ) : (
             <>
@@ -6237,7 +6311,7 @@ const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
           {user && profile?.role === 'student' && <MomentumChip userId={profile?.id} onClick={() => onNavigate('ai')} />}
           {user && (
             <button onClick={() => onNavigate('dashboard')}>
-              <Avatar src={profile?.avatar_url} name={profile?.full_name} size={28} />
+              <Avatar src={profile?.avatar_url} preset={profile?.avatar} name={profile?.full_name} size={28} />
             </button>
           )}
           <button onClick={() => setMobileOpen(!mobileOpen)} className={`p-1 ${scrolled ? 'text-slate-700' : 'text-white'}`}>

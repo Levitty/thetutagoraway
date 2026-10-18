@@ -91,3 +91,26 @@ test('subtraction does not commute, and reordering never invents a match', () =>
   assert.ok(!same('2x+3y', '2y+3x'));     // coefficients belong to their letters
   assert.ok(!same('x+3=9', 'x+3=8'));
 });
+
+// ---------------------------------------------------------------------------
+// Clock times with a.m. and p.m. Found by the check simulator: a key written
+// "9:15 a.m." only matched an exact copy, so "9:15 am", "9:15 AM" and the
+// Kenyan classroom's own "9.15 a.m." were all marked wrong on a Grade 4 time
+// question — the commonest way a child who knew the answer was told they had
+// a gap.
+// ---------------------------------------------------------------------------
+test('a 12-hour time is accepted however a child writes a.m. or p.m.', () => {
+  const same = (a, b) => checkAnswerMatch(a, { answer: b });
+  for (const typed of ['9:15 a.m.', '9:15 am', '9:15am', '9.15 am', '9:15 AM', '9.15 a.m.']) {
+    assert.ok(same(typed, '9:15 a.m.'), `${typed} should be accepted for 9:15 a.m.`);
+  }
+  assert.ok(same('21:15', '9:15 p.m.'), 'an unambiguous 24-hour time is the same time');
+});
+
+test('a.m. and p.m. stay different, and a time without one is not enough', () => {
+  const same = (a, b) => checkAnswerMatch(a, { answer: b });
+  assert.ok(!same('9:15 p.m.', '9:15 a.m.'), 'telling a.m. from p.m. is the skill');
+  assert.ok(!same('9:15 am', '9:15 p.m.'));
+  assert.ok(!same('9:15', '9:15 a.m.'), 'a bare 9:15 does not say which');
+  assert.ok(!same('9:16 am', '9:15 a.m.'));
+});

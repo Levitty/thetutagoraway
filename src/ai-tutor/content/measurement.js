@@ -10,12 +10,18 @@ const r2 = (x) => Math.round(x * 100) / 100;
 const numStr = (x) => `${r2(x)}`;
 
 // ---- rectangle perimeter ----
-export function buildRectanglePerimeter() {
-  const l = randInt(3, 20), w = randInt(2, l);
+// Banded by grade. Grades 5, 6 and 7 all called this with no arguments, so
+// all three generated the SAME question: a learner who "cleared Grade 7
+// perimeter" had answered a Grade 5 one, and the placement sweep used that to
+// decide they were working above their level. `band` reports the operands so
+// the difficulty test can check the ladder actually climbs.
+export function buildRectanglePerimeter({ min = 3, max = 20, unit = 'cm' } = {}) {
+  const l = randInt(min, max), w = randInt(min, Math.max(min, l));
   const value = 2 * (l + w);
   return {
     type: 'rect-perimeter', instruction: 'Find the perimeter.',
-    question: `A rectangle is ${l} cm long and ${w} cm wide. Find its perimeter.`,
+    question: `A rectangle is ${l} ${unit} long and ${w} ${unit} wide. Find its perimeter.`,
+    band: { op: 'perimeter', a: l, b: w },
     answer: `${value}`, accepts: accepts(`${value}`, `${value}cm`),
     model: { type: 'shape', data: { kind: 'rect', dims: { l, w }, emphasis: 'perimeter', unit: 'cm' } },
     hints: hintLadder('Perimeter is the total distance around the edge.',
@@ -29,16 +35,17 @@ export function buildRectanglePerimeter() {
 }
 
 // ---- rectangle area ----
-export function buildRectangleArea() {
-  const l = randInt(3, 20), w = randInt(2, 15);
+export function buildRectangleArea({ min = 3, max = 20, minW = 2, maxW = 15, unit = 'cm' } = {}) {
+  const l = randInt(min, max), w = randInt(minW, maxW);
   const value = l * w;
   return {
     type: 'rect-area', instruction: 'Find the area.',
-    question: `Find the area of a rectangle ${l} cm by ${w} cm.`,
+    question: `Find the area of a rectangle ${l} ${unit} by ${w} ${unit}.`,
+    band: { op: 'area', a: l, b: w },
     answer: `${value}`, accepts: accepts(`${value}`),
-    model: { type: 'shape', data: { kind: 'rect', dims: { l, w }, emphasis: 'area', unit: 'cm' } },
+    model: { type: 'shape', data: { kind: 'rect', dims: { l, w }, emphasis: 'area', unit } },
     hints: hintLadder('Area of a rectangle = length × width.', `${l} × ${w}.`),
-    solution: { steps: [{ text: 'Area = length × width.', expr: `${l} × ${w} = ${value} cm²` }], answer: `${value}` },
+    solution: { steps: [{ text: 'Area = length × width.', expr: `${l} × ${w} = ${value} ${unit}²` }], answer: `${value}` },
     misconceptions: [{ when: `${2 * (l + w)}`, feedback: 'That is the perimeter. Area = length × width.' }],
     verify: { kind: 'fraction', value },
   };
@@ -95,15 +102,18 @@ export function buildCircleArea() {
 }
 
 // ---- cuboid volume ----
-export function buildCuboidVolume() {
-  const l = randInt(2, 12), w = randInt(2, 10), h = randInt(2, 10);
+// Grades 6 and 7 shared this with no arguments, so the two generated the same
+// cuboid — and Grade 5's own volume skill reached higher than either.
+export function buildCuboidVolume({ min = 2, max = 12, unit = 'cm' } = {}) {
+  const l = randInt(min, max), w = randInt(min, Math.max(min, max - 2)), h = randInt(min, Math.max(min, max - 2));
   const value = l * w * h;
   return {
     type: 'cuboid-volume', instruction: 'Find the volume.',
-    question: `Find the volume of a cuboid ${l} cm × ${w} cm × ${h} cm.`,
+    question: `Find the volume of a cuboid ${l} ${unit} × ${w} ${unit} × ${h} ${unit}.`,
+    band: { op: 'volume', a: l * w, b: h },
     answer: `${value}`, accepts: accepts(`${value}`),
     hints: hintLadder('Volume of a cuboid = length × width × height.', `${l} × ${w} × ${h}.`),
-    solution: { steps: [{ text: 'Volume = l × w × h.', expr: `${l} × ${w} × ${h} = ${value} cm³` }], answer: `${value}` },
+    solution: { steps: [{ text: 'Volume = l × w × h.', expr: `${l} × ${w} × ${h} = ${value} ${unit}³` }], answer: `${value}` },
     misconceptions: [], verify: { kind: 'fraction', value },
   };
 }
@@ -870,17 +880,17 @@ export const MEASUREMENT_CONTENT = {
   G8_AREA_COMPOSITE:  withWorkedExample(buildCompositeArea),
   G8_SURFACE_AREA:    withWorkedExample(buildSurfaceAreaCuboid),
   G8_VOLUME_ADV:      withWorkedExample(buildVolumePrism),
-  G5_PERIMETER_INTRO: withWorkedExample(buildRectanglePerimeter),
-  G5_AREA_INTRO:      withWorkedExample(buildRectangleArea),
-  G6_PERIMETER:       withWorkedExample(buildRectanglePerimeter),
-  G6_AREA_RECT:       withWorkedExample(buildRectangleArea),
+  G5_PERIMETER_INTRO: withWorkedExample(() => buildRectanglePerimeter({ min: 3, max: 15 })),
+  G5_AREA_INTRO:      withWorkedExample(() => buildRectangleArea({ min: 3, max: 12, minW: 2, maxW: 10 })),
+  G6_PERIMETER:       withWorkedExample(() => buildRectanglePerimeter({ min: 16, max: 45 })),
+  G6_AREA_RECT:       withWorkedExample(() => buildRectangleArea({ min: 13, max: 30, minW: 11, maxW: 25 })),
   G6_AREA_TRIANGLE:   withWorkedExample(buildTriangleArea),
-  G6_VOLUME_CUBOID:   withWorkedExample(buildCuboidVolume),
-  G7_PERIMETER:       withWorkedExample(buildRectanglePerimeter),
-  G7_AREA_RECT:       withWorkedExample(buildRectangleArea),
+  G6_VOLUME_CUBOID:   withWorkedExample(() => buildCuboidVolume({ min: 4, max: 14 })),
+  G7_PERIMETER:       withWorkedExample(() => buildRectanglePerimeter({ min: 46, max: 120, unit: 'm' })),
+  G7_AREA_RECT:       withWorkedExample(() => buildRectangleArea({ min: 31, max: 80, minW: 26, maxW: 60, unit: 'm' })),
   G7_CIRCUMFERENCE:   withWorkedExample(buildCircumference),
   G7_AREA_CIRCLE:     withWorkedExample(buildCircleArea),
-  G7_VOLUME_CUBOID:   withWorkedExample(buildCuboidVolume),
+  G7_VOLUME_CUBOID:   withWorkedExample(() => buildCuboidVolume({ min: 15, max: 32, unit: 'm' })),
   G7_VOLUME_CYLINDER: withWorkedExample(buildCylinderVolume),
   G7_SPEED:           withWorkedExample(buildSpeed),
   // Main's graph models temperature as ONE skill — mix reading/units with change.

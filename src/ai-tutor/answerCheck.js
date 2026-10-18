@@ -118,6 +118,34 @@ export function timeValue(raw) {
   return null;
 }
 const isClockKey = (a) => /^\d{1,2}:\d{2}$/.test(String(a).trim());
+
+// 12-hour times with a.m./p.m. The clock match above only recognises a
+// 24-hour key ("13:30"), so a key written "9:15 a.m." never qualified and only
+// an exact copy passed: "9:15 am", "9:15 AM" and the Kenyan classroom's own
+// "9.15 a.m." were all marked wrong on a Grade 4 time question. Found by the
+// check simulator, where it was the commonest way a child who knew the answer
+// was told they had a gap.
+//
+// a.m. and p.m. stay distinct — telling them apart IS the skill — and a bare
+// "9:15" is not accepted for "9:15 a.m." because it does not say which. A
+// 24-hour answer counts only where it is unambiguous ("21:15" for 9:15 p.m.).
+const MERIDIEM = /^(\d{1,2})\s*[:.]\s*(\d{2})\s*([ap])\.?\s*m\.?$/;
+const meridiemTime = (raw) => {
+  const t = String(raw ?? '').trim().toLowerCase().replace(/\s+/g, ' ');
+  let m = t.match(MERIDIEM);
+  if (m) {
+    const h = Number(m[1]), mi = Number(m[2]);
+    if (h < 1 || h > 12 || mi > 59) return null;
+    return { h: (h % 12) + (m[3] === 'p' ? 12 : 0), mi, meridiem: true };
+  }
+  m = t.match(/^(\d{1,2})\s*[:.]\s*(\d{2})\s*(hrs|h|hours)?$/);
+  if (m) {
+    const h = Number(m[1]), mi = Number(m[2]);
+    if (mi <= 59 && (h === 0 || (h >= 13 && h <= 23))) return { h, mi, meridiem: false };
+  }
+  return null;
+};
+const isMeridiemKey = (a) => meridiemTime(a)?.meridiem === true;
 const COMPASS = { n: 'north', s: 'south', e: 'east', w: 'west', ne: 'north east', nw: 'north west', se: 'south east', sw: 'south west' };
 const SHORT_NAMES = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday',
   'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
@@ -188,6 +216,10 @@ export function checkAnswerMatch(userAnswer, problem) {
   if (accepts.some(isClockKey)) {
     const tv = timeValue(userAnswer);
     if (tv != null && accepts.some(a => isClockKey(a) && timeValue(a) === tv)) return true;
+  }
+  if (accepts.some(isMeridiemKey)) {
+    const u = meridiemTime(userAnswer);
+    if (u && accepts.some(a => { const k = meridiemTime(a); return k?.meridiem && k.h === u.h && k.mi === u.mi; })) return true;
   }
 
   // 1d) Compass points and day/month names, shortened: "S", "Tue", "Sept".

@@ -295,7 +295,14 @@ function buildUnitConvert({ pairs }) {
         misconceptions: [], verify: { kind: 'fraction', value: n } };
     }
     if (mode === 2) {           // which is longer / heavier
-      const other = n * factor + pick([-1, 1]) * randInt(1, Math.max(1, factor / 2 - 1)) * (factor >= 100 ? 10 : 1);
+      // The second measurement has to stay a real quantity. The offset used to
+      // be drawn from the unit's size alone, so "2 metres" could be compared
+      // against 490 centimetres LESS than itself: "Which is more: 2 metres or
+      // -200 centimetres?" — nonsense at any age, and this is Grade 4. Cap the
+      // offset by the measurement itself as well.
+      const step = factor >= 100 ? 10 : 1;
+      const maxOffset = Math.max(1, Math.min(Math.floor(factor / 2) - 1, Math.floor((n * factor - step) / step)));
+      const other = n * factor + pick([-1, 1]) * randInt(1, maxOffset) * step;
       const bigger = n * factor > other ? `${n} ${big}` : `${other} ${small}`;
       return { type: 'unit-compare', instruction: 'Compare the measurements.',
         question: `Which is more: ${n} ${big} or ${other} ${small}?`,
@@ -1103,15 +1110,20 @@ function buildTablesAndBars() {
     const vals = set.keys.map(() => randInt(3, 20));
     // Distinct values keep "which is biggest" and the readings unambiguous.
     if (new Set(vals).size !== vals.length) return buildTablesAndBars()();
-    const table = set.keys.map((k, i) => `${k}: ${vals[i]}`).join(',  ');
     const mode = pick(['read', 'total', 'difference', 'most']);
-    const stem = `A table shows ${set.label} —  ${table}.`;
+    // The data is DRAWN, never written into the question. Spelled out as
+    // "Mon: 7, Tue: 9, Wed: 20", reading a table collapses into finding the
+    // label and copying the number beside it — which is not the skill.
+    const rows = set.keys.map((k, i) => ({ label: k, value: vals[i] }));
+    const tableModel = { type: 'table', data: { head: ['', set.noun], rows } };
+    const barModel = { type: 'bar-chart', data: { bars: rows } };
 
     if (mode === 'read') {
       const i = randInt(0, set.keys.length - 1);
       return {
         type: 'table-read', instruction: 'Read the value out of the table.',
-        question: `${stem}  How many ${set.noun} for ${set.keys[i]}?`,
+        question: `The table shows ${set.label}. How many ${set.noun} for ${set.keys[i]}?`,
+        model: tableModel,
         answer: `${vals[i]}`, accepts: accepts(`${vals[i]}`),
         hints: hintLadder(
           'Each row of the table names one group and gives its count.',
@@ -1131,7 +1143,8 @@ function buildTablesAndBars() {
       const value = vals.reduce((a, b) => a + b, 0);
       return {
         type: 'table-total', instruction: 'Give the total.',
-        question: `${stem}  How many ${set.noun} altogether?`,
+        question: `The table shows ${set.label}. How many ${set.noun} altogether?`,
+        model: tableModel,
         answer: `${value}`, accepts: accepts(`${value}`),
         hints: hintLadder(
           'Every row stands for part of the whole.',
@@ -1151,7 +1164,8 @@ function buildTablesAndBars() {
       const hi = Math.max(...vals), lo = Math.min(...vals), value = hi - lo;
       return {
         type: 'bar-difference', instruction: 'Compare the tallest and shortest bars.',
-        question: `A bar graph shows ${set.label} —  ${table}.  How many more ${set.noun} has the biggest bar than the smallest?`,
+        question: `The bar graph shows ${set.label}. How many more ${set.noun} has the tallest bar than the shortest?`,
+        model: barModel,
         answer: `${value}`, accepts: accepts(`${value}`),
         hints: hintLadder(
           'Find the tallest bar and the shortest bar first.',
@@ -1172,7 +1186,8 @@ function buildTablesAndBars() {
     const value = set.keys[vals.indexOf(hi)];
     return {
       type: 'bar-most', instruction: 'Name the biggest bar.',
-      question: `A bar graph shows ${set.label} —  ${table}.  Which has the most?`,
+      question: `The bar graph shows ${set.label}. Which has the most?`,
+      model: barModel,
       answer: value, accepts: accepts(value), choices: set.keys,
       hints: hintLadder(
         'The tallest bar always stands for the biggest count.',
@@ -1186,6 +1201,273 @@ function buildTablesAndBars() {
         { when: set.keys[vals.indexOf(Math.min(...vals))], feedback: 'That is the smallest bar. The question asks which has the MOST.' },
       ],
       verify: { kind: 'text', value },
+    };
+  };
+}
+
+// ---------------------------------------------------------------------------
+// KICD Grade 4, 1.1 Whole Numbers (20 lessons) — the outcomes beyond place value
+//
+// The design lists ten outcomes for this sub-strand and only (a), place and
+// total value, had a skill behind it. Reading and writing numbers, ordering,
+// rounding, factors, multiples, odd and even numbers and Roman numerals were
+// all absent, so the biggest sub-strand of the Grade 4 year — a fifth of its
+// lessons — was taught by a single place-value drill. These builders cover
+// outcomes (b) through (j), to the design's own number ranges.
+// ---------------------------------------------------------------------------
+
+const ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
+  'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen',
+  'eighteen', 'nineteen'];
+const TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
+/** 0–1,000 in words, the way Kenyan classrooms say them: "three hundred and forty-five". */
+const inWords = (n) => {
+  if (n === 1000) return 'one thousand';
+  if (n < 20) return ONES[n];
+  if (n < 100) {
+    const t = TENS[Math.floor(n / 10)], o = n % 10;
+    return o ? `${t}-${ONES[o]}` : t;
+  }
+  const h = `${ONES[Math.floor(n / 100)]} hundred`;
+  const r = n % 100;
+  return r ? `${h} and ${inWords(r)}` : h;
+};
+
+// The same number said without the "and", and without the hyphen, both of
+// which a child may well write. All three spellings are the same answer.
+const wordForms = (n) => {
+  const w = inWords(n);
+  return accepts(w, w.replace(' and ', ' '), w.replace('-', ' '),
+    w.replace(' and ', ' ').replace('-', ' '));
+};
+
+/** KICD 1.1 b, c: read and write numbers in symbols (to 10,000) and words (to 1,000). */
+function buildNumberWords() {
+  return () => {
+    // Words are required only up to 1,000; symbols run to 10,000.
+    if (coin()) {
+      const n = randInt(21, 999);
+      const w = inWords(n);
+      return {
+        type: 'number-words', instruction: 'Write the number in words.',
+        question: `Write ${n} in words.`,
+        answer: w, accepts: wordForms(n),
+        hints: hintLadder('Say the number out loud first.',
+          n % 100 === 0 ? 'How many hundreds is it?' : 'Start with the hundreds, then say the rest.'),
+        solution: { steps: [
+          { text: `${Math.floor(n / 100)} hundred${n % 100 ? `, then ${n % 100}` : ''}.`, expr: w }], answer: w },
+        misconceptions: [], verify: { kind: 'text', value: w },
+      };
+    }
+    const n = randInt(1001, 9999);
+    // Read the symbols aloud: the design asks for numbers up to 10,000 read in
+    // symbols, which in practice is "how many thousands, hundreds, tens, ones".
+    const th = Math.floor(n / 1000), rest = n % 1000;
+    return {
+      type: 'number-symbols', instruction: 'Write the number in symbols.',
+      question: `Write ${th} thousand ${rest ? `${rest} ` : ''}in symbols.`,
+      answer: `${n}`, accepts: accepts(`${n}`, n.toLocaleString('en-US')),
+      hints: hintLadder('Thousands come first, then the rest of the number.',
+        `${th} thousand is ${th * 1000}.`),
+      solution: { steps: [
+        { text: `${th} thousand is ${th * 1000}${rest ? `, and ${rest} more` : ''}.`, expr: `${n}` }], answer: `${n}` },
+      misconceptions: [], verify: { kind: 'fraction', value: n },
+    };
+  };
+}
+
+/** KICD 1.1 d, e: order numbers up to 1,000, and round to the nearest ten. */
+function buildOrderRound() {
+  return () => {
+    const mode = pick(['order', 'order', 'round', 'round']);
+    if (mode === 'round') {
+      // The design is specific: up to 1,000, to the NEAREST TEN. A number that
+      // is already a multiple of ten rounds to itself, which teaches nothing
+      // and reads like a trick, so those are never drawn.
+      let n = randInt(11, 989);
+      while (n % 10 === 0) n = randInt(11, 989);
+      const down = Math.floor(n / 10) * 10, up = down + 10;
+      const ans = (n % 10) >= 5 ? up : down;
+      return {
+        type: 'round-ten', instruction: 'Round to the nearest ten.',
+        question: `Round ${n} to the nearest ten.`,
+        answer: `${ans}`, accepts: accepts(`${ans}`),
+        choices: [`${down}`, `${up}`],
+        hints: hintLadder('Look at the ones digit.',
+          'If it is 5 or more, round up. If it is less than 5, round down.'),
+        solution: { steps: [
+          { text: `${n} sits between ${down} and ${up}.` },
+          { text: `The ones digit is ${n % 10}, so round ${(n % 10) >= 5 ? 'up' : 'down'}.`, expr: `${ans}` }], answer: `${ans}` },
+        misconceptions: [{ when: `${(n % 10) >= 5 ? down : up}`, feedback: `The ones digit is ${n % 10}, so you round ${(n % 10) >= 5 ? 'UP' : 'DOWN'}.` }],
+        verify: { kind: 'fraction', value: ans },
+      };
+    }
+    // Order: three numbers up to 1,000, smallest or largest.
+    const set = new Set();
+    while (set.size < 3) set.add(randInt(101, 999));
+    const nums = [...set];
+    const wantLargest = coin();
+    const ans = wantLargest ? Math.max(...nums) : Math.min(...nums);
+    return {
+      type: 'order-numbers', instruction: 'Compare the numbers.',
+      question: `Which is the ${wantLargest ? 'largest' : 'smallest'}: ${nums.join(', ')}?`,
+      answer: `${ans}`, accepts: accepts(`${ans}`),
+      choices: nums.map(String), choicesFixed: true,
+      hints: hintLadder('Compare the hundreds digit first.',
+        'If two numbers have the same hundreds, compare the tens.'),
+      solution: { steps: [
+        { text: 'Compare the hundreds digit, then the tens, then the ones.', expr: `${ans}` }], answer: `${ans}` },
+      misconceptions: [{ when: `${wantLargest ? Math.min(...nums) : Math.max(...nums)}`, feedback: `That is the ${wantLargest ? 'smallest' : 'largest'}. Read the question again.` }],
+      verify: { kind: 'fraction', value: ans },
+    };
+  };
+}
+
+/** KICD 1.1 f, g: factors of numbers up to 50, multiples of numbers up to 100. */
+function buildFactorsMultiples() {
+  return () => {
+    if (coin()) {
+      const n = pick([12, 15, 16, 18, 20, 24, 28, 30, 32, 36, 40, 42, 45, 48, 50]);
+      const factors = [];
+      for (let i = 1; i <= n; i++) if (n % i === 0) factors.push(i);
+      // Ask whether ONE number is a factor: a list answer is hard to type.
+      const isFactor = coin();
+      const cand = isFactor ? pick(factors.filter(f => f > 1 && f < n))
+        : pick([...Array(n).keys()].map(i => i + 2).filter(i => n % i !== 0 && i < n));
+      const value = n % cand === 0 ? 'yes' : 'no';
+      return {
+        type: 'factors', instruction: 'Think about factors.', tapChoices: true,
+        question: `Is ${cand} a factor of ${n}?`,
+        answer: value, accepts: accepts(value), choices: ['yes', 'no'],
+        hints: hintLadder('A factor divides the number exactly, with nothing left over.',
+          `Try ${n} ÷ ${cand}.`),
+        solution: { steps: [
+          { text: `${n} ÷ ${cand} ${n % cand === 0 ? `= ${n / cand}, exactly` : `leaves ${n % cand} over`}.`, expr: value }], answer: value },
+        misconceptions: [], verify: { kind: 'text', value },
+      };
+    }
+    const base = randInt(2, 12);
+    const k = randInt(2, Math.floor(100 / base));
+    const value = base * k;
+    return {
+      type: 'multiples', instruction: 'Think about multiples.',
+      question: `What is the ${k === 2 ? '2nd' : k === 3 ? '3rd' : `${k}th`} multiple of ${base}?`,
+      answer: `${value}`, accepts: accepts(`${value}`),
+      hints: hintLadder(`Count up in ${base}s.`, `${base} × ${k} = ?`),
+      solution: { steps: [{ text: `Multiples of ${base} are ${base}, ${base * 2}, ${base * 3}, …`, expr: `${base} × ${k} = ${value}` }], answer: `${value}` },
+      misconceptions: [{ when: `${base + k}`, feedback: `A multiple means ${base} × ${k}, not ${base} + ${k}.` }],
+      verify: { kind: 'fraction', value },
+    };
+  };
+}
+
+/** KICD 1.1 h, i: even and odd numbers up to 100, and patterns made from them. */
+function buildOddEven() {
+  return () => {
+    if (coin()) {
+      const n = randInt(11, 100);
+      const value = n % 2 === 0 ? 'even' : 'odd';
+      return {
+        type: 'odd-even', instruction: 'Even or odd?', tapChoices: true,
+        question: `Is ${n} even or odd?`,
+        answer: value, accepts: accepts(value), choices: ['even', 'odd'],
+        hints: hintLadder('Look at the ones digit.',
+          'A number ending in 0, 2, 4, 6 or 8 is even. The rest are odd.'),
+        solution: { steps: [{ text: `${n} ends in ${n % 10}, so it is ${value}.`, expr: value }], answer: value },
+        misconceptions: [], verify: { kind: 'text', value },
+      };
+    }
+    // A pattern made of even or of odd numbers: the next term.
+    const even = coin();
+    const start = even ? randInt(1, 20) * 2 : randInt(1, 20) * 2 + 1;
+    const step = pick([2, 4, 6]);
+    const seq = [0, 1, 2, 3].map(i => start + i * step);
+    const next = start + 4 * step;
+    return {
+      type: 'odd-even-pattern', instruction: 'Find the next number.',
+      question: `What comes next?   ${seq.join(', ')}, ?`,
+      answer: `${next}`, accepts: accepts(`${next}`),
+      hints: hintLadder(`These are all ${even ? 'even' : 'odd'} numbers.`, `How much is added each time?`),
+      solution: { steps: [
+        { text: `Each number is ${step} more than the one before.`, expr: `${seq[3]} + ${step} = ${next}` }], answer: `${next}` },
+      misconceptions: [], verify: { kind: 'fraction', value: next },
+    };
+  };
+}
+
+/**
+ * KICD Grade 5, 1.1 d: round off numbers up to tens of thousands to the nearest
+ * hundred AND thousand. Grade 4 rounds to the nearest ten; this is the next
+ * rung, and before it was written the whole idea of rounding first appeared at
+ * Grade 7 — three years after the design asks for it.
+ */
+export function buildRoundHundredThousand() {
+  return () => {
+    const toThousand = coin();
+    const unit = toThousand ? 1000 : 100;
+    const word = toThousand ? 'thousand' : 'hundred';
+    let n = randInt(1001, 99999);
+    while (n % unit === 0) n = randInt(1001, 99999);   // already rounded: no question
+    const down = Math.floor(n / unit) * unit, up = down + unit;
+    const ans = (n % unit) >= unit / 2 ? up : down;
+    // The digit the decision rests on: tens for hundreds, hundreds for thousands.
+    const deciding = Math.floor((n % unit) / (unit / 10));
+    return {
+      type: 'round-place', instruction: `Round to the nearest ${word}.`,
+      question: `Round ${n.toLocaleString('en-US')} to the nearest ${word}.`,
+      answer: `${ans}`, accepts: accepts(`${ans}`, ans.toLocaleString('en-US')),
+      choices: [down, up].map(v => v.toLocaleString('en-US')),
+      hints: hintLadder(
+        `Look at the digit in the ${toThousand ? 'hundreds' : 'tens'} place.`,
+        'If it is 5 or more, round up. If it is less than 5, round down.'),
+      solution: { steps: [
+        { text: `${n.toLocaleString('en-US')} sits between ${down.toLocaleString('en-US')} and ${up.toLocaleString('en-US')}.` },
+        { text: `The ${toThousand ? 'hundreds' : 'tens'} digit is ${deciding}, so round ${deciding >= 5 ? 'up' : 'down'}.`, expr: `${ans}` }],
+        answer: `${ans}` },
+      misconceptions: [{ when: `${deciding >= 5 ? down : up}`, feedback: `The ${toThousand ? 'hundreds' : 'tens'} digit is ${deciding}, so round ${deciding >= 5 ? 'UP' : 'DOWN'}.` }],
+      verify: { kind: 'fraction', value: ans },
+    };
+  };
+}
+
+const ROMAN = [[1000, 'M'], [900, 'CM'], [500, 'D'], [400, 'CD'], [100, 'C'], [90, 'XC'],
+  [50, 'L'], [40, 'XL'], [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']];
+const toRoman = (n) => ROMAN.reduce((out, [v, sym]) => { while (n >= v) { out += sym; n -= v; } return out; }, '');
+
+/** KICD 1.1 j: represent Hindu-Arabic numerals using Roman numerals. */
+function buildRomanNumerals() {
+  return () => {
+    // The design's examples stay in the range a Grade 4 child meets on clocks,
+    // chapter headings and dates.
+    // The hint gives the learner the symbol chart (I, V, X, L, C), because
+    // that chart IS the teaching here. So the numbers that ARE a single chart
+    // entry — 1, 5, 10, 50, 100 — are never asked: the hint would hand over the
+    // whole answer. Every number drawn has to be composed from two or more.
+    const CHART = [1, 5, 10, 50, 100];
+    const n = pick([...Array(39).keys()].map(i => i + 1)
+      .concat([40, 44, 45, 49, 50, 60, 70, 90, 100])
+      .filter(v => !CHART.includes(v)));
+    const r = toRoman(n);
+    if (coin()) {
+      return {
+        type: 'roman-write', instruction: 'Write the Roman numeral.',
+        question: `Write ${n} in Roman numerals.`,
+        answer: r, accepts: accepts(r, r.toLowerCase()),
+        hints: hintLadder('I is 1, V is 5, X is 10, L is 50, C is 100.',
+          'A smaller letter BEFORE a bigger one means take it away: IV is 4.'),
+        solution: { steps: [{ text: `${n} is written ${r}.`, expr: r }], answer: r },
+        misconceptions: [], verify: { kind: 'text', value: r },
+      };
+    }
+    return {
+      type: 'roman-read', instruction: 'Write the number.',
+      question: `What number is ${r}?`,
+      answer: `${n}`, accepts: accepts(`${n}`),
+      hints: hintLadder('I is 1, V is 5, X is 10, L is 50, C is 100.',
+        'A smaller letter BEFORE a bigger one is taken away: IX is 9.'),
+      solution: { steps: [{ text: `${r} is ${n}.`, expr: `${n}` }], answer: `${n}` },
+      misconceptions: [], verify: { kind: 'fraction', value: n },
     };
   };
 }
@@ -1302,6 +1584,12 @@ export const LOWER_PRIMARY_CONTENT = {
 
   // ── Grade 4 ──────────────────────────────────────────────────────────────
   G4_PLACE_VALUE:    withWorkedExample(buildBandedPlaceValue({ digits: 4 })),
+  G4_NUMBER_WORDS:   withWorkedExample(buildNumberWords()),
+  G4_ORDER_ROUND:    withWorkedExample(buildOrderRound()),
+  G4_FACTORS_MULTIPLES: withWorkedExample(buildFactorsMultiples()),
+  G4_ODD_EVEN:       withWorkedExample(buildOddEven()),
+  G4_ROMAN_NUMERALS: withWorkedExample(buildRomanNumerals()),
+  G5_ROUNDING:       withWorkedExample(buildRoundHundredThousand()),
   // KP ladder: 4-digit sums without regrouping, then with, up to 10,000.
   G4_ADD:            withKPs([
                        withWorkedExample(buildBandedAdd({ maxTotal: 10000, digitsA: 4, digitsB: 3, regroup: false })),

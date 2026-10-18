@@ -120,7 +120,7 @@ export default function SchoolsPage({ onNavigate, onSignIn, user }) {
         <h2 className="display" style={{ margin: '8px 0 30px' }}>Set up in one lesson. Useful the next morning.</h2>
         <div className="steps">
           <div className="st"><span className="ico c-indigo"><SiteIcon name="users" /></span><div className="n">01</div><h3>Create a class</h3><p>You get a join code. Learners type it once on a school tablet or on their phone at home.</p></div>
-          <div className="st"><span className="ico c-indigo"><SiteIcon name="target" /></span><div className="n">02</div><h3>Learners take the check</h3><p>About 10 minutes each. It adapts to every learner, so nobody sits through work that's too easy or too hard.</p></div>
+          <div className="st"><span className="ico c-indigo"><SiteIcon name="target" /></span><div className="n">02</div><h3>Learners take the check</h3><p>About 20 minutes each. It covers every topic of the grade and adapts to every learner, so nobody sits through work that's too easy or too hard.</p></div>
           <div className="st"><span className="ico c-indigo"><SiteIcon name="chart" /></span><div className="n">03</div><h3>You see the gaps</h3><p>Who's stuck, on which foundation, with a 5-minute classroom move for each. Daily practice then closes the gaps.</p></div>
         </div>
       </div></section>

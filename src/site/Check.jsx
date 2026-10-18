@@ -68,7 +68,7 @@ export function CheckStart({ initialGrade, onStart, onResume, onLeave, onSeeResu
               <button type="button" className="btn" onClick={canResume ? onResume : onSeeResult}>{canResume ? 'Continue' : 'See result'} <SiteIcon name="arrow" /></button>
             </div>
           )}
-          <div className="kicker">{canResume || hasResult ? 'Or start a new check' : 'Free · about 10 minutes · no account'}</div>
+          <div className="kicker">{canResume || hasResult ? 'Or start a new check' : 'Free · about 20 minutes · no account'}</div>
           <h1 className="display" style={{ marginTop: 10 }}>Let's find the step.</h1>
           <p className="lead">Questions start easy and adapt to each answer. There's no score and no pass or fail. We're only looking for where to start.</p>
           <label className="field"><span>Child's first name</span>
@@ -114,7 +114,7 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user, save
         <FlowBar label="Free maths check" onLeave={onLeave} />
         <div className="stage"><div className="card">
           <h1 className="display">{saved ? `No check for ${check.name} yet.` : 'No check on this device yet.'}</h1>
-          <p className="lead">{saved ? `It runs at the start of ${check.name}'s first practice and takes about ten minutes. The plan appears here after it.` : "It takes about ten minutes and it's free."}</p>
+          <p className="lead">{saved ? `It runs at the start of ${check.name}'s first practice and takes about twenty minutes. The plan appears here after it.` : "It takes about twenty minutes and it's free."}</p>
           <button type="button" className="btn" onClick={saved ? onStart : onRetake}>{saved ? `Start ${check.name}'s check` : 'Start the free check'} <SiteIcon name="arrow" /></button>
         </div></div>
       </div>
@@ -134,7 +134,7 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user, save
           <h1 className="display" style={{ marginTop: 10 }}>{who} skipped most of the questions.</h1>
           <p className="lead">That's okay, and it happens a lot. It just means we can't tell yet where {check?.name || 'they'} should start. They tapped "I haven't learned this yet" on {st.skipped} of {st.answered} questions.</p>
           <ol className="tips">
-            <li>Sit next to {check?.name || 'them'} for ten minutes.</li>
+            <li>Sit next to {check?.name || 'them'} while they do it.</li>
             <li>Let them try each question, even if they're unsure. A wrong answer helps us too.</li>
             <li>Only tap "I haven't learned this yet" when it's truly new.</li>
           </ol>
@@ -151,14 +151,27 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user, save
   const solid = r.solid.map(id => skillLabel(id)).filter(Boolean);
   const next = r.next.map(id => skillLabel(id)).filter(Boolean);
   const others = r.otherGaps.map(id => skillLabel(id)).filter(Boolean);
-  // Only claim "solid up to Grade N" when the answers show it: at least one
-  // skill passed at or above that grade.
-  const passedGrades = Object.entries(progress.skills || {}).filter(([, v]) => v?.passed).map(([id]) => skillLabel(id)?.grade).filter(Boolean);
-  const upTo = r.placement && passedGrades.some(g => g >= r.placement) ? `solid up to Grade ${r.placement}` : null;
+  // What the check actually covered, from the counts the check itself saved.
+  //
+  // The check now asks one question on every topic (sub-strand) of the
+  // learner's grade, then follows each miss down to where it holds. That is a
+  // real sweep of the syllabus — and still one question per topic, so it finds
+  // a starting point rather than certifying a year. The headline says what
+  // happened; this line says how much was looked at.
+  //
+  // It must NOT be counted from the skills the diagnostic flagged: credit
+  // propagation flags about five skills per question asked, and an earlier
+  // version of this line counted those, overstating the questions fivefold.
+  const ds = progress.diagStats || {};
   const headline = r.allClear
-    ? `${name} is ${upTo || 'on track'}. Here's the next step.`
-    : upTo ? `${name} is ${upTo}. One step is missing.`
-    : `Here's where ${check?.name || 'your child'} should start.`;
+    ? `${name} answered everything we asked. Here's the next step.`
+    : `Here's the first gap we found for ${name}.`;
+  const coverage = ds.subStrandsInGrade && ds.sweptGrade
+    ? `: ${ds.subStrandsSwept === ds.subStrandsInGrade ? 'one on each of the' : `one on ${ds.subStrandsSwept} of the`} ${ds.subStrandsInGrade} topics in the Grade ${ds.sweptGrade} syllabus, then follow-ups wherever something was missed`
+    : '';
+  const scopeLine = ds.questions
+    ? `Based on ${ds.questions} question${ds.questions === 1 ? '' : 's'}${coverage}. That finds a starting point, not a full report — the daily practice keeps checking as ${name} goes.`
+    : `This check finds a starting point, not a full report. The daily practice keeps checking as ${name} goes.`;
 
   return (
     <div className="tg">
@@ -173,9 +186,9 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user, save
           <div className="kicker">{saved ? `${check.name}'s plan` : check?.name ? `${check.name}'s check` : 'Your check'}{grade ? ` · Grade ${grade}` : ''}</div>
           <h1 className="display" style={{ marginTop: 12 }}>{headline}</h1>
           <p>{r.allClear
-            ? 'Nothing below this is missing. The daily plan starts here and keeps building.'
-            : !upTo ? 'The plan starts at this step and moves quickly through anything that turns out to be easy.'
-            : `It's likely the reason ${next.length ? next[0].name.toLowerCase() : 'the next topics'} feel${next.length ? 's' : ''} hard right now. Fix this one, and the work built on it gets easier.`}</p>
+            ? 'Nothing we asked about came back missing. The daily plan starts here and keeps building.'
+            : `Of what we asked, this is the lowest step that broke. Fix it and the work built on it gets easier.`}</p>
+          {scopeLine && <p className="fine" style={{ marginTop: 10, opacity: 0.85 }}>{scopeLine}</p>}
         </div>
         <div className="found">
           <div className="kicker">{saved ? 'Working on now' : r.allClear ? 'The next step' : 'The missing step'}</div>

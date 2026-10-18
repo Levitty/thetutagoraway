@@ -785,6 +785,192 @@ const TransposeWork = ({ data }) => {
 };
 
 // ---------------------------------------------------------------- dispatcher
+// ---------------------------------------------------------------------------
+// DATA DISPLAYS
+//
+// These exist because a set of questions used to SAY "a bar graph shows…" and
+// then list the numbers as text. There was no graph. The learner was asked to
+// read a chart that had never been drawn, which turns reading a chart — the
+// actual skill — into arithmetic on a sentence.
+// ---------------------------------------------------------------------------
+
+const CAT_COLORS = ['#6d6fcb', '#5a7a3a', '#c98a14', '#c0663f', '#6b4a63', '#4a7a86'];
+
+// A vertical bar chart with a labelled axis, the way a primary textbook draws it.
+const BarChart = ({ data }) => {
+  const { bars = [], unit = '', caption, highlight } = data || {};
+  if (!bars.length) return null;
+  const W = 340, H = 190, left = 34, bottom = 150, top = 16;
+  const max = Math.max(...bars.map(b => b.value), 1);
+  // A round number above the tallest bar, so the axis ticks read sensibly.
+  const step = max <= 5 ? 1 : max <= 10 ? 2 : max <= 25 ? 5 : max <= 60 ? 10 : 20;
+  const axisTop = Math.ceil(max / step) * step;
+  const plotW = W - left - 12, plotH = bottom - top;
+  const bw = Math.min(42, (plotW / bars.length) * 0.62);
+  const gap = plotW / bars.length;
+  const y = (v) => bottom - (v / axisTop) * plotH;
+  const ticks = [];
+  for (let v = 0; v <= axisTop; v += step) ticks.push(v);
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Bar graph">
+        {ticks.map(v => (
+          <g key={v}>
+            <line x1={left} y1={y(v)} x2={W - 12} y2={y(v)} stroke="#e2e8f0" strokeWidth="1" />
+            <text x={left - 6} y={y(v) + 4} textAnchor="end" fontSize="10" fill="#94a3b8">{v}</text>
+          </g>
+        ))}
+        <line x1={left} y1={top} x2={left} y2={bottom} stroke="#64748b" strokeWidth="1.5" />
+        <line x1={left} y1={bottom} x2={W - 12} y2={bottom} stroke="#64748b" strokeWidth="1.5" />
+        {bars.map((b, i) => {
+          const cx = left + gap * i + gap / 2;
+          const on = highlight == null || highlight === i || highlight === b.label;
+          return (
+            <g key={i}>
+              <rect x={cx - bw / 2} y={y(b.value)} width={bw} height={bottom - y(b.value)}
+                fill={CAT_COLORS[i % CAT_COLORS.length]} fillOpacity={on ? 1 : 0.6} rx="2" />
+              <text x={cx} y={bottom + 14} textAnchor="middle" fontSize="10.5" fill="#334155">{b.label}</text>
+            </g>
+          );
+        })}
+        {unit && <text x={left - 6} y={top - 4} textAnchor="end" fontSize="9" fill="#94a3b8">{unit}</text>}
+      </svg>
+      {caption && <p className="text-center text-xs text-slate-500 mt-1">{caption}</p>}
+    </div>
+  );
+};
+
+// Tally marks in fives, the fifth struck through — KICD Grade 5, 4.1 (c).
+const TallyChart = ({ data }) => {
+  const { rows = [], caption } = data || {};
+  if (!rows.length) return null;
+  const H = 26 + rows.length * 26;
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 340 ${H}`} className="w-full" role="img" aria-label="Tally chart">
+        <line x1="8" y1="20" x2="332" y2="20" stroke="#64748b" strokeWidth="1.2" />
+        <text x="12" y="14" fontSize="10" fill="#94a3b8" fontWeight="700">ITEM</text>
+        <text x="120" y="14" fontSize="10" fill="#94a3b8" fontWeight="700">TALLY</text>
+        {rows.map((r, i) => {
+          const y = 40 + i * 26;
+          const fives = Math.floor(r.count / 5), ones = r.count % 5;
+          const marks = [];
+          let x = 120;
+          for (let g = 0; g < fives; g++) {
+            for (let k = 0; k < 4; k++) marks.push(<line key={`${i}-${g}-${k}`} x1={x + k * 5} y1={y - 10} x2={x + k * 5} y2={y + 4} stroke="#1e293b" strokeWidth="1.8" />);
+            marks.push(<line key={`${i}-${g}-s`} x1={x - 3} y1={y + 2} x2={x + 19} y2={y - 8} stroke="#1e293b" strokeWidth="1.8" />);
+            x += 30;
+          }
+          for (let k = 0; k < ones; k++) { marks.push(<line key={`${i}-o-${k}`} x1={x + k * 5} y1={y - 10} x2={x + k * 5} y2={y + 4} stroke="#1e293b" strokeWidth="1.8" />); }
+          return (
+            <g key={i}>
+              <text x="12" y={y} fontSize="12" fill="#1e293b" fontWeight="600">{r.label}</text>
+              {marks}
+              <line x1="8" y1={y + 10} x2="332" y2={y + 10} stroke="#e2e8f0" strokeWidth="1" />
+            </g>
+          );
+        })}
+      </svg>
+      {caption && <p className="text-center text-xs text-slate-500 mt-1">{caption}</p>}
+    </div>
+  );
+};
+
+// A pictograph: repeated symbols, each standing for `each` of the thing.
+const Pictograph = ({ data }) => {
+  const { rows = [], each = 1, symbol = '●', caption } = data || {};
+  if (!rows.length) return null;
+  const H = 30 + rows.length * 26;
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 340 ${H}`} className="w-full" role="img" aria-label="Pictograph">
+        {rows.map((r, i) => {
+          const y = 26 + i * 26;
+          const whole = Math.floor(r.value / each);
+          const half = (r.value % each) >= each / 2;
+          const out = [];
+          for (let k = 0; k < whole; k++) out.push(<circle key={`${i}-${k}`} cx={104 + k * 20} cy={y - 4} r="7.5" fill={CAT_COLORS[i % CAT_COLORS.length]} />);
+          if (half) out.push(<path key={`${i}-h`} d={`M${104 + whole * 20},${y - 11.5} A7.5,7.5 0 0,1 ${104 + whole * 20},${y + 3.5} Z`} fill={CAT_COLORS[i % CAT_COLORS.length]} />);
+          return (
+            <g key={i}>
+              <text x="12" y={y} fontSize="12" fill="#1e293b" fontWeight="600">{r.label}</text>
+              {out}
+            </g>
+          );
+        })}
+        <text x="12" y={H - 6} fontSize="10" fill="#64748b">Each ● stands for {each}</text>
+      </svg>
+      {caption && <p className="text-center text-xs text-slate-500 mt-1">{caption}</p>}
+    </div>
+  );
+};
+
+// A pie chart, drawn from slices given either as values or as degrees.
+const PieChart = ({ data }) => {
+  const { slices = [], caption, highlight } = data || {};
+  if (!slices.length) return null;
+  const total = slices.reduce((s, x) => s + (x.deg != null ? x.deg : x.value), 0) || 1;
+  const cx = 110, cy = 100, r = 78;
+  let acc = -90;
+  const arcs = slices.map((s, i) => {
+    const share = (s.deg != null ? s.deg : s.value) / total;
+    const a0 = acc, a1 = acc + share * 360;
+    acc = a1;
+    const rad = (d) => (d * Math.PI) / 180;
+    const big = a1 - a0 > 180 ? 1 : 0;
+    const d = `M${cx},${cy} L${cx + r * Math.cos(rad(a0))},${cy + r * Math.sin(rad(a0))} `
+      + `A${r},${r} 0 ${big} 1 ${cx + r * Math.cos(rad(a1))},${cy + r * Math.sin(rad(a1))} Z`;
+    const on = highlight == null || highlight === i || highlight === s.label;
+    return <path key={i} d={d} fill={CAT_COLORS[i % CAT_COLORS.length]} fillOpacity={on ? 1 : 0.3} stroke="#fff" strokeWidth="1.5" />;
+  });
+  return (
+    <div className="w-full">
+      <svg viewBox="0 0 340 200" className="w-full" role="img" aria-label="Pie chart">
+        {arcs}
+        {slices.map((s, i) => (
+          <g key={i}>
+            <rect x="212" y={38 + i * 22} width="11" height="11" rx="2" fill={CAT_COLORS[i % CAT_COLORS.length]} />
+            <text x="229" y={48 + i * 22} fontSize="11" fill="#334155">{s.label}</text>
+          </g>
+        ))}
+      </svg>
+      {caption && <p className="text-center text-xs text-slate-500 mt-1">{caption}</p>}
+    </div>
+  );
+};
+
+// A plain two-column frequency table, drawn. Reading a value out of a table is
+// a Grade 4 outcome in its own right, but only when there is a table: written
+// into the question as "Mon: 7, Tue: 9, Wed: 20" it collapses into finding the
+// label and copying the number beside it.
+const DataTable = ({ data }) => {
+  const { rows = [], head = ['', ''], caption, highlight } = data || {};
+  if (!rows.length) return null;
+  const H = 30 + rows.length * 24;
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 340 ${H}`} className="w-full" role="img" aria-label="Table">
+        <text x="14" y="15" fontSize="10" fill="#94a3b8" fontWeight="700">{String(head[0]).toUpperCase()}</text>
+        <text x="210" y="15" fontSize="10" fill="#94a3b8" fontWeight="700">{String(head[1]).toUpperCase()}</text>
+        <line x1="8" y1="21" x2="332" y2="21" stroke="#64748b" strokeWidth="1.2" />
+        {rows.map((r, i) => {
+          const y = 39 + i * 24;
+          const on = highlight === r.label;
+          return (
+            <g key={i}>
+              {on && <rect x="8" y={y - 14} width="324" height="22" fill="#c98a14" fillOpacity="0.12" rx="3" />}
+              <text x="14" y={y} fontSize="12.5" fill="#1e293b" fontWeight={on ? 700 : 600}>{r.label}</text>
+              <text x="210" y={y} fontSize="12.5" fill="#1e293b" fontWeight={on ? 700 : 600}>{r.value}</text>
+              <line x1="8" y1={y + 8} x2="332" y2={y + 8} stroke="#e2e8f0" strokeWidth="1" />
+            </g>
+          );
+        })}
+      </svg>
+      {caption && <p className="text-center text-xs text-slate-500 mt-1">{caption}</p>}
+    </div>
+  );
+};
+
 const MODELS = {
   'balance': BalanceScale,
   'numberline-jump': NumberLineJump,
@@ -803,6 +989,11 @@ const MODELS = {
   'formula-triangle': FormulaTriangle,
   'transpose': TransposeWork,
   'column-op': ColumnOp,
+  'bar-chart': BarChart,
+  'tally': TallyChart,
+  'pictograph': Pictograph,
+  'pie-chart': PieChart,
+  'table': DataTable,
 };
 
 export const TEACHING_MODEL_TYPES = Object.keys(MODELS);

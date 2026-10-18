@@ -8,8 +8,8 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
 import { prereqsMet, getStatus, getRecommendedPath, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
-import { propagateCredit, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
-import { selectQuestion, isComplete as placementComplete, computePlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
+import { propagateCredit, withdrawMiss, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
+import { selectQuestion, isComplete as placementComplete, computePlacement, buildPlacementPool, sweepRemaining, roomForAnother, worthConfirming, nextToSettle, explainPlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
 import { HorebBot } from './HorebBot.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { TeachingVisual } from './TeachingVisual.jsx';
@@ -178,7 +178,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   const [activeLearner, setActiveLearner] = useState(lockedLearner);
   useEffect(() => {
     if (!userId) { setLearners([]); return; }
-    supabase.from('children').select('id, name, grade').eq('parent_id', userId).order('created_at')
+    supabase.from('children').select('id, name, grade, avatar').eq('parent_id', userId).order('created_at')
       .then(({ data }) => setLearners(data || []));
   }, [userId]);
   const learnerBase = activeLearner ? `${userId}_c${activeLearner.id}` : userId;
@@ -374,10 +374,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       // same current question, all evidence so far, and the focus grade. The
       // candidate pool is the full skill list, rebuilt fresh from the subject.
       const dip = p.diagInProgress;
-      if (!p.diagnosed && dip && dip.subjectId === subjectId && dip.currentId && dip.v === 4 && Array.isArray(dip.record)) {
+      // v5 is the per-sub-strand sweep. An older cursor's records carry no
+      // sub-strand, so it is dropped and the check simply starts again.
+      if (!p.diagnosed && dip && dip.subjectId === subjectId && dip.currentId && dip.v === 5 && Array.isArray(dip.record)) {
         try {
-          const cur = ctx?.skills?.[dip.currentId];
-          if (!cur) throw new Error('current skill not found');
+          const found = buildPlacementPool(ctx?.skills || {}, p.curriculum || NATIVE).find(s => s.id === dip.currentId);
+          if (!found) throw new Error('current skill not found');
+          const cur = { ...found, ...(dip.currentProbeFor ? { probeFor: dip.currentProbeFor } : {}), ...(dip.currentHunt ? { hunt: true } : {}) };
           setDiagState({ record: dip.record, balances: dip.balances || {}, startTimes: { [cur.id]: Date.now() }, current: cur, pending: dip.pending || null, asked: dip.asked ?? dip.record.length });
           setDiagHistory([]); // snapshots aren't persisted; can't step back past a reload
           setProblem(dip.problem || ownChoicesOnly(generateProblem(cur.id)));
@@ -551,14 +554,17 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // The candidate pool. Which question comes next, when to stop and the final
   // grade all live in placement.js — see its header for why the declared grade
   // is a ceiling rather than a starting rung.
-  const diagPool = () => Object.values(ctx?.skills || {}).filter(s => Number.isFinite(s.grade));
+  // Read through the learner's OWN curriculum: a CBC child is swept against the
+  // CBC design, one question per sub-strand of their grade, and never asked a
+  // topic the design leaves out.
+  const diagPool = () => buildPlacementPool(ctx?.skills || {}, curriculum);
 
   // Snapshot the live diagnostic so a browser close/reload resumes the exact
   // question — answers so far, running evidence, focus grade, and the current
   // problem. Stored in `progress` (localStorage instantly + cloud on save). The
   // candidate pool is the full skill list, rebuilt on resume rather than stored.
   const diagCursor = (record, balances, current, prob, extra = {}) =>
-    ({ subjectId, v: 4, record, balances, currentId: current?.id, problem: prob,
+    ({ subjectId, v: 5, record, balances, currentId: current?.id, currentProbeFor: current?.probeFor || null, currentHunt: !!current?.hunt, problem: prob,
        pending: extra.pending || null, asked: extra.asked ?? record.length });
 
   const startDiagnostic = () => {
@@ -629,16 +635,28 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
         newRecord = pending.record.map(r => r.id === skill.id
           ? { ...r, correct: true, confirmed: true } : r);
         if (!newRecord.some(r => r.id === skill.id)) {
-          newRecord = [...newRecord, { id: skill.id, grade: skill.grade, strand: skill.strand, correct: true, confirmed: true }];
+          newRecord = [...newRecord, { id: skill.id, grade: skill.grade, strand: skill.strand, unit: skill.unit, probeFor: skill.probeFor, ...(skill.hunt ? { hunt: true } : {}), correct: true, confirmed: true }];
         }
       } else {
         // Wrong twice: the gap is real. Leave the verdict standing.
         newBalances = balances;
         newRecord = record.map(r => r.id === skill.id ? { ...r, confirmed: true } : r);
       }
+    } else if (record.some(r => r.id === skill.id)) {
+      // A final ask on the missing step about to be named (placement.js,
+      // nextToSettle). Right now: the miss was a slip twice over, and its
+      // evidence is taken back. Wrong again: the gap stands, and is said.
+      const prior = record.find(r => r.id === skill.id);
+      if (correct) {
+        newBalances = propagateCredit(withdrawMiss(balances, skill.id, prior.w ?? 1, ctx), skill.id, true, timeWeight, ctx);
+        newRecord = record.map(r => r.id === skill.id ? { ...r, correct: true, settled: true } : r);
+      } else {
+        newBalances = balances;
+        newRecord = record.map(r => r.id === skill.id ? { ...r, settled: true, ...(skip ? { skipped: true } : {}) } : r);
+      }
     } else {
       newBalances = propagateCredit(balances, skill.id, correct, timeWeight, ctx);
-      newRecord = [...record, { id: skill.id, grade: skill.grade, strand: skill.strand, correct, ...(skip ? { skipped: true } : {}) }];
+      newRecord = [...record, { id: skill.id, grade: skill.grade, strand: skill.strand, unit: skill.unit, probeFor: skill.probeFor, ...(skill.hunt ? { hunt: true } : {}), correct, w: timeWeight, ...(skip ? { skipped: true } : {}) }];
       // "I haven't learned this yet" is already a clear signal: no re-ask.
       if (!correct && !skip) newPending = { id: skill.id, balances, record };
     }
@@ -659,8 +677,16 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     // step down a grade at a time until one clears.
     const pool = diagPool();
     const declared = progress.declaredGrade;
-    const confirmNext = !!newPending && newAsked < DIAG_MAX;
-    const nextSkill = confirmNext ? skill : selectQuestion(newRecord, declared, pool, newBalances);
+    // A wrong answer is confirmed only if that cannot push any of the declared
+    // grade's sub-strands out of the test; and a new question is only started
+    // while a slot is left to confirm it, so the last answer is never an
+    // unconfirmed slip — the case that, in simulation, most often told a
+    // parent about a step their child actually had.
+    const confirmNext = !!newPending && worthConfirming(newRecord) && newAsked + sweepRemaining(newRecord, declared, pool) < DIAG_MAX;
+    // The final ask (no confirm follows it) may use the slot held back for one.
+    const nextSkill = confirmNext ? skill
+      : roomForAnother(newAsked) ? selectQuestion(newRecord, declared, pool, newBalances)
+      : newAsked < DIAG_MAX ? nextToSettle(newRecord, pool) : null;
     const isLast = newAsked >= DIAG_MAX || !nextSkill
       || (!confirmNext && placementComplete(newRecord, declared, pool));
 
@@ -682,6 +708,15 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
           answered: newRecord.length,
           skipped: newRecord.filter(r => r.skipped).length,
           correct: newRecord.filter(r => r.correct).length,
+          // What the result page may truthfully say it covered. Counted from
+          // the questions themselves: the skills flagged by the diagnostic are
+          // no use for this, since credit propagation flags about five skills
+          // for every one actually asked.
+          questions: newAsked,
+          ...(() => {
+            const e = explainPlacement(newRecord, declared, pool);
+            return { sweptGrade: e.sweptGrade, subStrandsSwept: e.subStrandsSwept, subStrandsInGrade: e.subStrandsInGrade };
+          })(),
         },
         diagInProgress: null, // completed — clear the resume cursor
         focusSkillId: null,   // a new check brings a new plan: its missing step leads
@@ -1246,7 +1281,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
           </p>
 
           <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-4 text-sm text-slate-600 space-y-2.5">
-            <p>Around 15–20 quick questions — we stop the moment I know your start.</p>
+            <p>One quick question on each topic of your grade, then a few more wherever something needs a closer look. Usually 20–40 in all.</p>
             <p>Meet something you haven’t learned? Tap <strong className="text-slate-800">“I haven’t learned this yet”</strong> — that’s a helpful answer, not a wrong one.</p>
             <p>Whatever we find, it’s only a starting line. Everything after it is growth.</p>
           </div>

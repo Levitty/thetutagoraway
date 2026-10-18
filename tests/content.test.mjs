@@ -79,3 +79,36 @@ test('the knowledge graph has no broken prerequisite references', () => {
   }
   assert.deepEqual(broken, [], `\n${broken.join('\n  ')}\n`);
 });
+
+// ---------------------------------------------------------------------------
+// A measurement in a primary question must be a real quantity.
+//
+// Found while auditing Grades 4-5: the "which is more" generator drew its
+// second measurement by offsetting the first by an amount based on the size of
+// the unit alone, so it could subtract more than there was —
+//
+//     "Which is more: 2 metres or -200 centimetres?"
+//     "Which is more: 3 kilograms or -1870 grams?"
+//
+// Negative length and negative mass are not a hard question, they are a broken
+// one, and this is Grade 4. Roughly one draw in 600 was affected, which is
+// exactly the frequency a human tester never reproduces on demand.
+// ---------------------------------------------------------------------------
+test('primary measurement questions never use a negative or zero quantity', () => {
+  const UNITS = 'metres?|centimetres?|kilometres?|grams?|kilograms?|litres?|millilitres?|shillings?';
+  // "-5 cm" and "0 litres" — the number belongs to the unit that follows it.
+  const NONSENSE = new RegExp(`(?:^|[\\s(])(-\\s?\\d[\\d,.]*|0)\\s*(?:${UNITS})\\b`, 'i');
+  const offenders = new Set();
+  for (const [id, s] of Object.entries(SKILLS)) {
+    if ((s.grade || 99) > 6) continue;          // negatives are taught from Grade 7
+    for (let i = 0; i < 60; i++) {
+      let p;
+      try { p = generateProblem(id); } catch { break; }
+      if (!p) break;
+      for (const text of [p.question, ...(p.hints || [])]) {
+        if (text && NONSENSE.test(String(text))) offenders.add(`${id}: ${text}`);
+      }
+    }
+  }
+  assert.deepEqual([...offenders], [], `\n  ${[...offenders].join('\n  ')}\n`);
+});

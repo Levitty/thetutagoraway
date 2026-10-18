@@ -102,26 +102,79 @@ skill behind **2.4 Capacity** (6 lessons), and `G6_BODMAS_BASIC` claimed a Grade
 "Combined Operations", which the design does not have — combined operations is outcome (d) inside
 1.5 Division.
 
-What is **not** asserted for Grades 4–5 is the thin-coverage rule the Junior School grades carry
-(a sub-strand of ≥12 lessons needs ≥2 skills behind it). Upper primary deliberately has fewer,
-broader skills, so switching it on would assert a content-expansion decision rather than a syllabus
-fact. The sub-strands it would flag today, for whoever works through them:
+The thin-coverage rule the Junior School grades carry (a sub-strand of ≥12 lessons needs ≥2 skills
+behind it) was initially left off for Grades 4–5, because switching it on would have asserted a
+content decision rather than a syllabus fact. The decision has since been taken and the work done,
+so the rule is now on for all five graded years. What it used to flag:
 
-| Grade | Sub-strand | Lessons | Skills tagged |
-|---|---|---|---|
-| 4 | Whole Numbers | 20 | 1 (`G4_PLACE_VALUE`) |
-| 5 | Whole Numbers | 20 | 4 |
-| 5 | Length | 12 | 1 (`G5_LENGTH`) |
-| 5 | Capacity | 12 | 1 (`G5_CAPACITY`) |
-| 5 | Mass | 12 | 1 (`G5_MASS`) |
+**This section is now closed, and the thin-coverage rule is asserted for Grades 4 and 5 too**
+(`tests/curriculum.test.mjs`), so it cannot quietly come back.
 
-Grade 4 Whole Numbers is the weakest: 20 lessons of the design (place value, rounding, number
-patterns, roman numerals in some editions) behind a single place-value skill. Grade 5's three
-twelve-lesson measurement sub-strands each have one skill carrying a 3–4 rung KP ladder, so the
-*content* is broader than the skill count suggests; the fix there may be splitting skills rather than
-authoring more.
+**Grade 4 Whole Numbers is now closed** (20 lessons, 6 skills). Read against the design's own
+outcome list, nine of its ten outcomes had no skill at all — only (a) place and total value did.
+The rest are now authored: `G4_NUMBER_WORDS` (b, c — reading and writing numbers in symbols to
+10,000 and in words to 1,000), `G4_ORDER_ROUND` (d, e — ordering to 1,000 and rounding to the
+nearest ten), `G4_FACTORS_MULTIPLES` (f, g — factors to 50, multiples to 100), `G4_ODD_EVEN`
+(h, i — even and odd to 100 and the patterns made from them) and `G4_ROMAN_NUMERALS` (j).
+
+Rounding deserves its own note. The design asks for it twice — Grade 4 to the nearest ten (1.1e)
+and Grade 5 to the nearest hundred and thousand (1.1d) — and it did not exist anywhere in the graph
+below `G7_ROUNDING_WHOLE`. A CBC learner met rounding three years after the syllabus introduces it.
+`G4_ORDER_ROUND` and the new `G5_ROUNDING` close that.
+
+Grade 5's three twelve-lesson measurement sub-strands each carried one skill with a 3–4 rung KP
+ladder, so the *content* was broader than the skill count suggested and the fix was splitting rather
+than authoring more. Each is now split on the seam the design itself uses — KICD lists outcomes
+(a)–(e) as the unit and converting between units, and (f)–(i) as the four operations on it:
+
+| Was | Is now |
+|---|---|
+| `G5_LENGTH` | `G5_LENGTH` (m, cm, km and conversions) + `G5_LENGTH_OPS` |
+| `G5_CAPACITY` | `G5_CAPACITY` (l, ml and conversions) + `G5_CAPACITY_OPS` |
+| `G5_MASS` | `G5_MASS` (g, kg and conversions) + `G5_MASS_OPS` |
+
+This is worth more than a tidier count. Converting 764 cm to metres and subtracting 2 m 94 cm from
+6 m 14 cm are different competencies that fail for different reasons, and behind one node they shared
+a single mastery number: a learner fluent at conversion but lost in the subtraction read as half-way
+through "Length", and the review scheduler could not bring back the half they were actually missing.
+All six score 100 at the gate.
 
 Also noted, not a gap: `G5_TRIANGLES_INTRO` has content but **no** CBC tag, correctly — Grade 5
 Geometry in the design is only 3.1 Lines, 3.2 Angles and 3.3 Three Dimension (3-D) Objects. Triangles
 enter the KICD sequence later, so the skill is enrichment at Grade 5 and must not be counted as
 Grade 5 coursework. Grades 1, 2, 3 and 6 still have no contract test.
+
+---
+
+## P1c — Grade 6 (opened 2026-10-14)
+
+Grade 6 had no contract test, and it showed: of the 16 sub-strands in
+`docs/curriculum-sources/KICD-Grade6-Mathematics-Curriculum-Design.pdf`, only 8 had a skill
+tagged, and 28 native Grade 6 skills carried no CBC tag at all. Untagged means "in scope at the
+native grade", so a CBC Grade 6 learner was being swept on integers, ratio and the mean — all
+Grade 8 in the design — and could not be asked a Grade 6 division question, because none existed.
+
+Done:
+
+- All 28 tagged from the design text, not from their names. Fifteen are Grade 6 content; eight
+  the design puts in **Grade 7** (multiplying and dividing fractions and decimals, pie charts,
+  volume of cuboids, perimeter, simple equations); four in **Grade 8** (integers, ratio, the
+  mean); symmetry appears in none of Grades 4-8 and is enrichment.
+- `G7_MEAN_MEDIAN_MODE` moved from Grade 7 to Grade 8: the Grade 7 design never mentions mean,
+  median or mode; the Grade 8 design has them throughout.
+- `G6_MULTIPLICATION` (4-digit × 2-digit) and `G6_DIVISION` (up to 4 digits by up to 3) authored.
+  1.2 Multiplication had only a number-patterns skill behind it and 1.3 Division had nothing.
+- Grade 6 is under the contract test: every sub-strand covered, nothing stray tagged.
+
+Still open — depth, not coverage. The thin-coverage rule (≥12 lessons needs ≥2 skills) is not yet
+asserted for Grade 6, because three sub-strands would fail it:
+
+| Sub-strand | Lessons | Skills |
+|---|---|---|
+| Decimals | 12 | 1 (`G6_FRACTIONS_DECIMALS`) |
+| Length | 14 | 1 (`G6_UNIT_CONVERSIONS`) |
+| Mass | 14 | 1 (`G6_MASS`) |
+
+The design's own outcome lists say what to write: Decimals 1.5 adds and subtracts to four decimal
+places; Length 2.1 introduces the millimetre and the circumference of a circle; Mass 2.4 works in
+tonnes. Add `6` to the thin-coverage loop in `tests/curriculum.test.mjs` once they exist.

@@ -34,6 +34,18 @@ export const propagateCredit = (balances, skillId, correct, weight = 1.0, ctx) =
   return newBalances;
 };
 
+// Takes back a wrong answer's evidence exactly — the inverse of propagateCredit
+// with correct=false — for a miss later shown to be a slip.
+export const withdrawMiss = (balances, skillId, weight = 1.0, ctx) => {
+  const getPostChain = ctx?.getPostChain || mathPostChain;
+  const newBalances = { ...balances };
+  newBalances[skillId] = (newBalances[skillId] || 0) + weight;
+  let postReqs;
+  try { postReqs = getPostChain(skillId); } catch(e) { postReqs = []; }
+  for (const postId of postReqs) newBalances[postId] = (newBalances[postId] || 0) + weight * 0.5;
+  return newBalances;
+};
+
 // ==================== TIME-WEIGHTED SCORING ====================
 
 export const getTimeWeight = (timeTakenMs, expectedMs = 30000) => {

@@ -35,6 +35,19 @@ const KICD_GRADE9 = [
   ['Trigonometry', 8], ['Data Interpretation (Grouped Data)', 8], ['Probability', 6],
 ];
 
+// The KICD Grade 6 design: sixteen sub-strands, 150 lessons, read from the
+// design's own summary table. Until 14 Oct 2026 only eight of them had a skill
+// tagged, and 28 native Grade 6 skills carried no tag at all — so the check
+// swept a CBC Grade 6 learner on integers, ratio and the mean (Grade 8 in the
+// design) and could not ask them a Grade 6 division question.
+const KICD_GRADE6 = [
+  ['Whole Numbers', 20], ['Multiplication', 6], ['Division', 6], ['Fractions', 12],
+  ['Decimals', 12], ['Inequalities', 8],
+  ['Length', 14], ['Area', 6], ['Capacity', 6], ['Mass', 14], ['Time', 10], ['Money', 8],
+  ['Lines', 6], ['Angles', 6], ['3-D Objects', 6],
+  ['Bar Graphs', 10],
+];
+
 // The Grade 7 design: eighteen sub-strands, 150 lessons.
 const KICD_GRADE7 = [
   ['Whole Numbers', 20], ['Factors', 7], ['Fractions', 9], ['Decimals', 6],
@@ -93,7 +106,7 @@ const KICD_GRADE5 = [
   ['Data Representation', 6],
 ];
 
-const DESIGNS = { 4: KICD_GRADE4, 5: KICD_GRADE5, 7: KICD_GRADE7, 8: KICD_GRADE8, 9: KICD_GRADE9 };
+const DESIGNS = { 4: KICD_GRADE4, 5: KICD_GRADE5, 6: KICD_GRADE6, 7: KICD_GRADE7, 8: KICD_GRADE8, 9: KICD_GRADE9 };
 
 const cbcGrade = (grade) => {
   const bySub = {};
@@ -105,7 +118,7 @@ const cbcGrade = (grade) => {
 };
 const cbcGrade9 = () => cbcGrade(9);
 
-for (const grade of [4, 5, 7, 8, 9]) {
+for (const grade of [4, 5, 6, 7, 8, 9]) {
   const design = DESIGNS[grade];
 
   test(`every KICD Grade ${grade} sub-strand has at least one skill behind it`, () => {
@@ -121,13 +134,20 @@ for (const grade of [4, 5, 7, 8, 9]) {
   });
 }
 
-// The thin-coverage rule is asserted for Junior School only. Upper primary has
-// deliberately fewer, broader skills per sub-strand — Grade 5 Length, Capacity
-// and Mass are twelve lessons each behind one skill apiece — so turning it on
-// for Grades 4 and 5 would be asserting a content-expansion decision that is
-// the owner's to make, not a fact about the syllabus. The list is recorded in
-// docs/curriculum-backlog.md instead, where it can be worked through.
-for (const grade of [7, 8, 9]) {
+// The thin-coverage rule now holds for upper primary too. It was off while
+// Grade 5's three twelve-lesson measurement sub-strands sat behind one skill
+// apiece and Grade 4 Whole Numbers behind one — turning it on then would have
+// asserted a content decision rather than a syllabus fact. Both have since been
+// worked through: Grade 4 Whole Numbers was authored out to its ten outcomes,
+// and Length, Capacity and Mass were each split on the seam the design itself
+// uses, the unit and its conversions apart from the operations on it.
+//
+// Grade 6 is left out of THIS rule, deliberately and for now: Decimals (12
+// lessons), Length (14) and Mass (14) each have one skill behind them. Every
+// Grade 6 sub-strand is covered (the loop above), so the check can ask about
+// each one; these three are depth still to author, listed in
+// docs/curriculum-backlog.md. Add 6 here once they are done.
+for (const grade of [4, 5, 7, 8, 9]) {
   const design = DESIGNS[grade];
 
   test(`Grade ${grade}'s biggest sub-strands are not left with a single token skill`, () => {

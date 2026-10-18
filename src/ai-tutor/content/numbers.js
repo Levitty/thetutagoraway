@@ -371,14 +371,21 @@ export function buildSimpleInterest() {
 // ---- number patterns: find the next term (G5 algebra readiness) ----
 export function buildNumberPattern() {
   const geometric = Math.random() < 0.3;
-  const start = randInt(1, 8);
-  let seq, next;
+  let seq, next, start;
   if (geometric) {
     const r = pick([2, 3]);
+    start = randInt(1, 8);
     seq = [0, 1, 2, 3].map((i) => start * Math.pow(r, i));
     next = start * Math.pow(r, 4);
   } else {
-    const d = randInt(2, 9) * (coin() ? 1 : -1);
+    // A pattern that counts DOWN has to start high enough to reach its fifth
+    // term without crossing zero. It used to start between 1 and 8 whichever
+    // way it ran, so "3, 0, -3, -6, ?" was a Grade 5 question with the answer
+    // -9 — CBC does not introduce negative numbers until Grade 8.
+    const step = randInt(2, 9);
+    const down = coin();
+    const d = down ? -step : step;
+    start = down ? randInt(4 * step + 1, 4 * step + 20) : randInt(1, 8);
     seq = [0, 1, 2, 3].map((i) => start + i * d);
     next = start + 4 * d;
   }

@@ -743,7 +743,8 @@ export function buildBarLineGraphs() {
     const value = vals[i];
     return {
       type: 'bar-read', instruction: 'Read the value off the graph.',
-      question: `A bar graph shows books borrowed each day —  ${days.map((d, k) => `${d}: ${vals[k]}`).join(',  ')}.  How many more books were borrowed on the busiest day than on the quietest?`,
+      question: `The bar graph shows books borrowed each day. How many more books were borrowed on the busiest day than on the quietest?`,
+      model: { type: 'bar-chart', data: { bars: days.map((d, k) => ({ label: d, value: vals[k] })) } },
       answer: `${Math.max(...vals) - Math.min(...vals)}`,
       accepts: accepts(`${Math.max(...vals) - Math.min(...vals)}`),
       hints: hintLadder(
@@ -766,7 +767,8 @@ export function buildBarLineGraphs() {
     const value = vals.reduce((a, b) => a + b, 0);
     return {
       type: 'bar-total', instruction: 'Give the total.',
-      question: `A bar graph shows books borrowed each day —  ${days.map((d, k) => `${d}: ${vals[k]}`).join(',  ')}.  How many books were borrowed in the whole week?`,
+      question: `The bar graph shows books borrowed each day. How many books were borrowed in the whole week?`,
+      model: { type: 'bar-chart', data: { bars: days.map((d, k) => ({ label: d, value: vals[k] })) } },
       answer: `${value}`, accepts: accepts(`${value}`),
       hints: hintLadder(
         'Every bar stands for one day.',
