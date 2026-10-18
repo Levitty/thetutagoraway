@@ -38,9 +38,13 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,woff2,svg,png,ico}'],
         // Lottie is 1MB and only decorative: runtime-cached, not precached.
-        globIgnores: ['**/lottie/**', '**/og-image.png'],
-        // The main bundle is ~2.6MB; Workbox's default 2MB ceiling would
-        // silently skip it and the app would not boot offline.
+        // Lottie is 1MB and only decorative; the Agora chunk is 1.3MB and only
+        // needed by someone joining a live video lesson, which needs a
+        // connection anyway. Both are runtime-cached instead, so a learner who
+        // only ever practises never spends mobile data on them.
+        globIgnores: ['**/lottie/**', '**/og-image.png', '**/v-agora-*.js'],
+        // Headroom over the default 2MB ceiling, which would silently skip a
+        // chunk and leave the app unable to boot offline.
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         navigateFallback: '/index.html',
         navigateFallbackDenylist: [
@@ -48,6 +52,8 @@ export default defineConfig({
           /^\/sitemap\.xml$/, /^\/robots\.txt$/,
         ],
         runtimeCaching: [
+          { urlPattern: /\/assets\/v-agora-.*\.js$/, handler: 'CacheFirst',
+            options: { cacheName: 'tg-agora', expiration: { maxEntries: 3, maxAgeSeconds: 30 * 86400 } } },
           { urlPattern: /\/lottie\//, handler: 'CacheFirst',
             options: { cacheName: 'tg-lottie', expiration: { maxEntries: 6, maxAgeSeconds: 30 * 86400 } } },
           { urlPattern: /^https:\/\/fonts\.(googleapis|gstatic)\.com\//, handler: 'StaleWhileRevalidate',
@@ -61,6 +67,23 @@ export default defineConfig({
     }),
   ],
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        // Only the large, stable vendors are pinned by hand. Everything else is
+        // left to Rollup, which splits it along the dynamic imports in
+        // src/lazyRoutes.jsx. React and Supabase are pinned so that editing
+        // content or a screen does not invalidate them in a returning
+        // learner's cache; Agora is pinned so the service worker has a stable
+        // name to keep out of the precache (see globIgnores above).
+        manualChunks(id) {
+          if (!id.includes('node_modules')) return undefined;
+          if (id.includes('agora-rtc')) return 'v-agora';
+          if (/node_modules\/(react|react-dom|scheduler)\//.test(id)) return 'v-react';
+          if (id.includes('@supabase')) return 'v-supabase';
+          return undefined;
+        },
+      },
+    },
   }
 })

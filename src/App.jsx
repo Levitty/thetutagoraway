@@ -1,27 +1,22 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { supabase } from './supabase';
+// Whole screens, each loaded on demand behind its own Suspense boundary. The
+// call sites below are unchanged; only where these names come from has moved.
+import { VideoRoom, AIMastery, TeacherDashboard, Writing, Spreadsheet, ConsultingPage, SchoolsPage, ClubsPage } from './lazyRoutes.jsx';
 import { SKILLS as AI_SKILLS } from './ai-tutor/knowledgeGraph.js';
-import { VideoRoom } from './VideoRoom';
 import { useLessonNotes, LessonNotesModal } from './lesson/LessonNotes.jsx';
 import { INTEREST_CATEGORIES, CATEGORY_BY_KEY, categoryLabel, categoryEmoji } from './groupClassCategories.js';
 import { PaymentModal } from './PaymentModal';
 import { initiatePaystackPayment } from './paystack';
 import { Messaging, MessageButton, startConversation } from './Messaging';
-import { AIMastery } from './ai-tutor/AIMastery.jsx';
 import { getLevel } from './ai-tutor/adaptiveEngine.js';
 import { todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP } from './ai-tutor/gamification.js';
-import { TeacherDashboard } from './ai-tutor/TeacherDashboard.jsx';
-import SchoolsPage from './SchoolsPage.jsx';
-import ClubsPage from './ClubsPage.jsx';
-import { ConsultingPage } from './ConsultingPage.jsx';
-import { Spreadsheet } from './Spreadsheet.jsx';
 import { sendEmail } from './email.js';
 import { initPush, requestPush, clearPush } from './push.js';
 import { PLANS, paywallActive, isFreeWeek, passDaysLeft, isNetworkError } from './subscription.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Icon } from './ai-tutor/components/Icons.jsx';
-import { Writing } from './writing/Writing.jsx';
 import { HandOver, StudentHome, PinGate, WhoIsPractising, FamilyTabletSetup } from './family/StudentSpace.jsx';
 import { TabletLinkSheet, TabletLinkPage } from './family/ChildTablet.jsx';
 import { getStudentMode, startStudentMode, endStudentMode, isOlderLearner, gradeNumber, hasPin, getFamilyDevice, clearFamilyDevice } from './family/studentMode.js';
