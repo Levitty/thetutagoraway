@@ -58,6 +58,7 @@ const gradeSpan = (list) => { const g = list.map(s => s.grade); return [Math.min
 const clearedG = (pg, g) => pg[g] && pg[g].t >= 2 && pg[g].c / pg[g].t >= 0.5;
 const failedG = (pg, g) => pg[g] && pg[g].t >= 2 && pg[g].c / pg[g].t < 0.5;
 const STRANDS = args.includes('--strands');
+const AHEAD = args.includes('--ahead');
 const pickAt = (list, focus, answeredSet, balances) => {
   if (STRANDS) return pickAtStrands(list, focus, answeredSet, balances);
   const [gmin, gmax] = gradeSpan(list);
@@ -94,7 +95,11 @@ const pickAtStrands = (list, focus, answeredSet, balances) => {
 // ---- a virtual child ---------------------------------------------------------
 function makeChild() {
   const declared = GRADES ? pickR(GRADES) : 2 + Math.floor(rnd() * 8);   // Grade 2..9
-  const offset = pickR([0, 0, 0, -1, -1, -2, 1]);              // mostly on grade or behind
+  // The default population is mostly on grade or behind, which is the common
+  // case — but it contains nobody more than ONE grade ahead, so it could not
+  // see that placement was capped at declared+1 however able the child.
+  // --ahead draws a population of able children to exercise that ceiling.
+  const offset = AHEAD ? pickR([1, 1, 2, 2, 3, 0]) : pickR([0, 0, 0, -1, -1, -2, 1]);
   const level = Math.max(1, declared + offset);
   // By default gaps are planted only in "critical" skills — mostly core
   // arithmetic — which flatters a check that samples one question per strand.

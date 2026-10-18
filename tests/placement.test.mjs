@@ -269,3 +269,25 @@ test('a deep gap is asked directly instead of being chased one grade at a time',
   const asked = sitCheck(5, q => SKILLS[q.id].grade <= 5 && !blocked.has(q.id));
   assert.ok(asked.some(a => a.hunt), 'no shared missing step was asked');
 });
+
+test('a child well ahead of their class is placed where they actually are', () => {
+  // Placement used to stretch exactly one grade above the declared one and
+  // stop, so this child COULD NOT be placed above Grade 6 however well they
+  // answered. On a population of able learners that put 29% in the right
+  // place and started 32% of them on a skill they had already mastered —
+  // which is the "why is my Grade 5 being asked this?" complaint from the
+  // other end: the check decided they were younger than they are.
+  const asked = sitCheck(5, (q) => SKILLS[q.id].grade <= 8);
+  const placed = computePlacement(asked, 5, CBC_POOL);
+  assert.ok(placed >= 7, `a Grade 5 working at Grade 8 was placed at ${placed}`);
+});
+
+test('the climb still stops where the evidence stops', () => {
+  // The mirror risk of letting it climb: it must not run away up the grades
+  // on a child who cannot do the work. One who holds only to Grade 6 is
+  // placed at 6 or 7, never at 8.
+  const asked = sitCheck(5, (q) => SKILLS[q.id].grade <= 6);
+  const placed = computePlacement(asked, 5, CBC_POOL);
+  assert.ok(placed <= 7, `a Grade 5 working at Grade 6 was placed at ${placed}`);
+  assert.ok(placed >= 6, `a Grade 5 working at Grade 6 was placed at ${placed}`);
+});
