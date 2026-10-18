@@ -78,6 +78,38 @@ const assumedKnown = (skill, progress) => {
   return !(sp?.attempts > 0 && !sp.mastered);   // struggle cancels the assumption
 };
 
+// The same idea, for the paths that make a learner PRACTISE something they
+// already have — review, the review problems themselves, fluency drills.
+//
+// Why these need a different anchor from assumedKnown. learnerLevel() is
+// placementGrade, where the check found them, and for LEARNING that is right:
+// a Grade 10 placed at Grade 7 has real gaps at Grade 7 and should be taught
+// them. But being placed low must not also mean being DRILLED low. Anchored on
+// placement alone, a Grade 10 placed at 8 can be sent a timed rep on Grade 6
+// place value — work they last met in primary school — because the write-off
+// window slid down with them. For practice the floor is the grade they are IN.
+//
+// Taking the max of the two keeps the easier case intact: a learner placed
+// ABOVE their class keeps the higher anchor.
+// The highest grade the learner has actually mastered anything at. Unlike a
+// placement, this rises as they work, so anything ceilinged on it advances
+// with them instead of freezing at the grade a check found months ago.
+const topMasteredGrade = (progress, c) => {
+  let top = 0;
+  for (const s of c.skillList) {
+    if (progress?.skills?.[s.id]?.mastered && Number.isFinite(s.grade)) top = Math.max(top, s.grade);
+  }
+  return top;
+};
+
+const longSecure = (skill, progress) => {
+  const lvl = Math.max(progress?.placementGrade ?? 0, progress?.declaredGrade ?? 0);
+  if (!lvl || !Number.isFinite(skill?.grade)) return false;
+  if (skill.grade > lvl - ASSUMED_FOUNDATION_GAP) return false;
+  const sp = progress?.skills?.[skill.id];
+  return !(sp?.attempts > 0 && !sp.mastered);   // struggle cancels it, as above
+};
+
 export const prereqsMet = (skillId, progress, ctx) => {
   const c = resolveCtx(ctx);
   const skill = c.skills[skillId];
@@ -199,7 +231,7 @@ export const getReviews = (progress, ctx) => {
     // answer: don't send a Grade 5 back to counting at all. assumedKnown
     // cancels itself on real struggle, and practisedHere covers the learner
     // who has since worked at it here, so neither is silently written off.
-    if (!sp.practisedHere && assumedKnown(skill, progress)) continue;
+    if (!sp.practisedHere && longSecure(skill, progress)) continue;
 
     // Between that floor and the frontier, delay rather than exclude: a skill
     // two grades down is plausibly still worth a look, just not on the same
@@ -238,6 +270,15 @@ export const getFluencyPractice = (progress, ctx) => {
   for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
     if (!sp?.mastered || isFluent(sp)) continue;
+    // The same floor the lesson path and the review queue use. Without it
+    // this was the single worst offender in the whole engine: a skill the
+    // check credited has no speed history, so it never looks fluent, and
+    // getRecommendedPath takes ONE fluency rep for every learner — which
+    // meant a Grade 10's path opened with a timed drill on Pre-number
+    // Activities. Building automaticity on work a learner finished years
+    // ago buys nothing; the point of fluency practice is to free working
+    // memory for what they are learning NOW.
+    if (!sp.practisedHere && longSecure(skill, progress)) continue;
     out.push({
       ...skill,
       type: 'fluency',
@@ -272,11 +313,23 @@ export const getNextToLearn = (progress, ctx) => {
       // student is not sent to "Pre-number Activities". It stays openable from
       // the library, and findGaps still raises it on real struggle.
       if (assumedKnown(s, progress)) return false;
-      // The mirror guard: a prerequisite-free skill far ABOVE the learner (a
-      // graph root like Grade 5 division has no prerequisites at all) must not
-      // outrank a young learner's own work. Two grades of stretch is plenty.
-      const lvl = learnerLevel(progress);
-      if (lvl != null && Number.isFinite(s.grade) && s.grade > lvl + 2) return false;
+      // The mirror guard: a prerequisite-free skill far ABOVE the learner must
+      // not outrank their own work. Twelve skills in the graph have NO
+      // prerequisites at all — four of them at Grade 5 — so for those this
+      // line is the only thing standing between a Grade 2 and "What type of
+      // angle measures 162°?". Two grades of stretch measured from PLACEMENT
+      // was not enough: a Grade 2 placed at 3 reached Grade 5 that way.
+      //
+      // One grade of stretch, measured from what the learner has actually
+      // SHOWN — their placement or the highest grade they have mastered,
+      // whichever is further. Taking the highest mastered grade is what keeps
+      // this from capping anyone: it rises as they master work, so the
+      // ceiling rises with them and an advanced learner is never stalled by a
+      // placement taken months ago.
+      if (Number.isFinite(s.grade)) {
+        const shown = Math.max(learnerLevel(progress) ?? 0, topMasteredGrade(progress, c));
+        if (shown && s.grade > shown + 1) return false;
+      }
       return true;
     })
     .map(s => {
@@ -718,7 +771,7 @@ export const selectReviewProblems = (progress, count = 12, ctx) => {
     // through to skill-list order, which is ascending grade.
     const filler = c.skillList
       .filter(s => progress.skills[s.id]?.mastered && !inBag.has(s.id))
-      .filter(s => progress.skills[s.id].practisedHere || !assumedKnown(s, progress))
+      .filter(s => progress.skills[s.id].practisedHere || !longSecure(s, progress))
       .sort((a, b) =>
         (new Date(progress.skills[a.id].lastPractice || 0) - new Date(progress.skills[b.id].lastPractice || 0))
         || ((b.grade || 0) - (a.grade || 0)));
