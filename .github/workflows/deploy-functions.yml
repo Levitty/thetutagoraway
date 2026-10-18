@@ -1,0 +1,102 @@
+name: Deploy edge function
+
+# Deploys a Supabase edge function. Run it by hand from the Actions tab
+# ("Run workflow") and pick the function.
+#
+# Why this exists: deploy.yml publishes dist/ to Hostinger and never touches
+# supabase/functions, so an edge function only ever went live from somebody's
+# laptop with the Supabase CLI logged in. That made mark-composition — the one
+# place a child's writing is read, and now the one place a safeguarding
+# disclosure is recorded — the hardest thing in the project to ship.
+#
+# ONE SECRET IS NEEDED, once:
+#   SUPABASE_ACCESS_TOKEN   a personal access token from
+#                           https://supabase.com/dashboard/account/tokens
+#   Settings → Secrets and variables → Actions → New repository secret.
+#
+# This does NOT run database migrations. Adding DDL to a button is how a
+# production schema gets changed by accident; run those in the SQL editor
+# where you can see what you are about to do.
+
+on:
+  workflow_dispatch:
+    inputs:
+      function:
+        description: Which function to deploy
+        required: true
+        default: mark-composition
+        type: choice
+        options:
+          - mark-composition
+          - weekly-report
+          - lesson-token
+          - send-email
+          - send-booking-email
+          - send-lesson-reminders
+          - send-push
+          - verify-payment
+          - verify-paystack
+          - verify-subscription
+
+env:
+  PROJECT_REF: dlqbiayaqjucxsvbesms
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # mark-composition and weekly-report are GENERATED from a template plus a
+      # module in src/. Rebuild and fail if the committed file differs: a hand
+      # edit to the generated file would otherwise be silently deployed and
+      # then silently lost on the next build. For mark-composition that file
+      # carries the safeguarding screen, so the copy that protects a child must
+      # be the copy the tests cover.
+      - name: Regenerate and verify the generated function
+        if: inputs.function == 'mark-composition' || inputs.function == 'weekly-report'
+        run: |
+          if [ "${{ inputs.function }}" = "mark-composition" ]; then
+            npm run build:marking-fn
+          else
+            npm run build:report-fn
+          fi
+          if ! git diff --quiet -- "supabase/functions/${{ inputs.function }}/index.ts"; then
+            echo "::error::supabase/functions/${{ inputs.function }}/index.ts is not what the build produces."
+            echo "Someone edited the generated file by hand. Edit the template or the src/ module, rebuild, and commit."
+            git --no-pager diff -- "supabase/functions/${{ inputs.function }}/index.ts"
+            exit 1
+          fi
+          echo "Generated file matches the committed one."
+
+      - name: Run the tests that cover it
+        if: inputs.function == 'mark-composition'
+        run: npm test
+
+      - name: Set up the Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Deploy
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+        run: |
+          if [ -z "$SUPABASE_ACCESS_TOKEN" ]; then
+            echo "::error::SUPABASE_ACCESS_TOKEN is not set. Add it under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          supabase functions deploy "${{ inputs.function }}" --project-ref "$PROJECT_REF"
+
+      - name: Done
+        run: echo "Deployed ${{ inputs.function }} to $PROJECT_REF."
