@@ -181,3 +181,29 @@ test('every skill the queue returns really exists in the graph', () => {
     assert.ok(r.name, `queue entry ${r.id} has no name to show`);
   }
 });
+
+test('an assumed-known foundation is not reviewed, the way it is not taught', () => {
+  // getNextToLearn refuses to offer these as a lesson; a review makes the
+  // same claim on the learner's time, so it must refuse too — otherwise the
+  // skill the path will not teach is the one the session opens with.
+  const progress = checkedAt(['G1_PRENUMBER', 'G1_COUNTING', 'G2_COUNTING'], 400);
+  progress.declaredGrade = 5;
+  assert.deepEqual(
+    ids(getReviews(progress, undefined)), [],
+    'three grades below a Grade 5 should never come round, not even after a year',
+  );
+});
+
+test('real struggle cancels the assumption and the skill is reviewed again', () => {
+  // assumedKnown is deliberately weak: it never claims the skill is
+  // REMEMBERED. A learner who has attempted it here and not mastered it is
+  // struggling, and must keep getting it.
+  const progress = { declaredGrade: 5, skills: { G2_COUNTING: {
+    attempts: 6, correct: 2, mastered: true, repNum: 2, learningSpeed: 1.0,
+    lastPractice: ago(40), fromDiagnostic: true, practisedHere: true, consecutiveFailures: 1,
+  } } };
+  assert.ok(
+    ids(getReviews(progress, undefined)).includes('G2_COUNTING'),
+    'a Grade 5 who has worked at Grade 2 counting here still gets it reviewed',
+  );
+});

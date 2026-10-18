@@ -193,6 +193,17 @@ export const getReviews = (progress, ctx) => {
     // Grade 5 who sailed through counting to 50 is asked to review it three
     // days later. Stretch the interval by how far below the frontier it sits,
     // so the session is spent on what is actually at risk of fading.
+    // getNextToLearn already refuses to offer an assumed-known foundation AS A
+    // LESSON ("a Grade 8 student is not sent to Pre-number Activities"). A
+    // review is the same claim on the learner's time, so it gets the same
+    // answer: don't send a Grade 5 back to counting at all. assumedKnown
+    // cancels itself on real struggle, and practisedHere covers the learner
+    // who has since worked at it here, so neither is silently written off.
+    if (!sp.practisedHere && assumedKnown(skill, progress)) continue;
+
+    // Between that floor and the frontier, delay rather than exclude: a skill
+    // two grades down is plausibly still worth a look, just not on the same
+    // three-day rung as genuinely new work.
     const below = Number.isFinite(skill.grade) ? workingGrade - skill.grade : 0;
     if (sp.fromDiagnostic && !sp.practisedHere && below >= 2) interval *= 1 + below;
 
