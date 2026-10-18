@@ -13,6 +13,8 @@
     "build:report-fn": "node scripts/build-weekly-report-fn.mjs",
     "build:marking-fn": "node scripts/build-mark-composition-fn.mjs",
     "audit:items": "node scripts/audit-new-items.mjs",
+    "audit:gradefit": "node scripts/audit-grade-fit.mjs",
+    "audit:dupes": "node scripts/audit-rung-dupes.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:content": "node engine/scripts/quality_gate.mjs"
   },

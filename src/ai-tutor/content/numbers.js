@@ -50,12 +50,18 @@ export function buildDecimalAddSub({ sub = false } = {}) {
 }
 
 // ---- decimals: multiply ----
-export function buildDecimalMul() {
-  let A = randInt(11, 99), B = randInt(2, 19);       // a.b  ×  c.d / c
-  while (A % 10 === 0) A = randInt(11, 99);          // whole-number factors would break
-  while (B % 10 === 0) B = randInt(2, 19);           // the "2 decimal places" teaching
-  const a = A / 10, b = B / 10;
-  const res = (A * B) / 100;
+// `placesA` is how many decimal places the first factor carries, and it is a
+// parameter because G6_DECIMALS_MUL and G7_DECIMALS_MUL ("Multiplying
+// Decimals (Advanced)") called this bare and were therefore the same
+// question: the Advanced rung was not advanced, it was identical.
+export function buildDecimalMul({ placesA = 1 } = {}) {
+  const sA = Math.pow(10, placesA);
+  let A = randInt(sA + 1, sA * 10 - 1), B = randInt(2, 19);   // a.b…  ×  c.d / c
+  while (A % 10 === 0) A = randInt(sA + 1, sA * 10 - 1);      // whole-number factors would break
+  while (B % 10 === 0) B = randInt(2, 19);                    // the "count the places" teaching
+  const a = A / sA, b = B / 10;
+  const res = (A * B) / (sA * 10);
+  const totalPlaces = placesA + 1;
   return {
     type: 'decimal-mul',
     instruction: 'Multiply the decimals.',
@@ -65,12 +71,12 @@ export function buildDecimalMul() {
     hints: hintLadder(
       'Ignore the points and multiply as whole numbers.',
       `${A} × ${B} = ${A * B}.`,
-      'Count the decimal places in the question (2 here) and put that many in the answer.',
+      `Count the decimal places in the question (${totalPlaces} here) and put that many in the answer.`,
     ),
     solution: {
       steps: [
         { text: 'Multiply without the points.', expr: `${A} × ${B} = ${A * B}` },
-        { text: 'Replace the decimal point (2 places total).', expr: numStr(res) },
+        { text: `Replace the decimal point (${totalPlaces} places total).`, expr: numStr(res) },
       ],
       answer: numStr(res),
     },
@@ -80,8 +86,11 @@ export function buildDecimalMul() {
 }
 
 // ---- decimals: divide (engineered to terminate) ----
-export function buildDecimalDiv() {
-  const divisor = randInt(2, 9);
+// Same story as buildDecimalMul: G6 and G7 shared this untouched, so
+// "Dividing Decimals (Advanced)" asked exactly what Grade 6 asked. A
+// two-digit divisor is the step the Grade 7 name is promising.
+export function buildDecimalDiv({ twoDigitDivisor = false } = {}) {
+  const divisor = twoDigitDivisor ? randInt(11, 39) : randInt(2, 9);
   let Q = randInt(11, 99);                // quotient in tenths
   while (Q % 10 === 0) Q = randInt(11, 99);   // keep the quotient genuinely decimal
   const dividend = (Q / 10) * divisor;
@@ -252,7 +261,9 @@ export function buildIndicesLaws() {
 
 // ---- squares & square roots ----
 export function buildSquare() {
-  const n = randInt(2, 15);
+  // "Squares (1-12)" is the times-table square a learner is expected to know
+  // by heart; 13² to 15² is a different task and was being asked anyway.
+  const n = randInt(2, 12);
   return {
     type: 'square', instruction: 'Find the square.',
     question: `${n}²`, answer: `${n * n}`, accepts: accepts(`${n * n}`),
@@ -565,8 +576,12 @@ export function buildDivisionArray() {
 }
 
 // PICTORIAL: value of a digit shown in a place-value chart (column = value).
-export function buildPlaceValueChart() {
-  const nDigits = pick([4, 5]);
+// `digits` is the band of lengths this rung uses. It is a parameter because
+// G5 and G6 both called this bare and so were the SAME skill twice: "Place
+// Value (Millions)" never showed a million and topped out lower than "Place
+// Value (Thousands)" — the Grade 6 rung was easier than the Grade 5 one.
+export function buildPlaceValueChart({ digits: lengths = [4, 5] } = {}) {
+  const nDigits = pick(lengths);
   const placeVals = [];
   for (let i = nDigits - 1; i >= 0; i--) placeVals.push(Math.pow(10, i));   // 1000,100,10,1
   const digits = placeVals.map(() => randInt(1, 9));                         // no zeros, clean questions
@@ -647,7 +662,10 @@ export function buildRatioShare() {
 
 // ---- G7: place value in large numbers (to hundred millions) ----
 export function buildBigPlaceValue() {
-  const len = pick([6, 7, 8, 9]);
+  // Hundred millions: 9 digits is the name's own claim, 8 its neighbour. The
+  // old 6-9 reached down into G6's millions and below, so the two rungs
+  // overlapped for half their range.
+  const len = pick([8, 9]);
   const digits = [randInt(1, 9), ...Array.from({ length: len - 1 }, () => randInt(0, 9))];
   const pos = pick(digits.map((d, i) => d !== 0 ? i : null).filter(i => i !== null));
   const digit = digits[pos];
@@ -2472,18 +2490,22 @@ export const NUMBERS_CONTENT = {
   G5_MISSING_NUMBER:     withWorkedExample(buildMissingNumber),
 
   // Place value — taught pictorially with a place-value chart.
-  G5_PLACE_VALUE:        withWorkedExample(buildPlaceValueChart),
-  G6_PLACE_VALUE:        withWorkedExample(buildPlaceValueChart),
+  // Thousands, then millions — the ladder each name promises. G4 below them
+  // is 4 digits, G7 above is 8-9, so each rung is strictly harder than the last.
+  G5_PLACE_VALUE:        withWorkedExample(() => buildPlaceValueChart({ digits: [5] })),
+  G6_PLACE_VALUE:        withWorkedExample(() => buildPlaceValueChart({ digits: [6, 7] })),
 
   // Concept-first (concrete): integers on a number line, decimals on a grid.
   G6_INTEGERS_INTRO:     withWorkedExample(buildPlaceInteger),
   G5_DECIMALS_INTRO:     withWorkedExample(buildDecimalGrid),
   G5_DECIMALS_ADD:       withWorkedExample(() => buildDecimalAddSub({ sub: false })),
   G5_DECIMALS_SUB:       withWorkedExample(() => buildDecimalAddSub({ sub: true })),
-  G6_DECIMALS_MUL:       withWorkedExample(buildDecimalMul),
-  G6_DECIMALS_DIV:       withWorkedExample(buildDecimalDiv),
-  G7_DECIMALS_MUL:       withWorkedExample(buildDecimalMul),
-  G7_DECIMALS_DIV:       withWorkedExample(buildDecimalDiv),
+  G6_DECIMALS_MUL:       withWorkedExample(() => buildDecimalMul({ placesA: 1 })),
+  G6_DECIMALS_DIV:       withWorkedExample(() => buildDecimalDiv({ twoDigitDivisor: false })),
+  // The Grade 7 rungs are the ones named "(Advanced)": another decimal place
+  // to track, and a divisor that cannot be done by recall.
+  G7_DECIMALS_MUL:       withWorkedExample(() => buildDecimalMul({ placesA: 2 })),
+  G7_DECIMALS_DIV:       withWorkedExample(() => buildDecimalDiv({ twoDigitDivisor: true })),
   G6_INTEGERS_ADD_SUB:   withLevels({
                             abstract: withWorkedExample(buildIntegerAddSub),
                             concrete: withWorkedExample(buildIntegerJump),

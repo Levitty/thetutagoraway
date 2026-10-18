@@ -32,7 +32,11 @@ function buildBandedAdd({ maxOperand, maxTotal, minTotal = 0, digitsA = null, di
     for (let i = 0; ; i++) {
       a = digitsA ? randDigits(digitsA) : randInt(2, maxOperand);
       b = digitsB ? randDigits(digitsB) : randInt(2, Math.min(maxOperand, maxTotal - a));
-      const ok = a + b <= maxTotal && a + b >= minTotal && (regroup === null || needsCarry(a, b) === regroup);
+      // maxTotal happens to cap `a` here even when digitsA bypasses
+      // maxOperand, so addition never showed the fault subtraction did —
+      // but relying on that is luck. Bind the operand cap explicitly too.
+      const inBand = (maxOperand == null || (a <= maxOperand && b <= maxOperand));
+      const ok = inBand && a + b <= maxTotal && a + b >= minTotal && (regroup === null || needsCarry(a, b) === regroup);
       if (ok || i > 300) break;
     }
     const value = a + b;
@@ -62,7 +66,13 @@ function buildBandedSub({ maxOperand, digitsA = null, digitsB = null, borrow = n
     for (let i = 0; ; i++) {
       a = digitsA ? randDigits(digitsA) : randInt(3, maxOperand);
       b = digitsB ? randDigits(digitsB) : randInt(1, a - 1);
-      const ok = b < a && (borrow === null || needsBorrow(a, b) === borrow);
+      // maxOperand has to keep binding when digitsA is given, or the two
+      // constraints silently disagree and the looser one wins. G1_SUB asks
+      // for 2-digit minus 1-digit WITHIN 18 — "crossing ten" — and without
+      // this it served "57 − 8" under a skill named "Subtraction (Single
+      // Digit)", which is Grade 2 work with a Grade 1 label on it.
+      const inBand = (maxOperand == null || a <= maxOperand);
+      const ok = b < a && inBand && (borrow === null || needsBorrow(a, b) === borrow);
       if (ok || i > 300) break;
     }
     const value = a - b;
@@ -1482,7 +1492,9 @@ function buildRomanNumerals() {
 export const LOWER_PRIMARY_CONTENT = {
   // ── Grade 1 ──────────────────────────────────────────────────────────────
   G1_PRENUMBER:      withWorkedExample(buildSimplePattern()),
-  G1_COUNTING:       withWorkedExample(buildCounting({ max: 100 })),
+  // "Counting & Numbers (1-50)" — it asked up to 100, which made it the same
+  // skill as G2_COUNTING ("Whole Numbers (to 100)") one grade below it.
+  G1_COUNTING:       withWorkedExample(buildCounting({ max: 50 })),
   // KP ladder from the G1 design: sums within 9, then crossing ten (to 18).
   G1_ADD:            withKPs([
                        withWorkedExample(buildBandedAdd({ maxOperand: 9, maxTotal: 9 })),

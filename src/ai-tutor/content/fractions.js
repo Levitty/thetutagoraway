@@ -200,10 +200,16 @@ export function buildAddSubUnlike({ sub = false } = {}) {
 }
 
 // ---- multiply fractions ----
-export function buildMulFractions() {
+// `maxNum`/`maxDen` exist because G6_FRACTIONS_MUL and G7_FRACTIONS_MUL
+// ("Multiplying Fractions (Advanced)") called this bare and asked the
+// identical question. NOTE: the real Grade 7 step in the CBC design is mixed
+// numbers, which is a different question type rather than a bigger one;
+// bigger operands make the rungs genuinely distinct and the simplification
+// harder, but authoring the mixed-number rung is still worth doing.
+export function buildMulFractions({ maxNum = 8, maxDen = 9 } = {}) {
   let a, b, c, d;
   do {
-    a = randInt(1, 8); b = randInt(2, 9); c = randInt(1, 8); d = randInt(2, 9);
+    a = randInt(1, maxNum); b = randInt(2, maxDen); c = randInt(1, maxNum); d = randInt(2, maxDen);
   } while (a === b || c === d || (a === c && b === d)
     || ((a * c) % (b * d) === 0 && [a, b, c, d].includes((a * c) / (b * d))));   // no trivial operands; result must not equal a number on the page
   const num = a * c, den = b * d;
@@ -249,10 +255,11 @@ export function buildMulFractions() {
 }
 
 // ---- divide fractions ----
-export function buildDivFractions() {
+// Parameterised for the same reason as buildMulFractions above.
+export function buildDivFractions({ maxNum = 8, maxDen = 9 } = {}) {
   let a, b, c, d;
   do {
-    a = randInt(1, 8); b = randInt(2, 9); c = randInt(1, 8); d = randInt(2, 9);
+    a = randInt(1, maxNum); b = randInt(2, maxDen); c = randInt(1, maxNum); d = randInt(2, maxDen);
     // a===b or c===d makes one operand equal 1, so the hint's flipped fraction or
     // restated dividend IS the answer; identical operands make the answer 1;
     // a·d² = b·c² makes the simplified result equal the divisor on the page.
@@ -886,10 +893,10 @@ export const FRACTIONS_CONTENT = {
   // Grade 7 — fluency & supporting number skills
   G7_FRACTIONS_ADD_UNLIKE: withWorkedExample(() => buildAddSubUnlike({ sub: Math.random() < 0.4 })),
   G7_FRACTIONS_MUL:      withLevels({
-                            abstract: withWorkedExample(buildMulFractions),
+                            abstract: withWorkedExample(() => buildMulFractions({ maxNum: 11, maxDen: 12 })),
                             concrete: withWorkedExample(buildMulFractionsPictorial),
                           }),
-  G7_FRACTIONS_DIV:      withWorkedExample(buildDivFractions),
+  G7_FRACTIONS_DIV:      withWorkedExample(() => buildDivFractions({ maxNum: 11, maxDen: 12 })),
   G7_FRACTIONS_COMPARE:  withWorkedExample(buildCompareFractions),
   G7_RECIPROCALS:        withWorkedExample(buildReciprocal),
   G7_LCM:                withWorkedExample(buildLCM),
