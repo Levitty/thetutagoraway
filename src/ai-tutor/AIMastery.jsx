@@ -110,6 +110,22 @@ const withholdAnswer = (steps, answer) => {
     : (st && typeof st.expr === 'string') ? { ...st, expr: cut(st.expr) } : st);
 };
 
+// The strand blocks on the dashboard. Colour is how a child tells one strand
+// from another at a glance — faster than reading five labels — so each gets a
+// fixed one from the HOREB palette (see horeb-look.css) and keeps it
+// everywhere. `meta` is the small count line and has to clear contrast
+// against its own block, which is why it is set per colour and not inherited.
+const STRAND_BLOCK = {
+  Numbers:         { bg: '#FFC93C', ink: '#16161A', meta: '#6B5309' },
+  Measurements:    { bg: '#FF4F91', ink: '#16161A', meta: '#7A1538' },
+  Geometry:        { bg: '#6C4BF4', ink: '#FFFFFF', meta: '#DCD3FF' },
+  Statistics:      { bg: '#9BE3C4', ink: '#16161A', meta: '#2A6B52' },
+  'Data Handling': { bg: '#9BE3C4', ink: '#16161A', meta: '#2A6B52' },
+  Algebra:         { bg: '#16161A', ink: '#FFFFFF', meta: '#A9A9B4' },
+  // Any strand a curriculum adds later still gets a readable block.
+  _:               { bg: '#D7D7DE', ink: '#16161A', meta: '#5C5C66' },
+};
+
 export function AIMastery({ onBack, userId, studentName, onFindTutor, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, autoStartCurriculum = null, onDiagnosed = null }) {
   useHorebLook();
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
@@ -442,11 +458,27 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
     }
 
     // First run on this device: there is nothing to show but the loader.
+    //
+    // The catch is the whole point. There is no local copy to fall back on
+    // here, so if the cloud read throws — a dead connection, a DNS failure, a
+    // cert error on a school network — apply() is never reached, `loading`
+    // stays true, and the learner sits on the HOREB splash for ever with no
+    // way forward. The fast path above has always handled this; this one did
+    // not, and it is the path a child takes on their FIRST run on a shared
+    // tablet, which is precisely where the connection is least reliable.
+    // Start them on an empty progress instead: the diagnostic can run offline,
+    // and the cloud copy is adopted on the next load that reaches it.
     setLoading(true);
     (async () => {
-      const p = await loadProgress(storageKey, userId);
+      let p;
+      try {
+        p = await loadProgress(storageKey, userId);
+      } catch (e) {
+        console.warn('Could not load progress; starting offline.', e);
+        p = defaultProgress();
+      }
       if (cancelled) return;
-      apply(p);
+      apply(p || defaultProgress());
     })();
     return () => { cancelled = true; };
   }, [userId, subjectId, learnerBase, keyFor]);
@@ -2357,16 +2389,41 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               {/* Strand progress */}
               <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-slate-800 font-semibold">Your progress</span>
+                  <span className="text-slate-800 font-semibold">Your strands</span>
                   <button onClick={() => setActiveTab('stats')} className="text-xs text-amber-600 hover:text-amber-700">Details →</button>
                 </div>
-                <div className="space-y-2.5">{scopedStrandStats.map(s => (
-                  <div key={s.name} className="flex items-center gap-3">
-                    <span className="text-sm text-slate-500 w-24 truncate" title={s.name}>{s.name}</span>
-                    <div className="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden"><div className={`h-full transition-all ${s.assessed ? 'bg-[#8ca86a]' : 'bg-slate-200'}`} style={{ width: `${s.percent}%` }} /></div>
-                    <span className="text-xs font-semibold w-14 text-right text-slate-700 tabular-nums">{s.assessed ? `${s.percent}%` : '—'}</span>
-                  </div>
-                ))}</div>
+                {/* Five identical grey bars made the strands a table to be
+                    read. As colour blocks they are a thing to be chosen from,
+                    which is what they actually are — and the count says how
+                    far along each one is without a percentage to decode. */}
+                <div className="grid grid-cols-2 gap-2.5">{scopedStrandStats.map(s => {
+                  const c = STRAND_BLOCK[s.name] || STRAND_BLOCK._;
+                  // Count against what is IN REACH, not against the whole
+                  // graph. Numbers holds 108 skills from Grade 1 to Grade 12,
+                  // so the honest-looking "3 of 108" tells a Grade 5 nothing
+                  // except that they are nowhere — the denominator is work
+                  // they are years from meeting. Their own grade and below is
+                  // the set that means "what I should have by now".
+                  const inReach = declaredG == null
+                    ? s.skills
+                    : s.skills.filter(k => !Number.isFinite(k.grade) || k.grade <= declaredG);
+                  const done = inReach.filter(k => progress.skills[k.id]?.mastered).length;
+                  return (
+                    <button key={s.name} onClick={() => setActiveTab('skills')}
+                      style={{ background: c.bg }}
+                      className="h-24 rounded-2xl p-3 flex flex-col justify-between text-left">
+                      <span className="text-[11px] font-bold tabular-nums" style={{ color: c.meta }}>
+                        {s.assessed ? `${done} of ${inReach.length}` : 'Not checked yet'}
+                      </span>
+                      <span className="flex items-end justify-between gap-1.5">
+                        <span className="text-[17px] font-extrabold leading-tight" style={{ color: c.ink }}>{s.name}</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="shrink-0 mb-0.5">
+                          <path d="M9 5.5 15.5 12 9 18.5" stroke={c.ink} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                    </button>
+                  );
+                })}</div>
               </div>
               </div>{/* ===== end LEFT COLUMN ===== */}
 
