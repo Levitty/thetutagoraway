@@ -244,6 +244,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // UI state
   const [expanded, setExpanded] = useState(null);
   const [activeTab, setActiveTab] = useState('overview');
+  // The dashboard's "Find a skill" box. It filters the Skills tab rather than
+  // decorating the header: a search field that does nothing is worse than no
+  // search field, because it invites a child to type and then ignores them.
+  const [skillQuery, setSkillQuery] = useState('');
   const [remediationSkills, setRemediationSkills] = useState(null);
   // Celebration queue: skill mastery, level-ups, achievements, daily goal.
   const [celebrations, setCelebrations] = useState([]);
@@ -2039,36 +2043,35 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
 
       {/* ===== SIDEBAR (desktop) ===== */}
-      <aside className="hidden lg:flex lg:flex-col w-[248px] shrink-0 bg-white border-r border-slate-200 sticky top-0 h-screen px-4 py-5">
-        <div className="flex items-center gap-2.5 px-2 pb-5">
-          <HorebBot size={30} />
-          <b className="text-[18px] font-extrabold tracking-tight">HOREB</b>
-        </div>
-        <nav className="flex flex-col gap-1">
-          {[['overview', 'Home', 'home'], ['path', 'My path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Progress', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
-            <button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-[14.5px] font-semibold transition-colors ${activeTab === id ? 'bg-slate-900 text-white' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'}`}>
-              <Icon name={icon} className="w-[19px] h-[19px]" />{label}
-            </button>
-          ))}
-          <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[14.5px] font-semibold text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-            <span className="w-[19px] text-center text-lg leading-none">+</span>Join a class
+      {/* An icon rail, not a menu of words. Five destinations do not need
+          labels taking a sixth of a 1280px screen, and the names were the
+          least interesting thing on the page — the title, each label on
+          hover, and the aria-label carry them for anyone who needs them. */}
+      <aside className="hidden lg:flex lg:flex-col items-center w-[72px] shrink-0 bg-white rounded-[26px] my-7 ml-7 py-4.5 gap-2.5 sticky top-7 self-start max-h-[calc(100vh-3.5rem)]">
+        <span className="mb-2.5"><HorebBot size={34} /></span>
+        {[['overview', 'Home', 'home'], ['path', 'My path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Progress', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
+          <button key={id} onClick={() => setActiveTab(id)} title={label} aria-label={label}
+            aria-current={activeTab === id ? 'page' : undefined}
+            className={`w-12 h-12 rounded-[15px] flex items-center justify-center transition-colors ${
+              activeTab === id ? 'bg-slate-900 text-amber-400' : 'text-slate-400 hover:bg-slate-50 hover:text-slate-900'}`}>
+            <Icon name={icon} className="w-[21px] h-[21px]" />
           </button>
-        </nav>
-        <div className="flex-1" />
-        <div className="border-t border-slate-100 pt-3 space-y-1">
-          {curriculaOptions.length > 1 && (
-            <select value={curriculum} onChange={(e) => setProgress(p => ({ ...p, curriculum: e.target.value }))} title="Curriculum view" className="w-full text-xs bg-slate-50 text-slate-600 rounded-lg px-2.5 py-2 border border-slate-200 focus:outline-none">
-              {!curriculumChosen && <option value={NATIVE} disabled>Choose curriculum</option>}
-              {choosableCurricula.map(c => <option key={c.id} value={c.id}>{c.shortName}</option>)}
-            </select>
-          )}
-          <button onClick={switchSubject} className="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] text-slate-500 hover:bg-slate-50 transition-colors"><Icon name="book" className="w-4 h-4" />Switch subject</button>
-          <button onClick={resetAll} className="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] text-slate-500 hover:bg-slate-50 transition-colors"><Icon name="refresh" className="w-4 h-4" />Reset progress</button>
-        </div>
-        <div className="flex items-center gap-2.5 mt-3 pt-3 border-t border-slate-100">
-          <HorebBot size={32} />
-          <div className="min-w-0"><b className="text-[13.5px] block truncate">{((activeLearner?.name || studentName) || 'You').trim().split(/\s+/)[0]}</b><span className="text-[12px] text-slate-400">{gradeLabel(estimatedGrade)} · {sub?.shortName}</span></div>
-        </div>
+        ))}
+        <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} title="Join a class" aria-label="Join a class"
+          className="w-12 h-12 rounded-[15px] flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-slate-900 transition-colors text-xl leading-none">+</button>
+        <span className="flex-1 min-h-[16px]" />
+        <button onClick={switchSubject} title="Switch subject" aria-label="Switch subject"
+          className="w-12 h-12 rounded-[15px] flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-slate-900 transition-colors"><Icon name="book" className="w-[19px] h-[19px]" /></button>
+        <button onClick={resetAll} title="Reset progress" aria-label="Reset progress"
+          className="w-12 h-12 rounded-[15px] flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-slate-900 transition-colors"><Icon name="refresh" className="w-[19px] h-[19px]" /></button>
+        {curriculaOptions.length > 1 && (
+          <select value={curriculum} onChange={(e) => setProgress(p => ({ ...p, curriculum: e.target.value }))}
+            title="Curriculum view" aria-label="Curriculum view"
+            className="w-12 text-[10px] text-center bg-slate-50 text-slate-500 rounded-lg py-1.5 border-0 focus:outline-none">
+            {!curriculumChosen && <option value={NATIVE} disabled>—</option>}
+            {choosableCurricula.map(c => <option key={c.id} value={c.id}>{c.shortName}</option>)}
+          </select>
+        )}
       </aside>
 
       {/* ===== MOBILE TOP BAR ===== */}
@@ -2220,8 +2223,40 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
               {/* ===== LEFT COLUMN — the main flow: what to do, what to fix, progress ===== */}
               <div className="lg:col-span-2 space-y-4">
+              {/* ===== THE MAIN CARD =====
+                  On a wide screen the greeting, the hero and the strands are
+                  ONE surface, the way the design has them — separate cards
+                  floating on grey turned the page into a list of boxes. On a
+                  phone they stay separate cards, which is what the phone
+                  board does too. */}
+              <div className="contents lg:block lg:bg-white lg:rounded-[28px] lg:p-8">
+
+              {/* The card's own top row on a wide screen: who this is, and a
+                  way to reach any skill directly. The big greeting below is
+                  the phone's, and showing both stacked two headings on top of
+                  each other with the hero's eyebrow underneath. */}
+              <div className="hidden lg:flex items-center gap-3.5 mb-7">
+                <div className="flex-1 min-w-0 text-[11px] font-bold tracking-[.12em] uppercase text-slate-500">
+                  Habari{firstName ? `, ${firstName}` : ''}
+                </div>
+                <form onSubmit={(e) => e.preventDefault()} role="search"
+                  className="flex-none w-[280px] flex items-center gap-2.5 bg-slate-100 rounded-full h-[46px] px-4">
+                  {/* Icons.jsx has no magnifier, and <Icon name="search"/>
+                      renders nothing rather than failing, so this is inline. */}
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="shrink-0">
+                    <circle cx="11" cy="11" r="6.5" stroke="#5C5C66" strokeWidth="2.2" />
+                    <path d="m16 16 4 4" stroke="#5C5C66" strokeWidth="2.2" strokeLinecap="round" />
+                  </svg>
+                  <label htmlFor="find-skill" className="sr-only">Find a skill</label>
+                  <input id="find-skill" type="search" value={skillQuery}
+                    onChange={(e) => { setSkillQuery(e.target.value); if (e.target.value) setActiveTab('skills'); }}
+                    placeholder="Find a skill"
+                    className="flex-1 min-w-0 bg-transparent border-0 outline-none text-sm font-medium text-slate-900 placeholder:text-slate-400" />
+                </form>
+              </div>
+
               {/* Greeting — the guide + who/where */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 lg:hidden">
                 <HorebBot size={44} className="shrink-0" />
                 <div className="min-w-0">
                   <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 leading-tight">{greeting}{firstName ? `, ${firstName}` : ''}</h2>
@@ -2241,28 +2276,100 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
               {/* Resume card — light, content-forward (fixes the 'AI' navy hero) */}
               {/* ===== THE HERO — the one thing to do now, named ===== */}
+              {/* A grid, not flex-wrap: the shape is a fixed 200px column that
+                  must sit BESIDE the words, and wrapping it underneath (which
+                  flex-wrap did) reads as a stray graphic. */}
               {heroItem && (
-                <div className="bg-white rounded-3xl px-5 pt-5 pb-5">
-                  <div className="text-[10.5px] font-bold tracking-[.12em] uppercase text-slate-500">
-                    {heroItem.kind === 'review' ? 'Keep it fresh' : 'Carry on'}
+                <div className="bg-white rounded-3xl px-5 py-5 lg:bg-transparent lg:rounded-none lg:p-0 lg:grid lg:grid-cols-[minmax(0,1fr)_200px] lg:items-end lg:gap-6">
+                  <div className="min-w-0">
+                    <div className="text-[10.5px] font-bold tracking-[.12em] uppercase text-slate-500">
+                      {heroItem.kind === 'review' ? 'Keep it fresh' : 'Carry on where you stopped'}
+                    </div>
+                    <h1 className="mt-2.5 text-[31px] lg:text-[52px] leading-[1.03] lg:leading-[1.02] font-extrabold text-slate-900">
+                      {heroTitle}
+                      {heroQualifier && <><br /><span className="text-slate-400">{heroQualifier}</span></>}
+                    </h1>
+                    <div className="mt-3 text-[13px] lg:text-[14px] font-medium text-slate-500">
+                      {sessionSummary} · about {sessionMins} min
+                      {heroRecent.length > 0 && ` · last time you got ${heroRecent.filter(Boolean).length} of ${heroRecent.length}`}
+                    </div>
+                    <button onClick={() => startSessionItem(heroItem)}
+                      className="mt-5 w-full lg:w-auto h-14 lg:px-8 bg-amber-400 text-slate-900 font-extrabold text-[17px] inline-flex items-center justify-center gap-2 rounded-full">
+                      {heroItem.kind === 'review' ? 'Start your review' : 'Continue'}
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M5 12h13M12 5.5 18.5 12 12 18.5" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </button>
                   </div>
-                  <h1 className="mt-2 text-[31px] leading-[1.04] font-extrabold text-slate-900">
-                    {heroTitle}
-                    {heroQualifier && <><br /><span className="text-slate-400">{heroQualifier}</span></>}
-                  </h1>
-                  <div className="mt-2.5 text-[13px] font-medium text-slate-500">
-                    {sessionSummary} · about {sessionMins} min
-                    {heroRecent.length > 0 && ` · last time you got ${heroRecent.filter(Boolean).length} of ${heroRecent.length}`}
-                  </div>
-                  <button onClick={() => startSessionItem(heroItem)}
-                    className="mt-4 w-full h-14 bg-amber-400 text-slate-900 font-extrabold text-[17px] flex items-center justify-center gap-2 rounded-full">
-                    {heroItem.kind === 'review' ? 'Start your review' : 'Continue'}
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M5 12h13M12 5.5 18.5 12 12 18.5" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </button>
+                  {/* Drawn, not downloaded. A stock illustration here would be the
+                      biggest asset on the page, on connections where the whole
+                      point of the bundle work was to send less. */}
+                  <svg viewBox="0 0 230 180" aria-hidden="true" className="hidden lg:block w-full">
+                    <circle cx="86" cy="74" r="56" fill="#6C4BF4" />
+                    <path d="M86 18a56 56 0 0 1 0 112z" fill="#FFC93C" />
+                    <rect x="120" y="96" width="78" height="30" rx="15" fill="#FF4F91" />
+                    <rect x="140" y="136" width="56" height="30" rx="15" fill="#9BE3C4" />
+                    <circle cx="188" cy="46" r="18" fill="#16161A" />
+                    <path d="M44 150h150" stroke="#D3D3DA" strokeWidth="4" strokeLinecap="round" />
+                  </svg>
                 </div>
               )}
+
+
+              {/* Strands — inside the main card on a wide screen. */}
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 lg:bg-transparent lg:border-0 lg:shadow-none lg:rounded-none lg:p-0 lg:mt-9">
+                <div className="flex items-baseline justify-between mb-3 lg:mb-3.5">
+                  <span className="text-slate-800 font-semibold lg:text-[19px] lg:font-extrabold lg:tracking-tight">Your strands</span>
+                  <button onClick={() => setActiveTab('stats')} className="text-xs lg:text-[13px] lg:font-semibold text-amber-600 hover:text-amber-700">Details →</button>
+                </div>
+                {/* Five identical grey bars made the strands a table to be
+                    read. As colour blocks they are a thing to be chosen from,
+                    which is what they actually are — and the count says how
+                    far along each one is without a percentage to decode. */}
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-3.5">{scopedStrandStats.map((s, i) => {
+                  const c = STRAND_BLOCK[s.name] || STRAND_BLOCK._;
+                  // A mosaic rather than a uniform grid: the strand furthest
+                  // along gets the tall block and the one needing work gets
+                  // the wide one, so the shape of the page says something
+                  // before any of it is read.
+                  // Numbers tall on the left, the next one wide beside it, the
+                  // rest single — and when the count leaves one block alone on
+                  // the last row it takes the whole width rather than sitting
+                  // in a corner with two empty cells beside it.
+                  const nStrands = scopedStrandStats.length;
+                  const span = i === 0 ? 'lg:row-span-2 lg:min-h-[300px]'
+                    : i === 1 ? 'lg:col-span-2'
+                    : (i === nStrands - 1 && (nStrands - 2) % 2 === 1) ? 'lg:col-span-3 lg:min-h-0 lg:h-[116px]'
+                    : '';
+                  // Count against what is IN REACH, not against the whole
+                  // graph. Numbers holds 108 skills from Grade 1 to Grade 12,
+                  // so the honest-looking "3 of 108" tells a Grade 5 nothing
+                  // except that they are nowhere — the denominator is work
+                  // they are years from meeting. Their own grade and below is
+                  // the set that means "what I should have by now".
+                  const inReach = declaredG == null
+                    ? s.skills
+                    : s.skills.filter(k => !Number.isFinite(k.grade) || k.grade <= declaredG);
+                  const done = inReach.filter(k => progress.skills[k.id]?.mastered).length;
+                  return (
+                    <button key={s.name} onClick={() => setActiveTab('skills')}
+                      style={{ background: c.bg }}
+                      className={`h-24 lg:h-auto lg:min-h-[142px] rounded-2xl lg:rounded-3xl p-3 lg:p-5 flex flex-col justify-between text-left ${span}`}>
+                      <span className="text-[11px] lg:text-[12px] font-bold tabular-nums" style={{ color: c.meta }}>
+                        {s.assessed ? `${done} of ${inReach.length} skills` : 'Not checked yet'}
+                      </span>
+                      <span className="flex items-end justify-between gap-1.5">
+                        <span className="flex-1 min-w-0 text-[17px] lg:text-[19px] font-extrabold leading-tight" style={{ color: c.ink }}>{s.name}</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="shrink-0 mb-0.5 lg:w-[18px] lg:h-[18px]">
+                          <path d="M9 5.5 15.5 12 9 18.5" stroke={c.ink} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                    </button>
+                  );
+                })}</div>
+              </div>
+
+              </div>{/* ===== end THE MAIN CARD ===== */}
 
               {/* ===== TODAY'S SESSION — finite, ordered, with an end =====
                   Only worth showing when there is more than one thing in it:
@@ -2386,45 +2493,6 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 </button>
               )}
 
-              {/* Strand progress */}
-              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-slate-800 font-semibold">Your strands</span>
-                  <button onClick={() => setActiveTab('stats')} className="text-xs text-amber-600 hover:text-amber-700">Details →</button>
-                </div>
-                {/* Five identical grey bars made the strands a table to be
-                    read. As colour blocks they are a thing to be chosen from,
-                    which is what they actually are — and the count says how
-                    far along each one is without a percentage to decode. */}
-                <div className="grid grid-cols-2 gap-2.5">{scopedStrandStats.map(s => {
-                  const c = STRAND_BLOCK[s.name] || STRAND_BLOCK._;
-                  // Count against what is IN REACH, not against the whole
-                  // graph. Numbers holds 108 skills from Grade 1 to Grade 12,
-                  // so the honest-looking "3 of 108" tells a Grade 5 nothing
-                  // except that they are nowhere — the denominator is work
-                  // they are years from meeting. Their own grade and below is
-                  // the set that means "what I should have by now".
-                  const inReach = declaredG == null
-                    ? s.skills
-                    : s.skills.filter(k => !Number.isFinite(k.grade) || k.grade <= declaredG);
-                  const done = inReach.filter(k => progress.skills[k.id]?.mastered).length;
-                  return (
-                    <button key={s.name} onClick={() => setActiveTab('skills')}
-                      style={{ background: c.bg }}
-                      className="h-24 rounded-2xl p-3 flex flex-col justify-between text-left">
-                      <span className="text-[11px] font-bold tabular-nums" style={{ color: c.meta }}>
-                        {s.assessed ? `${done} of ${inReach.length}` : 'Not checked yet'}
-                      </span>
-                      <span className="flex items-end justify-between gap-1.5">
-                        <span className="text-[17px] font-extrabold leading-tight" style={{ color: c.ink }}>{s.name}</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="shrink-0 mb-0.5">
-                          <path d="M9 5.5 15.5 12 9 18.5" stroke={c.ink} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                    </button>
-                  );
-                })}</div>
-              </div>
               </div>{/* ===== end LEFT COLUMN ===== */}
 
               {/* ===== RIGHT COLUMN — the glanceable sidebar ===== */}
@@ -2606,9 +2674,15 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               });
               return Object.keys(byBand).map(Number).sort((a, b) => a - b);
             })().map(grade => {
-              const gradeSkills = Object.values(sub.skills).filter(s => gradeOf(s, curriculum) === grade);
+              const q = skillQuery.trim().toLowerCase();
+              const gradeSkills = Object.values(sub.skills)
+                .filter(s => gradeOf(s, curriculum) === grade)
+                .filter(s => !q || s.name.toLowerCase().includes(q));
+              // A search with its results collapsed behind a grade heading is
+              // not a search, so every band holding a match opens itself.
+              if (q && !gradeSkills.length) return null;
               const mastered = gradeSkills.filter(s => progress.skills[s.id]?.mastered).length;
-              const isExp = expanded === grade;
+              const isExp = q ? true : expanded === grade;
 
               // Group by the active curriculum's strand within the band
               const byStrand = {};
