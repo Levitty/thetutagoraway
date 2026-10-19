@@ -48,3 +48,29 @@ test('the rest of the learner still travels', () => {
   endStudentMode();
   assert.equal(getStudentMode(), null);
 });
+
+// ---- the figure a learner is given when they have not picked one -----------
+const { avatarFor, isAvatarId, AVATARS } = await import('../src/avatars/avatarList.js');
+
+test('every learner has a figure, picked or not', () => {
+  // The bug this closes: "no pick" was drawn as an initial in a circle, and
+  // almost every account predates the picker — so the six drawn figures were
+  // on nobody's screen, and nothing on the screen suggested there were six.
+  for (const seed of ['child-1', 'Amani', 'parent-uuid-aaaa', '', null, undefined]) {
+    assert.ok(isAvatarId(avatarFor(seed)), `no figure for seed ${JSON.stringify(seed)}`);
+  }
+});
+
+test('the same learner is given the same figure every time', () => {
+  // Otherwise the child opens the app tomorrow as somebody else.
+  assert.equal(avatarFor('child-1'), avatarFor('child-1'));
+});
+
+test('two children on one account are not given the same figure', () => {
+  // Not guaranteed for any two ids, but the switcher chips are where sibling
+  // figures appear side by side, so a run of real ids must spread out.
+  const ids = ['c1', 'c2', 'c3', 'c4', 'c5', 'c6'];
+  const got = new Set(ids.map(avatarFor));
+  assert.ok(got.size >= Math.min(ids.length, AVATARS.length) - 1,
+    `six children drew only ${got.size} distinct figures`);
+});

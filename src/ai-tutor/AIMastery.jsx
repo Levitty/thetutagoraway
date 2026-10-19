@@ -11,7 +11,7 @@ import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, flu
 import { propagateCredit, withdrawMiss, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
 import { selectQuestion, isComplete as placementComplete, computePlacement, buildPlacementPool, sweepRemaining, roomForAnother, worthConfirming, nextToSettle, explainPlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
 import { HorebBot } from './HorebBot.jsx';
-import { AvatarArt, AvatarPicker, isAvatarId } from '../avatars/Avatars.jsx';
+import { AvatarArt, AvatarPicker, isAvatarId, avatarFor } from '../avatars/Avatars.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { TeachingVisual } from './TeachingVisual.jsx';
 import { QuestionMedia, ChoiceGrid } from './QuestionMedia.jsx';
@@ -2126,7 +2126,12 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   // The roster lookup is a repair, not a nicety: student mode stored the
   // learner without an avatar until this was fixed, so a tablet already in a
   // child's hands carries a stale record. The roster row is the truth.
-  const learnerAvatar = (() => {
+  // There is no "no figure" state. A learner who has not picked gets one
+  // assigned from their own id — the same one every time — because the
+  // alternative, an initial in a circle, is what kept the avatars off the
+  // screen entirely: most accounts predate the picker, so most accounts had
+  // nothing to draw and no reason to look for the picker.
+  const pickedAvatar = (() => {
     if (activeLearner) {
       const fresh = learners.find(l => l.id === activeLearner.id)?.avatar;
       const id = isAvatarId(activeLearner.avatar) ? activeLearner.avatar : fresh;
@@ -2134,24 +2139,37 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     }
     return isAvatarId(ownAvatar) ? ownAvatar : null;
   })();
+  const learnerAvatar = pickedAvatar
+    || avatarFor(activeLearner ? (activeLearner.id || activeLearner.name) : (userId || studentName));
   const whoFirst = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
   // The figure, wherever it appears, is also the way to change it. Nothing
   // else on either screen is a picture of the learner, so it reads as theirs
   // without a label; the label is there for anyone who can't see it.
-  const AvatarButton = ({ size }) => (
-    <button type="button" onClick={() => setPickingAvatar(v => !v)}
-      title="Change your avatar"
-      aria-label={learnerAvatar ? 'Change your avatar' : 'Pick your avatar'}
-      className="rounded-full leading-none shrink-0 hover:opacity-85 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-300"
-      style={{ width: size, height: size, padding: 0, border: 0, background: 'none', overflow: 'hidden' }}>
-      {learnerAvatar
-        ? <AvatarArt id={learnerAvatar} size={size} title={whoFirst ? `${whoFirst}'s avatar` : 'Your avatar'} />
-        : <span className="flex items-center justify-center w-full h-full rounded-full bg-[#6C4BF4] text-white font-extrabold"
-            style={{ fontSize: Math.round(size * 0.4) }}>
-            {(whoFirst || 'Y').charAt(0).toUpperCase()}
-          </span>}
-    </button>
-  );
+  // The pencil is the whole point. Without it the figure is a picture of the
+  // learner and nothing more, and the six they can choose between stay
+  // invisible — which is exactly how an account that never picked one stayed
+  // on its assigned figure forever without knowing there was a choice.
+  const AvatarButton = ({ size }) => {
+    const pip = Math.max(20, Math.round(size * 0.3));
+    return (
+      <button type="button" onClick={() => setPickingAvatar(v => !v)}
+        title={pickedAvatar ? 'Change your avatar' : 'Pick your avatar'}
+        aria-label={pickedAvatar ? 'Change your avatar' : 'Pick your avatar'}
+        className="relative inline-block rounded-full leading-none shrink-0 hover:opacity-90 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-300"
+        style={{ width: size, height: size, padding: 0, border: 0, background: 'none' }}>
+        <span className="block rounded-full overflow-hidden" style={{ width: size, height: size }}>
+          <AvatarArt id={learnerAvatar} size={size} title={whoFirst ? `${whoFirst}'s avatar` : 'Your avatar'} />
+        </span>
+        <span aria-hidden="true"
+          className="absolute -bottom-0.5 -right-0.5 rounded-full bg-[#16161A] border-2 border-white flex items-center justify-center"
+          style={{ width: pip, height: pip }}>
+          <svg viewBox="0 0 24 24" fill="none" style={{ width: pip * 0.52, height: pip * 0.52 }}>
+            <path d="M4 20h4l10-10a2.8 2.8 0 0 0-4-4L4 16v4Z" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+      </button>
+    );
+  };
   const avatarSheet = pickingAvatar && (
     <div className="bg-white rounded-[24px] p-5 border-2 border-[#16161A]">
       <div className="flex items-baseline justify-between gap-3 mb-3">
@@ -2160,7 +2178,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
         </span>
         <button onClick={() => setPickingAvatar(false)} className="text-[13px] font-semibold text-slate-500 hover:text-slate-900">Close</button>
       </div>
-      <AvatarPicker value={learnerAvatar} onChange={saveAvatar} min={64} />
+      <AvatarPicker value={pickedAvatar || learnerAvatar} onChange={saveAvatar} min={64} />
     </div>
   );
   // "Grade 5 skills mastered, 24 of 35" — counted at the learner's own grade,
@@ -2357,9 +2375,9 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                       {/* Siblings tell each other apart by the figure faster
                           than by a first name, and this is the one place both
                           are on screen at once. */}
-                      {isAvatarId(c.avatar)
-                        ? <span className="rounded-full overflow-hidden leading-none"><AvatarArt id={c.avatar} size={24} /></span>
-                        : <span className="w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-[11px] font-bold flex items-center justify-center">{(c.name || '?').trim().charAt(0).toUpperCase()}</span>}
+                      <span className="rounded-full overflow-hidden leading-none">
+                        <AvatarArt id={isAvatarId(c.avatar) ? c.avatar : avatarFor(c.id || c.name)} size={24} />
+                      </span>
                       {(c.name || '').trim().split(/\s+/)[0]}
                     </button>
                   ))}

@@ -92,25 +92,11 @@ const LEG_PATTERN = {
   )),
 };
 
-// ---------------------------------------------------------------------------
-// Six figures: three boys, three girls. Skin, hair, coat and ground are chosen
-// so no two read alike at thumbnail size. `label` is for screen readers only —
-// it describes the picture, it is not a name for the person.
-// ---------------------------------------------------------------------------
-export const AVATARS = [
-  { id: 'b1', label: 'Boy in a rust coat', ground: 'sky', skin: 'umber', hair: 'crop', hairColor: 'black', coat: 'rust', trouser: '#24303f', legs: 'plain' },
-  { id: 'b2', label: 'Boy in a forest coat', ground: 'sand', skin: 'tan', hair: 'afro', hairColor: 'coal', coat: 'forest', trouser: '#e4ded1', legs: 'stripe' },
-  { id: 'b3', label: 'Boy in a navy coat', ground: 'sage', skin: 'deep', hair: 'locs', hairColor: 'coal', coat: 'navy', trouser: '#cfc7b6', legs: 'plain' },
-  { id: 'g1', label: 'Girl in a camel coat', ground: 'blush', skin: 'amber', hair: 'bun', hairColor: 'black', coat: 'camel', trouser: '#2b3340', legs: 'plain' },
-  { id: 'g2', label: 'Girl in a grey coat', ground: 'mist', skin: 'fair', hair: 'long', hairColor: 'brown', coat: 'slate', trouser: '#3a3f4a', legs: 'stripe' },
-  { id: 'g3', label: 'Girl in a cream coat', ground: 'clay', skin: 'sand', hair: 'headwrap', hairColor: 'rust', coat: 'cream', trouser: '#2f3b2f', legs: 'speck' },
-];
-
-const byId = Object.fromEntries(AVATARS.map(a => [a.id, a]));
-
-/** The default pick, so a learner who skips the step still gets a real figure. */
-export const DEFAULT_AVATAR = AVATARS[0].id;
-export const isAvatarId = (v) => typeof v === 'string' && !!byId[v];
+// The list and its two rules are plain JavaScript in avatarList.js, so node
+// can hold them to a test; everything re-exports from here so no call site
+// needs to know which file a name lives in.
+export { AVATARS, DEFAULT_AVATAR, isAvatarId, avatarFor } from './avatarList.js';
+import { AVATARS, byId, DEFAULT_AVATAR, avatarFor } from './avatarList.js';
 
 /**
  * One figure, in profile, walking right.
