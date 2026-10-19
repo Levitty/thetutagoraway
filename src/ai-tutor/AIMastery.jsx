@@ -11,6 +11,7 @@ import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, flu
 import { propagateCredit, withdrawMiss, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
 import { selectQuestion, isComplete as placementComplete, computePlacement, buildPlacementPool, sweepRemaining, roomForAnother, worthConfirming, nextToSettle, explainPlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
 import { HorebBot } from './HorebBot.jsx';
+import { AvatarArt, isAvatarId } from '../avatars/Avatars.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { TeachingVisual } from './TeachingVisual.jsx';
 import { QuestionMedia, ChoiceGrid } from './QuestionMedia.jsx';
@@ -2036,6 +2037,17 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // has no enrichment, so these match the unscoped numbers.)
   const scopedStats = getStats(progress, ctx, { excludeEnrichment: true });
   const scopedStrandStats = getStrandStats(progress, ctx, { excludeEnrichment: true });
+  // The rail's profile card. The avatar is the learner's own pick when there
+  // is one (children carry theirs on the roster row); otherwise an initial.
+  const learnerAvatar = isAvatarId(activeLearner?.avatar) ? activeLearner.avatar : null;
+  // "Grade 5 skills mastered, 24 of 35" — counted at the learner's own grade,
+  // not across the whole graph, for the same reason the strand blocks are.
+  const gradeMastered = (() => {
+    const g = progress.declaredGrade ?? getEstimatedGradeLevel(progress, ctx);
+    const here = Object.values(sub.skills).filter(k => gradeOf(k, curriculum) === g);
+    const done = here.filter(k => progress.skills[k.id]?.mastered).length;
+    return { done, total: here.length, pct: here.length ? Math.round((done / here.length) * 100) : 0 };
+  })();
   const scopedGradeStats = getGradeStats(progress, ctx, { excludeEnrichment: true });
 
   return (
@@ -2089,7 +2101,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
 
       {/* ===== MAIN ===== */}
       <main className="flex-1 min-w-0 app-scroll">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-28 lg:pb-14">
+        {/* 1224px, the width the desktop board is drawn at. At max-w-4xl
+            (896px) the two columns were squeezed into less than a laptop
+            screen, so everything stacked tall and the page read as portrait
+            with grey margins either side of it. */}
+        <div className="max-w-[1224px] mx-auto px-4 sm:px-6 lg:pr-7 pt-6 lg:pt-7 pb-28 lg:pb-14">
 
         {/* ========== OVERVIEW (HOME) TAB ========== */}
         {activeTab === 'overview' && (() => {
@@ -2202,7 +2218,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
             );
           })();
           return (
-            <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:items-start">
+            <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-5 lg:items-start">
               {/* Learner switcher — a parent runs HOREB per child. Each learner
                   has their own diagnostic, level, and progress. */}
               {learners.length > 0 && !lockedLearner && (
@@ -2222,7 +2238,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
               )}
 
               {/* ===== LEFT COLUMN — the main flow: what to do, what to fix, progress ===== */}
-              <div className="lg:col-span-2 space-y-4">
+              <div className="min-w-0 space-y-4">
               {/* ===== THE MAIN CARD =====
                   On a wide screen the greeting, the hero and the strands are
                   ONE surface, the way the design has them — separate cards
@@ -2526,19 +2542,51 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 </div>
               )}
 
-              {/* Today's goal — ring (desktop rail; the mobile copy sits up top) */}
-              <div className="hidden lg:block">{goalRing}</div>
-
-              {/* Live tutoring — a first-class door, not a footnote. Practice
-                  and a real tutor are the two halves of the same promise. */}
-              {onFindTutor && (
-                <div className="bg-[#121117] text-white rounded-lg p-5 -rotate-1">
-                  <div className="text-[12px] font-extrabold tracking-[.1em] uppercase text-[#ff7aac]" style={{ fontFamily: 'inherit', letterSpacing: '.1em' }}>Live help</div>
-                  <div className="text-[22px] font-extrabold leading-tight mt-1">A tutor for the stuck part</div>
-                  <p className="text-[13.5px] text-[#c9c9d1] mt-1 mb-3.5">Stuck on something, or want a person to walk it through with you? A checked Kenyan tutor, live, one to one.</p>
-                  <button onClick={onFindTutor} className="bg-white hover:bg-slate-100 text-[#121117] rounded-lg px-5 py-2.5 text-[15px] font-bold transition-colors">Find a live tutor</button>
+              {/* ===== WHO THIS IS =====
+                  The board opens the rail with the learner, not with a
+                  statistic: face, name, grade, level, and how much of their
+                  own grade they hold. Desktop only — the phone already leads
+                  with the greeting and the goal ring. */}
+              <div className="hidden lg:block bg-white rounded-[28px] px-6 py-7 text-center">
+                {learnerAvatar
+                  ? <span className="inline-block"><AvatarArt id={learnerAvatar} size={86} /></span>
+                  : <span className="inline-flex items-center justify-center w-[86px] h-[86px] rounded-full bg-[#6C4BF4] text-white text-[34px] font-extrabold">
+                      {(firstName || 'Y').charAt(0).toUpperCase()}
+                    </span>}
+                <div className="mt-3.5 text-[19px] font-extrabold tracking-tight text-slate-900 truncate">
+                  {(activeLearner?.name || studentName || 'You').trim()}
                 </div>
-              )}
+                <div className="mt-0.5 text-[13px] font-medium text-slate-500">{gradeLabel(declaredG ?? estimatedGrade)}</div>
+
+                {/* Level, read at a glance. The bars are decoration and say so
+                    to a screen reader; the number is the thing. */}
+                <div className="mt-5 flex items-end justify-center gap-3">
+                  <span className="flex items-end gap-1" aria-hidden="true">
+                    <span className="w-[7px] h-4 rounded-[3px] bg-slate-200" />
+                    <span className="w-[7px] h-[26px] rounded-[3px] bg-slate-300" />
+                    <span className="w-[7px] h-9 rounded-[3px] bg-amber-400" />
+                  </span>
+                  <span className="text-[62px] font-extrabold tracking-tighter text-slate-900 leading-[0.86] tabular-nums">
+                    {getLevel(progress.totalXP || 0).level}
+                  </span>
+                  <span className="flex items-end gap-1" aria-hidden="true">
+                    <span className="w-[7px] h-9 rounded-[3px] bg-[#FF4F91]" />
+                    <span className="w-[7px] h-[26px] rounded-[3px] bg-slate-300" />
+                    <span className="w-[7px] h-4 rounded-[3px] bg-slate-200" />
+                  </span>
+                </div>
+                <div className="mt-2.5 text-[13px] font-semibold text-slate-500">Level {getLevel(progress.totalXP || 0).level}</div>
+
+                <div className="mt-5 text-left">
+                  <div className="flex justify-between text-[12px] font-bold text-slate-500 mb-1.5">
+                    <span>{gradeLabel(declaredG ?? estimatedGrade)} skills mastered</span>
+                    <span className="text-slate-900 tabular-nums">{gradeMastered.done} of {gradeMastered.total}</span>
+                  </div>
+                  <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
+                    <div className="h-2 rounded-full bg-slate-900" style={{ width: `${gradeMastered.pct}%` }} />
+                  </div>
+                </div>
+              </div>
 
               {/* Quick stats. On a phone these sit under the real content and a
                   zero reads as failure, so only earned numbers show; the full
@@ -2560,7 +2608,52 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 const earned = all.filter(s => s.earned);
                 return (
                   <>
-                    <div className="hidden lg:grid grid-cols-2 gap-2.5">{all.map(s => <Tile key={s.label} s={s} />)}</div>
+                    {/* The board's pair rather than four tiles: days in a row,
+                        and today's XP against the goal. Mastery and accuracy
+                        moved into the profile card above, where "how much of
+                        my grade do I hold" already lives. */}
+                    <div className="hidden lg:grid grid-cols-2 gap-3.5">
+                      <div className="bg-white rounded-[22px] px-4.5 py-4">
+                        <div className="flex items-baseline gap-1.5">
+                          <span className="text-[30px] font-extrabold tracking-tight text-slate-900 tabular-nums leading-none">{progress.currentStreak || 0}</span>
+                          <Icon name="flame" className="w-4 h-4 text-[#FF4F91]" />
+                        </div>
+                        <div className="text-[12px] font-semibold text-slate-500 mt-1">days in a row</div>
+                      </div>
+                      <div className="bg-white rounded-[22px] px-4.5 py-4">
+                        <div className="text-[30px] font-extrabold tracking-tight text-slate-900 leading-none tabular-nums">
+                          {Math.min(todaysXP(progress), DAILY_GOAL_XP)}<span className="text-[16px] text-slate-400">/{DAILY_GOAL_XP}</span>
+                        </div>
+                        <div className="h-1.5 rounded-full bg-slate-100 mt-2 overflow-hidden">
+                          <div className="h-1.5 rounded-full bg-[#FF4F91]" style={{ width: `${dailyGoalPercent(progress)}%` }} />
+                        </div>
+                        <div className="text-[12px] font-semibold text-slate-500 mt-1.5">XP today</div>
+                      </div>
+                    </div>
+
+                    {/* The board's dark card. For a learner who has already
+                        been placed this is the retake, which was a grey text
+                        link at the very bottom of the rail where nobody would
+                        find it. */}
+                    <button onClick={() => setView('welcome')}
+                      className="hidden lg:block w-full text-left bg-slate-900 rounded-[28px] px-6 py-7 relative overflow-hidden">
+                      <svg width="150" height="150" viewBox="0 0 150 150" aria-hidden="true" className="absolute -right-10 -bottom-10 opacity-50">
+                        <circle cx="75" cy="75" r="74" fill="none" stroke="#3A3A42" strokeWidth="2" />
+                        <circle cx="75" cy="75" r="50" fill="none" stroke="#3A3A42" strokeWidth="2" />
+                        <circle cx="75" cy="75" r="26" fill="none" stroke="#3A3A42" strokeWidth="2" />
+                      </svg>
+                      <span className="relative block text-[26px] font-extrabold leading-tight tracking-tight text-white">
+                        {progress.diagnosed ? 'Moved on since the check?' : 'Not sure where to begin?'}
+                      </span>
+                      <span className="relative block text-[14px] leading-relaxed font-medium text-slate-400 mt-3">
+                        {progress.diagnosed
+                          ? 'Take it again and the plan starts from where you are now. No marks, no pass or fail.'
+                          : 'The check asks about 20 questions and finds the right place to start. No marks, no pass or fail.'}
+                      </span>
+                      <span className="relative inline-flex items-center h-[50px] px-6 mt-5 rounded-full bg-white text-slate-900 font-bold text-[15px]">
+                        {progress.diagnosed ? 'Retake the check' : 'Start the check'}
+                      </span>
+                    </button>
                     {earned.length > 0 && (
                       <div className={`lg:hidden grid gap-2.5 ${earned.length === 1 ? 'grid-cols-1' : 'grid-cols-2'}`}>
                         {earned.map(s => <Tile key={s.label} s={s} />)}
@@ -2569,6 +2662,17 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   </>
                 );
               })()}
+
+              {/* Live tutoring — a first-class door, not a footnote. Practice
+                  and a real tutor are the two halves of the same promise. */}
+              {onFindTutor && (
+                <div className="bg-[#121117] text-white rounded-lg p-5 -rotate-1">
+                  <div className="text-[12px] font-extrabold tracking-[.1em] uppercase text-[#ff7aac]" style={{ fontFamily: 'inherit', letterSpacing: '.1em' }}>Live help</div>
+                  <div className="text-[22px] font-extrabold leading-tight mt-1">A tutor for the stuck part</div>
+                  <p className="text-[13.5px] text-[#c9c9d1] mt-1 mb-3.5">Stuck on something, or want a person to walk it through with you? A checked Kenyan tutor, live, one to one.</p>
+                  <button onClick={onFindTutor} className="bg-white hover:bg-slate-100 text-[#121117] rounded-lg px-5 py-2.5 text-[15px] font-bold transition-colors">Find a live tutor</button>
+                </div>
+              )}
 
               {/* Recent badges */}
               <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5">
@@ -2588,8 +2692,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 )}
               </div>
 
-              {/* Retake diagnostic */}
-              <button onClick={() => setView('welcome')} className="w-full text-center text-xs text-slate-400 hover:text-slate-700 py-2 transition-colors">Retake the check</button>
+              {/* Retake — phone only; the desktop rail has the dark card. */}
+              <button onClick={() => setView('welcome')} className="lg:hidden w-full text-center text-xs text-slate-400 hover:text-slate-700 py-2 transition-colors">Retake the check</button>
               </div>{/* ===== end RIGHT COLUMN ===== */}
             </div>
           );
