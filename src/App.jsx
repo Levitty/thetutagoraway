@@ -7203,6 +7203,9 @@ function AppInner() {
     if (path === 'schools') return 'schools';
     if (path === 'clubs') return 'clubs';
     if (path === 'spreadsheet') return 'spreadsheet';
+    // Class Insights had no URL of its own: reachable only by clicking through
+    // from the dashboard, so a teacher could not bookmark it or be sent a link.
+    if (path === 'classroom') return 'classroom';
     if (path === 'admin') return 'admin';
     if (path === 'handover') return 'handover';
     if (path === 'family-tablet') return 'family-tablet';

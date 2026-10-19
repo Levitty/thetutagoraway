@@ -139,6 +139,21 @@ export const getKnowledgeFrontier = (progress, ctx) => {
 
 // ==================== GAP DETECTION ====================
 
+/**
+ * Struggling with a skill: poor live accuracy, or an outright diagnostic
+ * failure. The diagnostic seeds attempts:1, which an attempts>=3 threshold
+ * silently ignores, so without the second clause a freshly-diagnosed gap never
+ * surfaces to the student or the teacher.
+ *
+ * Exported because the class view counts the same thing across a roster, and
+ * two definitions of "struggling" that drift apart would have a teacher and a
+ * learner looking at different truths.
+ */
+export const isStruggling = (sp) => !!sp && !!(
+  (sp.attempts >= 3 && (sp.correct / sp.attempts) < 0.6)
+  || (sp.fromDiagnostic && sp.passed === false)
+);
+
 export const findGaps = (progress, ctx) => {
   const c = resolveCtx(ctx);
   const gaps = [];
@@ -146,11 +161,7 @@ export const findGaps = (progress, ctx) => {
 
   for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
-    // Struggling = poor live accuracy OR an outright diagnostic failure — the
-    // diagnostic seeds attempts:1, which the >=3 threshold silently ignored,
-    // so freshly-diagnosed gaps never surfaced to the student or the teacher.
-    const diagnosticFail = sp?.fromDiagnostic && sp?.passed === false;
-    if (sp && ((sp.attempts >= 3 && (sp.correct / sp.attempts) < 0.6) || diagnosticFail)) {
+    if (isStruggling(sp)) {
       const preReqs = skill.keyPrerequisites || skill.prerequisites;
       for (const pid of preReqs) {
         const pp = progress.skills[pid];
@@ -176,6 +187,78 @@ export const findGaps = (progress, ctx) => {
   }
 
   return gaps.sort((a, b) => b.priority - a.priority);
+};
+
+// ==================== THE CLASS, NOT THE CHILD ====================
+//
+// A teacher opening a roster of thirty-four one at a time learns thirty-four
+// separate things and cannot act on any of them before the bell. The same
+// data read down the other axis answers the question they actually have:
+// WHAT DO I TEACH TOMORROW, AND TO WHOM.
+//
+// Everything here is already measured per learner. Nothing new is collected.
+
+/**
+ * One class's gaps, by skill rather than by child.
+ *
+ * `learners` is [{ id, name, progress }]. Two different things put a skill on
+ * the list, and they are kept apart because they ask for different lessons:
+ *
+ *   blocked  — a learner is failing something that needs this skill, and has
+ *              not mastered this skill. A foundation to go back to.
+ *   failing  — the learner is struggling with this skill itself, right now.
+ *              Usually the thing that was just taught.
+ *
+ * A learner can appear under both, for different skills. They are counted once
+ * per skill, under the more urgent of the two, because "nine children" has to
+ * mean nine children.
+ */
+export const classGaps = (learners, ctx) => {
+  const c = resolveCtx(ctx);
+  const bySkill = new Map();
+
+  const note = (skillId, learner, kind, extra = {}) => {
+    const skill = c.skills[skillId];
+    if (!skill) return;
+    let row = bySkill.get(skillId);
+    if (!row) {
+      row = { id: skillId, name: skill.name, strand: skill.strand, grade: skill.grade,
+              critical: !!skill.critical, blockedSkills: 0, blocked: [], failing: [] };
+      bySkill.set(skillId, row);
+    }
+    Object.assign(row, extra);
+    // One learner, one entry per skill. "blocked" wins: a foundation they
+    // never had explains the failure above it, and is the lesson to teach.
+    const other = kind === 'blocked' ? row.failing : row.blocked;
+    const i = other.findIndex(l => l.id === learner.id);
+    if (i >= 0) { if (kind === 'blocked') other.splice(i, 1); else return; }
+    const here = row[kind];
+    if (!here.some(l => l.id === learner.id)) here.push({ id: learner.id, name: learner.name });
+  };
+
+  for (const l of learners || []) {
+    const progress = l?.progress;
+    if (!progress?.skills) continue;
+    for (const g of findGaps(progress, c)) {
+      note(g.id, l, 'blocked', { blockedSkills: g.blockedSkills, reason: g.reason });
+    }
+    for (const skill of c.skillList) {
+      if (isStruggling(progress.skills[skill.id])) note(skill.id, l, 'failing');
+    }
+  }
+
+  const rows = [...bySkill.values()]
+    .map(r => ({ ...r, count: r.blocked.length + r.failing.length }))
+    .filter(r => r.count > 0);
+
+  // Most children first. Then the foundation over the symptom, since teaching
+  // the foundation is what clears the symptom; then how much it unblocks.
+  return rows.sort((a, b) =>
+    b.count - a.count
+    || b.blocked.length - a.blocked.length
+    || (b.critical ? 1 : 0) - (a.critical ? 1 : 0)
+    || (b.blockedSkills || 0) - (a.blockedSkills || 0)
+    || (a.grade ?? 99) - (b.grade ?? 99));
 };
 
 // ==================== REVIEW DETECTION ====================

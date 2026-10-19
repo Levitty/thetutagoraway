@@ -15,7 +15,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { supabase } from '../supabase.js';
 import { SUBJECTS } from './subjects.js';
-import { getStats, getStrandStats, getEstimatedGradeLevel, findGaps } from './adaptiveEngine.js';
+import { getStats, getStrandStats, getEstimatedGradeLevel, findGaps, classGaps } from './adaptiveEngine.js';
 import { Icon } from './components/Icons.jsx';
 
 const SUBJECT_ID = 'math';
@@ -86,18 +86,27 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   const [creating, setCreating] = useState(false);
   const [createError, setCreateError] = useState(null);
   const [copiedCode, setCopiedCode] = useState(null);
+  // Which class is being looked at. The roster table has existed since the
+  // first migration and nothing read it, so every number on this page was a
+  // number about "everyone whose row I can see" — which is not a class, and
+  // not something a teacher teaches.
+  const [classId, setClassId] = useState('all');
+  const [members, setMembers] = useState([]);
 
   const ctx = useMemo(() => ctxFor(SUBJECT_ID), []);
 
-  // Load the teacher's classes (RLS scopes this to classes they own).
+  // Load the teacher's classes and their rosters (RLS scopes both to classes
+  // they own).
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const { data } = await supabase
-        .from('classes')
-        .select('id, name, join_code')
-        .order('created_at', { ascending: true });
-      if (!cancelled) setClasses(data || []);
+      const [{ data: cls }, { data: mem }] = await Promise.all([
+        supabase.from('classes').select('id, name, join_code').order('created_at', { ascending: true }),
+        supabase.from('class_members').select('class_id, student_id'),
+      ]);
+      if (cancelled) return;
+      setClasses(cls || []);
+      setMembers(mem || []);
     })();
     return () => { cancelled = true; };
   }, [teacherProfile?.id]);
@@ -176,19 +185,33 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
     return () => { cancelled = true; };
   }, [ctx, teacherProfile?.id]);
 
+  // ---- the class being looked at ----
+  const inClass = useMemo(() => {
+    if (classId === 'all') return students;
+    const ids = new Set(members.filter(m => m.class_id === classId).map(m => m.student_id));
+    return students.filter(s => ids.has(s.userId));
+  }, [students, members, classId]);
+
+  // ---- what to teach next, and to whom ----
+  // The same measurements as the roster below, read down the other axis.
+  const gaps = useMemo(
+    () => classGaps(inClass.map(s => ({ id: s.userId, name: s.name, progress: s.progress })), ctx).slice(0, 5),
+    [inClass, ctx]
+  );
+
   // ---- class summary ----
   const summary = useMemo(() => {
-    if (!students.length) return null;
-    const levels = students.map(s => s.snap.level);
+    if (!inClass.length) return null;
+    const levels = inClass.map(s => s.snap.level);
     const avg = levels.reduce((a, b) => a + b, 0) / levels.length;
-    const behind = students.filter(s => s.snap.gapCount > 0 || s.snap.level <= 6).length;
-    const ahead = students.filter(s => s.snap.accelerated || s.snap.level >= 9).length;
-    return { count: students.length, avg, behind, ahead };
-  }, [students]);
+    const behind = inClass.filter(s => s.snap.gapCount > 0 || s.snap.level <= 6).length;
+    const ahead = inClass.filter(s => s.snap.accelerated || s.snap.level >= 9).length;
+    return { count: inClass.length, avg, behind, ahead };
+  }, [inClass]);
 
   const sorted = useMemo(
-    () => [...students].sort((a, b) => b.snap.level - a.snap.level),
-    [students]
+    () => [...inClass].sort((a, b) => b.snap.level - a.snap.level),
+    [inClass]
   );
 
   // ---- render ----
@@ -213,48 +236,79 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
       </header>
 
       <main className="max-w-4xl mx-auto px-4 py-5">
-        {/* Needs you today — the teacher's first question, answered first.
-            Named stuck skills + a five-minute physical-materials move, not a count. */}
-        {(() => {
-          const needs = students
-            .filter(s => s.snap.topGaps?.length > 0)
-            .sort((a, b) => b.snap.gapCount - a.snap.gapCount)
-            .slice(0, 3);
-          if (!needs.length) return null;
-          return (
-            <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-5">
-              <div className="flex items-baseline justify-between mb-1">
-                <h2 className="font-semibold text-slate-900">
-                  {needs.length === 1 ? 'One child needs you today' : `${needs.length} children need you today`}
-                </h2>
-                <span className="text-xs text-slate-400">stuck on a foundation</span>
-              </div>
-              <div className="divide-y divide-slate-100">
-                {needs.map(st => {
-                  const gap = st.snap.topGaps[0];
-                  return (
-                    <button key={st.id} onClick={() => setSelected(st)} className="w-full text-left py-3 group">
-                      <div className="flex flex-wrap items-baseline gap-x-3">
-                        <span className="font-semibold text-slate-900 group-hover:underline">{st.name}</span>
-                        <span className="text-sm font-semibold text-red-600">{gap.name}</span>
-                        <span className="text-xs text-slate-400">{gap.strand} · Grade {gap.grade}</span>
-                      </div>
-                      <p className="mt-1 text-sm text-slate-600">
-                        <span className="font-semibold text-amber-600">Five-minute move: </span>
-                        {fiveMinuteMove(gap)}
-                      </p>
-                      {st.snap.topGaps.length > 1 && (
-                        <p className="mt-0.5 text-xs text-slate-400">
-                          Also stuck: {st.snap.topGaps.slice(1).map(g => g.name).join(' · ')}
-                        </p>
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
+        {/* Which class. The roster table has existed since the first migration
+            and nothing read it, so every number here was about "everyone whose
+            row I can see" rather than about a class. */}
+        {classes.length > 0 && (
+          <div className="flex items-center gap-2 flex-wrap mb-4">
+            <span className="text-xs text-slate-400 mr-1">Showing</span>
+            {[{ id: 'all', name: 'Everyone' }, ...classes].map(c => (
+              <button key={c.id} onClick={() => setClassId(c.id)}
+                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${classId === c.id ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'}`}>
+                {c.name}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* TEACH THIS NEXT — the teacher's real question, answered first.
+            A roster answers "how is Amani doing?" thirty-four times. Nobody
+            can act on thirty-four answers before the bell. This is the same
+            measurements read down the other axis: one skill, the children it
+            is holding up, and something to do about it on Tuesday. */}
+        {gaps.length > 0 && (
+          <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-5">
+            <div className="flex items-baseline justify-between mb-1">
+              <h2 className="font-semibold text-slate-900">Teach this next</h2>
+              <span className="text-xs text-slate-400">across {inClass.length} {inClass.length === 1 ? 'student' : 'students'}</span>
             </div>
-          );
-        })()}
+            <p className="text-xs text-slate-500 mb-2">
+              Ranked by how many children one lesson would unblock.
+            </p>
+            <div className="divide-y divide-slate-100">
+              {gaps.map(g => {
+                const who = [...g.blocked, ...g.failing];
+                const share = inClass.length ? Math.round((g.count / inClass.length) * 100) : 0;
+                return (
+                  <div key={g.id} className="py-3">
+                    <div className="flex flex-wrap items-baseline gap-x-3">
+                      <span className="text-xl font-bold text-slate-900 tabular-nums">{g.count}</span>
+                      <span className="text-sm font-semibold text-red-600">{g.name}</span>
+                      <span className="text-xs text-slate-400">{g.strand} · Grade {g.grade}</span>
+                      {inClass.length > 1 && <span className="text-xs text-slate-400">{share}% of the class</span>}
+                    </div>
+                    {/* The two readings ask for different lessons, so they are
+                        never merged into one number without saying which — but
+                        the counts are only spelled out when both apply, since
+                        otherwise they just repeat the number above.
+
+                        No "unlocks 166 later skills" here: that is the whole
+                        transitive chain, every foundation scores between 140
+                        and 190, and a number that is always enormous tells a
+                        teacher nothing. It still ranks the list; `critical` is
+                        the part of it worth reading. */}
+                    <p className="mt-0.5 text-xs text-slate-500">
+                      {g.blocked.length > 0 && g.failing.length > 0
+                        ? <>{g.blocked.length} missing it as a foundation · {g.failing.length} struggling with it right now</>
+                        : g.blocked.length > 0
+                        ? <>missing it as a foundation — they are failing work that needs it</>
+                        : <>struggling with it right now</>}
+                      {g.critical && <span className="text-slate-400"> · a foundation skill</span>}
+                    </p>
+                    <p className="mt-1 text-sm text-slate-600">
+                      <span className="font-semibold text-amber-600">Five-minute move: </span>
+                      {fiveMinuteMove(g)}
+                    </p>
+                    <p className="mt-1 text-xs text-slate-500">
+                      {who.slice(0, 8).map(l => l.name).join(' · ')}
+                      {who.length > 8 && ` · +${who.length - 8} more`}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Classes & join codes */}
         <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-5">
