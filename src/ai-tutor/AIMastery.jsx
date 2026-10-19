@@ -1523,18 +1523,31 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
       <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell" onClick={() => activeTooltip && setActiveTooltip(null)}>
         {/* Header */}
         <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
-            <button onClick={goHome} className="text-slate-400 hover:text-slate-700 flex items-center gap-1 text-sm"><Icon name="back" className="w-4 h-4" /> Exit</button>
-            <div className="text-center flex-1 min-w-0">
-              <div className="font-semibold text-slate-900 text-sm truncate">{skill.name}</div>
-              <div className="text-xs text-slate-400">Grade {skill.grade} · {skill.strand}</div>
+          {/* The board's header: a way back, how far through this is, and
+              what today has earned. A one-pixel bar across the whole width
+              said "loading" more than it said "three of eight"; segments
+              count, so a child can see the end from here. */}
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3">
+            <button onClick={goHome} aria-label="Exit this lesson" title="Exit"
+              className="w-11 h-11 shrink-0 rounded-[14px] bg-white border border-slate-200 flex items-center justify-center text-slate-900 hover:bg-slate-50 transition-colors">
+              <Icon name="back" className="w-5 h-5" />
+            </button>
+            <div className="flex-1 min-w-0">
+              <div className="flex gap-1" role="progressbar" aria-valuenow={shownDone} aria-valuemin={0}
+                aria-valuemax={masterTarget} aria-label={`Question ${Math.min(shownDone + 1, masterTarget)} of ${masterTarget}`}>
+                {Array.from({ length: masterTarget }).map((_, i) => (
+                  <span key={i} className={`flex-1 h-1.5 rounded-full ${i < shownDone ? 'bg-slate-900' : 'bg-slate-300'}`} />
+                ))}
+              </div>
+              <div className="mt-1.5 text-[11px] font-semibold text-slate-500 truncate">
+                {testOutSkill ? 'Quick check' : `Question ${Math.min(shownDone + 1, masterTarget)} of ${masterTarget}`} · {skill.name}
+              </div>
             </div>
-            <div className="text-right shrink-0">
-              <div className="font-bold text-sm text-slate-900 tabular-nums">{shownDone}/{masterTarget}</div>
-              <div className="text-xs text-slate-400">{testOutSkill ? 'quick check' : 'to master'}</div>
+            <div className="w-11 h-11 shrink-0 rounded-[14px] bg-amber-400 flex flex-col items-center justify-center leading-none">
+              <span className="text-[15px] font-extrabold text-slate-900 tabular-nums">{todaysXP(progress)}</span>
+              <span className="text-[8px] font-bold tracking-[.06em] text-[#6B5309] mt-0.5">XP</span>
             </div>
           </div>
-          <div className="h-1 bg-slate-100"><div className="h-full bg-[#ff7aac] transition-all" style={{ width: `${pct}%` }} /></div>
         </div>
 
         <div className="px-4 sm:px-6 pt-6 pb-20 app-scroll">
@@ -1616,6 +1629,22 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 </div>
               </div>
               <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
+                {/* Where this question sits. The header names the skill; these
+                    say which part of the subject it belongs to, which is what
+                    lets a child start building a map instead of meeting a
+                    sequence of unrelated sums. */}
+                {!interleave && (
+                  <div className="flex flex-wrap gap-1.5 mb-3">
+                    <span className="bg-[#FFF0F5] text-[#C2255C] text-[10px] font-bold tracking-[.06em] uppercase px-2.5 py-1 rounded-full">
+                      {strandOf(skill, curriculum)}
+                    </span>
+                    {skill.curricula?.[curriculum]?.substrand && (
+                      <span className="bg-slate-100 text-slate-500 text-[10px] font-bold tracking-[.06em] uppercase px-2.5 py-1 rounded-full">
+                        {skill.curricula[curriculum].substrand}
+                      </span>
+                    )}
+                  </div>
+                )}
                 {interleave && (
                   <div className="inline-flex items-center gap-1.5 mb-3 text-xs font-bold text-[#6d6fcb] bg-[#f5f6fc] border border-[#e8e9f6] rounded-full px-3 py-1.5">
                     <Icon name="refresh" className="w-3.5 h-3.5" /> Quick review · {interleave.name}
