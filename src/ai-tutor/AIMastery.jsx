@@ -6,16 +6,16 @@
 import { useHorebLook } from './horebLook.js';
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
-import { prereqsMet, getStatus, getRecommendedPath, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
+import { prereqsMet, getStatus, getRecommendedPath, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, strandsInReach, weakestStrand, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, withdrawMiss, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
 import { selectQuestion, isComplete as placementComplete, computePlacement, buildPlacementPool, sweepRemaining, roomForAnother, worthConfirming, nextToSettle, explainPlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
 import { HorebBot } from './HorebBot.jsx';
-import { AvatarArt, isAvatarId } from '../avatars/Avatars.jsx';
+import { AvatarArt, AvatarPicker, isAvatarId } from '../avatars/Avatars.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { TeachingVisual } from './TeachingVisual.jsx';
 import { QuestionMedia, ChoiceGrid } from './QuestionMedia.jsx';
-import { computeSteps, diagnoseError, genericNudge } from './remediation.js';
+import { computeSteps, diagnoseError, genericNudge, hintRungs } from './remediation.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
 import { defaultProgress, loadProgress, loadLocalProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
@@ -93,24 +93,6 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 // stays on this device. autoStartGrade skips the welcome screen and starts the
 // check at that grade; onDiagnosed(progress) replaces the usual "home" view when
 // the check finishes.
-// Partial reveal — "show me the first steps". Never the last step (that is
-// the answer), never more than two, and any step shown that ends in
-// "= <answer>" is cut at the equals sign. Before this, a one- or two-step
-// solution was shown whole: on a four-choice question the "hint" was a free
-// tick, and the first-steps box read "→ 18 × 4 = 72" with 72 sitting in
-// option C.
-const withholdAnswer = (steps, answer) => {
-  if (!Array.isArray(steps) || !steps.length) return steps;
-  const shown = steps.length > 1 ? steps.slice(0, Math.min(2, steps.length - 1)) : steps.slice(0, 1);
-  const a = String(answer ?? '').trim().replace(/\u2212/g, '-');
-  if (!a) return shown;
-  const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/-/g, '[-\u2212]');
-  const tail = new RegExp('\\s*=\\s*' + esc + '\\s*$');
-  const cut = (str) => str.replace(tail, ' = ?');
-  return shown.map(st => typeof st === 'string' ? cut(st)
-    : (st && typeof st.expr === 'string') ? { ...st, expr: cut(st.expr) } : st);
-};
-
 // The strand blocks on the dashboard. Colour is how a child tells one strand
 // from another at a glance — faster than reading five labels — so each gets a
 // fixed one from the HOREB palette (see horeb-look.css) and keeps it
@@ -127,7 +109,7 @@ const STRAND_BLOCK = {
   _:               { bg: '#D7D7DE', ink: '#16161A', meta: '#5C5C66' },
 };
 
-export function AIMastery({ onBack, userId, studentName, onFindTutor, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, autoStartCurriculum = null, onDiagnosed = null }) {
+export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAvatar = null, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, autoStartCurriculum = null, onDiagnosed = null }) {
   useHorebLook();
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
   const [progress, setProgress] = useState(defaultProgress);
@@ -200,6 +182,29 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   }, [userId]);
   const learnerBase = activeLearner ? `${userId}_c${activeLearner.id}` : userId;
   const learnerId = activeLearner?.id || null;
+
+  // The figure a learner picked for themselves. Changeable from inside HOREB
+  // because the only other place to set one is the sign-up sheet: an account
+  // made before the picker existed had no figure and no way to get one, which
+  // is why the avatars were nowhere to be seen on screen.
+  const [ownAvatar, setOwnAvatar] = useState(profileAvatar);
+  useEffect(() => { setOwnAvatar(profileAvatar); }, [profileAvatar]);
+  const [pickingAvatar, setPickingAvatar] = useState(false);
+  const saveAvatar = useCallback((id) => {
+    if (!isAvatarId(id)) return;
+    setPickingAvatar(false);
+    // Local first, then the row: the figure changes under the child's finger
+    // whether or not the write lands (a family tablet signs in as the device,
+    // so the children row may not be writable from here).
+    if (activeLearner) {
+      setActiveLearner(l => (l ? { ...l, avatar: id } : l));
+      setLearners(ls => ls.map(l => (l.id === activeLearner.id ? { ...l, avatar: id } : l)));
+      if (userId) supabase.from('children').update({ avatar: id }).eq('id', activeLearner.id).eq('parent_id', userId).then(() => {}, () => {});
+    } else {
+      setOwnAvatar(id);
+      if (userId) supabase.from('profiles').update({ avatar: id }).eq('id', userId).then(() => {}, () => {});
+    }
+  }, [activeLearner, userId]);
   const keyFor = useCallback(
     (subj) => (subj === 'math' ? learnerBase : `${learnerBase}_${subj}`),
     [learnerBase],
@@ -1776,21 +1781,19 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 {/* Roadside assistance, not GPS: only offered once the child has
                     actually sat with the problem — never as a reflex tap. */}
                 {!feedback && !problem.parts && hintLevel < 1 && attemptCount === 0 && hintUnlocked && (
-                  <button onClick={() => setHintLevel(1)} className="mt-3 text-sm text-slate-400 hover:text-amber-600 transition-colors">I'm stuck — give me a nudge</button>
+                  <button onClick={() => setHintLevel(1)}
+                    className="mt-3.5 w-full h-[52px] rounded-2xl border-2 border-dashed border-[#C9C9D2] text-[15px] font-bold text-slate-900 hover:border-[#FF4F91] hover:text-[#C2255C] transition-colors flex items-center justify-center gap-2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 3.5 10.9V16h-7v-2.1A6 6 0 0 1 12 3Z" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    Stuck? Show a hint
+                  </button>
                 )}
 
                 {/* "type a number" nudge — doesn't cost an attempt */}
                 {!feedback && wrongInfo?.needNumber && (
                   <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-2xl text-amber-800 text-sm">
                     Type your answer as a number.
-                  </div>
-                )}
-
-                {/* Proactive hint (asked before trying) — an op-appropriate nudge */}
-                {hintLevel >= 1 && !feedback && attemptCount === 0 && (
-                  <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-2xl text-amber-800 text-sm">
-                    <span className="font-semibold text-amber-700">Hint:</span> {problem.hint || genericNudge(problem)}
-                    {hintLevel < 2 && !plan && !problem.explain && <button onClick={() => setHintLevel(2)} className="ml-2 text-amber-700 underline hover:text-amber-800">still stuck?</button>}
                   </div>
                 )}
 
@@ -1804,21 +1807,70 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   </div>
                 )}
 
-                {hintLevel >= 2 && !feedback && !plan && !problem.explain && (() => {
-                  const all = problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps;
-                  if (!all) return null;
-                  const steps = withholdAnswer(all, problem.answer);
+                {/* ===== THE HINT LADDER =====
+                    One panel that climbs, rather than two boxes in different
+                    colours appearing underneath each other. Three rungs at
+                    most: orient, then the method, then the work laid out to be
+                    filled in. The rule the panel states out loud is the rule
+                    tests/hints.test.mjs enforces on the content and
+                    answerRule.js enforces on the model's replies — a hint
+                    never names its answer, so the ladder shows the shape of
+                    the work and leaves every value to the child. */}
+                {hintLevel >= 1 && !feedback && (() => {
+                  // A completion problem (plan) or an authored explanation has
+                  // its own scaffold, so the ladder stays at its first rung
+                  // rather than stepping through a solution twice.
+                  const steps = (plan || problem.explain) ? []
+                    : (problem.solutionSteps || computeSteps(problem) || generateWorkedExample(activeSkill)?.steps || []);
+                  const ladder = hintRungs(problem, { steps });
+                  const rungs = ladder.length;
+                  // Rung 1 orients; each rung after it adds one step. The step
+                  // count is capped at two upstream, so the ladder is never
+                  // longer than the three rungs the board draws.
+                  const shown = ladder.slice(1, Math.max(0, hintLevel - 1) + 1);
+                  // After a wrong answer the box above has already said the
+                  // nudge, so repeating it under a "HINT 2 OF 3" header would
+                  // read as a stuck screen.
+                  const showNudge = !(attemptCount > 0 && hintLevel >= 2);
                   return (
-                    <div className="mt-3 p-3 bg-[#eef1f8] border border-[#d3daf0] rounded-2xl text-sm">
-                      <span className="font-semibold text-[#6d6fcb]">Here are the first steps to guide you:</span>
-                      <div className="mt-2 space-y-1">
-                        {steps.map((step, i) => (
-                          <div key={i} className="flex gap-2 text-slate-700">
-                            <span className="text-[#6d6fcb] font-bold tabular-nums">{i + 1}.</span>
-                            <TermTooltip text={step} />
-                          </div>
-                        ))}
+                    <div className="mt-4 bg-[#FFF0F5] rounded-[20px] p-4">
+                      <div className="flex items-center justify-between gap-2.5 mb-2">
+                        <span className="text-[10px] font-extrabold tracking-[.1em] text-[#C2255C]">
+                          HINT {Math.min(hintLevel, rungs)} OF {rungs}
+                        </span>
+                        <span className="text-[10px] font-bold tracking-[.06em] text-[#B06A86]">NEVER THE ANSWER</span>
                       </div>
+                      {showNudge && (
+                        <p className="text-[15px] leading-[1.45] font-medium text-[#16161A]">{ladder[0].text}</p>
+                      )}
+                      {shown.length > 0 && (
+                        <div className={`${showNudge ? 'mt-3.5' : ''} flex flex-col gap-[7px]`}>
+                          {shown.map(({ label, slot }, i) => (
+                            // One numbered list, whether a rung ends in a blank
+                            // to fill or in an instruction to follow: the two
+                            // shapes are steps of the same method.
+                            <div key={i} className={`flex gap-2 text-[14px] text-[#16161A] ${slot ? 'items-center' : 'leading-snug'}`}>
+                              <span className="font-bold text-[#C2255C] tabular-nums shrink-0">{i + 1}.</span>
+                              {slot ? <>
+                                {/* The label takes what it needs and the blank
+                                    is fixed: the other way round, a 1000px card
+                                    gave the box the whole row and wrapped a
+                                    six-word label into a 108px column. */}
+                                <span className="flex-1 min-w-0 font-bold tabular-nums">
+                                  {label}<span className="sr-only"> — work this out</span>
+                                </span>
+                                <span className="w-[40%] max-w-[180px] shrink-0 h-[38px] rounded-[11px] border-2 border-dashed border-[#F0A8C4] bg-white" aria-hidden="true" />
+                              </> : <TermTooltip text={label} />}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {hintLevel < rungs && (
+                        <button onClick={() => setHintLevel(h => h + 1)}
+                          className="mt-3.5 h-11 px-[18px] rounded-full border-2 border-[#16161A] text-[14px] font-bold text-[#16161A] hover:bg-[#16161A] hover:text-white transition-colors">
+                          Next hint
+                        </button>
+                      )}
                     </div>
                   );
                 })()}
@@ -2066,9 +2118,51 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
   // has no enrichment, so these match the unscoped numbers.)
   const scopedStats = getStats(progress, ctx, { excludeEnrichment: true });
   const scopedStrandStats = getStrandStats(progress, ctx, { excludeEnrichment: true });
-  // The rail's profile card. The avatar is the learner's own pick when there
-  // is one (children carry theirs on the roster row); otherwise an initial.
-  const learnerAvatar = isAvatarId(activeLearner?.avatar) ? activeLearner.avatar : null;
+  // The rail's profile card. A child's figure comes from their roster row; the
+  // account holder's from their own profile. The parent's pick is deliberately
+  // NOT a fallback for a child — a child seeing their parent's figure above
+  // their own name is worse than seeing an initial.
+  //
+  // The roster lookup is a repair, not a nicety: student mode stored the
+  // learner without an avatar until this was fixed, so a tablet already in a
+  // child's hands carries a stale record. The roster row is the truth.
+  const learnerAvatar = (() => {
+    if (activeLearner) {
+      const fresh = learners.find(l => l.id === activeLearner.id)?.avatar;
+      const id = isAvatarId(activeLearner.avatar) ? activeLearner.avatar : fresh;
+      return isAvatarId(id) ? id : null;
+    }
+    return isAvatarId(ownAvatar) ? ownAvatar : null;
+  })();
+  const whoFirst = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
+  // The figure, wherever it appears, is also the way to change it. Nothing
+  // else on either screen is a picture of the learner, so it reads as theirs
+  // without a label; the label is there for anyone who can't see it.
+  const AvatarButton = ({ size }) => (
+    <button type="button" onClick={() => setPickingAvatar(v => !v)}
+      title="Change your avatar"
+      aria-label={learnerAvatar ? 'Change your avatar' : 'Pick your avatar'}
+      className="rounded-full leading-none shrink-0 hover:opacity-85 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-300"
+      style={{ width: size, height: size, padding: 0, border: 0, background: 'none', overflow: 'hidden' }}>
+      {learnerAvatar
+        ? <AvatarArt id={learnerAvatar} size={size} title={whoFirst ? `${whoFirst}'s avatar` : 'Your avatar'} />
+        : <span className="flex items-center justify-center w-full h-full rounded-full bg-[#6C4BF4] text-white font-extrabold"
+            style={{ fontSize: Math.round(size * 0.4) }}>
+            {(whoFirst || 'Y').charAt(0).toUpperCase()}
+          </span>}
+    </button>
+  );
+  const avatarSheet = pickingAvatar && (
+    <div className="bg-white rounded-[24px] p-5 border-2 border-[#16161A]">
+      <div className="flex items-baseline justify-between gap-3 mb-3">
+        <span className="text-[15px] font-extrabold tracking-tight text-slate-900">
+          {whoFirst ? `Who are you today, ${whoFirst}?` : 'Who are you today?'}
+        </span>
+        <button onClick={() => setPickingAvatar(false)} className="text-[13px] font-semibold text-slate-500 hover:text-slate-900">Close</button>
+      </div>
+      <AvatarPicker value={learnerAvatar} onChange={saveAvatar} min={64} />
+    </div>
+  );
   // "Grade 5 skills mastered, 24 of 35" — counted at the learner's own grade,
   // not across the whole graph, for the same reason the strand blocks are.
   const gradeMastered = (() => {
@@ -2259,7 +2353,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   </button>
                   {learners.map(c => (
                     <button key={c.id} onClick={() => setActiveLearner(c)}
-                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${activeLearner?.id === c.id ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'}`}>
+                      className={`flex items-center gap-2 pl-1 pr-3 py-1 rounded-full text-sm font-medium transition-colors ${activeLearner?.id === c.id ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'}`}>
+                      {/* Siblings tell each other apart by the figure faster
+                          than by a first name, and this is the one place both
+                          are on screen at once. */}
+                      {isAvatarId(c.avatar)
+                        ? <span className="rounded-full overflow-hidden leading-none"><AvatarArt id={c.avatar} size={24} /></span>
+                        : <span className="w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-[11px] font-bold flex items-center justify-center">{(c.name || '?').trim().charAt(0).toUpperCase()}</span>}
                       {(c.name || '').trim().split(/\s+/)[0]}
                     </button>
                   ))}
@@ -2300,20 +2400,27 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                 </form>
               </div>
 
-              {/* Greeting — the guide + who/where */}
-              <div className="flex items-center gap-3 lg:hidden">
-                <HorebBot size={44} className="shrink-0" />
-                <div className="min-w-0">
-                  <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 leading-tight">{greeting}{firstName ? `, ${firstName}` : ''}</h2>
-                  {/* Never show a bare lower grade to a learner who declared a
-                      higher one — "Grade 7 · your level" to a Grade 9 reads as a
-                      demotion. Name their grade first, then where they're solid. */}
-                  <p className="text-sm text-slate-500">
-                    {behindBy > 0
-                      ? <>{gradeLabel(declaredG)} · solid to {gradeLabel(estimatedGrade)}</>
-                      : <>{gradeLabel(estimatedGrade)} · your level</>}
-                  </p>
+              {/* Greeting — the guide + who/where. The figure sits at the end
+                  of the row, which is the slot the phone board draws it in:
+                  the only picture of the learner on the screen, and the way
+                  to change it. */}
+              <div className="lg:hidden space-y-3">
+                <div className="flex items-center gap-3">
+                  <HorebBot size={44} className="shrink-0" />
+                  <div className="min-w-0 flex-1">
+                    <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 leading-tight">{greeting}{firstName ? `, ${firstName}` : ''}</h2>
+                    {/* Never show a bare lower grade to a learner who declared a
+                        higher one — "Grade 7 · your level" to a Grade 9 reads as a
+                        demotion. Name their grade first, then where they're solid. */}
+                    <p className="text-sm text-slate-500">
+                      {behindBy > 0
+                        ? <>{gradeLabel(declaredG)} · solid to {gradeLabel(estimatedGrade)}</>
+                        : <>{gradeLabel(estimatedGrade)} · your level</>}
+                    </p>
+                  </div>
+                  <AvatarButton size={42} />
                 </div>
+                {avatarSheet}
               </div>
 
               {/* Daily-goal ring — mobile only, kept near the top so it's the first thing they see */}
@@ -2371,8 +2478,16 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                     read. As colour blocks they are a thing to be chosen from,
                     which is what they actually are — and the count says how
                     far along each one is without a percentage to decode. */}
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-3.5">{scopedStrandStats.map((s, i) => {
+                {(() => {
+                // Both the in-reach count and the "needs work" rule live in
+                // adaptiveEngine.js, so tests/strand-focus.test.mjs holds the
+                // same implementation the dashboard draws.
+                const blocks = strandsInReach(scopedStrandStats, progress, declaredG);
+                const worst = weakestStrand(blocks);
+                return (
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-3.5">{blocks.map(({ s, done, total }, i) => {
                   const c = STRAND_BLOCK[s.name] || STRAND_BLOCK._;
+                  const needsWork = s.name === worst;
                   // A mosaic rather than a uniform grid: the strand furthest
                   // along gets the tall block and the one needing work gets
                   // the wide one, so the shape of the page says something
@@ -2381,30 +2496,28 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   // rest single — and when the count leaves one block alone on
                   // the last row it takes the whole width rather than sitting
                   // in a corner with two empty cells beside it.
-                  const nStrands = scopedStrandStats.length;
+                  const nStrands = blocks.length;
                   const span = i === 0 ? 'lg:row-span-2 lg:min-h-[300px]'
                     : i === 1 ? 'lg:col-span-2'
                     : (i === nStrands - 1 && (nStrands - 2) % 2 === 1) ? 'lg:col-span-3 lg:min-h-0 lg:h-[116px]'
                     : '';
-                  // Count against what is IN REACH, not against the whole
-                  // graph. Numbers holds 108 skills from Grade 1 to Grade 12,
-                  // so the honest-looking "3 of 108" tells a Grade 5 nothing
-                  // except that they are nowhere — the denominator is work
-                  // they are years from meeting. Their own grade and below is
-                  // the set that means "what I should have by now".
-                  const inReach = declaredG == null
-                    ? s.skills
-                    : s.skills.filter(k => !Number.isFinite(k.grade) || k.grade <= declaredG);
-                  const done = inReach.filter(k => progress.skills[k.id]?.mastered).length;
+                  const count = s.assessed ? `${done} of ${total} skills` : 'Not checked yet';
                   return (
                     <button key={s.name} onClick={() => setActiveTab('skills')}
                       style={{ background: c.bg }}
                       className={`h-24 lg:h-auto lg:min-h-[142px] rounded-2xl lg:rounded-3xl p-3 lg:p-5 flex flex-col justify-between text-left ${span}`}>
-                      <span className="text-[11px] lg:text-[12px] font-bold tabular-nums" style={{ color: c.meta }}>
-                        {s.assessed ? `${done} of ${inReach.length} skills` : 'Not checked yet'}
-                      </span>
+                      {/* The badged block leads with the badge and moves its
+                          count under the name, which is how the board draws
+                          it — the one block that should not look like the
+                          other four. */}
+                      {needsWork
+                        ? <span className="self-start bg-[#16161A] text-white text-[9px] lg:text-[10px] font-bold tracking-[.06em] px-2 lg:px-2.5 py-1 rounded-full">NEEDS WORK</span>
+                        : <span className="text-[11px] lg:text-[12px] font-bold tabular-nums" style={{ color: c.meta }}>{count}</span>}
                       <span className="flex items-end justify-between gap-1.5">
-                        <span className="flex-1 min-w-0 text-[17px] lg:text-[19px] font-extrabold leading-tight" style={{ color: c.ink }}>{s.name}</span>
+                        <span className="flex-1 min-w-0">
+                          <span className="block text-[17px] lg:text-[19px] font-extrabold leading-tight" style={{ color: c.ink }}>{s.name}</span>
+                          {needsWork && <span className="hidden lg:block mt-1 text-[12px] font-bold tabular-nums" style={{ color: c.meta }}>{count}</span>}
+                        </span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="shrink-0 mb-0.5 lg:w-[18px] lg:h-[18px]">
                           <path d="M9 5.5 15.5 12 9 18.5" stroke={c.ink} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
@@ -2412,6 +2525,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                     </button>
                   );
                 })}</div>
+                );
+                })()}
               </div>
 
               </div>{/* ===== end THE MAIN CARD ===== */}
@@ -2577,11 +2692,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   own grade they hold. Desktop only — the phone already leads
                   with the greeting and the goal ring. */}
               <div className="hidden lg:block bg-white rounded-[28px] px-6 py-7 text-center">
-                {learnerAvatar
-                  ? <span className="inline-block"><AvatarArt id={learnerAvatar} size={86} /></span>
-                  : <span className="inline-flex items-center justify-center w-[86px] h-[86px] rounded-full bg-[#6C4BF4] text-white text-[34px] font-extrabold">
-                      {(firstName || 'Y').charAt(0).toUpperCase()}
-                    </span>}
+                <span className="inline-block align-middle"><AvatarButton size={86} /></span>
                 <div className="mt-3.5 text-[19px] font-extrabold tracking-tight text-slate-900 truncate">
                   {(activeLearner?.name || studentName || 'You').trim()}
                 </div>
@@ -2616,6 +2727,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, subscripti
                   </div>
                 </div>
               </div>
+
+              {/* The picker opens under the card it belongs to, on whichever
+                  screen the figure was tapped. */}
+              <div className="hidden lg:block">{avatarSheet}</div>
 
               {/* Quick stats. On a phone these sit under the real content and a
                   zero reads as failure, so only earned numbers show; the full

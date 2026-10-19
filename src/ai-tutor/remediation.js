@@ -16,6 +16,9 @@
 // ============================================================================
 
 import { checkAnswerMatch } from './answerCheck.js';
+// The answer rule, so the hint ladder built here is held to the same one the
+// authored hints and the model's replies answer to, rather than a second copy.
+import { revealed } from './answerRule.js';
 
 // "42 × 4 = ?" / "727 + 112" / "207 - 174 = ?" / "56 ÷ 8" → { a, b, op }.
 // Only plain two-operand integer arithmetic; anything else returns null.
@@ -275,4 +278,78 @@ export const genericNudge = (problem) => {
     '/': 'Ask how many of the second number fit into the first.' }[p.op];
 };
 
-export default { parseArithmetic, computeSteps, diagnoseError, genericNudge };
+/**
+ * Partial reveal — the steps a hint rung may show. Never the last step (that
+ * is the answer), never more than two, and any step shown that ends in
+ * "= <answer>" is cut at the equals sign. Before this, a one- or two-step
+ * solution was shown whole: on a four-choice question the "hint" was a free
+ * tick, and the first-steps box read "→ 18 × 4 = 72" with 72 sitting in
+ * option C.
+ */
+export const withholdAnswer = (steps, answer) => {
+  if (!Array.isArray(steps) || !steps.length) return steps;
+  const shown = steps.length > 1 ? steps.slice(0, Math.min(2, steps.length - 1)) : steps.slice(0, 1);
+  const a = String(answer ?? '').trim().replace(/\u2212/g, '-');
+  if (!a) return shown;
+  const esc = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/-/g, '[-\u2212]');
+  const tail = new RegExp('\\s*=\\s*' + esc + '\\s*$');
+  const cut = (str) => str.replace(tail, ' = ?');
+  return shown.map(st => typeof st === 'string' ? cut(st)
+    : (st && typeof st.expr === 'string') ? { ...st, expr: cut(st.expr) } : st);
+};
+
+/**
+ * A step that ends by stating a value splits into the work to do and the value
+ * it reaches: "380 × 4 = 1520." is really "work out 380 × 4". The value is the
+ * one thing a rung of the hint ladder must not hand over, so with the split in
+ * hand the label goes on the left of the rung and the value behind a blank the
+ * child fills in — "never the answer" applied to every rung, not only the last.
+ *
+ * Everything after the equals must be a bare number for the split to happen.
+ * "Ones: 5 + 8 = 13 — write 3, carry 1." keeps its carry instruction and stays
+ * prose, because the sentence after the value IS the teaching there.
+ */
+const STEP_SLOT = /^(.+?)\s*=\s*([-−]?[\d.,/\s]+)\.?\s*$/;
+export const splitStep = (step) => {
+  const s = String(typeof step === 'string' ? step : (step?.expr ?? step ?? '')).trim();
+  const m = s.match(STEP_SLOT);
+  // The numeric class has to contain "." so that 1.5 is captured whole, which
+  // means it also swallows the sentence's full stop — hence the trim here
+  // rather than a tidier pattern.
+  return m ? { label: m[1].trim(), value: m[2].trim().replace(/\.$/, ''), slot: true }
+    : { label: s.replace(/\.$/, ''), value: null, slot: false };
+};
+
+/**
+ * The rungs of the hint ladder for one problem, in the order they are climbed.
+ * Rung 1 orients; each rung after it adds one step of the method. The whole
+ * ladder lives here rather than in the screen so tests/hint-ladder.test.mjs
+ * can hold every rung of every skill to the answer rule.
+ */
+export const hintRungs = (problem, { steps = null } = {}) => {
+  const nudge = problem?.hint || genericNudge(problem);
+  const all = steps || computeSteps(problem);
+  const shown = Array.isArray(all) && all.length ? withholdAnswer(all, problem?.answer) : [];
+  const answers = [problem?.answer, ...(problem?.accepts || [])].filter(a => a != null);
+  const rungs = [{ kind: 'nudge', text: nudge }];
+  for (const st of shown) {
+    const parts = splitStep(st);
+    // A step can reach the answer without being the LAST step, which is all
+    // withholdAnswer guards against. "7 + 5 = ?" solves in a single column, so
+    // its ones-column step states the answer outright — and the old
+    // first-steps box printed it. Where that happens the ladder stops short:
+    // the honest ladder for a one-column sum is one rung long, because there
+    // is no part of it that is not the answer.
+    // No question-quoting exemption here, deliberately. revealed() excuses a
+    // number the child can already see in the question, which is right for an
+    // authored hint and wrong for a generated step: that exemption is a loose
+    // substring test, so "19" counts as visible because the question says
+    // "190", and "190 ÷ 10 = 19 books each" went straight through it. A step
+    // that states the answer is a leak whatever the question says.
+    if (answers.some(a => revealed(a, parts.label, ''))) break;
+    rungs.push({ kind: 'step', step: st, ...parts });
+  }
+  return rungs;
+};
+
+export default { parseArithmetic, computeSteps, diagnoseError, genericNudge, withholdAnswer, splitStep, hintRungs };

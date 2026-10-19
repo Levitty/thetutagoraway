@@ -17,7 +17,7 @@
 // device's developer tools.
 // ============================================================================
 
-import { supabase } from '../supabase';
+import { supabase } from '../supabase.js';
 
 const MODE_KEY = 'tg_student_mode';
 const LOOK_KEY = (learnerId) => `tg_student_look_${learnerId}`;
@@ -29,7 +29,7 @@ const lsGet = (k) => { try { return localStorage.getItem(k); } catch { return nu
 const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch { /* private mode */ } };
 const lsDel = (k) => { try { localStorage.removeItem(k); } catch { /* private mode */ } };
 
-// { parentId, learnerId, name, grade } | null
+// { parentId, learnerId, name, grade, avatar } | null
 export const getStudentMode = () => {
   try {
     const m = JSON.parse(lsGet(MODE_KEY) || 'null');
@@ -37,7 +37,10 @@ export const getStudentMode = () => {
   } catch { return null; }
 };
 export const startStudentMode = (parentId, learner) => {
-  const m = { parentId, learnerId: learner.id, name: learner.name, grade: learner.grade || null, since: Date.now() };
+  // The avatar travels with the learner. It was left out here, so a tablet
+  // handed to a child — the way HOREB is actually used — showed an initial in
+  // a circle however carefully they had picked their figure.
+  const m = { parentId, learnerId: learner.id, name: learner.name, grade: learner.grade || null, avatar: learner.avatar || null, since: Date.now() };
   lsSet(MODE_KEY, JSON.stringify(m));
   return m;
 };

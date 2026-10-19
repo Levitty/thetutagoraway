@@ -638,6 +638,41 @@ export const getStrandStats = (progress, ctx, { excludeEnrichment = false } = {}
   }));
 };
 
+/**
+ * The strand blocks as the dashboard counts them: against what is IN REACH,
+ * not against the whole graph. Numbers holds 108 skills from Grade 1 to Grade
+ * 12, so the honest-looking "3 of 108" tells a Grade 5 nothing except that
+ * they are nowhere — the denominator is work they are years from meeting.
+ * Their own grade and below is the set that means "what I should have by now".
+ */
+export const strandsInReach = (strandStats, progress, declaredGrade) => (strandStats || []).map((s) => {
+  const inReach = declaredGrade == null
+    ? s.skills
+    : s.skills.filter(k => !Number.isFinite(k.grade) || k.grade <= declaredGrade);
+  const done = inReach.filter(k => progress?.skills?.[k.id]?.mastered).length;
+  return { s, done, total: inReach.length, pct: inReach.length ? done / inReach.length : null };
+});
+
+/**
+ * The one strand to badge "needs work", or null when no such claim is honest.
+ * Three guards, each for a case where the badge would be a lie or just
+ * discouraging:
+ *   assessed only — a strand the check never reached is unknown, not weak,
+ *     and must never be labelled as weak
+ *   behind the best by 20 points — on the morning after a diagnostic every
+ *     strand sits near the same number, and badging whichever one rounded
+ *     lowest is noise
+ *   under half — a learner holding 80% of everything has no strand that needs
+ *     work, however the five of them rank against each other
+ */
+export const weakestStrand = (blocks) => {
+  const ranked = (blocks || []).filter(b => b.s?.assessed && b.pct != null).sort((a, b) => a.pct - b.pct);
+  if (ranked.length < 2) return null;
+  if (ranked[0].pct >= 0.5) return null;
+  if (ranked[ranked.length - 1].pct - ranked[0].pct < 0.2) return null;
+  return ranked[0].s.name;
+};
+
 export const getGradeStats = (progress, ctx, { excludeEnrichment = false } = {}) => {
   const c = resolveCtx(ctx);
   const grades = {};

@@ -7431,7 +7431,7 @@ function AppInner() {
   // ---- Student mode: only the child's space is reachable ----
   if (studentMode && auth.user) {
     const onTablet = !!studentMode.tablet;
-    const learner = { id: studentMode.learnerId, name: studentMode.name, grade: studentMode.grade };
+    const learner = { id: studentMode.learnerId, name: studentMode.name, grade: studentMode.grade, avatar: studentMode.avatar || null };
     const backToSpace = () => handleNavigate('student');
     // Back to the parent: straight away, unless the parent has set a PIN.
     const leaveStudentMode = () => (isFamilyTablet
@@ -7588,7 +7588,7 @@ function AppInner() {
     return (
       <>
         <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} onFindTutor={() => handleNavigate('tutors')}
-          subscription={auth.subscription} onPaywall={() => setShowPaywall(true)} />
+          profileAvatar={auth.profile?.avatar} subscription={auth.subscription} onPaywall={() => setShowPaywall(true)} />
         {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
       </>
     );
