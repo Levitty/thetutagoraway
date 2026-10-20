@@ -17,6 +17,7 @@ import { TeachingVisual } from './TeachingVisual.jsx';
 import { QuestionMedia, ChoiceGrid } from './QuestionMedia.jsx';
 import { computeSteps, diagnoseError, genericNudge, hintRungs } from './remediation.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
+import { openForLearner } from './assignments.js';
 import { defaultProgress, loadProgress, loadLocalProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
@@ -314,9 +315,25 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     } else {
       setJoinStatus('ok');
       setJoinCode('');
+      loadAssignments();
       setTimeout(() => { setShowJoin(false); setJoinStatus(null); }, 1800);
     }
   };
+
+  // Work a teacher has set. RLS returns only the assignments for classes this
+  // learner is actually in, so there is nothing to filter here.
+  //
+  // A child practising as themselves on their own account is the only one this
+  // can apply to: a parent's roster child has no auth user of their own, so
+  // they cannot be in a class. Skipping the query for them keeps a guaranteed
+  // 404 off the dashboard's load path.
+  const [assignments, setAssignments] = useState([]);
+  const loadAssignments = useCallback(() => {
+    if (!userId || guest || activeLearner) { setAssignments([]); return; }
+    supabase.from('assignments').select('id, class_id, title, skill_ids, due_on')
+      .then(({ data, error }) => setAssignments(error ? [] : (data || [])), () => setAssignments([]));
+  }, [userId, guest, activeLearner]);
+  useEffect(() => { loadAssignments(); }, [loadAssignments]);
 
   // ==================== INLINE COMPONENTS ====================
 
@@ -2276,6 +2293,14 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             ? { label: 'Continue learning', sub: nextPick.name, icon: 'play', onClick: () => startLesson(nextPick.id) }
             : { label: 'Take the diagnostic', sub: 'Find your level and get your plan', icon: 'target', onClick: startDiagnostic };
 
+          // ---- WORK A TEACHER SET ----------------------------------------
+          // Skills that are not in this subject's graph are dropped: a maths
+          // assignment must not count a skill the learner cannot be served.
+          const setWork = openForLearner(
+            assignments.map(a => ({ ...a, skill_ids: (a.skill_ids || []).filter(id => SKILLS[id]) })),
+            progress,
+          ).filter(a => a.status.total > 0);
+
           // ---- TODAY'S SESSION -------------------------------------------
           // A finite, ordered list with an end. "Continue learning" is an open
           // tap that never finishes; a learner opening the app needs to know
@@ -2548,6 +2573,53 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               </div>
 
               </div>{/* ===== end THE MAIN CARD ===== */}
+
+              {/* ===== SET BY YOUR TEACHER =====
+                  Above today's session, because work somebody is expecting
+                  outranks the engine's own suggestion. Each row starts the
+                  first skill on it the learner has not mastered, so "Start"
+                  never reopens something they have already done.
+
+                  Nothing is submitted and nothing is ticked off by hand: the
+                  bar fills as they master the skill in ordinary practice,
+                  which is also exactly what their teacher sees. */}
+              {setWork.length > 0 && (
+                <div className="bg-white border border-slate-200 shadow-sm rounded-3xl overflow-hidden">
+                  <div className="px-5 pt-4 pb-1 flex items-baseline justify-between gap-3">
+                    <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#C2255C]">Set by your teacher</div>
+                    <span className="text-[11px] text-slate-400">{setWork.length} {setWork.length === 1 ? 'thing' : 'things'}</span>
+                  </div>
+                  <div className="px-3 py-3 space-y-1.5">
+                    {setWork.map(a => {
+                      const label = SKILLS[a.status.nextId]?.name;
+                      return (
+                        <div key={a.id} className="rounded-2xl px-3 py-3 bg-[#FFF0F5]">
+                          <div className="flex items-baseline justify-between gap-2.5">
+                            <span className="text-[15px] font-extrabold text-slate-900 leading-tight">{a.title}</span>
+                            <span className={`text-[11px] font-bold shrink-0 ${a.due.overdue ? 'text-[#C2255C]' : a.due.tone === 'urgent' ? 'text-amber-700' : 'text-slate-500'}`}>
+                              {a.due.text}
+                            </span>
+                          </div>
+                          <div className="mt-2 flex items-center gap-2.5">
+                            <div className="h-2 flex-1 rounded-full bg-white overflow-hidden">
+                              <div className="h-2 rounded-full bg-[#FF4F91]" style={{ width: `${a.status.percent}%` }} />
+                            </div>
+                            <span className="text-[11px] font-bold text-slate-600 tabular-nums shrink-0">{a.status.done} of {a.status.total}</span>
+                          </div>
+                          {a.status.complete ? (
+                            <p className="mt-2 text-[13px] font-bold text-[#2A6B52]">Done — nothing left on this one.</p>
+                          ) : (
+                            <button onClick={() => startLesson(a.status.nextId)}
+                              className="mt-2.5 h-10 px-4 rounded-full bg-[#16161A] text-white text-[13px] font-bold hover:bg-[#2b2b33] transition-colors">
+                              {label ? `Start: ${label}` : 'Start'}
+                            </button>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
 
               {/* ===== TODAY'S SESSION — finite, ordered, with an end =====
                   Only worth showing when there is more than one thing in it:

@@ -16,6 +16,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { supabase } from '../supabase.js';
 import { SUBJECTS } from './subjects.js';
 import { getStats, getStrandStats, getEstimatedGradeLevel, findGaps, classGaps } from './adaptiveEngine.js';
+import { assignmentRoster, dueLabel, isoDay } from './assignments.js';
 import { Icon } from './components/Icons.jsx';
 
 const SUBJECT_ID = 'math';
@@ -92,6 +93,13 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   // not something a teacher teaches.
   const [classId, setClassId] = useState('all');
   const [members, setMembers] = useState([]);
+  const [assignments, setAssignments] = useState([]);
+  // The table is created by a migration the owner runs. Until they have, every
+  // query 404s — so the feature hides itself rather than papering the page
+  // with an error a teacher can do nothing about.
+  const [assignmentsReady, setAssignmentsReady] = useState(true);
+  const [assigning, setAssigning] = useState(null);   // the gap row being set
+  const [assignError, setAssignError] = useState(null);
 
   const ctx = useMemo(() => ctxFor(SUBJECT_ID), []);
 
@@ -100,16 +108,43 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const [{ data: cls }, { data: mem }] = await Promise.all([
+      const [{ data: cls }, { data: mem }, asg] = await Promise.all([
         supabase.from('classes').select('id, name, join_code').order('created_at', { ascending: true }),
         supabase.from('class_members').select('class_id, student_id'),
+        supabase.from('assignments').select('id, class_id, title, skill_ids, due_on, created_at')
+          .order('due_on', { ascending: true, nullsFirst: false }),
       ]);
       if (cancelled) return;
       setClasses(cls || []);
       setMembers(mem || []);
+      if (asg.error) setAssignmentsReady(false);
+      else setAssignments(asg.data || []);
     })();
     return () => { cancelled = true; };
   }, [teacherProfile?.id]);
+
+  // Set work straight from a gap row. That is the whole point of having found
+  // it: a teacher who has just been shown the one skill holding up nine
+  // children should not then have to go and describe it to a form.
+  const assignGap = async (gap, cid, dueOn) => {
+    setAssignError(null);
+    const { data, error: err } = await supabase.from('assignments').insert({
+      class_id: cid,
+      teacher_id: teacherProfile?.id,
+      title: gap.name,
+      skill_ids: [gap.id],
+      due_on: dueOn || null,
+    }).select('id, class_id, title, skill_ids, due_on, created_at').single();
+    if (err) { setAssignError(err.message); return; }
+    setAssignments(a => [...a, data]);
+    setAssigning(null);
+  };
+
+  const removeAssignment = async (id) => {
+    const { error: err } = await supabase.from('assignments').delete().eq('id', id);
+    if (err) { setAssignError(err.message); return; }
+    setAssignments(a => a.filter(x => x.id !== id));
+  };
 
   const createClass = async () => {
     const name = newClassName.trim();
@@ -214,6 +249,14 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
     [inClass]
   );
 
+  // One day, read once per render, so no two parts of this page can disagree
+  // about whether something is due today.
+  const today = useMemo(() => isoDay(), []);
+  const shownAssignments = useMemo(
+    () => (classId === 'all' ? assignments : assignments.filter(a => a.class_id === classId)),
+    [assignments, classId]
+  );
+
   // ---- render ----
   if (selected) {
     return <StudentDetail student={selected} onBack={() => setSelected(null)} />;
@@ -303,6 +346,69 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
                       {who.slice(0, 8).map(l => l.name).join(' · ')}
                       {who.length > 8 && ` · +${who.length - 8} more`}
                     </p>
+
+                    {/* Set it as work, here, on the row that found it. */}
+                    {assignmentsReady && classes.length > 0 && (
+                      assigning === g.id
+                        ? <AssignRow gap={g} classes={classes} classId={classId}
+                            onCancel={() => setAssigning(null)} onAssign={assignGap} />
+                        : <button onClick={() => { setAssigning(g.id); setAssignError(null); }}
+                            className="mt-2 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-md px-2.5 py-1 transition-colors">
+                            Set as work →
+                          </button>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+            {assignError && <p className="text-xs text-red-500 mt-2">{assignError}</p>}
+          </div>
+        )}
+
+        {/* WORK SET — what was assigned, and who has actually mastered it.
+            Not "who submitted": there is nothing to submit. A name moves into
+            Done when the child masters the skill in their ordinary practice. */}
+        {assignmentsReady && shownAssignments.length > 0 && (
+          <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-5">
+            <div className="flex items-baseline justify-between mb-1">
+              <h2 className="font-semibold text-slate-900">Work set</h2>
+              <span className="text-xs text-slate-400">done = mastered, from their own practice</span>
+            </div>
+            <div className="divide-y divide-slate-100">
+              {shownAssignments.map(a => {
+                const ids = new Set(members.filter(m => m.class_id === a.class_id).map(m => m.student_id));
+                const cohort = students.filter(s => ids.has(s.userId));
+                const r = assignmentRoster(a, cohort.map(s => ({ id: s.userId, name: s.name, progress: s.progress })));
+                const due = dueLabel(a.due_on, today);
+                const cls = classes.find(c => c.id === a.class_id);
+                return (
+                  <div key={a.id} className="py-3">
+                    <div className="flex flex-wrap items-baseline gap-x-3">
+                      <span className="font-semibold text-slate-900">{a.title}</span>
+                      {cls && <span className="text-xs text-slate-400">{cls.name}</span>}
+                      <span className={`text-xs font-semibold ${due.overdue ? 'text-red-600' : due.tone === 'urgent' ? 'text-amber-600' : 'text-slate-400'}`}>{due.text}</span>
+                      <button onClick={() => removeAssignment(a.id)}
+                        className="ml-auto text-xs text-slate-400 hover:text-red-600">Remove</button>
+                    </div>
+                    <div className="mt-1.5 flex items-center gap-2">
+                      <div className="h-2 flex-1 rounded-full bg-slate-100 overflow-hidden">
+                        <div className="h-2 rounded-full bg-emerald-500" style={{ width: `${r.percent}%` }} />
+                      </div>
+                      <span className="text-xs font-semibold text-slate-600 tabular-nums">{r.done.length} of {r.count}</span>
+                    </div>
+                    {/* The three groups by name. "Not started" is the list a
+                        teacher acts on first, so it is never a bare number. */}
+                    <div className="mt-1.5 space-y-0.5 text-xs">
+                      {r.notStarted.length > 0 && (
+                        <p className="text-slate-600"><span className="font-semibold text-red-600">Not started: </span>{r.notStarted.map(l => l.name).join(' · ')}</p>
+                      )}
+                      {r.started.length > 0 && (
+                        <p className="text-slate-600"><span className="font-semibold text-amber-600">Working on it: </span>{r.started.map(l => `${l.name} (${l.percent}%)`).join(' · ')}</p>
+                      )}
+                      {r.done.length > 0 && (
+                        <p className="text-slate-500"><span className="font-semibold text-emerald-600">Done: </span>{r.done.map(l => l.name).join(' · ')}</p>
+                      )}
+                    </div>
                   </div>
                 );
               })}
@@ -416,6 +522,42 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
     </div>
   );
 }
+
+// Setting work from a gap row: which class, and by when. The skill and the
+// title are already decided — they are the row the teacher just read — so this
+// asks only what it cannot know.
+const AssignRow = ({ gap, classes, classId, onCancel, onAssign }) => {
+  // Default to the class being looked at; "Everyone" is not a class you can
+  // set work for, so fall back to the first real one.
+  const [cid, setCid] = useState(classId !== 'all' ? classId : classes[0]?.id);
+  // A week on Friday is nobody's deadline. Default to one week, which is the
+  // commonest answer, and let them change it.
+  const [due, setDue] = useState(() => {
+    const d = new Date();
+    d.setDate(d.getDate() + 7);
+    return isoDay(d);
+  });
+  const [busy, setBusy] = useState(false);
+  return (
+    <div className="mt-2 flex flex-wrap items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg p-2">
+      <span className="text-xs text-slate-500">Set “{gap.name}” for</span>
+      <select value={cid} onChange={e => setCid(e.target.value)}
+        aria-label="Class to set this work for"
+        className="text-xs border border-slate-300 rounded-md px-2 py-1 bg-white">
+        {classes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+      </select>
+      <label className="text-xs text-slate-500" htmlFor={`due-${gap.id}`}>by</label>
+      <input id={`due-${gap.id}`} type="date" value={due} onChange={e => setDue(e.target.value)}
+        className="text-xs border border-slate-300 rounded-md px-2 py-1 bg-white" />
+      <button disabled={busy || !cid}
+        onClick={async () => { setBusy(true); await onAssign(gap, cid, due); setBusy(false); }}
+        className="text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 rounded-md px-2.5 py-1">
+        {busy ? 'Setting…' : 'Set work'}
+      </button>
+      <button onClick={onCancel} className="text-xs text-slate-400 hover:text-slate-600">Cancel</button>
+    </div>
+  );
+};
 
 const SummaryCard = ({ label, value, accent }) => (
   <div className="bg-white rounded-xl border border-slate-200 p-3">
