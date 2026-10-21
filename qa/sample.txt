@@ -1,0 +1,618 @@
+
+=================== CBC GRADE 4 (25 skills) ===================
+
+# G4_ROMAN_NUMERALS — Roman Numerals
+  instr: Write the Roman numeral.
+  Q: Write 12 in Roman numerals.
+  key: XII   accepts: ["XII","xii"]
+  hint: I is 1, V is 5, X is 10, L is 50, C is 100.
+  hint: A smaller letter BEFORE a bigger one is taken away from it; after it, it is added on. That is how the fours and the nines are written.
+  worked: undefined | 9 is written IX.   →   IX | = undefined
+
+# G4_DIVIDE — Division (Long)
+  instr: Work out the division.
+  Q: 203 ÷ 7 = ?
+  key: 29   accepts: ["29"]
+  hint: How many 7s in 203? Work digit by digit, left to right.
+  hint: Start with the front of the number: how many 7s fit into 20? Write that above, then bring the last digit down.
+  hint: Check as you go: multiply what you wrote by 7 and take it away, then carry on.
+  worked: undefined | Divide step by step: 8 × 29 = 232.   →   29 | = undefined
+
+# G4_ODD_EVEN — Even & Odd Numbers
+  instr: Even or odd?
+  Q: Is 72 even or odd?
+  key: even   accepts: ["even"]   choices: ["even","odd"]
+  hint: Look at the ones digit.
+  hint: A number ending in 0, 2, 4, 6 or 8 is even. The rest are odd.
+  worked: undefined | 35 ends in 5, so it is odd.   →   odd | = undefined
+
+# G4_DATA — Bar Graphs & Tables  [figure model:bar-chart]
+  instr: Name the biggest bar.
+  Q: The bar graph shows mango trees counted. Which has the most?
+  key: Kamau   accepts: ["Kamau"]   choices: ["Kamau","Achieng","Mwikali","Otieno"]
+  hint: The tallest bar always stands for the biggest count.
+  hint: Compare the numbers rather than the labels.
+  hint: Work along the rows keeping the biggest so far in mind.
+  worked: undefined | Find the row for Thu. / Read its number.   →   14 | = undefined
+
+# G4_VOLUME — Volume (Cubes & Cuboids Intro)
+  instr: Count the unit cubes.
+  Q: A cuboid is built from small cubes: 3 cubes long, 2 cubes wide, and 2 cubes tall. How many cubes is that in total?
+  key: 12   accepts: ["12"]
+  hint: One layer has length × width cubes.
+  hint: Each layer: 3 × 2 = 6. There are 2 layers.
+  worked: undefined | One layer = 2 × 3 = 6 cubes; 2 layers.   →   6 × 2 = 12 | = undefined
+
+# G4_MONEY — Money (Budgets, Spending & Saving)
+  instr: Work out the total cost.
+  Q: You buy a book for 368 shillings and a pen for 42 shillings. What is the total cost?
+  key: 410   accepts: ["410","410 shillings","410shillings"]
+  hint: Add the two prices.
+  hint: 368 + 42 = ?
+  worked: undefined | Add the prices together.   →   290 + 32 = 322 | = undefined
+
+# G4_FRACTIONS — Fractions (Equivalent, Compare)
+  instr: Find the missing number.
+  Q: Fill in the blank:   6/7 = ?/28
+  key: 24   accepts: ["24"]
+  hint: Equivalent fractions are the same amount cut into more, smaller pieces.
+  hint: Ask what 7 was multiplied by to become 28.
+  hint: Whatever the bottom was multiplied by, the top must be multiplied by the same.
+  worked: undefined | See what happened to the bottom.   →   4 × 3 = 12 / Do the same to the top.   →   3 × 3 = 9 | = undefined
+
+# G4_MULTIPLY — Multiplication (2-digit)
+  instr: Work out the multiplication.
+  Q: 13 × 2 = ?
+  key: 26   accepts: ["26"]
+  hint: Split the 2-digit number into tens and ones.
+  hint: (10 × 2) + (3 × 2) = ?
+  worked: undefined | Multiply tens, multiply ones, then add.   →   19 × 5 = 95 | = undefined
+
+# G4_SUB — Subtraction (up to 4 digits)
+  instr: Work out the subtraction.
+  Q: 1939 − 122 = ?
+  key: 1817   accepts: ["1817"]
+  hint: Subtract the ones first, then the tens (borrow if you need to).
+  hint: Start at 1939 and count back 122.
+  worked: undefined | Subtract column by column from the ones.   →   5298 − 261 = 5037 | = undefined
+
+# G4_ADD — Addition (up to 4 digits)
+  instr: Work out the addition.
+  Q: 6275 + 613 = ?
+  key: 6888   accepts: ["6888"]
+  hint: Add the ones first, then the tens (regroup if the ones make ten or more).
+  hint: Start from 6275 and count up 613.
+  worked: undefined | Add column by column from the ones.   →   9713 + 141 = 9854 | = undefined
+
+# G4_POSITION — Position & Direction (Turns)  [figure picture:spin]
+  instr: Look at the arrow.
+  Q: The tap turns the way the arrow shows. Is that clockwise or anticlockwise?
+  key: anticlockwise   accepts: ["anticlockwise","anti-clockwise"]   choices: ["clockwise","anticlockwise"]
+  hint: Clockwise is the way the hands of a clock move.
+  hint: Follow the arrow: does it go the same way as a clock's hands?
+  worked: undefined | The arrow goes the same way as the hands of a clock.   →   clockwise | = undefined
+
+# G4_ANGLES — Angles (Introduction)
+  instr: Classify the angle.
+  Q: Is an angle of 119° acute, right, or obtuse?
+  key: obtuse   accepts: ["obtuse"]   choices: ["acute","right","obtuse"]
+  hint: Compare the angle with 90°.
+  hint: Less than 90° = acute · exactly 90° = right · more than 90° = obtuse.
+  worked: undefined | 23° compared with 90° → acute.   →   acute | = undefined
+
+=================== CBC GRADE 5 (35 skills) ===================
+
+# G5_FRACTIONS_ADD_LIKE — Adding Fractions (Like Denominators)  [figure model:bar-model]
+  instr: Add the fractions. Give the answer in simplest form.
+  Q: 10/11 + 2/11
+  key: 12/11   accepts: ["12/11"]
+  hint: The denominators are the same, so the bottom number stays the same.
+  hint: Just add the numerators: 10 + 2.
+  hint: Then simplify if you can.
+  worked: undefined | Same denominator — add the numerators only.   →   10/12 / Simplify if possible.   →   5/6 | = undefined
+
+# G5_FRACTIONS_SUB_LIKE — Subtracting Fractions (Like Denominators)  [figure model:bar-model]
+  instr: Subtract the fractions. Give the answer in simplest form.
+  Q: 5/9 − 2/9
+  key: 1/3   accepts: ["1/3"]
+  hint: The denominators are the same, so the bottom number stays the same.
+  hint: Just subtract the numerators: 5 − 2.
+  hint: Then simplify if you can.
+  worked: undefined | Same denominator — subtract the numerators only.   →   8/12 / Simplify if possible.   →   2/3 | = undefined
+
+# G5_LENGTH — Measuring Length (cm, m, km)
+  instr: Write it in metres and centimetres.
+  Q: Write 584 cm in metres and centimetres.
+  key: 5 m 84 cm   accepts: ["5 m 84 cm","5m84cm","5 m and 84 cm","5mand84cm"]
+  hint: 100 cm make 1 m.
+  hint: So ask how many whole lots of 100 fit into the number.
+  hint: Those whole lots are the metres, and whatever is left over stays as centimetres.
+  worked: undefined | Change the metres.   →   8 × 100 = 800 cm / Add the loose centimetres.   →   800 + 71 = 871 | = undefined
+
+# G5_ANGLES_INTRO — Types of Angles
+  instr: Name the type of angle.
+  Q: A hoe handle is tipped past a quarter turn but not as far as a half turn. What type of angle has it turned through?
+  key: obtuse   accepts: ["obtuse","obtuse angle","obtuseangle"]   choices: ["acute","right","obtuse"]
+  hint: Work out how many degrees the turn is worth first — a quarter turn is 90° and a half turn is 180°.
+  hint: Then compare that measure with 90° and with 180°.
+  hint: Each band — under 90°, exactly 90°, between 90° and 180°, exactly 180°, over 180° — carries its own name.
+  worked: undefined | Compare 77° with 90° and 180°. / Name the band it falls in.   →   acute | = undefined
+
+# G5_TIME — Telling Time & Duration
+  instr: Add the two times. Give the answer in hours and minutes.
+  Q: Wanjiru works 1 h 44 min in the morning and 1 h 37 min in the afternoon. How long does she work altogether? (Give hours and minutes.)
+  key: 3 h 21 min   accepts: ["3 h 21 min","3h21min","3 hours 21 minutes","3hours21minutes","201"]
+  hint: Add the minutes to the minutes and the hours to the hours, kept apart.
+  hint: Sixty minutes make one more hour, so minutes past sixty have to be carried.
+  hint: Carry the extra hour across and leave only what is under sixty in the minutes column.
+  worked: undefined | Change both into minutes.   →   336 min − 215 min / Subtract.   →   121 min / Change back into hours and minutes.   →   2 h 1 min | = undefined
+
+# G5_ADDITION — Addition (up to 6 digits)  [figure model:column-op]
+  instr: Use column addition — start from the ones.
+  Q: 86063 + 1526 = ?
+  key: 87589   accepts: ["87589"]
+  hint: Line the digits up by place value — ones under ones, tens under tens, and so on up to the highest column.
+  hint: Work one column at a time, starting from the ones on the right.
+  hint: When a column makes ten or more, write down the ones digit and carry the one into the next column.
+  worked: undefined | Ones: 0 + 6 = 6.   →   6 / Tens: 1 + 3 = 4.   →   4 / Hundreds: 3 + 5 = 8.   →   8 / Thousands: 3 + 2 = 5.   →   5 / Ten-thousands: 2 + 0 = 2.   →   2 / Read the answer off the bottom row.   →   25846 | = undefined
+
+# G5_FACTORS — Factors of a Number
+  instr: Find the number that is not a factor.
+  Q: Three of these are factors of 24 and one is not: 3, 5, 6, 12. Which one is NOT a factor of 24?
+  key: 5   accepts: ["5"]   choices: ["3","5","6","12"]
+  hint: A factor divides the number leaving nothing over.
+  hint: Divide 24 by each one in turn and watch for a remainder.
+  hint: The one that leaves something over is the odd one out.
+  worked: undefined | Divide 18 by each.   →   18 ÷ 2,  18 ÷ 3,  18 ÷ 4,  18 ÷ 18 / One of them leaves a remainder.   →   4 | = undefined
+
+# G5_MONEY — Money (Profit & Loss)
+  instr: Work out the profit.
+  Q: A trader buys a mango for 550 shillings and sells it for 566 shillings. What is the profit?
+  key: 16   accepts: ["16","16 shillings","16shillings"]
+  hint: Profit = selling price − buying price.
+  hint: 566 − 550 = ?
+  worked: undefined | Find the difference between buying and selling prices.   →   779 − 742 = 37 | = undefined
+
+# G5_LENGTH_OPS — Adding & Subtracting Length
+  instr: Give the answer in centimetres.
+  Q: A tailor uses 1 m 64 cm of cloth for a school dress and 4 m 76 cm for a shirt. How much cloth is that in all? Give your answer in centimetres.
+  key: 640   accepts: ["640","640 cm","640cm"]
+  hint: Add like with like: the centimetres go with the centimetres and the metres with the metres.
+  hint: 100 cm make 1 m, so if the centimetres reach 100 they carry over into the metres.
+  hint: The simplest way is to change both measurements into centimetres and add the two numbers.
+  worked: undefined | Change both into centimetres.   →   429 cm and 154 cm / Subtract.   →   429 − 154 = 275 cm | = undefined
+
+# G6_BODMAS_BASIC — Order of Operations (BODMAS)
+  instr: Evaluate using the correct order of operations.
+  Q: 3 + 7 × 9
+  key: 66   accepts: ["66"]
+  hint: BODMAS: Brackets, Orders (powers), Division/Multiplication, then Addition/Subtraction.
+  hint: Do multiplication/division before addition/subtraction.
+  hint: Work left to right within the same level.
+  worked: undefined | Apply BODMAS order.   →   10 + 4 × 5 / Evaluate.   →   30 | = undefined
+
+# G5_FRACTIONS_EQUIV — Equivalent Fractions  [figure model:bar-model]
+  instr: Find the missing numerator.
+  Q: Fill in the blank:   2/3 = ?/15
+  key: 10   accepts: ["10","10/15"]
+  hint: What do you multiply the bottom by to get the new denominator?
+  hint: 3 × ? = 15 — find that multiplier first.
+  hint: Multiply the top by the same multiplier.
+  worked: undefined | The denominator was multiplied by 2 (5×2=10).   →   ×2 / Multiply the numerator by the same number.   →   3 × 2 = 6 | = undefined
+
+# G5_ROUNDING — Rounding to the Nearest Hundred & Thousand
+  instr: Round to the nearest thousand.
+  Q: Round 85,862 to the nearest thousand.
+  key: 86000   accepts: ["86000","86,000"]   choices: ["85,000","86,000"]
+  hint: Look at the digit in the hundreds place.
+  hint: If it is 5 or more, round up. If it is less than 5, round down.
+  worked: undefined | 69,535 sits between 69,500 and 69,600. / The tens digit is 3, so round down.   →   69500 | = undefined
+
+=================== CBC GRADE 6 (26 skills) ===================
+
+# G6_FRACTIONS_SUB — Subtracting Fractions (Unlike Denominators)  [figure model:bar-model]
+  instr: Subtract the fractions. Give the answer in simplest form.
+  Q: 6/8 − 3/6
+  key: 1/4   accepts: ["1/4","0.25"]
+  hint: You need a common denominator before you can subtract.
+  hint: The lowest common denominator of 8 and 6 is 24.
+  hint: Rewrite as 18/24 − 12/24, then subtract the numerators.
+  worked: undefined | Find the lowest common denominator of 4 and 2.   →   LCD = 4 / Rewrite 3/4: the bottom needs ×1 to reach 4, so the top gets ×1 too.   →   3/4 = 3×1/4×1 = 3/4 / Rewrite 1/2 the same way, with ×2.   →   1/2 = 1×2/2×2 = 2/4 / Subtract the numerators (keep the denominator).   →   1/4 | = undefined
+
+# G6_UNIT_CONVERSIONS — Unit Conversions (Length, Mass, Capacity)
+  Q: Convert 2026 ml to litres
+  key: 2.026   accepts: []
+  hint: 1000 ml = 1 litre, so divide by 1000.
+
+# G6_PLACE_VALUE — Place Value (Millions)  [figure visual:place_value_chart]
+  instr: Find the value of the highlighted digit.
+  Q: In 6,454,522, what is the value of the highlighted digit (5)?
+  key: 50000   accepts: ["50000","50,000"]
+  hint: The digit 5 sits in the 10000s column.
+  hint: Multiply the digit by what its column is worth.
+  worked: undefined | That column is worth 1000.   →   7 × 1000 = 7000 | = undefined
+
+# G6_SQUARES — Squares (1-12)
+  instr: Find the square.
+  Q: 3²
+  key: 9   accepts: ["9"]
+  hint: 3² means 3 × 3.
+  worked: undefined | Multiply the number by itself.   →   3 × 3 = 9 | = undefined
+
+# G6_CAPACITY — Capacity (Conversions, Word Problems)
+  Q: A 20 litre jerrycan of water fills how many 250 ml bottles?
+  key: 80   accepts: []
+  hint: 20 litres = 20000 ml. How many 250 ml bottles is that?
+
+# G6_FRACTIONS_ADD — Adding Fractions (Unlike Denominators)  [figure model:bar-model]
+  instr: Add the fractions. Give the answer in simplest form.
+  Q: 5/7 + 2/5
+  key: 39/35   accepts: ["39/35"]
+  hint: You need a common denominator before you can add.
+  hint: The lowest common denominator of 7 and 5 is 35.
+  hint: Rewrite as 25/35 + 14/35, then add the numerators.
+  worked: undefined | Find the lowest common denominator of 2 and 4.   →   LCD = 4 / Rewrite 1/2: the bottom needs ×2 to reach 4, so the top gets ×2 too.   →   1/2 = 1×2/2×2 = 2/4 / Rewrite 3/4 the same way, with ×1.   →   3/4 = 3×1/4×1 = 3/4 / Add the numerators (keep the denominator).   →   5/4 | = undefined
+
+# G6_MASS — Mass (Tonnes, Word Problems)
+  Q: A basket holds 3 kg 100 g of mangoes. 100 g more are added. What is the total in grams?
+  key: 3200   accepts: []
+  hint: Change 3 kg 100 g into grams first.
+
+# G6_AREA_RECT — Area of Rectangles & Squares  [figure model:shape]
+  instr: Find the area.
+  Q: Find the area of a rectangle 29 cm by 11 cm.
+  key: 319   accepts: ["319"]
+  hint: Area of a rectangle = length × width.
+  hint: 29 × 11.
+  worked: undefined | Area = length × width.   →   23 × 13 = 299 cm² | = undefined
+
+# G6_DATA_COLLECTION — Collecting & Organizing Data
+  Q: Survey of 50 students: football=7, basketball=10, volleyball=? Find volleyball.
+  key: 33   accepts: []
+  hint: All three groups add up to 50. Add the two you know (7 + 10), then subtract from 50.
+
+# G6_TRIANGLE_PROPERTIES — Triangle Angle Sum
+  instr: Find the missing angle.
+  Q: Two angles of a triangle are 52° and 66°. Find the third angle.
+  key: 62   accepts: ["62","62°"]
+  hint: The angles in a triangle add up to 180°.
+  hint: 180 − 52 − 66.
+  worked: undefined | Angles in a triangle sum to 180°.   →   180 − 72 − 70 = 38° | = undefined
+
+# G6_MULTIPLICATION — Multiplication (4-digit × 2-digit)
+  instr: Use long multiplication.
+  Q: 2275 × 35 = ?
+  key: 79625   accepts: ["79625"]
+  hint: Split the two-digit number into its tens and its ones, and multiply by each part separately.
+  hint: That means working out 2275 × 5 and 2275 × 30.
+  hint: Add the two partial products, keeping each one lined up in its own place-value columns.
+  worked: undefined | Split 33 into tens and ones.   →   30 + 3 / Multiply by the ones.   →   1063 × 3 = 3189 / Multiply by the tens.   →   1063 × 30 = 31890 / Add the two partial products.   →   3189 + 31890 = 35079 | = undefined
+
+# G6_FRACTIONS_DECIMALS — Converting Fractions & Decimals
+  instr: Write as a decimal.
+  Q: Write 16/20 as a decimal.
+  key: 0.8   accepts: ["0.8"]
+  hint: Divide the numerator by the denominator.
+  hint: Or scale the fraction to a denominator of 10 or 100 first.
+  worked: undefined | Numerator ÷ denominator.   →   14 ÷ 25 = 0.56 | = undefined
+
+=================== CBC GRADE 7 (53 skills) ===================
+
+# G7_VOLUME_CUBOID — Volume of Cuboids (Advanced)
+  instr: Find the volume.
+  Q: Find the volume of a cuboid 15 m × 17 m × 18 m.
+  key: 4590   accepts: ["4590"]
+  hint: Volume of a cuboid = length × width × height.
+  hint: 15 × 17 × 18.
+  worked: undefined | Volume = l × w × h.   →   21 × 24 × 29 = 14616 m³ | = undefined
+
+# G7_DECIMALS_DIV — Dividing Decimals (Advanced)
+  instr: Divide.
+  Q: 114 ÷ 15
+  key: 7.6   accepts: ["7.6"]
+  hint: Divide as normal, keeping the decimal point lined up.
+  hint: How many 15s make 114?
+  worked: undefined | Short division, keeping the point in place.   →   57.2 ÷ 13 = 4.4 | = undefined
+
+# G7_CIRCUMFERENCE — Circumference of Circles  [figure model:shape]
+  instr: Find the circumference (to 2 d.p.).
+  Q: Find the circumference of a circle with radius 8 cm. (2 d.p.)
+  key: 50.27   accepts: ["50.27"]
+  hint: Circumference = 2πr.
+  hint: 2 × π × 8.
+  worked: undefined | Use C = 2πr.   →   2 × π × 9 / Evaluate.   →   56.55 cm | = undefined
+
+# G7_LENGTH_CONV — Length Conversions (Advanced)
+  instr: Convert the units.
+  Q: Convert 86 mm to cm.
+  key: 8.6   accepts: ["8.6","8.6cm"]
+  hint: Going to a BIGGER unit means FEWER of them — divide.
+  hint: 10 mm make 1 cm.
+  hint: 86 ÷ 10.
+  worked: undefined | 10 mm = 1 cm.   →   ÷ 10 / Divide.   →   12 ÷ 10 = 1.2 cm | = undefined
+
+# G7_PERCENTAGES — Percentage Calculations  [figure model:bar-model]
+  instr: Find the percentage of the amount.
+  Q: What is 60% of 200?
+  key: 120   accepts: ["120"]
+  hint: Percent means “out of 100”. Convert to a fraction or decimal first.
+  hint: 60% = 60/100 = 0.6.
+  hint: Multiply: 0.6 × 200.
+  worked: undefined | Write 20% as a decimal.   →   0.2 / Multiply by 200.   →   40 | = undefined
+
+# G7_MONEY_TRANSACTIONS — Discount, Commission, Bills & Mobile Money
+  instr: Work in shillings.
+  Q: Achieng withdraws KSh 5,000 from her mobile money account. A withdrawal charge of KSh 10 is deducted from the account as well. If she had exactly KSh 5,000 plus the charge, how much cash does she receive?
+  key: 5000   accepts: ["5000","5,000"]
+  hint: The amount moved and the charge for moving it are two separate sums.
+  hint: The cash handed over is the amount withdrawn; the charge comes out of the account separately.
+  hint: Decide which of the two the question is actually asking about.
+  worked: undefined | Separate the amount from the charge.   →   KSh 5,000 and KSh 55 / The account loses both.   →   5055 | = undefined
+
+# G7_DATA_REPRESENT — Data Representation (Bar, Line, Pie)
+  instr: Fraction of the circle = fraction of the people.
+  Q: A pie chart of how 28 students travel to school gives "walking" a 180° slice. How many students is that?
+  key: 14   accepts: ["14"]
+  hint: Work out what fraction of the whole circle the slice is.
+  hint: 180/360 = 1/2.
+  hint: That fraction of 28 students.
+  worked: undefined | Slice as a fraction of the circle.   →   180/360 = 1/2 / Take that fraction of the total.   →   32 ÷ 2 = 16 | = undefined
+
+# G7_SQUARES_EXT — Squares (Extended)
+  instr: Square it.
+  Q: Work out (0.4)²
+  key: 0.16   accepts: ["0.16"]
+  hint: Squaring means multiplying the number by ITSELF.
+  hint: 0.4 × 0.4 — multiply 4 × 4, then place the decimal.
+  hint: 4 × 4 = 16, and tenths × tenths = hundredths.
+  worked: undefined | Multiply the digits.   →   3 × 3 = 9 / Tenths × tenths gives hundredths (two decimal places).   →   0.09 | = undefined
+
+# G7_CONSTRUCTIONS — Geometrical Constructions (Perpendiculars, Bisectors)
+  instr: Compass-and-ruler thinking.
+  Q: An angle bisector splits a 74° angle into two angles of how many degrees each?
+  key: 37   accepts: ["37","37°"]
+  hint: Think about what the construction guarantees, not how it looks.
+  hint: Bisect means cut exactly in half.
+  worked: undefined | "Perpendicular" means at right angles.   →   90 | = undefined
+
+# G7_FRACTIONS_COMPARE — Comparing & Ordering Fractions  [figure model:bar-model]
+  instr: Compare the fractions. Answer with <, > or =.
+  Q: Insert <, > or =:   5/7  ?  2/4
+  key: >   accepts: [">"]
+  hint: Cross-multiply: compare a×d with c×b.
+  hint: Compare 5×4 = 20  with  2×7 = 14.
+  hint: The side with the larger cross-product is the larger fraction.
+  worked: undefined | Cross-multiply.   →   5×3 = 15,  1×6 = 6 / Compare the two products.   →   0.8333333333333334 > 0.3333333333333333 | = undefined
+
+# G7_ANGLE_CONSTRUCTION — Bisecting & Constructing Angles
+  instr: Give the angle in degrees.
+  Q: An angle of 120° is bisected with a ruler and a pair of compasses. What is the size of EACH of the two new angles?
+  key: 60   accepts: ["60","60°"]
+  hint: To bisect is to cut into two equal parts.
+  hint: The two new angles are equal, and together they make up the original.
+  hint: So the original is shared equally between them.
+  worked: undefined | First bisection.   →   90 ÷ 2 = 45° / Bisect that half again.   →   45 ÷ 2 = 22.5° | = undefined
+
+# G7_PIE_CHARTS — Pie Charts & Travel Graphs
+  instr: Give the number of people.
+  Q: A pie chart shows how 120 learners travel to school. The sector for those who cycle has an angle of 60°. How many learners cycle?
+  key: 20   accepts: ["20"]
+  hint: This is the reverse of drawing the chart — the angle is given, the count is wanted.
+  hint: Compare the sector’s angle with a full turn to find what share it is.
+  hint: Then take that share of the 120 learners.
+  worked: undefined | Ignore the rest — no distance is covered.   →   60 and 20 / Add the moving stretches.   →   60 + 20 = 80 | = undefined
+
+=================== CBC GRADE 8 (32 skills) ===================
+
+# G6_MEAN — Finding the Mean
+  instr: Find the mean.
+  Q: Find the mean of:  33, 18, 2, 23
+  key: 19   accepts: ["19"]
+  hint: Mean = (sum of values) ÷ (how many values).
+  hint: Add them up: 76.
+  hint: Divide by 4.
+  worked: undefined | Add all the values.   →   84 / Divide by how many there are (6).   →   84 ÷ 6 = 14 | = undefined
+
+# G8_FACTORIZE_COMMON — Factorizing (Common Factor)
+  instr: Factorise fully.
+  Q: Factorise:   -24x - 12
+  key: 6(-4x - 2)   accepts: ["6(-4x - 2)","6(-4x-2)"]
+  hint: Find the highest common factor of both terms.
+  hint: What number divides both -24 and -12?
+  hint: Take out 6, then write what remains in the bracket.
+  worked: undefined | Highest common factor of 6 and -6 is 3.   →   3( … ) / Divide each term by 3.   →   3(2x - 2) | = undefined
+
+# G6_INTEGERS_ADD_SUB — Adding & Subtracting Integers  [figure model:numberline-jump]
+  instr: Work out the answer.
+  Q: -2 + 8
+  key: 6   accepts: ["6"]
+  hint: Subtracting a negative is the same as adding; adding a negative is the same as subtracting.
+  hint: Think of a number line: which direction do you move?
+  hint: -2 + 8 = ?
+  worked: undefined | Rewrite double signs (− − becomes +, + − becomes −).   →   -10 + 7 / Compute.   →   -3 | = undefined
+
+# G8_AREA_COMPOSITE — Area of Composite Shapes
+  instr: Big rectangle minus the missing piece.
+  Q: An L-shaped garden is a 12 m by 7 m rectangle with a 6 m by 3 m rectangular corner cut out. Find its area.
+  key: 66   accepts: ["66","66m²","66m2"]
+  hint: Two ways: subtract the cut-out from the full rectangle, or split the L into two rectangles.
+  hint: Full rectangle: 12 × 7 = 84.
+  hint: Work out the cut-out piece on its own (6 × 3), then take it off the whole.
+  worked: undefined | Area of the full rectangle.   →   13 × 12 = 156 m² / Subtract the cut-out corner.   →   156 − 35 = 121 m² | = undefined
+
+# G8_EXPAND_BRACKETS — Expanding Brackets
+  instr: Expand the bracket.
+  Q: Expand:   6(3x + 5)
+  key: 18x + 30   accepts: ["18x + 30","18x+30"]
+  hint: Multiply everything inside the bracket by the number outside.
+  hint: 6 × 3x  and  6 × (5).
+  hint: Keep track of signs when multiplying.
+  worked: undefined | Multiply the x-term: 3 × 4x.   →   12x / Multiply the constant: 3 × (-1).   →   - 3 / Write the result.   →   12x - 3 | = undefined
+
+# G8_PROBABILITY_COMBINED — Combined Events & Tree Diagrams
+  instr: The second pick has one sweet fewer.
+  Q: A bag holds 3 red and 4 blue sweets. Two are taken WITHOUT replacement. Find the probability both are red.
+  key: 1/7   accepts: ["1/7","6/42"]
+  hint: Draw the tree: the second branch depends on the first pick.
+  hint: First pick: 3/7. After a red is gone: 2/6.
+  hint: Multiply along the red-red branch.
+  worked: undefined | Probability on each spin.   →   1/6 / AND means multiply.   →   1/6 × 1/6 = 1/36 | = undefined
+
+# G8_SIMPLE_INTEREST — Simple Interest
+  instr: Find the simple interest.
+  Q: Find the simple interest on 1000 at 8% per year for 2 years.
+  key: 160   accepts: ["160"]
+  hint: Simple Interest = (P × R × T) ÷ 100.
+  hint: P = 1000, R = 8, T = 2.
+  worked: undefined | Use I = PRT/100.   →   (10000 × 8 × 3) ÷ 100 / Evaluate.   →   2400 | = undefined
+
+# G7_INTEGERS_MUL_DIV — Multiplying & Dividing Integers
+  instr: Work out the answer.
+  Q: 1 × 3
+  key: 3   accepts: ["3"]
+  hint: Same signs give a positive; different signs give a negative.
+  hint: Work out the size first, then decide the sign.
+  worked: undefined | Decide the sign: same → +, different → −.   →   positive / Multiply/divide the sizes.   →   15 | = undefined
+
+# G9_LOCI — Loci & Locus
+  instr: Where do the two loci meet?
+  Q: A point must be equidistant from two fixed points A and B, AND exactly 6 cm from A. How many positions are possible (in general)?
+  key: 2   accepts: ["2"]
+  hint: Draw each condition as its own locus first, then look at where they cross.
+  hint: A line crossing a circle meets it twice; two lines that are not parallel meet once; two overlapping circles cross twice.
+  worked: undefined | It can walk 2 m from the fence on either side — a parallel line on each side.   →   two parallel lines | = undefined
+
+# G8_SURFACE_AREA — Surface Area (Cuboids, Cylinders)  [figure model:shape]
+  instr: Six faces, in three equal pairs.
+  Q: Find the surface area of a cuboid 3 cm × 5 cm × 2 cm.
+  key: 62   accepts: ["62","62cm²","62cm2"]
+  hint: A cuboid has 6 faces in 3 identical pairs: top/bottom, front/back, sides.
+  hint: The pairs: 3×5, 3×2, 5×2.
+  hint: SA = 2(15 + 6 + 10).
+  worked: undefined | Area of each different face.   →   8×3=24,  8×2=16,  3×2=6 / Each appears twice — double the sum.   →   2 × 46 = 92 cm² | = undefined
+
+# G8_FRACTIONS_COMBINED — Combined Operations on Fractions
+  instr: Use the correct order of operations.
+  Q: Work out:  5/4 − 1/4 ÷ 2/3
+  key: 7/8   accepts: ["7/8","7 / 8"]
+  hint: Division is settled before subtraction.
+  hint: To divide by a fraction, turn the second one upside down and multiply.
+  hint: Only then subtract, over a common denominator.
+  worked: undefined | Multiply first (straight across).   →   1/3 × 1/3 = 1/9 / Now add, over a common denominator.   →   3/5 + 1/9 / Simplify.   →   32/45 | = undefined
+
+# G8_SCALE_DRAWING — Scale Drawing (Simple Scales)
+  instr: Find the value of ONE first.
+  Q: 8 exercise books cost 400 shillings. How much do 3 exercise books cost?
+  key: 150   accepts: ["150","150/-"]
+  hint: Unitary method: find the price of ONE first.
+  hint: One costs 400 ÷ 8.
+  hint: Then multiply by 3.
+  worked: undefined | Price of one.   →   300 ÷ 6 = 50 / Price of 9.   →   50 × 9 = 450 | = undefined
+
+=================== CBC GRADE 9 (34 skills) ===================
+
+# G8_INDICES_LAWS — Laws of Indices
+  instr: Simplify, leaving your answer as a single power of y.
+  Q: Simplify:   y^11 ÷ y^3
+  key: y^8   accepts: ["y^8","y^(8)"]
+  hint: Dividing: SUBTRACT the powers.
+  hint: So the new power is 11−3 = 8.
+  worked: undefined | Dividing: SUBTRACT the powers.   →   x^3 | = undefined
+
+# G9_TRANSFORMATIONS_ADV — Transformations (Translation, Enlargement)  [figure visual:plot_point]
+  instr: Plot the image after the translation.
+  Q: Plot the image of (-2, -2) after translating by (-4, -1).
+  key: (-6, -3)   accepts: ["(-6,-3)","(-6, -3)","-6,-3","-6, -3"]
+  hint: A translation adds the vector to the coordinates.
+  hint: Add -4 to x and -1 to y.
+  hint: Work out (-2 + -4, -2 + -1).
+  worked: undefined | Reflection in the y-axis negates the x-coordinate.   →   x: -1 → 1 / Plot the image.   →   (1, 4) | = undefined
+
+# G9_PROBABILITY_ADV — Probability (With/Without Replacement)
+  instr: Give the probability as a fraction in simplest form.
+  Q: A bag has 6 equally likely outcomes; 3 are favourable. What is the probability of a favourable outcome?
+  key: 1/2   accepts: ["1/2","0.5"]
+  hint: Probability = favourable ÷ total.
+  hint: Write favourable over total as a fraction, then simplify it.
+  worked: undefined | Probability = favourable ÷ total.   →   3/8 / Simplify.   →   3/8 | = undefined
+
+# G9_RATES_OF_WORK — Rates of Work
+  instr: Find the rate per hour.
+  Q: A machine makes 24 chairs in 2 hours. Working at the same rate, how many chairs does it make in ONE hour?
+  key: 12   accepts: ["12"]
+  hint: A rate per hour means "how many in a single hour".
+  hint: You know the amount for 2 hours — share it out evenly.
+  hint: This is a division, not a multiplication.
+  worked: undefined | Share the total over the hours.   →   24 ÷ 4 = 6 | = undefined
+
+# G9_ELEVATION_DEPRESSION — Angles of Elevation & Depression
+  instr: Answer elevation or depression.
+  Q: A surveyor at the foot of a hill sights the peak above her. The angle between the line of sight and the horizontal is an angle of what?
+  key: elevation   accepts: ["elevation","angle of elevation","angleofelevation"]
+  hint: Both angles are measured from the HORIZONTAL, never from the vertical.
+  hint: The name depends on which way the line of sight travels from the observer.
+  hint: Ask yourself: is the observer raising their eyes or lowering them?
+  worked: undefined | Start at the observer and follow the line of sight.   →   A learner on the ground looks UP at the top of a flagpost / Name the angle from the horizontal.   →   angle of elevation | = undefined
+
+# G8_GRADIENT — Gradient of a Line
+  instr: Rise over run.
+  Q: Find the gradient of the line through (-1, 3) and (3, 11).
+  key: 2   accepts: ["2"]
+  hint: Gradient = rise ÷ run = (change in y) ÷ (change in x).
+  hint: Rise: 11 − (3) = 8.  Run: 3 − (-1) = 4.
+  hint: 8 ÷ 4.
+  worked: undefined | Change in y (rise).   →   -11 − (-2) = -9 / Change in x (run).   →   4 − (1) = 3 / Divide rise by run.   →   -9/3 = -3 | = undefined
+
+# G11_MATRICES_OPS — Matrix Operations
+  instr: Answer yes or no.
+  Q: Matrix A has order 2 × 3 and matrix B has order 1 × 3. Can A + B be worked out?
+  key: no   accepts: ["no","n"]
+  hint: Adding matrices means adding each position to its matching position.
+  hint: For every position in A there must be one in exactly the same place in B.
+  hint: Compare the two orders, number against number.
+  worked: undefined | Compare the orders.   →   3 × 3  and  1 × 3 / They differ, so some positions have no partner.   →   no | = undefined
+
+# G9_APPROX_ERRORS — Approximations & Errors
+  instr: Work out the new amount.
+  Q: Decrease 60 by 15%.
+  key: 51   accepts: ["51"]
+  hint: Find 15% of 60 first.
+  hint: 15% of 60 = 9.
+  hint: Then subtract it from 60.
+  worked: undefined | Find 20% of 200.   →   40 / Add to the original.   →   240 | = undefined
+
+# G9_COMMERCIAL_ARITH — Commercial Arithmetic (Tax, Bills)
+  instr: Work through the tax bands in order.
+  Q: PAYE is charged at 10% on the first KSh 24,000 of monthly income and 25% on anything above that. A worker earns KSh 36,000 a month and gets a personal relief of KSh 2,400. How much tax does she actually pay?
+  key: 3000   accepts: ["3000","3,000","KSh 3000","KSh3000"]
+  hint: Tax bands are charged in slices — the higher rate applies only to the part ABOVE the band, not to everything.
+  hint: First slice: 10% of 24,000.
+  hint: Add the tax on the remainder, then subtract the personal relief at the very end.
+  worked: undefined | Commission = 8% of sales.   →   8/100 × 60000 = 4800 | = undefined
+
+# G9_TRIG_INTRO — Trigonometry (SOH CAH TOA)
+  instr: Find the side (to 1 d.p.).
+  Q: In a right-angled triangle the hypotenuse is 16 and one angle is 60°. Find the opposite side. (1 d.p.)
+  key: 13.9   accepts: ["13.9"]
+  hint: SOH-CAH-TOA.
+  hint: sin = opposite ÷ hypotenuse, so opposite = hyp × sin(angle).
+  hint: 16 × sin(60°).
+  worked: undefined | adjacent = hyp × cos(angle).   →   16 × cos(50°) / Evaluate (1 d.p.).   →   10.3 | = undefined
+
+# G9_TRIG_PROBLEMS — Trigonometry Word Problems
+  instr: The ladder is the hypotenuse.
+  Q: A ladder 5 m long leans against a wall, making an angle of 30° with the ground. How far is its foot from the wall? (1 d.p.)
+  key: 4.3   accepts: ["4.3","4.3m"]
+  hint: The ladder itself is the longest side — the hypotenuse.
+  hint: The distance along the ground is ADJACENT to the angle, and you know the hypotenuse.
+  hint: Adjacent with hypotenuse → cos.
+  worked: undefined | Opposite (height) and adjacent (ground) → use tan.   →   tan 60° = h / 56 / Rearrange and evaluate.   →   h = 56 × tan 60° = 97 m | = undefined
+
+# G9_ERRORS — Approximation Errors & Bounds  [figure model:numberline-interval]
+  instr: Find the upper bound.
+  Q: The length of a plank is 20 cm to the nearest 10 cm. What is the upper bound of the actual length?
+  key: 25   accepts: ["25","25cm"]
+  hint: A rounded measurement could be up to HALF a unit out either way.
+  hint: Half of 10 cm is 5 cm.
+  hint: Add 5 to 20.
+  worked: undefined | Find the error.   →   |40 − 46| = 6 / Divide by the actual value and make it a percentage.   →   (6 ÷ 40) × 100 = 15% | = undefined

@@ -1,0 +1,369 @@
+HOREB simulated classroom · seed 11 · 18 children · 7280 questions served
+
+Children
+  G4 strong     check 29 q [4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 6x 6x] → placed G5 · practice 144 q, lowest G5 · {"5":32,"6":48,"7":64}
+  G4 average    check 30 q [4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5x 5x] → placed G4 · practice 144 q, lowest G5 · {"5":144}
+  G4 struggling check 40 q [4x 4x 4x 4x 4x 4x 4x 4x 4x 4 4x 4x 4x 4x 4x 4x 4x 4x 4x] → placed G3 · practice 144 q, lowest G1 · {"1":8,"2":56,"3":40,"4":40}
+  G5 strong     check 30 q [5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6 6 6 6 6 7 7x 7x] → placed G6 · practice 144 q, lowest G7 · {"7":144}
+  G5 average    check 32 q [5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 4 6x 6 6x] → placed G5 · practice 144 q, lowest G5 · {"5":8,"6":48,"7":88}
+  G5 struggling check 40 q [5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 4x] → placed G3 · practice 144 q, lowest G3 · {"3":24,"4":80,"5":40}
+  G6 strong     check 26 q [6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 8x 8x] → placed G7 · practice 144 q, lowest G5 · {"5":32,"7":32,"8":80}
+  G6 average    check 25 q [6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 7x 7x] → placed G6 · practice 144 q, lowest G5 · {"5":24,"7":120}
+  G6 struggling check 40 q [6x 6x 6 6x 6x 6x 6x 6x 6x 6x 6x 6x 6x 6x 6x 6x 5x 5x 5x] → placed G4 · practice 144 q, lowest G3 · {"3":8,"4":40,"5":96}
+  G7 strong     check 30 q [7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 8 8 8 8 8 9x 9x] → placed G8 · practice 144 q, lowest G8 · {"8":16,"9":128}
+  G7 average    check 33 q [7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 8 8x 8 8x] → placed G7 · practice 144 q, lowest G8 · {"8":136,"9":8}
+  G7 struggling check 40 q [7x 7x 7 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 6x 6x] → placed G5 · practice 144 q, lowest G4 · {"4":8,"5":80,"6":32,"7":24}
+  G8 strong     check 24 q [8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 9 9 9 9 9 10x] → placed G9 · practice 144 q, lowest G8 · {"8":16,"9":40,"10":88}
+  G8 average    check 29 q [8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 9x 9x] → placed G8 · practice 144 q, lowest G8 · {"8":8,"9":136}
+  G8 struggling check 40 q [8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 7x 7 7x 7x] → placed G6 · practice 144 q, lowest G3 · {"3":8,"4":32,"5":88,"8":16}
+  G9 strong     check 28 q [9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 10 10 10 10 11x] → placed G10 · practice 144 q, lowest G9 · {"9":16,"10":8,"11":120}
+  G9 average    check 32 q [9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 10x] → placed G9 · practice 144 q, lowest G8 · {"8":24,"9":24,"10":96}
+  G9 struggling check 40 q [9x 9x 9x 9x 9x 9x 9x 9x 9x 9x 9x 9 9x 9x 9x 9x 9x 9x 9x] → placed G8 · practice 144 q, lowest G4 · {"4":24,"5":64,"7":48,"9":8}
+
+Pass rate per check
+  scope      81.9%  (575 of 3180 failed)
+  fit        97.0%  (96 of 3180 failed)
+  key       100.0%  (0 of 3180 failed)
+  marking    97.7%  (337 of 14964 failed)
+  wording   100.0%  (0 of 3180 failed)
+  help       96.5%  (215 of 6205 failed)
+  repeats    97.3%  (86 of 3180 failed)
+  jumps      98.4%  (16 of 1018 failed)
+  pictures  100.0%  (0 of 161 failed)
+
+Content sweep: 205 CBC Grade 4-9 skills × 20 draws
+  key        99.8%  (7 of 4100 failed)
+  marking    98.3%  (290 of 16957 failed)
+  wording   100.0%  (0 of 4100 failed)
+  help       89.3%  (862 of 8020 failed)
+  pictures  100.0%  (0 of 165 failed)
+
+Failures, grouped by check and skill (first example each; "sweep" = content sweep)
+
+  [help] 1077 failures across 74 skills
+   × 53 G5 G5_FRACTIONS_INTRO (G4 strong): worked example is for another kind of question ("Shade the bar to show the fraction." vs "Place the fraction on the number line.")
+         Q: Place 2/3 on the number line.  [key 2/3]
+   × 35 G8 G8_VOLUME_ADV (G6 strong): worked example is for another kind of question ("Same prism idea: circle area × height. (2 d.p.)" vs "Volume of a prism = area of cross-section × length.")
+         Q: A triangular prism has a cross-section of base 5 cm and height 8 cm, and is 6 cm long. Find its volume.  [key 120]
+   × 35 G7 G7_DECIMAL_PV (G9 struggling): worked example is for another kind of question ("Think about the column after the point." vs "Answer with the number.")
+         Q: Which is larger: 0.77 or 0.8?  [key 0.8]
+   × 32 G5 G5_MULTIPLES (G4 strong): worked example is for another kind of question ("Find the multiple." vs "Find the multiple in the range.")
+         Q: Write the multiple of 7 that lies between 81 and 88.  [key 84]
+   × 24 G8 G7_MEAN_MEDIAN_MODE (G8 strong): worked example is for another kind of question ("Find the mode." vs "Find the range.")
+         Q: Find the range of:  2, 2, 11, 7, 4  [key 9]
+   × 23 G9 G9_ROUNDING (G7 strong): worked example is for another kind of question ("Round to 2 significant figures." vs "Estimate by rounding first.")
+         Q: Estimate 3.1 × 2.5 by first rounding each number to 1 significant figure.  [key 9]
+   × 22 G9 G9_COMMERCIAL_ARITH (G9 strong): worked example is for another kind of question ("Work through the tax bands in order." vs "Order matters — discount first, then VAT.")
+         Q: A shop offers 25% discount on an item marked KSh 5,000. VAT of 16% is then added to the discounted price. What does the customer pay?  [key 4350]
+   × 20 G4 G4_DATA (G4 strong): worked example is for another kind of question ("Name the biggest bar." vs "Read the value out of the table.")
+         Q: The table shows mango trees counted. How many trees for Kamau?  [key 17]
+   × 20 G6 G6_TIME (G6 strong): worked example is for another kind of question ("Subtract the two times. Give the answer in hours and minutes." vs "Change the time to minutes.")
+         Q: A journey to Kisumu takes 9 hours 25 minutes. How many minutes is that?  [key 565]
+   × 20 G8 G8_DATA_GRAPHS (G7 strong): worked example is for another kind of question ("Answer increasing or decreasing." vs "Give the value the bar represents.")
+         Q: On a bar graph, 1 square on the vertical axis represents 10 learners. A bar reaches 8 squares. How many learners does it represent?  [key 80]
+   × 20 G9 G9_SURFACE_AREA_ADV (G9 strong): worked example is for another kind of question ("Find the total surface area." vs "Find the curved surface area.")
+         Q: A cone has base radius 8 cm and slant height 17 cm. Find its CURVED surface area. (π = 3.142, 1 d.p.)  [key 427.3]
+   × 19 G8 G9_ARC_LENGTH (G8 strong): worked example is for another kind of question ("Find the perimeter of the sector." vs "Find the sector area.")
+         Q: Find the area of a sector of radius 20 cm with an angle of 240° at the centre. (π = 3.142, 1 d.p.)  [key 837.9]
+   × 19 G8 G8_SCALE_FORMS (G8 strong): worked example is for another kind of question ("Give the length on the drawing in centimetres." vs "Give the actual distance in kilometres.")
+         Q: On a map of scale 1:200,000, two towns are 3 cm apart. What is the actual distance between them, in kilometres?  [key 6]
+   × 19 G9 G10_LOGARITHMS_INTRO (G9 sweep): worked example is for another kind of question ("Answer with the power." vs "Write it as a common logarithm.")
+         Q: 10^1 = 10.  Write this in logarithm form.  [key log 10 = 1]
+   × 18 G5 G5_LENGTH (G5 average): worked example is for another kind of question ("Compare the two distances." vs "Give the answer in metres.")
+         Q: A matatu travels 6 km 814 m from the stage to the market, then 5 km 471 m to the next town. How far has it travelled in metres?  [key 12285]
+   × 18 G9 G9_PARALLEL_PERPENDICULAR (G9 struggling): worked example is for another kind of question ("Give the gradient only." vs "Give the equation in the form y = mx + c.")
+         Q: Find the equation of the line parallel to  y = 3x + 5  passing through the point (-1, 1).  [key y = 3x + 4]
+   × 18 G8 G8_RECURRING_DECIMALS (G8 sweep): worked example is for another kind of question ("Give the fraction in simplest form." vs "Write the decimal the dot stands for, to 1 decimal place.")
+         Q: The notation 0.9̇ means the digit 9 repeats forever. Written out to ONE decimal place, what is this number?  [key 0.9]
+   × 17 G4 G4_DECIMALS (G4 strong): worked example is for another kind of question ("Write the decimal as a fraction." vs "Name the place value.")
+         Q: In the number 0.2, the digit 2 is in which place?  [key tenths]
+   × 17 G5 G5_DIVISIBILITY (G5 sweep): worked example is for another kind of question ("Apply the divisibility test to each." vs "Choose the digit that passes the test.")
+         Q: Replace the ☐ in 25☐ with the smallest digit that makes the number divisible by 2.  [key 0]
+   × 17 G5 G5_FACTORS (G5 sweep): worked example is for another kind of question ("Find the largest factor below the number itself." vs "Count the factors.")
+         Q: How many factors does 24 have altogether?  [key 8]
+   × 17 G7 G7_FRACTIONS_COMPARE (G7 sweep): help shows computer noise "0.6666666666666666"
+         Q: Insert <, > or =:   3/7  ?  1/8  [key >]
+   × 17 G7 G7_NUMBERS_WORDS (G7 sweep): worked example is for another kind of question ("Write the number in symbols (digits only)." vs "Write the number in words.")
+         Q: Write 7,238 in words.  [key seven thousand two hundred and thirty-eight]
+   × 16 G5 G5_TIME (G5 struggling): worked example is for another kind of question ("Subtract the two times. Give the answer in hours and minutes." vs "Change the time to minutes.")
+         Q: A journey to Kisumu takes 5 hours 33 minutes. How many minutes is that?  [key 333]
+   × 16 G9 G9_GROUPED_MEASURES (G8 strong): worked example is for another kind of question ("Give your answer to 2 decimal places." vs "Give the class width as a number.")
+         Q: A frequency table uses the classes 0–19, 20–39, 40–59, … What is the CLASS WIDTH?  [key 20]
+   × 16 G9 G9_COMPOUND_PROPORTION (G9 strong): worked example is for another kind of question ("Think about which way the answer moves." vs "Share it in the given ratio.")
+         Q: A harvest of maize of 5,400 is shared between Amina and Otieno in the ratio 2:7. How much does Otieno get?  [key 4200]
+   × 16 G5 G5_FRACTIONS_EQUIV (G5 sweep): help shows computer noise "0.7142857142857143"
+         Q: Fill in the blank:   5/7 = ?/42  [key 30]
+   × 16 G9 G8_CUMULATIVE_FREQ (G9 sweep): worked example is for another kind of question ("Read it from the running total." vs "Build the running total.")
+         Q: Marks are grouped as —  10–19: 9,  20–29: 6,  30–39: 3,  40–49: 3.  What is the cumulative frequency of the class 30–39?  [key 18]
+   × 16 G8 G9_LOCI (G8 sweep): worked example is for another kind of question ("Describe the locus in this situation." vs "Inside or outside the locus?")
+         Q: A sprinkler waters everything within 7 m of itself. Is a flower 9 m away watered? (yes/no)  [key no]
+   × 16 G9 G9_GROUPED_DATA (G9 sweep): worked example is for another kind of question ("Halfway across the class." vs "How many data points in all?")
+         Q: Marks (grouped) with frequencies —  0–9: 8,  10–19: 2,  20–29: 4,  30–39: 9.  How many students were surveyed in total?  [key 23]
+   × 15 G7 G7_PIE_CHARTS (G7 sweep): worked example is for another kind of question ("Give the missing angle in degrees." vs "Give the speed in km/h.")
+         Q: On a travel graph, a matatu covers 40 km in the first 2 hour(s). What is its average speed over that stretch?  [key 20]
+   × 15 G9 G9_TRIG_PROBLEMS (G9 sweep): worked example is for another kind of question ("Find the angle." vs "Angle of depression equals the angle of elevation from below.")
+         Q: From the top of a cliff 51 m high, the angle of depression of a boat at sea is 45°. How far is the boat from the foot of the cliff? (1 d.p.)  [key 51]
+   × 15 G9 G9_ERRORS (G9 sweep): worked example is for another kind of question ("Find the upper bound." vs "Find the error.")
+         Q: The actual length of a desk is 115 cm. A learner estimates it as 107 cm. Find the error in the estimate.  [key 8]
+   × 15 G9 G9_RATES_OF_WORK (G9 sweep): worked example is for another kind of question ("Find the rate per hour." vs "Work with what each does in ONE hour.")
+         Q: Wanjiku can paint a room in 12 hours. Kamau can paint the same room in 4 hours. Working together, how many hours do they take?  [key 3]
+   × 14 G4 G4_LENGTH (G4 strong): worked example is for another kind of question ("Convert the units." vs "Compare the measurements.")
+         Q: Which is more: 5 metres or 910 centimetres?  [key 910 centimetres]
+   × 14 G4 G4_PLANE_FIGURES (G4 strong): worked example is for another kind of question ("Think about the shape." vs "Name the shape.")
+         Q: I have 6 sides and 6 corners. What shape am I?  [key hexagon]
+   × 14 G9 G8_INEQUALITIES (G9 average): worked example is for another kind of question ("Careful — watch the sign." vs "Solve it.")
+         Q: Solve:   2x − 5 > 7  [key x > 6]
+   × 14 G9 G9_ELEVATION_DEPRESSION (G9 sweep): worked example is for another kind of question ("Answer elevation or depression." vs "Give your answer in metres to 1 decimal place.")
+         Q: A learner stands 50 m from the foot of a tower on level ground. The angle of elevation of the top of the tower from her eyes is 45°. How tall is the tower above  [key 50]
+   × 13 G7 G7_ANGLE_CONSTRUCTION (G7 strong): worked example is for another kind of question ("Give the angle in degrees." vs "Answer yes or no.")
+         Q: Using only a ruler and a pair of compasses, and working from 90° and 60° by bisecting, can an angle of 70° be constructed?  [key no]
+   × 13 G9 G11_MATRICES_INTRO (G9 strong): worked example is for another kind of question ("Give the order as rows × columns." vs "Answer as row,column — for example 2,1.")
+         Q: In the matrix [5 9 4; 5 6 4; 5 4 1], in which row and column does the element 1 sit?  [key 3,3]
+   × 13 G9 G8_CUBES_CUBE_ROOTS (G9 strong): worked example is for another kind of question ("Find the cube root." vs "Find the cube.")
+         Q: 3³  [key 27]
+   × 13 G4 G4_ORDER_ROUND (G4 sweep): worked example is for another kind of question ("Round to the nearest ten." vs "Compare the numbers.")
+         Q: Which is the largest: 526, 889, 225?  [key 889]
+   × 13 G8 G8_PROBABILITY_COMBINED (G8 sweep): worked example is for another kind of question ("The second pick has one sweet fewer." vs "Two spins — multiply along the branches.")
+         Q: A fair 6-sided spinner (numbered 1 to 6) is spun twice. What is the probability of getting 6 BOTH times?  [key 1/36]
+   × 12 G9 G9_QUADRATIC_GRAPHS (G9 strong): worked example is for another kind of question ("Find a point on the curve." vs "Find the line of symmetry.")
+         Q: The curve y = x² - 9x + 18 crosses the x-axis at x = 3 and x = 6. Find the equation of its line of symmetry.  [key x = 4.5]
+   × 12 G4 G4_ODD_EVEN (G4 sweep): worked example is for another kind of question ("Even or odd?" vs "Find the next number.")
+         Q: What comes next?   25, 31, 37, 43, ?  [key 49]
+   × 12 G4 G4_ROMAN_NUMERALS (G4 sweep): worked example is for another kind of question ("Write the Roman numeral." vs "Write the number.")
+         Q: What number is XI?  [key 11]
+   × 12 G9 G9_VARIATION (G9 sweep): worked example is for another kind of question ("Find the constant first." vs "The PRODUCT stays constant.")
+         Q: y varies INVERSELY as x, and y = 8 when x = 3. Find y when x = 2.  [key 12]
+   × 11 G5 G5_MASS (G5 struggling): worked example is for another kind of question ("Write it in kilogrammes and grams." vs "Write it in grams.")
+         Q: Write 9 kg 219 g in grams.  [key 9219]
+   × 11 G9 G9_BEARINGS (G8 strong): worked example is for another kind of question ("The return journey." vs "Bearings: three figures, measured CLOCKWISE from North.")
+         Q: A ship sails S 38° E. Write this as a three-figure bearing.  [key 142]
+   × 11 G8 G8_SQUARES_TABLES (G8 struggling): worked example is for another kind of question ("Give the whole number just below it." vs "Give the square root.")
+         Q: Find  √1.44  [key 1.2]
+   × 11 G7 G7_NUMBER_SEQUENCES (G7 sweep): worked example is for another kind of question ("Give the constant difference as a number." vs "Find the next term.")
+         Q: What is the next number in the sequence  6, 7, 9, 12,  … ?  [key 16]
+   × 11 G9 G11_MATRICES_OPS (G9 sweep): worked example is for another kind of question ("Answer yes or no." vs "Give your answer as a matrix, rows separated by ;")
+         Q: [10 3; 5 9] + [4 2; 2 4] = ?  [key [14 5; 7 13]]
+   × 10 G8 G8_LINEAR_GRAPHS (G8 strong): worked example is for another kind of question ("Read it straight off the equation." vs "Substitute and evaluate.")
+         Q: A line has equation y = x - 2. Find y when x = 4.  [key 2]
+   × 10 G7 G7_FRACTIONS_ADD_UNLIKE (G7 sweep): worked example is for another kind of question ("Add the fractions. Give the answer in simplest form." vs "Subtract the fractions. Give the answer in simplest form.")
+         Q: 6/8 − 3/5  [key 3/20]
+   × 10 G7 G7_DATA_REPRESENT (G7 sweep): worked example is for another kind of question ("The whole pie is 360°." vs "Fraction of the circle = fraction of the people.")
+         Q: A pie chart of how 192 students travel to school gives "walking" a 45° slice. How many students is that?  [key 24]
+   × 10 G9 G9_TRANSFORMATIONS_ADV (G9 sweep): worked example is for another kind of question ("Plot the image after the reflection." vs "Plot the image after the translation.")
+         Q: Plot the image of (3, 1) after translating by (-2, -1).  [key (1, 0)]
+   × 10 G9 G10_LOG_LAWS (G9 sweep): worked example is for another kind of question ("Write it as a single logarithm." vs "Give a number, not a log.")
+         Q: Evaluate:  log 100 + log 100  [key 4]
+   ×  9 G4 G4_TIME (G4 struggling): worked example is for another kind of question ("Change the time to minutes." vs "Give the finishing time with a.m. or p.m.")
+         Q: A Mathematics lesson starts at 11:15 a.m. and lasts 1 hour 20 minutes. At what time does it finish? (Give a.m. or p.m.)  [key 12:35 p.m.]
+   ×  9 G4 G4_NUMBER_WORDS (G4 sweep): worked example is for another kind of question ("Write the number in words." vs "Write the number in symbols.")
+         Q: Write 4 thousand 478 in symbols.  [key 4478]
+   ×  9 G5 G5_ROUNDING (G5 sweep): worked example is for another kind of question ("Round to the nearest hundred." vs "Round to the nearest thousand.")
+         Q: Round 73,145 to the nearest thousand.  [key 73000]
+   ×  9 G8 G8_STANDARD_FORM (G8 sweep): worked example is for another kind of question ("Write it out in full." vs "One digit before the point, times a power of 10.")
+         Q: Write 8,300 in standard form.  [key 8.3×10^3]
+   ×  8 G5 G5_CAPACITY (G4 average): worked example is for another kind of question ("Write it in litres and millilitres." vs "Write it in millilitres.")
+         Q: Write 2 l 682 ml in millilitres.  [key 2682]
+   ×  8 G4 G4_FACTORS_MULTIPLES (G4 sweep): worked example is for another kind of question ("Think about factors." vs "Think about multiples.")
+         Q: What is the 9th multiple of 11?  [key 99]
+   ×  8 G9 G8_EQUATION_OF_LINE (G9 sweep): worked example is for another kind of question ("Build y = mx + c." vs "Gradient first, then the intercept.")
+         Q: Find the equation of the line through (-3, -1) and (0, 5).  [key y = 2x + 5]
+   ×  7 G5 G5_LINES (G5 struggling): worked example is for another kind of question ("Say whether the line is horizontal or vertical." vs "Name the relationship between the lines.")
+         Q: The corner of an exercise book is made by two straight edges meeting. What are such lines called?  [key perpendicular]
+   ×  7 G7 G7_ANGLE_CONSTRUCTION (G7 strong): help shows computer noise "9.333333333333334"
+         Q: Using only a ruler and a pair of compasses, and working from 90° and 60° by bisecting, can an angle of 70° be constructed?  [key no]
+   ×  7 G5 G5_VOLUME (G5 sweep): worked example is for another kind of question ("Use the link between cubic centimetres and millilitres." vs "Find the volume in cubic centimetres.")
+         Q: Find the volume of a cube of side 4 cm.  [key 64]
+   ×  7 G7 G7_DIVISIBILITY (G7 sweep): worked example is for another kind of question ("Use the digit-sum rule." vs "Answer yes or no — no long division needed.")
+         Q: Is 9,682 divisible by 9?  [key no]
+   ×  6 G4 G4_MASS (G4 struggling): worked example is for another kind of question ("Compare the measurements." vs "Convert the units.")
+         Q: How many kilograms are there in 7,000 grams?  [key 7]
+   ×  6 G7 G8_POLYGON_ANGLES (G7 sweep): worked example is for another kind of question ("Find the sum of the interior angles." vs "Find each interior angle of the regular polygon.")
+         Q: Find each interior angle of a regular 4-sided polygon.  [key 90]
+   ×  5 G4 G4_FRACTIONS (G4 average): worked example is for another kind of question ("Find the missing number." vs "Write the fraction in its simplest form.")
+         Q: Write 5/10 in its simplest form.  [key 1/2]
+   ×  5 G7 G7_MONEY_TRANSACTIONS (G7 sweep): worked example is for another kind of question ("Work in shillings." vs "Give the percentage.")
+         Q: An item marked KSh 800 is sold for KSh 760. What is the percentage discount?  [key 5]
+   ×  5 G8 G8_PROFIT_LOSS (G8 sweep): worked example is for another kind of question ("Percentage change is measured on the BUYING price." vs "Work out the selling price.")
+         Q: A shopkeeper buys a bag for 200/- and sells it at a 5% profit. Find the selling price.  [key 210]
+   ×  5 G8 G8_COORDINATES (G8 sweep): worked example is for another kind of question ("Plot the midpoint." vs "Plot the point on the grid.")
+         Q: Plot the point (-1, 1).  [key (-1, 1)]
+   ×  4 G4 G4_CAPACITY (G4 sweep): worked example is for another kind of question ("Convert the units." vs "Compare the measurements.")
+         Q: Which is more: 8 litres or 12460 millilitres?  [key 12460 millilitres]
+   ×  4 G7 G8_POLYGON_ANGLES (G7 sweep): help shows computer noise "8.57142857142858"
+         Q: Find each interior angle of a regular 10-sided polygon.  [key 144]
+   ×  3 G4 G4_POSITION (G4 sweep): worked example is for another kind of question ("Act it out." vs "Think about turns.")
+         Q: How many right angles are there in a quarter turn?  [key 1]
+
+  [marking] 627 failures across 19 skills
+   ×178 G7 G6_FRACTIONS_MUL (G4 strong): wrong answer "120/81" marked right
+         Q: 8/3 × 5/9  [key 40/27]
+   ×158 G6 G6_FRACTIONS_ADD (G4 strong): wrong answer "15/18" marked right
+         Q: 4/8 + 2/6  [key 5/6]
+   × 34 G9 G9_PROBABILITY_ADV (G8 strong): wrong answer "3/6" marked right
+         Q: A bag has 10 equally likely outcomes; 5 are favourable. What is the probability of a favourable outcome?  [key 1/2]
+   × 24 G8 G8_PROBABILITY_INTRO (G8 strong): wrong answer "3/24" marked right
+         Q: A bag has 8 equally likely outcomes; 1 is favourable. What is the probability of a favourable outcome?  [key 1/8]
+   × 20 G7 G7_FRACTIONS_MUL (G7 sweep): wrong answer "75/9" marked right
+         Q: 10/4 × 10/3  [key 25/3]
+   × 20 G8 G8_SIMULTANEOUS_INTRO (G8 sweep): right answer as pair swapped "y = 2, x = 2" marked wrong
+         Q: Solve: 2x + 3y = 10, 1x + 2y = 6  [key x=2, y=2]
+   × 20 G8 G8_SIMULTANEOUS_INTRO (G8 sweep): right answer as pair with and "x = 2 and y = 2" marked wrong
+         Q: Solve: 2x + 3y = 10, 1x + 2y = 6  [key x=2, y=2]
+   × 19 G7 G7_FRACTIONS_ADD_UNLIKE (G7 sweep): wrong answer "3/168" marked right
+         Q: 7/8 − 6/7  [key 1/56]
+   × 18 G5 G5_MASS (G5 strong): right answer as units in words "9 kilograms 927 grams" marked wrong
+         Q: Write 9927 g in kilogrammes and grams.  [key 9 kg 927 g]
+   × 18 G7 G6_FRACTIONS_DIV (G7 sweep): wrong answer "63/12" marked right
+         Q: 7/2 ÷ 2/3  [key 21/4]
+   × 18 G7 G7_FRACTIONS_DIV (G7 sweep): wrong answer "15/18" marked right
+         Q: 1/3 ÷ 2/5  [key 5/6]
+   × 17 G5 G5_FRACTIONS_SUB_LIKE (G5 sweep): wrong answer "3/18" marked right
+         Q: 5/6 − 4/6  [key 1/6]
+   × 17 G6 G6_FRACTIONS_SUB (G6 sweep): wrong answer "3/18" marked right
+         Q: 2/4 − 1/3  [key 1/6]
+   × 16 G5 G5_FRACTIONS_ADD_LIKE (G5 sweep): wrong answer "24/33" marked right
+         Q: 6/11 + 2/11  [key 8/11]
+   × 13 G5 G5_CAPACITY (G4 strong): right answer as units in words "2 litres 460 millilitres" marked wrong
+         Q: Write 2460 ml in litres and millilitres.  [key 2 l 460 ml]
+   × 11 G6 G6_TIME (G6 average): right answer as units in words "2 hrs 59 mins" marked wrong
+         Q: A film lasts 4 h 52 min. Otieno has already watched 1 h 53 min of it. How much is left? (Give hours and minutes.)  [key 2 h 59 min]
+   ×  9 G5 G5_TIME (G5 strong): right answer as units in words "1 hrs 48 mins" marked wrong
+         Q: A film lasts 3 h 39 min. Otieno has already watched 1 h 51 min of it. How much is left? (Give hours and minutes.)  [key 1 h 48 min]
+   ×  7 G4 G4_FRACTIONS (G4 average): wrong answer "3/6" marked right
+         Q: Write 5/10 in its simplest form.  [key 1/2]
+   ×  5 G5 G5_LENGTH (G5 strong): right answer as units in words "9 metres 81 centimetres" marked wrong
+         Q: Write 981 cm in metres and centimetres.  [key 9 m 81 cm]
+   ×  5 G8 G8_RECURRING_DECIMALS (G8 sweep): wrong answer "24/27" marked right
+         Q: Express the recurring decimal  0.888…  as a fraction in its simplest form.  [key 8/9]
+
+  [fit] 96 failures across 5 skills
+   × 48 G7 G6_DECIMALS_MUL (G4 strong): Grade 7 skill served to a strong Grade 4 child
+         Q: 2.1 × 0.9  [key 1.89]
+   × 16 G7 G6_FRACTIONS_MUL (G4 strong): Grade 7 skill served to a strong Grade 4 child
+         Q: 8/3 × 5/9  [key 40/27]
+   × 16 G4 G4_MULTIPLY (G9 struggling): Grade 4 skill served to a struggling Grade 9 child
+         Q: 14 × 5 = ?  [key 70]
+   ×  8 G3 G3_MULTIPLY (G8 struggling): Grade 3 skill served to a struggling Grade 8 child
+         Q: 3 × 6 = ?  [key 18]
+   ×  8 G4 G4_FRACTIONS (G9 struggling): Grade 4 skill served to a struggling Grade 9 child
+         Q: Fill in the blank:   3/6 = ?/18  [key 9]
+
+  [jumps] 16 failures across 10 skills
+   ×  5 G7 G6_DECIMALS_MUL (G4 strong): Grade 5 → Grade 7 straight after a correct answer
+         Q: 2.1 × 0.9  [key 1.89]
+   ×  2 G4 G4_MULTIPLY (G4 struggling): Grade 2 → Grade 4 straight after a correct answer
+         Q: 14 × 2 = ?  [key 28]
+   ×  2 G7 G6_FRACTIONS_MUL (G6 average): Grade 5 → Grade 7 straight after a correct answer
+         Q: 4/7 × 6/4  [key 6/7]
+   ×  1 G6 G6_FRACTIONS_ADD (G5 average): Grade 4 → Grade 6 straight after a correct answer
+         Q: 1/8 + 3/4  [key 7/8]
+   ×  1 G8 G8_VOLUME_ADV (G6 strong): Grade 5 → Grade 8 straight after a correct answer
+         Q: Find the volume of a cylinder with radius 7 cm and height 4 cm. (2 d.p.)  [key 615.75]
+   ×  1 G10 G10_PROBABILITY_DISTRIBUTIONS (G8 strong): Grade 8 → Grade 10 straight after a correct answer
+         Q: X ~ B(7, 0.8). Find the mean of X.  [key 5.6]
+   ×  1 G5 G5_MULTIPLICATION (G8 struggling): Grade 3 → Grade 5 straight after a correct answer
+         Q: 23 × 67 = ?  [key 1541]
+   ×  1 G11 G11_DIFF_FIRST_PRINCIPLES (G9 strong): Grade 9 → Grade 11 straight after a correct answer
+         Q: f(x) = 6x^5. Using the derivative from first principles, find the gradient f'(1).  [key 30]
+   ×  1 G11 G11_LIMITS (G9 strong): Grade 9 → Grade 11 straight after a correct answer
+         Q: On y = x², find the gradient of the chord from x = 6 to x = 6.1.  [key 12.1]
+   ×  1 G7 G7_DECIMALS_MUL (G9 struggling): Grade 5 → Grade 7 straight after a correct answer
+         Q: 1.51 × 0.5  [key 0.755]
+
+  [repeats] 86 failures across 25 skills
+   × 26 G9 G8_INDICES_INTRO (G7 strong): same question twice in one sitting
+         Q: 2^4  [key 16]
+   × 10 G10 G10_PERMUTATIONS (G8 strong): same question twice in one sitting
+         Q: Evaluate  6P4  (the number of ordered arrangements).  [key 360]
+   ×  7 G9 G9_QUADRATIC_EXPAND (G7 strong): same question twice in one sitting
+         Q: Expand:   (x + 6)(x + 7)  [key x^2 + 13x + 42]
+   ×  6 G5 G5_FRACTIONS_INTRO (G4 strong): same question twice in one sitting
+         Q: Place 2/3 on the number line.  [key 2/3]
+   ×  5 G10 G10_COMBINATIONS (G8 strong): same question twice in one sitting
+         Q: Evaluate  8C4  (the number of unordered selections).  [key 70]
+   ×  4 G8 G6_INTEGERS_INTRO (G7 average): same question twice in one sitting
+         Q: Place 7 on the number line.  [key 7]
+   ×  3 G3 G3_MULTIPLY (G4 struggling): same question twice in one sitting
+         Q: 5 × 7 = ?  [key 35]
+   ×  3 G7 G7_AREA_CIRCLE (G6 strong): same question twice in one sitting
+         Q: Find the area of a circle with radius 3 cm. (2 d.p.)  [key 28.27]
+   ×  3 G11 G11_LIMITS (G9 strong): same question twice in one sitting
+         Q: On y = x², find the gradient of the chord from x = 6 to x = 6.1.  [key 12.1]
+   ×  2 G5 G5_DECIMALS_INTRO (G4 strong): same question twice in one sitting
+         Q: Shade the grid to show 0.51.  [key 0.51]
+   ×  2 G2 G2_MULTIPLY_INTRO (G4 struggling): same question twice in one sitting
+         Q: 2 + 2 = ?  [key 4]
+   ×  2 G9 G9_PROBABILITY_ADV (G8 strong): same question twice in one sitting
+         Q: A bag has 10 equally likely outcomes; 5 are favourable. What is the probability of a favourable outcome?  [key 1/2]
+   ×  1 G6 G6_FRACTIONS_ADD (G4 strong): same question twice in one sitting
+         Q: 1/2 + 3/8  [key 7/8]
+   ×  1 G5 G5_LCM_HCF (G4 average): same question twice in one sitting
+         Q: What is the highest common factor (HCF) of 16 and 6?  [key 2]
+   ×  1 G1 G1_ADD (G4 struggling): same question twice in one sitting
+         Q: 7 + 2 = ?  [key 9]
+   ×  1 G7 G6_DECIMALS_MUL (G5 average): same question twice in one sitting
+         Q: 3.3 × 0.5  [key 1.65]
+   ×  1 G7 G7_VOLUME_CYLINDER (G6 strong): same question twice in one sitting
+         Q: Find the volume of a cylinder with radius 3 cm and height 11 cm. (2 d.p.)  [key 311.02]
+   ×  1 G7 G6_FRACTIONS_MUL (G6 average): same question twice in one sitting
+         Q: 4/5 × 4/8  [key 2/5]
+   ×  1 G9 G9_QUADRATIC_FACTORIZE (G7 strong): same question twice in one sitting
+         Q: Factorise:   x^2 + 6x + 5  [key (x + 1)(x + 5)]
+   ×  1 G4 G4_MULTIPLY (G8 struggling): same question twice in one sitting
+         Q: 16 × 5 = ?  [key 80]
+   ×  1 G11 G11_DIFF_FIRST_PRINCIPLES (G9 strong): same question twice in one sitting
+         Q: Differentiate f(x) = 5x^3 from first principles. What is f'(x)?  [key 15x^2]
+   ×  1 G9 G9_QUADRATIC_GRAPHS (G9 strong): same question twice in one sitting
+         Q: At what value of y does the curve y = x² + x - 2 cross the y-AXIS?  [key -2]
+   ×  1 G9 G8_SIMILARITY (G9 average): same question twice in one sitting
+         Q: Two triangles are similar. A 4 cm side matches a 10 cm side. What does a 6 cm side of the small triangle match?  [key 15]
+   ×  1 G9 G9_VOLUME_ADV (G9 average): same question twice in one sitting
+         Q: Find the volume of a sphere of radius 9 cm. (π = 3.142, 1 d.p.)  [key 3054]
+   ×  1 G10 G10_SEQUENCES_ADV (G9 average): same question twice in one sitting
+         Q: Geometric sequence:  -3, -9, -27, …   Find the 5th term.  [key -243]
+
+  [scope] 575 failures across 18 skills
+   ×120 G9 G9_QUADRATIC_EXPAND (G7 strong): skill outside the CBC design (inScope false) served to a CBC Grade 7 child
+         Q: Expand:   (x + 6)(x - 1)  [key x^2 + 5x - 6]
+   ×103 G10 G10_SEQUENCES_ADV (G8 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 8 child
+         Q: Sequence:  1, 0, -1, -2, …   Find the 6th term.  [key -4]
+   × 56 G9 G9_QUADRATIC_FACTORIZE (G7 strong): skill outside the CBC design (inScope false) served to a CBC Grade 7 child
+         Q: Factorise:   x^2 + 8x + 7  [key (x + 1)(x + 7)]
+   × 48 G11 G11_DIFF_FIRST_PRINCIPLES (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: f(x) = 6x^5. Using the derivative from first principles, find the gradient f'(1).  [key 30]
+   × 40 G11 G11_LIMITS (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: On y = x², find the gradient of the chord from x = 6 to x = 6.1.  [key 12.1]
+   × 35 G11 G11_DIFF_POWER_RULE (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: Differentiate:   y = -3x^4 - 3x^3 + 5x^2  [key -12x^3 - 9x^2 + 10x]
+   × 33 G10 G10_COMBINATIONS (G8 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 8 child
+         Q: Evaluate  5C3  (the number of unordered selections).  [key 10]
+   × 24 G8 G8_SEQUENCES (G8 strong): skill outside the CBC design (inScope false) served to a CBC Grade 8 child
+         Q: Sequence:  -1, -3, -5, -7, …   Find the 10th term.  [key -19]
+   × 24 G10 G10_PROBABILITY_DISTRIBUTIONS (G8 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 8 child
+         Q: X ~ B(7, 0.8). Find the mean of X.  [key 5.6]
+   × 24 G10 G10_PERMUTATIONS (G8 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 8 child
+         Q: Evaluate  5P2  (the number of ordered arrangements).  [key 20]
+   × 16 G9 G9_QUADRATIC_SOLVE (G7 strong): skill outside the CBC design (inScope false) served to a CBC Grade 7 child
+         Q: Solve:   x^2 - 4x - 5 = 0  [key x = -1 or x = 5]
+   × 16 G9 G9_FUNCTIONS_INTRO (G8 strong): skill outside the CBC design (inScope false) served to a CBC Grade 8 child
+         Q: Given f(x) = -2x^2 - x + 8,   find f(-1).  [key 7]
+   × 16 G9 G9_QUADRATIC_GRAPHS (G9 strong): skill outside the CBC design (inScope false) served to a CBC Grade 9 child
+         Q: Find the value of y on the curve y = x² + 7x + 6 when x = -4.  [key -6]
+   ×  8 G10 G10_FUNCTIONS_ADV (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: f(x) = 4x + 5. Find f⁻¹(9).  [key 1]
+   ×  8 G10 G10_BINOMIAL_THEOREM (G9 average): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: Find the coefficient of x^1 in (1 + x)^3.  [key 3]
+   ×  2 G11 G11_DIFF_CHAIN_RULE (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: f(x) = (-4x - 3)^3.   Using the chain rule, find f'(0).  [key -108]
+   ×  1 G10 G10_TRIG_IDENTITIES (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: θ is acute and cos(θ) = 12/13. Find sin(θ).  [key 5/13]
+   ×  1 G10 G10_SURDS_ADV (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: Rationalise the denominator: 8/√5  [key 8√5/5]
+
+  [key] 7 failures across 1 skills
+   ×  3 G8 G8_FACTORIZE_COMMON (G8 sweep): key 6(2x - 4) is not fully factorised (the bracket still has a common factor 2)
+         Q: Factorise:   12x - 24  [key 6(2x - 4)]
+   ×  2 G8 G8_FACTORIZE_COMMON (G8 sweep): key 2(-2x - 2) is not fully factorised (the bracket still has a common factor 2)
+         Q: Factorise:   -4x - 4  [key 2(-2x - 2)]
+   ×  2 G8 G8_FACTORIZE_COMMON (G8 sweep): key 5(-6x + 2) is not fully factorised (the bracket still has a common factor 2)
+         Q: Factorise:   -30x + 10  [key 5(-6x + 2)]
