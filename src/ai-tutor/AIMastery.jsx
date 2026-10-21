@@ -31,6 +31,7 @@ import { Lottie, LOTTIE } from './components/Lottie.jsx';
 import { InteractiveVisual, SKILL_VISUALS } from './InteractiveVisual.jsx';
 import { checkVisualAnswer } from './content/visual.js';
 import { checkAnswerMatch, normalizeMath } from './answerCheck.js';
+import { readAs } from './algebraEquivalence.js';
 import { maybeChoices, ownChoicesOnly, LETTERS } from './choices.js';
 import { specialItemFor } from './specialItems.js';
 import { BarModel } from './BarModel.jsx';
@@ -38,6 +39,15 @@ import { YoungPicture } from './YoungPicture.jsx';
 import { StepsQuestion } from './StepsQuestion.jsx';
 import { speak, canSpeak, stopSpeaking, questionScript } from './speech.js';
 import { canPractice } from '../subscription.js';
+
+// How the child's typing was read ("x^9" shows as x⁹, "5*x" as 5x), so they can
+// see the checker understood them before they press Check (feedback F3).
+function ReadAs({ text, hidden }) {
+  const shown = !hidden && readAs(text);
+  if (!shown) return null;
+  return <p className="mt-1.5 text-sm text-slate-500" aria-live="polite">Read as <span className="font-semibold text-slate-800">{shown}</span></p>;
+}
+
 
 // ==================== SMART ANSWER MATCHING ====================
 // Tolerant answer grading lives in ./answerCheck.js (so it can be unit-tested).
@@ -1452,7 +1462,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               {problem?.mc ? (
                 <ChoiceGrid problem={problem} answer={answer} onPick={setAnswer} disabled={!!feedback} />
               ) : (
-              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+              <><input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+              <ReadAs text={answer} hidden={!!feedback} /></>
               )}
               {!feedback && (
                 <button onClick={() => handleDiagnosticAnswer({ skip: true })} className="mt-3.5 text-[15px] font-bold text-slate-900 underline underline-offset-4 hover:text-[#c2255c] transition-colors">
@@ -1793,6 +1804,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   )
                 )}
                 <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+                <ReadAs text={answer} hidden={!!feedback} />
                 </>}
 
                 {/* Roadside assistance, not GPS: only offered once the child has
@@ -2069,7 +2081,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               {problem?.mc ? (
                 <ChoiceGrid problem={problem} answer={answer} onPick={setAnswer} disabled={!!feedback} showAnswer={!!feedback} />
               ) : (
-              <input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+              <><input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+              <ReadAs text={answer} hidden={!!feedback} /></>
               )}
             </div>
 

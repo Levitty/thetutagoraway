@@ -8,6 +8,8 @@
 // string/algebra matches.
 // ============================================================================
 
+import { algebraicallyEqual } from './algebraEquivalence.js';
+
 export function normalizeMath(str) {
   let s = str.toString().trim().toLowerCase();
   s = s.replace(/[−–—]/g, '-');          // unicode minus/dash → hyphen
@@ -273,6 +275,11 @@ export function checkAnswerMatch(userAnswer, problem) {
   const userKey = sidesKey(normalizedUser);
   if (userKey && accepts.some(a => sidesKey(normalizeMath(a)) === userKey)) return true;
 
+  // 1g) Any expression equal in value to the key, in the form the question
+  //     asks for: "x·5 + 3", "2(3 + x)", "yx", "(x+2)(x+1)" (algebraEquivalence.js).
+  //     Keys that read as a plain number are left to the value match below.
+  if (accepts.some(a => mathValue(a) == null && algebraicallyEqual(userAnswer, a, problem?.question))) return true;
+
   // 2) Single-number match by value — covers integers, decimals, fractions,
   //    mixed numbers, %, and units. A typed DECIMAL is graded at the key's
   //    displayed precision (3.14159 for a key of 3.14). A typed fraction, mixed
@@ -297,9 +304,11 @@ export function checkAnswerMatch(userAnswer, problem) {
     })) return true;
   }
 
-  // 3) Coordinate answers: normalize (x,y) format.
+  // 3) Coordinate answers: normalize (x,y) format. Only for keys that ARE
+  //    coordinates (a comma inside): stripping brackets from algebra made
+  //    "2k + 8" pass for "2(k + 8)", a child who forgot the brackets.
   const coordUser = normalizedUser.replace(/[()]/g, '');
-  if (accepts.some(a => normalizeMath(a).replace(/[()]/g, '') === coordUser)) return true;
+  if (accepts.some(a => /,/.test(String(a)) && normalizeMath(a).replace(/[()]/g, '') === coordUser)) return true;
 
   return false;
 }
