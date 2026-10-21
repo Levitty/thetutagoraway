@@ -1,0 +1,57 @@
+diff --git a/src/ai-tutor/content/schema.js b/src/ai-tutor/content/schema.js
+index 4c46c82..eece0d0 100644
+--- a/src/ai-tutor/content/schema.js
++++ b/src/ai-tutor/content/schema.js
+@@ -176,7 +176,15 @@ export const withLevels = (levels) => (opts = {}) => {
+ // what the lesson UI renders.
+ export const withWorkedExample = (gen) => () => {
+   const p = gen();
+-  const ex = gen();
++  // The example must be the same KIND of question with other numbers: a
++  // generator that picks among variants drew the example's variant separately,
++  // so a pie-chart question was shown a travel-graph example (feedback F11).
++  // Same instruction (numbers and single letters aside) and a different
++  // question; after 60 tries the last draw is kept rather than none.
++  const kind = (t) => String(t || '').trim().toLowerCase().replace(/\d+/g, '#').replace(/\b[a-z]\b/g, '_');
++  const same = (a, b) => JSON.stringify([a.question, a.model, a.visual, a.picture]) === JSON.stringify([b.question, b.model, b.visual, b.picture]);
++  let ex = gen();
++  for (let i = 0; i < 60 && (kind(ex.instruction) !== kind(p.instruction) || same(ex, p)); i++) ex = gen();
+   p.hint = p.hint || (p.hints && p.hints[0]);
+   p.solutionSteps = (p.solution?.steps || []).map(stepText);
+   p.workedExample = {
+diff --git a/tests/worked-example-kind.test.mjs b/tests/worked-example-kind.test.mjs
+new file mode 100644
+index 0000000..20854bf
+--- /dev/null
++++ b/tests/worked-example-kind.test.mjs
+@@ -0,0 +1,30 @@
++// ============================================================================
++// THE WORKED EXAMPLE IS THE SAME KIND OF QUESTION (feedback F11)
++//
++// 21% of worked examples (72 CBC Grade 4-9 skills) were drawn from another
++// variant of the skill: a pie-chart question with a travel-graph example,
++// "decrease by 15%" with an increase, adding times with a subtraction.
++// ============================================================================
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
++import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
++
++const kind = (t) => String(t || '').trim().toLowerCase().replace(/\d+/g, '#').replace(/\b[a-z]\b/g, '_');
++
++test('worked example instruction matches the question it sits under', () => {
++  let total = 0, wrong = 0; const off = new Set();
++  for (const id of Object.keys(SKILLS)) {
++    for (let i = 0; i < 15; i++) {
++      const p = generateProblem(id);
++      const w = p.workedExample;
++      if (!w?.instruction || !p.instruction) continue;
++      total++;
++      if (kind(w.instruction) !== kind(p.instruction)) { wrong++; off.add(id); }
++    }
++  }
++  assert.ok(total > 1000);
++  // A variant with only one or two questions can, rarely, find no other
++  // example; that stays under 1% (it was 21%).
++  assert.ok(wrong / total < 0.01, `${(100 * wrong / total).toFixed(1)}% mismatched: ${[...off].join(', ')}`);
++});

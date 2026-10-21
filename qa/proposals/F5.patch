@@ -1,0 +1,87 @@
+diff --git a/src/ai-tutor/answerCheck.js b/src/ai-tutor/answerCheck.js
+index 066f5ac..0f0e67a 100644
+--- a/src/ai-tutor/answerCheck.js
++++ b/src/ai-tutor/answerCheck.js
+@@ -37,6 +37,26 @@ export function normalizeMath(str) {
+   return s;
+ }
+ 
++// Two-unit quantities the way children write them: "4 hrs 21 mins",
++// "8 kilograms 695 grams", "9 metres and 28 cm". Read as { family, small },
++// the whole amount in the smaller unit. The small part must be less than one
++// big unit, so "3 h 81 min" is not taken for 4 h 21 min. Null if not one.
++const COMPOUND_UNITS = [
++  { family: 'time', big: /^(h|hr|hrs|hour|hours)$/, small: /^(min|mins|minute|minutes)$/, per: 60 },
++  { family: 'mass', big: /^(kg|kgs|kilogram|kilograms|kilogramme|kilogrammes)$/, small: /^(g|gm|gms|gram|grams|gramme|grammes)$/, per: 1000 },
++  { family: 'length', big: /^(m|metre|metres|meter|meters)$/, small: /^(cm|cms|centimetre|centimetres|centimeter|centimeters)$/, per: 100 },
++  { family: 'capacity', big: /^(l|ltr|ltrs|litre|litres|liter|liters)$/, small: /^(ml|mls|millilitre|millilitres|milliliter|milliliters)$/, per: 1000 },
++];
++export function compoundValue(raw) {
++  const m = raw.toString().trim().toLowerCase().replace(/\.$/, '')
++    .match(/^(\d+)\s*([a-z]+)\.?\s*(?:,|and|&)?\s*(\d+)\s*([a-z]+)\.?$/);
++  if (!m) return null;
++  const big = Number(m[1]), small = Number(m[3]);
++  const u = COMPOUND_UNITS.find(f => f.big.test(m[2]) && f.small.test(m[4]));
++  if (!u || small >= u.per) return null;
++  return { family: u.family, small: big * u.per + small };
++}
++
+ // Common unit suffixes students append that shouldn't affect a numeric answer.
+ const UNIT_SUFFIX = /(cm²|cm³|m²|m³|cm2|cm3|m2|m3|cm|mm|km|kg|ml|°|deg|degrees|units?|sq|squareunits?|%|m|l|g)+$/;
+ // Keys never end in a bare m / l / g (checked by scripts/audit-answers.mjs), so
+@@ -273,6 +293,11 @@ export function checkAnswerMatch(userAnswer, problem) {
+   const userKey = sidesKey(normalizedUser);
+   if (userKey && accepts.some(a => sidesKey(normalizeMath(a)) === userKey)) return true;
+ 
++  // 1g) Two-unit quantities in any spelling: "4 hrs 21 mins" for a key of
++  //     "4 h 21 min". Only compared with a key written the same two-unit way.
++  const cu = compoundValue(userAnswer);
++  if (cu && accepts.some(a => { const k = compoundValue(a); return k && k.family === cu.family && k.small === cu.small; })) return true;
++
+   // 2) Single-number match by value — covers integers, decimals, fractions,
+   //    mixed numbers, %, and units. A typed DECIMAL is graded at the key's
+   //    displayed precision (3.14159 for a key of 3.14). A typed fraction, mixed
+diff --git a/tests/compound-units.test.mjs b/tests/compound-units.test.mjs
+new file mode 100644
+index 0000000..55dfc39
+--- /dev/null
++++ b/tests/compound-units.test.mjs
+@@ -0,0 +1,38 @@
++// ============================================================================
++// TWO-UNIT ANSWERS IN THE WORDS CHILDREN USE (feedback F5)
++//
++// "4 hrs 21 mins" was marked wrong for a key of "4 h 21 min", and so were
++// "8 kilograms 695 grams" and "9 metres 28 centimetres": only the spellings
++// listed in the key passed. Grades 5-6 time, mass, length and capacity.
++// ============================================================================
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
++import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
++
++const WORDS = { h: 'hrs', kg: 'kilograms', m: 'metres', l: 'litres', min: 'mins', g: 'grams', cm: 'centimetres', ml: 'millilitres' };
++
++test('a two-unit answer is right in any common spelling', () => {
++  const key = { answer: '4 h 21 min', accepts: ['4 h 21 min', '4h21min', '4 hours 21 minutes', '261'] };
++  for (const typed of ['4 hrs 21 mins', '4 hr 21 min', '4 hours and 21 mins', '4 h, 21 min']) assert.ok(checkAnswerMatch(typed, key), typed);
++  assert.ok(checkAnswerMatch('8 kgs 695 gms', { answer: '8 kg 695 g' }));
++  assert.ok(checkAnswerMatch('9 metres 28 centimetres', { answer: '9 m 28 cm' }));
++  assert.ok(checkAnswerMatch('9 ltrs 393 mls', { answer: '9 l 393 ml' }));
++});
++
++test('a wrong two-unit answer is still wrong', () => {
++  const key = { answer: '4 h 21 min', accepts: ['4 h 21 min'] };
++  for (const typed of ['4 hrs 20 mins', '5 hrs 21 mins', '3 h 81 min', '4 kg 21 g']) assert.ok(!checkAnswerMatch(typed, key), typed);
++});
++
++test('every generated two-unit key accepts the units in words', () => {
++  for (const id of ['G5_TIME', 'G6_TIME', 'G5_MASS', 'G5_LENGTH', 'G5_CAPACITY']) {
++    for (let i = 0; i < 30; i++) {
++      const p = generateProblem(id);
++      const m = String(p.answer).match(/^(\d+)\s*(h|kg|m|l)\s+(\d+)\s*(min|g|cm|ml)$/);
++      if (!m) continue;
++      const typed = `${m[1]} ${WORDS[m[2]]} ${m[3]} ${WORDS[m[4]]}`;
++      assert.ok(checkAnswerMatch(typed, p), `${id}: "${typed}" for ${p.answer}`);
++    }
++  }
++});

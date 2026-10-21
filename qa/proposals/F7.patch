@@ -1,0 +1,83 @@
+diff --git a/src/ai-tutor/answerCheck.js b/src/ai-tutor/answerCheck.js
+index 066f5ac..c62967d 100644
+--- a/src/ai-tutor/answerCheck.js
++++ b/src/ai-tutor/answerCheck.js
+@@ -243,6 +243,34 @@ export function checkAnswerMatch(userAnswer, problem) {
+   const isSet = (a) => /\s(and|or)\s|°/.test(String(a));
+   if (userList && accepts.some(a => { if (!isSet(a)) return false; const k = numList(a); return k && k.length === userList.length && k.every((v, i) => Math.abs(v - userList[i]) < 1e-9); })) return true;
+ 
++  // 1h) Named values, in any order and joined any way: "y = 6, x = 2",
++  //     "x = 2 and y = 6", "x=2; y=6" for a key of "x=2, y=6". Unnamed values
++  //     ("2 and 6") are read in the key's letter order, x before y.
++  const named = (t) => {
++    const s = t.toString().toLowerCase().replace(/[−–—]/g, '-');
++    const NV = /([a-z])\s*=\s*(-?\d+(?:\.\d+)?(?:\/\d+)?)/g;
++    const found = [...s.matchAll(NV)];
++    if (found.length < 2 || s.replace(NV, '').replace(/\b(and|&)\b|[\s,;&]/g, '')) return null;
++    const out = {};
++    for (const [, k, v] of found) {
++      if (k in out) return null;                 // "x = -3 or x = 4" is a set, not a pair
++      out[k] = v.includes('/') ? Number(v.split('/')[0]) / Number(v.split('/')[1]) : Number(v);
++    }
++    return out;
++  };
++  const sameNamed = (u, k) => Object.keys(u).length === Object.keys(k).length
++    && Object.keys(k).every(x => x in u && Math.abs(u[x] - k[x]) < 1e-9);
++  const keyPairs = accepts.map(a => named(a)).filter(Boolean);
++  if (keyPairs.length) {
++    const u = named(userAnswer);
++    if (u && keyPairs.some(k => sameNamed(u, k))) return true;
++    const bare = userAnswer.toString().trim().replace(/[−–—]/g, '-').replace(/\s+(and|&)\s+/gi, ',');
++    if (/^-?\d+(\.\d+)?(\s*[,;\s]\s*-?\d+(\.\d+)?)+$/.test(bare)) {
++      const vals = bare.split(/\s*[,;\s]\s*/).map(Number);
++      if (keyPairs.some(k => { const ks = Object.keys(k).sort(); return ks.length === vals.length && ks.every((x, i) => Math.abs(k[x] - vals[i]) < 1e-9); })) return true;
++    }
++  }
++
+   // 1f) Addition commutes, so "3 + 5x" is the same answer as "5x + 3".
+   //
+   //     A child who writes the terms in the other order has not made a mistake,
+diff --git a/tests/named-pairs.test.mjs b/tests/named-pairs.test.mjs
+new file mode 100644
+index 0000000..e64687f
+--- /dev/null
++++ b/tests/named-pairs.test.mjs
+@@ -0,0 +1,38 @@
++// ============================================================================
++// A PAIR OF NAMED VALUES IS RIGHT IN ANY ORDER (feedback F7)
++//
++// For "x=2, y=6", "y = 6, x = 2" and "x = 2 and y = 6" were marked wrong:
++// G8_SIMULTANEOUS_INTRO, every item.
++// ============================================================================
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
++import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
++
++const key = { answer: 'x=2, y=6', accepts: ['x=2, y=6', 'x=2,y=6', '(2,6)'] };
++
++test('named values in any order and joined any way', () => {
++  for (const typed of ['y = 6, x = 2', 'x = 2 and y = 6', 'x=2 y=6', 'x=2; y=6', 'y=6 & x=2', 'X = 2, Y = 6', '2 and 6', '2, 6'])
++    assert.ok(checkAnswerMatch(typed, key), typed);
++});
++
++test('wrong or swapped values stay wrong', () => {
++  for (const typed of ['x = 6, y = 2', '6 and 2', 'x = 2', 'x = 2, y = 5', 'x = 2, x = 6', 'x = 2, y = 6, z = 1'])
++    assert.ok(!checkAnswerMatch(typed, key), typed);
++});
++
++test('every simultaneous-equations item accepts the pair the other way round', () => {
++  for (let i = 0; i < 40; i++) {
++    const p = generateProblem('G8_SIMULTANEOUS_INTRO');
++    const m = String(p.answer).match(/x\s*=\s*(-?\d+).*y\s*=\s*(-?\d+)/);
++    assert.ok(m, p.answer);
++    assert.ok(checkAnswerMatch(`y = ${m[2]}, x = ${m[1]}`, p));
++    assert.ok(checkAnswerMatch(`x = ${m[1]} and y = ${m[2]}`, p));
++  }
++});
++
++test('a set of roots is not read as a pair', () => {
++  const roots = { answer: 'x = -3 or x = 4', accepts: ['x = -3 or x = 4', 'x=4 or x=-3', '-3, 4'] };
++  assert.ok(checkAnswerMatch('x = 4 or x = -3', roots));
++  assert.ok(!checkAnswerMatch('x = -3', roots));
++});

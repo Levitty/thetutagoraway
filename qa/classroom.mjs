@@ -255,6 +255,9 @@ function inspect(child, skillId, p, sitting) {
   if (!fitOk) fail('fit', child, skillId, p, `Grade ${sg} skill served to a ${child.kind} Grade ${child.grade} child`);
   // key
   const k = keyProblem(p); tally('key', !k); if (k) fail('key', child, skillId, p, k);
+  // key: a number a child can type (no 128.57142857142858)
+  const longKey = /\d\.\d{5,}/.test(String(p.answer)); tally('key', !longKey);
+  if (longKey) fail('key', child, skillId, p, `key ${p.answer} has more decimals than a child can be expected to type`);
   // marking: the key itself, fair forms, near misses
   const selfOk = checkAnswerMatch(String(p.answer), p);
   tally('marking', selfOk); if (!selfOk) fail('marking', child, skillId, p, `its own answer "${p.answer}" is marked wrong`);
@@ -278,7 +281,9 @@ function inspect(child, skillId, p, sitting) {
     const ok = kind(we.instruction) === kind(p.instruction); tally('help', ok);
     if (!ok) fail('help', child, skillId, p, `worked example is for another kind of question ("${we.instruction}" vs "${p.instruction}")`);
   }
-  const noise = JSON.stringify([we, p.solution, p.hints]).match(/\d\.\d{8,}/);
+  // Only what a child reads (a drawing's coordinates are not shown as text).
+  const readable = [p.hint, ...(p.hints || []), ...(p.solution?.steps || []).map(st => `${st?.text || st} ${st?.expr || ''}`), ...(we?.steps || []), we?.problem, we?.solution].filter(Boolean).join(' | ');
+  const noise = readable.match(/\d\.\d{8,}/);
   tally('help', !noise); if (noise) fail('help', child, skillId, p, `help shows computer noise "${noise[0]}"`);
   // repeats
   const key = `${p.instruction || ''}|${p.question}`;
