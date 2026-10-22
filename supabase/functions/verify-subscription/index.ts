@@ -58,15 +58,23 @@ Deno.serve(async (req) => {
     // The buyer is whoever is signed in, not whoever the body claims. A
     // user_id in the body would let anybody who knows a successful reference
     // grant a pass to an account that is not theirs.
-    const authHeader = req.headers.get("Authorization") || "";
-    const asCaller = createClient(SUPABASE_URL, Deno.env.get("SUPABASE_ANON_KEY")!, {
-      global: { headers: { Authorization: authHeader } },
-    });
-    const { data: who } = await asCaller.auth.getUser();
-    const user_id = who?.user?.id;
-    if (!user_id) return json({ verified: false, error: "signed out" }, 401);
+    //
+    // The token is passed to getUser() EXPLICITLY. Calling getUser() with no
+    // argument looks for a stored session, and there is no session inside an
+    // edge function — setting the Authorization header on the client does not
+    // change that. It returned null for every caller, so every claim came back
+    // "signed out" however good the reference was. Found by a real person
+    // trying to claim a real payment, not by any test here.
+    const token = (req.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "").trim();
+    if (!token) return json({ verified: false, error: "signed out" }, 401);
 
     const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
+
+    const { data: who, error: whoErr } = await supabase.auth.getUser(token);
+    const user_id = who?.user?.id;
+    if (!user_id) {
+      return json({ verified: false, error: "signed out", detail: whoErr?.message ?? null }, 401);
+    }
 
     // Replay guard. subscription_payments has the reference as its primary
     // key, so a reference that already bought a pass cannot buy a second one —

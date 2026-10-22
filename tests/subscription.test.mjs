@@ -37,8 +37,23 @@ test('the function prices every plan the client sells, at the same price', () =>
 test('the function no longer demands a user_id the client has never sent', () => {
   assert.ok(!/missing reference or user_id/.test(FN),
     'the function still rejects the body the client actually sends');
-  assert.ok(/auth\.getUser\(\)/.test(FN),
+  assert.ok(/auth\.getUser\(/.test(FN),
     'the buyer must be taken from the caller’s token, not from the body');
+});
+
+test('the caller’s token is passed to getUser explicitly', () => {
+  // getUser() with no argument looks for a STORED SESSION, and an edge
+  // function has none — setting the Authorization header on the client does
+  // not change that. It returned null for every caller, so every claim came
+  // back "signed out" however good the reference was. Found by a real person
+  // claiming a real payment; nothing here caught it, because every test
+  // stubbed the function rather than running it.
+  assert.ok(!/auth\.getUser\(\s*\)/.test(FN),
+    'getUser() with no argument cannot see the caller inside an edge function');
+  assert.ok(/auth\.getUser\(\s*token\s*\)/.test(FN),
+    'the token lifted off the Authorization header must be passed to getUser');
+  assert.ok(/replace\(\/\^Bearer/.test(FN),
+    'the "Bearer " prefix has to come off before the token is used');
 });
 
 test('a reference cannot buy two passes', () => {
