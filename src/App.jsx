@@ -637,7 +637,43 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
   const [done, setDone] = useState(null);
+  const [claimOpen, setClaimOpen] = useState(false);
+  const [claimRef, setClaimRef] = useState('');
+  const [claiming, setClaiming] = useState(false);
+  const [claimMsg, setClaimMsg] = useState('');
   const endedFreeWeek = isFreeWeek(subscription);
+
+  // Claim a payment that was taken but never granted. The plan is inferred
+  // from the amount Paystack recorded, not from what the person says they
+  // bought: verify-subscription checks the charge, so the only way to get a
+  // month out of this is to have paid for one.
+  const claim = async () => {
+    const reference = claimRef.trim();
+    if (!reference) return;
+    setClaiming(true); setClaimMsg('');
+    let granted = null, lastError = '';
+    for (const p of Object.values(PLANS)) {
+      try {
+        const { data, error } = await supabase.functions.invoke('verify-subscription', { body: { reference, plan: p.id } });
+        if (data?.verified) { granted = data.pro_until; break; }
+        let said = String(data?.error || '');
+        if (!said && error?.context?.json) { try { said = String((await error.context.json())?.error || ''); } catch { /* not json */ } }
+        if (said) lastError = said;
+        // "amount too low" for a week means it is not a week; try the next
+        // plan up. Anything else is final for every plan, so stop.
+        if (!/amount too low/i.test(said)) break;
+      } catch { lastError = 'network'; break; }
+    }
+    setClaiming(false);
+    if (granted) { forgetPendingPass(user?.id); setDone(granted); onUnlocked?.(); return; }
+    setClaimMsg(
+      /not successful/i.test(lastError) ? "Paystack has no successful payment with that reference. Check the reference in your M-Pesa message."
+      : /already used/i.test(lastError) ? 'That payment has already unlocked a pass on another account.'
+      : /signed out/i.test(lastError) ? 'Please sign in again, then try once more.'
+      : /network/i.test(lastError) ? "We couldn't reach the server. Check your connection and try again."
+      : `We couldn't confirm that reference. WhatsApp us on 0759 240 692 with it and we'll sort it out.`
+    );
+  };
 
   const pay = async () => {
     if (!user?.id || !user?.email) { setErr('Please sign in first.'); return; }
@@ -704,6 +740,38 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
               {busy ? 'Opening M-Pesa…' : `Pay KSh ${PLANS[plan].kes} with M-Pesa or card`}
             </button>
             <button onClick={onClose} className="w-full mt-2 text-slate-500 text-sm font-semibold py-2">Not now</button>
+
+            {/* ALREADY PAID AND STILL LOCKED OUT.
+                Until now the only way out of this was a WhatsApp message to a
+                person, which meant a family who had paid sat locked out until
+                somebody answered. A payment Paystack took is a fact we can
+                check in a second: the reference is in their M-Pesa SMS, and
+                verify-subscription confirms it with Paystack before granting
+                anything, so there is nothing to abuse here — a reference that
+                was never paid, or already used, is refused. */}
+            {!claimOpen ? (
+              <button onClick={() => { setClaimOpen(true); setClaimMsg(''); }}
+                className="w-full text-slate-400 text-[13px] font-semibold py-1 underline">
+                Already paid but still locked out?
+              </button>
+            ) : (
+              <div className="mt-2 rounded-2xl border border-slate-200 p-3.5">
+                <p className="text-[13px] text-slate-600 leading-snug">
+                  Paste the reference from your M-Pesa message. We'll check it with Paystack and switch your pass on.
+                </p>
+                <input value={claimRef} onChange={e => setClaimRef(e.target.value.trim())}
+                  placeholder="e.g. PASS-1a2b3c4d-m0zq9x" aria-label="Payment reference"
+                  className="w-full mt-2 border border-slate-300 rounded-xl px-3 py-2.5 text-sm font-mono" />
+                <div className="flex gap-2 mt-2">
+                  <button onClick={claim} disabled={claiming || !claimRef}
+                    className="flex-1 bg-slate-900 disabled:opacity-40 text-white rounded-xl py-2.5 font-bold text-[14px]">
+                    {claiming ? 'Checking…' : 'Unlock my pass'}
+                  </button>
+                  <button onClick={() => setClaimOpen(false)} className="px-3 text-slate-500 text-sm font-semibold">Cancel</button>
+                </div>
+                {claimMsg && <p className="mt-2 text-[13px] leading-snug text-[#b3261e]">{claimMsg}</p>}
+              </div>
+            )}
           </>
         )}
       </div>
