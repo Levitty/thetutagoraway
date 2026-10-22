@@ -40,7 +40,6 @@ on:
           - send-push
           - verify-payment
           - verify-paystack
-          - verify-subscription
 
 env:
   PROJECT_REF: dlqbiayaqjucxsvbesms
