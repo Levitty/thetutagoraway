@@ -22,22 +22,22 @@ export const PLANS = {
 };
 
 /**
- * TEMPORARY. The deployed verify-subscription predates these two plans: it
- * demands at least KES 200 and grants a flat 30 days, so a KES 100 week pass
- * is charged by Paystack and then REFUSED by the thing that grants the pass
- * ("amount too low"). A family pays and is still shown the paywall.
+ * The week pass was off sale for a few hours on 22 Oct 2026, because the
+ * DEPLOYED verify-subscription predated these two plans: it demanded at least
+ * KES 200 and granted a flat 30 days, so a KES 100 week pass was charged by
+ * Paystack and then refused as "amount too low" — a family paid and was still
+ * shown the paywall. Selling nothing beat selling that.
  *
- * supabase/functions/verify-subscription/index.ts is fixed and committed. It
- * cannot be deployed from here — deploying an edge function needs
- * SUPABASE_ACCESS_TOKEN set as a repository secret, which only the owner can
- * do. Until that deploy happens, the only honest thing is not to sell the week
- * pass: taking KES 100 for something that cannot be granted is worse than
- * offering one plan.
+ * The fixed function is deployed (run #2 of "Deploy edge function"), and was
+ * checked against the live endpoint: { reference, plan: 'week' } now gets past
+ * the plan check and asks who is signed in, where the old copy answered
+ * "missing reference or user_id". So the week pass is sellable again.
  *
- * FLIP THIS TO true the moment `supabase functions deploy verify-subscription`
- * has run. Nothing else needs changing.
+ * Kept as a flag rather than deleted: this is the switch to reach for if a
+ * plan's price or length ever changes again before the function that grants it
+ * does. tests/subscription.test.mjs reads both files and fails on that drift.
  */
-export const WEEK_PASS_ENABLED = false;
+export const WEEK_PASS_ENABLED = true;
 
 /** The plans a family can actually be sold right now. */
 export const availablePlans = () =>
