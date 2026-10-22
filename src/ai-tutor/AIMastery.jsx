@@ -1845,17 +1845,31 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   // count is capped at two upstream, so the ladder is never
                   // longer than the three rungs the board draws.
                   const shown = ladder.slice(1, Math.max(0, hintLevel - 1) + 1);
-                  // After a wrong answer the box above has already said the
-                  // nudge, so repeating it under a "HINT 2 OF 3" header would
-                  // read as a stuck screen.
-                  const showNudge = !(attemptCount > 0 && hintLevel >= 2);
+                  // The "Not quite" box above falls back to this same sentence
+                  // when it has no specific diagnosis for the answer given, so
+                  // printing it again here put the identical line on screen
+                  // twice, one under the other. Repeat it only when that box
+                  // said something else — or is not there at all.
+                  const wrongBoxEchoesNudge = !feedback && attemptCount > 0
+                    && wrongInfo && !wrongInfo.needNumber && !wrongInfo.diagnosis;
+                  const showNudge = !wrongBoxEchoesNudge;
                   return (
                     <div className="mt-4 bg-[#FFF0F5] rounded-[20px] p-4">
-                      <div className="flex items-center justify-between gap-2.5 mb-2">
+                      {/* "NEVER THE ANSWER" used to sit on the right of this
+                          row. It came off the design board, where it was
+                          explaining the rule to whoever was reviewing the
+                          board — and it was shipped onto a child's lesson
+                          without asking who reads this screen. A ten-year-old
+                          does not need telling that the help will not contain
+                          the answer; it is a claim about how the product is
+                          built, which belongs in a pitch or a parent's
+                          explainer. tests/hint-ladder.test.mjs is where the
+                          rule is actually kept, and a promise a test enforces
+                          does not need printing beside a child's sums. */}
+                      <div className="mb-2">
                         <span className="text-[10px] font-extrabold tracking-[.1em] text-[#C2255C]">
                           HINT {Math.min(hintLevel, rungs)} OF {rungs}
                         </span>
-                        <span className="text-[10px] font-bold tracking-[.06em] text-[#B06A86]">NEVER THE ANSWER</span>
                       </div>
                       {showNudge && (
                         <p className="text-[15px] leading-[1.45] font-medium text-[#16161A]">{ladder[0].text}</p>
