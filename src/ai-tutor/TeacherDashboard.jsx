@@ -17,6 +17,7 @@ import { supabase } from '../supabase.js';
 import { SUBJECTS } from './subjects.js';
 import { getStats, getStrandStats, getEstimatedGradeLevel, findGaps, classGaps } from './adaptiveEngine.js';
 import { assignmentRoster, dueLabel, isoDay } from './assignments.js';
+import { demoMode, demoStudents, demoClasses, demoMembers, demoAssignments } from './demoClass.js';
 import { Icon } from './components/Icons.jsx';
 
 const SUBJECT_ID = 'math';
@@ -42,11 +43,22 @@ const jsSnapshot = (progress, ctx) => {
   const strands = getStrandStats(progress, ctx);
   const grade = getEstimatedGradeLevel(progress, ctx);
   const gaps = findGaps(progress, ctx);
+  // Count against what is IN REACH, not the whole graph. The roster read
+  // "2/311 skills · 1% mastered" for every child, because the denominator was
+  // every skill from Grade 1 to Grade 12 — work a Grade 5 is years from
+  // meeting. A teacher learns nothing from a number that is 1% for the child
+  // who is struggling and 5% for the child who is flying.
+  const declared = progress.declaredGrade ?? grade;
+  const all = Object.values(SUBJECTS[SUBJECT_ID]?.skills || {});
+  const inReach = all.filter(s => !Number.isFinite(s.grade) || s.grade <= declared);
+  const masteredInReach = inReach.filter(s => progress.skills?.[s.id]?.mastered).length;
   return {
     level: grade,
-    mastered: stats.mastered,
-    total: stats.total,
-    percent: stats.percent,
+    declared,
+    mastered: masteredInReach,
+    total: inReach.length,
+    percent: inReach.length ? Math.round((masteredInReach / inReach.length) * 100) : 0,
+    percentAll: stats.percent,
     accuracy: stats.accuracy,
     strands: strands.map(s => ({ name: s.name, percent: s.percent, accuracy: s.accuracy })),
     gapCount: gaps.length,
@@ -125,9 +137,15 @@ const fiveMinuteMove = (gap) => {
   return `Five minutes on ${(gap?.strand || 'this').toLowerCase()} away from the screen — do one together, out loud, with something they can hold, then retry the skill on HOREB.`;
 };
 
-const bandColor = (level) => {
-  if (level <= 6) return 'text-red-500 bg-red-50 border-red-200';
-  if (level <= 8) return 'text-amber-600 bg-amber-50 border-amber-200';
+// Behind, near, or ahead of the grade this child is actually IN — not an
+// absolute number. The old rule was "level <= 6 is red", which painted every
+// child in a primary class red and told a teacher of Grade 4s that their whole
+// class was failing. A Grade 5 working at Grade 5 is fine; a Grade 9 working at
+// Grade 5 is not, and the same number cannot mean both.
+const bandColor = (level, declared) => {
+  const d = level - (declared ?? level);
+  if (d <= -2) return 'text-red-500 bg-red-50 border-red-200';
+  if (d < 0) return 'text-amber-600 bg-amber-50 border-amber-200';
   return 'text-emerald-600 bg-emerald-50 border-emerald-200';
 };
 
@@ -156,11 +174,21 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   const [assignError, setAssignError] = useState(null);
 
   const ctx = useMemo(() => ctxFor(SUBJECT_ID), []);
+  // ?demo=1 — a class to present with. Nothing is read from or written to the
+  // database, and the numbers on screen are still computed by the real engine
+  // from these answer histories: the data is invented, the reasoning is not.
+  const isDemo = useMemo(() => demoMode(), []);
 
   // Load the teacher's classes and their rosters (RLS scopes both to classes
   // they own).
   useEffect(() => {
     let cancelled = false;
+    if (isDemo) {
+      setClasses(demoClasses());
+      setMembers(demoMembers());
+      setAssignments(demoAssignments());
+      return () => { cancelled = true; };
+    }
     (async () => {
       const [{ data: cls }, { data: mem }, asg] = await Promise.all([
         supabase.from('classes').select('id, name, join_code').order('created_at', { ascending: true }),
@@ -182,6 +210,13 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   // children should not then have to go and describe it to a form.
   const assignGap = async (gap, cid, dueOn) => {
     setAssignError(null);
+    // In a demo the whole flow still works — pick a class, pick a date, see it
+    // land in "Work set" with who has it — it just never touches the database.
+    if (isDemo) {
+      setAssignments(a => [...a, { id: `demo-${Date.now()}`, class_id: cid, title: gap.name, skill_ids: [gap.id], due_on: dueOn || null }]);
+      setAssigning(null);
+      return;
+    }
     const { data, error: err } = await supabase.from('assignments').insert({
       class_id: cid,
       teacher_id: teacherProfile?.id,
@@ -195,6 +230,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   };
 
   const removeAssignment = async (id) => {
+    if (isDemo) { setAssignments(a => a.filter(x => x.id !== id)); return; }
     const { error: err } = await supabase.from('assignments').delete().eq('id', id);
     if (err) { setAssignError(err.message); return; }
     setAssignments(a => a.filter(x => x.id !== id));
@@ -223,6 +259,14 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
 
   useEffect(() => {
     let cancelled = false;
+    if (isDemo) {
+      // The snapshot is computed by the same jsSnapshot() a real roster goes
+      // through, so levels, strand bars and gaps are the engine's own reading
+      // of these answers — not numbers typed into a fixture.
+      setStudents(demoStudents().map(s => ({ ...s, snap: jsSnapshot(s.progress, ctx) })));
+      setLoading(false);
+      return () => { cancelled = true; };
+    }
     (async () => {
       setLoading(true);
       setError(null);
@@ -293,8 +337,11 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
     if (!inClass.length) return null;
     const levels = inClass.map(s => s.snap.level);
     const avg = levels.reduce((a, b) => a + b, 0) / levels.length;
-    const behind = inClass.filter(s => s.snap.gapCount > 0 || s.snap.level <= 6).length;
-    const ahead = inClass.filter(s => s.snap.accelerated || s.snap.level >= 9).length;
+    // Behind/ahead relative to the grade each child is in. The old rule
+    // ("level <= 6" behind, ">= 9" ahead) reported a whole primary class as
+    // needing support and nobody as ahead, whatever they had actually done.
+    const behind = inClass.filter(s => s.snap.gapCount > 0 || s.snap.level < s.snap.declared).length;
+    const ahead = inClass.filter(s => s.snap.accelerated || s.snap.level > s.snap.declared).length;
     return { count: inClass.length, avg, behind, ahead };
   }, [inClass]);
 
@@ -333,6 +380,19 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
       </header>
 
       <main className="max-w-4xl mx-auto px-4 py-5">
+        {/* Say so. A screen full of children's names and gaps must never be
+            mistaken for real children, by the room or by the person running
+            the demo. */}
+        {isDemo && (
+          <div className="mb-4 rounded-xl bg-amber-50 border border-amber-200 px-4 py-2.5 flex items-center gap-2.5">
+            <span className="text-[10px] font-extrabold tracking-[.1em] bg-amber-400 text-slate-900 rounded-full px-2 py-1">DEMO</span>
+            <span className="text-[13px] text-amber-900">
+              Invented class. Nothing here is saved, and no real child's work is shown —
+              but every level and gap below is worked out by the live engine.
+            </span>
+          </div>
+        )}
+
         {/* Which class. The roster table has existed since the first migration
             and nothing read it, so every number here was about "everyone whose
             row I can see" rather than about a class. */}
@@ -551,7 +611,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
                   onClick={() => setSelected(st)}
                   className="w-full flex items-center gap-3 p-4 hover:bg-slate-50 transition-colors text-left"
                 >
-                  <div className={`w-12 h-12 rounded-xl border flex flex-col items-center justify-center ${bandColor(st.snap.level)}`}>
+                  <div className={`w-12 h-12 rounded-xl border flex flex-col items-center justify-center ${bandColor(st.snap.level, st.snap.declared)}`}>
                     <span className="text-[10px] leading-none opacity-70">level</span>
                     <span className="font-bold leading-tight">{st.snap.level.toFixed(0)}</span>
                   </div>
@@ -635,7 +695,7 @@ function StudentDetail({ student, onBack }) {
         </div>
       </header>
       <main className="max-w-2xl mx-auto px-4 py-5 space-y-4">
-        <div className={`rounded-2xl border p-5 ${bandColor(snap.level)}`}>
+        <div className={`rounded-2xl border p-5 ${bandColor(snap.level, snap.declared)}`}>
           <div className="text-sm opacity-70">Overall level</div>
           <div className="text-4xl font-bold">Grade {snap.level.toFixed(0)}</div>
           <div className="text-sm mt-1">
