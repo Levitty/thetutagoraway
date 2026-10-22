@@ -20,6 +20,28 @@ export const PLANS = {
   week: { id: 'week', kes: 100, days: 7, label: '1 week' },
   month: { id: 'month', kes: 350, days: 30, label: '1 month', note: 'About KSh 82 a week' },
 };
+
+/**
+ * TEMPORARY. The deployed verify-subscription predates these two plans: it
+ * demands at least KES 200 and grants a flat 30 days, so a KES 100 week pass
+ * is charged by Paystack and then REFUSED by the thing that grants the pass
+ * ("amount too low"). A family pays and is still shown the paywall.
+ *
+ * supabase/functions/verify-subscription/index.ts is fixed and committed. It
+ * cannot be deployed from here — deploying an edge function needs
+ * SUPABASE_ACCESS_TOKEN set as a repository secret, which only the owner can
+ * do. Until that deploy happens, the only honest thing is not to sell the week
+ * pass: taking KES 100 for something that cannot be granted is worse than
+ * offering one plan.
+ *
+ * FLIP THIS TO true the moment `supabase functions deploy verify-subscription`
+ * has run. Nothing else needs changing.
+ */
+export const WEEK_PASS_ENABLED = false;
+
+/** The plans a family can actually be sold right now. */
+export const availablePlans = () =>
+  Object.values(PLANS).filter(p => p.id !== 'week' || WEEK_PASS_ENABLED);
 // Kept for older screens that show a single price.
 export const PRICE_KES = PLANS.week.kes;
 export const PASS_DAYS = PLANS.week.days;

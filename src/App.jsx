@@ -13,7 +13,7 @@ import { getLevel } from './ai-tutor/adaptiveEngine.js';
 import { todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP } from './ai-tutor/gamification.js';
 import { sendEmail } from './email.js';
 import { initPush, requestPush, clearPush } from './push.js';
-import { PLANS, paywallActive, isFreeWeek, passDaysLeft, isNetworkError } from './subscription.js';
+import { PLANS, availablePlans, paywallActive, isPro, isFreeWeek, passDaysLeft, isNetworkError } from './subscription.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Icon } from './ai-tutor/components/Icons.jsx';
@@ -574,12 +574,66 @@ const LoadingSpinner = () => (
   </div>
 );
 
+// ============ A PAYMENT THAT WAS TAKEN BUT NEVER CONFIRMED ============
+//
+// M-Pesa is completed on the phone, which means the browser that has to turn
+// the payment into a pass is the one most likely to be closed, backgrounded or
+// off network at exactly that moment. When Paystack's onSuccess never fires,
+// the money has gone and nothing grants the pass — the family pays and is
+// still shown the paywall, and the only route back was a WhatsApp message to a
+// human.
+//
+// So the reference is written down before Paystack opens and retried on every
+// load until it lands. verify-subscription records each reference as a primary
+// key, so retrying is safe: a reference that already bought a pass returns the
+// pass it bought rather than granting a second one.
+const PENDING_PASS = (uid) => `tg_pending_pass_${uid}`;
+const rememberPendingPass = (uid, reference, plan) => {
+  try { localStorage.setItem(PENDING_PASS(uid), JSON.stringify({ reference, plan, at: Date.now() })); } catch { /* no storage */ }
+};
+const forgetPendingPass = (uid) => { try { localStorage.removeItem(PENDING_PASS(uid)); } catch { /* no storage */ } };
+const readPendingPass = (uid) => {
+  try { return JSON.parse(localStorage.getItem(PENDING_PASS(uid)) || 'null'); } catch { return null; }
+};
+/**
+ * Retry a remembered payment. Returns true if a pass was granted.
+ * Gives up after three days: by then Paystack has long settled, and a
+ * reference that still will not verify never will.
+ */
+// fetchSubscription runs several times on a cold start (profile load, auth
+// listener, route mount). Without this guard each one fires its own recovery,
+// so one page load made three Paystack verifications for the same reference.
+let recoveryInFlight = null;
+const recoverPendingPass = (uid) => {
+  if (recoveryInFlight) return recoveryInFlight;
+  recoveryInFlight = (async () => {
+    const p = readPendingPass(uid);
+    if (!p?.reference) return false;
+    if (Date.now() - (p.at || 0) > 3 * 86400000) { forgetPendingPass(uid); return false; }
+    try {
+      const { data, error } = await supabase.functions.invoke('verify-subscription', { body: { reference: p.reference, plan: p.plan } });
+      if (data?.verified) { forgetPendingPass(uid); return true; }
+      // A non-2xx reply arrives as `error`, with the body on error.context —
+      // NOT as data. Reading only `data` meant a definitive "they never paid"
+      // looked like a network blip, and the reference was retried on every
+      // load for three days.
+      let said = String(data?.error || '');
+      if (!said && error?.context?.json) { try { said = String((await error.context.json())?.error || ''); } catch { /* not json */ } }
+      // Definitive answers: there is nothing to recover, so stop asking.
+      if (/not successful|unknown plan|already used|signed out|missing reference/i.test(said)) forgetPendingPass(uid);
+    } catch { /* offline: keep it and try next time */ }
+    return false;
+  })().finally(() => { recoveryInFlight = null; });
+  return recoveryInFlight;
+};
+
 // ============ PAYWALL MODAL ============
 // Shown when the free week (or a pass) has ended and a child tries to
 // practise. Pays by M-Pesa or card through Paystack; the pass is granted only
 // by the verify-subscription function, never by the browser.
 const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
-  const [plan, setPlan] = useState('month');
+  const offered = availablePlans();
+  const [plan, setPlan] = useState(offered.some(p => p.id === 'month') ? 'month' : offered[0]?.id);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
   const [done, setDone] = useState(null);
@@ -589,22 +643,29 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
     if (!user?.id || !user?.email) { setErr('Please sign in first.'); return; }
     const p = PLANS[plan];
     setBusy(true); setErr('');
+    const reference = `PASS-${user.id.slice(0, 8)}-${Date.now().toString(36)}`;
+    // Remember it BEFORE Paystack opens. M-Pesa is completed on the phone, so
+    // the browser that has to confirm the payment is the one most likely to be
+    // closed, backgrounded or off network at the moment it matters — and when
+    // onSuccess never fires, the money is gone and no pass is granted. A
+    // remembered reference is retried on the next load (recoverPendingPass).
+    rememberPendingPass(user.id, reference, p.id);
     try {
       await initiatePaystackPayment({
         email: user.email,
         amount: p.kes,
-        reference: `PASS-${user.id.slice(0, 8)}-${Date.now().toString(36)}`,
+        reference,
         metadata: { type: 'subscription', plan: p.id, user_id: user.id },
         onSuccess: async (response) => {
           let ok = false;
           for (let attempt = 0; attempt < 3 && !ok; attempt++) {
             try {
               const { data } = await supabase.functions.invoke('verify-subscription', { body: { reference: response.reference, plan: p.id } });
-              if (data?.verified) { ok = true; setDone(data.pro_until); onUnlocked?.(); }
+              if (data?.verified) { ok = true; forgetPendingPass(user.id); setDone(data.pro_until); onUnlocked?.(); }
             } catch { /* try again */ }
             if (!ok) await new Promise(r => setTimeout(r, 1500));
           }
-          if (!ok) setErr(`We couldn't confirm the payment yet. If M-Pesa took the money, WhatsApp us on 0759 240 692 with reference ${response.reference} and we'll switch your pass on.`);
+          if (!ok) setErr(`We couldn't confirm the payment yet — we'll keep trying each time you open the app. If M-Pesa took the money and practice is still locked tomorrow, WhatsApp us on 0759 240 692 with reference ${response.reference}.`);
           setBusy(false);
         },
         onClose: () => setBusy(false),
@@ -628,8 +689,8 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
             <div className="text-[11px] font-bold tracking-[.12em] uppercase text-amber-700">{endedFreeWeek ? 'Your free week has ended' : 'Your pass has ended'}</div>
             <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900 mt-1">Keep the daily practice going</h2>
             <p className="text-[15px] text-slate-500 mt-2">15 minutes a day, picking up exactly where your child left off. One pass covers every child on your account.</p>
-            <div className="grid grid-cols-2 gap-2.5 mt-5" role="radiogroup" aria-label="Choose a pass">
-              {[PLANS.week, PLANS.month].map(p => (
+            <div className={`grid ${offered.length > 1 ? 'grid-cols-2' : 'grid-cols-1'} gap-2.5 mt-5`} role="radiogroup" aria-label="Choose a pass">
+              {offered.map(p => (
                 <button key={p.id} type="button" role="radio" aria-checked={plan === p.id} onClick={() => setPlan(p.id)}
                   className={`text-left rounded-2xl p-4 border-2 transition-colors ${plan === p.id ? 'border-slate-900 bg-amber-50' : 'border-slate-200 bg-white'}`}>
                   <div className="text-[13px] font-bold text-slate-500">{p.label}</div>
@@ -682,9 +743,18 @@ const useAuth = () => {
         subCache.write(parentId, data || null);
         setSubscription(data || null); return;
       }
-      const { data, error } = await supabase.from('subscriptions').select('*').eq('user_id', userId).maybeSingle();
+      let { data, error } = await supabase.from('subscriptions').select('*').eq('user_id', userId).maybeSingle();
       // No network: the last row we saw decides. Never a free day, never a lockout.
       if (error && isNetworkError(error)) { setSubscription(subCache.read(userId)); return; }
+      // A payment that was taken but never confirmed. Only worth retrying when
+      // the row we just read would actually lock them out — otherwise a family
+      // mid-pass pays the cost of a function call on every load.
+      if (!isPro(data) && readPendingPass(userId)) {
+        if (await recoverPendingPass(userId)) {
+          const again = await supabase.from('subscriptions').select('*').eq('user_id', userId).maybeSingle();
+          if (again.data) data = again.data;
+        }
+      }
       if (data) { subCache.write(userId, data); setSubscription(data); return; }
       if (!paywallActive() || role === 'tutor') { setSubscription(null); return; }
       // Paid practice is on and this family has never had a pass: their
