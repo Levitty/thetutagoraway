@@ -18,6 +18,8 @@ import { SUBJECTS } from './subjects.js';
 import { getStats, getStrandStats, getEstimatedGradeLevel, findGaps, classGaps } from './adaptiveEngine.js';
 import { assignmentRoster, dueLabel, isoDay } from './assignments.js';
 import { demoMode, demoStudents, demoClasses, demoMembers, demoAssignments } from './demoClass.js';
+import { useHorebLook } from './horebLook.js';
+import { STRAND_BLOCK } from './strandBlocks.js';
 import { Icon } from './components/Icons.jsx';
 
 const SUBJECT_ID = 'math';
@@ -150,6 +152,8 @@ const bandColor = (level, declared) => {
 };
 
 export function TeacherDashboard({ onBack, teacherProfile }) {
+  // Archivo/Figtree and the HOREB tokens, the same as the learner's screens.
+  useHorebLook();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [students, setStudents] = useState([]);
@@ -364,17 +368,22 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600"><Icon name="back" /></button>}
-            <div>
-              <h1 className="text-lg font-bold text-slate-900">Class Insights</h1>
-              <p className="text-xs text-slate-500">
-                {SUBJECTS[SUBJECT_ID].name}
-              </p>
-            </div>
+    /* HOREB's own ground, not the generic admin slate this page was built on
+       before the student side got its design pass. Same canvas, same card
+       radii, same display face — a teacher and a child should be looking at
+       one product. */
+    <div className="min-h-screen bg-[#E8E8EC]">
+      <header className="sticky top-0 z-10 bg-[#E8E8EC]/90 backdrop-blur">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-3 flex items-center gap-3.5">
+          {onBack && (
+            <button onClick={onBack} aria-label="Back"
+              className="w-11 h-11 shrink-0 rounded-[14px] bg-white flex items-center justify-center text-slate-500 hover:text-slate-900 transition-colors">
+              <Icon name="back" className="w-5 h-5" />
+            </button>
+          )}
+          <div className="min-w-0">
+            <h1 className="text-[26px] font-extrabold tracking-tight text-slate-900 leading-none">Class Insights</h1>
+            <p className="text-[13px] text-slate-500 mt-1">{SUBJECTS[SUBJECT_ID].name}</p>
           </div>
         </div>
       </header>
@@ -414,68 +423,86 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
             measurements read down the other axis: one skill, the children it
             is holding up, and something to do about it on Tuesday. */}
         {gaps.length > 0 && (
-          <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-5">
-            <div className="flex items-baseline justify-between mb-1">
-              <h2 className="font-semibold text-slate-900">Teach this next</h2>
-              <span className="text-xs text-slate-400">across {inClass.length} {inClass.length === 1 ? 'student' : 'students'}</span>
+          <div className="bg-white rounded-[28px] p-6 sm:p-8 mb-5">
+            <div className="flex items-baseline justify-between gap-3 mb-1">
+              <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">Teach this next</h2>
+              <span className="text-[12px] text-slate-400 shrink-0">{inClass.length} {inClass.length === 1 ? 'child' : 'children'}</span>
             </div>
-            <p className="text-xs text-slate-500 mb-2">
-              Ranked by how many children one lesson would unblock.
-            </p>
-            <div className="divide-y divide-slate-100">
-              {gaps.map(g => {
+            <p className="text-[13px] text-slate-500 mb-6">Ranked by how many one lesson would unblock.</p>
+
+            {/* A ranking has to LOOK ranked. Every row used to carry the same
+                weight — same red heading, same orange "Five-minute move:", same
+                button — so five rows read as five emergencies and the number,
+                the only thing that orders them, was the smallest text on the
+                row. The lead finding gets the space now and the tail compresses
+                to one line each. */}
+            <div className="flex flex-col gap-3">
+              {gaps.map((g, i) => {
                 const who = [...g.blocked, ...g.failing];
                 const share = inClass.length ? Math.round((g.count / inClass.length) * 100) : 0;
-                return (
-                  <div key={g.id} className="py-3">
-                    <div className="flex flex-wrap items-baseline gap-x-3">
-                      <span className="text-xl font-bold text-slate-900 tabular-nums">{g.count}</span>
-                      <span className="text-sm font-semibold text-red-600">{g.name}</span>
-                      <span className="text-xs text-slate-400">{g.strand} · Grade {g.grade}</span>
-                      {inClass.length > 1 && <span className="text-xs text-slate-400">{share}% of the class</span>}
+                const lead = i === 0;
+                const c = STRAND_BLOCK[g.strand] || STRAND_BLOCK._;
+                const setWork = assignmentsReady && classes.length > 0 && (
+                  assigning === g.id
+                    ? <AssignRow gap={g} classes={classes} classId={classId}
+                        onCancel={() => setAssigning(null)} onAssign={assignGap} />
+                    : <button onClick={() => { setAssigning(g.id); setAssignError(null); }}
+                        className={`shrink-0 rounded-full font-bold transition-colors ${lead
+                          ? 'h-11 px-5 text-[14px] bg-[#16161A] text-white hover:bg-[#2b2b33]'
+                          : 'h-8 px-3.5 text-[12.5px] text-slate-600 border border-slate-200 hover:bg-slate-50'}`}>
+                        Set as work
+                      </button>
+                );
+
+                if (!lead) {
+                  return (
+                    <div key={g.id} className="flex flex-wrap items-center gap-x-3 gap-y-2 py-2.5 border-t border-slate-100">
+                      <span className="w-7 text-[17px] font-extrabold text-slate-900 tabular-nums shrink-0">{g.count}</span>
+                      <span className="font-bold text-slate-900 text-[15px]">{g.name}</span>
+                      <span className="text-[12px] text-slate-400">{g.strand} · Grade {g.grade}</span>
+                      <span className="text-[12px] text-slate-500 flex-1 min-w-0 truncate">{who.map(l => l.name).join(', ')}</span>
+                      {setWork}
                     </div>
-                    {/* The two readings ask for different lessons, so they are
-                        never merged into one number without saying which — but
-                        the counts are only spelled out when both apply, since
-                        otherwise they just repeat the number above.
+                  );
+                }
 
-                        No "unlocks 166 later skills" here: that is the whole
-                        transitive chain, every foundation scores between 140
-                        and 190, and a number that is always enormous tells a
-                        teacher nothing. It still ranks the list; `critical` is
-                        the part of it worth reading. */}
-                    <p className="mt-0.5 text-xs text-slate-500">
-                      {g.blocked.length > 0 && g.failing.length > 0
-                        ? <>{g.blocked.length} missing it as a foundation · {g.failing.length} struggling with it right now</>
-                        : g.blocked.length > 0
-                        ? <>missing it as a foundation — they are failing work that needs it</>
-                        : <>struggling with it right now</>}
-                      {g.critical && <span className="text-slate-400"> · a foundation skill</span>}
-                    </p>
-                    <p className="mt-1 text-sm text-slate-600">
-                      <span className="font-semibold text-amber-600">Five-minute move: </span>
-                      {fiveMinuteMove(g)}
-                    </p>
-                    <p className="mt-1 text-xs text-slate-500">
-                      {who.slice(0, 8).map(l => l.name).join(' · ')}
-                      {who.length > 8 && ` · +${who.length - 8} more`}
-                    </p>
-
-                    {/* Set it as work, here, on the row that found it. */}
-                    {assignmentsReady && classes.length > 0 && (
-                      assigning === g.id
-                        ? <AssignRow gap={g} classes={classes} classId={classId}
-                            onCancel={() => setAssigning(null)} onAssign={assignGap} />
-                        : <button onClick={() => { setAssigning(g.id); setAssignError(null); }}
-                            className="mt-2 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-md px-2.5 py-1 transition-colors">
-                            Set as work →
-                          </button>
-                    )}
+                return (
+                  <div key={g.id} className="rounded-[22px] p-5 sm:p-6" style={{ background: c.bg }}>
+                    <div className="flex items-start gap-4 sm:gap-5">
+                      {/* The count, finally the size of its importance. */}
+                      <span className="font-extrabold tabular-nums leading-none text-[44px] sm:text-[56px] tracking-tighter shrink-0"
+                        style={{ color: c.ink }}>{g.count}</span>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-[21px] sm:text-[25px] font-extrabold tracking-tight leading-tight" style={{ color: c.ink }}>{g.name}</h3>
+                        <p className="text-[12.5px] font-bold mt-1" style={{ color: c.meta }}>
+                          {g.strand} · Grade {g.grade}{inClass.length > 1 && <> · {share}% of the class</>}
+                        </p>
+                        {/* Which of the two readings this is. They ask for
+                            different lessons, so they are never merged. */}
+                        <p className="text-[13.5px] mt-2 leading-snug" style={{ color: c.ink, opacity: 0.8 }}>
+                          {g.blocked.length > 0 && g.failing.length > 0
+                            ? <>{g.blocked.length} never mastered it · {g.failing.length} struggling with it now</>
+                            : g.blocked.length > 0
+                            ? <>Never mastered it, and failing the work that needs it</>
+                            : <>Struggling with it right now</>}
+                        </p>
+                        <p className="text-[14px] font-bold mt-2.5" style={{ color: c.ink }}>
+                          {who.map(l => l.name).join(' · ')}
+                        </p>
+                      </div>
+                    </div>
+                    {/* The move is a detail, not a headline. It used to be an
+                        orange shout repeated down every row. */}
+                    <div className="mt-4 rounded-2xl bg-white/70 px-4 py-3">
+                      <p className="text-[11px] font-bold tracking-[.08em] uppercase text-slate-500">Away from the screen</p>
+                      <p className="text-[14px] text-slate-800 leading-snug mt-0.5">{fiveMinuteMove(g)}</p>
+                    </div>
+                    <div className="mt-4">{setWork}</div>
                   </div>
                 );
               })}
             </div>
-            {assignError && <p className="text-xs text-red-500 mt-2">{assignError}</p>}
+            {assignError && <p className="text-[13px] text-red-500 mt-3">{assignError}</p>}
           </div>
         )}
 

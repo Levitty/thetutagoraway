@@ -11,6 +11,7 @@ import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, flu
 import { propagateCredit, withdrawMiss, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
 import { selectQuestion, isComplete as placementComplete, computePlacement, buildPlacementPool, sweepRemaining, roomForAnother, worthConfirming, nextToSettle, explainPlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
 import { HorebBot } from './HorebBot.jsx';
+import { STRAND_BLOCK } from './strandBlocks.js';
 import { AvatarArt, AvatarPicker, isAvatarId, avatarFor } from '../avatars/Avatars.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { TeachingVisual } from './TeachingVisual.jsx';
@@ -94,21 +95,7 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 // stays on this device. autoStartGrade skips the welcome screen and starts the
 // check at that grade; onDiagnosed(progress) replaces the usual "home" view when
 // the check finishes.
-// The strand blocks on the dashboard. Colour is how a child tells one strand
-// from another at a glance — faster than reading five labels — so each gets a
-// fixed one from the HOREB palette (see horeb-look.css) and keeps it
-// everywhere. `meta` is the small count line and has to clear contrast
-// against its own block, which is why it is set per colour and not inherited.
-const STRAND_BLOCK = {
-  Numbers:         { bg: '#FFC93C', ink: '#16161A', meta: '#6B5309' },
-  Measurements:    { bg: '#FF4F91', ink: '#16161A', meta: '#7A1538' },
-  Geometry:        { bg: '#6C4BF4', ink: '#FFFFFF', meta: '#DCD3FF' },
-  Statistics:      { bg: '#9BE3C4', ink: '#16161A', meta: '#2A6B52' },
-  'Data Handling': { bg: '#9BE3C4', ink: '#16161A', meta: '#2A6B52' },
-  Algebra:         { bg: '#16161A', ink: '#FFFFFF', meta: '#A9A9B4' },
-  // Any strand a curriculum adds later still gets a readable block.
-  _:               { bg: '#D7D7DE', ink: '#16161A', meta: '#5C5C66' },
-};
+// The strand palette is shared with the teacher's board — see strandBlocks.js.
 
 export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAvatar = null, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, autoStartCurriculum = null, onDiagnosed = null }) {
   useHorebLook();
