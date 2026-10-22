@@ -739,13 +739,26 @@ const useAuth = () => {
         const parentId = getStudentMode()?.parentId;
         if (!parentId) { setSubscription(null); return; }
         const { data, error } = await supabase.from('subscriptions').select('*').eq('user_id', parentId).maybeSingle();
-        if (error && isNetworkError(error)) { setSubscription(subCache.read(parentId)); return; }
+        if (error) { setSubscription(subCache.read(parentId)); return; }
         subCache.write(parentId, data || null);
         setSubscription(data || null); return;
       }
       let { data, error } = await supabase.from('subscriptions').select('*').eq('user_id', userId).maybeSingle();
-      // No network: the last row we saw decides. Never a free day, never a lockout.
-      if (error && isNetworkError(error)) { setSubscription(subCache.read(userId)); return; }
+      // ANY failed read falls back to the last row this device saw — not just
+      // a dead network.
+      //
+      // This used to test isNetworkError(error), so a read that failed for any
+      // other reason (an expired JWT mid-session, a PostgREST 5xx, an RLS
+      // hiccup) fell through with data === null, past a perfectly good cached
+      // row, and ended up setting the subscription to null. A family who had
+      // paid five minutes earlier was shown the paywall on their next lesson,
+      // because of one failed request.
+      //
+      // A pass is only ever extended, never revoked, so a cached row is always
+      // a safe lower bound: if it has run out it simply isn't pro, and if it
+      // hasn't, the family keeps what they paid for. Only a DEFINITIVE answer
+      // from the server — no error, no row — may take a pass away.
+      if (error) { setSubscription(subCache.read(userId)); return; }
       // A payment that was taken but never confirmed. Only worth retrying when
       // the row we just read would actually lock them out — otherwise a family
       // mid-pass pays the cost of a function call on every load.
@@ -767,12 +780,18 @@ const useAuth = () => {
         console.warn('start_free_week unavailable:', rpcError.message);
         setSubscription({ plan: 'setup_pending', pro_until: new Date(Date.now() + 86400000).toISOString() }); return;
       }
-      const row = started?.user_id ? started : null;
-      subCache.write(userId, row);
+      // start_free_week returning nothing is not a reason to revoke a pass
+      // this device has already seen — it means the free week could not be
+      // started, not that the family has no entitlement.
+      const row = started?.user_id ? started : subCache.read(userId);
+      if (started?.user_id) subCache.write(userId, started);
       setSubscription(row);
     } catch (e) {
-      // A thrown network failure lands here; same rule as above.
-      setSubscription(isNetworkError(e) ? subCache.read(userId) : null);
+      // Anything thrown here — not just a network failure — is an answer we
+      // did not get, so the last row this device saw stands. Revoking a paid
+      // family's pass because of an unexpected exception is the one outcome
+      // this function must never produce.
+      setSubscription(subCache.read(userId));
     }
   };
 

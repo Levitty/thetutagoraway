@@ -12,6 +12,11 @@ name: Deploy to Hostinger
 on:
   push:
     branches: [main]
+    # The edge-function workflow commits this file after a successful deploy.
+    # It changes nothing a browser downloads, so rebuilding and re-uploading
+    # the whole site for it would be a few minutes of FTP for no change.
+    paths-ignore:
+      - 'supabase/functions/DEPLOYED.json'
   workflow_dispatch:
 
 jobs:

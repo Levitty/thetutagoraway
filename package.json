@@ -16,7 +16,8 @@
     "audit:gradefit": "node scripts/audit-grade-fit.mjs",
     "audit:dupes": "node scripts/audit-rung-dupes.mjs",
     "test": "node --test tests/*.test.mjs",
-    "test:content": "node engine/scripts/quality_gate.mjs"
+    "test:content": "node engine/scripts/quality_gate.mjs",
+    "audit:drift": "node scripts/function-drift.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.2",

@@ -101,5 +101,22 @@ jobs:
           fi
           supabase functions deploy "${{ inputs.function }}" --project-ref "$PROJECT_REF"
 
+      # Record WHAT was deployed, so scripts/function-drift.mjs can tell later
+      # that the running copy is no longer this code. The seven-week gap
+      # between the client and verify-subscription was invisible precisely
+      # because nothing wrote this down.
+      - name: Record the deployed version
+        run: |
+          node scripts/function-drift.mjs --record "${{ inputs.function }}"
+          if git diff --quiet -- supabase/functions/DEPLOYED.json; then
+            echo "Already recorded at this version."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add supabase/functions/DEPLOYED.json
+          git commit -m "Record ${{ inputs.function }} as deployed [skip ci]"
+          git push
+
       - name: Done
         run: echo "Deployed ${{ inputs.function }} to $PROJECT_REF."
