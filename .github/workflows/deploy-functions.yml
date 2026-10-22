@@ -47,6 +47,11 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # The record step commits DEPLOYED.json. Without this the default token is
+    # read-only and the push fails with exit 128 — AFTER a successful deploy,
+    # which makes the whole run look like the deploy failed when it did not.
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -105,7 +110,12 @@ jobs:
       # that the running copy is no longer this code. The seven-week gap
       # between the client and verify-subscription was invisible precisely
       # because nothing wrote this down.
+      # Never fail the run over bookkeeping. The function is already deployed
+      # by this point; a red tick here says "the deploy failed" to anyone
+      # reading the Actions tab, which is worse than an unrecorded version —
+      # the drift check will simply keep asking for this one.
       - name: Record the deployed version
+        continue-on-error: true
         run: |
           node scripts/function-drift.mjs --record "${{ inputs.function }}"
           if git diff --quiet -- supabase/functions/DEPLOYED.json; then
@@ -116,7 +126,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add supabase/functions/DEPLOYED.json
           git commit -m "Record ${{ inputs.function }} as deployed [skip ci]"
-          git push
+          # checkout leaves a detached HEAD, so the branch has to be named.
+          git push origin "HEAD:${{ github.ref_name }}"
 
       - name: Done
         run: echo "Deployed ${{ inputs.function }} to $PROJECT_REF."
