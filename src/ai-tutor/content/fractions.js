@@ -199,13 +199,138 @@ export function buildAddSubUnlike({ sub = false } = {}) {
   };
 }
 
+// ---- mixed numbers: the real Grade 7 rung --------------------------------
+// G7's "(Advanced)" fraction skills ran the Grade 6 builder with bigger
+// operands, so the audit found them identical to the Grade 6 rung: same
+// question shape, 9 -> 12. Bigger numbers are not a harder skill — they are
+// the same skill with more arithmetic. The step the CBC design actually names
+// is MIXED NUMBERS, and it is a different question: you cannot multiply
+// 2 1/2 by 1 1/3 at all until you have converted both, which is the thing
+// being taught.
+const mixedStr = (n, d) => {
+  const [rn, rd] = reduce(n, d);
+  if (rd === 1) return `${rn}`;
+  if (Math.abs(rn) < rd) return `${rn}/${rd}`;
+  const w = Math.trunc(rn / rd);
+  return `${w} ${Math.abs(rn % rd)}/${rd}`;
+};
+// Either form is right, so both are accepted: a child who leaves 10/3 has done
+// the mathematics, and marking that wrong teaches them to distrust the marking
+// rather than to convert. answerCheck.js already parses "3 1/3".
+//
+// Built BY HAND rather than through accepts(), which adds a whitespace-
+// stripped copy of every form it is given. That is right for "12 kg" -> "12kg"
+// and catastrophic for a mixed number: "8 9/25" stripped is "89/25", a
+// different number — and since answers are compared BY VALUE, listing it would
+// mark 89/25 correct for a question whose answer is 209/25.
+const mixedAccepts = (n, d) => {
+  const [rn, rd] = reduce(n, d);
+  if (rd === 1) return accepts(`${rn}`);
+  const list = [`${rn}/${rd}`];
+  if (Math.abs(rn) > rd) list.push(mixedStr(rn, rd));
+  if (terminates(rd)) list.push(`${+(rn / rd).toFixed(6)}`);
+  return [...new Set(list)];
+};
+/** A mixed number as parts: 2 1/2 -> { w: 2, n: 1, d: 2, imp: 5, txt: '2 1/2' } */
+const mixed = (w, n, d) => ({ w, n, d, imp: w * d + n, txt: `${w} ${n}/${d}` });
+// The fraction part is always in lowest terms: a question that prints "1 3/6"
+// is teaching the child that unsimplified is fine, in the one skill whose
+// whole point is simplifying.
+const pickMixed = (maxW = 4, maxD = 6) => {
+  let w, n, d;
+  do { d = randInt(2, maxD); n = randInt(1, d - 1); w = randInt(1, maxW); } while (gcd(n, d) !== 1);
+  return mixed(w, n, d);
+};
+
+/**
+ * Multiplying mixed numbers — convert, multiply across, convert back.
+ * The one rule enforced on the draw: the answer must not already be a number
+ * on the page, or the child can read it off instead of working it out.
+ */
+export function buildMixedMulFractions() {
+  let x, y, num, den;
+  do {
+    x = pickMixed(); y = pickMixed();
+    num = x.imp * y.imp; den = x.d * y.d;
+    var [rn, rd] = reduce(num, den);
+  } while (
+    (rd === 1 && [x.w, y.w, x.n, y.n, x.d, y.d].includes(rn))
+    || (x.w === y.w && x.n === y.n && x.d === y.d)
+  );
+  return {
+    type: 'multiply-mixed-numbers',
+    instruction: 'Multiply. Give the answer in simplest form.',
+    question: `${x.txt} × ${y.txt}`,
+    answer: mixedStr(num, den),
+    accepts: mixedAccepts(num, den),
+    hints: hintLadder(
+      'A mixed number cannot be multiplied as it stands — each one has to become a single fraction first.',
+      'To convert, multiply the whole number by the denominator and add the numerator; the denominator stays the same.',
+      'Then multiply straight across, simplify, and turn the result back into a mixed number.',
+    ),
+    solution: { steps: [
+      { text: 'Convert the first.', expr: `${x.txt} = ${x.imp}/${x.d}` },
+      { text: 'Convert the second.', expr: `${y.txt} = ${y.imp}/${y.d}` },
+      { text: 'Multiply straight across.', expr: `${num}/${den}` },
+      { text: 'Simplify and convert back.', expr: mixedStr(num, den) },
+    ], answer: mixedStr(num, den) },
+    misconceptions: [
+      // The classic: multiply the wholes and the fractions separately. It is
+      // what "2 1/2" looks like it is asking for, and it is always wrong.
+      { when: `${x.w * y.w} ${x.n * y.n}/${x.d * y.d}`,
+        feedback: 'The wholes and the fractions cannot be multiplied separately — 2 1/2 means 2 + 1/2, and every part has to meet every other part. Convert each one to a single fraction first.' },
+      { when: fracStr(x.n * y.n, x.d * y.d),
+        feedback: 'That is only the fraction parts. The whole numbers are still to be included — convert each mixed number to a single fraction first.' },
+    ],
+    verify: { kind: 'fraction', value: num / den },
+  };
+}
+
+/**
+ * Dividing mixed numbers — convert, then multiply by the reciprocal.
+ */
+export function buildMixedDivFractions() {
+  let x, y, num, den;
+  do {
+    x = pickMixed(); y = pickMixed(3, 5);
+    num = x.imp * y.d; den = x.d * y.imp;
+    var [rn, rd] = reduce(num, den);
+  } while (
+    rn === rd                                   // an answer of 1 teaches nothing
+    || (rd === 1 && [x.w, y.w, x.n, y.n, x.d, y.d].includes(rn))
+    || (x.imp === y.imp && x.d === y.d)
+  );
+  return {
+    type: 'divide-mixed-numbers',
+    instruction: 'Divide. Give the answer in simplest form.',
+    question: `${x.txt} ÷ ${y.txt}`,
+    answer: mixedStr(num, den),
+    accepts: mixedAccepts(num, den),
+    hints: hintLadder(
+      'Both mixed numbers have to become single fractions before anything else can happen.',
+      'Dividing by a fraction is the same as multiplying by it upside down.',
+      'So convert both, turn the second one over, multiply across, then simplify.',
+    ),
+    solution: { steps: [
+      { text: 'Convert the first.', expr: `${x.txt} = ${x.imp}/${x.d}` },
+      { text: 'Convert the second.', expr: `${y.txt} = ${y.imp}/${y.d}` },
+      { text: 'Turn the second over and multiply.', expr: `${x.imp}/${x.d} × ${y.d}/${y.imp}` },
+      { text: 'Simplify and convert back.', expr: mixedStr(num, den) },
+    ], answer: mixedStr(num, den) },
+    misconceptions: [
+      { when: fracStr(x.imp * y.imp, x.d * y.d),
+        feedback: 'That is the two fractions multiplied. For division the second one has to be turned upside down first.' },
+    ],
+    verify: { kind: 'fraction', value: num / den },
+  };
+}
+
 // ---- multiply fractions ----
 // `maxNum`/`maxDen` exist because G6_FRACTIONS_MUL and G7_FRACTIONS_MUL
 // ("Multiplying Fractions (Advanced)") called this bare and asked the
-// identical question. NOTE: the real Grade 7 step in the CBC design is mixed
-// numbers, which is a different question type rather than a bigger one;
-// bigger operands make the rungs genuinely distinct and the simplification
-// harder, but authoring the mixed-number rung is still worth doing.
+// identical question. The Grade 7 rung is now buildMixedMulFractions above;
+// these parameters remain because they also keep the Grade 6 rung distinct
+// from the Grade 5 one.
 export function buildMulFractions({ maxNum = 8, maxDen = 9 } = {}) {
   let a, b, c, d;
   do {
@@ -892,11 +1017,15 @@ export const FRACTIONS_CONTENT = {
 
   // Grade 7 — fluency & supporting number skills
   G7_FRACTIONS_ADD_UNLIKE: withWorkedExample(() => buildAddSubUnlike({ sub: Math.random() < 0.4 })),
+  // "(Advanced)" now means mixed numbers, which is the step the CBC design
+  // actually names — not the Grade 6 question with bigger numbers in it.
+  // The concrete rung stays the proper-fraction grid: a mixed number has no
+  // grid picture, and a wrong picture is worse than none.
   G7_FRACTIONS_MUL:      withLevels({
-                            abstract: withWorkedExample(() => buildMulFractions({ maxNum: 11, maxDen: 12 })),
+                            abstract: withWorkedExample(buildMixedMulFractions),
                             concrete: withWorkedExample(buildMulFractionsPictorial),
                           }),
-  G7_FRACTIONS_DIV:      withWorkedExample(() => buildDivFractions({ maxNum: 11, maxDen: 12 })),
+  G7_FRACTIONS_DIV:      withWorkedExample(buildMixedDivFractions),
   G7_FRACTIONS_COMPARE:  withWorkedExample(buildCompareFractions),
   G7_RECIPROCALS:        withWorkedExample(buildReciprocal),
   G7_LCM:                withWorkedExample(buildLCM),

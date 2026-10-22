@@ -19,6 +19,13 @@ export function normalizeMath(str) {
   s = s.replace(/\/[=-]\s*$/, '');                 // Kenyan "4500/=" or "/-"
   s = s.replace(/\bremainder\b/g, 'r');            // "5 remainder 2" → "5 r 2"
   s = s.replace(/\.\s*$/, '');                     // trailing full stop
+  // A mixed number's space is the only thing separating it from a different
+  // number, so it becomes an explicit plus BEFORE spaces are dropped. Without
+  // this, "3 1/4" and "31/4" both collapse to "31/4" and the literal match
+  // below marks 31/4 (7.75) correct for an answer of 3 1/4 (3.25). Nothing
+  // shipped had a mixed-number answer, so this never bit until Grade 7
+  // fractions got one.
+  s = s.replace(/^(-?\d+)\s+(\d+\/\d+)$/, '$1+$2');
   s = s.replace(/\s+/g, '');             // drop spaces
   // Phone keyboards have no √ or π, so a child who knows the answer is 2√5 has
   // no way to type it. Accept the words instead. Both sides are normalised, so

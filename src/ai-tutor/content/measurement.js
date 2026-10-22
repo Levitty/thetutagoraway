@@ -874,7 +874,140 @@ export function buildVolumeAdv() {
   };
 }
 
+// ---- Grade 6 time: the 24-hour clock and timetables -----------------------
+// G6_TIME is named "Time (24-hour Clock, Timetables)" and was an alias to
+// G5_TIME, which asks a Grade 5 to change hours into minutes and add two
+// durations. So the label promised the harder skill and the questions gave
+// the easier one — and a learner who answered them was credited with the
+// Grade 6 rung and placed above where they actually are. Same shape of defect
+// as "Place Value (Millions)" never showing a million.
+//
+// What the rung is actually for: notation (2.45 p.m. is 1445), and reading a
+// timetable, which is where the 24-hour clock earns its keep.
+const hhmm = (mins) => `${String(Math.floor(mins / 60) % 24).padStart(2, '0')}${String(mins % 60).padStart(2, '0')}`;
+const to12 = (mins) => {
+  const h = Math.floor(mins / 60) % 24, m = mins % 60;
+  const suffix = h < 12 ? 'a.m.' : 'p.m.';
+  const h12 = h % 12 === 0 ? 12 : h % 12;
+  return `${h12}.${String(m).padStart(2, '0')} ${suffix}`;
+};
+const STOPS = ['Nakuru', 'Naivasha', 'Limuru', 'Thika', 'Machakos', 'Kitui', 'Nyeri', 'Embu'];
+// "1 hours 45 minutes" and "2 hours 0 minutes" are how a generator talks, not
+// how a timetable does, and a child reading a question in broken English is
+// being asked to decode two things at once.
+const saidDuration = (mins) => {
+  const h = Math.floor(mins / 60), m = mins % 60;
+  const hPart = h ? `${h} hour${h === 1 ? '' : 's'}` : '';
+  const mPart = m ? `${m} minute${m === 1 ? '' : 's'}` : '';
+  return [hPart, mPart].filter(Boolean).join(' ');
+};
+
+function buildTwentyFourHour() {
+  const mode = pick(['to24', 'to12', 'duration', 'arrival']);
+
+  if (mode === 'to24') {
+    // Afternoon only: a morning time converts by doing nothing, which teaches
+    // nothing and marks a child right for leaving the question alone.
+    const mins = randInt(13, 23) * 60 + pick([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]);
+    const value = hhmm(mins);
+    return {
+      type: 'g6-time-24', instruction: 'Write the time in 24-hour notation.',
+      question: `Write ${to12(mins)} in 24-hour time.`,
+      answer: value, accepts: accepts(value, `${value} h`, `${value} hrs`, `${value.slice(0, 2)}:${value.slice(2)}`),
+      hints: hintLadder(
+        'After midday the 24-hour clock keeps counting instead of starting again at one.',
+        'So an afternoon hour is twelve more than the hour on a 12-hour clock.',
+        'Write it as four digits, with no gap between the hours and the minutes.'),
+      solution: { steps: [
+        { text: 'Add 12 to the afternoon hour.', expr: `${Math.floor(mins / 60) - 12} + 12 = ${Math.floor(mins / 60)}` },
+        { text: 'Write four digits.', expr: value },
+      ], answer: value },
+      misconceptions: [
+        { when: `${String(Math.floor(mins / 60) - 12).padStart(2, '0')}${String(mins % 60).padStart(2, '0')}`,
+          feedback: 'That is still the 12-hour time. After midday the hours carry on past 12 instead of restarting.' },
+      ],
+    };
+  }
+
+  if (mode === 'to12') {
+    const mins = randInt(13, 22) * 60 + pick([0, 10, 15, 20, 30, 40, 45, 50]);
+    const h = Math.floor(mins / 60), m = mins % 60;
+    const h12 = h % 12 === 0 ? 12 : h % 12;
+    const value = `${h12}.${String(m).padStart(2, '0')} p.m.`;
+    return {
+      type: 'g6-time-12', instruction: 'Write the time on a 12-hour clock.',
+      question: `A bus leaves at ${hhmm(mins)} h. What time is that on a 12-hour clock?`,
+      answer: value,
+      accepts: accepts(value, `${h12}.${String(m).padStart(2, '0')}pm`,
+        `${h12}:${String(m).padStart(2, '0')} p.m.`, `${h12}:${String(m).padStart(2, '0')}pm`),
+      hints: hintLadder(
+        'A 24-hour time past 1200 is in the afternoon or evening.',
+        'Take twelve off the hours to get back to the 12-hour clock.',
+        'Then say whether it is a.m. or p.m. — without that the time is ambiguous.'),
+      solution: { steps: [
+        { text: 'Subtract 12 from the hours.', expr: `${h} − 12 = ${h12}` },
+        { text: 'It is after midday.', expr: value },
+      ], answer: value },
+      misconceptions: [
+        { when: `${h}.${String(m).padStart(2, '0')} p.m.`, feedback: 'The hours still need 12 taking off before you can call it p.m.' },
+      ],
+    };
+  }
+
+  // A timetable: two stops, and the question is read off it.
+  const [from, to] = (() => { const a = pick(STOPS); let b; do { b = pick(STOPS); } while (b === a); return [a, b]; })();
+  const dep = randInt(6, 19) * 60 + pick([0, 15, 20, 30, 40, 45]);
+  const journey = randInt(2, 7) * 15 + randInt(1, 3) * 60;   // 1h15 to 4h45
+  const arr = dep + journey;
+
+  if (mode === 'duration') {
+    const value = journey % 60 === 0
+      ? `${Math.floor(journey / 60)} h`
+      : `${Math.floor(journey / 60)} h ${journey % 60} min`;
+    return {
+      type: 'g6-timetable-duration', instruction: 'Read the timetable and work out how long the journey takes.',
+      question: `A bus leaves ${from} at ${hhmm(dep)} h and reaches ${to} at ${hhmm(arr)} h. How long is the journey?`,
+      answer: value,
+      accepts: accepts(value, value.replace(/\s/g, ''), saidDuration(journey), `${journey} min`, `${journey} minutes`),
+      hints: hintLadder(
+        'The two times are both on the 24-hour clock, so neither needs converting first.',
+        'Count on from the leaving time to the next whole hour, then in hours, then the last few minutes.',
+        'Give the answer in hours and minutes.'),
+      solution: { steps: [
+        { text: 'Count on to the next hour.', expr: `${hhmm(dep)} → ${hhmm(Math.ceil(dep / 60) * 60)}` },
+        { text: 'Then on to the arrival.', expr: `${hhmm(Math.ceil(dep / 60) * 60)} → ${hhmm(arr)}` },
+        { text: 'Add the two parts.', expr: value },
+      ], answer: value },
+      misconceptions: [
+        // Treating the clock as decimal: 1430 − 1145 done as 1430 − 1145 = 285.
+        { when: `${Number(hhmm(arr)) - Number(hhmm(dep))}`,
+          feedback: 'Clock times are not ordinary numbers — an hour is 60 minutes, not 100, so they cannot just be subtracted.' },
+      ],
+    };
+  }
+
+  const value = hhmm(arr);
+  return {
+    type: 'g6-timetable-arrival', instruction: 'Read the timetable and work out the arrival time.',
+    question: `A bus leaves ${from} at ${hhmm(dep)} h. The journey takes ${saidDuration(journey)}. What time does it reach ${to}? Give your answer in 24-hour time.`,
+    answer: value, accepts: accepts(value, `${value} h`, `${value.slice(0, 2)}:${value.slice(2)}`),
+    hints: hintLadder(
+      'Add the hours first, then the minutes.',
+      'If the minutes pass 60, that is another whole hour to carry.',
+      'Write the answer as four digits on the 24-hour clock.'),
+    solution: { steps: [
+      { text: 'Add the hours.', expr: `${hhmm(dep)} + ${Math.floor(journey / 60)} h = ${hhmm(dep + Math.floor(journey / 60) * 60)}` },
+      { text: 'Then the minutes.', expr: value },
+    ], answer: value },
+    misconceptions: [
+      { when: String(Number(hhmm(dep)) + Math.floor(journey / 60) * 100 + (journey % 60)),
+        feedback: 'When the minutes go past 60 they become another hour — the clock does not run to 100 minutes.' },
+    ],
+  };
+}
+
 export const MEASUREMENT_CONTENT = {
+  G6_TIME:            withWorkedExample(buildTwentyFourHour),
   // Cambridge gap fill
   G7_LENGTH_CONV:     withWorkedExample(buildLengthConvAdvanced),
   G8_AREA_COMPOSITE:  withWorkedExample(buildCompositeArea),

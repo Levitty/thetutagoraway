@@ -118,3 +118,59 @@ test('the Grade 7 decimal rungs are harder than the Grade 6 ones they are named 
     'G7 decimal division is no harder than G6',
   );
 });
+
+// ---- the rungs that were aliases or copies --------------------------------
+
+test('Grade 6 time is the 24-hour clock and timetables, not Grade 5 again', () => {
+  // G6_TIME was an alias to G5_TIME, so the label promised the harder skill
+  // and the questions gave the easier one — and answering them credited the
+  // learner with a rung they had not reached.
+  const seen = new Set();
+  let timetable = 0, notation = 0;
+  for (let i = 0; i < 120; i++) {
+    const p = generateProblem('G6_TIME');
+    if (!p || p.placeholder) continue;
+    seen.add(p.type);
+    if (/\b\d{4}\s*h\b|24-hour/.test(p.question)) notation++;
+    if (/bus leaves/.test(p.question)) timetable++;
+  }
+  assert.ok(seen.size >= 3, `only ${seen.size} question shapes — the rung is too thin`);
+  assert.ok(notation > 0, 'nothing used 24-hour notation, which the skill is named for');
+  assert.ok(timetable > 0, 'nothing read a timetable, which the skill is named for');
+});
+
+test('Grade 7 fractions are mixed numbers, not Grade 6 with bigger numbers', () => {
+  // "(Advanced)" ran the Grade 6 builder with maxNum 11 instead of 8. Bigger
+  // operands are the same skill with more arithmetic; mixed numbers are the
+  // step the CBC design actually names, and cannot be started without
+  // converting — which is the thing being taught.
+  for (const id of ['G7_FRACTIONS_MUL', 'G7_FRACTIONS_DIV']) {
+    let mixedSeen = 0, n = 0;
+    for (let i = 0; i < 80; i++) {
+      const p = generateProblem(id);
+      if (!p || p.placeholder) continue;
+      n++;
+      if (/\d+\s+\d+\/\d+/.test(p.question)) mixedSeen++;
+    }
+    assert.ok(n > 0, `${id} generated nothing`);
+    assert.ok(mixedSeen / n > 0.5, `${id}: only ${mixedSeen} of ${n} questions used a mixed number`);
+  }
+});
+
+test('a mixed-number question never prints an unsimplified fraction part', () => {
+  // "1 3/6 × 4 1/3" teaches that unsimplified is fine, in the one skill whose
+  // whole point is simplifying.
+  const bad = [];
+  for (const id of ['G7_FRACTIONS_MUL', 'G7_FRACTIONS_DIV']) {
+    for (let i = 0; i < 150; i++) {
+      const p = generateProblem(id);
+      if (!p || p.placeholder) continue;
+      for (const m of String(p.question).matchAll(/(\d+)\/(\d+)/g)) {
+        const a = Number(m[1]), b = Number(m[2]);
+        const g = (x, y) => (y ? g(y, x % y) : x);
+        if (g(a, b) !== 1) bad.push(`${id}: ${p.question}`);
+      }
+    }
+  }
+  assert.deepEqual(bad.slice(0, 3), [], `unsimplified fractions in the question text`);
+});

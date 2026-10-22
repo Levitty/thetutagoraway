@@ -114,3 +114,41 @@ test('a.m. and p.m. stay different, and a time without one is not enough', () =>
   assert.ok(!same('9:15', '9:15 a.m.'), 'a bare 9:15 does not say which');
   assert.ok(!same('9:16 am', '9:15 a.m.'));
 });
+
+// ============================================================================
+// MIXED NUMBERS — the space is the only thing separating two different numbers
+//
+// normalizeMath() drops whitespace, which is right for "12 kg" and wrong for
+// "3 1/4": squashed it becomes "31/4", a different number, and the literal
+// match at the top of checkAnswerMatch then marked 31/4 (7.75) correct for an
+// answer of 3 1/4 (3.25). Nothing shipped had a mixed-number answer, so it
+// never bit until Grade 7 fractions got one.
+// ============================================================================
+test('a squashed mixed number is not the same number', () => {
+  const p = { answer: '3 1/4', accepts: ['13/4', '3 1/4', '3.25'] };
+  assert.equal(checkAnswerMatch('3 1/4', p), true, 'the mixed form is right');
+  assert.equal(checkAnswerMatch('13/4', p), true, 'the improper form is right');
+  assert.equal(checkAnswerMatch('3.25', p), true, 'the decimal is right');
+  assert.equal(checkAnswerMatch('31/4', p), false, '31/4 is 7.75 — a different number');
+});
+
+test('a mixed number whose squash happens to be its own improper form still passes', () => {
+  // 6 3/10 really is 63/10, so accepting "63/10" is correct, not a leak.
+  const p = { answer: '6 3/10', accepts: ['63/10', '6 3/10', '6.3'] };
+  assert.equal(checkAnswerMatch('63/10', p), true);
+  assert.equal(checkAnswerMatch('6 3/10', p), true);
+});
+
+test('a negative mixed number keeps its sign', () => {
+  const p = { answer: '-2 1/2', accepts: ['-5/2', '-2 1/2', '-2.5'] };
+  assert.equal(checkAnswerMatch('-2 1/2', p), true);
+  assert.equal(checkAnswerMatch('-5/2', p), true);
+  assert.equal(checkAnswerMatch('-21/2', p), false, '-21/2 is -10.5');
+});
+
+test('the whitespace-dropping that mixed numbers needed protecting from still works', () => {
+  // The rule exists for units and currency; narrowing it must not break them.
+  assert.equal(checkAnswerMatch('12 kg', { answer: '12kg', accepts: ['12kg', '12 kg'] }), true);
+  assert.equal(checkAnswerMatch('KSh 4 500', { answer: '4500', accepts: ['4500'] }), true);
+  assert.equal(checkAnswerMatch('2 h 45 min', { answer: '2 h 45 min', accepts: ['2 h 45 min', '2h45min'] }), true);
+});

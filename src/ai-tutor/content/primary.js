@@ -22,7 +22,10 @@ export const PRIMARY_ALIAS = {
   // G5_SIMPLE_EQUATIONS is authored in grade5.js now. The alias to
   // G6_SIMPLE_EQUATIONS served a Grade 5 learner equations like x − 10 = −13.
   // Grade 6 additions from the KICD Grade 6 summary (rationalised design)
-  G6_TIME: 'G5_TIME',
+  // G6_TIME is authored in measurement.js now. The alias to G5_TIME served a
+  // Grade 6 learner the Grade 5 question — change hours to minutes, add two
+  // durations — under a label promising the 24-hour clock and timetables, so
+  // answering it credited them with a rung they had not reached.
   G6_3D_OBJECTS: 'G6_VOLUME_CUBOID',
   // G5_3D_OBJECTS and G5_VOLUME are authored in grade5.js now. G5_3D_OBJECTS
   // aliased to G6_VOLUME_CUBOID, which asks for the volume of a cuboid — a
