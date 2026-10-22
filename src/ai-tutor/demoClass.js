@@ -54,11 +54,15 @@ const upTo = (grade, except = []) => {
     .map(s => s.id);
 };
 
-const learner = (name, { through = 3, mastered = [], struggling = [], failed = [], grade = 5 }) => {
+const learner = (name, { through = 3, mastered = [], struggling = [], failed = [], grade = 5, seen = 1 }) => {
   const held = [...upTo(through, [...struggling, ...failed]), ...mastered];
   return {
     name,
     grade,
+    // Days since this child last practised. Every demo child used to be
+    // 0–3 days old, so "Gone quiet" — the one thing on the page a roster can
+    // never tell you — had nobody in it and demonstrated nothing.
+    seen,
     skills: {
       ...Object.fromEntries(held.map(id => [id, solid()])),
       ...Object.fromEntries(struggling.map(id => [id, shaky()])),
@@ -72,41 +76,49 @@ const ROSTER = [
   // The three the demo is really about: three different failures, one cause.
   // They hold Grade 3 and below but never got place value, so the work above
   // it keeps collapsing — which is the finding on screen.
-  learner('Amani Otieno', { through: 3, mastered: ['G4_ADD', 'G4_SUB'], struggling: ['G4_NUMBER_WORDS'] }),
-  learner('Baraka Kimani', { through: 3, mastered: ['G4_ADD', 'G4_ODD_EVEN'], struggling: ['G4_ORDER_ROUND'] }),
-  learner('Chipo Wanjiru', { through: 3, mastered: ['G4_SUB'], struggling: ['G4_ODD_EVEN'] }),
+  learner('Amani Otieno', { through: 3, mastered: ['G4_ADD', 'G4_SUB'], struggling: ['G4_NUMBER_WORDS'], seen: 1 }),
+  learner('Baraka Kimani', { through: 3, mastered: ['G4_ADD', 'G4_ODD_EVEN'], struggling: ['G4_ORDER_ROUND'], seen: 3 }),
+  learner('Chipo Wanjiru', { through: 3, mastered: ['G4_SUB'], struggling: ['G4_ODD_EVEN'], seen: 0 }),
   // Two who have Grade 4 and are stuck on the grade they are actually in.
-  learner('Dalila Mwangi', { through: 4, struggling: ['G5_ADDITION'] }),
-  learner('Esha Njoroge', { through: 4, struggling: ['G5_ADDITION', 'G5_SUBTRACTION'] }),
+  learner('Dalila Mwangi', { through: 4, struggling: ['G5_ADDITION'], seen: 2 }),
+  // Stuck AND gone quiet — the two signals at once, on the child who has
+  // stopped coming back. A roster sorted by level buried her.
+  learner('Esha Njoroge', { through: 4, struggling: ['G5_ADDITION', 'G5_SUBTRACTION'], seen: 16 }),
   // Failed a check rather than ground to a halt — a different signal, and
   // worth having on screen so the two can be told apart.
-  learner('Faraji Kiptoo', { through: 4, mastered: ['G5_PLACE_VALUE'], failed: ['G5_MULTIPLICATION'] }),
-  // On track.
-  learner('Grace Atieno', { through: 4, mastered: [...G5_CORE.slice(0, 5)] }),
+  learner('Faraji Kiptoo', { through: 4, mastered: ['G5_PLACE_VALUE'], failed: ['G5_MULTIPLICATION'], seen: 4 }),
+  // Nothing wrong, nothing happening: the child who quietly stops and whom
+  // nobody chases, because there is no gap to raise a flag.
+  learner('Grace Atieno', { through: 4, mastered: [...G5_CORE.slice(0, 5)], seen: 9 }),
   // Ahead, so the dashboard is not a wall of red.
-  learner('Hamisi Juma', { through: 5, mastered: ['G6_PLACE_VALUE', 'G6_MULTIPLICATION', 'G6_FRACTIONS_ADD'] }),
+  learner('Hamisi Juma', { through: 5, mastered: ['G6_PLACE_VALUE', 'G6_MULTIPLICATION', 'G6_FRACTIONS_ADD'], seen: 0 }),
 ];
 
 const DEMO_CLASS_ID = 'demo-class-grade-5';
 const idFor = (i) => `demo-student-${i + 1}`;
 
 /** Students in the shape TeacherDashboard builds from a progress row. */
-export const demoStudents = () => ROSTER.map((r, i) => ({
-  userId: idFor(i),
-  name: r.name,
-  updatedAt: new Date(Date.now() - (i % 4) * 86400000).toISOString(),
-  diagnosed: true,
-  progress: {
-    skills: r.skills,
-    diagnosticBalances: null,
+export const demoStudents = () => ROSTER.map((r, i) => {
+  const seenAt = new Date(Date.now() - r.seen * 86400000);
+  return {
+    userId: idFor(i),
+    name: r.name,
+    updatedAt: seenAt.toISOString(),
     diagnosed: true,
-    declaredGrade: r.grade,
-    placementGrade: r.grade,
-    totalXP: 60 + i * 35,
-    currentStreak: (i * 2) % 5,
-    lastPracticeDate: new Date(Date.now() - (i % 4) * 86400000).toISOString().slice(0, 10),
-  },
-}));
+    progress: {
+      skills: r.skills,
+      diagnosticBalances: null,
+      diagnosed: true,
+      declaredGrade: r.grade,
+      placementGrade: r.grade,
+      totalXP: 60 + i * 35,
+      // A streak cannot survive a fortnight away, so it follows `seen` rather
+      // than contradicting it on the same row.
+      currentStreak: r.seen > 1 ? 0 : (i * 3) % 7 + 1,
+      lastPracticeDate: seenAt.toISOString().slice(0, 10),
+    },
+  };
+});
 
 export const demoClasses = () => [{ id: DEMO_CLASS_ID, name: 'Grade 5 Blue (demo)', join_code: 'DEMO01' }];
 export const demoMembers = () => ROSTER.map((_, i) => ({ class_id: DEMO_CLASS_ID, student_id: idFor(i) }));

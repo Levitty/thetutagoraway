@@ -15,11 +15,18 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { supabase } from '../supabase.js';
 import { SUBJECTS } from './subjects.js';
-import { getStats, getStrandStats, getEstimatedGradeLevel, findGaps, classGaps } from './adaptiveEngine.js';
+import {
+  getStats, getStrandStats, getEstimatedGradeLevel, findGaps, classGaps,
+  getNextToLearn, strandsInReach,
+} from './adaptiveEngine.js';
 import { assignmentRoster, dueLabel, isoDay } from './assignments.js';
 import { demoMode, demoStudents, demoClasses, demoMembers, demoAssignments } from './demoClass.js';
 import { useHorebLook } from './horebLook.js';
 import { STRAND_BLOCK } from './strandBlocks.js';
+import {
+  BUCKETS, bucketCounts, inBucket, sortForTeacher, attentionOf, lastSeenLabel,
+  rowToProgress,
+} from './classView.js';
 import { Icon } from './components/Icons.jsx';
 
 const SUBJECT_ID = 'math';
@@ -29,18 +36,17 @@ const ctxFor = (subjectId) => {
   return s ? { skills: s.skills, getPostReqs: s.getPostReqs } : null;
 };
 
-// Reconstruct the in-memory progress object from a stored row.
-const rowToProgress = (row) => ({
-  skills: row.progress?.skills || {},
-  diagnosticBalances: row.progress?.diagnosticBalances || null,
-  diagnosed: row.diagnosed || false,
-  totalXP: row.total_xp || 0,
-  currentStreak: row.current_streak || 0,
-  lastPracticeDate: row.last_practice_date || null,
-});
+// `rowToProgress` lives in classView.js — it is the function that was silently
+// dropping declaredGrade, placementGrade and curriculum, so it belongs where a
+// test can reach it.
 
 // JS-engine snapshot for one student (always available).
-const jsSnapshot = (progress, ctx) => {
+const jsSnapshot = (progress, baseCtx) => {
+  // Which syllabus THIS child is on. Grade and strand reads route through it,
+  // so one ctx shared by the whole class reads a child on another curriculum
+  // against the wrong grades. It is stored per child; it was simply never read
+  // back out of the row.
+  const ctx = progress.curriculum ? { ...baseCtx, curriculum: progress.curriculum } : baseCtx;
   const stats = getStats(progress, ctx);
   const strands = getStrandStats(progress, ctx);
   const grade = getEstimatedGradeLevel(progress, ctx);
@@ -62,11 +68,34 @@ const jsSnapshot = (progress, ctx) => {
     percent: inReach.length ? Math.round((masteredInReach / inReach.length) * 100) : 0,
     percentAll: stats.percent,
     accuracy: stats.accuracy,
-    strands: strands.map(s => ({ name: s.name, percent: s.percent, accuracy: s.accuracy })),
+    // Per strand, counted against what is in reach for the grade the child is
+    // in — the same correction the overall count needed. And `assessed` is
+    // carried through: the detail page read `s.confidence`, which this map
+    // never produced, so a strand the check had never reached drew an empty
+    // bar instead of saying "not assessed". Every child looked as though they
+    // had failed geometry when they had simply never met it.
+    strands: strandsInReach(strands, progress, declared).map(b => ({
+      name: b.s.name,
+      assessed: !!b.s.assessed,
+      accuracy: b.s.accuracy,
+      done: b.done,
+      total: b.total,
+      pct: b.pct,
+    })),
     gapCount: gaps.length,
     // Keep the NAMES — "3 gaps" tells a teacher nothing; "Addition —
     // regrouping ones" tells them exactly where to sit down.
     topGaps: gaps.slice(0, 3).map(g => ({ id: g.id, name: g.name, strand: g.strand, grade: g.grade })),
+    // The skill this child opens HOREB to next — the engine's own answer, the
+    // same one the child is about to be given. A roster row that says
+    // "2/13 skills · 15% mastered" tells a teacher nothing they can use; a row
+    // that names the skill tells them what the child is working on today.
+    next: (() => {
+      const n = getNextToLearn(progress, ctx)[0];
+      return n ? { id: n.id, name: n.name, strand: n.strand, grade: n.grade } : null;
+    })(),
+    streak: progress.currentStreak || 0,
+    xp: progress.totalXP || 0,
     accelerated: false,
   };
 };
@@ -176,6 +205,12 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   const [assignmentsReady, setAssignmentsReady] = useState(true);
   const [assigning, setAssigning] = useState(null);   // the gap row being set
   const [assignError, setAssignError] = useState(null);
+  // Which question is being asked of the roster — see classView.js.
+  const [bucket, setBucket] = useState('all');
+  // Join codes and "create a class" are setup. Done once, then permanently in
+  // the way: the form used to sit ABOVE the children. Closed unless there is
+  // nothing set up yet, in which case it is the only thing to do here.
+  const [setupOpen, setSetupOpen] = useState(false);
 
   const ctx = useMemo(() => ctxFor(SUBJECT_ID), []);
   // ?demo=1 — a class to present with. Nothing is read from or written to the
@@ -336,23 +371,14 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
     [inClass, ctx]
   );
 
-  // ---- class summary ----
-  const summary = useMemo(() => {
-    if (!inClass.length) return null;
-    const levels = inClass.map(s => s.snap.level);
-    const avg = levels.reduce((a, b) => a + b, 0) / levels.length;
-    // Behind/ahead relative to the grade each child is in. The old rule
-    // ("level <= 6" behind, ">= 9" ahead) reported a whole primary class as
-    // needing support and nobody as ahead, whatever they had actually done.
-    const behind = inClass.filter(s => s.snap.gapCount > 0 || s.snap.level < s.snap.declared).length;
-    const ahead = inClass.filter(s => s.snap.accelerated || s.snap.level > s.snap.declared).length;
-    return { count: inClass.length, avg, behind, ahead };
-  }, [inClass]);
-
-  const sorted = useMemo(
-    () => [...inClass].sort((a, b) => b.snap.level - a.snap.level),
-    [inClass]
-  );
+  // ---- how the class is read ----
+  // Four cards used to sit here: Students, Avg level, Need support, Racing
+  // ahead. "Avg level G4.2" is a number no teacher can act on — nothing they
+  // do on Tuesday changes in response to a class mean — and the other three
+  // were counts you could only look at. These are the same question asked so
+  // that the answer is a LIST: tap it and the roster below is that list.
+  const counts = useMemo(() => bucketCounts(inClass), [inClass]);
+  const roster = useMemo(() => sortForTeacher(inBucket(inClass, bucket)), [inClass, bucket]);
 
   // One day, read once per render, so no two parts of this page can disagree
   // about whether something is due today.
@@ -361,6 +387,9 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
     () => (classId === 'all' ? assignments : assignments.filter(a => a.class_id === classId)),
     [assignments, classId]
   );
+  // With nothing on the left there is no second column to make, and an empty
+  // 7fr track would push the whole class into the right-hand third.
+  const twoCol = gaps.length > 0 || (assignmentsReady && shownAssignments.length > 0);
 
   // ---- render ----
   if (selected) {
@@ -373,8 +402,13 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
        radii, same display face — a teacher and a child should be looking at
        one product. */
     <div className="min-h-screen bg-[#E8E8EC]">
+      {/* A laptop is 1400–1900px wide and this page used max-w-4xl (896px) in a
+          single stack, so a quarter of the screen carried everything and the
+          roster sat below the fold under a create-class form. The width is the
+          working surface now: the thinking on the left, the class on the
+          right, and the class picker up in the header where it costs no row. */}
       <header className="sticky top-0 z-10 bg-[#E8E8EC]/90 backdrop-blur">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-3 flex items-center gap-3.5">
+        <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 pt-6 pb-3 flex items-center gap-3.5">
           {onBack && (
             <button onClick={onBack} aria-label="Back"
               className="w-11 h-11 shrink-0 rounded-[14px] bg-white flex items-center justify-center text-slate-500 hover:text-slate-900 transition-colors">
@@ -385,10 +419,20 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
             <h1 className="text-[26px] font-extrabold tracking-tight text-slate-900 leading-none">Class Insights</h1>
             <p className="text-[13px] text-slate-500 mt-1">{SUBJECTS[SUBJECT_ID].name}</p>
           </div>
+          {classes.length > 0 && (
+            <div className="ml-auto flex items-center gap-1.5 flex-wrap justify-end">
+              {[{ id: 'all', name: 'Everyone' }, ...classes].map(c => (
+                <button key={c.id} onClick={() => setClassId(c.id)}
+                  className={`px-3.5 h-9 rounded-full text-[13.5px] font-bold transition-colors ${classId === c.id ? 'bg-[#16161A] text-white' : 'bg-white text-slate-600 hover:text-slate-900'}`}>
+                  {c.name}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 py-5">
+      <main className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 pb-12 pt-1">
         {/* Say so. A screen full of children's names and gaps must never be
             mistaken for real children, by the room or by the person running
             the demo. */}
@@ -402,20 +446,9 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
           </div>
         )}
 
-        {/* Which class. The roster table has existed since the first migration
-            and nothing read it, so every number here was about "everyone whose
-            row I can see" rather than about a class. */}
-        {classes.length > 0 && (
-          <div className="flex items-center gap-2 flex-wrap mb-4">
-            <span className="text-xs text-slate-400 mr-1">Showing</span>
-            {[{ id: 'all', name: 'Everyone' }, ...classes].map(c => (
-              <button key={c.id} onClick={() => setClassId(c.id)}
-                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${classId === c.id ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'}`}>
-                {c.name}
-              </button>
-            ))}
-          </div>
-        )}
+        <div className={`grid gap-5 items-start ${twoCol ? 'xl:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]' : ''}`}>
+        {/* LEFT — what to do about the class. */}
+        <div className="min-w-0 space-y-5">
 
         {/* TEACH THIS NEXT — the teacher's real question, answered first.
             A roster answers "how is Amani doing?" thirty-four times. Nobody
@@ -423,7 +456,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
             measurements read down the other axis: one skill, the children it
             is holding up, and something to do about it on Tuesday. */}
         {gaps.length > 0 && (
-          <div className="bg-white rounded-[28px] p-6 sm:p-8 mb-5">
+          <div className="bg-white rounded-[28px] p-6 sm:p-8">
             <div className="flex items-baseline justify-between gap-3 mb-1">
               <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">Teach this next</h2>
               <span className="text-[12px] text-slate-400 shrink-0">{inClass.length} {inClass.length === 1 ? 'child' : 'children'}</span>
@@ -510,7 +543,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
             Not "who submitted": there is nothing to submit. A name moves into
             Done when the child masters the skill in their ordinary practice. */}
         {assignmentsReady && shownAssignments.length > 0 && (
-          <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-5">
+          <div className="bg-white rounded-[28px] p-5 sm:p-6">
             <div className="flex items-baseline justify-between mb-1">
               <h2 className="font-semibold text-slate-900">Work set</h2>
               <span className="text-xs text-slate-400">done = mastered, from their own practice</span>
@@ -557,108 +590,135 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
           </div>
         )}
 
-        {/* Classes & join codes */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-5">
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="font-semibold text-slate-900">Your classes</h2>
-          </div>
-          {classes.length > 0 ? (
-            <div className="space-y-2 mb-3">
-              {classes.map((c) => (
-                <div key={c.id} className="flex items-center justify-between bg-slate-50 rounded-lg px-3 py-2">
-                  <span className="text-sm font-medium text-slate-700">{c.name}</span>
-                  <button
-                    onClick={() => copyCode(c.join_code)}
-                    className="flex items-center gap-2 text-sm font-mono font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-md px-2.5 py-1 transition-colors"
-                    title="Copy join code"
-                  >
-                    {c.join_code}
-                    <span className="text-xs font-sans text-emerald-600">{copiedCode === c.join_code ? 'copied!' : 'copy'}</span>
-                  </button>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="text-sm text-slate-400 mb-3">No classes yet. Create one and share its code with your students.</p>
-          )}
-          <div className="flex gap-2">
-            <input
-              value={newClassName}
-              onChange={(e) => setNewClassName(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && createClass()}
-              placeholder="New class name (e.g. Form 2 Math)"
-              className="flex-1 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400"
-            />
-            <button
-              onClick={createClass}
-              disabled={creating || !newClassName.trim()}
-              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 text-white font-semibold rounded-lg text-sm transition-colors"
-            >
-              {creating ? 'Creating…' : 'Create'}
-            </button>
-          </div>
-          {createError && <p className="text-xs text-red-500 mt-1.5">{createError}</p>}
         </div>
+        {/* ------------------------------------------------------------------
+            RIGHT — the class itself. Thirty-four children is a list, and a
+            list wants a column, not the full width of a laptop.
+            ------------------------------------------------------------------ */}
+        <div className="min-w-0 space-y-5">
 
-        {loading && <div className="text-center text-slate-400 py-16">Loading class…</div>}
+          {loading && (
+            <div className="bg-white rounded-[28px] p-10 text-center text-slate-400">Loading class…</div>
+          )}
 
-        {error && (
-          <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-700">
-            Couldn’t load students: {error}
-          </div>
-        )}
-
-        {!loading && !error && students.length === 0 && (
-          <div className="text-center py-16 text-slate-500">
-            <Icon name="brain" className="w-12 h-12 mx-auto mb-3 text-slate-300" />
-            <p className="font-semibold text-slate-700 mb-1">No student data visible yet</p>
-            <p className="text-sm max-w-md mx-auto">
-              Once your students use the AI Tutor, their progress appears here. If you
-              expect students but see none, your account may need a class roster and
-              read access configured (Supabase RLS).
-            </p>
-          </div>
-        )}
-
-        {!loading && summary && (
-          <>
-            {/* Class summary */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
-              <SummaryCard label="Students" value={summary.count} />
-              <SummaryCard label="Avg level" value={`G${summary.avg.toFixed(1)}`} />
-              <SummaryCard label="Need support" value={summary.behind} accent="red" />
-              <SummaryCard label="Racing ahead" value={summary.ahead} accent="emerald" />
+          {error && (
+            <div className="bg-white rounded-[28px] p-6">
+              <p className="font-bold text-slate-900 mb-1">Couldn’t load the class</p>
+              <p className="text-[13px] text-slate-500">{error}</p>
             </div>
+          )}
 
-            {/* Roster */}
-            <div className="bg-white rounded-2xl border border-slate-200 divide-y divide-slate-100">
-              {sorted.map((st) => (
-                <button
-                  key={st.userId}
-                  onClick={() => setSelected(st)}
-                  className="w-full flex items-center gap-3 p-4 hover:bg-slate-50 transition-colors text-left"
-                >
-                  <div className={`w-12 h-12 rounded-xl border flex flex-col items-center justify-center ${bandColor(st.snap.level, st.snap.declared)}`}>
-                    <span className="text-[10px] leading-none opacity-70">level</span>
-                    <span className="font-bold leading-tight">{st.snap.level.toFixed(0)}</span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-slate-900 truncate flex items-center gap-2">
-                      {st.name}
-                      {st.snap.accelerated && <span title="Working above grade" className="text-emerald-500"><Icon name="zap" className="w-3.5 h-3.5 inline" /></span>}
-                      {st.snap.gapCount > 0 && <span title="Foundation gaps" className="text-red-500"><Icon name="alert" className="w-3.5 h-3.5 inline" /></span>}
-                    </div>
-                    <div className="text-xs text-slate-500">
-                      {st.snap.mastered}/{st.snap.total} skills · {st.snap.percent}% mastered
-                      {!st.diagnosed && ' · not placed yet'}
-                    </div>
-                  </div>
-                  <Icon name="arrow" className="w-5 h-5 text-slate-300" />
+          {!loading && !error && students.length === 0 && (
+            <div className="bg-white rounded-[28px] p-8 text-center">
+              <Icon name="brain" className="w-10 h-10 mx-auto mb-3 text-slate-300" />
+              <p className="font-bold text-slate-900 mb-1">No children here yet</p>
+              <p className="text-[13px] text-slate-500 leading-snug">
+                Create a class below, give its code to your students, and their work
+                appears here as soon as they practise.
+              </p>
+            </div>
+          )}
+
+          {!loading && !error && inClass.length > 0 && (
+            <div className="bg-white rounded-[28px] p-5 sm:p-6">
+              <div className="flex items-baseline justify-between gap-3 mb-1">
+                <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">The class</h2>
+                <span className="text-[12px] text-slate-400 shrink-0">{inClass.length} {inClass.length === 1 ? 'child' : 'children'}</span>
+              </div>
+              <p className="text-[13px] text-slate-500 mb-4">Whoever needs you most is at the top.</p>
+
+              {/* Four cards used to sit above this: Students, Avg level, Need
+                  support, Racing ahead. A number you can only read is not
+                  useful; a number you can open into the list of children it
+                  counts is. They overlap — a child can be stuck AND quiet —
+                  so these are filters, not a pie chart pretending to sum. */}
+              <div className="flex flex-wrap gap-1.5 mb-3">
+                {BUCKETS.map(b => {
+                  const n = counts[b.id] ?? 0;
+                  const on = bucket === b.id;
+                  const empty = n === 0 && b.id !== 'all';
+                  return (
+                    <button key={b.id} title={b.hint || undefined} disabled={empty}
+                      onClick={() => setBucket(b.id)}
+                      className={`h-9 pl-2 pr-3.5 rounded-full text-[13px] font-bold inline-flex items-center gap-1.5 transition-colors ${
+                        on ? 'bg-[#16161A] text-white'
+                        : empty ? 'bg-slate-50 text-slate-300 cursor-default'
+                        : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                      <span className={`tabular-nums text-[15px] font-extrabold ${on ? '' : 'text-slate-900'}`}>{n}</span>
+                      {b.label}
+                    </button>
+                  );
+                })}
+              </div>
+              {bucket !== 'all' && (
+                <p className="text-[12.5px] text-slate-500 mb-3 leading-snug">
+                  {BUCKETS.find(b => b.id === bucket)?.hint}{' '}
+                  <button onClick={() => setBucket('all')} className="font-bold text-slate-900 underline decoration-slate-300 hover:decoration-slate-900">Show everyone</button>
+                </p>
+              )}
+
+              <div className="-mx-2.5">
+                {roster.map(st => (
+                  <RosterRow key={st.userId} st={st} onOpen={() => setSelected(st)} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* SETUP. Join codes and "create a class" are done once and then in
+              the way forever — this form used to sit above the children. Open
+              by default only when there is nothing set up, in which case it is
+              the one thing to do on this page. */}
+          {(() => {
+            const open = setupOpen || classes.length === 0;
+            return (
+              <div className="bg-white rounded-[28px] p-5 sm:p-6">
+                <button onClick={() => setSetupOpen(o => !o)}
+                  className="w-full flex items-center justify-between gap-3 text-left">
+                  <h2 className="text-[15px] font-extrabold tracking-tight text-slate-900">
+                    Classes &amp; join codes
+                    {classes.length > 0 && <span className="font-bold text-slate-400"> · {classes.length}</span>}
+                  </h2>
+                  <span className="text-[12.5px] font-bold text-slate-400">{open ? 'Hide' : 'Set up'}</span>
                 </button>
-              ))}
-            </div>
-          </>
-        )}
+
+                {open && (
+                  <div className="mt-4">
+                    {classes.length > 0 && (
+                      <div className="space-y-1.5 mb-3">
+                        {classes.map((c) => (
+                          <div key={c.id} className="flex items-center justify-between gap-3 bg-slate-50 rounded-xl px-3 py-2">
+                            <span className="text-[14px] font-bold text-slate-800 truncate">{c.name}</span>
+                            <button onClick={() => copyCode(c.join_code)} title="Copy join code"
+                              className="shrink-0 flex items-center gap-2 text-[13px] font-mono font-bold text-slate-900 bg-white hover:bg-slate-100 rounded-lg px-2.5 py-1 transition-colors">
+                              {c.join_code}
+                              <span className="text-[11px] font-sans font-bold text-slate-400">{copiedCode === c.join_code ? 'copied' : 'copy'}</span>
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    <div className="flex gap-2">
+                      <input
+                        value={newClassName}
+                        onChange={(e) => setNewClassName(e.target.value)}
+                        onKeyDown={(e) => e.key === 'Enter' && createClass()}
+                        placeholder="New class name (e.g. Grade 5 Blue)"
+                        className="flex-1 min-w-0 bg-slate-50 rounded-xl px-3.5 h-11 text-[14px] text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#16161A]/20"
+                      />
+                      <button onClick={createClass} disabled={creating || !newClassName.trim()}
+                        className="shrink-0 px-5 h-11 bg-[#16161A] hover:bg-[#2b2b33] disabled:opacity-25 text-white font-bold rounded-full text-[14px] transition-colors">
+                        {creating ? 'Creating…' : 'Create'}
+                      </button>
+                    </div>
+                    {createError && <p className="text-[12.5px] text-red-500 mt-2">{createError}</p>}
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+        </div>
+        </div>
       </main>
     </div>
   );
@@ -680,95 +740,222 @@ const AssignRow = ({ gap, classes, classId, onCancel, onAssign }) => {
   });
   const [busy, setBusy] = useState(false);
   return (
-    <div className="mt-2 flex flex-wrap items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg p-2">
-      <span className="text-xs text-slate-500">Set “{gap.name}” for</span>
+    <div className="mt-2 flex flex-wrap items-center gap-2 bg-white/80 rounded-2xl px-3 py-2.5">
+      <span className="text-[12.5px] font-bold text-slate-500">Set for</span>
       <select value={cid} onChange={e => setCid(e.target.value)}
         aria-label="Class to set this work for"
-        className="text-xs border border-slate-300 rounded-md px-2 py-1 bg-white">
+        className="text-[13px] font-bold rounded-lg px-2 h-9 bg-slate-100 text-slate-900 focus:outline-none">
         {classes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
       </select>
-      <label className="text-xs text-slate-500" htmlFor={`due-${gap.id}`}>by</label>
+      <label className="text-[12.5px] font-bold text-slate-500" htmlFor={`due-${gap.id}`}>by</label>
       <input id={`due-${gap.id}`} type="date" value={due} onChange={e => setDue(e.target.value)}
-        className="text-xs border border-slate-300 rounded-md px-2 py-1 bg-white" />
+        className="text-[13px] font-bold rounded-lg px-2 h-9 bg-slate-100 text-slate-900 focus:outline-none" />
       <button disabled={busy || !cid}
         onClick={async () => { setBusy(true); await onAssign(gap, cid, due); setBusy(false); }}
-        className="text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 rounded-md px-2.5 py-1">
+        className="h-9 px-4 text-[13px] font-bold text-white bg-[#16161A] hover:bg-[#2b2b33] disabled:opacity-25 rounded-full transition-colors">
         {busy ? 'Setting…' : 'Set work'}
       </button>
-      <button onClick={onCancel} className="text-xs text-slate-400 hover:text-slate-600">Cancel</button>
+      <button onClick={onCancel} className="text-[12.5px] font-bold text-slate-400 hover:text-slate-700 px-1">Cancel</button>
     </div>
   );
 };
 
-const SummaryCard = ({ label, value, accent }) => (
-  <div className="bg-white rounded-xl border border-slate-200 p-3">
-    <div className="text-xs text-slate-500">{label}</div>
-    <div className={`text-2xl font-bold ${accent === 'red' ? 'text-red-500' : accent === 'emerald' ? 'text-emerald-600' : 'text-slate-900'}`}>{value}</div>
-  </div>
-);
-
-// ---- per-student detail ----
-function StudentDetail({ student, onBack }) {
-  const { name, snap, diagnosed } = student;
+// ---- one child, one line --------------------------------------------------
+// This row used to read "2/13 skills · 15% mastered" — a percentage of a
+// denominator the teacher never chose and cannot see. It now carries the two
+// facts a teacher acts on: when the child was last seen, and the name of the
+// skill they are stuck on or working on next. Both were already loaded; the
+// practice date was read from the database on every page load and thrown away.
+const RosterRow = ({ st, onOpen }) => {
+  const a = attentionOf(st);
+  const gap = st.snap.topGaps?.[0];
+  const line = gap
+    ? { label: 'Stuck on', name: gap.name, strand: gap.strand }
+    : st.snap.next
+      ? { label: 'Next', name: st.snap.next.name, strand: st.snap.next.strand }
+      : null;
+  const c = line ? (STRAND_BLOCK[line.strand] || STRAND_BLOCK._) : null;
   return (
-    <div className="min-h-screen bg-slate-50">
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-10">
-        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-3">
-          <button onClick={onBack} className="text-slate-400 hover:text-slate-600"><Icon name="back" /></button>
-          <div>
-            <h1 className="text-lg font-bold text-slate-900">{name}</h1>
-            <p className="text-xs text-slate-500">{diagnosed ? 'Placed' : 'Not placed yet'}</p>
+    /* There was a 44px grade chip on the left of this row. Inside a class it
+       showed the same number on every line — a child's measured level and the
+       grade they are in agree by construction for most of a class — and it was
+       GREEN on all of them, including children with foundation gaps, because
+       the band compares the two and the difference is zero. A reassuring
+       colour that cannot fire is worse than no colour. The level is on the
+       child's own page, where the comparison has somewhere to go. */
+    <button onClick={onOpen}
+      className="w-full text-left flex items-center gap-3 px-2.5 py-2.5 rounded-2xl hover:bg-slate-50 transition-colors">
+      <div className="min-w-0 flex-1">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="font-bold text-slate-900 truncate text-[15px]">{st.name}</span>
+          {/* Silence is the one thing a gap cannot tell you, so it gets a mark
+              of its own rather than a colour someone has to decode. */}
+          {a.quiet && (
+            <span className="shrink-0 text-[9.5px] font-extrabold tracking-[.08em] uppercase bg-[#16161A] text-white rounded-full px-2 py-0.5">quiet</span>
+          )}
+          {!st.diagnosed && (
+            <span className="shrink-0 text-[9.5px] font-extrabold tracking-[.08em] uppercase bg-slate-100 text-slate-500 rounded-full px-2 py-0.5">not placed</span>
+          )}
+        </div>
+        {line && (
+          <div className="flex items-center gap-1.5 mt-0.5 min-w-0">
+            <span className="w-2 h-2 rounded-full shrink-0" style={{ background: c.bg }} />
+            <span className="text-[12.5px] text-slate-500 truncate">
+              <span className="font-bold text-slate-600">{line.label}:</span> {line.name}
+            </span>
+          </div>
+        )}
+      </div>
+      <div className="shrink-0 text-right">
+        <div className="text-[12.5px] font-bold text-slate-600">{lastSeenLabel(a.days)}</div>
+        {st.snap.gapCount > 0 && (
+          <div className="text-[11.5px] text-slate-400">{st.snap.gapCount} gap{st.snap.gapCount > 1 ? 's' : ''}</div>
+        )}
+      </div>
+      <Icon name="arrow" className="w-4 h-4 text-slate-300 shrink-0" />
+    </button>
+  );
+};
+
+// ---- one child ------------------------------------------------------------
+// This page used to be strictly LESS informative than the list that led to it.
+// It said "3 foundation gaps detected — this student needs prerequisite
+// support before moving on" while `snap.topGaps` held the three skill names,
+// so a teacher who clicked a child to find out what was wrong learned nothing
+// they did not already know and had nowhere to go next.
+function StudentDetail({ student, onBack }) {
+  useHorebLook();
+  const { name, snap, diagnosed } = student;
+  const a = attentionOf(student);
+  return (
+    <div className="min-h-screen bg-[#E8E8EC]">
+      <header className="sticky top-0 z-10 bg-[#E8E8EC]/90 backdrop-blur">
+        <div className="mx-auto w-full max-w-[1100px] px-5 sm:px-8 pt-6 pb-3 flex items-center gap-3.5">
+          <button onClick={onBack} aria-label="Back to the class"
+            className="w-11 h-11 shrink-0 rounded-[14px] bg-white flex items-center justify-center text-slate-500 hover:text-slate-900 transition-colors">
+            <Icon name="back" className="w-5 h-5" />
+          </button>
+          <div className="min-w-0">
+            <h1 className="text-[26px] font-extrabold tracking-tight text-slate-900 leading-none truncate">{name}</h1>
+            <p className="text-[13px] text-slate-500 mt-1">
+              {diagnosed ? `Working at Grade ${snap.level.toFixed(0)}` : 'Not placed yet'} · last practised {lastSeenLabel(a.days)}
+            </p>
           </div>
         </div>
       </header>
-      <main className="max-w-2xl mx-auto px-4 py-5 space-y-4">
-        <div className={`rounded-2xl border p-5 ${bandColor(snap.level, snap.declared)}`}>
-          <div className="text-sm opacity-70">Overall level</div>
-          <div className="text-4xl font-bold">Grade {snap.level.toFixed(0)}</div>
-          <div className="text-sm mt-1">
-            {snap.mastered}/{snap.total} skills mastered · {snap.percent}%
-            {snap.accelerated && ' · working above grade'}
-          </div>
-        </div>
 
-        <div className="bg-white rounded-2xl border border-slate-200 p-5">
-          <h2 className="font-semibold text-slate-900 mb-3">By strand</h2>
-          <div className="space-y-3">
-            {snap.strands.map((s) => {
-              const unassessed = s.confidence != null && s.confidence < 0.15;
-              return (
-                <div key={s.name}>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span className="text-slate-700">{s.name}</span>
-                    <span className="text-slate-500">
-                      {unassessed ? 'not assessed' : s.level != null ? `level ${s.level.toFixed(1)}` : `${s.percent}%`}
-                    </span>
-                  </div>
-                  <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
-                    {!unassessed && (
-                      <div
-                        className="h-full bg-emerald-500"
-                        style={{ width: `${s.level != null ? Math.min(100, (s.level / 12) * 100) : s.percent}%` }}
-                      />
-                    )}
-                  </div>
-                  {s.accuracy != null && s.accuracy < 70 && (
-                    <div className="text-xs text-red-500 mt-0.5">Accuracy {s.accuracy}%</div>
-                  )}
+      <main className="mx-auto w-full max-w-[1100px] px-5 sm:px-8 pb-12 pt-1">
+        <div className="grid gap-5 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start">
+
+          {/* WHAT TO DO ABOUT THIS CHILD, named. */}
+          <div className="min-w-0 space-y-5">
+            {snap.topGaps.length > 0 ? (
+              <div className="bg-white rounded-[28px] p-6 sm:p-7">
+                <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">
+                  {snap.gapCount === 1 ? 'One foundation is missing' : `${snap.gapCount} foundations are missing`}
+                </h2>
+                <p className="text-[13px] text-slate-500 mt-1 mb-5">
+                  Work above these keeps collapsing until they are in place. Deepest first.
+                </p>
+                <div className="space-y-3">
+                  {snap.topGaps.map((g, i) => {
+                    const c = STRAND_BLOCK[g.strand] || STRAND_BLOCK._;
+                    return (
+                      <div key={g.id} className="rounded-[22px] p-5" style={{ background: i === 0 ? c.bg : '#F4F4F6' }}>
+                        <h3 className="text-[19px] font-extrabold tracking-tight leading-tight"
+                          style={{ color: i === 0 ? c.ink : '#16161A' }}>{g.name}</h3>
+                        <p className="text-[12px] font-bold mt-1"
+                          style={{ color: i === 0 ? c.meta : '#6B6B76' }}>{g.strand} · Grade {g.grade}</p>
+                        <div className="mt-3.5 rounded-2xl bg-white/70 px-4 py-3">
+                          <p className="text-[11px] font-bold tracking-[.08em] uppercase text-slate-500">Away from the screen</p>
+                          <p className="text-[14px] text-slate-800 leading-snug mt-0.5">{fiveMinuteMove(g)}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
+                {snap.gapCount > snap.topGaps.length && (
+                  <p className="text-[12.5px] text-slate-400 mt-3">
+                    {snap.gapCount - snap.topGaps.length} more behind these. Clear the deepest first — some of the
+                    rest usually go with it.
+                  </p>
+                )}
+              </div>
+            ) : (
+              <div className="bg-white rounded-[28px] p-6 sm:p-7">
+                <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">Nothing is blocking them</h2>
+                <p className="text-[13.5px] text-slate-500 mt-1.5 leading-snug">
+                  No foundation below their grade is missing. {a.quiet
+                    ? 'They have not practised in a while, though — that is the thing to chase.'
+                    : 'Keep them moving.'}
+                </p>
+                {snap.next && (
+                  <div className="mt-5 rounded-[22px] p-5" style={{ background: (STRAND_BLOCK[snap.next.strand] || STRAND_BLOCK._).bg }}>
+                    <p className="text-[11px] font-bold tracking-[.08em] uppercase"
+                      style={{ color: (STRAND_BLOCK[snap.next.strand] || STRAND_BLOCK._).meta }}>Working on next</p>
+                    <h3 className="text-[20px] font-extrabold tracking-tight mt-0.5"
+                      style={{ color: (STRAND_BLOCK[snap.next.strand] || STRAND_BLOCK._).ink }}>{snap.next.name}</h3>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* THE MEASUREMENTS. */}
+          <div className="min-w-0 space-y-5">
+            <div className="bg-white rounded-[28px] p-5 sm:p-6">
+              <div className="grid grid-cols-3 gap-3 text-center">
+                {/* Here the band has somewhere to point: this child's measured
+                    level against the grade they are in. On a roster row it
+                    could only ever read zero. */}
+                <Stat label="Working at" value={`G${snap.level.toFixed(0)}`}
+                  className={`rounded-xl ${bandColor(snap.level, snap.declared)} border-0 bg-transparent`} />
+                <Stat label="Day streak" value={snap.streak} className="text-slate-900" />
+                <Stat label="Mastered" value={`${snap.percent}%`} className="text-slate-900" />
+              </div>
+              <p className="text-[12px] text-slate-400 mt-3 leading-snug">
+                In Grade {snap.declared}. {snap.mastered} of the {snap.total} skills up to that grade are
+                mastered — not of the whole curriculum, which runs to Grade 12.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-[28px] p-5 sm:p-6">
+              <h2 className="text-[15px] font-extrabold tracking-tight text-slate-900 mb-4">By strand</h2>
+              <div className="space-y-3.5">
+                {snap.strands.filter(s => s.total > 0).map((s) => {
+                  const c = STRAND_BLOCK[s.name] || STRAND_BLOCK._;
+                  const pct = s.pct == null ? 0 : Math.round(s.pct * 100);
+                  return (
+                    <div key={s.name}>
+                      <div className="flex justify-between items-baseline text-[13px] mb-1.5 gap-2">
+                        <span className="font-bold text-slate-800">{s.name}</span>
+                        <span className="text-slate-400 shrink-0 tabular-nums">
+                          {s.assessed ? `${s.done}/${s.total}` : 'not assessed'}
+                        </span>
+                      </div>
+                      <div className="h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                        {s.assessed && (
+                          <div className="h-full rounded-full" style={{ width: `${pct}%`, background: c.bg }} />
+                        )}
+                      </div>
+                      {s.assessed && s.accuracy != null && s.accuracy < 70 && (
+                        <div className="text-[11.5px] text-slate-500 mt-1">Getting {s.accuracy}% right — worth watching</div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
-
-        {snap.gapCount > 0 && (
-          <div className="bg-red-50 border border-red-200 rounded-2xl p-4 text-sm text-red-700">
-            {snap.gapCount} foundation gap{snap.gapCount > 1 ? 's' : ''} detected — this student needs
-            prerequisite support before moving on.
-          </div>
-        )}
-
       </main>
     </div>
   );
 }
+
+const Stat = ({ label, value, className = '' }) => (
+  <div className={className}>
+    <div className="text-[26px] font-extrabold tracking-tight tabular-nums leading-none">{value}</div>
+    <div className="text-[11px] font-bold tracking-[.06em] uppercase opacity-60 mt-1.5">{label}</div>
+  </div>
+);
