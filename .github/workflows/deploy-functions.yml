@@ -24,9 +24,13 @@ on:
       function:
         description: Which function to deploy
         required: true
-        default: mark-composition
+        # The default is whatever needs deploying next, because the dropdown
+        # in GitHub's "Run workflow" panel does not always open — and when it
+        # doesn't, the default is the only thing you can deploy.
+        default: verify-subscription
         type: choice
         options:
+          - verify-subscription
           - mark-composition
           - weekly-report
           - lesson-token
