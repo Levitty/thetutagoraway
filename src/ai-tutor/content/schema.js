@@ -361,31 +361,42 @@ export function buildBinomial() {
 
 // ---- factorise a common factor: abx + ac  ->  a(bx + c) ----
 export function buildFactorizeCommon() {
-  const a = nonzero(2, 6), b = nonzero(1, 6) * (coin() ? 1 : -1), c = nonzero(-6, 6);
+  // "Fully" means nothing common is left in the bracket, so its two terms are
+  // coprime (until Oct 2026 about a third of keys were not: 6(2x + 2) for
+  // 12x + 12, feedback F6). A negative x-term has its minus taken out with the
+  // factor, the way the textbook writes it: -24x - 12 = -12(2x + 1); the same
+  // factor with the minus left inside, 12(-2x - 1), is accepted too.
+  const gcd = (m, n) => (n ? gcd(n, m % n) : Math.abs(m));
+  const a = nonzero(2, 6);
+  let b, c;
+  do { b = nonzero(1, 6) * (coin() ? 1 : -1); c = nonzero(-6, 6); } while (gcd(b, c) !== 1);
   const A = a * b, C = a * c;
-  const ans = `${a}(${fmtLinear(b, c)})`;
+  const k = b < 0 ? -a : a;                     // the factor taken out, sign included
+  const ans = `${k}(${fmtLinear(b / Math.sign(k), c / Math.sign(k))})`;
+  const alt = `${a}(${fmtLinear(b, c)})`;       // same factor, minus left inside
+  const forms = k < 0 ? [ans, alt] : [ans];
   return {
     type: 'factorize-common',
     instruction: 'Factorise fully.',
     question: `Factorise:   ${fmtLinear(A, C)}`,
     answer: ans,
-    accepts: accepts(ans, ans.replace(/\s/g, '')),
+    accepts: accepts(...forms.flatMap(f => [f, f.replace(/\s/g, '')])),
     hints: hintLadder(
       'Find the highest common factor of both terms.',
-      `What number divides both ${A} and ${C}?`,
-      `Take out ${a}, then write what remains in the bracket.`,
+      `What is the biggest number that divides both ${A} and ${C}?`,
+      `Take out ${k}, then write what remains in the bracket.`,
     ),
     solution: {
       steps: [
-        { text: `Highest common factor of ${A} and ${C} is ${a}.`, expr: `${a}( … )` },
-        { text: `Divide each term by ${a}.`, expr: `${a}(${fmtLinear(b, c)})` },
+        { text: `Highest common factor of ${Math.abs(A)} and ${Math.abs(C)} is ${a}${k < 0 ? `; the x-term is negative, so take out ${k}` : ''}.`, expr: `${k}( … )` },
+        { text: `Divide each term by ${k}.`, expr: ans },
       ],
       answer: ans,
     },
     misconceptions: [
-      { when: `${a}(${fmtLinear(b, C)})`, feedback: 'Divide BOTH terms by the common factor, including the constant.' },
+      { when: `${k}(${fmtLinear(b / Math.sign(k), C / Math.sign(k))})`, feedback: 'Divide BOTH terms by the common factor, including the constant.' },
     ],
-    verify: { kind: 'identity', original: (t) => A * t + C, answerExpr: (t) => a * (b * t + c) },
+    verify: { kind: 'identity', original: (t) => A * t + C, answerExpr: (t) => k * ((b / Math.sign(k)) * t + c / Math.sign(k)) },
   };
 }
 

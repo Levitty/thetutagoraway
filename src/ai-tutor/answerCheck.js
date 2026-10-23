@@ -39,6 +39,26 @@ export function normalizeMath(str) {
   return s;
 }
 
+// Two-unit quantities the way children write them: "4 hrs 21 mins",
+// "8 kilograms 695 grams", "9 metres and 28 cm". Read as { family, small },
+// the whole amount in the smaller unit. The small part must be less than one
+// big unit, so "3 h 81 min" is not taken for 4 h 21 min. Null if not one.
+const COMPOUND_UNITS = [
+  { family: 'time', big: /^(h|hr|hrs|hour|hours)$/, small: /^(min|mins|minute|minutes)$/, per: 60 },
+  { family: 'mass', big: /^(kg|kgs|kilogram|kilograms|kilogramme|kilogrammes)$/, small: /^(g|gm|gms|gram|grams|gramme|grammes)$/, per: 1000 },
+  { family: 'length', big: /^(m|metre|metres|meter|meters)$/, small: /^(cm|cms|centimetre|centimetres|centimeter|centimeters)$/, per: 100 },
+  { family: 'capacity', big: /^(l|ltr|ltrs|litre|litres|liter|liters)$/, small: /^(ml|mls|millilitre|millilitres|milliliter|milliliters)$/, per: 1000 },
+];
+export function compoundValue(raw) {
+  const m = raw.toString().trim().toLowerCase().replace(/\.$/, '')
+    .match(/^(\d+)\s*([a-z]+)\.?\s*(?:,|and|&)?\s*(\d+)\s*([a-z]+)\.?$/);
+  if (!m) return null;
+  const big = Number(m[1]), small = Number(m[3]);
+  const u = COMPOUND_UNITS.find(f => f.big.test(m[2]) && f.small.test(m[4]));
+  if (!u || small >= u.per) return null;
+  return { family: u.family, small: big * u.per + small };
+}
+
 // Common unit suffixes students append that shouldn't affect a numeric answer.
 const UNIT_SUFFIX = /(cm²|cm³|m²|m³|cm2|cm3|m2|m3|cm|mm|km|kg|ml|°|deg|degrees|units?|sq|squareunits?|%|m|l|g)+$/;
 // Keys never end in a bare m / l / g (checked by scripts/audit-answers.mjs), so
@@ -245,6 +265,34 @@ export function checkAnswerMatch(userAnswer, problem) {
   const isSet = (a) => /\s(and|or)\s|°/.test(String(a));
   if (userList && accepts.some(a => { if (!isSet(a)) return false; const k = numList(a); return k && k.length === userList.length && k.every((v, i) => Math.abs(v - userList[i]) < 1e-9); })) return true;
 
+  // 1h) Named values, in any order and joined any way: "y = 6, x = 2",
+  //     "x = 2 and y = 6", "x=2; y=6" for a key of "x=2, y=6". Unnamed values
+  //     ("2 and 6") are read in the key's letter order, x before y.
+  const named = (t) => {
+    const s = t.toString().toLowerCase().replace(/[−–—]/g, '-');
+    const NV = /([a-z])\s*=\s*(-?\d+(?:\.\d+)?(?:\/\d+)?)/g;
+    const found = [...s.matchAll(NV)];
+    if (found.length < 2 || s.replace(NV, '').replace(/\b(and|&)\b|[\s,;&]/g, '')) return null;
+    const out = {};
+    for (const [, k, v] of found) {
+      if (k in out) return null;                 // "x = -3 or x = 4" is a set, not a pair
+      out[k] = v.includes('/') ? Number(v.split('/')[0]) / Number(v.split('/')[1]) : Number(v);
+    }
+    return out;
+  };
+  const sameNamed = (u, k) => Object.keys(u).length === Object.keys(k).length
+    && Object.keys(k).every(x => x in u && Math.abs(u[x] - k[x]) < 1e-9);
+  const keyPairs = accepts.map(a => named(a)).filter(Boolean);
+  if (keyPairs.length) {
+    const u = named(userAnswer);
+    if (u && keyPairs.some(k => sameNamed(u, k))) return true;
+    const bare = userAnswer.toString().trim().replace(/[−–—]/g, '-').replace(/\s+(and|&)\s+/gi, ',');
+    if (/^-?\d+(\.\d+)?(\s*[,;\s]\s*-?\d+(\.\d+)?)+$/.test(bare)) {
+      const vals = bare.split(/\s*[,;\s]\s*/).map(Number);
+      if (keyPairs.some(k => { const ks = Object.keys(k).sort(); return ks.length === vals.length && ks.every((x, i) => Math.abs(k[x] - vals[i]) < 1e-9); })) return true;
+    }
+  }
+
   // 1f) Addition commutes, so "3 + 5x" is the same answer as "5x + 3".
   //
   //     A child who writes the terms in the other order has not made a mistake,
@@ -275,7 +323,12 @@ export function checkAnswerMatch(userAnswer, problem) {
   const userKey = sidesKey(normalizedUser);
   if (userKey && accepts.some(a => sidesKey(normalizeMath(a)) === userKey)) return true;
 
-  // 1g) Any expression equal in value to the key, in the form the question
+  // 1g) Two-unit quantities in any spelling: "4 hrs 21 mins" for a key of
+  //     "4 h 21 min". Only compared with a key written the same two-unit way.
+  const cu = compoundValue(userAnswer);
+  if (cu && accepts.some(a => { const k = compoundValue(a); return k && k.family === cu.family && k.small === cu.small; })) return true;
+
+  // 1i) Any expression equal in value to the key, in the form the question
   //     asks for: "x·5 + 3", "2(3 + x)", "yx", "(x+2)(x+1)" (algebraEquivalence.js).
   //     Keys that read as a plain number are left to the value match below.
   if (accepts.some(a => mathValue(a) == null && algebraicallyEqual(userAnswer, a, problem?.question))) return true;
@@ -285,6 +338,14 @@ export function checkAnswerMatch(userAnswer, problem) {
   //    displayed precision (3.14159 for a key of 3.14). A typed fraction, mixed
   //    number or whole number is exact, so a wrong 1/20 can't pass for a key
   //    shown as 0.1.
+  // A question that asks for the simplest form is not answered by an equal
+  // fraction that can still be simplified: 3/12 is not 1/4 there (feedback F8).
+  // It is marked wrong; the lesson's mistake feedback can say "now simplify".
+  if (/simplest form|simplify|lowest terms/i.test(`${problem.instruction || ''} ${problem.question || ''}`)) {
+    const f = userAnswer.toString().trim().replace(/[−–—]/g, '-').match(/^(?:-?\d+\s+)?(-?\d+)\s*\/\s*(\d+)$/);
+    const gcd = (m, n) => (n ? gcd(n, m % n) : Math.abs(m));
+    if (f && gcd(Number(f[1]), Number(f[2])) > 1) return false;
+  }
   const userVal = mathValue(userAnswer, true);
   if (userVal != null && !unitConflict(userAnswer, problem)) {
     const typedDecimal = /\d*\.\d/.test(userAnswer.toString());
