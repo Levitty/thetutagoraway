@@ -49,7 +49,9 @@ export function buildAnglesLine() {
 export function buildPolygonAngles() {
   const askEach = coin();
   // for the sum question, n = 3 gives 180° — the same 180° printed in the formula hint
-  const n = askEach ? randInt(3, 10) : randInt(4, 10);
+  // Each angle is only asked where it is a whole number of degrees: a regular
+  // 7-gon gives 128.571428…°, and its key rejected 128.57 and 128.6 (F16).
+  const n = askEach ? pick([3, 4, 5, 6, 8, 9, 10, 12]) : randInt(4, 10);
   const total = (n - 2) * 180;
   const value = askEach ? total / n : total;
   return {
