@@ -1025,7 +1025,12 @@ const useTutors = () => {
   const fetchTutors = async () => {
     const { data, error } = await supabase
       .from('tutors')
-      .select(`*, profiles(full_name, avatar_url, email), availability(*)`)
+      // No email. This is the one profiles read that runs SIGNED OUT, on the
+      // public tutor directory, and nothing on that page displays an address
+      // — it was simply asked for and carried to the browser. Asking for it
+      // is also what blocked the column grant that stops anonymous callers
+      // reading every address in the table (see 20261026_profiles_columns).
+      .select(`*, profiles(full_name, avatar_url), availability(*)`)
       .eq('verification_status', 'approved')
       .order('rating', { ascending: false });
 
