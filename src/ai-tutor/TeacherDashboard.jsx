@@ -28,6 +28,7 @@ import {
   rowToProgress,
 } from './classView.js';
 import { Icon } from './components/Icons.jsx';
+import { isOwnMathRow } from './classRows.js';
 
 const SUBJECT_ID = 'math';
 
@@ -313,15 +314,14 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
         // 1. Progress rows this teacher is permitted to read.
         const { data: rows, error: e1 } = await supabase
           .from('ai_tutor_progress')
-          .select('user_id, progress, total_xp, current_streak, last_practice_date, diagnosed, updated_at');
+          .select('user_id, profile_key, learner_id, progress, total_xp, current_streak, last_practice_date, diagnosed, updated_at');
         if (e1) throw e1;
 
-        // Real per-user math rows only (composite keys like `uuid_afm` are
-        // skipped), and never list the teacher's own row as a "student".
+        // Each account's own maths row only: a parent's children and other
+        // subjects share the parent's user_id (see classRows.js), and never
+        // list the teacher's own row as a "student".
         const teacherId = teacherProfile?.id;
-        const mathRows = (rows || []).filter(
-          r => r.user_id && !r.user_id.includes('_') && r.user_id !== teacherId
-        );
+        const mathRows = (rows || []).filter(r => isOwnMathRow(r, teacherId));
         const ids = mathRows.map(r => r.user_id);
 
         // 2. Names for those students.

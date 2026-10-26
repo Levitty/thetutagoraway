@@ -40,6 +40,7 @@ import { YoungPicture } from './YoungPicture.jsx';
 import { StepsQuestion } from './StepsQuestion.jsx';
 import { speak, canSpeak, stopSpeaking, questionScript } from './speech.js';
 import { canPractice } from '../subscription.js';
+import { canJoinClass } from './classRows.js';
 
 // How the child's typing was read ("x^9" shows as x⁹, "5*x" as 5x), so they can
 // see the checker understood them before they press Check (feedback F3).
@@ -302,9 +303,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   const [joinCode, setJoinCode] = useState('');
   const [joinStatus, setJoinStatus] = useState(null); // null | 'joining' | 'ok' | error string
 
+  const joinAllowed = canJoinClass({ userId, guest, activeLearner });
   const joinClass = async () => {
     const code = joinCode.trim();
-    if (!code) return;
+    if (!code || !joinAllowed) return;
     setJoinStatus('joining');
     const { error } = await supabase.rpc('join_class', { p_code: code });
     if (error) {
@@ -2241,8 +2243,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             <Icon name={icon} className="w-[21px] h-[21px]" />
           </button>
         ))}
+        {joinAllowed && (
         <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} title="Join a class" aria-label="Join a class"
           className="w-12 h-12 rounded-[15px] flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-slate-900 transition-colors text-xl leading-none">+</button>
+        )}
         <span className="flex-1 min-h-[16px]" />
         <button onClick={switchSubject} title="Switch subject" aria-label="Switch subject"
           className="w-12 h-12 rounded-[15px] flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-slate-900 transition-colors"><Icon name="book" className="w-[19px] h-[19px]" /></button>
@@ -2762,7 +2766,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               {/* ===== RIGHT COLUMN — the glanceable sidebar ===== */}
               <div className="space-y-4">
               {/* Join a class — surfaced from the sidebar's "+ Join a class" */}
-              {showJoin && (
+              {showJoin && joinAllowed && (
                 <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
                   {joinStatus === 'ok' ? (
                     <p className="text-sm text-[#5a7a3a] font-medium">Joined. Your teacher can now see your progress.</p>
