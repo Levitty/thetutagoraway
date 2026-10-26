@@ -4,6 +4,7 @@
 // ============================================================================
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { numberLineLabel } from './numberLineLabels.js';
 
 // ==================== COORDINATE SYSTEM HELPERS ====================
 const toCanvas = (x, y, bounds, canvas) => ({
@@ -865,12 +866,7 @@ const FractionNumberLineVisual = ({ data, onAnswer, disabled }) => {
     if (onAnswer) onAnswer({ value: j / denom, k: j, denom });
   };
 
-  const gcd = (a, b) => { a = Math.abs(a); b = Math.abs(b); while (b) { [a, b] = [b, a % b]; } return a || 1; };
-  const label = (j) => {
-    if (j === 0) return '0';
-    if (j === steps) return `${max}`;
-    const g = gcd(j, denom); return `${j / g}/${denom / g}`;
-  };
+  const label = (j) => numberLineLabel(j, steps, denom, max, !!data.labelTicks);
 
   return (
     <div className="mb-4">
