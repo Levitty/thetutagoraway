@@ -1,0 +1,77 @@
+name: Inspect database rules
+
+# Prints the row-level security rules and table grants. READ ONLY.
+#
+# Why this exists: twice now a real exposure has sat open for days because
+# nobody could see the rules. `profiles` answers an anonymous request with
+# every row — 147 names, with emails and phone numbers — and the fix is a
+# policy change that nobody should write blind, because one of those same
+# policies is what makes the public tutor directory work and another is what
+# lets a teacher see their students' names. The only way to know which is to
+# read them, and pg_catalog is not reachable through the REST API.
+#
+# It takes NO INPUTS AND RUNS A FIXED QUERY. That is deliberate: a workflow
+# that ran SQL from a text box would be an arbitrary-SQL button on the
+# production database for anyone who can push to this repo. This one can only
+# ever do the SELECTs written below.
+#
+# Uses the SUPABASE_ACCESS_TOKEN already set for deploy-functions.yml.
+
+on:
+  workflow_dispatch:
+
+env:
+  PROJECT_REF: dlqbiayaqjucxsvbesms
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read the rules
+        env:
+          TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$TOKEN" ]; then
+            echo "::error::SUPABASE_ACCESS_TOKEN is not set."
+            exit 1
+          fi
+
+          run_sql () {
+            local title="$1" sql="$2"
+            echo ""
+            echo "===== $title ====="
+            local body
+            body=$(jq -nc --arg q "$sql" '{query:$q}')
+            local out http
+            out=$(curl -sS -w '\n%{http_code}' \
+              -X POST "https://api.supabase.com/v1/projects/$PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $TOKEN" \
+              -H "Content-Type: application/json" \
+              -d "$body")
+            http=$(printf '%s' "$out" | tail -n1)
+            body=$(printf '%s' "$out" | sed '$d')
+            if [ "$http" != "200" ]; then
+              echo "HTTP $http"
+              printf '%s\n' "$body"
+              # A token without database access fails here and only here; the
+              # rest of the report is still worth printing.
+              return 0
+            fi
+            printf '%s\n' "$body" | jq -r '.'
+          }
+
+          run_sql "RLS policies on profiles" \
+            "select policyname, cmd, roles::text, coalesce(qual,'(none)') as qual, coalesce(with_check,'(none)') as with_check from pg_policies where schemaname='public' and tablename='profiles' order by cmd, policyname;"
+
+          run_sql "Column grants to anon and authenticated on profiles" \
+            "select grantee, privilege_type, coalesce(column_name,'(whole table)') as col from information_schema.column_privileges where table_schema='public' and table_name='profiles' and grantee in ('anon','authenticated') union all select grantee, privilege_type, '(whole table)' from information_schema.table_privileges where table_schema='public' and table_name='profiles' and grantee in ('anon','authenticated') order by grantee, col;"
+
+          run_sql "Which tables anon can still SELECT at all" \
+            "select tablename, rowsecurity from pg_tables t where schemaname='public' and exists (select 1 from information_schema.table_privileges p where p.table_schema='public' and p.table_name=t.tablename and p.grantee='anon' and p.privilege_type='SELECT') order by tablename;"
+
+          run_sql "Every policy that lets anon or public read anything" \
+            "select tablename, policyname, cmd, roles::text, left(coalesce(qual,'(none)'), 200) as qual from pg_policies where schemaname='public' and cmd in ('SELECT','ALL') and (roles::text like '%anon%' or roles::text like '%public%') order by tablename, policyname;"
+
+          run_sql "Tables with RLS switched off" \
+            "select tablename from pg_tables where schemaname='public' and not rowsecurity order by tablename;"
