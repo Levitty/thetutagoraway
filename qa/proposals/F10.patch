@@ -1,0 +1,87 @@
+diff --git a/src/ai-tutor/adaptiveEngine.js b/src/ai-tutor/adaptiveEngine.js
+index 2008b4b..bc505b6 100644
+--- a/src/ai-tutor/adaptiveEngine.js
++++ b/src/ai-tutor/adaptiveEngine.js
+@@ -97,7 +97,8 @@ const assumedKnown = (skill, progress) => {
+ const topMasteredGrade = (progress, c) => {
+   let top = 0;
+   for (const s of c.skillList) {
+-    if (progress?.skills?.[s.id]?.mastered && Number.isFinite(s.grade)) top = Math.max(top, s.grade);
++    const g = gradeOf(s, c.curriculum);
++    if (progress?.skills?.[s.id]?.mastered && Number.isFinite(g)) top = Math.max(top, g);
+   }
+   return top;
+ };
+@@ -409,9 +410,14 @@ export const getNextToLearn = (progress, ctx) => {
+       // this from capping anyone: it rises as they master work, so the
+       // ceiling rises with them and an advanced learner is never stalled by a
+       // placement taken months ago.
+-      if (Number.isFinite(s.grade)) {
++      //
++      // Measured in the child's own curriculum's grades: CBC puts 35 skills in
++      // another grade than the graph does, so a graph-grade ceiling let a
++      // Grade 4 placed at 5 practise CBC Grade 7 decimals (feedback F10).
++      const sg = gradeOf(s, c.curriculum);
++      if (Number.isFinite(sg)) {
+         const shown = Math.max(learnerLevel(progress) ?? 0, topMasteredGrade(progress, c));
+-        if (shown && s.grade > shown + 1) return false;
++        if (shown && sg > shown + 1) return false;
+       }
+       return true;
+     })
+@@ -423,9 +429,15 @@ export const getNextToLearn = (progress, ctx) => {
+       const criticalBonus = s.critical ? 12 : 0;
+       const gradeProximity = Math.max(0, 8 - 2 * Math.abs(gradeOf(s, c.curriculum) - getEstimatedGradeLevel(progress, ctx))) * 2;
+ 
++      // Work outside the child's curriculum (CBC inScope false) still opens —
++      // there is no ceiling — but after the curriculum's own work (F10).
++      // A skill the curriculum has no tag for at all (Grade 10-11 skills under
++      // CBC today) is treated the same way.
++      const untagged = c.curriculum && c.curriculum !== NATIVE && !s.curricula?.[c.curriculum];
++      const enrichment = isEnrichment(s, c.curriculum) || untagged ? -20 : 0;
+       return {
+         ...s,
+-        priority: criticalBonus + Math.min(dependents, 5) * 2 + inProgress + gradeProximity,
++        priority: criticalBonus + Math.min(dependents, 5) * 2 + inProgress + gradeProximity + enrichment,
+         type: 'learn',
+       };
+     })
+diff --git a/tests/cbc-stretch.test.mjs b/tests/cbc-stretch.test.mjs
+new file mode 100644
+index 0000000..684a00b
+--- /dev/null
++++ b/tests/cbc-stretch.test.mjs
+@@ -0,0 +1,33 @@
++// ============================================================================
++// STRETCH IS MEASURED IN THE CHILD'S CURRICULUM, AND STAYS IN IT FIRST (F10)
++//
++// The one-grade stretch ceiling read the graph grade, so a CBC Grade 4 child
++// placed at Grade 5 practised G6_DECIMALS_MUL (CBC Grade 7) for 48 questions,
++// and strong learners spent most of their practice on skills CBC leaves out.
++// ============================================================================
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import { SKILLS, getPrerequisiteChain, getPostRequisiteChain, getPostRequisites } from '../src/ai-tutor/knowledgeGraph.js';
++import { getNextToLearn } from '../src/ai-tutor/adaptiveEngine.js';
++import { gradeOf, isEnrichment } from '../src/ai-tutor/curricula.js';
++
++const ctx = { skills: SKILLS, getPostReqs: getPostRequisites, getPreChain: (id) => getPrerequisiteChain(id), getPostChain: (id) => getPostRequisiteChain(id), curriculum: 'cbc' };
++const mastered = { attempts: 8, correct: 8, mastered: true, passed: true };
++
++test('nothing more than one CBC grade above what the child has shown', () => {
++  for (let g = 4; g <= 9; g++) {
++    const skills = Object.fromEntries(Object.values(SKILLS).filter(s => gradeOf(s, 'cbc') <= g).map(s => [s.id, mastered]));
++    const next = getNextToLearn({ declaredGrade: g, placementGrade: g, diagnosed: true, skills }, ctx);
++    const tooHigh = next.filter(s => gradeOf(s, 'cbc') > g + 1).map(s => `${s.id} (CBC ${gradeOf(s, 'cbc')})`);
++    assert.deepEqual(tooHigh, [], `Grade ${g}`);
++  }
++});
++
++test("the curriculum's own work comes before enrichment", () => {
++  const skills = Object.fromEntries(Object.values(SKILLS).filter(s => gradeOf(s, 'cbc') <= 7).map(s => [s.id, mastered]));
++  const next = getNextToLearn({ declaredGrade: 7, placementGrade: 7, diagnosed: true, skills }, ctx);
++  const outside = (s) => isEnrichment(s, 'cbc') || !s.curricula?.cbc;
++  const firstEnrichment = next.findIndex(outside);
++  const lastInScope = next.map(s => !outside(s)).lastIndexOf(true);
++  if (firstEnrichment !== -1) assert.ok(firstEnrichment > Math.min(lastInScope, 7), next.slice(0, 8).map(s => s.id).join(', '));
++});

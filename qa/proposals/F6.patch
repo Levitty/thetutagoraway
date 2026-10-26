@@ -1,0 +1,101 @@
+diff --git a/src/ai-tutor/content/schema.js b/src/ai-tutor/content/schema.js
+index 4c46c82..2bf2bee 100644
+--- a/src/ai-tutor/content/schema.js
++++ b/src/ai-tutor/content/schema.js
+@@ -361,31 +361,42 @@ export function buildBinomial() {
+ 
+ // ---- factorise a common factor: abx + ac  ->  a(bx + c) ----
+ export function buildFactorizeCommon() {
+-  const a = nonzero(2, 6), b = nonzero(1, 6) * (coin() ? 1 : -1), c = nonzero(-6, 6);
++  // "Fully" means nothing common is left in the bracket, so its two terms are
++  // coprime (until Oct 2026 about a third of keys were not: 6(2x + 2) for
++  // 12x + 12, feedback F6). A negative x-term has its minus taken out with the
++  // factor, the way the textbook writes it: -24x - 12 = -12(2x + 1); the same
++  // factor with the minus left inside, 12(-2x - 1), is accepted too.
++  const gcd = (m, n) => (n ? gcd(n, m % n) : Math.abs(m));
++  const a = nonzero(2, 6);
++  let b, c;
++  do { b = nonzero(1, 6) * (coin() ? 1 : -1); c = nonzero(-6, 6); } while (gcd(b, c) !== 1);
+   const A = a * b, C = a * c;
+-  const ans = `${a}(${fmtLinear(b, c)})`;
++  const k = b < 0 ? -a : a;                     // the factor taken out, sign included
++  const ans = `${k}(${fmtLinear(b / Math.sign(k), c / Math.sign(k))})`;
++  const alt = `${a}(${fmtLinear(b, c)})`;       // same factor, minus left inside
++  const forms = k < 0 ? [ans, alt] : [ans];
+   return {
+     type: 'factorize-common',
+     instruction: 'Factorise fully.',
+     question: `Factorise:   ${fmtLinear(A, C)}`,
+     answer: ans,
+-    accepts: accepts(ans, ans.replace(/\s/g, '')),
++    accepts: accepts(...forms.flatMap(f => [f, f.replace(/\s/g, '')])),
+     hints: hintLadder(
+       'Find the highest common factor of both terms.',
+-      `What number divides both ${A} and ${C}?`,
+-      `Take out ${a}, then write what remains in the bracket.`,
++      `What is the biggest number that divides both ${A} and ${C}?`,
++      `Take out ${k}, then write what remains in the bracket.`,
+     ),
+     solution: {
+       steps: [
+-        { text: `Highest common factor of ${A} and ${C} is ${a}.`, expr: `${a}( … )` },
+-        { text: `Divide each term by ${a}.`, expr: `${a}(${fmtLinear(b, c)})` },
++        { text: `Highest common factor of ${Math.abs(A)} and ${Math.abs(C)} is ${a}${k < 0 ? `; the x-term is negative, so take out ${k}` : ''}.`, expr: `${k}( … )` },
++        { text: `Divide each term by ${k}.`, expr: ans },
+       ],
+       answer: ans,
+     },
+     misconceptions: [
+-      { when: `${a}(${fmtLinear(b, C)})`, feedback: 'Divide BOTH terms by the common factor, including the constant.' },
++      { when: `${k}(${fmtLinear(b / Math.sign(k), C / Math.sign(k))})`, feedback: 'Divide BOTH terms by the common factor, including the constant.' },
+     ],
+-    verify: { kind: 'identity', original: (t) => A * t + C, answerExpr: (t) => a * (b * t + c) },
++    verify: { kind: 'identity', original: (t) => A * t + C, answerExpr: (t) => k * ((b / Math.sign(k)) * t + c / Math.sign(k)) },
+   };
+ }
+ 
+diff --git a/tests/factorise-fully.test.mjs b/tests/factorise-fully.test.mjs
+new file mode 100644
+index 0000000..16a9324
+--- /dev/null
++++ b/tests/factorise-fully.test.mjs
+@@ -0,0 +1,39 @@
++// ============================================================================
++// "FACTORISE FULLY" MEANS NOTHING COMMON IS LEFT IN THE BRACKET (feedback F6)
++//
++// About a third of G8_FACTORIZE_COMMON keys were not fully factorised:
++// "-24x - 12" expected 6(-4x - 2), the right -12(2x + 1) was marked wrong, and
++// the worked example said the HCF of -18 and 36 is 6. The quality gate's
++// identity check only proves the two sides are equal, so it never saw it.
++// ============================================================================
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
++import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
++
++const gcd = (m, n) => (n ? gcd(n, m % n) : Math.abs(m));
++
++test('every factorise-fully key has a coprime bracket and is accepted', () => {
++  for (let i = 0; i < 400; i++) {
++    const p = generateProblem('G8_FACTORIZE_COMMON');
++    const m = p.answer.replace(/\s+/g, '').match(/^(-?\d+)\((-?\d*)x([+-]\d+)\)$/);
++    assert.ok(m, `unexpected key ${p.answer}`);
++    const b = m[2] === '' ? 1 : m[2] === '-' ? -1 : Number(m[2]);
++    assert.equal(gcd(b, Number(m[3])), 1, `${p.question} -> ${p.answer} leaves a common factor`);
++    assert.ok(checkAnswerMatch(p.answer, p));
++    // The HCF the help states is the real one.
++    const A = Number(p.question.replace(/\s+/g, '').match(/^Factorise:(-?\d*)x/)[1] || 1);
++    const C = Number(p.question.replace(/\s+/g, '').match(/x([+-]\d+)$/)[1]);
++    assert.match(p.solution.steps[0].text, new RegExp(`is ${gcd(A, C)}\\b`));
++  }
++});
++
++test('the factor with the minus inside the bracket is accepted too', () => {
++  for (let i = 0; i < 100; i++) {
++    const p = generateProblem('G8_FACTORIZE_COMMON');
++    const m = p.answer.replace(/\s+/g, '').match(/^-(\d+)\((\d*)x([+-]\d+)\)$/);
++    if (!m) continue;
++    const inside = `${m[1]}(-${m[2]}x${m[3].startsWith('-') ? '+' + m[3].slice(1) : '-' + m[3].slice(1)})`;
++    assert.ok(checkAnswerMatch(inside, p), `${inside} for ${p.answer}`);
++  }
++});

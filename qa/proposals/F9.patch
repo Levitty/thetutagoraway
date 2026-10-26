@@ -1,0 +1,110 @@
+diff --git a/src/ai-tutor/adaptiveEngine.js b/src/ai-tutor/adaptiveEngine.js
+index 2008b4b..8501b00 100644
+--- a/src/ai-tutor/adaptiveEngine.js
++++ b/src/ai-tutor/adaptiveEngine.js
+@@ -159,8 +159,12 @@ export const findGaps = (progress, ctx) => {
+   const gaps = [];
+   const seen = new Set();
+ 
++  const lvl = learnerLevel(progress);
+   for (const skill of c.skillList) {
+     const sp = progress.skills[skill.id];
++    // A stretch question missed in the check, above where the child placed, is
++    // new learning, not a sign that its foundations are missing (feedback F9).
++    if (lvl && sp?.fromDiagnostic && !(sp.attempts > 1) && gradeOf(skill, c.curriculum) > lvl) continue;
+     if (isStruggling(sp)) {
+       const preReqs = skill.keyPrerequisites || skill.prerequisites;
+       for (const pid of preReqs) {
+diff --git a/src/site/missingStep.js b/src/site/missingStep.js
+index 82aae0c..b8cf057 100644
+--- a/src/site/missingStep.js
++++ b/src/site/missingStep.js
+@@ -2,6 +2,7 @@
+ // the lowest skill their child is missing, what it rests on, and what rests on
+ // it. Pure, so it can be tested without the app.
+ import { SKILLS } from '../ai-tutor/knowledgeGraph.js';
++import { NATIVE, gradeOf } from '../ai-tutor/curricula.js';
+ 
+ const passed = (sp) => !!sp && sp.passed === true;
+ const failed = (sp) => !!sp && sp.fromDiagnostic === true && sp.passed === false;
+@@ -19,7 +20,17 @@ export function findMissingStep(progress, skills = SKILLS) {
+ 
+   if (!Object.keys(sk).length) return { missing: null, solid: [], next: [], otherGaps: [], placement, declared, allClear: false };
+ 
+-  const gaps = Object.keys(sk).filter(id => skills[id] && failed(sk[id]));
++  // A gap is a skill at or below where the child placed. A stretch question
++  // missed ABOVE it is the next thing to learn, not something missing: a child
++  // who cleared Grade 9 and missed the one Grade 10 probe was being told their
++  // missing step was Grade 10 sequences (feedback F9). Grades are read in the
++  // child's own curriculum.
++  const curr = progress?.curriculum || NATIVE;
++  const level = placement || declared;
++  const failedAll = Object.keys(sk).filter(id => skills[id] && failed(sk[id]));
++  const above = (id) => level != null && gradeOf(skills[id], curr) > level;
++  const gaps = failedAll.filter(id => !above(id));
++  const stretch = failedAll.filter(above).sort((a, b) => gradeOf(skills[a], curr) - gradeOf(skills[b], curr));
+   // A root gap is a missing skill whose own prerequisites aren't missing:
+   // that's where the ladder actually breaks.
+   const roots = gaps.filter(id => !(skills[id].prerequisites || []).some(p => gaps.includes(p)));
+@@ -37,6 +48,10 @@ export function findMissingStep(progress, skills = SKILLS) {
+   // where they placed.
+   if (!missing) {
+     allClear = true;
++    // What they reached for and missed is the natural next step.
++    if (stretch.length) missing = stretch[0];
++  }
++  if (!missing) {
+     const from = (placement || declared || 1) + 1;
+     missing = Object.values(skills)
+       .filter(s => s.grade >= from && !passed(sk[s.id]) && (s.prerequisites || []).every(p => passed(sk[p]) || !skills[p]))
+diff --git a/tests/stretch-not-gap.test.mjs b/tests/stretch-not-gap.test.mjs
+new file mode 100644
+index 0000000..fbb40f4
+--- /dev/null
++++ b/tests/stretch-not-gap.test.mjs
+@@ -0,0 +1,45 @@
++// ============================================================================
++// A MISSED STRETCH QUESTION IS THE NEXT STEP, NOT A MISSING ONE (feedback F9)
++//
++// A simulated Grade 9 child who answered every Grade 9 question right and
++// missed the Grade 10 probe was told the missing step was Grade 10 sequences
++// (allClear false), and every practice sitting opened with it as a "gap".
++// ============================================================================
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import { SKILLS, getPrerequisiteChain, getPostRequisiteChain, getPostRequisites } from '../src/ai-tutor/knowledgeGraph.js';
++import { findMissingStep } from '../src/site/missingStep.js';
++import { findGaps, getRecommendedPath } from '../src/ai-tutor/adaptiveEngine.js';
++
++const ctx = { skills: SKILLS, getPostReqs: getPostRequisites, getPreChain: (id) => getPrerequisiteChain(id), getPostChain: (id) => getPostRequisiteChain(id), curriculum: 'cbc' };
++const pass = { attempts: 1, correct: 1, mastered: true, passed: true, fromDiagnostic: true };
++const miss = { attempts: 1, correct: 0, mastered: false, passed: false, fromDiagnostic: true };
++
++const clearedNine = () => ({
++  declaredGrade: 9, placementGrade: 9, diagnosed: true, curriculum: 'cbc',
++  skills: {
++    ...Object.fromEntries(Object.values(SKILLS).filter(s => s.grade <= 9).map(s => [s.id, pass])),
++    G10_SEQUENCES_ADV: miss,
++  },
++});
++
++test('a child who cleared their grade is all clear, with the stretch skill next', () => {
++  const r = findMissingStep(clearedNine());
++  assert.equal(r.allClear, true);
++  assert.equal(r.missing, 'G10_SEQUENCES_ADV');
++});
++
++test('the missed stretch skill does not turn its prerequisites into gaps', () => {
++  const gaps = findGaps(clearedNine(), ctx).map(g => g.id);
++  assert.deepEqual(gaps, []);
++  const lead = getRecommendedPath(clearedNine(), ctx)[0];
++  assert.notEqual(lead?.type, 'gap');
++});
++
++test('a miss at or below the placement is still a gap', () => {
++  const p = clearedNine();
++  p.skills.G8_INDICES_LAWS = miss;
++  const r = findMissingStep(p);
++  assert.equal(r.allClear, false);
++  assert.equal(r.missing, 'G8_INDICES_LAWS');
++});

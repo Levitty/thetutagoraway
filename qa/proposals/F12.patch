@@ -1,0 +1,70 @@
+diff --git a/src/ai-tutor/content/fractions.js b/src/ai-tutor/content/fractions.js
+index d8c09d8..a2b652c 100644
+--- a/src/ai-tutor/content/fractions.js
++++ b/src/ai-tutor/content/fractions.js
+@@ -357,7 +357,7 @@ export function buildCompareFractions() {
+     solution: {
+       steps: [
+         { text: 'Cross-multiply.', expr: `${a}×${d} = ${a * d},  ${c}×${b} = ${c * b}` },
+-        { text: 'Compare the two products.', expr: `${a / b} ${sym} ${c / d}` },
++        { text: 'Compare the two products: the larger product goes with the larger fraction.', expr: `${a * d} ${sym} ${c * b}, so ${a}/${b} ${sym} ${c}/${d}` },
+       ],
+       answer: sym,
+     },
+diff --git a/src/ai-tutor/content/geometry.js b/src/ai-tutor/content/geometry.js
+index cdfce25..1df5930 100644
+--- a/src/ai-tutor/content/geometry.js
++++ b/src/ai-tutor/content/geometry.js
+@@ -958,7 +958,7 @@ export function buildAngleConstruction() {
+         'Every angle in that family is a multiple of the same small step — work out what that step is and test the angle against it.'),
+       solution: { steps: [
+         { text: 'Halving 90° and 60° repeatedly reaches 45°, 30°, 22.5°, 15°, 7.5°.', expr: 'the smallest step is 7.5°' },
+-        { text: 'Test the angle against that step.', expr: `${ang} ÷ 7.5 = ${ang / 7.5}${Number.isInteger(ang / 7.5) ? '' : '…'}` },
++        { text: 'Test the angle against that step.', expr: Number.isInteger(ang / 7.5) ? `${ang} ÷ 7.5 = ${ang / 7.5}` : `${ang} ÷ 7.5 = ${Math.floor(ang / 7.5)} remainder ${ang - 7.5 * Math.floor(ang / 7.5)}` },
+         { text: Number.isInteger(ang / 7.5) ? 'It is a whole number of steps.' : 'It is not a whole number of steps.', expr: value }], answer: value },
+       misconceptions: [
+         { when: yes ? 'no' : 'yes', feedback: 'Test the angle against the smallest step that repeated bisection reaches — anything that is a whole number of those steps can be built.' },
+diff --git a/tests/help-no-float-noise.test.mjs b/tests/help-no-float-noise.test.mjs
+new file mode 100644
+index 0000000..c44b01b
+--- /dev/null
++++ b/tests/help-no-float-noise.test.mjs
+@@ -0,0 +1,38 @@
++// ============================================================================
++// NO COMPUTER NOISE IN WHAT A CHILD READS (feedback F12)
++//
++// Worked examples showed "1 > 0.3333333333333333" (G7_FRACTIONS_COMPARE, after
++// cross-multiplying, so the step did not even follow) and "25 ÷ 7.5 =
++// 3.3333333333333335…" (G7_ANGLE_CONSTRUCTION). tidy() only cleans the
++// question, answer and hints, so these slipped through.
++// ============================================================================
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
++import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
++
++const NOISE = /\d\.\d{8,}/;
++const readable = (p) => [p.question, p.instruction, p.hint, ...(p.hints || []), ...(p.solutionSteps || []),
++  ...(p.solution?.steps || []).map(s => `${s.text || s} ${s.expr || ''}`),
++  ...(p.workedExample?.steps || []), p.workedExample?.problem, p.workedExample?.solution].filter(Boolean).map(String);
++
++test('hints, solutions and worked examples never show float noise', () => {
++  const found = new Set();
++  // G8_POLYGON_ANGLES (a regular 7-gon) has the noise in its KEY: feedback F16.
++  for (const id of Object.keys(SKILLS).filter(id => id !== 'G8_POLYGON_ANGLES')) {
++    for (let i = 0; i < 25; i++) {
++      const p = generateProblem(id);
++      const t = readable(p).find(x => NOISE.test(x));
++      if (t) found.add(`${id}: ${t.match(/.{0,30}\d\.\d{8,}/)[0]}`);
++    }
++  }
++  assert.deepEqual([...found], []);
++});
++
++test('the fraction comparison step compares the cross-products', () => {
++  for (let i = 0; i < 30; i++) {
++    const p = generateProblem('G7_FRACTIONS_COMPARE');
++    const step = p.solution.steps[1].expr;
++    assert.match(step, /^\d+ [<>=] \d+, so /, step);
++  }
++});

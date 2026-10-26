@@ -1,0 +1,185 @@
+HOREB simulated classroom · seed 11 · 18 children · 7280 questions served
+
+Children
+  G4 strong     check 29 q [4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 6x 6x] → placed G5 · practice 144 q, lowest G3 · {"3":40,"4":8,"5":48,"6":48}
+  G4 average    check 30 q [4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5x 5x] → placed G4 · practice 144 q, lowest G2 · {"2":8,"4":8,"5":128}
+  G4 struggling check 40 q [4x 4x 4x 4x 4x 4x 4x 4x 4x 4 4x 4x 4x 4x 4x 4x 4x 4x 4x] → placed G3 · practice 144 q, lowest G1 · {"1":56,"2":32,"3":32,"4":24}
+  G5 strong     check 30 q [5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6 6 6 6 6 7 7x 7x] → placed G6 · practice 144 q, lowest G4 · {"4":8,"7":136}
+  G5 average    check 32 q [5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 4 6x 6 6x] → placed G5 · practice 144 q, lowest G3 · {"3":32,"4":8,"5":56,"6":48}
+  G5 struggling check 40 q [5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 5x 4x] → placed G3 · practice 144 q, lowest G1 · {"1":40,"2":16,"3":40,"4":48}
+  G6 strong     check 26 q [6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 8x 8x] → placed G7 · practice 144 q, lowest G5 · {"5":40,"6":16,"7":40,"8":48}
+  G6 average    check 25 q [6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 7x 7x] → placed G6 · practice 144 q, lowest G4 · {"4":48,"6":24,"7":72}
+  G6 struggling check 40 q [6x 6x 6 6x 6x 6x 6x 6x 6x 6x 6x 6x 6x 6x 6x 6x 5x 5x 5x] → placed G4 · practice 144 q, lowest G2 · {"2":8,"3":8,"4":32,"5":88,"6":8}
+  G7 strong     check 30 q [7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 8 8 8 8 8 9x 9x] → placed G8 · practice 144 q, lowest G6 · {"6":56,"7":8,"8":32,"9":48}
+  G7 average    check 33 q [7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 8 8x 8 8x] → placed G7 · practice 144 q, lowest G5 · {"5":48,"7":32,"8":64}
+  G7 struggling check 40 q [7x 7x 7 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 7x 6x 6x] → placed G5 · practice 144 q, lowest G4 · {"4":8,"5":96,"7":40}
+  G8 strong     check 24 q [8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 9 9 9 9 9 10x] → placed G9 · practice 144 q, lowest G7 · {"7":40,"8":24,"9":32,"10":48}
+  G8 average    check 29 q [8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 9x 9x] → placed G8 · practice 144 q, lowest G6 · {"6":48,"7":8,"8":40,"9":48}
+  G8 struggling check 40 q [8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 8x 7x 7 7x 7x] → placed G6 · practice 144 q, lowest G3 · {"3":16,"4":32,"5":8,"8":88}
+  G9 strong     check 28 q [9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 10 10 10 10 11x] → placed G10 · practice 144 q, lowest G8 · {"8":8,"9":24,"10":8,"11":104}
+  G9 average    check 32 q [9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 10x] → placed G9 · practice 144 q, lowest G7 · {"7":40,"8":24,"9":32,"10":48}
+  G9 struggling check 40 q [9x 9x 9x 9x 9x 9x 9x 9x 9x 9x 9x 9 9x 9x 9x 9x 9x 9x 9x] → placed G8 · practice 144 q, lowest G4 · {"4":8,"5":56,"7":72,"9":8}
+
+Pass rate per check
+  scope      91.5%  (271 of 3180 failed)
+  fit        99.2%  (24 of 3180 failed)
+  key       100.0%  (0 of 6360 failed)
+  marking   100.0%  (0 of 14058 failed)
+  wording   100.0%  (0 of 3180 failed)
+  help      100.0%  (0 of 6253 failed)
+  repeats    97.3%  (85 of 3180 failed)
+  jumps      97.7%  (35 of 1527 failed)
+  pictures  100.0%  (0 of 192 failed)
+
+Content sweep: 205 CBC Grade 4-9 skills × 20 draws
+  key       100.0%  (0 of 8200 failed)
+  marking   100.0%  (0 of 16995 failed)
+  wording   100.0%  (0 of 4100 failed)
+  help      100.0%  (0 of 8020 failed)
+  pictures  100.0%  (0 of 161 failed)
+
+Failures, grouped by check and skill (first example each; "sweep" = content sweep)
+
+  [jumps] 35 failures across 28 skills
+   ×  3 G7 G6_DECIMALS_MUL (G6 average): Grade 4 → Grade 7 straight after a correct answer
+         Q: 1.2 × 1.2  [key 1.44]
+   ×  3 G8 G8_PERCENTAGE_CHANGE (G7 strong): Grade 6 → Grade 8 straight after a correct answer
+         Q: Increase 400 by 5%.  [key 420]
+   ×  2 G3 G3_COUNTING (G4 struggling): Grade 1 → Grade 3 straight after a correct answer
+         Q: In the number 945, what is the VALUE of the digit in the hundreds place?  [key 900]
+   ×  2 G7 G6_FRACTIONS_MUL (G5 strong): Grade 4 → Grade 7 straight after a correct answer
+         Q: 7/9 × 2/9  [key 14/81]
+   ×  2 G9 G8_INDICES_LAWS (G8 strong): Grade 7 → Grade 9 straight after a correct answer
+         Q: Simplify:   a^6 × a^8  [key a^14]
+   ×  1 G5 G5_MULTIPLICATION (G4 strong): Grade 3 → Grade 5 straight after a correct answer
+         Q: 34 × 36 = ?  [key 1224]
+   ×  1 G5 G5_DIVISION (G4 strong): Grade 3 → Grade 5 straight after a correct answer
+         Q: 286 ÷ 11 = ?  [key 26]
+   ×  1 G5 G5_FRACTIONS_INTRO (G4 strong): Grade 3 → Grade 5 straight after a correct answer
+         Q: Place 2/6 on the number line.  [key 2/6]
+   ×  1 G4 G4_DIVIDE (G4 average): Grade 2 → Grade 4 straight after a correct answer
+         Q: 92 ÷ 4 = ?  [key 23]
+   ×  1 G6 G6_FRACTIONS_ADD (G5 average): Grade 4 → Grade 6 straight after a correct answer
+         Q: 2/4 + 3/7  [key 13/14]
+   ×  1 G5 G6_BODMAS_BASIC (G5 average): Grade 3 → Grade 5 straight after a correct answer
+         Q: 37 − 5 × 5  [key 12]
+   ×  1 G5 G5_TALLY (G5 average): Grade 3 → Grade 5 straight after a correct answer
+         Q: The tally chart shows fruits the class brought. How many learners for Mango?  [key 16]
+   ×  1 G5 G5_FACTORS (G5 average): Grade 3 → Grade 5 straight after a correct answer
+         Q: What is the largest factor of 16, not counting 16 itself?  [key 8]
+   ×  1 G7 G7_LENGTH_CONV (G6 strong): Grade 5 → Grade 7 straight after a correct answer
+         Q: Convert 8.8 cm to mm.  [key 88]
+   ×  1 G7 G7_DECIMAL_PV (G6 strong): Grade 5 → Grade 7 straight after a correct answer
+         Q: In 3.437, what is the VALUE of the digit 3?  [key 0.03]
+   ×  1 G5 G5_ANGLES_INTRO (G6 struggling): Grade 2 → Grade 5 straight after a correct answer
+         Q: A roof truss has an angle of 90° at one joint. What type of angle is that?  [key right]
+   ×  1 G8 G8_EXPAND_BRACKETS (G7 strong): Grade 6 → Grade 8 straight after a correct answer
+         Q: Expand:   5(-4x - 3)  [key -20x - 15]
+   ×  1 G8 G8_LINEAR_EQ_ADV (G7 strong): Grade 6 → Grade 8 straight after a correct answer
+         Q: Solve for x:   2x + 8 = x + 9  [key x = 1]
+   ×  1 G7 G7_PYTHAGORAS (G7 average): Grade 5 → Grade 7 straight after a correct answer
+         Q: A right-angled triangle has hypotenuse 29 and one shorter side 20. Find the other side.  [key 21]
+   ×  1 G7 G7_AREA_RECT (G7 average): Grade 5 → Grade 7 straight after a correct answer
+         Q: Find the area of a rectangle 72 m by 32 m.  [key 2304]
+   ×  1 G9 G8_INDICES_INTRO (G8 strong): Grade 7 → Grade 9 straight after a correct answer
+         Q: 4^2  [key 16]
+   ×  1 G9 G10_LOGARITHMS_INTRO (G8 strong): Grade 7 → Grade 9 straight after a correct answer
+         Q: 10^3 = 1,000.  Write this in logarithm form.  [key log 1000 = 3]
+   ×  1 G8 G8_COORDINATES (G8 average): Grade 6 → Grade 8 straight after a correct answer
+         Q: Plot the midpoint of A(0, -5) and B(-2, -5).  [key (-1, -5)]
+   ×  1 G8 G8_PROBABILITY_INTRO (G8 average): Grade 6 → Grade 8 straight after a correct answer
+         Q: A bag has 10 equally likely outcomes; 8 are favourable. What is the probability of a favourable outcome?  [key 4/5]
+   ×  1 G8 G6_RATIOS (G8 average): Grade 6 → Grade 8 straight after a correct answer
+         Q: Amina and Baraka share 21 mangoes in the ratio 3:4. How many does Baraka get?  [key 12]
+   ×  1 G8 G6_INTEGERS_INTRO (G8 struggling): Grade 3 → Grade 8 straight after a correct answer
+         Q: Place 3 on the number line.  [key 3]
+   ×  1 G9 G9_COMPOUND_PROPORTION (G9 average): Grade 7 → Grade 9 straight after a correct answer
+         Q: A piece of land of 7,200 is shared between Amina and Otieno in the ratio 4:5. How much does Otieno get?  [key 4000]
+   ×  1 G9 G9_INTEGERS_COMBINED (G9 average): Grade 7 → Grade 9 straight after a correct answer
+         Q: Work out:  8 + (-4) × (-1)  [key 12]
+
+  [repeats] 85 failures across 26 skills
+   × 28 G9 G8_INDICES_INTRO (G7 strong): same question twice in one sitting
+         Q: 6^2  [key 36]
+   ×  7 G7 G7_PYTHAGORAS (G7 strong): same question twice in one sitting
+         Q: A right-angled triangle has the two shorter sides 6 and 8. Find the hypotenuse.  [key 10]
+   ×  6 G5 G5_ANGLES_INTRO (G6 struggling): same question twice in one sitting
+         Q: A dancer turns three quarters of the way round. What type of angle has it turned through?  [key reflex]
+   ×  6 G5 G5_TALLY (G6 struggling): same question twice in one sitting
+         Q: The tally chart shows favourite games in Grade 5. Which had the fewest?  [key Athletics]
+   ×  6 G5 G5_FRACTIONS_INTRO (G7 struggling): same question twice in one sitting
+         Q: Shade the bar to show 2/6.  [key 2/6]
+   ×  3 G1 G1_PRENUMBER (G4 struggling): same question twice in one sitting
+         Q: What comes next: 9, 19, 29, 39, __?  [key 49]
+   ×  3 G9 G10_LOGARITHMS_INTRO (G8 strong): same question twice in one sitting
+         Q: log 1,000 = 3.  Write this in index form.  [key 10^3]
+   ×  3 G8 G6_INTEGERS_INTRO (G8 struggling): same question twice in one sitting
+         Q: Place -4 on the number line.  [key -4]
+   ×  2 G1 G1_LINES (G4 struggling): same question twice in one sitting
+         Q: Is the line made by the rim of a cup straight or curved?  [key curved]
+   ×  2 G7 G7_CIRCUMFERENCE (G5 strong): same question twice in one sitting
+         Q: Find the circumference of a circle with radius 7 cm. (2 d.p.)  [key 43.98]
+   ×  2 G6 G6_FRACTIONS_ADD (G5 average): same question twice in one sitting
+         Q: 3/4 + 1/2  [key 5/4]
+   ×  2 G6 G6_AREA_RECT (G6 average): same question twice in one sitting
+         Q: Find the area of a rectangle 17 cm by 14 cm.  [key 238]
+   ×  2 G8 G8_PROBABILITY_INTRO (G8 strong): same question twice in one sitting
+         Q: A bag has 20 equally likely outcomes; 7 are favourable. What is the probability of a favourable outcome?  [key 7/20]
+   ×  1 G5 G5_LCM_HCF (G4 average): same question twice in one sitting
+         Q: What is the highest common factor (HCF) of 12 and 6?  [key 6]
+   ×  1 G2 G2_COUNTING (G4 struggling): same question twice in one sitting
+         Q: What number comes just after 5?  [key 6]
+   ×  1 G7 G7_DECIMAL_PV (G5 strong): same question twice in one sitting
+         Q: Which is larger: 0.57 or 0.6?  [key 0.6]
+   ×  1 G5 G5_FRACTIONS_EQUIV (G5 average): same question twice in one sitting
+         Q: Fill in the blank:   2/5 = ?/25  [key 10]
+   ×  1 G4 G4_MULTIPLY (G5 struggling): same question twice in one sitting
+         Q: 19 × 5 = ?  [key 95]
+   ×  1 G3 G3_MULTIPLY (G5 struggling): same question twice in one sitting
+         Q: 9 × 6 = ?  [key 54]
+   ×  1 G1 G1_COUNTING (G5 struggling): same question twice in one sitting
+         Q: What number comes just before 39?  [key 38]
+   ×  1 G6 G6_PERCENTAGES_INTRO (G6 strong): same question twice in one sitting
+         Q: What is 10% of 240?  [key 24]
+   ×  1 G6 G5_BAR_GRAPHS (G6 struggling): same question twice in one sitting
+         Q: The bar graph shows books borrowed each day. How many books altogether?  [key 64]
+   ×  1 G8 G8_VOLUME_ADV (G7 average): same question twice in one sitting
+         Q: Find the volume of a cylinder with radius 4 cm and height 11 cm. (2 d.p.)  [key 552.92]
+   ×  1 G11 G11_DIFF_FIRST_PRINCIPLES (G9 strong): same question twice in one sitting
+         Q: Differentiate f(x) = 2x^3 from first principles. What is f'(x)?  [key 6x^2]
+   ×  1 G9 G9_PROBABILITY_ADV (G9 average): same question twice in one sitting
+         Q: A bag has 6 equally likely outcomes; 2 are favourable. What is the probability of a favourable outcome?  [key 1/3]
+   ×  1 G7 G7_BODMAS_ADV (G9 average): same question twice in one sitting
+         Q: (3 + 6) × 5  [key 45]
+
+  [scope] 271 failures across 12 skills
+   ×103 G10 G10_SEQUENCES_ADV (G8 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 8 child
+         Q: Sequence:  -9, -4, 1, 6, …   Find the 6th term.  [key 16]
+   × 51 G11 G11_DIFF_POWER_RULE (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: Differentiate:   y = 5x^2 - 2x - 7  [key 10x - 2]
+   × 32 G11 G11_DIFF_FIRST_PRINCIPLES (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: Differentiate f(x) = 6x^4 from first principles. What is f'(x)?  [key 24x^3]
+   × 24 G8 G8_SEQUENCES (G8 strong): skill outside the CBC design (inScope false) served to a CBC Grade 8 child
+         Q: Sequence:  -4, -9, -14, -19, …   Find the 8th term.  [key -39]
+   × 24 G11 G11_LIMITS (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: As the second point of a chord slides along the curve towards x = 5, the chord gets closer and closer to which line at x = 5?  [key tangent]
+   × 16 G9 G9_FUNCTIONS_INTRO (G8 strong): skill outside the CBC design (inScope false) served to a CBC Grade 8 child
+         Q: Given f(x) = 5x - 1,   find f(5).  [key 24]
+   ×  8 G9 G9_QUADRATIC_GRAPHS (G9 strong): skill outside the CBC design (inScope false) served to a CBC Grade 9 child
+         Q: The curve y = x² - 7x + 6 crosses the x-axis at x = 1 and x = 6. Find the equation of its line of symmetry.  [key x = 3.5]
+   ×  8 G10 G10_FUNCTIONS_ADV (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: f(x) = 3x + 2. Find f⁻¹(14).  [key 4]
+   ×  2 G11 G11_DIFF_CHAIN_RULE (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: f(x) = (-2x + 2)^4.   Using the chain rule, find f'(-2).  [key -1728]
+   ×  1 G10 G10_TRIG_IDENTITIES (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: θ is acute and sin(θ) = 12/37. Find tan(θ).  [key 12/35]
+   ×  1 G10 G10_COMBINATIONS (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: Evaluate  7C2  (the number of unordered selections).  [key 21]
+   ×  1 G10 G10_SURDS_ADV (G9 strong): skill outside the CBC design (no CBC tag) served to a CBC Grade 9 child
+         Q: Rationalise the denominator: 3/√2  [key 3√2/2]
+
+  [fit] 24 failures across 2 skills
+   × 16 G3 G3_COUNTING (G8 struggling): Grade 3 skill served to a struggling Grade 8 child
+         Q: In the number 448, what is the VALUE of the digit in the hundreds place?  [key 400]
+   ×  8 G4 G4_MULTIPLY (G9 struggling): Grade 4 skill served to a struggling Grade 9 child
+         Q: 18 × 3 = ?  [key 54]
