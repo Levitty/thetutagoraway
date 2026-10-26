@@ -14,6 +14,7 @@ import { todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP } from './ai-tu
 import { sendEmail } from './email.js';
 import { initPush, requestPush, clearPush } from './push.js';
 import { PLANS, availablePlans, paywallActive, isPro, isFreeWeek, passDaysLeft, isNetworkError } from './subscription.js';
+import { rememberPendingPass, forgetPendingPass, readPendingPass, recoverPendingPass as recoverPending, confirmPendingPass as confirmPending } from './pendingPass.js';
 import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Icon } from './ai-tutor/components/Icons.jsx';
@@ -574,58 +575,12 @@ const LoadingSpinner = () => (
   </div>
 );
 
-// ============ A PAYMENT THAT WAS TAKEN BUT NEVER CONFIRMED ============
-//
-// M-Pesa is completed on the phone, which means the browser that has to turn
-// the payment into a pass is the one most likely to be closed, backgrounded or
-// off network at exactly that moment. When Paystack's onSuccess never fires,
-// the money has gone and nothing grants the pass — the family pays and is
-// still shown the paywall, and the only route back was a WhatsApp message to a
-// human.
-//
-// So the reference is written down before Paystack opens and retried on every
-// load until it lands. verify-subscription records each reference as a primary
-// key, so retrying is safe: a reference that already bought a pass returns the
-// pass it bought rather than granting a second one.
-const PENDING_PASS = (uid) => `tg_pending_pass_${uid}`;
-const rememberPendingPass = (uid, reference, plan) => {
-  try { localStorage.setItem(PENDING_PASS(uid), JSON.stringify({ reference, plan, at: Date.now() })); } catch { /* no storage */ }
-};
-const forgetPendingPass = (uid) => { try { localStorage.removeItem(PENDING_PASS(uid)); } catch { /* no storage */ } };
-const readPendingPass = (uid) => {
-  try { return JSON.parse(localStorage.getItem(PENDING_PASS(uid)) || 'null'); } catch { return null; }
-};
-/**
- * Retry a remembered payment. Returns true if a pass was granted.
- * Gives up after three days: by then Paystack has long settled, and a
- * reference that still will not verify never will.
- */
-// fetchSubscription runs several times on a cold start (profile load, auth
-// listener, route mount). Without this guard each one fires its own recovery,
-// so one page load made three Paystack verifications for the same reference.
-let recoveryInFlight = null;
-const recoverPendingPass = (uid) => {
-  if (recoveryInFlight) return recoveryInFlight;
-  recoveryInFlight = (async () => {
-    const p = readPendingPass(uid);
-    if (!p?.reference) return false;
-    if (Date.now() - (p.at || 0) > 3 * 86400000) { forgetPendingPass(uid); return false; }
-    try {
-      const { data, error } = await supabase.functions.invoke('verify-subscription', { body: { reference: p.reference, plan: p.plan } });
-      if (data?.verified) { forgetPendingPass(uid); return true; }
-      // A non-2xx reply arrives as `error`, with the body on error.context —
-      // NOT as data. Reading only `data` meant a definitive "they never paid"
-      // looked like a network blip, and the reference was retried on every
-      // load for three days.
-      let said = String(data?.error || '');
-      if (!said && error?.context?.json) { try { said = String((await error.context.json())?.error || ''); } catch { /* not json */ } }
-      // Definitive answers: there is nothing to recover, so stop asking.
-      if (/not successful|unknown plan|already used|signed out|missing reference/i.test(said)) forgetPendingPass(uid);
-    } catch { /* offline: keep it and try next time */ }
-    return false;
-  })().finally(() => { recoveryInFlight = null; });
-  return recoveryInFlight;
-};
+// ============ A PAYMENT THAT WAS TAKEN BUT NOT YET CONFIRMED ============
+// The reference is written down before Paystack opens and confirmed until it
+// lands; see src/pendingPass.js for why (F20: a paid pass that only unlocked
+// on the next reload).
+const recoverPendingPass = (uid) => recoverPending(uid, { invoke: (...a) => supabase.functions.invoke(...a) });
+const confirmPendingPass = (uid, opts = {}) => confirmPending(uid, { invoke: (...a) => supabase.functions.invoke(...a), ...opts });
 
 // ============ PAYWALL MODAL ============
 // Shown when the free week (or a pass) has ended and a child tries to
@@ -641,7 +596,27 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
   const [claimRef, setClaimRef] = useState('');
   const [claiming, setClaiming] = useState(false);
   const [claimMsg, setClaimMsg] = useState('');
+  const [confirming, setConfirming] = useState(false);
+  const [doneShown, setDoneShown] = useState(false);
+  const mounted = useRef(true);
   const endedFreeWeek = isFreeWeek(subscription);
+
+  // Opened over a payment still waiting to be confirmed (the parent paid, came
+  // back and tapped a new lesson): confirm it now instead of selling a second
+  // pass. This is the gate a paying family meets, so it is where the pass
+  // must turn on (F20).
+  useEffect(() => {
+    mounted.current = true;
+    if (user?.id && readPendingPass(user.id)) {
+      setConfirming(true);
+      recoverPendingPass(user.id).then(got => {
+        if (!mounted.current) return;
+        setConfirming(false);
+        if (got) { setDone(typeof got === 'string' && got !== 'granted' ? got : null); setDoneShown(true); onUnlocked?.(); }
+      });
+    }
+    return () => { mounted.current = false; };
+  }, []);
 
   // Claim a payment that was taken but never granted. The plan is inferred
   // from the amount Paystack recorded, not from what the person says they
@@ -665,7 +640,7 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
       } catch { lastError = 'network'; break; }
     }
     setClaiming(false);
-    if (granted) { forgetPendingPass(user?.id); setDone(granted); onUnlocked?.(); return; }
+    if (granted) { forgetPendingPass(user?.id); setDone(granted); setDoneShown(true); onUnlocked?.(); return; }
     setClaimMsg(
       /not successful/i.test(lastError) ? "Paystack has no successful payment with that reference. Check the reference in your M-Pesa message."
       : /already used/i.test(lastError) ? 'That payment has already unlocked a pass on another account.'
@@ -692,19 +667,28 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
         amount: p.kes,
         reference,
         metadata: { type: 'subscription', plan: p.id, user_id: user.id },
+        // Paystack says it went through: keep asking for about two minutes,
+        // because M-Pesa settles a few seconds after the PIN and three asks in
+        // four seconds often all heard "not successful" (F20).
         onSuccess: async (response) => {
-          let ok = false;
-          for (let attempt = 0; attempt < 3 && !ok; attempt++) {
-            try {
-              const { data } = await supabase.functions.invoke('verify-subscription', { body: { reference: response.reference, plan: p.id } });
-              if (data?.verified) { ok = true; forgetPendingPass(user.id); setDone(data.pro_until); onUnlocked?.(); }
-            } catch { /* try again */ }
-            if (!ok) await new Promise(r => setTimeout(r, 1500));
-          }
-          if (!ok) setErr(`We couldn't confirm the payment yet — we'll keep trying each time you open the app. If M-Pesa took the money and practice is still locked tomorrow, WhatsApp us on 0759 240 692 with reference ${response.reference}.`);
-          setBusy(false);
+          setConfirming(true);
+          const got = await confirmPendingPass(user.id, { cancelled: () => !mounted.current });
+          if (!mounted.current) return;
+          setConfirming(false); setBusy(false);
+          if (got) { setDone(typeof got === 'string' && got !== 'granted' ? got : null); setDoneShown(true); onUnlocked?.(); return; }
+          setErr(`We couldn't confirm the payment yet — we'll keep trying each time you open the app. If M-Pesa took the money and practice is still locked tomorrow, WhatsApp us on 0759 240 692 with reference ${response.reference}.`);
         },
-        onClose: () => setBusy(false),
+        // The window was closed, often because the parent went to the phone to
+        // type the M-Pesa PIN. The payment can still land: keep checking.
+        onClose: async () => {
+          setBusy(false);
+          if (!readPendingPass(user.id)) return;
+          setConfirming(true);
+          const got = await confirmPendingPass(user.id, { cancelled: () => !mounted.current });
+          if (!mounted.current) return;
+          setConfirming(false);
+          if (got) { setDone(typeof got === 'string' && got !== 'granted' ? got : null); setDoneShown(true); onUnlocked?.(); }
+        },
       });
     } catch { setErr("The payment couldn't start. Please try again."); setBusy(false); }
   };
@@ -714,10 +698,10 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
     <div className="fixed inset-0 z-[60] bg-black/50 flex items-end sm:items-center justify-center p-0 sm:p-4" onClick={onClose}>
       <div className="bg-white w-full sm:max-w-sm rounded-t-3xl sm:rounded-3xl p-6 native-safe-top" style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }} onClick={e => e.stopPropagation()}>
         <div className="w-10 h-1 bg-slate-200 rounded-full mx-auto mb-5 sm:hidden" />
-        {done ? (
+        {doneShown ? (
           <>
             <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">Practice is unlocked</h2>
-            <p className="text-[15px] text-slate-600 mt-2">Your pass runs until {until}. Every child on your account can practise.</p>
+            <p className="text-[15px] text-slate-600 mt-2">{until ? `Your pass runs until ${until}.` : 'Your pass is on.'} Every child on your account can practise.</p>
             <button onClick={onClose} className="w-full mt-5 bg-slate-900 text-white rounded-2xl py-3.5 font-bold text-[15px]">Keep practising</button>
           </>
         ) : (
@@ -735,8 +719,9 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
                 </button>
               ))}
             </div>
+            {confirming && <div className="mt-3 text-[13.5px] text-slate-600 leading-snug" role="status">Checking your M-Pesa payment… this can take a minute after you enter your PIN.</div>}
             {err && <div className="mt-3 text-[13.5px] text-[#b3261e] leading-snug">{err}</div>}
-            <button onClick={pay} disabled={busy} className="w-full mt-5 bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-slate-900 rounded-2xl py-3.5 font-bold text-[15px] transition-colors">
+            <button onClick={pay} disabled={busy || confirming} className="w-full mt-5 bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-slate-900 rounded-2xl py-3.5 font-bold text-[15px] transition-colors">
               {busy ? 'Opening M-Pesa…' : `Pay KSh ${PLANS[plan].kes} with M-Pesa or card`}
             </button>
             <button onClick={onClose} className="w-full mt-2 text-slate-500 text-sm font-semibold py-2">Not now</button>
@@ -919,6 +904,20 @@ const useAuth = () => {
 
     return () => subscription.unsubscribe();
   }, []);
+
+  // A parent who paid on the M-Pesa prompt comes back to the app: if that
+  // payment is still waiting to be confirmed, confirm it now rather than on
+  // the next reload (F20). fetchSubscription only asks when the row it reads
+  // would lock them out.
+  useEffect(() => {
+    if (!user?.id || typeof document === 'undefined') return;
+    const back = () => {
+      if (document.visibilityState === 'visible' && readPendingPass(user.id)) fetchSubscription(user.id, profile?.role);
+    };
+    document.addEventListener('visibilitychange', back);
+    window.addEventListener('focus', back);
+    return () => { document.removeEventListener('visibilitychange', back); window.removeEventListener('focus', back); };
+  }, [user?.id, profile?.role]);
 
   const fetchProfile = async (userId) => {
     // First get the profile
