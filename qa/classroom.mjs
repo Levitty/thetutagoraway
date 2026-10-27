@@ -154,6 +154,14 @@ function fairForms(p) {
   // A pair of named values in the other order or joined by "and": "y = 6, x = 2".
   const pr = a.match(/^([a-z])\s*=\s*(-?[\d./]+),\s*([a-z])\s*=\s*(-?[\d./]+)$/i);
   if (pr) { add('pair swapped', `${pr[3]} = ${pr[4]}, ${pr[1]} = ${pr[2]}`); add('pair with and', `${pr[1]} = ${pr[2]} and ${pr[3]} = ${pr[4]}`); }
+  // Added 27 Oct: forms Kenyan children write that the classroom did not try.
+  if (isNumber(a) && /^-/.test(a)) add('negative in brackets', `(${a})`);
+  if (isNumber(a) && Math.abs(Number(a)) >= 1000) {
+    const [i, d] = a.split('.'); const c = i.replace(/\B(?=(\d{3})+(?!\d))/g, ',') + (d ? '.' + d : '');
+    add('thousands comma', c); add('thousands space', c.replace(/,/g, ' '));
+  }
+  if (isNumber(a) && /KSh|shillings/.test(String(p.question))) add('KSh prefix', `KSh ${a}`);
+  if (isNumber(a) && /^-?0\.\d+$/.test(a)) add('no leading zero', a.replace('0.', '.'));
   // Keep only forms the independent reader agrees are equal (guards our own bugs).
   return forms.filter(({ f }) => !isAlgebra(a) || /=/.test(a) || sameExpr(a, f) !== false);
 }
@@ -173,6 +181,10 @@ function nearMisses(p) {
   }
   const fr = a.match(/^(-?\d+)\/(\d+)$/);
   if (fr && /simplest form|simplify/i.test(`${p.instruction || ''} ${p.question || ''}`)) out.push(`${Number(fr[1]) * 3}/${Number(fr[2]) * 3}`);
+  // Added 27 Oct: the right number with a unit from another family ("28 kg"
+  // for an area in cm²) is a wrong answer.
+  const um = String(p.question).match(/\b\d+(?:\.\d+)?\s*(cm|mm|km|m|kg|g|ml|litres)\b/);
+  if (isNumber(a) && um) out.push(`${a} ${/^(kg|g)$/.test(um[1]) ? 'cm' : 'kg'}`);
   return out.filter(w => !(p.accepts || []).some(x => String(x).trim() === w));
 }
 
@@ -241,6 +253,16 @@ const counters = {};
 const tally = (check, ok) => { const c = (counters[check] ||= { pass: 0, fail: 0 }); ok ? c.pass++ : c.fail++; };
 const fail = (check, child, skillId, p, detail) => failures.push({ check, grade: child.grade, learner: child.kind, skill: skillId, skillGrade: G(skillId), question: String(p?.question ?? '').slice(0, 160), answer: p?.answer, detail });
 
+// Words that name what a question is about; a worked example naming another
+// word from the same group (and not the question's) is for a different kind.
+const KIND_GROUPS = [
+  ['cone', 'cylinder', 'sphere', 'cuboid', 'prism', 'pyramid', 'hemisphere'],
+  ['vertically opposite', 'corresponding', 'alternate', 'co-interior', 'allied'],
+  ['mean', 'median', 'mode', 'range'],
+  ['arc', 'sector'],
+  ['hire purchase', 'vat', 'paye', 'commission', 'discount', 'standing charge'],
+  ['p\\.m\\.', 'a\\.m\\.'],
+];
 let served = 0;
 function inspect(child, skillId, p, sitting) {
   served++;
@@ -255,6 +277,12 @@ function inspect(child, skillId, p, sitting) {
   if (!fitOk) fail('fit', child, skillId, p, `Grade ${sg} skill served to a ${child.kind} Grade ${child.grade} child`);
   // key
   const k = keyProblem(p); tally('key', !k); if (k) fail('key', child, skillId, p, k);
+  // key: "how much more" never has a negative answer (added 27 Oct)
+  const negMore = /how (much|many) more/i.test(String(p.question)) && isNumber(String(p.answer)) && Number(canon(String(p.answer))) < 0;
+  tally('key', !negMore); if (negMore) fail('key', child, skillId, p, `asks "how much more" but the key is ${p.answer}`);
+  // key: a hire-purchase price is more than the cash price (added 27 Oct)
+  const hpq = String(p.question).match(/KSh ([\d,]+) cash.*total hire-purchase price/i);
+  if (hpq) { const ok = Number(p.answer) > Number(hpq[1].replace(/,/g, '')); tally('key', ok); if (!ok) fail('key', child, skillId, p, `hire-purchase price ${p.answer} is not more than the cash price`); }
   // key: a number a child can type (no 128.57142857142858)
   const longKey = /\d\.\d{5,}/.test(String(p.answer)); tally('key', !longKey);
   if (longKey) fail('key', child, skillId, p, `key ${p.answer} has more decimals than a child can be expected to type`);
@@ -280,6 +308,20 @@ function inspect(child, skillId, p, sitting) {
     const kind = (t) => t.trim().toLowerCase().replace(/\d+/g, '#').replace(/\b[a-z]\b/g, '_');
     const ok = kind(we.instruction) === kind(p.instruction); tally('help', ok);
     if (!ok) fail('help', child, skillId, p, `worked example is for another kind of question ("${we.instruction}" vs "${p.instruction}")`);
+  }
+  // help (added 27 Oct): the worked example is about the same thing, not only
+  // under the same instruction: a cylinder under a cone, corresponding angles
+  // under vertically opposite, 24-hour to 12-hour under 12-hour to 24-hour.
+  if (we) {
+    const qText = `${p.instruction || ''} ${p.question || ''}`.toLowerCase();
+    const wText = [we.problem, we.question, we.instruction, ...(we.steps || []).map(st => (typeof st === 'string' ? st : `${st?.text || ''} ${st?.expr || ''}`))].filter(Boolean).join(' ').toLowerCase();
+    for (const group of KIND_GROUPS) {
+      const inQ = group.filter(w => new RegExp(`\\b${w}\\b`).test(qText));
+      const inW = group.filter(w => new RegExp(`\\b${w}\\b`).test(wText));
+      if (inQ.length === 1 && inW.length && !inW.includes(inQ[0])) {
+        tally('help', false); fail('help', child, skillId, p, `worked example is about "${inW.join(', ')}", the question about "${inQ[0]}"`); break;
+      }
+    }
   }
   // Only what a child reads (a drawing's coordinates are not shown as text).
   const readable = [p.hint, ...(p.hints || []), ...(p.solution?.steps || []).map(st => `${st?.text || st} ${st?.expr || ''}`), ...(we?.steps || []), we?.problem, we?.solution].filter(Boolean).join(' | ');
