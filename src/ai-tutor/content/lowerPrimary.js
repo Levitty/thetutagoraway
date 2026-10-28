@@ -51,7 +51,9 @@ function buildBandedAdd({ maxOperand, maxTotal, minTotal = 0, digitsA = null, di
         `Start from ${Math.max(a, b)} and count up ${Math.min(a, b)}.`),
       solution: { steps: [{ text: maxOperand <= 9 ? `Count on: start at ${a}, count up ${b}.` : 'Add column by column from the ones.', expr: `${a} + ${b} = ${value}` }], answer: `${value}` },
       misconceptions: [{ when: `${Math.abs(a - b)}`, feedback: 'That is the difference — this question asks for the total (add, don\'t subtract).' }],
-      visual: maxOperand <= 9 ? { type: 'number_line', data: { from: 0, to: 20, start: a, jump: b } } : undefined,
+      // The whole-number line with the start marked; the fraction line
+      // ('number_line') drew 0 to 1 in quarters under a Grade 1 sum.
+      visual: maxOperand <= 9 ? { type: 'integer_line', data: { min: 0, max: 20, start: a } } : undefined,
       band: { op: 'add', a, b },
       verify: { kind: 'fraction', value },
     };

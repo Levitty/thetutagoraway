@@ -926,6 +926,8 @@ function buildTwentyFourHour() {
         { when: `${String(Math.floor(mins / 60) - 12).padStart(2, '0')}${String(mins % 60).padStart(2, '0')}`,
           feedback: 'That is still the 12-hour time. After midday the hours carry on past 12 instead of restarting.' },
       ],
+      // Recomputed from the hour and minute, not from hhmm(), so the gate checks the key.
+      verify: { kind: 'exact', value: `${Math.floor(mins / 60)}`.padStart(2, '0') + `${mins % 60}`.padStart(2, '0') },
     };
   }
 
@@ -951,6 +953,7 @@ function buildTwentyFourHour() {
       misconceptions: [
         { when: `${h}.${String(m).padStart(2, '0')} p.m.`, feedback: 'The hours still need 12 taking off before you can call it p.m.' },
       ],
+      verify: { kind: 'exact', value: `${h - 12 === 0 ? 12 : h - 12}.${m < 10 ? '0' + m : m} p.m.` },
     };
   }
 
@@ -958,7 +961,10 @@ function buildTwentyFourHour() {
   const [from, to] = (() => { const a = pick(STOPS); let b; do { b = pick(STOPS); } while (b === a); return [a, b]; })();
   const dep = randInt(6, 19) * 60 + pick([0, 15, 20, 30, 40, 45]);
   const journey = randInt(2, 7) * 15 + randInt(1, 3) * 60;   // 1h15 to 4h45
-  const arr = dep + journey;
+  let depart = dep;
+  // A late bus must still arrive the same day: 2345 at the latest, never "0030".
+  while (depart + journey > 23 * 60 + 45) depart -= 60;
+  const arr = depart + journey;
 
   if (mode === 'duration') {
     const value = journey % 60 === 0
@@ -966,7 +972,7 @@ function buildTwentyFourHour() {
       : `${Math.floor(journey / 60)} h ${journey % 60} min`;
     return {
       type: 'g6-timetable-duration', instruction: 'Read the timetable and work out how long the journey takes.',
-      question: `A bus leaves ${from} at ${hhmm(dep)} h and reaches ${to} at ${hhmm(arr)} h. How long is the journey?`,
+      question: `A bus leaves ${from} at ${hhmm(depart)} h and reaches ${to} at ${hhmm(arr)} h. How long is the journey?`,
       answer: value,
       accepts: accepts(value, value.replace(/\s/g, ''), saidDuration(journey), `${journey} min`, `${journey} minutes`),
       hints: hintLadder(
@@ -974,35 +980,39 @@ function buildTwentyFourHour() {
         'Count on from the leaving time to the next whole hour, then in hours, then the last few minutes.',
         'Give the answer in hours and minutes.'),
       solution: { steps: [
-        { text: 'Count on to the next hour.', expr: `${hhmm(dep)} → ${hhmm(Math.ceil(dep / 60) * 60)}` },
-        { text: 'Then on to the arrival.', expr: `${hhmm(Math.ceil(dep / 60) * 60)} → ${hhmm(arr)}` },
+        { text: 'Count on to the next hour.', expr: `${hhmm(depart)} → ${hhmm(Math.ceil(depart / 60) * 60)}` },
+        { text: 'Then on to the arrival.', expr: `${hhmm(Math.ceil(depart / 60) * 60)} → ${hhmm(arr)}` },
         { text: 'Add the two parts.', expr: value },
       ], answer: value },
       misconceptions: [
         // Treating the clock as decimal: 1430 − 1145 done as 1430 − 1145 = 285.
-        { when: `${Number(hhmm(arr)) - Number(hhmm(dep))}`,
+        { when: `${Number(hhmm(arr)) - Number(hhmm(depart))}`,
           feedback: 'Clock times are not ordinary numbers — an hour is 60 minutes, not 100, so they cannot just be subtracted.' },
       ],
+      // Read back off the two printed times, the way a child reads the timetable.
+      verify: { kind: 'exact', value: (() => { const t = (x) => +x.slice(0, 2) * 60 + +x.slice(2); const d = t(hhmm(arr)) - t(hhmm(depart));
+        return d % 60 === 0 ? `${Math.floor(d / 60)} h` : `${Math.floor(d / 60)} h ${d % 60} min`; })() },
     };
   }
 
   const value = hhmm(arr);
   return {
     type: 'g6-timetable-arrival', instruction: 'Read the timetable and work out the arrival time.',
-    question: `A bus leaves ${from} at ${hhmm(dep)} h. The journey takes ${saidDuration(journey)}. What time does it reach ${to}? Give your answer in 24-hour time.`,
+    question: `A bus leaves ${from} at ${hhmm(depart)} h. The journey takes ${saidDuration(journey)}. What time does it reach ${to}? Give your answer in 24-hour time.`,
     answer: value, accepts: accepts(value, `${value} h`, `${value.slice(0, 2)}:${value.slice(2)}`),
     hints: hintLadder(
       'Add the hours first, then the minutes.',
       'If the minutes pass 60, that is another whole hour to carry.',
       'Write the answer as four digits on the 24-hour clock.'),
     solution: { steps: [
-      { text: 'Add the hours.', expr: `${hhmm(dep)} + ${Math.floor(journey / 60)} h = ${hhmm(dep + Math.floor(journey / 60) * 60)}` },
+      { text: 'Add the hours.', expr: `${hhmm(depart)} + ${Math.floor(journey / 60)} h = ${hhmm(depart + Math.floor(journey / 60) * 60)}` },
       { text: 'Then the minutes.', expr: value },
     ], answer: value },
     misconceptions: [
-      { when: String(Number(hhmm(dep)) + Math.floor(journey / 60) * 100 + (journey % 60)),
+      { when: String(Number(hhmm(depart)) + Math.floor(journey / 60) * 100 + (journey % 60)),
         feedback: 'When the minutes go past 60 they become another hour — the clock does not run to 100 minutes.' },
     ],
+    verify: { kind: 'exact', value: (() => { const t = depart + journey; return `${Math.floor(t / 60)}`.padStart(2, '0') + `${t % 60}`.padStart(2, '0'); })() },
   };
 }
 

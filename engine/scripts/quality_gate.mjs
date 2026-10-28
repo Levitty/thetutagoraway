@@ -52,9 +52,14 @@ function verifyProblem(p) {
   if (v.kind === 'fraction') {
     // The stated answer (a fraction / whole / decimal) must equal the value
     // computed directly from the operands.
-    const ans = String(p.answer).replace(/\s/g, '');
+    // A mixed number ("2 1/2") is read before spaces are dropped: dropping
+    // them first turned it into 21/2 and failed correct keys.
+    const raw = String(p.answer).trim();
+    const mixed = raw.match(/^(-?)(\d+)\s+(\d+)\/(\d+)$/);
+    const ans = raw.replace(/\s/g, '');
     const m = ans.match(/^(-?\d+)\/(-?\d+)$/);
-    const val = m ? (+m[1]) / (+m[2]) : parseFloat(ans);
+    const val = mixed ? (mixed[1] ? -1 : 1) * ((+mixed[2]) + (+mixed[3]) / (+mixed[4]))
+      : m ? (+m[1]) / (+m[2]) : parseFloat(ans);
     const tol = v.tol || 1e-6;   // rounded answers (π, trig) set a small tolerance
     return Math.abs(val - v.value) <= tol
       ? { ok: true } : { ok: false, reason: `answer ${p.answer} = ${val} ≠ ${v.value}` };
