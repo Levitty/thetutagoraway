@@ -238,7 +238,9 @@ function buildBandedMoney({ maxAmount, kind }) {
       };
     }
     if (kind === 'change') {          // G2: shopping change
-      const price = randInt(10, maxAmount - 10), paid = Math.min(maxAmount, Math.ceil(price / 10) * 10 + pick([0, 10, 20]));
+      // Always some change back: paying the exact price gave a key of 0
+      // (the class of fault in feedback F26).
+      const price = randInt(10, maxAmount - 10), paid = Math.min(maxAmount, Math.floor(price / 10) * 10 + pick([10, 20, 30]));
       const value = paid - price;
       return {
         type: 'money-change', instruction: 'Work out the change.',

@@ -91,6 +91,11 @@ export function mathValue(raw, child = false) {
   s = s.replace(/^[a-z]\s*=\s*/, '');              // "x = 5" on a Find-x question
   s = s.replace(/\.$/, '');                        // trailing full stop: "45."
   s = s.replace(/\bremainder\b/, 'r');             // "5 remainder 2" → "5 r 2"
+  // A signed number in brackets, the way integer questions write it: "(-4)",
+  // "( -4 )", "(+5)". Only one bare number inside, so "(3, 4)" is untouched
+  // (feedback F25).
+  if (child) s = s.replace(/^\(\s*([+-]?)\s*(\d*\.?\d+)\s*\)$/, (_, sign, n) => (sign === '-' ? '-' : '') + n);
+  if (child) s = s.replace(/^\+\s*(?=\d)/, '');
   // Mixed number "1 1/6" → 1 + 1/6  (BEFORE collapsing whitespace)
   const mixed = s.match(/^(-?\d+)\s+(\d+)\/(\d+)$/);
   if (mixed) {
