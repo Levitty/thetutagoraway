@@ -320,7 +320,9 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   };
 
   // Work a teacher has set. RLS returns only the assignments for classes this
-  // learner is actually in, so there is nothing to filter here.
+  // learner is in, and since 28 Oct only those set for the whole class or
+  // naming this learner. openForLearner applies the same rule again below, so
+  // the screen is right even before that migration has been run.
   //
   // A child practising as themselves on their own account is the only one this
   // can apply to: a parent's roster child has no auth user of their own, so
@@ -329,8 +331,16 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   const [assignments, setAssignments] = useState([]);
   const loadAssignments = useCallback(() => {
     if (!userId || guest || activeLearner) { setAssignments([]); return; }
-    supabase.from('assignments').select('id, class_id, title, skill_ids, due_on')
-      .then(({ data, error }) => setAssignments(error ? [] : (data || [])), () => setAssignments([]));
+    const cols = 'id, class_id, title, skill_ids, due_on';
+    // student_ids arrives with the 28 Oct migration; without it every
+    // assignment is whole-class, so read what there is.
+    supabase.from('assignments').select(`${cols}, student_ids`)
+      .then(({ data, error }) => {
+        if (!error) { setAssignments(data || []); return; }
+        return supabase.from('assignments').select(cols)
+          .then(({ data: d2, error: e2 }) => setAssignments(e2 ? [] : (d2 || [])));
+      })
+      .then(undefined, () => setAssignments([]));
   }, [userId, guest, activeLearner]);
   useEffect(() => { loadAssignments(); }, [loadAssignments]);
 
@@ -2317,6 +2327,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
           const setWork = openForLearner(
             assignments.map(a => ({ ...a, skill_ids: (a.skill_ids || []).filter(id => SKILLS[id]) })),
             progress,
+            undefined,
+            userId,
           ).filter(a => a.status.total > 0);
 
           // ---- TODAY'S SESSION -------------------------------------------

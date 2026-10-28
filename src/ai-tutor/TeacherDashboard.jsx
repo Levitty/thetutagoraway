@@ -19,8 +19,10 @@ import {
   getStats, getStrandStats, getEstimatedGradeLevel, findGaps, classGaps,
   getNextToLearn, strandsInReach,
 } from './adaptiveEngine.js';
-import { assignmentRoster, dueLabel, isoDay } from './assignments.js';
-import { demoMode, demoStudents, demoClasses, demoMembers, demoAssignments } from './demoClass.js';
+import { assignmentRoster, assignedLearners, audienceLabel, dueLabel, isoDay } from './assignments.js';
+import { assignmentStruggles, answerPattern, patternInfo } from './struggles.js';
+import { fiveMinuteMove } from './teacherMoves.js';
+import { demoMode, demoStudents, demoClasses, demoMembers, demoAssignments, demoEvents } from './demoClass.js';
 import { useHorebLook } from './horebLook.js';
 import { STRAND_BLOCK } from './strandBlocks.js';
 import {
@@ -31,6 +33,9 @@ import { Icon } from './components/Icons.jsx';
 import { isOwnMathRow } from './classRows.js';
 
 const SUBJECT_ID = 'math';
+const ASSIGNMENT_COLS = 'id, class_id, title, skill_ids, due_on, created_at';
+const EVENT_COLS_BASE = 'student_id, skill_id, correct, hints_used, created_at';
+const EVENT_COLS_FULL = `${EVENT_COLS_BASE}, learner_id, skipped, submitted_value, expected_value, client_ts`;
 
 const ctxFor = (subjectId) => {
   const s = SUBJECTS[subjectId];
@@ -101,73 +106,7 @@ const jsSnapshot = (progress, baseCtx) => {
   };
 };
 
-// A concrete, physical-materials suggestion per stuck skill — the KICD
-// designs' own suggested resources (bottle tops, bundles of sticks, cut-outs).
-//
-// Ordered, most specific first. This was seven patterns covering 62 of the 221
-// primary skills, so 72% of the gaps a teacher is shown came back with "five
-// minutes with physical counters" — which is not advice about geometry, or
-// statistics, or telling the time. Every line below is something a teacher can
-// do with what is already in a Kenyan classroom.
-const MOVES = [
-  // Number
-  [/PRENUMBER|COUNTING|NUMBER_WORDS|NUMBERS_WORDS/, 'Count real objects together out loud, then write the numeral and say it back — the saying and the writing have to meet.'],
-  [/PLACE_VALUE|PLACE|BIG_NUMBERS/, 'Place-value chart on paper: build the number with bottle tops in columns, then read it aloud.'],
-  [/ORDER_ROUND|ROUND|COMPARE/, 'Draw a number line on paper and let them peg the number where it belongs — rounding is "which end is it nearer?".'],
-  [/ODD_EVEN/, 'Pair the counters up. If one is left over with no partner, it is odd — that is the whole rule.'],
-  [/ROMAN/, 'Lay out sticks for I, V and X and build the number, then read it back left to right.'],
-  [/FACTOR|MULTIPLE|PRIME|DIVISIBILITY|LCM|HCF|GCD/, 'Arrange counters into rectangles. The ones that make a neat rectangle are the factors; the ones that cannot are not.'],
-  [/PROFIT_LOSS|INTEREST|DISCOUNT/, 'Real prices on paper: what it cost, what it sold for, and what is left over. Name the leftover before calling it a percentage.'],
-  [/STANDARD_FORM/, 'Write the number out in full, then count the places the point moves. The count is the power.'],
-  [/UNIT_CONVERSION|CONVERSION/, 'Lay the units out largest to smallest and step between them one at a time, saying each × 10 or ÷ 10 aloud.'],
-  [/SQUARE|ROOT|INDICES|POWER/, 'Build an actual square out of counters — 4 rows of 4. The square number is how many you used.'],
-  [/INTEGER|TEMPERATURE|NEGATIVE/, 'A number line on the floor with zero in the middle. Stand on a number and walk the moves.'],
-  [/DECIMAL/, 'The same place-value chart with a point drawn in — tenths to the right of it, and read the whole thing aloud.'],
-  [/PERCENT/, 'A 10 by 10 grid on squared paper. Shade it. Per cent just means "out of this hundred".'],
-  [/RATIO|PROPORTION|SHARING/, 'Share bottle tops into the groups the ratio asks for, one round at a time, then count what each group holds.'],
-  [/BODMAS|ORDER_OF_OP/, 'Work one line together, saying which part is done next and why, before anything is written down.'],
-  [/FRACTION|MIXED_NUMBER|RECIPROCAL/, 'Cut a paper circle into equal parts together — fold first, cut second, name each piece.'],
-  [/ADD/, 'Bundle sticks in tens — build both numbers, trade ten singles for one bundle, then retry on HOREB.'],
-  [/SUB/, 'Act it out with bottle tops the child physically hands to you, counting what remains each time.'],
-  [/MULT/, 'Plates and stones: 3 plates, 4 stones on each — how many plates? how many on each? how many altogether?'],
-  [/DIV/, 'Share real counters into equal groups, one at a time, before writing anything.'],
-  // Measurement
-  [/TIME|CLOCK|TIMETABLE/, 'A paper-plate clock with movable hands — the child sets the times you call out, then reads a real bus timetable.'],
-  [/MONEY/, 'Real coins and written price tags. Buy something from them and make them give you the change.'],
-  [/LENGTH|DISTANCE/, 'Measure three things in the room with a ruler or a metre rule and write each one down with its unit.'],
-  [/MASS|WEIGHT/, 'A simple balance with stones on one side. Heavier, lighter, about the same — then put numbers to it.'],
-  [/CAPACITY|VOLUME_LIQUID/, 'Fill a small bottle from a bigger one and count how many it takes. That count IS the relationship.'],
-  [/PERIMETER/, 'Run a string all the way round a desk, then straighten the string and measure it. That is the perimeter.'],
-  [/AREA/, 'Squared paper: draw the shape and count the squares inside it before using any formula.'],
-  [/VOLUME|CUBOID/, 'Stack small boxes or cubes into a bigger box and count them, layer by layer.'],
-  [/SPEED/, 'Walk a measured distance and time it. Speed is just how much distance fits into the time.'],
-  [/DENSITY/, 'Two objects of the same size but different weight, in the hand. Same space, different mass.'],
-  // Geometry
-  [/ANGLE/, 'The corner of a sheet of paper is a right angle. Hold it against the angle — bigger, smaller, or the same?'],
-  [/TRIANGLE|PYTHAGORAS/, 'Cut triangles out of paper and sort them by their sides and corners before naming any of them.'],
-  [/LINES|PARALLEL|PERPENDICULAR/, 'Find them in the room — the edges of a door, the lines on a book — and trace them with a finger.'],
-  [/SHAPE|POLYGON|3D|OBJECT|NET|FIGURE|CIRCUMFERENCE|CIRCLE/, 'Fold and cut the shape out of paper, then count its sides, corners and faces by touching each one.'],
-  [/POSITION|DIRECTION|COORDINATE|BEARING/, 'Stand up and face the direction. Left and right are from the walker’s point of view, not the page’s.'],
-  [/SYMMETRY|TRANSFORM|REFLECT|ROTAT/, 'Fold the paper shape in half. If the halves land on each other, that fold is a line of symmetry.'],
-  [/CONSTRUCT/, 'Do it once slowly with a ruler and compasses, saying each step aloud before drawing it.'],
-  // Algebra
-  [/LETTERS|EXPRESSION|ALGEBRA|EQUATION|MISSING_NUMBER|SUBSTITUT|SIMPLIFY/, 'Hide counters under a cup. The cup is the letter; how many are under it, and how do you know?'],
-  [/PATTERN|SEQUENCE/, 'Lay the pattern out in bottle tops and ask what comes next — then what the tenth one would be, without laying it out.'],
-  [/INEQUALIT/, 'Two unequal piles of counters. The open end of the sign always faces the bigger pile.'],
-  // Statistics
-  [/TALLY|DATA/, 'Count something real in the room — shoes, windows — and tally it in fives as you go.'],
-  [/MEAN|AVERAGE|MEDIAN|MODE/, 'Build towers of counters of different heights, then level them off. The levelled height is the mean.'],
-  [/GRAPH|CHART|PICTOGRAPH|DISPLAY/, 'Draw the graph by hand from the tally they just made, then ask them a question only the graph can answer.'],
-  [/PROBABILIT|CHANCE/, 'Bottle tops of two colours in a bag. Predict, draw one out, repeat, and keep score.'],
-];
-const fiveMinuteMove = (gap) => {
-  const id = gap?.id || '';
-  const hit = MOVES.find(([re]) => re.test(id));
-  if (hit) return hit[1];
-  // The fallback names the strand, so even here a teacher is not told to count
-  // counters at a child who is stuck on a bar chart.
-  return `Five minutes on ${(gap?.strand || 'this').toLowerCase()} away from the screen — do one together, out loud, with something they can hold, then retry the skill on HOREB.`;
-};
+// The five-minute moves live in teacherMoves.js, shared with the homework view.
 
 // Behind, near, or ahead of the grade this child is actually IN — not an
 // absolute number. The old rule was "level <= 6 is red", which painted every
@@ -206,6 +145,15 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   const [assignmentsReady, setAssignmentsReady] = useState(true);
   const [assigning, setAssigning] = useState(null);   // the gap row being set
   const [assignError, setAssignError] = useState(null);
+  // Choosing learners needs the 28 Oct migration (assignments.student_ids).
+  // Until it is run, work is set for the whole class, as before, and the
+  // picker says so instead of failing on save.
+  const [learnersReady, setLearnersReady] = useState(true);
+  // "Where they struggled": opened per assignment, and its answers fetched
+  // only then, so the page does not read every answer for every piece of work
+  // on load.
+  const [openStruggle, setOpenStruggle] = useState(null);
+  const [eventsFor, setEventsFor] = useState({});      // assignment id -> rows | 'loading' | { error }
   // Which question is being asked of the roster — see classView.js.
   const [bucket, setBucket] = useState('all');
   // Join codes and "create a class" are setup. Done once, then permanently in
@@ -230,15 +178,24 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
       return () => { cancelled = true; };
     }
     (async () => {
-      const [{ data: cls }, { data: mem }, asg] = await Promise.all([
+      const readAssignments = (cols) => supabase.from('assignments').select(cols)
+        .order('due_on', { ascending: true, nullsFirst: false });
+      const [{ data: cls }, { data: mem }, first] = await Promise.all([
         supabase.from('classes').select('id, name, join_code').order('created_at', { ascending: true }),
         supabase.from('class_members').select('class_id, student_id'),
-        supabase.from('assignments').select('id, class_id, title, skill_ids, due_on, created_at')
-          .order('due_on', { ascending: true, nullsFirst: false }),
+        readAssignments(`${ASSIGNMENT_COLS}, student_ids`),
       ]);
+      // Without the student_ids column, read what there is: every assignment
+      // made before it is whole-class anyway.
+      let asg = first;
+      let withLearners = !first.error;
+      if (first.error) {
+        asg = await readAssignments(ASSIGNMENT_COLS);
+      }
       if (cancelled) return;
       setClasses(cls || []);
       setMembers(mem || []);
+      setLearnersReady(withLearners);
       if (asg.error) setAssignmentsReady(false);
       else setAssignments(asg.data || []);
     })();
@@ -248,25 +205,56 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   // Set work straight from a gap row. That is the whole point of having found
   // it: a teacher who has just been shown the one skill holding up nine
   // children should not then have to go and describe it to a form.
-  const assignGap = async (gap, cid, dueOn) => {
+  // `studentIds` null = the whole class; a list = only those learners.
+  const assignGap = async (gap, cid, dueOn, studentIds = null) => {
     setAssignError(null);
+    const chosen = Array.isArray(studentIds) && studentIds.length ? studentIds : null;
     // In a demo the whole flow still works — pick a class, pick a date, see it
     // land in "Work set" with who has it — it just never touches the database.
     if (isDemo) {
-      setAssignments(a => [...a, { id: `demo-${Date.now()}`, class_id: cid, title: gap.name, skill_ids: [gap.id], due_on: dueOn || null }]);
+      setAssignments(a => [...a, {
+        id: `demo-${Date.now()}`, class_id: cid, title: gap.name, skill_ids: [gap.id],
+        student_ids: chosen, due_on: dueOn || null, created_at: new Date().toISOString(),
+      }]);
       setAssigning(null);
-      return;
+      return true;
     }
-    const { data, error: err } = await supabase.from('assignments').insert({
+    const row = {
       class_id: cid,
       teacher_id: teacherProfile?.id,
       title: gap.name,
       skill_ids: [gap.id],
       due_on: dueOn || null,
-    }).select('id, class_id, title, skill_ids, due_on, created_at').single();
-    if (err) { setAssignError(err.message); return; }
+    };
+    if (learnersReady) row.student_ids = chosen;
+    const { data, error: err } = await supabase.from('assignments').insert(row)
+      .select(learnersReady ? `${ASSIGNMENT_COLS}, student_ids` : ASSIGNMENT_COLS).single();
+    if (err) { setAssignError(err.message); return false; }
     setAssignments(a => [...a, data]);
     setAssigning(null);
+    return true;
+  };
+
+  // The answers behind one assignment: these learners, these skills, since it
+  // was set. RLS already limits a teacher to learners in classes they own;
+  // the filters here only keep the read small.
+  const loadStruggles = async (a, cohortIds) => {
+    if (eventsFor[a.id] && eventsFor[a.id] !== 'loading' && !eventsFor[a.id].error) return;
+    if (isDemo) { setEventsFor(m => ({ ...m, [a.id]: demoEvents() })); return; }
+    if (!cohortIds.length) { setEventsFor(m => ({ ...m, [a.id]: [] })); return; }
+    setEventsFor(m => ({ ...m, [a.id]: 'loading' }));
+    const read = (cols) => {
+      let q = supabase.from('response_events').select(cols)
+        .in('student_id', cohortIds)
+        .in('skill_id', a.skill_ids || []);
+      if (a.created_at) q = q.gte('created_at', a.created_at);
+      return q.order('created_at', { ascending: false }).limit(3000);
+    };
+    // The richer columns arrived with later migrations; fall back to the base
+    // ones rather than show nothing.
+    let res = await read(EVENT_COLS_FULL);
+    if (res.error) res = await read(EVENT_COLS_BASE);
+    setEventsFor(m => ({ ...m, [a.id]: res.error ? { error: res.error.message } : (res.data || []) }));
   };
 
   const removeAssignment = async (id) => {
@@ -364,6 +352,15 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
     return students.filter(s => ids.has(s.userId));
   }, [students, members, classId]);
 
+  // The children of one class, by name, for the learner picker and for every
+  // "who is this work for" question below.
+  const learnersOf = (cid) => {
+    const ids = new Set(members.filter(m => m.class_id === cid).map(m => m.student_id));
+    return students.filter(s => ids.has(s.userId))
+      .map(s => ({ id: s.userId, name: s.name, progress: s.progress }))
+      .sort((a, b) => String(a.name).localeCompare(String(b.name)));
+  };
+
   // ---- what to teach next, and to whom ----
   // The same measurements as the roster below, read down the other axis.
   const gaps = useMemo(
@@ -393,7 +390,15 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
 
   // ---- render ----
   if (selected) {
-    return <StudentDetail student={selected} onBack={() => setSelected(null)} />;
+    // The classes this child is in: work set from their page can only go to
+    // a class that has them in it.
+    const theirClasses = classes.filter(c => members.some(m => m.class_id === c.id && m.student_id === selected.userId));
+    return (
+      <StudentDetail student={selected} onBack={() => setSelected(null)}
+        canAssign={assignmentsReady && theirClasses.length > 0}
+        classes={theirClasses} learnersOf={learnersOf} learnersReady={learnersReady}
+        onAssign={assignGap} assignError={assignError} />
+    );
   }
 
   return (
@@ -478,6 +483,10 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
                 const setWork = assignmentsReady && classes.length > 0 && (
                   assigning === g.id
                     ? <AssignRow gap={g} classes={classes} classId={classId}
+                        learnersOf={learnersOf} learnersReady={learnersReady}
+                        // "Set this for the learners who have this gap": the
+                        // children on this row are ticked to begin with.
+                        preset={who.map(l => l.id)}
                         onCancel={() => setAssigning(null)} onAssign={assignGap} />
                     : <button onClick={() => { setAssigning(g.id); setAssignError(null); }}
                         className={`shrink-0 rounded-full font-bold transition-colors ${lead
@@ -541,52 +550,75 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
 
         {/* WORK SET — what was assigned, and who has actually mastered it.
             Not "who submitted": there is nothing to submit. A name moves into
-            Done when the child masters the skill in their ordinary practice. */}
+            Done when the child masters the skill in their ordinary practice.
+            Work set for chosen learners counts only those learners. */}
         {assignmentsReady && shownAssignments.length > 0 && (
           <div className="bg-white rounded-[28px] p-5 sm:p-6">
             <div className="flex items-baseline justify-between mb-1">
-              <h2 className="font-semibold text-slate-900">Work set</h2>
-              <span className="text-xs text-slate-400">done = mastered, from their own practice</span>
+              <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">Work set</h2>
+              <span className="text-[12px] text-slate-400">done = mastered, from their own practice</span>
             </div>
             <div className="divide-y divide-slate-100">
               {shownAssignments.map(a => {
-                const ids = new Set(members.filter(m => m.class_id === a.class_id).map(m => m.student_id));
-                const cohort = students.filter(s => ids.has(s.userId));
-                const r = assignmentRoster(a, cohort.map(s => ({ id: s.userId, name: s.name, progress: s.progress })));
+                const classLearners = learnersOf(a.class_id);
+                const r = assignmentRoster(a, classLearners);
                 const due = dueLabel(a.due_on, today);
                 const cls = classes.find(c => c.id === a.class_id);
+                const aud = audienceLabel(a, classLearners);
+                const open = openStruggle === a.id;
                 return (
-                  <div key={a.id} className="py-3">
-                    <div className="flex flex-wrap items-baseline gap-x-3">
-                      <span className="font-semibold text-slate-900">{a.title}</span>
-                      {cls && <span className="text-xs text-slate-400">{cls.name}</span>}
-                      <span className={`text-xs font-semibold ${due.overdue ? 'text-red-600' : due.tone === 'urgent' ? 'text-amber-600' : 'text-slate-400'}`}>{due.text}</span>
+                  <div key={a.id} className="py-3.5">
+                    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                      <span className="font-bold text-[15px] text-slate-900">{a.title}</span>
+                      {cls && <span className="text-[12px] text-slate-400">{cls.name}</span>}
+                      <span className={`text-[11px] font-bold rounded-full px-2 py-0.5 ${aud.whole ? 'bg-slate-100 text-slate-500' : 'bg-[#16161A] text-white'}`}>{aud.text}</span>
+                      <span className={`text-[12px] font-bold ${due.overdue ? 'text-red-600' : due.tone === 'urgent' ? 'text-amber-600' : 'text-slate-400'}`}>{due.text}</span>
                       <button onClick={() => removeAssignment(a.id)}
-                        className="ml-auto text-xs text-slate-400 hover:text-red-600">Remove</button>
+                        className="ml-auto text-[12px] text-slate-400 hover:text-red-600">Remove</button>
                     </div>
-                    <div className="mt-1.5 flex items-center gap-2">
+                    <div className="mt-2 flex items-center gap-2">
                       <div className="h-2 flex-1 rounded-full bg-slate-100 overflow-hidden">
                         <div className="h-2 rounded-full bg-emerald-500" style={{ width: `${r.percent}%` }} />
                       </div>
-                      <span className="text-xs font-semibold text-slate-600 tabular-nums">{r.done.length} of {r.count}</span>
+                      <span className="text-[12px] font-bold text-slate-600 tabular-nums">{r.done.length} of {r.count}</span>
                     </div>
                     {/* The three groups by name. "Not started" is the list a
                         teacher acts on first, so it is never a bare number. */}
-                    <div className="mt-1.5 space-y-0.5 text-xs">
+                    <div className="mt-1.5 space-y-0.5 text-[12px]">
                       {r.notStarted.length > 0 && (
-                        <p className="text-slate-600"><span className="font-semibold text-red-600">Not started: </span>{r.notStarted.map(l => l.name).join(' · ')}</p>
+                        <p className="text-slate-600"><span className="font-bold text-red-600">Not started: </span>{r.notStarted.map(l => l.name).join(' · ')}</p>
                       )}
                       {r.started.length > 0 && (
-                        <p className="text-slate-600"><span className="font-semibold text-amber-600">Working on it: </span>{r.started.map(l => `${l.name} (${l.percent}%)`).join(' · ')}</p>
+                        <p className="text-slate-600"><span className="font-bold text-amber-600">Working on it: </span>{r.started.map(l => `${l.name} (${l.percent}%)`).join(' · ')}</p>
                       )}
                       {r.done.length > 0 && (
-                        <p className="text-slate-500"><span className="font-semibold text-emerald-600">Done: </span>{r.done.map(l => l.name).join(' · ')}</p>
+                        <p className="text-slate-500"><span className="font-bold text-emerald-600">Done: </span>{r.done.map(l => l.name).join(' · ')}</p>
                       )}
                     </div>
+                    {r.count > 0 && (
+                      <button
+                        onClick={() => {
+                          if (open) { setOpenStruggle(null); return; }
+                          setOpenStruggle(a.id);
+                          loadStruggles(a, assignedLearners(a, classLearners).map(l => l.id));
+                        }}
+                        className={`mt-2.5 h-8 px-3.5 rounded-full text-[12.5px] font-bold transition-colors ${open ? 'bg-[#16161A] text-white' : 'border border-slate-200 text-slate-700 hover:bg-slate-50'}`}>
+                        {open ? 'Hide where they struggled' : 'Where they struggled'}
+                      </button>
+                    )}
+                    {open && (
+                      <StrugglePanel
+                        state={eventsFor[a.id]}
+                        assignment={a}
+                        learners={classLearners}
+                        skills={ctx?.skills || {}}
+                      />
+                    )}
                   </div>
                 );
               })}
             </div>
+            {assignError && <p className="text-[13px] text-red-500 mt-3">{assignError}</p>}
           </div>
         )}
 
@@ -724,13 +756,17 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   );
 }
 
-// Setting work from a gap row: which class, and by when. The skill and the
-// title are already decided — they are the row the teacher just read — so this
-// asks only what it cannot know.
-const AssignRow = ({ gap, classes, classId, onCancel, onAssign }) => {
+// Setting work from a gap row: which class, by when, and for whom. The skill
+// and the title are already decided — they are the row the teacher just read —
+// so this asks only what it cannot know.
+//
+// For whom: the children on the gap row are ticked to begin with, because
+// "set this for the ones who have this gap" is the commonest answer. The whole
+// class is one tap away, and any child in the class can be added or taken off.
+const AssignRow = ({ gap, classes, classId, learnersOf, learnersReady = true, preset = [], onCancel, onAssign }) => {
   // Default to the class being looked at; "Everyone" is not a class you can
   // set work for, so fall back to the first real one.
-  const [cid, setCid] = useState(classId !== 'all' ? classId : classes[0]?.id);
+  const [cid, setCid] = useState(classId !== 'all' && classes.some(c => c.id === classId) ? classId : classes[0]?.id);
   // A week on Friday is nobody's deadline. Default to one week, which is the
   // commonest answer, and let them change it.
   const [due, setDue] = useState(() => {
@@ -739,23 +775,250 @@ const AssignRow = ({ gap, classes, classId, onCancel, onAssign }) => {
     return isoDay(d);
   });
   const [busy, setBusy] = useState(false);
+  const pool = useMemo(() => (learnersOf ? learnersOf(cid) : []), [learnersOf, cid]);
+  const presetHere = useMemo(() => (preset || []).filter(id => pool.some(l => l.id === id)), [preset, pool]);
+  const [mode, setMode] = useState('all');
+  const [picked, setPicked] = useState(() => new Set());
+  // A new class is a new set of children: start again from the gap row.
+  const presetKey = presetHere.join(',');
+  useEffect(() => {
+    setPicked(new Set(presetHere));
+    setMode(learnersReady && presetHere.length > 0 && presetHere.length < pool.length ? 'some' : 'all');
+  }, [cid, presetKey, learnersReady, pool.length]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const toggle = (id) => setPicked(p => {
+    const n = new Set(p);
+    if (n.has(id)) n.delete(id); else n.add(id);
+    return n;
+  });
+  const chosen = mode === 'some' ? pool.filter(l => picked.has(l.id)).map(l => l.id) : null;
+  const ready = !!cid && (mode === 'all' || chosen.length > 0);
+  const label = mode === 'all' ? 'Set for the class' : `Set for ${chosen.length}`;
+
   return (
-    <div className="mt-2 flex flex-wrap items-center gap-2 bg-white/80 rounded-2xl px-3 py-2.5">
-      <span className="text-[12.5px] font-bold text-slate-500">Set for</span>
-      <select value={cid} onChange={e => setCid(e.target.value)}
-        aria-label="Class to set this work for"
-        className="text-[13px] font-bold rounded-lg px-2 h-9 bg-slate-100 text-slate-900 focus:outline-none">
-        {classes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
-      </select>
-      <label className="text-[12.5px] font-bold text-slate-500" htmlFor={`due-${gap.id}`}>by</label>
-      <input id={`due-${gap.id}`} type="date" value={due} onChange={e => setDue(e.target.value)}
-        className="text-[13px] font-bold rounded-lg px-2 h-9 bg-slate-100 text-slate-900 focus:outline-none" />
-      <button disabled={busy || !cid}
-        onClick={async () => { setBusy(true); await onAssign(gap, cid, due); setBusy(false); }}
-        className="h-9 px-4 text-[13px] font-bold text-white bg-[#16161A] hover:bg-[#2b2b33] disabled:opacity-25 rounded-full transition-colors">
-        {busy ? 'Setting…' : 'Set work'}
-      </button>
-      <button onClick={onCancel} className="text-[12.5px] font-bold text-slate-400 hover:text-slate-700 px-1">Cancel</button>
+    <div className="mt-2 bg-white/80 rounded-2xl px-3 py-2.5 space-y-2.5">
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-[12.5px] font-bold text-slate-500">Set for</span>
+        <select value={cid} onChange={e => setCid(e.target.value)}
+          aria-label="Class to set this work for"
+          className="text-[13px] font-bold rounded-lg px-2 h-9 bg-slate-100 text-slate-900 focus:outline-none">
+          {classes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+        </select>
+        <label className="text-[12.5px] font-bold text-slate-500" htmlFor={`due-${gap.id}`}>by</label>
+        <input id={`due-${gap.id}`} type="date" value={due} onChange={e => setDue(e.target.value)}
+          className="text-[13px] font-bold rounded-lg px-2 h-9 bg-slate-100 text-slate-900 focus:outline-none" />
+      </div>
+
+      {learnersReady ? (
+        <div>
+          <div className="inline-flex rounded-full bg-slate-100 p-0.5" role="radiogroup" aria-label="Who this work is for">
+            {[['all', `Whole class${pool.length ? ` (${pool.length})` : ''}`], ['some', 'Chosen learners']].map(([m, text]) => (
+              <button key={m} role="radio" aria-checked={mode === m} onClick={() => setMode(m)}
+                className={`h-8 px-3.5 rounded-full text-[12.5px] font-bold transition-colors ${mode === m ? 'bg-[#16161A] text-white' : 'text-slate-600 hover:text-slate-900'}`}>
+                {text}
+              </button>
+            ))}
+          </div>
+          {mode === 'some' && (
+            <div className="mt-2 flex flex-wrap gap-1.5">
+              {pool.length === 0 && <span className="text-[12.5px] text-slate-400">Nobody in this class has practised yet.</span>}
+              {pool.map(l => {
+                const on = picked.has(l.id);
+                const gapChild = presetHere.includes(l.id);
+                return (
+                  <button key={l.id} onClick={() => toggle(l.id)} aria-pressed={on}
+                    title={gapChild ? 'Has this gap' : undefined}
+                    className={`h-8 px-3 rounded-full text-[12.5px] font-bold inline-flex items-center gap-1.5 transition-colors ${on ? 'bg-[#16161A] text-white' : 'bg-slate-100 text-slate-500 hover:text-slate-900'}`}>
+                    {gapChild && <span className={`w-1.5 h-1.5 rounded-full ${on ? 'bg-white' : 'bg-slate-400'}`} />}
+                    {l.name}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      ) : (
+        <p className="text-[12px] text-slate-400">Set for the whole class. Choosing learners comes with the next database update.</p>
+      )}
+
+      <div className="flex items-center gap-2">
+        <button disabled={busy || !ready}
+          onClick={async () => { setBusy(true); await onAssign(gap, cid, due, chosen); setBusy(false); }}
+          className="h-9 px-4 text-[13px] font-bold text-white bg-[#16161A] hover:bg-[#2b2b33] disabled:opacity-25 rounded-full transition-colors">
+          {busy ? 'Setting…' : label}
+        </button>
+        <button onClick={onCancel} className="text-[12.5px] font-bold text-slate-400 hover:text-slate-700 px-1">Cancel</button>
+      </div>
+    </div>
+  );
+};
+
+// ---- where they struggled -------------------------------------------------
+// One assignment, read from the answers the learners gave since it was set.
+// Visual first: the split of the group as one bar, the skill most missed as a
+// coloured block, a square per learner per skill, and then only the children
+// a teacher should sit with, each with what they got wrong and what to do.
+const STATE_STYLE = {
+  stuck: { bar: 'bg-red-500', cell: 'bg-red-500 text-white', label: 'Stuck' },
+  working: { bar: 'bg-amber-400', cell: 'bg-amber-300 text-slate-900', label: 'Working on it' },
+  untouched: { bar: 'bg-slate-200', cell: 'bg-slate-100 text-slate-400', label: 'Not started' },
+  done: { bar: 'bg-emerald-500', cell: 'bg-emerald-500 text-white', label: 'Mastered' },
+};
+const cellStyle = (state) => STATE_STYLE[state === 'mastered' ? 'done' : state] || STATE_STYLE.untouched;
+
+const Trail = ({ trail }) => (
+  trail?.length > 0 ? (
+    <span className="inline-flex items-center gap-[3px]" aria-label={`${trail.filter(Boolean).length} right of the last ${trail.length}`}>
+      {trail.map((ok, i) => (
+        <span key={i} className={`w-2 h-2 rounded-full ${ok ? 'bg-emerald-500' : 'bg-red-400'}`} />
+      ))}
+    </span>
+  ) : null
+);
+
+const WrongChip = ({ w }) => (
+  <span className="inline-flex items-baseline gap-1 rounded-lg bg-white px-2 py-1 text-[12px]">
+    <span className="text-slate-400">wrote</span>
+    <span className="font-bold text-red-600 tabular-nums">{w.submitted || '(blank)'}</span>
+    {w.expected && <><span className="text-slate-400">for</span><span className="font-bold text-slate-900 tabular-nums">{w.expected}</span></>}
+    {w.n > 1 && <span className="text-slate-400">· {w.n} times</span>}
+  </span>
+);
+
+const StrugglePanel = ({ state, assignment, learners, skills }) => {
+  if (!state || state === 'loading') {
+    return <div className="mt-3 rounded-[22px] bg-slate-50 p-5 text-[13px] text-slate-400">Reading their answers…</div>;
+  }
+  if (state.error) {
+    return <div className="mt-3 rounded-[22px] bg-slate-50 p-5 text-[13px] text-slate-500">Could not read their answers: {state.error}</div>;
+  }
+  const r = assignmentStruggles(assignment, learners, state, { skills });
+  if (!r.counts.assigned) {
+    return <div className="mt-3 rounded-[22px] bg-slate-50 p-5 text-[13px] text-slate-500">None of the learners this was set for has practised yet.</div>;
+  }
+  const many = r.skills.length > 1;
+  const mm = r.mostMissed;
+  const mmBlock = mm ? (STRAND_BLOCK[mm.strand] || STRAND_BLOCK._) : null;
+  const shared = mm?.commonWrong;
+  const sharedPattern = shared ? patternInfo(answerPattern(shared.submitted, shared.expected)) : null;
+
+  return (
+    <div className="mt-3 rounded-[22px] bg-[#F4F4F6] p-4 sm:p-5 space-y-4">
+      {/* The group in one bar. */}
+      <div>
+        <div className="flex h-3 rounded-full overflow-hidden bg-white">
+          {['stuck', 'working', 'untouched', 'done'].map(k => r.counts[k] > 0 && (
+            <div key={k} className={STATE_STYLE[k].bar} style={{ width: `${(r.counts[k] / r.counts.assigned) * 100}%` }} />
+          ))}
+        </div>
+        <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+          {['stuck', 'working', 'untouched', 'done'].map(k => (
+            <span key={k} className="inline-flex items-center gap-1.5 text-[12.5px] text-slate-600">
+              <span className={`w-2.5 h-2.5 rounded-full ${STATE_STYLE[k].bar}`} />
+              <span className="font-extrabold text-slate-900 tabular-nums">{r.counts[k]}</span> {STATE_STYLE[k].label.toLowerCase()}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* The skill most missed, as a block in its strand's colour. */}
+      {mm && (
+        <div className="rounded-[18px] p-4" style={{ background: mmBlock.bg }}>
+          <p className="text-[11px] font-bold tracking-[.08em] uppercase" style={{ color: mmBlock.meta }}>
+            {many ? 'Most missed' : 'The skill'}
+          </p>
+          <div className="flex items-baseline gap-3 mt-0.5">
+            <span className="text-[34px] font-extrabold tabular-nums leading-none tracking-tighter" style={{ color: mmBlock.ink }}>{mm.accuracy ?? 0}%</span>
+            <span className="text-[17px] font-extrabold tracking-tight leading-tight" style={{ color: mmBlock.ink }}>{mm.name}</span>
+          </div>
+          <p className="text-[12.5px] font-bold mt-1" style={{ color: mmBlock.meta }}>
+            right across {mm.attempts} {mm.attempts === 1 ? 'answer' : 'answers'} · {mm.wrongCount} wrong{mm.stuck > 0 && <> · {mm.stuck} stuck</>}
+          </p>
+          {shared && (
+            <div className="mt-3 rounded-2xl bg-white/75 px-3.5 py-2.5">
+              <p className="text-[13.5px] text-slate-800 leading-snug">
+                <span className="font-bold">{shared.learners.join(' and ')}</span> {shared.learners.length === 2 ? 'both' : 'all'} wrote{' '}
+                <span className="font-bold text-red-600 tabular-nums">{shared.submitted}</span> where the answer was{' '}
+                <span className="font-bold tabular-nums">{shared.expected}</span>.
+                {sharedPattern && <> {sharedPattern.label}: teach it once, to them together.</>}
+              </p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* A square per learner per skill: the whole group at a glance. */}
+      <div>
+        {many && (
+          <div className="flex items-end gap-1.5 pl-[128px] mb-1">
+            {r.skills.map(sk => (
+              <span key={sk.id} title={sk.name} className="w-14 text-[10.5px] font-bold text-slate-400 leading-tight truncate">{sk.name}</span>
+            ))}
+          </div>
+        )}
+        <div className="space-y-1.5">
+          {r.learners.map(l => (
+            <div key={l.id} className="flex items-center gap-1.5">
+              <span className="w-[122px] shrink-0 text-[13px] font-bold text-slate-800 truncate">{l.name}</span>
+              {l.cells.map(c => {
+                const st = cellStyle(c.state);
+                return (
+                  <span key={c.skillId}
+                    title={`${c.attempts} ${c.attempts === 1 ? 'try' : 'tries'}${c.accuracy != null ? `, ${c.accuracy}% right` : ''}${c.mastered ? ', mastered' : ''}`}
+                    className={`w-14 h-9 shrink-0 rounded-lg flex flex-col items-center justify-center leading-none ${st.cell}`}>
+                    <span className="text-[13px] font-extrabold tabular-nums">{c.mastered ? 'done' : c.accuracy != null ? `${c.accuracy}%` : '–'}</span>
+                    {c.attempts > 0 && <span className="text-[9.5px] font-bold opacity-75 mt-0.5">{c.attempts} tries</span>}
+                  </span>
+                );
+              })}
+              {!many && <span className="ml-1.5"><Trail trail={l.cells[0]?.trail} /></span>}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Only the children to sit with, each with a next step. */}
+      {r.stuck.length > 0 && (
+        <div>
+          <h3 className="text-[15px] font-extrabold tracking-tight text-slate-900">
+            Sit with {r.stuck.length === 1 ? 'this one' : `these ${r.stuck.length}`}
+          </h3>
+          <p className="text-[12px] text-slate-500 mb-2">Tried at least four times, under half right, not mastered.</p>
+          <div className="space-y-2">
+            {r.stuck.map(x => (
+              <div key={x.id} className="rounded-[18px] bg-white p-4">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <span className="font-extrabold text-[15px] text-slate-900">{x.name}</span>
+                  <span className="text-[12.5px] text-slate-500">{x.skillName} · {x.attempts} tries · {x.accuracy}% right</span>
+                  <span className="ml-auto"><Trail trail={x.trail} /></span>
+                </div>
+                {x.wrong.length > 0 && (
+                  <div className="mt-2 flex flex-wrap gap-1.5 rounded-xl bg-[#F4F4F6] p-1.5">
+                    {x.wrong.map((w, i) => <WrongChip key={i} w={w} />)}
+                  </div>
+                )}
+                {x.pattern && (
+                  <p className="text-[13px] font-bold text-slate-900 mt-2.5">{x.pattern.label}</p>
+                )}
+                <p className="text-[11px] font-bold tracking-[.08em] uppercase text-slate-500 mt-2">Next step</p>
+                <p className="text-[13.5px] text-slate-800 leading-snug mt-0.5">{x.step}</p>
+                {x.step !== x.move && (
+                  <p className="text-[12.5px] text-slate-500 leading-snug mt-1.5">
+                    <span className="font-bold">Away from the screen:</span> {x.move}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {r.source === 'progress' && (
+        <p className="text-[12px] text-slate-400 leading-snug">
+          No answers have reached the server since this was set, so these counts come from their practice
+          overall, and the wrong answers themselves are not shown.
+        </p>
+      )}
     </div>
   );
 };
@@ -823,10 +1086,15 @@ const RosterRow = ({ st, onOpen }) => {
 // support before moving on" while `snap.topGaps` held the three skill names,
 // so a teacher who clicked a child to find out what was wrong learned nothing
 // they did not already know and had nowhere to go next.
-function StudentDetail({ student, onBack }) {
+function StudentDetail({ student, onBack, canAssign = false, classes = [], learnersOf, learnersReady, onAssign, assignError }) {
   useHorebLook();
   const { name, snap, diagnosed } = student;
   const a = attentionOf(student);
+  // Set one of this child's gaps as work for this child (and anyone else the
+  // teacher adds), straight from their page.
+  const [assigning, setAssigning] = useState(null);
+  const [setIds, setSetIds] = useState(() => new Set());
+  const firstName = String(name || '').split(' ')[0] || 'them';
   return (
     <div className="min-h-screen bg-[#E8E8EC]">
       <header className="sticky top-0 z-10 bg-[#E8E8EC]/90 backdrop-blur">
@@ -870,10 +1138,29 @@ function StudentDetail({ student, onBack }) {
                           <p className="text-[11px] font-bold tracking-[.08em] uppercase text-slate-500">Away from the screen</p>
                           <p className="text-[14px] text-slate-800 leading-snug mt-0.5">{fiveMinuteMove(g)}</p>
                         </div>
+                        {canAssign && (
+                          setIds.has(g.id)
+                            ? <p className="mt-3 text-[13px] font-bold" style={{ color: i === 0 ? c.ink : '#16161A' }}>Set as work for {firstName}.</p>
+                            : assigning === g.id
+                            ? <AssignRow gap={g} classes={classes} classId={classes[0]?.id}
+                                learnersOf={learnersOf} learnersReady={learnersReady}
+                                preset={[student.userId]}
+                                onCancel={() => setAssigning(null)}
+                                onAssign={async (...args) => {
+                                  const ok = await onAssign(...args);
+                                  if (ok) { setSetIds(x => new Set([...x, g.id])); setAssigning(null); }
+                                  return ok;
+                                }} />
+                            : <button onClick={() => setAssigning(g.id)}
+                                className="mt-3 h-9 px-4 rounded-full text-[13px] font-bold bg-[#16161A] text-white hover:bg-[#2b2b33] transition-colors">
+                                Set as work for {firstName}
+                              </button>
+                        )}
                       </div>
                     );
                   })}
                 </div>
+                {assignError && <p className="text-[13px] text-red-500 mt-3">{assignError}</p>}
                 {snap.gapCount > snap.topGaps.length && (
                   <p className="text-[12.5px] text-slate-400 mt-3">
                     {snap.gapCount - snap.topGaps.length} more behind these. Clear the deepest first — some of the

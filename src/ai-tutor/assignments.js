@@ -70,8 +70,11 @@ export const dueLabel = (dueOn, today = isoDay()) => {
  * a child who is behind is exactly the child who must not have the work
  * quietly removed from their screen.
  */
-export const openForLearner = (assignments, progress, today = isoDay()) =>
+export const openForLearner = (assignments, progress, today = isoDay(), learnerId = undefined) =>
   (assignments || [])
+    // Only the work set for this learner. Skipped when no id is given, so a
+    // caller that has none behaves exactly as before.
+    .filter(a => learnerId === undefined || isFor(a, learnerId))
     .map(a => ({ ...a, status: assignmentProgress(a, progress), due: dueLabel(a.due_on, today) }))
     .filter(a => !(a.status.complete && a.due.overdue))
     // Soonest first; an overdue one leads, because it is the most urgent thing
@@ -81,14 +84,52 @@ export const openForLearner = (assignments, progress, today = isoDay()) =>
       || (a.due.days ?? 9999) - (b.due.days ?? 9999)
       || String(a.title).localeCompare(String(b.title)));
 
+// ---- who an assignment is for ---------------------------------------------
+// `student_ids` null means the whole class (every assignment made before
+// 28 Oct). A list means only those learners. The database already refuses to
+// show a learner work that does not name them (RLS); these are the same rule in
+// the app, so the teacher's numbers count the right children and a learner
+// screen stays right even against a database that has not had the migration.
+
+/** Is this assignment set for this learner? Whole-class work is for everyone. */
+export const isFor = (assignment, learnerId) => {
+  const ids = assignment?.student_ids;
+  if (!Array.isArray(ids)) return true;
+  return learnerId != null && ids.includes(learnerId);
+};
+
+/** The learners, out of a class roster, that this assignment is set for. */
+export const assignedLearners = (assignment, learners) =>
+  (learners || []).filter(l => isFor(assignment, l?.id));
+
+/**
+ * Who the work is for, in words. Names while they fit on a line; a count when
+ * they do not, because a row that wraps to three lines stops being a row.
+ */
+export const audienceLabel = (assignment, learners, maxNames = 3) => {
+  const ids = assignment?.student_ids;
+  if (!Array.isArray(ids)) return { whole: true, text: 'Whole class', count: null };
+  const byId = new Map((learners || []).map(l => [l.id, l.name]));
+  const names = ids.map(id => byId.get(id)).filter(Boolean);
+  const count = ids.length;
+  const text = names.length === count && count <= maxNames
+    ? `For ${names.join(', ')}`
+    : `For ${count} ${count === 1 ? 'learner' : 'learners'}`;
+  return { whole: false, text, count, names };
+};
+
 /**
  * The teacher's view of one assignment across a roster: who has finished, who
  * has started, who has not touched it. Names, not counts — a count tells a
  * teacher there is a problem and a name tells them who to sit with.
  */
-export const assignmentRoster = (assignment, learners) => {
+export const assignmentRoster = (assignment, classLearners) => {
+  // Work set for chosen learners is counted against those learners only: a
+  // child it was never set for is not "not started", and must not drag the
+  // percentage down.
+  const learners = assignedLearners(assignment, classLearners);
   const done = [], started = [], notStarted = [];
-  for (const l of learners || []) {
+  for (const l of learners) {
     const st = assignmentProgress(assignment, l?.progress);
     const row = { id: l.id, name: l.name, done: st.done, total: st.total, percent: st.percent };
     if (st.complete) done.push(row);
@@ -100,8 +141,8 @@ export const assignmentRoster = (assignment, learners) => {
     done: done.sort(byProgress),
     started: started.sort(byProgress),
     notStarted: notStarted.sort((a, b) => String(a.name).localeCompare(String(b.name))),
-    count: (learners || []).length,
+    count: learners.length,
     // The number a teacher reads first, and the only one that needs no thought.
-    percent: (learners || []).length ? Math.round((done.length / learners.length) * 100) : 0,
+    percent: learners.length ? Math.round((done.length / learners.length) * 100) : 0,
   };
 };
