@@ -27,3 +27,17 @@ quality gate passes 255 of 255. The classroom changes:
 
 See `../report.txt` (main) and `../report-with-proposals.txt`.
 F13, F14 and F15 are plans in feedback.md, not patches.
+
+## 27 Oct 2026 (branch qa/2026-10-27, against main 5a5952e)
+
+F5–F8 and F16 are merged. Still open, still applying cleanly to main: F9, F10,
+F11, F12. New:
+
+- `F25.patch`: a negative answer in brackets, "(-4)", is read as -4
+  (answerCheck.js `mathValue`), with `tests/negative-in-brackets.test.mjs`.
+- `F26.patch`: hire purchase always costs more than cash (numbers.js,
+  `buildCommercialArith`), with `tests/hire-purchase.test.mjs`.
+
+Both together: `npm test` 270 of 270. The content gate's three failures
+(G6_TIME, G7_FRACTIONS_DIV, G7_FRACTIONS_MUL) are on main already and are not
+touched by these patches.
