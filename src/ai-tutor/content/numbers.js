@@ -1302,7 +1302,10 @@ export function buildCommercialArith() {
     const cash = pick([24000, 36000, 48000, 60000, 75000]);
     const deposit = Math.round(cash * pick([0.1, 0.2, 0.25]) / 100) * 100;
     const months = pick([6, 10, 12]);
-    const monthly = pick([2500, 3000, 3500, 4000, 5000]);
+    // Hire purchase always costs more than cash (feedback F26): the
+    // instalments cover the rest of a price 10-25% above cash, to KSh 100.
+    const markup = pick([1.1, 1.15, 1.2, 1.25]);
+    const monthly = Math.ceil((cash * markup - deposit) / months / 100) * 100;
     const hp = deposit + months * monthly;
     const askExtra = coin();
     const value = askExtra ? hp - cash : hp;
