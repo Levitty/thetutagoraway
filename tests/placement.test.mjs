@@ -15,7 +15,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { getNextToLearn, getEstimatedGradeLevel } from '../src/ai-tutor/adaptiveEngine.js';
 import { SKILLS, getPostRequisites, getPrerequisiteChain, getPostRequisiteChain } from '../src/ai-tutor/knowledgeGraph.js';
-import { selectQuestion, computePlacement, buildPlacementPool, roomForAnother, nextToSettle, STRETCH_PROBE } from '../src/ai-tutor/placement.js';
+import { selectQuestion, computePlacement, buildPlacementPool, roomForAnother, nextToSettle, questionCap, STRETCH_PROBE } from '../src/ai-tutor/placement.js';
 import { propagateCredit, processDiagnosticResults } from '../src/ai-tutor/diagnosticEngine.js';
 
 const TOP = 8;   // the recommended path only ever shows a handful
@@ -174,7 +174,7 @@ const sitCheck = (declared, knows) => {
   const asked = [];
   for (;;) {
     const q = selectQuestion(asked, declared, CBC_POOL);
-    if (!q || !roomForAnother(asked.length)) break;
+    if (!q || !roomForAnother(asked.length, asked, declared, CBC_POOL)) break;
     // The final ask on the headline miss: this child answers it the same way.
     if (q.settle) { asked.find(a => a.id === q.id).settled = true; continue; }
     asked.push({ id: q.id, grade: q.grade, strand: q.strand, unit: q.unit, probeFor: q.probeFor, hunt: q.hunt, correct: knows(q) });
@@ -290,4 +290,12 @@ test('the climb still stops where the evidence stops', () => {
   const placed = computePlacement(asked, 5, CBC_POOL);
   assert.ok(placed <= 7, `a Grade 5 working at Grade 6 was placed at ${placed}`);
   assert.ok(placed >= 6, `a Grade 5 working at Grade 6 was placed at ${placed}`);
+});
+
+test('a child missing most of their grade gets a longer check, and no one else does', () => {
+  // Forty questions ran out before the check could show the grade below holds.
+  const behind = sitCheck(5, q => SKILLS[q.id].grade <= 3);
+  assert.ok(behind.length > 40 && behind.length <= 50, `asked ${behind.length}`);
+  const onGrade = sitCheck(5, q => SKILLS[q.id].grade <= 5);
+  assert.equal(questionCap(onGrade, 5, CBC_POOL), 40);
 });

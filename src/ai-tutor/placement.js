@@ -35,7 +35,9 @@ import { gradeOf, strandOf, isEnrichment, NATIVE } from './curricula.js';
 
 export const CLEAR = 0.65;          // share of the declared sweep needed to clear the grade
 export const STRETCH_GATE = 0.9;    // share of the sweep needed before a stretch is offered
-export const MAX_QUESTIONS = 40;    // hard ceiling on the whole test, confirmations included
+export const BASE_QUESTIONS = 40;   // the ceiling for most children, confirmations included
+export const MAX_QUESTIONS = 50;    // the hard ceiling: a child missing most of their grade (see questionCap)
+export const STRUGGLING = 0.5;      // sweep accuracy below which the longer ceiling applies
 export const STRETCH_PROBE = 5;     // stretch questions, one per sub-strand of the grade above
 // Misses a full five-question stretch may carry and still count. Asking for
 // five out of five missed one child in three who really is a grade ahead: a
@@ -200,7 +202,7 @@ const probeBelow = (pool, byId, rec, answered, balances) => {
 // or null when the test is finished.
 // ---------------------------------------------------------------------------
 export const selectQuestion = (asked, declared, pool, balances = {}) => {
-  if (asked.length >= MAX_QUESTIONS) return null;
+  if (asked.length >= questionCap(asked, declared, pool)) return null;
   const start = clampGrade(pool, declared);
   if (start == null) return null;
   const answered = new Set(asked.map(a => a.id));
@@ -348,10 +350,30 @@ export const nextToSettle = (asked, pool) => {
  * LOWEST gap it found, that slip became the headline: in simulation, 16 of 19
  * parents told about a step their child actually had were told it this way.
  */
-export const roomForAnother = (totalAsked) => totalAsked < MAX_QUESTIONS - 1;
+export const roomForAnother = (totalAsked, asked, declared, pool) =>
+  totalAsked < questionCap(asked, declared, pool) - 1;
+
+/**
+ * How many questions this child's check may run to, confirmations included.
+ *
+ * Forty for most children. A child who has missed most of their declared
+ * grade's sweep gets up to fifty: they miss nearly every topic, each miss is
+ * re-asked, and at forty the check ran out before showing that the grade below
+ * holds — in simulation a quarter of Grade 4-5 children a grade behind with an
+ * early arithmetic gap were placed one grade too low for that reason alone.
+ * Only the cap moves; nothing else about their check changes.
+ */
+export const questionCap = (asked, declared, pool) => {
+  if (!asked || !pool) return BASE_QUESTIONS;
+  const start = clampGrade(pool, declared);
+  if (start == null) return BASE_QUESTIONS;
+  const sweep = sweepRows(asked, start);
+  if (!sweep.length || sweepRemaining(asked, declared, pool) > 0) return BASE_QUESTIONS;
+  return accuracy(sweep) < STRUGGLING ? MAX_QUESTIONS : BASE_QUESTIONS;
+};
 
 export const isComplete = (asked, declared, pool) =>
-  asked.length >= MAX_QUESTIONS || selectQuestion(asked, declared, pool) == null;
+  asked.length >= questionCap(asked, declared, pool) || selectQuestion(asked, declared, pool) == null;
 
 // ---------------------------------------------------------------------------
 // The placement itself.
@@ -536,7 +558,7 @@ export const explainPlacement = (asked, declared, pool) => {
 };
 
 export default {
-  CLEAR, STRETCH_GATE, MAX_QUESTIONS, STRETCH_PROBE, STRETCH_MISSES, MAX_PROBE_DEPTH,
+  CLEAR, STRETCH_GATE, BASE_QUESTIONS, MAX_QUESTIONS, STRUGGLING, questionCap, STRETCH_PROBE, STRETCH_MISSES, MAX_PROBE_DEPTH,
   buildPlacementPool, gradesIn, unitsAt, nextToSettle, MAX_HUNTS, gradeAccuracy, sweepRemaining, roomForAnother, worthConfirming,
   selectQuestion, isComplete, computePlacement, explainPlacement,
 };
