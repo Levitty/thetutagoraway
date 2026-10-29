@@ -123,13 +123,49 @@ export const demoStudents = () => ROSTER.map((r, i) => {
 export const demoClasses = () => [{ id: DEMO_CLASS_ID, name: 'Grade 5 Blue (demo)', join_code: 'DEMO01' }];
 export const demoMembers = () => ROSTER.map((_, i) => ({ class_id: DEMO_CLASS_ID, student_id: idFor(i) }));
 
-/** Work already set, so "Work set" has something to show and is partly done. */
+/**
+ * Work already set, so "Work set" has something to show and is partly done.
+ * The second is set for three children on Grade 5 work, not the whole class:
+ * work for chosen learners is the move the 28 Oct change exists to make.
+ */
+const daysAgoIso = (n) => new Date(Date.now() - n * 86400000).toISOString();
 export const demoAssignments = () => {
   const day = (n) => { const d = new Date(); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); };
   return [
-    { id: 'demo-a1', class_id: DEMO_CLASS_ID, title: 'Place Value (to 10,000)', skill_ids: ['G4_PLACE_VALUE'], due_on: day(3) },
-    { id: 'demo-a2', class_id: DEMO_CLASS_ID, title: 'Addition (up to 6 digits)', skill_ids: ['G5_ADDITION'], due_on: day(-1) },
+    { id: 'demo-a1', class_id: DEMO_CLASS_ID, title: 'Place Value (to 10,000)', skill_ids: ['G4_PLACE_VALUE'],
+      student_ids: null, due_on: day(3), created_at: daysAgoIso(4) },
+    // Dalila, Esha and Faraji: the three on Grade 5 work who have not got it.
+    { id: 'demo-a2', class_id: DEMO_CLASS_ID, title: 'Addition (up to 6 digits)', skill_ids: ['G5_ADDITION'],
+      student_ids: [idFor(3), idFor(4), idFor(5)], due_on: day(-1), created_at: daysAgoIso(8) },
   ];
+};
+
+/**
+ * The answers behind "Where they struggled", in the shape response_events
+ * stores them. Like the progress above, invented — and like it, read by the
+ * real summary code. The wrong answers are the ones these mistakes really
+ * produce: a dropped zero, a power of ten, a carry that slipped.
+ */
+export const demoEvents = () => {
+  const out = [];
+  let k = 0;
+  const log = (i, skill, days, answers) => answers.forEach(([submitted, expected], j) => {
+    out.push({
+      student_id: idFor(i), learner_id: null, skill_id: skill,
+      correct: submitted === expected, skipped: false,
+      submitted_value: submitted, expected_value: expected,
+      hints_used: submitted === expected ? 0 : 1,
+      created_at: new Date(Date.now() - days * 86400000 + (j + 1) * 60000 + (k++)).toISOString(),
+    });
+  });
+  // Place value, set for the whole class four days ago.
+  log(0, 'G4_PLACE_VALUE', 3, [['342', '3402'], ['3402', '3402'], ['506', '5006'], ['342', '3402'], ['7080', '7080'], ['61', '6001'], ['342', '3402']]);
+  log(1, 'G4_PLACE_VALUE', 2, [['2050', '2050'], ['250', '2050'], ['4300', '4300'], ['9', '9000'], ['1704', '1704']]);
+  log(2, 'G4_PLACE_VALUE', 1, [['3000', '300'], ['300', '300'], ['30', '300'], ['4000', '400'], ['5000', '500'], ['60', '600']]);
+  // Addition, set for Dalila, Esha and Faraji eight days ago.
+  log(3, 'G5_ADDITION', 6, [['4563', '5563'], ['5563', '5563'], ['12311', '12411'], ['8072', '8172'], ['9100', '9100'], ['4563', '5563']]);
+  log(4, 'G5_ADDITION', 7, [['12311', '12411'], ['7040', '7140'], ['12411', '12411'], ['3315', '3415'], ['6000', '6100']]);
+  return out;
 };
 
 /** On when the URL says ?demo=1, off on ?demo=0. Remembered for the session. */
