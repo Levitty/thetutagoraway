@@ -9,7 +9,7 @@ import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
 import { prereqsMet, getStatus, getRecommendedPath, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, strandsInReach, weakestStrand, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, withdrawMiss, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
-import { selectQuestion, isComplete as placementComplete, computePlacement, buildPlacementPool, sweepRemaining, roomForAnother, worthConfirming, nextToSettle, explainPlacement, MAX_QUESTIONS as DIAG_MAX } from './placement.js';
+import { selectQuestion, isComplete as placementComplete, computePlacement, buildPlacementPool, sweepRemaining, roomForAnother, worthConfirming, nextToSettle, explainPlacement, questionCap } from './placement.js';
 import { HorebBot } from './HorebBot.jsx';
 import { STRAND_BLOCK } from './strandBlocks.js';
 import { AvatarArt, AvatarPicker, isAvatarId, avatarFor } from '../avatars/Avatars.jsx';
@@ -740,10 +740,12 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     // while a slot is left to confirm it, so the last answer is never an
     // unconfirmed slip — the case that, in simulation, most often told a
     // parent about a step their child actually had.
+    // Forty questions, or fifty for a child missing most of their grade.
+    const DIAG_MAX = questionCap(newRecord, declared, pool);
     const confirmNext = !!newPending && worthConfirming(newRecord) && newAsked + sweepRemaining(newRecord, declared, pool) < DIAG_MAX;
     // The final ask (no confirm follows it) may use the slot held back for one.
     const nextSkill = confirmNext ? skill
-      : roomForAnother(newAsked) ? selectQuestion(newRecord, declared, pool, newBalances)
+      : roomForAnother(newAsked, newRecord, declared, pool) ? selectQuestion(newRecord, declared, pool, newBalances)
       : newAsked < DIAG_MAX ? nextToSettle(newRecord, pool) : null;
     const isLast = newAsked >= DIAG_MAX || !nextSkill
       || (!confirmNext && placementComplete(newRecord, declared, pool));
@@ -1339,7 +1341,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
           </p>
 
           <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-4 text-sm text-slate-600 space-y-2.5">
-            <p>One quick question on each topic of your grade, then a few more wherever something needs a closer look. Usually 20–40 in all.</p>
+            <p>One quick question on each topic of your grade, then a few more wherever something needs a closer look. Usually 20–40 in all, up to 50 if most of it is new to you.</p>
             <p>Meet something you haven’t learned? Tap <strong className="text-slate-800">“I haven’t learned this yet”</strong> — that’s a helpful answer, not a wrong one.</p>
             <p>Whatever we find, it’s only a starting line. Everything after it is growth.</p>
           </div>
@@ -1395,7 +1397,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     const asked = diagState.asked ?? record.length;
     const n = asked + 1;
     // Adaptive test: the length isn't fixed, so show progress toward the ceiling.
-    const pct = Math.min(96, Math.round((asked / DIAG_MAX) * 100));
+    const pct = Math.min(96, Math.round((asked / questionCap(record, progress.declaredGrade, diagPool())) * 100));
     // The guide keeps the mood light — this must never feel like an exam. No
     // grade labels on questions (an older child rebuilding foundations should
     // never see "Grade 1" stamped on their screen), no red X, no scores.

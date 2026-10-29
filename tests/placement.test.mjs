@@ -15,7 +15,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { getNextToLearn, getEstimatedGradeLevel } from '../src/ai-tutor/adaptiveEngine.js';
 import { SKILLS, getPostRequisites, getPrerequisiteChain, getPostRequisiteChain } from '../src/ai-tutor/knowledgeGraph.js';
-import { selectQuestion, computePlacement, buildPlacementPool, roomForAnother, nextToSettle, STRETCH_PROBE } from '../src/ai-tutor/placement.js';
+import { selectQuestion, computePlacement, buildPlacementPool, roomForAnother, nextToSettle, questionCap, STRETCH_PROBE } from '../src/ai-tutor/placement.js';
 import { propagateCredit, processDiagnosticResults } from '../src/ai-tutor/diagnosticEngine.js';
 
 const TOP = 8;   // the recommended path only ever shows a handful
@@ -174,7 +174,7 @@ const sitCheck = (declared, knows) => {
   const asked = [];
   for (;;) {
     const q = selectQuestion(asked, declared, CBC_POOL);
-    if (!q || !roomForAnother(asked.length)) break;
+    if (!q || !roomForAnother(asked.length, asked, declared, CBC_POOL)) break;
     // The final ask on the headline miss: this child answers it the same way.
     if (q.settle) { asked.find(a => a.id === q.id).settled = true; continue; }
     asked.push({ id: q.id, grade: q.grade, strand: q.strand, unit: q.unit, probeFor: q.probeFor, hunt: q.hunt, correct: knows(q) });
@@ -270,24 +270,19 @@ test('a deep gap is asked directly instead of being chased one grade at a time',
   assert.ok(asked.some(a => a.hunt), 'no shared missing step was asked');
 });
 
-test('a child well ahead of their class is placed where they actually are', () => {
-  // Placement used to stretch exactly one grade above the declared one and
-  // stop, so this child COULD NOT be placed above Grade 6 however well they
-  // answered. On a population of able learners that put 29% in the right
-  // place and started 32% of them on a skill they had already mastered —
-  // which is the "why is my Grade 5 being asked this?" complaint from the
-  // other end: the check decided they were younger than they are.
-  const asked = sitCheck(5, (q) => SKILLS[q.id].grade <= 8);
-  const placed = computePlacement(asked, 5, CBC_POOL);
-  assert.ok(placed >= 7, `a Grade 5 working at Grade 8 was placed at ${placed}`);
+test('the check places a child at most one grade above the one they declared', () => {
+  // A climb that let each cleared stretch earn the next put a Grade 6 child
+  // who knows everything at Grade 12, on surds and logarithms. One grade up is
+  // the ceiling; daily practice moves an able child on from there.
+  const asked = sitCheck(5, (q) => SKILLS[q.id].grade <= 9);
+  assert.equal(computePlacement(asked, 5, CBC_POOL), 6);
+  assert.ok(asked.every(a => a.grade <= 6), 'a question was asked above Grade 6');
 });
 
-test('the climb still stops where the evidence stops', () => {
-  // The mirror risk of letting it climb: it must not run away up the grades
-  // on a child who cannot do the work. One who holds only to Grade 6 is
-  // placed at 6 or 7, never at 8.
-  const asked = sitCheck(5, (q) => SKILLS[q.id].grade <= 6);
-  const placed = computePlacement(asked, 5, CBC_POOL);
-  assert.ok(placed <= 7, `a Grade 5 working at Grade 6 was placed at ${placed}`);
-  assert.ok(placed >= 6, `a Grade 5 working at Grade 6 was placed at ${placed}`);
+test('a child missing most of their grade gets a longer check, and no one else does', () => {
+  // Forty questions ran out before the check could show the grade below holds.
+  const behind = sitCheck(5, q => SKILLS[q.id].grade <= 3);
+  assert.ok(behind.length > 40 && behind.length <= 50, `asked ${behind.length}`);
+  const onGrade = sitCheck(5, q => SKILLS[q.id].grade <= 5);
+  assert.equal(questionCap(onGrade, 5, CBC_POOL), 40);
 });

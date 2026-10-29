@@ -144,6 +144,8 @@ const wrongType = (p) => {
 // selector has nothing left or the cap is reached.
 const POOL = PL.buildPlacementPool ? PL.buildPlacementPool(SKILLS, 'cbc') : LIST;
 const CAP = PL.MAX_QUESTIONS;
+// The per-child ceiling, as the app computes it (longer for a child missing most of their grade).
+const capFor = (record, declared) => (PL.questionCap ? PL.questionCap(record, declared, POOL) : CAP);
 function runCheck(child) {
   const declared = child.declared;
   let balances = {}, record = [];
@@ -187,13 +189,13 @@ function runCheck(child) {
       balances = propagateCredit(balances, current.id, correct, 1.0, ctx);
       record = [...record, rec];
       // Same guard as the app: a confirm never pushes the declared sweep past the cap.
-      const room = (PL.sweepRemaining ? asked + PL.sweepRemaining(record, declared, POOL) < CAP : asked < CAP)
+      const room = (PL.sweepRemaining ? asked + PL.sweepRemaining(record, declared, POOL) < capFor(record, declared) : asked < CAP)
         && (!PL.worthConfirming || PL.worthConfirming(record));
       if (CONFIRM && !correct && !skip && room) { pending = before; continue; }
     }
     // Same as the app: hold the last slot back so a wrong answer can be confirmed.
-    current = !PL.roomForAnother || PL.roomForAnother(asked) ? PL.selectQuestion(record, declared, POOL, balances)
-      : PL.nextToSettle && asked < CAP ? PL.nextToSettle(record, POOL) : null;
+    current = !PL.roomForAnother || PL.roomForAnother(asked, record, declared, POOL) ? PL.selectQuestion(record, declared, POOL, balances)
+      : PL.nextToSettle && asked < capFor(record, declared) ? PL.nextToSettle(record, POOL) : null;
   }
   const placementGrade = PL.computePlacement(record, declared, POOL);
   const progress = { declaredGrade: declared, placementGrade, diagnosed: true, skills: processDiagnosticResults(balances, ctx) };
