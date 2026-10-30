@@ -1,0 +1,7 @@
+# Her customers' names and prices never enter git.
+data/
+out/
+*.xlsx
+*.docx
+*.xls
+*.csv
