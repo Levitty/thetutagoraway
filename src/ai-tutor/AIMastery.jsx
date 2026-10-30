@@ -9,7 +9,7 @@ import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
 import { prereqsMet, getStatus, getRecommendedPath, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, strandsInReach, weakestStrand, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, withdrawMiss, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
-import { selectQuestion, isComplete as placementComplete, computePlacement, buildPlacementPool, sweepRemaining, roomForAnother, worthConfirming, nextToSettle, explainPlacement, questionCap } from './placement.js';
+import { selectQuestion, computePlacement, buildPlacementPool, nextAfterAnswer, explainPlacement, questionCap } from './placement.js';
 import { HorebBot } from './HorebBot.jsx';
 import { STRAND_BLOCK } from './strandBlocks.js';
 import { AvatarArt, AvatarPicker, isAvatarId, avatarFor } from '../avatars/Avatars.jsx';
@@ -751,14 +751,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     // unconfirmed slip — the case that, in simulation, most often told a
     // parent about a step their child actually had.
     // Forty questions, or fifty for a child missing most of their grade.
-    const DIAG_MAX = questionCap(newRecord, declared, pool);
-    const confirmNext = !!newPending && worthConfirming(newRecord) && newAsked + sweepRemaining(newRecord, declared, pool) < DIAG_MAX;
     // The final ask (no confirm follows it) may use the slot held back for one.
-    const nextSkill = confirmNext ? skill
-      : roomForAnother(newAsked, newRecord, declared, pool) ? selectQuestion(newRecord, declared, pool, newBalances)
-      : newAsked < DIAG_MAX ? nextToSettle(newRecord, pool) : null;
-    const isLast = newAsked >= DIAG_MAX || !nextSkill
-      || (!confirmNext && placementComplete(newRecord, declared, pool));
+    // One skill is asked at most three times (placement.js, nextAfterAnswer).
+    const { next: nextSkill } = nextAfterAnswer({ skill, total: newAsked, record: newRecord, pending: newPending, declared, pool, balances: newBalances });
+    const isLast = !nextSkill;
 
     // On the final question, compute and PERSIST the finished state immediately —
     // before the 800ms feedback pause — so navigating away can never lose it.

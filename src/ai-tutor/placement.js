@@ -372,6 +372,33 @@ export const questionCap = (asked, declared, pool) => {
 export const isComplete = (asked, declared, pool) =>
   asked.length >= questionCap(asked, declared, pool) || selectQuestion(asked, declared, pool) == null;
 
+/**
+ * What the check asks after an answer: the same skill once more to confirm a
+ * fresh miss, a new question while a slot is left, or the final ask on the
+ * missing step about to be named. `total` counts every question asked so far,
+ * this one included; `record` and `pending` are the state after this answer.
+ * Returns { next, confirm, cap }, with next null when the check is over.
+ *
+ * One skill is asked at most three times: once, once to confirm a miss and
+ * once as the final ask. Anything that would serve it again ends the check
+ * instead of looping (F21, 25 Oct: a demo run showed one angle question fifty
+ * times; a child must never be held on one topic).
+ */
+export const nextAfterAnswer = ({ skill, total, record, pending, declared, pool, balances = {} }) => {
+  const cap = questionCap(record, declared, pool);
+  const confirm = !!pending && pending.id === skill?.id && worthConfirming(record)
+    && total + sweepRemaining(record, declared, pool) < cap;
+  if (confirm) return { next: skill, confirm, cap };
+  const fresh = roomForAnother(total, record, declared, pool);
+  const next = fresh ? selectQuestion(record, declared, pool, balances)
+    : total < cap ? nextToSettle(record, pool) : null;
+  const row = next && record.find(r => r.id === next.id);
+  // A new question never repeats an asked skill; a final ask happens once.
+  const repeat = !!row && (row.settled || (fresh && !next.settle));
+  const over = total >= cap || !next || repeat || isComplete(record, declared, pool);
+  return { next: over ? null : next, confirm: false, cap };
+};
+
 // ---------------------------------------------------------------------------
 // The placement itself.
 //
@@ -550,6 +577,6 @@ export const explainPlacement = (asked, declared, pool) => {
 
 export default {
   CLEAR, STRETCH_GATE, BASE_QUESTIONS, MAX_QUESTIONS, STRUGGLING, questionCap, STRETCH_PROBE, STRETCH_MISSES, MAX_PROBE_DEPTH,
-  buildPlacementPool, gradesIn, unitsAt, nextToSettle, MAX_HUNTS, gradeAccuracy, sweepRemaining, roomForAnother, worthConfirming,
+  buildPlacementPool, gradesIn, unitsAt, nextToSettle, nextAfterAnswer, MAX_HUNTS, gradeAccuracy, sweepRemaining, roomForAnother, worthConfirming,
   selectQuestion, isComplete, computePlacement, explainPlacement,
 };
