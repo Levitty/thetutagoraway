@@ -304,10 +304,22 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   const [joinStatus, setJoinStatus] = useState(null); // null | 'joining' | 'ok' | error string
 
   const joinAllowed = canJoinClass({ userId, guest, activeLearner });
+  // A parent's child cannot join a class, but can be linked to their school with
+  // the code on the slip the school sends home (school practice, 2 Nov 2026).
+  const linkAllowed = !!(userId && !guest && activeLearner);
   const joinClass = async () => {
     const code = joinCode.trim();
-    if (!code || !joinAllowed) return;
+    if (!code || !(joinAllowed || linkAllowed)) return;
     setJoinStatus('joining');
+    if (linkAllowed) {
+      const { data, error } = await supabase.rpc('link_school_learner', { p_child: activeLearner.id, p_code: code });
+      if (error || !data?.success) { setJoinStatus(data?.error || 'Could not link. Check the code on the slip.'); return; }
+      setJoinStatus('ok');
+      setJoinCode('');
+      loadAssignments();
+      setTimeout(() => { setShowJoin(false); setJoinStatus(null); }, 1800);
+      return;
+    }
     const { error } = await supabase.rpc('join_class', { p_code: code });
     if (error) {
       setJoinStatus(error.message || 'Could not join');
@@ -330,6 +342,15 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   // 404 off the dashboard's load path.
   const [assignments, setAssignments] = useState([]);
   const loadAssignments = useCallback(() => {
+    // A parent's child: the practice their school set from its exam results,
+    // once the parent has linked them with the school's code. Same shape as an
+    // assignment (title, skill_ids, due_on), plus the school's name.
+    if (userId && !guest && activeLearner) {
+      supabase.rpc('my_school_practice', { p_child: activeLearner.id })
+        .then(({ data, error }) => setAssignments(error ? [] : (data || [])))
+        .then(undefined, () => setAssignments([]));
+      return;
+    }
     if (!userId || guest || activeLearner) { setAssignments([]); return; }
     const cols = 'id, class_id, title, skill_ids, due_on';
     // student_ids arrives with the 28 Oct migration; without it every
@@ -2255,8 +2276,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             <Icon name={icon} className="w-[21px] h-[21px]" />
           </button>
         ))}
-        {joinAllowed && (
-        <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} title="Join a class" aria-label="Join a class"
+        {(joinAllowed || linkAllowed) && (
+        <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} title={linkAllowed ? 'Link to your school' : 'Join a class'} aria-label={linkAllowed ? 'Link to your school' : 'Join a class'}
           className="w-12 h-12 rounded-[15px] flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-slate-900 transition-colors text-xl leading-none">+</button>
         )}
         <span className="flex-1 min-h-[16px]" />
@@ -2627,7 +2648,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                       return (
                         <div key={a.id} className="rounded-2xl px-3 py-3 bg-[#FFF0F5]">
                           <div className="flex items-baseline justify-between gap-2.5">
-                            <span className="text-[15px] font-extrabold text-slate-900 leading-tight">{a.title}</span>
+                            <span className="text-[15px] font-extrabold text-slate-900 leading-tight">{a.title}{a.school && <span className="block text-[11px] font-semibold text-slate-500 mt-0.5">From {a.school}</span>}</span>
                             <span className={`text-[11px] font-bold shrink-0 ${a.due.overdue ? 'text-[#C2255C]' : a.due.tone === 'urgent' ? 'text-amber-700' : 'text-slate-500'}`}>
                               {a.due.text}
                             </span>
@@ -2780,14 +2801,14 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               {/* ===== RIGHT COLUMN — the glanceable sidebar ===== */}
               <div className="space-y-4">
               {/* Join a class — surfaced from the sidebar's "+ Join a class" */}
-              {showJoin && joinAllowed && (
+              {showJoin && (joinAllowed || linkAllowed) && (
                 <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
                   {joinStatus === 'ok' ? (
-                    <p className="text-sm text-[#5a7a3a] font-medium">Joined. Your teacher can now see your progress.</p>
+                    <p className="text-sm text-[#5a7a3a] font-medium">{linkAllowed ? 'Linked. Practice the school sets shows here, and the school sees only whether each skill was mastered.' : 'Joined. Your teacher can now see your progress.'}</p>
                   ) : (
                     <>
-                      <p className="text-sm font-semibold text-slate-800 mb-1">Join your class</p>
-                      <p className="text-xs text-slate-500 mb-2.5">Enter the code from your teacher:</p>
+                      <p className="text-sm font-semibold text-slate-800 mb-1">{linkAllowed ? 'Link to your school' : 'Join your class'}</p>
+                      <p className="text-xs text-slate-500 mb-2.5">{linkAllowed ? 'Type the code on the slip from school, for example WSL-K7QM2XPA-H3RT:' : 'Enter the code from your teacher:'}</p>
                       <div className="flex gap-2">
                         <input
                           value={joinCode}
