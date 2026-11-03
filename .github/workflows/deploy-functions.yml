@@ -40,6 +40,7 @@ on:
           - send-push
           - verify-payment
           - verify-paystack
+          - rocket-guide
 
 env:
   PROJECT_REF: dlqbiayaqjucxsvbesms
