@@ -45,6 +45,7 @@ const LazySpreadsheet = named(() => import('./Spreadsheet.jsx'), 'Spreadsheet');
 const LazyConsultingPage = named(() => import('./ConsultingPage.jsx'), 'ConsultingPage');
 const LazySchoolsPage = lazy(() => import('./SchoolsPage.jsx'));
 const LazyClubsPage = lazy(() => import('./ClubsPage.jsx'));
+const LazyRocketChallenge = named(() => import('./rocket/RocketChallenge.jsx'), 'RocketChallenge');
 
 const route = (Lazy) => {
   const Route = (props) => (
@@ -61,3 +62,4 @@ export const Spreadsheet = route(LazySpreadsheet);
 export const ConsultingPage = route(LazyConsultingPage);
 export const SchoolsPage = route(LazySchoolsPage);
 export const ClubsPage = route(LazyClubsPage);
+export const RocketChallenge = route(LazyRocketChallenge);
