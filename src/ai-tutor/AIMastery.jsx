@@ -41,6 +41,7 @@ import { StepsQuestion } from './StepsQuestion.jsx';
 import { speak, canSpeak, stopSpeaking, questionScript } from './speech.js';
 import { canPractice } from '../subscription.js';
 import { canJoinClass } from './classRows.js';
+import { rocketTeamsFor } from '../rocket/rocketData.js';
 
 // How the child's typing was read ("x^9" shows as x⁹, "5*x" as 5x), so they can
 // see the checker understood them before they press Check (feedback F3).
@@ -108,7 +109,7 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 // the check finishes.
 // The strand palette is shared with the teacher's board — see strandBlocks.js.
 
-export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAvatar = null, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, autoStartCurriculum = null, onDiagnosed = null }) {
+export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAvatar = null, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, autoStartCurriculum = null, onDiagnosed = null, autoStartSkill = null, autoStartLearnerId = null, onRocket = null }) {
   useHorebLook();
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
   const [progress, setProgress] = useState(defaultProgress);
@@ -180,6 +181,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
       .then(({ data }) => setLearners(data || []));
   }, [userId]);
   const learnerBase = activeLearner ? `${userId}_c${activeLearner.id}` : userId;
+  // Rocket Challenge seats on this account (empty until the migration runs).
+  const [rocketSeats, setRocketSeats] = useState([]);
+  useEffect(() => { if (onRocket && userId) rocketTeamsFor(userId).then(setRocketSeats); }, [userId, !!onRocket]);
+  const rocketSeat = rocketSeats.find(r => (activeLearner ? r.child_id === activeLearner.id : !r.child_id)) || (activeLearner ? null : rocketSeats[0]) || null;
+
   const learnerId = activeLearner?.id || null;
 
   // The figure a learner picked for themselves. Changeable from inside HOREB
@@ -823,6 +829,22 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     autoStarted.current = true;
     startDiagnostic();
   }, [autoStartGrade, autoStartCurriculum, loading, view, progress.declaredGrade, progress.curriculum, curriculumChosen]);
+
+  // Rocket Challenge: "the maths behind it" opens HOREB on that skill, as the
+  // child on the team. Only once, only from the home screen (a learner who has
+  // not done the check yet does that first), and only a skill this subject has.
+  useEffect(() => {
+    if (!autoStartLearnerId || lockedLearner || activeLearner?.id === autoStartLearnerId) return;
+    const c = learners.find(l => l.id === autoStartLearnerId);
+    if (c) setActiveLearner(c);
+  }, [autoStartLearnerId, learners]);
+  const rocketStarted = useRef(false);
+  useEffect(() => {
+    if (!autoStartSkill || rocketStarted.current || loading || view !== 'home' || !SKILLS[autoStartSkill]) return;
+    if (autoStartLearnerId && !lockedLearner && activeLearner?.id !== autoStartLearnerId) return;
+    rocketStarted.current = true;
+    startLesson(autoStartSkill);
+  }, [autoStartSkill, autoStartLearnerId, loading, view, activeLearner?.id]);
 
   // ==================== LESSON (KP-BASED) ====================
 
@@ -2611,6 +2633,19 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   Nothing is submitted and nothing is ticked off by hand: the
                   bar fills as they master the skill in ordinary practice,
                   which is also exactly what their teacher sees. */}
+              {/* ===== ROCKET CHALLENGE =====
+                  Only for a learner on a team. Project work somebody else is
+                  waiting on, so it sits with "Set by your teacher". */}
+              {rocketSeat && onRocket && (
+                <button onClick={() => onRocket()} className="w-full text-left rounded-3xl p-5 bg-[#16161A] text-white flex items-center gap-4">
+                  <span className="flex-1 min-w-0">
+                    <span className="block text-[11.5px] font-bold tracking-[.08em] uppercase text-[#FFC93C]">Rocket Challenge</span>
+                    <span className="block text-[18px] font-extrabold leading-tight mt-1">Your team's next step is waiting</span>
+                  </span>
+                  <span className="shrink-0 h-11 px-5 rounded-full bg-amber-400 text-slate-900 font-extrabold text-[15px] inline-flex items-center">Open</span>
+                </button>
+              )}
+
               {setWork.length > 0 && (
                 <div className="bg-white border border-slate-200 shadow-sm rounded-3xl overflow-hidden">
                   <div className="px-5 pt-4 pb-1 flex items-baseline justify-between gap-3">

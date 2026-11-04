@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { supabase } from './supabase';
 // Whole screens, each loaded on demand behind its own Suspense boundary. The
 // call sites below are unchanged; only where these names come from has moved.
-import { VideoRoom, AIMastery, TeacherDashboard, Writing, Spreadsheet, ConsultingPage, SchoolsPage, ClubsPage } from './lazyRoutes.jsx';
+import { VideoRoom, AIMastery, TeacherDashboard, Writing, Spreadsheet, ConsultingPage, SchoolsPage, ClubsPage, RocketChallenge } from './lazyRoutes.jsx';
 import { SKILLS as AI_SKILLS } from './ai-tutor/knowledgeGraph.js';
 import { useLessonNotes, LessonNotesModal } from './lesson/LessonNotes.jsx';
 import { INTEREST_CATEGORIES, CATEGORY_BY_KEY, categoryLabel, categoryEmoji } from './groupClassCategories.js';
@@ -58,7 +58,7 @@ const ROUTE_SEO = {
   teach:      { t: "Become a Tutor on Tutagora", d: "Teach online, set your own rate, and reach students across Kenya. Apply to become a verified Tutagora tutor.", path: '/teach' },
   consulting: { t: "Education Consulting | Tutagora", d: "Education consulting and advisory from the Tutagora team.", path: '/consulting' },
 };
-const NOINDEX_ROUTES = new Set(['admin', 'dashboard', 'spreadsheet', 'classroom', 'my-lessons', 'native-home', 'native-welcome', 'check-run', 'check-result']);
+const NOINDEX_ROUTES = new Set(['rocket', 'admin', 'dashboard', 'spreadsheet', 'classroom', 'my-lessons', 'native-home', 'native-welcome', 'check-run', 'check-result']);
 
 const applyRouteSEO = (page) => {
   if (IS_NATIVE || typeof document === 'undefined') return;
@@ -7373,6 +7373,7 @@ function AppInner() {
     if (path === 'family') return 'family';
     if (path === 'check' || path === 'check-result') return path;
     if (path === 'privacy') return 'privacy';
+    if (path === 'rocket') return 'rocket';
     if (path.startsWith('t/')) return 'tablet-link';
     return 'home';
   });
@@ -7401,6 +7402,9 @@ function AppInner() {
   const [familyDevice, setFamilyDevice] = useState(() => getFamilyDevice());
   const [parentUnlocked, setParentUnlocked] = useState(false);
   const [planChild, setPlanChild] = useState(null); // child whose saved plan is open
+  // Rocket Challenge: "the maths behind it" opens HOREB on that skill, for that child.
+  const [rocketPractise, setRocketPractise] = useState(null);
+  useEffect(() => { if (page !== 'ai' && page !== 'rocket') setRocketPractise(null); }, [page]);
   const [showParentGate, setShowParentGate] = useState(false);
   const isFamilyTablet = !!(familyDevice && auth.user && !auth.user.is_anonymous && familyDevice.parentId === auth.user.id);
   const [showPrivacyBanner, setShowPrivacyBanner] = useState(() => !IS_NATIVE && !localStorage.getItem('tutagora_privacy_accepted'));
@@ -7498,6 +7502,7 @@ function AppInner() {
       else if (path === 'handover') setPage('handover');
       else if (path === 'family') setPage('family');
       else if (path === 'privacy') setPage('privacy');
+      else if (path === 'rocket') setPage('rocket');
       else if (path === 'check' || path === 'check-result') setPage(path);
       else setPage('home');
       setSelectedTutor(null);
@@ -7747,12 +7752,24 @@ function AppInner() {
     );
   }
 
+  // HOREB Rocket Challenge: project mode. /rocket?demo=1 shows the example
+  // challenge (invented data, nothing saved), and is what a signed-out visitor sees.
+  if (page === 'rocket') {
+    return (
+      <RocketChallenge userId={auth.user?.id} isAdmin={isAdmin}
+        onBack={() => handleNavigate(IS_NATIVE ? 'native-home' : auth.user ? 'ai' : 'home')}
+        onPractise={auth.user ? (skillId, childId) => { setRocketPractise({ skillId, childId }); handleNavigate('ai'); } : null} />
+    );
+  }
+
   // AI Tutor
   if (page === 'ai') {
     return (
       <>
         <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} onFindTutor={() => handleNavigate('tutors')}
-          profileAvatar={auth.profile?.avatar} subscription={auth.subscription} onPaywall={() => setShowPaywall(true)} />
+          profileAvatar={auth.profile?.avatar} subscription={auth.subscription} onPaywall={() => setShowPaywall(true)}
+          autoStartSkill={rocketPractise?.skillId || null} autoStartLearnerId={rocketPractise?.childId || null}
+          onRocket={() => { setRocketPractise(null); handleNavigate('rocket'); }} />
         {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
       </>
     );
