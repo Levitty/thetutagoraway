@@ -41,6 +41,7 @@ on:
           - verify-payment
           - verify-paystack
           - rocket-guide
+          - wa-sign-in
 
 env:
   PROJECT_REF: dlqbiayaqjucxsvbesms
@@ -73,10 +74,12 @@ jobs:
       # carries the safeguarding screen, so the copy that protects a child must
       # be the copy the tests cover.
       - name: Regenerate and verify the generated function
-        if: inputs.function == 'mark-composition' || inputs.function == 'weekly-report'
+        if: inputs.function == 'mark-composition' || inputs.function == 'weekly-report' || inputs.function == 'wa-sign-in'
         run: |
           if [ "${{ inputs.function }}" = "mark-composition" ]; then
             npm run build:marking-fn
+          elif [ "${{ inputs.function }}" = "wa-sign-in" ]; then
+            npm run build:wa-sign-in-fn
           else
             npm run build:report-fn
           fi
@@ -105,7 +108,13 @@ jobs:
             echo "::error::SUPABASE_ACCESS_TOKEN is not set. Add it under Settings → Secrets and variables → Actions."
             exit 1
           fi
-          supabase functions deploy "${{ inputs.function }}" --project-ref "$PROJECT_REF"
+          # wa-sign-in is called by Tutagora's server (signed with its own secret) and by a signed-out
+          # browser opening a link, so it takes no Supabase login.
+          if [ "${{ inputs.function }}" = "wa-sign-in" ]; then
+            supabase functions deploy wa-sign-in --project-ref "$PROJECT_REF" --no-verify-jwt
+          else
+            supabase functions deploy "${{ inputs.function }}" --project-ref "$PROJECT_REF"
+          fi
 
       # Record WHAT was deployed, so scripts/function-drift.mjs can tell later
       # that the running copy is no longer this code. The seven-week gap
