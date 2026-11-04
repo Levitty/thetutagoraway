@@ -19,7 +19,8 @@
     "test:content": "node engine/scripts/quality_gate.mjs",
     "audit:drift": "node scripts/function-drift.mjs",
     "build:rocket-fn": "node scripts/build-rocket-guide-fn.mjs",
-    "redteam:rocket": "node scripts/rocket-redteam.mjs"
+    "redteam:rocket": "node scripts/rocket-redteam.mjs",
+    "build:wa-sign-in-fn": "node scripts/build-wa-sign-in-fn.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.2",

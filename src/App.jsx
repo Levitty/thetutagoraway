@@ -22,6 +22,7 @@ import { HandOver, StudentHome, PinGate, WhoIsPractising, FamilyTabletSetup } fr
 import { TabletLinkSheet, TabletLinkPage } from './family/ChildTablet.jsx';
 import { getStudentMode, startStudentMode, endStudentMode, isOlderLearner, gradeNumber, hasPin, getFamilyDevice, clearFamilyDevice } from './family/studentMode.js';
 import { FamilyPage, FamilyCards } from './family/FamilyPage.jsx';
+import { redeemWhatsAppLink } from './auth/waSignInClient.js';
 import './site/site.css';
 import SiteHome from './site/Home.jsx';
 import { TutorList, TutorProfile } from './site/Tutors.jsx';
@@ -776,6 +777,8 @@ const useAuth = () => {
   const [profile, setProfile] = useState(null);
   const [subscription, setSubscription] = useState(null); // paywall entitlement
   const [loading, setLoading] = useState(true);
+  // A sign-in link from the WhatsApp line that did not work (expired, used): said once, on the sign-in sheet.
+  const [waSignInError, setWaSignInError] = useState('');
 
   // The last REAL pass row this device saw, per account. Offline, the pass is
   // judged on its pro_until — a safe lower bound, since a pass is only ever
@@ -849,8 +852,13 @@ const useAuth = () => {
   };
 
   useEffect(() => {
+    // A sign-in link from WhatsApp (/dashboard#wa=...) is swapped for a session first.
+    const waLink = typeof window === 'undefined' ? Promise.resolve(null) : redeemWhatsAppLink(supabase, window.location, window.history);
     // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    waLink.then((wa) => {
+      if (wa && !wa.ok) setWaSignInError(wa.message);
+      return supabase.auth.getSession();
+    }).then(({ data: { session } }) => {
       setUser(session?.user ?? null);
       if (session?.user) fetchProfile(session.user.id);
       else setLoading(false);
@@ -1010,7 +1018,7 @@ const useAuth = () => {
     setSubscription(null);
   };
 
-  return { user, profile, subscription, loading, signUp, signIn, signInWithGoogle, resetPassword, signOut, refetchProfile: () => user && fetchProfile(user.id), refetchSubscription: () => user && fetchSubscription(user.id, profile?.role) };
+  return { user, profile, subscription, loading, waSignInError, clearWaSignInError: () => setWaSignInError(''), signUp, signIn, signInWithGoogle, resetPassword, signOut, refetchProfile: () => user && fetchProfile(user.id), refetchSubscription: () => user && fetchSubscription(user.id, profile?.role) };
 };
 
 // ============ DATABASE HOOKS ============
@@ -1216,7 +1224,12 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
   const [success, setSuccess] = useState('');
   const [view, setView] = useState(mode); // 'login', 'register', 'forgot'
 
-  React.useEffect(() => { setView(mode); setError(''); setSuccess(''); }, [mode]);
+  React.useEffect(() => {
+    setView(mode); setSuccess('');
+    // A WhatsApp sign-in link that did not work is said here once, then forgotten.
+    setError(onAuth?.waSignInError || '');
+    if (onAuth?.waSignInError) onAuth.clearWaSignInError?.();
+  }, [mode]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const dbRole = form.role === 'tutor' ? 'tutor' : 'student';
   const accountType = form.role;
@@ -7386,6 +7399,10 @@ function AppInner() {
   // reloads and shows the new child straight away.
   const [dashKey, setDashKey] = useState(0);
   const [showAuth, setShowAuth] = useState(null);
+  // A WhatsApp sign-in link that failed: open the sign-in sheet so the password is one tap away.
+  useEffect(() => {
+    if (auth.waSignInError && !auth.user) setShowAuth('login');
+  }, [auth.waSignInError, auth.user]);
   const [selectedTutor, setSelectedTutor] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [activeLesson, setActiveLesson] = useState(null);
