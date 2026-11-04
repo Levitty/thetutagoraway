@@ -24,6 +24,7 @@ import { LEVELS, SAFETY_RULES, JUDGING, UNDECIDED, PRESSURE_MAX_BAR, levelByN, s
 import { teamProgress, validateEntry, logSummary, LOG_FIELDS } from './progress.js';
 import { rocketApi } from './rocketData.js';
 import { exampleApi } from './example.js';
+import { TeacherShell, SuggestPanel, Pill } from '../ai-tutor/TeacherScreens.jsx';
 
 // ------------------------------------------------------------------ helpers
 const fmtDay = (iso) => {
@@ -83,7 +84,7 @@ const ExampleBanner = () => (
 );
 
 // ------------------------------------------------------------------ shell
-export function RocketChallenge({ userId, isAdmin = false, onBack, onPractise }) {
+export function RocketChallenge({ userId, isAdmin = false, onBack, onPractise, onNavigate, teacherName }) {
   useHorebLook();
   const params = useMemo(() => new URLSearchParams(typeof window !== 'undefined' ? window.location.search : ''), []);
   const demo = params.get('demo') === '1' || !userId;
@@ -132,6 +133,27 @@ export function RocketChallenge({ userId, isAdmin = false, onBack, onPractise })
   ].filter(Boolean) : [];
   const activeTab = view?.name === 'level' || view?.name === 'log' ? 'home' : view?.name === 'team' ? (roles?.admin && !roles.staff.length ? 'organiser' : 'teacher') : view?.name;
 
+  // A teacher (staff, not a family) sees the challenge inside the teacher
+  // screens' frame, beside their classes, as approved on 4 Nov.
+  if (roles && roles.staff.length && !roles.family.length && (view?.name === 'teacher' || view?.name === 'team')) {
+    const onNav = (id) => {
+      if (id === 'rocket') { go({ name: 'teacher' }); return; }
+      if (onNavigate) onNavigate('classroom'); else window.location.assign('/classroom');
+    };
+    return (
+      <TeacherShell active="rocket" onNav={onNav} teacherName={teacherName || (api.isExample ? 'Mrs Wairimu' : 'Teacher')}
+        teacherLine="Rocket Challenge" demoNote={api.isExample ? 'Example data: invented teams, nothing is saved' : null}>
+        {err && <Card><p className="text-[14px] text-[#C2255C] font-semibold">{err}</p></Card>}
+        {view.name === 'teacher' && <TeacherView teams={roles.staff} go={go} now={api.now ? Date.parse(api.now) : Date.now()} />}
+        {view.name === 'team' && team && (
+          <div className="space-y-4">
+            <TeamDetail team={team} api={api} reload={reload} challenge={data.challenge} canOpen={roles.admin || roles.staff.some((t) => t.id === team.id)} back={() => go({ name: 'teacher' })} initialTab={view.tab || params.get('tab') || 'chat'} />
+          </div>
+        )}
+      </TeacherShell>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#eef0f2] text-slate-900">
       <div className="max-w-[1180px] mx-auto px-4 lg:px-8 pt-4 pb-16 space-y-4">
@@ -160,8 +182,8 @@ export function RocketChallenge({ userId, isAdmin = false, onBack, onPractise })
         {data && view?.name === 'level' && team && <LevelScreen team={team} level={view.level} api={api} me={me} reload={reload} go={go} onPractise={onPractise} />}
         {data && view?.name === 'log' && team && <DesignLog team={team} api={api} reload={reload} go={go} canAdd />}
         {data && view?.name === 'parent' && team && <ParentView team={team} api={api} me={me} reload={reload} />}
-        {data && view?.name === 'teacher' && <TeacherView teams={roles.staff} go={go} />}
-        {data && view?.name === 'team' && team && <TeamDetail team={team} api={api} reload={reload} challenge={data.challenge} canOpen={roles.admin || roles.staff.some((t) => t.id === team.id)} back={() => go({ name: roles.staff.length ? 'teacher' : 'organiser' })} initialTab={params.get('tab') || 'chat'} />}
+        {data && view?.name === 'teacher' && <TeacherView teams={roles.staff} go={go} now={api.now ? Date.parse(api.now) : Date.now()} />}
+        {data && view?.name === 'team' && team && <TeamDetail team={team} api={api} reload={reload} challenge={data.challenge} canOpen={roles.admin || roles.staff.some((t) => t.id === team.id)} back={() => go({ name: roles.staff.length ? 'teacher' : 'organiser' })} initialTab={view.tab || params.get('tab') || 'chat'} />}
         {data && view?.name === 'organiser' && <OrganiserView data={data} api={api} reload={reload} go={go} />}
         {data && view?.name === 'join' && <JoinTeam api={api} kids={data.children} reload={async () => { setView(null); await reload(); }} />}
       </div>
@@ -668,52 +690,96 @@ function ParentView({ team, api, me, reload }) {
 }
 
 // ------------------------------------------------------------------ teacher
-function TeamRow({ t, onOpen }) {
+// The teacher's teams, in the teacher screens' look (4 Nov 2026): one row per
+// team with its five levels as dots, and HOREB's one suggestion beside them,
+// with the reason and where it came from. The only signal used is the one the
+// gate already rests on: when the team last logged a test or wrote.
+const QUIET_TEAM_DAYS = 4;
+const daysSince = (iso, now = Date.now()) => (iso ? Math.max(0, Math.floor((now - Date.parse(iso)) / 86400000)) : null);
+const isToday = (iso, now = Date.now()) => !!iso && new Date(iso).toDateString() === new Date(now).toDateString();
+
+function TeamRow({ t, flag, onOpen, now }) {
   const p = teamProgress(t.log, { openedLevel: t.opened_level });
-  const l = levelByN(p.level);
-  const s = logSummary(t.log);
-  const used = t.spend?.cap_usd ? Math.round((Number(t.spend.spent_usd || 0) / Number(t.spend.cap_usd)) * 100) : 0;
+  const lastTest = [...t.log].map((e) => e.created_at).filter(Boolean).sort().pop() || null;
+  const grades = [...new Set(t.members.map((m) => m.grade).filter(Boolean))];
   return (
-    <button onClick={onOpen} className="w-full text-left bg-white rounded-3xl p-4 lg:p-5 flex items-center gap-4 hover:ring-2 hover:ring-slate-200">
-      <span className="w-12 h-12 rounded-2xl shrink-0 flex items-center justify-center text-[17px] font-extrabold" style={{ background: l.colour.bg, color: l.colour.ink }}>{p.level}</span>
-      <span className="flex-1 min-w-0">
-        <span className="block text-[16px] font-extrabold leading-tight truncate">{t.name}</span>
-        <span className="block text-[12.5px] text-slate-500 font-semibold truncate">{firstNames(t.members)} · {t.school?.name}</span>
-        <span className="block text-[12.5px] mt-0.5 truncate">{p.finished ? 'Every level logged' : `Level ${p.level}, step ${p.step}: ${stepOf(p.level, p.step).title}`}</span>
-        <span className="sm:hidden block text-[12px] text-slate-500 font-semibold mt-0.5">{s.tests} {s.tests === 1 ? 'test' : 'tests'} · active {fmtDay(lastActive(t)) || 'not yet'} · help used {used}%</span>
-      </span>
-      <span className="hidden sm:block text-right shrink-0 text-[12px] text-slate-500 font-semibold">
-        <span className="block"><b className="text-slate-900 tabular-nums">{s.tests}</b> {s.tests === 1 ? 'test' : 'tests'}</span>
-        <span className="block">Active {fmtDay(lastActive(t)) || 'not yet'}</span>
-        <span className="block">HOREB help used {used}%</span>
-      </span>
-      <Chevron />
-    </button>
+    <div className={`tt-team${flag ? ' tt-flag' : ''}`}>
+      <div>
+        <b className="tt-tn">{t.name}</b>
+        <div className="tt-ln">{p.finished ? 'Every level logged' : `Level ${p.level}, step ${p.step}: ${stepOf(p.level, p.step).title}`}</div>
+        <div className="tt-tm">
+          <span className="tt-lv" aria-label={`Level ${p.level} of ${LEVELS.length}`}>
+            {p.levels.map((l) => <i key={l.n} className={l.complete ? 'tt-f' : l.n === p.level ? 'tt-c' : ''} />)}
+          </span>
+          <span>{firstNames(t.members)}{grades.length ? ` · Grade ${grades.join(' and ')}` : ''}</span>
+          {lastTest
+            ? <Pill tone={flag ? 'am' : isToday(lastTest, now) ? 'gr' : null}>Last test {isToday(lastTest, now) ? 'today' : fmtDay(lastTest)}</Pill>
+            : <Pill tone="am">No test logged yet</Pill>}
+        </div>
+      </div>
+      <button className="tt-go tt-btn tt-line" onClick={onOpen}>{flag ? 'Open log' : 'Open'}</button>
+    </div>
   );
 }
 
-function TeacherView({ teams, go }) {
+function TeacherView({ teams, go, now = Date.now() }) {
+  const [hidden, setHidden] = useState(false);
   const schools = [...new Set(teams.map((t) => t.school?.name).filter(Boolean))];
-  const stuck = teams.filter((t) => {
-    const last = lastActive(t);
-    return !last || Date.now() - Date.parse(last) > 4 * 86400000;
-  });
+  const quiet = teams.map((t) => ({ t, days: daysSince(lastActive(t), now) }))
+    .filter((x) => x.days == null || x.days > QUIET_TEAM_DAYS)
+    .sort((a, b) => (b.days ?? 999) - (a.days ?? 999));
+  const flagged = new Set(quiet.map((x) => x.t.id));
+  const first = quiet[0];
+  const firstLast = first ? [...first.t.log].sort((a, b) => String(a.created_at).localeCompare(String(b.created_at))).pop() : null;
+  const firstLevel = first ? levelByN(teamProgress(first.t.log, { openedLevel: first.t.opened_level }).level) : null;
+  const ordered = [...quiet.map((x) => x.t), ...teams.filter((t) => !flagged.has(t.id))];
+  const gone = (x) => (x.days == null ? 'has not logged a test or written yet' : `has not logged a test or written for ${x.days} days`);
   return (
-    <div className="space-y-4">
-      <Card className="lg:p-8">
-        <Eyebrow>Teacher view · {schools.join(', ') || 'Your school'}</Eyebrow>
-        <h1 className="mt-2 text-[28px] lg:text-[44px] font-extrabold leading-[1.05]">
-          {teams.length} {teams.length === 1 ? 'team' : 'teams'} building rockets.
-        </h1>
-        <p className="mt-3 text-[14.5px] text-slate-600 leading-snug">
-          Each team logs a test before HOREB helps with the next step. Open a team to read its conversation and log, and to open a level early on a lab day.
-          {stuck.length > 0 && <> <b>{stuck.length === 1 ? `${stuck[0].name} has` : `${stuck.length} teams have`} not been active for four days.</b></>}
+    <section className="tt-screen tt-on">
+      <div className="tt-card" style={{ marginBottom: 20 }}>
+        <div className="tt-crumb">Rocket Challenge · {schools.join(', ') || 'your school'}</div>
+        <h1>{teams.length} {teams.length === 1 ? 'team' : 'teams'} building rockets</h1>
+        <p className="tt-lead">
+          {first ? `${first.t.name} ${gone(first)}. ` : ''}HOREB waits for a test before it helps with the next step.
         </p>
-      </Card>
-      <div className="space-y-2.5">
-        {teams.map((t) => <TeamRow key={t.id} t={t} onOpen={() => go({ name: 'team', teamId: t.id })} />)}
       </div>
-    </div>
+      <div className="tt-grid2">
+        <div className="tt-stack">
+          <div className="tt-card">
+            <div className="tt-head-row"><h2>Your teams</h2><span className="tt-sub">Levels 1 to {LEVELS.length}</span></div>
+            {ordered.map((t) => (
+              <TeamRow key={t.id} t={t} flag={flagged.has(t.id)} now={now}
+                onOpen={() => go({ name: 'team', teamId: t.id, tab: flagged.has(t.id) ? 'log' : 'chat' })} />
+            ))}
+            <p className="tt-sub" style={{ marginTop: 14 }}>Open a team to read its conversation with HOREB and its design log, or to open a level early on a lab day.</p>
+          </div>
+        </div>
+        <div className="tt-stack">
+          {first && !hidden && (
+            <SuggestPanel
+              title={`Check in with ${first.t.name}.`}
+              body={first.days == null ? 'No test logged and no messages yet.' : `No test logged and no messages for ${first.days} days.`}
+              why={[
+                ['The reason', 'A team logs a test before HOREB gives the next step, so a team that stops logging stops getting help.'],
+                ['Where it came from', firstLast ? `Their design log, last entry ${fmtDay(firstLast.created_at)}.` : 'Their design log has no entries yet.'],
+              ]}
+              innerLabel={firstLast ? 'Their last log entry' : null}
+              inner={firstLast?.result || null}
+              foot={firstLevel ? `Their level uses ${firstLevel.maths.charAt(0).toLowerCase()}${firstLevel.maths.slice(1)}.` : null}
+              action="Open their log"
+              onAction={() => go({ name: 'team', teamId: first.t.id, tab: 'log' })}
+              onDismiss={() => setHidden(true)}
+            />
+          )}
+          <div className="tt-card">
+            <h2>The {LEVELS.length === 5 ? 'five' : LEVELS.length} levels</h2>
+            <div className="tt-levels">
+              {LEVELS.map((l) => <div key={l.n}><b>{l.title}</b><span>{l.maths}</span></div>)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

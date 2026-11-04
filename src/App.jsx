@@ -7756,7 +7756,8 @@ function AppInner() {
   // challenge (invented data, nothing saved), and is what a signed-out visitor sees.
   if (page === 'rocket') {
     return (
-      <RocketChallenge userId={auth.user?.id} isAdmin={isAdmin}
+      <RocketChallenge userId={auth.user?.id} isAdmin={isAdmin} onNavigate={handleNavigate}
+      teacherName={auth.profile?.full_name}
         onBack={() => handleNavigate(IS_NATIVE ? 'native-home' : auth.user ? 'ai' : 'home')}
         onPractise={auth.user ? (skillId, childId) => { setRocketPractise({ skillId, childId }); handleNavigate('ai'); } : null} />
     );
@@ -7790,7 +7791,7 @@ function AppInner() {
 
   // Teacher / class insights dashboard
   if (page === 'classroom') {
-    return <TeacherDashboard onBack={() => handleNavigate('dashboard')} teacherProfile={auth.profile} />;
+    return <TeacherDashboard onBack={() => handleNavigate('dashboard')} onNavigate={handleNavigate} teacherProfile={auth.profile} />;
   }
 
   // Spreadsheet

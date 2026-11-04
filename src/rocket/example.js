@@ -144,6 +144,9 @@ export const exampleApi = (as = 'learner') => {
   };
   return {
     isExample: true,
+    // The example's own clock: its story happens in early December, so "how
+    // long since this team was active" is read against 8 Dec, not today.
+    now: day(8, 18),
     me: { id: me, isAdmin },
     async load() {
       const s = S();

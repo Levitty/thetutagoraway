@@ -48,6 +48,9 @@ export const rowToProgress = (row) => ({
   skills: row?.progress?.skills || {},
   diagnosticBalances: row?.progress?.diagnosticBalances || null,
   curriculum: row?.progress?.curriculum ?? null,
+  // What HOREB noticed about the wrong answers. Dropped here until 4 Nov, so
+  // the teacher's "where they went wrong" could never fall back on it.
+  misconceptions: row?.progress?.misconceptions || null,
   declaredGrade: row?.progress?.declaredGrade ?? null,
   placementGrade: row?.progress?.placementGrade ?? null,
   diagnosed: row?.diagnosed || false,

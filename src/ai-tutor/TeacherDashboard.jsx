@@ -22,7 +22,9 @@ import {
 import { assignmentRoster, assignedLearners, audienceLabel, dueLabel, isoDay } from './assignments.js';
 import { assignmentStruggles, answerPattern, patternInfo } from './struggles.js';
 import { fiveMinuteMove } from './teacherMoves.js';
-import { demoMode, demoStudents, demoClasses, demoMembers, demoAssignments, demoEvents } from './demoClass.js';
+import { demoMode, demoSchool } from './demoClass.js';
+import { missingStepGroups, classHeadline, homeSuggestion, practiceVersions, practiceRows, groupPattern } from './teacherInsights.js';
+import { TeacherShell, TeacherHome, ClassScreen, PracticeScreen } from './TeacherScreens.jsx';
 import { useHorebLook } from './horebLook.js';
 import { STRAND_BLOCK } from './strandBlocks.js';
 import {
@@ -120,7 +122,7 @@ const bandColor = (level, declared) => {
   return 'text-emerald-600 bg-emerald-50 border-emerald-200';
 };
 
-export function TeacherDashboard({ onBack, teacherProfile }) {
+export function TeacherDashboard({ onBack, onNavigate, teacherProfile }) {
   // Archivo/Figtree and the HOREB tokens, the same as the learner's screens.
   useHorebLook();
   const [loading, setLoading] = useState(true);
@@ -136,7 +138,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   // first migration and nothing read it, so every number on this page was a
   // number about "everyone whose row I can see" — which is not a class, and
   // not something a teacher teaches.
-  const [classId, setClassId] = useState('all');
+  const [classId, setClassId] = useState(null);
   const [members, setMembers] = useState([]);
   const [assignments, setAssignments] = useState([]);
   // The table is created by a migration the owner runs. Until they have, every
@@ -172,9 +174,10 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   useEffect(() => {
     let cancelled = false;
     if (isDemo) {
-      setClasses(demoClasses());
-      setMembers(demoMembers());
-      setAssignments(demoAssignments());
+      const d = demoSchool();
+      setClasses(d.classes);
+      setMembers(d.members);
+      setAssignments(d.assignments);
       return () => { cancelled = true; };
     }
     (async () => {
@@ -240,7 +243,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   // the filters here only keep the read small.
   const loadStruggles = async (a, cohortIds) => {
     if (eventsFor[a.id] && eventsFor[a.id] !== 'loading' && !eventsFor[a.id].error) return;
-    if (isDemo) { setEventsFor(m => ({ ...m, [a.id]: demoEvents() })); return; }
+    if (isDemo) { setEventsFor(m => ({ ...m, [a.id]: demoSchool().events })); return; }
     if (!cohortIds.length) { setEventsFor(m => ({ ...m, [a.id]: [] })); return; }
     setEventsFor(m => ({ ...m, [a.id]: 'loading' }));
     const read = (cols) => {
@@ -291,7 +294,7 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
       // The snapshot is computed by the same jsSnapshot() a real roster goes
       // through, so levels, strand bars and gaps are the engine's own reading
       // of these answers — not numbers typed into a fixture.
-      setStudents(demoStudents().map(s => ({ ...s, snap: jsSnapshot(s.progress, ctx) })));
+      setStudents(demoSchool().students.map(s => ({ ...s, snap: jsSnapshot(s.progress, ctx) })));
       setLoading(false);
       return () => { cancelled = true; };
     }
@@ -388,6 +391,112 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
   // 7fr track would push the whole class into the right-hand third.
   const twoCol = gaps.length > 0 || (assignmentsReady && shownAssignments.length > 0);
 
+  // ---- the teacher screens (4 Nov 2026) ----
+  // Each class read on its own: its learners with the snapshot the engine
+  // made, so last-seen, gaps and next skill all come from one place.
+  const classLearners = (cid) => {
+    const ids = cid === 'all' ? null : new Set(members.filter(m => m.class_id === cid).map(m => m.student_id));
+    return students.filter(s => !ids || ids.has(s.userId))
+      .map(s => ({ id: s.userId, name: s.name, progress: s.progress, updatedAt: s.updatedAt, snap: s.snap }));
+  };
+  // With no class set up yet, the readable learners are shown as one group.
+  const shownClasses = useMemo(
+    () => (classes.length ? classes : (students.length ? [{ id: 'all', name: 'Your learners' }] : [])),
+    [classes, students.length]
+  );
+  const rows = useMemo(() => shownClasses.map(c => {
+    const ls = classLearners(c.id);
+    return { id: c.id, name: c.name, size: ls.length, headline: classHeadline(ls, ctx) };
+  }).sort((a, b) => (b.headline?.count || 0) - (a.headline?.count || 0)),
+  [shownClasses, students, members, ctx]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Once the work is set, the suggestion has been taken: it does not stay up.
+  const suggestion = useMemo(() => {
+    const s = homeSuggestion(rows);
+    if (!s) return null;
+    const taken = assignments.some(a => a.class_id === s.classId && (a.skill_ids || []).includes(s.skill.id));
+    return taken ? null : s;
+  }, [rows, assignments]);
+  const sideClasses = shownClasses.map(c => ({ id: c.id, name: c.name, size: classLearners(c.id).length }));
+
+  const [screen, setScreen] = useState('home');
+  const [practiceFor, setPracticeFor] = useState(null);   // { classId, coreId }
+  const [practiceDone, setPracticeDone] = useState(null);
+  const [practiceError, setPracticeError] = useState(null);
+  const currentClass = shownClasses.find(c => c.id === classId) || shownClasses[0] || null;
+  const groups = useMemo(
+    () => (currentClass ? missingStepGroups(classLearners(currentClass.id), ctx) : []),
+    [currentClass, students, members, ctx] // eslint-disable-line react-hooks/exhaustive-deps
+  );
+  const leadGroup = groups.find(g => g.kind !== 'clear') || null;
+
+  // "Where they went wrong": the answers behind the class's largest group,
+  // read only when the class screen is open.
+  const [patternState, setPatternState] = useState({});
+  const leadKey = currentClass && leadGroup ? `${currentClass.id}|${leadGroup.key}` : null;
+  useEffect(() => {
+    if (screen !== 'class' || !leadKey || patternState[leadKey]) return;
+    const skillIds = leadGroup.kind === 'foundation' ? (leadGroup.above || []).map(s => s.id) : [leadGroup.skill.id];
+    const ids = leadGroup.learners.map(l => l.id);
+    const summarise = (events) => {
+      const r = assignmentStruggles({ skill_ids: skillIds, student_ids: ids, created_at: null },
+        classLearners(currentClass.id), events, { skills: ctx?.skills || {} });
+      return groupPattern(r);
+    };
+    if (isDemo) { setPatternState(m => ({ ...m, [leadKey]: { value: summarise(demoSchool().events) } })); return; }
+    setPatternState(m => ({ ...m, [leadKey]: { value: 'loading' } }));
+    (async () => {
+      const read = (cols) => supabase.from('response_events').select(cols)
+        .in('student_id', ids).in('skill_id', skillIds)
+        .order('created_at', { ascending: false }).limit(3000);
+      let res = await read(EVENT_COLS_FULL);
+      if (res.error) res = await read(EVENT_COLS_BASE);
+      setPatternState(m => ({ ...m, [leadKey]: { value: summarise(res.error ? [] : (res.data || [])) } }));
+    })();
+  }, [screen, leadKey]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const openClass = (cid) => { setClassId(cid); setScreen('class'); setSelected(null); try { window.scrollTo(0, 0); } catch { /* jsdom */ } };
+  const openPractice = (cid, coreId) => {
+    setClassId(cid); setPracticeFor({ classId: cid, coreId }); setPracticeDone(null); setPracticeError(null);
+    setScreen('practice'); try { window.scrollTo(0, 0); } catch { /* jsdom */ }
+  };
+  const coreOfGroup = (g) => (g.kind === 'foundation' ? (g.above?.[0]?.id || g.skill.id) : g.skill.id);
+  const onNav = (id) => {
+    if (id === 'rocket') { if (onNavigate) onNavigate('rocket'); else window.location.assign('/rocket'); return; }
+    setSelected(null);
+    if (id === 'practice') {
+      const r = rows.find(x => x.id === (currentClass?.id)) || rows.find(x => x.headline);
+      if (r?.headline) { openPractice(r.id, r.headline.skill.id); return; }
+      id = 'class';
+    }
+    setScreen(id); try { window.scrollTo(0, 0); } catch { /* jsdom */ }
+  };
+
+  // Setting the versions: one assignment per version, each for its learners.
+  const setVersions = async (chosen, dueOn) => {
+    setPracticeError(null);
+    const rowsOut = practiceRows(chosen, { classId: practiceFor.classId, teacherId: teacherProfile?.id || null, dueOn });
+    if (!rowsOut.length) return;
+    const word = `${rowsOut.length} ${rowsOut.length === 1 ? 'version' : 'versions'}`;
+    if (isDemo) {
+      setAssignments(a => [...a, ...rowsOut.map((r, i) => ({ ...r, id: `demo-${Date.now()}-${i}`, created_at: new Date().toISOString() }))]);
+      setPracticeDone(word);
+      return;
+    }
+    const { data, error: err } = await supabase.from('assignments').insert(rowsOut).select(`${ASSIGNMENT_COLS}, student_ids`);
+    if (err) { setPracticeError(err.message); return; }
+    setAssignments(a => [...a, ...(data || [])]);
+    setPracticeDone(word);
+  };
+
+  const teacherName = teacherProfile?.full_name || (isDemo ? 'Mrs Wairimu' : 'Teacher');
+  const shell = (active, body) => (
+    <TeacherShell active={active} onNav={onNav} classes={sideClasses} onOpenClass={openClass}
+      activeClassId={currentClass?.id} teacherName={teacherName} teacherLine={SUBJECTS[SUBJECT_ID].name}
+      demoNote={isDemo ? 'Demo: invented learners, nothing is saved' : null}>
+      {body}
+    </TeacherShell>
+  );
+
   // ---- render ----
   if (selected) {
     // The classes this child is in: work set from their page can only go to
@@ -401,359 +510,116 @@ export function TeacherDashboard({ onBack, teacherProfile }) {
     );
   }
 
-  return (
-    /* HOREB's own ground, not the generic admin slate this page was built on
-       before the student side got its design pass. Same canvas, same card
-       radii, same display face — a teacher and a child should be looking at
-       one product. */
-    <div className="min-h-screen bg-[#E8E8EC]">
-      {/* A laptop is 1400–1900px wide and this page used max-w-4xl (896px) in a
-          single stack, so a quarter of the screen carried everything and the
-          roster sat below the fold under a create-class form. The width is the
-          working surface now: the thinking on the left, the class on the
-          right, and the class picker up in the header where it costs no row. */}
-      <header className="sticky top-0 z-10 bg-[#E8E8EC]/90 backdrop-blur">
-        <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 pt-6 pb-3 flex items-center gap-3.5">
-          {onBack && (
-            <button onClick={onBack} aria-label="Back"
-              className="w-11 h-11 shrink-0 rounded-[14px] bg-white flex items-center justify-center text-slate-500 hover:text-slate-900 transition-colors">
-              <Icon name="back" className="w-5 h-5" />
-            </button>
-          )}
-          <div className="min-w-0">
-            <h1 className="text-[26px] font-extrabold tracking-tight text-slate-900 leading-none">Class Insights</h1>
-            <p className="text-[13px] text-slate-500 mt-1">{SUBJECTS[SUBJECT_ID].name}</p>
+  if (loading || error) {
+    return shell('home', (
+      <div className="tt-card">
+        {loading ? <p className="tt-sub">Loading your classes.</p>
+          : <><h2>Could not load your classes</h2><p className="tt-sub" style={{ marginTop: 6 }}>{error}</p></>}
+      </div>
+    ));
+  }
+
+  const openLearner = (id) => { const s = students.find(x => x.userId === id); if (s) setSelected(s); };
+
+  const setupCard = (
+    <div className="tt-card">
+      <div className="tt-head-row"><h2>Classes and join codes</h2>
+        <button className="tt-whyb" onClick={() => setSetupOpen(o => !o)}>{setupOpen || classes.length === 0 ? 'Hide' : 'Set up'}</button></div>
+      {(setupOpen || classes.length === 0) && (
+        <div style={{ marginTop: 12 }}>
+          {classes.map(c => (
+            <div className="tt-answer" key={c.id}>
+              <span>{c.name}</span>
+              <button className="tt-whyb" onClick={() => copyCode(c.join_code)} title="Copy join code">
+                {c.join_code} {copiedCode === c.join_code ? 'copied' : 'copy'}
+              </button>
+            </div>
+          ))}
+          <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+            <input value={newClassName} onChange={(e) => setNewClassName(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && createClass()} placeholder="New class name (e.g. Grade 6 Blue)"
+              style={{ flex: 1, minWidth: 0, height: 44, borderRadius: 14, border: '1px solid var(--line)', padding: '0 14px', background: 'var(--tile)' }} />
+            <button className="tt-btn tt-dark" onClick={createClass} disabled={creating || !newClassName.trim()}>{creating ? 'Creating' : 'Create'}</button>
           </div>
-          {classes.length > 0 && (
-            <div className="ml-auto flex items-center gap-1.5 flex-wrap justify-end">
-              {[{ id: 'all', name: 'Everyone' }, ...classes].map(c => (
-                <button key={c.id} onClick={() => setClassId(c.id)}
-                  className={`px-3.5 h-9 rounded-full text-[13.5px] font-bold transition-colors ${classId === c.id ? 'bg-[#16161A] text-white' : 'bg-white text-slate-600 hover:text-slate-900'}`}>
-                  {c.name}
-                </button>
-              ))}
-            </div>
-          )}
+          {createError && <p className="tt-sub" style={{ marginTop: 8, color: 'var(--am-ink)' }}>{createError}</p>}
         </div>
-      </header>
-
-      <main className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 pb-12 pt-1">
-        {/* Say so. A screen full of children's names and gaps must never be
-            mistaken for real children, by the room or by the person running
-            the demo. */}
-        {isDemo && (
-          <div className="mb-4 rounded-xl bg-amber-50 border border-amber-200 px-4 py-2.5 flex items-center gap-2.5">
-            <span className="text-[10px] font-extrabold tracking-[.1em] bg-amber-400 text-slate-900 rounded-full px-2 py-1">DEMO</span>
-            <span className="text-[13px] text-amber-900">
-              Invented class. Nothing here is saved, and no real child's work is shown —
-              but every level and gap below is worked out by the live engine.
-            </span>
-          </div>
-        )}
-
-        <div className={`grid gap-5 items-start ${twoCol ? 'xl:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]' : ''}`}>
-        {/* LEFT — what to do about the class. */}
-        <div className="min-w-0 space-y-5">
-
-        {/* TEACH THIS NEXT — the teacher's real question, answered first.
-            A roster answers "how is Amani doing?" thirty-four times. Nobody
-            can act on thirty-four answers before the bell. This is the same
-            measurements read down the other axis: one skill, the children it
-            is holding up, and something to do about it on Tuesday. */}
-        {gaps.length > 0 && (
-          <div className="bg-white rounded-[28px] p-6 sm:p-8">
-            <div className="flex items-baseline justify-between gap-3 mb-1">
-              <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">Teach this next</h2>
-              <span className="text-[12px] text-slate-400 shrink-0">{inClass.length} {inClass.length === 1 ? 'child' : 'children'}</span>
-            </div>
-            <p className="text-[13px] text-slate-500 mb-6">Ranked by how many one lesson would unblock.</p>
-
-            {/* A ranking has to LOOK ranked. Every row used to carry the same
-                weight — same red heading, same orange "Five-minute move:", same
-                button — so five rows read as five emergencies and the number,
-                the only thing that orders them, was the smallest text on the
-                row. The lead finding gets the space now and the tail compresses
-                to one line each. */}
-            <div className="flex flex-col gap-3">
-              {gaps.map((g, i) => {
-                const who = [...g.blocked, ...g.failing];
-                const share = inClass.length ? Math.round((g.count / inClass.length) * 100) : 0;
-                const lead = i === 0;
-                const c = STRAND_BLOCK[g.strand] || STRAND_BLOCK._;
-                const setWork = assignmentsReady && classes.length > 0 && (
-                  assigning === g.id
-                    ? <AssignRow gap={g} classes={classes} classId={classId}
-                        learnersOf={learnersOf} learnersReady={learnersReady}
-                        // "Set this for the learners who have this gap": the
-                        // children on this row are ticked to begin with.
-                        preset={who.map(l => l.id)}
-                        onCancel={() => setAssigning(null)} onAssign={assignGap} />
-                    : <button onClick={() => { setAssigning(g.id); setAssignError(null); }}
-                        className={`shrink-0 rounded-full font-bold transition-colors ${lead
-                          ? 'h-11 px-5 text-[14px] bg-[#16161A] text-white hover:bg-[#2b2b33]'
-                          : 'h-8 px-3.5 text-[12.5px] text-slate-600 border border-slate-200 hover:bg-slate-50'}`}>
-                        Set as work
-                      </button>
-                );
-
-                if (!lead) {
-                  return (
-                    <div key={g.id} className="flex flex-wrap items-center gap-x-3 gap-y-2 py-2.5 border-t border-slate-100">
-                      <span className="w-7 text-[17px] font-extrabold text-slate-900 tabular-nums shrink-0">{g.count}</span>
-                      <span className="font-bold text-slate-900 text-[15px]">{g.name}</span>
-                      <span className="text-[12px] text-slate-400">{g.strand} · Grade {g.grade}</span>
-                      <span className="text-[12px] text-slate-500 flex-1 min-w-0 truncate">{who.map(l => l.name).join(', ')}</span>
-                      {setWork}
-                    </div>
-                  );
-                }
-
-                return (
-                  <div key={g.id} className="rounded-[22px] p-5 sm:p-6" style={{ background: c.bg }}>
-                    <div className="flex items-start gap-4 sm:gap-5">
-                      {/* The count, finally the size of its importance. */}
-                      <span className="font-extrabold tabular-nums leading-none text-[44px] sm:text-[56px] tracking-tighter shrink-0"
-                        style={{ color: c.ink }}>{g.count}</span>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="text-[21px] sm:text-[25px] font-extrabold tracking-tight leading-tight" style={{ color: c.ink }}>{g.name}</h3>
-                        <p className="text-[12.5px] font-bold mt-1" style={{ color: c.meta }}>
-                          {g.strand} · Grade {g.grade}{inClass.length > 1 && <> · {share}% of the class</>}
-                        </p>
-                        {/* Which of the two readings this is. They ask for
-                            different lessons, so they are never merged. */}
-                        <p className="text-[13.5px] mt-2 leading-snug" style={{ color: c.ink, opacity: 0.8 }}>
-                          {g.blocked.length > 0 && g.failing.length > 0
-                            ? <>{g.blocked.length} never mastered it · {g.failing.length} struggling with it now</>
-                            : g.blocked.length > 0
-                            ? <>Never mastered it, and failing the work that needs it</>
-                            : <>Struggling with it right now</>}
-                        </p>
-                        <p className="text-[14px] font-bold mt-2.5" style={{ color: c.ink }}>
-                          {who.map(l => l.name).join(' · ')}
-                        </p>
-                      </div>
-                    </div>
-                    {/* The move is a detail, not a headline. It used to be an
-                        orange shout repeated down every row. */}
-                    <div className="mt-4 rounded-2xl bg-white/70 px-4 py-3">
-                      <p className="text-[11px] font-bold tracking-[.08em] uppercase text-slate-500">Away from the screen</p>
-                      <p className="text-[14px] text-slate-800 leading-snug mt-0.5">{fiveMinuteMove(g)}</p>
-                    </div>
-                    <div className="mt-4">{setWork}</div>
-                  </div>
-                );
-              })}
-            </div>
-            {assignError && <p className="text-[13px] text-red-500 mt-3">{assignError}</p>}
-          </div>
-        )}
-
-        {/* WORK SET — what was assigned, and who has actually mastered it.
-            Not "who submitted": there is nothing to submit. A name moves into
-            Done when the child masters the skill in their ordinary practice.
-            Work set for chosen learners counts only those learners. */}
-        {assignmentsReady && shownAssignments.length > 0 && (
-          <div className="bg-white rounded-[28px] p-5 sm:p-6">
-            <div className="flex items-baseline justify-between mb-1">
-              <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">Work set</h2>
-              <span className="text-[12px] text-slate-400">done = mastered, from their own practice</span>
-            </div>
-            <div className="divide-y divide-slate-100">
-              {shownAssignments.map(a => {
-                const classLearners = learnersOf(a.class_id);
-                const r = assignmentRoster(a, classLearners);
-                const due = dueLabel(a.due_on, today);
-                const cls = classes.find(c => c.id === a.class_id);
-                const aud = audienceLabel(a, classLearners);
-                const open = openStruggle === a.id;
-                return (
-                  <div key={a.id} className="py-3.5">
-                    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                      <span className="font-bold text-[15px] text-slate-900">{a.title}</span>
-                      {cls && <span className="text-[12px] text-slate-400">{cls.name}</span>}
-                      <span className={`text-[11px] font-bold rounded-full px-2 py-0.5 ${aud.whole ? 'bg-slate-100 text-slate-500' : 'bg-[#16161A] text-white'}`}>{aud.text}</span>
-                      <span className={`text-[12px] font-bold ${due.overdue ? 'text-red-600' : due.tone === 'urgent' ? 'text-amber-600' : 'text-slate-400'}`}>{due.text}</span>
-                      <button onClick={() => removeAssignment(a.id)}
-                        className="ml-auto text-[12px] text-slate-400 hover:text-red-600">Remove</button>
-                    </div>
-                    <div className="mt-2 flex items-center gap-2">
-                      <div className="h-2 flex-1 rounded-full bg-slate-100 overflow-hidden">
-                        <div className="h-2 rounded-full bg-emerald-500" style={{ width: `${r.percent}%` }} />
-                      </div>
-                      <span className="text-[12px] font-bold text-slate-600 tabular-nums">{r.done.length} of {r.count}</span>
-                    </div>
-                    {/* The three groups by name. "Not started" is the list a
-                        teacher acts on first, so it is never a bare number. */}
-                    <div className="mt-1.5 space-y-0.5 text-[12px]">
-                      {r.notStarted.length > 0 && (
-                        <p className="text-slate-600"><span className="font-bold text-red-600">Not started: </span>{r.notStarted.map(l => l.name).join(' · ')}</p>
-                      )}
-                      {r.started.length > 0 && (
-                        <p className="text-slate-600"><span className="font-bold text-amber-600">Working on it: </span>{r.started.map(l => `${l.name} (${l.percent}%)`).join(' · ')}</p>
-                      )}
-                      {r.done.length > 0 && (
-                        <p className="text-slate-500"><span className="font-bold text-emerald-600">Done: </span>{r.done.map(l => l.name).join(' · ')}</p>
-                      )}
-                    </div>
-                    {r.count > 0 && (
-                      <button
-                        onClick={() => {
-                          if (open) { setOpenStruggle(null); return; }
-                          setOpenStruggle(a.id);
-                          loadStruggles(a, assignedLearners(a, classLearners).map(l => l.id));
-                        }}
-                        className={`mt-2.5 h-8 px-3.5 rounded-full text-[12.5px] font-bold transition-colors ${open ? 'bg-[#16161A] text-white' : 'border border-slate-200 text-slate-700 hover:bg-slate-50'}`}>
-                        {open ? 'Hide where they struggled' : 'Where they struggled'}
-                      </button>
-                    )}
-                    {open && (
-                      <StrugglePanel
-                        state={eventsFor[a.id]}
-                        assignment={a}
-                        learners={classLearners}
-                        skills={ctx?.skills || {}}
-                      />
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-            {assignError && <p className="text-[13px] text-red-500 mt-3">{assignError}</p>}
-          </div>
-        )}
-
-        </div>
-        {/* ------------------------------------------------------------------
-            RIGHT — the class itself. Thirty-four children is a list, and a
-            list wants a column, not the full width of a laptop.
-            ------------------------------------------------------------------ */}
-        <div className="min-w-0 space-y-5">
-
-          {loading && (
-            <div className="bg-white rounded-[28px] p-10 text-center text-slate-400">Loading class…</div>
-          )}
-
-          {error && (
-            <div className="bg-white rounded-[28px] p-6">
-              <p className="font-bold text-slate-900 mb-1">Couldn’t load the class</p>
-              <p className="text-[13px] text-slate-500">{error}</p>
-            </div>
-          )}
-
-          {!loading && !error && students.length === 0 && (
-            <div className="bg-white rounded-[28px] p-8 text-center">
-              <Icon name="brain" className="w-10 h-10 mx-auto mb-3 text-slate-300" />
-              <p className="font-bold text-slate-900 mb-1">No children here yet</p>
-              <p className="text-[13px] text-slate-500 leading-snug">
-                Create a class below, give its code to your students, and their work
-                appears here as soon as they practise.
-              </p>
-            </div>
-          )}
-
-          {!loading && !error && inClass.length > 0 && (
-            <div className="bg-white rounded-[28px] p-5 sm:p-6">
-              <div className="flex items-baseline justify-between gap-3 mb-1">
-                <h2 className="text-[22px] font-extrabold tracking-tight text-slate-900">The class</h2>
-                <span className="text-[12px] text-slate-400 shrink-0">{inClass.length} {inClass.length === 1 ? 'child' : 'children'}</span>
-              </div>
-              <p className="text-[13px] text-slate-500 mb-4">Whoever needs you most is at the top.</p>
-
-              {/* Four cards used to sit above this: Students, Avg level, Need
-                  support, Racing ahead. A number you can only read is not
-                  useful; a number you can open into the list of children it
-                  counts is. They overlap — a child can be stuck AND quiet —
-                  so these are filters, not a pie chart pretending to sum. */}
-              <div className="flex flex-wrap gap-1.5 mb-3">
-                {BUCKETS.map(b => {
-                  const n = counts[b.id] ?? 0;
-                  const on = bucket === b.id;
-                  const empty = n === 0 && b.id !== 'all';
-                  return (
-                    <button key={b.id} title={b.hint || undefined} disabled={empty}
-                      onClick={() => setBucket(b.id)}
-                      className={`h-9 pl-2 pr-3.5 rounded-full text-[13px] font-bold inline-flex items-center gap-1.5 transition-colors ${
-                        on ? 'bg-[#16161A] text-white'
-                        : empty ? 'bg-slate-50 text-slate-300 cursor-default'
-                        : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
-                      <span className={`tabular-nums text-[15px] font-extrabold ${on ? '' : 'text-slate-900'}`}>{n}</span>
-                      {b.label}
-                    </button>
-                  );
-                })}
-              </div>
-              {bucket !== 'all' && (
-                <p className="text-[12.5px] text-slate-500 mb-3 leading-snug">
-                  {BUCKETS.find(b => b.id === bucket)?.hint}{' '}
-                  <button onClick={() => setBucket('all')} className="font-bold text-slate-900 underline decoration-slate-300 hover:decoration-slate-900">Show everyone</button>
-                </p>
-              )}
-
-              <div className="-mx-2.5">
-                {roster.map(st => (
-                  <RosterRow key={st.userId} st={st} onOpen={() => setSelected(st)} />
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* SETUP. Join codes and "create a class" are done once and then in
-              the way forever — this form used to sit above the children. Open
-              by default only when there is nothing set up, in which case it is
-              the one thing to do on this page. */}
-          {(() => {
-            const open = setupOpen || classes.length === 0;
-            return (
-              <div className="bg-white rounded-[28px] p-5 sm:p-6">
-                <button onClick={() => setSetupOpen(o => !o)}
-                  className="w-full flex items-center justify-between gap-3 text-left">
-                  <h2 className="text-[15px] font-extrabold tracking-tight text-slate-900">
-                    Classes &amp; join codes
-                    {classes.length > 0 && <span className="font-bold text-slate-400"> · {classes.length}</span>}
-                  </h2>
-                  <span className="text-[12.5px] font-bold text-slate-400">{open ? 'Hide' : 'Set up'}</span>
-                </button>
-
-                {open && (
-                  <div className="mt-4">
-                    {classes.length > 0 && (
-                      <div className="space-y-1.5 mb-3">
-                        {classes.map((c) => (
-                          <div key={c.id} className="flex items-center justify-between gap-3 bg-slate-50 rounded-xl px-3 py-2">
-                            <span className="text-[14px] font-bold text-slate-800 truncate">{c.name}</span>
-                            <button onClick={() => copyCode(c.join_code)} title="Copy join code"
-                              className="shrink-0 flex items-center gap-2 text-[13px] font-mono font-bold text-slate-900 bg-white hover:bg-slate-100 rounded-lg px-2.5 py-1 transition-colors">
-                              {c.join_code}
-                              <span className="text-[11px] font-sans font-bold text-slate-400">{copiedCode === c.join_code ? 'copied' : 'copy'}</span>
-                            </button>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    <div className="flex gap-2">
-                      <input
-                        value={newClassName}
-                        onChange={(e) => setNewClassName(e.target.value)}
-                        onKeyDown={(e) => e.key === 'Enter' && createClass()}
-                        placeholder="New class name (e.g. Grade 5 Blue)"
-                        className="flex-1 min-w-0 bg-slate-50 rounded-xl px-3.5 h-11 text-[14px] text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#16161A]/20"
-                      />
-                      <button onClick={createClass} disabled={creating || !newClassName.trim()}
-                        className="shrink-0 px-5 h-11 bg-[#16161A] hover:bg-[#2b2b33] disabled:opacity-25 text-white font-bold rounded-full text-[14px] transition-colors">
-                        {creating ? 'Creating…' : 'Create'}
-                      </button>
-                    </div>
-                    {createError && <p className="text-[12.5px] text-red-500 mt-2">{createError}</p>}
-                  </div>
-                )}
-              </div>
-            );
-          })()}
-        </div>
-        </div>
-      </main>
+      )}
     </div>
   );
+
+  if (screen === 'practice' && practiceFor) {
+    const cls = shownClasses.find(c => c.id === practiceFor.classId) || currentClass;
+    const ls = classLearners(cls.id);
+    const versions = practiceVersions(ls, practiceFor.coreId, ctx);
+    const head = rows.find(r => r.id === cls.id)?.headline;
+    return shell('practice', (
+      <PracticeView cls={cls} core={ctx.skills[practiceFor.coreId]} versions={versions}
+        learnersById={new Map(ls.map(l => [l.id, l]))}
+        sources={head?.evidence?.source ? `the ${head.evidence.source}` : null}
+        canChoose={assignmentsReady && learnersReady}
+        onBack={() => openClass(cls.id)} onSet={setVersions} done={practiceDone} error={practiceError} />
+    ));
+  }
+
+  if (screen === 'class' && currentClass) {
+    const ls = classLearners(currentClass.id);
+    const quiet = ls.filter(l => { const a = attentionOf(l); return a.quiet && a.days != null; })
+      .map(l => ({ id: l.id, name: l.name, days: attentionOf(l).days }));
+    return shell('class', (
+      <ClassScreen cls={currentClass} size={ls.length} groups={groups}
+        pattern={leadKey ? patternState[leadKey]?.value ?? 'loading' : null}
+        patternFor={leadGroup ? `the group of ${leadGroup.learners.length}` : ''}
+        quiet={quiet} onBack={() => setScreen('home')}
+        onPractice={(g) => openPractice(currentClass.id, coreOfGroup(g))}
+        onOpenLearner={openLearner} setup={setupCard} />
+    ));
+  }
+
+  // Home.
+  const workSet = assignmentsReady ? assignments.map(a => {
+    const classL = learnersOf(a.class_id);
+    const r = assignmentRoster(a, classL);
+    const aud = audienceLabel(a, classL);
+    const due = dueLabel(a.due_on, today);
+    const cls = classes.find(c => c.id === a.class_id);
+    const open = openStruggle === a.id;
+    return {
+      id: a.id, title: a.title, className: cls?.name || '', count: r.count, done: r.done.length,
+      audience: aud.whole ? 'whole class' : `${aud.count} chosen ${aud.count === 1 ? 'learner' : 'learners'}`,
+      due: a.due_on ? due.text : null, complete: r.count > 0 && r.done.length === r.count,
+      children: r.count > 0 && (
+        <>
+          <button className="tt-whyb" style={{ marginTop: 8 }} onClick={() => {
+            if (open) { setOpenStruggle(null); return; }
+            setOpenStruggle(a.id);
+            loadStruggles(a, assignedLearners(a, classL).map(l => l.id));
+          }}>{open ? 'Hide where they struggled' : 'Where they struggled'}</button>
+          {open && <StrugglePanel state={eventsFor[a.id]} assignment={a} learners={classL} skills={ctx?.skills || {}} />}
+          {open && <button className="tt-whyb" style={{ marginTop: 8, color: 'var(--muted)' }} onClick={() => removeAssignment(a.id)}>Remove this work</button>}
+        </>
+      ),
+    };
+  }).filter(w => !w.complete) : [];
+  const quietAll = shownClasses.flatMap(c => classLearners(c.id)
+    .filter(l => { const a = attentionOf(l); return a.quiet && a.days != null; })
+    .map(l => ({ id: `${c.id}-${l.id}`, name: l.name, className: c.name, days: attentionOf(l).days })));
+
+  return shell('home', (
+    <TeacherHome teacherName={teacherName} rows={rows} suggestion={suggestion}
+      onSuggest={() => suggestion && openPractice(suggestion.classId, suggestion.above?.id || suggestion.skill.id)}
+      workSet={workSet} quiet={quietAll} onOpenClass={openClass}
+      extra={(classes.length === 0 || rows.length === 0) ? setupCard : null} />
+  ));
+}
+
+// Examples are generated once per skill and kept, so the question does not
+// change every time the teacher ticks a box.
+function PracticeView(props) {
+  const ids = props.versions.map(v => v.skill.id).join(',');
+  const examples = useMemo(() => Object.fromEntries(props.versions.map(v => {
+    try { return [v.skill.id, SUBJECTS[SUBJECT_ID].generate(v.skill.id)]; } catch { return [v.skill.id, null]; }
+  })), [ids]); // eslint-disable-line react-hooks/exhaustive-deps
+  return <PracticeScreen {...props} examples={examples} />;
 }
 
 // Setting work from a gap row: which class, by when, and for whom. The skill

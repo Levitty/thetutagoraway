@@ -178,3 +178,107 @@ export const demoMode = () => {
     return sessionStorage.getItem(KEY) === '1';
   } catch { return false; }
 };
+
+// ============================================================================
+// A TEACHER WITH THREE CLASSES (4 Nov 2026, for the teacher home)
+//
+// The home screen reads across a teacher's classes, so the demo needs more
+// than one. Grade 5 Blue above is unchanged. Two more are built the same way:
+// invented children, real engine. Grade 6 Blue is built around the finding the
+// home leads with: nine children failing Adding Fractions (Unlike
+// Denominators) because Equivalent Fractions was never mastered, three
+// struggling with the new step itself, and the rest clear.
+// ============================================================================
+const G6_CLASS_ID = 'demo-class-grade-6';
+const G7_CLASS_ID = 'demo-class-grade-7';
+const FRACTION_MISTAKE = { 'fraction-procedure': { n: 3, skills: ['G6_FRACTIONS_ADD'] } };
+
+const built = (prefix, rows) => rows.map((r, i) => {
+  const held = [...upTo(r.through, [...(r.missing || []), ...(r.struggling || []), ...(r.failed || [])]), ...(r.mastered || [])];
+  const seenAt = new Date(Date.now() - (r.seen || 0) * 86400000);
+  return {
+    userId: `${prefix}-${i + 1}`,
+    name: r.name,
+    updatedAt: seenAt.toISOString(),
+    diagnosed: true,
+    progress: {
+      skills: {
+        ...Object.fromEntries(held.map(id => [id, solid()])),
+        ...Object.fromEntries((r.struggling || []).map(id => [id, shaky()])),
+        ...Object.fromEntries((r.failed || []).map(id => [id, failedCheck()])),
+      },
+      misconceptions: r.misconceptions || undefined,
+      diagnosticBalances: null,
+      diagnosed: true,
+      declaredGrade: r.grade,
+      placementGrade: r.grade,
+      totalXP: 80 + i * 20,
+      currentStreak: (r.seen || 0) > 1 ? 0 : (i % 5) + 1,
+      lastPracticeDate: seenAt.toISOString().slice(0, 10),
+    },
+  };
+});
+
+const G6_NAMES = ['Akinyi Odhiambo', 'Brian Kamau', 'Cynthia Wambui', 'David Mutua', 'Esther Nyambura', 'Felix Kiprono',
+  'Joy Mumbi', 'Kevin Omondi', 'Lilian Wanjiku', 'Moses Achieng', 'Nadia Juma', 'Peter Kibet', 'Grace Adhiambo',
+  'Halima Jelimo', 'Ian Waweru', 'Kendi Njeri', 'Lucy Auma', 'Mark Owino', 'Nancy Wairimu', 'Otieno Kariuki',
+  'Purity Muthoni', 'Quincy Abuya', 'Rehema Nduta', 'Samuel Ochieng', 'Tabitha Koech', 'Umi Wekesa', 'Victor Maina',
+  'Wanjiru Atieno', 'Xavier Ngugi', 'Yvonne Obiero', 'Zawadi Kilonzo'];
+const G6_ROWS = G6_NAMES.map((name, i) => {
+  const seen = [0, 1, 0, 2, 16, 3, 0, 1, 0, 0, 1, 0, 9, 0, 1, 2, 0, 0, 1, 3, 0, 2, 0, 1, 0, 0, 1, 0, 2, 0, 1][i];
+  if (i < 9) return { name, grade: 6, through: 5, missing: ['G5_FRACTIONS_EQUIV'], struggling: ['G6_FRACTIONS_ADD'], misconceptions: FRACTION_MISTAKE, seen };
+  if (i < 12) return { name, grade: 6, through: 5, struggling: ['G6_FRACTIONS_ADD'], misconceptions: FRACTION_MISTAKE, seen };
+  if (i < 26) return { name, grade: 6, through: 5, mastered: ['G6_PLACE_VALUE', 'G6_MULTIPLICATION'], seen };
+  if (i < 29) return { name, grade: 6, through: 5, mastered: ['G6_PLACE_VALUE', 'G6_MULTIPLICATION', 'G6_FRACTIONS_ADD'], seen };
+  return { name, grade: 6, through: 6, seen };
+});
+
+const G7_NAMES = ['Abdi Hassan', 'Beatrice Chebet', 'Collins Otieno', 'Dorcas Wafula', 'Edwin Mwangi', 'Faith Naliaka',
+  'George Onyango', 'Hellen Moraa', 'Isaac Rotich', 'Janet Akoth', 'Kelvin Njoroge', 'Linet Mumo'];
+const G7_ROWS = G7_NAMES.map((name, i) => {
+  const seen = [0, 2, 1, 0, 3, 0, 1, 10, 0, 2, 0, 1][i];
+  if (i < 4) return { name, grade: 7, through: 6, struggling: ['G7_FRACTIONS_COMPARE'], seen };
+  return { name, grade: 7, through: 6, seen };
+});
+
+/** The whole demo teacher: three classes, their learners, work set and answers. */
+export const demoSchool = () => {
+  const g5 = demoStudents();
+  const g6 = built('demo-g6', G6_ROWS);
+  const g7 = built('demo-g7', G7_ROWS);
+  const day = (n) => { const d = new Date(); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); };
+  // Distinct wrong answers on the fractions, so the pattern comes from what
+  // HOREB noticed (fraction-procedure), not from one repeated slip.
+  const wrongs = [['2/5', '5/6'], ['3/7', '11/12'], ['2/7', '7/12'], ['4/9', '13/18'], ['3/8', '7/12'], ['2/6', '5/6']];
+  const g6Events = [];
+  g6.slice(0, 12).forEach((s, i) => {
+    for (let j = 0; j < 4; j += 1) {
+      const [submitted, expected] = wrongs[(i + j) % wrongs.length];
+      const ok = j === 3 && i % 2 === 0;
+      g6Events.push({
+        student_id: s.userId, learner_id: null, skill_id: 'G6_FRACTIONS_ADD',
+        correct: ok, skipped: false, submitted_value: ok ? expected : submitted, expected_value: expected,
+        hints_used: ok ? 0 : 1, created_at: new Date(Date.now() - (2 - (j % 2)) * 86400000 + i * 60000 + j * 1000).toISOString(),
+      });
+    }
+  });
+  return {
+    classes: [
+      { id: G6_CLASS_ID, name: 'Grade 6 Blue (demo)', join_code: 'DEMO06' },
+      { id: G7_CLASS_ID, name: 'Grade 7 Red (demo)', join_code: 'DEMO07' },
+      ...demoClasses(),
+    ],
+    students: [...g6, ...g7, ...g5],
+    members: [
+      ...g6.map(s => ({ class_id: G6_CLASS_ID, student_id: s.userId })),
+      ...g7.map(s => ({ class_id: G7_CLASS_ID, student_id: s.userId })),
+      ...demoMembers(),
+    ],
+    assignments: [
+      ...demoAssignments(),
+      { id: 'demo-a3', class_id: G6_CLASS_ID, title: 'Adding Fractions (Like Denominators)', skill_ids: ['G5_FRACTIONS_ADD_LIKE'],
+        student_ids: [g6[9].userId, g6[10].userId, g6[11].userId], due_on: day(-1), created_at: new Date(Date.now() - 6 * 86400000).toISOString() },
+    ],
+    events: [...demoEvents(), ...g6Events],
+  };
+};
