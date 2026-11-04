@@ -15,7 +15,7 @@
 // decimals, and word problems parse to null and keep their existing behaviour.
 // ============================================================================
 
-import { checkAnswerMatch } from './answerCheck.js';
+import { checkAnswerMatch, rightNumberWrongUnit } from './answerCheck.js';
 // The answer rule, so the hint ladder built here is held to the same one the
 // authored hints and the model's replies answer to, rather than a second copy.
 import { revealed } from './answerRule.js';
@@ -135,6 +135,7 @@ const smallerFromLargerDiff = (a, b) => {
 
 // ---- name the likely mistake behind THIS specific answer ---------------------
 export const diagnoseError = (problem, studentAnswer) => {
+  if (problem && rightNumberWrongUnit(studentAnswer, problem)) return 'Your number is right. Check the unit: is that what the question asks for?';
   // The question's own mistake list first (authored, then the common-mistake
   // catalogue): the child's answer is matched the same forgiving way answers
   // are marked, so "1 3/4" and "7/4" both find the same mistake.

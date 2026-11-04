@@ -83,10 +83,14 @@ function kidVariants(p) {
     const asksTime = /how long|how many (hours|minutes)|time taken/i.test(ask);
     // "How many metres are in 900 cm?" asks for metres: "9 cm" is a wrong
     // unit (marked wrong on purpose), so only the asked unit is tried.
-    const target = ask.match(/how many ([a-z²³]+)/i) || ask.match(/\b(?:to|into|in)\s+([a-z²³]+)\s*\??\s*$/i);
+    const target = ask.match(/how many ([a-z²³]+)/i) || ask.match(/\b(?:to|into|in)\s+([a-z²³]+)\s*[.?]*\s*$/i) || `${q} ${str(p.instruction)}`.match(/\b(?:to|into|in)\s+([a-z²³]+)\s*[.?]+/i);
     const asked = target ? unitsIn(` ${target[1]} `).filter(u => u !== 'money') : [];
+    // An area, a volume or a speed is not in the lengths its question mentions,
+    // and a price is not in kilograms: "84cm" for an area is wrong (feedback F27).
+    const asksDerived = /\b(area|volume|speed|density|convert|how many|represents)\b/i.test(ask);
     for (const u of (asked.length ? asked : unitsIn(ask))) {
       if (u === 'money' && !asksMoney) continue;
+      if (u !== 'money' && !asked.length && (asksDerived || asksMoney)) continue;
       if ((u === 'minutes' || u === 'hours') && !asksTime) continue;
       if (u === 'money') { add(`KSh ${a}`, 'KSh prefix'); add(`Ksh.${a}`, 'Ksh. prefix'); add(`${a}/=`, 'Kenyan /='); add(`sh ${a}`, 'sh prefix'); add(`${a} shillings`, 'word shillings'); }
       else if (u === 'minutes' || u === 'hours') add(`${a} ${u}`, `unit ${u}`);

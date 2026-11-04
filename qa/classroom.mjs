@@ -185,6 +185,10 @@ function nearMisses(p) {
   // for an area in cm²) is a wrong answer.
   const um = String(p.question).match(/\b\d+(?:\.\d+)?\s*(cm|mm|km|m|kg|g|ml|litres)\b/);
   if (isNumber(a) && um) out.push(`${a} ${/^(kg|g)$/.test(um[1]) ? 'cm' : 'kg'}`);
+  // Added 4 Nov (F27): the same family at another size ("62.5 m" for 62.5 cm).
+  const NEIGHBOUR = { cm: 'm', mm: 'cm', m: 'cm', km: 'cm', kg: 'g', g: 'kg', ml: 'litres', litres: 'ml' };
+  const units = new Set([...String(p.question).matchAll(/\b\d+(?:\.\d+)?\s*(cm|mm|km|m|kg|g|ml|litres)\b/g)].map(x => x[1]));
+  if (isNumber(a) && units.size === 1 && !/\b(in|to|into) [a-z]+\s*[.?]*\s*$|how many/i.test(`${p.instruction || ''}. ${p.question}`) && !/\b(in|to|into) [a-z]+[.?]/i.test(`${p.instruction || ''}.`)) out.push(`${a} ${NEIGHBOUR[[...units][0]]}`);
   return out.filter(w => !(p.accepts || []).some(x => String(x).trim() === w));
 }
 

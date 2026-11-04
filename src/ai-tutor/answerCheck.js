@@ -77,6 +77,46 @@ const KEY_UNIT_SUFFIX = /(cm²|cm³|m²|m³|cm2|cm3|m2|m3|cm|mm|km|kg|ml|°|deg|
 // CHILD typed, never from a key, so an algebra key like "3m" keeps its letter.
 const CHILD_UNIT_WORDS = /(percent(age)?|per cent|shillings?|shs?|bob|hours?|hrs?|minutes?|mins?|seconds?|secs?|years?|yrs?|days?|weeks?|months?|km\/h|kmh|kph|m\/s|litres?|liters?|millilit(re|er)s?|kilograms?|grams?|kilomet(re|er)s?|centimet(re|er)s?|millimet(re|er)s?|met(re|er)s?|sq\.?(cm|m|km|mm|units?)|square(cm|m|km|mm|units?|centimet(re|er)s?|met(re|er)s?)|(cm|m|km|mm)sq|cubic(cm|m)|cc|people|pupils|children|students|marks|goats|cows|books|pencils|sweets|apples|oranges|mangoes|eggs|items|pieces|boxes|bags|trees|cars|buses|days)$/;
 
+// ---- Units: what one is, however a child writes it ----
+// readUnit("square centimetres") and readUnit("cm^2") are both { family: 'area',
+// unit: 'cm2' }. Null for anything that is not a clear unit ("goats", "pieces").
+const LENGTH_NAMES = { mm: 'mm|millimet(?:re|er)s?', cm: 'cms?|centimet(?:re|er)s?', m: 'm|mtrs?|met(?:re|er)s?', km: 'kms?|kilomet(?:re|er)s?' };
+const SIMPLE_UNITS = [
+  ['capacity', 'ml', /^(ml|mls|millilit(re|er)s?)$/], ['capacity', 'l', /^(l|ltrs?|lit(re|er)s?)$/],
+  ['mass', 'mg', /^(mg|milligrams?)$/], ['mass', 'g', /^(g|gms?|grams?|grammes?)$/],
+  ['mass', 'kg', /^(kgs?|kilos?|kilograms?|kilogrammes?)$/], ['mass', 't', /^(t|tonnes?|tons?)$/],
+  ['time', 's', /^(s|secs?|seconds?)$/], ['time', 'min', /^(mins?|minutes?)$/], ['time', 'h', /^(h|hrs?|hours?)$/],
+  ['time', 'day', /^days?$/], ['time', 'week', /^(wks?|weeks?)$/], ['time', 'month', /^months?$/], ['time', 'year', /^(yrs?|years?)$/],
+  ['money', 'sh', /^(ksh|kes|shs?|shillings?|bob)$/],
+  ['angle', 'deg', /^(°|degs?|degrees?)$/], ['percent', '%', /^(%|percent|percentage|percents)$/],
+  ['area', 'ha', /^(ha|hectares?)$/], ['area', 'acre', /^acres?$/],
+];
+export function readUnit(raw) {
+  const w = String(raw ?? '').toLowerCase().replace(/²/g, '2').replace(/³/g, '3').replace(/\^/g, '')
+    .replace(/[\s.]+/g, '').replace(/\bper\b|(?<=[a-z])per(?=[a-z])/g, '/').replace(/\/[=-]$/, 'sh');
+  if (!w) return null;
+  if (w === 'sh') return { family: 'money', unit: 'sh' };
+  if (w === 'cc') return { family: 'volume', unit: 'cm3' };
+  for (const [family, unit, re] of SIMPLE_UNITS) if (re.test(w)) return { family, unit };
+  for (const [unit, names] of Object.entries(LENGTH_NAMES)) {
+    if (new RegExp(`^(${names})$`).test(w)) return { family: 'length', unit };
+    if (new RegExp(`^((sq|square|squared)(${names})|(${names})(sq|square|squared|2))$`).test(w)) return { family: 'area', unit: `${unit}2` };
+    if (new RegExp(`^((cu|cubic|cubed)(${names})|(${names})(cu|cubic|cubed|3))$`).test(w)) return { family: 'volume', unit: `${unit}3` };
+  }
+  // A rate: km/h, m/s, g/cm³, shillings per kg. Each side read by the rules above.
+  const rate = w.match(/^([^/]+)\/([^/]+)$/);
+  if (rate) {
+    const top = readUnit(rate[1]), under = readUnit(rate[2]);
+    if (top && under) {
+      const family = top.family === 'length' && under.family === 'time' ? 'speed' : top.family === 'mass' && under.family === 'volume' ? 'density' : 'rate';
+      return { family, unit: `${top.unit}/${under.unit}` };
+    }
+  }
+  if (/^(kmh|kph|kmph)$/.test(w)) return { family: 'speed', unit: 'km/h' };
+  if (w === 'mps') return { family: 'speed', unit: 'm/s' };
+  return null;
+}
+
 // Parse an answer string into ONE number when it represents a single pure
 // quantity; otherwise null (so "A=2, B=1", "(2,5)", "x=3y" fall through to
 // string matching). `child` also strips the unit words a child might add.
@@ -108,6 +148,11 @@ export function mathValue(raw, child = false) {
   if (frac) {
     const d = parseInt(frac[2]);
     return d === 0 ? null : parseInt(frac[1]) / d;
+  }
+  if (child) {
+    // Any spelling of a unit readUnit knows: "28 cm squared", "28 cm^2", "5 m/s".
+    const tail = s.match(/^(-?\d*\.?\d+)([^\d.].*)$/);
+    if (tail && readUnit(tail[2])) return parseFloat(tail[1]);
   }
   if (child) s = s.replace(CHILD_UNIT_WORDS, '').replace(/\/[=-]$/, '');
   const pct = s.match(/^(-?\d*\.?\d+)%$/);
@@ -210,21 +255,130 @@ function exactValue(problem) {
   return null;
 }
 
-// A unit the child wrote that contradicts the unit asked for ("9 metres" when
-// the question asks how many kilometres). Only clear length/mass/capacity words.
-const UNIT_WORDS = [
-  ['mm', /^(mm|millimet(re|er)s?)$/], ['cm', /^(cm|centimet(re|er)s?)$/], ['km', /^(km|kilomet(re|er)s?)$/], ['m', /^(m|met(re|er)s?)$/],
-  ['kg', /^(kg|kilograms?|kilos?)$/], ['g', /^(g|grams?)$/], ['ml', /^(ml|millilit(re|er)s?)$/], ['l', /^(l|lit(re|er)s?)$/],
+// ---- Is the unit the child wrote the one asked for? (feedback F27) ----
+// "28 kg" for an area and "62.5 m" for 62.5 cm are wrong answers, as a teacher
+// marks them. A number with no unit is never a conflict, and neither is a word
+// readUnit does not know ("6 pieces"). Marking a right answer wrong is the worse
+// fault, so every rule below that guesses says nothing when it is unsure.
+const unitAfterNumber = (raw) => {
+  const t = String(raw ?? '').trim().replace(/[−–—]/g, '-').replace(/\.$/, '');
+  if (/^(ksh|kes|shs?)\b\.?\s*-?\d/i.test(t)) return readUnit('sh');
+  const m = t.match(/^\(?[+-]?\s*(?:\d[\d,]*)?(?:\.\d+)?(?:\s+\d+\/\d+|\/\d+)?\)?\s*([^\d\s.,/(][^]*|\/[=-])$/);
+  return m ? readUnit(m[1]) : null;
+};
+const sameUnit = (a, b) => a.unit === b.unit
+  || (a.unit === 'ml' && b.unit === 'cm3') || (a.unit === 'cm3' && b.unit === 'ml');
+
+// Words of a question that name what it asks for, in the order they count.
+const ASK_WORDS = [
+  ['area', /\barea\b/i], ['volume', /\bvolume\b/i], ['capacity', /\bcapacity\b/i],
+  ['length', /\b(perimeter|circumference|length|width|breadth|height|distance|radius|diameter|how far|how tall|how wide|how high|lower bound|upper bound)\b/i],
+  ['mass', /\b(mass|weight|how heavy)\b/i], ['speed', /\b(speed|velocity)\b/i], ['density', /\bdensity\b/i],
+  ['angle', /\b(angle|bearing)\b/i], ['time', /\b(time|how long (?:does|did|will|would))\b/i],
+  ['money', /\b(cost|price|profit|loss|commission|interest|discount)\b/i],
 ];
-const unitOf = (w) => { const x = String(w || '').toLowerCase().replace(/\.$/, ''); const hit = UNIT_WORDS.find(([, re]) => re.test(x)); return hit ? hit[0] : null; };
+const ASK_VERB = /\b(find|calculate|work out|determine|what|which|state|give)\b/i;
+// The first thing named after the asking word: "What is the area of a rectangle
+// of length 7" asks for area, "Find the length of a rectangle of area 24" for
+// length. With no asking word, only a sentence naming one kind of thing counts.
+function askedKind(sentence) {
+  const verb = sentence.match(ASK_VERB);
+  const hits = ASK_WORDS.flatMap(([family, re]) => {
+    const m = (verb ? sentence.slice(verb.index) : sentence).match(re);
+    return m ? [{ family, at: m.index, bound: /bound/i.test(m[0]) }] : [];
+  });
+  if (!hits.length) return null;
+  // A bound is asked of whatever is measured, so it says nothing about the kind.
+  if (hits.some(h => h.bound)) return null;
+  if (verb) return hits.sort((a, b) => a.at - b.at)[0].family;
+  return hits.length === 1 ? hits[0].family : null;
+}
+
+// Every unit a question mentions. Single letters ("5 m") count only straight
+// after a number, and only in a question that is not algebra.
+function unitsInText(text) {
+  const out = [];
+  const add = (w) => { const u = readUnit(w); if (u) out.push(u); };
+  for (const m of text.matchAll(/(?:square|sq\.?|cubic)\s+[a-z]+|\b[a-z]{2,}(?:[²³]|\^[23])?(?:\s*(?:\/|per)\s*[a-z]+(?:[²³]|\^[23])?)?/gi)) add(m[0]);
+  for (const m of text.matchAll(/\d\s*(m|g|l|h|s|t)(?:[²³]|\^[23])?(?:\/[a-z]+(?:[²³]|\^[23])?)?(?![a-z0-9])/g)) add(m[0].replace(/^\d\s*/, ''));
+  if (/\d\s*°/.test(text)) add('°');
+  if (/\b(ksh|kes)\.?\s*\d/i.test(text)) add('sh');
+  return out;
+}
+const isAlgebraText = (t) => /\d[a-z]\s*[-+=×]|[-+=]\s*\d*[a-z]\b|\b[a-z]\s*=/.test(t);
+const GEOMETRY = { length: 1, area: 2, volume: 3 };
+const POWER = { 2: 'area', 3: 'volume' };
+// The units that would be right for a kind of answer, from the question's own
+// units: an area in a question measured in cm is in cm².
+function unitsOfKind(family, units) {
+  const same = units.filter(u => u.family === family);
+  const power = GEOMETRY[family];
+  if (power > 1) for (const u of units) if (u.family === 'length') same.push({ family, unit: `${u.unit}${power}` });
+  return same;
+}
+
+// What the question asks for, without looking at the key: exact units when it
+// says so, a kind of unit when it only implies one, null when it does not say.
+export function askedUnit(problem) {
+  const instruction = String(problem?.instruction || '');
+  const question = String(problem?.question || '');
+  const text = `${instruction} ${question}`.trim();
+  if (isAlgebraText(text)) return null;
+  const said = [];
+  const pushSaid = (w, original) => {
+    // "from P to S": a capital letter is a point, not seconds.
+    if (original.length === 1 && original !== original.toLowerCase()) return;
+    const u = readUnit(w); if (u) said.push(u);
+  };
+  for (const m of text.matchAll(/how many\s+((?:square\s+|cubic\s+)?([a-z]+(?:\s*(?:\/|per\b)\s*[a-z]+)?))/gi)) pushSaid(m[1], m[2]);
+  if (!said.length) {
+    for (const m of text.matchAll(/\b(?:in|into|to)\s+(?:the\s+unit\s+)?((?:square\s+|sq\.?\s+|cubic\s+)?([a-z]+(?:[²³23]|\^[23])?(?:\s*(?:\/|per\b)\s*[a-z]+(?:[²³23]|\^[23])?)?))(?![a-z])/gi)) pushSaid(m[1], m[2]);
+    for (const m of text.matchAll(/\(\s*((?:square\s+|cubic\s+)?([a-z]+(?:[²³])?(?:\/[a-z]+[²³]?)?))\s*\)\s*\??\s*$/gi)) pushSaid(m[1], m[2]);
+  }
+  if (said.length) return { units: said };
+
+  const units = unitsInText(text);
+  // A closing "(π = 3.142, 2 d.p.)" is a rule for the answer, not the ask.
+  const sentences = question.replace(/(\s*\([^()]*\))+\s*$/, '').split(/(?<=[.?!])\s+/).filter(Boolean);
+  const kind = askedKind(sentences[sentences.length - 1] || '') || askedKind(instruction);
+  if (kind) return { family: kind, units: unitsOfKind(kind, units) };
+
+  // Nothing named: a question measured in one kind of unit only is answered in
+  // it. Not for money and time, which many stories mention in passing, nor for
+  // angles, since a side found from an angle has a length.
+  const groups = new Set(units.filter(u => u.family !== 'percent').map(u => (GEOMETRY[u.family] ? 'geometry' : u.family)));
+  if (groups.size !== 1) return null;
+  const only = [...groups][0];
+  if (!['geometry', 'mass', 'capacity'].includes(only)) return null;
+  return only === 'geometry' ? { group: 'geometry', units } : { family: only, units: units.filter(u => u.family === only) };
+}
+
 function unitConflict(userAnswer, problem) {
-  const um = String(userAnswer).trim().match(/^-?[\d.,\s/]+\s*([a-z]+)\.?$/i);
-  const given = um && unitOf(um[1]);
+  const given = unitAfterNumber(userAnswer);
   if (!given) return false;
-  const q = String(problem?.question || '');
-  const ask = q.match(/how many ([a-z]+)/i) || q.match(/\b(?:in|to|into)\s+([a-z]+)\s*\??\s*$/i) || q.match(/\(([a-z]+)\)\s*$/i);
-  const asked = ask && unitOf(ask[1]);
-  return !!asked && asked !== given;
+  const asked = askedUnit(problem);
+  if (!asked) return false;
+  // Percentages are said so many ways around a measure that "40%" is left alone.
+  if (given.family === 'percent' && !asked.family) return false;
+  if (asked.group === 'geometry') {
+    if (!GEOMETRY[given.family]) return true;
+    const samePower = asked.units.filter(u => u.family === given.family);
+    return samePower.length > 0 && !samePower.some(u => sameUnit(u, given));
+  }
+  if (asked.family) {
+    if (given.family === 'percent') return false;
+    const liquid = new Set(['volume', 'capacity']);
+    if (asked.family !== given.family) return !(liquid.has(asked.family) && liquid.has(given.family));
+    return asked.units.length > 0 && !asked.units.some(u => sameUnit(u, given));
+  }
+  return !asked.units.some(u => sameUnit(u, given));
+}
+
+// The right number with the wrong unit, for the lesson's "check your unit".
+export function rightNumberWrongUnit(userAnswer, problem) {
+  if (!unitAfterNumber(userAnswer) || checkAnswerMatch(userAnswer, problem)) return false;
+  const number = String(userAnswer).trim().match(/^\(?[+-]?\s*[\d,]*\.?\d+(?:\s+\d+\/\d+|\/\d+)?\)?/);
+  return !!number && checkAnswerMatch(number[0], problem);
 }
 
 export function checkAnswerMatch(userAnswer, problem) {
@@ -359,15 +513,24 @@ export function checkAnswerMatch(userAnswer, problem) {
     if (f && gcd(Number(f[1]), Number(f[2])) > 1) return false;
   }
   const userVal = mathValue(userAnswer, true);
-  if (userVal != null && !unitConflict(userAnswer, problem)) {
+  // A key that carries a unit says exactly what is asked for; only without one
+  // is the unit read from the question.
+  const givenUnit = unitAfterNumber(userAnswer);
+  const keyUnits = accepts.map(unitAfterNumber);
+  const keyHasUnit = keyUnits.some(Boolean);
+  const unitFits = (i) => !givenUnit || !keyHasUnit
+    || (keyUnits[i] ? sameUnit(givenUnit, keyUnits[i]) : keyUnits.some(u => u && sameUnit(givenUnit, u)));
+  if (userVal != null && (keyHasUnit || !unitConflict(userAnswer, problem))) {
     const typedDecimal = /\d*\.\d/.test(userAnswer.toString());
     const exact = exactValue(problem);
     const wholeKey = /^-?\d+$/.test(String(problem.answer ?? '').trim());
-    if (accepts.some(a => {
+    if (accepts.some((a, i) => {
+      if (!unitFits(i)) return false;
       // "24/30" listed for a "?/30" blank is a literal alternative: "4/5" has
       // the same value but is the question, not the answer.
       if (wholeKey && /^\s*-?\d+\s*\/\s*\d+\s*$/.test(String(a))) return false;
-      const aVal = mathValue(a);
+      // A key with a spaced or spelled-out unit ("5 m", "60 km/h") is that number.
+      const aVal = mathValue(a) ?? (keyUnits[i] ? mathValue(a, true) : null);
       if (aVal == null) return false;
       if (!typedDecimal) return Math.abs(userVal - aVal) <= 1e-9 * Math.max(1, Math.abs(aVal));
       // An exact key (4/5 = 0.8) must be matched exactly: 0.75 is wrong.
