@@ -22,7 +22,7 @@ export function buildRectanglePerimeter({ min = 3, max = 20, unit = 'cm' } = {})
     type: 'rect-perimeter', instruction: 'Find the perimeter.',
     question: `A rectangle is ${l} ${unit} long and ${w} ${unit} wide. Find its perimeter.`,
     band: { op: 'perimeter', a: l, b: w },
-    answer: `${value}`, accepts: accepts(`${value}`, `${value}cm`),
+    answer: `${value}`, accepts: accepts(`${value}`, `${value}${unit}`),
     model: { type: 'shape', data: { kind: 'rect', dims: { l, w }, emphasis: 'perimeter', unit: 'cm' } },
     hints: hintLadder('Perimeter is the total distance around the edge.',
       'Add all four sides, or use P = 2(l + w).', `2 × (${l} + ${w}).`),

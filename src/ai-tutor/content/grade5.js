@@ -643,7 +643,7 @@ function buildLcmHcf({ which }) {
       ]);
       return {
         type: 'lcm-word', instruction: 'Work out when they meet again.',
-        question: spec, answer: `${value}`, accepts: accepts(`${value}`, `${value} minutes`, `${value} days`),
+        question: spec, answer: `${value}`, accepts: accepts(`${value}`, `${value} ${/minutes/.test(spec) ? 'minutes' : 'days'}`),
         hints: hintLadder(
           'Each one happens on its own multiples, so they meet on a time that is a multiple of BOTH.',
           `Count up in ${m1}s, and separately in ${m2}s, and look for the first time that appears in both counts.`,

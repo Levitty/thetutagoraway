@@ -21,3 +21,6 @@ key checks for a negative "how much more" and a hire-purchase price below cash;
 and a help check that the worked example is about the same thing (cone, not
 cylinder; alternate, not co-interior). `node qa/probe-forms.mjs` tries the
 extra forms on every CBC Grade 4-9 skill, 25 draws each.
+
+Added 4 Nov (F27): the wrong-unit near miss also tries the same family at another
+size ("62.5 m" for 62.5 cm).
