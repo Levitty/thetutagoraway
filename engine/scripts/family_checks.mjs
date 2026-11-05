@@ -9,7 +9,7 @@ import { OUTCOMES } from '../../src/ai-tutor/curriculum/outcomes.js';
 import { SKILL_TAGS } from '../../src/ai-tutor/curriculum/skillTags.js';
 import { SKILLS } from '../../src/ai-tutor/knowledgeGraph.js';
 import { checkAnswerMatch } from '../../src/ai-tutor/answerCheck.js';
-import { tidyProblem } from '../../src/ai-tutor/problemGenerators.js';
+import { tidyProblem, generateProblem } from '../../src/ai-tutor/problemGenerators.js';
 import { buildChoices } from '../../src/ai-tutor/choices.js';
 import { textOf, formText, senseFlags, clusterForms, sameForm } from './content_measures.mjs';
 
@@ -114,6 +114,17 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
   if (placeOnly) fail('every wrong option is just ten times or a tenth of the answer');
   if (weakOption > n * 0.1) fail(`${weakOption} of ${n} draws have a wrong option with no "why" feedback`);
   if (seen.size < 4) fail(`only ${seen.size} different questions in ${n} draws`);
+  return out;
+}
+
+// What a skill asks without any family: what a new family must not repeat.
+export function baseFormsOf(ids) {
+  const out = {};
+  for (const id of ids) {
+    const seen = new Set();
+    for (let i = 0; i < 40; i++) { const p = generateProblem(id, { noFamilies: true, kp: i % 4 }); if (p && !p.placeholder) seen.add(p.question); }
+    out[id] = [...seen];
+  }
   return out;
 }
 

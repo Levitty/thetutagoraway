@@ -31,7 +31,7 @@ const { STRUCTURED_IDS } = await import(resolve(root, 'src/ai-tutor/content/inde
 const { auditHints, reportHints } = await import(resolve(root, 'engine/scripts/audit_hint_leaks.mjs'));
 const { measureAll, summarise, gradeTable, rangeFailures } = await import(resolve(root, 'engine/scripts/range_report.mjs'));
 const { setFamilyMode } = await import(resolve(root, 'src/ai-tutor/content/families/core.js'));
-const { checkFamily, checkForms, FAMILIES } = await import(resolve(root, 'engine/scripts/family_checks.mjs'));
+const { checkFamily, checkForms, baseFormsOf, FAMILIES } = await import(resolve(root, 'engine/scripts/family_checks.mjs'));
 
 const args = process.argv.slice(2);
 const VERBOSE = args.includes('--verbose');
@@ -283,8 +283,7 @@ console.log(reportHints(hintAudit, { verbose: VERBOSE }));
 
 // ---- Range: forms, fit, one right answer, and the families ------------------
 setFamilyMode('reviewed');
-const baseForms = Object.fromEntries(Object.entries(childView).map(([id, m]) => [id, m.formExamples]));
-const familyFails = [...checkForms(baseForms), ...FAMILIES.flatMap(f => checkFamily(f))];
+const familyFails = [...checkForms(baseFormsOf(new Set(FAMILIES.map(f => f.skill)))), ...FAMILIES.flatMap(f => checkFamily(f))];
 const childFails = rangeFailures(childView, { formsMin: 0, onTopicMin: ON_TOPIC_MIN });
 const bankFails = rangeFailures(bankView, { formsMin: FORMS_MIN, onTopicMin: ON_TOPIC_MIN });
 

@@ -15,6 +15,7 @@ import { gradeOf } from '../src/ai-tutor/curricula.js';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
 import { CBC_SUBSTRANDS, OUTCOMES } from '../src/ai-tutor/curriculum/outcomes.js';
 import { textOf } from '../engine/scripts/content_measures.mjs';
+import { FAMILIES } from '../src/ai-tutor/content/families/index.js';
 
 // How the graph's sub-strand names read in the design. Keys are lowercase.
 const NAME_FIX = {
@@ -86,7 +87,8 @@ for (const [id, s] of Object.entries(SKILLS)) {
   for (let i = 0; i < 60; i++) { try { texts.push(textOf(generateProblem(id, { kp: i % 6 }))); } catch { /* the gate reports it */ } }
   const hit = sub.outcomes.filter(([letter, , signal, hands]) => !hands && texts.filter(t => signal.test(t)).length >= 6)
     .map(([letter]) => `G${sub.grade}.${sub.key}.${letter}`);
-  const outcomes = [...new Set([...hit, ...(PROMISED[id] || [])])];
+  const fromFamilies = FAMILIES.filter(f => f.skill === id).map(f => f.outcome);
+  const outcomes = [...new Set([...hit, ...(PROMISED[id] || []), ...fromFamilies])];
   tags[id] = { grade: sub.grade, substrand: sub.key, status: sub.status, outcomes };
 }
 for (const k of Object.keys(PROMISED)) for (const o of PROMISED[k]) if (!OUTCOMES[o]) throw new Error(`${k}: unknown outcome ${o}`);

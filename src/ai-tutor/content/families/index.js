@@ -33,6 +33,8 @@ export const FAMILY_SHARE = 0.5;
 // lesson (diagnostic, memory check) draw no working or step-marked questions,
 // because only the lesson screen can show them.
 const eligible = (f, opts) => {
+  // Young learners get only what their tap-and-listen lesson can show.
+  if (opts.young && !f.young) return false;
   const lesson = opts.lesson === true;
   const right = opts.correctSoFar ?? 0;
   const form = f.form;

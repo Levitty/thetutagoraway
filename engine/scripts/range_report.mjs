@@ -22,6 +22,9 @@ export function measureSkill(id, draws = 60) {
   const tag = SKILL_TAGS[id] || {};
   const young = (SKILLS[id].grade || 99) <= 3;
   const outcomes = (tag.outcomes || []).map(o => OUTCOMES[o]).filter(Boolean);
+  // Revision counts as on topic: the same sub-strand one grade below, such as
+  // hire purchase (Grade 8 Money) in a Grade 9 Money skill.
+  const revision = Object.values(OUTCOMES).filter(o => o.grade === tag.grade - 1 && outcomes.some(x => x.substrand === o.substrand) && !o.hands);
   const kps = kpCount(id);
   const m = { id, grade: tag.grade ?? SKILLS[id].grade, n: 0, questions: [], formTexts: [], story: 0, kenyan: 0, multi: 0, stepMarked: 0, reasoning: 0, picture: 0, choice: 0, offTopic: 0, offTopicExample: null, keyFails: [], choiceFails: [], flags: {}, optionTotal: 0, optionPlace: 0, promisedHit: {} };
   const warn = console.warn; console.warn = () => {};
@@ -39,7 +42,7 @@ export function measureSkill(id, draws = 60) {
     const c = classify(p);
     for (const k of ['story', 'kenyan', 'multi', 'stepMarked', 'reasoning', 'picture', 'choice']) if (c[k]) m[k]++;
     if (outcomes.length) {
-      if (!outcomes.some(o => o.signal.test(t))) { m.offTopic++; m.offTopicExample ||= String(p.question).slice(0, 90); }
+      if (![...outcomes, ...revision].some(o => o.signal.test(t))) { m.offTopic++; m.offTopicExample ||= String(p.question).slice(0, 90); }
       for (const o of outcomes) if (o.signal.test(t)) m.promisedHit[o.id] = (m.promisedHit[o.id] || 0) + 1;
     }
     if (!p.parts && !p.shownSteps && !checkAnswerMatch(String(p.answer), p)) m.keyFails.push(`key marks wrong: ${p.answer} on "${String(p.question).slice(0, 70)}"`);

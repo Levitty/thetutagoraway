@@ -69,7 +69,7 @@ export const CORE_FAMILIES = [
 
   // ---- G9_APPROX_ERRORS: approximations and errors, not percentage change
   fx({ id: 'g9.approx.percent-error', skill: 'G9_APPROX_ERRORS', outcome: 'G9.APPROX.c', rung: 2, form: 'word',
-    draw: () => { const actual = pick([50, 80, 90, 120, 160, 200, 250]); const est = actual + pick([-1, 1]) * pick([2, 4, 5, 8, 10]); const pct = (Math.abs(est - actual) / actual) * 100; return Number.isInteger(pct * 10) ? { actual, est } : null; },
+    draw: () => { const actual = pick([50, 80, 90, 120, 160, 200, 250]); const est = actual + pick([-1, 1]) * pick([2, 4, 5, 8, 10]); const e = Math.abs(est - actual), pct = (e / actual) * 100; const v = [round((e / est) * 100, 1), e, round((est / actual) * 100, 1)]; return Number.isInteger(pct * 10) && new Set(v).size === 3 && !v.includes(round(pct, 1)) ? { actual, est } : null; },
     make: ({ actual, est }) => {
       const e = Math.abs(est - actual), pct = round((e / actual) * 100, 1);
       return { question: `A bag of maize has a true mass of ${actual} kg. A trader estimates it as ${est} kg. Find the percentage error.`,
@@ -120,7 +120,7 @@ export const CORE_FAMILIES = [
   fx({ id: 'g8.scale.real-length', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.b', rung: 1, form: 'word',
     draw: () => { const s = pick([5, 10, 20, 25, 50]), cm = randInt(3, 12); return { s, cm, what: pick(['A plot', 'A school field', 'A shamba', 'A church compound']) }; },
     make: ({ s, cm, what }) => ({
-      question: `${what} is drawn to a scale of 1 cm to ${s} m. Its length on the drawing is ${cm} cm. What is its real length, in metres?`,
+      question: `On a plan, 1 cm stands for ${s} m. ${what} measures ${cm} cm on that plan. How long is it in real life, in metres?`,
       answer: cm * s,
       wrong: [[cm + s, 'Each centimetre on the drawing stands for the full distance. Multiply, do not add.'], [round(s / cm, 2), 'The drawing is smaller than the real thing, so the real length must be bigger.'], [cm * s * 100, 'The scale already gives metres, so the answer is in metres with no change of unit.']],
       hints: ['What does 1 cm on the drawing stand for?', `There are ${cm} of those centimetres.`],
@@ -140,7 +140,7 @@ export const CORE_FAMILIES = [
   fx({ id: 'g8.scale.ratio-map', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.j', rung: 3, form: 'steps',
     draw: () => { const [a, b, km] = route(); const scale = pick([1000000, 2000000, 500000]); const cm = (km * 100000) / scale; return Number.isInteger(cm * 10) && cm < 80 && cm > 2 ? { a, b, km, scale, cm } : null; },
     make: ({ a, b, km, scale, cm }) => ({
-      question: `A map has a scale of 1 : ${commas(scale)}. The road from ${a} to ${b} measures ${cm} cm on the map, as a straight line.`,
+      question: `On a 1 : ${commas(scale)} map of Kenya, a ruler laid from ${a} to ${b} reads ${cm} cm.`,
       parts: [
         { prompt: 'How many cm of real distance does 1 cm on the map stand for?', answer: scale, hint: 'In a ratio scale, both numbers are in the same unit.', wrong: [[1, 'Read the second number of the scale.']] },
         { prompt: `How many cm is ${cm} cm on the map in real life?`, answer: cm * scale, hint: `${cm} × ${commas(scale)}`, wrong: [[cm + scale, 'Each map centimetre stands for the whole amount: multiply.']] },
@@ -298,7 +298,7 @@ export const CORE_FAMILIES = [
     draw: () => ({ t1: randInt(1, 6), kg1: randInt(1, 9) * 100, t2: randInt(1, 4), kg2: randInt(1, 9) * 100 }),
     make: ({ t1, kg1, t2, kg2 }) => {
       const total = t1 * 1000 + kg1 + t2 * 1000 + kg2;
-      return { question: `A farmer sells ${t1} tonnes ${kg1} kg of maize in one week and ${t2} tonnes ${kg2} kg in the next. How many kilograms is that altogether?`,
+      return { question: `One week a farmer sells ${t1} t ${kg1} kg of maize. The next week the sale is ${t2} t ${kg2} kg. Find the total for both weeks, in kilograms.`,
         answer: total,
         wrong: [[t1 + t2 + kg1 + kg2, 'Tonnes and kilograms are different units. Change the tonnes to kilograms first.'], [(t1 + t2) * 100 + kg1 + kg2, '1 tonne is 1,000 kg, not 100 kg.'], [(t1 + t2) * 1000, 'The kilograms have been left out.']],
         hints: ['Change each amount to kilograms.', 'Then add.'],
@@ -453,10 +453,10 @@ export const CORE_FAMILIES = [
 
   // ---- G8_SURFACE_AREA: cylinders as well as cuboids
   fx({ id: 'g8.surface.cylinder-tin', skill: 'G8_SURFACE_AREA', outcome: 'G8.AREA.d', rung: 2, form: 'word',
-    draw: () => { const r = pick([7, 14, 3.5]), h = pick([10, 15, 20, 30]); return { r, h, what: pick(['A closed tin of cooking fat', 'A closed water tank', 'A closed paint tin']) }; },
+    draw: () => { const r = pick([7, 14, 3.5]), h = pick([10, 15, 20, 30]); return { r, h, what: pick(['A closed tin of cooking fat', 'A closed cylindrical drum', 'A closed paint tin']) }; },
     make: ({ r, h, what }) => {
       const pi = 22 / 7, sa = round(2 * pi * r * (r + h), 1);
-      return { question: `${what} is a cylinder of radius ${r} cm and height ${h} cm. Find its total surface area in cm². (Use π = 22/7)`,
+      return { question: `${what} has a circular top and bottom of radius ${r} cm, and stands ${h} cm tall. How much metal covers the whole outside, in cm²? (Use π = 22/7)`,
         answer: sa,
         wrong: [[round(2 * pi * r * h, 1), 'That is the curved side only. A closed tin has a top and a bottom too.'], [round(2 * pi * r * h + pi * r * r, 1), 'That has one circle. A closed tin has two.'], [round(pi * r * r * h, 1), 'That is the volume. Surface area is what covers the outside.']],
         hints: ['A closed cylinder opens out into a rectangle and two circles.', 'Curved part = 2πrh. Each circle = πr².'],
@@ -502,10 +502,10 @@ export const CORE_FAMILIES = [
     draw: () => { const d1 = pick([60, 120, 180, 240]), v1 = pick([40, 60, 80]), v2 = pick([30, 40, 60]); const d2 = pick([60, 120, 180]); const T = d1 / v1 + d2 / v2; const av = (d1 + d2) / T; return v1 !== v2 && Number.isInteger(av * 10) ? { d1, v1, d2, v2 } : null; },
     make: ({ d1, v1, d2, v2 }) => {
       const t1 = d1 / v1, t2 = d2 / v2, av = round((d1 + d2) / (t1 + t2), 1);
-      return { question: `A matatu travels ${d1} km at ${v1} km/h, then ${d2} km at ${v2} km/h. Find its average speed for the whole journey, in km/h.`,
+      return { question: `Two stretches of road: ${d1} km driven at ${v1} km/h and ${d2} km driven at ${v2} km/h. Find the average speed over both stretches, in km/h.`,
         answer: av,
         wrong: [[(v1 + v2) / 2, 'The two parts take different times, so you cannot just average the speeds. Use total distance ÷ total time.'], [d1 + d2, 'That is the total distance. Divide it by the total time.'], [round(t1 + t2, 2), 'That is the total time. Average speed is distance ÷ time.']],
-        hints: ['Average speed = total distance ÷ total time.', 'Find the time for each part first.'],
+        hints: ['Average speed = total distance ÷ total time.', 'Find the time for each stretch first.'],
         steps: [`Time: ${d1} ÷ ${v1} = ${round(t1, 2)} h and ${d2} ÷ ${v2} = ${round(t2, 2)} h.`, `Total distance: ${d1 + d2} km. Total time: ${round(t1 + t2, 2)} h.`, `Average speed: ${d1 + d2} ÷ ${round(t1 + t2, 2)} = ${av} km/h.`] };
     },
     check: ({ d1, v1, d2, v2 }, a) => Math.abs(a * (d1 / v1 + d2 / v2) - (d1 + d2)) < 0.5 }),
@@ -520,7 +520,7 @@ export const CORE_FAMILIES = [
   fx({ id: 'g9.speed.velocity-direction', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.c', rung: 2, form: 'word',
     draw: () => { const d = pick([120, 150, 180, 240, 300]), t = pick([2, 3, 4, 5, 6]); return Number.isInteger(d / t) ? { d, t } : null; },
     make: ({ d, t }) => ({
-      question: `A lorry drives ${d} km due north in ${t} hours. Find the size of its average velocity, in km/h.`,
+      question: `Going straight north without turning, a lorry ends ${d} km from where it began, ${t} hours later. How big is its velocity, in km/h?`,
       answer: d / t,
       wrong: [[d * t, 'Velocity is displacement divided by time, so divide.'], [d - t, 'Divide the distance by the time.'], [t / d, 'That is the wrong way up: displacement ÷ time.']],
       hints: ['On a straight road in one direction, the displacement equals the distance.', 'Velocity = displacement ÷ time.'],

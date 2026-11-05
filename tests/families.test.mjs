@@ -6,9 +6,9 @@
 // ============================================================================
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { checkFamily, checkForms, FAMILIES } from '../engine/scripts/family_checks.mjs';
+import { checkFamily, checkForms, baseFormsOf, FAMILIES } from '../engine/scripts/family_checks.mjs';
 import { setFamilyMode } from '../src/ai-tutor/content/families/core.js';
-import { familyDraw, familiesFor } from '../src/ai-tutor/content/families/index.js';
+import { familyDraw } from '../src/ai-tutor/content/families/index.js';
 import { measureSkill } from '../engine/scripts/range_report.mjs';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
 import { checkAnswerMatch } from '../src/ai-tutor/answerCheck.js';
@@ -20,15 +20,7 @@ test('every family passes its checks over 200 draws', () => {
 
 test('no two families in a skill are the same form, and none repeats what the skill had', () => {
   setFamilyMode('reviewed');
-  const ids = [...new Set(FAMILIES.map(f => f.skill))];
-  const base = {};
-  for (const id of ids) {
-    const own = familiesFor(id);
-    // The skill's own forms, without any of its families.
-    const seen = [];
-    for (let i = 0; i < 40; i++) { const p = generateProblem(id, { noFamilies: true, kp: i % 4 }); if (p && !p.placeholder && !own.some(f => f.id === p.familyId)) seen.push(p.question); }
-    base[id] = [...new Set(seen)];
-  }
+  const base = baseFormsOf([...new Set(FAMILIES.map(f => f.skill))]);
   const bad = checkForms(base);
   assert.deepEqual(bad, [], `\n${bad.slice(0, 40).join('\n')}\n`);
 });

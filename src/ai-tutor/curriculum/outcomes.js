@@ -53,7 +53,7 @@ sub(4, N, 'Whole numbers', 'WHOLE', [
   ['j', 'Roman numerals to X', /[Rr]oman|\b[IVX]{1,4}\b/],
 ]);
 sub(4, N, 'Addition', 'ADD', [
-  ['a', 'Add to a sum of 10,000 with regrouping', /\d\s*\+\s*\d|add|sum|total|altogether|together/i],
+  ['a', 'Add to a sum of 10,000 with regrouping', /\d\s*\+\s*\d|add|sum|total|altogether|together|gives|have now|more/i],
   ['c', 'Estimate a sum by rounding to the nearest ten', /estimate|about how/i],
   ['d', 'Addition patterns', /pattern|next number|sequence/i],
 ]);
@@ -298,7 +298,7 @@ sub(6, D, 'Bar graphs', 'DATA', [
 
 // ---------------------------------------------------------------- Grade 7
 sub(7, N, 'Whole numbers', 'WHOLE', [
-  ['a', 'Place value and total value', /place value|total value|value of the digit/i],
+  ['a', 'Place value and total value', /place value|total value|value of the digit|which place/i],
   ['b', 'Read and write numbers in symbols to hundreds of millions', /in (figures|symbols)|million/i],
   ['c', 'Read and write numbers in words to millions', /in words|words/i],
   ['d', 'Round off to the nearest hundred million', /round|nearest/i],
@@ -324,7 +324,7 @@ sub(7, N, 'Fractions', 'FRAC', [
 sub(7, N, 'Decimals', 'DEC', [
   ['a', 'Place value and total value of decimals', /place value|total value|decimal|tenths?|hundredths?/i],
   ['b', 'Multiply decimals', /\d\.\d.*×|×.*\d\.\d|multipl|each/i],
-  ['c', 'Divide decimals', /\d\.\d.*÷|÷.*\d\.\d|divide|share/i],
+  ['c', 'Divide decimals', /\d\.\d.*÷|÷.*\d\.\d|divid|share/i],
 ]);
 sub(7, N, 'Squares and square roots', 'SQUARES', [
   ['a', 'Squares of whole numbers, fractions, decimals', /square|²/i],
@@ -332,7 +332,7 @@ sub(7, N, 'Squares and square roots', 'SQUARES', [
 ]);
 sub(7, A, 'Algebraic expressions', 'EXPR', [
   ['a', 'Form expressions from real life', /expression|write|form/i],
-  ['c', 'Simplify expressions', /simplif|collect|like terms|\d?[a-z] [+−-] \d?[a-z]/i],
+  ['c', 'Simplify expressions', /simplif|collect|like terms|\d?[a-z] [+−-] \d?[a-z]|\b\d*x\b/i],
 ]);
 sub(7, A, 'Linear equations', 'EQUATIONS', [
   ['a', 'Form linear equations in one unknown', /form|equation|let [a-z]/i],
@@ -383,9 +383,9 @@ sub(7, MS, 'Temperature', 'TEMP', [
 sub(7, MS, 'Money', 'MONEY', [
   ['a', 'Profit and loss', /profit|loss/i],
   ['b', 'Percentage profit and loss', /(profit|loss).*(%|per ?cent)|(%|per ?cent).*(profit|loss)/i],
-  ['c', 'Discount', /discount|percentage|%/i],
+  ['c', 'Discount', /discount|percentage|%|change for/i],
   ['d', 'Commission', /commission/i],
-  ['e', 'Interpret and prepare bills', /\bbill|receipt|invoice|tokens?|units|KPLC|water/i],
+  ['e', 'Interpret and prepare bills', /\bbill|receipt|invoice|tokens?|units|KPLC|water|change|buys/i],
   ['g', 'Postal charges', /postal|parcel|post office|postage/i],
   ['h', 'Mobile money', /M-?Pesa|mobile money|agent|send money|withdraw/i],
 ]);
@@ -434,7 +434,7 @@ sub(8, N, 'Rates, ratio, proportions and percentages', 'RATES', [
   ['e', 'Divide a quantity in a given ratio', /share|divide|ratio|\d:\d/i],
   ['f', 'Increase and decrease in a ratio', /(increase|decrease|in the ratio).*ratio|ratio.*(increase|decrease)/i],
   ['g', 'Percentage increase and decrease', /per ?cent|%|increase|decrease/i],
-  ['j', 'Direct and inverse proportion', /proportion|how many .*(would|will|take)|workers|days|men|people/i],
+  ['j', 'Direct and inverse proportion', /proportion|how (many|much) .*(would|will|take|do|does)|workers|days|men|people/i],
 ]);
 sub(8, A, 'Algebraic expressions', 'EXPR', [
   ['a', 'Factorise algebraic expressions', /factor|\(/i],
@@ -474,7 +474,7 @@ sub(8, G, 'Geometrical constructions', 'CONSTRUCT', [
 ]);
 sub(8, G, 'Coordinates and graphs', 'GRAPHS', [
   ['b', 'Identify and plot points', /\(-?\d+, ?-?\d+\)|point|coordinate|plot|axis/i],
-  ['d', 'Table of values for a linear equation', /table of values|complete the table|table/i],
+  ['d', 'Table of values for a linear equation', /table of values|complete the table|table|find y when/i],
   ['e', 'A suitable scale', /\bscale\b/i],
   ['f', 'Draw a linear graph', /draw .*graph/i, 'hands'],
   ['g', 'Solve simultaneous equations by graph', /(meet|cross|intersect)|simultaneous/i],
@@ -493,7 +493,7 @@ sub(8, G, 'Common solids', 'SOLIDS', [
 ]);
 sub(8, DP, 'Data presentation and interpretation', 'DATA', [
   ['b', 'Bar graphs and line graphs', /bar|line graph|graph/i],
-  ['e', 'Mode, mean and median', /mode|mean|median|average/i],
+  ['e', 'Mode, mean and median', /mode|mean|median|average|range/i],
 ]);
 sub(8, DP, 'Probability', 'PROB', [
   ['a', 'Events involving chance', /chance|likely|certain|impossible|probab/i],
@@ -520,7 +520,7 @@ sub(9, N, 'Indices and logarithms', 'INDICES', [
 ]);
 sub(9, N, 'Compound proportions and rates of work', 'PROPORTION', [
   ['a', 'Divide quantities in ratio; proportional parts', /ratio|\d:\d|share|proportion/i],
-  ['b', 'Relate different ratios', /(a|b|c)\s*:\s*(b|c)|ratio.*ratio|\d:\d.*\d:\d/i],
+  ['b', 'Relate different ratios', /(a|b|c)\s*:\s*(b|c)|ratio.*ratio|\d ?: ?\d.*\d ?: ?\d/i],
   ['c', 'Compound proportion', /workers?|men|machines?|people|painters|days|hours|varies|proportion/i],
   ['d', 'Rates of work', /days?|hours?|work|fill|pipe|tap|together/i],
 ]);
@@ -541,7 +541,7 @@ sub(9, A, 'Linear inequalities', 'INEQ', [
   ['a', 'Solve inequalities in one unknown', /solve|[a-z]\s*[<>≤≥]/i],
   ['b', 'Graph an inequality in one unknown', /graph|number line|shade|region|side of the line|boundary/i],
   ['c', 'Graph an inequality in two unknowns', /region|shade|side of the line|boundary|[a-z]\s*\+\s*[a-z]\s*[<>≤≥]|y\s*[<>≤≥]/i],
-  ['d', 'Inequalities in real life', /at least|at most|no more|budget|can .*buy|maximum|minimum|fewest|most/i],
+  ['d', 'Inequalities in real life', /at least|at most|no more|budget|can .*buy|maximum|minimum|fewest|most|greatest|largest/i],
 ]);
 sub(9, MS, 'Area', 'AREA', [
   ['a', 'Area of a pentagon and hexagon', /pentagon|hexagon/i],
@@ -552,7 +552,7 @@ sub(9, MS, 'Area', 'AREA', [
   ['f', 'Surface area of a sphere', /sphere|ball|dome|hemisphere/i],
 ]);
 sub(9, MS, 'Volume of solids', 'VOL', [
-  ['a', 'Volume of a prism', /prism/i],
+  ['a', 'Volume of a prism', /prism|cylind/i],
   ['b', 'Volume of a pyramid', /pyramid/i],
   ['c', 'Volume of a cone', /cone/i],
   ['d', 'Volume of a frustum', /frustum|bucket|top .*cut off/i],
@@ -575,7 +575,7 @@ sub(9, MS, 'Money', 'MONEY', [
   ['b', 'Convert currency', /currency|exchange|US\$|dollars?|euros?|pounds?|Ush|Tsh|shillings? (to|into)|buying rate|selling rate/i],
   ['c', 'Import and export duty', /import|export|duty|customs/i],
   ['d', 'Excise duty', /excise/i],
-  ['e', 'Value added tax', /\bVAT\b|value added/i],
+  ['e', 'Value added tax', /\bVAT\b|value added|\bbill\b|hire purchase/i],
 ]);
 sub(9, MS, 'Approximations and errors', 'APPROX', [
   ['a', 'Approximate quantities', /approximat|estimate|round|significant|decimal place|nearest/i],

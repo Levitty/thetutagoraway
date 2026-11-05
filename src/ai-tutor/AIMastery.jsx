@@ -882,7 +882,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     // a step-marked question (Grades 7-9), or reasoning (spot the mistake,
     // always/sometimes/never) once the child has this skill right twice.
     const special = youngUI ? null : specialItemFor(skillId, { correctSoFar: progress.skills[skillId]?.correct || 0 });
-    const raw = special || generateProblem(skillId, { level, kp: kpIndexRef.current, lesson: true, correctSoFar: progress.skills[skillId]?.correct || 0, noFamilies: youngUI });
+    const raw = special || generateProblem(skillId, { level, kp: kpIndexRef.current, lesson: true, correctSoFar: progress.skills[skillId]?.correct || 0, young: youngUI });
     const p = youngUI ? raw : maybeChoices(raw);
     setStruckChoices([]);
     scaffoldableRef.current = !young && !!completionPlan(p, SUPPORT.FULL);
