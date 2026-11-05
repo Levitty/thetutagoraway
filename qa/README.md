@@ -24,3 +24,6 @@ extra forms on every CBC Grade 4-9 skill, 25 draws each.
 
 Added 4 Nov (F27): the wrong-unit near miss also tries the same family at another
 size ("62.5 m" for 62.5 cm).
+
+Added 5 Nov (F30): a key check that a solve question has exactly one answer, not
+a pair of parallel or identical lines.

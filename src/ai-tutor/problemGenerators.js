@@ -961,8 +961,12 @@ const generators = {
 
   G8_SIMULTANEOUS_INTRO: () => {
     const x = rand(1, 6), y = rand(1, 6);
-    const a1 = rand(1, 3), b1 = rand(1, 3), a2 = rand(1, 3), b2 = rand(1, 3);
-    return { question: `Solve: ${a1}x + ${b1}y = ${a1 * x + b1 * y}, ${a2}x + ${b2}y = ${a2 * x + b2 * y}`, answer: `x=${x}, y=${y}`,
+    const a1 = rand(1, 3), b1 = rand(1, 3);
+    let a2 = rand(1, 3), b2 = rand(1, 3);
+    // Proportional coefficients are parallel or identical lines: no single answer (F30).
+    while (a1 * b2 - a2 * b1 === 0) { a2 = rand(1, 3); b2 = rand(1, 3); }
+    const eq = (a, b) => `${a === 1 ? '' : a}x + ${b === 1 ? '' : b}y = ${a * x + b * y}`;
+    return { question: `Solve: ${eq(a1, b1)}, ${eq(a2, b2)}`, answer: `x=${x}, y=${y}`,
       accepts: [`x=${x}, y=${y}`, `x=${x},y=${y}`, `(${x},${y})`],
       hint: 'Use elimination or substitution method' };
   },

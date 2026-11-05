@@ -38,6 +38,7 @@ import { getRecommendedPath } from '../src/ai-tutor/adaptiveEngine.js';
 import * as PL from '../src/ai-tutor/placement.js';
 import { gradeOf } from '../src/ai-tutor/curricula.js';
 import { writeFileSync } from 'node:fs';
+import { noUniqueAnswer } from '../engine/scripts/audit_unique_answers.mjs';
 
 const args = process.argv.slice(2);
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
@@ -290,6 +291,9 @@ function inspect(child, skillId, p, sitting) {
   // key: a number a child can type (no 128.57142857142858)
   const longKey = /\d\.\d{5,}/.test(String(p.answer)); tally('key', !longKey);
   if (longKey) fail('key', child, skillId, p, `key ${p.answer} has more decimals than a child can be expected to type`);
+  // key: a solve question has exactly one answer (added 5 Nov, F30)
+  const noUnique = noUniqueAnswer(p.question); tally('key', !noUnique);
+  if (noUnique) fail('key', child, skillId, p, `no single answer: ${noUnique}`);
   // marking: the key itself, fair forms, near misses
   const selfOk = checkAnswerMatch(String(p.answer), p);
   tally('marking', selfOk); if (!selfOk) fail('marking', child, skillId, p, `its own answer "${p.answer}" is marked wrong`);
