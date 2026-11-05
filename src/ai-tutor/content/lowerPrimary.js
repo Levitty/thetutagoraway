@@ -1717,15 +1717,6 @@ export const LOWER_PRIMARY_CONTENT = {
 
 // Upper grades whose aliases ran above level — tuned here instead.
 Object.assign(LOWER_PRIMARY_CONTENT, {
-  G5_MONEY:        withKPs([                          // G5 design: profit & loss
-                     withWorkedExample(buildBandedMoney({ maxAmount: 1000, kind: 'profit' })),
-                     withWorkedExample(buildBandedMoney({ maxAmount: 1000, kind: 'loss' })),
-                   ]),
-  G6_MONEY:        withKPs([                          // G6 design: bills & charges
-                     withWorkedExample(buildBandedMoney({ maxAmount: 5000, kind: 'budget' })),
-                     withWorkedExample(buildBandedMoney({ maxAmount: 2000, kind: 'change' })),
-                   ]),
-  G6_INEQUALITIES: withWorkedExample(buildCompareSymbols({ max: 999999 })),
 });
 
 export const LOWER_PRIMARY_SKILL_IDS = Object.keys(LOWER_PRIMARY_CONTENT);

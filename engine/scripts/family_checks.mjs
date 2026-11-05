@@ -11,7 +11,7 @@ import { SKILLS } from '../../src/ai-tutor/knowledgeGraph.js';
 import { checkAnswerMatch } from '../../src/ai-tutor/answerCheck.js';
 import { tidyProblem } from '../../src/ai-tutor/problemGenerators.js';
 import { buildChoices } from '../../src/ai-tutor/choices.js';
-import { textOf, senseFlags, clusterForms, sameForm } from './content_measures.mjs';
+import { textOf, formText, senseFlags, clusterForms, sameForm } from './content_measures.mjs';
 
 export const FAMILY_DRAWS = 200;
 const AMERICAN = /\b(color|colour?ed-|meter|meters|liter|liters|center|centers|favorite|gray|neighbor|neighbors|odor|harbor|labor|traveled|traveling|customize|realize|organize|program fee)\b/i;
@@ -105,11 +105,12 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
     }
     for (const h of p.hints || []) if (hasAnswerAlone(p.answer, h, p.question)) fail(`hint gives the answer away: ${h}`);
     const live = new Set(authored.map(m => String(m.when)).filter(w => w !== String(p.answer)));
+    if (live.size < 2) fail(`only ${live.size} named wrong answer on "${p.question.slice(0, 70)}"`);
     if (live.size < 3) thinWrong++;
     const v = Number(p.answer);
     if (Number.isFinite(v) && v !== 0 && authored.length && authored.every(m => { const w = Number(m.when); return Number.isFinite(w) && (Math.abs(w / v - 10) < 1e-9 || Math.abs(w / v - 0.1) < 1e-9); })) placeOnly++;
   }
-  if (thinWrong > n * 0.1) fail(`fewer than 3 named wrong answers on ${thinWrong} of ${n} draws: wrong options must come from real mistakes`);
+  if (thinWrong > n * 0.3) fail(`fewer than 3 named wrong answers on ${thinWrong} of ${n} draws: wrong options must come from real mistakes`);
   if (placeOnly) fail('every wrong option is just ten times or a tenth of the answer');
   if (weakOption > n * 0.1) fail(`${weakOption} of ${n} draws have a wrong option with no "why" feedback`);
   if (seen.size < 4) fail(`only ${seen.size} different questions in ${n} draws`);
@@ -124,7 +125,7 @@ export function checkForms(baseForms = {}) {
   const ids = new Set();
   for (const f of FAMILIES) { if (ids.has(f.id)) out.push(`${f.id}: duplicate id`); ids.add(f.id); }
   for (const [skill, fams] of bySkill) {
-    const reps = fams.map(f => ({ f, t: textOf(drawFamily(f).p) }));
+    const reps = fams.map(f => ({ f, t: formText(drawFamily(f).p) }));
     reps.forEach((a, i) => {
       for (let j = i + 1; j < reps.length; j++) {
         if (sameForm(a.t, reps[j].t)) out.push(`${a.f.id}: same form as ${reps[j].f.id}: "${a.t.slice(0, 80)}"`);

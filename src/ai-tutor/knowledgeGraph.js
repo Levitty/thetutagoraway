@@ -185,7 +185,7 @@ const GRADE_5 = {
   G5_VOLUME: skill('G5_VOLUME', 'Volume (Cubic Units)', 5, S.MEA, { pre: ['G4_VOLUME'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Volume') } }),
   G5_CAPACITY: skill('G5_CAPACITY', 'Capacity (Litres & Millilitres)', 5, S.MEA, { pre: ['G4_CAPACITY'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Capacity') } }),
   G5_CAPACITY_OPS: skill('G5_CAPACITY_OPS', 'Adding & Subtracting Capacity', 5, S.MEA, { pre: ['G5_CAPACITY', 'G5_ADDITION'], w: 3, curricula: { cbc: cbc(5, 'Measurements', 'Capacity') } }),
-  G5_MONEY: skill('G5_MONEY', 'Money (Profit & Loss)', 5, S.MEA, { pre: ['G4_MONEY', 'G5_MULTIPLICATION'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Money') } }),
+  G5_MONEY: skill('G5_MONEY', 'Money (Budget, Tax, Banks & Saving)', 5, S.MEA, { pre: ['G4_MONEY', 'G5_MULTIPLICATION'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Money') } }),
   G5_PERIMETER_INTRO: skill('G5_PERIMETER_INTRO', 'Perimeter of Rectangles', 5, S.MEA, { pre: ['G5_ADDITION', 'G5_LENGTH'], w: 2, curricula: { cbc: cbc(4, 'Measurements', 'Length') } }),
   G5_AREA_INTRO: skill('G5_AREA_INTRO', 'Area of Rectangles (Counting Squares)', 5, S.MEA, { pre: ['G5_MULTIPLICATION'], w: 2, curricula: { cbc: cbc(5, 'Measurements', 'Area') } }),
 
@@ -204,7 +204,7 @@ const GRADE_6 = {
   G6_PLACE_VALUE: skill('G6_PLACE_VALUE', 'Place Value (Millions)', 6, S.NUM, { pre: ['G5_PLACE_VALUE'], w: 2, curricula: { cbc: cbc(6, 'Numbers', 'Whole Numbers') } }),
   G6_MULTIPLICATION: skill('G6_MULTIPLICATION', 'Multiplication (4-digit × 2-digit)', 6, S.NUM, { pre: ['G5_MULTIPLICATION'], w: 3, crit: true, curricula: { cbc: cbc(6, 'Numbers', 'Multiplication') } }),
   G6_DIVISION: skill('G6_DIVISION', 'Long Division (up to 4 digits)', 6, S.NUM, { pre: ['G5_DIVISION', 'G6_MULTIPLICATION'], w: 3, crit: true, curricula: { cbc: cbc(6, 'Numbers', 'Division') } }),
-  G6_INEQUALITIES: skill('G6_INEQUALITIES', 'Inequalities (Comparing with <, >, =)', 6, S.NUM, { pre: ['G6_PLACE_VALUE'], w: 2, curricula: { cbc: cbc(6, 'Numbers', 'Inequalities') } }),
+  G6_INEQUALITIES: skill('G6_INEQUALITIES', 'Inequalities (Forming & Solving)', 6, S.NUM, { pre: ['G6_PLACE_VALUE'], w: 2, curricula: { cbc: cbc(6, 'Numbers', 'Inequalities') } }),
   G6_BODMAS_BASIC: skill('G6_BODMAS_BASIC', 'Order of Operations (BODMAS)', 5, S.NUM, { pre: ['G5_ADDITION', 'G5_SUBTRACTION', 'G5_MULTIPLICATION', 'G5_DIVISION'], w: 5, crit: true, curricula: { cbc: cbc(5, 'Numbers', 'Division') } }),
   G6_FRACTIONS_ADD: skill('G6_FRACTIONS_ADD', 'Adding Fractions (Unlike Denominators)', 6, S.NUM, { pre: ['G5_FRACTIONS_ADD_LIKE', 'G5_FRACTIONS_EQUIV', 'G5_MULTIPLES'], w: 4, crit: true, curricula: { cbc: cbc(6, 'Numbers', 'Fractions') } }),
   G6_FRACTIONS_SUB: skill('G6_FRACTIONS_SUB', 'Subtracting Fractions (Unlike Denominators)', 6, S.NUM, { pre: ['G5_FRACTIONS_SUB_LIKE', 'G5_FRACTIONS_EQUIV', 'G5_MULTIPLES'], w: 4, curricula: { cbc: cbc(6, 'Numbers', 'Fractions') } }),
@@ -241,7 +241,7 @@ const GRADE_6 = {
   G6_CAPACITY: skill('G6_CAPACITY', 'Capacity (Conversions, Word Problems)', 6, S.MEA, { pre: ['G5_CAPACITY'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Capacity') } }),
   G6_MASS: skill('G6_MASS', 'Mass (Tonnes, Word Problems)', 6, S.MEA, { pre: ['G5_MASS'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Mass') } }),
   G6_TIME: skill('G6_TIME', 'Time (24-hour Clock, Timetables)', 6, S.MEA, { pre: ['G5_TIME'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Time') } }),
-  G6_MONEY: skill('G6_MONEY', 'Money (Postal & Bank Charges, Bills)', 6, S.MEA, { pre: ['G5_MONEY'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Money') } }),
+  G6_MONEY: skill('G6_MONEY', 'Money (Budget, Profit & Loss, Taxes)', 6, S.MEA, { pre: ['G5_MONEY'], w: 2, curricula: { cbc: cbc(6, 'Measurements', 'Money') } }),
 
   // Statistics
   G6_MEAN: skill('G6_MEAN', 'Finding the Mean', 6, S.STA, { pre: ['G5_ADDITION', 'G5_DIVISION'], w: 2, curricula: { cbc: cbc(8, 'Data Handling', 'Data Presentation and Interpretation') } }),
@@ -283,7 +283,7 @@ const GRADE_7 = {
   // Geometry & Measurements — note CBC files Pythagoras, perimeter & circumference under Measurements.
   G7_PYTHAGORAS: skill('G7_PYTHAGORAS', 'Pythagorean Theorem', 7, S.GEO, { pre: ['G7_SQUARES_EXT', 'G7_SQUARE_ROOTS'], w: 5, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Pythagorean Relationship'), cambridge: cam(9, 'Gg', '9Gg.10') } }),
   G7_ANGLES: skill('G7_ANGLES', 'Angles (at a Point, Transversals, Parallelograms)', 7, S.GEO, { pre: ['G6_ANGLE_PROPERTIES'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Geometry', 'Angles'), cambridge: cam(7, 'Gg') } }),
-  G7_CONSTRUCTIONS: skill('G7_CONSTRUCTIONS', 'Geometrical Constructions (Perpendiculars, Bisectors)', 7, S.GEO, { pre: ['G7_ANGLES'], w: 5, curricula: { cbc: cbc(7, 'Geometry', 'Geometrical Constructions'), cambridge: cam(8, 'Gg') } }),
+  G7_CONSTRUCTIONS: skill('G7_CONSTRUCTIONS', 'Constructions: Method & Reasons (Draw on Paper)', 7, S.GEO, { pre: ['G7_ANGLES'], w: 5, curricula: { cbc: cbc(7, 'Geometry', 'Geometrical Constructions'), cambridge: cam(8, 'Gg') } }),
   G7_LENGTH_CONV: skill('G7_LENGTH_CONV', 'Length Conversions (Advanced)', 7, S.MEA, { pre: ['G6_UNIT_CONVERSIONS'], w: 2, curricula: { cbc: cbc(7, 'Measurements', 'Length'), cambridge: cam(8, 'Gg', '8Gg.03') } }),
   G7_PERIMETER: skill('G7_PERIMETER', 'Perimeter (Advanced Shapes)', 7, S.MEA, { pre: ['G6_PERIMETER', 'G7_LENGTH_CONV'], w: 3, curricula: { cbc: cbc(7, 'Measurements', 'Length'), cambridge: cam(7, 'Gg') } }),
   G7_CIRCUMFERENCE: skill('G7_CIRCUMFERENCE', 'Circumference of Circles', 7, S.MEA, { pre: ['G7_DECIMALS_MUL', 'G7_PERIMETER'], w: 4, crit: true, curricula: { cbc: cbc(7, 'Measurements', 'Length'), cambridge: cam(8, 'Gg', '8Gg.02') } }),
@@ -395,7 +395,7 @@ const GRADE_9 = {
   G9_QUADRATIC_GRAPHS: skill('G9_QUADRATIC_GRAPHS', 'Quadratic Graphs', 9, S.ALG, { pre: ['G9_QUADRATIC_SOLVE', 'G8_LINEAR_GRAPHS'], w: 5, crit: true, curricula: { cbc: cbcEnr('Algebra'), cambridge: camEnr('As') } }),
 
   // Geometry
-  G9_CONSTRUCTION: skill('G9_CONSTRUCTION', 'Geometric Constructions', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_ANGLE_MEASURE', 'G5_LINES'], w: 3, curricula: { cbc: cbc(8, 'Geometry', 'Geometrical Constructions'), cambridge: cam(8, 'Gg', '8Gg.12') } }),
+  G9_CONSTRUCTION: skill('G9_CONSTRUCTION', 'Geometric Constructions (Method & Reasons)', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_ANGLE_MEASURE', 'G5_LINES'], w: 3, curricula: { cbc: cbc(8, 'Geometry', 'Geometrical Constructions'), cambridge: cam(8, 'Gg', '8Gg.12') } }),
   G9_LOCI: skill('G9_LOCI', 'Loci & Locus', 9, S.GEO, { pre: ['G9_CONSTRUCTION', 'G7_CIRCUMFERENCE'], w: 4, curricula: { cbc: cbc(8, 'Geometry', 'Geometrical Constructions'), cambridge: camEnr('Gg') } }),
   G9_CIRCLE_THEOREMS_INTRO: skill('G9_CIRCLE_THEOREMS_INTRO', 'Circle Theorems (Introduction)', 9, S.GEO, { pre: ['G8_ANGLE_RELATIONSHIPS', 'G6_TRIANGLE_PROPERTIES', 'G7_AREA_CIRCLE'], w: 5, crit: true, curricula: { cbc: cbcEnr('Geometry'), cambridge: camEnr('Gg') } }),
   G9_TRIG_INTRO: skill('G9_TRIG_INTRO', 'Trigonometry (SOH CAH TOA)', 9, S.GEO, { pre: ['G7_PYTHAGORAS', 'G7_FRACTIONS_DIV'], w: 5, crit: true, curricula: { cbc: cbc(9, 'Geometry', 'Trigonometry'), cambridge: camEnr('Gg') } }),

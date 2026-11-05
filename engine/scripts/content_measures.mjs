@@ -17,9 +17,12 @@ const STORY = /\b(shop|shopkeeper|trader|farmer|market|kiosk|duka|school|teacher
 export const hasName = (t) => { NAMES_RE.lastIndex = 0; return NAMES_RE.test(t); };
 
 export const textOf = (p) => [p.instruction, p.question, ...(p.shownSteps || []), ...(p.mc || p.choices || []), modelText(p.model), ...(p.parts || []).map(q => q.prompt)].filter(Boolean).join(' ');
+// What makes a form: the question and any table or graph, not the stock
+// instruction line or the options, which would make unlike questions look alike.
+export const formText = (p) => [p.question, modelText(p.model), p.parts ? 'in parts' : '', p.shownSteps ? 'working with a mistake' : ''].filter(Boolean).join(' ');
 const modelText = (m) => {
   if (!m) return '';
-  if (m.type === 'table') return ['table', ...(m.data?.headers || []), ...((m.data?.rows || []).flat())].join(' ');
+  if (m.type === 'table') return ['table', ...(m.data?.head || []), ...(m.data?.rows || []).flatMap(r => r.cells || [r.label, r.value])].join(' ');
   if (m.type === 'line-graph') return `line graph ${m.data?.xLabel || ''} ${m.data?.yLabel || ''}`;
   if (m.type === 'bar-chart' || m.type === 'pictograph' || m.type === 'pie-chart' || m.type === 'tally') return `${m.type.replace('-', ' ')} graph`;
   return '';

@@ -55,6 +55,8 @@ export const PROMISED = {
 const SENIOR_NOTE = 'No KICD design could be read for Grades 10 to 12 (the official links returned 404). These skills follow a traditional syllabus and are not matched to Core or Essential Mathematics.';
 const OUT_NOTE = 'Not in the KICD Grade 4 to 9 designs. May belong to Grade 10 Core (reported topics include quadratics, reflection, rotation, vectors); not verified.';
 
+// Reported, from secondary sources only, as Grade 10 Core topics.
+const REPORTED_CORE = /quadratic|reflection|rotation|vector|motion/i;
 const norm = (s) => s.toLowerCase().replace(/\s+/g, ' ').trim();
 const findSub = (grade, name) => {
   const n = NAME_FIX[norm(name)] || norm(name);
@@ -62,12 +64,21 @@ const findSub = (grade, name) => {
     || CBC_SUBSTRANDS.find(s => s.grade === grade && (norm(s.name).startsWith(n) || n.startsWith(norm(s.name))));
 };
 
+// Fixed dice, so running this twice writes the same file.
+let seed = 20261105;
+Math.random = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
 const tags = {}; const unmatched = [];
 for (const [id, s] of Object.entries(SKILLS)) {
   const c = s.curricula?.cbc;
   const grade = gradeOf(s, 'cbc');
-  if (c?.inScope === false) { tags[id] = { grade, status: 'outside-design', note: 'out' }; continue; }
-  if (grade >= 10) { tags[id] = { grade, status: 'unverified', note: 'senior' }; continue; }
+  // Tagged to their own topic, plainly marked as not checked against any design.
+  if (c?.inScope === false || grade >= 10) {
+    const out = c?.inScope === false;
+    const topic = s.name.replace(/\s*\(.*\)$/, '');
+    const code = `MATH.G${grade}.${{ Numbers: 'NUMBER', Algebra: 'ALGEBR', Geometry: 'GEOMET', Measurements: 'MEASUR', Statistics: 'DATA_H' }[s.strand]}.${topic.toUpperCase().replace(/[^A-Z0-9]+/g, '_').slice(0, 24)}`;
+    tags[id] = { grade, topic, code, status: out ? 'outside-design' : 'unverified', note: out ? 'out' : 'senior', reportedGrade10Core: REPORTED_CORE.test(s.name) };
+    continue;
+  }
   const over = GRADE_OVERRIDE[id];
   const sub = over ? CBC_SUBSTRANDS.find(x => x.grade === over[0] && x.key === over[1]) : c?.substrand ? findSub(grade, c.substrand) : null;
   if (!sub) { unmatched.push(`${id} ${grade} ${c?.substrand}`); tags[id] = { grade, status: 'unmatched' }; continue; }

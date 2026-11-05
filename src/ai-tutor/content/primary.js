@@ -26,17 +26,12 @@ export const PRIMARY_ALIAS = {
   // Grade 6 learner the Grade 5 question — change hours to minutes, add two
   // durations — under a label promising the 24-hour clock and timetables, so
   // answering it credited them with a rung they had not reached.
-  G6_3D_OBJECTS: 'G6_VOLUME_CUBOID',
   // G5_3D_OBJECTS and G5_VOLUME are authored in grade5.js now. G5_3D_OBJECTS
   // aliased to G6_VOLUME_CUBOID, which asks for the volume of a cuboid — a
   // different skill from naming 3-D objects and counting their faces and
   // edges. G5_VOLUME shared that alias and so had no cubic-units content of
   // its own, and nothing on the 1 cm³ = 1 ml link.
   G7_MONEY: 'G8_PERCENTAGE_CHANGE',      // profit/loss/discount = % change
-  G7_TEMPERATURE: 'G6_INTEGERS_ADD_SUB', // rises/falls on an integer scale
   G7_ANGLES: 'G8_ANGLE_RELATIONSHIPS',   // angles on transversals/parallels
   G7_CONSTRUCTIONS: 'G9_CONSTRUCTION',
-  G8_SCALE_DRAWING: 'G8_RATIO_PROPORTION',
-  G9_APPROX_ERRORS: 'G8_PERCENTAGE_CHANGE',
-  G9_SPEED_VELOCITY: 'G7_SPEED',   // perpendiculars, bisectors
 };

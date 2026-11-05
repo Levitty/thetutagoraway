@@ -372,14 +372,14 @@ const MAP = {
   G6_AREA_TRIANGLE: ['triangleArea'], G7_CIRCUMFERENCE: ['circumference'],
   G6_MEAN: ['mean', 'asn:mean'], G7_MEAN_MEDIAN_MODE: ['mean', 'asn:mean'],
   G6_UNIT_CONVERSIONS: ['units'], G5_LENGTH: ['units:len'], G7_LENGTH_CONV: ['units:len'], G5_MASS: ['units:mass'], G6_CAPACITY: ['units:cap'],
-  G6_INTEGERS_ADD_SUB: ['integers', 'asn:integers'], G7_TEMPERATURE: ['integers'], G7_INTEGERS_MUL_DIV: ['asn:intMul'],
+  G6_INTEGERS_ADD_SUB: ['integers', 'asn:integers'], G7_INTEGERS_MUL_DIV: ['asn:intMul'],
   G7_PYTHAGORAS: ['pythagoras', 'asn:pythagoras'], G8_INDICES_LAWS: ['indices'], G8_INDICES_INTRO: ['indices'],
   G6_RATIOS: ['ratio'], G8_RATIO_PROPORTION: ['ratio'],
   G8_SIMPLE_INTEREST: ['interest'], G7_SPEED: ['speed'], G8_PROFIT_LOSS: ['profit'],
-  G4_MONEY: ['money'], G5_MONEY: ['money'], G6_MONEY: ['money'], G7_MONEY: ['money'],
+  G4_MONEY: ['money'], G7_MONEY: ['money'],
   G4_PLANE_FIGURES: ['asn:shapes'], G6_SYMMETRY: ['asn:shapes'],
   G5_TRIANGLES_INTRO: ['asn:triangles'], G6_TRIANGLE_PROPERTIES: ['asn:triangles'],
-  G5_ANGLES_INTRO: ['asn:angles'], G6_ANGLE_MEASURE: ['asn:angles'], G5_LINES: ['asn:lines'], G6_LINES: ['asn:lines'],
+  G5_ANGLES_INTRO: ['asn:angles'], G5_LINES: ['asn:lines'], G6_LINES: ['asn:lines'],
   G8_PROBABILITY_INTRO: ['asn:probability'],
 };
 

@@ -48,9 +48,9 @@ sub(4, N, 'Whole numbers', 'WHOLE', [
   ['e', 'Round off to the nearest ten', /round|nearest/i],
   ['f', 'Factors of numbers to 50', /factor/i],
   ['g', 'Multiples of numbers to 100', /multiple/i],
-  ['h', 'Even and odd numbers', /even|odd/i],
+  ['h', 'Even and odd numbers', /even|odd|what comes next/i],
   ['i', 'Patterns with even and odd numbers', /(even|odd).*(pattern|next|sequence)|pattern.*(even|odd)/i],
-  ['j', 'Roman numerals to X', /roman|\b[IVX]{1,4}\b/],
+  ['j', 'Roman numerals to X', /[Rr]oman|\b[IVX]{1,4}\b/],
 ]);
 sub(4, N, 'Addition', 'ADD', [
   ['a', 'Add to a sum of 10,000 with regrouping', /\d\s*\+\s*\d|add|sum|total|altogether|together/i],
@@ -470,7 +470,7 @@ sub(8, G, 'Geometrical constructions', 'CONSTRUCT', [
   ['b', 'Divide a line in proportion', /proportion|equal parts|divide a line/i],
   ['c', 'Angle properties of polygons', /polygon|hexagon|pentagon|octagon|interior|exterior|bisect|construct|loci|locus|compass/i],
   ['d', 'Actually construct polygons', /draw and measure/i, 'hands'],
-  ['f', 'Circumscribed and inscribed circles', /circumscrib|inscribe|circumcentre|incentre|touch(es|ing) .*sides|passes? through .*vertices/i],
+  ['f', 'Circumscribed and inscribed circles', /circumscrib|inscribe|circumcentre|incentre|touch(es|ing) .*sides|through all three corners|passes? through .*vertices/i],
 ]);
 sub(8, G, 'Coordinates and graphs', 'GRAPHS', [
   ['b', 'Identify and plot points', /\(-?\d+, ?-?\d+\)|point|coordinate|plot|axis/i],
@@ -616,7 +616,7 @@ sub(9, DP, 'Data interpretation', 'DATA', [
 sub(9, DP, 'Probability', 'PROB', [
   ['b', 'Range of probability, simple events', /probab|chance|likely/i],
   ['c', 'Mutually exclusive events', /mutually exclusive|cannot both|either/i],
-  ['e', 'Independent events, with and without replacement', /independent|replac|two|both|then/i],
+  ['e', 'Independent events, with and without replacement', /independent|replac|two|both|then|keeps|next draw|put back/i],
   ['f', 'Tree diagrams', /tree diagram/i],
 ]);
 
