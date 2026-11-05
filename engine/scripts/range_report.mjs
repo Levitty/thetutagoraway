@@ -15,8 +15,8 @@ import { SKILL_TAGS } from '../../src/ai-tutor/curriculum/skillTags.js';
 import { OUTCOMES, TESTABLE_OUTCOMES } from '../../src/ai-tutor/curriculum/outcomes.js';
 import { textOf, formText, classify, clusterForms, senseFlags } from './content_measures.mjs';
 
-// Fault fixed on another branch: reported, not failed, until that branch merges.
-export const KNOWN_FAULTS = { G8_SIMULTANEOUS_INTRO: 'F30, being fixed on horeb/2026-11-05-simultaneous' };
+// A fault being fixed on another branch: reported, not failed, until that branch merges.
+export const KNOWN_FAULTS = {};
 
 const median = (a) => { if (!a.length) return 0; const s = [...a].sort((x, y) => x - y); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
 

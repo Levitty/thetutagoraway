@@ -18,7 +18,7 @@ import { setFamilyMode, allOnFrom, isOn } from '../src/ai-tutor/content/families
 
 const BASE = JSON.parse(readFileSync(new URL('./fixtures/question-snapshot-598b578.json', import.meta.url)));
 // The 18 mislabelled skills (engine evaluation, 5 Nov 2026), and their aliases.
-export const CHANGED = new Set(['G7_TEMPERATURE', 'G9_APPROX_ERRORS', 'G8_SCALE_DRAWING', 'G6_3D_OBJECTS', 'G6_INEQUALITIES', 'G6_MONEY', 'G6_ANGLE_MEASURE', 'G6_MASS', 'G5_MONEY', 'G4_LETTERS', 'G7_DATA_REPRESENT', 'G8_LINEAR_GRAPHS', 'G8_SURFACE_AREA', 'G8_PROBABILITY_COMBINED', 'G9_SPEED_VELOCITY', 'G9_PROBABILITY_ADV', 'G7_CONSTRUCTIONS', 'G9_CONSTRUCTION']);
+export const CHANGED = new Set(['G8_SIMULTANEOUS_INTRO', 'G7_TEMPERATURE', 'G9_APPROX_ERRORS', 'G8_SCALE_DRAWING', 'G6_3D_OBJECTS', 'G6_INEQUALITIES', 'G6_MONEY', 'G6_ANGLE_MEASURE', 'G6_MASS', 'G5_MONEY', 'G4_LETTERS', 'G7_DATA_REPRESENT', 'G8_LINEAR_GRAPHS', 'G8_SURFACE_AREA', 'G8_PROBABILITY_COMBINED', 'G9_SPEED_VELOCITY', 'G9_PROBABILITY_ADV', 'G7_CONSTRUCTIONS', 'G9_CONSTRUCTION']);
 
 test('with only reviewed families on, no other skill serves anything different', () => {
   setFamilyMode('reviewed');
