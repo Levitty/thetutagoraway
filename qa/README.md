@@ -27,3 +27,9 @@ size ("62.5 m" for 62.5 cm).
 
 Added 5 Nov (F30): a key check that a solve question has exactly one answer, not
 a pair of parallel or identical lines.
+
+Added 5 Nov (one product): `qa/surfaces/surfaces.mjs` opens every surface as each kind of
+person, at laptop and phone, with invented data; every request to Supabase is answered
+in the browser, so nothing reaches the live database. `qa/surfaces/flows.mjs` walks every
+menu at both sizes. Both need the dev server (`npx vite --port 5199`) and PLAYWRIGHT_DIR
+pointing at any folder with Playwright installed.

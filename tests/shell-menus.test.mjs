@@ -2,7 +2,7 @@
 // that each person gets only what they need and a tutor's world stays a tutor's.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { menuFor, personKind, allItems, barItems, teachingMenu } from '../src/shell/menus.js';
+import { menuFor, personKind, allItems, barItems, teachingMenu, tutorTab } from '../src/shell/menus.js';
 import { TOKENS, TAILWIND_COLOURS } from '../src/shell/tokens.mjs';
 
 const ids = (m) => allItems(m).map(i => i.id);
@@ -62,4 +62,14 @@ test('tokens: the approved values, shared with Tuta on purpose', () => {
   for (const [k, v] of Object.entries(approved)) assert.equal(TOKENS[k], v, k);
   assert.equal(TAILWIND_COLOURS.slate[900], TOKENS.ink);
   assert.equal(TAILWIND_COLOURS.slate[100], TOKENS.ground);
+});
+
+test('the review gate holds against a typed address', () => {
+  for (const s of ['schedule', 'students', 'groupClasses', 'earnings']) {
+    assert.equal(tutorTab(s, false), 'overview', s);
+    assert.equal(tutorTab(s, true), s, s);
+  }
+  assert.equal(tutorTab('profile', false), 'profile');
+  assert.equal(tutorTab(null, true), 'overview');
+  assert.equal(tutorTab('nonsense', true), 'overview');
 });

@@ -93,7 +93,7 @@ export function menuFor({ kind, approved = false, hasClasses = false, isAdmin = 
     sections: [
       { items: [
         item('home', 'Home', 'home', native ? 'native-home' : 'dashboard'),
-        item('family', 'Goals and reports', 'target', 'family', null, { short: 'Family' }),
+        item('family', 'Family', 'target', 'family'),
         item('tutors', 'Find a tutor', 'search', 'tutors', null, { short: 'Tutors' }),
         item('clubs', 'Clubs', 'heart', 'clubs'),
       ] },
@@ -109,6 +109,14 @@ export function personKind(profile, accountType) {
   if (profile?.role === 'tutor') return 'tutor';
   if (accountType === 'student') return 'learner';
   return 'parent';
+}
+
+const TUTOR_TABS = new Set(['overview', 'schedule', 'students', 'groupClasses', 'earnings', 'profile']);
+const OPEN_DURING_REVIEW = new Set(['overview', 'profile']);
+/** The tutor tab to show for an address. Until approved only Home and Profile open, whatever the address says. */
+export function tutorTab(section, approved) {
+  if (!TUTOR_TABS.has(section)) return 'overview';
+  return approved || OPEN_DURING_REVIEW.has(section) ? section : 'overview';
 }
 
 /** Flat list of a menu's items, in order. */

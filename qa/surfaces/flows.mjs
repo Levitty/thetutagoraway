@@ -5,7 +5,7 @@ import { KIT } from './surfaces.mjs';
 const { chromium, USERS, wire, session, BASE } = KIT;
 const WALKS = {
   tutor: [['Schedule', '/dashboard?s=schedule'], ['Students', '/dashboard?s=students'], ['Group classes', '/dashboard?s=groupClasses'], ['Earnings', '/dashboard?s=earnings'], ['Classes', '/classroom'],  ['Rocket Challenge', '/rocket'], ['Profile', '/dashboard?s=profile'], ['Spreadsheet', '/spreadsheet'], ['Home', '/dashboard?s=overview']],
-  parent: [['Goals and reports', '/family'], ['Find a tutor', '/tutors'], ['Clubs', '/clubs'], ['Home', '/dashboard']],
+  parent: [['Family', '/family'], ['Find a tutor', '/tutors'], ['Clubs', '/clubs'], ['Home', '/dashboard']],
   learner: [['Lessons', '/dashboard?s=lessons'], ['Writing', '/writing'], ['Rocket Challenge', '/rocket'], ['Find a tutor', '/tutors'], ['Clubs', '/clubs'], ['Home', '/ai?s=overview']],
 };
 const start = { tutor: '/dashboard', parent: '/dashboard', learner: '/dashboard' };
@@ -22,7 +22,7 @@ for (const who of Object.keys(WALKS)) for (const [sname, viewport] of [['laptop'
   for (const [label, want] of WALKS[who]) {
     try {
       const inNav = p.locator(sname === 'laptop' ? `.hb-side button.hb-nav:text-is("${label}")` : `.hb-tabbar button:has-text("${label}")`).first();
-      const short = { 'Goals and reports': 'Family', 'Find a tutor': 'Tutors', 'Set practice': null, 'Rocket Challenge': null, 'Group classes': null }[label];
+      const short = { 'Find a tutor': 'Tutors', 'Set practice': null, 'Rocket Challenge': null, 'Group classes': null }[label];
       const onBar = sname === 'phone' && short ? p.locator(`.hb-tabbar button:has-text("${short}")`).first() : inNav;
       if (await onBar.count()) await onBar.click({ timeout: 3000 });
       else { await p.locator('.hb-tabbar button:has-text("More")').click({ timeout: 3000 }); await p.locator(`.hb-more button.hb-nav:has-text("${label}")`).first().click({ timeout: 3000 }); }

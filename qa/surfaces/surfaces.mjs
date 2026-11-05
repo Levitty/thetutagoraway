@@ -112,10 +112,12 @@ export const SURFACES = [
   ['tutor-group-classes', 'tutor', '/dashboard', tab('Group classes', 'Groups')], ['tutor-earnings', 'tutor', '/dashboard', tab('Earnings')], ['tutor-profile', 'tutor', '/dashboard', tab('Profile')],
   ['tutor-under-review', 'tutorReview', '/dashboard'], ['tutor-find-tutors', 'tutor', '/tutors'], ['tutor-spreadsheet', 'tutor', '/spreadsheet'], ['tutor-account', 'tutor', '/dashboard', async (p) => { await p.locator('.hb-me').first().click({ timeout: 4000 }); await p.waitForTimeout(400); }],
   ['teacher-home', 'tutor', '/classroom?demo=1'],
-  ['teacher-class', 'tutor', '/classroom?demo=1', async (p) => { const side = p.locator('.hb-cls').first(); if (await side.isVisible().catch(() => false)) await side.click({ timeout: 4000 }); else await p.locator('.tt-crow .tt-go, .tt-crow').first().click({ timeout: 4000 }); await p.waitForTimeout(500); }],
+  ['teacher-class', 'tutor', '/classroom?demo=1', async (p) => { const side = p.locator('.hb-cls').first(); if (await side.isVisible().catch(() => false)) await side.click({ timeout: 4000 }); else await p.locator('.tt-crow .tt-go').first().click({ timeout: 4000 }); await p.waitForTimeout(500); }],
   ['teacher-practice', 'tutor', '/classroom?demo=1', tab('Set practice')],
   ['teacher-rocket', 'tutor', '/rocket?demo=1&as=teacher'],
   ['admin', 'admin', '/admin'],
+  ['tutor-messages', 'tutor', '/dashboard', async (p) => { await p.getByRole('button', { name: 'Messages' }).first().click({ timeout: 4000 }); await p.waitForTimeout(500); }],
+  ['tutor-more', 'tutor', '/dashboard', async (p) => { const m = p.locator('.hb-tabbar button:has-text("More")'); if (await m.isVisible()) { await m.click(); await p.waitForTimeout(300); } }],
   ['teacher-demo-signed-out', null, '/classroom?demo=1'], ['public-horeb', null, '/horeb'],
   // A child's handed-over device: no menu, no account, no way out but the PIN.
   ['child-home', 'parent', '/student', null, false, { tg_student_mode: { parentId: USERS.parent.id, learnerId: 'k1', name: 'Zawadi', grade: 'Grade 6', avatar: null } }],
@@ -125,7 +127,7 @@ export const SURFACES = [
 export const KIT = { chromium, USERS, wire, session, BASE };
 if (process.argv[1].endsWith('surfaces.mjs')) {
 const browser = await chromium.launch();
-const SIZES = { laptop: { width: 1440, height: 900 }, phone: { width: 390, height: 844 } };
+const SIZES = { laptop: { width: 1440, height: 900 }, phone: { width: 390, height: 844 }, ...(arg('--tablet', null) ? { tablet: { width: 1024, height: 768 } } : {}) };
 for (const [name, who, path, act, native, store] of SURFACES) {
   if (ONLY && !name.includes(ONLY)) continue;
   for (const [sname, viewport] of Object.entries(SIZES)) {
@@ -150,12 +152,12 @@ for (const [name, who, path, act, native, store] of SURFACES) {
     } catch (e) { note = ' ACTION-FAILED: ' + e.message.split('\n')[0]; }
     mkdirSync(OUT, { recursive: true });
     await p.screenshot({ path: join(OUT, `${name}-${sname}.png`) });
-    const facts = await p.evaluate(() => ({
+    const facts = await p.evaluate((screenW) => ({
       bg: getComputedStyle(document.body).backgroundColor,
       font: getComputedStyle(document.querySelector('h1,h2,button') || document.body).fontFamily.split(',')[0],
-      overflow: document.documentElement.scrollWidth > innerWidth,
+      overflow: Math.max(document.documentElement.scrollWidth, innerWidth) > screenW,
       shell: !!document.querySelector('.hb-shell'), bar: !!document.querySelector('.hb-tabbar'), side: !!document.querySelector('.hb-side'),
-    }));
+    }), viewport.width);
     console.log([name, sname, JSON.stringify(facts), errors.length ? 'ERRORS ' + errors.join(' | ') : '', note].join(' '));
     await ctx.close();
   }

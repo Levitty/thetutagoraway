@@ -8,7 +8,7 @@ import { useLessonNotes, LessonNotesModal } from './lesson/LessonNotes.jsx';
 import { INTEREST_CATEGORIES, CATEGORY_BY_KEY, categoryLabel, categoryEmoji } from './groupClassCategories.js';
 import { PaymentModal } from './PaymentModal';
 import { initiatePaystackPayment } from './paystack';
-import { Messaging, MessageButton, startConversation } from './Messaging';
+import { Messaging, startConversation } from './Messaging';
 import { getLevel } from './ai-tutor/adaptiveEngine.js';
 import { todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP } from './ai-tutor/gamification.js';
 import { sendEmail } from './email.js';
@@ -31,7 +31,7 @@ import { HALF_HOUR_LESSONS } from './site/features.js';
 import { SiteIcon, SiteNav, SiteFooter } from './site/ui.jsx';
 import { AppShell, ShellContext, TabBar } from './shell/AppShell.jsx';
 import { TIcon } from './shell/icons.jsx';
-import { menuFor, personKind } from './shell/menus.js';
+import { menuFor, personKind, tutorTab } from './shell/menus.js';
 import { AvatarArt, AvatarPicker, isAvatarId, DEFAULT_AVATAR } from './avatars/Avatars.jsx';
 import { CheckStart, CheckResult, getCheck, setFocus } from './site/Check.jsx';
 import { findMissingStep, skillLabel } from './site/missingStep.js';
@@ -40,6 +40,7 @@ import { claimGuestCheck, markWantsSave, wantsSave } from './site/claim.js';
 // Running inside the iOS/Android shell (Capacitor injects window.Capacitor).
 // The app IS the product: no marketing landing, no cookie banner — it opens
 // straight into learning, with live tutoring as a co-equal front-door path.
+const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 const IS_NATIVE = typeof window !== 'undefined' && !!window.Capacitor?.isNativePlatform?.();
 
 // ---- per-route SEO (web only) ----------------------------------------------
@@ -1365,24 +1366,7 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
 // Compact "momentum" chip — surfaces the learner's level + streak in headers,
 // nudging them back into the tutor. Self-contained background so it reads on
 // both the light dashboard header and the transparent marketing nav.
-const MomentumChipView = ({ level, streak, onClick }) => (
-  <button onClick={onClick} title="Open HOREB" className="flex items-center gap-1.5 bg-white/90 border border-slate-200 shadow-sm rounded-full pl-2 pr-2.5 py-1 hover:bg-white transition-colors">
-    <Icon name="brain" className="w-4 h-4 text-violet-500" />
-    <span className="text-xs font-semibold text-slate-700">Lv {level}</span>
-    {streak > 0 && <span className="text-xs font-semibold text-amber-600 flex items-center gap-0.5"><Icon name="flame" className="w-3.5 h-3.5" />{streak}</span>}
-  </button>
-);
 
-const MomentumChip = ({ userId, onClick }) => {
-  const [m, setM] = useState(null);
-  useEffect(() => {
-    if (!userId) return;
-    supabase.from('ai_tutor_progress').select('total_xp, current_streak, diagnosed').eq('user_id', userId).maybeSingle()
-      .then(({ data }) => { if (data?.diagnosed) setM({ level: getLevel(data.total_xp || 0).level, streak: data.current_streak || 0 }); });
-  }, [userId]);
-  if (!m) return null;
-  return <MomentumChipView level={m.level} streak={m.streak} onClick={onClick} />;
-};
 
 // The signed-in family's home (web). Parents first: their children, handing
 // over the phone, and lessons. Students use the same screen without the
@@ -1666,7 +1650,7 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
             )}
           </section>
 
-          <p className="dline">{past.length} lessons done · {uniqueTutors} {uniqueTutors === 1 ? 'tutor' : 'tutors'} · KSh {totalSpent.toLocaleString()} spent</p>
+          <p className="dline">{plural(past.length, 'lesson')} done · {plural(uniqueTutors, 'tutor')} · KSh {totalSpent.toLocaleString()} spent</p>
         </main>
 
         <aside className="dside">
@@ -2328,7 +2312,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
             {step === 1 ? "Let's set up your tutor profile" : step === 2 ? "Tell parents about yourself" : step === 3 ? "Upload your verification documents" : "Review and agree to our terms"}
           </p>
           {/* Step indicator */}
-          <div className="flex items-center justify-center gap-2 mt-4">
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
             {stepLabels.map((label, i) => (
               <div key={i} className="flex items-center gap-2">
                 <div className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium transition-colors ${step >= i + 1 ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-400'}`}>
@@ -2612,7 +2596,9 @@ const saveTutorHours = async (tutorId, availability) => {
 };
 
 const TutorDashboard = ({ profile, bookings, bookingsLoading, onStartLesson, onRefreshProfile, onNavigate, section, onSection }) => {
-  const tab = section || 'overview';
+  // The section comes from the address, so the review gate is enforced here too.
+  const tutorForGate = profile?.tutors?.[0];
+  const tab = tutorTab(section, (tutorForGate?.verification_status || (tutorForGate?.verified ? 'approved' : 'pending')) === 'approved');
   const setTab = onSection;
   const [resubmitting, setResubmitting] = useState(false);
   const tutor = profile?.tutors?.[0];
@@ -3083,7 +3069,7 @@ const TutorHello = ({ profile, tutor, upcoming, completed, onStartLesson }) => {
       </p>
       {next && <button type="button" className="tt-btn tt-dark" style={{ marginTop: 16 }} onClick={() => onStartLesson(next)}>Start lesson</button>}
       <p className="tt-sub" style={{ marginTop: 16 }}>
-        {tutor.students_total || completed.length} students · {completed.length} lessons done{tutor.rating ? ` · rating ${tutor.rating}` : ''} · KSh {earned.toLocaleString()} earned
+        {plural(tutor.students_total || completed.length, 'student')} · {plural(completed.length, 'lesson')} done{tutor.rating ? ` · rating ${tutor.rating}` : ''} · KSh {earned.toLocaleString()} earned
       </p>
     </div>
   );
@@ -6435,7 +6421,7 @@ function AppInner() {
 
   // Parent: weekly goals and messages for each child.
   if (page === 'family' && auth.user) {
-    return framed('family', 'Goals and reports', <FamilyPage user={auth.user} onBack={() => handleNavigate('dashboard')} onHandOver={() => handleNavigate('handover')} />);
+    return framed('family', 'Family', <FamilyPage user={auth.user} onBack={() => handleNavigate('dashboard')} onHandOver={() => handleNavigate('handover')} />);
   }
 
   // Parent hands this device to a child.
