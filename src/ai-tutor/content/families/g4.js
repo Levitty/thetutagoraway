@@ -135,10 +135,10 @@ export const FAMILIES = [
     },
     make: ({ m, k, n, r, p }) => {
       const opts = [
-        { text: `${m} × ${k} = ${n}, so ${m} goes into ${n} exactly`, right: true },
-        { text: `${n} is an even number`, right: false, why: `Many even numbers are not multiples of ${m}. For example, ${n + 2} is even but ${m} does not go into it exactly.` },
-        { text: `${n} is bigger than ${m}`, right: false, why: `${n + 1} is also bigger than ${m}, but it is not a multiple of ${m}.` },
-        { text: `${m} + ${n - m} = ${n}`, right: false, why: `Any two numbers can be added to make ${n}. A multiple of ${m} comes from counting in ${m}s or multiplying ${m}.` },
+        { text: `${m} × ${k} = ${n}, so ${m} goes into ${n}`, right: true },
+        { text: `${n} is an even number, and even numbers are multiples`, right: false, why: `Many even numbers are not multiples of ${m}. For example, ${n + 2} is even but ${m} does not go into it exactly.` },
+        { text: `${n} is bigger than ${m}, and bigger numbers are multiples`, right: false, why: `${n + 1} is also bigger than ${m}, but it is not a multiple of ${m}.` },
+        { text: `${m} + ${n - m} = ${n}, so the two numbers make ${n}`, right: false, why: `Any two numbers can be added to make ${n}. A multiple of ${m} comes from counting in ${m}s or multiplying ${m}.` },
       ];
       return { question: `${p.name} counts in ${m}s and reaches ${n}. ${p.She} says ${n} is a multiple of ${m}. Why is ${p.she} right?`, options: rot(opts, r),
         hints: [`Count in ${m}s: ${m}, ${m * 2}, ${m * 3} and so on.`, 'A multiple is made by multiplying the number by 1, 2, 3 and so on.'],
@@ -150,10 +150,10 @@ export const FAMILIES = [
     make: ({ s, d, r }) => {
       const t = [0, 1, 2, 3, 4].map(i => s + i * d).join(', ');
       const opts = [
-        { text: `Each time we add ${d}, an odd number. Adding an odd number changes odd to even, and even to odd`, right: true },
-        { text: 'The numbers get bigger each time', right: false, why: 'Numbers can get bigger and stay odd. Think of adding 2 each time to 5: 5, 7, 9.' },
-        { text: 'Adding any number changes odd to even', right: false, why: 'Adding an even number, such as 4, keeps an odd number odd.' },
-        { text: `The first number is ${s % 2 ? 'odd' : 'even'}, so all the numbers are ${s % 2 ? 'odd' : 'even'}`, right: false, why: 'Look at the pattern again. The numbers are not all the same kind.' },
+        { text: `Each time we add ${d}, an odd number, so odd and even swap`, right: true },
+        { text: 'The numbers get bigger each time, so they must swap between odd and even', right: false, why: 'Numbers can get bigger and stay odd. Think of adding 2 each time to 5: 5, 7, 9.' },
+        { text: 'Adding any number at all changes an odd number to an even number', right: false, why: 'Adding an even number, such as 4, keeps an odd number odd.' },
+        { text: `The first number is ${s % 2 ? 'odd' : 'even'}, so all the numbers are ${s % 2 ? 'odd' : 'even'} too`, right: false, why: 'Look at the pattern again. The numbers are not all the same kind.' },
       ];
       return { question: `Look at this pattern: ${t}. The numbers change from odd to even, and from even to odd, again and again. Why?`, options: rot(opts, r),
         hints: [`The pattern adds ${d} each time. Is ${d} odd or even?`, 'Try: odd + odd, and then even + odd.'],
@@ -404,9 +404,9 @@ export const FAMILIES = [
     make: ({ d, n, p, k }) => {
       const opts = [
         { text: `The chapati was cut into ${d} equal pieces`, right: true },
-        { text: `${p.name} ate ${d} pieces`, right: false, why: 'The number of pieces eaten is the top number, the numerator.' },
-        { text: `There are ${n} equal pieces in all`, right: false, why: `${n} is the numerator. It tells how many pieces ${p.name} ate.` },
-        { text: `${d - n} pieces are left over`, right: false, why: 'The bottom number does not tell how many are left. It tells how many equal parts the whole has.' },
+        { text: `${p.name} ate ${d} pieces of the chapati`, right: false, why: 'The number of pieces eaten is the top number, the numerator.' },
+        { text: `There are ${n} equal pieces in the whole chapati`, right: false, why: `${n} is the numerator. It tells how many pieces ${p.name} ate.` },
+        { text: `${d - n} pieces are left over after ${p.name} eats`, right: false, why: 'The bottom number does not tell how many are left. It tells how many equal parts the whole has.' },
       ];
       return { question: `${p.name} cuts a chapati into ${d} equal pieces. ${p.She} eats ${n} pieces. ${p.She} writes the fraction ${n}/${d}. What does the denominator ${d} tell us?`, options: rot(opts, k),
         hints: ['The denominator is the bottom number of a fraction.', 'It names the equal parts that make one whole.'],
@@ -436,10 +436,10 @@ export const FAMILIES = [
     draw: () => { const d = randInt(3, 9); return { d, n: randInt(d + 1, 2 * d - 1), r: randInt(0, 3) }; },
     make: ({ d, n, r }) => {
       const opts = [
-        { text: `The numerator ${n} is bigger than the denominator ${d}, so it is more than one whole`, right: true },
-        { text: 'It is smaller than one whole', right: false, why: 'A fraction smaller than one whole is a proper fraction. Compare the top and bottom numbers.' },
-        { text: 'It has a whole number and a fraction together', right: false, why: `That describes a mixed number. ${n}/${d} has no whole number written beside it.` },
-        { text: `The denominator is ${d % 2 ? 'an odd' : 'an even'} number`, right: false, why: 'Odd or even does not decide the type. Compare the two numbers instead.' },
+        { text: `The top number ${n} is bigger than the bottom number ${d}`, right: true },
+        { text: 'It is smaller than one whole, so the top is smaller', right: false, why: 'A fraction smaller than one whole is a proper fraction. Compare the top and bottom numbers.' },
+        { text: 'It has a whole number and a fraction written together', right: false, why: `That describes a mixed number. ${n}/${d} has no whole number written beside it.` },
+        { text: `The bottom number ${d} is ${d % 2 ? 'an odd' : 'an even'} number`, right: false, why: 'Odd or even does not decide the type. Compare the two numbers instead.' },
       ];
       return { question: `Why is ${n}/${d} called an improper fraction?`, options: rot(opts, r),
         hints: ['Compare the top number with the bottom number.', 'What does it mean when the top is bigger?'],
@@ -565,10 +565,10 @@ export const FAMILIES = [
     make: ({ t, h, r, p }) => {
       const a = `0.${String(h).padStart(2, '0')}`, b = `0.${t}`;
       const opts = [
-        { text: `Compare the tenths first. ${b} has ${t} tenths, but ${a} has only ${Math.floor(h / 10)} tenths`, right: true },
-        { text: `${h} is not bigger than ${t}`, right: false, why: `${h} is bigger than ${t}. But the digits after the point are compared place by place, not as one whole number.` },
-        { text: 'A decimal with more digits is always smaller', right: false, why: 'Not always. Compare place by place, starting with the tenths.' },
-        { text: 'Decimals cannot be compared', right: false, why: 'Decimals can be compared. Start with the tenths.' },
+        { text: `${b} has ${t} tenths, but ${a} has only ${Math.floor(h / 10)} tenths`, right: true },
+        { text: `${h} is not bigger than ${t}, so ${a} is the smaller one`, right: false, why: `${h} is bigger than ${t}. But the digits after the point are compared place by place, not as one whole number.` },
+        { text: 'A decimal with more digits after the point is always smaller', right: false, why: 'Not always. Compare place by place, starting with the tenths.' },
+        { text: 'Decimals cannot be compared with each other at all', right: false, why: 'Decimals can be compared. Start with the tenths.' },
       ];
       return { question: `${p.name} says ${a} is bigger than ${b}, because ${h} is bigger than ${t}. Why is ${p.she} wrong?`, options: rot(opts, r),
         hints: ['Look at the tenths place of each decimal.', `${b} is the same as ${t} tenths and 0 hundredths.`],
@@ -617,10 +617,10 @@ export const FAMILIES = [
     draw: () => { const [v, w] = [...['x', 'y', 'n', 'p', 'k']].sort(() => Math.random() - 0.5); return { a: randInt(2, 8), b: randInt(2, 8), v, w, r: randInt(0, 3) }; },
     make: ({ a, b, v, w, r }) => {
       const opts = [
-        { text: `${a}${v} and ${b}${v} are lots of the same thing, but ${a}${v} and ${b}${w} are lots of different things`, right: true },
-        { text: `${w} is a smaller letter than ${v}`, right: false, why: 'The size of a letter does not matter. What matters is whether the letters are the same.' },
-        { text: 'Letters can never be added', right: false, why: `Letters can be added when they stand for the same thing. ${a}${v} + ${b}${v} = ${a + b}${v}.` },
-        { text: `${a} and ${b} must be the same number`, right: false, why: `The numbers in front can be different. ${a}${v} + ${b}${v} = ${a + b}${v}.` },
+        { text: `${a}${v} and ${b}${v} are lots of the same thing, but ${b}${w} is not`, right: true },
+        { text: `${w} is a smaller letter than ${v}, so it cannot be added`, right: false, why: 'The size of a letter does not matter. What matters is whether the letters are the same.' },
+        { text: 'Letters can never be added to anything at all', right: false, why: `Letters can be added when they stand for the same thing. ${a}${v} + ${b}${v} = ${a + b}${v}.` },
+        { text: `${a} and ${b} in front must be the same number to add`, right: false, why: `The numbers in front can be different. ${a}${v} + ${b}${v} = ${a + b}${v}.` },
       ];
       return { question: `We can simplify ${a}${v} + ${b}${v}. We cannot simplify ${a}${v} + ${b}${w}. Why?`, options: rot(opts, r),
         hints: [`Think of ${v} as pens and ${w} as books.`, 'Can you add 3 pens and 2 books to make one kind of thing?'],
@@ -710,10 +710,10 @@ export const FAMILIES = [
     draw: () => ({ r: randInt(3, 8), c: randInt(4, 9), k: randInt(0, 3) }),
     make: ({ r, c, k }) => {
       const opts = [
-        { text: `There are ${r} equal rows with ${c} squares in each row. ${r} groups of ${c} is ${r} × ${c}`, right: true },
-        { text: 'Area is the distance around the rectangle', right: false, why: 'The distance around is the perimeter. Area is how many unit squares cover the rectangle.' },
-        { text: `${r} + ${c} counts all the squares`, right: false, why: 'Adding counts the squares along two sides only, not the squares inside.' },
-        { text: 'We must double the longest side', right: false, why: 'Doubling a side does not count the squares inside the rectangle.' },
+        { text: `There are ${r} equal rows with ${c} squares in each row`, right: true },
+        { text: 'Area is the distance around the outside of the rectangle', right: false, why: 'The distance around is the perimeter. Area is how many unit squares cover the rectangle.' },
+        { text: `${r} + ${c} counts all the squares inside the rectangle`, right: false, why: 'Adding counts the squares along two sides only, not the squares inside.' },
+        { text: 'We must double the longest side of the rectangle', right: false, why: 'Doubling a side does not count the squares inside the rectangle.' },
       ];
       return { question: `A rectangle is covered by ${r} rows of ${c} unit squares. Why can we find its area by working out ${r} × ${c}?`, options: rot(opts, k),
         hints: ['Picture one row of unit squares.', 'Equal rows are equal groups.'],

@@ -37,7 +37,7 @@ export const FAMILIES = [
     make: ({ r, p }) => ({
       question: `${p.name} wants the circumference of a circle with a radius of ${r} cm. ${p.She} writes C = π × ${r}. Why is this wrong?`,
       options: [
-        { text: `Circumference is π × diameter, and the diameter is ${2 * r} cm, not ${r} cm`, right: true },
+        { text: `Circumference uses the diameter, ${2 * r} cm, not ${r} cm`, right: true },
         { text: `${p.She} should have squared the radius: π × ${r} × ${r}`, right: false, why: 'Squaring the radius gives the area inside the circle. Circumference is the distance round it.' },
         { text: `${p.She} should have added the radius: π + ${r}`, right: false, why: 'Circumference is found by multiplying, not adding. The number π is a multiplier.' },
         { text: `${p.She} should have divided by π, to get ${r} ÷ π`, right: false, why: 'Dividing by π goes the wrong way. From a length across the circle to a length round it, you multiply by π.' },
@@ -197,7 +197,7 @@ export const FAMILIES = [
     make: ({ k, p }) => ({
       question: `${p.name} digs a round fish pond. ${p.She} then digs a second round pond with a radius ${k} times as long. How many times as much water surface does the second pond have?`,
       options: [
-        { text: `${k * k} times as much, because the radius is multiplied twice in π × r × r`, right: true },
+        { text: `${k * k} times as much, because r is multiplied twice`, right: true },
         { text: `${k} times as much, because the radius is ${k} times as long`, right: false, why: 'The area uses the radius twice. A circle that is wider is also taller in every direction.' },
         { text: `${2 * k} times as much, because the area has a 2 in it`, right: false, why: 'The 2 belongs to the circumference, 2 × π × r. The area formula is π × r × r.' },
         { text: `${k * k * k} times as much, because the area is a cube`, right: false, why: 'A flat area uses two lengths multiplied, not three. Three lengths give a volume.' },
@@ -241,7 +241,7 @@ export const FAMILIES = [
     make: ({ th, n, p }) => ({
       question: `A round table cloth has a pattern. ${p.name} says a sector of angle ${th}° has exactly 1/${n} of the area of the whole circle, without using the radius. Why is that right?`,
       options: [
-        { text: `A full turn is 360° and ${th}° is 1/${n} of 360°, and area is shared out in the same fractions as angle`, right: true },
+        { text: 'Area is shared out in the same fractions as the angle', right: true },
         { text: `${th}° means ${th}% of the circle, and ${th}% is 1/${n}`, right: false, why: 'A full turn is 360°, not 100°. Degrees are not per cent.' },
         { text: 'The area of any sector is always half of the circle', right: false, why: 'Only a half circle, 180°, has half the area. The fraction depends on the angle.' },
         { text: `The radius cancels, so the area is ${th} ÷ 100 of the circle`, right: false, why: 'The radius does not cancel like that. The angle is compared with the 360° of a full turn.' },
@@ -472,7 +472,7 @@ export const FAMILIES = [
     make: ({ P, a, b, simple, comp }) => ({
       question: `${a.name} and ${b.name} each save ${sh(P)} for 3 years at 10% a year. ${a.name}'s account pays simple interest and ends with ${sh(simple)}. ${b.name}'s account pays compound interest and ends with ${sh(comp)}. Why does ${b.name} end with more?`,
       options: [
-        { text: `Each year ${b.her} interest is added to the money, so next year's interest is worked out on a bigger amount`, right: true },
+        { text: `Each year's interest is added and earns interest too`, right: true },
         { text: `${b.Her} account has a higher rate than ${a.her} account`, right: false, why: 'Both accounts pay 10% a year. The rate is the same. It is the way the interest is worked out that differs.' },
         { text: `Simple interest is only paid in the first year`, right: false, why: 'Simple interest is paid every year, but always on the amount first saved.' },
         { text: `Compound interest is paid each month, not each year`, right: false, why: 'Here the interest is paid once a year in both accounts. The difference is what the interest is worked out on.' },
@@ -520,7 +520,7 @@ export const FAMILIES = [
     make: ({ r, P, V2, tot, real, wrongUp, p }) => ({
       question: `A phone costs ${sh(P)} new. It loses ${r}% of its value in year 1 and another ${r}% of its value in year 2. ${p.name} says it has lost ${tot}% of its price altogether. Why is that wrong?`,
       options: [
-        { text: `The second ${r}% is taken from the smaller value after year 1, so the loss is ${real}%, which is less than ${tot}%`, right: true },
+        { text: `The second ${r}% is taken from a smaller value, so the loss is ${real}%`, right: true },
         { text: `The loss should be ${wrongUp}%, because the second ${r}% is taken from a bigger value`, right: false, why: 'After a fall, the value is smaller, not bigger. The second year\'s loss is taken from the smaller value.' },
         { text: `The phone only loses value in the first year`, right: false, why: 'The question says it loses value in year 2 as well.' },
         { text: `Per cent changes can never be added`, right: false, why: 'They can be added when they are all taken from the same starting value. Here the starting value changes.' },
@@ -600,8 +600,8 @@ export const FAMILIES = [
     make: ({ a, b, p }) => ({
       question: `${p.name} divides a line AB in the ratio ${a}:${b}. ${p.She} marks ${a + b} equal parts on a ray from A and joins the last mark to B. Then ${p.she} draws lines through the other marks parallel to that line. Why must these lines be parallel?`,
       options: [
-        { text: 'Parallel lines cut AB into parts in the same ratio as the equal parts on the ray', right: true },
-        { text: 'Parallel lines are always as long as AB', right: false, why: 'The length of a parallel line has nothing to do with the ratio. What matters is where it cuts AB.' },
+        { text: 'Parallel lines cut AB in the same ratio as the ray', right: true },
+        { text: 'Parallel lines are always exactly as long as AB', right: false, why: 'The length of a parallel line has nothing to do with the ratio. What matters is where it cuts AB.' },
         { text: 'Parallel lines make right angles with AB, so the cuts are fair', right: false, why: 'Parallel lines do not make right angles. They keep the same slope as the line to B.' },
         { text: 'Parallel lines stop the compasses from slipping', right: false, why: 'The compasses are used earlier, to mark the equal parts. The parallel lines carry the equal parts over to AB.' },
       ],
@@ -708,10 +708,10 @@ export const FAMILIES = [
     make: ({ s, V, p }) => ({
       question: `${p.name} wants to graph values up to ${V}. The vertical axis has 10 big squares. ${p.She} chooses a scale of 1 big square to ${s} units. Why is this scale not suitable?`,
       options: [
-        { text: `10 big squares of ${s} units reach only ${10 * s}, so ${V} will not fit on the axis`, right: true },
+        { text: `The axis reaches only ${10 * s}, so ${V} will not fit`, right: true },
         { text: `${s} is too small a number to use as a scale`, right: false, why: 'The size of the number does not matter by itself. What matters is whether the largest value fits on the axis.' },
         { text: 'A scale must always be 1 big square to 1 unit', right: false, why: 'Scales are chosen to fit the data. 1 big square to 1 unit would only fit tiny values.' },
-        { text: `A scale must be bigger than ${V}`, right: false, why: 'A scale is how many units one square stands for. It is never as large as the biggest value.' },
+        { text: `A scale must always be bigger than ${V} units`, right: false, why: 'A scale is how many units one square stands for. It is never as large as the biggest value.' },
       ],
       hints: ['Find how far the axis reaches: the number of big squares times the units in each.', 'Compare that with the largest value to be shown.'],
       steps: [`The axis reaches 10 × ${s} = ${10 * s}.`, `${V} is bigger than ${10 * s}, so the largest value is off the graph.`],
@@ -796,7 +796,7 @@ export const FAMILIES = [
       return {
         question: `${p.name} draws the lines ${e1} and ${e2} on one graph. They cross at the point (${x0}, ${y0}). ${p.She} says that x = ${x0} and y = ${y0} solve the two equations together. Why is that right?`,
         options: [
-          { text: `The crossing point is the only point on both lines, so its x and y fit both equations`, right: true },
+          { text: `The crossing point is on both lines, so it fits both`, right: true },
           { text: 'The lines cross where each one meets the y-axis', right: false, why: 'The lines cross each other at one point. That point is not on the y-axis here.' },
           { text: `The crossing point is where both equations equal zero`, right: false, why: 'Check by putting the numbers in. Neither equation gives zero at the crossing point.' },
           { text: 'Every point on one line also fits the other equation', right: false, why: 'Different lines have different points. Only the crossing point is shared by both.' },
@@ -860,7 +860,7 @@ export const FAMILIES = [
       return {
         question: `Map A has a scale of 1 : ${commas(sx)}. Map B shows the same town with a scale of 1 : ${commas(sy)}. Which map shows more detail, and why?`,
         options: [
-          { text: `Map ${win}, because 1 cm on it stands for a shorter real distance, so the town is drawn bigger`, right: true },
+          { text: `Map ${win}, because 1 cm on it stands for less real distance`, right: true },
           { text: `Map ${lose}, because the number in its scale is bigger`, right: false, why: 'A bigger number after the 1 means each cm covers more ground, so the town is drawn smaller with less room for detail.' },
           { text: `Map ${lose}, because it covers more ground on the same sheet`, right: false, why: 'Covering more ground on the same paper means each cm stands for more, so there is less detail.' },
           { text: 'Neither, because both maps show the same town', right: false, why: 'The same town can be drawn bigger or smaller. The bigger drawing has room for more detail.' },
@@ -1247,7 +1247,7 @@ export const FAMILIES = [
     make: ({ a, b, n1, h1, n2, h2 }) => ({
       question: `${a.name} tossed a fair coin ${n1} times and got ${h1} heads. ${b.name} tossed the same coin ${n2} times and got ${h2} heads. Whose result is likely to be closer to the true probability of heads, and why?`,
       options: [
-        { text: `${b.name}'s, because more tosses usually give a result nearer to the true probability`, right: true },
+        { text: `${b.name}'s, because more tosses give a steadier result`, right: true },
         { text: `${a.name}'s, because ${h1} out of ${n1} is a bigger fraction of heads`, right: false, why: 'A bigger fraction is not a better one. A result from few tosses can easily be far from the true probability.' },
         { text: 'Both are equally good, because it is the same coin', right: false, why: 'The same coin does not make a short run of tosses as reliable as a long run.' },
         { text: `${a.name}'s, because fewer tosses means fewer mistakes in counting`, right: false, why: 'The question is about chance, not about counting mistakes. A long run evens out the lucky and unlucky tosses.' },

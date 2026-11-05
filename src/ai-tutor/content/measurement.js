@@ -4,7 +4,7 @@
 // tolerance in their verify hook). π uses Math.PI; rounded to 2 d.p. on display.
 // ============================================================================
 
-import { accepts, hintLadder, randInt, pick, coin, withWorkedExample } from './schema.js';
+import { accepts, hintLadder, randInt, nonzero, pick, coin, withWorkedExample } from './schema.js';
 
 const r2 = (x) => Math.round(x * 100) / 100;
 const numStr = (x) => `${r2(x)}`;
@@ -158,7 +158,7 @@ export function buildSpeed() {
 export function buildTemperatureRead() {
   const kind = pick(['toK', 'toC', 'colder']);
   if (kind === 'toK') {
-    const c = randInt(-10, 35);
+    const c = nonzero(-10, 35);   // 0 °C would make the answer the 273 in the hint
     const value = c + 273;
     return {
       type: 'temp-convert', instruction: 'Convert the temperature.',
@@ -246,7 +246,7 @@ export function buildTemperatureChange() {
         { text: 'A fall is a subtraction.', expr: `${t} − ${f}` },
         { text: 'Evaluate (crossing zero if needed).', expr: `${value}°C`,
           model: { type: 'numberline-jump', data: { from: t, delta: -f, to: value, unit: '°C' } } }], answer: `${value}` },
-      misconceptions: [{ when: `${f - t}`, feedback: `Sign slip: ${t} − ${f} lands BELOW zero at ${value}, not at ${f - t}. Count down the scale past 0.` }],
+      misconceptions: [{ when: `${f - t}`, feedback: 'Sign slip: this fall takes the temperature BELOW zero. Count down the scale past 0.' }],
       verify: { kind: 'fraction', value },
     };
   }
@@ -265,7 +265,7 @@ export function buildTemperatureChange() {
       { text: 'Evaluate.', expr: `${value}°C`,
         model: { type: 'numberline-jump', data: { from: a, delta: value, to: b, unit: '°C' } } }], answer: `${value}` },
     misconceptions: (a < 0 && wrong !== value)
-      ? [{ when: `${wrong}`, feedback: `You ignored the minus sign on ${a}. From ${a} up to 0 is ${-a} degrees, then 0 up to ${b} is ${b} more: ${value} in total.` }]
+      ? [{ when: `${wrong}`, feedback: `You ignored the minus sign on ${a}. Count up to 0 first, then on to ${b}.` }]
       : [],
     verify: { kind: 'fraction', value },
   };

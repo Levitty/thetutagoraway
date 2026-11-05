@@ -73,10 +73,10 @@ export const FAMILIES = [
     draw: () => ({ short: randInt(2, 8) * 50, k: randInt(0, 3), p: person() }),
     make: ({ short, k, p }) => {
       const opts = [
-        { text: 'Cut the sweets and the toy, because they are wants and the other items are needs', right: true },
-        { text: 'Cut the food, because a person can wait to eat', right: false, why: 'Food is a need. A budget pays for needs first.' },
+        { text: 'Cut the sweets and the toy, because they are wants', right: true },
+        { text: 'Cut the food, because a person can wait a while to eat', right: false, why: 'Food is a need. A budget pays for needs first.' },
         { text: 'Cut the school books, because books are not important', right: false, why: 'School books are a need. They come before wants.' },
-        { text: 'Cut nothing, because a budget does not change', right: false, why: 'A budget is a plan, and a plan can change when the money is not enough.' },
+        { text: 'Cut nothing, because a budget can never be changed', right: false, why: 'A budget is a plan, and a plan can change when the money is not enough.' },
       ];
       return { question: `${p.name}'s budget is ${sh(short)} more than the money ${p.she} has. It lists food, school books, sweets and a toy. What should ${p.she} cut first, and why?`,
         instruction: 'Choose the best reason.', options: rot(opts, k),
@@ -126,13 +126,13 @@ export const FAMILIES = [
     draw: () => {
       const S = randInt(8, 30) * 100, d1 = randInt(2, 8) * 100, w1 = randInt(2, 8) * 100, d2 = randInt(1, 6) * 100, w2 = randInt(1, 5) * 100;
       const end = S + d1 - w1 + d2 - w2;
-      return end > 0 && distinct(end, S + d1 + w1 + d2 + w2, S + d1 - w1, d1 + d2 - w1 - w2) ? { S, d1, w1, d2, w2, end, p: person() } : null;
+      return end > 0 && distinct(end, S + d1 + w1 + d2 + w2, S + d1 - w1, S + d1 + d2, S + d1 + d2 - w1) ? { S, d1, w1, d2, w2, end, p: person() } : null;
     },
     make: ({ S, d1, w1, d2, w2, end, p }) => ({
       question: `The table shows what happened in ${p.name}'s bank account in one week. A deposit puts money in. A withdrawal takes money out. How much is in the account at the end of Saturday?`,
       model: { type: 'table', data: { head: ['Day', 'What happened', 'Amount'], rows: [{ cells: ['Monday', 'Opening balance', sh(S)] }, { cells: ['Tuesday', 'Deposit', sh(d1)] }, { cells: ['Wednesday', 'Withdrawal', sh(w1)] }, { cells: ['Friday', 'Deposit', sh(d2)] }, { cells: ['Saturday', 'Withdrawal', sh(w2)] }] } },
       answer: end,
-      wrong: [[S + d1 + w1 + d2 + w2, 'A withdrawal takes money out, so subtract it.'], [S + d1 - w1, 'Two more things happened on Friday and Saturday.'], [d1 + d2 - w1 - w2, 'The account began with the opening balance. Start from it.']],
+      wrong: [[S + d1 + w1 + d2 + w2, 'A withdrawal takes money out, so subtract it.'], [S + d1 - w1, 'Two more things happened on Friday and Saturday.'], [S + d1 + d2, 'A withdrawal takes money out. Do not leave the withdrawals out.'], [S + d1 + d2 - w1, 'There is one more withdrawal, on Saturday.']],
       hints: ['Start with the opening balance.', 'Add each deposit and take away each withdrawal in order.'],
       steps: [`Start: ${sh(S)}. Tuesday: ${S} + ${d1} = ${S + d1}.`, `Wednesday: ${S + d1} − ${w1} = ${S + d1 - w1}. Friday: + ${d2} = ${S + d1 - w1 + d2}.`, `Saturday: − ${w2} = ${sh(end)}.`],
     }),
@@ -382,10 +382,10 @@ export const FAMILIES = [
     make: ({ a, b, ra, rb, k, p }) => {
       const claim = a * b * 10;
       const opts = [
-        { text: `${a} is about ${commas(ra)} and ${b} is about ${rb}. ${commas(ra)} × ${rb} is about ${commas(ra * rb)}, far from ${commas(claim)}`, right: true },
-        { text: 'A product is always bigger than both numbers, so it must be wrong', right: false, why: 'A product of two numbers above 1 is bigger than both. That does not show a mistake.' },
-        { text: 'The answer ends in zero, and products cannot end in zero', right: false, why: 'Products can end in zero. This is not a reason.' },
-        { text: 'The answer is bigger than the sum of the two numbers', right: false, why: 'A product like this is bigger than the sum. That is normal and shows no mistake.' },
+        { text: `${commas(ra)} × ${rb} is about ${commas(ra * rb)}, far from ${commas(claim)}`, right: true },
+        { text: 'A product is always bigger than both numbers, so it must be wrong here', right: false, why: 'A product of two numbers above 1 is bigger than both. That does not show a mistake.' },
+        { text: 'The answer ends in zero, and products can never end in zero', right: false, why: 'Products can end in zero. This is not a reason.' },
+        { text: 'The answer is much bigger than the sum of the two numbers', right: false, why: 'A product like this is bigger than the sum. That is normal and shows no mistake.' },
       ];
       return { question: `${p.name} works out ${a} × ${b} and gets ${commas(claim)}. Which reason, using an estimate, shows that the answer is wrong?`, instruction: 'Choose the best reason.', options: rot(opts, k),
         hints: ['Round each number and multiply the rounded numbers.', 'Compare the estimate with the answer given.'],
@@ -439,7 +439,7 @@ export const FAMILIES = [
 
   // ================================================================ EQUATIONS
   fam({ id: 'g5.eq.let-add', skill: 'G5_SIMPLE_EQUATIONS', outcome: 'G5.EQUATIONS.a', rung: 2, form: 'word',
-    draw: () => { const kind = pick(['add', 'sub']), x = randInt(8, 60), a = randInt(5, 30); return { kind, x, a, b: kind === 'add' ? x + a : x - a, p: person(), thing: pick(['pencils', 'sweets', 'mangoes', 'books']) }; },
+    draw: () => { const kind = pick(['add', 'sub']), a = randInt(5, 30), x = kind === 'add' ? randInt(8, 60) : randInt(2 * a + 2, 2 * a + 30); return { kind, x, a, b: kind === 'add' ? x + a : x - a, p: person(), thing: pick(['pencils', 'sweets', 'mangoes', 'books']) }; },
     make: ({ kind, x, a, b, p, thing }) => ({
       question: kind === 'add'
         ? `A box has some ${thing}. ${p.name} puts in ${a} more ${thing}. Now the box has ${b} ${thing}. Let n stand for the number of ${thing} the box had at first. Form an equation and solve it. What is n?`
@@ -502,10 +502,10 @@ export const FAMILIES = [
     draw: () => { const f = randInt(3, 6), n = randInt(5, 40) * 10, k = randInt(0, 3); return { f, T: f * n, n, k }; },
     make: ({ f, T, k }) => {
       const opts = [
-        { text: `${f}n = ${T}, because ${f} equal payments of n shillings make the whole cost`, right: true },
+        { text: `${f}n = ${T}, because ${f} equal payments make the cost`, right: true },
         { text: `n + ${f} = ${T}, because the friends add ${f} to the cost`, right: false, why: `n is what each friend pays. The number of friends is not added to it.` },
-        { text: `n ÷ ${f} = ${T}, because the cost is shared`, right: false, why: `n is one share. Sharing the cost ${T} gives n, so n is the answer, not the starting number.` },
-        { text: `${f} − n = ${T}, because the cost is taken from ${f}`, right: false, why: 'The friends do not take money away from the number of friends.' },
+        { text: `n ÷ ${f} = ${T}, because the cost is shared by the friends`, right: false, why: `n is one share. Sharing the cost ${T} gives n, so n is the answer, not the starting number.` },
+        { text: `${f} − n = ${T}, because the cost is taken away from ${f}`, right: false, why: 'The friends do not take money away from the number of friends.' },
       ];
       return { question: `${f} friends share the cost of a gift equally. Each friend pays n shillings. The gift costs ${sh(T)}. Which equation fits the story, and why?`, instruction: 'Choose the best reason.', options: rot(opts, k),
         hints: ['n is one friend\'s payment. How many payments are there?', 'All the payments together make the cost of the gift.'],
@@ -689,10 +689,10 @@ export const FAMILIES = [
     draw: () => { const u = randInt(3, 9), v = randInt(1, u - 1), w = randInt(1, 9); return { u, v, w, k: randInt(0, 3), p: person() }; },
     make: ({ u, v, w, k, p }) => {
       const opts = [
-        { text: `0.${u} is ${u}0 hundredths and 0.${v}${w} is ${v}${w} hundredths. ${u}0 hundredths is more than ${v}${w} hundredths`, right: true },
+        { text: `0.${u} is ${u}0 hundredths, and 0.${v}${w} is only ${v}${w} hundredths`, right: true },
         { text: `0.${v}${w} has more digits, and more digits means a bigger number`, right: false, why: 'More digits after the point does not make a decimal bigger.' },
-        { text: 'Decimals with different numbers of digits cannot be compared', right: false, why: 'They can. Write both with the same number of decimal places.' },
-        { text: `0.${u} is the same as 0.0${u}`, right: false, why: `0.${u} is ${u} tenths, which is 0.${u}0. It is not 0.0${u}.` },
+        { text: 'Decimals with different numbers of digits can never be compared', right: false, why: 'They can. Write both with the same number of decimal places.' },
+        { text: `0.${u} is the same number as 0.0${u}, so it is smaller`, right: false, why: `0.${u} is ${u} tenths, which is 0.${u}0. It is not 0.0${u}.` },
       ];
       return { question: `${p.name} says that 0.${v}${w} is bigger than 0.${u} because ${v}${w} is bigger than ${u}. Which reason shows ${p.she} is wrong?`, instruction: 'Choose the best reason.', options: rot(opts, k),
         hints: ['Write both decimals with the same number of places.', 'Compare tenths first.'],
@@ -920,7 +920,7 @@ export const FAMILIES = [
     },
     make: ({ a, r, t, k }) => {
       const opts = [
-        { text: `Start at ${a} and multiply by ${r} each time: ${t[0]} × ${r} = ${t[1]}, ${t[1]} × ${r} = ${t[2]}`, right: true },
+        { text: `Start at ${a} and multiply by ${r} each time`, right: true },
         { text: `Start at ${a} and add ${t[1] - t[0]} each time`, right: false, why: `${t[1]} + ${t[1] - t[0]} = ${2 * t[1] - t[0]}, not ${t[2]}.` },
         { text: `Start at ${a} and add ${r} each time`, right: false, why: `${t[0]} + ${r} = ${a + r}, not ${t[1]}.` },
         { text: `Start at ${a} and multiply by ${r + 1} each time`, right: false, why: `${t[0]} × ${r + 1} = ${a * (r + 1)}, not ${t[1]}.` },
@@ -1024,12 +1024,12 @@ export const FAMILIES = [
   fam({ id: 'g5.mass.shop-left', skill: 'G5_MASS_OPS', outcome: 'G5.MASS.d', rung: 2, form: 'word',
     draw: () => {
       const a = randInt(3, 9), pk = pick([250, 500]), n = randInt(3, 12), left = a * 1000 - pk * n;
-      return left > 0 && distinct(left, a * 100 - pk * n, pk * n, a * 1000 + pk * n) ? { a, pk, n, left, p: person() } : null;
+      return left > 0 && distinct(left, left + pk, a * 1000 - pk, pk * n, a * 1000 + pk * n) ? { a, pk, n, left, p: person() } : null;
     },
     make: ({ a, pk, n, left, p }) => ({
       question: `${p.name} has ${a} kg of sugar in a shop. ${p.She} sells ${n} packets of ${pk} g each. How many grams of sugar are left?`,
       answer: left,
-      wrong: [[a * 100 - pk * n, '1 kg is 1,000 g. Change the kilograms to grams first.'], [pk * n, 'That is the sugar sold. The question asks what is left.'], [a * 1000 + pk * n, 'Selling takes sugar away, so subtract.']],
+      wrong: [[a * 100 - pk * n, '1 kg is 1,000 g. Change the kilograms to grams first.'], [pk * n, 'That is the sugar sold. The question asks what is left.'], [a * 1000 + pk * n, 'Selling takes sugar away, so subtract.'], [a * 1000 - pk, 'Take away the sugar in all the packets, not in one packet.'], [left + pk, 'Count the packets again. All of them are sold.']],
       hints: ['Change the kilograms to grams first.', 'Find the grams in all the packets, then take them away.'],
       steps: [`${a} kg = ${commas(a * 1000)} g. Sold: ${n} × ${pk} = ${commas(n * pk)} g.`, `Left: ${commas(a * 1000)} − ${commas(n * pk)} = ${commas(left)} g.`],
     }),
@@ -1068,12 +1068,12 @@ export const FAMILIES = [
   fam({ id: 'g5.cap.dairy-left', skill: 'G5_CAPACITY_OPS', outcome: 'G5.CAP.d', rung: 3, form: 'word',
     draw: () => {
       const a = randInt(8, 30), pk = pick([250, 500]), n = randInt(4, 16), used = pk * n, left = a * 1000 - used;
-      return left > 0 && used % 250 === 0 && distinct(left / 1000, a - n * pk / 100, used / 1000, a + used / 1000) ? { a, pk, n, left, p: person() } : null;
+      return left > 0 && used % 250 === 0 && distinct(left / 1000, a - pk / 1000, (left + pk) / 1000, used / 1000, a + used / 1000) ? { a, pk, n, left, p: person() } : null;
     },
     make: ({ a, pk, n, left, p }) => ({
       question: `A dairy has ${a} litres of milk. ${p.name} fills ${n} packets of ${pk} ml each. How many litres of milk are left?`,
       answer: left / 1000,
-      wrong: [[a - n * pk / 100, '1 litre is 1,000 ml, not 100 ml.'], [n * pk / 1000, 'That is the milk put in the packets. The question asks what is left.'], [a + n * pk / 1000, 'Filling packets takes milk away, so subtract.']],
+      wrong: [[a - n * pk / 100, '1 litre is 1,000 ml, not 100 ml.'], [n * pk / 1000, 'That is the milk put in the packets. The question asks what is left.'], [a + n * pk / 1000, 'Filling packets takes milk away, so subtract.'], [a - pk / 1000, 'Take away the milk in all the packets, not in one packet.'], [(left + pk) / 1000, 'Count the packets again. All of them are filled.']],
       hints: ['Find the millilitres in all the packets, then change them to litres.', 'Take that amount from the litres the dairy has.'],
       steps: [`${n} × ${pk} = ${commas(n * pk)} ml = ${n * pk / 1000} litres.`, `Left: ${a} − ${n * pk / 1000} = ${left / 1000} litres.`],
     }),
@@ -1113,10 +1113,10 @@ export const FAMILIES = [
     },
     make: ({ it, k, p }) => {
       const opts = [
-        { text: `${it[1]}, because it is about the amount that ${it[0]} holds`, right: true },
-        { text: `${it[2]}, because small units are always right`, right: false, why: it[4] },
+        { text: `${it[1]}, because that is about how much it holds`, right: true },
+        { text: `${it[2]}, because small units are always the right choice`, right: false, why: it[4] },
         { text: `${it[3]}, because a big number means a big container`, right: false, why: it[4] },
-        { text: 'Any of them, because litres and millilitres are the same', right: false, why: '1 litre is 1,000 ml. They are not the same size.' },
+        { text: 'Any of them, because litres and millilitres are the same size', right: false, why: '1 litre is 1,000 ml. They are not the same size.' },
       ];
       return { question: `${p.name} wants to say how much ${it[0]} holds. Which amount is sensible, and why?`, instruction: 'Choose the best reason.', options: rot(opts, k),
         hints: ['Picture the container. Is it as big as a bucket or as small as a spoon?', '1 litre is 1,000 millilitres.'],

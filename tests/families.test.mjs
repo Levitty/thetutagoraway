@@ -7,7 +7,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { checkFamily, checkForms, baseFormsOf, FAMILIES } from '../engine/scripts/family_checks.mjs';
-import { setFamilyMode } from '../src/ai-tutor/content/families/core.js';
+import { setFamilyMode, drawFamily } from '../src/ai-tutor/content/families/core.js';
+import { planYoungLesson } from '../src/ai-tutor/youngPlan.js';
 import { familyDraw } from '../src/ai-tutor/content/families/index.js';
 import { measureSkill } from '../engine/scripts/range_report.mjs';
 import { generateProblem } from '../src/ai-tutor/problemGenerators.js';
@@ -48,6 +49,17 @@ test('a family question served through generateProblem marks itself right', () =
       }
     }
   } finally { setFamilyMode('reviewed'); }
+});
+
+test('a family for the youngest works in their tap-and-listen lesson', () => {
+  for (const f of FAMILIES.filter(x => x.young)) {
+    for (let i = 0; i < 30; i++) {
+      const p = drawFamily(f).p;
+      const plan = planYoungLesson(p);
+      assert.ok(plan, `${f.id}: the young lesson cannot show "${p.question}"`);
+      assert.ok(plan.choices.some(c => checkAnswerMatch(String(c), p)), `${f.id}: no button is right on "${p.question}": ${plan.choices}`);
+    }
+  }
 });
 
 test('the 18 skills now teach what their label says', () => {

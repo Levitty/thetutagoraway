@@ -381,7 +381,7 @@ export const FAMILIES = [
       const load = round((gross * 1000 - empty) / 1000, 3);
       return { question: `A lorry and its load are weighed at a weighbridge. The scale shows ${gross} tonnes. The empty lorry has a mass of ${T(empty)} kg. Find the mass of the load in tonnes.`,
         answer: load,
-        wrong: [[round(gross - empty, 3), 'The two masses are in different units. Change them to the same unit first.'], [round(gross - empty / 100, 3), 'There are 1,000 kg in a tonne, not 100.'], [round(gross * 1000 - empty, 1), 'That is the load in kg. The question asks for tonnes.'], [round(gross + empty / 1000, 3), 'The scale already includes the lorry. Take the lorry away.']],
+        wrong: [[round(gross * 1000 - empty / 1000, 3), 'The two masses are in different units. Change them to the same unit first.'], [round(empty / 1000, 3), 'That is the mass of the empty lorry. The question asks for the load.'], [round(gross * 1000 - empty, 1), 'That is the load in kg. The question asks for tonnes.'], [round(gross + empty / 1000, 3), 'The scale already includes the lorry. Take the lorry away.']],
         hints: ['Write both masses in the same unit.', '1 tonne = 1,000 kg.'],
         steps: [`Empty lorry: ${T(empty)} kg = ${T(empty / 1000)} tonnes.`, `Load: ${gross} − ${T(empty / 1000)} = ${T(load)} tonnes.`] };
     },
@@ -486,7 +486,7 @@ export const FAMILIES = [
       const floats = rho < 1, opp = floats ? 'sinks' : 'floats', same = floats ? 'floats' : 'sinks';
       return { question: `${who.name} lowers a block into a basin of water. The block has a mass of ${T(m)} g and a volume of ${v} cm³. Water has a density of 1 g/cm³. Choose the best explanation.`,
         options: [
-          { text: `It ${same}, because its density is ${rho} g/cm³, which is ${floats ? 'less' : 'more'} than water`, right: true },
+          { text: `It ${same}, because it is ${floats ? 'less' : 'more'} dense than water`, right: true },
           { text: `It ${opp}, because an object ${floats ? 'with a low density' : 'with a high density'} ${opp}`, right: false, why: 'An object floats when it is less dense than the liquid, and sinks when it is denser.' },
           { text: `It ${same}, because its mass of ${T(m)} g is ${floats ? 'small' : 'large'}`, right: false, why: 'Mass alone does not decide it. A big ship floats and a small pin sinks. Compare densities.' },
           { text: `It ${opp}, because its volume of ${v} cm³ is ${floats ? 'large' : 'small'}`, right: false, why: 'Volume alone does not decide it. Find the density, which uses both mass and volume.' },

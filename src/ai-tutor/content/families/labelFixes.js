@@ -96,7 +96,7 @@ export const CORE_FAMILIES = [
       const ra = Math.round(a / 10) * 10, rb = Math.round(b / 10) * 10;
       return { question: `Estimate ${a} × ${b} by rounding each number to the nearest ten.`, story: false,
         answer: ra * rb,
-        wrong: [[round(a * b, 2), 'That is the exact product. An estimate rounds first, then multiplies.'], [(Math.floor(a / 10) * 10) * (Math.floor(b / 10) * 10), 'Both numbers were rounded down. Look at the units digit to decide.'], [ra + rb, 'The question is a multiplication, so multiply the rounded numbers.']],
+        wrong: [[round(a * b, 2), 'That is the exact product. An estimate rounds first, then multiplies.'], [(Math.floor(a / 10) * 10) * (Math.floor(b / 10) * 10), 'Both numbers were rounded down. Look at the units digit to decide.'], [(Math.ceil(a / 10) * 10) * (Math.ceil(b / 10) * 10), 'Both numbers were rounded up. Look at the units digit to decide.'], [(Math.floor(a / 10) * 10) * (Math.ceil(b / 10) * 10), 'Each number is rounded by its own units digit, not both the same way.'], [(Math.ceil(a / 10) * 10) * (Math.floor(b / 10) * 10), 'Each number is rounded by its own units digit, not both the same way.'], [ra + rb, 'The question is a multiplication, so multiply the rounded numbers.']],
         hints: ['Round first, then multiply.', `${a} is closest to which ten?`],
         steps: [`${a} rounds to ${ra} and ${b} rounds to ${rb}.`, `${ra} × ${rb} = ${commas(ra * rb)}.`] };
     },
@@ -268,7 +268,7 @@ export const CORE_FAMILIES = [
     draw: () => { const a = randInt(3, 8) * 10 + pick([0, 5]); return { a, p: person() }; },
     make: ({ a, p }) => ({
       question: `An acute angle is measured with a protractor. The arm crosses the marks ${a} and ${180 - a}. ${p.name} says the angle is ${180 - a}°. Why is ${p.she} wrong?`,
-      options: [{ text: `An acute angle is less than 90°, so it must be ${a}°`, right: true }, { text: 'A protractor only reads up to 90°', right: false, why: 'A protractor reads up to 180°. Look at what kind of angle this is.' }, { text: `The two marks must be added to give ${a + 180 - a}°`, right: false, why: 'The two marks are two scales for the same arm. Only one is right.' }, { text: 'Angles must be measured in centimetres', right: false, why: 'Angles are measured in degrees.' }],
+      options: [{ text: `An acute angle is less than 90°, so it must be ${a}°`, right: true }, { text: 'A protractor only reads angles up to 90 degrees', right: false, why: 'A protractor reads up to 180°. Look at what kind of angle this is.' }, { text: `The two marks must be added together to give ${a + 180 - a}°`, right: false, why: 'The two marks are two scales for the same arm. Only one is right.' }, { text: 'Angles must always be measured in centimetres', right: false, why: 'Angles are measured in degrees.' }],
       hints: ['What does "acute" tell you about the size?', 'A protractor has two scales. Which reading is possible?'],
       steps: ['An acute angle is less than 90°.', `Of ${a}° and ${180 - a}°, only ${a}° is less than 90°.`],
     }) }),
@@ -321,7 +321,7 @@ export const CORE_FAMILIES = [
   fx({ id: 'g5.money.budget-why', skill: 'G5_MONEY', outcome: 'G5.MONEY.a', rung: 1, form: 'why',
     draw: () => { const has = pick([500, 800, 1000, 1500]); return { has, p: person(), k: randInt(0, 3) }; },
     make: ({ has, p, k }) => {
-      const opts = [{ text: 'To plan the money before spending it, so it covers what is needed', right: true }, { text: 'To make the money grow by itself', right: false, why: 'A budget does not add money. It plans how to use it.' }, { text: 'To spend it all as fast as possible', right: false, why: 'A budget slows spending down by planning it.' }, { text: 'To hide the money from the family', right: false, why: 'A budget is a plan, and a family often makes it together.' }];
+      const opts = [{ text: 'To plan the money so it covers what is needed', right: true }, { text: 'To make the money grow bigger by itself each month', right: false, why: 'A budget does not add money. It plans how to use it.' }, { text: 'To spend all of it as fast as we possibly can', right: false, why: 'A budget slows spending down by planning it.' }, { text: 'To hide the money away from the whole family', right: false, why: 'A budget is a plan, and a family often makes it together.' }];
       return { question: `${p.name} has ${sh(has)} to last the month and writes a budget. Why is a budget useful?`, instruction: 'Choose the best reason.', options: [...opts.slice(k), ...opts.slice(0, k)],
         hints: ['A budget is written before the money is spent.', 'What does it help you decide?'],
         steps: ['A budget lists what money comes in and what it will be used for.', 'It helps make sure needs are covered first.'] };
@@ -513,7 +513,7 @@ export const CORE_FAMILIES = [
     draw: () => { const d = pick([10, 15, 20, 30, 40]), T = pick([0.5, 1, 2]); return { d, T, p: person() }; },
     make: ({ d, T, p }) => ({
       question: `${p.name} cycles ${d} km east along a straight road and straight back to the start. The whole trip takes ${T} h. Why is ${p.her} average velocity 0, even though ${p.her} average speed is ${(2 * d) / T} km/h?`,
-      options: [{ text: 'Velocity depends on the change in position, and the trip ends where it began', right: true }, { text: 'Velocity ignores time altogether', right: false, why: 'Velocity is displacement divided by time, so time counts.' }, { text: 'A bicycle cannot have a velocity', right: false, why: 'Anything moving has a velocity.' }, { text: 'Velocity and speed are always the same', right: false, why: 'Speed uses total distance. Velocity uses how far you end up from the start, and the direction.' }],
+      options: [{ text: 'Velocity uses the change in position, which is zero', right: true }, { text: 'Velocity ignores time, so it cannot be worked out', right: false, why: 'Velocity is displacement divided by time, so time counts.' }, { text: 'A bicycle cannot have a velocity, only a car can', right: false, why: 'Anything moving has a velocity.' }, { text: 'Velocity and speed are always the same thing, so one is wrong', right: false, why: 'Speed uses total distance. Velocity uses how far you end up from the start, and the direction.' }],
       hints: ['Speed uses the distance travelled.', 'Velocity uses how far you end up from where you began, in a direction.'],
       steps: [`Total distance: ${2 * d} km, so average speed = ${(2 * d) / T} km/h.`, 'Displacement: 0, because the trip ends at the start. So average velocity = 0.'],
     }) }),
@@ -557,7 +557,7 @@ export const CORE_FAMILIES = [
     draw: () => { const r = randInt(3, 7), b = randInt(2, 6); return { r, b, p: person() }; },
     make: ({ r, b, p }) => ({
       question: `A bag has ${r} red and ${b} blue beads. ${p.name} takes out a red bead and keeps it. Why is the chance of red on the next draw now ${r - 1}/${r + b - 1}, and not ${r}/${r + b}?`,
-      options: [{ text: 'One red bead has gone, so there is one fewer red and one fewer bead in all', right: true }, { text: 'Taking a bead makes red more likely next time', right: false, why: 'With one red gone, red is less likely, not more.' }, { text: 'The chance of red never changes', right: false, why: 'It stays the same only if the bead is put back.' }, { text: 'Only the blue beads change', right: false, why: 'Blue beads are untouched. Look at what left the bag.' }],
+      options: [{ text: 'One red has gone, so reds and all beads are one fewer', right: true }, { text: 'Taking a bead makes red more likely next time', right: false, why: 'With one red gone, red is less likely, not more.' }, { text: 'The chance of red never changes in a bag of beads', right: false, why: 'It stays the same only if the bead is put back.' }, { text: 'Only the number of blue beads changes in the bag', right: false, why: 'Blue beads are untouched. Look at what left the bag.' }],
       hints: ['Count what is left in the bag.', 'How many reds now? How many beads altogether?'],
       steps: [`Reds left: ${r - 1}. Beads left: ${r + b - 1}.`, `So the chance is ${r - 1}/${r + b - 1}.`],
     }) }),
@@ -596,7 +596,7 @@ export const CORE_FAMILIES = [
   fx({ id: 'g9.construct.circum-centre', skill: 'G9_CONSTRUCTION', outcome: 'G8.CONSTRUCT.f', rung: 3, form: 'why',
     draw: () => ({ k: randInt(0, 3), a: randInt(6, 12), b: randInt(5, 11) }),
     make: ({ k, a, b }) => {
-      const opts = [{ text: 'Any point on a perpendicular bisector is the same distance from both ends of that side', right: true }, { text: 'Perpendicular bisectors always pass through a corner', right: false, why: 'A perpendicular bisector passes through the middle of a side.' }, { text: 'They make every angle of the triangle equal', right: false, why: 'Drawing lines does not change the angles of the triangle.' }, { text: 'They give the area of the triangle', right: false, why: 'Area comes from base and height.' }];
+      const opts = [{ text: 'Any point on the bisector is equally far from both ends', right: true }, { text: 'Perpendicular bisectors always pass through a corner', right: false, why: 'A perpendicular bisector passes through the middle of a side.' }, { text: 'They make every angle of the triangle equal', right: false, why: 'Drawing lines does not change the angles of the triangle.' }, { text: 'They are used to give the area of the triangle', right: false, why: 'Area comes from base and height.' }];
       return { question: `To draw a circle through all three corners of a triangle with sides ${a} cm and ${b} cm and a third side, you bisect two sides at right angles and use the point where those lines meet as the centre. Why does this work?`, story: false, options: [...opts.slice(k), ...opts.slice(0, k)],
         hints: ['What is special about a point on a perpendicular bisector?', 'The centre must be the same distance from all three corners.'],
         steps: ['A point on a perpendicular bisector is equally far from the two ends of the side.', 'The meeting point of two such lines is equally far from all three corners, so a circle fits through them.'] };

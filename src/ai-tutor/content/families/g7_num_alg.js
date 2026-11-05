@@ -263,7 +263,7 @@ export const FAMILIES = [
     make: ({ p, q, N, who }) => ({
       question: `${who.name} says that ${N} is a prime number, because it does not divide by 2, 3 or 5. Why is ${who.her} reasoning not enough?`,
       options: [
-        { text: `${N} = ${p} × ${q}, so it has a factor other than 1 and itself. ${who.She} did not test ${p}`, right: true },
+        { text: `${N} = ${p} × ${q}, so it has factors besides 1 and itself`, right: true },
         { text: 'A number that does not divide by 2, 3 or 5 is always prime', right: false, why: `That is not true. ${N} passes those three tests and is still not prime.` },
         { text: `${N} is even, so it divides by 2`, right: false, why: `${N} ends in an odd digit, so it is odd.` },
         { text: 'Prime numbers are never larger than 100', right: false, why: 'There are prime numbers bigger than 100, such as 101. Look for a factor of this number instead.' },
@@ -321,8 +321,8 @@ export const FAMILIES = [
     make: ({ a, b, L, p }) => ({
       question: `${p.name} says the LCM of ${a} and ${b} is ${a * b}, because ${a * b} is a common multiple of both numbers. Why is ${p.her} answer not the least common multiple?`,
       options: [
-        { text: `${L} is also a common multiple of ${a} and ${b}, and it is smaller than ${a * b}`, right: true },
-        { text: `${a * b} is not a multiple of ${a}`, right: false, why: `${a * b} = ${a} × ${b}, so it is a multiple of ${a}. It is just not the smallest common one.` },
+        { text: `${L} is also a common multiple, and it is smaller`, right: true },
+        { text: `${a * b} is not a multiple of ${a}, so it cannot be common`, right: false, why: `${a * b} = ${a} × ${b}, so it is a multiple of ${a}. It is just not the smallest common one.` },
         { text: 'The LCM must be smaller than both of the numbers', right: false, why: 'A common multiple is never smaller than the numbers themselves.' },
         { text: 'The LCM is always found by adding the two numbers', right: false, why: 'Adding does not give a multiple of both numbers. Look at lists of multiples.' },
       ],
@@ -367,7 +367,7 @@ export const FAMILIES = [
       const A = `${n - 1}/${n}`, B = `${n}/${n + 1}`, first = swap ? B : A, second = swap ? A : B;
       return { question: `Which is greater: ${first} or ${second}? Choose the best reason.`, story: false,
         options: shuffle([
-          { text: `${B} is greater, because it is only 1/${n + 1} short of a whole and that is smaller than 1/${n}`, right: true },
+          { text: `${B} is greater, because less is missing from a whole`, right: true },
           { text: `${A} is greater, because its denominator is smaller`, right: false, why: `A smaller denominator does not decide it. Look at how much is missing from a whole in each fraction.` },
           { text: `${B} is greater, because its denominator is bigger`, right: false, why: 'A bigger denominator does not always mean a bigger fraction: 1/9 is less than 1/2. The reason is in the piece that is missing.' },
           { text: 'They are equal, because each is one piece short of a whole', right: false, why: `The missing pieces are not the same size: ${n + 1}ths are smaller than ${n}ths.` },
@@ -631,8 +631,8 @@ export const FAMILIES = [
     make: ({ a, b, c, p }) => ({
       question: `${p.name} writes √(${a * a} + ${b * b}) = √${a * a} + √${b * b} = ${a} + ${b} = ${a + b}. Why is this wrong?`, story: false,
       options: shuffle([
-        { text: `√(${a * a} + ${b * b}) = √${c * c} = ${c}, but ${a} + ${b} = ${a + b}. A square root of a sum is not the sum of the square roots`, right: true },
-        { text: `√${a * a} is not ${a}`, right: false, why: `${a} × ${a} = ${a * a}, so √${a * a} = ${a}. That part is right.` },
+        { text: 'A square root of a sum is not the sum of the roots', right: true },
+        { text: `√${a * a} is not ${a}, so the first step is wrong`, right: false, why: `${a} × ${a} = ${a * a}, so √${a * a} = ${a}. That part is right.` },
         { text: `√${c * c} must be found by halving ${c * c}, which gives ${(c * c) / 2}`, right: false, why: `Halving is not taking a square root. Test by multiplying: which number times itself gives ${c * c}?` },
         { text: `The roots should be multiplied: ${a} × ${b} = ${a * b}`, right: false, why: 'Multiplying the roots does not give the root of a sum either.' },
       ]),
@@ -886,7 +886,7 @@ export const FAMILIES = [
     make: ({ sym, v, x }) => {
       const vt = v < 0 ? `−${-v}` : String(v), closed = sym === '≤' || sym === '≥', right = sym === '>' || sym === '≥';
       const combos = [[true, true], [true, false], [false, true], [false, false]];
-      return { question: `Which number line shows ${x} ${sym} ${vt}? Each line has a circle at ${vt} and is shaded in one direction.`,
+      return { question: `Which number line shows ${x} ${sym} ${vt}? Each line has a circle at ${vt}; each line is shaded in one direction.`,
         options: shuffle(combos.map(([c, r]) => ({ text: `${c ? 'A closed' : 'An open'} circle at ${vt}, shaded to the ${r ? 'right' : 'left'}`, right: c === closed && r === right, why: c === closed && r === right ? undefined : c !== closed ? `${x} ${sym} ${vt} ${closed ? 'includes' : 'does not include'} ${vt} itself, so the circle must not be ${c ? 'closed' : 'open'}.` : `${r ? 'Shading to the right' : 'Shading to the left'} shows ${r ? 'bigger' : 'smaller'} numbers than ${vt}, which does not fit ${sym}.` }))),
         hints: ['Does the number itself belong to the answers? That decides the circle.', 'Are the answers bigger or smaller than the number? That decides the direction.'],
         steps: [`${sym} ${closed ? 'includes' : 'does not include'} ${vt}: a ${closed ? 'closed' : 'open'} circle.`, `The answers are ${right ? 'bigger' : 'smaller'} than ${vt}: shade to the ${right ? 'right' : 'left'}.`] };
@@ -899,7 +899,7 @@ export const FAMILIES = [
       const tS = right ? [v + 1, v + 2, v + 3] : [v - 1, v - 2, v - 3], fS = right ? [v - 1, v - 2, v - 3] : [v + 1, v + 2, v + 3];
       const vals = closed ? [v, ...shuffle(fS).slice(0, 3)] : [shuffle(tS)[0], v, ...shuffle(fS).slice(0, 2)];
       const t = (n) => (n < 0 ? `−${-n}` : String(n));
-      return { question: `Mwende shades a number line. The shading starts at ${circ(closed)} at ${t(v)} and runs to the ${right ? 'right' : 'left'}. Which of these numbers lies under the shading?`,
+      return { question: `Mwende shades a number line. The shading starts at ${circ(closed)} at ${t(v)}. It runs to the ${right ? 'right' : 'left'}. Which of these numbers lies under the shading?`,
         options: shuffle(vals.map(n => ({ text: t(n), right: ok(n), why: ok(n) ? undefined : n === v ? `The circle at ${t(v)} is ${closed ? 'closed' : 'open'}, so ${t(v)} is ${closed ? '' : 'not '}in the shaded part.` : `${t(n)} is on the side of ${t(v)} that is not shaded.` }))),
         hints: ['Which side of the circle is shaded?', 'Is the number at the circle included? Look at whether the circle is open or closed.'],
         steps: [`The shaded part is the numbers ${right ? 'greater' : 'less'} than ${t(v)}${closed ? `, and ${t(v)} itself` : ''}.`, 'Only one of the four numbers is in that part.'] };
@@ -919,7 +919,7 @@ export const FAMILIES = [
     draw: () => { const lo = randInt(-4, 5); return { lo, hi: lo + randInt(3, 8), li: Math.random() < 0.5, hi_i: Math.random() < 0.5, x: pick(['x', 'n']) }; },
     make: ({ lo, hi, li, hi_i, x }) => {
       const t = (n) => (n < 0 ? `−${-n}` : String(n)), LS = (b) => (b ? '≤' : '<'), txt = (a, b) => `${t(lo)} ${LS(a)} ${x} ${LS(b)} ${t(hi)}`;
-      return { question: `On a number line, ${circ(li)} is at ${t(lo)} and ${circ(hi_i)} is at ${t(hi)}. The line between the two circles is shaded. Which inequality does it show?`,
+      return { question: `On a number line, ${circ(li)} is at ${t(lo)}; ${circ(hi_i)} is at ${t(hi)}. The line between the two circles is shaded. Which inequality does it show?`,
         options: shuffle([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? undefined : a !== li ? `The circle at ${t(lo)} is ${li ? 'closed' : 'open'}, so ${t(lo)} ${li ? 'is' : 'is not'} included. This inequality ${a ? 'includes' : 'leaves out'} it.` : `The circle at ${t(hi)} is ${hi_i ? 'closed' : 'open'}, so ${t(hi)} ${hi_i ? 'is' : 'is not'} included. This inequality ${b ? 'includes' : 'leaves out'} it.` }))),
         hints: ['A closed circle means the end number is included (≤). An open circle means it is not (<).', 'The smaller number goes on the left of x, and the bigger number on the right.'],
         steps: [`Left end: ${circ(li)} at ${t(lo)}, so ${LS(li)}.`, `Right end: ${circ(hi_i)} at ${t(hi)}, so ${LS(hi_i)}.`, `The inequality is ${txt(li, hi_i)}.`] };
@@ -988,9 +988,9 @@ export const FAMILIES = [
     make: ({ lo, hi, p }) => ({
       question: `${p.name} wants to write "x is less than ${lo} or greater than ${hi}". ${p.She} writes ${hi} < x < ${lo}. Why is this wrong?`, story: false,
       options: shuffle([
-        { text: `No number is greater than ${hi} and also less than ${lo}, so this inequality has no solutions`, right: true },
+        { text: `No number is both greater than ${hi} and less than ${lo}`, right: true },
         { text: `${hi} < x < ${lo} is correct: it means x is outside the two numbers`, right: false, why: `A chain like ${hi} < x < ${lo} says x is between the two numbers, both at once.` },
-        { text: 'An inequality can only have one sign in it', right: false, why: 'A compound inequality can have two signs, for example 2 < x < 5.' },
+        { text: 'An inequality can only ever have one sign in it', right: false, why: 'A compound inequality can have two signs, for example 2 < x < 5.' },
         { text: 'It should use ≤ instead of <, because x can equal the end numbers', right: false, why: `The words say "less than" and "greater than", so the end numbers are not included. The real problem is the order of the numbers.` },
       ]),
       hints: ['Read the chain from left to right: x must be bigger than the first number and smaller than the last.', 'Can one number be both?'],

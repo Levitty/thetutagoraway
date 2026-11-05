@@ -9,6 +9,8 @@ import { generateProblem, kpCount } from '../../src/ai-tutor/problemGenerators.j
 import { specialItemFor } from '../../src/ai-tutor/specialItems.js';
 import { checkAnswerMatch } from '../../src/ai-tutor/answerCheck.js';
 import { buildChoices } from '../../src/ai-tutor/choices.js';
+import { familiesFor } from '../../src/ai-tutor/content/families/index.js';
+import { drawFamily, isOn } from '../../src/ai-tutor/content/families/core.js';
 import { SKILL_TAGS } from '../../src/ai-tutor/curriculum/skillTags.js';
 import { OUTCOMES, TESTABLE_OUTCOMES } from '../../src/ai-tutor/curriculum/outcomes.js';
 import { textOf, formText, classify, clusterForms, senseFlags } from './content_measures.mjs';
@@ -42,7 +44,9 @@ export function measureSkill(id, draws = 60) {
     const c = classify(p);
     for (const k of ['story', 'kenyan', 'multi', 'stepMarked', 'reasoning', 'picture', 'choice']) if (c[k]) m[k]++;
     if (outcomes.length) {
-      if (![...outcomes, ...revision].some(o => o.signal.test(t))) { m.offTopic++; m.offTopicExample ||= String(p.question).slice(0, 90); }
+      // An always-sometimes-never statement argues about the topic without naming it.
+      const statement = /sometimes|always/.test(p.type || '');
+      if (!statement && ![...outcomes, ...revision].some(o => o.signal.test(t))) { m.offTopic++; m.offTopicExample ||= String(p.question).slice(0, 90); }
       for (const o of outcomes) if (o.signal.test(t)) m.promisedHit[o.id] = (m.promisedHit[o.id] || 0) + 1;
     }
     if (!p.parts && !p.shownSteps && !checkAnswerMatch(String(p.answer), p)) m.keyFails.push(`key marks wrong: ${p.answer} on "${String(p.question).slice(0, 70)}"`);
@@ -61,6 +65,8 @@ export function measureSkill(id, draws = 60) {
     for (const f of senseFlags(p)) m.flags[f.split(':')[0]] = (m.flags[f.split(':')[0]] || 0) + 1;
   }
   console.warn = warn;
+  // Every switched-on family counts once, so a form is not missed by the dice.
+  for (const f of familiesFor(id).filter(isOn)) { try { m.formTexts.push(formText(drawFamily(f).p)); } catch { /* family_checks reports it */ } }
   const forms = clusterForms(m.formTexts);
   delete m.formTexts;
   m.forms = forms.length;

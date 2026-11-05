@@ -362,10 +362,10 @@ export const FAMILIES = [
     },
     make: ({ n1, d1, n2, d2, p, k }) => ({
       question: `${p.name} says ${fr(n1, d1)} + ${fr(n2, d2)} = ${fr(n1 + n2, d1 + d2)}. Why is this wrong?`,
-      options: optionsOf('The pieces are different sizes. Both fractions must have the same denominator before you add the numerators', [
-        [`Nothing is wrong. You add the tops and add the bottoms`, `${fr(n1 + n2, d1 + d2)} is smaller than the bigger fraction, but adding must make a bigger answer.`],
-        ['The two fractions must be multiplied, not added', 'Multiplying a fraction by a fraction gives a smaller amount. The question asks for the two amounts together.'],
-        ['The tops should be multiplied and the bottoms added', 'That mixes two rules. The pieces must be the same size before you add.']], k),
+      options: optionsOf('The pieces are different sizes, so the bottoms must match first', [
+        [`Nothing is wrong, because you add the tops and add the bottoms`, `${fr(n1 + n2, d1 + d2)} is smaller than the bigger fraction, but adding must make a bigger answer.`],
+        ['The two fractions must be multiplied together, not added', 'Multiplying a fraction by a fraction gives a smaller amount. The question asks for the two amounts together.'],
+        ['The tops should be multiplied and the bottoms should be added', 'That mixes two rules. The pieces must be the same size before you add.']], k),
       hints: ['Compare the answer with the bigger of the two fractions. Is it bigger?', 'Pieces can only be added when they are the same size.'],
       steps: ['Fractions with different denominators show pieces of different sizes.', 'Change both to the same denominator, then add the numerators only.'],
     }) }),
@@ -837,10 +837,10 @@ export const FAMILIES = [
     draw: () => ({ p: person(), k: randInt(0, 3) }),
     make: ({ p, k }) => ({
       question: `${p.name} says the area from counting squares inside a circle is only an estimate, never exact. Why is that?`,
-      options: optionsOf('The curved edge cuts many squares into pieces, and the size of each piece can only be guessed', [
-        ['Squares on paper cannot be used to measure area', 'Counting squares is a good way to measure area. The problem is only at the curved edge.'],
-        ['A circle has no area that can be measured', 'Every circle has an area. It is the space inside the edge.'],
-        ['The whole squares are counted wrongly', 'Whole squares inside the circle can be counted exactly. The trouble is the squares the edge cuts through.']], k),
+      options: optionsOf('The curved edge cuts squares into pieces that are guessed', [
+        ['Squares on paper are not a proper way to measure area', 'Counting squares is a good way to measure area. The problem is only at the curved edge.'],
+        ['A circle has no area, so only a guess can be made', 'Every circle has an area. It is the space inside the edge.'],
+        ['The whole squares inside the circle are counted wrongly', 'Whole squares inside the circle can be counted exactly. The trouble is the squares the edge cuts through.']], k),
       hints: ['Which squares are easy to count, and which are hard?', 'Think about the squares that the curved edge goes through.'],
       steps: ['Whole squares inside the circle can be counted exactly.', 'The squares cut by the curved edge are only part inside, so their share is guessed. That makes the total an estimate.'],
     }) }),
@@ -933,7 +933,7 @@ export const FAMILIES = [
 
   fam({ id: 'g6.mass.which-in-tonnes', skill: 'G6_MASS', outcome: 'G6.MASS.a', rung: 1, form: 'direct',
     draw: () => {
-      const big = pick(['A lorry full of sand', 'A ship carrying cargo', 'A goods train wagon full of cement', 'A tipper truck of building stones']);
+      const big = pick(['A lorry full of sand', 'A ship carrying cargo', 'A wagon full of cement', 'A truck full of stones']);
       const small = shuffle(['A sack of maize', 'A goat', 'A bag of sugar', 'A bicycle', 'A school bag full of books']).slice(0, 3);
       return { big, small, k: randInt(0, 3), p: person() };
     },
@@ -984,11 +984,11 @@ export const FAMILIES = [
 
   // =========================================================== ANGLES
   fam({ id: 'g6.angle.sectors-point', skill: 'G6_ANGLE_PROPERTIES', outcome: 'G6.ANGLES.a', rung: 2, form: 'word',
-    draw: () => { const a = randInt(8, 18) * 10, b = randInt(5, 15) * 10, x = 360 - a - b; return x > 30 && uniq(x, 180 - a - b, 360 - a, a + b) ? { a, b, x, p: person() } : null; },
+    draw: () => { const a = randInt(8, 18) * 10, b = randInt(5, 15) * 10, x = 360 - a - b; return x > 30 && uniq(x, 180 - a - b, 360 - a, 360 - b, a + b) ? { a, b, x, p: person() } : null; },
     make: ({ a, b, x, p }) => ({
       question: `${p.name} cuts a round cake into three pieces. The three angles meet at a point in the centre. Two angles are ${a}° and ${b}°. What is the third angle, in degrees?`,
       answer: x,
-      wrong: [[180 - a - b, 'The angles at a point add up to 360°, not 180°.'], [360 - a, 'The other angle, ' + b + '°, must be taken away too.'], [a + b, 'That is the two angles together. Take them from 360°.']],
+      wrong: [[180 - a - b, 'The angles at a point add up to 360°, not 180°.'], [360 - a, 'The other angle, ' + b + '°, must be taken away too.'], [360 - b, 'The other angle, ' + a + '°, must be taken away too.'], [a + b, 'That is the two angles together. Take them from 360°.']],
       hints: ['All the angles at a point make a full turn.', 'A full turn is 360°.'],
       steps: [`Angles at a point add up to 360°.`, `${a} + ${b} = ${a + b}, and 360 − ${a + b} = ${x}°.`],
     }),

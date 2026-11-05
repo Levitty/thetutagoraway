@@ -179,7 +179,7 @@ export const FAMILIES = [
       const others = shuffle(['circle', 'triangle', 'square', 'rectangle'].filter(s => s !== q.r)).slice(0, 2);
       return { q, three: [q.r, ...others] };
     },
-    make: ({ q, three }) => ({ story: false, question: `Which shape ${q.t}?`,
+    make: ({ q, three }) => ({ story: false, question: `A shape ${q.t}. Pick it.`,
       options: opts(three, q.r, `That shape does not fit. Count its sides and corners.`),
       hints: ['Picture each shape. Count its sides and corners.', 'A circle is round with no corners.'],
       steps: [`Think about each shape: a circle has no corners, a triangle has 3 sides, a square has 4 equal sides.`, `The answer is the ${q.r}.`] }) }),

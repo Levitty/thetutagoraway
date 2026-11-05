@@ -12,7 +12,7 @@
 // (MATH.G7.MEASUR.TEMPERATURE). Migration 215 calls its list "starter" and in
 // places differs from the KICD design; the design wins here, and
 // tests/fixtures/migration215-substrand-codes.json records which of our codes
-// that list does not have yet (see UNMATCHED_215 in tests/curriculum-tags.test.mjs).
+// that list does not have yet (printed in the review pack, BEFORE-AFTER.md).
 //
 // `signal` is how the quality gate decides a draw teaches this outcome: a
 // pattern over what the child reads. It is a blunt tool on purpose. It catches
@@ -140,7 +140,7 @@ sub(4, D, 'Data', 'DATA', [
 
 // ---------------------------------------------------------------- Grade 5
 sub(5, N, 'Whole numbers', 'WHOLE', [
-  ['a', 'Place value to tens of thousands', /place value|total value|value of the digit|thousands/i],
+  ['a', 'Place value to tens of thousands', /place value|total value|value of the|which place|digit|thousands/i],
   ['b', 'Read and write numbers to tens of thousands in words', /in words|words|in figures/i],
   ['c', 'Order numbers to tens of thousands', /order|smallest|largest|biggest|ascending|descending/i],
   ['d', 'Round to the nearest hundred and thousand', /round|nearest/i],

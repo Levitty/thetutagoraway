@@ -33,9 +33,9 @@ export const FAMILIES = [
   fam({ id: 'g8.int.order-why', skill: 'G6_INTEGERS_INTRO', outcome: 'G8.INTEGERS.a', rung: 1, form: 'why',
     draw: () => { const lo = -randInt(6, 20), hi = -randInt(1, 5); return { lo, hi, p: person() }; },
     make: ({ lo, hi, p }) => ({
-      question: `${p.name} says ${neg(hi)} is smaller than ${neg(lo)}, because ${-hi} is smaller than ${-lo}. Why is this wrong?`,
+      question: `Because ${-hi} is smaller than ${-lo}, ${p.name} says ${neg(hi)} is smaller than ${neg(lo)}. Why is this wrong?`,
       options: [
-        { text: `${neg(lo)} is further to the left of zero on the number line, so it is the smaller number`, right: lo < hi },
+        { text: `${neg(lo)} is further left of zero, so it is smaller`, right: lo < hi },
         { text: 'Negative numbers cannot be compared with each other', right: false, why: 'They can. Every integer has its own place on the number line.' },
         { text: `${p.name} is right: the number with the smaller digit is the smaller number`, right: false, why: 'That is true above zero only. Below zero, the further a number is from zero, the smaller it is.' },
         { text: 'The two numbers are equal because both have a minus sign', right: false, why: 'The minus sign only says which side of zero. The digits still tell how far from zero.' },
@@ -186,10 +186,10 @@ export const FAMILIES = [
       const prime = (() => { for (let f = 3; f <= q; f += 2) if (q % f === 0) return f; return q; })();
       return { question: `A calculator shows that ${n}/${den} is a recurring decimal. Why does it never stop?`,
         options: [
-          { text: `${den} has a prime factor ${prime}. Only 2 and 5 give decimals that stop`, right: q > 1 },
+          { text: `${den} has a prime factor ${prime}, not only 2 and 5`, right: q > 1 },
           { text: `The top number is smaller than the bottom number`, right: false, why: 'Every proper fraction is like that, and 3/4 = 0.75 stops.' },
-          { text: `${den} is bigger than 10`, right: false, why: '1/20 = 0.05 stops, and 20 is bigger than 10.' },
-          { text: 'Every fraction gives a recurring decimal', right: false, why: 'Not so. 1/2 = 0.5 and 3/4 = 0.75 both stop.' },
+          { text: `${den} is bigger than 10, so the decimal never stops`, right: false, why: '1/20 = 0.05 stops, and 20 is bigger than 10.' },
+          { text: 'Every fraction gives a recurring decimal in the end', right: false, why: 'Not so. 1/2 = 0.5 and 3/4 = 0.75 both stop.' },
         ],
         hints: [`Break ${den} into prime factors.`, 'A decimal stops only if the bottom number is made of 2s and 5s.'],
         steps: [`${den} = ${(() => { const f = []; let m = den; for (let k = 2; m > 1; k++) while (m % k === 0) { f.push(k); m /= k; } return f.join(' × '); })()}.`, `A factor of ${prime} is not 2 or 5, so the division never ends and the digits repeat.`] };
@@ -304,10 +304,10 @@ export const FAMILIES = [
     make: ({ n, lo, p }) => ({
       question: `${p.name} says √${n} lies between ${lo} and ${lo + 1}. Why is that correct?`,
       options: [
-        { text: `${lo}² = ${lo * lo} and ${lo + 1}² = ${(lo + 1) ** 2}, and ${n} is between ${lo * lo} and ${(lo + 1) ** 2}`, right: lo * lo < n && n < (lo + 1) ** 2 },
-        { text: `${n} lies between ${lo} and ${lo + 1}`, right: false, why: `${n} is much bigger than ${lo + 1}. Roots are compared through squares.` },
-        { text: `${lo} × ${lo + 1} = ${lo * (lo + 1)}, which is close to ${n}`, right: false, why: 'Multiplying two neighbouring numbers is not how a root is placed. Square each end instead.' },
-        { text: `A square root is found by dividing ${n} by 2`, right: false, why: 'Dividing by 2 gives a half. A root is the number that multiplies by itself to give the number.' },
+        { text: `${n} is between ${lo}² = ${lo * lo} and ${lo + 1}² = ${(lo + 1) ** 2}`, right: lo * lo < n && n < (lo + 1) ** 2 },
+        { text: `${n} lies between ${lo} and ${lo + 1}, so its root does too`, right: false, why: `${n} is much bigger than ${lo + 1}. Roots are compared through squares.` },
+        { text: `${lo} × ${lo + 1} = ${lo * (lo + 1)}, which is close to ${n}, so that is the root`, right: false, why: 'Multiplying two neighbouring numbers is not how a root is placed. Square each end instead.' },
+        { text: `A square root is found by dividing ${n} by 2, to get half`, right: false, why: 'Dividing by 2 gives a half. A root is the number that multiplies by itself to give the number.' },
       ],
       hints: ['Square the two whole numbers.', 'Compare the number under the root sign with those two squares.'],
       steps: [`${lo}² = ${lo * lo} and ${lo + 1}² = ${(lo + 1) ** 2}.`, `${lo * lo} < ${n} < ${(lo + 1) ** 2}, so ${lo} < √${n} < ${lo + 1}.`],
@@ -396,9 +396,9 @@ export const FAMILIES = [
       const [sa, sb] = [a * L / c, b * L / d];
       return { question: `Cement and sand are mixed for mortar. Mix A has cement to sand in the ratio ${a}:${c}. Mix B has the ratio ${b}:${d}. Which mix has more cement for each bag of sand, and why?`,
         options: [
-          { text: `Mix ${strong}. With ${L} bags of sand in each, Mix A has ${sa} bags of cement and Mix B has ${sb}`, right: strong === (sa > sb ? 'A' : 'B') },
-          { text: `Mix ${strong === 'A' ? 'B' : 'A'}, because its cement number is bigger`, right: false, why: 'That compares the cement only. The sand is different in each mix, so the ratios must be compared on the same amount of sand.' },
-          { text: `Mix ${strong === 'A' ? 'B' : 'A'}, because it makes the bigger batch`, right: false, why: 'The size of the batch is not what is asked. The question is how much cement for each bag of sand.' },
+          { text: `Mix ${strong}. With ${L} bags of sand each, it has more cement`, right: strong === (sa > sb ? 'A' : 'B') },
+          { text: `Mix ${strong === 'A' ? 'B' : 'A'}, because its cement number is the bigger one`, right: false, why: 'That compares the cement only. The sand is different in each mix, so the ratios must be compared on the same amount of sand.' },
+          { text: `Mix ${strong === 'A' ? 'B' : 'A'}, because it makes the bigger batch of mortar`, right: false, why: 'The size of the batch is not what is asked. The question is how much cement for each bag of sand.' },
           { text: 'Both are the same, because each has more sand than cement', right: false, why: 'Make the sand equal in both mixes and the cement amounts are different.' },
         ],
         hints: ['Make the sand the same amount in both mixes.', 'Then compare the bags of cement.'],
@@ -483,9 +483,9 @@ export const FAMILIES = [
     make: ({ big, small, base, p }) => ({
       question: `${p.name} must increase ${base} in the ratio ${big}:${small}. ${p.She} works out ${base} × ${small}/${big}. Why is that wrong?`,
       options: [
-        { text: `An increase must give more than ${base}. The multiplier must be ${big}/${small}, which is bigger than 1`, right: big > small },
-        { text: `${base} × ${small}/${big} is correct`, right: false, why: `It gives a number smaller than ${base}. An increase must give a bigger number.` },
-        { text: `${p.She} should add ${big} to ${base}`, right: false, why: 'A ratio is not a number to add. It says what to multiply by.' },
+        { text: `An increase must give more than ${base}, so multiply by ${big}/${small}`, right: big > small },
+        { text: `${base} × ${small}/${big} is correct, because it uses the ratio`, right: false, why: `It gives a number smaller than ${base}. An increase must give a bigger number.` },
+        { text: `${p.She} should add ${big} to ${base}, because the ratio is ${big}:${small}`, right: false, why: 'A ratio is not a number to add. It says what to multiply by.' },
         { text: `${p.She} should divide ${base} by ${big} and then by ${small}`, right: false, why: 'That divides twice and makes the number far too small.' },
       ],
       hints: ['Will the answer be more than or less than the starting number?', 'For an increase, the bigger ratio number goes on top.'],
@@ -650,10 +650,10 @@ export const FAMILIES = [
     make: ({ a, b, p }) => ({
       question: `${p.name} says x/${a} + x/${b} = 2x/${a + b}. Why is this wrong?`,
       options: [
-        { text: `The fractions need a common denominator first. x/${a} = ${b}x/${a * b} and x/${b} = ${a}x/${a * b}, so the sum is ${a + b}x/${a * b}`, right: true },
-        { text: 'The top should be x, not 2x', right: false, why: 'Both fractions do have x on top, but tops and bottoms cannot be added separately.' },
-        { text: `The answer should be x/${a * b}`, right: false, why: `The bottom number is ${a * b} only after the tops are changed too. Write each fraction over ${a * b} first.` },
-        { text: 'Algebraic fractions cannot be added', right: false, why: 'They can, once they have a common denominator.' },
+        { text: 'The fractions need a common denominator first', right: true },
+        { text: 'The top should be x, not 2x, because both tops are x', right: false, why: 'Both fractions do have x on top, but tops and bottoms cannot be added separately.' },
+        { text: `The answer should be x/${a * b}, the product of the bottoms`, right: false, why: `The bottom number is ${a * b} only after the tops are changed too. Write each fraction over ${a * b} first.` },
+        { text: 'Algebraic fractions cannot be added at all, only multiplied', right: false, why: 'They can, once they have a common denominator.' },
       ],
       hints: ['Think about 1/2 + 1/3. Do you add the bottoms?', 'Change both fractions to the same denominator, then add the tops.'],
       steps: [`Common denominator of ${a} and ${b}: ${a * b}.`, `x/${a} + x/${b} = ${b}x/${a * b} + ${a}x/${a * b} = ${a + b}x/${a * b}.`],
@@ -698,7 +698,7 @@ export const FAMILIES = [
   fam({ id: 'g8.subst.sign-why', skill: 'G8_EXPAND_BRACKETS', outcome: 'G8.EXPR.c', rung: 2, form: 'why',
     draw: () => { const c = randInt(5, 20), r = randInt(2, 6), s = randInt(2, 5); return { c, r, s, p: person() }; },
     make: ({ c, r, s, p }) => ({
-      question: `${p.name} substitutes x = −${s} into ${c} − ${r}x. Which working is right?`,
+      question: `${p.name} substitutes into ${c} − ${r}x. Here x = −${s}. Which working is right?`,
       options: [
         { text: `${c} − ${r} × (−${s}) = ${c} + ${r * s}. Taking away a negative adds`, right: true },
         { text: `${c} − ${r} × ${s} = ${neg(c - r * s)}. The minus sign of x is not needed`, right: false, why: 'x is −' + s + ', not ' + s + '. The minus sign must stay.' },
@@ -820,9 +820,9 @@ export const FAMILIES = [
     make: ({ a, b1, b2, c1, c2, p }) => ({
       question: `To solve ${a}x + ${b1 === 1 ? '' : b1}y = ${c1} and ${a}x + ${b2}y = ${c2}, ${p.name} subtracts one equation from the other. Why does that help?`,
       options: [
-        { text: 'The x terms are the same, so they cancel and leave an equation with y only', right: true },
-        { text: 'It makes the numbers smaller', right: false, why: 'Smaller numbers are not the aim. The aim is to remove one unknown.' },
-        { text: 'It gives the value of x straight away', right: false, why: 'The x terms disappear, so you find y first and then x.' },
+        { text: 'The x terms are the same, so they cancel out', right: true },
+        { text: 'It makes all the numbers in the equations smaller', right: false, why: 'Smaller numbers are not the aim. The aim is to remove one unknown.' },
+        { text: 'It gives the value of x straight away, in one step', right: false, why: 'The x terms disappear, so you find y first and then x.' },
         { text: 'Subtracting is always the way to solve two equations', right: false, why: 'Sometimes you add, when the terms are opposites. The aim is to cancel one unknown.' },
       ],
       hints: ['Look at the numbers in front of x in the two equations.', 'What happens to terms that are the same when you subtract?'],

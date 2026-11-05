@@ -40,11 +40,27 @@ export const round = (v, dp = 0) => num(Math.round((v + Number.EPSILON * Math.si
 // makes, so it is dropped unless the family is about negative numbers.
 const wrongList = (wrong, answer, negativesFair) => (wrong || [])
   .filter(([when]) => negativesFair || typeof when !== 'number' || when >= 0)
-  .map(([when, feedback]) => ({ when: typeof when === 'number' ? fmtNum(when) : String(when), feedback }))
+  .map(([when, feedback]) => ({ when: typeof when === 'number' ? fmtNum(round(when, 3)) : String(when), feedback }))
   .filter(m => m.when !== String(answer));
 
+// Numbers change on every draw, so the grammar around them has to change too:
+// "1 tonne", not "1 tonnes"; "an 8 litre jug", "an open circle". One place, for
+// every family, rather than a condition in each.
+const SINGULAR = { tonnes: 'tonne', kilograms: 'kilogram', kilometres: 'kilometre', metres: 'metre', litres: 'litre', hours: 'hour', minutes: 'minute', seconds: 'second', days: 'day', weeks: 'week', months: 'month', years: 'year', packets: 'packet', bags: 'bag', bottles: 'bottle', tickets: 'ticket', boxes: 'box', cubes: 'cube', pieces: 'piece', learners: 'learner', mangoes: 'mango', oranges: 'orange', eggs: 'egg', sweets: 'sweet', books: 'book', pens: 'pen', pencils: 'pencil', children: 'child', people: 'person', rows: 'row', columns: 'column', sides: 'side', cows: 'cow', goats: 'goat', hens: 'hen', parts: 'part', layers: 'layer', trees: 'tree', sacks: 'sack', tins: 'tin', workers: 'worker', shillings: 'shilling' };
+const ONE_PLURAL = new RegExp(`(^|[^\\d.,/])1 (${Object.keys(SINGULAR).join('|')})\\b`, 'g');
+export const polish = (t) => t
+  .replace(ONE_PLURAL, (_, b, w) => `${b}1 ${SINGULAR[w]}`)
+  .replace(/\b([Aa]) (open|oval|octagon|exercise|orange|egg|hour|empty|old|acre|apple|8|11|18|8\d)\b/g, '$1n $2');
+const polishAll = (v) => {
+  if (typeof v === 'string') return polish(v);
+  if (Array.isArray(v)) return v.map(polishAll);
+  if (v && typeof v === 'object') return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, typeof x === 'function' ? x : polishAll(x)]));
+  return v;
+};
+
 // Turn one draw's make() output into the engine's problem object.
-export function toProblem(def, d) {
+export const toProblem = (def, d) => polishAll(buildProblem(def, d));
+function buildProblem(def, d) {
   const m = def.make(d);
   const base = {
     type: `family-${def.form}`,

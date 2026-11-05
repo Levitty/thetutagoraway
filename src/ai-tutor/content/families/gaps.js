@@ -30,7 +30,7 @@ export const FAMILIES = [
     make: ({ each, n, p }) => ({
       question: `${p.name} shares ${round(each * n, 2)} litres of milk equally into ${n} bottles. How many litres go into each bottle?`,
       answer: each,
-      wrong: [[round(each * n * n, 2), 'Sharing makes each amount smaller, so divide.'], [round((each * n) - n, 2), 'Sharing equally is a division, not taking away.'], [round(each * 10, 2), 'Check the decimal point in your answer.']],
+      wrong: [[round(each * n * n, 2), 'Sharing makes each amount smaller, so divide.'], [round(each * n, 2), 'That is the whole amount of milk. Share it among the bottles.'], [round(each * 10, 2), 'Check the decimal point in your answer.'], [round(each / 10, 3), 'Check the decimal point in your answer.']],
       hints: ['Share equally means divide.', 'Keep the decimal point in line as you divide.'],
       steps: [`Total: ${round(each * n, 2)} litres, into ${n} bottles.`, `${round(each * n, 2)} ÷ ${n} = ${each} litres.`],
     }),
@@ -39,7 +39,7 @@ export const FAMILIES = [
     draw: () => { const s = pick([0.5, 0.25, 0.2]), k = randInt(3, 9); return { s, k }; },
     make: ({ s, k }) => ({
       question: `To divide ${k} by ${s}, a learner asks: how many lots of ${s} are in ${k}? Why is the answer bigger than ${k}?`, story: false,
-      options: [{ text: `${s} is less than 1, so more than ${k} lots of it fit into ${k}`, right: true }, { text: 'Dividing always gives a bigger number', right: false, why: 'Dividing by a number greater than 1 gives a smaller answer.' }, { text: `The point must be moved to make ${k} bigger first`, right: false, why: 'Moving the point on its own changes the value. Think about how many lots fit.' }, { text: 'It is a mistake: the answer must be smaller', right: false, why: 'That is true only when dividing by more than 1.' }],
+      options: [{ text: `${s} is less than 1, so more than ${k} lots fit`, right: true }, { text: 'Dividing always gives a bigger number, whatever we divide by', right: false, why: 'Dividing by a number greater than 1 gives a smaller answer.' }, { text: `The point must be moved to make ${k} bigger first`, right: false, why: 'Moving the point on its own changes the value. Think about how many lots fit.' }, { text: `It is a mistake, because the answer must be smaller than ${k}`, right: false, why: 'That is true only when dividing by more than 1.' }],
       hints: [`How many lots of ${s} make 1?`, `Then how many make ${k}?`],
       steps: [`${s} goes into 1 exactly ${round(1 / s, 0)} times.`, `So ${s} goes into ${k} exactly ${round(k / s, 0)} times, which is more than ${k}.`],
     }) }),
@@ -57,7 +57,7 @@ export const FAMILIES = [
     draw: () => ({ a: randInt(3, 15), r: randInt(4, 20) }),
     make: ({ a, r }) => ({
       question: `To solve x + ${a} = ${a + r}, a learner takes ${a} from both sides. Why must it come off both sides?`, story: false,
-      options: [{ text: 'The two sides are equal, and doing the same to both keeps them equal', right: true }, { text: `Because ${a} is the bigger number`, right: false, why: 'The size of the number is not the reason.' }, { text: 'Because x must always be on the left', right: false, why: 'x can be on either side.' }, { text: 'So that the answer comes out even', right: false, why: 'The answer can be odd or even.' }],
+      options: [{ text: 'Doing the same to both sides keeps them equal', right: true }, { text: `Because ${a} is the bigger number in the equation`, right: false, why: 'The size of the number is not the reason.' }, { text: 'Because x must always stay on the left of the equals sign', right: false, why: 'x can be on either side.' }, { text: 'So that the answer always comes out as an even number', right: false, why: 'The answer can be odd or even.' }],
       hints: ['Think of the equals sign as a balance.', 'What keeps a balance level?'],
       steps: ['An equation is like a level balance.', 'Taking the same from both sides keeps it level.'],
     }) }),
@@ -97,7 +97,7 @@ export const FAMILIES = [
     make: ({ n, m, r, p }) => {
       const up = r >= 500000, right = (up ? m + 1 : m) * 1000000, wrong = (up ? m : m + 1) * 1000000;
       return { question: `A county's budget is ${sh(n)}. ${p.name} rounds it to the nearest million as ${sh(wrong)}. Why is this wrong?`,
-        options: [{ text: up ? `The next digit is 5 or more, so it rounds up to ${commas(right)}` : `The next digit is less than 5, so it rounds down to ${commas(right)}`, right: true }, { text: 'Numbers are always rounded up', right: false, why: 'Rounding depends on the next digit.' }, { text: 'Only the last digit is looked at', right: false, why: 'Look at the digit just after the place you are rounding to.' }, { text: 'Money cannot be rounded', right: false, why: 'Large amounts are often rounded in reports.' }],
+        options: [{ text: up ? 'The next digit is 5 or more, so it rounds up' : 'The next digit is below 5, so it rounds down', right: true }, { text: 'Numbers are always rounded up to the next million', right: false, why: 'Rounding depends on the next digit.' }, { text: 'Only the very last digit of the number is looked at', right: false, why: 'Look at the digit just after the place you are rounding to.' }, { text: 'Money amounts cannot be rounded to the nearest million', right: false, why: 'Large amounts are often rounded in reports.' }],
         hints: ['Find the millions digit.', 'Look at the digit straight after it.'],
         steps: [`The digit after the millions is ${Math.floor(r / 100000)}.`, `So ${commas(n)} rounds to ${commas(right)}.`] };
     } }),
@@ -115,10 +115,45 @@ export const FAMILIES = [
     draw: () => { const a = randInt(50, 130); return a === 90 ? null : { a, p: person() }; },
     make: ({ a, p }) => ({
       question: `${p.name} marks a co-interior pair of angles between parallel lines as ${a}° and ${180 - a}°. Which fact supports this?`, story: false,
-      options: [{ text: 'Co-interior angles between parallel lines add up to 180°', right: true }, { text: 'Co-interior angles are equal', right: false, why: 'Alternate and corresponding angles are equal. Co-interior angles are not.' }, { text: 'All angles on parallel lines add up to 90°', right: false, why: 'Angles at a right angle add to 90°. These lie between parallel lines.' }, { text: 'Angles at a point add up to 360°', right: false, why: 'That is true, but these two angles do not meet at one point.' }],
+      options: [{ text: 'Co-interior angles between parallel lines add up to 180°', right: true }, { text: 'Co-interior angles between parallel lines are equal', right: false, why: 'Alternate and corresponding angles are equal. Co-interior angles are not.' }, { text: 'All angles between parallel lines add up to 90 degrees', right: false, why: 'Angles at a right angle add to 90°. These lie between parallel lines.' }, { text: 'Angles around a point add up to 360°, so these do too', right: false, why: 'That is true, but these two angles do not meet at one point.' }],
       hints: ['Co-interior angles sit on the same side, between the lines.', 'Do they look equal, or do they fill a straight line together?'],
       steps: [`Co-interior angles add up to 180°.`, `180 − ${a} = ${180 - a}°.`],
     }) }),
+  fam({ id: 'g5.length.cloth-table', skill: 'G5_LENGTH_OPS', outcome: 'G5.LENGTH.e', rung: 2, form: 'table',
+    draw: () => { const a = randInt(2, 5), b = randInt(1, 9) * 50, c = randInt(1, 3), d = randInt(1, 9) * 50; return b + d === 1000 ? null : { a, b, c, d }; },
+    make: ({ a, b, c, d }) => {
+      const t = (a + c) * 1000 + b + d;
+      return { question: 'The table shows two roads that a county repaired this week. Find the total length repaired, in metres.',
+        model: { type: 'table', data: { head: ['Road', 'Length'], rows: [{ label: 'Road A', value: `${a} km ${b} m` }, { label: 'Road B', value: `${c} km ${d} m` }] } },
+        answer: t,
+        wrong: [[a + c + b + d, 'Kilometres and metres are different units. Change the kilometres to metres first.'], [(a + c) * 100 + b + d, '1 km is 1,000 m, not 100 m.'], [(a + c) * 1000, 'The metres in the table have been left out.']],
+        hints: ['Change each length to metres.', '1 km = 1,000 m.'],
+        steps: [`Road A: ${commas(a * 1000 + b)} m. Road B: ${commas(c * 1000 + d)} m.`, `Total: ${commas(t)} m.`] };
+    },
+    check: ({ a, b, c, d }, v) => v - b - d === (a + c) * 1000 }),
+  fam({ id: 'g5.area.tile-floor', skill: 'G5_AREA_INTRO', outcome: 'G5.AREA.b', rung: 2, form: 'word',
+    draw: () => { const l = randInt(4, 12), w = randInt(3, 8), left = randInt(5, 15); return l === w || 2 * (l + w) === l * w ? null : { l, w, left, p: person() }; },
+    make: ({ l, w, left, p }) => ({
+      question: `${p.name} covers a classroom floor ${l} m long and ${w} m wide with square tiles of side 1 m. ${p.She} has ${l * w + left} tiles. How many tiles are left over?`,
+      answer: left,
+      wrong: [[l * w, 'That is the number of tiles used. Take it from what there was.'], [l + w + left, 'The tiles fill the area: length times width, not length plus width.'], [2 * (l + w), 'That is the distance around the floor. The tiles cover the area.']],
+      hints: ['How many 1 m squares fit on the floor?', 'Area = length × width.'],
+      steps: [`Tiles used: ${l} × ${w} = ${l * w}.`, `Left over: ${l * w + left} − ${l * w} = ${left}.`],
+    }),
+    check: ({ l, w, left }, a) => a + l * w === l * w + left }),
+  fam({ id: 'g5.whole.words-to-digits', skill: 'G5_PLACE_VALUE', outcome: 'G5.WHOLE.b', rung: 2, form: 'word',
+    draw: () => { const t = randInt(11, 90), h = randInt(1, 9); return t % 10 === 0 ? null : { t, h, p: person() }; },
+    make: ({ t, h, p }) => {
+      const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'], teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'], tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+      const words = t < 20 ? teens[t - 10] : `${tens[Math.floor(t / 10)]}-${ones[t % 10]}`;
+      const n = t * 1000 + h * 100;
+      return { question: `A notice says ${p.name}'s school raised ${words} thousand, ${ones[h]} hundred shillings in words. Write the amount in figures.`,
+        answer: n,
+        wrong: [[t * 100 + h * 10, 'Thousands come first and fill the thousands place, so the number needs more digits.'], [t * 1000 + h, `"${ones[h]} hundred" means ${h} hundreds, not ${h} ones.`], [t * 10000 + h * 100, 'Check the thousands: count the places again.']],
+        hints: ['Write the thousands first.', 'Then put the hundreds, with zeros in the empty places.'],
+        steps: [`${words} thousand = ${commas(t * 1000)}.`, `${ones[h]} hundred = ${h * 100}.`, `Together: ${commas(n)}.`] };
+    },
+    check: ({ t, h }, a) => a % 100 === 0 && Math.floor(a / 1000) === t && (a % 1000) / 100 === h }),
   fam({ id: 'g8.money.interest-table', skill: 'G9_COMPOUND_INTEREST', outcome: 'G8.MONEY.c', rung: 2, form: 'table',
     draw: () => { const P = pick([10000, 20000, 40000, 50000]), R = pick([5, 10, 20]); return { P, R }; },
     make: ({ P, R }) => {

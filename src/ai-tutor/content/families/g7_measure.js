@@ -156,7 +156,7 @@ export const FAMILIES = [
     make: ({ f, t, r, v, p }) => ({
       question: `${p.name} changes ${v} ${f} to ${t}. ${p.She} divides ${v} by ${r} and gets ${round(v / r, 4)} ${t}. Why is this wrong?`,
       options: [
-        { text: `A ${t} is smaller than a ${f}, so the same length needs a bigger number: multiply by ${commas(r)}`, right: true },
+        { text: `A ${t} is smaller than a ${f}, so multiply by ${commas(r)}`, right: true },
         { text: 'The number should stay the same, because only the unit name changes', right: false, why: 'The unit changes the size of one step, so the number must change too.' },
         { text: `${p.She} should divide, but by 10 every time`, right: false, why: 'The number of small units in a big unit depends on the two units. It is not always 10.' },
         { text: `Dividing is right, because a ${t} is bigger than a ${f}`, right: false, why: `Compare the units again. A ${f} is the longer one.` },
@@ -178,11 +178,11 @@ export const FAMILIES = [
         steps: [`${n} Hm = ${commas(m)} m.`, `${commas(m)} m = ${commas(m)} × 100 = ${commas(good)} cm.`] };
     } }),
   fam({ id: 'g7.length.rope-left', skill: 'G7_LENGTH_CONV', outcome: 'G7.LENGTH.b', rung: 2, form: 'word',
-    draw: () => { const n = randInt(3, 8), pc = pick([25, 40, 50, 60, 75, 80]), R = randInt(8, 20); const left = R - (n * pc) / 100; return Number.isInteger(left * 2) && left > 0 && uniq(left, R - n * pc, R * 100 - n * pc, R - pc) ? { n, pc, R, p: person() } : null; },
+    draw: () => { const n = randInt(3, 8), pc = pick([25, 40, 50, 60, 75, 80]), R = randInt(8, 20); const left = R - (n * pc) / 100; return Number.isInteger(left * 2) && left > 0 && uniq(left, R * 100 - n * pc, R - pc / 100, R + (n * pc) / 100, (n * pc) / 100) ? { n, pc, R, p: person() } : null; },
     make: ({ n, pc, R, p }) => ({
       question: `${p.name} has a rope ${R} m long. ${p.She} cuts ${n} pieces, each ${pc} cm long, for a washing line. How many metres of rope are left?`,
       answer: R - (n * pc) / 100,
-      wrong: [[R - n * pc, 'The rope is in metres and the pieces are in centimetres. Change to one unit first.'], [R * 100 - n * pc, 'That is in centimetres. The question asks for metres.'], [R - pc, 'There are several pieces. Find the length of all the pieces together.']],
+      wrong: [[R * 100 - n * pc, 'That is in centimetres. The question asks for metres.'], [R - pc / 100, 'There are several pieces. Find the length of all the pieces together.'], [R + (n * pc) / 100, 'Cutting takes rope away, so subtract.'], [(n * pc) / 100, 'That is the rope that is cut. The question asks what is left.']],
       hints: ['Use one unit for everything.', `Total length of the ${n} pieces, then change it to metres.`],
       steps: [`${n} pieces × ${pc} cm = ${n * pc} cm = ${(n * pc) / 100} m.`, `Left: ${R} − ${(n * pc) / 100} = ${R - (n * pc) / 100} m.`],
     }),
@@ -388,7 +388,7 @@ export const FAMILIES = [
     make: ({ b, h, s, p }) => ({
       question: `A parallelogram has a base of ${b} cm, a slanting side of ${s} cm and a perpendicular height of ${h} cm. ${p.name} works out the area as ${b} × ${s}. Why is this wrong?`,
       options: [
-        { text: 'The parallelogram can be cut and moved to make a rectangle whose sides are the base and the perpendicular height', right: true },
+        { text: 'The shape can be moved to make a rectangle, base by height', right: true },
         { text: `The area should be half of ${b} × ${s}, as for a triangle`, right: false, why: 'A parallelogram is not half of anything here. A triangle has the half.' },
         { text: 'The slanting side is shorter than the height, so it gives too small an area', right: false, why: 'The slanting side is longer than the height, and that is why the answer is too big.' },
         { text: 'The area of a parallelogram is found by adding the sides', right: false, why: 'Adding the sides gives the perimeter.' },
@@ -443,9 +443,9 @@ export const FAMILIES = [
     make: ({ r, p }) => ({
       question: `${p.name} has a round mat of radius ${r} cm and a bigger round mat of radius ${2 * r} cm. ${p.She} says the bigger mat has twice the area. Why is ${p.she} wrong?`,
       options: [
-        { text: 'The area uses the radius squared, so doubling the radius makes the area 4 times as big', right: true },
+        { text: 'The area uses the radius squared, so it is 4 times as big', right: true },
         { text: 'The area of a circle does not depend on the radius', right: false, why: 'A bigger radius gives a bigger area.' },
-        { text: 'The area becomes 3 times as big because of π', right: false, why: 'π is the same for both mats. It does not change the multiplying.' },
+        { text: 'The area becomes 3 times as big, because π is about 3', right: false, why: 'π is the same for both mats. It does not change the multiplying.' },
         { text: 'Doubling the radius doubles the distance round, so the area doubles too', right: false, why: 'The distance round does double, but area grows faster: it uses r × r.' },
       ],
       hints: ['Write the area of each mat with the rule π × r × r.', 'Compare r × r for both mats.'],
@@ -770,7 +770,7 @@ export const FAMILIES = [
     make: ({ v, kmh, p }) => ({
       question: `${p.name} changes ${kmh} km/h to m/s. ${p.She} multiplies by 1,000 and divides by 60. Why is this wrong?`,
       options: [
-        { text: 'The kilometres change to metres correctly, but an hour has 3,600 seconds, not 60', right: true },
+        { text: 'An hour has 3,600 seconds, not 60 seconds', right: true },
         { text: 'A kilometre is 100 metres, not 1,000', right: false, why: 'A kilometre is 1,000 metres. That part is correct.' },
         { text: 'You should add 1,000 and 60, not multiply and divide', right: false, why: 'Adding units does not change them. You multiply by the size of the new small unit and divide by the bigger one.' },
         { text: 'You do not divide by anything. You only multiply by 1,000', right: false, why: 'The time changes from hours to seconds as well, so you must divide by the seconds in one hour.' },
@@ -850,7 +850,7 @@ export const FAMILIES = [
   fam({ id: 'g7.money.loss-fault', skill: 'G7_MONEY', outcome: 'G7.MONEY.a', rung: 1, form: 'word',
     draw: () => { const item = pick(['radio', 'bicycle', 'mobile phone', 'sewing machine', 'television']); const c = price(item), l = pick([100, 200, 300, 500, 800]); return c > l * 3 ? { item, c, l, p: person() } : null; },
     make: ({ item, c, l, p }) => ({
-      question: `${p.name} buys a ${item} for ${sh(c)}. It has a fault, so ${p.she} sells it for ${sh(c - l)}. How much is the loss, in shillings?`,
+      question: `A ${item} has a fault. ${p.name} paid ${sh(c)} for it and can only get ${sh(c - l)} now. What is the loss, in shillings?`,
       answer: l,
       wrong: [[c, 'That is the buying price. The loss is how much less the item sold for.'], [c - l, 'That is the selling price. Compare it with the buying price.'], [c + (c - l), 'A loss is a difference, so take one price from the other.']],
       hints: ['A loss happens when the selling price is less than the buying price.', 'Loss = buying price − selling price.'],

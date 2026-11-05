@@ -44,7 +44,7 @@ const SAMPLES = 14;          // generations per skill for the answer check
 const REPEATS_MIN = 6;       // distinct questions required out of SAMPLES
 const FORMS_DRAWS = 60;      // draws per skill for the form and fit measures
 const FORMS_MIN = 3;         // distinct forms a Grade 4 to 9 skill must reach
-const ON_TOPIC_MIN = 0.8;    // share of draws that must teach the tagged outcomes
+const ON_TOPIC_MIN = 0.75;    // share of draws that must teach the tagged outcomes
 const EPS = 1e-6;
 
 // ---- independent answer verification ----

@@ -180,7 +180,7 @@ export const FAMILIES = [
     make: ({ shape, k }) => ({
       question: `Why do the four angles of any ${shape} add up to 360°?`,
       options: rot([
-        { text: 'A diagonal cuts it into two triangles, and each triangle has angles that add up to 180°', right: true },
+        { text: 'A diagonal cuts it into two triangles of 180° each', right: true },
         { text: 'It has four corners, and every corner is 90°', right: false, why: 'Only a rectangle or square has four right angles. The corners of this shape can be different sizes.' },
         { text: 'All four corners meet at one point, and angles at a point add up to 360°', right: false, why: 'The corners are at four different places. The 360° at a point is about angles around one point.' },
         { text: 'A diagonal always cuts it into two triangles that are exactly the same', right: false, why: 'The two triangles need not be equal. What matters is that there are two triangles.' },
@@ -207,7 +207,7 @@ export const FAMILIES = [
     make: ({ a, k }) => ({
       question: `In parallelogram ABCD, angle A is ${a}°. Which statement about angle B is correct?`,
       options: rot([
-        { text: `Angle B is ${180 - a}°, because AD is parallel to BC, so angles A and B are co-interior and add up to 180°`, right: true },
+        { text: `Angle B is ${180 - a}°, because A and B are co-interior angles`, right: true },
         { text: `Angle B is ${a}°, because opposite angles of a parallelogram are equal`, right: false, why: 'Opposite angles are equal, but B is next to A. The angle opposite A is C.' },
         { text: `Angle B is ${360 - a}°, because angles at a point add up to 360°`, right: false, why: 'Angles A and B are not all the way round one point. They sit between parallel sides.' },
         { text: 'Angle B is 90°, because a parallelogram has right angles', right: false, why: 'Only a rectangle has right angles. A parallelogram can be slanted.' },
@@ -283,8 +283,8 @@ export const FAMILIES = [
       return {
         question: `${p.name} says each interior angle of a regular ${shape} is ${ext}°, because 360 ÷ ${n} = ${ext}. Why is that wrong?`,
         options: rot([
-          { text: `360 ÷ ${n} gives the exterior angle. The interior angle is 180° − ${ext}° = ${int}°`, right: true },
-          { text: `The interior angle should be 180° ÷ ${n}`, right: false, why: '180° is the angle sum of one triangle only. It is not shared among the corners.' },
+          { text: `360 ÷ ${n} gives the exterior angle, not the interior angle`, right: true },
+          { text: `The interior angle should be 180° ÷ ${n}, not 360° ÷ ${n}`, right: false, why: '180° is the angle sum of one triangle only. It is not shared among the corners.' },
           { text: `Nothing is wrong, because angles at a point add up to 360°`, right: false, why: 'The interior angles are at different corners, not around one point.' },
           { text: `The sum of the interior angles must be divided by ${n - 2}`, right: false, why: 'The sum is found from the number of triangles, and then shared among the corners, one angle for each corner.' },
         ], k),
@@ -368,13 +368,13 @@ export const FAMILIES = [
     },
     make: ({ sides, L, s1, s2, possible, k, p }) => {
       const opts = possible ? [
-        { text: `Yes. ${s1} + ${s2} = ${s1 + s2}, which is more than ${L}, so the two arcs meet`, right: true },
+        { text: `Yes. ${s1} + ${s2} = ${s1 + s2}, which is more than ${L}`, right: true },
         { text: 'No. The three sides are all different lengths', right: false, why: 'A triangle can have three different sides. What matters is whether the two shorter sides together are longer than the longest side.' },
         { text: `No. ${L} cm is longer than each of the other two sides`, right: false, why: 'The longest side is always longer than each of the others. The test is whether the two shorter sides together beat it.' },
         { text: 'Yes. Any three lengths make a triangle', right: false, why: 'Not any three. If the two shorter sides together are too short, the arcs never meet.' },
       ] : [
-        { text: `No. ${s1} + ${s2} = ${s1 + s2}, which is less than ${L}, so the two arcs cannot meet`, right: true },
-        { text: 'Yes. Any three lengths make a triangle', right: false, why: 'Not any three. If the two shorter sides together are too short, the arcs never meet.' },
+        { text: `No. ${s1} + ${s2} = ${s1 + s2}, which is less than ${L}`, right: true },
+        { text: 'Yes. Any three lengths at all will make a triangle', right: false, why: 'Not any three. If the two shorter sides together are too short, the arcs never meet.' },
         { text: `Yes. ${L} cm is the longest side, so it can be the base`, right: false, why: 'Any side can be the base. The problem is that the two shorter sides together are too short to reach each other.' },
         { text: 'No. The three sides are all different lengths', right: false, why: 'A triangle can have three different sides. Check whether the two shorter sides together are longer than the longest.' },
       ];
@@ -615,7 +615,7 @@ export const FAMILIES = [
       return {
         question: `School A has ${tA} learners and school B has ${tB}. Each school draws a pie chart. In both charts the sector for learners who ${what} is ${deg}°. ${p.name} says the same number of learners ${what} in both schools. Why is ${p.she} wrong?`,
         options: rot([
-          { text: `A sector shows a share of its own total. ${deg}° of a bigger total is more learners`, right: true },
+          { text: 'A sector shows a share of its own total, not a count', right: true },
           { text: 'Equal angles always mean equal numbers of learners', right: false, why: 'An angle shows a share of the whole. The same share of different totals gives different numbers.' },
           { text: 'The school with more learners must have the bigger angle', right: false, why: 'A bigger school does not need a bigger sector. The sector shows a share, not a count.' },
           { text: 'The angles should have been added together first', right: false, why: 'Adding the two angles does not tell you how many learners are in each school.' },

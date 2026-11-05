@@ -79,9 +79,9 @@ const INTEGERS = [
   fam({ id: 'g9.int.why-order', skill: 'G9_INTEGERS_COMBINED', outcome: 'G9.INTEGERS.b', rung: 2, form: 'why',
     draw: () => { const a = randInt(3, 9), b = randInt(2, 6), c = randInt(2, 5); return a !== b && uniq(a + b * c, (a - b) * -c) ? { a, b, c, who: person() } : null; },
     make: ({ a, b, c, who }) => ({
-      question: `${who.name} worked out ${a} − ${b} × (−${c}) and got ${fm((a - b) * -c)}. ${who.She} did ${a} − ${b} = ${fm(a - b)} first. Then ${who.she} did ${fm(a - b)} × (−${c}). Why is this wrong?`,
+      question: `${who.name} worked out ${a} − ${b} × (−${c}) and got ${fm((a - b) * -c)}. ${who.She} did ${a} − ${b} first, which is ${fm(a - b)}. Then ${who.she} did ${fm(a - b)} × (−${c}). Why is this wrong?`,
       options: [
-        { text: `Multiplication is done before subtraction. ${b} × (−${c}) = −${b * c} first, so the answer is ${a} − (−${b * c}) = ${a + b * c}`, right: true },
+        { text: `Multiplication comes before subtraction: ${a} − (−${b * c}) = ${a + b * c}`, right: true },
         { text: 'Nothing is wrong. Operations are always done from left to right', right: false, why: 'Left to right applies only to operations of the same rank. Multiplication ranks above subtraction.' },
         { text: `The sign of the last answer is wrong. A negative number times a positive number is positive`, right: false, why: 'A negative number times a positive number is negative. The problem is the order of the steps.' },
         { text: 'The negative sign means the subtraction must be done last, as an addition of all the numbers', right: false, why: 'A negative sign does not change the order of operations.' },
@@ -372,7 +372,7 @@ const INDICES = [
     make: ({ b, m, n, who }) => ({
       question: `${who.name} writes ${b}^${m} × ${b}^${n} = ${b * b}^${m + n}. Which law of indices shows that this is wrong?`,
       options: [
-        { text: `When powers of the same base are multiplied, the base stays the same and the indices are added: ${b}^${m + n}`, right: true },
+        { text: `The base stays ${b} and the indices are added: ${b}^${m + n}`, right: true },
         { text: `The indices must be multiplied, giving ${b}^${m * n}`, right: false, why: 'Multiplying the indices is for a power of a power, such as (b^m)^n.' },
         { text: `The bases must be added, giving ${2 * b}^${m + n}`, right: false, why: 'Bases are never added in the laws of indices.' },
         { text: `Nothing is wrong: the two bases multiply, so the base becomes ${b * b}`, right: false, why: 'When the bases are the same, they are not multiplied. They stay as they are.' },
@@ -693,10 +693,10 @@ const MATRICES = [
       return r2 === r && c2 === c && !same ? null : (r * c === r2 * c2 || same) ? { r, c, r2, c2, same } : null;
     },
     make: ({ r, c, r2, c2, same }) => {
-      const right = same ? `Yes. Both matrices have order ${ord(r, c)}, the same order, so matching elements are added` : `No. To be added, matrices must have the same order, and ${ord(r, c)} is not the same as ${ord(r2, c2)}`;
+      const right = same ? `Yes. Both matrices have order ${ord(r, c)}, so they can be added` : `No. ${ord(r, c)} is not the same order as ${ord(r2, c2)}`;
       const wrong = same
-        ? [{ text: `No. Only square matrices can be added`, why: 'Matrices of any order can be added, as long as they have the same order.' }, { text: `No. The matrices must be multiplied, not added`, why: 'The question is about adding. Matching elements are added when the orders are equal.' }, { text: `Yes, but only if the elements are all positive`, why: 'The signs of the elements do not matter for adding.' }]
-        : [{ text: `Yes. Both matrices have ${r * c} elements`, why: 'The same number of elements is not enough. The rows and columns must also match.' }, { text: `Yes. The number of columns of A equals the number of rows of B`, why: 'That condition is for multiplying matrices. For adding, the orders must be the same.' }, { text: `No. Only square matrices can be added`, why: 'Matrices of any order can be added, as long as they have the same order.' }];
+        ? [{ text: `No. Only square matrices can ever be added together`, why: 'Matrices of any order can be added, as long as they have the same order.' }, { text: `No. The matrices must be multiplied, not added`, why: 'The question is about adding. Matching elements are added when the orders are equal.' }, { text: `Yes, but only if the elements are all positive`, why: 'The signs of the elements do not matter for adding.' }]
+        : [{ text: `Yes. Both matrices have ${r * c} elements`, why: 'The same number of elements is not enough. The rows and columns must also match.' }, { text: `Yes. The number of columns of A equals the number of rows of B`, why: 'That condition is for multiplying matrices. For adding, the orders must be the same.' }, { text: `No. Only square matrices can ever be added together`, why: 'Matrices of any order can be added, as long as they have the same order.' }];
       return { question: `Matrix A has order ${ord(r, c)} and matrix B has order ${ord(r2, c2)}. Which statement about adding A and B is correct?`,
         options: [{ text: right, right: true }, ...wrong.map(w => ({ text: w.text, right: false, why: w.why }))],
         hints: ['What must be true about the rows and columns of two matrices before you add matching elements?', `Compare ${ord(r, c)} with ${ord(r2, c2)}.`],
@@ -884,7 +884,7 @@ const LINES = [
       ];
       const fix = { add: 'To find c, take m × x away from y. Step 2 added them.', sign: 'In Step 3, the value of c from Step 2 was written with the wrong sign in the equation.', product: 'm × x means multiply. Step 1 added instead.' }[type];
       const c = y1 - m * x1;
-      return { question: `${who.name} found the equation of the line with gradient ${m} that passes through (${x1}, ${y1}). One step is wrong. Which one?`, working, fix,
+      return { question: `${who.name} found the equation of the line through (${x1}, ${y1}) with gradient ${m}. One step is wrong. Which one?`, working, fix,
         steps: [`m × x = ${br(m)} × ${x1} = ${fm(m * x1)}.`, `c = ${y1} − (${fm(m * x1)}) = ${fm(c)}, so the equation is ${eq(m, c)}.`] };
     } }),
   fam({ id: 'g9.line.steps-rearrange', skill: 'G8_EQUATION_OF_LINE', outcome: 'G9.LINE.e', rung: 2, form: 'steps',
@@ -979,7 +979,7 @@ const INEQ = [
     make: ({ m, k, v, sign, who }) => ({
       question: `${who.name} solves −${m}x ${sign} ${k} and writes x ${FLIP[sign]} −${v}. Why does the sign change from ${sign} to ${FLIP[sign]}?`,
       options: [
-        { text: `Dividing both sides by a negative number reverses the inequality. For example, 2 < 5 but −2 > −5`, right: true },
+        { text: `Dividing both sides by a negative reverses the inequality`, right: true },
         { text: `The sign changes every time you divide, whatever the number`, right: false, why: 'Dividing by a positive number keeps the sign. For example, 6 < 9 and 2 < 3.' },
         { text: `The sign changes because ${k} is a positive number`, right: false, why: 'The sign of the number on the right does not decide this. It is the number you divide by.' },
         { text: `The sign changes because x is on the left side`, right: false, why: 'Where x sits does not matter. It is the negative number you divide by.' },
@@ -1004,7 +1004,7 @@ const INEQ = [
     draw: () => ({ v: randInt(-4, 9), sign: pick(['<', '>', '≤', '≥']), who: person() }),
     make: ({ v, sign, who }) => {
       const inc = sign === '≤' || sign === '≥', left = sign === '<' || sign === '≤';
-      return { question: `To graph x ${sign} ${fm(v)}, ${who.name} draws ${inc ? 'an open' : 'a solid'} circle at ${fm(v)} and an arrow pointing ${left ? 'left' : 'right'}. A teacher marks the circle wrong. Why?`,
+      return { question: `To graph x ${sign} ${fm(v)}, ${who.name} draws ${inc ? 'an open' : 'a solid'} circle and an arrow pointing ${left ? 'left' : 'right'}. The circle is at ${fm(v)}. A teacher marks the circle wrong. Why?`,
         options: [
           { text: inc ? `x ${sign} ${fm(v)} includes ${fm(v)}, so the circle must be solid` : `x ${sign} ${fm(v)} does not include ${fm(v)}, so the circle must be open`, right: true },
           { text: `The circle is right, but the shading should go to the ${left ? 'right' : 'left'}`, right: false, why: `The shading to the ${left ? 'left' : 'right'} is correct for ${sign === '<' || sign === '≤' ? 'smaller' : 'bigger'} numbers. The circle is the problem.` },
@@ -1037,9 +1037,9 @@ const INEQ = [
       const inc = sign === '≥' || sign === '≤', rhs = `${m === 1 ? '' : m}x + ${c}`;
       return { question: `${who.name} shades the region y ${sign} ${rhs} and draws its boundary line as a ${inc ? 'solid' : 'dashed'} line. Why is this correct?`,
         options: [
-          { text: inc ? `Points on the line satisfy y ${sign} ${rhs}, because y can be equal to ${rhs}, so the line is part of the region` : `Points on the line do not satisfy y ${sign} ${rhs}, because y must be ${sign === '>' ? 'greater' : 'less'}, never equal, so the line is not part of the region`, right: true },
-          { text: `${inc ? 'Solid' : 'Dashed'} lines are used when the gradient is ${m > 1 ? 'big' : 'small'}`, right: false, why: 'The gradient has nothing to do with it. The inequality sign decides.' },
-          { text: `A ${inc ? 'solid' : 'dashed'} line shows which side to shade`, right: false, why: 'The shading shows the side. The line style shows whether the boundary is included.' },
+          { text: inc ? 'The sign includes "equal to", so the line is in the region' : 'The sign leaves out "equal to", so the line is not in the region', right: true },
+          { text: `${inc ? 'Solid' : 'Dashed'} lines are used when the gradient is ${m > 1 ? 'big' : 'small'}, whatever the sign`, right: false, why: 'The gradient has nothing to do with it. The inequality sign decides.' },
+          { text: `A ${inc ? 'solid' : 'dashed'} line shows which side of the line to shade`, right: false, why: 'The shading shows the side. The line style shows whether the boundary is included.' },
           { text: `A ${inc ? 'solid' : 'dashed'} line is used when the line goes through the origin`, right: false, why: 'Where the line goes does not matter. The inequality sign decides.' },
         ],
         hints: ['Is a point on the line in the region?', 'Does the sign include "equal to"?'],

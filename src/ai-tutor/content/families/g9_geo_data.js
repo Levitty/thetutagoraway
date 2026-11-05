@@ -329,7 +329,7 @@ export const FAMILIES = [
     make: ({ a, b, g, r1, r2, p }) => ({
       question: `A photo is ${b} cm by ${a} cm. It is printed again at ${b + g} cm by ${a + g} cm. ${p.name} says the two photos are similar, because each side grew by ${g} cm. Why is ${p.she} wrong?`,
       options: [
-        { text: `The length is multiplied by ${r2} but the width by ${r1}, so the scale factors are not equal`, right: true },
+        { text: `The length is multiplied by ${r2} and the width by ${r1}`, right: true },
         { text: 'Similar shapes must have sides that are all equal', right: false, why: 'Similar shapes need equal scale factors, not equal sides. A rectangle can be similar to a larger rectangle.' },
         { text: 'A larger photo can never be similar to a smaller one', right: false, why: 'An enlargement of a shape is always similar to it.' },
         { text: 'Adding the same length to each side always gives a similar shape', right: false, why: 'Adding the same length changes the proportions. Similar shapes come from multiplying by the same factor.' },
@@ -706,7 +706,7 @@ export const FAMILIES = [
     make: ({ lo, a, b, k, p }) => {
       const m1 = lo + 5, m2 = lo + 15;
       const opts = [
-        { text: `Each midpoint counts once for every learner in its class, which gives a mean of ${m1 + b}`, right: true },
+        { text: 'Each midpoint counts once for every learner in its class', right: true },
         { text: 'The midpoint of a class is its lower limit, not its middle', right: false, why: 'The midpoint is the middle of the class, halfway between its limits.' },
         { text: 'The mean of grouped data is the midpoint of the middle class', right: false, why: 'That is closer to a median. The mean uses every learner.' },
         { text: 'The two midpoints should be added, not averaged', right: false, why: 'The mean is a total divided by a count, so adding alone cannot give a mean.' },
