@@ -36,7 +36,10 @@ export const commas = (v) => {
 // Round to dp places the way a child would, away from float noise.
 export const round = (v, dp = 0) => num(Math.round((v + Number.EPSILON * Math.sign(v)) * 10 ** dp) / 10 ** dp);
 
-const wrongList = (wrong, answer) => (wrong || [])
+// A negative option next to a question about sacks of sugar is no mistake a child
+// makes, so it is dropped unless the family is about negative numbers.
+const wrongList = (wrong, answer, negativesFair) => (wrong || [])
+  .filter(([when]) => negativesFair || typeof when !== 'number' || when >= 0)
   .map(([when, feedback]) => ({ when: typeof when === 'number' ? fmtNum(when) : String(when), feedback }))
   .filter(m => m.when !== String(answer));
 
@@ -65,7 +68,7 @@ export function toProblem(def, d) {
       accepts: accepts(fmtNum(q.answer), commas(q.answer), ...(q.accepts || [])),
       unit: q.unit || '',
       hint: q.hint || '',
-      mistakes: wrongList(q.wrong, fmtNum(q.answer)),
+      mistakes: wrongList(q.wrong, fmtNum(q.answer), def.allowNegative),
     }));
     const last = parts[parts.length - 1];
     return { ...base, instruction: 'Answer each part. Each part earns a mark.', parts, marks: parts.length,
@@ -96,7 +99,7 @@ export function toProblem(def, d) {
   return { ...base, instruction: m.instruction || 'Read carefully. Then answer the question.',
     answer,
     accepts: accepts(answer, ...(isNum ? [commas(m.answer)] : []), ...(m.accepts || [])),
-    misconceptions: wrongList(m.wrong, answer),
+    misconceptions: wrongList(m.wrong, answer, def.allowNegative),
     verify: isNum ? { kind: 'number', value: num(m.answer) } : { kind: 'text', value: answer },
     answerValue: isNum ? num(m.answer) : null,
     solution: { ...base.solution, answer } };

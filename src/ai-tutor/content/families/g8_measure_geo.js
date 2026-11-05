@@ -168,10 +168,10 @@ export const FAMILIES = [
   fam({ id: 'g8.area.path-round-field', skill: 'G8_AREA_COMPOSITE', outcome: 'G8.AREA.a', rung: 3, form: 'steps',
     draw: () => { const r = pick([14, 21, 28]), w = pick([7, 14]), R = r + w; return { r, w, R, A1: (22 * r * r) / 7, A2: (22 * R * R) / 7 }; },
     make: ({ r, w, R, A1, A2 }) => ({
-      question: `A round football field has a radius of ${r} m. A path ${w} m wide goes all the way round the outside of the field. Use π = 22/7.`,
+      question: `A round flower garden at a school has a radius of ${r} m. A path ${w} m wide goes all the way round the outside of the garden. Use π = 22/7.`,
       parts: [
-        { prompt: 'What is the area of the field, in m²?', answer: A1, unit: 'm²', hint: 'Area of a circle = π × radius × radius.', wrong: [[(44 * r) / 7, 'That is the distance round the field. Area is π × r × r.']] },
-        { prompt: 'The field and the path together make a bigger circle. What is its radius, in metres?', answer: R, unit: 'm', hint: 'The path is added all round the edge.', wrong: [[r + 2 * w, 'The path is added once to the radius, not twice.'], [w, 'That is the width of the path only.']] },
+        { prompt: 'What is the area of the garden, in m²?', answer: A1, unit: 'm²', hint: 'Area of a circle = π × radius × radius.', wrong: [[(44 * r) / 7, 'That is the distance round the field. Area is π × r × r.']] },
+        { prompt: 'The garden and the path together make a bigger circle. What is its radius, in metres?', answer: R, unit: 'm', hint: 'The path is added all round the edge.', wrong: [[r + 2 * w, 'The path is added once to the radius, not twice.'], [w, 'That is the width of the path only.']] },
         { prompt: 'What is the area of the path alone, in m²?', answer: A2 - A1, unit: 'm²', hint: 'Take the area of the field away from the area of the bigger circle.', wrong: [[(22 * w * w) / 7, 'That is the area of a circle as wide as the path. The path is a ring.'], [A2, 'That includes the field. Take the field away.']] },
       ],
       steps: [`Field: 22/7 × ${r} × ${r} = ${A1} m².`, `Bigger circle radius: ${r} + ${w} = ${R} m.`, `Bigger circle area: 22/7 × ${R} × ${R} = ${A2} m².`, `Path: ${A2} − ${A1} = ${A2 - A1} m².`],

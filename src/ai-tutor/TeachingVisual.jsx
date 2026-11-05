@@ -953,9 +953,16 @@ const LineGraph = ({ data }) => {
   const xMin = xTicks[0], xMax = xTicks[xTicks.length - 1], yMin = yTicks[0], yMax = yTicks[yTicks.length - 1];
   const X = (v) => left + ((v - xMin) / (xMax - xMin)) * (W - left - right);
   const Y = (v) => bottom - ((v - yMin) / (yMax - yMin)) * (bottom - top);
+  // Graph paper: faint lines fine enough that every plotted value sits on one,
+  // so a child can read a point that falls between the printed numbers.
+  const gcd = (a, b) => (b < 1e-9 ? a : gcd(b, a % b));
+  const fine = series.flat().reduce((g, p) => gcd(g, Math.abs(p.y - yMin)), yTicks[1] - yTicks[0]);
+  const minor = [];
+  if (fine > 1e-9 && (yMax - yMin) / fine <= 40) for (let v = yMin; v < yMax; v += fine) minor.push(v);
   return (
     <div className="w-full">
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Line graph">
+        {minor.map(v => <line key={`m${v}`} x1={left} y1={Y(v)} x2={W - right} y2={Y(v)} stroke="#f1f5f9" strokeWidth="1" />)}
         {yTicks.map(v => (
           <g key={`y${v}`}>
             <line x1={left} y1={Y(v)} x2={W - right} y2={Y(v)} stroke="#e2e8f0" strokeWidth="1" />

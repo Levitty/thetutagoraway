@@ -227,7 +227,7 @@ export const CORE_FAMILIES = [
     draw: () => { const item = pick(['hen', 'radio', 'bag of maize', 'sack of potatoes', 'goat']); const buy = price(item); const change = pick([-1, 1]) * pick([100, 150, 200, 250, 300, 500]); const sell = buy + change; return sell > 0 ? { item, buy, sell, p: person() } : null; },
     make: ({ item, buy, sell, p }) => {
       const gain = sell > buy;
-      return { question: `${p.name} buys a ${item} for ${sh(buy)} and sells it for ${sh(sell)}. What is the ${gain ? 'profit' : 'loss'}, in shillings?`,
+      return { question: `A ${item} is bought by ${p.name} at ${sh(buy)}. Later ${p.she} sells it at ${sh(sell)}. Find the ${gain ? 'profit' : 'loss'}, in shillings.`,
         answer: Math.abs(sell - buy),
         wrong: [[buy + sell, 'Adding gives the two prices together. Compare them: take the smaller from the bigger.'], [gain ? sell : buy, 'That is one of the prices. The question asks for the difference.'], [Math.abs(sell - buy) * 2, 'Check your subtraction: the difference is found only once.']],
         hints: ['Is the selling price more or less than the buying price?', 'The difference between the two prices is the profit or loss.'],
@@ -412,7 +412,7 @@ export const CORE_FAMILIES = [
     draw: () => { const m = randInt(2, 4), c = randInt(-3, 5); const x = pick([2, 3, 4]), v = [m + x + c, m * x, m * (x - 1) + c]; return c === 0 || new Set(v).size < 3 || v.includes(m * x + c) ? null : { m, c, x }; },
     make: ({ m, c, x }) => {
       const y = (t) => m * t + c, eq = `y = ${m}x ${c < 0 ? '−' : '+'} ${Math.abs(c)}`;
-      return { question: `Complete the table of values for ${eq}. What is y when x = ${x}?`, story: false,
+      return { question: `Here is part of a table for ${eq}. What goes in the empty box, where x = ${x}?`, story: false,
         model: { type: 'table', data: { head: ['x', 'y'], rows: [{ label: '0', value: String(y(0)) }, { label: '1', value: String(y(1)) }, { label: String(x), value: '?' }] } },
         answer: y(x),
         wrong: [[m + x + c, `${m}x means ${m} times x. Multiply before adding.`], [m * x, `You have not yet done the ${c < 0 ? '−' : '+'} ${Math.abs(c)}.`], [y(x - 1), 'That is the value for the x before it.']],

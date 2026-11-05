@@ -149,7 +149,7 @@ sub(5, N, 'Whole numbers', 'WHOLE', [
   ['g', 'Least common multiple', /LCM|lowest common|least common|multiple|same day|together again/i],
 ]);
 sub(5, N, 'Addition', 'ADD', [
-  ['a', 'Add up to 6-digit numbers with regrouping', /\d\s*\+\s*\d|add|sum|total|altogether|together/i],
+  ['a', 'Add up to 6-digit numbers with regrouping', /\d\s*\+\s*\d|add|sum|total|altogether|together|odd number plus|how many/i],
   ['c', 'Estimate a sum by rounding', /estimate|about how/i],
   ['d', 'Create patterns with addition', /pattern|next|sequence|rule/i],
 ]);
@@ -221,7 +221,7 @@ sub(5, D, 'Data representation', 'DATA', [
 
 // ---------------------------------------------------------------- Grade 6
 sub(6, N, 'Whole numbers', 'WHOLE', [
-  ['a', 'Place value to millions', /place value|total value|value of the digit|million/i],
+  ['a', 'Place value to millions', /place value|total value|value of the|digit|million/i],
   ['c', 'Read and write numbers in words', /in words|words|in figures/i],
   ['e', 'Round off', /round|nearest/i],
   ['f', 'Squares of whole numbers', /square|²|\^2/i],
@@ -575,7 +575,7 @@ sub(9, MS, 'Money', 'MONEY', [
   ['b', 'Convert currency', /currency|exchange|US\$|dollars?|euros?|pounds?|Ush|Tsh|shillings? (to|into)|buying rate|selling rate/i],
   ['c', 'Import and export duty', /import|export|duty|customs/i],
   ['d', 'Excise duty', /excise/i],
-  ['e', 'Value added tax', /\bVAT\b|value added|\bbill\b|hire purchase/i],
+  ['e', 'Value added tax', /\bVAT\b|value added|\bbill\b|hire purchase|\bPAYE\b|commission|\btax/i],
 ]);
 sub(9, MS, 'Approximations and errors', 'APPROX', [
   ['a', 'Approximate quantities', /approximat|estimate|round|significant|decimal place|nearest/i],

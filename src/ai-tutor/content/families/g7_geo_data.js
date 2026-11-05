@@ -91,7 +91,7 @@ export const FAMILIES = [
       };
       const opts = ['alt', 'corr', 'coint', 'vert'].map(t => ({ text: `${R[t].val}°, because ${R[t].reason}`, right: t === type, why: t === type ? undefined : wrongWhy[t] }));
       return {
-        question: `In a diagram, line AB is parallel to line CD. The transversal EF crosses both. ${R[type].where} What is angle x, and what is the reason?`,
+        question: `Line AB is parallel to line CD. The transversal EF crosses both. ${R[type].where} What is angle x, and what is the reason?`,
         options: rot(opts, k),
         hints: ['Say where angle x is: which side of the transversal, and between or outside the parallel lines.', 'Match that position to one of the angle pairs: alternate, corresponding, co-interior.'],
         steps: [`Position of x compared with the ${a}° angle: ${type === 'alt' ? 'opposite sides, between the lines, so alternate' : type === 'corr' ? 'matching places at the two crossings, so corresponding' : 'same side, between the lines, so co-interior'}.`, `So x = ${R[type].val}°, because ${R[type].reason}.`],

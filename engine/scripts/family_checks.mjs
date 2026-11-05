@@ -37,7 +37,7 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
   if (def.core !== true && def.reviewed !== true && def.reviewed !== false) fail('reviewed must be true or false');
   if (typeof def.draw !== 'function' || typeof def.make !== 'function') { fail('needs draw() and make()'); return out; }
 
-  const seen = new Set(); let thinWrong = 0, n = 0, placeOnly = 0, weakOption = 0;
+  const seen = new Set(); let thinWrong = 0, n = 0, placeOnly = 0, weakOption = 0, longestRight = 0;
   for (let i = 0; i < draws; i++) {
     let got;
     try { got = drawFamily(def); } catch (e) { fail(`threw: ${e.message}`); return out; }
@@ -53,6 +53,7 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
     if (EMOJI.test(sentenceText)) fail('emoji in child-facing text');
     if (AMERICAN.test(sentenceText)) fail(`American spelling: "${sentenceText.match(AMERICAN)[0]}"`);
     if (FLOAT.test(sentenceText)) fail(`float noise: "${sentenceText.match(FLOAT)[0]}"`);
+    if (!def.allowNegative && /(^|[\s(])[-−]\d[\d,.]* [a-z]{3,}/.test(String(p.question))) fail(`a negative amount in a story: "${p.question.slice(0, 80)}"`);
     if (String(p.question).length > 420) fail('question is too long for a child to read on a phone');
     if ((p.hints || []).length < 2 && !p.parts && def.form !== 'spot') fail('needs at least 2 hints');
     if ((p.solutionSteps || []).length < 2 && def.form !== 'spot') fail('needs at least 2 solution steps');
@@ -83,6 +84,8 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       if (new Set(p.choices).size !== p.choices.length) fail(`options repeat: ${p.choices.join(' | ')}`);
       if (p.choices.length < 2 || p.choices.length > 4) fail(`${p.choices.length} options: need 2 to 4`);
       if (p.choices.length === 2 && def.form !== 'why' && !/true|false|yes|no/i.test(p.choices.join(' '))) fail('two options are only for yes/no or true/false');
+      const lens = p.choices.map(c => c.length), rightLen = lens[p.optionTruth.indexOf(true)];
+      if (p.choices.length >= 3 && rightLen > 25 && rightLen === Math.max(...lens) && rightLen > 1.2 * [...lens].sort((a, b) => b - a)[1]) longestRight++;
       const marked = p.choices.filter(c => checkAnswerMatch(c, p));
       if (marked.length !== 1) fail(`marker accepts ${marked.length} options: ${p.choices.join(' | ')}`);
       if (p.choices.filter((_, j) => !p.optionTruth[j]).some(c => !(raw.misconceptions || []).some(m => m.when === c))) weakOption++;
@@ -110,9 +113,10 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
     const v = Number(p.answer);
     if (Number.isFinite(v) && v !== 0 && authored.length && authored.every(m => { const w = Number(m.when); return Number.isFinite(w) && (Math.abs(w / v - 10) < 1e-9 || Math.abs(w / v - 0.1) < 1e-9); })) placeOnly++;
   }
-  if (thinWrong > n * 0.3) fail(`fewer than 3 named wrong answers on ${thinWrong} of ${n} draws: wrong options must come from real mistakes`);
+  if (thinWrong > n * 0.3 && !def.young) fail(`fewer than 3 named wrong answers on ${thinWrong} of ${n} draws: wrong options must come from real mistakes`);
   if (placeOnly) fail('every wrong option is just ten times or a tenth of the answer');
   if (weakOption > n * 0.1) fail(`${weakOption} of ${n} draws have a wrong option with no "why" feedback`);
+  if (longestRight > n * 0.5) fail('the right option is clearly the longest, which gives it away');
   if (seen.size < 4) fail(`only ${seen.size} different questions in ${n} draws`);
   return out;
 }

@@ -956,7 +956,7 @@ export const FAMILIES = [
   fam({ id: 'g7.money.electricity-bill', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.e', rung: 2, form: 'table',
     draw: () => { const prev = randInt(1200, 4800), u = randInt(40, 160), rate = pick([20, 22, 24, 25, 28, 30]), fixed = pick([150, 200, 250, 300]); return uniq(u * rate + fixed, (prev + u) * rate + fixed, u * rate, u + rate + fixed) ? { prev, u, rate, fixed, p: person() } : null; },
     make: ({ prev, u, rate, fixed, p }) => ({
-      question: `${p.name} reads the electricity bill for the house. This bill was made up for a class exercise, so its prices are not real. What is the total to pay, in shillings?`,
+      question: `${p.name} reads this electricity bill for the house. In this question, the prices are as shown. What is the total to pay, in shillings?`,
       model: { type: 'table', data: { head: ['Item', 'Amount'], rows: [{ label: 'Meter reading last month', value: commas(prev) }, { label: 'Meter reading this month', value: commas(prev + u) }, { label: 'Charge for each unit used (sh)', value: String(rate) }, { label: 'Fixed charge (sh)', value: String(fixed) }] } },
       answer: u * rate + fixed,
       wrong: [[(prev + u) * rate + fixed, 'The number of units used is the difference between the two meter readings, not the reading itself.'], [u * rate, 'Add the fixed charge too.'], [u + rate + fixed, 'Units are multiplied by the charge for each unit, not added.']],
@@ -967,7 +967,7 @@ export const FAMILIES = [
   fam({ id: 'g7.money.water-bill-bands', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.e', rung: 3, form: 'table',
     draw: () => { const a = pick([30, 35, 40, 45]), b = a + pick([10, 15, 20]), c = b + pick([10, 15, 20]), n = randInt(22, 32), F = pick([100, 150, 200]); return { a, b, c, n, F, p: person() }; },
     make: ({ a, b, c, n, F, p }) => ({
-      question: `A county water company charges in bands, as the table shows. These prices were invented for practice and are not real tariffs. ${p.name}'s family uses ${n} units in a month, and pays a fixed charge of ${sh(F)} as well. What is the water bill, in shillings?`,
+      question: `In this question, a water company charges in bands, as the table shows. ${p.name}'s family uses ${n} units in a month, and pays a fixed charge of ${sh(F)} as well. What is the water bill, in shillings?`,
       model: { type: 'table', data: { head: ['Units used', 'Charge for each unit (sh)'], rows: [{ label: 'First 10 units', value: String(a) }, { label: 'Next 10 units', value: String(b) }, { label: 'Every unit after 20', value: String(c) }] } },
       answer: 10 * a + 10 * b + (n - 20) * c + F,
       wrong: [[n * c + F, 'Each band has its own charge. Only the units above 20 cost the top rate.'], [n * a + F, 'Only the first 10 units cost the lowest rate.'], [10 * a + 10 * b + (n - 20) * c, 'Add the fixed charge as well.']],
@@ -993,7 +993,7 @@ export const FAMILIES = [
   fam({ id: 'g7.money.kplc-tokens', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.e', rung: 2, form: 'word',
     draw: () => { const S = pick([500, 1000, 1500, 2000]), C = pick([50, 100, 150, 200]), u = pick([20, 25, 30, 35, 40]); const n = (S - C) / u; return Number.isInteger(n) && uniq(n, S / u, S - C, C / u) ? { S, C, u, n, p: person() } : null; },
     make: ({ S, C, u, n, p }) => ({
-      question: `${p.name} buys KPLC tokens for ${sh(S)}. In this made-up example, ${sh(C)} goes on charges first, and the rest buys units at ${sh(u)} a unit. How many units does ${p.she} get?`,
+      question: `${p.name} buys KPLC tokens for ${sh(S)}. In this question, ${sh(C)} goes on charges first, and the rest buys units at ${sh(u)} a unit. How many units does ${p.she} get?`,
       answer: n,
       wrong: [[round(S / u, 2), `The charges of ${sh(C)} are taken first. Only the rest buys units.`], [S - C, 'That is the money left for units. Divide it by the price of one unit.'], [round(C / u, 2), 'The units are bought with the money left after the charges, not with the charges.']],
       hints: ['How much money is left after the charges?', 'Divide that money by the price of one unit.'],
@@ -1012,7 +1012,7 @@ export const FAMILIES = [
     },
     make: ({ ch, ms, ans, one, top, p }) => {
       const say = (m) => (m >= 1000 ? `${m / 1000} kg` : `${m} g`);
-      return { question: `The table shows made-up charges at a post office. They are for practice and are not real rates. ${p.name} posts three parcels, one after the other, of ${say(ms[0])}, ${say(ms[1])} and ${say(ms[2])}. What is the total postage, in shillings?`,
+      return { question: `The table shows the charges at a post office in this question. ${p.name} posts three parcels, one after the other, of ${say(ms[0])}, ${say(ms[1])} and ${say(ms[2])}. What is the total postage, in shillings?`,
         model: { type: 'table', data: { head: ['Mass of one parcel', 'Postage (sh)'], rows: [{ label: 'Up to 500 g', value: String(ch[0]) }, { label: 'Over 500 g, up to 1 kg', value: String(ch[1]) }, { label: 'Over 1 kg, up to 2 kg', value: String(ch[2]) }, { label: 'Over 2 kg, up to 5 kg', value: String(ch[3]) }] } },
         answer: ans,
         wrong: [[one, 'The parcels are posted separately. Each parcel is charged by its own mass.'], [top, 'Each parcel has its own charge. They do not all cost the same as the heaviest.'], [ans + ch[0], 'There are only three parcels, so only three charges are added.']],
@@ -1023,7 +1023,7 @@ export const FAMILIES = [
   fam({ id: 'g7.money.parcel-per-100g', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.g', rung: 2, form: 'word',
     draw: () => { const F = pick([60, 80, 100]), E = pick([20, 30, 40]), k = randInt(4, 12); return uniq(F + E * (k - 1), k * E, k * F, F + E * k) ? { F, E, k, p: person() } : null; },
     make: ({ F, E, k, p }) => ({
-      question: `A courier company has made-up postal charges for practice. A parcel costs ${sh(F)} for the first 100 g, and ${sh(E)} for each extra 100 g. ${p.name} posts a parcel of ${k * 100} g. What does the postage cost, in shillings?`,
+      question: `In this question, a courier's postal charges are these. A parcel costs ${sh(F)} for the first 100 g, and ${sh(E)} for each extra 100 g. ${p.name} posts a parcel of ${k * 100} g. What does the postage cost, in shillings?`,
       answer: F + E * (k - 1),
       wrong: [[k * E, 'The first 100 g has its own charge. Add it.'], [k * F, 'Only the first 100 g costs that much. The rest costs less per 100 g.'], [F + E * k, 'The first 100 g is not an extra part. Count one fewer extra part.']],
       hints: [`How many 100 g parts are there in ${k * 100} g?`, 'The first part is charged at the first price. All the others are charged at the extra price.'],
@@ -1040,7 +1040,7 @@ export const FAMILIES = [
       return uniq(ans, comb, ch[band(Math.max(X, Y))]) ? { ch, X, Y, ans, comb, big: ch[band(Math.max(X, Y))], p: person(), band } : null;
     },
     make: ({ ch, X, Y, ans, comb, big, p }) => ({
-      question: `A mobile money agent's charges for sending money are shown. They were invented for practice, so they are not real rates. ${p.name} sends ${sh(X)} to an aunt, and later ${sh(Y)} to a friend. How much is paid in charges altogether?`,
+      question: `The table shows one mobile money agent's charges for sending money, for this question only. ${p.name} sends ${sh(X)} to an aunt, and later ${sh(Y)} to a friend. How much is paid in charges altogether?`,
       model: { type: 'table', data: { head: ['Amount sent (sh)', 'Charge (sh)'], rows: [{ label: '1 to 100', value: String(ch[0]) }, { label: '101 to 500', value: String(ch[1]) }, { label: '501 to 1,000', value: String(ch[2]) }, { label: '1,001 to 2,500', value: String(ch[3]) }] } },
       answer: ans,
       wrong: [[comb, 'These are two separate sends. Each send has its own charge.'], [big, 'There are two sends, so there are two charges to add.'], [ans + ch[1], 'Only two sends were made, so add only two charges.']],

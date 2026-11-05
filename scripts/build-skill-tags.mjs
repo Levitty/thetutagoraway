@@ -28,7 +28,7 @@ const NAME_FIX = {
 const GRADE_OVERRIDE = {
   // Tagged in the graph to a sub-strand that the design lists under another name or place.
   G8_SURFACE_AREA: [8, 'AREA'], G8_VOLUME_ADV: [8, 'SOLIDS'], G9_ARC_LENGTH: [8, 'CIRCLES'],
-  G5_PATTERNS: [5, 'ADD'], G6_PATTERNS: [6, 'MUL'], G6_BODMAS_BASIC: [5, 'DIV'],
+  G9_COMPOUND_INTEREST: [8, 'MONEY'], G5_PATTERNS: [5, 'ADD'], G6_PATTERNS: [6, 'MUL'], G6_BODMAS_BASIC: [5, 'DIV'],
 };
 
 // What each label promises. The 18 skills the evaluation found, kept honest.

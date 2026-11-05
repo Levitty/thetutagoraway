@@ -10,8 +10,23 @@ const STATIC_PAGES = readdirSync('public', { withFileTypes: true })
   .filter(d => d.isDirectory() && existsSync(`public/${d.name}/index.html`))
   .map(d => d.name)
 
+// Question families nobody has reviewed stay out of what a phone downloads. In a
+// production build, a family file with no `reviewed: true` in it is replaced by
+// an empty list. Children would not get them anyway (families/core.js); this
+// also spares the mobile data, about 1 MB. The dev server keeps them all.
+const reviewedFamiliesOnly = {
+  name: 'horeb-reviewed-families-only',
+  apply: 'build',
+  enforce: 'pre',
+  transform(code, id) {
+    if (!/content\/families\/g[0-9a-z_]+\.js$/.test(id.split('?')[0]) && !id.split('?')[0].endsWith('content/families/gaps.js')) return null;
+    return /reviewed:\s*true/.test(code) ? null : { code: 'export const FAMILIES = [];', map: null };
+  },
+};
+
 export default defineConfig({
   plugins: [
+    reviewedFamiliesOnly,
     react(),
     // Offline for the web build. The phone app already loads from the device
     // (Capacitor bundles dist); this gives tutagora.com the same: the shell,

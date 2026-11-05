@@ -802,7 +802,7 @@ function buildUseOfLetters() {
     }
     const each = randInt(2, 9), groups = randInt(2, 9);
     const value = each * groups;
-    const wrong = [...new Set([each + groups, value + each, value - each])].filter(w => w !== value).slice(0, 2);
+    const wrong = [...new Set([each + groups, value + each, value - each])].filter(w => w !== each).slice(0, 2);
     return { type: 'use-of-letters', instruction: 'Find the number the letter stands for.',
       question: `If ${groups} × ${letter} = ${value}, what is ${letter}?`,
       answer: `${each}`, accepts: accepts(`${each}`), choices: [each, ...wrong].map(String),

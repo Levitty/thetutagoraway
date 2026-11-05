@@ -707,7 +707,7 @@ export const FAMILIES = [
         parts: [
           { prompt: 'The simplified perimeter is ax + b metres. What is a?', answer: A, hint: 'Add the numbers in front of x. A plain x counts as 1x.', wrong: [[a[0] + a[1], 'The third side also has an x term.'], [a[0] * a[1] * a[2], 'Like terms are added, not multiplied.'], [3, 'Each x is not just 1. Add the numbers in front of each x.']] },
           { prompt: 'What is b?', answer: C, hint: 'Add the plain numbers. Keep the sign of each one.', wrong: [[c[0] + c[1] + Math.abs(c[2]), 'The last side takes away a number. Keep its minus sign.'], [c[0] + c[1], 'The third side has a number term too.'], [c[0] * c[1] * c[2], 'Like terms are added, not multiplied.']] },
-          { prompt: `The perimeter when x = ${t}. What is its length in metres?`, answer: A * t + C, unit: 'm', hint: `Put x = ${t} into the simplified expression.`, wrong: [[A + C, `Replace x with ${t}: ${A}x means ${A} × ${t}.`], [A * t, `Do not forget the number b.`], [A * t - C, 'The number b is added, with its own sign.']] },
+          { prompt: `Now take x = ${t}. How long is the perimeter, in metres?`, answer: A * t + C, unit: 'm', hint: `Put x = ${t} into the simplified expression.`, wrong: [[A + C, `Replace x with ${t}: ${A}x means ${A} × ${t}.`], [A * t, `Do not forget the number b.`], [A * t - C, 'The number b is added, with its own sign.']] },
         ],
         steps: [`x terms: ${a.join('x + ')}x = ${A}x.`, `Numbers: ${c[0]} + ${c[1]} + (${c[2]}) = ${C}.`, `When x = ${t}: ${A} × ${t} + ${C} = ${A * t + C} m.`] };
     },
