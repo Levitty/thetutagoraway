@@ -6,6 +6,7 @@
 
 import { SKILLS } from './knowledgeGraph.js';
 import { STRUCTURED_CONTENT } from './content/index.js';
+import { familyDraw } from './content/families/index.js';
 import { PRIMARY_ALIAS } from './content/primary.js';
 import { checkAnswerMatch } from './answerCheck.js';
 import { catalogueMistakes } from './mistakes.js';
@@ -324,14 +325,6 @@ const generators = {
   G5_CAPACITY: () => capacityQuestion(false),
   G6_CAPACITY: () => capacityQuestion(true),
 
-  G6_MASS: () => pick([
-    () => { let t = rand(1, 9) + pick([0, 0.5, 0.25]); if (t === 1) t = 1.5; return { question: `How many kilograms are in ${t} tonnes?`, answer: String(Math.round(t * 1000)), hint: '1 tonne = 1000 kg.' }; },
-    () => { const kg = rand(1, 30) * 500; return { question: `How many tonnes are in ${kg.toLocaleString('en-US')} kg?`, answer: String(kg / 1000), hint: '1000 kg = 1 tonne, so divide by 1000.' }; },
-    () => { const bag = pick([50, 90, 100]), n = rand(10, 60); const t = bag * n / 1000; return { question: `A lorry carries ${t} tonnes of maize in ${bag} kg bags. How many bags is that?`, answer: String(n), hint: `${t} tonnes = ${bag * n} kg. Divide by ${bag}.` }; },
-    () => { const bag = pick([2, 5]), n = rand(3, 12), pr = pick([150, 180, 200, 250]); return { question: `Flour costs KSh ${pr} for a ${bag} kg packet. How much do ${n * bag} kg cost?`, answer: String(n * pr), hint: `${n * bag} kg is ${n} packets of ${bag} kg.` }; },
-    () => { const a = rand(1, 4), b = rand(1, 9) * 100, c = rand(1, 9) * 100; return { question: `A basket holds ${a} kg ${b} g of mangoes. ${c} g more are added. What is the total in grams?`, answer: String(a * 1000 + b + c), hint: `Change ${a} kg ${b} g into grams first.` }; },
-  ])(),
-
   G5_TIME: () => {
     const h1 = rand(8, 11), m1 = rand(0, 3) * 15;
     const durH = rand(1, 3), durM = pick([0, 15, 30, 45]);
@@ -510,13 +503,6 @@ const generators = {
     const type = rand(0, 1);
     if (type === 0) return { question: `x + ${a} = ${x + a}. Find x.`, answer: x.toString(), hint: `Undo the +${a}: subtract ${a} from both sides.` };
     return { question: `x - ${a} = ${x - a}. Find x.`, answer: x.toString(), hint: `Undo the -${a}: add ${a} to both sides.` };
-  },
-
-  G6_ANGLE_MEASURE: () => {
-    const angle = rand(20, 160);
-    const type = angle < 90 ? 'acute' : angle === 90 ? 'right' : 'obtuse';
-    return { question: `An angle measures ${angle}°. Is it acute, right, or obtuse?`, answer: type,
-      hint: 'Acute is less than 90°, right is exactly 90°, obtuse is more than 90°.' };
   },
 
   G6_ANGLE_PROPERTIES: () => {
@@ -1288,13 +1274,6 @@ const generators = {
       hint: 'Total frequency = add the frequency of every interval.' };
   },
 
-  G9_PROBABILITY_ADV: () => {
-    const red = rand(3, 7), blue = rand(3, 7), total = red + blue;
-    const p = formatFraction(red * (red - 1), total * (total - 1));
-    return { question: `Bag: ${red} red, ${blue} blue. Two drawn without replacement. P(both red)?`, answer: p,
-      hint: 'P = (r/n) × ((r-1)/(n-1))' };
-  },
-
   G9_SCATTER_PLOTS: () => {
     const c = pick([
       ['the temperature', 'cold drink sales', 'positive'], ['a child\'s height', 'their shoe size', 'positive'],
@@ -1867,8 +1846,13 @@ const tidy = (p, skillId) => {
   return p;
 };
 
+export const tidyProblem = tidy;   // the gate runs families through the same last step
 export const generateProblem = (skillId, opts = {}) => tidy(generateRaw(skillId, opts), PRIMARY_ALIAS[skillId] || skillId);
 const generateRaw = (skillId, opts = {}) => {
+  // A written-in-advance question family, when one is switched on for this
+  // skill (content/families). Null otherwise, and then nothing below changes.
+  const fam = familyDraw(skillId, opts);
+  if (fam) return fam;
   // Lower-primary (Grade 1–4) skills reuse an equivalent skill's content.
   if (PRIMARY_ALIAS[skillId]) skillId = PRIMARY_ALIAS[skillId];
   // Prefer authored structured content when present. `opts.level` lets the

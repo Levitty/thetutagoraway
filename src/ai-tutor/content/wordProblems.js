@@ -183,7 +183,7 @@ const B = {
 const MAP = {
   G4_ADD: ['join'], G5_ADDITION: ['join'], G4_SUB: ['part', 'compare'], G5_SUBTRACTION: ['part', 'compare'],
   G4_MULTIPLY: ['groups'], G5_MULTIPLICATION: ['groups', 'times'], G4_DIVIDE: ['groups'], G5_DIVISION: ['groups', 'times'],
-  G4_MONEY: ['shopping', 'join'], G5_MONEY: ['shopping'], G6_MONEY: ['shopping', 'percentOff'], G7_MONEY: ['shopping', 'percentOff'],
+  G4_MONEY: ['shopping', 'join'], G7_MONEY: ['shopping', 'percentOff'],
   G4_FRACTIONS: ['fractionOf'], G5_FRACTIONS_INTRO: ['fractionOf'], G6_FRACTIONS_MUL: ['fractionOf', 'fractionLeft'],
   G7_FRACTIONS_MUL: ['fractionLeft'], G7_FRACTIONS_DIV: ['fractionLeft'],
   G6_RATIOS: ['ratio', 'times'], G8_RATIO_PROPORTION: ['ratio'],

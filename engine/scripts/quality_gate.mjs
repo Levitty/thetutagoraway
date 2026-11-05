@@ -5,6 +5,14 @@
 //   node engine/scripts/quality_gate.mjs            # all skills, summary
 //   node engine/scripts/quality_gate.mjs --authored # only structured skills
 //   node engine/scripts/quality_gate.mjs --verbose  # per-skill detail
+//   node engine/scripts/quality_gate.mjs --report-only --json <file>
+//                                  # measure and write, never fail (report mode)
+//
+// Since 5 Nov 2026 it no longer counts new numbers as variety. It measures, per
+// skill (content_measures.mjs): distinct question FORMS, whether draws teach the
+// tagged outcomes (curriculum/skillTags.js), one correct answer per draw, and
+// sense checks. Families (content/families) must pass family_checks.mjs reviewed
+// or not. See the "Range" section at the bottom.
 //
 // A tutor that teaches WRONG answers is worse than none — so the gate doesn't
 // trust the stated answer. For equations it substitutes the solution back; for
@@ -22,13 +30,22 @@ const { generateProblem } = await import(resolve(root, 'src/ai-tutor/problemGene
 const { STRUCTURED_IDS } = await import(resolve(root, 'src/ai-tutor/content/index.js'));
 const { auditHints, reportHints } = await import(resolve(root, 'engine/scripts/audit_hint_leaks.mjs'));
 const { auditUniqueAnswers, reportUniqueAnswers } = await import(resolve(root, 'engine/scripts/audit_unique_answers.mjs'));
+const { measureAll, summarise, gradeTable, rangeFailures } = await import(resolve(root, 'engine/scripts/range_report.mjs'));
+const { setFamilyMode } = await import(resolve(root, 'src/ai-tutor/content/families/core.js'));
+const { checkFamily, checkForms, baseFormsOf, FAMILIES } = await import(resolve(root, 'engine/scripts/family_checks.mjs'));
 
 const args = process.argv.slice(2);
 const VERBOSE = args.includes('--verbose');
 const AUTHORED_ONLY = args.includes('--authored');
 
-const SAMPLES = 14;          // generations per skill for variety + verify
-const VARIETY_MIN = 6;       // distinct questions required out of SAMPLES
+const REPORT_ONLY = args.includes('--report-only');
+const JSON_OUT = args.includes('--json') ? args[args.indexOf('--json') + 1] : null;
+
+const SAMPLES = 14;          // generations per skill for the answer check
+const REPEATS_MIN = 6;       // distinct questions required out of SAMPLES
+const FORMS_DRAWS = 60;      // draws per skill for the form and fit measures
+const FORMS_MIN = 3;         // distinct forms a Grade 4 to 9 skill must reach
+const ON_TOPIC_MIN = 0.75;    // share of draws that must teach the tagged outcomes
 const EPS = 1e-6;
 
 // ---- independent answer verification ----
@@ -163,7 +180,7 @@ function verifyProblem(p) {
 }
 
 // ---- score one skill ----
-function scoreSkill(id) {
+function scoreSkill(id, forms) {
   const issues = [];
   let sample;
   const questions = new Set();
@@ -194,7 +211,7 @@ function scoreSkill(id) {
   if (!has.workedExample) issues.push('no worked example');
   if (!has.steps) issues.push('no step-by-step solution');
   if (has.hints < 2) issues.push(`only ${has.hints} hint(s) (need ≥2)`);
-  if (has.variety < VARIETY_MIN) issues.push(`low variety: ${has.variety}/${SAMPLES} distinct`);
+  if (has.variety < REPEATS_MIN) issues.push(`repeats itself: ${has.variety}/${SAMPLES} distinct`);
   if (verifyFails > 0) issues.push(`${verifyFails}/${SAMPLES} generated answers UNVERIFIED/WRONG`);
   // A skill that CARRIES a verify hook the checker does not understand was
   // silently scored as if it had no hook at all, and still printed "verified"
@@ -211,7 +228,8 @@ function scoreSkill(id) {
   score += has.steps ? 15 : 0;
   score += Math.min(has.hints, 3) / 3 * 10;
   score += has.misconceptions ? 5 : 0;
-  score += Math.min(has.variety, VARIETY_MIN) / VARIETY_MIN * 10;
+  // Variety is question forms. New numbers earn nothing: they only stop repeats.
+  score += Math.min(forms ?? FORMS_MIN, FORMS_MIN) / FORMS_MIN * 10;
   score = Math.round(score);
 
   return { id, score, has, issues, sample };
@@ -221,7 +239,12 @@ function scoreSkill(id) {
 let ids = Object.keys(SKILLS);
 if (AUTHORED_ONLY) ids = ids.filter(id => STRUCTURED_IDS.includes(id));
 
-const results = ids.map(scoreSkill);
+setFamilyMode('reviewed');
+const childView = measureAll(FORMS_DRAWS);       // what children get today
+setFamilyMode('all');
+const bankView = measureAll(FORMS_DRAWS);        // with every family, reviewed or not
+const results = ids.map(id => scoreSkill(id, bankView[id]?.forms));
+setFamilyMode('reviewed');
 const authored = results.filter(r => r.has?.structured);
 const passed = results.filter(r => r.score >= 85);
 const wrongAnswers = results.filter(r => r.issues.some(i => i.includes('WRONG') || i.includes('UNVERIFIED')));
@@ -236,7 +259,7 @@ for (const r of authored.sort((a, b) => a.id.localeCompare(b.id))) {
   const mark = r.score >= 85 ? 'PASS' : 'FAIL';
   console.log(`  [${mark}] ${r.score.toString().padStart(3)}  ${r.id.padEnd(22)} ` +
     `${r.issues.length ? '— ' + r.issues.join('; ')
-      : `${r.has.verified ? 'verified' : 'not verifiable'}, ${r.has.variety} variety, ${r.has.hints} hints`}`);
+      : `${r.has.verified ? 'verified' : 'not verifiable'}, ${bankView[r.id]?.forms ?? '?'} forms, ${r.has.hints} hints`}`);
 }
 
 if (VERBOSE && authored[0]) {
@@ -269,7 +292,36 @@ if (uniqueAudit.failing.length) {
 }
 
 // Exit non-zero if any authored skill fails — usable as a CI gate.
+// ---- Range: forms, fit, one right answer, and the families ------------------
+setFamilyMode('reviewed');
+const familyFails = [...checkForms(baseFormsOf(new Set(FAMILIES.map(f => f.skill)))), ...FAMILIES.flatMap(f => checkFamily(f))];
+const childFails = rangeFailures(childView, { formsMin: 0, onTopicMin: ON_TOPIC_MIN });
+const bankFails = rangeFailures(bankView, { formsMin: FORMS_MIN, onTopicMin: ON_TOPIC_MIN });
+
+console.log(`\n--- Range, what children get today (reviewed families only) ---`);
+console.log(gradeTable(summarise(childView)));
+console.log(`\n--- Range, with every family on (${FAMILIES.length} families) ---`);
+console.log(gradeTable(summarise(bankView)));
+const show = (label, list, max = VERBOSE ? 1e9 : 40) => {
+  console.log(`\n${label}: ${list.length}`);
+  list.slice(0, max).forEach(x => console.log(`  ${x}`));
+  if (list.length > max) console.log(`  ... and ${list.length - max} more (--verbose)`);
+};
+show('Failures in what children get today', childFails.hard);
+show('Reported, not failing, in what children get today', childFails.soft);
+show('Failures with every family on', bankFails.hard);
+show('Families failing their checks', familyFails);
+
+if (JSON_OUT) {
+  const { writeFileSync } = await import('node:fs');
+  const lean = (v) => Object.fromEntries(Object.entries(v).map(([id, m]) => [id, { ...m, questions: undefined }]));
+  writeFileSync(JSON_OUT, JSON.stringify({ families: FAMILIES.length, child: summarise(childView), bank: summarise(bankView), childFails, bankFails, familyFails, perSkill: lean(childView), perSkillBank: lean(bankView) }, null, 1));
+}
+if (REPORT_ONLY) { console.log('\nReport mode: nothing fails.'); process.exit(0); }
+
+// Exit non-zero on anything a child could meet, or anything a family gets wrong.
 const authoredFails = authored.filter(r => r.score < 85);
+const rangeBad = childFails.hard.length + bankFails.hard.length + familyFails.length;
 if (hintAudit.leaking.length) {
   console.log(`\n${hintAudit.leaking.length} skill(s) leak an answer through a hint.`);
   process.exit(1);
@@ -278,4 +330,8 @@ if (authoredFails.length) {
   console.log(`\n${authoredFails.length} authored skill(s) below bar.`);
   process.exit(1);
 }
-console.log(`\nAll ${authored.length} authored skills pass the bar.`);
+if (rangeBad) {
+  console.log(`\n${rangeBad} range failure(s).`);
+  process.exit(1);
+}
+console.log(`\nAll ${authored.length} authored skills pass the bar, and the range checks pass.`);

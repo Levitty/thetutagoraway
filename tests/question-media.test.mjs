@@ -193,7 +193,7 @@ test('a drawn display is not also spelled out in the question', () => {
       // only genuine lists are read.
       const list = (v) => (Array.isArray(v) ? v : []);
       const values = [...list(d.rows), ...list(d.bars)]
-        .map(r => r?.value ?? r?.count).filter(v => v != null);
+        .map(r => r?.value ?? r?.count).filter(v => v != null && /^[\d.]+$/.test(String(v)));
       // Three or more of the display's own values repeated in the stem means
       // the data was written out as well as drawn.
       if (values.length >= 3) {

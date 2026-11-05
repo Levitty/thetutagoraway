@@ -103,6 +103,7 @@ export function readUnit(raw) {
     if (new RegExp(`^((sq|square|squared)(${names})|(${names})(sq|square|squared|2))$`).test(w)) return { family: 'area', unit: `${unit}2` };
     if (new RegExp(`^((cu|cubic|cubed)(${names})|(${names})(cu|cubic|cubed|3))$`).test(w)) return { family: 'volume', unit: `${unit}3` };
   }
+  if (/^(m\/s2|ms-?2)$/.test(w)) return { family: 'acceleration', unit: 'm/s2' };
   // A rate: km/h, m/s, g/cm³, shillings per kg. Each side read by the rules above.
   const rate = w.match(/^([^/]+)\/([^/]+)$/);
   if (rate) {

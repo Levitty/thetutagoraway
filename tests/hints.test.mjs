@@ -58,7 +58,6 @@ const REVIEWED = {
   G1_COUNTING: 'both compared numbers must be named to ask the question at all',
   G4_ANGLES: 'acute/right/obtuse classification — applying the stated rule is the skill',
   G5_ANGLES_INTRO: 'acute/right/obtuse classification',
-  G6_ANGLE_MEASURE: 'acute/right/obtuse classification',
   G8_CONGRUENCE: 'names the four tests (SSS/SAS/ASA/RHS); choosing between them is the skill',
   G9_SCATTER_PLOTS: 'positive/negative correlation — the hint defines both directions',
   G12_CORRELATION_REGRESSION: 'describing r — the hint defines the scale',

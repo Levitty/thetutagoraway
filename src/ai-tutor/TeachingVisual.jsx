@@ -943,10 +943,81 @@ const PieChart = ({ data }) => {
 // a Grade 4 outcome in its own right, but only when there is a table: written
 // into the question as "Mon: 7, Tue: 9, Wed: 20" it collapses into finding the
 // label and copying the number beside it.
+// A line on labelled axes: a travel graph, a line graph of data, y = 2x + 1.
+// points are {x, y} in order. xTicks and yTicks are the printed scale values.
+const LineGraph = ({ data }) => {
+  const { points = [], xTicks = [], yTicks = [], xLabel = '', yLabel = '', caption, lines } = data || {};
+  const series = lines || [points];
+  if (!series.flat().length || xTicks.length < 2 || yTicks.length < 2) return null;
+  const W = 340, H = 220, left = 44, right = 14, top = 14, bottom = 172;
+  const xMin = xTicks[0], xMax = xTicks[xTicks.length - 1], yMin = yTicks[0], yMax = yTicks[yTicks.length - 1];
+  const X = (v) => left + ((v - xMin) / (xMax - xMin)) * (W - left - right);
+  const Y = (v) => bottom - ((v - yMin) / (yMax - yMin)) * (bottom - top);
+  // Graph paper: faint lines fine enough that every plotted value sits on one,
+  // so a child can read a point that falls between the printed numbers.
+  const gcd = (a, b) => (b < 1e-9 ? a : gcd(b, a % b));
+  const fine = series.flat().reduce((g, p) => gcd(g, Math.abs(p.y - yMin)), yTicks[1] - yTicks[0]);
+  const minor = [];
+  if (fine > 1e-9 && (yMax - yMin) / fine <= 40) for (let v = yMin; v < yMax; v += fine) minor.push(v);
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Line graph">
+        {minor.map(v => <line key={`m${v}`} x1={left} y1={Y(v)} x2={W - right} y2={Y(v)} stroke="#f1f5f9" strokeWidth="1" />)}
+        {yTicks.map(v => (
+          <g key={`y${v}`}>
+            <line x1={left} y1={Y(v)} x2={W - right} y2={Y(v)} stroke="#e2e8f0" strokeWidth="1" />
+            <text x={left - 6} y={Y(v) + 4} textAnchor="end" fontSize="10" fill="#64748b">{v}</text>
+          </g>
+        ))}
+        {xTicks.map(v => (
+          <g key={`x${v}`}>
+            <line x1={X(v)} y1={top} x2={X(v)} y2={bottom} stroke="#e2e8f0" strokeWidth="1" />
+            <text x={X(v)} y={bottom + 14} textAnchor="middle" fontSize="10" fill="#64748b">{v}</text>
+          </g>
+        ))}
+        <line x1={left} y1={bottom} x2={W - right} y2={bottom} stroke="#64748b" strokeWidth="1.5" />
+        <line x1={left} y1={top} x2={left} y2={bottom} stroke="#64748b" strokeWidth="1.5" />
+        {series.map((pts, i) => (
+          <g key={i}>
+            <polyline points={pts.map(p => `${X(p.x)},${Y(p.y)}`).join(' ')} fill="none" stroke={CAT_COLORS[i % CAT_COLORS.length]} strokeWidth="2.5" />
+            {pts.map((p, j) => <circle key={j} cx={X(p.x)} cy={Y(p.y)} r="3" fill={CAT_COLORS[i % CAT_COLORS.length]} />)}
+          </g>
+        ))}
+        <text x={(left + W - right) / 2} y={H - 18} textAnchor="middle" fontSize="11" fill="#334155" fontWeight="600">{xLabel}</text>
+        <text x={12} y={(top + bottom) / 2} textAnchor="middle" fontSize="11" fill="#334155" fontWeight="600" transform={`rotate(-90 12 ${(top + bottom) / 2})`}>{yLabel}</text>
+      </svg>
+      {caption && <p className="text-center text-sm text-slate-500 mt-1">{caption}</p>}
+    </div>
+  );
+};
+
 const DataTable = ({ data }) => {
   const { rows = [], head = ['', ''], caption, highlight } = data || {};
   if (!rows.length) return null;
   const H = 30 + rows.length * 24;
+  // More than two columns (a timetable, a charges table): rows carry `cells`.
+  if (rows[0]?.cells) {
+    const n = head.length;
+    const col = (i) => 14 + (i * 318) / n;
+    return (
+      <div className="w-full">
+        <svg viewBox={`0 0 340 ${H}`} className="w-full" role="img" aria-label="Table">
+          {head.map((h, i) => <text key={i} x={col(i)} y="15" fontSize="10" fill="#94a3b8" fontWeight="700">{String(h).toUpperCase()}</text>)}
+          <line x1="8" y1="21" x2="332" y2="21" stroke="#64748b" strokeWidth="1.2" />
+          {rows.map((r, j) => {
+            const y = 39 + j * 24;
+            return (
+              <g key={j}>
+                {r.cells.map((c, i) => <text key={i} x={col(i)} y={y} fontSize="12" fill="#1e293b" fontWeight="600">{c}</text>)}
+                <line x1="8" y1={y + 8} x2="332" y2={y + 8} stroke="#e2e8f0" strokeWidth="1" />
+              </g>
+            );
+          })}
+        </svg>
+        {caption && <p className="text-center text-sm text-slate-500 mt-1">{caption}</p>}
+      </div>
+    );
+  }
   return (
     <div className="w-full">
       <svg viewBox={`0 0 340 ${H}`} className="w-full" role="img" aria-label="Table">
@@ -994,6 +1065,7 @@ const MODELS = {
   'pictograph': Pictograph,
   'pie-chart': PieChart,
   'table': DataTable,
+  'line-graph': LineGraph,
 };
 
 export const TEACHING_MODEL_TYPES = Object.keys(MODELS);

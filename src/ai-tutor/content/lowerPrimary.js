@@ -802,7 +802,7 @@ function buildUseOfLetters() {
     }
     const each = randInt(2, 9), groups = randInt(2, 9);
     const value = each * groups;
-    const wrong = [...new Set([each + groups, value + each, value - each])].filter(w => w !== value).slice(0, 2);
+    const wrong = [...new Set([each + groups, value + each, value - each])].filter(w => w !== each).slice(0, 2);
     return { type: 'use-of-letters', instruction: 'Find the number the letter stands for.',
       question: `If ${groups} × ${letter} = ${value}, what is ${letter}?`,
       answer: `${each}`, accepts: accepts(`${each}`), choices: [each, ...wrong].map(String),
@@ -1717,15 +1717,6 @@ export const LOWER_PRIMARY_CONTENT = {
 
 // Upper grades whose aliases ran above level — tuned here instead.
 Object.assign(LOWER_PRIMARY_CONTENT, {
-  G5_MONEY:        withKPs([                          // G5 design: profit & loss
-                     withWorkedExample(buildBandedMoney({ maxAmount: 1000, kind: 'profit' })),
-                     withWorkedExample(buildBandedMoney({ maxAmount: 1000, kind: 'loss' })),
-                   ]),
-  G6_MONEY:        withKPs([                          // G6 design: bills & charges
-                     withWorkedExample(buildBandedMoney({ maxAmount: 5000, kind: 'budget' })),
-                     withWorkedExample(buildBandedMoney({ maxAmount: 2000, kind: 'change' })),
-                   ]),
-  G6_INEQUALITIES: withWorkedExample(buildCompareSymbols({ max: 999999 })),
 });
 
 export const LOWER_PRIMARY_SKILL_IDS = Object.keys(LOWER_PRIMARY_CONTENT);
