@@ -6,6 +6,7 @@
 
 import { SKILLS } from './knowledgeGraph.js';
 import { STRUCTURED_CONTENT } from './content/index.js';
+import { familyDraw } from './content/families/index.js';
 import { PRIMARY_ALIAS } from './content/primary.js';
 import { checkAnswerMatch } from './answerCheck.js';
 import { catalogueMistakes } from './mistakes.js';
@@ -1863,8 +1864,13 @@ const tidy = (p, skillId) => {
   return p;
 };
 
+export const tidyProblem = tidy;   // the gate runs families through the same last step
 export const generateProblem = (skillId, opts = {}) => tidy(generateRaw(skillId, opts), PRIMARY_ALIAS[skillId] || skillId);
 const generateRaw = (skillId, opts = {}) => {
+  // A written-in-advance question family, when one is switched on for this
+  // skill (content/families). Null otherwise, and then nothing below changes.
+  const fam = familyDraw(skillId, opts);
+  if (fam) return fam;
   // Lower-primary (Grade 1–4) skills reuse an equivalent skill's content.
   if (PRIMARY_ALIAS[skillId]) skillId = PRIMARY_ALIAS[skillId];
   // Prefer authored structured content when present. `opts.level` lets the
