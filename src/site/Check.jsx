@@ -174,13 +174,13 @@ export function CheckResult({ onSave, onRetake, onFindTutor, onLeave, user, save
     : `This check finds a starting point, not a full report. The daily practice keeps checking as ${name} goes.`;
 
   return (
-    <div className="tg">
-      <nav className="nav onbrand"><div className="in">
+    <div className={`tg${framed ? ' inframe' : ''}`}>
+      {!framed && <nav className="nav onbrand"><div className="in">
         {saved
           ? <button type="button" className="txt" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'none', border: 0, padding: 0, cursor: 'pointer', fontWeight: 700 }} onClick={onLeave}><SiteIcon name="back" style={{ width: 18, height: 18 }} />Dashboard</button>
           : <Logo onClick={onLeave} />}
         {!saved && <div className="right"><button type="button" className="txt" onClick={onRetake}>Retake</button></div>}
-      </div></nav>
+      </div></nav>}
       <section className="rhero"><div className="in">
         <div>
           <div className="kicker">{saved ? `${check.name}'s plan` : check?.name ? `${check.name}'s check` : 'Your check'}{grade ? ` · Grade ${grade}` : ''}</div>

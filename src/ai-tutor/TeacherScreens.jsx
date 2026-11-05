@@ -8,27 +8,16 @@
 //
 // Layout only. Every number and sentence is made by teacherInsights.js and the
 // engine from the learners' own records; this file decides where it goes.
-// Styles: the .tt block at the end of horeb-look.css.
+// Styles: shell/shell.css.
 // ============================================================================
 import React, { useMemo, useState } from 'react';
 import { lastSeenLabel } from './classView.js';
 import { fiveMinuteMove } from './teacherMoves.js';
+import { TIcon } from '../shell/icons.jsx';
+import { AppShell, ClassLink, useShell } from '../shell/AppShell.jsx';
+import { teachingMenu } from '../shell/menus.js';
 
-// ---- icons: Lucide paths, one stroke, one size ------------------------------
-const PATHS = {
-  home: <><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></>,
-  users: <><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></>,
-  list: <><path d="m3 17 2 2 4-4" /><path d="m3 7 2 2 4-4" /><path d="M13 6h8" /><path d="M13 12h8" /><path d="M13 18h8" /></>,
-  rocket: <><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" /><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></>,
-  chev: <path d="m9 18 6-6-6-6" />,
-  left: <path d="m15 18-6-6 6-6" />,
-  cal: <><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M16 2v4" /><path d="M8 2v4" /><path d="M3 10h18" /></>,
-  check: <path d="M20 6 9 17l-5-5" />,
-  file: <><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /></>,
-};
-export const TIcon = ({ name, style }) => (
-  <svg className="tt-i" viewBox="0 0 24 24" aria-hidden="true" style={style}>{PATHS[name]}</svg>
-);
+export { TIcon };
 
 // ---- small parts ------------------------------------------------------------
 export const initials = (name) => String(name || '?').replace(/\(.*?\)/g, '').trim().split(/\s+/).slice(0, 2).map(w => w[0] || '').join('').toUpperCase() || '?';
@@ -59,61 +48,30 @@ const Why = ({ open, items }) => (
 );
 
 const greeting = (d = new Date()) => (d.getHours() < 12 ? 'Good morning' : d.getHours() < 17 ? 'Good afternoon' : 'Good evening');
-const dayLabel = (d = new Date()) => d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
 
 // ---- the frame --------------------------------------------------------------
-const NAV = [
-  { id: 'home', label: 'Home', short: 'Home', icon: 'home' },
-  { id: 'class', label: 'Classes', short: 'Class', icon: 'users' },
-  { id: 'practice', label: 'Set practice', short: 'Practice', icon: 'list' },
-  { id: 'rocket', label: 'Rocket Challenge', short: 'Rocket', icon: 'rocket' },
-];
-
 /**
- * One solid labelled sidebar on a laptop (the owner's rule since 1 Nov), a
- * dark tab bar on a phone. `classes` is [{ id, name, size }].
+ * The teacher's screens in HOREB's one frame, with their classes listed under the
+ * menu. `classes` is [{ id, name, size }]. Signed out (the teacher demo) there is
+ * no person, so the teaching items are the whole menu.
  */
-export function TeacherShell({ active, onNav, classes = [], onOpenClass, activeClassId, teacherName, teacherLine, demoNote, children }) {
+export function TeacherShell({ active, onNav, classes = [], onOpenClass, activeClassId, demoNote, title, children }) {
+  const ctx = useShell();
+  const onItem = (it) => {
+    if (it.id === 'classes' || it.id === 'practice' || it.id === 'rocket') { onNav(it.id); return true; }
+    return false;
+  };
   return (
-    <div className="tt tt-app">
-      <aside className="tt-side">
-        <div className="tt-brand"><span className="tt-mk">H</span>HOREB</div>
-        <div className="tt-lbl">Teaching</div>
-        {NAV.map(n => (
-          <button key={n.id} className={`tt-nav${active === n.id ? ' tt-on' : ''}`} onClick={() => onNav(n.id)}>
-            <span className="tt-tile"><TIcon name={n.icon} /></span>{n.label}
-          </button>
+    <AppShell active={active} title={title} note={demoNote} menu={ctx ? undefined : teachingMenu()} onItem={onItem}
+      extra={classes.length > 0 ? <>
+        <div className="hb-lbl">My classes</div>
+        {classes.map(c => (
+          <ClassLink key={c.id} code={classCode(c.name)} name={plainClass(c.name)} size={c.size}
+            current={activeClassId === c.id && active === 'classes'} onClick={() => onOpenClass && onOpenClass(c.id)} />
         ))}
-        {classes.length > 0 && <>
-          <hr />
-          <div className="tt-lbl">My classes</div>
-          {classes.map(c => (
-            <button key={c.id} className="tt-cls" onClick={() => onOpenClass && onOpenClass(c.id)}
-              aria-current={activeClassId === c.id && active === 'class' ? 'page' : undefined}>
-              <span className="tt-code">{classCode(c.name)}</span>
-              <span><b>{plainClass(c.name)}</b>{c.size != null && <small>{c.size} {c.size === 1 ? 'learner' : 'learners'}</small>}</span>
-            </button>
-          ))}
-        </>}
-        <div className="tt-foot">Mathematics · CBC</div>
-      </aside>
-      <main style={{ minWidth: 0 }}>
-        <div className="tt-top">
-          <div className="tt-brandm"><span className="tt-mk">H</span>HOREB</div>
-          {demoNote && <Pill tone="am">{demoNote}</Pill>}
-          <div className="tt-chip-top"><TIcon name="cal" />{dayLabel()}</div>
-          <div className="tt-me"><span className="tt-av">{initials(teacherName)}</span><div><b>{teacherName}</b>{teacherLine && <small>{teacherLine}</small>}</div></div>
-        </div>
-        {children}
-      </main>
-      <nav className="tt-tabbar" aria-label="Teaching">
-        {NAV.map(n => (
-          <button key={n.id} className={active === n.id ? 'tt-on' : ''} onClick={() => onNav(n.id)}>
-            <TIcon name={n.icon} />{n.short}
-          </button>
-        ))}
-      </nav>
-    </div>
+      </> : null}>
+      {children}
+    </AppShell>
   );
 }
 

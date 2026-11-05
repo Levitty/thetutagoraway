@@ -25,6 +25,7 @@ import { teamProgress, validateEntry, logSummary, LOG_FIELDS } from './progress.
 import { rocketApi } from './rocketData.js';
 import { exampleApi } from './example.js';
 import { TeacherShell, SuggestPanel, Pill } from '../ai-tutor/TeacherScreens.jsx';
+import { AppShell, useShell } from '../shell/AppShell.jsx';
 
 // ------------------------------------------------------------------ helpers
 const fmtDay = (iso) => {
@@ -78,14 +79,15 @@ const Card = ({ className = '', children }) => (
 );
 
 const ExampleBanner = () => (
-  <div className="bg-[#16161A] text-white rounded-2xl px-4 py-2.5 text-[12.5px] font-semibold flex items-center justify-between gap-3">
+  <div className="bg-slate-900 text-white rounded-2xl px-4 py-2.5 text-[12.5px] font-semibold flex items-center justify-between gap-3">
     <span>EXAMPLE DATA. Invented teams and names, nothing is saved.</span>
   </div>
 );
 
 // ------------------------------------------------------------------ shell
-export function RocketChallenge({ userId, isAdmin = false, onBack, onPractise, onNavigate, teacherName }) {
+export function RocketChallenge({ userId, isAdmin = false, onBack, onPractise, onNavigate }) {
   useHorebLook();
+  const inPerson = !!useShell();
   const params = useMemo(() => new URLSearchParams(typeof window !== 'undefined' ? window.location.search : ''), []);
   const demo = params.get('demo') === '1' || !userId;
   const demoAs = params.get('as') || 'learner';
@@ -138,11 +140,11 @@ export function RocketChallenge({ userId, isAdmin = false, onBack, onPractise, o
   if (roles && roles.staff.length && !roles.family.length && (view?.name === 'teacher' || view?.name === 'team')) {
     const onNav = (id) => {
       if (id === 'rocket') { go({ name: 'teacher' }); return; }
-      if (onNavigate) onNavigate('classroom'); else window.location.assign('/classroom');
+      const section = id === 'practice' ? 'practice' : null;
+      if (onNavigate) onNavigate('classroom', null, section); else window.location.assign('/classroom');
     };
     return (
-      <TeacherShell active="rocket" onNav={onNav} teacherName={teacherName || (api.isExample ? 'Mrs Wairimu' : 'Teacher')}
-        teacherLine="Rocket Challenge" demoNote={api.isExample ? 'Example data: invented teams, nothing is saved' : null}>
+      <TeacherShell active="rocket" onNav={onNav} demoNote={api.isExample ? 'Example data: invented teams, nothing is saved' : null}>
         {err && <Card><p className="text-[14px] text-[#C2255C] font-semibold">{err}</p></Card>}
         {view.name === 'teacher' && <TeacherView teams={roles.staff} go={go} now={api.now ? Date.parse(api.now) : Date.now()} />}
         {view.name === 'team' && team && (
@@ -154,10 +156,9 @@ export function RocketChallenge({ userId, isAdmin = false, onBack, onPractise, o
     );
   }
 
-  return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900">
-      <div className="max-w-[1180px] mx-auto px-4 lg:px-8 pt-4 pb-16 space-y-4">
-        <header className="flex items-center gap-3">
+  const page = (
+      <div className={inPerson ? 'space-y-4' : 'max-w-[1180px] mx-auto px-4 lg:px-8 pt-4 pb-16 space-y-4'}>
+        {!inPerson && <header className="flex items-center gap-3">
           {onBack && (
             <button onClick={onBack} aria-label="Back" className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0"><Chevron back /></button>
           )}
@@ -166,7 +167,7 @@ export function RocketChallenge({ userId, isAdmin = false, onBack, onPractise, o
             <div className="text-[15px] font-bold truncate">{data?.challenge ? data.challenge.title : 'Loading'}</div>
           </div>
           <HorebBot size={40} className="shrink-0" />
-        </header>
+        </header>}
         {api.isExample && <ExampleBanner />}
         {tabs.length > 1 && (
           <nav className="flex gap-2 overflow-x-auto -mx-4 px-4 pb-1" aria-label="Views">
@@ -187,8 +188,10 @@ export function RocketChallenge({ userId, isAdmin = false, onBack, onPractise, o
         {data && view?.name === 'organiser' && <OrganiserView data={data} api={api} reload={reload} go={go} />}
         {data && view?.name === 'join' && <JoinTeam api={api} kids={data.children} reload={async () => { setView(null); await reload(); }} />}
       </div>
-    </div>
   );
+  // In the frame for anyone signed in; a signed-out visitor sees the example alone.
+  if (inPerson) return <AppShell active="rocket" title="Rocket Challenge" warm>{page}</AppShell>;
+  return <div className="min-h-screen bg-slate-100 text-slate-900">{page}</div>;
 }
 
 // ------------------------------------------------------------------ team home
@@ -325,7 +328,7 @@ function LevelScreen({ team, level, api, me, reload, go, onPractise }) {
                 return (
                   <li key={s.n} className={`rounded-2xl px-3 py-3 ${isNow ? 'bg-[#FFF7DC]' : 'bg-slate-100'}`}>
                     <div className="flex items-center gap-3">
-                      <span className={`w-8 h-8 rounded-full shrink-0 flex items-center justify-center text-[13px] font-extrabold ${isDone ? 'bg-[#9BE3C4] text-[#16161A]' : isNow ? 'bg-amber-400 text-slate-900' : 'bg-white text-slate-400'}`}>
+                      <span className={`w-8 h-8 rounded-full shrink-0 flex items-center justify-center text-[13px] font-extrabold ${isDone ? 'bg-[#9BE3C4] text-slate-900' : isNow ? 'bg-amber-400 text-slate-900' : 'bg-white text-slate-400'}`}>
                         {isDone ? <Tick /> : isNow ? s.n : <Lock />}
                       </span>
                       <span className="min-w-0">
@@ -400,7 +403,7 @@ function Thread({ messages, members, steps }) {
             ) : (
               <div className="flex flex-col items-end">
                 <span className="text-[11px] font-bold text-slate-400 mb-0.5 mr-1">{nameOf(m.author_label)}</span>
-                <div className="max-w-[85%] rounded-2xl rounded-tr-md px-3.5 py-2.5 text-[14.5px] leading-snug bg-[#16161A] text-white">
+                <div className="max-w-[85%] rounded-2xl rounded-tr-md px-3.5 py-2.5 text-[14.5px] leading-snug bg-slate-900 text-white">
                   {m.kind === 'stuck' ? <i>We are stuck.</i> : m.body}
                 </div>
               </div>

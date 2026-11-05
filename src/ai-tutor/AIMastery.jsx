@@ -4,6 +4,7 @@
 // ============================================================================
 
 import { useHorebLook } from './horebLook.js';
+import { AppShell, useShell } from '../shell/AppShell.jsx';
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
 import { prereqsMet, getStatus, getRecommendedPath, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, strandsInReach, weakestStrand, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
@@ -94,7 +95,7 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
         <div className="w-16 h-16 mx-auto mb-3 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center"><Icon name={item.icon} className="w-8 h-8" /></div>
         <h2 className="text-2xl font-extrabold tracking-tight mb-1">{item.title}</h2>
         {item.subtitle && <p className="text-slate-500 mb-2">{item.subtitle}</p>}
-        {item.xp != null && <p className="text-[#5a7a3a] font-bold text-lg mb-2">+{item.xp} XP</p>}
+        {item.xp != null && <p className="text-emerald-600 font-bold text-lg mb-2">+{item.xp} XP</p>}
         <button onClick={onDismiss} className="mt-3 w-full bg-amber-400 hover:bg-amber-300 text-slate-900 rounded-xl px-8 py-3 font-bold transition-colors">Continue</button>
       </div>
     </div>
@@ -109,8 +110,9 @@ const CelebrationOverlay = ({ item, onDismiss }) => {
 // the check finishes.
 // The strand palette is shared with the teacher's board — see strandBlocks.js.
 
-export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAvatar = null, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, autoStartCurriculum = null, onDiagnosed = null, autoStartSkill = null, autoStartLearnerId = null, onRocket = null }) {
+export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAvatar = null, subscription = null, onPaywall, lockedLearner = null, guest = false, autoStartGrade = null, autoStartCurriculum = null, onDiagnosed = null, autoStartSkill = null, autoStartLearnerId = null, onRocket = null, section = null }) {
   useHorebLook();
+  const shellCtx = useShell();
   const [subjectId, setSubjectId] = useState(DEFAULT_SUBJECT); // default subject; switch via header. null = picker
   const [progress, setProgress] = useState(defaultProgress);
   const [view, setView] = useState('loading');
@@ -254,7 +256,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
   // UI state
   const [expanded, setExpanded] = useState(null);
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState(section && ['overview', 'path', 'skills', 'stats', 'awards'].includes(section) ? section : 'overview');
   // The dashboard's "Find a skill" box. It filters the Skills tab rather than
   // decorating the header: a search field that does nothing is worse than no
   // search field, because it invites a child to type and then ignores them.
@@ -1322,7 +1324,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   };
 
   if (loading) return (
-    <div className="min-h-screen bg-[#eef0f2] flex flex-col items-center justify-center gap-4">
+    <div className="min-h-screen bg-slate-100 flex flex-col items-center justify-center gap-4">
       <HorebBot size={56} />
       <div className="h-1.5 w-32 bg-slate-200 rounded-full overflow-hidden">
         <div className="h-full w-1/3 bg-[#ff7aac] rounded-full animate-pulse" />
@@ -1333,7 +1335,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   // ==================== RENDER: SUBJECT PICKER ====================
 
   if (view === 'subject-picker' || !subjectId) return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
+    <div className="min-h-screen bg-slate-100 text-slate-900 app-shell">
       <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
         <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-2.5">
           {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-700 mr-1"><Icon name="back" /></button>}
@@ -1348,7 +1350,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
           <div className="space-y-3">
             {SUBJECT_LIST.map(s => (
               <button key={s.id} onClick={() => setSubjectId(s.id)} className="w-full bg-white border border-slate-200 shadow-sm hover:border-slate-300 rounded-2xl p-5 flex items-center gap-4 transition-colors text-left">
-                <div className="w-12 h-12 rounded-2xl bg-[#ecedfa] text-[#6d6fcb] flex items-center justify-center shrink-0"><Icon name={s.icon} className="w-6 h-6" /></div>
+                <div className="w-12 h-12 rounded-2xl bg-slate-100 text-violet-500 flex items-center justify-center shrink-0"><Icon name={s.icon} className="w-6 h-6" /></div>
                 <div className="flex-1 min-w-0">
                   <div className="font-bold text-[17px] text-slate-900">{s.name}</div>
                   <div className="text-slate-500 text-sm">{s.description}</div>
@@ -1370,7 +1372,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   if (view === 'welcome') {
     const welcomeFirst = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
     return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900">
+    <div className="min-h-screen bg-slate-100 text-slate-900">
       <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40">
         <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-2.5">
           {onBack && <button onClick={onBack} className="text-slate-400 hover:text-slate-600 mr-1"><Icon name="back" /></button>}
@@ -1424,7 +1426,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               </>
             )}
             {progress.declaredGrade != null && (
-              <p className="text-xs text-[#5a7a3a] mt-3">I’ll focus on {sub?.gradeLabel || 'Grade'} {progress.declaredGrade} and the steps that lead up to it.</p>
+              <p className="text-xs text-emerald-600 mt-3">I’ll focus on {sub?.gradeLabel || 'Grade'} {progress.declaredGrade} and the steps that lead up to it.</p>
             )}
           </div>
 
@@ -1459,7 +1461,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     const cheerNow = diagState.pending && diagState.pending.id === skill.id ? 'One more like that one. Take your time.' : cheer;
 
     return (
-      <div className="min-h-screen bg-[#eef0f2] text-slate-900">
+      <div className="min-h-screen bg-slate-100 text-slate-900">
         <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
           <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
@@ -1502,7 +1504,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               {problem?.mc ? (
                 <ChoiceGrid problem={problem} answer={answer} onPick={setAnswer} disabled={!!feedback} />
               ) : (
-              <><input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+              <><input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem?.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleDiagnosticAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-slate-900 text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
               <ReadAs text={answer} hidden={!!feedback} /></>
               )}
               {!feedback && (
@@ -1513,8 +1515,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             </div>
             {feedback && (
               feedback === 'correct'
-                ? <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]"><span className="text-[#4f7233] font-bold">Nice one!</span></div>
-                : <div className="rounded-2xl p-4 mb-4 bg-[#f5f6fc] border border-[#d3daf0]"><span className="text-[#5658b8] font-semibold">Noted — that helps me find your start.</span></div>
+                ? <div className="rounded-2xl p-4 mb-4 bg-emerald-100 border border-[#cfe0bd]"><span className="text-emerald-700 font-bold">Nice one!</span></div>
+                : <div className="rounded-2xl p-4 mb-4 bg-[#f5f6fc] border border-[#d3daf0]"><span className="text-violet-600 font-semibold">Noted — that helps me find your start.</span></div>
             )}
             {!feedback && <button onClick={() => handleDiagnosticAnswer()} disabled={!answer.trim() && !(problem?.visual && visualAnswer != null)} className="w-full bg-amber-400 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 text-slate-900 rounded-2xl py-4 font-bold transition-colors">Check</button>}
           </div>
@@ -1593,7 +1595,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
     const learnerFirst = ((activeLearner?.name || studentName) || '').trim().split(/\s+/)[0];
     return (
-      <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell" onClick={() => activeTooltip && setActiveTooltip(null)}>
+      <div className="min-h-screen bg-slate-100 text-slate-900 app-shell" onClick={() => activeTooltip && setActiveTooltip(null)}>
         {/* Header */}
         <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
           {/* The board's header: a way back, how far through this is, and
@@ -1675,8 +1677,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                         </div>
                       ))}
                     </div>}
-                    <div className="mt-5 flex items-center gap-2 bg-[#eef4e7] border border-[#cfe0bd] rounded-2xl px-4 py-3">
-                      <span className="text-[#5a7a3a] font-semibold text-sm">Answer</span>
+                    <div className="mt-5 flex items-center gap-2 bg-emerald-100 border border-[#cfe0bd] rounded-2xl px-4 py-3">
+                      <span className="text-emerald-600 font-semibold text-sm">Answer</span>
                       <span className="font-bold text-slate-900 ml-auto text-lg">{we.solution}</span>
                     </div>
                   </div>
@@ -1719,13 +1721,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   </div>
                 )}
                 {interleave && (
-                  <div className="inline-flex items-center gap-1.5 mb-3 text-xs font-bold text-[#6d6fcb] bg-[#f5f6fc] border border-[#e8e9f6] rounded-full px-3 py-1.5">
+                  <div className="inline-flex items-center gap-1.5 mb-3 text-xs font-bold text-violet-500 bg-[#f5f6fc] border border-[#e8e9f6] rounded-full px-3 py-1.5">
                     <Icon name="refresh" className="w-3.5 h-3.5" /> Quick review · {interleave.name}
                   </div>
                 )}
                 {canSpeak() && (
                   <button type="button" onClick={() => speak(questionScript(problem))} aria-label="Read the question to me"
-                    className="float-right ml-3 mb-2 inline-flex items-center gap-1.5 rounded-full border-2 border-[#121117] bg-white px-3 py-1 text-sm font-semibold text-slate-900 hover:bg-slate-50">
+                    className="float-right ml-3 mb-2 inline-flex items-center gap-1.5 rounded-full border-2 border-slate-900 bg-white px-3 py-1 text-sm font-semibold text-slate-900 hover:bg-slate-50">
                     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z" /><path d="M15.5 8.5a5 5 0 0 1 0 7" /><path d="M18.5 5.5a9 9 0 0 1 0 13" /></svg>
                     Read to me
                   </button>
@@ -1740,7 +1742,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                 {problem.shownSteps && (
                   <ol className="mb-5 space-y-1.5">
                     {problem.shownSteps.map((st, i) => (
-                      <li key={i} className="flex gap-3 items-start rounded-lg bg-[#f4f4f6] px-3 py-2 text-[15px] text-slate-800">
+                      <li key={i} className="flex gap-3 items-start rounded-lg bg-slate-50 px-3 py-2 text-[15px] text-slate-800">
                         <span className="font-bold text-[#e8336d] min-w-[52px]">Step {i + 1}</span><span>{st}</span>
                       </li>
                     ))}
@@ -1771,13 +1773,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                 {plan && (
                   <div className="mb-5 rounded-2xl border border-[#cfe0bd] bg-[#f2f6ec] p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[#5a7a3a] text-sm font-semibold">Solution started for you — finish the last step</span>
-                      {supportChip && <span className="text-[11px] px-2 py-0.5 rounded-full bg-[#e2edd3] text-[#5a7a3a]">{supportChip}</span>}
+                      <span className="text-emerald-600 text-sm font-semibold">Solution started for you — finish the last step</span>
+                      {supportChip && <span className="text-[11px] px-2 py-0.5 rounded-full bg-[#e2edd3] text-emerald-600">{supportChip}</span>}
                     </div>
                     <div className="space-y-1.5">
                       {plan.shown.map((s, i) => (
                         <div key={i} className="flex gap-2 text-sm text-slate-700">
-                          <span className="text-[#5a7a3a] font-bold min-w-[20px] tabular-nums">{i + 1}.</span>
+                          <span className="text-emerald-600 font-bold min-w-[20px] tabular-nums">{i + 1}.</span>
                           <span>{s}</span>
                         </div>
                       ))}
@@ -1807,7 +1809,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                         </div>
                       ))}
                     </div>
-                    <div className="mt-2 text-[#5a7a3a]"><span className="font-semibold">Answer:</span> <span className="font-mono">{legacyExample.solution}</span></div>
+                    <div className="mt-2 text-emerald-600"><span className="font-semibold">Answer:</span> <span className="font-mono">{legacyExample.solution}</span></div>
                   </details>
                 )}
 
@@ -1824,10 +1826,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                           disabled={!!feedback || struck}
                           onClick={() => setAnswer(opt)}
                           className={`text-left flex items-center gap-3 rounded-lg border-2 px-4 py-3 text-lg font-bold transition-colors ${
-                            right ? 'bg-[#eef4e7] border-[#4f7233] text-slate-900'
+                            right ? 'bg-emerald-100 border-emerald-700 text-slate-900'
                             : struck ? 'bg-[#fdf2ef] border-[#f2cdc2] text-slate-400 line-through'
-                            : chosen ? 'bg-amber-300 border-[#121117] text-slate-900 ring-4 ring-[#ff7aac]/40'
-                            : 'bg-amber-400 border-[#121117] text-slate-900 hover:bg-amber-300'}`}>
+                            : chosen ? 'bg-amber-300 border-slate-900 text-slate-900 ring-4 ring-[#ff7aac]/40'
+                            : 'bg-amber-400 border-slate-900 text-slate-900 hover:bg-amber-300'}`}>
                           {String(opt) !== LETTERS[i] && <span className="text-xs font-bold opacity-60 w-4">{LETTERS[i]}</span>}
                           <span>{opt}</span>
                         </button>
@@ -1843,7 +1845,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                     <InteractiveVisual visualType={SKILL_VISUALS[activeSkill].visualType} visualData={SKILL_VISUALS[activeSkill].visualData} onAnswer={setVisualAnswer} disabled={!!feedback} />
                   )
                 )}
-                <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+                <input type="text" inputMode={/^-?\d+$/.test(String(problem.answer ?? '')) ? 'numeric' : /^-?\d*\.\d+$/.test(String(problem.answer ?? '')) ? 'decimal' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && checkAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-slate-900 text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
                 <ReadAs text={answer} hidden={!!feedback} />
                 </>}
 
@@ -1869,10 +1871,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                 {/* Wrong try — name what happened, keep their answer, escalate */}
                 {!feedback && attemptCount > 0 && wrongInfo && !wrongInfo.needNumber && (
                   <div className="mt-4 p-3 bg-[#fdf2ef] border border-[#f2cdc2] rounded-2xl text-sm">
-                    <span className="text-[#c0663f] font-semibold">Not quite.</span>
+                    <span className="text-amber-600 font-semibold">Not quite.</span>
                     {wrongInfo.answer && <span className="text-slate-500"> You {problem.mc ? 'chose' : 'wrote'} <span className={`${problem.mc ? 'font-semibold' : 'font-mono'} text-slate-700`}>{wrongInfo.answer}</span>.</span>}
                     <div className="mt-1 text-slate-700">{wrongInfo.diagnosis || (problem.hint || genericNudge(problem))}</div>
-                    {hintLevel < 2 && !plan && !problem.explain && <button onClick={() => setHintLevel(2)} className="mt-1.5 text-[#6d6fcb] underline text-xs hover:text-[#5658b8]">show me the first steps</button>}
+                    {hintLevel < 2 && !plan && !problem.explain && <button onClick={() => setHintLevel(2)} className="mt-1.5 text-violet-500 underline text-xs hover:text-violet-600">show me the first steps</button>}
                   </div>
                 )}
 
@@ -1924,7 +1926,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                         </span>
                       </div>
                       {showNudge && (
-                        <p className="text-[15px] leading-[1.45] font-medium text-[#16161A]">{ladder[0].text}</p>
+                        <p className="text-[15px] leading-[1.45] font-medium text-slate-900">{ladder[0].text}</p>
                       )}
                       {shown.length > 0 && (
                         <div className={`${showNudge ? 'mt-3.5' : ''} flex flex-col gap-[7px]`}>
@@ -1932,7 +1934,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                             // One numbered list, whether a rung ends in a blank
                             // to fill or in an instruction to follow: the two
                             // shapes are steps of the same method.
-                            <div key={i} className={`flex gap-2 text-[14px] text-[#16161A] ${slot ? 'items-center' : 'leading-snug'}`}>
+                            <div key={i} className={`flex gap-2 text-[14px] text-slate-900 ${slot ? 'items-center' : 'leading-snug'}`}>
                               <span className="font-bold text-[#C2255C] tabular-nums shrink-0">{i + 1}.</span>
                               {slot ? <>
                                 {/* The label takes what it needs and the blank
@@ -1950,7 +1952,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                       )}
                       {hintLevel < rungs && (
                         <button onClick={() => setHintLevel(h => h + 1)}
-                          className="mt-3.5 h-11 px-[18px] rounded-full border-2 border-[#16161A] text-[14px] font-bold text-[#16161A] hover:bg-[#16161A] hover:text-white transition-colors">
+                          className="mt-3.5 h-11 px-[18px] rounded-full border-2 border-slate-900 text-[14px] font-bold text-slate-900 hover:bg-slate-900 hover:text-white transition-colors">
                           Next hint
                         </button>
                       )}
@@ -1961,8 +1963,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
               {/* Correct answer feedback */}
               {feedback === 'correct' && (
-                <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]">
-                  <span className="text-[#4f7233] font-bold">Nice{learnerFirst ? `, ${learnerFirst}` : ''} — that's right!</span>
+                <div className="rounded-2xl p-4 mb-4 bg-emerald-100 border border-[#cfe0bd]">
+                  <span className="text-emerald-700 font-bold">Nice{learnerFirst ? `, ${learnerFirst}` : ''} — that's right!</span>
                   {attemptCount > 1 && <span className="text-slate-400 text-sm ml-2">(attempt {attemptCount})</span>}
                   {problem.explain && <p className="mt-1.5 text-sm text-slate-700">{problem.explain}</p>}
                 </div>
@@ -1973,7 +1975,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   work, then checks their thinking against the actual steps. */}
               {answeredPlan && (
                 <div className="rounded-2xl p-4 mb-4 bg-[#eef1f8] border border-[#d3daf0]">
-                  <div className="text-[#5658b8] text-sm font-bold mb-1">Teach it back</div>
+                  <div className="text-violet-600 text-sm font-bold mb-1">Teach it back</div>
                   <p className="text-sm text-slate-600 mb-2">
                     You worked the last {answeredPlan.hiddenCount === 1 ? 'step' : `${answeredPlan.hiddenCount} steps`} yourself.
                     Say <em>why</em> {answeredPlan.hiddenCount === 1 ? 'it works' : 'they work'} — out loud or in your head — then check:
@@ -1992,22 +1994,22 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                         <div className="grid gap-1.5">
                           {opts.map(o => (
                             <button key={o} type="button" onClick={() => { setSelfPick({ pick: o, right: o === right }); setSelfExplainOpen(true); }}
-                              className="text-left text-sm rounded-lg border-2 border-[#121117] bg-amber-400 hover:bg-amber-300 text-slate-900 font-semibold px-3 py-2">{o}</button>
+                              className="text-left text-sm rounded-lg border-2 border-slate-900 bg-amber-400 hover:bg-amber-300 text-slate-900 font-semibold px-3 py-2">{o}</button>
                           ))}
                         </div>
                       </div>
                     );
                   })()}
-                  {selfPick && <p className={`text-sm font-semibold mb-1.5 ${selfPick.right ? 'text-[#4f7233]' : 'text-[#c0663f]'}`}>{selfPick.right ? 'Yes, that was your step.' : 'Not that one. Here is what you did:'}</p>}
+                  {selfPick && <p className={`text-sm font-semibold mb-1.5 ${selfPick.right ? 'text-emerald-700' : 'text-amber-600'}`}>{selfPick.right ? 'Yes, that was your step.' : 'Not that one. Here is what you did:'}</p>}
                   {!selfExplainOpen ? ([...new Set([...answeredPlan.shown, ...answeredPlan.hidden].map(t => String(t).split('→')[0].trim()))].filter(Boolean).length >= 3 ? null :
-                    <button onClick={() => setSelfExplainOpen(true)} className="text-sm text-[#6d6fcb] hover:text-[#5658b8] font-semibold transition-colors">
+                    <button onClick={() => setSelfExplainOpen(true)} className="text-sm text-violet-500 hover:text-violet-600 font-semibold transition-colors">
                       Show the thinking
                     </button>
                   ) : (
                     <div className="space-y-1">
                       {answeredPlan.hidden.map((s, i) => (
                         <div key={i} className="flex gap-2 text-sm text-slate-700">
-                          <span className="text-[#6d6fcb] font-bold min-w-[20px] tabular-nums">{answeredPlan.shown.length + i + 1}.</span>
+                          <span className="text-violet-500 font-bold min-w-[20px] tabular-nums">{answeredPlan.shown.length + i + 1}.</span>
                           <span>{s}</span>
                         </div>
                       ))}
@@ -2019,7 +2021,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               {/* Missed it — show the answer AND the full working, warmly */}
               {feedback === 'incorrect' && !problem.parts && (
                 <div className="rounded-2xl p-4 mb-4 bg-[#fdf2ef] border border-[#f2cdc2]">
-                  <span className="text-[#c0663f] font-bold">Not quite — the answer is <span className="font-mono text-slate-900">{problem.answer}</span></span>
+                  <span className="text-amber-600 font-bold">Not quite — the answer is <span className="font-mono text-slate-900">{problem.answer}</span></span>
                   {wrongInfo?.diagnosis && <p className="mt-1.5 text-sm text-slate-700">{wrongInfo.diagnosis}</p>}
                   {(() => {
                     // Working for the LEARNER'S problem (never a stand-in example),
@@ -2043,7 +2045,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                         <div className="space-y-1.5">
                           {steps.map((step, i) => (
                             <div key={i} className="flex gap-2 text-sm">
-                              <span className="text-[#c0663f] font-bold tabular-nums">{i + 1}.</span>
+                              <span className="text-amber-600 font-bold tabular-nums">{i + 1}.</span>
                               <span className="text-slate-700">{step}</span>
                             </div>
                           ))}
@@ -2056,10 +2058,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
               {/* Remediation — a gentle nudge to shore up a foundation */}
               {remediationSkills && <div className="bg-[#f2f6ec] border border-[#cfe0bd] rounded-2xl p-4 mb-4">
-                <div className="flex items-center gap-2 text-[#5a7a3a] font-semibold mb-2"><Icon name="target" className="w-5 h-5" /> Let's shore up a foundation first</div>
+                <div className="flex items-center gap-2 text-emerald-600 font-semibold mb-2"><Icon name="target" className="w-5 h-5" /> Let's shore up a foundation first</div>
                 <p className="text-sm text-slate-600 mb-3">A quick warm-up on these will make this one click:</p>
                 <div className="space-y-2">{remediationSkills.map(rs => (
-                  <button key={rs.id} onClick={() => startLesson(rs.id)} className="w-full text-left p-3 bg-white border border-[#cfe0bd] rounded-xl hover:bg-[#eef4e7] transition-colors">
+                  <button key={rs.id} onClick={() => startLesson(rs.id)} className="w-full text-left p-3 bg-white border border-[#cfe0bd] rounded-xl hover:bg-emerald-100 transition-colors">
                     <div className="font-medium text-slate-900">{rs.name}</div>
                     <div className="text-xs text-slate-500">{rs.reason}</div>
                   </button>
@@ -2072,7 +2074,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                 <p className="text-center text-sm text-slate-500 mb-2">{problem.mc ? 'Pick another answer, then tap Try Again.' : 'Type a new answer, then tap Try Again.'}</p>
               )}
               {!feedback && problem.parts ? null : !feedback ? <button onClick={checkAnswer} disabled={!answer.trim() && !(problem.visual && visualAnswer != null)} className="w-full bg-amber-400 text-slate-900 hover:bg-amber-300 disabled:bg-slate-200 disabled:text-slate-400 rounded-2xl py-4 font-bold transition-colors">{attemptCount > 0 ? 'Try Again' : 'Check Answer'}</button>
-                : <button onClick={nextProblem} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-2xl py-4 font-bold flex items-center justify-center gap-2 transition-colors">Next <Icon name="arrow" className="w-5 h-5" /></button>}
+                : <button onClick={nextProblem} className="w-full bg-violet-500 hover:bg-violet-600 text-white rounded-2xl py-4 font-bold flex items-center justify-center gap-2 transition-colors">Next <Icon name="arrow" className="w-5 h-5" /></button>}
             </>
           )}
         </div>
@@ -2094,7 +2096,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     const secs = reviewTimer % 60;
 
     return (
-      <div className="min-h-screen bg-[#eef0f2] text-slate-900">
+      <div className="min-h-screen bg-slate-100 text-slate-900">
         <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
           <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
             <button onClick={() => { setReviewTimerActive(false); goHome(); }} className="text-slate-400 hover:text-slate-700 flex items-center gap-1 text-sm"><Icon name="back" className="w-4 h-4" /> Exit</button>
@@ -2104,7 +2106,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             </div>
             <div className="text-slate-500 font-semibold text-sm tabular-nums">{reviewIndex + 1}/{reviewProblems.length}</div>
           </div>
-          <div className="h-1.5 bg-slate-100"><div className="h-full bg-[#6d6fcb] transition-all rounded-r-full" style={{ width: `${pct}%` }} /></div>
+          <div className="h-1.5 bg-slate-100"><div className="h-full bg-violet-500 transition-all rounded-r-full" style={{ width: `${pct}%` }} /></div>
         </div>
         <div className="px-4 pt-6 pb-16">
           <div className="max-w-2xl mx-auto">
@@ -2135,17 +2137,17 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               {problem?.mc ? (
                 <ChoiceGrid problem={problem} answer={answer} onPick={setAnswer} disabled={!!feedback} showAnswer={!!feedback} />
               ) : (
-              <><input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-[#121117] text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
+              <><input type="text" inputMode={/^-?\d+$/.test(String(problem?.answer ?? '')) ? 'numeric' : undefined} value={answer} onChange={e => setAnswer(e.target.value)} onKeyDown={e => e.key === 'Enter' && !feedback && handleReviewAnswer()} disabled={!!feedback} enterKeyHint="go" autoCapitalize="off" autoCorrect="off" spellCheck={false} autoComplete="off" className="w-full bg-white border-2 border-slate-900 text-slate-900 rounded-lg px-4 py-3.5 text-lg focus:outline-none focus:ring-4 focus:ring-amber-300 disabled:opacity-60 placeholder:text-slate-400" autoFocus placeholder={problem?.visual ? 'Tap the picture, or type' : 'Type your answer…'} />
               <ReadAs text={answer} hidden={!!feedback} /></>
               )}
             </div>
 
             {feedback && (
               feedback === 'correct'
-                ? <div className="rounded-2xl p-4 mb-4 bg-[#eef4e7] border border-[#cfe0bd]"><span className="text-[#4f7233] font-bold">Still got it!</span></div>
+                ? <div className="rounded-2xl p-4 mb-4 bg-emerald-100 border border-[#cfe0bd]"><span className="text-emerald-700 font-bold">Still got it!</span></div>
                 : (
                   <div className="rounded-2xl p-4 mb-4 bg-[#fdf2ef] border border-[#f2cdc2]">
-                    <span className="text-[#c0663f] font-bold">Not this time — it&rsquo;s <span className="font-mono text-slate-900">{problem?.answer}</span></span>
+                    <span className="text-amber-600 font-bold">Not this time — it&rsquo;s <span className="font-mono text-slate-900">{problem?.answer}</span></span>
                     {(() => { const d = diagnoseError(problem, answer); return d ? <p className="text-sm text-slate-700 mt-1.5">{d}</p> : null; })()}
                     <p className="text-sm text-slate-600 mt-1">That&rsquo;s exactly what a review is for — I&rsquo;ll bring this one back sooner.</p>
                   </div>
@@ -2166,13 +2168,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     const secs = reviewTimer % 60;
 
     return (
-      <div className="min-h-screen bg-[#eef0f2] text-slate-900 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-slate-100 text-slate-900 flex items-center justify-center p-4">
         <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
         <div className="max-w-md text-center">
-          <Icon name="check" className="w-16 h-16 text-[#5a7a3a] mx-auto mb-4" />
+          <Icon name="check" className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
           <h2 className="text-2xl font-extrabold tracking-tight mb-2">Review complete</h2>
           <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-6 space-y-3">
-            <div className="flex justify-between"><span className="text-slate-500">Accuracy</span><span className={`font-bold ${accuracy >= 80 ? 'text-[#5a7a3a]' : accuracy >= 60 ? 'text-amber-600' : 'text-[#c0663f]'}`}>{accuracy}%</span></div>
+            <div className="flex justify-between"><span className="text-slate-500">Accuracy</span><span className={`font-bold ${accuracy >= 80 ? 'text-emerald-600' : accuracy >= 60 ? 'text-amber-600' : 'text-amber-600'}`}>{accuracy}%</span></div>
             <div className="flex justify-between"><span className="text-slate-500">Questions</span><span className="font-bold text-slate-900">{session.correct}/{session.total}</span></div>
             <div className="flex justify-between"><span className="text-slate-500">Time</span><span className="font-bold text-slate-900">{mins}m {secs}s</span></div>
           </div>
@@ -2245,7 +2247,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
           <AvatarArt id={learnerAvatar} size={size} title={whoFirst ? `${whoFirst}'s avatar` : 'Your avatar'} />
         </span>
         <span aria-hidden="true"
-          className="absolute -bottom-0.5 -right-0.5 rounded-full bg-[#16161A] border-2 border-white flex items-center justify-center"
+          className="absolute -bottom-0.5 -right-0.5 rounded-full bg-slate-900 border-2 border-white flex items-center justify-center"
           style={{ width: pip, height: pip }}>
           <svg viewBox="0 0 24 24" fill="none" style={{ width: pip * 0.52, height: pip * 0.52 }}>
             <path d="M4 20h4l10-10a2.8 2.8 0 0 0-4-4L4 16v4Z" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -2255,7 +2257,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     );
   };
   const avatarSheet = pickingAvatar && (
-    <div className="bg-white rounded-[24px] p-5 border-2 border-[#16161A]">
+    <div className="bg-white rounded-[24px] p-5 border-2 border-slate-900">
       <div className="flex items-baseline justify-between gap-3 mb-3">
         <span className="text-[15px] font-extrabold tracking-tight text-slate-900">
           {whoFirst ? `Who are you today, ${whoFirst}?` : 'Who are you today?'}
@@ -2276,63 +2278,40 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   const scopedGradeStats = getGradeStats(progress, ctx, { excludeEnrichment: true });
 
   return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900 lg:flex app-shell">
-      <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
-
-      {/* ===== SIDEBAR (desktop) ===== */}
-      {/* An icon rail, not a menu of words. Five destinations do not need
-          labels taking a sixth of a 1280px screen, and the names were the
-          least interesting thing on the page — the title, each label on
-          hover, and the aria-label carry them for anyone who needs them. */}
-      <aside className="hidden lg:flex lg:flex-col items-center w-[72px] shrink-0 bg-white rounded-[26px] my-7 ml-7 py-4.5 gap-2.5 sticky top-7 self-start max-h-[calc(100vh-3.5rem)]">
-        <span className="mb-2.5"><HorebBot size={34} /></span>
-        {[['overview', 'Home', 'home'], ['path', 'My path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Progress', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
-          <button key={id} onClick={() => setActiveTab(id)} title={label} aria-label={label}
-            aria-current={activeTab === id ? 'page' : undefined}
-            className={`w-12 h-12 rounded-[15px] flex items-center justify-center transition-colors ${
-              activeTab === id ? 'bg-slate-900 text-amber-400' : 'text-slate-400 hover:bg-slate-50 hover:text-slate-900'}`}>
-            <Icon name={icon} className="w-[21px] h-[21px]" />
-          </button>
-        ))}
+    <AppShell warm active={activeTab} brand={<HorebBot size={34} className="shrink-0" />}
+      onBack={shellCtx ? undefined : onBack}
+      onItem={(it) => { if (it.practiceTab) { setActiveTab(it.id); return true; } return false; }}
+      local={{
+        label: shellCtx ? 'Practice' : undefined,
+        // Handed-over device: the five tabs it has always had. On an account, one goes under More.
+        bar: shellCtx ? ['overview', 'path', 'stats', 'awards'] : ['overview', 'path', 'skills', 'stats', 'awards'],
+        items: [
+          { id: 'overview', label: shellCtx?.person?.line === 'Learner' || !shellCtx ? 'Home' : 'Practice', short: 'Home', icon: 'home', practiceTab: true },
+          { id: 'path', label: 'My path', short: 'Path', icon: 'target', practiceTab: true },
+          { id: 'skills', label: 'Skills', icon: 'map', practiceTab: true },
+          { id: 'stats', label: 'Progress', icon: 'bar', practiceTab: true },
+          { id: 'awards', label: 'Awards', icon: 'trophy', practiceTab: true },
+        ],
+      }}
+      tools={<>
         {(joinAllowed || linkAllowed) && (
-        <button onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }} title={linkAllowed ? 'Link to your school' : 'Join a class'} aria-label={linkAllowed ? 'Link to your school' : 'Join a class'}
-          className="w-12 h-12 rounded-[15px] flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-slate-900 transition-colors text-xl leading-none">+</button>
+          <button type="button" className="hb-tool" onClick={() => { setShowJoin(s => !s); setJoinStatus(null); }}>{linkAllowed ? 'Link to your school' : 'Join a class'}</button>
         )}
-        <span className="flex-1 min-h-[16px]" />
-        <button onClick={switchSubject} title="Switch subject" aria-label="Switch subject"
-          className="w-12 h-12 rounded-[15px] flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-slate-900 transition-colors"><Icon name="book" className="w-[19px] h-[19px]" /></button>
-        <button onClick={resetAll} title="Reset progress" aria-label="Reset progress"
-          className="w-12 h-12 rounded-[15px] flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-slate-900 transition-colors"><Icon name="refresh" className="w-[19px] h-[19px]" /></button>
+        <button type="button" className="hb-tool" onClick={switchSubject}>Switch subject</button>
+        <button type="button" className="hb-tool" onClick={resetAll}>Reset progress</button>
         {curriculaOptions.length > 1 && (
           <select value={curriculum} onChange={(e) => setProgress(p => ({ ...p, curriculum: e.target.value }))}
             title="Curriculum view" aria-label="Curriculum view"
-            className="w-12 text-[10px] text-center bg-slate-50 text-slate-500 rounded-lg py-1.5 border-0 focus:outline-none">
-            {!curriculumChosen && <option value={NATIVE} disabled>—</option>}
+            className="mx-2.5 my-1 text-[13px] bg-slate-50 text-slate-500 rounded-lg py-1.5 px-2 border-0 focus:outline-none">
+            {!curriculumChosen && <option value={NATIVE} disabled>Curriculum</option>}
             {choosableCurricula.map(c => <option key={c.id} value={c.id}>{c.shortName}</option>)}
           </select>
         )}
-      </aside>
+      </>}>
+      <CelebrationOverlay item={celebrations[0]} onDismiss={dismissCelebration} />
+        {progress.currentStreak > 0 && <span className="min-[900px]:hidden inline-flex items-center gap-1 bg-[#ffe3ee] text-slate-900 rounded px-2 py-0.5 text-sm font-bold mb-3"><Icon name="flame" className="w-4 h-4" />{progress.currentStreak} day{progress.currentStreak === 1 ? '' : 's'}</span>}
 
-      {/* ===== MOBILE TOP BAR ===== */}
-      <div className="lg:hidden sticky top-0 z-40 shrink-0 bg-white/90 backdrop-blur border-b border-slate-200 flex items-center justify-between px-4 min-h-14 py-2">
-        <div className="flex items-center gap-2">
-          {onBack && <button onClick={onBack} className="text-slate-400 mr-1"><Icon name="back" className="w-5 h-5" /></button>}
-          <HorebBot size={28} /><b className="text-[17px] font-extrabold tracking-tight">HOREB</b>
-        </div>
-        <div className="flex items-center gap-3.5">
-          {progress.currentStreak > 0 && <span className="flex items-center gap-1 bg-[#ffe3ee] text-slate-900 rounded px-2 py-0.5 text-sm font-bold"><Icon name="flame" className="w-4 h-4" />{progress.currentStreak} day{progress.currentStreak === 1 ? '' : 's'}</span>}
-          <button onClick={switchSubject} className="text-slate-400" title="Switch subject"><Icon name="book" className="w-[18px] h-[18px]" /></button>
-          <button onClick={resetAll} className="text-slate-400" title="Reset progress"><Icon name="refresh" className="w-[18px] h-[18px]" /></button>
-        </div>
-      </div>
-
-      {/* ===== MAIN ===== */}
-      <main className="flex-1 min-w-0 app-scroll">
-        {/* 1224px, the width the desktop board is drawn at. At max-w-4xl
-            (896px) the two columns were squeezed into less than a laptop
-            screen, so everything stacked tall and the page read as portrait
-            with grey margins either side of it. */}
-        <div className="max-w-[1224px] mx-auto px-4 sm:px-6 lg:pr-7 pt-6 lg:pt-7 pb-28 lg:pb-14">
+        <div className="max-w-[1224px] mx-auto">
 
         {/* ========== OVERVIEW (HOME) TAB ========== */}
         {activeTab === 'overview' && (() => {
@@ -2455,11 +2434,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             );
           })();
           return (
-            <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-5 lg:items-start">
+            <div className="space-y-4 xl:space-y-0 xl:grid xl:grid-cols-[minmax(0,1fr)_300px] xl:gap-5 xl:items-start">
               {/* Learner switcher — a parent runs HOREB per child. Each learner
                   has their own diagnostic, level, and progress. */}
               {learners.length > 0 && !lockedLearner && (
-                <div className="flex items-center gap-2 flex-wrap lg:col-span-3">
+                <div className="flex items-center gap-2 flex-wrap xl:col-span-3">
                   <span className="text-xs text-slate-400 mr-1">Practising as</span>
                   <button onClick={() => setActiveLearner(null)}
                     className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${!activeLearner ? 'bg-slate-900 text-white' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'}`}>
@@ -2488,13 +2467,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   floating on grey turned the page into a list of boxes. On a
                   phone they stay separate cards, which is what the phone
                   board does too. */}
-              <div className="contents lg:block lg:bg-white lg:rounded-[28px] lg:p-8">
+              <div className="contents xl:block xl:bg-white xl:rounded-[28px] xl:p-8">
 
               {/* The card's own top row on a wide screen: who this is, and a
                   way to reach any skill directly. The big greeting below is
                   the phone's, and showing both stacked two headings on top of
                   each other with the hero's eyebrow underneath. */}
-              <div className="hidden lg:flex items-center gap-3.5 mb-7">
+              <div className="hidden xl:flex items-center gap-3.5 mb-7">
                 <div className="flex-1 min-w-0 text-[11px] font-bold tracking-[.12em] uppercase text-slate-500">
                   Habari{firstName ? `, ${firstName}` : ''}
                 </div>
@@ -2518,7 +2497,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   of the row, which is the slot the phone board draws it in:
                   the only picture of the learner on the screen, and the way
                   to change it. */}
-              <div className="lg:hidden space-y-3">
+              <div className="xl:hidden space-y-3">
                 <div className="flex items-center gap-3">
                   <HorebBot size={44} className="shrink-0" />
                   <div className="min-w-0 flex-1">
@@ -2538,7 +2517,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               </div>
 
               {/* Daily-goal ring — mobile only, kept near the top so it's the first thing they see */}
-              <div className="lg:hidden">{goalRing}</div>
+              <div className="xl:hidden">{goalRing}</div>
 
               {/* Resume card — light, content-forward (fixes the 'AI' navy hero) */}
               {/* ===== THE HERO — the one thing to do now, named ===== */}
@@ -2546,21 +2525,21 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   must sit BESIDE the words, and wrapping it underneath (which
                   flex-wrap did) reads as a stray graphic. */}
               {heroItem && (
-                <div className="bg-white rounded-3xl px-5 py-5 lg:bg-transparent lg:rounded-none lg:p-0 lg:grid lg:grid-cols-[minmax(0,1fr)_200px] lg:items-end lg:gap-6">
+                <div className="bg-white rounded-3xl px-5 py-5 xl:bg-transparent xl:rounded-none xl:p-0 xl:grid xl:grid-cols-[minmax(0,1fr)_200px] xl:items-end xl:gap-6">
                   <div className="min-w-0">
                     <div className="text-[10.5px] font-bold tracking-[.12em] uppercase text-slate-500">
                       {heroItem.kind === 'review' ? 'Keep it fresh' : 'Carry on where you stopped'}
                     </div>
-                    <h1 className="mt-2.5 text-[31px] lg:text-[52px] leading-[1.03] lg:leading-[1.02] font-extrabold text-slate-900">
+                    <h1 className="mt-2.5 text-[31px] xl:text-[52px] leading-[1.03] xl:leading-[1.02] font-extrabold text-slate-900">
                       {heroTitle}
                       {heroQualifier && <><br /><span className="text-slate-400">{heroQualifier}</span></>}
                     </h1>
-                    <div className="mt-3 text-[13px] lg:text-[14px] font-medium text-slate-500">
+                    <div className="mt-3 text-[13px] xl:text-[14px] font-medium text-slate-500">
                       {sessionSummary} · about {sessionMins} min
                       {heroRecent.length > 0 && ` · last time you got ${heroRecent.filter(Boolean).length} of ${heroRecent.length}`}
                     </div>
                     <button onClick={() => startSessionItem(heroItem)}
-                      className="mt-5 w-full lg:w-auto h-14 lg:px-8 bg-amber-400 text-slate-900 font-extrabold text-[17px] inline-flex items-center justify-center gap-2 rounded-full">
+                      className="mt-5 w-full xl:w-auto h-14 xl:px-8 bg-amber-400 text-slate-900 font-extrabold text-[17px] inline-flex items-center justify-center gap-2 rounded-full">
                       {heroItem.kind === 'review' ? 'Start your review' : 'Continue'}
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M5 12h13M12 5.5 18.5 12 12 18.5" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -2570,7 +2549,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   {/* Drawn, not downloaded. A stock illustration here would be the
                       biggest asset on the page, on connections where the whole
                       point of the bundle work was to send less. */}
-                  <svg viewBox="0 0 230 180" aria-hidden="true" className="hidden lg:block w-full">
+                  <svg viewBox="0 0 230 180" aria-hidden="true" className="hidden xl:block w-full">
                     <circle cx="86" cy="74" r="56" fill="#6C4BF4" />
                     <path d="M86 18a56 56 0 0 1 0 112z" fill="#FFC93C" />
                     <rect x="120" y="96" width="78" height="30" rx="15" fill="#FF4F91" />
@@ -2583,10 +2562,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
 
               {/* Strands — inside the main card on a wide screen. */}
-              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 lg:bg-transparent lg:border-0 lg:shadow-none lg:rounded-none lg:p-0 lg:mt-9">
-                <div className="flex items-baseline justify-between mb-3 lg:mb-3.5">
-                  <span className="text-slate-800 font-semibold lg:text-[19px] lg:font-extrabold lg:tracking-tight">Your strands</span>
-                  <button onClick={() => setActiveTab('stats')} className="text-xs lg:text-[13px] lg:font-semibold text-amber-600 hover:text-amber-700">Details →</button>
+              <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 xl:bg-transparent xl:border-0 xl:shadow-none xl:rounded-none xl:p-0 xl:mt-9">
+                <div className="flex items-baseline justify-between mb-3 xl:mb-3.5">
+                  <span className="text-slate-800 font-semibold xl:text-[19px] xl:font-extrabold xl:tracking-tight">Your strands</span>
+                  <button onClick={() => setActiveTab('stats')} className="text-xs xl:text-[13px] xl:font-semibold text-amber-600 hover:text-amber-700">Details →</button>
                 </div>
                 {/* Five identical grey bars made the strands a table to be
                     read. As colour blocks they are a thing to be chosen from,
@@ -2599,7 +2578,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                 const blocks = strandsInReach(scopedStrandStats, progress, declaredG);
                 const worst = weakestStrand(blocks);
                 return (
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-3.5">{blocks.map(({ s, done, total }, i) => {
+                <div className="grid grid-cols-2 xl:grid-cols-3 gap-2.5 xl:gap-3.5">{blocks.map(({ s, done, total }, i) => {
                   const c = STRAND_BLOCK[s.name] || STRAND_BLOCK._;
                   const needsWork = s.name === worst;
                   // A mosaic rather than a uniform grid: the strand furthest
@@ -2611,28 +2590,28 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   // the last row it takes the whole width rather than sitting
                   // in a corner with two empty cells beside it.
                   const nStrands = blocks.length;
-                  const span = i === 0 ? 'lg:row-span-2 lg:min-h-[300px]'
-                    : i === 1 ? 'lg:col-span-2'
-                    : (i === nStrands - 1 && (nStrands - 2) % 2 === 1) ? 'lg:col-span-3 lg:min-h-0 lg:h-[116px]'
+                  const span = i === 0 ? 'xl:row-span-2 xl:min-h-[300px]'
+                    : i === 1 ? 'xl:col-span-2'
+                    : (i === nStrands - 1 && (nStrands - 2) % 2 === 1) ? 'xl:col-span-3 xl:min-h-0 xl:h-[116px]'
                     : '';
                   const count = s.assessed ? `${done} of ${total} skills` : 'Not checked yet';
                   return (
                     <button key={s.name} onClick={() => setActiveTab('skills')}
                       style={{ background: c.bg }}
-                      className={`h-24 lg:h-auto lg:min-h-[142px] rounded-2xl lg:rounded-3xl p-3 lg:p-5 flex flex-col justify-between text-left ${span}`}>
+                      className={`h-24 xl:h-auto xl:min-h-[142px] rounded-2xl xl:rounded-3xl p-3 xl:p-5 flex flex-col justify-between text-left ${span}`}>
                       {/* The badged block leads with the badge and moves its
                           count under the name, which is how the board draws
                           it — the one block that should not look like the
                           other four. */}
                       {needsWork
-                        ? <span className="self-start bg-[#16161A] text-white text-[9px] lg:text-[10px] font-bold tracking-[.06em] px-2 lg:px-2.5 py-1 rounded-full">NEEDS WORK</span>
-                        : <span className="text-[11px] lg:text-[12px] font-bold tabular-nums" style={{ color: c.meta }}>{count}</span>}
+                        ? <span className="self-start bg-slate-900 text-white text-[9px] xl:text-[10px] font-bold tracking-[.06em] px-2 xl:px-2.5 py-1 rounded-full">NEEDS WORK</span>
+                        : <span className="text-[11px] xl:text-[12px] font-bold tabular-nums" style={{ color: c.meta }}>{count}</span>}
                       <span className="flex items-end justify-between gap-1.5">
                         <span className="flex-1 min-w-0">
-                          <span className="block text-[17px] lg:text-[19px] font-extrabold leading-tight" style={{ color: c.ink }}>{s.name}</span>
-                          {needsWork && <span className="hidden lg:block mt-1 text-[12px] font-bold tabular-nums" style={{ color: c.meta }}>{count}</span>}
+                          <span className="block text-[17px] xl:text-[19px] font-extrabold leading-tight" style={{ color: c.ink }}>{s.name}</span>
+                          {needsWork && <span className="hidden xl:block mt-1 text-[12px] font-bold tabular-nums" style={{ color: c.meta }}>{count}</span>}
                         </span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="shrink-0 mb-0.5 lg:w-[18px] lg:h-[18px]">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="shrink-0 mb-0.5 xl:w-[18px] xl:h-[18px]">
                           <path d="M9 5.5 15.5 12 9 18.5" stroke={c.ink} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </span>
@@ -2658,7 +2637,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   Only for a learner on a team. Project work somebody else is
                   waiting on, so it sits with "Set by your teacher". */}
               {rocketSeat && onRocket && (
-                <button onClick={() => onRocket()} className="w-full text-left rounded-3xl p-5 bg-[#16161A] text-white flex items-center gap-4">
+                <button onClick={() => onRocket()} className="w-full text-left rounded-3xl p-5 bg-slate-900 text-white flex items-center gap-4">
                   <span className="flex-1 min-w-0">
                     <span className="block text-[11.5px] font-bold tracking-[.08em] uppercase text-[#FFC93C]">Rocket Challenge</span>
                     <span className="block text-[18px] font-extrabold leading-tight mt-1">Your team's next step is waiting</span>
@@ -2694,7 +2673,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                             <p className="mt-2 text-[13px] font-bold text-[#2A6B52]">Done — nothing left on this one.</p>
                           ) : (
                             <button onClick={() => startLesson(a.status.nextId)}
-                              className="mt-2.5 h-10 px-4 rounded-full bg-[#16161A] text-white text-[13px] font-bold hover:bg-[#2b2b33] transition-colors">
+                              className="mt-2.5 h-10 px-4 rounded-full bg-slate-900 text-white text-[13px] font-bold hover:bg-slate-800 transition-colors">
                               {label ? `Start: ${label}` : 'Start'}
                             </button>
                           )}
@@ -2720,12 +2699,12 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                     {todaySession.map((item, idx) => (
                       <button key={`${item.kind}-${item.id}`} onClick={() => startSessionItem(item)}
                         className={`w-full text-left rounded-2xl px-3 py-3 flex items-center gap-3 transition-colors ${
-                          idx === 0 ? 'bg-[#f5f6fc] border border-[#e2e5f6] hover:bg-[#eef0fb]' : 'hover:bg-slate-50'}`}>
+                          idx === 0 ? 'bg-[#f5f6fc] border border-violet-100 hover:bg-[#eef0fb]' : 'hover:bg-slate-50'}`}>
                         <span className={`w-8 h-8 rounded-full shrink-0 flex items-center justify-center text-[13px] font-extrabold ${
                           idx === 0 ? 'bg-amber-400 text-slate-900' : 'bg-slate-100 text-slate-400'}`}>{idx + 1}</span>
                         <span className="flex-1 min-w-0">
                           <span className={`block text-[10.5px] font-bold tracking-[.08em] uppercase ${
-                            item.kind === 'review' ? 'text-[#6d6fcb]' : 'text-amber-700'}`}>
+                            item.kind === 'review' ? 'text-violet-500' : 'text-amber-700'}`}>
                             {item.kind === 'review' ? 'Review' : 'New skill'}
                           </span>
                           <span className="block text-[15px] font-bold text-slate-900 truncate leading-tight">{item.name}</span>
@@ -2745,7 +2724,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               ) : todaySession.length === 1 ? null : (
                 /* Nothing planned at all — offer the one next step instead. */
                 <button onClick={cta.onClick} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-3xl p-5 flex items-center gap-4 hover:border-slate-300 transition-colors">
-                  <div className="w-[68px] h-[68px] rounded-2xl bg-[#f5f6fc] border border-[#e8e9f6] flex items-center justify-center shrink-0 text-[#6d6fcb]">
+                  <div className="w-[68px] h-[68px] rounded-2xl bg-[#f5f6fc] border border-[#e8e9f6] flex items-center justify-center shrink-0 text-violet-500">
                     <Icon name={cta.icon} className="w-7 h-7" />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -2761,7 +2740,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               {/* ===== PLACEMENT, EXPLAINED — a plan, not a verdict ===== */}
               {behindBy > 0 && catchUpSkills.length > 0 && (
                 <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5">
-                  <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Where you stand</div>
+                  <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-violet-500">Where you stand</div>
                   <p className="text-[16px] text-slate-800 mt-1.5 leading-snug">
                     You're in <b>{gradeLabel(declaredG)}</b>, and you're solid all the way to <b>{gradeLabel(estimatedGrade)}</b>.
                     {' '}Here's what to close next — start at the top.
@@ -2798,7 +2777,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                       const status = sp.mastered ? 'done' : (sp.attempts ? 'prog' : 'next');
                       const min = SKILLS[it.id]?.minProblems || 5;
                       const pct = status === 'done' ? 100 : (sp.attempts ? Math.min(100, Math.round((sp.correct || 0) / min * 100)) : 0);
-                      const tint = status === 'done' ? 'bg-[#eef4e7] text-[#4f6a30]' : status === 'prog' ? 'bg-[#fff4e2] text-[#a5670a]' : 'bg-slate-100 text-slate-400';
+                      const tint = status === 'done' ? 'bg-emerald-100 text-emerald-700' : status === 'prog' ? 'bg-[#fff4e2] text-[#a5670a]' : 'bg-slate-100 text-slate-400';
                       const chipTxt = status === 'done' ? 'Mastered' : status === 'prog' ? 'In progress' : 'Up next';
                       return (
                         <button key={it.id} onClick={() => startLesson(it.id)} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-slate-50 transition-colors text-left">
@@ -2809,7 +2788,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                             <span className="block text-[14px] font-semibold text-slate-900 truncate">{it.name || SKILLS[it.id]?.name}</span>
                             <span className="block text-xs text-slate-400 truncate">{SKILLS[it.id]?.strand || ''}</span>
                           </span>
-                          <span className="hidden sm:block w-20 h-1.5 rounded-full bg-slate-100 overflow-hidden shrink-0"><span className="block h-full rounded-full bg-[#8ca86a]" style={{ width: `${pct}%` }} /></span>
+                          <span className="hidden sm:block w-20 h-1.5 rounded-full bg-slate-100 overflow-hidden shrink-0"><span className="block h-full rounded-full bg-emerald-400" style={{ width: `${pct}%` }} /></span>
                           <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full shrink-0 ${status === 'next' ? 'bg-slate-100 text-slate-500' : tint}`}>{chipTxt}</span>
                         </button>
                       );
@@ -2835,7 +2814,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               {showJoin && (joinAllowed || linkAllowed) && (
                 <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
                   {joinStatus === 'ok' ? (
-                    <p className="text-sm text-[#5a7a3a] font-medium">{linkAllowed ? 'Linked. Practice the school sets shows here, and the school sees only whether each skill was mastered.' : 'Joined. Your teacher can now see your progress.'}</p>
+                    <p className="text-sm text-emerald-600 font-medium">{linkAllowed ? 'Linked. Practice the school sets shows here, and the school sees only whether each skill was mastered.' : 'Joined. Your teacher can now see your progress.'}</p>
                   ) : (
                     <>
                       <p className="text-sm font-semibold text-slate-800 mb-1">{linkAllowed ? 'Link to your school' : 'Join your class'}</p>
@@ -2865,7 +2844,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   statistic: face, name, grade, level, and how much of their
                   own grade they hold. Desktop only — the phone already leads
                   with the greeting and the goal ring. */}
-              <div className="hidden lg:block bg-white rounded-[28px] px-6 py-7 text-center">
+              <div className="hidden xl:block bg-white rounded-[28px] px-6 py-7 text-center">
                 <span className="inline-block align-middle"><AvatarButton size={86} /></span>
                 <div className="mt-3.5 text-[19px] font-extrabold tracking-tight text-slate-900 truncate">
                   {(activeLearner?.name || studentName || 'You').trim()}
@@ -2904,17 +2883,17 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
               {/* The picker opens under the card it belongs to, on whichever
                   screen the figure was tapped. */}
-              <div className="hidden lg:block">{avatarSheet}</div>
+              <div className="hidden xl:block">{avatarSheet}</div>
 
               {/* Quick stats. On a phone these sit under the real content and a
                   zero reads as failure, so only earned numbers show; the full
                   set stays in the desktop rail (and always in Progress). */}
               {(() => {
                 const all = [
-                  { icon: 'target', val: `${scopedStats.percent}%`, label: 'Mastery', color: 'text-[#5a7a3a]', earned: scopedStats.percent > 0 },
+                  { icon: 'target', val: `${scopedStats.percent}%`, label: 'Mastery', color: 'text-emerald-600', earned: scopedStats.percent > 0 },
                   { icon: 'zap', val: progress.totalXP || 0, label: 'XP', color: 'text-amber-500', earned: (progress.totalXP || 0) > 0 },
                   { icon: 'flame', val: progress.currentStreak || 0, label: 'Streak', color: 'text-orange-500', earned: (progress.currentStreak || 0) > 0 },
-                  { icon: 'check', val: `${scopedStats.accuracy}%`, label: 'Accuracy', color: 'text-[#6d6fcb]', earned: scopedStats.accuracy > 0 },
+                  { icon: 'check', val: `${scopedStats.accuracy}%`, label: 'Accuracy', color: 'text-violet-500', earned: scopedStats.accuracy > 0 },
                 ];
                 const Tile = ({ s }) => (
                   <div key={s.label} className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
@@ -2930,7 +2909,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                         and today's XP against the goal. Mastery and accuracy
                         moved into the profile card above, where "how much of
                         my grade do I hold" already lives. */}
-                    <div className="hidden lg:grid grid-cols-2 gap-3.5">
+                    <div className="hidden xl:grid grid-cols-2 gap-3.5">
                       <div className="bg-white rounded-[22px] px-4.5 py-4">
                         <div className="flex items-baseline gap-1.5">
                           <span className="text-[30px] font-extrabold tracking-tight text-slate-900 tabular-nums leading-none">{progress.currentStreak || 0}</span>
@@ -2954,7 +2933,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                         link at the very bottom of the rail where nobody would
                         find it. */}
                     <button onClick={() => setView('welcome')}
-                      className="hidden lg:block w-full text-left bg-slate-900 rounded-[28px] px-6 py-7 relative overflow-hidden">
+                      className="hidden xl:block w-full text-left bg-slate-900 rounded-[28px] px-6 py-7 relative overflow-hidden">
                       <svg width="150" height="150" viewBox="0 0 150 150" aria-hidden="true" className="absolute -right-10 -bottom-10 opacity-50">
                         <circle cx="75" cy="75" r="74" fill="none" stroke="#3A3A42" strokeWidth="2" />
                         <circle cx="75" cy="75" r="50" fill="none" stroke="#3A3A42" strokeWidth="2" />
@@ -2973,7 +2952,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                       </span>
                     </button>
                     {earned.length > 0 && (
-                      <div className={`lg:hidden grid gap-2.5 ${earned.length === 1 ? 'grid-cols-1' : 'grid-cols-2'}`}>
+                      <div className={`xl:hidden grid gap-2.5 ${earned.length === 1 ? 'grid-cols-1' : 'grid-cols-2'}`}>
                         {earned.map(s => <Tile key={s.label} s={s} />)}
                       </div>
                     )}
@@ -2984,11 +2963,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               {/* Live tutoring — a first-class door, not a footnote. Practice
                   and a real tutor are the two halves of the same promise. */}
               {onFindTutor && (
-                <div className="bg-[#121117] text-white rounded-lg p-5 -rotate-1">
+                <div className="bg-slate-900 text-white rounded-lg p-5 -rotate-1">
                   <div className="text-[12px] font-extrabold tracking-[.1em] uppercase text-[#ff7aac]" style={{ fontFamily: 'inherit', letterSpacing: '.1em' }}>Live help</div>
                   <div className="text-[22px] font-extrabold leading-tight mt-1">A tutor for the stuck part</div>
                   <p className="text-[13.5px] text-[#c9c9d1] mt-1 mb-3.5">Stuck on something, or want a person to walk it through with you? A checked Kenyan tutor, live, one to one.</p>
-                  <button onClick={onFindTutor} className="bg-white hover:bg-slate-100 text-[#121117] rounded-lg px-5 py-2.5 text-[15px] font-bold transition-colors">Find a live tutor</button>
+                  <button onClick={onFindTutor} className="bg-white hover:bg-slate-100 text-slate-900 rounded-lg px-5 py-2.5 text-[15px] font-bold transition-colors">Find a live tutor</button>
                 </div>
               )}
 
@@ -3011,7 +2990,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               </div>
 
               {/* Retake — phone only; the desktop rail has the dark card. */}
-              <button onClick={() => setView('welcome')} className="lg:hidden w-full text-center text-xs text-slate-400 hover:text-slate-700 py-2 transition-colors">Retake the check</button>
+              <button onClick={() => setView('welcome')} className="xl:hidden w-full text-center text-xs text-slate-400 hover:text-slate-700 py-2 transition-colors">Retake the check</button>
               </div>{/* ===== end RIGHT COLUMN ===== */}
             </div>
           );
@@ -3024,13 +3003,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             {reviews.length > 0 && (
               <button onClick={startReview} className="w-full bg-[#f5f6fc] border border-[#d3daf0] rounded-2xl p-4 mb-4 flex items-center justify-between hover:bg-[#eef0fb] transition-colors">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#6d6fcb] text-white rounded-xl flex items-center justify-center"><Icon name="refresh" className="w-5 h-5" /></div>
+                  <div className="w-10 h-10 bg-violet-500 text-white rounded-xl flex items-center justify-center"><Icon name="refresh" className="w-5 h-5" /></div>
                   <div className="text-left">
                     <div className="font-semibold text-slate-900">Review Session</div>
-                    <div className="text-xs text-[#6d6fcb]">{reviews.length} skills due — timed & interleaved</div>
+                    <div className="text-xs text-violet-500">{reviews.length} skills due — timed & interleaved</div>
                   </div>
                 </div>
-                <Icon name="arrow" className="w-5 h-5 text-[#6d6fcb]" />
+                <Icon name="arrow" className="w-5 h-5 text-violet-500" />
               </button>
             )}
 
@@ -3044,11 +3023,11 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             )}
 
             {/* Recommended path */}
-            <h2 className="text-lg font-semibold mb-3 flex items-center gap-2 text-slate-900"><Icon name="target" className="w-5 h-5 text-[#8ca86a]" /> Your Learning Path</h2>
+            <h2 className="text-lg font-semibold mb-3 flex items-center gap-2 text-slate-900"><Icon name="target" className="w-5 h-5 text-emerald-400" /> Your Learning Path</h2>
             {path.length > 0 ? (
               <div className="space-y-2 mb-6">{path.map((s, i) => (
                 <button key={s.id} onClick={() => startLesson(s.id)} className={`w-full flex items-center gap-3 p-3 rounded-xl border transition-colors ${s.type === 'gap' ? 'bg-[#fdf2ef] border-[#f2cdc2] hover:bg-[#fbe9e3]' : s.type === 'review' ? 'bg-[#f5f6fc] border-[#d3daf0] hover:bg-[#eef0fb]' : s.type === 'remediation' ? 'bg-[#fff7ec] border-[#f6e2bd]' : 'bg-white border-slate-200 hover:border-slate-300'}`}>
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold text-white shrink-0 ${s.type === 'gap' ? 'bg-[#c0663f]' : s.type === 'review' ? 'bg-[#6d6fcb]' : 'bg-[#8ca86a]'}`}>{i + 1}</div>
+                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold text-white shrink-0 ${s.type === 'gap' ? 'bg-amber-600' : s.type === 'review' ? 'bg-violet-500' : 'bg-emerald-400'}`}>{i + 1}</div>
                   <div className="flex-1 text-left">
                     <div className="font-medium text-slate-900 flex items-center gap-2">{s.name}{s.critical && <Icon name="zap" className="w-4 h-4 text-amber-500" />}</div>
                     <div className="text-xs text-slate-500">{s.type === 'gap' ? s.reason : s.type === 'review' ? `Review (${s.daysSince}d ago)` : `Grade ${s.grade} — ${s.strand}`}</div>
@@ -3068,14 +3047,14 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-4">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-slate-700">{curriculum === NATIVE ? 'Overall Mastery' : 'In-syllabus Mastery'}</span>
-                <span className="text-[#5a7a3a] font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
+                <span className="text-emerald-600 font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
               </div>
-              <div className="h-3 bg-slate-100 rounded-full overflow-hidden mb-4"><div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
+              <div className="h-3 bg-slate-100 rounded-full overflow-hidden mb-4"><div className="h-full bg-emerald-400 transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
               <div className="grid grid-cols-3 gap-2 text-center text-sm">{scopedStrandStats.map(s => (
                 <div key={s.name} className="bg-slate-50 border border-slate-100 rounded-lg p-2">
                   <div className="text-slate-500 text-xs">{s.name}</div>
                   <div className="font-bold text-slate-900">{s.assessed ? `${s.percent}%` : '—'}</div>
-                  {s.accuracy !== null && s.accuracy < 70 && <div className="text-xs text-[#c0663f]">{s.accuracy}%</div>}
+                  {s.accuracy !== null && s.accuracy < 70 && <div className="text-xs text-amber-600">{s.accuracy}%</div>}
                 </div>
               ))}</div>
             </div>
@@ -3118,14 +3097,14 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                 <div key={grade}>
                   <button onClick={() => setExpanded(isExp ? null : grade)} className="w-full flex items-center justify-between bg-white border border-slate-200 shadow-sm rounded-2xl p-4 hover:border-slate-300 transition-colors">
                     <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg text-white ${grade <= 6 ? 'bg-[#8ca86a]' : grade <= 8 ? 'bg-[#6d6fcb]' : grade <= 10 ? 'bg-purple-500' : 'bg-rose-500'}`}>{grade}</div>
+                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg text-white ${grade <= 6 ? 'bg-emerald-400' : grade <= 8 ? 'bg-violet-500' : grade <= 10 ? 'bg-purple-500' : 'bg-rose-500'}`}>{grade}</div>
                       <div className="text-left">
                         <div className="font-semibold text-slate-900">{gradeLabel(grade)}</div>
                         <div className="text-sm text-slate-500">{mastered}/{gradeSkills.length} mastered</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-16 h-2 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-[#8ca86a]" style={{ width: `${(mastered / gradeSkills.length) * 100}%` }} /></div>
+                      <div className="w-16 h-2 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-emerald-400" style={{ width: `${(mastered / gradeSkills.length) * 100}%` }} /></div>
                       <Icon name={isExp ? 'up' : 'down'} className="w-5 h-5 text-slate-400" />
                     </div>
                   </button>
@@ -3138,8 +3117,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                             const status = getStatus(skill.id, progress, ctx);
                             const sp = progress.skills[skill.id];
                             return (
-                              <button key={skill.id} onClick={() => status !== 'locked' && startLesson(skill.id)} disabled={status === 'locked'} className={`w-full flex items-center gap-3 p-3 rounded-xl transition-colors ${status === 'locked' ? 'bg-slate-50 border border-slate-100 opacity-70 cursor-not-allowed' : status === 'mastered' ? 'bg-[#eef4e7] border border-[#cfe0bd] hover:bg-[#e6efd9]' : status === 'in_progress' ? 'bg-[#f5f6fc] border border-[#e8e9f6] hover:bg-[#eef0fb]' : 'bg-white border border-slate-200 hover:border-slate-300'}`}>
-                                <div className={`w-7 h-7 rounded-lg flex items-center justify-center text-white shrink-0 ${status === 'locked' ? 'bg-slate-300' : status === 'mastered' ? 'bg-[#8ca86a]' : status === 'in_progress' ? 'bg-[#6d6fcb]' : 'bg-slate-300'}`}>
+                              <button key={skill.id} onClick={() => status !== 'locked' && startLesson(skill.id)} disabled={status === 'locked'} className={`w-full flex items-center gap-3 p-3 rounded-xl transition-colors ${status === 'locked' ? 'bg-slate-50 border border-slate-100 opacity-70 cursor-not-allowed' : status === 'mastered' ? 'bg-emerald-100 border border-[#cfe0bd] hover:bg-[#e6efd9]' : status === 'in_progress' ? 'bg-[#f5f6fc] border border-[#e8e9f6] hover:bg-[#eef0fb]' : 'bg-white border border-slate-200 hover:border-slate-300'}`}>
+                                <div className={`w-7 h-7 rounded-lg flex items-center justify-center text-white shrink-0 ${status === 'locked' ? 'bg-slate-300' : status === 'mastered' ? 'bg-emerald-400' : status === 'in_progress' ? 'bg-violet-500' : 'bg-slate-300'}`}>
                                   {status === 'locked' ? <Icon name="lock" className="w-3.5 h-3.5" /> : status === 'mastered' ? <Icon name="check" className="w-3.5 h-3.5" /> : status === 'in_progress' ? <Icon name="trend" className="w-3.5 h-3.5" /> : <Icon name="play" className="w-3.5 h-3.5" />}
                                 </div>
                                 <div className="flex-1 text-left">
@@ -3163,10 +3142,10 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
         {activeTab === 'stats' && (
           <div className="space-y-4">
             {/* Your Level — surfaces the engine's actual measurement (or a JS estimate) */}
-            <div className="bg-gradient-to-br from-[#eef4e7] to-white border border-[#cfe0bd] rounded-2xl p-5">
+            <div className="bg-gradient-to-br from-emerald-100 to-white border border-[#cfe0bd] rounded-2xl p-5">
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <div className="text-[11px] uppercase tracking-wide text-[#5a7a3a] mb-1">Your current level</div>
+                  <div className="text-[11px] uppercase tracking-wide text-emerald-600 mb-1">Your current level</div>
                   <div className="text-2xl font-bold leading-tight text-slate-900">{gradeLabel(estimatedGrade)}</div>
                 </div>
               </div>
@@ -3176,7 +3155,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             {/* Big numbers */}
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
-                <div className="text-3xl font-bold text-[#5a7a3a]">{scopedStats.mastered}</div>
+                <div className="text-3xl font-bold text-emerald-600">{scopedStats.mastered}</div>
                 <div className="text-sm text-slate-500">Skills Mastered</div>
               </div>
               <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
@@ -3184,7 +3163,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                 <div className="text-sm text-slate-500">Total XP</div>
               </div>
               <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
-                <div className="text-3xl font-bold text-[#6d6fcb]">{scopedStats.accuracy}%</div>
+                <div className="text-3xl font-bold text-violet-500">{scopedStats.accuracy}%</div>
                 <div className="text-sm text-slate-500">Accuracy</div>
               </div>
               <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 text-center">
@@ -3197,9 +3176,9 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
               <div className="flex items-center justify-between mb-1">
                 <span className="text-slate-700">{curriculum === NATIVE ? 'Overall mastery' : 'In-syllabus mastery'}</span>
-                <span className="text-[#5a7a3a] font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
+                <span className="text-emerald-600 font-bold">{scopedStats.percent}% ({scopedStats.mastered}/{scopedStats.total})</span>
               </div>
-              <div className="h-3 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
+              <div className="h-3 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-emerald-400 transition-all" style={{ width: `${scopedStats.percent}%` }} /></div>
               {scopedStats.enrichment > 0 && (
                 <p className="text-xs text-amber-700 mt-2">+ {scopedStats.enrichment} enrichment skill{scopedStats.enrichment === 1 ? '' : 's'} beyond the {curriculaOptions.find(c => c.id === curriculum)?.shortName || ''} syllabus — explore them anytime in All Skills.</p>
               )}
@@ -3211,7 +3190,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               <div className="space-y-2">{scopedGradeStats.map(gs => (
                 <div key={gs.grade} className="flex items-center gap-3">
                   <span className="text-sm text-slate-500 w-28 truncate" title={gradeLabel(gs.grade)}>{gradeLabel(gs.grade)}</span>
-                  <div className="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-[#8ca86a] transition-all" style={{ width: `${gs.percent}%` }} /></div>
+                  <div className="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div className="h-full bg-emerald-400 transition-all" style={{ width: `${gs.percent}%` }} /></div>
                   <span className="text-sm font-medium w-12 text-right text-slate-700">{gs.percent}%</span>
                 </div>
               ))}</div>
@@ -3224,7 +3203,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                 return (
                   <div key={ss.name} className="flex items-center gap-3">
                     <span className="text-sm text-slate-500 w-24 truncate" title={ss.name}>{ss.name}</span>
-                    <div className="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div className={`h-full transition-all ${ss.assessed ? 'bg-[#8ca86a]' : 'bg-slate-200'}`} style={{ width: `${ss.percent}%` }} /></div>
+                    <div className="flex-1 h-3 bg-slate-100 rounded-full overflow-hidden"><div className={`h-full transition-all ${ss.assessed ? 'bg-emerald-400' : 'bg-slate-200'}`} style={{ width: `${ss.percent}%` }} /></div>
                     {ss.assessed
                       ? <span className="text-sm font-medium w-16 text-right text-slate-700">{`${ss.mastered}/${ss.total}`}</span>
                       : <span className="text-xs text-slate-400 w-16 text-right">not assessed</span>}
@@ -3235,7 +3214,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
             {/* Actions */}
             <div className="space-y-2">
-              <button onClick={() => setView('welcome')} className="w-full p-3 bg-white border border-slate-200 rounded-2xl text-[#6d6fcb] hover:bg-slate-50 transition-colors text-sm font-medium">Retake Diagnostic Test</button>
+              <button onClick={() => setView('welcome')} className="w-full p-3 bg-white border border-slate-200 rounded-2xl text-violet-500 hover:bg-slate-50 transition-colors text-sm font-medium">Retake Diagnostic Test</button>
             </div>
           </div>
         )}
@@ -3271,17 +3250,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
           <p>Adaptive learning path · Spaced repetition · Knowledge graph</p>
         </div>
         </div>
-      </main>
-
-      {/* ===== MOBILE BOTTOM NAV ===== */}
-      <nav className="lg:hidden fixed inset-x-0 bottom-0 z-40 bg-white border-t border-slate-200 flex justify-around px-1 pt-2" style={{ paddingBottom: 'calc(0.5rem + env(safe-area-inset-bottom))' }}>
-        {[['overview', 'Home', 'home'], ['path', 'Path', 'target'], ['skills', 'Skills', 'map'], ['stats', 'Progress', 'bar'], ['awards', 'Awards', 'trophy']].map(([id, label, icon]) => (
-          <button key={id} onClick={() => setActiveTab(id)} className={`flex flex-col items-center gap-0.5 flex-1 py-1 transition-colors ${activeTab === id ? 'text-slate-900' : 'text-slate-400'}`}>
-            <Icon name={icon} className="w-[21px] h-[21px]" /><span className="text-[10px] font-semibold">{label}</span><i className={`block h-[3px] w-4 rounded-full ${activeTab === id ? 'bg-[#ff7aac]' : 'bg-transparent'}`} />
-          </button>
-        ))}
-      </nav>
-    </div>
+</AppShell>
   );
 }
 

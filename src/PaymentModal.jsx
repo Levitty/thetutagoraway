@@ -35,13 +35,13 @@ const PaymentStatus = ({ status, message }) => {
     },
     processing: {
       animation: 'https://assets8.lottiefiles.com/packages/lf20_4XmSkB.json',
-      color: 'text-[#6d6fcb]',
-      bg: 'bg-[#ecedfa]'
+      color: 'text-violet-500',
+      bg: 'bg-slate-100'
     },
     success: {
       animation: 'https://assets2.lottiefiles.com/packages/lf20_jbrw3hcz.json',
-      color: 'text-[#4f7233]',
-      bg: 'bg-[#eef4e7]',
+      color: 'text-emerald-700',
+      bg: 'bg-emerald-100',
       loop: false
     },
     // Paid at Paystack but not yet confirmed by our server: calm, not a spinner.
@@ -261,14 +261,14 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
                   )}
                   <div className="border-t border-slate-200 pt-2 flex justify-between">
                     <span className="text-slate-700 font-semibold">Total</span>
-                    <span className="text-[#6d6fcb] font-bold">{currency} {amount.toLocaleString()}</span>
+                    <span className="text-violet-500 font-bold">{currency} {amount.toLocaleString()}</span>
                   </div>
                 </div>
               </div>
 
               {/* Payment method info */}
-              <div className="flex items-center gap-3 p-3 bg-[#ecedfa] rounded-xl">
-                <div className="w-10 h-10 bg-[#6d6fcb] rounded-xl flex items-center justify-center text-white">
+              <div className="flex items-center gap-3 p-3 bg-slate-100 rounded-xl">
+                <div className="w-10 h-10 bg-violet-500 rounded-xl flex items-center justify-center text-white">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <rect x="2" y="5" width="20" height="14" rx="2"/>
                     <line x1="2" y1="10" x2="22" y2="10"/>
@@ -298,7 +298,7 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
                 <span className="text-xs text-slate-400">Secured by</span>
-                <span className="text-xs font-semibold text-[#6d6fcb]">Paystack</span>
+                <span className="text-xs font-semibold text-violet-500">Paystack</span>
               </div>
             </div>
           )}
@@ -306,8 +306,8 @@ export const PaymentModal = ({ booking, tutor, user, onClose, onSuccess }) => {
           {/* Step: Processing */}
           {step === 'processing' && (
             <div className="py-8 text-center space-y-4">
-              <div className="w-16 h-16 mx-auto bg-[#eef4e7] rounded-full flex items-center justify-center">
-                <div className="w-8 h-8 border-4 border-[#6d6fcb] border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 border-4 border-violet-500 border-t-transparent rounded-full animate-spin"></div>
               </div>
               <div>
                 <h3 className="font-semibold text-slate-900">Processing payment</h3>

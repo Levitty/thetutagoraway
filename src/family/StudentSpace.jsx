@@ -14,6 +14,7 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from '../supabase';
 import { HorebBot } from '../ai-tutor/HorebBot.jsx';
 import { useHorebLook } from '../ai-tutor/horebLook.js';
+import { useInFrame } from '../shell/AppShell.jsx';
 import {
   startStudentMode, isOlderLearner, getLook, setLook,
   hasPin, setPin, checkPin, pinLockedFor, setFamilyDevice,
@@ -30,14 +31,18 @@ const GRADES = ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6'
 
 // ---- Shared pieces ---------------------------------------------------------
 
-export const Shell = ({ header, children, wide = false }) => (
-  <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
-    {header}
-    <div className="app-scroll">
-      <div className={`${wide ? 'max-w-3xl' : 'max-w-md'} mx-auto px-4 pt-5 pb-16 space-y-3`}>{children}</div>
+export const Shell = ({ header, children, wide = false }) => {
+  const framed = useInFrame();
+  if (framed) return <div className={`${wide ? 'max-w-3xl' : 'max-w-2xl'} mx-auto space-y-3`}>{children}</div>;
+  return (
+    <div className="min-h-screen bg-slate-100 text-slate-900 app-shell">
+      {header}
+      <div className="app-scroll">
+        <div className={`${wide ? 'max-w-3xl' : 'max-w-md'} mx-auto px-4 pt-5 pb-16 space-y-3`}>{children}</div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 export const Header = ({ children }) => (
   <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
     <div className="max-w-3xl mx-auto px-4 min-h-14 py-2.5 flex items-center gap-3">{children}</div>
@@ -53,7 +58,7 @@ export const PrimaryButton = ({ children, className = '', ...p }) => (
   <button {...p} className={`w-full bg-amber-400 hover:bg-amber-300 disabled:opacity-50 text-slate-900 rounded-xl py-3 font-bold text-[15px] transition-colors ${className}`}>{children}</button>
 );
 const IndigoButton = ({ children, className = '', ...p }) => (
-  <button {...p} className={`w-full bg-[#6d6fcb] hover:bg-[#5658b8] disabled:opacity-50 text-white rounded-xl py-3 font-bold text-[15px] transition-colors ${className}`}>{children}</button>
+  <button {...p} className={`w-full bg-violet-500 hover:bg-violet-600 disabled:opacity-50 text-white rounded-xl py-3 font-bold text-[15px] transition-colors ${className}`}>{children}</button>
 );
 export const BackIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
@@ -104,10 +109,10 @@ const PinPad = ({ onComplete, error = '', busy = false }) => {
     <div className="space-y-5">
       <div className="flex justify-center gap-3" aria-label={`${pin.length} of 4 digits entered`}>
         {[0, 1, 2, 3].map(i => (
-          <span key={i} className={`w-3.5 h-3.5 rounded-full border-2 ${error ? 'border-[#c0663f]' : 'border-slate-700'} ${i < pin.length ? (error ? 'bg-[#c0663f]' : 'bg-slate-700') : ''}`} />
+          <span key={i} className={`w-3.5 h-3.5 rounded-full border-2 ${error ? 'border-amber-600' : 'border-slate-700'} ${i < pin.length ? (error ? 'bg-amber-600' : 'bg-slate-700') : ''}`} />
         ))}
       </div>
-      <div className="min-h-5 text-center text-[13px] font-semibold text-[#c0663f]" aria-live="polite">{error}</div>
+      <div className="min-h-5 text-center text-[13px] font-semibold text-amber-600" aria-live="polite">{error}</div>
       <div className="grid grid-cols-3 gap-2.5 max-w-[280px] mx-auto">
         {['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', 'del'].map((k, i) => k === ''
           ? <span key={i} />
@@ -190,11 +195,11 @@ export const HandOver = ({ user, onStart, onCancel }) => {
 
   if (step === 'ready') {
     return (
-      <div className="min-h-screen app-shell text-slate-900" style={{ background: 'linear-gradient(180deg,#ecedfa,#eef0f2)' }}>
+      <div className="min-h-screen app-shell text-slate-900" style={{ background: 'var(--hb-ground)' }}>
         <div className="app-scroll">
           <div className="max-w-md mx-auto px-5 pt-16 pb-16 flex flex-col items-center text-center gap-4">
             <HorebBot size={96} mood="cheer" />
-            <Eyebrow tone="text-[#6d6fcb]">All set</Eyebrow>
+            <Eyebrow tone="text-violet-500">All set</Eyebrow>
             <h1 className="text-[27px] font-extrabold tracking-tight leading-tight">Now give this {device} to {n}.</h1>
             <p className="text-slate-500">
               {isOlderLearner(chosen?.grade)
@@ -222,13 +227,13 @@ export const HandOver = ({ user, onStart, onCancel }) => {
       {kids === null && <div className="text-center text-sm text-slate-400 py-6">Loading…</div>}
       {kids?.map(k => (
         <button key={k.id} onClick={() => setChosen(k)}
-          className={`w-full flex items-center gap-3 bg-white border rounded-2xl p-4 text-left shadow-sm transition-colors ${chosen?.id === k.id ? 'border-[#6d6fcb] ring-2 ring-[#6d6fcb]/20' : 'border-slate-200 hover:border-slate-300'}`}>
+          className={`w-full flex items-center gap-3 bg-white border rounded-2xl p-4 text-left shadow-sm transition-colors ${chosen?.id === k.id ? 'border-violet-500 ring-2 ring-violet-500/20' : 'border-slate-200 hover:border-slate-300'}`}>
           <LearnerAvatar name={k.name} look={getLook(k.id)} size={40} />
           <span className="flex-1 min-w-0">
             <span className="block font-bold text-[15px] truncate">{k.name}</span>
             {k.grade && <span className="block text-[13px] text-slate-500">{k.grade}</span>}
           </span>
-          <span className={`w-5 h-5 rounded-full border-2 ${chosen?.id === k.id ? 'border-[#6d6fcb] bg-[#6d6fcb]' : 'border-slate-300'}`} />
+          <span className={`w-5 h-5 rounded-full border-2 ${chosen?.id === k.id ? 'border-violet-500 bg-violet-500' : 'border-slate-300'}`} />
         </button>
       ))}
       {adding ? (
@@ -236,20 +241,20 @@ export const HandOver = ({ user, onStart, onCancel }) => {
           <Eyebrow>Add a child</Eyebrow>
           <label className="block text-[12.5px] font-bold text-slate-700">First name
             <input value={newName} onChange={e => setNewName(e.target.value)} autoComplete="off"
-              className="mt-1.5 w-full bg-white border-[1.5px] border-slate-200 rounded-xl px-3 py-2.5 text-[15px] font-semibold focus:outline-none focus:border-[#6d6fcb]" />
+              className="mt-1.5 w-full bg-white border-[1.5px] border-slate-200 rounded-xl px-3 py-2.5 text-[15px] font-semibold focus:outline-none focus:border-violet-500" />
           </label>
           <label className="block text-[12.5px] font-bold text-slate-700">Grade in school
             <select value={newGrade} onChange={e => setNewGrade(e.target.value)}
-              className="mt-1.5 w-full bg-white border-[1.5px] border-slate-200 rounded-xl px-3 py-2.5 text-[15px] font-semibold focus:outline-none focus:border-[#6d6fcb]">
+              className="mt-1.5 w-full bg-white border-[1.5px] border-slate-200 rounded-xl px-3 py-2.5 text-[15px] font-semibold focus:outline-none focus:border-violet-500">
               {GRADES.map(g => <option key={g}>{g}</option>)}
             </select>
           </label>
           <PrimaryButton onClick={addChild} disabled={busy}>{busy ? 'Saving…' : 'Save'}</PrimaryButton>
         </Card>
       ) : (
-        <button onClick={() => setAdding(true)} className="text-sm font-semibold text-[#6d6fcb] px-1">+ Add a child</button>
+        <button onClick={() => setAdding(true)} className="text-sm font-semibold text-violet-500 px-1">+ Add a child</button>
       )}
-      {err && <div className="text-sm font-semibold text-[#c0663f] px-1">{err}</div>}
+      {err && <div className="text-sm font-semibold text-amber-600 px-1">{err}</div>}
       {chosen && !adding && <PrimaryButton onClick={next} disabled={pinSet === null}>Continue</PrimaryButton>}
       {pinSet && <button onClick={() => { setErr(''); setStep('pin'); }} className="block text-[13px] font-semibold text-slate-500 underline underline-offset-4 px-1">Change parent PIN</button>}
     </Shell>
@@ -284,7 +289,7 @@ const LookPicker = ({ mode, onDone }) => {
         <div className="grid grid-cols-3 sm:grid-cols-6 gap-2.5">
           {Object.keys(BUDDIES).map(id => (
             <button key={id} onClick={() => setLocal({ kind: 'buddy', id })} aria-label={id} aria-pressed={look.id === id}
-              className={`aspect-square rounded-2xl border-2 bg-white p-2 transition-colors ${look.id === id ? 'border-[#6d6fcb] bg-[#ecedfa]' : 'border-slate-200'}`}>
+              className={`aspect-square rounded-2xl border-2 bg-white p-2 transition-colors ${look.id === id ? 'border-violet-500 bg-slate-100' : 'border-slate-200'}`}>
               <svg viewBox="0 0 64 64" className="w-full h-full">{BUDDIES[id]}</svg>
             </button>
           ))}
@@ -346,14 +351,14 @@ export const StudentHome = ({ mode, bookings, onPractice, onWriting, onJoin, onL
         </Card>
 
         {onWriting && <Card className="space-y-2">
-          <Eyebrow tone="text-[#6d6fcb]">Writing</Eyebrow>
+          <Eyebrow tone="text-violet-500">Writing</Eyebrow>
           <div className="text-[16px] font-bold">Composition and insha</div>
           <p className="text-sm text-slate-500">Write, get a mark out of 20 and the exact lines to fix.</p>
           <button onClick={onWriting} className="w-full bg-white border border-slate-200 hover:bg-slate-50 rounded-xl py-2.5 font-bold text-[14px] text-slate-800 transition-colors">Open writing</button>
         </Card>}
 
         <Card className="space-y-2">
-          <Eyebrow tone="text-[#5a7a3a]">Your lessons</Eyebrow>
+          <Eyebrow tone="text-emerald-600">Your lessons</Eyebrow>
           {next ? (
             <>
               <div className="text-[16px] font-bold">{next.subject}</div>
@@ -403,7 +408,7 @@ export const PinGate = ({ userId, learnerName, onUnlock, onCancel, onSignOut }) 
   };
 
   return (
-    <div className="fixed inset-0 z-[70] bg-[#eef0f2] text-slate-900 app-shell">
+    <div className="fixed inset-0 z-[70] bg-slate-100 text-slate-900 app-shell">
       <Header>
         <button onClick={onCancel} aria-label="Back" className="text-slate-400 hover:text-slate-700"><BackIcon /></button>
         <h1 className="text-[17px] font-extrabold tracking-tight">Parent PIN</h1>
@@ -412,7 +417,7 @@ export const PinGate = ({ userId, learnerName, onUnlock, onCancel, onSignOut }) 
         <div className="max-w-sm mx-auto px-4 pt-8 pb-16 space-y-5">
           <p className="text-center text-slate-500">{learnerName ? `Enter the parent PIN to leave ${firstName(learnerName)}'s space.` : 'Enter the parent PIN to open the parent side.'}</p>
           {lockMs > 0
-            ? <div className="text-center font-semibold text-[#c0663f]">Too many tries. Try again in {Math.ceil(lockMs / 1000)} seconds.</div>
+            ? <div className="text-center font-semibold text-amber-600">Too many tries. Try again in {Math.ceil(lockMs / 1000)} seconds.</div>
             : <PinPad onComplete={submit} error={err} busy={busy} />}
           {!forgot ? (
             <button onClick={() => setForgot(true)} className="block mx-auto text-[13px] font-semibold text-slate-500 underline underline-offset-4">Forgot the PIN?</button>
@@ -492,7 +497,7 @@ export const WhoIsPractising = ({ user, onPick, onParent }) => {
       .then(({ data }) => setKids(data || []));
   }, [user?.id]);
   return (
-    <div className="min-h-screen app-shell text-slate-900" style={{ background: 'linear-gradient(180deg,#ecedfa,#eef0f2)' }}>
+    <div className="min-h-screen app-shell text-slate-900" style={{ background: 'var(--hb-ground)' }}>
       <div className="app-scroll">
         <div className="max-w-2xl mx-auto px-5 pt-14 pb-16 flex flex-col items-center gap-6">
           <HorebBot size={72} mood="cheer" />
@@ -505,7 +510,7 @@ export const WhoIsPractising = ({ user, onPick, onParent }) => {
             <div className="flex flex-wrap justify-center gap-4 w-full max-w-lg">
               {kids.map(k => (
                 <button key={k.id} onClick={() => onPick(k)}
-                  className="w-[150px] bg-white border-2 border-[#121117] hover:bg-[#fff0f5] rounded-lg p-5 flex flex-col items-center gap-3 transition">
+                  className="w-[150px] bg-white border-2 border-slate-900 hover:bg-[#fff0f5] rounded-lg p-5 flex flex-col items-center gap-3 transition">
                   <LearnerAvatar name={k.name} look={getLook(k.id)} size={72} />
                   <span className="text-[22px] font-extrabold">{firstName(k.name)}</span>
                   {k.grade && <span className="text-[13px] text-slate-400 -mt-2">{k.grade}</span>}
@@ -514,7 +519,7 @@ export const WhoIsPractising = ({ user, onPick, onParent }) => {
             </div>
           )}
           <button onClick={onParent}
-            className="mt-4 inline-flex items-center gap-2 h-11 px-5 rounded-lg border-2 border-[#121117] bg-transparent text-[#121117] hover:bg-white text-[15px] font-bold">
+            className="mt-4 inline-flex items-center gap-2 h-11 px-5 rounded-lg border-2 border-slate-900 bg-transparent text-slate-900 hover:bg-white text-[15px] font-bold">
             <LockIcon /> Parent
           </button>
         </div>

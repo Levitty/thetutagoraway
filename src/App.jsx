@@ -15,7 +15,6 @@ import { sendEmail } from './email.js';
 import { initPush, requestPush, clearPush } from './push.js';
 import { PLANS, availablePlans, paywallActive, isPro, isFreeWeek, passDaysLeft, isNetworkError } from './subscription.js';
 import { rememberPendingPass, forgetPendingPass, readPendingPass, recoverPendingPass as recoverPending, confirmPendingPass as confirmPending } from './pendingPass.js';
-import horebGraph from './horebGraph.json';
 import { HorebBot } from './ai-tutor/HorebBot.jsx';
 import { Icon } from './ai-tutor/components/Icons.jsx';
 import { HandOver, StudentHome, PinGate, WhoIsPractising, FamilyTabletSetup } from './family/StudentSpace.jsx';
@@ -30,6 +29,9 @@ import SiteTeach from './site/Teach.jsx';
 import SiteWhy from './site/Why.jsx';
 import { HALF_HOUR_LESSONS } from './site/features.js';
 import { SiteIcon, SiteNav, SiteFooter } from './site/ui.jsx';
+import { AppShell, ShellContext, TabBar } from './shell/AppShell.jsx';
+import { TIcon } from './shell/icons.jsx';
+import { menuFor, personKind } from './shell/menus.js';
 import { AvatarArt, AvatarPicker, isAvatarId, DEFAULT_AVATAR } from './avatars/Avatars.jsx';
 import { CheckStart, CheckResult, getCheck, setFocus } from './site/Check.jsx';
 import { findMissingStep, skillLabel } from './site/missingStep.js';
@@ -107,7 +109,7 @@ class ErrorBoundary extends React.Component {
               The page hit an unexpected error. Your data is safe — this is just a display glitch.
             </p>
             <div className="flex gap-3 mt-6">
-              <button onClick={() => window.location.reload()} className="flex-1 py-3 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+              <button onClick={() => window.location.reload()} className="flex-1 py-3 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-colors">
                 Reload page
               </button>
               <button onClick={() => { window.location.href = '/'; }} className="flex-1 py-3 bg-slate-100 text-slate-700 font-semibold rounded-xl hover:bg-slate-200 transition-colors">
@@ -519,7 +521,7 @@ const AccountSettings = ({ profile, user, onClose, onLogout }) => {
         </div>
 
         <div className="p-6 space-y-6">
-          {message && <div className="p-3 bg-[#ecedfa] text-[#6d6fcb] text-sm rounded-xl">{message}</div>}
+          {message && <div className="p-3 bg-slate-100 text-violet-500 text-sm rounded-xl">{message}</div>}
 
           {/* Data Export */}
           <div>
@@ -721,7 +723,7 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
               ))}
             </div>
             {confirming && <div className="mt-3 text-[13.5px] text-slate-600 leading-snug" role="status">Checking your M-Pesa payment… this can take a minute after you enter your PIN.</div>}
-            {err && <div className="mt-3 text-[13.5px] text-[#b3261e] leading-snug">{err}</div>}
+            {err && <div className="mt-3 text-[13.5px] text-red-600 leading-snug">{err}</div>}
             <button onClick={pay} disabled={busy || confirming} className="w-full mt-5 bg-amber-400 hover:bg-amber-300 disabled:opacity-60 text-slate-900 rounded-2xl py-3.5 font-bold text-[15px] transition-colors">
               {busy ? 'Opening M-Pesa…' : `Pay KSh ${PLANS[plan].kes} with M-Pesa or card`}
             </button>
@@ -755,7 +757,7 @@ const PaywallModal = ({ user, subscription, onClose, onUnlocked }) => {
                   </button>
                   <button onClick={() => setClaimOpen(false)} className="px-3 text-slate-500 text-sm font-semibold">Cancel</button>
                 </div>
-                {claimMsg && <p className="mt-2 text-[13px] leading-snug text-[#b3261e]">{claimMsg}</p>}
+                {claimMsg && <p className="mt-2 text-[13px] leading-snug text-red-600">{claimMsg}</p>}
               </div>
             )}
           </>
@@ -1365,7 +1367,7 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
 // both the light dashboard header and the transparent marketing nav.
 const MomentumChipView = ({ level, streak, onClick }) => (
   <button onClick={onClick} title="Open HOREB" className="flex items-center gap-1.5 bg-white/90 border border-slate-200 shadow-sm rounded-full pl-2 pr-2.5 py-1 hover:bg-white transition-colors">
-    <Icon name="brain" className="w-4 h-4 text-[#6d6fcb]" />
+    <Icon name="brain" className="w-4 h-4 text-violet-500" />
     <span className="text-xs font-semibold text-slate-700">Lv {level}</span>
     {streak > 0 && <span className="text-xs font-semibold text-amber-600 flex items-center gap-0.5"><Icon name="flame" className="w-3.5 h-3.5" />{streak}</span>}
   </button>
@@ -1385,7 +1387,7 @@ const MomentumChip = ({ userId, onClick }) => {
 // The signed-in family's home (web). Parents first: their children, handing
 // over the phone, and lessons. Students use the same screen without the
 // children section. On the public site's coral design.
-const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bookingsLoading, onNavigate, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, isAdmin, onOpenAccountSettings, onStartPractice, familyTablet = false, onFamilyTablet, onLockFamilyTablet, onStopFamilyTablet, onOpenPlan }) => {
+const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bookingsLoading, onNavigate, onStartLesson, onRefreshProfile, onStartPractice, familyTablet = false, onFamilyTablet, onLockFamilyTablet, onStopFamilyTablet, onOpenPlan }) => {
   const [tab, setTab] = useState('upcoming');
   const [showEditProfile, setShowEditProfile] = useState(false);
   const [reviewBooking, setReviewBooking] = useState(null);
@@ -1505,24 +1507,10 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
   );
 
   return (
+    <AppShell active={isStudentAccount ? 'lessons' : 'home'}>
     <div className="tg dashboard">
-      <nav className="nav lined"><div className="in">
-        <button type="button" className="logo" onClick={() => onNavigate('home')} aria-label="Tutagora home">tutagora<i /></button>
-        <div className="links">
-          <button type="button" onClick={() => onNavigate('tutors')}>Find a tutor</button>
-          <button type="button" onClick={() => onNavigate('clubs')}>Clubs</button>
-          <button type="button" onClick={() => onNavigate('spreadsheet')}>Spreadsheet</button>
-          {isAdmin && <button type="button" onClick={() => onNavigate('admin')}>Admin</button>}
-        </div>
-        <div className="right">
-          <MessageButton onClick={onOpenMessages} />
-          <Avatar src={profile?.avatar_url} preset={profile?.avatar} name={profile?.full_name} size={34} />
-        </div>
-      </div></nav>
-
-      <header className="dhero"><div className="in">
-        <div>
-          <div className="kicker">{isStudentAccount ? 'Your space' : accountType === 'parent' ? 'Parent' : 'Your account'}</div>
+      <header className="dhero">
+        <div className="dhello">
           <h1 className="display">Hi {first}.</h1>
           <p className="lead">{nextLesson ? `${upcoming.length} lesson${upcoming.length === 1 ? '' : 's'} coming up.` : isStudentAccount ? 'Pick up where you left off.' : children.length ? 'Hand over the phone for today\'s 15 minutes.' : 'Add your child, then hand over the phone.'}</p>
         </div>
@@ -1533,7 +1521,7 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
             <span>with {nextLesson.tutors?.profiles?.full_name} · {when(nextLesson)}</span>
             <div style={{ marginTop: 14 }}>
               {nextLesson.status === 'confirmed'
-                ? <button type="button" className="btn white" onClick={() => onStartLesson(nextLesson)}>Join lesson</button>
+                ? <button type="button" className="btn" onClick={() => onStartLesson(nextLesson)}>Join lesson</button>
                 : <span className="pill">Awaiting payment</span>}
             </div>
           </div>
@@ -1542,12 +1530,12 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
             <div className="kicker">No lessons booked</div>
             <b>A tutor for the stuck part</b>
             <span>Live, one-to-one, inside Tutagora.</span>
-            <div style={{ marginTop: 14 }}><button type="button" className="btn white" onClick={() => onNavigate('tutors')}>Find a tutor</button></div>
+            <div style={{ marginTop: 14 }}><button type="button" className="btn" onClick={() => onNavigate('tutors')}>Find a tutor</button></div>
           </div>
         )}
-      </div></header>
+      </header>
 
-      <div className="in dgrid">
+      <div className="dgrid">
         <main style={{ minWidth: 0 }}>
           {/* Practice pass: how long is left, and a way to keep going. */}
           {paywallActive() && subscription?.plan !== 'setup_pending' && (() => {
@@ -1678,12 +1666,7 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
             )}
           </section>
 
-          <section className="proof dstats" aria-label="Your numbers"><div className="in" style={{ padding: 0 }}>
-            <div className="s"><b>{past.length}</b><span>lessons done</span></div>
-            <div className="s"><b>{upcoming.length}</b><span>coming up</span></div>
-            <div className="s"><b>{uniqueTutors}</b><span>tutors</span></div>
-            <div className="s"><b>KSh {totalSpent.toLocaleString()}</b><span>spent</span></div>
-          </div></section>
+          <p className="dline">{past.length} lessons done · {uniqueTutors} {uniqueTutors === 1 ? 'tutor' : 'tutors'} · KSh {totalSpent.toLocaleString()} spent</p>
         </main>
 
         <aside className="dside">
@@ -1699,13 +1682,9 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
             <div className="kicker muted" style={{ marginBottom: 6 }}>Account</div>
             <button type="button" onClick={() => setShowEditProfile(true)}><SiteIcon name="pen" />Edit profile</button>
             <button type="button" onClick={() => setShowProgress(true)}><SiteIcon name="chart" />Lesson progress</button>
-            {!isStudentAccount && <button type="button" onClick={() => onNavigate('family')}><SiteIcon name="target" />Goals, messages and Sunday report</button>}
-            {onOpenAccountSettings && <button type="button" onClick={onOpenAccountSettings}><SiteIcon name="gear" />Account and data</button>}
-            <button type="button" className="out" onClick={onLogout}><SiteIcon name="back" />Sign out</button>
           </div>
         </aside>
       </div>
-      <div style={{ height: 40 }} />
 
       {showEditProfile && (
         <StudentProfileEditor profile={profile} onClose={() => setShowEditProfile(false)}
@@ -1723,6 +1702,7 @@ const StudentDashboard = ({ profile, user, subscription, onGetPass, bookings, bo
         <StudentProgressModal profile={profile} bookings={bookings} onClose={() => setShowProgress(false)} />
       )}
     </div>
+    </AppShell>
   );
 };
 
@@ -1797,12 +1777,12 @@ const StudentProgressModal = ({ profile, bookings, onClose }) => {
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-3">
-            <div className="bg-[#eef4e7] rounded-xl p-4 text-center">
-              <div className="text-2xl font-extrabold tracking-tight text-[#6d6fcb]">{totalHours}</div>
+            <div className="bg-emerald-100 rounded-xl p-4 text-center">
+              <div className="text-2xl font-extrabold tracking-tight text-violet-500">{totalHours}</div>
               <div className="text-xs text-slate-500">Hours</div>
             </div>
-            <div className="bg-[#ecedfa] rounded-xl p-4 text-center">
-              <div className="text-2xl font-extrabold tracking-tight text-[#6d6fcb]">{Object.keys(subjectCounts).length}</div>
+            <div className="bg-slate-100 rounded-xl p-4 text-center">
+              <div className="text-2xl font-extrabold tracking-tight text-violet-500">{Object.keys(subjectCounts).length}</div>
               <div className="text-xs text-slate-500">Subjects</div>
             </div>
             <div className="bg-amber-50 rounded-xl p-4 text-center">
@@ -1948,7 +1928,7 @@ const ReviewModal = ({ booking, profile, onClose, onSubmit }) => {
             onChange={(e) => setText(e.target.value)}
             placeholder="What did you like about the lesson? How was the tutor's teaching style?"
             rows={4}
-            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 resize-none"
+            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500/30 resize-none"
           />
         </div>
 
@@ -2048,7 +2028,7 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
               type="text"
               value={form.full_name}
               onChange={(e) => setForm({ ...form, full_name: e.target.value })}
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30"
+              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500/30"
             />
           </div>
 
@@ -2069,7 +2049,7 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               placeholder="+254 712 345 678"
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30"
+              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500/30"
             />
           </div>
 
@@ -2080,7 +2060,7 @@ const StudentProfileEditor = ({ profile, onClose, onSave }) => {
               value={form.avatar_url}
               onChange={(e) => setForm({ ...form, avatar_url: e.target.value })}
               placeholder="https://example.com/avatar.jpg"
-              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30"
+              className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500/30"
             />
           </div>
 
@@ -2313,7 +2293,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
   // Confirmation screen after a successful submission.
   if (submitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-emerald-500 to-emerald-600 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl w-full max-w-lg p-8 shadow-xl text-center">
           <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-5">
             <svg className="w-9 h-9 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
@@ -2325,7 +2305,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mt-5 text-left">
             <p className="text-sm text-amber-700"><strong>What happens next?</strong> Once you're approved, your profile goes live in Find Tutors and you can start receiving bookings and creating group classes.</p>
           </div>
-          <button onClick={() => onComplete()} className="w-full mt-6 py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+          <button onClick={() => onComplete()} className="w-full mt-6 py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-colors">
             Go to my dashboard
           </button>
         </div>
@@ -2334,7 +2314,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-500 to-emerald-600 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl w-full max-w-lg p-8 shadow-xl">
         <div className="text-center mb-6">
           <div className="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -2409,7 +2389,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
               <label className="block text-sm font-medium text-slate-700 mb-1">Phone Number *</label>
               <input type="tel" value={form.phone_number} onChange={(e) => setForm({ ...form, phone_number: e.target.value })}
                 placeholder="e.g. 0712345678 or +254712345678"
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" required />
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-400" required />
               <p className="text-xs text-slate-400 mt-1">For admin contact only — not shown to students</p>
             </div>
             <div>
@@ -2417,30 +2397,30 @@ const TutorOnboarding = ({ profile, onComplete }) => {
               <input type="text" value={form.headline} onChange={(e) => setForm({ ...form, headline: e.target.value })}
                 placeholder="e.g. Making calculus intuitive and fun"
                 maxLength={80}
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" required />
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-400" required />
               <p className="text-xs text-slate-400 mt-1">{form.headline.length}/80 — this is the first thing parents see</p>
             </div>
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">Your qualification *</label>
               <input type="text" value={form.degree} onChange={(e) => setForm({ ...form, degree: e.target.value })}
                 placeholder="e.g. BSc Mathematics, University of Nairobi"
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" required />
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-400" required />
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Hourly Rate (KSh)</label>
                 <input type="number" value={form.hourly_rate} onChange={(e) => setForm({ ...form, hourly_rate: parseInt(e.target.value) || 1000 })}
                   min="500" max="10000"
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-400" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Years of experience</label>
                 <input type="number" value={form.experience_years} onChange={(e) => setForm({ ...form, experience_years: e.target.value })}
                   placeholder="e.g. 5" min="0" max="50"
-                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                  className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-400" />
               </div>
             </div>
-            <button type="submit" className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+            <button type="submit" className="w-full py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-colors">
               Next: Tell Parents About You
             </button>
           </form>
@@ -2463,7 +2443,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
               <textarea value={form.bio} onChange={(e) => setForm({ ...form, bio: e.target.value })}
                 placeholder={"Write about yourself for parents and students. Include:\n\n• Your teaching experience and background\n• What makes your teaching style effective\n• What grades/levels you teach\n• Any notable achievements or results\n• Why you're passionate about your subject\n\nExample: \"I'm a mathematics graduate from the University of Nairobi with 5 years of tutoring experience. I specialize in helping Form 3 and Form 4 students prepare for KCSE, and my students consistently score A's and B's. My approach is patient and step-by-step — I break down complex problems into simple, relatable examples...\""}
                 rows={8}
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" required />
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-400 text-sm" required />
               <div className="flex justify-between mt-1">
                 <p className={`text-xs ${form.bio.length >= 100 ? 'text-emerald-600' : 'text-amber-600'}`}>
                   {form.bio.length} characters {form.bio.length < 100 ? `(${100 - form.bio.length} more needed)` : '✓'}
@@ -2475,7 +2455,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">Teaching style</label>
               <select value={form.teaching_style} onChange={(e) => setForm({ ...form, teaching_style: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-400">
                 <option value="">Select your style</option>
                 <option value="Patient & step-by-step">Patient & step-by-step</option>
                 <option value="Interactive & discussion-based">Interactive & discussion-based</option>
@@ -2504,10 +2484,10 @@ const TutorOnboarding = ({ profile, onComplete }) => {
               <label className="block text-sm font-medium text-slate-700 mb-1">Languages</label>
               <input type="text" value={form.languages} onChange={(e) => setForm({ ...form, languages: e.target.value })}
                 placeholder="e.g. English, Kiswahili"
-                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-400" />
             </div>
 
-            <button type="submit" className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+            <button type="submit" className="w-full py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-colors">
               Next: Upload Documents
             </button>
           </form>
@@ -2529,7 +2509,7 @@ const TutorOnboarding = ({ profile, onComplete }) => {
             <FileUpload label="Teaching Certificate / Qualification" hint="Degree cert, teaching license, etc." file={credentialFile} onFile={setCredentialFile} />
 
             <button type="submit"
-              className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+              className="w-full py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-colors">
               Next: Review Terms
             </button>
           </form>
@@ -2573,12 +2553,12 @@ const TutorOnboarding = ({ profile, onComplete }) => {
 
             <label className="flex items-start gap-3 cursor-pointer p-3 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
               <input type="checkbox" checked={agreedToTerms} onChange={(e) => setAgreedToTerms(e.target.checked)}
-                className="w-5 h-5 rounded border-slate-300 text-emerald-500 focus:ring-emerald-500 mt-0.5" />
+                className="w-5 h-5 rounded border-slate-300 text-emerald-500 focus:ring-slate-400 mt-0.5" />
               <span className="text-sm text-slate-700">I have read and agree to the <strong>Terms of Engagement</strong> and <button type="button" onClick={() => window.open('/privacy', '_blank')} className="text-emerald-600 underline font-semibold">Privacy Policy</button>. I understand the platform fee structure and code of conduct. I explicitly consent to the collection and processing of my national ID and teaching certificates for identity verification, in accordance with the Kenya Data Protection Act, 2019.</span>
             </label>
 
             <button type="submit" disabled={saving || !agreedToTerms}
-              className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors disabled:opacity-50">
+              className="w-full py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-colors disabled:opacity-50">
               {saving ? 'Submitting...' : 'Submit for Verification'}
             </button>
 
@@ -2631,8 +2611,9 @@ const saveTutorHours = async (tutorId, availability) => {
   }
 };
 
-const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartLesson, onOpenMessages, onRefreshProfile, onNavigate, isAdmin, onOpenAccountSettings }) => {
-  const [tab, setTab] = useState('overview');
+const TutorDashboard = ({ profile, bookings, bookingsLoading, onStartLesson, onRefreshProfile, onNavigate, section, onSection }) => {
+  const tab = section || 'overview';
+  const setTab = onSection;
   const [resubmitting, setResubmitting] = useState(false);
   const tutor = profile?.tutors?.[0];
   const upcoming = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending');
@@ -2770,191 +2751,30 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
     setClassLoading(false);
   };
 
-  // SVG Icons
-  const icons = {
-    overview: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" /></svg>,
-    schedule: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>,
-    students: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>,
-    earnings: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
-    groupClasses: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>,
-    profile: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>,
-  };
-
-  const navItems = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'schedule', label: 'Schedule', locked: !isApproved },
-    { id: 'students', label: 'Students', locked: !isApproved },
-    { id: 'groupClasses', label: 'Group Classes', locked: !isApproved },
-    { id: 'earnings', label: 'Earnings', locked: !isApproved },
-    { id: 'profile', label: 'Profile' },
-  ];
+  const tabTitle = { schedule: 'Schedule', students: 'Students', groupClasses: 'Group classes', earnings: 'Earnings', profile: 'Profile' }[tab];
 
   return (
-    <div className="min-h-screen bg-slate-50 flex">
-      {/* Sidebar */}
-      <aside className="w-64 bg-white border-r border-slate-200 hidden lg:flex flex-col">
-        <div className="h-16 px-6 flex items-center border-b border-slate-100">
-          <button onClick={() => onNavigate && onNavigate('home')} className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-bold text-sm">T</div>
-            <div className="text-left">
-              <div className="font-semibold text-slate-900 text-sm">Tutagora</div>
-              <div className="text-xs text-emerald-600 font-medium">Tutor Portal</div>
-            </div>
-          </button>
-        </div>
-        
-        <nav className="flex-1 p-4 space-y-1">
-          {navItems.map(item => (
-            <button
-              key={item.id}
-              onClick={() => !item.locked && setTab(item.id)}
-              disabled={item.locked}
-              title={item.locked ? 'Available after verification' : ''}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                item.locked ? 'text-slate-300 cursor-not-allowed' :
-                tab === item.id
-                  ? 'bg-slate-900 text-white'
-                  : 'text-slate-600 hover:bg-slate-100'
-              }`}
-            >
-              {icons[item.id]}
-              {item.label}
-            </button>
-          ))}
-        </nav>
-
-        <div className="p-4 border-t border-slate-100">
-          <div className="flex items-center gap-3 px-3 py-2">
-            <Avatar src={profile?.avatar_url} preset={profile?.avatar} name={profile?.full_name} size={36} />
-            <div className="flex-1 min-w-0">
-              <div className="text-sm font-medium text-slate-900 truncate">{profile?.full_name}</div>
-              <div className="text-xs text-slate-400 truncate">{tutor?.subject}</div>
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      {/* Main Content */}
-      <main className="flex-1 flex flex-col min-w-0">
-        <header className="h-16 bg-white border-b border-slate-200 px-4 sm:px-6 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3 min-w-0">
-            {/* Mobile-only logo + home link (sidebar hidden on mobile) */}
-            <button onClick={() => onNavigate && onNavigate('home')} className="lg:hidden flex items-center gap-2 mr-2">
-              <div className="w-7 h-7 rounded-lg bg-slate-900 flex items-center justify-center text-white font-bold text-xs">T</div>
-            </button>
-            <h1 className="text-lg font-semibold text-slate-900 truncate">{navItems.find(n => n.id === tab)?.label}</h1>
-            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-emerald-100 text-emerald-700 uppercase tracking-wide hidden sm:inline">Tutor</span>
-          </div>
-          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-            <button onClick={() => onNavigate && onNavigate('home')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Home</button>
-            <button onClick={() => onNavigate && onNavigate('tutors')} className="text-sm text-slate-500 hover:text-slate-700 hidden sm:block">Find Tutors</button>
-            <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="text-sm text-blue-600 font-medium hidden sm:block">Spreadsheet</button>
-            <button onClick={() => onNavigate && onNavigate('classroom')} className="text-sm text-emerald-600 font-medium hidden sm:block">Class Insights</button>
-            {isAdmin && <button onClick={() => onNavigate && onNavigate('admin')} className="text-sm text-purple-600 font-medium hidden sm:block">Admin</button>}
-            <MessageButton onClick={onOpenMessages} />
-            {onOpenAccountSettings && <button onClick={onOpenAccountSettings} className="text-sm text-slate-500 hover:text-slate-700" title="Account & Data Settings">
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-            </button>}
-            <button onClick={onLogout} className="text-sm text-slate-500 hover:text-slate-700">Sign out</button>
-          </div>
-        </header>
-        {/* Phones: the sidebar is hidden, so the sections sit in a strip here. */}
-        <nav className="lg:hidden bg-white border-b border-slate-200 px-3 py-2 flex gap-1.5 overflow-x-auto scrollbar-hide" aria-label="Tutor sections">
-          {navItems.map(item => (
-            <button key={item.id} onClick={() => !item.locked && setTab(item.id)} disabled={item.locked}
-              className={`shrink-0 px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                item.locked ? 'text-slate-300' : tab === item.id ? 'bg-slate-900 text-white' : 'text-slate-600 bg-slate-100'
-              }`}>
-              {item.label}
-            </button>
-          ))}
-          <button onClick={() => onNavigate && onNavigate('spreadsheet')} className="shrink-0 px-3.5 py-2 rounded-lg text-sm font-semibold text-blue-700 bg-blue-50">Spreadsheet</button>
-          <button onClick={() => onNavigate && onNavigate('classroom')} className="shrink-0 px-3.5 py-2 rounded-lg text-sm font-semibold text-emerald-700 bg-emerald-50">Class Insights</button>
-        </nav>
+    <AppShell active={tab} title={tabTitle}>
+      <div className="hb-page">
         {tutor?.verification_status === 'approved' && !hasHours && tab !== 'schedule' && (
-          <div className="bg-amber-50 border-b border-amber-200 px-4 lg:px-8 py-3 flex flex-wrap items-center gap-3 text-sm text-amber-900">
+          <div className="bg-amber-100 rounded-2xl mb-4 px-5 py-3 flex flex-wrap items-center gap-3 text-sm text-amber-900">
             <span className="font-semibold">Families can't book you yet.</span>
             <span>Set the days and times you teach.</span>
             <button onClick={() => setTab('schedule')} className="ml-auto px-3 py-1.5 rounded-lg bg-amber-900 text-white font-semibold">Set my hours</button>
           </div>
         )}
 
-        <div className="flex-1 p-4 sm:p-6 overflow-auto">
+        <div>
           <VerificationBanner />
           {tab === 'overview' && (
             <div className="space-y-6">
-              {/* Welcome Banner */}
-              <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 flex items-center gap-4 text-white">
-                <Lottie src={ANIMATIONS.teacher} width={80} height={80} loop={false} />
-                <div>
-                  <h2 className="text-xl font-bold">Welcome back, {profile?.full_name?.split(' ')[0]}!</h2>
-                  <p className="text-slate-300 text-sm">You have {upcoming.length} upcoming lesson{upcoming.length !== 1 ? 's' : ''} this week</p>
-                </div>
-              </div>
-
-              {/* Stats Cards */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="bg-white rounded-xl p-5 border border-slate-200">
-                  <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
-                      <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="mt-3">
-                    <div className="text-2xl font-bold text-slate-900">{tutor.students_total || completed.length}</div>
-                    <div className="text-sm text-slate-500">Total Students</div>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-xl p-5 border border-slate-200">
-                  <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center">
-                      <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="mt-3">
-                    <div className="text-2xl font-bold text-slate-900">{completed.length}</div>
-                    <div className="text-sm text-slate-500">Lessons Completed</div>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-xl p-5 border border-slate-200">
-                  <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center">
-                      <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="mt-3">
-                    <div className="text-2xl font-bold text-slate-900">{tutor.rating || '—'}</div>
-                    <div className="text-sm text-slate-500">Average Rating</div>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-xl p-5 border border-slate-200">
-                  <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center">
-                      <svg className="w-5 h-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="mt-3">
-                    <div className="text-2xl font-bold text-slate-900">KSh {completed.reduce((sum, b) => sum + Math.round((tutor.hourly_rate || 0) * (Number(b.duration_minutes) || 60) / 60), 0).toLocaleString()}</div>
-                    <div className="text-sm text-slate-500">Total Earned</div>
-                  </div>
-                </div>
-              </div>
+              <TutorHello profile={profile} tutor={tutor} upcoming={upcoming} completed={completed} onStartLesson={onStartLesson} />
+              <TutorClassesCard userId={profile?.id} onOpen={() => onNavigate('classroom')} />
 
               {/* Upcoming Lessons */}
-              <div className="bg-white rounded-xl border border-slate-200">
+              <div className="bg-white rounded-2xl">
                 <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
-                  <h2 className="font-semibold text-slate-900">Upcoming Lessons</h2>
+                  <h2 className="font-semibold text-slate-900">Upcoming lessons</h2>
                   <span className="text-sm text-slate-400">{upcoming.length} scheduled</span>
                 </div>
                 {bookingsLoading ? <LoadingSpinner /> : upcoming.length === 0 ? (
@@ -3015,9 +2835,9 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
           )}
 
           {tab === 'students' && (
-            <div className="bg-white rounded-xl border border-slate-200">
+            <div className="bg-white rounded-2xl">
               <div className="px-5 py-4 border-b border-slate-100">
-                <h2 className="font-semibold text-slate-900">Your Students</h2>
+                <h2 className="font-semibold text-slate-900">Your students</h2>
               </div>
               {completed.length === 0 ? (
                 <div className="p-12 text-center">
@@ -3063,15 +2883,14 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
 
           {tab === 'groupClasses' && (
             <div className="space-y-6">
-              <div className="flex items-center justify-between">
-                <h2 className="text-xl font-bold text-slate-900">Group Classes</h2>
-                <button onClick={() => setShowCreateClass(!showCreateClass)} className="px-4 py-2 bg-emerald-500 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors">
-                  {showCreateClass ? 'Cancel' : '+ Create Class'}
+              <div className="flex items-center justify-end">
+                <button onClick={() => setShowCreateClass(!showCreateClass)} className="tt-btn tt-dark">
+                  {showCreateClass ? 'Cancel' : 'Create a class'}
                 </button>
               </div>
 
               {showCreateClass && (
-                <form onSubmit={handleCreateGroupClass} className="bg-white rounded-xl border border-slate-200 p-6 space-y-4">
+                <form onSubmit={handleCreateGroupClass} className="bg-white rounded-2xl p-6 space-y-4">
                   <h3 className="font-semibold text-slate-900">Create a New Group Class</h3>
                   {/* Academic vs interest club */}
                   <div className="grid grid-cols-2 gap-3">
@@ -3080,7 +2899,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                       { v: 'interest', t: 'Interest club', d: 'Chess, coding, art, debate…' },
                     ].map(o => (
                       <button type="button" key={o.v} onClick={() => setClassForm({ ...classForm, class_type: o.v })}
-                        className={`text-left rounded-lg border p-3 transition-colors ${classForm.class_type === o.v ? 'border-emerald-500 bg-emerald-50 ring-1 ring-emerald-500' : 'border-slate-200 hover:border-slate-300'}`}>
+                        className={`text-left rounded-lg border p-3 transition-colors ${classForm.class_type === o.v ? 'border-slate-900 bg-slate-50 ring-1 ring-slate-900' : 'border-slate-200 hover:border-slate-300'}`}>
                         <div className="font-medium text-slate-900 text-sm">{o.t}</div>
                         <div className="text-xs text-slate-500 mt-0.5">{o.d}</div>
                       </button>
@@ -3093,19 +2912,19 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                         placeholder={classForm.class_type === 'interest'
                           ? `e.g. ${(CATEGORY_BY_KEY[classForm.category]?.examples || ['Saturday Chess Masters'])[0]}`
                           : 'e.g. KCSE Mathematics Revision'} required
-                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400" />
                     </div>
                     <div className="col-span-2">
                       <label className="block text-sm font-medium text-slate-700 mb-1">Description</label>
                       <textarea value={classForm.description} onChange={(e) => setClassForm({ ...classForm, description: e.target.value })}
                         placeholder="What will students learn in this class?" rows={3}
-                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400" />
                     </div>
                     {classForm.class_type === 'interest' ? (
                       <div>
                         <label className="block text-sm font-medium text-slate-700 mb-1">Category *</label>
                         <select value={classForm.category} onChange={(e) => setClassForm({ ...classForm, category: e.target.value })}
-                          className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                          className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400">
                           <option value="">Choose a club type</option>
                           {INTEREST_CATEGORIES.map(c => <option key={c.key} value={c.key}>{c.emoji} {c.label}</option>)}
                         </select>
@@ -3119,7 +2938,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                       <div>
                         <label className="block text-sm font-medium text-slate-700 mb-1">Subject *</label>
                         <select value={classForm.subject} onChange={(e) => setClassForm({ ...classForm, subject: e.target.value })}
-                          className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                          className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400">
                           <option value="">Select subject</option>
                           {['Mathematics', 'English', 'Physics', 'Chemistry', 'Biology', 'Kiswahili', 'History', 'Geography', 'Computer Science', 'Business Studies'].map(s => <option key={s} value={s}>{s}</option>)}
                         </select>
@@ -3130,7 +2949,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                         <div>
                           <label className="block text-sm font-medium text-slate-700 mb-1">Age range</label>
                           <select value={classForm.age_range} onChange={(e) => setClassForm({ ...classForm, age_range: e.target.value })}
-                            className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400">
                             <option value="">Any age</option>
                             {['6–9', '9–12', '12–15', '15–18'].map(a => <option key={a} value={a}>{a} years</option>)}
                           </select>
@@ -3148,17 +2967,17 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">Max Students (2-20)</label>
                       <input type="number" value={classForm.max_students} onChange={(e) => setClassForm({ ...classForm, max_students: e.target.value })}
-                        min="2" max="20" className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                        min="2" max="20" className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">Price per Student (KSh)</label>
                       <input type="number" value={classForm.price_per_student} onChange={(e) => setClassForm({ ...classForm, price_per_student: e.target.value })}
-                        min="100" className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                        min="100" className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">Duration (minutes)</label>
                       <select value={classForm.duration_minutes} onChange={(e) => setClassForm({ ...classForm, duration_minutes: e.target.value })}
-                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400">
                         <option value="30">30 min</option>
                         <option value="60">1 hour</option>
                         <option value="90">1.5 hours</option>
@@ -3169,25 +2988,25 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                       <label className="block text-sm font-medium text-slate-700 mb-1">Date *</label>
                       <input type="date" value={classForm.lesson_date} onChange={(e) => setClassForm({ ...classForm, lesson_date: e.target.value })}
                         min={new Date().toISOString().split('T')[0]} required
-                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">Start Time *</label>
                       <input type="time" value={classForm.start_time} onChange={(e) => setClassForm({ ...classForm, start_time: e.target.value })} required
-                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400" />
                     </div>
                   </div>
                   {classError && (
                     <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg">{classError}</div>
                   )}
-                  <button type="submit" disabled={classLoading} className="w-full py-3 bg-emerald-500 text-white font-semibold rounded-lg hover:bg-emerald-600 transition-colors disabled:opacity-50">
+                  <button type="submit" disabled={classLoading} className="w-full py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors disabled:opacity-50">
                     {classLoading ? 'Creating...' : 'Create Group Class'}
                   </button>
                 </form>
               )}
 
               {groupClasses.length === 0 ? (
-                <div className="bg-white rounded-xl border border-slate-200 p-8 text-center">
+                <div className="bg-white rounded-2xl p-8 text-center">
                   <svg className="w-12 h-12 text-slate-300 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                   <h3 className="font-semibold text-slate-900 mb-1">No group classes yet</h3>
                   <p className="text-sm text-slate-500">Create your first group class to teach multiple students at once and earn more!</p>
@@ -3198,7 +3017,7 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
                     const enrolled = gc.group_class_enrollments?.length || 0;
                     const spotsLeft = gc.max_students - enrolled;
                     return (
-                      <div key={gc.id} className="bg-white rounded-xl border border-slate-200 p-5">
+                      <div key={gc.id} className="bg-white rounded-2xl p-5">
                         <div className="flex items-start justify-between">
                           <div>
                             <h3 className="font-semibold text-slate-900">{gc.title}</h3>
@@ -3238,7 +3057,54 @@ const TutorDashboard = ({ profile, bookings, bookingsLoading, onLogout, onStartL
             </div>
           )}
         </div>
-      </main>
+      </div>
+    </AppShell>
+  );
+};
+
+// The tutor's home opens with what is next, in a sentence, and the one action.
+const TutorHello = ({ profile, tutor, upcoming, completed, onStartLesson }) => {
+  const first = profile?.full_name?.split(' ')[0] || 'there';
+  const hour = new Date().getHours();
+  const hi = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+  const next = [...upcoming].filter(b => b.status === 'confirmed').sort((a, b) => `${a.lesson_date}${a.start_time}`.localeCompare(`${b.lesson_date}${b.start_time}`))[0];
+  const earned = completed.reduce((sum, b) => sum + Math.round((tutor.hourly_rate || 0) * (Number(b.duration_minutes) || 60) / 60), 0);
+  const whenText = (b) => {
+    const d = new Date(`${b.lesson_date}T00:00:00`);
+    const day = isNaN(d) ? b.lesson_date : d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
+    return `${day} at ${String(b.start_time || '').slice(0, 5)}`;
+  };
+  return (
+    <div className="tt-card">
+      <h1>{hi}, {first}</h1>
+      <p className="tt-lead">
+        {next ? <>Your next lesson is with {next.learner_name || next.profiles?.full_name}, {whenText(next)}.</>
+          : upcoming.length ? `${upcoming.length} ${upcoming.length === 1 ? 'booking is' : 'bookings are'} waiting for payment.` : 'No lessons booked yet. New bookings appear here.'}
+      </p>
+      {next && <button type="button" className="tt-btn tt-dark" style={{ marginTop: 16 }} onClick={() => onStartLesson(next)}>Start lesson</button>}
+      <p className="tt-sub" style={{ marginTop: 16 }}>
+        {tutor.students_total || completed.length} students · {completed.length} lessons done{tutor.rating ? ` · rating ${tutor.rating}` : ''} · KSh {earned.toLocaleString()} earned
+      </p>
+    </div>
+  );
+};
+
+// A person who tutors and also runs classes has one home: their classes sit here.
+// One small indexed read of names, nothing from the engine.
+const TutorClassesCard = ({ userId, onOpen }) => {
+  const [classes, setClasses] = useState([]);
+  useEffect(() => {
+    if (!userId) return;
+    supabase.from('classes').select('id, name').eq('teacher_id', userId).order('created_at', { ascending: true }).limit(6)
+      .then(({ data }) => setClasses(data || []));
+  }, [userId]);
+  if (!classes.length) return null;
+  return (
+    <div className="tt-card">
+      <div className="tt-head-row"><h2>Your classes</h2><button type="button" className="tt-whyb" onClick={onOpen}>See where each is stuck</button></div>
+      <div className="tt-avs" style={{ marginTop: 10, gap: 8 }}>
+        {classes.map(c => <button type="button" key={c.id} className="tt-pill" onClick={onOpen}>{c.name}</button>)}
+      </div>
     </div>
   );
 };
@@ -3298,7 +3164,7 @@ const TutorEarningsTab = ({ tutor, completed }) => {
       </div>
 
       {/* Payment history */}
-      <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div className="bg-white rounded-2xl overflow-hidden">
         <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
           <h3 className="font-semibold text-slate-900">Payment History</h3>
           <span className="text-sm text-slate-400">{payments.length} payments</span>
@@ -3442,7 +3308,7 @@ const TutorAvailabilityEditor = ({ tutor }) => {
   if (loading) return <LoadingSpinner />;
 
   return (
-    <div className="max-w-xl bg-white rounded-xl border border-slate-200 p-5">
+    <div className="max-w-xl bg-white rounded-2xl p-5">
       <h3 className="font-semibold text-slate-900 mb-1">Availability Settings</h3>
       <p className="text-sm text-slate-500 mb-4">Set the days and times you're available for lessons</p>
       
@@ -3494,7 +3360,7 @@ const TutorAvailabilityEditor = ({ tutor }) => {
         <button
           onClick={handleSave}
           disabled={saving}
-          className="px-6 py-2.5 bg-emerald-500 text-white font-semibold rounded-lg hover:bg-emerald-600 disabled:opacity-50"
+          className="px-6 py-2.5 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 disabled:opacity-50"
         >
           {saving ? 'Saving...' : 'Save Availability'}
         </button>
@@ -3585,7 +3451,7 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
   return (
     <div className="space-y-6">
       {/* Upcoming Bookings */}
-      <div className="bg-white rounded-xl border border-slate-200">
+      <div className="bg-white rounded-2xl">
         <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
           <h3 className="font-semibold text-slate-900">Scheduled Lessons</h3>
           <span className="text-sm text-slate-400">{upcoming.length} upcoming</span>
@@ -3626,7 +3492,7 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
       </div>
 
       {/* Weekly Availability */}
-      <div className="bg-white rounded-xl border border-slate-200">
+      <div className="bg-white rounded-2xl">
         <div className="px-5 py-4 border-b border-slate-100">
           <h3 className="font-semibold text-slate-900">Weekly Availability</h3>
           <p className="text-sm text-slate-500 mt-1">Set when you're available for lessons</p>
@@ -3680,7 +3546,7 @@ const TutorScheduleManager = ({ tutor, bookings }) => {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="px-6 py-2.5 bg-emerald-500 text-white font-semibold rounded-lg hover:bg-emerald-600 disabled:opacity-50"
+            className="px-6 py-2.5 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 disabled:opacity-50"
           >
             {saving ? 'Saving...' : 'Save Schedule'}
           </button>
@@ -3756,7 +3622,7 @@ const TutorProfileEditor = ({ tutor, profile }) => {
   };
 
   return (
-    <div className="max-w-xl bg-white rounded-xl border border-slate-200 p-5">
+    <div className="max-w-xl bg-white rounded-2xl p-5">
       {/* Photo section */}
       <div className="flex items-center gap-4 mb-6">
         <label className="relative cursor-pointer group">
@@ -3859,619 +3725,8 @@ const TutorProfileEditor = ({ tutor, profile }) => {
   );
 };
 
-// ============ HOME PAGE ============
-// ============ TEACH PAGE — Tutor Recruitment ============
-const TeachPage = ({ onNavigate, setShowAuth }) => {
-  const tutorFaqs = [
-    { q: 'How much can I earn?', a: 'You set your own hourly rate from KSh 500 to KSh 10,000. Tutagora takes a 15% platform fee and you keep 85%. Teaching just 10 hours a week at KSh 1,000/hr means KSh 34,000/month in your pocket.' },
-    { q: 'When do I get paid?', a: 'Payouts are processed every Friday directly to your mobile money. You can track your earnings and payout history from your tutor dashboard.' },
-    { q: 'What documents do I need?', a: 'A valid national ID or passport, and a teaching certificate or relevant academic qualification (degree, diploma, or professional certification).' },
-    { q: 'How long does verification take?', a: 'Our team typically reviews applications within 24 hours. Once approved, your profile goes live and students can start booking you immediately.' },
-    { q: 'Do I need any equipment?', a: 'Just a smartphone or laptop with a stable internet connection. All lessons happen via our built in video call platform with screen sharing and chat.' },
-    { q: 'Can I teach multiple subjects?', a: 'Yes! You can select as many subjects as you are qualified to teach. Many of our tutors teach 2 to 3 related subjects.' },
-  ];
-  const [openFaq, setOpenFaq] = useState(null);
 
-  return (
-    <div>
-      {/* Hero */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 py-16 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-emerald-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
-        </div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-5 relative flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-          <div className="flex-1 text-center lg:text-left">
-            <span className="inline-block px-4 py-1.5 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-semibold mb-4 border border-emerald-500/30">Now recruiting tutors</span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Teach on <span className="text-emerald-400">Tutagora</span>,<br /> earn on your terms
-            </h1>
-            <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-300 max-w-xl">
-              Join Kenya's growing online tutoring platform. Set your own hours, choose your rate, and get paid weekly via mobile money. We bring the students to you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 mt-6 sm:mt-8 justify-center lg:justify-start">
-              <button onClick={() => setShowAuth({ mode: 'register', role: 'tutor' })} className="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-colors text-base">
-                Apply Now
-              </button>
-              <button onClick={() => { const el = document.getElementById('how-it-works'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }} className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/20 transition-colors text-base">
-                Learn More
-              </button>
-            </div>
-          </div>
-          <div className="hidden lg:block flex-shrink-0">
-            <Lottie src={ANIMATIONS.teacher} width={380} height={380} loop={false} />
-          </div>
-        </div>
-      </section>
 
-      {/* Quick Stats Bar */}
-      <section className="bg-white border-b border-slate-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-5 py-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div><span className="text-2xl sm:text-3xl font-bold text-slate-900">85%</span><p className="text-slate-500 text-sm mt-1">You keep per lesson</p></div>
-            <div><span className="text-2xl sm:text-3xl font-bold text-slate-900">Weekly</span><p className="text-slate-500 text-sm mt-1">Mobile money payouts</p></div>
-            <div><span className="text-2xl sm:text-3xl font-bold text-slate-900">24hrs</span><p className="text-slate-500 text-sm mt-1">Verification time</p></div>
-            <div><span className="text-2xl sm:text-3xl font-bold text-emerald-600">Free</span><p className="text-slate-500 text-sm mt-1">To join</p></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Tutors Love Tutagora */}
-      <section className="py-12 sm:py-20 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-5">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Why tutors love Tutagora</h2>
-            <p className="text-slate-500 mt-2 sm:mt-3 text-sm sm:text-base">Everything you need to build a tutoring career online</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 text-center">
-              <div className="flex justify-center mb-4">
-                <Lottie src={ANIMATIONS.payment} width={80} height={80} loop={false} />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Earn what you deserve</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">Set your own hourly rate from KSh 500 to 10,000. No cap on how many students you can take. The more you teach, the more you earn.</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 text-center">
-              <div className="flex justify-center mb-4">
-                <Lottie src={ANIMATIONS.calendar} width={80} height={80} loop={false} />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Your schedule, your rules</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">Teach mornings, evenings, or weekends. Block off days when you are busy. Students can only book slots you have made available.</p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 text-center">
-              <div className="flex justify-center mb-4">
-                <Lottie src={ANIMATIONS.search} width={80} height={80} loop={false} />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Students come to you</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">No marketing needed. Parents and students find you through our platform, read your profile, check your availability, and book directly.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works — Step by Step */}
-      <section id="how-it-works" className="py-12 sm:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-5">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Start teaching in 3 steps</h2>
-            <p className="text-slate-500 mt-2 sm:mt-3 text-sm sm:text-base">The whole process takes less than 10 minutes</p>
-          </div>
-          <div className="space-y-8">
-            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-              <div className="flex-shrink-0">
-                <Lottie src={ANIMATIONS.typing} width={120} height={120} loop={false} />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <div className="flex items-center gap-3 justify-center md:justify-start mb-2">
-                  <span className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</span>
-                  <h3 className="text-lg font-bold text-slate-900">Create your profile</h3>
-                </div>
-                <p className="text-slate-600 text-sm leading-relaxed">Add your subjects, qualifications, teaching style, and hourly rate. Write a short bio that tells parents why you are the right tutor. Upload a photo — profiles with photos get 3x more bookings.</p>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10">
-              <div className="flex-shrink-0">
-                <Lottie src={ANIMATIONS.certificate} width={120} height={120} loop={false} />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <div className="flex items-center gap-3 justify-center md:justify-start mb-2">
-                  <span className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</span>
-                  <h3 className="text-lg font-bold text-slate-900">Get verified</h3>
-                </div>
-                <p className="text-slate-600 text-sm leading-relaxed">Upload your national ID and teaching certificate. Our team reviews every application within 24 hours to keep students safe. Once approved, your profile goes live immediately.</p>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-              <div className="flex-shrink-0">
-                <Lottie src={ANIMATIONS.videoCall} width={120} height={120} loop={false} />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <div className="flex items-center gap-3 justify-center md:justify-start mb-2">
-                  <span className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</span>
-                  <h3 className="text-lg font-bold text-slate-900">Teach and earn</h3>
-                </div>
-                <p className="text-slate-600 text-sm leading-relaxed">Students book your available time slots. Teach one on one via our built in video platform with screen sharing and whiteboard. Get paid every Friday via mobile money.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Earnings Calculator */}
-      <section className="py-12 sm:py-20 bg-slate-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-5">
-          <div className="text-center mb-8 sm:mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">What could you earn?</h2>
-            <p className="text-slate-400 mt-2 text-sm sm:text-base">Here is what Tutagora tutors earn at different commitment levels</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700">
-              <div className="text-center">
-                <p className="text-slate-400 text-sm">Part time</p>
-                <p className="text-sm text-slate-500 mb-3">5 hrs/week</p>
-                <p className="text-3xl font-bold text-white">KSh 17,000</p>
-                <p className="text-slate-500 text-sm mt-1">/month</p>
-              </div>
-              <div className="mt-4 pt-4 border-t border-slate-700 space-y-2 text-sm">
-                <div className="flex justify-between text-slate-400"><span>Rate</span><span className="text-white">KSh 1,000/hr</span></div>
-                <div className="flex justify-between text-slate-400"><span>Weekly hours</span><span className="text-white">5 hrs</span></div>
-                <div className="flex justify-between text-slate-400"><span>Your cut (85%)</span><span className="text-emerald-400">KSh 4,250/wk</span></div>
-              </div>
-            </div>
-            <div className="bg-gradient-to-b from-emerald-900/50 to-slate-800 rounded-2xl p-6 border-2 border-emerald-500 relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-emerald-500 text-white text-xs font-bold rounded-full">Most popular</div>
-              <div className="text-center">
-                <p className="text-emerald-400 text-sm font-medium">Regular</p>
-                <p className="text-sm text-slate-500 mb-3">10 hrs/week</p>
-                <p className="text-4xl font-bold text-white">KSh 34,000</p>
-                <p className="text-slate-500 text-sm mt-1">/month</p>
-              </div>
-              <div className="mt-4 pt-4 border-t border-emerald-800 space-y-2 text-sm">
-                <div className="flex justify-between text-slate-400"><span>Rate</span><span className="text-white">KSh 1,000/hr</span></div>
-                <div className="flex justify-between text-slate-400"><span>Weekly hours</span><span className="text-white">10 hrs</span></div>
-                <div className="flex justify-between text-slate-400"><span>Your cut (85%)</span><span className="text-emerald-400">KSh 8,500/wk</span></div>
-              </div>
-            </div>
-            <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700">
-              <div className="text-center">
-                <p className="text-slate-400 text-sm">Full time</p>
-                <p className="text-sm text-slate-500 mb-3">20 hrs/week</p>
-                <p className="text-3xl font-bold text-white">KSh 68,000</p>
-                <p className="text-slate-500 text-sm mt-1">/month</p>
-              </div>
-              <div className="mt-4 pt-4 border-t border-slate-700 space-y-2 text-sm">
-                <div className="flex justify-between text-slate-400"><span>Rate</span><span className="text-white">KSh 1,000/hr</span></div>
-                <div className="flex justify-between text-slate-400"><span>Weekly hours</span><span className="text-white">20 hrs</span></div>
-                <div className="flex justify-between text-slate-400"><span>Your cut (85%)</span><span className="text-emerald-400">KSh 17,000/wk</span></div>
-              </div>
-            </div>
-          </div>
-          <p className="text-center text-slate-500 text-xs mt-6">Based on KSh 1,000/hr rate. Your actual earnings depend on your rate and hours.</p>
-        </div>
-      </section>
-
-      {/* What We Provide */}
-      <section className="py-12 sm:py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-5">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">We handle the rest</h2>
-            <p className="text-slate-500 mt-2 text-sm sm:text-base">Focus on teaching. We take care of everything else.</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            {[
-              { icon: '📹', title: 'Video platform', desc: 'Built in HD video calls with screen sharing' },
-              { icon: '💳', title: 'Payment processing', desc: 'Secure card payments via Paystack' },
-              { icon: '📅', title: 'Scheduling', desc: 'Students book your available slots' },
-              { icon: '📊', title: 'Dashboard', desc: 'Track students, lessons, and earnings' },
-              { icon: '🔔', title: 'Notifications', desc: 'Instant alerts for new bookings' },
-              { icon: '⭐', title: 'Reviews', desc: 'Build your reputation with ratings' },
-              { icon: '👥', title: 'Group classes', desc: 'Create and manage group sessions' },
-              { icon: '🛡️', title: 'Verification badge', desc: 'Build trust with parents' },
-            ].map((item, i) => (
-              <div key={i} className="bg-slate-50 rounded-xl p-4 sm:p-5 text-center">
-                <span className="text-2xl">{item.icon}</span>
-                <h3 className="font-semibold text-slate-900 text-sm mt-2">{item.title}</h3>
-                <p className="text-slate-500 text-xs mt-1">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-12 sm:py-20 bg-slate-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-5">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Frequently asked questions</h2>
-            <p className="text-slate-500 mt-2 text-sm sm:text-base">Everything you need to know before joining</p>
-          </div>
-          <div className="space-y-3">
-            {tutorFaqs.map((faq, i) => (
-              <div key={i} className="bg-white border border-slate-200 rounded-xl overflow-hidden">
-                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full p-4 sm:p-5 flex justify-between items-center text-left hover:bg-slate-50">
-                  <span className="font-semibold text-slate-900 text-sm sm:text-base">{faq.q}</span>
-                  <span className="text-slate-400 text-xl ml-4">{openFaq === i ? '−' : '+'}</span>
-                </button>
-                {openFaq === i && <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-slate-600 text-sm leading-relaxed">{faq.a}</div>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-12 sm:py-20 bg-gradient-to-r from-emerald-500 to-emerald-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-5 text-center">
-          <div className="flex justify-center mb-4">
-            <Lottie src={ANIMATIONS.rocket} width={100} height={100} loop={false} />
-          </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">Ready to start teaching?</h2>
-          <p className="text-emerald-100 text-sm sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">It takes less than 10 minutes to set up your profile. Get verified within 24 hours and start earning this week.</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button onClick={() => setShowAuth({ mode: 'register', role: 'tutor' })} className="px-8 py-4 bg-white text-emerald-600 font-semibold rounded-full hover:bg-emerald-50 transition-colors">
-              Apply Now
-            </button>
-            <button onClick={() => onNavigate('home')} className="px-8 py-4 bg-emerald-700 text-white font-semibold rounded-full hover:bg-emerald-800 transition-colors">
-              Back to Homepage
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white py-10">
-        <div className="max-w-6xl mx-auto px-4 sm:px-5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center font-bold text-sm">T</div>
-            <span className="font-bold">Tutagora</span>
-          </div>
-          <p className="text-slate-400 text-sm">© 2026 Tutagora. All rights reserved.</p>
-          <div className="flex gap-4 text-sm text-slate-400">
-            <button onClick={() => onNavigate('home')} className="hover:text-white">Home</button>
-            <button onClick={() => onNavigate('tutors')} className="hover:text-white">Find Tutors</button>
-            <button onClick={() => onNavigate('privacy')} className="hover:text-white">Privacy Policy</button>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-// HOREB intro — the public front door for parents. The ads/emails promise
-// "free HOREB practice", so a visitor needs one clear page that explains it and
-// starts it. Logged-in students are sent straight into the engine.
-// The knowledge constellation — HOREB is literally a graph of skills wired by
-// prerequisites, so we draw it as a slowly rotating 3-D globe of them: a glowing
-// mastery core, skills orbiting on gold filaments, a starfield halo for depth.
-// Self-contained animated canvas (no WebGL/graph library) so it stays fast on
-// mobile data; holds still for prefers-reduced-motion.
-// The real CBC-mathematics knowledge graph as a live 3D force map — the same
-// build as math-knowledge-graph-3d.html (202 skills, prerequisites as links,
-// coloured by strand), lazy-loaded and gently auto-rotating. Drag to explore;
-// it resumes spinning after you let go.
-const HOREB_PAL = ['#6366f1', '#22c55e', '#ec4899', '#f59e0b', '#14b8a6', '#a855f7', '#ef4444', '#eab308', '#38bdf8'];
-// project a node's live 3D position to canvas pixels; null if behind the camera
-const tagScreen = (G, n) => {
-  try {
-    const c = G.graph2ScreenCoords(n.x, n.y, n.z);
-    if (!c || !isFinite(c.x) || !isFinite(c.y)) return null;
-    return c;
-  } catch (e) { return null; }
-};
-const HorebForceGraph = () => {
-  const holderRef = useRef(null);
-  useEffect(() => {
-    const el = holderRef.current;
-    if (!el) return;
-    let G = null, raf = 0, disposed = false, ro = null;
-    let spinning = false, angle = 0, base = 320, last = 0, resumeAt = 0, dragging = false, zoomPhase = 0;
-
-    // floating name tag that pops over one node at a time
-    const tag = document.createElement('div');
-    tag.style.cssText = 'position:absolute;left:0;top:0;pointer-events:none;transform:translate(-50%,-140%);' +
-      'padding:4px 10px;border-radius:999px;font:600 12px/1.2 -apple-system,Inter,sans-serif;white-space:nowrap;' +
-      'background:rgba(10,26,48,.82);color:#ffe6b0;border:1px solid rgba(242,168,40,.5);backdrop-filter:blur(4px);' +
-      'box-shadow:0 4px 14px rgba(0,0,0,.35);opacity:0;transition:opacity .25s;z-index:5;';
-
-    (async () => {
-      const ForceGraph3D = (await import('3d-force-graph')).default;
-      if (disposed || !holderRef.current) return;
-
-      const strands = horebGraph.strands;
-      const col = {}; strands.forEach((s, i) => { col[s] = HOREB_PAL[i % HOREB_PAL.length]; });
-      const byId = {}; horebGraph.skills.forEach(s => { byId[s.id] = s; });
-      const nodes = horebGraph.skills.map(s => ({ id: s.id, name: s.name, strand: s.strand, grade: s.grade, val: s.critical ? 5 : 3 }));
-      const links = [];
-      horebGraph.skills.forEach(s => (s.prerequisites || []).forEach(p => { if (byId[p]) links.push({ source: p, target: s.id }); }));
-
-      // One glowing prerequisite path climbing from a foundational skill upward.
-      const deps = {}; horebGraph.skills.forEach(s => { deps[s.id] = []; });
-      horebGraph.skills.forEach(s => (s.prerequisites || []).forEach(p => { if (deps[p]) deps[p].push(s.id); }));
-      const roots = horebGraph.skills.filter(s => !(s.prerequisites || []).length && deps[s.id].length)
-        .sort((a, b) => a.grade - b.grade || deps[b.id].length - deps[a.id].length);
-      const pathIds = [];
-      if (roots.length) {
-        let cur = roots[0].id; const seen = new Set([cur]); pathIds.push(cur);
-        while (pathIds.length < 18) {
-          const nexts = (deps[cur] || []).filter(x => !seen.has(x)).sort((a, b) => byId[b].grade - byId[a].grade || deps[b].length - deps[a].length);
-          if (!nexts.length) break;
-          cur = nexts[0]; seen.add(cur); pathIds.push(cur);
-        }
-      }
-      const key = (a, b) => a + '>' + b;
-      const pathEdges = new Set();
-      for (let i = 0; i < pathIds.length - 1; i++) pathEdges.add(key(pathIds[i], pathIds[i + 1]));
-      const pathNodes = new Set(pathIds);
-      links.forEach(l => { l.onPath = pathEdges.has(key(l.source, l.target)); });
-
-      // A clean living SPHERE, not a force-scatter or a tower: pin every skill to
-      // an evenly-spaced point on a fibonacci sphere. Nodes are ordered by strand
-      // then grade first, so each strand forms a contiguous region and the
-      // prerequisite links stay short, tracing a graceful web across the surface.
-      // Positions are PINNED (fx/fy/fz) so it frames and rotates instantly.
-      const strandOrder = {}; strands.forEach((s, i) => { strandOrder[s] = i; });
-      const ordered = nodes.slice().sort((a, b) =>
-        (strandOrder[a.strand] - strandOrder[b.strand]) || (a.grade - b.grade) || a.name.localeCompare(b.name));
-      const N = ordered.length, R = 205, GOLDEN = Math.PI * (3 - Math.sqrt(5));
-      ordered.forEach((n, i) => {
-        const y = 1 - (i / Math.max(1, N - 1)) * 2;      // 1 → -1
-        const rr = Math.sqrt(Math.max(0, 1 - y * y));
-        const th = i * GOLDEN;
-        n.fx = n.x = R * Math.cos(th) * rr;
-        n.fy = n.y = R * y;
-        n.fz = n.z = R * Math.sin(th) * rr;
-      });
-
-      G = ForceGraph3D({ controlType: 'orbit' })(el)
-        .backgroundColor('rgba(0,0,0,0)')
-        .graphData({ nodes, links })
-        .cooldownTicks(0).warmupTicks(0)
-        .nodeLabel(n => `${n.name} — Grade ${n.grade}`)
-        .nodeColor(n => pathNodes.has(n.id) ? '#ffd77a' : col[n.strand])
-        .nodeVal(n => pathNodes.has(n.id) ? n.val * 1.7 : n.val)
-        .nodeOpacity(0.96).nodeResolution(14)
-        .linkColor(l => l.onPath ? 'rgba(255,196,72,0.98)' : 'rgba(158,186,230,0.38)')
-        .linkWidth(l => l.onPath ? 2.4 : 1.0)
-        .linkDirectionalParticles(l => l.onPath ? 4 : 0)
-        .linkDirectionalParticleWidth(2.8)
-        .linkDirectionalParticleSpeed(0.006)
-        .linkDirectionalParticleColor(() => '#fff2cc')
-        .width(el.clientWidth).height(el.clientHeight)
-        .showNavInfo(false).enableNodeDrag(false);
-      el.appendChild(tag); // after construction — the graph resets el's contents on init
-
-      const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const controls = G.controls();
-      controls.addEventListener('start', () => { dragging = true; });
-      controls.addEventListener('end', () => {
-        dragging = false; resumeAt = performance.now() + 2500;
-        const p = G.camera().position; angle = Math.atan2(p.x, p.z); base = Math.hypot(p.x, p.y, p.z) || base;
-      });
-
-      // Frame and start rotating right away — the layout is pinned, nothing to settle.
-      let framed = false;
-      const frameAndSpin = () => {
-        if (framed || disposed || !G) return; framed = true;
-        G.zoomToFit(0, 70);
-        const p = G.camera().position;
-        base = (Math.hypot(p.x, p.y, p.z) || base) * 0.86; // land a touch zoomed in
-        angle = Math.atan2(p.x, p.z) || 0;
-        if (!reduced) spinning = true;
-      };
-      setTimeout(frameAndSpin, 200);
-
-      // name-tag cycling: pick a node (favouring the lit path), show its grade+name
-      let tagNode = null, tagStart = 0, nextTagAt = 1500;
-      const pathList = pathIds.map(id => nodes.find(n => n.id === id)).filter(Boolean);
-
-      last = performance.now();
-      const tick = (now) => {
-        raf = requestAnimationFrame(tick);
-        const dt = now - last; last = now;
-        if (spinning && !dragging && now > resumeAt) {
-          angle += dt * 0.00011;
-          zoomPhase += dt * 0.00022;
-          const d = base * (0.90 + 0.13 * Math.sin(zoomPhase)); // breathe in and out
-          G.cameraPosition({ x: d * Math.sin(angle), y: d * 0.10, z: d * Math.cos(angle) });
-        }
-        // floating label
-        if (spinning && now > nextTagAt) {
-          const pool = (pathList.length && Math.sin(now * 0.001) > 0) ? pathList : nodes;
-          tagNode = pool[(now * 0.013 | 0) % pool.length];
-          tagStart = now; nextTagAt = now + 3200;
-          tag.textContent = `G${tagNode.grade} · ${tagNode.name}`;
-        }
-        if (tagNode && tagNode.x != null) {
-          const p = tagScreen(G, tagNode);
-          const w = el.clientWidth, h = el.clientHeight;
-          if (p && p.x > 8 && p.x < w - 8 && p.y > 20 && p.y < h - 8) {
-            const prog = Math.min(1, (now - tagStart) / 3200);
-            tag.style.opacity = Math.sin(prog * Math.PI).toFixed(2);
-            tag.style.left = p.x + 'px'; tag.style.top = p.y + 'px';
-          } else { tag.style.opacity = '0'; }
-        }
-      };
-      raf = requestAnimationFrame(tick);
-
-      ro = new ResizeObserver(() => { if (G && holderRef.current) G.width(holderRef.current.clientWidth).height(holderRef.current.clientHeight); });
-      ro.observe(el);
-    })().catch(e => console.error('HOREB graph failed:', e));
-
-    return () => {
-      disposed = true;
-      if (raf) cancelAnimationFrame(raf);
-      if (ro) ro.disconnect();
-      try { if (G && G._destructor) G._destructor(); } catch (e) { /* noop */ }
-      if (el) el.innerHTML = '';
-    };
-  }, []);
-  return <div ref={holderRef} className="w-full h-full" aria-hidden="true" />;
-};
-
-const HorebConstellation = () => {
-  const canvasRef = useRef(null);
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let raf, W = 0, H = 0, dpr = 1, pts = [], edges = [], stars = [], paths = [], reduced = false;
-    try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { /* ignore */ }
-    const rnd = (a, b) => a + Math.random() * (b - a);
-    // Distinct colours for the three learning tracks lighting up at once.
-    const TRACKS = [[242, 168, 40], [52, 211, 153], [96, 165, 250]];
-
-    const build = () => {
-      const rect = canvas.getBoundingClientRect();
-      if (!rect.width) return;
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      W = rect.width; H = rect.height;
-      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const R = Math.min(W, H) * 0.44;
-      const N = 210;
-      pts = [];
-      // Fibonacci sphere → evenly spread skills over a globe.
-      for (let i = 0; i < N; i++) {
-        const y = 1 - (i / (N - 1)) * 2;
-        const ringR = Math.sqrt(Math.max(0, 1 - y * y));
-        const theta = i * 2.399963;
-        const rr = R * rnd(0.7, 1.02);
-        pts.push({ x: Math.cos(theta) * ringR * rr, y: y * rr, z: Math.sin(theta) * ringR * rr, r: rnd(1.1, 2.5), tw: rnd(0, 6.28) });
-      }
-      // Prerequisite filaments: each skill wired to its 1–2 nearest neighbours.
-      edges = [];
-      for (let i = 0; i < N; i++) {
-        const d = [];
-        for (let j = 0; j < N; j++) { if (i === j) continue; const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y, dz = pts[i].z - pts[j].z; d.push([dx * dx + dy * dy + dz * dz, j]); }
-        d.sort((a, b) => a[0] - b[0]);
-        edges.push([i, d[0][1]]);
-        if (Math.random() < 0.55) edges.push([i, d[1][1]]);
-      }
-      // Three learning tracks climbing outward from the core — each a chain of
-      // prerequisites we light in sequence (master this, and the next unlocks).
-      const adj = Array.from({ length: N }, () => []);
-      for (const [a, b] of edges) { adj[a].push(b); adj[b].push(a); }
-      const rad2 = (i) => pts[i].x * pts[i].x + pts[i].y * pts[i].y + pts[i].z * pts[i].z;
-      // Each track is a long wandering walk across the whole graph, so its
-      // pulse travels everywhere rather than a short stub. It prefers fresh
-      // nodes but may revisit, snaking through the structure.
-      const walk = (seed) => {
-        const p = [seed]; const local = new Set([seed]);
-        const LEN = Math.min(N - 1, 64);
-        for (let step = 0; step < LEN; step++) {
-          const cur = p[p.length - 1], prev = p[p.length - 2];
-          let cand = adj[cur].filter(n => n !== prev);
-          if (!cand.length) cand = adj[cur];
-          if (!cand.length) break;
-          const fresh = cand.filter(n => !local.has(n));
-          const pool = fresh.length ? fresh : cand;
-          const pick = pool[(Math.random() * pool.length) | 0];
-          p.push(pick); local.add(pick);
-        }
-        return p;
-      };
-      paths = [0, 1, 2].map(i => ({ nodes: walk((Math.random() * N) | 0), color: TRACKS[i], off: i / 3 }));
-      stars = [];
-      const cx = W / 2, cy = H / 2, maxR = Math.min(W, H) * 0.5;
-      const S = Math.round((W * H) / 2600);
-      for (let i = 0; i < S; i++) { const a = rnd(0, 6.28), rr = maxR * Math.sqrt(rnd(0, 1)) * 1.22; stars.push({ x: cx + Math.cos(a) * rr, y: cy + Math.sin(a) * rr, r: rnd(0.4, 1.2), tw: rnd(0, 6.28), warm: Math.random() < 0.4 }); }
-    };
-
-    const draw = (t) => {
-      if (!W) { raf = requestAnimationFrame(draw); return; }
-      const cx = W / 2, cy = H / 2;
-      ctx.clearRect(0, 0, W, H);
-      for (const s of stars) {
-        const a = 0.14 + 0.3 * (0.5 + 0.5 * Math.sin(t / 1500 + s.tw));
-        ctx.fillStyle = s.warm ? `rgba(244,206,140,${a})` : `rgba(150,180,220,${a * 0.9})`;
-        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.29); ctx.fill();
-      }
-      const ay = reduced ? 0.5 : t / 8200;         // slow spin
-      const cyA = Math.cos(ay), syA = Math.sin(ay);
-      const tilt = 0.42, ct = Math.cos(tilt), st = Math.sin(tilt);
-      const fov = Math.min(W, H) * 1.15;
-      const proj = pts.map(p => {
-        const x = p.x * cyA - p.z * syA, z0 = p.x * syA + p.z * cyA;     // rotate Y
-        const y2 = p.y * ct - z0 * st, z2 = p.y * st + z0 * ct;          // tilt X
-        const persp = fov / (fov + z2);
-        return { sx: cx + x * persp, sy: cy + y2 * persp, persp, z: z2, r: p.r, tw: p.tw };
-      });
-      for (const [a, b] of edges) {
-        const pa = proj[a], pb = proj[b];
-        const al = 0.11 * ((pa.persp + pb.persp) / 2);
-        ctx.strokeStyle = `rgba(242,178,70,${al})`;
-        ctx.lineWidth = 0.6;
-        ctx.beginPath(); ctx.moveTo(pa.sx, pa.sy); ctx.lineTo(pb.sx, pb.sy); ctx.stroke();
-      }
-      const order = proj.map((_, i) => i).sort((a, b) => proj[a].z - proj[b].z);
-      for (const i of order) {
-        const p = proj[i];
-        const tw = 0.55 + 0.45 * Math.sin(t / 1000 + p.tw);
-        const warm = p.persp > 0.98;
-        ctx.fillStyle = warm ? `rgba(246,204,124,${(0.5 + 0.45 * p.persp) * tw})` : `rgba(168,198,234,${(0.35 + 0.35 * p.persp) * tw})`;
-        ctx.beginPath(); ctx.arc(p.sx, p.sy, Math.max(0.6, p.r * p.persp), 0, 6.29); ctx.fill();
-      }
-      // Three coloured currents run through the WHOLE graph: each track is a
-      // long walk, and a comet (bright head + fading tail) travels it end to
-      // end, so light is always moving across the structure — not one stub.
-      const TAIL = 9;                     // how many segments the glow trails
-      for (const track of paths) {
-        const p = track.nodes; if (p.length < 2) continue;
-        const [cr, cg, cb] = track.color;
-        const segs = p.length - 1, per = reduced ? 1e9 : 300, cycle = per * segs;
-        const fseg = (reduced ? per * 4 : (t + track.off * cycle) % cycle) / per;
-        const head = Math.floor(fseg), f = fseg - head;
-        // faint full path so the route is always readable
-        for (let k = 0; k < segs; k++) {
-          const pa = proj[p[k]], pb = proj[p[k + 1]];
-          ctx.strokeStyle = `rgba(${cr},${cg},${cb},0.10)`; ctx.lineWidth = 0.8;
-          ctx.beginPath(); ctx.moveTo(pa.sx, pa.sy); ctx.lineTo(pb.sx, pb.sy); ctx.stroke();
-        }
-        // comet: segments and nodes just behind the head glow, fading with distance
-        for (let d = 0; d <= TAIL; d++) {
-          const k = head - d; if (k < 0) continue;
-          const a = 1 - d / (TAIL + 1);
-          if (k < segs) {
-            const pa = proj[p[k]], pb = proj[p[k + 1]];
-            ctx.strokeStyle = `rgba(${cr},${cg},${cb},${0.55 * a})`; ctx.lineWidth = 1.2 * a + 0.4;
-            ctx.beginPath(); ctx.moveTo(pa.sx, pa.sy); ctx.lineTo(pb.sx, pb.sy); ctx.stroke();
-          }
-          const pp = proj[p[k]];
-          const gg = ctx.createRadialGradient(pp.sx, pp.sy, 0, pp.sx, pp.sy, 10 * pp.persp);
-          gg.addColorStop(0, `rgba(${cr},${cg},${cb},${0.5 * a})`); gg.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
-          ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(pp.sx, pp.sy, 10 * pp.persp, 0, 6.29); ctx.fill();
-          ctx.fillStyle = `rgba(${Math.min(255, cr + 45)},${Math.min(255, cg + 45)},${Math.min(255, cb + 45)},${0.92 * a})`;
-          ctx.beginPath(); ctx.arc(pp.sx, pp.sy, Math.max(1.5, 3 * pp.persp * a + 0.6), 0, 6.29); ctx.fill();
-        }
-        // bright white-cored head, interpolated along the current segment
-        if (head < segs) {
-          const pa = proj[p[head]], pb = proj[p[head + 1]];
-          const px = pa.sx + (pb.sx - pa.sx) * f, py = pa.sy + (pb.sy - pa.sy) * f;
-          const gg = ctx.createRadialGradient(px, py, 0, px, py, 9);
-          gg.addColorStop(0, 'rgba(255,255,255,0.95)'); gg.addColorStop(0.4, `rgba(${cr},${cg},${cb},0.7)`); gg.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
-          ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(px, py, 9, 0, 6.29); ctx.fill();
-          ctx.fillStyle = 'rgba(255,255,255,1)'; ctx.beginPath(); ctx.arc(px, py, 2.3, 0, 6.29); ctx.fill();
-        }
-      }
-
-      const pulse = 54 + Math.sin(t / 1600) * 7;
-      const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, pulse);
-      g.addColorStop(0, 'rgba(255,246,220,0.92)');
-      g.addColorStop(0.2, 'rgba(242,168,40,0.5)');
-      g.addColorStop(1, 'rgba(242,168,40,0)');
-      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, pulse, 0, 6.29); ctx.fill();
-      ctx.fillStyle = 'rgba(255,251,238,0.96)'; ctx.beginPath(); ctx.arc(cx, cy, 5, 0, 6.29); ctx.fill();
-      if (!reduced) raf = requestAnimationFrame(draw);
-    };
-
-    build();
-    raf = requestAnimationFrame(draw);
-    const ro = new ResizeObserver(() => build());
-    ro.observe(canvas);
-    return () => { cancelAnimationFrame(raf); ro.disconnect(); };
-  }, []);
-  return <canvas ref={canvasRef} className="w-full h-full block" aria-hidden="true" />;
-};
 
 // The app's front door (native only): two equal ways in — free practice or a
 // live tutor. No pitch, no banner; installing the app was the yes.
@@ -4482,7 +3737,7 @@ const NativeWelcome = ({ user, onNavigate, setShowAuth }) => {
     setShowAuth('register');
   };
   return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900 flex flex-col">
+    <div className="min-h-screen bg-slate-100 text-slate-900 flex flex-col">
       <div className="flex-1 flex flex-col justify-center px-6 pb-6 pt-14 max-w-md w-full mx-auto">
         <div className="flex justify-center mb-6"><HorebBot size={84} /></div>
         <h1 className="text-[30px] font-extrabold tracking-tight leading-[1.1] text-center">
@@ -4511,28 +3766,17 @@ const NativeWelcome = ({ user, onNavigate, setShowAuth }) => {
 
 // App-level bottom tabs (native only) — navigation lives at the thumb, not in
 // a hamburger. Shown on marketplace/account pages; HOREB has its own nav.
-const NativeTabs = ({ page, user, onNavigate, setShowAuth }) => {
-  const Item = ({ id, label, active, onTap, d }) => (
-    <button onClick={onTap} className={`flex-1 flex flex-col items-center gap-1 py-1 transition-colors ${active ? 'text-slate-900' : 'text-slate-400'}`}>
-      <svg viewBox="0 0 24 24" className="w-[22px] h-[22px]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{d}</svg>
-      <span className="text-[10px] font-semibold">{label}</span>
-    </button>
-  );
-  return (
-    <nav className="fixed inset-x-0 bottom-0 z-50 bg-white border-t border-slate-200 flex justify-around px-1 pt-2" style={{ paddingBottom: 'calc(0.5rem + env(safe-area-inset-bottom))' }}>
-      <Item id="home" label="Home" active={page === 'native-home'} onTap={() => onNavigate('native-home')}
-        d={<><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V21h13V9.5"/></>} />
-      <Item id="ai" label="Practice" active={page === 'ai'} onTap={() => onNavigate('ai')}
-        d={<><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1 2.7 3 6 3s6-2 6-3v-5.5"/></>} />
-      <Item id="writing" label="Write" active={page === 'writing'} onTap={() => user ? onNavigate('writing') : setShowAuth('login')}
-        d={<><path d="M4 20h4l10.5-10.5a2.1 2.1 0 0 0-3-3L5 17v3Z"/><path d="m13.5 6.5 3 3"/></>} />
-      <Item id="tutors" label="Tutors" active={page === 'tutors'} onTap={() => onNavigate('tutors')}
-        d={<><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.3 2.9-5.5 6.5-5.5s6.5 2.2 6.5 5.5"/><circle cx="17.5" cy="9.5" r="2.6"/><path d="M15.5 14.7c2.9.2 6 2 6 4.8"/></>} />
-      <Item id="dashboard" label="My space" active={page === 'dashboard'} onTap={() => user ? onNavigate('dashboard') : setShowAuth('login')}
-        d={<><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5c0-3.6 3.3-6 7.5-6s7.5 2.4 7.5 6"/></>} />
-    </nav>
-  );
-};
+// The iOS and Android app's five places, on the same plain bar as everywhere else.
+const NATIVE_TABS = [
+  { id: 'native-home', label: 'Home', icon: 'home' },
+  { id: 'ai', label: 'Practice', icon: 'student' },
+  { id: 'writing', label: 'Write', icon: 'pen', signedIn: true },
+  { id: 'tutors', label: 'Tutors', icon: 'users' },
+  { id: 'dashboard', label: 'My space', icon: 'user', signedIn: true },
+];
+const NativeTabs = ({ page, user, onNavigate, setShowAuth }) => (
+  <TabBar native items={NATIVE_TABS} active={page} onPick={(it) => (it.signedIn && !user ? setShowAuth('login') : onNavigate(it.id))} />
+);
 
 // The app's account surface. Not the web dashboard: a phone-shaped view of the
 // three things that matter here — the next lesson, practice momentum, and the
@@ -4584,7 +3828,7 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
   );
 
   return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
+    <div className="min-h-screen bg-slate-100 text-slate-900 app-shell">
       <div className="max-w-md mx-auto px-4 pt-12 pb-28 native-safe-top app-scroll w-full">
         <div className="flex items-center gap-3 mb-6">
           <Avatar src={profile?.avatar_url} preset={profile?.avatar} name={profile?.full_name} size={52} />
@@ -4612,7 +3856,7 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
                 </div>
               );
               return (
-                <button onClick={() => onStartLesson(next)} className={`w-full mt-3 rounded-xl py-3 font-bold text-[15px] transition-colors ${j.soon ? 'bg-[#5a7a3a] hover:bg-[#4f6a30] text-white' : 'bg-slate-900 hover:bg-slate-800 text-white'}`}>{j.label}</button>
+                <button onClick={() => onStartLesson(next)} className={`w-full mt-3 rounded-xl py-3 font-bold text-[15px] transition-colors ${j.soon ? 'bg-emerald-600 hover:bg-emerald-700 text-white' : 'bg-slate-900 hover:bg-slate-800 text-white'}`}>{j.label}</button>
               );
             })()}
           </div>
@@ -4620,7 +3864,7 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
           <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-3">
             <div className="text-[15px] font-semibold">No lessons booked</div>
             <p className="text-[13.5px] text-slate-500 mt-1 mb-3">Work through something tricky with one of Kenya's verified tutors.</p>
-            <button onClick={() => onNavigate('tutors')} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Find a tutor</button>
+            <button onClick={() => onNavigate('tutors')} className="w-full bg-violet-500 hover:bg-violet-600 text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Find a tutor</button>
           </div>
         )}
 
@@ -4640,7 +3884,7 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
         {/* Hand this device to a child: their own space, no payments or messages */}
         <button onClick={() => onNavigate('handover')}
           className="w-full bg-white border border-slate-200 shadow-sm rounded-2xl p-4 mb-3 flex items-center gap-3 text-left hover:border-slate-300 transition-colors">
-          <span className="w-10 h-10 rounded-xl bg-[#ecedfa] text-[#6d6fcb] flex items-center justify-center shrink-0">
+          <span className="w-10 h-10 rounded-xl bg-slate-100 text-violet-500 flex items-center justify-center shrink-0">
             <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
           </span>
           <span className="flex-1 min-w-0">
@@ -4658,7 +3902,7 @@ const NativeMySpace = ({ profile, bookings, onNavigate, onStartLesson, onOpenMes
             {[{ id: null, name: 'You', grade: null }, ...children].map(c => (
               <button key={c.id || 'self'} onClick={() => onOpenProgress(c.id ? c : null)}
                 className="w-full flex items-center gap-3 py-2.5 px-2 -mx-2 rounded-xl hover:bg-slate-50 transition-colors text-left">
-                <span className="w-9 h-9 rounded-full bg-[#f5f6fc] border border-[#e2e5f6] text-[#6d6fcb] font-bold text-[14px] flex items-center justify-center shrink-0">
+                <span className="w-9 h-9 rounded-full bg-violet-50 border border-violet-100 text-violet-500 font-bold text-[14px] flex items-center justify-center shrink-0">
                   {(c.name || '?')[0].toUpperCase()}
                 </span>
                 <span className="flex-1 min-w-0">
@@ -4703,7 +3947,7 @@ const NativeLessonBanner = ({ bookings, onStartLesson }) => {
   if (!live) return null;
   return (
     <div className="fixed inset-x-0 z-[55] px-3" style={{ bottom: 'calc(4.6rem + env(safe-area-inset-bottom))' }}>
-      <button onClick={() => onStartLesson(live)} className="w-full max-w-md mx-auto flex items-center gap-3 bg-[#5a7a3a] hover:bg-[#4f6a30] text-white rounded-2xl px-4 py-3 shadow-lg transition-colors">
+      <button onClick={() => onStartLesson(live)} className="w-full max-w-md mx-auto flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl px-4 py-3 shadow-lg transition-colors">
         <span className="w-2.5 h-2.5 rounded-full bg-white/90 animate-pulse shrink-0" />
         <span className="flex-1 text-left min-w-0">
           <span className="block text-[14.5px] font-extrabold tracking-tight">{live.subject} is starting</span>
@@ -4754,7 +3998,7 @@ const NativeHome = ({ profile, bookings, onNavigate, onStartLesson, setShowAuth,
   const R = 31, C = 2 * Math.PI * R;
 
   if (!user) return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
+    <div className="min-h-screen bg-slate-100 text-slate-900 app-shell">
       <div className="app-scroll"><div className="max-w-md mx-auto px-4 pt-16 pb-28 native-safe-top text-center">
         <div className="text-[22px] font-extrabold tracking-tight">Welcome to Tutagora</div>
         <p className="text-slate-500 mt-2 mb-5">Sign in to see your lessons and your practice.</p>
@@ -4764,7 +4008,7 @@ const NativeHome = ({ profile, bookings, onNavigate, onStartLesson, setShowAuth,
   );
 
   return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
+    <div className="min-h-screen bg-slate-100 text-slate-900 app-shell">
       <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
         <div className="max-w-md mx-auto px-4 py-3 flex items-center justify-between">
           <span className="text-[15px] font-extrabold tracking-tight">TUTAGORA</span>
@@ -4799,21 +4043,21 @@ const NativeHome = ({ profile, bookings, onNavigate, onStartLesson, setShowAuth,
           {/* next lesson */}
           {next ? (
             <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
-              <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Next lesson</div>
+              <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-violet-500">Next lesson</div>
               <div className="text-[16px] font-extrabold tracking-tight mt-1">{next.subject}</div>
               <div className="text-sm text-slate-500">
                 {next.tutors?.profiles?.full_name ? `with ${tidyName(next.tutors.profiles.full_name)} · ` : ''}
                 {prettyDate(next.lesson_date)} at {next.start_time?.slice(0, 5)}
               </div>
               {next.status === 'confirmed'
-                ? <button onClick={() => onStartLesson(next)} className={`w-full mt-3 rounded-xl py-3 font-bold text-[15px] text-white transition-colors ${startsSoon(next) ? 'bg-[#5a7a3a] hover:bg-[#4f6a30]' : 'bg-slate-900 hover:bg-slate-800'}`}>{startsSoon(next) ? 'Join now' : 'Enter the room early'}</button>
+                ? <button onClick={() => onStartLesson(next)} className={`w-full mt-3 rounded-xl py-3 font-bold text-[15px] text-white transition-colors ${startsSoon(next) ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-slate-900 hover:bg-slate-800'}`}>{startsSoon(next) ? 'Join now' : 'Enter the room early'}</button>
                 : <div className="mt-3 text-[13px] text-slate-400">Waiting for the tutor to confirm this booking.</div>}
             </div>
           ) : (
             <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
               <div className="text-[15px] font-semibold">Work with a tutor</div>
               <p className="text-[13.5px] text-slate-500 mt-1 mb-3">One-to-one help from Kenya's verified tutors, whenever something won't click.</p>
-              <button onClick={() => onNavigate('tutors')} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Find a tutor</button>
+              <button onClick={() => onNavigate('tutors')} className="w-full bg-violet-500 hover:bg-violet-600 text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Find a tutor</button>
             </div>
           )}
 
@@ -4833,7 +4077,7 @@ const NativeHome = ({ profile, bookings, onNavigate, onStartLesson, setShowAuth,
           <button onClick={() => onNavigate('writing')} className="w-full text-left bg-white border border-slate-200 shadow-sm rounded-2xl p-4 hover:border-slate-300 transition-colors">
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
-                <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Writing</div>
+                <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-violet-500">Writing</div>
                 <div className="text-[15px] font-extrabold tracking-tight mt-0.5">Composition & Insha</div>
                 <div className="text-[13px] text-slate-500">Write it, get it marked out of 20, fix the exact lines.</div>
               </div>
@@ -4929,7 +4173,7 @@ const LearnerProgress = ({ parentId, learner, onBack }) => {
   const name = learner?.name || 'You';
 
   return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
+    <div className="min-h-screen bg-slate-100 text-slate-900 app-shell">
       <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
         <div className="max-w-md mx-auto px-4 py-3 flex items-center gap-2">
           <button onClick={onBack} aria-label="Back" className="text-slate-400 hover:text-slate-700">
@@ -4960,7 +4204,7 @@ const LearnerProgress = ({ parentId, learner, onBack }) => {
 
               {/* what a parent actually wants: where is she stuck */}
               <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
-                <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#c0663f]">Struggling with</div>
+                <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-amber-600">Struggling with</div>
                 {view.struggling.length === 0 ? (
                   <p className="text-[14px] text-slate-500 mt-2">Nothing is stuck right now — everything she's attempted is holding.</p>
                 ) : (
@@ -4980,20 +4224,20 @@ const LearnerProgress = ({ parentId, learner, onBack }) => {
 
               {/* what she's been working on */}
               <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
-                <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#5a7a3a]">Recently worked on</div>
+                <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-emerald-600">Recently worked on</div>
                 {view.recent.length === 0 ? (
                   <p className="text-[14px] text-slate-500 mt-2">Nothing yet.</p>
                 ) : (
                   <div className="mt-2 space-y-2">
                     {view.recent.map(s => (
                       <div key={s.id} className="flex items-center gap-3">
-                        <span className={`w-2 h-2 rounded-full shrink-0 ${s.mastered ? 'bg-[#5a7a3a]' : 'bg-amber-400'}`} />
+                        <span className={`w-2 h-2 rounded-full shrink-0 ${s.mastered ? 'bg-emerald-600' : 'bg-amber-400'}`} />
                         <span className="flex-1 min-w-0 text-[14.5px] text-slate-800 truncate">{view.named(s.id)}</span>
                         <span className="shrink-0 text-[12.5px] text-slate-400">{pretty(s.lastPractice)}</span>
                       </div>
                     ))}
                     <p className="text-[12.5px] text-slate-400 pt-1">
-                      <span className="inline-block w-2 h-2 rounded-full bg-[#5a7a3a] mr-1.5" />mastered
+                      <span className="inline-block w-2 h-2 rounded-full bg-emerald-600 mr-1.5" />mastered
                       <span className="inline-block w-2 h-2 rounded-full bg-amber-400 ml-3 mr-1.5" />still learning
                     </p>
                   </div>
@@ -5005,11 +4249,11 @@ const LearnerProgress = ({ parentId, learner, onBack }) => {
           {/* writing — the marks, and what the marker said to work on */}
           {!state.loading && pieces.length > 0 && (
             <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4">
-              <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">Writing</div>
+              <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-violet-500">Writing</div>
               <div className="mt-2 space-y-2.5">
                 {pieces.map(p => (
                   <div key={p.id} className="flex items-start gap-3">
-                    <span className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center font-extrabold tabular-nums text-[14px] ${p.score == null ? 'bg-slate-100 text-slate-400' : p.score >= 16 ? 'bg-[#e8efdc] text-[#5a7a3a]' : p.score >= 11 ? 'bg-amber-100 text-amber-800' : 'bg-[#fde7e3] text-[#c0663f]'}`}>{p.score == null ? '—' : p.score}</span>
+                    <span className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center font-extrabold tabular-nums text-[14px] ${p.score == null ? 'bg-slate-100 text-slate-400' : p.score >= 16 ? 'bg-emerald-100 text-emerald-600' : p.score >= 11 ? 'bg-amber-100 text-amber-800' : 'bg-red-50 text-amber-600'}`}>{p.score == null ? '—' : p.score}</span>
                     <span className="flex-1 min-w-0">
                       <span className="block text-[14.5px] text-slate-800 truncate">{p.title || p.prompt}</span>
                       <span className="block text-[12.5px] text-slate-400">{p.language === 'sw' ? 'Kiswahili' : 'English'} · {pretty(p.created_at)}{p.feedback?.next_step ? ` · next: ${p.feedback.next_step}` : ''}</span>
@@ -5055,7 +4299,7 @@ const NativeMyLessons = ({ bookings, onBack, onStartLesson, onNavigate }) => {
           {b.learner_name && <div className="text-[13px] text-slate-400 mt-1">For {b.learner_name}{b.learner_grade ? ` · ${b.learner_grade}` : ''}</div>}
         </div>
         {!isPast && (
-          <span className={`shrink-0 text-[11px] font-bold px-2.5 py-1 rounded-full ${b.status === 'confirmed' ? 'bg-[#eef4e7] text-[#4f7233]' : 'bg-amber-50 text-amber-700'}`}>
+          <span className={`shrink-0 text-[11px] font-bold px-2.5 py-1 rounded-full ${b.status === 'confirmed' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-50 text-amber-700'}`}>
             {b.status === 'confirmed' ? 'Confirmed' : 'Awaiting tutor'}
           </span>
         )}
@@ -5067,7 +4311,7 @@ const NativeMyLessons = ({ bookings, onBack, onStartLesson, onNavigate }) => {
   );
 
   return (
-    <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
+    <div className="min-h-screen bg-slate-100 text-slate-900 app-shell">
       <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
         <div className="max-w-md mx-auto px-4 py-3 flex items-center gap-2">
           <button onClick={onBack} aria-label="Back" className="text-slate-400 hover:text-slate-700">
@@ -5082,7 +4326,7 @@ const NativeMyLessons = ({ bookings, onBack, onStartLesson, onNavigate }) => {
             <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-5 text-center">
               <div className="text-[15px] font-semibold">No lessons yet</div>
               <p className="text-[13.5px] text-slate-500 mt-1 mb-3">Book a tutor and your lessons will live here.</p>
-              <button onClick={() => onNavigate('tutors')} className="w-full bg-[#6d6fcb] hover:bg-[#5658b8] text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Find a tutor</button>
+              <button onClick={() => onNavigate('tutors')} className="w-full bg-violet-500 hover:bg-violet-600 text-white rounded-xl py-3 font-bold text-[15px] transition-colors">Find a tutor</button>
             </div>
           )}
           {upcoming.length > 0 && <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-slate-400 px-1 pt-1">Upcoming</div>}
@@ -5095,398 +4339,8 @@ const NativeMyLessons = ({ bookings, onBack, onStartLesson, onNavigate }) => {
   );
 };
 
-const HorebIntro = ({ user, profile, onNavigate, setShowAuth }) => {
-  const start = () => {
-    if (user) { onNavigate('ai'); return; }
-    // Quick signup, then land in HOREB (App reads this after auth).
-    try { sessionStorage.setItem('tg_after_auth', 'ai'); } catch { /* private mode */ }
-    setShowAuth('register');
-  };
-  return (
-    <div className="min-h-screen text-white" style={{ background: 'linear-gradient(168deg,#0a1a30 0%,#0d2138 60%,#122c4a 100%)' }}>
-      <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-10 lg:gap-6 items-center">
-        {/* Left — the pitch */}
-        <div>
-          <div className="text-[13px] font-semibold tracking-[.16em] text-amber-300/90">HOREB · ADAPTIVE MATHEMATICS</div>
-          <h1 className="mt-4 text-[40px] sm:text-[52px] font-extrabold leading-[1.03] tracking-[-.03em]">
-            No child is bad<br />at maths.
-            <span className="block text-amber-300 mt-1">They're missing one step.</span>
-          </h1>
-          <p className="mt-6 text-[17.5px] leading-relaxed text-white/80 max-w-md">
-            Every “I don’t get it” traces back to a single skill that never quite
-            clicked. HOREB finds that <em>exact</em> skill — and quietly rebuilds
-            everything that stands on it.
-          </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <button onClick={start} className="px-7 py-3.5 rounded-xl bg-amber-400 text-slate-900 font-bold text-[15px] hover:bg-amber-300 transition-colors">
-              {user ? 'Open HOREB' : 'Find your child’s gap'}
-            </button>
-            <button onClick={() => { const el = document.getElementById('how'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/20 font-semibold text-[15px] hover:bg-white/15 transition-colors">
-              How it works
-            </button>
-          </div>
 
-          <p className="mt-8 text-[14px] text-white/50 max-w-md leading-relaxed">
-            On any phone. Two minutes to set up, one child at a time.
-          </p>
-        </div>
-
-        {/* Right — the living knowledge graph */}
-        <div className="relative h-[440px] sm:h-[520px] lg:h-[600px] lg:-mr-10">
-          <HorebConstellation />
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// Page two — a confident, science-forward answer to "what is HOREB?", in the
-// clean bold register the founder likes. Light, high-contrast, one accent.
-const HorebHow = ({ user, onNavigate, setShowAuth, embedded = false }) => {
-  const start = () => {
-    if (user) { onNavigate('ai'); return; }
-    try { sessionStorage.setItem('tg_after_auth', 'ai'); } catch { /* private mode */ }
-    setShowAuth('register');
-  };
-  const beats = [
-    { k: 'It knows the whole map.', p: 'Every skill in the CBC maths curriculum, and every skill it stands on, wired together. So HOREB always knows exactly what your child is ready to learn next — and what would only confuse them.' },
-    { k: 'It teaches to mastery, not to the bell.', p: 'A skill isn’t “done” because the lesson ended. HOREB only moves on once your child has genuinely mastered it — proven question by question, not assumed.' },
-    { k: 'It keeps them at the edge.', p: 'Too easy is boring; too hard is discouraging. HOREB holds every child right at the edge of what they can do — the one place where learning actually happens fast.' },
-    { k: 'It fights forgetting.', p: 'Each skill returns for a short review at the precise moment it would start to fade. What your child learns, they keep — without you ever nagging about revision.' },
-  ];
-  return (
-    <div id="how" className="bg-white text-slate-900">
-      <div className={`max-w-4xl mx-auto px-6 pb-24 ${embedded ? 'pt-20' : 'pt-24'}`}>
-        {!embedded && <button onClick={() => onNavigate('horeb')} className="text-slate-400 hover:text-slate-700 text-sm transition-colors">← Back</button>}
-        <div className={`text-[13px] font-bold tracking-[.16em] text-amber-600 ${embedded ? '' : 'mt-8'}`}>HOW HOREB WORKS</div>
-        <h1 className="mt-4 text-[46px] sm:text-[64px] font-extrabold leading-[0.98] tracking-[-.035em]">
-          The way maths<br />should be taught.<br /><span className="text-amber-500">One child at a time.</span>
-        </h1>
-        <p className="mt-7 text-[19px] leading-relaxed text-slate-600 max-w-2xl">
-          HOREB runs the techniques cognitive science keeps proving — and a
-          classroom of forty rarely has the time for. It measures what your child
-          truly knows, teaches the exact next thing they’re ready for, and makes
-          it stick.
-        </p>
-
-        {/* pace comparison — the Recess-style proof bar, kept honest */}
-        <div className="mt-16">
-          <div className="flex items-baseline justify-between">
-            <span className="text-[12.5px] font-bold tracking-[.12em] text-slate-400">A CLASSROOM</span>
-            <span className="text-[15px] text-slate-500">one pace, forty children</span>
-          </div>
-          <div className="mt-2 h-11 rounded-xl bg-slate-100 overflow-hidden">
-            <div className="h-full rounded-xl bg-slate-300" style={{ width: '52%' }} />
-          </div>
-          <div className="mt-7 flex items-baseline justify-between">
-            <span className="text-[12.5px] font-bold tracking-[.12em] text-amber-600">HOREB</span>
-            <span className="text-[15px] text-slate-700 font-medium">your child’s exact pace</span>
-          </div>
-          <div className="mt-2 h-11 rounded-xl bg-amber-100 overflow-hidden">
-            <div className="h-full rounded-xl flex items-center justify-end pr-4 text-white font-extrabold text-[15px]" style={{ width: '100%', background: 'linear-gradient(90deg,#f2a828,#e0891a)' }}>up to 2× the progress</div>
-          </div>
-          <p className="mt-4 text-[14px] text-slate-500 max-w-2xl leading-relaxed">
-            Taught to mastery at their own pace, children learn far faster — one of the most replicated findings in education. HOREB is how you give that to one child, at home.
-          </p>
-        </div>
-
-        {/* the method */}
-        <div className="mt-20 space-y-11">
-          {beats.map((b, i) => (
-            <div key={i} className="border-t border-slate-200 pt-8">
-              <div className="flex items-baseline gap-4">
-                <span className="text-amber-500 font-extrabold text-[15px] tabular-nums">0{i + 1}</span>
-                <h2 className="text-[26px] sm:text-[30px] font-extrabold leading-tight tracking-[-.02em]">{b.k}</h2>
-              </div>
-              <p className="mt-3 sm:pl-10 text-[17px] leading-relaxed text-slate-600 max-w-2xl">{b.p}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* close */}
-        <div className="mt-20 rounded-3xl bg-slate-900 text-white p-9 sm:p-11">
-          <h3 className="text-[26px] sm:text-[30px] font-extrabold leading-tight">One map per child. On any phone.</h3>
-          <p className="mt-3 text-[16.5px] leading-relaxed text-white/70 max-w-xl">
-            Add each of your children — each gets their own map, their own pace, their own progress. And the moment they need a person, a verified Tutagora tutor is one tap away.
-          </p>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <button onClick={start} className="px-7 py-3.5 rounded-xl bg-amber-400 text-slate-900 font-bold text-[15px] hover:bg-amber-300 transition-colors">
-              {user ? 'Open HOREB' : 'Start now'}
-            </button>
-            <button onClick={() => onNavigate('tutors')} className="px-6 py-3.5 rounded-xl bg-white/10 border border-white/25 font-semibold text-[15px] hover:bg-white/15 transition-colors">
-              Browse tutors
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const HomePage = ({ onNavigate, setShowAuth }) => {
-  const { tutors } = useTutors();
-  const [openFaq, setOpenFaq] = useState(null);
-
-  const subjects = [
-    { name: 'Mathematics', animation: 'mathematics' },
-    { name: 'English', animation: 'english' },
-    { name: 'Physics', animation: 'physics' },
-    { name: 'Chemistry', animation: 'chemistry' },
-    { name: 'Biology', animation: 'biology' },
-    { name: 'Kiswahili', animation: 'languages' },
-    { name: 'History', animation: 'history' },
-    { name: 'Geography', animation: 'geography' },
-  ];
-
-  const steps = [
-    { num: '1', title: 'Find a Tutor', desc: 'Browse our verified tutors by subject, price, and availability' },
-    { num: '2', title: 'Book a Lesson', desc: 'Pick a time that works for you and pay securely via card' },
-    { num: '3', title: 'Learn Online', desc: 'Join your live video lesson with screen sharing and chat' },
-  ];
-
-  const faqs = [
-    { q: 'How do I book a lesson?', a: 'Simply find a tutor, select an available time slot, and pay securely via card. You\'ll receive a confirmation with a link to join the video lesson.' },
-    { q: 'How do video lessons work?', a: 'Lessons happen via our built-in video platform. Both you and your tutor can share screens, use a virtual whiteboard, and chat in real-time.' },
-    { q: 'How do tutors get paid?', a: 'Tutors receive payments weekly via mobile money. We handle all the payment processing securely.' },
-  ];
-
-  return (
-    <>
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center relative overflow-hidden" style={{ background: 'linear-gradient(168deg,#0a1a30 0%,#0d2138 55%,#122c4a 100%)' }}>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
-        <div className="max-w-6xl mx-auto px-4 sm:px-5 pt-20 pb-12 sm:py-32 relative flex items-center justify-between">
-          <div className="max-w-xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-              Learn from Kenya's <span className="text-emerald-400">best tutors</span>
-            </h1>
-            <p className="mt-4 sm:mt-6 text-base sm:text-xl text-slate-300">
-              One-on-one online lessons with verified tutors. Book instantly, pay securely, learn from anywhere.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8">
-              <button onClick={() => onNavigate('tutors')} className="px-6 sm:px-8 py-3.5 sm:py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-colors text-sm sm:text-base">
-                Find a Tutor
-              </button>
-              <button onClick={() => onNavigate('teach')} className="px-6 sm:px-8 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/20 transition-colors text-sm sm:text-base">
-                Become a Tutor
-              </button>
-            </div>
-            <div className="flex gap-4 sm:gap-8 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10">
-              <div><span className="text-xl sm:text-3xl font-bold text-white">{tutors.length || '500'}+</span><span className="text-slate-400 text-xs sm:text-base ml-1 sm:ml-2">Tutors</span></div>
-              <div><span className="text-xl sm:text-3xl font-bold text-white">10k+</span><span className="text-slate-400 text-xs sm:text-base ml-1 sm:ml-2">Students</span></div>
-              <div className="flex items-center gap-1 sm:gap-2"><span className="text-xl sm:text-3xl font-bold text-white">4.9</span><Stars rating={5} size={14} /></div>
-            </div>
-          </div>
-          {/* Lottie Animation */}
-          <div className="hidden lg:block">
-            <Lottie src={ANIMATIONS.learning} width={400} height={400} />
-          </div>
-        </div>
-      </section>
-
-      {/* Subjects Section */}
-      <section className="py-12 sm:py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-5">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Find tutors by subject</h2>
-            <p className="text-slate-500 mt-2 sm:mt-3 text-sm sm:text-base">Choose from a wide range of subjects taught by expert tutors</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-            {subjects.map(s => (
-              <button 
-                key={s.name} 
-                onClick={() => onNavigate('tutors')} 
-                className="p-6 bg-white border border-slate-200 hover:border-slate-300 hover:shadow-lg rounded-2xl text-center transition-all group"
-              >
-                <div className="flex justify-center mb-3 group-hover:scale-110 transition-transform">
-                  <Lottie src={ANIMATIONS[s.animation]} width={70} height={70} />
-                </div>
-                <div className="font-semibold text-slate-900">{s.name}</div>
-                <div className="text-sm text-slate-500 mt-1">View tutors</div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-5">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">How Tutagora works</h2>
-            <p className="text-slate-500 mt-3">Get started in 3 simple steps</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="flex justify-center mb-4">
-                <div className="w-[120px] h-[120px] bg-emerald-50 rounded-full flex items-center justify-center">
-                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-                    <path d="M11 8v6M8 11h6"/>
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Find a Tutor</h3>
-              <p className="text-slate-500">Browse our verified tutors by subject, price, and availability</p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="flex justify-center mb-4">
-                <div className="w-[120px] h-[120px] bg-blue-50 rounded-full flex items-center justify-center">
-                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-                    <path d="m9 16 2 2 4-4"/>
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Book a Lesson</h3>
-              <p className="text-slate-500">Pick a time that works for you and pay securely via card</p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="flex justify-center mb-4">
-                <div className="w-[120px] h-[120px] bg-purple-50 rounded-full flex items-center justify-center">
-                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M15.6 11.6L22 7v10l-6.4-4.5v-1zM4 5h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2z"/>
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Learn Online</h3>
-              <p className="text-slate-500">Join your live video lesson with screen sharing and chat</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Tutors */}
-      {tutors.length > 0 && (
-        <section className="py-20 bg-white">
-          <div className="max-w-6xl mx-auto px-5">
-            <div className="flex justify-between items-end mb-10">
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900">Featured Tutors</h2>
-                <p className="text-slate-500 mt-2">Learn from our top-rated educators</p>
-              </div>
-              <button onClick={() => onNavigate('tutors')} className="text-emerald-600 font-semibold hover:text-emerald-700">
-                View all →
-              </button>
-            </div>
-            <div className="grid md:grid-cols-4 gap-6">
-              {tutors.slice(0, 4).map(t => (
-                <div key={t.id} onClick={() => onNavigate('tutors')} className="bg-white border border-slate-200 rounded-2xl overflow-hidden cursor-pointer hover:shadow-xl transition-all">
-                  <div className="aspect-square bg-gradient-to-br from-slate-100 to-slate-50 flex items-center justify-center">
-                    <Avatar src={t.profiles?.avatar_url} name={t.profiles?.full_name} size={100} />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-bold text-slate-900">{t.profiles?.full_name}</h3>
-                    <p className="text-emerald-600 text-sm font-medium">{t.subject}</p>
-                    {t.headline && <p className="text-slate-500 text-sm mt-1 line-clamp-2">{t.headline}</p>}
-                    <div className="flex items-center gap-2 mt-3">
-                      <Stars rating={t.rating || 5} size={14} />
-                      <span className="text-sm text-slate-600">{t.rating || '5.0'}</span>
-                    </div>
-                    <div className="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
-                      <span className="font-bold text-lg">KSh {t.hourly_rate?.toLocaleString() || '1,000'}</span>
-                      <span className="text-slate-400 text-sm">/hour</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-5">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900">Frequently asked questions</h2>
-            <p className="text-slate-500 mt-3">Everything you need to know</p>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <div key={i} className="border border-slate-200 rounded-xl overflow-hidden">
-                <button 
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full p-5 flex justify-between items-center text-left hover:bg-slate-50"
-                >
-                  <span className="font-semibold text-slate-900">{faq.q}</span>
-                  <span className="text-slate-400 text-xl">{openFaq === i ? '−' : '+'}</span>
-                </button>
-                {openFaq === i && (
-                  <div className="px-5 pb-5 text-slate-600">{faq.a}</div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-12 sm:py-20 bg-gradient-to-r from-emerald-500 to-emerald-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-5 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8">Ready to start learning?</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button onClick={() => onNavigate('tutors')} className="px-8 py-4 bg-white text-emerald-600 font-semibold rounded-full hover:bg-emerald-50 transition-colors">
-              Find a Tutor
-            </button>
-            <button onClick={() => setShowAuth('register')} className="px-8 py-4 bg-emerald-700 text-white font-semibold rounded-full hover:bg-emerald-800 transition-colors">
-              Sign Up Free
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white py-16">
-        <div className="max-w-6xl mx-auto px-5">
-          <div className="grid md:grid-cols-4 gap-10 mb-10">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center font-bold text-lg">T</div>
-                <span className="font-bold text-xl">Tutagora</span>
-              </div>
-              <p className="text-slate-400">Kenya's leading online tutoring platform. Quality education, accessible to all.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">For Students</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li><button onClick={() => onNavigate('tutors')} className="hover:text-white">Find Tutors</button></li>
-                <li><button onClick={() => setShowAuth('register')} className="hover:text-white">Sign Up</button></li>
-                <li><button className="hover:text-white">How It Works</button></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">For Tutors</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li><button onClick={() => onNavigate('teach')} className="hover:text-white">Become a Tutor</button></li>
-                <li><button onClick={() => onNavigate('teach')} className="hover:text-white">Why Teach</button></li>
-                <li><button onClick={() => onNavigate('teach')} className="hover:text-white">Payment Info</button></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li>hello@tutagora.com</li>
-                <li>+254 759 240 692</li>
-                <li>Nairobi, Kenya</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-400 text-sm">© 2026 Tutagora. All rights reserved.</p>
-            <div className="flex items-center gap-4">
-              <button onClick={() => onNavigate('privacy')} className="text-slate-400 text-sm hover:text-white transition-colors">Privacy Policy</button>
-              <span className="text-slate-700">|</span>
-              <p className="text-slate-500 text-sm">Made in Nairobi</p>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </>
-  );
-};
 
 // ============ TUTORS PAGE ============
 const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
@@ -5548,7 +4402,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
   const activeFilters = (selectedSubject && selectedSubject !== 'All Subjects' ? 1 : 0) + (selectedGrade && selectedGrade !== 'All Grades' ? 1 : 0) + (priceRange !== 'all' ? 1 : 0);
 
   return (
-    <div className="min-h-screen bg-[#eef0f2] pt-20 pb-10">
+    <div className="min-h-screen bg-slate-100 pt-20 pb-10">
       <div className="max-w-6xl mx-auto px-5">
         {onBack && <button onClick={onBack} className="text-slate-500 mb-4 flex items-center gap-1"><span>←</span> Back</button>}
         
@@ -5567,7 +4421,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
               value={search} 
               onChange={e => setSearch(e.target.value)} 
               placeholder="Search by name, subject, or keyword..." 
-              className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30" 
+              className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-violet-500/30" 
             />
           </div>
         </div>
@@ -5579,7 +4433,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <select
               value={selectedSubject}
               onChange={(e) => setSelectedSubject(e.target.value)}
-              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 cursor-pointer transition-colors ${selectedSubject && selectedSubject !== 'All Subjects' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-violet-500/30 cursor-pointer transition-colors ${selectedSubject && selectedSubject !== 'All Subjects' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
             >
               {subjects.map(s => <option key={s} value={s}>{s}</option>)}
             </select>
@@ -5588,7 +4442,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <select
               value={selectedGrade}
               onChange={(e) => setSelectedGrade(e.target.value)}
-              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 cursor-pointer transition-colors ${selectedGrade && selectedGrade !== 'All Grades' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-violet-500/30 cursor-pointer transition-colors ${selectedGrade && selectedGrade !== 'All Grades' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
             >
               {grades.map(g => <option key={g} value={g}>{g}</option>)}
             </select>
@@ -5597,7 +4451,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
-              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 cursor-pointer transition-colors ${priceRange !== 'all' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-violet-500/30 cursor-pointer transition-colors ${priceRange !== 'all' ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-700 border-slate-200'}`}
             >
               {priceRanges.map(p => <option key={p.value} value={p.value}>{p.label}</option>)}
             </select>
@@ -5606,7 +4460,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 cursor-pointer transition-colors bg-white text-slate-700 border-slate-200`}
+              className={`appearance-none px-4 py-2.5 rounded-full border text-[14px] font-semibold focus:outline-none focus:ring-2 focus:ring-violet-500/30 cursor-pointer transition-colors bg-white text-slate-700 border-slate-200`}
             >
               <option value="rating">Highest Rated</option>
               <option value="reviews">Most Reviews</option>
@@ -5646,7 +4500,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filtered.map(t => (
-              <div key={t.id} onClick={() => onSelectTutor(t)} className="bg-white rounded-xl border border-slate-200 overflow-hidden cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
+              <div key={t.id} onClick={() => onSelectTutor(t)} className="bg-white rounded-2xl overflow-hidden cursor-pointer hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
                 {/* Photo-forward header — the face is the hero. Full-bleed cover
                     image (real photo, or the initials avatar as a colour tile). */}
                 <div className="relative w-full aspect-[4/3] bg-slate-100 overflow-hidden">
@@ -5657,7 +4511,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
                     className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
                   />
                   {t.verified && (
-                    <span className="absolute top-2.5 left-2.5 px-2.5 py-1 bg-white/95 text-[#6d6fcb] text-xs font-semibold rounded-full flex items-center gap-1 shadow-sm">
+                    <span className="absolute top-2.5 left-2.5 px-2.5 py-1 bg-white/95 text-violet-500 text-xs font-semibold rounded-full flex items-center gap-1 shadow-sm">
                       <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                       Verified
                     </span>
@@ -5668,7 +4522,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
                 </div>
                 <div className="px-4 pt-3 pb-4 flex flex-col flex-1">
                   <h3 className="font-bold text-slate-900 text-lg">{t.profiles?.full_name}</h3>
-                  <p className="text-sm text-[#6d6fcb] font-medium">{(t.subjects || [t.subject]).join(', ')} Tutor</p>
+                  <p className="text-sm text-violet-500 font-medium">{(t.subjects || [t.subject]).join(', ')} Tutor</p>
                   {t.headline && <p className="text-sm text-slate-500 mt-1">{t.headline}</p>}
                   {t.bio && <p className="text-sm text-slate-500 mt-1.5 line-clamp-2">{t.bio}</p>}
 
@@ -5676,7 +4530,7 @@ const TutorsPage = ({ onSelectTutor, onBack, user, setShowAuth }) => {
                   <div className="flex flex-wrap gap-1.5 mt-3">
                     {t.degree && <span className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full text-xs">{t.degree}</span>}
                     {t.experience_years && <span className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full text-xs">{t.experience_years}yr exp</span>}
-                    {t.teaching_style && <span className="px-2 py-0.5 bg-[#ecedfa] text-[#6d6fcb] rounded-full text-xs">{t.teaching_style}</span>}
+                    {t.teaching_style && <span className="px-2 py-0.5 bg-slate-100 text-violet-500 rounded-full text-xs">{t.teaching_style}</span>}
                   </div>
 
                   <div className="flex items-center gap-2 mt-3">
@@ -5809,7 +4663,7 @@ const GroupClassesBrowse = ({ user, setShowAuth }) => {
           const isFull = spotsLeft <= 0;
           const isEnrolled = !!myEnrollments[gc.id];
           return (
-            <div key={gc.id} className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-lg transition-all flex flex-col">
+            <div key={gc.id} className="bg-white rounded-2xl p-5 hover:shadow-lg transition-all flex flex-col">
               <div className="flex items-center gap-3 mb-3">
                 <img src={gc.profiles?.avatar_url || initialsAvatar(gc.profiles?.full_name || 'T')}
                   onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = initialsAvatar(gc.profiles?.full_name || 'T'); }}
@@ -5849,7 +4703,7 @@ const GroupClassesBrowse = ({ user, setShowAuth }) => {
                   onClick={() => handleEnrollClick(gc)}
                   disabled={isFull}
                   className={`w-full py-2.5 rounded-lg text-sm font-semibold transition-colors mt-auto ${
-                    isFull ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'bg-emerald-500 text-white hover:bg-emerald-600'
+                    isFull ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'bg-slate-900 text-white hover:bg-slate-800'
                   }`}
                 >
                   {isFull ? 'Class Full' : user ? `Enrol · KSh ${gc.price_per_student}` : 'Sign in to enrol'}
@@ -5958,7 +4812,7 @@ const GroupClassEnrollModal = ({ gc, user, onClose, onSuccess }) => {
                 <div className="border-t border-slate-200 pt-2 flex justify-between"><span className="text-slate-700 font-semibold">Total</span><span className="text-emerald-600 font-bold">KSh {amount.toLocaleString()}</span></div>
               </div>
               {error && <div className="p-3 bg-red-50 text-red-600 text-sm rounded-lg">{error}</div>}
-              <button onClick={pay} className="w-full py-4 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors">
+              <button onClick={pay} className="w-full py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-colors">
                 {amount <= 0 ? 'Join for Free' : `Pay KSh ${amount.toLocaleString()}`}
               </button>
               {amount > 0 && (
@@ -6162,7 +5016,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
         <div className="rounded-2xl overflow-hidden border border-slate-200 mb-8">
           <div className="h-28 bg-white border border-slate-200 shadow-sm relative">
             {tutor.verified && (
-              <span className="absolute top-3 right-3 px-3 py-1 bg-white/90 text-[#6d6fcb] text-xs font-semibold rounded-full flex items-center gap-1">
+              <span className="absolute top-3 right-3 px-3 py-1 bg-white/90 text-violet-500 text-xs font-semibold rounded-full flex items-center gap-1">
                 <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                 Verified Tutor
               </span>
@@ -6178,7 +5032,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
               />
               <div className="flex-1 pb-1">
                 <h1 className="text-2xl font-extrabold tracking-tight text-slate-900">{tutor.profiles?.full_name}</h1>
-                <p className="text-[#6d6fcb] font-medium">{(tutor.subjects || [tutor.subject]).join(', ')} Tutor</p>
+                <p className="text-violet-500 font-medium">{(tutor.subjects || [tutor.subject]).join(', ')} Tutor</p>
                 {tutor.headline && <p className="text-slate-500 text-sm mt-0.5">{tutor.headline}</p>}
               </div>
             </div>
@@ -6201,12 +5055,12 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
             {/* Quick info chips */}
             <div className="flex flex-wrap gap-2 mt-4">
               {tutor.degree && <span className="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm">{tutor.degree}</span>}
-              {tutor.teaching_style && <span className="px-3 py-1 bg-[#ecedfa] text-[#6d6fcb] rounded-full text-sm">{tutor.teaching_style}</span>}
+              {tutor.teaching_style && <span className="px-3 py-1 bg-slate-100 text-violet-500 rounded-full text-sm">{tutor.teaching_style}</span>}
               {tutor.languages && (Array.isArray(tutor.languages) ? tutor.languages : [tutor.languages]).map(l => (
                 <span key={l} className="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm">{l}</span>
               ))}
               {gradeList(tutor.grade_levels).map(g => (
-                <span key={g} className="px-3 py-1 bg-[#ecedfa] text-[#6d6fcb] rounded-full text-sm">{g}</span>
+                <span key={g} className="px-3 py-1 bg-slate-100 text-violet-500 rounded-full text-sm">{g}</span>
               ))}
             </div>
           </div>
@@ -6229,7 +5083,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
               <h2 className="text-lg font-semibold text-slate-900 mb-3">What I teach</h2>
               <div className="flex flex-wrap gap-2">
                 {[...new Set((Array.isArray(tutor.subjects) && tutor.subjects.length ? tutor.subjects : [tutor.subject]).filter(Boolean))].map(sub => (
-                  <span key={sub} className="px-3 py-1.5 bg-[#eef4e7] text-[#4f7233] rounded-full text-sm font-medium">{sub}</span>
+                  <span key={sub} className="px-3 py-1.5 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">{sub}</span>
                 ))}
                 {tutor.specialties?.map((s, i) => (
                   <span key={i} className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full text-sm">{s}</span>
@@ -6339,7 +5193,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                     <div>
                       <label className="block text-xs font-medium text-slate-500 mb-1">Subject</label>
                       <select value={selectedSubject} onChange={e => setSelectedSubject(e.target.value)}
-                        className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 bg-white">
+                        className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/30 bg-white">
                         {bookableSubjects.map(sub => <option key={sub} value={sub}>{sub}</option>)}
                       </select>
                     </div>
@@ -6373,12 +5227,12 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                         <label className="block text-xs font-medium text-slate-500 mb-1">Student's name</label>
                         <input type="text" value={learnerName} onChange={e => setLearnerName(e.target.value)}
                           placeholder="e.g. your child's name (or your own)"
-                          className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30" />
+                          className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/30" />
                       </div>
                       <div>
                         <label className="block text-xs font-medium text-slate-500 mb-1">Grade / level</label>
                         <select value={learnerGrade} onChange={e => setLearnerGrade(e.target.value)}
-                          className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 bg-white">
+                          className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/30 bg-white">
                           <option value="">Select grade…</option>
                           {GRADES.map(g => <option key={g} value={g}>{g}</option>)}
                         </select>
@@ -6391,7 +5245,7 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
                     <label className="block text-xs font-medium text-slate-500 mb-1">What should the tutor focus on? <span className="text-slate-400 font-normal">(optional)</span></label>
                     <textarea value={focusNote} onChange={e => setFocusNote(e.target.value)} rows={2}
                       placeholder="e.g. struggling with fractions; preparing for end-term exam"
-                      className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6d6fcb]/30 resize-none" />
+                      className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/30 resize-none" />
                   </div>
                 </div>
               )}
@@ -6446,74 +5300,11 @@ const TutorProfileView = ({ tutor, onBack, onBook, user, setShowAuth, onNavigate
   );
 };
 
-// ============ NAVIGATION ============
-const Nav = ({ user, profile, onNavigate, setShowAuth, scrolled, isAdmin }) => {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all ${scrolled ? 'bg-white shadow-sm' : 'bg-transparent'}`}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-5 h-14 flex items-center justify-between">
-        <button onClick={() => onNavigate('home')} className="flex items-center gap-2">
-          <img src="/logo.png" alt="Tutagora" className="w-8 h-8 object-contain rounded-xl" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/favicon.svg'; }} />
-          <span className={`font-semibold ${scrolled ? 'text-slate-900' : 'text-white'}`}>Tutagora</span>
-        </button>
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-4">
-          <button onClick={() => onNavigate('tutors')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Find Tutors</button>
-          <button onClick={() => onNavigate('horeb')} className={`text-sm font-medium ${scrolled ? 'text-[#6d6fcb]' : 'text-amber-300'}`}>HOREB</button>
-          <button onClick={() => onNavigate('clubs')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Clubs</button>
-          <button onClick={() => onNavigate('schools')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>For Schools</button>
-          {isAdmin && <button onClick={() => onNavigate('admin')} className={`text-sm ${scrolled ? 'text-[#6d6fcb]' : 'text-[#c7cbe8]'}`}>Admin</button>}
-          {user && profile?.role === 'student' && <MomentumChip userId={profile?.id} onClick={() => onNavigate('ai')} />}
-          {user ? (
-            <button onClick={() => onNavigate('dashboard')} className="flex items-center gap-2">
-              <Avatar src={profile?.avatar_url} preset={profile?.avatar} name={profile?.full_name} size={32} />
-            </button>
-          ) : (
-            <>
-              <button onClick={() => setShowAuth('login')} className={`text-sm ${scrolled ? 'text-slate-600' : 'text-white/80'}`}>Sign in</button>
-              <button onClick={() => setShowAuth('register')} className={`px-4 py-2 rounded-full text-sm font-semibold ${scrolled ? 'bg-slate-900 text-white' : 'bg-white text-slate-900'}`}>Get Started</button>
-            </>
-          )}
-        </div>
-        {/* Mobile hamburger */}
-        <div className="flex md:hidden items-center gap-3">
-          {user && profile?.role === 'student' && <MomentumChip userId={profile?.id} onClick={() => onNavigate('ai')} />}
-          {user && (
-            <button onClick={() => onNavigate('dashboard')}>
-              <Avatar src={profile?.avatar_url} preset={profile?.avatar} name={profile?.full_name} size={28} />
-            </button>
-          )}
-          <button onClick={() => setMobileOpen(!mobileOpen)} className={`p-1 ${scrolled ? 'text-slate-700' : 'text-white'}`}>
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              {mobileOpen ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /> : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />}
-            </svg>
-          </button>
-        </div>
-      </div>
-      {/* Mobile menu dropdown */}
-      {mobileOpen && (
-        <div className={`md:hidden ${scrolled ? 'bg-white border-t border-slate-100' : 'bg-slate-900/95 backdrop-blur-sm'} px-4 py-4 space-y-2`}>
-          <button onClick={() => { onNavigate('tutors'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Find Tutors</button>
-          <button onClick={() => { onNavigate('horeb'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium ${scrolled ? 'text-[#6d6fcb] hover:bg-slate-100' : 'text-amber-300 hover:bg-white/10'}`}>HOREB</button>
-          <button onClick={() => { onNavigate('clubs'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>Clubs</button>
-          <button onClick={() => { onNavigate('schools'); setMobileOpen(false); }} className={`block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium ${scrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}>For Schools</button>
-          {isAdmin && <button onClick={() => { onNavigate('admin'); setMobileOpen(false); }} className="block w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium text-purple-400 hover:bg-white/10">Admin</button>}
-          {!user && (
-            <div className="flex gap-2 pt-2">
-              <button onClick={() => { setShowAuth('login'); setMobileOpen(false); }} className={`flex-1 py-2.5 rounded-xl text-sm font-medium ${scrolled ? 'bg-slate-100 text-slate-700' : 'bg-white/10 text-white'}`}>Sign in</button>
-              <button onClick={() => { setShowAuth('register'); setMobileOpen(false); }} className="flex-1 py-2.5 bg-amber-400 text-slate-900 rounded-xl text-sm font-semibold">Get Started</button>
-            </div>
-          )}
-        </div>
-      )}
-    </nav>
-  );
-};
 
 // ============ ADMIN DASHBOARD ============
 const ADMIN_EMAILS = ['mutualevy@gmail.com'];
 
-const AdminDashboard = ({ onLogout, onBack }) => {
+const AdminDashboard = ({ onBack }) => {
   const [tab, setTab] = useState('overview');
   const [stats, setStats] = useState({ tutors: 0, students: 0, bookings: 0, revenue: 0 });
   const [users, setUsers] = useState([]);
@@ -6731,44 +5522,16 @@ const AdminDashboard = ({ onLogout, onBack }) => {
   if (!authorized) return loading ? <LoadingSpinner /> : null;
 
   return (
-    <div className="min-h-screen bg-slate-100">
-      {/* Admin Header */}
-      <header className="bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <button onClick={onBack} className="text-slate-400 hover:text-white">← Back</button>
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center font-bold">T</div>
-              <span className="font-semibold">Tutagora Admin</span>
-            </div>
-          </div>
-          <button onClick={onLogout} className="text-slate-400 hover:text-white text-sm">Sign Out</button>
-        </div>
-      </header>
-
-      <div className="max-w-7xl mx-auto px-5 py-6">
-        {/* Tabs */}
-        <div className="flex gap-1 mb-6 bg-slate-200/50 p-1 rounded-lg w-fit">
-          {[
-            { id: 'overview', label: 'Overview' },
-            { id: 'payouts', label: `Payouts${allPayments.filter(p => p.payout_status !== 'paid').length ? ` (${allPayments.filter(p => p.payout_status !== 'paid').length})` : ''}` },
-            { id: 'verification', label: `Verification${pendingTutors.length ? ` (${pendingTutors.length})` : ''}` },
-            { id: 'users', label: 'Users' },
-            { id: 'bookings', label: 'Bookings' },
-            { id: 'analytics', label: 'Analytics' },
-          ].map(t => (
-            <button
-              key={t.id}
-              onClick={() => setTab(t.id)}
-              className={`px-4 py-2 rounded-md font-medium text-sm transition-colors ${
-                tab === t.id ? 'bg-white shadow-sm text-slate-900' : 'text-slate-600 hover:text-slate-900'
-              }`}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
-
+    <AppShell active={`admin-${tab}`} title="Admin" onItem={(it) => { if (it.adminTab) { setTab(it.adminTab); return true; } return false; }}
+      local={{ label: 'Admin', bar: ['admin-overview', 'admin-payouts', 'admin-verification', 'admin-users'], items: [
+        { id: 'admin-overview', adminTab: 'overview', label: 'Overview', icon: 'home' },
+        { id: 'admin-payouts', adminTab: 'payouts', label: 'Payouts', icon: 'wallet', count: allPayments.filter(p => p.payout_status !== 'paid').length },
+        { id: 'admin-verification', adminTab: 'verification', label: 'Verification', short: 'Verify', icon: 'shield', count: pendingTutors.length },
+        { id: 'admin-users', adminTab: 'users', label: 'Users', icon: 'users' },
+        { id: 'admin-bookings', adminTab: 'bookings', label: 'Bookings', icon: 'book' },
+        { id: 'admin-analytics', adminTab: 'analytics', label: 'Analytics', icon: 'bar' },
+      ] }}>
+      <div className="hb-page">
         {loading ? <LoadingSpinner /> : (
           <>
             {/* Overview Tab */}
@@ -7049,7 +5812,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                               <button
                                 onClick={() => handleMarkAllPaidForTutor(tp.tutorId)}
                                 disabled={payoutLoading === tp.tutorId}
-                                className="px-4 py-2 bg-emerald-500 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 disabled:opacity-50"
+                                className="px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 disabled:opacity-50"
                               >
                                 {payoutLoading === tp.tutorId ? 'Marking...' : 'Mark All Paid'}
                               </button>
@@ -7253,7 +6016,7 @@ const AdminDashboard = ({ onLogout, onBack }) => {
                             <>
                               {t._status !== 'approved' && (
                                 <button onClick={() => handleApproveTutor(t.id)} disabled={actionLoading === t.id}
-                                  className="px-5 py-2 bg-emerald-500 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 disabled:opacity-50">
+                                  className="px-5 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 disabled:opacity-50">
                                   {actionLoading === t.id ? (t._status === 'pending' && t.verified === false ? 'Publishing...' : 'Approving...') : (t.verification_status === 'pending' && t.bio ? 'Publish to site' : 'Approve')}
                                 </button>
                               )}
@@ -7351,11 +6114,22 @@ const AdminDashboard = ({ onLogout, onBack }) => {
           </>
         )}
       </div>
-    </div>
+    </AppShell>
   );
 };
 
 // ============ MAIN APP ============
+// The one route table. A page that takes a parameter ('t/<token>') is matched
+// after it; anything else is the public home.
+const ROUTES = new Set(['consulting', 'tutors', 'teach', 'why', 'dashboard', 'ai', 'writing', 'horeb', 'horebhow', 'schools', 'clubs', 'spreadsheet', 'classroom', 'admin', 'handover', 'family-tablet', 'family', 'check', 'check-result', 'privacy', 'rocket']);
+const pageFromPath = (pathname) => {
+  const path = String(pathname || '').replace(/^\//, '');
+  if (ROUTES.has(path)) return path;
+  if (path.startsWith('t/')) return 'tablet-link';
+  return 'home';
+};
+const sectionFromSearch = (search) => { try { return new URLSearchParams(search).get('s'); } catch { return null; } };
+
 function AppInner() {
   const auth = useAuth();
   const tutorId = auth.profile?.tutors?.[0]?.id;
@@ -7364,32 +6138,10 @@ function AppInner() {
   
   const [page, setPage] = useState(() => {
     if (IS_NATIVE) return 'native-welcome';
-    const path = window.location.pathname.replace(/^\//, '');
-    if (path === 'consulting') return 'consulting';
-    if (path === 'tutors') return 'tutors';
-    if (path === 'teach') return 'teach';
-    if (path === 'why') return 'why';
-    if (path === 'dashboard') return 'dashboard';
-    if (path === 'ai') return 'ai';
-    if (path === 'writing') return 'writing';
-    if (path === 'horeb') return 'horeb';
-    if (path === 'horebhow') return 'horebhow';
-    if (path === 'schools') return 'schools';
-    if (path === 'clubs') return 'clubs';
-    if (path === 'spreadsheet') return 'spreadsheet';
-    // Class Insights had no URL of its own: reachable only by clicking through
-    // from the dashboard, so a teacher could not bookmark it or be sent a link.
-    if (path === 'classroom') return 'classroom';
-    if (path === 'admin') return 'admin';
-    if (path === 'handover') return 'handover';
-    if (path === 'family-tablet') return 'family-tablet';
-    if (path === 'family') return 'family';
-    if (path === 'check' || path === 'check-result') return path;
-    if (path === 'privacy') return 'privacy';
-    if (path === 'rocket') return 'rocket';
-    if (path.startsWith('t/')) return 'tablet-link';
-    return 'home';
+    return pageFromPath(window.location.pathname);
   });
+  // Which part of a page this is (/dashboard?s=schedule). The menu and the back button use it.
+  const [section, setSection] = useState(() => sectionFromSearch(window.location.search));
   // The free check: which grade to start at (set by the homepage finder).
   // An ad can also preset it: tutagora.com/check?grade=5
   const [checkGrade, setCheckGrade] = useState(() => {
@@ -7404,7 +6156,6 @@ function AppInner() {
     if (auth.waSignInError && !auth.user) setShowAuth('login');
   }, [auth.waSignInError, auth.user]);
   const [selectedTutor, setSelectedTutor] = useState(null);
-  const [scrolled, setScrolled] = useState(false);
   const [activeLesson, setActiveLesson] = useState(null);
   const [showMessages, setShowMessages] = useState(false);
   const [showAccountSettings, setShowAccountSettings] = useState(false);
@@ -7431,12 +6182,6 @@ function AppInner() {
   // Use auth.user.email (from Supabase auth, always reliable) — never trust profile email for admin checks
   const currentUserEmail = (auth.user?.email || '').toLowerCase();
   const isAdmin = currentUserEmail && ADMIN_LIST.includes(currentUserEmail);
-
-  useEffect(() => {
-    const h = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', h);
-    return () => window.removeEventListener('scroll', h);
-  }, []);
 
   // Register this device for push once we know who is using it. The moment
   // that matters — "your lesson is starting" — happens while the app is shut.
@@ -7493,35 +6238,19 @@ function AppInner() {
   // engine (the intro is only for prospects).
   useEffect(() => {
     if ((page === 'horeb' || page === 'horebhow' || page === 'native-welcome') && auth.user) handleNavigate(IS_NATIVE ? 'native-home' : 'ai');
+    // The old /horeb landing page is gone: the links to it from the guides go to the free check.
+    if ((page === 'horeb' || page === 'horebhow') && !IS_NATIVE && !auth.user && !auth.loading) { setPage('check'); window.history.replaceState({}, '', '/check'); }
     // The app has no marketing pages: any route to them becomes the front door.
     if (IS_NATIVE && (page === 'home' || page === 'horeb' || page === 'horebhow' || page === 'teach' || page === 'schools' || page === 'consulting')) {
       setPage(auth.user ? 'native-home' : 'native-welcome');
     }
-  }, [page, auth.user]);
+  }, [page, auth.user, auth.loading]);
 
   // Browser back/forward button support
   useEffect(() => {
     const onPopState = () => {
-      const path = window.location.pathname.replace(/^\//, '');
-      if (path === 'consulting') setPage('consulting');
-      else if (path === 'tutors') setPage('tutors');
-      else if (path === 'teach') setPage('teach');
-      else if (path === 'why') setPage('why');
-      else if (path === 'dashboard') setPage('dashboard');
-      else if (path === 'ai') setPage('ai');
-      else if (path === 'writing') setPage('writing');
-      else if (path === 'horeb') setPage('horeb');
-      else if (path === 'horebhow') setPage('horebhow');
-      else if (path === 'schools') setPage('schools');
-      else if (path === 'clubs') setPage('clubs');
-      else if (path === 'spreadsheet') setPage('spreadsheet');
-      else if (path === 'admin') setPage('admin');
-      else if (path === 'handover') setPage('handover');
-      else if (path === 'family') setPage('family');
-      else if (path === 'privacy') setPage('privacy');
-      else if (path === 'rocket') setPage('rocket');
-      else if (path === 'check' || path === 'check-result') setPage(path);
-      else setPage('home');
+      setPage(pageFromPath(window.location.pathname));
+      setSection(sectionFromSearch(window.location.search));
       setSelectedTutor(null);
       window.scrollTo(0, 0);
     };
@@ -7529,7 +6258,17 @@ function AppInner() {
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
-  const handleNavigate = (p, tutor = null) => { setPage(p); setSelectedTutor(tutor); window.scrollTo(0, 0); window.history.pushState({}, '', p === 'home' ? '/' : '/' + p); };
+  // Moving between the teaching screens keeps a demo a demo.
+  const demoQuery = (p) => {
+    const inDemo = new URLSearchParams(window.location.search).get('demo') === '1';
+    if (!inDemo) return '';
+    return p === 'classroom' ? 'demo=1' : p === 'rocket' ? 'demo=1&as=teacher' : '';
+  };
+  const handleNavigate = (p, tutor = null, s = null) => {
+    setPage(p); setSelectedTutor(tutor); setSection(s); window.scrollTo(0, 0);
+    const q = [demoQuery(p), s ? `s=${s}` : ''].filter(Boolean).join('&');
+    window.history.pushState({}, '', (p === 'home' ? '/' : '/' + p) + (q ? `?${q}` : ''));
+  };
   const startCheck = (grade) => { setCheckGrade(grade || null); handleNavigate('check'); };
   const openSignIn = () => setShowAuth('login');
   const renderAuth = (defaultRole) => showAuth && (
@@ -7572,6 +6311,50 @@ function AppInner() {
   };
   const handleOpenMessages = () => setShowMessages(true);
 
+  // ---- The frame's person: who is here, their menu, where it goes. ----
+  // Nobody signed in, or a child's handed-over device: no person, so the frame
+  // shows no account and no menu but the screen's own.
+  const accountType = auth.user?.user_metadata?.account_type || null;
+  const kind = personKind(auth.profile, accountType);
+  const isLearnerAccount = kind === 'learner';
+  // Anyone who runs a class gets the teaching section. Tutors have it already.
+  const [hasClasses, setHasClasses] = useState(false);
+  useEffect(() => {
+    if (!auth.user?.id || auth.user.is_anonymous || kind === 'tutor' || studentMode) { setHasClasses(false); return; }
+    supabase.from('classes').select('id').eq('teacher_id', auth.user.id).limit(1)
+      .then(({ data }) => setHasClasses(!!data?.length));
+  }, [auth.user?.id, kind, !!studentMode]);
+  const myTutor = auth.profile?.tutors?.[0];
+  const tutorApproved = (myTutor?.verification_status || (myTutor?.verified ? 'approved' : 'pending')) === 'approved';
+  const shell = useMemo(() => {
+    if (!auth.user || auth.user.is_anonymous || !auth.profile || studentMode) return null;
+    const menu = menuFor({ kind, approved: tutorApproved, hasClasses, isAdmin, native: IS_NATIVE });
+    return {
+      menu,
+      person: {
+        name: auth.profile.full_name,
+        line: kind === 'tutor' ? myTutor?.subject : kind === 'learner' ? 'Learner' : 'Parent',
+        avatar: <Avatar src={auth.profile.avatar_url} preset={auth.profile.avatar} name={auth.profile.full_name} size={34} />,
+      },
+      headerEnd: <button type="button" className="hb-round" aria-label="Messages" onClick={handleOpenMessages}><TIcon name="message" /></button>,
+      openSettings: () => setShowAccountSettings(true),
+      go: (it) => {
+        if (it.action === 'settings') { setShowAccountSettings(true); return; }
+        if (it.action === 'signout') { handleLogout(); return; }
+        handleNavigate(it.page, null, it.section || null);
+      },
+    };
+  }, [auth.user?.id, auth.profile, !!studentMode, kind, tutorApproved, hasClasses, isAdmin]);
+  // A learner's account has one home, their practice board.
+  useEffect(() => {
+    if (page === 'dashboard' && isLearnerAccount && section !== 'lessons' && !IS_NATIVE && auth.user && !studentMode) {
+      setPage('ai'); window.history.replaceState({}, '', '/ai');
+    }
+  }, [page, section, isLearnerAccount, auth.user?.id, !!studentMode]);
+  // A signed-in person's screen, in the frame. Signed out, the same screen alone.
+  const framed = (active, title, el) => (shell ? <AppShell active={active} title={title}>{el}</AppShell> : el);
+
+  const route = () => {
   if (auth.loading) return <div className="min-h-screen flex items-center justify-center"><LoadingSpinner /></div>;
 
   // Active video lesson
@@ -7588,10 +6371,10 @@ function AppInner() {
 
   // A child's saved plan, from the parent's dashboard.
   if (page === 'plan' && auth.user && planChild && !studentMode) {
-    return <SavedPlan user={auth.user} child={planChild} subscription={auth.subscription}
+    return framed('home', planChild.name, <SavedPlan user={auth.user} child={planChild} subscription={auth.subscription}
       onBack={() => handleNavigate('dashboard')}
       onStart={() => { setStudentMode(startStudentMode(auth.user.id, planChild)); handleNavigate('ai'); }}
-      onFindTutor={(skill, learner) => { setFocus({ skill, learner }); handleNavigate('tutors'); }} />;
+      onFindTutor={(skill, learner) => { setFocus({ skill, learner }); handleNavigate('tutors'); }} />);
   }
 
   // Setting this device up as the children's tablet.
@@ -7652,14 +6435,14 @@ function AppInner() {
 
   // Parent: weekly goals and messages for each child.
   if (page === 'family' && auth.user) {
-    return <FamilyPage user={auth.user} onBack={() => handleNavigate('dashboard')} onHandOver={() => handleNavigate('handover')} />;
+    return framed('family', 'Goals and reports', <FamilyPage user={auth.user} onBack={() => handleNavigate('dashboard')} onHandOver={() => handleNavigate('handover')} />);
   }
 
   // Parent hands this device to a child.
   if (page === 'handover') {
     if (!auth.user) {
       return (
-        <div className="min-h-screen bg-[#eef0f2] flex items-center justify-center p-6 text-slate-900">
+        <div className="min-h-screen bg-slate-100 flex items-center justify-center p-6 text-slate-900">
           <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 max-w-sm w-full text-center space-y-3">
             <div className="text-[18px] font-extrabold tracking-tight">Sign in to hand over</div>
             <p className="text-sm text-slate-500">Sign in with your parent account, then choose which child is using this device.</p>
@@ -7761,9 +6544,9 @@ function AppInner() {
   if (page === 'writing') {
     return (
       <>
-        <Writing userId={auth.user?.id} studentName={auth.profile?.full_name} isNative={IS_NATIVE}
-          onBack={() => handleNavigate(IS_NATIVE ? 'native-home' : auth.user ? 'dashboard' : 'home')} onSignIn={() => setShowAuth('login')} />
-        {IS_NATIVE && <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
+        {framed('writing', 'Writing', <Writing userId={auth.user?.id} studentName={auth.profile?.full_name} isNative={IS_NATIVE}
+          onBack={() => handleNavigate(IS_NATIVE ? 'native-home' : auth.user ? 'dashboard' : 'home')} onSignIn={() => setShowAuth('login')} />)}
+        {IS_NATIVE && !shell && <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
         {renderAuth('student')}
       </>
     );
@@ -7784,7 +6567,7 @@ function AppInner() {
   if (page === 'ai') {
     return (
       <>
-        <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} onFindTutor={() => handleNavigate('tutors')}
+        <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} onFindTutor={() => handleNavigate('tutors')} section={section}
           profileAvatar={auth.profile?.avatar} subscription={auth.subscription} onPaywall={() => setShowPaywall(true)}
           autoStartSkill={rocketPractise?.skillId || null} autoStartLearnerId={rocketPractise?.childId || null}
           onRocket={() => { setRocketPractise(null); handleNavigate('rocket'); }} />
@@ -7803,17 +6586,17 @@ function AppInner() {
 
   // Interest-led clubs — discovery page
   if (page === 'clubs') {
-    return <ClubsRoute user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />;
+    return framed('clubs', 'Clubs', <ClubsRoute user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />);
   }
 
   // Teacher / class insights dashboard
   if (page === 'classroom') {
-    return <TeacherDashboard onBack={() => handleNavigate('dashboard')} onNavigate={handleNavigate} teacherProfile={auth.profile} />;
+    return <TeacherDashboard onBack={() => handleNavigate('dashboard')} onNavigate={handleNavigate} teacherProfile={auth.profile} section={section} />;
   }
 
   // Spreadsheet
   if (page === 'spreadsheet') {
-    return <Spreadsheet standalone={true} onBack={() => handleNavigate('dashboard')} />;
+    return framed('spreadsheet', 'Spreadsheet', <Spreadsheet standalone={true} onBack={() => handleNavigate('dashboard')} />);
   }
 
   // Admin Dashboard — redirect non-admins
@@ -7822,7 +6605,7 @@ function AppInner() {
       handleNavigate('home');
       return null;
     }
-    return <AdminDashboard onLogout={handleLogout} onBack={() => handleNavigate('home')} />;
+    return <AdminDashboard onBack={() => handleNavigate('dashboard')} />;
   }
 
   // Dashboard routing
@@ -7830,9 +6613,8 @@ function AppInner() {
     if (auth.profile?.role === 'tutor') {
       return (
         <>
-          <TutorDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} onNavigate={handleNavigate} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)} />
-          {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
-          {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
+          <TutorDashboard profile={auth.profile} bookings={bookings} bookingsLoading={bookingsLoading} onStartLesson={handleStartLesson} onRefreshProfile={auth.refetchProfile} onNavigate={handleNavigate}
+            section={section} onSection={(s) => handleNavigate('dashboard', null, s)} />
         </>
       );
     }
@@ -7842,40 +6624,41 @@ function AppInner() {
           <NativeMySpace profile={auth.profile} bookings={bookings} onNavigate={handleNavigate} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onOpenAccountSettings={() => setShowAccountSettings(true)} onLogout={handleLogout} onOpenProgress={setProgressLearner} />
           <NativeLessonBanner bookings={bookings} onStartLesson={handleStartLesson} />
           <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
-          {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
-          {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
         </>
       );
     }
     return (
       <>
-        <StudentDashboard key={dashKey} profile={auth.profile} user={auth.user} subscription={auth.subscription} onGetPass={() => setShowPaywall(true)} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onLogout={handleLogout} onStartLesson={handleStartLesson} onOpenMessages={handleOpenMessages} onRefreshProfile={auth.refetchProfile} isAdmin={isAdmin} onOpenAccountSettings={() => setShowAccountSettings(true)}
+        <StudentDashboard key={dashKey} profile={auth.profile} user={auth.user} subscription={auth.subscription} onGetPass={() => setShowPaywall(true)} bookings={bookings} bookingsLoading={bookingsLoading} onNavigate={handleNavigate} onStartLesson={handleStartLesson} onRefreshProfile={auth.refetchProfile}
           onStartPractice={(c) => { setStudentMode(startStudentMode(auth.user.id, c)); handleNavigate('ai'); }}
           familyTablet={isFamilyTablet} onFamilyTablet={() => handleNavigate('family-tablet')}
           onLockFamilyTablet={() => { setParentUnlocked(false); window.scrollTo(0, 0); }}
           onStopFamilyTablet={() => { clearFamilyDevice(); setFamilyDevice(null); }}
           onOpenPlan={(c) => { setPlanChild(c); handleNavigate('plan'); }} />
         {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
-        {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
-        {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       </>
     );
   }
 
+  // Finding a tutor, for someone signed in, is a page of the product.
+  if (shell && !IS_NATIVE && page === 'tutors') {
+    return framed('tutors', selectedTutor ? 'Tutor' : 'Find a tutor', selectedTutor ? (
+      <TutorProfile tutor={selectedTutor} user={auth.user} onBook={createBooking} onNavigate={handleNavigate}
+        onPaid={(b) => sendBookingNotifications(b, auth.user?.id)}
+        onBack={() => { setSelectedTutor(null); window.scrollTo(0, 0); }}
+        onSignIn={() => { try { sessionStorage.setItem('tg_resume_tutor', String(selectedTutor.id)); } catch { /* ignore */ } setShowAuth({ mode: auth.user ? 'login' : 'register', role: 'parent', reason: 'book' }); }} />
+    ) : (
+      <TutorList tutors={publicTutors.tutors} loading={publicTutors.loading} user={auth.user}
+        onSelect={(t) => { setSelectedTutor(t); window.scrollTo(0, 0); }} onNavigate={handleNavigate} onSignIn={openSignIn}
+        extra={<div style={{ paddingBottom: 40 }}><GroupClassesBrowse user={auth.user} setShowAuth={setShowAuth} /></div>} />
+    ));
+  }
+
   return (
     <div className="min-h-screen">
-      {!IS_NATIVE && page !== 'home' && page !== 'tutors' && page !== 'teach' && page !== 'why' && !selectedTutor && <Nav user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} scrolled={scrolled || page !== 'home'} isAdmin={isAdmin} />}
       {IS_NATIVE && <div className="h-2" />}
       
       {page === 'home' && !selectedTutor && !IS_NATIVE && <SiteHome onNavigate={handleNavigate} onSignIn={openSignIn} onStartCheck={startCheck} user={auth.user} tutors={publicTutors.tutors} />}
-      {page === 'home' && !selectedTutor && IS_NATIVE && <HomePage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
-      {(page === 'horeb' || page === 'horebhow') && !auth.user && (
-        <>
-          <HorebIntro user={auth.user} profile={auth.profile} onNavigate={handleNavigate} setShowAuth={setShowAuth} />
-          <HorebHow user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} embedded />
-        </>
-      )}
-      {page === 'teach' && IS_NATIVE && <TeachPage onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
       {page === 'why' && <SiteWhy onNavigate={handleNavigate} onSignIn={openSignIn} user={auth.user} />}
       {page === 'teach' && !IS_NATIVE && <SiteTeach onNavigate={handleNavigate} onSignIn={openSignIn} user={auth.user} onApply={() => setShowAuth({ mode: 'register', role: 'tutor' })} />}
       {page === 'tutors' && !selectedTutor && IS_NATIVE && <TutorsPage onSelectTutor={setSelectedTutor} onBack={null} user={auth.user} setShowAuth={setShowAuth} />}
@@ -7893,11 +6676,19 @@ function AppInner() {
       )}
       
       {renderAuth(undefined)}
-      {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
       {showPrivacyBanner && <PrivacyBanner onAccept={() => { localStorage.setItem('tutagora_privacy_accepted', 'true'); setShowPrivacyBanner(false); }} onNavigate={handleNavigate} />}
       {IS_NATIVE && <div className="h-24" />}
       {IS_NATIVE && <NativeTabs page={page} user={auth.user} onNavigate={handleNavigate} setShowAuth={setShowAuth} />}
     </div>
+  );
+  };
+
+  return (
+    <ShellContext.Provider value={shell}>
+      {route()}
+      {showMessages && <Messaging currentUser={auth.profile} onClose={() => setShowMessages(false)} />}
+      {showAccountSettings && <AccountSettings profile={auth.profile} user={auth.user} onClose={() => setShowAccountSettings(false)} onLogout={handleLogout} />}
+    </ShellContext.Provider>
   );
 }
 

@@ -33,7 +33,7 @@ export const WeekDots = ({ days }) => {
       {weekDates().map((d, i) => (
         <div key={d} className="text-[11px] font-bold text-slate-400">
           {DAY_LETTERS[i]}
-          <div className={`h-6 mt-1 rounded-lg ${done.has(d) ? 'bg-[#8ca86a]' : 'bg-[#eef0f2]'} ${d === today ? 'ring-2 ring-slate-300' : ''}`} />
+          <div className={`h-6 mt-1 rounded-lg ${done.has(d) ? 'bg-emerald-400' : 'bg-slate-100'} ${d === today ? 'ring-2 ring-slate-300' : ''}`} />
         </div>
       ))}
     </div>
@@ -42,8 +42,8 @@ export const WeekDots = ({ days }) => {
 
 const GoalMeter = ({ count, target }) => (
   <div className="flex items-center gap-3">
-    <div className="flex-1 h-2.5 rounded-full bg-[#eef0f2] overflow-hidden">
-      <div className="h-full rounded-full bg-[#8ca86a]" style={{ width: `${Math.min(100, Math.round((count / target) * 100))}%` }} />
+    <div className="flex-1 h-2.5 rounded-full bg-slate-100 overflow-hidden">
+      <div className="h-full rounded-full bg-emerald-400" style={{ width: `${Math.min(100, Math.round((count / target) * 100))}%` }} />
     </div>
     <span className="text-[14px] font-extrabold tabular-nums">{Math.min(count, target)}/{target}</span>
   </div>
@@ -51,7 +51,7 @@ const GoalMeter = ({ count, target }) => (
 
 const Chip = ({ active, children, ...p }) => (
   <button {...p} aria-pressed={!!active}
-    className={`px-3 py-2 rounded-full text-[13px] font-semibold border transition-colors ${active ? 'bg-[#6d6fcb] border-[#6d6fcb] text-white' : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'}`}>
+    className={`px-3 py-2 rounded-full text-[13px] font-semibold border transition-colors ${active ? 'bg-violet-500 border-violet-500 text-white' : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'}`}>
     {children}
   </button>
 );
@@ -130,14 +130,14 @@ const ChildPanel = ({ parentId, kid, onMissingTables }) => {
 
       {/* Weekly goal */}
       <div className="border-t border-slate-100 pt-4 space-y-3">
-        <Eyebrow tone="text-[#5a7a3a]">Weekly goal</Eyebrow>
+        <Eyebrow tone="text-emerald-600">Weekly goal</Eyebrow>
         {goal === undefined && <div className="text-sm text-slate-400">Loading…</div>}
         {goal && !editing && (
           <>
             <div className="text-[15px] font-bold">Practise {goal.target_days} days → {goal.reward}</div>
             <GoalMeter count={thisWeek} target={goal.target_days} />
-            {thisWeek >= goal.target_days && <div className="text-[13.5px] font-semibold text-[#5a7a3a]">Reached this week. {n} has earned it.</div>}
-            <button onClick={() => setEditing(true)} className="text-[13px] font-semibold text-[#6d6fcb]">Change goal</button>
+            {thisWeek >= goal.target_days && <div className="text-[13.5px] font-semibold text-emerald-600">Reached this week. {n} has earned it.</div>}
+            <button onClick={() => setEditing(true)} className="text-[13px] font-semibold text-violet-500">Change goal</button>
           </>
         )}
         {goal === null && !editing && (
@@ -158,12 +158,12 @@ const ChildPanel = ({ parentId, kid, onMissingTables }) => {
             </div>
             <label className="block text-[12.5px] font-bold text-slate-700">Or write your own
               <input value={reward} onChange={e => setReward(e.target.value)} maxLength={120}
-                className="mt-1.5 w-full bg-white border-[1.5px] border-slate-200 rounded-xl px-3 py-2.5 text-[15px] font-semibold focus:outline-none focus:border-[#6d6fcb]" />
+                className="mt-1.5 w-full bg-white border-[1.5px] border-slate-200 rounded-xl px-3 py-2.5 text-[15px] font-semibold focus:outline-none focus:border-violet-500" />
             </label>
             <PrimaryButton onClick={onSaveGoal} disabled={busy || !reward.trim()}>{busy ? 'Saving…' : 'Save goal'}</PrimaryButton>
             <div className="flex justify-between">
               <button onClick={() => setEditing(false)} className="text-[13px] font-semibold text-slate-500">Cancel</button>
-              {goal && <button onClick={onRemoveGoal} className="text-[13px] font-semibold text-[#c0663f]">Remove goal</button>}
+              {goal && <button onClick={onRemoveGoal} className="text-[13px] font-semibold text-amber-600">Remove goal</button>}
             </div>
           </div>
         )}
@@ -171,7 +171,7 @@ const ChildPanel = ({ parentId, kid, onMissingTables }) => {
 
       {/* Message */}
       <div className="border-t border-slate-100 pt-4 space-y-3">
-        <Eyebrow tone="text-[#6d6fcb]">Send {n} a message</Eyebrow>
+        <Eyebrow tone="text-violet-500">Send {n} a message</Eyebrow>
         <div className="flex flex-wrap items-center gap-2 text-[13px] text-slate-500">
           Sign as
           {SIGN_OFFS.map(s => <Chip key={s} active={sign === s} onClick={() => { setSign(s); setSignOff(s); }}>{s}</Chip>)}
@@ -182,9 +182,9 @@ const ChildPanel = ({ parentId, kid, onMissingTables }) => {
         <div className="flex gap-2">
           <input value={text} onChange={e => setText(e.target.value)} maxLength={200} placeholder="Or write your own"
             aria-label={`Message to ${n}`}
-            className="flex-1 min-w-0 bg-white border-[1.5px] border-slate-200 rounded-xl px-3 py-2.5 text-[15px] focus:outline-none focus:border-[#6d6fcb]" />
+            className="flex-1 min-w-0 bg-white border-[1.5px] border-slate-200 rounded-xl px-3 py-2.5 text-[15px] focus:outline-none focus:border-violet-500" />
           <button onClick={() => onSend(text)} disabled={busy || !text.trim()}
-            className="shrink-0 bg-[#6d6fcb] hover:bg-[#5658b8] disabled:opacity-50 text-white rounded-xl px-4 font-bold text-[14px]">Send</button>
+            className="shrink-0 bg-violet-500 hover:bg-violet-600 disabled:opacity-50 text-white rounded-xl px-4 font-bold text-[14px]">Send</button>
         </div>
         {msg && (
           <div className="text-[13px] text-slate-500">
@@ -195,7 +195,7 @@ const ChildPanel = ({ parentId, kid, onMissingTables }) => {
 
       {/* Sunday report preview */}
       <div className="border-t border-slate-100 pt-4 space-y-3">
-        <button onClick={showPreview} className="text-[13px] font-semibold text-[#6d6fcb]">
+        <button onClick={showPreview} className="text-[13px] font-semibold text-violet-500">
           {preview ? 'Hide the Sunday report' : `Preview ${n}'s Sunday report`}
         </button>
         {preview && (
@@ -206,7 +206,7 @@ const ChildPanel = ({ parentId, kid, onMissingTables }) => {
       </div>
 
       <div aria-live="polite" className="text-[13px] font-semibold">
-        {err ? <span className="text-[#c0663f]">{err}</span> : status ? <span className="text-[#5a7a3a]">{status}</span> : null}
+        {err ? <span className="text-amber-600">{err}</span> : status ? <span className="text-emerald-600">{status}</span> : null}
       </div>
     </Card>
   );
@@ -262,7 +262,7 @@ const ReportSettings = ({ parentId, kids, onMissingTables }) => {
 
   return (
     <Card className="space-y-3">
-      <Eyebrow tone="text-[#5a7a3a]">Sunday report</Eyebrow>
+      <Eyebrow tone="text-emerald-600">Sunday report</Eyebrow>
       <div className="text-[16px] font-extrabold tracking-tight">A short message every Sunday evening</div>
       <p className="text-sm text-slate-500">For each child: days practised, skills mastered, what they are finding hard and how the goal is going. You don't need to open the app.</p>
 
@@ -285,7 +285,7 @@ const ReportSettings = ({ parentId, kids, onMissingTables }) => {
         <div className="space-y-3">
           <label className="block text-[12.5px] font-bold text-slate-700">Your mobile number
             <input value={phone} onChange={e => setPhone(e.target.value)} inputMode="tel" placeholder="0712 345 678"
-              className="mt-1.5 w-full bg-white border-[1.5px] border-slate-200 rounded-xl px-3 py-2.5 text-[15px] font-semibold focus:outline-none focus:border-[#6d6fcb]" />
+              className="mt-1.5 w-full bg-white border-[1.5px] border-slate-200 rounded-xl px-3 py-2.5 text-[15px] font-semibold focus:outline-none focus:border-violet-500" />
           </label>
           <div className="flex flex-wrap items-center gap-2 text-[13px] text-slate-500">
             Send by
@@ -294,7 +294,7 @@ const ReportSettings = ({ parentId, kids, onMissingTables }) => {
           </div>
           {!settings && (
             <label className="flex gap-2.5 items-start text-[13.5px] text-slate-600">
-              <input type="checkbox" checked={agree} onChange={e => setAgree(e.target.checked)} className="mt-1 w-4 h-4 accent-[#6d6fcb]" />
+              <input type="checkbox" checked={agree} onChange={e => setAgree(e.target.checked)} className="mt-1 w-4 h-4 accent-violet-500" />
               <span>I agree to get one message a week from Tutagora about my children's practice. I can turn it off here at any time.</span>
             </label>
           )}
@@ -309,7 +309,7 @@ const ReportSettings = ({ parentId, kids, onMissingTables }) => {
           {history.map(h => (
             <div key={h.id} className="flex justify-between text-[13px]">
               <span className="text-slate-600">{kidName(h.learner_id)} · week of {h.week_start}</span>
-              <span className={h.status === 'sent' ? 'text-[#5a7a3a] font-semibold' : h.status === 'failed' ? 'text-[#c0663f] font-semibold' : 'text-slate-400'}>
+              <span className={h.status === 'sent' ? 'text-emerald-600 font-semibold' : h.status === 'failed' ? 'text-amber-600 font-semibold' : 'text-slate-400'}>
                 {h.status === 'sent' ? 'Sent' : h.status === 'failed' ? 'Not delivered' : 'Not sent'}
               </span>
             </div>
@@ -318,7 +318,7 @@ const ReportSettings = ({ parentId, kids, onMissingTables }) => {
       )}
 
       <div aria-live="polite" className="text-[13px] font-semibold">
-        {msg.err ? <span className="text-[#c0663f]">{msg.err}</span> : msg.ok ? <span className="text-[#5a7a3a]">{msg.ok}</span> : null}
+        {msg.err ? <span className="text-amber-600">{msg.err}</span> : msg.ok ? <span className="text-emerald-600">{msg.ok}</span> : null}
       </div>
     </Card>
   );
@@ -386,20 +386,20 @@ export const FamilyCards = ({ parentId, learnerId, name, older }) => {
   return (
     <>
       {msg && (
-        <div className="bg-[#ecedfa] border border-[#d5d6f3] rounded-2xl p-4 flex gap-3 items-start">
+        <div className="bg-slate-100 border border-violet-200 rounded-2xl p-4 flex gap-3 items-start">
           <div className="flex-1 min-w-0">
-            <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-[#6d6fcb]">From {msg.from_label}</div>
+            <div className="text-[11.5px] font-bold tracking-[.08em] uppercase text-violet-500">From {msg.from_label}</div>
             <p className="font-bold text-[15px] mt-0.5 break-words">{msg.body}</p>
           </div>
           <button onClick={() => { markSeen(msg.id).catch(() => {}); setMsg(null); }}
-            className="shrink-0 bg-white border border-[#d5d6f3] rounded-xl px-3 py-1.5 text-[13px] font-bold text-[#6d6fcb]">
+            className="shrink-0 bg-white border border-violet-200 rounded-xl px-3 py-1.5 text-[13px] font-bold text-violet-500">
             {older ? 'Got it' : 'Thanks!'}
           </button>
         </div>
       )}
       {goal && (
         <Card className="space-y-3">
-          <Eyebrow tone="text-[#5a7a3a]">{older ? 'Goal you agreed' : 'Your reward'}</Eyebrow>
+          <Eyebrow tone="text-emerald-600">{older ? 'Goal you agreed' : 'Your reward'}</Eyebrow>
           <div className="text-[15px] font-bold">Practise {goal.target_days} days this week → {goal.reward}</div>
           <GoalMeter count={thisWeek} target={goal.target_days} />
           <WeekDots days={days} />

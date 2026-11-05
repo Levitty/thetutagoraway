@@ -1,4 +1,4 @@
-// Turns on HOREB's Tutagora look (horeb-look.css) while a HOREB screen is open.
+// Turns on the child's look (horeb-look.css) while a learner's screen is open.
 import { useEffect } from 'react';
 import './horeb-look.css';
 

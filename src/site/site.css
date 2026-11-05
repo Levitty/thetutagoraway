@@ -1,17 +1,16 @@
-/* Public site design (homepage, free check, tutors, schools).
+/* Public site design (homepage, free check, tutors, schools). Its colours and
+   layouts are the website's own; its ink, lines and font are HOREB's tokens.
    Coral brand canvas, near-black type, flat 4–8px components, calm black and
    white below the fold. Everything is scoped under .tg so it never leaks into
    the app screens that still use Tailwind. */
-@import '@fontsource-variable/archivo/wdth.css';
-@import '@fontsource-variable/figtree';
 
 .tg {
   --brand: #ff7aac; --brand-deep: #ff4f91; --brand-soft: #ffe3ee; --brand-ink: #121117;
-  --ink: #121117; --ink2: #3f3f4a; --mute: #6c6c78;
-  --paper: #ffffff; --gray: #f4f4f6; --line: #dcdce2;
-  --good: #1f7a47; --good-soft: #e3f3e9;
-  --display: "Archivo Variable", "Figtree Variable", -apple-system, "Segoe UI", Roboto, sans-serif;
-  --body: "Figtree Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --ink: var(--hb-ink); --ink2: var(--hb-ink2); --mute: var(--hb-muted);
+  --paper: var(--hb-card); --gray: var(--hb-tile); --line: var(--hb-line);
+  --good: var(--hb-green-ink); --good-soft: var(--hb-green-tint);
+  --display: var(--hb-font);
+  --body: var(--hb-font);
   background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5;
   min-height: 100vh; -webkit-font-smoothing: antialiased;
 }
@@ -450,23 +449,30 @@
 }
 
 /* ---------- family dashboard ---------- */
-.tg.dashboard { background: var(--paper); }
-.tg .dhero { background: var(--brand); }
-.tg .dhero > .in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 30px; align-items: center; padding-block: 34px 44px; }
-.tg .dhero h1 { font-size: clamp(40px, 6vw, 72px); margin-top: 8px; }
-.tg .dhero .lead { font-size: 19px; font-weight: 500; margin: 12px 0 0; }
-.tg .found.next { transform: rotate(-1deg); }
-.tg .found .pill { background: rgba(255,255,255,.14); color: #fff; }
-.tg .dgrid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 36px; align-items: start; padding-top: 36px; }
-.tg .block { margin-bottom: 40px; }
-.tg .block h2 { font-size: clamp(28px, 3.4vw, 38px); margin-bottom: 16px; }
+.tg.dashboard, .tg.inframe { background: transparent; min-height: 0; font-size: 15px; }
+.tg.dashboard .btn, .tg.inframe .btn { border-radius: var(--hb-r-btn); font-size: 15px; padding: 11px 18px; }
+.tg.dashboard .btn.sm { padding: 7px 12px; font-size: 14px; }
+.tg.dashboard .btn.line, .tg.inframe .btn.line { background: var(--hb-card); border: 1px solid var(--hb-line); }
+.tg.dashboard .btn.line:hover { background: var(--hb-tile); }
+.tg .dhero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: 20px; margin-bottom: 20px; }
+.tg .dhello, .tg .dhero .found { background: var(--hb-card); border-radius: var(--hb-r-card); padding: 28px; transform: none; color: var(--hb-ink); }
+.tg .dhero h1 { font-size: 38px; font-weight: 700; letter-spacing: -.025em; line-height: 1.1; }
+.tg .dhero .lead { font-size: 16.5px; font-weight: 400; color: var(--hb-ink2); margin: 10px 0 0; }
+.tg .dhero .found .kicker { font-size: 12.5px; letter-spacing: 0; text-transform: none; font-weight: 500; color: var(--hb-muted); opacity: 1; }
+.tg .dhero .found b { font-size: 20px; font-weight: 700; margin: 6px 0 2px; letter-spacing: -.01em; }
+.tg .dhero .found span { opacity: 1; font-weight: 400; color: var(--hb-muted); }
+.tg .dhero .found .pill { background: var(--hb-amber-tint); color: var(--hb-amber-ink); }
+.tg .dgrid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 20px; align-items: start; }
+.tg .dline { color: var(--hb-muted); font-size: 13.5px; margin: 0 0 8px; }
+.tg .block { margin-bottom: 20px; background: var(--hb-card); border-radius: var(--hb-r-card); padding: 24px; }
+.tg .block h2 { font-size: 20px; font-weight: 700; letter-spacing: -.01em; line-height: 1.2; margin-bottom: 12px; }
 .tg .bhead { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
 .tg .bhead h2 { margin: 0; }
 .tg .empty-card { background: var(--gray); border-radius: 8px; padding: 22px; }
 .tg .empty-card p { margin: 0 0 14px; color: var(--ink2); }
 .tg .addkid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) auto auto; gap: 8px; align-items: center; margin-bottom: 14px; }
 .tg .kids { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
-.tg .kid { border: 2px solid var(--ink); border-radius: 8px; padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+.tg .kid { border: 0; background: var(--hb-tile); border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 12px; }
 .tg .ktop { display: flex; justify-content: space-between; gap: 8px; }
 .tg .ktop b { display: block; font-family: var(--display); font-size: 26px; letter-spacing: -.02em; line-height: 1.05; }
 .tg .ktop span { color: var(--mute); font-weight: 700; font-size: 14px; }
@@ -480,17 +486,17 @@
 .tg .kstep span { font-size: 13.5px; color: var(--ink2); font-weight: 600; }
 .tg .klinks { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14.5px; }
 .tg .tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.tg .tool { text-align: left; border: 0; border-radius: 8px; padding: 20px; background: var(--gray); cursor: pointer; display: flex; flex-direction: column; gap: 8px; min-height: 190px; }
-.tg .tool b { font-family: var(--display); font-size: 24px; letter-spacing: -.02em; line-height: 1.1; }
+.tg .tool { text-align: left; border: 0; border-radius: 18px; padding: 20px; background: var(--hb-tile); cursor: pointer; display: flex; flex-direction: column; gap: 8px; min-height: 190px; }
+.tg .tool b { font-size: 18px; font-weight: 700; letter-spacing: -.01em; line-height: 1.1; }
 .tg .tool .small { font-size: 14px; font-weight: 600; opacity: .8; }
 .tg .tool .go { margin-top: auto; font-weight: 800; display: inline-flex; gap: 6px; align-items: center; }
-.tg .tool.darkc { background: var(--ink); color: #fff; }
-.tg .tool .bar { height: 8px; border-radius: 4px; background: rgba(255,255,255,.18); overflow: hidden; }
-.tg .tool .bar i { display: block; height: 100%; background: var(--brand); }
-.tg .seg { display: flex; gap: 4px; background: var(--gray); border-radius: 8px; padding: 4px; }
-.tg .seg button { border: 0; background: transparent; border-radius: 6px; padding: 7px 12px; font-weight: 800; cursor: pointer; font-size: 14px; }
+.tg .tool.darkc { background: var(--hb-tile); color: var(--hb-ink); }
+.tg .tool .bar { height: 6px; border-radius: 9px; background: var(--hb-line); overflow: hidden; }
+.tg .tool .bar i { display: block; height: 100%; background: var(--hb-violet); }
+.tg .seg { display: flex; gap: 4px; border: 1px solid var(--line); border-radius: 999px; padding: 4px; }
+.tg .seg button { border: 0; background: transparent; border-radius: 999px; padding: 6px 12px; font-weight: 500; cursor: pointer; font-size: 13.5px; }
 .tg .seg button[aria-selected="true"] { background: var(--ink); color: #fff; }
-.tg .lessons { border-top: 2px solid var(--ink); }
+.tg .lessons { border-top: 1px solid var(--line); }
 .tg .lrow { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
 .tg .lwho { display: flex; gap: 12px; align-items: center; min-width: 0; }
 .tg .lwho b { display: block; }
@@ -502,18 +508,19 @@
 .tg .dstats .in { max-width: none; }
 .tg .dstats b { font-size: 30px; }
 .tg .dside { display: grid; gap: 14px; position: sticky; top: 16px; }
-.tg .refer { background: var(--ink); color: #fff; border-radius: 8px; padding: 20px; }
-.tg .refer b { display: block; font-family: var(--display); font-size: 22px; letter-spacing: -.02em; line-height: 1.15; margin: 8px 0 14px; }
-.tg .refer .copy { display: flex; gap: 6px; background: rgba(255,255,255,.1); border-radius: 6px; padding: 6px; }
-.tg .refer .copy input { flex: 1; min-width: 0; background: transparent; border: 0; color: #fff; font-size: 13px; }
-.tg .refer .copy button { background: #fff; color: var(--ink); border: 0; border-radius: 4px; padding: 6px 10px; font-weight: 800; cursor: pointer; }
-.tg .acct { border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: grid; gap: 2px; }
+.tg .refer { background: var(--hb-card); border-radius: var(--hb-r-card); padding: 22px; }
+.tg .refer b { display: block; font-size: 17px; font-weight: 700; letter-spacing: -.01em; line-height: 1.25; margin: 6px 0 12px; }
+.tg .refer .kicker { font-size: 12.5px; letter-spacing: 0; text-transform: none; font-weight: 500; color: var(--hb-muted); }
+.tg .refer .copy { display: flex; gap: 6px; background: var(--hb-tile); border-radius: 12px; padding: 6px; }
+.tg .refer .copy input { flex: 1; min-width: 0; background: transparent; border: 0; font-size: 13px; }
+.tg .refer .copy button { background: var(--hb-ink); color: #fff; border: 0; border-radius: 9px; padding: 6px 12px; font-weight: 600; cursor: pointer; }
+.tg .acct { background: var(--hb-card); border: 0; border-radius: var(--hb-r-card); padding: 16px; display: grid; gap: 2px; }
 .tg .acct button { display: flex; gap: 10px; align-items: center; background: none; border: 0; text-align: left; padding: 10px 6px; border-radius: 6px; font-weight: 700; cursor: pointer; }
 .tg .acct button:hover { background: var(--gray); }
 .tg .acct .i { width: 18px; height: 18px; }
 .tg .acct .out { color: #b3261e; }
 @media (max-width: 1000px) {
-  .tg .dhero > .in, .tg .dgrid { grid-template-columns: minmax(0, 1fr); }
+  .tg .dhero, .tg .dgrid { grid-template-columns: minmax(0, 1fr); }
   .tg .dside { position: static; }
 }
 @media (max-width: 600px) {
@@ -521,7 +528,8 @@
   .tg .tool { min-height: 0; }
   .tg .addkid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .tg .dstats b { font-size: 22px; }
-  .tg .dhero > .in { padding-block: 22px 30px; }
+  .tg .dhello, .tg .dhero .found { padding: 20px; }
+  .tg .dhero h1 { font-size: 30px; }
 }
 
 /* ---------- section colours ----------
@@ -648,3 +656,18 @@
 .tg-legal p:last-child { margin-bottom: 0; }
 .tg-legal strong { color: var(--ink); font-weight: 800; }
 @media (max-width: 600px) { .tg-legal { padding: 36px 16px 64px; } .tg-legal p { font-size: 16px; } }
+
+/* A public screen opened by someone signed in: the frame is the page. No brand
+   wash, no site navigation; the same list and profile, on white cards. */
+.tg.inframe > section > .in, .tg.inframe .thero > .in, .tg.inframe .in { padding-inline: 0; max-width: none; }
+.tg.inframe .thero { background: var(--hb-card); border-radius: var(--hb-r-card); margin-bottom: 20px; padding: 20px 24px; }
+.tg.inframe .thero > .in { padding-block: 0; }
+.tg.inframe .filters { margin: 0; }
+.tg.inframe .trow { background: var(--hb-card); border: 0; border-radius: var(--hb-r-card); margin-bottom: 12px; padding: 20px; }
+.tg.inframe .listhead { padding: 0 4px 12px; }
+.tg.inframe .prof { background: var(--hb-card); border-radius: var(--hb-r-card); padding: 28px; }
+.tg.inframe .rhero { background: var(--hb-card); border-radius: var(--hb-r-card); margin-bottom: 20px; }
+@media (max-width: 899px) { .tg.inframe .prof { padding: 18px; } .tg.inframe .thero { padding: 16px; } .tg.inframe .trow { padding: 16px; } }
+/* Quiet labels inside the frame. */
+.tg.dashboard .kicker { font-size: 12.5px; letter-spacing: 0; text-transform: none; font-weight: 500; color: var(--hb-muted); opacity: 1; }
+.tg.dashboard .ktop b { font-size: 16px; font-weight: 600; font-family: inherit; letter-spacing: 0; }

@@ -8,6 +8,7 @@
 // type-led with a small monoline category glyph, so nothing reads as app art.
 // ============================================================================
 
+import { useInFrame } from './shell/AppShell.jsx';
 import React, { useCallback, useEffect, useState } from 'react';
 import { supabase } from './supabase.js';
 import { INTEREST_CATEGORIES, CATEGORY_BY_KEY } from './groupClassCategories.js';
@@ -72,6 +73,7 @@ function ClubCard({ gc, onJoin, user, setShowAuth }) {
 }
 
 export default function ClubsPage({ user, onNavigate, setShowAuth, onEnroll }) {
+  const framed = useInFrame();
   const [clubs, setClubs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [cat, setCat] = useState('');
@@ -99,9 +101,9 @@ export default function ClubsPage({ user, onNavigate, setShowAuth, onEnroll }) {
   ];
 
   return (
-    <div className="bg-white text-slate-900 min-h-screen">
+    <div className={framed ? 'bg-white text-slate-900 rounded-2xl overflow-hidden' : 'bg-white text-slate-900 min-h-screen'}>
       {/* header */}
-      <header className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200">
+      {!framed && <header className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
           <button onClick={() => onNavigate('home')} className="flex items-center gap-2.5">
             <img src="/logo.png" alt="" className="w-7 h-7" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
@@ -113,7 +115,7 @@ export default function ClubsPage({ user, onNavigate, setShowAuth, onEnroll }) {
             <button onClick={() => onNavigate('teach')} className="px-4 py-2 rounded-full bg-slate-900 text-white text-[13.5px] font-bold hover:bg-slate-800 transition-colors">Teach a club</button>
           </div>
         </div>
-      </header>
+      </header>}
 
       {/* hero */}
       <section className="max-w-5xl mx-auto px-6 pt-16 sm:pt-20 pb-14 grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">

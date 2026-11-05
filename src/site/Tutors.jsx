@@ -1,3 +1,4 @@
+import { useInFrame } from '../shell/AppShell.jsx';
 import React, { useEffect, useMemo, useState } from 'react';
 import { HALF_HOUR_LESSONS } from './features.js';
 import { supabase } from '../supabase.js';
@@ -42,6 +43,7 @@ export const nextFree = (t) => {
 };
 
 export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, user, extra }) {
+  const framed = useInFrame();
   const [search, setSearch] = useState('');
   const [subject, setSubject] = useState('');
   const [grade, setGrade] = useState('');
@@ -72,11 +74,11 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
     }), [tutors, search, subject, grade, price, sort, photosChecked]);
 
   return (
-    <div className="tg t-amber">
+    <div className={`tg t-amber${framed ? ' inframe' : ''}`}>
       <header className="thero">
-        <SiteNav onNavigate={onNavigate} onSignIn={onSignIn} user={user} current="tutors" />
+        {!framed && <SiteNav onNavigate={onNavigate} onSignIn={onSignIn} user={user} current="tutors" />}
         <div className="in">
-          <h1 className="display">A tutor for exactly the stuck part.</h1>
+          {!framed && <h1 className="display">A tutor for exactly the stuck part.</h1>}
           <div className="filters">
             <label className="fsel" style={{ flex: '2 1 220px' }}><span>Search</span><input value={search} onChange={e => setSearch(e.target.value)} placeholder="Name or subject" /></label>
             <label className="fsel"><span>Subject</span><select value={subject} onChange={e => setSubject(e.target.value)}><option value="">All subjects</option>{SUBJECTS.map(s => <option key={s}>{s}</option>)}</select></label>
@@ -121,7 +123,7 @@ export function TutorList({ tutors, loading, onSelect, onNavigate, onSignIn, use
         <div style={{ height: 40 }} />
       </div></section>
       {extra}
-      <SiteFooter onNavigate={onNavigate} />
+      {!framed && <SiteFooter onNavigate={onNavigate} />}
     </div>
   );
 }
@@ -142,6 +144,7 @@ const saveDraft = (tutorId, d) => { try { localStorage.setItem(DRAFT, JSON.strin
 const clearDraft = () => { try { localStorage.removeItem(DRAFT); } catch { /* ignore */ } };
 
 export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn, onPaid }) {
+  const framed = useInFrame();
   const focus = getFocus();
   const check = getCheck();
   // A booking started before signing in (day, time, learner) is picked up
@@ -269,8 +272,8 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
   };
 
   return (
-    <div className="tg t-amber">
-      <SiteNav onNavigate={onNavigate} onSignIn={onSignIn} user={user} current="tutors" onBrand={false} />
+    <div className={`tg t-amber${framed ? ' inframe' : ''}`}>
+      {!framed && <SiteNav onNavigate={onNavigate} onSignIn={onSignIn} user={user} current="tutors" onBrand={false} />}
       <div className="in prof">
         <div style={{ minWidth: 0 }}>
           <button type="button" className="linkbtn plain" onClick={onBack} style={{ marginBottom: 18 }}><SiteIcon name="back" />All tutors</button>
@@ -348,7 +351,7 @@ export function TutorProfile({ tutor, user, onBack, onBook, onNavigate, onSignIn
         </aside>
       </div>
       <div className="mobilebook"><div className="price" style={{ fontSize: 22 }}>{ksh(tutor.hourly_rate)} <small>/ hour</small></div><a className="btn" href="#book">Book {shortName(tutor.profiles?.full_name).split(' ')[0]}</a></div>
-      <SiteFooter onNavigate={onNavigate} />
+      {!framed && <SiteFooter onNavigate={onNavigate} />}
 
       {pending && (
         <PaymentModal booking={pending} tutor={tutor} user={user} onClose={cancelPayment}

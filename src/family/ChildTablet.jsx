@@ -89,20 +89,20 @@ export function TabletLinkPage({ token, onReady, onLeave }) {
     catch (e) { setCode(e.code || 'failed'); setState('trouble'); }
   };
   return (
-    <div className="min-h-screen app-shell text-slate-900" style={{ background: 'linear-gradient(180deg,#ecedfa,#eef0f2)' }}>
+    <div className="min-h-screen app-shell text-slate-900" style={{ background: 'var(--hb-ground)' }}>
       <div className="app-scroll">
         <div className="max-w-md mx-auto px-5 pt-16 pb-16 flex flex-col items-center text-center gap-4">
           <HorebBot size={96} mood={state === 'trouble' ? 'thinking' : 'cheer'} />
           {state === 'trouble' ? (
             <>
-              <Eyebrow tone="text-[#c0663f]">Not set up</Eyebrow>
+              <Eyebrow tone="text-amber-600">Not set up</Eyebrow>
               <p className="text-[17px] font-semibold">{TROUBLE[code] || TROUBLE.failed}</p>
               {code === 'failed' && <PrimaryButton onClick={go}>Try again</PrimaryButton>}
               <button onClick={onLeave} className="text-sm font-semibold text-slate-500 underline underline-offset-4">Go to Tutagora</button>
             </>
           ) : (
             <>
-              <Eyebrow tone="text-[#6d6fcb]">Tutagora</Eyebrow>
+              <Eyebrow tone="text-violet-500">Tutagora</Eyebrow>
               <h1 className="text-[27px] font-extrabold tracking-tight leading-tight">Set up this tablet for practice</h1>
               <p className="text-slate-500">This tablet will open straight into your child's maths practice every time. Anyone signed in to Tutagora on it will be signed out.</p>
               <PrimaryButton onClick={go} disabled={state === 'busy'}>{state === 'busy' ? 'Setting up…' : 'Set up this tablet'}</PrimaryButton>

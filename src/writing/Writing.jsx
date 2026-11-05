@@ -8,6 +8,7 @@
 // amber primary, indigo/olive/rust accents, no emoji.
 // ============================================================================
 
+import { useInFrame } from '../shell/AppShell.jsx';
 import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { supabase } from '../supabase';
 import { loadLocalProgress } from '../ai-tutor/progressStore.js';
@@ -20,7 +21,7 @@ const Chevron = ({ back }) => (
 );
 
 const Label = ({ tone = 'amber', children }) => {
-  const c = { amber: 'text-amber-700', indigo: 'text-[#6d6fcb]', olive: 'text-[#5a7a3a]', rust: 'text-[#c0663f]', slate: 'text-slate-400' }[tone];
+  const c = { amber: 'text-amber-700', indigo: 'text-violet-500', olive: 'text-emerald-600', rust: 'text-amber-600', slate: 'text-slate-400' }[tone];
   return <div className={`text-[11.5px] font-bold tracking-[.08em] uppercase ${c}`}>{children}</div>;
 };
 
@@ -74,7 +75,7 @@ const MarkedText = ({ body, corrections, onPick }) => {
   return (
     <p className="text-[15px] leading-[1.7] text-slate-800 whitespace-pre-wrap">
       {parts.map((p, k) => p.i == null ? <React.Fragment key={k}>{p.t}</React.Fragment>
-        : <mark key={k} onClick={() => onPick(p.i)} className="bg-[#fde7e3] text-slate-900 rounded px-0.5 cursor-pointer border-b-2 border-[#c0663f]">{p.t}</mark>)}
+        : <mark key={k} onClick={() => onPick(p.i)} className="bg-red-50 text-slate-900 rounded px-0.5 cursor-pointer border-b-2 border-amber-600">{p.t}</mark>)}
     </p>
   );
 };
@@ -82,7 +83,9 @@ const MarkedText = ({ body, corrections, onPick }) => {
 // Chrome lives at module level so React keeps the same element identity
 // between renders — defined inside the component they'd remount on every
 // keystroke and the editor would drop focus.
-const Header = ({ title, back, right }) => (
+const Header = ({ title, back, right }) => useInFrame() ? (
+  (back || right) ? <div className="flex items-center gap-2 mb-3">{back && <button onClick={back} aria-label="Back" className="w-10 h-10 rounded-xl bg-white flex items-center justify-center"><Chevron back /></button>}<b className="flex-1 truncate">{title}</b>{right}</div> : null
+) : (
   <div className="bg-white/85 backdrop-blur border-b border-slate-200/70 sticky top-0 z-40 shrink-0">
     <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-2 min-h-14">
       {back && <button onClick={back} aria-label="Back" className="text-slate-400 hover:text-slate-700 -ml-1"><Chevron back /></button>}
@@ -91,12 +94,16 @@ const Header = ({ title, back, right }) => (
     </div>
   </div>
 );
-const Shell = ({ children, header }) => (
-  <div className="min-h-screen bg-[#eef0f2] text-slate-900 app-shell">
-    {header}
-    <div className="app-scroll"><div className="max-w-2xl mx-auto px-4 pt-4 pb-32 space-y-3">{children}</div></div>
-  </div>
-);
+const Shell = ({ children, header }) => {
+  const framed = useInFrame();
+  if (framed) return <div className="max-w-2xl mx-auto">{header}<div className="space-y-3">{children}</div></div>;
+  return (
+    <div className="min-h-screen bg-slate-100 text-slate-900 app-shell">
+      {header}
+      <div className="app-scroll"><div className="max-w-2xl mx-auto px-4 pt-4 pb-32 space-y-3">{children}</div></div>
+    </div>
+  );
+};
 
 export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = false, lockedLearner = null }) => {
   const [children, setChildren] = useState([]);
@@ -313,7 +320,7 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <Label>{sw ? 'Chagua mada' : 'Pick a task'}</Label>
-              <button onClick={surprise} className="text-[13px] font-semibold text-[#6d6fcb]">{sw ? 'Nichagulie' : 'Surprise me'}</button>
+              <button onClick={surprise} className="text-[13px] font-semibold text-violet-500">{sw ? 'Nichagulie' : 'Surprise me'}</button>
             </div>
             {prompts.map(p => (
               <Card key={p.id} onClick={() => begin(p)}>
@@ -333,7 +340,7 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
             {history.map(h => (
               <Card key={h.id} onClick={() => openPast(h)}>
                 <div className="flex items-center gap-3">
-                  <span className={`shrink-0 w-11 h-11 rounded-xl flex items-center justify-center font-extrabold tabular-nums text-[15px] ${h.score == null ? 'bg-slate-100 text-slate-400' : h.score >= 16 ? 'bg-[#e8efdc] text-[#5a7a3a]' : h.score >= 11 ? 'bg-amber-100 text-amber-800' : 'bg-[#fde7e3] text-[#c0663f]'}`}>
+                  <span className={`shrink-0 w-11 h-11 rounded-xl flex items-center justify-center font-extrabold tabular-nums text-[15px] ${h.score == null ? 'bg-slate-100 text-slate-400' : h.score >= 16 ? 'bg-emerald-100 text-emerald-600' : h.score >= 11 ? 'bg-amber-100 text-amber-800' : 'bg-red-50 text-amber-600'}`}>
                     {h.score == null ? '—' : h.score}
                   </span>
                   <span className="flex-1 min-w-0">
@@ -386,12 +393,12 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
         {pasteNote && <div className="bg-amber-50 border border-amber-200 text-amber-900 rounded-xl px-3.5 py-2.5 text-[13.5px]">{pl ? 'Kubandika kumezimwa. Andika kwa maneno yako mwenyewe.' : 'Pasting is turned off. Type it in your own words.'}</div>}
         <p className="text-[12px] text-slate-400 px-1">{pl ? 'Ukaguzi wa tahajia umezimwa kimakusudi — mwalimu wako anataka kuona tahajia yako halisi.' : "Spell-check is off on purpose: the marker needs to see your real spelling."}</p>
 
-        {err && <div className="bg-[#fde7e3] border border-[#f3c9c0] text-[#8a3d22] rounded-xl px-3.5 py-2.5 text-[13.5px]">{err}</div>}
+        {err && <div className="bg-red-50 border border-red-200 text-amber-800 rounded-xl px-3.5 py-2.5 text-[13.5px]">{err}</div>}
 
         <div className="fixed inset-x-0 bottom-0 z-40 bg-white/95 backdrop-blur border-t border-slate-200" style={{ paddingBottom: isNative ? 'calc(0.75rem + env(safe-area-inset-bottom))' : '0.75rem' }}>
           <div className="max-w-2xl mx-auto px-4 pt-3 flex items-center gap-3">
             <div className="min-w-0 flex-1">
-              <div className={`text-[15px] font-extrabold tabular-nums ${inRange ? 'text-[#5a7a3a]' : 'text-slate-900'}`}>{words} <span className="text-[12.5px] font-semibold text-slate-400">/ {b.words[0]}–{b.words[1]} {pl ? 'maneno' : 'words'}</span></div>
+              <div className={`text-[15px] font-extrabold tabular-nums ${inRange ? 'text-emerald-600' : 'text-slate-900'}`}>{words} <span className="text-[12.5px] font-semibold text-slate-400">/ {b.words[0]}–{b.words[1]} {pl ? 'maneno' : 'words'}</span></div>
               <div className="text-[12px] text-slate-400">{words < 40 ? (pl ? 'Angalau maneno 40' : 'At least 40 words to mark') : inRange ? (pl ? 'Urefu unafaa' : 'Good length') : (pl ? 'Endelea — bado fupi' : 'Keep going — still short')}</div>
             </div>
             <button onClick={submit} disabled={view === 'marking' || words < 40}
@@ -402,7 +409,7 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
         </div>
 
         {view === 'marking' && (
-          <div className="fixed inset-0 z-[45] bg-[#eef0f2]/80 backdrop-blur-sm flex items-center justify-center px-6">
+          <div className="fixed inset-0 z-[45] bg-slate-100/80 backdrop-blur-sm flex items-center justify-center px-6">
             <div className="bg-white border border-slate-200 shadow-lg rounded-2xl p-6 max-w-sm w-full text-center">
               <div className="mx-auto w-10 h-10 rounded-full border-[3px] border-slate-200 border-t-amber-400 animate-spin" />
               <div className="text-[16px] font-extrabold tracking-tight mt-4">{pl ? 'Inasomwa kwa makini…' : 'Reading it properly…'}</div>
@@ -434,7 +441,7 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
             <div className="min-w-0 flex-1">
               <div className="text-[17px] font-extrabold tracking-tight">{result.score == null ? (pl ? 'Haikujibu mada' : 'Off task') : verdict(result.score, result.language)}</div>
               {delta != null && (
-                <div className={`text-[13px] font-bold mt-0.5 ${delta > 0 ? 'text-[#5a7a3a]' : delta < 0 ? 'text-[#c0663f]' : 'text-slate-400'}`}>
+                <div className={`text-[13px] font-bold mt-0.5 ${delta > 0 ? 'text-emerald-600' : delta < 0 ? 'text-amber-600' : 'text-slate-400'}`}>
                   {delta > 0 ? `${pl ? 'Umepanda kutoka' : 'Up from'} ${result.baseScore}` : delta < 0 ? `${pl ? 'Umeshuka kutoka' : 'Down from'} ${result.baseScore}` : (pl ? 'Sawa na awali' : 'Same as before')}
                 </div>
               )}
@@ -466,7 +473,7 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
           <Card>
             <Label tone="olive">{pl ? 'Ulichofanya vizuri' : 'What worked'}</Label>
             <ul className="mt-2 space-y-1.5">
-              {fb.strengths.map((s, i) => <li key={i} className="flex gap-2.5 text-[14px] text-slate-800 leading-snug"><span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-[#5a7a3a] shrink-0" />{s}</li>)}
+              {fb.strengths.map((s, i) => <li key={i} className="flex gap-2.5 text-[14px] text-slate-800 leading-snug"><span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />{s}</li>)}
             </ul>
           </Card>
         )}
@@ -483,7 +490,7 @@ export const Writing = ({ userId, studentName, onBack, onSignIn, isNative = fals
             <Label tone="rust">{pl ? `Ya kurekebisha (${corrections.length})` : `Fix these (${corrections.length})`}</Label>
             {corrections.map((c, i) => (
               <div key={i} id={`corr-${i}`} className="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 transition-shadow">
-                <div className="text-[14px] text-slate-400 line-through decoration-[#c0663f]/60">{c.original}</div>
+                <div className="text-[14px] text-slate-400 line-through decoration-amber-600/60">{c.original}</div>
                 <div className="text-[15px] font-semibold text-slate-900 mt-1">{c.better}</div>
                 <div className="text-[13px] text-slate-500 mt-1.5 leading-snug">{c.why}</div>
               </div>

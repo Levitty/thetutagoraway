@@ -413,7 +413,7 @@ export const VideoRoom = ({ booking, user, onEnd }) => {
           <Icon name="back" className="w-[18px] h-[18px]" />Leave
         </button>
         <div className="min-w-0 flex-1">
-          <div className="font-extrabold text-[17px] tracking-tight truncate" style={{ fontFamily: '"Archivo Variable", "Figtree Variable", sans-serif', fontStretch: '92%' }}>{subject} with {other}</div>
+          <div className="font-extrabold text-[17px] tracking-tight truncate" style={{ fontFamily: '"Figtree Variable", sans-serif', fontStretch: '92%' }}>{subject} with {other}</div>
           {who && <div className="text-[13px] font-semibold truncate" style={{ color: C.mute }}>{who}</div>}
         </div>
         {clock && <span className="h-9 px-3 rounded-full text-[14px] font-extrabold flex items-center gap-1.5 shrink-0" style={clockStyle}><Icon name="clock" className="w-4 h-4" sw={2.2} /><span>{clock.tone === 'soon' ? <><span className="hidden sm:inline">Starts </span>{clock.text.replace('Starts in', 'in')}</> : <>{clock.text.replace(' left', '')}<span className="hidden sm:inline"> left</span></>}</span></span>}

@@ -116,7 +116,7 @@ export const TutorPhoto = ({ tutor }) => {
   return (
     <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" role="img" aria-label={name}>
       <rect width="100" height="100" fill={bg} />
-      <text x="50" y="50" dominantBaseline="central" textAnchor="middle" fontFamily="Archivo Variable, sans-serif" fontWeight="800" fontSize="34" fill="#121117">{initials}</text>
+      <text x="50" y="50" dominantBaseline="central" textAnchor="middle" fontFamily="Figtree Variable, sans-serif" fontWeight="800" fontSize="34" fill="#121117">{initials}</text>
     </svg>
   );
 };

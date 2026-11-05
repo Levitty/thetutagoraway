@@ -25,7 +25,6 @@ import { fiveMinuteMove } from './teacherMoves.js';
 import { demoMode, demoSchool } from './demoClass.js';
 import { missingStepGroups, classHeadline, homeSuggestion, practiceVersions, practiceRows, groupPattern } from './teacherInsights.js';
 import { TeacherShell, TeacherHome, ClassScreen, PracticeScreen } from './TeacherScreens.jsx';
-import { useHorebLook } from './horebLook.js';
 import { STRAND_BLOCK } from './strandBlocks.js';
 import {
   BUCKETS, bucketCounts, inBucket, sortForTeacher, attentionOf, lastSeenLabel,
@@ -122,9 +121,7 @@ const bandColor = (level, declared) => {
   return 'text-emerald-600 bg-emerald-50 border-emerald-200';
 };
 
-export function TeacherDashboard({ onBack, onNavigate, teacherProfile }) {
-  // Archivo/Figtree and the HOREB tokens, the same as the learner's screens.
-  useHorebLook();
+export function TeacherDashboard({ onBack, onNavigate, teacherProfile, section = null }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [students, setStudents] = useState([]);
@@ -461,6 +458,7 @@ export function TeacherDashboard({ onBack, onNavigate, teacherProfile }) {
   };
   const coreOfGroup = (g) => (g.kind === 'foundation' ? (g.above?.[0]?.id || g.skill.id) : g.skill.id);
   const onNav = (id) => {
+    if (id === 'classes') id = 'home';
     if (id === 'rocket') { if (onNavigate) onNavigate('rocket'); else window.location.assign('/rocket'); return; }
     setSelected(null);
     if (id === 'practice') {
@@ -470,6 +468,9 @@ export function TeacherDashboard({ onBack, onNavigate, teacherProfile }) {
     }
     setScreen(id); try { window.scrollTo(0, 0); } catch { /* jsdom */ }
   };
+
+  // The menu can open a screen directly (Set practice, from any page).
+  useEffect(() => { if (!loading && section === 'practice') onNav('practice'); }, [loading, section]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Setting the versions: one assignment per version, each for its learners.
   const setVersions = async (chosen, dueOn) => {
@@ -491,7 +492,7 @@ export function TeacherDashboard({ onBack, onNavigate, teacherProfile }) {
   const teacherName = teacherProfile?.full_name || (isDemo ? 'Mrs Wairimu' : 'Teacher');
   const shell = (active, body) => (
     <TeacherShell active={active} onNav={onNav} classes={sideClasses} onOpenClass={openClass}
-      activeClassId={currentClass?.id} teacherName={teacherName} teacherLine={SUBJECTS[SUBJECT_ID].name}
+      activeClassId={currentClass?.id}
       demoNote={isDemo ? 'Demo: invented learners, nothing is saved' : null}>
       {body}
     </TeacherShell>
@@ -502,16 +503,16 @@ export function TeacherDashboard({ onBack, onNavigate, teacherProfile }) {
     // The classes this child is in: work set from their page can only go to
     // a class that has them in it.
     const theirClasses = classes.filter(c => members.some(m => m.class_id === c.id && m.student_id === selected.userId));
-    return (
+    return shell('classes', (
       <StudentDetail student={selected} onBack={() => setSelected(null)}
         canAssign={assignmentsReady && theirClasses.length > 0}
         classes={theirClasses} learnersOf={learnersOf} learnersReady={learnersReady}
         onAssign={assignGap} assignError={assignError} />
-    );
+    ));
   }
 
   if (loading || error) {
-    return shell('home', (
+    return shell('classes', (
       <div className="tt-card">
         {loading ? <p className="tt-sub">Loading your classes.</p>
           : <><h2>Could not load your classes</h2><p className="tt-sub" style={{ marginTop: 6 }}>{error}</p></>}
@@ -565,7 +566,7 @@ export function TeacherDashboard({ onBack, onNavigate, teacherProfile }) {
     const ls = classLearners(currentClass.id);
     const quiet = ls.filter(l => { const a = attentionOf(l); return a.quiet && a.days != null; })
       .map(l => ({ id: l.id, name: l.name, days: attentionOf(l).days }));
-    return shell('class', (
+    return shell('classes', (
       <ClassScreen cls={currentClass} size={ls.length} groups={groups}
         pattern={leadKey ? patternState[leadKey]?.value ?? 'loading' : null}
         patternFor={leadGroup ? `the group of ${leadGroup.learners.length}` : ''}
@@ -604,7 +605,7 @@ export function TeacherDashboard({ onBack, onNavigate, teacherProfile }) {
     .filter(l => { const a = attentionOf(l); return a.quiet && a.days != null; })
     .map(l => ({ id: `${c.id}-${l.id}`, name: l.name, className: c.name, days: attentionOf(l).days })));
 
-  return shell('home', (
+  return shell('classes', (
     <TeacherHome teacherName={teacherName} rows={rows} suggestion={suggestion}
       onSuggest={() => suggestion && openPractice(suggestion.classId, suggestion.above?.id || suggestion.skill.id)}
       workSet={workSet} quiet={quietAll} onOpenClass={openClass}
@@ -680,7 +681,7 @@ const AssignRow = ({ gap, classes, classId, learnersOf, learnersReady = true, pr
           <div className="inline-flex rounded-full bg-slate-100 p-0.5" role="radiogroup" aria-label="Who this work is for">
             {[['all', `Whole class${pool.length ? ` (${pool.length})` : ''}`], ['some', 'Chosen learners']].map(([m, text]) => (
               <button key={m} role="radio" aria-checked={mode === m} onClick={() => setMode(m)}
-                className={`h-8 px-3.5 rounded-full text-[12.5px] font-bold transition-colors ${mode === m ? 'bg-[#16161A] text-white' : 'text-slate-600 hover:text-slate-900'}`}>
+                className={`h-8 px-3.5 rounded-full text-[12.5px] font-bold transition-colors ${mode === m ? 'bg-slate-900 text-white' : 'text-slate-600 hover:text-slate-900'}`}>
                 {text}
               </button>
             ))}
@@ -694,7 +695,7 @@ const AssignRow = ({ gap, classes, classId, learnersOf, learnersReady = true, pr
                 return (
                   <button key={l.id} onClick={() => toggle(l.id)} aria-pressed={on}
                     title={gapChild ? 'Has this gap' : undefined}
-                    className={`h-8 px-3 rounded-full text-[12.5px] font-bold inline-flex items-center gap-1.5 transition-colors ${on ? 'bg-[#16161A] text-white' : 'bg-slate-100 text-slate-500 hover:text-slate-900'}`}>
+                    className={`h-8 px-3 rounded-full text-[12.5px] font-bold inline-flex items-center gap-1.5 transition-colors ${on ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-500 hover:text-slate-900'}`}>
                     {gapChild && <span className={`w-1.5 h-1.5 rounded-full ${on ? 'bg-white' : 'bg-slate-400'}`} />}
                     {l.name}
                   </button>
@@ -710,7 +711,7 @@ const AssignRow = ({ gap, classes, classId, learnersOf, learnersReady = true, pr
       <div className="flex items-center gap-2">
         <button disabled={busy || !ready}
           onClick={async () => { setBusy(true); await onAssign(gap, cid, due, chosen); setBusy(false); }}
-          className="h-9 px-4 text-[13px] font-bold text-white bg-[#16161A] hover:bg-[#2b2b33] disabled:opacity-25 rounded-full transition-colors">
+          className="h-9 px-4 text-[13px] font-bold text-white bg-slate-900 hover:bg-slate-800 disabled:opacity-25 rounded-full transition-colors">
           {busy ? 'Setting…' : label}
         </button>
         <button onClick={onCancel} className="text-[12.5px] font-bold text-slate-400 hover:text-slate-700 px-1">Cancel</button>
@@ -769,7 +770,7 @@ const StrugglePanel = ({ state, assignment, learners, skills }) => {
   const sharedPattern = shared ? patternInfo(answerPattern(shared.submitted, shared.expected)) : null;
 
   return (
-    <div className="mt-3 rounded-[22px] bg-[#F4F4F6] p-4 sm:p-5 space-y-4">
+    <div className="mt-3 rounded-[22px] bg-slate-50 p-4 sm:p-5 space-y-4">
       {/* The group in one bar. */}
       <div>
         <div className="flex h-3 rounded-full overflow-hidden bg-white">
@@ -859,7 +860,7 @@ const StrugglePanel = ({ state, assignment, learners, skills }) => {
                   <span className="ml-auto"><Trail trail={x.trail} /></span>
                 </div>
                 {x.wrong.length > 0 && (
-                  <div className="mt-2 flex flex-wrap gap-1.5 rounded-xl bg-[#F4F4F6] p-1.5">
+                  <div className="mt-2 flex flex-wrap gap-1.5 rounded-xl bg-slate-50 p-1.5">
                     {x.wrong.map((w, i) => <WrongChip key={i} w={w} />)}
                   </div>
                 )}
@@ -920,7 +921,7 @@ const RosterRow = ({ st, onOpen }) => {
           {/* Silence is the one thing a gap cannot tell you, so it gets a mark
               of its own rather than a colour someone has to decode. */}
           {a.quiet && (
-            <span className="shrink-0 text-[9.5px] font-extrabold tracking-[.08em] uppercase bg-[#16161A] text-white rounded-full px-2 py-0.5">quiet</span>
+            <span className="shrink-0 text-[9.5px] font-extrabold tracking-[.08em] uppercase bg-slate-900 text-white rounded-full px-2 py-0.5">quiet</span>
           )}
           {!st.diagnosed && (
             <span className="shrink-0 text-[9.5px] font-extrabold tracking-[.08em] uppercase bg-slate-100 text-slate-500 rounded-full px-2 py-0.5">not placed</span>
@@ -953,7 +954,6 @@ const RosterRow = ({ st, onOpen }) => {
 // so a teacher who clicked a child to find out what was wrong learned nothing
 // they did not already know and had nowhere to go next.
 function StudentDetail({ student, onBack, canAssign = false, classes = [], learnersOf, learnersReady, onAssign, assignError }) {
-  useHorebLook();
   const { name, snap, diagnosed } = student;
   const a = attentionOf(student);
   // Set one of this child's gaps as work for this child (and anyone else the
@@ -962,9 +962,9 @@ function StudentDetail({ student, onBack, canAssign = false, classes = [], learn
   const [setIds, setSetIds] = useState(() => new Set());
   const firstName = String(name || '').split(' ')[0] || 'them';
   return (
-    <div className="min-h-screen bg-[#E8E8EC]">
-      <header className="sticky top-0 z-10 bg-[#E8E8EC]/90 backdrop-blur">
-        <div className="mx-auto w-full max-w-[1100px] px-5 sm:px-8 pt-6 pb-3 flex items-center gap-3.5">
+    <div>
+      <header>
+        <div className="pb-4 flex items-center gap-3.5">
           <button onClick={onBack} aria-label="Back to the class"
             className="w-11 h-11 shrink-0 rounded-[14px] bg-white flex items-center justify-center text-slate-500 hover:text-slate-900 transition-colors">
             <Icon name="back" className="w-5 h-5" />
@@ -978,7 +978,7 @@ function StudentDetail({ student, onBack, canAssign = false, classes = [], learn
         </div>
       </header>
 
-      <main className="mx-auto w-full max-w-[1100px] px-5 sm:px-8 pb-12 pt-1">
+      <main>
         <div className="grid gap-5 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-start">
 
           {/* WHAT TO DO ABOUT THIS CHILD, named. */}
@@ -1018,7 +1018,7 @@ function StudentDetail({ student, onBack, canAssign = false, classes = [], learn
                                   return ok;
                                 }} />
                             : <button onClick={() => setAssigning(g.id)}
-                                className="mt-3 h-9 px-4 rounded-full text-[13px] font-bold bg-[#16161A] text-white hover:bg-[#2b2b33] transition-colors">
+                                className="mt-3 h-9 px-4 rounded-full text-[13px] font-bold bg-slate-900 text-white hover:bg-slate-800 transition-colors">
                                 Set as work for {firstName}
                               </button>
                         )}
