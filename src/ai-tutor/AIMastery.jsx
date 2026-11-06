@@ -16,6 +16,7 @@ import { STRAND_BLOCK } from './strandBlocks.js';
 import { AvatarArt, AvatarPicker, isAvatarId, avatarFor } from '../avatars/Avatars.jsx';
 import { AreaModel, parseAreaProblem } from './AreaModel.jsx';
 import { TeachingVisual } from './TeachingVisual.jsx';
+import { questionHeadingClass } from './questionHeading.js';
 import { QuestionMedia, ChoiceGrid } from './QuestionMedia.jsx';
 import { computeSteps, diagnoseError, genericNudge, hintRungs } from './remediation.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
@@ -1485,7 +1486,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               <div className="bg-white rounded-2xl rounded-tl-md border border-slate-200 px-4 py-2.5 text-[15px] text-slate-700 shadow-sm">{cheerNow}</div>
             </div>
             <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
-              <div className={`${String(problem?.question || '').length <= 28 ? 'text-[36px] font-extrabold leading-tight' : 'text-[22px] font-bold leading-snug'} text-slate-900 mb-6`}>{problem?.question}</div>
+              <div className={`${questionHeadingClass(problem?.question)} text-slate-900 mb-6`}>{problem?.question}</div>
               {/* The picture the question is ABOUT ("what fraction of the sheet
                   of paper is coloured?"). Without it the question cannot be
                   answered at all — the placement would read as a gap in
@@ -2118,7 +2119,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
             </div>
 
             <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 mb-4">
-              <div className={`${String(problem?.question || '').length <= 28 ? 'text-[36px] font-extrabold leading-tight' : 'text-[22px] font-bold leading-snug'} text-slate-900 mb-6`}>{problem?.question}</div>
+              <div className={`${questionHeadingClass(problem?.question)} text-slate-900 mb-6`}>{problem?.question}</div>
               {/* A memory check still has to SHOW the thing it asks about. This
                   screen used to render only an interactive visual, so a picture
                   question arrived as a bare text box and the learner was marked

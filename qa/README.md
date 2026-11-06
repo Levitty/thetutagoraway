@@ -33,3 +33,8 @@ person, at laptop and phone, with invented data; every request to Supabase is an
 in the browser, so nothing reaches the live database. `qa/surfaces/flows.mjs` walks every
 menu at both sizes. Both need the dev server (`npx vite --port 5199`) and PLAYWRIGHT_DIR
 pointing at any folder with Playwright installed.
+
+Added 6 Nov (F28, F29): the classroom does not draw pictures, so these are unit
+tests, `tests/figure-palette.test.mjs`: a figure waiting for an answer shows no
+shaded part, its words can be read on the light card, a column sum reads in order
+on the page, and an instruction is not set at the size of a bare sum.
