@@ -35,3 +35,4 @@ __pycache__/
 
 # Vite writes these while loading the config; never source.
 vite.config.js.timestamp-*
+.school-homework-local.json

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F4F2EC">
+<title>Homework · HOREB</title>
+<!--
+  School homework on the family phone (10 Nov 2026). The school's Tuta sets it from the curriculum; HOREB
+  drew these questions for this child and marks each one at once. The link's code is the key: no login.
+  One question at a time. Leaving the page (another app, closing it, going back) locks it, as the school's
+  own online homework; what was answered is kept, and the teacher can open it again.
+  Talks to the school-homework edge function (scripts/school-homework.template.ts).
+-->
+<style>
+  :root { --ink:#16161A; --ink2:#3A3A44; --muted:#5F6072; --faint:#9A9AA6; --ground:#F4F2EC; --card:#FFFFFF; --line:#E6E3DA;
+    --sun:#FFC93C; --sun-ink:#6B5309; --violet:#4318D1; --violet-tint:#ECE8FF; --green-tint:#E2F5E8; --green-ink:#17663A;
+    --pink-tint:#FFF0F5; --pink-deep:#C2255C; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--ground); color: var(--ink); }
+  body { font: 17px/1.45 "Figtree Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+  main { max-width: 520px; margin: 0 auto; padding: 18px 16px 40px; min-height: 100vh; display: flex; flex-direction: column; }
+  .brand { font-weight: 800; letter-spacing: -.02em; font-size: 15px; color: var(--violet); }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .count { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .bar { height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; margin: -8px 0 20px; }
+  .bar i { display: block; height: 100%; background: var(--violet); border-radius: 99px; transition: width .3s; }
+  h1 { font-size: 30px; line-height: 1.08; letter-spacing: -.035em; font-weight: 800; margin: 8px 0 10px; }
+  .lead { color: var(--ink2); margin: 0 0 18px; }
+  .card { background: var(--card); border-radius: 24px; padding: 20px; box-shadow: 0 1px 0 rgba(22,22,26,.04); }
+  .q { font-size: 21px; line-height: 1.35; font-weight: 700; letter-spacing: -.015em; margin: 0 0 6px; }
+  .instr { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0 16px; font-size: 16px; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  th { font-size: 13px; color: var(--muted); font-weight: 700; }
+  ol.work { margin: 0 0 16px; padding: 0; list-style: none; }
+  ol.work li { background: var(--ground); border-radius: 14px; padding: 10px 12px; margin-bottom: 8px; font-size: 16px; }
+  .opts { display: grid; gap: 10px; }
+  .opt { display: flex; gap: 12px; align-items: flex-start; width: 100%; text-align: left; font: inherit; color: var(--ink); background: var(--card);
+    border: 2px solid var(--line); border-radius: 18px; padding: 14px 14px; cursor: pointer; }
+  .opt b { flex: 0 0 30px; height: 30px; border-radius: 99px; background: var(--ground); display: grid; place-items: center; font-size: 15px; }
+  .opt.on { border-color: var(--ink); }
+  .opt.on b { background: var(--ink); color: #fff; }
+  input.ans { width: 100%; font: inherit; font-size: 24px; font-weight: 700; border: 2px solid var(--ink); border-radius: 18px; padding: 14px 16px; min-height: 62px; background: #fff; color: var(--ink); }
+  .go { display: block; width: 100%; min-height: 58px; margin-top: 18px; border: 0; border-radius: 99px; background: var(--sun); color: var(--ink);
+    font: inherit; font-size: 17px; font-weight: 800; letter-spacing: -.01em; cursor: pointer; }
+  .go:disabled { opacity: .45; }
+  .mark { border-radius: 18px; padding: 14px 16px; margin-top: 16px; }
+  .mark.right { background: var(--green-tint); color: var(--green-ink); }
+  .mark.wrong { background: var(--pink-tint); color: var(--pink-deep); }
+  .mark p { margin: 4px 0 0; color: var(--ink2); }
+  .warn { background: var(--violet-tint); border-radius: 18px; padding: 14px 16px; margin: 0 0 6px; color: var(--ink2); font-size: 16px; }
+  .warn b { color: var(--ink); }
+  .big { font-size: 64px; font-weight: 800; letter-spacing: -.04em; line-height: 1; margin: 6px 0 4px; font-variant-numeric: tabular-nums; }
+  .foot { margin-top: auto; padding-top: 28px; font-size: 13px; color: var(--faint); text-align: center; }
+  .err { color: var(--pink-deep); }
+</style>
+</head>
+<body>
+<main id="app"><p class="brand">HOREB</p><p class="lead">Opening the homework...</p></main>
+<script>
+(function () {
+  var local = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  var FN = local ? '/hw/api' : 'https://dlqbiayaqjucxsvbesms.supabase.co/functions/v1/school-homework';
+  var code = (new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  var app = document.getElementById('app');
+  var state = null, busy = false, locked = false, picked = '';
+  var esc = function (t) { return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var call = function (body) {
+    body.code = code;
+    return fetch(FN, { method: 'POST', headers: { 'content-type': 'text/plain' }, body: JSON.stringify(body) }).then(function (r) { return r.json(); });
+  };
+  var day = function (d) { try { return new Date(d + 'T12:00').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' }); } catch (e) { return d; } };
+  var top = function (v) {
+    var n = v.status === 'started' ? Math.min(v.answered + 1, v.total) : v.total;
+    return '<div class="top"><span class="brand">HOREB</span>' + (v.status === 'started' ? '<span class="count">Question ' + n + ' of ' + v.total + '</span>' : '') + '</div>'
+      + (v.status === 'started' ? '<div class="bar"><i style="width:' + Math.round(v.answered / v.total * 100) + '%"></i></div>' : '');
+  };
+  var foot = '<p class="foot">Questions made for you by HOREB, set by your school.</p>';
+
+  var render = function (r) {
+    state = r; var v = r.view || {};
+    if (!r.success) { app.innerHTML = '<p class="brand">HOREB</p><h1>This link does not open</h1><p class="lead err">' + esc(r.error || 'Try again.') + '</p>' + foot; return; }
+    if (v.status === 'paper') { app.innerHTML = top(v) + '<h1>' + esc(r.title) + '</h1><p class="lead">This homework is on paper. Your teacher has the worksheet.</p>' + foot; return; }
+    if (v.status === 'issued') {
+      app.innerHTML = top(v) + '<h1>' + esc(r.title) + '</h1>'
+        + '<p class="lead">' + v.total + ' questions' + (r.due_on ? ', due ' + esc(day(r.due_on)) : '') + '. Each one is marked as soon as you answer it.</p>'
+        + '<div class="warn"><b>Stay on this page until the end.</b> If you leave it, open another app or go back, the homework locks. What you answered is kept, and your teacher can open it again.</div>'
+        + '<button class="go" id="go">Start</button>' + foot;
+      document.getElementById('go').onclick = function () { send({ action: 'start' }); };
+      return;
+    }
+    if (v.status === 'locked') {
+      app.innerHTML = top(v) + '<h1>Locked</h1><p class="lead">This homework locked because the page was left at question ' + esc(v.lock_question || v.answered + 1) + '. Your ' + v.answered + ' answer' + (v.answered === 1 ? ' is' : 's are') + ' kept. Ask your teacher to open it again.</p>' + foot;
+      return;
+    }
+    if (v.status === 'submitted') {
+      app.innerHTML = top(v) + '<p class="lead">Handed in</p><p class="big">' + v.right + ' <span style="font-size:28px;color:var(--muted)">of ' + v.total + '</span></p>'
+        + '<h1 style="font-size:24px">' + esc(r.title) + '</h1><p class="lead">Your teacher sees which questions went well and which ones to practise.</p>' + foot;
+      return;
+    }
+    question(v);
+  };
+
+  var question = function (v, mark) {
+    var it = v.item; if (!it) return;
+    var h = top(v) + '<div class="card"><p class="q">' + esc(it.question) + '</p>' + (it.instruction ? '<p class="instr">' + esc(it.instruction) + '</p>' : '');
+    if (it.table) h += '<table><thead><tr>' + it.table.head.map(function (c) { return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead><tbody>'
+      + it.table.rows.map(function (r) { return '<tr>' + r.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table>';
+    if (it.steps_shown) h += '<ol class="work">' + it.steps_shown.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>';
+    if (it.kind === 'choice') h += '<div class="opts">' + it.options.map(function (o) { return '<button class="opt" data-k="' + o.key + '"><b>' + o.key + '</b><span>' + esc(o.text) + '</span></button>'; }).join('') + '</div>';
+    else h += '<input class="ans" id="ans" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Your answer" aria-label="Your answer">';
+    h += '<button class="go" id="go" disabled>Check</button></div>';
+    app.innerHTML = h; picked = '';
+    var go = document.getElementById('go');
+    app.querySelectorAll('.opt').forEach(function (b) { b.onclick = function () { app.querySelectorAll('.opt').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); picked = b.dataset.k; go.disabled = false; }; });
+    var ans = document.getElementById('ans');
+    if (ans) { ans.oninput = function () { picked = ans.value; go.disabled = ans.value.trim() === ''; }; ans.onkeydown = function (e) { if (e.key === 'Enter' && !go.disabled) go.click(); }; }
+    go.onclick = function () { if (picked.trim() === '') return; send({ action: 'answer', n: v.answered + 1, response: picked }, it); };
+  };
+
+  var feedback = function (r, it) {
+    var m = r.mark, v = r.view;
+    var card = app.querySelector('.card');
+    app.querySelectorAll('.opt, #ans, #go').forEach(function (x) { x.disabled = true; });
+    var g = document.getElementById('go'); if (g) g.remove();
+    var d = document.createElement('div');
+    d.className = 'mark ' + (m.correct ? 'right' : 'wrong');
+    d.innerHTML = m.correct ? '<b>Right.</b>' : '<b>Not quite.</b><p>The answer is ' + esc(m.answer) + '.' + (m.why ? ' ' + esc(m.why) : '') + '</p>';
+    card.appendChild(d);
+    var next = document.createElement('button'); next.className = 'go'; next.textContent = v.status === 'submitted' ? 'See how you did' : 'Next question';
+    next.onclick = function () { render(r); window.scrollTo(0, 0); };
+    card.appendChild(next);
+  };
+
+  var send = function (body, it) {
+    if (busy) return; busy = true;
+    call(body).then(function (r) { busy = false; if (body.action === 'answer' && r.mark) feedback(r, it); else render(r); })
+      .catch(function () { busy = false; var g = document.getElementById('go'); if (g) { g.disabled = false; g.textContent = 'No connection. Try again'; } });
+  };
+
+  // Leaving locks it: another app or tab, the window losing focus, closing, or going back. Only while it is open.
+  var lock = function (why) {
+    if (locked || !state || !state.view || state.view.status !== 'started') return; locked = true;
+    var b = JSON.stringify({ action: 'leave', code: code, reason: why });
+    if (navigator.sendBeacon) navigator.sendBeacon(FN, new Blob([b], { type: 'text/plain' })); else fetch(FN, { method: 'POST', body: b, keepalive: true });
+    state.view = Object.assign({}, state.view, { status: 'locked', lock_question: state.view.answered + 1 }); render(state);
+  };
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') lock('left the page'); });
+  window.addEventListener('blur', function () { lock('switched away'); });
+  window.addEventListener('pagehide', function () { lock('closed the page'); });
+  history.pushState({ hw: 1 }, ''); window.addEventListener('popstate', function () { lock('went back'); });
+
+  if (!code) render({ success: false, error: 'This link has no code. Open the link the school sent.' });
+  else call({ action: 'open' }).then(render).catch(function () { render({ success: false, error: 'No connection. Check the phone has data, then open the link again.' }); });
+})();
+</script>
+</body>
+</html>

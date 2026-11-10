@@ -11,6 +11,8 @@
 //           -> { success: true }       (the same practice_ref again replaces it)
 //   status  { practice_refs: [...] }
 //           -> { success: true, status: { [practice_ref]: { [learner_ref]: { linked, mastered, mastered_at, practised } } } }
+//   homework_preview, homework_set, homework_status, homework_reopen   homework drawn from the curriculum
+//           families (10 Nov 2026), see src/school/homeworkDoor.js
 //
 // Only learner references and HOREB skill ids cross. No names, phones or marks.
 // Deploy: supabase functions deploy school-practice --no-verify-jwt   (Tuta has no HOREB login;
@@ -19,7 +21,12 @@
 // @ts-nocheck
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
 
-/*__DOOR_LIB__*/
+import { verifyCall, cleanAssign, practiceStatus, childProfileKey } from "../src/school/schoolDoor.js";
+import { doorHomework, makeCodeFrom } from "../src/school/homeworkDoor.js";
+import { supabaseStore } from "../src/school/homeworkStore.js";
+
+// The child's link: HOREB's own page, keyed by the sitting's code (public/hw/index.html).
+const HOREB_SITE = "https://tutagora.com";
 
 const env = (k) => Deno.env.get(k) || "";
 const json = (status, body) => new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json" } });
@@ -65,6 +72,15 @@ Deno.serve(async (req) => {
       for (const r of rows || []) progress[r.profile_key] = r.progress || {};
     }
     return json(200, { success: true, status: practiceStatus(practices || [], links || [], progress) });
+  }
+
+  if (String(p.action || "").startsWith("homework_")) {
+    const r = await doorHomework(door, p, {
+      store: supabaseStore(admin), now: () => Date.now(),
+      makeCode: makeCodeFrom((n) => crypto.getRandomValues(new Uint8Array(n))),
+      linkFor: (c) => `${HOREB_SITE}/hw/?c=${c}`,
+    }).catch(() => ({ status: 500, body: { success: false, error: "Not saved" } }));
+    if (r) return json(r.status, r.body);
   }
 
   return json(400, { success: false, error: "Unknown action" });

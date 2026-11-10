@@ -97,9 +97,12 @@ test('the migration keeps the door closed: secrets and practice are not readable
   assert.doesNotMatch(code, /\b(first_name|last_name|phone|marks)\b/);
 });
 
-test('the edge function is built from the tested rules', () => {
+test('the edge functions are built from the tested rules', async () => {
+  const { buildSchoolFns } = await import('../scripts/build-school-practice-fn.mjs');
+  for (const [name, want] of Object.entries(await buildSchoolFns())) {
+    const fn = readFileSync(new URL(`../supabase/functions/${name}/index.ts`, import.meta.url), 'utf8');
+    assert.ok(fn === want, `${name} is out of date: run npm run build:school-fn`);
+  }
   const fn = readFileSync(new URL('../supabase/functions/school-practice/index.ts', import.meta.url), 'utf8');
-  const lib = readFileSync(new URL('../src/school/schoolDoor.js', import.meta.url), 'utf8').replace(/^export const /gm, 'const ').trim();
-  assert.ok(fn.includes(lib), 'run npm run build:school-fn');
   assert.match(fn, /verifyCall\(door\.secret/);
 });
