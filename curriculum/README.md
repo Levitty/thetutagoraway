@@ -1,0 +1,11 @@
+# HOREB curriculum
+
+HOREB owns the curriculum. `mathematics/g5.json` is the canonical map: KICD 2024 Grade 5 Mathematics, 19 sub-strands, 122 official outcomes (verified word for word), 167 skills, 422 prerequisites and 414 misconceptions. Outcomes are official; skills, prerequisites and misconceptions are proposed or draft until a teacher reviews them.
+
+Tuta (the school system) connects to HOREB and keeps only a read copy. Its copy is generated from this file, never edited there.
+
+Generated from this file:
+- `node scripts/build-curriculum-map.mjs` writes `src/ai-tutor/content/curriculumMap.g5.js` and `engine/data/curriculum/g5.*.json`.
+- `node scripts/build-curriculum-migration.mjs` writes `supabase/migrations/20261110_curriculum.sql` (loads the same file into the five `curriculum_*` reference tables; idempotent).
+
+Question families carry `cskill` (a skill code here) and `outcome` (its official outcome code).

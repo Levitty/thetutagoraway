@@ -1,0 +1,1674 @@
+{
+ "outcomes": {
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.a": "use place value and total value of digits up to hundreds of thousands in different situations",
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.b": "read and write numbers up to tens of thousands in words in different situations",
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.c": "order numbers up to tens of thousands in different situations",
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.d": "round off numbers up to tens of thousands to the nearest hundred and thousand in different situations",
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.e": "apply divisibility tests of 2, 5 and 10 in real-life situations",
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.f": "determine Highest Common Factor (HCF) and Greatest Common Divisor (GCD) in different situations",
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.g": "determine Least Common Multiple (LCM) in real-life situations",
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.h": "appreciate use of whole numbers in real-life situations",
+  "MATH.G5.NUMBER.ADDITION.a": "add up to three 6-digit numbers without regrouping up to a sum not exceeding 1,000,000 in different situations",
+  "MATH.G5.NUMBER.ADDITION.b": "add up to two 6-digit numbers with double regrouping with the sum not exceeding 1,000, 000 in different situations",
+  "MATH.G5.NUMBER.ADDITION.c": "estimate sum by rounding off the addends to the nearest hundred and thousand in different situations",
+  "MATH.G5.NUMBER.ADDITION.d": "create patterns involving the addition of numbers up to a sum of 1,000,000 in real-life situations",
+  "MATH.G5.NUMBER.ADDITION.e": "appreciate use of the addition of whole numbers in real-life situations",
+  "MATH.G5.NUMBER.SUBTRACTION.a": "subtract up to two 6-digit numbers without regrouping in real-life situations",
+  "MATH.G5.NUMBER.SUBTRACTION.b": "subtract of up to two 6-digit numbers with regrouping in different situations",
+  "MATH.G5.NUMBER.SUBTRACTION.c": "estimate difference by rounding off the minuend and subtrahend to the nearest hundred and thousand in different situations",
+  "MATH.G5.NUMBER.SUBTRACTION.d": "perform combined operations involving addition and subtraction in different situations",
+  "MATH.G5.NUMBER.SUBTRACTION.e": "create patterns involving subtraction from up to 1,000,000 in different situations",
+  "MATH.G5.NUMBER.SUBTRACTION.f": "appreciate subtraction of numbers in real-life situations",
+  "MATH.G5.NUMBER.MULTIPLICATION.a": "multiply up to a 3-digit number by up to a 2-digit number in real-life situations",
+  "MATH.G5.NUMBER.MULTIPLICATION.b": "estimate product by rounding off numbers to the nearest ten in different situations",
+  "MATH.G5.NUMBER.MULTIPLICATION.c": "make patterns involving multiplication of numbers with product not exceeding 1000 in in different situations",
+  "MATH.G5.NUMBER.MULTIPLICATION.d": "appreciate use of multiplication in real life",
+  "MATH.G5.NUMBER.DIVISION.a": "divide up to a 3-digit number by up to a 2-digit number where the dividend is greater than the divisor in real life",
+  "MATH.G5.NUMBER.DIVISION.b": "apply the relationship between multiplication and division in different situations",
+  "MATH.G5.NUMBER.DIVISION.c": "divide up to 3-digit number by 1000 in different situations",
+  "MATH.G5.NUMBER.DIVISION.d": "estimate quotients by rounding off the dividend and divisor to the nearest ten in real-life situations",
+  "MATH.G5.NUMBER.DIVISION.e": "perform combined operations involving addition, subtraction, multiplication and division of whole numbers in different situations",
+  "MATH.G5.NUMBER.DIVISION.f": "appreciate use of division of whole numbers in real-life situations",
+  "MATH.G5.NUMBER.FRACTIONS.a": "simplify fractions in different situations",
+  "MATH.G5.NUMBER.FRACTIONS.b": "compare fractions in different situations",
+  "MATH.G5.NUMBER.FRACTIONS.c": "order fractions with denominators not exceeding 12 in different situations",
+  "MATH.G5.NUMBER.FRACTIONS.d": "add two fractions with the same denominator in different situations",
+  "MATH.G5.NUMBER.FRACTIONS.e": "subtract two fractions with the same denominator in different situations",
+  "MATH.G5.NUMBER.FRACTIONS.f": "add two fractions with one renaming in different situations",
+  "MATH.G5.NUMBER.FRACTIONS.g": "subtract two fractions with one renaming in different situations",
+  "MATH.G5.NUMBER.FRACTIONS.h": "appreciate the use of fractions in real life",
+  "MATH.G5.NUMBER.DECIMALS.a": "identify place value of decimals up to thousandths in different situations",
+  "MATH.G5.NUMBER.DECIMALS.b": "order decimals up to thousandths in different situations",
+  "MATH.G5.NUMBER.DECIMALS.c": "add decimals up to thousandths in different situations",
+  "MATH.G5.NUMBER.DECIMALS.d": "subtract decimals up to thousandths in different situations",
+  "MATH.G5.NUMBER.DECIMALS.e": "multiply decimal numbers of up to thousandths by 1000 in different situations",
+  "MATH.G5.NUMBER.DECIMALS.f": "appreciate use of decimals in real-life situations",
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a": "form simple equations with one unknown involving real-life situations",
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.b": "solve simple equations with one unknown involving real-life situations",
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.c": "appreciate use of equations in solving problems in real life",
+  "MATH.G5.MEASUR.LENGTH.a": "identify the kilometre (km) as a unit of measuring length in real life",
+  "MATH.G5.MEASUR.LENGTH.b": "estimate distance in kilometres in real-life situations",
+  "MATH.G5.MEASUR.LENGTH.c": "identify the relationship between the kilometre (km) and the metre (m) in different situations",
+  "MATH.G5.MEASUR.LENGTH.d": "convert kilometres to metres and metres to kilometres in different situations",
+  "MATH.G5.MEASUR.LENGTH.e": "add metres and kilometres in real-life situations",
+  "MATH.G5.MEASUR.LENGTH.f": "subtract metres and kilometres in real life situations",
+  "MATH.G5.MEASUR.LENGTH.g": "multiply metres and kilometres by whole numbers in real life situations",
+  "MATH.G5.MEASUR.LENGTH.h": "divide metres and kilometres by whole numbers in real life situations",
+  "MATH.G5.MEASUR.LENGTH.i": "appreciate the use of kilometres and metres in measuring length in real life",
+  "MATH.G5.MEASUR.AREA.a": "identify the square centimetre (cm²) as a unit of measuring area in real life",
+  "MATH.G5.MEASUR.AREA.b": "work out area of rectangles and squares in square centimetres (cm²) in different situations",
+  "MATH.G5.MEASUR.AREA.c": "appreciate the use of cm² in working out area in real life",
+  "MATH.G5.MEASUR.VOLUME.a": "identify the cubic centimetre (cm³) as a unit of measuring volume in different situations",
+  "MATH.G5.MEASUR.VOLUME.b": "derive the formula for the volume of cuboid as v= l x w x h practically",
+  "MATH.G5.MEASUR.VOLUME.c": "work out volume of cuboids in cubic centimetres (cm³) using the formula",
+  "MATH.G5.MEASUR.VOLUME.d": "derive the formula for the volume of cube as v= s x s x s practically",
+  "MATH.G5.MEASUR.VOLUME.e": "work out volume of cubes in cubic centimetres (cm³) using the formula",
+  "MATH.G5.MEASUR.VOLUME.f": "appreciate use of cubic centimetres in measuring volume in real life",
+  "MATH.G5.MEASUR.CAPACITY.a": "identify the millilitre as a unit of measuring capacity in real life",
+  "MATH.G5.MEASUR.CAPACITY.b": "measure capacity in millilitres in real-life situations",
+  "MATH.G5.MEASUR.CAPACITY.c": "estimate and measure capacity in millilitres in different situations",
+  "MATH.G5.MEASUR.CAPACITY.d": "identify the relationship between litres and millilitres in real life",
+  "MATH.G5.MEASUR.CAPACITY.e": "convert litres to millilitres and millilitres to litres in real-life situations",
+  "MATH.G5.MEASUR.CAPACITY.f": "add litres and millilitres in real-life situations",
+  "MATH.G5.MEASUR.CAPACITY.g": "subtract litres and millilitres in real-life situations",
+  "MATH.G5.MEASUR.CAPACITY.h": "multiply litres and millilitres by whole numbers in real-life situations",
+  "MATH.G5.MEASUR.CAPACITY.i": "divide litres and millilitres by whole numbers in different situations",
+  "MATH.G5.MEASUR.CAPACITY.j": "appreciate use of litres and millilitres in measuring capacity in real life",
+  "MATH.G5.MEASUR.MASS.a": "identify the gramme as a unit of measuring mass in real life",
+  "MATH.G5.MEASUR.MASS.b": "measure mass in grammes in different situations",
+  "MATH.G5.MEASUR.MASS.c": "estimate and measure mass in grammes in different situations",
+  "MATH.G5.MEASUR.MASS.d": "identify the relationship between the kilogramme and the gramme in real-life situations",
+  "MATH.G5.MEASUR.MASS.e": "convert kilogrammes to grammes and grammes to kilogrammes in real-life situations",
+  "MATH.G5.MEASUR.MASS.f": "add grammes and kilogrammes in real-life situations",
+  "MATH.G5.MEASUR.MASS.g": "subtract grammes and kilogrammes in real-life situations",
+  "MATH.G5.MEASUR.MASS.h": "multiply grammes and kilogramme by whole numbers in real-life situations",
+  "MATH.G5.MEASUR.MASS.i": "divide grammes and kilogrammes by whole numbers in real-life situations",
+  "MATH.G5.MEASUR.MASS.j": "appreciate use of kilogrammes and grammes in measuring mass in real life",
+  "MATH.G5.MEASUR.TIME.a": "identify the second as a unit of measuring time from a clock",
+  "MATH.G5.MEASUR.TIME.b": "use digital or analogues clocks to read time in seconds",
+  "MATH.G5.MEASUR.TIME.c": "identify the relationship between the minute and the second in real-life situations",
+  "MATH.G5.MEASUR.TIME.d": "convert minutes to seconds and seconds to minutes in real life",
+  "MATH.G5.MEASUR.TIME.e": "add minutes and seconds with conversion in real-life situations",
+  "MATH.G5.MEASUR.TIME.f": "subtract minutes and seconds with conversion in real life situations",
+  "MATH.G5.MEASUR.TIME.g": "multiply minutes and seconds by whole numbers in real-life situations",
+  "MATH.G5.MEASUR.TIME.h": "divide minutes and seconds by whole numbers in real-life situations",
+  "MATH.G5.MEASUR.TIME.i": "appreciate use of minutes and seconds as units of measuring time in real-life situations",
+  "MATH.G5.MEASUR.MONEY.a": "explain the term budget in real-life situations",
+  "MATH.G5.MEASUR.MONEY.b": "identify the importance of a budget in real life",
+  "MATH.G5.MEASUR.MONEY.c": "prepare a budget of up to 5 items used in daily life",
+  "MATH.G5.MEASUR.MONEY.d": "explain meaning of tax and its importance to the government",
+  "MATH.G5.MEASUR.MONEY.e": "identify services provided by banks in real-life situations",
+  "MATH.G5.MEASUR.MONEY.f": "identify factors to consider in order to save money wisely",
+  "MATH.G5.MEASUR.MONEY.g": "appreciate use of budgeting, bank services and payment of taxes in real life",
+  "MATH.G5.GEOMET.LINES.a": "identify horizontal and vertical lines in different situations",
+  "MATH.G5.GEOMET.LINES.b": "draw horizontal and vertical lines in different salutations",
+  "MATH.G5.GEOMET.LINES.c": "identify perpendicular lines in different situations",
+  "MATH.G5.GEOMET.LINES.d": "draw perpendicular lines in different salutations",
+  "MATH.G5.GEOMET.LINES.e": "identify parallel lines in different situations",
+  "MATH.G5.GEOMET.LINES.f": "draw parallel lines in different salutations",
+  "MATH.G5.GEOMET.LINES.g": "appreciate use of various types of lines in real life",
+  "MATH.G5.GEOMET.ANGLES.a": "relate a turn to angles in real life",
+  "MATH.G5.GEOMET.ANGLES.b": "read angles from protractor in both directions",
+  "MATH.G5.GEOMET.ANGLES.c": "use protractor to measure angles in different situations",
+  "MATH.G5.GEOMET.ANGLES.d": "measure angles in degrees in different situations",
+  "MATH.G5.GEOMET.ANGLES.e": "identify the use of angles in the environment",
+  "MATH.G5.GEOMET.ANGLES.f": "appreciate the use of angles in our day-to-day life",
+  "MATH.G5.GEOMET.3_D_OBJECTS.a": "describe 3-D objects in the environment",
+  "MATH.G5.GEOMET.3_D_OBJECTS.b": "describe 2-D shapes in 3-D objects in the environment",
+  "MATH.G5.GEOMET.3_D_OBJECTS.c": "appreciate the use of 3-D objects in the environment",
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.a": "collect data of about 30 items relating to real-life experiences",
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.b": "draw a table to record data from real-life situations",
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.c": "draw tally marks of the collected data",
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.d": "prepare a frequency table to represent data",
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.e": "interpret data represented by frequency tables",
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.f": "appreciate use frequency tables in real life"
+ },
+ "skills": {
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH": {
+   "forms": [
+    "name the place of an underlined digit",
+    "which digit is in the given place",
+    "read a place value chart or abacus",
+    "build a number from place clues (missing number)"
+   ],
+   "mastery": "Given any whole number up to 999,999, the child names the place of any digit (ones, tens, hundreds, thousands, ten thousands, hundred thousands), including digits next to or after zeros. Given a place, the child says which digit is in it. The child can show the number on a place value chart or apparatus."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH": {
+   "forms": [
+    "total value of an underlined digit",
+    "write as sum of total values (expanded form)",
+    "number from given total values, including empty places",
+    "difference between total values of two digits",
+    "word problem: money in shillings by place"
+   ],
+   "mastery": "For numbers up to 999,999 the child gives the total value of any digit (for example, the 8 in 487,306 is worth 80,000). The child writes a number as the sum of the total values of its digits and rebuilds a number from total values, including when some places are empty. Proposed: this skill also covers reading six-digit numbers in symbols from charts or cards, which the learning experiences mention."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS": {
+   "forms": [
+    "write the number in words",
+    "read the number aloud",
+    "spot and correct the spelling or wording error",
+    "word problem: write the amount on a cheque or receipt"
+   ],
+   "mastery": "The child reads aloud and writes in correctly spelt words any whole number up to 99,999. This includes numbers with zeros in the middle, such as 40,507 (forty thousand, five hundred and seven), and uses 'and' and hyphens in the British way."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS": {
+   "forms": [
+    "write the number in symbols",
+    "match words to numerals",
+    "dictation: write the number you hear",
+    "word problem: number of people in a news report or census"
+   ],
+   "mastery": "The child turns any number up to 99,999 given in words into digits. Zeros go in the correct places, as in twelve thousand and five = 12,005, and the child does not write the number as it sounds."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.COMPARE_NUMBERS": {
+   "forms": [
+    "which is greater/smaller",
+    "compare and explain",
+    "fill in 'greater than'/'less than' (proposed: or the symbols > and <)",
+    "word problem: which county or school has more"
+   ],
+   "mastery": "The child decides which of two numbers up to 99,999 is greater or smaller. First the child compares the number of digits, then compares place by place from the left. The child explains the decision using place value."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.ORDER_NUMBERS": {
+   "forms": [
+    "arrange in increasing order",
+    "arrange in decreasing order",
+    "which number is out of place",
+    "word problem: order distances, populations or prices from smallest to largest"
+   ],
+   "mastery": "The child arranges a set of numbers, each up to 99,999 (proposed: 3 to 6 numbers), in increasing or decreasing order as asked. This includes sets where the numbers share leading digits or have different numbers of digits."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED": {
+   "forms": [
+    "round to the nearest hundred",
+    "which hundred is it closest to (number line)",
+    "which numbers round to a given value",
+    "word problem: approximate amount in shillings"
+   ],
+   "mastery": "The child rounds any whole number up to 99,999 to the nearest hundred by looking only at the tens digit. The child keeps the place of every digit, handles rounding that carries into the next place (for example, 39,960 becomes 40,000) and rounds a tens digit of 5 up."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND": {
+   "forms": [
+    "round to the nearest thousand",
+    "round the same number to the nearest hundred and to the nearest thousand",
+    "which numbers round to a given thousand",
+    "word problem: estimate attendance or cost"
+   ],
+   "mastery": "The child rounds any whole number up to 99,999 to the nearest thousand by looking only at the hundreds digit. This includes rounding that carries into the next place (for example, 59,650 becomes 60,000). The child can explain why we round, for example when reporting crowd sizes or prices."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_2": {
+   "forms": [
+    "is it divisible by 2? yes/no with reason",
+    "pick the numbers divisible by 2 from a list",
+    "missing digit so the number is divisible by 2",
+    "state the rule"
+   ],
+   "mastery": "The child states the rule that a number is divisible by 2 when its ones digit is 0, 2, 4, 6 or 8. The child uses it to decide, without dividing, whether a number is divisible by 2. Proposed limit: numbers up to 99,999."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10": {
+   "forms": [
+    "is it divisible by 5/10? with reason",
+    "sort numbers into divisible by 2, 5, 10 (Venn or table)",
+    "missing digit",
+    "which of 2, 5 and 10 divide this number",
+    "discover the rule from a pattern of examples"
+   ],
+   "mastery": "The child states and uses two rules: a number is divisible by 5 if its ones digit is 0 or 5, and by 10 if its ones digit is 0. The child recognises that any number divisible by 10 is also divisible by 2 and by 5. Proposed limit: numbers up to 99,999."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBILITY_PROBLEMS": {
+   "forms": [
+    "word problem: sharing equally between 2",
+    "word problem: packing in fives or tens",
+    "word problem: paying exactly with Sh 5 / Sh 10 coins",
+    "yes/no with explanation"
+   ],
+   "mastery": "In everyday situations such as sharing, packing or paying with coins and notes, the child picks the relevant divisor (2, 5 or 10). The child applies the test to decide whether the items or money can be shared or packed exactly with nothing left over, and explains the answer."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_FACTORS": {
+   "forms": [
+    "list all factors",
+    "write as a product of factors",
+    "list common factors of two/three numbers",
+    "is n a common factor of a and b?"
+   ],
+   "mastery": "The child lists all factors of numbers up to 100 (proposed limit) systematically in pairs, including 1 and the number itself. The child writes a number as a product of factors and picks out the factors common to two or three numbers."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_GCD": {
+   "forms": [
+    "find the HCF",
+    "find the GCD (same task, other name)",
+    "true/false: the HCF of a and b is n",
+    "missing number given the HCF"
+   ],
+   "mastery": "The child finds the Highest Common Factor of two or three numbers up to 100 (proposed limit) by listing common factors. Proposed: the child may also use factor or prime-factor form. The child knows that HCF and GCD (Greatest Common Divisor) name the same number."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_PROBLEMS": {
+   "forms": [
+    "word problem: longest equal pieces",
+    "word problem: largest number of identical groups",
+    "word problem: biggest equal containers",
+    "choose HCF or LCM and explain"
+   ],
+   "mastery": "The child recognises 'largest equal piece/group with nothing left over' situations and uses the HCF to solve them. Examples are cutting ribbons or timber, or packing two kinds of fruit into identical bags. The child answers the question actually asked: the size of each group or the number of groups."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_MULTIPLES": {
+   "forms": [
+    "list the first n multiples",
+    "list common multiples of two/three numbers",
+    "is n a common multiple of a and b?",
+    "continue the pattern of common multiples"
+   ],
+   "mastery": "The child lists multiples of numbers up to 20 (proposed limit), starting with the number itself. The child identifies common multiples of two or three such numbers and notices that common multiples repeat at regular steps."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM": {
+   "forms": [
+    "find the LCM",
+    "true/false: the LCM of a and b is n",
+    "missing number given the LCM",
+    "compare the LCM with the product"
+   ],
+   "mastery": "The child finds the Least Common Multiple of two or three numbers, each not exceeding 20 (proposed limit), by listing multiples. Proposed: the child may also use factor or prime-factor form. The child knows the LCM is never smaller than the largest of the numbers."
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM_PROBLEMS": {
+   "forms": [
+    "word problem: events repeating together (bells, buses)",
+    "word problem: smallest number that can be packed in a's or b's",
+    "word problem: clock time of next meeting",
+    "choose HCF or LCM and explain"
+   ],
+   "mastery": "The child recognises 'when will they next happen together / smallest amount that fits both' situations and uses the LCM to solve them. Examples are matatus leaving a stage, bells ringing, and buying items sold in different pack sizes. The child converts the answer to the form asked, such as a clock time."
+  },
+  "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE": {
+   "forms": [
+    "vertical sum: two or three addends",
+    "horizontal sum to rewrite in columns",
+    "addends of different lengths (e.g. 6-digit + 5-digit + 4-digit)",
+    "place value chart / abacus representation",
+    "missing digit in an addend or the sum"
+   ],
+   "mastery": "Lines up two or three whole numbers of up to 6 digits by place value, including numbers with different numbers of digits and internal zeros, and adds them correctly where no column total exceeds 9. The sum stays within 999,999, since a sum with no regrouping cannot reach 1,000,000. Can do this on a place value chart and in vertical (column) form."
+  },
+  "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO": {
+   "forms": [
+    "vertical sum with regrouping in two columns (adjacent or non-adjacent)",
+    "horizontal sum to rewrite in columns",
+    "place value apparatus: exchange 10 ones for 1 ten, and so on",
+    "missing digit where a carry is involved",
+    "spot and correct the error in a worked sum"
+   ],
+   "mastery": "Adds two whole numbers of up to 6 digits where two columns need regrouping (e.g. ones to tens and tens to hundreds). Writes the ones digit of each column total and carries the ten to the next column, including when the carried 1 makes the next column total exactly 10. Sum not exceeding 1,000,000."
+  },
+  "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS": {
+   "forms": [
+    "word problem: combining totals (altogether, in total)",
+    "word problem with numbers given in words",
+    "word problem with extra (irrelevant) information",
+    "read values from a table or price list and add",
+    "write your own story for a given sum (proposed)"
+   ],
+   "mastery": "Reads a short real-life situation (shillings, harvests in kg, populations, votes, distances), picks out the quantities to be combined, writes them correctly in figures, and adds them. Covers up to three addends without regrouping, or two addends with double regrouping, with a sum not exceeding 1,000,000. Gives the answer with its unit."
+  },
+  "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100": {
+   "forms": [
+    "round each addend then add",
+    "choose the best estimate (multiple choice)",
+    "word problem: about how much altogether?"
+   ],
+   "mastery": "Rounds each addend to the nearest hundred by looking at the tens digit (5 or more rounds up), including rounding that bridges into the next thousand (e.g. 4,960 to 5,000). Then adds the rounded numbers to give an estimate. The design does not state addend sizes; the proposed range is addends of up to 6 digits, with two or three addends."
+  },
+  "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000": {
+   "forms": [
+    "round each addend then add",
+    "nearest hundred or nearest thousand: same addends, two estimates",
+    "choose the best estimate (multiple choice)",
+    "word problem: about how many altogether?"
+   ],
+   "mastery": "Rounds each addend to the nearest thousand by looking at the hundreds digit, including rounding that bridges into the next ten thousand. Writes the rounded numbers in full with their zeros and adds them to give an estimate. Can say whether a question asks for the nearest hundred or the nearest thousand. Proposed range: addends of up to 6 digits."
+  },
+  "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM": {
+   "forms": [
+    "is this answer reasonable? explain",
+    "which of these answers must be wrong?",
+    "compare an estimate with the exact sum"
+   ],
+   "mastery": "Compares an exact sum with an estimate and decides whether the exact answer is reasonable. Understands that a correct exact answer is close to the estimate but need not equal it. Proposed: this follows from the key inquiry question 'How can you estimate the sum of given numbers?' and is not an explicit outcome."
+  },
+  "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND": {
+   "forms": [
+    "next term(s) in a pattern",
+    "missing term(s) in the middle",
+    "find the nth term in a real-life pattern (savings, harvests)",
+    "complete a pattern table"
+   ],
+   "mastery": "Finds the constant amount added in a number pattern by comparing neighbouring terms. Uses it to find the next terms, missing middle terms, or a named term (e.g. the 5th), with all terms not exceeding 1,000,000. Handles steps that cross a place boundary (e.g. 249,600 + 2,000 = 251,600). The constant-step limit is proposed; the design does not say whether growing steps are included."
+  },
+  "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE": {
+   "forms": [
+    "create a pattern from a start number and a rule",
+    "describe the rule of a given pattern",
+    "make up a real-life pattern and explain it",
+    "addition grid / number chart patterns (proposed)"
+   ],
+   "mastery": "Given a starting number and an amount to add, or a real-life situation (e.g. a chama adding the same contribution each month), writes a correct pattern of several terms not exceeding 1,000,000. States a pattern's rule in full value terms (e.g. 'add 10,000', not 'add 1')."
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP": {
+   "forms": [
+    "vertical column subtraction",
+    "horizontal subtraction to rewrite in columns",
+    "subtrahend with fewer digits than minuend",
+    "missing digit in a subtraction",
+    "place value apparatus / abacus representation",
+    "short real-life word problem: take away"
+   ],
+   "mastery": "Subtracts a number of up to 6 digits from a number of up to 6 digits where every digit of the minuend is at least as large as the digit below it (e.g. 875,964 − 342,531). The child lines up the digits by place value, including when the subtrahend has fewer digits. The child handles zero digits in either number correctly and writes the difference with its internal zeros in place."
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP": {
+   "forms": [
+    "vertical column subtraction with one regrouping",
+    "vertical column subtraction with several regroupings",
+    "check by inverse addition",
+    "spot and correct the error in a worked subtraction",
+    "missing digit with regrouping"
+   ],
+   "mastery": "Subtracts a number of up to 6 digits from a larger or equal number of up to 6 digits where one or more columns need regrouping (e.g. 724,352 − 315,128). The child exchanges one unit of the next place for ten of the current place and reduces the digit regrouped from. The child can check the answer by adding the difference to the subtrahend. Proposed limit: the difference is a whole number (no negative results)."
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS": {
+   "forms": [
+    "subtraction from a round number (e.g. 300,000 − n)",
+    "subtraction with an internal zero in the minuend",
+    "change from a large note or budget (e.g. Sh 100,000 − cost)",
+    "spot and correct the error"
+   ],
+   "mastery": "Subtracts correctly when regrouping must pass through one or more zero digits in the minuend, for minuends of up to 6 digits. Examples are 500,000 − 237,468 and 403,215 − 128,436. The child changes each zero to 9 except the column being worked on, which becomes 10, and reduces the first non-zero digit by one."
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_WORD_PROBLEMS": {
+   "forms": [
+    "word problem: take away (spent, sold, used)",
+    "word problem: comparison / difference",
+    "word problem: missing part (how much more needed)",
+    "write the number sentence for a story",
+    "write a story for a given subtraction"
+   ],
+   "mastery": "Recognises when a situation calls for subtraction and writes the subtraction with the larger number first. Situations include: take away; comparison ('how many more/fewer', 'difference'); missing part ('how much more is needed'). The child then solves it with numbers of up to 6 digits, with or without regrouping, and states the answer with its unit (shillings, bags, people, litres)."
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000": {
+   "forms": [
+    "round to the nearest hundred",
+    "round to the nearest thousand",
+    "place the number on a number line between two hundreds/thousands",
+    "which number rounds to …? (reverse rounding)",
+    "rounding that carries (…9… digits)"
+   ],
+   "mastery": "Rounds a whole number of up to 6 digits to the nearest hundred or the nearest thousand, using a number line or the digit to the right of the rounding place. This includes cases where a 5 decides the rounding (round up) and cases where rounding up carries into higher places (e.g. 239,962 → 240,000 to the nearest hundred). Proposed: this is the rounding step needed for outcome c; it may also be taught in the Grade 5 Whole Numbers sub-strand."
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE": {
+   "forms": [
+    "estimate to the nearest hundred",
+    "estimate to the nearest thousand",
+    "estimate on a number line",
+    "is this answer reasonable? (compare estimate with exact)",
+    "word problem: about how much more"
+   ],
+   "mastery": "Estimates a difference by first rounding both the minuend and the subtrahend to the nearest hundred or nearest thousand (as asked), then subtracting the rounded numbers. For example, 58,640 − 23,270 ≈ 59,000 − 23,000 = 36,000. The child uses the estimate to judge whether an exact answer is reasonable. Numbers are up to 6 digits."
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_CALC": {
+   "forms": [
+    "evaluate a horizontal expression (e.g. a − b + c)",
+    "evaluate with three or more operations",
+    "missing number in a combined expression",
+    "spot and correct the error",
+    "true or false: two expressions are equal"
+   ],
+   "mastery": "Evaluates expressions with two or more additions and subtractions, such as 85,000 − 20,000 + 15,000, by working from left to right. Proposed limits: numbers up to 6 digits, no brackets, and every intermediate and final result a whole number. The child recognises that adding all the subtracted amounts first gives the wrong answer."
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_PROBLEMS": {
+   "forms": [
+    "multi-step word problem: money (received and spent)",
+    "multi-step word problem: stock or produce (delivered and sold)",
+    "write a single number sentence for a story",
+    "table of changes: find the final amount"
+   ],
+   "mastery": "Reads a situation with several changes and decides for each step whether to add or subtract. Steps may include money received and spent, passengers boarding and alighting, or stock delivered and sold. The child writes one combined number sentence or a sequence of steps and finds the result with numbers up to 6 digits (proposed limit)."
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE": {
+   "forms": [
+    "next term(s) in a pattern",
+    "missing term in the middle",
+    "state the rule",
+    "pattern in a table or on a number line",
+    "spot the term that does not fit"
+   ],
+   "mastery": "Finds the constant amount being subtracted in a decreasing sequence starting from a number up to 1,000,000, and states the rule in words (e.g. 'subtract 25,000'). The child fills in missing terms at the end or in the middle, including where a term crosses a place-value boundary, as in 302,500 → 301,500 → 300,500 → 299,500."
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CREATE": {
+   "forms": [
+    "create a pattern from a given start and rule",
+    "create your own pattern and state its rule",
+    "real-life pattern: fixed amount used each day or week",
+    "how many steps until the pattern reaches a given number"
+   ],
+   "mastery": "Given a starting number up to 1,000,000 and a rule, or choosing their own, the child produces a correct decreasing pattern of several terms with a constant step. The child explains the rule and knows the pattern must stop before going below zero. Real-life examples include a savings balance going down by a fixed withdrawal, or a water tank emptying by a fixed amount each day."
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D": {
+   "forms": [
+    "bare calculation: column",
+    "multiply with a zero in the middle",
+    "missing digit in a worked multiplication",
+    "spot and correct the error"
+   ],
+   "mastery": "Multiplies any number up to 999 by a 1-digit number accurately, regrouping in any column and handling zeros inside the number (e.g. 305 × 6). Products go up to 8,991. Works in the column method or another method such as expanded form or the grid."
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D": {
+   "forms": [
+    "bare calculation: long multiplication",
+    "grid/area method",
+    "complete the partial products",
+    "spot and correct the error",
+    "compare two methods"
+   ],
+   "mastery": "Multiplies any number up to 999 by any number from 10 to 99, for products up to 98,901. Correctly forms the tens partial product (multiplying by the tens digit as tens) and adds the partial products. Can use long multiplication, the grid/area method or expanded partial products, and can explain why the second row is worth ten times as much."
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS": {
+   "forms": [
+    "word problem: equal groups",
+    "word problem: cost (shillings)",
+    "word problem: two-step (multiply then subtract/add)",
+    "write the number sentence for the story",
+    "make up a story for a multiplication"
+   ],
+   "mastery": "Recognises when a real-life situation calls for multiplication, for example equal groups, a cost per item or a rate per trip. Writes the multiplication, works it out within the 3-digit × 2-digit limit and gives the answer with the correct unit (shillings, kg, pupils). Can complete a simple second step, such as finding change, when the problem asks for it."
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10": {
+   "forms": [
+    "round then estimate",
+    "choose the best estimate (multiple choice)",
+    "word problem: about how much",
+    "which rounding is correct"
+   ],
+   "mastery": "Rounds each factor (2- or 3-digit) to the nearest ten before multiplying, for example 347 × 26 becomes 350 × 30. Then multiplies the rounded numbers correctly, handling the zeros (350 × 30 = 10,500)."
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE": {
+   "forms": [
+    "is this answer reasonable? explain",
+    "compare estimate and exact answer",
+    "word problem: is there enough money",
+    "which calculation is wrong"
+   ],
+   "mastery": "Compares an exact product with its nearest-ten estimate and decides whether the answer is sensible. Knows that an estimate is close to the exact answer but not equal to it, and spots answers that are wrong by a factor of about 10. Uses estimates in situations such as checking whether money is enough."
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND": {
+   "forms": [
+    "next term",
+    "missing term in the middle or at the start",
+    "state the rule",
+    "table/input-output pattern",
+    "odd one out in a pattern"
+   ],
+   "mastery": "Finds the multiplying rule in a number pattern, such as ×2, ×3, ×5 or ×10, or the pattern in a times table. Uses the rule to find the next terms or missing terms, including earlier terms found by dividing. All numbers stay at or below 1000."
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_CREATE": {
+   "forms": [
+    "make a pattern from a start number and rule",
+    "make your own pattern and state its rule",
+    "how many terms before passing 1000",
+    "peer check: does this pattern follow its rule"
+   ],
+   "mastery": "Given a starting number and a multiplying rule, or choosing their own, makes a pattern of at least four terms that never goes over 1000. Describes the rule clearly in words, and can explain why the pattern must stop before 1000 is passed."
+  },
+  "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT": {
+   "forms": [
+    "bare calculation: short form",
+    "bare calculation: long form",
+    "quotient with a zero digit (e.g. 618 ÷ 6)",
+    "division with remainder",
+    "spot the error in a worked division"
+   ],
+   "mastery": "Divides any dividend from 100 to 999 by a divisor from 2 to 9 using both short form and long form. Places zeros in the quotient correctly and gives a remainder that is always smaller than the divisor. Including remainders is proposed, because the outcome does not mention them but G4 1.5a includes them."
+  },
+  "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_2DIGIT": {
+   "forms": [
+    "bare calculation: long division",
+    "2-digit ÷ 2-digit (e.g. 96 ÷ 12)",
+    "quotient with a zero digit",
+    "division with remainder",
+    "spot the error in a worked division"
+   ],
+   "mastery": "Divides any dividend up to 999 by a divisor from 10 to 99, where the dividend is greater than the divisor, using long division. Chooses each trial quotient digit sensibly, recognises when a remainder is too big, and handles quotients ending in or containing zero (e.g. 840 ÷ 42 = 20)."
+  },
+  "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS": {
+   "forms": [
+    "word problem: equal sharing",
+    "word problem: grouping / how many fit",
+    "word problem: round up the remainder",
+    "word problem: what is left over",
+    "choose the operation"
+   ],
+   "mastery": "Recognises sharing and grouping situations as division, with numbers within the limits above (dividend up to 999, divisor up to 99). Writes the correct division and decides from the context whether the answer is the quotient, the quotient rounded up, or the remainder (e.g. matatus needed, money left over)."
+  },
+  "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES": {
+   "forms": [
+    "write the fact family",
+    "missing number: ☐ ÷ a = b",
+    "missing number: a × ☐ = c",
+    "true or false: related facts",
+    "explain why division is not commutative"
+   ],
+   "mastery": "From one multiplication or division fact, with products up to 999 and factors up to 2 digits, writes the related facts (e.g. 24 × 6 = 144, so 144 ÷ 6 = 24 and 144 ÷ 24 = 6). Uses the inverse operation to find a missing number in a multiplication or division sentence."
+  },
+  "MATH.G5.NUMBER.DIVISION.CHECK_DIVISION_BY_MULT": {
+   "forms": [
+    "check this answer",
+    "find the dividend from quotient, divisor and remainder",
+    "which worked answer is correct (multiple choice)"
+   ],
+   "mastery": "Checks any division within the G5 limits by working out quotient × divisor + remainder and comparing the result with the dividend (e.g. 395 ÷ 12 = 32 r 11 because 12 × 32 + 11 = 395). Uses the check to decide whether a given answer is right."
+  },
+  "MATH.G5.NUMBER.DIVISION.DIV_BY_1000": {
+   "forms": [
+    "bare calculation",
+    "unit conversion in context (g → kg, ml → l, m → km)",
+    "place the decimal point",
+    "match the number to its value ÷ 1000"
+   ],
+   "mastery": "Proposed: divides a whole number from 1 to 999 by 1000 by shifting the digits three places to the right, and writes the result as a decimal less than 1 (e.g. 375 ÷ 1000 = 0.375, 45 ÷ 1000 = 0.045, 300 ÷ 1000 = 0.3). Uses this in measurement contexts such as grams to kilograms, millilitres to litres and metres to kilometres. See notes: the outcome is ambiguous."
+  },
+  "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS": {
+   "forms": [
+    "estimate the quotient",
+    "round then divide (show both roundings)",
+    "is this answer reasonable?",
+    "word problem: about how many",
+    "compare estimate with exact answer"
+   ],
+   "mastery": "Rounds a dividend up to 999 and a 2-digit divisor each to the nearest ten, then divides the rounded numbers mentally (e.g. 598 ÷ 31 ≈ 600 ÷ 30 = 20). Uses the estimate to judge whether an exact answer or a real-life claim is reasonable. Restricting divisors to 2 digits is proposed (see notes)."
+  },
+  "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS": {
+   "forms": [
+    "evaluate the expression",
+    "which operation first?",
+    "insert brackets to make it true (proposed extension)",
+    "spot the error in a worked solution",
+    "true or false: two expressions are equal"
+   ],
+   "mastery": "Evaluates whole-number expressions mixing two to four of +, −, × and ÷, using the proposed limits below. Does × and ÷ before + and −, and works left to right within each pair (e.g. 20 + 30 ÷ 5 = 26; 50 − 20 + 10 = 40). Proposed limits: each operation stays within G5 ranges and every step gives a whole number; brackets are optional and proposed."
+  },
+  "MATH.G5.NUMBER.DIVISION.COMBINED_OPS_PROBLEMS": {
+   "forms": [
+    "word problem: buy then change",
+    "word problem: share then remove/add",
+    "write the expression for the story",
+    "create a story for an expression"
+   ],
+   "mastery": "Turns a 2- or 3-step Kenyan everyday situation (shopping and change, sharing after buying, harvest packing) into a sequence of operations or a single expression, then solves it with whole numbers within G5 limits. Answers the question actually asked."
+  },
+  "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS": {
+   "forms": [
+    "missing number (e.g. 3/4 = ?/12)",
+    "match equivalent fractions on a fraction board or chart",
+    "true or false: are these fractions equivalent?",
+    "compare and explain: same amount of a shared item"
+   ],
+   "mastery": "Given a fraction with denominator not exceeding 12, the child produces equivalent fractions by multiplying or dividing the numerator and denominator by the same number (proposed: multipliers 2 to 10). The child can show the equivalence on a fraction board, a chart or with real objects and explain that the amount stays the same."
+  },
+  "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS": {
+   "forms": [
+    "simplify to lowest terms",
+    "is this fraction in its simplest form? explain",
+    "word problem: give the answer in simplest form (e.g. 6 of 8 mandazi eaten)",
+    "spot the error in a worked simplification"
+   ],
+   "mastery": "The child reduces a fraction to its simplest form by dividing the numerator and denominator by a common factor, repeating until no common factor other than 1 remains. Proposed limits: starting numerators and denominators up to 50, in line with G4 factors up to 50, and simplest forms with denominators not exceeding 12. The child also knows the simplified fraction has the same value."
+  },
+  "MATH.G5.NUMBER.FRACTIONS.COMPARE_LIKE_FRACTIONS": {
+   "forms": [
+    "insert <, > or =",
+    "which is bigger? (unit fractions)",
+    "word problem: who got more of the same chapati or loaf",
+    "compare and explain: same whole versus different wholes"
+   ],
+   "mastery": "The child uses < , > or = to compare two fractions of the same whole that share a denominator or a numerator, including unit fractions. The child explains that a larger denominator means smaller parts. Proposed limit: denominators not exceeding 12."
+  },
+  "MATH.G5.NUMBER.FRACTIONS.COMPARE_UNLIKE_FRACTIONS": {
+   "forms": [
+    "insert <, > or =",
+    "word problem: which share is greater (e.g. 2/3 of a plot of sukuma wiki versus 5/6)",
+    "compare using a fraction board",
+    "compare and explain: why your method works"
+   ],
+   "mastery": "The child compares two fractions with different numerators and denominators by renaming them to a common denominator. Proposed: this is done by renaming one fraction where one denominator is a multiple of the other, or by using a fraction board or lists of equivalent fractions where both denominators divide 12 (e.g. 2/3 and 3/4 as twelfths). The child may also use the benchmark 1/2. Proposed limit: denominators not exceeding 12; LCM methods are Grade 6."
+  },
+  "MATH.G5.NUMBER.FRACTIONS.ORDER_FRACTIONS": {
+   "forms": [
+    "arrange in increasing order",
+    "arrange in decreasing order",
+    "word problem: order shares or distances (e.g. fractions of a kilometre walked to school)",
+    "place fractions on a number line",
+    "which fraction is out of order?"
+   ],
+   "mastery": "The child arranges a set of fractions (proposed: three to five fractions) with denominators not exceeding 12 in increasing or decreasing order. The child uses a suitable method such as same denominator, same numerator, renaming to a common denominator, a fraction board or a number line, and writes the answer using the original fractions."
+  },
+  "MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR": {
+   "forms": [
+    "calculate the sum",
+    "missing addend (e.g. 2/9 + ?/9 = 7/9)",
+    "word problem: combining parts of the same whole (e.g. a jug of uji, a plot of maize)",
+    "represent with paper cut-outs or a diagram"
+   ],
+   "mastery": "The child adds two proper fractions with the same denominator (proposed: not exceeding 12) by adding the numerators and keeping the denominator. The answer is simplified. Proposed: where the sum exceeds 1, it is written as a mixed number using G4 skills."
+  },
+  "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR": {
+   "forms": [
+    "calculate the difference",
+    "missing number (e.g. 7/10 - ?/10 = 3/10)",
+    "word problem: what fraction is left (e.g. of a pawpaw or of a bag of flour)",
+    "represent on a number line or with cut-outs"
+   ],
+   "mastery": "The child subtracts one fraction from another with the same denominator (proposed: not exceeding 12, result not negative). This includes subtracting from a whole written as, for example, 8/8. The child subtracts the numerators, keeps the denominator and simplifies the answer."
+  },
+  "MATH.G5.NUMBER.FRACTIONS.ADD_ONE_RENAMING": {
+   "forms": [
+    "calculate the sum",
+    "which fraction should be renamed, and to what?",
+    "word problem: combining (e.g. 1/2 kg of sugar and 1/4 kg of sugar)",
+    "spot the error in a worked sum"
+   ],
+   "mastery": "The child adds two fractions where one denominator is a multiple of the other (proposed: denominators not exceeding 12, e.g. 1/2 + 1/4 or 2/3 + 1/6). The child renames only the fraction with the smaller denominator as an equivalent fraction, adds, and simplifies the answer."
+  },
+  "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_ONE_RENAMING": {
+   "forms": [
+    "calculate the difference",
+    "word problem: what is left or how much more (e.g. 1/2 litre of milk, 3/8 litre drunk)",
+    "missing number after renaming",
+    "spot the error in a worked subtraction"
+   ],
+   "mastery": "The child subtracts two fractions where one denominator is a multiple of the other (proposed: denominators not exceeding 12, result not negative). The child renames one fraction as an equivalent fraction, subtracts, and simplifies the answer. The child also recognises when the fraction that looks 'smaller' is actually larger after renaming."
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME": {
+   "forms": [
+    "name the place of the underlined digit",
+    "fill a place value chart from a decimal",
+    "which digit is in the thousandths place?",
+    "compare place sizes (which is larger: a tenth or a thousandth?)"
+   ],
+   "mastery": "Given a decimal with up to three decimal places (e.g. 34.708, 0.056), the child names the place of any digit (ones, tenths, hundredths, thousandths, plus whole-number places already known) and places the digits correctly on a place value chart. Proposed limit: whole-number part up to hundreds."
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE": {
+   "forms": [
+    "value of the underlined digit",
+    "write the decimal shown on the chart or abacus",
+    "write from expanded form (3 + 0.4 + 0.006)",
+    "write from words (e.g. 'two and fifteen thousandths')",
+    "real-life: read a measurement such as 1.250 kg and say what each digit means"
+   ],
+   "mastery": "The child states what a digit is worth in a decimal with up to three decimal places (the 7 in 3.072 is 7 hundredths, or 0.07). They also write a decimal from a chart, from words or from expanded form, using zero as a placeholder (e.g. 5 ones and 4 thousandths = 5.004). Proposed: this is professional judgement about what 'identify place value' requires. The outcome does not use the words 'total value'."
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE": {
+   "forms": [
+    "insert >, < or =",
+    "which is greater/smaller and why?",
+    "compare and explain (spot the error in a friend's comparison)",
+    "real-life: which parcel or runner is heavier or faster?"
+   ],
+   "mastery": "The child correctly decides which of two decimals with up to three decimal places is greater, including pairs with different numbers of decimal places (0.5 and 0.125) and trailing zeros (0.70 and 0.7). They use >, < or = and explain by comparing place by place from the left."
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_ORDER": {
+   "forms": [
+    "arrange smallest to largest",
+    "arrange largest to smallest",
+    "real-life: order race times, masses of produce or lengths",
+    "find the missing decimal that fits between two others"
+   ],
+   "mastery": "The child arranges a set of three to five decimals (up to three decimal places, possibly with different whole-number parts and including whole numbers) from smallest to largest or from largest to smallest. They may use a place value chart, add zeros to give equal decimal places, or use a number line."
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES": {
+   "forms": [
+    "vertical addition",
+    "horizontal addition",
+    "addition using place value apparatus or a chart",
+    "missing digit in a sum"
+   ],
+   "mastery": "The child adds two or three decimals that all have the same number of decimal places (up to thousandths). They regroup across places, including from tenths into ones, and place the decimal point correctly in the answer (e.g. 2.786 + 4.457 = 7.243). Proposed limit: whole-number parts up to hundreds."
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES": {
+   "forms": [
+    "vertical addition with unequal decimal places",
+    "whole number plus decimal",
+    "word problem: total mass or length",
+    "word problem: total cost in shillings",
+    "spot the error in a worked sum"
+   ],
+   "mastery": "The child lines up place values, not end digits, when adding decimals with different numbers of decimal places or a whole number and a decimal (3.5 + 1.25 + 0.075; 6 + 0.25). They solve one- or two-step word problems involving shillings, kilograms, litres or kilometres."
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES": {
+   "forms": [
+    "vertical subtraction",
+    "horizontal subtraction",
+    "subtraction using place value apparatus",
+    "missing digit in a difference",
+    "check by adding"
+   ],
+   "mastery": "The child subtracts decimals that have the same number of decimal places (up to thousandths), where the first number is the larger. They regroup correctly, including across zeros and across the decimal point (e.g. 6.003 − 2.145 = 3.858)."
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES": {
+   "forms": [
+    "vertical subtraction with unequal decimal places",
+    "whole number minus decimal",
+    "word problem: change from a note or coin",
+    "word problem: how much more / how much is left",
+    "compare and explain (who is taller, by how much?)"
+   ],
+   "mastery": "The child fills empty places with zeros so both numbers have the same number of decimal places, then subtracts (4.5 − 1.237; 7 − 2.45). They solve word problems about change, difference and what remains, in shillings, kilograms, litres or metres."
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000": {
+   "forms": [
+    "direct calculation × 1000",
+    "missing number (□ × 1000 = 2045)",
+    "place value chart shift",
+    "real-life: convert kg to g, l to ml, km to m",
+    "spot the error"
+   ],
+   "mastery": "The child multiplies any decimal with up to three decimal places by 1000. They understand that each digit moves three places to the left, and they insert zeros where needed (0.375 × 1000 = 375; 3.2 × 1000 = 3200; 0.04 × 1000 = 40). They apply this in real-life situations such as kg to g, km to m and litres to millilitres."
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING": {
+   "forms": [
+    "pick the equation from a list (equation vs expression)",
+    "true or false number sentence (e.g. 8 + 4 = 7 + 5)",
+    "missing number on either side of '='",
+    "balance scale picture: say what the letter stands for",
+    "explain what the letter means in a context"
+   ],
+   "mastery": "The child can tell an equation (e.g. x + 5 = 12) from an expression (e.g. x + 5). They read '=' as 'has the same value as', can say whether a number statement such as 8 + 4 = 7 + 5 is true, and can explain that a letter stands for an unknown number (a quantity), not an object. Proposed limit: whole numbers, one letter, one operation on each side."
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB": {
+   "forms": [
+    "word problem: some, then more (x + a = b)",
+    "word problem: some, then spent or removed (x − a = b)",
+    "word problem: comparison 'more than' or 'less than'",
+    "match a story to its equation (multiple choice)",
+    "real objects or picture: write the equation shown",
+    "write a story for a given equation"
+   ],
+   "mastery": "Given a short everyday situation (money in shillings, passengers in a matatu, eggs, ages), real objects or a picture, the child chooses a letter for the unknown and writes a correct equation of the form x + a = b, x − a = b or a − x = b. The order is right in subtraction. Proposed limit: whole numbers within the Grade 4 range (sums up to 10,000), with one unknown."
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV": {
+   "forms": [
+    "word problem: cost of several identical items (3p = 45)",
+    "word problem: 'times as many'",
+    "word problem: equal sharing (x ÷ 5 = 6)",
+    "match a story to its equation (multiple choice)",
+    "real objects or groups: write the equation shown",
+    "write a story for a given equation"
+   ],
+   "mastery": "Given an everyday situation about equal groups, cost of several identical items, 'times as many' or equal sharing, the child writes a correct equation of the form ax = b (written as 3x or 3 × x) or x ÷ a = b. The order is right in division. Proposed limit: whole numbers, multipliers and divisors up to 2 digits (in line with G4:1.4b and 1.5a), and whole-number unknowns."
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB": {
+   "forms": [
+    "solve: x + a = b",
+    "solve: x − a = b",
+    "solve: a − x = b (unknown subtracted)",
+    "check whether a given value is the solution",
+    "find the error in a worked solution"
+   ],
+   "mastery": "The child solves x + a = b, a + x = b, x − a = b and a − x = b by using the inverse operation, or by balancing (doing the same to both sides). They check the answer by putting it back into the equation. Proposed limit: whole numbers, sums up to 10,000, whole-number solutions."
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV": {
+   "forms": [
+    "solve: ax = b",
+    "solve: x ÷ a = b",
+    "solve: a ÷ x = b (unknown divisor)",
+    "check whether a given value is the solution",
+    "find the error in a worked solution"
+   ],
+   "mastery": "The child solves ax = b, x ÷ a = b and a ÷ x = b by using the inverse operation or by balancing. They know that 3x means 3 × x, and they check by substitution. Proposed limit: whole numbers, divisors up to 2 digits, exact (no-remainder) whole-number solutions."
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT": {
+   "forms": [
+    "word problem: form, solve and state the answer with units",
+    "word problem: shopping in shillings",
+    "word problem: ages or measurements",
+    "is this answer reasonable? (check against the story)",
+    "pose own problem from daily life and solve it"
+   ],
+   "mastery": "From a real-life word problem, the child forms the equation, solves it, states the answer in words with the correct unit (e.g. 'Each bunch of sukuma wiki costs sh 30'), and checks that the answer makes sense in the story. Proposed limit: one-step equations with whole numbers, as in the two solving skills."
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP": {
+   "forms": [
+    "solve: ax + b = c",
+    "solve: ax − b = c",
+    "word problem: several identical items plus a fixed cost",
+    "find the error in a worked solution"
+   ],
+   "mastery": "Proposed extension, not stated in the design. The child forms and solves equations such as 2x + 6 = 20 from situations like '2 pens and a sh 6 sweet cost sh 20'. They undo the addition or subtraction first, then the multiplication. Proposed limit: small whole numbers, coefficient up to 10, whole-number solutions."
+  },
+  "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT": {
+   "forms": [
+    "choose the best unit (km, m or cm) for a given length",
+    "sort items into 'measured in km' and 'measured in m'",
+    "where in real life do we see km? (road signs, maps)",
+    "read and interpret a distance written on a road sign"
+   ],
+   "mastery": "The child names and writes the kilometre and its symbol (km). They choose km rather than m or cm for long real-life distances, such as between towns, along a road or a marathon route, and choose m or cm for short lengths. They can give at least two everyday places where km is used, such as road signs, matatu fares by distance, athletics races and maps."
+  },
+  "MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE": {
+   "forms": [
+    "estimate then check against a given distance",
+    "choose the most reasonable estimate (multiple choice with unrealistic options)",
+    "use a benchmark (walking time, track laps) to estimate",
+    "compare two estimated distances: which place is further?"
+   ],
+   "mastery": "The child gives a sensible whole-number estimate in km for familiar real-life distances, such as home to school, school to the nearest market or town, or a walking route. They use benchmarks, for example that a walk of about 10 to 15 minutes covers roughly 1 km, or 2½ laps of a 400 m track. They can then check the estimate against a measured or given distance (proposed: estimates in whole km, for distances up to a few tens of km for local places)."
+  },
+  "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP": {
+   "forms": [
+    "complete: 1 km = ___ m",
+    "how many 100 m (or 200 m, 250 m, 500 m) lengths make 1 km?",
+    "compare and explain: which is longer?",
+    "order distances given in mixed units",
+    "half and quarter of a kilometre in metres"
+   ],
+   "mastery": "The child states that 1 km = 1 000 m and explains it from practical experience, for example 10 lengths of 100 m or 2½ laps of a 400 m track. They use the relationship to compare and order distances given in km and m, such as 2 km and 1 500 m, or 3 km 50 m and 3 500 m. They also use simple fractions of a kilometre, such as ½ km = 500 m and ¼ km = 250 m."
+  },
+  "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M": {
+   "forms": [
+    "convert whole km to m",
+    "convert km and m to m (including placeholder zeros)",
+    "missing number: 4 km ___ m = 4 070 m",
+    "word problem: express a journey's length in metres"
+   ],
+   "mastery": "The child converts whole kilometres to metres, such as 7 km = 7 000 m. They also convert mixed measures to metres, including those needing placeholder zeros, such as 3 km 45 m = 3 045 m and 2 km 5 m = 2 005 m (proposed limit: whole numbers of km up to 3 digits, metres 0 to 999; decimal km not required)."
+  },
+  "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM": {
+   "forms": [
+    "convert exact thousands of m to km",
+    "express m as km and m",
+    "missing number: 5 208 m = ___ km ___ m",
+    "word problem: a runner covered 3 400 m; how many km and m?"
+   ],
+   "mastery": "The child converts exact thousands of metres to km, such as 6 000 m = 6 km. They also convert other metre values to km and m, such as 4 050 m = 4 km 50 m and 12 300 m = 12 km 300 m, by splitting off thousands (proposed limit: up to 5-digit metre values; answers in km and m, not decimals)."
+  },
+  "MATH.G5.MEASUR.LENGTH.ADD_KM_M": {
+   "forms": [
+    "column addition without regrouping",
+    "column addition with regrouping (m to km)",
+    "add a km measure and a m measure (e.g. 5 km + 300 m)",
+    "word problem: total distance of a journey in stages"
+   ],
+   "mastery": "The child adds two or three distances given in km and m, set out in km and m columns, regrouping every 1 000 m as 1 km. For example, 2 km 700 m + 1 km 600 m = 4 km 300 m. They also solve real-life addition word problems, such as total journey length (proposed limit: totals up to 999 km 999 m)."
+  },
+  "MATH.G5.MEASUR.LENGTH.SUBTRACT_KM_M": {
+   "forms": [
+    "column subtraction without exchanging",
+    "column subtraction with exchanging (1 km to 1 000 m)",
+    "subtract from a whole number of km (e.g. 10 km − 3 km 450 m)",
+    "word problem: how much further / distance left to travel"
+   ],
+   "mastery": "The child subtracts distances in km and m, exchanging 1 km for 1 000 m when the metres being taken away are more than those available. For example, 5 km 200 m − 2 km 650 m = 2 km 550 m. They also solve real-life problems such as 'how much further?' and 'distance remaining' (proposed limit: values up to 999 km 999 m)."
+  },
+  "MATH.G5.MEASUR.LENGTH.MULTIPLY_KM_M": {
+   "forms": [
+    "multiply without regrouping",
+    "multiply with regrouping (m to km)",
+    "word problem: same journey made several times",
+    "missing multiplier: ___ × 1 km 500 m = 6 km"
+   ],
+   "mastery": "The child multiplies a distance in km and m by a whole number, multiplying both the m and the km and regrouping each 1 000 m as 1 km. For example, 2 km 400 m × 3 = 7 km 200 m. They also solve repeated-trip problems (proposed limit: multiplier a single-digit whole number; may extend to 2-digit at the teacher's discretion)."
+  },
+  "MATH.G5.MEASUR.LENGTH.DIVIDE_KM_M": {
+   "forms": [
+    "divide where km divides exactly",
+    "divide with remaining km carried into metres",
+    "word problem: share a road or route equally",
+    "word problem: equal stages of a journey"
+   ],
+   "mastery": "The child divides a distance in km and m by a whole number. They either convert the remaining km to 1 000 m each and carry it into the metres, or convert the whole distance to metres first. For example, 7 km 200 m ÷ 4 = 1 km 800 m. They also solve equal-sharing and equal-parts problems (proposed limit: single-digit divisor; answers in whole metres)."
+  },
+  "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING": {
+   "forms": [
+    "draw or identify a 1 cm by 1 cm square",
+    "which unit: cm or cm²",
+    "explain what '6 cm²' means",
+    "true or false: a square with 2 cm sides has area 1 cm²"
+   ],
+   "mastery": "The child can explain and show that 1 cm² is the space covered by a square with sides of 1 cm. They can read and write 'cm²' correctly and tell it apart from 'cm', which measures length. They know that a shape of 5 cm² covers the same space as five such squares, even when the squares are arranged differently."
+  },
+  "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT": {
+   "forms": [
+    "practical: cover a surface (stamp, eraser, matchbox top) and count",
+    "count squares on a cm grid",
+    "compare two shapes by counting squares",
+    "spot the mistake in someone's covering"
+   ],
+   "mastery": "The child can cover a flat surface or a drawn shape with 1 cm square cut-outs, or use a 1 cm grid, leaving no gaps or overlaps. They count the squares accurately and record the area with the unit cm². Proposed limit: rectangles and squares up to about 100 cm², with whole squares only (no part-squares at Grade 5)."
+  },
+  "MATH.G5.MEASUR.AREA.CM2_REAL_LIFE": {
+   "forms": [
+    "choose the quantity measured in cm²",
+    "match quantity to unit (cm, cm², kg, litres)",
+    "list surfaces at home or school measured in cm²"
+   ],
+   "mastery": "The child can name and pick out everyday flat surfaces whose area we measure in cm², such as a postage stamp, an exercise book cover, a mobile phone screen or a mandazi tray. They can tell these apart from quantities measured in other units, such as the length of a pencil (cm), the mass of a mango (kg) or the amount of milk in a jug (litres)."
+  },
+  "MATH.G5.MEASUR.AREA.AREA_ROWS_BY_COLUMNS": {
+   "forms": [
+    "array: how many squares without counting one by one",
+    "partly drawn grid: find the area",
+    "explain why area = length × width",
+    "multiplication-chart area game"
+   ],
+   "mastery": "The child can explain that a rectangle with 4 rows of 6 one-centimetre squares has area 4 × 6 = 24 cm². They can connect this to 'area = length × width', because the number of squares in a row equals the length in cm and the number of rows equals the width in cm. They can do this even when only part of the grid is drawn."
+  },
+  "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC": {
+   "forms": [
+    "labelled diagram: find the area",
+    "measure the sides with a ruler, then find the area",
+    "square given one side",
+    "compare and explain: which has the larger area"
+   ],
+   "mastery": "Given, or after measuring, the whole-number sides in cm, the child works out the area of a rectangle (length × width) or a square (side × side) and writes the answer in cm². Proposed limits: whole-centimetre sides, mostly within 12 × 12 facts, extending to 2-digit × 1-digit and simple 2-digit × 2-digit (e.g. 25 cm × 14 cm)."
+  },
+  "MATH.G5.MEASUR.AREA.AREA_PROBLEMS": {
+   "forms": [
+    "word problem: covering a surface",
+    "word problem: comparing two surfaces",
+    "missing side (proposed extension)",
+    "area or perimeter: choose and solve"
+   ],
+   "mastery": "The child can solve word problems set in everyday situations, for example the cover of a textbook, a piece of kitenge cloth or a tile on a classroom wall. They decide that area (not perimeter) is needed, calculate it and give the answer in cm². Proposed extension: finding a missing side when the area and one side are known, using multiplication or division facts within 12 × 12."
+  },
+  "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY": {
+   "forms": [
+    "measure the edges of a 1 cm cube and name the unit",
+    "choose the correct unit (cm, cm², cm³) for a given measurement",
+    "read or write the symbol cm³",
+    "true or false: statements about what 1 cm³ means",
+    "identify real objects whose volume would be measured in cm³"
+   ],
+   "mastery": "The child recognises a cube with every edge 1 cm as one cubic centimetre and reads and writes the symbol cm³ correctly. They can tell cm (length), cm² (area) and cm³ (volume) apart and choose cm³ for the space taken up by small everyday objects such as a sugar cube, a matchbox or a block of soap. Proposed limit: only the cm³ unit; larger units are not expected."
+  },
+  "MATH.G5.MEASUR.VOLUME.VOLUME_COUNT_CM3_CUBES": {
+   "forms": [
+    "count cubes in a built model and record the volume in cm³",
+    "count cubes in a picture of a cuboid including hidden cubes",
+    "compare volumes of two arrangements of the same cubes",
+    "build a cuboid with a given number of cubes"
+   ],
+   "mastery": "The child builds or examines a cuboid or cube made of 1 cm cubes and states its volume as the total number of cubes in cm³. This includes cubes hidden inside or behind a picture. They also understand that rearranging the same cubes, or turning the shape around, does not change the volume. Proposed limit: models of up to about 60 cubes, and pictures with up to 5 cubes along any edge."
+  },
+  "MATH.G5.MEASUR.VOLUME.CUBOID_FORMULA_DERIVE": {
+   "forms": [
+    "practical: arrange cubes in rows and layers and record the counts in a table",
+    "complete a table of length, width, layers and total cubes, then spot the rule",
+    "explain why multiplying gives the number of cubes",
+    "compare and explain: same cuboid placed on a different face"
+   ],
+   "mastery": "Using 1 cm cubes, the child shows that the cubes along the length multiplied by the cubes along the width gives the cubes in one layer. That number multiplied by the number of layers gives the total. They then explain that this is V = l × w × h. They can explain why the answer is the same whichever face the cuboid rests on. Proposed limit: whole-number dimensions up to about 6 cm in practical work."
+  },
+  "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC": {
+   "forms": [
+    "calculate from a labelled diagram",
+    "calculate from given dimensions in a table",
+    "spot the error in a worked solution",
+    "multiple choice with area, sum-of-sides and correct-volume distractors"
+   ],
+   "mastery": "Given the length, width and height of a cuboid in whole centimetres, either as numbers or on a labelled diagram, the child multiplies all three and writes the answer in cm³. Proposed limit: dimensions are whole numbers of centimetres and volumes do not exceed 10 000 cm³."
+  },
+  "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_PROBLEMS": {
+   "forms": [
+    "word problem: volume of a box or container",
+    "word problem: how many 1 cm cubes fill a box",
+    "word problem with extra (irrelevant) information",
+    "word problem with one measurement given in metres",
+    "compare volumes of two boxes and decide which holds more"
+   ],
+   "mastery": "The child works out the volume of real cuboid-shaped objects described in words, such as a box of chalk, a brick, a bar of soap or a juice carton. They pick out only the measurements needed and change any metres to centimetres before multiplying. They give the answer in cm³. Proposed limit: whole-number dimensions and volumes not exceeding 10 000 cm³."
+  },
+  "MATH.G5.MEASUR.VOLUME.CUBE_FORMULA_DERIVE": {
+   "forms": [
+    "practical: build cubes of edge 1, 2, 3 cm and record cubes used",
+    "explain how the cube formula comes from the cuboid formula",
+    "true or false: a cube with edge 3 cm has volume 3 cm³",
+    "identify which of several cuboids are cubes"
+   ],
+   "mastery": "The child builds cubes from 1 cm cubes, for example 2 by 2 by 2 and 3 by 3 by 3. They explain that a cube is a cuboid whose length, width and height are all equal, so V = l × w × h becomes V = s × s × s. They know that one edge measurement is enough to find a cube's volume. Proposed limit: practical cubes with edges up to 4 cm."
+  },
+  "MATH.G5.MEASUR.VOLUME.CUBE_VOLUME_CALC": {
+   "forms": [
+    "calculate from a labelled diagram of a cube",
+    "calculate from the edge length given in words",
+    "word problem: cube-shaped box or container",
+    "multiple choice with s × 3 and s × s distractors"
+   ],
+   "mastery": "Given the edge of a cube in whole centimetres, the child works out s × s × s and writes the answer in cm³. This includes simple contexts such as a dice, a cube-shaped box or a sugar cube. Proposed limit: edges from 1 cm to 10 cm, giving volumes up to 1000 cm³, with occasional extension to 20 cm."
+  },
+  "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT": {
+   "forms": [
+    "read the label: which unit is shown",
+    "odd one out: which label shows capacity",
+    "choose the sensible unit (ml or l)",
+    "list real-life items measured in ml"
+   ],
+   "mastery": "The child reads and writes 'ml' and 'millilitre' on real containers such as a 5 ml medicine spoon, a 300 ml soda bottle or a 500 ml milk packet. They can tell a capacity label (ml, l) from a mass label (g, kg) or a length label (cm, m). They choose ml for small amounts (spoonfuls, cups, bottles) and l for large ones (jerrycans, buckets, drums). Proposed limit: everyday items up to a 20 l jerrycan."
+  },
+  "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_SCALE": {
+   "forms": [
+    "read the scale from a picture",
+    "practical: measure and record",
+    "work out the value of one small division",
+    "mark a given amount on a drawn scale"
+   ],
+   "mastery": "The child pours liquid into a measuring jug, cylinder, syringe or medicine cup marked in ml. They read the level at eye height and work out what each unlabelled division is worth (for example 10, 25, 50 or 100 ml). Proposed limit: scales up to 1 000 ml."
+  },
+  "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_BY_FILLING": {
+   "forms": [
+    "count fills and find the capacity",
+    "how many fills are needed",
+    "which measuring cup is bigger (compare the number of fills)",
+    "practical: fill and record"
+   ],
+   "mastery": "The child fills a container using a smaller container of known capacity, such as a 5 ml spoon or a 100 ml cup. They count the fills and work out the total in ml by repeated addition or multiplication. They understand that a smaller measuring container needs more fills. Proposed limit: up to 20 fills."
+  },
+  "MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE": {
+   "forms": [
+    "choose the best estimate (multiple choice)",
+    "estimate then measure, and record the difference",
+    "order containers by estimated capacity",
+    "compare and explain: which holds more"
+   ],
+   "mastery": "The child gives a sensible estimate in ml for common containers using benchmarks such as a 5 ml spoon, a 250 ml cup or a 500 ml bottle. They then measure, compare the estimate with the measurement and improve later estimates. They do not judge capacity by height alone. Proposed limit: containers up to 1 l."
+  },
+  "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP": {
+   "forms": [
+    "fill in: 1 l = ___ ml",
+    "how many 250 ml cups fill 1 l",
+    "true or false with reason",
+    "practical: fill a 1 l container with a ml container"
+   ],
+   "mastery": "The child states that 1 l = 1 000 ml and can show it practically. For example, they know that four 250 ml cups or two 500 ml bottles fill a 1 l container. Proposed extension linking to Grade 4: ½ l = 500 ml, ¼ l = 250 ml and ¾ l = 750 ml."
+  },
+  "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML": {
+   "forms": [
+    "fill in the missing number",
+    "word problem: how many ml in a jerrycan",
+    "match equal amounts",
+    "spot the error"
+   ],
+   "mastery": "The child converts whole litres and mixed amounts to ml, for example 4 l = 4 000 ml and 3 l 45 ml = 3 045 ml. They place zeros correctly when the ml part has fewer than three digits. Proposed limit: up to 20 l, whole numbers only (no decimal litres)."
+  },
+  "MATH.G5.MEASUR.CAPACITY.CONVERT_ML_TO_L": {
+   "forms": [
+    "fill in: ___ l ___ ml",
+    "word problem: how many litres",
+    "compare amounts given in different units",
+    "spot the error"
+   ],
+   "mastery": "The child converts exact thousands of ml to l (6 000 ml = 6 l). They also write other amounts as litres and ml (3 500 ml = 3 l 500 ml; 2 040 ml = 2 l 40 ml). They recognise that amounts under 1 000 ml are less than 1 l. Proposed limit: up to 20 000 ml, no decimal litres."
+  },
+  "MATH.G5.MEASUR.CAPACITY.ADD_L_ML": {
+   "forms": [
+    "column addition",
+    "word problem: total milk or water collected",
+    "missing number",
+    "spot the error"
+   ],
+   "mastery": "The child adds amounts in l and ml in columns, with and without regrouping 1 000 ml as 1 l. They write the answer in standard form, for example 2 l 700 ml + 1 l 500 ml = 4 l 200 ml. They solve one- or two-step real-life problems. Proposed limit: totals up to 50 l."
+  },
+  "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML": {
+   "forms": [
+    "column subtraction",
+    "word problem: how much is left",
+    "word problem: find the difference",
+    "missing number",
+    "spot the error"
+   ],
+   "mastery": "The child subtracts amounts in l and ml, with and without regrouping 1 l as 1 000 ml. This includes subtracting from whole litres (5 l − 350 ml = 4 l 650 ml). They solve real-life 'how much is left' and 'difference' problems. Proposed limit: amounts up to 50 l."
+  },
+  "MATH.G5.MEASUR.CAPACITY.MULTIPLY_L_ML": {
+   "forms": [
+    "column multiplication",
+    "word problem: equal containers (e.g. 4 bottles of 1 l 250 ml)",
+    "missing number",
+    "spot the error"
+   ],
+   "mastery": "The child multiplies an amount in l and ml by a whole number. They multiply the ml first, regroup each 1 000 ml as 1 l, then multiply the litres and add the carried litres, for example 2 l 600 ml × 3 = 7 l 800 ml. Proposed limit: multipliers up to 9, products up to 100 l."
+  },
+  "MATH.G5.MEASUR.CAPACITY.DIVIDE_L_ML": {
+   "forms": [
+    "long or short division",
+    "word problem: sharing equally among people or containers",
+    "check by multiplying",
+    "spot the error"
+   ],
+   "mastery": "The child divides an amount in l and ml by a whole number. They change any remaining litres to 1 000 ml each and add them to the ml before dividing, for example 5 l 400 ml ÷ 2 = 2 l 700 ml. They solve equal-sharing problems. Proposed limit: divisors up to 9, answers in whole millilitres."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE": {
+   "forms": [
+    "read the label: what is the mass of this packet?",
+    "match symbol to unit name",
+    "sort labels into g and kg",
+    "spot the label that is not a mass (ml, l)"
+   ],
+   "mastery": "The child names the gramme and its symbol g, tells it apart from kg, and reads mass labels on everyday packets (for example 500 g salt, 250 g tea leaves, 2 kg maize flour). Proposed: labels up to 1000 g and whole kilogrammes."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_CHOOSE_UNIT": {
+   "forms": [
+    "choose the best unit",
+    "complete the sentence with g or kg",
+    "odd one out",
+    "explain your choice"
+   ],
+   "mastery": "The child decides sensibly whether an object's mass is better measured in grammes (an egg, a pencil, a packet of chewing gum) or in kilogrammes (a sack of potatoes, a child). They explain the choice by how heavy the object is, not by how big it looks."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_MEASURE_BALANCE": {
+   "forms": [
+    "practical: weigh and record",
+    "picture of a balanced beam: find the mass",
+    "which side is heavier?",
+    "which masses would balance 350 g?"
+   ],
+   "mastery": "Using a beam balance or an improvised balance with gramme masses (for example 10 g, 20 g, 50 g, 100 g, 200 g, 500 g), the child balances an object and finds its mass by adding the values of the masses used. They also read the display of an electronic scale in grammes. Proposed: objects up to 1000 g."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_READ_SCALE": {
+   "forms": [
+    "read the pointer",
+    "what is each small mark worth?",
+    "draw the pointer at a given mass",
+    "difference between two readings"
+   ],
+   "mastery": "The child reads the pointer on a dial or spring scale marked in grammes. Proposed: scales up to 1000 g, with labelled divisions of 100 g and unlabelled marks worth 10 g, 20 g, 25 g or 50 g. They work out the value of one small mark before reading. Proposed skill: the design names beam balances and electronic machines, so dial reading is professional judgement."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_ESTIMATE_GRAMMES": {
+   "forms": [
+    "estimate then measure (record table)",
+    "is this mass reasonable?",
+    "benchmark scaling: 20 bottle tops of sand is about ...",
+    "order objects by estimated mass"
+   ],
+   "mastery": "The child uses a benchmark to give a sensible estimate in grammes and then measures to check. Benchmarks include a spoon or bottle top of sand at about 5 g, or a 500 g packet. Proposed: up to 1000 g. The child judges whether a stated mass is reasonable and keeps the estimate as recorded when the measurement differs."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP": {
+   "forms": [
+    "fill in: 1 kg = ___ g",
+    "how many 250 g packets make 1 kg?",
+    "compare masses in different units",
+    "true or false with reason"
+   ],
+   "mastery": "The child states that 1 kg = 1000 g and shows it on a balance, for example 1 kg balancing ten 100 g masses. They know that ½ kg = 500 g and ¼ kg = 250 g. They compare masses given in different units, such as 750 g against 1 kg."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G": {
+   "forms": [
+    "convert",
+    "missing number",
+    "word problem: packet sizes",
+    "spot the error"
+   ],
+   "mastery": "The child converts whole kilogrammes and mixed amounts to grammes, for example 4 kg = 4000 g, 3 kg 450 g = 3450 g and 2 kg 45 g = 2045 g, keeping place-holder zeros. Proposed: up to 10 kg, without decimal kilogrammes."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG": {
+   "forms": [
+    "convert",
+    "missing number",
+    "word problem: total grammes to kg",
+    "compare and explain"
+   ],
+   "mastery": "The child converts grammes to kilogrammes, or to kilogrammes and grammes. Examples: 6000 g = 6 kg, 4250 g = 4 kg 250 g, 3050 g = 3 kg 50 g. Proposed: up to 10 000 g, without decimal kilogrammes."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G": {
+   "forms": [
+    "column addition in kg and g",
+    "word problem: total mass of shopping",
+    "mixed units (kg + g)",
+    "missing addend"
+   ],
+   "mastery": "The child adds masses written in kg and g, with and without regrouping 1000 g as 1 kg. For example, 2 kg 700 g + 1 kg 600 g = 4 kg 300 g. They solve shopping and market word problems. Proposed: totals up to 100 kg, up to three addends."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G": {
+   "forms": [
+    "column subtraction in kg and g",
+    "word problem: amount remaining",
+    "word problem: difference / how much heavier",
+    "subtract from whole kg"
+   ],
+   "mastery": "The child subtracts masses in kg and g, exchanging 1 kg for 1000 g when needed. Examples: 5 kg 200 g − 2 kg 700 g = 2 kg 500 g, and 3 kg − 400 g = 2 kg 600 g. They solve 'how much is left' and 'how much heavier' problems. Proposed: up to 100 kg."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_MULTIPLY_KG_G": {
+   "forms": [
+    "multiply kg and g",
+    "word problem: equal packets/bags",
+    "multiply grammes and give answer in kg and g",
+    "missing multiplier"
+   ],
+   "mastery": "The child multiplies a mass in kg and g by a whole number and regroups grammes into kilogrammes. For example, 2 kg 350 g × 4 = 9 kg 400 g. They solve 'several identical packets' problems. Proposed: multipliers up to 10 (two-digit at most), products up to 100 kg."
+  },
+  "MATH.G5.MEASUR.MASS.MASS_DIVIDE_KG_G": {
+   "forms": [
+    "divide kg and g",
+    "word problem: equal sharing",
+    "word problem: mass of one item from total",
+    "check by multiplying"
+   ],
+   "mastery": "The child divides a mass in kg and g by a whole number. Any remaining kilogrammes are changed to grammes and carried on, for example 7 kg 200 g ÷ 4 = 1 kg 800 g. They solve equal-sharing and packing problems. Proposed: single-digit divisors (up to 10), exact answers to the nearest whole gramme."
+  },
+  "MATH.G5.MEASUR.TIME.SECOND_IDENTIFY": {
+   "forms": [
+    "label the hands of a clock",
+    "which hand shows seconds (multiple choice)",
+    "point to the seconds digits on a digital display",
+    "true or false about clock hands"
+   ],
+   "mastery": "The child points out the second hand on an analogue clock (the thin hand that moves fastest, or ticks once each second) and the seconds digits on a digital clock or stopwatch. The child names the second as the unit it measures. Proposed: the child also tells the second hand apart from the minute and hour hands on any ordinary wall clock or wristwatch."
+  },
+  "MATH.G5.MEASUR.TIME.SECOND_DURATION_SENSE": {
+   "forms": [
+    "which activity takes about 10 seconds (multiple choice)",
+    "estimate then measure",
+    "order activities by duration",
+    "record a measured time in seconds"
+   ],
+   "mastery": "Proposed: the child judges which everyday actions take about 1 second, about 10 seconds or about 1 minute. The child times short activities (for example clapping 10 times or running across the school field) with a stopwatch or clock, to the nearest second, for durations up to 60 seconds."
+  },
+  "MATH.G5.MEASUR.TIME.READ_SECONDS_ANALOGUE": {
+   "forms": [
+    "read the clock face (hours, minutes, seconds)",
+    "how many seconds does the second hand show",
+    "draw the second hand to show a given number of seconds",
+    "match clock face to written time"
+   ],
+   "mastery": "The child reads hours, minutes and seconds from an analogue clock that has a second hand, including when the second hand is between numerals. The child counts in fives from 12 and then adds the small marks, for example 'twenty past three and 37 seconds', or 3:20:37."
+  },
+  "MATH.G5.MEASUR.TIME.READ_SECONDS_DIGITAL": {
+   "forms": [
+    "read the digital display",
+    "which digits show the seconds",
+    "stopwatch reading to words",
+    "match digital and analogue displays"
+   ],
+   "mastery": "The child reads a digital clock in the form hh:mm:ss, for example 08:15:42, as 8 hours 15 minutes 42 seconds. The child reads a stopwatch in the form mm:ss, for example 02:35, as 2 minutes 35 seconds, and can say which digits stand for which unit."
+  },
+  "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION": {
+   "forms": [
+    "fill in: 1 minute = __ seconds",
+    "what happens to the minute hand when the second hand goes round once",
+    "explain using a clock or stopwatch",
+    "true or false about minutes and seconds"
+   ],
+   "mastery": "The child states that 60 seconds make 1 minute. The child explains this using the clock: one full turn of the second hand is 60 seconds, during which the minute hand moves on by one small mark. The child uses the fact in real-life talk, for example 'one minute of silence is 60 seconds'."
+  },
+  "MATH.G5.MEASUR.TIME.CONVERT_MIN_TO_SEC": {
+   "forms": [
+    "convert: __ min = __ s",
+    "convert mixed: __ min __ s = __ s",
+    "word problem: duration of a song or race in seconds",
+    "missing number"
+   ],
+   "mastery": "The child converts whole minutes to seconds by multiplying by 60, and converts mixed amounts such as 4 min 15 s to seconds (255 s). Proposed limit: up to 2-digit minutes (under 100 minutes), no hours."
+  },
+  "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN": {
+   "forms": [
+    "convert: __ s = __ min __ s",
+    "word problem: a stopwatch shows seconds, give in minutes and seconds",
+    "compare two durations given in different units",
+    "missing number"
+   ],
+   "mastery": "The child converts a number of seconds to whole minutes and leftover seconds by grouping in sixties or dividing by 60, for example 150 s = 2 min 30 s and 240 s = 4 min. The answer is always given in minutes and seconds, not as a decimal. Proposed limit: up to about 4-digit seconds, giving answers under 100 minutes."
+  },
+  "MATH.G5.MEASUR.TIME.ADD_MIN_SEC": {
+   "forms": [
+    "column addition (min | s)",
+    "word problem: total time of two activities",
+    "missing number in an addition",
+    "find the error in a worked example"
+   ],
+   "mastery": "The child adds two or three durations in minutes and seconds. When the seconds come to 60 or more, the child changes 60 s into 1 min and adds it to the minutes, for example 3 min 45 s + 2 min 30 s = 6 min 15 s. Proposed limit: answers under 100 minutes."
+  },
+  "MATH.G5.MEASUR.TIME.SUBTRACT_MIN_SEC": {
+   "forms": [
+    "column subtraction (min | s)",
+    "word problem: difference between two race times",
+    "word problem: time remaining",
+    "find the error in a worked example"
+   ],
+   "mastery": "The child subtracts durations in minutes and seconds. When there are not enough seconds, the child changes 1 minute into 60 seconds, for example 5 min 20 s − 2 min 45 s = 2 min 35 s. The child uses subtraction for 'how much longer' and 'how much time is left' problems."
+  },
+  "MATH.G5.MEASUR.TIME.MULTIPLY_MIN_SEC": {
+   "forms": [
+    "column multiplication (min | s)",
+    "word problem: repeated activity (e.g. same song played several times)",
+    "missing number",
+    "compare with repeated addition"
+   ],
+   "mastery": "The child multiplies a duration in minutes and seconds by a whole number and regroups seconds into minutes, for example 2 min 25 s × 3 = 7 min 15 s. Proposed limit: multipliers up to 10."
+  },
+  "MATH.G5.MEASUR.TIME.DIVIDE_MIN_SEC": {
+   "forms": [
+    "division of min and s by a whole number",
+    "word problem: sharing time equally",
+    "word problem: time for one lap or one item",
+    "check answer by multiplying"
+   ],
+   "mastery": "The child divides a duration in minutes and seconds by a whole number. Leftover minutes are changed into 60 s each before dividing the seconds, for example 7 min 30 s ÷ 2 = 3 min 45 s. The child may instead convert everything to seconds first. Proposed limits: divisors up to 10, and answers that come out in whole seconds."
+  },
+  "MATH.G5.MEASUR.MONEY.BUDGET_MEANING": {
+   "forms": [
+    "explain in own words",
+    "pick the budget: budget vs shopping list vs receipt",
+    "true or false about budgets",
+    "give a real-life example of when a budget is made"
+   ],
+   "mastery": "The child explains in their own words that a budget is a plan, made before spending, of how a known amount of money will be used. They can tell a budget apart from a plain shopping list (no costs or money available) and from a receipt (a record made after buying). Contexts are home, school and the classroom model shop."
+  },
+  "MATH.G5.MEASUR.MONEY.BUDGET_IMPORTANCE": {
+   "forms": [
+    "list reasons",
+    "scenario: what went wrong without a budget",
+    "needs vs wants sorting",
+    "which item to drop first and why"
+   ],
+   "mastery": "The child gives at least three reasons for budgeting, for example avoiding overspending, putting needs before wants, leaving money to save, and avoiding debt. They can say which item a family should drop first when money is short. The needs-before-wants reasoning is a proposed part of this skill."
+  },
+  "MATH.G5.MEASUR.MONEY.BUDGET_ITEM_COSTS": {
+   "forms": [
+    "complete the cost column of a budget table",
+    "word problem: cost of several of one item",
+    "missing unit price or quantity",
+    "spot the error in a budget line"
+   ],
+   "mastery": "For each of up to 5 everyday items, the child finds the line cost from a quantity and a unit price, e.g. 3 kg of sugar at 180 shillings per kg. Proposed limits: whole shillings, whole-number quantities up to about 10, plus halves (e.g. ½ kg), and line costs within 10,000 shillings."
+  },
+  "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE": {
+   "forms": [
+    "prepare a budget from a price list (model shop)",
+    "find the total of a budget",
+    "find the balance left",
+    "can she afford it? shortfall and adjust",
+    "open task: plan a budget for a given amount"
+   ],
+   "mastery": "The child sets out a budget of up to 5 items with columns for item, quantity, unit price and cost. They add the line costs and compare the total with the money available, then either state the balance or, if there is a shortfall, adjust the budget by dropping or reducing wants. Proposed limits: money available and totals up to 10,000 shillings, matching G4 3.7c."
+  },
+  "MATH.G5.MEASUR.MONEY.TAX_MEANING": {
+   "forms": [
+    "explain in own words",
+    "who receives the tax?",
+    "match tax to services it pays for",
+    "true or false about tax",
+    "why should people pay tax?"
+   ],
+   "mastery": "The child explains that tax is money people and businesses must pay to the government, which collects it through KRA. They name public services paid for with taxes, such as roads, public schools, hospitals, security and water. They do not need to name types of tax, which is Grade 6 outcome 2.6e."
+  },
+  "MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT": {
+   "forms": [
+    "read the receipt: how much tax?",
+    "how much did the customer pay in total?",
+    "which line shows the tax?",
+    "price before tax (total − tax)"
+   ],
+   "mastery": "From a real or model Kenyan receipt, the child finds the line that shows tax (e.g. 'VAT 16%') and reads the tax amount in shillings and cents. They understand that the total already includes this tax. Proposed limit: read and identify only; working out VAT as a percentage is not required at Grade 5. This skill comes from the learning experiences, not a separate outcome."
+  },
+  "MATH.G5.MEASUR.MONEY.BANK_SERVICES": {
+   "forms": [
+    "name the services",
+    "match situation to bank service",
+    "true or false (e.g. loans are paid back)",
+    "vocabulary: deposit vs withdrawal"
+   ],
+   "mastery": "The child names and describes bank services: deposits, withdrawals, savings accounts, loans (paid back with interest), safe custody of valuables and documents, and money transfer. Given a short real-life situation, they say which service is being used."
+  },
+  "MATH.G5.MEASUR.MONEY.MONEY_TRANSFER_DIGITAL": {
+   "forms": [
+    "put the transfer steps in order",
+    "what should you check before pressing send?",
+    "safety scenario: someone asks for your PIN",
+    "role play with a model phone"
+   ],
+   "mastery": "The child describes the steps of sending money with a phone or banking app: choose 'send money', enter the recipient's number or account, enter the amount, check the recipient's name, then enter the PIN and confirm. They explain the safety rules: never share the PIN and always check the name before sending. Proposed limit: describing the steps only; working out transfer charges is Grade 6 (bank charges)."
+  },
+  "MATH.G5.MEASUR.MONEY.SAVING_FACTORS": {
+   "forms": [
+    "brainstorm or list factors",
+    "which is the wiser saving plan?",
+    "where is the safest place to save and why?",
+    "advise a character on saving"
+   ],
+   "mastery": "The child names and explains factors in wise saving, and applies them to choose the wiser plan in a short scenario. The factors (a proposed list) are:\n- how much money comes in\n- needs before wants\n- setting a saving goal and a time to reach it\n- deciding the amount to save before spending\n- choosing a safe place to save (bank, SACCO, children's account rather than at home)\n- saving regularly, even in small amounts\n- interest earned"
+  },
+  "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL": {
+   "forms": [
+    "classify: horizontal / vertical / neither",
+    "pick the object or picture (multiple choice)",
+    "count horizontal or vertical lines in a figure or letter",
+    "spot the odd one out and explain",
+    "true/false with reason"
+   ],
+   "mastery": "The child correctly names lines in the environment (table tops, door frames, flag poles, window bars, a plumb line) and in drawings as horizontal (level, like the horizon or the bottom edge of the page), vertical (upright, like a hanging plumb line or the side edge of the page) or neither (slanting). The child does this however long the lines are and wherever they sit on the page, and does not call steep or shallow slanting lines vertical or horizontal (proposed limits: pictures and line drawings; no measurement needed)."
+  },
+  "MATH.G5.GEOMET.LINES.DRAW_HORIZONTAL_VERTICAL": {
+   "forms": [
+    "draw a horizontal or vertical line of a given length",
+    "draw on a grid from a given dot",
+    "complete a figure with horizontal or vertical lines",
+    "check a classmate's drawing and correct it"
+   ],
+   "mastery": "Using a ruler, and the page edge, a square grid or a set square as a guide, the child draws horizontal and vertical lines of a given length that are truly level or upright on the page. Lengths are measured from the 0 mark and are accurate to about 2 mm (proposed limits: whole-centimetre lengths up to 15 cm; drawing on plain or squared paper)."
+  },
+  "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR": {
+   "forms": [
+    "yes/no: are these lines perpendicular?",
+    "pick the perpendicular pair (multiple choice with tilted and near-right distractors)",
+    "name the perpendicular sides in a shape",
+    "find examples in the environment",
+    "explain why a pair is or is not perpendicular"
+   ],
+   "mastery": "The child recognises perpendicular lines as lines that meet or cross at a right angle. This includes pairs that form an L, a T or a + shape, and pairs that are tilted (neither line horizontal or vertical). The child checks doubtful cases with a set square or a folded-paper right-angle tester instead of judging by eye, and finds perpendicular sides in squares, rectangles and right-angled triangles and in the environment (corners of books, window frames, crossroads)."
+  },
+  "MATH.G5.GEOMET.LINES.DRAW_PERPENDICULAR": {
+   "forms": [
+    "draw a perpendicular through a marked point on a line",
+    "draw a perpendicular to a slanting line",
+    "complete a right-angled corner or rectangle",
+    "check and correct a drawn 'perpendicular'"
+   ],
+   "mastery": "Given a line in any orientation (horizontal, vertical or slanting) and a point on it, the child draws a line through that point at a right angle to it. The child uses a ruler with a set square, a square grid or a folded-paper right angle, and checks the right angle afterwards (proposed limits: point on the line only; construction with pair of compasses is left to Grade 6, outcome 3.1c)."
+  },
+  "MATH.G5.GEOMET.LINES.IDENTIFY_PARALLEL": {
+   "forms": [
+    "yes/no: are these lines parallel?",
+    "pick the parallel pair (multiple choice with unequal-length and converging distractors)",
+    "name the parallel sides in a shape",
+    "find examples in the environment",
+    "sort pairs into parallel / perpendicular / neither"
+   ],
+   "mastery": "The child recognises parallel lines as lines that stay the same distance apart all along and never meet however far they are extended. This holds whatever their length, position or slant. The child rejects lines that are slowly getting closer, and finds parallel lines in shapes (opposite sides of a rectangle) and the environment (railway lines, ruled lines in an exercise book, rungs of a ladder, iron sheet ridges)."
+  },
+  "MATH.G5.GEOMET.LINES.DRAW_PARALLEL": {
+   "forms": [
+    "draw a line parallel to a given line",
+    "draw a parallel line a given distance away",
+    "draw parallel lines on a grid",
+    "complete a rectangle or a pattern of parallel lines",
+    "check and correct a drawn 'parallel'"
+   ],
+   "mastery": "Given a line in any orientation, the child draws a line parallel to it. Where asked, the new line is a given distance away, measured at right angles to the given line at two places or made by sliding a set square along a ruler. A square grid can also be used. The child checks the gap is equal at both ends (proposed limits: whole-centimetre gaps up to 10 cm)."
+  },
+  "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES": {
+   "forms": [
+    "practical: make a turn and name the angle",
+    "clock hands: how much has the minute hand turned",
+    "compass: facing X, turn a quarter clockwise, which way now and what angle",
+    "turn to degrees and degrees to turn conversion",
+    "compare and explain: same end position, different turn"
+   ],
+   "mastery": "The child states the angle made by a quarter turn (90°, a right angle), half turn (180°), three-quarter turn (270°) and full turn (360°), in either direction. They can work out the turn between a start and an end position on a clock face, a compass or their own body. Proposed limit: whole quarter turns only; no other turn fractions."
+  },
+  "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT": {
+   "forms": [
+    "practical: measure an angle with a paper unit angle",
+    "compare two angles with different arm lengths",
+    "how many degrees in a right angle, half turn or full turn",
+    "true or false and explain"
+   ],
+   "mastery": "The child explains that angle size is the amount of turn between two arms, not the length of the arms. They compare angles using a non-standard unit angle (for example a paper wedge) and know that a degree is a very small, fixed unit: 90 in a right angle and 360 in a full turn."
+  },
+  "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES": {
+   "forms": [
+    "read the angle from a picture of a placed protractor",
+    "which scale should you use and why",
+    "read between labelled marks (nearest degree)",
+    "spot the error in a classmate's reading"
+   ],
+   "mastery": "Given a protractor already placed on an angle of 0° to 180°, the child chooses the scale that starts at 0 on the baseline arm. They read to the nearest degree whether the angle opens clockwise or anticlockwise, and they check the reading against a right angle."
+  },
+  "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR": {
+   "forms": [
+    "practical: measure a drawn angle",
+    "measure angles in different orientations (neither arm horizontal)",
+    "measure an angle with short arms",
+    "spot the error in protractor placement"
+   ],
+   "mastery": "The child places the centre point on the vertex and the baseline (0° line) along one arm, then reads the angle to within about 2° (proposed tolerance). This applies to angles of 0° to 180° in any orientation, including angles whose arms must first be extended with a ruler."
+  },
+  "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT": {
+   "forms": [
+    "measure the angles of a drawn shape",
+    "estimate then measure",
+    "measure an angle in a picture of a real object",
+    "reasonableness check: is this measurement sensible",
+    "group task: measure and compare results"
+   ],
+   "mastery": "The child measures angles of 0° to 180° in plane figures (triangles, rectangles, other polygons) and in drawings or models of real objects, such as a roof truss, a ladder against a wall or opened scissors. They estimate first using a right angle as a benchmark and record the answer with the ° symbol."
+  },
+  "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT": {
+   "forms": [
+    "name objects in the classroom or home that show angles",
+    "picture: point to the angle",
+    "right angle, smaller or bigger (tilted pictures)",
+    "explain why this angle is used (e.g. roof slope, ladder)"
+   ],
+   "mastery": "The child finds angles in fixed objects (roof, window frame, road junction, signboard) and in turning objects (door, clock hands, scissors, a matatu turning at a junction). They describe each angle as less than, equal to or greater than a right angle in any orientation, and say why the angle matters for its use."
+  },
+  "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS": {
+   "forms": [
+    "name the object (real item or picture)",
+    "sort a collection into groups",
+    "odd one out and explain",
+    "give an example from home or school",
+    "match object to name"
+   ],
+   "mastery": "Given real objects, models or pictures from daily life (e.g. a dice, a matchbox, a tin of Kimbo, a football, a model pyramid), the child names each as a cube, cuboid, cylinder, sphere or pyramid. The child does this whatever the object's size, colour, material or orientation. Proposed limit: only these five objects, with pyramids limited to square-based and triangular-based ones."
+  },
+  "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES": {
+   "forms": [
+    "describe the object",
+    "which objects can roll / stack / slide",
+    "guess the object from a description",
+    "explain why an object is shaped as it is (e.g. why bricks are cuboids)",
+    "compare two objects: same and different"
+   ],
+   "mastery": "The child describes an object in everyday mathematical language. For example, they say whether its surfaces are flat, curved or both, and whether it has corners and straight edges. They also say whether it can roll, slide or stack, and link this to its use (e.g. tins roll, bricks stack). Proposed limit: informal description only. Formal counting of vertices, faces and edges is left to Grade 6 (G6:3.3a, 3.3b)."
+  },
+  "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D": {
+   "forms": [
+    "2-D or 3-D? sort the list",
+    "correct the wrong name",
+    "match flat shape to the solid it comes from",
+    "explain the difference"
+   ],
+   "mastery": "The child uses the correct name for a flat shape and for a solid object. They say 'circle' for a flat shape but 'sphere' for a ball, and 'square' for a flat shape but 'cube' for a dice. They can explain that a 3-D object takes up space and can be held, while a 2-D shape is flat."
+  },
+  "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D": {
+   "forms": [
+    "what shape is this face?",
+    "trace or print a face and name it",
+    "which object made this print?",
+    "list all the flat shapes on an object",
+    "true or false with explanation"
+   ],
+   "mastery": "For the five objects, the child names the flat shapes found on them:\n- a cube has only squares\n- a cuboid has rectangles (sometimes with two squares)\n- a cylinder has two circles plus a curved surface\n- a pyramid has triangles plus a square or triangular base\n- a sphere has no flat face\nThe child can identify the shape left when a face is traced or printed, including faces that cannot be seen in a picture. Proposed: they may say informally how many of each shape there are, but formal face counting is Grade 6."
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.PLAN_DATA_COLLECTION": {
+   "forms": [
+    "choose a suitable question to collect data",
+    "spot what is wrong with a set of categories",
+    "choose a method: ask, observe or count",
+    "identify which of these is data"
+   ],
+   "mastery": "Given a real-life situation such as learners' ages, shoe sizes, marks, favourite foods or vehicles passing the school, the child states what will be counted, chooses clear categories that do not overlap (3 to 6 categories, with 'other' where needed), and chooses a method such as asking, observing or counting. Proposed limit: the plan should produce a data set of about 30 observations."
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.COLLECT_DATA_30": {
+   "forms": [
+    "practical task: collect data from the class",
+    "check a record against the number of people asked",
+    "find the error in someone else's collected data"
+   ],
+   "mastery": "The child collects data on about 30 items, for example 30 classmates' favourite drinks or vehicles passing for 15 minutes. Each observation is recorded once, in a book or on a chart, and the child checks that the number recorded matches the number observed."
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_RECORDING_TABLE": {
+   "forms": [
+    "draw a table for given data",
+    "choose or write the missing heading or title",
+    "enter given data into a table",
+    "find the mistake in a table"
+   ],
+   "mastery": "The child draws a ruled table with a title, labelled column headings (for example 'Name | Age' or 'Type of vehicle | Number') and one row per item or category. The child enters data from a real-life situation in the correct cells. Proposed limit: up to about 30 rows of raw data, or up to 6 category rows."
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_TALLY_GROUPS": {
+   "forms": [
+    "draw tallies for a number",
+    "match a number to its tally",
+    "spot the wrongly drawn tally"
+   ],
+   "mastery": "The child draws any whole number up to about 30 as tally marks. Each group of five is a 'gate' of four upright strokes crossed by a fifth, written [||||/] in this map, and the remainder is shown as single strokes. For example, 13 is [||||/] [||||/] |||."
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_RAW_DATA": {
+   "forms": [
+    "tally a list of raw data",
+    "tally numerical data (sizes, ages, marks)",
+    "find the item that was missed or tallied twice"
+   ],
+   "mastery": "The child works through a raw list of about 30 observations, either words or numbers such as shoe sizes. For each observation the child makes one tally mark against the correct category, without skipping or repeating any. The child then checks that the total number of tally marks equals the number of observations."
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_TO_FREQUENCY": {
+   "forms": [
+    "write the number shown by the tallies",
+    "complete the frequency column from the tally column",
+    "which tally shows the bigger number"
+   ],
+   "mastery": "The child reads a set of tally marks (up to about 30) and writes the number correctly. The child counts each gate as five and then counts on in ones."
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.PREPARE_FREQUENCY_TABLE": {
+   "forms": [
+    "prepare a frequency table from raw data",
+    "complete a partly filled frequency table",
+    "check whether the total is correct",
+    "fill the missing frequency given the total"
+   ],
+   "mastery": "From raw data of about 30 items, the child prepares a titled frequency table. It has the columns 'item or category | tally | frequency', one row per category (not one per observation), and a total row. The child checks that the total equals the number of items collected."
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE": {
+   "forms": [
+    "how many chose X",
+    "which category had N",
+    "most common / least common",
+    "read a table of numerical data (ages, shoe sizes)"
+   ],
+   "mastery": "The child reads the frequency of a given category, finds the category with a given frequency, and identifies the most and least common category. This includes numerical categories such as ages or shoe sizes, where the child must keep the value and its frequency apart. Proposed limit: frequencies up to about 30."
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES": {
+   "forms": [
+    "word problem: how many more / fewer",
+    "total number surveyed",
+    "combine two categories",
+    "how many did not choose X"
+   ],
+   "mastery": "Using whole-number frequencies with a total of about 30, the child answers questions of these kinds: 'how many more or fewer', 'how many altogether', 'how many in two categories together' and 'how many did not choose X'."
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.INFER_FROM_FREQUENCY_TABLE": {
+   "forms": [
+    "true or false: explain using the table",
+    "make a decision and justify it",
+    "which statement does the table support",
+    "explain why a table is useful here"
+   ],
+   "mastery": "The child says whether statements about the data are true or false and gives a reason. The child uses the table to make a sensible real-life decision, such as which fruit the canteen should buy most of, and keeps conclusions to the group that was surveyed."
+  }
+ }
+}

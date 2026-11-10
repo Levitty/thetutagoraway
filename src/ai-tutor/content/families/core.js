@@ -17,7 +17,11 @@
 //    come out right on every draw.
 //  - A spot-the-mistake working computes each step's truth. Exactly one step
 //    must be false.
-//  - Wrong options come from named mistakes, each with feedback.
+//  - Wrong options come from named mistakes, each with feedback. A family that
+//    carries `cskill` (a skill of the Grade 5 curriculum map) names the library
+//    misconception behind each wrong answer: [value, why, 'M_CODE'], or
+//    { text, why, mis } on an option. The code is the library's own, without
+//    the skill prefix; the checks resolve it.
 //  - Every family is tagged to one outcome in curriculum/outcomes.js and must
 //    match its signal, and it must not repeat a form its skill already has.
 //
@@ -40,7 +44,7 @@ export const round = (v, dp = 0) => num(Math.round((v + Number.EPSILON * Math.si
 // makes, so it is dropped unless the family is about negative numbers.
 const wrongList = (wrong, answer, negativesFair) => (wrong || [])
   .filter(([when]) => negativesFair || typeof when !== 'number' || when >= 0)
-  .map(([when, feedback]) => ({ when: typeof when === 'number' ? fmtNum(round(when, 3)) : String(when), feedback }))
+  .map(([when, feedback, mis]) => ({ when: typeof when === 'number' ? fmtNum(round(when, 3)) : String(when), feedback, ...(mis ? { mis } : {}) }))
   .filter(m => m.when !== String(answer));
 
 // Numbers change on every draw, so the grammar around them has to change too:
@@ -68,6 +72,7 @@ function buildProblem(def, d) {
     familyForm: def.form,
     rung: def.rung,
     outcome: def.outcome,
+    ...(def.cskill ? { cskill: def.cskill } : {}),
     question: m.question,
     hints: hintLadder(...(m.hints || [])),
     hint: (m.hints || [])[0],
@@ -75,6 +80,7 @@ function buildProblem(def, d) {
     solution: { steps: (m.steps || []).map(text => ({ text })), answer: '' },
   };
   if (m.model) base.model = m.model;
+  if (m.mis) base.mis = [].concat(m.mis);
   if (m.story !== false && def.form !== 'direct') base.story = true;
 
   if (m.parts) {
@@ -107,7 +113,7 @@ function buildProblem(def, d) {
       choices: m.options.map(o => String(o.text)), choicesFixed: !!m.fixedOrder,
       optionTruth: m.options.map(o => !!o.right),
       answer: right ? String(right.text) : '', accepts: right ? [String(right.text)] : [],
-      misconceptions: m.options.filter(o => !o.right && o.why).map(o => ({ when: String(o.text), feedback: o.why })),
+      misconceptions: m.options.filter(o => !o.right && o.why).map(o => ({ when: String(o.text), feedback: o.why, ...(o.mis ? { mis: o.mis } : {}) })),
       solution: { ...base.solution, answer: right ? String(right.text) : '' } };
   }
   const isNum = typeof m.answer === 'number';
@@ -146,7 +152,9 @@ export function serveFamily(def) {
 }
 
 export const FORMS = ['direct', 'word', 'steps', 'spot', 'why', 'table', 'graph'];
-export const family = (def) => def;   // reads well at the call site; the gate does the checking
+// Reads well at the call site; the gate does the checking. `cskill` (the Grade 5
+// curriculum skill code) rides beside the HOREB `skill` and the official `outcome`.
+export const family = (def) => def;
 export { stepText };
 
 // ---------------------------------------------------------------- the switch

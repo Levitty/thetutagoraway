@@ -11,9 +11,24 @@ import { SKILLS } from '../../src/ai-tutor/knowledgeGraph.js';
 import { checkAnswerMatch } from '../../src/ai-tutor/answerCheck.js';
 import { tidyProblem, generateProblem } from '../../src/ai-tutor/problemGenerators.js';
 import { buildChoices } from '../../src/ai-tutor/choices.js';
+import { SKILLS_G5, SUBSTRANDS, OUTCOMES_G5, horebOf } from '../../src/ai-tutor/content/curriculumMap.g5.js';
+import { readFileSync } from 'node:fs';
 import { textOf, formText, senseFlags, clusterForms, sameForm } from './content_measures.mjs';
 
 export const FAMILY_DRAWS = 200;
+
+// The curriculum map's misconception library: full code -> entry. A wrong answer in a
+// family that carries `cskill` names one by its short code (no skill prefix); the code
+// must be one of its own skill's, or of another skill in the same sub-strand.
+const MIS = JSON.parse(readFileSync(new URL('../data/curriculum/g5.misconceptions.json', import.meta.url), 'utf8'));
+const misCodesFor = (cskill) => {
+  const sub = SKILLS_G5[cskill]?.sub;
+  const own = new Set((SKILLS_G5[cskill]?.mis || []));
+  const near = new Set(Object.entries(SKILLS_G5).filter(([, k]) => k.sub === sub).flatMap(([c, k]) => k.mis));
+  return { own, near };
+};
+export const misTally = { wrong: 0, tied: 0 };
+
 const AMERICAN = /\b(color|colour?ed-|meter|meters|liter|liters|center|centers|favorite|gray|neighbor|neighbors|odor|harbor|labor|traveled|traveling|customize|realize|organize|program fee)\b/i;
 const EMOJI = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/u;
 const FLOAT = /\d\.\d*?(0{6,}|9{6,})\d?/;
@@ -26,12 +41,37 @@ const hasAnswerAlone = (answer, text, question) => {
 export function checkFamily(def, draws = FAMILY_DRAWS) {
   const out = [];
   const fail = (msg) => { if (out.length < 8) out.push(`${def.id}: ${msg}`); };
-  const o = OUTCOMES[def.outcome];
+  const official = OUTCOMES_G5[def.outcome];
+  const ck = SKILLS_G5[def.cskill];
+  let o = OUTCOMES[def.outcome];
+  if (official) {
+    // The design's own outcome code, with the curriculum skill it belongs to.
+    // No regex signal here: HOREB's old signals were written for its own outcome list and miss honest
+    // word problems (a ribbon-cutting question never says HCF). The cskill-to-outcome-to-skill chain
+    // below is the tag, and the teacher's review is the judge of the content.
+    o = { id: def.outcome, grade: 5, text: official.letter, signal: /[\s\S]*/, hands: false };
+    if (!ck) fail(`cskill ${def.cskill} is not in the Grade 5 curriculum map`);
+    else {
+      if (!ck.outcomes.includes(def.outcome)) fail(`outcome ${def.outcome} is not an outcome of ${def.cskill}`);
+      if (!horebOf(def.cskill).includes(def.skill)) fail(`HOREB skill ${def.skill} is not mapped to ${def.cskill}`);
+    }
+  } else if (def.cskill) fail(`cskill ${def.cskill} needs the official outcome code, not ${def.outcome}`);
   if (!SKILLS[def.skill]) fail(`unknown skill ${def.skill}`);
   if (!o) fail(`unknown outcome ${def.outcome}`);
   if (o?.hands) fail(`outcome ${def.outcome} is hands-on: a typed or tapped answer cannot test it`);
   const tag = SKILL_TAGS[def.skill];
   if (o && tag && o.grade !== tag.grade) fail(`outcome is Grade ${o.grade}, the skill is CBC Grade ${tag.grade}`);
+  // Every wrong answer names the library misconception it reveals.
+  const codes = ck ? misCodesFor(def.cskill) : null;
+  const misFail = (list, where) => {
+    for (const m of list) {
+      misTally.wrong++;
+      const ms = [].concat(m.mis || []);
+      if (!ms.length) { fail(`${where}: wrong answer "${m.when}" names no misconception (mis)`); continue; }
+      misTally.tied++;
+      for (const c of ms) if (!codes.near.has(c)) fail(`${where}: "${c}" is not a misconception of ${def.cskill} or its sub-strand`);
+    }
+  };
   if (![1, 2, 3].includes(def.rung)) fail(`rung must be 1, 2 or 3, not ${def.rung}`);
   if (!FORMS.includes(def.form)) fail(`form must be one of ${FORMS.join(', ')}`);
   if (def.core !== true && def.reviewed !== true && def.reviewed !== false) fail('reviewed must be true or false');
@@ -64,6 +104,7 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       if (vals.some(v => !Number.isFinite(v))) fail(`a part has no number answer: ${vals}`);
       if (typeof def.check !== 'function') fail('needs check(d, partAnswers)');
       else if (!def.check(d, vals)) fail(`check failed on parts ${vals}: "${p.question.slice(0, 80)}"`);
+      if (ck) for (const q of p.parts) misFail(q.mistakes || [], `part "${String(q.prompt).slice(0, 30)}"`);
       for (const q of p.parts) {
         if (!checkAnswerMatch(q.answer, q)) fail(`part key does not mark itself right: ${q.prompt}`);
         for (const m of q.mistakes || []) if (checkAnswerMatch(m.when, q)) fail(`a part's mistake marks right: ${q.prompt} / ${m.when}`);
@@ -75,6 +116,7 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       const bad = (p.workingTruth || []).filter(ok => !ok).length;
       if (bad !== 1) fail(`working has ${bad} false steps, must have exactly 1: ${p.shownSteps?.join(' / ')}`);
       if ((p.shownSteps || []).length < 3) fail('a working needs at least 3 steps');
+      if (ck) { if (!(p.mis || []).length) fail('a working names no misconception (mis)'); else for (const c of p.mis) if (!codes.near.has(c)) fail(`"${c}" is not a misconception of ${def.cskill} or its sub-strand`); }
       if (!p.explain) fail('a working needs fix: what went wrong');
       continue;
     }
@@ -88,6 +130,7 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       if (p.choices.length >= 3 && rightLen > 25 && rightLen === Math.max(...lens) && rightLen > 1.2 * [...lens].sort((a, b) => b - a)[1]) longestRight++;
       const marked = p.choices.filter(c => checkAnswerMatch(c, p));
       if (marked.length !== 1) fail(`marker accepts ${marked.length} options: ${p.choices.join(' | ')}`);
+      if (ck) misFail((raw.misconceptions || []).filter(m => m.when != null), 'option');
       if (p.choices.filter((_, j) => !p.optionTruth[j]).some(c => !(raw.misconceptions || []).some(m => m.when === c))) weakOption++;
       continue;
     }
@@ -107,6 +150,7 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       if (hasAnswerAlone(p.answer, m.feedback, p.question)) fail(`feedback gives the answer away: ${m.feedback}`);
     }
     for (const h of p.hints || []) if (hasAnswerAlone(p.answer, h, p.question)) fail(`hint gives the answer away: ${h}`);
+    if (ck) misFail(authored.filter(m => String(m.when) !== String(p.answer)), 'wrong answer');
     const live = new Set(authored.map(m => String(m.when)).filter(w => w !== String(p.answer)));
     if (live.size < 2) fail(`only ${live.size} named wrong answer on "${p.question.slice(0, 70)}"`);
     if (live.size < 3) thinWrong++;
