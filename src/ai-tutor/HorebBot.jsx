@@ -2,6 +2,9 @@
 // HOREB — the tutor mascot. A friendly little robot guide who speaks to the
 // learner. Clean flat SVG in the brand-adjacent palette (indigo body, gold
 // antenna, soft-cyan face). Scales crisply at any size; `mood` tweaks the face.
+// Moods: happy, thinking, cheer, and for the live tutor (src/voice-tutor)
+// listening (wide eyes, antenna lit) and speaking (open mouth; the class
+// hb-talk lets the page animate it).
 // ============================================================================
 
 import React from 'react';
@@ -11,7 +14,7 @@ export const HorebBot = ({ size = 40, className = '', mood = 'happy' }) => (
     role="img" aria-label="HOREB, your maths guide">
     {/* antenna */}
     <line x1="32" y1="7.5" x2="32" y2="14" stroke="#b8bde0" strokeWidth="2.4" strokeLinecap="round" />
-    <circle cx="32" cy="6" r="3.4" fill="#f2a828" />
+    <circle cx="32" cy="6" r="3.4" fill="#f2a828" className={mood === 'listening' ? 'hb-listen' : undefined} />
     {/* ears */}
     <rect x="7.5" y="29" width="5" height="13" rx="2.5" fill="#c7cbe8" />
     <rect x="51.5" y="29" width="5" height="13" rx="2.5" fill="#c7cbe8" />
@@ -28,12 +31,14 @@ export const HorebBot = ({ size = 40, className = '', mood = 'happy' }) => (
       </>
     ) : (
       <>
-        <circle cx="26" cy="30.5" r="3.1" fill="#8fe3ff" />
-        <circle cx="38" cy="30.5" r="3.1" fill="#8fe3ff" />
+        <circle cx="26" cy="30.5" r={mood === 'listening' ? 3.7 : 3.1} fill="#8fe3ff" />
+        <circle cx="38" cy="30.5" r={mood === 'listening' ? 3.7 : 3.1} fill="#8fe3ff" />
       </>
     )}
     {/* mouth */}
-    {mood === 'cheer' ? (
+    {mood === 'speaking' ? (
+      <ellipse className="hb-talk" cx="32" cy="38" rx="5" ry="2.8" fill="#8fe3ff" />
+    ) : mood === 'cheer' ? (
       <path d="M25 35.5 Q32 42.5 39 35.5 Q32 39 25 35.5 Z" fill="#8fe3ff" />
     ) : (
       <path d="M25.5 36 Q32 41 38.5 36" stroke="#8fe3ff" strokeWidth="2.3" fill="none" strokeLinecap="round" />

@@ -45,6 +45,7 @@ const PRIMARY = [
   [/LINES\./, 'G5_LINES'], [/ANGLES\./, 'G5_ANGLES_INTRO'], [/3_D_OBJECTS\./, 'G5_3D_OBJECTS'], [/DATA_REPRESENTATION\./, 'G5_TALLY'],
 ];
 
+const G5_SKILLS = new Set(g5.sub_strands.flatMap(x => x.skills.map(k => k.code)));
 const out = { source: 'curriculum/mathematics/g5.json', status: g5.status, subs: {}, outcomes: {}, skills: {} };
 const mis = {}, detail = { outcomes: {}, skills: {} };
 for (const s of g5.sub_strands) {
@@ -55,7 +56,10 @@ for (const s of g5.sub_strands) {
     const tail = k.code.replace(P, '');
     const primary = (PRIMARY.find(([re]) => re.test(tail)) || [])[1];
     if (!primary) throw new Error(`no primary HOREB skill for ${k.code}`);
-    out.skills[k.code] = { name: k.name, sub: s.code, outcome: k.outcomes[0], outcomes: k.outcomes, horeb: k.horeb_skill_ids, primary, mis: [] };
+    // `pre`: the Grade 5 skills this one builds on (the design's skill-to-skill prerequisites;
+    // the ones on Grade 4 outcomes are left in g5.json), so a tutor can find the weakest one.
+    const pre = (k.prerequisites || []).map(r => r.requires).filter(c => G5_SKILLS.has(c));
+    out.skills[k.code] = { name: k.name, sub: s.code, outcome: k.outcomes[0], outcomes: k.outcomes, horeb: k.horeb_skill_ids, primary, pre: [...new Set(pre)], mis: [] };
     detail.skills[k.code] = { forms: k.question_forms, mastery: k.mastery };
   }
   for (const m of s.misconceptions) {

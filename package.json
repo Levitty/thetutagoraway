@@ -20,6 +20,7 @@
     "test:content": "node engine/scripts/quality_gate.mjs",
     "audit:drift": "node scripts/function-drift.mjs",
     "build:rocket-fn": "node scripts/build-rocket-guide-fn.mjs",
+    "build:voice-tutor-fn": "node scripts/build-voice-tutor-fn.mjs",
     "redteam:rocket": "node scripts/rocket-redteam.mjs",
     "build:wa-sign-in-fn": "node scripts/build-wa-sign-in-fn.mjs",
     "build:review": "node scripts/build-question-review.mjs",

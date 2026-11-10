@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { supabase } from './supabase';
 // Whole screens, each loaded on demand behind its own Suspense boundary. The
 // call sites below are unchanged; only where these names come from has moved.
-import { VideoRoom, AIMastery, TeacherDashboard, Writing, Spreadsheet, ConsultingPage, SchoolsPage, ClubsPage, RocketChallenge } from './lazyRoutes.jsx';
+import { VideoRoom, AIMastery, TeacherDashboard, Writing, Spreadsheet, ConsultingPage, SchoolsPage, ClubsPage, RocketChallenge, VoiceTutor } from './lazyRoutes.jsx';
 import { SKILLS as AI_SKILLS } from './ai-tutor/knowledgeGraph.js';
 import { useLessonNotes, LessonNotesModal } from './lesson/LessonNotes.jsx';
 import { INTEREST_CATEGORIES, CATEGORY_BY_KEY, categoryLabel, categoryEmoji } from './groupClassCategories.js';
@@ -62,7 +62,7 @@ const ROUTE_SEO = {
   teach:      { t: "Become a Tutor on Tutagora", d: "Teach online, set your own rate, and reach students across Kenya. Apply to become a verified Tutagora tutor.", path: '/teach' },
   consulting: { t: "Education Consulting | Tutagora", d: "Education consulting and advisory from the Tutagora team.", path: '/consulting' },
 };
-const NOINDEX_ROUTES = new Set(['rocket', 'admin', 'dashboard', 'spreadsheet', 'classroom', 'my-lessons', 'native-home', 'native-welcome', 'check-run', 'check-result']);
+const NOINDEX_ROUTES = new Set(['rocket', 'voice-tutor', 'admin', 'dashboard', 'spreadsheet', 'classroom', 'my-lessons', 'native-home', 'native-welcome', 'check-run', 'check-result']);
 
 const applyRouteSEO = (page) => {
   if (IS_NATIVE || typeof document === 'undefined') return;
@@ -6107,7 +6107,9 @@ const AdminDashboard = ({ onBack }) => {
 // ============ MAIN APP ============
 // The one route table. A page that takes a parameter ('t/<token>') is matched
 // after it; anything else is the public home.
-const ROUTES = new Set(['consulting', 'tutors', 'teach', 'why', 'dashboard', 'ai', 'writing', 'horeb', 'horebhow', 'schools', 'clubs', 'spreadsheet', 'classroom', 'admin', 'handover', 'family-tablet', 'family', 'check', 'check-result', 'privacy', 'rocket']);
+const ROUTES = new Set(['consulting', 'tutors', 'teach', 'why', 'dashboard', 'ai', 'writing', 'horeb', 'horebhow', 'schools', 'clubs', 'spreadsheet', 'classroom', 'admin', 'handover', 'family-tablet', 'family', 'check', 'check-result', 'privacy', 'rocket',
+  // The HOREB live tutor prototype exists only in a build with VITE_VOICE_TUTOR=1 (test only).
+  ...(import.meta.env.VITE_VOICE_TUTOR === '1' ? ['voice-tutor'] : [])]);
 const pageFromPath = (pathname) => {
   const path = String(pathname || '').replace(/^\//, '');
   if (ROUTES.has(path)) return path;
@@ -6537,6 +6539,9 @@ function AppInner() {
       </>
     );
   }
+
+  // HOREB live tutor prototype (the route exists only with VITE_VOICE_TUTOR=1; adult testers only).
+  if (page === 'voice-tutor') return <VoiceTutor user={auth.user} isAdmin={isAdmin} onNavigate={handleNavigate} />;
 
   // HOREB Rocket Challenge: project mode. /rocket?demo=1 shows the example
   // challenge (invented data, nothing saved), and is what a signed-out visitor sees.
