@@ -62,7 +62,10 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
   const tag = SKILL_TAGS[def.skill];
   if (o && tag && o.grade !== tag.grade) fail(`outcome is Grade ${o.grade}, the skill is CBC Grade ${tag.grade}`);
   // Every wrong answer names the library misconception it reveals.
-  const codes = ck ? misCodesFor(def.cskill) : null;
+  // misMapped: false marks an older family retagged to a curriculum skill whose wrong answers carry
+  // their own reasons but are not yet tied to library misconceptions (counted in misTally.unmapped).
+  const mapped = !!ck && def.misMapped !== false;
+  const codes = mapped ? misCodesFor(def.cskill) : null;
   const misFail = (list, where) => {
     for (const m of list) {
       misTally.wrong++;
@@ -104,7 +107,7 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       if (vals.some(v => !Number.isFinite(v))) fail(`a part has no number answer: ${vals}`);
       if (typeof def.check !== 'function') fail('needs check(d, partAnswers)');
       else if (!def.check(d, vals)) fail(`check failed on parts ${vals}: "${p.question.slice(0, 80)}"`);
-      if (ck) for (const q of p.parts) misFail(q.mistakes || [], `part "${String(q.prompt).slice(0, 30)}"`);
+      if (mapped) for (const q of p.parts) misFail(q.mistakes || [], `part "${String(q.prompt).slice(0, 30)}"`);
       for (const q of p.parts) {
         if (!checkAnswerMatch(q.answer, q)) fail(`part key does not mark itself right: ${q.prompt}`);
         for (const m of q.mistakes || []) if (checkAnswerMatch(m.when, q)) fail(`a part's mistake marks right: ${q.prompt} / ${m.when}`);
@@ -116,7 +119,7 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       const bad = (p.workingTruth || []).filter(ok => !ok).length;
       if (bad !== 1) fail(`working has ${bad} false steps, must have exactly 1: ${p.shownSteps?.join(' / ')}`);
       if ((p.shownSteps || []).length < 3) fail('a working needs at least 3 steps');
-      if (ck) { if (!(p.mis || []).length) fail('a working names no misconception (mis)'); else for (const c of p.mis) if (!codes.near.has(c)) fail(`"${c}" is not a misconception of ${def.cskill} or its sub-strand`); }
+      if (mapped) { if (!(p.mis || []).length) fail('a working names no misconception (mis)'); else for (const c of p.mis) if (!codes.near.has(c)) fail(`"${c}" is not a misconception of ${def.cskill} or its sub-strand`); }
       if (!p.explain) fail('a working needs fix: what went wrong');
       continue;
     }
@@ -130,7 +133,7 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       if (p.choices.length >= 3 && rightLen > 25 && rightLen === Math.max(...lens) && rightLen > 1.2 * [...lens].sort((a, b) => b - a)[1]) longestRight++;
       const marked = p.choices.filter(c => checkAnswerMatch(c, p));
       if (marked.length !== 1) fail(`marker accepts ${marked.length} options: ${p.choices.join(' | ')}`);
-      if (ck) misFail((raw.misconceptions || []).filter(m => m.when != null), 'option');
+      if (mapped) misFail((raw.misconceptions || []).filter(m => m.when != null), 'option');
       if (p.choices.filter((_, j) => !p.optionTruth[j]).some(c => !(raw.misconceptions || []).some(m => m.when === c))) weakOption++;
       continue;
     }
@@ -150,7 +153,7 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       if (hasAnswerAlone(p.answer, m.feedback, p.question)) fail(`feedback gives the answer away: ${m.feedback}`);
     }
     for (const h of p.hints || []) if (hasAnswerAlone(p.answer, h, p.question)) fail(`hint gives the answer away: ${h}`);
-    if (ck) misFail(authored.filter(m => String(m.when) !== String(p.answer)), 'wrong answer');
+    if (mapped) misFail(authored.filter(m => String(m.when) !== String(p.answer)), 'wrong answer');
     const live = new Set(authored.map(m => String(m.when)).filter(w => w !== String(p.answer)));
     if (live.size < 2) fail(`only ${live.size} named wrong answer on "${p.question.slice(0, 70)}"`);
     if (live.size < 3) thinWrong++;
@@ -179,8 +182,11 @@ export function baseFormsOf(ids) {
 // A family must add a form its skill does not have.
 export function checkForms(baseForms = {}) {
   const out = [];
+  // Families that carry a curriculum skill are compared within that skill (adding and subtracting
+  // distances are different skills even when HOREB files both under one skill); the rest, as before,
+  // within their HOREB skill. What a skill's own generator already asks is still compared per HOREB skill.
   const bySkill = new Map();
-  for (const f of FAMILIES) { if (!bySkill.has(f.skill)) bySkill.set(f.skill, []); bySkill.get(f.skill).push(f); }
+  for (const f of FAMILIES) { const k = f.cskill || f.skill; if (!bySkill.has(k)) bySkill.set(k, []); bySkill.get(k).push(f); }
   const ids = new Set();
   for (const f of FAMILIES) { if (ids.has(f.id)) out.push(`${f.id}: duplicate id`); ids.add(f.id); }
   for (const [skill, fams] of bySkill) {
@@ -189,8 +195,8 @@ export function checkForms(baseForms = {}) {
       for (let j = i + 1; j < reps.length; j++) {
         if (sameForm(a.t, reps[j].t)) out.push(`${a.f.id}: same form as ${reps[j].f.id}: "${a.t.slice(0, 80)}"`);
       }
-      for (const b of baseForms[skill] || []) {
-        if (sameForm(a.t, b)) { out.push(`${a.f.id}: repeats a form ${skill} already has: "${b.slice(0, 80)}"`); break; }
+      for (const b of baseForms[a.f.skill] || []) {
+        if (sameForm(a.t, b)) { out.push(`${a.f.id}: repeats a form ${a.f.skill} already has: "${b.slice(0, 80)}"`); break; }
       }
     });
   }

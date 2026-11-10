@@ -97,7 +97,7 @@ export const FAMILIES = [
       const val = up ? a + b : t - b;
       const options = mc(String(val), [[String(up ? Math.abs(a - b) : t + b), up ? `${l} − ${a} = ${b} means ${l} is bigger than ${b}. Add ${a} to both sides.` : `${t} − ${l} = ${b} means ${l} is what is taken away. ${l} is less than ${t}.`, up ? 'M_SUBTRACTS_FOR_X_MINUS' : 'M_UNKNOWN_SUBTRACTED_TREATED_AS_X_MINUS'], [String(up ? b : t), 'Check by putting it into the equation.', up ? 'M_SAME_OPERATION_NOT_INVERSE' : 'M_UNKNOWN_SUBTRACTED_TREATED_AS_X_MINUS'], [String(up ? a : b), 'Check by putting it into the equation.', 'M_SAME_OPERATION_NOT_INVERSE']]);
       if (!options) return null;
-      return { question: `Solve ${eq}. Which value of ${l} makes it true?`, options, instruction: 'Choose the value.',
+      return { question: up ? `A learner takes ${a} away from a number and has ${b} left. Which number did the learner start with?` : `A number is taken away from ${t} and ${b} is left. Which number was taken away?`, options, instruction: 'Choose the value.',
         hints: [up ? 'Read it as: I had some, took away ' + a + ', and have ' + b + ' left.' : 'Read it as: from ' + t + ', what do I take away to leave ' + b + '?', 'Check by putting your answer back.'], steps: [up ? `${l} = ${b} + ${a} = ${val}.` : `${l} = ${t} − ${b} = ${val}.`, 'Check by substitution.'] };
     } }),
   fam({ id: 'g5c.eq.sadd.spot', cs: `${Q}EQ_SOLVE_ADD_SUB`, form: 'spot', rung: 3,
@@ -121,7 +121,7 @@ export const FAMILIES = [
       const a = randInt(3, 9), b = randInt(4, 12), x = a * b, l = L();
       const options = mc(String(x), [[String(Math.floor(x / a) === b ? b : b), `${l} ÷ ${a} = ${b} means ${l} shared by ${a} gives ${b}. Undo it by multiplying.`, 'M_DIVIDES_FOR_X_DIV'], [String(x + a), 'Check: divide your answer by ' + a + '.', 'M_DIVIDES_FOR_X_DIV'], [String(b - a > 0 ? b - a : b + a), 'Use the opposite operation.', 'M_DIVIDES_FOR_X_DIV']]);
       if (!options) return null;
-      return { question: `Solve ${l} ÷ ${a} = ${b}. Which value of ${l} is right?`, options, instruction: 'Choose the value.',
+      return { question: `${person().name} shares a number of sweets equally among ${a} children and each gets ${b}. How many sweets were there? (${l} ÷ ${a} = ${b}.)`, options, instruction: 'Choose the value.',
         hints: [`${l} was shared among ${a} and each got ${b}.`, 'Multiply to find the total.'], steps: [`${l} = ${b} × ${a} = ${x}.`, `Check: ${x} ÷ ${a} = ${b}.`] };
     } }),
   fam({ id: 'g5c.eq.smul.spot', cs: `${Q}EQ_SOLVE_MUL_DIV`, form: 'spot', rung: 3,
@@ -169,7 +169,7 @@ export const FAMILIES = [
       const k = randInt(2, 6), x = randInt(4, 15), b = randInt(5, 30), c = k * x + b;
       const options = mc(String(x), [[String(Math.round((c / k - b) * 100) / 100), 'Divide only after taking the added number off. Undo in the opposite order.', 'M_UNDOES_IN_WRONG_ORDER'], [String(Math.round(c / (k + b) * 100) / 100), `Terms with x and plain numbers cannot be joined into one kind of term.`, 'M_COMBINES_UNLIKE_TERMS'], [String(c - b), 'That is the value of ' + k + 'x, not x.', 'M_UNDOES_IN_WRONG_ORDER']]);
       if (!options) return null;
-      return { question: `Solve ${k}x + ${b} = ${c}. Which value of x is right?`, options, instruction: 'Choose the value.',
+      return { question: `${person().name} must find x when ${k}x + ${b} = ${c}, undoing the steps in the right order. Which value of x is right?`, options, instruction: 'Choose the value.',
         hints: [`First take ${b} from both sides.`, `Then divide both sides by ${k}.`], steps: [`${k}x = ${c} − ${b} = ${c - b}.`, `x = ${c - b} ÷ ${k} = ${x}.`] };
     } }),
   fam({ id: 'g5c.eq.two.spot', cs: `${Q}EQ_TWO_STEP`, form: 'spot', rung: 3,

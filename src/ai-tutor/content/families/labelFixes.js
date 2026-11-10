@@ -307,7 +307,7 @@ export const CORE_FAMILIES = [
     check: ({ t1, kg1, t2, kg2 }, a) => a - kg1 - kg2 === (t1 + t2) * 1000 }),
 
   // ---- G5_MONEY: budget, tax, banks, saving
-  fx({ id: 'g5.money.budget-left', skill: 'G5_MONEY', outcome: 'G5.MONEY.c', rung: 1, form: 'word',
+  fx({ id: 'g5.money.budget-left', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE', outcome: 'MATH.G5.MEASUR.MONEY.c', misMapped: false, rung: 1, form: 'word',
     draw: () => { const have = pick([300, 400, 500, 600, 800, 1000]); const a = price('exercise book') * 2, b = price('pen'), c = price('ruler'), d = pick([100, 150, 200]); const left = have - a - b - c - d; return left >= 0 && left !== 0 ? { have, a, b, c, d, p: person() } : null; },
     make: ({ have, a, b, c, d, p }) => {
       const left = have - a - b - c - d;
@@ -318,7 +318,7 @@ export const CORE_FAMILIES = [
         steps: [`Planned spending: ${a} + ${b} + ${c} + ${d} = ${sh(a + b + c + d)}.`, `Left: ${have} − ${a + b + c + d} = ${sh(left)}.`] };
     },
     check: ({ have, a, b, c, d }, v) => v + a + b + c + d === have }),
-  fx({ id: 'g5.money.budget-why', skill: 'G5_MONEY', outcome: 'G5.MONEY.a', rung: 1, form: 'why',
+  fx({ id: 'g5.money.budget-why', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.BUDGET_IMPORTANCE', outcome: 'MATH.G5.MEASUR.MONEY.b', misMapped: false, rung: 1, form: 'why',
     draw: () => { const has = pick([500, 800, 1000, 1500]); return { has, p: person(), k: randInt(0, 3) }; },
     make: ({ has, p, k }) => {
       const opts = [{ text: 'To plan the money so it covers what is needed', right: true }, { text: 'To make the money grow bigger by itself each month', right: false, why: 'A budget does not add money. It plans how to use it.' }, { text: 'To spend all of it as fast as we possibly can', right: false, why: 'A budget slows spending down by planning it.' }, { text: 'To hide the money away from the whole family', right: false, why: 'A budget is a plan, and a family often makes it together.' }];
@@ -326,7 +326,7 @@ export const CORE_FAMILIES = [
         hints: ['A budget is written before the money is spent.', 'What does it help you decide?'],
         steps: ['A budget lists what money comes in and what it will be used for.', 'It helps make sure needs are covered first.'] };
     } }),
-  fx({ id: 'g5.money.tax-why', skill: 'G5_MONEY', outcome: 'G5.MONEY.d', rung: 1, form: 'why',
+  fx({ id: 'g5.money.tax-why', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.TAX_MEANING', outcome: 'MATH.G5.MEASUR.MONEY.d', misMapped: false, rung: 1, form: 'why',
     draw: () => { const list = ['roads', 'public schools', 'public hospitals', 'clean water supply']; return { what: pick(list), k: randInt(0, 3), n: randInt(1, 5) }; },
     make: ({ what, k, n }) => {
       const opts = [{ text: `It pays for services such as ${what}`, right: true }, { text: 'It goes to the shop owner as profit', right: false, why: 'Tax goes to the government, not to the shop.' }, { text: 'It is a gift that people may give if they wish', right: false, why: 'Tax is required by law.' }, { text: 'It is money a bank lends to people', right: false, why: 'That is a loan, not a tax.' }];
@@ -334,7 +334,7 @@ export const CORE_FAMILIES = [
         hints: ['Tax is money people pay to the government.', 'What does the government use it for?'],
         steps: ['Tax is money people must pay to the government.', `Government uses it for services such as ${what}.`] };
     } }),
-  fx({ id: 'g5.money.bank-service', skill: 'G5_MONEY', outcome: 'G5.MONEY.e', rung: 1, form: 'direct',
+  fx({ id: 'g5.money.bank-service', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.BANK_SERVICES', outcome: 'MATH.G5.MEASUR.MONEY.e', misMapped: false, rung: 1, form: 'direct',
     draw: () => { const list = [['keep money safe and take it out when needed', 'A savings account'], ['borrow money and pay it back with interest', 'A loan'], ['take out cash at any time of day from a machine', 'An ATM']]; const [q, right] = pick(list); return { q, right, all: [...list.map(x => x[1]), 'A receipt'], p: person(), k: randInt(0, 3) }; },
     make: ({ q, right, all, p, k }) => {
       const opts = all.map(text => ({ text, right: text === right, why: text === right ? undefined : (text === 'A receipt' ? 'A receipt only shows that something was paid for.' : `${text} is for something else. Read what ${p.name} wants to do.`) }));
@@ -342,7 +342,7 @@ export const CORE_FAMILIES = [
         hints: ['Think about what each service is for.', `What does ${p.name} want to do with the money?`],
         steps: [`To ${q}, ${p.name} needs: ${right}.`, 'Banks offer different services for different needs.'] };
     } }),
-  fx({ id: 'g5.money.save-weeks', skill: 'G5_MONEY', outcome: 'G5.MONEY.f', rung: 2, form: 'word',
+  fx({ id: 'g5.money.save-weeks', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.SAVING_FACTORS', outcome: 'MATH.G5.MEASUR.MONEY.f', misMapped: false, rung: 2, form: 'word',
     draw: () => { const w = pick([10, 15, 20, 25, 30, 35, 40, 50]), weeks = randInt(4, 20), thing = pick(['football', 'school bag', 'pair of shoes', 'storybook']); return { w, weeks, thing, p: person() }; },
     make: ({ w, weeks, thing, p }) => ({
       question: `${p.name} saves ${sh(w)} every week in a savings account. How many weeks will it take to save ${sh(w * weeks)} for a ${thing}?`,

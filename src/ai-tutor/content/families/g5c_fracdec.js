@@ -317,7 +317,7 @@ export const FAMILIES = [
     } }),
 
   // ---------------------------------------------------------------- DEC_COMPARE
-  fam({ id: 'g5c.dec.cmp.which', cs: `${DC}DEC_COMPARE`, form: 'direct', rung: 1,
+  fam({ id: 'g5c.dec.cmp.which', cs: `${DC}DEC_COMPARE`, form: 'word', rung: 1,
     gen: () => {
       const a = pick([0.5, 0.3, 0.7, 0.6, 0.4, 0.8]), b = dp(a - 0.2 + randInt(1, 9) / 1000 + randInt(1, 9) / 100), c = dp(a - 0.15 + randInt(1, 9) / 1000 + randInt(1, 9) / 100);
       if (!(a > b && a > c) || b === c || b <= 0 || c <= 0) return null;

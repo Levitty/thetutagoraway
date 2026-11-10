@@ -101,7 +101,7 @@ export const FAMILIES = [
     gen: () => {
       const a = randInt(2, 8) * 100 + randInt(4, 9) * 10 + randInt(5, 9), b = randInt(1, 6) * 10 + randInt(5, 9), t = rnd(a, 10) * rnd(b, 10), p = person();
       if (rnd(a, 10) % 100 === 0) return null;
-      return { question: `A school buys ${b} desks costing sh ${a} each. ${p.name} estimates the total cost by rounding each number to the nearest ten. What is the estimate in shillings?`, answer: t,
+      return { question: `A hospital orders ${b} mattresses at sh ${a} each. ${p.name} estimates the bill by rounding each number to the nearest ten and multiplying. What is the estimate?`, answer: t,
         wrong: [[a * b, 'You worked out the exact product. Round both numbers first, then multiply.', 'M_EXACT_THEN_ROUND'], [fl(a, 10) * fl(b, 10), 'You rounded down by chopping the ones. A ones digit of 5 or more rounds up.', 'M_TRUNCATE_NOT_ROUND'], [t / 10, 'You attached too few zeros. Count the zeros in both rounded numbers.', 'M_ZEROS_MISCOUNTED'], [t * 10, 'You attached too many zeros.', 'M_ZEROS_MISCOUNTED']],
         hints: ['Round each number to the nearest ten.', 'Multiply the rounded numbers, counting all the zeros.'], steps: [`${a} → ${rnd(a, 10)} and ${b} → ${rnd(b, 10)}.`, `${rnd(a, 10)} × ${rnd(b, 10)} = ${commas(t)}.`], chk: (v) => v % 100 === 0 && v === rnd(a, 10) * rnd(b, 10) };
     } }),
@@ -128,7 +128,7 @@ export const FAMILIES = [
       const exact = a * b, shown = ok ? exact : Math.round(exact / 10), est = rnd(a, 10) * rnd(b, 10);
       if (a % 10 === 0 || b % 10 === 0 || shown === exact && !ok) return null;
       const options = mc(ok ? 'Yes, it is close to the estimate' : 'No, it is about ten times too small', [[ok ? 'No, it is not exactly the estimate' : 'Yes, it looks about right', ok ? 'An estimate is only close. The exact answer does not have to equal it.' : 'Compare the size with the estimate. It is far too small.', ok ? 'M_ESTIMATE_MUST_MATCH' : 'M_NO_SIZE_CHECK'], [ok ? 'No, the digits are different' : 'Yes, it has the same last digit', 'Compare the size of the exact answer with the estimate.', ok ? 'M_ESTIMATE_MUST_MATCH' : 'M_NO_SIZE_CHECK']]);
-      return { question: `${p.name} says ${a} × ${b} = ${commas(shown)}. The estimate with both numbers rounded to the nearest ten is ${commas(est)}. Is the answer reasonable?`, options, instruction: 'Choose the best answer.',
+      return { question: `${p.name} says ${a} × ${b} = ${commas(shown)}. Rounded to tens, the sum is ${commas(est)}. Is the answer reasonable?`, options, instruction: 'Choose the best answer.',
         hints: ['Is the answer close to the estimate, or far away?', 'A product ten times too small is a sign of a missing zero.'], steps: [`Estimate ${commas(est)}.`, ok ? `${commas(exact)} is close to it.` : `${commas(exact)} is the right product, so ${commas(shown)} is too small.`] };
     } }),
   fam({ id: 'g5c.mul.chk.money', cs: `${M}ESTIMATE_CHECK_REASONABLE`, form: 'word', rung: 3,
@@ -146,7 +146,7 @@ export const FAMILIES = [
       const a = randInt(12, 48), b = randInt(12, 48), t = a * b;
       if (a % 10 === 0 || b % 10 === 0) return null;
       const options = mc(commas(Math.round(t / 10)), [[commas(t), 'This is the exact product.', 'M_ESTIMATE_MUST_MATCH'], [commas(t + 8), 'This is close to the estimate, so it could be right.', 'M_ESTIMATE_MUST_MATCH'], [commas(t - 12), 'This is close to the estimate, so it could be right.', 'M_ESTIMATE_MUST_MATCH']]);
-      return { question: `By estimating ${a} × ${b} with numbers rounded to the nearest ten, which answer cannot be right?`, options, instruction: 'Choose the answer that must be wrong.',
+      return { question: `${person().name} multiplies ${a} by ${b}. Which of these answers is impossible if you round both numbers to tens first?`, options, instruction: 'Choose the answer that must be wrong.',
         hints: [`Round: ${rnd(a, 10)} × ${rnd(b, 10)}.`, 'Which answer is far from the estimate?'], steps: [`Estimate ${commas(rnd(a, 10) * rnd(b, 10))}.`, `${commas(Math.round(t / 10))} is far too small.`] };
     } }),
 
@@ -383,7 +383,7 @@ export const FAMILIES = [
       if (!Number.isInteger(est) || est < 4) return null;
       const shown = ok ? Math.floor(n / d) : Math.floor(n / d) * 10;
       const options = mc(ok ? 'Reasonable: it is close to the estimate' : 'Not reasonable: it is about ten times too big', [[ok ? 'Not reasonable: it is not exactly the estimate' : 'Reasonable: it is a whole number', 'Compare the size with the estimate.', 'M_ESTIMATE_COMPUTED_EXACTLY'], [ok ? 'Not reasonable: the estimate has different digits' : 'Reasonable: it has the same digits as the estimate', 'Compare the size, not the digits.', 'M_ESTIMATE_COMPUTED_EXACTLY']]);
-      return { question: `${person().name} says ${n} ÷ ${d} = about ${shown}. The estimate with both numbers rounded to the nearest ten is ${est}. Is the answer reasonable?`, options, instruction: 'Choose the best answer.',
+      return { question: `${person().name} says ${n} ÷ ${d} is about ${shown}. Rounding both numbers to tens gives ${est}. Is that sensible?`, options, instruction: 'Choose the best answer.',
         hints: ['Is the answer near the estimate?', 'An answer ten times too big is a sign of a misplaced digit.'], steps: [`Estimate ${est}.`, ok ? `${shown} is close.` : `${shown} is far larger.`] };
     } }),
 
@@ -423,7 +423,7 @@ export const FAMILIES = [
     gen: () => {
       const g = randInt(3, 6), each = randInt(4, 9), give = randInt(1, 3), n = g * each, p = person();
       if (give >= each) return null;
-      return { question: `A teacher shares ${n} pencils equally among ${g} groups. Then each group gives away ${give} pencils.`,
+      return { question: `${p.name}, a teacher, has ${n} pencils for ${g} groups of pupils. The pencils are shared out equally. Later each group returns ${give} of them.`,
         parts: [{ prompt: 'How many pencils does each group get at first?', answer: each, hint: 'Share the pencils equally.', wrong: [[n * g, 'Sharing means divide.', 'M_STOPS_AFTER_ONE_STEP'], [n - g, 'Equal sharing is division.', 'M_EXPRESSION_ORDER_SCRAMBLED'], [each + give, 'Check the division.', 'M_STOPS_AFTER_ONE_STEP']] },
           { prompt: 'How many pencils does each group have after giving some away?', answer: each - give, hint: 'Take away what each group gave.', wrong: [[each, 'That is the number before they gave some away.', 'M_STOPS_AFTER_ONE_STEP'], [n / (g - give), 'Share first, then take away.', 'M_EXPRESSION_ORDER_SCRAMBLED'], [each + give, 'They gave pencils away, so subtract.', 'M_STOPS_AFTER_ONE_STEP']] }],
         steps: [`${n} ÷ ${g} = ${each}.`, `${each} − ${give} = ${each - give}.`], chk: (x, v) => v[0] * g === n && v[0] - give === v[1] };
@@ -433,7 +433,7 @@ export const FAMILIES = [
       const g = randInt(3, 6), each = randInt(4, 9), give = randInt(1, 3), n = g * each;
       if (give >= each) return null;
       const options = mc(`${n} ÷ ${g} − ${give}`, [[`${n} ÷ (${g} − ${give})`, 'The groups do not change. Share first, then take away.', 'M_EXPRESSION_ORDER_SCRAMBLED'], [`${n} − ${g} ÷ ${give}`, 'Write the operations in the order of the story: share, then subtract.', 'M_EXPRESSION_ORDER_SCRAMBLED'], [`${n} + ${g} − ${give}`, 'Sharing equally is division.', 'M_STOPS_AFTER_ONE_STEP']]);
-      return { question: `A teacher shares ${n} pencils equally among ${g} groups, then each group gives away ${give} pencils. Which expression finds the pencils each group has now?`, options, instruction: 'Choose the expression.',
+      return { question: `Choose the expression for this story: ${n} pencils are shared equally among ${g} groups, and each group then hands in ${give}.`, options, instruction: 'Choose the expression.',
         hints: ['What happens first in the story?', 'Write the steps in that order.'], steps: [`${n} ÷ ${g} = ${each}.`, `${each} − ${give} = ${each - give}.`] };
     } }),
 ];

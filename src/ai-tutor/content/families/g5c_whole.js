@@ -22,7 +22,7 @@ export const FAMILIES = [
       const n = sixDigits(), p = randInt(2, 5), d = digitAt(n, p);
       if (d === 0 || digitAt(n, p) === digitAt(n, p - 1)) return null;
       const options = mc(place(n, p), [[commas(tv(n, p)), `${commas(tv(n, p))} is what the digit is worth, its total value. The question asks for the name of its place.`, 'M_PV_GIVES_TOTAL_VALUE'], [place(n, p - 1), `Count the places again from the ones on the right: ones, tens, hundreds, then thousands. The ${d} is one place further left.`, 'M_PV_MISCOUNT_PLACES'], [place(n, Math.min(5, p + 1)) === place(n, p) ? 'millions' : place(n, p + 1), 'Be careful. The digit is not that far to the left.', 'M_PV_MISCOUNT_PLACES']]);
-      return { question: `In the number ${commas(n)}, the digit ${d} is in which place?`, options, instruction: 'Choose the name of the place.',
+      return { question: `A water tank gauge shows ${commas(n)} litres. Which place name tells where the digit ${d} sits in that reading?`, options, instruction: 'Choose the name of the place.',
         hints: ['Count the places from the ones on the right.', 'Ones, tens, hundreds, then after the comma: thousands, ten thousands, hundred thousands.'],
         steps: [`Write ${commas(n)} under a place value chart, ones at the right end.`, `The ${d} sits in the ${place(n, p)} place.`] };
     } }),
@@ -72,7 +72,7 @@ export const FAMILIES = [
       const wrongDrop = String(n).replace(/0/g, '');
       const options = mc(sum, [[[a * 1e5, b * 1e4, c * 1e3, e * 100, f * 10, g].filter(x => x).map(x => String(x).replace(/0+$/, '') || x).join(' + '), 'Each digit is worth its digit followed by the zeros of its place. A bare digit is only its face value.', 'M_TV_FACE_VALUE'], [[a * 1e5, b * 1e4, c * 1e3, e * 100, f * 10, g].filter(x => x).map(x => commas(x * 10)).join(' + '), 'Each total value here has one zero too many. Count the digits to the right of each digit.', 'M_TV_WRONG_NUMBER_OF_ZEROS'], [[a * 1e5, b * 1e4, c * 1e3, e * 100, f * 10, g].filter(x => x).map(x => commas(x / 10 < 1 ? x : x)).slice(0, -1).join(' + ') || 'x', 'The ones are missing. Every non-zero digit is added into the sum.', 'M_TV_COMPOSE_DROPS_ZEROS']]);
       if (!options) return null;
-      return { question: `Which sum shows the total value of each digit in ${commas(n)}?`, options, instruction: 'Choose the correct expanded form.',
+      return { question: `${person().name} writes ${commas(n)} as a sum of what each digit is worth. Which sum has been written correctly?`, options, instruction: 'Choose the correct expanded form.',
         hints: ['Find the total value of the first digit by counting the digits to its right.', 'A zero digit is worth nothing, so it is left out of the sum.'],
         steps: [`Total values: ${sum}.`, `Their total is ${commas(n)}, the number we started with.`] };
     } }),
@@ -264,7 +264,7 @@ export const FAMILIES = [
       const h = randInt(100, 990) * 100, ok = [h - 50, h + 49], no = [h + 50, h - 51];
       const t = pick(ok), bad = pick(no);
       const options = mc(commas(t), [[commas(bad), `${commas(bad)} rounds to ${commas(rnd(bad, 100))}, not ${commas(h)}.`, 'M_ROUND_CHAIN_ROUNDING'], [commas(h + 100 + 30), 'It rounds to a different hundred.', 'M_ROUND_DOWN_DECREASES_DIGIT'], [commas(h - 100 - 20), 'It rounds to a different hundred.', 'M_ROUND_DOWN_DECREASES_DIGIT']]);
-      return { question: `Which of these numbers rounds to ${commas(h)} when we round to the nearest hundred?`, options, instruction: 'Choose the number.',
+      return { question: `A shopkeeper rounds every price to the nearest hundred shillings. Which of these prices becomes sh ${commas(h)}?`, options, instruction: 'Choose the number.',
         hints: ['Round each number to the nearest hundred and compare.', 'A tens digit of 5 or more rounds up.'], steps: [`${commas(t)} rounds to ${commas(h)}.`, `${commas(bad)} rounds to ${commas(rnd(bad, 100))}.`] };
     } }),
 
@@ -430,7 +430,7 @@ export const FAMILIES = [
       const [a, b] = pick([[12, 18], [24, 36], [8, 12], [20, 30], [16, 24], [30, 45], [18, 27], [28, 42], [36, 48], [40, 60]]);
       const g = gcd(a, b), l = lcm(a, b), small = Math.min(a, b), p = person();
       const first = [...Array(small)].map((_, i) => i + 1).filter(i => a % i === 0 && b % i === 0)[1] || 1;
-      return { question: `${p.name} wants the greatest number that divides both ${a} and ${b} exactly. This is the highest common factor, HCF. What is the HCF of ${a} and ${b}?`, answer: g,
+      return { question: `${p.name} lists the factors of ${a} and of ${b}, then picks the biggest number that appears in both lists. Which number does ${p.she} pick?`, answer: g,
         wrong: [[l, 'That is the LCM or a multiple. The HCF divides both numbers, so it cannot be bigger than the smaller one.', 'M_HCF_GIVES_LCM_OR_PRODUCT'], [a * b, 'That is the product. The HCF is a factor of both numbers, not bigger than either.', 'M_HCF_GIVES_LCM_OR_PRODUCT'], [first, 'That is a common factor but not the highest. List all the common factors and pick the greatest.', 'M_HCF_ANY_COMMON'], [small === g ? 1 : small, `Does ${small} divide the other number exactly? Test before you decide.`, 'M_HCF_SMALLER_NUMBER']],
         hints: ['List the factors of each number.', 'Pick the greatest factor that is on both lists.'], steps: [`Common factors of ${a} and ${b} include ${g}.`, `The greatest is ${g}.`], chk: (x) => a % x === 0 && b % x === 0 && gcd(a / x, b / x) === 1 };
     } }),
@@ -471,11 +471,11 @@ export const FAMILIES = [
   fam({ id: 'g5c.whole.hp.which', cs: `${W}HCF_PROBLEMS`, form: 'why', rung: 3,
     gen: () => {
       const [a, b] = pick([[12, 18], [24, 30], [20, 28], [16, 36]]), g = gcd(a, b), l = lcm(a, b), p = person(), cut = Math.random() < 0.5;
-      const q = cut ? `${p.name} cuts two planks, ${a} m and ${b} m long, into equal pieces as long as possible with nothing left. Which should ${p.she} find, the HCF or the LCM, and what is the length?` : `Two bells ring every ${a} and ${b} minutes. When will they ring together again? Which should be found?`;
-      const right = cut ? `The HCF: each piece is ${g} m` : `The LCM: ${l} minutes later`;
-      const options = mc(right, [[cut ? `The LCM: each piece is ${l} m` : `The HCF: ${g} minutes later`, cut ? 'A piece cannot be longer than the planks. The longest equal piece is the HCF.' : 'A time when both ring again is a multiple of both intervals, so it is the LCM.', cut ? 'M_HCFPROB_USES_LCM' : 'M_LCMPROB_USES_HCF'], [cut ? `The HCF: there are ${a / g + b / g} pieces` : `The LCM: ${a + b} minutes later`, cut ? 'That is how many pieces there are, not how long each one is.' : 'Adding the two intervals does not give the next meeting time. Find the LCM.', cut ? 'M_HCFPROB_WRONG_QUANTITY' : 'M_LCMPROB_ADDS_INTERVALS']]);
+      const q = cut ? `${p.name} packs ${a} kg of rice and ${b} kg of beans into the largest identical sacks, with nothing left over. Which should ${p.she} find, the HCF or the LCM, and what is the sack size?` : `Two bells ring every ${a} and ${b} minutes. When will they ring together again? Which should be found?`;
+      const right = cut ? `The HCF: each sack is ${g} kg` : `The LCM: ${l} minutes later`;
+      const options = mc(right, [[cut ? `The LCM: each sack is ${l} kg` : `The HCF: ${g} minutes later`, cut ? 'A sack cannot hold more than all the rice. The largest equal sack is the HCF.' : 'A time when both ring again is a multiple of both intervals, so it is the LCM.', cut ? 'M_HCFPROB_USES_LCM' : 'M_LCMPROB_USES_HCF'], [cut ? `The HCF: there are ${a / g + b / g} sacks` : `The LCM: ${a + b} minutes later`, cut ? 'That is how many sacks there are, not the size of each one.' : 'Adding the two intervals does not give the next meeting time. Find the LCM.', cut ? 'M_HCFPROB_WRONG_QUANTITY' : 'M_LCMPROB_ADDS_INTERVALS']]);
       return { question: q, options, instruction: 'Choose the method and the answer.',
-        hints: cut ? ['Longest equal pieces that fit both: which tool finds the largest number that divides both?', 'Check that the piece is shorter than both planks.'] : ['The time must be a multiple of both intervals.', 'Find the least common multiple.'], steps: cut ? [`HCF of ${a} and ${b} is ${g}.`, `Each piece is ${g} m.`] : [`Multiples of ${a} and ${b}: the first in both is ${l}.`, `They ring together after ${l} minutes.`] };
+        hints: cut ? ['Largest equal sacks that fit both loads: which tool finds the largest number that divides both?', 'Check that the sack size divides both amounts.'] : ['The time must be a multiple of both intervals.', 'Find the least common multiple.'], steps: cut ? [`HCF of ${a} and ${b} is ${g}.`, `Each sack is ${g} kg.`] : [`Multiples of ${a} and ${b}: the first in both is ${l}.`, `They ring together after ${l} minutes.`] };
     } }),
 
   // ---------------------------------------------------------------- COMMON_MULTIPLES
@@ -507,7 +507,7 @@ export const FAMILIES = [
   fam({ id: 'g5c.whole.lcm.find', cs: `${W}LCM`, form: 'word', rung: 1,
     gen: () => {
       const [a, b] = pick([[4, 6], [6, 8], [3, 5], [4, 10], [6, 9], [8, 12], [5, 6], [9, 12], [10, 15], [12, 18]]), l = lcm(a, b), g = gcd(a, b), p = person();
-      return { question: `${p.name} needs the lowest common multiple of ${a} and ${b}. This is the smallest number that is a multiple of both. What is the LCM of ${a} and ${b}?`, answer: l,
+      return { question: `${p.name} writes the multiples of ${a} in one row and of ${b} in another, then circles the first number found in both rows. Which number is circled?`, answer: l,
         wrong: [[a * b, `That is the product. A smaller number may be a multiple of both. Check the multiples of ${Math.max(a, b)}.`, 'M_LCM_ALWAYS_PRODUCT'], [g, 'That is the HCF. The LCM must be at least as big as the larger number.', 'M_LCM_GIVES_HCF'], [Math.min(a, b), `The LCM is a multiple of both numbers. Is ${Math.min(a, b)} a multiple of ${Math.max(a, b)}?`, 'M_LCM_SMALLER_NUMBER'], [l * 2, 'There is a smaller number that is a multiple of both.', 'M_LCM_ALWAYS_PRODUCT']],
         hints: [`List the multiples of ${Math.max(a, b)}.`, `Find the first one that ${Math.min(a, b)} divides exactly.`], steps: [`Multiples of ${Math.max(a, b)}: ${[1, 2, 3, 4, 5, 6].map(i => Math.max(a, b) * i).join(', ')}.`, `The first that ${Math.min(a, b)} divides is ${l}.`], chk: (x) => x % a === 0 && x % b === 0 && gcd(x / a, x / b) === 1 };
     }, allowNegative: false }),
@@ -518,13 +518,13 @@ export const FAMILIES = [
       const ok = claimed === l;
       const codeMap = claimed === a * b ? 'M_LCM_ALWAYS_PRODUCT' : claimed === gcd(a, b) ? 'M_LCM_GIVES_HCF' : 'M_LCM_SMALLER_NUMBER';
       const options = mc(ok ? 'True: it is the smallest number both divide into' : 'False', [[ok ? 'False: the LCM is the product' : 'True', ok ? 'The LCM is not always the product. Check for a smaller common multiple.' : 'Check: is it a multiple of both numbers, and is it the smallest such number?', ok ? 'M_LCM_ALWAYS_PRODUCT' : codeMap]]);
-      return { question: `${p.name} says the LCM of ${a} and ${b} is ${claimed}. LCM means the least common multiple. Is this true or false?`, options, instruction: 'Choose true or false.',
+      return { question: `${p.name} says the smallest number that both ${a} and ${b} divide into exactly is ${claimed}. Is this true or false?`, options, instruction: 'Choose true or false.',
         hints: [`Is ${claimed} a multiple of ${a}? Of ${b}?`, 'Is there a smaller number that is a multiple of both?'], steps: [`The first number in both lists of multiples is ${l}.`, `So the LCM of ${a} and ${b} is ${l}.`] };
     } }),
   fam({ id: 'g5c.whole.lcm.three', cs: `${W}LCM`, form: 'steps', rung: 3,
     gen: () => {
       const [a, b, c] = pick([[2, 3, 4], [2, 3, 5], [3, 4, 6], [2, 4, 5], [3, 5, 6], [4, 6, 8], [2, 5, 10]]), l2 = lcm(a, b), l = lcm(l2, c), p = person();
-      return { question: `${p.name} finds the lowest common multiple of ${a}, ${b} and ${c} in two steps.`,
+      return { question: `${p.name} looks for the smallest number that ${a}, ${b} and ${c} all divide into, working in two steps.`,
         parts: [{ prompt: `What is the LCM of ${a} and ${b}?`, answer: l2, hint: 'List multiples of the larger number.', wrong: [[a * b, 'A smaller number may be a multiple of both.', 'M_LCM_ALWAYS_PRODUCT'], [gcd(a, b), 'The LCM is at least as big as the larger number.', 'M_LCM_GIVES_HCF'], [Math.min(a, b), 'That is not a multiple of the larger number.', 'M_LCM_SMALLER_NUMBER']].filter(x => x[0] !== l2) },
           { prompt: `What is the LCM of ${a}, ${b} and ${c} together?`, answer: l, hint: `It must be a multiple of ${c} as well as of the first answer.`, wrong: [[a * b * c, 'Multiplying all three makes a common multiple, but not the least.', 'M_LCM_ALWAYS_PRODUCT'], [l2, `Is ${l2} a multiple of ${c}?`, 'M_LCM_SMALLER_NUMBER'], [Math.max(a, b, c), 'Is the biggest number a multiple of all three?', 'M_LCM_SMALLER_NUMBER']].filter(x => x[0] !== l) }],
         steps: [`LCM of ${a} and ${b} is ${l2}.`, `Next multiples of ${l2} until ${c} divides: ${l}.`], chk: (x, v) => v[1] % a === 0 && v[1] % b === 0 && v[1] % c === 0 && v[1] === l };
@@ -534,7 +534,7 @@ export const FAMILIES = [
   fam({ id: 'g5c.whole.lp.matatu', cs: `${W}LCM_PROBLEMS`, form: 'word', rung: 2,
     gen: () => {
       const [a, b] = pick([[12, 18], [10, 15], [8, 12], [6, 8], [20, 30], [15, 20]]), l = lcm(a, b), p = person();
-      return { question: `At a stage, one matatu leaves every ${a} minutes and another every ${b} minutes. Both leave together at 8:00 a.m. After how many minutes will they next leave together?`, answer: l,
+      return { question: `Two lamps on a tower flash, one every ${a} seconds and the other every ${b} seconds. They flash together now. After how many seconds will they next flash together?`, answer: l,
         wrong: [[gcd(a, b), 'That is the HCF. They leave together at a time that is a multiple of both intervals.', 'M_LCMPROB_USES_HCF'], [a + b, `Adding the intervals does not work: does the first leave again after ${a + b} minutes?`, 'M_LCMPROB_ADDS_INTERVALS'], [a * b, 'That is a time they leave together, but there is an earlier one.', 'M_LCMPROB_ADDS_INTERVALS'], [l * 2, 'That is later than the first time.', 'M_LCMPROB_ADDS_INTERVALS']],
         hints: ['List the leaving times of each matatu in minutes after 8:00.', 'Find the first time that is in both lists.'], steps: [`First matatu: ${[1, 2, 3, 4, 5].map(i => a * i).join(', ')}.`, `Second matatu: ${[1, 2, 3, 4, 5].map(i => b * i).join(', ')}. First match: ${l} minutes.`], chk: (x) => x % a === 0 && x % b === 0 && gcd(x / a, x / b) === 1 };
     } }),

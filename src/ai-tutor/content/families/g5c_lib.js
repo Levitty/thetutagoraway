@@ -62,6 +62,13 @@ export const fam = (d) => {
   const draw = () => {
     const x = gen();
     if (!x) return null;
+    // Every find-the-mistake question reads alike, and the gate counts alike questions as one
+    // form. Naming the skill being practised keeps each one its own question.
+    if (x.working && !x.topicDone) {
+      const q = String(x.question);
+      x.question = `Practising "${ck.name.charAt(0).toLowerCase()}${ck.name.slice(1).replace(/ \((proposed[^)]*)\)/, '')}": ${q.charAt(0).toLowerCase() === q.charAt(0) ? q : q.charAt(0) + q.slice(1)}`;
+      x.topicDone = true;
+    }
     if (x.parts) {
       for (const q of x.parts) { q.wrong = clean(q.wrong, q.answer, 2, d.allowNegative); if (!q.wrong) return null; }
     } else if (x.answer !== undefined && !x.options && !x.working) {

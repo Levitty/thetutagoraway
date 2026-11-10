@@ -15,7 +15,7 @@ const gcd = (a, b) => (b ? gcd(b, a % b) : a);
 
 export const FAMILIES = [
   // ================================================================ MONEY
-  fam({ id: 'g5.money.budget-table', skill: 'G5_MONEY', outcome: 'G5.MONEY.c', rung: 2, form: 'table',
+  fam({ id: 'g5.money.budget-table', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE', outcome: 'MATH.G5.MEASUR.MONEY.c', misMapped: false, rung: 2, form: 'table',
     draw: () => {
       const food = randInt(6, 12) * 100, water = randInt(2, 6) * 50, fare = randInt(4, 10) * 50, air = randInt(2, 6) * 50, clothes = randInt(2, 5) * 100;
       const total = food + water + fare + air + clothes, have = rnd(total, 500) + 500 * randInt(0, 1);
@@ -32,7 +32,7 @@ export const FAMILIES = [
     }),
     check: ({ have, food, water, fare, air, clothes }, a) => have - a - clothes - air - fare - water === food }),
 
-  fam({ id: 'g5.money.budget-steps', skill: 'G5_MONEY', outcome: 'G5.MONEY.c', rung: 3, form: 'steps',
+  fam({ id: 'g5.money.budget-steps', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE', outcome: 'MATH.G5.MEASUR.MONEY.c', misMapped: false, rung: 3, form: 'steps',
     draw: () => {
       const a = randInt(6, 12) * 100, b = randInt(2, 6) * 100, c = randInt(1, 4) * 50, save = pick([200, 250, 300, 350, 400]);
       const total = a + b + c, P = total + save, m = randInt(3, 8), X = save * m;
@@ -49,7 +49,7 @@ export const FAMILIES = [
     }),
     check: ({ P, X }, v) => v[0] + v[1] === P && v[1] * v[2] === X }),
 
-  fam({ id: 'g5.money.budget-spot', skill: 'G5_MONEY', outcome: 'G5.MONEY.c', rung: 3, form: 'spot',
+  fam({ id: 'g5.money.budget-spot', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE', outcome: 'MATH.G5.MEASUR.MONEY.c', misMapped: false, rung: 3, form: 'spot',
     draw: () => {
       const a = randInt(5, 10) * 100, b = randInt(2, 5) * 100, c = randInt(1, 4) * 100, P = a + b + c + randInt(2, 5) * 100;
       return { a, b, c, P, k: randInt(0, 2), p: person(), months: randInt(3, 6) };
@@ -69,7 +69,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g5.money.budget-cut-why', skill: 'G5_MONEY', outcome: 'G5.MONEY.a', rung: 2, form: 'why',
+  fam({ id: 'g5.money.budget-cut-why', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.BUDGET_IMPORTANCE', outcome: 'MATH.G5.MEASUR.MONEY.b', misMapped: false, rung: 2, form: 'why',
     draw: () => ({ short: randInt(2, 8) * 50, k: randInt(0, 3), p: person() }),
     make: ({ short, k, p }) => {
       const opts = [
@@ -84,7 +84,7 @@ export const FAMILIES = [
         steps: ['A budget pays for needs first: food and school books.', 'Wants such as sweets and a toy are cut first when money is short.'] };
     } }),
 
-  fam({ id: 'g5.money.tax-add', skill: 'G5_MONEY', outcome: 'G5.MONEY.d', rung: 2, form: 'word',
+  fam({ id: 'g5.money.tax-add', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT', outcome: 'MATH.G5.MEASUR.MONEY.d', misMapped: false, rung: 2, form: 'word',
     draw: () => { const n = randInt(2, 9), r = pick([5, 10, 15]), p = person(); return { n, r, p, goods: n * 100, thing: pick(['a school jersey', 'a pair of school shoes', 'a basket of groceries']) }; },
     make: ({ n, r, p, goods, thing }) => {
       const tax = n * r, tot = goods + tax;
@@ -96,7 +96,7 @@ export const FAMILIES = [
     },
     check: ({ goods, r }, a) => (a - goods) * 100 === (goods * r) }),
 
-  fam({ id: 'g5.money.tax-receipt', skill: 'G5_MONEY', outcome: 'G5.MONEY.d', rung: 2, form: 'table',
+  fam({ id: 'g5.money.tax-receipt', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT', outcome: 'MATH.G5.MEASUR.MONEY.d', misMapped: false, rung: 2, form: 'table',
     draw: () => { const a = price('loaf of bread'), b = price('litre of milk'), c = price('kg of sugar'), tax = pick([10, 15, 20, 25]); return { a, b, c, tax }; },
     make: ({ a, b, c, tax }) => {
       const goods = a + b + c, tot = goods + tax;
@@ -110,7 +110,7 @@ export const FAMILIES = [
     },
     check: ({ a, b, c, tax }, v) => v - tax - a - b === c }),
 
-  fam({ id: 'g5.money.bank-interest', skill: 'G5_MONEY', outcome: 'G5.MONEY.e', rung: 2, form: 'word',
+  fam({ id: 'g5.money.bank-interest', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.BANK_SERVICES', outcome: 'MATH.G5.MEASUR.MONEY.e', misMapped: false, rung: 2, form: 'word',
     draw: () => { const n = randInt(2, 9), r = pick([2, 3, 4, 5]), p = person(); return { n, r, p, sav: n * 500 }; },
     make: ({ n, r, p, sav }) => {
       const interest = (sav / 100) * r, tot = sav + interest;
@@ -122,7 +122,7 @@ export const FAMILIES = [
     },
     check: ({ sav, r }, a) => (a - sav) * 100 === sav * r }),
 
-  fam({ id: 'g5.money.bank-statement', skill: 'G5_MONEY', outcome: 'G5.MONEY.e', rung: 3, form: 'table',
+  fam({ id: 'g5.money.bank-statement', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.BANK_SERVICES', outcome: 'MATH.G5.MEASUR.MONEY.e', misMapped: false, rung: 3, form: 'table',
     draw: () => {
       const S = randInt(8, 30) * 100, d1 = randInt(2, 8) * 100, w1 = randInt(2, 8) * 100, d2 = randInt(1, 6) * 100, w2 = randInt(1, 5) * 100;
       const end = S + d1 - w1 + d2 - w2;
@@ -138,7 +138,7 @@ export const FAMILIES = [
     }),
     check: ({ S, d1, w1, d2, w2 }, a) => a + w1 + w2 === S + d1 + d2 }),
 
-  fam({ id: 'g5.money.save-goal-steps', skill: 'G5_MONEY', outcome: 'G5.MONEY.f', rung: 3, form: 'steps',
+  fam({ id: 'g5.money.save-goal-steps', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.SAVING_FACTORS', outcome: 'MATH.G5.MEASUR.MONEY.f', misMapped: false, rung: 3, form: 'steps',
     draw: () => {
       const p = price('radio'), s = pick([100, 150, 200, 250]), w = pick([4, 6, 8, 10, 12]), have = p - s * w;
       return have >= 100 && have <= p / 2 && have % 50 === 0 ? { p, s, w, have, who: person() } : null;
@@ -154,7 +154,7 @@ export const FAMILIES = [
     }),
     check: ({ p, s, w, have }, v) => v[0] === p - have && v[1] * s === v[0] && v[2] * (w / 2) === v[0] }),
 
-  fam({ id: 'g5.money.save-place-why', skill: 'G5_MONEY', outcome: 'G5.MONEY.f', rung: 2, form: 'why',
+  fam({ id: 'g5.money.save-place-why', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.SAVING_FACTORS', outcome: 'MATH.G5.MEASUR.MONEY.f', misMapped: false, rung: 2, form: 'why',
     draw: () => ({ amt: pick([3000, 5000, 8000, 12000]), months: pick([4, 6, 8]), k: randInt(0, 3), p: person() }),
     make: ({ amt, months, k, p }) => {
       const opts = [
@@ -168,7 +168,7 @@ export const FAMILIES = [
         steps: ['When saving, think about safety first.', 'A SACCO or bank keeps the money safe and may add interest.'] };
     } }),
 
-  fam({ id: 'g5.money.save-spot', skill: 'G5_MONEY', outcome: 'G5.MONEY.f', rung: 3, form: 'spot',
+  fam({ id: 'g5.money.save-spot', skill: 'G5_MONEY', cskill: 'MATH.G5.MEASUR.MONEY.SAVING_FACTORS', outcome: 'MATH.G5.MEASUR.MONEY.f', misMapped: false, rung: 3, form: 'spot',
     draw: () => {
       const s = pick([50, 100, 150, 200]), w = randInt(4, 12), have = pick([200, 300, 400, 500]), X = have + s * w;
       const k = randInt(0, 1);
@@ -190,7 +190,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ ESTIMATING
-  fam({ id: 'g5.add.estimate-word', skill: 'G5_ADDITION', outcome: 'G5.ADD.c', rung: 2, form: 'word',
+  fam({ id: 'g5.add.estimate-word', skill: 'G5_ADDITION', cskill: 'MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100', outcome: 'MATH.G5.NUMBER.ADDITION.c', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const u = pick([100, 1000]), a = u === 100 ? randInt(1200, 9800) : randInt(12000, 98000), b = u === 100 ? randInt(1200, 9800) : randInt(12000, 98000);
       if (a % u === 0 || b % u === 0 || a % u === u / 2 || b % u === u / 2) return null;
@@ -213,28 +213,7 @@ export const FAMILIES = [
     },
     check: ({ ra, rb }, a) => a - rb === ra }),
 
-  fam({ id: 'g5.add.estimate-spot', skill: 'G5_ADDITION', outcome: 'G5.ADD.c', rung: 3, form: 'spot',
-    draw: () => {
-      const u = pick([100, 1000]), a = u === 100 ? randInt(1200, 9800) : randInt(12000, 98000), b = u === 100 ? randInt(1200, 9800) : randInt(12000, 98000);
-      return a % u < u / 2 || b % u < u / 2 || a % u === 0 || b % u === 0 || a % u === u / 2 || b % u === u / 2 ? null : { a, b, u, k: randInt(0, 2), p: person() };
-    },
-    make: ({ a, b, u, k, p }) => {
-      const sa = k === 0 ? fl(a, u) : rnd(a, u), sb = k === 1 ? fl(b, u) : rnd(b, u), t = k === 2 ? sa - sb : sa + sb;
-      return {
-        question: `${p.name} estimates ${commas(a)} + ${commas(b)} by rounding each number to the nearest ${u === 100 ? 'hundred' : 'thousand'}. Which step has the mistake?`,
-        working: [
-          { text: `${commas(a)} rounds to ${commas(sa)}.`, ok: sa === rnd(a, u) },
-          { text: `${commas(b)} rounds to ${commas(sb)}.`, ok: sb === rnd(b, u) },
-          { text: `${commas(sa)} + ${commas(sb)} = ${commas(t)}.`, ok: t === sa + sb },
-          { text: `The sum is about ${commas(t)}.`, ok: true },
-        ],
-        fix: k < 2 ? `${commas(k === 0 ? a : b)} is closer to ${commas(rnd(k === 0 ? a : b, u))}. The digit after the rounding place is 5 or more, so round up.` : `Estimating a sum means adding the rounded numbers. Here the second was taken from the first.`,
-        hints: ['Check each rounding by looking at the digit after the rounding place.', 'Does the last step use the sign for a sum?'],
-        steps: [`${commas(a)} rounds to ${commas(rnd(a, u))}. ${commas(b)} rounds to ${commas(rnd(b, u))}.`, `The estimate is ${commas(rnd(a, u) + rnd(b, u))}.`],
-      };
-    } }),
-
-  fam({ id: 'g5.add.estimate-check-why', skill: 'G5_ADDITION', outcome: 'G5.ADD.c', rung: 3, form: 'why',
+  fam({ id: 'g5.add.estimate-check-why', skill: 'G5_ADDITION', cskill: 'MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM', outcome: 'MATH.G5.NUMBER.ADDITION.c', misMapped: false, rung: 3, form: 'why',
     draw: () => {
       const a = randInt(12, 98) * 1000 + randInt(1, 9) * 100 + randInt(1, 9), b = randInt(12, 98) * 1000 + randInt(1, 9) * 100 + randInt(1, 9);
       return { a, b, ra: rnd(a, 1000), rb: rnd(b, 1000), k: randInt(0, 3), p: person() };
@@ -252,7 +231,7 @@ export const FAMILIES = [
         steps: [`${commas(a)} is about ${commas(ra)}. ${commas(b)} is about ${commas(rb)}.`, `The estimate is ${commas(ra + rb)}, so ${commas(claim)} is too far away.`] };
     } }),
 
-  fam({ id: 'g5.sub.estimate-word', skill: 'G5_SUBTRACTION', outcome: 'G5.SUB.c', rung: 2, form: 'word',
+  fam({ id: 'g5.sub.estimate-word', skill: 'G5_SUBTRACTION', cskill: 'MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE', outcome: 'MATH.G5.NUMBER.SUBTRACTION.c', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const u = pick([100, 1000]), a = u === 100 ? randInt(5200, 9800) : randInt(52000, 98000), b = u === 100 ? randInt(1200, 4800) : randInt(12000, 48000);
       if (a % u === 0 || b % u === 0 || a % u === u / 2 || b % u === u / 2) return null;
@@ -274,7 +253,7 @@ export const FAMILIES = [
     },
     check: ({ ra, rb }, a) => a + rb === ra }),
 
-  fam({ id: 'g5.sub.estimate-table', skill: 'G5_SUBTRACTION', outcome: 'G5.SUB.c', rung: 2, form: 'table',
+  fam({ id: 'g5.sub.estimate-table', skill: 'G5_SUBTRACTION', cskill: 'MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE', outcome: 'MATH.G5.NUMBER.SUBTRACTION.c', misMapped: false, rung: 2, form: 'table',
     draw: () => {
       const v = [0, 1, 2, 3].map(() => randInt(21, 98) * 100 + randInt(1, 9) * 10 + randInt(0, 9));
       const hi = v.indexOf(Math.max(...v)), lo = v.indexOf(Math.min(...v));
@@ -292,7 +271,7 @@ export const FAMILIES = [
     },
     check: ({ v, hi, lo }, a) => a + rnd(v[lo], 100) === rnd(v[hi], 100) }),
 
-  fam({ id: 'g5.sub.estimate-spot', skill: 'G5_SUBTRACTION', outcome: 'G5.SUB.c', rung: 3, form: 'spot',
+  fam({ id: 'g5.sub.estimate-spot', skill: 'G5_SUBTRACTION', cskill: 'MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE', outcome: 'MATH.G5.NUMBER.SUBTRACTION.c', misMapped: false, rung: 3, form: 'spot',
     draw: () => {
       const u = pick([100, 1000]), a = u === 100 ? randInt(5200, 9800) : randInt(52000, 98000), b = u === 100 ? randInt(1200, 4800) : randInt(12000, 48000);
       return a % u === 0 || b % u === 0 || a % u === u / 2 || b % u === u / 2 || rnd(a, u) <= rnd(b, u) ? null : { a, b, u, k: randInt(0, 2), p: person() };
@@ -314,7 +293,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g5.mul.estimate-word', skill: 'G5_MULTIPLICATION', outcome: 'G5.MUL.b', rung: 2, form: 'word',
+  fam({ id: 'g5.mul.estimate-word', skill: 'G5_MULTIPLICATION', cskill: 'MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10', outcome: 'MATH.G5.NUMBER.MULTIPLICATION.b', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const a = randInt(110, 890), b = randInt(12, 88);
       if (a % 100 === 0 || b % 10 === 0 || b % 10 === 5 || a % 100 < 15 || a % 100 > 85 || a % 100 === 50) return null;
@@ -335,26 +314,7 @@ export const FAMILIES = [
     },
     check: ({ ra, rb }, x) => x / rb === ra }),
 
-  fam({ id: 'g5.mul.estimate-choose', skill: 'G5_MULTIPLICATION', outcome: 'G5.MUL.b', rung: 1, form: 'direct',
-    draw: () => {
-      const a = randInt(210, 890), b = randInt(12, 88);
-      if (a % 100 < 15 || a % 100 > 85 || a % 100 === 50 || b % 10 === 0 || b % 10 === 5) return null;
-      const ra = rnd(a, 100), rb = rnd(b, 10);
-      return distinct(ra * rb, ra * rb / 10, ra * rb * 10, ra + rb) ? { a, b, ra, rb, k: randInt(0, 3) } : null;
-    },
-    make: ({ a, b, ra, rb, k }) => {
-      const opts = [
-        { text: commas(ra * rb), right: true },
-        { text: commas(ra * rb / 10), right: false, why: 'This answer is too small. Count the zeros in the rounded numbers.' },
-        { text: commas(ra * rb * 10), right: false, why: 'This answer is too big. Count the zeros in the rounded numbers.' },
-        { text: commas(ra + rb), right: false, why: 'The rounded numbers must be multiplied, not added.' },
-      ];
-      return { question: `Which is the best estimate of ${a} × ${b}?`, story: false, instruction: 'Round each number first.', options: rot(opts, k),
-        hints: [`Round ${a} to the nearest hundred and ${b} to the nearest ten.`, 'Multiply the rounded numbers. Count the zeros.'],
-        steps: [`${a} is about ${commas(ra)}. ${b} is about ${rb}.`, `${commas(ra)} × ${rb} = ${commas(ra * rb)}.`] };
-    } }),
-
-  fam({ id: 'g5.mul.estimate-steps', skill: 'G5_MULTIPLICATION', outcome: 'G5.MUL.b', rung: 3, form: 'steps',
+  fam({ id: 'g5.mul.estimate-steps', skill: 'G5_MULTIPLICATION', cskill: 'MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10', outcome: 'MATH.G5.NUMBER.MULTIPLICATION.b', misMapped: false, rung: 3, form: 'steps',
     draw: () => {
       const a = randInt(110, 890), b = randInt(12, 88);
       if (a % 100 === 0 || b % 10 === 0 || b % 10 === 5 || a % 100 < 15 || a % 100 > 85 || a % 100 === 50) return null;
@@ -373,7 +333,7 @@ export const FAMILIES = [
     }),
     check: ({ a, b, ex, est }, v) => v[0] % 100 === 0 && v[1] % 10 === 0 && v[2] === v[0] * v[1] && (v[3] === est - ex || v[3] === ex - est) && a * b === ex }),
 
-  fam({ id: 'g5.mul.estimate-why', skill: 'G5_MULTIPLICATION', outcome: 'G5.MUL.b', rung: 3, form: 'why',
+  fam({ id: 'g5.mul.estimate-why', skill: 'G5_MULTIPLICATION', cskill: 'MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE', outcome: 'MATH.G5.NUMBER.MULTIPLICATION.b', misMapped: false, rung: 3, form: 'why',
     draw: () => {
       const a = randInt(210, 890), b = randInt(12, 88);
       if (a % 100 < 15 || a % 100 > 85 || a % 100 === 50 || b % 10 === 0 || b % 10 === 5) return null;
@@ -392,7 +352,7 @@ export const FAMILIES = [
         steps: [`${a} is about ${commas(ra)}, ${b} is about ${rb}.`, `The estimate is ${commas(ra * rb)}. The answer ${commas(claim)} is much too big.`] };
     } }),
 
-  fam({ id: 'g5.div.estimate-word', skill: 'G5_DIVISION', outcome: 'G5.DIV.d', rung: 2, form: 'word',
+  fam({ id: 'g5.div.estimate-word', skill: 'G5_DIVISION', cskill: 'MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS', outcome: 'MATH.G5.NUMBER.DIVISION.d', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const rb = pick([20, 30, 40, 50]), q = randInt(5, 24), ra = rb * q;
       if (ra % 100 !== 0 || ra < 200 || ra > 900) return null;
@@ -414,7 +374,7 @@ export const FAMILIES = [
     },
     check: ({ ra, rb }, x) => x * rb === ra }),
 
-  fam({ id: 'g5.div.estimate-spot', skill: 'G5_DIVISION', outcome: 'G5.DIV.d', rung: 3, form: 'spot',
+  fam({ id: 'g5.div.estimate-spot', skill: 'G5_DIVISION', cskill: 'MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS', outcome: 'MATH.G5.NUMBER.DIVISION.d', misMapped: false, rung: 3, form: 'spot',
     draw: () => {
       const rb = pick([20, 30, 40, 50]), q = randInt(5, 24), ra = rb * q;
       if (ra % 100 !== 0 || ra < 200 || ra > 900) return null;
@@ -438,7 +398,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ EQUATIONS
-  fam({ id: 'g5.eq.let-add', skill: 'G5_SIMPLE_EQUATIONS', outcome: 'G5.EQUATIONS.a', rung: 2, form: 'word',
+  fam({ id: 'g5.eq.let-add', skill: 'G5_SIMPLE_EQUATIONS', cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB', outcome: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.a', misMapped: false, rung: 2, form: 'word',
     draw: () => { const kind = pick(['add', 'sub']), a = randInt(5, 30), x = kind === 'add' ? randInt(8, 60) : randInt(2 * a + 2, 2 * a + 30); return { kind, x, a, b: kind === 'add' ? x + a : x - a, p: person(), thing: pick(['pencils', 'sweets', 'mangoes', 'books']) }; },
     make: ({ kind, x, a, b, p, thing }) => ({
       question: kind === 'add'
@@ -452,7 +412,7 @@ export const FAMILIES = [
     }),
     check: ({ kind, a, b }, v) => (kind === 'add' ? v + a === b : v - a === b) }),
 
-  fam({ id: 'g5.eq.let-twostep', skill: 'G5_SIMPLE_EQUATIONS', outcome: 'G5.EQUATIONS.a', rung: 3, form: 'word',
+  fam({ id: 'g5.eq.let-twostep', skill: 'G5_SIMPLE_EQUATIONS', cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP', outcome: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.a', misMapped: false, rung: 3, form: 'word',
     draw: () => {
       const a = randInt(2, 6), x = randInt(3, 15), b = a * randInt(1, 5), c = a * x + b;
       return distinct(x, c - b, (c + b) / a, c / a) ? { a, x, b, c, p: person() } : null;
@@ -466,7 +426,7 @@ export const FAMILIES = [
     }),
     check: ({ a, b, c }, v) => a * v + b === c }),
 
-  fam({ id: 'g5.eq.balance-word', skill: 'G5_SIMPLE_EQUATIONS', outcome: 'G5.EQUATIONS.b', rung: 1, form: 'word',
+  fam({ id: 'g5.eq.balance-word', skill: 'G5_SIMPLE_EQUATIONS', cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB', outcome: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.b', misMapped: false, rung: 1, form: 'word',
     draw: () => { const kind = pick(['plus', 'twice']), x = randInt(2, 14), a = randInt(2, 9); return { kind, x, a, b: kind === 'plus' ? x + a : 2 * x, p: person() }; },
     make: ({ kind, x, a, b, p }) => ({
       question: kind === 'plus'
@@ -480,7 +440,7 @@ export const FAMILIES = [
     }),
     check: ({ kind, a, b }, v) => (kind === 'plus' ? v + a === b : v + v === b) }),
 
-  fam({ id: 'g5.eq.form-spot', skill: 'G5_SIMPLE_EQUATIONS', outcome: 'G5.EQUATIONS.a', rung: 3, form: 'spot',
+  fam({ id: 'g5.eq.form-spot', skill: 'G5_SIMPLE_EQUATIONS', cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB', outcome: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.a', misMapped: false, rung: 3, form: 'spot',
     draw: () => { const x = randInt(20, 60), a = randInt(5, 15); return { x, a, c: x + a, k: randInt(0, 1), p: person() }; },
     make: ({ x, a, c, k, p }) => {
       const op = k === 0 ? '−' : '+', v = c + a;
@@ -498,7 +458,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g5.eq.form-why', skill: 'G5_SIMPLE_EQUATIONS', outcome: 'G5.EQUATIONS.a', rung: 2, form: 'why',
+  fam({ id: 'g5.eq.form-why', skill: 'G5_SIMPLE_EQUATIONS', cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV', outcome: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.a', misMapped: false, rung: 2, form: 'why',
     draw: () => { const f = randInt(3, 6), n = randInt(5, 40) * 10, k = randInt(0, 3); return { f, T: f * n, n, k }; },
     make: ({ f, T, k }) => {
       const opts = [
@@ -512,7 +472,7 @@ export const FAMILIES = [
         steps: [`${f} friends each pay n shillings.`, `So ${f} × n = ${T}, written ${f}n = ${T}.`] };
     } }),
 
-  fam({ id: 'g5.eq.choose-direct', skill: 'G5_SIMPLE_EQUATIONS', outcome: 'G5.EQUATIONS.a', rung: 1, form: 'direct',
+  fam({ id: 'g5.eq.choose-direct', skill: 'G5_SIMPLE_EQUATIONS', cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB', outcome: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.a', misMapped: false, rung: 1, form: 'direct',
     draw: () => { const a = randInt(4, 15), b = randInt(5, 30), thing = pick(['oranges', 'eggs', 'books', 'balls']), k = randInt(0, 3); if (a === b) return null; return { a, b, thing, k, p: person() }; },
     make: ({ a, b, thing, k, p }) => {
       const opts = [
@@ -526,7 +486,7 @@ export const FAMILIES = [
         steps: [`Start: n. Take away ${a}: n − ${a}.`, `That leaves ${b}, so n − ${a} = ${b}.`] };
     } }),
 
-  fam({ id: 'g5.eq.solve-why', skill: 'G5_SIMPLE_EQUATIONS', outcome: 'G5.EQUATIONS.b', rung: 2, form: 'why',
+  fam({ id: 'g5.eq.solve-why', skill: 'G5_SIMPLE_EQUATIONS', cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB', outcome: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.b', misMapped: false, rung: 2, form: 'why',
     draw: () => { const kind = pick(['add', 'sub', 'mul']), a = randInt(3, 12), y = randInt(4, 15); return { kind, a, y, c: kind === 'add' ? y + a : kind === 'sub' ? y - a : y * a, k: randInt(0, 3) }; },
     make: ({ kind, a, y, c, k }) => {
       const eq = kind === 'add' ? `y + ${a} = ${c}` : kind === 'sub' ? `y − ${a} = ${c}` : `${a}y = ${c}`;
@@ -542,24 +502,7 @@ export const FAMILIES = [
         steps: [`In ${eq}, y has been ${kind === 'add' ? 'added to' : kind === 'sub' ? 'taken from' : 'multiplied by'} ${a}.`, `We ${doIt}, so y = ${y}.`] };
     } }),
 
-  fam({ id: 'g5.eq.solve-spot', skill: 'G5_SIMPLE_EQUATIONS', outcome: 'G5.EQUATIONS.b', rung: 3, form: 'spot',
-    draw: () => { const a = randInt(2, 6), x = randInt(3, 14), b = a * randInt(1, 5), c = a * x + b; return { a, x, b, c, k: randInt(0, 1), p: person() }; },
-    make: ({ a, x, b, c, k, p }) => {
-      const t = k === 0 ? c + b : c - b, v = k === 1 ? a * t : t / a;
-      return {
-        question: `${p.name} solves ${a}x + ${b} = ${c}. Which step has the mistake?`,
-        working: [
-          { text: `Take ${b} from both sides: ${a}x = ${t}`, ok: t === c - b },
-          { text: `Divide both sides by ${a}: x = ${commas(v)}`, ok: v === t / a },
-          { text: `Check: ${a} × ${commas(v)} + ${b} = ${commas(a * v + b)}`, ok: true },
-        ],
-        fix: k === 0 ? `To undo + ${b}, take ${b} away from both sides. Here it was added.` : `${a}x means ${a} times x. To undo it, divide both sides by ${a}. Here they were multiplied.`,
-        hints: ['Check each step against the one before it.', 'Does each step use the opposite operation?'],
-        steps: [`${a}x = ${c} − ${b} = ${c - b}.`, `x = ${c - b} ÷ ${a} = ${x}.`],
-      };
-    } }),
-
-  fam({ id: 'g5.missing.story', skill: 'G5_MISSING_NUMBER', outcome: 'G5.EQUATIONS.b', rung: 2, form: 'word',
+  fam({ id: 'g5.missing.story', skill: 'G5_MISSING_NUMBER', cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV', outcome: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.b', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const kind = pick(['sub', 'add', 'mul', 'div']);
       const x = kind === 'mul' || kind === 'div' ? randInt(3, 12) : randInt(20, 80), a = kind === 'mul' || kind === 'div' ? randInt(3, 9) : randInt(8, 30);
@@ -581,7 +524,7 @@ export const FAMILIES = [
     },
     check: ({ kind, a, b }, v) => ({ sub: v - a === b, add: v + a === b, mul: a * v === b, div: v / a === b })[kind] }),
 
-  fam({ id: 'g5.missing.machine-table', skill: 'G5_MISSING_NUMBER', outcome: 'G5.EQUATIONS.b', rung: 3, form: 'table',
+  fam({ id: 'g5.missing.machine-table', skill: 'G5_MISSING_NUMBER', cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB', outcome: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.b', misMapped: false, rung: 3, form: 'table',
     draw: () => {
       const m = randInt(2, 5), c0 = randInt(1, 5), n = pick([8, 9, 10, 12]), out = (v) => m * v + c0;
       return distinct(out(n), m * n, n + m + c0, out(4) + n) ? { m, c0, n, out } : null;
@@ -596,7 +539,7 @@ export const FAMILIES = [
     }),
     check: ({ m, c0, n }, a) => (a - c0) / m === n }),
 
-  fam({ id: 'g5.missing.think-number', skill: 'G5_MISSING_NUMBER', outcome: 'G5.EQUATIONS.b', rung: 3, form: 'word',
+  fam({ id: 'g5.missing.think-number', skill: 'G5_MISSING_NUMBER', cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB', outcome: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.b', misMapped: false, rung: 3, form: 'word',
     draw: () => {
       const m = randInt(2, 5), x = randInt(3, 15), b = m * randInt(1, 5), op = pick(['+', '−']), c = op === '+' ? m * x + b : m * x - b;
       const w = [op === '+' ? c - b : c + b, op === '+' ? (c + b) / m : (c - b) / m, c / m];
@@ -612,22 +555,7 @@ export const FAMILIES = [
     check: ({ m, b, op, c }, v) => (op === '+' ? v * m + b === c : v * m - b === c) }),
 
   // ================================================================ DECIMALS
-  fam({ id: 'g5.dec.place-expanded', skill: 'G5_DECIMALS_INTRO', outcome: 'G5.DEC.a', rung: 2, form: 'word',
-    draw: () => {
-      const t = randInt(1, 9), h = Math.random() < 0.5 ? 0 : randInt(1, 9), th = randInt(1, 9);
-      const ans = round(t / 10 + h / 100 + th / 1000, 3), A = Number(`0.${t}${th}`), C = Number(`0.${th}${h}${t}`), F = h === 0 ? Number(`0.${t}00${th}`) : Number(`0.${t}${th}${h}`);
-      return distinct(ans, A, C, F) ? { t, h, th, ans, A, C, F } : null;
-    },
-    make: ({ t, h, th, ans, A, C, F }) => ({
-      question: `A scale reading is made of ${t} tenths, ${h} hundredths and ${th} thousandths of a kilogram. Write the reading as a decimal, in kilograms.`,
-      answer: ans,
-      wrong: [[A, h === 0 ? 'A zero is needed in the hundredths place. Without it the digits slide into the wrong places.' : 'The hundredths digit is missing from the number.'], [C, 'The tenths digit comes first after the decimal point, then the hundredths, then the thousandths.'], [F, h === 0 ? 'The thousandths digit goes in the third place after the point, not the fourth.' : 'The hundredths digit goes before the thousandths digit.']],
-      hints: ['The first place after the point is tenths, then hundredths, then thousandths.', 'A place with none in it is filled with a zero.'],
-      steps: [`Tenths: ${t}. Hundredths: ${h}. Thousandths: ${th}.`, `Written as a decimal: 0.${t}${h}${th} kg.`],
-    }),
-    check: ({ t, h, th }, a) => Math.round(a * 1000) === t * 100 + h * 10 + th }),
-
-  fam({ id: 'g5.dec.place-table', skill: 'G5_DECIMALS_INTRO', outcome: 'G5.DEC.a', rung: 2, form: 'table',
+  fam({ id: 'g5.dec.place-table', skill: 'G5_DECIMALS_INTRO', cskill: 'MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME', outcome: 'MATH.G5.NUMBER.DECIMALS.a', misMapped: false, rung: 2, form: 'table',
     draw: () => {
       const ds = [randInt(1, 9), randInt(1, 9), randInt(1, 9), randInt(1, 9)];
       const n = ds[0] + ds[1] / 10 + ds[2] / 100 + ds[3] / 1000;
@@ -643,7 +571,7 @@ export const FAMILIES = [
     }),
     check: ({ ds }, a) => Math.round(a * 1000) === ds[0] * 1000 + ds[1] * 100 + ds[2] * 10 + ds[3] }),
 
-  fam({ id: 'g5.dec.place-spot', skill: 'G5_DECIMALS_INTRO', outcome: 'G5.DEC.a', rung: 3, form: 'spot',
+  fam({ id: 'g5.dec.place-spot', skill: 'G5_DECIMALS_INTRO', cskill: 'MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE', outcome: 'MATH.G5.NUMBER.DECIMALS.a', misMapped: false, rung: 3, form: 'spot',
     draw: () => {
       const ds = [randInt(1, 9), randInt(1, 9), randInt(1, 9)];
       return new Set(ds).size === 3 ? { ds, k: randInt(0, 2), p: person() } : null;
@@ -662,7 +590,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g5.dec.order-word', skill: 'G5_DECIMALS_INTRO', outcome: 'G5.DEC.b', rung: 2, form: 'word',
+  fam({ id: 'g5.dec.order-word', skill: 'G5_DECIMALS_INTRO', cskill: 'MATH.G5.NUMBER.DECIMALS.DEC_ORDER', outcome: 'MATH.G5.NUMBER.DECIMALS.b', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const w = randInt(2, 5), fr = [];
       while (fr.length < 4) { const len = randInt(1, 3), f = String(randInt(1, 999)).padStart(len, '0').slice(0, len); if (!f.endsWith('0') && !fr.some(x => Number('0.' + x) === Number('0.' + f))) fr.push(f); }
@@ -685,7 +613,7 @@ export const FAMILIES = [
     },
     check: ({ vals, small }, a) => vals.includes(a) && vals.filter(v => (small ? v < a : v > a)).length === 0 }),
 
-  fam({ id: 'g5.dec.order-why', skill: 'G5_DECIMALS_INTRO', outcome: 'G5.DEC.b', rung: 3, form: 'why',
+  fam({ id: 'g5.dec.order-why', skill: 'G5_DECIMALS_INTRO', cskill: 'MATH.G5.NUMBER.DECIMALS.DEC_COMPARE', outcome: 'MATH.G5.NUMBER.DECIMALS.b', misMapped: false, rung: 3, form: 'why',
     draw: () => { const u = randInt(3, 9), v = randInt(1, u - 1), w = randInt(1, 9); return { u, v, w, k: randInt(0, 3), p: person() }; },
     make: ({ u, v, w, k, p }) => {
       const opts = [
@@ -699,7 +627,7 @@ export const FAMILIES = [
         steps: [`0.${u} = 0.${u}0.`, `${u}0 hundredths is more than ${v}${w} hundredths, so 0.${u} is bigger.`] };
     } }),
 
-  fam({ id: 'g5.dec.order-table', skill: 'G5_DECIMALS_INTRO', outcome: 'G5.DEC.b', rung: 2, form: 'table',
+  fam({ id: 'g5.dec.order-table', skill: 'G5_DECIMALS_INTRO', cskill: 'MATH.G5.NUMBER.DECIMALS.DEC_ORDER', outcome: 'MATH.G5.NUMBER.DECIMALS.b', misMapped: false, rung: 2, form: 'table',
     draw: () => {
       const names = ['Achieng', 'Baraka', 'Chebet', 'Dennis', 'Elijah'], t = [];
       while (t.length < 5) { const len = randInt(1, 2), f = String(randInt(1, 99)).padStart(len, '0').slice(0, len); if (!f.endsWith('0') && !t.some(x => Number(x) === Number(`13.${f}`))) t.push(Number(`13.${f}`)); }
@@ -720,24 +648,7 @@ export const FAMILIES = [
     },
     check: ({ t }, a) => t.includes(a) && t.every(x => x >= a) }),
 
-  fam({ id: 'g5.decadd.word', skill: 'G5_DECIMALS_ADD', outcome: 'G5.DEC.c', rung: 2, form: 'word',
-    draw: () => {
-      const a = round(randInt(110, 690) / 100, 2), b = round(randInt(11, 69) / 10, 1);
-      if (a * 100 % 10 === 0 || b === Math.floor(b)) return null;
-      const sum = round(a + b, 2), mis = (x) => Math.floor(x) + round((x - Math.floor(x)) / 10, 3);
-      const w = [round(a + mis(b), 3), Math.floor(a) + Math.floor(b), round(Math.abs(a - b), 2)];
-      return distinct(sum, ...w) ? { a, b, sum, w, s: pick([0, 1, 2]) } : null;
-    },
-    make: ({ a, b, sum, w, s }) => {
-      const st = [[`A parcel has a mass of ${a} kg. A second parcel has a mass of ${b} kg. What is their total mass in kilograms?`], [`Wanjiru walks ${a} km to school. After school she walks ${b} km to her aunt. How many kilometres does she walk altogether?`], [`A bucket holds ${a} litres of water. Another bucket holds ${b} litres. How many litres is that together?`]];
-      return { question: st[s][0], answer: sum,
-        wrong: [[w[0], 'The decimal points must line up. Tenths go under tenths and hundredths under hundredths.'], [w[1], 'The decimal parts have been left out. Add them too.'], [w[2], 'The question asks for the total, so add.']],
-        hints: ['Write the numbers one under the other with the decimal points lined up.', 'You can write a zero to make the numbers the same length.'],
-        steps: [`${a.toFixed(2)} + ${b.toFixed(2)}`, `= ${sum}.`] };
-    },
-    check: ({ a, b }, v) => Math.round((v - b) * 100) === Math.round(a * 100) }),
-
-  fam({ id: 'g5.decadd.table', skill: 'G5_DECIMALS_ADD', outcome: 'G5.DEC.c', rung: 2, form: 'table',
+  fam({ id: 'g5.decadd.table', skill: 'G5_DECIMALS_ADD', cskill: 'MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES', outcome: 'MATH.G5.NUMBER.DECIMALS.c', misMapped: false, rung: 2, form: 'table',
     draw: () => {
       const a = round(randInt(11, 59) / 10, 1), b = round(randInt(110, 590) / 100, 2), c = round(randInt(11, 59) / 10, 1);
       if (b * 100 % 10 === 0) return null;
@@ -755,7 +666,7 @@ export const FAMILIES = [
     }),
     check: ({ a, b, c }, v) => Math.round(v * 100) - Math.round(c * 100) - Math.round(b * 100) === Math.round(a * 100) }),
 
-  fam({ id: 'g5.decsub.word', skill: 'G5_DECIMALS_SUB', outcome: 'G5.DEC.c', rung: 2, form: 'word',
+  fam({ id: 'g5.decsub.word', skill: 'G5_DECIMALS_SUB', cskill: 'MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES', outcome: 'MATH.G5.NUMBER.DECIMALS.d', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const a = round(randInt(41, 99) / 10, 1), b = round(randInt(110, 390) / 100, 2);
       if (b * 100 % 10 === 0 || a <= b || a === Math.floor(a)) return null;
@@ -772,30 +683,7 @@ export const FAMILIES = [
     }),
     check: ({ a, b }, v) => Math.round(v * 100) + Math.round(b * 100) === Math.round(a * 100) }),
 
-  fam({ id: 'g5.decsub.spot', skill: 'G5_DECIMALS_SUB', outcome: 'G5.DEC.c', rung: 3, form: 'spot',
-    draw: () => {
-      const a = round(randInt(51, 99) / 10, 1), b = round(randInt(110, 390) / 100, 2);
-      if (b * 100 % 10 === 0 || a <= b || a === Math.floor(a)) return null;
-      const colAbs = (x, y) => { const X = String(Math.round(x * 100)).padStart(4, '0'), Y = String(Math.round(y * 100)).padStart(4, '0'); return Number([...X].map((d, i) => Math.abs(d - Y[i])).join('')) / 100; };
-      const ans = round(a - b, 2);
-      return colAbs(a, b) !== ans ? { a, b, ans, wrongRes: colAbs(a, b), k: randInt(0, 1), p: person() } : null;
-    },
-    make: ({ a, b, ans, wrongRes, k, p }) => {
-      const A = k === 0 ? `${Math.floor(a)}.0${Math.round((a % 1) * 10)}` : a.toFixed(2), res = k === 1 ? wrongRes : round(Number(A) - b, 2);
-      return {
-        question: `${p.name} works out ${a} − ${b}. Which step has the mistake?`,
-        working: [
-          { text: `Write ${a} with two decimal places: ${A}`, ok: Number(A) === a },
-          { text: `Subtract: ${A} − ${b.toFixed(2)} = ${res}`, ok: Math.abs(res - round(Number(A) - b, 2)) < 1e-9 },
-          { text: `So the answer is ${res}.`, ok: true },
-        ],
-        fix: k === 0 ? `${a} has 1 decimal place. A zero is added at the end to make hundredths: ${a.toFixed(2)}. Here it was put in the wrong place.` : 'Where a top digit is smaller than the one below it, regroup from the next column. Here the smaller digit was taken from the bigger one.',
-        hints: ['Check each step against the one before it.', 'Is the zero added at the end of the decimal? Are the columns regrouped?'],
-        steps: [`${a} = ${a.toFixed(2)}.`, `${a.toFixed(2)} − ${b.toFixed(2)} = ${ans}.`],
-      };
-    } }),
-
-  fam({ id: 'g5.decmul.word', skill: 'G5_DECIMALS_INTRO', outcome: 'G5.DEC.e', rung: 2, form: 'word',
+  fam({ id: 'g5.decmul.word', skill: 'G5_DECIMALS_INTRO', cskill: 'MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000', outcome: 'MATH.G5.NUMBER.DECIMALS.e', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const m = pick([10, 100, 1000]), a = round(randInt(11, 99) / 100, 2), thing = pick(['packets of seeds', 'tins of paint', 'bottles of juice']);
       if (a * 100 % 10 === 0) return null;
@@ -812,7 +700,7 @@ export const FAMILIES = [
     },
     check: ({ m, a }, v) => Math.round(v / m * 1000) / 1000 === a }),
 
-  fam({ id: 'g5.decmul.table', skill: 'G5_DECIMALS_INTRO', outcome: 'G5.DEC.e', rung: 2, form: 'table',
+  fam({ id: 'g5.decmul.table', skill: 'G5_DECIMALS_INTRO', cskill: 'MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000', outcome: 'MATH.G5.NUMBER.DECIMALS.e', misMapped: false, rung: 2, form: 'table',
     draw: () => {
       const a = round(randInt(11, 99) / 100, 2);
       return a * 100 % 10 === 0 ? null : { a, p: person() };
@@ -827,7 +715,7 @@ export const FAMILIES = [
     }),
     check: ({ a }, v) => Math.round(v) === Math.round(a * 1000) }),
 
-  fam({ id: 'g5.decmul.why', skill: 'G5_DECIMALS_INTRO', outcome: 'G5.DEC.e', rung: 3, form: 'why',
+  fam({ id: 'g5.decmul.why', skill: 'G5_DECIMALS_INTRO', cskill: 'MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000', outcome: 'MATH.G5.NUMBER.DECIMALS.e', misMapped: false, rung: 3, form: 'why',
     draw: () => { const m = pick([10, 100, 1000]), a = round(randInt(11, 99) / 100, 2), z = String(m).length - 1; return a * 100 % 10 === 0 ? null : { m, a, z, k: randInt(0, 3), p: person() }; },
     make: ({ m, a, z, k, p }) => {
       const wrongAns = a + '0'.repeat(z);
@@ -842,7 +730,7 @@ export const FAMILIES = [
         steps: [`${commas(m)} has ${z} zero${z > 1 ? 's' : ''}, so the digits move ${z} place${z > 1 ? 's' : ''} to the left.`, `${a} × ${commas(m)} = ${commas(round(a * m, 3))}.`] };
     } }),
 
-  fam({ id: 'g5.decmul.steps', skill: 'G5_DECIMALS_INTRO', outcome: 'G5.DEC.e', rung: 2, form: 'steps',
+  fam({ id: 'g5.decmul.steps', skill: 'G5_DECIMALS_INTRO', cskill: 'MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000', outcome: 'MATH.G5.NUMBER.DECIMALS.e', misMapped: false, rung: 2, form: 'steps',
     draw: () => { const a = round(randInt(11, 99) / 100, 2); return a * 100 % 10 === 0 ? null : { a, p: person() }; },
     make: ({ a, p }) => ({
       question: `Each bottle of oil holds ${a} litres. ${p.name} fills 10 bottles, then 100 bottles, then 1,000 bottles. Find the number of litres each time.`,
@@ -856,7 +744,7 @@ export const FAMILIES = [
     check: ({ a }, v) => Math.round(v[0] * 10) === Math.round(v[1]) && Math.round(v[1] * 10) === Math.round(v[2]) && Math.round(v[0] * 100) === Math.round(a * 1000) }),
 
   // ================================================================ PATTERNS
-  fam({ id: 'g5.pat.add-word', skill: 'G5_PATTERNS', outcome: 'G5.ADD.d', rung: 2, form: 'word',
+  fam({ id: 'g5.pat.add-word', skill: 'G5_PATTERNS', cskill: 'MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND', outcome: 'MATH.G5.NUMBER.ADDITION.d', misMapped: false, rung: 2, form: 'word',
     draw: () => { const a = randInt(5, 30), d = randInt(3, 9), n = randInt(6, 12); return distinct(a + d * (n - 1), a + d * n, d * n, a + d) ? { a, d, n, thing: pick(['seedlings', 'cabbages', 'banana suckers']), p: person() } : null; },
     make: ({ a, d, n, thing, p }) => ({
       question: `${p.name} plants ${thing} in rows that follow a pattern. Row 1 has ${a} ${thing}. Each next row has ${d} more ${thing} than the row before. How many ${thing} are in row ${n}?`,
@@ -867,7 +755,7 @@ export const FAMILIES = [
     }),
     check: ({ a, d, n }, v) => (v - a) / (n - 1) === d }),
 
-  fam({ id: 'g5.pat.add-spot', skill: 'G5_PATTERNS', outcome: 'G5.ADD.d', rung: 3, form: 'spot',
+  fam({ id: 'g5.pat.add-spot', skill: 'G5_PATTERNS', cskill: 'MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND', outcome: 'MATH.G5.NUMBER.ADDITION.d', misMapped: false, rung: 3, form: 'spot',
     draw: () => { const a = randInt(4, 30), d = randInt(3, 9); return { a, d, k: randInt(0, 2), p: person() }; },
     make: ({ a, d, k, p }) => {
       const seq = [0, 1, 2, 3].map(i => a + d * i), last = seq[3], r = k === 0 ? d + 1 : d, x = k === 1 ? last + r + 1 : last + r, y = k === 2 ? x + r + 1 : x + r;
@@ -884,7 +772,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g5.pat.sub-word', skill: 'G5_PATTERNS', outcome: 'G5.SUB.e', rung: 2, form: 'word',
+  fam({ id: 'g5.pat.sub-word', skill: 'G5_PATTERNS', cskill: 'MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE', outcome: 'MATH.G5.NUMBER.SUBTRACTION.e', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const a = randInt(60, 90) * 10, d = pick([30, 40, 50, 60, 70]), n = randInt(6, 9), v = a - d * (n - 1);
       return v > 0 && distinct(v, a - d * n, a - d * (n - 2), d * (n - 1)) ? { a, d, n, v } : null;
@@ -898,7 +786,7 @@ export const FAMILIES = [
     }),
     check: ({ a, d, n }, x) => (a - x) / (n - 1) === d }),
 
-  fam({ id: 'g5.pat.mul-word', skill: 'G5_PATTERNS', outcome: 'G5.MUL.c', rung: 2, form: 'word',
+  fam({ id: 'g5.pat.mul-word', skill: 'G5_PATTERNS', cskill: 'MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND', outcome: 'MATH.G5.NUMBER.MULTIPLICATION.c', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const a = randInt(2, 5), r = pick([2, 3]), n = pick([4, 5, 6]), v = a * r ** (n - 1);
       return distinct(v, a * r ** n, a * r * (n - 1), a + r * (n - 1)) ? { a, r, n, v, p: person() } : null;
@@ -912,7 +800,7 @@ export const FAMILIES = [
     }),
     check: ({ a, r, n }, x) => x === Array.from({ length: n - 1 }).reduce((t) => t * r, a) }),
 
-  fam({ id: 'g5.pat.mul-why', skill: 'G5_PATTERNS', outcome: 'G5.MUL.c', rung: 3, form: 'why',
+  fam({ id: 'g5.pat.mul-why', skill: 'G5_PATTERNS', cskill: 'MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND', outcome: 'MATH.G5.NUMBER.MULTIPLICATION.c', misMapped: false, rung: 3, form: 'why',
     draw: () => {
       const a = pick([3, 4, 5, 6]), r = pick([2, 3, 4]), k = randInt(0, 3);
       const t = [a, a * r, a * r * r, a * r ** 3];
@@ -931,7 +819,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ ROUNDING
-  fam({ id: 'g5.round.news-word', skill: 'G5_ROUNDING', outcome: 'G5.WHOLE.d', rung: 2, form: 'word',
+  fam({ id: 'g5.round.news-word', skill: 'G5_ROUNDING', cskill: 'MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND', outcome: 'MATH.G5.NUMBER.WHOLE_NUMBERS.d', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const u = pick([100, 1000]), n = randInt(12000, 98000) + randInt(1, 9) * 10 + randInt(0, 9);
       const r = rnd(n, u), u2 = u === 100 ? 1000 : 100;
@@ -948,7 +836,7 @@ export const FAMILIES = [
     },
     check: ({ n, u }, a) => a % u === 0 && Math.abs(a - n) < u / 2 }),
 
-  fam({ id: 'g5.round.crowd-table', skill: 'G5_ROUNDING', outcome: 'G5.WHOLE.d', rung: 2, form: 'table',
+  fam({ id: 'g5.round.crowd-table', skill: 'G5_ROUNDING', cskill: 'MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND', outcome: 'MATH.G5.NUMBER.WHOLE_NUMBERS.d', misMapped: false, rung: 2, form: 'table',
     draw: () => {
       const v = [0, 1, 2, 3].map(() => randInt(11, 59) * 1000 + randInt(1, 9) * 100 + randInt(1, 9) * 10 + randInt(0, 9));
       const big = Math.max(...v), sm = Math.min(...v);
@@ -964,7 +852,7 @@ export const FAMILIES = [
     }),
     check: ({ big }, a) => a % 1000 === 0 && Math.abs(a - big) < 500 }),
 
-  fam({ id: 'g5.round.spot', skill: 'G5_ROUNDING', outcome: 'G5.WHOLE.d', rung: 3, form: 'spot',
+  fam({ id: 'g5.round.spot', skill: 'G5_ROUNDING', cskill: 'MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED', outcome: 'MATH.G5.NUMBER.WHOLE_NUMBERS.d', misMapped: false, rung: 3, form: 'spot',
     draw: () => {
       const n = randInt(12, 98) * 1000 + randInt(0, 9) * 100 + randInt(5, 9) * 10 + randInt(0, 4), k = randInt(0, 1);
       return { n, k, p: person() };
@@ -987,24 +875,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ LENGTH
-  fam({ id: 'g5.length.est-route', skill: 'G5_LENGTH', outcome: 'G5.LENGTH.b', rung: 2, form: 'word',
-    draw: () => {
-      const pairs = [['Nairobi', 'Nakuru', 160, 80], ['Nairobi', 'Mombasa', 480, 60], ['Nairobi', 'Kisumu', 350, 50], ['Nairobi', 'Eldoret', 310, 62], ['Nairobi', 'Machakos', 60, 60], ['Nakuru', 'Eldoret', 155, 62]];
-      const [a, b, km] = pick([['Nairobi', 'Nakuru', 160], ['Nairobi', 'Mombasa', 480], ['Nairobi', 'Kisumu', 350], ['Mombasa', 'Malindi', 120], ['Eldoret', 'Kitale', 70]]);
-      void pairs;
-      const sp = pick([50, 60, 80]);
-      return km % sp === 0 && km / sp >= 2 ? { a, b, km, sp, h: km / sp } : null;
-    },
-    make: ({ a, b, km, sp, h }) => ({
-      question: `A matatu from ${a} to ${b} travels at about ${sp} km every hour. The journey takes about ${h} hours. Estimate the distance between ${a} and ${b} by road, in kilometres.`,
-      answer: km,
-      wrong: [[sp + h, 'Distance is speed times time. Do not add them.'], [sp / h, 'Distance is found by multiplying the speed by the time.'], [km + sp, 'Each hour covers a set distance. Multiply it by the number of hours.']],
-      hints: ['In one hour the matatu travels the same distance.', 'How many hours does it travel?'],
-      steps: [`In 1 hour: ${sp} km. The journey takes ${h} hours.`, `${sp} × ${h} = ${km} km.`],
-    }),
-    check: ({ sp, h }, a) => a / h === sp }),
-
-  fam({ id: 'g5.length.est-trip-table', skill: 'G5_LENGTH', outcome: 'G5.LENGTH.b', rung: 2, form: 'table',
+  fam({ id: 'g5.length.est-trip-table', skill: 'G5_LENGTH', cskill: 'MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE', outcome: 'MATH.G5.MEASUR.LENGTH.b', misMapped: false, rung: 2, form: 'table',
     draw: () => {
       const rows = [['Thika', 45], ['Nakuru', 160], ['Nyeri', 150], ['Eldoret', 310], ['Kisumu', 350], ['Mombasa', 480], ['Garissa', 370]];
       const [town, km] = pick(rows);
@@ -1021,7 +892,7 @@ export const FAMILIES = [
     check: ({ km }, a) => a % 200 === 0 && Math.abs(a / 2 - km) < 50 }),
 
   // ================================================================ MASS AND CAPACITY
-  fam({ id: 'g5.mass.shop-left', skill: 'G5_MASS_OPS', outcome: 'G5.MASS.d', rung: 2, form: 'word',
+  fam({ id: 'g5.mass.shop-left', skill: 'G5_MASS_OPS', cskill: 'MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G', outcome: 'MATH.G5.MEASUR.MASS.g', misMapped: false, rung: 2, form: 'word',
     draw: () => {
       const a = randInt(3, 9), pk = pick([250, 500]), n = randInt(3, 12), left = a * 1000 - pk * n;
       return left > 0 && distinct(left, left + pk, a * 1000 - pk, pk * n, a * 1000 + pk * n) ? { a, pk, n, left, p: person() } : null;
@@ -1035,7 +906,7 @@ export const FAMILIES = [
     }),
     check: ({ a, pk, n }, v) => v + pk * n === a * 1000 }),
 
-  fam({ id: 'g5.mass.parcels-table', skill: 'G5_MASS_OPS', outcome: 'G5.MASS.d', rung: 2, form: 'table',
+  fam({ id: 'g5.mass.parcels-table', skill: 'G5_MASS_OPS', cskill: 'MATH.G5.MEASUR.MASS.MASS_ADD_KG_G', outcome: 'MATH.G5.MEASUR.MASS.f', misMapped: false, rung: 2, form: 'table',
     draw: () => {
       const g1 = pick([250, 500, 750, 1250, 1500]), k2 = randInt(1, 4), g3 = pick([250, 500, 750, 1250]), total = g1 + k2 * 1000 + g3;
       return distinct(total / 1000, g1 + k2 + g3, total / 100, (g1 + g3) / 1000 + k2 * 10) ? { g1, k2, g3, total } : null;
@@ -1050,7 +921,7 @@ export const FAMILIES = [
     }),
     check: ({ g1, k2, g3 }, a) => Math.round(a * 1000) - g1 - g3 === k2 * 1000 }),
 
-  fam({ id: 'g5.mass.written-why', skill: 'G5_MASS', outcome: 'G5.MASS.d', rung: 3, form: 'why',
+  fam({ id: 'g5.mass.written-why', skill: 'G5_MASS', cskill: 'MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG', outcome: 'MATH.G5.MEASUR.MASS.e', misMapped: false, rung: 3, form: 'why',
     draw: () => { const kg = randInt(2, 9), g = pick([20, 30, 40, 50, 60, 70, 80]), k = randInt(0, 3); return { kg, g, k, p: person() }; },
     make: ({ kg, g, k, p }) => {
       const claim = `${kg}.${g / 10}`, right = `${kg}.0${g / 10}`;
@@ -1065,7 +936,7 @@ export const FAMILIES = [
         steps: [`${g} g = ${g} ÷ 1,000 = ${g / 1000} kg.`, `${kg} kg ${g} g = ${right} kg.`] };
     } }),
 
-  fam({ id: 'g5.cap.dairy-left', skill: 'G5_CAPACITY_OPS', outcome: 'G5.CAP.d', rung: 3, form: 'word',
+  fam({ id: 'g5.cap.dairy-left', skill: 'G5_CAPACITY_OPS', cskill: 'MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML', outcome: 'MATH.G5.MEASUR.CAPACITY.g', misMapped: false, rung: 3, form: 'word',
     draw: () => {
       const a = randInt(8, 30), pk = pick([250, 500]), n = randInt(4, 16), used = pk * n, left = a * 1000 - used;
       return left > 0 && used % 250 === 0 && distinct(left / 1000, a - pk / 1000, (left + pk) / 1000, used / 1000, a + used / 1000) ? { a, pk, n, left, p: person() } : null;
@@ -1079,7 +950,7 @@ export const FAMILIES = [
     }),
     check: ({ a, pk, n }, v) => Math.round((v + a - a) * 1000) + pk * n === a * 1000 }),
 
-  fam({ id: 'g5.cap.drums-table', skill: 'G5_CAPACITY_OPS', outcome: 'G5.CAP.d', rung: 2, form: 'table',
+  fam({ id: 'g5.cap.drums-table', skill: 'G5_CAPACITY_OPS', cskill: 'MATH.G5.MEASUR.CAPACITY.ADD_L_ML', outcome: 'MATH.G5.MEASUR.CAPACITY.f', misMapped: false, rung: 2, form: 'table',
     draw: () => {
       const l1 = randInt(2, 9), ml1 = pick([250, 500, 750]), l2 = randInt(1, 6), ml2 = pick([250, 500, 750]);
       const t = l1 * 1000 + ml1 + l2 * 1000 + ml2;
@@ -1095,7 +966,7 @@ export const FAMILIES = [
     }),
     check: ({ l1, ml1, l2, ml2 }, a) => a - ml1 - ml2 === (l1 + l2) * 1000 }),
 
-  fam({ id: 'g5.cap.cups-word', skill: 'G5_CAPACITY', outcome: 'G5.CAP.d', rung: 2, form: 'word',
+  fam({ id: 'g5.cap.cups-word', skill: 'G5_CAPACITY', cskill: 'MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP', outcome: 'MATH.G5.MEASUR.CAPACITY.d', misMapped: false, rung: 2, form: 'word',
     draw: () => { const cup = pick([200, 250, 500]), n = randInt(4, 16), l = (cup * n) / 1000; return Number.isInteger(l * 2) && l >= 1 && distinct(n, l, n * cup, cup) ? { cup, n, l, p: person() } : null; },
     make: ({ cup, n, l, p }) => ({
       question: `${p.name} pours milk from a ${l} litre jug into cups. Each cup holds ${cup} ml. How many cups can ${p.she} fill?`,
@@ -1106,7 +977,7 @@ export const FAMILIES = [
     }),
     check: ({ cup, l }, a) => a * cup === l * 1000 }),
 
-  fam({ id: 'g5.cap.sensible-why', skill: 'G5_CAPACITY', outcome: 'G5.CAP.d', rung: 2, form: 'why',
+  fam({ id: 'g5.cap.sensible-why', skill: 'G5_CAPACITY', cskill: 'MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE', outcome: 'MATH.G5.MEASUR.CAPACITY.c', misMapped: false, rung: 2, form: 'why',
     draw: () => {
       const items = [['a bucket of drinking water', '10 litres', '10 ml', '10,000 litres', 'A bucket holds about 10 litres, and 10 ml is only two teaspoons.'], ['a small cup of tea', '200 millilitres', '200 litres', '2 millilitres', 'A cup holds about 200 ml. 200 litres would fill a big drum.'], ['a jerrican of cooking oil', '20 litres', '20 ml', '2,000 litres', 'A jerrican holds about 20 litres, as much as two buckets.']];
       return { it: pick(items), k: randInt(0, 3), p: person() };
@@ -1124,7 +995,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ FRACTIONS
-  fam({ id: 'g5.frac.sub-word', skill: 'G5_FRACTIONS_SUB_LIKE', outcome: 'G5.FRAC.d', rung: 2, form: 'word',
+  fam({ id: 'g5.frac.sub-word', skill: 'G5_FRACTIONS_SUB_LIKE', cskill: 'MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR', outcome: 'MATH.G5.NUMBER.FRACTIONS.e', misMapped: false, rung: 2, form: 'word',
     draw: () => { const d = pick([5, 6, 8, 10, 12]), a = randInt(d - 3, d - 1), b = randInt(1, a - 1); return a - b > 0 && distinct(a - b, a + b, a, d) ? { d, a, b, p: person() } : null; },
     make: ({ d, a, b, p }) => ({
       question: `A tank is ${a}/${d} full of water. ${p.name} uses ${b}/${d} of a tank for the garden. The rest stays in the tank. How many ${d === 5 ? 'fifths' : d === 6 ? 'sixths' : d === 8 ? 'eighths' : d === 10 ? 'tenths' : 'twelfths'} of the tank are still full?`,
@@ -1135,7 +1006,7 @@ export const FAMILIES = [
     }),
     check: ({ a, b }, v) => v + b === a }),
 
-  fam({ id: 'g5.frac.sub-spot', skill: 'G5_FRACTIONS_SUB_LIKE', outcome: 'G5.FRAC.d', rung: 3, form: 'spot',
+  fam({ id: 'g5.frac.sub-spot', skill: 'G5_FRACTIONS_SUB_LIKE', cskill: 'MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR', outcome: 'MATH.G5.NUMBER.FRACTIONS.e', misMapped: false, rung: 3, form: 'spot',
     draw: () => { const d = pick([6, 8, 9, 10, 12]), a = randInt(4, d - 1), b = randInt(1, a - 1); return a - b > 0 && distinct(a - b, a + b, d - b) ? { d, a, b, k: randInt(0, 1), p: person() } : null; },
     make: ({ d, a, b, k, p }) => {
       const num = k === 0 ? a + b : a - b, den = k === 1 ? d - b : d;
@@ -1153,7 +1024,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g5.frac.add-word', skill: 'G5_FRACTIONS_ADD_LIKE', outcome: 'G5.FRAC.d', rung: 2, form: 'word',
+  fam({ id: 'g5.frac.add-word', skill: 'G5_FRACTIONS_ADD_LIKE', cskill: 'MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR', outcome: 'MATH.G5.NUMBER.FRACTIONS.d', misMapped: false, rung: 2, form: 'word',
     draw: () => { const d = pick([8, 10, 12]), a = randInt(2, 5), b = randInt(2, 5), c = randInt(1, 3); return a + b + c < d && distinct(a + b + c, a + b, d - a - b - c) ? { d, a, b, c, p: person() } : null; },
     make: ({ d, a, b, c, p }) => {
       const nm = { 8: 'eighths', 10: 'tenths', 12: 'twelfths' }[d];
@@ -1165,7 +1036,7 @@ export const FAMILIES = [
     },
     check: ({ a, b, c }, v) => v - c - b === a }),
 
-  fam({ id: 'g5.frac.equiv-word', skill: 'G5_FRACTIONS_EQUIV', outcome: 'G5.FRAC.a', rung: 2, form: 'word',
+  fam({ id: 'g5.frac.equiv-word', skill: 'G5_FRACTIONS_EQUIV', cskill: 'MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS', outcome: 'MATH.G5.NUMBER.FRACTIONS.a', misMapped: false, rung: 2, form: 'word',
     draw: () => { const d1 = pick([2, 3, 4, 5]), n1 = randInt(1, d1 - 1), m = randInt(2, 6); return distinct(n1 * m, n1 + m, d1 * m) ? { d1, n1, m, p: person(), q: person() } : null; },
     make: ({ d1, n1, m, p }) => ({
       question: `${p.name} cuts a mandazi into ${d1} equal pieces and eats ${n1} of them. ${p.Her} friend cuts an equal mandazi into ${d1 * m} equal pieces. The two children eat equivalent fractions. How many of the smaller pieces does the friend eat?`,
@@ -1176,23 +1047,4 @@ export const FAMILIES = [
     }),
     check: ({ d1, n1, m }, a) => a * d1 === n1 * d1 * m }),
 
-  fam({ id: 'g5.frac.simplify-spot', skill: 'G5_FRACTIONS_EQUIV', outcome: 'G5.FRAC.a', rung: 3, form: 'spot',
-    draw: () => { const g = pick([2, 3, 4, 5, 6]), n = pick([1, 2, 3, 5, 7]), d = pick([4, 5, 7, 9, 11]); return n < d && n * g !== d * g && new Set([n, d]).size === 2 && gcd(n, d) === 1 ? { g, n, d, k: randInt(0, 1), p: person() } : null; },
-    make: ({ g, n, d, k, p }) => {
-      const top = n * g, bot = d * g, top2 = k === 1 ? n + 1 : n, bot2 = k === 0 ? d + 1 : d;
-      return {
-        question: `${p.name} writes ${top}/${bot} in its simplest form. Which step has the mistake?`,
-        working: [
-          { text: `${top} and ${bot} can both be divided by ${g}.`, ok: top % g === 0 && bot % g === 0 },
-          { text: `Top: ${top} ÷ ${g} = ${top2}`, ok: top / g === top2 },
-          { text: `Bottom: ${bot} ÷ ${g} = ${bot2}`, ok: bot / g === bot2 },
-          { text: `So ${top}/${bot} = ${top2}/${bot2}.`, ok: true },
-        ],
-        fix: k === 0 ? `${bot} ÷ ${g} = ${d}, not ${bot2}. Check the division.` : `${top} ÷ ${g} = ${n}, not ${top2}. Check the division.`,
-        hints: ['Check each division on its own.', 'Multiply your answer back by the number divided by to check it.'],
-        steps: [`${top} ÷ ${g} = ${n}, ${bot} ÷ ${g} = ${d}.`, `${top}/${bot} = ${n}/${d}.`],
-      };
-    } }),
-
-  // END
 ];

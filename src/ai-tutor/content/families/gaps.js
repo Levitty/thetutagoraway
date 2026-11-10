@@ -119,7 +119,7 @@ export const FAMILIES = [
       hints: ['Co-interior angles sit on the same side, between the lines.', 'Do they look equal, or do they fill a straight line together?'],
       steps: [`Co-interior angles add up to 180°.`, `180 − ${a} = ${180 - a}°.`],
     }) }),
-  fam({ id: 'g5.length.cloth-table', skill: 'G5_LENGTH_OPS', outcome: 'G5.LENGTH.e', rung: 2, form: 'table',
+  fam({ id: 'g5.length.cloth-table', skill: 'G5_LENGTH_OPS', cskill: 'MATH.G5.MEASUR.LENGTH.ADD_KM_M', outcome: 'MATH.G5.MEASUR.LENGTH.e', misMapped: false, rung: 2, form: 'table',
     draw: () => { const a = randInt(2, 5), b = randInt(1, 9) * 50, c = randInt(1, 3), d = randInt(1, 9) * 50; return b + d === 1000 ? null : { a, b, c, d }; },
     make: ({ a, b, c, d }) => {
       const t = (a + c) * 1000 + b + d;
@@ -131,7 +131,7 @@ export const FAMILIES = [
         steps: [`Road A: ${commas(a * 1000 + b)} m. Road B: ${commas(c * 1000 + d)} m.`, `Total: ${commas(t)} m.`] };
     },
     check: ({ a, b, c, d }, v) => v - b - d === (a + c) * 1000 }),
-  fam({ id: 'g5.area.tile-floor', skill: 'G5_AREA_INTRO', outcome: 'G5.AREA.b', rung: 2, form: 'word',
+  fam({ id: 'g5.area.tile-floor', skill: 'G5_AREA_INTRO', cskill: 'MATH.G5.MEASUR.AREA.AREA_PROBLEMS', outcome: 'MATH.G5.MEASUR.AREA.b', misMapped: false, rung: 2, form: 'word',
     draw: () => { const l = randInt(4, 12), w = randInt(3, 8), left = randInt(5, 15); return l === w || 2 * (l + w) === l * w ? null : { l, w, left, p: person() }; },
     make: ({ l, w, left, p }) => ({
       question: `${p.name} covers a classroom floor ${l} m long and ${w} m wide with square tiles of side 1 m. ${p.She} has ${l * w + left} tiles. How many tiles are left over?`,
@@ -141,7 +141,7 @@ export const FAMILIES = [
       steps: [`Tiles used: ${l} × ${w} = ${l * w}.`, `Left over: ${l * w + left} − ${l * w} = ${left}.`],
     }),
     check: ({ l, w, left }, a) => a + l * w === l * w + left }),
-  fam({ id: 'g5.whole.words-to-digits', skill: 'G5_PLACE_VALUE', outcome: 'G5.WHOLE.b', rung: 2, form: 'word',
+  fam({ id: 'g5.whole.words-to-digits', skill: 'G5_PLACE_VALUE', cskill: 'MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS', outcome: 'MATH.G5.NUMBER.WHOLE_NUMBERS.b', misMapped: false, rung: 2, form: 'word',
     draw: () => { const t = randInt(11, 90), h = randInt(1, 9); return t % 10 === 0 ? null : { t, h, p: person() }; },
     make: ({ t, h, p }) => {
       const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'], teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'], tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];

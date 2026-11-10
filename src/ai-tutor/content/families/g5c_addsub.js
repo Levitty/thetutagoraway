@@ -94,13 +94,14 @@ export const FAMILIES = [
         wrong: [[Number(`${Math.floor(th / 10)}${t2 % 1000}`) + b, 'You left zeros out when writing the number from words. Zero holds a place.', 'M_WORDS_TO_FIGURES_ZEROS'], [a, 'The April trees are missing from the total.', 'M_ADD_ALL_NUMBERS'], [a + b + 1000, 'Check the thousands column.', 'M_WORDS_TO_FIGURES_ZEROS'], [b - a > 0 ? b - a : a - b, 'Altogether means add, not subtract.', 'M_KEYWORD_ADD']],
         hints: ['Write the number in words as figures first, keeping zeros in the empty places.', 'Then add the two numbers.'], steps: [`March: ${commas(a)}. April: ${commas(b)}.`, `Altogether: ${commas(a + b)} trees.`], chk: (v) => v - b === a };
     } }),
-  fam({ id: 'g5c.add.sit.extra', cs: `${A}ADD_IN_SITUATIONS`, form: 'word', rung: 3,
+  fam({ id: 'g5c.add.sit.extra', cs: `${A}ADD_IN_SITUATIONS`, form: 'steps', rung: 3,
     gen: () => {
-      const a = randInt(100, 400) * 1000 + randInt(0, 9) * 100, b = randInt(100, 400) * 1000 + randInt(0, 9) * 100, m = randInt(12, 30);
-      if (carries(a, b) > 2) return null;
-      return { question: `A matatu Sacco with ${m} matatus earned ${sh(a)} in January and ${sh(b)} in February. How much did the Sacco earn in the two months?`, answer: a + b,
-        wrong: [[a + b + m, `${m} is the number of matatus. It is not money to add.`, 'M_ADD_ALL_NUMBERS'], [a, 'February is missing.', 'M_ADD_ALL_NUMBERS'], [a + b + m * 1000, 'The number of matatus is extra information. Do not add it.', 'M_ADD_ALL_NUMBERS'], [Math.abs(a - b), 'In the two months means together, so add.', 'M_KEYWORD_ADD']],
-        hints: ['Underline the question: how much in the two months?', 'Only add the amounts that answer it.'], steps: [`Money in the two months: ${commas(a)} + ${commas(b)}.`, `Total: ${sh(a + b)}.`], chk: (v) => v - a === b };
+      const a = randInt(100, 400) * 1000 + randInt(0, 9) * 100, b = randInt(100, 400) * 1000 + randInt(0, 9) * 100, c = randInt(5, 30) * 1000, m = randInt(12, 30);
+      if (carries(a, b) > 2 || a + b + c >= 1e6) return null;
+      return { question: `A matatu Sacco with ${m} matatus earned ${sh(a)} in January, ${sh(b)} in February and ${sh(c)} in March.`,
+        parts: [{ prompt: 'How much did the Sacco earn in January and February together?', answer: a + b, unit: 'sh', hint: 'The number of matatus is not an amount of money.', wrong: [[a + b + m, `${m} is the number of matatus. It is not money to add.`, 'M_ADD_ALL_NUMBERS'], [a, 'February is missing.', 'M_ADD_ALL_NUMBERS'], [Math.abs(a - b), 'Together means add.', 'M_KEYWORD_ADD']] },
+          { prompt: 'How much did it earn in the three months?', answer: a + b + c, unit: 'sh', hint: 'Add March to the first answer.', wrong: [[a + b + c + m, 'Do not add the number of matatus.', 'M_ADD_ALL_NUMBERS'], [a + b, 'March is missing.', 'M_ADD_ALL_NUMBERS'], [a + b + c + 1000, 'Check the addition.', 'M_ADD_ALL_NUMBERS']] }],
+        steps: [`${commas(a)} + ${commas(b)} = ${commas(a + b)}.`, `${commas(a + b)} + ${commas(c)} = ${commas(a + b + c)}.`], chk: (x, v) => v[0] === a + b && v[1] === a + b + c };
     } }),
   fam({ id: 'g5c.add.sit.table', cs: `${A}ADD_IN_SITUATIONS`, form: 'table', rung: 2,
     gen: () => {
