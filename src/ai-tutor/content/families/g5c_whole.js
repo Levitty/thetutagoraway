@@ -456,14 +456,14 @@ export const FAMILIES = [
   fam({ id: 'g5c.whole.hp.ribbon', cs: `${W}HCF_PROBLEMS`, form: 'word', rung: 1,
     gen: () => {
       const [a, b] = pick([[24, 36], [18, 30], [12, 20], [30, 45], [16, 40], [20, 50]]), g = gcd(a, b), p = person();
-      return { question: `${p.name}, a tailor in Kisumu, has two ribbons, ${a} m and ${b} m long. ${p.She} cuts both ribbons into equal pieces, as long as possible, with nothing left. How long is each piece, in metres?`, answer: g,
+      return { question: `${p.name}, a tailor in Kisumu, has two ribbons, ${a} m and ${b} m long. ${p.She} cuts both ribbons into equal pieces, so a piece length is a common factor of ${a} and ${b}, as long as possible, with nothing left. How long is each piece, in metres?`, answer: g,
         wrong: [[lcm(a, b), `A piece cannot be longer than the ribbon. A ${lcm(a, b)} m piece cannot come from a ${a} m ribbon.`, 'M_HCFPROB_USES_LCM'], [a / g + b / g, 'That is the number of pieces. The question asks how long each piece is.', 'M_HCFPROB_WRONG_QUANTITY'], [Math.min(a, b), 'Does the shorter ribbon length go into the longer exactly?', 'M_HCFPROB_USES_LCM'], [2, 'That is a possible length, but not the longest.', 'M_HCFPROB_WRONG_QUANTITY']],
         hints: ['A piece must go into both lengths exactly.', 'It should be as long as possible: use the HCF.'], steps: [`The longest equal piece is the HCF of ${a} and ${b}.`, `HCF = ${g} m.`], chk: (x) => a % x === 0 && b % x === 0 && gcd(a / x, b / x) === 1 };
     } }),
   fam({ id: 'g5c.whole.hp.bags', cs: `${W}HCF_PROBLEMS`, form: 'steps', rung: 2,
     gen: () => {
       const [a, b] = pick([[24, 36], [18, 27], [30, 45], [20, 30], [16, 24], [28, 42]]), g = gcd(a, b), p = person();
-      return { question: `${p.name} packs ${a} mangoes and ${b} oranges into identical gift bags. Every bag has the same number of mangoes and the same number of oranges, and none are left over. ${p.She} wants as many bags as possible.`,
+      return { question: `${p.name} packs ${a} mangoes and ${b} oranges into identical gift bags. Every bag has the same number of mangoes and of oranges, none are left over, and the number of bags is a common factor of ${a} and ${b}. ${p.She} wants as many bags as possible.`,
         parts: [{ prompt: 'How many bags can be made?', answer: g, hint: 'The number of bags must divide both counts exactly. It should be as large as possible.', wrong: [[lcm(a, b), 'That is a multiple of both. It cannot be more than the number of fruits.', 'M_HCFPROB_USES_LCM'], [a / g, 'That is the number of mangoes in each bag, not the number of bags.', 'M_HCFPROB_WRONG_QUANTITY'], [2, 'That works, but is it the most bags possible?', 'M_HCFPROB_WRONG_QUANTITY']] },
           { prompt: 'How many mangoes are in each bag?', answer: a / g, hint: 'Share the mangoes equally into the bags.', wrong: [[g, 'That is the number of bags. Mangoes per bag is mangoes divided by bags.', 'M_HCFPROB_WRONG_QUANTITY'], [b / g, 'That is the number of oranges in each bag.', 'M_HCFPROB_WRONG_QUANTITY'], [a, 'That is all the mangoes together.', 'M_HCFPROB_WRONG_QUANTITY']] }],
         steps: [`Bags = HCF of ${a} and ${b} = ${g}.`, `Mangoes per bag = ${a} ÷ ${g} = ${a / g}.`], chk: (x, v) => v[0] * v[1] === a && b % v[0] === 0 };
@@ -518,13 +518,13 @@ export const FAMILIES = [
       const ok = claimed === l;
       const codeMap = claimed === a * b ? 'M_LCM_ALWAYS_PRODUCT' : claimed === gcd(a, b) ? 'M_LCM_GIVES_HCF' : 'M_LCM_SMALLER_NUMBER';
       const options = mc(ok ? 'True: it is the smallest number both divide into' : 'False', [[ok ? 'False: the LCM is the product' : 'True', ok ? 'The LCM is not always the product. Check for a smaller common multiple.' : 'Check: is it a multiple of both numbers, and is it the smallest such number?', ok ? 'M_LCM_ALWAYS_PRODUCT' : codeMap]]);
-      return { question: `${p.name} says the smallest number that both ${a} and ${b} divide into exactly is ${claimed}. Is this true or false?`, options, instruction: 'Choose true or false.',
+      return { question: `${p.name} claims that ${claimed} is the smallest number both ${a} and ${b} go into evenly. Is the claim true or false? Give a reason.`, options, instruction: 'Choose true or false.',
         hints: [`Is ${claimed} a multiple of ${a}? Of ${b}?`, 'Is there a smaller number that is a multiple of both?'], steps: [`The first number in both lists of multiples is ${l}.`, `So the LCM of ${a} and ${b} is ${l}.`] };
     } }),
   fam({ id: 'g5c.whole.lcm.three', cs: `${W}LCM`, form: 'steps', rung: 3,
     gen: () => {
       const [a, b, c] = pick([[2, 3, 4], [2, 3, 5], [3, 4, 6], [2, 4, 5], [3, 5, 6], [4, 6, 8], [2, 5, 10]]), l2 = lcm(a, b), l = lcm(l2, c), p = person();
-      return { question: `${p.name} looks for the smallest number that ${a}, ${b} and ${c} all divide into, working in two steps.`,
+      return { question: `${p.name} looks for the least common multiple of ${a}, ${b} and ${c}, working in two steps.`,
         parts: [{ prompt: `What is the LCM of ${a} and ${b}?`, answer: l2, hint: 'List multiples of the larger number.', wrong: [[a * b, 'A smaller number may be a multiple of both.', 'M_LCM_ALWAYS_PRODUCT'], [gcd(a, b), 'The LCM is at least as big as the larger number.', 'M_LCM_GIVES_HCF'], [Math.min(a, b), 'That is not a multiple of the larger number.', 'M_LCM_SMALLER_NUMBER']].filter(x => x[0] !== l2) },
           { prompt: `What is the LCM of ${a}, ${b} and ${c} together?`, answer: l, hint: `It must be a multiple of ${c} as well as of the first answer.`, wrong: [[a * b * c, 'Multiplying all three makes a common multiple, but not the least.', 'M_LCM_ALWAYS_PRODUCT'], [l2, `Is ${l2} a multiple of ${c}?`, 'M_LCM_SMALLER_NUMBER'], [Math.max(a, b, c), 'Is the biggest number a multiple of all three?', 'M_LCM_SMALLER_NUMBER']].filter(x => x[0] !== l) }],
         steps: [`LCM of ${a} and ${b} is ${l2}.`, `Next multiples of ${l2} until ${c} divides: ${l}.`], chk: (x, v) => v[1] % a === 0 && v[1] % b === 0 && v[1] % c === 0 && v[1] === l };
@@ -534,7 +534,7 @@ export const FAMILIES = [
   fam({ id: 'g5c.whole.lp.matatu', cs: `${W}LCM_PROBLEMS`, form: 'word', rung: 2,
     gen: () => {
       const [a, b] = pick([[12, 18], [10, 15], [8, 12], [6, 8], [20, 30], [15, 20]]), l = lcm(a, b), p = person();
-      return { question: `Two lamps on a tower flash, one every ${a} seconds and the other every ${b} seconds. They flash together now. After how many seconds will they next flash together?`, answer: l,
+      return { question: `Two lamps on a tower flash, one every ${a} seconds and the other every ${b} seconds. They flash together now. After how many seconds will they flash together again, a common multiple of ${a} and ${b}?`, answer: l,
         wrong: [[gcd(a, b), 'That is the HCF. They leave together at a time that is a multiple of both intervals.', 'M_LCMPROB_USES_HCF'], [a + b, `Adding the intervals does not work: does the first leave again after ${a + b} minutes?`, 'M_LCMPROB_ADDS_INTERVALS'], [a * b, 'That is a time they leave together, but there is an earlier one.', 'M_LCMPROB_ADDS_INTERVALS'], [l * 2, 'That is later than the first time.', 'M_LCMPROB_ADDS_INTERVALS']],
         hints: ['List the leaving times of each matatu in minutes after 8:00.', 'Find the first time that is in both lists.'], steps: [`First matatu: ${[1, 2, 3, 4, 5].map(i => a * i).join(', ')}.`, `Second matatu: ${[1, 2, 3, 4, 5].map(i => b * i).join(', ')}. First match: ${l} minutes.`], chk: (x) => x % a === 0 && x % b === 0 && gcd(x / a, x / b) === 1 };
     } }),
@@ -544,13 +544,13 @@ export const FAMILIES = [
       const t = (m) => { const mm = (h0 * 60 + m); return `${Math.floor(mm / 60) % 12 || 12}:${String(mm % 60).padStart(2, '0')} ${mm >= 720 ? 'p.m.' : 'a.m.'}`; };
       if (l > 90) return null;
       const options = mc(t(l), [[t(gcd(a, b)), 'You used the HCF. They ring together at a multiple of both intervals.', 'M_LCMPROB_USES_HCF'], [t(a + b), 'You added the two intervals. List the times for each bell instead.', 'M_LCMPROB_ADDS_INTERVALS'], [t(2 * l), 'That is a later time. Look for the first time both ring.', 'M_LCMPROB_ADDS_INTERVALS']]);
-      return { question: `Two bells at a school ring every ${a} minutes and every ${b} minutes. At ${t(0)} they ring together. At what time do they next ring together?`, options, instruction: 'Choose the time.',
+      return { question: `Two bells at a school ring every ${a} minutes and every ${b} minutes. At ${t(0)} they ring together. At what time will they ring together again?`, options, instruction: 'Choose the time.',
         hints: ['List the times each bell rings.', 'Find the first time that appears for both.'], steps: [`The LCM of ${a} and ${b} is ${l}.`, `${t(0)} plus ${l} minutes is ${t(l)}.`] };
     } }),
   fam({ id: 'g5c.whole.lp.packs', cs: `${W}LCM_PROBLEMS`, form: 'steps', rung: 3,
     gen: () => {
       const [a, b] = pick([[6, 8], [4, 6], [12, 18], [10, 15], [6, 9]]), l = lcm(a, b), p = person();
-      return { question: `A shop sells exercise books in packs of ${a} and pencils in packs of ${b}. ${p.name} wants exactly the same number of each, and buys whole packs only.`,
+      return { question: `A shop sells exercise books in packs of ${a} and pencils in packs of ${b}. ${p.name} wants exactly the same number of each, and buys whole packs only, so each total is a multiple of its pack size.`,
         parts: [{ prompt: 'What is the smallest number of books and of pencils that are equal?', answer: l, hint: 'The number must be a multiple of both pack sizes.', wrong: [[gcd(a, b), 'That is too small to be a multiple of both pack sizes.', 'M_LCMPROB_USES_HCF'], [a + b, 'Adding the pack sizes does not make equal numbers.', 'M_LCMPROB_ADDS_INTERVALS'], [a * b, 'That works, but there is a smaller number that does too.', 'M_LCM_ALWAYS_PRODUCT']] },
           { prompt: `How many packs of ${a} books must ${p.she} buy?`, answer: l / a, hint: 'Share the number of books by the pack size.', wrong: [[l / b, `That is the number of packs of ${b}.`, 'M_LCMPROB_USES_HCF'], [l, 'That is the number of books, not packs.', 'M_LCMPROB_ADDS_INTERVALS'], [a, 'That is the number of books in one pack.', 'M_LCMPROB_ADDS_INTERVALS']] }],
         steps: [`LCM of ${a} and ${b} is ${l}.`, `Packs of ${a}: ${l} ÷ ${a} = ${l / a}.`], chk: (x, v) => v[0] % a === 0 && v[0] % b === 0 && v[1] * a === v[0] };

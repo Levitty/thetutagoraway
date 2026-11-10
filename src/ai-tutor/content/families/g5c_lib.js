@@ -20,6 +20,7 @@ import { randInt, pick } from '../schema.js';
 import { family, round, commas, fmtNum } from './core.js';
 import { person, sh, price } from './kenya.js';
 import { SKILLS_G5 } from '../curriculumMap.g5.js';
+import { SIGNED } from './g5c_signed.js';   // ids of factory-made families a teacher has signed off (see scripts/apply-question-review.mjs)
 
 export { randInt, pick, round, commas, fmtNum, person, sh, price };
 export const rot = (a, k) => [...a.slice(k % a.length), ...a.slice(0, k % a.length)];
@@ -78,7 +79,7 @@ export const fam = (d) => {
     } else if (x.options === null) return null;
     return x;
   };
-  return family({ reviewed: false, ...rest, id, form, rung, skill: ck.primary, cskill: `MATH.G5.${cs}`, outcome: letter, draw, make: x => x,
+  return family({ reviewed: SIGNED.includes(id), ...rest, id, form, rung, skill: ck.primary, cskill: `MATH.G5.${cs}`, outcome: letter, draw, make: x => x,
     check: (x, a) => (x.chk ? x.chk(a, a) : true) });
 };
 
