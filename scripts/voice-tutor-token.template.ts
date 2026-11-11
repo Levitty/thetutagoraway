@@ -1,12 +1,12 @@
 // voice-tutor-token: short-lived tokens for the live tutor's voice (milestone 3, 11 Nov 2026).
 //
-// The browser listens through Deepgram and speaks through Cartesia directly, with a token from
-// here; the keys stay on the server. The rules (switch, allowlist stub, session and day caps,
+// The browser listens (Ink) and speaks (Sonic) through Cartesia directly, with one short-lived token
+// from here; the key stays on the server. The rules (switch, allowlist stub, session and day caps,
 // tokens a minute) are in src/voice-tutor/tokens.js, tested by tests/voice-tutor-voice.test.mjs.
 //
 // Deploy:  supabase functions deploy voice-tutor-token
 // Then record it: node scripts/function-drift.mjs --record voice-tutor-token
-// Secrets: DEEPGRAM_API_KEY, CARTESIA_API_KEY (names only; the owner sets them), and the same
+// Secrets: CARTESIA_API_KEY (name only; the owner set it), and the same
 //          VOICE_TUTOR_ENABLED / VOICE_TUTOR_ALLOWLIST / caps as voice-tutor.
 //          VOICE_TUTOR_TTS_VOICE (optional): the Cartesia voice id. VOICE_TUTOR_TTS_MODEL (optional).
 
@@ -38,7 +38,7 @@ const dbFor = (admin) => ({
   },
   async countTokens({ userId, since }) {
     const { count } = await admin.from("voice_tutor_usage").select("id", { count: "exact", head: true })
-      .eq("user_id", userId).gte("created_at", since).overlaps("guard", ["token-stt", "token-tts"]);
+      .eq("user_id", userId).gte("created_at", since).contains("guard", ["token-voice"]);
     return count ?? 0;
   },
   async recordUsage(row) {
@@ -59,7 +59,7 @@ Deno.serve(async (req) => {
     const out = await mintToken({
       user, body: await req.json().catch(() => ({})), db: dbFor(admin),
       settings: settingsFrom((k) => Deno.env.get(k)),
-      keys: { deepgram: Deno.env.get("DEEPGRAM_API_KEY"), cartesia: Deno.env.get("CARTESIA_API_KEY") },
+      keys: { cartesia: Deno.env.get("CARTESIA_API_KEY") },
       fetch,
     });
     return json(out.body, out.status);

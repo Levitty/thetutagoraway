@@ -48,6 +48,7 @@ RULES THAT NEVER BEND:
 
 HOW YOU TALK:
 - Your words are spoken aloud while you draw, like a teacher at a board. Keep each turn short: at most about 40 words, then ask one question and wait (pause_for_child). Never lecture; the child should talk as much as you do.
+- Start every turn with a say (set_phase can come after it): the child hears you as soon as your first sentence is written.
 - English for a Kenyan ten year old. Short sentences, about 12 words or fewer. One idea at a time.
 - Write numbers and fractions in words in what you say ("three quarters"), so they are spoken naturally; put the figures on the board.
 - If the child spoke over you, the context says what they heard. Answer what they said first, briefly, then carry on.
@@ -107,7 +108,7 @@ export function turnContext({ target, prerequisite, profile = [], reason = '', e
  * history: [{ who:'tutor'|'child', text }] from the browser (the transcript).
  * names: [{ name, as }] scrubbed from everything sent.
  */
-export function buildRequest({ model, effort = 'low', lib, history = [], message = '', context = '', names = [], retry = null, image = null }) {
+export function buildRequest({ model, effort = 'low', lib, history = [], message = '', context = '', names = [], image = null }) {
   const scrub = (s) => scrubNames(s, names);
   const transcript = history.slice(-HISTORY_LINES)
     .map((h) => (h.who === 'child' ? `Child: ${fenceTeamText(scrub(h.text)).slice(0, 300)}` : `HOREB: ${scrub(String(h.text || '')).slice(0, 400)}`)).join('\n');
@@ -121,16 +122,14 @@ export function buildRequest({ model, effort = 'low', lib, history = [], message
   // The picture (only the latest; earlier ones are never re-sent) goes before the words.
   const content = image ? [{ type: 'image', source: { type: 'base64', media_type: image.media, data: image.data } }, { type: 'text', text: now }] : [{ type: 'text', text: now }];
   const messages = [{ role: 'user', content }];
-  if (retry) {
-    messages.push({ role: 'assistant', content: [{ type: 'text', text: retry.previous }] });
-    messages.push({ role: 'user', content: [{ type: 'text', text: `That turn could not be used: ${retry.reasons.join('; ')}. Send the whole turn again with these fixed.` }] });
-  }
   return {
     model,
     max_tokens: MAX_TOKENS,
     output_config: { effort, format: { type: 'json_schema', schema: TURN_SCHEMA } },
     system: [{ type: 'text', text: systemPrompt(lib), cache_control: { type: 'ephemeral' } }],
     messages,
+    // Streamed: each step is checked and spoken as soon as it is written (tutorTurn.js).
+    stream: true,
   };
 }
 

@@ -76,6 +76,13 @@ export function applyStep(board, step, at = 0, H = 640) {
   }
 }
 
+/**
+ * The board's height on an upright phone (it is always 1000 wide): about 36% of the
+ * screen's height, so the conversation keeps room for the current sentence whole.
+ * Between 600 and 1000; wide screens use 640.
+ */
+export const portraitBoardH = (w, h) => Math.max(600, Math.min(1000, Math.round((1000 * 0.36 * h) / Math.max(1, w - 16))));
+
 /** Progress (0..1) of a stroke that began at `at`, at time `now`. */
 export const drawProgress = (at, dur, now) => (dur <= 0 || now == null ? 1 : Math.max(0, Math.min(1, (now - at) / dur)));
 

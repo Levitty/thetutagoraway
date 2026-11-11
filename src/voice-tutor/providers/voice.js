@@ -1,11 +1,14 @@
 // ============================================================================
-// VOICE, the parts that are pure (milestone 3): tested in node, used by the
-// browser providers (cartesia.js, deepgram.js, mockVoice.js) and the page.
+// VOICE, the parts that are pure (milestones 3 and 3b): tested in node, used by
+// the browser providers (cartesia.js, cartesiaStt.js, webSpeech.js,
+// mockVoice.js) and the page.
 //
 //   cartesiaWords(msgs)     Cartesia `timestamps` messages (seconds) -> the
 //                           timeline's word times ({ word, start, end } in ms)
 //   pcmF32FromBase64(b64)   a Cartesia audio chunk (raw pcm_f32le) as samples
-//   deepgramEvent(msg)      a Deepgram message -> { kind: 'speech'|'partial'|'final'|'end'|'error', text }
+//   cartesiaSttEvent(msg)   a Cartesia Ink message -> { kind: 'partial'|'final'|'flushed'|'done'|'error', text }
+//   pcm16(float32)          microphone samples as the pcm_s16le Ink is sent
+//   SpeechEnd               end of speech from the microphone's loudness (press to talk, then silence ends it)
 //   voiceReducer(s, ev)     is the voice working, and if not, what the child is told:
 //                           typing is always the fallback, shown plainly
 //   bargeIn({ player, tts, now })  the child spoke: the voice stops at once, the
@@ -57,29 +60,56 @@ export function sentenceTiming(text, words, samples, sampleRate) {
   };
 }
 
-// ---------------------------------------------------------------- Deepgram
-/** A Deepgram live message, as what the page needs to know. */
-export function deepgramEvent(msg) {
+// ---------------------------------------------------------------- Cartesia Ink (listening)
+// wss://api.cartesia.ai/stt/websocket (Cartesia docs, read 11 Nov 2026). ink-whisper takes `language`
+// and `max_silence_duration_secs`; text arrives as deltas: concatenate the final ones as they are.
+export const CARTESIA_STT_URL = 'wss://api.cartesia.ai/stt/websocket';
+export const STT_MODEL = 'ink-whisper';
+export const STT_RATE = 16000;
+export const sttUrl = ({ token, version, rate = STT_RATE }) => `${CARTESIA_STT_URL}?model=${STT_MODEL}&language=en&encoding=pcm_s16le&sample_rate=${rate}&max_silence_duration_secs=0.8&cartesia_version=${encodeURIComponent(version)}&access_token=${encodeURIComponent(token)}`;
+
+/** A Cartesia Ink message, as what the page needs. */
+export function cartesiaSttEvent(msg) {
   if (!msg || typeof msg !== 'object') return null;
-  if (msg.type === 'SpeechStarted') return { kind: 'speech' };
-  if (msg.type === 'UtteranceEnd') return { kind: 'end' };
-  if (msg.type === 'Error' || msg.type === 'error') return { kind: 'error', text: String(msg.description || msg.message || 'speech service error') };
-  if (msg.type === 'Results') {
-    const text = String(msg.channel?.alternatives?.[0]?.transcript || '').trim();
-    if (msg.is_final) return { kind: 'final', text, speechFinal: !!msg.speech_final };
-    return text ? { kind: 'partial', text } : null;
-  }
+  if (msg.type === 'transcript') return { kind: msg.is_final ? 'final' : 'partial', text: String(msg.text ?? '') };
+  if (msg.type === 'flush_done') return { kind: 'flushed' };
+  if (msg.type === 'done') return { kind: 'done' };
+  if (msg.type === 'error') return { kind: 'error', text: String(msg.message || msg.title || 'speech service error') };
   return null;
 }
 
-/** Live query for Deepgram (the token comes from voice-tutor-token; the key never reaches the page). */
-export const DEEPGRAM_URL = 'wss://api.deepgram.com/v1/listen?model=nova-3&language=en&smart_format=true&interim_results=true&endpointing=400&utterance_end_ms=1200&vad_events=true';
+/** Float32 microphone samples -> little-endian 16-bit PCM bytes. */
+export function pcm16(f32) {
+  const out = new Int16Array(f32.length);
+  for (let i = 0; i < f32.length; i += 1) { const v = Math.max(-1, Math.min(1, f32[i])); out[i] = v < 0 ? v * 0x8000 : v * 0x7fff; }
+  return out.buffer;
+}
+
+/**
+ * End of speech from loudness, for press to talk: speech has started once a
+ * frame is louder than `speak`, and ends after `silenceMs` below `quiet`.
+ * feed(rms, ms) -> 'speech' (it started) | 'end' (it ended) | null.
+ */
+export function speechEnd({ speak = 0.02, quiet = 0.012, silenceMs = 800 } = {}) {
+  let talking = false; let quietFor = 0;
+  return {
+    feed(rms, ms) {
+      if (!talking) { if (rms >= speak) { talking = true; quietFor = 0; return 'speech'; } return null; }
+      if (rms < quiet) { quietFor += ms; if (quietFor >= silenceMs) { talking = false; return 'end'; } } else quietFor = 0;
+      return null;
+    },
+    get talking() { return talking; },
+  };
+}
+export const rmsOf = (f32) => { let s = 0; for (let i = 0; i < f32.length; i += 1) s += f32[i] * f32[i]; return Math.sqrt(s / (f32.length || 1)); };
 
 // ---------------------------------------------------------------- the fallback
 // mode: 'voice' (talk and listen), 'speaker' (the tutor speaks, the child types:
 // no microphone), 'typed' (no voice at all). A failure never stops the lesson:
 // it moves down a mode and says so plainly.
 export const VOICE_MESSAGES = {
+  'no-listening': 'This browser cannot listen, so please type your answers.',
+  'no-voice': 'This browser has no English voice, so HOREB is silent: read along as the words appear.',
   'mic-denied': 'The microphone is not allowed, so please type your answers.',
   'mic-missing': 'No microphone was found, so please type your answers.',
   'listen-failed': 'Listening is not working just now, so please type your answers.',
@@ -97,10 +127,16 @@ export function voiceReducer(s, ev) {
     case 'heard': case 'stopped': return { ...s, listening: false, partial: '' };
     case 'fail': {
       const kind = VOICE_MESSAGES[ev.kind] ? ev.kind : 'listen-failed';
-      const listenKinds = ['mic-denied', 'mic-missing', 'listen-failed'];
+      const listenKinds = ['mic-denied', 'mic-missing', 'listen-failed', 'no-listening'];
       // Losing the microphone keeps the voice; losing the voice or the line drops to typing.
-      const mode = listenKinds.includes(kind) ? (s.mode === 'typed' ? 'typed' : 'speaker') : kind === 'audio-blocked' ? s.mode : 'typed';
-      return { ...s, mode, listening: false, partial: '', message: VOICE_MESSAGES[kind], failures: s.failures + 1 };
+      const mode = listenKinds.includes(kind) ? (s.mode === 'typed' ? 'typed' : 'speaker')
+        : kind === 'audio-blocked' ? s.mode
+          : kind === 'no-voice' ? (s.mode === 'voice' ? 'voice' : s.mode)   // silent board, listening still works
+            : 'typed';
+      // Two things can be wrong at once (no voice and no listening): say both, once each.
+      const both = !!s.message && !s.message.includes(VOICE_MESSAGES[kind]) && kind !== 'audio-blocked';
+      const message = both ? `${s.message} ${VOICE_MESSAGES[kind]}` : VOICE_MESSAGES[kind];
+      return { ...s, mode, listening: false, partial: '', message, failures: s.failures + 1 };
     }
     case 'retry': return { ...s, mode: ev.mode || 'voice', message: '' };
     default: return s;
@@ -124,14 +160,17 @@ export function bargeIn({ player, tts, now }) {
 }
 
 // ---------------------------------------------------------------- price
-// Option B (owner, 10 Nov 2026). Confirm against the vendors' pages before paying.
+// Cartesia, both ways (owner, 11 Nov 2026). Source: cartesia.ai/pricing, read 11 Nov 2026:
+// Pro US$5 a month for 100K credits (US$0.00005 a credit); Sonic 1 credit a character;
+// Ink speech-to-text 3 credits a second, so 180 a minute. Scale (US$299 for 8M) is cheaper:
+// US$0.0000374 a character, about US$0.0067 a minute (the page quotes US$0.39 an hour).
 export const PRICES = {
-  ttsUsdPerChar: 65 / 1e6,       // Cartesia Pro: US$65 a million credits, 1 credit a character
-  sttUsdPerMinute: 0.0077,       // Deepgram streaming, only while the child speaks
+  ttsUsdPerChar: 5 / 100000,               // Sonic: 1 credit a character at Pro
+  sttUsdPerMinute: (180 * 5) / 100000,     // Ink: 3 credits a second at Pro = US$0.009 a minute, only while the child speaks
 };
 export const speechCost = (chars, p = PRICES) => Math.max(0, chars) * p.ttsUsdPerChar;
 export const listenCost = (seconds, p = PRICES) => (Math.max(0, seconds) / 60) * p.sttUsdPerMinute;
 /** Characters the tutor will speak in a turn (every `say`). */
 export const spokenChars = (steps) => (steps || []).filter((s) => s.cmd === 'say').reduce((n, s) => n + String(s.text).length, 0);
 
-export default { cartesiaWords, pcmF32FromBase64, sentenceTiming, deepgramEvent, voiceReducer, bargeIn, speechCost, listenCost, spokenChars };
+export default { cartesiaWords, pcmF32FromBase64, sentenceTiming, cartesiaSttEvent, pcm16, speechEnd, voiceReducer, bargeIn, speechCost, listenCost, spokenChars };

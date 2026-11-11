@@ -601,15 +601,6 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
 }
 var MAX_SPOKEN_WORDS = 60;
 var spokenWords = (steps) => steps.filter((s) => s.cmd === "say").reduce((n, s) => n + s.text.split(/\s+/).filter(Boolean).length, 0);
-var turnProblems = (steps, { nod = false, maxWords = null } = {}) => {
-  const out = [];
-  if (maxWords && spokenWords(steps) > maxWords) out.push(`the turn says ${spokenWords(steps)} words: say at most ${maxWords}, then wait for the child`);
-  const isNod = nod && steps.length >= 1 && steps.every((s) => s.cmd === "pause_for_child" || s.cmd === "set_phase" || s.cmd === "record_diagnosis");
-  if (!isNod && !steps.some((s) => s.cmd === "say")) out.push("the turn says nothing");
-  const last = steps[steps.length - 1];
-  if (!last || !["pause_for_child", "end_session"].includes(last.cmd)) out.push("the turn does not end with pause_for_child or end_session");
-  return out;
-};
 var S = (props, required) => ({ type: "object", properties: props, required, additionalProperties: false });
 var T = { type: "string" };
 var I = { type: "integer" };
@@ -4930,6 +4921,68 @@ function checkTurnText(steps, hidden = []) {
   return { ok: reasons.length === 0, reasons };
 }
 
+// src/voice-tutor/streamSteps.js
+function stepParser() {
+  let buf = "";
+  let i = 0;
+  let inArray = false;
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+  let start = -1;
+  let keyAt = -1;
+  return {
+    /** Feed more text; returns the steps completed by it. */
+    push(text) {
+      buf += String(text || "");
+      const out = [];
+      for (; i < buf.length; i += 1) {
+        const c = buf[i];
+        if (inString) {
+          if (escaped) escaped = false;
+          else if (c === "\\") escaped = true;
+          else if (c === '"') inString = false;
+          continue;
+        }
+        if (c === '"') {
+          inString = true;
+          continue;
+        }
+        if (!inArray) {
+          if (keyAt < 0) {
+            const k = buf.indexOf('"steps"');
+            if (k >= 0 && k < i) keyAt = k;
+          }
+          if (keyAt >= 0 && c === "[") inArray = true;
+          continue;
+        }
+        if (c === "{") {
+          if (depth === 0) start = i;
+          depth += 1;
+          continue;
+        }
+        if (c === "}") {
+          depth -= 1;
+          if (depth === 0 && start >= 0) {
+            const raw = buf.slice(start, i + 1);
+            try {
+              out.push(JSON.parse(raw));
+            } catch {
+              out.push({ __bad: raw.slice(0, 200) });
+            }
+            start = -1;
+          }
+          continue;
+        }
+        if (c === "]" && depth === 0) inArray = false;
+      }
+      return out;
+    },
+    /** All the text so far (for logs). */
+    text: () => buf
+  };
+}
+
 // src/voice-tutor/prompt.js
 var MAX_TOKENS = 6e3;
 var HISTORY_LINES = 24;
@@ -4966,6 +5019,7 @@ RULES THAT NEVER BEND:
 
 HOW YOU TALK:
 - Your words are spoken aloud while you draw, like a teacher at a board. Keep each turn short: at most about 40 words, then ask one question and wait (pause_for_child). Never lecture; the child should talk as much as you do.
+- Start every turn with a say (set_phase can come after it): the child hears you as soon as your first sentence is written.
 - English for a Kenyan ten year old. Short sentences, about 12 words or fewer. One idea at a time.
 - Write numbers and fractions in words in what you say ("three quarters"), so they are spoken naturally; put the figures on the board.
 - If the child spoke over you, the context says what they heard. Answer what they said first, briefly, then carry on.
@@ -5017,7 +5071,7 @@ function turnContext({ target, prerequisite, profile = [], reason = "", elapsedM
 ${lines.join("\n")}
 </context>`;
 }
-function buildRequest({ model, effort = "low", lib, history = [], message = "", context = "", names = [], retry: retry2 = null, image = null }) {
+function buildRequest({ model, effort = "low", lib, history = [], message = "", context = "", names = [], image = null }) {
   const scrub = (s) => scrubNames(s, names);
   const transcript = history.slice(-HISTORY_LINES).map((h) => h.who === "child" ? `Child: ${fenceTeamText(scrub(h.text)).slice(0, 300)}` : `HOREB: ${scrub(String(h.text || "")).slice(0, 400)}`).join("\n");
   const now = [
@@ -5029,16 +5083,14 @@ ${transcript}
   ].join("\n");
   const content = image ? [{ type: "image", source: { type: "base64", media_type: image.media, data: image.data } }, { type: "text", text: now }] : [{ type: "text", text: now }];
   const messages = [{ role: "user", content }];
-  if (retry2) {
-    messages.push({ role: "assistant", content: [{ type: "text", text: retry2.previous }] });
-    messages.push({ role: "user", content: [{ type: "text", text: `That turn could not be used: ${retry2.reasons.join("; ")}. Send the whole turn again with these fixed.` }] });
-  }
   return {
     model,
     max_tokens: MAX_TOKENS,
     output_config: { effort, format: { type: "json_schema", schema: TURN_SCHEMA } },
     system: [{ type: "text", text: systemPrompt(lib), cache_control: { type: "ephemeral" } }],
-    messages
+    messages,
+    // Streamed: each step is checked and spoken as soon as it is written (tutorTurn.js).
+    stream: true
   };
 }
 
@@ -33411,10 +33463,10 @@ function validateSnapshot(x) {
 
 // src/voice-tutor/providers/voice.js
 var PRICES3 = {
-  ttsUsdPerChar: 65 / 1e6,
-  // Cartesia Pro: US$65 a million credits, 1 credit a character
-  sttUsdPerMinute: 77e-4
-  // Deepgram streaming, only while the child speaks
+  ttsUsdPerChar: 5 / 1e5,
+  // Sonic: 1 credit a character at Pro
+  sttUsdPerMinute: 180 * 5 / 1e5
+  // Ink: 3 credits a second at Pro = US$0.009 a minute, only while the child speaks
 };
 var speechCost = (chars, p = PRICES3) => Math.max(0, chars) * p.ttsUsdPerChar;
 var listenCost = (seconds, p = PRICES3) => Math.max(0, seconds) / 60 * p.sttUsdPerMinute;
@@ -33432,6 +33484,7 @@ var TURN_ESTIMATE_USD = 0.02;
 var VOICE_TURN_CHARS_ESTIMATE = 250;
 var MAX_AUDIO_S = 90;
 var FALLBACK_TURN = [say("Let me think about that a different way."), say("Tell me what you think the first step is."), handBack];
+var RECOVER_TURN = [say("Let me stop there."), say("Tell me what you think the next step is."), handBack];
 var WIND_DOWN = [
   { cmd: "set_phase", phase: "wrapup" },
   say("We have done a lot of good thinking today."),
@@ -33439,7 +33492,7 @@ var WIND_DOWN = [
   { cmd: "end_session", summary: "The session reached its time or cost limit and closed early." }
 ];
 var DISCLOSES = /\b(ai|a\.i\.|artificial intelligence|computer program|not a (real )?person|not a human)\b/i;
-async function runTutorTurn({ user, body, db, callModel = null, safeguard = null, settings, lib = {}, secret, now = Date.now() }) {
+async function prepareTurn({ user, body, db, callModel = null, safeguard = null, settings, lib = {}, secret, now = Date.now() }) {
   if (!user?.id) return reply(401, { error: "Sign in first." });
   if (!settings?.enabled) return reply(403, { error: OFF_REPLY });
   const email = String(user.email || "").toLowerCase();
@@ -33477,9 +33530,9 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
   if (body?.answer?.seal) {
     const q = await unseal(body.answer.seal, secret, { session: sid, child: childKey, now });
     if (q) {
-      const r2 = markItem(q.item, String(body.answer.response ?? "").slice(0, 60));
-      marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r2.correct, misconception: r2.mis || null, answer: String(body.answer.response ?? "").slice(0, 60) };
-      if (!r2.correct) open = q.item;
+      const r = markItem(q.item, String(body.answer.response ?? "").slice(0, 60));
+      marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: String(body.answer.response ?? "").slice(0, 60) };
+      if (!r.correct) open = q.item;
     }
   }
   const progress = await db.getProgress(childKey) || { skills: {} };
@@ -33494,18 +33547,21 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
   const voice = body?.voice === true;
   const audioS = Math.max(0, Math.min(MAX_AUDIO_S, Number(body?.audio_in_s) || 0));
   const listenUsd = listenCost(audioS);
-  const voiceMeter = { voice, audioS, listenUsd };
-  const out = async (steps2, extra = {}) => {
-    const v = validateTurn({ steps: steps2 }, vopts);
-    if (voiceMeter) {
-      const chars = voiceMeter.voice ? spokenChars(v.steps) : 0;
-      const usd = speechCost(chars) + voiceMeter.listenUsd;
-      if (chars || voiceMeter.audioS) await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: "voice", cost_usd: usd, guard: ["voice"], dropped_steps: 0, tts_chars: chars, audio_in_s: voiceMeter.audioS });
-      extra = { ...extra, cost: (extra.cost || 0) + usd, spent: extra.spent ? addSpent(extra.spent, usd) : extra.spent, voice: { chars, audio_s: voiceMeter.audioS, usd } };
-    }
-    return reply(200, { steps: await sealAsks(v.steps, extra.bank || []), dropped: extra.dropped || v.dropped, notes: extra.notes || v.notes, marked, target: pick2.target, prerequisite: pick2.prerequisite, guard: extra.guard || [], cost_usd: extra.cost || 0, spent: extra.spent || null, model: extra.model || null, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null }, voice: extra.voice || null });
+  const meta = () => ({ type: "meta", target: pick2.target, prerequisite: pick2.prerequisite, marked, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null } });
+  const authored = (steps, guard, spent2) => ({ status: 200, go: async (emit) => {
+    emit(meta());
+    const v = validateTurn({ steps }, vopts);
+    for (const st of v.steps) emit({ type: "step", step: await sealAsk(st, []) });
+    const voiceUsd = await meterVoice(v.steps);
+    emit({ type: "end", guard, dropped: v.dropped, notes: v.notes, cost_usd: voiceUsd.usd, spent: spent2 ? addSpent(spent2, voiceUsd.usd) : null, voice: voiceUsd, model: null });
+  } });
+  const meterVoice = async (steps) => {
+    const chars = voice ? spokenChars(steps) : 0;
+    const usd = speechCost(chars) + listenUsd;
+    if (chars || audioS) await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: "voice", cost_usd: usd, guard: ["voice"], dropped_steps: 0, tts_chars: chars, audio_in_s: audioS });
+    return { chars, audio_s: audioS, usd };
   };
-  const sealAsks = async (steps2, bank2) => Promise.all(steps2.map(async (s) => {
+  const sealAsk = async (s, bank2) => {
     if (s.cmd !== "ask") return s;
     const item = itemFor(s, bank2);
     const { expected, accepts: accepts2, wrong, bank: b, ...pub } = s;
@@ -33519,9 +33575,9 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
     pub.skill = item?.cskill || s.skill || pick2.target;
     if (!item) return pub;
     return { ...pub, seal: await seal({ session: sid, child: childKey, ask: s.id, skill: pub.skill, item }, secret, now) };
-  }));
+  };
   const screen2 = message ? screenChild(message) : { ok: true, wantsAnswer: false };
-  if (!screen2.ok) return out([say(screen2.reply), handBack], { guard: [screen2.kind] });
+  if (!screen2.ok) return authored([say(screen2.reply), handBack], [screen2.kind], null);
   let spent;
   try {
     spent = await db.spend({ sessionId: sid, childKey, since: dayStart(now) });
@@ -33544,8 +33600,8 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
   const imageUsd = image ? imageTokens(image.w, image.h) * (PRICES2[settings.model]?.input ?? 2) / 1e6 : 0;
   const est = TURN_ESTIMATE_USD + imageUsd + listenUsd + (voice ? speechCost(VOICE_TURN_CHARS_ESTIMATE) : 0);
   const cap2 = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
-  if (!cap2.ok) return out(WIND_DOWN, { guard: [cap2.reason], spent });
-  if (!callModel) return out(image ? NO_PICTURE_TURN : screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, { guard: ["offline"], spent });
+  if (!cap2.ok) return authored(WIND_DOWN, [cap2.reason], spent);
+  if (!callModel) return authored(image ? NO_PICTURE_TURN : screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, ["offline"], spent);
   const bank = probeBank(skills, `${sid}:${turnIndex}`);
   const names = child?.name ? [{ name: child.name, as: "the child" }] : [];
   const context = turnContext({
@@ -33561,57 +33617,109 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
     picture
   });
   const history = Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === "string") : [];
-  const base = { model: settings.model, effort: settings.effort, lib, history, message, context, names, image };
+  const request = buildRequest({ model: settings.model, effort: settings.effort, lib, history, message, context, names, image });
   const nod = !!image && image.reason === "idle" && !message;
-  let cost = 0;
-  const meter = { input_tokens: 0, output_tokens: 0, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 };
-  const attempt = async (retry2) => {
-    const res = await callModel(buildRequest({ ...base, retry: retry2 }));
-    const u = res?.usage || {};
-    for (const k of Object.keys(meter)) meter[k] += u[k] || 0;
-    cost += costOf(settings.model, u);
-    if (res?.stop_reason === "refusal") return { refused: true };
-    const text = (res?.content || []).filter((c) => c.type === "text").map((c) => c.text).join("");
-    let raw = null;
-    try {
-      raw = JSON.parse(text);
-    } catch {
-      return { text, reasons: ["the reply was not valid JSON"] };
-    }
-    const v = validateTurn(raw, vopts);
-    const reasons = [...v.dropped.map((d) => `step ${d.index} (${d.cmd}) dropped: ${d.reason}`), ...turnProblems(v.steps, { nod, maxWords: MAX_SPOKEN_WORDS })];
-    const hidden = [open, ...v.steps.filter((s) => s.cmd === "ask").map((s) => itemFor(s, bank))].filter(Boolean);
-    const leak = checkTurnText(v.steps, hidden);
-    if (!leak.ok) reasons.push(...leak.reasons.map((r2) => `${r2}: never give the answer`));
-    if (turnIndex === 0 && !v.steps.some((s) => s.cmd === "say" && DISCLOSES.test(s.text))) {
-      if (v.steps.length < 12) v.steps.unshift(say(DISCLOSURE));
-      else {
-        const k = v.steps.findIndex((s) => s.cmd === "say");
-        v.steps[k] = say(DISCLOSURE);
+  return { status: 200, go: async (emit) => {
+    emit(meta());
+    const sent = [];
+    const raws = [];
+    const dropped = [];
+    const notes = [];
+    const guard = [];
+    const hidden = [open].filter(Boolean);
+    let closed = false;
+    let saidAny = false;
+    const send = async (st) => {
+      const pub = await sealAsk(st, bank);
+      sent.push(st);
+      emit({ type: "step", step: pub });
+    };
+    const stop = async (why) => {
+      if (closed) return;
+      closed = true;
+      guard.push(why);
+      for (const st of screen2.wantsAnswer && !saidAny ? [say(ANSWER_REPLY), handBack] : saidAny ? RECOVER_TURN : FALLBACK_TURN) await send(st);
+    };
+    const visible = (steps) => steps.filter((x) => ["say", "write_text", "write_math", "ask"].includes(x.cmd));
+    const handle = async (raw) => {
+      if (closed) return;
+      raws.push(raw && !raw.__bad ? raw : { cmd: "__bad" });
+      const v = validateTurn({ steps: raws }, vopts);
+      const bad2 = v.dropped.find((d) => d.index === raws.length - 1);
+      if (bad2) {
+        dropped.push(bad2);
+        raws.pop();
+        return;
       }
+      const st = v.steps[v.steps.length - 1];
+      notes.splice(0, notes.length, ...v.notes);
+      if (st.cmd === "ask") {
+        const it = itemFor(st, bank);
+        if (it) hidden.push(it);
+      }
+      if (visible([st]).length) {
+        const leak = checkTurnText(visible([...sent, st]), hidden);
+        if (!leak.ok) {
+          console.warn("voice-tutor: answer leak", leak.reasons.slice(0, 2));
+          await stop("answer-leak");
+          return;
+        }
+        const text = st.text || st.prompt || "";
+        if (safeguard && text && safeguard(text)?.tier !== "none") {
+          await stop("unsafe-reply");
+          return;
+        }
+      }
+      if (st.cmd === "say") {
+        if (turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text)) await send(say(DISCLOSURE));
+        if (spokenWords([...sent, st]) > MAX_SPOKEN_WORDS) {
+          guard.push("too-long");
+          closed = true;
+          await send(handBack);
+          return;
+        }
+        saidAny = true;
+      }
+      if (st.cmd === "pause_for_child" && !saidAny && !nod) {
+        await stop("invalid-turn");
+        return;
+      }
+      await send(st);
+      if (st.cmd === "pause_for_child" || st.cmd === "end_session") closed = true;
+    };
+    let usage = {};
+    let stopReason = null;
+    const parser = stepParser();
+    let queue = Promise.resolve();
+    try {
+      const res = await callModel({ ...request, stream: true }, {
+        onText: (t) => {
+          const got = parser.push(t);
+          queue = queue.then(async () => {
+            for (const raw of got) await handle(raw);
+          });
+        }
+      });
+      await queue;
+      usage = res?.usage || {};
+      stopReason = res?.stop_reason || null;
+    } catch (e) {
+      await queue.catch(() => {
+      });
+      console.error("voice-tutor: model", String(e?.message || e).slice(0, 200));
+      await stop("model-error");
     }
-    return { text, v, reasons, leaked: !leak.ok, fatal: !leak.ok || turnProblems(v.steps, { nod, maxWords: MAX_SPOKEN_WORDS }).length > 0 };
-  };
-  let r;
-  const guard = [];
-  try {
-    r = await attempt(null);
-    if (!r.refused && r.reasons?.length) {
-      guard.push("retried");
-      const again = await attempt({ previous: r.text || "", reasons: r.reasons.slice(0, 8) });
-      r = again.refused ? again : !again.fatal || r.fatal ? again : r;
+    if (stopReason === "refusal") await stop("refusal");
+    if (!closed && !saidAny && !(nod && sent.length === 0)) await stop("invalid-turn");
+    if (!closed) {
+      closed = true;
+      await send(handBack);
     }
-  } catch (e) {
-    await logUsage(db, { user, childKey, sid, settings, cost, meter, guard: [...guard, "model-error"], dropped: 0, image });
-    return out(FALLBACK_TURN, { guard: [...guard, "model-error"], cost, spent: addSpent(spent, cost) });
-  }
-  if (r.refused) guard.push("refusal");
-  const usable2 = r.v && !r.fatal;
-  if (!usable2 && !r.refused) guard.push(r.leaked ? "answer-leak" : "invalid-turn");
-  const steps = usable2 ? r.v.steps : screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN;
-  await logUsage(db, { user, childKey, sid, settings, cost, meter, guard, dropped: r.v?.dropped.length || 0, image });
-  const body2 = await out(steps, { bank, guard, cost, spent: addSpent(spent, cost), model: settings.model, dropped: r.v?.dropped || [], notes: r.v?.notes || [] });
-  return body2;
+    const cost = costOf(settings.model, usage);
+    await logUsage(db, { user, childKey, sid, settings, cost, meter: usage, guard, dropped: dropped.length, image });
+    const voiceUsd = await meterVoice(sent);
+    emit({ type: "end", guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model });
+  } };
 }
 var addSpent = (s, c) => ({ session: (s?.session || 0) + c, day: (s?.day || 0) + c });
 var dayStart = (now) => {
@@ -33625,10 +33733,10 @@ var logUsage = (db, { user, childKey, sid, settings, cost, meter, guard, dropped
   session_id: sid,
   model: settings.model,
   cost_usd: cost,
-  input_tokens: meter.input_tokens,
-  output_tokens: meter.output_tokens,
-  cache_read_tokens: meter.cache_read_input_tokens,
-  cache_write_tokens: meter.cache_creation_input_tokens,
+  input_tokens: meter.input_tokens ?? 0,
+  output_tokens: meter.output_tokens ?? 0,
+  cache_read_tokens: meter.cache_read_input_tokens ?? 0,
+  cache_write_tokens: meter.cache_creation_input_tokens ?? 0,
   guard,
   dropped_steps: dropped,
   snapshots: image ? 1 : 0,
@@ -39208,17 +39316,46 @@ var cors = {
 };
 var json = (body, status = 200) => new Response(JSON.stringify(body), { status, headers: { ...cors, "Content-Type": "application/json" } });
 var FRACTION_LIB = Object.fromEntries(Object.entries(g5_misconceptions_default).filter(([k]) => k.startsWith("MATH.G5.NUMBER.FRACTIONS.")));
-var callModelWith = (key) => async (request) => {
+var callModelWith = (key) => async (request, { onText }) => {
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01", "anthropic-beta": "server-side-fallback-2026-07-01" },
-    body: JSON.stringify({ ...request, fallbacks: "default" })
+    body: JSON.stringify({ ...request, stream: true, fallbacks: "default" })
   });
-  if (!res.ok) {
+  if (!res.ok || !res.body) {
     console.error("anthropic", res.status, (await res.text().catch(() => "")).slice(0, 400));
     throw new Error(`model ${res.status}`);
   }
-  return await res.json();
+  const usage = {};
+  let stop_reason = null;
+  const reader = res.body.getReader();
+  const dec2 = new TextDecoder();
+  let buf = "";
+  for (; ; ) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buf += dec2.decode(value, { stream: true });
+    let cut;
+    while ((cut = buf.indexOf("\n\n")) >= 0) {
+      const block = buf.slice(0, cut);
+      buf = buf.slice(cut + 2);
+      const line = block.split("\n").find((l) => l.startsWith("data:"));
+      if (!line) continue;
+      let ev;
+      try {
+        ev = JSON.parse(line.slice(5).trim());
+      } catch {
+        continue;
+      }
+      if (ev.type === "message_start") Object.assign(usage, ev.message?.usage || {});
+      else if (ev.type === "content_block_delta" && ev.delta?.type === "text_delta") onText(ev.delta.text);
+      else if (ev.type === "message_delta") {
+        Object.assign(usage, ev.usage || {});
+        stop_reason = ev.delta?.stop_reason ?? stop_reason;
+      } else if (ev.type === "error") throw new Error(ev.error?.message || "model stream error");
+    }
+  }
+  return { usage, stop_reason };
 };
 var dbFor = (admin) => ({
   async getChild(id) {
@@ -39293,7 +39430,7 @@ Deno.serve(async (req) => {
     if (!user) return json({ error: "Sign in first." }, 401);
     const admin = createClient(Deno.env.get("SUPABASE_URL"), Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"));
     const key = Deno.env.get("ANTHROPIC_API_KEY");
-    const out = await runTutorTurn({
+    const turn2 = await prepareTurn({
       user,
       body: JSON.parse(text || "{}"),
       db: dbFor(admin),
@@ -39303,7 +39440,22 @@ Deno.serve(async (req) => {
       lib: FRACTION_LIB,
       secret: Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")
     });
-    return json(out.body, out.status);
+    if (!turn2.go) return json(turn2.body, turn2.status);
+    const enc2 = new TextEncoder();
+    const stream = new ReadableStream({
+      async start(controller) {
+        const emit = (ev) => controller.enqueue(enc2.encode(`${JSON.stringify(ev)}
+`));
+        try {
+          await turn2.go(emit);
+        } catch (e) {
+          console.error(e);
+          emit({ type: "end", guard: ["server-error"], broken: true });
+        }
+        controller.close();
+      }
+    });
+    return new Response(stream, { status: 200, headers: { ...cors, "Content-Type": "application/x-ndjson", "Cache-Control": "no-store", "X-Accel-Buffering": "no" } });
   } catch (e) {
     console.error(e);
     return json({ error: "HOREB could not answer just now. Try again in a moment." }, 500);

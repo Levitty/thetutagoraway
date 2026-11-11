@@ -86,18 +86,8 @@ var capCheck = ({ sessionUsd = 0, dayUsd = 0, turns = 0 } = {}, s = DEFAULT_SETT
   return { ok: true, reason: null };
 };
 
-// src/voice-tutor/providers/voice.js
-var DEEPGRAM_URL = "wss://api.deepgram.com/v1/listen?model=nova-3&language=en&smart_format=true&interim_results=true&endpointing=400&utterance_end_ms=1200&vad_events=true";
-var PRICES = {
-  ttsUsdPerChar: 65 / 1e6,
-  // Cartesia Pro: US$65 a million credits, 1 credit a character
-  sttUsdPerMinute: 77e-4
-  // Deepgram streaming, only while the child speaks
-};
-
 // src/voice-tutor/tokens.js
-var STT_TTL_S = 30;
-var TTS_TTL_S = 600;
+var TOKEN_TTL_S = 600;
 var TOKENS_PER_MINUTE = 20;
 var CARTESIA_WS = "wss://api.cartesia.ai/tts/websocket";
 var CARTESIA_VERSION = "2026-08-14";
@@ -112,8 +102,6 @@ async function mintToken({ user, body, db, settings, keys = {}, fetch: f, now = 
   if (!settings?.enabled) return reply(403, { error: "The live tutor is switched off." });
   const email = String(user.email || "").toLowerCase();
   if (!email || !settings.allowlist.includes(email)) return reply(403, { error: "Voice is for adult test accounts only until parent consent is built (milestone 5)." });
-  const kind = body?.kind === "tts" ? "tts" : body?.kind === "stt" ? "stt" : null;
-  if (!kind) return reply(400, { error: "Which voice service?" });
   const sid = String(body?.session_id || "");
   if (!/^[A-Za-z0-9-]{8,64}$/.test(sid)) return reply(400, { error: "No session." });
   let childKey = user.id;
@@ -132,36 +120,24 @@ async function mintToken({ user, body, db, settings, keys = {}, fetch: f, now = 
   if (!cap.ok) return reply(402, { error: "This lesson has used its allowance for today.", reason: cap.reason });
   const recent = await db.countTokens({ userId: user.id, since: new Date(now - 6e4).toISOString() });
   if (recent >= TOKENS_PER_MINUTE) return reply(429, { error: "Too many voice requests. Wait a moment." });
-  const key = kind === "stt" ? keys.deepgram : keys.cartesia;
-  if (!key) return reply(503, { error: `Voice is not set up (${kind === "stt" ? "DEEPGRAM_API_KEY" : "CARTESIA_API_KEY"} is missing).` });
+  const key = keys.cartesia;
+  if (!key) return reply(503, { error: "Voice is not set up (CARTESIA_API_KEY is missing)." });
   let out;
   try {
-    if (kind === "stt") {
-      const r = await f("https://api.deepgram.com/v1/auth/grant", {
-        method: "POST",
-        headers: { Authorization: `Token ${key}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ ttl_seconds: STT_TTL_S })
-      });
-      if (!r.ok) throw new Error(`deepgram ${r.status}`);
-      const j = await r.json();
-      if (!j?.access_token) throw new Error("deepgram gave no token");
-      out = { token: j.access_token, expires_in: Number(j.expires_in) || STT_TTL_S, url: DEEPGRAM_URL };
-    } else {
-      const r = await f("https://api.cartesia.ai/access-token", {
-        method: "POST",
-        headers: { Authorization: `Bearer ${key}`, "Cartesia-Version": CARTESIA_VERSION, "Content-Type": "application/json" },
-        body: JSON.stringify({ grants: { tts: true }, expires_in: TTS_TTL_S })
-      });
-      if (!r.ok) throw new Error(`cartesia ${r.status}`);
-      const j = await r.json();
-      if (!j?.token) throw new Error("cartesia gave no token");
-      out = { token: j.token, expires_in: TTS_TTL_S, url: CARTESIA_WS, version: CARTESIA_VERSION, model: settings.ttsModel, voice: settings.ttsVoice, sample_rate: settings.ttsSampleRate };
-    }
+    const r = await f("https://api.cartesia.ai/access-token", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${key}`, "Cartesia-Version": CARTESIA_VERSION, "Content-Type": "application/json" },
+      body: JSON.stringify({ grants: { tts: true, stt: true }, expires_in: TOKEN_TTL_S })
+    });
+    if (!r.ok) throw new Error(`cartesia ${r.status}`);
+    const j = await r.json();
+    if (!j?.token) throw new Error("cartesia gave no token");
+    out = { token: j.token, expires_in: TOKEN_TTL_S, version: CARTESIA_VERSION, url: CARTESIA_WS, model: settings.ttsModel, voice: settings.ttsVoice, sample_rate: settings.ttsSampleRate };
   } catch (e) {
     console.error("voice token", String(e?.message || e).slice(0, 200));
     return reply(502, { error: "The voice service did not answer. Please type for now." });
   }
-  await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: kind === "stt" ? "deepgram" : "cartesia", cost_usd: 0, guard: [`token-${kind}`], dropped_steps: 0 });
+  await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: "cartesia", cost_usd: 0, guard: ["token-voice"], dropped_steps: 0 });
   return reply(200, out);
 }
 
@@ -187,7 +163,7 @@ var dbFor = (admin) => ({
     return { session: sum(a), day: sum(b) };
   },
   async countTokens({ userId, since }) {
-    const { count } = await admin.from("voice_tutor_usage").select("id", { count: "exact", head: true }).eq("user_id", userId).gte("created_at", since).overlaps("guard", ["token-stt", "token-tts"]);
+    const { count } = await admin.from("voice_tutor_usage").select("id", { count: "exact", head: true }).eq("user_id", userId).gte("created_at", since).contains("guard", ["token-voice"]);
     return count ?? 0;
   },
   async recordUsage(row) {
@@ -209,7 +185,7 @@ Deno.serve(async (req) => {
       body: await req.json().catch(() => ({})),
       db: dbFor(admin),
       settings: settingsFrom((k) => Deno.env.get(k)),
-      keys: { deepgram: Deno.env.get("DEEPGRAM_API_KEY"), cartesia: Deno.env.get("CARTESIA_API_KEY") },
+      keys: { cartesia: Deno.env.get("CARTESIA_API_KEY") },
       fetch
     });
     return json(out.body, out.status);

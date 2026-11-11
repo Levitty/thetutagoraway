@@ -1,4 +1,5 @@
-// voice-tutor: one turn of the HOREB live tutor prototype (milestone 1, 10 Nov 2026).
+// voice-tutor: one turn of the HOREB live tutor prototype (milestones 1 to 3b, 10-11 Nov 2026).
+// The turn streams: the model's reply is read as it is written, each step checked, then sent as a line.
 //
 // The decision is all in src/voice-tutor/tutorTurn.js (bundled below with the
 // command validator, the guards, the fraction map, the probe bank and the
@@ -24,7 +25,7 @@
 
 // @ts-nocheck
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
-import { runTutorTurn } from "../src/voice-tutor/tutorTurn.js";
+import { prepareTurn } from "../src/voice-tutor/tutorTurn.js";
 import { settingsFrom } from "../src/voice-tutor/session.js";
 import { screen, CHILD_HELPLINE } from "../src/ai/safeguarding.js";
 import LIB from "../engine/data/curriculum/g5.misconceptions.json";
@@ -38,20 +39,41 @@ const json = (body, status = 200) => new Response(JSON.stringify(body), { status
 // Only the fraction misconceptions are needed; the rest of the library stays out of the prompt.
 const FRACTION_LIB = Object.fromEntries(Object.entries(LIB).filter(([k]) => k.startsWith("MATH.G5.NUMBER.FRACTIONS.")));
 
-// The Messages API by plain fetch, as rocket-guide and mark-composition do. A
-// refusal is re-run on a model chosen by the API (server-side fallback); one
-// that survives it is answered with an authored line in tutorTurn.js.
-const callModelWith = (key) => async (request) => {
+// The Messages API by plain fetch, streamed (Server-Sent Events): each text delta is handed to
+// onText as it arrives, so tutorTurn.js can check and send each step as soon as it is written.
+// A refusal is re-run on a model chosen by the API (server-side fallback); one that survives it
+// ends the turn with an authored line. Usage (every token, for the caps) comes in the events.
+const callModelWith = (key) => async (request, { onText }) => {
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01", "anthropic-beta": "server-side-fallback-2026-07-01" },
-    body: JSON.stringify({ ...request, fallbacks: "default" }),
+    body: JSON.stringify({ ...request, stream: true, fallbacks: "default" }),
   });
-  if (!res.ok) {
+  if (!res.ok || !res.body) {
     console.error("anthropic", res.status, (await res.text().catch(() => "")).slice(0, 400));
     throw new Error(`model ${res.status}`);
   }
-  return await res.json();
+  const usage = {}; let stop_reason = null;
+  const reader = res.body.getReader();
+  const dec = new TextDecoder();
+  let buf = "";
+  for (;;) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buf += dec.decode(value, { stream: true });
+    let cut;
+    while ((cut = buf.indexOf("\n\n")) >= 0) {
+      const block = buf.slice(0, cut); buf = buf.slice(cut + 2);
+      const line = block.split("\n").find((l) => l.startsWith("data:"));
+      if (!line) continue;
+      let ev; try { ev = JSON.parse(line.slice(5).trim()); } catch { continue; }
+      if (ev.type === "message_start") Object.assign(usage, ev.message?.usage || {});
+      else if (ev.type === "content_block_delta" && ev.delta?.type === "text_delta") onText(ev.delta.text);
+      else if (ev.type === "message_delta") { Object.assign(usage, ev.usage || {}); stop_reason = ev.delta?.stop_reason ?? stop_reason; }
+      else if (ev.type === "error") throw new Error(ev.error?.message || "model stream error");
+    }
+  }
+  return { usage, stop_reason };
 };
 
 const dbFor = (admin) => ({
@@ -125,13 +147,23 @@ Deno.serve(async (req) => {
     if (!user) return json({ error: "Sign in first." }, 401);
     const admin = createClient(Deno.env.get("SUPABASE_URL"), Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"));
     const key = Deno.env.get("ANTHROPIC_API_KEY");
-    const out = await runTutorTurn({
+    const turn = await prepareTurn({
       user, body: JSON.parse(text || "{}"), db: dbFor(admin),
       callModel: key ? callModelWith(key) : null, safeguard: screen,
       settings: settingsFrom((k) => Deno.env.get(k)), lib: FRACTION_LIB,
       secret: Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"),
     });
-    return json(out.body, out.status);
+    if (!turn.go) return json(turn.body, turn.status);
+    // The turn streams as one JSON event per line; each step only after it has been checked.
+    const enc = new TextEncoder();
+    const stream = new ReadableStream({
+      async start(controller) {
+        const emit = (ev) => controller.enqueue(enc.encode(`${JSON.stringify(ev)}\n`));
+        try { await turn.go(emit); } catch (e) { console.error(e); emit({ type: "end", guard: ["server-error"], broken: true }); }
+        controller.close();
+      },
+    });
+    return new Response(stream, { status: 200, headers: { ...cors, "Content-Type": "application/x-ndjson", "Cache-Control": "no-store", "X-Accel-Buffering": "no" } });
   } catch (e) {
     console.error(e);
     return json({ error: "HOREB could not answer just now. Try again in a moment." }, 500);

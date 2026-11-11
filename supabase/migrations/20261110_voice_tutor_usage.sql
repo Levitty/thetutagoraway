@@ -32,9 +32,9 @@ CREATE TABLE IF NOT EXISTS voice_tutor_usage (
   -- never stored here or anywhere yet), and their estimated input tokens.
   snapshots          INTEGER NOT NULL DEFAULT 0,
   image_tokens       INTEGER NOT NULL DEFAULT 0,
-  -- Milestone 3: the voice. Characters the tutor spoke (Cartesia) and seconds of the child's
-  -- speech sent for listening (Deepgram), priced into cost_usd. Rows with guard token-stt or
-  -- token-tts (cost 0) record a voice token minted, for the rate limit. No audio is stored.
+  -- Milestone 3: the voice, all Cartesia. Characters the tutor spoke (Sonic) and seconds of the
+  -- child's speech sent for listening (Ink), priced into cost_usd. Rows with guard token-voice
+  -- (cost 0) record a voice token minted, for the rate limit. No audio is stored.
   tts_chars          INTEGER NOT NULL DEFAULT 0,
   audio_in_s         NUMERIC NOT NULL DEFAULT 0
 );

@@ -2,14 +2,15 @@
 // THE FREE VOICE (scripted mode, and the fallback when there is no real voice).
 //
 //   simulatedTts   no audio: word times at speaking pace (speakingTimes), the
-//                  page's own clock. The board moves exactly as it will with
-//                  real audio, because only the word times differ.
-//   fakeStt        typed text "spoken": speech starts at once (so barge-in
-//                  happens), the words appear one by one as partials, then
-//                  end-of-speech gives the final text, as Deepgram does.
-// Same interface as cartesia.js and deepgram.js (see providers/index.js).
+//                  page's own clock. Used only where the browser has no voice
+//                  that sends word times (the page says so), and in tests.
+//   fakeStt        typed text "spoken", for the self-playing demo (?demo=auto)
+//                  and tests: speech starts at once (so barge-in happens), the
+//                  words appear one by one as partials, then end of speech
+//                  gives the final text, as a real listener does.
+// Same interface as the other providers (providers/index.js).
 // ============================================================================
-import { speakingTimes } from '../timeline.js';
+import { speakingTimes, SENTENCE_GAP_MS } from '../timeline.js';
 
 const now = () => (typeof performance !== 'undefined' ? performance.now() : Date.now());
 
@@ -17,11 +18,28 @@ export const simulatedTts = () => ({
   name: 'simulated',
   hasAudio: false,
   clock: now,
-  async unlock() {},
-  /** Every sentence is known at once: speaking-pace word times, ready now. */
-  speak(texts) {
-    const t = texts.map((text) => ({ ...speakingTimes(text), complete: true }));
-    return { ready: Promise.resolve(now()), timing: (k) => t[k], version: () => 1, failed: false, stop() {} };
+  async unlock() { return { ok: true, reason: null }; },
+  /** Each sentence is timed at speaking pace the moment it arrives; ready on the first. */
+  open() {
+    const S = [];
+    let t0 = null; let v = 0; let res;
+    const ready = new Promise((r) => { res = r; });
+    return {
+      ready, failed: false,
+      version: () => v,
+      timing: (k) => S[k] || { start: null, words: [], duration: null, complete: false },
+      add(text) {
+        const n = now();
+        if (t0 == null) { t0 = n; res(t0); }
+        const prev = S[S.length - 1];
+        // After the sentence before (and the gap), or now if this one came late.
+        const start = Math.max(prev ? prev.start + prev.duration + SENTENCE_GAP_MS : 0, n - t0);
+        S.push({ start, ...speakingTimes(text), complete: true });
+        v += 1;
+      },
+      end() {},
+      stop() {},
+    };
   },
   stop() {},
   close() {},

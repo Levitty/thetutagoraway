@@ -98,6 +98,21 @@ export function sessionReducer(s, ev) {
         target: ev.target || s.target, prerequisite: ev.prerequisite === undefined ? s.prerequisite : ev.prerequisite,
       };
     }
+    case 'turn_more': {
+      // The rest of a streamed turn (after its first sound): its phase, diagnoses, drops and spend.
+      const steps = ev.steps || [];
+      const phase = [...steps].reverse().find((x) => x.cmd === 'set_phase')?.phase || s.phase;
+      const diagnoses = steps.filter((x) => x.cmd === 'record_diagnosis').map((d) => ({ ...d, turn: s.turns, at: ev.at }));
+      return {
+        ...s, phase,
+        phasesSeen: phase && !s.phasesSeen.includes(phase) ? [...s.phasesSeen, phase] : s.phasesSeen,
+        diagnoses: [...s.diagnoses, ...diagnoses],
+        dropped: [...s.dropped, ...(ev.dropped || []).map((d) => ({ ...d, turn: s.turns }))].slice(-100),
+        cost: ev.spent ? { sessionUsd: ev.spent.session ?? s.cost.sessionUsd, dayUsd: ev.spent.day ?? s.cost.dayUsd } : s.cost,
+      };
+    }
+    case 'lesson':
+      return { ...s, target: ev.target || s.target, prerequisite: ev.prerequisite === undefined ? s.prerequisite : ev.prerequisite };
     case 'said':
       // One sentence finished (or was cut short): it goes in the transcript as heard.
       return { ...s, transcript: push(s.transcript, { who: 'tutor', text: ev.text, at: ev.at, cut: !!ev.cut, turn: s.turns }) };

@@ -3,10 +3,11 @@
 // browser with a short-lived access token from the voice-tutor-token function
 // (the API key never leaves the server).
 //
-// speak(texts) sends every sentence of the turn (one context each, on one
-// socket) and starts the first sound on the first audio chunk. Word timestamps
-// stream in beside the audio; the page rebuilds the board timeline from them as
-// they come, so a stroke starts as its word is heard and never before. The
+// open() gives a turn's voice; add(text) sends each sentence as soon as the
+// tutor's streamed reply has checked it (one context each, on one socket), and
+// the first sound starts on the first audio chunk. Word timestamps stream in
+// beside the audio; the page rebuilds the board timeline from them as they
+// come, so a stroke starts as its word is heard and never before. The
 // board's clock (clock()) is the audio clock less the output latency: what the
 // child hears. stop() silences everything at once (barge-in).
 // ============================================================================
@@ -49,22 +50,33 @@ export function cartesiaTts({ getToken }) {
     hasAudio: true,
     clock: heardNow,
     /** Call from a tap: browsers only allow audio after one. */
-    async unlock() { await audio().resume(); },
+    async unlock() { await audio().resume(); return { ok: true, reason: null }; },
     /**
-     * Speak the turn's sentences. All are sent at once (one context each); the first
-     * sound starts on sentence 1's first audio chunk; sentence k plays right after
-     * sentence k-1 plus the timeline's gap, so word times line up with the board.
+     * A turn's voice. Sentences are added one by one as the tutor's reply streams in
+     * (each already checked); each goes to Cartesia at once as its own context. The first
+     * sound starts on the first audio chunk. Sentence k starts when its audio arrives,
+     * but never before sentence k-1 has ended plus the timeline's gap; its start is
+     * reported, so the board timeline uses exactly the time the child hears it.
      */
-    speak(texts) {
+    open() {
       const c = audio();
       const rate = () => cfg.sample_rate;
-      const S = texts.map((text) => ({ text, words: [], samples: 0, duration: null, complete: false, offset: null, queue: [], id: uid() }));
+      const S = [];
       let version = 0; let startAt = null; let stopped = false;
       let readyRes; let readyRej;
       const ready = new Promise((res, rej) => { readyRes = res; readyRej = rej; });
-      const stream = { ready, failed: false, version: () => version, timing: (k) => ({ words: S[k].words, duration: S[k].duration, complete: S[k].complete }), stop: () => stopAll() };
+      const sock = socket();
+      sock.catch(() => {});
+      let firstTimer = null;
+      const stream = {
+        ready, failed: false,
+        version: () => version,
+        timing: (k) => (S[k] ? { start: S[k].offset, words: S[k].words, duration: S[k].duration, complete: S[k].complete } : { start: null, words: [], duration: null, complete: false }),
+        add: (text) => add(text),
+        end() {},
+        stop: () => stopAll(),
+      };
       streams.add(stream);
-      const firstTimer = setTimeout(() => { if (startAt == null) fail(new Error('voice too slow')); }, FIRST_CHUNK_TIMEOUT_MS);
 
       const schedule = (k, samples) => {
         const s = S[k];
@@ -73,20 +85,22 @@ export function cartesiaTts({ getToken }) {
         const src = c.createBufferSource();
         src.buffer = buf; src.connect(c.destination);
         src.onended = () => playing.delete(src);
-        // On the audio clock (not the heard clock): both move together.
-        const when = (startAt + s.offset) / 1000 + (s.samples - samples.length) / rate() + (ctx.outputLatency || ctx.baseLatency || 0);
+        // On the audio clock: the heard time plus the output latency.
+        const when = (startAt + s.offset) / 1000 + (s.played / rate()) + (ctx.outputLatency || ctx.baseLatency || 0);
         src.start(Math.max(c.currentTime, when));
+        s.played += samples.length;
         playing.add(src);
       };
       const place = (k) => {
         const s = S[k];
-        if (s.offset != null) return;
-        if (k === 0) s.offset = 0;
-        else if (S[k - 1].complete && S[k - 1].offset != null) s.offset = S[k - 1].offset + S[k - 1].duration + SENTENCE_GAP_MS;
-        else return;
+        if (!s || s.offset != null || !s.queue.length) return;
+        const prev = S[k - 1];
+        if (prev && !(prev.complete && prev.offset != null)) return;
+        const earliest = prev ? prev.offset + prev.duration + SENTENCE_GAP_MS : 0;
+        s.offset = Math.max(earliest, heardNow() + LEAD_MS - startAt);
+        version += 1;
         for (const q of s.queue) schedule(k, q);
         s.queue = [];
-        if (s.complete && k + 1 < S.length) place(k + 1);
       };
       const fail = (err) => {
         if (stream.failed) return;
@@ -94,8 +108,14 @@ export function cartesiaTts({ getToken }) {
         clearTimeout(firstTimer);
         if (startAt == null) { readyRej(err); return; }
         // Mid-turn: finish the board silently on speaking-pace times, so the child keeps their place.
-        S.forEach((s) => { if (!s.complete) { const t = speakingTimes(s.text); const known = s.words.length; s.words = known ? s.words : t.words; s.duration = Math.max(t.duration, s.words.length ? s.words[s.words.length - 1].end : 0); s.complete = true; } });
-        S.forEach((_, k) => place(k));
+        S.forEach((s, k) => {
+          if (s.complete) return;
+          const t = speakingTimes(s.text);
+          if (!s.words.length) s.words = t.words;
+          s.duration = Math.max(t.duration, s.words.length ? s.words[s.words.length - 1].end : 0);
+          s.complete = true;
+          if (s.offset == null) { const p = S[k - 1]; s.offset = Math.max(p ? p.offset + p.duration + SENTENCE_GAP_MS : 0, heardNow() - startAt); }
+        });
         version += 1;
       };
       const stopAll = () => {
@@ -104,36 +124,39 @@ export function cartesiaTts({ getToken }) {
         for (const s of S) { routes.delete(s.id); if (ws?.readyState === WebSocket.OPEN && !s.complete) ws.send(JSON.stringify({ context_id: s.id, cancel: true })); }
         streams.delete(stream);
       };
-
-      (async () => {
-        let sock;
-        try { sock = await socket(); } catch (e) { fail(e); return; }
-        S.forEach((s, k) => {
+      const add = (text) => {
+        if (stopped || stream.failed) return;
+        const k = S.length;
+        const s = { text, words: [], samples: 0, played: 0, duration: null, complete: false, offset: null, queue: [], id: uid() };
+        S.push(s);
+        if (k === 0) firstTimer = setTimeout(() => { if (startAt == null) fail(new Error('voice too slow')); }, FIRST_CHUNK_TIMEOUT_MS);
+        sock.then((w) => {
+          if (stopped) return;
           routes.set(s.id, (m) => {
             if (stopped) return;
             if (m.type === 'error') { fail(new Error(m.message || m.title || 'voice error')); return; }
             if (m.type === 'chunk' && m.data) {
               const samples = pcmF32FromBase64(m.data);
               s.samples += samples.length;
-              if (startAt == null && k === 0) { startAt = heardNow() + LEAD_MS; clearTimeout(firstTimer); place(0); readyRes(startAt); }
-              if (s.offset != null) schedule(k, samples); else s.queue.push(samples);
+              if (startAt == null && k === 0) { startAt = heardNow() + LEAD_MS; clearTimeout(firstTimer); readyRes(startAt); }
+              if (s.offset != null) schedule(k, samples); else { s.queue.push(samples); place(k); }
             }
             if (m.type === 'timestamps') { s.words = [...s.words, ...cartesiaWords([m])]; version += 1; }
             if (m.done || m.type === 'done') {
               routes.delete(s.id);
               s.duration = Math.max(Math.round((s.samples / rate()) * 1000), s.words.length ? s.words[s.words.length - 1].end : 0);
-              s.complete = true; version += 1;
               if (!s.words.length) s.words = sentenceTiming(s.text, [], s.samples, rate()).words;
-              place(k);
+              s.complete = true; version += 1;
+              place(k + 1);
             }
           });
-          sock.send(JSON.stringify({
+          w.send(JSON.stringify({
             model_id: cfg.model, transcript: s.text, voice: { id: cfg.voice }, language: 'en', context_id: s.id,
             output_format: { container: 'raw', encoding: 'pcm_f32le', sample_rate: cfg.sample_rate },
             add_timestamps: true, continue: false,
           }));
-        });
-      })();
+        }, (e) => fail(e));
+      };
       return stream;
     },
     stop() {

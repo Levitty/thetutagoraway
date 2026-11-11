@@ -135,8 +135,14 @@ const BEATS = {
 
 const NOTICED = /\b(2|two|times|multipl\w*|double\w*)\b/i;
 
+// About how fast a model writes the turn's JSON (some 75 tokens a second) and how long
+// before its first step: the scripted tutor streams at this pace.
+export const STREAM_CHARS_PER_S = 300;
+export const FIRST_STEP_MS = 60;
+const IN_PAGE = typeof window !== 'undefined';   // node tests run it without the pauses
+
 /**
- * A scripted tutor with the same shape as the remote one: turn(request) ->
+ * A scripted tutor with the same shape as the remote one: turn(request, onEvent) ->
  * { steps, dropped, notes, marked, target, prerequisite, cost_usd, spent }.
  */
 export function createMockTutor() {
@@ -172,9 +178,7 @@ export function createMockTutor() {
     evidence.push(m);
     return m;
   };
-  return {
-    name: 'scripted',
-    async turn({ message = '', answer = null, board = [], heard = null, snapshot = null, snapshots_taken: taken = 0, ink_cells: cells = [] } = {}) {
+  const compose = async ({ message = '', answer = null, board = [], heard = null, snapshot = null, snapshots_taken: taken = 0, ink_cells: cells = [] } = {}) => {
       inkAt = cells;
       snapshots = Math.max(snapshots, Number(taken) || 0);
       const meta = { target: EQ, prerequisite: null, cost_usd: 0, spent: { session: 0, day: 0 } };
@@ -225,6 +229,27 @@ export function createMockTutor() {
         default: out = { steps: [say('Our lesson is finished. Well done.'), { cmd: 'end_session', summary: 'Finished.' }], dropped: [], notes: [] };
       }
       return { ...out, marked, ...meta, ...(snapshot ? { picture: { id: snapshot.id, used: true, reason: snapshot.reason } } : {}), guard: ['scripted'] };
+  };
+  return {
+    name: 'scripted',
+    /**
+     * The same stream as the live tutor: meta, then each step, then end. Steps come at
+     * about a model's writing speed (STREAM_CHARS_PER_S), so the free mode plays the
+     * same streaming path: a sentence is spoken while the next is still being written.
+     */
+    async turn(request = {}, onEvent = () => {}, { charsPerS = IN_PAGE ? STREAM_CHARS_PER_S : 0, firstMs = IN_PAGE ? FIRST_STEP_MS : 0 } = {}) {
+      const r = await compose(request);
+      const { steps, dropped, notes, guard, cost_usd, spent, ...rest } = r;
+      onEvent({ type: 'meta', ...rest });
+      let wait = firstMs;
+      for (const st of steps) {
+        if (wait > 0) await new Promise((res) => setTimeout(res, wait));
+        onEvent({ type: 'step', step: st });
+        wait = charsPerS ? (JSON.stringify(st).length / charsPerS) * 1000 : 0;
+      }
+      const end = { type: 'end', dropped, notes, guard, cost_usd, spent };
+      onEvent(end);
+      return { ...r, ...end };
     },
   };
 }

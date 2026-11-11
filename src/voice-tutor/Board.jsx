@@ -5,8 +5,8 @@
 // that passed validateTurn and applyStep exist.
 //
 // The board is 1000 units wide in a 2 x 3 grid of slots and scales to fit:
-// 640 high on a wide screen, 1050 high on a phone held upright (taller rows,
-// the same slots), so the board takes most of either screen.
+// 640 high on a wide screen; on an upright phone the page sizes it (H) to about
+// a third of the screen's height, the same slots in taller rows.
 // The child's ink layer sits on top, in its own colour, and no command reaches
 // it. The child draws with a finger, stylus or mouse (pointer events, one
 // pointer at a time, coalesced points for smooth lines); what they draw goes
@@ -21,7 +21,6 @@ import { cellsOf, PALETTE } from './commands.js';
 
 export const BOARD_W = 1000;
 export const BOARD_H = 640;
-export const BOARD_H_PORTRAIT = 1050;
 const PAD = 16;
 
 export const INK = PALETTE;
@@ -472,7 +471,9 @@ export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard
           const item = board.items[id];
           const D = DRAW[item.cmd];
           if (!D) return null;
-          return <g key={id} data-id={id}><D item={item} H={H} p={drawProgress(item.at, drawMs(item), now)} /></g>;
+          const p = drawProgress(item.at, drawMs(item), now);
+          if (p <= 0) return null;   // not started: nothing, not even a dot
+          return <g key={id} data-id={id}><D item={item} H={H} p={p} /></g>;
         })}
         {board.marks.map((m, k) => (board.items[m.target] ? <Mark key={k} m={m} item={board.items[m.target]} now={now} H={H} /> : null))}
         {ptr ? <Pointer pointer={ptr} items={board.items} now={now} from={lastPointer.current.prev} H={H} /> : null}

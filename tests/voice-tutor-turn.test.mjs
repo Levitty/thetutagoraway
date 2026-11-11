@@ -8,7 +8,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { runTutorTurn, DISCLOSURE, WIND_DOWN, itemFor } from '../src/voice-tutor/tutorTurn.js';
+import { runTutorTurn, prepareTurn, DISCLOSURE, WIND_DOWN, FALLBACK_TURN, RECOVER_TURN, itemFor } from '../src/voice-tutor/tutorTurn.js';
 import { settingsFrom } from '../src/voice-tutor/session.js';
 import { screen } from '../src/ai/safeguarding.js';
 import { screenChild, checkTurnText } from '../src/voice-tutor/guard.js';
@@ -37,7 +37,20 @@ const world = ({ spent = { session: 0, day: 0 }, progress = { skills: {} }, brok
   };
 };
 const reply = (steps, usage = { input_tokens: 4000, output_tokens: 600 }) => ({ stop_reason: 'end_turn', usage, content: [{ type: 'text', text: JSON.stringify({ steps }) }] });
-const model = (...replies) => { const calls = []; const fn = async (req) => { calls.push(req); const r = replies[Math.min(calls.length - 1, replies.length - 1)]; if (r instanceof Error) throw r; return r; }; fn.calls = calls; return fn; };
+// A streaming model: the reply's text arrives in small pieces through onText, as the API streams it.
+const model = (...replies) => {
+  const calls = [];
+  const fn = async (req, { onText } = {}) => {
+    calls.push(req);
+    const r = replies[Math.min(calls.length - 1, replies.length - 1)];
+    if (r instanceof Error) throw r;
+    const text = (r.content || []).filter((c) => c.type === 'text').map((c) => c.text).join('');
+    for (let i = 0; i < text.length; i += 17) onText?.(text.slice(i, i + 17));
+    return { usage: r.usage, stop_reason: r.stop_reason };
+  };
+  fn.calls = calls;
+  return fn;
+};
 const turn = (o = {}) => runTutorTurn({ user: USER, settings, lib: LIB, secret: SECRET, safeguard: screen, now: 1_800_000_000_000, ...o, body: { session_id: SID, turn_index: 1, board: [], history: [], ...o.body } });
 
 const GOOD = [
@@ -105,27 +118,43 @@ test('the answer is marked on the server from the seal, with the misconception i
   assert.equal(await unseal(await seal({ a: 1 }, SECRET, 0), SECRET, { now: 10 * 60 * 60 * 1000 }), null);
 });
 
-test('a turn that gives the answer away is retried once, then replaced; the answer never reaches the child', async () => {
-  const first = await turn({ db: world(), callModel: model(reply(GOOD)) });
-  const s = first.body.steps.find((x) => x.cmd === 'ask').seal;
-  const leak = reply([{ cmd: 'say', text: 'Not quite. One third is 2 sixths.' }, { cmd: 'write_math', id: 'm', expr: 'frac(1,3) = frac(2,6)', slot: 'top' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }]);
+test('streamed: a sentence that gives the answer away is never sent; the turn stops there and recovers', async () => {
   // 2 is a single character, which the shared guard skips as too collision-prone; use a two-digit answer.
   const ask12 = await seal({ session: SID, child: 'u-parent', ask: 'q9', item: { kind: 'typed', cskill: EQ, question: '3/4 = ?/16', answer: '12', accepts: ['12'], wrong: [] } }, SECRET, 1_800_000_000_000);
-  const leak12 = reply([{ cmd: 'say', text: 'Not quite. Three quarters is 12 sixteenths.' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }]);
+  const leak12 = reply([
+    { cmd: 'say', text: 'Not quite. Let us look again.' },
+    { cmd: 'say', text: 'Three quarters is 12 sixteenths.' },
+    { cmd: 'say', text: 'Well done.' },
+    { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 },
+  ]);
   const db = world();
-  const callModel = model(leak12, leak12);
+  const callModel = model(leak12);
   const r = await turn({ db, callModel, body: { message: '7', answer: { seal: ask12, response: '7' } } });
-  assert.equal(callModel.calls.length, 2);
-  assert.match(callModel.calls[1].messages.at(-1).content[0].text, /never give the answer/);
+  assert.equal(callModel.calls.length, 1, 'no retry: what was said stays said');
   assert.ok(r.body.guard.includes('answer-leak'));
-  assert.doesNotMatch(JSON.stringify(r.body.steps), /12/);
-  assert.ok(db.usage[0].cost_usd > 0, 'both calls are billed');
-  // A retry that fixes it is used.
-  const fixed = reply([{ cmd: 'say', text: 'Not quite. How many sixteenths make one quarter?' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }]);
-  const r2 = await turn({ db: world(), callModel: model(leak12, fixed), body: { message: '7', answer: { seal: ask12, response: '7' } } });
-  assert.deepEqual(r2.body.guard, ['retried']);
-  assert.match(r2.body.steps[0].text, /How many sixteenths/);
-  assert.ok(s && leak);
+  assert.equal(r.body.steps[0].text, 'Not quite. Let us look again.', 'the clean sentence before it was sent');
+  assert.doesNotMatch(JSON.stringify(r.body.steps), /12|Well done/, 'neither the leak nor anything after it');
+  assert.deepEqual(r.body.steps.slice(1).map((x) => x.text || x.cmd), [...RECOVER_TURN.map((x) => x.text || x.cmd)]);
+  assert.ok(db.usage[0].cost_usd > 0, 'every token is still billed');
+  // The check covers everything said so far in the turn, not only the newest sentence.
+  const split = reply([{ cmd: 'say', text: 'Think of twelve.' }, { cmd: 'write_math', id: 'm', expr: 'frac(3,4) = frac(12,16)', slot: 'top' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }]);
+  const r2 = await turn({ db: world(), callModel: model(split), body: { message: '7', answer: { seal: ask12, response: '7' } } });
+  assert.ok(r2.body.guard.includes('answer-leak'));
+  assert.ok(!r2.body.steps.some((x) => x.cmd === 'write_math'));
+});
+
+test('streamed: steps go out one by one, in order, each as soon as it is complete and checked', async () => {
+  const events = [];
+  const t = await prepareTurn({ user: USER, settings, lib: LIB, secret: SECRET, safeguard: screen, now: 1_800_000_000_000, db: world(), callModel: model(reply(GOOD)), body: { session_id: SID, turn_index: 1, board: [], history: [] } });
+  await t.go((ev) => events.push(ev));
+  assert.deepEqual(events.map((e) => e.type), ['meta', 'step', 'step', 'step', 'step', 'step', 'step', 'end']);
+  assert.deepEqual(events.filter((e) => e.type === 'step').map((e) => e.step.cmd), GOOD.map((x) => x.cmd));
+  // Each step leaves as soon as its closing brace arrives, before the model has finished.
+  let sentAtChunk = []; let chunks = 0;
+  const slow = async (req, { onText }) => { const text = JSON.stringify({ steps: GOOD }); for (let i = 0; i < text.length; i += 10) { chunks += 1; onText(text.slice(i, i + 10)); await new Promise((r) => setImmediate(r)); } return { usage: {}, stop_reason: 'end_turn' }; };
+  const t2 = await prepareTurn({ user: USER, settings, lib: LIB, secret: SECRET, now: 1_800_000_000_000, db: world(), callModel: slow, body: { session_id: SID, turn_index: 1, board: [] } });
+  await t2.go((ev) => { if (ev.type === 'step') sentAtChunk.push(chunks); });
+  assert.ok(sentAtChunk[1] < chunks / 2, 'the first sentence went out while the model was still writing');
 });
 
 test('checkTurnText reads every word the child would hear or see, maths included', () => {
@@ -134,15 +163,35 @@ test('checkTurnText reads every word the child would hear or see, maths included
   assert.equal(checkTurnText([{ cmd: 'say', text: 'What do you multiply 4 by to get 12?' }], hidden).ok, true);
 });
 
-test('invalid commands are dropped and logged; a turn that does not hand back is retried', async () => {
+test('invalid commands are dropped and logged; a turn that does not hand back is handed back', async () => {
   const bad = reply([{ cmd: 'say', text: 'Look.' }, { cmd: 'run_code', js: 'alert(1)' }, { cmd: 'fraction_bar', id: 'b', parts: 40, shaded: 1, slot: 'top' }]);
-  const callModel = model(bad, bad);
-  const r = await turn({ db: world(), callModel });
-  assert.ok(r.body.guard.includes('invalid-turn'));
-  assert.ok(r.body.steps.every((s) => ['say', 'pause_for_child'].includes(s.cmd)));
+  const r = await turn({ db: world(), callModel: model(bad) });
+  assert.deepEqual(r.body.steps.map((x) => x.cmd), ['say', 'pause_for_child']);
   assert.ok(r.body.dropped.some((d) => /unknown command/.test(d.reason)));
-  const r2 = await turn({ db: world(), callModel: model({ stop_reason: 'end_turn', content: [{ type: 'text', text: 'not json' }] }, reply(GOOD)) });
-  assert.deepEqual(r2.body.guard, ['retried']);
+  assert.ok(r.body.dropped.some((d) => /1 to 12/.test(d.reason)));
+  // Nothing usable at all: an authored line.
+  const r2 = await turn({ db: world(), callModel: model({ stop_reason: 'end_turn', content: [{ type: 'text', text: 'not json' }] }) });
+  assert.ok(r2.body.guard.includes('invalid-turn'));
+  assert.deepEqual(r2.body.steps.map((x) => x.text || x.cmd), FALLBACK_TURN.map((x) => x.text || x.cmd));
+  // The model failing mid-turn: what was said stays, and the tutor recovers.
+  const broken = async (req, { onText }) => { onText(JSON.stringify({ steps: [GOOD[1]] }).slice(0, -2)); throw new Error('model 529'); };
+  const r3 = await turn({ db: world(), callModel: broken });
+  assert.ok(r3.body.guard.includes('model-error'));
+  assert.equal(r3.body.steps[0].text, GOOD[1].text);
+  assert.equal(r3.body.steps.at(-1).cmd, 'pause_for_child');
+  // Too long a turn is cut and handed back.
+  const long = reply([...Array.from({ length: 6 }, (_, k) => ({ cmd: 'say', text: `This is sentence number ${k} and it has a few more words in it.` })), { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }]);
+  const r4 = await turn({ db: world(), callModel: model(long) });
+  assert.ok(r4.body.guard.includes('too-long'));
+  assert.ok(r4.body.steps.filter((x) => x.cmd === 'say').length < 6);
+  assert.equal(r4.body.steps.at(-1).cmd, 'pause_for_child');
+});
+
+test('a sentence that trips the safeguarding rules is never spoken', async () => {
+  const odd = reply([{ cmd: 'say', text: 'Good start.' }, { cmd: 'say', text: 'I want to die laughing at this one.' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }]);
+  const r = await turn({ db: world(), callModel: model(odd) });
+  assert.ok(r.body.guard.includes('unsafe-reply'));
+  assert.doesNotMatch(JSON.stringify(r.body.steps), /die/);
 });
 
 test('turn one always says the tutor is an AI', async () => {
@@ -282,10 +331,10 @@ test('after an idle picture the tutor may just nod; after Check my work it must 
   const idle = await turn({ db: world(), callModel: model(nod), body: { snapshot: PIC({ reason: 'idle' }) } });
   assert.deepEqual(idle.body.steps.map((s) => s.cmd), ['pause_for_child']);
   assert.deepEqual(idle.body.guard, []);
-  const check = model(nod, nod);
+  const check = model(nod);
   const c = await turn({ db: world(), callModel: check, body: { snapshot: PIC({ reason: 'check' }) } });
-  assert.equal(check.calls.length, 2);
   assert.ok(c.body.guard.includes('invalid-turn'));
+  assert.ok(c.body.steps.some((x) => x.cmd === 'say'), 'the child who asked gets an answer');
 });
 
 test('the diagnosis names the picture it rests on, and only one that was taken', async () => {

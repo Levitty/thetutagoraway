@@ -26,12 +26,14 @@
 // before it has been said. An `on` phrase that is not in the sentence starts
 // the step at the beginning of the sentence (and is logged).
 //
-// STREAMING (milestone 3): the voice starts on its first audio chunk, so word
+// STREAMING (milestones 3 and 3b): the voice starts on its first audio chunk, so word
 // times arrive while the tutor is already speaking. `speech(text, k)` may then
 // return a sentence that is not complete yet ({ words so far, duration: null,
 // complete: false }). A stroke whose word has not arrived yet waits (its time
 // is Infinity) and never fires early; rebuild the timeline as words arrive and
-// hand it to the player with updateTimeline (what has fired stays fired).
+// hand it to the player with updateTimeline (what has fired stays fired). In
+// 3b the steps themselves stream in too: rebuild with the longer list, and a
+// sentence the voice has not started yet ({ start: null }) waits likewise.
 //
 // Pure: the clock is passed in. Tested in tests/voice-tutor-timeline.test.mjs.
 // ============================================================================
@@ -96,11 +98,16 @@ export function buildTimeline(steps, { speech = speakingTimes } = {}) {
   let k = 0;
   steps.forEach((s, i) => {
     if (s.cmd !== 'say') return;
-    if (sentences.length) cursor += SENTENCE_GAP_MS;
     const sp = speech(s.text, k++);
+    // A voice that reports when each sentence really starts (streaming: a sentence may
+    // arrive after the one before has finished) is taken at its word; otherwise each
+    // sentence follows the one before after the gap.
+    let start;
+    if ('start' in sp) start = sp.start == null ? Infinity : sp.start;
+    else start = sentences.length ? cursor + SENTENCE_GAP_MS : cursor;
     const complete = sp.complete !== false && sp.duration != null;
-    const end = complete ? cursor + sp.duration : Infinity;
-    sentences.push({ step: i, text: s.text, start: cursor, end, complete, words: (sp.words || []).map((w) => ({ ...w, start: w.start + cursor, end: w.end + cursor })) });
+    const end = complete && Number.isFinite(start) ? start + sp.duration : Infinity;
+    sentences.push({ step: i, text: s.text, start, end, complete, words: (sp.words || []).map((w) => ({ ...w, start: w.start + start, end: w.end + start })) });
     cursor = end;
   });
   const speechEnd = cursor;

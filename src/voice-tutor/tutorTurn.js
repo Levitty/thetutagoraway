@@ -16,16 +16,30 @@
 //      the model;
 //   5. the caps: US$ per session and per child per day (settings); at a cap
 //      the tutor winds down kindly;
-//   6. the model, names scrubbed, prefix cached, structured output;
-//   7. every step validated (commands.js), the turn checked for answer leaks
-//      (guard.js) and the AI disclosure on turn 1; one retry with the reasons,
-//      then an authored line;
-//   8. questions sealed, cost metered, the turn returned.
+//   6. the model, names scrubbed, prefix cached, structured output, STREAMED
+//      (owner, 11 Nov 2026): the reply is read step by step as it is written;
+//   7. each step, as it completes, is validated (commands.js) and checked:
+//      a sentence (or anything written on the board) is checked for the answer
+//      against everything said so far in the turn and the questions known so
+//      far, and against the safeguarding rules, BEFORE it is sent to be spoken
+//      and drawn. A step that fails stops the turn there and the tutor recovers
+//      with an authored line. The AI disclosure comes first on turn 1. A turn
+//      that runs past MAX_SPOKEN_WORDS is cut and handed back to the child;
+//   8. questions sealed, every token and second metered, the end sent.
+//
+// prepareTurn() does 1 to 5 and either refuses (a status and an error) or
+// returns go(emit), which streams the turn as events:
+//   { type:'meta', target, prerequisite, marked, picture }
+//   { type:'step', step }            in order, each already checked and sealed
+//   { type:'end', guard, dropped, notes, cost_usd, spent, voice, model }
+// There is one path: authored replies (guards, caps, no key) stream the same way.
+// runTutorTurn() collects the events, for the tests.
 // ============================================================================
-import { validateTurn, turnProblems, MAX_SPOKEN_WORDS } from './commands.js';
+import { validateTurn, MAX_SPOKEN_WORDS, spokenWords } from './commands.js';
 import { pickTarget, lessonSkills, allowedMisconceptions } from './fractions.js';
 import { capCheck } from './session.js';
 import { screenChild, checkTurnText, MAX_CHILD_CHARS, ANSWER_REPLY } from './guard.js';
+import { stepParser } from './streamSteps.js';
 import { buildRequest, turnContext } from './prompt.js';
 import { probeBank, bankLines, markItem } from './probes.js';
 import { seal, unseal } from './seal.js';
@@ -47,6 +61,8 @@ export const TURN_ESTIMATE_USD = 0.02;
 export const VOICE_TURN_CHARS_ESTIMATE = 250;
 export const MAX_AUDIO_S = 90;
 export const FALLBACK_TURN = [say('Let me think about that a different way.'), say('Tell me what you think the first step is.'), handBack];
+// When a sentence fails its check mid-turn: what has been said stays said, and the tutor turns it back to the child.
+export const RECOVER_TURN = [say('Let me stop there.'), say('Tell me what you think the next step is.'), handBack];
 export const WIND_DOWN = [
   { cmd: 'set_phase', phase: 'wrapup' },
   say('We have done a lot of good thinking today.'),
@@ -61,14 +77,14 @@ const DISCLOSES = /\b(ai|a\.i\.|artificial intelligence|computer program|not a (
  * @param {{id:string,email?:string}} a.user
  * @param {object} a.body   { session_id, child_id|null, skill?, message, answer?:{seal,response}, heard?, board, history, elapsed_s, turn_index }
  * @param {object} a.db     getChild, getProgress, spend, recordUsage, recordConcern (see the fake in the test)
- * @param {Function|null} a.callModel  null when no API key is set
+ * @param {Function|null} a.callModel  (request, { onText }) -> Promise<{ usage, stop_reason }>, streaming; null when no API key is set
  * @param {Function|null} a.safeguard  src/ai/safeguarding.js screen
  * @param {object} a.settings  settingsFrom(env)
  * @param {object} a.lib    the misconception library (engine/data/curriculum/g5.misconceptions.json)
  * @param {string} a.secret the seal key (server only)
  * @param {number} [a.now]
  */
-export async function runTutorTurn({ user, body, db, callModel = null, safeguard = null, settings, lib = {}, secret, now = Date.now() }) {
+export async function prepareTurn({ user, body, db, callModel = null, safeguard = null, settings, lib = {}, secret, now = Date.now() }) {
   if (!user?.id) return reply(401, { error: 'Sign in first.' });
   // 1. Switch, allowlist stub, child.
   if (!settings?.enabled) return reply(403, { error: OFF_REPLY });
@@ -128,19 +144,24 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
   const voice = body?.voice === true;
   const audioS = Math.max(0, Math.min(MAX_AUDIO_S, Number(body?.audio_in_s) || 0));
   const listenUsd = listenCost(audioS);
-  const voiceMeter = { voice, audioS, listenUsd };
-  const out = async (steps, extra = {}) => {
+  const meta = () => ({ type: 'meta', target: pick.target, prerequisite: pick.prerequisite, marked, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null } });
+  // An authored turn (guards, caps, no key), streamed the same way as the model's.
+  const authored = (steps, guard, spent) => ({ status: 200, go: async (emit) => {
+    emit(meta());
     const v = validateTurn({ steps }, vopts);
-    if (voiceMeter) {
-      const chars = voiceMeter.voice ? spokenChars(v.steps) : 0;
-      const usd = speechCost(chars) + voiceMeter.listenUsd;
-      if (chars || voiceMeter.audioS) await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: 'voice', cost_usd: usd, guard: ['voice'], dropped_steps: 0, tts_chars: chars, audio_in_s: voiceMeter.audioS });
-      extra = { ...extra, cost: (extra.cost || 0) + usd, spent: extra.spent ? addSpent(extra.spent, usd) : extra.spent, voice: { chars, audio_s: voiceMeter.audioS, usd } };
-    }
-    return reply(200, { steps: await sealAsks(v.steps, extra.bank || []), dropped: extra.dropped || v.dropped, notes: extra.notes || v.notes, marked, target: pick.target, prerequisite: pick.prerequisite, guard: extra.guard || [], cost_usd: extra.cost || 0, spent: extra.spent || null, model: extra.model || null, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null }, voice: extra.voice || null });
+    for (const st of v.steps) emit({ type: 'step', step: await sealAsk(st, []) });
+    const voiceUsd = await meterVoice(v.steps);
+    emit({ type: 'end', guard, dropped: v.dropped, notes: v.notes, cost_usd: voiceUsd.usd, spent: spent ? addSpent(spent, voiceUsd.usd) : null, voice: voiceUsd, model: null });
+  } });
+  // The voice's price for what was actually sent: the spoken characters and the child's speech.
+  const meterVoice = async (steps) => {
+    const chars = voice ? spokenChars(steps) : 0;
+    const usd = speechCost(chars) + listenUsd;
+    if (chars || audioS) await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: 'voice', cost_usd: usd, guard: ['voice'], dropped_steps: 0, tts_chars: chars, audio_in_s: audioS });
+    return { chars, audio_s: audioS, usd };
   };
   // 8 (shared). The hidden half of each question is sealed; the browser gets the public half.
-  const sealAsks = async (steps, bank) => Promise.all(steps.map(async (s) => {
+  const sealAsk = async (s, bank) => {
     if (s.cmd !== 'ask') return s;
     const item = itemFor(s, bank);
     const { expected, accepts, wrong, bank: b, ...pub } = s;
@@ -150,11 +171,11 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
     pub.skill = item?.cskill || s.skill || pick.target;
     if (!item) return pub;
     return { ...pub, seal: await seal({ session: sid, child: childKey, ask: s.id, skill: pub.skill, item }, secret, now) };
-  }));
+  };
 
   // 4. The child's words.
   const screen = message ? screenChild(message) : { ok: true, wantsAnswer: false };
-  if (!screen.ok) return out([say(screen.reply), handBack], { guard: [screen.kind] });
+  if (!screen.ok) return authored([say(screen.reply), handBack], [screen.kind], null);
 
   // 5. The caps.
   let spent;
@@ -177,10 +198,10 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
   const imageUsd = image ? (imageTokens(image.w, image.h) * (PRICES[settings.model]?.input ?? 2)) / 1e6 : 0;
   const est = TURN_ESTIMATE_USD + imageUsd + listenUsd + (voice ? speechCost(VOICE_TURN_CHARS_ESTIMATE) : 0);
   const cap = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
-  if (!cap.ok) return out(WIND_DOWN, { guard: [cap.reason], spent });
-  if (!callModel) return out(image ? NO_PICTURE_TURN : screen.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, { guard: ['offline'], spent });
+  if (!cap.ok) return authored(WIND_DOWN, [cap.reason], spent);
+  if (!callModel) return authored(image ? NO_PICTURE_TURN : screen.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, ['offline'], spent);
 
-  // 6. The model.
+  // 6. The model, streamed.
   const bank = probeBank(skills, `${sid}:${turnIndex}`);
   const names = child?.name ? [{ name: child.name, as: 'the child' }] : [];
   const context = turnContext({
@@ -189,56 +210,91 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
     bankLines: bankLines(bank), picture,
   });
   const history = Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === 'string') : [];
-  const base = { model: settings.model, effort: settings.effort, lib, history, message, context, names, image };
+  const request = buildRequest({ model: settings.model, effort: settings.effort, lib, history, message, context, names, image });
   // A picture taken because the child paused may get only a nod.
   const nod = !!image && image.reason === 'idle' && !message;
 
-  let cost = 0;
-  const meter = { input_tokens: 0, output_tokens: 0, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 };
-  const attempt = async (retry) => {
-    const res = await callModel(buildRequest({ ...base, retry }));
-    const u = res?.usage || {};
-    for (const k of Object.keys(meter)) meter[k] += u[k] || 0;
-    cost += costOf(settings.model, u);
-    if (res?.stop_reason === 'refusal') return { refused: true };
-    const text = (res?.content || []).filter((c) => c.type === 'text').map((c) => c.text).join('');
-    let raw = null;
-    try { raw = JSON.parse(text); } catch { return { text, reasons: ['the reply was not valid JSON'] }; }
-    const v = validateTurn(raw, vopts);
-    const reasons = [...v.dropped.map((d) => `step ${d.index} (${d.cmd}) dropped: ${d.reason}`), ...turnProblems(v.steps, { nod, maxWords: MAX_SPOKEN_WORDS })];
-    // 7. The answer guard: the open question, and any asked now.
-    const hidden = [open, ...v.steps.filter((s) => s.cmd === 'ask').map((s) => itemFor(s, bank))].filter(Boolean);
-    const leak = checkTurnText(v.steps, hidden);
-    if (!leak.ok) reasons.push(...leak.reasons.map((r) => `${r}: never give the answer`));
-    // The child is told it is an AI on turn 1, whatever the model wrote.
-    if (turnIndex === 0 && !v.steps.some((s) => s.cmd === 'say' && DISCLOSES.test(s.text))) {
-      if (v.steps.length < 12) v.steps.unshift(say(DISCLOSURE));
-      else { const k = v.steps.findIndex((s) => s.cmd === 'say'); v.steps[k] = say(DISCLOSURE); }
-    }
-    return { text, v, reasons, leaked: !leak.ok, fatal: !leak.ok || turnProblems(v.steps, { nod, maxWords: MAX_SPOKEN_WORDS }).length > 0 };
-  };
+  return { status: 200, go: async (emit) => {
+    emit(meta());
+    const sent = [];          // steps sent, in order (validated, checked)
+    const raws = [];          // the model's steps as written, for validation in sequence
+    const dropped = []; const notes = []; const guard = [];
+    const hidden = [open].filter(Boolean); // answers the child has not found: the open question, then any asked now
+    let closed = false;       // pause_for_child / end_session sent, or the turn was stopped
+    let saidAny = false;
+    const send = async (st) => { const pub = await sealAsk(st, bank); sent.push(st); emit({ type: 'step', step: pub }); };
+    const stop = async (why) => {
+      if (closed) return;
+      closed = true; guard.push(why);
+      for (const st of (screen.wantsAnswer && !saidAny ? [say(ANSWER_REPLY), handBack] : saidAny ? RECOVER_TURN : FALLBACK_TURN)) await send(st);
+    };
+    const visible = (steps) => steps.filter((x) => ['say', 'write_text', 'write_math', 'ask'].includes(x.cmd));
+    const handle = async (raw) => {
+      if (closed) return;
+      raws.push(raw && !raw.__bad ? raw : { cmd: '__bad' });
+      // Validate in sequence: the step as it stands after everything before it.
+      const v = validateTurn({ steps: raws }, vopts);
+      const bad = v.dropped.find((d) => d.index === raws.length - 1);
+      if (bad) { dropped.push(bad); raws.pop(); return; }
+      const st = v.steps[v.steps.length - 1];
+      notes.splice(0, notes.length, ...v.notes);
+      // The check, before the child hears or sees anything of this step.
+      if (st.cmd === 'ask') { const it = itemFor(st, bank); if (it) hidden.push(it); }
+      if (visible([st]).length) {
+        const leak = checkTurnText(visible([...sent, st]), hidden);
+        if (!leak.ok) { console.warn('voice-tutor: answer leak', leak.reasons.slice(0, 2)); await stop('answer-leak'); return; }
+        const text = st.text || st.prompt || '';
+        if (safeguard && text && safeguard(text)?.tier !== 'none') { await stop('unsafe-reply'); return; }
+      }
+      if (st.cmd === 'say') {
+        // Turn 1: the child is told it is an AI before anything else.
+        if (turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text)) await send(say(DISCLOSURE));
+        // Short turns: past the limit the tutor stops talking and waits.
+        if (spokenWords([...sent, st]) > MAX_SPOKEN_WORDS) { guard.push('too-long'); closed = true; await send(handBack); return; }
+        saidAny = true;
+      }
+      // Handing back having said nothing is not a turn (except a nod after an idle picture).
+      if (st.cmd === 'pause_for_child' && !saidAny && !nod) { await stop('invalid-turn'); return; }
+      await send(st);
+      if (st.cmd === 'pause_for_child' || st.cmd === 'end_session') closed = true;
+    };
 
-  let r;
-  const guard = [];
-  try {
-    r = await attempt(null);
-    if (!r.refused && r.reasons?.length) {
-      guard.push('retried');
-      const again = await attempt({ previous: r.text || '', reasons: r.reasons.slice(0, 8) });
-      // Keep the first if the retry is worse; a turn with only dropped decoration is still usable.
-      r = again.refused ? again : (!again.fatal || r.fatal ? again : r);
+    let usage = {}; let stopReason = null;
+    const parser = stepParser();
+    let queue = Promise.resolve();
+    try {
+      const res = await callModel({ ...request, stream: true }, {
+        onText: (t) => { const got = parser.push(t); queue = queue.then(async () => { for (const raw of got) await handle(raw); }); },
+      });
+      await queue;
+      usage = res?.usage || {}; stopReason = res?.stop_reason || null;
+    } catch (e) {
+      await queue.catch(() => {});
+      console.error('voice-tutor: model', String(e?.message || e).slice(0, 200));
+      await stop('model-error');
     }
-  } catch (e) {
-    await logUsage(db, { user, childKey, sid, settings, cost, meter, guard: [...guard, 'model-error'], dropped: 0, image });
-    return out(FALLBACK_TURN, { guard: [...guard, 'model-error'], cost, spent: addSpent(spent, cost) });
-  }
-  if (r.refused) guard.push('refusal');
-  const usable = r.v && !r.fatal;
-  if (!usable && !r.refused) guard.push(r.leaked ? 'answer-leak' : 'invalid-turn');
-  const steps = usable ? r.v.steps : (screen.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN);
-  await logUsage(db, { user, childKey, sid, settings, cost, meter, guard, dropped: r.v?.dropped.length || 0, image });
-  const body2 = await out(steps, { bank, guard, cost, spent: addSpent(spent, cost), model: settings.model, dropped: r.v?.dropped || [], notes: r.v?.notes || [] });
-  return body2;
+    if (stopReason === 'refusal') await stop('refusal');
+    // Nothing usable said: an authored line. Said something but did not hand back: hand back.
+    if (!closed && !saidAny && !(nod && sent.length === 0)) await stop('invalid-turn');
+    if (!closed) { closed = true; await send(handBack); }
+    const cost = costOf(settings.model, usage);
+    await logUsage(db, { user, childKey, sid, settings, cost, meter: usage, guard, dropped: dropped.length, image });
+    const voiceUsd = await meterVoice(sent);
+    emit({ type: 'end', guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model });
+  } };
+}
+
+/** The whole turn collected (the tests, and anything that does not stream): { status, body: { steps, ...meta, ...end } }. */
+export async function runTutorTurn(args) {
+  const t = await prepareTurn(args);
+  if (!t.go) return t;
+  const body = { steps: [], events: [] };
+  await t.go((ev) => {
+    body.events.push(ev);
+    if (ev.type === 'step') body.steps.push(ev.step);
+    else { const { type, ...rest } = ev; Object.assign(body, rest); }
+  });
+  return { status: 200, body };
 }
 
 const addSpent = (s, c) => ({ session: (s?.session || 0) + c, day: (s?.day || 0) + c });
@@ -247,8 +303,8 @@ export const dayStart = (now) => { const d = new Date(now); d.setUTCHours(0, 0, 
 // The picture itself is never stored (milestone 4 decides storage); only that one was sent, and its size.
 const logUsage = (db, { user, childKey, sid, settings, cost, meter, guard, dropped, image = null }) => db.recordUsage({
   user_id: user.id, child_key: childKey, session_id: sid, model: settings.model, cost_usd: cost,
-  input_tokens: meter.input_tokens, output_tokens: meter.output_tokens,
-  cache_read_tokens: meter.cache_read_input_tokens, cache_write_tokens: meter.cache_creation_input_tokens,
+  input_tokens: meter.input_tokens ?? 0, output_tokens: meter.output_tokens ?? 0,
+  cache_read_tokens: meter.cache_read_input_tokens ?? 0, cache_write_tokens: meter.cache_creation_input_tokens ?? 0,
   guard, dropped_steps: dropped,
   snapshots: image ? 1 : 0, image_tokens: image ? imageTokens(image.w, image.h) : 0,
 });
@@ -274,4 +330,4 @@ export function itemFor(s, bank = []) {
   return { kind: 'typed', cskill: s.skill || null, question: s.prompt, answer: s.expected, accepts: [s.expected, ...(s.accepts || [])], wrong: wrong.map((w) => ({ value: w.answer, mis: w.misconception })) };
 }
 
-export default { runTutorTurn, itemFor, WIND_DOWN, FALLBACK_TURN, DISCLOSURE };
+export default { prepareTurn, runTutorTurn, itemFor, WIND_DOWN, FALLBACK_TURN, RECOVER_TURN, DISCLOSURE };
