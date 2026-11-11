@@ -43,6 +43,7 @@ on:
           - rocket-guide
           - wa-sign-in
           - school-practice
+          - school-homework
 
 env:
   PROJECT_REF: dlqbiayaqjucxsvbesms
@@ -75,12 +76,14 @@ jobs:
       # carries the safeguarding screen, so the copy that protects a child must
       # be the copy the tests cover.
       - name: Regenerate and verify the generated function
-        if: inputs.function == 'mark-composition' || inputs.function == 'weekly-report' || inputs.function == 'wa-sign-in'
+        if: inputs.function == 'mark-composition' || inputs.function == 'weekly-report' || inputs.function == 'wa-sign-in' || inputs.function == 'rocket-guide'
         run: |
           if [ "${{ inputs.function }}" = "mark-composition" ]; then
             npm run build:marking-fn
           elif [ "${{ inputs.function }}" = "wa-sign-in" ]; then
             npm run build:wa-sign-in-fn
+          elif [ "${{ inputs.function }}" = "rocket-guide" ]; then
+            npm run build:rocket-fn
           else
             npm run build:report-fn
           fi
@@ -93,7 +96,9 @@ jobs:
           echo "Generated file matches the committed one."
 
       - name: Run the tests that cover it
-        if: inputs.function == 'mark-composition'
+        if: inputs.function == 'mark-composition' || inputs.function == 'rocket-guide'
+        env:
+          DEPLOYING_FUNCTION: ${{ inputs.function }}
         run: npm test
 
       - name: Set up the Supabase CLI
@@ -109,13 +114,15 @@ jobs:
             echo "::error::SUPABASE_ACCESS_TOKEN is not set. Add it under Settings → Secrets and variables → Actions."
             exit 1
           fi
-          # wa-sign-in is called by Tutagora's server (signed with its own secret) and by a signed-out
-          # browser opening a link, so it takes no Supabase login.
-          if [ "${{ inputs.function }}" = "wa-sign-in" ]; then
-            supabase functions deploy wa-sign-in --project-ref "$PROJECT_REF" --no-verify-jwt
-          else
-            supabase functions deploy "${{ inputs.function }}" --project-ref "$PROJECT_REF"
-          fi
+          # These check their own signature, not a Supabase login: wa-sign-in (Tutagora's server and a
+          # signed-out browser opening a one-use link), school-practice and school-homework (the school
+          # door, signed with each school's door secret). Every other function keeps the login check.
+          case "${{ inputs.function }}" in
+            wa-sign-in|school-practice|school-homework)
+              supabase functions deploy "${{ inputs.function }}" --project-ref "$PROJECT_REF" --no-verify-jwt ;;
+            *)
+              supabase functions deploy "${{ inputs.function }}" --project-ref "$PROJECT_REF" ;;
+          esac
 
       # Record WHAT was deployed, so scripts/function-drift.mjs can tell later
       # that the running copy is no longer this code. The seven-week gap

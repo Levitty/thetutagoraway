@@ -15,7 +15,12 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { drifted, functionNames, hashOf, deployedRecord } from '../scripts/function-drift.mjs';
 
-test('no edge function has changed since it was last deployed', () => {
+// The deploy workflow runs the tests just before deploying one function. Drift is what a deploy cures, one
+// function at a time, so while a deploy runs (DEPLOYING_FUNCTION set) these two checks stand aside: they would
+// otherwise block every deploy as long as any other function is also waiting. Ordinary test runs keep them.
+const DEPLOYING = process.env.DEPLOYING_FUNCTION || '';
+
+test('no edge function has changed since it was last deployed', { skip: DEPLOYING ? `deploying ${DEPLOYING}` : false }, () => {
   const { changed } = drifted();
   const lines = changed.map(d =>
     `${d.name}: deployed ${d.at?.slice(0, 10) ?? 'unknown'} as ${d.deployed}, repository now ${d.here}`);
@@ -23,7 +28,7 @@ test('no edge function has changed since it was last deployed', () => {
     `\n  The running copy is not this code. Actions -> Deploy edge function:\n    ${lines.join('\n    ')}\n`);
 });
 
-test('the two functions a child depends on have a deploy on record', () => {
+test('the two functions a child depends on have a deploy on record', { skip: DEPLOYING ? `deploying ${DEPLOYING}` : false }, () => {
   // verify-subscription grants the pass a family paid for; mark-composition
   // carries the safeguarding screen. For these two "we do not know what is
   // running" is not an acceptable answer, so they are named rather than left
