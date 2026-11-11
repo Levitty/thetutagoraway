@@ -66,7 +66,13 @@ export function sentenceTiming(text, words, samples, sampleRate) {
 export const CARTESIA_STT_URL = 'wss://api.cartesia.ai/stt/websocket';
 export const STT_MODEL = 'ink-whisper';
 export const STT_RATE = 16000;
-export const sttUrl = ({ token, version, rate = STT_RATE }) => `${CARTESIA_STT_URL}?model=${STT_MODEL}&language=en&encoding=pcm_s16le&sample_rate=${rate}&max_silence_duration_secs=0.8&cartesia_version=${encodeURIComponent(version)}&access_token=${encodeURIComponent(token)}`;
+export const sttUrl = ({ token, version, rate = STT_RATE, model = STT_MODEL, language = 'en', maxSilenceSecs = 0.8, keyterms = [] }) => {
+  const q = [`model=${encodeURIComponent(model)}`, `language=${encodeURIComponent(language)}`, 'encoding=pcm_s16le', `sample_rate=${rate}`, `max_silence_duration_secs=${maxSilenceSecs}`, `cartesia_version=${encodeURIComponent(version)}`];
+  // keyterm is documented for ink-2 and ink-preview only (up to 100 terms, 1200 characters); ink-whisper takes none.
+  if (!/^ink-whisper/.test(model)) for (const t of keyterms) q.push(`keyterm=${encodeURIComponent(t)}`);
+  q.push(`access_token=${encodeURIComponent(token)}`);
+  return `${CARTESIA_STT_URL}?${q.join('&')}`;
+};
 
 /** A Cartesia Ink message, as what the page needs. */
 export function cartesiaSttEvent(msg) {
@@ -90,16 +96,33 @@ export function pcm16(f32) {
  * frame is louder than `speak`, and ends after `silenceMs` below `quiet`.
  * feed(rms, ms) -> 'speech' (it started) | 'end' (it ended) | null.
  */
-export function speechEnd({ speak = 0.02, quiet = 0.012, silenceMs = 800 } = {}) {
-  let talking = false; let quietFor = 0;
+export function speechEnd({ speak = 0.02, quiet = 0.012, silenceMs = 800, pauseMs = 0 } = {}) {
+  let talking = false; let quietFor = 0; let nudged = false;
+  const limit = () => (typeof silenceMs === 'function' ? silenceMs() : silenceMs);
   return {
+    // Also 'pause' (once per quiet stretch) when pauseMs is set: the child is thinking, not finished.
     feed(rms, ms) {
-      if (!talking) { if (rms >= speak) { talking = true; quietFor = 0; return 'speech'; } return null; }
-      if (rms < quiet) { quietFor += ms; if (quietFor >= silenceMs) { talking = false; return 'end'; } } else quietFor = 0;
+      if (!talking) { if (rms >= speak) { talking = true; quietFor = 0; nudged = false; return 'speech'; } return null; }
+      if (rms < quiet) {
+        quietFor += ms;
+        if (quietFor >= limit()) { talking = false; return 'end'; }
+        if (pauseMs && !nudged && quietFor >= pauseMs) { nudged = true; return 'pause'; }
+      } else { quietFor = 0; nudged = false; }
       return null;
     },
     get talking() { return talking; },
   };
+}
+
+/**
+ * The child speaking over HOREB, from the microphone's loudness while HOREB is talking. The level is
+ * higher than for the child's own turn (the speaker leaks into the microphone even with echo
+ * cancellation) and it must hold for `frames` frames in a row, so a click or a cough does not stop the
+ * lesson. feed(rms) -> true once, when it holds.
+ */
+export function bargeDetector({ level = 0.06, frames = 2 } = {}) {
+  let run = 0; let fired = false;
+  return { feed(rms) { if (fired) return false; run = rms >= level ? run + 1 : 0; if (run >= frames) { fired = true; return true; } return false; }, reset() { run = 0; fired = false; } };
 }
 export const rmsOf = (f32) => { let s = 0; for (let i = 0; i < f32.length; i += 1) s += f32[i] * f32[i]; return Math.sqrt(s / (f32.length || 1)); };
 

@@ -67,7 +67,7 @@ export async function mintToken({ user, body, db, settings, keys = {}, fetch: f,
     if (!r.ok) throw new Error(`cartesia ${r.status}`);
     const j = await r.json();
     if (!j?.token) throw new Error('cartesia gave no token');
-    out = { token: j.token, expires_in: TOKEN_TTL_S, version: CARTESIA_VERSION, url: CARTESIA_WS, model: settings.ttsModel, voice: settings.ttsVoice, sample_rate: settings.ttsSampleRate };
+    out = { token: j.token, expires_in: TOKEN_TTL_S, version: CARTESIA_VERSION, url: CARTESIA_WS, model: settings.ttsModel, voice: settings.ttsVoice, speed: settings.ttsSpeed, emotion: settings.ttsEmotion === 'none' ? null : settings.ttsEmotion, sample_rate: settings.ttsSampleRate };
   } catch (e) {
     console.error('voice token', String(e?.message || e).slice(0, 200));
     return reply(502, { error: 'The voice service did not answer. Please type for now.' });

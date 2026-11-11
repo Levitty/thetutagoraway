@@ -462,6 +462,83 @@ var STEP_SCHEMAS = [
 ];
 var TURN_SCHEMA = S({ steps: { type: "array", items: { anyOf: STEP_SCHEMAS } } }, ["steps"]);
 
+// src/voice-tutor/childVoice.js
+var MATHS_KEYTERMS = Object.freeze([
+  "quarter",
+  "quarters",
+  "half",
+  "halves",
+  "third",
+  "thirds",
+  "fifth",
+  "fifths",
+  "sixth",
+  "sixths",
+  "eighth",
+  "eighths",
+  "tenth",
+  "tenths",
+  "numerator",
+  "denominator",
+  "fraction",
+  "fractions",
+  "simplify",
+  "equivalent",
+  "nought",
+  "whole",
+  "mixed number",
+  "improper fraction",
+  "number line",
+  "HOREB"
+]);
+var CHILD_LISTEN = Object.freeze({
+  model: "ink-whisper",
+  language: "en",
+  // The server's own auto-finalize waits as long as the page does, so it never cuts a thinking child off.
+  maxSilenceSecs: 2.4,
+  // The page's end of speech (a child pauses to think: an adult's 0.8 s ended turns mid-sentence).
+  baseEndMs: 2e3,
+  // a finished-sounding answer ends after this much quiet
+  thinkingEndMs: 3400,
+  // a short or unfinished answer waits longer
+  pauseNudgeMs: 1500,
+  // quiet this long mid-answer: show "Take your time" (once per pause)
+  slowerExtraMs: 500,
+  // when the tutor has been asked to slow down, wait a little more still
+  maxUtteranceMs: 4e4,
+  noSpeechMs: 1e4
+});
+var NUMBER_WORDS = new Set("zero nought none one two three four five six seven eight nine ten eleven twelve twenty thirty forty fifty hundred half halves quarter quarters third thirds fifth fifths sixth sixths eighth eighths tenth tenths whole yes no yeah yep nope ok okay maybe".split(" "));
+var ASK_AGAIN = Object.freeze([
+  "Sorry, I did not catch that. Say it again for me, nice and slowly.",
+  "I still could not hear you well. Tap Talk and try once more, or type your answer if you like."
+]);
+var CHILD_SPEECH = Object.freeze({
+  // Sonic speed is a multiplier (docs: 0.6 to 1.5, default 1). A ten-year-old learning a new idea
+  // needs slower than conversation: 0.9 steady, 0.07 a step.
+  baseSpeed: 0.9,
+  speedStep: 0.07,
+  minSpeed: 0.7,
+  maxSpeed: 1,
+  // Sonic 3.6 adapts pause length to the sentence by itself (docs), so only the gap between our
+  // separate sentences is ours: longer when slower, so the child can think between ideas.
+  gapMs: 450,
+  maxWords: { [-2]: 18, [-1]: 26, 0: 40, 1: 46 },
+  // `emotion` is one of neutral, calm, angry, content, sad (docs). Warm and settled: content;
+  // calm once the child has asked for slower.
+  emotion: "content",
+  slowEmotion: "calm"
+});
+var TUTOR_VOICES = Object.freeze([
+  { id: "db6b0ed5-d5d3-463d-ae85-518a07d3c2b4", name: "Skylar", note: "US woman, stable and pleasant (default)" },
+  { id: "9626c31c-bec5-4cca-baa8-f8ba9e84c8bc", name: "Jacqueline", note: "US woman, warmer" },
+  { id: "62ae83ad-4f6a-430b-af41-a9bede9286ca", name: "Gemma", note: "British woman, closer to Kenyan school English than US" },
+  { id: "47c38ca4-5f35-497b-b1a3-415245fb35e1", name: "Daniel", note: "US man" },
+  { id: "ef191366-f52f-447a-a398-ed8c0f2943a1", name: "Archie", note: "British man" },
+  { id: "f786b574-daa5-4673-aa0c-cbe3e8534c02", name: "Earlier choice", note: "the voice used before 12 Nov" }
+]);
+var DEFAULT_TUTOR_VOICE = TUTOR_VOICES[0].id;
+
 // src/voice-tutor/session.js
 var DEFAULT_SETTINGS = Object.freeze({
   model: "claude-sonnet-5-5",
@@ -473,7 +550,10 @@ var DEFAULT_SETTINGS = Object.freeze({
   maxSnapshots: 30,
   // The voice (milestone 3, option B). The voice id is a setting: see the report on choosing it.
   ttsModel: "sonic-3.6",
-  ttsVoice: "f786b574-daa5-4673-aa0c-cbe3e8534c02",
+  ttsVoice: DEFAULT_TUTOR_VOICE,
+  // Speed (Sonic: 0.6 to 1.5, 1 is normal) and emotion for a ten-year-old; the pace state moves them from here (childVoice.js).
+  ttsSpeed: CHILD_SPEECH.baseSpeed,
+  ttsEmotion: CHILD_SPEECH.emotion,
   ttsSampleRate: 24e3
 });
 var num = (v, d) => Number.isFinite(Number(v)) && String(v ?? "").trim() !== "" ? Number(v) : d;
@@ -489,6 +569,8 @@ var settingsFrom = (get = () => void 0) => ({
   maxSnapshots: num(get("VOICE_TUTOR_MAX_SNAPSHOTS"), DEFAULT_SETTINGS.maxSnapshots),
   ttsModel: get("VOICE_TUTOR_TTS_MODEL") || DEFAULT_SETTINGS.ttsModel,
   ttsVoice: get("VOICE_TUTOR_TTS_VOICE") || DEFAULT_SETTINGS.ttsVoice,
+  ttsSpeed: Math.max(0.6, Math.min(1.5, num(get("VOICE_TUTOR_TTS_SPEED"), DEFAULT_SETTINGS.ttsSpeed))),
+  ttsEmotion: ["neutral", "calm", "content", "sad", "angry", "none"].includes(get("VOICE_TUTOR_TTS_EMOTION")) ? get("VOICE_TUTOR_TTS_EMOTION") : DEFAULT_SETTINGS.ttsEmotion,
   ttsSampleRate: [16e3, 22050, 24e3, 44100].includes(num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0)) ? num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0) : DEFAULT_SETTINGS.ttsSampleRate
 });
 var capCheck = ({ sessionUsd = 0, dayUsd = 0, turns = 0 } = {}, s = DEFAULT_SETTINGS) => {
@@ -544,7 +626,7 @@ async function mintToken({ user, body, db, settings, keys = {}, fetch: f, now = 
     if (!r.ok) throw new Error(`cartesia ${r.status}`);
     const j = await r.json();
     if (!j?.token) throw new Error("cartesia gave no token");
-    out = { token: j.token, expires_in: TOKEN_TTL_S, version: CARTESIA_VERSION, url: CARTESIA_WS, model: settings.ttsModel, voice: settings.ttsVoice, sample_rate: settings.ttsSampleRate };
+    out = { token: j.token, expires_in: TOKEN_TTL_S, version: CARTESIA_VERSION, url: CARTESIA_WS, model: settings.ttsModel, voice: settings.ttsVoice, speed: settings.ttsSpeed, emotion: settings.ttsEmotion === "none" ? null : settings.ttsEmotion, sample_rate: settings.ttsSampleRate };
   } catch (e) {
     console.error("voice token", String(e?.message || e).slice(0, 200));
     return reply(502, { error: "The voice service did not answer. Please type for now." });

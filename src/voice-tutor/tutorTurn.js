@@ -46,6 +46,7 @@ import { seal, unseal } from './seal.js';
 import { costOf, PRICES } from '../rocket/guide.js';
 import { validateSnapshot, imageTokens, CHECK_GAP_MS } from './snapshot.js';
 import { speechCost, listenCost, spokenChars } from './providers/voice.js';
+import { cleanPace } from './childVoice.js';
 
 const reply = (status, body) => ({ status, body });
 const say = (text) => ({ cmd: 'say', text });
@@ -213,7 +214,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   const context = turnContext({
     ...pick, elapsedMin: Math.max(0, Number(body?.elapsed_s) || 0) / 60, turnIndex, phase: body?.phase || null,
     board, marked, heard: typeof body?.heard === 'string' ? body.heard.slice(0, 400) : null, wantsAnswer: screen.wantsAnswer,
-    bankLines: bankLines(bank), picture, figures,
+    bankLines: bankLines(bank), picture, figures, pace: cleanPace(body?.pace),
   });
   const history = Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === 'string') : [];
   const request = buildRequest({ model: settings.model, effort: settings.effort, lib, history, message, context, names, image });
