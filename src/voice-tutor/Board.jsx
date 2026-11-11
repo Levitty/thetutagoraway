@@ -29,6 +29,7 @@ import { itemStrokes, markStrokes, strokesBox } from '../draw/strokes.js';
 import { strokeTimes, progress, ease } from '../draw/timing.js';
 import { pointAt } from '../draw/path.js';
 import { PRINT_FONT } from '../draw/print.js';
+import { sceneAccent, withAccent } from '../draw/accent.js';
 import { BOARD_W, BOARD_H } from '../draw/geometry.js';
 
 export { BOARD_W, BOARD_H, slotRect, barGeom, shapeGeom, lineGeom, targetBox } from '../draw/geometry.js';
@@ -256,12 +257,14 @@ export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard
   const t = now == null ? Infinity : now;
   // Each item's and mark's strokes, made once and kept while the item is the same object.
   const cache = useRef(new WeakMap());
+  // One accent per scene: every colour but ink is drawn in the scene's accent (src/draw/accent.js).
+  const accent = sceneAccent(board);
   const entryFor = (obj, make, pace) => {
     const fit = drawTimes?.get(drawKey(obj)) ?? null;
     const c = cache.current.get(obj);
-    if (c && c.H === H && c.fit === fit && c.target === make.target) return c.entry;
-    const entry = makeEntry(make(), obj.at, fit, pace);
-    cache.current.set(obj, { H, fit, target: make.target, entry });
+    if (c && c.H === H && c.fit === fit && c.accent === accent) return c.entry;
+    const entry = makeEntry(withAccent(make(), accent), obj.at, fit, pace);
+    cache.current.set(obj, { H, fit, accent, entry });
     return entry;
   };
   const items = board.order.map((id) => {
@@ -272,13 +275,11 @@ export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard
   const markOf = (m) => {
     const item = board.items[m.target];
     if (!item) return null;
-    const mk = () => markStrokes(m, item, H);
-    mk.target = item;
     const fit = drawTimes?.get(drawKey(m)) ?? drawMs(m);
     const c = cache.current.get(m);
-    if (c && c.H === H && c.fit === fit && c.target === item) return { obj: m, entry: c.entry };
-    const entry = makeEntry(mk(), m.at, fit);
-    cache.current.set(m, { H, fit, target: item, entry });
+    if (c && c.H === H && c.fit === fit && c.target === item && c.accent === accent) return { obj: m, entry: c.entry };
+    const entry = makeEntry(withAccent(markStrokes(m, item, H), accent), m.at, fit);
+    cache.current.set(m, { H, fit, target: item, accent, entry });
     return { obj: m, entry };
   };
   const marks = [...board.marks, ...(board.pointer ? [board.pointer] : [])].map(markOf).filter(Boolean);

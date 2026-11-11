@@ -273,3 +273,47 @@ test('the prompt teaches the moves, and its example turn passes the validator an
   assert.ok(v.steps.some((s) => s.pace === 'slow'));
   assert.deepEqual(v.steps.filter((s) => s.cmd === 'highlight').map((s) => s.on), ['One', 'Two']);
 });
+
+test('one accent per scene: ink stays ink, the first colour is the accent, and every later colour and mark is drawn in it', async () => {
+  const { sceneAccent, withAccent, DEFAULT_ACCENT } = await import('../src/draw/accent.js');
+  const { PALETTE } = await import('../src/voice-tutor/commands.js');
+  let b = emptyBoard();
+  assert.equal(sceneAccent(b), DEFAULT_ACCENT, 'no colour yet: orange');
+  b = applyStep(b, { cmd: 'write_math', id: 'm', expr: 'frac(1,2)', slot: 'top_left', colour: 'ink' }, 0);
+  assert.equal(sceneAccent(b), DEFAULT_ACCENT, 'ink is not an accent');
+  b = applyStep(b, { cmd: 'fraction_bar', id: 'a', parts: 2, shaded: 1, label: true, slot: 'top_right' }, 1);   // blue by default
+  b = applyStep(b, { cmd: 'shape', id: 's', kind: 'circle', parts: 4, shaded: 1, slot: 'middle', colour: 'green' }, 2);
+  const accent = sceneAccent(b);
+  assert.equal(accent, PALETTE.blue, 'the first colour used');
+  const used = new Set();
+  for (const it of [b.items.m, b.items.a, b.items.s]) for (const s of withAccent(itemStrokes(it, 640), accent)) used.add(s.colour);
+  for (const m of [{ cmd: 'highlight', target: 's', part: 1, style: 'circle' }, { cmd: 'highlight', target: 'a', style: 'glow' }, { cmd: 'underline', target: 'm' }, { cmd: 'point', target: 'a' }]) {
+    for (const s of withAccent(markStrokes(m, b.items[m.target], 640), accent)) used.add(s.colour);
+  }
+  for (const s of withAccent(itemStrokes(ITEMS.number_line, 640), accent)) used.add(s.colour);   // jumps and marks too
+  assert.deepEqual([...used].sort(), [PALETTE.ink, PALETTE.blue].sort());
+  // A clear starts a new scene.
+  b = applyStep(b, { cmd: 'clear' }, 3);
+  b = applyStep(b, { cmd: 'shape', id: 't', kind: 'square', parts: 2, shaded: 1, slot: 'top', colour: 'purple' }, 4);
+  assert.equal(sceneAccent(b), PALETTE.purple);
+});
+
+test('the practice lesson and the prompt example keep to ink and one colour per scene', async () => {
+  const { itemColour } = await import('../src/draw/accent.js');
+  const paths = [
+    [[null], ['3/4', 'w1'], ['The bottom doubled'], ['2', 'g1'], ['9', 'i1']],
+    [[null], ['1/4', 'w1'], ['no idea'], ['4', 'g1'], ['6', 'p1'], ['3', 'g2'], ['11', 'i1']],
+  ];
+  const ex = JSON.parse(systemPrompt({}).match(/\{"steps":.*\}\]\}/)[0]).steps;
+  for (const turns of [...await Promise.all(paths.map(lesson)), [ex]]) {
+    let scene = new Set();
+    for (const steps of turns) {
+      for (const s of steps) {
+        if (s.cmd === 'clear') scene = new Set();
+        const c = itemColour(s);
+        if (DRAWN.includes(s.cmd) && c && c !== 'ink') scene.add(c);
+        assert.ok(scene.size <= 1, `two colours in one scene: ${[...scene]}`);
+      }
+    }
+  }
+});

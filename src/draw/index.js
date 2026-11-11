@@ -9,6 +9,7 @@
 //   print.js     Figtree print for longer text, placed without measuring
 //   geometry.js  the slots and each item's frame (shared with marks)
 //   path.js      reading and measuring a stroke once
+//   accent.js    one accent per scene: ink, plus the scene's one colour
 // Board.jsx draws through it; timeline.js takes its times (drawDuration).
 // ============================================================================
 import { DRAWN } from '../voice-tutor/commands.js';
@@ -22,3 +23,4 @@ export const drawDuration = (step, H = BOARD_H) => (DRAWN.includes(step.cmd) ? M
 
 export { itemStrokes, markStrokes, strokesBox, PEN } from './strokes.js';
 export { strokeTimes, progress, ease } from './timing.js';
+export { sceneAccent, withAccent, itemColour, DEFAULT_ACCENT } from './accent.js';
