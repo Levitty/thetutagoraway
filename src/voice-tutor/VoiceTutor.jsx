@@ -104,7 +104,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const q = useMemo(params, []);
   const demo = q.get('demo') === 'auto';
   const email = String(user?.email || '').toLowerCase();
-  const allowed = !!user && (isAdmin || (email && ALLOWLIST.includes(email)));
+  // The server's VOICE_TUTOR_ALLOWLIST is the real gate; on a local test build any signed-in tester may try, and the server says no if not listed.
+  const allowed = !!user && (isAdmin || ENV.DEV === true || (email && ALLOWLIST.includes(email)));
   const canMock = allowed || ENV.DEV === true;
   const [mode, setMode] = useState(q.get('mode') === 'live' && allowed ? 'remote' : 'mock');
   const [children, setChildren] = useState([]);
@@ -539,7 +540,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
         <span className="font-extrabold tracking-tight">HOREB tutor</span>
         <span className="px-2 py-0.5 rounded-full font-bold" style={{ background: '#FFE3EE', color: '#C2255C' }}>Adult testers only</span>
         <span className="hidden md:inline text-slate-500">Prototype.{started ? (silentVoice.current ? ' Silent: words appear at speaking pace.' : ` Voice: ${voiceName}.`) : ''}</span>
-        <span className="ml-auto font-bold text-slate-600">{mode === 'remote' ? 'Live' : 'Practice'}</span>
+        <span className="ml-auto font-bold text-slate-600">{mode === 'remote' ? 'Live' : 'Practice (fixed script)'}</span>
         {mode === 'remote' ? <span className="tabular-nums text-slate-500">US${session.cost.sessionUsd.toFixed(2)}</span> : null}
         <button type="button" onClick={() => setTester((x) => !x)} className="px-2 py-0.5 rounded-full border border-slate-300 font-bold text-slate-700">Tester</button>
       </header>
@@ -557,6 +558,12 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
                     <button type="button" onClick={() => setMode('mock')} className={`flex-1 rounded-full px-3 py-1.5 font-bold border ${mode === 'mock' ? 'bg-violet-600 text-white border-violet-600' : 'border-slate-300'}`}>Practice (free)</button>
                     <button type="button" disabled={!allowed} onClick={() => setMode('remote')} className={`flex-1 rounded-full px-3 py-1.5 font-bold border disabled:opacity-40 ${mode === 'remote' ? 'bg-violet-600 text-white border-violet-600' : 'border-slate-300'}`}>Live model</button>
                   </div>
+                  {/* Never fall back to the script without saying so (owner, 11 Nov 2026: he asked for live and got the script). */}
+                  {!allowed ? (
+                    <p className="vt-fallback mt-2 rounded-xl px-3 py-2">{user ? `Live is off for ${email}: it is not on the testers list.` : 'Live needs you signed in to HOREB first.'} Practice is a fixed script: HOREB does not hear what you say.</p>
+                  ) : mode === 'mock' ? (
+                    <p className="text-xs text-slate-500 mt-2">Practice is a fixed script to try the screen: HOREB does not hear what you say. Choose Live model for the real tutor.</p>
+                  ) : null}
                   {mode === 'remote' ? (
                     <div className="mt-3 grid gap-2 text-sm">
                       <select value={childId} onChange={(e) => setChildId(e.target.value)} className="rounded-lg border border-slate-300 px-2 py-1.5">
