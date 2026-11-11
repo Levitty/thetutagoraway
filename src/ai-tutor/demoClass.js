@@ -282,3 +282,36 @@ export const demoSchool = () => {
     events: [...demoEvents(), ...g6Events],
   };
 };
+
+// ============================================================================
+// EVIDENCE FOR THE LEARNER VIEW (11 Nov 2026). Invented answers in the shape
+// response_events stores them after the learner-evidence migration; the five
+// states shown from them are worked out by the real rules in learner/mastery.js.
+// One story per skill, so the view shows every state: the same learner is
+// mastered on one skill, overdue on another, slipping on a third.
+// ============================================================================
+export const demoEvidence = (userId) => {
+  const stamp = (days, j = 0) => new Date(Date.now() - days * 86400000 + j * 60000).toISOString();
+  const FR = 'MATH.G5.NUMBER.FRACTIONS';
+  const WN = 'MATH.G5.NUMBER.WHOLE_NUMBERS';
+  const ME = 'MATH.G5.MEASUREMENT.LENGTH';
+  const out = [];
+  let k = 0;
+  // run(skill, daysAgo, [ [right, difficulty, source, helped] ... ])
+  const run = (cskill, days, items, outcome) => items.forEach(([ok, difficulty, source = 'practice', helped = false], j) => out.push({
+    id: `demo-ev-${userId}-${++k}`, student_id: userId, skill_id: cskill, cskill, correct: ok, hints_used: helped ? 1 : 0,
+    independent: !helped, difficulty, source, marks: ok ? 1 : 0, max_marks: 1, outcome_code: outcome || null,
+    substrand_code: cskill.split('.').slice(0, 4).join('.'), misconception: null, item_ref: `demo:${k}`, created_at: stamp(days, j),
+  }));
+  const R = true; const W = false;
+  run(`${FR}.EQUIVALENT_FRACTIONS`, 40, [[R, 'easy'], [R, 'easy'], [R, 'medium'], [R, 'hard'], [R, 'medium'], [R, 'easy']], 'MATH.G5.O.FRACTIONS.1');
+  run(`${FR}.EQUIVALENT_FRACTIONS`, 24, [[R, 'medium', 'school_homework'], [R, 'easy', 'school_homework']], 'MATH.G5.O.FRACTIONS.1');
+  run(`${FR}.ADD_SAME_DENOM`, 12, [[R, 'easy'], [W, 'easy'], [R, 'medium'], [R, 'easy'], [W, 'medium', 'school_homework'], [R, 'easy', 'school_homework']], 'MATH.G5.O.FRACTIONS.2');
+  run(`${FR}.ADD_UNLIKE_DENOM`, 6, [[W, 'medium'], [R, 'easy', 'practice', true], [W, 'medium'], [W, 'hard'], [R, 'easy', 'practice', true]], 'MATH.G5.O.FRACTIONS.2');
+  run(`${WN}.PLACE_VALUE`, 120, [[R, 'easy'], [R, 'easy'], [R, 'medium'], [R, 'hard'], [R, 'medium']], 'MATH.G5.O.WHOLE.1');
+  run(`${WN}.PLACE_VALUE`, 95, [[R, 'medium'], [R, 'hard']], 'MATH.G5.O.WHOLE.1');
+  run(`${WN}.PLACE_VALUE`, 66, [[R, 'medium'], [R, 'easy']], 'MATH.G5.O.WHOLE.1');
+  run(`${ME}.CONVERT_UNITS`, 3, [[R, 'easy', 'school_exam'], [R, 'easy', 'school_exam']], null);
+  run(`${ME}.READ_SCALE`, 9, [[R, 'easy'], [R, 'easy'], [R, 'easy'], [R, 'easy'], [R, 'easy']], null);
+  return out;
+};

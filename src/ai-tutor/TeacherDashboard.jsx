@@ -31,6 +31,7 @@ import {
   rowToProgress,
 } from './classView.js';
 import { Icon } from './components/Icons.jsx';
+import { LearnerStates } from './LearnerStates.jsx';
 import { isOwnMathRow } from './classRows.js';
 
 const SUBJECT_ID = 'math';
@@ -507,7 +508,7 @@ export function TeacherDashboard({ onBack, onNavigate, teacherProfile, section =
       <StudentDetail student={selected} onBack={() => setSelected(null)}
         canAssign={assignmentsReady && theirClasses.length > 0}
         classes={theirClasses} learnersOf={learnersOf} learnersReady={learnersReady}
-        onAssign={assignGap} assignError={assignError} />
+        onAssign={assignGap} assignError={assignError} isDemo={isDemo} />
     ));
   }
 
@@ -953,7 +954,7 @@ const RosterRow = ({ st, onOpen }) => {
 // support before moving on" while `snap.topGaps` held the three skill names,
 // so a teacher who clicked a child to find out what was wrong learned nothing
 // they did not already know and had nowhere to go next.
-function StudentDetail({ student, onBack, canAssign = false, classes = [], learnersOf, learnersReady, onAssign, assignError }) {
+function StudentDetail({ student, onBack, canAssign = false, classes = [], learnersOf, learnersReady, onAssign, assignError, isDemo = false }) {
   const { name, snap, diagnosed } = student;
   const a = attentionOf(student);
   // Set one of this child's gaps as work for this child (and anyone else the
@@ -1052,6 +1053,7 @@ function StudentDetail({ student, onBack, canAssign = false, classes = [], learn
                 )}
               </div>
             )}
+            <LearnerStates student={student} isDemo={isDemo} />
           </div>
 
           {/* THE MEASUREMENTS. */}
