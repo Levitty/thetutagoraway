@@ -22,9 +22,12 @@ import React, { useCallback, useEffect, useMemo, useReducer, useRef, useState } 
 import { HorebBot } from '../ai-tutor/HorebBot.jsx';
 import { useHorebLook } from '../ai-tutor/horebLook.js';
 import { supabase } from '../supabase.js';
-import { Board, drawKey } from './Board.jsx';
+import { Board, drawKey, composedItems } from './Board.jsx';
 import { drawDuration } from '../draw/index.js';
-import { emptyBoard, applyStep, boardSummary } from './board.js';
+import { emptyBoard, applyStep, boardSummary, playFigure } from './board.js';
+import { placeItem } from '../draw/compose.js';
+import { itemStrokes, strokesBox } from '../draw/strokes.js';
+import { figureNotes } from '../draw/observe.js';
 import { lessonShape, tutorBubble, childBubble, partLabel } from './layout.js';
 import { validateTurn, PHASES, cellsOf, DRAWN, MARKS } from './commands.js';
 import { buildTimeline, createPlayer, advance, updateTimeline } from './timeline.js';
@@ -130,7 +133,28 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const boardClock = () => providers.current?.tts?.clock?.() ?? clock();
   // How long the timeline gave each drawing (drawKey -> ms): the board draws it in that time.
   const drawTimes = useRef(new Map());
-  const timeOf = (step) => drawDuration(step, boardHRef.current);
+  // The layout pass (src/draw/compose.js): a new drawing's frame on the sheet, laid out with the rest of its
+  // turn (the steps after it), around the ink already drawn, which never moves.
+  const inkOf = (it) => strokesBox(itemStrokes(it, boardHRef.current), 6) || it.rect;
+  const placeFor = (b, step, pending) => placeItem([...composedItems(b, boardHRef.current).values()], step, pending, boardHRef.current, { inkOf });
+  // How long a drawing takes, in the frame it will have (a big main figure takes longer than a small one).
+  const timed = useRef(new WeakMap());
+  const timeOf = (step) => {
+    if (!DRAWN.includes(step.cmd)) return drawDuration(step, boardHRef.current);
+    const c = timed.current.get(step);
+    if (c && c.b === boardRef.current && c.H === boardHRef.current) return c.ms;
+    const steps = turnSteps.current; const k = steps.indexOf(step);
+    let rect = null;
+    try { rect = placeFor(boardRef.current, step, k >= 0 ? steps.slice(k + 1) : []); } catch { rect = null; }
+    const ms = drawDuration(rect ? { ...step, rect } : step, boardHRef.current);
+    timed.current.set(step, { b: boardRef.current, H: boardHRef.current, ms });
+    return ms;
+  };
+  // The child handles a figure: the figure's rules decide, and what they did goes with the next turn.
+  const onPlay = useCallback((id, control, value) => {
+    const b = playFigure(boardRef.current, id, control, value, clock());
+    if (b !== boardRef.current) { boardRef.current = b; setBoard(b); }
+  }, []);
   useWakeLock(session.status !== 'ready' && session.status !== 'ended');
 
   useEffect(() => { boardRef.current = board; }, [board]);
@@ -167,7 +191,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
         for (const e of due) if (e.anchor === 'word') offsets.current.push(t - (pl.startedAt + e.t));
         if (due.length) {
           let b = boardRef.current;
-          for (const e of due) b = fire(b, turnSteps.current[e.i], pl.startedAt + e.t, e.dur);
+          for (const e of due) b = fire(b, turnSteps.current[e.i], pl.startedAt + e.t, e.dur, turnSteps.current.slice(e.i + 1));
           boardRef.current = b;
           setBoard(b);
         }
@@ -188,10 +212,10 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     return () => cancelAnimationFrame(raf);
   }, []);
 
-  const fire = (b, step, at, dur = null) => {
+  const fire = (b, step, at, dur = null, pending = []) => {
     if (!step) return b;
     if (dur != null && (DRAWN.includes(step.cmd) || MARKS.includes(step.cmd))) drawTimes.current.set(drawKey({ ...step, at }), dur);
-    const next = applyStep(b, step, at, boardHRef.current);
+    const next = applyStep(b, step, at, boardHRef.current, { place: (st) => { try { return placeFor(b, st, pending); } catch (e) { console.warn('voice-tutor: layout', e.message); return null; } } });
     if (step.cmd === 'ask') setAsk(next.ask);
     if (step.cmd === 'end_session') dispatch({ type: 'ended', summary: step.summary, at });
     return next;
@@ -272,6 +296,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       snapshots_taken: snap.current.count,
       ink_cells: inkNow,
       board: boardNow,
+      // What the child did with the figures they could handle, in plain words (src/draw/observe.js).
+      figures: figureNotes(boardRef.current),
       history: s.transcript.map((h) => ({ who: h.who, text: h.text })),
       elapsed_s: Math.round((clock() - startedAt.current) / 1000), turn_index: s.turns, phase: s.phase,
       // The voice, priced into the caps on the server: will the words be spoken, and how much the child spoke.
@@ -351,7 +377,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       const t = boardClock();
       const r = bargeIn({ player: pl, tts: providers.current.tts, now: t });
       let b = boardRef.current;
-      for (const e of r.due) b = fire(b, turnSteps.current[e.i], t - e.dur, e.dur);
+      for (const e of r.due) b = fire(b, turnSteps.current[e.i], t - e.dur, e.dur, r.due.filter((x) => x.i > e.i).map((x) => turnSteps.current[x.i]));
       boardRef.current = b; setBoard(b);
       if (r.interrupted) {
         heard = r.heard;
@@ -568,7 +594,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
         {/* The sheet of paper between them. */}
         <section className="vt-sheet">
           <div className="vt-board" style={{ aspectRatio: `1000 / ${boardH}` }}>
-            <Board ref={svgRef} board={board} now={now} H={boardH} drawTimes={drawTimes.current} inkOn={inkShown} tool={tool} onInk={onInk} />
+            <Board ref={svgRef} board={board} now={now} H={boardH} drawTimes={drawTimes.current} inkOn={inkShown} tool={tool} onInk={onInk} onPlay={onPlay} playOn={started && session.status !== 'ended'} />
             {!started ? (
               <div className="absolute inset-0 flex items-center justify-center bg-white/70 p-3 overflow-y-auto">
                 <div className="w-full max-w-sm bg-white rounded-2xl p-4 border border-slate-200">

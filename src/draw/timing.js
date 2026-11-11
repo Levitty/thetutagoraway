@@ -17,6 +17,8 @@
 //                                           step's word)
 //   progressAt(times, now)                  each stroke's progress, eased
 // pace 'slow' (the key idea of a lesson) is SLOW times longer throughout.
+// An instrument laid on the board (kind 'place': the protractor, squared paper)
+// is not drawn: all its strokes appear together, in PLACE_MS, as it is put down.
 // Pure. Tested in tests/draw-engine.test.mjs.
 // ============================================================================
 export const SPEED = { line: 620, write: 330, hatch: 2600, jump: 520, mark: 560 };
@@ -24,13 +26,14 @@ export const MIN_MS = 120;
 export const MAX_MS = 1500;
 export const HATCH_EVERY = 45;
 export const SLOW = 1.6;
+export const PLACE_MS = 420;
 export const LIFT = { inUnit: [70, 160], unit: [100, 260], phase: 140 };
 
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 export const paceFactor = (pace) => (pace === 'slow' ? SLOW : 1);
 
 /** One stroke's drawing time, before pace. */
-export const strokeMs = (s) => clamp((s.len / (SPEED[s.kind] || SPEED.line)) * 1000, MIN_MS, MAX_MS);
+export const strokeMs = (s) => (s.kind === 'place' ? PLACE_MS : clamp((s.len / (SPEED[s.kind] || SPEED.line)) * 1000, MIN_MS, MAX_MS));
 
 const ends = (s) => [s.sp.pts[0], s.sp.pts[s.sp.pts.length - 1]];
 
@@ -46,6 +49,7 @@ export function layoutStrokes(strokes, { pace } = {}) {
     if (prev) {
       const sameUnit = prev.unit === s.unit && prev.phase === s.phase;
       if (s.kind === 'hatch' && prev.kind === 'hatch' && sameUnit) t0 = times[i - 1].t0 + HATCH_EVERY * k;
+      else if (s.kind === 'place' && prev.kind === 'place' && sameUnit) t0 = times[i - 1].t0;
       else {
         const [, a] = ends(prev); const [b] = ends(s);
         const dist = Math.hypot(b[0] - a[0], b[1] - a[1]);

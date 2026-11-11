@@ -2,7 +2,7 @@
 // THE BOARD COMMAND LIST (HOREB live tutor, milestone 1, approved 10 Nov 2026).
 //
 // The model never writes code, HTML or coordinates. Each turn it fills in one
-// fixed form: an ordered list of at most MAX_STEPS steps, each one of the 17
+// fixed form: an ordered list of at most MAX_STEPS steps, each one of the 18
 // commands below. This file is the rule every step must clear before it is
 // drawn, on the server (before the reply leaves) and again in the browser
 // (before anything is rendered). A step that fails is dropped and logged,
@@ -16,6 +16,7 @@
 // Pure: no network, no clock, no React. Tested in tests/voice-tutor-commands.test.mjs.
 // ============================================================================
 import { parseMath } from './mathExpr.js';
+import { validateFigure, figureParts, FIGURE_TYPES, FIGURE_CONTROLS } from '../draw/figures.js';
 
 export const MAX_STEPS = 12;
 export const MAX_BOARD_ITEMS = 30;
@@ -37,7 +38,9 @@ export const ROWS = ['top', 'middle', 'bottom'];
 export const cellsOf = (slot) => (ROWS.includes(slot) ? [`${slot}_left`, `${slot}_right`] : [slot]);
 
 // Items that take a slot on the board, and the marks that point at them.
-export const DRAWN = ['write_text', 'write_math', 'fraction_bar', 'number_line', 'shape', 'plot_points'];
+// figure (rendering engine phase 2): a Grade 5 maths figure by type and settings (src/draw/figures.js), which the
+// child may handle where the tutor allows it (controls), with a goal the app marks itself.
+export const DRAWN = ['write_text', 'write_math', 'fraction_bar', 'number_line', 'shape', 'plot_points', 'figure'];
 export const MARKS = ['highlight', 'underline', 'point'];
 // Steps that are never seen or heard: applied when the turn arrives, never
 // dropped by an interruption.
@@ -56,6 +59,7 @@ const FIELDS = {
   number_line: ['id', 'from', 'to', 'divisions', 'marks', 'jumps', 'slot'],
   shape: ['id', 'kind', 'parts', 'shaded', 'label', 'slot', 'colour'],
   plot_points: ['id', 'x_axis', 'y_axis', 'points', 'connect', 'slot'],
+  figure: ['id', 'type', 'params', 'controls', 'goal', 'slot', 'colour'],
   highlight: ['target', 'part', 'bar', 'style'],
   underline: ['target', 'range'],
   point: ['target', 'part', 'bar'],
@@ -71,6 +75,7 @@ const REQUIRED = {
   say: ['text'], write_text: ['id', 'text', 'slot'], write_math: ['id', 'expr', 'slot'],
   fraction_bar: ['id', 'parts', 'shaded', 'slot'], number_line: ['id', 'from', 'to', 'divisions', 'slot'],
   shape: ['id', 'kind', 'parts', 'shaded', 'slot'], plot_points: ['id', 'x_axis', 'y_axis', 'points', 'slot'],
+  figure: ['id', 'type', 'slot'],
   highlight: ['target'], underline: ['target'], point: ['target'], erase: ['targets'], clear: [],
   ask: ['id', 'prompt', 'form'], set_phase: ['phase'],
   record_diagnosis: ['skill', 'misconception', 'confidence', 'evidence', 'next'],
@@ -249,11 +254,20 @@ function checkStep(s, ctx, notes) {
       out.connect = optBool('connect', false); out.slot = optEnum('slot', SLOTS);
       break;
     }
+    case 'figure': {
+      // The figure's own rules, whole: type, settings, what the child may do, the goal. Never repaired.
+      out.id = newId();
+      const r = validateFigure({ type: s.type, params: s.params, controls: s.controls, goal: s.goal });
+      need(r.ok, `figure: ${r.ok ? '' : r.error}`);
+      Object.assign(out, r.figure);
+      out.slot = optEnum('slot', SLOTS); out.colour = optEnum('colour', COLOURS, 'blue');
+      break;
+    }
     case 'highlight': case 'point': {
       out.target = target(s.target);
       const item = ctx.items.get(out.target);
       if (s.bar !== undefined && s.bar !== null) {
-        need(s.bar === 1 || (s.bar === 2 && item?.second_bar), `${cmd}: bar must be 1, or 2 on a bar with a second bar`);
+        need(s.bar === 1 || (s.bar === 2 && (item?.second_bar || (item?.cmd === 'figure' && item.params?.second))), `${cmd}: bar must be 1, or 2 on a bar with a second bar`);
         out.bar = s.bar;
       }
       if (s.part !== undefined && s.part !== null) {
@@ -372,6 +386,7 @@ export const partsOf = (item, bar) => {
   if (item.cmd === 'shape') return item.parts;
   if (item.cmd === 'number_line') return (item.marks || []).length;
   if (item.cmd === 'plot_points') return (item.points || []).length;
+  if (item.cmd === 'figure') return figureParts(item, bar);
   return 0;
 };
 
@@ -489,6 +504,8 @@ export const STEP_SCHEMAS = [
   C('number_line', { id: T, from: I, to: I, divisions: I, marks: { type: 'array', items: S({ value: N, label: T, style: E(['dot', 'arrow']) }, ['value']) }, jumps: { type: 'array', items: S({ from: N, to: N }, ['from', 'to']) }, slot: E(SLOTS), ...drawn }, ['id', 'from', 'to', 'divisions', 'slot']),
   C('shape', { id: T, kind: E(SHAPE_KINDS), parts: I, shaded: shadedSchema, label: B, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ['id', 'kind', 'parts', 'shaded', 'slot']),
   C('plot_points', { id: T, x_axis: S({ from: I, to: I, name: T }, ['from', 'to']), y_axis: S({ from: I, to: I, name: T }, ['from', 'to']), points: { type: 'array', items: S({ x: N, y: N, label: T }, ['x', 'y']) }, connect: B, slot: E(SLOTS), ...drawn }, ['id', 'x_axis', 'y_axis', 'points', 'slot']),
+  // params and goal are JSON text (each figure type has its own settings; validateTurn checks them against figures.js).
+  C('figure', { id: T, type: E(FIGURE_TYPES), params: T, controls: { type: 'array', items: E(FIGURE_CONTROLS) }, goal: T, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ['id', 'type', 'params', 'slot']),
   C('highlight', { target: T, part: I, bar: I, style: E(HIGHLIGHT_STYLES), ...timing }, ['target']),
   C('underline', { target: T, range: { type: 'array', items: I }, ...timing }, ['target']),
   C('point', { target: T, part: I, bar: I, ...timing }, ['target']),

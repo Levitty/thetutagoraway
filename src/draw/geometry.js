@@ -10,6 +10,10 @@ import { parseMath, layoutMath } from '../voice-tutor/mathExpr.js';
 import { canHandwrite, handWidth } from './glyphs.js';
 import { printWidth } from './print.js';
 
+// The figures' frames for marks (figureDraw.js registers itself here, so geometry stays free of it).
+let figureBox = null;
+export const registerFigureBox = (f) => { figureBox = f; };
+
 export const BOARD_W = 1000;
 export const BOARD_H = 640;
 const PAD = 16;
@@ -30,15 +34,23 @@ export function slotRect(slot, H = BOARD_H) {
   return { x: (right ? BOARD_W / 2 : 0) + PAD, y: row * ROW_H + PAD / 2, w: (full ? BOARD_W : BOARD_W / 2) - PAD * 2, h: ROW_H - PAD };
 }
 
+/**
+ * An item's frame on the board: the one the layout pass gave it (compose.js, `rect`), else its slot's.
+ * Every drawing and every mark reads its frame here, so a composed item and its marks agree.
+ */
+export const rectOf = (item, H = BOARD_H) => item.rect || slotRect(item.slot, H);
+
 export const shadedSet = (shaded, parts) => new Set(Array.isArray(shaded) ? shaded : Array.from({ length: shaded }, (_, i) => i + 1).filter((i) => i <= parts));
 export const countOf = (shaded) => (Array.isArray(shaded) ? shaded.length : shaded);
 
 export function barGeom(item, r) {
   const bars = [{ parts: item.parts, shaded: item.shaded }, ...(item.second_bar ? [item.second_bar] : [])];
-  const labelW = item.label ? 110 : 0;
-  const gap = 16;
-  const h = Math.min(66, (r.h - 20 - gap * (bars.length - 1)) / bars.length);
-  const w = Math.min(r.w - 24 - labelW, 760);
+  // A bar grows with its frame (a composed main figure is big), never fatter than a sixth of its length.
+  const w0 = Math.min(r.w - 24 - 110, 800);
+  const h = Math.min(66 + Math.max(0, r.h - 300) * 0.12, w0 * 0.16, (r.h - 20 - 16 * (bars.length - 1)) / bars.length);
+  const gap = Math.max(16, h * 0.3);
+  const labelW = item.label ? Math.max(110, h * 1.3) : 0;
+  const w = Math.min(r.w - 24 - labelW, 800);
   const x = r.x + (r.w - w - labelW) / 2;
   const total = bars.length * h + (bars.length - 1) * gap;
   const y0 = r.y + (r.h - total) / 2;
@@ -84,9 +96,9 @@ export function shapePart(item, g, i) {
 
 export function lineGeom(item, r) {
   const x0 = r.x + 34; const x1 = r.x + r.w - 34;
-  const y = r.y + r.h * 0.64;
+  const y = r.y + Math.min(r.h * 0.64, Math.max(150, r.h * 0.5));
   const X = (v) => x0 + (v - item.from) / (item.to - item.from) * (x1 - x0);
-  return { x0, x1, y, X };
+  return { x0, x1, y, X, lh: Math.max(24, Math.min(32, r.h * 0.07)) };
 }
 
 export function plotGeom(item, r) {
@@ -121,8 +133,9 @@ export function mathGeom(item, r) {
 
 /** The box around an item, or one of its parts: for highlight, underline and point. */
 export function targetBox(item, part, bar, H = BOARD_H) {
-  const r = slotRect(item.slot, H);
+  const r = rectOf(item, H);
   switch (item.cmd) {
+    case 'figure': return figureBox ? figureBox(item, part, bar, H) : { x: r.x, y: r.y, w: r.w, h: r.h, cx: r.x + r.w / 2, cy: r.y + r.h / 2 };
     case 'fraction_bar': {
       const g = barGeom(item, r);
       const b = g[bar === 2 ? 1 : 0] || g[0];

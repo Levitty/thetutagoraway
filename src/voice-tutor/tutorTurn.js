@@ -35,7 +35,7 @@
 // There is one path: authored replies (guards, caps, no key) stream the same way.
 // runTutorTurn() collects the events, for the tests.
 // ============================================================================
-import { validateTurn, MAX_SPOKEN_WORDS, spokenWords } from './commands.js';
+import { validateTurn, MAX_SPOKEN_WORDS, spokenWords, cleanText } from './commands.js';
 import { pickTarget, lessonSkills, allowedMisconceptions } from './fractions.js';
 import { capCheck } from './session.js';
 import { screenChild, checkTurnText, MAX_CHILD_CHARS, ANSWER_REPLY } from './guard.js';
@@ -137,6 +137,12 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   const snapshots = Math.max(0, Math.min(999, Number(body?.snapshots_taken) || 0));
   const inkCellsIn = Array.isArray(body?.ink_cells) ? body.ink_cells.slice(0, 6).map(String) : [];
   const vopts = { board, allowedMis, skills, snapshots, inkCells: inkCellsIn };
+  // What the child did with the figures on the board they could handle (src/draw/observe.js, written by the
+  // page from their taps and drags): only for figures really on the board, plain words only, short. It is the
+  // app's account of the child's play, never instructions.
+  const handled = new Set(board.filter((b) => b && b.cmd === 'figure' && Array.isArray(b.controls) && b.controls.length).map((b) => b.id));
+  const figures = (Array.isArray(body?.figures) ? body.figures : []).filter((f) => f && handled.has(f.id) && typeof f.note === 'string')
+    .slice(0, 3).map((f) => ({ id: f.id, note: cleanText(f.note.slice(0, 800)).text.slice(0, 600) }));
   let picture = null; // { id, reason, attached, note } for the reply and the context
   // The voice: the child's speech since the last turn (seconds the microphone sent, as the page
   // measured them, at most 90), and whether the tutor's words will be spoken. Every reply from
@@ -207,7 +213,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   const context = turnContext({
     ...pick, elapsedMin: Math.max(0, Number(body?.elapsed_s) || 0) / 60, turnIndex, phase: body?.phase || null,
     board, marked, heard: typeof body?.heard === 'string' ? body.heard.slice(0, 400) : null, wantsAnswer: screen.wantsAnswer,
-    bankLines: bankLines(bank), picture,
+    bankLines: bankLines(bank), picture, figures,
   });
   const history = Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === 'string') : [];
   const request = buildRequest({ model: settings.model, effort: settings.effort, lib, history, message, context, names, image });

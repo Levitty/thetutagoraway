@@ -156,6 +156,529 @@ function mathToText(node) {
   }
 }
 
+// src/draw/spec.js
+var WORDS = /^[A-Za-z0-9 .,;:!?'"()\-+=<>/%×÷−_]*$/;
+var Refused = class extends Error {
+};
+var refuse = (msg) => {
+  throw new Refused(msg);
+};
+var roundTo = (v, step2) => Math.round(Math.round(v / step2) * step2 * 1e6) / 1e6;
+var clone = (v) => v === void 0 ? v : JSON.parse(JSON.stringify(v));
+function checkValue(spec, v, name) {
+  if (v === null && spec.nullable) return null;
+  switch (spec.kind) {
+    case "int":
+      if (!Number.isInteger(v)) refuse(`${name}: not a whole number`);
+      if (v < spec.min || v > spec.max) refuse(`${name}: ${v} is outside ${spec.min} to ${spec.max}`);
+      return v;
+    case "num": {
+      if (typeof v !== "number" || !Number.isFinite(v)) refuse(`${name}: not a number`);
+      if (v < spec.min || v > spec.max) refuse(`${name}: ${v} is outside ${spec.min} to ${spec.max}`);
+      return spec.step ? roundTo(v, spec.step) : roundTo(v, 1e-6);
+    }
+    case "enum":
+      if (!spec.values.includes(v)) refuse(`${name}: ${String(v).slice(0, 30)} is not one of ${spec.values.join(", ")}`);
+      return v;
+    case "bool":
+      if (typeof v !== "boolean") refuse(`${name}: not true or false`);
+      return v;
+    case "text": {
+      if (typeof v !== "string") refuse(`${name}: not text`);
+      const t = v.replace(/\s+/g, " ").trim();
+      if (t.length > spec.max) refuse(`${name}: longer than ${spec.max}`);
+      if (!WORDS.test(t)) refuse(`${name}: characters the board cannot write`);
+      return t;
+    }
+    case "list": {
+      if (!Array.isArray(v)) refuse(`${name}: not a list`);
+      if (v.length < (spec.min ?? 0) || v.length > spec.max) refuse(`${name}: ${v.length} items, allowed ${spec.min ?? 0} to ${spec.max}`);
+      return v.map((x, i) => checkValue(spec.of, x, `${name}[${i}]`));
+    }
+    case "obj": {
+      if (!v || typeof v !== "object" || Array.isArray(v)) refuse(`${name}: not a record`);
+      for (const k of Object.keys(v)) if (!spec.fields[k]) refuse(`${name}: unknown field ${k.slice(0, 20)}`);
+      const out = {};
+      for (const [k, f] of Object.entries(spec.fields)) {
+        if (v[k] === void 0 || v[k] === null) {
+          if (f.default === void 0) refuse(`${name}.${k}: missing`);
+          out[k] = clone(f.default);
+        } else out[k] = checkValue(f, v[k], `${name}.${k}`);
+      }
+      return out;
+    }
+    default:
+      refuse(`${name}: unknown kind`);
+  }
+  return v;
+}
+function checkParams(type, raw = {}) {
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) refuse("params: not a record");
+  for (const k of Object.keys(raw)) if (!type.params[k]) refuse(`unknown parameter ${k.slice(0, 30)}`);
+  const out = {};
+  for (const [k, spec] of Object.entries(type.params)) {
+    out[k] = raw[k] === void 0 || raw[k] === null ? clone(spec.default) : checkValue(spec, raw[k], k);
+  }
+  const problem = type.rule ? type.rule(out) : null;
+  if (problem) refuse(problem);
+  return out;
+}
+function checkControls(type, raw, params) {
+  if (raw === void 0 || raw === null) return [];
+  if (!Array.isArray(raw)) refuse("controls: not a list");
+  const out = [];
+  for (const c of raw) {
+    if (!Object.keys(type.controls || {}).includes(c)) refuse(`controls: ${String(c).slice(0, 30)} is not something the child can do with ${type.type}`);
+    const why = type.controls[c].needs?.(params);
+    if (why) refuse(`controls: ${c}: ${why}`);
+    if (!out.includes(c)) out.push(c);
+  }
+  return out;
+}
+function checkGoal(type, raw, params, controls) {
+  if (raw === void 0 || raw === null) return null;
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) refuse("goal: not a record");
+  const g = (type.goals || {})[raw.kind];
+  if (!g) refuse(`goal: ${String(raw.kind).slice(0, 30)} is not a goal of ${type.type}`);
+  const may = [].concat(g.control || []);
+  if (!may.some((c) => controls.includes(c))) refuse(`goal: ${raw.kind} needs the control ${may.join(" or ")}`);
+  const { kind, ...rest } = raw;
+  const clean2 = checkParams({ type: `${type.type} goal`, params: g.params, rule: g.rule ? (x) => g.rule(x, params) : null }, rest);
+  return { kind, ...clean2 };
+}
+var recordOf = (v, name, max = 1500) => {
+  if (v === void 0 || v === null || v === "") return null;
+  if (typeof v === "string") {
+    if (v.length > max) refuse(`${name}: too long`);
+    try {
+      return JSON.parse(v);
+    } catch {
+      refuse(`${name}: not valid JSON`);
+    }
+  }
+  return v;
+};
+
+// src/draw/figures.js
+var fmt = (v) => {
+  const r = Math.round(v * 1e3) / 1e3;
+  return Object.is(r, -0) ? "0" : String(r);
+};
+var gcd = (a, b) => b ? gcd(b, a % b) : Math.abs(a);
+var fracText = (n, d) => d === 1 ? String(n) : `${n}/${d}`;
+var near = (a, b, tol = 1e-6) => Math.abs(a - b) <= tol;
+var modelFields = {
+  parts: { kind: "int", min: 1, max: 12, default: 4 },
+  rows: { kind: "int", min: 1, max: 10, default: 10 },
+  cols: { kind: "int", min: 1, max: 10, default: 10 },
+  shaded: { kind: "int", min: 0, max: 100, default: 0 }
+};
+var modelParts = (shape, m) => shape === "grid" ? m.rows * m.cols : m.parts;
+var modelOf = (p, which) => which === 2 ? p.second : p;
+var shadedTotal = (p, st, which) => which === 2 ? (p.second?.shaded || 0) + st.shade_second.length : p.shaded + st.shade.length;
+var shadeAct = (which) => ({
+  needs: which === 2 ? (p) => p.second ? null : "there is no second model" : null,
+  act(p, st, part) {
+    const m = modelOf(p, which);
+    const n = modelParts(p.shape, m);
+    if (!Number.isInteger(part) || part < 1 || part > n || part <= m.shaded) return null;
+    const key = which === 2 ? "shade_second" : "shade";
+    const on = st[key].includes(part);
+    const list = on ? st[key].filter((x) => x !== part) : [...st[key], part];
+    return { state: { ...st, [key]: list }, text: `${on ? "took the shading off" : "shaded"} part ${part}${p.second ? ` of the ${which === 2 ? "second" : "first"} ${p.shape}` : ""}` };
+  }
+});
+var shadeGoal = (which) => ({
+  control: [which === 2 ? "shade_second" : "shade"],
+  params: { n: { kind: "int", min: 0, max: 100 }, d: { kind: "int", min: 1, max: 100 } },
+  rule: (g) => g.n > g.d ? "goal: more than the whole" : null,
+  met: (p, st, g) => shadedTotal(p, st, which) * g.d === g.n * modelParts(p.shape, modelOf(p, which)),
+  text: (g, p) => `shade ${fracText(g.n, g.d)} of the ${p.second ? which === 2 ? "second " : "first " : ""}${p.shape}`
+});
+var fraction = {
+  type: "fraction",
+  title: "fraction model",
+  params: {
+    shape: { kind: "enum", values: ["bar", "circle", "grid"], default: "bar" },
+    ...modelFields,
+    second: { kind: "obj", nullable: true, default: null, fields: modelFields },
+    label: { kind: "bool", default: true }
+  },
+  rule: (p) => {
+    if (p.shaded > modelParts(p.shape, p)) return "shaded is more than the parts";
+    if (p.second && p.second.shaded > modelParts(p.shape, p.second)) return "second.shaded is more than its parts";
+    return null;
+  },
+  start: () => ({ shade: [], shade_second: [] }),
+  controls: { shade: shadeAct(1), shade_second: shadeAct(2) },
+  goals: {
+    shade: shadeGoal(1),
+    shade_second: shadeGoal(2),
+    match: {
+      control: ["shade", "shade_second"],
+      params: {},
+      rule: (g, p) => p.second ? null : "match needs a second model",
+      met: (p, st) => !!p.second && shadedTotal(p, st, 1) * modelParts(p.shape, p.second) === shadedTotal(p, st, 2) * modelParts(p.shape, p),
+      text: () => "shade the same amount of both"
+    }
+  },
+  parts: (p, bar) => modelParts(p.shape, bar === 2 && p.second ? p.second : p),
+  describe(p, st) {
+    const one = (which) => {
+      const n = shadedTotal(p, st, which);
+      const d = modelParts(p.shape, modelOf(p, which));
+      const g = gcd(n, d);
+      return `${n} of ${d} part${d === 1 ? "" : "s"} shaded (${fracText(n, d)}${n && g > 1 ? ` = ${fracText(n / g, d / g)}` : ""})`;
+    };
+    let s = `${p.shape}: ${one(1)}`;
+    if (p.second) {
+      const cmp = shadedTotal(p, st, 1) * modelParts(p.shape, p.second) - shadedTotal(p, st, 2) * modelParts(p.shape, p);
+      s += `; second ${p.shape}: ${one(2)}; the first is ${cmp === 0 ? "the same amount as" : cmp > 0 ? "more than" : "less than"} the second`;
+    }
+    return s;
+  }
+};
+var NUM = { kind: "num", min: -100, max: 1e3 };
+var lineStep = (p) => (p.to - p.from) / p.divisions;
+var tickValue = (p, k) => roundTo(p.from + k * lineStep(p), 1e-6);
+var onLine = (p, v) => v >= p.from - 1e-9 && v <= p.to + 1e-9;
+var tickOf = (p, v) => Math.round((v - p.from) / lineStep(p));
+var isTick = (p, v) => onLine(p, v) && near(tickValue(p, tickOf(p, v)), v, 1e-6);
+var landing = (p, st) => st.jumps.length ? st.jumps[st.jumps.length - 1].to : p.start ?? (p.jumps.length ? p.jumps[p.jumps.length - 1].to : p.from);
+var numberline = {
+  type: "numberline",
+  title: "number line",
+  params: {
+    from: { ...NUM, default: 0 },
+    to: { ...NUM, default: 1 },
+    divisions: { kind: "int", min: 1, max: 24, default: 4 },
+    label_as: { kind: "enum", values: ["whole", "fraction", "decimal"], default: "fraction" },
+    labels: { kind: "enum", values: ["every", "ends", "wholes"], default: "every" },
+    jumps: { kind: "list", max: 8, default: [], of: { kind: "obj", fields: { from: NUM, to: NUM } } },
+    jump_label: { kind: "bool", default: true },
+    marker: { ...NUM, nullable: true, default: null },
+    start: { ...NUM, nullable: true, default: null }
+  },
+  rule: (p) => {
+    if (p.to <= p.from) return "to must be more than from";
+    if (p.to - p.from > 1e3) return "the line is too long";
+    if (p.label_as === "fraction" && !Number.isInteger(p.divisions / (p.to - p.from))) return "fraction labels need whole numbers of steps in each whole";
+    for (const j of p.jumps) if (!onLine(p, j.from) || !onLine(p, j.to) || near(j.from, j.to)) return "a jump is off the line";
+    if (p.marker != null && !onLine(p, p.marker)) return "the marker is off the line";
+    if (p.start != null && !isTick(p, p.start)) return "start must be on a tick";
+    return null;
+  },
+  start: (p) => ({ marker: p.marker ?? p.from, jumps: [] }),
+  controls: {
+    marker: {
+      drag: true,
+      act(p, st, v) {
+        if (typeof v !== "number" || !Number.isFinite(v)) return null;
+        const x = tickValue(p, Math.max(0, Math.min(p.divisions, tickOf(p, v))));
+        if (near(x, st.marker)) return null;
+        return { state: { ...st, marker: x }, text: `moved the marker to ${numberline.label(p, x)}`, fold: "marker" };
+      }
+    },
+    jump: {
+      act(p, st, v) {
+        if (typeof v !== "number" || !isTick(p, v)) return null;
+        const at = landing(p, st);
+        if (near(v, at)) {
+          if (!st.jumps.length) return null;
+          const last = st.jumps[st.jumps.length - 1];
+          return { state: { ...st, jumps: st.jumps.slice(0, -1) }, text: `took back the jump to ${numberline.label(p, last.to)}` };
+        }
+        if (st.jumps.length >= 12) return null;
+        const to = tickValue(p, tickOf(p, v));
+        return { state: { ...st, jumps: [...st.jumps, { from: at, to }] }, text: `jumped from ${numberline.label(p, at)} to ${numberline.label(p, to)}` };
+      }
+    }
+  },
+  goals: {
+    marker_at: {
+      control: ["marker"],
+      params: { value: NUM },
+      rule: (g, p) => isTick(p, g.value) ? null : "goal: the value is not on a tick",
+      met: (p, st, g) => near(st.marker, g.value, 1e-6),
+      text: (g, p) => `put the marker on ${numberline.label(p, g.value)}`
+    },
+    land_on: {
+      control: ["jump"],
+      params: { value: NUM },
+      rule: (g, p) => isTick(p, g.value) ? null : "goal: the value is not on a tick",
+      met: (p, st, g) => st.jumps.length > 0 && near(landing(p, st), g.value, 1e-6),
+      text: (g, p) => `jump along to land on ${numberline.label(p, g.value)}`
+    }
+  },
+  parts: (p) => p.jumps.length || p.divisions + 1,
+  /** A value as the line labels it: 3/4 (in quarters, never simplified), 0.3, or 7. Wholes as whole numbers. */
+  label(p, v) {
+    if (p.label_as === "fraction") {
+      const d = Math.round(p.divisions / (p.to - p.from));
+      const n = Math.round(v * d);
+      if (near(n / d, v, 1e-6)) return n % d === 0 ? String(n / d) : `${n}/${d}`;
+    }
+    return fmt(v);
+  },
+  describe(p, st) {
+    const s = [`a number line from ${fmt(p.from)} to ${fmt(p.to)} in ${p.divisions} equal steps of ${p.label_as === "fraction" ? fracText(1, Math.round(p.divisions / (p.to - p.from))) : fmt(lineStep(p))}`];
+    if (p.jumps.length) s.push(`your jumps: ${p.jumps.map((j) => `${this.label(p, j.from)} to ${this.label(p, j.to)}`).join(", ")}`);
+    if (st.jumps.length) s.push(`the child's jumps: ${st.jumps.map((j) => `${this.label(p, j.from)} to ${this.label(p, j.to)}`).join(", ")}, landing on ${this.label(p, landing(p, st))}`);
+    if (p.marker != null || st.marker !== p.from) s.push(`the marker is on ${this.label(p, st.marker)}`);
+    return s.join("; ");
+  }
+};
+var PLACE_NAMES = ["ones", "tens", "hundreds", "thousands", "ten thousands", "hundred thousands"];
+var PLACE_ONE = ["one", "ten", "hundred", "thousand", "ten thousand", "hundred thousand"];
+var PLACE_SHORT = ["O", "T", "H", "Th", "TTh", "HTh"];
+var digitsOf = (value, columns) => String(value).padStart(columns, "0").slice(-columns).split("").map(Number);
+var valueOf = (digits) => digits.reduce((v, d) => v * 10 + d, 0);
+var spaced = (v) => String(v).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+var placeName = (columns, col) => PLACE_NAMES[columns - 1 - col];
+var placeValue = {
+  type: "place_value",
+  title: "place value chart",
+  params: {
+    value: { kind: "int", min: 0, max: 999999, default: 0 },
+    columns: { kind: "int", min: 2, max: 6, default: 4 },
+    show: { kind: "enum", values: ["digits", "counters"], default: "digits" }
+  },
+  rule: (p) => String(p.value).length > p.columns ? "the value needs more columns" : null,
+  start: (p) => ({ digits: digitsOf(p.value, p.columns) }),
+  controls: {
+    set: {
+      act(p, st, v) {
+        if (!v || !Number.isInteger(v.col) || v.col < 0 || v.col >= p.columns || v.by !== 1 && v.by !== -1) return null;
+        const d = st.digits[v.col] + v.by;
+        if (d < 0 || d > 9) return null;
+        const digits = st.digits.map((x, i) => i === v.col ? d : x);
+        return { state: { ...st, digits }, text: `made the ${placeName(p.columns, v.col)} ${d}`, fold: `col${v.col}` };
+      }
+    }
+  },
+  goals: {
+    shows: {
+      control: ["set"],
+      params: { value: { kind: "int", min: 0, max: 999999 } },
+      rule: (g, p) => String(g.value).length > p.columns ? "goal: the value needs more columns" : null,
+      met: (p, st, g) => valueOf(st.digits) === g.value,
+      text: (g) => `make ${spaced(g.value)} on the chart`
+    }
+  },
+  parts: (p) => p.columns,
+  describe(p, st, controls = []) {
+    const ds = controls.includes("set") ? st.digits : digitsOf(p.value, p.columns);
+    const v = valueOf(ds);
+    const heads = PLACE_SHORT.slice(0, p.columns).reverse().join(" ");
+    return `a place value chart (${heads}) showing ${spaced(v)} as ${p.show}: ${ds.map((d, i) => `${d} ${d === 1 ? PLACE_ONE[p.columns - 1 - i] : placeName(p.columns, i)}`).join(", ")}`;
+  }
+};
+var angleKind = (d) => d === 0 ? "no turn" : d < 90 ? "acute" : d === 90 ? "right" : d < 180 ? "obtuse" : "straight";
+var SNAP_ALIGN = 3;
+var angle = {
+  type: "angle",
+  title: "angle",
+  params: {
+    degrees: { kind: "int", min: 0, max: 180, default: 60 },
+    base: { kind: "enum", values: ["right", "left"], default: "right" },
+    protractor: { kind: "bool", default: true },
+    protractor_turn: { kind: "int", min: -90, max: 90, default: 0 },
+    arc: { kind: "bool", default: true },
+    show_value: { kind: "bool", default: false }
+  },
+  start: (p) => ({ degrees: p.degrees, turn: p.protractor_turn }),
+  controls: {
+    turn: {
+      drag: true,
+      act(p, st, v) {
+        if (!Number.isFinite(v)) return null;
+        const d = Math.max(0, Math.min(180, Math.round(v)));
+        if (d === st.degrees) return null;
+        return { state: { ...st, degrees: d }, text: `turned the arm to ${d} degrees`, fold: "turn" };
+      }
+    },
+    protractor: {
+      drag: true,
+      needs: (p) => p.protractor ? null : "the protractor is not on the board",
+      act(p, st, v) {
+        if (!Number.isFinite(v)) return null;
+        let t = Math.max(-90, Math.min(90, Math.round(v)));
+        if (Math.abs(t) <= SNAP_ALIGN) t = 0;
+        if (t === st.turn) return null;
+        return { state: { ...st, turn: t }, text: t === 0 ? "lined the protractor up with the fixed arm" : `turned the protractor ${Math.abs(t)} degrees off the fixed arm`, fold: "protractor" };
+      }
+    }
+  },
+  goals: {
+    angle_is: {
+      control: ["turn"],
+      params: { degrees: { kind: "int", min: 0, max: 180 }, tolerance: { kind: "int", min: 0, max: 10, default: 1 } },
+      met: (p, st, g) => Math.abs(st.degrees - g.degrees) <= g.tolerance,
+      text: (g) => `turn the arm to make ${g.degrees} degrees`
+    },
+    kind_is: {
+      control: ["turn"],
+      params: { is: { kind: "enum", values: ["acute", "right", "obtuse", "straight"] } },
+      met: (p, st, g) => angleKind(st.degrees) === g.is,
+      text: (g) => `make ${g.is === "acute" || g.is === "obtuse" ? "an" : "a"} ${g.is} angle`
+    },
+    aligned: {
+      control: ["protractor"],
+      params: {},
+      met: (p, st) => st.turn === 0,
+      text: () => "line the protractor up with the fixed arm"
+    }
+  },
+  parts: () => 2,
+  describe(p, st) {
+    const s = [`an angle of ${st.degrees} degrees (${angleKind(st.degrees)}), the fixed arm pointing ${p.base}`];
+    if (p.protractor) s.push(st.turn === 0 ? "the protractor is on, lined up with the fixed arm" : `the protractor is on, turned ${Math.abs(st.turn)} degrees off the fixed arm`);
+    return s.join("; ");
+  }
+};
+var areaCells = (p) => {
+  const out = [];
+  for (let r = 0; r < p.height; r += 1) {
+    for (let c = 0; c < p.width; c += 1) {
+      if (p.cut && r < p.cut.h && c >= p.width - p.cut.w) continue;
+      out.push({ r, c });
+    }
+  }
+  return out;
+};
+var areaEdges = (p) => {
+  const cells = new Set(areaCells(p).map(({ r, c }) => `${r},${c}`));
+  const inside = (r, c) => cells.has(`${r},${c}`);
+  const out = [];
+  for (let r = 0; r <= p.height; r += 1) {
+    for (let c = 0; c < p.width; c += 1) if (inside(r - 1, c) !== inside(r, c)) out.push({ key: `h${r}.${c}`, x0: c, y0: r, x1: c + 1, y1: r });
+  }
+  for (let c = 0; c <= p.width; c += 1) {
+    for (let r = 0; r < p.height; r += 1) if (inside(r, c - 1) !== inside(r, c)) out.push({ key: `v${r}.${c}`, x0: c, y0: r, x1: c, y1: r + 1 });
+  }
+  return out;
+};
+var unitText = (p, sq) => p.unit === "squares" ? sq ? "squares" : "units" : sq ? `square ${p.unit}` : p.unit;
+var area = {
+  type: "area",
+  title: "shape on squares",
+  params: {
+    width: { kind: "int", min: 1, max: 12, default: 4 },
+    height: { kind: "int", min: 1, max: 10, default: 3 },
+    cut: { kind: "obj", nullable: true, default: null, fields: { w: { kind: "int", min: 1, max: 11, default: 1 }, h: { kind: "int", min: 1, max: 9, default: 1 } } },
+    sides: { kind: "bool", default: false },
+    unit: { kind: "enum", values: ["squares", "cm", "m"], default: "cm" }
+  },
+  rule: (p) => p.cut && (p.cut.w >= p.width || p.cut.h >= p.height) ? "the cut is as big as the shape" : null,
+  start: () => ({ count: [], trace: [] }),
+  controls: {
+    count: {
+      act(p, st, part) {
+        const n = areaCells(p).length;
+        if (!Number.isInteger(part) || part < 1 || part > n) return null;
+        const on = st.count.includes(part);
+        return { state: { ...st, count: on ? st.count.filter((x) => x !== part) : [...st.count, part] }, text: on ? `took back the count on square ${part}` : `counted square ${part} as ${st.count.length + 1}` };
+      }
+    },
+    trace: {
+      act(p, st, key) {
+        if (!areaEdges(p).some((e) => e.key === key)) return null;
+        const on = st.trace.includes(key);
+        return { state: { ...st, trace: on ? st.trace.filter((x) => x !== key) : [...st.trace, key] }, text: on ? "took back one traced edge" : "traced one more edge", fold: "trace" };
+      }
+    }
+  },
+  goals: {
+    count_all: { control: ["count"], params: {}, met: (p, st) => st.count.length === areaCells(p).length, text: () => "count every square" },
+    trace_all: { control: ["trace"], params: {}, met: (p, st) => st.trace.length === areaEdges(p).length, text: () => "trace all the way round" }
+  },
+  parts: (p) => areaCells(p).length,
+  describe(p, st) {
+    const a = areaCells(p).length;
+    const per = areaEdges(p).length;
+    const s = [`${p.cut ? "an L shape" : `a rectangle ${p.width} by ${p.height}`} on squares: area ${a} ${unitText(p, true)}, perimeter ${per} ${unitText(p, false)}`];
+    if (st.count.length) s.push(`the child has counted ${st.count.length} of the ${a} squares`);
+    if (st.trace.length) s.push(`the child has traced ${st.trace.length} of the ${per} edges`);
+    return s.join("; ");
+  }
+};
+var axis = (name) => ({
+  kind: "obj",
+  default: { from: 0, to: 10, step: 1, name: "" },
+  fields: { from: { kind: "int", min: -20, max: 1e3, default: 0 }, to: { kind: "int", min: -20, max: 1e3, default: 10 }, step: { kind: "int", min: 1, max: 100, default: 1 }, name: { kind: "text", max: 16, default: "" } },
+  name
+});
+var steps = (a) => (a.to - a.from) / a.step;
+var onGrid = (p, x, y) => [[p.x, x], [p.y, y]].every(([a, v]) => v >= a.from && v <= a.to && near((v - a.from) / a.step, Math.round((v - a.from) / a.step)));
+var MAX_CHILD_POINTS = 8;
+var graph = {
+  type: "graph",
+  title: "graph",
+  params: {
+    x: axis("x"),
+    y: axis("y"),
+    grid: { kind: "bool", default: true },
+    points: { kind: "list", max: 12, default: [], of: { kind: "obj", fields: { x: { kind: "num", min: -20, max: 1e3 }, y: { kind: "num", min: -20, max: 1e3 }, label: { kind: "text", max: 8, default: "" } } } },
+    connect: { kind: "bool", default: false }
+  },
+  rule: (p) => {
+    for (const a of [p.x, p.y]) {
+      if (a.to <= a.from) return "an axis must go up";
+      if (!Number.isInteger(steps(a)) || steps(a) > 12) return "an axis needs at most 12 whole steps";
+    }
+    for (const q of p.points) if (q.x < p.x.from || q.x > p.x.to || q.y < p.y.from || q.y > p.y.to) return "a point is off the axes";
+    return null;
+  },
+  start: () => ({ points: [] }),
+  controls: {
+    place: {
+      act(p, st, v) {
+        if (!Array.isArray(v) || v.length !== 2 || !onGrid(p, v[0], v[1])) return null;
+        const has = st.points.findIndex(([x, y]) => near(x, v[0]) && near(y, v[1]));
+        if (has >= 0) return { state: { ...st, points: st.points.filter((_, i) => i !== has) }, text: `took away the point (${fmt(v[0])}, ${fmt(v[1])})` };
+        if (st.points.length >= MAX_CHILD_POINTS) return null;
+        return { state: { ...st, points: [...st.points, [v[0], v[1]]] }, text: `put a point at (${fmt(v[0])}, ${fmt(v[1])})` };
+      }
+    }
+  },
+  goals: {
+    point_at: {
+      control: ["place"],
+      params: { x: { kind: "num", min: -20, max: 1e3 }, y: { kind: "num", min: -20, max: 1e3 } },
+      rule: (g, p) => onGrid(p, g.x, g.y) ? null : "goal: the point is not on a grid crossing",
+      met: (p, st, g) => st.points.some(([x, y]) => near(x, g.x) && near(y, g.y)),
+      text: (g) => `put a point at (${fmt(g.x)}, ${fmt(g.y)})`
+    }
+  },
+  parts: (p) => p.points.length,
+  describe(p, st) {
+    const nm = (a, d) => a.name || d;
+    const s = [`a graph: ${nm(p.x, "across")} from ${p.x.from} to ${p.x.to} in steps of ${p.x.step}, ${nm(p.y, "up")} from ${p.y.from} to ${p.y.to} in steps of ${p.y.step}`];
+    if (p.points.length) s.push(`your points: ${p.points.map((q) => `${q.label ? `${q.label} ` : ""}(${fmt(q.x)}, ${fmt(q.y)})`).join(", ")}`);
+    if (st.points.length) s.push(`the child's points: ${st.points.map(([x, y]) => `(${fmt(x)}, ${fmt(y)})`).join(", ")}`);
+    return s.join("; ");
+  }
+};
+var FIGURES = [fraction, numberline, placeValue, angle, area, graph];
+var FIGURE = Object.fromEntries(FIGURES.map((t) => [t.type, t]));
+var FIGURE_TYPES = FIGURES.map((t) => t.type);
+var FIGURE_CONTROLS = [...new Set(FIGURES.flatMap((t) => Object.keys(t.controls)))];
+function validateFigure(raw) {
+  try {
+    if (!raw || typeof raw !== "object") throw new Refused("not a request");
+    const type = FIGURE[raw.type];
+    if (!type) throw new Refused(`unknown figure ${String(raw.type).slice(0, 30)}`);
+    const params = checkParams(type, recordOf(raw.params, "params") ?? {});
+    const controls = checkControls(type, raw.controls, params);
+    const goal = checkGoal(type, recordOf(raw.goal, "goal", 300), params, controls);
+    return { ok: true, figure: { type: type.type, params, controls, goal } };
+  } catch (e) {
+    if (e instanceof Refused) return { ok: false, error: e.message };
+    throw e;
+  }
+}
+var figureParts = (item, bar) => FIGURE[item?.type] ? FIGURE[item.type].parts(item.params, bar) : 0;
+
 // src/voice-tutor/commands.js
 var MAX_STEPS = 12;
 var MAX_BOARD_ITEMS = 30;
@@ -171,7 +694,7 @@ var SHAPE_KINDS = ["circle", "rectangle", "square", "triangle"];
 var SLOTS = ["top", "middle", "bottom", "top_left", "top_right", "middle_left", "middle_right", "bottom_left", "bottom_right"];
 var ROWS = ["top", "middle", "bottom"];
 var cellsOf = (slot) => ROWS.includes(slot) ? [`${slot}_left`, `${slot}_right`] : [slot];
-var DRAWN = ["write_text", "write_math", "fraction_bar", "number_line", "shape", "plot_points"];
+var DRAWN = ["write_text", "write_math", "fraction_bar", "number_line", "shape", "plot_points", "figure"];
 var MARKS = ["highlight", "underline", "point"];
 var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "pause_for_child", "end_session"];
 var TIMED = [...DRAWN, ...MARKS, "erase", "clear"];
@@ -184,6 +707,7 @@ var FIELDS = {
   number_line: ["id", "from", "to", "divisions", "marks", "jumps", "slot"],
   shape: ["id", "kind", "parts", "shaded", "label", "slot", "colour"],
   plot_points: ["id", "x_axis", "y_axis", "points", "connect", "slot"],
+  figure: ["id", "type", "params", "controls", "goal", "slot", "colour"],
   highlight: ["target", "part", "bar", "style"],
   underline: ["target", "range"],
   point: ["target", "part", "bar"],
@@ -203,6 +727,7 @@ var REQUIRED = {
   number_line: ["id", "from", "to", "divisions", "slot"],
   shape: ["id", "kind", "parts", "shaded", "slot"],
   plot_points: ["id", "x_axis", "y_axis", "points", "slot"],
+  figure: ["id", "type", "slot"],
   highlight: ["target"],
   underline: ["target"],
   point: ["target"],
@@ -365,13 +890,13 @@ function checkStep(s, ctx, notes) {
       out.from = s.from;
       out.to = s.to;
       out.divisions = s.divisions;
-      const onLine = (v) => typeof v === "number" && Number.isFinite(v) && v >= s.from && v <= s.to;
+      const onLine2 = (v) => typeof v === "number" && Number.isFinite(v) && v >= s.from && v <= s.to;
       const marks = s.marks ?? [];
       need(Array.isArray(marks) && marks.length <= LIMITS.marks, "number_line: at most 8 marks");
       out.marks = marks.map((m) => {
         need(m && typeof m === "object", "mark: not an object");
         for (const k of Object.keys(m)) need(["value", "label", "style"].includes(k), `mark: extra field ${k.slice(0, 20)}`);
-        need(onLine(m.value), "mark: value off the line");
+        need(onLine2(m.value), "mark: value off the line");
         return { value: m.value, label: m.label == null ? "" : str(m.label, LIMITS.label, "mark label", notes), style: m.style === "arrow" ? "arrow" : m.style == null || m.style === "dot" ? "dot" : bad("mark: style must be dot or arrow") };
       });
       const jumps = s.jumps ?? [];
@@ -379,7 +904,7 @@ function checkStep(s, ctx, notes) {
       out.jumps = jumps.map((j) => {
         need(j && typeof j === "object", "jump: not an object");
         for (const k of Object.keys(j)) need(["from", "to"].includes(k), `jump: extra field ${k.slice(0, 20)}`);
-        need(onLine(j.from) && onLine(j.to) && j.from !== j.to, "jump: off the line");
+        need(onLine2(j.from) && onLine2(j.to) && j.from !== j.to, "jump: off the line");
         return { from: j.from, to: j.to };
       });
       out.slot = optEnum("slot", SLOTS);
@@ -397,14 +922,14 @@ function checkStep(s, ctx, notes) {
       break;
     case "plot_points": {
       out.id = newId();
-      const axis = (a, n) => {
+      const axis2 = (a, n) => {
         need(a && typeof a === "object", `${n}: not an object`);
         for (const k of Object.keys(a)) need(["from", "to", "name"].includes(k), `${n}: extra field ${k.slice(0, 20)}`);
         need(isInt(a.from) && isInt(a.to) && a.from < a.to && a.to - a.from <= LIMITS.axis_steps && Math.abs(a.from) <= 100 && Math.abs(a.to) <= 100, `${n}: at most 20 whole steps`);
         return { from: a.from, to: a.to, name: a.name == null ? "" : str(a.name, LIMITS.axis_name, `${n} name`, notes) };
       };
-      out.x_axis = axis(s.x_axis, "x_axis");
-      out.y_axis = axis(s.y_axis, "y_axis");
+      out.x_axis = axis2(s.x_axis, "x_axis");
+      out.y_axis = axis2(s.y_axis, "y_axis");
       need(Array.isArray(s.points) && s.points.length >= 1 && s.points.length <= LIMITS.points, "plot_points: 1 to 12 points");
       out.points = s.points.map((p) => {
         need(p && typeof p === "object", "point: not an object");
@@ -416,12 +941,21 @@ function checkStep(s, ctx, notes) {
       out.slot = optEnum("slot", SLOTS);
       break;
     }
+    case "figure": {
+      out.id = newId();
+      const r = validateFigure({ type: s.type, params: s.params, controls: s.controls, goal: s.goal });
+      need(r.ok, `figure: ${r.ok ? "" : r.error}`);
+      Object.assign(out, r.figure);
+      out.slot = optEnum("slot", SLOTS);
+      out.colour = optEnum("colour", COLOURS, "blue");
+      break;
+    }
     case "highlight":
     case "point": {
       out.target = target(s.target);
       const item = ctx.items.get(out.target);
       if (s.bar !== void 0 && s.bar !== null) {
-        need(s.bar === 1 || s.bar === 2 && item?.second_bar, `${cmd}: bar must be 1, or 2 on a bar with a second bar`);
+        need(s.bar === 1 || s.bar === 2 && (item?.second_bar || item?.cmd === "figure" && item.params?.second), `${cmd}: bar must be 1, or 2 on a bar with a second bar`);
         out.bar = s.bar;
       }
       if (s.part !== void 0 && s.part !== null) {
@@ -532,6 +1066,7 @@ var partsOf = (item, bar) => {
   if (item.cmd === "shape") return item.parts;
   if (item.cmd === "number_line") return (item.marks || []).length;
   if (item.cmd === "plot_points") return (item.points || []).length;
+  if (item.cmd === "figure") return figureParts(item, bar);
   return 0;
 };
 var resolveSlot = (used, wanted, soft = null) => {
@@ -559,7 +1094,7 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
   const used = new Set(board.flatMap((b) => b.slot ? cellsOf(b.slot) : []));
   const ctx = { ids: new Set(items.keys()), items, allowedMis: allowedMis ? new Set(allowedMis) : null, skills: skills ? new Set(skills) : null, publicAsk, snapshots };
   const soft = new Set((Array.isArray(inkCells) ? inkCells : []).filter((c) => SLOTS.includes(c) && !ROWS.includes(c)));
-  const steps = [];
+  const steps2 = [];
   let closed = false;
   list.forEach((s, index) => {
     const cmd = s && typeof s === "object" ? String(s.cmd ?? "").slice(0, 30) : null;
@@ -594,18 +1129,18 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
         used.clear();
         ctx.ids.clear();
       }
-      if (out.cmd === "ask" && steps.some((x) => x.cmd === "ask")) bad("one question a turn");
+      if (out.cmd === "ask" && steps2.some((x) => x.cmd === "ask")) bad("one question a turn");
       if (out.cmd === "pause_for_child" || out.cmd === "end_session") closed = true;
-      steps.push(out);
+      steps2.push(out);
     } catch (e) {
       if (!(e instanceof Bad)) throw e;
       dropped.push({ index, cmd, reason: e.message });
     }
   });
-  return { steps, dropped, notes };
+  return { steps: steps2, dropped, notes };
 }
 var MAX_SPOKEN_WORDS = 60;
-var spokenWords = (steps) => steps.filter((s) => s.cmd === "say").reduce((n, s) => n + s.text.split(/\s+/).filter(Boolean).length, 0);
+var spokenWords = (steps2) => steps2.filter((s) => s.cmd === "say").reduce((n, s) => n + s.text.split(/\s+/).filter(Boolean).length, 0);
 var S = (props, required) => ({ type: "object", properties: props, required, additionalProperties: false });
 var T = { type: "string" };
 var I = { type: "integer" };
@@ -624,6 +1159,8 @@ var STEP_SCHEMAS = [
   C("number_line", { id: T, from: I, to: I, divisions: I, marks: { type: "array", items: S({ value: N, label: T, style: E(["dot", "arrow"]) }, ["value"]) }, jumps: { type: "array", items: S({ from: N, to: N }, ["from", "to"]) }, slot: E(SLOTS), ...drawn }, ["id", "from", "to", "divisions", "slot"]),
   C("shape", { id: T, kind: E(SHAPE_KINDS), parts: I, shaded: shadedSchema, label: B, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ["id", "kind", "parts", "shaded", "slot"]),
   C("plot_points", { id: T, x_axis: S({ from: I, to: I, name: T }, ["from", "to"]), y_axis: S({ from: I, to: I, name: T }, ["from", "to"]), points: { type: "array", items: S({ x: N, y: N, label: T }, ["x", "y"]) }, connect: B, slot: E(SLOTS), ...drawn }, ["id", "x_axis", "y_axis", "points", "slot"]),
+  // params and goal are JSON text (each figure type has its own settings; validateTurn checks them against figures.js).
+  C("figure", { id: T, type: E(FIGURE_TYPES), params: T, controls: { type: "array", items: E(FIGURE_CONTROLS) }, goal: T, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ["id", "type", "params", "slot"]),
   C("highlight", { target: T, part: I, bar: I, style: E(HIGHLIGHT_STYLES), ...timing }, ["target"]),
   C("underline", { target: T, range: { type: "array", items: I }, ...timing }, ["target"]),
   C("point", { target: T, part: I, bar: I, ...timing }, ["target"]),
@@ -4906,7 +5443,7 @@ function screenChild(raw) {
   if (INJECTION.test(t)) return { ok: false, kind: "rules", reply: RULES_REPLY, wantsAnswer };
   return { ok: true, kind: null, reply: "", wantsAnswer };
 }
-var visibleText = (steps) => steps.flatMap((s, i) => {
+var visibleText = (steps2) => steps2.flatMap((s, i) => {
   if (s.cmd === "say" || s.cmd === "write_text") return [{ i, cmd: s.cmd, text: s.text }];
   if (s.cmd === "write_math") {
     const p = parseMath(s.expr);
@@ -4915,11 +5452,11 @@ var visibleText = (steps) => steps.flatMap((s, i) => {
   if (s.cmd === "ask") return [{ i, cmd: s.cmd, text: s.prompt }];
   return [];
 });
-function checkTurnText(steps, hidden = []) {
+function checkTurnText(steps2, hidden = []) {
   const reasons = [];
   for (const h of hidden) {
     if (!h || h.answer == null || String(h.answer).trim() === "") continue;
-    for (const v of visibleText(steps)) {
+    for (const v of visibleText(steps2)) {
       const why = leaksAnswer({ answer: String(h.answer), accepts: h.accepts || [], question: h.question || "", reply: v.text });
       if (why) reasons.push(`step ${v.i} (${v.cmd}) ${why}`);
     }
@@ -5037,13 +5574,30 @@ THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app d
 - Drawing steps take "on": a word or two copied exactly from the say before them. The stroke starts as that word is spoken. delay_ms (-300 to 1500) shifts it. No "on" means: after that sentence ends.
 - The board draws like a teacher, stroke by stroke: a shaded bar or shape takes about 4 to 8 seconds, a line of maths 1 to 3, a mark under a second. A drawing is hurried to finish before the next drawing step's word, so give each drawing its own sentence or two: anchor the next drawing or mark in a later sentence, never a word or two later.
 - pace "slow" on a drawing step draws it about 1.6 times slower. Use it for the key idea of the lesson (the cut that makes the equal parts, the step that changes the fraction), once or twice a lesson, and give it a long sentence.
-- write_text (60 chars), write_math (80 chars of: digits, ?, + - \xD7 \xF7 = < >, brackets, ^, frac(a,b), mixed(w,a,b); never LaTeX), fraction_bar (parts 1 to 12, shaded: a count or a list of part numbers; second_bar to compare), number_line (whole numbers 0 to 12, divisions per whole, marks, jumps), shape (circle, rectangle, square, triangle; 2 to 12 equal parts), plot_points (not needed for fractions).
+- write_text (60 chars), write_math (80 chars of: digits, ?, + - \xD7 \xF7 = < >, brackets, ^, frac(a,b), mixed(w,a,b); never LaTeX), fraction_bar (parts 1 to 12, shaded: a count or a list of part numbers; second_bar to compare), number_line (whole numbers 0 to 12, divisions per whole, marks, jumps), shape (circle, rectangle, square, triangle; 2 to 12 equal parts), plot_points (not needed for fractions), figure (below).
 - Slots: ${SLOTS.join(", ")}. top, middle and bottom are full width; the others are half. Colours: ${COLOURS.join(", ")}.
 - One colour per scene (a scene is your drawing between two clears): ink, plus one colour. The first colour you use in a scene is its colour, and the board draws every other colour in that scene, and every mark, in it. So pick one and keep to it; to count shaded parts with rings, shade them in ink so the rings stand out.
 - highlight (circle, box or glow, optionally one part), underline (text or maths), point (the teacher's finger; optionally one part) need an id already on the board. erase removes items; clear wipes your ink (never the child's). The board holds 30 items at most; clear between ideas.
 - ask: one question a turn. Give expected (the right answer) and, for your own questions, the wrong answers you expect with their misconception codes, or set bank to a probe bank id and the app uses that question's answers. The child never sees expected.
 - pause_for_child ends every turn (expect typed while there is no voice; max_wait_s 5 to 60), except the last, which ends with end_session.
 - Phases: ${PHASES.join(", ")}.
+
+FIGURES (figure): Grade 5 maths figures the board draws stroke by stroke and the child can handle. Fill in type, params (JSON text with that type's settings; anything left out takes its default), controls (what the child may do; leave it out for a figure that is only shown) and goal (JSON text; the app marks it, never you). A figure takes about 5 to 12 seconds to draw: give it two sentences.
+- Composition: the board lays out the slots you use. Put the main figure in middle and the writing about it in top or bottom: the figure is drawn big and centred with its words round it. A half slot with nothing beside it takes the whole row.
+- fraction: shape bar|circle|grid; parts 1 to 12 (a grid has rows and cols up to 10 and its parts are its squares); shaded (a count, from the first part); second {parts or rows and cols, shaded}, a second model to compare or to show an equivalent fraction; label. Controls: shade, shade_second (the child taps parts to shade them). Goals: {"kind":"shade","n":3,"d":4}, {"kind":"shade_second","n":2,"d":6}, {"kind":"match"} (the same amount of both).
+- numberline: from, to, divisions (equal steps, 1 to 24), label_as whole|fraction|decimal, labels every|ends|wholes, jumps [{"from":0,"to":0.25}], jump_label, marker, start. Controls: marker (the child drags it), jump (the child taps ticks to jump along from start). Goals: {"kind":"marker_at","value":0.7}, {"kind":"land_on","value":1}.
+- place_value: value 0 to 999999, columns 2 to 6 (ones up to hundred thousands), show digits|counters. Control: set (the child builds a number with + and - under each column; the chart starts at value, usually 0). Goal: {"kind":"shows","value":40512}.
+- angle: degrees 0 to 180, base right|left (where the fixed arm points), protractor, protractor_turn (-90 to 90: laid on crooked), arc, show_value. Controls: turn (the child turns the arm), protractor (the child turns the protractor to line it up). Goals: {"kind":"angle_is","degrees":120,"tolerance":1}, {"kind":"kind_is","is":"obtuse"}, {"kind":"aligned"}.
+- area: width 1 to 12 and height 1 to 10 squares, cut {"w":2,"h":1} off the top right (an L shape), sides (writes the side lengths), unit squares|cm|m. Controls: count (the child taps each square to count it), trace (the child taps the edges to go round). Goals: {"kind":"count_all"}, {"kind":"trace_all"}.
+- graph: x and y {"from":0,"to":10,"step":1,"name":"days"} (at most 12 steps each), grid, points [{"x":2,"y":3,"label":"A"}], connect. Control: place (the child taps grid crossings to put points). Goal: {"kind":"point_at","x":3,"y":5}.
+TEACHING WITH FIGURES:
+- Give the child a control when handling it is the learning: shading to find the same amount, putting a fraction or a decimal on the line, building a number, turning the arm to make an angle, counting squares. One control, one sentence saying what to do, then pause_for_child. Never do the handling for them.
+- Next turn the context says what the child did and whether the goal is met. Say what they did first, in words ("You shaded two of the sixths"). If it is not met, ask about what they did; do not fix it for them.
+- Predict first: before you jump or turn, ask where they think it will land, then draw it next turn.
+- Count with the child here too: highlight with part counts a fraction's parts, a number line's jumps (its ticks when it has none), a chart's columns from the left, an area's squares, a graph's points.
+- A protractor is read from the zero on the fixed arm: with base left, that is the outer scale. Reading the other scale is a common mistake to diagnose.
+- Never show a figure's answer before the child has given it: no label, shading, marker or jump on the answer.
+Example: {"cmd":"figure","id":"f1","type":"fraction","params":"{\\"parts\\":3,\\"shaded\\":1,\\"second\\":{\\"parts\\":6,\\"shaded\\":0}}","controls":["shade_second"],"goal":"{\\"kind\\":\\"match\\"}","slot":"middle","colour":"orange","on":"sixths"}
 
 TEACHING MOVES AT THE BOARD:
 - Count with the child. To count parts, count only the first ones aloud, one highlight per part, each "on" the number word you say ("One." "Two."). Then ask the child to carry on and say how many, and pause_for_child. Never say or show the total before the child has had a go.
@@ -5064,17 +5618,18 @@ Example of a teaching turn (shape only): the bar is drawn slowly with its own se
 GRADE 5 FRACTIONS: the skills, what each builds on, and the misconceptions you may name (use the full code):
 ${mapText(lib)}`;
 var pct = (x) => x == null ? "no attempts" : `${Math.round(x * 100)}% right`;
-function turnContext({ target, prerequisite, profile = [], reason = "", elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines: bankLines2 = [], capNote = null, picture = null }) {
+function turnContext({ target, prerequisite, profile = [], reason = "", elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines: bankLines2 = [], capNote = null, picture = null, figures = [] }) {
   const lines = [
     `Turn ${turnIndex + 1}. Time used: ${Math.round(elapsedMin)} of about 20 minutes. Part of the lesson so far: ${phase || "not started"}.`,
     `Target skill: ${target} (${skillName(target)}), ${reason}.`,
     `Weakest prerequisite: ${prerequisite ? `${prerequisite} (${skillName(prerequisite)})` : "none"}.`,
     `What HOREB knows (practice so far): ${profile.map((p) => `${shortName(p.skill)} ${p.held ? "held" : "not held"} (${pct(p.accuracy)}, ${p.attempts} tries)`).join("; ")}.`,
-    `Board now: ${board.length ? board.map((b) => `${b.id} ${b.cmd} at ${b.slot}${b.parts ? `, ${b.parts} parts` : ""}`).join("; ") : "empty"}.`
+    `Board now: ${board.length ? board.map((b) => `${b.id} ${b.cmd === "figure" ? `figure ${b.type}` : b.cmd} at ${b.slot}${b.parts ? `, ${b.parts} parts` : ""}${b.cmd === "figure" && b.controls?.length ? ` (the child may: ${b.controls.join(", ")})` : ""}`).join("; ") : "empty"}.`
   ];
   if (marked) {
     lines.push(marked.correct ? `The child answered your question ${marked.ask} with "${marked.answer}": right.` : `The child answered your question ${marked.ask} with "${marked.answer}": not right.${marked.misconception ? ` The library reads this answer as ${marked.misconception}.` : " No misconception in the library matches this answer."} Diagnose before you teach.`);
   }
+  for (const f of figures) lines.push(`What the child did with ${f.id}: ${f.note}`);
   if (picture?.attached) lines.push(`A picture of the board is attached (id ${picture.id}), taken because ${picture.reason === "check" ? 'the child pressed "Check my work"' : "the child stopped writing for a few seconds"}. Read only the teal ink.`);
   else if (picture?.note) lines.push(picture.note);
   if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Do not repeat everything; answer them.`);
@@ -8683,15 +9238,15 @@ var FAMILIES3 = [
     draw: () => {
       const L2 = Array.from({ length: 3 }, () => randInt(12, 48) * 10 + randInt(1, 9)).filter((x) => x % 100 !== 0);
       if (L2.length < 3 || !uniq(...L2)) return null;
-      const fmt = [0, 1, 1].sort(() => Math.random() - 0.5);
-      return { L: L2, fmt, k: randInt(0, 2) };
+      const fmt2 = [0, 1, 1].sort(() => Math.random() - 0.5);
+      return { L: L2, fmt: fmt2, k: randInt(0, 2) };
     },
-    make: ({ L: L2, fmt, k }) => {
+    make: ({ L: L2, fmt: fmt2, k }) => {
       const txt = (x, f) => f ? `${Math.floor(x / 100)} m ${x % 100} cm` : `${x} cm`, best = L2.indexOf(Math.max(...L2));
       const opts2 = L2.map((x, i) => ({ text: `Piece ${"ABC"[i]}`, right: i === best, why: i === best ? void 0 : `Piece ${"ABC"[i]} is ${x} cm. Change every length to centimetres, then compare.` }));
       return {
         question: "The table shows the lengths of three pieces of cloth. Which piece is the longest?",
-        model: { type: "table", data: { head: ["Piece", "Length"], rows: L2.map((x, i) => ({ label: `Piece ${"ABC"[i]}`, value: txt(x, fmt[i]) })) } },
+        model: { type: "table", data: { head: ["Piece", "Length"], rows: L2.map((x, i) => ({ label: `Piece ${"ABC"[i]}`, value: txt(x, fmt2[i]) })) } },
         options: rot(opts2, k),
         hints: ["Lengths in different units cannot be compared yet.", "1 m = 100 cm. Change the metres to centimetres."],
         steps: L2.map((x, i) => `Piece ${"ABC"[i]} is ${x} cm.`).concat([`The longest is Piece ${"ABC"[best]}.`])
@@ -10686,8 +11241,8 @@ var shuffle2 = (a) => {
   return b;
 };
 var distinct3 = (...v) => new Set(v).size === v.length;
-var gcd = (a, b) => b ? gcd(b, a % b) : a;
-var lcm = (a, b) => a / gcd(a, b) * b;
+var gcd2 = (a, b) => b ? gcd2(b, a % b) : a;
+var lcm = (a, b) => a / gcd2(a, b) * b;
 var rnd2 = (n, to) => Math.round(n / to) * to;
 var fl2 = (n, to) => Math.floor(n / to) * to;
 var tbl = (head, rows) => ({ type: "table", data: { head, rows: rows.map((cells) => ({ cells })) } });
@@ -11125,12 +11680,12 @@ var FAMILIES5 = [
       const rank = [...d].sort((x, y) => x - y);
       const k = randInt(0, 2);
       const asked = ["nearest", "furthest", "middle one"][k];
-      const mid = rank[1], far = rank[2], near3 = rank[0];
-      const ans = [near3, far, mid][k], idx = d.indexOf(ans);
+      const mid = rank[1], far = rank[2], near4 = rank[0];
+      const ans = [near4, far, mid][k], idx = d.indexOf(ans);
       return {
         question: `The distances in metres from a school to three markets are: ${towns[0]} ${commas(d[0])}, ${towns[1]} ${commas(d[1])} and ${towns[2]} ${commas(d[2])}. Put them in order from smallest to largest. Which market is the ${asked}? Give the number of metres.`,
         answer: ans,
-        wrong: [...[near3, far, mid].filter((v) => v !== ans).map((v) => [v, "That is another distance in the list. Put all three in order from smallest to largest, then pick the one asked.", "M_ORDER_DIRECTION_CONFUSED"]), [d.reduce((a, b) => a + b, 0), "Adding is not needed. Put the distances in order.", "M_ORDER_DIRECTION_CONFUSED"], [d.slice().sort((x, y) => x % 10 - y % 10)[0], "You compared the ones digits. Compare from the left, starting with the biggest place.", "M_ORDER_LAST_DIGIT"]],
+        wrong: [...[near4, far, mid].filter((v) => v !== ans).map((v) => [v, "That is another distance in the list. Put all three in order from smallest to largest, then pick the one asked.", "M_ORDER_DIRECTION_CONFUSED"]), [d.reduce((a, b) => a + b, 0), "Adding is not needed. Put the distances in order.", "M_ORDER_DIRECTION_CONFUSED"], [d.slice().sort((x, y) => x % 10 - y % 10)[0], "You compared the ones digits. Compare from the left, starting with the biggest place.", "M_ORDER_LAST_DIGIT"]],
         hints: ["Write the three distances in a list and order them.", "Smallest to largest: the first is the nearest, the last is the furthest."],
         steps: [`In order: ${rank.map(commas).join(", ")}.`, `The ${asked} is ${commas(ans)} metres.`],
         chk: (x) => rank.includes(x)
@@ -11527,7 +12082,7 @@ var FAMILIES5 = [
     rung: 1,
     gen: () => {
       const [a, b] = pick([[12, 18], [24, 36], [8, 12], [20, 30], [16, 24], [30, 45], [18, 27], [28, 42], [36, 48], [40, 60]]);
-      const g = gcd(a, b), l = lcm(a, b), small = Math.min(a, b), p = person();
+      const g = gcd2(a, b), l = lcm(a, b), small = Math.min(a, b), p = person();
       const first = [...Array(small)].map((_, i) => i + 1).filter((i) => a % i === 0 && b % i === 0)[1] || 1;
       return {
         question: `${p.name} lists the factors of ${a} and of ${b}, then picks the biggest number that appears in both lists. Which number does ${p.she} pick?`,
@@ -11535,7 +12090,7 @@ var FAMILIES5 = [
         wrong: [[l, "That is the LCM or a multiple. The HCF divides both numbers, so it cannot be bigger than the smaller one.", "M_HCF_GIVES_LCM_OR_PRODUCT"], [a * b, "That is the product. The HCF is a factor of both numbers, not bigger than either.", "M_HCF_GIVES_LCM_OR_PRODUCT"], [first, "That is a common factor but not the highest. List all the common factors and pick the greatest.", "M_HCF_ANY_COMMON"], [small === g ? 1 : small, `Does ${small} divide the other number exactly? Test before you decide.`, "M_HCF_SMALLER_NUMBER"]],
         hints: ["List the factors of each number.", "Pick the greatest factor that is on both lists."],
         steps: [`Common factors of ${a} and ${b} include ${g}.`, `The greatest is ${g}.`],
-        chk: (x) => a % x === 0 && b % x === 0 && gcd(a / x, b / x) === 1
+        chk: (x) => a % x === 0 && b % x === 0 && gcd2(a / x, b / x) === 1
       };
     }
   }),
@@ -11545,7 +12100,7 @@ var FAMILIES5 = [
     form: "why",
     rung: 2,
     gen: () => {
-      const [a, b] = pick([[12, 18], [24, 36], [20, 30], [16, 24], [30, 45], [28, 42]]), g = gcd(a, b), p = person();
+      const [a, b] = pick([[12, 18], [24, 36], [20, 30], [16, 24], [30, 45], [28, 42]]), g = gcd2(a, b), p = person();
       const claimed = pick([g, 2, Math.min(a, b), lcm(a, b)]);
       const ok = claimed === g;
       const options = mc(ok ? "True: it divides both and no bigger number does" : "False", [[ok ? "False: it is too small" : "True: it divides both", ok ? "Check whether a bigger number also divides both." : "Check: is it the highest common factor, or just a common factor or a multiple?", ok ? "M_HCF_ANY_COMMON" : claimed === lcm(a, b) ? "M_HCF_GIVES_LCM_OR_PRODUCT" : claimed === Math.min(a, b) ? "M_HCF_SMALLER_NUMBER" : "M_HCF_ANY_COMMON"]]);
@@ -11564,7 +12119,7 @@ var FAMILIES5 = [
     form: "steps",
     rung: 3,
     gen: () => {
-      const [a, b, c] = pick([[12, 18, 30], [24, 36, 60], [16, 24, 40], [20, 30, 50], [18, 27, 45], [14, 21, 35]]), g = gcd(gcd(a, b), c), g2 = gcd(a, b), p = person();
+      const [a, b, c] = pick([[12, 18, 30], [24, 36, 60], [16, 24, 40], [20, 30, 50], [18, 27, 45], [14, 21, 35]]), g = gcd2(gcd2(a, b), c), g2 = gcd2(a, b), p = person();
       return {
         question: `${p.name} finds the HCF of ${a}, ${b} and ${c} in two steps.`,
         parts: [
@@ -11583,14 +12138,14 @@ var FAMILIES5 = [
     form: "word",
     rung: 1,
     gen: () => {
-      const [a, b] = pick([[24, 36], [18, 30], [12, 20], [30, 45], [16, 40], [20, 50]]), g = gcd(a, b), p = person();
+      const [a, b] = pick([[24, 36], [18, 30], [12, 20], [30, 45], [16, 40], [20, 50]]), g = gcd2(a, b), p = person();
       return {
         question: `${p.name}, a tailor in Kisumu, has two ribbons, ${a} m and ${b} m long. ${p.She} cuts both ribbons into equal pieces, so a piece length is a common factor of ${a} and ${b}, as long as possible, with nothing left. How long is each piece, in metres?`,
         answer: g,
         wrong: [[lcm(a, b), `A piece cannot be longer than the ribbon. A ${lcm(a, b)} m piece cannot come from a ${a} m ribbon.`, "M_HCFPROB_USES_LCM"], [a / g + b / g, "That is the number of pieces. The question asks how long each piece is.", "M_HCFPROB_WRONG_QUANTITY"], [Math.min(a, b), "Does the shorter ribbon length go into the longer exactly?", "M_HCFPROB_USES_LCM"], [2, "That is a possible length, but not the longest.", "M_HCFPROB_WRONG_QUANTITY"]],
         hints: ["A piece must go into both lengths exactly.", "It should be as long as possible: use the HCF."],
         steps: [`The longest equal piece is the HCF of ${a} and ${b}.`, `HCF = ${g} m.`],
-        chk: (x) => a % x === 0 && b % x === 0 && gcd(a / x, b / x) === 1
+        chk: (x) => a % x === 0 && b % x === 0 && gcd2(a / x, b / x) === 1
       };
     }
   }),
@@ -11600,7 +12155,7 @@ var FAMILIES5 = [
     form: "steps",
     rung: 2,
     gen: () => {
-      const [a, b] = pick([[24, 36], [18, 27], [30, 45], [20, 30], [16, 24], [28, 42]]), g = gcd(a, b), p = person();
+      const [a, b] = pick([[24, 36], [18, 27], [30, 45], [20, 30], [16, 24], [28, 42]]), g = gcd2(a, b), p = person();
       return {
         question: `${p.name} packs ${a} mangoes and ${b} oranges into identical gift bags. Every bag has the same number of mangoes and of oranges, none are left over, and the number of bags is a common factor of ${a} and ${b}. ${p.She} wants as many bags as possible.`,
         parts: [
@@ -11618,7 +12173,7 @@ var FAMILIES5 = [
     form: "why",
     rung: 3,
     gen: () => {
-      const [a, b] = pick([[12, 18], [24, 30], [20, 28], [16, 36]]), g = gcd(a, b), l = lcm(a, b), p = person(), cut = Math.random() < 0.5;
+      const [a, b] = pick([[12, 18], [24, 30], [20, 28], [16, 36]]), g = gcd2(a, b), l = lcm(a, b), p = person(), cut = Math.random() < 0.5;
       const q = cut ? `${p.name} packs ${a} kg of rice and ${b} kg of beans into the largest identical sacks, with nothing left over. Which should ${p.she} find, the HCF or the LCM, and what is the sack size?` : `Two bells ring every ${a} and ${b} minutes. When will they ring together again? Which should be found?`;
       const right = cut ? `The HCF: each sack is ${g} kg` : `The LCM: ${l} minutes later`;
       const options = mc(right, [[cut ? `The LCM: each sack is ${l} kg` : `The HCF: ${g} minutes later`, cut ? "A sack cannot hold more than all the rice. The largest equal sack is the HCF." : "A time when both ring again is a multiple of both intervals, so it is the LCM.", cut ? "M_HCFPROB_USES_LCM" : "M_LCMPROB_USES_HCF"], [cut ? `The HCF: there are ${a / g + b / g} sacks` : `The LCM: ${a + b} minutes later`, cut ? "That is how many sacks there are, not the size of each one." : "Adding the two intervals does not give the next meeting time. Find the LCM.", cut ? "M_HCFPROB_WRONG_QUANTITY" : "M_LCMPROB_ADDS_INTERVALS"]]);
@@ -11693,14 +12248,14 @@ var FAMILIES5 = [
     form: "word",
     rung: 1,
     gen: () => {
-      const [a, b] = pick([[4, 6], [6, 8], [3, 5], [4, 10], [6, 9], [8, 12], [5, 6], [9, 12], [10, 15], [12, 18]]), l = lcm(a, b), g = gcd(a, b), p = person();
+      const [a, b] = pick([[4, 6], [6, 8], [3, 5], [4, 10], [6, 9], [8, 12], [5, 6], [9, 12], [10, 15], [12, 18]]), l = lcm(a, b), g = gcd2(a, b), p = person();
       return {
         question: `${p.name} writes the multiples of ${a} in one row and of ${b} in another, then circles the first number found in both rows. Which number is circled?`,
         answer: l,
         wrong: [[a * b, `That is the product. A smaller number may be a multiple of both. Check the multiples of ${Math.max(a, b)}.`, "M_LCM_ALWAYS_PRODUCT"], [g, "That is the HCF. The LCM must be at least as big as the larger number.", "M_LCM_GIVES_HCF"], [Math.min(a, b), `The LCM is a multiple of both numbers. Is ${Math.min(a, b)} a multiple of ${Math.max(a, b)}?`, "M_LCM_SMALLER_NUMBER"], [l * 2, "There is a smaller number that is a multiple of both.", "M_LCM_ALWAYS_PRODUCT"]],
         hints: [`List the multiples of ${Math.max(a, b)}.`, `Find the first one that ${Math.min(a, b)} divides exactly.`],
         steps: [`Multiples of ${Math.max(a, b)}: ${[1, 2, 3, 4, 5, 6].map((i) => Math.max(a, b) * i).join(", ")}.`, `The first that ${Math.min(a, b)} divides is ${l}.`],
-        chk: (x) => x % a === 0 && x % b === 0 && gcd(x / a, x / b) === 1
+        chk: (x) => x % a === 0 && x % b === 0 && gcd2(x / a, x / b) === 1
       };
     },
     allowNegative: false
@@ -11712,9 +12267,9 @@ var FAMILIES5 = [
     rung: 2,
     gen: () => {
       const [a, b] = pick([[3, 9], [4, 6], [6, 8], [4, 12], [5, 10], [6, 9]]), l = lcm(a, b), p = person();
-      const claimed = pick([l, a * b, Math.min(a, b), gcd(a, b)]);
+      const claimed = pick([l, a * b, Math.min(a, b), gcd2(a, b)]);
       const ok = claimed === l;
-      const codeMap = claimed === a * b ? "M_LCM_ALWAYS_PRODUCT" : claimed === gcd(a, b) ? "M_LCM_GIVES_HCF" : "M_LCM_SMALLER_NUMBER";
+      const codeMap = claimed === a * b ? "M_LCM_ALWAYS_PRODUCT" : claimed === gcd2(a, b) ? "M_LCM_GIVES_HCF" : "M_LCM_SMALLER_NUMBER";
       const options = mc(ok ? "True: it is the smallest number both divide into" : "False", [[ok ? "False: the LCM is the product" : "True", ok ? "The LCM is not always the product. Check for a smaller common multiple." : "Check: is it a multiple of both numbers, and is it the smallest such number?", ok ? "M_LCM_ALWAYS_PRODUCT" : codeMap]]);
       return {
         question: `${p.name} claims that ${claimed} is the smallest number both ${a} and ${b} go into evenly. Is the claim true or false? Give a reason.`,
@@ -11735,7 +12290,7 @@ var FAMILIES5 = [
       return {
         question: `${p.name} looks for the least common multiple of ${a}, ${b} and ${c}, working in two steps.`,
         parts: [
-          { prompt: `What is the LCM of ${a} and ${b}?`, answer: l2, hint: "List multiples of the larger number.", wrong: [[a * b, "A smaller number may be a multiple of both.", "M_LCM_ALWAYS_PRODUCT"], [gcd(a, b), "The LCM is at least as big as the larger number.", "M_LCM_GIVES_HCF"], [Math.min(a, b), "That is not a multiple of the larger number.", "M_LCM_SMALLER_NUMBER"]].filter((x) => x[0] !== l2) },
+          { prompt: `What is the LCM of ${a} and ${b}?`, answer: l2, hint: "List multiples of the larger number.", wrong: [[a * b, "A smaller number may be a multiple of both.", "M_LCM_ALWAYS_PRODUCT"], [gcd2(a, b), "The LCM is at least as big as the larger number.", "M_LCM_GIVES_HCF"], [Math.min(a, b), "That is not a multiple of the larger number.", "M_LCM_SMALLER_NUMBER"]].filter((x) => x[0] !== l2) },
           { prompt: `What is the LCM of ${a}, ${b} and ${c} together?`, answer: l, hint: `It must be a multiple of ${c} as well as of the first answer.`, wrong: [[a * b * c, "Multiplying all three makes a common multiple, but not the least.", "M_LCM_ALWAYS_PRODUCT"], [l2, `Is ${l2} a multiple of ${c}?`, "M_LCM_SMALLER_NUMBER"], [Math.max(a, b, c), "Is the biggest number a multiple of all three?", "M_LCM_SMALLER_NUMBER"]].filter((x) => x[0] !== l) }
         ],
         steps: [`LCM of ${a} and ${b} is ${l2}.`, `Next multiples of ${l2} until ${c} divides: ${l}.`],
@@ -11754,10 +12309,10 @@ var FAMILIES5 = [
       return {
         question: `Two lamps on a tower flash, one every ${a} seconds and the other every ${b} seconds. They flash together now. After how many seconds will they flash together again, a common multiple of ${a} and ${b}?`,
         answer: l,
-        wrong: [[gcd(a, b), "That is the HCF. They leave together at a time that is a multiple of both intervals.", "M_LCMPROB_USES_HCF"], [a + b, `Adding the intervals does not work: does the first leave again after ${a + b} minutes?`, "M_LCMPROB_ADDS_INTERVALS"], [a * b, "That is a time they leave together, but there is an earlier one.", "M_LCMPROB_ADDS_INTERVALS"], [l * 2, "That is later than the first time.", "M_LCMPROB_ADDS_INTERVALS"]],
+        wrong: [[gcd2(a, b), "That is the HCF. They leave together at a time that is a multiple of both intervals.", "M_LCMPROB_USES_HCF"], [a + b, `Adding the intervals does not work: does the first leave again after ${a + b} minutes?`, "M_LCMPROB_ADDS_INTERVALS"], [a * b, "That is a time they leave together, but there is an earlier one.", "M_LCMPROB_ADDS_INTERVALS"], [l * 2, "That is later than the first time.", "M_LCMPROB_ADDS_INTERVALS"]],
         hints: ["List the leaving times of each matatu in minutes after 8:00.", "Find the first time that is in both lists."],
         steps: [`First matatu: ${[1, 2, 3, 4, 5].map((i) => a * i).join(", ")}.`, `Second matatu: ${[1, 2, 3, 4, 5].map((i) => b * i).join(", ")}. First match: ${l} minutes.`],
-        chk: (x) => x % a === 0 && x % b === 0 && gcd(x / a, x / b) === 1
+        chk: (x) => x % a === 0 && x % b === 0 && gcd2(x / a, x / b) === 1
       };
     }
   }),
@@ -11773,7 +12328,7 @@ var FAMILIES5 = [
         return `${Math.floor(mm / 60) % 12 || 12}:${String(mm % 60).padStart(2, "0")} ${mm >= 720 ? "p.m." : "a.m."}`;
       };
       if (l > 90) return null;
-      const options = mc(t(l), [[t(gcd(a, b)), "You used the HCF. They ring together at a multiple of both intervals.", "M_LCMPROB_USES_HCF"], [t(a + b), "You added the two intervals. List the times for each bell instead.", "M_LCMPROB_ADDS_INTERVALS"], [t(2 * l), "That is a later time. Look for the first time both ring.", "M_LCMPROB_ADDS_INTERVALS"]]);
+      const options = mc(t(l), [[t(gcd2(a, b)), "You used the HCF. They ring together at a multiple of both intervals.", "M_LCMPROB_USES_HCF"], [t(a + b), "You added the two intervals. List the times for each bell instead.", "M_LCMPROB_ADDS_INTERVALS"], [t(2 * l), "That is a later time. Look for the first time both ring.", "M_LCMPROB_ADDS_INTERVALS"]]);
       return {
         question: `Two bells at a school ring every ${a} minutes and every ${b} minutes. At ${t(0)} they ring together. At what time will they ring together again?`,
         options,
@@ -11793,7 +12348,7 @@ var FAMILIES5 = [
       return {
         question: `A shop sells exercise books in packs of ${a} and pencils in packs of ${b}. ${p.name} wants exactly the same number of each, and buys whole packs only, so each total is a multiple of its pack size.`,
         parts: [
-          { prompt: "What is the smallest number of books and of pencils that are equal?", answer: l, hint: "The number must be a multiple of both pack sizes.", wrong: [[gcd(a, b), "That is too small to be a multiple of both pack sizes.", "M_LCMPROB_USES_HCF"], [a + b, "Adding the pack sizes does not make equal numbers.", "M_LCMPROB_ADDS_INTERVALS"], [a * b, "That works, but there is a smaller number that does too.", "M_LCM_ALWAYS_PRODUCT"]] },
+          { prompt: "What is the smallest number of books and of pencils that are equal?", answer: l, hint: "The number must be a multiple of both pack sizes.", wrong: [[gcd2(a, b), "That is too small to be a multiple of both pack sizes.", "M_LCMPROB_USES_HCF"], [a + b, "Adding the pack sizes does not make equal numbers.", "M_LCMPROB_ADDS_INTERVALS"], [a * b, "That works, but there is a smaller number that does too.", "M_LCM_ALWAYS_PRODUCT"]] },
           { prompt: `How many packs of ${a} books must ${p.she} buy?`, answer: l / a, hint: "Share the number of books by the pack size.", wrong: [[l / b, `That is the number of packs of ${b}.`, "M_LCMPROB_USES_HCF"], [l, "That is the number of books, not packs.", "M_LCMPROB_ADDS_INTERVALS"], [a, "That is the number of books in one pack.", "M_LCMPROB_ADDS_INTERVALS"]] }
         ],
         steps: [`LCM of ${a} and ${b} is ${l}.`, `Packs of ${a}: ${l} \xF7 ${a} = ${l / a}.`],
@@ -13857,7 +14412,7 @@ var F = "NUMBER.FRACTIONS.";
 var DC = "NUMBER.DECIMALS.";
 var fr = (n, d) => `${n}/${d}`;
 var simp = (n, d) => {
-  const g = gcd(n, d);
+  const g = gcd2(n, d);
   return [n / g, d / g];
 };
 var frs = (n, d) => {
@@ -13879,7 +14434,7 @@ var FAMILIES8 = [
     rung: 1,
     gen: () => {
       const d = pick([2, 3, 4, 5, 6]), k = randInt(2, 4), n = randInt(1, d - 1);
-      if (d * k > 24 || gcd(n, d) !== 1) return null;
+      if (d * k > 24 || gcd2(n, d) !== 1) return null;
       const p = person(), f = pick(FOODS);
       return {
         question: `${p.name} ate ${fr(n, d)} of a ${f}. The ${f} is cut into ${d * k} equal pieces instead. How many of the smaller pieces make the same amount?`,
@@ -13898,7 +14453,7 @@ var FAMILIES8 = [
     rung: 2,
     gen: () => {
       const d = pick([2, 3, 4]), k = pick([2, 3, 4]), n = randInt(1, d - 1), [a, b] = [person(), person()];
-      if (gcd(n, d) !== 1 || a.name === b.name) return null;
+      if (gcd2(n, d) !== 1 || a.name === b.name) return null;
       const options = mc("They ate the same amount", [[`${b.name} ate more, because ${fr(n * k, d * k)} has bigger numbers`, "Bigger numbers on top and bottom do not mean a bigger amount here. The pieces are smaller.", "M_EQUIV_BIGGER_NUMBERS_BIGGER"], [`${a.name} ate more, because ${fr(n, d)} has fewer pieces`, "Compare how much of the whole is eaten, not the number of pieces.", "M_EQUIV_BIGGER_NUMBERS_BIGGER"], [`${b.name} ate more, because ${d * k} is more than ${d}`, "The bigger bottom number means smaller pieces.", "M_EQUIV_ADDITIVE"]]);
       return {
         question: `${a.name} ate ${fr(n, d)} of a chapati. ${b.name} ate ${fr(n * k, d * k)} of an equal chapati. Who ate more?`,
@@ -13916,7 +14471,7 @@ var FAMILIES8 = [
     rung: 3,
     gen: () => {
       const d = pick([3, 4, 5, 6]), k = randInt(2, 3), n = randInt(1, d - 1), eq2 = Math.random() < 0.5;
-      if (gcd(n, d) !== 1) return null;
+      if (gcd2(n, d) !== 1) return null;
       const second = eq2 ? fr(n * k, d * k) : fr(n + (d * k - d), d * k);
       const options = mc(eq2 ? "True" : "False", [[eq2 ? "False" : "True", eq2 ? `Multiply both ${n} and ${d} by ${k} and you get ${n * k}/${d * k}. They are the same amount.` : `${n + (d * k - d)} comes from adding ${d * k - d} to ${n}. Adding the same number does not keep the amount.`, eq2 ? "M_EQUIV_ONE_TERM_ONLY" : "M_EQUIV_ADDITIVE"]]);
       return {
@@ -13937,7 +14492,7 @@ var FAMILIES8 = [
     gen: () => {
       const g = pick([2, 3, 4, 5, 6]), [sn, sd] = pick([[1, 2], [2, 3], [3, 4], [1, 3], [3, 5], [1, 4], [5, 6], [2, 5]]), n = sn * g, d = sd * g;
       if (d > 50 || g < 2) return null;
-      const stops = simp(n, d), half = gcd(n, d) % 2 === 0 ? 2 : gcd(n, d) % 3 === 0 ? 3 : gcd(n, d);
+      const stops = simp(n, d), half = gcd2(n, d) % 2 === 0 ? 2 : gcd2(n, d) % 3 === 0 ? 3 : gcd2(n, d);
       const early = [n / half, d / half];
       return {
         question: `${person().name} ate ${n} of the ${d} mandazi in a pot. What fraction was eaten, in its simplest form?`,
@@ -14048,7 +14603,7 @@ var FAMILIES8 = [
     rung: 2,
     gen: () => {
       const [a, b] = pick([[[2, 3], [3, 4]], [[3, 4], [5, 6]], [[1, 2], [3, 8]], [[2, 3], [5, 12]], [[3, 4], [7, 12]], [[1, 3], [3, 8]]]).map((x2) => x2), swap = Math.random() < 0.5;
-      const [x, y] = swap ? [b, a] : [a, b], l = x[1] * y[1] / gcd(x[1], y[1]);
+      const [x, y] = swap ? [b, a] : [a, b], l = x[1] * y[1] / gcd2(x[1], y[1]);
       const vx = x[0] * (l / x[1]), vy = y[0] * (l / y[1]);
       if (vx === vy) return null;
       const bigger = vx > vy ? x : y, smaller = vx > vy ? y : x, [n1, n2] = [person().name, person().name];
@@ -14069,7 +14624,7 @@ var FAMILIES8 = [
     rung: 2,
     gen: () => {
       const [x, y] = pick([[[2, 3], [3, 4]], [[3, 4], [4, 5]], [[5, 12], [2, 3]], [[1, 2], [4, 8]], [[3, 6], [2, 4]], [[3, 5], [7, 10]], [[5, 6], [3, 4]]]);
-      const l = x[1] * y[1] / gcd(x[1], y[1]), vx = x[0] * (l / x[1]), vy = y[0] * (l / y[1]), right = vx > vy ? ">" : vx < vy ? "<" : "=";
+      const l = x[1] * y[1] / gcd2(x[1], y[1]), vx = x[0] * (l / x[1]), vy = y[0] * (l / y[1]), right = vx > vy ? ">" : vx < vy ? "<" : "=";
       const gap = x[0] / x[1] < y[0] / y[1] ? ">" : "<";
       const others = ["<", ">", "="].filter((z) => z !== right);
       const options = mc(right, [[others[0], right === "=" ? "The fractions are equal. Rename both to a common denominator to see it." : "Rename both fractions to a common denominator before you decide.", right === "=" ? "M_COMPARE_BIGGER_TERMS" : others[0] === "=" ? "M_COMPARE_GAP_THINKING" : "M_COMPARE_BIGGER_TERMS"], [others[1], "The bigger numbers do not make the bigger fraction. Rename and compare.", others[1] === "=" ? "M_COMPARE_GAP_THINKING" : "M_COMPARE_BIGGER_TERMS"]]);
@@ -14131,7 +14686,7 @@ var FAMILIES8 = [
       const set = pick([[[1, 2], [3, 4], [5, 8]], [[2, 3], [5, 6], [1, 2]], [[3, 4], [2, 3], [7, 12]]]), v = (x) => x[0] / x[1], desc = [...set].sort((a, b) => v(b) - v(a)), names = shuffle2(["Achieng", "Baraka", "Chebet"]);
       const shown = shuffle2(set.map((x, i) => [x, names[i]]));
       const far = shown.find(([x]) => v(x) === v(desc[0]))[1];
-      const l = set.reduce((a, x) => a * x[1] / gcd(a, x[1]), 1);
+      const l = set.reduce((a, x) => a * x[1] / gcd2(a, x[1]), 1);
       const ans = desc[0][0] * (l / desc[0][1]);
       return {
         question: `Three children walk to school: ${shown.map(([x, n]) => `${n} ${fr(...x)} km`).join(", ")}. Rename the fractions as ${l}ths. How many ${l}ths of a kilometre did the child who walked furthest walk?`,
@@ -14277,7 +14832,7 @@ var FAMILIES8 = [
     rung: 2,
     gen: () => {
       const [d1, d2] = pick(pairs), n1 = randInt(1, d1 - 1), n2 = randInt(1, d2 - 1), k = d2 / d1, tn = n1 * k + n2;
-      if (tn >= d2 || gcd(n1, d1) !== 1 && false) return null;
+      if (tn >= d2 || gcd2(n1, d1) !== 1 && false) return null;
       const p = person();
       return {
         question: `${p.name} bought ${fr(n1, d1)} kg of sugar and then ${fr(n2, d2)} kg more. How many kilograms of sugar is that altogether? Write it in its simplest form.`,
@@ -15429,7 +15984,7 @@ var CTX = {
 };
 function build(name) {
   const S4 = SETS[name], C2 = CTX[name], { big, small, f } = S4, sk = (k) => `${M2}${S4.key}.${S4.sk[k]}`, mis = S4.mis;
-  const fmt = (b, s) => comp(b, s, big, small), W2 = `${name.slice(0, 3)}`;
+  const fmt2 = (b, s) => comp(b, s, big, small), W2 = `${name.slice(0, 3)}`;
   const acc = (b, s) => [`${plain(b, s, f)} ${small}`];
   const out = [];
   const F3 = (o) => out.push(fam5(o));
@@ -15498,9 +16053,9 @@ function build(name) {
       if (f === 60 && s >= 60) return null;
       const p = person();
       return {
-        question: `${C2.conv(p)} It reads ${fmt(b, s)}. How many ${small} is that?`,
+        question: `${C2.conv(p)} It reads ${fmt2(b, s)}. How many ${small} is that?`,
         answer: t,
-        accepts: [fmt(b, s)],
+        accepts: [fmt2(b, s)],
         wrong: [[b * 100 + s, `1 ${big} is ${f} ${small}, not 100. Multiply by ${f}.`, mis.k2s100], [Number(`${b}${s}`), `Zeros hold places. Write ${b} ${big} as ${b * f} ${small} and then add ${s}.`, mis.k2sconcat], [b * f, `The extra ${small} are missing. Add ${s} to ${b * f}.`, mis.k2sconcat], [b * 10 + s, `Multiply the ${big} by ${f}.`, mis.k2s100]],
         hints: [`1 ${big} = ${f} ${small}.`, `Multiply the ${big} by ${f}, then add the ${small}.`],
         steps: [`${b} \xD7 ${f} = ${b * f}.`, `${b * f} + ${s} = ${t} ${small}.`],
@@ -15518,7 +16073,7 @@ function build(name) {
       if (f === 60 && s === 5) return null;
       const options = mc(String(t), [[String(b * 100 + s), `1 ${big} is ${f} ${small}.`, mis.k2s100], [String(Number(`${b}${s}`)), "Place-holder zeros are needed. Convert the big unit first, then add.", mis.k2sconcat], [String(b * f), `The ${s} ${small} must be added on.`, mis.k2sconcat]]);
       return {
-        question: `Which number of ${small} equals ${fmt(b, s)}?`,
+        question: `Which number of ${small} equals ${fmt2(b, s)}?`,
         options,
         instruction: "Choose the number.",
         hints: [`${b} ${big} is ${b * f} ${small}.`, "Then add the rest."],
@@ -15534,7 +16089,7 @@ function build(name) {
     gen: () => {
       const b = randInt(2, 9), s = f === 60 ? randInt(10, 55) : randInt(11, 99), t = plain(b, s, f), p = person();
       return {
-        question: `${p.name} changes ${fmt(b, s)} into ${small}. Which step has the mistake?`,
+        question: `${p.name} changes ${fmt2(b, s)} into ${small}. Which step has the mistake?`,
         working: [{ text: `Step 1: ${b} ${big} = ${b * f} ${small}.`, ok: true }, { text: `Step 2: Write the ${big} and ${small} digits side by side: ${b}${s}.`, ok: false }, { text: `Step 3: So the answer is ${b}${s} ${small}.`, ok: true }],
         fix: `Add the ${small} to the converted ${big}: ${b * f} + ${s} = ${t} ${small}.`,
         mis: mis.k2sconcat,
@@ -15551,18 +16106,18 @@ function build(name) {
     gen: () => {
       const b = randInt(2, 9), s = pick([randInt(10, 99), randInt(101, 900), f === 60 ? randInt(10, 59) : randInt(101, 900)]), t = plain(b, s, f);
       if (f === 60 && s >= 60) return null;
-      const d100 = fmt(Math.floor(t / 100), t % 100), zero = fmt(b, Number(String(s).replace(/0/g, "")) || 5);
-      const dec2 = fmt(b, Math.round((t / f - Math.floor(t / f)) * 10));
+      const d100 = fmt2(Math.floor(t / 100), t % 100), zero = fmt2(b, Number(String(s).replace(/0/g, "")) || 5);
+      const dec2 = fmt2(b, Math.round((t / f - Math.floor(t / f)) * 10));
       const p = person();
-      const wr = f === 60 ? [[dec2, "You divided and used the decimal digits as seconds. The leftover seconds are what remains after taking out whole minutes.", mis.s2kdec], [d100, "You split at 100. One minute is 60 seconds.", mis.s2kd100], [`${t * f} min`, "Dividing by 60, not multiplying, changes seconds to minutes.", mis.s2kdir]] : [[d100, `You split off every ${100} ${small}. 1 ${big} is ${f} ${small}.`, mis.s2kd100], [fmt(b, Math.floor(s / 10)), "The leftover must keep all its digits. Do not cut it short.", mis.s2kzero], [fmt(b + 1, f - s), "Do not round up. Count the whole units and keep the leftover.", mis.s2kdir], [zero, "Check any zero in the middle of the number. Zeros hold places.", mis.s2kzero]];
+      const wr = f === 60 ? [[dec2, "You divided and used the decimal digits as seconds. The leftover seconds are what remains after taking out whole minutes.", mis.s2kdec], [d100, "You split at 100. One minute is 60 seconds.", mis.s2kd100], [`${t * f} min`, "Dividing by 60, not multiplying, changes seconds to minutes.", mis.s2kdir]] : [[d100, `You split off every ${100} ${small}. 1 ${big} is ${f} ${small}.`, mis.s2kd100], [fmt2(b, Math.floor(s / 10)), "The leftover must keep all its digits. Do not cut it short.", mis.s2kzero], [fmt2(b + 1, f - s), "Do not round up. Count the whole units and keep the leftover.", mis.s2kdir], [zero, "Check any zero in the middle of the number. Zeros hold places.", mis.s2kzero]];
       return {
         question: `${C2.conv(p)} It shows ${t} ${small}. Write this in ${big} and ${small}.`,
-        answer: fmt(b, s),
+        answer: fmt2(b, s),
         accepts: [`${t} ${small}`],
         wrong: wr,
         hints: [`Take out as many whole ${big} as you can: 1 ${big} is ${f} ${small}.`, "What is left over?"],
-        steps: [`${t} \xF7 ${f} = ${b} remainder ${s}.`, `${fmt(b, s)}.`],
-        chk: (v) => v === fmt(b, s)
+        steps: [`${t} \xF7 ${f} = ${b} remainder ${s}.`, `${fmt2(b, s)}.`],
+        chk: (v) => v === fmt2(b, s)
       };
     }
   });
@@ -15573,13 +16128,13 @@ function build(name) {
     rung: 2,
     gen: () => {
       const b = randInt(2, 9), s = f === 60 ? randInt(10, 55) : pick([45, 50, 105, 250, 308, 640]), t = plain(b, s, f);
-      const options = mc(fmt(b, s), [[fmt(Math.floor(t / 100), t % 100), `1 ${big} is ${f} ${small}, not 100.`, mis.s2kd100], [fmt(b, Math.round((t / f - b) * 10) || 5), "The leftover seconds are what remains after whole units are taken out.", mis.s2kdec], [fmt(b * 10 + 1, s), "Check how many whole units fit.", mis.s2kzero]]);
+      const options = mc(fmt2(b, s), [[fmt2(Math.floor(t / 100), t % 100), `1 ${big} is ${f} ${small}, not 100.`, mis.s2kd100], [fmt2(b, Math.round((t / f - b) * 10) || 5), "The leftover seconds are what remains after whole units are taken out.", mis.s2kdec], [fmt2(b * 10 + 1, s), "Check how many whole units fit.", mis.s2kzero]]);
       return {
         question: `Which of these is ${t} ${small} written in ${big} and ${small}?`,
         options,
         instruction: "Choose the correct amount.",
         hints: [`${f} ${small} make 1 ${big}.`, "Count the whole units, then the leftover."],
-        steps: [`${t} \xF7 ${f} = ${b} remainder ${s}.`, fmt(b, s) + "."]
+        steps: [`${t} \xF7 ${f} = ${b} remainder ${s}.`, fmt2(b, s) + "."]
       };
     }
   });
@@ -15592,11 +16147,11 @@ function build(name) {
       const b = randInt(2, 9), s = f === 60 ? randInt(10, 55) : randInt(101, 900), t = plain(b, s, f), p = person();
       return {
         question: `${p.name} writes ${t} ${small} in ${big} and ${small}. Which step has the mistake?`,
-        working: [{ text: `Step 1: Look for whole ${big} in ${t} ${small}.`, ok: true }, { text: `Step 2: Split the number after the hundreds digit: ${Math.floor(t / 100)} and ${t % 100}.`, ok: false }, { text: `Step 3: ${fmt(Math.floor(t / 100), t % 100)}.`, ok: true }],
-        fix: `${f} ${small} make 1 ${big}, so divide by ${f}: ${fmt(b, s)}.`,
+        working: [{ text: `Step 1: Look for whole ${big} in ${t} ${small}.`, ok: true }, { text: `Step 2: Split the number after the hundreds digit: ${Math.floor(t / 100)} and ${t % 100}.`, ok: false }, { text: `Step 3: ${fmt2(Math.floor(t / 100), t % 100)}.`, ok: true }],
+        fix: `${f} ${small} make 1 ${big}, so divide by ${f}: ${fmt2(b, s)}.`,
         mis: mis.s2kd100,
         hints: [`How many ${small} make 1 ${big}?`],
-        steps: [`${fmt(b, s)}.`]
+        steps: [`${fmt2(b, s)}.`]
       };
     }
   });
@@ -15627,13 +16182,13 @@ function build(name) {
       const [rb, rs] = [b1 + b2 + Math.floor(sum3 / f), sum3 % f];
       const p = person();
       return {
-        question: C2.add(p, fmt(b1, s1), fmt(b2, s2)),
-        answer: fmt(rb, rs),
+        question: C2.add(p, fmt2(b1, s1), fmt2(b2, s2)),
+        answer: fmt2(rb, rs),
         accepts: acc(rb, rs),
-        wrong: [[fmt(b1 + b2, sum3), `${sum3} ${small} is more than ${f}, so regroup ${f} ${small} as 1 ${big}.`, mis.addNo], [fmt(b1 + b2 + Math.floor(sum3 / 100), sum3 % 100), `${big} are made at ${f} ${small}, not 100.`, mis.add100], [fmt(b1 + b2, sum3 % f), "You forgot to add the carried unit to the bigger column.", mis.addLost], [fmt(rb, rs + 10), "Check the column of smaller units again.", mis.addNo]].filter((w) => w[0] !== fmt(rb, rs)),
+        wrong: [[fmt2(b1 + b2, sum3), `${sum3} ${small} is more than ${f}, so regroup ${f} ${small} as 1 ${big}.`, mis.addNo], [fmt2(b1 + b2 + Math.floor(sum3 / 100), sum3 % 100), `${big} are made at ${f} ${small}, not 100.`, mis.add100], [fmt2(b1 + b2, sum3 % f), "You forgot to add the carried unit to the bigger column.", mis.addLost], [fmt2(rb, rs + 10), "Check the column of smaller units again.", mis.addNo]].filter((w) => w[0] !== fmt2(rb, rs)),
         hints: [`Add the ${small} first.`, `Every ${f} ${small} becomes 1 ${big}.`],
         steps: [`${s1} + ${s2} = ${sum3} ${small} = ${Math.floor(sum3 / f)} ${big} ${sum3 % f} ${small}.`, `${b1} + ${b2} + ${Math.floor(sum3 / f)} = ${b1 + b2 + Math.floor(sum3 / f)} ${big}.`],
-        chk: (v) => v === fmt(rb, rs)
+        chk: (v) => v === fmt2(rb, rs)
       };
     }
   });
@@ -15646,13 +16201,13 @@ function build(name) {
       const [b1, s1, b2, s2] = addDraw(true), sum3 = s1 + s2;
       if (sum3 < f || f === 60 && sum3 < 100) return null;
       const [rb, rs] = [b1 + b2 + Math.floor(sum3 / f), sum3 % f];
-      const options = mc(fmt(rb, rs), [[fmt(b1 + b2, sum3), `${sum3} ${small} is more than ${f}, so regroup.`, mis.addNo], [fmt(b1 + b2 + Math.floor(sum3 / 100), sum3 % 100), `Regroup at ${f}, not 100.`, mis.add100], [fmt(b1 + b2, sum3 % f), "The carried unit is missing.", mis.addLost]]);
+      const options = mc(fmt2(rb, rs), [[fmt2(b1 + b2, sum3), `${sum3} ${small} is more than ${f}, so regroup.`, mis.addNo], [fmt2(b1 + b2 + Math.floor(sum3 / 100), sum3 % 100), `Regroup at ${f}, not 100.`, mis.add100], [fmt2(b1 + b2, sum3 % f), "The carried unit is missing.", mis.addLost]]);
       return {
-        question: `Which is the sum of ${fmt(b1, s1)} and ${fmt(b2, s2)}?`,
+        question: `Which is the sum of ${fmt2(b1, s1)} and ${fmt2(b2, s2)}?`,
         options,
         instruction: "Choose the sum.",
         hints: [`Add the ${small} first and regroup.`, `Then add the ${big}.`],
-        steps: [`${s1} + ${s2} = ${sum3} ${small}.`, `${fmt(rb, rs)}.`]
+        steps: [`${s1} + ${s2} = ${sum3} ${small}.`, `${fmt2(rb, rs)}.`]
       };
     }
   });
@@ -15667,12 +16222,12 @@ function build(name) {
       if (!ok) return null;
       const rb = b1 + b2 + (f === 60 ? 1 : 0), rs = f === 60 ? sum3 - 60 : sum3, wb = f === 60 ? b1 + b2 : b1 + b2 + 1, ws = f === 60 ? sum3 : sum3 - 100, p = person();
       return {
-        question: `${p.name} adds ${fmt(b1, s1)} and ${fmt(b2, s2)}. Which step has the mistake?`,
-        working: [{ text: `Step 1: ${s1} + ${s2} = ${sum3} ${small}.`, ok: true }, { text: f === 60 ? `Step 2: ${sum3} is less than 100, so no regrouping is needed.` : `Step 2: ${sum3} is 100 or more, so change 100 ${small} into 1 ${big}.`, ok: false }, { text: `Step 3: ${fmt(wb, ws)}.`, ok: true }],
-        fix: `${f} ${small} make 1 ${big}. ${fmt(b1 + b2 + Math.floor(sum3 / f), sum3 % f)} is the sum.`,
+        question: `${p.name} adds ${fmt2(b1, s1)} and ${fmt2(b2, s2)}. Which step has the mistake?`,
+        working: [{ text: `Step 1: ${s1} + ${s2} = ${sum3} ${small}.`, ok: true }, { text: f === 60 ? `Step 2: ${sum3} is less than 100, so no regrouping is needed.` : `Step 2: ${sum3} is 100 or more, so change 100 ${small} into 1 ${big}.`, ok: false }, { text: `Step 3: ${fmt2(wb, ws)}.`, ok: true }],
+        fix: `${f} ${small} make 1 ${big}. ${fmt2(b1 + b2 + Math.floor(sum3 / f), sum3 % f)} is the sum.`,
         mis: mis.add100,
         hints: [`How many ${small} make 1 ${big}?`],
-        steps: [`${fmt(b1 + b2 + Math.floor(sum3 / f), sum3 % f)}.`]
+        steps: [`${fmt2(b1 + b2 + Math.floor(sum3 / f), sum3 % f)}.`]
       };
     }
   });
@@ -15691,13 +16246,13 @@ function build(name) {
       const [rb, rs] = norm3(t, f), p = person();
       const sm = [b1 - b2, s2 - s1], e100 = [b1 - b2 - 1, s1 + 100 - s2], nr = [b1 - b2, s1 + f - s2];
       return {
-        question: C2.sub(p, fmt(b1, s1), fmt(b2, s2)),
-        answer: fmt(rb, rs),
+        question: C2.sub(p, fmt2(b1, s1), fmt2(b2, s2)),
+        answer: fmt2(rb, rs),
         accepts: acc(rb, rs),
-        wrong: [[fmt(...sm), "You took the smaller number from the larger in the smaller-unit column. Exchange 1 " + big + " for " + f + " " + small + " instead.", mis.subSm], [e100[1] > 0 ? fmt(...e100) : fmt(b1 - b2 - 1, 20), `1 ${big} is ${f} ${small}, not 100.`, mis.sub100], [fmt(...nr), `You exchanged 1 ${big} but did not reduce the ${big} by 1.`, mis.subNoRed], [fmt(rb, rs + 10 > f ? rs - 10 : rs + 10), "Check the exchange again.", mis.subSm]].filter((w) => w[0] !== fmt(rb, rs)),
+        wrong: [[fmt2(...sm), "You took the smaller number from the larger in the smaller-unit column. Exchange 1 " + big + " for " + f + " " + small + " instead.", mis.subSm], [e100[1] > 0 ? fmt2(...e100) : fmt2(b1 - b2 - 1, 20), `1 ${big} is ${f} ${small}, not 100.`, mis.sub100], [fmt2(...nr), `You exchanged 1 ${big} but did not reduce the ${big} by 1.`, mis.subNoRed], [fmt2(rb, rs + 10 > f ? rs - 10 : rs + 10), "Check the exchange again.", mis.subSm]].filter((w) => w[0] !== fmt2(rb, rs)),
         hints: [`Is ${s1} ${small} enough to take away ${s2} ${small}?`, `Exchange 1 ${big} for ${f} ${small}.`],
-        steps: [`${s1} < ${s2}, so exchange: ${b1 - 1} ${big} and ${s1 + f} ${small}.`, `${fmt(rb, rs)}.`],
-        chk: (v) => v === fmt(rb, rs)
+        steps: [`${s1} < ${s2}, so exchange: ${b1 - 1} ${big} and ${s1 + f} ${small}.`, `${fmt2(rb, rs)}.`],
+        chk: (v) => v === fmt2(rb, rs)
       };
     }
   });
@@ -15710,13 +16265,13 @@ function build(name) {
       const [b1, s1, b2, s2] = subDraw(), t = plain(b1, s1, f) - plain(b2, s2, f);
       if (s2 <= s1 || t <= 0) return null;
       const [rb, rs] = norm3(t, f);
-      const options = mc(fmt(rb, rs), [[fmt(b1 - b2, s2 - s1), "Exchange when the top is smaller. Do not take the smaller from the larger.", mis.subSm], [fmt(b1 - b2 - 1, s1 + 100 - s2), `1 ${big} is ${f} ${small}.`, mis.sub100], [fmt(b1 - b2, s1 + f - s2), `The ${big} must go down by 1 after the exchange.`, mis.subNoRed]]);
+      const options = mc(fmt2(rb, rs), [[fmt2(b1 - b2, s2 - s1), "Exchange when the top is smaller. Do not take the smaller from the larger.", mis.subSm], [fmt2(b1 - b2 - 1, s1 + 100 - s2), `1 ${big} is ${f} ${small}.`, mis.sub100], [fmt2(b1 - b2, s1 + f - s2), `The ${big} must go down by 1 after the exchange.`, mis.subNoRed]]);
       return {
-        question: `Which is the difference when ${fmt(b2, s2)} is taken from ${fmt(b1, s1)}?`,
+        question: `Which is the difference when ${fmt2(b2, s2)} is taken from ${fmt2(b1, s1)}?`,
         options,
         instruction: "Choose the difference.",
         hints: ["Look at the smaller units first.", `Exchange 1 ${big} when you need to.`],
-        steps: [`Exchange 1 ${big} for ${f} ${small}.`, `${fmt(rb, rs)}.`]
+        steps: [`Exchange 1 ${big} for ${f} ${small}.`, `${fmt2(rb, rs)}.`]
       };
     }
   });
@@ -15730,12 +16285,12 @@ function build(name) {
       if (s2 <= s1 || t <= 0) return null;
       const [rb, rs] = norm3(t, f), p = person();
       return {
-        question: `${p.name} works out ${fmt(b1, s1)} \u2212 ${fmt(b2, s2)}. Which step has the mistake?`,
-        working: [{ text: `Step 1: ${s1} ${small} is less than ${s2} ${small}, so exchange 1 ${big} for ${f} ${small}.`, ok: true }, { text: `Step 2: ${s1} + ${f} \u2212 ${s2} = ${s1 + f - s2} ${small}. Keep ${b1} ${big}.`, ok: false }, { text: `Step 3: ${b1} \u2212 ${b2} = ${b1 - b2} ${big}. Answer ${fmt(b1 - b2, s1 + f - s2)}.`, ok: true }],
-        fix: `After the exchange the ${big} go down by 1: ${b1 - 1} \u2212 ${b2} = ${b1 - 1 - b2}. The answer is ${fmt(rb, rs)}.`,
+        question: `${p.name} works out ${fmt2(b1, s1)} \u2212 ${fmt2(b2, s2)}. Which step has the mistake?`,
+        working: [{ text: `Step 1: ${s1} ${small} is less than ${s2} ${small}, so exchange 1 ${big} for ${f} ${small}.`, ok: true }, { text: `Step 2: ${s1} + ${f} \u2212 ${s2} = ${s1 + f - s2} ${small}. Keep ${b1} ${big}.`, ok: false }, { text: `Step 3: ${b1} \u2212 ${b2} = ${b1 - b2} ${big}. Answer ${fmt2(b1 - b2, s1 + f - s2)}.`, ok: true }],
+        fix: `After the exchange the ${big} go down by 1: ${b1 - 1} \u2212 ${b2} = ${b1 - 1 - b2}. The answer is ${fmt2(rb, rs)}.`,
         mis: mis.subNoRed,
         hints: [`What happens to the ${big} when you exchange one?`],
-        steps: [`${fmt(rb, rs)}.`]
+        steps: [`${fmt2(rb, rs)}.`]
       };
     }
   });
@@ -15754,13 +16309,13 @@ function build(name) {
       const [cb, cs2] = [Math.floor(sm / f), sm % f], rb = b * n + cb, rs = cs2, p = person();
       const w100 = [b * n + Math.floor(sm / 100), sm % 100];
       return {
-        question: C2.mul(p, fmt(b, s), n),
-        answer: fmt(rb, rs),
+        question: C2.mul(p, fmt2(b, s), n),
+        answer: fmt2(rb, rs),
         accepts: acc(rb, rs),
-        wrong: [[fmt(b * n, sm), `${sm} ${small} is more than ${f}, so regroup ${f} ${small} as 1 ${big}.`, mis.mulNo], [fmt(b * n, s), `You multiplied only the ${big} and copied the ${small}. Multiply both.`, mis.mulOne], [fmt(...w100), `Regroup at ${f} ${small}, not at 100.`, mis.mul100], [fmt((b + cb) * n, rs), "You added the carried unit before multiplying the bigger unit. Multiply first, then add the carry.", mis.mulCarry]].filter((w) => w[0] !== fmt(rb, rs)),
+        wrong: [[fmt2(b * n, sm), `${sm} ${small} is more than ${f}, so regroup ${f} ${small} as 1 ${big}.`, mis.mulNo], [fmt2(b * n, s), `You multiplied only the ${big} and copied the ${small}. Multiply both.`, mis.mulOne], [fmt2(...w100), `Regroup at ${f} ${small}, not at 100.`, mis.mul100], [fmt2((b + cb) * n, rs), "You added the carried unit before multiplying the bigger unit. Multiply first, then add the carry.", mis.mulCarry]].filter((w) => w[0] !== fmt2(rb, rs)),
         hints: [`Multiply the ${small} first, then regroup.`, `Multiply the ${big}, then add the carried ${big}.`],
         steps: [`${s} \xD7 ${n} = ${sm} ${small} = ${cb} ${big} ${rs} ${small}.`, `${b} \xD7 ${n} + ${cb} = ${b * n + cb} ${big}.`],
-        chk: (v) => v === fmt(rb, rs)
+        chk: (v) => v === fmt2(rb, rs)
       };
     }
   });
@@ -15773,13 +16328,13 @@ function build(name) {
       const [b, s, n] = mulDraw(), sm = s * n;
       if (sm < f || f === 60 && sm < 100) return null;
       const cb = Math.floor(sm / f), rb = b * n + cb, rs = sm % f;
-      const options = mc(fmt(rb, rs), [[fmt(b * n, sm), `Regroup the ${small} into ${big}.`, mis.mulNo], [fmt(b * n, s), `Multiply both parts, not just one.`, mis.mulOne], [fmt(b * n + Math.floor(sm / 100), sm % 100), `Regroup at ${f}, not 100.`, mis.mul100]]);
+      const options = mc(fmt2(rb, rs), [[fmt2(b * n, sm), `Regroup the ${small} into ${big}.`, mis.mulNo], [fmt2(b * n, s), `Multiply both parts, not just one.`, mis.mulOne], [fmt2(b * n + Math.floor(sm / 100), sm % 100), `Regroup at ${f}, not 100.`, mis.mul100]]);
       return {
-        question: `Which is ${fmt(b, s)} multiplied by ${n}?`,
+        question: `Which is ${fmt2(b, s)} multiplied by ${n}?`,
         options,
         instruction: "Choose the product.",
         hints: [`Multiply the ${small} first.`, "Regroup, then multiply the bigger unit."],
-        steps: [`${s} \xD7 ${n} = ${sm}.`, fmt(rb, rs) + "."]
+        steps: [`${s} \xD7 ${n} = ${sm}.`, fmt2(rb, rs) + "."]
       };
     }
   });
@@ -15793,12 +16348,12 @@ function build(name) {
       if (sm < f || f === 60 && sm < 100) return null;
       const cb = Math.floor(sm / f), p = person();
       return {
-        question: `${p.name} works out ${fmt(b, s)} \xD7 ${n}. Which step has the mistake?`,
-        working: [{ text: `Step 1: ${b} \xD7 ${n} = ${b * n} ${big}.`, ok: true }, { text: `Step 2: ${s} \xD7 ${n} = ${sm} ${small}. Copy ${sm} ${small} into the answer.`, ok: false }, { text: `Step 3: ${fmt(b * n, sm)}.`, ok: true }],
-        fix: `${sm} ${small} = ${cb} ${big} ${sm % f} ${small}. The answer is ${fmt(b * n + cb, sm % f)}.`,
+        question: `${p.name} works out ${fmt2(b, s)} \xD7 ${n}. Which step has the mistake?`,
+        working: [{ text: `Step 1: ${b} \xD7 ${n} = ${b * n} ${big}.`, ok: true }, { text: `Step 2: ${s} \xD7 ${n} = ${sm} ${small}. Copy ${sm} ${small} into the answer.`, ok: false }, { text: `Step 3: ${fmt2(b * n, sm)}.`, ok: true }],
+        fix: `${sm} ${small} = ${cb} ${big} ${sm % f} ${small}. The answer is ${fmt2(b * n + cb, sm % f)}.`,
         mis: mis.mulNo,
         hints: [`Can ${sm} ${small} stay in the ${small} column?`],
-        steps: [`${fmt(b * n + cb, sm % f)}.`]
+        steps: [`${fmt2(b * n + cb, sm % f)}.`]
       };
     }
   });
@@ -15819,13 +16374,13 @@ function build(name) {
       if (t % n !== 0 || b % n === 0) return null;
       const [rb, rs] = norm3(t / n, f), rem = b % n, p = person();
       return {
-        question: C2.div(p, fmt(b, s), n),
-        answer: fmt(rb, rs),
+        question: C2.div(p, fmt2(b, s), n),
+        answer: fmt2(rb, rs),
         accepts: acc(rb, rs),
-        wrong: [[fmt(Math.floor(b / n), s / n), `You threw away the leftover ${big} when dividing the ${big}. Change it into ${small} and carry it on.`, mis.divIgn], [fmt(Math.floor(b / n), (rem * (f === 60 ? 10 : 100) + s) / n), `A leftover ${big} is ${f} ${small}, not ${f === 60 ? 10 : 100}.`, mis.div100], [fmt(Math.floor(b / n), s), `You divided only the ${big} and left the ${small} as they were. Divide the whole amount.`, mis.divOne], [fmt(rb, rs + 10 > f ? rs - 10 : rs + 10), "Check by multiplying.", mis.divIgn]].filter((w) => w[0] !== fmt(rb, rs)),
+        wrong: [[fmt2(Math.floor(b / n), s / n), `You threw away the leftover ${big} when dividing the ${big}. Change it into ${small} and carry it on.`, mis.divIgn], [fmt2(Math.floor(b / n), (rem * (f === 60 ? 10 : 100) + s) / n), `A leftover ${big} is ${f} ${small}, not ${f === 60 ? 10 : 100}.`, mis.div100], [fmt2(Math.floor(b / n), s), `You divided only the ${big} and left the ${small} as they were. Divide the whole amount.`, mis.divOne], [fmt2(rb, rs + 10 > f ? rs - 10 : rs + 10), "Check by multiplying.", mis.divIgn]].filter((w) => w[0] !== fmt2(rb, rs)),
         hints: [`Divide the ${big}. What is left over?`, `Change the leftover ${big} into ${small}, add the ${small}, and divide again.`],
-        steps: [`${b} \xF7 ${n} = ${Math.floor(b / n)} remainder ${rem}.`, `${rem} \xD7 ${f} + ${s} = ${rem * f + s}; \xF7 ${n} = ${rs}. Answer ${fmt(rb, rs)}.`],
-        chk: (v) => v === fmt(rb, rs)
+        steps: [`${b} \xF7 ${n} = ${Math.floor(b / n)} remainder ${rem}.`, `${rem} \xD7 ${f} + ${s} = ${rem * f + s}; \xF7 ${n} = ${rs}. Answer ${fmt2(rb, rs)}.`],
+        chk: (v) => v === fmt2(rb, rs)
       };
     }
   });
@@ -15840,13 +16395,13 @@ function build(name) {
       const t = plain(b, s, f);
       if (t % n !== 0 || b % n === 0) return null;
       const [rb, rs] = norm3(t / n, f), rem = b % n;
-      const options = mc(fmt(rb, rs), [[fmt(Math.floor(b / n), s / n), "The leftover must be carried on, not dropped.", mis.divIgn], [fmt(Math.floor(b / n), (rem * (f === 60 ? 10 : 100) + s) / n), `A leftover ${big} is ${f} ${small}.`, mis.div100], [fmt(Math.floor(b / n), s), "Divide the smaller unit too.", mis.divOne]]);
+      const options = mc(fmt2(rb, rs), [[fmt2(Math.floor(b / n), s / n), "The leftover must be carried on, not dropped.", mis.divIgn], [fmt2(Math.floor(b / n), (rem * (f === 60 ? 10 : 100) + s) / n), `A leftover ${big} is ${f} ${small}.`, mis.div100], [fmt2(Math.floor(b / n), s), "Divide the smaller unit too.", mis.divOne]]);
       return {
-        question: `Which is ${fmt(b, s)} divided by ${n}?`,
+        question: `Which is ${fmt2(b, s)} divided by ${n}?`,
         options,
         instruction: "Choose the answer.",
         hints: [`Divide the ${big} first.`, "Carry any leftover into the smaller unit."],
-        steps: [`Whole amount in ${small}: ${t}. ${t} \xF7 ${n} = ${t / n}.`, fmt(rb, rs) + "."]
+        steps: [`Whole amount in ${small}: ${t}. ${t} \xF7 ${n} = ${t / n}.`, fmt2(rb, rs) + "."]
       };
     }
   });
@@ -15862,12 +16417,12 @@ function build(name) {
       if (t % n !== 0 || b % n === 0) return null;
       const [rb, rs] = norm3(t / n, f), rem = b % n, p = person();
       return {
-        question: `${p.name} divides ${fmt(b, s)} by ${n}. Which step has the mistake?`,
-        working: [{ text: `Step 1: ${b} \xF7 ${n} = ${Math.floor(b / n)} remainder ${rem}.`, ok: true }, { text: `Step 2: Ignore the remainder and divide the ${small}: ${s} \xF7 ${n} = ${s / n}.`, ok: false }, { text: `Step 3: ${fmt(Math.floor(b / n), s / n)}.`, ok: true }],
-        fix: `The ${rem} left ${big} is ${rem * f} ${small}. Add it to ${s}: ${rem * f + s} \xF7 ${n} = ${(rem * f + s) / n}. The answer is ${fmt(rb, rs)}.`,
+        question: `${p.name} divides ${fmt2(b, s)} by ${n}. Which step has the mistake?`,
+        working: [{ text: `Step 1: ${b} \xF7 ${n} = ${Math.floor(b / n)} remainder ${rem}.`, ok: true }, { text: `Step 2: Ignore the remainder and divide the ${small}: ${s} \xF7 ${n} = ${s / n}.`, ok: false }, { text: `Step 3: ${fmt2(Math.floor(b / n), s / n)}.`, ok: true }],
+        fix: `The ${rem} left ${big} is ${rem * f} ${small}. Add it to ${s}: ${rem * f + s} \xF7 ${n} = ${(rem * f + s) / n}. The answer is ${fmt2(rb, rs)}.`,
         mis: mis.divIgn,
         hints: ["Check by multiplying your answer by " + n + "."],
-        steps: [`${fmt(rb, rs)}.`]
+        steps: [`${fmt2(rb, rs)}.`]
       };
     }
   });
@@ -16973,14 +17528,14 @@ var FAMILIES11 = [
     form: "why",
     rung: 3,
     gen: () => {
-      const l = randInt(10, 25), w = randInt(6, 15), area = Math.random() < 0.5;
-      const options = mc(area ? `Area: ${l} \xD7 ${w} = ${l * w} cm\xB2` : `Perimeter: ${2 * (l + w)} cm`, [[area ? `Perimeter: ${2 * (l + w)} cm` : `Area: ${l} \xD7 ${w} = ${l * w} cm\xB2`, area ? "Covering a surface needs area, not the distance round the edge." : "A fence goes round the edge, so it needs the perimeter.", "M_CONTEXT_WRONG_MEASURE"], [`Add the length and width: ${l + w} cm`, "Neither area nor perimeter is just length + width.", "M_CONTEXT_WRONG_MEASURE"]]);
+      const l = randInt(10, 25), w = randInt(6, 15), area2 = Math.random() < 0.5;
+      const options = mc(area2 ? `Area: ${l} \xD7 ${w} = ${l * w} cm\xB2` : `Perimeter: ${2 * (l + w)} cm`, [[area2 ? `Perimeter: ${2 * (l + w)} cm` : `Area: ${l} \xD7 ${w} = ${l * w} cm\xB2`, area2 ? "Covering a surface needs area, not the distance round the edge." : "A fence goes round the edge, so it needs the perimeter.", "M_CONTEXT_WRONG_MEASURE"], [`Add the length and width: ${l + w} cm`, "Neither area nor perimeter is just length + width.", "M_CONTEXT_WRONG_MEASURE"]]);
       return {
-        question: area ? `A tile is ${l} cm long and ${w} cm wide. ${person().name} wants to know how much of the floor it covers. Which measure is needed?` : `A small garden bed is ${l} cm long and ${w} cm wide. ${person().name} wants to put a border round its edge. Which measure is needed?`,
+        question: area2 ? `A tile is ${l} cm long and ${w} cm wide. ${person().name} wants to know how much of the floor it covers. Which measure is needed?` : `A small garden bed is ${l} cm long and ${w} cm wide. ${person().name} wants to put a border round its edge. Which measure is needed?`,
         options,
         instruction: "Choose the measure and its value.",
-        hints: [area ? "Covering is area." : "Going round is perimeter.", "Choose the right calculation."],
-        steps: [area ? "Covering a flat surface needs the area." : "A border goes round the edge, so it needs the perimeter.", area ? `Area = ${l} \xD7 ${w} = ${l * w} cm\xB2.` : `Perimeter = 2 \xD7 (${l} + ${w}) = ${2 * (l + w)} cm.`]
+        hints: [area2 ? "Covering is area." : "Going round is perimeter.", "Choose the right calculation."],
+        steps: [area2 ? "Covering a flat surface needs the area." : "A border goes round the edge, so it needs the perimeter.", area2 ? `Area = ${l} \xD7 ${w} = ${l * w} cm\xB2.` : `Perimeter = 2 \xD7 (${l} + ${w}) = ${2 * (l + w)} cm.`]
       };
     }
   }),
@@ -17350,9 +17905,9 @@ var FAMILIES11 = [
 
 // src/ai-tutor/content/families/g5c_money.js
 var Y = "MEASUR.MONEY.";
-var ask = (right, wrongs, q, hints, steps, instruction = "Choose the best answer.") => {
+var ask = (right, wrongs, q, hints, steps2, instruction = "Choose the best answer.") => {
   const options = mc(right, wrongs);
-  return options ? { question: q, options, instruction, hints, steps } : null;
+  return options ? { question: q, options, instruction, hints, steps: steps2 } : null;
 };
 var pool = (items, lead) => () => {
   const x = pick(items);
@@ -17721,8 +18276,8 @@ var FAMILIES12 = [
     form: "word",
     rung: 3,
     gen: () => {
-      const steps = ["Choose send money", "Enter the number", "Enter the amount", "Check the name", "Enter the PIN and confirm"];
-      const right = steps.join(", then "), alt = (a) => a.map((i) => steps[i]).join(", then ");
+      const steps2 = ["Choose send money", "Enter the number", "Enter the amount", "Check the name", "Enter the PIN and confirm"];
+      const right = steps2.join(", then "), alt = (a) => a.map((i) => steps2[i]).join(", then ");
       const options = mc(right, [[alt([4, 0, 1, 2, 3]), "The PIN comes last, after checking the name.", "M_NO_CHECK_RECIPIENT"], [alt([0, 1, 2, 4, 3]), "Check the name before entering the PIN.", "M_NO_CHECK_RECIPIENT"], [alt([0, 1, 3, 2, 4]), "Enter the amount before checking the details.", "M_NO_CHECK_RECIPIENT"]]);
       return {
         question: `${person().name} sends money from a phone. Which is the correct order of steps?`,
@@ -17790,9 +18345,9 @@ var FAMILIES12 = [
 // src/ai-tutor/content/families/g5c_geomdata.js
 var G = "GEOMET.";
 var D2 = "DATA_H.DATA_REPRESENTATION.";
-var ask2 = (right, wrongs, q, hints, steps, instruction = "Choose the best answer.") => {
+var ask2 = (right, wrongs, q, hints, steps2, instruction = "Choose the best answer.") => {
   const options = mc(right, wrongs);
-  return options ? { question: q, options, instruction, hints, steps } : null;
+  return options ? { question: q, options, instruction, hints, steps: steps2 } : null;
 };
 var fromPool = (pool2, lead) => () => {
   const x = pick(pool2);
@@ -18966,20 +19521,20 @@ var retry = (f, n = 80) => () => {
   }
   return null;
 };
-var gcd2 = (a, b) => b ? gcd2(b, a % b) : a;
+var gcd3 = (a, b) => b ? gcd3(b, a % b) : a;
 var fr2 = (n, d) => `${n}/${d}`;
 var simp2 = (n, d) => {
-  const g = gcd2(n, d);
+  const g = gcd3(n, d);
   return fr2(n / g, d / g);
 };
 var simpPart = (n, d) => {
-  const g = gcd2(n, d);
+  const g = gcd3(n, d);
   return [n / g, d / g];
 };
 var T4 = (n) => (n / 1e4).toFixed(4);
-var digitsOf = (n) => String(n).padStart(7, "0").split("").map(Number);
+var digitsOf2 = (n) => String(n).padStart(7, "0").split("").map(Number);
 var noCarry = (A2, B2) => {
-  const a = digitsOf(A2), b = digitsOf(B2);
+  const a = digitsOf2(A2), b = digitsOf2(B2);
   return Number(a.map((x, i) => (x + b[i]) % 10).join(""));
 };
 var ONES2 = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
@@ -19412,7 +19967,7 @@ var FAMILIES14 = [
     draw: () => {
       const [d1, d2] = pick([[2, 3], [2, 5], [3, 4], [3, 5], [4, 5], [2, 7], [3, 7]]);
       const n1 = randInt(1, d1 - 1), n2 = randInt(1, d2 - 1);
-      if (gcd2(n1, d1) > 1 || gcd2(n2, d2) > 1 || n1 / d1 + n2 / d2 >= 1) return null;
+      if (gcd3(n1, d1) > 1 || gcd3(n2, d2) > 1 || n1 / d1 + n2 / d2 >= 1) return null;
       const N2 = n1 * d2 + n2 * d1, D3 = d1 * d2, right = simp2(N2, D3);
       const w = [fr2(n1 + n2, d1 + d2), simp2(n1 + n2, D3), simp2(n1 * n2, D3)];
       return uniq2(right, ...w) ? { n1, d1, n2, d2, right, w, thing: pick(["flour", "sugar", "rice"]), p: person(), k: randInt(0, 3) } : null;
@@ -19433,7 +19988,7 @@ var FAMILIES14 = [
     draw: () => {
       const [d1, d2] = pick([[2, 3], [3, 4], [3, 5], [4, 5], [2, 5], [5, 6], [3, 7]]);
       const n1 = randInt(1, d1 - 1), n2 = randInt(1, d2 - 1);
-      return gcd2(n1, d1) > 1 || gcd2(n2, d2) > 1 ? null : { n1, d1, n2, d2 };
+      return gcd3(n1, d1) > 1 || gcd3(n2, d2) > 1 ? null : { n1, d1, n2, d2 };
     },
     make: ({ n1, d1, n2, d2 }) => {
       const D3 = d1 * d2, a = n1 * d2, b = n2 * d1;
@@ -19461,7 +20016,7 @@ var FAMILIES14 = [
     draw: () => {
       const [d1, d2] = pick([[2, 3], [3, 4], [2, 5], [3, 5], [4, 5]]);
       const n1 = randInt(1, d1 - 1), n2 = randInt(1, d2 - 1);
-      return gcd2(n1, d1) > 1 || gcd2(n2, d2) > 1 ? null : { n1, d1, n2, d2, p: person(), k: randInt(0, 3) };
+      return gcd3(n1, d1) > 1 || gcd3(n2, d2) > 1 ? null : { n1, d1, n2, d2, p: person(), k: randInt(0, 3) };
     },
     make: ({ n1, d1, n2, d2, p, k }) => ({
       question: `${p.name} says ${fr2(n1, d1)} + ${fr2(n2, d2)} = ${fr2(n1 + n2, d1 + d2)}. Why is this wrong?`,
@@ -19483,7 +20038,7 @@ var FAMILIES14 = [
     draw: retry(() => {
       const d1 = pick([6, 8, 10, 12]), d2 = pick([2, 3, 4, 5].filter((x) => d1 % x === 0)), k = d1 / d2;
       const n2 = randInt(1, d2 - 1), n1 = randInt(n2 * k + 1, d1 - 1);
-      if (n1 >= d1 || gcd2(n2, d2) > 1 || gcd2(n1, d1) > 1) return null;
+      if (n1 >= d1 || gcd3(n2, d2) > 1 || gcd3(n1, d1) > 1) return null;
       const right = simp2(n1 - n2 * k, d1), w = [simp2(n1 - n2, d1 - d2), simp2(n1 - n2, d1), simp2(n1 + n2 * k, d1)];
       return uniq2(right, ...w) && n1 + n2 * k < d1 && n1 - n2 !== d1 - d2 && n1 - n2 * k !== d1 - d2 ? { n1, d1, n2, d2, k, right, w, p: person(), q: randInt(0, 3) } : null;
     }),
@@ -19503,7 +20058,7 @@ var FAMILIES14 = [
     draw: () => {
       const d1 = pick([6, 8, 10, 12]), d2 = pick([2, 3, 4, 5].filter((x) => d1 % x === 0)), k = d1 / d2;
       const n2 = randInt(1, d2 - 1), n1 = randInt(n2 * k + 1, d1 - 1);
-      return n1 >= d1 || gcd2(n2, d2) > 1 || gcd2(n1, d1) > 1 ? null : { n1, d1, n2, d2, k, p: person() };
+      return n1 >= d1 || gcd3(n2, d2) > 1 || gcd3(n1, d1) > 1 ? null : { n1, d1, n2, d2, k, p: person() };
     },
     make: ({ n1, d1, n2, d2, k, p }) => {
       const shown = n2, diff = n1 - shown;
@@ -19575,7 +20130,7 @@ var FAMILIES14 = [
     form: "spot",
     draw: () => {
       const d = randInt(3, 9), n = randInt(1, d - 1), w = randInt(2, 6);
-      return gcd2(n, d) > 1 ? null : { d, n, w, p: person() };
+      return gcd3(n, d) > 1 ? null : { d, n, w, p: person() };
     },
     make: ({ d, n, w, p }) => {
       const s1 = w * n, s2 = s1 + n;
@@ -19601,7 +20156,7 @@ var FAMILIES14 = [
     form: "direct",
     draw: () => {
       const n = randInt(2, 9), d = randInt(2, 9);
-      if (n === d || gcd2(n, d) > 1) return null;
+      if (n === d || gcd3(n, d) > 1) return null;
       const w = [`\u2212${fr2(n, d)}`, fr2(d - n > 0 ? d - n : n - d, d), `1/${n}`];
       return uniq2(fr2(d, n), ...w) ? { n, d, w, k: randInt(0, 3) } : null;
     },
@@ -19621,7 +20176,7 @@ var FAMILIES14 = [
     form: "why",
     draw: () => {
       const n = randInt(1, 8), d = randInt(n + 1, 9);
-      return gcd2(n, d) > 1 ? null : { n, d, p: person(), k: randInt(0, 3) };
+      return gcd3(n, d) > 1 ? null : { n, d, p: person(), k: randInt(0, 3) };
     },
     make: ({ n, d, p, k }) => ({
       question: `${p.name} says ${fr2(d, n)} is the reciprocal of ${fr2(n, d)}. Which check shows ${p.she} is right?`,
@@ -19642,7 +20197,7 @@ var FAMILIES14 = [
     form: "direct",
     draw: () => {
       const n = randInt(1, 8), d = randInt(2, 9);
-      if (n >= d || gcd2(n, d) > 1) return null;
+      if (n >= d || gcd3(n, d) > 1) return null;
       const w = [fr2(n * n, d), fr2(n, d * d), fr2(2 * n, 2 * d)];
       return uniq2(fr2(n * n, d * d), ...w) && n > 1 ? { n, d, w, k: randInt(0, 3) } : null;
     },
@@ -19662,7 +20217,7 @@ var FAMILIES14 = [
     form: "word",
     draw: () => {
       const n = randInt(2, 8), d = randInt(3, 9);
-      if (n >= d || gcd2(n, d) > 1) return null;
+      if (n >= d || gcd3(n, d) > 1) return null;
       const w = [fr2(4 * n, d), fr2(2 * n, d), fr2(n * n, d)];
       return uniq2(fr2(n * n, d * d), ...w) ? { n, d, w, p: person(), k: randInt(0, 3) } : null;
     },
@@ -19681,7 +20236,7 @@ var FAMILIES14 = [
     form: "spot",
     draw: () => {
       const n = randInt(2, 8), d = randInt(3, 9);
-      return n >= d || gcd2(n, d) > 1 || n === 2 ? null : { n, d, kind: pick(["num", "den"]), p: person() };
+      return n >= d || gcd3(n, d) > 1 || n === 2 ? null : { n, d, kind: pick(["num", "den"]), p: person() };
     },
     make: ({ n, d, kind, p }) => {
       const sn = kind === "num" ? n + n : n * n, sd = kind === "den" ? d + d : d * d;
@@ -19725,14 +20280,14 @@ var FAMILIES14 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const pct2 = pick([12, 15, 16, 24, 35, 36, 45, 55, 64, 65, 85]), g = gcd2(pct2, 100), n = pct2 / g, d = 100 / g;
+      const pct2 = pick([12, 15, 16, 24, 35, 36, 45, 55, 64, 65, 85]), g = gcd3(pct2, 100), n = pct2 / g, d = 100 / g;
       return { pct: pct2, n, d, k: randInt(0, 3), p: person() };
     },
     make: ({ pct: pct2, n, d, k, p }) => ({
       question: `${p.name} sells ${pct2}% of a box of mangoes on Monday. What fraction of the box is that, in its simplest form?`,
       options: optionsOf(fr2(n, d), [[fr2(pct2, 100), "This has the right value, but it can still be made simpler. Divide top and bottom by the same number."], [fr2(pct2, 10), "Per cent means out of 100, not out of 10."], [`1/${pct2}`, "Per cent means out of 100. The percentage goes on top."]], k),
       hints: ["Per cent means out of 100.", "Then divide the top and the bottom by their biggest common factor."],
-      steps: [`${pct2}% = ${fr2(pct2, 100)}.`, `Divide the top and the bottom by ${gcd2(pct2, 100)}: ${fr2(n, d)}.`]
+      steps: [`${pct2}% = ${fr2(pct2, 100)}.`, `Divide the top and the bottom by ${gcd3(pct2, 100)}: ${fr2(n, d)}.`]
     })
   }),
   fam6({
@@ -19830,14 +20385,14 @@ var FAMILIES14 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const n = pick([12, 15, 24, 35, 45, 55, 65, 75, 85]), g = gcd2(n, 100);
+      const n = pick([12, 15, 24, 35, 45, 55, 65, 75, 85]), g = gcd3(n, 100);
       return { n, x: n / 100, a: n / g, b: 100 / g, k: randInt(0, 3), p: person() };
     },
     make: ({ n, x, a, b, k, p }) => ({
       question: `${p.name} uses ${x} of a roll of cloth. Which fraction of the roll is that, in its simplest form?`,
       options: optionsOf(fr2(a, b), [[fr2(n, 100), "This has the right value, but it can still be made simpler."], [fr2(n, 10), "The second decimal place means hundredths, not tenths."], [`1/${n}`, "The decimal digits go on top of the fraction, over 10 or 100."]], k),
       hints: ["Two decimal places means hundredths.", "Write the digits over 100, then simplify."],
-      steps: [`${x} = ${fr2(n, 100)}.`, `Divide top and bottom by ${gcd2(n, 100)}: ${fr2(a, b)}.`]
+      steps: [`${x} = ${fr2(n, 100)}.`, `Divide top and bottom by ${gcd3(n, 100)}: ${fr2(a, b)}.`]
     })
   }),
   fam6({
@@ -20102,9 +20657,9 @@ var FAMILIES14 = [
         const far = Math.max(...xs.map(Math.abs)) ** 2 + Math.max(...ys.map(Math.abs)) ** 2;
         const nx = i <= 0 && 0 <= i + 1 ? 0 : Math.min(Math.abs(i), Math.abs(i + 1));
         const ny = j <= 0 && 0 <= j + 1 ? 0 : Math.min(Math.abs(j), Math.abs(j + 1));
-        const near3 = nx ** 2 + ny ** 2;
+        const near4 = nx ** 2 + ny ** 2;
         if (far <= r * r) whole++;
-        else if (near3 < r * r) part++;
+        else if (near4 < r * r) part++;
       }
       const est = whole + part / 2, w = [whole, whole + part, (2 * r) ** 2];
       return Math.abs(est - Math.PI * r * r) / (Math.PI * r * r) < 0.08 && uniq2(est, ...w) ? { r, whole, part, est, w, p: person() } : null;
@@ -20423,8 +20978,8 @@ var isCube = (n) => {
   const r = Math.round(Math.cbrt(n));
   return r * r * r === n;
 };
-var gcd3 = (a, b) => b ? gcd3(b, a % b) : a;
-var lcm2 = (a, b) => a / gcd3(a, b) * b;
+var gcd4 = (a, b) => b ? gcd4(b, a % b) : a;
+var lcm2 = (a, b) => a / gcd4(a, b) * b;
 var factorise = (n) => {
   const f = {};
   let m = n;
@@ -21265,7 +21820,7 @@ var PROPORTION = [
     form: "word",
     draw: () => {
       const p = randInt(1, 5), q = randInt(2, 6), r = randInt(2, 6), s = randInt(1, 6);
-      if (q === r || s <= r || gcd3(p, q) !== 1 || gcd3(r, s) !== 1) return null;
+      if (q === r || s <= r || gcd4(p, q) !== 1 || gcd4(r, s) !== 1) return null;
       const L2 = lcm2(q, r), A2 = p * L2 / q, B2 = L2, C2 = s * L2 / r, k = randInt(2, 5), N2 = A2 * k, hens = C2 * k;
       const w1 = round(N2 * s / p, 1), w2 = round(N2 * s / r, 1), w3 = B2 * k;
       return uniq3(hens, w1, w2, w3) && N2 <= 90 && hens <= 200 ? { p, q, r, s, N: N2, hens, w1, w2, w3 } : null;
@@ -21287,7 +21842,7 @@ var PROPORTION = [
     form: "why",
     draw: () => {
       const p = randInt(1, 5), q = randInt(2, 6), r = randInt(2, 6), s = randInt(1, 6);
-      if (q === r || gcd3(p, q) !== 1 || gcd3(r, s) !== 1 || s === q) return null;
+      if (q === r || gcd4(p, q) !== 1 || gcd4(r, s) !== 1 || s === q) return null;
       return { p, q, r, s, who: person() };
     },
     make: ({ p, q, r, s, who }) => {
@@ -22375,13 +22930,13 @@ var FAMILIES16 = [
       return { b, l, rate: rate2, who: person() };
     },
     make: ({ b, l, rate: rate2, who }) => {
-      const area = 2 * b * l;
+      const area2 = 2 * b * l;
       return {
         question: `The roof of a garden shelter is a square-based pyramid with no base. Each side of the square is ${b} m. The slant height of each triangular face is ${l} m. ${who.name} paints the roof. The paint costs ${sh(rate2)} for each m\xB2. How much does the paint cost?`,
-        answer: area * rate2,
-        wrong: [[(area + b * b) * rate2, "The roof has no base, so only the four triangular faces are painted."], [area / 4 * rate2, "The roof has four triangular faces, not one."], [area, "That is the area in m\xB2. The question asks for the cost."], [b * l * 4 * rate2, "Each triangular face is half of base times height. Do not forget the half."]],
+        answer: area2 * rate2,
+        wrong: [[(area2 + b * b) * rate2, "The roof has no base, so only the four triangular faces are painted."], [area2 / 4 * rate2, "The roof has four triangular faces, not one."], [area2, "That is the area in m\xB2. The question asks for the cost."], [b * l * 4 * rate2, "Each triangular face is half of base times height. Do not forget the half."]],
         hints: ["A roof of this shape has four triangular faces.", "Find the area, then multiply by the cost of each m\xB2."],
-        steps: [`One face: \xBD \xD7 ${b} \xD7 ${l} = ${T3(b * l / 2)} m\xB2. Four faces: ${area} m\xB2.`, `Cost: ${area} \xD7 ${rate2} = ${sh(area * rate2)}.`]
+        steps: [`One face: \xBD \xD7 ${b} \xD7 ${l} = ${T3(b * l / 2)} m\xB2. Four faces: ${area2} m\xB2.`, `Cost: ${area2} \xD7 ${rate2} = ${sh(area2 * rate2)}.`]
       };
     },
     check: ({ b, l, rate: rate2 }, a) => a / rate2 / 4 * 2 === b * l
@@ -22603,13 +23158,13 @@ var FAMILIES16 = [
       return { b, h, L: L2, kind: pick(["half", "times", "litres"]), who: person() };
     },
     make: ({ b, h, L: L2, kind, who }) => {
-      const area = kind === "half" ? b * h : b * h / 2;
-      const vol = kind === "times" ? area + L2 : area * L2, lit = kind === "litres" ? vol / 100 : vol / 1e3;
+      const area2 = kind === "half" ? b * h : b * h / 2;
+      const vol = kind === "times" ? area2 + L2 : area2 * L2, lit = kind === "litres" ? vol / 100 : vol / 1e3;
       return {
         question: `${who.name} is asked how many litres a water tank holds. It is a prism ${L2} cm long. Each end is a triangle with a base of ${b} cm and a height of ${h} cm. The working is shown. Which step has the mistake?`,
         working: [
-          { text: kind === "half" ? `Area of the end = ${b} \xD7 ${h} = ${T3(area)} cm\xB2` : `Area of the end = \xBD \xD7 ${b} \xD7 ${h} = ${T3(area)} cm\xB2`, ok: area === b * h / 2 },
-          { text: kind === "times" ? `Volume = ${T3(area)} + ${L2} = ${T3(vol)} cm\xB3` : `Volume = ${T3(area)} \xD7 ${L2} = ${T3(vol)} cm\xB3`, ok: vol === area * L2 },
+          { text: kind === "half" ? `Area of the end = ${b} \xD7 ${h} = ${T3(area2)} cm\xB2` : `Area of the end = \xBD \xD7 ${b} \xD7 ${h} = ${T3(area2)} cm\xB2`, ok: area2 === b * h / 2 },
+          { text: kind === "times" ? `Volume = ${T3(area2)} + ${L2} = ${T3(vol)} cm\xB3` : `Volume = ${T3(area2)} \xD7 ${L2} = ${T3(vol)} cm\xB3`, ok: vol === area2 * L2 },
           { text: kind === "litres" ? `Litres = ${T3(vol)} \xF7 100 = ${T3(lit)}` : `Litres = ${T3(vol)} \xF7 1,000 = ${T3(lit)}`, ok: lit === vol / 1e3 }
         ],
         fix: kind === "half" ? "The area of a triangle is half of base times height. The half is missing." : kind === "times" ? "The volume of a prism is the area of the end times the length, not plus." : "There are 1,000 cm\xB3 in a litre, so divide by 1,000.",
@@ -23824,7 +24379,7 @@ var allDistinct = (...v) => new Set(v.map((x) => String(x))).size === v.length;
 var mix = (a) => [...a].sort(() => Math.random() - 0.5);
 var turn = (a, k) => [...a.slice(k), ...a.slice(0, k)];
 var pt = (x, y) => `(${sg(x)}, ${sg(y)})`;
-var near = (a, b, e = 1e-6) => Math.abs(a - b) < e;
+var near2 = (a, b, e = 1e-6) => Math.abs(a - b) < e;
 var rad = (d) => d * Math.PI / 180;
 var TRIG = { sin: (d) => round(Math.sin(rad(d)), 4), cos: (d) => round(Math.cos(rad(d)), 4), tan: (d) => round(Math.tan(rad(d)), 4) };
 var FAMILIES17 = [
@@ -23902,7 +24457,7 @@ var FAMILIES17 = [
       ],
       steps: [`Gradient of L = (${y2} \u2212 ${sg(y1)}) \xF7 (${x2} \u2212 ${x1}) = ${n}.`, `Perpendicular: ${n} \xD7 m = \u22121, so m = \u22121 \xF7 ${sg(n)} = ${m}.`, `${q} = ${sg(m)} \xD7 ${sg(p)} + c, so c = ${q} \u2212 ${sg(round(m * p, 4))} = ${c}.`]
     }),
-    check: ({ p, q }, v) => near(v[0] * v[1], -1) && near(v[1] * p + v[2], q)
+    check: ({ p, q }, v) => near2(v[0] * v[1], -1) && near2(v[1] * p + v[2], q)
   }),
   fam9({
     id: "g9.graphs.perpendicular-why-opposite",
@@ -23937,16 +24492,16 @@ var FAMILIES17 = [
     make: ({ m, c0, p, q, kind }) => {
       const trueG = -1 / m;
       const shownG = kind === "recip" ? 1 / m : kind === "neg" ? -m : trueG;
-      const gText = (g) => near(g, -1 / m) ? `\u22121/${m}` : near(g, 1 / m) ? `1/${m}` : sg(g);
+      const gText = (g) => near2(g, -1 / m) ? `\u22121/${m}` : near2(g, 1 / m) ? `1/${m}` : sg(g);
       const cTrue = q - trueG * p;
       const cShown = kind === "sign" ? q + trueG * p : q - shownG * p;
       const eqText = (g, c) => `y = (${gText(g)})x${c < 0 ? ` \u2212 ${-c}` : ` + ${c}`}`;
       const finalText = kind === "csign" ? eqText(trueG, -cTrue) : eqText(shownG, cShown);
       const working = [
         { text: `The gradient of ${lineEq(m, c0)} is ${m}.`, ok: m === m },
-        { text: `The perpendicular gradient is ${gText(shownG)}.`, ok: near(shownG, trueG) },
+        { text: `The perpendicular gradient is ${gText(shownG)}.`, ok: near2(shownG, trueG) },
         { text: `Put in the point ${pt(p, q)}: ${sg(q)} = (${gText(shownG)}) \xD7 ${sg(p)} + c, so c = ${sg(q)} \u2212 (${sg(round(shownG * p, 4))}).`, ok: true },
-        { text: `c = ${sg(cShown)}`, ok: near(cShown, q - shownG * p) },
+        { text: `c = ${sg(cShown)}`, ok: near2(cShown, q - shownG * p) },
         { text: `The line is ${finalText}.`, ok: finalText === eqText(shownG, cShown) }
       ];
       const fixes = { recip: "The perpendicular gradient was only turned upside down. It must change sign as well, so that the two gradients multiply to \u22121.", neg: "The sign was changed but the number was not turned upside down. The two gradients must multiply to \u22121.", sign: "c = y \u2212 mx. The product mx was added to y instead of being taken away.", csign: "The value of c was found correctly but written with the wrong sign in the final equation." };
@@ -24167,7 +24722,7 @@ var FAMILIES17 = [
       ],
       steps: [`With a 45\xB0 angle, the two short sides are equal: the top is ${d} m above the clinometer.`, `Mast height = ${d} + ${eye} = ${round(d + eye, 1)} m.`, `With the aerial: ${round(d + eye, 1)} + ${flag} = ${round(d + eye + flag, 1)} m.`]
     }),
-    check: ({ d, eye, flag }, v) => v[0] === d && near(v[1] - eye, v[0]) && near(v[2] - v[1], flag)
+    check: ({ d, eye, flag }, v) => v[0] === d && near2(v[1] - eye, v[0]) && near2(v[2] - v[1], flag)
   }),
   fam9({
     id: "g9.depression.equals-elevation-why",
@@ -24298,7 +24853,7 @@ var FAMILIES17 = [
         w = [{ text: `The sides ${a} and ${A2} match.`, ok: true }, { text: `The large triangle is ${A2} \u2212 ${a} = ${diff} cm longer.`, ok: false }, { text: `So x = ${b} + ${diff}.`, ok: true }, { text: `x = ${b + diff} cm`, ok: true }];
       } else if (kind === "flip") {
         const f = round(a / A2, 3);
-        w = [{ text: `The sides ${a} and ${A2} match.`, ok: true }, { text: `Scale factor = ${a} \xF7 ${A2} = ${f}.`, ok: near(f, k, 1e-3) }, { text: `x = ${b} \xD7 ${f}.`, ok: true }, { text: `x = ${round(b * f, 2)} cm`, ok: true }];
+        w = [{ text: `The sides ${a} and ${A2} match.`, ok: true }, { text: `Scale factor = ${a} \xF7 ${A2} = ${f}.`, ok: near2(f, k, 1e-3) }, { text: `x = ${b} \xD7 ${f}.`, ok: true }, { text: `x = ${round(b * f, 2)} cm`, ok: true }];
       } else {
         w = [{ text: `The sides ${a} and ${A2} match.`, ok: true }, { text: `Scale factor = ${A2} \xF7 ${a} = ${k}.`, ok: true }, { text: `x = ${b} \xF7 ${k}.`, ok: false }, { text: `x = ${round(b / k, 2)} cm`, ok: true }];
       }
@@ -25124,11 +25679,11 @@ var FAMILIES17 = [
 
 // src/ai-tutor/content/families/g8_num_alg.js
 var fam10 = (def) => family({ reviewed: false, ...def });
-var gcd4 = (a, b) => b ? gcd4(b, a % b) : Math.abs(a);
+var gcd5 = (a, b) => b ? gcd5(b, a % b) : Math.abs(a);
 var neg = (n) => n < 0 ? `\u2212${-n}` : String(n);
 var distinct5 = (...v) => new Set(v).size === v.length;
 var simp3 = (n, d) => {
-  const g = gcd4(n, d);
+  const g = gcd5(n, d);
   return [n / g, d / g];
 };
 var signed = (c) => c < 0 ? `\u2212 ${-c}` : `+ ${c}`;
@@ -25283,7 +25838,7 @@ var FAMILIES18 = [
     form: "word",
     draw: () => {
       const [a, b, c, d] = pick([[1, 3, 1, 4], [1, 2, 1, 5], [2, 5, 1, 4], [1, 2, 1, 3], [3, 8, 1, 4], [1, 3, 2, 5], [1, 4, 1, 6]]);
-      const l = b * d / gcd4(b, d);
+      const l = b * d / gcd5(b, d);
       const A2 = l * randInt(1, Math.max(1, Math.floor(80 / l)));
       const m = A2 * a / b, be = A2 * c / d, rest = A2 - m - be;
       const p = person();
@@ -25387,7 +25942,7 @@ var FAMILIES18 = [
     draw: () => {
       const den = pick([12, 14, 15, 18, 21, 22, 24, 33]);
       const n = randInt(1, den - 1);
-      return gcd4(n, den) === 1 ? { n, den } : null;
+      return gcd5(n, den) === 1 ? { n, den } : null;
     },
     make: ({ n, den }) => {
       let q = den;
@@ -25425,10 +25980,10 @@ var FAMILIES18 = [
     form: "steps",
     draw: () => {
       const ab = randInt(12, 98);
-      return ab % 11 === 0 || gcd4(ab, 99) === 1 ? null : { ab };
+      return ab % 11 === 0 || gcd5(ab, 99) === 1 ? null : { ab };
     },
     make: ({ ab }) => {
-      const g = gcd4(ab, 99);
+      const g = gcd5(ab, 99);
       return {
         question: `Let x = 0.${ab}${ab}${ab}... where the digits ${ab} repeat for ever. You want to write x as a fraction. Follow the method.`,
         parts: [
@@ -25440,7 +25995,7 @@ var FAMILIES18 = [
         steps: ["100x = block.block block... and x = 0.block block..., so 100x \u2212 x = the block.", `99x = ${ab}, so x = ${ab}/99.`, `Divide by ${g}: x = ${ab / g}/${99 / g}.`]
       };
     },
-    check: ({ ab }, v) => v[0] === 100 && v[1] === ab && gcd4(v[1], 99) === v[2] && Math.abs(ab / 99 - ab / v[2] / v[3]) < 1e-12
+    check: ({ ab }, v) => v[0] === 100 && v[1] === ab && gcd5(v[1], 99) === v[2] && Math.abs(ab / 99 - ab / v[2] / v[3]) < 1e-12
   }),
   fam10({
     id: "g8.dec.cloth-profit",
@@ -25722,7 +26277,7 @@ var FAMILIES18 = [
         model: { type: "table", data: { head: ["Class", "Boys", "Girls"], rows: names.map((n, i) => ({ cells: [n, `${rows[i][0]}`, `${rows[i][1]}`] })) } },
         options: names.map((n, i) => ({ text: `Class ${n}`, right: rows[i][0] * b === rows[i][1] * a, why: i === swapped ? "That class has the numbers the other way round: girls to boys. Read the order in the question." : "Divide both numbers by their common factor. The boys to girls ratio does not match." })),
         hints: ["Boys come first in the ratio, then girls.", "Divide the boys and the girls in each class by the same number to simplify."],
-        steps: rows.map(([x, y], i) => `${names[i]}: ${x} : ${y} = ${x / gcd4(x, y)} : ${y / gcd4(x, y)}.`).concat([`The class with ${a}:${b} is the answer.`])
+        steps: rows.map(([x, y], i) => `${names[i]}: ${x} : ${y} = ${x / gcd5(x, y)} : ${y / gcd5(x, y)}.`).concat([`The class with ${a}:${b} is the answer.`])
       };
     }
   }),
@@ -25734,7 +26289,7 @@ var FAMILIES18 = [
     form: "why",
     draw: () => {
       const a = randInt(4, 9), c = randInt(a + 2, 12), b = randInt(2, a - 1), d = randInt(3, c - 1);
-      const L2 = c * d / gcd4(c, d);
+      const L2 = c * d / gcd5(c, d);
       return b * c > a * d && L2 <= 60 && c !== d ? { a, b, c, d, L: L2 } : null;
     },
     make: ({ a, b, c, d, L: L2 }) => {
@@ -26035,7 +26590,7 @@ var FAMILIES18 = [
     form: "direct",
     draw: () => {
       const g = pick([6, 8, 9, 10, 12, 15]), h = pick([2, 3, 5].filter((x) => g % x === 0)), p = randInt(2, 4), q = randInt(1, 5), v = pick(["x", "y", "m", "n", "a"]);
-      return gcd4(p, q) === 1 && p !== q && distinct5(g, h, p, q) ? { g, h, p, q, v } : null;
+      return gcd5(p, q) === 1 && p !== q && distinct5(g, h, p, q) ? { g, h, p, q, v } : null;
     },
     make: ({ g, h, p, q, v }) => ({
       question: `${g * p}${v} + ${g * q} is factorised fully as a number times a bracket. What is the number outside the bracket?`,
@@ -26045,7 +26600,7 @@ var FAMILIES18 = [
       hints: [`List the factors of ${g * p} and of ${g * q}.`, "The number outside is the biggest factor they share."],
       steps: [`The highest common factor of ${g * p} and ${g * q} is ${g}.`, `${g * p}${v} + ${g * q} = ${g}(${p}${v} + ${q}).`]
     }),
-    check: ({ g, p, q }, a) => gcd4(a * p, a * q) === a
+    check: ({ g, p, q }, a) => gcd5(a * p, a * q) === a
   }),
   fam10({
     id: "g8.fact.rectangle-steps",
@@ -26055,7 +26610,7 @@ var FAMILIES18 = [
     form: "steps",
     draw: () => {
       const g = randInt(2, 6), p = randInt(2, 4), q = randInt(1, 7), X = randInt(2, 5);
-      return gcd4(p, q) === 1 ? { g, p, q, X } : null;
+      return gcd5(p, q) === 1 ? { g, p, q, X } : null;
     },
     make: ({ g, p, q, X }) => ({
       question: `A rectangle has an area of ${g * p}x + ${g * q} square metres. Factorise the area. The length is the common factor, and the width is what is left inside the bracket.`,
@@ -26076,14 +26631,14 @@ var FAMILIES18 = [
     form: "spot",
     draw: () => {
       const g = pick([6, 8, 9, 10, 12, 15]), h = pick([2, 3, 5].filter((x) => g % x === 0)), p = randInt(2, 4), q = randInt(1, 5);
-      return gcd4(p, q) === 1 && p !== q ? { g, h, p, q, p0: person() } : null;
+      return gcd5(p, q) === 1 && p !== q ? { g, h, p, q, p0: person() } : null;
     },
     make: ({ g, h, p, q, p0 }) => {
       const A2 = g * p, B2 = g * q;
       return {
         question: `${p0.name} factorises ${A2}x + ${B2} completely. Which step has the mistake?`,
         working: [
-          { text: `The numbers are ${A2} and ${B2}. Their highest common factor is ${h}.`, ok: h === gcd4(A2, B2) },
+          { text: `The numbers are ${A2} and ${B2}. Their highest common factor is ${h}.`, ok: h === gcd5(A2, B2) },
           { text: `${A2}x \xF7 ${h} = ${A2 / h}x.`, ok: true },
           { text: `${B2} \xF7 ${h} = ${B2 / h}.`, ok: true },
           { text: `So ${A2}x + ${B2} = ${h}(${A2 / h}x + ${B2 / h}).`, ok: true }
@@ -26402,7 +26957,7 @@ var FAMILIES18 = [
 var fam11 = (def) => family({ reviewed: false, ...def });
 var PI2 = 22 / 7;
 var uniq4 = (...v) => new Set(v.map((x) => String(round(x, 4)))).size === v.length;
-var near2 = (a, b) => Math.abs(a - b) < 1e-6;
+var near3 = (a, b) => Math.abs(a - b) < 1e-6;
 var circ = (r) => 2 * PI2 * r;
 var nice = (v) => Number.isInteger(v * 2);
 var FAMILIES19 = [
@@ -26426,7 +26981,7 @@ var FAMILIES19 = [
       hints: ["One full turn takes the wheel once round its rim. That distance is the circumference.", "Circumference = \u03C0 \xD7 diameter. Then count all the turns, and change cm to m."],
       steps: [`One turn: 22/7 \xD7 ${d} = ${c} cm.`, `${n} turns: ${n} \xD7 ${c} = ${tot} cm.`, `${tot} \xF7 100 = ${a} m.`]
     }),
-    check: ({ d, n }, a) => near2(a * 100 / n / d, 22 / 7)
+    check: ({ d, n }, a) => near3(a * 100 / n / d, 22 / 7)
   }),
   fam11({
     id: "g8.circ.radius-slip",
@@ -26488,7 +27043,7 @@ var FAMILIES19 = [
       hints: ["First find the circumference of the whole circle.", `The arc is the fraction ${th}/360 of the circumference.`],
       steps: [`Whole circle: 2 \xD7 22/7 \xD7 ${r} = ${full} m.`, `Fraction of the circle: ${th}/360.`, `Arc = ${th}/360 \xD7 ${full} = ${arc} m.`]
     }),
-    check: ({ r, th }, a) => near2(a * 360 / th, 44 * r / 7)
+    check: ({ r, th }, a) => near3(a * 360 / th, 44 * r / 7)
   }),
   fam11({
     id: "g8.arc.minute-hand",
@@ -26510,7 +27065,7 @@ var FAMILIES19 = [
       hints: ["A minute hand goes once round in 60 minutes. What fraction of a turn is that?", "The tip travels that fraction of the circumference of its circle."],
       steps: [`In ${m} minutes the hand turns ${m}/60 of a full turn.`, `The tip's full circle is 2 \xD7 22/7 \xD7 ${r} = ${full} cm.`, `Distance = ${m}/60 \xD7 ${full} = ${arc} cm.`]
     }),
-    check: ({ r, m }, a) => near2(a * 60 / m, 44 * r / 7)
+    check: ({ r, m }, a) => near3(a * 60 / m, 44 * r / 7)
   }),
   fam11({
     id: "g8.arc.table-angles",
@@ -26534,7 +27089,7 @@ var FAMILIES19 = [
       hints: ["Arc length grows in step with the angle. Look at how the rows are related.", "Or find the whole circumference, then the fraction of it."],
       steps: [`Whole circle: 2 \xD7 22/7 \xD7 ${r} = ${full} cm.`, `Arc for ${miss}\xB0: ${miss}/360 \xD7 ${full} = ${arc} cm.`]
     }),
-    check: ({ r, miss }, a) => near2(a * 360 / miss, 44 * r / 7)
+    check: ({ r, miss }, a) => near3(a * 360 / miss, 44 * r / 7)
   }),
   fam11({
     id: "g8.arc.spot-fraction",
@@ -26554,7 +27109,7 @@ var FAMILIES19 = [
         working: [
           { text: m === 0 ? `Circumference = 22/7 \xD7 ${r} = ${c1} cm` : `Circumference = 2 \xD7 22/7 \xD7 ${r} = ${c1} cm`, ok: c1 === c },
           { text: m === 1 ? `Fraction of the circle: 360 \xF7 ${th} = ${k}` : `Fraction of the circle: ${th} \xF7 360 = 1/${k}`, ok: f === 1 / k },
-          { text: m === 1 ? `Arc = ${c1} \xD7 ${k} = ${a3} cm` : `Arc = ${c1} \xF7 ${k} = ${a3} cm`, ok: near2(a3, m === 1 ? c1 * f : c1 * f) }
+          { text: m === 1 ? `Arc = ${c1} \xD7 ${k} = ${a3} cm` : `Arc = ${c1} \xF7 ${k} = ${a3} cm`, ok: near3(a3, m === 1 ? c1 * f : c1 * f) }
         ],
         fix: m === 0 ? "The circumference is 2 \xD7 \u03C0 \xD7 radius. Step 1 left out the 2, so everything after it is half the right size." : `The arc is ${th}/360 of the circle, a fraction smaller than 1. Step 2 turned it upside down, so the arc came out longer than the whole circle.`,
         steps: [`Circumference = 2 \xD7 22/7 \xD7 ${r} = ${c} cm.`, `Fraction = ${th}/360 = 1/${k}.`, `Arc = ${c} \xF7 ${k} = ${arc} cm.`]
@@ -26581,7 +27136,7 @@ var FAMILIES19 = [
       hints: ["Draw the sector. How many edges does it have, and which are straight?", "The curved edge is an arc: a fraction of the circumference."],
       steps: [`Arc: ${th}/360 \xD7 2 \xD7 22/7 \xD7 ${r} = ${arc} m.`, `Two straight edges: 2 \xD7 ${r} = ${2 * r} m.`, `Perimeter: ${arc} + ${2 * r} = ${per} m.`]
     }),
-    check: ({ r, th }, a) => near2(a - 2 * r, th * 44 * r / (7 * 360))
+    check: ({ r, th }, a) => near3(a - 2 * r, th * 44 * r / (7 * 360))
   }),
   fam11({
     id: "g8.sector.semicircle-radius",
@@ -26601,7 +27156,7 @@ var FAMILIES19 = [
       hints: ["Write the perimeter in terms of r: the curved edge plus the diameter.", "Curved edge = \u03C0 \xD7 r. Diameter = 2 \xD7 r. Together they make (\u03C0 + 2) \xD7 r."],
       steps: [`Perimeter = 22/7 \xD7 r + 2r = 36/7 \xD7 r.`, `So ${P} = 36/7 \xD7 r.`, `r = ${P} \xD7 7 \xF7 36 = ${r} m.`]
     }),
-    check: ({ r, P }, a) => near2(a * (22 / 7 + 2), P)
+    check: ({ r, P }, a) => near3(a * (22 / 7 + 2), P)
   }),
   // ================================================================ AREA
   fam11({
@@ -26642,7 +27197,7 @@ var FAMILIES19 = [
       hints: ["Split the window into two shapes: a rectangle and a half circle.", "The flat side of the half circle is as long as the width. How does the radius relate to that?"],
       steps: [`Rectangle: ${w} \xD7 ${h} = ${rect} cm\xB2.`, `Radius of the half circle: ${w} \xF7 2 = ${r} cm.`, `Half circle: 1/2 \xD7 22/7 \xD7 ${r} \xD7 ${r} = ${semi} cm\xB2.`, `Total: ${rect} + ${semi} = ${rect + semi} cm\xB2.`]
     }),
-    check: ({ w, h }, a) => near2(a, w * h + 0.5 * PI2 * (w / 2) ** 2)
+    check: ({ w, h }, a) => near3(a, w * h + 0.5 * PI2 * (w / 2) ** 2)
   }),
   fam11({
     id: "g8.area.double-radius",
@@ -26682,7 +27237,7 @@ var FAMILIES19 = [
       hints: ["What fraction of a full turn (360\xB0) does the sprinkler swing through?", "The area watered is that fraction of the area of the whole circle."],
       steps: [`Whole circle: 22/7 \xD7 ${r} \xD7 ${r} = ${PI2 * r * r} m\xB2.`, `Fraction: ${th}/360.`, `Area watered: ${th}/360 \xD7 ${PI2 * r * r} = ${A2} m\xB2.`]
     }),
-    check: ({ r, th }, a) => near2(a * 360 / th, 22 * r * r / 7)
+    check: ({ r, th }, a) => near3(a * 360 / th, 22 * r * r / 7)
   }),
   fam11({
     id: "g8.sector.find-angle",
@@ -26701,7 +27256,7 @@ var FAMILIES19 = [
       hints: ["Find the area of the whole circle first.", "The angle is the fraction (area lit \xF7 whole circle) of 360\xB0."],
       steps: [`Whole circle: 22/7 \xD7 ${r} \xD7 ${r} = 1,386 m\xB2.`, `Fraction lit: ${A2} \xF7 1,386.`, `Angle: that fraction \xD7 360 = ${th}\xB0.`]
     }),
-    check: ({ th, r, A: A2 }, a) => near2(A2 / 1386 * 360, a) && r === 21
+    check: ({ th, r, A: A2 }, a) => near3(A2 / 1386 * 360, a) && r === 21
   }),
   fam11({
     id: "g8.sector.fraction-why",
@@ -26817,7 +27372,7 @@ var FAMILIES19 = [
       hints: ["Count the pieces of metal: a curved side and how many circles?", "Curved side = 2 \xD7 \u03C0 \xD7 r \xD7 h. One circle = \u03C0 \xD7 r \xD7 r."],
       steps: [`Curved side: 2 \xD7 22/7 \xD7 ${r} \xD7 ${h} = ${side} cm\xB2.`, `Base, one circle: 22/7 \xD7 ${r} \xD7 ${r} = ${base} cm\xB2.`, `Total: ${side} + ${base} = ${base + side} cm\xB2.`]
     }),
-    check: ({ r, h }, a) => near2(a, PI2 * r * (r + 2 * h))
+    check: ({ r, h }, a) => near3(a, PI2 * r * (r + 2 * h))
   }),
   fam11({
     id: "g8.surface.tin-label",
@@ -26836,7 +27391,7 @@ var FAMILIES19 = [
       hints: ["Picture the label unrolled flat. What shape is it?", "Its length is the distance round the tin, and its width is the height of the tin."],
       steps: [`Length of the label: \u03C0 \xD7 ${d} = ${22 * d / 7} cm, the circumference.`, `Area: ${22 * d / 7} \xD7 ${h} = ${a} cm\xB2.`]
     }),
-    check: ({ d, h }, a) => near2(a / h, PI2 * d)
+    check: ({ d, h }, a) => near3(a / h, PI2 * d)
   }),
   fam11({
     id: "g8.prism.tent",
@@ -26856,7 +27411,7 @@ var FAMILIES19 = [
       hints: ["List the faces: two triangles, two sloping rectangles, and the floor.", "Each triangle is half of base \xD7 height. Each sloping side is the sloping length \xD7 the length of the tent."],
       steps: [`Two triangles: 2 \xD7 1/2 \xD7 ${2 * a} \xD7 ${h} = ${ends} m\xB2.`, `Two sloping sides: 2 \xD7 ${s} \xD7 ${L2} = ${slopes} m\xB2.`, `Floor: ${2 * a} \xD7 ${L2} = ${floor} m\xB2.`, `Total: ${ends} + ${slopes} + ${floor} = ${tot} m\xB2.`]
     }),
-    check: ({ a, h, s, L: L2 }, v) => near2(v, a * h * 2 + L2 * (2 * s + 2 * a))
+    check: ({ a, h, s, L: L2 }, v) => near3(v, a * h * 2 + L2 * (2 * s + 2 * a))
   }),
   fam11({
     id: "g8.prism.table-faces",
@@ -26877,7 +27432,7 @@ var FAMILIES19 = [
       hints: ['Work out the area of one of each kind of face. Then use the "How many" column.', "Area of a triangle = 1/2 \xD7 base \xD7 height. Area of a rectangle = length \xD7 width."],
       steps: [`Triangles: 2 \xD7 1/2 \xD7 ${b} \xD7 ${h} = ${b * h} cm\xB2.`, `Rectangles: ${b}\xD7${L2} + ${h}\xD7${L2} + ${s}\xD7${L2} = ${(b + h + s) * L2} cm\xB2.`, `Total: ${b * h} + ${(b + h + s) * L2} = ${tot} cm\xB2.`]
     }),
-    check: ({ b, h, s, L: L2 }, a) => near2(a, b * h + L2 * b + L2 * h + L2 * s)
+    check: ({ b, h, s, L: L2 }, a) => near3(a, b * h + L2 * b + L2 * h + L2 * s)
   }),
   fam11({
     id: "g8.prism.spot-working",
@@ -26993,7 +27548,7 @@ var FAMILIES19 = [
       hints: ["After year 1, the interest is added to the money. Year 2 starts with the bigger amount.", "Find the amount after year 1. Then find the interest on that amount."],
       steps: [`Year 1: ${P} \xD7 ${(100 + r) / 100} = ${one}.`, `Year 2: ${one} \xD7 ${(100 + r) / 100} = ${A2}.`, `The account holds ${sh(A2)}.`]
     }),
-    check: ({ r, P }, a) => near2(a * 100 * 100 / ((100 + r) * (100 + r)), P)
+    check: ({ r, P }, a) => near3(a * 100 * 100 / ((100 + r) * (100 + r)), P)
   }),
   fam11({
     id: "g8.money.compound-steps",
@@ -27059,7 +27614,7 @@ var FAMILIES19 = [
       hints: ["Find the value after year 1. Year 2 starts from that smaller value.", `Each year the motorcycle keeps ${100 - r}% of its value.`],
       steps: [`Year 1: ${P} \xD7 ${(100 - r) / 100} = ${one}.`, `Year 2: ${one} \xD7 ${(100 - r) / 100} = ${V}.`]
     }),
-    check: ({ P, r }, a) => near2(a * 1e4 / ((100 - r) * (100 - r)), P)
+    check: ({ P, r }, a) => near3(a * 1e4 / ((100 - r) * (100 - r)), P)
   }),
   fam11({
     id: "g8.money.depreciate-table",
@@ -27082,7 +27637,7 @@ var FAMILIES19 = [
       hints: ["First find the per cent by which the value falls: compare year 1 with new.", "Then take that per cent off the value after 2 years."],
       steps: [`${V1} \xF7 ${P} = ${V1 / P}, so the fridge keeps ${V1 / P * 100}% of its value each year.`, `After 3 years: ${V2} \xD7 ${V1 / P} = ${V3}.`]
     }),
-    check: ({ P, V1, V3 }, a) => near2(a * P * P, V1 * V1 * V1) && V3 > 0
+    check: ({ P, V1, V3 }, a) => near3(a * P * P, V1 * V1 * V1) && V3 > 0
   }),
   fam11({
     id: "g8.money.depreciate-why",
@@ -27239,7 +27794,7 @@ var FAMILIES19 = [
       hints: ["The longest side of a right-angled triangle is its hypotenuse. Find its length first.", "The hypotenuse is a diameter of the circle."],
       steps: [`Longest side: the square root of ${a}\xB2 + ${b}\xB2 = ${c} cm.`, `It is a diameter, so the radius is ${c} \xF7 2 = ${c / 2} cm.`]
     }),
-    check: ({ a, b }, r) => near2((2 * r) ** 2, a * a + b * b)
+    check: ({ a, b }, r) => near3((2 * r) ** 2, a * a + b * b)
   }),
   fam11({
     id: "g8.construct.which-centre-lines",
@@ -27523,7 +28078,7 @@ var FAMILIES19 = [
       hints: ["The ratio 1 : n says that 1 cm on the map stands for n cm in real life.", "There are 100 cm in 1 m and 1,000 m in 1 km."],
       steps: [`1 cm on the map stands for ${commas(n)} cm.`, `${commas(n)} \xF7 100 = ${commas(n / 100)} m.`, `${commas(n / 100)} \xF7 1,000 = ${km} km.`]
     }),
-    check: ({ n }, a) => near2(a * 1e5, n)
+    check: ({ n }, a) => near3(a * 1e5, n)
   }),
   fam11({
     id: "g8.scale.spot-ratio",
@@ -27591,7 +28146,7 @@ var FAMILIES19 = [
       hints: ["Change the real distance to cm. There are 100 cm in 1 m and 1,000 m in 1 km.", "Divide the real distance in cm by the map distance in cm to find what 1 cm stands for."],
       steps: [`${km} km = ${commas(km * 1e5)} cm.`, `1 cm on the map stands for ${commas(km * 1e5)} \xF7 ${cm} = ${commas(n)} cm.`, `The scale is 1 : ${commas(n)}.`]
     }),
-    check: ({ km, cm }, a) => near2(a * cm, km * 1e5)
+    check: ({ km, cm }, a) => near3(a * cm, km * 1e5)
   }),
   fam11({
     id: "g8.scale.two-legs",
@@ -27611,7 +28166,7 @@ var FAMILIES19 = [
       hints: ["Find the total length on the map first, or each part on its own.", `1 cm on this map stands for ${commas(n)} cm in real life. There are 100,000 cm in 1 km.`],
       steps: [`On the map: ${c1} + ${c2} = ${c1 + c2} cm.`, `Real distance: ${c1 + c2} \xD7 ${commas(n)} = ${commas((c1 + c2) * n)} cm.`, `In km: ${commas((c1 + c2) * n)} \xF7 100,000 = ${tot} km.`]
     }),
-    check: ({ c1, c2, n }, a) => near2((c1 + c2) * n / 1e5, a)
+    check: ({ c1, c2, n }, a) => near3((c1 + c2) * n / 1e5, a)
   }),
   fam11({
     id: "g8.scale.shamba-area",
@@ -27633,7 +28188,7 @@ var FAMILIES19 = [
       ],
       steps: [`Length: ${l} \xD7 ${s} = ${l * s} m.`, `Width: ${w} \xD7 ${s} = ${w * s} m.`, `Area: ${l * s} \xD7 ${w * s} = ${commas(A2)} m\xB2.`, `Hectares: ${commas(A2)} \xF7 10,000 = ${A2 / 1e4} ha.`]
     }),
-    check: ({ s, l, w }, v) => v[0] === l * s && v[1] === w * s && v[2] === v[0] * v[1] && near2(v[3] * 1e4, v[2])
+    check: ({ s, l, w }, v) => v[0] === l * s && v[1] === w * s && v[2] === v[0] * v[1] && near3(v[3] * 1e4, v[2])
   }),
   // ================================================================ SOLIDS
   fam11({
@@ -27672,7 +28227,7 @@ var FAMILIES19 = [
       hints: ["When the rectangle wraps round the tin, its long edge touches the whole edge of a circle.", "What is the distance round a circle called?"],
       steps: [`The long edge of the rectangle meets the edge of a circle all the way round.`, `So it equals the circumference: 2 \xD7 22/7 \xD7 ${r} = ${L2} cm.`]
     }),
-    check: ({ r }, a) => near2(a * 7 / 44, r)
+    check: ({ r }, a) => near3(a * 7 / 44, r)
   }),
   fam11({
     id: "g8.solids.cube-net-yes-no",
@@ -27773,7 +28328,7 @@ var FAMILIES19 = [
       hints: ["Imagine the side face folded flat, so the two faces make one flat rectangle.", "Now the shortest path is a straight line. Use Pythagoras' theorem."],
       steps: [`Flat out, the two distances from the edge add up: ${p} + ${q} = ${a} cm.`, `The sideways distance is ${r} cm.`, `Straight line: the square root of ${a}\xB2 + ${r}\xB2 = ${c} cm.`]
     }),
-    check: ({ a, r }, d) => near2(d * d, a * a + r * r)
+    check: ({ a, r }, d) => near3(d * d, a * a + r * r)
   }),
   fam11({
     id: "g8.solids.beetle-tin",
@@ -27792,7 +28347,7 @@ var FAMILIES19 = [
       hints: ["A and B are on the same rim, directly opposite each other. How far round is that?", "The rim is a circle. B is half way round it from A."],
       steps: [`The rim is a circle with circumference 2 \xD7 22/7 \xD7 ${r} = ${2 * d} cm.`, `Half way round: ${2 * d} \xF7 2 = ${d} cm.`]
     }),
-    check: ({ r }, a) => near2(2 * a, circ(r))
+    check: ({ r }, a) => near3(2 * a, circ(r))
   }),
   // ================================================================ DATA
   fam11({
@@ -27905,7 +28460,7 @@ var FAMILIES19 = [
       hints: ["Work out the total goals: each score times the number of matches with that score.", "Divide the total goals by the total number of matches."],
       steps: [`Total goals: ${f.map((c, x) => `${x}\xD7${c}`).join(" + ")} = ${tot}.`, `Total matches: ${f.join(" + ")} = ${n}.`, `Mean: ${tot} \xF7 ${n} = ${mean}.`]
     }),
-    check: ({ n, tot }, a) => near2(a * n, tot)
+    check: ({ n, tot }, a) => near3(a * n, tot)
   }),
   fam11({
     id: "g8.data.table-median",
@@ -28045,7 +28600,7 @@ var FAMILIES19 = [
       hints: ["First find the total number of tosses from the table.", "Probability = the times it landed on its side \xF7 the total number of tosses."],
       steps: [`Total tosses: ${side} + ${up} + ${down} = ${n}.`, `Experimental probability = ${side} \xF7 ${n} = ${round(side / n, 3)}.`]
     }),
-    check: ({ n, side }, a) => near2(a * n, side)
+    check: ({ n, side }, a) => near3(a * n, side)
   }),
   fam11({
     id: "g8.prob.spinner-expected",
@@ -28068,7 +28623,7 @@ var FAMILIES19 = [
       ],
       steps: [`Total spins: ${g} + ${red} + ${blue} = ${n}.`, `P(green) = ${g} \xF7 ${n} = ${round(g / n, 3)}.`, `In ${N2} spins: ${round(g / n, 3)} \xD7 ${N2} = ${round(g / n * N2, 1)}.`]
     }),
-    check: ({ n, g, N: N2 }, v) => v[0] === g + (n - g) && near2(v[1] * v[0], g) && near2(v[2], g * N2 / n)
+    check: ({ n, g, N: N2 }, v) => v[0] === g + (n - g) && near3(v[1] * v[0], g) && near3(v[2], g * N2 / n)
   }),
   fam11({
     id: "g8.prob.expected-times",
@@ -28124,8 +28679,8 @@ var shuffle4 = (a) => {
   }
   return r;
 };
-var gcd5 = (a, b) => b ? gcd5(b, a % b) : a;
-var lcm3 = (a, b) => a / gcd5(a, b) * b;
+var gcd6 = (a, b) => b ? gcd6(b, a % b) : a;
+var lcm3 = (a, b) => a / gcd6(a, b) * b;
 var isPrime = (n) => {
   if (n < 2) return false;
   for (let i = 2; i * i <= n; i++) if (n % i === 0) return false;
@@ -28133,8 +28688,8 @@ var isPrime = (n) => {
 };
 var distinct6 = (...v) => new Set(v).size === v.length;
 var circ2 = (closed) => closed ? "a closed circle" : "an open circle";
-var digitsOf2 = (n) => String(n).split("").map(Number);
-var digitSum = (n) => digitsOf2(n).reduce((s, x) => s + x, 0);
+var digitsOf3 = (n) => String(n).split("").map(Number);
+var digitSum = (n) => digitsOf3(n).reduce((s, x) => s + x, 0);
 var ONES3 = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
 var TENS4 = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
 var below1002 = (r) => r < 20 ? ONES3[r] : TENS4[Math.floor(r / 10)] + (r % 10 ? "-" + ONES3[r % 10] : "");
@@ -28157,12 +28712,12 @@ var words4 = (n) => {
 };
 var PLACES2 = ["units", "tens", "hundreds", "thousands", "ten thousands", "hundred thousands", "millions", "ten millions", "hundred millions"];
 var frac = (n, d) => {
-  const g = gcd5(Math.abs(n), d);
+  const g = gcd6(Math.abs(n), d);
   const a = n / g, b = d / g;
   return b === 1 ? String(a) : `${a}/${b}`;
 };
 var mixed = (n, d) => {
-  const g = gcd5(Math.abs(n), d);
+  const g = gcd6(Math.abs(n), d);
   const a = n / g, b = d / g;
   if (b === 1) return String(a);
   if (a > b) return `${Math.floor(a / b)} ${a % b}/${b}`;
@@ -28561,7 +29116,7 @@ var FAMILIES20 = [
     form: "word",
     draw: () => {
       const g = pick([4, 6, 8, 9, 12, 15]), u = randInt(2, 9), v = randInt(2, 9);
-      if (gcd5(u, v) !== 1 || u === v) return null;
+      if (gcd6(u, v) !== 1 || u === v) return null;
       const a = g * Math.min(u, v), b = g * Math.max(u, v);
       const L2 = lcm3(a, b), dif = b - a, pieces = a / g + b / g;
       return distinct6(g, L2, dif, pieces, a) && b <= 150 ? { a, b, g, L: L2, dif, pieces, p: person() } : null;
@@ -28573,7 +29128,7 @@ var FAMILIES20 = [
       hints: ["List the factors of each length, or divide both by small numbers.", "The greatest factor they share is the GCD."],
       steps: [`Factors of ${a} and ${b} that both share: the biggest is ${g}.`, `Check: ${a} \xF7 ${g} = ${a / g} and ${b} \xF7 ${g} = ${b / g}, with nothing left.`]
     }),
-    check: ({ a, b }, x) => a % x === 0 && b % x === 0 && gcd5(a / x, b / x) === 1
+    check: ({ a, b }, x) => a % x === 0 && b % x === 0 && gcd6(a / x, b / x) === 1
   }),
   fam12({
     id: "g7.factors.hcf-gift-boxes",
@@ -28583,9 +29138,9 @@ var FAMILIES20 = [
     form: "table",
     draw: () => {
       const g = pick([4, 5, 6, 8, 10]), u = randInt(2, 9), v = randInt(2, 9), w = randInt(2, 9);
-      if (!distinct6(u, v, w) || gcd5(gcd5(u, v), w) !== 1) return null;
+      if (!distinct6(u, v, w) || gcd6(gcd6(u, v), w) !== 1) return null;
       const nums = [g * u, g * v, g * w];
-      const gab = gcd5(nums[0], nums[1]), mn = Math.min(...nums), per = nums.reduce((s, x) => s + x, 0) / g;
+      const gab = gcd6(nums[0], nums[1]), mn = Math.min(...nums), per = nums.reduce((s, x) => s + x, 0) / g;
       return distinct6(g, gab, mn, per) ? { g, nums, gab, mn, per, items: shuffle4(["Bars of soap", "Packets of tea", "Boxes of matches", "Tubes of toothpaste", "Packets of sugar"]).slice(0, 3), p: person() } : null;
     },
     make: ({ g, nums, gab, mn, per, items, p }) => ({
@@ -28597,7 +29152,7 @@ var FAMILIES20 = [
       hints: ["The number of boxes must divide all three numbers exactly.", "Find the greatest number that divides all three."],
       steps: [`The greatest number that divides ${nums.join(", ")} exactly is ${g}.`, `Each box then has ${nums.map((n) => n / g).join(", ")} of the items.`]
     }),
-    check: ({ nums }, a) => nums.every((n) => n % a === 0) && nums.every((n) => gcd5(n / a, nums[0] / a) >= 1) && gcd5(gcd5(nums[0] / a, nums[1] / a), nums[2] / a) === 1
+    check: ({ nums }, a) => nums.every((n) => n % a === 0) && nums.every((n) => gcd6(n / a, nums[0] / a) >= 1) && gcd6(gcd6(nums[0] / a, nums[1] / a), nums[2] / a) === 1
   }),
   fam12({
     id: "g7.factors.lcm-matatus",
@@ -28607,7 +29162,7 @@ var FAMILIES20 = [
     form: "word",
     draw: () => {
       const a = pick([6, 8, 10, 12, 15, 18, 20]), b = pick([6, 8, 9, 10, 12, 15, 18, 20, 24]);
-      if (a === b || gcd5(a, b) === 1 || a % b === 0 || b % a === 0) return null;
+      if (a === b || gcd6(a, b) === 1 || a % b === 0 || b % a === 0) return null;
       const L2 = lcm3(a, b);
       return L2 <= 120 && distinct6(L2, a * b, a + b, Math.max(a, b)) ? { a, b, L: L2, town: pick(["Thika", "Nakuru", "Kisumu", "Eldoret", "Machakos"]) } : null;
     },
@@ -28618,7 +29173,7 @@ var FAMILIES20 = [
       hints: ["List the times when the first matatu leaves: multiples of its gap.", "Find the first time that is also on the second list."],
       steps: [`Multiples of ${a}: ${[1, 2, 3, 4, 5, 6].map((i) => a * i).join(", ")} ...`, `Multiples of ${b}: ${[1, 2, 3, 4, 5, 6].map((i) => b * i).join(", ")} ...`, `The first time on both lists is ${L2} minutes.`]
     }),
-    check: ({ a, b }, x) => x % a === 0 && x % b === 0 && gcd5(x / a, x / b) === 1
+    check: ({ a, b }, x) => x % a === 0 && x % b === 0 && gcd6(x / a, x / b) === 1
   }),
   fam12({
     id: "g7.factors.lcm-product-why",
@@ -28628,7 +29183,7 @@ var FAMILIES20 = [
     form: "why",
     draw: () => {
       const a = pick([4, 6, 8, 9, 10, 12, 14, 15]), b = pick([6, 9, 10, 12, 14, 15, 18, 20]);
-      if (a >= b || gcd5(a, b) === 1 || b % a === 0) return null;
+      if (a >= b || gcd6(a, b) === 1 || b % a === 0) return null;
       return { a, b, L: lcm3(a, b), p: person() };
     },
     make: ({ a, b, L: L2, p }) => ({
@@ -28663,7 +29218,7 @@ var FAMILIES20 = [
       hints: ["Find the LCM of the first two numbers.", "Then find the LCM of that answer and the third number."],
       steps: [`LCM of ${v[0]} and ${v[1]} is ${L22}.`, `LCM of ${L22} and ${v[2]} is ${L2}.`]
     }),
-    check: ({ v }, x) => v.every((n) => x % n === 0) && gcd5(gcd5(x / v[0], x / v[1]), x / v[2]) === 1
+    check: ({ v }, x) => v.every((n) => x % n === 0) && gcd6(gcd6(x / v[0], x / v[1]), x / v[2]) === 1
   }),
   // ======================================================================
   // FRACTIONS
@@ -28679,7 +29234,7 @@ var FAMILIES20 = [
         const a = randInt(1, d - 1);
         return { a, d };
       });
-      if (fs.some((f) => gcd5(f.a, f.d) !== 1)) return null;
+      if (fs.some((f) => gcd6(f.a, f.d) !== 1)) return null;
       const vals = fs.map((f) => f.a / f.d).sort((x, y) => x - y);
       if (vals[2] - vals[1] < 0.02 || vals[1] - vals[0] < 0.02) return null;
       const ps = [];
@@ -28752,7 +29307,7 @@ var FAMILIES20 = [
     form: "why",
     draw: () => {
       const b = pick([3, 4, 5, 7]), a = randInt(2, b - 1);
-      return gcd5(a, b) === 1 ? { w: randInt(1, 4), a, b, p: person() } : null;
+      return gcd6(a, b) === 1 ? { w: randInt(1, 4), a, b, p: person() } : null;
     },
     make: ({ w, a, b, p }) => {
       const n = w * b + a;
@@ -28808,7 +29363,7 @@ var FAMILIES20 = [
       question: `A water tank is ${a}/${b} full. ${p.name} divides the water equally among ${k} drums. What fraction of the whole tank is in each drum?`,
       options: shuffle4([{ text: right, right: true }, { text: w[0], right: false, why: "That multiplies by the number of drums. Sharing equally makes each part smaller." }, { text: w[1], right: false, why: "The denominator is not found by adding. Dividing by a number multiplies the denominator." }, { text: w[2], right: false, why: "That turns the fraction upside down and multiplies. Divide the fraction by the number of drums." }]),
       hints: ["Sharing equally into drums is dividing the fraction by the number of drums.", "Dividing a fraction by a whole number is the same as multiplying by one over that number."],
-      steps: [`${a}/${b} \xF7 ${k} = ${a}/${b} \xD7 1/${k}.`, `= ${a}/${b * k}${gcd5(a, b * k) > 1 ? ` = ${right}` : ""}.`]
+      steps: [`${a}/${b} \xF7 ${k} = ${a}/${b} \xD7 1/${k}.`, `= ${a}/${b * k}${gcd6(a, b * k) > 1 ? ` = ${right}` : ""}.`]
     })
   }),
   fam12({
@@ -28971,17 +29526,17 @@ var FAMILIES20 = [
     form: "steps",
     draw: () => {
       const L2 = pick([3.2, 4.5, 2.4, 5.5, 3.6, 4.8]), w = pick([2.5, 1.5, 2.4, 3.5, 2.2]), pr = pick([40, 60, 80, 100, 120]);
-      const area = round(L2 * w, 2), cost = round(area * pr, 2);
-      return L2 !== w && Number.isInteger(cost) && distinct6(area, round(2 * (L2 + w), 2), round(L2 + w, 2)) ? { L: L2, w, pr, area, cost, per: round(2 * (L2 + w), 2), p: person() } : null;
+      const area2 = round(L2 * w, 2), cost = round(area2 * pr, 2);
+      return L2 !== w && Number.isInteger(cost) && distinct6(area2, round(2 * (L2 + w), 2), round(L2 + w, 2)) ? { L: L2, w, pr, area: area2, cost, per: round(2 * (L2 + w), 2), p: person() } : null;
     },
-    make: ({ L: L2, w, pr, area, cost, per, p }) => ({
+    make: ({ L: L2, w, pr, area: area2, cost, per, p }) => ({
       question: `${p.name} has a rectangular garden ${L2} m long and ${w} m wide.`,
       parts: [
-        { prompt: "What is the area of the garden, in square metres?", answer: area, unit: "m\xB2", hint: "Area of a rectangle = length \xD7 width.", wrong: [[round(L2 + w, 2), "Area is found by multiplying, not adding."], [per, "That is the distance around the garden, the perimeter."], [round(area * 10, 2), "Count the decimal places in both numbers: the answer has that many in total."]] },
-        { prompt: `Grass costs ${sh(pr)} for each square metre. What is the cost of covering the garden with grass? Answer in shillings.`, answer: cost, hint: "Cost = area \xD7 price for each square metre.", wrong: [[round(L2 * pr, 2), "Use the whole area, not only the length."], [round(area + pr, 2), "The price is for each square metre. Multiply."], [round(per * pr, 2), "That uses the perimeter. Grass covers the area."]] },
-        { prompt: "What length of fence goes all the way round the garden, in metres?", answer: per, unit: "m", hint: "Add all four sides, or double length + width.", wrong: [[round(L2 + w, 2), "That is only two sides."], [area, "That is the area. The fence goes round the edge."], [round(L2 * 2 + w, 2), "Two sides are long and two are short."]] }
+        { prompt: "What is the area of the garden, in square metres?", answer: area2, unit: "m\xB2", hint: "Area of a rectangle = length \xD7 width.", wrong: [[round(L2 + w, 2), "Area is found by multiplying, not adding."], [per, "That is the distance around the garden, the perimeter."], [round(area2 * 10, 2), "Count the decimal places in both numbers: the answer has that many in total."]] },
+        { prompt: `Grass costs ${sh(pr)} for each square metre. What is the cost of covering the garden with grass? Answer in shillings.`, answer: cost, hint: "Cost = area \xD7 price for each square metre.", wrong: [[round(L2 * pr, 2), "Use the whole area, not only the length."], [round(area2 + pr, 2), "The price is for each square metre. Multiply."], [round(per * pr, 2), "That uses the perimeter. Grass covers the area."]] },
+        { prompt: "What length of fence goes all the way round the garden, in metres?", answer: per, unit: "m", hint: "Add all four sides, or double length + width.", wrong: [[round(L2 + w, 2), "That is only two sides."], [area2, "That is the area. The fence goes round the edge."], [round(L2 * 2 + w, 2), "Two sides are long and two are short."]] }
       ],
-      steps: [`Area: ${L2} \xD7 ${w} = ${area} m\xB2.`, `Cost: ${area} \xD7 ${pr} = ${commas(cost)}.`, `Fence: 2 \xD7 (${L2} + ${w}) = ${per} m.`]
+      steps: [`Area: ${L2} \xD7 ${w} = ${area2} m\xB2.`, `Cost: ${area2} \xD7 ${pr} = ${commas(cost)}.`, `Fence: 2 \xD7 (${L2} + ${w}) = ${per} m.`]
     }),
     check: ({ L: L2, w, pr }, v) => Math.abs(v[0] / L2 - w) < 1e-9 && Math.abs(v[1] / pr - v[0]) < 1e-9 && Math.abs(v[2] / 2 - (L2 + w)) < 1e-9
   }),
@@ -29037,17 +29592,17 @@ var FAMILIES20 = [
     form: "steps",
     draw: () => {
       const s = pick([1.2, 1.5, 2.5, 3.5, 0.8, 4.5]), pr = pick([100, 120, 160, 200]);
-      const area = round(s * s, 4), cost = round(area * pr, 2);
-      return Number.isInteger(cost) ? { s, pr, area, cost, p: person() } : null;
+      const area2 = round(s * s, 4), cost = round(area2 * pr, 2);
+      return Number.isInteger(cost) ? { s, pr, area: area2, cost, p: person() } : null;
     },
-    make: ({ s, pr, area, cost, p }) => ({
+    make: ({ s, pr, area: area2, cost, p }) => ({
       question: `${p.name} has a square vegetable garden. Each side is ${s} m long.`,
       parts: [
-        { prompt: "What is the area of the garden, in square metres?", answer: area, unit: "m\xB2", hint: `Area of a square = side \xD7 side, so square ${s}.`, wrong: [[round(s * 2, 2), `That doubles the side. Squaring means ${s} \xD7 ${s}.`], [round(s * 4, 2), "That is the perimeter. Area is side \xD7 side."], [round(area * 10, 3), "Check the decimal point. The product of two decimals has as many decimal places as both together."]] },
-        { prompt: `Topsoil costs ${sh(pr)} for each square metre. How much does it cost to cover the garden? Answer in shillings.`, answer: cost, hint: "Cost = area \xD7 price for each square metre.", wrong: [[round(s * pr, 2), "Use the area, not the length of a side."], [round(area + pr, 2), "The price is for each square metre. Multiply."], [round(s * 4 * pr, 2), "That uses the perimeter. Topsoil covers the area."]] },
-        { prompt: `${p.name} makes a new square garden with sides twice as long. What is the area of the new garden, in square metres?`, answer: round(4 * area, 4), unit: "m\xB2", hint: "The new side is double the old side. Square it.", wrong: [[round(2 * area, 4), "Doubling the side makes the area more than double. Square the new side."], [round(area + 2 * s, 4), "Work out the new side first, then square it."], [round(area * 8, 4), "The area grows by the square of 2, not by the cube."]] }
+        { prompt: "What is the area of the garden, in square metres?", answer: area2, unit: "m\xB2", hint: `Area of a square = side \xD7 side, so square ${s}.`, wrong: [[round(s * 2, 2), `That doubles the side. Squaring means ${s} \xD7 ${s}.`], [round(s * 4, 2), "That is the perimeter. Area is side \xD7 side."], [round(area2 * 10, 3), "Check the decimal point. The product of two decimals has as many decimal places as both together."]] },
+        { prompt: `Topsoil costs ${sh(pr)} for each square metre. How much does it cost to cover the garden? Answer in shillings.`, answer: cost, hint: "Cost = area \xD7 price for each square metre.", wrong: [[round(s * pr, 2), "Use the area, not the length of a side."], [round(area2 + pr, 2), "The price is for each square metre. Multiply."], [round(s * 4 * pr, 2), "That uses the perimeter. Topsoil covers the area."]] },
+        { prompt: `${p.name} makes a new square garden with sides twice as long. What is the area of the new garden, in square metres?`, answer: round(4 * area2, 4), unit: "m\xB2", hint: "The new side is double the old side. Square it.", wrong: [[round(2 * area2, 4), "Doubling the side makes the area more than double. Square the new side."], [round(area2 + 2 * s, 4), "Work out the new side first, then square it."], [round(area2 * 8, 4), "The area grows by the square of 2, not by the cube."]] }
       ],
-      steps: [`${s} \xD7 ${s} = ${area} m\xB2.`, `${area} \xD7 ${pr} = ${commas(cost)}.`, `New side ${round(2 * s, 2)} m, and ${round(2 * s, 2)}\xB2 = ${round(4 * area, 4)} m\xB2.`]
+      steps: [`${s} \xD7 ${s} = ${area2} m\xB2.`, `${area2} \xD7 ${pr} = ${commas(cost)}.`, `New side ${round(2 * s, 2)} m, and ${round(2 * s, 2)}\xB2 = ${round(4 * area2, 4)} m\xB2.`]
     }),
     check: ({ s, pr }, v) => Math.abs(v[0] / s - s) < 1e-9 && Math.abs(v[1] / pr - v[0]) < 1e-9 && Math.abs(v[2] / v[0] - 4) < 1e-9
   }),
@@ -29060,17 +29615,17 @@ var FAMILIES20 = [
     draw: () => ({ dp: pick([1, 2]), a: randInt(2, 9), p: person() }),
     make: ({ dp: dp3, a, p }) => {
       const x = round(a / 10 ** dp3, 3), shownDp = dp3, num4 = a * a, shown = round(num4 / 10 ** shownDp, 6);
-      const fmt = (v) => String(round(v, 6));
+      const fmt2 = (v) => String(round(v, 6));
       return {
-        question: `${p.name} works out the square of ${fmt(x)}. Here is ${p.her} working. Which step has the mistake?`,
+        question: `${p.name} works out the square of ${fmt2(x)}. Here is ${p.her} working. Which step has the mistake?`,
         working: [
           { text: `Ignore the point: ${a} \xD7 ${a} = ${num4}.`, ok: num4 === a * a },
-          { text: `${fmt(x)} has ${dp3} decimal place${dp3 > 1 ? "s" : ""}, so its square has ${shownDp} decimal place${shownDp > 1 ? "s" : ""}.`, ok: shownDp === 2 * dp3 },
-          { text: `Put the point in ${num4}, with ${shownDp} decimal place${shownDp > 1 ? "s" : ""}: ${fmt(shown)}.`, ok: shown === round(num4 / 10 ** shownDp, 6) },
-          { text: `So (${fmt(x)})\xB2 = ${fmt(shown)}.`, ok: true }
+          { text: `${fmt2(x)} has ${dp3} decimal place${dp3 > 1 ? "s" : ""}, so its square has ${shownDp} decimal place${shownDp > 1 ? "s" : ""}.`, ok: shownDp === 2 * dp3 },
+          { text: `Put the point in ${num4}, with ${shownDp} decimal place${shownDp > 1 ? "s" : ""}: ${fmt2(shown)}.`, ok: shown === round(num4 / 10 ** shownDp, 6) },
+          { text: `So (${fmt2(x)})\xB2 = ${fmt2(shown)}.`, ok: true }
         ],
         fix: `Squaring multiplies the number by itself, so the decimal places double: ${dp3} + ${dp3} = ${2 * dp3}. The square has ${2 * dp3} decimal places.`,
-        steps: [`${a} \xD7 ${a} = ${num4}.`, `${2 * dp3} decimal places: ${fmt(round(num4 / 10 ** (2 * dp3), 6))}.`]
+        steps: [`${a} \xD7 ${a} = ${num4}.`, `${2 * dp3} decimal places: ${fmt2(round(num4 / 10 ** (2 * dp3), 6))}.`]
       };
     }
   }),
@@ -29082,7 +29637,7 @@ var FAMILIES20 = [
     form: "direct",
     draw: () => {
       const d = randInt(3, 9), n = randInt(2, d - 1);
-      if (gcd5(n, d) !== 1) return null;
+      if (gcd6(n, d) !== 1) return null;
       const right = frac(n * n, d * d), w = [frac(n * n, d), frac(n, d * d), frac(2 * n, d)];
       return distinct6(right, ...w) ? { n, d, right, w } : null;
     },
@@ -29091,7 +29646,7 @@ var FAMILIES20 = [
       story: false,
       options: shuffle4([{ text: right, right: true }, { text: w[0], right: false, why: "Only the top was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w[1], right: false, why: "Only the bottom was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w[2], right: false, why: "That doubles the top. Squaring means multiplying the fraction by itself." }]),
       hints: ["The square of a number is the number times itself.", "Multiply the numerators, and multiply the denominators."],
-      steps: [`(${n}/${d})\xB2 = ${n}/${d} \xD7 ${n}/${d}.`, `= ${n * n}/${d * d}${gcd5(n * n, d * d) > 1 ? ` = ${right}` : ""}.`]
+      steps: [`(${n}/${d})\xB2 = ${n}/${d} \xD7 ${n}/${d}.`, `= ${n * n}/${d * d}${gcd6(n * n, d * d) > 1 ? ` = ${right}` : ""}.`]
     })
   }),
   fam12({
@@ -33254,8 +33809,8 @@ function checkAnswerMatch(userAnswer, problem) {
   if (accepts2.some((a) => mathValue(a) == null && algebraicallyEqual(userAnswer, a, problem?.question))) return true;
   if (/simplest form|simplify|lowest terms/i.test(`${problem.instruction || ""} ${problem.question || ""}`)) {
     const f = userAnswer.toString().trim().replace(/[−–—]/g, "-").match(/^(?:-?\d+\s+)?(-?\d+)\s*\/\s*(\d+)$/);
-    const gcd6 = (m, n) => n ? gcd6(n, m % n) : Math.abs(m);
-    if (f && gcd6(Number(f[1]), Number(f[2])) > 1) return false;
+    const gcd7 = (m, n) => n ? gcd7(n, m % n) : Math.abs(m);
+    if (f && gcd7(Number(f[1]), Number(f[2])) > 1) return false;
   }
   const userVal = mathValue(userAnswer, true);
   const givenUnit = unitAfterNumber(userAnswer);
@@ -33484,7 +34039,7 @@ var PRICES3 = {
 };
 var speechCost = (chars, p = PRICES3) => Math.max(0, chars) * p.ttsUsdPerChar;
 var listenCost = (seconds, p = PRICES3) => Math.max(0, seconds) / 60 * p.sttUsdPerMinute;
-var spokenChars = (steps) => (steps || []).filter((s) => s.cmd === "say").reduce((n, s) => n + String(s.text).length, 0);
+var spokenChars = (steps2) => (steps2 || []).filter((s) => s.cmd === "say").reduce((n, s) => n + String(s.text).length, 0);
 
 // src/voice-tutor/tutorTurn.js
 var reply = (status, body) => ({ status, body });
@@ -33557,20 +34112,22 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   const snapshots = Math.max(0, Math.min(999, Number(body?.snapshots_taken) || 0));
   const inkCellsIn = Array.isArray(body?.ink_cells) ? body.ink_cells.slice(0, 6).map(String) : [];
   const vopts = { board, allowedMis, skills, snapshots, inkCells: inkCellsIn };
+  const handled = new Set(board.filter((b) => b && b.cmd === "figure" && Array.isArray(b.controls) && b.controls.length).map((b) => b.id));
+  const figures = (Array.isArray(body?.figures) ? body.figures : []).filter((f) => f && handled.has(f.id) && typeof f.note === "string").slice(0, 3).map((f) => ({ id: f.id, note: cleanText(f.note.slice(0, 800)).text.slice(0, 600) }));
   let picture = null;
   const voice = body?.voice === true;
   const audioS = Math.max(0, Math.min(MAX_AUDIO_S, Number(body?.audio_in_s) || 0));
   const listenUsd = listenCost(audioS);
   const meta = () => ({ type: "meta", target: pick2.target, prerequisite: pick2.prerequisite, marked, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null } });
-  const authored = (steps, guard, spent2) => ({ status: 200, go: async (emit) => {
+  const authored = (steps2, guard, spent2) => ({ status: 200, go: async (emit) => {
     emit(meta());
-    const v = validateTurn({ steps }, vopts);
+    const v = validateTurn({ steps: steps2 }, vopts);
     for (const st of v.steps) emit({ type: "step", step: await sealAsk(st, []) });
     const voiceUsd = await meterVoice(v.steps);
     emit({ type: "end", guard, dropped: v.dropped, notes: v.notes, cost_usd: voiceUsd.usd, spent: spent2 ? addSpent(spent2, voiceUsd.usd) : null, voice: voiceUsd, model: null });
   } });
-  const meterVoice = async (steps) => {
-    const chars = voice ? spokenChars(steps) : 0;
+  const meterVoice = async (steps2) => {
+    const chars = voice ? spokenChars(steps2) : 0;
     const usd = speechCost(chars) + listenUsd;
     if (chars || audioS) await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: "voice", cost_usd: usd, guard: ["voice"], dropped_steps: 0, tts_chars: chars, audio_in_s: audioS });
     return { chars, audio_s: audioS, usd };
@@ -33628,7 +34185,8 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     heard: typeof body?.heard === "string" ? body.heard.slice(0, 400) : null,
     wantsAnswer: screen2.wantsAnswer,
     bankLines: bankLines(bank),
-    picture
+    picture,
+    figures
   });
   const history = Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === "string") : [];
   const request = buildRequest({ model: settings.model, effort: settings.effort, lib, history, message, context, names, image });
@@ -33654,7 +34212,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       guard.push(why);
       for (const st of screen2.wantsAnswer && !saidAny ? [say(ANSWER_REPLY), handBack] : saidAny ? RECOVER_TURN : FALLBACK_TURN) await send(st);
     };
-    const visible = (steps) => steps.filter((x) => ["say", "write_text", "write_math", "ask"].includes(x.cmd));
+    const visible = (steps2) => steps2.filter((x) => ["say", "write_text", "write_math", "ask"].includes(x.cmd));
     const handle = async (raw) => {
       if (closed) return;
       raws.push(raw && !raw.__bad ? raw : { cmd: "__bad" });

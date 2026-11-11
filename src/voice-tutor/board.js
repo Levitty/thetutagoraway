@@ -13,9 +13,10 @@
 // ============================================================================
 import { DRAWN, MAX_BOARD_ITEMS, cellsOf, resolveSlot, partsOf } from './commands.js';
 import { emptyInk, inkCells } from './ink.js';
+import { act } from '../draw/observe.js';
 
 export const emptyBoard = () => ({
-  items: {}, order: [], marks: [], pointer: null, ask: null, phase: null,
+  items: {}, order: [], marks: [], pointer: null, ask: null, phase: null, play: {},
   diagnoses: [], snapshots: [], childInk: emptyInk(), ended: null, log: [],
 });
 
@@ -23,11 +24,15 @@ const usedCells = (board) => new Set(board.order.flatMap((id) => cellsOf(board.i
 
 /** Tutor items as validateTurn wants them: [{ id, cmd, slot, ... }]. */
 export const boardSummary = (board) => board.order.map((id) => {
-  const { at, ...rest } = board.items[id];
+  const { at, rect, rectH, ...rest } = board.items[id];
   return rest;
 });
 
-export function applyStep(board, step, at = 0, H = 640) {
+/**
+ * `opts.place(step)`: the frame the layout pass gives a new drawn item (compose.js placeItem), kept on the
+ * item with the board height it was made for, so drawn ink never moves while the sheet keeps its size.
+ */
+export function applyStep(board, step, at = 0, H = 640, opts = {}) {
   const b = { ...board, log: board.log };
   const refuse = (reason) => ({ ...b, log: [...b.log, { at, cmd: step.cmd, reason }] });
   if (DRAWN.includes(step.cmd)) {
@@ -35,7 +40,9 @@ export function applyStep(board, step, at = 0, H = 640) {
     if (b.order.length >= MAX_BOARD_ITEMS) return refuse('the board is full');
     const slot = resolveSlot(usedCells(b), step.slot, new Set(inkCells(b.childInk, H)));
     if (!slot) return refuse('no free slot');
-    return { ...b, items: { ...b.items, [step.id]: { ...step, slot, at } }, order: [...b.order, step.id] };
+    const rect = opts.place ? opts.place({ ...step, slot }) : null;
+    const item = { ...step, slot, at, ...(rect ? { rect, rectH: H } : {}) };
+    return { ...b, items: { ...b.items, [step.id]: item }, order: [...b.order, step.id] };
   }
   switch (step.cmd) {
     case 'highlight': case 'underline': {
@@ -56,12 +63,13 @@ export function applyStep(board, step, at = 0, H = 640) {
         ...b, items, order: b.order.filter((id) => !gone.has(id)),
         marks: b.marks.filter((m) => !gone.has(m.target)),
         pointer: b.pointer && gone.has(b.pointer.target) ? null : b.pointer,
+        play: Object.fromEntries(Object.entries(b.play || {}).filter(([id]) => !gone.has(id))),
       };
     }
     case 'clear':
       // Snapshot first, then tutor ink only. childInk is left exactly as it was.
       return {
-        ...b, items: {}, order: [], marks: [], pointer: null,
+        ...b, items: {}, order: [], marks: [], pointer: null, play: {},
         snapshots: [...b.snapshots, { at, items: b.items, order: b.order, marks: b.marks }],
       };
     case 'ask': {
@@ -77,6 +85,19 @@ export function applyStep(board, step, at = 0, H = 640) {
 }
 
 /**
+ * The child handles a figure (taps a part, drags a marker, turns the protractor): the figure's own
+ * rules decide (src/draw/observe.js act), and the app marks the goal. The tutor's ink is not changed.
+ */
+export function playFigure(board, id, control, value, t = 0) {
+  const item = board.items[id];
+  if (!item || item.cmd !== 'figure') return board;
+  const before = board.play?.[id];
+  const next = act(item, before, control, value, t);
+  if (next === before) return board;
+  return { ...board, play: { ...(board.play || {}), [id]: next } };
+}
+
+/**
  * The board's height on an upright phone (it is always 1000 wide): about 36% of the
  * screen's height, so the conversation keeps room for the current sentence whole.
  * Between 600 and 1000; wide screens use 640.
@@ -86,4 +107,4 @@ export const portraitBoardH = (w, h) => Math.max(600, Math.min(1000, Math.round(
 /** Progress (0..1) of a stroke that began at `at`, at time `now`. */
 export const drawProgress = (at, dur, now) => (dur <= 0 || now == null ? 1 : Math.max(0, Math.min(1, (now - at) / dur)));
 
-export default { emptyBoard, applyStep, boardSummary, drawProgress };
+export default { emptyBoard, applyStep, boardSummary, drawProgress, playFigure };
