@@ -22,7 +22,7 @@
 //      then an authored line;
 //   8. questions sealed, cost metered, the turn returned.
 // ============================================================================
-import { validateTurn, turnProblems } from './commands.js';
+import { validateTurn, turnProblems, MAX_SPOKEN_WORDS } from './commands.js';
 import { pickTarget, lessonSkills, allowedMisconceptions } from './fractions.js';
 import { capCheck } from './session.js';
 import { screenChild, checkTurnText, MAX_CHILD_CHARS, ANSWER_REPLY } from './guard.js';
@@ -31,6 +31,7 @@ import { probeBank, bankLines, markItem } from './probes.js';
 import { seal, unseal } from './seal.js';
 import { costOf, PRICES } from '../rocket/guide.js';
 import { validateSnapshot, imageTokens, CHECK_GAP_MS } from './snapshot.js';
+import { speechCost, listenCost, spokenChars } from './providers/voice.js';
 
 const reply = (status, body) => ({ status, body });
 const say = (text) => ({ cmd: 'say', text });
@@ -42,6 +43,9 @@ export const DISCLOSURE = 'Hello. I am HOREB, an AI tutor. I am a computer progr
 export const NO_PICTURE_TURN = [say('I cannot look at pictures just now.'), say('Please type your answer for me.'), { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }];
 // A rough price for one turn before it is made, so a picture is never sent past a cap.
 export const TURN_ESTIMATE_USD = 0.02;
+// With voice: the tutor's words (about 250 characters a turn) are spoken, and the child's speech heard.
+export const VOICE_TURN_CHARS_ESTIMATE = 250;
+export const MAX_AUDIO_S = 90;
 export const FALLBACK_TURN = [say('Let me think about that a different way.'), say('Tell me what you think the first step is.'), handBack];
 export const WIND_DOWN = [
   { cmd: 'set_phase', phase: 'wrapup' },
@@ -118,9 +122,22 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
   const inkCellsIn = Array.isArray(body?.ink_cells) ? body.ink_cells.slice(0, 6).map(String) : [];
   const vopts = { board, allowedMis, skills, snapshots, inkCells: inkCellsIn };
   let picture = null; // { id, reason, attached, note } for the reply and the context
+  // The voice: the child's speech since the last turn (seconds the microphone sent, as the page
+  // measured them, at most 90), and whether the tutor's words will be spoken. Every reply from
+  // here on is priced with its speech, guard replies included.
+  const voice = body?.voice === true;
+  const audioS = Math.max(0, Math.min(MAX_AUDIO_S, Number(body?.audio_in_s) || 0));
+  const listenUsd = listenCost(audioS);
+  const voiceMeter = { voice, audioS, listenUsd };
   const out = async (steps, extra = {}) => {
     const v = validateTurn({ steps }, vopts);
-    return reply(200, { steps: await sealAsks(v.steps, extra.bank || []), dropped: extra.dropped || v.dropped, notes: extra.notes || v.notes, marked, target: pick.target, prerequisite: pick.prerequisite, guard: extra.guard || [], cost_usd: extra.cost || 0, spent: extra.spent || null, model: extra.model || null, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null } });
+    if (voiceMeter) {
+      const chars = voiceMeter.voice ? spokenChars(v.steps) : 0;
+      const usd = speechCost(chars) + voiceMeter.listenUsd;
+      if (chars || voiceMeter.audioS) await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: 'voice', cost_usd: usd, guard: ['voice'], dropped_steps: 0, tts_chars: chars, audio_in_s: voiceMeter.audioS });
+      extra = { ...extra, cost: (extra.cost || 0) + usd, spent: extra.spent ? addSpent(extra.spent, usd) : extra.spent, voice: { chars, audio_s: voiceMeter.audioS, usd } };
+    }
+    return reply(200, { steps: await sealAsks(v.steps, extra.bank || []), dropped: extra.dropped || v.dropped, notes: extra.notes || v.notes, marked, target: pick.target, prerequisite: pick.prerequisite, guard: extra.guard || [], cost_usd: extra.cost || 0, spent: extra.spent || null, model: extra.model || null, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null }, voice: extra.voice || null });
   };
   // 8 (shared). The hidden half of each question is sealed; the browser gets the public half.
   const sealAsks = async (steps, bank) => Promise.all(steps.map(async (s) => {
@@ -156,9 +173,9 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
     else if (spent.lastSnapshotAt && now - Date.parse(spent.lastSnapshotAt) < CHECK_GAP_MS) picture = { id, reason: snap.reason, attached: false, why: 'snapshot-throttled', note: null };
     else { image = snap; picture = { id: snap.id, reason: snap.reason, attached: true }; }
   }
-  // Caps, counting what this turn will cost (its picture included) before it is made.
+  // Caps, counting what this turn will cost (its picture and its voice included) before it is made.
   const imageUsd = image ? (imageTokens(image.w, image.h) * (PRICES[settings.model]?.input ?? 2)) / 1e6 : 0;
-  const est = TURN_ESTIMATE_USD + imageUsd;
+  const est = TURN_ESTIMATE_USD + imageUsd + listenUsd + (voice ? speechCost(VOICE_TURN_CHARS_ESTIMATE) : 0);
   const cap = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
   if (!cap.ok) return out(WIND_DOWN, { guard: [cap.reason], spent });
   if (!callModel) return out(image ? NO_PICTURE_TURN : screen.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, { guard: ['offline'], spent });
@@ -188,7 +205,7 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
     let raw = null;
     try { raw = JSON.parse(text); } catch { return { text, reasons: ['the reply was not valid JSON'] }; }
     const v = validateTurn(raw, vopts);
-    const reasons = [...v.dropped.map((d) => `step ${d.index} (${d.cmd}) dropped: ${d.reason}`), ...turnProblems(v.steps, { nod })];
+    const reasons = [...v.dropped.map((d) => `step ${d.index} (${d.cmd}) dropped: ${d.reason}`), ...turnProblems(v.steps, { nod, maxWords: MAX_SPOKEN_WORDS })];
     // 7. The answer guard: the open question, and any asked now.
     const hidden = [open, ...v.steps.filter((s) => s.cmd === 'ask').map((s) => itemFor(s, bank))].filter(Boolean);
     const leak = checkTurnText(v.steps, hidden);
@@ -198,7 +215,7 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
       if (v.steps.length < 12) v.steps.unshift(say(DISCLOSURE));
       else { const k = v.steps.findIndex((s) => s.cmd === 'say'); v.steps[k] = say(DISCLOSURE); }
     }
-    return { text, v, reasons, leaked: !leak.ok, fatal: !leak.ok || turnProblems(v.steps, { nod }).length > 0 };
+    return { text, v, reasons, leaked: !leak.ok, fatal: !leak.ok || turnProblems(v.steps, { nod, maxWords: MAX_SPOKEN_WORDS }).length > 0 };
   };
 
   let r;

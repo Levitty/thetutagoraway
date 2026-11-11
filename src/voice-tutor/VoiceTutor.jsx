@@ -1,10 +1,13 @@
 // ============================================================================
-// THE LIVE TUTOR SESSION WINDOW (prototype, milestones 1 and 2): the board takes most
+// THE LIVE TUTOR SESSION WINDOW (prototype, milestones 1 to 3): the board takes most
 // of the screen, the HOREB robot sits in a corner box (listening, thinking,
 // speaking), a transcript strip shows the tutor's words at speaking pace, and
 // the child types, or writes and draws on the board (a pen, an eraser for their
 // own ink, undo). "Check my work", or about 4 seconds without writing, sends a
 // picture of the board (never the camera) to the tutor with the next turn.
+// Voice (milestone 3): HOREB speaks and the board moves on the voice's own word
+// times; the child taps Talk to speak (tapping over HOREB stops it at once).
+// Typing always stays, and is said plainly when the microphone or voice fails.
 //
 // Test only: behind VITE_VOICE_TUTOR=1 and an allowlist stub (the admin list,
 // or VITE_VOICE_TUTOR_ALLOWLIST). Adult test accounts only until consent
@@ -21,9 +24,11 @@ import { supabase } from '../supabase.js';
 import { Board, BOARD_H, BOARD_H_PORTRAIT } from './Board.jsx';
 import { emptyBoard, applyStep, boardSummary } from './board.js';
 import { validateTurn, PHASES, cellsOf } from './commands.js';
-import { buildTimeline, createPlayer, advance, interrupt } from './timeline.js';
+import { buildTimeline, createPlayer, advance, updateTimeline } from './timeline.js';
 import { sessionReducer, newSession, mascotState } from './session.js';
-import { providersFor } from './providers.js';
+import { providersFor, checkProviders } from './providers/index.js';
+import { simulatedTts } from './providers/mockVoice.js';
+import { voiceReducer, initialVoice, bargeIn, canListen, canSpeak } from './providers/voice.js';
 import { DEMO_SCRIPT } from './mockTutor.js';
 import { inkReducer, hasInk, writing, inkCells, CHILD_INK } from './ink.js';
 import { autoSnapDue, checkAllowed, imageTokens } from './snapshot.js';
@@ -50,6 +55,19 @@ function usePortrait() {
     return () => m.removeEventListener?.('change', f);
   }, []);
   return on;
+}
+
+// Keep the screen on while a lesson runs; a refusal (or no support) is fine.
+function useWakeLock(on) {
+  useEffect(() => {
+    if (!on || !navigator.wakeLock?.request) return undefined;
+    let lock = null; let alive = true;
+    const take = () => navigator.wakeLock.request('screen').then((l) => { if (alive) lock = l; else l.release(); }).catch(() => {});
+    const back = () => { if (document.visibilityState === 'visible') take(); };
+    take();
+    document.addEventListener('visibilitychange', back);
+    return () => { alive = false; document.removeEventListener('visibilitychange', back); lock?.release?.().catch?.(() => {}); };
+  }, [on]);
 }
 
 const MASCOT_LABEL = { listening: 'Listening', thinking: 'Thinking', speaking: 'Speaking' };
@@ -94,6 +112,18 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const [pics, setPics] = useState([]);   // { id, reason, w, h, bytes, tokens, thumb } kept in memory only, never stored
   const [snapNote, setSnapNote] = useState('');
   const transcriptEnd = useRef(null);
+  // The voice: wanted or not, working or not (typing is always the fallback), the child's
+  // speech in progress, seconds of speech sent since the last turn, and the delays measured.
+  const [voiceOn, setVoiceOn] = useState(q.get('voice') !== 'off');
+  const [voice, vdispatch] = useReducer(voiceReducer, null, () => initialVoice('voice'));
+  const listenRef = useRef(null);
+  const audioIn = useRef(0);
+  const turnNo = useRef(0);
+  const delays = useRef({});
+  const offsets = useRef([]);   // ms between a word being heard and its stroke starting (frame lag)
+  const [delayLog, setDelayLog] = useState([]);
+  const boardClock = () => providers.current?.tts?.clock?.() ?? clock();
+  useWakeLock(session.status !== 'ready' && session.status !== 'ended');
 
   useEffect(() => { boardRef.current = board; }, [board]);
   useEffect(() => { askRef.current = ask; }, [ask]);
@@ -111,10 +141,18 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   useEffect(() => {
     let raf;
     const tick = () => {
-      const t = clock();
+      const t = boardClock();
       const pl = player.current;
       if (pl && !pl.stopped) {
+        if (pl.stream && pl.stream.version() !== pl.version) {
+          pl.version = pl.stream.version();
+          updateTimeline(pl, buildTimeline(turnSteps.current, { speech: (_, k) => pl.stream.timing(k) }));
+          setLive((l) => (l ? { ...l, sentences: pl.timeline.sentences } : l));
+          if (pl.stream.failed && !pl.failNoted) { pl.failNoted = true; vdispatch({ type: 'fail', kind: 'speak-failed' }); providers.current.tts = simulatedTts(); }
+        }
         const { due, words, done } = advance(pl, t);
+        // Word-to-stroke offset: how late each word-anchored stroke appeared after its word.
+        for (const e of due) if (e.anchor === 'word') offsets.current.push(t - (pl.startedAt + e.t));
         if (due.length) {
           let b = boardRef.current;
           for (const e of due) b = fire(b, turnSteps.current[e.i], pl.startedAt + e.t);
@@ -123,7 +161,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
         }
         setLive((l) => (l && l.words.join() !== words.join() ? { ...l, words } : l));
         pl.timeline.sentences.forEach((s, k) => {
-          if (words[k] === s.words.length && !saidK.current.has(k)) { saidK.current.add(k); dispatch({ type: 'said', text: s.text, at: t }); }
+          if (words[k] === s.words.length && !saidK.current.has(k)) { saidK.current.add(k); dispatch({ type: 'said', text: s.text, at: clock() }); }
         });
         if (done && t - pl.startedAt >= pl.timeline.duration) {
           player.current = null;
@@ -147,7 +185,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   };
 
   // ---------------------------------------------------------------- one turn
-  const play = useCallback((res) => {
+  const play = useCallback(async (res, mine) => {
     // The browser checks every step again against its own board before drawing.
     const raw = res.steps || [];
     const v = validateTurn({ steps: raw.map((s) => (s?.cmd === 'ask' ? (({ seal, ...p }) => p)(s) : s)) }, { board: boardSummary(boardRef.current), publicAsk: true, snapshots: snap.current.count, inkCells: inkCells(boardRef.current.childInk, boardHRef.current) });
@@ -155,17 +193,46 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     if (v.dropped.length) console.warn('voice-tutor: dropped', v.dropped);
     // The validator strips fields it does not know; the seal rides on the public ask.
     const steps = v.steps.map((s, k) => (s.cmd === 'ask' ? { ...s, seal: raw.find((x) => x.cmd === 'ask' && x.id === s.id)?.seal || null } : s));
+    // The voice starts on its first audio chunk; the board's timeline is built from the
+    // voice's own word times as they stream in (the same timeline code as the silent clock).
+    const texts = steps.filter((x) => x.cmd === 'say').map((x) => x.text);
+    let tts = providers.current.tts;
+    let stream = null;
+    let startAt;
+    try { stream = tts.speak(texts); startAt = await stream.ready; } catch (e) {
+      // No voice: carry on silently in words, from the same place.
+      console.warn('voice-tutor: voice failed', e?.message);
+      vdispatch({ type: 'fail', kind: 'speak-failed' });
+      tts = providers.current.tts = simulatedTts();
+      stream = tts.speak(texts);
+      startAt = await stream.ready;
+    }
+    if (mine !== turnNo.current) { stream?.stop?.(); return; } // the child spoke again meanwhile
+    delays.current.voiceReady = clock();
     dispatch({ type: 'turn', steps, dropped, spent: res.spent, target: res.target, prerequisite: res.prerequisite, at: clock() });
     turnSteps.current = steps;
     saidK.current = new Set();
     if (!steps.some((x) => x.cmd === 'say') && !steps.some((x) => x.cmd === 'end_session')) dispatch({ type: 'said', text: '(HOREB nods and lets you carry on)', at: clock() });
-    const tl = buildTimeline(steps, { speech: providers.current.tts.speak });
-    player.current = createPlayer(tl, clock());
+    const tl = buildTimeline(steps, { speech: (_, k) => stream.timing(k) });
+    player.current = createPlayer(tl, startAt);
+    player.current.stream = stream;
+    player.current.version = stream.version();
     setLive({ sentences: tl.sentences, words: tl.sentences.map(() => 0) });
+    // How long the child waited: end of their speech (or Send) to the first sound.
+    const d = delays.current;
+    if (d.childDone) {
+      const first = clock() + Math.max(0, startAt - tts.clock());
+      setDelayLog((l) => [...l, { turn: turnNo.current, model: Math.round((d.received || first) - (d.sent || d.childDone)), voice: Math.round((d.voiceReady || first) - (d.received || first)), total: Math.round(first - d.childDone), spoken: !!tts.hasAudio }].slice(-10));
+    }
+    delays.current = {};
   }, []);
 
   const request = useCallback(async ({ message = '', heard = null, snapshot = null }) => {
     const s = sessionRef.current;
+    const mine = ++turnNo.current;
+    if (!delays.current.childDone) delays.current.childDone = clock();
+    const audioS = Math.round(audioIn.current * 10) / 10;
+    audioIn.current = 0;
     const open = askRef.current;
     setAsk(null);
     setNudge(false);
@@ -179,21 +246,33 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       board: boardSummary(boardRef.current),
       history: s.transcript.map((h) => ({ who: h.who, text: h.text })),
       elapsed_s: Math.round((clock() - startedAt.current) / 1000), turn_index: s.turns, phase: s.phase,
+      // The voice, priced into the caps on the server: will the words be spoken, and how much the child spoke.
+      voice: !!providers.current.tts.hasAudio, audio_in_s: audioS,
     };
     dispatch({ type: 'request' });
+    delays.current.sent = clock();
     try {
       const res = await providers.current.tutor.turn(body);
+      delays.current.received = clock();
+      if (mine !== turnNo.current) return;
       if (res.marked) dispatch({ type: 'marked', skill: res.marked.skill, correct: res.marked.correct, misconception: res.marked.misconception, answer: res.marked.answer, askId: res.marked.ask, at: clock() });
       if (res.picture && !res.picture.used) setPics((l) => l.map((x) => (x.id === res.picture.id ? { ...x, unused: res.picture.why || 'not used' } : x)));
-      play(res);
+      await play(res, mine);
     } catch (e) {
       dispatch({ type: 'error', message: e.message });
     }
   }, [childId, skill, play]);
 
-  const start = () => {
-    providers.current = providersFor(mode, supabase);
+  const start = async () => {
+    const sid = () => sessionRef.current.id;
+    providers.current = providersFor(mode, { supabase, voice: voiceOn && mode === 'remote', sessionId: sid });
+    const missing = checkProviders(providers.current);
+    if (missing.length) console.error('voice-tutor: provider is missing', missing);
+    if (!voiceOn && mode === 'remote') vdispatch({ type: 'retry', mode: 'typed' });
+    if (!providers.current.stt) vdispatch({ type: 'retry', mode: voiceOn ? 'speaker' : 'typed' });
     startedAt.current = clock();
+    // Audio may start only after a tap: this is that tap.
+    try { await providers.current.tts.unlock(); } catch { vdispatch({ type: 'fail', kind: 'audio-blocked' }); }
     request({});
   };
 
@@ -202,13 +281,15 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const stopTutor = () => {
     let heard = null;
     const pl = player.current;
-    if (pl && !pl.stopped) {
-      const t = clock();
-      const r = interrupt(pl, t);
+    // The voice stops at once, whether or not strokes are still to come.
+    if (!pl || pl.stopped) { providers.current?.tts?.stop?.(); return null; }
+    {
+      const t = boardClock();
+      const r = bargeIn({ player: pl, tts: providers.current.tts, now: t });
       let b = boardRef.current;
       for (const e of r.due) b = fire(b, turnSteps.current[e.i], t - e.dur);
       boardRef.current = b; setBoard(b);
-      if (!r.finished) {
+      if (r.interrupted) {
         heard = r.heard;
         const k = r.words.findIndex((n, i) => n < pl.timeline.sentences[i].words.length);
         const s = pl.timeline.sentences[k];
@@ -225,8 +306,41 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     const heard = stopTutor();
     dispatch({ type: 'child_said', text: msg, at: clock() });
     setInput('');
+    delays.current = { childDone: clock() };
     request({ message: msg, heard });
   };
+
+  // ---------------------------------------------------------------- talking
+  // Press to talk: a tap starts listening (and stops HOREB at once if it is speaking);
+  // end of speech, or a second tap, ends it. In the scripted mode the words typed in
+  // the box are "spoken" (partials, then the final words), so barge-in can be tried free.
+  const talk = (spokenText = null) => {
+    const p = providers.current;
+    if (!p?.stt || !canListen(voice) || session.status === 'ended') return;
+    if (listenRef.current) { listenRef.current.stop(); return; }
+    const fake = p.stt.name === 'typed-as-speech';
+    const text = (spokenText ?? input).trim();
+    if (fake && !text) { setSnapNote('Type what you would say, then press Talk.'); return; }
+    const heard = stopTutor();
+    vdispatch({ type: 'listen' });
+    const sess = p.stt.start({
+      onSpeech: () => {},
+      onPartial: (t) => vdispatch({ type: 'partial', text: t }),
+      onFinal: (t, seconds) => {
+        listenRef.current = null;
+        audioIn.current += Number(seconds) || 0;
+        vdispatch({ type: 'heard' });
+        if (!t) { setSnapNote('HOREB did not hear anything. Tap Talk and try again, or type.'); return; }
+        dispatch({ type: 'child_said', text: t, at: clock() });
+        delays.current = { childDone: clock() };
+        request({ message: t, heard });
+      },
+      onError: (kind) => { listenRef.current = null; vdispatch({ type: 'fail', kind }); },
+    });
+    listenRef.current = sess;
+    if (fake) { setInput(''); sess.say(text); }
+  };
+  useEffect(() => () => { listenRef.current?.cancel?.(); providers.current?.tts?.close?.(); providers.current?.stt?.close?.(); }, []);
 
   // ---------------------------------------------------------------- the child's ink
   const onInk = useCallback((actions) => {
@@ -286,11 +400,14 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     if (session.status === 'ready' && !providers.current) { const id = setTimeout(start, 600); return () => clearTimeout(id); }
     if (session.status !== 'listening') return undefined;
     const item = DEMO_SCRIPT[demoK.current];
-    if (!item) return undefined;
+    if (!item || item.during) return undefined;
     const timers = [];
     const at = (ms, fn) => timers.push(setTimeout(fn, ms));
     let t = 1100;
-    if (item.type === 'text') {
+    if (item.type === 'speak') {
+      [...item.text].forEach((_, i) => at(t + i * 45, () => setInput(item.text.slice(0, i + 1))));
+      at(t + item.text.length * 45 + 300, () => { demoK.current += 1; talk(item.text); });
+    } else if (item.type === 'text') {
       [...item.text].forEach((_, i) => at(t + i * 55, () => setInput(item.text.slice(0, i + 1))));
       at(t + item.text.length * 55 + 450, () => { demoK.current += 1; send(item.text); });
     } else {
@@ -309,6 +426,15 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       if (item.then === 'check') at(t + 900, () => takePicture('check'));
     }
     return () => timers.forEach(clearTimeout);
+  }, [demo, session.status, session.turns]);
+
+  // The demo child also talks over HOREB once, to show barge-in.
+  useEffect(() => {
+    if (!demo || session.status !== 'speaking') return undefined;
+    const item = DEMO_SCRIPT[demoK.current];
+    if (!item?.during) return undefined;
+    const id = setTimeout(() => { demoK.current += 1; talk(item.text); }, item.after || 3000);
+    return () => clearTimeout(id);
   }, [demo, session.status, session.turns]);
 
   useEffect(() => { transcriptEnd.current?.scrollIntoView?.({ block: 'end' }); }, [session.transcript.length, live?.words?.join()]);
@@ -336,7 +462,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       <header className="shrink-0 flex items-center gap-2 px-3 py-1.5 bg-white border-b border-slate-200 text-[12px] sm:text-[13px] whitespace-nowrap">
         <span className="font-extrabold tracking-tight">HOREB tutor</span>
         <span className="px-2 py-0.5 rounded-full font-bold" style={{ background: '#FFE3EE', color: '#C2255C' }}>Adult testers only</span>
-        <span className="hidden md:inline text-slate-500">Prototype. No voice yet: words appear at speaking pace.</span>
+        <span className="hidden md:inline text-slate-500">Prototype.{providers.current?.tts?.hasAudio ? '' : ' Silent voice: words appear at speaking pace.'}</span>
         <span className="ml-auto font-bold text-slate-600">{mode === 'remote' ? 'Live' : 'Scripted'}</span>
         {mode === 'remote' ? <span className="tabular-nums text-slate-500">US${session.cost.sessionUsd.toFixed(2)}</span> : null}
         <button type="button" onClick={() => setTester((x) => !x)} className="px-2 py-0.5 rounded-full border border-slate-300 font-bold text-slate-700">Tester</button>
@@ -365,9 +491,14 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
                         <option value="">Skill: chosen from the profile</option>
                         {FRACTION_SKILLS.map((c) => <option key={c} value={c}>{skillName(c)}</option>)}
                       </select>
-                      <p className="text-xs text-slate-500">Each turn is a paid model call. Caps: US$1.50 a session, US$3 a day.</p>
+                      <p className="text-xs text-slate-500">Each turn is a paid model call{voiceOn ? ', and the voice is paid too' : ''}. Caps: US$1.50 a session, US$3 a day.</p>
                     </div>
                   ) : null}
+                  <label className="mt-3 flex items-center gap-2 text-sm font-bold">
+                    <input type="checkbox" checked={voiceOn} onChange={(e) => setVoiceOn(e.target.checked)} className="w-4 h-4" />
+                    Voice: HOREB speaks, and you can talk
+                  </label>
+                  <p className="text-xs text-slate-500 mt-0.5">{mode === 'remote' ? 'Uses the microphone when you tap Talk. Headphones help on a phone.' : 'Scripted mode is silent: the words appear at speaking pace, and Talk "speaks" what you type.'}</p>
                   <button type="button" onClick={start} className="mt-4 w-full rounded-full bg-amber-400 py-2.5 font-extrabold">Start the lesson</button>
                 </div>
               </div>
@@ -388,9 +519,9 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
         <aside className="min-h-0 flex-1 landscape:flex-none landscape:w-[300px] lg:landscape:w-[340px] flex flex-col gap-2">
           <div className="flex gap-2 min-h-0 flex-1 landscape:flex-col">
             <div className={`vt-mascot shrink-0 self-start landscape:self-stretch rounded-2xl bg-white border border-slate-200 flex flex-col items-center justify-center px-2 py-2 landscape:flex-row landscape:gap-3 landscape:justify-start landscape:px-3 landscape:py-1.5 vt-${mascot}`} aria-live="polite">
-              <HorebBot size={56} mood={mascot} />
+              <HorebBot size={56} mood={voice.listening ? 'listening' : mascot} />
               <div className="text-center landscape:text-left">
-                <div className="text-[12px] font-extrabold text-violet-700 leading-tight">{session.looking ? 'Looking' : MASCOT_LABEL[mascot]}</div>
+                <div className="text-[12px] font-extrabold text-violet-700 leading-tight">{voice.listening ? 'Listening to you' : session.looking ? 'Looking' : MASCOT_LABEL[mascot]}</div>
                 <div className="hidden landscape:block text-[11px] text-slate-500 leading-tight">{session.phase ? PHASE_LABEL[session.phase] : 'Ready'}</div>
               </div>
             </div>
@@ -406,20 +537,33 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
                   ))}
                 </p>
               ) : null)) : null}
-              {session.status === 'thinking' ? <p className="vt-tutor text-slate-400">...</p> : null}
+              {voice.listening ? <p className="vt-child vt-partial">{voice.partial || 'Listening...'}</p> : null}
               {session.error ? <p className="text-[13px] text-red-700">{session.error}</p> : null}
               <div ref={transcriptEnd} />
             </div>
           </div>
 
           <form className="shrink-0 rounded-2xl bg-white border border-slate-200 p-2" onSubmit={(e) => { e.preventDefault(); send(input); }}>
-            {ask ? <div className="text-[13px] font-bold text-violet-700 px-1 pb-1">{ask.prompt}</div> : null}
+            <div className="text-[13px] font-bold text-violet-700 px-1 pb-1 min-h-[1.4rem] truncate">{ask ? ask.prompt : ''}</div>
             {ask?.form === 'choice' ? (
               <div className="grid grid-cols-2 gap-1.5 pb-1.5">
                 {ask.choices.map((c) => <button key={c} type="button" onClick={() => send(c)} className="rounded-xl border border-slate-300 px-2 py-1.5 text-sm font-bold text-left">{c}</button>)}
               </div>
             ) : null}
+            {voice.message ? (
+              <div className="vt-fallback flex items-center gap-2 text-[13px] font-bold rounded-xl px-3 py-1.5 mb-1.5" role="status">
+                <span>{voice.message}</span>
+                {voiceOn && voice.mode !== 'voice' && providers.current?.stt ? <button type="button" className="ml-auto underline" onClick={() => vdispatch({ type: 'retry' })}>Try voice again</button> : null}
+              </div>
+            ) : null}
             <div className="flex gap-2">
+              {started && providers.current?.stt && canListen(voice) ? (
+                <button type="button" onClick={() => talk()} disabled={session.status === 'ended' || session.status === 'thinking'} aria-pressed={voice.listening}
+                  className={`vt-talk shrink-0 rounded-full px-4 font-extrabold flex items-center gap-1.5 disabled:opacity-40 ${voice.listening ? 'vt-talk-on' : ''}`}>
+                  <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="1.5" width="5" height="8.5" rx="2.5" fill="none" stroke="currentColor" strokeWidth="1.6" /><path d="M3 8a5 5 0 0 0 10 0M8 13v2" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
+                  {voice.listening ? 'Done' : 'Talk'}
+                </button>
+              ) : null}
               <input value={input} onChange={(e) => setInput(e.target.value)} disabled={!started || session.status === 'ended'}
                 placeholder={!started ? 'Start the lesson first' : ask ? 'Type your answer' : session.status === 'speaking' ? 'Type to stop HOREB and talk' : 'Type to HOREB'}
                 className="flex-1 min-w-0 rounded-full border border-slate-300 px-4 py-2 text-[16px] outline-none focus:border-violet-500" maxLength={300} inputMode="text" autoComplete="off" />
@@ -431,7 +575,12 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       </main>
 
       {tester ? (
-        <TesterPanel session={session} board={board} mode={mode} pics={pics} onClose={() => setTester(false)}
+        <TesterPanel session={session} board={board} mode={mode} pics={pics} delays={delayLog} offsets={offsets.current} voice={voice} voiceName={providers.current ? `${providers.current.tts.name} voice, ${providers.current.stt?.name || 'no'} listening` : ''} onClose={() => setTester(false)}
+          onFail={started ? (kind) => {
+            // As a real failure: the sound stops, the turn finishes in words on the board, the next turns are silent.
+            if (kind === 'speak-failed') { providers.current.tts.stop(); providers.current.tts = simulatedTts(); }
+            vdispatch({ type: 'fail', kind }); setTester(false);
+          } : null}
           onExample={mode === 'mock' && started ? (key) => { onInk([{ type: 'clear' }, { type: 'add', strokes: exampleStrokes(key, boardH), example: key }]); setTester(false); } : null} />
       ) : null}
     </div>
@@ -469,7 +618,7 @@ function InkBar({ tool, setTool, canUndo, hasInk: any, onUndo, onClear, onCheck,
   );
 }
 
-function TesterPanel({ session, board, mode, pics = [], onExample = null, onClose }) {
+function TesterPanel({ session, board, mode, pics = [], delays = [], offsets = [], voice = null, voiceName = '', onExample = null, onFail = null, onClose }) {
   return (
     <div className="fixed inset-x-2 bottom-2 top-12 sm:left-auto sm:w-[400px] z-50 bg-white rounded-2xl border border-slate-300 overflow-y-auto p-4 text-sm">
       <div className="flex items-center"><b className="text-base">Tester view</b><button type="button" className="ml-auto font-bold" onClick={onClose}>Close</button></div>
@@ -504,6 +653,18 @@ function TesterPanel({ session, board, mode, pics = [], onExample = null, onClos
           <div className="flex flex-wrap gap-1.5 mt-1">{Object.entries(EXAMPLES).map(([k, e]) => <button key={k} type="button" onClick={() => onExample(k)} className="px-2 py-1 rounded-full border border-slate-300 text-[12px] font-bold">{e.label}</button>)}</div>
         </>
       ) : null}
+      <h3 className="font-extrabold mt-3">Voice and delay</h3>
+      <p>{voiceName || 'Not started.'} Mode: {voice?.mode}.</p>
+      {delays.length ? delays.map((d, k) => (
+        <p key={k} className="text-[12px]">Turn {d.turn}: {d.total} ms from the end of the child's words to {d.spoken ? 'the first sound' : 'the first word'} (tutor {d.model} ms, voice {d.voice} ms)</p>
+      )) : <p className="text-slate-500">No replies timed yet.</p>}
+      {offsets.length ? (() => { const o = [...offsets].sort((a, b) => a - b); const q = (f) => Math.round(o[Math.min(o.length - 1, Math.floor(o.length * f))]); return <p className="text-[12px]">Word to stroke: median {q(0.5)} ms, slowest {q(0.99)} ms over {o.length} strokes.</p>; })() : null}
+      {onFail ? (
+        <div className="flex flex-wrap gap-1.5 mt-1.5">
+          <button type="button" onClick={() => onFail('mic-denied')} className="px-2 py-1 rounded-full border border-slate-300 text-[12px] font-bold">Try: the microphone fails</button>
+          <button type="button" onClick={() => onFail('speak-failed')} className="px-2 py-1 rounded-full border border-slate-300 text-[12px] font-bold">Try: the voice fails</button>
+        </div>
+      ) : null}
       <h3 className="font-extrabold mt-3">Dropped commands</h3>
       {session.dropped.length || board.log.length ? [...session.dropped, ...board.log].map((d, k) => <p key={k} className="text-red-700">{d.cmd || 'turn'}: {d.reason}</p>) : <p className="text-slate-500">None.</p>}
     </div>
@@ -517,6 +678,10 @@ const CSS = `
 .vt-child { margin: 0 0 .35rem auto; width: fit-content; max-width: 85%; background: #FFF0D4; color: #6B3D00; border-radius: 14px; padding: .2rem .65rem; font-weight: 700; }
 .vt-snap { background: #E0F2F1; color: #0E5F66; }
 .vt-snap::before { content: ''; display: inline-block; width: .7em; height: .7em; margin-right: .35em; border: 2px solid currentColor; border-radius: 2px; vertical-align: -.05em; }
+.vt-partial { opacity: .65; font-style: italic; }
+.vt-talk { background: #ECE8FF; color: #3B17B0; border: 2px solid #6D3FD6; }
+.vt-talk-on { background: #6D3FD6; color: #fff; animation: vt-glow 1.2s ease-in-out infinite; }
+.vt-fallback { background: #FFF0D4; color: #6B3D00; }
 .vt-word { background: linear-gradient(transparent 62%, #FFC93C 62%); }
 .vt-speaking .hb-talk { transform-box: fill-box; transform-origin: center; animation: vt-talk .32s ease-in-out infinite alternate; }
 .vt-listening .hb-listen { animation: vt-glow 1.6s ease-in-out infinite; }

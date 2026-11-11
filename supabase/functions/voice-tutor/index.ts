@@ -599,8 +599,11 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
   });
   return { steps, dropped, notes };
 }
-var turnProblems = (steps, { nod = false } = {}) => {
+var MAX_SPOKEN_WORDS = 60;
+var spokenWords = (steps) => steps.filter((s) => s.cmd === "say").reduce((n, s) => n + s.text.split(/\s+/).filter(Boolean).length, 0);
+var turnProblems = (steps, { nod = false, maxWords = null } = {}) => {
   const out = [];
+  if (maxWords && spokenWords(steps) > maxWords) out.push(`the turn says ${spokenWords(steps)} words: say at most ${maxWords}, then wait for the child`);
   const isNod = nod && steps.length >= 1 && steps.every((s) => s.cmd === "pause_for_child" || s.cmd === "set_phase" || s.cmd === "record_diagnosis");
   if (!isNod && !steps.some((s) => s.cmd === "say")) out.push("the turn says nothing");
   const last = steps[steps.length - 1];
@@ -4460,7 +4463,11 @@ var DEFAULT_SETTINGS = Object.freeze({
   dayCapUsd: 3,
   sessionMinutes: 20,
   maxTurns: 60,
-  maxSnapshots: 30
+  maxSnapshots: 30,
+  // The voice (milestone 3, option B). The voice id is a setting: see the report on choosing it.
+  ttsModel: "sonic-3.6",
+  ttsVoice: "f786b574-daa5-4673-aa0c-cbe3e8534c02",
+  ttsSampleRate: 24e3
 });
 var num = (v, d) => Number.isFinite(Number(v)) && String(v ?? "").trim() !== "" ? Number(v) : d;
 var settingsFrom = (get = () => void 0) => ({
@@ -4472,7 +4479,10 @@ var settingsFrom = (get = () => void 0) => ({
   dayCapUsd: num(get("VOICE_TUTOR_DAY_CAP_USD"), DEFAULT_SETTINGS.dayCapUsd),
   sessionMinutes: DEFAULT_SETTINGS.sessionMinutes,
   maxTurns: num(get("VOICE_TUTOR_MAX_TURNS"), DEFAULT_SETTINGS.maxTurns),
-  maxSnapshots: num(get("VOICE_TUTOR_MAX_SNAPSHOTS"), DEFAULT_SETTINGS.maxSnapshots)
+  maxSnapshots: num(get("VOICE_TUTOR_MAX_SNAPSHOTS"), DEFAULT_SETTINGS.maxSnapshots),
+  ttsModel: get("VOICE_TUTOR_TTS_MODEL") || DEFAULT_SETTINGS.ttsModel,
+  ttsVoice: get("VOICE_TUTOR_TTS_VOICE") || DEFAULT_SETTINGS.ttsVoice,
+  ttsSampleRate: [16e3, 22050, 24e3, 44100].includes(num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0)) ? num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0) : DEFAULT_SETTINGS.ttsSampleRate
 });
 var capCheck = ({ sessionUsd = 0, dayUsd = 0, turns = 0 } = {}, s = DEFAULT_SETTINGS) => {
   if (sessionUsd >= s.sessionCapUsd) return { ok: false, reason: "session-cap" };
@@ -4955,7 +4965,10 @@ RULES THAT NEVER BEND:
 - If the child says something that suggests they are hurt or not safe, reply gently, tell them to talk to a trusted adult now, and that Childline Kenya is free on 116. Do not ask for details.
 
 HOW YOU TALK:
+- Your words are spoken aloud while you draw, like a teacher at a board. Keep each turn short: at most about 40 words, then ask one question and wait (pause_for_child). Never lecture; the child should talk as much as you do.
 - English for a Kenyan ten year old. Short sentences, about 12 words or fewer. One idea at a time.
+- Write numbers and fractions in words in what you say ("three quarters"), so they are spoken naturally; put the figures on the board.
+- If the child spoke over you, the context says what they heard. Answer what they said first, briefly, then carry on.
 - Kenyan things to share and count: chapati, mandazi, sukuma wiki, a loaf of bread, a shamba, shillings, a matatu, a football team.
 - Plain text. No emojis, no markdown.
 
@@ -33396,6 +33409,17 @@ function validateSnapshot(x) {
   return { id: x.id, media: x.media, data, w, h, reason: x.reason === "check" ? "check" : "idle", strokes: Math.max(0, Number(x.strokes) || 0) };
 }
 
+// src/voice-tutor/providers/voice.js
+var PRICES3 = {
+  ttsUsdPerChar: 65 / 1e6,
+  // Cartesia Pro: US$65 a million credits, 1 credit a character
+  sttUsdPerMinute: 77e-4
+  // Deepgram streaming, only while the child speaks
+};
+var speechCost = (chars, p = PRICES3) => Math.max(0, chars) * p.ttsUsdPerChar;
+var listenCost = (seconds, p = PRICES3) => Math.max(0, seconds) / 60 * p.sttUsdPerMinute;
+var spokenChars = (steps) => (steps || []).filter((s) => s.cmd === "say").reduce((n, s) => n + String(s.text).length, 0);
+
 // src/voice-tutor/tutorTurn.js
 var reply = (status, body) => ({ status, body });
 var say = (text) => ({ cmd: "say", text });
@@ -33405,6 +33429,8 @@ var ADULTS_ONLY = "The live tutor is for adult test accounts only until parent c
 var DISCLOSURE = "Hello. I am HOREB, an AI tutor. I am a computer program, not a person.";
 var NO_PICTURE_TURN = [say("I cannot look at pictures just now."), say("Please type your answer for me."), { cmd: "pause_for_child", expect: "typed", max_wait_s: 30 }];
 var TURN_ESTIMATE_USD = 0.02;
+var VOICE_TURN_CHARS_ESTIMATE = 250;
+var MAX_AUDIO_S = 90;
 var FALLBACK_TURN = [say("Let me think about that a different way."), say("Tell me what you think the first step is."), handBack];
 var WIND_DOWN = [
   { cmd: "set_phase", phase: "wrapup" },
@@ -33465,9 +33491,19 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
   const inkCellsIn = Array.isArray(body?.ink_cells) ? body.ink_cells.slice(0, 6).map(String) : [];
   const vopts = { board, allowedMis, skills, snapshots, inkCells: inkCellsIn };
   let picture = null;
+  const voice = body?.voice === true;
+  const audioS = Math.max(0, Math.min(MAX_AUDIO_S, Number(body?.audio_in_s) || 0));
+  const listenUsd = listenCost(audioS);
+  const voiceMeter = { voice, audioS, listenUsd };
   const out = async (steps2, extra = {}) => {
     const v = validateTurn({ steps: steps2 }, vopts);
-    return reply(200, { steps: await sealAsks(v.steps, extra.bank || []), dropped: extra.dropped || v.dropped, notes: extra.notes || v.notes, marked, target: pick2.target, prerequisite: pick2.prerequisite, guard: extra.guard || [], cost_usd: extra.cost || 0, spent: extra.spent || null, model: extra.model || null, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null } });
+    if (voiceMeter) {
+      const chars = voiceMeter.voice ? spokenChars(v.steps) : 0;
+      const usd = speechCost(chars) + voiceMeter.listenUsd;
+      if (chars || voiceMeter.audioS) await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: "voice", cost_usd: usd, guard: ["voice"], dropped_steps: 0, tts_chars: chars, audio_in_s: voiceMeter.audioS });
+      extra = { ...extra, cost: (extra.cost || 0) + usd, spent: extra.spent ? addSpent(extra.spent, usd) : extra.spent, voice: { chars, audio_s: voiceMeter.audioS, usd } };
+    }
+    return reply(200, { steps: await sealAsks(v.steps, extra.bank || []), dropped: extra.dropped || v.dropped, notes: extra.notes || v.notes, marked, target: pick2.target, prerequisite: pick2.prerequisite, guard: extra.guard || [], cost_usd: extra.cost || 0, spent: extra.spent || null, model: extra.model || null, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null }, voice: extra.voice || null });
   };
   const sealAsks = async (steps2, bank2) => Promise.all(steps2.map(async (s) => {
     if (s.cmd !== "ask") return s;
@@ -33506,7 +33542,7 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
     }
   }
   const imageUsd = image ? imageTokens(image.w, image.h) * (PRICES2[settings.model]?.input ?? 2) / 1e6 : 0;
-  const est = TURN_ESTIMATE_USD + imageUsd;
+  const est = TURN_ESTIMATE_USD + imageUsd + listenUsd + (voice ? speechCost(VOICE_TURN_CHARS_ESTIMATE) : 0);
   const cap2 = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
   if (!cap2.ok) return out(WIND_DOWN, { guard: [cap2.reason], spent });
   if (!callModel) return out(image ? NO_PICTURE_TURN : screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, { guard: ["offline"], spent });
@@ -33543,7 +33579,7 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
       return { text, reasons: ["the reply was not valid JSON"] };
     }
     const v = validateTurn(raw, vopts);
-    const reasons = [...v.dropped.map((d) => `step ${d.index} (${d.cmd}) dropped: ${d.reason}`), ...turnProblems(v.steps, { nod })];
+    const reasons = [...v.dropped.map((d) => `step ${d.index} (${d.cmd}) dropped: ${d.reason}`), ...turnProblems(v.steps, { nod, maxWords: MAX_SPOKEN_WORDS })];
     const hidden = [open, ...v.steps.filter((s) => s.cmd === "ask").map((s) => itemFor(s, bank))].filter(Boolean);
     const leak = checkTurnText(v.steps, hidden);
     if (!leak.ok) reasons.push(...leak.reasons.map((r2) => `${r2}: never give the answer`));
@@ -33554,7 +33590,7 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
         v.steps[k] = say(DISCLOSURE);
       }
     }
-    return { text, v, reasons, leaked: !leak.ok, fatal: !leak.ok || turnProblems(v.steps, { nod }).length > 0 };
+    return { text, v, reasons, leaked: !leak.ok, fatal: !leak.ok || turnProblems(v.steps, { nod, maxWords: MAX_SPOKEN_WORDS }).length > 0 };
   };
   let r;
   const guard = [];

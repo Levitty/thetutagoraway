@@ -245,17 +245,21 @@ export function stubVision(snapshot) {
 // What the demo child types, in order, when the page runs itself (?demo=auto).
 export const DEMO_ANSWERS = ['3/4', 'The bottom doubled and the top doubled', '4', '6', '3', '9'];
 
-// Milestone 2's demo: the child also writes on the board. Each entry is one turn of the child's:
+// The demo child. Each entry is one turn of the child's:
+//   { type: 'speak', text }                      says it (Talk; the scripted mode "speaks" typed words)
+//   { type: 'speak', text, during: 'speaking', after }   says it over HOREB, `after` ms into its turn
 //   { type: 'text', text }                       types it
 //   { type: 'draw', example, then: 'check'|'wait', clearFirst }   writes a prepared example, then
 //                                                 presses Check my work, or stops and waits (the idle picture)
 export const DEMO_SCRIPT = [
-  { type: 'text', text: '3/4' },
-  { type: 'text', text: 'The bottom doubled and the top doubled' },
+  { type: 'speak', text: '3/4' },
+  // Talks over HOREB 4 s into its next turn: the voice and the strokes stop at once (barge-in).
+  { type: 'speak', text: 'Wait, can you show me again', during: 'speaking', after: 4000 },
+  { type: 'speak', text: 'The bottom doubled and the top doubled' },
   { type: 'draw', example: 'scribble', then: 'check' },
   { type: 'draw', example: 'adds', then: 'wait', clearFirst: true },
   { type: 'draw', example: 'probe', then: 'check', clearFirst: true },
-  { type: 'text', text: '3' },
+  { type: 'speak', text: '3' },
   { type: 'text', text: '9' },
 ];
 

@@ -26,6 +26,10 @@ export const DEFAULT_SETTINGS = Object.freeze({
   sessionMinutes: 20,
   maxTurns: 60,
   maxSnapshots: 30,
+  // The voice (milestone 3, option B). The voice id is a setting: see the report on choosing it.
+  ttsModel: 'sonic-3.6',
+  ttsVoice: 'f786b574-daa5-4673-aa0c-cbe3e8534c02',
+  ttsSampleRate: 24000,
 });
 
 const num = (v, d) => (Number.isFinite(Number(v)) && String(v ?? '').trim() !== '' ? Number(v) : d);
@@ -40,6 +44,9 @@ export const settingsFrom = (get = () => undefined) => ({
   sessionMinutes: DEFAULT_SETTINGS.sessionMinutes,
   maxTurns: num(get('VOICE_TUTOR_MAX_TURNS'), DEFAULT_SETTINGS.maxTurns),
   maxSnapshots: num(get('VOICE_TUTOR_MAX_SNAPSHOTS'), DEFAULT_SETTINGS.maxSnapshots),
+  ttsModel: get('VOICE_TUTOR_TTS_MODEL') || DEFAULT_SETTINGS.ttsModel,
+  ttsVoice: get('VOICE_TUTOR_TTS_VOICE') || DEFAULT_SETTINGS.ttsVoice,
+  ttsSampleRate: [16000, 22050, 24000, 44100].includes(num(get('VOICE_TUTOR_TTS_SAMPLE_RATE'), 0)) ? num(get('VOICE_TUTOR_TTS_SAMPLE_RATE'), 0) : DEFAULT_SETTINGS.ttsSampleRate,
 });
 
 /**

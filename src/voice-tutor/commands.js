@@ -446,11 +446,15 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
 
 /**
  * A turn is usable when it says something and hands back to the child (or ends).
+ * `maxWords`: the most the tutor may say in one turn (the server uses MAX_SPOKEN_WORDS).
  * `nod`: after a picture taken because the child paused, the tutor may only nod
  * (a turn that is just pause_for_child) and let them carry on.
  */
-export const turnProblems = (steps, { nod = false } = {}) => {
+export const MAX_SPOKEN_WORDS = 60;   // a turn is short: say a little, then wait for the child (owner, 11 Nov)
+export const spokenWords = (steps) => steps.filter((s) => s.cmd === 'say').reduce((n, s) => n + s.text.split(/\s+/).filter(Boolean).length, 0);
+export const turnProblems = (steps, { nod = false, maxWords = null } = {}) => {
   const out = [];
+  if (maxWords && spokenWords(steps) > maxWords) out.push(`the turn says ${spokenWords(steps)} words: say at most ${maxWords}, then wait for the child`);
   const isNod = nod && steps.length >= 1 && steps.every((s) => s.cmd === 'pause_for_child' || s.cmd === 'set_phase' || s.cmd === 'record_diagnosis');
   if (!isNod && !steps.some((s) => s.cmd === 'say')) out.push('the turn says nothing');
   const last = steps[steps.length - 1];

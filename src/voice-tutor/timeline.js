@@ -26,6 +26,13 @@
 // before it has been said. An `on` phrase that is not in the sentence starts
 // the step at the beginning of the sentence (and is logged).
 //
+// STREAMING (milestone 3): the voice starts on its first audio chunk, so word
+// times arrive while the tutor is already speaking. `speech(text, k)` may then
+// return a sentence that is not complete yet ({ words so far, duration: null,
+// complete: false }). A stroke whose word has not arrived yet waits (its time
+// is Infinity) and never fires early; rebuild the timeline as words arrive and
+// hand it to the player with updateTimeline (what has fired stays fired).
+//
 // Pure: the clock is passed in. Tested in tests/voice-tutor-timeline.test.mjs.
 // ============================================================================
 import { SILENT } from './commands.js';
@@ -82,15 +89,19 @@ export function findAnchor(words, phrase) {
  *            events:{ i:number, t:number, cmd:string, dur:number, silent:boolean, anchor:'word'|'sentence'|'after'|'missed'|null }[] }}
  */
 export function buildTimeline(steps, { speech = speakingTimes } = {}) {
-  // Lay the sentences out first.
+  // Lay the sentences out first. A sentence whose length is not known yet makes
+  // every later one unknown too (Infinity), until its audio is complete.
   const sentences = [];
   let cursor = 0;
+  let k = 0;
   steps.forEach((s, i) => {
     if (s.cmd !== 'say') return;
     if (sentences.length) cursor += SENTENCE_GAP_MS;
-    const sp = speech(s.text);
-    sentences.push({ step: i, text: s.text, start: cursor, end: cursor + sp.duration, words: sp.words.map((w) => ({ ...w, start: w.start + cursor, end: w.end + cursor })) });
-    cursor += sp.duration;
+    const sp = speech(s.text, k++);
+    const complete = sp.complete !== false && sp.duration != null;
+    const end = complete ? cursor + sp.duration : Infinity;
+    sentences.push({ step: i, text: s.text, start: cursor, end, complete, words: (sp.words || []).map((w) => ({ ...w, start: w.start + cursor, end: w.end + cursor })) });
+    cursor = end;
   });
   const speechEnd = cursor;
   const owner = (i) => {
@@ -110,13 +121,13 @@ export function buildTimeline(steps, { speech = speakingTimes } = {}) {
     if (sen && s.on) {
       const local = sen.words.map((w) => ({ word: w.word, start: w.start }));
       const hit = findAnchor(local, s.on);
-      if (hit) { t = hit.start; anchor = 'word'; } else { t = sen.start; anchor = 'missed'; }
+      if (hit) { t = hit.start; anchor = 'word'; } else if (sen.complete) { t = sen.start; anchor = 'missed'; } else { t = Infinity; anchor = 'pending'; }
     } else if (sen) {
       // No word: after the sentence before it; before any sentence: with the first one.
       t = sen.step < i ? sen.end : sen.start;
       anchor = sen.step < i ? 'after' : 'sentence';
     }
-    t = Math.max(0, t + (s.delay_ms || 0));
+    t = Number.isFinite(t) ? Math.max(0, t + (s.delay_ms || 0)) : Infinity;
     const dur = drawMs(s);
     drawEnd = Math.max(drawEnd, t + dur);
     events.push({ i, t, cmd: s.cmd, dur, silent: false, anchor });
@@ -128,6 +139,9 @@ export function buildTimeline(steps, { speech = speakingTimes } = {}) {
   events.sort((a, b) => a.t - b.t || a.i - b.i);
   return { duration: end, sentences, events };
 }
+
+/** Swap in a timeline rebuilt with more word times; steps already fired stay fired. */
+export const updateTimeline = (player, timeline) => { if (!player.stopped) player.timeline = timeline; return player; };
 
 // ---------------------------------------------------------------- playing it
 /** A player for one timeline, started at `startedAt` (the speech clock's time). */
