@@ -71,7 +71,7 @@ const SEVERITY = /\b(blood|bleeding|bruise\w*|swollen|swelling|scar\w*|burn\w*|b
 //   not    (optional) suppresses the rule — a known innocent idiom that uses
 //          the very same words
 // ---------------------------------------------------------------------------
-const RULES = [
+const SAFEGUARDING_RULES = [
   // ---- crisis: self-harm and suicide ------------------------------------
   {
     id: 'self_harm_intent', tier: 'crisis', category: 'self-harm',
@@ -194,7 +194,7 @@ export const screen = (raw) => {
   if (!text) return { tier: 'none', categories: [], hits: [] };
 
   const hits = [];
-  for (const rule of RULES) {
+  for (const rule of SAFEGUARDING_RULES) {
     if (!rule.any.test(text)) continue;
     if (rule.needs && !rule.needs.test(text)) continue;
     if (rule.not && rule.not.test(text)) continue;

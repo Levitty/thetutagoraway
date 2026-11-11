@@ -31,6 +31,10 @@ export const buildRocketFn = () => {
   for (const needed of ['async function runTurn(', 'const screen =', 'const CHILD_HELPLINE =', 'const DEFAULT_MODEL =']) {
     if (!lib.includes(needed)) throw new Error(`the inlined library no longer defines: ${needed}`);
   }
+  // The files are inlined into one scope: two top-level names alike would make the function fail to start.
+  const names = [...lib.matchAll(/^(?:const|let|var|function|async function|class) ([A-Za-z_$][\w$]*)/gm)].map((m) => m[1]);
+  const dup = names.filter((n, i) => names.indexOf(n) !== i);
+  if (dup.length) throw new Error(`duplicate top-level names across the inlined files: ${[...new Set(dup)].join(', ')}`);
   const PLACEHOLDER = '/*__ROCKET_LIB__*/';
   const template = read('scripts/rocket-guide.template.ts');
   if (!template.includes(PLACEHOLDER)) throw new Error(`template is missing ${PLACEHOLDER}`);
