@@ -266,7 +266,9 @@ Deno.serve(async (req) => {
     const asUser = createClient(env("SUPABASE_URL"), env("SUPABASE_ANON_KEY"), {
       global: { headers: { Authorization: req.headers.get("Authorization") ?? "" } },
     });
-    const { data: { user } } = await asUser.auth.getUser();
+    // The token is passed EXPLICITLY: getUser() with no argument looks for a stored session, and an edge function has none,
+    // so every caller came back signed out (found 11 Nov 2026: Live in the voice tutor refused every tester; see verify-subscription).
+    const { data: { user } } = await asUser.auth.getUser((req.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "").trim());
     if (!user) return json({ error: "sign in first" }, 401);
 
     if (body.mode === "test") {
