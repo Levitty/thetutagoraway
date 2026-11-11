@@ -6,11 +6,23 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
 
 // src/school/schoolDoor.js
+var CODE_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
 var enc = new TextEncoder();
 var hex = (buf) => Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
 var hmac = async (secret, text) => {
   const key = await crypto.subtle.importKey("raw", enc.encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
   return crypto.subtle.sign("HMAC", key, enc.encode(text));
+};
+var linkCheck = async (secret, door, ref) => {
+  const b = new Uint8Array(await hmac(secret, `link:${door}:${ref}`));
+  return Array.from(b.slice(0, 4)).map((x) => CODE_CHARS[x % 31]).join("");
+};
+var parseLinkCode = (code) => {
+  const c = String(code || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+  if (c.length < 14 || c.length > 18) return null;
+  const door = c.slice(0, c.length - 12), ref = c.slice(-12, -4), check = c.slice(-4);
+  if (!/^[A-Z]{2,6}$/.test(door) || !/^[A-Z2-9]{8}$/.test(ref)) return null;
+  return { door, ref, check };
 };
 var signCall = async (secret, time, body) => hex(await hmac(secret, `${time}.${body}`));
 
@@ -776,21 +788,3683 @@ function resultsFor(sittings) {
   return out;
 }
 
+// src/ai-tutor/content/curriculumMap.g5.js
+var SUBSTRANDS = {
+  "MATH.G5.NUMBER.WHOLE_NUMBERS": {
+    "name": "Whole Numbers",
+    "strand": "Numbers",
+    "legacy": "WHOLE",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.a",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.b",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.c",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.d",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.e",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.f",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.g",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.h"
+    ]
+  },
+  "MATH.G5.NUMBER.ADDITION": {
+    "name": "Addition",
+    "strand": "Numbers",
+    "legacy": "ADD",
+    "outcomes": [
+      "MATH.G5.NUMBER.ADDITION.a",
+      "MATH.G5.NUMBER.ADDITION.b",
+      "MATH.G5.NUMBER.ADDITION.c",
+      "MATH.G5.NUMBER.ADDITION.d",
+      "MATH.G5.NUMBER.ADDITION.e"
+    ]
+  },
+  "MATH.G5.NUMBER.SUBTRACTION": {
+    "name": "Subtraction",
+    "strand": "Numbers",
+    "legacy": "SUB",
+    "outcomes": [
+      "MATH.G5.NUMBER.SUBTRACTION.a",
+      "MATH.G5.NUMBER.SUBTRACTION.b",
+      "MATH.G5.NUMBER.SUBTRACTION.c",
+      "MATH.G5.NUMBER.SUBTRACTION.d",
+      "MATH.G5.NUMBER.SUBTRACTION.e",
+      "MATH.G5.NUMBER.SUBTRACTION.f"
+    ]
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION": {
+    "name": "Multiplication",
+    "strand": "Numbers",
+    "legacy": "MUL",
+    "outcomes": [
+      "MATH.G5.NUMBER.MULTIPLICATION.a",
+      "MATH.G5.NUMBER.MULTIPLICATION.b",
+      "MATH.G5.NUMBER.MULTIPLICATION.c",
+      "MATH.G5.NUMBER.MULTIPLICATION.d"
+    ]
+  },
+  "MATH.G5.NUMBER.DIVISION": {
+    "name": "Division",
+    "strand": "Numbers",
+    "legacy": "DIV",
+    "outcomes": [
+      "MATH.G5.NUMBER.DIVISION.a",
+      "MATH.G5.NUMBER.DIVISION.b",
+      "MATH.G5.NUMBER.DIVISION.c",
+      "MATH.G5.NUMBER.DIVISION.d",
+      "MATH.G5.NUMBER.DIVISION.e",
+      "MATH.G5.NUMBER.DIVISION.f"
+    ]
+  },
+  "MATH.G5.NUMBER.FRACTIONS": {
+    "name": "Fractions",
+    "strand": "Numbers",
+    "legacy": "FRAC",
+    "outcomes": [
+      "MATH.G5.NUMBER.FRACTIONS.a",
+      "MATH.G5.NUMBER.FRACTIONS.b",
+      "MATH.G5.NUMBER.FRACTIONS.c",
+      "MATH.G5.NUMBER.FRACTIONS.d",
+      "MATH.G5.NUMBER.FRACTIONS.e",
+      "MATH.G5.NUMBER.FRACTIONS.f",
+      "MATH.G5.NUMBER.FRACTIONS.g",
+      "MATH.G5.NUMBER.FRACTIONS.h"
+    ]
+  },
+  "MATH.G5.NUMBER.DECIMALS": {
+    "name": "Decimals",
+    "strand": "Numbers",
+    "legacy": "DEC",
+    "outcomes": [
+      "MATH.G5.NUMBER.DECIMALS.a",
+      "MATH.G5.NUMBER.DECIMALS.b",
+      "MATH.G5.NUMBER.DECIMALS.c",
+      "MATH.G5.NUMBER.DECIMALS.d",
+      "MATH.G5.NUMBER.DECIMALS.e",
+      "MATH.G5.NUMBER.DECIMALS.f"
+    ]
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS": {
+    "name": "Simple Equations",
+    "strand": "Numbers",
+    "legacy": "EQUATIONS",
+    "outcomes": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.b",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.c"
+    ]
+  },
+  "MATH.G5.MEASUR.LENGTH": {
+    "name": "Length",
+    "strand": "Measurement",
+    "legacy": "LENGTH",
+    "outcomes": [
+      "MATH.G5.MEASUR.LENGTH.a",
+      "MATH.G5.MEASUR.LENGTH.b",
+      "MATH.G5.MEASUR.LENGTH.c",
+      "MATH.G5.MEASUR.LENGTH.d",
+      "MATH.G5.MEASUR.LENGTH.e",
+      "MATH.G5.MEASUR.LENGTH.f",
+      "MATH.G5.MEASUR.LENGTH.g",
+      "MATH.G5.MEASUR.LENGTH.h",
+      "MATH.G5.MEASUR.LENGTH.i"
+    ]
+  },
+  "MATH.G5.MEASUR.AREA": {
+    "name": "Area",
+    "strand": "Measurement",
+    "legacy": "AREA",
+    "outcomes": [
+      "MATH.G5.MEASUR.AREA.a",
+      "MATH.G5.MEASUR.AREA.b",
+      "MATH.G5.MEASUR.AREA.c"
+    ]
+  },
+  "MATH.G5.MEASUR.VOLUME": {
+    "name": "Volume",
+    "strand": "Measurement",
+    "legacy": "VOL",
+    "outcomes": [
+      "MATH.G5.MEASUR.VOLUME.a",
+      "MATH.G5.MEASUR.VOLUME.b",
+      "MATH.G5.MEASUR.VOLUME.c",
+      "MATH.G5.MEASUR.VOLUME.d",
+      "MATH.G5.MEASUR.VOLUME.e",
+      "MATH.G5.MEASUR.VOLUME.f"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY": {
+    "name": "Capacity",
+    "strand": "Measurement",
+    "legacy": "CAP",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.a",
+      "MATH.G5.MEASUR.CAPACITY.b",
+      "MATH.G5.MEASUR.CAPACITY.c",
+      "MATH.G5.MEASUR.CAPACITY.d",
+      "MATH.G5.MEASUR.CAPACITY.e",
+      "MATH.G5.MEASUR.CAPACITY.f",
+      "MATH.G5.MEASUR.CAPACITY.g",
+      "MATH.G5.MEASUR.CAPACITY.h",
+      "MATH.G5.MEASUR.CAPACITY.i",
+      "MATH.G5.MEASUR.CAPACITY.j"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS": {
+    "name": "Mass",
+    "strand": "Measurement",
+    "legacy": "MASS",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.a",
+      "MATH.G5.MEASUR.MASS.b",
+      "MATH.G5.MEASUR.MASS.c",
+      "MATH.G5.MEASUR.MASS.d",
+      "MATH.G5.MEASUR.MASS.e",
+      "MATH.G5.MEASUR.MASS.f",
+      "MATH.G5.MEASUR.MASS.g",
+      "MATH.G5.MEASUR.MASS.h",
+      "MATH.G5.MEASUR.MASS.i",
+      "MATH.G5.MEASUR.MASS.j"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME": {
+    "name": "Time",
+    "strand": "Measurement",
+    "legacy": "TIME",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.a",
+      "MATH.G5.MEASUR.TIME.b",
+      "MATH.G5.MEASUR.TIME.c",
+      "MATH.G5.MEASUR.TIME.d",
+      "MATH.G5.MEASUR.TIME.e",
+      "MATH.G5.MEASUR.TIME.f",
+      "MATH.G5.MEASUR.TIME.g",
+      "MATH.G5.MEASUR.TIME.h",
+      "MATH.G5.MEASUR.TIME.i"
+    ]
+  },
+  "MATH.G5.MEASUR.MONEY": {
+    "name": "Money",
+    "strand": "Measurement",
+    "legacy": "MONEY",
+    "outcomes": [
+      "MATH.G5.MEASUR.MONEY.a",
+      "MATH.G5.MEASUR.MONEY.b",
+      "MATH.G5.MEASUR.MONEY.c",
+      "MATH.G5.MEASUR.MONEY.d",
+      "MATH.G5.MEASUR.MONEY.e",
+      "MATH.G5.MEASUR.MONEY.f",
+      "MATH.G5.MEASUR.MONEY.g"
+    ]
+  },
+  "MATH.G5.GEOMET.LINES": {
+    "name": "Lines",
+    "strand": "Geometry",
+    "legacy": "LINES",
+    "outcomes": [
+      "MATH.G5.GEOMET.LINES.a",
+      "MATH.G5.GEOMET.LINES.b",
+      "MATH.G5.GEOMET.LINES.c",
+      "MATH.G5.GEOMET.LINES.d",
+      "MATH.G5.GEOMET.LINES.e",
+      "MATH.G5.GEOMET.LINES.f",
+      "MATH.G5.GEOMET.LINES.g"
+    ]
+  },
+  "MATH.G5.GEOMET.ANGLES": {
+    "name": "Angles",
+    "strand": "Geometry",
+    "legacy": "ANGLES",
+    "outcomes": [
+      "MATH.G5.GEOMET.ANGLES.a",
+      "MATH.G5.GEOMET.ANGLES.b",
+      "MATH.G5.GEOMET.ANGLES.c",
+      "MATH.G5.GEOMET.ANGLES.d",
+      "MATH.G5.GEOMET.ANGLES.e",
+      "MATH.G5.GEOMET.ANGLES.f"
+    ]
+  },
+  "MATH.G5.GEOMET.3_D_OBJECTS": {
+    "name": "Three-Dimension (3-D) Objects",
+    "strand": "Geometry",
+    "legacy": "3D",
+    "outcomes": [
+      "MATH.G5.GEOMET.3_D_OBJECTS.a",
+      "MATH.G5.GEOMET.3_D_OBJECTS.b",
+      "MATH.G5.GEOMET.3_D_OBJECTS.c"
+    ]
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION": {
+    "name": "Data Representation",
+    "strand": "Data Handling",
+    "legacy": "DATA",
+    "outcomes": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.a",
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.b",
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.c",
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.d",
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.e",
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.f"
+    ]
+  }
+};
+var SKILLS_G5 = {
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH": {
+    "name": "Place value of digits up to hundreds of thousands",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.a"
+    ],
+    "horeb": [
+      "G5_PLACE_VALUE"
+    ],
+    "primary": "G5_PLACE_VALUE",
+    "pre": [],
+    "mis": [
+      "M_PV_GIVES_TOTAL_VALUE",
+      "M_PV_MISCOUNT_PLACES",
+      "M_PV_SKIPS_ZERO"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH": {
+    "name": "Total value of digits and expanded form up to hundreds of thousands",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.a"
+    ],
+    "horeb": [
+      "G5_PLACE_VALUE"
+    ],
+    "primary": "G5_PLACE_VALUE",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH"
+    ],
+    "mis": [
+      "M_TV_FACE_VALUE",
+      "M_TV_WRONG_NUMBER_OF_ZEROS",
+      "M_TV_COMPOSE_DROPS_ZEROS"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS": {
+    "name": "Write numbers up to tens of thousands in words",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.b"
+    ],
+    "horeb": [
+      "G5_PLACE_VALUE"
+    ],
+    "primary": "G5_PLACE_VALUE",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH"
+    ],
+    "mis": [
+      "M_WORDS_OMITS_THOUSAND_GROUP",
+      "M_WORDS_SPELLING_TY"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS": {
+    "name": "Write numbers given in words in symbols (up to tens of thousands)",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.b"
+    ],
+    "horeb": [
+      "G5_PLACE_VALUE"
+    ],
+    "primary": "G5_PLACE_VALUE",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH"
+    ],
+    "mis": [
+      "M_SYMBOLS_WRITE_AS_HEARD",
+      "M_SYMBOLS_MISSING_PLACEHOLDER",
+      "M_SYMBOLS_TEEN_TY"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.COMPARE_NUMBERS": {
+    "name": "Compare two numbers up to tens of thousands",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.c"
+    ],
+    "horeb": [
+      "G5_PLACE_VALUE",
+      "G6_INEQUALITIES"
+    ],
+    "primary": "G5_PLACE_VALUE",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH"
+    ],
+    "mis": [
+      "M_COMPARE_FIRST_DIGIT_ONLY",
+      "M_COMPARE_SYMBOL_DIRECTION"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.ORDER_NUMBERS": {
+    "name": "Arrange numbers up to tens of thousands in increasing and decreasing order",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.c"
+    ],
+    "horeb": [
+      "G5_PLACE_VALUE"
+    ],
+    "primary": "G5_PLACE_VALUE",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.COMPARE_NUMBERS"
+    ],
+    "mis": [
+      "M_ORDER_DIRECTION_CONFUSED",
+      "M_ORDER_LAST_DIGIT"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED": {
+    "name": "Round off numbers up to tens of thousands to the nearest hundred",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.d",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.d"
+    ],
+    "horeb": [],
+    "primary": "G5_ROUNDING",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH"
+    ],
+    "mis": [
+      "M_ROUND_CHAIN_ROUNDING",
+      "M_ROUND_DOWN_DECREASES_DIGIT",
+      "M_ROUND_DROPS_DIGITS"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND": {
+    "name": "Round off numbers up to tens of thousands to the nearest thousand",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.d",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.d"
+    ],
+    "horeb": [],
+    "primary": "G5_ROUNDING",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH"
+    ],
+    "mis": [
+      "M_ROUND_NO_REGROUP",
+      "M_ROUND_FIVE_DOWN",
+      "M_ROUND_WRONG_PLACE"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_2": {
+    "name": "Apply the divisibility test for 2",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.e",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.e"
+    ],
+    "horeb": [
+      "G5_DIVISION",
+      "G5_MULTIPLES"
+    ],
+    "primary": "G5_DIVISIBILITY",
+    "pre": [],
+    "mis": [
+      "M_DIV2_WRONG_DIGIT",
+      "M_DIV2_ZERO_NOT_EVEN"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10": {
+    "name": "Apply the divisibility tests for 5 and 10",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.e",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.e"
+    ],
+    "horeb": [
+      "G5_DIVISION",
+      "G5_MULTIPLES"
+    ],
+    "primary": "G5_DIVISIBILITY",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH"
+    ],
+    "mis": [
+      "M_DIV5_ONLY_ENDS_5",
+      "M_DIV10_ANY_ZERO",
+      "M_DIV_TESTS_EXCLUSIVE"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBILITY_PROBLEMS": {
+    "name": "Use divisibility tests of 2, 5 and 10 in real-life problems",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.e",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.e"
+    ],
+    "horeb": [
+      "G5_DIVISION"
+    ],
+    "primary": "G5_DIVISIBILITY",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_2",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10"
+    ],
+    "mis": [
+      "M_DIVPROB_DIVIDE_ANYWAY",
+      "M_DIVPROB_5_NEEDS_0"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_FACTORS": {
+    "name": "List factors and identify common factors",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.f",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.f"
+    ],
+    "horeb": [
+      "G5_FACTORS"
+    ],
+    "primary": "G5_FACTORS",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_2",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10"
+    ],
+    "mis": [
+      "M_FACTORS_AS_MULTIPLES",
+      "M_FACTORS_MISS_1_AND_SELF",
+      "M_FACTORS_INCOMPLETE"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_GCD": {
+    "name": "Determine the HCF (GCD) of two or three numbers",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.f",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.f"
+    ],
+    "horeb": [
+      "G5_FACTORS"
+    ],
+    "primary": "G5_LCM_HCF",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_FACTORS"
+    ],
+    "mis": [
+      "M_HCF_GIVES_LCM_OR_PRODUCT",
+      "M_HCF_ANY_COMMON",
+      "M_HCF_SMALLER_NUMBER"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_PROBLEMS": {
+    "name": "Solve real-life problems using HCF/GCD",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.f",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.f"
+    ],
+    "horeb": [
+      "G5_FACTORS"
+    ],
+    "primary": "G5_LCM_HCF",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_GCD"
+    ],
+    "mis": [
+      "M_HCFPROB_USES_LCM",
+      "M_HCFPROB_WRONG_QUANTITY"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_MULTIPLES": {
+    "name": "List multiples and identify common multiples",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.g",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.g"
+    ],
+    "horeb": [
+      "G5_MULTIPLES"
+    ],
+    "primary": "G5_MULTIPLES",
+    "pre": [],
+    "mis": [
+      "M_MULT_PRODUCT_ONLY",
+      "M_MULT_EXCLUDES_SELF"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM": {
+    "name": "Determine the LCM of two or three numbers",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.g",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.g"
+    ],
+    "horeb": [
+      "G5_MULTIPLES"
+    ],
+    "primary": "G5_LCM_HCF",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_MULTIPLES"
+    ],
+    "mis": [
+      "M_LCM_ALWAYS_PRODUCT",
+      "M_LCM_GIVES_HCF",
+      "M_LCM_SMALLER_NUMBER"
+    ]
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM_PROBLEMS": {
+    "name": "Solve real-life problems using LCM",
+    "sub": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G5.NUMBER.WHOLE_NUMBERS.g",
+    "outcomes": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.g"
+    ],
+    "horeb": [
+      "G5_MULTIPLES"
+    ],
+    "primary": "G5_LCM_HCF",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_PROBLEMS"
+    ],
+    "mis": [
+      "M_LCMPROB_USES_HCF",
+      "M_LCMPROB_ADDS_INTERVALS"
+    ]
+  },
+  "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE": {
+    "name": "Add up to three numbers of up to 6 digits without regrouping",
+    "sub": "MATH.G5.NUMBER.ADDITION",
+    "outcome": "MATH.G5.NUMBER.ADDITION.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.ADDITION.a"
+    ],
+    "horeb": [
+      "G5_ADDITION",
+      "G5_PLACE_VALUE"
+    ],
+    "primary": "G5_ADDITION",
+    "pre": [],
+    "mis": [
+      "M_LEFT_ALIGN",
+      "M_ZERO_ANNIHILATES"
+    ]
+  },
+  "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO": {
+    "name": "Add two numbers of up to 6 digits with double regrouping",
+    "sub": "MATH.G5.NUMBER.ADDITION",
+    "outcome": "MATH.G5.NUMBER.ADDITION.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.ADDITION.b"
+    ],
+    "horeb": [
+      "G5_ADDITION"
+    ],
+    "primary": "G5_ADDITION",
+    "pre": [
+      "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE"
+    ],
+    "mis": [
+      "M_NO_CARRY_WRITE_ALL",
+      "M_DROP_CARRY",
+      "M_CARRY_MAKES_TEN"
+    ]
+  },
+  "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS": {
+    "name": "Solve real-life addition problems with numbers up to 6 digits",
+    "sub": "MATH.G5.NUMBER.ADDITION",
+    "outcome": "MATH.G5.NUMBER.ADDITION.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.ADDITION.a",
+      "MATH.G5.NUMBER.ADDITION.b"
+    ],
+    "horeb": [
+      "G5_ADDITION"
+    ],
+    "primary": "G5_ADDITION",
+    "pre": [
+      "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE",
+      "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO"
+    ],
+    "mis": [
+      "M_WORDS_TO_FIGURES_ZEROS",
+      "M_ADD_ALL_NUMBERS",
+      "M_KEYWORD_ADD"
+    ]
+  },
+  "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100": {
+    "name": "Estimate a sum by rounding the addends to the nearest hundred",
+    "sub": "MATH.G5.NUMBER.ADDITION",
+    "outcome": "MATH.G5.NUMBER.ADDITION.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.ADDITION.c"
+    ],
+    "horeb": [
+      "G5_ADDITION",
+      "G5_PLACE_VALUE"
+    ],
+    "primary": "G5_ADDITION",
+    "pre": [
+      "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO"
+    ],
+    "mis": [
+      "M_ROUND_BY_TRUNCATING",
+      "M_CHAIN_ROUNDING",
+      "M_ROUND_BRIDGE"
+    ]
+  },
+  "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000": {
+    "name": "Estimate a sum by rounding the addends to the nearest thousand",
+    "sub": "MATH.G5.NUMBER.ADDITION",
+    "outcome": "MATH.G5.NUMBER.ADDITION.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.ADDITION.c"
+    ],
+    "horeb": [
+      "G5_ADDITION",
+      "G5_PLACE_VALUE"
+    ],
+    "primary": "G5_ADDITION",
+    "pre": [
+      "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100"
+    ],
+    "mis": [
+      "M_WRONG_ROUNDING_PLACE",
+      "M_DECIDE_BY_LAST_DIGIT",
+      "M_DROP_ZEROS_ROUNDED"
+    ]
+  },
+  "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM": {
+    "name": "Use an estimate to judge whether an exact sum is reasonable (proposed)",
+    "sub": "MATH.G5.NUMBER.ADDITION",
+    "outcome": "MATH.G5.NUMBER.ADDITION.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.ADDITION.c"
+    ],
+    "horeb": [
+      "G5_ADDITION"
+    ],
+    "primary": "G5_ADDITION",
+    "pre": [
+      "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000",
+      "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO"
+    ],
+    "mis": [
+      "M_NO_SENSE_CHECK",
+      "M_EXACT_MUST_EQUAL_ESTIMATE"
+    ]
+  },
+  "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND": {
+    "name": "Find the rule and extend or complete addition patterns",
+    "sub": "MATH.G5.NUMBER.ADDITION",
+    "outcome": "MATH.G5.NUMBER.ADDITION.d",
+    "outcomes": [
+      "MATH.G5.NUMBER.ADDITION.d"
+    ],
+    "horeb": [
+      "G5_ADDITION"
+    ],
+    "primary": "G5_PATTERNS",
+    "pre": [
+      "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO"
+    ],
+    "mis": [
+      "M_PATTERN_BRIDGE_DROP",
+      "M_PATTERN_NON_ADJACENT_STEP",
+      "M_PATTERN_OFF_BY_ONE"
+    ]
+  },
+  "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE": {
+    "name": "Create and describe addition patterns in real-life situations",
+    "sub": "MATH.G5.NUMBER.ADDITION",
+    "outcome": "MATH.G5.NUMBER.ADDITION.d",
+    "outcomes": [
+      "MATH.G5.NUMBER.ADDITION.d"
+    ],
+    "horeb": [
+      "G5_ADDITION"
+    ],
+    "primary": "G5_PATTERNS",
+    "pre": [
+      "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND"
+    ],
+    "mis": [
+      "M_RULE_AS_DIGIT_CHANGE",
+      "M_PATTERN_RULE_DRIFT"
+    ]
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP": {
+    "name": "Subtract up to 6-digit numbers without regrouping",
+    "sub": "MATH.G5.NUMBER.SUBTRACTION",
+    "outcome": "MATH.G5.NUMBER.SUBTRACTION.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.SUBTRACTION.a"
+    ],
+    "horeb": [
+      "G5_SUBTRACTION"
+    ],
+    "primary": "G5_SUBTRACTION",
+    "pre": [],
+    "mis": [
+      "M_MISALIGN_COLUMNS",
+      "M_DIGIT_MINUS_ZERO_IS_ZERO",
+      "M_DROP_INTERNAL_ZEROS"
+    ]
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP": {
+    "name": "Subtract up to 6-digit numbers with regrouping (non-zero digits)",
+    "sub": "MATH.G5.NUMBER.SUBTRACTION",
+    "outcome": "MATH.G5.NUMBER.SUBTRACTION.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.SUBTRACTION.b"
+    ],
+    "horeb": [
+      "G5_SUBTRACTION"
+    ],
+    "primary": "G5_SUBTRACTION",
+    "pre": [
+      "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP"
+    ],
+    "mis": [
+      "M_SMALLER_FROM_LARGER",
+      "M_REGROUP_NO_DECREMENT"
+    ]
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS": {
+    "name": "Subtract with regrouping across zeros",
+    "sub": "MATH.G5.NUMBER.SUBTRACTION",
+    "outcome": "MATH.G5.NUMBER.SUBTRACTION.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.SUBTRACTION.b"
+    ],
+    "horeb": [
+      "G5_SUBTRACTION"
+    ],
+    "primary": "G5_SUBTRACTION",
+    "pre": [
+      "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP"
+    ],
+    "mis": [
+      "M_ZEROS_ALL_BECOME_TEN",
+      "M_ZERO_MINUS_DIGIT_IS_ZERO"
+    ]
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_WORD_PROBLEMS": {
+    "name": "Solve real-life subtraction problems with up to 6-digit numbers",
+    "sub": "MATH.G5.NUMBER.SUBTRACTION",
+    "outcome": "MATH.G5.NUMBER.SUBTRACTION.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.SUBTRACTION.a",
+      "MATH.G5.NUMBER.SUBTRACTION.b"
+    ],
+    "horeb": [
+      "G5_SUBTRACTION"
+    ],
+    "primary": "G5_SUBTRACTION",
+    "pre": [
+      "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP"
+    ],
+    "mis": [
+      "M_KEYWORD_MORE_MEANS_ADD",
+      "M_MISSING_PART_ADDS"
+    ]
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000": {
+    "name": "Round numbers to the nearest hundred and nearest thousand",
+    "sub": "MATH.G5.NUMBER.SUBTRACTION",
+    "outcome": "MATH.G5.NUMBER.SUBTRACTION.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.SUBTRACTION.c"
+    ],
+    "horeb": [
+      "G5_PLACE_VALUE"
+    ],
+    "primary": "G5_ROUNDING",
+    "pre": [],
+    "mis": [
+      "M_ROUND_USES_OWN_DIGIT",
+      "M_ROUND_KEEPS_TAIL",
+      "M_ROUND_NO_CARRY",
+      "M_ROUND_FIVE_DOWN"
+    ]
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE": {
+    "name": "Estimate a difference by rounding the minuend and subtrahend",
+    "sub": "MATH.G5.NUMBER.SUBTRACTION",
+    "outcome": "MATH.G5.NUMBER.SUBTRACTION.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.SUBTRACTION.c"
+    ],
+    "horeb": [
+      "G5_SUBTRACTION",
+      "G5_PLACE_VALUE"
+    ],
+    "primary": "G5_SUBTRACTION",
+    "pre": [
+      "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000",
+      "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP"
+    ],
+    "mis": [
+      "M_EXACT_THEN_ROUND",
+      "M_ROUND_ONLY_ONE"
+    ]
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_CALC": {
+    "name": "Work out combined addition and subtraction expressions",
+    "sub": "MATH.G5.NUMBER.SUBTRACTION",
+    "outcome": "MATH.G5.NUMBER.SUBTRACTION.d",
+    "outcomes": [
+      "MATH.G5.NUMBER.SUBTRACTION.d"
+    ],
+    "horeb": [
+      "G5_ADDITION",
+      "G5_SUBTRACTION"
+    ],
+    "primary": "G5_SUBTRACTION",
+    "pre": [
+      "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP"
+    ],
+    "mis": [
+      "M_ADD_BEFORE_SUBTRACT"
+    ]
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_PROBLEMS": {
+    "name": "Solve multi-step real-life problems using addition and subtraction",
+    "sub": "MATH.G5.NUMBER.SUBTRACTION",
+    "outcome": "MATH.G5.NUMBER.SUBTRACTION.d",
+    "outcomes": [
+      "MATH.G5.NUMBER.SUBTRACTION.d"
+    ],
+    "horeb": [
+      "G5_ADDITION",
+      "G5_SUBTRACTION"
+    ],
+    "primary": "G5_SUBTRACTION",
+    "pre": [
+      "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_CALC",
+      "MATH.G5.NUMBER.SUBTRACTION.SUB_WORD_PROBLEMS"
+    ],
+    "mis": [
+      "M_ADD_ALL_NUMBERS"
+    ]
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE": {
+    "name": "Identify the rule and complete subtraction patterns up to 1,000,000",
+    "sub": "MATH.G5.NUMBER.SUBTRACTION",
+    "outcome": "MATH.G5.NUMBER.SUBTRACTION.e",
+    "outcomes": [
+      "MATH.G5.NUMBER.SUBTRACTION.e"
+    ],
+    "horeb": [
+      "G5_SUBTRACTION"
+    ],
+    "primary": "G5_PATTERNS",
+    "pre": [
+      "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS"
+    ],
+    "mis": [
+      "M_PATTERN_BOUNDARY_NO_REGROUP",
+      "M_RULE_DIGIT_NOT_VALUE"
+    ]
+  },
+  "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CREATE": {
+    "name": "Create subtraction patterns from up to 1,000,000",
+    "sub": "MATH.G5.NUMBER.SUBTRACTION",
+    "outcome": "MATH.G5.NUMBER.SUBTRACTION.e",
+    "outcomes": [
+      "MATH.G5.NUMBER.SUBTRACTION.e"
+    ],
+    "horeb": [
+      "G5_SUBTRACTION"
+    ],
+    "primary": "G5_PATTERNS",
+    "pre": [
+      "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE"
+    ],
+    "mis": [
+      "M_PATTERN_PAST_ZERO",
+      "M_PATTERN_STEP_NOT_CONSTANT"
+    ]
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D": {
+    "name": "Multiply up to a 3-digit number by a 1-digit number",
+    "sub": "MATH.G5.NUMBER.MULTIPLICATION",
+    "outcome": "MATH.G5.NUMBER.MULTIPLICATION.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.MULTIPLICATION.a"
+    ],
+    "horeb": [
+      "G5_MULTIPLICATION",
+      "G4_MULTIPLY"
+    ],
+    "primary": "G5_MULTIPLICATION",
+    "pre": [],
+    "mis": [
+      "M_ADD_CARRY_BEFORE_MULTIPLY",
+      "M_DROP_CARRY",
+      "M_WRITE_WHOLE_COLUMN_PRODUCTS",
+      "M_ZERO_DIGIT_SKIPPED"
+    ]
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D": {
+    "name": "Multiply up to a 3-digit number by a 2-digit number",
+    "sub": "MATH.G5.NUMBER.MULTIPLICATION",
+    "outcome": "MATH.G5.NUMBER.MULTIPLICATION.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.MULTIPLICATION.a"
+    ],
+    "horeb": [
+      "G5_MULTIPLICATION"
+    ],
+    "primary": "G5_MULTIPLICATION",
+    "pre": [
+      "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D"
+    ],
+    "mis": [
+      "M_NO_PLACEHOLDER_ZERO",
+      "M_MULTIPLY_LIKE_ADDITION",
+      "M_CARRIES_MIXED_BETWEEN_ROWS"
+    ]
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS": {
+    "name": "Solve real-life problems using multiplication (up to 3-digit \xD7 2-digit)",
+    "sub": "MATH.G5.NUMBER.MULTIPLICATION",
+    "outcome": "MATH.G5.NUMBER.MULTIPLICATION.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.MULTIPLICATION.a"
+    ],
+    "horeb": [
+      "G5_MULTIPLICATION"
+    ],
+    "primary": "G5_MULTIPLICATION",
+    "pre": [
+      "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D"
+    ],
+    "mis": [
+      "M_ADD_INSTEAD_OF_MULTIPLY",
+      "M_STOP_AFTER_FIRST_STEP"
+    ]
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10": {
+    "name": "Estimate a product by rounding each number to the nearest ten",
+    "sub": "MATH.G5.NUMBER.MULTIPLICATION",
+    "outcome": "MATH.G5.NUMBER.MULTIPLICATION.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.MULTIPLICATION.b"
+    ],
+    "horeb": [],
+    "primary": "G5_MULTIPLICATION",
+    "pre": [
+      "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D"
+    ],
+    "mis": [
+      "M_EXACT_THEN_ROUND",
+      "M_TRUNCATE_NOT_ROUND",
+      "M_ZEROS_MISCOUNTED"
+    ]
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE": {
+    "name": "Use an estimate to judge whether a product is reasonable",
+    "sub": "MATH.G5.NUMBER.MULTIPLICATION",
+    "outcome": "MATH.G5.NUMBER.MULTIPLICATION.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.MULTIPLICATION.b"
+    ],
+    "horeb": [],
+    "primary": "G5_MULTIPLICATION",
+    "pre": [
+      "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
+      "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D"
+    ],
+    "mis": [
+      "M_ESTIMATE_MUST_MATCH",
+      "M_NO_SIZE_CHECK"
+    ]
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND": {
+    "name": "Identify the rule and extend or complete multiplication patterns (terms not exceeding 1000)",
+    "sub": "MATH.G5.NUMBER.MULTIPLICATION",
+    "outcome": "MATH.G5.NUMBER.MULTIPLICATION.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.MULTIPLICATION.c"
+    ],
+    "horeb": [
+      "G5_MULTIPLES"
+    ],
+    "primary": "G5_PATTERNS",
+    "pre": [],
+    "mis": [
+      "M_ADDITIVE_RULE",
+      "M_ALWAYS_DOUBLE",
+      "M_NO_REVERSE_FOR_EARLIER_TERM"
+    ]
+  },
+  "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_CREATE": {
+    "name": "Create and describe own multiplication patterns (terms not exceeding 1000)",
+    "sub": "MATH.G5.NUMBER.MULTIPLICATION",
+    "outcome": "MATH.G5.NUMBER.MULTIPLICATION.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.MULTIPLICATION.c"
+    ],
+    "horeb": [
+      "G5_MULTIPLES"
+    ],
+    "primary": "G5_PATTERNS",
+    "pre": [
+      "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND"
+    ],
+    "mis": [
+      "M_TABLE_VS_REPEATED_MULTIPLY",
+      "M_RULE_CHANGES_MIDWAY"
+    ]
+  },
+  "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT": {
+    "name": "Divide a 3-digit number by a 1-digit number (short and long form)",
+    "sub": "MATH.G5.NUMBER.DIVISION",
+    "outcome": "MATH.G5.NUMBER.DIVISION.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.DIVISION.a"
+    ],
+    "horeb": [
+      "G5_DIVISION",
+      "G4_DIVIDE"
+    ],
+    "primary": "G5_DIVISION",
+    "pre": [],
+    "mis": [
+      "M_ZERO_QUOTIENT_DROPPED",
+      "M_REMAINDER_TOO_BIG",
+      "M_SHORT_DIV_NO_CARRY"
+    ]
+  },
+  "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_2DIGIT": {
+    "name": "Divide up to a 3-digit number by a 2-digit number (long division)",
+    "sub": "MATH.G5.NUMBER.DIVISION",
+    "outcome": "MATH.G5.NUMBER.DIVISION.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.DIVISION.a"
+    ],
+    "horeb": [
+      "G4_DIVIDE"
+    ],
+    "primary": "G5_DIVISION",
+    "pre": [
+      "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT"
+    ],
+    "mis": [
+      "M_TRIAL_DIGIT_TOO_SMALL",
+      "M_TRAILING_ZERO_DROPPED"
+    ]
+  },
+  "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS": {
+    "name": "Solve real-life division problems and interpret the remainder",
+    "sub": "MATH.G5.NUMBER.DIVISION",
+    "outcome": "MATH.G5.NUMBER.DIVISION.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.DIVISION.a"
+    ],
+    "horeb": [
+      "G5_DIVISION"
+    ],
+    "primary": "G5_DIVISION",
+    "pre": [
+      "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_2DIGIT",
+      "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT"
+    ],
+    "mis": [
+      "M_REMAINDER_NOT_INTERPRETED",
+      "M_GIVES_QUOTIENT_NOT_REMAINDER",
+      "M_KEYWORD_EACH_MEANS_MULTIPLY"
+    ]
+  },
+  "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES": {
+    "name": "Use multiplication and division as inverse operations",
+    "sub": "MATH.G5.NUMBER.DIVISION",
+    "outcome": "MATH.G5.NUMBER.DIVISION.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.DIVISION.b"
+    ],
+    "horeb": [
+      "G5_MULTIPLICATION",
+      "G5_DIVISION"
+    ],
+    "primary": "G5_DIVISION",
+    "pre": [],
+    "mis": [
+      "M_DIVISION_COMMUTATIVE",
+      "M_MISSING_DIVIDEND_DIVIDES"
+    ]
+  },
+  "MATH.G5.NUMBER.DIVISION.CHECK_DIVISION_BY_MULT": {
+    "name": "Check a division by multiplying (and adding the remainder)",
+    "sub": "MATH.G5.NUMBER.DIVISION",
+    "outcome": "MATH.G5.NUMBER.DIVISION.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.DIVISION.b"
+    ],
+    "horeb": [
+      "G5_MULTIPLICATION"
+    ],
+    "primary": "G5_DIVISION",
+    "pre": [
+      "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES",
+      "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_2DIGIT"
+    ],
+    "mis": [
+      "M_CHECK_FORGETS_REMAINDER"
+    ]
+  },
+  "MATH.G5.NUMBER.DIVISION.DIV_BY_1000": {
+    "name": "Divide up to a 3-digit number by 1000 (proposed interpretation: answer as a decimal)",
+    "sub": "MATH.G5.NUMBER.DIVISION",
+    "outcome": "MATH.G5.NUMBER.DIVISION.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.DIVISION.c"
+    ],
+    "horeb": [
+      "G5_DECIMALS_INTRO",
+      "G5_PLACE_VALUE"
+    ],
+    "primary": "G5_DECIMALS_INTRO",
+    "pre": [],
+    "mis": [
+      "M_DIV1000_DECIMAL_PLACES",
+      "M_SMALLER_CANNOT_DIVIDE_BIGGER",
+      "M_DIV1000_MULTIPLIES"
+    ]
+  },
+  "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS": {
+    "name": "Estimate quotients by rounding dividend and divisor to the nearest ten",
+    "sub": "MATH.G5.NUMBER.DIVISION",
+    "outcome": "MATH.G5.NUMBER.DIVISION.d",
+    "outcomes": [
+      "MATH.G5.NUMBER.DIVISION.d"
+    ],
+    "horeb": [],
+    "primary": "G5_DIVISION",
+    "pre": [
+      "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES"
+    ],
+    "mis": [
+      "M_ROUNDS_DIVISOR_WRONG",
+      "M_ESTIMATE_COMPUTED_EXACTLY"
+    ]
+  },
+  "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS": {
+    "name": "Work out combined operations (+, \u2212, \xD7, \xF7) in the correct order",
+    "sub": "MATH.G5.NUMBER.DIVISION",
+    "outcome": "MATH.G5.NUMBER.DIVISION.e",
+    "outcomes": [
+      "MATH.G5.NUMBER.DIVISION.e"
+    ],
+    "horeb": [
+      "G6_BODMAS_BASIC"
+    ],
+    "primary": "G6_BODMAS_BASIC",
+    "pre": [
+      "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT"
+    ],
+    "mis": [
+      "M_LEFT_TO_RIGHT_ALL",
+      "M_ADD_BEFORE_SUBTRACT",
+      "M_MULTIPLY_BEFORE_DIVIDE"
+    ]
+  },
+  "MATH.G5.NUMBER.DIVISION.COMBINED_OPS_PROBLEMS": {
+    "name": "Solve multi-step real-life problems using combined operations",
+    "sub": "MATH.G5.NUMBER.DIVISION",
+    "outcome": "MATH.G5.NUMBER.DIVISION.e",
+    "outcomes": [
+      "MATH.G5.NUMBER.DIVISION.e"
+    ],
+    "horeb": [
+      "G6_BODMAS_BASIC"
+    ],
+    "primary": "G6_BODMAS_BASIC",
+    "pre": [
+      "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS",
+      "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS"
+    ],
+    "mis": [
+      "M_STOPS_AFTER_ONE_STEP",
+      "M_EXPRESSION_ORDER_SCRAMBLED"
+    ]
+  },
+  "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS": {
+    "name": "Recognise and generate equivalent fractions",
+    "sub": "MATH.G5.NUMBER.FRACTIONS",
+    "outcome": "MATH.G5.NUMBER.FRACTIONS.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.FRACTIONS.a"
+    ],
+    "horeb": [
+      "G5_FRACTIONS_EQUIV",
+      "G4_FRACTIONS"
+    ],
+    "primary": "G5_FRACTIONS_EQUIV",
+    "pre": [],
+    "mis": [
+      "M_EQUIV_ADDITIVE",
+      "M_EQUIV_ONE_TERM_ONLY",
+      "M_EQUIV_BIGGER_NUMBERS_BIGGER"
+    ]
+  },
+  "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS": {
+    "name": "Express a fraction in its simplest form",
+    "sub": "MATH.G5.NUMBER.FRACTIONS",
+    "outcome": "MATH.G5.NUMBER.FRACTIONS.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.FRACTIONS.a"
+    ],
+    "horeb": [
+      "G5_FRACTIONS_EQUIV"
+    ],
+    "primary": "G5_FRACTIONS_EQUIV",
+    "pre": [
+      "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS"
+    ],
+    "mis": [
+      "M_SIMPLIFY_SUBTRACT",
+      "M_SIMPLIFY_STOPS_EARLY",
+      "M_SIMPLIFY_MAKES_SMALLER"
+    ]
+  },
+  "MATH.G5.NUMBER.FRACTIONS.COMPARE_LIKE_FRACTIONS": {
+    "name": "Compare fractions with the same denominator or the same numerator",
+    "sub": "MATH.G5.NUMBER.FRACTIONS",
+    "outcome": "MATH.G5.NUMBER.FRACTIONS.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.FRACTIONS.b"
+    ],
+    "horeb": [
+      "G4_FRACTIONS"
+    ],
+    "primary": "G5_FRACTIONS_INTRO",
+    "pre": [],
+    "mis": [
+      "M_COMPARE_BIGGER_DENOMINATOR",
+      "M_COMPARE_DIFFERENT_WHOLES"
+    ]
+  },
+  "MATH.G5.NUMBER.FRACTIONS.COMPARE_UNLIKE_FRACTIONS": {
+    "name": "Compare fractions with different denominators by renaming",
+    "sub": "MATH.G5.NUMBER.FRACTIONS",
+    "outcome": "MATH.G5.NUMBER.FRACTIONS.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.FRACTIONS.b"
+    ],
+    "horeb": [
+      "G4_FRACTIONS"
+    ],
+    "primary": "G5_FRACTIONS_INTRO",
+    "pre": [
+      "MATH.G5.NUMBER.FRACTIONS.COMPARE_LIKE_FRACTIONS",
+      "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS"
+    ],
+    "mis": [
+      "M_COMPARE_GAP_THINKING",
+      "M_COMPARE_BIGGER_TERMS"
+    ]
+  },
+  "MATH.G5.NUMBER.FRACTIONS.ORDER_FRACTIONS": {
+    "name": "Order fractions with denominators not exceeding 12",
+    "sub": "MATH.G5.NUMBER.FRACTIONS",
+    "outcome": "MATH.G5.NUMBER.FRACTIONS.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.FRACTIONS.c"
+    ],
+    "horeb": [
+      "G4_FRACTIONS"
+    ],
+    "primary": "G5_FRACTIONS_INTRO",
+    "pre": [
+      "MATH.G5.NUMBER.FRACTIONS.COMPARE_UNLIKE_FRACTIONS",
+      "MATH.G5.NUMBER.FRACTIONS.COMPARE_LIKE_FRACTIONS"
+    ],
+    "mis": [
+      "M_ORDER_BY_DENOMINATOR",
+      "M_ORDER_BY_NUMERATOR",
+      "M_ORDER_DIRECTION"
+    ]
+  },
+  "MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR": {
+    "name": "Add two fractions with the same denominator",
+    "sub": "MATH.G5.NUMBER.FRACTIONS",
+    "outcome": "MATH.G5.NUMBER.FRACTIONS.d",
+    "outcomes": [
+      "MATH.G5.NUMBER.FRACTIONS.d"
+    ],
+    "horeb": [
+      "G5_FRACTIONS_ADD_LIKE"
+    ],
+    "primary": "G5_FRACTIONS_ADD_LIKE",
+    "pre": [
+      "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS"
+    ],
+    "mis": [
+      "M_ADD_DENOMINATORS",
+      "M_ADD_DROPS_DENOMINATOR"
+    ]
+  },
+  "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR": {
+    "name": "Subtract two fractions with the same denominator",
+    "sub": "MATH.G5.NUMBER.FRACTIONS",
+    "outcome": "MATH.G5.NUMBER.FRACTIONS.e",
+    "outcomes": [
+      "MATH.G5.NUMBER.FRACTIONS.e"
+    ],
+    "horeb": [
+      "G5_FRACTIONS_SUB_LIKE"
+    ],
+    "primary": "G5_FRACTIONS_SUB_LIKE",
+    "pre": [
+      "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS"
+    ],
+    "mis": [
+      "M_SUB_DENOMINATORS",
+      "M_SUB_WHOLE_NOT_RENAMED"
+    ]
+  },
+  "MATH.G5.NUMBER.FRACTIONS.ADD_ONE_RENAMING": {
+    "name": "Add two fractions by renaming one of them",
+    "sub": "MATH.G5.NUMBER.FRACTIONS",
+    "outcome": "MATH.G5.NUMBER.FRACTIONS.f",
+    "outcomes": [
+      "MATH.G5.NUMBER.FRACTIONS.f"
+    ],
+    "horeb": [
+      "G6_FRACTIONS_ADD"
+    ],
+    "primary": "G5_FRACTIONS_ADD_LIKE",
+    "pre": [
+      "MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR",
+      "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS",
+      "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS"
+    ],
+    "mis": [
+      "M_RENAME_ADD_DENOMINATORS",
+      "M_RENAME_DENOMINATOR_ONLY",
+      "M_RENAME_ADDITIVE"
+    ]
+  },
+  "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_ONE_RENAMING": {
+    "name": "Subtract two fractions by renaming one of them",
+    "sub": "MATH.G5.NUMBER.FRACTIONS",
+    "outcome": "MATH.G5.NUMBER.FRACTIONS.g",
+    "outcomes": [
+      "MATH.G5.NUMBER.FRACTIONS.g"
+    ],
+    "horeb": [
+      "G6_FRACTIONS_SUB"
+    ],
+    "primary": "G5_FRACTIONS_SUB_LIKE",
+    "pre": [
+      "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR",
+      "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS",
+      "MATH.G5.NUMBER.FRACTIONS.COMPARE_UNLIKE_FRACTIONS"
+    ],
+    "mis": [
+      "M_RENAME_SUB_DENOMINATORS",
+      "M_RENAME_SUB_DENOMINATOR_ONLY",
+      "M_SUB_THINKS_IMPOSSIBLE"
+    ]
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME": {
+    "name": "Name the place of a digit in a decimal (ones to thousandths)",
+    "sub": "MATH.G5.NUMBER.DECIMALS",
+    "outcome": "MATH.G5.NUMBER.DECIMALS.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.DECIMALS.a"
+    ],
+    "horeb": [
+      "G5_DECIMALS_INTRO"
+    ],
+    "primary": "G5_DECIMALS_INTRO",
+    "pre": [],
+    "mis": [
+      "M_TENTHS_AS_TENS",
+      "M_THOUSANDTH_BIGGER"
+    ]
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE": {
+    "name": "State the value of a digit and write decimals to thousandths from place value information (proposed)",
+    "sub": "MATH.G5.NUMBER.DECIMALS",
+    "outcome": "MATH.G5.NUMBER.DECIMALS.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.DECIMALS.a"
+    ],
+    "horeb": [
+      "G5_DECIMALS_INTRO"
+    ],
+    "primary": "G5_DECIMALS_INTRO",
+    "pre": [
+      "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME"
+    ],
+    "mis": [
+      "M_DIGIT_VALUE_AS_WHOLE",
+      "M_MISSING_PLACEHOLDER_ZERO"
+    ]
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE": {
+    "name": "Compare two decimals up to thousandths",
+    "sub": "MATH.G5.NUMBER.DECIMALS",
+    "outcome": "MATH.G5.NUMBER.DECIMALS.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.DECIMALS.b"
+    ],
+    "horeb": [
+      "G5_DECIMALS_INTRO",
+      "G6_INEQUALITIES"
+    ],
+    "primary": "G5_DECIMALS_INTRO",
+    "pre": [
+      "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME"
+    ],
+    "mis": [
+      "M_LONGER_IS_LARGER",
+      "M_SHORTER_IS_LARGER",
+      "M_TRAILING_ZERO_CHANGES_VALUE"
+    ]
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_ORDER": {
+    "name": "Order a set of decimals up to thousandths",
+    "sub": "MATH.G5.NUMBER.DECIMALS",
+    "outcome": "MATH.G5.NUMBER.DECIMALS.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.DECIMALS.b"
+    ],
+    "horeb": [
+      "G5_DECIMALS_INTRO"
+    ],
+    "primary": "G5_DECIMALS_INTRO",
+    "pre": [
+      "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE"
+    ],
+    "mis": [
+      "M_IGNORES_WHOLE_PART",
+      "M_WHOLE_NUMBER_SMALLEST"
+    ]
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES": {
+    "name": "Add decimals with the same number of decimal places, with regrouping",
+    "sub": "MATH.G5.NUMBER.DECIMALS",
+    "outcome": "MATH.G5.NUMBER.DECIMALS.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.DECIMALS.c"
+    ],
+    "horeb": [
+      "G5_DECIMALS_ADD"
+    ],
+    "primary": "G5_DECIMALS_ADD",
+    "pre": [
+      "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME"
+    ],
+    "mis": [
+      "M_ADD_PARTS_SEPARATELY",
+      "M_POINT_DROPPED"
+    ]
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES": {
+    "name": "Add decimals with different numbers of decimal places, including whole numbers, in context",
+    "sub": "MATH.G5.NUMBER.DECIMALS",
+    "outcome": "MATH.G5.NUMBER.DECIMALS.c",
+    "outcomes": [
+      "MATH.G5.NUMBER.DECIMALS.c"
+    ],
+    "horeb": [
+      "G5_DECIMALS_ADD"
+    ],
+    "primary": "G5_DECIMALS_ADD",
+    "pre": [
+      "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES",
+      "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE"
+    ],
+    "mis": [
+      "M_RIGHT_ALIGN_DIGITS",
+      "M_WHOLE_AS_DECIMAL_DIGITS"
+    ]
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES": {
+    "name": "Subtract decimals with the same number of decimal places, with regrouping",
+    "sub": "MATH.G5.NUMBER.DECIMALS",
+    "outcome": "MATH.G5.NUMBER.DECIMALS.d",
+    "outcomes": [
+      "MATH.G5.NUMBER.DECIMALS.d"
+    ],
+    "horeb": [
+      "G5_DECIMALS_SUB"
+    ],
+    "primary": "G5_DECIMALS_SUB",
+    "pre": [
+      "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME",
+      "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES"
+    ],
+    "mis": [
+      "M_SMALLER_FROM_LARGER",
+      "M_REGROUP_ACROSS_ZERO"
+    ]
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES": {
+    "name": "Subtract decimals with different numbers of decimal places, including from whole numbers, in context",
+    "sub": "MATH.G5.NUMBER.DECIMALS",
+    "outcome": "MATH.G5.NUMBER.DECIMALS.d",
+    "outcomes": [
+      "MATH.G5.NUMBER.DECIMALS.d"
+    ],
+    "horeb": [
+      "G5_DECIMALS_SUB"
+    ],
+    "primary": "G5_DECIMALS_SUB",
+    "pre": [
+      "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES",
+      "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE"
+    ],
+    "mis": [
+      "M_BRING_DOWN_DIGITS",
+      "M_WHOLE_MINUS_DECIMAL"
+    ]
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000": {
+    "name": "Multiply decimals (up to thousandths) by 1000",
+    "sub": "MATH.G5.NUMBER.DECIMALS",
+    "outcome": "MATH.G5.NUMBER.DECIMALS.e",
+    "outcomes": [
+      "MATH.G5.NUMBER.DECIMALS.e"
+    ],
+    "horeb": [
+      "G6_DECIMALS_MUL"
+    ],
+    "primary": "G5_DECIMALS_INTRO",
+    "pre": [
+      "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME"
+    ],
+    "mis": [
+      "M_ANNEX_ZEROS",
+      "M_WRONG_NUMBER_OF_PLACES",
+      "M_NO_ZERO_FILL",
+      "M_MOVES_WRONG_WAY"
+    ]
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING": {
+    "name": "Understand what an equation is (equals sign as balance, letter as an unknown number)",
+    "sub": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+    "outcome": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a"
+    ],
+    "horeb": [
+      "G5_MISSING_NUMBER",
+      "G5_SIMPLE_EQUATIONS"
+    ],
+    "primary": "G5_MISSING_NUMBER",
+    "pre": [],
+    "mis": [
+      "M_EQUALS_MEANS_ANSWER",
+      "M_LETTER_AS_OBJECT",
+      "M_EXPRESSION_IS_EQUATION"
+    ]
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB": {
+    "name": "Form a one-step equation involving addition or subtraction from a real-life situation",
+    "sub": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+    "outcome": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a"
+    ],
+    "horeb": [
+      "G5_SIMPLE_EQUATIONS"
+    ],
+    "primary": "G5_SIMPLE_EQUATIONS",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING"
+    ],
+    "mis": [
+      "M_SUBTRACTION_ORDER_REVERSED",
+      "M_KEYWORD_MORE_MEANS_ADD",
+      "M_WRITES_ANSWER_NOT_EQUATION"
+    ]
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV": {
+    "name": "Form a one-step equation involving multiplication or division from a real-life situation",
+    "sub": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+    "outcome": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a"
+    ],
+    "horeb": [
+      "G5_SIMPLE_EQUATIONS"
+    ],
+    "primary": "G5_SIMPLE_EQUATIONS",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING"
+    ],
+    "mis": [
+      "M_TIMES_AS_MANY_REVERSED",
+      "M_SHARING_ORDER_REVERSED",
+      "M_REPEATED_COST_AS_ADD"
+    ]
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB": {
+    "name": "Solve one-step equations involving addition or subtraction",
+    "sub": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+    "outcome": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.b"
+    ],
+    "horeb": [
+      "G5_SIMPLE_EQUATIONS",
+      "G5_MISSING_NUMBER",
+      "G6_SIMPLE_EQUATIONS",
+      "G5_ADDITION",
+      "G5_SUBTRACTION"
+    ],
+    "primary": "G5_SIMPLE_EQUATIONS",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING"
+    ],
+    "mis": [
+      "M_SAME_OPERATION_NOT_INVERSE",
+      "M_SUBTRACTS_FOR_X_MINUS",
+      "M_UNKNOWN_SUBTRACTED_TREATED_AS_X_MINUS"
+    ]
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV": {
+    "name": "Solve one-step equations involving multiplication or division",
+    "sub": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+    "outcome": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.b",
+    "outcomes": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.b"
+    ],
+    "horeb": [
+      "G5_SIMPLE_EQUATIONS",
+      "G5_MISSING_NUMBER",
+      "G5_MULTIPLICATION",
+      "G5_DIVISION"
+    ],
+    "primary": "G5_SIMPLE_EQUATIONS",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING"
+    ],
+    "mis": [
+      "M_MULTIPLIES_FOR_AX",
+      "M_3X_AS_TWO_DIGIT_NUMBER",
+      "M_DIVIDES_FOR_X_DIV"
+    ]
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT": {
+    "name": "Form and solve an equation to answer a real-life problem, then interpret and check",
+    "sub": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+    "outcome": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.b"
+    ],
+    "horeb": [
+      "G5_SIMPLE_EQUATIONS"
+    ],
+    "primary": "G5_SIMPLE_EQUATIONS",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV"
+    ],
+    "mis": [
+      "M_NUMBERS_IN_STORY_ORDER",
+      "M_NO_REASONABLENESS_CHECK"
+    ]
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP": {
+    "name": "Form and solve two-step equations of the form ax + b = c or ax \u2212 b = c (proposed extension)",
+    "sub": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+    "outcome": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a",
+    "outcomes": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.b"
+    ],
+    "horeb": [
+      "G5_SIMPLE_EQUATIONS"
+    ],
+    "primary": "G5_SIMPLE_EQUATIONS",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV"
+    ],
+    "mis": [
+      "M_UNDOES_IN_WRONG_ORDER",
+      "M_COMBINES_UNLIKE_TERMS"
+    ]
+  },
+  "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT": {
+    "name": "Recognise the kilometre as the unit for long distances",
+    "sub": "MATH.G5.MEASUR.LENGTH",
+    "outcome": "MATH.G5.MEASUR.LENGTH.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.LENGTH.a"
+    ],
+    "horeb": [
+      "G5_LENGTH"
+    ],
+    "primary": "G5_LENGTH",
+    "pre": [],
+    "mis": [
+      "M_UNIT_SIZE_MISMATCH",
+      "M_KM_KG_CONFUSION"
+    ]
+  },
+  "MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE": {
+    "name": "Estimate distances in kilometres",
+    "sub": "MATH.G5.MEASUR.LENGTH",
+    "outcome": "MATH.G5.MEASUR.LENGTH.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.LENGTH.b"
+    ],
+    "horeb": [
+      "G5_LENGTH"
+    ],
+    "primary": "G5_LENGTH",
+    "pre": [
+      "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT",
+      "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP"
+    ],
+    "mis": [
+      "M_UNREALISTIC_ESTIMATE",
+      "M_TIME_AS_DISTANCE"
+    ]
+  },
+  "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP": {
+    "name": "Know and use 1 km = 1 000 m, including comparing distances",
+    "sub": "MATH.G5.MEASUR.LENGTH",
+    "outcome": "MATH.G5.MEASUR.LENGTH.c",
+    "outcomes": [
+      "MATH.G5.MEASUR.LENGTH.c"
+    ],
+    "horeb": [
+      "G5_LENGTH",
+      "G4_LENGTH"
+    ],
+    "primary": "G5_LENGTH",
+    "pre": [
+      "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT"
+    ],
+    "mis": [
+      "M_KM_EQUALS_100M",
+      "M_BIGGER_NUMBER_LONGER"
+    ]
+  },
+  "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M": {
+    "name": "Convert kilometres (and km with m) to metres",
+    "sub": "MATH.G5.MEASUR.LENGTH",
+    "outcome": "MATH.G5.MEASUR.LENGTH.d",
+    "outcomes": [
+      "MATH.G5.MEASUR.LENGTH.d"
+    ],
+    "horeb": [
+      "G5_LENGTH",
+      "G6_UNIT_CONVERSIONS"
+    ],
+    "primary": "G5_LENGTH",
+    "pre": [
+      "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP"
+    ],
+    "mis": [
+      "M_KM_TO_M_TIMES_100",
+      "M_MISSING_PLACEHOLDER_ZERO"
+    ]
+  },
+  "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM": {
+    "name": "Convert metres to kilometres (and km with m)",
+    "sub": "MATH.G5.MEASUR.LENGTH",
+    "outcome": "MATH.G5.MEASUR.LENGTH.d",
+    "outcomes": [
+      "MATH.G5.MEASUR.LENGTH.d"
+    ],
+    "horeb": [
+      "G5_LENGTH",
+      "G6_UNIT_CONVERSIONS"
+    ],
+    "primary": "G5_LENGTH",
+    "pre": [
+      "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP",
+      "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M"
+    ],
+    "mis": [
+      "M_M_TO_KM_DIVIDE_100",
+      "M_M_TO_KM_DROPS_ZERO"
+    ]
+  },
+  "MATH.G5.MEASUR.LENGTH.ADD_KM_M": {
+    "name": "Add distances in km and m",
+    "sub": "MATH.G5.MEASUR.LENGTH",
+    "outcome": "MATH.G5.MEASUR.LENGTH.e",
+    "outcomes": [
+      "MATH.G5.MEASUR.LENGTH.e"
+    ],
+    "horeb": [
+      "G5_LENGTH"
+    ],
+    "primary": "G5_LENGTH_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM"
+    ],
+    "mis": [
+      "M_ADD_NO_REGROUP",
+      "M_ADD_REGROUP_AT_100",
+      "M_ADD_IGNORE_UNITS"
+    ]
+  },
+  "MATH.G5.MEASUR.LENGTH.SUBTRACT_KM_M": {
+    "name": "Subtract distances in km and m",
+    "sub": "MATH.G5.MEASUR.LENGTH",
+    "outcome": "MATH.G5.MEASUR.LENGTH.f",
+    "outcomes": [
+      "MATH.G5.MEASUR.LENGTH.f"
+    ],
+    "horeb": [
+      "G5_LENGTH"
+    ],
+    "primary": "G5_LENGTH_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M",
+      "MATH.G5.MEASUR.LENGTH.ADD_KM_M"
+    ],
+    "mis": [
+      "M_SUB_SMALLER_FROM_LARGER",
+      "M_SUB_EXCHANGE_100",
+      "M_SUB_FORGET_REDUCE_KM"
+    ]
+  },
+  "MATH.G5.MEASUR.LENGTH.MULTIPLY_KM_M": {
+    "name": "Multiply distances in km and m by a whole number",
+    "sub": "MATH.G5.MEASUR.LENGTH",
+    "outcome": "MATH.G5.MEASUR.LENGTH.g",
+    "outcomes": [
+      "MATH.G5.MEASUR.LENGTH.g"
+    ],
+    "horeb": [
+      "G5_LENGTH"
+    ],
+    "primary": "G5_LENGTH_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM",
+      "MATH.G5.MEASUR.LENGTH.ADD_KM_M"
+    ],
+    "mis": [
+      "M_MULT_NO_REGROUP",
+      "M_MULT_ONE_PART_ONLY"
+    ]
+  },
+  "MATH.G5.MEASUR.LENGTH.DIVIDE_KM_M": {
+    "name": "Divide distances in km and m by a whole number",
+    "sub": "MATH.G5.MEASUR.LENGTH",
+    "outcome": "MATH.G5.MEASUR.LENGTH.h",
+    "outcomes": [
+      "MATH.G5.MEASUR.LENGTH.h"
+    ],
+    "horeb": [
+      "G5_LENGTH"
+    ],
+    "primary": "G5_LENGTH_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M",
+      "MATH.G5.MEASUR.LENGTH.MULTIPLY_KM_M"
+    ],
+    "mis": [
+      "M_DIV_IGNORE_REMAINDER",
+      "M_DIV_REMAINDER_AS_100"
+    ]
+  },
+  "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING": {
+    "name": "Knowing what one square centimetre (cm\xB2) is",
+    "sub": "MATH.G5.MEASUR.AREA",
+    "outcome": "MATH.G5.MEASUR.AREA.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.AREA.a"
+    ],
+    "horeb": [
+      "G5_AREA_INTRO"
+    ],
+    "primary": "G5_AREA_INTRO",
+    "pre": [],
+    "mis": [
+      "M_CM_FOR_AREA",
+      "M_SQUARED_MEANS_DOUBLE",
+      "M_ANY_SQUARE_IS_ONE_CM2"
+    ]
+  },
+  "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT": {
+    "name": "Finding area by covering with 1 cm squares and counting",
+    "sub": "MATH.G5.MEASUR.AREA",
+    "outcome": "MATH.G5.MEASUR.AREA.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.AREA.a",
+      "MATH.G5.MEASUR.AREA.b"
+    ],
+    "horeb": [
+      "G5_AREA_INTRO",
+      "G4_AREA"
+    ],
+    "primary": "G5_AREA_INTRO",
+    "pre": [
+      "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING"
+    ],
+    "mis": [
+      "M_GAPS_OVERLAPS",
+      "M_COUNT_LINES_NOT_SQUARES",
+      "M_COUNT_BORDER_ONLY"
+    ]
+  },
+  "MATH.G5.MEASUR.AREA.CM2_REAL_LIFE": {
+    "name": "Recognising real-life surfaces whose area is measured in cm\xB2",
+    "sub": "MATH.G5.MEASUR.AREA",
+    "outcome": "MATH.G5.MEASUR.AREA.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.AREA.a"
+    ],
+    "horeb": [],
+    "primary": "G5_AREA_INTRO",
+    "pre": [
+      "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING"
+    ],
+    "mis": [
+      "M_CM2_FOR_LENGTH"
+    ]
+  },
+  "MATH.G5.MEASUR.AREA.AREA_ROWS_BY_COLUMNS": {
+    "name": "Linking rows \xD7 columns of 1 cm\xB2 squares to length \xD7 width",
+    "sub": "MATH.G5.MEASUR.AREA",
+    "outcome": "MATH.G5.MEASUR.AREA.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.AREA.b"
+    ],
+    "horeb": [
+      "G5_AREA_INTRO",
+      "G4_AREA"
+    ],
+    "primary": "G5_AREA_INTRO",
+    "pre": [
+      "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT"
+    ],
+    "mis": [
+      "M_ADD_ROWS_COLUMNS",
+      "M_PARTIAL_GRID_COUNT"
+    ]
+  },
+  "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC": {
+    "name": "Calculating area of rectangles and squares from their sides",
+    "sub": "MATH.G5.MEASUR.AREA",
+    "outcome": "MATH.G5.MEASUR.AREA.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.AREA.b"
+    ],
+    "horeb": [
+      "G6_AREA_RECT"
+    ],
+    "primary": "G5_AREA_INTRO",
+    "pre": [
+      "MATH.G5.MEASUR.AREA.AREA_ROWS_BY_COLUMNS"
+    ],
+    "mis": [
+      "M_AREA_AS_PERIMETER",
+      "M_SQUARE_SIDE_DOUBLED",
+      "M_MULTIPLY_ALL_SIDES"
+    ]
+  },
+  "MATH.G5.MEASUR.AREA.AREA_PROBLEMS": {
+    "name": "Solving real-life area problems with rectangles and squares in cm\xB2",
+    "sub": "MATH.G5.MEASUR.AREA",
+    "outcome": "MATH.G5.MEASUR.AREA.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.AREA.b"
+    ],
+    "horeb": [
+      "G6_AREA_RECT"
+    ],
+    "primary": "G5_AREA_INTRO",
+    "pre": [
+      "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC",
+      "MATH.G5.MEASUR.AREA.CM2_REAL_LIFE"
+    ],
+    "mis": [
+      "M_CONTEXT_WRONG_MEASURE",
+      "M_MISSING_SIDE_SUBTRACT"
+    ]
+  },
+  "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY": {
+    "name": "Identify the cubic centimetre (cm\xB3) as a unit of volume",
+    "sub": "MATH.G5.MEASUR.VOLUME",
+    "outcome": "MATH.G5.MEASUR.VOLUME.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.VOLUME.a"
+    ],
+    "horeb": [
+      "G5_VOLUME"
+    ],
+    "primary": "G5_VOLUME",
+    "pre": [],
+    "mis": [
+      "M_CM3_WRONG_UNIT",
+      "M_CM3_MEANS_3CM",
+      "M_VOLUME_IS_MASS"
+    ]
+  },
+  "MATH.G5.MEASUR.VOLUME.VOLUME_COUNT_CM3_CUBES": {
+    "name": "Find volume by counting 1 cm cubes (models and pictures)",
+    "sub": "MATH.G5.MEASUR.VOLUME",
+    "outcome": "MATH.G5.MEASUR.VOLUME.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.VOLUME.a",
+      "MATH.G5.MEASUR.VOLUME.b"
+    ],
+    "horeb": [
+      "G5_VOLUME",
+      "G4_VOLUME"
+    ],
+    "primary": "G5_VOLUME",
+    "pre": [
+      "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY"
+    ],
+    "mis": [
+      "M_COUNT_FACE_SQUARES",
+      "M_COUNT_ONE_LAYER",
+      "M_NO_CONSERVATION_VOLUME"
+    ]
+  },
+  "MATH.G5.MEASUR.VOLUME.CUBOID_FORMULA_DERIVE": {
+    "name": "Derive V = l \xD7 w \xD7 h for a cuboid practically",
+    "sub": "MATH.G5.MEASUR.VOLUME",
+    "outcome": "MATH.G5.MEASUR.VOLUME.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.VOLUME.b"
+    ],
+    "horeb": [
+      "G5_VOLUME"
+    ],
+    "primary": "G5_VOLUME",
+    "pre": [
+      "MATH.G5.MEASUR.VOLUME.VOLUME_COUNT_CM3_CUBES"
+    ],
+    "mis": [
+      "M_ADD_LAYERS",
+      "M_ROTATION_CHANGES_VOLUME"
+    ]
+  },
+  "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC": {
+    "name": "Calculate the volume of a cuboid in cm\xB3 using the formula",
+    "sub": "MATH.G5.MEASUR.VOLUME",
+    "outcome": "MATH.G5.MEASUR.VOLUME.c",
+    "outcomes": [
+      "MATH.G5.MEASUR.VOLUME.c"
+    ],
+    "horeb": [
+      "G5_VOLUME",
+      "G6_VOLUME_CUBOID"
+    ],
+    "primary": "G5_VOLUME",
+    "pre": [
+      "MATH.G5.MEASUR.VOLUME.CUBOID_FORMULA_DERIVE",
+      "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY"
+    ],
+    "mis": [
+      "M_ADD_DIMENSIONS",
+      "M_TWO_DIMENSIONS_ONLY"
+    ]
+  },
+  "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_PROBLEMS": {
+    "name": "Solve real-life problems on the volume of cuboids in cm\xB3",
+    "sub": "MATH.G5.MEASUR.VOLUME",
+    "outcome": "MATH.G5.MEASUR.VOLUME.c",
+    "outcomes": [
+      "MATH.G5.MEASUR.VOLUME.c"
+    ],
+    "horeb": [
+      "G5_VOLUME",
+      "G6_VOLUME_CUBOID"
+    ],
+    "primary": "G5_VOLUME",
+    "pre": [
+      "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC"
+    ],
+    "mis": [
+      "M_MIXED_UNITS",
+      "M_MULTIPLY_ALL_NUMBERS"
+    ]
+  },
+  "MATH.G5.MEASUR.VOLUME.CUBE_FORMULA_DERIVE": {
+    "name": "Derive V = s \xD7 s \xD7 s for a cube practically",
+    "sub": "MATH.G5.MEASUR.VOLUME",
+    "outcome": "MATH.G5.MEASUR.VOLUME.d",
+    "outcomes": [
+      "MATH.G5.MEASUR.VOLUME.d"
+    ],
+    "horeb": [
+      "G5_VOLUME"
+    ],
+    "primary": "G5_VOLUME",
+    "pre": [
+      "MATH.G5.MEASUR.VOLUME.CUBOID_FORMULA_DERIVE"
+    ],
+    "mis": [
+      "M_EDGE_EQUALS_VOLUME"
+    ]
+  },
+  "MATH.G5.MEASUR.VOLUME.CUBE_VOLUME_CALC": {
+    "name": "Calculate the volume of a cube in cm\xB3 using the formula",
+    "sub": "MATH.G5.MEASUR.VOLUME",
+    "outcome": "MATH.G5.MEASUR.VOLUME.e",
+    "outcomes": [
+      "MATH.G5.MEASUR.VOLUME.e"
+    ],
+    "horeb": [
+      "G5_VOLUME"
+    ],
+    "primary": "G5_VOLUME",
+    "pre": [
+      "MATH.G5.MEASUR.VOLUME.CUBE_FORMULA_DERIVE",
+      "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY"
+    ],
+    "mis": [
+      "M_CUBE_S_TIMES_3",
+      "M_CUBE_S_SQUARED"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT": {
+    "name": "Recognise the millilitre as a unit of capacity and where it is used",
+    "sub": "MATH.G5.MEASUR.CAPACITY",
+    "outcome": "MATH.G5.MEASUR.CAPACITY.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.a"
+    ],
+    "horeb": [
+      "G5_CAPACITY",
+      "G4_MASS"
+    ],
+    "primary": "G5_CAPACITY",
+    "pre": [],
+    "mis": [
+      "M_BIGGER_NUMBER_MEANS_MORE",
+      "M_MASS_LABEL_AS_CAPACITY",
+      "M_WRONG_UNIT_FOR_SMALL_AMOUNT"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_SCALE": {
+    "name": "Measure capacity in millilitres using a graduated container",
+    "sub": "MATH.G5.MEASUR.CAPACITY",
+    "outcome": "MATH.G5.MEASUR.CAPACITY.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.b",
+      "MATH.G5.MEASUR.CAPACITY.c"
+    ],
+    "horeb": [
+      "G5_CAPACITY"
+    ],
+    "primary": "G5_CAPACITY",
+    "pre": [
+      "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT"
+    ],
+    "mis": [
+      "M_EACH_MARK_IS_ONE",
+      "M_READS_FROM_ABOVE"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_BY_FILLING": {
+    "name": "Measure capacity in millilitres by filling with a smaller known container",
+    "sub": "MATH.G5.MEASUR.CAPACITY",
+    "outcome": "MATH.G5.MEASUR.CAPACITY.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.b"
+    ],
+    "horeb": [
+      "G5_CAPACITY"
+    ],
+    "primary": "G5_CAPACITY",
+    "pre": [
+      "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT"
+    ],
+    "mis": [
+      "M_GIVES_NUMBER_OF_FILLS",
+      "M_MORE_FILLS_BIGGER_CUP"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE": {
+    "name": "Estimate capacity in millilitres and check by measuring",
+    "sub": "MATH.G5.MEASUR.CAPACITY",
+    "outcome": "MATH.G5.MEASUR.CAPACITY.c",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.c"
+    ],
+    "horeb": [
+      "G5_CAPACITY"
+    ],
+    "primary": "G5_CAPACITY",
+    "pre": [
+      "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_SCALE",
+      "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_BY_FILLING"
+    ],
+    "mis": [
+      "M_NO_BENCHMARKS",
+      "M_TALLER_HOLDS_MORE"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP": {
+    "name": "Know and explain that 1 litre = 1 000 millilitres (and \xBD l = 500 ml, \xBC l = 250 ml)",
+    "sub": "MATH.G5.MEASUR.CAPACITY",
+    "outcome": "MATH.G5.MEASUR.CAPACITY.d",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.d"
+    ],
+    "horeb": [
+      "G5_CAPACITY",
+      "G4_MASS"
+    ],
+    "primary": "G5_CAPACITY",
+    "pre": [
+      "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT",
+      "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_BY_FILLING"
+    ],
+    "mis": [
+      "M_LITRE_IS_100_ML",
+      "M_HALF_LITRE_50"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML": {
+    "name": "Convert litres (and litres with millilitres) to millilitres",
+    "sub": "MATH.G5.MEASUR.CAPACITY",
+    "outcome": "MATH.G5.MEASUR.CAPACITY.e",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.e"
+    ],
+    "horeb": [
+      "G5_CAPACITY",
+      "G6_UNIT_CONVERSIONS",
+      "G6_CAPACITY"
+    ],
+    "primary": "G5_CAPACITY",
+    "pre": [
+      "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP"
+    ],
+    "mis": [
+      "M_MULTIPLY_BY_100",
+      "M_MIXED_UNIT_PLACEHOLDER"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY.CONVERT_ML_TO_L": {
+    "name": "Convert millilitres to litres (and litres with millilitres)",
+    "sub": "MATH.G5.MEASUR.CAPACITY",
+    "outcome": "MATH.G5.MEASUR.CAPACITY.e",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.e"
+    ],
+    "horeb": [
+      "G5_CAPACITY",
+      "G6_UNIT_CONVERSIONS",
+      "G6_CAPACITY"
+    ],
+    "primary": "G5_CAPACITY",
+    "pre": [
+      "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP",
+      "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML"
+    ],
+    "mis": [
+      "M_DIVIDE_BY_100",
+      "M_SPLIT_DIGITS_WRONG"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY.ADD_L_ML": {
+    "name": "Add litres and millilitres",
+    "sub": "MATH.G5.MEASUR.CAPACITY",
+    "outcome": "MATH.G5.MEASUR.CAPACITY.f",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.f"
+    ],
+    "horeb": [
+      "G5_CAPACITY"
+    ],
+    "primary": "G5_CAPACITY_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.CAPACITY.CONVERT_ML_TO_L"
+    ],
+    "mis": [
+      "M_ADD_REGROUP_AT_100",
+      "M_COLUMNS_MISALIGNED",
+      "M_ADD_UNLIKE_UNITS"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML": {
+    "name": "Subtract litres and millilitres",
+    "sub": "MATH.G5.MEASUR.CAPACITY",
+    "outcome": "MATH.G5.MEASUR.CAPACITY.g",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.g"
+    ],
+    "horeb": [
+      "G5_CAPACITY"
+    ],
+    "primary": "G5_CAPACITY_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML",
+      "MATH.G5.MEASUR.CAPACITY.ADD_L_ML"
+    ],
+    "mis": [
+      "M_SMALLER_FROM_LARGER",
+      "M_BORROW_100",
+      "M_SUBTRACT_IGNORING_UNITS"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY.MULTIPLY_L_ML": {
+    "name": "Multiply litres and millilitres by a whole number",
+    "sub": "MATH.G5.MEASUR.CAPACITY",
+    "outcome": "MATH.G5.MEASUR.CAPACITY.h",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.h"
+    ],
+    "horeb": [
+      "G5_CAPACITY"
+    ],
+    "primary": "G5_CAPACITY_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.CAPACITY.CONVERT_ML_TO_L",
+      "MATH.G5.MEASUR.CAPACITY.ADD_L_ML"
+    ],
+    "mis": [
+      "M_MULTIPLY_LITRES_ONLY",
+      "M_MULT_REGROUP_AT_100",
+      "M_CARRY_BEFORE_MULTIPLY"
+    ]
+  },
+  "MATH.G5.MEASUR.CAPACITY.DIVIDE_L_ML": {
+    "name": "Divide litres and millilitres by a whole number",
+    "sub": "MATH.G5.MEASUR.CAPACITY",
+    "outcome": "MATH.G5.MEASUR.CAPACITY.i",
+    "outcomes": [
+      "MATH.G5.MEASUR.CAPACITY.i"
+    ],
+    "horeb": [
+      "G5_CAPACITY"
+    ],
+    "primary": "G5_CAPACITY_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML",
+      "MATH.G5.MEASUR.CAPACITY.MULTIPLY_L_ML"
+    ],
+    "mis": [
+      "M_DROP_REMAINDER_LITRES",
+      "M_REMAINDER_AS_100ML",
+      "M_DIVIDE_LITRES_ONLY"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE": {
+    "name": "Recognise the gramme and read mass labels",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.a"
+    ],
+    "horeb": [
+      "G5_MASS"
+    ],
+    "primary": "G5_MASS",
+    "pre": [],
+    "mis": [
+      "M_G_KG_SYMBOL_SWAP",
+      "M_MASS_CAPACITY_UNITS"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_CHOOSE_UNIT": {
+    "name": "Choose grammes or kilogrammes for a real object",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.a"
+    ],
+    "horeb": [
+      "G5_MASS"
+    ],
+    "primary": "G5_MASS",
+    "pre": [
+      "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE"
+    ],
+    "mis": [
+      "M_SIZE_DECIDES_UNIT",
+      "M_UNIT_UNREASONABLE_MAGNITUDE"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_MEASURE_BALANCE": {
+    "name": "Measure mass in grammes with a beam balance or improvised balance",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.b"
+    ],
+    "horeb": [
+      "G5_MASS"
+    ],
+    "primary": "G5_MASS",
+    "pre": [
+      "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE"
+    ],
+    "mis": [
+      "M_HEAVIER_SIDE_UP",
+      "M_COUNT_MASSES_NOT_VALUES"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_READ_SCALE": {
+    "name": "Read a weighing scale marked in grammes",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.b"
+    ],
+    "horeb": [
+      "G5_MASS"
+    ],
+    "primary": "G5_MASS",
+    "pre": [
+      "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE"
+    ],
+    "mis": [
+      "M_EACH_MARK_ONE_UNIT",
+      "M_READ_NEAREST_LABEL"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_ESTIMATE_GRAMMES": {
+    "name": "Estimate mass in grammes using benchmarks, then check by measuring",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.c",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.c"
+    ],
+    "horeb": [
+      "G5_MASS"
+    ],
+    "primary": "G5_MASS",
+    "pre": [
+      "MATH.G5.MEASUR.MASS.MASS_MEASURE_BALANCE",
+      "MATH.G5.MEASUR.MASS.MASS_CHOOSE_UNIT"
+    ],
+    "mis": [
+      "M_SIZE_EQUALS_MASS",
+      "M_BENCHMARK_ADD_NOT_REPEAT",
+      "M_CHANGE_ESTIMATE"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP": {
+    "name": "Know that 1 kg = 1000 g, including half and quarter kilogrammes",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.d",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.d"
+    ],
+    "horeb": [
+      "G5_MASS",
+      "G6_UNIT_CONVERSIONS"
+    ],
+    "primary": "G5_MASS",
+    "pre": [
+      "MATH.G5.MEASUR.MASS.MASS_MEASURE_BALANCE"
+    ],
+    "mis": [
+      "M_KG_IS_100G",
+      "M_HALF_QUARTER_MIXUP",
+      "M_COMPARE_IGNORE_UNITS"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G": {
+    "name": "Convert kilogrammes (and kilogrammes with grammes) to grammes",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.e",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.e"
+    ],
+    "horeb": [
+      "G5_MASS",
+      "G6_UNIT_CONVERSIONS"
+    ],
+    "primary": "G5_MASS",
+    "pre": [
+      "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP"
+    ],
+    "mis": [
+      "M_KG_TO_G_TIMES_100",
+      "M_MISSING_PLACEHOLDER_ZERO"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG": {
+    "name": "Convert grammes to kilogrammes (and kilogrammes with grammes)",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.e",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.e"
+    ],
+    "horeb": [
+      "G5_MASS",
+      "G6_UNIT_CONVERSIONS"
+    ],
+    "primary": "G5_MASS",
+    "pre": [
+      "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP",
+      "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G"
+    ],
+    "mis": [
+      "M_G_TO_KG_SPLIT_AT_HUNDREDS",
+      "M_DROP_ZERO_IN_GRAMMES",
+      "M_CONVERT_WRONG_DIRECTION"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G": {
+    "name": "Add masses in kilogrammes and grammes",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.f",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.f"
+    ],
+    "horeb": [
+      "G5_MASS"
+    ],
+    "primary": "G5_MASS_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG"
+    ],
+    "mis": [
+      "M_ADD_DROP_CARRY",
+      "M_ADD_REGROUP_AT_100",
+      "M_ADD_UNLIKE_UNITS"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G": {
+    "name": "Subtract masses in kilogrammes and grammes",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.g",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.g"
+    ],
+    "horeb": [
+      "G5_MASS"
+    ],
+    "primary": "G5_MASS_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G"
+    ],
+    "mis": [
+      "M_SUB_SMALLER_FROM_LARGER",
+      "M_SUB_BORROW_100",
+      "M_SUB_EXCHANGE_NOT_REDUCED"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_MULTIPLY_KG_G": {
+    "name": "Multiply masses in kilogrammes and grammes by a whole number",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.h",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.h"
+    ],
+    "horeb": [
+      "G5_MASS"
+    ],
+    "primary": "G5_MASS_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G"
+    ],
+    "mis": [
+      "M_MULT_ONE_PART",
+      "M_MULT_NO_REGROUP"
+    ]
+  },
+  "MATH.G5.MEASUR.MASS.MASS_DIVIDE_KG_G": {
+    "name": "Divide masses in kilogrammes and grammes by a whole number",
+    "sub": "MATH.G5.MEASUR.MASS",
+    "outcome": "MATH.G5.MEASUR.MASS.i",
+    "outcomes": [
+      "MATH.G5.MEASUR.MASS.i"
+    ],
+    "horeb": [
+      "G5_MASS"
+    ],
+    "primary": "G5_MASS_OPS",
+    "pre": [
+      "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G",
+      "MATH.G5.MEASUR.MASS.MASS_MULTIPLY_KG_G"
+    ],
+    "mis": [
+      "M_DIV_IGNORE_KG_REMAINDER",
+      "M_DIV_REMAINDER_AS_100",
+      "M_DIV_WRONG_WAY"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME.SECOND_IDENTIFY": {
+    "name": "Identify the second and the second hand on a clock",
+    "sub": "MATH.G5.MEASUR.TIME",
+    "outcome": "MATH.G5.MEASUR.TIME.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.a"
+    ],
+    "horeb": [
+      "G5_TIME"
+    ],
+    "primary": "G5_TIME",
+    "pre": [],
+    "mis": [
+      "M_SECOND_MINUTE_HAND_SWAP"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME.SECOND_DURATION_SENSE": {
+    "name": "Estimate and measure short durations in seconds (proposed, from learning experiences)",
+    "sub": "MATH.G5.MEASUR.TIME",
+    "outcome": "MATH.G5.MEASUR.TIME.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.a"
+    ],
+    "horeb": [
+      "G5_TIME"
+    ],
+    "primary": "G5_TIME",
+    "pre": [
+      "MATH.G5.MEASUR.TIME.SECOND_IDENTIFY",
+      "MATH.G5.MEASUR.TIME.READ_SECONDS_DIGITAL"
+    ],
+    "mis": [
+      "M_SECOND_SIZE_MISJUDGED"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME.READ_SECONDS_ANALOGUE": {
+    "name": "Read time including seconds on an analogue clock",
+    "sub": "MATH.G5.MEASUR.TIME",
+    "outcome": "MATH.G5.MEASUR.TIME.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.b"
+    ],
+    "horeb": [
+      "G5_TIME"
+    ],
+    "primary": "G5_TIME",
+    "pre": [
+      "MATH.G5.MEASUR.TIME.SECOND_IDENTIFY"
+    ],
+    "mis": [
+      "M_NUMERAL_AS_SECONDS",
+      "M_SMALL_MARKS_ADDED_TO_NUMERAL"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME.READ_SECONDS_DIGITAL": {
+    "name": "Read time and durations including seconds on digital clocks and stopwatches",
+    "sub": "MATH.G5.MEASUR.TIME",
+    "outcome": "MATH.G5.MEASUR.TIME.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.b"
+    ],
+    "horeb": [
+      "G5_TIME"
+    ],
+    "primary": "G5_TIME",
+    "pre": [
+      "MATH.G5.MEASUR.TIME.SECOND_IDENTIFY"
+    ],
+    "mis": [
+      "M_STOPWATCH_AS_HOURS",
+      "M_DIGITAL_SECONDS_IGNORED"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION": {
+    "name": "Know that 1 minute = 60 seconds",
+    "sub": "MATH.G5.MEASUR.TIME",
+    "outcome": "MATH.G5.MEASUR.TIME.c",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.c"
+    ],
+    "horeb": [
+      "G5_TIME"
+    ],
+    "primary": "G5_TIME",
+    "pre": [
+      "MATH.G5.MEASUR.TIME.SECOND_IDENTIFY"
+    ],
+    "mis": [
+      "M_100_SECONDS_IN_MINUTE",
+      "M_REVOLUTION_IS_12"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME.CONVERT_MIN_TO_SEC": {
+    "name": "Convert minutes (and minutes and seconds) to seconds",
+    "sub": "MATH.G5.MEASUR.TIME",
+    "outcome": "MATH.G5.MEASUR.TIME.d",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.d"
+    ],
+    "horeb": [
+      "G5_TIME"
+    ],
+    "primary": "G5_TIME",
+    "pre": [
+      "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION"
+    ],
+    "mis": [
+      "M_MIN_TO_SEC_TIMES_100",
+      "M_MIXED_CONCATENATE"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN": {
+    "name": "Convert seconds to minutes and seconds",
+    "sub": "MATH.G5.MEASUR.TIME",
+    "outcome": "MATH.G5.MEASUR.TIME.d",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.d"
+    ],
+    "horeb": [
+      "G5_TIME"
+    ],
+    "primary": "G5_TIME",
+    "pre": [
+      "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION",
+      "MATH.G5.MEASUR.TIME.CONVERT_MIN_TO_SEC"
+    ],
+    "mis": [
+      "M_DECIMAL_REMAINDER",
+      "M_SEC_TO_MIN_BY_100",
+      "M_CONVERT_WRONG_DIRECTION"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME.ADD_MIN_SEC": {
+    "name": "Add minutes and seconds with regrouping",
+    "sub": "MATH.G5.MEASUR.TIME",
+    "outcome": "MATH.G5.MEASUR.TIME.e",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.e"
+    ],
+    "horeb": [
+      "G5_TIME"
+    ],
+    "primary": "G5_TIME",
+    "pre": [
+      "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN"
+    ],
+    "mis": [
+      "M_ADD_NO_REGROUP",
+      "M_ADD_REGROUP_AT_100",
+      "M_ADD_CARRY_LOST"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME.SUBTRACT_MIN_SEC": {
+    "name": "Subtract minutes and seconds with regrouping",
+    "sub": "MATH.G5.MEASUR.TIME",
+    "outcome": "MATH.G5.MEASUR.TIME.f",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.f"
+    ],
+    "horeb": [
+      "G5_TIME"
+    ],
+    "primary": "G5_TIME",
+    "pre": [
+      "MATH.G5.MEASUR.TIME.CONVERT_MIN_TO_SEC"
+    ],
+    "mis": [
+      "M_SUB_SMALLER_FROM_LARGER",
+      "M_SUB_BORROW_100",
+      "M_SUB_BORROW_NOT_REDUCED"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME.MULTIPLY_MIN_SEC": {
+    "name": "Multiply minutes and seconds by a whole number",
+    "sub": "MATH.G5.MEASUR.TIME",
+    "outcome": "MATH.G5.MEASUR.TIME.g",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.g"
+    ],
+    "horeb": [
+      "G5_TIME"
+    ],
+    "primary": "G5_TIME",
+    "pre": [
+      "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN",
+      "MATH.G5.MEASUR.TIME.ADD_MIN_SEC"
+    ],
+    "mis": [
+      "M_MULT_NO_REGROUP",
+      "M_MULT_MINUTES_ONLY",
+      "M_MULT_REGROUP_100"
+    ]
+  },
+  "MATH.G5.MEASUR.TIME.DIVIDE_MIN_SEC": {
+    "name": "Divide minutes and seconds by a whole number",
+    "sub": "MATH.G5.MEASUR.TIME",
+    "outcome": "MATH.G5.MEASUR.TIME.h",
+    "outcomes": [
+      "MATH.G5.MEASUR.TIME.h"
+    ],
+    "horeb": [
+      "G5_TIME"
+    ],
+    "primary": "G5_TIME",
+    "pre": [
+      "MATH.G5.MEASUR.TIME.CONVERT_MIN_TO_SEC",
+      "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN"
+    ],
+    "mis": [
+      "M_DIV_REMAINDER_DROPPED",
+      "M_DIV_REMAINDER_AS_TEN",
+      "M_DIV_ONE_PART_ONLY"
+    ]
+  },
+  "MATH.G5.MEASUR.MONEY.BUDGET_MEANING": {
+    "name": "Explain what a budget is",
+    "sub": "MATH.G5.MEASUR.MONEY",
+    "outcome": "MATH.G5.MEASUR.MONEY.a",
+    "outcomes": [
+      "MATH.G5.MEASUR.MONEY.a"
+    ],
+    "horeb": [
+      "G4_MONEY"
+    ],
+    "primary": "G5_MONEY",
+    "pre": [],
+    "mis": [
+      "M_BUDGET_IS_RECEIPT",
+      "M_BUDGET_NO_MONEY_LIMIT",
+      "M_BUDGET_ONLY_FOR_GOVERNMENT"
+    ]
+  },
+  "MATH.G5.MEASUR.MONEY.BUDGET_IMPORTANCE": {
+    "name": "Identify why a budget is important",
+    "sub": "MATH.G5.MEASUR.MONEY",
+    "outcome": "MATH.G5.MEASUR.MONEY.b",
+    "outcomes": [
+      "MATH.G5.MEASUR.MONEY.b"
+    ],
+    "horeb": [
+      "G4_MONEY"
+    ],
+    "primary": "G5_MONEY",
+    "pre": [
+      "MATH.G5.MEASUR.MONEY.BUDGET_MEANING"
+    ],
+    "mis": [
+      "M_BUDGET_MEANS_SPEND_ALL",
+      "M_DROP_MOST_EXPENSIVE"
+    ]
+  },
+  "MATH.G5.MEASUR.MONEY.BUDGET_ITEM_COSTS": {
+    "name": "Work out the cost of each line in a budget (quantity \xD7 unit price)",
+    "sub": "MATH.G5.MEASUR.MONEY",
+    "outcome": "MATH.G5.MEASUR.MONEY.c",
+    "outcomes": [
+      "MATH.G5.MEASUR.MONEY.c"
+    ],
+    "horeb": [
+      "G4_MONEY"
+    ],
+    "primary": "G5_MONEY",
+    "pre": [],
+    "mis": [
+      "M_UNIT_PRICE_AS_COST",
+      "M_ADD_QTY_AND_PRICE",
+      "M_FORGET_CARRY"
+    ]
+  },
+  "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE": {
+    "name": "Prepare a full budget of up to 5 items: total, compare with money available, balance or adjust",
+    "sub": "MATH.G5.MEASUR.MONEY",
+    "outcome": "MATH.G5.MEASUR.MONEY.c",
+    "outcomes": [
+      "MATH.G5.MEASUR.MONEY.c"
+    ],
+    "horeb": [
+      "G4_MONEY"
+    ],
+    "primary": "G5_MONEY",
+    "pre": [
+      "MATH.G5.MEASUR.MONEY.BUDGET_ITEM_COSTS",
+      "MATH.G5.MEASUR.MONEY.BUDGET_MEANING",
+      "MATH.G5.MEASUR.MONEY.BUDGET_IMPORTANCE"
+    ],
+    "mis": [
+      "M_TOTAL_OF_UNIT_PRICES",
+      "M_BALANCE_ADDED",
+      "M_SMALLER_FROM_LARGER",
+      "M_SHORTFALL_IGNORED"
+    ]
+  },
+  "MATH.G5.MEASUR.MONEY.TAX_MEANING": {
+    "name": "Explain what tax is and why the government needs it",
+    "sub": "MATH.G5.MEASUR.MONEY",
+    "outcome": "MATH.G5.MEASUR.MONEY.d",
+    "outcomes": [
+      "MATH.G5.MEASUR.MONEY.d"
+    ],
+    "horeb": [],
+    "primary": "G5_MONEY",
+    "pre": [],
+    "mis": [
+      "M_TAX_IS_FINE",
+      "M_TAX_KEPT_BY_SHOP",
+      "M_GOVT_PRINTS_MONEY"
+    ]
+  },
+  "MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT": {
+    "name": "Identify the amount of tax paid on a sales receipt",
+    "sub": "MATH.G5.MEASUR.MONEY",
+    "outcome": "MATH.G5.MEASUR.MONEY.d",
+    "outcomes": [
+      "MATH.G5.MEASUR.MONEY.d"
+    ],
+    "horeb": [],
+    "primary": "G5_MONEY",
+    "pre": [
+      "MATH.G5.MEASUR.MONEY.TAX_MEANING"
+    ],
+    "mis": [
+      "M_ADD_TAX_AGAIN",
+      "M_TAX_RATE_AS_AMOUNT"
+    ]
+  },
+  "MATH.G5.MEASUR.MONEY.BANK_SERVICES": {
+    "name": "Identify services provided by banks in real-life situations",
+    "sub": "MATH.G5.MEASUR.MONEY",
+    "outcome": "MATH.G5.MEASUR.MONEY.e",
+    "outcomes": [
+      "MATH.G5.MEASUR.MONEY.e"
+    ],
+    "horeb": [
+      "G6_MONEY"
+    ],
+    "primary": "G5_MONEY",
+    "pre": [],
+    "mis": [
+      "M_BANK_KEEPS_SAME_NOTES",
+      "M_LOAN_IS_GIFT",
+      "M_DEPOSIT_WITHDRAW_SWAP"
+    ]
+  },
+  "MATH.G5.MEASUR.MONEY.MONEY_TRANSFER_DIGITAL": {
+    "name": "Describe how money is transferred from one person to another using digital devices, and how to stay safe",
+    "sub": "MATH.G5.MEASUR.MONEY",
+    "outcome": "MATH.G5.MEASUR.MONEY.e",
+    "outcomes": [
+      "MATH.G5.MEASUR.MONEY.e"
+    ],
+    "horeb": [
+      "G6_MONEY"
+    ],
+    "primary": "G5_MONEY",
+    "pre": [
+      "MATH.G5.MEASUR.MONEY.BANK_SERVICES"
+    ],
+    "mis": [
+      "M_SHARE_PIN",
+      "M_NO_CHECK_RECIPIENT"
+    ]
+  },
+  "MATH.G5.MEASUR.MONEY.SAVING_FACTORS": {
+    "name": "Identify factors to consider in order to save money wisely",
+    "sub": "MATH.G5.MEASUR.MONEY",
+    "outcome": "MATH.G5.MEASUR.MONEY.f",
+    "outcomes": [
+      "MATH.G5.MEASUR.MONEY.f"
+    ],
+    "horeb": [
+      "G4_MONEY"
+    ],
+    "primary": "G5_MONEY",
+    "pre": [
+      "MATH.G5.MEASUR.MONEY.BUDGET_IMPORTANCE",
+      "MATH.G5.MEASUR.MONEY.BANK_SERVICES"
+    ],
+    "mis": [
+      "M_SAVE_WHATS_LEFT",
+      "M_HOME_AS_SAFE_AS_BANK",
+      "M_SAVING_ONLY_FOR_RICH"
+    ]
+  },
+  "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL": {
+    "name": "Identify horizontal and vertical lines",
+    "sub": "MATH.G5.GEOMET.LINES",
+    "outcome": "MATH.G5.GEOMET.LINES.a",
+    "outcomes": [
+      "MATH.G5.GEOMET.LINES.a"
+    ],
+    "horeb": [],
+    "primary": "G5_LINES",
+    "pre": [],
+    "mis": [
+      "M_HV_SWAP_NAMES",
+      "M_HV_SLANT_COUNTS",
+      "M_HV_TILTED_SHAPE"
+    ]
+  },
+  "MATH.G5.GEOMET.LINES.DRAW_HORIZONTAL_VERTICAL": {
+    "name": "Draw horizontal and vertical lines",
+    "sub": "MATH.G5.GEOMET.LINES",
+    "outcome": "MATH.G5.GEOMET.LINES.b",
+    "outcomes": [
+      "MATH.G5.GEOMET.LINES.b"
+    ],
+    "horeb": [],
+    "primary": "G5_LINES",
+    "pre": [
+      "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL"
+    ],
+    "mis": [
+      "M_DRAW_HV_DRIFT",
+      "M_RULER_FROM_ONE"
+    ]
+  },
+  "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR": {
+    "name": "Identify perpendicular lines",
+    "sub": "MATH.G5.GEOMET.LINES",
+    "outcome": "MATH.G5.GEOMET.LINES.c",
+    "outcomes": [
+      "MATH.G5.GEOMET.LINES.c"
+    ],
+    "horeb": [
+      "G5_LINES",
+      "G5_ANGLES_INTRO"
+    ],
+    "primary": "G5_LINES",
+    "pre": [
+      "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL"
+    ],
+    "mis": [
+      "M_PERP_MUST_BE_UPRIGHT",
+      "M_PERP_ANY_CROSSING",
+      "M_PERP_MUST_CROSS",
+      "M_PERP_BY_EYE"
+    ]
+  },
+  "MATH.G5.GEOMET.LINES.DRAW_PERPENDICULAR": {
+    "name": "Draw perpendicular lines",
+    "sub": "MATH.G5.GEOMET.LINES",
+    "outcome": "MATH.G5.GEOMET.LINES.d",
+    "outcomes": [
+      "MATH.G5.GEOMET.LINES.d"
+    ],
+    "horeb": [
+      "G5_LINES"
+    ],
+    "primary": "G5_LINES",
+    "pre": [
+      "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR",
+      "MATH.G5.GEOMET.LINES.DRAW_HORIZONTAL_VERTICAL"
+    ],
+    "mis": [
+      "M_DRAWPERP_ALWAYS_VERTICAL",
+      "M_SETSQUARE_WRONG_EDGE",
+      "M_DRAWPERP_MISSES_POINT"
+    ]
+  },
+  "MATH.G5.GEOMET.LINES.IDENTIFY_PARALLEL": {
+    "name": "Identify parallel lines",
+    "sub": "MATH.G5.GEOMET.LINES",
+    "outcome": "MATH.G5.GEOMET.LINES.e",
+    "outcomes": [
+      "MATH.G5.GEOMET.LINES.e"
+    ],
+    "horeb": [
+      "G5_LINES"
+    ],
+    "primary": "G5_LINES",
+    "pre": [
+      "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL"
+    ],
+    "mis": [
+      "M_PAR_SAME_LENGTH",
+      "M_PAR_NOT_MEETING_YET",
+      "M_PAR_ONLY_HORIZONTAL"
+    ]
+  },
+  "MATH.G5.GEOMET.LINES.DRAW_PARALLEL": {
+    "name": "Draw parallel lines",
+    "sub": "MATH.G5.GEOMET.LINES",
+    "outcome": "MATH.G5.GEOMET.LINES.f",
+    "outcomes": [
+      "MATH.G5.GEOMET.LINES.f"
+    ],
+    "horeb": [
+      "G5_LINES",
+      "G6_LINES"
+    ],
+    "primary": "G5_LINES",
+    "pre": [
+      "MATH.G5.GEOMET.LINES.IDENTIFY_PARALLEL",
+      "MATH.G5.GEOMET.LINES.DRAW_PERPENDICULAR"
+    ],
+    "mis": [
+      "M_DRAWPAR_ONE_MEASURE",
+      "M_DRAWPAR_SLANT_MEASURE",
+      "M_DRAWPAR_IGNORES_DIRECTION"
+    ]
+  },
+  "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES": {
+    "name": "Relating quarter, half, three-quarter and full turns to angles",
+    "sub": "MATH.G5.GEOMET.ANGLES",
+    "outcome": "MATH.G5.GEOMET.ANGLES.a",
+    "outcomes": [
+      "MATH.G5.GEOMET.ANGLES.a"
+    ],
+    "horeb": [
+      "G4_POSITION",
+      "G4_ANGLES"
+    ],
+    "primary": "G5_ANGLES_INTRO",
+    "pre": [],
+    "mis": [
+      "M_FULL_TURN_100",
+      "M_TURN_FROM_TOP",
+      "M_SAME_END_SAME_ANGLE"
+    ]
+  },
+  "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT": {
+    "name": "Understanding the degree as the unit for measuring the size of an angle",
+    "sub": "MATH.G5.GEOMET.ANGLES",
+    "outcome": "MATH.G5.GEOMET.ANGLES.d",
+    "outcomes": [
+      "MATH.G5.GEOMET.ANGLES.d"
+    ],
+    "horeb": [
+      "G4_ANGLES"
+    ],
+    "primary": "G5_ANGLES_INTRO",
+    "pre": [
+      "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES"
+    ],
+    "mis": [
+      "M_LONGER_ARMS_BIGGER",
+      "M_GAP_BETWEEN_ENDS"
+    ]
+  },
+  "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES": {
+    "name": "Reading a protractor's inner and outer scales in both directions",
+    "sub": "MATH.G5.GEOMET.ANGLES",
+    "outcome": "MATH.G5.GEOMET.ANGLES.b",
+    "outcomes": [
+      "MATH.G5.GEOMET.ANGLES.b"
+    ],
+    "horeb": [
+      "G6_ANGLE_MEASURE"
+    ],
+    "primary": "G5_ANGLES_INTRO",
+    "pre": [
+      "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT"
+    ],
+    "mis": [
+      "M_WRONG_SCALE",
+      "M_COUNT_MARKS_BACKWARDS",
+      "M_SMALL_MARK_AS_TEN"
+    ]
+  },
+  "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR": {
+    "name": "Positioning a protractor and measuring a given angle",
+    "sub": "MATH.G5.GEOMET.ANGLES",
+    "outcome": "MATH.G5.GEOMET.ANGLES.c",
+    "outcomes": [
+      "MATH.G5.GEOMET.ANGLES.c"
+    ],
+    "horeb": [
+      "G6_ANGLE_MEASURE"
+    ],
+    "primary": "G5_ANGLES_INTRO",
+    "pre": [
+      "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES"
+    ],
+    "mis": [
+      "M_EDGE_NOT_BASELINE",
+      "M_CENTRE_OFF_VERTEX",
+      "M_READ_SECOND_ARM_ONLY",
+      "M_SHORT_ARMS_GUESS"
+    ]
+  },
+  "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT": {
+    "name": "Measuring and recording angles in degrees in shapes, diagrams and objects",
+    "sub": "MATH.G5.GEOMET.ANGLES",
+    "outcome": "MATH.G5.GEOMET.ANGLES.c",
+    "outcomes": [
+      "MATH.G5.GEOMET.ANGLES.c",
+      "MATH.G5.GEOMET.ANGLES.d"
+    ],
+    "horeb": [
+      "G6_ANGLE_MEASURE",
+      "G4_PLANE_FIGURES"
+    ],
+    "primary": "G5_ANGLES_INTRO",
+    "pre": [
+      "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR",
+      "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES"
+    ],
+    "mis": [
+      "M_NO_DEGREE_UNIT",
+      "M_BIGGER_SHAPE_BIGGER_ANGLES",
+      "M_NO_REASONABLENESS_CHECK"
+    ]
+  },
+  "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT": {
+    "name": "Identifying angles and their uses in the environment",
+    "sub": "MATH.G5.GEOMET.ANGLES",
+    "outcome": "MATH.G5.GEOMET.ANGLES.e",
+    "outcomes": [
+      "MATH.G5.GEOMET.ANGLES.e",
+      "MATH.G5.GEOMET.ANGLES.a"
+    ],
+    "horeb": [
+      "G4_ANGLES",
+      "G5_ANGLES_INTRO"
+    ],
+    "primary": "G5_ANGLES_INTRO",
+    "pre": [
+      "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES"
+    ],
+    "mis": [
+      "M_RIGHT_ANGLE_ONLY_UPRIGHT",
+      "M_ANGLE_IS_THE_CORNER_POINT",
+      "M_NO_ANGLE_IN_MOVEMENT"
+    ]
+  },
+  "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS": {
+    "name": "Recognise and name cubes, cuboids, cylinders, spheres and pyramids in the environment",
+    "sub": "MATH.G5.GEOMET.3_D_OBJECTS",
+    "outcome": "MATH.G5.GEOMET.3_D_OBJECTS.a",
+    "outcomes": [
+      "MATH.G5.GEOMET.3_D_OBJECTS.a"
+    ],
+    "horeb": [
+      "G5_3D_OBJECTS"
+    ],
+    "primary": "G5_3D_OBJECTS",
+    "pre": [],
+    "mis": [
+      "M_EVERY_BOX_IS_CUBE",
+      "M_PROTOTYPE_ORIENTATION",
+      "M_SIZE_CHANGES_SHAPE",
+      "M_POINTED_MEANS_PYRAMID"
+    ]
+  },
+  "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES": {
+    "name": "Describe 3-D objects by their surfaces, corners and behaviour",
+    "sub": "MATH.G5.GEOMET.3_D_OBJECTS",
+    "outcome": "MATH.G5.GEOMET.3_D_OBJECTS.a",
+    "outcomes": [
+      "MATH.G5.GEOMET.3_D_OBJECTS.a"
+    ],
+    "horeb": [
+      "G5_3D_OBJECTS"
+    ],
+    "primary": "G5_3D_OBJECTS",
+    "pre": [
+      "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS"
+    ],
+    "mis": [
+      "M_CYLINDER_SURFACES",
+      "M_PYRAMID_ONE_CORNER",
+      "M_ONLY_BALLS_ROLL"
+    ]
+  },
+  "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D": {
+    "name": "Distinguish 2-D shapes from 3-D objects",
+    "sub": "MATH.G5.GEOMET.3_D_OBJECTS",
+    "outcome": "MATH.G5.GEOMET.3_D_OBJECTS.a",
+    "outcomes": [
+      "MATH.G5.GEOMET.3_D_OBJECTS.a",
+      "MATH.G5.GEOMET.3_D_OBJECTS.b"
+    ],
+    "horeb": [
+      "G5_3D_OBJECTS",
+      "G4_PLANE_FIGURES"
+    ],
+    "primary": "G5_3D_OBJECTS",
+    "pre": [
+      "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS"
+    ],
+    "mis": [
+      "M_PLANE_NAME_FOR_SOLID",
+      "M_THIN_OBJECT_IS_2D"
+    ]
+  },
+  "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D": {
+    "name": "Identify and describe the 2-D shapes that form the flat faces of 3-D objects",
+    "sub": "MATH.G5.GEOMET.3_D_OBJECTS",
+    "outcome": "MATH.G5.GEOMET.3_D_OBJECTS.b",
+    "outcomes": [
+      "MATH.G5.GEOMET.3_D_OBJECTS.b"
+    ],
+    "horeb": [
+      "G5_3D_OBJECTS",
+      "G4_PLANE_FIGURES",
+      "G6_3D_OBJECTS"
+    ],
+    "primary": "G5_3D_OBJECTS",
+    "pre": [
+      "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS",
+      "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D"
+    ],
+    "mis": [
+      "M_VISIBLE_FACES_ONLY",
+      "M_PYRAMID_ALL_TRIANGLES",
+      "M_SPHERE_HAS_CIRCLE_FACE",
+      "M_CYLINDER_SIDE_RECTANGLE_FACE"
+    ]
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.PLAN_DATA_COLLECTION": {
+    "name": "Plan a data collection: choose a question, categories and a method",
+    "sub": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+    "outcome": "MATH.G5.DATA_H.DATA_REPRESENTATION.a",
+    "outcomes": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.a"
+    ],
+    "horeb": [
+      "G6_DATA_COLLECTION"
+    ],
+    "primary": "G5_TALLY",
+    "pre": [],
+    "mis": [
+      "M_OVERLAPPING_CATEGORIES",
+      "M_DATA_ONLY_NUMBERS"
+    ]
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.COLLECT_DATA_30": {
+    "name": "Collect and record about 30 observations from a real-life situation",
+    "sub": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+    "outcome": "MATH.G5.DATA_H.DATA_REPRESENTATION.a",
+    "outcomes": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.a"
+    ],
+    "horeb": [
+      "G6_DATA_COLLECTION"
+    ],
+    "primary": "G5_TALLY",
+    "pre": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.PLAN_DATA_COLLECTION"
+    ],
+    "mis": [
+      "M_DOUBLE_COUNTING",
+      "M_DISTINCT_VALUES_ONLY"
+    ]
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_RECORDING_TABLE": {
+    "name": "Draw a table to record data",
+    "sub": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+    "outcome": "MATH.G5.DATA_H.DATA_REPRESENTATION.b",
+    "outcomes": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.b"
+    ],
+    "horeb": [
+      "G4_DATA"
+    ],
+    "primary": "G5_TALLY",
+    "pre": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.PLAN_DATA_COLLECTION"
+    ],
+    "mis": [
+      "M_TABLE_NO_HEADINGS",
+      "M_ROW_MISALIGNMENT"
+    ]
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_TALLY_GROUPS": {
+    "name": "Show a number as tally marks in groups of five",
+    "sub": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+    "outcome": "MATH.G5.DATA_H.DATA_REPRESENTATION.c",
+    "outcomes": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.c"
+    ],
+    "horeb": [
+      "G5_TALLY"
+    ],
+    "primary": "G5_TALLY",
+    "pre": [],
+    "mis": [
+      "M_GATE_SIX_STROKES",
+      "M_NO_GROUPING"
+    ]
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_RAW_DATA": {
+    "name": "Tally collected data into categories",
+    "sub": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+    "outcome": "MATH.G5.DATA_H.DATA_REPRESENTATION.c",
+    "outcomes": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.c"
+    ],
+    "horeb": [
+      "G5_TALLY"
+    ],
+    "primary": "G5_TALLY",
+    "pre": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_TALLY_GROUPS",
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.COLLECT_DATA_30"
+    ],
+    "mis": [
+      "M_TALLY_SKIP_OR_REPEAT",
+      "M_TALLY_THE_VALUE"
+    ]
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_TO_FREQUENCY": {
+    "name": "Convert tally marks to frequencies",
+    "sub": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+    "outcome": "MATH.G5.DATA_H.DATA_REPRESENTATION.d",
+    "outcomes": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.d"
+    ],
+    "horeb": [
+      "G5_TALLY"
+    ],
+    "primary": "G5_TALLY",
+    "pre": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_TALLY_GROUPS"
+    ],
+    "mis": [
+      "M_GATE_READ_AS_FOUR"
+    ]
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.PREPARE_FREQUENCY_TABLE": {
+    "name": "Prepare a frequency table",
+    "sub": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+    "outcome": "MATH.G5.DATA_H.DATA_REPRESENTATION.d",
+    "outcomes": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.d"
+    ],
+    "horeb": [
+      "G5_TALLY"
+    ],
+    "primary": "G5_TALLY",
+    "pre": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_RAW_DATA",
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_TO_FREQUENCY",
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_RECORDING_TABLE"
+    ],
+    "mis": [
+      "M_FREQ_TOTAL_UNCHECKED",
+      "M_ROW_PER_OBSERVATION"
+    ]
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE": {
+    "name": "Read information directly from a frequency table",
+    "sub": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+    "outcome": "MATH.G5.DATA_H.DATA_REPRESENTATION.e",
+    "outcomes": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.e"
+    ],
+    "horeb": [
+      "G5_TALLY"
+    ],
+    "primary": "G5_TALLY",
+    "pre": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_TO_FREQUENCY"
+    ],
+    "mis": [
+      "M_VALUE_VS_FREQUENCY",
+      "M_BIGGEST_LABEL_IS_MOST"
+    ]
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES": {
+    "name": "Compare and combine frequencies from a table",
+    "sub": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+    "outcome": "MATH.G5.DATA_H.DATA_REPRESENTATION.e",
+    "outcomes": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.e"
+    ],
+    "horeb": [
+      "G5_TALLY"
+    ],
+    "primary": "G5_TALLY",
+    "pre": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE"
+    ],
+    "mis": [
+      "M_HOW_MANY_MORE_ADD",
+      "M_TOTAL_IS_ROWS",
+      "M_NOT_CHOOSING_MISREAD"
+    ]
+  },
+  "MATH.G5.DATA_H.DATA_REPRESENTATION.INFER_FROM_FREQUENCY_TABLE": {
+    "name": "Draw conclusions and make decisions from a frequency table",
+    "sub": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+    "outcome": "MATH.G5.DATA_H.DATA_REPRESENTATION.e",
+    "outcomes": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.e"
+    ],
+    "horeb": [
+      "G5_TALLY"
+    ],
+    "primary": "G5_TALLY",
+    "pre": [
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE",
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES"
+    ],
+    "mis": [
+      "M_MOST_POPULAR_IS_MAJORITY",
+      "M_OVERGENERALISE",
+      "M_OPINION_OVER_DATA"
+    ]
+  }
+};
+
+// src/school/learnerHome.js
+var HOME_TRIES_PER_HOUR = 10;
+var UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+var NAIROBI = 3 * 3600 * 1e3;
+var dayOf = (ms) => new Date(ms + NAIROBI).toISOString().slice(0, 10);
+var dayMs = (d) => Date.parse(d + "T00:00:00Z");
+var addDays = (d, n) => new Date(dayMs(d) + n * 864e5).toISOString().slice(0, 10);
+var ok = (body) => ({ status: 200, body: { success: true, ...body } });
+var no = (status, error) => ({ status, body: { success: false, error } });
+var WRONG = "This link is not right. Ask the school to send it again.";
+var sameText = (a, b) => {
+  if (a.length !== b.length) return false;
+  let d = 0;
+  for (let i = 0; i < a.length; i++) d |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return d === 0;
+};
+var MASTERY_MIN = 4;
+var LATEST = 5;
+var skillOf = (code) => {
+  const s = SKILLS_G5[code];
+  return { code, name: s?.name || code, topic: SUBSTRANDS[s?.sub]?.name || "" };
+};
+function buildHome(school, rows, now) {
+  const today = dayOf(now);
+  const todo = [];
+  const done = [];
+  const bySkill = /* @__PURE__ */ new Map();
+  const days = /* @__PURE__ */ new Set();
+  for (const { sitting: s, homework: h } of rows || []) {
+    const items = s.items || [];
+    const answers = s.answers || [];
+    const right = answers.filter((a) => a.correct).length;
+    const base = { title: h.title, due_on: h.due_on || null, set_on: h.created_at ? dayOf(Date.parse(h.created_at)) : null, total: items.length };
+    for (const a of answers) {
+      if (a.at) days.add(dayOf(Date.parse(a.at)));
+      const code = items[a.n - 1]?.cskill;
+      if (!code) continue;
+      if (!bySkill.has(code)) bySkill.set(code, []);
+      bySkill.get(code).push({ at: a.at || "", correct: !!a.correct });
+    }
+    if (h.mode === "paper") {
+      if (!h.due_on || h.due_on >= today) todo.push({ ...base, status: "paper", answered: 0 });
+      continue;
+    }
+    if (s.status === "submitted") {
+      done.push({ ...base, status: "submitted", right, answered: answers.length, finished_on: s.finished_at ? dayOf(Date.parse(s.finished_at)) : null });
+      continue;
+    }
+    if (h.due_on && h.due_on < addDays(today, -14)) {
+      done.push({ ...base, status: "missed", answered: answers.length });
+      continue;
+    }
+    todo.push({ ...base, status: s.status, answered: answers.length, code: s.code, ...s.status === "locked" ? { lock_question: s.lock_question || answers.length + 1 } : {} });
+  }
+  const rank = (t) => t.status === "started" ? 0 : t.status === "issued" ? 1 : t.status === "locked" ? 2 : 3;
+  todo.sort((a, b) => rank(a) - rank(b) || (a.due_on || "9999").localeCompare(b.due_on || "9999") || (a.set_on || "").localeCompare(b.set_on || ""));
+  done.sort((a, b) => (b.finished_on || b.due_on || "").localeCompare(a.finished_on || a.due_on || ""));
+  const mastered = [];
+  const practise = [];
+  for (const [code, list] of bySkill) {
+    list.sort((a, b) => a.at.localeCompare(b.at));
+    const latest = list.slice(-LATEST);
+    const r = latest.filter((x) => x.correct).length;
+    if (list.length >= MASTERY_MIN && r >= 4) mastered.push({ ...skillOf(code), last: list[list.length - 1].at });
+    else practise.push({ ...skillOf(code), right: list.filter((x) => x.correct).length, of: list.length, last: list[list.length - 1].at });
+  }
+  mastered.sort((a, b) => b.last.localeCompare(a.last));
+  practise.sort((a, b) => a.right / a.of - b.right / b.of || b.last.localeCompare(a.last));
+  let streak = 0;
+  let d = days.has(today) ? today : addDays(today, -1);
+  while (days.has(d)) {
+    streak++;
+    d = addDays(d, -1);
+  }
+  const week = Array.from({ length: 7 }, (_, i) => {
+    const x = addDays(today, i - 6);
+    return { day: x, done: days.has(x) };
+  });
+  const strip2 = ({ last, ...x }) => x;
+  return {
+    school,
+    today,
+    todo,
+    done: done.slice(0, 12),
+    mastered: mastered.slice(0, 8).map(strip2),
+    practise: practise.slice(0, 3).map(strip2),
+    streak: { days: streak, today: days.has(today), week }
+  };
+}
+async function learnerHome(p, deps) {
+  const { store } = deps;
+  if (p.child !== void 0) {
+    if (!UUID.test(String(p.child))) return no(400, "Which child?");
+    const uid = deps.userId ? await deps.userId() : null;
+    if (!uid) return no(401, "Sign in first.");
+    const link = await store.childLink(uid, String(p.child));
+    if (!link) return ok({ linked: false });
+    return ok({ linked: true, home: buildHome(link.door.name, await store.homeSittings(link.door.id, link.learner_ref), deps.now()) });
+  }
+  const key = String(deps.ipKey || "unknown");
+  const since = new Date(deps.now() - 3600 * 1e3).toISOString();
+  if (await store.homeTries(key, since) >= HOME_TRIES_PER_HOUR) return no(429, "Too many tries. Wait an hour, or ask the school to send the link again.");
+  const c = parseLinkCode(p.link);
+  const door = c ? await store.homeDoor(c.door) : null;
+  if (!c || !door || !sameText(await linkCheck(door.secret, door.code, c.ref), c.check)) {
+    await store.homeTry(key, false, new Date(deps.now()).toISOString());
+    return no(404, WRONG);
+  }
+  return ok({ linked: true, home: buildHome(door.name, await store.homeSittings(door.id, c.ref), deps.now()) });
+}
+
 // src/school/homeworkLearner.js
 var CODE = /^[A-Z2-9]{10}$/;
-var ok = (body) => ({ status: 200, body: { success: true, ...body } });
-var no = (status, error, more = {}) => ({ status, body: { success: false, error, ...more } });
+var ok2 = (body) => ({ status: 200, body: { success: true, ...body } });
+var no2 = (status, error, more = {}) => ({ status, body: { success: false, error, ...more } });
 var resultsBody = (hw, sittings) => ({ action: "homework_results", results: { [hw.homework_ref]: resultsFor(sittings) } });
 async function learnerHomework(p, deps) {
   const { store } = deps;
+  if (p?.action === "learner_home") return learnerHome(p, deps);
   const code = String(p?.code || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
-  if (!CODE.test(code)) return no(404, "This link is not right. Ask the teacher for it again.");
+  if (!CODE.test(code)) return no2(404, "This link is not right. Ask the teacher for it again.");
   const found = await store.sittingByCode(code);
-  if (!found) return no(404, "This link is not right. Ask the teacher for it again.");
+  if (!found) return no2(404, "This link is not right. Ask the teacher for it again.");
   const { sitting, homework, door } = found;
   const s0 = { ...sitting, mode: homework.mode };
   const head = { title: homework.title, due_on: homework.due_on, count: (sitting.items || []).length, mode: homework.mode };
-  if (homework.mode === "paper") return ok({ ...head, view: { status: "paper" } });
+  if (homework.mode === "paper") return ok2({ ...head, view: { status: "paper" } });
   const done = async (s) => {
     await store.saveSitting(s);
     if ((s.status === "submitted" || s.status === "locked") && deps.push && door?.results_url) {
@@ -800,28 +4474,28 @@ async function learnerHomework(p, deps) {
       }
     }
   };
-  if (p.action === "open") return ok({ ...head, view: sittingView(s0) });
+  if (p.action === "open") return ok2({ ...head, view: sittingView(s0) });
   if (p.action === "start") {
     const r = step(s0, { type: "start" }, deps.now());
-    if (!r.ok) return ok({ ...head, view: sittingView(s0) });
+    if (!r.ok) return ok2({ ...head, view: sittingView(s0) });
     if (r.s !== s0) await store.saveSitting(r.s);
-    return ok({ ...head, view: sittingView(r.s) });
+    return ok2({ ...head, view: sittingView(r.s) });
   }
   if (p.action === "answer") {
     const r = step(s0, { type: "answer", n: p.n, response: p.response }, deps.now());
-    if (!r.ok) return ok({ ...head, refused: r.error, view: sittingView(s0) });
+    if (!r.ok) return ok2({ ...head, refused: r.error, view: sittingView(s0) });
     await done(r.s);
     const it = s0.items[Number(p.n) - 1];
     const right = it.kind === "choice" ? it.options.find((o) => o.right) : null;
     const reason = !r.mark.correct ? it.kind === "choice" ? it.options.find((o) => o.key === r.mark.chosen)?.why : (it.wrong || []).find((w) => w.mis && w.mis === r.mark.mis)?.why : "";
-    return ok({ ...head, mark: { correct: r.mark.correct, answer: right ? `${right.key}. ${right.text}` : it.answer, why: reason || "" }, view: sittingView(r.s) });
+    return ok2({ ...head, mark: { correct: r.mark.correct, answer: right ? `${right.key}. ${right.text}` : it.answer, why: reason || "" }, view: sittingView(r.s) });
   }
   if (p.action === "leave") {
     const r = step(s0, { type: "leave", reason: p.reason }, deps.now());
     if (r.ok && r.s !== s0) await done(r.s);
-    return ok({ ...head, view: sittingView(r.ok ? r.s : s0) });
+    return ok2({ ...head, view: sittingView(r.ok ? r.s : s0) });
   }
-  return no(400, "Unknown action");
+  return no2(400, "Unknown action");
 }
 
 // src/school/homeworkStore.js
@@ -875,16 +4549,48 @@ function supabaseStore(admin) {
     async saveSitting(s) {
       const { id, ...rest } = pickCols(s);
       await admin.from("school_homework_sittings").update({ ...rest, updated_at: (/* @__PURE__ */ new Date()).toISOString() }).eq("id", id);
+    },
+    // The learner home (learnerHome.js, migration 20261111_learner_home.sql).
+    async homeDoor(code) {
+      const { data } = await admin.from("school_doors").select("id, code, name, secret, active").eq("code", code).maybeSingle();
+      return data && data.active ? data : null;
+    },
+    async homeSittings(doorId, ref) {
+      const { data } = await admin.from("school_homework_sittings").select("code, status, items, answers, started_at, finished_at, locked_at, lock_question, school_homework!inner(door_id, title, mode, due_on, created_at)").eq("learner_ref", ref).eq("school_homework.door_id", doorId).order("updated_at", { ascending: false }).limit(60);
+      return (data || []).map(({ school_homework: homework, ...sitting }) => ({ sitting, homework }));
+    },
+    async homeTries(key, sinceIso) {
+      const { count } = await admin.from("school_home_attempts").select("id", { count: "exact", head: true }).eq("ip_key", key).eq("ok", false).gte("at", sinceIso);
+      return count || 0;
+    },
+    async homeTry(key, ok3) {
+      await admin.from("school_home_attempts").insert({ ip_key: key, ok: ok3 });
+      await admin.from("school_home_attempts").delete().eq("ip_key", key).lt("at", new Date(Date.now() - 864e5).toISOString());
+    },
+    async childLink(userId, childId) {
+      const { data } = await admin.from("school_learner_links").select("learner_ref, linked_at, school_doors(id, code, name, active)").eq("parent_id", userId).eq("child_id", childId).order("linked_at", { ascending: false }).limit(5);
+      const l = (data || []).find((x) => x.school_doors?.active);
+      return l ? { door: { id: l.school_doors.id, code: l.school_doors.code, name: l.school_doors.name }, learner_ref: l.learner_ref } : null;
     }
   };
 }
 
 // scripts/school-homework.template.ts
 var env = (k) => Deno.env.get(k) || "";
-var ORIGINS = ["https://tutagora.com", "https://www.tutagora.com"];
+var ORIGINS = ["https://tutagora.com", "https://www.tutagora.com", "capacitor://localhost", "https://localhost"];
 var cors = (req) => {
   const o = req.headers.get("origin") || "";
-  return { "access-control-allow-origin": ORIGINS.includes(o) ? o : ORIGINS[0], "access-control-allow-headers": "content-type", "access-control-allow-methods": "POST, OPTIONS", vary: "origin" };
+  return {
+    "access-control-allow-origin": ORIGINS.includes(o) ? o : ORIGINS[0],
+    "access-control-allow-headers": "authorization, x-client-info, apikey, content-type",
+    "access-control-allow-methods": "POST, OPTIONS",
+    vary: "origin"
+  };
+};
+var ipKey = async (req) => {
+  const ip = (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || req.headers.get("cf-connecting-ip") || req.headers.get("x-real-ip") || "unknown";
+  const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("learner-home:" + ip));
+  return Array.from(new Uint8Array(d)).slice(0, 16).map((b) => b.toString(16).padStart(2, "0")).join("");
 };
 var push = async (door, body) => {
   const text = JSON.stringify(body);
@@ -910,6 +4616,12 @@ Deno.serve(async (req) => {
     p = null;
   }
   const admin = createClient(env("SUPABASE_URL"), env("SUPABASE_SERVICE_ROLE_KEY"));
-  const r = await learnerHomework(p || {}, { store: supabaseStore(admin), now: () => Date.now(), push }).catch(() => ({ status: 500, body: { success: false, error: "Something went wrong. Try again." } }));
+  const token = (req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
+  const userId = async () => {
+    if (!token || token === env("SUPABASE_ANON_KEY")) return null;
+    const { data } = await admin.auth.getUser(token);
+    return data?.user?.id || null;
+  };
+  const r = await learnerHomework(p || {}, { store: supabaseStore(admin), now: () => Date.now(), push, ipKey: await ipKey(req), userId }).catch(() => ({ status: 500, body: { success: false, error: "Something went wrong. Try again." } }));
   return new Response(JSON.stringify(r.body), { status: r.status, headers: { ...h, "content-type": "application/json" } });
 });

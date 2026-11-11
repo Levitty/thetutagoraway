@@ -12,6 +12,11 @@
   One question at a time. Leaving the page (another app, closing it, going back) locks it, as the school's
   own online homework; what was answered is kept, and the teacher can open it again.
   Talks to the school-homework edge function (scripts/school-homework.template.ts).
+
+  The learner home (11 Nov 2026): /hw/?l=<link code>, the code Tuta prints on the slip and sends. All of this
+  learner's homework, what they have got and what to practise next, and a streak. One call to the same
+  function (action learner_home); drawn by /hw/home.js, built from src/school/learnerHomeView.js, the same
+  drawing the family app shows inside the child's home.
 -->
 <style>
   :root { --ink:#16161A; --ink2:#3A3A44; --muted:#5F6072; --faint:#9A9AA6; --ground:#F4F2EC; --card:#FFFFFF; --line:#E6E3DA;
@@ -55,6 +60,8 @@
   .big { font-size: 64px; font-weight: 800; letter-spacing: -.04em; line-height: 1; margin: 6px 0 4px; font-variant-numeric: tabular-nums; }
   .foot { margin-top: auto; padding-top: 28px; font-size: 13px; color: var(--faint); text-align: center; }
   .err { color: var(--pink-deep); }
+  .back { display: flex; align-items: center; justify-content: center; min-height: 56px; margin-top: 18px; border-radius: 99px; border: 2px solid var(--ink);
+    color: var(--ink); font-weight: 800; text-decoration: none; }
 </style>
 </head>
 <body>
@@ -63,8 +70,14 @@
 (function () {
   var local = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
   var FN = local ? '/hw/api' : 'https://dlqbiayaqjucxsvbesms.supabase.co/functions/v1/school-homework';
-  var code = (new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  var qs = new URLSearchParams(location.search);
+  var code = (qs.get('c') || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
   var app = document.getElementById('app');
+
+  // Came from the learner home: the way back, once this homework is finished or cannot go on.
+  var home = ''; try { home = sessionStorage.getItem('horeb-home') || ''; } catch (e) {}
+  if (home.indexOf(location.origin + '/') !== 0) home = '';   // this site only
+  var back = function () { return home ? '<a class="back" href="' + esc(home) + '">Back to all your homework</a>' : ''; };
   var state = null, busy = false, locked = false, picked = '';
   var esc = function (t) { return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var call = function (body) {
@@ -82,7 +95,7 @@
   var render = function (r) {
     state = r; var v = r.view || {};
     if (!r.success) { app.innerHTML = '<p class="brand">HOREB</p><h1>This link does not open</h1><p class="lead err">' + esc(r.error || 'Try again.') + '</p>' + foot; return; }
-    if (v.status === 'paper') { app.innerHTML = top(v) + '<h1>' + esc(r.title) + '</h1><p class="lead">This homework is on paper. Your teacher has the worksheet.</p>' + foot; return; }
+    if (v.status === 'paper') { app.innerHTML = top(v) + '<h1>' + esc(r.title) + '</h1><p class="lead">This homework is on paper. Your teacher has the worksheet.</p>' + back() + foot; return; }
     if (v.status === 'issued') {
       app.innerHTML = top(v) + '<h1>' + esc(r.title) + '</h1>'
         + '<p class="lead">' + v.total + ' questions' + (r.due_on ? ', due ' + esc(day(r.due_on)) : '') + '. Each one is marked as soon as you answer it.</p>'
@@ -92,12 +105,12 @@
       return;
     }
     if (v.status === 'locked') {
-      app.innerHTML = top(v) + '<h1>Locked</h1><p class="lead">This homework locked because the page was left at question ' + esc(v.lock_question || v.answered + 1) + '. Your ' + v.answered + ' answer' + (v.answered === 1 ? ' is' : 's are') + ' kept. Ask your teacher to open it again.</p>' + foot;
+      app.innerHTML = top(v) + '<h1>Locked</h1><p class="lead">This homework locked because the page was left at question ' + esc(v.lock_question || v.answered + 1) + '. Your ' + v.answered + ' answer' + (v.answered === 1 ? ' is' : 's are') + ' kept. Ask your teacher to open it again.</p>' + back() + foot;
       return;
     }
     if (v.status === 'submitted') {
       app.innerHTML = top(v) + '<p class="lead">Handed in</p><p class="big">' + v.right + ' <span style="font-size:28px;color:var(--muted)">of ' + v.total + '</span></p>'
-        + '<h1 style="font-size:24px">' + esc(r.title) + '</h1><p class="lead">Your teacher sees which questions went well and which ones to practise.</p>' + foot;
+        + '<h1 style="font-size:24px">' + esc(r.title) + '</h1><p class="lead">Your teacher sees which questions went well and which ones to practise.</p>' + back() + foot;
       return;
     }
     question(v);
@@ -140,6 +153,21 @@
       .catch(function () { busy = false; var g = document.getElementById('go'); if (g) { g.disabled = false; g.textContent = 'No connection. Try again'; } });
   };
 
+  // The learner home: ?l=<link code>. The data and the drawing load side by side: one call, one small script.
+  var homeCode = (qs.get('l') || '').toUpperCase().replace(/[^A-Z0-9-]/g, '');
+  if (homeCode && !code) {
+    document.title = 'Your homework · HOREB';
+    app.innerHTML = '<p class="brand">HOREB</p><p class="lead">Opening your homework...</p>';
+    var drawn = new Promise(function (ok, bad) { var t = document.createElement('script'); t.src = '/hw/home.js'; t.onload = ok; t.onerror = bad; document.head.appendChild(t); });
+    var data = fetch(FN, { method: 'POST', headers: { 'content-type': 'text/plain' }, body: JSON.stringify({ action: 'learner_home', link: homeCode }) }).then(function (r) { return r.json(); });
+    Promise.all([data, drawn]).then(function (x) {
+      var r = x[0];
+      if (!r.success) { app.innerHTML = '<p class="brand">HOREB</p><h1>This link does not open</h1><p class="lead err">' + esc(r.error || 'Try again.') + '</p>'; return; }
+      var st = document.createElement('style'); st.textContent = window.HorebHome.HOME_CSS; document.head.appendChild(st);
+      app.innerHTML = window.HorebHome.homeHtml(r.home, { hwBase: '' });
+    }).catch(function () { app.innerHTML = '<p class="brand">HOREB</p><h1>No connection</h1><p class="lead">Check the phone has data, then open the link again.</p>'; });
+    return;
+  }
   // Leaving locks it: another app or tab, the window losing focus, closing, or going back. Only while it is open.
   var lock = function (why) {
     if (locked || !state || !state.view || state.view.status !== 'started') return; locked = true;

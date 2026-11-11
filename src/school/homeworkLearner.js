@@ -1,6 +1,8 @@
 // The child's door for school homework (10 Nov 2026): open, start, answer, leave, keyed by the sitting's
 // code alone. See homeworkDoor.js for the deps; this file carries no family bank.
+// The learner home (learnerHome.js) answers here too: action 'learner_home'.
 import { step, sittingView, resultsFor } from './homeworkSitting.js';
+import { learnerHome } from './learnerHome.js';
 
 export const CODE = /^[A-Z2-9]{10}$/;
 const ok = (body) => ({ status: 200, body: { success: true, ...body } });
@@ -11,6 +13,8 @@ export const resultsBody = (hw, sittings) => ({ action: 'homework_results', resu
 
 export async function learnerHomework(p, deps) {
   const { store } = deps;
+  // The learner home (11 Nov 2026): all of one learner's homework, keyed by the link code or the parent's sign-in.
+  if (p?.action === 'learner_home') return learnerHome(p, deps);
   const code = String(p?.code || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
   if (!CODE.test(code)) return no(404, 'This link is not right. Ask the teacher for it again.');
   const found = await store.sittingByCode(code);

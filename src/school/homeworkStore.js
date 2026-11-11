@@ -36,15 +36,40 @@ export function supabaseStore(admin) {
       const { id, ...rest } = pickCols(s);
       await admin.from('school_homework_sittings').update({ ...rest, updated_at: new Date().toISOString() }).eq('id', id);
     },
+    // The learner home (learnerHome.js, migration 20261111_learner_home.sql).
+    async homeDoor(code) {
+      const { data } = await admin.from('school_doors').select('id, code, name, secret, active').eq('code', code).maybeSingle();
+      return data && data.active ? data : null;
+    },
+    async homeSittings(doorId, ref) {
+      const { data } = await admin.from('school_homework_sittings')
+        .select('code, status, items, answers, started_at, finished_at, locked_at, lock_question, school_homework!inner(door_id, title, mode, due_on, created_at)')
+        .eq('learner_ref', ref).eq('school_homework.door_id', doorId).order('updated_at', { ascending: false }).limit(60);
+      return (data || []).map(({ school_homework: homework, ...sitting }) => ({ sitting, homework }));
+    },
+    async homeTries(key, sinceIso) {
+      const { count } = await admin.from('school_home_attempts').select('id', { count: 'exact', head: true }).eq('ip_key', key).eq('ok', false).gte('at', sinceIso);
+      return count || 0;
+    },
+    async homeTry(key, ok) {
+      await admin.from('school_home_attempts').insert({ ip_key: key, ok });
+      await admin.from('school_home_attempts').delete().eq('ip_key', key).lt('at', new Date(Date.now() - 86400000).toISOString());
+    },
+    async childLink(userId, childId) {
+      const { data } = await admin.from('school_learner_links').select('learner_ref, linked_at, school_doors(id, code, name, active)')
+        .eq('parent_id', userId).eq('child_id', childId).order('linked_at', { ascending: false }).limit(5);
+      const l = (data || []).find(x => x.school_doors?.active);
+      return l ? { door: { id: l.school_doors.id, code: l.school_doors.code, name: l.school_doors.name }, learner_ref: l.learner_ref } : null;
+    },
   };
 }
 
-export function memoryStore(doors = []) {
-  const homework = []; const sittings = [];
+export function memoryStore(doors = [], links = []) {
+  const homework = []; const sittings = []; const tries = [];
   let n = 0;
   const id = () => `00000000-0000-4000-8000-${String(++n).padStart(12, '0')}`;
   return {
-    homework, sittings,
+    homework, sittings, tries, links,
     async getHomework(doorId, ref) { return homework.find(h => h.door_id === doorId && h.homework_ref === ref) || null; },
     async saveHomework(row) { const h = { id: id(), ...row }; homework.push(h); return h; },
     async sittingsOf(homeworkId) { return sittings.filter(s => s.homework_id === homeworkId).map(s => ({ ...s })).sort((a, b) => a.learner_ref.localeCompare(b.learner_ref)); },
@@ -55,5 +80,16 @@ export function memoryStore(doors = []) {
       return d?.active === false ? null : { sitting: { ...s }, homework: h, door: d };
     },
     async saveSitting(s) { const i = sittings.findIndex(x => x.id === s.id); if (i >= 0) sittings[i] = { ...sittings[i], ...pickCols(s) }; },
+    async homeDoor(code) { const d = doors.find(x => x.code === code); return d && d.active !== false ? d : null; },
+    async homeSittings(doorId, ref) {
+      return sittings.filter(s => s.learner_ref === ref).map(s => ({ sitting: { ...s }, homework: homework.find(h => h.id === s.homework_id) }))
+        .filter(x => x.homework && x.homework.door_id === doorId);
+    },
+    async homeTries(key, sinceIso) { return tries.filter(t => t.ip_key === key && !t.ok && t.at >= sinceIso).length; },
+    async homeTry(key, ok, atIso) { tries.push({ ip_key: key, ok, at: atIso || new Date().toISOString() }); },
+    async childLink(userId, childId) {
+      const l = links.find(x => x.parent_id === userId && x.child_id === childId); const d = l && doors.find(x => x.id === l.door_id && x.active !== false);
+      return d ? { door: { id: d.id, code: d.code, name: d.name }, learner_ref: l.learner_ref } : null;
+    },
   };
 }

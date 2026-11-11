@@ -5,6 +5,7 @@
 //   HW_DOOR_CODE=WSL HW_DOOR_SECRET=<40+ chars> HW_RESULTS_URL=http://localhost:8096/api/horeb/homework-results \
 //     node scripts/school-homework-local.mjs [port]
 //   Tuta's door URL is then http://localhost:<port>/door ; the child's link http://localhost:<port>/hw/?c=CODE
+//   and the learner home http://localhost:<port>/hw/?l=<link code>
 // Unreviewed families are offered as they are in the edge function: only a teacher's approval lets one in.
 import { createServer } from 'node:http';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -18,7 +19,7 @@ import { memoryStore } from '../src/school/homeworkStore.js';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const port = Number(process.argv[2] || 8097);
-const door = { id: 'local-door', code: process.env.HW_DOOR_CODE || 'WSL', secret: process.env.HW_DOOR_SECRET || '', active: true, results_url: process.env.HW_RESULTS_URL || null };
+const door = { id: 'local-door', code: process.env.HW_DOOR_CODE || 'WSL', name: process.env.HW_DOOR_NAME || 'Your school', secret: process.env.HW_DOOR_SECRET || '', active: true, results_url: process.env.HW_RESULTS_URL || null };
 if (door.secret.length < 40) { console.error('HW_DOOR_SECRET (40+ characters) is needed'); process.exit(1); }
 const file = process.env.HW_STATE || resolve(root, '.school-homework-local.json');
 const store = memoryStore([door]);
@@ -42,6 +43,9 @@ createServer(async (req, res) => {
   if (req.method === 'GET' && (url.pathname === '/hw/' || url.pathname === '/hw')) {
     res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' }); res.end(readFileSync(resolve(root, 'public/hw/index.html'))); return;
   }
+  if (req.method === 'GET' && url.pathname === '/hw/home.js') {
+    res.writeHead(200, { 'content-type': 'text/javascript; charset=utf-8' }); res.end(readFileSync(resolve(root, 'public/hw/home.js'))); return;
+  }
   if (req.method !== 'POST') { send(res, 404, { success: false }); return; }
   const body = await read(req);
   let p; try { p = JSON.parse(body); } catch { send(res, 400, { success: false, error: 'Not JSON' }); return; }
@@ -54,7 +58,7 @@ createServer(async (req, res) => {
     send(res, r ? r.status : 400, r ? r.body : { success: false, error: 'Unknown action' }); return;
   }
   if (url.pathname === '/hw/api') {
-    const r = await learnerHomework(p, deps); keep();
+    const r = await learnerHomework(p, { ...deps, ipKey: 'local' }); keep();
     console.log(`learner ${p.action}: ${r.status}`);
     send(res, r.status, r.body); return;
   }

@@ -31791,6 +31791,9 @@ function sittingsFor(hw, homeworkRef, learnerRefs, families, makeCode) {
   });
 }
 
+// src/school/learnerHome.js
+var NAIROBI = 3 * 3600 * 1e3;
+
 // src/school/homeworkDoor.js
 var UUID2 = /^[a-f0-9-]{36}$/;
 var REF3 = /^[A-Z2-9]{8}$/;
@@ -31909,6 +31912,28 @@ function supabaseStore(admin) {
     async saveSitting(s) {
       const { id, ...rest } = pickCols(s);
       await admin.from("school_homework_sittings").update({ ...rest, updated_at: (/* @__PURE__ */ new Date()).toISOString() }).eq("id", id);
+    },
+    // The learner home (learnerHome.js, migration 20261111_learner_home.sql).
+    async homeDoor(code) {
+      const { data } = await admin.from("school_doors").select("id, code, name, secret, active").eq("code", code).maybeSingle();
+      return data && data.active ? data : null;
+    },
+    async homeSittings(doorId, ref) {
+      const { data } = await admin.from("school_homework_sittings").select("code, status, items, answers, started_at, finished_at, locked_at, lock_question, school_homework!inner(door_id, title, mode, due_on, created_at)").eq("learner_ref", ref).eq("school_homework.door_id", doorId).order("updated_at", { ascending: false }).limit(60);
+      return (data || []).map(({ school_homework: homework, ...sitting }) => ({ sitting, homework }));
+    },
+    async homeTries(key, sinceIso) {
+      const { count } = await admin.from("school_home_attempts").select("id", { count: "exact", head: true }).eq("ip_key", key).eq("ok", false).gte("at", sinceIso);
+      return count || 0;
+    },
+    async homeTry(key, ok2) {
+      await admin.from("school_home_attempts").insert({ ip_key: key, ok: ok2 });
+      await admin.from("school_home_attempts").delete().eq("ip_key", key).lt("at", new Date(Date.now() - 864e5).toISOString());
+    },
+    async childLink(userId, childId) {
+      const { data } = await admin.from("school_learner_links").select("learner_ref, linked_at, school_doors(id, code, name, active)").eq("parent_id", userId).eq("child_id", childId).order("linked_at", { ascending: false }).limit(5);
+      const l = (data || []).find((x) => x.school_doors?.active);
+      return l ? { door: { id: l.school_doors.id, code: l.school_doors.code, name: l.school_doors.name }, learner_ref: l.learner_ref } : null;
     }
   };
 }

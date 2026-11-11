@@ -20,6 +20,7 @@ import { QuestionMedia, ChoiceGrid } from './QuestionMedia.jsx';
 import { computeSteps, diagnoseError, genericNudge, hintRungs } from './remediation.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
 import { openForLearner } from './assignments.js';
+import { SchoolHome } from '../school/SchoolHome.jsx';
 import { defaultProgress, loadProgress, loadLocalProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
 import { NATIVE, curriculaForSubject, gradeOf, strandOf, isEnrichment, bandLabel, getCurriculum } from './curricula.js';
 import { gainXP, todaysXP, dailyGoalPercent, dailyGoalMet, DAILY_GOAL_XP, ACHIEVEMENTS, evaluateAchievements, getAchievement, encourage } from './gamification.js';
@@ -310,6 +311,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   const [showJoin, setShowJoin] = useState(false);
   const [joinCode, setJoinCode] = useState('');
   const [joinStatus, setJoinStatus] = useState(null); // null | 'joining' | 'ok' | error string
+  const [schoolHomeTick, setSchoolHomeTick] = useState(0); // a new link: the school homework section asks again
 
   const joinAllowed = canJoinClass({ userId, guest, activeLearner });
   // A parent's child cannot join a class, but can be linked to their school with
@@ -325,6 +327,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
       setJoinStatus('ok');
       setJoinCode('');
       loadAssignments();
+      setSchoolHomeTick(t => t + 1);
       setTimeout(() => { setShowJoin(false); setJoinStatus(null); }, 1800);
       return;
     }
@@ -2623,6 +2626,13 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
               </div>
 
               </div>{/* ===== end THE MAIN CARD ===== */}
+
+              {/* ===== SCHOOL HOMEWORK (the learner home, 11 Nov 2026) =====
+                  A child the parent linked to their school: all the homework the
+                  school set, what they have got and what to practise next, the
+                  same drawing as the page the school sends (/hw/?l=...). Nothing
+                  shows for a child who is not linked. */}
+              {linkAllowed && <SchoolHome childId={activeLearner.id} tick={schoolHomeTick} />}
 
               {/* ===== SET BY YOUR TEACHER =====
                   Above today's session, because work somebody is expecting
