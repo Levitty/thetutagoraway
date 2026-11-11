@@ -1,0 +1,574 @@
+{
+ "framework": "cbc",
+ "subject_key": "science",
+ "grade": 6,
+ "source": "KICD Science & Technology, First Published 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 3,
+  "sub_strands": 8,
+  "outcomes": 34,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "SCIE.G6.LIVING.FUNGI",
+   "number": "1.1",
+   "strand": "Living things and their Environment",
+   "sub_strand": "Fungi",
+   "sequence": 101,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "Common fungi (mushrooms, toadstool, puff balls, yeast and moulds).",
+    "Importance of fungi (food, fermentation, health and medicine). Note: scientific names and details on application of fungi in food processing not required"
+   ],
+   "learning_experiences": [
+    "use print and non-print materials to search for images of common fungi such and share findings with peers,",
+    "take a walk in the school compound and the adjacent environment to observe and identify different types of fungi,",
+    "grow moulds on available food materials, observe and share with peers,",
+    "use print and non-print materials to search for information on the economic importance of moulds, yeast and mushrooms, record and discuss with peers."
+   ],
+   "key_inquiry_questions": [
+    "How is fungi important in nature?"
+   ],
+   "core_competences": "Learning to learn: The learner learns new information as they share with peers their findings on images of common fungi and the economic importance of moulds, yeast and mushrooms.\nSelf-efficacy: The learner successfully grows moulds on food materials, observes and shares the findings with peers.",
+   "values": "Responsibility: The learner plays different role(s) as they grow moulds on available food materials, observe and share with peers.",
+   "pcis": "Financial Literacy: The learner learns about economic activities as they use print and non-print materials to search for information on the economic importance of moulds, yeast and mushrooms.\nEnvironmental conservation: The learner learns how to conserve the environment as they observe precautions and safe disposal of wastes when handling fungi.",
+   "links": "Agriculture and Nutrition: The learner is able to link information on the economic importance of fungi to food production in Agriculture and Nutition.",
+   "design_notes": "Learners are guided to observe precautions and safe disposal of wastes when handling fungi.\nSecond read left this for a person to confirm: outcome letters read as aab.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Grade 6 Science and Tech - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     14,
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.a",
+     "letter": "a",
+     "text": "identify common fungi in the environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.a_",
+     "letter": "a",
+     "text": "describe the importance of fungi in nature",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.b",
+     "letter": "b",
+     "text": "appreciate the importance of fungi in the economy",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G6.LIVING.INVERTEBRATES",
+   "number": "1.2",
+   "strand": "Living things and their Environment",
+   "sub_strand": "Invertebrates",
+   "sequence": 102,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Common invertebrates: (insects; spiders, ticks and mites; millipedes and centipedes; snails and slugs;worms; Sea invertebrates",
+    "octopus, starfish and crabs).",
+    "Importance of invertebrates (food, pollination, soil aeration, pests, transmission of diseases).",
+    "Note: scientific names not required."
+   ],
+   "learning_experiences": [
+    "walk around the school compound, observe and identify common invertebrates, record and share with peers,",
+    "use print and non-print material to search for information on common invertebrates and share the findings with peers,",
+    "discuss with peers the safety precautions applied when handling invertebrates,",
+    "use print and non-print materials to search for information on general characteristics of invertebrates,",
+    "explore the school compound and the adjacent environment to identify different invertebrates and their characteristics; practise safety precautions in handling invertebrates,",
+    "make an inventory of common invertebrates in their locality,",
+    "discuss the economic importance of invertebrates."
+   ],
+   "key_inquiry_questions": [
+    "What are the common features of invertebrates?"
+   ],
+   "core_competences": "Critical thinking and problem solving: The learner identifies solutions to some economic problems as they discuss the economic importance of invertebrates.\nCreativity and Imagination: The learner thinks critically, imagines and innovatively creates an inventory of common invertebrates in their locality.",
+   "values": "Love: The learner learns how to take care self and others as they explore the school compound and their locality to identify different invertebrates and their characteristics.",
+   "pcis": "Animal Welfare: The learner learns how to take care of animals as they explore the school compound and their locality to identify different invertebrates and their characteristics.\nSafety and security: The learner practises and observes safety precautions in handling animals as they discuss safety precautions applied when handling invertebrates.\nHealth promotion issues: The learner discusses the role of invertebrates in transmission of diseases as they discuss safety precautions applied when handling invertebrates.",
+   "links": "Agriculture and Nutrition: The learner is able to link information on transmission of diseases to communicable diseases in Agriculture and Nutrition.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Grade 6 Science and Tech - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.a",
+     "letter": "a",
+     "text": "identify common invertebrates in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.b",
+     "letter": "b",
+     "text": "practise precautions in handling invertebrates",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.c",
+     "letter": "c",
+     "text": "describe the general characteristics of invertebrates",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.d",
+     "letter": "d",
+     "text": "outline the economic importance of invertebrates",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.e",
+     "letter": "e",
+     "text": "appreciate the importance of invertebrates in nature",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM",
+   "number": "1.3",
+   "strand": "Living things and their Environment",
+   "sub_strand": "Human circulatory system",
+   "sequence": 103,
+   "lessons": 16,
+   "optional": false,
+   "content_topics": [
+    "Parts of the human circulatory system (heart, blood vessels and blood). Note: details of different blood vessels and parts of the body not needed.",
+    "Parts of the heart and their functions.",
+    "Major blood vessels and their functions.",
+    "Components of blood and their functions.",
+    "Symptoms and prevention of common health conditions of the human circulatory system (hardening of arteries, high blood pressure and heart attack)."
+   ],
+   "learning_experiences": [
+    "use print and non-print materials to search for information on the main parts of the human circulatory system and share the finding with peers,",
+    "use locally available materials to model the human circulatory system and share the finding with peers,",
+    "use online interactive platforms or digital images or writing materials to illustrate main parts of the human circulatory system,",
+    "use print and non-print material to search for information on parts of the heart (auricles, ventricles and vessels) and their functions, record and share their findings with peers,",
+    "discuss with peers the functions of the main blood vessels in the human body (arteries, veins and capillaries),",
+    "discuss with peers the components of blood and their functions, record and share (red blood cells, white blood cells and platelets)",
+    "search for information on the symptoms and prevention of common health conditions of the human circulatory system and share the findings with peers,",
+    "discuss with peers the ways of maintaining a healthy human circulatory system,",
+    "discuss with peers on routine plan for maintaining a healthy circulatory system, and develop a routine plan for maintaining a healthy circulatory system (to include drinking plenty of water, physical activities and healthy eating)."
+   ],
+   "key_inquiry_questions": [
+    "What is the human circulatory system made up of?",
+    "What measures enhance a healthy human circulatory system?"
+   ],
+   "core_competences": "Communication and Collaboration: The learner acquires listening and speaking skills as they discuss components of blood and their functions.\nDigital literacy: The learner uses interactive platforms or digital images as they search for information on the main parts of the human circulatory system and share the finding with peers.",
+   "values": "Responsibility: The learner learns how to live responsibly while practising ways for maintaining a healthy circulatory system. Unity: The learner shares the roles involved in an activity as they use print and non-print material to search for information on parts of the heart.",
+   "pcis": "Health promotion issues: The learner learns ways of living healthy as they discuss ways of maintaining a healthy human circulatory system and develop a routine plan for maintaining a healthy circulatory system.",
+   "links": "Creative Arts: The learner is able to relate modelling of the human circulatory system to modelling in Creative Arts and Sports.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Grade 6 Science and Tech - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     18,
+     19,
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.a",
+     "letter": "a",
+     "text": "identify main parts of the human circulatory system",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.b",
+     "letter": "b",
+     "text": "describe functions of main parts of the human circulatory system",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.c",
+     "letter": "c",
+     "text": "outline the symptoms and prevention of common health conditions of the human circulatory system",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.d",
+     "letter": "d",
+     "text": "develop a routine plan for maintaining a healthy circulatory system",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.e",
+     "letter": "e",
+     "text": "appreciate the importance of a healthy circulatory system",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G6.MATTER.CHANGE_OF_STATE",
+   "number": "2.1",
+   "strand": "Matter",
+   "sub_strand": "Change of State",
+   "sequence": 201,
+   "lessons": 18,
+   "optional": false,
+   "content_topics": [
+    "Changes of state of matter. (melting evaporation, sublimation, deposition, condensation and freezing).",
+    "Application of change of state of matter."
+   ],
+   "learning_experiences": [
+    "brainstorm the meaning of change of state of matter,",
+    "carry out activities to demonstrate change of state of matter,",
+    "discuss the applications of change of state of matter in everyday life,",
+    "use digital or print media to search for information on what happens when matter is heated or cooled."
+   ],
+   "key_inquiry_questions": [
+    "How is change of state of matter important in day-to-day life?"
+   ],
+   "core_competences": "Communication and collaboration: The learner acquires speaking and listening skills as they brainstorm the meaning of change of state of matter.\nLearning to learn: The learner learns the best procedural practices of changing states as they carry out activities to demonstrate change of state of matter.",
+   "values": "Respect: The learner appreciates diverse opinions of others while discussing the change of state of matter in everyday life.",
+   "pcis": "Socio-economic issues (Environmental Education): The learner practises ways of conserving the environment as they make candles using waste candle wax or beeswax and repairing broken plastic containers to save on the cost.",
+   "links": "Agriculture and Nutrition: The learner relates the concept of evaporation as a process of drying clothes and cereals in Agriculture and Nutrition.",
+   "design_notes": "observe safety while heating substances to avoid fires and burns.\nSecond read left this for a person to confirm: outcome letters read as abc??; a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Grade 6 Science and Tech - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.a",
+     "letter": "a",
+     "text": "identify the changes of state when substances are heated or cooled",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.b",
+     "letter": "b",
+     "text": "describe the applications of the change of state of matter in everyday life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.c",
+     "letter": "c",
+     "text": "appreciate the applications of change of state of matter in day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR",
+   "number": "2.2",
+   "strand": "Matter",
+   "sub_strand": "Composition of Air",
+   "sequence": 202,
+   "lessons": 16,
+   "optional": false,
+   "content_topics": [
+    "Composition of air in the atmosphere.",
+    "Uses of different components of air",
+    "Air pollution."
+   ],
+   "learning_experiences": [
+    "brainstorm on the meaning air and its constituent,",
+    "draw a pie chart showing percentage composition of components of air,",
+    "carry out activity to investigate the presence of oxygen in air collaboratively (use a burning candle),",
+    "discuss with peers the uses of the different components of air,",
+    "brainstorm on the meaning of air pollution,",
+    "explore the school and neighbourhood to identify air pollutants,",
+    "discuss with peers the effects of air pollution on the environment,",
+    "identify and discuss methods of reducing air pollution,",
+    "use digital or print media to search for more information on the effects of air pollution."
+   ],
+   "key_inquiry_questions": [
+    "How does air pollution affect the environment?"
+   ],
+   "core_competences": "Citizenship: The learner relates concept of environmental conservation as they discuss on air pollutants and come up with ways of reducing air pollution in the environment.\nLearning to learn: The learner learns new skills of controlling air pollutants as they explore the school and neighbourhood to identify air pollutants.",
+   "values": "Responsibility: The learner observes safety precautions in an air-polluted environment as they identify and discuss methods of reducing air pollution.\nPatriotism: The learner serves the community by making posters on common air pollutants, dangers of air pollution and ways of controlling air pollution to educate members of the community.",
+   "pcis": "Socio-economic and environmental issues (Environmental education and climate change): The learner practises ways of environmental conservation as they identify and discuss methods of reducing air pollution.",
+   "links": "Mathematics: The learner uses mathematical skills to draw a pie chart showing the percentage composition of components of air. .",
+   "design_notes": "observe safety precautions in air-polluted environments (Example: practise use of dust masks, goggles, overcoats).\nSecond read left this for a person to confirm: outcome letters read as ?abcde; a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Grade 6 Science and Tech - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.a",
+     "letter": "a",
+     "text": "identify the components of air",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.b",
+     "letter": "b",
+     "text": "outline uses of the different components of air",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.c",
+     "letter": "c",
+     "text": "explain the effects of air pollution in the environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.d",
+     "letter": "d",
+     "text": "describe methods of reducing air pollution in the environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.e",
+     "letter": "e",
+     "text": "appreciate the need for clean air in day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G6.FORCE_.LIGHT",
+   "number": "3.1",
+   "strand": "Force and energy",
+   "sub_strand": "Light",
+   "sequence": 301,
+   "lessons": 16,
+   "optional": false,
+   "content_topics": [
+    "Movement of light through materials (transparent, translucent and opaque).",
+    "Ray diagrams of images in plane mirrors.",
+    "Formation of shadows and eclipses (solar & lunar eclipses).",
+    "Reflection of light at plane surfaces.",
+    "Image formation in plane mirrors.",
+    "Rainbow formation."
+   ],
+   "learning_experiences": [
+    "carry out activities to show the movement of light through different materials,",
+    "perform an experiment to show reflection of light in plane mirrors (laws of reflection),",
+    "locate and illustrate images formed in plane mirrors and discuss their characteristics,",
+    "carry out activities to demonstrate and illustrate the formation of shadows and eclipses,",
+    "use digital or print media to search for more information on the movement of light through materials, image formation in plane mirrors, the formation of shadows, eclipses and rainbow in nature,",
+    "discuss with peers the applications of movement of light through different media (mirrors, periscope, kaleidoscope, lenses, magnifying glass, hand lens, mirage, rainbow)."
+   ],
+   "key_inquiry_questions": [
+    "How does light travel?"
+   ],
+   "core_competences": "Digital literacy: The learner interacts with digital technology as they use digital or print media to search for information on the movement of light through materials, image formation in plane mirrors, the formation of shadows, eclipses and rainbows in nature.\nCommunication and Collaboration: The learner cooperates and works harmoniously with peers as they discuss the applications of movement of light in different media.",
+   "values": "Unity: The learner works harmoniously with peers as they use locally available resources to make a functional periscope.",
+   "pcis": "Socio-economic issues: The learner observes safety and security as they use plane mirrors to perform experiments to demonstrate image formation and describe the characteristics of images formed.",
+   "links": "The learner is able to relate the concept of ray of light in lighting up the home in Home Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Grade 6 Science and Tech - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.a",
+     "letter": "a",
+     "text": "demonstrate the movement of light through materials",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.b",
+     "letter": "b",
+     "text": "draw ray diagrams of images formed in plane mirrors",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.c",
+     "letter": "c",
+     "text": "illustrate the formation of shadows and eclipses in nature",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.d",
+     "letter": "d",
+     "text": "describe the formation of rainbow in nature",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.e",
+     "letter": "e",
+     "text": "appreciate the importance of movement light in everyday life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE",
+   "number": "3.2",
+   "strand": "Force and energy",
+   "sub_strand": "Levers as simple machines",
+   "sequence": 302,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Examples of levers.",
+    "Parts of levers (fulcrum/pivot, effort, and load).",
+    "Classification of levers (first, second and third class levers).",
+    "Uses of levers in day-to-day life(a hole punch, pliers, scissors, a see-saw, wheelbarrow, bottle openers, nail clippers, a nutcracker, shovel, fishing rod, kitchen tongs and tweezers)."
+   ],
+   "learning_experiences": [
+    "brainstorm on the meaning of levers as simple machines,",
+    "work collaboratively to identify parts of a lever,",
+    "carry out activities to group levers into the three classes,",
+    "carry out activities to demonstrate the use of common levers as simple machines,",
+    "use digital or print media to search for information on how levers make work easier in day-to-day life."
+   ],
+   "key_inquiry_questions": [
+    "How are levers used in day to day life?"
+   ],
+   "core_competences": "Creativity and imagination: The learner assembles different parts and innovatively makes a beam balance from locally available materials.\nLearning to learn: The learner learns from each other as they carry out activities while demonstrating the use of common levers as simple machines.",
+   "values": "Respect: The learner displays positive regard for self and others as they work together to identify parts of a lever.",
+   "pcis": "Citizenship education: The learner exercises care and protection for one another while performing experiments to demonstrate the use of common levers as simple machines.",
+   "links": "Agriculture and Nutrition: Learner is able to link application of the principle of levers in farm tools, use of cutlery; spoons and bottle openers as in Agriculture and Nutrition.\nCreative Arts: Learner is able to apply the concepts of simple leavers as they play on a see-saw in Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Grade 6 Science and Tech - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.a",
+     "letter": "a",
+     "text": "identify common levers used in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.b",
+     "letter": "b",
+     "text": "describe parts of a lever as used in making work easier",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.c",
+     "letter": "c",
+     "text": "classify levers into the three classes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.d",
+     "letter": "d",
+     "text": "demonstrate the use of levers in making work easier",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.e",
+     "letter": "e",
+     "text": "appreciate the use of levers in making work easier",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE",
+   "number": "3.3",
+   "strand": "Force and energy",
+   "sub_strand": "Slopes as simple machines",
+   "sequence": 303,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Types of slopes.",
+    "Uses of slopes."
+   ],
+   "learning_experiences": [
+    "discuss with peers the meaning of slope as a simple machine (inclined plane),",
+    "give practical examples on where slopes are used to make work easier around the school environment (ladders, ramps, staircase, road winding uphill, wedge, roofs, loading a lorry),",
+    "discuss with peers how slopes are used to make work easier in day-to-day life,",
+    "carry out activities to show how slopes make work easier,",
+    "where possible, use digital media to search for information on how slopes make work easier (elevators/lifts, escalators/moving stares, stair case, ladders, cableways, ramps, road winding uphill, wedge, roofs, loading a lorry),",
+    "discuss with peers the importance of use of slopes in day-to-day life."
+   ],
+   "key_inquiry_questions": [
+    "How are slopes used in everyday life?"
+   ],
+   "core_competences": "Citizenship: The learner exercises ethical responsibility as they make a simple slope for use in school or at home using locally available materials.\nCritical thinking and problem solving: The learner thinks clearly as they make a simple slope for use in school or at home using locally available materials.",
+   "values": "Integrity: The learner learns how to utilise resources prudently while making a simple slope for use in school or at home.",
+   "pcis": "Socio economic issues: The learner exercises safety and security as they carry out activities to show how slopes make work easier.",
+   "links": "Agriculture and Nutrition: The learner is able to relate the concept of slope in the use of farm tools, equipment and machinery to carry out the projects in Agriculture and Nutrition.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Grade 6 Science and Tech - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     31,
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.a",
+     "letter": "a",
+     "text": "identify types of slopes used as simple machines",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.b",
+     "letter": "b",
+     "text": "demonstrate how a slope makes work easier in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.c",
+     "letter": "c",
+     "text": "appreciate the use of slopes in everyday life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

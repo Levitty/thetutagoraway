@@ -1,0 +1,773 @@
+{
+ "framework": "cbc",
+ "subject_key": "agriculture",
+ "grade": 7,
+ "source": "KICD Agriculture, First published 2022; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 14,
+  "outcomes": 42,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI",
+   "number": "1.1",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Controlling Soil Pollution",
+   "sequence": 101,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search and watch a video clip or print media on causes of soil pollution and then share experiences on causes of soil pollution such as wastewater, excessive use of artificial fertilizers, agricultural chemicals, and plastic wastes.",
+    "engage in safe soil pollution control practises such as safe disposal of household wastewater, used chemical containers, and plastic wastes.",
+    "create awareness messages against improper disposal of wastewater, dumping of soil pollutants, used chemical containers and plastic wastes, and use of correct types and amounts of farm chemicals and fertilizers."
+   ],
+   "key_inquiry_questions": [
+    "How can household practises cause soil pollution?"
+   ],
+   "core_competences": "Citizenship: civic skills as learners promote control of soil pollution to enhance soil conservation in the community.",
+   "values": "Patriotism: awareness of own responsibility as the learners engage in activities that promote soil pollution control.",
+   "pcis": "Environmental conservation as learners protect soil against pollution.",
+   "links": "Learners relate soil pollution to other forms of environmental pollution learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.a",
+     "letter": "a",
+     "text": "explain the causes of soil pollution in gardening",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.b",
+     "letter": "b",
+     "text": "control soil pollution in the home environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.c",
+     "letter": "c",
+     "text": "demonstrate responsibility in using safe farming practises to conserve the soil",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN",
+   "number": "1.2",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Constructing Water Retention Structures",
+   "sequence": 102,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search for information and discuss how surface run-off can be conserved in structures such as water retention ditches and water retention pits for gardening.",
+    "construct retention ditches or retention pits for water conservation.",
+    "establish a crop of their choice such as a banana sucker, sugarcane, napier grass, or arrowroot to adopt the utilisation of surface run-off in gardening."
+   ],
+   "key_inquiry_questions": [
+    "How can surface run-off be conserved for gardening purposes?",
+    "How does the construction of water retention structures conserve water?"
+   ],
+   "core_competences": "Critical thinking and Problem-solving: decision-making skills as learners construct water retention structures to control run-off.",
+   "values": "Unity: collaboration with others as learners engage in project activities to construct water retention structures.",
+   "pcis": "Environmental protection as learners construct water retention structures to harness run-off and use it in gardening activities.",
+   "links": "Learners relate the construction of run-off control structures to the destruction of the environment by excess water in socio-economic amenities as learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.a",
+     "letter": "a",
+     "text": "describe how surface run-off can be used in gardening",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.b",
+     "letter": "b",
+     "text": "construct water retention structures to conserve surface runoff",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.c",
+     "letter": "c",
+     "text": "adopt utilisation of surface run-off in gardening",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT",
+   "number": "1.3",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Conserving Food Nutrients",
+   "sequence": 103,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search for information and discuss on ways of conserving vitamins and minerals in vegetables such as washing, peeling, cutting, cooking time, and covering.",
+    "conserve vitamins and minerals in vegetables during food handling, preparation, and cooking.",
+    "Discuss and make presentations on how they can adopt appropriate ways of handling, preparing, and cooking vegetables to conserve vitamins and minerals."
+   ],
+   "key_inquiry_questions": [
+    "How do we conserve vitamins and minerals in vegetables?"
+   ],
+   "core_competences": "Learning to learn: carrying out research and sharing information on ways of conserving food nutrients.",
+   "values": "Integrity: prudent use of resources as learners conserve food nutrients.",
+   "pcis": "Health promotion as learners conserve nutrients in food production processes.",
+   "links": "Learners relate the conservation of food nutrients to healthy growth and development learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.a",
+     "letter": "a",
+     "text": "identify ways of conserving vitamins and minerals in vegetables",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.b",
+     "letter": "b",
+     "text": "conserve vitamins and minerals in vegetables",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.c",
+     "letter": "c",
+     "text": "adopt conservation of vitamins and minerals in vegetables",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.CONSER.GROWING_TREES",
+   "number": "1.4",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Growing Trees",
+   "sequence": 104,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search for information on the importance of trees and make presentations in class to share their findings.",
+    "plant at least one tree either from seeds, seedlings or cuttings.",
+    "take care of the seedlings until it is fully established to adopt tree planting for conservation of the environment."
+   ],
+   "key_inquiry_questions": [
+    "How can growing trees conserve the environment?"
+   ],
+   "core_competences": "Citizenship: active community life skills as learners plant trees to conserve the environment.",
+   "values": "Patriotism: loving the country by conserving the environment through tree planting.",
+   "pcis": "Environmental protection as learners establish trees in the community to enhance the environment.",
+   "links": "Learners relate tree planting to the conservation of natural resources learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.CONSER.GROWING_TREES.a",
+     "letter": "a",
+     "text": "explain the importance of trees in conserving the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.CONSER.GROWING_TREES.b",
+     "letter": "b",
+     "text": "plant trees to conserve the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.CONSER.GROWING_TREES.c",
+     "letter": "c",
+     "text": "adopt tree planting as a way of conserving the environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT",
+   "number": "2.1",
+   "strand": "Food Production Processes",
+   "sub_strand": "Crop Establishment",
+   "sequence": 201,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [
+    "Preparing Planting Site",
+    "Planting"
+   ],
+   "learning_experiences": [
+    "observe provided planting materials and suggest appropriate tilth for each material (small-sized seeds for fine tilth, medium-sized seeds for medium tilth, and large planting materials like tubers, suckers, and cuttings for coarse tilth).",
+    "prepare suitable sites (fine tilth for small seeds, medium tilth for medium-sized seeds, coarse tilth for large planting materials like tubers, suckers, and cuttings).",
+    "establish a planting material of their choice in the selected soil tilth and take care of the crop to adopt the use of appropriate tilth in crop production."
+   ],
+   "key_inquiry_questions": [
+    "How does planting material determine planting site preparation?"
+   ],
+   "core_competences": "Critical thinking and problem-solving: observation skills as learner relate the size of planting materials to the type of tilth.",
+   "values": "Unity: collaboration with other learners in the preparation of sites and planting.",
+   "pcis": "Safety of self and others as learners use tools and equipment to prepare planting sites.",
+   "links": "Learners relate planting site (tilth) and seed size to the concept of germination learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.a",
+     "letter": "a",
+     "text": "determine appropriate tilth for selected planting material",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.b",
+     "letter": "b",
+     "text": "prepare a suitable tilth for establishing selected planting material",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.c",
+     "letter": "c",
+     "text": "adopt appropriate tilth in establishing a selected planting material",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT",
+   "number": "2.2",
+   "strand": "Food Production Processes",
+   "sub_strand": "Selected Crop Management Practises",
+   "sequence": 202,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "watch a video, or a demonstration on management practises (gapping, thinning, weeding, earthing-up).",
+    "carry out selected management practises (gapping, thinning, weeding through physical methods, earthing-up).",
+    "make class presentations on the importance of the selected management practises in crop production."
+   ],
+   "key_inquiry_questions": [
+    "How can we carry out management practises in crop production?"
+   ],
+   "core_competences": "Self-efficacy: effective communication skills as learners make presentations on importance of selected crop management practises.",
+   "values": "Respect: open-mindedness as learners appreciate the opinions of others during presentations",
+   "pcis": "Safety and security for self and others in the use of tools and equipment to carry out crop management practises.",
+   "links": "Learners relate plant spacing and population that guides gapping and thinning to concepts of measurement and numbers in Mathematics.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.a",
+     "letter": "a",
+     "text": "explain management practises carried out on crops",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.b",
+     "letter": "b",
+     "text": "carry out management practises in crop production",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.c",
+     "letter": "c",
+     "text": "appreciate the importance of various management practises in crop production",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT",
+   "number": "2.3",
+   "strand": "Food Production Processes",
+   "sub_strand": "Preparing Animal Products",
+   "sequence": 203,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [
+    "Eggs",
+    "Honey"
+   ],
+   "learning_experiences": [
+    "search for information, discuss, and share experiences on how to prepare eggs and honey for use and storage.",
+    "prepare eggs (sorting, grading, packing) and honey (crushing and straining method, packing in appropriate containers).",
+    "display prepared animal products to embrace the practise of preparing animal products."
+   ],
+   "key_inquiry_questions": [
+    "How can we prepare animal products?"
+   ],
+   "core_competences": "Digital literacy: digital citizenship skills while observing netiquette in the use and search of information on the internet.",
+   "values": "Integrity: use of ethically acceptable procedures in the preparation and packaging of eggs and honey.",
+   "pcis": "Food hygiene on the use of clean tools and equipment when preparing eggs and honey.",
+   "links": "Learners relate the preparation of eggs and honey through sorting, grading, and packing to the concept of presentation of products for marketing learnt in Pre-Technical Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.a",
+     "letter": "a",
+     "text": "explain how to prepare animal products for various purposes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.b",
+     "letter": "b",
+     "text": "prepare animal products for various purposes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.c",
+     "letter": "c",
+     "text": "embrace preparation of animal products for various purposes",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.FOOD_P.COOKING_FOOD",
+   "number": "2.4",
+   "strand": "Food Production Processes",
+   "sub_strand": "Cooking Food",
+   "sequence": 204,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [
+    "Grilling",
+    "Roasting",
+    "Steaming"
+   ],
+   "learning_experiences": [
+    "use digital resources, print materials, or resource persons to source for information on grilling, roasting, and steaming foods",
+    "practise grilling, steaming, and roasting methods to prepare foods while observing the safety of self and others.",
+    "serve grilled, steamed, and roasted foods to appreciate the various methods of cooking."
+   ],
+   "key_inquiry_questions": [
+    "Why should we use different methods of cooking food?"
+   ],
+   "core_competences": "Digital Literacy: connecting and using technology to search for information on methods of cooking.",
+   "values": "Responsibility: taking care of cooking equipment as learners engage in steaming and roasting methods.",
+   "pcis": "Safety of self and others as learners use sharp tools and fuels in cooking.",
+   "links": "Learners relate cooking methods to the transfer of heat learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.FOOD_P.COOKING_FOOD.a",
+     "letter": "a",
+     "text": "describe methods of cooking different types of foods",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.COOKING_FOOD.b",
+     "letter": "b",
+     "text": "cook food using various methods",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.COOKING_FOOD.c",
+     "letter": "c",
+     "text": "appreciate the use of varied methods of cooking food",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA",
+   "number": "3.1",
+   "strand": "Hygiene Practises",
+   "sub_strand": "Hygiene in Rearing Animals",
+   "sequence": 301,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search for information on hygienic practises (clean feeders and waterers, clean and well-ventilated houses, clean animal) in rearing domestic animals such as pets.",
+    "carry out appropriate hygiene practises in rearing domestic animals such as cleaning feeders, waterers, cleaning animal structures.",
+    "make a class presentation on the importance of hygiene in rearing domestic animals."
+   ],
+   "key_inquiry_questions": [
+    "How can we maintain hygiene while rearing animals?"
+   ],
+   "core_competences": "Learning to Learn: sharing learnt knowledge as learners apply information to carry out hygiene in animal rearing practises.",
+   "values": "Responsibility: engaging in assigned roles while carrying out hygiene practises in rearing domestic animals.",
+   "pcis": "Animal welfare as learners observe hygiene practises in rearing domestic animals.",
+   "links": "Learners relate hygiene practises in rearing domestic animals to concepts of animal production as an economic activity learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.a",
+     "letter": "a",
+     "text": "describe hygiene practises in rearing domestic animals",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.b",
+     "letter": "b",
+     "text": "carry out hygiene practises in rearing domestic animals",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.c",
+     "letter": "c",
+     "text": "appreciate importance of hygiene practises in rearing domestic animals",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I",
+   "number": "3.2",
+   "strand": "Hygiene Practises",
+   "sub_strand": "Laundry: Loose-coloured Items",
+   "sequence": 302,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "watch a video clip or a demonstration on how to launder a loose-coloured (sorting, washing by kneading and squeezing, drying, finishing).",
+    "launder a loose-coloured item (sorting, washing by kneading and squeezing, drying, finishing).",
+    "display the clean loose-coloured articles to embrace appropriate laundry for hygiene purposes."
+   ],
+   "key_inquiry_questions": [
+    "How do you launder a loose-coloured article for hygienic purposes?"
+   ],
+   "core_competences": "Learning to Learn: reflection of own work as learners launder loose-coloured articles for hygiene purposes.",
+   "values": "Responsibility as learners undertake assigned roles to launder loose-coloured articles.",
+   "pcis": "Health promotion as learners maintain hygiene through laundering a loose-coloured article.",
+   "links": "Learners relate laundering of loose-coloured articles to the concept of tie and dye technique of fixing colours learnt in Creative Arts and Sports.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.a",
+     "letter": "a",
+     "text": "describe how to launder a loose-coloured article for hygiene purposes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.b",
+     "letter": "b",
+     "text": "launder a loose-coloured article for hygiene purposes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.c",
+     "letter": "c",
+     "text": "embrace laundering of loose-coloured articles for hygiene purposes",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.PRODUC.KNITTING_SKILLS",
+   "number": "4.1",
+   "strand": "Production Techniques",
+   "sub_strand": "Knitting Skills",
+   "sequence": 401,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use digital devices or real materials or print media to identify basic knitting stitches (purl and knit).",
+    "knit a simple household article such as a tool bag, scarf, gloves, mats, or table wipers.",
+    "display knitted work to embrace the use of knitted articles for household use."
+   ],
+   "key_inquiry_questions": [
+    "How do you knit an article for household use?"
+   ],
+   "core_competences": "Creativity and imagination: experimenting skills as learners knit a household article using basic knitting stitches.",
+   "values": "Integrity: prudent use of materials and equipment in the knitting of household articles.",
+   "pcis": "Safety of self and others as learners use sharp knitting tools.",
+   "links": "Learners relate knitting to weaving techniques learnt in Creative Arts and Sports.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.PRODUC.KNITTING_SKILLS.a",
+     "letter": "a",
+     "text": "describe knitting stitches used in making household articles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.PRODUC.KNITTING_SKILLS.b",
+     "letter": "b",
+     "text": "knit various articles for household use",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.PRODUC.KNITTING_SKILLS.c",
+     "letter": "c",
+     "text": "embrace knitting skills in making household articles",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP",
+   "number": "4.2",
+   "strand": "Production Techniques",
+   "sub_strand": "Constructing Framed Suspended Garden",
+   "sequence": 402,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search for photos, videos, and illustrations on framed suspended gardens to describe how they are constructed.",
+    "innovate and construct framed suspended gardens using locally available materials such as wires, wooden planks, metal bars, and poles.",
+    "establish a crop on the constructed framed suspended garden to embrace their use in growing crops."
+   ],
+   "key_inquiry_questions": [
+    "How are framed suspended gardens constructed?"
+   ],
+   "core_competences": "Creativity and imagination: experimenting skills as learners innovate framed suspended gardens.",
+   "values": "Unity: team work as learners undertake the project for the construction of a framed suspended garden.",
+   "pcis": "Environmental awareness as learners utilise limited space when constructing framed suspended gardens.",
+   "links": "Learners relate designing, sketching, and construction of framed suspended gardens to skills in drawing, designing, and the use of related tools learnt in Pre-Technical Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.a",
+     "letter": "a",
+     "text": "describe a framed suspended garden for growing crops",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.b",
+     "letter": "b",
+     "text": "construct a framed structure for a suspended garden",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.c",
+     "letter": "c",
+     "text": "embrace the use of framed suspended gardens for growing crops",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO",
+   "number": "4.3",
+   "strand": "Production Techniques",
+   "sub_strand": "Adding Value to Crop Produce",
+   "sequence": 403,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss ways of adding value to crop produce such as potatoes, cassava, groundnuts, simsim, sweet potatoes, and pumpkin.",
+    "process a provided sample of crop produce such as potatoes, cassava, groundnuts, simsim, sweet potatoes and pumpkin to add value using appropriate methods like drying and frying.",
+    "compare the processed crop produce to raw crop produce in terms of monetary value and storage life to appreciate the importance of value addition."
+   ],
+   "key_inquiry_questions": [
+    "Why do we add value to crop produce?",
+    "How can we add value to crop produce?"
+   ],
+   "core_competences": "Critical thinking and Problem-solving: evaluation and decision-making skills as learners carry out value addition to selected crop produce.",
+   "values": "Integrity: applying laid down procedures when learners ethically process crop produce to add value.",
+   "pcis": "Food and nutrition security as learners process crop produce for value addition.",
+   "links": "Learners relate the value addition concept to commodity marketing learnt in Pre-Technical Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.a",
+     "letter": "a",
+     "text": "explain ways of adding value on crop produce",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.b",
+     "letter": "b",
+     "text": "add value to a selected crop produce",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.c",
+     "letter": "c",
+     "text": "appreciate the importance of value addition on crop produce",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP",
+   "number": "4.4",
+   "strand": "Production Techniques",
+   "sub_strand": "Making Homemade Soap",
+   "sequence": 404,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm and share experiences on forms of soap (liquid, cake/bar, paste, powder) used at the household level.",
+    "use natural ingredients such as ashes, salt, water, animal fats, or plant oils to make soap.",
+    "use the homemade soap to maintain cleanliness at the household level."
+   ],
+   "key_inquiry_questions": [
+    "How can we make soap using natural ingredients?"
+   ],
+   "core_competences": "Critical thinking and Problem-solving: open-mindedness and creativity skills as learners make homemade soap using natural ingredients.",
+   "values": "Responsibility: engaging in assigned roles while making homemade soap.",
+   "pcis": "Financial literacy as learners save on costs by using locally available resources to make homemade soap.",
+   "links": "Learners relate the use of natural ingredients in making soap to concepts of recycling and reusing wastes learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Agriculture Grade7 1.8.2024 -Proofread.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.a",
+     "letter": "a",
+     "text": "identify the forms of soap used at the household level",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.b",
+     "letter": "b",
+     "text": "make homemade soap using natural ingredients",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.c",
+     "letter": "c",
+     "text": "embrace homemade soap for household use",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

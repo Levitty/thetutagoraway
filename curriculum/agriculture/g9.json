@@ -1,0 +1,576 @@
+{
+ "framework": "cbc",
+ "subject_key": "agriculture",
+ "grade": 9,
+ "source": "KICD Agriculture, First published 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 10,
+  "outcomes": 33,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H",
+   "number": "1.1",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Conserving Animal Feed: Hay",
+   "sequence": 101,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use digital and print resources to search for information and share experiences on methods of conserving forage in coping with drought (baled haymaking, standing forage, stacking).",
+    "conserve forage through stacking and box-bailing methods using locally available materials such as grass and maize stover to make hay for drought season.",
+    "discuss and make a class presentation on how households can adopt conservation of forage in coping with drought."
+   ],
+   "key_inquiry_questions": [
+    "How can hay conservation contribute to coping with drought?"
+   ],
+   "core_competences": "Critical thinking and Problem-solving: evaluation and decision-making skills as learners analyse and apply methods of conserving hay to cope with drought.\nCommunication and collaboration: speaking and dialogue skills as learners discuss ways of conserving forage to cope with drought in the context of rearing animals.",
+   "values": "Peace: respect for diversity of opinions as learners discuss methods of conserving hay to cope with drought.",
+   "pcis": "Disaster risk reduction as learners analyse and adopt applicable methods of conserving hay to cope with drought.",
+   "links": "Learners relate the conservation of hay to concepts of mitigating the effects of climate change learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Agriculture Grade9 1.8.2024 -Proofread.pdf",
+    "version": "First published 2024",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.a",
+     "letter": "a",
+     "text": "describe methods of conserving forage in coping with drought",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.b",
+     "letter": "b",
+     "text": "conserve forage to cope with drought",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.c",
+     "letter": "c",
+     "text": "adopt conservation of forage in coping with drought",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD",
+   "number": "1.2",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Conserving Leftover Food",
+   "sequence": 102,
+   "lessons": 11,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search and share experiences importance of conserving leftover food at home.",
+    "prepare leftover food for consumption through methods such as reheating or preparing another recipe to avoid wastage.",
+    "make presentations on various recipes adopted from leftover food to avoid food wastage."
+   ],
+   "key_inquiry_questions": [
+    "How is leftover food prepared for use to prevent food wastage?"
+   ],
+   "core_competences": "Creativity and Imagination: experimenting skills as learners explore different ways of preparing leftover food.",
+   "values": "Integrity: utilising resources prudently to avoid wastage of resources in the preparation of leftover food.",
+   "pcis": "Hygiene in handling of foods to prevent contamination and spoilage.",
+   "links": "Learners relate the conservation of leftover foods to the spread of food-related diseases and illnesses learnt through Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Agriculture Grade9 1.8.2024 -Proofread.pdf",
+    "version": "First published 2024",
+    "pages": [
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.a",
+     "letter": "a",
+     "text": "explain the importance of conserving leftover food at home",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.b",
+     "letter": "b",
+     "text": "prepare leftover food to avoid wastage",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.c",
+     "letter": "c",
+     "text": "embrace the use of leftover food to avoid food wastage",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G9.CONSER.INTEGRATED_FARMING",
+   "number": "1.3",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Integrated Farming",
+   "sequence": 103,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "take an excursion or search for information on integrated farming practises to find out how components of integrated farming help in conserving resources.",
+    "design or sketch and make a model to illustrate integrated farming components such as fish rearing, rabbit keeping, poultry keeping and vegetable production on the same plot of land to show their relational benefits.",
+    "make class presentations on the models of integrated farming and the importance of integration in conserving resources."
+   ],
+   "key_inquiry_questions": [
+    "How can integrated farming conserve resources?"
+   ],
+   "core_competences": "Creativity and Imagination: observation and making connection skills as learners seek information, design and make a model to depict an integrated farming enterprise.\nCritical thinking and Problem-solving: evaluation and decision-making skills as learners analyse the environment for components of integrated farming and design models of an integrated farming enterprise.",
+   "values": "Unity: teamwork as learners harness gifts and special skills of the group members in designing and making an integrated farming model.\nRespect: accommodating diverse opinions while learners discuss and design a model of integrated farming.",
+   "pcis": "Environmental awareness and protection as learners re-use locally available resources such as waste pieces of wood, cartons, cardboard and papers to design and make a model of integrated farming enterprise.",
+   "links": "Learners apply skills of designing and choice of materials learnt in Pre-Technical Studies in the construction of an integrated farming model.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Agriculture Grade9 1.8.2024 -Proofread.pdf",
+    "version": "First published 2024",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.a",
+     "letter": "a",
+     "text": "describe components of integrated farming in conserving resources",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.b",
+     "letter": "b",
+     "text": "make a model of integrated farming for the conservation of resources",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.c",
+     "letter": "c",
+     "text": "appreciate the importance of integrated farming in the conservation of resources",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING",
+   "number": "2.1",
+   "strand": "Food Production Processes",
+   "sub_strand": "Organic Gardening",
+   "sequence": 201,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search and share information on organic gardening practises in crop production.",
+    "grow a selected short-season crop such as a vegetable, legume, or spice crop using organic gardening practises such as the use of organic manure, organic pesticides, mechanical weed control, use of organic foliar feed made from animal wastes and plants like Mexican sunflower.",
+    "share experiences through class presentations to appreciate the importance of organic gardening in the production of healthy foods."
+   ],
+   "key_inquiry_questions": [
+    "Why should we practise organic gardening?",
+    "How can we produce food crops through organic gardening?"
+   ],
+   "core_competences": "Learning to Learn: working collaboratively and organising own learning skills as learners grow crops using organic gardening practises.\nSelf-efficacy: planning skills as learners grow crops using organic farming practises.",
+   "values": "Unity: working in teams as learners undertake the project on growing crops using organic gardening practises.\nIntegrity: honesty as learners practise organic gardening practises.",
+   "pcis": "Food health and safety as learners acquire skills of growing foods without use of agro-chemicals.",
+   "links": "Learners relate organic gardening practises to farming practises in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Agriculture Grade9 1.8.2024 -Proofread.pdf",
+    "version": "First published 2024",
+    "pages": [
+     19,
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.a",
+     "letter": "a",
+     "text": "explain organic gardening practises in crop production",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.b",
+     "letter": "b",
+     "text": "grow a crop using organic gardening practises",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.c",
+     "letter": "c",
+     "text": "appreciate the importance of organic gardening in the production of healthy foods",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE",
+   "number": "2.2",
+   "strand": "Food Production Processes",
+   "sub_strand": "Storage of Crop Produce",
+   "sequence": 202,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use digital devices or print media to search for information on ways of preparing storage structures in readiness for the storage of crop produce and share findings in plenary.",
+    "prepare an existing storage structure or facility (container, store room, granary, storage bags) in readiness for storage through practises such as cleaning, dusting, sealing cracks, repairing leakages, emptying previous crop produce, and controlling rodents.",
+    "manage stored crop produce (checking moisture content in cereals and pulses, ensuring ventilation, controlling rodents, turning the stored crop produce and disposing of spoilt produce)."
+   ],
+   "key_inquiry_questions": [
+    "How can we prepare the facility in readiness for the storage of crop produce?",
+    "How should crop produce be managed during storage?"
+   ],
+   "core_competences": "Critical thinking and Problem-solving: open-mindedness and creativity skills as learners prepare storage structure and manage crop produce to maintain quality and reduce post-harvest loss.",
+   "values": "Responsibility: engaging in assigned roles as learners manage stored crop produce in the school food store.",
+   "pcis": "Food safety and security as learners manage crop storage structures to prevent spoilage of crop produce.",
+   "links": "Learners relate the management of storage of crop produce to farming as an economic activity learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Agriculture Grade9 1.8.2024 -Proofread.pdf",
+    "version": "First published 2024",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.a",
+     "letter": "a",
+     "text": "explain ways of preparing storage structures before storing crop produce",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.b",
+     "letter": "b",
+     "text": "prepare an existing storage structure in readiness for storing crop produce",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.c",
+     "letter": "c",
+     "text": "manage stored crop produce to reduce spoilage",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.d",
+     "letter": "d",
+     "text": "show responsibility in managing stored crop produce to reduce spoilage",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT",
+   "number": "2.3",
+   "strand": "Food Production Processes",
+   "sub_strand": "Cooking: Using Flour Mixtures",
+   "sequence": 203,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use print or digital resources to identify types of flour mixtures used in food production such as batters and dough.",
+    "prepare flour mixtures such as batters and doughs for food production.",
+    "make products such as pancakes, mandazi, and chapati from various flour mixtures.",
+    "display and appreciate the products made from various flour mixtures."
+   ],
+   "key_inquiry_questions": [
+    "How can we make products from flour mixtures?"
+   ],
+   "core_competences": "Learning to Learn: reflection on own work as learners apply procedures of preparing flour mixtures.",
+   "values": "Integrity: following ethically acceptable procedures in preparing flour mixtures.",
+   "pcis": "Safety of self and others as learners use tools and fuels in making products from flour mixtures.",
+   "links": "Learners relate the measurement of ingredients in preparing flour mixtures to weights and measurements learnt in Mathematics.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Agriculture Grade9 1.8.2024 -Proofread.pdf",
+    "version": "First published 2024",
+    "pages": [
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.a",
+     "letter": "a",
+     "text": "identify types of flour mixtures used in food production",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.b",
+     "letter": "b",
+     "text": "prepare flour mixtures for food production",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.c",
+     "letter": "c",
+     "text": "make products from various flour mixtures",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.d",
+     "letter": "d",
+     "text": "appreciate products made from various flour mixtures",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_",
+   "number": "3.1",
+   "strand": "Hygiene Practises",
+   "sub_strand": "Cleaning Waste Disposal Facilities",
+   "sequence": 301,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and share experiences on the importance of cleaning waste disposal facilities such as waste bins, sinks, and open drains.",
+    "clean waste disposal facilities such as dust bins, sinks, and open drains.",
+    "maintaining clean waste disposal facilities at the household level using improvised resources."
+   ],
+   "key_inquiry_questions": [
+    "How does cleaning waste disposal facilities promote hygiene?"
+   ],
+   "core_competences": "Critical thinking and Problem-solving: reflection skills as learners assess their success in cleaning waste disposal facilities.",
+   "values": "Responsibility: taking safety precautions as learners clean waste disposal facilities.",
+   "pcis": "Environmental awareness as learners clean waste disposal facilities to promote hygiene in their living places.",
+   "links": "Learners relate cleaning of waste disposal facilities to aspects of good health learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Agriculture Grade9 1.8.2024 -Proofread.pdf",
+    "version": "First published 2024",
+    "pages": [
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.a",
+     "letter": "a",
+     "text": "explain the importance of cleaning waste disposal facilities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.b",
+     "letter": "b",
+     "text": "clean waste disposal facilities at the household level",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.c",
+     "letter": "c",
+     "text": "adopt the use of clean waste disposal facilities at the household level",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN",
+   "number": "3.2",
+   "strand": "Hygiene Practises",
+   "sub_strand": "Disinfecting Clothing and Household Articles",
+   "sequence": 302,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search for information or observe demonstrations on methods of disinfecting clothing and household articles; use of sunlight, use of salt, boiling, use of disinfectants and ironing.",
+    "disinfect clothing and household articles like aprons, gloves, towels, dust coats, handkerchiefs, and socks among other personal items using methods such as sunlight, use of salt, boiling, use of disinfectants, and ironing.",
+    "make class presentations on the importance of disinfecting clothing and household articles for hygiene purposes."
+   ],
+   "key_inquiry_questions": [
+    "How can we disinfect household articles for hygiene purposes?"
+   ],
+   "core_competences": "Learning to Learn: organising own learning as they acquire new skills on methods of disinfecting clothing and household articles.",
+   "values": "Responsibility: taking care of clothing and household articles as learners carry out disinfection.",
+   "pcis": "Health promotion awareness as learners disinfect clothing and household articles to prevent the spread of diseases.",
+   "links": "Learners relate the use of disinfectants to solvents learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Agriculture Grade9 1.8.2024 -Proofread.pdf",
+    "version": "First published 2024",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.a",
+     "letter": "a",
+     "text": "describe methods of disinfecting clothing and household articles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.b",
+     "letter": "b",
+     "text": "carry out disinfection of clothing and household articles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.c",
+     "letter": "c",
+     "text": "appreciate the importance of disinfecting clothing and household articles",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS",
+   "number": "4.1",
+   "strand": "Production Techniques",
+   "sub_strand": "Grafting in Plants",
+   "sequence": 401,
+   "lessons": 13,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use print media or digital resources to search for information on grafting as a method of plant propagation.",
+    "carry out grafting in plants for repair, aesthetic, rejuvenation or improvement purposes.",
+    "carry out caring practises such as watering, protecting the union, removal of the grafting tape after successful union, and removal of other buds on the rootstock.",
+    "make discussions and presentations on reasons for grafting (repairing a damaged plant, aesthetic, rejuvenation and plant improvement) to appraise its applications in crop production."
+   ],
+   "key_inquiry_questions": [
+    "Why is grafting done on a plant?"
+   ],
+   "core_competences": "Learning to Learn: skill on reflection on own work as learners evaluate success on the grafted plant for rejuvenation, aesthetics, repair or improvement of existing plant.\nSelf-efficacy: awareness of potential skills in the manipulation of a plant through grafting for plant propagation.",
+   "values": "Respect: appreciating each other’s abilities and skills as learners carry out grafting techniques with varied degrees of success.\nResponsibility: taking assigned roles as learners undertake tasks in the grafting practical activity.",
+   "pcis": "Safety of self and others as learners handle and use sharp grafting tools and equipment.",
+   "links": "Learners relate carrying out grafting to parts of a plant and the relationship between plants learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Agriculture Grade9 1.8.2024 -Proofread.pdf",
+    "version": "First published 2024",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.a",
+     "letter": "a",
+     "text": "describe grafting as a method of plant propagation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.b",
+     "letter": "b",
+     "text": "carry out grafting for various purposes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.c",
+     "letter": "c",
+     "text": "take care of the grafted plant to ensure successful union",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.d",
+     "letter": "d",
+     "text": "appraise grafting for aesthetics, repair, improvement and rejuvenation purposes",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER",
+   "number": "4.2",
+   "strand": "Production Techniques",
+   "sub_strand": "Homemade Sun Dryer",
+   "sequence": 402,
+   "lessons": 13,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use digital and print media resources to search for information on how to make a homemade sun dryer for vegetables.",
+    "sketch and construct a homemade sun dryer for drying vegetables using locally available materials.",
+    "use the constructed homemade sun dryer to dry vegetables and promote usage of the equipment to the school community for adoption purposes."
+   ],
+   "key_inquiry_questions": [
+    "How can innovative technology be used to preserve vegetables?"
+   ],
+   "core_competences": "Self-efficacy: leadership and planning skills as learners design, construct and use homemade sun dryers for vegetables.\nCritical thinking and Problem-solving: skills in assessing or evaluating challenging situations and designing solutions in the construction of homemade sun dryers.",
+   "values": "Responsibility: proactively solving problems by constructing homemade sun dryers to prevent spoilage of vegetables.\nPatriotism as learners contribute to solving the community problems of food spoilage by constructing homemade sun dryers.",
+   "pcis": "Food nutrition and security as learners construct homemade sun dryers to preserve vegetables.",
+   "links": "Learners relate the designing and construction of homemade sun dryers to skills learnt in Pre-technical studies on designing, sketching and choice of construction materials.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Agriculture Grade9 1.8.2024 -Proofread.pdf",
+    "version": "First published 2024",
+    "pages": [
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.a",
+     "letter": "a",
+     "text": "describe how to make a homemade sun dryer for vegetables",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.b",
+     "letter": "b",
+     "text": "construct a homemade sun dryer to preserve vegetables",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.c",
+     "letter": "c",
+     "text": "adopt the use of a homemade sun dryer in the preservation of vegetables",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

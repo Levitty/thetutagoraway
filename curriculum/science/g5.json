@@ -1,0 +1,553 @@
+{
+ "framework": "cbc",
+ "subject_key": "science",
+ "grade": 5,
+ "source": "KICD Science & Technology, First Published 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 3,
+  "sub_strands": 8,
+  "outcomes": 32,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS",
+   "number": "1.1",
+   "strand": "Living Things and their Environment",
+   "sub_strand": "Classification of Plants",
+   "sequence": 101,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Classification of plants (flowering and non-flowering plants).",
+    "Parts and functions of flowers."
+   ],
+   "learning_experiences": [
+    "use print and non-print materials to search for images of flowering and non-flowering plants and share,",
+    "take a walk in their locality to observe, identify and categorise plants into flowering and non-flowering,",
+    "draw a flower and label parts,",
+    "discuss functions of parts of a flower and share with peers,",
+    "discuss the importance of flowers in nature with peers,",
+    "use digital applications to draw, paint and label flowers."
+   ],
+   "key_inquiry_questions": [
+    "How are plants classified?"
+   ],
+   "core_competences": "Creativity and imagination: The learner reflects and draw accurate images as they draw a flower and label parts.\nDigital literacy: The learner acquire digital manipulative skills as they use digital applications to draw, paint and label flowers.",
+   "values": "Unity: The learner appreciates sharing of the available resources amicably as they draw a flower and label parts.",
+   "pcis": "Environmental Conservation: The learner conserves the environment by not destroying plants as they observing, identifying and categorising plants into flowering and non-flowering in their natural habitat.",
+   "links": "Creative Arts: The use of digital applications to draw, paint and label flowers is linked to drawing and painting in Creative Arts.",
+   "design_notes": "Learners are guided on precautions to take when handling plants as they study flowering and non-flowering plants.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "Grade 5 Science and Technology.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     14,
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.a",
+     "letter": "a",
+     "text": "classify plants into flowering and non-flowering",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b",
+     "letter": "b",
+     "text": "describe functions of parts of a flower",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.c",
+     "letter": "c",
+     "text": "outline the importance of flowers in nature",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.d",
+     "letter": "d",
+     "text": "appreciate the importance of flowers in nature",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G5.LIVING.VERTEBRATES",
+   "number": "",
+   "strand": "Living Things and their Environment",
+   "sub_strand": "Vertebrates",
+   "sequence": 102,
+   "lessons": 16,
+   "optional": false,
+   "content_topics": [
+    "General characteristics of vertebrates",
+    "Groups of vertebrates (mammals, birds, reptiles, fish and amphibians; structural features only)"
+   ],
+   "learning_experiences": [
+    "search for information from print and non-print material on the general characteristics of vertebrates and share with peers,",
+    "explore the school compound and adjacent environment to observe and identify characteristics of vertebrates,",
+    "discuss with peers the characteristics of different groups of vertebrates, study their main characteristics."
+   ],
+   "key_inquiry_questions": [
+    "What are the key features of vertebrates?"
+   ],
+   "core_competences": "Communication and collaboration: The learner acquires speaking and listening skills as they contribute in the discussions on main characteristics of vertebrates.\nCreativity and Imagination: The learner acquires manipulative skills as they skilfully designs and develops a portfolio on vertebrates.",
+   "values": "Responsibility: The learner observes safety precautions when handling different animals.",
+   "pcis": "Safety and security: The learner observes necessary precautions while handling animals.",
+   "links": "Agriculture and Nutrition: The learner links information on characteristics of animals as living things is linked to the study of livestock in Agriculture.\nCreative Arts: Making of a portfolio of different categories of vertebrates is linked to designing in Creative Arts",
+   "design_notes": "The learners are guided to observe safety precautions when handling different animals.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "Grade 5 Science and Technology.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.a",
+     "letter": "a",
+     "text": "describe general characteristics of vertebrates",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.b",
+     "letter": "b",
+     "text": "classify vertebrates into their main groups",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.c",
+     "letter": "c",
+     "text": "appreciate the importance of vertebrates in the environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST",
+   "number": "1.2",
+   "strand": "Living Things and their Environment",
+   "sub_strand": "The Human Breathing System",
+   "sequence": 103,
+   "lessons": 18,
+   "optional": false,
+   "content_topics": [
+    "Parts of the breathing system and their functions (nose, trachea, lungs, diaphragm).",
+    "Symptoms and prevention of common conditions and diseases of the breathing system (common colds, coughs, COVID-19, allergy and asthma)."
+   ],
+   "learning_experiences": [
+    "use print and non-print material to identify the human breathing system,",
+    "draw the human breathing system and label the main parts,",
+    "use print or non-print media to search for information on the functions of main parts of the human breathing system and share with peers,",
+    "discuss symptoms and prevention of common conditions and diseases that affect the human breathing system and share,",
+    "use simulation or digital images to illustrate major parts of the human breathing system."
+   ],
+   "key_inquiry_questions": [
+    "What makes up the human breathing system?",
+    "What enhances a healthy breathing system?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner reflects on appropriate images as they design different ways of modelling the human breathing system using locally available material.\nDigital literacy: The learner acquires digital manipulative skills as they use simulations or digital images to illustrate major parts of the human breathing system.",
+   "values": "Love: The learner develop caring attitude towards self and others’ health as they discuss symptoms and prevention of common conditions and diseases that affect the human breathing system.\nResponsibility: The learner shows accountability in protecting self and others as they study prevention of common conditions and diseases that affect the human breathing system.",
+   "pcis": "Preventive health and communicable diseases: The learner learns how to take prevent diseases as they discuss symptoms and prevention of common conditions and diseases that affect the human breathing system.",
+   "links": "Agriculture and Nutrition: The information on symptoms and prevention of common conditions and diseases that affect the human breathing system is linked to personal hygiene in Agriculture and Nutrition.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "Grade 5 Science and Technology.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.a",
+     "letter": "a",
+     "text": "identify the main parts of the human breathing system",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.b",
+     "letter": "b",
+     "text": "describe the functions of parts of the human breathing system",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.c",
+     "letter": "c",
+     "text": "coutline the symptoms and prevention measures for common conditions and diseases of the breathing system",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.d",
+     "letter": "d",
+     "text": "appreciate the need for maintaining a healthy breathing system",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G5.MATTER.MIXTURES",
+   "number": "2.1",
+   "strand": "Matter",
+   "sub_strand": "Mixtures",
+   "sequence": 201,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Meaning of mixtures",
+    "Types of mixtures (heterogeneous and homogeneous).",
+    "Examples of mixtures (solid-solid, solid-liquid and liquid -liquid).",
+    "Methods of separating heterogeneous mixtures (Winnowing, picking, sieving, using magnet, filtering, decanting, separating funnel)."
+   ],
+   "learning_experiences": [
+    "brainstorm on the meaning of a mixture, give examples at home and school,",
+    "carry out activities to categorise mixtures as homogeneous (uniform) and heterogeneous (non-uniform),",
+    "carry out activities to separate heterogeneous mixtures,",
+    "carry out activities to demonstrate ways of separating mixtures in day-to-day life."
+   ],
+   "key_inquiry_questions": [
+    "What are the applications of mixture separation in day- to-day life?"
+   ],
+   "core_competences": "Critical thinking and imagination: The learner acquires reflects on the best ways of separating different mixtures as they carry out activities to demonstrate ways of separating mixtures.\nLearning to learn: The learner learns new methods separating mixtures through their own experiences as they carry out activities with peers to separate different types of mixtures.",
+   "values": "Social justice: The learner gives others equal opportunities in sharing responsibilities as they carry out activities to separate heterogeneous mixtures.",
+   "pcis": "Health Issues: The learner learns how to separate mixtures to remove impurities in cleaning of water for domestic usage as they carry out activities to demonstrate ways of separating mixtures.",
+   "links": "Agriculture and Nutrition: The learner applies the knowledge on separating mixtures in agricultural processes like straining milk, winnowing grains and straining honey.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "Grade 5 Science and Technology.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.a",
+     "letter": "a",
+     "text": "classify mixtures as homogeneous or heterogeneous",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.b",
+     "letter": "b",
+     "text": "apply appropriate methods to separate heterogeneous mixtures",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.c",
+     "letter": "c",
+     "text": "outline the applications of separating mixtures in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.d",
+     "letter": "d",
+     "text": "appreciate different methods of separating mixtures in day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G5.MATTER.WATER_POLLUTION",
+   "number": "2.2",
+   "strand": "Matter",
+   "sub_strand": "Water Pollution",
+   "sequence": 202,
+   "lessons": 18,
+   "optional": false,
+   "content_topics": [
+    "Meaning of the term water pollution.",
+    "Common water pollutants.",
+    "Effects of polluted water on living things",
+    "Methods of reducing water pollution.",
+    "Basic methods of water treatment (boiling, filtration, chemical treatment, solar treatment)."
+   ],
+   "learning_experiences": [
+    "brainstorm on water pollutants in water sources,",
+    "discuss with peers the effects of water pollution in day-to-day life,",
+    "discuss with peers the different methods of reducing water pollution,",
+    "observe safety measures when working in a water-polluted environment (Example: practise use of gumboots and gloves),",
+    "carry out activities to demonstrate methods of water treatment,",
+    "use visual aids or digital devices to identify water pollutants and their effects in day-to-day life."
+   ],
+   "key_inquiry_questions": [
+    "What are the dangers of water pollution?"
+   ],
+   "core_competences": "Creativity and imagination: The learner reflects and comes up with new ideas in making functional water filters using locally available materials.",
+   "values": "Responsibility: The learner practices being responsible in playing different role as they carry out activities to demonstrate methods of water treatment\nPeace: The learner learns how to share available materials amicably as they carry out activities to demonstrate methods of water treatment.",
+   "pcis": "Health Issues: The learner practices health preventive measures on water born diseases as they carry out activities to demonstrate basic methods of water treatment.",
+   "links": "Agriculture and Nutrition: knowledge and skills on ways of reducing pollutants are used to obtain clean water for domestic use in Agriculture and Nutrition.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "Grade 5 Science and Technology.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     23,
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.a",
+     "letter": "a",
+     "text": "identify water pollutants in the water sources",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.b",
+     "letter": "b",
+     "text": "outline the effects of water pollution in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.c",
+     "letter": "c",
+     "text": "identify methods of reducing water pollution in the water sources",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.d",
+     "letter": "d",
+     "text": "apply appropriate methods of water treatment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.e",
+     "letter": "e",
+     "text": "advocate for safe water sources in the locality",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING",
+   "number": "3.1",
+   "strand": "Force and Energy",
+   "sub_strand": "Floating and Sinking",
+   "sequence": 301,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Floating and sinking.",
+    "Factors that affect floating and sinking of objects in water (shape, weight and size).",
+    "Applications of floating and sinking."
+   ],
+   "learning_experiences": [
+    "carry out activities using different objects to demonstrate floating and sinking in water (use dry wood, stone, metals, plastic, cork, buoy & feathers),",
+    "carry out activities to classify objects into those that float and those that sink in water,",
+    "carry out activities to show how shape, weight and size affect floating and sinking of objects in water (normal bottle tops, crushed bottle tops, same quantity of plasticine in different shapes, containers of same size and weight; one filled with sand and the other one feathers or cotton wool,",
+    "discuss with peers the applications of floating and sinking in day-to-day life (swimming, diving, use of lifesavers, water transport, floods, drowning, surfing),",
+    "use digital or print media to search for: effects of flooding and the use of floaters as life savers."
+   ],
+   "key_inquiry_questions": [
+    "Why do some materials float and others sink?",
+    "How are floaters useful in day-to-day life?"
+   ],
+   "core_competences": "Communication and Collaboration: The learner acquires spirit of teamwork while carrying out activities to observe and classify objects into those that float and those that sink in water.\nCritical thinking and problem solving: The learner explores a variety of locally available materials that can be used to make lifesaving floaters as they",
+   "values": "Integrity: The learner gives honest observations and records real results while carrying out activities to classify objects into those that float or sink in water.\nResponsibility: The learner plays different roles as they carry out activities to make lifesaving floaters from locally available materials.",
+   "pcis": "Disaster Risk Reduction: The learner learns how to contribute in water lifesaving strategies as they carry out activities to make lifesaving floaters from locally available materials.",
+   "links": "Agriculture and Nutrition: The learner relates the concept of floating and sinking to fish farming and irrigation in Agriculture and Nutrition.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "Grade 5 Science and Technology.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.a",
+     "letter": "a",
+     "text": "classify objects as floating or sinking in water",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.b",
+     "letter": "b",
+     "text": "identify factors that affect floating and sinking of objects in water",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.c",
+     "letter": "c",
+     "text": "explain applications of floating and sinking in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.d",
+     "letter": "d",
+     "text": "appreciate the use of floaters as life savers",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G5.FORCE_.SOUND_ENERGY",
+   "number": "3.2",
+   "strand": "Force and Energy",
+   "sub_strand": "Sound Energy",
+   "sequence": 302,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Sources of sound (vibrating air, vibrating strings, vibrating drums).",
+    "Movement of sound in nature.",
+    "Effects of loud sound.",
+    "Role of sound in day-to-day life."
+   ],
+   "learning_experiences": [
+    "carry out activities to identify sources of sound,",
+    "carry out an activity to demonstrate that sound travels in all directions from a source (listening to a loud sound from a common speaker from different directions and around corners),",
+    "carry out an activity to demonstrate reflection of sound; echo (use of two tubes placed alongside a wall, a cliff, a large hall, a forest, a valley, between tall buildings),",
+    "discuss with peers the effects of loud sound in the environment,",
+    "use digital or print media to search for the effects of loud sound in day-to-day life,",
+    "discuss the role of the government in addressing sound pollution. Project 1: Learners to make a sound-producing instrument from locally available materials (for example: bell, drum, guitar, wind instruments, etc.). Project 2: Create a sound game using Scratch"
+   ],
+   "key_inquiry_questions": [
+    "How is sound produced?",
+    "What are the effects of loud sound?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner experiments different ways of making sound-producing instruments using locally available materials.\nDigital literacy: The learner acquires digital manipulative skills as they use appropriate digital technology to create and add sound effects using the \"Sound\" blocks in Scratch.",
+   "values": "Responsibility: The learner learns how to minimise the effects of loud sound in the environment as they discuss with peers the effects of loud sound in the environment.",
+   "pcis": "Citizenship: The learner acquires awareness on human rights and responsibilities as they discuss the role of the government in addressing sound pollution.\nSocio-Economic Issues: The learner creates awareness on sound pollution as they discuss with peers the effects of loud sound in the environment.",
+   "links": "Creative Arts: The learner relates the concept of sources of sound to making musical instruments.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "Grade 5 Science and Technology.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     28,
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.a",
+     "letter": "a",
+     "text": "identify sources of sound in nature",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.b",
+     "letter": "b",
+     "text": "demonstrate the movement of sound in nature",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.c",
+     "letter": "c",
+     "text": "describe effects of loud sound in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.d",
+     "letter": "d",
+     "text": "appreciate the role of sound in day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SCIE.G5.FORCE_.HEAT_TRANSFER",
+   "number": "3.3",
+   "strand": "Force and Energy",
+   "sub_strand": "Heat transfer",
+   "sequence": 303,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "Modes of heat transfer in nature (conduction, convection and radiation).",
+    "Classification of conductors of heat into good or poor conductors.",
+    "Uses of heat transfer in day-to-day life.",
+    "Safety precautions when handling heat."
+   ],
+   "learning_experiences": [
+    "brainstorm on the meanings of the terms conduction, convection and radiation as used in heat transfer,",
+    "perform experiments to demonstrate the modes of heat transfer,",
+    "carry out experiments to identify good and poor conductors of heat,",
+    "discuss with peers applications of heat transfer in day-to-day life (cooking, melting, freezing, maintaining body temperature, insulation),",
+    "use digital or print media to search for applications of heat transfer in day-to-day life,",
+    "discuss with peers safety precautions when handling heat,",
+    "discuss with peers various ways of responding to fire emergencies. Project 1: Learners to make oven gloves using locally available materials. Project 2: Learners to make a fireless cooker."
+   ],
+   "key_inquiry_questions": [
+    "How is heat transferred through materials in nature?"
+   ],
+   "core_competences": "Self-efficacy: The learner displays self-confidence as they perform experiments to demonstrate the modes of heat transfer.",
+   "values": "Social justice: The learner practices sharing of resources equitably as they perform experiments to identify good and poor conductors of heat.",
+   "pcis": "Social-Economic Issues: The learner exercises fire emergency response measures as they discuss various ways of responding to fire emergencies.",
+   "links": "Agriculture and Nutrition: The learner links the concept of heat transfer in choosing of appropriate material for knitting the oven gloves.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "Grade 5 Science and Technology.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.a",
+     "letter": "a",
+     "text": "demonstrate the modes of heat transfer in nature",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.b",
+     "letter": "b",
+     "text": "classify conductors of heat into good or poor conductors",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.c",
+     "letter": "c",
+     "text": "explain the uses of heat transfer in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.d",
+     "letter": "d",
+     "text": "acknowledge safety precautions when handling heat",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

@@ -1,0 +1,1226 @@
+{
+ "framework": "cbc",
+ "subject_key": "social_studies",
+ "grade": 4,
+ "source": "KICD Social Studies, First Published 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 5,
+  "sub_strands": 19,
+  "outcomes": 72,
+  "lessons": 90,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "SOCI.G4.NATURA.COMPASS_DIRECTION",
+   "number": "1.1",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Compass Direction",
+   "sequence": 101,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm the four cardinal points of a compass,",
+    "draw and label the four cardinal points, practise giving directions to places using the four cardinal points,",
+    "use the four compass points to show direction on the interactive map to enrich the mapping skills.",
+    "play computer games on the compass direction for enjoyment."
+   ],
+   "key_inquiry_questions": [
+    "How can we show direction of places?"
+   ],
+   "core_competences": "Digital Literacy: Learners interact with digital devices as they play computer games on compass direction for enjoyment.\nLearning to learn: Learners develop relationships as they share resources and practise giving direction of places using the four cardinal points.",
+   "values": "Unity: Learners cooperate as they practise giving direction of places using the four cardinal points.\nRespect: Learners show patience as they play computer games on compass direction for enjoyment.",
+   "pcis": "Creative Thinking: Learners participate in creative games as they play computer games on compass direction for enjoyment.",
+   "links": "Learners use Creative Arts skills as they draw and label the four cardinal points.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.a",
+     "letter": "a",
+     "text": "identify the four cardinal points of a compass",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.b",
+     "letter": "b",
+     "text": "use the four cardinal points to give directions on a map",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.c",
+     "letter": "c",
+     "text": "appreciate the use of four cardinal points in everyday life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE",
+   "number": "1.2",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Location and size of the County",
+   "sequence": 102,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm and list sub-counties in their county,",
+    "use relevant print or digital resources to identify the location of the county in relation to neighbouring counties,",
+    "discuss the size of the county in relation to the neighbouring counties,",
+    "sketch, colour, and display the map of the county in class,",
+    "play games on the location of the county in relation to neighbouring counties."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to learn the size and location of a county?"
+   ],
+   "core_competences": "Digital Literacy: Learners develop simple games as they play games on the location of the county in relation to the neighbouring counties\nLearning to learn: Learners search for the location and size of their county",
+   "values": "Responsibility: Learners engage in assigned roles and duties as they discuss the size of the county in relation to the neighbouring counties",
+   "pcis": "Problem Solving: Learners play creative games as they locate the county in relation to the neigbouring counties\nEffective Communication: Learners brainstorm to identify sub-counties in their county.",
+   "links": "English: Learners apply listening and speaking skills as they discuss in groups the size of the county in relation to the neigbouring counties",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.a",
+     "letter": "a",
+     "text": "identify sub-counties in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.b",
+     "letter": "b",
+     "text": "locate the county in relation to neighbouring counties",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.c",
+     "letter": "c",
+     "text": "estimate the size of the county in relation to neighbouring counties",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.d",
+     "letter": "d",
+     "text": "acknowledge the location and size of the county",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE",
+   "number": "1.3",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Physical features in the County",
+   "sequence": 103,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm the main physical features in the county, sketch the main physical features in the county,",
+    "draw or take photographs of the main physical features in the county,",
+    "outline the importance of the main physical features in the county and share the discussion points in class,",
+    "display pictures or models of the main physical features in the county in class,",
+    "find out from parents or guardians the main physical features in the county and share."
+   ],
+   "key_inquiry_questions": [
+    "Which physical features are found in your county?"
+   ],
+   "core_competences": "Citizenship: Learners identify the main physical features in their county.\nLearning to: Learners find out from parents or guardians the physical features in the county and share",
+   "values": "Social Justice: Learners accord equal opportunities in sharing responsibilities as they outline the importance of the main physical features in the county and share the discussion points in class.",
+   "pcis": "Self-Awareness: Learners appreciate each other’s abilities as they draw some of the main physical features in the county.",
+   "links": "English: Learners use speaking skills as they discuss in groups the importance of the main physical features in the county in class.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.a",
+     "letter": "a",
+     "text": "identify the main physical features in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.b",
+     "letter": "b",
+     "text": "state the importance of the main physical features in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.c",
+     "letter": "c",
+     "text": "illustrate the main physical features in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.d",
+     "letter": "d",
+     "text": "appreciate the main physical features in the county",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY",
+   "number": "1.4",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Seasons in the County",
+   "sequence": 104,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Hot,",
+    "Cold,",
+    "Dry",
+    "Rainy"
+   ],
+   "learning_experiences": [
+    "brainstorm about seasons experienced in the county,",
+    "use print or digital resources to identify seasons experienced in the county",
+    "engage a resource person to find out how seasons influence human activities in the county",
+    "discuss ways in which rainy weather affects safety of road users,",
+    "draw weather charts of seasons in the county,",
+    "observe and record in charts human activities associated with different seasons.",
+    "sing songs about seasons experienced in the county,"
+   ],
+   "key_inquiry_questions": [
+    "How do seasons influence human activities in the county?"
+   ],
+   "core_competences": "Collaboration: Learners develop relationships as they brainstorm about seasons experienced in the county.\nDigital Literacy: Learners use print or digital resources to identify seasons experienced in the county.",
+   "values": "Respect: Learners appreciate diverse opinions as they brainstorm about seasons experienced in the county.\nPatriotism: Learners sing songs about seasons experienced in the county,",
+   "pcis": "Safety and security: Learners discuss precautions to take during the different seasons experienced in the county (Hot, cold, dry and rainy season).",
+   "links": "Agriculture: Learners explain how different seasons influence human activities in the county.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     19,
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.a",
+     "letter": "a",
+     "text": "identify the four seasons experienced in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.b",
+     "letter": "b",
+     "text": "explain how the four seasons influence human activities in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.c",
+     "letter": "c",
+     "text": "explore how rainy weather affects road safety in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.d",
+     "letter": "d",
+     "text": "model weather charts of seasons in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.e",
+     "letter": "e",
+     "text": "appreciate the different seasons experienced in the county",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME",
+   "number": "1.5",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Historic Built Environments in the County",
+   "sequence": 105,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [
+    "Museums,",
+    "Monuments,",
+    "Cultural centres"
+   ],
+   "learning_experiences": [
+    "brainstorm and share the main historic built environments in the county,",
+    "use print or digital resources to identify historic built environments in the county,",
+    "visit some of the historic, built environments within the locality (take photographs, audio tape conversations on the environments or take notes),",
+    "engage a resource person to discuss the importance of the historic built environment in the county,",
+    "participate in conserving historic built environments in the locality as service learning (collecting litter, sweeping)."
+   ],
+   "key_inquiry_questions": [
+    "How can we care for the historic built environments in our county?"
+   ],
+   "core_competences": "Critical thinking and problem solving: Learners participate in conserving historic built environments in the locality (collecting litter, sweeping).\nSelf-efficacy: Learners engage resource person to discuss the importance of historic built environments within the county.",
+   "values": "Unity: Learners participate in conserving historic built environments in the locality as service learning (collecting litter, sweeping).\nResponsibility: Learners understands and appreciates the resource person as they discuss the importance of the historic built environment in the county",
+   "pcis": "Environmental issues: Learners respect others' views/feelings as they visit some of the historic built environments in the locality (take photographs, audio tape conversations on the environments or take notes).",
+   "links": "Learners use Creative Arts skills to create a picture booklet on the historic built environments.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.a",
+     "letter": "a",
+     "text": "identify the main historic built environments in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.b",
+     "letter": "b",
+     "text": "explain the importance of the main historic built environments in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.c",
+     "letter": "c",
+     "text": "participate in conservation activities of the historic built environments within the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.d",
+     "letter": "d",
+     "text": "appreciate historic built environments in the county",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL",
+   "number": "2.1",
+   "strand": "People and Population Inter-dependence of people (6 Lessons)",
+   "sub_strand": "Interdependence of people",
+   "sequence": 201,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "trade",
+    "farming",
+    "hospital,",
+    "worship places"
+   ],
+   "learning_experiences": [
+    "brainstorm in class the ways in which people depend on each other in the county,",
+    "use print or digital resources to identify ways in which people depend on each other in the county,",
+    "draw a chart on benefits of interdependence among the people,",
+    "role-play interdependence of people in the community,",
+    "recite a poem about the importance of interdependence of people,",
+    "find out from parents or guardians about the importance of interdependence of people and report back."
+   ],
+   "key_inquiry_questions": [
+    "How do people in the county depend on each other?",
+    "Why should we support each other in the county?"
+   ],
+   "core_competences": "Citizenship: Learners explain the benefits of interdependence of people in the county.\nCreativity and imagination: Learners role-play the interdependence of people in the county.",
+   "values": "Social justice: Learners discuss benefits of interdependence among people in the county",
+   "pcis": "Social cohesion: Learners identify ways in which people depend on each other in the county.\nSocial cohesion: Learners respect others’ views/feelings as they work to create a chart on benefits of interdependence among people.",
+   "links": "English: Learners develop communication skills as they recite a poem about the importance of interdependence of people.\nReligious Education: Learners explain the importance of interdependence.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.a",
+     "letter": "a",
+     "text": "identify ways in which people depend on each other in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.b",
+     "letter": "b",
+     "text": "explain the benefits of interdependence of people in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.c",
+     "letter": "c",
+     "text": "use chart to illustrate the benefits of interdependence people",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.d",
+     "letter": "d",
+     "text": "appreciate the interdependence of people in the County",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION",
+   "number": "2.2",
+   "strand": "People and Population Inter-dependence of people (6 Lessons)",
+   "sub_strand": "Population Distribution",
+   "sequence": 202,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm what is population distribution,",
+    "use a digital or print map of the county to identify the patterns of population, distribution in the county,",
+    "explain the patterns of population distribution in the county,",
+    "use the map of the county to plot patterns of population distribution,",
+    "draw a map of the county showing population distribution,",
+    "display the map of the county in the appropriate learning corner."
+   ],
+   "key_inquiry_questions": [
+    "How is population spread out in the county?"
+   ],
+   "core_competences": "Digital Literacy: Learners use a digital or print map of the county to identify the patterns of population distribution.\nLearning to Learn: Learners develop relationships as they share diagrams of the patterns of population distribution in class.",
+   "values": "Responsibility: Learners develop self-drive as they share the diagrams of the patterns of population distribution in class.\nIntegrity: Learners have self-discipline as they use a digital or print map of the county to identify the patterns of population distribution.",
+   "pcis": "Critical thinking and problem solving: Learners ask challenging questions as they share the diagrams of the patterns of population distribution in class.\nEffective Communication: Learners use appropriate communication channel as they discuss population distribution in the county.",
+   "links": "Learners apply listening and speaking skills as they discuss population distribution in the county.\nLearners apply Creative Arts skills as they draw a map of the county showing population distribution.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.a",
+     "letter": "a",
+     "text": "describe patterns of population distribution in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.b",
+     "letter": "b",
+     "text": "illustrate the patterns of population distribution in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.c",
+     "letter": "c",
+     "text": "appreciate population distribution in the county",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C",
+   "number": "3.1",
+   "strand": "Social Organisations",
+   "sub_strand": "Aspects of Traditional Culture in the County.",
+   "sequence": 301,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "dressing",
+    "food",
+    "housing",
+    "artefacts",
+    "sports and games",
+    "festivals and ceremonies"
+   ],
+   "learning_experiences": [
+    "brainstorm aspects of traditional culture in the county,",
+    "describe aspects of traditional culture in the county,",
+    "discuss the importance of traditional culture in the county,",
+    "collect and record aspects of traditional culture practised in the community (pictures, songs, artefacts, dress, food, paintings, tools),",
+    "showcase different aspects of traditional culture practised in the community."
+   ],
+   "key_inquiry_questions": [
+    "Why is culture important?"
+   ],
+   "core_competences": "Creativity and imagination: Learners showcase different aspects of traditional culture practised in the community.\nCitizenship: Learners collect and record aspects of traditional culture practised in the community.",
+   "values": "Respect: Learners recognise different aspects of traditional culture in their county.",
+   "pcis": "Self-Awareness: Learners appreciate individual uniqueness as they describe aspects of traditional culture in their county.",
+   "links": "Creative Arts: Learners will apply skills drawn from showcasing different aspects of traditional culture practised in the community in Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.a",
+     "letter": "a",
+     "text": "identify aspects of traditional culture in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.b",
+     "letter": "b",
+     "text": "illustrate aspects of traditional culture practised in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.c",
+     "letter": "c",
+     "text": "appreciate the importance of traditional culture in the county",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.SOCIAL.THE_SCHOOL",
+   "number": "3.2",
+   "strand": "Social Organisations",
+   "sub_strand": "The School",
+   "sequence": 302,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "gather information on the history of the school from relevant personnel and share in class,",
+    "discuss the history of the school with others in class,",
+    "use digital or print resources to find out the school values,",
+    "develop a poster on the school values",
+    "develop a poster on the school motto and display it in class,",
+    "make a gallery walk and peer assess."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to maintain discipline in school?"
+   ],
+   "core_competences": "Communication and collaboration: Learners recite the school motto\nCitizenship: Learners gather information on the history of the school from the school administration and share in class",
+   "values": "Integrity: Learners exhibit discipline as they display, make a gallery walk and peer assess.",
+   "pcis": "Social cohesion: Learners develop charts to explain the school values",
+   "links": "Creative arts: Learners apply graphic designing in Creative Arts in the designing of school motto and rules",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     31,
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.SOCIAL.THE_SCHOOL.a",
+     "letter": "a",
+     "text": "narrate the history of the school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.THE_SCHOOL.b",
+     "letter": "b",
+     "text": "explain the values of the school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.THE_SCHOOL.c",
+     "letter": "c",
+     "text": "recite the school motto",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.THE_SCHOOL.d",
+     "letter": "d",
+     "text": "desire to obey the school rules",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T",
+   "number": "4.1",
+   "strand": "Resources and Economic Activities",
+   "sub_strand": "Economic activities in the County",
+   "sequence": 401,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the economic activities in the county,",
+    "make posters on the economic activities carried out in the county,",
+    "discuss the importance of economic activities in the county,",
+    "participate in appropriate economic activities in the locality,",
+    "create and recite poems or songs on the economic activities in their county."
+   ],
+   "key_inquiry_questions": [
+    "How can we conserve the resources found in the county?"
+   ],
+   "core_competences": "Collaboration: Learners participate in appropriate economic activities in the locality.\nLearning to Learn: Learners shares ideas and make posters on the economic activities carried out in the county",
+   "values": "Patriotism: Learners participate in the economic activities in the locality",
+   "pcis": "Creative and critical thinking: Learners create and recite poems or songs on the economic activities in their county",
+   "links": "Agriculture: learners participate in economic activities\nPre-technical Studies: Learners identify the importance of economic activities",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.a",
+     "letter": "a",
+     "text": "Explore the main resources found in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.b",
+     "letter": "b",
+     "text": "identify the main economic activities carried out in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.c",
+     "letter": "c",
+     "text": "explain the importance of economic activities carried out in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.d",
+     "letter": "d",
+     "text": "participate in economic activities in the locality",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.e",
+     "letter": "e",
+     "text": "appreciate the economic activities in the county",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY",
+   "number": "4.2",
+   "strand": "Resources and Economic Activities",
+   "sub_strand": "Industries in the County",
+   "sequence": 402,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "share the industries in the county,",
+    "discuss the benefits of industries in the county,",
+    "locate industries in the county,",
+    "visit an industry to learn its benefits in the county,",
+    "create a poster of the industry visited and display in class,",
+    "Compose poems on the benefits of industries in the county."
+   ],
+   "key_inquiry_questions": [
+    "How can a county benefit from its industries?"
+   ],
+   "core_competences": "Creativity: Learners create a poster of the industry visited and display in class",
+   "values": "Patriotism: Learners portray citizenship as they visit an industry to learn about its benefits in the county.\nIntegrity: Learners develop honesty as they utilise resources prudently while creating a poster of the industry visited and displaying in class",
+   "pcis": "Safety: Learners exercise caution as they visit an industry to learn its benefits in the county.",
+   "links": "Science and Technology: Learners explain benefits of industries in the county",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.a",
+     "letter": "a",
+     "text": "identify industries in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.b",
+     "letter": "b",
+     "text": "explain the benefits of industries in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.c",
+     "letter": "c",
+     "text": "locate industries in the county",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.d",
+     "letter": "d",
+     "text": "recognise the role of industries in the county",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC",
+   "number": "4.3",
+   "strand": "Resources and Economic Activities",
+   "sub_strand": "Enterprise Project at School",
+   "sequence": 403,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm enterprise projects that can be undertaken at school,",
+    "plan and undertake a viable enterprise project at school,",
+    "design personal protective equipment for safety on the roads using locally available materials,",
+    "participate in the initiation and management of the enterprise project in the school,",
+    "share responsibilities on the planned enterprise project,",
+    "discuss ethical practices to be observed in managing the enterprise project,",
+    "showcase the school project."
+   ],
+   "key_inquiry_questions": [
+    "How are enterprise projects managed in school?"
+   ],
+   "core_competences": "Communication and collaboration: Learners share responsibilities on the planned enterprise\nCreativity and imagination: Learners identify a viable project enterprise at school",
+   "values": "Responsibility: Learners engage in the assigned roles and duties as they undertake the enterprise project at school and evaluate its success\nIntegrity: Learners develop accountability as they participate in the initiation and management of the enterprise project in the school",
+   "pcis": "Creative and critical thinking: Learners undertake the enterprise project at school and showcase the outcomes.",
+   "links": "Mathematics: Learners plan and undertake a viable enterprise project at school.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     37,
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.a",
+     "letter": "a",
+     "text": "identify the projects that can be initiated at school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.b",
+     "letter": "b",
+     "text": "participate in initiating an enterprise project at school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.c",
+     "letter": "c",
+     "text": "uphold ethics and collective efforts in managing enterprise projects at school",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO",
+   "number": "5.1",
+   "strand": "Citizenship and Governance in Kenya STRAND 1.0: NATURAL AND BUILT ENVIRONMENTS",
+   "sub_strand": "Good Citizenship in School",
+   "sequence": 501,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm qualities of a good citizen in school,",
+    "use digital or print resources to identify qualities of a good citizen in school,",
+    "role-play qualities of a good citizen in a school,",
+    "engage a role model in the community and discuss good citizenship,",
+    "design a poster with qualities of a good citizen in school,",
+    "write an essay on qualities of a good citizen and share in class."
+   ],
+   "key_inquiry_questions": [
+    "How can we demonstrate good citizenship in school?"
+   ],
+   "core_competences": "Citizenship: Learners role-play qualities of a good citizen in school",
+   "values": "Unity: Learners design a poster with qualities of a good citizen in school",
+   "pcis": "Social cohesion: Learners develop harmonious coexistence as they discuss how to become a good citizen in school",
+   "links": "English: Learners apply writing skills as they write an essay on a good digital citizen (using technology in a positive way) and share the essays in class.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     40,
+     41
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.a",
+     "letter": "a",
+     "text": "identify qualities of a good citizen in school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.b",
+     "letter": "b",
+     "text": "develop qualities of good citizenship in school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.c",
+     "letter": "c",
+     "text": "appreciate qualities of good citizenship in school",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.CITIZE.PEACE",
+   "number": "5.2",
+   "strand": "Citizenship and Governance in Kenya STRAND 1.0: NATURAL AND BUILT ENVIRONMENTS",
+   "sub_strand": "Peace",
+   "sequence": 502,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss factors that promote peace in school,",
+    "create messages on strategies of living in peace with others in school,",
+    "use digital or print resources to find out examples of peace activities undertaken in schools (peace gardens/nature trails, peace corners, peace competition essays),",
+    "design posters with peace-building messages,",
+    "participate in peacebuilding activities",
+    "find out from parents and guardians how they can uphold peace."
+   ],
+   "key_inquiry_questions": [
+    "How can we live in peace with others in school?",
+    "Why is it important to plan for a peacebuilding activity in school?"
+   ],
+   "core_competences": "Critical thinking: Learners create messages on strategies of living in peace with others in school.\nProblem solving: Learners participate in peace building activities in school.",
+   "values": "Patriotism: Learners design posters with peacebuilding messages\nPeace: Learners show respect as they participate in peacebuilding activities",
+   "pcis": "Coping with emotions: Learners identify factors that promote peace in school",
+   "links": "Religious Education: Learners apply religious concept of peace as they discuss ways of promoting peace in school",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     42,
+     43
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.a",
+     "letter": "a",
+     "text": "identify factors that promote peace in school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.b",
+     "letter": "b",
+     "text": "develop strategies of living in peace with others in school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.c",
+     "letter": "c",
+     "text": "desire to uphold peace in school",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.CITIZE.CHILD_RIGHTS",
+   "number": "5.3",
+   "strand": "Citizenship and Governance in Kenya STRAND 1.0: NATURAL AND BUILT ENVIRONMENTS",
+   "sub_strand": "Child Rights",
+   "sequence": 503,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Early and forced marriages",
+    "Female genital mutilation",
+    "Slavery",
+    "Child trafficking",
+    "Child/forced labour",
+    "Sexual abuse,",
+    "Abuse of children with special needs",
+    "Unauthorised school transport"
+   ],
+   "learning_experiences": [
+    "brainstorm forms of child abuse in the community,",
+    "use digital or print resources to find out the causes of child abuse in the community,",
+    "discuss effects of child abuse in the community,",
+    "design posters on the effects of child abuse in the community,",
+    "sing songs and recite poems on the protection of self and others from child abuse in the community,",
+    "create awareness on use of authorised school transport practices to peers,",
+    "participate in activities that promote child rights in the school."
+   ],
+   "key_inquiry_questions": [
+    "How can harmful cultural practices violate child rights in the community?",
+    "How can we protect ourselves from child abuse?"
+   ],
+   "core_competences": "Self-Efficacy: Learners participate in activities that promote child rights in the school",
+   "values": "Responsibility: Learners design posters on the effects of child abuse in the community,",
+   "pcis": "Gender Issues: Learners identify the causes of child abuse in the community.",
+   "links": "Religious Education: Learners participate in activities that promote child rights in the school.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     44,
+     45
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.a",
+     "letter": "a",
+     "text": "outline forms of child abuse in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.b",
+     "letter": "b",
+     "text": "explain the causes of child abuse in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.c",
+     "letter": "c",
+     "text": "explain effects of child abuse in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.d",
+     "letter": "d",
+     "text": "desire to promote child rights and responsibilities in the school",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL",
+   "number": "5.4",
+   "strand": "Citizenship and Governance in Kenya STRAND 1.0: NATURAL AND BUILT ENVIRONMENTS",
+   "sub_strand": "Democracy in school",
+   "sequence": 504,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm democratic processes in school,",
+    "prepare a chart showing the democratic processes in the school,",
+    "discuss benefits of democracy in school,",
+    "prepare posters with benefits of democracy in school,",
+    "carry out a mock election of leaders in class,",
+    "engage a resource person to learn the elements of democratic practices in school."
+   ],
+   "key_inquiry_questions": [
+    "How can we practise democracy in school?",
+    "Why is democracy important in a school?"
+   ],
+   "core_competences": "Learning to learn: Learners prepare a chart showing the democratic processes in the school,",
+   "values": "Unity: Learners develop inclusivity and respect others’ opinions as they discuss benefits of democracy in school.",
+   "pcis": "Social cohesion: Learners develop harmonious coexistence as they carry out a mock election of leaders in class",
+   "links": "Creative Arts: Learners prepare posters with the benefits of democracy in school",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     47,
+     48
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.a",
+     "letter": "a",
+     "text": "identify democratic processes in the school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.b",
+     "letter": "b",
+     "text": "explain the benefits of democracy in school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.c",
+     "letter": "c",
+     "text": "practise democratic elements in school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.d",
+     "letter": "d",
+     "text": "appreciate democratic practices in school",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN",
+   "number": "5.5",
+   "strand": "Citizenship and Governance in Kenya STRAND 1.0: NATURAL AND BUILT ENVIRONMENTS",
+   "sub_strand": "Children’s Government in school",
+   "sequence": 505,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm the composition of Children’s Government in school,",
+    "write the structure of the Children’s Government,",
+    "share experiences in groups on functions of Children’s Government in school,",
+    "role-play the functions of Children’s Government,",
+    "write a composition on ways of participating in Children’s Government in school,",
+    "simulate the Children’s Government in session in school,",
+    "share on how to respect Children’s Government."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to have a Children's Government in school?",
+    "How can we support Children’s Government in school?"
+   ],
+   "core_competences": "Citizenship: citizenship is developed as learners simulate the Children’s Government in session in school,\nCollaboration: Learners share experiences on functions of Children’s Government in school.",
+   "values": "Integrity: Learners simulate the Children’s Government in session in school\nSocial Justice: Learners accord privileges without favour as they role-play the functions of Children’s Government",
+   "pcis": "Governance: Learners describe the functions of Children’s Government in school",
+   "links": "Learners apply writing skills as they write a composition on ways of supporting Children’s Government in school.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     49,
+     50
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.a",
+     "letter": "a",
+     "text": "explain the composition of Children’s Government in school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.b",
+     "letter": "b",
+     "text": "describe the functions of the Children’s Government in school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.c",
+     "letter": "c",
+     "text": "participate in Children’s Government in school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.d",
+     "letter": "d",
+     "text": "respect Children’s Government in school",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP",
+   "number": "5.6",
+   "strand": "Citizenship and Governance in Kenya STRAND 1.0: NATURAL AND BUILT ENVIRONMENTS",
+   "sub_strand": "Community Leadership",
+   "sequence": 506,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [
+    "Religious leaders",
+    "Clan leaders",
+    "village leaders"
+   ],
+   "learning_experiences": [
+    "name leaders in the community",
+    "discuss duties of community leaders and make class presentation,",
+    "engage a resource person to discuss the qualities of a good community leader and report,",
+    "role-play qualities of good leadership in the community,",
+    "design and display a poster with qualities of good leadership in the community,",
+    "Compose songs on good leadership in the community."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important for leaders to have good qualities?"
+   ],
+   "core_competences": "Creativity: Learners design and display a poster with qualities of good leadership in the community,\nLearning to learn: Learners engage a resource person to discuss the qualities of a good community leader and report.",
+   "values": "Integrity: Learners role-play qualities of good leadership in the community.",
+   "pcis": "Leadership: Learners engage a resource person to discuss the qualities of a good community leader and report.",
+   "links": "Creative Arts as they design and display a poster with qualities of good leadership in the community.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     51,
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.a",
+     "letter": "a",
+     "text": "identify leaders in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.b",
+     "letter": "b",
+     "text": "explain the duties of leaders in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.c",
+     "letter": "c",
+     "text": "demonstrate qualities of good leadership in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.d",
+     "letter": "d",
+     "text": "appreciate good leadership in the community",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I",
+   "number": "5.7",
+   "strand": "Citizenship and Governance in Kenya STRAND 1.0: NATURAL AND BUILT ENVIRONMENTS",
+   "sub_strand": "The County Governments in Kenya",
+   "sequence": 507,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm the leaders of county government in Kenya",
+    "outline the structure of the county government",
+    "draw the structure of the county assembly in Kenya",
+    "discuss the duties of the governor and a member of the county assembly,",
+    "watch video clips or visit county government offices to learn administrative structure."
+   ],
+   "key_inquiry_questions": [
+    "Why is a county government important in Kenya?",
+    "What are the duties of ward and village administrators?"
+   ],
+   "core_competences": "Learning to Learn: Learners engage a resource person to discuss duties of the governor and the roles of a member of county assembly",
+   "values": "Respect: Learners understand and appreciate leaders as they discuss in groups the roles of members of the county assembly (MCAs)",
+   "pcis": "Governance: Learners learn the structure of county government and discuss the duties of the governor and members of the county assembly,",
+   "links": "Creative Arts: as learners draw the structure of the county government",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Grade 4 Social Studies 20.6.2024 - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     53,
+     54
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.a",
+     "letter": "a",
+     "text": "identify the structure of county government",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.b",
+     "letter": "b",
+     "text": "explain the duties of County Governor in Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.c",
+     "letter": "c",
+     "text": "explain the roles of a member of county assembly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.d",
+     "letter": "d",
+     "text": "appreciate the County Government in Kenya",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

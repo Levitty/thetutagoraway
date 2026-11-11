@@ -1,0 +1,954 @@
+{
+ "framework": "cbc",
+ "subject_key": "creative_arts",
+ "grade": 6,
+ "source": "KICD Creative Arts, First Published 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 3,
+  "sub_strands": 13,
+  "outcomes": 59,
+  "lessons": 180,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN",
+   "number": "1.1",
+   "strand": "Creating and Executing",
+   "sub_strand": "String Musical Instruments and Drawing",
+   "sequence": 101,
+   "lessons": 15,
+   "optional": false,
+   "content_topics": [
+    "Name, community, method of playing",
+    "Parts and functions",
+    "Care-handling, cleaning, storage",
+    "− Drawing (overlapping) texture and tone (stippling technique)"
+   ],
+   "learning_experiences": [
+    "observe videos/pictures or real indigenous Kenyan string instruments, and name the instrument, identify the community of origin and method of playing,",
+    "name parts of a string instrument from different indigenous communities in Kenya and explain their function(s),",
+    "visit an institution or a cultural resource centre in the community/virtual site to familiarise themselves with Kenyan indigenous string instruments,",
+    "assemble tools and material from the locality and make a fiddle while observing safety,",
+    "brainstorm on ways of care for and maintenance of a string instrument and discuss the importance of doing so,",
+    "research and identify a drawing done using stippling technique,",
+    "draw a still-life composition of any two string musical instruments using stippling technique with emphasis on: overlapping, balance of forms, tone/ texture,",
+    "value others’ ideas as they talk about their own and others' displayed work."
+   ],
+   "key_inquiry_questions": [
+    "Why are indigenous string musical instruments necessary in music?",
+    "How is overlapping achieved in still-life drawing?"
+   ],
+   "core_competences": "Creativity and imagination: The learner comes up with new ideas of arranging forms to create a composition in still-life drawing and make a fiddle.\nCommunication and Collaboration: The learner values others' ideas as they talk clearly about displayed work.",
+   "values": "Responsibility: The learner takes personal initiative to observe safety precautions while making a fiddle.\nPatriotism: The learner interacts with musical instruments from diverse communities in Kenya thereby appreciating the cultural resources existing in the country.",
+   "pcis": "Disaster risk reduction: The learner observes safety measures when making a fiddle using tools and materials to prevent disaster.\nEnvironmental conservation: The learner takes care of the environment by recycling some of the materials in making a fiddle.",
+   "links": "Social Studies: The learner identifies string instruments from different Kenyan communities.\nIndigenous Languages: The learner names string instruments using indigenous names as used in their communities of origin.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: links, values.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     15,
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.a",
+     "letter": "a",
+     "text": "identify string instruments from different indigenous communities in Kenya",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.b",
+     "letter": "b",
+     "text": "describe the functions of the parts of a string instrument",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.c",
+     "letter": "c",
+     "text": "make a fiddle using recyclable materials",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.d",
+     "letter": "d",
+     "text": "identify pictures drawn using stippling technique",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.e",
+     "letter": "e",
+     "text": "draw a picture of a musical instrument using stippling technique",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.f",
+     "letter": "f",
+     "text": "value indigenous string instruments drawn from indigenous communities in Kenya",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE",
+   "number": "1.2",
+   "strand": "Creating and Executing",
+   "sub_strand": "Painting and Collage",
+   "sequence": 102,
+   "lessons": 15,
+   "optional": false,
+   "content_topics": [
+    "Colour classification",
+    "Painting-brushstroke",
+    "Collage"
+   ],
+   "learning_experiences": [
+    "mix and paint a colour wheel to represent primary, secondary and tertiary colours,",
+    "mix and paint a surface to create tonal gradation by; thinning same tone/adding dark tone,",
+    "illustrate painting to create varied texture focusing on; brush position/angle, brush load and brush strokes,",
+    "paint any two objects overlapping inspired by football game, (tone and texture,",
+    "source for mounting materials and tools (papers, glue, cutting tools),",
+    "prepare the picture and mat surface by; measuring and cutting,",
+    "attach the picture on the mat surface (centred position),",
+    "explore actual/virtual samples of collage pictures to discuss characteristics; multi/mixed media and texture,",
+    "collect and prepare materials for making collage with focus on: texture and type of the materials, adhesives, and support,",
+    "collaboratively, make a collage with a theme ‘football’ to apply the characteristics,",
+    "talk about own and others work."
+   ],
+   "key_inquiry_questions": [
+    "Why is mounting of pictures important?"
+   ],
+   "core_competences": "Critical thinking and problem solving: The learner explores multiple perspectives of painting using varied tools and materials for creativity.\nCreativity and imagination: The learner applies creative skills in selecting media for painting, and painting the still life composition.",
+   "values": "Responsibility: The learner works on art work and cleans up after the activities.\nUnity: The learner collaboratively, make a collage with a theme ‘football’ to apply the characteristics.",
+   "pcis": "Waste management: The learner disposes of the waste after the classroom activity.\nSocial cohesion: The learner works in a group to watch actual or virtual paintings and discuss.",
+   "links": "Mathematics: Learner prepares the picture and mat surface by measuring and cutting. 5",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.a",
+     "letter": "a",
+     "text": "classify colour categories on the colour wheel for familiarity",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.b",
+     "letter": "b",
+     "text": "paint a still life composition using brush stroke technique",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.c",
+     "letter": "c",
+     "text": "mount the painting using mat technique for display",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.d",
+     "letter": "d",
+     "text": "create a collage composition to apply the characteristics",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.e",
+     "letter": "e",
+     "text": "appreciate painting and collage techniques. 4",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.CREATI.VOLLEYBALL",
+   "number": "1.3",
+   "strand": "Creating and Executing",
+   "sub_strand": "Volleyball",
+   "sequence": 103,
+   "lessons": 15,
+   "optional": false,
+   "content_topics": [
+    "Underarm service",
+    "Dig pass"
+   ],
+   "learning_experiences": [
+    "watch a real or virtual Volleyball game responsibly to identify serving and digging skills,",
+    "demonstrate the under-arm service,",
+    "practise the under-arm in volleyball game,",
+    "demonstrate the single hand dig pass in volleyball,",
+    "practise the single hand dig pass in a game situation,",
+    "play a Volleyball game while applying the skills learnt and observing safety,",
+    "share own and others performance in Volleyball game while giving each other feedback. 6"
+   ],
+   "key_inquiry_questions": [
+    "How can service skills in Volleyball be used to win a game?"
+   ],
+   "core_competences": "Learnin to learn: The learner acquires new skills of serving and the single hand dig pass in Volleyball game.\nDigital literacy: The learner uses digital technology to source virtual Volleyball game to identify under arm serving and single hand dig skills.",
+   "values": "Responsibility: The learner searches and watches a virtual Volleyball game to identify serving and digging skills.\nUnity: The learner shares the volleyball equipment as they demonstrate the skills of single hand dig pass and underarm service.",
+   "pcis": "Safety and security: The learner plays a Volleyball game while applying the skills learnt and observing safety.",
+   "links": "Integrated Science: The learners applies force while serving the Volleyball. 7",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: experiences, links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.CREATI.VOLLEYBALL.a",
+     "letter": "a",
+     "text": "identify the serving and the digging skills in Volleyball",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.VOLLEYBALL.b",
+     "letter": "b",
+     "text": "perform under-arm service for skill acquisition",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.VOLLEYBALL.c",
+     "letter": "c",
+     "text": "execute single hand dig pass in volleyball for skill acquisition",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.VOLLEYBALL.d",
+     "letter": "d",
+     "text": "appreciate playing Volleyball game for enjoyment",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN",
+   "number": "1.4",
+   "strand": "Creating and Executing",
+   "sub_strand": "Rhythm and Pattern Making",
+   "sequence": 104,
+   "lessons": 18,
+   "optional": false,
+   "content_topics": [
+    "Note values: crotchet, quaver, minim, dotted minim, semibreve and rests.",
+    "French rhythm names: taa, ta-te, taa-aa, taa-aa-aa-aa,",
+    "Note symbols and their rests on monotone"
+   ],
+   "learning_experiences": [
+    "listen to /sing familiar songs and identify words with the French rhythm names taa, ta-te, taa-aa, taa-aa-aa, taa-aa-aa-aa,",
+    "tap/ clap/stamp and recite rhythmic patterns using French rhythm names,",
+    "relate the French rhythm names to the music note symbols for the crotchet, pair of quavers, minim, dotted minim, semibreve and their rests,",
+    "apply composition techniques to compose original rhythmic patterns using French rhythm names or note symbols, and their rests,",
+    "use digital resources to further their skills of creating rhythms,",
+    "listen to songs and identify songs in three -beat patterns,",
+    "sing and conduct/beat time of songs in three -beat patterns,",
+    "improvise short rhythms in three-beat patterns using percussion instruments,",
+    "prepare a printing block from available resources (rubber/old slippers, wood, any other) using geometric shape motif,",
+    "improvise natural dye paste or artificial printing paste N/B observe safety in improvising the paste,",
+    "block print a full repeat pattern on a small fabric using contrasting colours,",
+    "neaten by trimming/stitching and ironing to make a small decorated table mat,",
+    "share the work with peers for critique and feedback for improvement."
+   ],
+   "key_inquiry_questions": [
+    "Why create rhythm in different beat patterns?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner combines various techniques to creatively come up with rhythmic patterns and repeat patterns using block printing.\nSelf-efficacy: The learner applies composition techniques to create and improvise original rhythmic patterns.",
+   "values": "Respect: The learner uses respectful words, appreciates and gives feedback on peers’ performances.\nIntegrity: The learner displays honesty by creating own original rhythms and repeat patterns using block printing",
+   "pcis": "Social cohesion: The learner appreciates working together with others when clapping/tapping rhythms, improvising and sharing rhythmic patterns.\nDecision making skills: The learner chooses correct note values and uses them to create a rhythmic pattern.",
+   "links": "Mathematics: The learner applies number concept when improvising three-beat patterns.\nAgriculture: The learner applies the skills of finishing by trimming/stitching and ironing in making a table mat.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: competencies, links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     22,
+     23,
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.a",
+     "letter": "a",
+     "text": "interpret rhythmic patterns in music",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.b",
+     "letter": "b",
+     "text": "compose a rhythm using a combination of musical notes and their rests",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.c",
+     "letter": "c",
+     "text": "improvise a rhythm in three- beat pattern on a percussion instrument",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.d",
+     "letter": "d",
+     "text": "prepare a block with a geometrical motif for printing a pattern",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.e",
+     "letter": "e",
+     "text": "print a full repeat pattern using a block for rhythm acquisition",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.f",
+     "letter": "f",
+     "text": "value rhythmic patterns created by self and others",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.CREATI.WEAVING",
+   "number": "1.5",
+   "strand": "Creating and Executing",
+   "sub_strand": "Weaving",
+   "sequence": 105,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Plain weave (1/1 or 2/2)",
+    "Serrated card loom (small spaces)"
+   ],
+   "learning_experiences": [
+    "research in virtual and actual sources to identify a plain weave,",
+    "collect and prepare recyclable materials for weaving such as yarns, fibres among others)",
+    "make a serrated card loom on a stiff material and a shuttle,",
+    "weave a mat/scarf using a serrated card loom with emphasis on colour variation,",
+    "finish the mat/scarf by cutting and tying the tassels,",
+    "display and positively critique each other’s woven items for reflective feedback,"
+   ],
+   "key_inquiry_questions": [
+    "Why is recycling beneficial to the environment?"
+   ],
+   "core_competences": "Critical thinking and problem solving: The learner weaves a mat/scarf using a plain weave on a serrated card loom.\nLearning to learn: The learner acquires new skill to make a mat or scarf using plain weaving technique.",
+   "values": "Responsibility: The learner puts into practise the aspects of safety, care of the environment while sourcing for materials for weaving.\nRespect: The learner appreciates and appraises others’ woven items using appropriate language.",
+   "pcis": "Safety: The learner observes safety as they prepare a serrated card loom for weaving.\nClimate change: The learner uses materials that are friendly to the environment when improvising the yarns and loom for weaving.",
+   "links": "Mathematics: The learner measures and cuts to make a serrated card loom. 12",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     25,
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.CREATI.WEAVING.a",
+     "letter": "a",
+     "text": "identify a plain weave for familiarity",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.WEAVING.b",
+     "letter": "b",
+     "text": "prepare materials and tools for weaving",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.WEAVING.c",
+     "letter": "c",
+     "text": "weave a mat using plain weave on a serrated card loom",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.WEAVING.d",
+     "letter": "d",
+     "text": "appreciate our own and peers’ woven items used for gymnastics performance. 11",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.CREATI.GYMNASTICS",
+   "number": "1.6",
+   "strand": "Creating and Executing",
+   "sub_strand": "Gymnastics",
+   "sequence": 106,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "Cartwheel",
+    "3- action sequence"
+   ],
+   "learning_experiences": [
+    "watch a video or live performance of a cartwheel in gymnastics and talk about how it is done,",
+    "demonstrate the cartwheel skill in gymnastics",
+    "practise the cartwheel skill,",
+    "demonstrate sequencing of cartwheel, forward roll, and swan balance,",
+    "practise a 3-action sequence of cartwheel, forward roll, a swan balance while observing safety,",
+    "observe peers’ gymnastic performance and give feedback."
+   ],
+   "key_inquiry_questions": [
+    "Why are sequences performed in Gymnastics?"
+   ],
+   "core_competences": "Learning to learn: The learner acquires the skills of combining cartwheel, forward roll and swan balance to perform a 3- action sequence in gymnastics.\nCritical thinking and problem solving: The learner practises and creates 3-action sequence of a gymnastics performance.\nSelf - Efficacy: The learner's self-esteem is enhanced by being able to perform a 3-action sequence in gymnastics.",
+   "values": "Responsibility: The learners put into practice the aspects of safety, while performing 3-action sequence in gymnastics.\nLove: The learner respects others as they practise the combination of gymnastics progressions to form a 3- action sequence in gymnastics.",
+   "pcis": "Gender: The learner works with peers to perform the 3- action sequence in gymnastics.\nSafety: The learner observes safety as they perform cartwheel, forward rolls and swan balances to form a 3- action sequence in gymnastics.",
+   "links": "Science and Technology: The learner applies the concept of how the body works during performance of gymnastic activity. 14",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.CREATI.GYMNASTICS.a",
+     "letter": "a",
+     "text": "describe the cartwheel skill in gymnastics",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.GYMNASTICS.b",
+     "letter": "b",
+     "text": "perform the cartwheel skill in gymnastics",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.GYMNASTICS.c",
+     "letter": "c",
+     "text": "perform 3-action sequence in cartwheel, forward roll and swan balance in gymnastics",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.GYMNASTICS.d",
+     "letter": "d",
+     "text": "appreciate the action sequence of gymnastic for enjoyment. 13",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.CREATI.MELODY",
+   "number": "1.7",
+   "strand": "Creating and Executing",
+   "sub_strand": "Melody",
+   "sequence": 107,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "Sol-fa syllables; doh to doh1",
+    "Composition techniques: narrow leaps (thirds), stepwise motion, repetition, variation and appropriate ending,"
+   ],
+   "learning_experiences": [
+    "sing sol-fa syllable doh to doh1 ascending and descending with accuracy in pitch,",
+    "imitate sol-fa pitches sung or played on a melodic instrument for pitch discrimination,",
+    "listen to and sing familiar songs 1 within the d-d range using sol-fa syllables,",
+    "practise singing and performing the sol-fa ladder using Kodaly hand signs,",
+    "apply composition techniques to compose original melodies based on sol-fa syllables d r m f s l t d1",
+    "use calligraphy lettering to add sol-fa syllables to created rhythms to form a melody,",
+    "record or present the created melodies to peers for review and improvement."
+   ],
+   "key_inquiry_questions": [
+    "How can melodies be made interesting during composition?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner will make thoughtful choices in selecting sol-fa syllables and note values to combine to create melodies.\nCritical thinking and Problem solving: The learner listens and identifies sol-fa sounds in melodies and interpret hand signs.",
+   "values": "Respect: This is instilled as the learner appreciates and appraises others’ compositions.\nUnity: This is achieved through the learner working with peers to produce a melody.\nIntegrity: The learner creates own compositions without copying what peers have already created.",
+   "pcis": "Mentorship and peer education: The learner reviews and provides feedback for peers’ compositions.\nTalent identification: The learner develops musical talent by composing and singing melodies.",
+   "links": "Mathematics: The learner applies number and sequencing concepts learnt in combining sol-fa syllables in stepwise and leaps motion.\nEnglish: The learner uses vowels to sing the sol fa syllables in ascending and descending order. 16",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: experiences, links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.CREATI.MELODY.a",
+     "letter": "a",
+     "text": "sing the sol-fa syllables doh to doh1 ascending and descending",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.MELODY.b",
+     "letter": "b",
+     "text": "perform the sol-fa ladder using Kodaly hand signs",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.MELODY.c",
+     "letter": "c",
+     "text": "aurally recognise sol-fa sounds doh to doh1 in familiar melodies",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.MELODY.d",
+     "letter": "d",
+     "text": "compose short melodies within the range of doh to doh1",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.MELODY.e",
+     "letter": "e",
+     "text": "write the sol-fa syllables using calligraphy lettering",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.CREATI.MELODY.f",
+     "letter": "f",
+     "text": "appreciate melodies created by self and others. 15",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.PERFOR.ATHLETICS",
+   "number": "2.1",
+   "strand": "Performing and Displaying",
+   "sub_strand": "Athletics",
+   "sequence": 201,
+   "lessons": 15,
+   "optional": false,
+   "content_topics": [
+    "Long jump-sail technique",
+    "High jump-scissor style"
+   ],
+   "learning_experiences": [
+    "watch a virtual or live performance of a Long jump and High jump, and keenly observe sail technique in long jump and scissors technique in high jump,",
+    "demonstrate the sail technique in Long jump while observing safety,",
+    "practise the sail technique in Long jump while observing safety,",
+    "demonstrate the scissors technique in High jump, while observing safety",
+    "practise the scissors technique in High jump while observing safety,",
+    "observe each other’s performance in Long jump and High jump and give feedback,",
+    "display own and others’ performance in Long jump and High jump and share feedback."
+   ],
+   "key_inquiry_questions": [
+    "How is the jumping skill useful in athletics?",
+    "Why is it important to maintain a pace in athletics?"
+   ],
+   "core_competences": "Digital literacy: The learner operates digital devices while watching performances in sail technique in Long jump and scissors technique in High jump.\nCreativity and Imagination: The learner applies tactics while practising the sail technique in Long jump and scissors technique in High jump.",
+   "values": "Integrity: The learner displays honesty while sharing feedback on each other's performance.\nResponsibility: The learner searches and watches videos on the performance of the Long and High jumps.",
+   "pcis": "Safety: The learner observes safety while performing the sail technique in Long jump and scissors in High jump.",
+   "links": "Mathematics: The learner measures and appraises their performance accordingly.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: experiences, links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.PERFOR.ATHLETICS.a",
+     "letter": "a",
+     "text": "describe Long jump and High jump techniques in athletics",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.ATHLETICS.b",
+     "letter": "b",
+     "text": "perform the sail technique in Long jump for skills acquisition",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.ATHLETICS.c",
+     "letter": "c",
+     "text": "perform the scissors technique in High jump for skills acquisition",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.ATHLETICS.d",
+     "letter": "d",
+     "text": "appreciate Long jump and High jump techniques in athletics for enjoyment",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.PERFOR.DESCANT_RECORDER",
+   "number": "2.2",
+   "strand": "Performing and Displaying",
+   "sub_strand": "Descant Recorder",
+   "sequence": 202,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Notes; C D E F G A B C1 and D1",
+    "Playing techniques; fingering, tonguing and posture",
+    "Melody of the Kenya National Anthem"
+   ],
+   "learning_experiences": [
+    "observe and interpret the Baroque fingering chart of the notes C D E F G A B C1 and D1",
+    "individually and in groups practise playing the notes C D E F G A B C1 D1 ascending and descending on the descant recorder with appropriate playing techniques,",
+    "practise playing melodies based on notes C D E F G A B C1 and D1 on the descant recorder applying playing techniques and hygiene measures,",
+    "present melodies before peers for critique and improvement,",
+    "search, watch videos and practise playing melodies on the descant recorder,",
+    "listen to and play the main melody of the Kenya National Anthem,"
+   ],
+   "key_inquiry_questions": [
+    "How can a good tone be produced on a descant recorder?"
+   ],
+   "core_competences": "Learning to learn: The learner takes the initiative to learn how to play notes and melodies on the descant recorder.\nCitizenship: The learner plays the main melody of the Kenya National Anthem on the descant recorder.",
+   "values": "Responsibility: The learner observes safety and hygiene measures in the use of the descant recorders.\nRespect: The learner uses polite language in appreciating and appraising peers’ performances.",
+   "pcis": "Peer education and mentorship: The learner contributes to others’ work through appraising it and providing feedback for improvement.\nHealth issues in Education: The learner prevents communicable diseases through observance of hygiene measures in the use of the descant recorder.",
+   "links": "Agriculture: The learner applies hygiene measures learnt during use and after playing the descant recorder.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: experiences, links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.PERFOR.DESCANT_RECORDER.a",
+     "letter": "a",
+     "text": "play notes C to D1 on the descant recorder with appropriate playing techniques",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.DESCANT_RECORDER.b",
+     "letter": "b",
+     "text": "play a melody within the range of C to D1on the descant recorder",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.DESCANT_RECORDER.c",
+     "letter": "c",
+     "text": "play the main melody of the Kenya National Anthem on the descant recorder",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.DESCANT_RECORDER.d",
+     "letter": "d",
+     "text": "show interest in playing the descant recorder",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU",
+   "number": "2.3",
+   "strand": "Performing and Displaying",
+   "sub_strand": "Indigenous Kenyan Instrumental Ensembles",
+   "sequence": 203,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "Instrumental Ensembles: percussion, wind, string ensemble",
+    "Factors to consider to play in an instrumental ensemble; -choosing an appropriate instrument,",
+    "tuning",
+    "playing technique",
+    "tempo",
+    "synchrony with other instrumentalists",
+    "accuracy in rhythm/ melody",
+    "improvisation of rhythms and melodies"
+   ],
+   "learning_experiences": [
+    "observe actual/ virtual samples of performance of Kenyan indigenous instrumental ensembles and classify them,",
+    "collaboratively identify the instruments that form part of the categories of the instrumental ensembles,",
+    "brainstorm on factors to consider for successful playing in an indigenous Kenyan instrumental ensemble,",
+    "select an instrument to perform in a Kenyan Indigenous Instrumental ensemble,",
+    "tune the selected instrument using appropriate technique,",
+    "handle with care while practising and playing a selected instrument in a Kenyan indigenous Instrumental ensemble."
+   ],
+   "key_inquiry_questions": [
+    "How can one play an instrument as part of an instrumental ensemble?"
+   ],
+   "core_competences": "Citizenship: The learner interacts with and plays indigenous Kenyan musical instruments in an ensemble.\nCommunication and collaboration: The learner teams up with peers to perform as an ensemble.",
+   "values": "Peace: The learner interacts with musical instruments from diverse Kenyan communities enhancing appreciation of different cultures hence peaceful coexistence.\nUnity: The learner plays a musical instrument with peers in an ensemble.\nResponsibility: The learner handles different musical instruments in the ensemble with care.",
+   "pcis": "Social cohesion: The learner plays a musical instrument in an ensemble with peers enhancing peaceful co-existence.\nCultural awareness: The learner learns about musical instruments from various Kenyan cultures.\nEthnic and racial relations: The learner interacts with musical instruments drawn from different Kenyan communities.",
+   "links": "Indigenous Languages: The learner interacts with different musical instruments from indigenous Kenyan communities\nSocial Studies: The learner interacts with musical instruments from different Kenyan Indigenous communities.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     36,
+     37
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.a",
+     "letter": "a",
+     "text": "identify the categories of indigenous Kenyan instrumental ensembles",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.b",
+     "letter": "b",
+     "text": "describe factors to consider when playing in an instrumental ensemble",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.c",
+     "letter": "c",
+     "text": "play a selected instrument in an ensemble using appropriate techniques",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.d",
+     "letter": "d",
+     "text": "appreciate the role of Kenyan indigenous musical instruments in performance",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_",
+   "number": "2.4",
+   "strand": "Performing and Displaying",
+   "sub_strand": "Indigenous Kenyan Craft- Pottery",
+   "sequence": 204,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "Slab technique",
+    "Burnishing/stamping"
+   ],
+   "learning_experiences": [
+    "observe actual/ virtual samples of indigenous Kenyan pottery items and identify items made using slab technique,",
+    "responsibly source clay from the environment (anthills, riverbanks among others),",
+    "collaboratively, prepare the clay by kneading and wedging,",
+    "roll clay into slabs of equal uniform thickness,",
+    "cut slabs of clay (rectangular and circular) and join to form a vase,",
+    "finish the vase by burnishing and stamping,",
+    "leave to dry under shade,",
+    "display and talk about own and others modelled item."
+   ],
+   "key_inquiry_questions": [
+    "Why are clay items dried under the shade?"
+   ],
+   "core_competences": "Communication and collaboration: The learner works in a group to prepare the clay by kneading and wedging.",
+   "values": "Respect: The learner talks about own and others modelled vase in a just manner",
+   "pcis": "Cultural awareness: The learner acquires skills about indigenous crafts in Kenya.\nEthnic and racial relations: The learner interacts with reference material and researches on indigenous craft drawn from different Kenyan communities",
+   "links": "Social Studies: The learner exploits natural resources to source clay from the environment such as anthills riverbanks.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     38,
+     39
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.a",
+     "letter": "a",
+     "text": "identify pottery items made using slab technique",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.b",
+     "letter": "b",
+     "text": "model a vase using slab technique for expression",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.c",
+     "letter": "c",
+     "text": "decorate a modelled item for aesthetic enhancement",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.d",
+     "letter": "d",
+     "text": "appreciate pottery as an indigenous Kenyan craft",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.PERFOR.SWIMMING",
+   "number": "2.5",
+   "strand": "Performing and Displaying",
+   "sub_strand": "Swimming",
+   "sequence": 205,
+   "lessons": 15,
+   "optional": true,
+   "content_topics": [],
+   "learning_experiences": [
+    "watch a virtual or actual performance to observe breaststroke in swimming,",
+    "demonstrate breaststroke skill,",
+    "practise breaststroke skills while observing safety,",
+    "apply the skill of breaststroke in swimming game,",
+    "observe each other swim using breaststroke and give feedback."
+   ],
+   "key_inquiry_questions": [
+    "Why are swimming skills considered as survival skills?"
+   ],
+   "core_competences": "Self-efficacy: The learner expresses water confidence as they practise the skill of breaststroke and provide feedback to each other about the performance.\nLearning to learn: The learner acquires new skill of breaststroke while practising in the swimming pool.",
+   "values": "Unity: The learner displays team spirit while applying the skills of breaststroke.\nResponsibility: The learner observes own and others’ safety while practising breaststroke.",
+   "pcis": "Safety: The learner observes safety measures as they practise breaststroke during swimming.\nLife skills: The learner acquires swimming skills as survival skills in case of emergencies such as floods.",
+   "links": "Integrated Science: The learner uses the knowledge of floatation to perform breaststroke in swimming..",
+   "design_notes": "Second read left this for a person to confirm: outcome letters read as abcabcd; not found in the second read: competencies, links; a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     40,
+     41,
+     42,
+     43
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.PERFOR.SWIMMING.a_",
+     "letter": "a",
+     "text": "describe the body position in breaststroke",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.SWIMMING.b_",
+     "letter": "b",
+     "text": "perform breaststroke in swimming for skill acquisition",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.PERFOR.SWIMMING.c_",
+     "letter": "c",
+     "text": "acknowledge performing breast stroke skill in swimming",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART",
+   "number": "3.1",
+   "strand": "Appreciation in Creative Arts",
+   "sub_strand": "Analysis of Creative Arts works",
+   "sequence": 301,
+   "lessons": 15,
+   "optional": true,
+   "content_topics": [
+    "Elements of music: pitch, melody, rhythm, dynamics, tempo, texture (monophonic and homophonic texture) and structure ( AB, ABA)"
+   ],
+   "learning_experiences": [
+    "visit virtual or actual art establishments for inspiration,",
+    "create a catalogue of the exhibited artworks indicating artist’s name, type of artwork, media/material,",
+    "interpret works of art displayed by taking into account; type of art, material, media, meaning, techniques, aesthetic),",
+    "reflect on the analysed work of art for inspiration and mentorship,",
+    "listen to a variety of songs addressing Pertinent and Contemporary Issues such as climate, road safety and identify the type of song, discuss how different elements of music are used using appropriate terminology,",
+    "listen to and identify the message/values in the songs,",
+    "discuss the texture and structure of the songs,",
+    "listen to/refer to specific music and relate it to experiences or events in life,",
+    "participate in Football, Athletics, Volleyball, Rounders, Gymnastics and Swimming events for fun and inter- class/inter school championships,",
+    "appreciate the sports performances with focus on; fair play and observance of code of conduct to enhance sportsmanship."
+   ],
+   "key_inquiry_questions": [
+    "How are Creative Arts analysed?"
+   ],
+   "core_competences": "Critical thinking and problem solving: The learner listens to and describes how the different the elements of music are used in songs using appropriate terminologies and critiques artworks.\nDigital Literacy: The learner interacts with digital technology to watch a video of songs and the execution of skills in volleyball, athletics, gymnastics and swimming.\nCitizenship: The learner visits community galleries or cultural centres to see artworks done by other local artists to appreciate their works.",
+   "values": "Respect: The learner appreciates diverse opinions while observing and talking about artworks and sports.\nLove: The learner respect others’ opinions as they critique works of art displayed in the galleries\nSocial justice: The learner fairly critiques the works of art displayed in the galleries.\nIntegrity: The learner observes sportsmanship during a mini game.",
+   "pcis": "Analytical and creative thinking: The learner analyses music and sports, and critiques art works.\nSelf-esteem and self-confidence: The learner listens to, discusses and relates the music to personal experiences.",
+   "links": "Social Studies: The learner visits community and virtual galleries to see artworks related to art techniques. 33",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "Creative Arts Curriculum designs - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     45,
+     46,
+     47
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.a",
+     "letter": "a",
+     "text": "create a catalogue of the exhibited artworks",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.b",
+     "letter": "b",
+     "text": "discuss the use of elements of music in a song",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.c",
+     "letter": "c",
+     "text": "discuss messages in songs",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.d",
+     "letter": "d",
+     "text": "participate in sporting events for enjoyment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.e",
+     "letter": "e",
+     "text": "value analysing Creative Arts works drawn from various cultural backgrounds. 31 32",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

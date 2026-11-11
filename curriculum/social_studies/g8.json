@@ -1,0 +1,1155 @@
+{
+ "framework": "cbc",
+ "subject_key": "social_studies",
+ "grade": 8,
+ "source": "KICD Social Studies, First published 2023; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 5,
+  "sub_strands": 16,
+  "outcomes": 79,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT",
+   "number": "1.1",
+   "strand": "Social Studies and Personal Management",
+   "sub_strand": "Self-Improvement",
+   "sequence": 101,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "choose the animal that best defines their personal characteristics from a list of pre-selected animals, then discuss the outcome with the class,",
+    "watch a video clip on personality traits and discuss,",
+    "develop and share personal life goals such as educational, careers,",
+    "watch a video clip of a successful career individual in social life that reflect on their traits,",
+    "role-play a skit depicting values in their dream career choice in Social Studies."
+   ],
+   "key_inquiry_questions": [
+    "Which animal best reflects your personal characteristics?",
+    "What career choices in Social Studies relate to you?"
+   ],
+   "core_competences": "Communication and Collaboration: speaking skills are developed as learners share personal life goals.\nImagination and Creativity: learnersreflect on their future life goals as they watch video clips of successful career individuals in Social Studies.",
+   "values": "Unity: learners work together in role-playing a skit depicting values in their dream career choice in Social Studies.\nRespect: learners give one another a chance to participate in discussions on personal characteristics.",
+   "pcis": "Career guidance: learners identify their career paths as they watch a video clip on a successful career individual in Social Studies.",
+   "links": "Pre-Technical Studies: learners get career guidance on the choice of their future careers in Social Studies.\nKenyan Sign Language, Kiswahili and English: learners role-play a skit depicting values in their dream career choice in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.a",
+     "letter": "a",
+     "text": "describe personality traits for self-understanding",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.b",
+     "letter": "b",
+     "text": "share goals for self-improvement in social life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.c",
+     "letter": "c",
+     "text": "appreciate the role of values in the development of personality traits",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT",
+   "number": "1.2",
+   "strand": "Social Studies and Personal Management",
+   "sub_strand": "Self-Esteem Assessment",
+   "sequence": 102,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use digital or print resources to search for and discuss the relationship between self-esteem and personal productivity,",
+    "research using print/digital devices on the contribution of self-esteem on their holistic development,",
+    "act out and discuss skits on examples of difficult life experiences that could severely affect self-esteem in their social lives,",
+    "discuss and present effects of unhealthy self-esteem in day-to-day social lives,such as: relationship difficulties, social isolation,",
+    "discuss and share ways of assessing their self-esteem in social interactions,",
+    "journalise actions they will take to improve their self-esteem."
+   ],
+   "key_inquiry_questions": [
+    "How does self-esteem affect my holistic development?"
+   ],
+   "core_competences": "Communication and Collaboration: learners develop speaking skills as they discuss cultural beliefs that promote self-esteem.\nDigital literacy: learners use digital devices to search for the relationship between self-esteem and personal productivity.",
+   "values": "Love: learners honestly journalise on steps they would take to improve their self-esteem.\nResponsibility: learners commit themselves through journalising actions they will take to improve their self-esteem.",
+   "pcis": "Guidance and Peer counselling: learners discuss and share ways of seeking help to overcome low self-esteem.\nSocial cohesion: learners work together in groups to discuss cultural beliefs that promote self-esteem.",
+   "links": "Religious Education: learners discuss self-love from religious texts.\nKenyan Sign Language, Kiswahili and English: learners make journal entries on steps they would take to improve their self-esteem.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.a",
+     "letter": "a",
+     "text": "explain the contribution of self-esteem on their holistic development",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.b",
+     "letter": "b",
+     "text": "determine effects of unhealthy self-esteem in day-to-day social lives",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.c",
+     "letter": "c",
+     "text": "assess their self-esteem in social interactions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.d",
+     "letter": "d",
+     "text": "desire to improve their self- esteem for personal productivity",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI",
+   "number": "2.1",
+   "strand": "Community Service Learning",
+   "sub_strand": "Community Service Learning Project",
+   "sequence": 201,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm and identify problems/gaps/opportunities in their school/community that need attention,",
+    "speak engagingly when discussing and adapting one identified (problem/gap) for the class/group project and hence state the project title,",
+    "authenticate the problem/gap and hence write down the statement of the problem (a small description of the identified problem),",
+    "search, discuss and agree on an appropriate solution/way/skills of addressing the identified problem and note down the recommended/ proposed solution,",
+    "discuss and draw a plan for implementing the proposed solution,",
+    "implement the plan prudently to address the identified problem,",
+    "reflect on the concluded project and submit a summary account/report to the CSL teacher."
+   ],
+   "key_inquiry_questions": [
+    "How does one determine some gaps/ needs in the community?",
+    "Why is it necessary to make adequate preparations before embarking on a project?"
+   ],
+   "core_competences": "Communication and Collaboration: Learners speak engagingly as they discuss and work on various CSL project/activity processes.\nSelf-efficacy: Learners develop the skills of self-awareness and leadership as they undertake the CSL project.\nCreativity and Imagination: Learners come up with creative ways of solving the identified problem in the community.\nCritical thinking and Problem solving: Learners identify a community need or gaps and explore possible solutions to address the gaps.\nDigital literacy: Learners use technology as they search for solutions to the identified problem in the community.\nLearning to learn: Learners gain new knowledge and skills as they work together to address a community problem in the project.\nCitizenship: Learners choose a PCI that needs immediate attention in the community.",
+   "values": "Integrity: Learners choose to visit appropriate sites as they use digital devices to carry out research and also use resources in the process of planning to address the community problem.\nRespect: Learners accommodate divergent opinions of others as they discuss, search, and plan for the project in the community.\nUnity: Learners work collaboratively to carry out the CSL project.",
+   "pcis": "Social cohesion: Learners discuss possible solutions to the identified issue in groups.",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.a",
+     "letter": "a",
+     "text": "identify a problem/gap in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.b",
+     "letter": "b",
+     "text": "design solution(s) to the identified problem",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.c",
+     "letter": "c",
+     "text": "plan to implement the solution to the identified problem",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.d",
+     "letter": "d",
+     "text": "implement plan for solving the identified problem",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.e",
+     "letter": "e",
+     "text": "report/account on the concluded project",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.f",
+     "letter": "f",
+     "text": "appreciate the need to offer solutions to the gaps/challenges in the community",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_",
+   "number": "3.1",
+   "strand": "People and Relationships",
+   "sub_strand": "Scientific Theory about Human Origin",
+   "sequence": 301,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "enhance the skill of teamwork as they discuss in groups how scientific theory is used to explain human origin and present,",
+    "use print/digital devices on changes that took place in humans as a result of evolution,",
+    "draw a map of Africa and locate where prehistoric human remains were discovered,",
+    "draw charts showing the different stages of human evolution and share in class,",
+    "generate conclusions on origin of humanity based on the scientific theory,",
+    "engage with a resource person to discuss the preservation of remains of early humans,",
+    "work together harmoniously in groups to discuss reasons why Africa is considered as the cradle for humanity,",
+    "engage in assigned roles and duties as they debate on the Africa as the cradle of humanity."
+   ],
+   "key_inquiry_questions": [
+    "Why is Africa considered as the cradle of humanity?"
+   ],
+   "core_competences": "Communication and Collaboration: Learners enhance the skill of teamwork during group discussion on how scientific theory is used to explain human origin.\nDigital literacy: The learners use print/digital devices on changes that took place in humans as a result of evolution.",
+   "values": "Respect: Learners engage in assigned roles and duties as they debate on the Africa as the cradle of humanity\nResponsibility: Learners work together harmoniously in groups to discuss reasons why Africa is considered as the cradle for humanity.",
+   "pcis": "Social cohesion: Learners engage with a resource person to discuss the preservation of remains of early humans.",
+   "links": "The learner applies Languages skills-learners to draw charts showing the different stages of human evolution and share in class.\nThe learner applies Creative Arts skills as they draw charts showing the different stages of human evolution.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.a",
+     "letter": "a",
+     "text": "explore scientific theory about human origin",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.b",
+     "letter": "b",
+     "text": "illustrate changes that took place in humans as a result of evolution",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.c",
+     "letter": "c",
+     "text": "draw conclusions on origin of humanity based on the scientific theory",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.d",
+     "letter": "d",
+     "text": "illustrate strategies of preservation of remains of early humans",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.e",
+     "letter": "e",
+     "text": "develop reasons why Africa is considered as the cradle for humanity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.f",
+     "letter": "f",
+     "text": "recognise reasons why Africa as the cradle of humanity",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION",
+   "number": "3.2",
+   "strand": "People and Relationships",
+   "sub_strand": "Early Civilisation",
+   "sequence": 302,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "Asia,",
+    "Europe"
+   ],
+   "learning_experiences": [
+    "use digital technology to locate on a map of Europe and Asia, places of origin of early visitors to the East African Coast,",
+    "accommodate divergent opinions in groups as they discuss on the origin of early visitors to the East African Coast up to 1500,",
+    "exhibit cultural awareness as they brainstorm on the Swahili civilisation along the East African coast and discuss factors that led to the growth of East African city states,",
+    "role-play the best practices from early civilisations to the development of the modern world."
+   ],
+   "key_inquiry_questions": [
+    "Why is cultural heritage important to society?"
+   ],
+   "core_competences": "Digital literacy: Learners use digital technology to locate on a map of Europe and Asia, places of origin of early visitors to the East African Coast.\nLearning to learn: Learners reflect on their own during role-play the best practices from early civilisations to the development of the modern world.",
+   "values": "Respect: Learners accommodate divergent opinions during group discussion on the origin of the early visitors in the East African Coast.\nPatriotism: Learners exhibit cultural awareness as they brainstorm on the Swahili civilisation along the East African coast and discuss factors that led to the growth of East African city states.",
+   "pcis": "Cultural awareness: Learners work together in brainstorming on the origin of early visitors to the East African Coast up to 1500.",
+   "links": "The learner applies Language skills during group discussion on the origin of the early visitors in the East African Coast.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.a",
+     "letter": "a",
+     "text": "describe Swahili civilisation along the East African coast",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.b",
+     "letter": "b",
+     "text": "show how best practices from early civilisations have contributed to the modern world",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.c",
+     "letter": "c",
+     "text": "appreciate best practices of early civilisation to the development of the modern world",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD",
+   "number": "3.3",
+   "strand": "People and Relationships",
+   "sub_strand": "Trans Saharan Slave Trade",
+   "sequence": 303,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "debate on factors that led to development of Trans-Saharan slave trade in Africa,",
+    "use digital or print resources to research on the organisation of Trans-Saharan slave trade in Africa,",
+    "work together and discuss the effects of Trans-Saharan slave trade in Africa,",
+    "take turns in activities and conversation as they draw a map of Africa and locate regions where slaves were sourced during the Trans-Saharan slave trade,",
+    "use slogans to show e assertiveness in promotion of social justice,",
+    "compose songs/messages to promote social justice in a society."
+   ],
+   "key_inquiry_questions": [
+    "Why do people subject others to slave trade?"
+   ],
+   "core_competences": "Digital literacy: Learners use digital or print resources to research on the organisation of Trans-Saharan slave trade in Africa.\nCreativity and Imagination: Learners debate on factors that led to development of Trans-Saharan slave trade in Africa.",
+   "values": "Respect: Learners work together and discuss the effects of Trans-Saharan slave trade in Africa.\nUnity: Learners take turns in activities and conversation as they draw a map of Africa and locate regions where slaves were sourced during the Trans-Saharan slave trade.",
+   "pcis": "Social cohesion: Learners work together amicably as they debate on factors that led to development of Trans-Saharan slave trade in Africa.",
+   "links": "The learner applies Creative Arts skills as they draw a map of Africa and locate regions where slaves were sourced during the Trans-Saharan slave trade.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.a",
+     "letter": "a",
+     "text": "identify factors that led to development of Trans-Saharan slave Trade in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.b",
+     "letter": "b",
+     "text": "describe organisation of Trans-Saharan slave trade in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.c",
+     "letter": "c",
+     "text": "outline effects of Trans-Saharan slave trade in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.d",
+     "letter": "d",
+     "text": "demonstrate assertiveness in promotion of social justice",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.e",
+     "letter": "e",
+     "text": "desire to promote social justice in a society",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR",
+   "number": "3.4",
+   "strand": "People and Relationships",
+   "sub_strand": "Population Growth in Africa",
+   "sequence": 304,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm in groups causes of population growth in Africa,",
+    "use digital and print resources to research on the causes and effects of population growth in Africa,",
+    "discuss the effects of high population road users safely – present in class,",
+    "develop self-confidence as they draw demographic trends in Kenya using recent census data,",
+    "brainstorm in groups on types of migration,",
+    "exchange new ideas as they research on the factors that influence migration in Africa and share in class,",
+    "exhibit team spirit as they develop posters to create awareness of the effect of population growth in the community,",
+    "design charts on ways of coping with stress due to population growth and migrations,",
+    "use charts to write on the impact of migration on population growth in Africa."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to study demographic changes?"
+   ],
+   "core_competences": "Self-efficacy: Learners develop self-confidence during illustration of demographic trends in Kenya and display in the classroom.\nCreativity and Imagination: Learners exchange new ideas during research on the factors that influence migration in Africa.",
+   "values": "Unity: Learners exhibit team spirit in developing posters to create awareness of the effects of population growth in the community.\nLove: Learners exhibit respect for others when working in groups during brainstorming on causes of population growth in Africa.",
+   "pcis": "Environmental education: Learners demonstrate knowledge on prevention of pollution as they develop posters to create awareness on effects of population growth in the community.",
+   "links": "The learner applies calculating skills in Mathematics when working out demographic trends in Kenya using recent census data.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     28,
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.a",
+     "letter": "a",
+     "text": "explore causes and effects of population growth in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.b",
+     "letter": "b",
+     "text": "examine types and effects of migration in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.c",
+     "letter": "c",
+     "text": "illustrate demographic trends in Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.d",
+     "letter": "d",
+     "text": "create awareness on the effects of population growth in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.e",
+     "letter": "e",
+     "text": "appreciate the impact of migration on population growth in Africa",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO",
+   "number": "3.5",
+   "strand": "People and Relationships",
+   "sub_strand": "Diversity and interpersonal skills",
+   "sequence": 305,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "exhibit respect for fellow citizens as they discuss the social cultural diversities in Kenya,",
+    "explain their own beliefs and those of others as they discuss ways of building a healthy self-esteem in diverse social cultural society,",
+    "use digital or print material to find out the impact of emotions on self and others,",
+    "practice inclusivity as they role play ways of managing peer pressure,",
+    "in groups, compose communication messages on social cultural diversities in Kenya and share in class."
+   ],
+   "key_inquiry_questions": [
+    "How can we demonstrate respect and appreciation of social cultural diversity and inclusion?"
+   ],
+   "core_competences": "Self-efficacy: Learners develop self-confidence when acting out in small groups,skits exhibiting values that enhance positive peer pressure.\nCitizenship: Learners explore their own beliefs and those of others as they carry out group discussion on social cultural diversity in Kenya.",
+   "values": "Patriotism: Learners exhibit respect for fellow citizens as they discuss socio-cultural diversities in Kenya.\nLove: Learners avoid inflicting emotional pain on others when role-playing expressions of different emotions.",
+   "pcis": "Social cohesion: Learners work together harmoniously when role-playing to express different emotions.\nEthnic and racial relation: Learners respect and accept heterogeneity as they discuss personal and social cultural factors that influence social cohesion.",
+   "links": "Learner applies values in Religious Education as they learn about exhibition of values that enhance positive peer pressure.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.a",
+     "letter": "a",
+     "text": "explore social cultural diversities in Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.b",
+     "letter": "b",
+     "text": "explain ways of building a healthy self-esteem in diverse social cultural society",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.c",
+     "letter": "c",
+     "text": "describe the impact of emotions on self and others",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.d",
+     "letter": "d",
+     "text": "manage peer pressure in a culturally diverse environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.e",
+     "letter": "e",
+     "text": "appreciate social cultural diversities in Kenya",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU",
+   "number": "3.6",
+   "strand": "People and Relationships",
+   "sub_strand": "Peaceful Conflict Resolution",
+   "sequence": 306,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "Negotiation",
+    "Mediation",
+    "Arbitration"
+   ],
+   "learning_experiences": [
+    "speak clearly as they discuss and present situations that may lead to conflicts in a family,",
+    "work together harmoniously as they role-play peaceful ways of resolving conflicts in the family,",
+    "create posters with strategies to enhance effective communication in resolving conflicts,",
+    "undertake group activities and exchange new ideas as build healthy relationships to promote peace in the family,",
+    "use digital or print resources to research on ways of building healthy relationships,",
+    "reflect in journal in their the culture of peace in a society."
+   ],
+   "key_inquiry_questions": [
+    "How can resolving conflicts help us live peacefully in the community?"
+   ],
+   "core_competences": "",
+   "values": "Peace: Learners resolve differences amicably when role-playing peace-building scenarios.\nUnity: Learners display team spirit as they work in groups to compose poems on the importance of peace in the family and present in class.",
+   "pcis": "Social cohesion: Learners work together harmoniously when role-playing peace-building scenarios.",
+   "links": "The learner applies Language skills when discussing and presenting on situations that may lead to conflicts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.a",
+     "letter": "a",
+     "text": "identify situations that lead to conflicts in the family",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.b",
+     "letter": "b",
+     "text": "apply peaceful ways of resolving conflicts in the family",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.c",
+     "letter": "c",
+     "text": "design strategies for effective communication in resolving conflicts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.d",
+     "letter": "d",
+     "text": "build healthy relationships to promote peace in the family",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.e",
+     "letter": "e",
+     "text": "show empathy with survivors of conflicts in the family",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.f",
+     "letter": "f",
+     "text": "appreciate the culture of peace in a society",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE",
+   "number": "4.1",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Map Reading and Interpretation",
+   "sequence": 401,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "exchange new ideas when discussing in groups the marginal information on a map and present it in class,",
+    "brainstorm on types and uses of scales and present in class,",
+    "collaborate with others to practice scale conversions on a topographical map and critique each other's work,",
+    "measure distances on a topographical map and share in class,",
+    "calculate the area of different places on a topographical map and share in class,",
+    "accomplish the task of carrying out a research on methods of representing physical features (drainage, relief features and vegetation) and share in class,",
+    "draw diagrams of the relief and drainage features on a topographical map,",
+    "use digital or print resources to search for essential critical thinking skills necessary for map interpretation (observation, analysis, communication, inference)."
+   ],
+   "key_inquiry_questions": [
+    "How can critical thinking be used in map interpretation?"
+   ],
+   "core_competences": "Creativity and Imagination: Learners exchange new ideas when discussing in groups the marginal information on a map.\nDigital literacy: Learners use digital devices to search for essential critical thinking skills necessary for map interpretation.",
+   "values": "Unity: Learners collaborate with others when practicing scale conversions on a topographical map.\nResponsibility: Learners accomplish the task of carrying out a research on different methods of representing physical features.",
+   "pcis": "Social cohesion: Learners work harmoniously in groups to practice scale conversions on a topographical map.",
+   "links": "The learner applies drawing skills from Creative Arts in drawing diagrams of the relief and drainage features on a topographical map.\nThe learner applies calculation skills from Mathematics in working out the area of different places on a topographical map.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     38,
+     39
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.a",
+     "letter": "a",
+     "text": "interpret maps using marginal information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.b",
+     "letter": "b",
+     "text": "calculate areas of places on a topographical map",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.c",
+     "letter": "c",
+     "text": "describe the different methods of representing physical features on topographical maps",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.d",
+     "letter": "d",
+     "text": "apply critical thinking skills in map interpretation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.e",
+     "letter": "e",
+     "text": "value map reading and interpretation in day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE",
+   "number": "4.2",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Weather and Climate",
+   "sequence": 402,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Desert",
+    "Semi-desert",
+    "Tropical",
+    "Mediterranean",
+    "Mountain"
+   ],
+   "learning_experiences": [
+    "use print or digital resources to research on the factors influencing weather and climate in Africa and share in class,",
+    "draw a map of Africa and indicate the major climatic regions and display it in class,",
+    "view a video clip/film or use print materials on the distribution and characteristics of major climatic regions of Africa, (desert, semi-desert, tropical, mediterranean and mountain) and make short notes,",
+    "discuss ways of managing stress during disasters caused by climate change,",
+    "brainstorm on the causes and effects of climate change and share in class,",
+    "become aware of own responsibility in the society as they perform a skit on problem-solving skills to address effects of climate change,",
+    "find extra information as they engage with a resource person to discuss the effects of weather and climate on personal wellbeing and human activities."
+   ],
+   "key_inquiry_questions": [
+    "How does climate change affect human activities?",
+    "How can one manage stress during disasters?"
+   ],
+   "core_competences": "Critical thinking and Problem solving: Learners find extra information when engaging with a resource person to discuss the effects of weather and climate on personal wellbeing and human activities.",
+   "values": "Patriotism: Learners become aware of their own responsibility in addressing the effects of climate change in the community.\nResponsibility: Learners engage in the task of drawing a map of Africa and indicating the climatic regions.",
+   "pcis": "Disaster and risk reduction: Learners brainstorm in groups on the causes and effects of climate change and share in class.\nEnvironmental education: Learners become aware of the effects of climate change as they perform a skit on problem-solving skills to address effects of climate change.",
+   "links": "The learner applies drawing skills from Creative Arts in drawing a map of Africa and indicating the climatic regions.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     40,
+     41
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.a",
+     "letter": "a",
+     "text": "examine factors influencing climate in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.b",
+     "letter": "b",
+     "text": "illustrate distribution and characteristics of major climatic regions of Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.c",
+     "letter": "c",
+     "text": "explore positive ways of managing disaster-related stress",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.d",
+     "letter": "d",
+     "text": "apply problem-solving skills in addressing effects of climate change on the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.e",
+     "letter": "e",
+     "text": "recognise the effects of climate on human activities",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA",
+   "number": "4.3",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Vegetation in Africa",
+   "sequence": 403,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm in groups factors influencing vegetation in Africa and do a presentation in class,",
+    "carry out a field excursion of the immediate environment and identify the different types of vegetation,",
+    "use digital or print resources to find out the vegetation regions in Africa,",
+    "use digital or print resources to identify the characteristics of vegetation in Africa,",
+    "draw the map of Africa and indicate the vegetation regions,",
+    "care for the environment when creating posters on methods of conserving vegetation in the locality,",
+    "write essays on ways of caring for vegetation in the school community,",
+    "speak clearly as they debate on the importance of vegetation in the community and make short notes,",
+    "reflect and share on their personal interest in professions associated with vegetation conservation."
+   ],
+   "key_inquiry_questions": [
+    "Why should we care for vegetation in our environment?"
+   ],
+   "core_competences": "Communication and Collaboration: Learners speak clearly during debate on importance of vegetation in the community.\nCitizenship: Learners enhance skills of caring for the environment when creating posters on methods of conserving vegetation in the locality.\nDigital literacy: Learners use digital devices to accomplish the task of finding out the vegetation regions in Africa.",
+   "values": "Unity: Learners display team spirit when carrying out a field excursion of the immediate environment and identify the different types of vegetation.\nResponsibility: Learners accomplish the task of finding out the vegetation regions in Africa.",
+   "pcis": "Environmental education: Learners participate in debating on the importance of vegetation in the community.",
+   "links": "The learner applies skills from Agriculture as they discuss methods of conserving vegetation in the locality.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     42,
+     43
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.a",
+     "letter": "a",
+     "text": "explain factors influencing vegetation distribution in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.b",
+     "letter": "b",
+     "text": "describe the characteristics of major vegetation regions of Africa on the map",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.c",
+     "letter": "c",
+     "text": "locate the major vegetation regions of Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.d",
+     "letter": "d",
+     "text": "apply methods of conserving vegetation in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.e",
+     "letter": "e",
+     "text": "explore personal interests in conservation of vegetation for career exploration",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.f",
+     "letter": "f",
+     "text": "appreciate vegetation conservation for environmental sustainability",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON",
+   "number": "4.4",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Historical Sites and Monuments in Africa",
+   "sequence": 404,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "Fort Jesus",
+    "Kilwa",
+    "Great Zimbabwe",
+    "Giza pyramids",
+    "Meroe",
+    "Timbuktu",
+    "Robben Island"
+   ],
+   "learning_experiences": [
+    "use digital or print resources to trace selected historical sites and monuments in Africa and present in class,",
+    "draw a map of Africa and indicate the selected historical sites and monuments and share in class,",
+    "develop the skill of constructive dialogue as they brainstorm in groups on the importance of historical sites and monuments in Africa and share in class,",
+    "work harmoniously in groups, and use digital or print resources to find out ways of conserving historical sites and monuments and present them in class,",
+    "discuss ways of applying creative thinking in preserving cultural heritage,",
+    "design strategies to overcoming challenges, preserving cultural heritage sites and share,",
+    "collect pictures and photographs, and create an album of historical sites and monuments, and display them in class."
+   ],
+   "key_inquiry_questions": [
+    "Why should we conserve historical sites and monuments?"
+   ],
+   "core_competences": "Creativity and Imagination: Learners exchange new ideas when applying creative thinking strategies to overcome challenges in conserving cultural heritage.\nCitizenship: Learners develop the skill of constructive dialogue when brainstorming in groups on the importance of historical sites and monuments in Africa.",
+   "values": "Unity: Learners display team spirit when brainstorming in groups on the importance of historical sites and monuments in Africa and share in class.\nPatriotism: Learners demonstrate love for their own community by preserving cultural heritage.",
+   "pcis": "Nationalism: Learners display national pride when finding out ways of conserving historical sites and monuments.\nSocial cohesion: Learners work harmoniously as they use digital or print resources to find out ways of conserving historical sites and monuments and present them in class.",
+   "links": "The learner applies Creative Arts skills when drawing a map of Africa and tracing the selected historical sites and monuments.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     44,
+     45,
+     46
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.a",
+     "letter": "a",
+     "text": "locate selected historical sites and monuments in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.b",
+     "letter": "b",
+     "text": "examine the importance of historical sites and monuments for the preservation of cultural heritage",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.c",
+     "letter": "c",
+     "text": "explore ways of conserving historical sites and monuments in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.d",
+     "letter": "d",
+     "text": "apply ways of conserving cultural heritage in community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.e",
+     "letter": "e",
+     "text": "desire to conserve historical sites and monuments in the locality in promoting cultural heritage",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY",
+   "number": "5.1",
+   "strand": "Political Developments and Governance",
+   "sub_strand": "The Constitution of Kenya",
+   "sequence": 501,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, discuss the components of the Constitution of Kenya,",
+    "work harmoniously in groups to create charts showing the three arms of government, their roles and inter-relationships, and display them,",
+    "display team spirit as they brainstorm in groups on the guiding principles of leadership and integrity in the Constitution of Kenya,",
+    "reflect on situations in their past when they needed to be assertive and how it can be applied in upholding principles of leadership and integrity in daily interactions,",
+    "develop critical and constructive dialogue as they debate on whether or not leaders in Kenya adhere to their constitutional responsibilities."
+   ],
+   "key_inquiry_questions": [
+    "Why do we need a constitution?",
+    "Why is assertiveness important in adhering to the Constitution of Kenya?"
+   ],
+   "core_competences": "Citizenship: Learners develop critical and constructive dialogue when debating on whether or not leaders in Kenya adhere to their constitutional responsibilities.",
+   "values": "Integrity: Learners choose to do the right thing by applying assertiveness in upholding principles of leadership and integrity in daily interactions.\nUnity: Learners display team spirit when brainstorming in groups on the guiding principles of leadership and integrity in the Constitution of Kenya.",
+   "pcis": "Good governance: Learners brainstorm in groups on the guiding principles of leadership and integrity in the Constitution of Kenya.\nSocial cohesion: Learners work harmoniously in groups when creating charts showing the three arms of government, their roles and interrelationships.",
+   "links": "The learner applies Language skills when debating on whether or not leaders in Kenya adhere to their Constitutional responsibilities.\nThe learner applies Creating Arts skills as they create charts showing the three arms of government, their roles and interrelationships.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     49,
+     50
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.a",
+     "letter": "a",
+     "text": "explore components of the Constitution of Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.b",
+     "letter": "b",
+     "text": "illustrate roles of the three arms of government of Kenya in reference to the relevant chapters in the Constitution",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.c",
+     "letter": "c",
+     "text": "examine guiding principles of leadership and integrity in the Constitution of Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.d",
+     "letter": "d",
+     "text": "apply assertiveness in upholding principles of leadership and integrity in daily interactions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.e",
+     "letter": "e",
+     "text": "exhibit good leadership intended in chapter six of the Constitution of Kenya",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.POLITI.HUMAN_RIGHTS",
+   "number": "5.2",
+   "strand": "Political Developments and Governance",
+   "sub_strand": "Human Rights",
+   "sequence": 502,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "foster fairness and justice among peers as they brainstorm on how human rights can be respected and protected in the community,",
+    "role-play scenarios that depict the process of effective communication on human rights issues,",
+    "enhance communication and collaboration skills within diverse group to perform a skit depicting ways in which children are protected against violation of their rights,",
+    "enhance the skill of finding extra information as they use print or digital resources to search and identify the rights of the child as stipulated in the Children’s Act (latest version) and the African Charter on the rights and welfare of the child,",
+    "exhibit the value of human dignity as they design an “issue tree” and use it to investigate the root causes, effects and possible solutions to the violation of human rights ."
+   ],
+   "key_inquiry_questions": [
+    "How can we promote respect for Children’ Rights in the community?",
+    "How can effective communicatio n foster respect for Human Rights?"
+   ],
+   "core_competences": "Citizenship: Learners enhance communicating and collaborating skills within diverse groups when performing a skit depicting ways in which children are protected against violation of their rights.\nCritical thinking and Problem solving: Learners enhance the skill of finding extra information when searching and identifying the rights of the child using digital or print resources.",
+   "values": "Social justice: Learners foster fairness and justice among peers when brainstorming on how human rights can be respected and protected in the community.\nRespect: Learners exhibit value of human dignity when designing an “issue tree” and use it to investigate the root causes, effects and possible solutions to the violation of human rights.",
+   "pcis": "Good governance: Learners become aware of protection of children against violation of their rights.",
+   "links": "The learner applies knowledge on promoting human dignity in the society from Religious Education as they learn about human rights.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     51,
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.a",
+     "letter": "a",
+     "text": "explore how human rights can be respected and protected in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.b",
+     "letter": "b",
+     "text": "describe the process of effective communication on human rights issues",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.c",
+     "letter": "c",
+     "text": "outline Children’s Rights in Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.d",
+     "letter": "d",
+     "text": "demonstrate ways in which children are protected against violation of their Rights in Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.e",
+     "letter": "e",
+     "text": "recognise responsibility of the society in protecting human rights",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G8.POLITI.CITIZENSHIP",
+   "number": "5.3",
+   "strand": "Political Developments and Governance",
+   "sub_strand": "Citizenship",
+   "sequence": 503,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on qualities and responsibilities of a global citizen in the world today,",
+    "use print or digital resources to find out the responsibilities of a global citizen,",
+    "become aware about responsibilities of global citizens by developing communication messages or posters on the responsibilities of a global citizen in the world today,",
+    "in groups, discuss factors for harmonious coexistence among citizens in East Africa and Africa,",
+    "practice and sing the Eastern Africa Community (EAC) and African Union (AU) anthems,",
+    "research on social entrepreneurship and active participation for personal and social wellbeing and write a report,",
+    "discuss ways in which Nobel Prize nominees responded to injustice situations in the society,(differences and similarities about how (Wangari Maathai and Mahatma Gandhi)",
+    "design examples social entrepreneurship and active participation in the community for personal and social well-being,",
+    "write an essay on the importance of empathy to personalities who volunteer to address injustices in society."
+   ],
+   "key_inquiry_questions": [
+    "How can we promote global citizenship?",
+    "How can we show empathy as global citizens?"
+   ],
+   "core_competences": "Citizenship: Learners demonstrate tolerance, expressing and understanding different viewpoints when debating on differences and similarities about how (Wangari Maathai and Mahatma Gandhi) responded to injustice situations in society.\nSelf-efficacy: Learners identify examples social entrepreneurship and active participation in the community for personal and social well-being,",
+   "values": "Patriotism: Learners become aware of their own responsibilities in the society when describing the qualities and responsibilities of a global citizen.",
+   "pcis": "Civic responsibility: Learners become aware about responsibilities of global citizens when developing communication messages or posters on responsibilities of a global citizen in the world today.",
+   "links": "The learner applies knowledge in Religious Studies as they learn about factors for harmonious coexistence among citizens in East Africa and Africa.\nThe learner applies singing skills in Creative Arts when practicing and singing the Eastern Africa Community (EAC) and African Union (AU) anthems.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Social Studies Grade 8 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     53,
+     54,
+     55
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.a",
+     "letter": "a",
+     "text": "describe qualities of a global citizen in an interconnected society",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.b",
+     "letter": "b",
+     "text": "explore ways in which Nobel Prize nominees responded to injustice situations in the society",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.c",
+     "letter": "c",
+     "text": "explain factors for harmonious coexistence among citizens in East Africa and Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.d",
+     "letter": "d",
+     "text": "exhibit social entrepreneurship and active participation in the community for personal and social well-being",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.e",
+     "letter": "e",
+     "text": "show empathy to personalities who volunteer to address injustices in society",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

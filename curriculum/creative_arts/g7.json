@@ -1,0 +1,1135 @@
+{
+ "framework": "cbc",
+ "subject_key": "creative_arts",
+ "grade": 7,
+ "source": "KICD Creative Arts And Sports, First published 2022; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 3,
+  "sub_strands": 15,
+  "outcomes": 73,
+  "lessons": 151,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE",
+   "number": "1.1",
+   "strand": "Foundations of Creative Arts and Sports",
+   "sub_strand": "Introduction to Creative Arts and Sports",
+   "sequence": 101,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "Categories Visual Arts, Music and dance, drama and film and Sports",
+    "Collage",
+    "Relationships among the categories of Creative Arts and Sports (functions, execution, visual, presentation, competition, audience, attire, themes, team effort),"
+   ],
+   "learning_experiences": [
+    "watch, in groups, actual or virtual activities of Creative Arts and Sports to describe the categories Visual Arts, Music and dance, drama and film and Sports,",
+    "discuss the relationships among the categories of Creative Arts and Sports",
+    "collaboratively collect picture inspired by Creative Arts and Sports activities,",
+    "paste the pictures to make a collage,",
+    "give feedback on own and others’ displayed collage on the categories of Creative Arts and Sports."
+   ],
+   "key_inquiry_questions": [
+    "How are the categories of the Creative Arts and Sports related?"
+   ],
+   "core_competences": "Learning to learn: the learner uses digital devices to explore, collect and present information on the categories and relationships of Creative Arts and Sports.\nCommunication: the learner exhibits communication skills as they give feedback on their own and others’ work in groups to research and come up with ideas on categories of Creative Arts and Sports.\nCollaboration: the learner collaboratively collects pictures of creative Arts and sports activities; and shares materials\nCreativity and imagination: the learner innovatively make a collage on categories of Creative Arts and Sports.",
+   "values": "Unity: the learner cooperates with group members in making, decorating and displaying a collage on categories of Creative Arts and Sports.\nLove: the learner shares the available materials while exploring and making a collage in Creative Arts and Sports.\nRespect: the learner appreciates others’ views during discussions on relationships among the Creative Arts and Sports categories.",
+   "pcis": "Social cohesion: the learner cooperates with others in group activities while exploring actual or virtual activities in Creative Arts and Sports.\nSocial Awareness skills: the learner develops effective communication skills during group discussions on categories of Creative Arts and Sports.\nEnvironmental education: the learner uses appropriate found materials from the environment when making the chart.",
+   "links": "English: the learner utilises language and communication skills as they discuss, and present, enhancing their linguistic capabilities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     14,
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.a",
+     "letter": "a",
+     "text": "describe categories of Creative Arts and Sports",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.b",
+     "letter": "b",
+     "text": "outline the relationships among the categories of Creative Arts and Sports",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.c",
+     "letter": "c",
+     "text": "make a collage on the categories of the Creative Arts and Sports",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.d",
+     "letter": "d",
+     "text": "appreciate the categories of Creative Arts and Sports",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A",
+   "number": "1.2",
+   "strand": "Foundations of Creative Arts and Sports",
+   "sub_strand": "Components of Creative Arts and Sports",
+   "sequence": 102,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "Elements of a story (character, setting, plot and theme)",
+    "Components of Fitness (Coordination and strength)",
+    "Note values and their rests: semibreve, minim, crotchet a pair of quavers and their rests,",
+    "Pitch: treble staff, ledger lines, scale of C major, keyboard"
+   ],
+   "learning_experiences": [
+    "discuss the elements of a story: character, setting, plot and theme,",
+    "observe actual or virtual activities of fitness that show coordination and strength in physical fitness,",
+    "demonstrate fitness exercises that enhance coordination and strength,",
+    "practise activities that enhance coordination and strength using music,",
+    "draw the treble staff and name lines and spaces including ledger lines,",
+    "draw the piano keyboard and relate to the treble staff,",
+    "group music notes in 2 time, 4",
+    "watch videos or films to appreciate how the components of Creative Arts and Sports relate to each other."
+   ],
+   "key_inquiry_questions": [
+    "How are the components of Creative Arts and Sports inter-related?",
+    "How are components of Creative Arts and Sports applied?"
+   ],
+   "core_competences": "Communication: the learner develops effective verbal expression and written communication skills while discussing the elements of storytelling.\nCollaboration: the learner embraces teamwork and mutual support while singing familiar tunes.\nDigital Literacy: the learner interacts with digital devices while watching virtual activities of fitness and watching videos to appreciate how the components of Creative Arts and Sports relate to each other.\nCritical Thinking and Problem Solving: the learner applies critical thinking to demonstrate fitness exercises from the observations made related to physical fitness.",
+   "values": "Responsibility: the learner steps up for their health and well-being by participating in fitness activities.\nUnity: the learner works together with others to achieve common goals in group activities, fostering a supportive and inclusive environment.\nCitizenship: the learner appreciates diverse musical expressions thus fostering a sense of citizenship.",
+   "pcis": "Lifestyle diseases: The learner performs fitness activities to reduce the chances of lifestyle diseases.",
+   "links": "English and Kiswahili: the learner enhances language comprehension and interpretation skills during group discussions and presentations.\nMathematics: the learner employs learnt mathematical principles of rhythm, values, timing, during music notation.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: experiences.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.a",
+     "letter": "a",
+     "text": "describe elements of a story",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.b",
+     "letter": "b",
+     "text": "perform activities demonstrating the components of fitness",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.c",
+     "letter": "c",
+     "text": "write note values on a treble staff",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.d",
+     "letter": "d",
+     "text": "name pitches on treble staff",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.e",
+     "letter": "e",
+     "text": "group music notes in 2 time, 4",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.f",
+     "letter": "f",
+     "text": "appreciate the components of Creative Arts and Sports",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING",
+   "number": "2.1",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Drawing and Painting",
+   "sequence": 201,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Drawing (line, tone, balance)",
+    "Painting (cool/war m colours)"
+   ],
+   "learning_experiences": [
+    "observe drawings to review use of line and tone; and discuss balance of forms,",
+    "draw set up of balls using any dry media focusing on; balance of forms in a space,",
+    "create tone on the drawing using smudging considering; blending and variation of tone,",
+    "discuss warm and cool colours on the colour wheel and pictures in regards to; recession /progression and emotional symbolism,",
+    "paint an imaginative sea scape using either warm or cool colours,",
+    "mat mount pictures,",
+    "display the artworks and take turn to talk about own and others work."
+   ],
+   "key_inquiry_questions": [
+    "How can balance be achieved in a drawing?",
+    "What emotions do different colours evoke in us when we look at them?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner's creativity paint a scenery using; warm colours (progression), and cool colours (recession),\nSelf-Efficacy: The learner displays their artwork and take turn to talk about own and others work.",
+   "values": "Integrity: The learner upholds integrity by honestly representing their artistic ideas and expressing themselves authentically through their pictorial compositions.\nRespect: The learner take turn to talk about own and others drawing and paintings",
+   "pcis": "Environmental Awareness: The learner, through their choice of materials and subject matter, reflects an awareness of environmental issues, contributing to the discourse on sustainable art practices.",
+   "links": "Social Studies: The learner connects with social studies through the exploration of cultural themes and societal influences, reflecting in their artwork inspired by sport activities.\nIntegrated Science: The learner engages with integrated science by demonstrating an understanding of colour theories and the scientific principles behind artistic techniques.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     19,
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.a",
+     "letter": "a",
+     "text": "explain balance in a picture",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.b",
+     "letter": "b",
+     "text": "draw a picture to apply balance",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.c",
+     "letter": "c",
+     "text": "analyse cool and warm colours for colour temperature",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.d",
+     "letter": "d",
+     "text": "paint a scenery based on colour temperature",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.e",
+     "letter": "e",
+     "text": "appreciate own and others' pictorial composition",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.RHYTHM",
+   "number": "2.2",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Rhythm",
+   "sequence": 202,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Time signature,",
+    "Repetition of note",
+    "Note values and their corresponding rests,( semibreve, minim, crotchet, and a pair of quavers)",
+    "Variation of note",
+    "Body movements",
+    "French rhythm names (taa-aa-aa-aa, taa-aa, taa, ta-te,)"
+   ],
+   "learning_experiences": [
+    "watch virtual or live spaces to listen to simple tunes and outline factors to consider in creating a rhythmic pattern,",
+    "recite the rhythmic patterns using French rhythm names,",
+    "compose 4 bar rhythmic patterns in 2 time, 4",
+    "listen to and write 4 bar rhythmic patterns in 2 4 time on monotone,",
+    "sight read rhythmic patterns created by self and others."
+   ],
+   "key_inquiry_questions": [
+    "What constitutes rhythm in music?",
+    "2.How are rhythmic patterns used in sports?"
+   ],
+   "core_competences": "Communication and Collaboration: as the learner articulates ideas and collaborates with peers to refine their understanding of the concept of rhythm.\nLearning to Learn: the learner acquires knowledge in rhythm as a fundamental component of musical creation, performance and analysis.\nCritical thinking and Problem-solving: as the learner composes and improvises rhythmic patterns to accompany warm-up routines.",
+   "values": "Integrity: as the learner composes rhythm, the commitment to conveying this musical element with precision reflects a sense of integrity in their approach to musical expression.\nResponsibility: as the learner composes four-bar rhythmic patterns, taking responsibility for individual contributions to the composition process is crucial in ensuring a sense of responsibility for their part in the musical collaboration.\nRespect: as the learner engages in the creative and collaborative process of valuing each other's ideas and contributions to demonstrate respect among musicians to create a positive and respectful musical environment.\nUnity: as the learner improvises rhythmic patterns, the collaborative nature of responding to others’ contributions promotes a sense of togetherness in creating a musical experience.",
+   "pcis": "Lifestyle diseases: The learner performs rhythms to various movements to reduce the chances of lifestyle diseases.\nSelf-esteem: the learner creates new rhythmic patterns for self-satisfaction.",
+   "links": "English: Writing about the factors involved in creating rhythmic patterns contributes to English language skills. This task involves the use of descriptive language, explanation, and the organisation of ideas.\nMathematics: Identifying mathematical elements in rhythm, such as beats and timing, connects to mathematical concepts. The learner may analyse and quantify aspects of rhythmic creation.\nIntegrated Science: Experimenting with the properties of sound during improvisation connects to integrated science. The learner may explore the scientific aspects of creating different rhythmic sounds.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: experiences.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.RHYTHM.a",
+     "letter": "a",
+     "text": "outline factors to consider in creating a rhythmic pattern in simple time",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.RHYTHM.b",
+     "letter": "b",
+     "text": "compose a four- bar rhythmic pattern in 2 time, 4",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.RHYTHM.c",
+     "letter": "c",
+     "text": "write rhythmic patterns in 2 on monotone from 4 dictation",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.RHYTHM.d",
+     "letter": "d",
+     "text": "sight read rhythmic patterns on monotone",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.RHYTHM.e",
+     "letter": "e",
+     "text": "appreciate rhythmic patterns created by self and others",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE",
+   "number": "2.3",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Javelin and Sculpture",
+   "sequence": 203,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "Javelin throw",
+    "Javelin appearance",
+    "Carving",
+    "Decorating Javelin (sanding, texturing or smoking)"
+   ],
+   "learning_experiences": [
+    "research and discuss carving as a technique in sculpture with focus on; practise in Kenya, materials and tools,",
+    "observe actual or virtual images of a javelin with focus on; (general shape, length, thickness and weight),",
+    "select and explore suitable materials and tools for carving a javelin implement,",
+    "carve a javelin while observing the following: sketching image, carve out the negative parts of the javelin focusing on the shape and pointedness, craftsmanship, apply Africa pattern decorative techniques to enhance the javelin by engraving or painting the patterns),",
+    "finish the javelin using appropriate techniques,",
+    "use the available digital devices or text to observe javelin throw and note the following phases; carry, approach run, cross over, release and follow through,",
+    "demonstrate the javelin throw while observing safety,",
+    "practise javelin throw while observing the five phases and the basic safety,",
+    "acknowledge others' effort by giving feedback on the carved javelin and throwing effort."
+   ],
+   "key_inquiry_questions": [
+    "Which safety considerations are important in carving and throwing a javelin?",
+    "How does Javelin throwing enhance fitness?"
+   ],
+   "core_competences": "Learning to Learn: the learner demonstrates craftsmanship in carving a javelin implement according to the right specifications,\nCreativity and Imagination: the learner selects found materials from environment to use in carving the javelin implement,\nSelf-efficacy: the learner develops self-efficacy, when carving a javelin implement according to the right specifications and executing a javelin throw following the phases correctly.",
+   "values": "Unity: the learner assists each other in safely executing a javelin throw.\nIntegrity: the learner upholds integrity by adhering to basic safety, while practising a javelin throw.\nResponsibility: the learner demonstrates responsibility by ensuring precision and adherence to specifications in carving a javelin.",
+   "pcis": "Safety and Security: observed when the learner carefully handles and uses carving tools to create a javelin implement,\nEnvironmental conservation: the learner uses found materials to carve a javelin implement while conserving the environment.",
+   "links": "Mathematics: The learner uses mathematical concepts such as weight and length in carving a javelin and performing.\nEnglish and Kiswahili: The learner expresses their observations, understanding, and findings on a javelin in well-structured and articulate ways employing learnt language skills.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 12, summary says 10.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     23,
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.a",
+     "letter": "a",
+     "text": "identify materials for carving in sculpture",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.b",
+     "letter": "b",
+     "text": "carve a javelin according to the right specification",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.c",
+     "letter": "c",
+     "text": "decorate the javelin using appropriate techniques",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.d",
+     "letter": "d",
+     "text": "perform a javelin throw following the throwing phases",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.e",
+     "letter": "e",
+     "text": "appreciate each other's carved javelin and effort in throwing the javelin",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.MELODY",
+   "number": "2.4",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Melody",
+   "sequence": 204,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Qualities of a good melody: singable - with leaps of a 3rd, has identifiable shape/contour, symmetry, starts on d, m or s, and ends on d,",
+    "Melodies in C major"
+   ],
+   "learning_experiences": [
+    "sing familiar tunes to outline the qualities of a good melody,",
+    "orally compose and notate 4-bar melodies in C major and 2 time, 4",
+    "create and notate four- bar melodies in C major and in 2 4 time using the treble staff,",
+    "sight read 4-bar melodies in C major and in 2 time using voice 4 or descant recorder,",
+    "give feedback on melodies composed by self and others."
+   ],
+   "key_inquiry_questions": [
+    "What attributes contribute to a good melody?"
+   ],
+   "core_competences": "Self-Efficacy: the learner gains confidence through creating melodies that bear acceptable qualities.\nLearning to Learn: the learner learns music notation and designs the seasonal melody card, and thus develops a novel approach to expressing musical concepts.\nDigital Literacy: is enhanced by using digital notation software, gaining proficiency in contemporary music creation tools, and navigating digital platforms.\nCommunication and Collaboration: as the learner composes melody, effective communication is fostered through discussions with peers, sharing perspectives, and engaging in group analyses, contributing to a collaborative understanding of musical elements.",
+   "values": "Respect: the learner values diverse perspectives and opinions from others about the qualities of a good melody.\nPatriotism: the learner incorporates Western and Kenyan cultural elements into their artistic expressions when designing the melody card using locally found objects and composing melody, as a sign of pride and connection to their cultural identity.\nResponsibility: the learner shows commitment to the creative processes involved in melody composing, which include learning to sight read melodies, designing melody cards and giving feedback on melodies created by self and others.\nUnity: the learner works with others to collect materials to design melody cards, perform parts of the melodies and present them, emphasising collaborative creativity.\nLove: learners passionately explore and appraise each other’s creations for qualities that qualify them as good melodies and well-designed cards, to show their connection to music experience and to each other.",
+   "pcis": "Citizenship: the learner acquires global citizenship, by writing music using Western Music notation, an internationally acceptable and conventional means of Music representation,\nEnvironmental Education: the learner uses appropriate found materials from the environment when embellishing the melody card.\nLearner Support Programmes: the learner, when creating melody and designing a melodic card, nurtures their artistic and musical talent.",
+   "links": "Mathematics: Musical notation involves mathematical concepts such as rhythm, timing and understanding musical patterns, providing a cross-disciplinary application of mathematical principles.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: experiences.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.MELODY.a",
+     "letter": "a",
+     "text": "outline the qualities of a good melody",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.MELODY.b",
+     "letter": "b",
+     "text": "compose a four-bar melody in C major",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.MELODY.c",
+     "letter": "c",
+     "text": "perform created pieces of music in C major",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.MELODY.d",
+     "letter": "d",
+     "text": "enjoy creating melodies in C major",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.HANDBALL",
+   "number": "2.5",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Handball",
+   "sequence": 205,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "Passes: side pass, jump pass and flick pass.",
+    "Dribbling: high and low.",
+    "Shooting: Jump shot"
+   ],
+   "learning_experiences": [
+    "watch a virtual or observe a demonstration of passes, dribbling and shooting in Handball,",
+    "demonstrate the side, jump and flick passes in Handball,",
+    "practise the passing skills in playing Handball,",
+    "demonstrate the high and low dribbling skills in Handball,",
+    "practise the dribbling skills in Handball game,",
+    "demonstrate jump shot skills,",
+    "practise shooting using jump shot skills while observing safety,",
+    "apply passing, dribbling and shooting skills in a mini Handball game while observing safety,",
+    "talk about each other's effort in passing, dribbling and shooting while playing Handball."
+   ],
+   "key_inquiry_questions": [
+    "How does playing Handball enhance body health?"
+   ],
+   "core_competences": "Self-efficacy: the learner develops confidence and belief in their skills and ability while engaging in a Handball game.\nDigital literacy: as the learners operate digital devices to observe virtual demonstration of passes, dribbling and jump shot in Handball.\nLearning to learn: the learner demonstrates willingness and eagerness to learn the passing, dribbling and shooting by observing the demonstrations in Handball game.",
+   "values": "Responsibility: the learner observes safety of own and others while playing Handball.\nRespect: the learner appreciates the need for respect of each other as they practise and perform handball skills thus emphasising the importance of sportsmanship.\nUnity: the learner interacts and collaborates with peers during the demonstration and practise of skills learnt in Handball during the mini game.",
+   "pcis": "Self-awareness: the learner develops self-esteem and interpersonal relationships enhancing their abilities while playing Handball games.\nValues in Sports: The learner acquires the value of sportsmanship while playing Handball.",
+   "links": "Mathematics: The execution of dribbling skills in handball involves spatial awareness, angles, and force application, connecting to mathematical concepts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     28,
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.HANDBALL.a",
+     "letter": "a",
+     "text": "describe passing, dribbling and jump shot in Handball game",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.HANDBALL.b",
+     "letter": "b",
+     "text": "perform the passing skills in Handball",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.HANDBALL.c",
+     "letter": "c",
+     "text": "execute dribbling in Handball for skill acquisition",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.HANDBALL.d",
+     "letter": "d",
+     "text": "execute jump shot in Handball for enjoyment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.HANDBALL.e",
+     "letter": "e",
+     "text": "appreciate each other's efforts in playing Handball game",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.DESCANT_RECORDER",
+   "number": "2.6",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Descant Recorder",
+   "sequence": 206,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Interpreting melodies on staff notation: -Key signature -Time Signature -Note values",
+    "Performance directions-dynamics (loud and soft) and tempo (fast and slow),"
+   ],
+   "learning_experiences": [
+    "brainstorm on factors to consider when interpreting melodies written on staff,",
+    "discuss the interpretation of performance directions on a piece of music for descant recorder,",
+    "perform a solo descant recorder piece in C major and in 2 time, 4",
+    "observe performance directions while playing a solo piece in C major in 2 time on a descant 4 recorder."
+   ],
+   "key_inquiry_questions": [
+    "What is the value of sight reading music?",
+    "Why are performance directions important in music?"
+   ],
+   "core_competences": "Self-Efficacy: the learner, while executing solo pieces, exhibits self-efficacy, fostering personal growth.\nDigital Literacy: the learner demonstrates digital literacy in preparing and sharing musical ideas, accessing sheet music, online tutorials, and other collaborative spaces.\nLearning to Learn: the learner consistently practises, adjusts, and seeks feedback, reflecting a self-directed and adaptive learning approach.",
+   "values": "Unity: The learner collaborates with peers during rehearsals, fostering a sense of togetherness in the pursuit of musical knowledge.\nRespect: the learner demonstrates an appreciation of Western Music traditions and is respectful in approaching this artistic expression.",
+   "pcis": "Self-awareness: the learner develops self-esteem and interpersonal relationships enhancing their abilities while practising playing the descant recorder.",
+   "links": "Mathematics: mathematical concepts of timing, beats, and sequences are applied in rhythmic patterns and melodic intervals in performance of the descant recorder pieces.\nIntegrated Science: principles of sound and soundwaves transmission are used in playing the descant recorder.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: experiences.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.DESCANT_RECORDER.a",
+     "letter": "a",
+     "text": "outline factors to consider in interpreting melodies on staff notation",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.DESCANT_RECORDER.b",
+     "letter": "b",
+     "text": "sight read simple melodies on descant recorder from staff notation",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.DESCANT_RECORDER.c",
+     "letter": "c",
+     "text": "play a piece in C major on a descant recorder",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.DESCANT_RECORDER.d",
+     "letter": "d",
+     "text": "perform simple melodies on a descant recorder observing performance directions",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.DESCANT_RECORDER.e",
+     "letter": "e",
+     "text": "appreciate playing music in C major on the descant recorder",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI",
+   "number": "2.7",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Storytelling and Animation",
+   "sequence": 207,
+   "lessons": 11,
+   "optional": false,
+   "content_topics": [
+    "Storytelling techniques (use of voice, use of body, use of songs, audience involvement, props and costumes),",
+    "Storyline (beginning, middle, end)",
+    "Composing a story",
+    "Flipbook animation",
+    "Performing a story"
+   ],
+   "learning_experiences": [
+    "watch live/recorded narration clips to discuss storytelling techniques (use of voice, use of body, use of songs, audience involvement, props and costumes),",
+    "explore to identify a pertinent and contemporary issue in society for storytelling,",
+    "develop, in groups, a character/characters for a story,",
+    "arrange milestones in a sequential order (beginning, middle and end) to create a short story,",
+    "draw a sequence of a moving character to create a flip book animation focussing on;(sequencing of objects/image(s), positioning of objects on subsequent pages, creativity (storyline),",
+    "finish and present the flip book with focus on: craftsmanship in use of materials and tools, - collating the papers, binding of papers (using string/stapling,",
+    "riffle the flip book by emphasising on; frequency of image(s), speed of flick per second to animate the story,",
+    "perform a vocal and physical warm up exercises in readiness for storytelling,",
+    "rehearse the short story for performance,",
+    "perform a short story to an audience,",
+    "record the narration and avail it on a digital platform."
+   ],
+   "key_inquiry_questions": [
+    "How can storytelling be made interesting?",
+    "How can flip book animation be used in storytelling?"
+   ],
+   "core_competences": "Communication: the learner speaks clearly and engagingly during class discussions and when performing stories.\nCollaboration: the learner contributes to group activities when creating and performing stories.\nSelf-efficacy: In performing a story, the learner builds confidence and self-esteem.\nLearning to Learn: the learner is equipped with concepts, knowledge, and skills relevant for continued learning and life.\nDigital literacy: the learner interacts with ICT gadgets to research and watch digital content relating to narratives and film book animation.",
+   "values": "Respect: the learner accommodates others’ views when creating and performing the short story.\nPeace: the learner works in harmony with others during the rehearsal sessions and performance.\nIntegrity: the learner is equipped with the value of honesty through creation of own original works devoid of plagiarism.\nUnity: the learner works in groups when creating and performing stories.",
+   "pcis": "Social Cohesion: the learner acquires group cohesion skills while working with other team members.\nLife skills education: the learner gains communication skills through performances of stories.\nCareer guidance: the learner derives skills in the preparation of costumes and props from locally available materials and technology.",
+   "links": "English and Kiswahili: the learner takes part in class discussions using these languages as a medium of communication.\nIndigenous Languages: the learner uses these languages as a medium of communication as they interact with some resource persons from the community.\nSocial Science: the learner explores social science concepts by narrating stories that reflect different historical periods, cultural practices, or societal issues.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 11, summary says 12.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     32,
+     33,
+     34
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.a",
+     "letter": "a",
+     "text": "describe techniques used in storytelling",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.b",
+     "letter": "b",
+     "text": "explain qualities of a good flipbook",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.c",
+     "letter": "c",
+     "text": "compose a 3 to 5- minute story addressing an issue in society",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.d",
+     "letter": "d",
+     "text": "create a flipbook animation for storytelling",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.e",
+     "letter": "e",
+     "text": "perform a 3 to 5- minute story before an audience",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.f",
+     "letter": "f",
+     "text": "realise storytelling as a means of communication",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.FOOTBALL",
+   "number": "2.8",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Football",
+   "sequence": 208,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "Trapping",
+    "Dribbling",
+    "Shooting",
+    "Crayon etching"
+   ],
+   "learning_experiences": [
+    "watch a virtual or live football demonstration of trapping skill: foot, thigh and chest, dribbling skill: inside and outside of the foot and shooting: low drive and placed shot,",
+    "demonstrate foot, thigh and chest trapping in football,",
+    "practise the trapping skills in football,",
+    "demonstrate dribbling skills in football using the inside and outside of the foot,",
+    "practise the dribbling skills in football game,",
+    "demonstrate low drive and placed shot in football,",
+    "practise shooting in football using low drive and placed shot,",
+    "play a mini football match or game while ensuring the learnt skills in trapping, dribbling and shooting are applied.",
+    "improvise crayons from locally available materials, (melting the wax, add pigment, pour in the moulds, cool and cut to size),",
+    "source to cut out images inspired by the football skills,",
+    "apply crayon to fill the paper in varied patterns/shapes,",
+    "coat the surface with black media and trace the images to create a composition,",
+    "scratch creatively within the outline on the black media,",
+    "display and talk about own and others’ work."
+   ],
+   "key_inquiry_questions": [
+    "How can colours be used to show distance?",
+    "Why is ball control important in a football match?"
+   ],
+   "core_competences": "Creativity and imagination: learner applies crayon to fill the paper in varied patterns, shapes or colour.\nLearning to Learn: the learner acquires and refines new skills in practising football.\nSelf-Efficacy: Performing trapping, dribbling and shooting skills contributes to self-confidence as the learner showcases their ability to execute fundamental football skills.",
+   "values": "Responsibility: as the learner paints a landscape composition of a football field, they take ownership of creating a visually appealing representation and ensuring a clean working environment.\nUnity: as the learner performs football skills, they contribute to a positive and cooperative atmosphere, emphasising the importance of working together.",
+   "pcis": "Physical fitness: as the learner keeps fit while playing football for promotion of a healthy lifestyle.\nFriendship formation and interpersonal relationship: as the learner interacts and makes new friends during play.",
+   "links": "Mathematics: Dribbling and shooting involves quick calculations of distances and angles. The learner applies mathematical concepts to determine the most efficient paths and angles during dribbling, reinforcing practical mathematical application.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     35,
+     36,
+     37
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.FOOTBALL.a",
+     "letter": "a",
+     "text": "execute trapping skill in football",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.FOOTBALL.b",
+     "letter": "b",
+     "text": "perform dribbling skill in football",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.FOOTBALL.c",
+     "letter": "c",
+     "text": "execute shooting skill in football",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.FOOTBALL.d",
+     "letter": "d",
+     "text": "make improvised crayons for drawing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.FOOTBALL.e",
+     "letter": "e",
+     "text": "create a pictorial composition using crayon etching inspired by football game",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.FOOTBALL.f",
+     "letter": "f",
+     "text": "value team effort in a football game and crayon etched drawing",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.KENYAN_FOLK_SONGS",
+   "number": "2.9",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Kenyan Folk Songs",
+   "sequence": 209,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "Classification-community of origin, occasion, and gender",
+    "Folk song performing techniques- (voice projection and balance, phrasing, tempo, tone, dynamics, expression and interpretation, gestures and movement, intensity, mood, idiom/authenticity)"
+   ],
+   "learning_experiences": [
+    "brainstorm to classify the folk songs,",
+    "visit an actual or virtual cultural centre to watch and select a solo or group folk song from any Kenyan community for performance,",
+    "take a role in performing a solo or group folk song applying performance techniques"
+   ],
+   "key_inquiry_questions": [
+    "What is the role of folk songs in Kenyan society?",
+    "How can performances of Kenyan folk songs be made interesting?"
+   ],
+   "core_competences": "Citizenship: by performing folk songs from different Kenyan cultures, the learner recognizes and appreciates cultural diversity in Kenya, thus fostering a sense of shared responsibility in preserving and promoting cultural heritage.\nCritical thinking: is demonstrated as the learner interprets the significance of each component in a folk song, fostering a deeper understanding of cultural and musical expressions.\nLearning to Learn: is enhanced as the learner researches and adapts folk song performance and costume decoration techniques, demonstrating an openness to new ideas and methods.\nCreativity and Imagination: the learner explores and combines unique techniques in decorating the costumes by stencil printing, and selecting songs and materials for performance,\nDigital literacy is developed when the learner explores digital platforms to research, document and share folk song performances.\nCommunication and Collaboration: are honed as the learner speaks articulately and interacts with others toexecute various components of folk songs.",
+   "values": "Unity: expressed as the learner collaborates with others to improvise costumes, collect found materials, rehearse and perform folk song as a shared cultural experience.\nPatriotism: is encouraged as the learner showcases a pride in presenting the folk song, contributing to the celebration and recognition of Kenyan cultural heritage,\nIntegrity: is demonstrated as the learner improvises and decorates costumes that ensure authenticity and decency, and acknowledges the origin of the songs during the folk songs’ presentations,\nRespect is demonstrated as the learner performs and appreciates folksongs from diverse Kenyan cultures, thus recognizing the diversity in performance technique and musical expression.",
+   "pcis": "Citizenship Education: the learner performs folk songs whose content promotes cultural awareness.\nSocial Awareness: the learner understands the existence of folks songs as a means of cultural expression and encounters new themes and content while searching for and performing folk songs from different Kenyan communities,",
+   "links": "Social Studies: Classification of Folk songs involves understanding the cultural and social context of different Kenyan communities, linking to social science.\nLanguages (English, Kiswahili): Describing and communicating the ideas for costume improvisation requires effective communication skills, linking to language arts components in both English and Kiswahili.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 8, summary says 10.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     38,
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.KENYAN_FOLK_SONGS.a",
+     "letter": "a",
+     "text": "classify folk songs in Kenyan communities",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.KENYAN_FOLK_SONGS.b",
+     "letter": "b",
+     "text": "perform a folksong from a Kenyan community with appropriate techniques",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.KENYAN_FOLK_SONGS.c",
+     "letter": "c",
+     "text": "appreciate folk songs performance as means of cultural preservation",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT",
+   "number": "2.10",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Indigenous Kenyan Craft",
+   "sequence": 210,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Beadwork",
+    "Types of beads (plastic/cl ay/shells/ bone/ wood)"
+   ],
+   "learning_experiences": [
+    "watch actual/ virtual samples, research and brainstorm on beadwork in Kenyan communities with focus on; type and function of the beaded jewellery,",
+    "source for beads and strings/fishing line in the environment,",
+    "prepare the materials focusing on; size, shape and colour,",
+    "make a beaded jewellery (bracelet) inspired by patriotism for Kenya with focus on colour and pattern using one-way technique and criss-cross technique.",
+    "research on varied Kenyan patriotic songs for performance,",
+    "sing a patriotic song adorned in beaded jewellery while applying performance techniques,",
+    "display and talk about own and others beadwork craft and patriotic song performances."
+   ],
+   "key_inquiry_questions": [
+    "How can beadwork be used to preserve Kenyan culture?",
+    "How can you express patriotism through Creative activities?"
+   ],
+   "core_competences": "Communication and Collaboration: as the learner works in a group, researches and discusses varied beadwork in Kenyan communities\nLearning to learn: as the learner learns new ways to make beaded jewellery using one-way technique and criss- cross technique.\nCitizenship : as the learner appreciates Kenya as a country with a rich cultural heritage.",
+   "values": "Patriotism: as the learner makes beaded jewellery inspired by patriotism for Kenya and sings a patriotic song.\nRespect: as the learner talks about own and others beaded jewellery in a just manner.\nLove: as the learner appreciates Kenya as a country with a rich cultural heritage.",
+   "pcis": "Citizenship: learner appreciates varied Kenyan Culture through beadwork",
+   "links": "Social studies: learner research and discuss varied beadwork from Kenyan communities\nIndigenous language: learner research and discuss beadwork in varied socio-cultural contexts of Kenyan communities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.a",
+     "letter": "a",
+     "text": "discuss function of jewellery in Kenyan communities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.b",
+     "letter": "b",
+     "text": "identify materials for beadwork in the local environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.c",
+     "letter": "c",
+     "text": "make beaded jewellery inspired by patriotism for Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.d",
+     "letter": "d",
+     "text": "sing a patriotic song adorned in beaded jewellery inspired by patriotism",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.e",
+     "letter": "e",
+     "text": "recognise beadwork as an indigenous Kenyan craft",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.SWIMMING",
+   "number": "2.11.1",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Swimming",
+   "sequence": 211,
+   "lessons": 10,
+   "optional": true,
+   "content_topics": [
+    "Pencil dive",
+    "Crouch dive",
+    "Backstroke"
+   ],
+   "learning_experiences": [
+    "watch a virtual or live demonstration of backstroke and water entry skill crouch dive, pencil dive),",
+    "demonstrate a crouch dive while observing safety,",
+    "practice crouch dives while observing safety,",
+    "demonstrate pencil dive while observing safety,",
+    "practise pencil dive while observing safety,",
+    "demonstrate flutter kicks, arm action and breathing while in supine position,",
+    "practise backstroke focusing on coordination,",
+    "observe each other’s performance and give feedback on the execution of the backstroke skill."
+   ],
+   "key_inquiry_questions": [
+    "How does water entry skills enhance safety in swimming?"
+   ],
+   "core_competences": "Collaboration: the learner works with others when reviewing the displays and while executing the skills of backstroke to give feedback.\nCritical Thinking and Problem solving: as the learner apply the strategies in water and executes the specific movements and techniques involved in pencil dive skill.\nLearning to Learn: as the learner acquires and applies practical skills in performing pencil dive, crouch dive and backstroke in swimming while observing safety.",
+   "values": "Unity: the learner contributes to a positive and cooperative environment, emphasising the importance of collective well-being as they display their swimming skills and give each other feedback.\nResponsibility: as the learner executes the water entry and backstroke skills while ensuring safety of self and others and cleanliness of the pool during swimming.",
+   "pcis": "Lifestyle diseases: the learners develop physical fitness to enhance health and well-being as they engage in swimming activities.\nSafety: the learners observe safety while performing the pencil dive.",
+   "links": "Social Studies: Performing water entry skills may connect to social science concepts related to water safety practices, cultural aspects of swimming, or historical perspectives on aquatic activities.\nMathematics: using the correct trajectory involved in a pencil dive connects to mathematical concepts.\nEnglish and Kiswahili: giving each other feedback in displays and execution of skills involves effective verbal communication.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     43,
+     44,
+     45
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.SWIMMING.a",
+     "letter": "a",
+     "text": "describe different ways of water entry in a pool",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.SWIMMING.b",
+     "letter": "b",
+     "text": "perform a crouch dive into the swimming pool",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.SWIMMING.c",
+     "letter": "c",
+     "text": "execute a water entry skill using a pencil dive",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.SWIMMING.d",
+     "letter": "d",
+     "text": "perform backstroke skill in swimming for skill development",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.CREATI.SWIMMING.e",
+     "letter": "e",
+     "text": "appreciate own and others’ effort in executing backstroke skill",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES",
+   "number": "2.11.1",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "sub_strand": "Kenyan Indigenous Games",
+   "sequence": 212,
+   "lessons": 10,
+   "optional": true,
+   "content_topics": [
+    "Rope games"
+   ],
+   "learning_experiences": [
+    "watch a virtual or live demonstration of indigenous rope skipping and identify the skills observed,",
+    "demonstrate indigenous rope skipping skills while observing safety,",
+    "practise indigenous rope skipping while observing safety,",
+    "practise different types of indigenous rope skipping while combining it to a musical rhythm."
+   ],
+   "key_inquiry_questions": [
+    "How does indigenous rope skipping enhance physical fitness?",
+    "Why is rope skipping considered an indigenous game?"
+   ],
+   "core_competences": "Communication and Collaboration: the learner interact and works with others in indigenous rope skipping.\nLearning to learn: the learner acquires and masters skills in indigenous rope skipping.",
+   "values": "Responsibility: the learner takes on different roles during indigenous rope skipping.\nUnity: the learner works with others in indigenous rope skipping.",
+   "pcis": "Safety: the learner observes safety rules of indigenous rope skipping.\nHealth and Fitness: the learner improves fitness through indigenous rope skipping for a healthy lifestyle.",
+   "links": "Mathematics: the learner keeps counting during indigenous rope skipping.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     46,
+     47
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.a",
+     "letter": "a",
+     "text": "identify types of indigenous rope games played in Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.b",
+     "letter": "b",
+     "text": "perform different indigenous rope games for skill acquisition",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.c",
+     "letter": "c",
+     "text": "perform indigenous rope skipping to a musical rhythm for enjoyment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.d",
+     "letter": "d",
+     "text": "appreciate the role played by indigenous rope skipping games for fitness and health",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART",
+   "number": "3.1",
+   "strand": "Appreciation in Creative Arts and Sports",
+   "sub_strand": "Analysis of Creative Arts and Sports",
+   "sequence": 301,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Sports values-fairness, teambuilding, and equality.",
+    "Folksong-components of a folk song: media of performance, style of performance, community of origin, participants, singing, messages, role of props, body movements, purpose, costumes and mood",
+    "Storytelling analysis",
+    "Portfolio; measuring, cutting, folding,"
+   ],
+   "learning_experiences": [
+    "work as a team and talk about the values in sports: fairness, teambuilding and equality,",
+    "analyse a given folk song paying attention to its components,",
+    "research on the criteria to analyse storytelling,",
+    "analyse a given storytelling performance to evaluate elements such as theme, plot, confidence of the performer(s), use of voice, use of body, use of costume and props, audience involvement, time management,",
+    "source recyclable material for making a working portfolio,",
+    "create an A3 portfolio and label it,",
+    "decorate the portfolio with found object."
+   ],
+   "key_inquiry_questions": [
+    "Why do we analyse Creative Arts and Sports work?"
+   ],
+   "core_competences": "Self-Efficacy: the learner gains confidence in their ability to evaluate and appreciate diverse forms of artistic expression as they apply their knowledge and skills to assess the artistic merits of visual representations.\nLearning to Learn: demonstrated as the learner adapts to new information, seeks further knowledge, and refines their evaluation skills throughout the process of evaluating Creative Arts and Sports.",
+   "values": "Patriotism: The learner showcases patriotism by exploring and celebrating the cultural richness embedded in a Kenyan folk song, contributing to the preservation and appreciation of local heritage.\nIntegrity: The learner approaches the evaluation task in artwork with integrity, ensuring honest assessments that contribute to the ethical critique of artistic expression.",
+   "pcis": "Peer Education and Mentorship: the learner shares knowledge through review of others’ performances.\nSafety: the learner plays a game of football and observes own and others safety.\nLife Skills and Human Sexuality: the learner gains analytical and creative thinking when discussing and evaluating own and others displayed 2D artworks.",
+   "links": "English and Kiswahili: language skills are essential in articulating and expressing thoughts when examining, discussing and giving feedback on the criteria for Creative Arts and Sports evaluation.\nSocial Studies: perspectives can be applied to understand the historical, cultural, and societal context of the folk song and its significance within the community.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 10, summary says 8.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Creative Arts & Sports Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     50,
+     51,
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.a",
+     "letter": "a",
+     "text": "examine the spirit of sports values for clean sports",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.b",
+     "letter": "b",
+     "text": "analyse a folk song from a Kenyan community",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.c",
+     "letter": "c",
+     "text": "analyse a storytelling performance",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.d",
+     "letter": "d",
+     "text": "make portfolio for showcase",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.e",
+     "letter": "e",
+     "text": "appreciate the role of analysis in Creative Arts and Sports",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

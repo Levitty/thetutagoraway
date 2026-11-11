@@ -1,0 +1,560 @@
+{
+ "framework": "cbc",
+ "subject_key": "agriculture",
+ "grade": 6,
+ "source": "KICD Agriculture, First Published 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 10,
+  "outcomes": 30,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION",
+   "number": "1.1",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Controlling Soil Erosion",
+   "sequence": 101,
+   "lessons": 11,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "watch video clips or observe photographs or make field excursions to observe types of soil erosion,",
+    "demonstrate how to control various types of soil erosion (gulley, rill, splash and sheet erosion),",
+    "discuss and make class presentations to appreciate the importance of controlling soil erosion to conserve soil in their environment."
+   ],
+   "key_inquiry_questions": [
+    "How does erosion control conserve the environment?"
+   ],
+   "core_competences": "Critical thinking and problem solving: evaluation and decision making skills as learners explore appropriate ways of controlling soil erosion.",
+   "values": "Responsibility: proactively solving problems by taking appropriate measures to control soil erosion.",
+   "pcis": "Environmental awareness as learners undertake control of soil erosion in the school environment.",
+   "links": "Learners relate control of soil erosion to knowledge on conservation of natural resources learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "AGRICULTURE Grade 6 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     13
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.a",
+     "letter": "a",
+     "text": "describe types of soil erosion in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.b",
+     "letter": "b",
+     "text": "control soil erosion in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.c",
+     "letter": "c",
+     "text": "appreciate importance of conserving soil",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G6.CONSER.CONSERVING_WATER",
+   "number": "1.2",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Conserving Water:",
+   "sequence": 102,
+   "lessons": 11,
+   "optional": false,
+   "content_topics": [
+    "Sunken seedbed",
+    "Shallow pits"
+   ],
+   "learning_experiences": [
+    "watch video clips or observe photographs or visit sites to observe sunken bed and shallow pits,",
+    "prepare seedbeds that conserve moisture (sunken seedbed and shallow pit),",
+    "utilise the sunken seedbed and shallow pits to appreciate the importance of soil moisture conservation in crop production."
+   ],
+   "key_inquiry_questions": [
+    "How can we prepare a seedbed to conserve moisture?"
+   ],
+   "core_competences": "Critical thinking and problem solving: open mindedness and creativity as learners look for possibilities for conserving soil moisture.",
+   "values": "Social justice: fairness and justice as learners share tasks and responsibilities in preparation of seedbeds.",
+   "pcis": "Conservation of resources as learners conserve water through preparation of water conserving seedbeds.",
+   "links": "Learners relate conservation of soil moisture to farming activities learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "AGRICULTURE Grade 6 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WATER.a",
+     "letter": "a",
+     "text": "identify types of seedbeds that conserve soil moisture",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WATER.b",
+     "letter": "b",
+     "text": "prepare different types of seedbeds that conserve soil moisture",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WATER.c",
+     "letter": "c",
+     "text": "appreciate importance of conserving moisture in a seedbed to increase chances of plants growth",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS",
+   "number": "1.3",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Conserving Wild Animals",
+   "sequence": 103,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search for information on physical deterrents search such as mesh fences, thorny fences, safe traps, innovative lights, innovative sounds, and deflectors,",
+    "select and establish a deterrent applicable in their local context,",
+    "discuss with a resource person the use of physical deterrents to acknowledge the importance of conserving wild animals in safeguarding crops and domestic animals."
+   ],
+   "key_inquiry_questions": [
+    "How can wild animals be kept away from crops and domestic animals?"
+   ],
+   "core_competences": "Creativity and imagination: exploration skills as learners seek new ideas to establish physical deterrents against wild animals that destroy crops and domestic animals.",
+   "values": "Patriotism: consciousness of social and moral duties to conserve wild animals and promote biodiversity.",
+   "pcis": "Protection of biodiversity against extinction by deterring them without killing them.",
+   "links": "Learners relate conservation of wild animals through use of deterrents to knowledge on importance of wildlife learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "AGRICULTURE Grade 6 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.a",
+     "letter": "a",
+     "text": "identify deterrents that can keep off wild animals from crop and domestic animals",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.b",
+     "letter": "b",
+     "text": "establish deterrents to keep off wild animals from destroying crops and domestic animals",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.c",
+     "letter": "c",
+     "text": "acknowledge the importance of deterrents in conserving wild animals",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A",
+   "number": "2.1",
+   "strand": "Food Production Processes",
+   "sub_strand": "Rearing Small Domestic Animals",
+   "sequence": 201,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "share experiences on routine practices in rearing of small domestic animals,",
+    "rear small domestic animal such as rabbits or guinea pigs to practise routine practices such as housing, feeding, watering, sanitation and parasite control.",
+    "make presentations to advocate the rearing of small domestic animals that are used for food."
+   ],
+   "key_inquiry_questions": [
+    "How does rearing of animals contribute to food production?"
+   ],
+   "core_competences": "Self-efficacy: self-realization and confidence as learners rear small domestic animals such as rabbits for food production.",
+   "values": "Integrity: fairness in allocation of resources and tasks in the project for rearing small domestic animals.",
+   "pcis": "Animal welfare in the handling and caring for small domestic animals.",
+   "links": "Learners relate rearing of small domestic animals to knowledge of farming as a socio-economic activity learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "AGRICULTURE Grade 6 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.a",
+     "letter": "a",
+     "text": "explain routine practices in rearing of small domestic animals",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.b",
+     "letter": "b",
+     "text": "rear small domestic animals used as sources of food",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.c",
+     "letter": "c",
+     "text": "embrace the rearing of small domestic animals used as sources of food",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS",
+   "number": "2.2",
+   "strand": "Food Production Processes",
+   "sub_strand": "Preserving Crop Products",
+   "sequence": 202,
+   "lessons": 11,
+   "optional": false,
+   "content_topics": [
+    "Fruits",
+    "Vegetables"
+   ],
+   "learning_experiences": [
+    "watch video clips or listen to resource person and share experiences on how to preserve fruits and vegetables using sun-drying method,",
+    "preserve fruits or vegetables using sun-drying method,",
+    "utilize sun-drying method in preservation of fruits and vegetables at home to reduce food wastage."
+   ],
+   "key_inquiry_questions": [
+    "How does preservation of fruits and vegetables enhance food security?"
+   ],
+   "core_competences": "Critical thinking and problem solving: evaluation and decision making skills as learners explore ways of preserving fruits and vegetables to prevent spoilage.",
+   "values": "Integrity: choosing to do the right thing and being honest by observing ethical, hygienic and safe methods of preserving fruits and vegetables.",
+   "pcis": "Food and nutrition security as learners preserve fruits and vegetables to avoid spoilage.",
+   "links": "Learners relate the preserved parts of fruits and vegetables to the parts of plant learnt in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "AGRICULTURE Grade 6 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.a",
+     "letter": "a",
+     "text": "describe how to preserve crop produce at home",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.b",
+     "letter": "b",
+     "text": "preserve crop produce using drying method",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.c",
+     "letter": "c",
+     "text": "adopt preservation crop produce to reduce food wastage",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G6.FOOD_P.COOKING_FOOD",
+   "number": "2.3",
+   "strand": "Food Production Processes",
+   "sub_strand": "Cooking Food",
+   "sequence": 203,
+   "lessons": 13,
+   "optional": false,
+   "content_topics": [
+    "Stewing",
+    "Baking (rubbing-in method)"
+   ],
+   "learning_experiences": [
+    "watch video clips or observe demonstration on stewing and baking as methods of cooking,",
+    "cook foods using stewing and baking methods (rubbing-in method),",
+    "serve foods prepares using stewing and baking methods."
+   ],
+   "key_inquiry_questions": [
+    "How can we cook foods by baking?",
+    "How can we cook foods by stewing?"
+   ],
+   "core_competences": "Learning to learn: reflection of own learning to apply stewing and baking of foods.",
+   "values": "Integrity: prudent use of resources and application of laid down procedure in stewing and baking foods.",
+   "pcis": "Safety of self and others while cooking food.",
+   "links": "Learners relate measuring of ingredients for baking to measurement of weights learnt in Mathematics.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "AGRICULTURE Grade 6 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G6.FOOD_P.COOKING_FOOD.a",
+     "letter": "a",
+     "text": "describe different methods of cooking",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.COOKING_FOOD.b",
+     "letter": "b",
+     "text": "cook food using, different methods",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.COOKING_FOOD.c",
+     "letter": "c",
+     "text": "embrace different methods of cooking in food production",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G6.HYGIEN.GOOD_GROOMING",
+   "number": "3.1",
+   "strand": "Hygiene Practices",
+   "sub_strand": "Good Grooming",
+   "sequence": 301,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [
+    "Body cleaning"
+   ],
+   "learning_experiences": [
+    "discuss and share experiences on practices that enhance body cleanliness (managing sweat, acnes and pimples, menstrual hygiene and care of pubic parts) for personal hygiene,",
+    "embrace applicable good routines that suit their body cleanliness,",
+    "discuss the importance of body cleanliness as a hygienic habit."
+   ],
+   "key_inquiry_questions": [
+    "How does body cleanliness enhance personal hygiene?"
+   ],
+   "core_competences": "Self-efficacy: self-confidence skills while learners maintain personal cleanliness as a healthy habit.",
+   "values": "Peace: tolerance for others while learners appreciate their personal and preferential differences relating to body cleanliness.",
+   "pcis": "Personal hygiene as learners adopt body cleanliness practices.",
+   "links": "Learners relate body cleanliness as a healthy habit to knowledge of growth and development learnt in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "AGRICULTURE Grade 6 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G6.HYGIEN.GOOD_GROOMING.a",
+     "letter": "a",
+     "text": "describe practices that enhance body cleanliness",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.GOOD_GROOMING.b",
+     "letter": "b",
+     "text": "practice body cleanliness as a healthy habit",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.GOOD_GROOMING.c",
+     "letter": "c",
+     "text": "recognise importance of body cleanliness as a hygienic practice",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL",
+   "number": "3.2",
+   "strand": "Hygiene Practices",
+   "sub_strand": "Laundry: Stain Removal",
+   "sequence": 302,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use digital resources and sample articles to identify common stains (blood and grass) on clothing and household articles,",
+    "carry out removal of common stains (blood and grass) on clothing and household articles,",
+    "practise and adopt stain removal for personal hygiene."
+   ],
+   "key_inquiry_questions": [
+    "How does stain removal enhance personal hygiene?"
+   ],
+   "core_competences": "Learning to learn: researching skills as learners identify and use different ways of removing stains.",
+   "values": "Responsibility: proactive engagement skills by removing stains to maintain cleanliness.",
+   "pcis": "Personal hygiene as learners maintain cleanliness by removing stains from their clothes.",
+   "links": "Learners relates removal of stains on cloths to knowledge of solvents learnt in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "AGRICULTURE Grade 6 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.a",
+     "letter": "a",
+     "text": "identify common stains on clothing and household articles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.b",
+     "letter": "b",
+     "text": "remove common stains from clothing and household articles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.c",
+     "letter": "c",
+     "text": "adopt stain removal for personal hygiene",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES",
+   "number": "4.1",
+   "strand": "Production Techniques",
+   "sub_strand": "Crocheting Stitches",
+   "sequence": 401,
+   "lessons": 16,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "observe a demonstration by resource person, photographs, or watch video clip to identify crocheting stitches (single and double crochet stitches) in making household article,",
+    "use (single or double crochet stitches) to make articles such as mats, cleaning rug, and surface wipers,",
+    "construct articles using crocheting stitches and showcase the household articles to promote adoption in their daily routines."
+   ],
+   "key_inquiry_questions": [
+    "How can crocheting reduce the cost of purchasing household articles?"
+   ],
+   "core_competences": "Creativity and imagination: originality skills as learners make household articles using crocheting stitches.",
+   "values": "Integrity: prudent use of resources as the learners make household articles using crocheting stitches.",
+   "pcis": "Financial literacy as learners save costs by constructing useable household articles using crocheting skills.",
+   "links": "Learners relate construction of household articles made through crocheting to artistic skills learnt in Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "AGRICULTURE Grade 6 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES.a",
+     "letter": "a",
+     "text": "identify crocheting stitches in making household articles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES.b",
+     "letter": "b",
+     "text": "use crocheting stitches to make a household articles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES.c",
+     "letter": "c",
+     "text": "adopt the use of crocheting stiches in making household articles",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G",
+   "number": "4.2",
+   "strand": "Production Techniques",
+   "sub_strand": "Constructing Moist Bed Garden",
+   "sequence": 402,
+   "lessons": 15,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search and share information on the meaning of moist bed garden,",
+    "construct a moist bed (sunken or raised moist bed) using locally available materials,",
+    "establish and grow a crop of their choice to embrace the use of moist bed garden."
+   ],
+   "key_inquiry_questions": [
+    "How can we construct a moist bed gardens to grow crops?"
+   ],
+   "core_competences": "Communication and collaboration: team work as learners share information on moist bed garden.",
+   "values": "Respect: appreciation of diverse opinion as learners share information on moist bed garden.",
+   "pcis": "Environmental conservation as learners use locally available materials to construct moist bed garden.",
+   "links": "Learners relate skills used in construction of moist bed garden to craft skills learnt in Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "AGRICULTURE Grade 6 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.a",
+     "letter": "a",
+     "text": "explain the meaning of moist bed garden",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.b",
+     "letter": "b",
+     "text": "construct a moist bed garden for growing a selected crop",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.c",
+     "letter": "c",
+     "text": "embrace the use of moist bed garden in growing crops",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

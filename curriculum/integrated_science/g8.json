@@ -1,0 +1,596 @@
+{
+ "framework": "cbc",
+ "subject_key": "integrated_science",
+ "grade": 8,
+ "source": "KICD Integrated Science, First published 2023; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 3,
+  "sub_strands": 8,
+  "outcomes": 37,
+  "lessons": 150,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS",
+   "number": "1.1",
+   "strand": "Mixtures, Elements and Compounds",
+   "sub_strand": "Elements and Compounds",
+   "sequence": 101,
+   "lessons": 18,
+   "optional": false,
+   "content_topics": [
+    "Atoms, elements, molecules and compounds,",
+    "Symbols of common elements (oxygen, carbon, hydrogen, nitrogen, iron, aluminium, copper, silver, gold, chlorine, sodium, mercury, lead),",
+    "Word equations for reactions of elements to form compounds (sodium chloride, water, carbon dioxide, copper oxide, aluminium oxide),",
+    "Uses of some common elements in the society (jewellery, construction, electricity, food nutrients, minerals elements, medals."
+   ],
+   "learning_experiences": [
+    "discuss the meaning of atoms, elements, molecules and compounds,",
+    "collaboratively sample labelled containers of different substances, identify and record the elements or compounds on the containers,",
+    "collaboratively represent selected elements using symbols,",
+    "use word equations to represent reactions of elements to form compounds,",
+    "identify elements in selected compounds (compounds with only two elements),",
+    "explore the importance and value of common elements and compounds in day-to-day life,",
+    "use digital or print media to search for information on atoms, elements, molecules and compounds or observe simulations of atoms, elements, molecules and compounds."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to use symbols for representing elements in day-to-day life?"
+   ],
+   "core_competences": "Learning to learn: the learner reflects on their own experiences as they identify elements and compounds on labels of containers.\nCommunication and Collaboration: the learner writes clearly the symbols of elements, compounds, word equations.",
+   "values": "Unity: the learner cooperates and harmoniously works with others while identifying elements and compounds from sample-labelled containers of different substances.",
+   "pcis": "Financial literacy: the learner explores the value of common elements and compounds in society as they learn about importance and value of common elements and compounds in day-to-day life.",
+   "links": "The learner is able to relate the use of ingredients and items made from the common elements and compounds learnt in Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Integrated Science Grade 8 - July 2024.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.a",
+     "letter": "a",
+     "text": "explain the relationship between an atom, an element, a molecule and a compound",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.b",
+     "letter": "b",
+     "text": "assign symbols to selected elements",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.c",
+     "letter": "c",
+     "text": "write word equations to represent reactions of selected elements to form compounds",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.d",
+     "letter": "d",
+     "text": "outline the applications of common elements in the society",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.e",
+     "letter": "e",
+     "text": "appreciate the information on packaging labels of commonly consumed substances",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH",
+   "number": "1.2",
+   "strand": "Mixtures, Elements and Compounds",
+   "sub_strand": "Physical and chemical changes",
+   "sequence": 102,
+   "lessons": 22,
+   "optional": false,
+   "content_topics": [
+    "Kinetic theory of matter,",
+    "Heating curve,",
+    "Effects of impurities on boiling point and melting point,",
+    "Physical and chemical changes (both temporary and permanent changes),",
+    "Applications of physical and chemical changes in day-to-day life."
+   ],
+   "learning_experiences": [
+    "Carry out activities to demonstrate the characteristics of particles in the three states of matter,",
+    "perform experiments to demonstrate diffusion in liquids and gases, for example use of water and ink to illustrate kinetic theory of matter,",
+    "carry out experiments to determine the boiling and melting points of pure and impure substances,",
+    "draw the heating curve and discuss the trends,",
+    "discuss the effects of impurities on boiling point and melting point of a substance,",
+    "carry out experiments to demonstrate physical and chemical changes in substances,",
+    "discuss the applications of physical and chemical changes in day-to-day life,",
+    "use digital or print media to search for the information on movement of particles in the different states of matter."
+   ],
+   "key_inquiry_questions": [
+    "How does the movement of particles in matter affect its properties?"
+   ],
+   "core_competences": "Critical thinking and Problem solving: the learner uses logical reasoning during the discussion of the characteristics of particles in the three states of matter.\nDigital literacy: the learner gains digital literacy as they use digital media and search for the information on movement of particles in the different states of matter.",
+   "values": "Unity: the learner cooperates and harmoniously works with peers as they carry out simple experiments to determine the boiling and melting points of pure and impure substances.",
+   "pcis": "Safety and Security: the learner observes safety to avoid burns while carrying out simple experiments to determine the boiling and melting points of pure and impure substances with peers.",
+   "links": "The learner relates concept of change of state of matter to preserve food in Agriculture.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Integrated Science Grade 8 - July 2024.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.a",
+     "letter": "a",
+     "text": "describe the characteristics of particles in the three states of matter",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.b",
+     "letter": "b",
+     "text": "explain the effects of impurities on boiling point and melting point of a substance",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.c",
+     "letter": "c",
+     "text": "distinguish between physical and chemical changes in substances",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.d",
+     "letter": "d",
+     "text": "outline applications of change of state of matter in day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.e",
+     "letter": "e",
+     "text": "appreciate the applications of change of state of matter in day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE",
+   "number": "1.3",
+   "strand": "Mixtures, Elements and Compounds",
+   "sub_strand": "Classes of fire",
+   "sequence": 103,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [
+    "Causes of fire (classes of fire),",
+    "Fire triangle and Fire control (breaking the fire triangle and use of fire extinguishers),",
+    "Dangers of fires."
+   ],
+   "learning_experiences": [
+    "discuss the possible causes of fire in nature,",
+    "discuss the role of the components of fire triangle in the spread of fire,",
+    "brainstorm on the different classes of fire,",
+    "discuss the dangers of fires in the environment,",
+    "collaboratively practice fire control measures,",
+    "discuss rights to safety information on flammable substances,",
+    "use digital devices or print media to search for information on fire control measures. project: Learner is guided to prepare posters on classes of fires and their control measures and hang them in places where they can be seen."
+   ],
+   "key_inquiry_questions": [
+    "What are the dangers of fire in nature?"
+   ],
+   "core_competences": "Citizenship: the learner enhances active community life skills by making posters on classes of fires and their control measures and hanging them at the places where they can be seen.\nCommunication and Collaboration: the learner acquires listening, speaking, and recording skills as they discuss the causes of fire, dangers of fire and rights to safety",
+   "values": "Respect: the learner observes rules of engagement while working with peers to classify fire according to the cause and suggest control measures.\nResponsibility: the learner accommodates each other’s views and opinions as they discuss rights to safety information on flammable substances.",
+   "pcis": "Safety and Security: the learner learns how to take care of self and others when handling fire, as the learner discusses the dangers of fires in the environment.",
+   "links": "The learner practices safety measures to prevent fire accidents in nature as a life skill in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Integrated Science Grade 8 - July 2024.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.a",
+     "letter": "a",
+     "text": "identify causes of fire in nature",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.b",
+     "letter": "b",
+     "text": "explain the role of the components of fire triangle in the spread of fire",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.c",
+     "letter": "c",
+     "text": "describe ways of controlling different classes of fires",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.d",
+     "letter": "d",
+     "text": "acknowledge the dangers of fires in nature",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INTE.G8.LIVING.THE_CELL",
+   "number": "2.1",
+   "strand": "Living Things and the Environment",
+   "sub_strand": "The Cell",
+   "sequence": 201,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [
+    "Cell structure as seen under a light microscope (plant and animal cells),",
+    "Preparation of temporary slides of plant cells,",
+    "Magnification of cells seen under the light microscope."
+   ],
+   "learning_experiences": [
+    "collaboratively prepare, mount, observe and draw plant cells as seen under a light microscope, (include a reminder on how to use and care for a light microscope),",
+    "observe, draw and label the parts of an animal cells seen from permanent slides under the light microscope,",
+    "use print and non-print material to search for information on functions of components of plant and animal cells as seen under the light microscope,",
+    "discuss the similarities and differences between plant and animal cells as seen under a light microscope,",
+    "calculate magnification of specimens at various objective lenses of the light microscope."
+   ],
+   "key_inquiry_questions": [
+    "What makes up plant and animal cells?"
+   ],
+   "core_competences": "Learning to learn: the learner learns how to prepare, mount, observe, and draws plant cells as seen under a light microscope.\nSelf-efficacy: the learner successfully prepares and observes specimens under the light microscope.",
+   "values": "Unity: the learner displays team spirit as they prepare, mount, observe, and draw plant cells as seen under a light microscope.\nResponsibility: the learner performs assigned roles as they observe, draw and label animal cells on permanent slides as seen under the light microscope.",
+   "pcis": "Environmental conservation: the learner safely disposes off waste materials generated from experiments on the study of cells.",
+   "links": "The concept of multiplication is learnt in Mathematics as the learner carries out multiplication of objective lens and eye piece lens to get the magnification.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Integrated Science Grade 8 - July 2024.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.a",
+     "letter": "a",
+     "text": "describe the structure of plant and animal cells as observed under a light microscope",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.b",
+     "letter": "b",
+     "text": "describe the functions of components of cells seen under the light microscope",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.c",
+     "letter": "c",
+     "text": "compare plant and animal cells as observed under a light microscope",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.d",
+     "letter": "d",
+     "text": "determine the magnification of cells under the light microscope",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.e",
+     "letter": "e",
+     "text": "appreciate the role of cells in living things",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN",
+   "number": "2.2",
+   "strand": "Living Things and the Environment",
+   "sub_strand": "Movement of Materials in and out of the cell",
+   "sequence": 202,
+   "lessons": 16,
+   "optional": false,
+   "content_topics": [
+    "Diffusion and Osmosis,",
+    "Demonstration of diffusion and osmosis,",
+    "Role of diffusion and osmosis in living things (Absorption of water, nutrients in the intestines, gases in the lungs)."
+   ],
+   "learning_experiences": [
+    "use print and non-print material to search for information on the processes involved in the movement of materials in and out of a cell, discuss with peers (cover diffusion and osmosis),",
+    "carry out experiments to demonstrate diffusion in plant materials and share the findings with peers,",
+    "carry out experiments to demonstrate osmosis using visking tubing and plant materials, and share their findings with peers,",
+    "search for information from print and non-print media on the roles of diffusion and osmosis in living things and discuss with peers."
+   ],
+   "key_inquiry_questions": [
+    "How do materials move in and out of a cell?"
+   ],
+   "core_competences": "Communication and Collaboration: the learner acquires writing skills while recording findings from experiments to demonstrate diffusion and osmosis.\nSelf-efficacy: the learner executes assigned tasks successfully while carrying out experiments to demonstrate diffusion and osmosis.",
+   "values": "Respect: the learner appreciates the opinions of peers when discussing the roles of diffusion and osmosis in living things.\nResponsibility: the learner executes assigned roles while carrying out experiments to demonstrate diffusion and osmosis.",
+   "pcis": "Environmental conservation: the learner learns how to disposes of waste materials from experiments to demonstrate diffusion and osmosis appropriately.",
+   "links": "The learner is able to link the information on diffusion and osmosis to absorption of water and mineral salts from the soil by crops in Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Integrated Science Grade 8 - July 2024.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     23,
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.a",
+     "letter": "a",
+     "text": "outline the process of diffusion and osmosis in cells",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.b",
+     "letter": "b",
+     "text": "demonstrate diffusion and osmosis in living things",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.c",
+     "letter": "c",
+     "text": "explain the role of diffusion and osmosis in living things",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.d",
+     "letter": "d",
+     "text": "appreciate the importance of diffusion and osmosis in living things",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE",
+   "number": "2.3",
+   "strand": "Living Things and the Environment",
+   "sub_strand": "Reproduction in human beings",
+   "sequence": 203,
+   "lessons": 18,
+   "optional": false,
+   "content_topics": [
+    "The menstrual cycle in human beings (omit details of hormonal control),",
+    "Challenges related to the menstrual cycle (include irregular periods, irregular bleeding, and pain),",
+    "Process of fertilisation and implantation (cover fusion of sperm with the egg and implantation of blastocyst in the uterus),",
+    "Note: -details on formation of blastocyst not necessary",
+    "Symptoms and prevention of common STIs (HIV& Aids, Gonorrhea, Syphilis, Herpes - Avoid details of causative agent)"
+   ],
+   "learning_experiences": [
+    "search for information from print or non-print media on the menstrual cycle,",
+    "search for information from print or non-print media on challenges related to the menstrual cycle,",
+    "discuss management of challenges related to the menstrual cycle,",
+    "study illustrations/charts on the process of fertilisation and implantation,",
+    "search for information from print and non-print materials on symptoms of common STIs and their prevention, and discuss with peers."
+   ],
+   "key_inquiry_questions": [
+    "How best can challenges related to the menstrual cycle be managed?"
+   ],
+   "core_competences": "Learning to learn: the learner organises own learning while searching for information from print and non-print materials on symptoms of common STIs and their prevention.\nSelf-efficacy: the learner appreciates and successfully manages challenges related to the menstrual cycle.",
+   "values": "Love: the learner shows empathy and embraces those with menstrual challenges.\nRespect: the learner shows open-mindedness while discussing symptoms of common STIs and their prevention.",
+   "pcis": "Health promotion issues: the learner discusses challenges related to the menstrual cycle and prevention of common STIs.",
+   "links": "The information on common STIs is linked to communicable diseases in Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Integrated Science Grade 8 - July 2024.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     25,
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.a",
+     "letter": "a",
+     "text": "outline the menstrual cycle and its related challenges in human beings",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.b",
+     "letter": "b",
+     "text": "develop a plan to manage challenges related to menstrual cycle in human beings",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.c",
+     "letter": "c",
+     "text": "describe fertilisation and implantation in human beings",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.d",
+     "letter": "d",
+     "text": "outline symptoms of STIs in human beings",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.e",
+     "letter": "e",
+     "text": "explain prevention measures for common STIs in human beings",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.f",
+     "letter": "f",
+     "text": "appreciate the need for a healthy reproductive system",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY",
+   "number": "3.1",
+   "strand": "Force and Energy",
+   "sub_strand": "Transformation of Energy",
+   "sequence": 301,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [
+    "Forms of energy in nature,",
+    "Renewable and non-renewable energy sources,",
+    "Energy transformations in nature,",
+    "Safety measures associated with energy transformation,",
+    "Applications of energy transformation in day-to- day life."
+   ],
+   "learning_experiences": [
+    "discuss and identify forms of energy found in nature (light, heat, potential, kinetic, gravitational, electrical, sound energy, chemical, nuclear or atomic energy),",
+    "discuss and classify energy sources in nature (renewable and non-renewable sources),",
+    "use digital or print media to search for information on classification of energy sources in nature,",
+    "carry out activities to show energy transformation in day-to-day life (electrical to heat, chemical to electrical, mechanical to electrical, electrical to light, electrical to sound and potential to kinetic),",
+    "discuss the applications of energy transformations in day-to-day life (use of a falling object, rubbing both hands, burning of wood, electric bulbs, Light Emitting Diodes (LED), electric heater, steam engine, piezoelectricity, microphone, windmills, electric generator/dynamo, hydroelectric dams, thermocouple, geothermal power plant, solar panel, electric motor),",
+    "use digital or print media to search for information on the applications of energy transformations in day-to-day life,",
+    "discuss safety measures on energy transformation and mitigation strategies, (relate to road accidents; K.E to P.E; action and reaction, accidents caused by fire, electricity, health hazard from bright light, loud sound),",
+    "relate safety measures during energy transformations to road accidents; K.E to P.E; action and reaction, accidents caused by fire, electricity, health hazard from bright light, loud sound,",
+    "use digital or print media to search for information on safety measures on energy transformation and mitigation strategies."
+   ],
+   "key_inquiry_questions": [
+    "What are the sources of energy in the environment?",
+    "How is energy transformation applied in day-to-day life?"
+   ],
+   "core_competences": "Critical thinking and Problem solving: the learner reflects on how to solve energy shortage by transforming energy from one form to another as they discuss examples and applications of energy transformation processes in day-to-day life.\nCreativity and Imagination: the learner experiments with ideas to test workability of energy transformation in day-to-day life.",
+   "values": "Social justice: the learner plays leadership role and delegate duties as he/she carries out activities to show energy transformation in day-to-day life.\nLove: the learner cares for self and others as they demonstrate the processes of energy transformation in day-to-day life.",
+   "pcis": "Safety: the learner learns how to stay safe as they discuss safety measures on energy transformation and mitigation strategies",
+   "links": "The learner relates the concept of energy transformation to cooking processes in Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Integrated Science Grade 8 - July 2024.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     28,
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.a",
+     "letter": "a",
+     "text": "identify forms of energy in nature",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.b",
+     "letter": "b",
+     "text": "classify energy sources into renewable or non-renewable",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.c",
+     "letter": "c",
+     "text": "demonstrate simple energy transformations in nature",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.d",
+     "letter": "d",
+     "text": "describe safety measures associated with energy transformation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.e",
+     "letter": "e",
+     "text": "appreciate the applications of energy transformation in day-to- day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INTE.G8.FORCE_.PRESSURE",
+   "number": "3.2",
+   "strand": "Force and Energy",
+   "sub_strand": "Pressure",
+   "sequence": 302,
+   "lessons": 16,
+   "optional": false,
+   "content_topics": [
+    "Pressure in solids and liquids,",
+    "Applications of pressure in solids and liquids."
+   ],
+   "learning_experiences": [
+    "brainstorm on the meaning of pressure as used in science,",
+    "carry out activities to demonstrate pressure exerted by solids,",
+    "carry out activities to demonstrate pressure in liquids,",
+    "discuss the relationship between pressure, area of contact and weight of solids,",
+    "describe the relationship between pressure and height of liquids (qualitative treatment only),",
+    "discuss the applications of pressure in solids and liquids (syringe, high heeled shoes, cutting tools, car brakes, siphons, bicycle pumps, drinking straw),",
+    "use digital or print media to search for information on the applications of pressure in solids and liquids."
+   ],
+   "key_inquiry_questions": [
+    "What are the applications of pressure in solids and liquids?"
+   ],
+   "core_competences": "Communication and Collaboration: the learner acquires listening and speaking skills as they discuss the applications of pressure in solids and liquids.\nLearning to learn: the learner uses digital or print media to search for information on the applications of pressure in solids and liquids.",
+   "values": "Unity: the learner collaboratively and harmoniously comes together while discussing the applications of pressure in solids and liquids.",
+   "pcis": "Socio-economic issues: the learner learns how to reduce destructive effects of pressure on surfaces or objects as they carry out activities to demonstrate pressure exerted by solids.",
+   "links": "The learner relates concepts of pressure to construction in Pre-Technical Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Integrated Science Grade 8 - July 2024.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     31,
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INTE.G8.FORCE_.PRESSURE.a",
+     "letter": "a",
+     "text": "demonstrate pressure in solids and liquids",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.FORCE_.PRESSURE.b",
+     "letter": "b",
+     "text": "identify applications of pressure in solids and liquids",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.FORCE_.PRESSURE.c",
+     "letter": "c",
+     "text": "appreciate the applications of pressure in solids and liquids",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

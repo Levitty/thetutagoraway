@@ -1,0 +1,1319 @@
+{
+ "framework": "cbc",
+ "subject_key": "social_studies",
+ "grade": 7,
+ "source": "KICD Social Studies, First published 2022; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 5,
+  "sub_strands": 20,
+  "outcomes": 84,
+  "lessons": 114,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION",
+   "number": "1.1",
+   "strand": "Social Studies Personal Development",
+   "sub_strand": "Self-Exploration",
+   "sequence": 101,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "reflect and journal personal abilities and interests and share with a friend in class,",
+    "brainstorm on how to use personal abilities and interests for holistic development and make presentations in class,",
+    "share personal values that help him or her pull through as a steady person,",
+    "use print or digital resources to search for how to develop personal principles and share in class,",
+    "search using digital or print media how to manage emotions (happiness, love, fear, and anger) in day-to-day life,",
+    "share previous experiences in groups how he/she dealt with emotions,",
+    "watch relevant video clips or print media on effective management of emotions in day-to-day life."
+   ],
+   "key_inquiry_questions": [
+    "How can personal abilities and interests influence career choices?"
+   ],
+   "core_competences": "Self-efficacy: learners reflect and journal personal abilities and interests and share them with a friend in class.\nCritical Thinking and Problem-solving: learners share previous experiences in groups and how he or she dealt with emotions.",
+   "values": "Unity: learners brainstorm on how to use personal abilities and interests for holistic development and make presentations in class.\nResponsibility: learners use print or digital resources to search for how to develop personal principles and share in class.",
+   "pcis": "Decision-making skills: Learners reflect and journal personal abilities and interests hence and with a friend in class.",
+   "links": "English/Kiswahili/KSL: learners use speaking and listening skills to brainstorm on personal abilities and interests for holistic development.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     14,
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.a",
+     "letter": "a",
+     "text": "explore personal abilities and interests for holistic development",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.b",
+     "letter": "b",
+     "text": "develop personal values for a steady personality",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.c",
+     "letter": "c",
+     "text": "manage emotions in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.d",
+     "letter": "d",
+     "text": "appreciate personal awareness in day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN",
+   "number": "1.2",
+   "strand": "Social Studies Personal Development",
+   "sub_strand": "Entrepreneurial Opportunities in Social Studies",
+   "sequence": 102,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "using digital or print media to search and classify entrepreneurial opportunities in social studies and make a presentation in class,",
+    "create posters of common entrepreneurial opportunities in social studies and display them in class,",
+    "use digital or print media to find out the personality requirements for any five social studies entrepreneurial opportunities in day-to-day life and make presentations in class,",
+    "draw charts showing an alignment of personal talents or abilities with different entrepreneurial opportunities in the country,",
+    "engage a relevant resource person to give a talk on entrepreneurial opportunities versus personality types"
+   ],
+   "key_inquiry_questions": [
+    "What is entrepreneurship",
+    "Which entrepreneurial opportunities exist in society?"
+   ],
+   "core_competences": "Creativity and Imagination: learners create posters of common entrepreneurial opportunities in social studies and display them in class.\nDigital Literacy: learners use digital or print resources to explore entrepreneurial opportunities in Social Studies.",
+   "values": "Responsibility: learners create a poster of all entrepreneurial opportunities available in Social Studies and display it in school.",
+   "pcis": "Career exploration: learners draw charts aligning personal talents and abilities with available entrepreneurial opportunities.\nDecision-making Skills: learners develop analytical and critical thinking skills as they use digital or print resources to explore entrepreneurial opportunities in Social Studies.",
+   "links": "Pre-Technical Studies: learners draw charts aligning personal talents and abilities with available entrepreneurial opportunities.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 4, summary says 5.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.a",
+     "letter": "a",
+     "text": "identify entrepreneurial opportunities that closely match their personality",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.b",
+     "letter": "b",
+     "text": "describe requirements for social entrepreneurial opportunities in the world of work",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.c",
+     "letter": "c",
+     "text": "appreciate entrepreneurial opportunities in social studies",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN",
+   "number": "2.1",
+   "strand": "People and Relationships",
+   "sub_strand": "Human Origin",
+   "sequence": 201,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "engage a resource person to discuss the traditional and religious stories on human origin from different communities,",
+    "compare the different stories on human origin from their communities and share in class,",
+    "write a collaborative essay on traditional and religious stories of human origin,",
+    "record traditional stories about the origin of humankind in society,",
+    "use relevant print or electronic media, resources to research and present in class the traditional and religious stories about the origin of humankind,",
+    "discuss ways of recording traditional stories about the origin of humankind in society.",
+    "discuss the implications of the traditional and religious stories on human origin."
+   ],
+   "key_inquiry_questions": [
+    "How did human beings come to be?"
+   ],
+   "core_competences": "Communication and Collaboration: learners engage a resource person to discuss the traditional and religious stories on human origin from different communities.",
+   "values": "Respect: learners discuss in turn the implications of the traditional and religious stories on human origin.",
+   "pcis": "Social Awareness: learners relate with others well as they compare different stories on human origin.",
+   "links": "Religious Education: learners relate with creation stories as they engage a resource person to discuss the traditional and religious stories on human origin.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     19,
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.a",
+     "letter": "a",
+     "text": "explore traditional stories of human origin from African communities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.b",
+     "letter": "b",
+     "text": "explain religious stories about the origin of humankind",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.c",
+     "letter": "c",
+     "text": "illustrate common aspects found in traditional and religious stories of human origin",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.d",
+     "letter": "d",
+     "text": "acknowledge religious and traditional stories of human origin",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION",
+   "number": "2.2",
+   "strand": "People and Relationships",
+   "sub_strand": "Early Civilisation",
+   "sequence": 202,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "ancient Egypt,",
+    "Great Zimbabwe",
+    "the Kingdom of Kongo,"
+   ],
+   "learning_experiences": [
+    "brainstorm on factors that led to the growth of ancient Egypt, Great Zimbabwe, and the Kingdom of Kongo,",
+    "use appropriate digital or print media to find out the location of ancient Egypt, Great Zimbabwe, and the Kingdom of Kongo from the map of Africa,",
+    "watch and critique audio-visual documentary on the contribution of Ancient Kingdoms to modern world civilisation,",
+    "write an essay on the contribution of ancient Kingdoms to the development of the modern world civilisation and present it in class."
+   ],
+   "key_inquiry_questions": [
+    "How has early African civilisation influenced the world today?"
+   ],
+   "core_competences": "Critical thinking: learners watch and critique audio-visual documentaries on the contribution of Ancient Kingdoms to modern world civilisation.",
+   "values": "Unity: learners watch and critique audio-visual documentaries on the contribution of Ancient Kingdoms to modern world civilisation.",
+   "pcis": "Self-esteem: learners write and present in class an essay on the contribution of ancient Kingdoms to the development of modern world civilisation.",
+   "links": "Creative Arts: learners relate the ancient contribution of Ancient to the modern world civilisation, by applying knowledge drawn from architectural designs, dressing, and artefacts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.a",
+     "letter": "a",
+     "text": "explore factors that led to the growth of the selected ancient Kingdoms in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.b",
+     "letter": "b",
+     "text": "locate the selected ancient Kingdoms on a map of Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.c",
+     "letter": "c",
+     "text": "assess the contribution of ancient Kingdoms to the modern world civilisation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.d",
+     "letter": "d",
+     "text": "appreciate the contribution of ancient kingdoms to the development of the modern world",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE",
+   "number": "2.3",
+   "strand": "People and Relationships",
+   "sub_strand": "Slavery and Servitude",
+   "sequence": 203,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning of slavery and servitude and share their findings in class,",
+    "discuss various forms of slavery and servitude in traditional African and contemporary society,",
+    "use digital or print resources to find out the factors that led to the development of the Indian Ocean slave trade,",
+    "draw the geographical extent of the regions covered by the Indian Ocean Slave trade in Africa,",
+    "develop slogans on ways of promoting human dignity for a just and peaceful world and share in class."
+   ],
+   "key_inquiry_questions": [
+    "Why has slavery and servitude existed for thousands of years?"
+   ],
+   "core_competences": "Communication and Collaboration: learners contribute to group decision-making as they brainstorm on the meaning of slavery and servitude and share their findings in class.\nLearning to Learn: learners use digital learning platforms for continuous learning and development as they use appropriate digital devices to draw and show the geographical extent of the regions covered by the Indian Ocean slave trade in Africa.",
+   "values": "Unity: learners work in groups to brainstorm on various forms of slavery and servitude in traditional African society.\nResponsibility: learners observe safety precautions as they use print or digital resources to locate the geographical extent of the regions covered by the Indian Ocean slave trade in Africa.",
+   "pcis": "Human Rights: learners identify the various forms of slavery and servitude in traditional African society and locate areas where slaves were taken during the Indian Ocean slave trade,",
+   "links": "Learners use speaking skills as they brainstorm on forms of slavery and servitude.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 4, summary says 5.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     23,
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.a",
+     "letter": "a",
+     "text": "identify the various forms of slavery and servitude in traditional African and contemporary society",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.b",
+     "letter": "b",
+     "text": "explain factors that led to the development of the Indian Ocean slave trade",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.c",
+     "letter": "c",
+     "text": "sketch the geographical extent of the regions covered by the Indian Ocean slave trade in Africa",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.d",
+     "letter": "d",
+     "text": "desire to promote human dignity for a just and peaceful world",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O",
+   "number": "2.4",
+   "strand": "People and Relationships",
+   "sub_strand": "Developments in Medium of trade",
+   "sequence": 204,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss the comparison between barter trade and the use of currency in Africa,",
+    "use digital /print media to find out factors that led to the introduction of money in Africa,",
+    "brainstorm on the impact of the introduction of money in Africa,",
+    "engage a resource person to give a talk on the impact of the introduction of money in Africa,",
+    "role play barter trade and the use of currency trade in Africa and provide a critique."
+   ],
+   "key_inquiry_questions": [
+    "How has money transformed trade in Africa?"
+   ],
+   "core_competences": "Communication and Collaboration: learners speak effectively and logically as they compare barter trade and use of currency in Africa.",
+   "values": "Respect: learners develop acceptance as they listen to each other as they brainstorm on the impact of the introduction of money in Africa.",
+   "pcis": "Self-awareness: learners role play a barter trade and the use of currency.",
+   "links": "Pre-Technical Studies: Learners apply knowledge gained from the impact of introduction of currency in Africa.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.a",
+     "letter": "a",
+     "text": "compare barter trade and the use of currency trade in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.b",
+     "letter": "b",
+     "text": "trace the factors that led to the introduction of money in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.c",
+     "letter": "c",
+     "text": "deduce the impact of the introduction of money in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.d",
+     "letter": "d",
+     "text": "appreciate the medium of trade for sustainability",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO",
+   "number": "2.5",
+   "strand": "People and Relationships",
+   "sub_strand": "Diversity and interpersonal relationships",
+   "sequence": 205,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on what is human diversity,",
+    "use digital or print materials to search for factors that determine human diversity,",
+    "debate and classify desirable and undesirable personality attributes,",
+    "role play in class the personality attributes that enhance self-awareness,",
+    "outline personality attributes to enhance self-awareness,",
+    "engage a resource person to discuss life skills that would promote healthy interactions in a multicultural society (effective communication, negotiation skills, Assertiveness, empathy),",
+    "research using appropriate print, library resources, or digital devices on the components of human identity in a multicultural society,",
+    "role-play the importance of building healthy relationships in a multicultural society."
+   ],
+   "key_inquiry_questions": [
+    "How do varied personalities shape society?",
+    "Why is respect and appreciation of diversity crucial for social cohesion?"
+   ],
+   "core_competences": "Self-efficacy: learners debate and classify desirable and undesirable personality attributes.\nLearning to Learn: learners develop relationship skills as they role-play the importance of building healthy relationships in a multicultural society.",
+   "values": "Respect: learners develop acceptance as they listen to each other and brainstorm personality attributes that make individuals different from others.",
+   "pcis": "Self-esteem: learners develop creative skills as they compose and recite poems that propagate inclusion and diversity.\nSelf-awareness: learners role play the personality attributes to enhance self-awareness.",
+   "links": "English/Kiswahili/KSL: learners brainstorm on desirable and undesirable personality attributes.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 4, summary says 5.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.a",
+     "letter": "a",
+     "text": "identify factors that determine human diversity in the society",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.b",
+     "letter": "b",
+     "text": "explain interpersonal skills that enhance healthy interactions in a multicultural society",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.c",
+     "letter": "c",
+     "text": "classify the desirable and undesirable personality attributes",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.d",
+     "letter": "d",
+     "text": "appreciate the importance of building healthy relationships in a multicultural society",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE",
+   "number": "2.6",
+   "strand": "People and Relationships",
+   "sub_strand": "Peaceful Coexistence",
+   "sequence": 206,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the qualities of a peaceful person in the community",
+    "write an essay on the qualities of a peaceful person",
+    "use digital or print resources to find out peaceful conflict resolution process,",
+    "engage a resource person to give a talk on factors that promote peaceful co-existence,",
+    "role play in peaceful conflict resolution process in day-to-day life,",
+    "compose and recite peace poems on the importance of peaceful co-existence in the community in day-to-day life."
+   ],
+   "key_inquiry_questions": [
+    "How can we promote peace for mutual social well-being?",
+    "How can I manage stress and emotion to promote inner peace?"
+   ],
+   "core_competences": "Digital Literacy: learners use digital or print resources to find out the peaceful conflict resolution processes.",
+   "values": "Peace: learners role play peaceful conflict resolution process in day-to-day life.",
+   "pcis": "Social Cohesion: learners write down what they plan to do to improve inner peace and relationships with their family, school, or community.",
+   "links": "Learners use creative skills to compose and recite peace poems in class.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     28,
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.a",
+     "letter": "a",
+     "text": "outline the qualities of a peaceful person in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.b",
+     "letter": "b",
+     "text": "explore factors that promote peaceful co-existence",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.c",
+     "letter": "c",
+     "text": "assess peaceful conflict resolution process in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.d",
+     "letter": "d",
+     "text": "value the importance of peaceful coexistence in the community in day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI",
+   "number": "3.1",
+   "strand": "Community Service-Learning",
+   "sub_strand": "Community Service Learning",
+   "sequence": 301,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning of the terms community, community services, community service learning (CSL), project (activities outside class), problem (gaps or opportunities), solution (remedy), plan of activity, implementation, and written report of a project.",
+    "discuss the steps involved in carrying out a CSL project:",
+    "- identification and verification of a problem/gap/opportunity",
+    "- planning to solve an identified problem",
+    "- designing solution(s) to the problem",
+    "- implementing the solution/filling the gap",
+    "- reflecting and reporting on the project/activity done",
+    "identify and brainstorm on problems/gaps in their context/community.",
+    "discuss, verify, and adopt one problem for the class/group project.",
+    "propose and plan way(s) of solving the problem.",
+    "implement the solution to the problem in the community.",
+    "write and report on the accomplished project,",
+    "discuss CSL benefits for self and the community."
+   ],
+   "key_inquiry_questions": [
+    "How can community service learning contribute to community development?"
+   ],
+   "core_competences": "Communication and Collaboration: learners develop skills of listening keenly and effectively as they discuss and brainstorm on types of projects and identification of relevant community problems.\nCritical thinking and Problem-solving: learners develop the skill of exploring complex problems as they identify projects that can be undertaken in the community.\nSelf-efficacy: learners develop self-awareness skills as they consider the steps in a CSL project and propose ways in which they can present CSL findings.",
+   "values": "Love: learners develop selflessness as they engage in a discussion on the benefits of CSL for self and community.\nResponsibility: learners develop self-drive as they implement the solution to the problem in the community",
+   "pcis": "",
+   "links": "All subjects as they provide PCIs and undertake CSL activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.a",
+     "letter": "a",
+     "text": "explain the meaning of key terms used in community service learning (CSL) and CSL projects",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.b",
+     "letter": "b",
+     "text": "describe the importance of CSL in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.c",
+     "letter": "c",
+     "text": "outline steps of a CSL project/activity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.d",
+     "letter": "d",
+     "text": "execute a class CSL project",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.e",
+     "letter": "e",
+     "text": "desire to conduct CSL projects in the community",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION",
+   "number": "4.1",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Historical information",
+   "sequence": 401,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use appropriate print media or digital resources to identify sources of historical information in society and share in class,",
+    "design posters on primary and secondary sources of historical information in society and display them in class,",
+    "watch documentaries or video clips on the ways of preserving sources of historical information.",
+    "debate on the significance of various sources of historical information in providing evidence of past human accounts."
+   ],
+   "key_inquiry_questions": [
+    "How significant are sources of historical information in understanding past human accounts?"
+   ],
+   "core_competences": "Communication: learners express themselves with clarity as they debate on the significance of historical information.\nDigital Literacy: learners use digital technology to effectively accomplish their tasks as they find out the sources of historical information using appropriate media.",
+   "values": "Patriotism: learners develop dedication as they debate on the significance of various sources of historical information in providing evidence of past human accounts.\nResponsibility: learners diligently use appropriate print media or digital resources to find out sources of historical information.",
+   "pcis": "Social Cohesion: learners debate as a class on the significance of historical sources of information in society.",
+   "links": "Learners apply listening and speaking skills as they discuss in small groups, sources of historical information in the society.\nLearners apply creative skills as they design posters on primary and secondary sources of historical information in society.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     35,
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.a",
+     "letter": "a",
+     "text": "identify various sources of historical information in the society",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.b",
+     "letter": "b",
+     "text": "distinguish between primary and secondary sources of historical information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.c",
+     "letter": "c",
+     "text": "explore how various sources of historical information have been preserved over the years",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.d",
+     "letter": "d",
+     "text": "appreciate the significance of various sources of historical information in providing evidence of past human accounts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O",
+   "number": "4.2",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Historical Development of Agriculture",
+   "sequence": 402,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use digital devices/ other sources to draw the map of Africa and show areas where early agriculture was practised in selected geographical regions. (Rift Valley of Eastern Africa, Egypt, and Nubia),",
+    "discuss the contribution of the Nile Valley agriculture to the world civilisation,",
+    "compose poems the importance of domestication of plants and animals in Africa."
+   ],
+   "key_inquiry_questions": [
+    "Why did people start practising agriculture in Africa?",
+    "How did Agriculture begin in Africa?"
+   ],
+   "core_competences": "Digital Literacy: learners carry out research on the factors that favoured growing of crops and rearing of animals in selected regions during early agriculture,(in Egypt, Nubia, and in the Rift Valley of the Eastern African region and report the findings to the class,\nCommunication and collaboration: Learners apply listening and speaking skills as they compose poems the importance of domestication of plants and animals in Africa.",
+   "values": "Patriotism: learners develop citizenship as they discuss the contribution of the Nile Valley agriculture to world civilisation.",
+   "pcis": "Social Cohesion: learners discuss the contribution of the Nile Valley agriculture to the world civilisation,",
+   "links": "Learners use knowledge of animal husbandry as they research on animals kept and types of crops which were grown during early agriculture in Egypt, Nubia and in Rift valley of the Eastern African region.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     37,
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.a",
+     "letter": "a",
+     "text": "locate areas where early agriculture was practised in selected geographical regions in Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.b",
+     "letter": "b",
+     "text": "explore factors that favoured growing of crops and rearing of animals in selected regions during early agriculture",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.c",
+     "letter": "c",
+     "text": "assess the contributions of the Nile Valley agriculture to the world civilisation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.d",
+     "letter": "d",
+     "text": "value the importance of domestication of plants and animals in Africa",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK",
+   "number": "4.3",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Maps and map work",
+   "sequence": 403,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the position, shape, and size of Africa and share in class,",
+    "buzz on the countries that make up Africa and display in class,",
+    "draw an outline map of Africa creatively and indicate the countries that make up Africa and display it in class,",
+    "use relevant print media or digital devices to establish the position and location of places and features on a map,",
+    "calculate the time of different places using longitudes,",
+    "discuss and appreciate positive features that are associated with Africa."
+   ],
+   "key_inquiry_questions": [
+    "How are maps used?",
+    "Why is time different in various locations?"
+   ],
+   "core_competences": "Digital Literacy: learners apply the skill of designing and creating new digital artefacts, content, and materials as they establish the position and location of places and features on a map.\nCreativity and Imagination: learners undertake group activities and exchange new ideas that inspire creative thinking as they draw an outline map of Africa.",
+   "values": "Responsibility: learners develop diligence as they research the three types of maps used in Social Studies and make summary notes.\nPatriotism: learners develop loyalty as they draw an outline map of Africa and indicate the countries that makeup Africa.\nUnity: learners demonstrate fairness as they brainstorm the position, shape, and size of Africa.",
+   "pcis": "Social Cohesion: learners brainstorm on the position, shape, and size of Africa.\nEnvironmental Education: learners use latitudes to locate the position of places and features on a map.",
+   "links": "Learners apply calculation skills as they use longitudes to calculate the time of different places in the world.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.a",
+     "letter": "a",
+     "text": "describe the position, shape, and size of Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.b",
+     "letter": "b",
+     "text": "locate places and features using latitudes and longitudes on a map",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.c",
+     "letter": "c",
+     "text": "calculate the time of different places in the world",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.d",
+     "letter": "d",
+     "text": "appreciate the location of key features in the continent",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST",
+   "number": "4.4",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Earth and the Solar System",
+   "sequence": 404,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "share stories on the origin of the earth from their communities,",
+    "use relevant print or digital resources to find out about the theories explaining the origin of the earth (the passing star theory and the nebula cloud theory),",
+    "brainstorm on the size, shape, and position of the earth in the solar system,",
+    "carry out library research on the effects of rotation and revolution of the earth on human activities,",
+    "draw the solar system and indicate the position of the earth as the home of humankind,",
+    "draw the internal structure of the earth and display it in class (core, mantle, and crust),",
+    "develop communication messages on the effects of rotation and revolution of the earth on human activities."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to understand the solar system?"
+   ],
+   "core_competences": "Learning to Learn: learners work collaboratively as they carry out library research on the effects of rotation and revolution of the earth on human activities.\nSelf-Efficacy: learners demonstrate task management as they model the solar system and show the position of the earth.",
+   "values": "Respect: learners demonstrate humility as they share stories on the origin of the earth.",
+   "pcis": "Environmental Education: learners examine the effects of rotation and revolution of the earth on human activities.\nSocial Cohesion: learners share stories on the origin of the earth from their communities.",
+   "links": "Learners apply computing skills as they use relevant print or digital resources to find out the theories explaining the origin of the earth.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.a",
+     "letter": "a",
+     "text": "describe the origin of the earth",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.b",
+     "letter": "b",
+     "text": "explore the size, shape, and position of the Earth in the solar system",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.c",
+     "letter": "c",
+     "text": "examine the effects of rotation and revolution of the earth on human activities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.d",
+     "letter": "d",
+     "text": "illustrate the internal structure of the earth in the solar system",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.e",
+     "letter": "e",
+     "text": "appreciate the effects of rotation and revolution of the earth on human activities",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.NATURA.WEATHER",
+   "number": "4.5",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Weather",
+   "sequence": 405,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use relevant print or digital resources to research the elements of weather in the environment and write a report,",
+    "record and calculate weather conditions in the local environment (temperature, rainfall),",
+    "discuss the factors considered when constructing and siting a weather station in the school compound,",
+    "use locally available materials to construct selected instruments for measuring elements of weather (a rain gauge/ wind vane/windsock) and peer assess,",
+    "brainstorm on the significance of weather to the human environment and how to appropriately change to varied weather conditions,",
+    "debate how different weather conditions affect road use and surface,",
+    "discuss the effects of weather on road safety,",
+    "invite a resource person from a meteorological station to discuss possible careers related to climate."
+   ],
+   "key_inquiry_questions": [
+    "Why are elements of weather in the environment important?",
+    "How can we predict change in weather conditions?"
+   ],
+   "core_competences": "Creativity and Imagination: learners experiment with ideas and see if they work as they use locally available materials to construct selected instruments for measuring elements of weather.",
+   "values": "Responsibility: learners demonstrate determination as they construct and site a weather station in the school compound.",
+   "pcis": "Safety and Security: learners acquire knowledge of weather elements and respond appropriately to different weather conditions.\nDecision-making: learners discuss the factors to consider when constructing and setting a weather station in the school compound.",
+   "links": "Learners record and calculate weather conditions in the local environment.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 4, summary says 5.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     43,
+     44
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.a",
+     "letter": "a",
+     "text": "describe the elements of weather in the environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.b",
+     "letter": "b",
+     "text": "construct selected instruments for measuring elements of weather",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.c",
+     "letter": "c",
+     "text": "examine the significance of weather to the human environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.d",
+     "letter": "d",
+     "text": "respond appropriately to different weather conditions in the environment",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.NATURA.FIELDWORK",
+   "number": "4.6",
+   "strand": "Natural and Historic Built Environments",
+   "sub_strand": "Fieldwork",
+   "sequence": 406,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use digital devices to search for methods of data collection (observation, questionnaire, interview, and focus group discussion),",
+    "engage a resource person on the challenges including road safety concerns and possible solutions in carrying out fieldwork,",
+    "search online on the methods of data analysis after fieldwork,",
+    "use mean, median, and mode to analyse road safety data from the locality and present in class,",
+    "watch documentary on the value field work in investigating phenomena immediate environment and write main points."
+   ],
+   "key_inquiry_questions": [
+    "Why is fieldwork important in social studies?",
+    "How should we conduct fieldwork?"
+   ],
+   "core_competences": "Critical thinking: learners value fieldwork in investigating phenomena in the immediate environment.\nCommunication and Collaboration: learners brainstorm on the challenges and possible solutions in carrying out fieldwork",
+   "values": "Responsibility: learners demonstrate self-drive as they carry out fieldwork.\nRespect: learners show respect to the people they interact with during fieldwork",
+   "pcis": "Safety and Security: learners carry out fieldwork and exercise caution as they investigate phenomena in the immediate environment.",
+   "links": "Learners apply listening and speaking skills as they discuss challenges likely to be encountered during field work and possible solutions.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     45,
+     46
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.a",
+     "letter": "a",
+     "text": "examine methods of data collection used in fieldwork",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.b",
+     "letter": "b",
+     "text": "explore challenges and possible solutions in carrying out fieldwork",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.c",
+     "letter": "c",
+     "text": "illustrate methods of data analysis after fieldwork",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.d",
+     "letter": "d",
+     "text": "value field work in investigating phenomena in the immediate environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN",
+   "number": "5.1",
+   "strand": "Political Development and Governance",
+   "sub_strand": "Political Development in Africa",
+   "sequence": 501,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the terms “Scramble for and Partition of Africa and make presentations,",
+    "discuss the roles of European groups in the ‘Scramble for and Partition’ of Africa,",
+    "draw the map of Africa and indicate the areas taken up by the different European countries (Belgium, Britain, Germany, Italy, Spain, and Portugal) during the partition of Africa and display them in class,",
+    "using posters, display in class the terms of the Berlin conference of 1884-1885 on the partitioning of Africa.",
+    "Search using digital devices/print resources on the implications of colonial rule on African nations,",
+    "compose songs for elimination of neo-colonialism through good governance."
+   ],
+   "key_inquiry_questions": [
+    "How did developments in Europe influence the scramble and partition of Africa?"
+   ],
+   "core_competences": "Citizenship: learners compose songs for elimination of neo-colonialism through good governance,\nCreativity and Imagination: learners draw the map of Africa and indicate the areas taken up by the different European countries (Belgium, Britain, Germany, Italy, Spain, and Portugal) during the partition of Africa and display them in class,",
+   "values": "Patriotism: Learners compose songs for elimination of neo-colonialism through good governance.\nResponsibility: learners engage in assigned roles and duties as they use posters to display in class the terms of the Berlin conference of 1884-1885.",
+   "pcis": "Inter racial-ethnic relations: Learners discuss the roles of European groups in the ‘Scramble for and Partition’ of Africa,\nGood governance: learners brainstorm on compose songs for elimination of neo-colonialism through good governance.",
+   "links": "Learners apply Creative Arts skills as they draw the map of Africa and indicate the areas taken up by the different European countries during the partition of Africa.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     49,
+     50
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.a",
+     "letter": "a",
+     "text": "explore roles of European groups in the ‘Scramble for and Partition’ of Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.b",
+     "letter": "b",
+     "text": "examine the terms of the Berlin Conference of 1884- 1885 on the partitioning of Africa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.c",
+     "letter": "c",
+     "text": "illustrate the implications of colonial rule on African nations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.d",
+     "letter": "d",
+     "text": "advocate for elimination of neo-colonialism through good governance",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY",
+   "number": "5.2",
+   "strand": "Political Development and Governance",
+   "sub_strand": "The Constitution of Kenya",
+   "sequence": 502,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use print or digital devices to conduct online research and write an essay on the importance of the Constitution and share it in class,",
+    "watch a video on the promulgation of the Constitution of Kenya and discuss in class,",
+    "design a sample constitution for the class and display it in class,",
+    "write simple slogans or statements on any eight of the national values as provided in the Constitution of Kenya and present in class,",
+    "discuss ways of upholding and protecting the Constitution of Kenya."
+   ],
+   "key_inquiry_questions": [
+    "Why should a country have a constitution?",
+    "Why should we uphold and protect the Constitution?"
+   ],
+   "core_competences": "Citizenship: learners demonstrate a shared commitment to the ideals of the nation as they watch a video on the promulgation of the Constitution of Kenya.\nSelf-Efficacy: learners demonstrate the skill of task execution as they compose simple slogans or statements on any of the eight national values as provided in the Constitution of Kenya and present in class.",
+   "values": "Patriotism: learners demonstrate democracy as they watch a video on the promulgation of the Constitution of Kenya and compose a song on any eight national values enshrined in the Constitution.\nSocial justice: learners demonstrate freedom as they discuss ways of upholding and protecting the Constitution of Kenya.",
+   "pcis": "Social cohesion: learners create a sample constitution for the class and display it in class.\nGood governance: learners organise an open forum as a class to pass messages on public engagement and democratic representation to the community.",
+   "links": "Learners apply listening, writing, and speaking skills as they hold discussions, and group activities, write essays, and create a class constitution\nLearners apply Creative Arts concepts to compose songs, write slogan and make presentation in class and in the community",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     51,
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.a",
+     "letter": "a",
+     "text": "discuss the importance of the Constitution of Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.b",
+     "letter": "b",
+     "text": "analyse ways of upholding and protecting the Constitution of Kenya for social cohesion",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.c",
+     "letter": "c",
+     "text": "apply the national values in day-to-day life as provided in the Constitution of Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.d",
+     "letter": "d",
+     "text": "uphold and protect the Constitution of Kenya to promote ethical and responsible citizenship",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.POLITI.HUMAN_RIGHTS",
+   "number": "5.3",
+   "strand": "Political Development and Governance",
+   "sub_strand": "Human Rights",
+   "sequence": 503,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "create posters on the classification of human rights and display them in school,",
+    "use a tree diagram to indicate characteristics of human rights and display them in class,",
+    "brainstorm on issues of equity and non-discrimination,",
+    "list was of promoting equity and non-discrimination in ensuring safety of all in road use,",
+    "develop posters on equity and non-discrimination and display them in school."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to know our rights?",
+    "How can we promote equity and non-discrimination in society?",
+    "How can we promote respect for human rights in our community?"
+   ],
+   "core_competences": "Citizenship: learners examine social justice issues in local, national, regional, and global contexts as they brainstorm on issues of equity and non-discrimination.\nCreativity and Imagination: learners undertake group activities and exchange new ideas that inspire creative thinking as they create posters on the classification of human rights.",
+   "values": "Social Justice: learners demonstrate responsibility as they develop posters on equity and non-discrimination.\nUnity: learners demonstrate cooperation as they create posters on the classification and use a tree diagram to indicate characteristics of human rights.",
+   "pcis": "Social Cohesion: learners in groups create posters on the classification of human rights and display them in school.\nGood Governance: learners develop posters on equity and non-discrimination and display them in school.",
+   "links": "Learners use graphic designs as developed in Creative Arts to develop posters on equity and non-discrimination and display them in school.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     53,
+     54
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.a",
+     "letter": "a",
+     "text": "classify human rights as stipulated in the human rights instruments",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.b",
+     "letter": "b",
+     "text": "explore characteristics of human rights in the society",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.c",
+     "letter": "c",
+     "text": "explain the concept of equity and non-discrimination in fostering solidarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.d",
+     "letter": "d",
+     "text": "take action to promote equity and non-discrimination for social justice",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.e",
+     "letter": "e",
+     "text": "value human rights for the promotion of human dignity",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS",
+   "number": "5.4",
+   "strand": "Political Development and Governance",
+   "sub_strand": "African Diasporas",
+   "sequence": 504,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "with the aid of print or internet resources, discuss the concept of African diasporas,",
+    "use library resources to research the factors that contributed to the presence of African diasporas across the world and share the findings in class,",
+    "use print or digital resources to locate on the world map countries inhabited by African diasporas by 1960 (USA, Brazil, and France) and present in class,",
+    "watch a video or YouTube on the role of the diasporas in the political development in Africa,",
+    "debate on the role of the diasporas in the political development in Africa,",
+    "develop simple slogans on the African diasporas and promotion of African unity in society today."
+   ],
+   "key_inquiry_questions": [
+    "How can we promote collaboration between continental Africans and African Diasporas?",
+    "How can we promote African Unity in society today?"
+   ],
+   "core_competences": "Learning to Learn: learners are motivated to learn continuously as they use library resources to research on the factors that contributed to the movement of African diasporas to various parts of the world.\nDigital Literacy: learners use digital technology to accomplish their tasks as they watch a video on the role of the Diasporas in the political development in Africa.",
+   "values": "Social Justice: learners demonstrate cooperation as they watch a video or YouTube on the role of Diasporas in the political development in Africa.\nPatriotism: learners apply democracy and the rule of law as they debate on the role of Diasporas in the political development in Africa.",
+   "pcis": "Creative Thinking: Learners use print or digital resources to locate on the world map countries inhabited by African diaspora.\nSocial Cohesion: Learners debate the role of diaspora in the political development in Africa.",
+   "links": "Learners use computer skills to watch a video or YouTube on the role of diasporas in political development in Africa.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 4, summary says 5.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     55,
+     56
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.a",
+     "letter": "a",
+     "text": "explore the factors that contributed to the presence of African diasporas across the world",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.b",
+     "letter": "b",
+     "text": "locate countries inhabited by African diasporas by 1960 on a world map",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.c",
+     "letter": "c",
+     "text": "assess the role of the diasporas in the political development in Africa",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.d",
+     "letter": "d",
+     "text": "acknowledge the African diasporas and promotion of African unity in society today",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "SOCI.G7.POLITI.CITIZENSHIP",
+   "number": "5.5",
+   "strand": "Political Development and Governance",
+   "sub_strand": "Citizenship",
+   "sequence": 505,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss why there is interconnectedness and interdependence among countries,",
+    "debate on positive and negative effects of globalisation at national and global levels",
+    "brainstorm on the qualities of a global citizen in the modern society,",
+    "use print or digital resources to research for qualities of a global citizen and write them down,",
+    "design poster with messages on awareness of the effects of globalisation at national and global levels,",
+    "compose a poem or a song ways of contributing to the international community while maintaining loyalty to own country.",
+    "display and appreciate aspects of interconnectedness and interdependence among countries in the world today."
+   ],
+   "key_inquiry_questions": [
+    "How do countries connect and depend on each other in the world today?",
+    "Which are the common concerns in the world today?"
+   ],
+   "core_competences": "Citizenship: learners identify ways of contributing to the international community while maintaining loyalty to own country,\nLearning to Learn: learners design poster with messages on awareness of the effects of globalisation at national and global levels.",
+   "values": "Love: learners display aspects of interconnectedness and interdependence among countries in the world today\nPatriotism: learners demonstrate loyalty as they brainstorm on the qualities of a global citizen in modern society.",
+   "pcis": "Inter-racial-ethnic relations: learners brainstorm on the qualities of a global citizen in modern society.\nHuman dignity: learners debate on positive and negative effects of globalisation at local and national levels and propose solutions.",
+   "links": "Learners apply computer skills as they use print or digital resources to research the qualities of a global citizen and write them down.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 4, summary says 5.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "Social Studies Grade 7 - Revised.pdf",
+    "version": "First published 2022; Revised 2024",
+    "pages": [
+     57,
+     58
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.a",
+     "letter": "a",
+     "text": "explain why there is interconnectedness and interdependence among countries in the world today",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.b",
+     "letter": "b",
+     "text": "examine the effects of globalisation at national and global levels",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.c",
+     "letter": "c",
+     "text": "describe the qualities of a global citizen in the modern society",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.d",
+     "letter": "d",
+     "text": "create awareness of the effects of globalisation at national and global levels",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.e",
+     "letter": "e",
+     "text": "identify ways of contributing to the international community while maintaining loyalty to own country",
+     "status": "kicd_read"
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.f",
+     "letter": "f",
+     "text": "appreciate interconnectedness and interdependence among countries in the world today",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

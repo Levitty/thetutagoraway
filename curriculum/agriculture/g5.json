@@ -1,0 +1,738 @@
+{
+ "framework": "cbc",
+ "subject_key": "agriculture",
+ "grade": 5,
+ "source": "KICD Agriculture, First Published 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 13,
+  "outcomes": 42,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "AGRI.G5.CONSER.SOIL_CONSERVATION",
+   "number": "1.1",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Soil Conservation",
+   "sequence": 101,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and identify sites in the school or community that have poor soil for crop growth,",
+    "construct a pit, a site or a structure for damping plant residue and suitable food remains and organic kitchen wastes in school,",
+    "plant crop in a residue pit to observe and appreciate soil improvement from accumulated organic wastes."
+   ],
+   "key_inquiry_questions": [
+    "How can we improve the soil using suitable organic wastes?"
+   ],
+   "core_competences": "Critical thinking and problem solving: observation skills as learners identify appropriate sites for soil improvement.",
+   "values": "Unity: collaborative skills as learners construct organic waste pit for soil improvement.",
+   "pcis": "Environmental conservation as learners recycle organic wastes through the organic waste pit.",
+   "links": "Learners relate the construction and use of organic waste pit to waste management skills learnt in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     13
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.a",
+     "letter": "a",
+     "text": "identify sites for soil improvement in the school or community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.b",
+     "letter": "b",
+     "text": "construct organic waste pit for soil improvement",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.c",
+     "letter": "c",
+     "text": "demonstrate use of plant remains for soil improvement",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.CONSER.WATER_CONSERVATION",
+   "number": "1.2",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Water Conservation",
+   "sequence": 102,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use devices or other resources to search for information on ways of water conservation such as mulching, cover cropping and shading in kitchen and backyard gardening,",
+    "practise various ways of conserving water in farming (mulching, shading, cover cropping) within the school,",
+    "experiment mulching (mulch some crops and leave others un-mulched and compare moisture conservation),",
+    "make presentations to share experiences on importance of conserving water (mulching, cover cropping and shading) in kitchen and backyard gardening activities."
+   ],
+   "key_inquiry_questions": [
+    "How can we conserve soil water in household gardening practices?"
+   ],
+   "core_competences": "Leaning to learn: learning independently as learners engage in self-driven tasks for water conservation.",
+   "values": "Integrity: taking personal responsibility in the use of digital devices while searching for information on water conservation.",
+   "pcis": "Environmental awareness as the learners conserve soil moisture through gardening practices.",
+   "links": "Learners relate water conservation to knowledge on natural resources in the environment learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.a",
+     "letter": "a",
+     "text": "identify ways of conserving water for household gardening",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.b",
+     "letter": "b",
+     "text": "practice water conservation within the school or community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.c",
+     "letter": "c",
+     "text": "appreciate importance of conserving water in the community",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS",
+   "number": "1.3",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Conserving Wild Animals",
+   "sequence": 103,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "watch video clips or listen to a resource person on safe ways of repelling wild animals (such as use of smoke, smells) to avoid damage on property (crops and domestic animals) and live better with wild animals,",
+    "innovate safe ways of repelling small wild animals (smoke, use of smell repellant or any other),",
+    "discuss and make presentations on importance of conserving wild animals in the environment."
+   ],
+   "key_inquiry_questions": [
+    "How can we repel wild animals to avoid destruction of property?"
+   ],
+   "core_competences": "Critical thinking and problem solving: evaluation and decision making skill as learners explore ways of solving destruction of property by wild animals.",
+   "values": "Patriotism: learners show love for the environment by conserving animal diversity.",
+   "pcis": "Conservation of biodiversity as learners appreciate cultural heritage in their community.",
+   "links": "Learners relate conservation of wild animals to conservation of natural resources learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.a",
+     "letter": "a",
+     "text": "identify ways of repelling wild animals to avoid damage of property",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.b",
+     "letter": "b",
+     "text": "repel wild animals to avoid destruction of property",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.c",
+     "letter": "c",
+     "text": "appreciate importance of living better with wild animals",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES",
+   "number": "2.1",
+   "strand": "Food Production Processes",
+   "sub_strand": "Growing Vegetables",
+   "sequence": 201,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm and share experiences on gardening practices of vegetables in a nursery bed,",
+    "prepare a nursery bed (container or ground nursery), sow vegetable seeds and take care of the seedlings,",
+    "transplant vegetable seedlings and take care of the seedlings,",
+    "make class presentations on importance of growing vegetables as a source of food for animals and humans."
+   ],
+   "key_inquiry_questions": [
+    "How does growing vegetables contribute to food production?"
+   ],
+   "core_competences": "Self-efficacy: self-drive as learners undertake projects to grow vegetable crops.",
+   "values": "Social justice: learners foster fairness in sharing and undertaking of duties in the vegetable production project.",
+   "pcis": "Financial literacy as the learners appreciate saving on cost at school or family level by growing own vegetables.",
+   "links": "Learners relate growing of vegetables to social economic activities in the community learnt through Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.a",
+     "letter": "a",
+     "text": "identify gardening practices in growing vegetables",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.b",
+     "letter": "b",
+     "text": "establish a nursery bed for vegetables",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.c",
+     "letter": "c",
+     "text": "care for vegetable seedlings after transplanting",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.d",
+     "letter": "d",
+     "text": "appreciate the importance of vegetables in provision of healthy meals",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS",
+   "number": "2.2",
+   "strand": "Food Production Processes",
+   "sub_strand": "Uses of Domestic Animals",
+   "sequence": 202,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm and share experiences on the uses of domestic animals in food production (bees, rabbits, camels, fish, pigs, donkeys, dogs and cats),",
+    "match domestic animals to their uses,",
+    "make class presentations on importance of domestic animals in various food production processes while relating contributions of all the scoped animals."
+   ],
+   "key_inquiry_questions": [
+    "How are domestic animals important in food production?"
+   ],
+   "core_competences": "Communication: speaking clearly and effectively as learners make presentations on uses of domestic animals in food production.",
+   "values": "Patriotism: appreciating own culture by recognising diversity of domestic animals reared in the country.",
+   "pcis": "Food and nutrition security as the learners appreciate the direct and indirect uses of domestic animals in food production.",
+   "links": "Learners relate the rearing and uses of domestic animals as socio-economic activity learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.a",
+     "letter": "a",
+     "text": "identify uses of various domestic animals in food production processes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.b",
+     "letter": "b",
+     "text": "relate various domestic animals to their uses",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.c",
+     "letter": "c",
+     "text": "appreciate the importance of domestic animals in food production",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_",
+   "number": "2.3",
+   "strand": "Food Production Processes",
+   "sub_strand": "Preservation of Cereals and Pulses",
+   "sequence": 203,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm and share experiences on methods of preserving and storing cereals and pulses (such as sun drying, use of ashes, use of airtight containers) at household level,",
+    "preserve and store cereals and pulses using methods such as sun drying, use of ash and airtight containers.",
+    "make class presentations to share experiences on importance of preserving and storing cereals and pulses."
+   ],
+   "key_inquiry_questions": [
+    "How does preservation and storage of cereals and pulses enhance food security?"
+   ],
+   "core_competences": "Critical thinking and problem solving: exploring ways of preserving and storing cereals and pulses to prevent spoilage.",
+   "values": "Unity: taking turns while undertaking tasks in preservation of cereals and pulses.",
+   "pcis": "Food and nutrition security as learners preserve available cereals and pulses to prevent food spoilage.",
+   "links": "Learners relate skills in preservation of cereals and pulses to farming activities in the community learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.a",
+     "letter": "a",
+     "text": "describe methods of preserving cereals and pulses in the locality",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.b",
+     "letter": "b",
+     "text": "preserve cereals and pulses for food security",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.c",
+     "letter": "c",
+     "text": "appreciate the importance of preserving cereals and pulses for food security",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS",
+   "number": "2.4",
+   "strand": "Food Production Processes",
+   "sub_strand": "Food Nutrients",
+   "sequence": 204,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search and share information on functions of food nutrients (carbohydrates, vitamins, proteins, fats),",
+    "use samples of food materials and photographs to categorise foods based on their major nutrients (protein rich foods, carbohydrates rich foods, vitamins and minerals rich foods),",
+    "use print and digital devices to search for information on various nutritional diseases and disorders such as kwashiorkor, marasmus, goiter and anaemia,",
+    "make class presentations on the importance of various nutrients in the body."
+   ],
+   "key_inquiry_questions": [
+    "Why is the knowledge of food nutrients important in food production?"
+   ],
+   "core_competences": "Digital literacy: interaction with digital technologies while searching for information on food nutrients.",
+   "values": "Unity: respect of each other’s opinions while making presentations on importance of nutrients in the body.",
+   "pcis": "Health promotion as learners learn the importance of food nutrients in the body.",
+   "links": "Learners relate food nutrients to prevention of non-communicable diseases learnt in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.a",
+     "letter": "a",
+     "text": "explain functions of food nutrients in the body",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.b",
+     "letter": "b",
+     "text": "categorise foods based on their major nutrients",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.c",
+     "letter": "c",
+     "text": "identify nutritional diseases and disorders associated with poor eating habits",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.d",
+     "letter": "d",
+     "text": "appreciate the importance of various nutrients in the body",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.FOOD_P.COOKING_FOOD",
+   "number": "2.5",
+   "strand": "Food Production Processes",
+   "sub_strand": "Cooking Food",
+   "sequence": 205,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [
+    "Dry Fat Frying",
+    "Deep Frying"
+   ],
+   "learning_experiences": [
+    "watch video clip or demonstration on dry fat frying and deep frying methods of cooking,",
+    "cook foods using dry fat frying and deep frying methods,",
+    "serve foods that have been cooked through dry fat frying and deep frying methods."
+   ],
+   "key_inquiry_questions": [
+    "How can we cook foods using dry fat frying and deep frying methods?"
+   ],
+   "core_competences": "Learning to learn: self-discipline as learners work cautiously to fry foods.",
+   "values": "Responsibility: taking personal initiative to observe safety as learners handle hot oils and equipment in frying foods.",
+   "pcis": "Safety and security for self and others as learners handle hot equipment and fat while frying food.",
+   "links": "Learners relate safety and first aid from burns and scald to knowledge learnt in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.a",
+     "letter": "a",
+     "text": "describe various methods of cooking food",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.b",
+     "letter": "b",
+     "text": "cook foods using various methods",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.c",
+     "letter": "c",
+     "text": "embrace dry fat frying and deep frying in food production",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES",
+   "number": "3.1",
+   "strand": "Hygiene Practices",
+   "sub_strand": "Good Grooming Practices",
+   "sequence": 301,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [
+    "Dressing",
+    "Etiquette"
+   ],
+   "learning_experiences": [
+    "discuss and share experiences on aspects of good grooming (dressing and etiquette) for different occasions,",
+    "demonstrate different ways of dressing and etiquette for different activities,",
+    "conduct class modelling on different ways of dressing and etiquette to appreciate good grooming habits for different activities."
+   ],
+   "key_inquiry_questions": [
+    "How does good grooming promote personal hygiene?"
+   ],
+   "core_competences": "Self-efficacy: identification of self as learners develop good grooming habits.",
+   "values": "Respect: positive regard for self and others as learners adopt good grooming habits.",
+   "pcis": "Health promotion as learners adopt preventive health practices through good grooming habits.",
+   "links": "Learners relate good grooming habits to self-discovery learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.a",
+     "letter": "a",
+     "text": "describe good grooming as a daily health habit",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.b",
+     "letter": "b",
+     "text": "practice good grooming as a daily health habit",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.c",
+     "letter": "c",
+     "text": "appreciate good grooming as a healthy habit",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.HYGIEN.HOME_HYGIENE",
+   "number": "3.2",
+   "strand": "Hygiene Practices",
+   "sub_strand": "Home Hygiene",
+   "sequence": 302,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and share experiences on surfaces made from different materials such as glass, wooden, earthen floors, cemented and tiled,",
+    "clean different types of surfaces such as glass, wooden, earthen floors, cemented and tiled,",
+    "maintain cleanliness of surfaces in the school to appreciate living in clean environment."
+   ],
+   "key_inquiry_questions": [
+    "How do you clean surfaces made from different materials?"
+   ],
+   "core_competences": "Communication and collaboration: listening and speaking skills using facts to support opinions in brainstorming on home hygiene.",
+   "values": "Unity: taking turns in activities while learners participate in cleaning surfaces.",
+   "pcis": "Safety of self and others while learners clean various types of surfaces at home or school.",
+   "links": "Learners relate cleaning of surfaces to prevention of contamination and prevention of spreading communicable diseases learnt in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.a",
+     "letter": "a",
+     "text": "identify surfaces made from different materials in home environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.b",
+     "letter": "b",
+     "text": "clean different types of surfaces in the home environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.c",
+     "letter": "c",
+     "text": "appreciate living in a clean home environment to promote healthy living",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM",
+   "number": "3.3",
+   "strand": "Hygiene Practices",
+   "sub_strand": "Laundering Cotton Item",
+   "sequence": 303,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "watch a clip or observe a demonstration on how to launder a cotton item (white and fast coloured cotton),",
+    "launder a white and fast coloured cotton item,",
+    "practice laundering of white and fast coloured items at home to appreciate the importance of laundry work for personal hygiene."
+   ],
+   "key_inquiry_questions": [
+    "How does laundering cotton items promote hygiene?"
+   ],
+   "core_competences": "Leaning to learn: sharing of ideas when carrying out activities with peers in laundering cotton items.",
+   "values": "Responsibility: taking care of personal items in the laundering of cotton items.",
+   "pcis": "Personal hygiene as they clean cotton items to promote health.",
+   "links": "Learners relate personal hygiene to communicable diseases learnt in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.a",
+     "letter": "a",
+     "text": "describe how to launder a cotton item",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.b",
+     "letter": "b",
+     "text": "launder a cotton item for personal hygiene",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.c",
+     "letter": "c",
+     "text": "appreciate importance of laundry work for hygiene purposes",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS",
+   "number": "4.1",
+   "strand": "Production Techniques",
+   "sub_strand": "Repairing Garments",
+   "sequence": 401,
+   "lessons": 11,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use pictures, samples of garments, video clips and charts to identify stitches such as back stitch and running stitch used in repairing garment,",
+    "make samples of running and back stitches,",
+    "use back stitch and running stitch to repair gaping seam,",
+    "make use of back stitch and running stitch repair their daily wear."
+   ],
+   "key_inquiry_questions": [
+    "How can we repair garments?"
+   ],
+   "core_competences": "Critical thinking and problem solving: evaluation and decision making skills as learners explore ways of repairing garment.",
+   "values": "Responsibility: taking care of personal items through repairing of gaping seams.",
+   "pcis": "Financial literacy as learners save costs by repairing own clothes.",
+   "links": "Learners relate cloth repairing skills such as choice and use of colours to aesthetic skills learnt in Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.a",
+     "letter": "a",
+     "text": "identify stitches used in repairing garment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.b",
+     "letter": "b",
+     "text": "make samples of stitches used to repair garments",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.c",
+     "letter": "c",
+     "text": "use the stitches to repair gaping seam",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.d",
+     "letter": "d",
+     "text": "adopt the use of stitches to repair of garments",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_",
+   "number": "4.2",
+   "strand": "Production Techniques",
+   "sub_strand": "Constructing Innovative Gardens",
+   "sequence": 402,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Horizontal gardens",
+    "Vertical gardens"
+   ],
+   "learning_experiences": [
+    "watch or observe stimulus materials (video clips, pictures and photographs) on innovative gardening practices to differentiate between vertical and horizontal gardens,",
+    "use sacks, plastic bottles, walls, plastic pipes among others to construct vertical and horizontal gardens for growing crops,",
+    "use the vertical and horizontal gardens to grow appropriate crop."
+   ],
+   "key_inquiry_questions": [
+    "How can gardening be done on vertical and horizontal spaces?"
+   ],
+   "core_competences": "Creativity and imagination: designing and assembling skills as learners innovate vertical and horizontal gardens.",
+   "values": "Unity: team spirit as learners take turns in constructing vertical and horizontal gardens.",
+   "pcis": "Environmental awareness as learners utilise limited spaces through use of vertical and horizontal gardens.",
+   "links": "Learners relate designing structures and use of craft tools and equipment to skills learnt in Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "AGRICULTURE Grade 5 30.07.2024.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.a",
+     "letter": "a",
+     "text": "distinguish between horizontal and vertical innovative gardening",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.b",
+     "letter": "b",
+     "text": "construct innovative gardens for growing crops",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.c",
+     "letter": "c",
+     "text": "adopt the use of innovative gardens in growing crops",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

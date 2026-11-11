@@ -1,0 +1,700 @@
+{
+ "framework": "cbc",
+ "subject_key": "agriculture",
+ "grade": 8,
+ "source": "KICD Agriculture, First published 2023; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 12,
+  "outcomes": 41,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR",
+   "number": "1.1",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Soil Conservation Measures",
+   "sequence": 101,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search and share information on methods of soil conservation (strip cropping, grassed water ways, stone lines, trash lines, soil bunds) using digital devices and print media,",
+    "explore the school environment and carry out activities on soil conservation in the school such as strip cropping, grassed water ways stone lines, trash lines and soil bunds,",
+    "construct a farm model using materials such as cartons, cardboards, soil and papier-mache for displaying soil conservation measures on a farm."
+   ],
+   "key_inquiry_questions": [
+    "How can we conserve soil in the environment?"
+   ],
+   "core_competences": "Creativity and Imagination: These are enhanced as learners demonstrate methods of soil conservation using a farm model.",
+   "values": "Unity: This is enhanced as the learner collaborates with others while working in teams to construct a farm model.",
+   "pcis": "Environmental awareness as learners conserve soil from erosion.",
+   "links": "Learners relate construction of a farm model with conservation structures using artistic skills learnt in Creative Arts and Sports.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     13
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.a",
+     "letter": "a",
+     "text": "describe methods of soil conservation in agricultural environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.b",
+     "letter": "b",
+     "text": "carry out soil conservation activities in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.c",
+     "letter": "c",
+     "text": "demonstrate caring attitude towards soil in the environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO",
+   "number": "1.2",
+   "strand": "Conservation of Resources",
+   "sub_strand": "Water Harvesting and Storage",
+   "sequence": 102,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search and share information in groups, on how harvested water can be stored for domestic purposes, using methods such as shallow water pans, water ponds and suitable water containers,",
+    "initiate measures of their choice towards water harvesting and storage in the school,",
+    "make class presentations on possible initiatives and maintenance practices that can be made to harvest and store rain water and surface run-off in the school environment."
+   ],
+   "key_inquiry_questions": [
+    "How can we harvest and store water for domestic purposes?"
+   ],
+   "core_competences": "Critical thinking and problem solving: open-mindedness and creativity skills as learners analyse and initiate water harvesting and storage measures.",
+   "values": "Responsibility: learners undertake assigned roles while participating in water harvesting and storage initiatives in the school.",
+   "pcis": "Environmental conservation: This is developed as learners harvest and store rainwater in the school environment.",
+   "links": "Learners relate water harvesting and storage to conservation of the community environment learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.a",
+     "letter": "a",
+     "text": "discuss ways of storing harvested water for domestic use",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.b",
+     "letter": "b",
+     "text": "take part in harvesting and storing water in the school for domestic use",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.c",
+     "letter": "c",
+     "text": "show responsibility in harvesting and storing water for domestic use",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR",
+   "number": "2.1",
+   "strand": "Food Production Processes",
+   "sub_strand": "Kitchen and Backyard Gardening",
+   "sequence": 201,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use digital and print resource to search for the roles of kitchen and backyard garden in food production such as production of fresh healthy foods, saving money and readily accessible food,",
+    "prepare a kitchen or backyard garden and plant various crops such as vegetables, herbs and spices,",
+    "take care of the crops established in the kitchen and backyard garden to adopt their use in food production."
+   ],
+   "key_inquiry_questions": [
+    "How does kitchen garden contribute to food production?"
+   ],
+   "core_competences": "Critical thinking and problem solving: evaluation and decision skills as the learners establish a kitchen or a backyard garden for food production.",
+   "values": "Unity: collaboration with others while learners establish a kitchen or backyard garden.",
+   "pcis": "Poverty eradication as learners establish their garden to grow own foods.",
+   "links": "Learners relate growing of own food in kitchen and backyard garden to financial literacy skills learnt in Pre-Technical Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.a",
+     "letter": "a",
+     "text": "explain the role of kitchen and backyard garden in food production",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.b",
+     "letter": "b",
+     "text": "establish a kitchen and backyard garden for food production",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.c",
+     "letter": "c",
+     "text": "adopt the use of kitchen and backyard garden for food production",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL",
+   "number": "2.2",
+   "strand": "Food Production Processes",
+   "sub_strand": "Poultry Rearing in a Fold",
+   "sequence": 202,
+   "lessons": 11,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search and observe video clips or images on poultry folds and share experiences on how poultry folds look like,",
+    "use locally available materials such as reused and recycled wires, plastic and wood materials to construct a poultry fold,",
+    "conduct a project: learners to rear poultry of their choice in a fold unit to practise moving of the folds, feeding, watering, sanitation, protection from predators and harsh weather."
+   ],
+   "key_inquiry_questions": [
+    "How can we rear poultry in a fold for food production?"
+   ],
+   "core_competences": "Creativity and imagination: networking skills as learners undertake group task and gain new perspective on how to construct a poultry fold.",
+   "values": "Responsibility: carrying out assigned tasks in the project for construction of a poultry fold.",
+   "pcis": "Financial literacy as learners recycle and reuse materials to save on costs in construction of a poultry fold.",
+   "links": "Learners relate dimensions of a poultry fold to measurements in Mathematics.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.a",
+     "letter": "a",
+     "text": "describe a fold in poultry rearing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.b",
+     "letter": "b",
+     "text": "construct a fold for rearing poultry",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.c",
+     "letter": "c",
+     "text": "rear poultry in a fold",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.d",
+     "letter": "d",
+     "text": "show responsibility in rearing of poultry",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO",
+   "number": "2.3",
+   "strand": "Food Production Processes",
+   "sub_strand": "Crop Pest and Disease Control",
+   "sequence": 203,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "take a field excursion to observe and identify vegetable crops that are attacked by pests; (punctured leaves, cut-off seedlings, curling leaves) and the common sites where the pests are found,",
+    "take a field excursion to a vegetable garden, observe and identify vegetable crops affected by disease, (wilting plants, black and brown spots and rotting of plant parts),",
+    "control pests on vegetables using methods such as handpicking, removing affected crop parts, uprooting heavily affected crops, and applying natural pesticides such as ash,",
+    "control diseases on vegetables using methods such as removing affected parts and uprooting heavily affected crops,",
+    "discuss and make presentations on importance of controlling crop pests and diseases in vegetable production,"
+   ],
+   "key_inquiry_questions": [
+    "How can we identify vegetable crops attacked by pests and diseases?",
+    "How can we control pests and diseases affecting crops?"
+   ],
+   "core_competences": "Learning to learn: learners carry out research during field excursion to identify vegetable crop pests and diseases.",
+   "values": "Respect: accommodating diverse opinions while learners discuss and make presentations on the importance of controlling pests and diseases in vegetable crops.",
+   "pcis": "Disaster risk reduction as learners control pests and diseases to prevent outbreaks.",
+   "links": "Learners relate control of pest and diseases in crops to farming for economic activities learnt in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.a",
+     "letter": "a",
+     "text": "identify vegetable crops attacked by pests and diseases",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.b",
+     "letter": "b",
+     "text": "control pests and diseases on vegetable crops",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.c",
+     "letter": "c",
+     "text": "acknowledge importance of controlling pests and diseases in vegetable production",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR",
+   "number": "2.4",
+   "strand": "Food Production Processes",
+   "sub_strand": "Preparation of Animal Products",
+   "sequence": 204,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [
+    "Processing fish",
+    "Dressing poultry"
+   ],
+   "learning_experiences": [
+    "discuss and share experiences on the importance of processing fish and dressing poultry,",
+    "process fresh fish through scaling, gutting, cleaning, salting, and frying,",
+    "dress poultry carcass (beheading, defeathering, removal of offal, cleaning) for various uses,",
+    "make presentations to create awareness on ethical issues (humane killing and handling while slaughtering) and safety practices in preparation of animal products."
+   ],
+   "key_inquiry_questions": [
+    "How can we process fresh fish?",
+    "How can we dress poultry carcass?"
+   ],
+   "core_competences": "Learning to learn: collaborative working as learners undertake processing of fish and poultry.",
+   "values": "Integrity: application of ethical procedures in the processing of fish and poultry.",
+   "pcis": "Animal welfare: learners practise humane killing of poultry during slaughtering.",
+   "links": "Learners relate the parts removed in fish and poultry to knowledge of parts of fish and birds learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.a",
+     "letter": "a",
+     "text": "explain the importance of processing fish and dressing poultry carcass",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.b",
+     "letter": "b",
+     "text": "process fresh fish for various purposes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.c",
+     "letter": "c",
+     "text": "dress poultry carcass for various purposes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.d",
+     "letter": "d",
+     "text": "uphold ethical and safety practices in preparation of animal products",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC",
+   "number": "2.5",
+   "strand": "Food Production Processes",
+   "sub_strand": "Preserving animal products",
+   "sequence": 205,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [
+    "Milk",
+    "Meat"
+   ],
+   "learning_experiences": [
+    "search for information from digital and print resources, discuss and share experiences on the importance of preserving milk and meat at household level,",
+    "preserve milk through methods such as boiling, fermenting and home cooling techniques,",
+    "preserve meat through methods such as salting, boiling, drying and smoking,",
+    "make presentations to promote applicable methods of preserving animal products to embrace their use at household level,"
+   ],
+   "key_inquiry_questions": [
+    "How can we preserve milk and meat at household level?"
+   ],
+   "core_competences": "Digital literacy: interacting with digital technology as learners search for information on milk and meat preservation.",
+   "values": "Integrity: honesty in the process of preserving meat and milk using ethically acceptable procedures.",
+   "pcis": "Food hygiene as learners ensure use of clean equipment and appropriate environment in the preservation of meat and milk.",
+   "links": "Learners relate preservation of meat and milk to basic principles of preservation learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.a",
+     "letter": "a",
+     "text": "explain the importance of preserving milk and meat at household level",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.b",
+     "letter": "b",
+     "text": "preserve meat to prolong shelf life at household level",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.c",
+     "letter": "c",
+     "text": "preserve milk to prolong shelf life at household level",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.d",
+     "letter": "d",
+     "text": "embrace the use of various methods to preserve animal products at household level",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA",
+   "number": "2.6",
+   "strand": "Food Production Processes",
+   "sub_strand": "Cooking: Preparing a Balanced Meal",
+   "sequence": 206,
+   "lessons": 11,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and share experiences on factors to consider in preparing a balanced meal such as age, health status, occasion and gender,",
+    "plan and cook a balanced meal that include proteins, carbohydrate, vitamins and minerals,",
+    "serve the balanced meal using appropriate serving styles such as family or blue plate to present the meal,",
+    "make various menus on balanced meal and present in class."
+   ],
+   "key_inquiry_questions": [
+    "How can we prepare a balanced meal for healthy living?"
+   ],
+   "core_competences": "Creativity and imagination: networking skills as learners share new ideas that inspire creative thinking in preparing and presenting meals.",
+   "values": "Integrity: prudent use of resources in the preparation of balanced meal.",
+   "pcis": "Health promotion as learners adopt the use of balanced meal in day to day life.",
+   "links": "Learners relate consumption of balanced meal to prevention of lifestyle diseases learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.a",
+     "letter": "a",
+     "text": "explain factors to consider in preparing a balanced meal",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.b",
+     "letter": "b",
+     "text": "prepare a balanced meal for healthy living",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.c",
+     "letter": "c",
+     "text": "use various styles to present the meal",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.d",
+     "letter": "d",
+     "text": "adopt the use of a balanced meal in the day to day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN",
+   "number": "3.1",
+   "strand": "Hygiene Practices",
+   "sub_strand": "Cleaning the Kitchen",
+   "sequence": 301,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "share experiences on routine cleaning of the kitchen, (daily, weekly, special cleaning)",
+    "clean the kitchen to maintain hygiene, (daily, weekly and special cleaning)",
+    "make discussions and presentations on the importance of a clean kitchen for healthy living."
+   ],
+   "key_inquiry_questions": [
+    "How can daily, weekly and special cleaning enhance hygiene in the kitchen?"
+   ],
+   "core_competences": "Learning to learn: organizing own learning as learners apply appropriate procedures in cleaning the kitchen.",
+   "values": "Responsibility: engaging in assigned roles when cleaning the kitchen to maintain hygiene.",
+   "pcis": "Health promotion as learners maintain hygiene by cleaning the kitchen.",
+   "links": "Learners relate cleaning the kitchen and preventing contamination of food to concepts of disease prevention learnt in Integrated Science.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.a",
+     "letter": "a",
+     "text": "explain the routine cleaning practices of a kitchen",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.b",
+     "letter": "b",
+     "text": "carry out cleaning of a kitchen to maintain hygiene",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.c",
+     "letter": "c",
+     "text": "appreciate the importance of a clean kitchen for healthy living",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI",
+   "number": "4.1",
+   "strand": "Production Techniques",
+   "sub_strand": "Sewing Skills: Constructing Household Items",
+   "sequence": 401,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "search for information on different types of seams used in making household items, (open and plain seams)",
+    "make samples of open and plain seams on a piece of cloth using hand sewing,",
+    "make a simple household article such as lap bag, work bag, pillow case, cushion cover using plain or open seams,",
+    "display samples of household items they make to appreciate the use of seams in making household items."
+   ],
+   "key_inquiry_questions": [
+    "How can a household item be made using seams?"
+   ],
+   "core_competences": "Creativity and imagination: experimenting skills as learners construct household items using seams.",
+   "values": "Responsibility: undertaking assigned roles as the learners construct household items using seams.",
+   "pcis": "Safety for self and others as learners use sharp tools in construction of household items using seams.",
+   "links": "Learners relate construction of household items using seams to artistic skills (pattern work) learnt in Creative Arts and Sports.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.a",
+     "letter": "a",
+     "text": "identify types of seams used in making household items",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.b",
+     "letter": "b",
+     "text": "make samples of seams on a piece of cloth",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.c",
+     "letter": "c",
+     "text": "construct a household item using seams",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.d",
+     "letter": "d",
+     "text": "appreciate the use of seam in making household items",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_",
+   "number": "4.2",
+   "strand": "Production Techniques",
+   "sub_strand": "Constructing Innovative Animal Waterer",
+   "sequence": 402,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "visit animal rearing households, identify challenges of animal waterers, and make presentations to explain the challenges of the existing waterers,",
+    "search for information from digital and print media on innovative waterers, design and construct a waterer for small domestic animal to solve the identified problem using locally available materials,",
+    "use the constructed innovative waterer to test functionality, make adjustments and provide water to target animal either at home, in the school or selected households to appreciate use of innovative waterers."
+   ],
+   "key_inquiry_questions": [
+    "How can we make an innovative waterer for small domestic animals?"
+   ],
+   "core_competences": "Critical thinking and problem solving: reflection skills as learners develop innovative waterers for domestic animals.",
+   "values": "Social justice: fairness as learners carry out allocated tasks in construction of innovative animal waterer.",
+   "pcis": "Environmental awareness as learners use and reuse available materials in construction of animal waterer.",
+   "links": "Learners relate designing and construction of innovative waterer to drawing and designing skills learnt in Pre-technical Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.a",
+     "letter": "a",
+     "text": "explain challenges with animal waterers used in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.b",
+     "letter": "b",
+     "text": "design and construct an innovative waterer for water conservation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.c",
+     "letter": "c",
+     "text": "appreciate use of innovative waterers in animal rearing",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES",
+   "number": "4.3",
+   "strand": "Production Techniques",
+   "sub_strand": "ICT Support Services",
+   "sequence": 403,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and share experiences on how ICT can be used to access supplies and information for appropriate decision making,",
+    "access online platforms for ICT support services such as weather forecast, veterinary services, supply services, extension services, market information and banking services, catering services, cleaning services.",
+    "discuss and adhere to responsible use of ICT platforms by observing ethical and security considerations."
+   ],
+   "key_inquiry_questions": [
+    "How can we access support services using ICT?"
+   ],
+   "core_competences": "Digital literacy: digital citizenship skills as learners access online platform for ICT support services.",
+   "values": "Integrity: ethical use of online support services.",
+   "pcis": "Cyber security: This is developed as the learners observe online security guideline to prevent cyber-attacks.",
+   "links": "Learners relate the access of ICT support services to digital technology skills learnt in Pre-technical Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Agriculture Grade8 1.8.2024 - Proofread.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.a",
+     "letter": "a",
+     "text": "describe support services that can be accessed through use of ICT",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.b",
+     "letter": "b",
+     "text": "access support services using ICT",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.c",
+     "letter": "c",
+     "text": "show responsibility in use of ICT in accessing support services",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}
