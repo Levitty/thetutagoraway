@@ -9,6 +9,8 @@
 //   bar names the items on the phone bar. Anything else goes under More.
 // Hiding a menu item never changes access: routes keep their own checks.
 // ============================================================================
+import { ROCKET_ON } from '../features.js';
+
 const item = (id, label, icon, page, section = null, extra = {}) => ({ id, label, short: extra.short || label, icon, page, section, ...extra });
 
 const SETTINGS = { id: 'settings', label: 'Settings', short: 'Settings', icon: 'settings', action: 'settings' };
@@ -21,12 +23,12 @@ export const teachingSection = () => ({
   items: [
     item('classes', 'Classes', 'users', 'classroom'),
     item('practice', 'Set practice', 'list', 'classroom', 'practice', { short: 'Practice' }),
-    item('rocket', 'Rocket Challenge', 'rocket', 'rocket', null, { short: 'Rocket' }),
+    ...(ROCKET_ON ? [item('rocket', 'Rocket Challenge', 'rocket', 'rocket', null, { short: 'Rocket' })] : []),
   ],
 });
 
 /** Signed out, on the teacher demo: the teaching screens and nothing else. */
-export const teachingMenu = () => ({ sections: [teachingSection()], foot: [], bar: ['classes', 'practice', 'rocket'] });
+export const teachingMenu = () => ({ sections: [teachingSection()], foot: [], bar: ['classes', 'practice', ...(ROCKET_ON ? ['rocket'] : [])] });
 
 /**
  * @param {object} who
@@ -75,7 +77,7 @@ export function menuFor({ kind, approved = false, hasClasses = false, isAdmin = 
           item('overview', 'Home', 'home', 'ai', 'overview'),
           item('lessons', 'Lessons', 'book', 'dashboard', 'lessons'),
           item('writing', 'Writing', 'pen', 'writing'),
-          item('rocket', 'Rocket Challenge', 'rocket', 'rocket', null, { short: 'Rocket' }),
+          ...(ROCKET_ON ? [item('rocket', 'Rocket Challenge', 'rocket', 'rocket', null, { short: 'Rocket' })] : []),
         ] },
         { label: 'Find', items: [
           item('tutors', 'Find a tutor', 'search', 'tutors', null, { short: 'Tutors' }),
