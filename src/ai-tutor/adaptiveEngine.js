@@ -159,8 +159,12 @@ export const findGaps = (progress, ctx) => {
   const gaps = [];
   const seen = new Set();
 
+  const lvl = learnerLevel(progress);
   for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
+    // A stretch question missed in the check, above where the child placed, is
+    // new learning, not a sign that its foundations are missing (feedback F9).
+    if (lvl && sp?.fromDiagnostic && !(sp.attempts > 1) && gradeOf(skill, c.curriculum) > lvl) continue;
     if (isStruggling(sp)) {
       const preReqs = skill.keyPrerequisites || skill.prerequisites;
       for (const pid of preReqs) {
@@ -169,6 +173,9 @@ export const findGaps = (progress, ctx) => {
           seen.add(pid);
           const preSkill = c.skills[pid];
           if (!preSkill) continue;
+          // A foundation above where the child placed has not been taught
+          // yet, so it is next to learn, never a gap (feedback F9).
+          if (lvl && gradeOf(preSkill, c.curriculum) > lvl) continue;
 
           let dependentCount = 0;
           try { dependentCount = c.getPostChain(pid).length; } catch(e) { dependentCount = 0; }
@@ -442,12 +449,12 @@ export const leadWithMissingStep = (path, progress, ctx) => {
   if (!progress?.diagnosed || !Array.isArray(path)) return path;
   const c = resolveCtx(ctx);
   let r;
-  try { r = findMissingStep(progress, c.skills); } catch { return path; }
+  try { r = findMissingStep(progress, c.skills, c.curriculum); } catch { return path; }
   const id = r?.missing;
   const skill = id && c.skills[id];
   if (!skill || progress.skills?.[id]?.mastered) return path;
   if (path[0]?.id === id) return path;
-  const lead = { ...(path.find(p => p.id === id) || skill), type: r.allClear ? 'learn' : 'gap', reason: 'The missing step from the check' };
+  const lead = { ...(path.find(p => p.id === id) || skill), type: r.allClear ? 'learn' : 'gap', reason: r.allClear ? 'Next to learn after the check' : 'The missing step from the check' };
   return [lead, ...path.filter(p => p.id !== id)];
 };
 
