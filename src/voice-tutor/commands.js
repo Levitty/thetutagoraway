@@ -45,6 +45,8 @@ export const SILENT = ['set_phase', 'record_diagnosis'];
 export const COMMANDS = ['say', ...DRAWN, ...MARKS, 'erase', 'clear', 'ask', 'set_phase', 'record_diagnosis', 'pause_for_child', 'end_session'];
 // Steps that may carry a word anchor (`on`) and a delay.
 export const TIMED = [...DRAWN, ...MARKS, 'erase', 'clear'];
+// A drawn step may be drawn slowly (`pace: 'slow'`, about 1.6 times slower): for the key idea of a lesson.
+export const PACES = ['slow'];
 
 const FIELDS = {
   say: ['text'],
@@ -127,7 +129,7 @@ function checkStep(s, ctx, notes) {
   need(s && typeof s === 'object' && !Array.isArray(s), 'not an object');
   const cmd = s.cmd;
   need(COMMANDS.includes(cmd), `unknown command ${String(cmd).slice(0, 30)}`);
-  const allowed = new Set(['cmd', ...FIELDS[cmd], ...(TIMED.includes(cmd) ? ['on', 'delay_ms'] : [])]);
+  const allowed = new Set(['cmd', ...FIELDS[cmd], ...(TIMED.includes(cmd) ? ['on', 'delay_ms'] : []), ...(DRAWN.includes(cmd) ? ['pace'] : [])]);
   for (const k of Object.keys(s)) need(allowed.has(k), `${cmd}: extra field ${k.slice(0, 30)}`);
   for (const k of REQUIRED[cmd]) need(s[k] !== undefined && s[k] !== null, `${cmd}: missing ${k}`);
   const out = { cmd };
@@ -138,6 +140,10 @@ function checkStep(s, ctx, notes) {
       need(isInt(s.delay_ms) && inRange(s.delay_ms, LIMITS.delay), 'delay_ms out of range');
       out.delay_ms = s.delay_ms;
     }
+  }
+  if (DRAWN.includes(cmd) && s.pace !== undefined && s.pace !== null) {
+    need(PACES.includes(s.pace), `${cmd}: pace must be ${PACES.join('/')}`);
+    out.pace = s.pace;
   }
   const newId = () => {
     need(typeof s.id === 'string' && ID_RE.test(s.id), `${cmd}: bad id`);
@@ -472,16 +478,17 @@ const N = { type: 'number' };
 const B = { type: 'boolean' };
 const E = (list) => ({ type: 'string', enum: list });
 const timing = { on: T, delay_ms: I };
+const drawn = { ...timing, pace: E(PACES) };
 const shadedSchema = { anyOf: [I, { type: 'array', items: I }] };
 const C = (cmd, props, required) => S({ cmd: { type: 'string', const: cmd }, ...props }, ['cmd', ...required]);
 export const STEP_SCHEMAS = [
   C('say', { text: T }, ['text']),
-  C('write_text', { id: T, text: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...timing }, ['id', 'text', 'slot']),
-  C('write_math', { id: T, expr: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...timing }, ['id', 'expr', 'slot']),
-  C('fraction_bar', { id: T, parts: I, shaded: shadedSchema, second_bar: S({ parts: I, shaded: shadedSchema }, ['parts', 'shaded']), label: B, slot: E(SLOTS), colour: E(COLOURS), ...timing }, ['id', 'parts', 'shaded', 'slot']),
-  C('number_line', { id: T, from: I, to: I, divisions: I, marks: { type: 'array', items: S({ value: N, label: T, style: E(['dot', 'arrow']) }, ['value']) }, jumps: { type: 'array', items: S({ from: N, to: N }, ['from', 'to']) }, slot: E(SLOTS), ...timing }, ['id', 'from', 'to', 'divisions', 'slot']),
-  C('shape', { id: T, kind: E(SHAPE_KINDS), parts: I, shaded: shadedSchema, label: B, slot: E(SLOTS), colour: E(COLOURS), ...timing }, ['id', 'kind', 'parts', 'shaded', 'slot']),
-  C('plot_points', { id: T, x_axis: S({ from: I, to: I, name: T }, ['from', 'to']), y_axis: S({ from: I, to: I, name: T }, ['from', 'to']), points: { type: 'array', items: S({ x: N, y: N, label: T }, ['x', 'y']) }, connect: B, slot: E(SLOTS), ...timing }, ['id', 'x_axis', 'y_axis', 'points', 'slot']),
+  C('write_text', { id: T, text: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ['id', 'text', 'slot']),
+  C('write_math', { id: T, expr: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ['id', 'expr', 'slot']),
+  C('fraction_bar', { id: T, parts: I, shaded: shadedSchema, second_bar: S({ parts: I, shaded: shadedSchema }, ['parts', 'shaded']), label: B, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ['id', 'parts', 'shaded', 'slot']),
+  C('number_line', { id: T, from: I, to: I, divisions: I, marks: { type: 'array', items: S({ value: N, label: T, style: E(['dot', 'arrow']) }, ['value']) }, jumps: { type: 'array', items: S({ from: N, to: N }, ['from', 'to']) }, slot: E(SLOTS), ...drawn }, ['id', 'from', 'to', 'divisions', 'slot']),
+  C('shape', { id: T, kind: E(SHAPE_KINDS), parts: I, shaded: shadedSchema, label: B, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ['id', 'kind', 'parts', 'shaded', 'slot']),
+  C('plot_points', { id: T, x_axis: S({ from: I, to: I, name: T }, ['from', 'to']), y_axis: S({ from: I, to: I, name: T }, ['from', 'to']), points: { type: 'array', items: S({ x: N, y: N, label: T }, ['x', 'y']) }, connect: B, slot: E(SLOTS), ...drawn }, ['id', 'x_axis', 'y_axis', 'points', 'slot']),
   C('highlight', { target: T, part: I, bar: I, style: E(HIGHLIGHT_STYLES), ...timing }, ['target']),
   C('underline', { target: T, range: { type: 'array', items: I }, ...timing }, ['target']),
   C('point', { target: T, part: I, bar: I, ...timing }, ['target']),

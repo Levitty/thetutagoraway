@@ -14,7 +14,9 @@
 //                                returns real word times in the same shape
 //                                ({ word, start, end } in ms from the start of
 //                                the sentence) and nothing below changes.
-//   buildTimeline(steps, speech) every step's start time
+//   buildTimeline(steps, { speech, drawMs })  every step's start time and how
+//                                long it draws for; a drawing is squeezed so it
+//                                never runs past the next step's word
 //   createPlayer / advance / interrupt   playing it, and stopping it when the
 //                                child speaks: steps already due are drawn at
 //                                once, the rest are dropped, and the tutor is
@@ -37,21 +39,22 @@
 //
 // Pure: the clock is passed in. Tested in tests/voice-tutor-timeline.test.mjs.
 // ============================================================================
-import { SILENT } from './commands.js';
+import { SILENT, DRAWN, MARKS } from './commands.js';
 
 export const WPM = 150;            // unhurried, for a ten year old listening in English
 export const SENTENCE_GAP_MS = 350; // between two `say` pieces
 const PAUSE = { ',': 160, ';': 200, ':': 200, '.': 320, '?': 320, '!': 320 };
 
-// How long each kind of stroke takes to draw on.
+// How long each step takes to draw. The board passes the drawing engine's own
+// times (src/draw/index.js drawDuration: each stroke by its length and kind,
+// the pen lifting between them, 1.6 times longer at pace 'slow'); this plain
+// estimate is only for callers without a board (the server, tests).
+// A mark is drawn in its own fixed time; erase and clear are a quick eraser pass.
 export const DRAW_MS = {
-  write_text: 700, write_math: 800, fraction_bar: 1000, number_line: 1000, shape: 1000, plot_points: 1100,
-  highlight: 450, underline: 450, point: 400, erase: 300, clear: 400,
+  write_text: 1200, write_math: 1600, fraction_bar: 3000, number_line: 3000, shape: 3000, plot_points: 3000,
+  highlight: 600, underline: 450, point: 450, erase: 350, clear: 350,
 };
-export const drawMs = (step) => {
-  if (step.cmd === 'write_text') return Math.min(1300, 350 + 25 * step.text.length);
-  return DRAW_MS[step.cmd] || 0;
-};
+export const drawMs = (step) => Math.round((DRAW_MS[step.cmd] || 0) * (DRAWN.includes(step.cmd) && step.pace === 'slow' ? 1.6 : 1));
 
 const normWord = (w) => String(w).toLowerCase().replace(/[^a-z0-9/]/g, '');
 
@@ -90,7 +93,7 @@ export function findAnchor(words, phrase) {
  * @returns {{ duration:number, sentences:{ step:number, text:string, start:number, words:{word,start,end}[] }[],
  *            events:{ i:number, t:number, cmd:string, dur:number, silent:boolean, anchor:'word'|'sentence'|'after'|'missed'|null }[] }}
  */
-export function buildTimeline(steps, { speech = speakingTimes } = {}) {
+export function buildTimeline(steps, { speech = speakingTimes, drawMs: timeOf = drawMs } = {}) {
   // Lay the sentences out first. A sentence whose length is not known yet makes
   // every later one unknown too (Infinity), until its audio is complete.
   const sentences = [];
@@ -135,10 +138,17 @@ export function buildTimeline(steps, { speech = speakingTimes } = {}) {
       anchor = sen.step < i ? 'after' : 'sentence';
     }
     t = Number.isFinite(t) ? Math.max(0, t + (s.delay_ms || 0)) : Infinity;
-    const dur = drawMs(s);
-    drawEnd = Math.max(drawEnd, t + dur);
-    events.push({ i, t, cmd: s.cmd, dur, silent: false, anchor });
+    const dur = timeOf(s);
+    events.push({ i, t, cmd: s.cmd, dur, natural: dur, silent: false, anchor });
   });
+  // A drawing never runs past the next step's word: it is drawn quicker to end by then.
+  for (const e of events) {
+    if (e.silent || !Number.isFinite(e.t) || !(DRAWN.includes(e.cmd) || MARKS.includes(e.cmd))) continue;
+    let next = Infinity;
+    for (const f of events) if (f.i > e.i && !f.silent && f.t > e.t && f.t < next) next = f.t;
+    if (next - e.t < e.dur) { e.dur = Math.round(next - e.t); e.squeezed = true; }
+  }
+  for (const e of events) if (!e.silent) drawEnd = Math.max(drawEnd, e.t + e.dur);
   const end = Math.max(speechEnd, drawEnd);
   steps.forEach((s, i) => {
     if (['ask', 'pause_for_child', 'end_session'].includes(s.cmd)) events.push({ i, t: end, cmd: s.cmd, dur: 0, silent: false, anchor: null });
