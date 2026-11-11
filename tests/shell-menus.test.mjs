@@ -4,6 +4,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { menuFor, personKind, allItems, barItems, teachingMenu, tutorTab } from '../src/shell/menus.js';
 import { TOKENS, TAILWIND_COLOURS } from '../src/shell/tokens.mjs';
+import { ROCKET_ON } from '../src/features.js';
+const ROCKET = ROCKET_ON ? ['rocket'] : [];
 
 const ids = (m) => allItems(m).map(i => i.id);
 
@@ -12,7 +14,7 @@ test('a tutor is never offered Find a tutor, and has one home', () => {
   assert.ok(!ids(m).includes('tutors'));
   assert.ok(!ids(m).includes('home'));
   assert.equal(ids(m).filter(i => i === 'overview').length, 1);
-  for (const id of ['schedule', 'students', 'groupClasses', 'earnings', 'classes', 'practice', 'rocket', 'profile', 'settings', 'signout']) assert.ok(ids(m).includes(id), id);
+  for (const id of ['schedule', 'students', 'groupClasses', 'earnings', 'classes', 'practice', ...ROCKET, 'profile', 'settings', 'signout']) assert.ok(ids(m).includes(id), id);
 });
 
 test('the review gate: tutoring stays locked until approved, the same four sections as before', () => {
@@ -54,7 +56,13 @@ test('account types map to menus', () => {
 });
 
 test('the signed-out teacher demo has only the teaching items', () => {
-  assert.deepEqual(ids(teachingMenu()), ['classes', 'practice', 'rocket']);
+  assert.deepEqual(ids(teachingMenu()), ['classes', 'practice', ...ROCKET]);
+});
+
+test('the Rocket Challenge switch: off means no menu item anywhere', () => {
+  if (ROCKET_ON) return;
+  for (const who of [{ kind: 'parent' }, { kind: 'learner' }, { kind: 'tutor', approved: true }, { kind: 'parent', hasClasses: true }]) assert.ok(!ids(menuFor(who)).includes('rocket'), JSON.stringify(who));
+  assert.ok(!ids(teachingMenu()).includes('rocket'));
 });
 
 test('tokens: the approved values, shared with Tuta on purpose', () => {

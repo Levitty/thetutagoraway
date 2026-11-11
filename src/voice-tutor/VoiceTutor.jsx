@@ -18,13 +18,14 @@
 //   /voice-tutor?demo=auto        the scripted lesson plays itself (demo child answers)
 //   &quiet=1                      the practice voice at volume 0 (screen recordings: sound added after)
 // ============================================================================
-import React, { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { HorebBot } from '../ai-tutor/HorebBot.jsx';
 import { useHorebLook } from '../ai-tutor/horebLook.js';
 import { supabase } from '../supabase.js';
-import { Board, BOARD_H, drawKey } from './Board.jsx';
+import { Board, drawKey } from './Board.jsx';
 import { drawDuration } from '../draw/index.js';
-import { emptyBoard, applyStep, boardSummary, portraitBoardH } from './board.js';
+import { emptyBoard, applyStep, boardSummary } from './board.js';
+import { lessonShape, tutorBubble, childBubble, partLabel } from './layout.js';
 import { validateTurn, PHASES, cellsOf, DRAWN, MARKS } from './commands.js';
 import { buildTimeline, createPlayer, advance, updateTimeline } from './timeline.js';
 import { sessionReducer, newSession, mascotState } from './session.js';
@@ -32,7 +33,7 @@ import { providersFor, checkProviders } from './providers/index.js';
 import { simulatedTts } from './providers/mockVoice.js';
 import { voiceReducer, initialVoice, bargeIn, canListen, canSpeak } from './providers/voice.js';
 import { DEMO_SCRIPT } from './mockTutor.js';
-import { inkReducer, hasInk, writing, inkCells, CHILD_INK } from './ink.js';
+import { inkReducer, hasInk, writing, inkCells } from './ink.js';
 import { autoSnapDue, checkAllowed, imageTokens } from './snapshot.js';
 import { captureBoard } from './capture.js';
 import { EXAMPLES, exampleStrokes } from './examples.js';
@@ -45,41 +46,19 @@ const clock = () => performance.now();
 const params = () => { try { return new URLSearchParams(window.location.search); } catch { return new URLSearchParams(); } };
 const uid = () => (crypto.randomUUID ? crypto.randomUUID() : `s${Date.now().toString(36)}${Math.random().toString(36).slice(2, 10)}`);
 
-// The board's shape. Wide screens: 1000 x 640. An upright phone: the board takes about a
-// third of the screen's height (same slots, rows sized to fit), so the conversation has room
-// to show the current sentence whole. Changes only on rotate or resize, never while speaking.
-function useBoardShape() {
-  const read = () => {
-    if (typeof window === 'undefined') return { portrait: false, H: BOARD_H };
-    const w = window.innerWidth; const h = window.innerHeight;
-    const portrait = h > w;
-    return { portrait, H: portrait ? portraitBoardH(w, h) : BOARD_H };
-  };
+// The arrangement ("Across the table", layout.js) and the board's height in units.
+// Changes only on rotate or resize, never with what is said, so the board never
+// rescales in the middle of a drawing.
+function useLessonShape() {
+  const read = () => (typeof window === 'undefined' ? { kind: 'table', boardH: 640 } : lessonShape(window.innerWidth, window.innerHeight));
   const [shape, setShape] = useState(read);
   useEffect(() => {
-    const f = () => setShape((old) => { const n = read(); return n.portrait === old.portrait && n.H === old.H ? old : n; });
+    const f = () => setShape((old) => { const n = read(); return n.kind === old.kind && n.boardH === old.boardH ? old : n; });
     window.addEventListener('resize', f);
     return () => window.removeEventListener('resize', f);
   }, []);
   return shape;
 }
-
-// The conversation shows whole lines only: lines that no longer fit leave from the top,
-// so no line is ever cut in half (the current sentence is always at the bottom, whole).
-function useWholeLines() {
-  const box = useRef(null);
-  const [gone, setGone] = useState(() => new Set());   // lines (by key) that have left from the top
-  useLayoutEffect(() => {
-    const el = box.current;
-    const first = el?.firstElementChild;
-    // The last line (the current one) never leaves.
-    if (!el || !first || el.children.length < 2 || !first.dataset.k) return;
-    if (first.getBoundingClientRect().top < el.getBoundingClientRect().top - 1) setGone((g) => new Set([...g, first.dataset.k]));
-  });
-  return [box, gone];
-}
-// A line's identity, the same whether it is being spoken now or already said.
-const lineKey = (h, i) => (h.who === 'tutor' && !h.cut ? `t${h.turn}:${h.text}` : `c${i}`);
 
 // Keep the screen on while a lesson runs; a refusal (or no support) is fine.
 function useWakeLock(on) {
@@ -95,11 +74,10 @@ function useWakeLock(on) {
 }
 
 const MASCOT_LABEL = { listening: 'Listening', thinking: 'Thinking', speaking: 'Speaking' };
-const PHASE_LABEL = { warmup: 'Warm-up', teach: 'Teach', guided: 'Together', independent: 'On your own', wrapup: 'Wrap-up' };
 
 export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) {
   useHorebLook();
-  const { H: boardH } = useBoardShape();
+  const { kind, boardH } = useLessonShape();
   const boardHRef = useRef(boardH);
   boardHRef.current = boardH;
   const q = useMemo(params, []);
@@ -135,7 +113,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const snap = useRef({ count: 0, lastAt: null, version: 0 });
   const [pics, setPics] = useState([]);   // { id, reason, w, h, bytes, tokens, thumb } kept in memory only, never stored
   const [snapNote, setSnapNote] = useState('');
-  const [linesRef, goneLines] = useWholeLines();
+  const [writeOpen, setWriteOpen] = useState(false);   // the pen tools, out when the child chooses Write
+  const [typeOpen, setTypeOpen] = useState(false);     // the typing box, when the child chooses Type
   // The voice: wanted or not, working or not (typing is always the fallback), the child's
   // speech in progress, seconds of speech sent since the last turn, and the delays measured.
   const [voiceOn, setVoiceOn] = useState(q.get('voice') !== 'off');
@@ -538,26 +517,60 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
 
   const mascot = mascotState(session.status);
   const started = session.status !== 'ready' || !!providers.current;
-  const pastLines = session.transcript.map((h, i) => ({ ...h, i, k: lineKey(h, i) })).filter((h) => !goneLines.has(h.k) && !(live && h.who === 'tutor' && h.turn === session.turns && !h.cut));
+  const ended = session.status === 'ended';
+  const canTalk = !!(started && providers.current?.stt && canListen(voice));
+  const bubble = tutorBubble(live, session.transcript);
+  const mine = childBubble({ transcript: session.transcript, ask, listening: voice.listening, partial: voice.partial, status: session.status, canTalk });
+  const part = partLabel(session.phase);
+  const stateWord = voice.listening ? 'Listening to you' : session.looking ? 'Looking at your board' : ended ? 'Finished' : MASCOT_LABEL[mascot];
+  // The pen tools come out when the child chooses to write (or has written); Type when they choose to type, or when talking is not possible.
+  const inkShown = started && !ended && (writeOpen || hasInk(board.childInk));
+  const typing = started && !ended && (typeOpen || !canTalk);
+  const botSize = kind === 'table' ? 150 : kind === 'side' ? 44 : 56;
+  const at = PHASES.indexOf(session.phase);
+  const dots = <span className="vt-dots" aria-hidden="true">{PHASES.map((p, i) => <i key={p} className={i <= at ? 'on' : undefined} />)}</span>;
+  // A small way in for the adults testing it: the mode, and the tester view (never for a child).
+  const testerBits = (
+    <span className="vt-testerbits">
+      <span>{mode === 'remote' ? `Live${session.cost.sessionUsd ? ` · US$${session.cost.sessionUsd.toFixed(2)}` : ''}` : 'Practice'}</span>
+      <button type="button" onClick={() => setTester((x) => !x)}>Tester</button>
+    </span>
+  );
 
   return (
-    <div className="vt-root h-[100dvh] flex flex-col bg-slate-100 text-slate-900 overflow-hidden">
+    <div className={`vt-root vt-k-${kind}`}>
       <style>{CSS}</style>
-      <header className="shrink-0 flex items-center gap-2 px-3 py-1.5 bg-white border-b border-slate-200 text-[12px] sm:text-[13px] whitespace-nowrap">
-        <span className="font-extrabold tracking-tight">HOREB tutor</span>
-        <span className="px-2 py-0.5 rounded-full font-bold" style={{ background: '#FFE3EE', color: '#C2255C' }}>Adult testers only</span>
-        <span className="hidden md:inline text-slate-500">Prototype.{started ? (silentVoice.current ? ' Silent: words appear at speaking pace.' : ` Voice: ${voiceName}.`) : ''}</span>
-        <span className="ml-auto font-bold text-slate-600">{mode === 'remote' ? 'Live' : 'Practice (fixed script)'}</span>
-        {mode === 'remote' ? <span className="tabular-nums text-slate-500">US${session.cost.sessionUsd.toFixed(2)}</span> : null}
-        <button type="button" onClick={() => setTester((x) => !x)} className="px-2 py-0.5 rounded-full border border-slate-300 font-bold text-slate-700">Tester</button>
-      </header>
+      <main className="vt-table">
+        {/* HOREB's side: the tutor, its state, and what it is saying now (one sentence, not a log). */}
+        <section className="vt-horeb">
+          {kind === 'table' && onNavigate ? <button type="button" className="vt-leave" aria-label="Leave the lesson" onClick={() => onNavigate('ai')}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button> : null}
+          <div className={`vt-who vt-${voice.listening ? 'listening' : mascot}`}>
+            <HorebBot size={botSize} mood={voice.listening ? 'listening' : mascot} />
+            <div className="vt-name">HOREB</div>
+            <div className="vt-state"><i />{stateWord}</div>
+          </div>
+          <div className="vt-bubble" aria-live="polite">
+            {bubble ? (
+              <>
+                {bubble.before ? <span className="vt-before">{bubble.before}</span> : null}
+                <span className="vt-now">
+                  {bubble.words.slice(0, bubble.shown).map((w, i) => <span key={i} className={i === bubble.shown - 1 && bubble.shown < bubble.words.length ? 'vt-word' : undefined}>{w} </span>)}
+                </span>
+              </>
+            ) : <span className="vt-before">{started ? 'HOREB is getting ready.' : 'HOREB is ready when you are.'}</span>}
+            {session.ended ? <span className="vt-before vt-endnote">Lesson finished. {session.ended.summary}</span> : null}
+            {session.error ? <span className="vt-error">{session.error}</span> : null}
+          </div>
+          {kind === 'table' ? <div className="vt-part">{dots}{part ? <span>{part}</span> : null}</div> : null}
+          {kind === 'table' ? testerBits : null}
+        </section>
 
-      <main className="flex-1 min-h-0 flex flex-col landscape:flex-row gap-2 p-2">
-        <section className="relative min-h-0 portrait:shrink-0 landscape:flex-1 flex flex-col items-center justify-center gap-1.5">
-          <div className="vt-board relative w-full rounded-2xl overflow-hidden bg-white min-h-0" style={{ aspectRatio: `1000 / ${boardH}`, maxHeight: started ? 'calc(100% - 46px)' : '100%' }}>
-            <Board ref={svgRef} board={board} now={now} H={boardH} drawTimes={drawTimes.current} inkOn={started && session.status !== 'ended'} tool={tool} onInk={onInk} />
+        {/* The sheet of paper between them. */}
+        <section className="vt-sheet">
+          <div className="vt-board" style={{ aspectRatio: `1000 / ${boardH}` }}>
+            <Board ref={svgRef} board={board} now={now} H={boardH} drawTimes={drawTimes.current} inkOn={inkShown} tool={tool} onInk={onInk} />
             {!started ? (
-              <div className="absolute inset-0 flex items-center justify-center bg-white/70 p-3">
+              <div className="absolute inset-0 flex items-center justify-center bg-white/70 p-3 overflow-y-auto">
                 <div className="w-full max-w-sm bg-white rounded-2xl p-4 border border-slate-200">
                   <div className="font-extrabold text-lg leading-tight">Grade 5 fractions</div>
                   <p className="text-sm text-slate-600 mt-1">A short lesson with HOREB, an AI tutor. For adult testers only.</p>
@@ -593,76 +606,64 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
                 </div>
               </div>
             ) : null}
-            {session.ended ? (
-              <div className="absolute left-3 right-3 bottom-3 rounded-xl bg-white/95 border border-slate-200 p-3 text-sm">
-                <span className="font-extrabold">Lesson finished.</span> {session.ended.summary}
-              </div>
-            ) : null}
           </div>
-          {started ? (
-            <InkBar tool={tool} setTool={setTool} canUndo={board.childInk.undo.length > 0} hasInk={hasInk(board.childInk)}
-              onUndo={() => onInk([{ type: 'undo' }])} onClear={() => onInk([{ type: 'clear' }])}
-              onCheck={() => takePicture('check')} checking={session.looking} note={snapNote} disabled={session.status === 'ended'} />
-          ) : null}
+          {kind !== 'table' ? <div className="vt-corner">{dots}{part ? <span>{part}</span> : null}{testerBits}</div> : null}
         </section>
 
-        <aside className="min-h-0 flex-1 landscape:flex-none landscape:w-[300px] lg:landscape:w-[340px] flex flex-col gap-2">
-          <div className="flex gap-2 min-h-0 flex-1 landscape:flex-col">
-            <div className={`vt-mascot shrink-0 self-start landscape:self-stretch rounded-2xl bg-white border border-slate-200 flex flex-col items-center justify-center px-2 py-2 landscape:flex-row landscape:gap-3 landscape:justify-start landscape:px-3 landscape:py-1.5 vt-${mascot}`} aria-live="polite">
-              <HorebBot size={56} mood={voice.listening ? 'listening' : mascot} />
-              <div className="text-center landscape:text-left">
-                <div className="text-[12px] font-extrabold text-violet-700 leading-tight">{voice.listening ? 'Listening to you' : session.looking ? 'Looking' : MASCOT_LABEL[mascot]}</div>
-                <div className="hidden landscape:block text-[11px] text-slate-500 leading-tight">{session.phase ? PHASE_LABEL[session.phase] : 'Ready'}</div>
-              </div>
+        {/* The child's side: their own bubble, then Talk; Write and Type are the other ways. */}
+        <section className="vt-child">
+          {mine ? (
+            <div className={`vt-mine vt-mine-${mine.kind}`}>
+              <small>You</small>
+              <span>{mine.text}</span>
             </div>
-            <div className="vt-strip min-h-0 flex-1 rounded-2xl bg-white border border-slate-200 overflow-hidden px-3 py-2 text-[16px] leading-snug flex flex-col">
-              <Phases phase={session.phase} />
-              <div ref={linesRef} className="vt-lines min-h-0 flex-1 overflow-hidden flex flex-col justify-end">
-              {pastLines.map((h) => (
-                <p key={h.k} data-k={h.k} className={h.snap ? 'vt-child vt-snap' : h.who === 'child' ? 'vt-child' : 'vt-tutor'}>{h.text}</p>
-              ))}
-              {live ? live.sentences.map((s, k) => (live.words[k] > 0 && !goneLines.has(`t${session.turns}:${s.text}`) ? (
-                <p key={`t${session.turns}:${s.text}`} data-k={`t${session.turns}:${s.text}`} className="vt-tutor vt-now">
-                  {s.words.slice(0, live.words[k]).map((w, i) => (
-                    <span key={i} className={i === live.words[k] - 1 && live.words[k] < s.words.length ? 'vt-word' : undefined}>{w.word} </span>
-                  ))}
-                </p>
-              ) : null)) : null}
-              {voice.listening ? <p className="vt-child vt-partial">{voice.partial || 'Listening...'}</p> : null}
-              {session.error ? <p className="text-[13px] text-red-700">{session.error}</p> : null}
-              </div>
+          ) : null}
+          {ask?.form === 'choice' && session.status === 'listening' ? (
+            <div className="vt-choices">
+              {ask.choices.map((c) => <button key={c} type="button" onClick={() => send(c)}>{c}</button>)}
             </div>
-          </div>
-
-          <form className="shrink-0 rounded-2xl bg-white border border-slate-200 p-2" onSubmit={(e) => { e.preventDefault(); send(input); }}>
-            <div className="text-[13px] font-bold text-violet-700 px-1 pb-1 min-h-[1.4rem] truncate">{ask ? ask.prompt : ''}</div>
-            {ask?.form === 'choice' ? (
-              <div className="grid grid-cols-2 gap-1.5 pb-1.5">
-                {ask.choices.map((c) => <button key={c} type="button" onClick={() => send(c)} className="rounded-xl border border-slate-300 px-2 py-1.5 text-sm font-bold text-left">{c}</button>)}
-              </div>
-            ) : null}
-            {voice.message ? (
-              <div className="vt-fallback flex items-center gap-2 text-[13px] font-bold rounded-xl px-3 py-1.5 mb-1.5" role="status">
-                <span>{voice.message}</span>
-                {voiceOn && voice.mode !== 'voice' && providers.current?.stt ? <button type="button" className="ml-auto underline" onClick={() => vdispatch({ type: 'retry' })}>Try voice again</button> : null}
-              </div>
-            ) : null}
-            <div className="flex gap-2">
-              {started && providers.current?.stt && canListen(voice) ? (
-                <button type="button" onClick={() => talk()} disabled={session.status === 'ended' || session.status === 'thinking'} aria-pressed={voice.listening}
-                  className={`vt-talk shrink-0 rounded-full px-4 font-extrabold flex items-center gap-1.5 disabled:opacity-40 ${voice.listening ? 'vt-talk-on' : ''}`}>
-                  <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="1.5" width="5" height="8.5" rx="2.5" fill="none" stroke="currentColor" strokeWidth="1.6" /><path d="M3 8a5 5 0 0 0 10 0M8 13v2" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
-                  {voice.listening ? 'Done' : 'Talk'}
+          ) : null}
+          {voice.message ? (
+            <div className="vt-fallback" role="status">
+              <span>{voice.message}</span>
+              {voiceOn && voice.mode !== 'voice' && providers.current?.stt ? <button type="button" onClick={() => vdispatch({ type: 'retry' })}>Try voice again</button> : null}
+            </div>
+          ) : null}
+          {nudge && session.status === 'listening' ? <div className="vt-nudge">Take your time, or tell HOREB if you would like it another way.</div> : null}
+          {canTalk && !ended ? (
+            <button type="button" onClick={() => talk()} disabled={session.status === 'thinking'} aria-pressed={voice.listening} className={`vt-talk ${voice.listening ? 'vt-talk-on' : ''}`}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2" /><path d="M12 19v3" /></svg>
+              {voice.listening ? 'Done' : 'Talk'}
+            </button>
+          ) : null}
+          {typing ? (
+            <form className="vt-type" onSubmit={(e) => { e.preventDefault(); send(input); }}>
+              <input value={input} onChange={(e) => setInput(e.target.value)} disabled={session.status === 'ended'} autoFocus={typeOpen}
+                placeholder={ask ? 'Type your answer' : session.status === 'speaking' ? 'Type to stop HOREB' : 'Type to HOREB'}
+                maxLength={300} inputMode="text" autoComplete="off" aria-label="Type to HOREB" />
+              <button type="submit" disabled={!input.trim() || session.status === 'thinking'} className={canTalk ? 'vt-send' : 'vt-send vt-send-main'}>Send</button>
+            </form>
+          ) : null}
+          {inkShown ? (
+            <InkBar tool={tool} setTool={setTool} canUndo={board.childInk.undo.length > 0} hasInk={hasInk(board.childInk)}
+              onUndo={() => onInk([{ type: 'undo' }])} onClear={() => onInk([{ type: 'clear' }])}
+              onCheck={() => takePicture('check')} checking={session.looking} note={snapNote}
+              onClose={hasInk(board.childInk) ? null : () => setWriteOpen(false)} />
+          ) : null}
+          {started && !ended && !inkShown ? (
+            <div className="vt-others">
+              <button type="button" onClick={() => setWriteOpen(true)}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /><path d="m15 5 4 4" /></svg>Write
+              </button>
+              {canTalk && !typing ? (
+                <button type="button" onClick={() => setTypeOpen(true)}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10" /></svg>Type
                 </button>
               ) : null}
-              <input value={input} onChange={(e) => setInput(e.target.value)} disabled={!started || session.status === 'ended'}
-                placeholder={!started ? 'Start the lesson first' : ask ? 'Type your answer' : session.status === 'speaking' ? 'Type to stop HOREB and talk' : 'Type to HOREB'}
-                className="flex-1 min-w-0 rounded-full border border-slate-300 px-4 py-2 text-[16px] outline-none focus:border-violet-500" maxLength={300} inputMode="text" autoComplete="off" />
-              <button type="submit" disabled={!input.trim() || session.status === 'thinking' || session.status === 'ended'} className="rounded-full bg-amber-400 px-5 font-extrabold disabled:opacity-40">Send</button>
             </div>
-            {nudge && session.status === 'listening' ? <div className="text-[12px] text-slate-500 px-2 pt-1">Take your time, or tell HOREB if you would like it another way.</div> : null}
-          </form>
-        </aside>
+          ) : null}
+          {snapNote && !inkShown ? <div className="vt-nudge">{snapNote}</div> : null}
+        </section>
       </main>
 
       {tester ? (
@@ -678,33 +679,29 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   );
 }
 
-function Phases({ phase }) {
-  const at = PHASES.indexOf(phase);
+// The child's pen, on their side of the table: pen, rub out (their own ink only),
+// undo, clear theirs, and Check my work. Big enough for a finger. Out only when
+// the child chooses Write (or has written); it closes again while the board is clean.
+const ICON = {
+  pen: <><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /><path d="m15 5 4 4" /></>,
+  eraser: <><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21" /><path d="M22 21H7" /><path d="m5 11 9 9" /></>,
+  undo: <><path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></>,
+  clear: <><path d="M3 6h18" /><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" /><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" /></>,
+  close: <><path d="M18 6 6 18" /><path d="m6 6 12 12" /></>,
+};
+const Icon = ({ name }) => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{ICON[name]}</svg>;
+function InkBar({ tool, setTool, canUndo, hasInk: any, onUndo, onClear, onCheck, checking, note, onClose = null }) {
   return (
-    <div className="flex gap-1 pb-1.5" aria-label="Lesson parts">
-      {PHASES.map((p, i) => <span key={p} title={PHASE_LABEL[p]} className="h-1.5 flex-1 rounded-full" style={{ background: i <= at ? '#6D3FD6' : '#E4E1F0' }} />)}
-    </div>
-  );
-}
-
-// What the tester (an adult) sees: the target, the diagnosis and its evidence,
-// the evidence gathered, and every dropped command. Never shown to a child.
-// The child's tools, under the board: pen, eraser (their own ink only), undo,
-// clear their ink, and Check my work. Big enough for a finger.
-function InkBar({ tool, setTool, canUndo, hasInk: any, onUndo, onClear, onCheck, checking, note, disabled }) {
-  const btn = 'h-10 min-w-10 px-3 rounded-full border text-[13px] font-bold flex items-center gap-1.5 disabled:opacity-40';
-  return (
-    <div className="vt-inkbar w-full shrink-0 flex items-center gap-1.5 flex-wrap" role="toolbar" aria-label="Your tools">
-      <button type="button" aria-pressed={tool === 'pen'} disabled={disabled} onClick={() => setTool('pen')} className={`${btn} ${tool === 'pen' ? 'bg-white border-2' : 'bg-white/60 border-slate-300'}`} style={tool === 'pen' ? { borderColor: CHILD_INK, color: CHILD_INK } : undefined}>
-        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 14l1-4 8-8 3 3-8 8z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /></svg>Pen
-      </button>
-      <button type="button" aria-pressed={tool === 'eraser'} disabled={disabled} onClick={() => setTool('eraser')} className={`${btn} ${tool === 'eraser' ? 'bg-white border-2 border-slate-700' : 'bg-white/60 border-slate-300'}`}>
-        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 14h8M3 10l6-7 5 5-5 6H6z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /></svg>Eraser
-      </button>
-      <button type="button" disabled={disabled || !canUndo} onClick={onUndo} className={`${btn} bg-white border-slate-300`}>Undo</button>
-      <button type="button" disabled={disabled || !any} onClick={onClear} className={`${btn} bg-white border-slate-300 hidden sm:flex`}>Clear mine</button>
-      {note ? <span className="text-[12px] text-slate-500">{note}</span> : null}
-      <button type="button" disabled={disabled || !any || checking} onClick={onCheck} className={`${btn} ml-auto bg-amber-400 border-amber-400 font-extrabold`}>{checking ? 'Looking...' : 'Check my work'}</button>
+    <div className="vt-inkbar" role="toolbar" aria-label="Your pen">
+      <div className="vt-tools">
+        <button type="button" aria-label="Pen" title="Pen" aria-pressed={tool === 'pen'} onClick={() => setTool('pen')} className={tool === 'pen' ? 'on' : undefined}><Icon name="pen" /></button>
+        <button type="button" aria-label="Rub out" title="Rub out" aria-pressed={tool === 'eraser'} onClick={() => setTool('eraser')} className={tool === 'eraser' ? 'on' : undefined}><Icon name="eraser" /></button>
+        <button type="button" aria-label="Undo" title="Undo" disabled={!canUndo} onClick={onUndo}><Icon name="undo" /></button>
+        <button type="button" className="vt-clear" aria-label="Clear my writing" title="Clear my writing" disabled={!any} onClick={onClear}><Icon name="clear" /></button>
+        {onClose ? <button type="button" aria-label="Put the pen away" title="Put the pen away" onClick={onClose}><Icon name="close" /></button> : null}
+      </div>
+      <button type="button" className="vt-check" disabled={!any || checking} onClick={onCheck}>{checking ? 'HOREB is looking...' : 'Check my work'}</button>
+      {note ? <div className="vt-nudge">{note}</div> : null}
     </div>
   );
 }
@@ -713,12 +710,16 @@ function TesterPanel({ session, board, mode, pics = [], delays = [], offsets = [
   return (
     <div className="fixed inset-x-2 bottom-2 top-12 sm:left-auto sm:w-[400px] z-50 bg-white rounded-2xl border border-slate-300 overflow-y-auto p-4 text-sm">
       <div className="flex items-center"><b className="text-base">Tester view</b><button type="button" className="ml-auto font-bold" onClick={onClose}>Close</button></div>
-      <p className="text-slate-500 mt-1">Mode: {mode === 'remote' ? 'live model' : 'scripted'}. Nothing is saved yet (storage and review come in milestone 4).</p>
+      <p className="text-slate-500 mt-1">Adult testers only: a prototype. Mode: {mode === 'remote' ? 'live model' : 'scripted'}. Nothing is saved yet (storage and review come in milestone 4).</p>
       <h3 className="font-extrabold mt-3">Lesson</h3>
       <p>Target: {session.target ? skillName(session.target) : 'not chosen yet'}</p>
       <p>Weakest prerequisite: {session.prerequisite ? skillName(session.prerequisite) : 'none'}</p>
       <p>Part: {session.phase || 'not started'}. Turns: {session.turns}. Interruptions: {session.interruptions}.</p>
       <p>Spent: US${session.cost.sessionUsd.toFixed(3)} this session, US${session.cost.dayUsd.toFixed(3)} today (caps US$1.50 and US$3).</p>
+      <h3 className="font-extrabold mt-3">Everything said (the child sees only the current sentence)</h3>
+      {session.transcript.length ? session.transcript.map((h, k) => (
+        <p key={k} className={h.who === 'child' ? 'text-[#0E7C86]' : undefined}><b>{h.who === 'child' ? 'Child' : 'HOREB'}:</b> {h.text}</p>
+      )) : <p className="text-slate-500">Nothing yet.</p>}
       <h3 className="font-extrabold mt-3">Diagnoses</h3>
       {session.diagnoses.length ? session.diagnoses.map((d, k) => (
         <div key={k} className="mt-1 rounded-lg bg-violet-50 p-2" style={{ background: '#ECE8FF' }}>
@@ -763,26 +764,120 @@ function TesterPanel({ session, board, mode, pics = [], delays = [], offsets = [
 }
 
 const CSS = `
-.vt-board { box-shadow: inset 0 0 0 1px #E2DED0; }
-.vt-tutor { margin: 0 0 .35rem; color: #1D1D27; font-weight: 600; }
-.vt-tutor.vt-now { color: #3B17B0; }
-.vt-child { margin: 0 0 .35rem auto; width: fit-content; max-width: 85%; background: #FFF0D4; color: #6B3D00; border-radius: 14px; padding: .2rem .65rem; font-weight: 700; }
-.vt-snap { background: #E0F2F1; color: #0E5F66; }
-.vt-snap::before { content: ''; display: inline-block; width: .7em; height: .7em; margin-right: .35em; border: 2px solid currentColor; border-radius: 2px; vertical-align: -.05em; }
-.vt-partial { opacity: .65; font-style: italic; }
-.vt-talk { background: #ECE8FF; color: #3B17B0; border: 2px solid #6D3FD6; }
-.vt-talk-on { background: #6D3FD6; color: #fff; animation: vt-glow 1.2s ease-in-out infinite; }
-.vt-fallback { background: #FFF0D4; color: #6B3D00; font-size: 12px; line-height: 1.3; }
-.vt-word { background: linear-gradient(transparent 62%, #FFC93C 62%); }
+.vt-root { position: fixed; inset: 0; overflow: hidden; background: #EDE8FA; color: #1D1D27; }
+.vt-table { height: 100%; display: grid; gap: 20px; padding: 20px; }
+.vt-table > section { min-height: 0; min-width: 0; }
+
+/* HOREB's side */
+.vt-horeb { position: relative; display: flex; flex-direction: column; align-items: center; }
+.vt-who { display: flex; flex-direction: column; align-items: center; }
+.vt-name { margin-top: 4px; font-weight: 800; font-size: 15px; }
+.vt-state { margin-top: 2px; font-size: 13px; font-weight: 700; color: #5B32C8; display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.vt-state i { width: 8px; height: 8px; border-radius: 99px; background: #f2a828; }
+.vt-bubble { position: relative; margin-top: 18px; align-self: stretch; background: #fff; border-radius: 22px; padding: 18px 20px; font-size: 22px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; min-height: 64px; }
+.vt-bubble::before { content: ''; position: absolute; top: -10px; left: 50%; margin-left: -10px; border: 10px solid transparent; border-top: 0; border-bottom-color: #fff; }
+.vt-before { display: block; color: #6B6F7B; font-weight: 600; font-size: 17px; margin-bottom: 6px; }
+.vt-now { color: #1D1D27; }
+.vt-word { background: linear-gradient(transparent 62%, #FFE08A 62%); }
+.vt-endnote { margin: 8px 0 0; }
+.vt-error { display: block; margin-top: 8px; font-size: 14px; font-weight: 600; color: #B42318; }
+.vt-part { margin-top: auto; align-self: stretch; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; color: #6B6F7B; padding: 0 4px; white-space: nowrap; }
+.vt-horeb > .vt-testerbits { align-self: stretch; margin: 8px 0 0; padding: 0 4px; }
+.vt-dots { display: inline-flex; gap: 5px; }
+.vt-dots i { width: 9px; height: 9px; border-radius: 9px; background: #D5CDEF; }
+.vt-dots i.on { background: #5B32C8; }
+.vt-testerbits { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; color: #9A9CA8; }
+.vt-testerbits button { font: inherit; color: inherit; background: none; border: 0; padding: 4px 0; text-decoration: underline; cursor: pointer; }
+.vt-leave { position: absolute; top: -6px; left: -6px; width: 40px; height: 40px; border: 0; border-radius: 99px; background: transparent; color: #6B6F7B; display: grid; place-items: center; cursor: pointer; }
+
+/* The sheet */
+.vt-sheet { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FFFDF6; border-radius: 18px; overflow: hidden; box-shadow: 0 0 0 1px #E2DED0; }
+.vt-board { position: relative; width: 100%; max-height: 100%; }
+.vt-corner { flex: none; align-self: stretch; display: flex; align-items: center; gap: 8px; padding: 4px 12px 6px; font-size: 11px; font-weight: 700; color: #6B6F7B; }
+.vt-k-stack .vt-board, .vt-k-side .vt-board { max-height: calc(100% - 26px); margin: auto 0; }
+.vt-corner .vt-dots i { width: 7px; height: 7px; background: #E3DFD0; }
+.vt-corner .vt-dots i.on { background: #1D1D27; }
+
+/* The child's side */
+.vt-child { display: flex; flex-direction: column; justify-content: flex-end; gap: 12px; }
+.vt-mine { border-radius: 22px; padding: 14px 18px; font-weight: 700; font-size: 18px; line-height: 1.3; color: #0E7C86; }
+.vt-mine small { display: block; font-size: 13px; color: #4F8E94; font-weight: 700; margin-bottom: 2px; }
+.vt-mine-hint { border: 2px dashed #9FCFD3; background: rgba(255,255,255,.35); font-size: 16px; }
+.vt-mine-said, .vt-mine-heard { background: #E1F2F3; }
+.vt-mine-heard span { opacity: .75; font-style: italic; }
+.vt-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.vt-choices button { min-height: 48px; border-radius: 16px; border: 1.5px solid #CFC6EA; background: #fff; font: inherit; font-weight: 700; font-size: 16px; padding: 6px 10px; cursor: pointer; }
+.vt-fallback { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; background: #FFF0D4; color: #6B3D00; font-size: 13px; line-height: 1.3; font-weight: 600; border-radius: 14px; padding: 8px 12px; }
+.vt-fallback button { font: inherit; background: none; border: 0; text-decoration: underline; color: inherit; cursor: pointer; }
+.vt-nudge { font-size: 13px; color: #6B6F7B; font-weight: 600; }
+.vt-talk { height: 72px; border-radius: 999px; border: 0; background: #FBBF24; color: #1D1D27; font: inherit; font-size: 21px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; }
+.vt-talk:disabled { opacity: .45; }
+.vt-talk-on { background: #5B32C8; color: #fff; animation: vt-glow 1.2s ease-in-out infinite; }
+.vt-others { display: flex; gap: 10px; }
+.vt-others button { flex: 1; height: 48px; border-radius: 999px; border: 1.5px solid #CFC6EA; background: transparent; color: #1D1D27; font: inherit; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 7px; cursor: pointer; }
+.vt-type { display: flex; gap: 8px; }
+.vt-type input { flex: 1; min-width: 0; height: 48px; border-radius: 999px; border: 1.5px solid #CFC6EA; background: #fff; padding: 0 16px; font: inherit; font-size: 16px; outline: none; }
+.vt-type input:focus { border-color: #5B32C8; }
+.vt-send { height: 48px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #CFC6EA; background: #fff; font: inherit; font-weight: 800; font-size: 15px; cursor: pointer; }
+.vt-send-main { background: #FBBF24; border-color: #FBBF24; }
+.vt-send:disabled { opacity: .45; }
+.vt-inkbar { display: flex; flex-direction: column; gap: 8px; }
+.vt-tools { display: flex; gap: 8px; }
+.vt-tools button { flex: 1; height: 46px; border-radius: 999px; border: 1.5px solid #CFC6EA; background: #fff; color: #1D1D27; display: grid; place-items: center; cursor: pointer; }
+.vt-tools button.on { border: 2.5px solid #0E7C86; color: #0E7C86; }
+.vt-tools button:disabled { opacity: .4; }
+.vt-check { height: 48px; border-radius: 999px; border: 2px solid #0E7C86; background: #fff; color: #0E7C86; font: inherit; font-weight: 800; font-size: 16px; cursor: pointer; }
+.vt-check:disabled { opacity: .45; }
+
+/* A laptop: HOREB | the sheet | you */
+.vt-table { grid-template-columns: 290px 1fr 290px; }
+@media (max-width: 1199px) { .vt-table { grid-template-columns: 250px 1fr 250px; } }
+
+/* An upright phone: HOREB at the top, the sheet, you at the bottom */
+.vt-k-stack .vt-table { grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; gap: 10px; padding: 12px; }
+.vt-k-stack .vt-horeb { flex-direction: row; align-items: flex-start; gap: 10px; }
+.vt-k-stack .vt-who { flex: none; width: 66px; }
+.vt-k-stack .vt-name { display: none; }
+.vt-k-stack .vt-state { font-size: 11px; }
+.vt-k-stack .vt-bubble { margin-top: 0; flex: 1; font-size: 18px; padding: 12px 15px; border-radius: 18px; min-height: 0; }
+.vt-k-stack .vt-bubble::before { top: 20px; left: -9px; margin: 0; border: 9px solid transparent; border-left: 0; border-right-color: #fff; }
+.vt-k-stack .vt-before { font-size: 15px; margin-bottom: 3px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.vt-k-stack .vt-child { gap: 8px; }
+.vt-k-stack .vt-mine { padding: 10px 14px; font-size: 16px; border-radius: 18px; }
+.vt-k-stack .vt-mine-hint { font-size: 15px; }
+.vt-k-stack .vt-talk { height: 60px; font-size: 19px; }
+.vt-k-stack .vt-others button, .vt-k-stack .vt-tools button, .vt-k-stack .vt-check, .vt-k-stack .vt-type input, .vt-k-stack .vt-send { height: 44px; }
+
+/* On a phone the pen tools and Check my work share one row, the height of Write and Type, so the board never shrinks when the pen comes out */
+.vt-k-stack .vt-inkbar, .vt-k-side .vt-inkbar { flex-direction: row; flex-wrap: wrap; }
+.vt-k-stack .vt-tools, .vt-k-side .vt-tools { flex: none; }
+.vt-k-stack .vt-tools button, .vt-k-side .vt-tools button { width: 44px; flex: none; }
+.vt-k-stack .vt-clear, .vt-k-side .vt-clear { display: none !important; }
+.vt-k-stack .vt-check, .vt-k-side .vt-check { flex: 1; min-width: 0; font-size: 15px; white-space: nowrap; padding: 0 8px; }
+.vt-k-side .vt-check { font-size: 13px; }
+.vt-k-stack .vt-inkbar .vt-nudge, .vt-k-side .vt-inkbar .vt-nudge { flex-basis: 100%; }
+
+/* A phone on its side: the sheet on the left, HOREB above you on the right */
+.vt-k-side .vt-table { grid-template-columns: 1fr 300px; grid-template-rows: auto 1fr; gap: 10px; padding: 10px; }
+.vt-k-side .vt-sheet { grid-column: 1; grid-row: 1 / span 2; }
+.vt-k-side .vt-horeb { grid-column: 2; grid-row: 1; flex-direction: row; align-items: flex-start; gap: 8px; }
+.vt-k-side .vt-name { display: none; }
+.vt-k-side .vt-state { font-size: 10px; }
+.vt-k-side .vt-bubble { margin-top: 0; flex: 1; font-size: 15px; padding: 8px 12px; border-radius: 14px; min-height: 0; }
+.vt-k-side .vt-bubble::before { display: none; }
+.vt-k-side .vt-before { display: none; }
+.vt-k-side .vt-child { grid-column: 2; grid-row: 2; gap: 6px; }
+.vt-k-side .vt-mine { padding: 6px 12px; font-size: 14px; border-radius: 14px; }
+.vt-k-side .vt-talk { height: 48px; font-size: 17px; }
+.vt-k-side .vt-others button, .vt-k-side .vt-tools button, .vt-k-side .vt-check, .vt-k-side .vt-type input, .vt-k-side .vt-send { height: 38px; }
+
 .vt-speaking .hb-talk { transform-box: fill-box; transform-origin: center; animation: vt-talk .32s ease-in-out infinite alternate; }
 .vt-listening .hb-listen { animation: vt-glow 1.6s ease-in-out infinite; }
 .vt-thinking svg { animation: vt-tilt 1.4s ease-in-out infinite; }
 @keyframes vt-talk { from { transform: scaleY(.35); } to { transform: scaleY(1.15); } }
 @keyframes vt-glow { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
 @keyframes vt-tilt { 0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
-@media (orientation: portrait) { .vt-mascot { width: 84px; } }
-@media (orientation: landscape) and (max-height: 500px) { .vt-strip { font-size: 13px; } .vt-mascot svg { width: 40px; height: 40px; } }
-@media (prefers-reduced-motion: reduce) { .vt-speaking .hb-talk, .vt-listening .hb-listen, .vt-thinking svg { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .vt-speaking .hb-talk, .vt-listening .hb-listen, .vt-thinking svg, .vt-talk-on { animation: none; } }
 `;
 
 export default VoiceTutor;

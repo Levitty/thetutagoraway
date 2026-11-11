@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { supabase } from './supabase';
 // Whole screens, each loaded on demand behind its own Suspense boundary. The
 // call sites below are unchanged; only where these names come from has moved.
+import { ROCKET_ON } from './features.js';
 import { VideoRoom, AIMastery, TeacherDashboard, Writing, Spreadsheet, ConsultingPage, SchoolsPage, ClubsPage, RocketChallenge, VoiceTutor } from './lazyRoutes.jsx';
 import { SKILLS as AI_SKILLS } from './ai-tutor/knowledgeGraph.js';
 import { useLessonNotes, LessonNotesModal } from './lesson/LessonNotes.jsx';
@@ -6107,7 +6108,7 @@ const AdminDashboard = ({ onBack }) => {
 // ============ MAIN APP ============
 // The one route table. A page that takes a parameter ('t/<token>') is matched
 // after it; anything else is the public home.
-const ROUTES = new Set(['consulting', 'tutors', 'teach', 'why', 'dashboard', 'ai', 'writing', 'horeb', 'horebhow', 'schools', 'clubs', 'spreadsheet', 'classroom', 'admin', 'handover', 'family-tablet', 'family', 'check', 'check-result', 'privacy', 'rocket',
+const ROUTES = new Set(['consulting', 'tutors', 'teach', 'why', 'dashboard', 'ai', 'writing', 'horeb', 'horebhow', 'schools', 'clubs', 'spreadsheet', 'classroom', 'admin', 'handover', 'family-tablet', 'family', 'check', 'check-result', 'privacy', ...(ROCKET_ON ? ['rocket'] : []),
   // The HOREB live tutor prototype exists only in a build with VITE_VOICE_TUTOR=1 (.env.production sets it; admins and the server allowlist only).
   ...(import.meta.env.VITE_VOICE_TUTOR === '1' ? ['voice-tutor'] : [])]);
 const pageFromPath = (pathname) => {
@@ -6545,7 +6546,7 @@ function AppInner() {
 
   // HOREB Rocket Challenge: project mode. /rocket?demo=1 shows the example
   // challenge (invented data, nothing saved), and is what a signed-out visitor sees.
-  if (page === 'rocket') {
+  if (page === 'rocket' && ROCKET_ON) {
     return (
       <RocketChallenge userId={auth.user?.id} isAdmin={isAdmin} onNavigate={handleNavigate}
       teacherName={auth.profile?.full_name}
@@ -6561,7 +6562,7 @@ function AppInner() {
         <AIMastery onBack={() => handleNavigate('dashboard')} userId={auth.user?.id} studentName={auth.profile?.full_name} onFindTutor={() => handleNavigate('tutors')} section={section}
           profileAvatar={auth.profile?.avatar} subscription={auth.subscription} onPaywall={() => setShowPaywall(true)}
           autoStartSkill={rocketPractise?.skillId || null} autoStartLearnerId={rocketPractise?.childId || null}
-          onRocket={() => { setRocketPractise(null); handleNavigate('rocket'); }} />
+          onRocket={ROCKET_ON ? () => { setRocketPractise(null); handleNavigate('rocket'); } : null} />
         {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
       </>
     );
