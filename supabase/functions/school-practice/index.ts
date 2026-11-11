@@ -31913,6 +31913,12 @@ function supabaseStore(admin) {
       const { id, ...rest } = pickCols(s);
       await admin.from("school_homework_sittings").update({ ...rest, updated_at: (/* @__PURE__ */ new Date()).toISOString() }).eq("id", id);
     },
+    // One evidence row for the learner's log (response_events, migration 20261111_learner_evidence.sql). A duplicate
+    // (the unique index on source, item_ref and learner) is the row already being there, which is what the log wants.
+    async saveEvidence(row) {
+      const { error } = await admin.from("response_events").insert(row);
+      if (error && error.code !== "23505") throw new Error("Not saved");
+    },
     // The learner home (learnerHome.js, migration 20261111_learner_home.sql).
     async homeDoor(code) {
       const { data } = await admin.from("school_doors").select("id, code, name, secret, active").eq("code", code).maybeSingle();

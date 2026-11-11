@@ -764,7 +764,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId: skill.id,
-      correct, problemType: problem?.type, timeMs: timeTaken, isDiagnostic: true,
+      correct, problemType: problem?.type, cskill: problem?.cskill, difficulty: problem?.difficulty, timeMs: timeTaken, isDiagnostic: true,
       confidence: priorConfidence, skipped: skip || undefined,
       submittedValue: skip ? null : (hasVisualAnswer ? JSON.stringify(visualAnswer) : answer),
       expectedValue: problem?.answer,
@@ -963,7 +963,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     const timeMs = Date.now() - problemStartRef.current;
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId,
-      correct, problemType: problem?.type, timeMs, isReview: true,
+      correct, problemType: problem?.type, cskill: problem?.cskill, difficulty: problem?.difficulty, timeMs, isReview: true,
       submittedValue: answer, expectedValue: problem?.answer,
     });
     if (!correct) {
@@ -1057,7 +1057,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     // Telemetry: capture the response for the HOREB learning loop.
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId: activeSkill,
-      correct, problemType: problem?.type,
+      correct, problemType: problem?.type, cskill: problem?.cskill, difficulty: problem?.difficulty,
       timeMs,
       hintsUsed, attemptNo, taps,
       scaffold: scaffoldableRef.current ? answeredAt : null,
@@ -1259,7 +1259,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId,
-      correct, problemType: problem?.type,
+      correct, problemType: problem?.type, cskill: problem?.cskill, difficulty: problem?.difficulty,
       timeMs, isReview: true,
       submittedValue: answer, expectedValue: problem?.answer,
     });

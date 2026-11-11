@@ -46,6 +46,7 @@ import { seal, unseal } from './seal.js';
 import { costOf, PRICES } from '../rocket/guide.js';
 import { validateSnapshot, imageTokens, CHECK_GAP_MS } from './snapshot.js';
 import { speechCost, listenCost, spokenChars } from './providers/voice.js';
+import { tutorEvidence } from '../learner/evidence.js';
 
 const reply = (status, body) => ({ status, body });
 const say = (text) => ({ cmd: 'say', text });
@@ -76,7 +77,7 @@ const DISCLOSES = /\b(ai|a\.i\.|artificial intelligence|computer program|not a (
  * @param {object} a
  * @param {{id:string,email?:string}} a.user
  * @param {object} a.body   { session_id, child_id|null, skill?, message, answer?:{seal,response}, heard?, board, history, elapsed_s, turn_index }
- * @param {object} a.db     getChild, getProgress, spend, recordUsage, recordConcern (see the fake in the test)
+ * @param {object} a.db     getChild, getProgress, spend, recordUsage, recordConcern, recordEvidence (see the fake in the test)
  * @param {Function|null} a.callModel  (request, { onText }) -> Promise<{ usage, stop_reason }>, streaming; null when no API key is set
  * @param {Function|null} a.safeguard  src/ai/safeguarding.js screen
  * @param {object} a.settings  settingsFrom(env)
@@ -124,6 +125,11 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       const r = markItem(q.item, String(body.answer.response ?? '').slice(0, 60));
       marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: String(body.answer.response ?? '').slice(0, 60) };
       if (!r.correct) open = q.item;
+      // One row in the learner's evidence log per marked answer. Never allowed to fail the turn.
+      try {
+        const row = tutorEvidence({ userId: user.id, childId: child?.id || null, sid, marked, now });
+        if (row) await db.recordEvidence(row);
+      } catch (e) { console.error('voice-tutor: evidence', String(e?.message || e).slice(0, 200)); }
     }
   }
 

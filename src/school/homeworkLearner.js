@@ -3,6 +3,7 @@
 // The learner home (learnerHome.js) answers here too: action 'learner_home'.
 import { step, sittingView, resultsFor } from './homeworkSitting.js';
 import { learnerHome } from './learnerHome.js';
+import { homeworkEvidence } from '../learner/evidence.js';
 
 export const CODE = /^[A-Z2-9]{10}$/;
 const ok = (body) => ({ status: 200, body: { success: true, ...body } });
@@ -43,6 +44,11 @@ export async function learnerHomework(p, deps) {
     const r = step(s0, { type: 'answer', n: p.n, response: p.response }, deps.now());
     if (!r.ok) return ok({ ...head, refused: r.error, view: sittingView(s0) });
     await done(r.s);
+    // The answer joins the learner's evidence log. Never allowed to fail the child's answer.
+    try {
+      const row = homeworkEvidence({ homework, sitting, answer: r.s.answers[r.s.answers.length - 1] });
+      if (row && store.saveEvidence) await store.saveEvidence(row);
+    } catch { /* the sitting keeps the answer: the backfill in 20261111_learner_evidence.sql shows how to rebuild a missing row */ }
     const it = s0.items[Number(p.n) - 1];
     const right = it.kind === 'choice' ? it.options.find(o => o.right) : null;
     const reason = !r.mark.correct ? (it.kind === 'choice' ? it.options.find(o => o.key === r.mark.chosen)?.why : (it.wrong || []).find(w => w.mis && w.mis === r.mark.mis)?.why) : '';

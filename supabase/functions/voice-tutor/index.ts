@@ -33472,6 +33472,30 @@ var speechCost = (chars, p = PRICES3) => Math.max(0, chars) * p.ttsUsdPerChar;
 var listenCost = (seconds, p = PRICES3) => Math.max(0, seconds) / 60 * p.sttUsdPerMinute;
 var spokenChars = (steps) => (steps || []).filter((s) => s.cmd === "say").reduce((n, s) => n + String(s.text).length, 0);
 
+// src/learner/evidence.js
+function tutorEvidence({ userId, childId = null, sid, marked, now }) {
+  if (!userId || !sid || !marked?.skill || marked.ask == null) return null;
+  return {
+    source: "tutor",
+    student_id: userId,
+    ...childId ? { learner_id: childId } : {},
+    .../^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(sid) ? { session_id: sid } : {},
+    subject: "math",
+    skill_id: marked.skill,
+    cskill: marked.skill,
+    correct: !!marked.correct,
+    misconception: marked.misconception || null,
+    independent: false,
+    marks: marked.correct ? 1 : 0,
+    max_marks: 1,
+    item_ref: `tutor:${sid}:${marked.ask}`,
+    submitted_value: marked.answer ? String(marked.answer).slice(0, 500) : null,
+    client_ts: new Date(now ?? Date.now()).toISOString(),
+    hints_used: 0,
+    attempt_no: 1
+  };
+}
+
 // src/voice-tutor/tutorTurn.js
 var reply = (status, body) => ({ status, body });
 var say = (text) => ({ cmd: "say", text });
@@ -33533,6 +33557,12 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       const r = markItem(q.item, String(body.answer.response ?? "").slice(0, 60));
       marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: String(body.answer.response ?? "").slice(0, 60) };
       if (!r.correct) open = q.item;
+      try {
+        const row = tutorEvidence({ userId: user.id, childId: child?.id || null, sid, marked, now });
+        if (row) await db.recordEvidence(row);
+      } catch (e) {
+        console.error("voice-tutor: evidence", String(e?.message || e).slice(0, 200));
+      }
     }
   }
   const progress = await db.getProgress(childKey) || { skills: {} };
@@ -39385,6 +39415,11 @@ var dbFor = (admin) => ({
   async recordUsage(row) {
     const { error } = await admin.from("voice_tutor_usage").insert(row);
     if (error) console.error("voice_tutor_usage insert", error);
+  },
+  // One marked answer in the learner's evidence log (response_events). A duplicate is the row already there.
+  async recordEvidence(row) {
+    const { error } = await admin.from("response_events").insert(row);
+    if (error && error.code !== "23505") console.error("response_events insert", error);
   },
   async recordConcern(row) {
     const { data, error } = await admin.from("safeguarding_events").insert(row).select("id").single();

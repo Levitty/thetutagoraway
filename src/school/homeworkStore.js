@@ -36,6 +36,12 @@ export function supabaseStore(admin) {
       const { id, ...rest } = pickCols(s);
       await admin.from('school_homework_sittings').update({ ...rest, updated_at: new Date().toISOString() }).eq('id', id);
     },
+    // One evidence row for the learner's log (response_events, migration 20261111_learner_evidence.sql). A duplicate
+    // (the unique index on source, item_ref and learner) is the row already being there, which is what the log wants.
+    async saveEvidence(row) {
+      const { error } = await admin.from('response_events').insert(row);
+      if (error && error.code !== '23505') throw new Error('Not saved');
+    },
     // The learner home (learnerHome.js, migration 20261111_learner_home.sql).
     async homeDoor(code) {
       const { data } = await admin.from('school_doors').select('id, code, name, secret, active').eq('code', code).maybeSingle();
@@ -65,7 +71,7 @@ export function supabaseStore(admin) {
 }
 
 export function memoryStore(doors = [], links = []) {
-  const homework = []; const sittings = []; const tries = [];
+  const homework = []; const sittings = []; const tries = []; const evidence = [];
   let n = 0;
   const id = () => `00000000-0000-4000-8000-${String(++n).padStart(12, '0')}`;
   return {
@@ -80,6 +86,12 @@ export function memoryStore(doors = [], links = []) {
       return d?.active === false ? null : { sitting: { ...s }, homework: h, door: d };
     },
     async saveSitting(s) { const i = sittings.findIndex(x => x.id === s.id); if (i >= 0) sittings[i] = { ...sittings[i], ...pickCols(s) }; },
+    // The evidence log in memory: the same once-only rule as the unique index.
+    evidence,
+    async saveEvidence(row) {
+      if (evidence.some(e => e.source === row.source && e.item_ref === row.item_ref && (e.student_id || `${e.door_id}:${e.learner_ref}`) === (row.student_id || `${row.door_id}:${row.learner_ref}`))) return;
+      evidence.push(row);
+    },
     async homeDoor(code) { const d = doors.find(x => x.code === code); return d && d.active !== false ? d : null; },
     async homeSittings(doorId, ref) {
       return sittings.filter(s => s.learner_ref === ref).map(s => ({ sitting: { ...s }, homework: homework.find(h => h.id === s.homework_id) }))

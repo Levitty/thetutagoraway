@@ -20,6 +20,7 @@
 // ============================================================================
 
 import { supabase } from '../supabase.js';
+import { practiceEvidence } from '../learner/evidence.js';
 
 const PARAMS_VERSION = 'heuristic-v0';   // bumped when calibrated params ship
 const OUTBOX_KEY = 'tg_response_outbox';
@@ -114,6 +115,8 @@ try {
  * @param {number}  [ev.taps]          interaction taps before answering (young mode)
  * @param {number}  [ev.scaffold]      faded-example support level answered at
  * @param {number}  [ev.confidence]    engine's prior confidence before the answer
+ * @param {string}  [ev.cskill]        curriculum skill code, when the item carries one (family items do)
+ * @param {string}  [ev.difficulty]    'easy' | 'medium' | 'hard', when the item carries one
  */
 export function logResponse(ev) {
   if (!ev || !ev.studentId || !ev.skillId) return;   // need a real student + skill
@@ -133,6 +136,7 @@ export function logResponse(ev) {
     is_diagnostic: !!ev.isDiagnostic,
     is_review: !!ev.isReview,
     params_version: PARAMS_VERSION,
+    ...practiceEvidence(ev),   // source 'practice', and the curriculum skill and difficulty when the item has them
   };
   if (ev.learnerId) row.learner_id = ev.learnerId;
   if (ev.submittedValue != null && ev.submittedValue !== '') row.submitted_value = String(ev.submittedValue).slice(0, 500);

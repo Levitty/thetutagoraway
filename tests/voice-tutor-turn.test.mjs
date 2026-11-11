@@ -26,14 +26,15 @@ const SID = '0b7e4d3c-1111-4222-8333-944455556666';
 const settings = settingsFrom((k) => ({ VOICE_TUTOR_ENABLED: '1', VOICE_TUTOR_ALLOWLIST: 'tester@example.com' }[k]));
 
 const world = ({ spent = { session: 0, day: 0 }, progress = { skills: {} }, broken = false } = {}) => {
-  const usage = []; const concerns = [];
+  const usage = []; const concerns = []; const evidence = [];
   return {
-    usage, concerns,
+    usage, concerns, evidence,
     async getChild(id) { return id === 'c1' ? { id: 'c1', parent_id: 'u-parent', name: 'Wanjiru Akinyi', grade: 'Grade 5' } : id === 'c2' ? { id: 'c2', parent_id: 'someone-else', name: 'X' } : null; },
     async getProgress() { return progress; },
     async spend() { if (broken) throw new Error('relation does not exist'); return spent; },
     async recordUsage(r) { usage.push(r); },
     async recordConcern(r) { concerns.push(r); },
+    async recordEvidence(r) { evidence.push(r); },
   };
 };
 const reply = (steps, usage = { input_tokens: 4000, output_tokens: 600 }) => ({ stop_reason: 'end_turn', usage, content: [{ type: 'text', text: JSON.stringify({ steps }) }] });

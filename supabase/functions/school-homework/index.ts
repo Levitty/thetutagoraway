@@ -4470,6 +4470,30 @@ async function learnerHome(p, deps) {
   return ok({ linked: true, home: buildHome(door.name, await store.homeSittings(door.id, c.ref), deps.now()) });
 }
 
+// src/learner/evidence.js
+function homeworkEvidence({ homework, sitting, answer }) {
+  const item = (sitting?.items || [])[Number(answer?.n) - 1];
+  if (!item?.cskill || !homework?.door_id || !sitting?.learner_ref) return null;
+  return {
+    source: "school_homework",
+    door_id: homework.door_id,
+    learner_ref: sitting.learner_ref,
+    subject: "math",
+    skill_id: item.cskill,
+    cskill: item.cskill,
+    correct: !!answer.correct,
+    misconception: answer.mis || null,
+    independent: true,
+    marks: answer.correct ? 1 : 0,
+    max_marks: 1,
+    item_ref: `hw:${sitting.homework_id || homework.id}:${answer.n}`,
+    submitted_value: answer.chosen ? String(answer.chosen).slice(0, 500) : null,
+    client_ts: answer.at || null,
+    hints_used: 0,
+    attempt_no: 1
+  };
+}
+
 // src/school/homeworkLearner.js
 var CODE = /^[A-Z2-9]{10}$/;
 var ok2 = (body) => ({ status: 200, body: { success: true, ...body } });
@@ -4506,6 +4530,11 @@ async function learnerHomework(p, deps) {
     const r = step(s0, { type: "answer", n: p.n, response: p.response }, deps.now());
     if (!r.ok) return ok2({ ...head, refused: r.error, view: sittingView(s0) });
     await done(r.s);
+    try {
+      const row = homeworkEvidence({ homework, sitting, answer: r.s.answers[r.s.answers.length - 1] });
+      if (row && store.saveEvidence) await store.saveEvidence(row);
+    } catch {
+    }
     const it = s0.items[Number(p.n) - 1];
     const right = it.kind === "choice" ? it.options.find((o) => o.right) : null;
     const reason = !r.mark.correct ? it.kind === "choice" ? it.options.find((o) => o.key === r.mark.chosen)?.why : (it.wrong || []).find((w) => w.mis && w.mis === r.mark.mis)?.why : "";
@@ -4570,6 +4599,12 @@ function supabaseStore(admin) {
     async saveSitting(s) {
       const { id, ...rest } = pickCols(s);
       await admin.from("school_homework_sittings").update({ ...rest, updated_at: (/* @__PURE__ */ new Date()).toISOString() }).eq("id", id);
+    },
+    // One evidence row for the learner's log (response_events, migration 20261111_learner_evidence.sql). A duplicate
+    // (the unique index on source, item_ref and learner) is the row already being there, which is what the log wants.
+    async saveEvidence(row) {
+      const { error } = await admin.from("response_events").insert(row);
+      if (error && error.code !== "23505") throw new Error("Not saved");
     },
     // The learner home (learnerHome.js, migration 20261111_learner_home.sql).
     async homeDoor(code) {

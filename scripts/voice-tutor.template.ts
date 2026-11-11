@@ -104,6 +104,11 @@ const dbFor = (admin) => ({
     const { error } = await admin.from("voice_tutor_usage").insert(row);
     if (error) console.error("voice_tutor_usage insert", error);
   },
+  // One marked answer in the learner's evidence log (response_events). A duplicate is the row already there.
+  async recordEvidence(row) {
+    const { error } = await admin.from("response_events").insert(row);
+    if (error && error.code !== "23505") console.error("response_events insert", error);
+  },
   async recordConcern(row) {
     const { data, error } = await admin.from("safeguarding_events").insert(row).select("id").single();
     if (error) { console.error("SAFEGUARDING insert failed", error); return; }

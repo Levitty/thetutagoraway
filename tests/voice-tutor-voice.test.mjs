@@ -236,7 +236,7 @@ test('short spoken turns: the server asks again when the tutor says too much', (
 // ---------------------------------------------------------------- caps and the cost log
 const world = ({ spent = { session: 0, day: 0 } } = {}) => {
   const usage = [];
-  return { usage, async getChild() { return null; }, async getProgress() { return { skills: {} }; }, async spend() { return spent; }, async recordUsage(r) { usage.push(r); }, async recordConcern() {}, async countTokens() { return usage.filter((u) => String(u.guard).startsWith('token')).length; } };
+  return { usage, async getChild() { return null; }, async getProgress() { return { skills: {} }; }, async spend() { return spent; }, async recordUsage(r) { usage.push(r); }, async recordConcern() {}, async recordEvidence() {}, async countTokens() { return usage.filter((u) => String(u.guard).startsWith('token')).length; } };
 };
 const SAY = { stop_reason: 'end_turn', usage: { input_tokens: 4000, output_tokens: 500 }, content: [{ type: 'text', text: JSON.stringify({ steps: [{ cmd: 'say', text: 'Good. What did you notice about the bottom numbers?' }, { cmd: 'pause_for_child', expect: 'spoken', max_wait_s: 30 }] }) }] };
 const turn = (db, body) => runTutorTurn({ user: USER, settings, lib: {}, secret: 'test-secret-that-is-long-enough', db, callModel: async () => SAY, now: 1_800_000_000_000, body: { session_id: SID, turn_index: 2, board: [], history: [], ...body } });
