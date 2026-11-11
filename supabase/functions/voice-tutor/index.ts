@@ -33550,7 +33550,7 @@ function itemFor(s, bank = []) {
 // src/ai/safeguarding.js
 var norm6 = (s) => String(s ?? "").toLowerCase().replace(/[’`´]/g, "'").replace(/[^a-z0-9'\s]+/g, " ").replace(/\s+/g, " ").trim();
 var SEVERITY = /\b(blood|bleeding|bruise\w*|swollen|swelling|scar\w*|burn\w*|broke\w*|fracture\w*|could ?n[o']?t walk|cannot walk|can ?t walk|could ?n[o']?t sit|hospital|stitches|unconscious|passed out)\b|\b(every ?day|everyday|every night|all the time|again and again|always beats?)\b|\b(afraid|scared|scaring|fear|terrified) (to|of) (go|going|return\w*) (back )?home\b|\bdo ?n[o']?t want to go home\b|\bsiogopi\b|\bninaogopa kwenda nyumbani\b/;
-var RULES = [
+var SAFEGUARDING_RULES = [
   // ---- crisis: self-harm and suicide ------------------------------------
   {
     id: "self_harm_intent",
@@ -33684,7 +33684,7 @@ var screen = (raw) => {
   const text = norm6(raw);
   if (!text) return { tier: "none", categories: [], hits: [] };
   const hits = [];
-  for (const rule of RULES) {
+  for (const rule of SAFEGUARDING_RULES) {
     if (!rule.any.test(text)) continue;
     if (rule.needs && !rule.needs.test(text)) continue;
     if (rule.not && rule.not.test(text)) continue;
