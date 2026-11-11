@@ -1,0 +1,3985 @@
+{
+ "framework": "cbc",
+ "subject_key": "english",
+ "grade": 1,
+ "source": "KICD English Language, First Published in 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 64,
+  "outcomes": 217,
+  "lessons": 152,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO",
+   "number": "1.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and vocabulary (Theme 1: Greetings)",
+   "sequence": 111,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target letters a-h",
+    "Target sounds a-h",
+    "Vocabulary building"
+   ],
+   "learning_experiences": [
+    "listen to an oral text with words containing the sounds corresponding to the letters a-h,",
+    "take turns to pronounce sounds/a:/, /æ/, / ɜː/, /ɑː/, /ə/, /b:/, /b/, /k/, /s/, /d/, /e/, /iː/, /f/ /g/, /h/ as modelled by peers, the teacher or an audio recording,",
+    "match sounds with corresponding letters,",
+    "talk about pictures/photos of people greeting one another,",
+    "watch videos of people greeting each other,",
+    "use non-verbal cuessuch as eye contact, appropriate gestures, and facial expressions when greeting others,",
+    "practise various types of greetingssuch asshaking hands, patting someone on the back, fist bumping, waving, among others as they take turns."
+   ],
+   "key_inquiry_questions": [
+    "Why do we greet people?",
+    "How do we greet people at different times of the day?"
+   ],
+   "core_competences": "Learning to learn: The learner’s ability to recreate learning experiences outside the class is enhanced as they use the vocabulary learnt to greet people at different times of the day.",
+   "values": "Unity: This is developed as the learner works jointly with peers to talk about pictures/photos of people greeting one another.\nRespect: Thisis developed as the learner practises patience with each other during turn taking as they greet.",
+   "pcis": "Life Skills(Self-esteem): The learner’s self-esteem is nurtured as they practise different types of greetings.",
+   "links": "The learner can link the concept of greetings to learning of similar concepts in Kiswahili and Indigenous Languages Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     13
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "pick out the letters a-h and their corresponding soundsfor effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "pronounce words with the sounds /a:/,/æ/, / ɜː/, /ɑː/, /ə/, /b:/, /b/, /k/, /s/, /d/, /e/, /iː/, /f/ /g/, /h/ for oral fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use words related to greetings in everyday conversations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T1_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "appreciate the role of greetings in diverse contexts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T1_PRE_READING",
+   "number": "1.2.1",
+   "strand": "Reading",
+   "sub_strand": "Pre-reading (Theme 1: Greetings)",
+   "sequence": 121,
+   "lessons": 1,
+   "optional": false,
+   "content_topics": [
+    "Target Letters a-h",
+    "Reading posture"
+   ],
+   "learning_experiences": [
+    "select the appropriate sitting position from pictures, videos and teacher’s demonstration,",
+    "position self and reading materials appropriately,",
+    "turn the pages of a book from right to left for easy reading,",
+    "track print through finger reading,",
+    "pick out words with letters(a-h) from flashcards or charts,",
+    "match target letters with the sounds they represent,",
+    "read 2-3 letter words containing the target sounds."
+   ],
+   "key_inquiry_questions": [
+    "How do we sit while reading?",
+    "How do we position our books while reading?"
+   ],
+   "core_competences": "Learning to learn: The learner’s ability to learn independently is nurtured as they practise reading words containing the target letters on their own.",
+   "values": "Responsibility: Thisis developed asthe learner takes care of reading materials entrusted to them.",
+   "pcis": "Life Skills(Self-awareness): The learner’s self-awareness is enhanced as they practise identifying the appropriate posture for reading preparedness.",
+   "links": "The learner applies the letter-sound knowledge acquired when reading materials in all other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T1_PRE_READING.a",
+     "letter": "a",
+     "text": "identify an appropriate posture for reading preparedness",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T1_PRE_READING.b",
+     "letter": "b",
+     "text": "read words containing the letters (a-h) for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T1_PRE_READING.c",
+     "letter": "c",
+     "text": "realise the importance of correct posture in preparation for reading",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T",
+   "number": "1.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Verb ‘to be’- Present Tense (Theme 1: Greetings)",
+   "sequence": 131,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Am",
+    "Are",
+    "Is"
+   ],
+   "learning_experiences": [
+    "participate in language games and songs using the present tense form of the verbs ‘to be’ -am, is, are,",
+    "watch videos of children greeting one another and introducing themselves,",
+    "observe as peers introduce themselves using the verb ‘to be’- am, is, are,",
+    "introduce himself/herself politely using the verb ‘to be’ - am, is, are,",
+    "describe himself/herself, and other people using the verb ‘to be’ - am, is, are,",
+    "practise various types of greetings using appropriate language e.g., how are you? I am fine,",
+    "role play varioustypes of greetings and introduction using the verb ‘to be’ - am, is, are."
+   ],
+   "key_inquiry_questions": [
+    "How do we greet people in the morning/afternoon/ evening?"
+   ],
+   "core_competences": "Communication and collaboration: The learner’s ability to speak clearly and effectively is enhanced as they use the present tense realisations of the verb ‘to be’, am, is, are to greet and introduce themselves and others.\nLearning to Learn: The learner’s ability to acquire self-discipline is enhanced as they are motivated to learn and practise introducing themselves and others using the verb ‘to be’, am, is, are.",
+   "values": "Respect: This is enhanced asthe learner understands and appreciatesthe role of greetings in interaction.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is nurtured as they greet and introduce themselves and others.",
+   "links": "The learner links the concept of present tense form of the verb ‘to be’ to learning of similar concepts in Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.a",
+     "letter": "a",
+     "text": "identify the present tense forms of the verbs‘to be’ am, is, are in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.b",
+     "letter": "b",
+     "text": "use the present tense realisations of the verbs ‘to be’ am, is and are to greet and introduce oneself and others",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T1_VERB_TO_BE_PRESENT_T.c",
+     "letter": "c",
+     "text": "acknowledge the importance of using correct tense in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T1_PRE_WRITING",
+   "number": "1.4.1",
+   "strand": "Writing",
+   "sub_strand": "Pre-writing (Theme 1: Greetings)",
+   "sequence": 141,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Sitting posture",
+    "Eye-hand coordination"
+   ],
+   "learning_experiences": [
+    "look at pictures and watchvideos on appropriate sitting posture,",
+    "practise sitting in the right posture,",
+    "position an exercise book correctly,",
+    "hold pencils/ colouring materials correctly,",
+    "work with peers to write the target letters from left to right,",
+    "join dotted linesto make letters and patterns,",
+    "colour differentshapes and letters,",
+    "draw patterns and shapes, trace letters and shapes or mould letters with plasticine or clay."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to sit properly when writing?",
+    "How do we place our books when writing?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s ability to learn independently is promoted as they practise appropriate sitting posture and eye-hand coordination in preparation for writing.",
+   "values": "Responsibility: Self-drive is nurtured as the learner practises holding pencils or colouring materials correctly and writing from left to right.",
+   "pcis": "Learner Support Programmes (Clubs and Societies): The learner uses the skills acquired to draw and colour items during art clubs.",
+   "links": "The learner uses the pre-writing skills learnt to practise writing clearly in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T1_PRE_WRITING.a",
+     "letter": "a",
+     "text": "recognise the appropriate sitting posture in preparation for writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T1_PRE_WRITING.b",
+     "letter": "b",
+     "text": "exhibit appropriate eye-hand coordination for writing preparedness",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T1_PRE_WRITING.c",
+     "letter": "c",
+     "text": "realise the role of correct posture and eye-hand coordination in writing",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO",
+   "number": "2.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 2: School)",
+   "sequence": 211,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target letter i-p",
+    "Target sounds i-p",
+    "Vocabulary"
+   ],
+   "learning_experiences": [
+    "identify the sounds /iː/ (feet), /ɪ / (fit) /aɪ/ (price), j: /ʤ/ (just), k: /k/, l: /l/, m: /m/, n: /n/, o: for example, / ɒ/ (lot), /ɔː/ (cot), p: /p/,",
+    "take pictures of items during a nature walk around the school and name them,",
+    "use the Frayer model to discussthe meaning of words related to the theme,",
+    "make sentences using the learnt words,",
+    "sing songs and recite poems featuring the learnt words,",
+    "play language games using the learnt sounds and words."
+   ],
+   "key_inquiry_questions": [
+    "Which words do we use to talk about school?",
+    "How can we listen attentively to others?"
+   ],
+   "core_competences": "Communication: The learner’s ability to speak clearly and effectively is developed as they use the learnt words to talk about school.\nDigital Literacy: The learner is empowered to create using technology as they use digital gadgets to take pictures of items during a nature walk around the school.",
+   "values": "Respect: This is enhanced as the learner understands and appreciates peers during language game activities.\nResponsibility: This is enhanced as the learner observes safety precautions during nature walks.",
+   "pcis": "Life Skills(Self-awareness): The learner’s self-awareness is nurtured as they identify the general features in their school during a nature walk.",
+   "links": "The learner applies the knowledge learnt on the general features of the school to learning similar concepts in Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify words featuring the sounds /iː/, /ɪ / /aɪ/ /ʤ/, k as in /k/ /l/ /m/ /n/ /ɒ/ /ɔː/ and /p/ in varied contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "articulate the sounds /iː/, /ɪ / /aɪ/ /ʤ/, k as in /k/ /l//m/ /n/ / ɒ/ /ɔː/ and /p/ forspeaking fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "make sentences using words related to the theme",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T2_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "value the role of listening in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T2_PRE_READING",
+   "number": "2.2.1",
+   "strand": "Reading",
+   "sub_strand": "Pre-reading (Theme 2: School)",
+   "sequence": 221,
+   "lessons": 1,
+   "optional": false,
+   "content_topics": [
+    "Small and capital letters",
+    "Positioning reading materials",
+    "Sitting posture"
+   ],
+   "learning_experiences": [
+    "pick out small letters from flashcards or charts,",
+    "match small and capital letters,",
+    "focus eyes on a line or word while reading,",
+    "track print through finger pointing as the teacher reads letters I to P,",
+    "view pictures and videos on reading posture,",
+    "use flashcards to form words with the letters I to P,",
+    "simulate the appropriate sitting posture while working with peers,",
+    "role play the correct positioning of reading materials,",
+    "practise turning over the pages of a book from right to left."
+   ],
+   "key_inquiry_questions": [
+    "Why should one sit appropriately when reading?"
+   ],
+   "core_competences": "be developed: Collaboration: Teamwork is nurtured as the learner collaboratively works with peers to demonstrate and practise to position reading materials appropriately.",
+   "values": "Responsibility: This is developed asthe learner takes care of the reading materials.",
+   "pcis": "Life Skills(Self-awareness): The learner’s self-awareness is enhanced as they recognise the appropriate sitting posture.",
+   "links": "The learner applies the knowledge of small and capital letters to the learning of similar concepts in Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T2_PRE_READING.a",
+     "letter": "a",
+     "text": "identify small and capital lettersfrom a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T2_PRE_READING.b",
+     "letter": "b",
+     "text": "position reading materials and sit appropriately while reading",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T2_PRE_READING.c",
+     "letter": "c",
+     "text": "read words featuring the letters I to P for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T2_PRE_READING.d",
+     "letter": "d",
+     "text": "value the need for the right posture while reading",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_",
+   "number": "2.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Verbs ‘to do’- Present form Subjective Pronouns-Singular (Theme 2: School)",
+   "sequence": 231,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Do, does",
+    "I/he/she/it"
+   ],
+   "learning_experiences": [
+    "ask each other questions using the target language pattern,",
+    "listen to a story related to the theme,",
+    "pick out the words do, does, I, he/she, it from the text,",
+    "form sentences with the words do and does from a substitution table,",
+    "use the words (I, she/he, it) in sentences, for example, - He eats bananas. - She drives a car. - I read books. - She reads books.",
+    "view pictures and form sentences with the target language patterns,",
+    "make charts and posters showing the words (do, does, I, he/she, it) and display them,",
+    "recite poems featuring the present tense form of the verb ‘to do’ (do and does)."
+   ],
+   "key_inquiry_questions": [
+    "How do you talk about a person, an object, or a place? 2.How do we talk about many people?"
+   ],
+   "core_competences": "be developed: Communication: The learner’s ability to speak clearly and effectively is nurtured as they use the verb ‘to do’ and the words I, he, she, and it in sentences.",
+   "values": "Responsibility: This is developed as the learner takes up assigned roles when making charts and posters showing the target language patterns.",
+   "pcis": "Life Skills(Self-awareness): The learner’s self-awareness level is enhanced as they read texts about the school.",
+   "links": "The learner applies the knowledge acquired on subject-verb agreement to the learning of similar concepts in Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.a",
+     "letter": "a",
+     "text": "pick out the words verbs ‘to do’ (do, does) and subjective pronouns (I, she/he, it) from an oral text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.b",
+     "letter": "b",
+     "text": "use the subjective pronouns (I, she/he, it) and the verb ‘to do’ (does and do) in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T2_VERBS_TO_DO_PRESENT_.c",
+     "letter": "c",
+     "text": "acknowledge the need for well-formed sentences in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T2_PRE_WRITING",
+   "number": "2.4.1",
+   "strand": "Writing",
+   "sub_strand": "Pre-writing (Theme 2: School)",
+   "sequence": 241,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Sitting posture",
+    "Eye-hand coordination",
+    "Positioning materials"
+   ],
+   "learning_experiences": [
+    "observe a series of pictures and pick out the right sitting posture with peers,",
+    "simulate the positioning of writing materials and the right sitting posture,",
+    "select well-positioned writing materialsfrom a chart,",
+    "practise writing from the left to the right,",
+    "draw and colour differentshapes using appropriate sitting posture and material positioning,",
+    "role play on how to use their exercise books well."
+   ],
+   "key_inquiry_questions": [
+    "How do we sit when writing?",
+    "How do we write?"
+   ],
+   "core_competences": "Collaboration: Teamwork is developed as the learner works collaboratively with peers to simulate the right body posture and positioning of materials.",
+   "values": "Love: This is enhanced as the learner works harmoniously with peers during drawing and colouring of different shapes.",
+   "pcis": "Life skills (Self-awareness): The learner gains self-awareness as they learn how to sit appropriately in preparation for writing.",
+   "links": "The learner is able to adopt the correct body posture and positioning of materials while writing in all other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T2_PRE_WRITING.a",
+     "letter": "a",
+     "text": "describe the right sitting posture and position materials appropriately for writing readiness",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T2_PRE_WRITING.b",
+     "letter": "b",
+     "text": "coordinate the eye and hands in preparation for writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T2_PRE_WRITING.c",
+     "letter": "c",
+     "text": "value the need for the right posture and appropriate positioning of writing materials in learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO",
+   "number": "3.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and vocabulary (Theme 3: Family)",
+   "sequence": 311,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds q-z",
+    "Vocabulary"
+   ],
+   "learning_experiences": [
+    "listen and point out the sounds of the letters: q, r, s, t, /ʌ/ (u) as in cup, v, w, x, y, z as modelled,",
+    "work with peers to say the sounds/q/, /r/, /s/, t, //ʌ /, /v/, /w/, /x/, /y/ and /z /,",
+    "view a chart featuring the letters and say the corresponding sounds,",
+    "work jointly to repeat words with the target sounds from an oral text,",
+    "role play simple instructions with peers,",
+    "sing rhymes, say tongue twisters and poems featuring the target sounds."
+   ],
+   "key_inquiry_questions": [
+    "How can we become better listeners?"
+   ],
+   "core_competences": "Communication: The learner’s ability to listen keenly and actively is developed as they listen keenly and repeat words with the target sounds from an oral text.\nSelf-efficacy: The learner’s knowledge of their family is enhanced as they sing rhymes, say tongue twisters and poems with target sounds about family members.",
+   "values": "Respect: This is promoted as the learner shows positive regard for self and others when role playing simple instructions with peers.",
+   "pcis": "Life Skills (Self-awareness):The learner’s sense of self-awareness is increased as they sing rhymes, say tongue twisters and recite poems related to the theme.",
+   "links": "The learner is able to apply the skill of listening attentively to their learning in Kiswahili and Indigenous Languages Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "link the letters q, r, s, t, u, v, w, x, y, z with their corresponding sounds",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "use words featuring the sounds/q/, /r/, /s/, / t /, /ʌ /, /v/, /w/, /x/, /y/ and /z/ in words for oral fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "respond verbally and non-verbally to simple one-directional instructions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T3_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "advocate for accurate pronunciation in oral conversations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T3_PRE_READING",
+   "number": "3.2.1",
+   "strand": "Reading",
+   "sub_strand": "Pre-reading (Theme 3: Family)",
+   "sequence": 321,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Target letters q-z"
+   ],
+   "learning_experiences": [
+    "name the letters q, r, s, t, u, v, w, x, y, z,",
+    "say the consonant sounds /q/ /r/ /s/ /t/ /v/ /w/ /x/ /y/ /z/,",
+    "say the vowel sound /u/,",
+    "team up to articulate the target sounds and write their corresponding letter,",
+    "model lettershapes for the target letters,",
+    "track print through finger-pointing as the teacher reads,",
+    "work jointly to match and pair sounds with their corresponding letters."
+   ],
+   "key_inquiry_questions": [
+    "Why should we learn how to read?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s ability to learn independently is promoted as they link the target letters to their corresponding sounds on their own in preparation for reading.\nCreativity and Imagination: The learner’s ability to explore new ideas is enhanced as they model letter shapes for the target letters.",
+   "values": "Unity: This is enhanced as the learner collaborates with peersto articulate the target sounds and write their corresponding letter.",
+   "pcis": "Life Skills (Self-esteem): The learner acquires an enhanced level of self-esteem as they articulate the target sounds correctly and write their corresponding letters.",
+   "links": "The learner is able to apply the pre-reading skills to learn similar concepts in Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T3_PRE_READING.a",
+     "letter": "a",
+     "text": "name the letters q, r, s, t, u, v, w, x, y, z articulately",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T3_PRE_READING.b",
+     "letter": "b",
+     "text": "read the sounds /q/ /r/ /s/ /t/ /u/ /v/ /w/ /x/ /y/ and /z/ for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T3_PRE_READING.c",
+     "letter": "c",
+     "text": "value the importance of accurate pronunciation in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT",
+   "number": "3.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Verb ‘to have’ – present form Objective Pronouns- Singular (Theme 3: Family)",
+   "sequence": 331,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Have, had",
+    "Me, her/him, it"
+   ],
+   "learning_experiences": [
+    "listen to a story and pick out the present forms of the verb ‘to have’ (have, has),",
+    "listen to a story and pick out the objective pronouns (me, her/him, it),",
+    "work with peers to form sentences featuring the present forms of the verb ‘to have’ (have, has) from a substitution table,",
+    "make sentences using the objective pronouns (me, her/him, it),",
+    "role play a dialogue featuring the present forms of the verb ‘to have’ (have, has) and the objective pronouns (me, her/him, it),",
+    "sing songs, recite poems and say tongue twisters featuring the present forms of the verb ‘to have’ (have, has) and the objective pronouns (me, her/him, it),",
+    "pick out the present forms of the verb ‘to have’ (have, has) and the objective pronouns (me, her/him, it) from a textbook, or children’s magazine."
+   ],
+   "key_inquiry_questions": [
+    "Which words do you use to talk about the things you have?"
+   ],
+   "core_competences": "be developed:\nCreativity and imagination: The learner’s ability to explore new ways of doing things is nurtured as they sing songs, recite poems and say tongue twisters featuring the target language pattern.\nCritical thinking and problem solving: The learner’s ability to think logically is enhanced as they form sentences featuring the present forms of the verb ‘to have’ (have, has) from a substitution table.",
+   "values": "Love: This is enhanced as the learner understands and appreciates peer’s input during the role play activity.",
+   "pcis": "Life Skills (Self-awareness): The learner’s self-awareness is enhanced as they learn about family members from texts they interact with.",
+   "links": "The learner applies the knowledge of verbs and pronouns to their learning of similar concept in Kiswahili and Indigenous languages Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     23,
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.a",
+     "letter": "a",
+     "text": "select the present form of the verb ‘to have’ (have, has) and the objective pronouns (me, her/him, it) from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.b",
+     "letter": "b",
+     "text": "use the present form of the verb ‘to have’ (have, has) and the objective pronouns (me, her/him, it) in varied contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T3_VERB_TO_HAVE_PRESENT.c",
+     "letter": "c",
+     "text": "value the importance of well-formed sentencesin communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T3_HANDWRITING",
+   "number": "3.4.1",
+   "strand": "Writing",
+   "sub_strand": "Handwriting (Theme 3: Family)",
+   "sequence": 341,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Letters of the alphabet",
+    "Legibility and neatness"
+   ],
+   "learning_experiences": [
+    "view flashcards featuring well-formed letters of the alphabet,",
+    "team up to sort out flashcards showing the letters of the alphabet in correct sequence,",
+    "practise correct letter formation from models on the board, charts and pattern books,",
+    "copy lowercase letter patterns neatly and legibly,",
+    "work with peers to write lower case letters from left to right,",
+    "work jointly to display their neatly written work in their portfolios."
+   ],
+   "key_inquiry_questions": [
+    "Why is neat handwriting important?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s self-discipline is enhanced as they are motivated to practise correct letter writing from left to right.",
+   "values": "Unity: This is enhanced as the learner teams up with peers to sort out flashcards showing the letters of the alphabet in correct sequence.",
+   "pcis": "Life skills (Self-esteem): The learner’s self-esteem is enhanced as they shape the letters of the alphabet correctly.",
+   "links": "The learner is able to apply their acquired writing skills to write neatly and legibly in all the learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.a",
+     "letter": "a",
+     "text": "identify correctly formed letters of the alphabet in a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.b",
+     "letter": "b",
+     "text": "form lower case letters for writing fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.c",
+     "letter": "c",
+     "text": "write from left to right legibly and neatly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T3_HANDWRITING.d",
+     "letter": "d",
+     "text": "appreciate the importance of well-formed letters in written communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO",
+   "number": "4.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 4: Home)",
+   "sequence": 411,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds",
+    "Vocabulary"
+   ],
+   "learning_experiences": [
+    "say the sounds /æ/ /m/, /t/ as modelled by the teacher, peers or from an audio recording,",
+    "form words featuring the target sounds,",
+    "display the words formed on flashcards,",
+    "make sentences orally using words with the target sounds,",
+    "team up to role play giving and receiving of instructions,",
+    "take turns to read flashcards featuring words with the target sounds."
+   ],
+   "key_inquiry_questions": [
+    "Why should we pronounce words correctly?"
+   ],
+   "core_competences": "Communication: The learner’s ability to listen keenly and actively is enhanced as they say the target sounds as modelled by the teacher, peers or from an audio recording.\nCollaboration: Teamwork is developed as the learner actively teams up with peers to role play giving and receiving of instructions.",
+   "values": "Responsibility: This is enhanced as the learner takes up assigned roles when taking turns to read flashcards featuring words with the target sounds.",
+   "pcis": "Environmental awareness: This is promoted as the learner acquires vocabulary related to theme on home.",
+   "links": "The learner is able to apply the vocabulary learnt from the theme to their learning in Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "articulate the sounds /æ/ /m/, /t/ /e/ for clarity in communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "use words with the sounds /æ/ /m/, /t/ /e/ in oral sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "respond to simple specific one-directional instructions using the new words",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T4_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "adopt using vocabulary learnt in oral communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T4_PRE_READING",
+   "number": "4.2.1",
+   "strand": "Reading",
+   "sub_strand": "Pre-reading (Theme 4: Home)",
+   "sequence": 421,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Target letters"
+   ],
+   "learning_experiences": [
+    "read out the letters Aa, Mm, Tt and Ee from a chart,",
+    "point out and name the letters on a chart or flashcards,",
+    "form words using flashcards with the target letters Aa, Mm, Tt and Ee,",
+    "fill in blank spaces using the target letters to form words,",
+    "team up to play word games to sort the target letters,",
+    "work with othersto match the target letters with their corresponding sounds."
+   ],
+   "key_inquiry_questions": [
+    "Why do we learn letters?"
+   ],
+   "core_competences": "be developed:\nCollaboration: Learner’s ability to exercise teamwork is developed as they work jointly to match the target letters with their corresponding sounds.\nLearning to learn: Learners’ ability to learn independently is promoted as they practise using target letters to form words.",
+   "values": "Respect: This is nurtured as the learner appreciates contributions from peers when playing word games to sort the target letters.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is enhanced as they form words correctly in preparation for reading.",
+   "links": "The learner is able to apply reading skills when reading texts in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T4_PRE_READING.a",
+     "letter": "a",
+     "text": "identify the letters Aa, Mm, Tt and Ee in given words",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T4_PRE_READING.b",
+     "letter": "b",
+     "text": "form words using the letters Aa, Mm, Tt and Ee in preparation for reading",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T4_PRE_READING.c",
+     "letter": "c",
+     "text": "realise the importance of letters in word formation",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS",
+   "number": "4.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Singular and plurals (adding -s and -es) (Theme 4: Home)",
+   "sequence": 431,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Regular nouns: Adding –s Adding -es"
+   ],
+   "learning_experiences": [
+    "talk about objects at home in their singular and plural forms,",
+    "work jointly to group pictures of items found at home in columns of ‘one’ and ‘many’,",
+    "draw pictures of objects found at home, colour them andindicate the number,",
+    "sing songs and rhymes featuring the singular and plural forms of nouns,",
+    "work jointly to record the songs and rhymes as they recite them,",
+    "work with others to match a given set of words with their singular or plural forms on flashcards."
+   ],
+   "key_inquiry_questions": [
+    "What objects are found at home?"
+   ],
+   "core_competences": "Creativity and imagination: The learner’s ability to creatively present ideas is enhanced as they sing songs and rhymes featuring the singular and plural forms of nouns.\nDigital Literacy: The learner’s ability to create with technology is enhanced as they record their songs and rhymes featuring the target language pattern.",
+   "values": "Peace: This is enhanced as the learner works harmoniously with peers to group pictures of itemsfound at home in columns of ‘one’ and ‘many’.",
+   "pcis": "Life Skills (Self-awareness): The learner’s self-esteem is enhanced as they use singular and plural forms of nouns in language correctly.",
+   "links": "The learner applies the knowledge of singular and plural forms of nouns to learning of counting in Mathematics Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.a",
+     "letter": "a",
+     "text": "identify singular nouns which require the addition of -s or - es to form plural",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.b",
+     "letter": "b",
+     "text": "form plural nouns from their singular forms by adding -s or -es",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T4_SINGULAR_AND_PLURALS.c",
+     "letter": "c",
+     "text": "appreciate the importance of using singular and plural nouns correctly in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T4_HANDWRITING",
+   "number": "4.4.1",
+   "strand": "Writing",
+   "sub_strand": "Handwriting (Theme 4: Home)",
+   "sequence": 441,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Target letters of the Alphabet",
+    "Neatness and legibility"
+   ],
+   "learning_experiences": [
+    "copy capital and small letter patterns of the letters Aa, Mm, Tt and Ee,",
+    "form the letters Aa, Mm, Tt and Ee from models such as boards/charts/pattern books,",
+    "select the letters Aa, Mm, Tt and Ee from flashcards,",
+    "work with peers to write 3-4 letter wordsfrom left to right,",
+    "match flashcards with upper case and lower case of the letters Aa, Mm, Tt and Ee,",
+    "watch videos on the formation of the target letters."
+   ],
+   "key_inquiry_questions": [
+    "Why should we shape letters correctly?"
+   ],
+   "core_competences": "be developed: Communication: The learner’s ability to write clearly and correctly is nurtured as they formletters using correct shapes and sizes.",
+   "values": "Unity: This is developed as the learner works collaboratively with peers to practise writing 3-4 letter wordsfrom left to right.",
+   "pcis": "Life skills (Self-esteem): The learner acquires an improved level of self-esteem as they form letters correctly.",
+   "links": "The learner is able to use correct letter formation learnt when writing texts in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T4_HANDWRITING.a",
+     "letter": "a",
+     "text": "identify the letters Aa, Mm, Tt and Ee in lower case and upper case",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T4_HANDWRITING.b",
+     "letter": "b",
+     "text": "form the letters Aa, Mm, Tt and Ee in their correct shapes and sizes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T4_HANDWRITING.c",
+     "letter": "c",
+     "text": "write from left to right for lifelong learning",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T4_HANDWRITING.d",
+     "letter": "d",
+     "text": "appreciate the role of legible handwriting in written communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO",
+   "number": "5.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 5: Time)",
+   "sequence": 511,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds",
+    "Non-verbal cues"
+   ],
+   "learning_experiences": [
+    "the /s/, /l/, /i /, /p/ sounds, pick out the words with the sounds /s/, /l/, /",
+    "i /, /p/,",
+    "say the sounds /s/, /l/, /i /, /p/ as modelled from an audio recording, peer or the teacher,",
+    "make sentences using words with the target letters,",
+    "role play activities done at different times of the day,",
+    "sing songs and recite poems about time,",
+    "watch a video or live performance of a story and say what the eye contact or the facial expressions mean,",
+    "retell the story and show appropriate eye contact and facial expressions."
+   ],
+   "key_inquiry_questions": [
+    "What things do we do at different times of the day?"
+   ],
+   "core_competences": "be developed:\nCreativity and imagination: The learner’s ability to explore new ways of presenting ideas is inculcated as they retell stories and show appropriate eye contact and facial expressions.\nDigital Literacy: The learner’s ability to connect with technology is promoted as they watch a video or live performance of a story and say what the eye contact or the facial expressions mean.",
+   "values": "Responsibility: This is enhanced as the learner takes up assigned roles during role play activities with peers.",
+   "pcis": "Life Skills(Self-esteem): The learner’s self-esteem is enhanced as they use new words learnt to talk about different times of the day.",
+   "links": "The learner applies information on time to their learning of similar concepts of time in Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify words with the sounds (/s/, /l/, /i /, /p/) in a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "use words with the sounds (/s/, /l/, /i /, /p/) in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use facial expressions, eye contact and gestures appropriately during conversations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T5_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "appreciate the role of accurate pronunciation and non-verbal cues in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T5_PRE_READING",
+   "number": "5.2.1",
+   "strand": "Reading",
+   "sub_strand": "Pre- reading (Theme 5: Time)",
+   "sequence": 521,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds"
+   ],
+   "learning_experiences": [
+    "match letters and sounds using pocket charts/ digital flashcards/ charts,",
+    "identify the letters S, L, I and P from a chart,",
+    "say the sounds /s/, / l/, /i/ and /p/ and pick a flashcard with the corresponding letter,",
+    "team up to play a fishing game to identify specific sounds with peers,",
+    "read simple 3-4 letter words made up of the target letters."
+   ],
+   "key_inquiry_questions": [
+    "What things do you do every morning?"
+   ],
+   "core_competences": "be developed: Collaboration: Teamwork is developed as the learner collaborates with peers to play a fishing game to identify specific sounds.",
+   "values": "Social Justice: This is enhanced as the learner fosters fairness and non-discrimination to peers as they accord peers equal opportunities to play the language game.",
+   "pcis": "Life Skills (Self-esteem): The learner acquires an improved level of self-esteem as they acquire reading skills.",
+   "links": "The learner applies their reading skills to the reading of materials in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T5_PRE_READING.a",
+     "letter": "a",
+     "text": "match the letters S, L, I and P to their corresponding sounds for reading preparedness",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T5_PRE_READING.b",
+     "letter": "b",
+     "text": "read simple 3 - 4 letter words featuring the letters S, L, I and P for effective reading",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T5_PRE_READING.c",
+     "letter": "c",
+     "text": "appreciate the role of letter-sound knowledge in reading",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE",
+   "number": "5.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Tense: Present Simple Tense (Theme 5: Time)",
+   "sequence": 531,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "watch a video on children participating in routine activities,",
+    "talk about the activities in the video using present simple tense,",
+    "respond to questions using the simple present tense based on daily home routines, For example: What do you do every day? - I wake up every day. - I go to school every morning. - I brush my teeth every day. - I comb my hair every day.",
+    "sing songs and rhymes on daily routine activities using simple present tense,",
+    "listen to a story or poem and pick out sentences about things a person does every day."
+   ],
+   "key_inquiry_questions": [
+    "What do you do from morning to evening?"
+   ],
+   "core_competences": "be developed:\nCommunication: The learner’s ability to speak clearly and correctly is enhanced as they talk about the activities they do every day.\nDigital Literacy: This is enhanced as the learner interacts with digital content when watching a video on children participating in routine activities.",
+   "values": "Respect: This is developed as the learner appreciates and understands peers’ opinions as they talk about their routine activities.",
+   "pcis": "Life Skills(Self-awareness): The learner acquires self-awareness as they talk about their sequence routine or daily activities using present simple tense.",
+   "links": "The learner applies the vocabulary learnt to talk about activities taking place at different times of the day in Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.a",
+     "letter": "a",
+     "text": "identify wordsin present simple tense from given sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.b",
+     "letter": "b",
+     "text": "use present simple tense to talk about routine or daily activities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T5_TENSE_PRESENT_SIMPLE.c",
+     "letter": "c",
+     "text": "adopt the use of present simple tense to talk about routine activities",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T5_HANDWRITING",
+   "number": "5.4.1",
+   "strand": "Writing",
+   "sub_strand": "Handwriting (Theme 5: Time)",
+   "sequence": 541,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Target letters of the Alphabet"
+   ],
+   "learning_experiences": [
+    "copy capital and small letter patterns of the letters Ss, Ll, Ii and Pp,",
+    "form the letters Ss, Ll, Ii and Pp as shown on boards/charts/pattern books,",
+    "select the letters Ss, Ll, Ii and Pp from a range of letters on flashcards,",
+    "work with peers to write 3-4 letter words from left to right using the target letters,",
+    "match lower case (small) and upper case (capital) letters Ss, Ll, Ii and Pp on flashcards,",
+    "draw and label objectsfound at home,",
+    "work jointly to sort out flashcards with small letters and capital letters."
+   ],
+   "key_inquiry_questions": [
+    "Why should you write letters in the correct shape and size?"
+   ],
+   "core_competences": "Critical thinking and problem solving: The learner is able to think logically when matching lower case (small) and upper case (capital) letters Ss, Ll, Ii and Pp on flashcards.\nLearning to Learn: The learner’s ability to build relationships is promoted as they work with peers to write 3-4 letter words from left to right.",
+   "values": "Unity: This is enhanced as the learner collaborates with others to sort out flashcards with small letters and capital letters.",
+   "pcis": "Life Skills (Self-esteem): The learner acquires a high level of self-esteem as they form letters correctly for effective communication.",
+   "links": "The learner can apply the concept of neatness and legibility in writing to their learning in all other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T5_HANDWRITING.a",
+     "letter": "a",
+     "text": "identify the letters Ss, Ll, Ii and Pp in their small or capital forms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T5_HANDWRITING.b",
+     "letter": "b",
+     "text": "form the letters Ss, Ll, Ii, and Pp in their correct shapes and sizes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T5_HANDWRITING.c",
+     "letter": "c",
+     "text": "value the role of legible handwriting in written communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO",
+   "number": "6.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 6: Weather and our environment)",
+   "sequence": 611,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds",
+    "Vocabulary"
+   ],
+   "learning_experiences": [
+    "listen to an audio text containing the sounds /f/, /n/, /h/, / ɒ/ and / ɔː/,",
+    "pick outwordswith the target sounds from a story,",
+    "say the sounds /f/, /n/, /h/, / ɒ/ and / ɔː/ as modeled by peers, teacher or from an audio recording,",
+    "recite rhymes orsing songs about the weather,",
+    "use the Frayer model to discuss the meaning of words related to the theme,",
+    "team up to role play giving and receiving of simple instructions using appropriate eye contact and facial expressions."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to pronounce words correctly?",
+    "Whatshould we do when someone is talking to us?"
+   ],
+   "core_competences": "be developed: Communication: The learner’s ability to listen keenly and actively is developed as they listen to audio texts/oral texts and identify words with the target sounds in preparation for reading.",
+   "values": "Unity: Cooperation is nurtured as the learner teams up with peers to role play giving and receiving of simple instructions with peers.",
+   "pcis": "Environmental Education: The learner acquires information on the environment as they learn the new words related to weather and our environment.",
+   "links": "The learner can relate the vocabulary related to weather to their learning in Environmental activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     34
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify words with the sounds /f/, /n/, /h/, / ɒ/ and / ɔː/ from an oral t ext",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "pronounce words with the sounds /f/, /n/, /h/, / ɒ/ and / ɔː/ for oral fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "respond to simple one-directional instructions using new words",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T6_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "appreciate the role of accurate pronunciation in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T6_WORD_READING",
+   "number": "6.2.1",
+   "strand": "Reading",
+   "sub_strand": "Word Reading (Theme 6: Weather and our environment)",
+   "sequence": 621,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Words with target sounds"
+   ],
+   "learning_experiences": [
+    "point out the sounds /f/, /n/, /h/, /ɒ/ and / ɔː/ from a group of letters,",
+    "select words with the target sounds from a chart,",
+    "view a chart and read the words with the sounds /f/, /n/, /h/ /ɒ/ and / ɔː/,",
+    "work with others and form words that have the sounds /f/, /n/, /h/, /ɒ/ and / ɔː/,",
+    "read words about weather and the environment,",
+    "read sentences containing decodable words related to the theme."
+   ],
+   "key_inquiry_questions": [
+    "Why should we pronounce words clearly?"
+   ],
+   "core_competences": "be developed: Learning to Learn: The learner’s ability to learn independently is developed as they practise reading sentences with decodable words on their own.",
+   "values": "Respect: This is developed as the learner appreciates the effort of peers as they practise reading words correctly.",
+   "pcis": "Climate Change: This is promoted as the learner interacts with words related to the theme on weather and the environment.",
+   "links": "The learner applies reading skills to read texts in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T6_WORD_READING.a",
+     "letter": "a",
+     "text": "identify words with the sounds /f/, /n/, /h/, /ɒ/ and / ɔː/ in preparation for reading",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T6_WORD_READING.b",
+     "letter": "b",
+     "text": "pronounce words with the target sounds accurately for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T6_WORD_READING.c",
+     "letter": "c",
+     "text": "value the role of fluency in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT",
+   "number": "6.3.1",
+   "strand": "Language Use",
+   "sub_strand": "1 Tense: Present Continuous Tense (Adding -ing) (Theme 6: Weather and our environment)",
+   "sequence": 631,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "describe activities going on in the school compound, for example, - The teacher is walking. - The children are singing. - The cat is jumping. - They are writing.",
+    "recite poems/sing songs featuring ongoing actionsin present continuous tense,",
+    "work with others to answer questions about ongoing activitiesrelated to the theme, for example, ‘What are you doing?’ ‘I am carrying an umbrella’",
+    "listen to a story and pick out the instances of ongoing actions, for example, ‘The hare is running.’",
+    "retell portions of a shortstoryin the present continuous tense, for example, ‘The hare is going...,",
+    "role play events in the story with peers."
+   ],
+   "key_inquiry_questions": [
+    "What is going on in the school compound?"
+   ],
+   "core_competences": "Communication: The learner’s ability to speak clearly and correctly is promoted as they use the present continuoustense to describe ongoing activities.",
+   "values": "Unity: This is enhanced as the learner actively participates in role playing events in a story with peers.",
+   "pcis": "Life Skills (Self-esteem): The learner’s level of self-esteem is boosted as they use the present continuoustense correctly to describe ongoing activities.",
+   "links": "The learner links the concept of present continuous tense to learning of similar concepts in Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.a",
+     "letter": "a",
+     "text": "identify ongoing activitiesin and out of school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.b",
+     "letter": "b",
+     "text": "use the present continuoustense to talk about ongoing activities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T6_1_TENSE_PRESENT_CONT.c",
+     "letter": "c",
+     "text": "appreciate the importance of correct use of tense in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T6_SPELLING",
+   "number": "6.4.1",
+   "strand": "Writing",
+   "sub_strand": "Spelling (Theme 6: Weather and our environment)",
+   "sequence": 641,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "work with others to trace words with the letters Ff, Hh, Nn and Oo in small and capital letters,",
+    "write words dictated by the teacher, peer or from an audio recording with the target letters,",
+    "color and spell 3-5 letter words with the target letters,",
+    "fill in the missing letters in a word,",
+    "rearrange jumbled-up letters to form the correct word,",
+    "play games such as word searches,",
+    "complete the word shapes featuring the letters Ff, Hh, Nn and Oo,",
+    "find the sight words, vowels, or consonants from a word search or crossword puzzle,",
+    "work with peers to create a poster featuring the 3-5 letter words and then colour the words with ink, crayons or improvised dyes."
+   ],
+   "key_inquiry_questions": [
+    "Why should we spell words correctly?",
+    "How can you make sure the letters and words you write are readable?"
+   ],
+   "core_competences": "be developed:\nLearning to Learn: The learner’s self-discipline is enhanced as they are motivated to practise correct letter formation on their own.\nCreativity and Imagination: The learner’s originality of ideas and skills are developed as they create a poster with words related to weather and our environment.",
+   "values": "Responsibility: This is enhanced as the learner takes it upon themselves to complete given tasks.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is enhanced as they spell words dictated by a teacher or peers correctly.",
+   "links": "The learner applies the writing skills as they write texts in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     37
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T6_SPELLING.a",
+     "letter": "a",
+     "text": "select words featuring the letters Ff, Hh, Nn and Oo in written texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T6_SPELLING.b",
+     "letter": "b",
+     "text": "spell 3-5 letter words with the letters Ff, Hh, Nn and Oo for writing fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T6_SPELLING.c",
+     "letter": "c",
+     "text": "advocate for the need to follow spelling rules for writing fluency",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO",
+   "number": "7.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 7: Hygiene)",
+   "sequence": 711,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds"
+   ],
+   "learning_experiences": [
+    "listen to an audio recording/watch a video clip about hygiene,",
+    "pick out words which have the sounds /b/, /r/, /u/, and /g/,",
+    "recite alliterative wordsthat have the target sounds as modeled by peers, a teacher or from an audio recording/clip, for example; brush, broom; black, blue",
+    "say tongue twisters featuring the target sounds, for example; ‘The brave boy used a black brush to brush his shoes’,",
+    "make sentences using the words with the target letters,",
+    "display their sentences on charts for a gallery walk,",
+    "team up to recite rhymes and sing songs related to the theme and featuring the target sounds."
+   ],
+   "key_inquiry_questions": [
+    "Why should we say sounds and words correctly?"
+   ],
+   "core_competences": "be developed:\nCommunication: The learner’s ability to speak fluently is promoted as they recite alliterative wordsthat have the target sounds as modeled by peers, a teacher or from an audio recording/clip.\nDigital Literacy: The learner’s interaction with digital technology is promoted as they listen to audio recordings/clips for information on hygiene and identify words related to the theme.",
+   "values": "Unity: This is enhanced aslearner works collaboratively with peers to recite poems and sing songs on hygiene.",
+   "pcis": "Health Issues (Personal Hygiene): The learner acquires information on how to maintain personal hygiene from texts when reciting rhymesand singing songs related to the theme.",
+   "links": "The learner applies information on hygiene to learning of similar concepts in Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     38,
+     39
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify words with the sounds /b/, /r/, /u/, and /g/ in a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "pronounce words with the sounds /b/, /r/, /u/, and /g/ in preparation for reading",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use words featuring the target sounds in short sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T7_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "acknowledge the role of accurate pronunciation in oral communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T7_WORD_READING",
+   "number": "7.2.1",
+   "strand": "Reading",
+   "sub_strand": "Word Reading (Theme 7: Hygiene)",
+   "sequence": 721,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds",
+    "Decodable words",
+    "Non-decodable words"
+   ],
+   "learning_experiences": [
+    "pick the capital and small letters of these letters from a basket, list, or box and name each letter, (Bb, Rr, Uu, Gg,)",
+    "read short words with target letters such as green, rot, brush, gap, mud",
+    "work with peers and read decodable words from a list,",
+    "listen to an audio recording containing decodable words,",
+    "view charts, posters and pictures and select non- decodable words with the sounds /b/, /r/ /u/, and /g/,",
+    "read non-decodable words on a word wall with peers and give feedback."
+   ],
+   "key_inquiry_questions": [
+    "Why should we learn to say sounds and words correctly?"
+   ],
+   "core_competences": "be developed: Learning to Learn: The learner’s ability to learn independently is improved as they practise reading non-decodable words for reading competency.",
+   "values": "Respect: This is enhanced as the learner appreciates the effort of peers to read non-decodable words and gives positive feedback.",
+   "pcis": "Life Skills (Self-esteem): The learner acquires an enhanced level of self-esteem as they read non-decodable words correctly.",
+   "links": "The learner is able to apply vocabulary related to the theme to words in Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T7_WORD_READING.a",
+     "letter": "a",
+     "text": "identify words with the sounds /b/, /r/ /u/ and /g/, and their corresponding letters for reading competence",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T7_WORD_READING.b",
+     "letter": "b",
+     "text": "read decodable and non-decodable words featuring the targetsoundsfor fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T7_WORD_READING.c",
+     "letter": "c",
+     "text": "appreciate the importance of word reading in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE",
+   "number": "7.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Tense: Simple Past Tense (Adding -ed / -d) (Theme 7: Hygiene)",
+   "sequence": 731,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "make sentences using simple past tense to talk about hygiene (by adding –ed or –d to words),",
+    "change words to simple past tense, for example: brush (brushed), polish (polished), clean (cleaned,) wash (washed),",
+    "write short sentences using words in simple present tense, for example, - I brush my teeth every day. - I clean my cup every day. - I polish my shoes every day. - I wash my hands every day.",
+    "rewrite the sentences made in simple past tense, - I brushed my teeth last night. - I cleaned my cup. - I polished my shoes yesterday. - I washed my hands in the morning.",
+    "read out sentences with simple past tense from a story, poem, or conversation,",
+    "create a story to talk about an event using the simple past tense,",
+    "play a language game ‘tense scavenger hunt’: Game tip: Scan a paragraph of about four short lines. Look for words showing simple past tense. Highlight the words."
+   ],
+   "key_inquiry_questions": [
+    "What did you do in the morning before coming to school?",
+    "What did your family do last Saturday to keep the home clean?"
+   ],
+   "core_competences": "be developed:\nCommunication: The learner’s ability to speak clearly and effectively is enhanced as they create a story to talk about an event using the past simple tense.\nCritical Thinking and Problem Solving: This is enhanced as the learner weighs options and thinks critically when playing the scavenger hunt game to scan for words in simple past tense.",
+   "values": "Social Justice: This is enhanced as the learner fosters inclusivity and non-discrimination towards peers as they play language games.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is nurtured as they use simple past tense in day-to-day communication.",
+   "links": "The learner uses the knowledge of simple past tense to learn similar concepts in Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.a",
+     "letter": "a",
+     "text": "identify words with -ed and - d from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.b",
+     "letter": "b",
+     "text": "use simple past tense to talk about things that happened in the past",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T7_TENSE_SIMPLE_PAST_TE.c",
+     "letter": "c",
+     "text": "value the need to use the correct tense when conveying information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T7_SPELLING",
+   "number": "7.4.1",
+   "strand": "Writing",
+   "sub_strand": "Spelling (Theme 7: Hygiene)",
+   "sequence": 741,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "circle words with the letters Bb, Rr, Uu, Gg from a text,",
+    "spell words dictated by a peer, teacher, or from an audio recording,",
+    "trace and colour the words correctly,",
+    "spell and write words with the target sounds,",
+    "fill in missing letters in words,",
+    "work jointly to rearrange jumbled-up letters to form correct words,",
+    "uncover hidden letters from flashcards and read them out,",
+    "listen to a poem, or sing a song and spell words with similar sounds,",
+    "draw and label objects related to the theme."
+   ],
+   "key_inquiry_questions": [
+    "words in correct spelling?"
+   ],
+   "core_competences": "Communication: The learner’s ability to write clearly and correctly is reinforced as they practise writing 3-5 letter words featuring the target sounds correctly.\nLearning to Learn: The learner’s self-discipline is developed as they practise writing wordsfeaturing the targetsounds.",
+   "values": "Respect: Thisis inculcated as the learner appreciates the efforts of peers to write correctly and offers guidance.",
+   "pcis": "Life Skills (Self-esteem): The learner acquires an enhanced level of self-esteem as they write letters correctly.",
+   "links": "The learner applies the writing skills to convey information through writing in all learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     43
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T7_SPELLING.a",
+     "letter": "a",
+     "text": "recognise wordsfeaturing the letters Bb, Rr, Uu, and Gg in written texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T7_SPELLING.b",
+     "letter": "b",
+     "text": "form the letters Bb, Rr, Uu, and Gg appropriately with reference to shape and size",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T7_SPELLING.c",
+     "letter": "c",
+     "text": "spell 3-5 letter words featuring the sounds /b/, /r/, /u/, /g / correctly for writing fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T7_SPELLING.d",
+     "letter": "d",
+     "text": "acknowledge the role of proper spelling in written communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO",
+   "number": "8.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 8: Parts of the body)",
+   "sequence": 811,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds"
+   ],
+   "learning_experiences": [
+    "listen to an audio recording of words featuring the target sounds /k/, /d/, and /w/ or words modelled by the teacher,",
+    "say words with the sounds /k/, /d/, and /w/ in turns,",
+    "match learnt vocabulary to pictures and objects,",
+    "team up to recite rhymes and poems related to the theme and featuring sounds /k/, /d/, and /w/,",
+    "make oral sentences using words with the sounds /k/, /d/, and /w/,",
+    "use picture clues to complete a crossword puzzle with target words."
+   ],
+   "key_inquiry_questions": [
+    "Why should we say words and sounds correctly?"
+   ],
+   "core_competences": "be developed: Critical Thinking and Problem Solving: The learner’s ability to think critically is developed as they use picture clues to complete a crossword puzzle with target words.",
+   "values": "Unity: This is advanced as the learner collaborates with peers to recite rhymes and poems related to the theme and featuring the target sounds.",
+   "pcis": "Life Skills (Self-awareness): The learner’s self-awareness is developed as they acquire knowledge about the parts of their body from relevant texts.",
+   "links": "The learner uses the pronunciation skills to learn similar concepts in Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     44
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify the sounds/k/, /d/, and /w/ from an audio text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "pronounce words with the sounds /k/, /d/, and /w/ accurately for clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use words related to the theme featuring the sounds /k/, /d/, and /w/ in relevant contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T8_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "value the role of accurate pronunciation in oral fluency",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T8_FLUENCY",
+   "number": "8.2.1",
+   "strand": "Reading",
+   "sub_strand": "Fluency (Theme 8: Parts of the body)",
+   "sequence": 821,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Words with target letters and sounds",
+    "Reading speed",
+    "Reading with expression"
+   ],
+   "learning_experiences": [
+    "point out words with the sounds /k/, /d/ and /w/,",
+    "say the sounds and words accurately,",
+    "read 3-4 letter words including words with letters ‘c, d, w’ in a text (25 words per minute),",
+    "read a sentence aloud after the teacher using appropriate facial expressions and pauses (echo game),",
+    "take turns reading a text aloud with minimal hesitations and with appropriate tone,",
+    "team up to make recordings of the text they are reading and play back the text to peers,",
+    "recite a poem over and over, or sing a song with the target sounds again and again,",
+    "read a grade-appropriate picture book in unison with a peer, a teacher, or recording (choral reading),",
+    "take turns reading short rhymes aloud using dramatic voices and gestures appropriate to the story (Reader’s Theatre)."
+   ],
+   "key_inquiry_questions": [
+    "Why should we read fluently?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s ability to build relationships is developed as they team up to make recordings of the text they are reading and play back the text to peers.",
+   "values": "Patriotism: This is promoted as the learner appreciates the contribution of peers when working jointly to read a grade-appropriate picture book in unison with a peer, a teacher, or recording.",
+   "pcis": "Life Skills (self-esteem): The learner’s self-esteem is nurtured as they acquire reading fluency skills.",
+   "links": "The learner applies reading fluency skills when reading materials in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     45
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.a",
+     "letter": "a",
+     "text": "identify words with the sounds /k/, /d/ and /w/ in preparation for reading",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.b",
+     "letter": "b",
+     "text": "read a grade-appropriate text accurately, at the right speed, and with minimal hesitations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.c",
+     "letter": "c",
+     "text": "display the right feelings or emotions when reading a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T8_FLUENCY.d",
+     "letter": "d",
+     "text": "realise the importance of reading fluency for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_",
+   "number": "8.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Demonstratives: this, that, these and those (Theme 8: Parts of the body)",
+   "sequence": 831,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "This",
+    "That",
+    "These",
+    "Those"
+   ],
+   "learning_experiences": [
+    "complete a vocabulary word search featuring this, that, these, and those,",
+    "work with peers and use flashcards with the words, this, that, these, and those and ask one another questions as they point at objects,",
+    "recite a poemfeaturing the words, this, that, these and those with peers,",
+    "play the ‘run and touch the object’ game (Game tip: Stand up. Run and touch the things in the class a teacher or peer points at. Then they should mention what it is, for example, This is a chair; These are pencils),",
+    "play a ‘What is That?’ board Game (Game Tip: Have a printed paper with pictures of objects and the words they refer to. Learner works with othersin pairs and asks one another questions using the words – this and that)",
+    "fill in gaps in a sentence with the words this, that, these, and those,",
+    "sing songs or recite rhymes about parts of the body."
+   ],
+   "key_inquiry_questions": [
+    "How do we tell others about near and far objects?"
+   ],
+   "core_competences": "Communication: The learner’s ability to write clearly and effectively is enhanced as they use demonstratives to talk about near or far objects.",
+   "values": "Unity: This is enhanced as the learner collaboratively works with peers to carry out tasks such as singing songs and reciting rhymes about parts of the body.",
+   "pcis": "Health education: This is promoted as the learner interacts with texts and words on the theme Parts of the body.",
+   "links": "The learner uses the knowledge acquired on vocabulary in learning the parts of the body in Religious Education Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     46,
+     47
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.a",
+     "letter": "a",
+     "text": "select demonstratives (the words this, that, these, and those) from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.b",
+     "letter": "b",
+     "text": "use the words this, that, these, those in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T8_DEMONSTRATIVES_THIS_.c",
+     "letter": "c",
+     "text": "appreciate the importance of the words this, that, these, and those in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T8_SPELLING",
+   "number": "8.4.1",
+   "strand": "Writing",
+   "sub_strand": "Spelling (Theme 8: Parts of the body)",
+   "sequence": 841,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "select words with the letters Cc, Dd, and Ww by circling the words,",
+    "spell the words with the letters Cc, Dd, and Ww dictated by a peer, teacher, or audio recording,",
+    "work jointly to make words related to parts of the body from jumbled letters,",
+    "trace and write words with the target sounds,",
+    "colour words with the target sounds,",
+    "fill in missing letters words,",
+    "team up to take part in a spelling writing mini-contest to spell words correctly,",
+    "uncover hidden letters from flashcards and read them out,",
+    "write neatly from the left to the right."
+   ],
+   "key_inquiry_questions": [
+    "Why do we spell words correctly?",
+    "How can we write legibly and neatly?"
+   ],
+   "core_competences": "Learning to learn: The learner’s potential to work jointly is promoted as the learner teams up with peers to take part in a spelling writing mini-contest to spell words correctly.",
+   "values": "Unity: This is enhanced as the learner collaborates with peers to make words related to parts of the body from jumbled letters.",
+   "pcis": "Life Skills (Self-esteem): The learner acquires an enhanced level of self-esteem as they learn how to spell words correctly.",
+   "links": "The learner applies the knowledge acquired to spell words correctly in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     48
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T8_SPELLING.a",
+     "letter": "a",
+     "text": "select words with the letters Cc, Dd, and Ww in a written text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T8_SPELLING.b",
+     "letter": "b",
+     "text": "spell words with the letters Cc, Dd, and Ww for writing fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T8_SPELLING.c",
+     "letter": "c",
+     "text": "realise the importance of correct spelling in written communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO",
+   "number": "9.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 9: My friends)",
+   "sequence": 911,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds"
+   ],
+   "learning_experiences": [
+    "say the targetsounds /k/, /j/, /l/, and /s/ as modelled by peers, teacher, or from an audio recording,",
+    "say the sounds /k/, /j/, /l/, and /s/ and their corresponding letters from flashcards or charts,",
+    "sing songs or recite rhymes with words featuring the sounds /k/, /j/, /l/, and /s/,",
+    "use words with the sounds /k/, /j/, /l/, and /s/ to talk about their friends,",
+    "listen to an audio recording on friendship,",
+    "use vocabulary related to the theme in dialogues,",
+    "role-play events related to the theme."
+   ],
+   "key_inquiry_questions": [
+    "Why should we say sounds and words correctly?"
+   ],
+   "core_competences": "be developed: Learning to Learn: The learner’s ability to learn independently is scaled up as they practise pronouncing words with the target sounds correctly.",
+   "values": "Unity: Cooperation is developed as the learner collaborates with peers to sing songs and recite poems related to the theme.",
+   "pcis": "Life Skills (Self-awareness): The learner’s self-awareness is nurtured as they acquire knowledge about their friends.",
+   "links": "The learner uses the acquired pronunciation skills to express themselves fully when learning content in the words in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     49
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify words with the sounds /k/, /j/, /l/, and /s/ from written texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "pronounce words with the sounds /k/, /j/, /l/, and /s/ for oral fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use vocabulary related to the theme in oral sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T9_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "value the role of vocabulary in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T9_FLUENCY",
+   "number": "9.2.1",
+   "strand": "Reading",
+   "sub_strand": "Fluency (Theme 9: My friends)",
+   "sequence": 921,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds",
+    "Reading speed",
+    "Reading with expression"
+   ],
+   "learning_experiences": [
+    "listen to a poem or story and pick words with the sounds /k/, /j/, and /l/",
+    "say the sounds /k/, /j/, and /l/ as modeled,",
+    "pick out words with the target sounds from a chart,",
+    "engage in timed reading with peers (25 words per minute),",
+    "take turns reading short texts aloud, using dramatic voices, appropriate facial expressions and gestures appropriate to the story (Reader’s Theatre).",
+    "pause appropriately and avoid hesitations while reading,",
+    "read a sentence aloud after a teacher or peer using appropriate expressions and pauses (echo game).",
+    "read a grade-appropriate text in unison with a peer, a teacher, or recording - choral reading,",
+    "read a favourite picture book that they are familiar with."
+   ],
+   "key_inquiry_questions": [
+    "Why should we pronounce sounds and words correctly?",
+    "How does correct pronunciation help us in reading?"
+   ],
+   "core_competences": "be developed: Communication: The learner’s ability to speak clearly and effectively is enhanced as they pronounce words correctly when reading a text.",
+   "values": "Respect: This is achieved as the learner appreciates the effort of peers to read fluently during timed reading activities.",
+   "pcis": "Life Skills (Self-esteem): The learner gains a greater sense of self-esteem as they recite poems and sing songs related to the theme.",
+   "links": "The learner uses reading fluency skills when reading words in Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     50,
+     51
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T9_FLUENCY.a",
+     "letter": "a",
+     "text": "select the sounds /k/, /j/, and /l/, and words with the target sounds from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T9_FLUENCY.b",
+     "letter": "b",
+     "text": "read a text featuring the sounds /k/, /j/, and /l/ accurately at the right speed, and with expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T9_FLUENCY.c",
+     "letter": "c",
+     "text": "acknowledge the need for fluency in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO",
+   "number": "9.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Nouns: Common and proper nouns (Theme 9: My friends)",
+   "sequence": 931,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "work jointly to name the places, people, or things around them, for example, - places – Nairobi, - people – teacher, mother, brother - things – chair, desk, pen",
+    "say the names of the things found at home and at school,",
+    "name their favourite foods, games, clothes,",
+    "fill in blank spaces using naming words. For example, ______ is my friend.",
+    "view a chart with pictures of objects such as a chair, table, desk; fruits such as mango, orange, and banana; family members, father, mother, boy, and girl; and read with peers,",
+    "match the names of items on flashcards with the correct picture,",
+    "take a walk around the school compound or classroom and name the things and people they see."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to refer to people and places by their names?",
+    "What things can you see in the classroom?"
+   ],
+   "core_competences": "Communication: The learner’s ability to speak clearly is developed as the learner uses common and proper nouns correctly.",
+   "values": "Respect: The value of respect is enhanced as the learner talks positively about their friends.",
+   "pcis": "Life Skills (Self-esteem): The learner’s sense of self-esteem is reinforced as they use proper nouns correctly.",
+   "links": "The learner applies the knowledge of common and proper nouns to learning of similar concepts in Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.a",
+     "letter": "a",
+     "text": "identify people, things, or places around them by name (common and proper nouns) from texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.b",
+     "letter": "b",
+     "text": "use words referring to the names of people, things, or places (common and proper nouns) in short sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T9_NOUNS_COMMON_AND_PRO.c",
+     "letter": "c",
+     "text": "appreciate the importance of identifying objects, places, or things by name",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_",
+   "number": "9.4.1",
+   "strand": "Writing",
+   "sub_strand": "Punctuation (capital letters, small letters and the full stop) (Theme 9: My friends)",
+   "sequence": 941,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "view a chart showing the letters of the alphabet (capital letters and small letters),",
+    "work with peers to point out the capital letters,small letters, and the full stop in a list of words and short sentences,",
+    "write their name and display it to peers,",
+    "write the names of their friends, teachers, or family members and capitalise the initial letters,",
+    "spell words dictated by a peer, teacher, or from an audio recording,",
+    "trace and write words,",
+    "circle the words with capital letters in a sentence,",
+    "work jointly to colour the capital letters and small letters using crayons of different colours,",
+    "write short sentences and use capital letters and the full stop appropriately."
+   ],
+   "key_inquiry_questions": [
+    "Why do we use the full stop?",
+    "When do we use capital letters?"
+   ],
+   "core_competences": "Communication: The learner’s ability to write clearly improves as they use capital letters and the full stop correctly. Learning to Learn: The learner’s ability to learn independently is developed as they practise writing their names/names of their friends starting with capital letters.",
+   "values": "Unity: Cooperation is enhanced asthe learner works collaboratively with peers to colour the capital letters and small letters using crayons of different colours.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is nurtured as they practise using target punctuation marks correctly.",
+   "links": "The learner applies knowledge about capital letters and the full stop when learning concepts in learning areas such as Environmental Activities, Kiswahili, and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     53,
+     54
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.a",
+     "letter": "a",
+     "text": "identify capital letters, small letters, and the fullstop in a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.b",
+     "letter": "b",
+     "text": "write the capital and small letters of the alphabet correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.c",
+     "letter": "c",
+     "text": "use full stops appropriately in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T9_PUNCTUATION_CAPITAL_.d",
+     "letter": "d",
+     "text": "acknowledge the need for proper punctuation in written communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO",
+   "number": "10.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and vocabulary (Theme 10: Safety)",
+   "sequence": 1011,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds"
+   ],
+   "learning_experiences": [
+    "listen to a story and pick out words with the sounds /æ/ / ɔː //i:/ /u:/ / ɔɪ / / eɪ /,",
+    "view/look at flashcards with pictures of the following and talk about them: road, first aid kit, ambulance, fire engine, bottle, walkway,",
+    "say the sounds /æ/ / ɔː //i:/ /u:/ / ɔɪ / / eɪ / from flashcards,",
+    "say words with the sounds /æ/ / ɔː //i:/ /u:// ɔɪ / / eɪ /, for example, / æ/ as in rat; / ɔː /as in thought /i:/ as in feet ;/u:/ as in pool; / ɔɪ / as in boy; / eɪ / as in day",
+    "use picture clues to infer the meaning of words,",
+    "make short sentences with the words related to the theme,",
+    "respond to simple questions and instructions about the sounds /æ/ / ɔː //i:/ /u:/ / ɔɪ / / eɪ / ."
+   ],
+   "key_inquiry_questions": [
+    "Why is it good to say words clearly?"
+   ],
+   "core_competences": "be developed: Communication: The learner’s ability to speak clearly and effectively is promoted as they pronounce words with the target sounds correctly. Learning to Learn: The learner’s ability to learn independently is developed as they practise pronouncing words containing the target sounds.",
+   "values": "The value of unity is developed as the learner works collaboratively with peers.",
+   "pcis": "Safety and Security: The learner’s safety is enhanced as they acquire information about safety from texts.",
+   "links": "The learner applies the skills of correct pronunciation to the learning of similar concepts in Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     55,
+     56
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify words with the sounds /æ/ / ɔː / /i:/ /u:/ / ɔɪ / and / eɪ / for oral fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "pronounce words with the sounds /æ/ / ɔː / /i:/ /u:/ / ɔɪ / and / eɪ / for speech clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use words related to the theme in oral sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T10_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "realise the importance of varied vocabulary in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T10_FLUENCY",
+   "number": "10.2.1",
+   "strand": "Reading",
+   "sub_strand": "Fluency (Theme 10: Safety)",
+   "sequence": 1021,
+   "lessons": 1,
+   "optional": false,
+   "content_topics": [
+    "Target letters and sounds",
+    "Reading speed",
+    "Reading with expression"
+   ],
+   "learning_experiences": [
+    "read words with the target sounds a:/, /o:/, /i:/, /u:/, /oi/, and /ei/ from a chart,",
+    "view flashcards with words featuring the target sounds and read them with peers,",
+    "read a timed text (25 words per minute) many times,",
+    "show facial expressions, maintain eye contact, and use gestures while reading a short text,",
+    "pause appropriately when reading a text,",
+    "practise reading sentences containing decodable and non-decodable words with peers,",
+    "read rhymes related to safety (rhymes should feature the target vocabulary),",
+    "draw one of the following: an ambulance, a cart, a fire engine, or a first aid kit,",
+    "collaboratively recite poems with words that have the target sounds."
+   ],
+   "key_inquiry_questions": [
+    "Why is it advisable to read at a moderate speed?",
+    "How can we make reading more enjoyable?"
+   ],
+   "core_competences": "be developed: Learning to Learn: The learner’s ability to develop relationships is developed as they collaboratively recite poems with words that have the target sounds.",
+   "values": "Responsibility: This is developed as the learner engages actively in activities to excel in reading fluency.",
+   "pcis": "Life Skills (Self-esteem): The learner acquires an enhanced level of self-esteem as they acquire reading fluency skills.",
+   "links": "The learner applies reading fluency skills when reading words in all learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     57
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T10_FLUENCY.a",
+     "letter": "a",
+     "text": "identify words with the sounds /a:/, /o:/, /i:/, /u:/, /oi/, and /ei/ for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T10_FLUENCY.b",
+     "letter": "b",
+     "text": "read a text accurately, at the right speed, and with expression for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T10_FLUENCY.c",
+     "letter": "c",
+     "text": "realise the importance of fluency in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_",
+   "number": "10.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Simple prepositions (in, on, under, between, behind, in front, inside, outside) (Theme 10: Safety)",
+   "sequence": 1031,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read sentences featuring prepositions,",
+    "read prepositions on flashcards to peers,",
+    "recite a choral poem featuring prepositions,",
+    "listen to a story from a recording and list the prepositions they hear,",
+    "respond to questions related to where the objects are on the story using the words: in, on, under, between, behind, in front, inside, outside, for example, - Where is the fire engine? It is on the road - Where is the pencil? It is on the table - Where are the children? They are in class - Where is the cat? It is under the table",
+    "look at pictures and complete sentences to describe where objects in the pictures are,",
+    "fill in gaps with the correct word (in, on, under, between, behind, in front, inside, outside),",
+    "sing a song that features the words (in, on, under, between, behind, in front, inside, outside)."
+   ],
+   "key_inquiry_questions": [
+    "How do we tell others where objects are?"
+   ],
+   "core_competences": "be developed: Digital Literacy: This is promoted as the learner interacts with technology as they listen to a story from a recording and lists the prepositions they hear.",
+   "values": "Social Justice: Fairness is enhanced as learners accord each other equal opportunities in sharing roles irrespective of their diversities when reciting a poem.",
+   "pcis": "Life Skills (Self-esteem): The learner’s esteem is enhanced as they use prepositions in various contexts correctly.",
+   "links": "Learner applies knowledge about prepositions to the learning of Kiswahili Language Activities and Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     58
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.a",
+     "letter": "a",
+     "text": "select the words (in, on, under, between, behind, in front, inside, outside) from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.b",
+     "letter": "b",
+     "text": "use the words (in, on, under, between, behind, in front, inside, and outside) in short sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T10_SIMPLE_PREPOSITIONS_.c",
+     "letter": "c",
+     "text": "value the need for well-formed sentences in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_",
+   "number": "10.4.1",
+   "strand": "Writing",
+   "sub_strand": "Punctuation - Capital letters - Question marks (Theme 10: Safety)",
+   "sequence": 1041,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "view charts with capital letters and small letters,",
+    "match a given small letter with its capital letter,",
+    "work with peers to view pictures related to the theme and colour the picture, for example a needle, bottle, wide road, narrow road, someone in pain/hurt, first aid kit, ambulance, door, toy, cart, walkway",
+    "circle the capital letters and question marks in a list of sentences,",
+    "make short sentences and use the capital letter and question mark appropriately,",
+    "take turns to ask questions and receive answers from peers,",
+    "circle the words that need a capital letter in a list of sentences,",
+    "write the names of people and places using capital letters appropriately."
+   ],
+   "key_inquiry_questions": [
+    "Why do we use the question marks?",
+    "When do we use capital letters?"
+   ],
+   "core_competences": "Learning to Learn: independent learning is enhanced as the learner practises how to use the target punctuation marks correctly in writing.",
+   "values": "Responsibility: This is enhanced as the learner takes up assigned roles when taking turns to ask questions and receive answers from peers.",
+   "pcis": "Life Skills (Self-esteem): Learners acquire a high enhanced level of self-esteem as they punctuate their writing correctly.",
+   "links": "Proper use of punctuation is emphasised in Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     59
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.a",
+     "letter": "a",
+     "text": "identify capital letters and question marks in a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.b",
+     "letter": "b",
+     "text": "use capital letters and question marks in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T10_PUNCTUATION_CAPITAL_.c",
+     "letter": "c",
+     "text": "acknowledge the need to use capital letters and question marks for writing fluency",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO",
+   "number": "11.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 11: Community leaders)",
+   "sequence": 1111,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target sounds",
+    "Vocabulary"
+   ],
+   "learning_experiences": [
+    "listen to a text containing the target sounds / ʃ/, /tʃ/, /θ/ and /ð/,",
+    "practise sound discrimination using minimal pairs,",
+    "pick out words with the sounds: / ʃ/, /tʃ/, /θ/ and /ð/ from sentences,",
+    "infer the meaning of words from stories, dialogues, and role-play,",
+    "make short sentences using the learnt vocabulary,",
+    "use picture cues and say the words in the picture,",
+    "sing phonic songs/rhymes,",
+    "recite poems/ rhymes/ tongue twisters using words with the sounds: / ʃ/, /tʃ/, /θ/, /ð/",
+    "colour the words which end or begin with the target sounds,",
+    "work with peers and play a game of swapping flashcards to make new words."
+   ],
+   "key_inquiry_questions": [
+    "How can we use soundsto make new words?",
+    "How do we learn to pronounce words correctly?"
+   ],
+   "core_competences": "Creativity and Imagination: This is enhanced as the learner is inspired to embrace creative ways of embracing ideas when reciting poems/ rhymes/ tongue twisters using words with the target sounds.",
+   "values": "Respect: Thisis developed as the learner works exhibits tolerance with peers when playing a game of swapping flashcards to make new words.",
+   "pcis": "Life Skills (Self-esteem): The learner acquires an enhanced level of self-esteem as they pronounce words correctly.",
+   "links": "The learner applies knowledge about pronunciation to express themselves clearly when learning concepts in Kiswahili Language Activities and Indigenous Languages Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     60,
+     61
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "pick out the sounds: / ʃ/, /tʃ/, /θ/ and /ð/ from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "pronounce words with the sounds: / ʃ/, /tʃ/, /θ/, and /ð/ correctly for clarity of speech",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use the vocabulary learnt in relevant contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T11_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "advocate for appropriate pronunciation for clarity in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T11_FLUENCY",
+   "number": "11.2.1",
+   "strand": "Reading",
+   "sub_strand": "Fluency (Theme 11: Community leaders)",
+   "sequence": 1121,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Target sounds",
+    "Reading speed",
+    "Reading with expression"
+   ],
+   "learning_experiences": [
+    "listen to short paragraphs containing words with the sounds/ ʃ/, /tʃ/, /θ/ and /ð/,",
+    "read words with the sounds /ʃ/, /tʃ/, /θ/, /ð/,",
+    "read simple sentences in a story aloud paying attention to the punctuation,",
+    "take part in timed reading competitions,",
+    "team up to recite poems/ rhymesrelated to the theme,",
+    "take part in echo reading where a teacher or peer reads a text and the learner echos what the peer reads in terms of speed, accuracy, and expressions,",
+    "practise displaying the right emotions when reading a text."
+   ],
+   "key_inquiry_questions": [
+    "Why is proper articulation of sounds important?"
+   ],
+   "core_competences": "be developed: Self-efficacy: This is enhanced as the learner sharpens their public speaking skills by displaying the right emotions when reading a text.",
+   "values": "Responsibility: This is developed as the learner takes up accountability tasks when practicing to read within set timelines.",
+   "pcis": "Learner Support Programmes (Clubs and Society): The learner’s ability to read is developed as they team up to recite poems/ rhymesrelated to the theme during club activities.",
+   "links": "The learner’s capacity to read and understand concepts in other learning areas is greatly improved as they become more fluent in reading.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     62
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T11_FLUENCY.a",
+     "letter": "a",
+     "text": "identify words with the target sounds / ʃ/, /tʃ/, /θ/ and /ð/ correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T11_FLUENCY.b",
+     "letter": "b",
+     "text": "read sentencesin a text accurately, at the right speed, and with expression for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T11_FLUENCY.c",
+     "letter": "c",
+     "text": "realise the importance of fluency in reading",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T11_COMPREHENSION",
+   "number": "11.2.2",
+   "strand": "Reading",
+   "sub_strand": "Comprehension (Theme 11: Community leaders)",
+   "sequence": 1122,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Making predictions",
+    "Answering questions"
+   ],
+   "learning_experiences": [
+    "discuss the pictures and the title of a story and make predictions,",
+    "read words with the target sounds in a text of about 60 words,",
+    "take turns to read simple sentences in the story aloud,",
+    "answer direct questions based on a passage,",
+    "answer indirect questions from a passage,",
+    "obtain specific information from a passage, for example, ‘What colour was hare’s tail’,",
+    "complete a sentence using picture clues,",
+    "state whether phrases or sentences are true (\"real\" or a \"fact\") according to the passage, for example, ‘The teacher’s name was.... True/false’",
+    "colour a picture based on the details in the passage."
+   ],
+   "key_inquiry_questions": [
+    "What do the pictures and the title tell us about the story?"
+   ],
+   "core_competences": "Creativity and Imagination: This is enhanced as the learner practises making predictions of what will happen in a story based on the title and the pictures.",
+   "values": "Respect: This is developed as the learner displays patience with each other as they take turns to read simple sentences.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is nurtured as they answer direct and indirect questions from a text correctly to show comprehension",
+   "links": "The learner applies the comprehension skills to learning areas of texts in Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     63
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T11_COMPREHENSION.a",
+     "letter": "a",
+     "text": "make predictions about a story related to the theme",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T11_COMPREHENSION.b",
+     "letter": "b",
+     "text": "answer direct and indirect questions for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T11_COMPREHENSION.c",
+     "letter": "c",
+     "text": "value the importance of comprehension in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T",
+   "number": "11.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Adjectives: (one and two-syllable adjectives) (Theme 11: Community leaders)",
+   "sequence": 1131,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "work with peers to name objects in the classroom, school, or home,",
+    "say the colour, size, and shape, of the things they see around them in the classroom or from pictures and video clips,",
+    "draw and colour different shapes, namely, oval, triangle, square, rectangle,",
+    "say the colours of the things in the classroom, home, or school,",
+    "use words such as good, bad, handsome, beautiful, kind, among others to describe things around them,",
+    "play language games involving one and two-syllable adjectives,",
+    "answer yes/no questions about the colour, shape, or size of objects,",
+    "sing songs/rhymes and recite poems that use adjectives."
+   ],
+   "key_inquiry_questions": [
+    "How do we talk about people, things, or places?"
+   ],
+   "core_competences": "Creativity and imagination: This is promoted as the learner uses words to describe things around them.",
+   "values": "Unity: This is developed as the learner embraces a team spirit during language games involving one and two syllable adjectives.",
+   "pcis": "Environmental awareness: This is promoted as the learner gets to identify things and people around them and describe them to peers in terms of shape, size and colour.",
+   "links": "The learner applies knowledge about adjectives to describe things in Creative Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     64
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.a",
+     "letter": "a",
+     "text": "state words which describe people, places, or things for clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.b",
+     "letter": "b",
+     "text": "use describing words to talk about people, places, and things",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T11_ADJECTIVES_ONE_AND_T.c",
+     "letter": "c",
+     "text": "appreciate the need to describe people, places, and things for communication efficacy",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING",
+   "number": "11.4.1",
+   "strand": "Writing",
+   "sub_strand": "Guided Writing (Theme 11: Community leaders)",
+   "sequence": 1141,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Making inferences",
+    "Sentences"
+   ],
+   "learning_experiences": [
+    "talk about what they have seen in pictures with peers,",
+    "match pictures to sentences using flashcards,",
+    "make short sentences from picture prompts,",
+    "write words dictated by a teacher or peer,",
+    "listen to a story or song and list four new words or things they hear,",
+    "fill in gaps in sentences,",
+    "work jointly to complete a word search or crossword puzzle with peers,",
+    "rearrange jumbled-up letters to form words,",
+    "team up to build a sentence or a chain story collaboratively, for example, a learner writes the first word of a sentence and the others write the missing words,",
+    "complete a story by writing missing words."
+   ],
+   "key_inquiry_questions": [
+    "How do pictures help us to write?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner’s ability to make connections is developed as the learner makes sentences from picture prompts.",
+   "values": "Unity: The learner acquires the ability to cooperate with others as they complete a word search or crossword puzzle with peers.",
+   "pcis": "Nationalism: This is addressed as the learner interacts with texts tied to the theme on community leaders.",
+   "links": "The learner is able to apply inferencing skills on pictures to their learning of similar concepts in Creative Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     65
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.a",
+     "letter": "a",
+     "text": "infer what the pictures in a text talk about",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.b",
+     "letter": "b",
+     "text": "use 4-6 letter words in short sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T11_GUIDED_WRITING.c",
+     "letter": "c",
+     "text": "appreciate the importance of writing fluency in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO",
+   "number": "12.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 12: Living together)",
+   "sequence": 1211,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target sounds",
+    "Vocabulary"
+   ],
+   "learning_experiences": [
+    "listen to an audio text and pick out the sounds /e /, / iː/, and / eə /,",
+    "listen to a passage aloud and list down the words with the sounds, /e /, / iː/, and /eə /,",
+    "read minimal pairs to distinguish the different sounds,",
+    "recite poems/ rhymes/ tongue twisters using words with the target sounds,",
+    "pick out the new words as used in short sentences/short paragraphs/teacher read-aloud stories,",
+    "practise pronouncing words in response to picture cues,",
+    "construct simple sentences using new words,",
+    "take turns to respond to simple one-directional instructions orally or by using appropriate gestures."
+   ],
+   "key_inquiry_questions": [
+    "How would you know if someone is listening to you?",
+    "How do we learn to pronounce words correctly?"
+   ],
+   "core_competences": "Communication: The learner’s ability to listen keenly and actively is enhanced as they listen to an audio text and pick out the target sounds. Learning to Learn: The learner’s ability to learn independently is enhanced as they practise using vocabulary learnt in a variety of texts.",
+   "values": "Peace: This is enhanced as the learner works harmoniously with peers to take turns to respond to simple one-directional instructions orally or by using appropriate gestures.",
+   "pcis": "Social Cohesion: This is enhanced as the learner interacts with texts on the theme – Living together.",
+   "links": "The learner is able to apply attentive listening skills to learning concepts in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     66
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "state the words with the sounds /e /, / iː/, and / eə / from an audio text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "articulate the words with the sounds /e /, / iː/, and / eə / for speech clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use vocabulary related to the theme in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T12_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "appreciate the importance of proper pronunciation in oral communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T12_FLUENCY",
+   "number": "12.2.1",
+   "strand": "Reading",
+   "sub_strand": "Fluency (Theme 12: Living together)",
+   "sequence": 1221,
+   "lessons": 1,
+   "optional": false,
+   "content_topics": [
+    "Target sounds",
+    "Reading speed",
+    "Reading with expression"
+   ],
+   "learning_experiences": [
+    "listen to short paragraphs and point out words with the target sounds /e /, / iː/, and /ea/,",
+    "read words with the target sounds correctly,",
+    "read simple sentences in a story aloud paying attention to the punctuation,",
+    "take part in timed-reading of a text while displaying the right expressions,",
+    "recite poems/ rhymes related to the theme with peers."
+   ],
+   "key_inquiry_questions": [
+    "How do we read fluently?"
+   ],
+   "core_competences": "Self -efficacy: This is enhanced as the learner builds on their fluency by taking part in timed-reading of a text while displaying the right expressions.",
+   "values": "Respect: This is enhanced as the learner appreciates the effort of peers in reading fluently as they read words with target sounds correctly..",
+   "pcis": "Learner Support Programmes (Clubs and Societies): The learner practises reading fluently and is able to apply the same in reading clubs.",
+   "links": "The learner applies reading fluency as they read texts in Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     67
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T12_FLUENCY.a",
+     "letter": "a",
+     "text": "identify words with the target sounds /e /, / iː/, and /ea/ in a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T12_FLUENCY.b",
+     "letter": "b",
+     "text": "read sentences in a text accurately, at the right speed, and with expression for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T12_FLUENCY.c",
+     "letter": "c",
+     "text": "realise the importance of fluency in reading",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T12_COMPREHENSION",
+   "number": "12.2.2",
+   "strand": "Reading",
+   "sub_strand": "Comprehension (Theme 12: Living together)",
+   "sequence": 1222,
+   "lessons": 1,
+   "optional": false,
+   "content_topics": [
+    "Making predictions",
+    "Target sounds",
+    "Comprehension questions"
+   ],
+   "learning_experiences": [
+    "make predictions of what will happen in a story by discussing the title and pictures in the text,",
+    "read a story and identify words that have the sounds /e/, /iː/ and / eə /,",
+    "work jointly to find the meaning of words identified from a text using contextual clues,",
+    "talk about their own experiences related to the events in the story with peers,",
+    "respond to direct and indirect questions from a text in print or digital devices,",
+    "work jointly to role-play the events from a story."
+   ],
+   "key_inquiry_questions": [
+    "How can you tell that someone has understood a story?",
+    "What makes a story interesting?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner practises making connections as they talk about their own experiences related to the events in the story.",
+   "values": "Responsibility: This is enhanced as the learner engages in assigned roles and duties during role-play activities with peers.",
+   "pcis": "Social Cohesion: This is promoted as the learner interacts with texts on living together and shares with peers their real life experiences that relate to events in the story.",
+   "links": "The learner applies comprehension skills to learning of texts in Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     68
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T12_COMPREHENSION.a",
+     "letter": "a",
+     "text": "make predictions about a story based on the title and picture",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T12_COMPREHENSION.b",
+     "letter": "b",
+     "text": "read wordsthat have the target sounds /e /, / iː/, and /ea/ in a text related to the theme",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T12_COMPREHENSION.c",
+     "letter": "c",
+     "text": "respond to direct and indirect questionsfroma text for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T12_COMPREHENSION.d",
+     "letter": "d",
+     "text": "adopt reading pictures and textsfor enjoyment and information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H",
+   "number": "12.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Possessives: (my, our, her, his, their, its) (Theme 12: Living together)",
+   "sequence": 1231,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "identify objects in the classroom and attach appropriate possessives to each,",
+    "take turns to ask questions whose responses will include possessives such as: (my pen, his book),",
+    "engage in a role-play to show ownership of various items,",
+    "pick out possessives from a text,",
+    "use possessives in phrases and sentences to illustrate ownership."
+   ],
+   "key_inquiry_questions": [
+    "How do we show that something belongs to someone in speech?",
+    "Why is it important to use possessives correctly?"
+   ],
+   "core_competences": "Creativity and imagination: This is nurtured as the learners creatively express their ideas when engaging in a role-play to show ownership of various items.",
+   "values": "Integrity: This is enhanced as the learner shows due regard for other’s property when learning about possessives.",
+   "pcis": "Life Skills (Self-awareness): The learner’s self-awareness is enhanced as they learn about possessive pronouns.",
+   "links": "The learner can link the concept of possessive pronouns to learning of similar concepts in Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     69
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.a",
+     "letter": "a",
+     "text": "recognise possessives from a written text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.b",
+     "letter": "b",
+     "text": "use possessives to talk about ownership in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T12_POSSESSIVES_MY_OUR_H.c",
+     "letter": "c",
+     "text": "adopt the use of possessives to show ownership in oral communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T12_GUIDED_WRITING",
+   "number": "12.4.1",
+   "strand": "Writing",
+   "sub_strand": "Guided Writing (Theme 12: Living together)",
+   "sequence": 1241,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Picture reading",
+    "Simple sentences"
+   ],
+   "learning_experiences": [
+    "work with peers to match pictures with words,",
+    "make sentences about pictures provided,",
+    "pick out correct words that can be used to fill in gaps in sentences appropriately,",
+    "use the words provided to fill in gaps correctly and meaningfully in given sentences,",
+    "write short sentences using prompts."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to write clearly and legibly?",
+    "What should you consider when selecting words to fill in gaps?"
+   ],
+   "core_competences": "Critical thinking and problem solving: The learner is able to think critically when picking out correct words that can be used to fill in gaps in sentences appropriately.",
+   "values": "Unity: This is enhanced as the learner works collaboratively with peers to match pictures with words.",
+   "pcis": "Life Skills (Self-esteem): The learner acquires an enhanced level of self-esteem as they fill in gaps to complete sentences.",
+   "links": "The learner can apply the writing skills to write sentences in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     70
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T12_GUIDED_WRITING.a",
+     "letter": "a",
+     "text": "recognise pictures for language acquisition",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T12_GUIDED_WRITING.b",
+     "letter": "b",
+     "text": "fill in gaps in simple sentences for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T12_GUIDED_WRITING.c",
+     "letter": "c",
+     "text": "realise the importance of writing complete sentences to express meaning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO",
+   "number": "13.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 13: Technology)",
+   "sequence": 1311,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target sounds",
+    "Vocabulary"
+   ],
+   "learning_experiences": [
+    "listen to a print or digital text containing the target sounds /ʊ/ and /eɪ / as in wait, pay,",
+    "work jointly to practise sound discrimination using minimal pairs,",
+    "pick out target vocabulary words used in short sentences/short paragraphs/teacher read-aloud stories,",
+    "infer the meaning of the new words from short sentences/short paragraphs/teacher read-aloud stories,",
+    "construct simple sentences using new words learnt,",
+    "recite poems/ rhymes/ tongue twisters using words with the target sounds and words,",
+    "team up to record each other recite the poem/rhymes/tongue twisters with target words and sounds."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to pronounce words correctly?"
+   ],
+   "core_competences": "Digital Literacy: This is embraced as the learner is guided to interact with technology when teaming up to record each other recite poems/rhymes/tongue twisters with target words and sounds.",
+   "values": "Responsibility: This is enhanced as the learner handles digital devices carefully and keeps each other accountable as they record their performances.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is nurtured as they learn how to use the digital devices appropriately.",
+   "links": "The learner applies the vocabulary learnt on technology to learning of other related concepts in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     71,
+     72
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify target sounds /ʊ/ and / eɪ / in words from an oral text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "articulate words with the target sounds accurately to discriminate the sounds",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use the vocabulary learnt in relevant contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T13_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "adopt using the vocabulary learnt to communicate effectively in various contexts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T13_COMPREHENSION",
+   "number": "13.2.1",
+   "strand": "Reading",
+   "sub_strand": "Comprehension (Theme 13: Technology)",
+   "sequence": 1321,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Making predictions",
+    "Inferring meaning",
+    "Comprehension questions"
+   ],
+   "learning_experiences": [
+    "talk about the title and pictures of a story with peers,",
+    "make predictions on where the events would be happening,",
+    "read a text (about 60 words) aloud with peers,",
+    "pick out new words from the text,",
+    "infer the meanings of words using contextual clues,",
+    "answer direct and indirect questions on the text."
+   ],
+   "key_inquiry_questions": [
+    "What do you see in the pictures?",
+    "How can you make a guess on what would happen in a story?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner’s ability to make connections is enhanced as they make predictions on where the events would be happening.",
+   "values": "Respect: This is enhanced as the learner appreciates the opinions of peers during discussions about the titles and pictures of a story.",
+   "pcis": "ICT: This is promoted as the learner interacts with texts tied to the theme on technology.",
+   "links": "The learner applies comprehension strategies when reading texts in Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     72
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T13_COMPREHENSION.a",
+     "letter": "a",
+     "text": "use the title and the pictures to make predictions about a story",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T13_COMPREHENSION.b",
+     "letter": "b",
+     "text": "use context clues to infer the meaning of new words",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T13_COMPREHENSION.c",
+     "letter": "c",
+     "text": "answer direct and indirect questions from a text for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T13_COMPREHENSION.d",
+     "letter": "d",
+     "text": "recommend reading for enjoyment and information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT",
+   "number": "13.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Yes/ No questions (with can, may, will) (Theme 13: Technology)",
+   "sequence": 1331,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use songs/short poems to practise asking Yes/No questions with can, may, and will,",
+    "point out questions that require a Yes/No response from a written text,",
+    "take turns to ask and answer Yes/No questions related to the theme using can, may and will,",
+    "restate sentence structures containing Yes/No questionsfrom a story, poem, or conversation they have listened to,",
+    "role-play activitiesthat will elicit the use of can, may, and will to answer Yes/No questions."
+   ],
+   "key_inquiry_questions": [
+    "How would you ask your friends for help?"
+   ],
+   "core_competences": "Communication: The learner’s ability to speak clearly and effectively is enhanced as they take turns to ask and answer Yes/No questions related to the theme using can, may, and will.",
+   "values": "Love: This is enhanced as the learner acknowledges peer’s views during question and answer activities.",
+   "pcis": "Life Skills(Self-esteem): The learner’s self-esteem is enhanced as they ask and answer questions appropriately.",
+   "links": "The learner uses question and answer as a mode of learning in all learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     73
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.a",
+     "letter": "a",
+     "text": "identify Yes/No questions with can, may, and will from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.b",
+     "letter": "b",
+     "text": "respond to Yes/No questions using can, may and will, for clarity in communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T13_YES_NO_QUESTIONS_WIT.c",
+     "letter": "c",
+     "text": "realise the use of can, may and will to seek information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T13_GUIDED_WRITING",
+   "number": "13.4.1",
+   "strand": "Writing",
+   "sub_strand": "Guided Writing (Theme 13: Technology)",
+   "sequence": 1341,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "write dictated words with the target sounds correctly,",
+    "play a sentence-building drill game using the correct form of words,",
+    "team up to match pictures with the correct sentences,",
+    "rearrange jumbled words to form simple sentences,",
+    "individually form simple sentences related to the theme (3-5 sentences)"
+   ],
+   "key_inquiry_questions": [
+    "What makes a sentence correct?"
+   ],
+   "core_competences": "Collaboration: The learner’s teamwork spirit is enhanced as they play sentence-building drills collaboratively with peers while observing the rules of engagement.",
+   "values": "Social justice: This is enhanced as the learner fosters inclusivity and non-discrimination to peers as they team up to match pictures with the correct sentences.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is enhanced as they write correct and meaningful sentences and words.",
+   "links": "The learner can use the writing skills acquired to write sentences in Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     74
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T13_GUIDED_WRITING.a",
+     "letter": "a",
+     "text": "recognise the correct form of words to be used in writing simple sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T13_GUIDED_WRITING.b",
+     "letter": "b",
+     "text": "rearrange words to form simple sentences for fluency in writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T13_GUIDED_WRITING.c",
+     "letter": "c",
+     "text": "realise the importance of writing correct and meaningful sentences to express meaning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO",
+   "number": "14.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 14: Numbers)",
+   "sequence": 1411,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target sounds",
+    "Vocabulary"
+   ],
+   "learning_experiences": [
+    "listen to a variety of words with the sounds /dʒ/, /s/ and /ŋ/,",
+    "practise pronouncing the target sounds in mouth-positions modelled by the teacher or from a video clip,",
+    "practise pronouncing words with target sounds accurately with peers,",
+    "use the vocabulary learnt to construct simple sentences.",
+    "work jointly to sing songs/chants using words related to the theme."
+   ],
+   "key_inquiry_questions": [
+    "Why should we pronounce words correctly?",
+    "Why is it important to learn new words?"
+   ],
+   "core_competences": "Communication: The learner’s ability to listen keenly and actively is enhanced as they listen to words with the target sounds and articulate them correctly.",
+   "values": "Unity: Cooperation is enhanced as the learner works collaboratively with peers on specific tasks like singing songs/chants using words related to the theme.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is enhanced as they pronounce words correctly.",
+   "links": "The learner uses the pronunciation skills to learn similar concepts in Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     75
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "recognise the target sounds /dʒ/, /s/ and /ŋ/ used in words for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "articulate the words with the target sounds in oral communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use the vocabulary for oral communication in relevant contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T14_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "advocate for the appropriate use of correct pronunciation in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T14_FLUENCY",
+   "number": "14.2.1",
+   "strand": "Reading",
+   "sub_strand": "Fluency (Theme 14: Numbers)",
+   "sequence": 1421,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "identify and read words with the sounds dʒ/, /s/ and /ŋ/ from a text,",
+    "practise reading a text containing words with the target letter sounds with the correct pronunciation,",
+    "practise reading sentences containing decodable and non-decodable words,",
+    "engage in timed reading (25 words per minute), displaying the right facial expressions and tone,",
+    "participate in a readers’ theatre where he or she reads some lines or stanzas of a poem."
+   ],
+   "key_inquiry_questions": [
+    "What makes it easy to read fluently?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s ability to learn independently is enhanced as they practise reading sentences containing decodable and non-decodable words for reading fluency.",
+   "values": "Responsibility: This is enhanced as the learner offers guidance to those with difficulties during reading activities.",
+   "pcis": "Peer Education and Mentorship: This is promoted as the learner engages in a readers’ theatre to build on their fluency.",
+   "links": "The learner uses reading fluency skills to read texts Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     76
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T14_FLUENCY.a",
+     "letter": "a",
+     "text": "identify words with the target sounds dʒ/, /s/ and /ŋ/ in preparation for reading",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T14_FLUENCY.b",
+     "letter": "b",
+     "text": "read sentences in a text accurately, at the right speed, and with expression for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T14_FLUENCY.c",
+     "letter": "c",
+     "text": "realise the role of fluency in reading",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T14_COMPREHENSION",
+   "number": "14.2.2",
+   "strand": "Reading",
+   "sub_strand": "Comprehension (Theme 14: Numbers)",
+   "sequence": 1422,
+   "lessons": 1,
+   "optional": false,
+   "content_topics": [
+    "Making predictions",
+    "Comprehension questions",
+    "Target sounds"
+   ],
+   "learning_experiences": [
+    "discuss the title and pictures in the text and make predictions of what will happen,",
+    "read a story and identify wordsthat have the sounds /dʒ/, /s/ and /ŋ/,",
+    "read simple stories or passages aloud,",
+    "talk about their own experiences in relation to the story with peers,",
+    "respond to direct and indirect questions from a print or non-print text,",
+    "role-play, with peers, the events from a story read."
+   ],
+   "key_inquiry_questions": [
+    "How can we tell thatsomeone has understood a story?",
+    "What helps us to understand a story?"
+   ],
+   "core_competences": "be developed: Creativity and Imagination: The learner’s ability to make connections is enhanced as they talk about their own experiences in relation to the story with peers.",
+   "values": "Respect: This is enhanced as the learner appreciates the opinions of peers during discussions on the title and pictures.",
+   "pcis": "Life Skills (Creative and Critical thinking skills): The skills are enhanced as the learner uses contextual clues to answer indirect questions.",
+   "links": "The learner uses numeracy skills as learnt in the vocabulary in learning similar concepts in Mathematics Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     77
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T14_COMPREHENSION.a",
+     "letter": "a",
+     "text": "make predictions about a story based on the title and picture",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T14_COMPREHENSION.b",
+     "letter": "b",
+     "text": "read words that have the targetsounds dʒ/, /s/ and /ŋ/,in a text related to the theme",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T14_COMPREHENSION.c",
+     "letter": "c",
+     "text": "respond to direct and indirect questions from a text for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T14_COMPREHENSION.d",
+     "letter": "d",
+     "text": "adopt reading pictures and textsfor enjoyment and information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE",
+   "number": "14.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Adverbs of Place (Theme 14: Numbers)",
+   "sequence": 1431,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "identify different positions of things in the classroom,",
+    "point out the adverbs of place in sentences,",
+    "practise using adverbs of place to construct sentences describing objects in the classroom,",
+    "sing songs, role-play, and recite poems related to the theme with peers."
+   ],
+   "key_inquiry_questions": [
+    "Where do you find different thingsin the classroom?",
+    "Why isit important to place things in the right place?"
+   ],
+   "core_competences": "be developed: Communication: The learner’s ability to speak clearly and correctly is enhanced as they use adverbs of place to describe the position of objects and people.",
+   "values": "Responsibility: This is enhanced as the learner takes up roles during role-play activities with peers.",
+   "pcis": "Environmental awareness: This is enhanced as the learner identifies different positions of things in the classroom.",
+   "links": "The learner uses the knowledge of adverbs to learn similar concepts in Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     78
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.a",
+     "letter": "a",
+     "text": "recognise the adverbs of place in sentences for information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.b",
+     "letter": "b",
+     "text": "use adverbs of place to describe the position of objects and people for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T14_ADVERBS_OF_PLACE.c",
+     "letter": "c",
+     "text": "realise the importance of proper use of adverbs of place for language acquisition",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T14_GUIDED_WRITING",
+   "number": "14.4.1",
+   "strand": "Writing",
+   "sub_strand": "Guided Writing (Theme 14: Numbers)",
+   "sequence": 1441,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "identify the target vocabulary in sentences,",
+    "write simple meaningful sentences (not more than 5 words),",
+    "work jointly to practise writing sentences from a substitution table,",
+    "fill in gaps to complete sentences,",
+    "form simple meaningful sentences from word prompts."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to write meaningful sentences?",
+    "What makes it easy to write clear sentences?"
+   ],
+   "core_competences": "Communication: The learner’s ability to write clearly and correctly is enhanced as they write simple meaningful sentences.",
+   "values": "Responsibility: This is enhanced as the learner ensures they complete allocated tasks when working jointly to write sentences from a substitution table.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is nurtured as they write correct sentences for effective communication.",
+   "links": "The learner can use the writing skills to write correct sentences in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     79
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T14_GUIDED_WRITING.a",
+     "letter": "a",
+     "text": "recognise words related to the theme in simple texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T14_GUIDED_WRITING.b",
+     "letter": "b",
+     "text": "write simple sentences for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T14_GUIDED_WRITING.c",
+     "letter": "c",
+     "text": "realise the importance of writing for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO",
+   "number": "15.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and vocabulary (Theme 15: Conserving resources)",
+   "sequence": 1511,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Target sounds",
+    "Vocabulary"
+   ],
+   "learning_experiences": [
+    "listen to and pronounce words with the target sounds /l/, / s/ and /r/ as modeled by the teacher or from an audio recording,",
+    "practise sound discrimination using minimal pairs,",
+    "use vocabulary relevant to the theme in short sentences,",
+    "play language games to practise pronouncing and using new words,",
+    "team up to recite rhymes, sing songs, and say tongue twisters with the target sounds with peers."
+   ],
+   "key_inquiry_questions": [
+    "What words can we make from the sound given?"
+   ],
+   "core_competences": "Communication: The learner’s ability to speak clearly and correctly is enhanced as they use the new words learnt in short sentences. Critical thinking and Problem solving: The learner’s ability to apply what they have learnt is enhanced as they use knowledge learnt to conserve resources.",
+   "values": "Respect: This is developed as the learner accepts diverse opinions from others when playing language games to practise pronouncing and using new words.",
+   "pcis": "Environmental Education: The learner is sensitised on avoiding wastage and using resources in the right way through texts they interact with.",
+   "links": "The learner can apply attentive listening skills to learning concepts in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     80
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify the target sounds /l/, / s/ and /r/ in an oral text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "articulate words with the target sounds /l/, / s/ and /r/ correctly to discriminate sounds",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use the vocabulary learnt in relevant contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LISTEN.T15_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "realise the role of vocabulary in language acquisition",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T15_FLUENCY",
+   "number": "15.2.1",
+   "strand": "Reading",
+   "sub_strand": "Fluency (Theme 15: Conserving resources)",
+   "sequence": 1521,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Target sounds",
+    "Reading speed",
+    "Reading with expression"
+   ],
+   "learning_experiences": [
+    "identify words with the sounds/l/, / s/ and /r/ from a text,",
+    "read a text containing words with the target letters’sounds adhering to the correct pronunciation,",
+    "work jointly to practise reading sentences containing decodable and non- decodable words,",
+    "engage in timed reading (25 words per minute) displaying the right facial expressions and tone.",
+    "participate in a readers’ theatre where theyread some lines or stanzas of a poem."
+   ],
+   "key_inquiry_questions": [
+    "Why should we read with expression?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s self-discipline is enhanced as they practise reading sentences containing decodable and non-decodable words for fluency in reading.\nCitizenship: The learner becomes ethically responsible as they use time responsibly when engage in timed reading.",
+   "values": "Integrity: The learner’s discipline is enhanced as they utilise time as a resource prudently.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is enhanced as they acquire reading fluency skills.",
+   "links": "The learner can use fluency skills to read fluently in Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     81
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T15_FLUENCY.a",
+     "letter": "a",
+     "text": "identify words with the target sounds /l/, / s/ and /r/ accurately",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T15_FLUENCY.b",
+     "letter": "b",
+     "text": "read sentences in a text accurately, at the right speed, and with expression for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T15_FLUENCY.c",
+     "letter": "c",
+     "text": "realise the importance of fluency in reading",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.READIN.T15_COMPREHENSION",
+   "number": "15.2.2",
+   "strand": "Reading",
+   "sub_strand": "Comprehension (Theme 15: Conserving resources)",
+   "sequence": 1522,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Target sounds",
+    "Making predictions",
+    "Comprehension questions"
+   ],
+   "learning_experiences": [
+    "read simple sentences aloud while paying attention to new words and correct pronunciation of words with sounds /l/, /r/ and /s/,",
+    "talk about the title and pictures in a story to make predictions,",
+    "read a text (of about 60 words) aloud,",
+    "work jointly to discuss whether the predictions made are accurate,",
+    "infer the meaning of new words using contextual clues,",
+    "answer questions from a story,",
+    "draw pictures to show what is happening in the story,",
+    "read a text or view pictures for enjoyment and information."
+   ],
+   "key_inquiry_questions": [
+    "What do pictures and titles tell us about a story?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner’s communication and self-expression skills are nurtured as they draw pictures to show what is happening in the story.",
+   "values": "Respect:is developed as the learner appreciates diverse opinions from peers during discussions on whether the predictions made are accurate.",
+   "pcis": "Environmental Education: This is promoted as the learner is sensitised on how to use resources properly through texts and stories read.",
+   "links": "The learner can apply comprehension skills when reading texts in Kiswahili and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     82
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.READIN.T15_COMPREHENSION.a",
+     "letter": "a",
+     "text": "identify wordsthat have the target sounds /l/, /r/ and /s/ from a text related to the theme",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T15_COMPREHENSION.b",
+     "letter": "b",
+     "text": "make predictions about a story using the title and the pictures",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T15_COMPREHENSION.c",
+     "letter": "c",
+     "text": "respond to direct and indirect questions from a text to show comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.READIN.T15_COMPREHENSION.d",
+     "letter": "d",
+     "text": "adopt reading pictures and textsfor enjoyment and information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR",
+   "number": "15.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Interjections of surprise (Theme 15: Conserving resources)",
+   "sequence": 1531,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "listen to a short dialogue from an audio recording,",
+    "pick out interjections of surprise from the dialogue,",
+    "make different familiar faces showing surprise,",
+    "read out sentence structures containing interjections ofsurprise from a story, poem or conversation they have listened to,",
+    "work jointly to role play the interjections of surprise as modelled by peers, the teacher or from a video recording,",
+    "search for emojis showing surprise from digital texts,",
+    "constructsentences using interjections of surprise,",
+    "recite rhymes and poems featuring interjections of surprise."
+   ],
+   "key_inquiry_questions": [
+    "How do people show surprise?"
+   ],
+   "core_competences": "Digital Literacy: The learner’s interaction with digital technology is enhanced as they use digital devices to search for emojis showing surprise.\nCommunication: The learner’s ability to write clearly and correctly is developed as they use interjections of surprise in simple sentences.",
+   "values": "Unity: This is reinforced as the learner works collaboratively with peers to role play the interjections of surprise as modelled by peers, the teacher or from a video recording.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is nurtured as they use interjections correctly in communication.",
+   "links": "The learner can use the knowledge on interjections of surprise to learn similar concepts in Kiswahili Language and Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     83
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.a",
+     "letter": "a",
+     "text": "identify words showing surprise from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.b",
+     "letter": "b",
+     "text": "use words showing surprise in simple sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.LANGUA.T15_INTERJECTIONS_OF_SUR.c",
+     "letter": "c",
+     "text": "adopt the use of interjections of surprise in day-to-day communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G1.WRITIN.T15_GUIDED_WRITING",
+   "number": "15.4.1",
+   "strand": "Writing",
+   "sub_strand": "Guided Writing (Theme 15: Conserving resources)",
+   "sequence": 1541,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Descriptive words (Adjectives)",
+    "Sentences"
+   ],
+   "learning_experiences": [
+    "circle words showing colour, height, feelings, taste, and smell, among others,",
+    "team up to create a list of words describing people, things, and places,",
+    "copy sentences featuring common descriptive words (adjectives),",
+    "write dictated words,",
+    "match pictures with the correct sentences,",
+    "form five-word sentences using descriptive words,",
+    "fill in gaps with the correct descriptive word."
+   ],
+   "key_inquiry_questions": [
+    "Why are words important in writing?"
+   ],
+   "core_competences": "be developed: Communication: The learner’s ability to write clearly and correctly is developed as they write sentences of not more than five words.",
+   "values": "Unity: Cooperation is enhanced as the learner displays a team spirit as they work with peers to create a list of words describing people, things, and places.",
+   "pcis": "Life Skills (Self-esteem): The learner acquires a greater level of self-esteem as they express himself/herself creatively in writing.",
+   "links": "The learner can apply writing skills to write correctly in other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 English Activities - Revised Sept.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     84
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G1.WRITIN.T15_GUIDED_WRITING.a",
+     "letter": "a",
+     "text": "pick out words describing people, things, and places from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T15_GUIDED_WRITING.b",
+     "letter": "b",
+     "text": "write short sentences related to the theme using descriptive words",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G1.WRITIN.T15_GUIDED_WRITING.c",
+     "letter": "c",
+     "text": "realise the importance of writing correct and meaningful sentences to express meaning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

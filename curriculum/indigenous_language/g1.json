@@ -1,0 +1,936 @@
+{
+ "framework": "cbc",
+ "subject_key": "indigenous_language",
+ "grade": 1,
+ "source": "KICD Creative Activities, IL G1-3 - Revised.pdf, First Published in 2021; Revised in 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 3,
+  "sub_strands": 15,
+  "outcomes": 45,
+  "lessons": 60,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "INDI.G1.LISTEN.T1_LISTENING_TO_INSTRUC",
+   "number": "1.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Listening to Instructions (Theme 1: The home)",
+   "sequence": 111,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Formal and Informal greetings",
+    "Vocabulary building - Family members"
+   ],
+   "learning_experiences": [
+    "label pictures of family members (father, mother, grandfather, grandmother, brother, sister, baby, aunt, uncle),",
+    "play singing games involving names of family members,",
+    "work collaboratively to role play formal and informal greetings at home,",
+    "recite rhymes related to formal and informal home greetings,",
+    "listen to a variety of simple instructions relating to accomplishing home tasks through various media (oral, audio and audio- visual),",
+    "play the 'broken telephone game' (whisper game) with peers in class."
+   ],
+   "key_inquiry_questions": [
+    "Why do we greet people at home?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner works collaboratively with peers to listen to and respond verbally and non-verbally to different instructions.\nCitizenship: This is enhanced as the learner appreciates their culture through role playing formal and informal greetings at home.",
+   "values": "Unity: This is achieved as the learner cooperates with peers to recite rhymes related to formal and informal greetings.\nRespect: This is enhanced as the learner displays patience with others as they play the 'broken telephone game'(whisper game) with peers in class.",
+   "pcis": "Social cohesion: This is realised as the learner embraces peers’ contribution for a common goal when giving and responding to different instructions.",
+   "links": "The learner can relate the concept of greetings to their learning of similar concepts in English Language Activities. 3",
+   "design_notes": "Second read left this for a person to confirm: not found on the captured pages: links.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     6,
+     7
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.LISTEN.T1_LISTENING_TO_INSTRUC.a",
+     "letter": "a",
+     "text": "identify family members at home",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INDI.G1.LISTEN.T1_LISTENING_TO_INSTRUC.b",
+     "letter": "b",
+     "text": "use formal and informal greetings at home appropriately",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INDI.G1.LISTEN.T1_LISTENING_TO_INSTRUC.c",
+     "letter": "c",
+     "text": "enjoy listening and responding to instructions for communication",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.READIN.T1_PICTURE_READING",
+   "number": "1.2.1",
+   "strand": "Reading",
+   "sub_strand": "Picture Reading (Theme 1: The home)",
+   "sequence": 121,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vocabulary Building-Items found at home",
+    "Reading picture labels"
+   ],
+   "learning_experiences": [
+    "observe pictures of different items found at home,",
+    "work jointly with peers to talk about the pictures observed,",
+    "sort and group pictures of items found at home,",
+    "match pictures of items found at home with their labels,",
+    "colour and paint pictures of items found at home,",
+    "read labels of pictures on items found at home,",
+    "work with peers to stick the pictures onto a gallery board to form a simple collection about the home,",
+    "organise their pictures in a class portfolio."
+   ],
+   "key_inquiry_questions": [
+    "How do we describe pictures?"
+   ],
+   "core_competences": "Creativity and Imagination: This is enhanced as the learner embraces new ideas when colouring and painting pictures of items found at home.\nCritical Thinking and Problem Solving: This is enhanced as the learner analyses concepts logically when matching pictures of items found at home with their names.",
+   "values": "Unity: This is achieved as the learner cooperates with peers to stick pictures on a gallery board to form a simple collection about the home.\nResponsibility: This is enhanced as the learner diligently works to organise their pictures in a class portfolio.",
+   "pcis": "Cultural awareness: This is developed as the learner interacts with cultural elements such as names of different items found at home.",
+   "links": "The learner can connect the concept of picture reading with their learning in Creative Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     8,
+     9
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.READIN.T1_PICTURE_READING.a",
+     "letter": "a",
+     "text": "describe items found at home from pictures",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.READIN.T1_PICTURE_READING.b",
+     "letter": "b",
+     "text": "read labels of simple pictures of items found at home",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.READIN.T1_PICTURE_READING.c",
+     "letter": "c",
+     "text": "enjoy reading pictures accompanying texts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.WRITIN.T1_HANDWRITING_LETTERS_",
+   "number": "1.3.1",
+   "strand": "Writing",
+   "sub_strand": "Handwriting-Letters of the Alphabet (Theme 1: The home)",
+   "sequence": 131,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Letters of the language alphabet",
+    "Upper case",
+    "Lower case"
+   ],
+   "learning_experiences": [
+    "trace letters of the language alphabet neatly,",
+    "colour and paint the letters of the language alphabet,",
+    "work collaboratively to model letters of the language alphabet,",
+    "match lower case letters with their corresponding upper case letters,",
+    "work jointly with peers to solve letter puzzles,",
+    "re-write names of simple words based on the theme e.g. names of family members and items found at home in upper case and lower case."
+   ],
+   "key_inquiry_questions": [
+    "How do we write letters of the alphabet?"
+   ],
+   "core_competences": "Creativity and Imagination: This is developed as the learner embraces new ideas that inspire creativity when modelling the letters of the alphabet.\nCritical Thinking and Problem Solving: This is enhanced as the learner explores concepts logically when solving letter puzzles.",
+   "values": "Love: This is promoted as the learner portrays a caring attitude as they work collaboratively with peers to model letters of the language alphabet.\nPeace: This is enhanced as the learner works harmoniously with peers to solve letter puzzles.",
+   "pcis": "Healthy relationships: This is fostered as the learner collaborates in sharing learning resources to complete tasks like painting and modelling letters of the alphabet.",
+   "links": "The learner can relate the concept of modeling and colouring to their learning in Creative Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     10,
+     11
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.WRITIN.T1_HANDWRITING_LETTERS_.a",
+     "letter": "a",
+     "text": "outline the letters of the language alphabet",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.WRITIN.T1_HANDWRITING_LETTERS_.b",
+     "letter": "b",
+     "text": "copy names of things found at home in upper case and lower case",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.WRITIN.T1_HANDWRITING_LETTERS_.c",
+     "letter": "c",
+     "text": "develop an interest in writing using letters of the language alphabet",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.LISTEN.T2_WORD_FORMATION_SYLLA",
+   "number": "2.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Word Formation – Syllables (Theme 2: The school)",
+   "sequence": 211,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Pronunciation",
+    "Blending syllables",
+    "Segmenting syllables"
+   ],
+   "learning_experiences": [
+    "listen to pre-recorded clips with common syllables forming simple words,",
+    "imitate the syllables from the audio clip recording,",
+    "work with peers to blend the syllables to form words,",
+    "segment words into syllables,",
+    "work collaboratively to match syllables from flashcards to form complete words,",
+    "conduct a mini tour within the school to identify things found in school,",
+    "play a singing game involving pronouncing simple words related to the theme."
+   ],
+   "key_inquiry_questions": [
+    "How can we take care of things found at school? 2.Why should we pronounce words well?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner engages actively with peers to blend syllables to form words.\nLearning to Learn: This is enhanced as the learner engages in collective learning when conducting a mini tour within the school to identify things found in school.",
+   "values": "Unity: This is achieved as the learner works collaboratively to match syllables from flashcards to form complete words.\nResponsibility: This is realised as the learner takes a role as they play singing games involving pronunciation of simple words related to the theme.",
+   "pcis": "Environmental awareness: This is promoted as the learner participates in a mini tour to identify things found in the school environment.",
+   "links": "The learner can connect the concept of sounds and word formation to the learning of similar concepts in English and Kiswahili Language activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     12,
+     13
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.LISTEN.T2_WORD_FORMATION_SYLLA.a",
+     "letter": "a",
+     "text": "pronounce syllables in words accurately for communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.LISTEN.T2_WORD_FORMATION_SYLLA.b",
+     "letter": "b",
+     "text": "blend syllables to form simple words for accuracy",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.LISTEN.T2_WORD_FORMATION_SYLLA.c",
+     "letter": "c",
+     "text": "enjoy blending syllables to form words for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.READIN.T2_READING_LETTERS_OF_T",
+   "number": "2.2.1",
+   "strand": "Reading",
+   "sub_strand": "Reading —Letters of the Alphabet (Theme 2: The school)",
+   "sequence": 221,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vowel sounds",
+    "Consonant sounds"
+   ],
+   "learning_experiences": [
+    "recognise individual vowel and consonant letter sounds,",
+    "read the vowel letter sounds from charts,",
+    "work collaboratively to sing rhymes on words with the vowel letter sounds,",
+    "take turns to lead peers in reading letter sounds aloud,",
+    "watch video clips on letter sounds,",
+    "identify letter sounds from words on flashcards,",
+    "read words with target letter sounds collaboratively,",
+    "work with peers to conduct a mini-contest to read target words."
+   ],
+   "key_inquiry_questions": [
+    "How do we read words correctly?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner engages actively when taking turns to lead peers in reading letter sounds aloud.\nLearning to Learn: This is achieved as the learner builds on their own learning experience when conducting a reading mini-contest to practise reading target words correctly.",
+   "values": "Social Justice: This is promoted as the learner gives others an equal opportunity to read letter sounds aloud.\nUnity: This is developed as the learner jointly sings rhymes on words related to the theme with peers.",
+   "pcis": "Citizenship: This is developed as the learner works jointly and mutually with peers to conduct a mini-contest to read target words.",
+   "links": "The learner can relate the vocabulary learnt on the school to their learning of environment in Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     14,
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.READIN.T2_READING_LETTERS_OF_T.a",
+     "letter": "a",
+     "text": "identify vowel and consonant letter sounds for accuracy",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.READIN.T2_READING_LETTERS_OF_T.b",
+     "letter": "b",
+     "text": "read words related to the school for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.READIN.T2_READING_LETTERS_OF_T.c",
+     "letter": "c",
+     "text": "develop an interest in reading texts for information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.WRITIN.T2_HANDWRITING",
+   "number": "2.3.1",
+   "strand": "Writing",
+   "sub_strand": "Handwriting – (Theme 2: The school)",
+   "sequence": 231,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vocabulary building",
+    "Neatness",
+    "Legibility",
+    "Writing words"
+   ],
+   "learning_experiences": [
+    "discuss the various items found in school,",
+    "differentiate neat and legible texts from illegible texts,",
+    "write letters neatly in the air and on surfaces,",
+    "team up to trace words related to the theme neatly,",
+    "fill in missing letters to complete words,",
+    "write down dictated words and sentences neatly and legibly,",
+    "write words on digital slate boards,",
+    "display their neatly written words in the class language corner or gallery."
+   ],
+   "key_inquiry_questions": [
+    "How can we describe good handwriting?"
+   ],
+   "core_competences": "Self-efficacy: This is developed as the learner shows concerted attention when writing dictated words neatly and legibly.\nDigital Literacy: This is developed as the learner interacts with technology to write words on digital slate boards. 12",
+   "values": "Unity: This is developed as the learner works harmoniously with peers to complete word puzzles.\nIntegrity: This is enhanced as learner embraces transparency by displaying their neatly written words in the class language corner or gallery.",
+   "pcis": "Social cohesion: This is enhanced as the learner relates with peers positively and respectfully while carrying out group tasks.",
+   "links": "The learner can apply the concept of legibility and neatness in their writing of texts in Kiswahili and English Language Activities.",
+   "design_notes": "Second read left this for a person to confirm: not found on the captured pages: competencies.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.WRITIN.T2_HANDWRITING.a",
+     "letter": "a",
+     "text": "outline items in the school neatly and legibly",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INDI.G1.WRITIN.T2_HANDWRITING.b",
+     "letter": "b",
+     "text": "re-write simple words related to school",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INDI.G1.WRITIN.T2_HANDWRITING.c",
+     "letter": "c",
+     "text": "enjoy writing words using acquired language neatly and legibly",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.LISTEN.T3_LISTENING_TO_STORIES",
+   "number": "3.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Listening to Stories (Theme 3: Good manners)",
+   "sequence": 311,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vocabulary building - Polite words"
+   ],
+   "learning_experiences": [
+    "listen to a story on good manners from a resource person,",
+    "work jointly with peers to list words or phrases that show etiquette and good manners from the story,",
+    "retell stories fluently and creatively with peers,",
+    "role play a conversation between a motorist and a Grade 1 learner accompanied by a parent on their way to school, using polite words,",
+    "play a ‘shop-shop’ fantasy game to show the use of polite language,",
+    "play musical games on polite language and etiquette."
+   ],
+   "key_inquiry_questions": [
+    "Why do we listen to stories?",
+    "Why is it important to be polite in a conversation?"
+   ],
+   "core_competences": "Self-efficacy: This is enhanced as the learner retells stories to their peers confidently and coherently.\nDigital Literacy: This is promoted as the learner interacts with digital content by listening to a conversation on good manners on digital devices.",
+   "values": "Respect: This is enhanced as the learner ensures positive regard for others when playing a ‘shop-shop’ fantasy game to show use of polite language.\nResponsibility: This is enhanced as the learner takes up assigned tasks when role playing a telephone conversation using polite words.",
+   "pcis": "Cultural Awareness: This is enhanced as the learner teams up with peers to listen to stories from their communities that teach etiquette.",
+   "links": "The learner can relate the concept of politeness and etiquette in language to their learning in English and Kiswahili language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.LISTEN.T3_LISTENING_TO_STORIES.a",
+     "letter": "a",
+     "text": "identify words that show etiquette from a story",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.LISTEN.T3_LISTENING_TO_STORIES.b",
+     "letter": "b",
+     "text": "use polite words in a conversation for communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.LISTEN.T3_LISTENING_TO_STORIES.c",
+     "letter": "c",
+     "text": "acknowledge the importance of etiquette in speech and action for peaceful coexistence",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.READIN.T3_READING_WORDS",
+   "number": "3.2.1",
+   "strand": "Reading",
+   "sub_strand": "Reading Words (Theme 3: Good manners)",
+   "sequence": 321,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vocabulary building-polite words"
+   ],
+   "learning_experiences": [
+    "identify courteous (polite) words or phrases from texts,",
+    "read words on flashcards related to good manners,",
+    "say when to use polite words at home and in school,",
+    "work collaboratively to build a vocabulary bank on words related to good manners,",
+    "compose simple sentences using the collection of words,",
+    "take turns to play reading games involving words showing good manners."
+   ],
+   "key_inquiry_questions": [
+    "Why should we use polite words in communication?",
+    "Why should we be polite to drivers and pedestrians?"
+   ],
+   "core_competences": "Learning to Learn: This is enhanced as the learner builds on their learning experiences when working with peers to search and build a vocabulary bank on polite words.\nCritical Thinking and Problem Solving: This is developed as the learner follows simple instructions to identify courteous (polite) words or phrases from texts.",
+   "values": "Responsibility: This is developed as the learner exhibits a self-driven attitude when reading words on flashcards related to good manners.\nRespect: This is enhanced as the learner appreciates the participation of peers as they take turns to play reading games. 16",
+   "pcis": "Nationalism: This is promoted as the learner interacts with texts that show and encourage the use of polite language when interacting with others.",
+   "links": "The learner can relate the concept of reading fluently to their learning of similar concepts in English and Kiswahili Language Activities.",
+   "design_notes": "Second read left this for a person to confirm: not found on the captured pages: values.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.READIN.T3_READING_WORDS.a",
+     "letter": "a",
+     "text": "identify words related to good manners in a written text",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INDI.G1.READIN.T3_READING_WORDS.b",
+     "letter": "b",
+     "text": "read words related to good manners",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INDI.G1.READIN.T3_READING_WORDS.c",
+     "letter": "c",
+     "text": "develop interest in reading words in indigenous language",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.WRITIN.T3_SPELLING",
+   "number": "3.3.1",
+   "strand": "Writing",
+   "sub_strand": "Spelling (Theme 3: Good manners)",
+   "sequence": 331,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "practise joining dots to create words related to good manners,",
+    "copy courteous words neatly and legibly,",
+    "play word matching games with peers to match words that show good manners with when they are used,",
+    "work collaboratively with peers to form polite words from jumbled letters,",
+    "rewrite simple sentences with polite words,",
+    "fill in missing words in sentences correctly,",
+    "take part in solving word puzzle games on polite words with peers."
+   ],
+   "key_inquiry_questions": [
+    "Why is spelling important in writing?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: This is enhanced as the learner works with peers to form polite words from jumbled letters.\nLearning to Learn: This is developed as the learner engages in collective learning when practicing to join dots to create words related to good manners.",
+   "values": "Respect: This is enhanced as the learner shows love and tolerance to the ideas of their peers as they play matching games. Unity: This is achieved as the learner works collaboratively with peers to form polite words from jumbled letters.",
+   "pcis": "Social Cohesion: This is enhanced as the learner engages peers as they solve word puzzles.",
+   "links": "The learner can apply the concept of using polite words to show good manners to their learning in Religious Education Activities.",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.WRITIN.T3_SPELLING.a",
+     "letter": "a",
+     "text": "write simple words related to good manners accurately",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INDI.G1.WRITIN.T3_SPELLING.b",
+     "letter": "b",
+     "text": "use simple words related to good manners to make simple sentences",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INDI.G1.WRITIN.T3_SPELLING.c",
+     "letter": "c",
+     "text": "enjoy writing texts accurately for communication",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.LISTEN.T4_LISTENING_TO_SONGS",
+   "number": "4.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Listening to Songs (Theme 4: Personal hygiene)",
+   "sequence": 411,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vocabulary building- parts of the body",
+    "Songs"
+   ],
+   "learning_experiences": [
+    "identify parts of the body,",
+    "sing rhyme songs that identify parts of the body,",
+    "collaborate with peers to draw and colour/paint different parts of the body,",
+    "work jointly with peers to identify personal hygiene practices for different parts of the body (e.g. face, hands, legs, nose, hair, teeth),",
+    "listen to songs and rhymes on personal hygiene and sing along,",
+    "work with peers to role play personal hygiene practices."
+   ],
+   "key_inquiry_questions": [
+    "How do songs help us in learning?",
+    "Why should we maintain good hygiene practices?"
+   ],
+   "core_competences": "Digital Literacy: This is enhanced as the learner interacts with digital content to listen to songs and rhymes on personal hygiene and sing along.\nSelf-efficacy: This is developed as the learner shows defining personal skills when working with peers to role play personal hygiene practices.",
+   "values": "Respect: This is enhanced as the learner teams up with peers and accommodates divergent ideas as they perform tasks such as singing and role-playing.\nUnity: This is enhanced as the learner collaborates with peers to draw and colour/paint different parts of the body.",
+   "pcis": "Health Education on personal hygiene: This is promoted as the learner works with peers to identify personal hygiene practices and sing songs based on theme.",
+   "links": "The learner can relate the concept of personal hygiene to their learning of hygiene practices in Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.LISTEN.T4_LISTENING_TO_SONGS.a",
+     "letter": "a",
+     "text": "label parts of the body for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.LISTEN.T4_LISTENING_TO_SONGS.b",
+     "letter": "b",
+     "text": "identify personal hygiene practices from songs",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.LISTEN.T4_LISTENING_TO_SONGS.c",
+     "letter": "c",
+     "text": "appreciate the need for good personal hygiene practices",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.READIN.T4_SIMPLE_SENTENCES",
+   "number": "4.2.1",
+   "strand": "Reading",
+   "sub_strand": "Simple Sentences (Theme 4: Personal hygiene)",
+   "sequence": 421,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vocabulary building-personal hygiene",
+    "Simple sentences"
+   ],
+   "learning_experiences": [
+    "identify vocabulary from the sentences on personal hygiene,",
+    "work together to find out the meaning of the vocabulary,",
+    "organise pictures on the theme in a vocabulary picture bank or portfolio,",
+    "match parts of the body to hygiene practices related to them,",
+    "read simple sentences based on the theme aloud,",
+    "arrange jumbled-up picture cards to form a short story on personal hygiene,",
+    "take turns to play reading games,",
+    "create an artistic story basket to store their collection of stories."
+   ],
+   "key_inquiry_questions": [
+    "Why is reading important?"
+   ],
+   "core_competences": "Communication and collaboration: This is developed as the learner engages actively by teaming up with peers to play reading games harmoniously.\nCritical Thinking and Problem Solving: This is enhanced as the learner analyses concepts to match parts of the body to hygiene practices related to them.",
+   "values": "Responsibility: This is enhanced as the learner takes personal initiative to organise words to create a vocabulary bank or portfolio.\nUnity: This is achieved as the learner works with peers collaboratively to find out the meaning of vocabulary.",
+   "pcis": "Social Justice: This is enhanced as the learner teams up with peers and shares roles as they create an artistic story basket to store their collection of stories.",
+   "links": "The learner can relate and apply the concept of reading words to their reading activities in English and Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.READIN.T4_SIMPLE_SENTENCES.a",
+     "letter": "a",
+     "text": "identify vocabulary related to personal hygiene from simple texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.READIN.T4_SIMPLE_SENTENCES.b",
+     "letter": "b",
+     "text": "read simple sentences on personal hygiene for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.READIN.T4_SIMPLE_SENTENCES.c",
+     "letter": "c",
+     "text": "advocate for proper personal hygiene practices in daily living",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.WRITIN.T4_WRITING_WORDS",
+   "number": "4.3.1",
+   "strand": "Writing",
+   "sub_strand": "Writing Words (Theme 4: Personal hygiene)",
+   "sequence": 431,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Word formation",
+    "Simple words"
+   ],
+   "learning_experiences": [
+    "practise word building using letter flashcards and letter cut outs,",
+    "collaborate with peers to arrange jumbled up letters to form words related to the theme,",
+    "complete word puzzles with peers,",
+    "fill in missing letters to complete words on personal hygiene,",
+    "match pictures of parts of the body and hygiene practice items to their names,",
+    "write simple words related to the theme,",
+    "work jointly to develop simple sentences by sequencing jumbled up words on flashcards."
+   ],
+   "key_inquiry_questions": [
+    "How do we write neatly?"
+   ],
+   "core_competences": "Citizenship: This is enhanced as the learner collaborates with peers peacefully to write simple words related to personal hygiene.\nCritical Thinking and Problem Solving: This is promoted as the learner logically arranges jumbled up letters to form words.",
+   "values": "Responsibility: This is achieved as the learner takes up assigned tasks in the group as they sequence jumbled words to make simple sentences.\nSocial Justice: This is promoted as the learner gives peers equal chances when completing word puzzles.",
+   "pcis": "Personal hygiene: This is enhanced as the learner works with peers to identify and match parts of the body with respective personal hygiene practice items.",
+   "links": "The learner can relate the concept on writing words to their learning of similar concepts in English and Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     28,
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.WRITIN.T4_WRITING_WORDS.a",
+     "letter": "a",
+     "text": "combine letters to form words related to the theme",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.WRITIN.T4_WRITING_WORDS.b",
+     "letter": "b",
+     "text": "write simple words related to personal hygiene for expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.WRITIN.T4_WRITING_WORDS.c",
+     "letter": "c",
+     "text": "enjoy creating texts on personal hygiene for information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.LISTEN.T5_RESPONDING_TO_INFORM",
+   "number": "5.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Responding to Information (Theme 5: Time (day, week and months))",
+   "sequence": 511,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vocabulary building (Times of the day, Days of the week)",
+    "Numerals",
+    "Pronunciation"
+   ],
+   "learning_experiences": [
+    "listen to simple songs on times of the day, days of the week and months of the year,",
+    "pronounce words on different times correctly from the songs (yesterday, today, morning, evening, afternoon, night, tomorrow),",
+    "listen to a resource person talk about different times of the day and days of the week and activities that take place at those times.",
+    "respond to questions on times of the day,",
+    "recite numerals used to identify months of the year (one, two, three, four, five, six, seven, eight, nine, ten),",
+    "work collaboratively to sing rhymes and songs to depict various times of the day and days of the week,",
+    "role play various activities carried out in the community at various times and days of the week."
+   ],
+   "key_inquiry_questions": [
+    "How do we tell time?",
+    "Why should we pronounce words well?"
+   ],
+   "core_competences": "Creativity and Imagination: This is enhanced as the learner creatively role plays various activities carried out in the community at various times and days of the week.\nCritical Thinking and Problem Solving: This is enhanced as the learner weighs concepts to respond to questions on times of the day.",
+   "values": "Respect: This is enhanced as the learner appreciates peer’s contributions when singing rhymes and songs to depict various times.\nPeace: This is developed as the learner works mutually with peers to role play various activities carried out in the community at various times.",
+   "pcis": "Cultural Awareness: This is promoted as the learner engages with a resource person to understand various activities that happen in their community at various times of the day, months and year.",
+   "links": "The learner can relate the concept of time (days of the week and months of the year) to their learning of counting in Mathematical Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.LISTEN.T5_RESPONDING_TO_INFORM.a",
+     "letter": "a",
+     "text": "pronounce words correctly to express different aspects of time for clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.LISTEN.T5_RESPONDING_TO_INFORM.b",
+     "letter": "b",
+     "text": "respond to instructions related to time for communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.LISTEN.T5_RESPONDING_TO_INFORM.c",
+     "letter": "c",
+     "text": "enjoy responding to instructions in varied communication contexts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.READIN.T5_READING_FOR_INFORMAT",
+   "number": "5.2.1",
+   "strand": "Reading",
+   "sub_strand": "Reading for Information (Theme 5: Time (day, week and months))",
+   "sequence": 521,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Picture stories",
+    "Comprehension questions"
+   ],
+   "learning_experiences": [
+    "work with peers to interpret the meaning of pictures related to the theme,",
+    "read words related to time from flashcards, charts or digital devices,",
+    "reorganise pieces of a broken picture to form a complete picture,",
+    "identify the main idea from the picture put together,",
+    "read simple community stories related to time,",
+    "team up with peers to respond to questions related to the stories,",
+    "collaborate to play games involving words and simple sentences related to time."
+   ],
+   "key_inquiry_questions": [
+    "How do we read to understand texts?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: This is promoted as the learner reorganises pieces of a broken picture to form a complete picture.\nCreativity and Imagination: This is enhanced as the learner embraces new ideas when playing games involving words and simple sentences related to time.",
+   "values": "Responsibility: This is developed as the learner takes initiative to read words and respond to questions from texts.\nUnity: This is achieved as the learner collaborates and cooperates with peers to play games on reorganising broken picture stories.",
+   "pcis": "Peer teaching: This is promoted as the learner assists peers in responding to questions related to the stories correctly.",
+   "links": "The learner can relate the concept of putting picture parts together to their learning of putting concepts together to form a whole in Mathematics Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.READIN.T5_READING_FOR_INFORMAT.a",
+     "letter": "a",
+     "text": "identify key messages in picture stories related to time for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.READIN.T5_READING_FOR_INFORMAT.b",
+     "letter": "b",
+     "text": "respond to questions on simple texts related to time for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.READIN.T5_READING_FOR_INFORMAT.c",
+     "letter": "c",
+     "text": "enjoy reading simple texts related to the theme for information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G1.WRITIN.T5_CREATIVE_EXPRESSION",
+   "number": "5.3.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Expression (Theme 5: Time (day, week and months))",
+   "sequence": 531,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Forming sentences",
+    "Creating pictures"
+   ],
+   "learning_experiences": [
+    "games to create names on time (days, week and moths), write names of different times of the days",
+    "and weeks as dictated,",
+    "combine jumbled-up words from cards to form correct sentences,",
+    "observe drawings and paintings describing different times of the day,",
+    "work with peers to describe the pictures in a paragraph,",
+    "team up to conduct a Pictionary session with peers to draw and paint different events at different times of the day,",
+    "display their pictures on the class gallery."
+   ],
+   "key_inquiry_questions": [
+    "Why are stories fun to hear?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: This is enhanced as the learner works jointly with peers to combine jumbled up words to form correct sentences.\nCreativity and Imagination: This is enhanced as the learner embraces new ideas to conduct a Pictionary session to draw and paint different events at different times of the day. 30",
+   "values": "Integrity: This is enhanced as the learner exhibits transparency by displaying their pictures on the class gallery for others to see. Unity: This is enhanced as the learner cooperates with peers to conduct a drawing and painting session.",
+   "pcis": "Social Cohesion: This is enhanced as the learner works and relates positively with peers as they describe the pictures and participate in a Pictionary session.",
+   "links": "The learner can apply their drawing skills to their learning of similar concepts in Creative Activities.",
+   "design_notes": "Second read left this for a person to confirm: not found on the captured pages: competencies.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G1.WRITIN.T5_CREATIVE_EXPRESSION.a",
+     "letter": "a",
+     "text": "order words to form clear sentences for effective communication",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INDI.G1.WRITIN.T5_CREATIVE_EXPRESSION.b",
+     "letter": "b",
+     "text": "create pictures to describe events at different times in sequence",
+     "status": "kicd_read"
+    },
+    {
+     "code": "INDI.G1.WRITIN.T5_CREATIVE_EXPRESSION.c",
+     "letter": "c",
+     "text": "appreciate the writing of texts for self-expression",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

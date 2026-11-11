@@ -6,7 +6,10 @@
 // validator (commands.js) and the same marking (markItem, the homework
 // marker), so what is tried here is what the real tutor drives. It follows the
 // approved session shape: it says it is an AI, warm-up on the prerequisite,
-// teach, guided practice, independent problem, wrap-up. When the child is
+// teach, guided practice, independent problem, wrap-up. It uses the teaching
+// moves the board supports (phase 1 of the rendering engine): it counts parts
+// with the child, draws an answer only after the child has given one, and
+// draws the key idea slowly (pace 'slow'). When the child is
 // wrong it diagnoses first: a follow-up whose wrong answers separate the
 // suspected misconceptions, then record_diagnosis with the evidence.
 //
@@ -31,48 +34,55 @@ const typed = (answer, wrong = [], accepts = []) => ({ kind: 'typed', cskill: EQ
 
 // Each beat: the steps, and the hidden question (if it asks one).
 const BEATS = {
+  // Count together (owner, 11 Nov 2026: count the parts with the child): HOREB counts the
+  // first eaten pieces aloud, one ring per spoken number, and the child carries on and
+  // says how many. It never counts them all before the child has had a go.
   open: () => ({
     steps: [
       { cmd: 'set_phase', phase: 'warmup' },
-      say('Hello. I am HOREB, an AI tutor. I am a computer program, not a person.'),
-      say('Today we will look at fractions that look different but are the same amount.'),
-      say('First, here is a chapati cut into four equal pieces.'),
-      { cmd: 'shape', id: 'chapati', kind: 'circle', parts: 4, shaded: 0, label: false, slot: 'top_left', on: 'chapati' },
-      say('Three of the pieces are eaten.'),
-      { cmd: 'shape', id: 'eaten', kind: 'circle', parts: 4, shaded: 3, label: false, slot: 'top_right', on: 'Three' },
-      { cmd: 'point', target: 'eaten', part: 3, on: 'eaten' },
-      { cmd: 'ask', id: 'w1', prompt: 'What fraction of the chapati is eaten?', form: 'fraction', expected: '3/4' },
+      say('Hello. I am HOREB, an AI tutor, a computer program, not a person. Today we look at fractions that look different but are the same amount.'),
+      say('Here is a chapati, cut into four equal pieces. Some of the pieces were eaten.'),
+      // Shaded in ink, so the counting rings (the scene's one colour, orange) stand out on it.
+      { cmd: 'shape', id: 'eaten', kind: 'circle', parts: 4, shaded: 3, label: false, slot: 'top_left', colour: 'ink', on: 'chapati' },
+      say('Count the eaten pieces with me. One. Two.'),
+      { cmd: 'highlight', target: 'eaten', part: 1, style: 'circle', on: 'One' },
+      { cmd: 'highlight', target: 'eaten', part: 2, style: 'circle', on: 'Two' },
+      say('Now you carry on counting. What fraction of the chapati was eaten?'),
+      { cmd: 'ask', id: 'w1', prompt: 'What fraction of the chapati was eaten?', form: 'fraction', expected: '3/4' },
       pause(),
     ],
     hidden: { w1: typed('3/4', [['1/4', 'other'], ['4/3', 'other']]) },
   }),
+  // The answer is drawn only now, after the child has answered: the last ring, and 3/4.
+  // The key idea (cutting each half in two) is drawn slowly.
   teach: (right) => ({
     steps: [
-      say(right ? 'Yes. Three of four equal pieces is three quarters.' : 'It is three quarters. Three pieces out of four equal pieces.'),
+      say(right ? 'Yes. Three of the four equal pieces. That is three quarters.' : 'Let us finish the count. Three pieces of four. That is three quarters.'),
+      { cmd: 'highlight', target: 'eaten', part: 3, style: 'circle', on: 'Three' },
+      { cmd: 'write_math', id: 'w1a', expr: 'frac(3,4)', slot: 'top_right', size: 'l', on: 'three quarters' },
       { cmd: 'set_phase', phase: 'teach' },
-      say('Now look at this bar. One half of it is shaded.'),
+      say('Now look at this bar. One half of it is shaded. Watch closely: I cut each half into two pieces.'),
       { cmd: 'clear', on: 'Now', delay_ms: -250 },
-      { cmd: 'fraction_bar', id: 'half', parts: 2, shaded: 1, label: true, slot: 'top', on: 'bar' },
-      say('Let us cut each piece into two smaller pieces.'),
-      { cmd: 'fraction_bar', id: 'quarters', parts: 4, shaded: 2, label: true, slot: 'middle', colour: 'green', on: 'cut' },
+      { cmd: 'fraction_bar', id: 'half', parts: 2, shaded: 1, label: true, slot: 'top', colour: 'orange', on: 'bar' },
+      { cmd: 'fraction_bar', id: 'quarters', parts: 4, shaded: 2, label: true, slot: 'middle', colour: 'orange', pace: 'slow', on: 'cut' },
       say('The shaded part is the same size. One half is the same as two quarters.'),
-      { cmd: 'highlight', target: 'quarters', part: 2, style: 'glow', on: 'same size' },
-      { cmd: 'write_math', id: 'eq1', expr: 'frac(1,2) = frac(2,4)', slot: 'bottom_left', size: 'l', on: 'One half' },
+      { cmd: 'write_math', id: 'eq1', expr: 'frac(1,2) = frac(2,4)', slot: 'bottom_left', size: 'l' },
     ],
     hidden: {},
     tail: [say('What happened to the top number and the bottom number?'), pause()],
   }),
   guided: (noticed) => ({
     steps: [
-      say(noticed ? 'Yes. Both numbers were multiplied by two.' : 'Look again. The bottom went from two to four. The top went from one to two.'),
-      { cmd: 'write_math', id: 'rule', expr: 'frac(1×2,2×2) = frac(2,4)', slot: 'bottom_right', colour: 'purple', on: noticed ? 'multiplied' : 'bottom' },
+      say(noticed ? 'Yes. Both numbers were multiplied by two. One times two is two, and two times two is four.' : 'Look again. The bottom went from two to four. The top went from one to two.'),
+      { cmd: 'write_math', id: 'rule', expr: 'frac(1×2,2×2) = frac(2,4)', slot: 'bottom_right', colour: 'orange', on: noticed ? 'multiplied' : 'bottom' },
       { cmd: 'set_phase', phase: 'guided' },
       say('Your turn. Here is one third.'),
       { cmd: 'clear', on: 'Your turn', delay_ms: -200 },
-      { cmd: 'fraction_bar', id: 'third', parts: 3, shaded: 1, label: true, slot: 'top', on: 'one third' },
-      say('Cut it into sixths. How many sixths are shaded?'),
-      { cmd: 'fraction_bar', id: 'sixths', parts: 6, shaded: 0, label: false, slot: 'middle', colour: 'green', on: 'sixths' },
-      { cmd: 'write_math', id: 'g1m', expr: 'frac(1,3) = frac(?,6)', slot: 'bottom_left', size: 'l', on: 'How many' },
+      { cmd: 'fraction_bar', id: 'third', parts: 3, shaded: 1, label: true, slot: 'top', colour: 'orange', on: 'one third' },
+      say('Under it, the same bar is cut into six equal pieces. These are sixths.'),
+      { cmd: 'fraction_bar', id: 'sixths', parts: 6, shaded: 0, label: false, slot: 'middle', colour: 'orange', on: 'sixths' },
+      say('One third is how many sixths? Look at the bars.'),
+      { cmd: 'write_math', id: 'g1m', expr: 'frac(1,3) = frac(?,6)', slot: 'bottom_left', size: 'l', on: 'Look' },
       { cmd: 'ask', id: 'g1', prompt: 'One third is how many sixths?', form: 'number', expected: '2' },
       pause(),
     ],
@@ -84,8 +94,9 @@ const BEATS = {
     steps: [
       say(seen ? `I see you wrote ${seen}. Let us try one more before we check.` : `You wrote ${answer}. Let us try one more before we check.`),
       { cmd: 'clear', on: 'one more', delay_ms: -200 },
-      { cmd: 'write_math', id: 'p1m', expr: 'frac(2,4) = frac(?,8)', slot: 'top_left', size: 'l', on: 'one more' },
-      { cmd: 'underline', target: 'p1m', on: 'check' },
+      say('Two quarters is how many eighths? Look at the top and the bottom.'),
+      { cmd: 'write_math', id: 'p1m', expr: 'frac(2,4) = frac(?,8)', slot: 'top_left', size: 'l', on: 'Two quarters' },
+      { cmd: 'underline', target: 'p1m', on: 'bottom' },
       { cmd: 'ask', id: 'p1', prompt: 'Two quarters is how many eighths?', form: 'number', expected: '4' },
       pause(),
     ],
@@ -95,12 +106,16 @@ const BEATS = {
     steps: [
       { cmd: 'record_diagnosis', skill: EQ, misconception: ADD, confidence: 'high', evidence, next: 'reteach', ...(snapshot ? { snapshot } : {}) },
       say(seen ? `Thank you. In ${seen} you added the same number to the top and the bottom.` : 'Thank you. I think you added the same number to the top and the bottom.'),
-      say('Adding changes the amount. Look at two thirds and five sixths.'),
+      say('Adding changes the amount. Look at two thirds.'),
       { cmd: 'clear', on: 'Look', delay_ms: -200 },
-      { cmd: 'fraction_bar', id: 'cmp', parts: 3, shaded: 2, second_bar: { parts: 6, shaded: 5 }, label: true, slot: 'top', on: 'two thirds' },
-      { cmd: 'highlight', target: 'cmp', bar: 2, part: 5, style: 'box', on: 'five sixths' },
-      say('Five sixths is more. So we multiply both numbers by the same number.'),
-      { cmd: 'write_math', id: 'r1', expr: 'frac(2×2,3×2) = frac(4,6)', slot: 'middle', size: 'l', on: 'multiply' },
+      // Both bars shaded in the scene's one colour: the same colour means the same kind of thing (an
+      // amount of the same whole), so the eye compares the two shaded lengths directly and sees
+      // five sixths reach further. Hatching one in ink would read as a different kind of thing.
+      { cmd: 'fraction_bar', id: 'thirds', parts: 3, shaded: 2, label: true, slot: 'top', colour: 'orange', on: 'Look', delay_ms: 300 },
+      say('Two of the three equal pieces are shaded. Under it, five sixths.'),
+      { cmd: 'fraction_bar', id: 'sixths5', parts: 6, shaded: 5, label: true, slot: 'middle', colour: 'orange', on: 'five sixths' },
+      say('Five of the six pieces are shaded. Five sixths is more than two thirds. So we multiply both numbers by the same number.'),
+      { cmd: 'write_math', id: 'r1', expr: 'frac(2×2,3×2) = frac(4,6)', slot: 'bottom', size: 'l', on: 'multiply' },
       { cmd: 'set_phase', phase: 'guided' },
       { cmd: 'ask', id: 'g2', prompt: 'Now try: one half is how many sixths?', form: 'number', expected: '3' },
       pause(),
@@ -113,8 +128,9 @@ const BEATS = {
       { cmd: 'set_phase', phase: 'independent' },
       say('Here is one for you to do on your own.'),
       { cmd: 'clear', on: 'Here', delay_ms: -200 },
-      { cmd: 'write_text', id: 'task', text: 'Mama cuts a cake into 12 equal pieces.', slot: 'top', size: 'm', on: 'one' },
-      { cmd: 'write_math', id: 'i1m', expr: 'frac(3,4) = frac(?,12)', slot: 'middle', size: 'l', on: 'own' },
+      say('Mama cuts a cake into twelve equal pieces. Three quarters of the cake is how many twelfths?'),
+      { cmd: 'write_text', id: 'task', text: 'Mama cuts a cake into 12 equal pieces.', slot: 'top', size: 'm', on: 'Mama' },
+      { cmd: 'write_math', id: 'i1m', expr: 'frac(3,4) = frac(?,12)', slot: 'middle', size: 'l', on: 'twelfths' },
       { cmd: 'ask', id: 'i1', prompt: 'Three quarters is how many twelfths?', form: 'number', expected: '9' },
       pause(60),
     ],
@@ -125,7 +141,7 @@ const BEATS = {
       say(right ? 'Yes, nine twelfths. You did that on your own.' : 'Let us look at that one again next time.'),
       { cmd: 'set_phase', phase: 'wrapup' },
       say('Today you learned that equivalent fractions are the same amount.'),
-      { cmd: 'write_text', id: 'learned', text: 'Multiply the top and bottom by the same number.', slot: 'bottom', size: 's', colour: 'green', on: 'same amount' },
+      { cmd: 'write_text', id: 'learned', text: 'Multiply the top and bottom by the same number.', slot: 'bottom', size: 's', colour: 'orange', on: 'same amount' },
       say('Thank you for working with me. Goodbye for now.'),
       { cmd: 'end_session', summary: right ? 'Equivalent fractions: added to top and bottom at first, then multiplied correctly after reteaching, and solved 3/4 = 9/12 alone.' : 'Equivalent fractions: added to top and bottom; reteaching started, needs another session.' },
     ],

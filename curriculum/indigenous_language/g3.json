@@ -1,0 +1,929 @@
+{
+ "framework": "cbc",
+ "subject_key": "indigenous_language",
+ "grade": 3,
+ "source": "KICD Creative Activities, IL G1-3 - Revised.pdf, First Published in 2021; Revised in 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 15,
+  "outcomes": 45,
+  "lessons": 60,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "INDI.G3.LISTEN.T1_SELF_EXPRESSION",
+   "number": "1.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Self expression (Theme 1: Introducing self and others)",
+   "sequence": 111,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Words used to introduce self formally",
+    "Expressions to introduce self"
+   ],
+   "learning_experiences": [
+    "collaborate with peers to listen to recorded clips on introducing self and others,",
+    "introduce self and others formally to peers in class,",
+    "listen to conversations from a radio lesson about the importance of introducing self and others,",
+    "respond to questions from the radio lesson with peers,",
+    "collaborate with peers to role play a short skit where they introduce themselves and their friends to others,",
+    "conduct a peer review to help each other improve on their introductions."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to introduce self and others?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced as the learner speaks engagingly when introducing self and others formally.\nLearning to Learn: This is developed as the learner engages in collective learning by conducting a peer review to help each other improve on their introductions.",
+   "values": "Unity: This is enhanced as the learner collaborates with peers to role play a short skit where they introduce themselves and their friends to others.\nSocial Justice: This is promoted as the learner fosters inclusivity of ideas when responding to questions from the radio lesson with peers.",
+   "pcis": "Nationalism: This is enhanced as the learner practises ways of introducing self and others formally to enhance social relationships.",
+   "links": "The learner can relate the use of expressions to introduce self and others to their learning of similar concepts in English Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     6,
+     7
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.LISTEN.T1_SELF_EXPRESSION.a",
+     "letter": "a",
+     "text": "identify simple expressions usedwhen introducing self and others",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.LISTEN.T1_SELF_EXPRESSION.b",
+     "letter": "b",
+     "text": "apply appropriate expressions in introductions for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.LISTEN.T1_SELF_EXPRESSION.c",
+     "letter": "c",
+     "text": "appreciate using expressions to introduce self and others",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.READIN.T1_INDEPENDENT_READING",
+   "number": "1.2.1",
+   "strand": "Reading",
+   "sub_strand": "Independent Reading (Theme 1: Introducing self and others)",
+   "sequence": 121,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Simple texts",
+    "Answering questions"
+   ],
+   "learning_experiences": [
+    "read a passage on the theme on introduction of self and others,",
+    "work with peers to practise identifying the main idea and specific information (e.g. characters) from a passage,",
+    "collaborate with peers to answer questions based on the texts read,",
+    "identify vocabulary related to the theme from a text,",
+    "list the vocabulary on charts and display them on the talking wall,",
+    "form a reading club/group and select level readers to read with peers for enjoyment."
+   ],
+   "key_inquiry_questions": [
+    "What are the benefits of reading on your own?",
+    "How do you identify the main idea from a passage?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced as the learner contributes to group decision making when working with peers to practise identifying the main idea and specific information.\nLearning to Learn: This is developed as the learner enhances collective learning by forming a reading club/group to read with peers for enjoyment.",
+   "values": "Responsibility: This is acquired as the learner diligently works with peers to list the vocabulary on charts and display on the talking wall.\nRespect: This is enhanced as the learner demonstrates tolerance for individual differences as they collaborate with peers to answer questions based on the texts read.",
+   "pcis": "Nationalism: This is enhanced as the learner works with peers to form reading clubs/groups to develop and grow a reading culture for enjoyment.",
+   "links": "The learner can relate the concept of reading for enjoyment to their learning of similar concepts in English and Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     8,
+     9
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.READIN.T1_INDEPENDENT_READING.a",
+     "letter": "a",
+     "text": "read simple texts related to the theme for information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.READIN.T1_INDEPENDENT_READING.b",
+     "letter": "b",
+     "text": "answer questions based on texts for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.READIN.T1_INDEPENDENT_READING.c",
+     "letter": "c",
+     "text": "develop an interest in reading for pleasure",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.WRITIN.T1_SENTENCE_FORMATION",
+   "number": "1.3.1",
+   "strand": "Writing",
+   "sub_strand": "Sentence Formation (Theme 1: Introducing self and others)",
+   "sequence": 131,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Forming sentences"
+   ],
+   "learning_experiences": [
+    "collaborate with peers to identify words related to introducing self and others from charts,",
+    "team up to arrange word cards to form simple sentences about introducing self and others,",
+    "use thematic words to form simple sentences about introducing self,",
+    "use digital devices to play ‘drag and drop’ games to re-arrange jumbled-up sentences to form meaningful sentences on introducing self and others,",
+    "work with peers to complete sentences on the theme,",
+    "participate in fishing games to look for and arrange word cards to form simple sentences about introducing self and others with peers."
+   ],
+   "key_inquiry_questions": [
+    "How do we arrange words to form sentences?"
+   ],
+   "core_competences": "Citizenship: This is developed as the learner demonstrates tolerance when teaming up to arrange word cards to form simple sentences about introducing self and others.\nLearning to Learn: This is enhanced as the learner engages in collective learning by participating in fishing games to fish and arrange word cards to form simple sentences.",
+   "values": "Responsibility: This is promoted as the learner handles digital devices carefully to play the ‘drag and drop’ games from online platforms.\nUnity: This is enhanced as the learner cooperates with peers to engage in a fishing game to form simple sentences.",
+   "pcis": "Ethnic and racial relations: These are promoted as the learner gets to initiate interactions with others through introductions for co-existence.",
+   "links": "The learner can relate the concept of sentence formation to their learning of language use in English and Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     10,
+     11
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.WRITIN.T1_SENTENCE_FORMATION.a",
+     "letter": "a",
+     "text": "arrange words to form sentences for expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.WRITIN.T1_SENTENCE_FORMATION.b",
+     "letter": "b",
+     "text": "write simple sentences based on the theme for communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.WRITIN.T1_SENTENCE_FORMATION.c",
+     "letter": "c",
+     "text": "enjoy forming sentences correctly for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.LISTEN.T2_STORYTELLING",
+   "number": "2.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Storytelling (Theme 2: The community-occupations)",
+   "sequence": 211,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vocabulary building",
+    "Re-telling stories"
+   ],
+   "learning_experiences": [
+    "listen to stories related to occupations in the community from recorded clips, a guest speaker or teacher,",
+    "identify words related to types of occupations from the story,",
+    "respond to oral questions from the story,",
+    "work jointly with peers to use creative words and expressions to retell stories in the correct sequence,",
+    "with peers, role play a skit (with a narrator) on different occupations and jobs in the community,",
+    "chant singing games on occupations and jobs,",
+    "participate in an interclass career fair to showcase various occupations and jobs."
+   ],
+   "key_inquiry_questions": [
+    "Why are occupations important?",
+    "How do we tell stories in sequence?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed asthe learner engages actively to use creative words and expressions to retell stories in correct sequence.\nCritical thinking and Problem solving: This is developed as the learner explores views to respond to oral questions from the story.",
+   "values": "Respect: This is developed as the learner ensures positive regard for others as they role play a skit (with a narrator) on different occupations and jobs in the community.\nResponsibility: This is promoted as the learner diligently takes up assigned roles when participating in an interclass career fair to showcase various occupations and jobs.",
+   "pcis": "Career Education: This is promoted as the learner talks about occupations and jobs in the community.",
+   "links": "The learner can relate the concept of storytelling to their learning of creative recitations in Creative Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     12,
+     13
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.LISTEN.T2_STORYTELLING.a",
+     "letter": "a",
+     "text": "identify words related to the types of occupations in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.LISTEN.T2_STORYTELLING.b",
+     "letter": "b",
+     "text": "re-tell a story creatively on occupations in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.LISTEN.T2_STORYTELLING.c",
+     "letter": "c",
+     "text": "develop an interest in storytelling for enjoyment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.READIN.T2_READING_ALOUD",
+   "number": "2.2.1",
+   "strand": "Reading",
+   "sub_strand": "Reading Aloud (Theme 2: The community-occupations)",
+   "sequence": 221,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Pronouncing words",
+    "Simple stories"
+   ],
+   "learning_experiences": [
+    "work with peers to practise pronouncing words on the theme fluently and clearly,",
+    "team up to practise pronouncing target words correctly,",
+    "collaborate to use word attack strategiesto read simple texts on the theme correctly,",
+    "select an appropriate story book from the reading corner or library,",
+    "read the stories aloud and at the correct speed,",
+    "work jointly to peer review one another’s reading by giving fair and honest feedback."
+   ],
+   "key_inquiry_questions": [
+    "Why isit important to read stories?",
+    "How can we ensure we read well?"
+   ],
+   "core_competences": "Learning to Learn: This is developed as the learner practises pronouncing words correctly, as they read sentences about occupations in the community correctly and give feedback.\nCitizenship: This is promoted as the learner engages in constructive dialogue when peer reviewing one another’s reading by giving fair and honest feedback.",
+   "values": "Responsibility: This is acquired as the learner takes care of storybooks or resources selected from the reading corner or library for reading.\nUnity: This is enhanced as the learner collaboratively works with peers to practise reading simple stories about occupations in the community fluently and clearly.",
+   "pcis": "Nationalism: This is promoted as the learner interacts with various stories on occupations in the community to appreciate each person’s role in the community/nation building.",
+   "links": "The learner can relate the word attack skills and library reading skills to their learning in English and Kiswahili Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     14,
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.READIN.T2_READING_ALOUD.a",
+     "letter": "a",
+     "text": "pronounce words in sentencesrelated to the theme for accuracy",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.READIN.T2_READING_ALOUD.b",
+     "letter": "b",
+     "text": "read simple stories fluently and clearly for communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.READIN.T2_READING_ALOUD.c",
+     "letter": "c",
+     "text": "develop an interest in reading with correct pronunciation",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.WRITIN.T2_WRITING_SIMPLE_STORI",
+   "number": "2.3.1",
+   "strand": "Writing",
+   "sub_strand": "Writing Simple Stories (Theme 2: The community-occupations)",
+   "sequence": 231,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Spelling",
+    "Correct word spacing",
+    "Shaping of letters",
+    "Re-writing simple stories"
+   ],
+   "learning_experiences": [
+    "work jointly to trace and model letters correctly,",
+    "team up to write thematic words using correct spacing and shaping of letters,",
+    "write words dictated by the teacher,",
+    "neatly copy simple stories about occupations in the community,",
+    "review their stories for correct spelling, spacing and shaping of letters,",
+    "collaborate with peers to organise their best stories in the class portfolio."
+   ],
+   "key_inquiry_questions": [
+    "What is the importance of spacing words when writing? 2.Why is it important to spell words correctly?"
+   ],
+   "core_competences": "Communication and Collaboration: This is promoted as the learner engages actively to trace and model letters correctly.\nSelf-efficacy: This is enhanced as the learner effectively prioritises and orders tasks to collaborate with peers to organise their best stories in the class portfolio.",
+   "values": "Respect: This is developed as the learner appreciates peers as they review their stories for correct spelling, spacing and shaping of letters.\nLove: This is acquired as the learner portrays a caring attitude when reviewing their stories for correct spelling, spacing and shaping of letters.",
+   "pcis": "Career guidance: This is enhanced as the learner is able to identify and take an interest in various occupations in the community as they grow up.",
+   "links": "The learner can relate and use creative writing skills in their learning for effective communication in Kiswahili and English Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.WRITIN.T2_WRITING_SIMPLE_STORI.a",
+     "letter": "a",
+     "text": "spell words in sentences correctly for accuracy",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.WRITIN.T2_WRITING_SIMPLE_STORI.b",
+     "letter": "b",
+     "text": "re-write simple stories using correct spacing and shaping of letters for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.WRITIN.T2_WRITING_SIMPLE_STORI.c",
+     "letter": "c",
+     "text": "develop an interest in writing simple stories about topical issues for enjoyment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.LISTEN.T3_PRESENTATION_SKILLS",
+   "number": "3.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Presentation Skills (Theme 3: Wild animals)",
+   "sequence": 311,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Audience awareness skills − gestures − tonal variation − facial expressions − eye contact"
+   ],
+   "learning_experiences": [
+    "share their ideas about various wild animals in the community,",
+    "identify presentation skills (use of gestures, tonal variation, facial expressions, eye contact),",
+    "listen to a resource person or audio-visual clip on stories about wild animals,",
+    "team up to present an oral narrative or recite a poem on wild animals using correct articulation, gestures and voice projection,",
+    "use digital devices to record themselves as they make presentations,",
+    "participate in an inter-class public speaking contest to strengthen their public presentation and audience awareness skills."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to use gestures when making a presentation?",
+    "How can we protect animals?"
+   ],
+   "core_competences": "Communication and Collaboration: This is promoted as the learner contributes to group decision making to talk about types of wild animals in the community.\nSelf- efficacy: This is enhanced as the learner shows defining personal skills by participating in an inter-class public speaking contest.",
+   "values": "Patriotism: This is developed as the learner recognises the efforts of others when sharing about wild animals.\nResponsibility: This is acquired as the learner handles digital devices carefully when recording themselves as they make presentations.",
+   "pcis": "Digital awareness: This is acquired as the learner uses digital devices to record themselves as they make presentations.",
+   "links": "The learner can relate the audience awareness skills learnt to their learning of performance and presentation skills in Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.LISTEN.T3_PRESENTATION_SKILLS.a",
+     "letter": "a",
+     "text": "identify non-verbal cues used during presentations for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.LISTEN.T3_PRESENTATION_SKILLS.b",
+     "letter": "b",
+     "text": "make a presentation using audience awareness skills for communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.LISTEN.T3_PRESENTATION_SKILLS.c",
+     "letter": "c",
+     "text": "embrace the importance of presentation skills for lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.READIN.T3_READING_COMPREHENSIO",
+   "number": "3.2.1",
+   "strand": "Reading",
+   "sub_strand": "Reading Comprehension (Theme 3: Wild animals)",
+   "sequence": 321,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vocabulary building",
+    "Responding to comprehension questions"
+   ],
+   "learning_experiences": [
+    "practise locating thematic words from texts on wild animals,",
+    "make a creative personal word bank based on vocabulary (names of wild animals),",
+    "team up to read short passages related to the theme,",
+    "respond to direct questions based on the passages,",
+    "give personal opinions about stories read on wild animals,",
+    "team up to identify favourite animals and give reasons why,",
+    "team up with peers to make creative drawings and mosaics on wild animals and display in class,",
+    "collaborate with peers to form a reading club and collect various simple stories about wild animals from the community and other sources."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to read passages fluently?",
+    "How can we protect ourselves from wild animals?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner engages actively with facts and examples to identify favourite animals and give reasons why.\nCreativity and Imagination: This is cultivated as the learner embraces creative ideas to create a personal word bank based on vocabulary (names of wild animals).",
+   "values": "Responsibility: This is enhanced as the learner exhibits a self-driven attitude to form a reading club and collect various simple stories about wild animals.\nIntegrity: This is enhanced as the learner gives their own truthful opinion on stories read about wild animals.",
+   "pcis": "Animal welfare education: This is enhanced as the learner interacts with texts about the different types of wild animals in the environment.",
+   "links": "The learner can relate the knowledge on wild animals to similar concepts learnt in Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.READIN.T3_READING_COMPREHENSIO.a",
+     "letter": "a",
+     "text": "create personal collections of thematic words from texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.READIN.T3_READING_COMPREHENSIO.b",
+     "letter": "b",
+     "text": "respond to questions from passages about wild animals for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.READIN.T3_READING_COMPREHENSIO.c",
+     "letter": "c",
+     "text": "embrace reading comprehension texts for lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.WRITIN.T3_SPELLING_RULES_OF_SP",
+   "number": "3.3.1",
+   "strand": "Writing",
+   "sub_strand": "Spelling-Rules of Spelling (Theme 3: Wild animals)",
+   "sequence": 331,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Spelling words",
+    "Short paragraphs-neatness and legibility"
+   ],
+   "learning_experiences": [
+    "team up to spell new words related to wild animals correctly,",
+    "work jointly to fill in word puzzles on vocabulary related to the theme,",
+    "re-write short paragraphs legibly with correctspelling,",
+    "sort words related to wild animals into well spelt and misspelt words,",
+    "team up to make corrections on misspelt words,",
+    "engage in digital spelling games with peers,",
+    "collaborate with peers to participate in class language games to form words using letter cut outs and scrabble."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to spell words correctly?",
+    "How does the spelling of words influence meaning?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner engages in group decision making when working jointly to fill in word puzzles on vocabulary related to the theme.\nLearning to Learn: This is promoted as the learner builds on their own learning experiences by using a range of spelling strategies to correct misspelt words.",
+   "values": "Respect: This is achieved as the learner appreciates peer’s opinions as they brainstorm on new words related to wild animals.\nUnity: This is enhanced as the learner works harmoniously with peers to participate in class language games to form words using letter cut outs and scrabble.",
+   "pcis": "Environmental Education: This is enhanced as the learner is exposed to information on wild animals and their habitat.",
+   "links": "The learner can relate the concept of spelling to their learning of similar concepts in Kiswahili and English Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.WRITIN.T3_SPELLING_RULES_OF_SP.a",
+     "letter": "a",
+     "text": "spell target words accurately for communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.WRITIN.T3_SPELLING_RULES_OF_SP.b",
+     "letter": "b",
+     "text": "re-write short paragraphs on wild animals using correct spelling",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.WRITIN.T3_SPELLING_RULES_OF_SP.c",
+     "letter": "c",
+     "text": "value the importance of accurate spelling in the understanding of written texts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.LISTEN.T4_ACTIVE_LISTENING",
+   "number": "4.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Active Listening (Theme 4: Road safety)",
+   "sequence": 411,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Main ideas",
+    "Retelling experiences"
+   ],
+   "learning_experiences": [
+    "work jointly to observe pictures on road safety and talk about them with peers,",
+    "listen to passages on road safety (features of a tarmac road such as bus stops, traffic lights)",
+    "work jointly to identify the main idea from the passage listened to,",
+    "share personal experiences with peers on their use of the road and observing road safety,",
+    "collaborate with peers to make creative drawings and mosaics on road safety,",
+    "display the posters and mosaics on the class gallery for awareness creation."
+   ],
+   "key_inquiry_questions": [
+    "Why do we observe road safety?",
+    "How can we the get main ideas from texts?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced as the learner shares personal experiences with peers on their use of the road and road safety.\nCreativity and Imagination: This is achieved as the learner embraces creative ideas to make creative drawings and mosaic on road safety.",
+   "values": "Peace: This is enhanced as the learner displays tolerance when presenting the posters and mosaics on the class gallery for awareness creation.\nSocial Justice: This is developed as the learner accords equal opportunities to peers when sharing personal experiences with peers on their use of the road and road safety.",
+   "pcis": "Child road safety: This is promoted as the learner gains knowledge on road safety to prevent possible accidents.",
+   "links": "The learner can relate the knowledge acquired on road safety to their learning in Environmental Activities. 228 100",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.LISTEN.T4_ACTIVE_LISTENING.a",
+     "letter": "a",
+     "text": "identify the main idea from aural texts on road safety",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.LISTEN.T4_ACTIVE_LISTENING.b",
+     "letter": "b",
+     "text": "retell experiences related to the theme for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.LISTEN.T4_ACTIVE_LISTENING.c",
+     "letter": "c",
+     "text": "desire to develop active listening skills for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.READIN.T4_READING_FOR_FLUENCY",
+   "number": "4.2.1",
+   "strand": "Reading",
+   "sub_strand": "Reading for Fluency (Theme 4: Road safety)",
+   "sequence": 421,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vocabulary building-road safety",
+    "Reading speed"
+   ],
+   "learning_experiences": [
+    "observe road sign pictures on charts and interpret them with peers,",
+    "read a comprehension passage based on the theme (features of a tarmac road such as bus stops, traffic lights),",
+    "pick out road safety measures from the comprehension passage,",
+    "take turns to read a paragraph at the correct speed,",
+    "work jointly to conduct a readers’ theatre for fluency and peer review,",
+    "role play a speech at a school function on road safety while reading texts fluently and at the correct speed."
+   ],
+   "key_inquiry_questions": [
+    "Why should we read at the right speed?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner participates actively in a reader’s theatre to practise reading fluently and gives peer reviews.\nCritical thinking and Problem solving: This is enhanced as the learner analyses concepts by logical reasoning when observing road sign pictures on charts and interpreting them with peers.",
+   "values": "Responsibility: This is developed as the learner diligently takes their turns during the reading comprehension activity in class.\nLove: This is promoted as the learner gives sincere feedback on peer’s work during the review session.",
+   "pcis": "Social cohesion: This is enhanced as the learner works harmoniously with peers to read passages in turns and participates in the readers’ theatre.",
+   "links": "The learner can apply the fluency strategies to their reading of texts in Kiswahili and English Language Activities. 230 102",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.READIN.T4_READING_FOR_FLUENCY.a",
+     "letter": "a",
+     "text": "identify road safety measures from a comprehension passage",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.READIN.T4_READING_FOR_FLUENCY.b",
+     "letter": "b",
+     "text": "read a passage on road safety with the correct speed for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.READIN.T4_READING_FOR_FLUENCY.c",
+     "letter": "c",
+     "text": "desire to acquire reading skills for self- fulfilment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.WRITIN.T4_WRITING_TO_GIVE_INFO",
+   "number": "4.3.1",
+   "strand": "Writing",
+   "sub_strand": "Writing to Give Information (Theme 4: Road safety)",
+   "sequence": 431,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Creating coherence in paragraphs",
+    "Neatness and legibility"
+   ],
+   "learning_experiences": [
+    "engage in a fishing game to practise combining short sentences to create a paragraph about road safety in a logical sequence,",
+    "take up a challenge with peers to write sentences legibly and neatly,",
+    "peer review each other’s work for constructive feedback,",
+    "organise their best written paragraph in the class portfolio,",
+    "work jointly to take part in a writing contest to organise jumbled up sentences to form sequenced paragraphs."
+   ],
+   "key_inquiry_questions": [
+    "Why should we write neatly and legibly?"
+   ],
+   "core_competences": "Digital Literacy: This is enhanced as the learner interacts with technology when engaging in a fishing game to practise combining short sentences to create a paragraph about road safety in logical sequence.\nLearning to Learn: This is promoted as the learner builds on their own learning experiences to take up a challenge with peers to write sentences legibly and neatly.",
+   "values": "Unity: This is enhanced as the learner cooperates with peers to review one another’s work for constructive feedback.\nLove: This is developed as the learner portrays a caring attitude when playing language games and assists peers in performing challenging tasks.",
+   "pcis": "Safety and security: This is achieved as the learner writes paragraphs on road safety which is a way of creating awareness.",
+   "links": "The learner can relate paragraph writing skills acquired to similar concepts learnt in Kiswahili and English Language Activities. 232 104",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     28,
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.WRITIN.T4_WRITING_TO_GIVE_INFO.a",
+     "letter": "a",
+     "text": "re-organise sentences to form a coherent paragraph for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.WRITIN.T4_WRITING_TO_GIVE_INFO.b",
+     "letter": "b",
+     "text": "write a paragraph legibly and neatly for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.WRITIN.T4_WRITING_TO_GIVE_INFO.c",
+     "letter": "c",
+     "text": "value the importance of writing coherently to give information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.LISTEN.T5_EXPRESSING_SELF_CREA",
+   "number": "5.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Expressing Self Creatively (Theme 5: Seasons of the year)",
+   "sequence": 511,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Vocabulary building- seasons of the year",
+    "Solving riddles"
+   ],
+   "learning_experiences": [
+    "listen to a guest speaker make a presentation on different seasons of the year,",
+    "pick out the various seasons mentioned in the presentation,",
+    "prepare flashcards with the various seasons and display them in class,",
+    "answer oral questions based on oral texts listened to,",
+    "participate in a riddling session with peers,",
+    "work collaboratively to collect more riddles from the community,",
+    "team up with peers to create a class riddle collection and organise in a class portfolio."
+   ],
+   "key_inquiry_questions": [
+    "How can we solve riddles accurately?",
+    "Why are riddles important?"
+   ],
+   "core_competences": "Learning to Learn: This is enhanced as the learner is motivated to learn continuously when listening to a guest speaker make a presentation on different seasons of the year.\nCritical thinking and Problem solving: This is achieved as the learner analyses concepts when participating in a riddling session with peers.",
+   "values": "Social Justice: This is promoted as the learner gives others equal opportunities to participate in a riddling session.\nIntegrity: This is enhanced as the learner displays transparency by preparing flashcards with various seasons and displaying them in class for all to see.",
+   "pcis": "Climate change issues: This is promoted as the learner interacts with various sources to acquire knowledge on the seasons of the year.",
+   "links": "The learner can relate the concept of seasons of the year to their learning in Environmental Activities. 234 106",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.LISTEN.T5_EXPRESSING_SELF_CREA.a",
+     "letter": "a",
+     "text": "identify seasons of the year for information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.LISTEN.T5_EXPRESSING_SELF_CREA.b",
+     "letter": "b",
+     "text": "solve riddles on the theme for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.LISTEN.T5_EXPRESSING_SELF_CREA.c",
+     "letter": "c",
+     "text": "appreciate riddles in communication for lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.READIN.T5_READING_FOR_INFORMAT",
+   "number": "5.2.1",
+   "strand": "Reading",
+   "sub_strand": "Reading for Information (Theme 5: Seasons of the year)",
+   "sequence": 521,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Simple texts",
+    "Comprehension questions"
+   ],
+   "learning_experiences": [
+    "observe pictures based on the theme with peers and talk about them,",
+    "conduct a reader’s theatre on texts based on the theme,",
+    "work jointly to answer comprehension questions,",
+    "use digital devices to find information about seasons and activities of the year,",
+    "collaborate with peers to prepare a painting or mosaic creation on the theme,",
+    "display their artistic works during indigenous languages festivals and school events."
+   ],
+   "key_inquiry_questions": [
+    "What materials do you enjoy reading?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner engages actively when answering comprehension questions.\nDigital Literacy: This is enhanced as the learner interacts with technology when using digital devices to find information about seasons and activities of the year.",
+   "values": "Unity: This is enhanced as the learner collaboratively works with others to prepare a painting or mosaic creation on the theme.\nSocial Justice: This is developed as each learner is given an equal opportunity to read a passage during the reader’s theatre.",
+   "pcis": "Environmental awareness: This is promoted as the learner interacts with texts on various seasons of the year and activities carried out in those seasons.",
+   "links": "The learner can apply the reading strategies acquired in their reading sessions in English and Kiswahili Language Activities. 236 108",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.READIN.T5_READING_FOR_INFORMAT.a",
+     "letter": "a",
+     "text": "read a simple text about seasons and activities of the year with accuracy",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.READIN.T5_READING_FOR_INFORMAT.b",
+     "letter": "b",
+     "text": "respond to questions based on a text for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.READIN.T5_READING_FOR_INFORMAT.c",
+     "letter": "c",
+     "text": "develop an interest in reading simple texts for enjoyment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "INDI.G3.WRITIN.T5_CREATIVE_WRITING",
+   "number": "5.3.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Writing (Theme 5: Seasons of the year)",
+   "sequence": 531,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Short poems"
+   ],
+   "learning_experiences": [
+    "copy short sentences from charts using correct spacing and shaping of letters,",
+    "draft and arrange points in sequence about the seasons of the year,",
+    "proof read the points they have written about seasons of the year for each other and give feedback,",
+    "collaborate with peers to create short poems about the seasons of the year,",
+    "publish the simple poems composed in magazines or the school library collection,",
+    "stage their poems during school events."
+   ],
+   "key_inquiry_questions": [
+    "Why are poems important?"
+   ],
+   "core_competences": "Creativity and Imagination: This is enhanced as the learner embraces creative ideas to compose short poems about seasons of the year with peers.\nLearning to Learn: This is enhanced as the learner publishes the simple poems composed in magazines or the school library collection.",
+   "values": "Integrity: This is developed as the learner honestly gives feedback during peer review sessions and helps others to improve on their work.\nResponsibility: This is enhanced as the learner stages their poems during school events.",
+   "pcis": "Climate Change: The concept of climate change is addressed as the learner appreciates changing weather patterns that affect livelihoods.",
+   "links": "The learner can apply the concept of creative writing to their learning of writing literature pieces in Creative Arts. 238 110",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "INDI.G3.WRITIN.T5_CREATIVE_WRITING.a",
+     "letter": "a",
+     "text": "compose short sentences about the seasons of the year",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.WRITIN.T5_CREATIVE_WRITING.b",
+     "letter": "b",
+     "text": "create short poems about seasons using vocabulary related to the seasons of the year",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.WRITIN.T5_CREATIVE_WRITING.c",
+     "letter": "c",
+     "text": "acknowledge the importance of poems for cultural awareness",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

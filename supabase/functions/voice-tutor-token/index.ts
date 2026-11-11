@@ -20,6 +20,7 @@ var DRAWN = ["write_text", "write_math", "fraction_bar", "number_line", "shape",
 var MARKS = ["highlight", "underline", "point"];
 var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "pause_for_child", "end_session"];
 var TIMED = [...DRAWN, ...MARKS, "erase", "clear"];
+var PACES = ["slow"];
 var S = (props, required) => ({ type: "object", properties: props, required, additionalProperties: false });
 var T = { type: "string" };
 var I = { type: "integer" };
@@ -27,16 +28,17 @@ var N = { type: "number" };
 var B = { type: "boolean" };
 var E = (list) => ({ type: "string", enum: list });
 var timing = { on: T, delay_ms: I };
+var drawn = { ...timing, pace: E(PACES) };
 var shadedSchema = { anyOf: [I, { type: "array", items: I }] };
 var C = (cmd, props, required) => S({ cmd: { type: "string", const: cmd }, ...props }, ["cmd", ...required]);
 var STEP_SCHEMAS = [
   C("say", { text: T }, ["text"]),
-  C("write_text", { id: T, text: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...timing }, ["id", "text", "slot"]),
-  C("write_math", { id: T, expr: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...timing }, ["id", "expr", "slot"]),
-  C("fraction_bar", { id: T, parts: I, shaded: shadedSchema, second_bar: S({ parts: I, shaded: shadedSchema }, ["parts", "shaded"]), label: B, slot: E(SLOTS), colour: E(COLOURS), ...timing }, ["id", "parts", "shaded", "slot"]),
-  C("number_line", { id: T, from: I, to: I, divisions: I, marks: { type: "array", items: S({ value: N, label: T, style: E(["dot", "arrow"]) }, ["value"]) }, jumps: { type: "array", items: S({ from: N, to: N }, ["from", "to"]) }, slot: E(SLOTS), ...timing }, ["id", "from", "to", "divisions", "slot"]),
-  C("shape", { id: T, kind: E(SHAPE_KINDS), parts: I, shaded: shadedSchema, label: B, slot: E(SLOTS), colour: E(COLOURS), ...timing }, ["id", "kind", "parts", "shaded", "slot"]),
-  C("plot_points", { id: T, x_axis: S({ from: I, to: I, name: T }, ["from", "to"]), y_axis: S({ from: I, to: I, name: T }, ["from", "to"]), points: { type: "array", items: S({ x: N, y: N, label: T }, ["x", "y"]) }, connect: B, slot: E(SLOTS), ...timing }, ["id", "x_axis", "y_axis", "points", "slot"]),
+  C("write_text", { id: T, text: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ["id", "text", "slot"]),
+  C("write_math", { id: T, expr: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ["id", "expr", "slot"]),
+  C("fraction_bar", { id: T, parts: I, shaded: shadedSchema, second_bar: S({ parts: I, shaded: shadedSchema }, ["parts", "shaded"]), label: B, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ["id", "parts", "shaded", "slot"]),
+  C("number_line", { id: T, from: I, to: I, divisions: I, marks: { type: "array", items: S({ value: N, label: T, style: E(["dot", "arrow"]) }, ["value"]) }, jumps: { type: "array", items: S({ from: N, to: N }, ["from", "to"]) }, slot: E(SLOTS), ...drawn }, ["id", "from", "to", "divisions", "slot"]),
+  C("shape", { id: T, kind: E(SHAPE_KINDS), parts: I, shaded: shadedSchema, label: B, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ["id", "kind", "parts", "shaded", "slot"]),
+  C("plot_points", { id: T, x_axis: S({ from: I, to: I, name: T }, ["from", "to"]), y_axis: S({ from: I, to: I, name: T }, ["from", "to"]), points: { type: "array", items: S({ x: N, y: N, label: T }, ["x", "y"]) }, connect: B, slot: E(SLOTS), ...drawn }, ["id", "x_axis", "y_axis", "points", "slot"]),
   C("highlight", { target: T, part: I, bar: I, style: E(HIGHLIGHT_STYLES), ...timing }, ["target"]),
   C("underline", { target: T, range: { type: "array", items: I }, ...timing }, ["target"]),
   C("point", { target: T, part: I, bar: I, ...timing }, ["target"]),
@@ -177,7 +179,7 @@ Deno.serve(async (req) => {
     const asUser = createClient(Deno.env.get("SUPABASE_URL"), Deno.env.get("SUPABASE_ANON_KEY"), {
       global: { headers: { Authorization: req.headers.get("Authorization") ?? "" } }
     });
-    const { data: { user } } = await asUser.auth.getUser();
+    const { data: { user } } = await asUser.auth.getUser((req.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "").trim());
     if (!user) return json({ error: "Sign in first." }, 401);
     const admin = createClient(Deno.env.get("SUPABASE_URL"), Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"));
     const out = await mintToken({

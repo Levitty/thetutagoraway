@@ -1,0 +1,790 @@
+{
+ "framework": "cbc",
+ "subject_key": "environmental_activities",
+ "grade": 2,
+ "source": "KICD Environmental Activities, First Published in 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 3,
+  "sub_strands": 12,
+  "outcomes": 47,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "ENVI.G2.SOCIAL.OUR_HOME",
+   "number": "1.1",
+   "strand": "SOCIAL ENVIRONMENT",
+   "sub_strand": "Our Home",
+   "sequence": 101,
+   "lessons": 16,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "share information on personal and common items found at home,",
+    "draw, colour and display personal and common items used at home,",
+    "recite poems or sing songs on personal items,",
+    "match personal and common items at home with their uses,",
+    "observe pictures or animations of different materials used for cleaning personal and common items,",
+    "improvise cleaning materials at home or school,",
+    "manipulate a digital device to watch video clips or observe a demonstration from a resource person on cleaning personal and common items found at home,",
+    "use water sparingly to clean personal items and dry them appropriately,",
+    "practise cleaning utensils using suitable soap and soft material,",
+    "observe safety and hygiene when handling waste materials to avoid communicable diseases,",
+    "sort and dispose of waste appropriately after cleaning personal and common items."
+   ],
+   "key_inquiry_questions": [
+    "How can we keep our home clean?",
+    "Why should we keep our home environment clean?"
+   ],
+   "core_competences": "Critical thinking and Problem-solving: learner enhances innovative thinking in improvising cleaning materials using locally available resources.",
+   "values": "Responsibility: learner enhances self-drive when cleaning utensils at home.",
+   "pcis": "Learner observes safety and hygiene when washing hands after handling waste materials to avoid communicable diseases.",
+   "links": "The skill of sorting draws knowledge learnt in pre-number concepts in Mathematical Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     7,
+     8
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_HOME.a",
+     "letter": "a",
+     "text": "differentiate between personal and common items used at home",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_HOME.b",
+     "letter": "b",
+     "text": "identify materials used for cleaning personal and common items at home",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_HOME.c",
+     "letter": "c",
+     "text": "clean personal and common items using locally available materials",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_HOME.d",
+     "letter": "d",
+     "text": "advocate for a clean home environment for self and others’ well-being",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS",
+   "number": "1.2",
+   "strand": "SOCIAL ENVIRONMENT",
+   "sub_strand": "Family Needs and Wants",
+   "sequence": 102,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "talk about family needs and wants,",
+    "draw items that represent family wants,",
+    "observe pictures and photographs of different places where family needs are met,",
+    "draw and colour places where family needs are met,",
+    "match places or facilities within the locality where family needs are met,",
+    "sort and group pictures of goods and services into family needs and wants,",
+    "watch video clips/listen to a resource person on different family needs and wants,",
+    "draw and colour items that represent different family needs and wants,",
+    "observe pictures of different meals taken at different times of the day,",
+    "keep a daily record of meals eaten at home or school for one week,",
+    "sort and group different food items into meals and snacks,",
+    "play a game of picking out flashcards/paper cuttings/pictures that show family needs and wants."
+   ],
+   "key_inquiry_questions": [
+    "How can we meet our family needs?"
+   ],
+   "core_competences": "Citizenship: learner develops awareness of the local environment when matching places or facilities within the locality where family needs are met.",
+   "values": "Love: learner portrays a caring attitude towards peers when playing games of picking out flashcards/paper cuttings/pictures that show family needs and wants.",
+   "pcis": "Social economic issues: learner enhances financial literacy when sorting and grouping pictures of goods and services into family needs and wants.",
+   "links": "Family needs and wants relate to the skill of counting, sorting, and grouping in Mathematical Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     9,
+     10
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.a",
+     "letter": "a",
+     "text": "mention differences between family needs and wants",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.b",
+     "letter": "b",
+     "text": "identify places within the locality where family needs are met",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.c",
+     "letter": "c",
+     "text": "classify family needs and wants for financial literacy awareness",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.d",
+     "letter": "d",
+     "text": "prioritise family needs over family wants",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.e",
+     "letter": "e",
+     "text": "appreciate family needs and wants within the locality",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENVI.G2.SOCIAL.OUR_SCHOOL",
+   "number": "1.3",
+   "strand": "SOCIAL ENVIRONMENT",
+   "sub_strand": "Our School",
+   "sequence": 103,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use video clips or pictures to find out how to keep the school environment clean,",
+    "walk around the school compound to find out dangerous places and items,",
+    "draw or write down dangerous places and items in school,",
+    "practise cleaning the school environment,",
+    "recite poems or sing songs about a clean school environment,",
+    "role play ways of giving first aid to common accidents in school (suffocation, falls, burns, cuts, choking),",
+    "make papier-mâché art of appropriate objects or models from paper waste."
+   ],
+   "key_inquiry_questions": [
+    "How can you keep the school environment clean and safe?"
+   ],
+   "core_competences": "Self-efficacy: learner develops the skill of knowing the school by walking around the school compound to find out dangerous places and items.",
+   "values": "Unity: learner enhances cooperation when cleaning the school environment in groups.",
+   "pcis": "Social Economic Issues: learner develops disaster risk reduction when role-playing ways of giving first aid to common accidents in school.",
+   "links": "Paper waste recycling relates to concepts of making papier-mâché in Creative Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     11,
+     12
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.a",
+     "letter": "a",
+     "text": "name ways of keeping the school environment clean",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.b",
+     "letter": "b",
+     "text": "identify common accidents at school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.c",
+     "letter": "c",
+     "text": "clean the school environment for the well-being of self and others",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.d",
+     "letter": "d",
+     "text": "advocate for a clean and safe school environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG",
+   "number": "1.4",
+   "strand": "SOCIAL ENVIRONMENT",
+   "sub_strand": "Our National Flag",
+   "sequence": 104,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "find information on the meaning of colours on the Kenya national flag,",
+    "manipulate a digital device to watch videos or observe pictures with colours of the Kenya national flag,",
+    "draw and colour the national flag,",
+    "role-play the expected behaviour when raising and lowering the Kenya national flag,",
+    "listen to audio-visual clips or read print materials to identify occasions when the Kenya national anthem is sung."
+   ],
+   "key_inquiry_questions": [
+    "How can you show respect for the Kenya National flag?"
+   ],
+   "core_competences": "Citizenship: learner develops active community skills when observing the expected behaviour related to the Kenya national flag and national anthem.",
+   "values": "Patriotism: learner enhances loyalty to the nation when singing the national anthem.",
+   "pcis": "Citizenship: learner enhances social cohesion and nationalism when singing the Kenya national anthem.",
+   "links": "Features of the Kenya national flag relate to learning of colours in Creative Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.a",
+     "letter": "a",
+     "text": "identify the meaning of colours on the Kenya national flag",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.b",
+     "letter": "b",
+     "text": "name events in which Kenya’s national anthem is sung",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.c",
+     "letter": "c",
+     "text": "observe etiquette when raising and lowering the Kenya national flag",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.d",
+     "letter": "d",
+     "text": "appreciate the importance of the national anthem",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB",
+   "number": "1.5",
+   "strand": "SOCIAL ENVIRONMENT",
+   "sub_strand": "Our Rights and Responsibilities",
+   "sequence": 105,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "listen to age-appropriate stories involving expectations and experiences on Child Rights and Responsibilities (parental care, health care, protection from exploitation and cruelty),",
+    "listen to a resource person on Child Rights and Responsibilities in a home or school,",
+    "use multimedia resources to explore the responsibilities of children at home and in school,",
+    "work with peers to role-play responsibilities of children in school,",
+    "perform age-appropriate responsibilities at school."
+   ],
+   "key_inquiry_questions": [
+    "Why are child rights and responsibilities important at home and school?"
+   ],
+   "core_competences": "Communication and Collaboration: learner develops teamwork when role-playing the responsibilities of children in school.",
+   "values": "Social Justice: learner enhances equity when performing age-appropriate responsibilities at school.",
+   "pcis": "Citizenship: learner enhances Child Rights awareness when sharing own expectations, experiences, duties and responsibilities at home or school.",
+   "links": "Listening to a resource person on Child Rights and Responsibilities relates to active listening and speaking in English Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
+     "letter": "a",
+     "text": "outline Child Rights and Responsibilities at home and in the school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.b",
+     "letter": "b",
+     "text": "carry out the responsibilities of a child at home and in school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.c",
+     "letter": "c",
+     "text": "appreciate Child Rights and Responsibilities for the attainment of social justice",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENVI.G2.SOCIAL.OUR_MARKET",
+   "number": "1.6",
+   "strand": "SOCIAL ENVIRONMENT",
+   "sub_strand": "Our Market",
+   "sequence": 106,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "physical features on the way to a local market,",
+    "draw and colour physical features found on the way to the local market,",
+    "model main physical features found on the way to the local market,",
+    "label and match pictures of parts of the road for the safety of self and others (vehicle use and pedestrian walkways),",
+    "manipulate digital devices to watch video clips or observe pictures of activities that take place in a market,",
+    "listen to a resource person on activities that take place in a market,",
+    "visit the nearest market to find out activities that take place,",
+    "role play buying and selling activities to recognise the interdependence and connections of people found in a market,",
+    "make a shop corner using locally available materials."
+   ],
+   "key_inquiry_questions": [
+    "How can you locate your local market?"
+   ],
+   "core_competences": "Citizenship: learner recognises the interdependence and connections of people found in a market.",
+   "values": "Integrity: learner enhances honest and fair negotiations when role-playing buying and selling.",
+   "pcis": "Citizenship: learner enhances acknowledgement for self and others when interacting with people found in a market.\nFinancial Literacy: learner develops spending skills when visiting the nearest market to find out activities that take place.",
+   "links": "Buying and selling in a market relates to the concept of money in Mathematical Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.a",
+     "letter": "a",
+     "text": "identify physical features on the way to a local market",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.b",
+     "letter": "b",
+     "text": "locate local market using physical features",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.c",
+     "letter": "c",
+     "text": "identify activities that take place in a market",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.SOCIAL.OUR_MARKET.d",
+     "letter": "d",
+     "text": "value things and people found in a market",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENVI.G2.NATURA.WEATHER",
+   "number": "2.1",
+   "strand": "NATURAL ENVIRONMENT",
+   "sub_strand": "Weather",
+   "sequence": 201,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss weather conditions at different times of the day,",
+    "draw weather symbols to represent different weather conditions and display them in class,",
+    "observe and record prevailing weather conditions as an outdoor activity in collaboration with peers,",
+    "make a weather record or chart using weather symbols for one week,",
+    "play relevant and educative computer games on weather conditions,",
+    "observe pictures and video clips to identify ways of responding to various weather conditions,",
+    "role play on ways of responding to various weather conditions,",
+    "use weather symbols to interpret weather conditions at different times of the day,",
+    "participate in a class contest, on narrating the previous week’s weather occurrences from a weather chart."
+   ],
+   "key_inquiry_questions": [
+    "Why do we need to predict the weather?"
+   ],
+   "core_competences": "Digital Literacy: learner interacts with digital technology when playing relevant and educative games on weather conditions.",
+   "values": "Unity: learner develops cooperation when observing and recording prevailing weather conditions as an outdoor activity.\nIntegrity: learner develops honesty when observing and recording weather conditions for one week.",
+   "pcis": "Life Skills: learner develops effective communication skills when participating in a class contest, on narrating weather occurrences from weather chart recordings.\nLearner Support Programs: learner develops career guidance skills when creating a weather record using weather symbols for one week.",
+   "links": "Drawing weather symbols relates to the skill of drawing and colouring in Creative Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.NATURA.WEATHER.a",
+     "letter": "a",
+     "text": "identify weather conditions at different times of the day",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.NATURA.WEATHER.b",
+     "letter": "b",
+     "text": "create a weather record, using weather symbols",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.NATURA.WEATHER.c",
+     "letter": "c",
+     "text": "predict weather conditions at different times of the day",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.NATURA.WEATHER.d",
+     "letter": "d",
+     "text": "develop curiosity in weather conditions experienced in the locality",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENVI.G2.NATURA.SOIL",
+   "number": "2.2",
+   "strand": "NATURAL ENVIRONMENT",
+   "sub_strand": "Soil",
+   "sequence": 202,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "walk within the school compound or visit the school neighbourhood to observe types of soil,",
+    "model soil ribbons using soil samples,",
+    "observe modelled ribbons to find out which soil sample makes smooth long ribbons,",
+    "classify types of soil depending on the length of ribbons made and size of particles,",
+    "make paper cuttings or pictures of different types of soil and create a portfolio,",
+    "model different objects using soil,",
+    "clean the working area and wash hands with soap and clean running water after handling soil."
+   ],
+   "key_inquiry_questions": [
+    "How can you identify different types of soil in our environment?"
+   ],
+   "core_competences": "Learning to Learn: learner develops the skill of learning independently when modelling soil ribbons using soil samples and finding out the soil sample that makes smooth long ribbons.",
+   "values": "Unity: learner develops cooperation skills when modelling objects with different types of soil.",
+   "pcis": "Health Promotion issues: learner develops preventive health skills when cleaning the working area and hands with soap and clean running water after handling soil to prevent communicable diseases.",
+   "links": "Modelling objects using soil draws knowledge from modelling techniques in Creative Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.NATURA.SOIL.a",
+     "letter": "a",
+     "text": "identify types of soil found in the locality",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.NATURA.SOIL.b",
+     "letter": "b",
+     "text": "classify types of soil in the locality",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.NATURA.SOIL.c",
+     "letter": "c",
+     "text": "make items from soil",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.NATURA.SOIL.d",
+     "letter": "d",
+     "text": "appreciate different types of soil in the immediate environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENVI.G2.NATURA.LIGHT",
+   "number": "2.3",
+   "strand": "NATURAL ENVIRONMENT",
+   "sub_strand": "Light",
+   "sequence": 203,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "observe pictures and photographs of different sources of light in the environment,",
+    "manipulate objects in the presence of light to form shadows,",
+    "practise switching off lights when not in use and during day time,",
+    "create light conservation messages,",
+    "make posters with simple messages on the conservation of light",
+    "type messages on the conservation of light using digital devices,",
+    "recite poems or sing songs on the conservation of light."
+   ],
+   "key_inquiry_questions": [
+    "How can we conserve light in our environment?",
+    "Why should we conserve light in our environment?"
+   ],
+   "core_competences": "Communication: learner develops writing skills when making posters with simple messages on the conservation of light to create awareness.",
+   "values": "Unity: learner develops cooperation skills when manipulating objects in the presence of light to form shadows for enjoyment.",
+   "pcis": "Social Economic Issues: learner develops financial skills when practising switching off lights when not in use and during day time.",
+   "links": "Posters on energy conservation relate to writing skills in English Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.NATURA.LIGHT.a",
+     "letter": "a",
+     "text": "identify sources of light in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.NATURA.LIGHT.b",
+     "letter": "b",
+     "text": "manipulate objects in the presence of light to form shadows for enjoyment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.NATURA.LIGHT.c",
+     "letter": "c",
+     "text": "describe a variety of ways of conserving light for a sustainable supply of light energy",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.NATURA.LIGHT.d",
+     "letter": "d",
+     "text": "appreciate different sources of light in the environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENVI.G2.RESOUR.WATER",
+   "number": "3.1",
+   "strand": "RESOURCES IN OUR ENVIRONMENT",
+   "sub_strand": "Water",
+   "sequence": 301,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "explore various ways of storing water at home and school,",
+    "draw items used to store water at home and school,",
+    "practise storing water in bottles and water cans at home and school,",
+    "watch video clips, pictures and photographs on appropriate ways of storing water at home and school,",
+    "share experiences on why water is stored at home and school,",
+    "visit with peers in the neighbourhood to identify different ways of storing water."
+   ],
+   "key_inquiry_questions": [
+    "Why do we store water at home and in school?"
+   ],
+   "core_competences": "Communication and Collaboration: learner develops teamwork when walking around the neighbourhood to identify different ways of storing water.",
+   "values": "Responsibility: learner enhances hard work skills when storing water in bottles and water cans for future use at home and school.\nSocial Justice: learner enhances cooperation when making visits to the neighbourhood to identify different ways of storing water.",
+   "pcis": "Health Promotion Issues: learner develops preventive health skills and awareness when storing water appropriately at home and school to prevent communicable diseases.",
+   "links": "Drawing items used to store water relates to the skill of drawing and colouring in Creative Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.RESOUR.WATER.a",
+     "letter": "a",
+     "text": "identify ways of storing water at home and school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.RESOUR.WATER.b",
+     "letter": "b",
+     "text": "conserve water at home and school for future use",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.RESOUR.WATER.c",
+     "letter": "c",
+     "text": "state the importance of keeping water safe for people and animal use",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.RESOUR.WATER.d",
+     "letter": "d",
+     "text": "appreciate safe water storage to prevent health risks to self and others",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENVI.G2.RESOUR.PLANTS",
+   "number": "3.2",
+   "strand": "RESOURCES IN OUR ENVIRONMENT",
+   "sub_strand": "Plants",
+   "sequence": 302,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "observe pictures, photographs or watch video clips of people watering, manuring and mulching plants,",
+    "water, manure and mulch for some plants in the school compound,",
+    "observe pictures, photographs or video clips of healthy plants that have been conserved,",
+    "write plant protection messages by hand or electronic device,",
+    "recite poems or sing songs on plant protection."
+   ],
+   "key_inquiry_questions": [
+    "How can you care for plants in the environment?"
+   ],
+   "core_competences": "Creativity and Imagination: learner develops originality when creating plant protection messages using own handwriting, or electronic resources.",
+   "values": "Responsibility: learner develops self-drive skills when writing plant protection messages by hand, or electronic resources.",
+   "pcis": "Citizenship: learner develops environmental education and climate change skills when watering, manuring, and mulching plants in the school compound.",
+   "links": "Messages on plant protection relate to writing skills in English Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.RESOUR.PLANTS.a",
+     "letter": "a",
+     "text": "identify ways of caring for plants using locally available materials",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.RESOUR.PLANTS.b",
+     "letter": "b",
+     "text": "perform plant-care activities using locally available materials",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.RESOUR.PLANTS.c",
+     "letter": "c",
+     "text": "advocate for plant protection for environmental sustainability",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENVI.G2.RESOUR.ANIMALS",
+   "number": "3.3",
+   "strand": "RESOURCES IN OUR ENVIRONMENT",
+   "sub_strand": "Animals",
+   "sequence": 303,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "observe pictures and photographs of different food items from animals,",
+    "observe and name pictures of animals that provide food,",
+    "sort and group food items from animals and display them in class,",
+    "listen to a resource person on ways of caring for animals,",
+    "discuss the importance of fair treatment of animals,",
+    "observe videos on ways of keeping an animal shelter clean,",
+    "practise feeding and cleaning animal shelter (for small domestic animal) at home or school,",
+    "wash hands with soap and water after cleaning the animal shelter,",
+    "dispose of waste appropriately after cleaning an animal shelter while observing safety."
+   ],
+   "key_inquiry_questions": [
+    "Why should an animal stay in a clean place?"
+   ],
+   "core_competences": "Communication and Collaboration: learner develops speaking and listening skills when discussing the importance of fair treatment of animals in groups.",
+   "values": "Love: learner develops empathy skills when feeding and cleaning animal shelters at home or school.",
+   "pcis": "Social Economic Issues: learner develops animal welfare awareness when participating in cleaning animal shelters at home or school.",
+   "links": "Matching, sorting, and grouping food items from animals draws the skills of sorting and grouping in Mathematical Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 Environmental Activities-Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     31,
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENVI.G2.RESOUR.ANIMALS.a",
+     "letter": "a",
+     "text": "identify food items from animals",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.RESOUR.ANIMALS.b",
+     "letter": "b",
+     "text": "relate food items with respective animals",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.RESOUR.ANIMALS.c",
+     "letter": "c",
+     "text": "carry out activities of caring for animals in the locality",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.RESOUR.ANIMALS.d",
+     "letter": "d",
+     "text": "advocate for clean and secure animal shelters to reduce risks to the animals",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

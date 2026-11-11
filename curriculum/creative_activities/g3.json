@@ -1,0 +1,1014 @@
+{
+ "framework": "cbc",
+ "subject_key": "creative_activities",
+ "grade": 3,
+ "source": "KICD Creative Activities, First Published in 2021; Revised in 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 3,
+  "sub_strands": 15,
+  "outcomes": 61,
+  "lessons": 210,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "CREA.G3.CREATI.PUSHING_AND_PULLING",
+   "number": "1.1",
+   "strand": "Creating and Executing",
+   "sub_strand": "Pushing and Pulling",
+   "sequence": 101,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Pushing activities",
+    "Pulling activities"
+   ],
+   "learning_experiences": [
+    "watch virtual or a demonstration of pushing and pulling activities in physical activities,",
+    "demonstrate pushing and pulling activities,",
+    "practise pushing and pulling activities,",
+    "sing songs while pulling and pushing,",
+    "play games using pulling and pushing skills by observing safety."
+   ],
+   "key_inquiry_questions": [
+    "How can pulling and pushing skills be applied at home?"
+   ],
+   "core_competences": "Digital literacy: the learner manipulates digital devices to watch clips showing pushing and pulling activities.\nSelf-efficacy: the learner appreciates their ability to demonstrate and practise pushing and pulling successfully.",
+   "values": "Unity: the learner cooperates with others as they perform pushing and pulling activities.\nRespect: the learner portrays positive regard for self and others as they practise pushing and pulling activities.",
+   "pcis": "Safety: The learner individually observes safety while playing games involving pushing and pulling.",
+   "links": "Mathematical activities: the learner counts while pulling and pushing.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     6
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.CREATI.PUSHING_AND_PULLING.a",
+     "letter": "a",
+     "text": "identify pushing and pulling in physical activities for space and body awareness",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.PUSHING_AND_PULLING.b",
+     "letter": "b",
+     "text": "perform pulling and pushing activities for flexibility",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.PUSHING_AND_PULLING.c",
+     "letter": "c",
+     "text": "enjoy pushing and pulling for strength and flexibility",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING",
+   "number": "1.2",
+   "strand": "Creating and Executing",
+   "sub_strand": "Drawing and Painting",
+   "sequence": 102,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Drawing",
+    "Painting",
+    "Colour mixing"
+   ],
+   "learning_experiences": [
+    "watch videos/pictures to recognise how to mix colour by spraying and blowing technique,",
+    "spray colours randomly using recyclable old brushes/improvised brushes and clean the hands after the activity,",
+    "mix the colour by blowing randomly using straws and a biro pen tube among others while observing safety,",
+    "draw and colour a simple composition using regular and irregular shapes,",
+    "paint a picture creatively for expression,",
+    "collaboratively, display their work for peer feedback."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to clean the brush after painting?"
+   ],
+   "core_competences": "Digital Literacy: the learner watches videos with peers to recognises how to mix colours by using the spraying and blowing technique.\nCreativity and Imagination: the learner explores colours mixing techniques in painting.",
+   "values": "Unity: the learner respects others’ opinions while talking about their own and peers' pictures.\nSocial justice: the learner shares resources and responsibilities equitably while mixing coloured water paints.",
+   "pcis": "Health promotion issues: the learner cleans the working area and washes hands after spraying paint.",
+   "links": "Environmental Activities: the learner takes care of hygiene by cleaning their hands after painting.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     7,
+     8
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.a",
+     "letter": "a",
+     "text": "identify colour mixing for familiarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.b",
+     "letter": "b",
+     "text": "mix colours using spraying and blowing techniques",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.c",
+     "letter": "c",
+     "text": "draw a picture using regular and irregular shapes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.d",
+     "letter": "d",
+     "text": "create a painting for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.e",
+     "letter": "e",
+     "text": "value drawing and painting for expression",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN",
+   "number": "1.3",
+   "strand": "Creating and Executing",
+   "sub_strand": "Rhythm and pattern making",
+   "sequence": 103,
+   "lessons": 18,
+   "optional": false,
+   "content_topics": [
+    "Short and long sounds (taa-aa-aa-aa taa-aa, taa and ta-te )",
+    "Body Percussion-clapping, tapping, snapping, stamping",
+    "Print making",
+    "Pattern making"
+   ],
+   "learning_experiences": [
+    "sing simple familiar songs for familiarisation of short and long sounds used in creating their rhythmic patterns,",
+    "listen to or watch live or recorded performances of simple songs and clap their rhythmic patterns,",
+    "use short and long sounds to create simple rhythmic patterns using body percussion or a percussion instrument,",
+    "provide rhythmic accompaniment to familiar songs using body percussion or a percussion instrument,",
+    "explore virtual sources to identify random and an all over patterns,",
+    "print a random pattern alternating colours to suggest rhythm, using",
+    "- a leaf",
+    "- block (banana stalk, maize cob, among others)."
+   ],
+   "key_inquiry_questions": [
+    "How can rhythms be created?"
+   ],
+   "core_competences": "Creativity and imagination: the learner creates simple rhythmic patterns using short and long sounds.\nSelf-efficacy: the learner confidently plays rhythmic accompaniment to familiar songs.",
+   "values": "Responsibility: the learner takes care of the digital devices as they record the rhythmic chant performances for future use.\nRespect: the learner gives a chance to peers as they take turns to recite short and long sounds using French rhythm names.",
+   "pcis": "Social cohesion: the learner portrays team spirit as they work with peers to create rhythms using short and long sounds on a percussion instrument or body percussion.",
+   "links": "Mathematical Activities: the learner applies knowledge and skill of counting to maintain the beat as they accompany songs with rhythmic accompaniment.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     9,
+     10
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.a",
+     "letter": "a",
+     "text": "identify different sound durations in simple songs",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.b",
+     "letter": "b",
+     "text": "create a simple rhythmic pattern using long and short sounds",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.c",
+     "letter": "c",
+     "text": "improvise rhythmic accompaniment to simple songs using long and short sounds",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.d",
+     "letter": "d",
+     "text": "make a random repeat pattern using found objects",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.e",
+     "letter": "e",
+     "text": "appreciate creating rhythms and patterns",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.CREATI.SKIPPING",
+   "number": "1.4",
+   "strand": "Creating and Executing",
+   "sub_strand": "Skipping",
+   "sequence": 104,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Directions in Skipping (Forward, Backward, Right, Left",
+    "Pattern making (Straight line, curved, circular, zigzag)."
+   ],
+   "learning_experiences": [
+    "talk about skipping in different directions,",
+    "demonstrate skipping in different ways and directions,",
+    "practise skipping in different ways and directions with peers,",
+    "sing songs while skipping for enjoyment while making line patterns and shapes,",
+    "play games involving skipping activities with peers while observing safety,",
+    "share feedback about own and others performance in skipping."
+   ],
+   "key_inquiry_questions": [
+    "Why are skipping activities interesting?"
+   ],
+   "core_competences": "Creativity and Imagination: the learner pays attention to making patterns while skipping.\nSelf- efficacy: The learner individually skips confidently in different ways.",
+   "values": "Unity: the learner cooperates with peers while skipping.\nPeace: the learner avoids hurting others by observing safety while playing games involving skipping.",
+   "pcis": "Gender issues in education: the learner shows respect for gender equality while playing games in skipping with peers.",
+   "links": "Mathematical Activities: the learner learns concepts of shapes and patterns.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     11
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.CREATI.SKIPPING.a",
+     "letter": "a",
+     "text": "identify different ways of skipping in different directions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.SKIPPING.b",
+     "letter": "b",
+     "text": "skip in different directions for skill acquisition",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.SKIPPING.c",
+     "letter": "c",
+     "text": "make patterns while skipping in different ways",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.SKIPPING.d",
+     "letter": "d",
+     "text": "appreciate skipping in different directions for balance and strength",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.CREATI.COLLAGE",
+   "number": "1.5",
+   "strand": "Creating and Executing",
+   "sub_strand": "Collage",
+   "sequence": 105,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Pasting",
+    "Cutting",
+    "Drawing"
+   ],
+   "learning_experiences": [
+    "observe images of simple collage from actual or virtual environment for motivation to make a collage,",
+    "collect varied recyclable materials for making collage,",
+    "sort out materials to make the collage,",
+    "outline a simple picture to guide the pasting of materials,",
+    "collaboratively, paste different materials on the outlined forms,",
+    "show and talk about own and others’ collage, work."
+   ],
+   "key_inquiry_questions": [
+    "What materials can be used to make a collage?"
+   ],
+   "core_competences": "Communication and collaboration: the learner works collaboratively to paste the different materials on the outlined forms,\nSelf-efficacy: the learner expresses themselves about their artwork during display sessions",
+   "values": "Responsibility: the learner uses recyclable materials from the environment responsibly.\nLove: the learner shows and talk about their own and others’ collage, works.",
+   "pcis": "Life Skills: the learner develops self-awareness and self-esteem through display of their work and as they express their feelings, ideas and emotions.",
+   "links": "Environmental Activities: the learner uses locally available materials emphasising the concept of use of recycled/reusable materials.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     12,
+     13
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.CREATI.COLLAGE.a",
+     "letter": "a",
+     "text": "identify a collage for familiarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.COLLAGE.b",
+     "letter": "b",
+     "text": "prepare materials for making the collage",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.COLLAGE.c",
+     "letter": "c",
+     "text": "create a collage for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.COLLAGE.d",
+     "letter": "d",
+     "text": "appreciate using collage as an art of self-expression",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.CREATI.MELODY",
+   "number": "1.6",
+   "strand": "Creating and Executing",
+   "sub_strand": "Melody",
+   "sequence": 106,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Variation in rhythm, tempo (slow and fast), volume, (loud and soft), text, pitch,",
+    "Melodic patterns on improvised percussions",
+    "Performance directions-slow/fast. Soft/loud."
+   ],
+   "learning_experiences": [
+    "collaboratively listen to simple songs, noting variations in rhythm, volume, and speed in live or recorded performances and discuss them,",
+    "sing simple short songs and improvise variations in rhythm, tempo, volume, text and pitch,",
+    "use improvised pitched percussions such as bottles filled with water to different levels or two-tone wood blocks, to create melodic patterns,",
+    "collaboratively perform the created melodic patterns applying performance directions; slow/fast, soft/loud,",
+    "record the created melodies or play the melodies to peers for feedback."
+   ],
+   "key_inquiry_questions": [
+    "How can a song be varied to make it more interesting?"
+   ],
+   "core_competences": "Communication and Collaboration: the learner keenly listens to or watches live or recorded performances of simple songs and talks about the variations.\nCreativity and Imagination: the learner creates melodic patterns from differently pitched objects.",
+   "values": "Respect: the learner provides feedback to peers’ performances using appropriate language.\nUnity: the learner in groups researches from print and electronic media different simple ways of varying melodies.",
+   "pcis": "Safety and Security: the learner observes their safety as they create melodic patterns from differently pitched objects.\nSocial Cohesion: the learner portrays team spirit as they find out from the electronic media different simple ways of varying melodies.",
+   "links": "Environmental Activities: the learner applies knowledge and skills gained in Environmental Activities to create melodic patterns from differently pitched objects.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     14,
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.CREATI.MELODY.a",
+     "letter": "a",
+     "text": "identify variations in a simple melodic pattern for aural skill development",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.MELODY.b",
+     "letter": "b",
+     "text": "create melodic patterns using improvised percussions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.MELODY.c",
+     "letter": "c",
+     "text": "apply performance directions in performing simple songs",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.MELODY.d",
+     "letter": "d",
+     "text": "enjoy creating melodies using the variation technique",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.CREATI.WEAVING",
+   "number": "1.7",
+   "strand": "Creating and Executing",
+   "sub_strand": "Weaving",
+   "sequence": 107,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Plain paper weave"
+   ],
+   "learning_experiences": [
+    "observe actual or virtual samples of paper plain weaves of varied colours,",
+    "collect different coloured papers,",
+    "cut slits on a paper to make a paper loom,",
+    "cut paper strips of a different colour to the loom and dispose of waste responsibly,",
+    "interlace the strips by running over and under the slits on the paper frame to make paper mats in two colours,",
+    "experiment to make paper weaves with different colours,",
+    "showcase their plain weaves and ask their peers to comment."
+   ],
+   "key_inquiry_questions": [
+    "Which other items can be woven?",
+    "Which other materials can be used for weaving?"
+   ],
+   "core_competences": "Creativity and Imagination: the learner experiments to make paper weaves with different colours.\nLearning to Learn: the learner acquires new skills in interlacing to make a woven item.",
+   "values": "Responsibility: the learner disposes of paper cuttings after weaving.\nRespect: the learner showcases their plain weaves and ask their peers to comment",
+   "pcis": "Cultural Appreciation: the learner appreciates weaving as a traditional craft.",
+   "links": "Environmental activities: the learner disposes of waste to maintain the environment.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.CREATI.WEAVING.a",
+     "letter": "a",
+     "text": "identify a plain paper weave for familiarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.WEAVING.b",
+     "letter": "b",
+     "text": "create a plain paper weave to make",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.CREATI.WEAVING.c",
+     "letter": "c",
+     "text": "enjoy making paper mat using weaving",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.PERFOR.ROUNDS",
+   "number": "2.1",
+   "strand": "Performing and Displaying",
+   "sub_strand": "Rounds",
+   "sequence": 201,
+   "lessons": 18,
+   "optional": false,
+   "content_topics": [
+    "Rounds; two and three-part rounds",
+    "Performance techniques; posture, accuracy of tune, clarity of words, entries and keeping to own part"
+   ],
+   "learning_experiences": [
+    "watch a variety of virtual or recorded clips on age-appropriate 2 and 3-part rounds and talk about what a round is,",
+    "talk about how to sing in a round focusing on; posture, accuracy of tune, clarity of words, entries and keeping to own part,",
+    "sing own part in a round on a specific theme for skill development,",
+    "sing rounds with peers applying appropriate performance techniques,",
+    "collaboratively, take turns to sing own part in a round as others give feedback,",
+    "talk about the message in a round sung."
+   ],
+   "key_inquiry_questions": [
+    "How are rounds sung?"
+   ],
+   "core_competences": "Communication and Collaboration: the learner talks about the round songs, and sings rounds with clear diction.\nSelf- efficacy: the learner sings own part in round songs on a specific theme for skill development.",
+   "values": "Responsibility: the learner keeps to own part in a round performance.\nUnity: the learner cooperates with others in groups while singing own part in round songs.\nRespect: the learner portrays positive regard for self and others as they work in groups on rounds.",
+   "pcis": "Self-awareness and Self-esteem: the learner gains confidence as they sing round songs with appropriate performance techniques.\nSocial Cohesion: the learner works with peers while singing round songs in groups.",
+   "links": "English Language Activities: the learner applies the skill of communication acquired in English to clearly pronounce the words of the round.\nReligious Activities: the learner applies values such as unity and love acquired in Religious Education during group work on rounds. 100 100",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     19,
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.PERFOR.ROUNDS.a",
+     "letter": "a",
+     "text": "aurally identify a round performance",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.ROUNDS.b",
+     "letter": "b",
+     "text": "sing own part in a round applying appropriate performance techniques",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.ROUNDS.c",
+     "letter": "c",
+     "text": "describe the message in a round",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.ROUNDS.d",
+     "letter": "d",
+     "text": "enjoy singing in a round",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.PERFOR.GALLOPING",
+   "number": "2.2",
+   "strand": "Performing and Displaying",
+   "sub_strand": "Galloping",
+   "sequence": 202,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Galloping movement Directions : forward, left and right.",
+    "Patterns: straight, curved, circular and zigzag."
+   ],
+   "learning_experiences": [
+    "observe videos or demonstrations of galloping and talk about the body movement,",
+    "demonstrate galloping skills,",
+    "practise galloping in different directions,",
+    "practise galloping to make patterns,",
+    "play games while galloping in different directions,",
+    "give self and others feedback on their performance in galloping activities."
+   ],
+   "key_inquiry_questions": [
+    "Which animals use galloping movement?"
+   ],
+   "core_competences": "Self-efficacy: the learner focusses on practising galloping skills by accepting feedback from peers.\nCommunication and collaboration: the learner interacts with peers while playing games that involve galloping.",
+   "values": "Love: the learner portrays respect in providing positive feedback to peers during practise of galloping activity.\nRespect: the learner allows other chances while demonstrating galloping skills.",
+   "pcis": "Social Cohesion: the learner embraces own and others performance during practise of galloping.",
+   "links": "Environmental activities: the learner learns about directions.\nReligious activities: the learner learns positive values while providing feedback to peers. 102 102",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.PERFOR.GALLOPING.a",
+     "letter": "a",
+     "text": "identify different directions of galloping for agility and coordination",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.GALLOPING.b",
+     "letter": "b",
+     "text": "perform galloping movement in different directions for skill acquisition",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.GALLOPING.c",
+     "letter": "c",
+     "text": "enjoy playing galloping games while moving in different directions",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE",
+   "number": "2.3",
+   "strand": "Performing and Displaying",
+   "sub_strand": "Sculpture (Toy Assemblage)",
+   "sequence": 203,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "observe actual or virtual samples of playing toys or dolls,",
+    "collaboratively, collect and sort different recyclable material for assemblage of toys or dolls,",
+    "safely, assemble the materials to get the structure of the doll or toy,",
+    "add details to enhance features of the toy or doll,",
+    "use the toys or dolls to play and sing with peers for enjoyment."
+   ],
+   "key_inquiry_questions": [
+    "What local materials can be used to make a toy?",
+    "How can one join different materials to make a toy?"
+   ],
+   "core_competences": "Communication and Collaboration: the learner use the toys or doll to play and sing with peers for enjoyment.\nCreativity and Imagination: the learner assemble the materials to get the structure of the doll or toy.",
+   "values": "Respect: the learner gives positive feedback as they display items made.\nUnity: the learner collaboratively, collect and sort different recyclable material for assemblage of toys or dolls.",
+   "pcis": "Safety and security: the learner observes their safety by collecting and sorting different recyclable material assemblage of toys or dolls\nSocial Cohesion: the learner enjoys playing with peers using the toys or dolls created.",
+   "links": "Environmental Activities: the learner collect and sort different recyclable material for assemblage of toys or dolls. 104 104",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     23,
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.a",
+     "letter": "a",
+     "text": "identify toys made by assemblage",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.b",
+     "letter": "b",
+     "text": "make toys using assemblage",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.c",
+     "letter": "c",
+     "text": "enjoy making and playing with the toys",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN",
+   "number": "2.4",
+   "strand": "Performing and Displaying",
+   "sub_strand": "Forward Roll and V-balance",
+   "sequence": 204,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Forward roll",
+    "V-balance",
+    "Making of markers ."
+   ],
+   "learning_experiences": [
+    "1. How",
+    "watch video clips or a demonstration of a forward roll and V-balance,",
+    "perform a forward roll and talk about how the body moves,",
+    "perform V balance and talk about different parts of the body used,",
+    "identify, collect and share simple reusable materials within the environment to be used as markers as they observe safety precautions,",
+    "improvise the markers using the collected reusable materials and paint them,",
+    "mark the field using the improvised markers,",
+    "practise forward roll and V-balance",
+    "play games using forward roll and V-balance in sequence."
+   ],
+   "key_inquiry_questions": [
+    "can forward roll and V balances be used to improve flexibility and balance?"
+   ],
+   "core_competences": "Creativity and Imagination: the learner identifies simple reusable materials to use in improvised markers.\nCommunication and Collaboration: the learner talks about different ways the body moves when performing forward roll and V-balance.",
+   "values": "Love: the learner appreciates their ability in practising the forward roll and V-balance.\nSocial justice: the learner shares materials equitably with peers for making markers.",
+   "pcis": "Personal Hygiene: the learner cleans the working area and stores markers after the performance.\nEnvironmental conservation: the learner collects reusable materials.",
+   "links": "Environmental Activities: the learner observes hygiene while collecting and sharing simple reusable materials.\nReligious Activities: the learner applies values while working in groups.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     25,
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.a",
+     "letter": "a",
+     "text": "identify body parts used for performing forward roll and V-balance in gymnastics",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.b",
+     "letter": "b",
+     "text": "make markers for use during forward roll and V-balance performance in gymnastics",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.c",
+     "letter": "c",
+     "text": "perform forward roll for skill acquisition",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.d",
+     "letter": "d",
+     "text": "perform V-balance for skill acquisition",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.e",
+     "letter": "e",
+     "text": "enjoy performing forward roll and V-balance for flexibility and balance. 105 105",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN",
+   "number": "2.5",
+   "strand": "Performing and Displaying",
+   "sub_strand": "String Musical Instruments",
+   "sequence": 205,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Identifying Fiddles/ground bows/mouth bow (name. community and method of playing),",
+    "Improvising fiddle/ground/mouth bow",
+    "Methods of playing-bowing, striking, plucking"
+   ],
+   "learning_experiences": [
+    "watch live or recorded performances and aurally and orally identify string instruments from Kenyan communities,",
+    "responsibly use digital devices or pictures to identify the local names of Indigenous string instruments from Kenyan communities,",
+    "improvise a Kenyan stringed instrument- either a fiddle, ground or mouth bow observing safety and hygiene by washing hands and cleaning the working area,",
+    "explore methods of playing the improvised string instruments,",
+    "practise producing sound from a string instrument."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to learn about string instruments from different communities?",
+    "Which materials can be used to improvise a string instrument?"
+   ],
+   "core_competences": "Communication and Collaboration: the learner visually and aurally identities and talks about the string instruments from the recordings and pictures.\nCreativity and Imagination: the learner uses locally available materials to improvise a string instrument.\nDigital Literacy: the learner responsibly searches for local names of string instruments- fiddles, ground and mouth bows.",
+   "values": "Responsibility: the learner takes care of digital devices as they search for information on string musical instruments.\nUnity: The learner cooperates with others as they work in pairs to identify and talk about the string instruments from the recordings and pictures.",
+   "pcis": "Environmental Conservation: the learner responsibly uses locally available materials to improvise string instruments\nSelf-awareness and Self-esteem: the learner plays the string instrument for enjoyment.",
+   "links": "Environmental Activities: the learner identifies string instruments from different Kenyan communities. 108 108",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.a",
+     "letter": "a",
+     "text": "identify Indigenous string musical instruments from Kenyan communities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.b",
+     "letter": "b",
+     "text": "improvise a string musical instrument using available materials",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.c",
+     "letter": "c",
+     "text": "play an improvised string instrument for enjoyment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.d",
+     "letter": "d",
+     "text": "value Indigenous string instruments from Kenyan communities",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M",
+   "number": "2.6",
+   "strand": "Performing and Displaying",
+   "sub_strand": "Modelling and Ornament Making.",
+   "sequence": 206,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "explore virtual and actual samples of beaded ornaments,",
+    "roll clay or papier mâché to make pellets for beading and clean hands,",
+    "pierce the pellets to make a hole through for stringing",
+    "dry the beads under shade,",
+    "decorate the beads by painting,",
+    "pass a string to make a single-stranded necklace,",
+    "display the ornament for peers’ feedback."
+   ],
+   "key_inquiry_questions": [
+    "What other materials can be used to make beads?"
+   ],
+   "core_competences": "Communication and collaboration: the learner works with peers to prepare clay or papier mâché for modelling items.\nCreativity and imagination: the learner creates a single-stranded necklace and a matching bracelet.",
+   "values": "Respect: the learner gives positive feedback as they display items made.\nUnity: the learner displays the ornament for peers’ feedback.",
+   "pcis": "Safety and security: The learner observes their safety as they fire the clay beads in an improvised kiln.\nSocial Cohesion: The learner portrays team spirit as they explore the pinch and pellet technique to make simple forms in pairs.",
+   "links": "Environmental Activities: The learner roll clay or papier mâché to make pellets for beading and clean hands. 110 110",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.a",
+     "letter": "a",
+     "text": "identify modelled beads for familiarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.b",
+     "letter": "b",
+     "text": "model beads using the pellet technique",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.c",
+     "letter": "c",
+     "text": "decorate the beads by painting",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.d",
+     "letter": "d",
+     "text": "make an ornament using beads",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.e",
+     "letter": "e",
+     "text": "appreciate making beads using the pellet technique",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE",
+   "number": "3.1",
+   "strand": "Appreciation",
+   "sub_strand": "The Kenya National Anthem",
+   "sequence": 301,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Text of the Kenya National Anthem",
+    "Message in the first stanza",
+    "Occasions when the Kenyan National flag is hoisted (national holidays, school assemblies, heads of state visits, national meetings among others)",
+    "Performance etiquette."
+   ],
+   "learning_experiences": [
+    "listen to or watch a live or recorded performance of the first stanza of the Kenya National Anthem in unison and sing along,",
+    "write the text of the first stanza of the Kenya National Anthem and talk about the message in the stanza,",
+    "collaboratively perform the first stanza of the Kenya National Anthem observing appropriate etiquette,",
+    "talk about the occasions when the Kenyan National Flag is hoisted."
+   ],
+   "key_inquiry_questions": [
+    "1 How is the Kenya National Anthem performed?",
+    "2 What can one learn from the Kenya National Anthem?"
+   ],
+   "core_competences": "Communication and Collaboration: the learner keenly listens to, and talks about the words of the Kenya National Anthem.\nCitizenship: the learner takes pride in performing the Kenya National Anthem.",
+   "values": "Respect: the learner performs the first stanza of the Kenya National Anthem observing the anthem’s etiquette.\nUnity: the learner performs the first stanza of the Kenya National Anthem with peers.\nPatriotism: the learner internalizes the message of the Kenya National Anthem developing love for the country.",
+   "pcis": "Life skills: the learner applies the knowledge acquired in observing anthem etiquette in daily life.",
+   "links": "Kiswahili Language Activities: the learner sings the first stanza of the Kenyan National Anthem articulating the words in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.a",
+     "letter": "a",
+     "text": "identify the text of the first stanza of the Kenya National Anthem in Kiswahili",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.b",
+     "letter": "b",
+     "text": "describe the message in the Kenya National anthem",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.c",
+     "letter": "c",
+     "text": "identify occasions when the Kenya National Flag is raised",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.d",
+     "letter": "d",
+     "text": "sing the Kenya National Anthem observing the anthem’s etiquette",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.e",
+     "letter": "e",
+     "text": "appreciate the performance of the Kenya National Anthem for patriotism. 112 112",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS",
+   "number": "3.2",
+   "strand": "Appreciation",
+   "sub_strand": "Water Safety Awareness",
+   "sequence": 302,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "observe pictures of different water points and water bodies within your locality and share them with peers,",
+    "talk about the dangers of water points and water bodies in your locality with peers,",
+    "talk about ways of observing safety around water points and water bodies in your locality,"
+   ],
+   "key_inquiry_questions": [
+    "How safe are the water points and water bodies in your locality?",
+    "Why is water safety awareness important?"
+   ],
+   "core_competences": "Communication and Collaboration: the learner talks about the dangers of water points and water bodies in your locality with peers.\nLearning to Learn: the learner learns to observe safety measures around different water points and water bodies in the locality. 114 114",
+   "values": "Responsibility: the learner observes safety precautions around water points and water bodies in their locality.\nIntegrity: the learner exercises self-discipline around water points and water bodies within their locality.",
+   "pcis": "Health Promotion: the learner practises self-discipline around water points and water bodies in their locality to avoid injuries.\nSafety: the learner develops water safety awareness by practising safety measures around water points and water bodies in their locality.",
+   "links": "Environmental Activities: the learner practises water safety awareness within their locality.\nReligious Activities: the learner applies values of self-discipline around water points and water bodies in their locality.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Creative Activities, IL G1-3 - Revised.pdf",
+    "version": "First Published in 2021; Revised in 2024",
+    "pages": [
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.a",
+     "letter": "a",
+     "text": "identify different water points and water bodies in the locality",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.b",
+     "letter": "b",
+     "text": "explain water dangers arising from water points and water bodies in the locality",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.c",
+     "letter": "c",
+     "text": "narrate ways of observing safety around water points and water bodies in the locality",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.d",
+     "letter": "d",
+     "text": "appreciate water safety in the locality for life skills",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

@@ -22,9 +22,10 @@ import React, { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, us
 import { HorebBot } from '../ai-tutor/HorebBot.jsx';
 import { useHorebLook } from '../ai-tutor/horebLook.js';
 import { supabase } from '../supabase.js';
-import { Board, BOARD_H } from './Board.jsx';
+import { Board, BOARD_H, drawKey } from './Board.jsx';
+import { drawDuration } from '../draw/index.js';
 import { emptyBoard, applyStep, boardSummary, portraitBoardH } from './board.js';
-import { validateTurn, PHASES, cellsOf } from './commands.js';
+import { validateTurn, PHASES, cellsOf, DRAWN, MARKS } from './commands.js';
 import { buildTimeline, createPlayer, advance, updateTimeline } from './timeline.js';
 import { sessionReducer, newSession, mascotState } from './session.js';
 import { providersFor, checkProviders } from './providers/index.js';
@@ -148,6 +149,9 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const [delayLog, setDelayLog] = useState([]);
   const [voiceName, setVoiceName] = useState('');
   const boardClock = () => providers.current?.tts?.clock?.() ?? clock();
+  // How long the timeline gave each drawing (drawKey -> ms): the board draws it in that time.
+  const drawTimes = useRef(new Map());
+  const timeOf = (step) => drawDuration(step, boardHRef.current);
   useWakeLock(session.status !== 'ready' && session.status !== 'ended');
 
   useEffect(() => { boardRef.current = board; }, [board]);
@@ -173,7 +177,9 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
           pl.version = pl.stream.version();
           pl.stepsLen = pl.turn.steps.length;
           turnSteps.current = pl.turn.steps;
-          updateTimeline(pl, buildTimeline(pl.turn.steps, { speech: (_, k) => pl.stream.timing(k) }));
+          updateTimeline(pl, buildTimeline(pl.turn.steps, { speech: (_, k) => pl.stream.timing(k), drawMs: timeOf }));
+          // A drawing already started is squeezed too if a later step's word now comes before it ends.
+          for (const e of pl.timeline.events) if (pl.fired.has(e.i)) { const key = drawKey({ ...turnSteps.current[e.i], at: pl.startedAt + e.t }); if (drawTimes.current.has(key)) drawTimes.current.set(key, e.dur); }
           setLive((l) => (l ? { ...l, sentences: pl.timeline.sentences } : l));
           if (pl.stream.failed && !pl.failNoted) { pl.failNoted = true; vdispatch({ type: 'fail', kind: 'speak-failed' }); providers.current.tts = simulatedTts(); }
         }
@@ -182,7 +188,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
         for (const e of due) if (e.anchor === 'word') offsets.current.push(t - (pl.startedAt + e.t));
         if (due.length) {
           let b = boardRef.current;
-          for (const e of due) b = fire(b, turnSteps.current[e.i], pl.startedAt + e.t);
+          for (const e of due) b = fire(b, turnSteps.current[e.i], pl.startedAt + e.t, e.dur);
           boardRef.current = b;
           setBoard(b);
         }
@@ -203,8 +209,9 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     return () => cancelAnimationFrame(raf);
   }, []);
 
-  const fire = (b, step, at) => {
+  const fire = (b, step, at, dur = null) => {
     if (!step) return b;
+    if (dur != null && (DRAWN.includes(step.cmd) || MARKS.includes(step.cmd))) drawTimes.current.set(drawKey({ ...step, at }), dur);
     const next = applyStep(b, step, at, boardHRef.current);
     if (step.cmd === 'ask') setAsk(next.ask);
     if (step.cmd === 'end_session') dispatch({ type: 'ended', summary: step.summary, at });
@@ -238,7 +245,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     T.reported = T.steps.length;
     turnSteps.current = T.steps;
     saidK.current = new Set();
-    const tl = buildTimeline(T.steps, { speech: (_, k) => T.stream.timing(k) });
+    const tl = buildTimeline(T.steps, { speech: (_, k) => T.stream.timing(k), drawMs: timeOf });
     const pl = createPlayer(tl, startAt);
     Object.assign(pl, { stream: T.stream, version: T.stream.version(), turn: T, stepsLen: T.steps.length });
     T.player = pl;
@@ -365,7 +372,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       const t = boardClock();
       const r = bargeIn({ player: pl, tts: providers.current.tts, now: t });
       let b = boardRef.current;
-      for (const e of r.due) b = fire(b, turnSteps.current[e.i], t - e.dur);
+      for (const e of r.due) b = fire(b, turnSteps.current[e.i], t - e.dur, e.dur);
       boardRef.current = b; setBoard(b);
       if (r.interrupted) {
         heard = r.heard;
@@ -548,7 +555,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       <main className="flex-1 min-h-0 flex flex-col landscape:flex-row gap-2 p-2">
         <section className="relative min-h-0 portrait:shrink-0 landscape:flex-1 flex flex-col items-center justify-center gap-1.5">
           <div className="vt-board relative w-full rounded-2xl overflow-hidden bg-white min-h-0" style={{ aspectRatio: `1000 / ${boardH}`, maxHeight: started ? 'calc(100% - 46px)' : '100%' }}>
-            <Board ref={svgRef} board={board} now={now} H={boardH} inkOn={started && session.status !== 'ended'} tool={tool} onInk={onInk} />
+            <Board ref={svgRef} board={board} now={now} H={boardH} drawTimes={drawTimes.current} inkOn={started && session.status !== 'ended'} tool={tool} onInk={onInk} />
             {!started ? (
               <div className="absolute inset-0 flex items-center justify-center bg-white/70 p-3">
                 <div className="w-full max-w-sm bg-white rounded-2xl p-4 border border-slate-200">

@@ -175,6 +175,7 @@ var DRAWN = ["write_text", "write_math", "fraction_bar", "number_line", "shape",
 var MARKS = ["highlight", "underline", "point"];
 var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "pause_for_child", "end_session"];
 var TIMED = [...DRAWN, ...MARKS, "erase", "clear"];
+var PACES = ["slow"];
 var FIELDS = {
   say: ["text"],
   write_text: ["id", "text", "slot", "size", "colour"],
@@ -281,7 +282,7 @@ function checkStep(s, ctx, notes) {
   need(s && typeof s === "object" && !Array.isArray(s), "not an object");
   const cmd = s.cmd;
   need(COMMANDS.includes(cmd), `unknown command ${String(cmd).slice(0, 30)}`);
-  const allowed = /* @__PURE__ */ new Set(["cmd", ...FIELDS[cmd], ...TIMED.includes(cmd) ? ["on", "delay_ms"] : []]);
+  const allowed = /* @__PURE__ */ new Set(["cmd", ...FIELDS[cmd], ...TIMED.includes(cmd) ? ["on", "delay_ms"] : [], ...DRAWN.includes(cmd) ? ["pace"] : []]);
   for (const k of Object.keys(s)) need(allowed.has(k), `${cmd}: extra field ${k.slice(0, 30)}`);
   for (const k of REQUIRED[cmd]) need(s[k] !== void 0 && s[k] !== null, `${cmd}: missing ${k}`);
   const out = { cmd };
@@ -291,6 +292,10 @@ function checkStep(s, ctx, notes) {
       need(isInt(s.delay_ms) && inRange(s.delay_ms, LIMITS.delay), "delay_ms out of range");
       out.delay_ms = s.delay_ms;
     }
+  }
+  if (DRAWN.includes(cmd) && s.pace !== void 0 && s.pace !== null) {
+    need(PACES.includes(s.pace), `${cmd}: pace must be ${PACES.join("/")}`);
+    out.pace = s.pace;
   }
   const newId = () => {
     need(typeof s.id === "string" && ID_RE.test(s.id), `${cmd}: bad id`);
@@ -608,16 +613,17 @@ var N = { type: "number" };
 var B = { type: "boolean" };
 var E = (list) => ({ type: "string", enum: list });
 var timing = { on: T, delay_ms: I };
+var drawn = { ...timing, pace: E(PACES) };
 var shadedSchema = { anyOf: [I, { type: "array", items: I }] };
 var C = (cmd, props, required) => S({ cmd: { type: "string", const: cmd }, ...props }, ["cmd", ...required]);
 var STEP_SCHEMAS = [
   C("say", { text: T }, ["text"]),
-  C("write_text", { id: T, text: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...timing }, ["id", "text", "slot"]),
-  C("write_math", { id: T, expr: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...timing }, ["id", "expr", "slot"]),
-  C("fraction_bar", { id: T, parts: I, shaded: shadedSchema, second_bar: S({ parts: I, shaded: shadedSchema }, ["parts", "shaded"]), label: B, slot: E(SLOTS), colour: E(COLOURS), ...timing }, ["id", "parts", "shaded", "slot"]),
-  C("number_line", { id: T, from: I, to: I, divisions: I, marks: { type: "array", items: S({ value: N, label: T, style: E(["dot", "arrow"]) }, ["value"]) }, jumps: { type: "array", items: S({ from: N, to: N }, ["from", "to"]) }, slot: E(SLOTS), ...timing }, ["id", "from", "to", "divisions", "slot"]),
-  C("shape", { id: T, kind: E(SHAPE_KINDS), parts: I, shaded: shadedSchema, label: B, slot: E(SLOTS), colour: E(COLOURS), ...timing }, ["id", "kind", "parts", "shaded", "slot"]),
-  C("plot_points", { id: T, x_axis: S({ from: I, to: I, name: T }, ["from", "to"]), y_axis: S({ from: I, to: I, name: T }, ["from", "to"]), points: { type: "array", items: S({ x: N, y: N, label: T }, ["x", "y"]) }, connect: B, slot: E(SLOTS), ...timing }, ["id", "x_axis", "y_axis", "points", "slot"]),
+  C("write_text", { id: T, text: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ["id", "text", "slot"]),
+  C("write_math", { id: T, expr: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ["id", "expr", "slot"]),
+  C("fraction_bar", { id: T, parts: I, shaded: shadedSchema, second_bar: S({ parts: I, shaded: shadedSchema }, ["parts", "shaded"]), label: B, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ["id", "parts", "shaded", "slot"]),
+  C("number_line", { id: T, from: I, to: I, divisions: I, marks: { type: "array", items: S({ value: N, label: T, style: E(["dot", "arrow"]) }, ["value"]) }, jumps: { type: "array", items: S({ from: N, to: N }, ["from", "to"]) }, slot: E(SLOTS), ...drawn }, ["id", "from", "to", "divisions", "slot"]),
+  C("shape", { id: T, kind: E(SHAPE_KINDS), parts: I, shaded: shadedSchema, label: B, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ["id", "kind", "parts", "shaded", "slot"]),
+  C("plot_points", { id: T, x_axis: S({ from: I, to: I, name: T }, ["from", "to"]), y_axis: S({ from: I, to: I, name: T }, ["from", "to"]), points: { type: "array", items: S({ x: N, y: N, label: T }, ["x", "y"]) }, connect: B, slot: E(SLOTS), ...drawn }, ["id", "x_axis", "y_axis", "points", "slot"]),
   C("highlight", { target: T, part: I, bar: I, style: E(HIGHLIGHT_STYLES), ...timing }, ["target"]),
   C("underline", { target: T, range: { type: "array", items: I }, ...timing }, ["target"]),
   C("point", { target: T, part: I, bar: I, ...timing }, ["target"]),
@@ -5029,12 +5035,20 @@ HOW YOU TALK:
 THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app draws them itself; you never write code, markup or coordinates.
 - say: one to three short sentences (220 characters at most). Every drawing step belongs to the say before it.
 - Drawing steps take "on": a word or two copied exactly from the say before them. The stroke starts as that word is spoken. delay_ms (-300 to 1500) shifts it. No "on" means: after that sentence ends.
+- The board draws like a teacher, stroke by stroke: a shaded bar or shape takes about 4 to 8 seconds, a line of maths 1 to 3, a mark under a second. A drawing is hurried to finish before the next drawing step's word, so give each drawing its own sentence or two: anchor the next drawing or mark in a later sentence, never a word or two later.
+- pace "slow" on a drawing step draws it about 1.6 times slower. Use it for the key idea of the lesson (the cut that makes the equal parts, the step that changes the fraction), once or twice a lesson, and give it a long sentence.
 - write_text (60 chars), write_math (80 chars of: digits, ?, + - \xD7 \xF7 = < >, brackets, ^, frac(a,b), mixed(w,a,b); never LaTeX), fraction_bar (parts 1 to 12, shaded: a count or a list of part numbers; second_bar to compare), number_line (whole numbers 0 to 12, divisions per whole, marks, jumps), shape (circle, rectangle, square, triangle; 2 to 12 equal parts), plot_points (not needed for fractions).
 - Slots: ${SLOTS.join(", ")}. top, middle and bottom are full width; the others are half. Colours: ${COLOURS.join(", ")}.
+- One colour per scene (a scene is your drawing between two clears): ink, plus one colour. The first colour you use in a scene is its colour, and the board draws every other colour in that scene, and every mark, in it. So pick one and keep to it; to count shaded parts with rings, shade them in ink so the rings stand out.
 - highlight (circle, box or glow, optionally one part), underline (text or maths), point (the teacher's finger; optionally one part) need an id already on the board. erase removes items; clear wipes your ink (never the child's). The board holds 30 items at most; clear between ideas.
 - ask: one question a turn. Give expected (the right answer) and, for your own questions, the wrong answers you expect with their misconception codes, or set bank to a probe bank id and the app uses that question's answers. The child never sees expected.
 - pause_for_child ends every turn (expect typed while there is no voice; max_wait_s 5 to 60), except the last, which ends with end_session.
 - Phases: ${PHASES.join(", ")}.
+
+TEACHING MOVES AT THE BOARD:
+- Count with the child. To count parts, count only the first ones aloud, one highlight per part, each "on" the number word you say ("One." "Two."). Then ask the child to carry on and say how many, and pause_for_child. Never say or show the total before the child has had a go.
+- Ask before you show. When you ask about a picture, do not draw its answer in the same turn: no shading, result or filled-in number that gives it away. Draw it in the next turn, after the child has answered, as you tell them whether they were right.
+- Slow at the key idea (pace "slow"), quick on the rest.
 
 THE CHILD'S WORK ON THE BOARD:
 - The child writes on the board too. Their ink is teal; everything in other colours is yours. A picture of the board is sometimes attached to the turn: when they press "Check my work", or when they stop writing for a few seconds.
@@ -5044,8 +5058,8 @@ THE CHILD'S WORK ON THE BOARD:
 - When their written work is the evidence for a diagnosis, quote what they wrote in evidence and set snapshot to the picture's id from the context.
 - Never ask the child to write names, places, phone numbers or anything personal on the board.
 
-Example of a teaching turn (shape only):
-{"steps":[{"cmd":"say","text":"Here is a chapati cut into four equal pieces."},{"cmd":"fraction_bar","id":"bar1","parts":4,"shaded":0,"slot":"top","on":"four"},{"cmd":"say","text":"You ate three of them. That is three quarters."},{"cmd":"highlight","target":"bar1","part":3,"style":"glow","on":"three"},{"cmd":"write_math","id":"m1","expr":"frac(3,4)","slot":"middle_left","on":"three quarters"},{"cmd":"say","text":"How many quarters are left?"},{"cmd":"pause_for_child","expect":"typed","max_wait_s":30}]}
+Example of a teaching turn (shape only): the bar is drawn slowly with its own sentences, HOREB counts the first two parts with the child, and the child says the total.
+{"steps":[{"cmd":"say","text":"Here is a bar of bread, cut into four equal pieces. Some of the pieces are eaten."},{"cmd":"fraction_bar","id":"bar1","parts":4,"shaded":3,"label":false,"slot":"top","colour":"ink","pace":"slow","on":"bread"},{"cmd":"say","text":"Count the eaten pieces with me. One. Two."},{"cmd":"highlight","target":"bar1","part":1,"style":"circle","on":"One"},{"cmd":"highlight","target":"bar1","part":2,"style":"circle","on":"Two"},{"cmd":"say","text":"Carry on counting. How many quarters were eaten?"},{"cmd":"pause_for_child","expect":"typed","max_wait_s":30}]}
 
 GRADE 5 FRACTIONS: the skills, what each builds on, and the misconceptions you may name (use the full code):
 ${mapText(lib)}`;
@@ -29526,13 +29540,13 @@ var FAMILIES20 = [
     form: "why",
     draw: () => ({ sym: pick(["<", ">", "\u2264", "\u2265"]), v: randInt(-5, 12), x: pick(["x", "n", "y"]), p: person() }),
     make: ({ sym, v, x, p }) => {
-      const closed = sym === "\u2264" || sym === "\u2265", vt = v < 0 ? `\u2212${-v}` : String(v), drawn = closed ? "open" : "closed", needed = closed ? "closed" : "open";
+      const closed = sym === "\u2264" || sym === "\u2265", vt = v < 0 ? `\u2212${-v}` : String(v), drawn2 = closed ? "open" : "closed", needed = closed ? "closed" : "open";
       return {
-        question: `${p.name} draws ${x} ${sym} ${vt} on a number line. ${p.She} puts ${circ2(drawn === "closed")} at ${vt}. Why is the circle wrong?`,
+        question: `${p.name} draws ${x} ${sym} ${vt} on a number line. ${p.She} puts ${circ2(drawn2 === "closed")} at ${vt}. Why is the circle wrong?`,
         story: false,
         options: shuffle4([
           { text: `${x} ${sym} ${vt} ${closed ? "includes" : "does not include"} ${vt} itself, so the circle must be ${needed}`, right: true },
-          { text: `A circle on a number line is always ${drawn}`, right: false, why: "Both kinds of circle are used. Which one to draw depends on the sign." },
+          { text: `A circle on a number line is always ${drawn2}`, right: false, why: "Both kinds of circle are used. Which one to draw depends on the sign." },
           { text: `The circle should be at ${v === 0 ? "1" : "0"}, not at ${vt}`, right: false, why: `The circle goes at the number in the inequality, which is ${vt}.` },
           { text: `The circle shows which way to shade, so it should be ${needed} to point the other way`, right: false, why: "The circle does not show a direction. It shows whether the end number is included. The shading shows the direction." }
         ]),
@@ -39461,7 +39475,7 @@ Deno.serve(async (req) => {
     const asUser = createClient(Deno.env.get("SUPABASE_URL"), Deno.env.get("SUPABASE_ANON_KEY"), {
       global: { headers: { Authorization: req.headers.get("Authorization") ?? "" } }
     });
-    const { data: { user } } = await asUser.auth.getUser();
+    const { data: { user } } = await asUser.auth.getUser((req.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "").trim());
     if (!user) return json({ error: "Sign in first." }, 401);
     const admin = createClient(Deno.env.get("SUPABASE_URL"), Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"));
     const key = Deno.env.get("ANTHROPIC_API_KEY");
