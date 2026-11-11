@@ -5,7 +5,9 @@
 // What must hold:
 //   a valid link code opens that learner's home; a wrong check, an unknown or
 //   closed school, and a malformed code all get the same refusal
-//   ten wrong codes an hour per address, then even a right one waits
+//   ten wrong checks an hour per learner reference, then even a right one waits;
+//   a loose 200 an hour per address, since many phones share one (Safaricom)
+//   the streak skips days with nothing open; only an open, untouched past day breaks it
 //   another learner's homework (same school, or the same reference at another
 //   school) is never in the payload; no names, no answers, no other codes
 //   the family app sees the same home only for a child the parent linked
@@ -17,7 +19,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { learnerHomework } from '../src/school/homeworkLearner.js';
-import { learnerHome, buildHome, HOME_TRIES_PER_HOUR, dayOf } from '../src/school/learnerHome.js';
+import { learnerHome, buildHome, HOME_TRIES_PER_HOUR, HOME_TRIES_PER_IP_HOUR, dayOf } from '../src/school/learnerHome.js';
 import { homeHtml, HOME_CSS, dueWords, dayWords } from '../src/school/learnerHomeView.js';
 import { memoryStore } from '../src/school/homeworkStore.js';
 import { linkCheck } from '../src/school/schoolDoor.js';
@@ -90,18 +92,31 @@ test('a wrong check, an unknown or closed school and a bad code all get the same
     answers.add(r.body.error);
   }
   assert.equal(answers.size, 1, 'nothing to learn from which part was wrong');
-  assert.equal(store.tries.length, bad.length, 'each wrong one counted');
+  assert.equal(store.tries.filter(t => t.try_key === 'iip1').length, bad.length, 'each wrong one counted on the address');
+  assert.ok(store.tries.every(t => !t.try_key.includes('AAAAAAAA')), 'the reference is kept only as a hash');
 });
 
-test('ten wrong codes an hour per address, then even a right code waits; another address is not held up', async () => {
+test('ten wrong checks an hour on one learner, from anywhere, then even the right code waits; other learners are not held up', async () => {
   const store = await world();
   const good = await linkOf('WSL', 'AAAAAAAA');
-  for (let i = 0; i < HOME_TRIES_PER_HOUR; i++) assert.equal((await learnerHome({ link: 'WSL-AAAAAAAA-ZZZZ' }, deps(store))).status, 404);
-  const held = await learnerHome({ link: good }, deps(store));
-  assert.equal(held.status, 429); assert.match(held.body.error, /Wait an hour/);
-  assert.equal((await learnerHome({ link: good }, deps(store, { ipKey: 'ip-2' }))).status, 200);
+  for (let i = 0; i < HOME_TRIES_PER_HOUR; i++) assert.equal((await learnerHome({ link: 'WSL-AAAAAAAA-ZZZZ' }, deps(store, { ipKey: 'ip-' + i }))).status, 404);
+  const held = await learnerHome({ link: good }, deps(store, { ipKey: 'ip-new' }));
+  assert.equal(held.status, 429, 'guessing one learner\'s check from many addresses is stopped'); assert.match(held.body.error, /Wait an hour/);
+  // Another learner on the same shared address still opens.
+  assert.equal((await learnerHome({ link: await linkOf('WSL', 'BBBBBBBB') }, deps(store, { ipKey: 'ip-0' }))).status, 200);
   // An hour later it opens again.
   assert.equal((await learnerHome({ link: good }, deps(store, { now: () => NOW + 3601 * 1000 }))).status, 200);
+});
+
+test('one shared address is held up only after 200 wrong codes, a ceiling on wide scanning', async () => {
+  const store = await world();
+  const CH = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+  const refs = Array.from({ length: HOME_TRIES_PER_IP_HOUR }, (_, i) => 'CCCCCC' + CH[Math.floor(i / 31)] + CH[i % 31]);
+  for (let i = 0; i < HOME_TRIES_PER_IP_HOUR - 1; i++) await learnerHome({ link: `WSL-${refs[i]}-ZZZZ` }, deps(store, { ipKey: 'shared' }));
+  assert.equal((await learnerHome({ link: await linkOf('WSL', 'AAAAAAAA') }, deps(store, { ipKey: 'shared' }))).status, 200, '199 wrong from a shared address: a real link still opens');
+  await learnerHome({ link: 'nonsense' }, deps(store, { ipKey: 'shared' }));
+  assert.equal((await learnerHome({ link: await linkOf('WSL', 'AAAAAAAA') }, deps(store, { ipKey: 'shared' }))).status, 429, 'then the address waits');
+  assert.equal((await learnerHome({ link: await linkOf('WSL', 'AAAAAAAA') }, deps(store, { ipKey: 'elsewhere' }))).status, 200);
 });
 
 test('the family app: the same home for a child the parent linked, nothing for anyone else', async () => {
@@ -122,16 +137,43 @@ test('the next step, the streak, got it and practise next follow the answers', a
   const h = (await learnerHome({ link: await linkOf('WSL', 'AAAAAAAA') }, deps(store))).body.home;
   assert.equal(h.today, '2026-11-11');
   // Answers on the 9th, 10th and 11th (Nairobi): three days in a row, today included.
-  assert.deepEqual(h.streak, { days: 3, today: true, week: ['05', '06', '07', '08', '09', '10', '11'].map(d => ({ day: `2026-11-${d}`, done: ['09', '10', '11'].includes(d) })) });
+  assert.deepEqual([h.streak.days, h.streak.today, h.streak.open_today], [3, true, true]);
+  assert.deepEqual(h.streak.week.map(w => [w.day.slice(8), w.done, w.open]), [['05', false, true], ['06', false, true], ['07', false, true], ['08', false, true], ['09', true, true], ['10', true, true], ['11', true, true]]);
   // Equivalent fractions: 4 answers, 4 right: got it. Simplify: 1 of 2 right: practise next.
   assert.deepEqual(h.mastered.map(m => m.code), [FR]);
   assert.deepEqual(h.practise.map(p => [p.code, p.right, p.of]), [[SIMP, 1, 2]]);
   assert.equal(h.practise[0].topic, 'Fractions');
-  // Yesterday's streak still counts until today ends; a gap breaks it.
-  const b = buildHome('S', [{ homework: { title: 't', mode: 'online' }, sitting: { status: 'started', items: [item(1, FR), item(2, FR)], answers: [ans(1, true, '2026-11-10T10:00:00Z')] } }], NOW);
-  assert.deepEqual([b.streak.days, b.streak.today], [1, false]);
-  const gapped = buildHome('S', [{ homework: { title: 't', mode: 'online' }, sitting: { status: 'started', items: [item(1, FR)], answers: [ans(1, true, '2026-11-08T10:00:00Z')] } }], NOW);
-  assert.equal(gapped.streak.days, 0);
+  // Open, not yet started today: the streak is still alive.
+  const b = buildHome('S', [{ homework: { title: 't', mode: 'online', created_at: '2026-11-09T05:00:00Z', due_on: '2026-11-13' }, sitting: { status: 'started', items: [item(1, FR), item(2, FR)], answers: [ans(1, true, '2026-11-09T10:00:00Z'), ans(2, true, '2026-11-10T10:00:00Z')] } }], NOW);
+  assert.deepEqual([b.streak.days, b.streak.today, b.streak.open_today], [2, false, true]);
+  assert.match(homeHtml(b), /Do today's homework to keep it\./);
+  // A day with homework open and none done breaks it.
+  const gapped = buildHome('S', [{ homework: { title: 't', mode: 'online', created_at: '2026-11-07T05:00:00Z', due_on: '2026-11-13' }, sitting: { status: 'started', items: [item(1, FR), item(2, FR)], answers: [ans(1, true, '2026-11-08T10:00:00Z'), ans(2, true, '2026-11-10T10:00:00Z')] } }], NOW);
+  assert.equal(gapped.streak.days, 1, 'the 9th was open and missed');
+  const sat = (d) => ({ status: 'submitted', items: [item(1, FR)], answers: [ans(1, true, d + 'T10:00:00Z')], finished_at: d + 'T10:00:00Z' });
+  // A weekend with nothing open: Friday's homework handed in Friday, Monday's set Monday.
+  const weekend = buildHome('S', [
+    { homework: { title: 'Fri', mode: 'online', created_at: '2026-11-05T05:00:00Z', due_on: '2026-11-06' }, sitting: sat('2026-11-06') },
+    { homework: { title: 'Thu', mode: 'online', created_at: '2026-11-05T05:00:00Z', due_on: '2026-11-05' }, sitting: sat('2026-11-05') },
+    { homework: { title: 'Mon', mode: 'online', created_at: '2026-11-09T05:00:00Z', due_on: '2026-11-11' }, sitting: sat('2026-11-09') },
+    { homework: { title: 'Tue', mode: 'online', created_at: '2026-11-10T05:00:00Z', due_on: '2026-11-12' }, sitting: sat('2026-11-10') },
+    { homework: { title: 'Wed', mode: 'online', created_at: '2026-11-11T05:00:00Z', due_on: '2026-11-12' }, sitting: sat('2026-11-11') },
+  ], NOW);
+  assert.equal(weekend.streak.days, 5, 'Thursday, Friday, then Monday to Wednesday: the weekend is skipped');
+  assert.deepEqual(weekend.streak.week.filter(w => !w.open).map(w => w.day), ['2026-11-07', '2026-11-08'], 'the weekend shows as no homework');
+  // Nothing set for three days (the 6th to the 8th): skipped, not a break.
+  const quiet = buildHome('S', [
+    { homework: { title: 'A', mode: 'online', created_at: '2026-11-04T05:00:00Z', due_on: '2026-11-05' }, sitting: sat('2026-11-05') },
+    { homework: { title: 'B', mode: 'online', created_at: '2026-11-09T05:00:00Z', due_on: '2026-11-10' }, sitting: sat('2026-11-09') },
+    { homework: { title: 'C', mode: 'online', created_at: '2026-11-10T05:00:00Z', due_on: '2026-11-13' }, sitting: { status: 'issued', code: 'C', items: [item(1, FR)], answers: [] } },
+  ], NOW);
+  assert.deepEqual([quiet.streak.days, quiet.streak.open_today], [0, true], 'the 10th was open and untouched: that breaks it, before the quiet days are reached');
+  const quiet2 = buildHome('S', [
+    { homework: { title: 'A', mode: 'online', created_at: '2026-11-04T05:00:00Z', due_on: '2026-11-05' }, sitting: sat('2026-11-05') },
+    { homework: { title: 'B', mode: 'online', created_at: '2026-11-09T05:00:00Z', due_on: '2026-11-10' }, sitting: sat('2026-11-09') },
+  ], NOW);
+  assert.deepEqual([quiet2.streak.days, quiet2.streak.open_today], [2, false], 'the 5th and the 9th count; three quiet days between and today with nothing open are skipped');
+  assert.match(homeHtml(quiet2), /Days with no homework set do not break it\./);
   // 21:30 UTC is the next morning in Nairobi.
   assert.equal(dayOf(Date.parse('2026-11-10T21:30:00Z')), '2026-11-11');
   // Long overdue and never handed in: off the to-do list.

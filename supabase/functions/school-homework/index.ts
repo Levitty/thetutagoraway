@@ -4340,6 +4340,11 @@ var SKILLS_G5 = {
 
 // src/school/learnerHome.js
 var HOME_TRIES_PER_HOUR = 10;
+var HOME_TRIES_PER_IP_HOUR = 200;
+var refKeyOf = async (door, ref) => {
+  const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`learner-home-ref:${door}:${ref}`));
+  return "r" + Array.from(new Uint8Array(d)).slice(0, 16).map((b) => b.toString(16).padStart(2, "0")).join("");
+};
 var UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 var NAIROBI = 3 * 3600 * 1e3;
 var dayOf = (ms) => new Date(ms + NAIROBI).toISOString().slice(0, 10);
@@ -4366,6 +4371,7 @@ function buildHome(school, rows, now) {
   const done = [];
   const bySkill = /* @__PURE__ */ new Map();
   const days = /* @__PURE__ */ new Set();
+  const windows = [];
   for (const { sitting: s, homework: h } of rows || []) {
     const items = s.items || [];
     const answers = s.answers || [];
@@ -4392,6 +4398,11 @@ function buildHome(school, rows, now) {
     }
     todo.push({ ...base, status: s.status, answered: answers.length, code: s.code, ...s.status === "locked" ? { lock_question: s.lock_question || answers.length + 1 } : {} });
   }
+  for (const { sitting: s, homework: h } of rows || []) {
+    if (h.mode === "paper" || !h.created_at) continue;
+    const ended = s.finished_at || s.locked_at;
+    windows.push({ from: dayOf(Date.parse(h.created_at)), to: [h.due_on, ended ? dayOf(Date.parse(ended)) : null].filter(Boolean).sort()[0] || today });
+  }
   const rank = (t) => t.status === "started" ? 0 : t.status === "issued" ? 1 : t.status === "locked" ? 2 : 3;
   todo.sort((a, b) => rank(a) - rank(b) || (a.due_on || "9999").localeCompare(b.due_on || "9999") || (a.set_on || "").localeCompare(b.set_on || ""));
   done.sort((a, b) => (b.finished_on || b.due_on || "").localeCompare(a.finished_on || a.due_on || ""));
@@ -4406,15 +4417,16 @@ function buildHome(school, rows, now) {
   }
   mastered.sort((a, b) => b.last.localeCompare(a.last));
   practise.sort((a, b) => a.right / a.of - b.right / b.of || b.last.localeCompare(a.last));
+  const open = (x) => windows.some((w) => w.from <= x && x <= w.to);
+  const first = [...windows.map((w) => w.from), ...days].sort()[0] || today;
   let streak = 0;
-  let d = days.has(today) ? today : addDays(today, -1);
-  while (days.has(d)) {
-    streak++;
-    d = addDays(d, -1);
+  for (let d = today; d >= first; d = addDays(d, -1)) {
+    if (days.has(d)) streak++;
+    else if (open(d) && d !== today) break;
   }
   const week = Array.from({ length: 7 }, (_, i) => {
     const x = addDays(today, i - 6);
-    return { day: x, done: days.has(x) };
+    return { day: x, done: days.has(x), open: open(x) };
   });
   const strip2 = ({ last, ...x }) => x;
   return {
@@ -4424,7 +4436,7 @@ function buildHome(school, rows, now) {
     done: done.slice(0, 12),
     mastered: mastered.slice(0, 8).map(strip2),
     practise: practise.slice(0, 3).map(strip2),
-    streak: { days: streak, today: days.has(today), week }
+    streak: { days: streak, today: days.has(today), open_today: open(today), week }
   };
 }
 async function learnerHome(p, deps) {
@@ -4437,13 +4449,22 @@ async function learnerHome(p, deps) {
     if (!link) return ok({ linked: false });
     return ok({ linked: true, home: buildHome(link.door.name, await store.homeSittings(link.door.id, link.learner_ref), deps.now()) });
   }
-  const key = String(deps.ipKey || "unknown");
+  const ipKey2 = "i" + String(deps.ipKey || "unknown").toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 40);
   const since = new Date(deps.now() - 3600 * 1e3).toISOString();
-  if (await store.homeTries(key, since) >= HOME_TRIES_PER_HOUR) return no(429, "Too many tries. Wait an hour, or ask the school to send the link again.");
+  const at = new Date(deps.now()).toISOString();
+  const busy = no(429, "Too many tries. Wait an hour, or ask the school to send the link again.");
+  if (await store.homeTries(ipKey2, since) >= HOME_TRIES_PER_IP_HOUR) return busy;
   const c = parseLinkCode(p.link);
-  const door = c ? await store.homeDoor(c.door) : null;
-  if (!c || !door || !sameText(await linkCheck(door.secret, door.code, c.ref), c.check)) {
-    await store.homeTry(key, false, new Date(deps.now()).toISOString());
+  if (!c) {
+    await store.homeTry(ipKey2, false, at);
+    return no(404, WRONG);
+  }
+  const refKey = await refKeyOf(c.door, c.ref);
+  if (await store.homeTries(refKey, since) >= HOME_TRIES_PER_HOUR) return busy;
+  const door = await store.homeDoor(c.door);
+  if (!door || !sameText(await linkCheck(door.secret, door.code, c.ref), c.check)) {
+    await store.homeTry(ipKey2, false, at);
+    await store.homeTry(refKey, false, at);
     return no(404, WRONG);
   }
   return ok({ linked: true, home: buildHome(door.name, await store.homeSittings(door.id, c.ref), deps.now()) });
@@ -4560,12 +4581,12 @@ function supabaseStore(admin) {
       return (data || []).map(({ school_homework: homework, ...sitting }) => ({ sitting, homework }));
     },
     async homeTries(key, sinceIso) {
-      const { count } = await admin.from("school_home_attempts").select("id", { count: "exact", head: true }).eq("ip_key", key).eq("ok", false).gte("at", sinceIso);
+      const { count } = await admin.from("school_home_attempts").select("id", { count: "exact", head: true }).eq("try_key", key).eq("ok", false).gte("at", sinceIso);
       return count || 0;
     },
     async homeTry(key, ok3) {
-      await admin.from("school_home_attempts").insert({ ip_key: key, ok: ok3 });
-      await admin.from("school_home_attempts").delete().eq("ip_key", key).lt("at", new Date(Date.now() - 864e5).toISOString());
+      await admin.from("school_home_attempts").insert({ try_key: key, ok: ok3 });
+      await admin.from("school_home_attempts").delete().eq("try_key", key).lt("at", new Date(Date.now() - 864e5).toISOString());
     },
     async childLink(userId, childId) {
       const { data } = await admin.from("school_learner_links").select("learner_ref, linked_at, school_doors(id, code, name, active)").eq("parent_id", userId).eq("child_id", childId).order("linked_at", { ascending: false }).limit(5);

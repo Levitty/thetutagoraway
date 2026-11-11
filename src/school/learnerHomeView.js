@@ -70,8 +70,8 @@ export function homeHtml(home, opts = {}) {
   // Streak.
   const s = h.streak || { days: 0, week: [] };
   out += '<section class="lh-card lh-streak"><div class="lh-streak-n"><b>' + s.days + '</b><span>' + (s.days === 1 ? 'day in a row' : 'days in a row') + '</span></div>'
-    + '<p class="lh-streak-l">' + (s.days === 0 ? (next ? 'Do some homework to start a streak.' : 'Your next homework starts a streak.') : s.today ? 'Homework done today. Well done.' : next ? 'Do some homework today to keep it going.' : 'Well done. Your next homework keeps it going.') + '</p>'
-    + '<ol class="lh-week">' + (s.week || []).map(w => '<li class="' + (w.done ? 'lh-on' : '') + (w.day === today ? ' lh-today' : '') + '"><i></i><span>' + weekday(w.day).slice(0, 3) + '</span></li>').join('') + '</ol></section>';
+    + '<p class="lh-streak-l">' + (s.days === 0 ? (s.open_today ? 'Do today\'s homework to start a streak.' : 'Your next homework starts a streak.') : s.today ? 'Homework done today. Well done.' : s.open_today ? 'Do today\'s homework to keep it.' : 'Well done. Days with no homework set do not break it.') + '</p>'
+    + '<ol class="lh-week">' + (s.week || []).map(w => '<li class="' + (w.done ? 'lh-on' : w.open ? '' : 'lh-off') + (w.day === today ? ' lh-today' : '') + '"><i></i><span>' + weekday(w.day).slice(0, 3) + '</span></li>').join('') + '</ol></section>';
 
   // The rest still to do.
   if (todo.length > 1) {
@@ -138,6 +138,7 @@ export const HOME_CSS = `
 .lh-week li { display: grid; justify-items: center; gap: 4px; font-size: 12px; color: var(--lh-muted); }
 .lh-week i { width: 30px; height: 30px; border-radius: 99px; background: var(--lh-ground); display: block; }
 .lh-week .lh-on i { background: var(--lh-sun); }
+.lh-week .lh-off i { background: transparent; box-shadow: inset 0 0 0 2px var(--lh-line); }
 .lh-week .lh-today i { box-shadow: 0 0 0 2px var(--lh-ink); }
 .lh-week .lh-today span { color: var(--lh-ink); font-weight: 800; }
 .lh-list { list-style: none; padding: 0; display: grid; gap: 8px; }

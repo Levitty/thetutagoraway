@@ -48,12 +48,12 @@ export function supabaseStore(admin) {
       return (data || []).map(({ school_homework: homework, ...sitting }) => ({ sitting, homework }));
     },
     async homeTries(key, sinceIso) {
-      const { count } = await admin.from('school_home_attempts').select('id', { count: 'exact', head: true }).eq('ip_key', key).eq('ok', false).gte('at', sinceIso);
+      const { count } = await admin.from('school_home_attempts').select('id', { count: 'exact', head: true }).eq('try_key', key).eq('ok', false).gte('at', sinceIso);
       return count || 0;
     },
     async homeTry(key, ok) {
-      await admin.from('school_home_attempts').insert({ ip_key: key, ok });
-      await admin.from('school_home_attempts').delete().eq('ip_key', key).lt('at', new Date(Date.now() - 86400000).toISOString());
+      await admin.from('school_home_attempts').insert({ try_key: key, ok });
+      await admin.from('school_home_attempts').delete().eq('try_key', key).lt('at', new Date(Date.now() - 86400000).toISOString());
     },
     async childLink(userId, childId) {
       const { data } = await admin.from('school_learner_links').select('learner_ref, linked_at, school_doors(id, code, name, active)')
@@ -85,8 +85,8 @@ export function memoryStore(doors = [], links = []) {
       return sittings.filter(s => s.learner_ref === ref).map(s => ({ sitting: { ...s }, homework: homework.find(h => h.id === s.homework_id) }))
         .filter(x => x.homework && x.homework.door_id === doorId);
     },
-    async homeTries(key, sinceIso) { return tries.filter(t => t.ip_key === key && !t.ok && t.at >= sinceIso).length; },
-    async homeTry(key, ok, atIso) { tries.push({ ip_key: key, ok, at: atIso || new Date().toISOString() }); },
+    async homeTries(key, sinceIso) { return tries.filter(t => t.try_key === key && !t.ok && t.at >= sinceIso).length; },
+    async homeTry(key, ok, atIso) { tries.push({ try_key: key, ok, at: atIso || new Date().toISOString() }); },
     async childLink(userId, childId) {
       const l = links.find(x => x.parent_id === userId && x.child_id === childId); const d = l && doors.find(x => x.id === l.door_id && x.active !== false);
       return d ? { door: { id: d.id, code: d.code, name: d.name }, learner_ref: l.learner_ref } : null;

@@ -31923,12 +31923,12 @@ function supabaseStore(admin) {
       return (data || []).map(({ school_homework: homework, ...sitting }) => ({ sitting, homework }));
     },
     async homeTries(key, sinceIso) {
-      const { count } = await admin.from("school_home_attempts").select("id", { count: "exact", head: true }).eq("ip_key", key).eq("ok", false).gte("at", sinceIso);
+      const { count } = await admin.from("school_home_attempts").select("id", { count: "exact", head: true }).eq("try_key", key).eq("ok", false).gte("at", sinceIso);
       return count || 0;
     },
     async homeTry(key, ok2) {
-      await admin.from("school_home_attempts").insert({ ip_key: key, ok: ok2 });
-      await admin.from("school_home_attempts").delete().eq("ip_key", key).lt("at", new Date(Date.now() - 864e5).toISOString());
+      await admin.from("school_home_attempts").insert({ try_key: key, ok: ok2 });
+      await admin.from("school_home_attempts").delete().eq("try_key", key).lt("at", new Date(Date.now() - 864e5).toISOString());
     },
     async childLink(userId, childId) {
       const { data } = await admin.from("school_learner_links").select("learner_ref, linked_at, school_doors(id, code, name, active)").eq("parent_id", userId).eq("child_id", childId).order("linked_at", { ascending: false }).limit(5);

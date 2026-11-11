@@ -8,10 +8,14 @@
 -- function (action learner_home), service role only. Nothing new is readable
 -- by the app.
 --
---   school_home_attempts   wrong link codes, per network address (a hash, never
---                          the address), so codes cannot be guessed: ten wrong
---                          an hour and nothing is checked for an hour, as
---                          link_school_learner does for parents
+--   school_home_attempts   wrong link codes, counted two ways, each under a hash
+--                          (never the address, never the reference):
+--                            per door and learner reference: ten wrong checks an
+--                            hour, then that learner's code waits an hour; this is
+--                            what stops anyone guessing one learner's check
+--                            per network address: 200 an hour, a loose ceiling on
+--                            wide scanning (many phones share one address on
+--                            Safaricom, so a tight limit would lock out an area)
 --   an index on the sittings by learner reference, so one learner's homework
 --   is found without reading the others'
 --
@@ -20,14 +24,14 @@
 
 create table if not exists public.school_home_attempts (
   id      bigserial primary key,
-  ip_key  text not null check (ip_key ~ '^[a-z0-9]{1,64}$'),
+  try_key text not null check (try_key ~ '^[ir][a-z0-9]{1,64}$'),   -- i<address hash> or r<door+reference hash>
   ok      boolean not null,
   at      timestamptz not null default now()
 );
-create index if not exists idx_school_home_attempts on public.school_home_attempts(ip_key, at);
+create index if not exists idx_school_home_attempts on public.school_home_attempts(try_key, at);
 alter table public.school_home_attempts enable row level security;   -- no policies: service role only
 revoke all on public.school_home_attempts from anon, authenticated;
 
 create index if not exists idx_school_homework_sittings_learner on public.school_homework_sittings(learner_ref);
 
-comment on table public.school_home_attempts is 'Wrong learner-home link codes per hashed network address, for the limit of ten an hour. Service role only.';
+comment on table public.school_home_attempts is 'Wrong learner-home link codes, per hashed door+reference (ten an hour) and per hashed network address (200 an hour). Service role only.';

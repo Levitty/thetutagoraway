@@ -9,8 +9,8 @@
 //
 // The learner home (11 Nov 2026, src/school/learnerHome.js): all of one learner's homework.
 //   POST { action: "learner_home", link: "WSL-K7QM2XPA-H3RT" }   the page /hw/?l=..., no account; the
-//        check is verified with the door's secret; ten wrong codes an hour per network address
-//        (kept as a hash, never the address: school_home_attempts, migration 20261111_learner_home.sql)
+//        check is verified with the door's secret; ten wrong checks an hour per learner reference and
+//        200 an hour per network address (both kept as hashes: school_home_attempts, 20261111_learner_home.sql)
 //   POST { action: "learner_home", child: "<uuid>" } + the parent's sign-in   the family app, a linked child
 // Deploy: supabase functions deploy school-homework --no-verify-jwt
 // Then record it: node scripts/function-drift.mjs --record school-homework
@@ -30,7 +30,7 @@ const cors = (req) => {
     "access-control-allow-methods": "POST, OPTIONS", vary: "origin" };
 };
 
-// The network address, kept only as a hash, for the learner home's limit on wrong codes.
+// The network address, kept only as a hash, for the learner home's loose per-address limit on wrong codes.
 const ipKey = async (req) => {
   const ip = (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || req.headers.get("cf-connecting-ip") || req.headers.get("x-real-ip") || "unknown";
   const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("learner-home:" + ip));
