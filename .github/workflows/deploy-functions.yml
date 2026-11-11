@@ -119,9 +119,9 @@ jobs:
           # door, signed with each school's door secret). Every other function keeps the login check.
           case "${{ inputs.function }}" in
             wa-sign-in|school-practice|school-homework)
-              supabase functions deploy "${{ inputs.function }}" --project-ref "$PROJECT_REF" --no-verify-jwt ;;
+              supabase functions deploy "${{ inputs.function }}" --project-ref "$PROJECT_REF" --no-verify-jwt --yes ;;
             *)
-              supabase functions deploy "${{ inputs.function }}" --project-ref "$PROJECT_REF" ;;
+              supabase functions deploy "${{ inputs.function }}" --project-ref "$PROJECT_REF" --yes ;;
           esac
 
       # Record WHAT was deployed, so scripts/function-drift.mjs can tell later
