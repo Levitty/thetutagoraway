@@ -24,6 +24,7 @@
 //   jumps     no rise of more than one grade straight after a correct answer
 //   wording   no empty fields, "{x}" placeholders, undefined/NaN
 //   scope     a CBC child is taught only skills in the CBC design
+//   gaps      nothing above where the child placed is called a gap (F9)
 //   help      the worked example is for the same kind of question; no
 //             computer noise (0.8333333333333334) in hints or solutions
 //
@@ -397,6 +398,10 @@ function runChild(child) {
   const practiceGrades = [];
   for (let s = 0; s < SITTINGS; s++) {
     const path = getRecommendedPath(progress, ctx);
+    for (const x of path.filter(x => x.type === 'gap')) {
+      const ok = !(G(x.id) > placementGrade); tally('gaps', ok);
+      if (!ok) fail('gaps', child, x.id, null, `Grade ${G(x.id)} skill called a gap for a child placed at Grade ${placementGrade}`);
+    }
     if (process.env.QA_TRACE === `${child.grade}${child.kind}`) console.error(`sitting ${s + 1}: ` + path.slice(0, 3).map(x => `${x.id}(${x.type}${progress.skills[x.id]?.mastered ? ',mastered' : ''})`).join(', '));
     const sitting = { seen: new Set(), last: null };
     for (const step of path.slice(0, 3)) {
