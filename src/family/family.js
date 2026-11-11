@@ -120,6 +120,29 @@ export const recentReports = async (parentId) => {
   return data || [];
 };
 
+// ---- lesson reports (the live tutor, after each lesson; see supabase/functions/voice-tutor) ----
+
+export const lessonReports = async (parentId) => {
+  const { data, error } = await supabase.from('lesson_reports')
+    .select('id, learner_id, subject, body, created_at').eq('parent_id', parentId).order('created_at', { ascending: false }).limit(10);
+  if (error) throw error;
+  return data || [];
+};
+
+// The email after each lesson is on unless the parent has turned it off.
+export const getLessonEmailOn = async (parentId) => {
+  const { data, error } = await supabase.from('lesson_report_settings').select('email_lesson_reports').eq('parent_id', parentId).maybeSingle();
+  if (error) throw error;
+  return data ? data.email_lesson_reports !== false : true;
+};
+
+export const setLessonEmailOn = async (parentId, on) => {
+  const { error } = await supabase.from('lesson_report_settings')
+    .upsert({ parent_id: parentId, email_lesson_reports: !!on, updated_at: new Date().toISOString() }, { onConflict: 'parent_id' });
+  if (error) throw error;
+  return !!on;
+};
+
 // Sends this week's reports to the parent's own number now.
 export const sendTestReport = async () => {
   const { data, error } = await supabase.functions.invoke('weekly-report', { body: { mode: 'test' } });

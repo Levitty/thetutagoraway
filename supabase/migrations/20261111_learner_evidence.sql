@@ -57,7 +57,7 @@ create unique index if not exists response_events_evidence_once
   on public.response_events (source, item_ref, coalesce(student_id::text, door_id::text || ':' || learner_ref))
   where item_ref is not null;
 
--- Reading one school learner's evidence, newest first. A HOREB student is already read through idx_response_events_learner.
+-- Reading the evidence of one school learner, newest first. A HOREB student is already read through idx_response_events_learner.
 create index if not exists idx_response_events_school_learner
   on public.response_events (door_id, learner_ref, created_at desc)
   where door_id is not null;

@@ -13,12 +13,13 @@ var ASK_FORMS = ["number", "fraction", "word", "choice", "draw"];
 var EXPECTS = ["typed", "spoken", "drawn", "any"];
 var CONFIDENCE = ["low", "med", "high"];
 var NEXT = ["probe", "reteach", "move_on"];
+var MOVES = ["drawing it", "counting together", "a real-life example", "smaller steps", "saying it aloud", "writing it down", "a picture on the board", "a story", "repeating it", "a quick game"];
 var HIGHLIGHT_STYLES = ["circle", "box", "glow"];
 var SHAPE_KINDS = ["circle", "rectangle", "square", "triangle"];
 var SLOTS = ["top", "middle", "bottom", "top_left", "top_right", "middle_left", "middle_right", "bottom_left", "bottom_right"];
 var DRAWN = ["write_text", "write_math", "fraction_bar", "number_line", "shape", "plot_points"];
 var MARKS = ["highlight", "underline", "point"];
-var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "pause_for_child", "end_session"];
+var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "note_interest", "note_what_helped", "pause_for_child", "end_session"];
 var TIMED = [...DRAWN, ...MARKS, "erase", "clear"];
 var PACES = ["slow"];
 var S = (props, required) => ({ type: "object", properties: props, required, additionalProperties: false });
@@ -47,6 +48,8 @@ var STEP_SCHEMAS = [
   C("ask", { id: T, prompt: T, form: E(ASK_FORMS), choices: { type: "array", items: T }, expected: T, accepts: { type: "array", items: T }, wrong: { type: "array", items: S({ answer: T, misconception: T }, ["answer", "misconception"]) }, skill: T, bank: T }, ["id", "prompt", "form"]),
   C("set_phase", { phase: E(PHASES) }, ["phase"]),
   C("record_diagnosis", { skill: T, misconception: T, confidence: E(CONFIDENCE), evidence: T, next: E(NEXT), snapshot: T }, ["skill", "misconception", "confidence", "evidence", "next"]),
+  C("note_interest", { interest: T }, ["interest"]),
+  C("note_what_helped", { move: E(MOVES), helped: B }, ["move", "helped"]),
   C("pause_for_child", { expect: E(EXPECTS), max_wait_s: I }, ["expect", "max_wait_s"]),
   C("end_session", { summary: T }, ["summary"])
 ];

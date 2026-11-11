@@ -22,6 +22,8 @@
 //          VOICE_TUTOR_SESSION_CAP_USD=1.5  VOICE_TUTOR_DAY_CAP_USD=3   (optional; defaults)
 //          VOICE_TUTOR_MAX_SNAPSHOTS=30                (optional; pictures of the child's work a session)
 // A picture of the child's work arrives with a turn and goes to the model; it is never stored.
+//          RESEND_API_KEY, SAFEGUARDING_EMAIL           (the lesson report to the parent; a safeguarding alert to a person)
+// Needs 20261111_learner_evidence.sql and 20261112_learner_profile.sql (Tuta Workspace/HOREB_LEARNER_MODEL_SQL.sql).
 
 // @ts-nocheck
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
@@ -76,6 +78,9 @@ const callModelWith = (key) => async (request, { onText }) => {
   return { usage, stop_reason };
 };
 
+// One text key for a learner: the account and, when there is one, the child on it (a school learner would be door and reference).
+const learnerKey = (userId, childId) => (childId ? `${userId}:${childId}` : `${userId}:-`);
+
 const dbFor = (admin) => ({
   async getChild(id) {
     if (!/^[0-9a-f-]{36}$/i.test(id)) return null;
@@ -108,6 +113,57 @@ const dbFor = (admin) => ({
   async recordEvidence(row) {
     const { error } = await admin.from("response_events").insert(row);
     if (error && error.code !== "23505") console.error("response_events insert", error);
+  },
+  // The learner model for the tutor, in one read: this child's fraction evidence (newest 500), the profile, the notes of the last 90 days.
+  async getLearner({ userId, childId, since }) {
+    const key = learnerKey(userId, childId);
+    let ev = admin.from("response_events")
+      .select("created_at, client_ts, cskill, skill_id, correct, misconception, independent, hints_used, marks, max_marks, difficulty, item_ref, source")
+      .eq("student_id", userId).like("cskill", "MATH.G5.NUMBER.FRACTIONS.%").order("created_at", { ascending: false }).limit(500);
+    ev = childId ? ev.eq("learner_id", childId) : ev.is("learner_id", null);
+    const [e, p, n] = await Promise.all([
+      ev,
+      admin.from("learner_profile").select("interests, what_helps").eq("learner_key", key).maybeSingle(),
+      admin.from("learner_session_notes").select("notes, open_questions, created_at").eq("learner_key", key).gte("created_at", since).order("created_at", { ascending: false }).limit(3),
+    ]);
+    if (e.error) throw new Error(e.error.message);
+    // A missing profile or notes table (migration not run) is no profile, never a failed turn.
+    return { rows: e.data || [], profile: p.error ? null : p.data, notes: n.error ? [] : (n.data || []) };
+  },
+  async saveProfile({ userId, childId, interests, what_helps }) {
+    const { error } = await admin.from("learner_profile").upsert({ learner_key: learnerKey(userId, childId), student_id: userId, learner_id: childId, interests, what_helps, updated_at: new Date().toISOString() }, { onConflict: "learner_key" });
+    if (error) console.error("learner_profile upsert", error);
+  },
+  // Notes older than 90 days are deleted by a trigger on this table (20261112_learner_profile.sql).
+  async saveNote({ userId, childId, sessionId, notes, openQuestions }) {
+    const { error } = await admin.from("learner_session_notes").insert({ learner_key: learnerKey(userId, childId), student_id: userId, learner_id: childId, session_id: sessionId, notes, open_questions: openQuestions });
+    if (error && error.code !== "23505") console.error("learner_session_notes insert", error);
+  },
+  // One report a lesson: a second save for the same session is the report already there (fresh false: not emailed again).
+  async saveReport({ parentId, learnerId, sessionId, subject, body, facts }) {
+    const { data, error } = await admin.from("lesson_reports").insert({ parent_id: parentId, learner_id: learnerId, session_id: sessionId, subject, body, facts }).select("id").single();
+    if (error) { if (error.code !== "23505") console.error("lesson_reports insert", error); return error.code === "23505" ? { id: null, fresh: false } : null; }
+    return { id: data.id, fresh: true };
+  },
+  async getReportPrefs(parentId) {
+    const { data } = await admin.from("lesson_report_settings").select("email_lesson_reports").eq("parent_id", parentId).maybeSingle();
+    return data || null;
+  },
+  // The report to the parent, by Resend like the other functions. true sent, false failed, null no key set.
+  async sendEmail({ to, subject, html, text }) {
+    const RESEND = Deno.env.get("RESEND_API_KEY");
+    if (!RESEND) return null;
+    try {
+      const res = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${RESEND}` },
+        body: JSON.stringify({ from: "HOREB by Tutagora <hello@tutagora.com>", to, subject, html, text }),
+      });
+      return res.ok;
+    } catch (e) { console.error("lesson report email threw", e); return false; }
+  },
+  async markReportEmailed(id, status) {
+    await admin.from("lesson_reports").update({ email_status: status, emailed_at: status === "sent" ? new Date().toISOString() : null }).eq("id", id);
   },
   async recordConcern(row) {
     const { data, error } = await admin.from("safeguarding_events").insert(row).select("id").single();

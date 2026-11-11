@@ -21,7 +21,7 @@ const onBoard = [
   { id: 'nl', cmd: 'number_line', from: 0, to: 1, divisions: 4, marks: [{ value: 0.75, label: '3/4', style: 'dot' }], jumps: [], slot: 'bottom_left' },
 ];
 
-// One good example of each of the 17 commands.
+// One good example of each of the 19 commands.
 const GOOD = {
   say: { cmd: 'say', text: 'Here is a chapati cut into four equal pieces.' },
   write_text: { cmd: 'write_text', id: 't1', text: 'Mama cuts a cake.', slot: 'bottom_right', size: 'm', colour: 'green', on: 'chapati', delay_ms: 200 },
@@ -38,12 +38,14 @@ const GOOD = {
   ask: { cmd: 'ask', id: 'q1', prompt: 'One third is how many sixths?', form: 'number', expected: '2', wrong: [{ answer: '4', misconception: ADD }] },
   set_phase: { cmd: 'set_phase', phase: 'teach' },
   record_diagnosis: { cmd: 'record_diagnosis', skill: EQ, misconception: ADD, confidence: 'high', evidence: 'Wrote 4 for 1/3 = ?/6 and 6 for 2/4 = ?/8.', next: 'reteach' },
+  note_interest: { cmd: 'note_interest', interest: 'football' },
+  note_what_helped: { cmd: 'note_what_helped', move: 'drawing it', helped: true },
   pause_for_child: { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 },
   end_session: { cmd: 'end_session', summary: 'Worked on equivalent fractions.' },
 };
 
-test('the list has exactly the 17 approved commands, and each one passes when right', () => {
-  assert.equal(COMMANDS.length, 17);
+test('the list has exactly the 19 approved commands, and each one passes when right', () => {
+  assert.equal(COMMANDS.length, 19);
   assert.deepEqual(Object.keys(GOOD).sort(), [...COMMANDS].sort());
   for (const s of Object.values(GOOD)) ok(s, { board: onBoard, allowedMis: [ADD], skills: [EQ] });
 });

@@ -2,7 +2,7 @@
 // THE BOARD COMMAND LIST (HOREB live tutor, milestone 1, approved 10 Nov 2026).
 //
 // The model never writes code, HTML or coordinates. Each turn it fills in one
-// fixed form: an ordered list of at most MAX_STEPS steps, each one of the 17
+// fixed form: an ordered list of at most MAX_STEPS steps, each one of the 19
 // commands below. This file is the rule every step must clear before it is
 // drawn, on the server (before the reply leaves) and again in the browser
 // (before anything is rendered). A step that fails is dropped and logged,
@@ -28,6 +28,8 @@ export const ASK_FORMS = ['number', 'fraction', 'word', 'choice', 'draw'];
 export const EXPECTS = ['typed', 'spoken', 'drawn', 'any'];
 export const CONFIDENCE = ['low', 'med', 'high'];
 export const NEXT = ['probe', 'reteach', 'move_on'];
+// What helped a child learn (note_what_helped). A fixed list: the child never writes it, the model only picks.
+export const MOVES = ['drawing it', 'counting together', 'a real-life example', 'smaller steps', 'saying it aloud', 'writing it down', 'a picture on the board', 'a story', 'repeating it', 'a quick game'];
 export const HIGHLIGHT_STYLES = ['circle', 'box', 'glow'];
 export const SHAPE_KINDS = ['circle', 'rectangle', 'square', 'triangle'];
 
@@ -41,8 +43,8 @@ export const DRAWN = ['write_text', 'write_math', 'fraction_bar', 'number_line',
 export const MARKS = ['highlight', 'underline', 'point'];
 // Steps that are never seen or heard: applied when the turn arrives, never
 // dropped by an interruption.
-export const SILENT = ['set_phase', 'record_diagnosis'];
-export const COMMANDS = ['say', ...DRAWN, ...MARKS, 'erase', 'clear', 'ask', 'set_phase', 'record_diagnosis', 'pause_for_child', 'end_session'];
+export const SILENT = ['set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped'];
+export const COMMANDS = ['say', ...DRAWN, ...MARKS, 'erase', 'clear', 'ask', 'set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped', 'pause_for_child', 'end_session'];
 // Steps that may carry a word anchor (`on`) and a delay.
 export const TIMED = [...DRAWN, ...MARKS, 'erase', 'clear'];
 // A drawn step may be drawn slowly (`pace: 'slow'`, about 1.6 times slower): for the key idea of a lesson.
@@ -65,6 +67,7 @@ const FIELDS = {
   set_phase: ['phase'],
   record_diagnosis: ['skill', 'misconception', 'confidence', 'evidence', 'next', 'snapshot'],
   pause_for_child: ['expect', 'max_wait_s'],
+  note_interest: ['interest'], note_what_helped: ['move', 'helped'],
   end_session: ['summary'],
 };
 const REQUIRED = {
@@ -74,11 +77,12 @@ const REQUIRED = {
   highlight: ['target'], underline: ['target'], point: ['target'], erase: ['targets'], clear: [],
   ask: ['id', 'prompt', 'form'], set_phase: ['phase'],
   record_diagnosis: ['skill', 'misconception', 'confidence', 'evidence', 'next'],
+  note_interest: ['interest'], note_what_helped: ['move', 'helped'],
   pause_for_child: ['expect', 'max_wait_s'], end_session: ['summary'],
 };
 export const LIMITS = {
   say: 220, write_text: 60, write_math: 80, ask_prompt: 140, choice: 40, expected: 40,
-  evidence: 240, summary: 300, label: 12, axis_name: 16, anchor: 40,
+  evidence: 240, summary: 300, interest: 24, label: 12, axis_name: 16, anchor: 40,
   parts: [1, 12], shape_parts: [2, 12], line: [0, 12], divisions: [1, 12], marks: 8, jumps: 4,
   axis_steps: 20, points: 12, choices: 4, wrong: 4, accepts: 4, delay: [-300, 1500], wait: [5, 60], targets: 8,
 };
@@ -336,6 +340,14 @@ function checkStep(s, ctx, notes) {
         out.snapshot = s.snapshot;
       }
       break;
+    case 'note_interest':
+      out.interest = interestOf(s.interest);
+      break;
+    case 'note_what_helped':
+      out.move = optEnum('move', MOVES);
+      need(typeof s.helped === 'boolean', 'note_what_helped: helped must be true or false');
+      out.helped = s.helped;
+      break;
     case 'pause_for_child':
       out.expect = optEnum('expect', EXPECTS);
       need(isInt(s.max_wait_s) && inRange(s.max_wait_s, LIMITS.wait), 'pause_for_child: max_wait_s must be 5 to 60');
@@ -348,6 +360,22 @@ function checkStep(s, ctx, notes) {
   }
   return out;
 }
+
+/**
+ * An interest the child mentioned: one or two plain words (football, chapati, a pet),
+ * lowercase letters only, never a number, a name or a personal detail. The server also drops a
+ * word that is the child's own name. Shared by the tutor's command and the profile (src/learner/profile.js).
+ */
+export const INTEREST_RE = /^[a-z]{2,16}( [a-z]{2,16})?$/;
+const NOT_AN_INTEREST = /^(school|home|house|mum|mom|dad|mother|father|teacher|name|phone|address|password|nairobi|mombasa|kisumu|nakuru|kibera|kenya|yes|no|nothing|maths|math|fractions|fraction|it|that|this|none|secret|sex|kill|die)$/;
+export const interestOf = (v) => {
+  need(typeof v === 'string', 'interest: not text');
+  const t = cleanText(v).text.toLowerCase().trim();
+  need(t.length > 0 && t.length <= LIMITS.interest, `interest: 1 to ${LIMITS.interest} characters`);
+  need(INTEREST_RE.test(t), 'interest: one or two plain words, letters only');
+  need(!t.split(' ').some((w) => NOT_AN_INTEREST.test(w)), 'interest: not a hobby or favourite thing');
+  return t;
+};
 
 const skillOf = (v, ctx) => {
   need(typeof v === 'string', 'skill: not text');
@@ -461,7 +489,7 @@ export const spokenWords = (steps) => steps.filter((s) => s.cmd === 'say').reduc
 export const turnProblems = (steps, { nod = false, maxWords = null } = {}) => {
   const out = [];
   if (maxWords && spokenWords(steps) > maxWords) out.push(`the turn says ${spokenWords(steps)} words: say at most ${maxWords}, then wait for the child`);
-  const isNod = nod && steps.length >= 1 && steps.every((s) => s.cmd === 'pause_for_child' || s.cmd === 'set_phase' || s.cmd === 'record_diagnosis');
+  const isNod = nod && steps.length >= 1 && steps.every((s) => s.cmd === 'pause_for_child' || ['set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped'].includes(s.cmd));
   if (!isNod && !steps.some((s) => s.cmd === 'say')) out.push('the turn says nothing');
   const last = steps[steps.length - 1];
   if (!last || !['pause_for_child', 'end_session'].includes(last.cmd)) out.push('the turn does not end with pause_for_child or end_session');
@@ -497,6 +525,8 @@ export const STEP_SCHEMAS = [
   C('ask', { id: T, prompt: T, form: E(ASK_FORMS), choices: { type: 'array', items: T }, expected: T, accepts: { type: 'array', items: T }, wrong: { type: 'array', items: S({ answer: T, misconception: T }, ['answer', 'misconception']) }, skill: T, bank: T }, ['id', 'prompt', 'form']),
   C('set_phase', { phase: E(PHASES) }, ['phase']),
   C('record_diagnosis', { skill: T, misconception: T, confidence: E(CONFIDENCE), evidence: T, next: E(NEXT), snapshot: T }, ['skill', 'misconception', 'confidence', 'evidence', 'next']),
+  C('note_interest', { interest: T }, ['interest']),
+  C('note_what_helped', { move: E(MOVES), helped: B }, ['move', 'helped']),
   C('pause_for_child', { expect: E(EXPECTS), max_wait_s: I }, ['expect', 'max_wait_s']),
   C('end_session', { summary: T }, ['summary']),
 ];

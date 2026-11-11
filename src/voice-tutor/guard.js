@@ -69,4 +69,129 @@ export function checkTurnText(steps, hidden = []) {
   return { ok: reasons.length === 0, reasons };
 }
 
-export default { screenChild, checkTurnText, visibleText, PERSONAL_REPLY, RULES_REPLY, ANSWER_REPLY };
+
+// ---------------------------------------------------------------------------
+// WELFARE: what the shared safeguarding rules (src/ai/safeguarding.js) do not cover for a live
+// conversation with a child: bullying, sexual content, wishes to hurt someone or a weapon,
+// being in danger now, and more ways of saying "I do not want to live", in Kenyan English and
+// Kiswahili. They run beside the shared rules on everything the child types (11 Nov 2026) and
+// give the same answer shape: { tier, categories, hits }. They flag for a PERSON; they decide
+// nothing about the child. The Kiswahili patterns need a native speaker's review, like the shared ones.
+// ---------------------------------------------------------------------------
+const CORROBORATE = /\bat night\b|\bprivate\b|\bsecret\b|\bwhen (we are|i am|i'm) alone\b|\bunder my\b|\bin my (bed|room)\b|\bi do ?n[o']?t like\b|\bit hurts\b|\bdo ?n[o']?t tell\b|\bscared\b|\bafraid\b|\bagain\b|\bevery (day|night)\b/;
+export const WELFARE_RULES = [
+  { id: 'wf_self_harm', tier: 'crisis', category: 'self-harm',
+    any: /\blife is not worth (living|it)\b|\b(life|living) (is|has) no (meaning|point|worth)\b|\bi am tired of (living|life|this life)\b|\bi have nothing to live for\b|\bi wish i (was|were) (never born|dead)\b|\bi want to sleep forever\b|\bi want to (go away|disappear) and not come back\b|\bi have decided to end my life\b|\bi will end it (all )?(today|tonight)\b|\bi want to (drink|take) (the )?(poison|pills)\b/ },
+  { id: 'wf_self_harm_sw', tier: 'crisis', category: 'self-harm',
+    any: /\bnimechoka na maisha\b|\bmaisha hayana maana\b|\bnatamani nife\b|\bnataka nife\b|\bnaomba nife\b|\bsitaki kuishi tena\b|\bnitajinyonga\b|\bnataka kujinyonga\b|\bnitakunywa sumu\b/ },
+  { id: 'wf_danger', tier: 'crisis', category: 'immediate-danger',
+    any: /\bi am in danger\b|\bi am not safe\b|\bi do ?n[o']?t feel safe\b|\bsomeone is (following|chasing) me\b|\b(a|the) (man|stranger|boy|boys|men) (is|are) (following|chasing) me\b|\bsomeone is (hurting|beating) me (now|right now)\b|\bthere is a fire\b|\bthe house is (on fire|burning)\b|\bsomeone has broken into\b|\bi am locked (in|inside)\b|\bi was kidnapped\b|\bthey want to take me\b/ },
+  { id: 'wf_danger_sw', tier: 'crisis', category: 'immediate-danger',
+    any: /\bniko hatarini\b|\bsipo salama\b|\bkuna mtu ananifuata\b|\bnimefungiwa (ndani|chumbani)\b|\bnimetekwa\b|\bwanataka kunichukua\b/ },
+  { id: 'wf_weapon', tier: 'crisis', category: 'violence',
+    any: /\b(i|we) (have|got|will bring|am going to bring|brought|carry|am carrying) (a |the )?(knife|gun|panga|machete|razor|blade|weapon|pistol)s? (to|at|in|into|with) (school|class|me)\b|\bbring(ing)? (a )?(knife|gun|panga|machete|weapon) to school\b|\bi will (burn|set fire to) (the )?(school|dormitory|class)\b|\bi will (stab|shoot) (him|her|them|you|my \w+|the \w+)\b/ },
+  { id: 'wf_weapon_sw', tier: 'crisis', category: 'violence',
+    any: /\bnina (kisu|bunduki|panga) (shuleni|mfukoni|nami)\b|\bnitamdunga kisu\b|\bnitachoma (shule|bweni)\b|\bnitampiga risasi\b/ },
+  { id: 'wf_violence', tier: 'concern', category: 'violence',
+    any: /\bi (want|plan|wanna|am going|'?m going|will|shall) (to )?(kill|stab|shoot|hurt|harm|beat up) (him|her|them|someone|somebody|my \w+|that \w+|the \w+|you)\b/ },
+  { id: 'wf_violence_sw', tier: 'concern', category: 'violence',
+    any: /\bnataka kumuua\b|\bnitamuua\b|\bnitamuumiza\b/ },
+  { id: 'wf_bullying', tier: 'concern', category: 'bullying',
+    any: /\b(they|he|she|the (boys|girls|kids|class|older boys|older girls)) (bully|bullies|bullied|are bullying|is bullying) me\b|\bi am (being )?bullied\b|\bi (get|was|am always|am being) (bullied|teased|laughed at)\b|\bbullied (me )?(at|in) school\b|\bno ?body wants to (play|sit|be) with me\b|\bthey (call|are calling) me names\b|\bthey (laugh|laughed) at me (every ?day|all the time)\b|\bi am (scared|afraid) (to go|of going) to school\b|\b(older|big) (boys|girls|kids) (beat|hit|push|pushed|kick|kicked) me\b|\bthey are (troubling|harassing|disturbing) me\b|\bthey (took|steal|steals|stole) my (money|lunch|food) (every|always)\b/ },
+  { id: 'wf_bullying_sw', tier: 'concern', category: 'bullying',
+    any: /\bwananionea\b|\bananionea\b|\bninaonewa\b|\bwananidhulumu\b|\bwananicheka (kila siku|sana)\b|\bnaogopa kwenda shule\b|\bwananipiga shuleni\b/ },
+  { id: 'wf_sexual', tier: 'concern', category: 'sexual-content',
+    any: /\b(sex|sexy|porn\w*|nude|nudes|naked|erotic)\b|\bsend (me )?(nudes|naked)\b|\bshow me your (body|private)\b|\bkiss me\b|\bare you (naked|my girlfriend|my boyfriend)\b/ },
+  { id: 'wf_sexual_sw', tier: 'concern', category: 'sexual-content',
+    any: /\bngono\b|\bpicha za uchi\b|\buchi\b|\bkufanya mapenzi\b|\bkulala nawe\b/ },
+  { id: 'wf_touch', tier: 'concern', category: 'sexual-abuse',
+    any: /\b(uncle|aunt|teacher|neighbour|neighbor|cousin|driver|pastor|my (father|stepfather|step ?father|brother)|he|she|someone|a man|a boy) (touch|touches|touched|kisses|kissed) me\b|\bsomeone is touching me\b|\b(he|she) (comes|came) to my (bed|room)\b/, needs: CORROBORATE },
+  { id: 'wf_touch2', tier: 'concern', category: 'sexual-abuse',
+    any: /\bwants me to sleep with (him|her)\b|\bsleeps? with me\b|\b(he|she) comes to my bed at night\b/ },
+  { id: 'wf_hurt', tier: 'concern', category: 'physical-abuse',
+    any: /\bsomeone (hurts|hurt|is hurting|is beating) me\b|\b(he|she|they) (hurts|is hurting|are hurting) me\b|\bi am (afraid|scared) of (him|her|them|my (father|mother|uncle|aunt|teacher|stepfather|stepmother|brother))\b|\bhurting me at home\b/ },
+  { id: 'wf_abuse_sw', tier: 'concern', category: 'sexual-abuse',
+    any: /\bananigusa (usiku|vibaya|sehemu)\b|\banalala nami\b|\bananilazimisha\b|\bnilibakwa\b|\banataka nilale naye\b/ },
+  { id: 'wf_hurt_sw', tier: 'concern', category: 'physical-abuse',
+    any: /\bananiumiza\b|\bninamwogopa (baba|mama|mjomba|shangazi|mwalimu)\b|\bninaogopa baba\b/ },
+];
+const RANK = { none: 0, concern: 1, crisis: 2 };
+
+/** The welfare rules on a child's words. @returns {{ tier:string, categories:string[], hits:object[] }} */
+export function screenWelfare(raw) {
+  const text = norm(raw);
+  const hits = [];
+  if (text) for (const r of WELFARE_RULES) {
+    const m = r.any.exec(text);
+    if (!m) continue;
+    if (r.needs && !r.needs.test(text)) continue;
+    hits.push({ id: r.id, tier: r.tier, category: r.category, excerpt: text.slice(Math.max(0, m.index - 60), m.index + m[0].length + 60) });
+  }
+  const tier = hits.reduce((t, h) => (RANK[h.tier] > RANK[t] ? h.tier : t), 'none');
+  return { tier, categories: [...new Set(hits.map((h) => h.category))], hits };
+}
+
+/** The shared rules and the welfare rules together: one answer. `shared` is src/ai/safeguarding.js screen (or null). */
+export function screenAll(raw, shared = null) {
+  const a = shared ? shared(raw) : { tier: 'none', categories: [], hits: [] };
+  const b = screenWelfare(raw);
+  const hits = [...(a.hits || []), ...b.hits];
+  const tier = RANK[a.tier] >= RANK[b.tier] ? a.tier : b.tier;
+  return { tier, categories: [...new Set([...(a.categories || []), ...b.categories])], hits };
+}
+
+// What the child hears when a message needs a person. Care first, a trusted adult, Childline Kenya (116, free);
+// never questions about the details, never the child's words repeated. A crisis ends the lesson;
+// a concern pauses it, and the child decides whether to carry on.
+const CHILDLINE = 'You can also call Childline Kenya on 116. It is free, from any phone.';
+const CARE = {
+  crisis: [
+    'Thank you for telling me. I am glad you did, and I care about you.',
+    'Please tell a grown-up you trust right now, like a parent, a teacher or a relative.',
+    CHILDLINE,
+    'Our lesson stops here. Please go and find a grown-up now.',
+  ],
+  'immediate-danger': [
+    'Thank you for telling me. Your safety matters most.',
+    'Please go to a grown-up you trust or to a safe place with other people, right now.',
+    CHILDLINE,
+    'Our lesson stops here. Please go and find a grown-up now.',
+  ],
+  bullying: [
+    'I am sorry that is happening. Nobody should be treated that way, and it is not your fault.',
+    'Please tell a teacher or a grown-up you trust. Childline Kenya on 116 will listen too, and it is free.',
+    'Say when you want to carry on with our fractions. We can rest first.',
+  ],
+  'sexual-content': [
+    'That is not something we talk about in our maths lesson.',
+    'If anyone has made you feel uncomfortable, please tell a grown-up you trust, or call Childline Kenya on 116.',
+    'We can carry on with our fractions when you are ready.',
+  ],
+  violence: [
+    'It sounds like you feel very angry. It is okay to feel angry, but hurting people is never okay.',
+    'Please talk to a grown-up you trust about how you feel. Childline Kenya on 116 will listen too, and it is free.',
+    'We can rest now. Say when you want to carry on.',
+  ],
+  default: [
+    'Thank you for telling me. You did the right thing, and it is not your fault.',
+    'Please tell a grown-up you trust, like a teacher or a relative. You can also call Childline Kenya on 116, free.',
+    'We can stop any time. Say when you want to carry on.',
+  ],
+};
+const PRIORITY = ['self-harm', 'immediate-danger', 'violence', 'sexual-abuse', 'grooming', 'physical-abuse', 'physical-abuse-school', 'neglect', 'bullying', 'sexual-content'];
+
+/**
+ * The authored turn for a flagged message: { steps, ends, kind }. Steps are plain commands
+ * (say, then pause_for_child, or end_session for a crisis).
+ */
+export function careTurn(hit) {
+  const cats = hit?.categories || [];
+  const top = PRIORITY.find((c) => cats.includes(c)) || cats[0] || null;
+  const crisis = hit?.tier === 'crisis';
+  const key = crisis ? (top === 'immediate-danger' ? 'immediate-danger' : 'crisis') : (CARE[top] ? top : 'default');
+  const says = (CARE[key] || CARE.default).map((text) => ({ cmd: 'say', text }));
+  const end = crisis ? { cmd: 'end_session', summary: 'The lesson stopped early.' } : { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 60 };
+  return { steps: [...says, end], ends: crisis, kind: key };
+}
+
+export default { screenChild, screenWelfare, screenAll, careTurn, checkTurnText, visibleText, PERSONAL_REPLY, RULES_REPLY, ANSWER_REPLY };

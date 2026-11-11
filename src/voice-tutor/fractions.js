@@ -60,17 +60,25 @@ export const strengthOf = (progress, c) => {
 /**
  * @param {object} progress   HOREB progress ({ skills: { G5_FRACTIONS_EQUIV: {...} } })
  * @param {string} [override] a curriculum skill code chosen by the tester
+ * @param {object} [model]    readSkills() of the learner's evidence, or null (then HOREB progress alone decides)
  * @returns {{ target:string, prerequisite:string|null, profile:object[], reason:string }}
  */
-export function pickTarget(progress, override = null) {
-  const profile = FRACTION_SKILLS.map((c) => strengthOf(progress, c));
+export function pickTarget(progress, override = null, model = null) {
+  // With evidence in the learner model (src/learner/model.js) the states decide; a skill with none keeps today's HOREB progress.
+  const profile = FRACTION_SKILLS.map((c) => {
+    const base = strengthOf(progress, c);
+    const m = model?.skills?.[c];
+    if (!model?.hasEvidence || !m || m.state === 'not_assessed') return base;
+    const held = m.secure || (base.held && m.state !== 'emerging');
+    return { ...base, held, score: held ? (m.secure ? m.score : 0.9) : (m.score ?? base.score), state: m.state, word: m.word };
+  });
   const by = Object.fromEntries(profile.map((p) => [p.skill, p]));
   let target = override && FRACTION_SKILLS.includes(override) ? override : null;
   let reason = target ? 'chosen by the tester' : '';
   if (!target) {
     const next = profile.find((p) => !p.held);
     target = next ? next.skill : FRACTION_SKILLS[FRACTION_SKILLS.length - 1];
-    reason = next ? 'the first fraction skill not yet held' : 'every fraction skill is held: revision of the last one';
+    reason = next ? (model?.hasEvidence ? 'the first fraction skill not yet secure, from the learner\'s evidence' : 'the first fraction skill not yet held') : 'every fraction skill is held: revision of the last one';
   }
   const weak = prerequisitesOf(target).map((c) => by[c]).filter((p) => p && !p.held).sort((a, b) => a.score - b.score);
   return { target, prerequisite: weak[0]?.skill || null, profile, reason };

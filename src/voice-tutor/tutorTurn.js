@@ -8,8 +8,11 @@
 // ORDER MATTERS:
 //   1. the switch and the allowlist stub (adult test accounts only until
 //      consent, milestone 5); whose child this is;
-//   2. SAFEGUARDING on the child's raw words, recorded before anything can
-//      return early;
+//   2. SAFEGUARDING on the child's raw words (the shared rules and the welfare rules,
+//      guard.js), recorded before anything can return early. A flagged message, or a
+//      typed answer, never reaches the model: the tutor answers with care and a
+//      trusted-adult line (a crisis ends the lesson), and earlier flagged lines are
+//      kept out of the transcript the model reads;
 //   3. the child's answer to the last question, marked HERE from the sealed
 //      question (the model never marks);
 //   4. the child-message guard: personal details and rule-changing never reach
@@ -38,7 +41,7 @@
 import { validateTurn, MAX_SPOKEN_WORDS, spokenWords } from './commands.js';
 import { pickTarget, lessonSkills, allowedMisconceptions } from './fractions.js';
 import { capCheck } from './session.js';
-import { screenChild, checkTurnText, MAX_CHILD_CHARS, ANSWER_REPLY } from './guard.js';
+import { screenChild, screenAll, careTurn, checkTurnText, MAX_CHILD_CHARS, ANSWER_REPLY } from './guard.js';
 import { stepParser } from './streamSteps.js';
 import { buildRequest, turnContext } from './prompt.js';
 import { probeBank, bankLines, markItem } from './probes.js';
@@ -47,6 +50,9 @@ import { costOf, PRICES } from '../rocket/guide.js';
 import { validateSnapshot, imageTokens, CHECK_GAP_MS } from './snapshot.js';
 import { speechCost, listenCost, spokenChars } from './providers/voice.js';
 import { tutorEvidence } from '../learner/evidence.js';
+import { readSkills, openMisconceptions, learnerLines } from '../learner/model.js';
+import { readLearner, rememberEvidence, saveLearned, finishLesson } from '../learner/tutorLearning.js';
+import { FRACTION_SKILLS, skillName } from './fractions.js';
 
 const reply = (status, body) => ({ status, body });
 const say = (text) => ({ cmd: 'say', text });
@@ -102,24 +108,28 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   const message = String(body?.message ?? '').trim().slice(0, MAX_CHILD_CHARS);
   const turnIndex = Math.max(0, Number(body?.turn_index) || 0);
 
-  // 2. Safeguarding, before anything that can return early.
-  if (message && safeguard) {
-    const hit = safeguard(message);
-    if (hit && hit.tier !== 'none') {
-      // Nothing else stores the child's words in milestone 1, so the snapshot is kept here.
-      await db.recordConcern({
-        source: 'voice_tutor', source_id: /^[0-9a-f-]{36}$/i.test(sid) ? sid : null, user_id: user.id, learner_id: child?.id || null,
-        grade: Number(String(child?.grade ?? '').replace(/\D/g, '')) || null, text_snapshot: message,
-        tier: hit.tier, categories: hit.categories, detected_by: 'rule',
-        rule_ids: (hit.hits || []).map((h) => h.id), excerpt: (hit.hits || []).map((h) => h.excerpt).join(' | ').slice(0, 1000),
-      });
-    }
+  // 2. Safeguarding, before anything that can return early: the child's message AND a typed answer
+  //    (both are words of the child that would otherwise reach the model or the evidence log).
+  const answerText = String(body?.answer?.response ?? '').slice(0, MAX_CHILD_CHARS);
+  let concern = null;
+  for (const text of [message, answerText]) {
+    if (!text) continue;
+    const hit = screenAll(text, safeguard);
+    if (hit.tier === 'none') continue;
+    if (!concern || (hit.tier === 'crisis' && concern.tier !== 'crisis')) concern = hit;
+    // Nothing else stores the child's words in milestone 1, so the snapshot is kept here.
+    await db.recordConcern({
+      source: 'voice_tutor', source_id: /^[0-9a-f-]{36}$/i.test(sid) ? sid : null, user_id: user.id, learner_id: child?.id || null,
+      grade: Number(String(child?.grade ?? '').replace(/\D/g, '')) || null, text_snapshot: text,
+      tier: hit.tier, categories: hit.categories, detected_by: 'rule',
+      rule_ids: (hit.hits || []).map((h) => h.id), excerpt: (hit.hits || []).map((h) => h.excerpt).join(' | ').slice(0, 1000),
+    });
   }
 
   // 3. The last question, marked from its seal.
   let marked = null;
   let open = null; // the question the child is still working on
-  if (body?.answer?.seal) {
+  if (body?.answer?.seal && !concern) {
     const q = await unseal(body.answer.seal, secret, { session: sid, child: childKey, now });
     if (q) {
       const r = markItem(q.item, String(body.answer.response ?? '').slice(0, 60));
@@ -128,14 +138,18 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       // One row in the learner's evidence log per marked answer. Never allowed to fail the turn.
       try {
         const row = tutorEvidence({ userId: user.id, childId: child?.id || null, sid, marked, now });
-        if (row) await db.recordEvidence(row);
+        if (row) { await db.recordEvidence(row); rememberEvidence({ sid, userId: user.id, childId: child?.id || null, row }); }
       } catch (e) { console.error('voice-tutor: evidence', String(e?.message || e).slice(0, 200)); }
     }
   }
 
   // Where the lesson is.
-  const progress = (await db.getProgress(childKey)) || { skills: {} };
-  const pick = pickTarget(progress, body?.skill || null);
+  // A flagged message gets only the authored care turn below: no model, no further reads.
+  const progress = concern ? { skills: {} } : ((await db.getProgress(childKey)) || { skills: {} });
+  const learnerData = concern ? { rows: [], profile: null, notes: [] } : await readLearner(db, { sid, userId: user.id, childId: child?.id || null, now });
+  const nowMs = now;
+  const skillsModel = readSkills(learnerData.rows, FRACTION_SKILLS, { now: nowMs });
+  const pick = pickTarget(progress, body?.skill || null, skillsModel);
   const skills = lessonSkills(pick.target);
   const allowedMis = allowedMisconceptions(skills);
   const board = Array.isArray(body?.board) ? body.board.slice(0, 40) : [];
@@ -157,6 +171,8 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const v = validateTurn({ steps }, vopts);
     for (const st of v.steps) emit({ type: 'step', step: await sealAsk(st, []) });
     const voiceUsd = await meterVoice(v.steps);
+    const ending = v.steps.find((x) => x.cmd === 'end_session');
+    if (ending && !concern) await finishLesson({ db, user, child, sid, target: pick.target, summary: ending.summary, lib, now });
     emit({ type: 'end', guard, dropped: v.dropped, notes: v.notes, cost_usd: voiceUsd.usd, spent: spent ? addSpent(spent, voiceUsd.usd) : null, voice: voiceUsd, model: null });
   } });
   // The voice's price for what was actually sent: the spoken characters and the child's speech.
@@ -178,6 +194,9 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     if (!item) return pub;
     return { ...pub, seal: await seal({ session: sid, child: childKey, ask: s.id, skill: pub.skill, item }, secret, now) };
   };
+
+  // 4a. A message that needs a person: care, a trusted adult, Childline. Never the model.
+  if (concern) { const care = careTurn(concern); return authored(care.steps, [care.ends ? 'safeguarding-crisis' : 'safeguarding'], null); }
 
   // 4. The child's words.
   const screen = message ? screenChild(message) : { ok: true, wantsAnswer: false };
@@ -210,12 +229,17 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   // 6. The model, streamed.
   const bank = probeBank(skills, `${sid}:${turnIndex}`);
   const names = child?.name ? [{ name: child.name, as: 'the child' }] : [];
+  const openMis = openMisconceptions(learnerData.rows, skills, { now: nowMs });
+  const learnerCtx = learnerLines({ pick, model: skillsModel, open: openMis, profile: learnerData.profile, notes: learnerData.notes, nameOf: skillName, lib, order: FRACTION_SKILLS });
   const context = turnContext({
-    ...pick, elapsedMin: Math.max(0, Number(body?.elapsed_s) || 0) / 60, turnIndex, phase: body?.phase || null,
+    ...pick, learner: learnerCtx, hasModel: skillsModel.hasEvidence, elapsedMin: Math.max(0, Number(body?.elapsed_s) || 0) / 60, turnIndex, phase: body?.phase || null,
     board, marked, heard: typeof body?.heard === 'string' ? body.heard.slice(0, 400) : null, wantsAnswer: screen.wantsAnswer,
     bankLines: bankLines(bank), picture,
   });
-  const history = Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === 'string') : [];
+  // Earlier lines the child said that a guard would have stopped are never re-sent to the model.
+  const PRIVATE_LINE = '(the child said something private; HOREB answered with care)';
+  const history = (Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === 'string') : [])
+    .map((h) => (h.who === 'child' && (!screenChild(h.text).ok || screenAll(h.text, safeguard).tier !== 'none') ? { ...h, text: PRIVATE_LINE } : h));
   const request = buildRequest({ model: settings.model, effort: settings.effort, lib, history, message, context, names, image });
   // A picture taken because the child paused may get only a nod.
   const nod = !!image && image.reason === 'idle' && !message;
@@ -228,7 +252,14 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const hidden = [open].filter(Boolean); // answers the child has not found: the open question, then any asked now
     let closed = false;       // pause_for_child / end_session sent, or the turn was stopped
     let saidAny = false;
-    const send = async (st) => { const pub = await sealAsk(st, bank); sent.push(st); emit({ type: 'step', step: pub }); };
+    const learned = { interests: [], helps: [] }; // the silent notes of this turn: saved, never sent to the browser
+    let ending = null;
+    const send = async (st) => {
+      if (st.cmd === 'note_interest') { learned.interests.push(st.interest); return; }
+      if (st.cmd === 'note_what_helped') { learned.helps.push({ move: st.move, helped: st.helped }); return; }
+      if (st.cmd === 'end_session') ending = st;
+      const pub = await sealAsk(st, bank); sent.push(st); emit({ type: 'step', step: pub });
+    };
     const stop = async (why) => {
       if (closed) return;
       closed = true; guard.push(why);
@@ -286,6 +317,9 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const cost = costOf(settings.model, usage);
     await logUsage(db, { user, childKey, sid, settings, cost, meter: usage, guard, dropped: dropped.length, image });
     const voiceUsd = await meterVoice(sent);
+    // What the tutor learned about the child, and, at the end of the lesson, the note and the report. Never fails the turn.
+    await saveLearned({ db, sid, user, child, learned, now });
+    if (ending) await finishLesson({ db, user, child, sid, target: pick.target, summary: ending.summary, lib, now });
     emit({ type: 'end', guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model });
   } };
 }

@@ -17,6 +17,7 @@ import {
   MESSAGE_PRESETS, REWARD_PRESETS, SIGN_OFFS, isMissingTable, getSignOff, setSignOff,
   sendMessage, lastMessage, markSeen, getGoal, saveGoal, removeGoal, learnerPracticeDays,
   getReportSettings, saveReportSettings, recentReports, sendTestReport, learnerReportData,
+  lessonReports, getLessonEmailOn, setLessonEmailOn,
 } from './family.js';
 
 const firstName = (n) => (n || '').trim().split(/\s+/)[0] || '';
@@ -324,6 +325,53 @@ const ReportSettings = ({ parentId, kids, onMissingTables }) => {
   );
 };
 
+// ---- Lesson reports: what the live tutor writes to the parent after each lesson -----------
+
+const LessonReports = ({ parentId, kids }) => {
+  const [list, setList] = useState(null);
+  const [open, setOpen] = useState(null);
+  const [emailOn, setEmailOn] = useState(true);
+  const [busy, setBusy] = useState(false);
+
+  useEffect(() => {
+    // No table yet (the SQL not run) or nothing to show: the card stays out of the way.
+    lessonReports(parentId).then(setList).catch(() => setList([]));
+    getLessonEmailOn(parentId).then(setEmailOn).catch(() => {});
+  }, [parentId]);
+
+  if (!list || !list.length) return null;
+  const kidName = (id) => firstName(kids.find(k => k.id === id)?.name) || 'Lesson';
+  const toggle = async () => {
+    setBusy(true);
+    try { setEmailOn(await setLessonEmailOn(parentId, !emailOn)); } catch { /* keep the old value */ }
+    setBusy(false);
+  };
+
+  return (
+    <Card className="space-y-3">
+      <Eyebrow tone="text-violet-500">After each lesson</Eyebrow>
+      <div className="text-[16px] font-extrabold tracking-tight">Lesson reports from HOREB</div>
+      <p className="text-sm text-slate-500">What your child worked on, what went well, and one thing to try at home.</p>
+      <div className="space-y-2">
+        {list.map(r => (
+          <div key={r.id} className="border border-slate-100 rounded-xl">
+            <button onClick={() => setOpen(open === r.id ? null : r.id)} aria-expanded={open === r.id}
+              className="w-full flex justify-between gap-3 text-left px-3 py-2.5 text-[13.5px]">
+              <span className="font-semibold text-slate-700">{kidName(r.learner_id)} · {new Date(r.created_at).toLocaleDateString('en-KE', { day: 'numeric', month: 'short' })}</span>
+              <span className="text-slate-400">{open === r.id ? 'Close' : 'Read'}</span>
+            </button>
+            {open === r.id && <div className="px-3 pb-3 text-[14px] leading-relaxed text-slate-700 whitespace-pre-line">{r.body}</div>}
+          </div>
+        ))}
+      </div>
+      <div className="flex flex-wrap items-center gap-2 text-[13px] text-slate-500">
+        Email me after each lesson
+        <Chip active={emailOn} onClick={toggle} disabled={busy}>{emailOn ? 'On' : 'Off'}</Chip>
+      </div>
+    </Card>
+  );
+};
+
 // ---- The page -------------------------------------------------------------
 
 export const FamilyPage = ({ user, onBack, onHandOver }) => {
@@ -358,6 +406,7 @@ export const FamilyPage = ({ user, onBack, onHandOver }) => {
           <PrimaryButton onClick={onHandOver}>Hand over to your child</PrimaryButton>
         </Card>
       )}
+      {kids && kids.length > 0 && <LessonReports parentId={user.id} kids={kids} />}
       {kids && kids.length > 0 && <ReportSettings parentId={user.id} kids={kids} onMissingTables={onMissingTables} />}
       {kids?.map(k => <ChildPanel key={k.id} parentId={user.id} kid={k} onMissingTables={onMissingTables} />)}
     </Shell>
