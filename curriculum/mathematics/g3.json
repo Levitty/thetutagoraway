@@ -1,0 +1,1024 @@
+{
+ "framework": "cbc",
+ "subject_key": "mathematics",
+ "grade": 3,
+ "source": "KICD KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf, revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 3,
+  "sub_strands": 14,
+  "outcomes": 74,
+  "lessons": 150,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "MATH.G3.NUMBER.NUMBER_CONCEPT",
+   "number": "1.1",
+   "strand": "Numbers",
+   "sub_strand": "Number Concept",
+   "sequence": 101,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs or groups, discuss and arrange real objects collected from the environment according to size starting with the smallest to the largest and from the largest to the smallest,",
+    "name the position of an object from a reference point using 1st, 2 nd up to 20 th ,",
+    "in groups of 20, race for a distance and assign each other the correct position using the words first, second up to twentieth position depending on when they finish the race. Write their positions in the race in symbols and in words,",
+    "in pairs/groups, relate numbers 1 to 20 to positions first, second up to 20 th and relate to real life situations. For example, birth order in a family; 1 st born, 2 nd born,",
+    "play games involving position 1 to 20 using digital devices and other resources."
+   ],
+   "key_inquiry_questions": [
+    "How do we tell our positions in a competition?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     9,
+     10
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.a",
+     "letter": "a",
+     "text": "order objects according size",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.b",
+     "letter": "b",
+     "text": "identify position of objects from 1 st to 20 th",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.c",
+     "letter": "c",
+     "text": "write the position of objects in numbers symbols and in words",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.d",
+     "letter": "d",
+     "text": "appreciate use of positions of items in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.NUMBER.WHOLE_NUMBERS",
+   "number": "1.2",
+   "strand": "Numbers",
+   "sub_strand": "Whole Numbers",
+   "sequence": 102,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs/groups, count forward in 1’s, 10’s, and 100’s starting from any point up to 1000 using rope skipping game in a safe environment,",
+    "in pairs/groups, practise through play using number cards counting numbers backward in multiples of 100 from 1000,",
+    "in pairs / groups, discuss place value up to hundreds using place value apparatus in class,",
+    "in pairs / groups, read numbers 1 to 1000 in symbols starting from any point,",
+    "in pairs and taking turns, read and write numbers 1 to 100 in words using number cards,",
+    "in pairs or groups, create number patterns up to 1000 and share with other groups,",
+    "play games involving whole numbers up to 1000 using digital devices and other resources."
+   ],
+   "key_inquiry_questions": [
+    "How would you get the total number of people in a group?",
+    "How do you tell the place value of a digit in a number?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     11,
+     12
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.a",
+     "letter": "a",
+     "text": "count numbers forward up to 1000 starting from any point",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.b",
+     "letter": "b",
+     "text": "count numbers backward in multiples of 100 from 1000",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.c",
+     "letter": "c",
+     "text": "identify the place value of numbers up to hundreds",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.d",
+     "letter": "d",
+     "text": "read numbers 1 to 1000 in symbols",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.e",
+     "letter": "e",
+     "text": "read and write numbers 1 to 100 in words",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.f",
+     "letter": "f",
+     "text": "identify missing numbers in number patterns up to 1000",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.g",
+     "letter": "g",
+     "text": "play games involving number patterns up to 1000",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.NUMBER.ADDITION",
+   "number": "1.3",
+   "strand": "Numbers",
+   "sub_strand": "Addition",
+   "sequence": 103,
+   "lessons": 25,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "add a 3 digit number to up to 2 digit number without regrouping with sum not exceeding 1000 using place value apparatus,",
+    "practice addition horizontally and vertically using place value apparatus,",
+    "in pairs or groups or individually, practise adding a 3 digit number to up to a 2 digit number with single regrouping with sum not exceeding 1000,",
+    "practise adding two 3 digit numbers without regrouping with sum not exceeding 1000 using place value apparatus (abacus and place value tins),",
+    "create and work out missing numbers in patterns involving addition up to 1000,",
+    "use digital devices or other resources for activities involving additions."
+   ],
+   "key_inquiry_questions": [
+    "How do you arrange numbers when adding downwards?",
+    "How can you get the next number in a given pattern?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.a",
+     "letter": "a",
+     "text": "add a 3 digit number to up to a 2 digit number without regrouping with sum not exceeding 1000",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.b",
+     "letter": "b",
+     "text": "add a 3 digit number to up to a 2 digit number with single regrouping with sum not exceeding 1000",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.c",
+     "letter": "c",
+     "text": "add two 3 digit numbers without regrouping",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.d",
+     "letter": "d",
+     "text": "add two 3 digit numbers with single regrouping with sum not exceeding 1000",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.e",
+     "letter": "e",
+     "text": "create number patterns involving addition up to 1000",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.f",
+     "letter": "f",
+     "text": "practice addition of numbers using digital devices or other resources",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.NUMBER.SUBTRACTION",
+   "number": "1.4",
+   "strand": "Numbers",
+   "sub_strand": "Subtraction",
+   "sequence": 104,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, work out subtraction of up to 3 digit numbers without regrouping using place value apparatus and share findings with others,",
+    "in turns, work out subtraction of up to 3 digit numbers with single regrouping using place value chart,",
+    "work out missing numbers in subtraction of up to 3 digit numbers with single regrouping using a variety of strategies,",
+    "play games involving subtraction using digital devices and other resources,",
+    "discuss how to work out missing numbers in patterns involving subtraction up to 1000."
+   ],
+   "key_inquiry_questions": [
+    "When do you regroup during subtraction?",
+    "How do you identify the missing number in a number pattern involving subtraction?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.a",
+     "letter": "a",
+     "text": "subtract a 2-digit number from a 3 digit number without regrouping",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.b",
+     "letter": "b",
+     "text": "Subtract a 2 digit number from a three digit number with single regrouping",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.c",
+     "letter": "c",
+     "text": "subtract a 3 digit number from a 3 digit number with single regrouping",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.d",
+     "letter": "d",
+     "text": "subtract up to 3 digit numbers involving missing numbers with single regrouping",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.e",
+     "letter": "e",
+     "text": "work out missing numbers in number patterns involving subtraction up to 1000",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.f",
+     "letter": "f",
+     "text": "appreciate subtraction in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.NUMBER.MULTIPLICATION",
+   "number": "1.5",
+   "strand": "Numbers",
+   "sub_strand": "Multiplication",
+   "sequence": 105,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs/groups, model multiplication as repeated addition of numbers 1, 2, 3, 4 and 5 by 4 and 5 using counters,",
+    "in groups, multiply a single digit number by a single digit number using multiplication chart,",
+    "in turns, practice multiplication of single digit numbers by 10 using multiplication tables,",
+    "play games involving multiplication using digital or other resources."
+   ],
+   "key_inquiry_questions": [
+    "How can you work out multiplication using repeated addition?",
+    "How do model multiplication as repeated addition?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.a",
+     "letter": "a",
+     "text": "model multiplication as repeated addition using numbers 1,2,3,4 and 5 by 4 and 5",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.b",
+     "letter": "b",
+     "text": "multiply a single digit number by a single digit number",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.c",
+     "letter": "c",
+     "text": "multiply single digit numbers by 10",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.d",
+     "letter": "d",
+     "text": "appreciate multiplication of numbers as repeated addition",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.NUMBER.DIVISION",
+   "number": "1.6",
+   "strand": "Numbers",
+   "sub_strand": "Division",
+   "sequence": 106,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, take away from a group a specific number of objects at a time until all are finished and then count the number of small groups formed and share their findings with others,",
+    "in groups, discuss and model division as repeated subtraction of numbers up to 50 by 4 and 5 using counters and share their findings with others,",
+    "in pairs/ groups, practise division of multiples of ten from 90 by 10 using multiplication tables,",
+    "extended activity: learners can participate in communal activities related to feeding of animals which involves subtraction of feeds for so many days."
+   ],
+   "key_inquiry_questions": [
+    "How can you represent division as repeated subtraction?",
+    "How can we use the multiplicatio n table to work out division questions?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.a",
+     "letter": "a",
+     "text": "represent division of numbers up to 50 by 4 and 5 as repeated subtraction",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.b",
+     "letter": "b",
+     "text": "divide a 2 digit number by a single digit number without a remainder",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.c",
+     "letter": "c",
+     "text": "divide a 2 digit number by 10 without a remainder",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.d",
+     "letter": "d",
+     "text": "appreciate division as repeated subtraction in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.NUMBER.FRACTIONS",
+   "number": "1.7",
+   "strand": "Numbers",
+   "sub_strand": "Fractions",
+   "sequence": 107,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs /groups, safely make circular cut-outs from manila papers,",
+    "in pairs /groups, fold circular cut-outs into 2 equal parts and identify one part as of the whole,",
+    "in pairs /groups, make rectangular cut-outs and fold them into 4 equal parts to get a quarter of a whole and identify each part as of the whole,",
+    "in pairs /groups, make rectangular cut-outs and fold to get 8 equal parts and identify one part as of the whole,",
+    "in pairs /groups, divide a number of objects into 2 equal groups and identify each of the small groups as of the whole group,",
+    "in pairs /groups, divide a number of objects into 4 equal groups and identify each of the small groups as of the whole group,",
+    "in pairs /groups, divide a number of objects into 8 equal groups and identify each of the small groups as of the whole group,",
+    "play games involving , and using digital devices or other resources."
+   ],
+   "key_inquiry_questions": [
+    "How can you represent a half, a quarter or an eighth of a group?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.a",
+     "letter": "a",
+     "text": "identify , and as part of a whole",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.b",
+     "letter": "b",
+     "text": "identify , and as part of a group",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.c",
+     "letter": "c",
+     "text": "appreciate fractions as part of a whole in daily activities",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.MEASUR.LENGTH",
+   "number": "2.1",
+   "strand": "Measurement",
+   "sub_strand": "Length",
+   "sequence": 201,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs/groups, use metre sticks to measure various distances and record their results,",
+    "prepare 5 metres long strings with knots at intervals of one metre to measure long distances,",
+    "in groups, measure the lengths of the 4 walls in their classroom and add the lengths,",
+    "measure the length of the chalkboard and the teacher’s table in metres and work out the difference in length,",
+    "work out questions involving addition of length in real life situations,",
+    "work out subtraction of length in metres based on real life situations,",
+    "in pairs/groups, estimate distances around the school compound up to 10 metres, measure and compare results,",
+    "record videos of classmates measuring length then play back the video and share experiences."
+   ],
+   "key_inquiry_questions": [
+    "How can the length of a chalkboard be measured using a metre stick?",
+    "How can the distance between the flag post and the staffroom be measured using a 5 metres long string?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.a",
+     "letter": "a",
+     "text": "measure length in metres",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.b",
+     "letter": "b",
+     "text": "add length in metres",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.c",
+     "letter": "c",
+     "text": "subtract length in metres",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.d",
+     "letter": "d",
+     "text": "estimate length up to 10 metres",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.e",
+     "letter": "e",
+     "text": "appreciate measuring length in metres in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.MEASUR.MASS",
+   "number": "2.2",
+   "strand": "Measurement",
+   "sub_strand": "Mass",
+   "sequence": 202,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "collect safe materials to be used to measure mass in their immediate environment,",
+    "make masses of 1kg using sand or soil by measuring against the kilogram standard unit,",
+    "in groups, measure mass of different objects in kilograms using a beam balance and share experiences,",
+    "in pairs/groups, role play addition of mass in kilograms using items in the classroom model shop,",
+    "work out the differences between the masses of items in the classroom model shop,",
+    "compare the masses of items in the classroom model shop with a 5kg mass,",
+    "estimate mass of items up to 5kg,",
+    "measure the masses of items to confirm their actual mass,",
+    "play digital games involving mass."
+   ],
+   "key_inquiry_questions": [
+    "How can you make a 1kg mass using a beam balance?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.MEASUR.MASS.a",
+     "letter": "a",
+     "text": "measure mass in kilograms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.b",
+     "letter": "b",
+     "text": "add mass in kilograms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.c",
+     "letter": "c",
+     "text": "subtract mass in kilograms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.d",
+     "letter": "d",
+     "text": "estimate mass up to 5 kilograms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.e",
+     "letter": "e",
+     "text": "appreciate measuring mass of objects in kilograms",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.MEASUR.CAPACITY",
+   "number": "2.3",
+   "strand": "Measurement",
+   "sub_strand": "Capacity",
+   "sequence": 203,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs /groups, collect safe materials in their immediate environment to be used to measure capacity,",
+    "in pairs or groups, discuss and measure capacity of different containers using a 1 litre containers,",
+    "in turns, practice addition of capacity in litres in real life situations,",
+    "in turns, practice subtraction of capacity in litres in real life situations,",
+    "estimate capacity of containers up to 5 litres,",
+    "measure the actual capacity of the containers to confirm their capacity in litres,",
+    "play digital games involving capacity in real life situations."
+   ],
+   "key_inquiry_questions": [
+    "How can the capacity of a container be measured?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.a",
+     "letter": "a",
+     "text": "measure capacity in litres",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.b",
+     "letter": "b",
+     "text": "add capacity in litres",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.c",
+     "letter": "c",
+     "text": "subtract capacity in litres",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.d",
+     "letter": "d",
+     "text": "estimate capacity up to 5 litres",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.e",
+     "letter": "e",
+     "text": "appreciate measuring capacity of containers in litres",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.MEASUR.TIME",
+   "number": "2.4",
+   "strand": "Measurement",
+   "sub_strand": "Time",
+   "sequence": 204,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, draw a clock face on a manila paper or any other resource, divide the clock face into two equal parts using a line passing through the centre, and discuss what each division represents,",
+    "in pairs/groups, discuss the divisions on the clock face,",
+    "locate a minute on the clock face and discuss it as a unit of measuring time,",
+    "in pairs/groups, discuss how to tell time on the clock face using “past” and “to” the hour,",
+    "in turns, read and tell time on an analog clock,",
+    "in groups, discuss how the digital clock operates and share their findings with others,",
+    "in turns, read and tell time on a digital clock,",
+    "in pairs/groups, estimate time in hours,",
+    "in pairs/groups, add time in hours and minutes without conversion,",
+    "in pairs/groups, subtract time in hours and minutes without conversion,",
+    "discuss the importance of keeping time in real life situations."
+   ],
+   "key_inquiry_questions": [
+    "How do we read and tell time using digital and analog clocks?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.MEASUR.TIME.a",
+     "letter": "a",
+     "text": "identify the minute as a unit of measuring time",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.b",
+     "letter": "b",
+     "text": "read and tell time using ‘past’ and ‘to’ the hour using the clock face",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.c",
+     "letter": "c",
+     "text": "read and tell time using the digital clock or analogue clock",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.d",
+     "letter": "d",
+     "text": "write time using ‘past’ and ‘to’ the hour",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.e",
+     "letter": "e",
+     "text": "estimate time in hours",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.f",
+     "letter": "f",
+     "text": "add time involving hours and minutes without conversion in real life situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.g",
+     "letter": "g",
+     "text": "subtract time involving hours and minutes without conversion in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.h",
+     "letter": "h",
+     "text": "appreciate reading and telling time using digital and analogue clocks",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.MEASUR.MONEY",
+   "number": "2.5",
+   "strand": "Measurement",
+   "sub_strand": "Money",
+   "sequence": 205,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use locally available materials to model Kenyan currency denominations for use in learning,",
+    "in pairs/groups, sort Kenyan currency notes according to their value up to sh.1000,",
+    "in pairs/groups, count Kenyan currency notes in different denominations up to sh1000,",
+    "in pairs/groups, subtract money up to sh.1000 in real life situations,",
+    "in pairs/groups, add money up to sh.1000 in real life situations,",
+    "in pairs/groups, role play changing money into different denominations up to sh. 1000 in the classroom model shop,",
+    "in pairs/groups, role play buying up to 3 items involving balance using the money models up to sh.1000 in the classroom model shop,",
+    "share own experiences in relation to shopping activities,",
+    "play digital games involving money."
+   ],
+   "key_inquiry_questions": [
+    "How can money be represented in different denominations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     36,
+     37
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.MEASUR.MONEY.a",
+     "letter": "a",
+     "text": "identify Kenyan currency notes up to sh.1000",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.b",
+     "letter": "b",
+     "text": "count money in different denominations up to sh.1000",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.c",
+     "letter": "c",
+     "text": "add money involving different denominations up to a sh.1000",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.d",
+     "letter": "d",
+     "text": "subtract money involving different denominations up to a sh.1000",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.e",
+     "letter": "e",
+     "text": "represent the same amount of money in different denominations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.f",
+     "letter": "f",
+     "text": "convert money into different denominations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.g",
+     "letter": "g",
+     "text": "use money to buy up to 3 items involving balance",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.h",
+     "letter": "h",
+     "text": "appreciate spending and saving money in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION",
+   "number": "3.1",
+   "strand": "Geometry",
+   "sub_strand": "Position and Direction",
+   "sequence": 301,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs /groups, move along a straight line from a given point outside the classroom,",
+    "in pairs/groups, play a game of moving to the right and left sides from a point,",
+    "in pairs/groups, move straight outside the classroom then turn to the right,",
+    "in pairs/groups, move straight outside the classroom then turn to the left,",
+    "in pairs or groups, play games involving moving along a straight line and turning left or right,",
+    "play digital games involving movement on straight lines and turning to the left and right."
+   ],
+   "key_inquiry_questions": [
+    "What is the importance of directions in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     41
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.a",
+     "letter": "a",
+     "text": "move along a straight line from a point",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.b",
+     "letter": "b",
+     "text": "identify the right and left side from a point",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.c",
+     "letter": "c",
+     "text": "turn to the right from a point",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.d",
+     "letter": "d",
+     "text": "turn to the left from a point",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.e",
+     "letter": "e",
+     "text": "appreciate use of directions in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G3.GEOMET.SHAPES",
+   "number": "3.2",
+   "strand": "Geometry",
+   "sub_strand": "Shapes",
+   "sequence": 302,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs/groups, make paper cut-out of different shapes,",
+    "in pairs or groups, sort out the paper cut-outs according to their shapes,",
+    "in pairs or groups, name the different shapes made from the paper cut-outs,",
+    "in pairs/groups, name and discuss shapes in their immediate environment,",
+    "in pairs/groups, draw combined shapes found in the environment that are made of 2 different shapes, e.g. the hut,",
+    "in groups, use locally available materials to model a combined shape made of 2 different shapes,",
+    "play digital games involving shapes."
+   ],
+   "key_inquiry_questions": [
+    "What shapes can you identify in your school?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-three-designs/",
+    "design": "KICD-Grade3-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     42,
+     43
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.a",
+     "letter": "a",
+     "text": "identify the shapes in a combined shape made of two different shapes",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.b",
+     "letter": "b",
+     "text": "draw a combined shape made of 2 shapes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.c",
+     "letter": "c",
+     "text": "model a combined shape made of two shapes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.d",
+     "letter": "d",
+     "text": "appreciate the use of combined shapes in the environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

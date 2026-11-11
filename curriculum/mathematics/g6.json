@@ -1,0 +1,1353 @@
+{
+ "framework": "cbc",
+ "subject_key": "mathematics",
+ "grade": 6,
+ "source": "KICD KICD-Grade6-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 16,
+  "outcomes": 97,
+  "lessons": 150,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "MATH.G6.NUMBER.WHOLE_NUMBERS",
+   "number": "1.1",
+   "strand": "Numbers",
+   "sub_strand": "Whole Numbers",
+   "sequence": 101,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [
+    "Place value",
+    "and total",
+    "value",
+    "Numbers in",
+    "symbols",
+    "and words",
+    "Rounding",
+    "off numbers",
+    "Squares",
+    "and square",
+    "roots of",
+    "numbers"
+   ],
+   "learning_experiences": [
+    "work with peers to identify place value of digits up to millions using place value apparatus,",
+    "work in teams to read numbers up to millions in symbols from number charts/ cards,",
+    "read and write numbers up to hundred thousand in words from number charts/ cards,",
+    "discuss and read numbers up to millions in symbols from number charts or cards,",
+    "discuss with peers and form different numbers by rearranging digits of a number up to 100,000,",
+    "discuss in teams and round off numbers up to hundred thousand to the nearest 1,000 from number cards and share with other groups,",
+    "multiply a given number by itself and identify the answer as the square of the number,",
+    "work out the square root of a given number and recognise the value which when multiplied by itself results in the given number,",
+    "play games involving whole number using digital devices or other resources,",
+    "create number charts involving number of road users to and from school or home. This will create awareness on the level of congestion of traffic on the road and help to address road safety issues."
+   ],
+   "key_inquiry_questions": [
+    "How do we read and write numbers in symbols and in words?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.a",
+     "letter": "a",
+     "text": "use place value and total value of digits up to millions in real life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.b",
+     "letter": "b",
+     "text": "use numbers up to millions in symbols in real life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.c",
+     "letter": "c",
+     "text": "read and write numbers up to 100,000 in words in real life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.d",
+     "letter": "d",
+     "text": "order numbers up to 100,000 in real-life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.e",
+     "letter": "e",
+     "text": "round off numbers up to 100,000 to the nearest thousand in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.f",
+     "letter": "f",
+     "text": "apply squares of whole numbers up to 100 in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.g",
+     "letter": "g",
+     "text": "apply square roots of perfect squares up to 10,000 in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.h",
+     "letter": "h",
+     "text": "appreciate use of whole numbers in real-life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.NUMBER.MULTIPLICATION",
+   "number": "1.2",
+   "strand": "Numbers",
+   "sub_strand": "Multiplication",
+   "sequence": 102,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "Multiplication",
+    "of numbers",
+    "Making",
+    "patterns"
+   ],
+   "learning_experiences": [
+    "multiply up to a 4-digit number by a 2- digit number using; - fact families - skip counting - multiplication chart - expanded form - digital devices, - estimate products using; - rounding off factors - compatibility of numbers, - make patterns involving multiplication with products not exceeding 1,000 using number cards, - work with peers and play games involving multiplication using digital devices or other resources such as number cards."
+   ],
+   "key_inquiry_questions": [
+    "How do we multiply numbers?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.NUMBER.MULTIPLICATION.a",
+     "letter": "a",
+     "text": "multiply up to a 4-digit number by a 2-digit number in real-life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.MULTIPLICATION.b",
+     "letter": "b",
+     "text": "estimate products by rounding off numbers being multiplied to the nearest ten in real-life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.MULTIPLICATION.c",
+     "letter": "c",
+     "text": "make patterns involving multiplication of numbers not exceeding 1,000 in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.MULTIPLICATION.d",
+     "letter": "d",
+     "text": "appreciate use of multiplication in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.NUMBER.DIVISION",
+   "number": "1.3",
+   "strand": "Numbers",
+   "sub_strand": "Division",
+   "sequence": 103,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "Division of",
+    "numbers",
+    "Combined",
+    "operations"
+   ],
+   "learning_experiences": [
+    "- divide up to a 4-digit number by up to a 3-digit number and share the answers where the dividend is greater than the divisor using;",
+    "- relationship between multiplication and division - long method,",
+    "- work out quotients by rounding off the dividend and divisor to the nearest ten,",
+    "- work out questions involving two, three or four operations up to 3-digit numbers,",
+    "- divide whole numbers using digital devices or other resources."
+   ],
+   "key_inquiry_questions": [
+    "Where is division used in real life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.NUMBER.DIVISION.a",
+     "letter": "a",
+     "text": "divide up to a 4-digit number by up to a 3-digit number where the dividend is greater than the divisor in real -life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DIVISION.b",
+     "letter": "b",
+     "text": "estimate quotients by rounding off the dividend and divisor to the nearest ten in real-life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DIVISION.c",
+     "letter": "c",
+     "text": "perform combined operations involving addition, subtraction, multiplication and division up to 3-digit number",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DIVISION.d",
+     "letter": "d",
+     "text": "appreciate use of division of whole numbers in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.NUMBER.FRACTIONS",
+   "number": "1.4",
+   "strand": "Numbers",
+   "sub_strand": "Fractions",
+   "sequence": 104,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "Addition and",
+    "subtraction",
+    "of fractions",
+    "Reciprocals",
+    "Squares of",
+    "fractions",
+    "Fractions as",
+    "percentages"
+   ],
+   "learning_experiences": [
+    "identify LCM of numbers given from number cards,",
+    "add and subtract fractions using LCM by listing multiples,",
+    "add and subtract mixed fractions by converting the fractions to improper fractions,",
+    "add and subtract mixed fractions by adding and subtracting whole number and fraction parts separately,",
+    "list the inverse of numbers between 1 and 10,",
+    "calculate the reciprocal of a number by dividing 1 (one) by the number. Always start by working out the reciprocal of whole numbers before solving the reciprocal of proper fractions up to a 2- digit number,",
+    "discuss the various reciprocals of a proper fraction,",
+    "calculate squares of fractions through multiplication or practically,",
+    "change fractions to equivalent fractions with denominator 100 through multiplication,",
+    "identify a percentage as a fraction with denominator 100,",
+    "work with peers on how to change fractions to percentages and vice versa,",
+    "play digital games involving fractions."
+   ],
+   "key_inquiry_questions": [
+    "How do we add or subtract fractions?",
+    "Where is percentage used in day-to-day life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     19,
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.a",
+     "letter": "a",
+     "text": "add fractions using LCM in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.b",
+     "letter": "b",
+     "text": "subtract fractions using LCM in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.c",
+     "letter": "c",
+     "text": "add mixed numbers in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.d",
+     "letter": "d",
+     "text": "subtract mixed numbers in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.e",
+     "letter": "e",
+     "text": "identify reciprocal of proper fractions up to a 2-digit number in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.f",
+     "letter": "f",
+     "text": "work out squares of fractions with a numerator of one digit and denominator of a 2-digit number in different situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.g",
+     "letter": "g",
+     "text": "express a fraction as a percentage in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.h",
+     "letter": "h",
+     "text": "convert percentage to fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.i",
+     "letter": "i",
+     "text": "appreciate use of fractions in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.NUMBER.DECIMALS",
+   "number": "1.5",
+   "strand": "Numbers",
+   "sub_strand": "Decimals",
+   "sequence": 105,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "Decimals up to",
+    "ten thousandths",
+    "Rounding off",
+    "decimals",
+    "Conversions in",
+    "decimals",
+    "Addition and",
+    "subtraction in",
+    "decimals"
+   ],
+   "learning_experiences": [
+    "work out place value of decimals up to ten thousandths using place value apparatus,",
+    "relate place value of decimals up to ten thousandths to the number of decimal places,",
+    "discuss and round off decimals up to 3 decimal places,",
+    "change decimals to fractions using square/ rectangular grid,",
+    "change fractions to decimals using square/ rectangular grid,",
+    "add decimals up to 4-decimal places using shared place value apparatus,",
+    "subtract decimals up to 4- decimal places using place value apparatus,",
+    "play games involving decimals using digital devices or other resources."
+   ],
+   "key_inquiry_questions": [
+    "Where are decimals applicable in real life? a a"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.a",
+     "letter": "a",
+     "text": "identify decimals up to ten thousandths in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.b",
+     "letter": "b",
+     "text": "round off decimals up to 3 decimal places in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.c",
+     "letter": "c",
+     "text": "convert decimals to fractions and fractions to decimals in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.d",
+     "letter": "d",
+     "text": "convert decimals to percentages and percentages to decimals in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.e",
+     "letter": "e",
+     "text": "add decimals up to 4-decimal places in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.f",
+     "letter": "f",
+     "text": "subtract decimals up to 4- decimal places in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.g",
+     "letter": "g",
+     "text": "appreciate use of decimals in real-life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.NUMBER.INEQUALITIES",
+   "number": "1.6",
+   "strand": "Numbers",
+   "sub_strand": "Inequalities",
+   "sequence": 106,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "Forming,",
+    "simplifying",
+    "and solving",
+    "simple",
+    "inequalities"
+   ],
+   "learning_experiences": [
+    "discuss meaning of inequality symbols ‘> ‘and ‘< ‘,",
+    "form inequalities in one unknown using different operations,",
+    "simplify inequalities in one unknown using cards or charts,",
+    "work out simple inequalities involving one unknown,",
+    "play games involving inequalities using digital devices or other resources."
+   ],
+   "key_inquiry_questions": [
+    "How do we solve simple inequalities?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.a",
+     "letter": "a",
+     "text": "form simple inequalities in one unknown involving real- life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.b",
+     "letter": "b",
+     "text": "simplify inequalities in one unknown involving real- life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.c",
+     "letter": "c",
+     "text": "solve simple inequalities in one unknown involving real-life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.d",
+     "letter": "d",
+     "text": "appreciate use of inequalities in real-life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.MEASUR.LENGTH",
+   "number": "2.1",
+   "strand": "Measurement",
+   "sub_strand": "Length",
+   "sequence": 201,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Millimetre (mm)",
+    "as a unit of",
+    "Measuring",
+    "length",
+    "Conversions in",
+    "length",
+    "Operations in",
+    "length",
+    "Circumference",
+    "of a circle"
+   ],
+   "learning_experiences": [
+    "measure the circumference of a circle practically,",
+    "divide circumference by diameter to get pi (π),",
+    "play games involving length in centimetres and millimetres using digital devices or other resources."
+   ],
+   "key_inquiry_questions": [
+    "Why do we measure distances in day-to-day life?",
+    "What do we use to measure length in real life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.a",
+     "letter": "a",
+     "text": "use the millimetre (mm) as a unit of measuring length in different situations, •",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.b",
+     "letter": "b",
+     "text": "establish the relationship between the millimetre and • centimetre in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.c",
+     "letter": "c",
+     "text": "convert centimetres and • millimetres to millimetres in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.d",
+     "letter": "d",
+     "text": "add centimetres and millimetres in different • situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.e",
+     "letter": "e",
+     "text": "subtract centimetres and • millimetres in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.f",
+     "letter": "f",
+     "text": "multiply centimetres and millimetres by whole • numbers in real- life situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.g",
+     "letter": "g",
+     "text": "divide centimetres and millimetres by whole numbers in real-life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.h",
+     "letter": "h",
+     "text": "determine the circumference of a circle practically",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.i",
+     "letter": "i",
+     "text": "identify the relationship between circumference and diameter in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.j",
+     "letter": "j",
+     "text": "appreciate use of length in real-life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.MEASUR.AREA",
+   "number": "2.2",
+   "strand": "Measurement",
+   "sub_strand": "Area",
+   "sequence": 202,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "Area of",
+    "triangles and",
+    "combined",
+    "shapes"
+   ],
+   "learning_experiences": [
+    "establish that the area of a triangle is equal to a half of the area of a rectangle or a square when the rectangle or the square is divided by a diagonal,",
+    "work out the area of triangles in cm² using the relationship between a rectangle and a triangle (Area of a triangle is equal to ½ area of a rectangle or square. A = ½ (Lx W),",
+    "sketch a circle on a unit square grid and count the full squares to estimate the area of circles and compare answers,",
+    "prepare own combined shapes involving rectangles, squares, triangles and ask peers to determine the area,",
+    "play games involving area using digital tools or other resources."
+   ],
+   "key_inquiry_questions": [
+    "Where is area used in real life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.MEASUR.AREA.a",
+     "letter": "a",
+     "text": "work out area of triangles in square centimetres (cm²)",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.AREA.b",
+     "letter": "b",
+     "text": "work out area of combined shapes involving squares, rectangles and triangles in icm²",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.AREA.c",
+     "letter": "c",
+     "text": "estimate the area of circles by counting squares",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.AREA.d",
+     "letter": "d",
+     "text": "appreciate the use of cm² in working out area in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.MEASUR.CAPACITY",
+   "number": "2.3",
+   "strand": "Measurement",
+   "sub_strand": "Capacity",
+   "sequence": 203,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "Capacity in",
+    "centimetres",
+    "(cm³),",
+    "millilitres",
+    "and litres",
+    "Conversions",
+    "in capacity"
+   ],
+   "learning_experiences": [
+    "work out the relationship between cm³, mililitres and litres through measuring practically,",
+    "measure capacity in millilitres and litres, discuss answers and share with others,",
+    "change capacity in litres to millilitres using containers from the environment by comparing sizes of different containers,",
+    "work out conversions of capacity of millilitres to litres,",
+    "play games involving capacity using containers of different capacities."
+   ],
+   "key_inquiry_questions": [
+    "How can we measure capacity?",
+    "Where is capacity applicable in real life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     31,
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.MEASUR.CAPACITY.a",
+     "letter": "a",
+     "text": "identify the relationship among cubic centimetres (cm³), millilitres and litres in real life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.CAPACITY.b",
+     "letter": "b",
+     "text": "convert litres to millilitres in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.CAPACITY.c",
+     "letter": "c",
+     "text": "convert capacity in millilitres to litres in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.CAPACITY.d",
+     "letter": "d",
+     "text": "appreciate use of cm³ and litres in measuring capacity in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.MEASUR.MASS",
+   "number": "2.4",
+   "strand": "Measurement",
+   "sub_strand": "Mass",
+   "sequence": 204,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [
+    "Tonne as a unit for",
+    "measuring mass",
+    "Conversions in mass",
+    "Operations in mass"
+   ],
+   "learning_experiences": [
+    "discuss tonne as a unit of measuring mass",
+    "discuss items in the environment such as loaded lorries, whose mass may be measured in tonnes",
+    "establish the relationship between the kilogramme and the tonne (1000kg = 1 tonne).",
+    "estimate mass in tonnes of various objects found in the environment.",
+    "change kilogrammes to tonnes and tonnes to kilogrammes.",
+    "determine mass of items in tonnes and kilogrammes using different operations involving addition, subtraction, multiplication and division.",
+    "use digital weighing machines to measure mass of different items."
+   ],
+   "key_inquiry_questions": [
+    "How can we measure large amounts of mass?",
+    "In what situations would the tonnes be more applicable to use when measuring mass?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     33,
+     34
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.MEASUR.MASS.a",
+     "letter": "a",
+     "text": "identify the tonne as a unit for measuring mass in real life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.b",
+     "letter": "b",
+     "text": "identify items measured in tonnes in real life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.c",
+     "letter": "c",
+     "text": "identify the relationship between the kilogramme and the tonne",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.d",
+     "letter": "d",
+     "text": "estimate mass in tonnes in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.e",
+     "letter": "e",
+     "text": "convert kilogrammes to tonnes and tonnes to kilogrammes in real-life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.f",
+     "letter": "f",
+     "text": "add tonnes and kilogrammes in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.g",
+     "letter": "g",
+     "text": "subtract tonnes and kilogrames in real-life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.h",
+     "letter": "h",
+     "text": "multiply tonnes and kilogrammes by whole numbers in real-life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.i",
+     "letter": "i",
+     "text": "divide tonnes and kilogrammes by whole numbers in real-life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.j",
+     "letter": "j",
+     "text": "appreciate use of the kilogramme and tonne in measuring mass",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.MEASUR.TIME",
+   "number": "2.5",
+   "strand": "Measurement",
+   "sub_strand": "Time",
+   "sequence": 205,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Time in a.m.",
+    "and p.m",
+    "Conversions",
+    "in time",
+    "Interpreting",
+    "travel",
+    "timetables"
+   ],
+   "learning_experiences": [
+    "discuss time in a.m. and p.m. from digital and analogue clocks.",
+    "determine time in a.m. and p.m. from digital and analogue clocks.",
+    "equate time in a.m. and p.m.to the 24h clock system using a chart.",
+    "change time from the 12h to 24h system and 24h to 12h using a chart.",
+    "interpret travel timetables to create travel schedules for different events.",
+    "determine time durations of travelling using travel timetables within the country.",
+    "check local time using digital clock or analogue in 12h and 24h systems."
+   ],
+   "key_inquiry_questions": [
+    "How do we read and tell time?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     35,
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.MEASUR.TIME.a",
+     "letter": "a",
+     "text": "identify time in a.m. and p.m. in day-to-day life experiences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.b",
+     "letter": "b",
+     "text": "write time in a.m. and p.m. in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.c",
+     "letter": "c",
+     "text": "relate time in a.m. and p.m. to the 24h clock system",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.d",
+     "letter": "d",
+     "text": "convert time from 12h to 24h and 24h to 12h system",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.e",
+     "letter": "e",
+     "text": "interpret travel timetable in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.f",
+     "letter": "f",
+     "text": "appreciate use of time in both 12h and 24h systems",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.MEASUR.MONEY",
+   "number": "2.6",
+   "strand": "Measurement",
+   "sub_strand": "Money",
+   "sequence": 206,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "Simple",
+    "budget",
+    "Buying and",
+    "selling prices",
+    "Profit and",
+    "loss",
+    "taxes"
+   ],
+   "learning_experiences": [
+    "identify different shopping items in the community or at home especially food items and prepare a simple budget,",
+    "discuss the meaning of buying and selling price,",
+    "determine buying and selling prices of different items in the community,",
+    "discuss the meaning of profit and loss in real-life situations and share with peers,",
+    "discuss and determine profit and loss by practising buying and selling from the classroom model shop,",
+    "discuss income and value added tax (VAT) from receipts issued by shops and retailers as a form of tax,",
+    "use IT devices or other resources to explore more on money."
+   ],
+   "key_inquiry_questions": [
+    "How can you make profit in a business?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     37,
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.MEASUR.MONEY.a",
+     "letter": "a",
+     "text": "prepare simple budget in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.b",
+     "letter": "b",
+     "text": "determine buying and selling prices of different items in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.c",
+     "letter": "c",
+     "text": "work out profit from sales of different items in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.d",
+     "letter": "d",
+     "text": "calculate loss realised from sales of different items in the community",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.e",
+     "letter": "e",
+     "text": "identify types of taxes in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.f",
+     "letter": "f",
+     "text": "appreciate use of money in real-life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.GEOMET.LINES",
+   "number": "3.1",
+   "strand": "Geometry",
+   "sub_strand": "Lines",
+   "sequence": 301,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "Parallel lines",
+    "Bisecting lines",
+    "Perpendicular",
+    "lines"
+   ],
+   "learning_experiences": [
+    "construct parallel lines using geometrical instruments and other writing materials,",
+    "bisect lines using geometrical instruments,",
+    "draw perpendicular lines using geometrical instruments,",
+    "share digital devices and other resources to draw parallel lines."
+   ],
+   "key_inquiry_questions": [
+    "Why do we need to draw lines?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.GEOMET.LINES.a",
+     "letter": "a",
+     "text": "draw parallel lines in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.LINES.b",
+     "letter": "b",
+     "text": "bisect lines by construction",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.LINES.c",
+     "letter": "c",
+     "text": "construct perpendicular lines in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.LINES.d",
+     "letter": "d",
+     "text": "appreciate use of lines in daily life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.GEOMET.ANGLES",
+   "number": "3.2",
+   "strand": "Geometry",
+   "sub_strand": "Angles",
+   "sequence": 302,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "Angles on a",
+    "straight line",
+    "Measure",
+    "angles",
+    "Sum of",
+    "angles",
+    "Equilateral,",
+    "right-angled",
+    "and",
+    "isosceles",
+    "triangles",
+    "Interior",
+    "angles"
+   ],
+   "learning_experiences": [
+    "discuss angles on a straight line using concrete objects that have straight edges,",
+    "draw a line that cuts the straight line to form an angle. Measure and write the size(s) of angles formed. Compare the sizes of angles with your classmates,",
+    "work out the sizes of various angles on a straight line,",
+    "practically establish the sum of angles in a triangle and rectangles using different objects in the environment,",
+    "identify and draw equilateral, right-angled and isosceles triangles using geometrical instruments,",
+    "practically establish the sum of the interior angles in a rectangle and triangle,",
+    "use geometrical instruments or digital resources to practise drawing different lines and angles."
+   ],
+   "key_inquiry_questions": [
+    "Where can you use angles in real life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     43,
+     44
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.GEOMET.ANGLES.a",
+     "letter": "a",
+     "text": "identify angles on a straight line at a point in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.ANGLES.b",
+     "letter": "b",
+     "text": "measure angles on a straight line at a point in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.ANGLES.c",
+     "letter": "c",
+     "text": "work out sum of angles on a straight line in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.ANGLES.d",
+     "letter": "d",
+     "text": "determine the sum of angles in rectangles and triangle s",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.ANGLES.e",
+     "letter": "e",
+     "text": "construct equilateral, right-angled and isosceles triangles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.ANGLES.f",
+     "letter": "f",
+     "text": "measure the interior angles of equilateral, right-angled and isosceles triangles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.ANGLES.g",
+     "letter": "g",
+     "text": "appreciate use of angles in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.GEOMET.3_D_OBJECTS",
+   "number": "3.3",
+   "strand": "Geometry",
+   "sub_strand": "3-D Objects",
+   "sequence": 303,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "Vertices,",
+    "faces and",
+    "edges",
+    "Plane figures",
+    "in 3-D",
+    "objects"
+   ],
+   "learning_experiences": [
+    "discuss and collect 3-D objects and safely keep them as part of their role in environmental conservation,",
+    "identify and relate cuboids and cylinders in the environment,",
+    "open up nets of cuboids, cubes and cylinders and sketch the layout,",
+    "discuss the rectangular, square and circular shapes on the nets,",
+    "manipulate 3-D objects using containers or digitally using IT devices."
+   ],
+   "key_inquiry_questions": [
+    "How do we use containers in daily life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     45
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.GEOMET.3_D_OBJECTS.a",
+     "letter": "a",
+     "text": "identify vertices, faces and edges in cuboids and cubes in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.3_D_OBJECTS.b",
+     "letter": "b",
+     "text": "identify faces and edges of cylinders in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.3_D_OBJECTS.c",
+     "letter": "c",
+     "text": "describe plane figures in 3-D objects in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.GEOMET.3_D_OBJECTS.d",
+     "letter": "d",
+     "text": "appreciate use of 3-D objects in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G6.DATA_H.BAR_GRAPHS",
+   "number": "4.1",
+   "strand": "Data Handling",
+   "sub_strand": "Bar Graphs",
+   "sequence": 401,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Frequency",
+    "table",
+    "Pictographs,",
+    "Piling and",
+    "bar graphs",
+    "Interpreting",
+    "bar graphs"
+   ],
+   "learning_experiences": [
+    "discuss with peers and collect data on identified topic from immediate environment and organise the data in a frequency table,",
+    "collect data, discuss and organise it in pictographs,",
+    "pile similar objects such as match boxes vertically to represent data,",
+    "discuss and organise data in form of bar graphs,",
+    "discuss information represented on bar graphs and explain what it represents,",
+    "use digital devices or other resources to draw bar graphs and other charts to present data."
+   ],
+   "key_inquiry_questions": [
+    "How can bar graphs be used in real-life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "KICD-Grade6-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     49,
+     50
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G6.DATA_H.BAR_GRAPHS.a",
+     "letter": "a",
+     "text": "draw a frequency table of real-life situation data",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.DATA_H.BAR_GRAPHS.b",
+     "letter": "b",
+     "text": "represent data from real-life situations using pictographs",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.DATA_H.BAR_GRAPHS.c",
+     "letter": "c",
+     "text": "represent data from real-life situation through piling",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.DATA_H.BAR_GRAPHS.d",
+     "letter": "d",
+     "text": "represent data from real-life situations using bar graphs",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.DATA_H.BAR_GRAPHS.e",
+     "letter": "e",
+     "text": "interpret information from bar graphs",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G6.DATA_H.BAR_GRAPHS.f",
+     "letter": "f",
+     "text": "appreciate use of bar graphs in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

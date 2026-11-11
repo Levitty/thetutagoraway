@@ -1,0 +1,1394 @@
+{
+ "framework": "cbc",
+ "subject_key": "mathematics",
+ "grade": 8,
+ "source": "KICD KICD-Grade8-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 5,
+  "sub_strands": 16,
+  "outcomes": 121,
+  "lessons": 150,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "MATH.G8.NUMBER.INTEGERS",
+   "number": "1.1",
+   "strand": "Numbers",
+   "sub_strand": "Integers",
+   "sequence": 101,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "carry out activities involving positive and negative numbers and zero. For example, climbing upstairs (positive), going down stairs (negative). Others may include standing at a point (the zero point) and count the number of steps moved either forward or backward.",
+    "draw and represent integers on number lines on learning materials.",
+    "perform operations, including combined operations of integers on a number line.",
+    "play creative games that involve number lines, for example jumping steps.",
+    "use IT or other resources to learn more on operations of integers on number lines."
+   ],
+   "key_inquiry_questions": [
+    "Where do we use integers in real life situations?",
+    "How do we carry out operations of integers?",
+    "Where are integer operations applicable in life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.a",
+     "letter": "a",
+     "text": "identify integers in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.b",
+     "letter": "b",
+     "text": "represent integers on a number line in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.c",
+     "letter": "c",
+     "text": "carry out operations of addition and subtraction integers on the number line in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.d",
+     "letter": "d",
+     "text": "use IT or print resources for learning more on integers and for skills development",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.e",
+     "letter": "e",
+     "text": "reflect on use of integers in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.NUMBER.FRACTIONS",
+   "number": "1.2",
+   "strand": "Numbers",
+   "sub_strand": "Fractions",
+   "sequence": 102,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and use the correct order of operations in fractions.",
+    "discuss and carry out operations on fractions from activities such as shopping and other real life cases.",
+    "play games of operations on fractions using IT devices or other resources."
+   ],
+   "key_inquiry_questions": [
+    "How do we use fractions in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.NUMBER.FRACTIONS.a",
+     "letter": "a",
+     "text": "carry out combined operations on fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.FRACTIONS.b",
+     "letter": "b",
+     "text": "Work out operations on fractions in real life Situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.FRACTIONS.c",
+     "letter": "c",
+     "text": "use IT devices for learning more on fractions and for enjoyment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.FRACTIONS.d",
+     "letter": "d",
+     "text": "promote use of fractions in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.NUMBER.DECIMALS",
+   "number": "1.3",
+   "strand": "Numbers",
+   "sub_strand": "Decimals",
+   "sequence": 103,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "practice converting fractions to decimals.",
+    "discuss and classify non-recurring and recurring decimals. Indicate the recurring digits.",
+    "practice converting recurring decimals to fractions.",
+    "discuss and round off decimal numbers to a required number of decimal places",
+    "write decimal and whole numbers to a given significant figures",
+    "write numbers in standard form in learning materials such as cards or charts.",
+    "work out combined operations on decimals in the correct order.",
+    "discuss and apply decimals to real life cases.",
+    "play games of operations on decimals using IT or other materials."
+   ],
+   "key_inquiry_questions": [
+    "How do we work out operations on decimals?",
+    "How do we use decimals in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.NUMBER.DECIMALS.a",
+     "letter": "a",
+     "text": "convert fractions to decimals in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.DECIMALS.b",
+     "letter": "b",
+     "text": "identify recurring decimals in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.DECIMALS.c",
+     "letter": "c",
+     "text": "convert recurring decimals into fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.DECIMALS.d",
+     "letter": "d",
+     "text": "round off a decimal number to a required number of decimal places in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.DECIMALS.e",
+     "letter": "e",
+     "text": "express numbers to a required significant figure in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.DECIMALS.f",
+     "letter": "f",
+     "text": "express numbers in standard form in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.DECIMALS.g",
+     "letter": "g",
+     "text": "carry out combined operations on decimals in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.DECIMALS.h",
+     "letter": "h",
+     "text": "apply decimals to real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.DECIMALS.i",
+     "letter": "i",
+     "text": "use IT or other resources for learning more on decimals and for enjoyment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.DECIMALS.j",
+     "letter": "j",
+     "text": "promote use of decimals in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+   "number": "1.4",
+   "strand": "Numbers",
+   "sub_strand": "Squares and Square roots",
+   "sequence": 104,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read and write the squares of numbers from tables",
+    "read and write the square roots of numbers from tables",
+    "practice working out squares and square roots using a calculator.",
+    "use IT devices or other materials to play square and square root games.",
+    "create games that involve squares and square roots of numbers."
+   ],
+   "key_inquiry_questions": [
+    "What are squares and square roots of numbers?",
+    "Where do we apply squares and square roots in real life situations ?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.a",
+     "letter": "a",
+     "text": "work out the squares of numbers from tables in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.b",
+     "letter": "b",
+     "text": "work out the square roots of numbers from tables in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.c",
+     "letter": "c",
+     "text": "work out squares and square roots of numbers using a calculator in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.d",
+     "letter": "d",
+     "text": "use IT or other materials to learn more on squares and square roots of numbers and for fun",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.e",
+     "letter": "e",
+     "text": "enjoy using squares and square roots in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+   "number": "1.5",
+   "strand": "Numbers",
+   "sub_strand": "Rates, Ratio, Proportions and Percentages",
+   "sequence": 105,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "time while doing different activities such as calling using for example different mobile service providers.",
+    "role play this activity and note time taken to call, Record on a table and compare.",
+    "use cut outs from whole objects or substances to relate fractions to ratios.",
+    "discuss and compare ratios from the cut outs.",
+    "discuss and share quantities of concrete objects in different ratios.",
+    "discuss and determine percentage increase and decrease of different quantities.",
+    "use IT devices or other materials to explore percentage change.",
+    "role play shopping activities to show and determine direct relationships and can use any other activities.",
+    "use hourglass to show and determine indirect relationships and can use any other activities.",
+    "watch videos on ratios and proportions as used in daily activities"
+   ],
+   "key_inquiry_questions": [
+    "How do we use rates in real life situations?",
+    "How do we use ratios in daily activities?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     23,
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.a",
+     "letter": "a",
+     "text": "identify rates in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.b",
+     "letter": "b",
+     "text": "work out rates in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.c",
+     "letter": "c",
+     "text": "express fractions as ratios in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.d",
+     "letter": "d",
+     "text": "compare two or more ratios in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.e",
+     "letter": "e",
+     "text": "divide quantities in given ratios in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.f",
+     "letter": "f",
+     "text": "work out ratios in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.g",
+     "letter": "g",
+     "text": "work out increase and decrease of quantities using ratios in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.h",
+     "letter": "h",
+     "text": "work out percentage change of given quantities in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.i",
+     "letter": "i",
+     "text": "identify direct and indirect proportions in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.j",
+     "letter": "j",
+     "text": "work out direct and indirect proportions in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.k",
+     "letter": "k",
+     "text": "use IT devices or other resources for more learning on ratios and proportions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.l",
+     "letter": "l",
+     "text": "promote use of ratios and proportions in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+   "number": "2.1",
+   "strand": "Algebra",
+   "sub_strand": "Algebraic Expressions",
+   "sequence": 201,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and identify like and unlike terms and factorize algebraic expressions.",
+    "discuss like and unlike terms and simplify the algebraic fractions",
+    "discuss how to substitute the given numerical values to work out a given algebraic expression.",
+    "use IT to work out exercises and activities in algebra or drag and drop activities of grouping similar terms to simplify algebraic expressions",
+    "use other resources to work out algebra exercises."
+   ],
+   "key_inquiry_questions": [
+    "How do we factorize algebraic expressions?",
+    "How do we simplify algebraic expressions?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.a",
+     "letter": "a",
+     "text": "factorize algebraic expressions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.b",
+     "letter": "b",
+     "text": "simplify algebraic fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.c",
+     "letter": "c",
+     "text": "evaluate algebraic expressions by substituting numerical values in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.d",
+     "letter": "d",
+     "text": "use IT or other materials to learn more on algebraic expressions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.e",
+     "letter": "e",
+     "text": "enjoy using algebraic expressions in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS",
+   "number": "2.2",
+   "strand": "Algebra",
+   "sub_strand": "Linear Equations",
+   "sequence": 202,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "role play activities such as shopping on two different items in the shop to form linear equations in two unknowns.",
+    "discuss with others and use other activities with two unknowns",
+    "discuss and use substitution method to find the solutions of simultaneous equations in two unknowns.",
+    "discuss and use elimination method to find the solutions of simultaneous equations in two unknowns.",
+    "practice forming and solving simultaneous equations in two unknowns of real life cases using any method.",
+    "watch videos or use other materials involving linear equations in two unknowns."
+   ],
+   "key_inquiry_questions": [
+    "How do we solve linear equations in two unknowns?",
+    "Where do we use linear equations in two unknowns in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.a",
+     "letter": "a",
+     "text": "form linear equations in two unknowns in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.b",
+     "letter": "b",
+     "text": "solve linear equations in two unknowns by Substitution method in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.c",
+     "letter": "c",
+     "text": "solve linear equations in two unknowns by elimination method in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.d",
+     "letter": "d",
+     "text": "apply linear equations in two unknowns in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.e",
+     "letter": "e",
+     "text": "use IT devices to work out linear learning and for enjoyment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.f",
+     "letter": "f",
+     "text": "recognize use of linear equations in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.MEASUR.CIRCLES",
+   "number": "3.1",
+   "strand": "Measurements",
+   "sub_strand": "Circles",
+   "sequence": 301,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss with others and find the circumference of different circular objects in the environment.",
+    "use cut outs to relate arc length to the circumference of a circle, starting with semicircle, then quarter of a circle etc.",
+    "draw circles and work out the circumference of a circle, and arc length of a circle.",
+    "use cut outs of sectors of circles from locally available materials and work out the perimeter of the sectors. Discuss and make any object with the sector that can be used in real life situations.",
+    "use IT or other resources to explore use of sectors of circles in daily life"
+   ],
+   "key_inquiry_questions": [
+    "How do we determine the circumference of a circle?",
+    "How do we use sectors of a circle in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.a",
+     "letter": "a",
+     "text": "work out the circumference of a circle in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.b",
+     "letter": "b",
+     "text": "work out the length of an Arc of a circle in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.c",
+     "letter": "c",
+     "text": "calculate the Perimeter of a sector of a circle in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.d",
+     "letter": "d",
+     "text": "use IT or other resources for more learning on circles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.e",
+     "letter": "e",
+     "text": "promote use of circles in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.MEASUR.AREA",
+   "number": "3.2",
+   "strand": "Measurements",
+   "sub_strand": "Area",
+   "sequence": 302,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and work out areas of different circles.",
+    "use cut outs of sectors of circles from locally available materials and find the area where they relate the angle of the sector to the area of the circle. Determine the area of a sector of a circle.",
+    "use models to find the surface area of cubes, cuboids and cylinders and derive the formulas for each.",
+    "apply the formulas to work out surface area of given cubes, cuboids and cylinders.",
+    "use models to find the surface area of triangular prisms",
+    "draw irregular shapes, for example their palm of hands, feet, leaves etc and trace on square grid to estimate the area.",
+    "watch videos on models of cubes, cuboid, cylinders and prisms and how to find the surface area. Also make or improvise models or containers from locally available materials."
+   ],
+   "key_inquiry_questions": [
+    "How do we use area in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     35,
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.MEASUR.AREA.a",
+     "letter": "a",
+     "text": "calculate the Area of circle in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.AREA.b",
+     "letter": "b",
+     "text": "work out the Area of a sector of a circle in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.AREA.c",
+     "letter": "c",
+     "text": "work out the Surface Area of Cubes and Cuboids in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.AREA.d",
+     "letter": "d",
+     "text": "work out the Surface area of a cylinders in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.AREA.e",
+     "letter": "e",
+     "text": "determine the surface Area of a triangular Prism in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.AREA.f",
+     "letter": "f",
+     "text": "work out the area of irregular shapes using square grids in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.AREA.g",
+     "letter": "g",
+     "text": "use IT and other materials for learning more on area and for enjoyment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.AREA.h",
+     "letter": "h",
+     "text": "recognise use of in real length life situations",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.MEASUR.MONEY",
+   "number": "3.3",
+   "strand": "Measurements",
+   "sub_strand": "Money",
+   "sequence": 303,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "visit or invite resource persons from different financial institutions in the neighborhood of the school or home and gather information about simple and compound interests offered on deposits (principal).",
+    "enquire and discuss terms of interests on deposits (principal) as part of consumer awareness and protection",
+    "discuss and work out compound interest",
+    "identify and discuss objects or goods that appreciate and depreciate in value to inform decision making on goods that are worth investing in or buying.",
+    "determine Appreciation and Depreciation using a step by step method.",
+    "visit places that items are offered on hire purchase and discuss different terms of purchase. This can be done either as physical or online searches. They can relate different pricing of the goods. They should discuss the installments periods and time to inform purchasing decisions that will protect from products that highly lose value with time.",
+    "use IT to access online shopping platforms and identify terms of sale."
+   ],
+   "key_inquiry_questions": [
+    "What is interest in money?",
+    "How do we pay for goods on hire purchase?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.MEASUR.MONEY.a",
+     "letter": "a",
+     "text": "identify interest and principal in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.MONEY.b",
+     "letter": "b",
+     "text": "calculate simple interest in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.MONEY.c",
+     "letter": "c",
+     "text": "calculate compound interest per annum step by step up to three years in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.MONEY.d",
+     "letter": "d",
+     "text": "work out appreciation and depreciation per annum step by step up to three years in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.MONEY.e",
+     "letter": "e",
+     "text": "work out hire purchase in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.MONEY.f",
+     "letter": "f",
+     "text": "use IT and other resources to carry out operations related to money",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.MEASUR.MONEY.g",
+     "letter": "g",
+     "text": "spend money responsibly on needs and leisure",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION",
+   "number": "4.1",
+   "strand": "Geometry",
+   "sub_strand": "Geometrical Constructions",
+   "sequence": 401,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "practice constructing parallel and perpendicular lines.",
+    "practice divide a line proportionally, for example, using a set square and a ruler only or pair of compasses.",
+    "discuss angle properties of polygons and relate the number of right angles to the number of sides. They can determine the angles in a given polygon.",
+    "construct regular polygons using pair of compasses, rulers, protractors.",
+    "construct irregular polygons using pair of compasses, rulers, protractors.",
+    "practice constructing circles passing through vertices of given triangles.",
+    "practice constructing circles touching sides of given triangles.",
+    "watch videos on how to construct polygons, use different construction software.",
+    "use IT or other devices to create patterns using circles touching sides of triangles or polygons."
+   ],
+   "key_inquiry_questions": [
+    "How do we construct polygons?",
+    "Where do we use polygons in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     43,
+     44
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.a",
+     "letter": "a",
+     "text": "construct parallel and perpendicular lines in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.b",
+     "letter": "b",
+     "text": "divide a line proportionally in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.c",
+     "letter": "c",
+     "text": "identify angle properties of polygons in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.d",
+     "letter": "d",
+     "text": "construct regular polygons up to a hexagon in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.e",
+     "letter": "e",
+     "text": "construct irregular polygons up to a hexagon in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.f",
+     "letter": "f",
+     "text": "construct circles passing through the vertices of a triangle in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.g",
+     "letter": "g",
+     "text": "construct circles touching the sides of the triangle in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.h",
+     "letter": "h",
+     "text": "use IT as well as other materials to learn more about geometric constructions and for skills development",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.i",
+     "letter": "i",
+     "text": "admire geometric patterns in objects and substances in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS",
+   "number": "4.2",
+   "strand": "Geometry",
+   "sub_strand": "Coordinates and graphs",
+   "sequence": 402,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "draw and appropriately label the axes on the Cartesian plane",
+    "practice locating and plotting points on a Cartesian plane appropriately.",
+    "discuss and read coordinates of points on the Cartesian plane. They write the coordinates in terms of (horizontal value, vertical value)",
+    "discuss, choose and use appropriate scale for a given data.",
+    "discuss and make an appropriate table of values for a given linear equation and draw the linear graphs",
+    "generate the values in a table of the simultaneous linear equations and draw the graphs, read the point of intersection as solution for the equations.",
+    "discuss and form simultaneous equations from statements and solve using graphs.",
+    "use IT graphing tools to create linear graphs or use other materials to practice drawing linear graphs."
+   ],
+   "key_inquiry_questions": [
+    "How do we plot coordinates on a Cartesian plane?",
+    "Where do we use linear graphs in real life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     47,
+     48
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.a",
+     "letter": "a",
+     "text": "draw a labelled Cartesian plane on different learning materials",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.b",
+     "letter": "b",
+     "text": "identify points on the Cartesian plane in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.c",
+     "letter": "c",
+     "text": "plot points on the Cartesian plane in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.d",
+     "letter": "d",
+     "text": "generate table of values for a linear equation in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.e",
+     "letter": "e",
+     "text": "determine an appropriate scale for a linear equation on the Cartesian plane in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.f",
+     "letter": "f",
+     "text": "draw a linear graph from table of values on Cartesian plane in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.g",
+     "letter": "g",
+     "text": "solve simultaneous linear equations graphically in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.h",
+     "letter": "h",
+     "text": "apply simultaneous equations in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.i",
+     "letter": "i",
+     "text": "use IT or other resources to learn more on coordinates and graphs and for fun",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.j",
+     "letter": "j",
+     "text": "reflect on the use of graphs in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.GEOMET.SCALE_DRAWING",
+   "number": "4.3",
+   "strand": "Geometry",
+   "sub_strand": "Scale Drawing",
+   "sequence": 403,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "measure and represent length of different objects from immediate environment in his/her work book",
+    "discuss and practice converting scale from one form to another",
+    "read, discuss and interpret given linear scales in statement form.",
+    "discuss and write given linear scales in statement form.",
+    "read, discuss and interpret given linear scales in ratio form.",
+    "discuss and carry out conversions of scales from one form to another.",
+    "make scale drawings on different learning materials using appropriate scale.",
+    "use ICT devices to display the maps and use the zoom functions to demonstrate scale.",
+    "Use maps to demonstrate scale"
+   ],
+   "key_inquiry_questions": [
+    "How do we determine scales in real life?",
+    "Where do we use scale drawing in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     51,
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.a",
+     "letter": "a",
+     "text": "represent length to a given scale in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.b",
+     "letter": "b",
+     "text": "convert actual length to scale length in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.c",
+     "letter": "c",
+     "text": "convert scale length to actual length in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.d",
+     "letter": "d",
+     "text": "interpret linear scales in statement form in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.e",
+     "letter": "e",
+     "text": "write linear scales in statement form in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.f",
+     "letter": "f",
+     "text": "interpret linear scales in ratio form in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.g",
+     "letter": "g",
+     "text": "write linear scales in ratio form in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.h",
+     "letter": "h",
+     "text": "convert linear scale from statement form to ratio form and ratio form to statement form in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.i",
+     "letter": "i",
+     "text": "make scale drawings in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.j",
+     "letter": "j",
+     "text": "apply scale drawing in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.k",
+     "letter": "k",
+     "text": "use IT or other resources to learn more on scale drawing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.SCALE_DRAWING.l",
+     "letter": "l",
+     "text": "recognise the use of scale drawing in maps",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.GEOMET.COMMON_SOLIDS",
+   "number": "4.4",
+   "strand": "Geometry",
+   "sub_strand": "Common Solids",
+   "sequence": 404,
+   "lessons": 16,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "collect common solids such as cubes, cuboids, cylinders, pyramids and cones from the immediate environment.",
+    "discuss, open and sketch the nets of hollow solids.",
+    "work out the surface area of solids from nets.",
+    "discuss and practice measuring the distance between any two points on the surface of the solids.",
+    "make models of hollow and compact solids using locally available materials. Hollow solids (containers) may be of cubes, cuboids, cylinders, pyramids or cones. Compact solids (eg. bricks) may be of cubes, cuboids or cylinders.",
+    "use IT devices to watch videos on common solids, nets and draw the solids and nets.",
+    "use other resources such as print or realia to trace or draw nets of solids."
+   ],
+   "key_inquiry_questions": [
+    "What are common solids?",
+    "How do we use common solids in real life?",
+    "How do you determine surface areas of solid?",
+    "How do you determine the volume of common solids?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     55,
+     56
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.a",
+     "letter": "a",
+     "text": "identify common solids from the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.b",
+     "letter": "b",
+     "text": "sketch nets of cubes, cuboids, cylinders, pyramids and cones in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.c",
+     "letter": "c",
+     "text": "work out surface area of the solids from nets of solids in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.d",
+     "letter": "d",
+     "text": "determine the distance between two points on the surface of a solid in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.e",
+     "letter": "e",
+     "text": "make models of hollow and compact solids for skills development",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.f",
+     "letter": "f",
+     "text": "use IT devices or other materials to draw models and nets of solids in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.g",
+     "letter": "g",
+     "text": "promote the use of common solids in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN",
+   "number": "5.1",
+   "strand": "Data Handling and Probability",
+   "sub_strand": "Data Presentation and Interpretation",
+   "sequence": 501,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "collect data from immediate environment or experiences, for example size of shoes, height or test scores.",
+    "use a suitable scale to represent the data in bar graphs.",
+    "discuss and interpret bar graphs",
+    "discuss and represent data in line graphs",
+    "discuss and interpret line graphs",
+    "recognize the mode from a given set of discrete data",
+    "discuss and to work out the average from different sets of discrete data and relate it to the mean.",
+    "carry out different activities that involve getting the median position. For example, where possible learners use the hand to identify the middle finger in reference to the position.",
+    "arrange given data in ascending order and identify the middle value which is the median.",
+    "use IT to create bar graphs and line graphs to represent the data, calculate the mean, the mode and the median.",
+    "use other resources to draw bar and line graphs"
+   ],
+   "key_inquiry_questions": [
+    "What are the different ways of representing data?",
+    "How do we determine the mean of data?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     58,
+     59
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.a",
+     "letter": "a",
+     "text": "draw bar graphs of data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.b",
+     "letter": "b",
+     "text": "interpret bar graphs of data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.c",
+     "letter": "c",
+     "text": "draw line graphs of given data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.d",
+     "letter": "d",
+     "text": "interpret line graphs of data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.e",
+     "letter": "e",
+     "text": "identify the mode of a set of discrete data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.f",
+     "letter": "f",
+     "text": "calculate the mean of a set of discrete data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.g",
+     "letter": "g",
+     "text": "determine the median of a set of discrete data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.h",
+     "letter": "h",
+     "text": "use IT or other materials to determine the mean, mode and median of discrete data in different situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.i",
+     "letter": "i",
+     "text": "promote use of data representation and interpretation in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G8.DATA_H.PROBABILITY",
+   "number": "5.2",
+   "strand": "Data Handling and Probability",
+   "sub_strand": "Probability",
+   "sequence": 502,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss daily events that are likely or unlikely to happen or will not happen.",
+    "discuss and carry out different chance experiments like flipping the coins, tossing the dice or drawing colored balls from a bag one ball at a time.",
+    "record the probability of the chance outcomes in fractions, decimals and percentages.",
+    "use IT or other resources to play games involving probability"
+   ],
+   "key_inquiry_questions": [
+    "When do we consider chances that an event is likely to happen?",
+    "Why is probability important in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     61
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.a",
+     "letter": "a",
+     "text": "identify events involving chance in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.b",
+     "letter": "b",
+     "text": "perform chance experiments in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.c",
+     "letter": "c",
+     "text": "write the experimental probability outcomes in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.d",
+     "letter": "d",
+     "text": "express the probability outcomes in fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.e",
+     "letter": "e",
+     "text": "express the probability outcomes in decimals or percentages in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.f",
+     "letter": "f",
+     "text": "use IT and other materials to play games involving probability",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.g",
+     "letter": "g",
+     "text": "recognise events that happen by chance in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

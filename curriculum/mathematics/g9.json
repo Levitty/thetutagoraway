@@ -1,0 +1,1475 @@
+{
+ "framework": "cbc",
+ "subject_key": "mathematics",
+ "grade": 9,
+ "source": "KICD KICD-Grade9-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 5,
+  "sub_strands": 19,
+  "outcomes": 119,
+  "lessons": 155,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "MATH.G9.NUMBER.INTEGERS",
+   "number": "1.1",
+   "strand": "Numbers",
+   "sub_strand": "INTEGERS",
+   "sequence": 101,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and work out basic operations on integers using number cards and charts. Play games involving numbers and operations. Pick integers and perform all basic operations.",
+    "work out combined operations of integers in the correct order",
+    "carry out activities such as reading temperature changes in a thermometer and discuss how to record it. Consider temperatures below zero points. They should consider cases of use of integers in real life.",
+    "use IT and other resources such as print to carry out operations on integers.",
+    "play creative games that involve integers."
+   ],
+   "key_inquiry_questions": [
+    "How do we carry out operations of integers in real life situations?",
+    "How do we apply integers in daily activities?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     10
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.a",
+     "letter": "a",
+     "text": "perform basic operations on Integers in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.b",
+     "letter": "b",
+     "text": "work out combined Operations on Integers in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.c",
+     "letter": "c",
+     "text": "apply Integers to real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.d",
+     "letter": "d",
+     "text": "use IT or other resources to learn more on integers",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.e",
+     "letter": "e",
+     "text": "appreciate use of integers in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS",
+   "number": "1.2",
+   "strand": "Numbers",
+   "sub_strand": "CUBES AND CUBE ROOTS",
+   "sequence": 102,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use stacks of cubes to demonstrate the concept of cube and cube roots.",
+    "demonstrate stacking of cubes.",
+    "discuss the volume of a cube and determine both the cube and cube root and relate the two.",
+    "read the cube of numbers from mathematical tables and relate to cube roots",
+    "use IT devices to determine cube and cube roots of numbers."
+   ],
+   "key_inquiry_questions": [
+    "How do we work out the cubes of numbers?",
+    "How do we work out the cube roots of numbers? 3.Where do we apply cubes and cube roots in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     11,
+     12
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.a",
+     "letter": "a",
+     "text": "Work out cubes of numbers by multiplication in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.b",
+     "letter": "b",
+     "text": "Determine cubes of numbers from mathematical tables in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.c",
+     "letter": "c",
+     "text": "Determine cube roots of numbers by factor method in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.d",
+     "letter": "d",
+     "text": "Determine cube roots of numbers from mathematical tables in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.e",
+     "letter": "e",
+     "text": "Apply cubes and cube roots in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.f",
+     "letter": "f",
+     "text": "Work out cubes and cube roots using IT devices",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS",
+   "number": "1.3",
+   "strand": "Numbers",
+   "sub_strand": "INDICES AND LOGARITHMS",
+   "sequence": 103,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss indices and identify the base.",
+    "show the laws of indices using multiplication and division.",
+    "use the laws of indices to work out indices",
+    "discuss and relate powers of 10 to common logarithms",
+    "use IT to work out common logarithms or use mathematical tables"
+   ],
+   "key_inquiry_questions": [
+    "How do we express numbers in powers?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     13
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.a",
+     "letter": "a",
+     "text": "Express numbers in index form in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.b",
+     "letter": "b",
+     "text": "Generate the laws of Indices in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.c",
+     "letter": "c",
+     "text": "Apply the laws of indices in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.d",
+     "letter": "d",
+     "text": "Relate Powers of 10 to common logarithms in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.e",
+     "letter": "e",
+     "text": "Use IT to learn more on indices and common logarithms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.f",
+     "letter": "f",
+     "text": "Appreciate use of indices and logarithms in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND",
+   "number": "1.4",
+   "strand": "Numbers",
+   "sub_strand": "COMPOUND PROPORTIONS AND RATES OF WORK",
+   "sequence": 104,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and divide quantities into proportional parts and express as a fraction",
+    "compare and write different ratios",
+    "determine compound proportions using ratios",
+    "work out rates of work.",
+    "play games on rates of work using IT devices."
+   ],
+   "key_inquiry_questions": [
+    "What are proportions?",
+    "Why do we work fast?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.a",
+     "letter": "a",
+     "text": "divide quantities into proportional parts in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.b",
+     "letter": "b",
+     "text": "relate different ratios in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.c",
+     "letter": "c",
+     "text": "work out compound proportions using ratio method in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.d",
+     "letter": "d",
+     "text": "calculate rates of work in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.e",
+     "letter": "e",
+     "text": "use IT devices to learn more on Compound proportions and rates of work",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.f",
+     "letter": "f",
+     "text": "appreciate use of Compound proportions and rates of work in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.ALGEBR.MATRICES",
+   "number": "2.1",
+   "strand": "Algebra",
+   "sub_strand": "Matrices",
+   "sequence": 201,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss the use of tables such as football league tables, travel schedules, shopping lists and any other. Count the number of rows and columns in the table, which is a matrix.",
+    "arrange items in rows and columns and discuss how to represent a matrix.",
+    "organize objects in rows and columns and give the order of the matrix in terms of row and columns (row x column).",
+    "discuss and identify the position of each item or element in terms of row and column.",
+    "discuss and identify matrices that have equal number of rows and equal number of columns (same order) compatibility in addition and subtraction.",
+    "discuss and note what is represented the rows and what is represented by the columns from two or more matrices to carry out addition or subtraction."
+   ],
+   "key_inquiry_questions": [
+    "How do we use matrices in real life situations? for by"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.ALGEBR.MATRICES.a",
+     "letter": "a",
+     "text": "identify a matrix in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.MATRICES.b",
+     "letter": "b",
+     "text": "determine the order of a matrix in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.MATRICES.c",
+     "letter": "c",
+     "text": "determine the position of items in a matrix in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.MATRICES.d",
+     "letter": "d",
+     "text": "determine compatibility of matrices in addition and subtraction",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.MATRICES.e",
+     "letter": "e",
+     "text": "carry out addition and subtraction of matrices in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.MATRICES.f",
+     "letter": "f",
+     "text": "reflect on the use of matrices in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_",
+   "number": "2.2",
+   "strand": "Algebra",
+   "sub_strand": "Equations of a Straight Line",
+   "sequence": 202,
+   "lessons": 15,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss steepness in relation to gradient from the immediate environment.",
+    "incline a ladder at different positions on the wall to demonstrate change in steepness of gradient. Discuss and compare the positions that the ladder is steeper.",
+    "observe and climb up and down places such as the stairs or hills and relate to gradients.",
+    "work out the equation of a straight line given two points or given a point and a gradient.",
+    "discuss and rewrite the equation of a straight line as 𝑦 = 𝑚𝑥 + 𝑐. Explain the variables and constants in the equation.",
+    "work out the value of x when y is zero and the value of y when is zero.",
+    "use IT or other resources to show different hills and mountains and discuss steepness."
+   ],
+   "key_inquiry_questions": [
+    "How do we use gradient or steepness in our daily activities?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.a",
+     "letter": "a",
+     "text": "identify the gradient in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.b",
+     "letter": "b",
+     "text": "determine the gradient of a line from two known points",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.c",
+     "letter": "c",
+     "text": "determine the equation of a straight line given two points",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.d",
+     "letter": "d",
+     "text": "determine the equation of a straight line from a known point and a gradient",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.e",
+     "letter": "e",
+     "text": "express the equation of a straight line in the form of 𝑦 = 𝑚𝑥 + 𝑐",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.f",
+     "letter": "f",
+     "text": "interpret the equation 𝑦 = 𝑚𝑥 + 𝑐 in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.g",
+     "letter": "g",
+     "text": "determine the x and y intercepts of a straight line",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.h",
+     "letter": "h",
+     "text": "recognize the use of equations of straight lines in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES",
+   "number": "2.3",
+   "strand": "Algebra",
+   "sub_strand": "Linear Inequalities",
+   "sequence": 203,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss why sometimes resources are shared unequally.",
+    "discuss simple inequality statements, form and work out the inequalities in one unknown.",
+    "discuss and generate a table of values and draw linear inequalities in one unknown. Indicate and discuss the region that satisfies the inequalities.",
+    "discuss and generate a table of values and draw linear inequalities in two unknowns. Indicate and discuss the region that satisfies the inequalities.",
+    "discuss and work out linear inequalities that involve real life cases",
+    "use IT or other graphing tools to present linear inequalities"
+   ],
+   "key_inquiry_questions": [
+    "How do we represent linear inequalities in graphs?",
+    "How do we use linear inequalities in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.a",
+     "letter": "a",
+     "text": "solve linear inequalities in one unknown",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.b",
+     "letter": "b",
+     "text": "represent linear inequalities in one unknown graphically",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.c",
+     "letter": "c",
+     "text": "represent linear inequality in two unknowns graphically",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.d",
+     "letter": "d",
+     "text": "apply linear inequalities to real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.e",
+     "letter": "e",
+     "text": "reflect on the use of linear inequalities in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.MEASUR.AREA",
+   "number": "3.1",
+   "strand": "Measurements",
+   "sub_strand": "Area",
+   "sequence": 301,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss the properties of regular polygons and use cut outs to work the area of pentagons and hexagons.",
+    "collect from the environment objects that are spheres, cones/funnels, pyramids, prisms and frustums.",
+    "discuss and sketch the nets of the solids.",
+    "use models of prisms to work out surface area of prisms.",
+    "open up the net and draw the faces a pyramid. Use the relevant formulas of area of plane figures to work out the surface area of the pyramid.",
+    "draw a circle with a sector, a chord and a segment and discuss the relationship and make cut outs of sector and a segment. Determine area of a sector and a segment.",
+    "open the cone to form a net and determine the curved surface area cone. Work out the surface area of closed and an open cone.",
+    "use relevant formulas to work out surface area of different sizes of spherical balls.",
+    "use IT or other resources to sketch different models and nets."
+   ],
+   "key_inquiry_questions": [
+    "How do we determine the out area of different surfaces? the of a the of a a the"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     25,
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.MEASUR.AREA.a",
+     "letter": "a",
+     "text": "calculate the area of a pentagon and a hexagon in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.AREA.b",
+     "letter": "b",
+     "text": "work out the surface area of triangular and rectangular based prisms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.AREA.c",
+     "letter": "c",
+     "text": "work out the surface area of triangular, rectangular and square based pyramids",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.AREA.d",
+     "letter": "d",
+     "text": "calculate the area of a sector and segment of a circle",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.AREA.e",
+     "letter": "e",
+     "text": "work out the surface area of a cone in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.AREA.f",
+     "letter": "f",
+     "text": "calculate the surface area of a sphere in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.AREA.g",
+     "letter": "g",
+     "text": "recognize the use of area in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS",
+   "number": "3.2",
+   "strand": "Measurements",
+   "sub_strand": "Volume of Solids",
+   "sequence": 302,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "collect different containers and objects. This may include prisms, pyramids, cones, funnels and balls.",
+    "identify and discuss the model of a prism. Using the relevant formulas, determine the volume of a prism.",
+    "use relevant formulae to work out the volume of pyramids and cones.",
+    "identify and work out the volume of models of a pyramid. Cut the pyramid into two parts to get a frustum and a small pyramid and determine the volume of the frustum using relevant formula.",
+    "Play any games involving different sizes of balls and work out volume of a sphere.",
+    "use IT or other resources to determine the volumes of solids."
+   ],
+   "key_inquiry_questions": [
+    "How do we determine the volume of different solids?",
+    "How do we use the volume of solids in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.a",
+     "letter": "a",
+     "text": "work out the volume of a triangular and rectangular based prisms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.b",
+     "letter": "b",
+     "text": "calculate the volume of a triangular, rectangular and squares based pyramids",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.c",
+     "letter": "c",
+     "text": "work out the volume of a cone in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.d",
+     "letter": "d",
+     "text": "determine the volume of a frustum in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.e",
+     "letter": "e",
+     "text": "calculate the volume of a sphere in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.f",
+     "letter": "f",
+     "text": "promote use of volume and capacity of different containers in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D",
+   "number": "3.3",
+   "strand": "Measurements",
+   "sub_strand": "Mass, Volume, Weight and Density",
+   "sequence": 303,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss different instruments and tools used in weighing materials or objects and relate to consumer awareness and protection.",
+    "Collect and weigh different materials or objects and change one unit of mass to another.",
+    "discuss the relationship between mass and weight.",
+    "carry out activities relating mass and volume to density using containers or different substances.",
+    "discuss and find the density of different materials or objects.",
+    "work out mass, volume and density using IT or other resources."
+   ],
+   "key_inquiry_questions": [
+    "How do you weigh materials and objects?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.a",
+     "letter": "a",
+     "text": "convert units of mass from one form to another in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.b",
+     "letter": "b",
+     "text": "relate mass and weight in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.c",
+     "letter": "c",
+     "text": "determine mass, volume and density in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.d",
+     "letter": "d",
+     "text": "apply density to real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.e",
+     "letter": "e",
+     "text": "recognize the use of density in daily life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED",
+   "number": "3.4",
+   "strand": "Measurements",
+   "sub_strand": "Time, Distance and Speed",
+   "sequence": 304,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "engage in activities that will involve measuring distances and time, for example running track events to determine speed.",
+    "discuss and relate distance and time.",
+    "discuss the difference between velocity and speed.",
+    "Discuss and determine acceleration from track events in school or community.",
+    "discuss and use maps and models of a globe to work out and relate time of different places on the earth.",
+    "use IT devices to watch videos on the globe, longitudes and time zones in different parts of the earth.",
+    "use other resources such as maps to locate different places (cities) on the earth and discuss time differences."
+   ],
+   "key_inquiry_questions": [
+    "How do we observe speed in daily activities?",
+    "Why does time vary in different places of the world?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     31,
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.a",
+     "letter": "a",
+     "text": "work out speed in km/h and m/s in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.b",
+     "letter": "b",
+     "text": "work out average speed in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.c",
+     "letter": "c",
+     "text": "determine velocity in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.d",
+     "letter": "d",
+     "text": "work out acceleration in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.e",
+     "letter": "e",
+     "text": "identify the longitudes on the globe",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.f",
+     "letter": "f",
+     "text": "relate longitudes to time on the globe",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.g",
+     "letter": "g",
+     "text": "determine local time of places on the earth along different longitudes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.h",
+     "letter": "h",
+     "text": "appreciate use of time and distance in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.MEASUR.MONEY",
+   "number": "3.5",
+   "strand": "Measurements",
+   "sub_strand": "Money",
+   "sequence": 305,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use IT or other resources to obtain and compile a collage of currencies from different countries. For example, currencies of East African Countries, US dollars, Euro, Yen and Sterling pound.",
+    "work out currency exchange from Kenya Shillings to any other currency and vice versa.",
+    "discuss and determine the export and import duty charges on different goods.",
+    "discuss and identify goods that attract excise duty. Determine excise duty.",
+    "use receipts from shopping to discuss and work out VAT on goods and services.",
+    "identify currency exchange rates from different sources including daily papers, IT devices, financial institutions and relate this to consumer awareness and protection."
+   ],
+   "key_inquiry_questions": [
+    "Why do we change currencies from one form to another?",
+    "What are the types of taxes the government levy on its citizens?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.MEASUR.MONEY.a",
+     "letter": "a",
+     "text": "identify currencies that are used in different countries",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.b",
+     "letter": "b",
+     "text": "convert currency from one form to another in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.c",
+     "letter": "c",
+     "text": "work out import and export duties charged on goods and services",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.d",
+     "letter": "d",
+     "text": "work out excise duty charged on goods and services",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.e",
+     "letter": "e",
+     "text": "determine value added tax charged on goods and services",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.f",
+     "letter": "f",
+     "text": "appreciate use of money in day to day activities",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR",
+   "number": "3.6",
+   "strand": "Measurements",
+   "sub_strand": "Approximations and Errors",
+   "sequence": 306,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "carryout activities of estimate measurements of different measurements quantities such as length, of area, volume, capacity and quantities? mass using arbitrary units.",
+    "Estimate and measure different quantities using appropriate instruments. compare the estimates and the actual measurements and determine the error.",
+    "work out the percentage error from the estimated and the actual measurements",
+    "work out errors using IT devices or other resources and relate this to consumer awareness."
+   ],
+   "key_inquiry_questions": [
+    "do we different"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     37,
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.a",
+     "letter": "a",
+     "text": "approximate quantities in measurements in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.b",
+     "letter": "b",
+     "text": "determine errors using estimations and actual measurements of quantities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.c",
+     "letter": "c",
+     "text": "determine percentage errors using actual measurements of quantities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.d",
+     "letter": "d",
+     "text": "appreciate approximations and errors in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS",
+   "number": "4.1",
+   "strand": "Geometry",
+   "sub_strand": "Coordinates and Graphs",
+   "sequence": 401,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "work in groups and locate the point of intersection of the coordinate and the y- coordinates on a Cartesian plane.",
+    "generate a table of values from equation a of a straight line, plot and join the points to form a straight line.",
+    "Generate table of values for each of the given equations, plot and join them to form straight lines on the Cartesian plane",
+    "work out the gradients of each of the lines and compare them to establish their relationship of parallelism.",
+    "Generate table of values for each of the given equations of perpendicular lines, plot and join them to form straight lines on the Cartesian plane",
+    "work out the gradients of each of the lines and compare them to establish the relationship of perpendicular lines."
+   ],
+   "key_inquiry_questions": [
+    "How do we draw graphs of straight lines?",
+    "How do we interpret graphs of straight lines?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.a",
+     "letter": "a",
+     "text": "plot out points on a Cartesian plane",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.b",
+     "letter": "b",
+     "text": "draw a straight line graph given an equation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.c",
+     "letter": "c",
+     "text": "draw parallel lines on the Cartesian plane",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.d",
+     "letter": "d",
+     "text": "relate the gradients of parallel lines",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.e",
+     "letter": "e",
+     "text": "draw perpendicular lines on the Cartesian plane",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.f",
+     "letter": "f",
+     "text": "relate the gradients of perpendicular lines",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.g",
+     "letter": "g",
+     "text": "apply graphs of straight line in real life situation",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.GEOMET.SCALE_DRAWING",
+   "number": "4.2",
+   "strand": "Geometry",
+   "sub_strand": "Scale Drawing",
+   "sequence": 402,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "draw and discuss the compass directions and relate to the compass and true North bearings.",
+    "discuss and locate places from different points using bearings.",
+    "discuss and locate a place using bearing and distance. Sketch and use scale drawing to show the position of places from given points.",
+    "carryout different activities involving angles of elevation, for example observing different objects or points that are above. Discuss, sketch and make a scale drawing to determine the angles of elevation.",
+    "Carryout different activities involving angles of depression, for example observing different objects or points that are below.",
+    "discuss, sketch and make a scale drawing to determine the angles of depression.",
+    "discuss and use scale drawing in simple surveying.",
+    "observe maps or watch videos on bearings and simple surveying."
+   ],
+   "key_inquiry_questions": [
+    "How do we use scale drawing in real life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     44,
+     45
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.GEOMET.SCALE_DRAWING.a",
+     "letter": "a",
+     "text": "identify compass and true bearings in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SCALE_DRAWING.b",
+     "letter": "b",
+     "text": "determine the bearing of one point from another in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SCALE_DRAWING.c",
+     "letter": "c",
+     "text": "locate a point using bearing and distance in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SCALE_DRAWING.d",
+     "letter": "d",
+     "text": "identify angles of elevation in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SCALE_DRAWING.e",
+     "letter": "e",
+     "text": "determine angles of elevation in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SCALE_DRAWING.f",
+     "letter": "f",
+     "text": "identify angles of depression in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SCALE_DRAWING.g",
+     "letter": "g",
+     "text": "determine angles of depression in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SCALE_DRAWING.h",
+     "letter": "h",
+     "text": "apply scale drawing in simple surveying",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SCALE_DRAWING.i",
+     "letter": "i",
+     "text": "appreciate the use of scale drawing in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME",
+   "number": "4.3",
+   "strand": "Geometry",
+   "sub_strand": "Similarity and Enlargement",
+   "sequence": 403,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "collect objects and sort according to similarity. Discuss and note down properties of similar objects.",
+    "use properties of similar objects to scale-draw similar figures.",
+    "discuss and identify properties of enlargement.",
+    "use properties of enlargement to represent objects and their images.",
+    "determine the linear relationship of similar figures and objects.",
+    "enlarge objects and figures using IT devices"
+   ],
+   "key_inquiry_questions": [
+    "What are similar objects?",
+    "How do we use enlargement in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     46
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.a",
+     "letter": "a",
+     "text": "identify similar figures and their properties",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.b",
+     "letter": "b",
+     "text": "draw similar figures in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.c",
+     "letter": "c",
+     "text": "determine properties of enlargement of different figures",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.d",
+     "letter": "d",
+     "text": "apply properties of enlargement to draw similar objects and their images",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.e",
+     "letter": "e",
+     "text": "determine the linear scale factor of similar figures",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.f",
+     "letter": "f",
+     "text": "promote use of similarity and enlargement in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.GEOMET.TRIGONOMETRY",
+   "number": "4.4",
+   "strand": "Geometry",
+   "sub_strand": "Trigonometry",
+   "sequence": 404,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "draw right angled triangles and recognize angles and sides. Discuss the relationship between angles and sides.",
+    "discuss and relate the trigonometric ratios to angles in a right angled triangle.",
+    "use trigonometric ratios to determine lengths and angles of right angled triangles",
+    "use Mathematical tables or IT devices to find trigonometric ratios of given angles."
+   ],
+   "key_inquiry_questions": [
+    "What is the relationship between angles and sides in a right angled triangle?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     48
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.GEOMET.TRIGONOMETRY.a",
+     "letter": "a",
+     "text": "identify angles and sides of right angled triangles in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.TRIGONOMETRY.b",
+     "letter": "b",
+     "text": "identify Sine, Cosine and Tangent ratios from a right angled triangle in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.TRIGONOMETRY.c",
+     "letter": "c",
+     "text": "read tables of trigonometric ratios for acute angles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.TRIGONOMETRY.d",
+     "letter": "d",
+     "text": "determine trigonometric ratios of acute angles using calculators",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.TRIGONOMETRY.e",
+     "letter": "e",
+     "text": "apply trigonometric ratios to calculate lengths and angles of right angled triangles in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.GEOMET.TRIGONOMETRY.f",
+     "letter": "f",
+     "text": "appreciate use of trigonometric ratios in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU",
+   "number": "5.1",
+   "strand": "Data Handling and Probability",
+   "sub_strand": "Data Interpretation (Grouped Data)",
+   "sequence": 501,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "collect data and work out an appropriate class width.",
+    "tally the data and represent it in a frequency distribution table.",
+    "recognize the modal class from a set of grouped data.",
+    "work out the mean from different sets of grouped data.",
+    "use the frequencies to determine the median class of grouped data.",
+    "work out the median from different sets of grouped data.",
+    "use IT or other materials to determine the mean and median of grouped data."
+   ],
+   "key_inquiry_questions": [
+    "How do we interpret data?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.a",
+     "letter": "a",
+     "text": "determine appropriate class width for grouping data",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.b",
+     "letter": "b",
+     "text": "draw frequency distribution tables of grouped data",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.c",
+     "letter": "c",
+     "text": "identify the modal class of grouped data",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.d",
+     "letter": "d",
+     "text": "calculate the mean of a grouped data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.e",
+     "letter": "e",
+     "text": "determine the median of a grouped data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.f",
+     "letter": "f",
+     "text": "appreciate data interpretation in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G9.DATA_H.PROBABILITY",
+   "number": "5.2",
+   "strand": "Data Handling and Probability",
+   "sub_strand": "Probability",
+   "sequence": 502,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and carry out experiments of events involving equally and likely outcomes.",
+    "work out the range of probability of different events.",
+    "discuss and carry out experiments involving mutually inclusive events.",
+    "discuss and carry out experiments involving independent events.",
+    "practice representing probability occurrences in a tree diagram.",
+    "use IT or other resources to explore more on probability."
+   ],
+   "key_inquiry_questions": [
+    "Why is probability important in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     54,
+     55
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G9.DATA_H.PROBABILITY.a",
+     "letter": "a",
+     "text": "perform experiments involving equally and likely outcomes in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.DATA_H.PROBABILITY.b",
+     "letter": "b",
+     "text": "determine the range of probability of an event",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.DATA_H.PROBABILITY.c",
+     "letter": "c",
+     "text": "identify mutually exclusive events in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.DATA_H.PROBABILITY.d",
+     "letter": "d",
+     "text": "perform experiments of single chance involving mutually exclusive events",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.DATA_H.PROBABILITY.e",
+     "letter": "e",
+     "text": "perform experiments involving independent events in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.DATA_H.PROBABILITY.f",
+     "letter": "f",
+     "text": "draw a tree diagram for a single outcome",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G9.DATA_H.PROBABILITY.g",
+     "letter": "g",
+     "text": "appreciate the probability of events occurring in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

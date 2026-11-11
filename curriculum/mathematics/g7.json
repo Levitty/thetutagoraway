@@ -1,0 +1,1612 @@
+{
+ "framework": "cbc",
+ "subject_key": "mathematics",
+ "grade": 7,
+ "source": "KICD KICD-Grade7-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 5,
+  "sub_strands": 18,
+  "outcomes": 117,
+  "lessons": 148,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+   "number": "1.1",
+   "strand": "Numbers",
+   "sub_strand": "Whole Numbers",
+   "sequence": 101,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [
+    "Place value and",
+    "total value",
+    "reading and",
+    "writing numbers in",
+    "symbols and",
+    "words",
+    "rounding off",
+    "numbers",
+    "classifying natural",
+    "numbers",
+    "operations of",
+    "whole numbers",
+    "number sequences"
+   ],
+   "learning_experiences": [
+    "identify and write place value and total value of digits using place value apparatus",
+    "read and write numbers in symbols on number cards or charts",
+    "read and write numbers in words on number cards or charts and practice writing dummy cheques for different sums of money",
+    "work in teams to prepare and use place value charts to round off numbers",
+    "play a number game, make number cards, sort and classify numbers according to those that are even, odd or prime",
+    "work out or perform 2, 3 or more combined operations in the correct order using digital devices",
+    "identify the number patterns to work out number sequences",
+    "play games of creating number puzzles that involve number sequences using IT devices or other materials."
+   ],
+   "key_inquiry_questions": [
+    "Why do we write numbers in words and/or symbols?",
+    "Where do we write numbers in words or symbols?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.a",
+     "letter": "a",
+     "text": "use place value and total value of digits up to hundreds of millions in real life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.b",
+     "letter": "b",
+     "text": "read and write numbers in symbols up to hundreds of millions in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.c",
+     "letter": "c",
+     "text": "read and write numbers in words up to millions for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.d",
+     "letter": "d",
+     "text": "round off numbers up to the nearest hundreds of millions in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.e",
+     "letter": "e",
+     "text": "classify natural numbers as even, odd and prime in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.f",
+     "letter": "f",
+     "text": "apply operations of whole numbers in real life situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.g",
+     "letter": "g",
+     "text": "identify number sequence in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.h",
+     "letter": "h",
+     "text": "create number sequence for playing number games",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.i",
+     "letter": "i",
+     "text": "appreciate use of whole numbers in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.NUMBER.FACTORS",
+   "number": "1.2",
+   "strand": "Numbers",
+   "sub_strand": "Factors",
+   "sequence": 102,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [
+    "divisibility of",
+    "numbers",
+    "composite numbers",
+    "Greatest Common",
+    "Divisor (GCD) and",
+    "the Least Common",
+    "Multiples (LCM)"
+   ],
+   "learning_experiences": [
+    "determine divisibility of numbers using regrouping and divisibility rule work sheets",
+    "write factors of composite numbers by factorization, factor tree, factor rainbow in charts, colour charts or cards using locally available materials",
+    "use factors to determine the LCM and the GCD using number cards or charts",
+    "use IT to access factors of numbers including songs/poems or games on divisibility tests",
+    "work out application questions and solve problems relating to the GCD and the LCM in real life situations.",
+    "determine the GCD and LCM of numbers using IT to perform exercises on factors such as matching activities or games."
+   ],
+   "key_inquiry_questions": [
+    "Where do we use factors in day to day activities?",
+    "How do we use factors in day to day activities?",
+    "How do we apply the GCD and the LCM in day to day activities?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.a",
+     "letter": "a",
+     "text": "test divisibility of numbers by 2, 3, 4, 5, 6, 8, 9,10 and 11 in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.b",
+     "letter": "b",
+     "text": "express composite numbers as a product of prime factors in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.c",
+     "letter": "c",
+     "text": "work out the Greatest Common Divisor (GCD) and the Least Common Multiples (LCM) of numbers by factor method in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.d",
+     "letter": "d",
+     "text": "apply the Greatest Common Divisor (GCD) and the Least Common Multiples (LCM) in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.e",
+     "letter": "e",
+     "text": "reflect on use of factors in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.NUMBER.FRACTIONS",
+   "number": "1.3",
+   "strand": "Numbers",
+   "sub_strand": "Fractions",
+   "sequence": 103,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [
+    "Comparing",
+    "fractions",
+    "Operations",
+    "on fractions",
+    "Reciprocals",
+    "Number",
+    "sequences for",
+    "fractions"
+   ],
+   "learning_experiences": [
+    "discuss and arrange fractions in increasing and decreasing order using different strategies",
+    "arrange fractions in ascending or descending order using fraction cards",
+    "add and subtract fractions in cut outs, cards, charts and concrete objects",
+    "multiply and divide fractions in cut outs, cards, charts and models",
+    "use flip cards to discuss reciprocals",
+    "play games of creating number puzzles that involve fractions number sequences using IT devices or other materials",
+    "create a fraction sequence game that can be used for play and learning",
+    "use IT devices to work out operations of fractions."
+   ],
+   "key_inquiry_questions": [
+    "How do we use fractions in daily activities?",
+    "Where do we use fractions in daily activities?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.NUMBER.FRACTIONS.a",
+     "letter": "a",
+     "text": "compare fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FRACTIONS.b",
+     "letter": "b",
+     "text": "add fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FRACTIONS.c",
+     "letter": "c",
+     "text": "subtract fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FRACTIONS.d",
+     "letter": "d",
+     "text": "multiply fractions by a whole number, fraction and a mixed number in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FRACTIONS.e",
+     "letter": "e",
+     "text": "identify the reciprocals of fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FRACTIONS.f",
+     "letter": "f",
+     "text": "divide fractions by a whole number, fraction and a mixed fraction in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FRACTIONS.g",
+     "letter": "g",
+     "text": "divide a whole number by fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FRACTIONS.h",
+     "letter": "h",
+     "text": "identify number sequence involving fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FRACTIONS.i",
+     "letter": "i",
+     "text": "create number sequence involving fractions for playing number games",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G7.NUMBER.FRACTIONS.j",
+     "letter": "j",
+     "text": "recognise use of fractions in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.NUMBER.DECIMALS",
+   "number": "1.4",
+   "strand": "Numbers",
+   "sub_strand": "Decimals",
+   "sequence": 104,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "Place value",
+    "and total",
+    "value",
+    "Multiplicatio",
+    "n and",
+    "division of",
+    "decimals"
+   ],
+   "learning_experiences": [
+    "discuss, state and use the place value and the total value of decimals using place value apparatus and worksheets",
+    "multiply and divide decimals using cut outs, cards, charts and models",
+    "use calculators and other IT devices to work out operations of decimals.",
+    "play games involving multiplication and division of decimals."
+   ],
+   "key_inquiry_questions": [
+    "Where are decimals applicable in real life?",
+    "How do you use decimals in daily activities?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.a",
+     "letter": "a",
+     "text": "identify the place value and the total value of digits in decimals in real life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.b",
+     "letter": "b",
+     "text": "multiply decimals by a whole number and by a decimal in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.c",
+     "letter": "c",
+     "text": "divide decimals by a whole number and by a decimal in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.d",
+     "letter": "d",
+     "text": "recognise use of decimals in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+   "number": "1.5",
+   "strand": "Numbers",
+   "sub_strand": "Squares and Square Roots",
+   "sequence": 105,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [
+    "squares of",
+    "whole numbers,",
+    "fractions and",
+    "decimals",
+    "square roots of",
+    "whole numbers,",
+    "fractions and",
+    "decimals"
+   ],
+   "learning_experiences": [
+    "work out squares of numbers using: ✔ grids and charts ✔ long multiplication method ✔ using calculators",
+    "work out square roots of number using: ✔ factors method ✔ division method ✔ calculators",
+    "use IT devices to play games involving squares and square roots"
+   ],
+   "key_inquiry_questions": [
+    "Where do we apply squares and square roots in daily activities?",
+    "How do we apply squares and square roots in daily activities?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a",
+     "letter": "a",
+     "text": "determine the squares of whole numbers, fractions and decimals by multiplication in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b",
+     "letter": "b",
+     "text": "determine the square roots of whole numbers, fractions and decimals of perfect squares in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.c",
+     "letter": "c",
+     "text": "appreciate use of squares and square roots in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+   "number": "2.1",
+   "strand": "Algebra",
+   "sub_strand": "Algebraic Expressions",
+   "sequence": 201,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [
+    "simple",
+    "algebraic",
+    "statements",
+    "simplify",
+    "algebraic",
+    "expressions"
+   ],
+   "learning_experiences": [
+    "discuss and classify objects in their immediate environment according to given attributes such as similarities or differences",
+    "discuss how to form algebraic expressions from the classified objects",
+    "read and interpret algebraic statements to form algebraic expressions",
+    "discuss how to simplify algebraic expressions from the classified objects",
+    "use IT to work out exercises and activities in algebra or drag and drop activities to group similar objects"
+   ],
+   "key_inquiry_questions": [
+    "How do we use algebraic expressions in daily activities?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a",
+     "letter": "a",
+     "text": "form algebraic expressions from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.b",
+     "letter": "b",
+     "text": "form algebraic expressions from simple algebraic statements in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c",
+     "letter": "c",
+     "text": "simplify algebraic expressions in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.d",
+     "letter": "d",
+     "text": "appreciate use of algebraic expressions in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+   "number": "2.2",
+   "strand": "Algebra",
+   "sub_strand": "Linear Equations",
+   "sequence": 202,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "Forming",
+    "and solving",
+    "linear",
+    "equations"
+   ],
+   "learning_experiences": [
+    "role play activities involving equations with one unknown for example weighing using beam balance. Also dramatize shopping activities.",
+    "discuss how to form and solve linear equations generated from role play activities",
+    "use IT devices or other resources to form and solve linear equations."
+   ],
+   "key_inquiry_questions": [
+    "How do we use linear equations in real life?",
+    "Why do we use linear equations in real life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.a",
+     "letter": "a",
+     "text": "form linear equations in one unknown in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b",
+     "letter": "b",
+     "text": "solve linear equations in one unknown in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.c",
+     "letter": "c",
+     "text": "apply linear equations in one unknown to real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.d",
+     "letter": "d",
+     "text": "reflect on use of linear equations in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+   "number": "2.3",
+   "strand": "Algebra",
+   "sub_strand": "Linear Inequalities",
+   "sequence": 203,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "inequality",
+    "symbols",
+    "simple and",
+    "compound",
+    "linear",
+    "inequalities in",
+    "one unknown",
+    "number lines"
+   ],
+   "learning_experiences": [
+    "use inequality cards to complete simple inequality statements using symbols",
+    "use inequality cards/objects to form simple linear inequalities with one unknown",
+    "draw and represent simple inequality statements on a number line",
+    "use inequality cards to complete compound inequality statements. Have examples that may involve gender such as number of boys and girls in class",
+    "draw and represent compound inequality statements on a number line",
+    "use IT devices in graphing tools to present solutions to inequalities."
+   ],
+   "key_inquiry_questions": [
+    "How do we use linear inequalities in real life?",
+    "Why do we use linear inequalities in real life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.a",
+     "letter": "a",
+     "text": "apply inequality symbols to inequality statements in learning situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.b",
+     "letter": "b",
+     "text": "form simple linear inequalities in one unknown in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.c",
+     "letter": "c",
+     "text": "illustrate simple inequalities on a number line",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.d",
+     "letter": "d",
+     "text": "form compound inequality statements in one unknown in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.e",
+     "letter": "e",
+     "text": "illustrate compound inequalities in one unknown on a number line",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.f",
+     "letter": "f",
+     "text": "appreciate use of linear inequalities in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
+   "number": "3.1",
+   "strand": "Measurements",
+   "sub_strand": "Pythagorean Relationship",
+   "sequence": 301,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Relationship of",
+    "the sides of a",
+    "right-angled",
+    "triangle"
+   ],
+   "learning_experiences": [
+    "draw and represent practical cases of right-angled triangle of an object leaning on a wall at different positions and recognize the sides as the hypotenuse the height and the base. For example, a ladder leaning on a wall.",
+    "do a variety of activities for example, counting squares on different sides of a 3, 4, 5 right angled-triangle, establish the Pythagorean relationship and practice using other right angled-triangles",
+    "work out exercises related to Pythagorean relationship",
+    "create Pythagorean relationship puzzles",
+    "use IT devices and other resources to explore the use of Pythagorean relationship in daily life."
+   ],
+   "key_inquiry_questions": [
+    "How do we use Pythagorean relationship in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.a",
+     "letter": "a",
+     "text": "recognize the sides of a right-angled triangle in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b",
+     "letter": "b",
+     "text": "identify Pythagorean relationship in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c",
+     "letter": "c",
+     "text": "apply Pythagorean relationship to real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.d",
+     "letter": "d",
+     "text": "promote use of Pythagoras Theorem in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.MEASUR.LENGTH",
+   "number": "3.2",
+   "strand": "Measurements",
+   "sub_strand": "Length",
+   "sequence": 302,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "Conversions in",
+    "length",
+    "Operations in",
+    "length",
+    "Perimeter of plane",
+    "figures",
+    "circumference of",
+    "circles"
+   ],
+   "learning_experiences": [
+    "generate conversion tables involving cm, dm, m, Dm, Hm",
+    "carry out different operations involving length",
+    "watch videos on correct procedures of measuring length and working out perimeter",
+    "use appropriate measuring tools to measure the length of various objects.",
+    "measure and work out perimeter of different plane figures including combined shapes.",
+    "measure the circumference and diameter of different circular objects and establish the relationship between circumference and diameter which is Pi.",
+    "use Pi to practice working out circumference of circles and can use IT devices for calculations."
+   ],
+   "key_inquiry_questions": [
+    "Why do we use differen t units of measuri ng length?",
+    "How do we measure the perimet er of differen t objects?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.MEASUR.LENGTH.a",
+     "letter": "a",
+     "text": "convert units of length from one form to another involving cm, dm, m, Dm, Hm in learning situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.LENGTH.b",
+     "letter": "b",
+     "text": "perform operations involving units of length in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.LENGTH.c",
+     "letter": "c",
+     "text": "work out the perimeter of plane figures in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.LENGTH.d",
+     "letter": "d",
+     "text": "work out the circumference of circles in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.LENGTH.e",
+     "letter": "e",
+     "text": "promote use of length in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.MEASUR.AREA",
+   "number": "3.3",
+   "strand": "Measurements",
+   "sub_strand": "Area",
+   "sequence": 303,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "square metre (m²),",
+    "acres and hectares",
+    "as units of",
+    "measuring area",
+    "area of rectangle,",
+    "parallelogram,",
+    "rhombus and",
+    "trapezium",
+    "area of circles and",
+    "borders"
+   ],
+   "learning_experiences": [
+    "generate conversion tables involving acres and hectares as units of measuring area",
+    "use cut outs to find the area of plane figures",
+    "watch videos on how to cut out a circle to small sectors to demonstrate how to derive the formula for the area of a circle",
+    "cut out a circle into small sectors and rearrange to form a rectangle to derive the formula for the area of a circle",
+    "practice cutting out the plane figures of combined shapes into different shapes to work out the area."
+   ],
+   "key_inquiry_questions": [
+    "What are plane figures?",
+    "How do we work out the areas of plane figures?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     36,
+     37
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.MEASUR.AREA.a",
+     "letter": "a",
+     "text": "identify square metre (m²), acres and hectares as units of measuring area",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.AREA.b",
+     "letter": "b",
+     "text": "work out the area of rectangle, parallelogram, rhombus and trapezium in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.AREA.c",
+     "letter": "c",
+     "text": "work out the area of circles in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.AREA.d",
+     "letter": "d",
+     "text": "calculate the area of borders and combined shapes in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.AREA.e",
+     "letter": "e",
+     "text": "recognise use of area in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY",
+   "number": "3.4",
+   "strand": "Measurements",
+   "sub_strand": "Volume and Capacity",
+   "sequence": 304,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "metre cube",
+    "(m³) as a unit",
+    "of volume",
+    "conversions",
+    "in volume",
+    "volume of",
+    "cubes,",
+    "cuboids and",
+    "cylinder",
+    "capacity of",
+    "containers"
+   ],
+   "learning_experiences": [
+    "make a cube of sides 1 metre using locally available materials",
+    "discuss and work out the conversions of cm cube (cm³) to m cube (m³) and vise versa",
+    "collect labeled containers of different volume and capacity from the environment",
+    "generate conversion tables of volume and capacity",
+    "create models of cubes, cuboids, and cylinders which they will use to work out volume",
+    "watch videos on volume and capacity"
+   ],
+   "key_inquiry_questions": [
+    "Where do we use volume and capacity in daily activities?",
+    "Why do we measure volume?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.a",
+     "letter": "a",
+     "text": "identify metre cube (m³) as a unit of volume in measurements",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.b",
+     "letter": "b",
+     "text": "convert metre cube (m³) into centimeter cube (cm³) and vice versa in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c",
+     "letter": "c",
+     "text": "work out the volume of cubes, cuboids and cylinder in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.d",
+     "letter": "d",
+     "text": "identify the relationship between cm³, m³ and litres in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.e",
+     "letter": "e",
+     "text": "relate volume to capacity in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.f",
+     "letter": "f",
+     "text": "work out the capacity of containers in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.g",
+     "letter": "g",
+     "text": "promote use of volume and capacity in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+   "number": "3.5",
+   "strand": "Measurements",
+   "sub_strand": "Time, Distance and Speed",
+   "sequence": 305,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "Conversions",
+    "in time",
+    "Conversions",
+    "in units of",
+    "distance",
+    "Speed"
+   ],
+   "learning_experiences": [
+    "use analog or digital clock to tell time in hours, minutes and seconds and discuss the units of time",
+    "create conversion table on units of time",
+    "discuss and estimate distances between two or more points and convert distances in Km to meters and vice versa",
+    "engage in activities that involve distance and time such as track events to relate time, distance and speed",
+    "discuss how long they take to travel from home to school, discuss the aspects of distance, and time taken to get to school",
+    "practice calculating speed in km/h or m/s,",
+    "read and interpret a road sign on speed,",
+    "identify and discuss the importance of speed limiters to ensure road safety,",
+    "play digital games involving racing or watch marathon"
+   ],
+   "key_inquiry_questions": [
+    "Why do we relate distance, time and speed?",
+    "What is the importance of speed in daily activities?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     40,
+     41
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.a",
+     "letter": "a",
+     "text": "identify units of measuring time in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.b",
+     "letter": "b",
+     "text": "convert units of time from one form to another in learning situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.c",
+     "letter": "c",
+     "text": "convert units of measuring distance in learning situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d",
+     "letter": "d",
+     "text": "identify speed as distance covered per unit time in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e",
+     "letter": "e",
+     "text": "work out speed in km/h and m/s in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f",
+     "letter": "f",
+     "text": "convert units of speed from kilometers per hour (Km/h) to meters per second (m/s) and vice versa in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.g",
+     "letter": "g",
+     "text": "reflect on use of time, distance and speed in real life situations",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.MEASUR.TEMPERATURE",
+   "number": "3.6",
+   "strand": "Measurements",
+   "sub_strand": "Temperature",
+   "sequence": 306,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "temperature",
+    "conditions",
+    "units of",
+    "measuring",
+    "temperature",
+    "conversions in",
+    "temperature",
+    "temperature in",
+    "degree Celsius",
+    "and Kelvin"
+   ],
+   "learning_experiences": [
+    "move to the field, observe the temperature in the environment and discuss the temperature conditions as either warm, hot or cold",
+    "discuss and test temperature of different substances using arbitrary methods like touching, for example cold, warm or hot, for example water (exercise caution when dealing with hot substances)",
+    "identify and use tools of measuring temperature, for example, thermometers that are in degrees Celsius.",
+    "work out conversions of temperature from degrees Celsius to Kelvin and vice versa",
+    "practice using IT devices or other resources to determine temperature of different places in degree Celsius and Kelvin."
+   ],
+   "key_inquiry_questions": [
+    "How does temperature affect our everyday lives?",
+    "How do we measure temperature?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     42,
+     43
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.a",
+     "letter": "a",
+     "text": "describe the temperature conditions of the immediate environment as either warm, hot or cold",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.b",
+     "letter": "b",
+     "text": "compare temperature using hotter, warmer, colder and same as in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.c",
+     "letter": "c",
+     "text": "identify units of measuring temperature as degree Celsius and Kelvin in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.d",
+     "letter": "d",
+     "text": "convert units of measuring temperature from degree Celsius to Kelvin and vice-versa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.e",
+     "letter": "e",
+     "text": "work out temperature in degree Celsius and Kelvin in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.f",
+     "letter": "f",
+     "text": "use IT devices or other resources to read temperature conditions of different places",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.g",
+     "letter": "g",
+     "text": "recognise temperature changes in the environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.MEASUR.MONEY",
+   "number": "3.7",
+   "strand": "Measurements",
+   "sub_strand": "Money",
+   "sequence": 307,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "profit and loss",
+    "discount",
+    "commission",
+    "bills",
+    "postal charges",
+    "mobile money",
+    "services"
+   ],
+   "learning_experiences": [
+    "role play shopping and selling activities involving profit, loss, discount and commission",
+    "work out profit and loss involving different activities and settings",
+    "work out percentage profit/loss from the role play activities",
+    "work out discount and percentage discount from model shopping activities",
+    "work out commission and percentage commission from the role play activities",
+    "identify different types of bills and read the components of bills",
+    "prepare bills of different items and expenses",
+    "visit post office to gather information on postal services and charges",
+    "work out postal charges of different services",
+    "discuss and identify mobile money services",
+    "work out mobile money transactions, for example, in sending or receiving money, credit and savings",
+    "generate bills, pay for goods and services, and other online transactions using IT devices"
+   ],
+   "key_inquiry_questions": [
+    "Why do we use money in daily activities?",
+    "What considerations would we make when buying or selling?",
+    "What is involved in mobile money transactions?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     44,
+     45
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.MEASUR.MONEY.a",
+     "letter": "a",
+     "text": "work out profit and loss in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.MONEY.b",
+     "letter": "b",
+     "text": "calculate the percentage profit and loss in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.MONEY.c",
+     "letter": "c",
+     "text": "calculate discount and percentage discount of different goods and services",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.MONEY.d",
+     "letter": "d",
+     "text": "calculate commission and percentage commission in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.MONEY.e",
+     "letter": "e",
+     "text": "interpret bills at home",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.MONEY.f",
+     "letter": "f",
+     "text": "prepare bills in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.MONEY.g",
+     "letter": "g",
+     "text": "work out postal charges in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.MONEY.h",
+     "letter": "h",
+     "text": "identify mobile money services for different transactions",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G7.MEASUR.MONEY.i",
+     "letter": "i",
+     "text": "work out mobile money transactions in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.MONEY.j",
+     "letter": "j",
+     "text": "use IT devices or other resources to learn more on money transactions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.MEASUR.MONEY.k",
+     "letter": "k",
+     "text": "recognise use of money in day to day activities",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.GEOMET.ANGLES",
+   "number": "4.1",
+   "strand": "Geometry",
+   "sub_strand": "Angles",
+   "sequence": 401,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [
+    "angles on a",
+    "straight line and",
+    "at a point",
+    "angles on a",
+    "transversal and",
+    "parallelogram",
+    "angle properties",
+    "of polygons"
+   ],
+   "learning_experiences": [
+    "discuss positions of objects in the immediate environment in relation to angles",
+    "draw straight lines with different angles, measure and relate them.",
+    "draw different angles at a point, measure, relate and work out angles at point",
+    "draw transversals, measure and relate angles in a transversal",
+    "draw parallelograms, measure and relate various angles in a parallelogram",
+    "use cut outs or drawings of different polygons up to hexagon, measure the interior angles and relate to the number of right angles",
+    "use cut outs or drawings of different polygons up to hexagon, measure interior and exterior angles and relate to the number of sides",
+    "work out angles and sides in different polygons up to hexagon",
+    "draw angles at a point and in parallelograms using IT devices or other resources."
+   ],
+   "key_inquiry_questions": [
+    "What are angles?",
+    "Where do we use angles in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     49,
+     50
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.a",
+     "letter": "a",
+     "text": "relate different types of angles on a straight line in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.b",
+     "letter": "b",
+     "text": "solve angles at a point in learning situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.c",
+     "letter": "c",
+     "text": "relate angles on a transversal in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.d",
+     "letter": "d",
+     "text": "solve angles in a parallelogram in different situation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.e",
+     "letter": "e",
+     "text": "identify angle properties of polygons up to hexagon in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.f",
+     "letter": "f",
+     "text": "relate interior angles, exterior angles and the number of sides of a polygon up to hexagon in different situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.g",
+     "letter": "g",
+     "text": "solve angles and sides of polygons up to hexagon in learning situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.h",
+     "letter": "h",
+     "text": "reflect on use of angles in objects within the environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+   "number": "4.2",
+   "strand": "Geometry",
+   "sub_strand": "Geometrical Constructions",
+   "sequence": 402,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [
+    "bisecting",
+    "angles",
+    "constructing",
+    "90 0 , 45 0 60 0 ,",
+    "30 0",
+    "constructing",
+    "different",
+    "triangles and",
+    "circles"
+   ],
+   "learning_experiences": [
+    "draw and measure different angles",
+    "draw and bisect different angles",
+    "construct 90 0 , 45 0 60 0 , 30 0 including 120 0 , 105 0 and practice drawing angles that are multiples of 7.5 0 using a pair of compasses and rulers",
+    "construct triangles using a pair of compasses and rulers",
+    "construct circles using a pair of compasses and rulers",
+    "use IT devices on graphics to draw angles and circles, watch videos of bisecting angles and constructing angles and circles."
+   ],
+   "key_inquiry_questions": [
+    "Where do we use geometric constructions in real life situations?",
+    "Why do we use geometric constructions?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     51,
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.a",
+     "letter": "a",
+     "text": "measure different angles in learning situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.b",
+     "letter": "b",
+     "text": "bisect angles using a ruler and a pair of compasses only in learning situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.c",
+     "letter": "c",
+     "text": "construct 90 0 , 45 0 60 0 , 30 0 and other angles that are multiples of 7.5 0 using a ruler and a pair of compasses only in learning situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.d",
+     "letter": "d",
+     "text": "construct different triangles using a ruler and a pair of compasses only in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.e",
+     "letter": "e",
+     "text": "construct circles using a ruler and a pair of compasses only in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.f",
+     "letter": "f",
+     "text": "recognise use of geometric constructions of different shapes in objects",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G7.DATA_H.DATA_HANDLING",
+   "number": "5.1",
+   "strand": "Data Handling and Probability",
+   "sub_strand": "Data Handling",
+   "sequence": 501,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [
+    "Collecting",
+    "data",
+    "frequency",
+    "distribution",
+    "table",
+    "drawing",
+    "pictographs,",
+    "bar graphs,",
+    "line graphs",
+    "and pie charts",
+    "Interpreting",
+    "graphs,",
+    "charts and",
+    "travel graphs"
+   ],
+   "learning_experiences": [
+    "discuss, collect and organize data from immediate environment",
+    "tally and represent the data in frequency tables",
+    "discuss and come up with suitable scale to represent data in graphs",
+    "discuss and use a suitable scale to draw pictographs from data",
+    "discuss and use a suitable scale to draw bar graphs from data",
+    "discuss and interpret bar graphs of data",
+    "discuss and represent data on pie charts",
+    "discuss and interpret pie charts of data",
+    "use suitable scale to represent and interpret data from a line graphs",
+    "discuss and interpret travel graphs from real life situations",
+    "draw pie charts, pictographs and read data from bar graphs using IT devices or watch videos relating to data."
+   ],
+   "key_inquiry_questions": [
+    "Why do we collect data?",
+    "How do we represent data?",
+    "How do we interpret data?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     54,
+     55
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.a",
+     "letter": "a",
+     "text": "state the meaning of data in learning situation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.b",
+     "letter": "b",
+     "text": "collect data from different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.c",
+     "letter": "c",
+     "text": "draw frequency distribution table of data from different sources",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.d",
+     "letter": "d",
+     "text": "determine suitable scale for graphs of data from different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.e",
+     "letter": "e",
+     "text": "draw pictographs of data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.f",
+     "letter": "f",
+     "text": "draw bar graphs of data from different sources",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.g",
+     "letter": "g",
+     "text": "interpret bar graphs of data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.h",
+     "letter": "h",
+     "text": "draw pie charts of data from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.i",
+     "letter": "i",
+     "text": "interpret pie charts of data from real life situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.j",
+     "letter": "j",
+     "text": "draw a line graph of data from different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.k",
+     "letter": "k",
+     "text": "interpret travel graphs from real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G7.DATA_H.DATA_HANDLING.l",
+     "letter": "l",
+     "text": "promote use of data in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

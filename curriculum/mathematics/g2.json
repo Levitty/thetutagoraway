@@ -1,0 +1,982 @@
+{
+ "framework": "cbc",
+ "subject_key": "mathematics",
+ "grade": 2,
+ "source": "KICD KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf, revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 3,
+  "sub_strands": 14,
+  "outcomes": 70,
+  "lessons": 150,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "MATH.G2.NUMBER.NUMBER_CONCEPT",
+   "number": "1.1",
+   "strand": "Numbers",
+   "sub_strand": "Number Concept",
+   "sequence": 101,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs or groups, recognize and read numbers 1 to 100 from number cards or charts,",
+    "in groups, collect safe concrete objects from the environment,",
+    "in groups, count concrete objects of given numbers in symbols,",
+    "match a group of objects to their number value,",
+    "in groups, discuss, choose and play number games in turns using number cards or digital devices."
+   ],
+   "key_inquiry_questions": [
+    "How can we represent numbers using objects?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     9
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.a",
+     "letter": "a",
+     "text": "identify numbers 1 to 100 in symbols in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.b",
+     "letter": "b",
+     "text": "represent numbers 1 to 100 using concrete objects from the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.c",
+     "letter": "c",
+     "text": "play number games using number cards or digital devices",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.d",
+     "letter": "d",
+     "text": "appreciate the use of numbers in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.NUMBER.WHOLE_NUMBERS",
+   "number": "1.2",
+   "strand": "Numbers",
+   "sub_strand": "Whole Numbers",
+   "sequence": 102,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs/groups, count numbers forward up to 100 starting from any point,",
+    "in pairs/groups, count numbers backward from 50 starting from any point,",
+    "in pairs, recognize and read numbers 1 to 100 in symbols from number cards or charts,",
+    "in groups, name and write the numbers in the place value of ones and tens",
+    "in groups, discuss the place value of digits written on the number cards,",
+    "read and write numbers 1 to 20 in words,",
+    "work out missing numbers in number patterns up to 100,",
+    "in pairs or groups, make number patterns and share with other groups,",
+    "play games involving whole numbers using digital devices or other resources,",
+    "improvise place value tins and pockets from locally available materials,",
+    "play a game of putting number cards in place value tins or pockets (ones and tens) according to the place value of digits."
+   ],
+   "key_inquiry_questions": [
+    "How do we get the next number in a number pattern?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     10,
+     11
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.a",
+     "letter": "a",
+     "text": "count numbers forward up to 100 in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.b",
+     "letter": "b",
+     "text": "count numbers backward from number 50",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.c",
+     "letter": "c",
+     "text": "read and write numbers 1 to 100 in symbols in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.d",
+     "letter": "d",
+     "text": "identify the place value of numbers in ones and tens",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.e",
+     "letter": "e",
+     "text": "read and write numbers 1 to 20 in words",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.f",
+     "letter": "f",
+     "text": "work out missing numbers in number patterns up to 100",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.g",
+     "letter": "g",
+     "text": "appreciate number patterns in playing number games",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.NUMBER.ADDITION",
+   "number": "1.3",
+   "strand": "Numbers",
+   "sub_strand": "Addition",
+   "sequence": 103,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs, write addition sentences given in horizontal form into vertical form according to place value,",
+    "add a 2 digit number to a 1 digit number without regrouping,",
+    "add a 2 digit number to a 1 digit number with regrouping,",
+    "in pairs/groups, discuss and come up with different ways of adding two 2 digit numbers without and with regrouping,",
+    "in pairs/groups, add 2 multiples of ten whose sum does not exceed 100,",
+    "play games involving addition using digital devices or other resources,",
+    "in groups, make patterns using numbers up to 100 and share with other groups."
+   ],
+   "key_inquiry_questions": [
+    "How are horizontal addition sentences written vertically?",
+    "When do we regroup during addition?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     12
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.a",
+     "letter": "a",
+     "text": "add a 2 digit number to a 1 digit number without and with regrouping with sum not exceeding 100",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.b",
+     "letter": "b",
+     "text": "add a 2 digit number to a 2 digit number without and with regrouping, with sum not exceeding 100",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.c",
+     "letter": "c",
+     "text": "add two multiples of 10 whose sum does not exceed 100",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.d",
+     "letter": "d",
+     "text": "work out missing numbers in patterns involving addition of whole numbers up to 100",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.e",
+     "letter": "e",
+     "text": "appreciate the addition of numbers in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.NUMBER.SUBTRACTION",
+   "number": "1.4",
+   "strand": "Numbers",
+   "sub_strand": "Subtraction",
+   "sequence": 104,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "individually or in groups, subtract a 1 digit number from a 2 digit number without regrouping,",
+    "in pairs or groups, subtract a 2 digit number from a 2 digit number without regrouping using place value apparatus,",
+    "in pairs or groups, subtract a 2 digit number from a 2 digit number with regrouping using place value apparatus,",
+    "in pairs or groups, subtract lower multiples of 10 from higher multiples of 10,",
+    "in groups, discuss and work out missing numbers in patterns involving subtraction up to 100."
+   ],
+   "key_inquiry_questions": [
+    "How do you work out missing numbers in number patterns involving subtraction?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.NUMBER.SUBTRACTION.a",
+     "letter": "a",
+     "text": "subtract a 1 digit number from a 2 digit number without regrouping",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.SUBTRACTION.b",
+     "letter": "b",
+     "text": "subtract a 2 digit number from a 2 digit number without and with regrouping",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.SUBTRACTION.c",
+     "letter": "c",
+     "text": "subtract a lower multiple of from a higher multiple of 10",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G2.NUMBER.SUBTRACTION.d",
+     "letter": "d",
+     "text": "work out missing numbers in patterns involving subtraction up to 100",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.SUBTRACTION.e",
+     "letter": "e",
+     "text": "appreciate subtraction of numbers in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.NUMBER.MULTIPLICATION",
+   "number": "1.5",
+   "strand": "Numbers",
+   "sub_strand": "Multiplication",
+   "sequence": 105,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs or groups, use counters or other concrete objects to represent multiplication as repeated addition,",
+    "in pairs, model multiplication as repeated addition using concrete objects.",
+    "use ‘ ’ sign in writing repeated addition sentences as multiplication,",
+    "in groups, multiply 1 digit numbers by 1, 2, 3, 4, 5,",
+    "use locally available materials to model a multiplication chart and display in the learning environment,",
+    "in groups, multiply 1 digit numbers by 10 to form multiples of 10,",
+    "play games involving multiplication using digital devices or other resources,",
+    "visit the local market to see how different fruits and other items are arranged in groups of 3's, 4's, 5's or 10's for selling, and assist in grouping some of the items for sale."
+   ],
+   "key_inquiry_questions": [
+    "How is multiplication represented as repeated addition?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.a",
+     "letter": "a",
+     "text": "represent multiplication as repeated addition using numbers 1, 2, 3, by 2 and 3",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.b",
+     "letter": "b",
+     "text": "write repeated addition sentences as multiplication using ‘ ’ sign",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.c",
+     "letter": "c",
+     "text": "multiply 1 digit numbers by 1, 2, 3, 4 and 5",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.d",
+     "letter": "d",
+     "text": "multiply 1 digit numbers by 10",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.e",
+     "letter": "e",
+     "text": "appreciate arranging objects in groups of 3’s, 4’s, 5’s and 10’s in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.NUMBER.DIVISION",
+   "number": "1.6",
+   "strand": "Numbers",
+   "sub_strand": "Division",
+   "sequence": 106,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, share a given number of objects equally by each picking one object at a time until all the objects are finished. Each learner to count how many objects he/she got,",
+    "as a class, place several objects together, let each group pick one item at a time until there is no object remaining, each group to count the number of objects they picked,",
+    "write division statements using the sign ‘÷’,",
+    "organise numbers up to 25 into groups of 4 or 5 without a remainder,",
+    "play games involving division using digital devices or other resources."
+   ],
+   "key_inquiry_questions": [
+    "How can you share a given number of objects equally?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.a",
+     "letter": "a",
+     "text": "represent division as equal sharing up to number 20 by 2",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.b",
+     "letter": "b",
+     "text": "represent division as equal grouping of numbers up to 25 by 3",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.c",
+     "letter": "c",
+     "text": "use ' ' sign in writing division statements",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.d",
+     "letter": "d",
+     "text": "divide numbers up to 25 by 4 and 5 without a remainder",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.e",
+     "letter": "e",
+     "text": "appreciate the application of division of numbers in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.NUMBER.FRACTIONS",
+   "number": "1.7",
+   "strand": "Numbers",
+   "sub_strand": "Fractions",
+   "sequence": 107,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs, use papers, pencils and a pair of scissors to make circular paper cut-outs while observing safety,",
+    "in pairs, fold the circular paper cut-outs into two equal parts and identify one of the parts as a half of the whole written as ,",
+    "in pairs, make rectangular paper cut-outs and fold them into two equal parts to get a half of a whole written as ,",
+    "in pairs, fold circular paper cut-outs to get 4 equal parts and identify one of the parts as a of a whole,",
+    "in pairs, practise making halves and quarters of a whole,",
+    "play games involving fractions using digital devices or other resources."
+   ],
+   "key_inquiry_questions": [
+    "How do we get a fraction from a whole?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.a",
+     "letter": "a",
+     "text": "identify a as part of a whole in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.b",
+     "letter": "b",
+     "text": "identify a as part of a whole in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.c",
+     "letter": "c",
+     "text": "use fractions in day-to-day activities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.d",
+     "letter": "d",
+     "text": "appreciate the application of fractions in daily life activities",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.MEASUR.LENGTH",
+   "number": "2.1",
+   "strand": "Measurement",
+   "sub_strand": "Length",
+   "sequence": 201,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs or groups, use sticks of equal length to measure lengths of different objects and record the measurements,",
+    "in pairs or groups, use sticks of different lengths to measure length, including a 1- metre sticks,",
+    "use locally available materials to make 1- metre sticks and use them to measure the length of various objects within the classroom and record the measurements,",
+    "measure the length of different objects at home, record the measurements and discuss with peers in school."
+   ],
+   "key_inquiry_questions": [
+    "How is the length of an object measured?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.a",
+     "letter": "a",
+     "text": "measure length using fixed units",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.b",
+     "letter": "b",
+     "text": "identify the metre as a unit of measuring length",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.c",
+     "letter": "c",
+     "text": "measure length in metres",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.d",
+     "letter": "d",
+     "text": "appreciate measuring length using fixed units in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.MEASUR.MASS",
+   "number": "2.2",
+   "strand": "Measurement",
+   "sub_strand": "Mass",
+   "sequence": 202,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs/groups, collect safe materials from the environment for measuring mass,",
+    "in pairs/groups use locally available materials to improvise a beam balance,",
+    "in pairs/groups, use items of the same mass and an improvised beam balance to measure different masses, record and discuss the results,",
+    "in pairs/groups, use an item equivalent to a 1-kilogram mass and a beam balance to measure mass of different objects in kilogram accurately,",
+    "visit a shop or market and assist vendors measure items such as beans, maize, rice, flour using fixed units, for example an empty 1-kilogram container,",
+    "measure the mass of different items in kilograms using a 1 kilogram container,",
+    "play digital games involving mass in kilograms."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to know the mass of an object?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.MEASUR.MASS.a",
+     "letter": "a",
+     "text": "measure mass using fixed units",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.b",
+     "letter": "b",
+     "text": "identify the kilogram as a unit of measuring mass",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.c",
+     "letter": "c",
+     "text": "measure mass of different objects in kilograms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.d",
+     "letter": "d",
+     "text": "appreciate measuring mass using fixed units in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.MEASUR.CAPACITY",
+   "number": "2.3",
+   "strand": "Measurement",
+   "sub_strand": "Capacity",
+   "sequence": 203,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs/groups collect containers of different sizes for use in measuring capacity,",
+    "in pairs/groups, use small containers of equal capacity to fill bigger containers of same capacity but different shapes with water, count the number of small containers used to fill the big containers,",
+    "in pairs/groups, use 1 litre containers to fill bigger containers with water and count the number of litres used to fill the big containers. Use water properly to avoid wetting floors.",
+    "in pairs/groups, discuss and measure the capacity of different containers in litres accurately,",
+    "participate in activities involving measuring liquids such as milk and water using 1 litre bottles."
+   ],
+   "key_inquiry_questions": [
+    "Why do containers have different capacities?",
+    "Which commodities can be measured in terms of litres?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     25,
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.a",
+     "letter": "a",
+     "text": "measure capacity using fixed units",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.b",
+     "letter": "b",
+     "text": "identify the litre as a unit of measuring capacity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.c",
+     "letter": "c",
+     "text": "measure capacity in litres",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.d",
+     "letter": "d",
+     "text": "appreciate measuring capacity in litres using improvised containers in real life situations",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.MEASUR.TIME",
+   "number": "2.4",
+   "strand": "Measurement",
+   "sub_strand": "Time",
+   "sequence": 204,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs/groups, discuss special occasions that take place in different months of the year,",
+    "in pairs/groups, sing songs and rhymes related to the number of days in the months of the year,",
+    "in pairs/groups, discuss how to read, tell and write dates from the calendar.",
+    "in pairs/groups, discuss and relate time by hour using the length of a shadow of an object such as a tree in the environment,",
+    "discuss places where clocks are displayed and how they look,",
+    "observe a clock face and discuss the minute and hour hand,",
+    "discuss how to read, tell and write time by the hour using both the analogue and digital clock,",
+    "discuss the importance of keeping time in different activities."
+   ],
+   "key_inquiry_questions": [
+    "How do we tell time?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.MEASUR.TIME.a",
+     "letter": "a",
+     "text": "relate the months of the year to special occasions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.b",
+     "letter": "b",
+     "text": "recite the number of days in each month of the year",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.c",
+     "letter": "c",
+     "text": "read the calendar in terms of day and date",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.d",
+     "letter": "d",
+     "text": "measure time using arbitrary units",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.e",
+     "letter": "e",
+     "text": "identify the minute and hour hand in clock face",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.f",
+     "letter": "f",
+     "text": "read time by the hour from the clock face",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.g",
+     "letter": "g",
+     "text": "write time by the hour shown by an analogue and digital clock",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.h",
+     "letter": "h",
+     "text": "appreciate keeping time in day-to-day activities",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.MEASUR.MONEY",
+   "number": "2.5",
+   "strand": "Measurement",
+   "sub_strand": "Money",
+   "sequence": 205,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs/groups, recognize and sort out Kenyan currency coins and notes up to sh.100,",
+    "in groups, make sh. 10 and sh. 20 coins paper cut-outs, sort and count the number of sh. 10 and sh. 20 coins paper cut-outs,",
+    "in groups, make sh. 50 and sh. 100 notes paper cut-outs, sort and count the number of sh. 50 and sh. 100 notes paper cut-outs,",
+    "add two denominations of money with a sum not exceeding sh. 100,",
+    "in pairs or groups, role play buying to 3 items without balance from the model shop in the classroom,",
+    "record a video during a role play of classroom shopping activities."
+   ],
+   "key_inquiry_questions": [
+    "How different are Kenyan currency denominations? up"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.MEASUR.MONEY.a",
+     "letter": "a",
+     "text": "identify Kenyan currency coins and notes up to sh.100",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.b",
+     "letter": "b",
+     "text": "count the number of sh. 10 and sh. 20 coins in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.c",
+     "letter": "c",
+     "text": "count the number of sh. 50 and sh. 100 notes in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.d",
+     "letter": "d",
+     "text": "add two denominations of money with a sum not exceeding sh. 100",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.e",
+     "letter": "e",
+     "text": "use money to buy up to 3 items without balance",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.f",
+     "letter": "f",
+     "text": "appreciate the use of money in buying items",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.GEOMET.LINES",
+   "number": "3.1",
+   "strand": "Geometry",
+   "sub_strand": "Lines",
+   "sequence": 301,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs /groups, safely model straight lines using sticks, plasticine or clay or papier mache and strings,",
+    "in pairs /groups, safely model curved lines using plasticine or clay or papier mache and strings,",
+    "individually model straight and curved lines by holding their hands in different ways; upward, horizontal, diagonal,",
+    "draw straight and curved lines on manila papers and books using pencils, crayons and rulers or sticks,",
+    "use digital devices or other resources to draw lines."
+   ],
+   "key_inquiry_questions": [
+    "How are lines used?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.GEOMET.LINES.a",
+     "letter": "a",
+     "text": "model straight lines in different ways",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.GEOMET.LINES.b",
+     "letter": "b",
+     "text": "draw straight lines in different ways",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.GEOMET.LINES.c",
+     "letter": "c",
+     "text": "model curved lines in different ways",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.GEOMET.LINES.d",
+     "letter": "d",
+     "text": "draw curved lines in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.GEOMET.LINES.e",
+     "letter": "e",
+     "text": "appreciate the use of lines in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G2.GEOMET.SHAPES",
+   "number": "3.2",
+   "strand": "Geometry",
+   "sub_strand": "Shapes",
+   "sequence": 302,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "recognise and name different shapes in the environment (triangles, squares, circles and ovals),",
+    "in pairs or groups, discuss types of lines in different shapes (triangles, squares, circles and ovals)",
+    "in turns, name different shapes of objects or on surfaces in their classroom,",
+    "draw triangles, squares, circles and ovals on manila papers and display in the learning environment,",
+    "in groups, make patterns using triangles, squares, circles and ovals, colour them and share with other groups,",
+    "play games involving pattern making using digital devices or other resources."
+   ],
+   "key_inquiry_questions": [
+    "How can patterns be made using shapes?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-two-designs/",
+    "design": "KICD-Grade2-Mathematical-Activities-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     33,
+     34
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.a",
+     "letter": "a",
+     "text": "identify different shapes in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.b",
+     "letter": "b",
+     "text": "draw shapes in different ways",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.c",
+     "letter": "c",
+     "text": "draw patterns involving different shapes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.d",
+     "letter": "d",
+     "text": "appreciate the use of shapes in forming patterns in fabrics",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

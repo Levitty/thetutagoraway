@@ -1,0 +1,1405 @@
+{
+ "framework": "cbc",
+ "subject_key": "mathematics",
+ "grade": 4,
+ "source": "KICD KICD-Grade4-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 19,
+  "outcomes": 106,
+  "lessons": 130,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "MATH.G4.NUMBER.WHOLE_NUMBERS",
+   "number": "1.1",
+   "strand": "Numbers",
+   "sub_strand": "Whole Numbers",
+   "sequence": 101,
+   "lessons": 0,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs/groups identify place value of numbers up to tens of thousands using place value apparatus.",
+    "in pairs/groups identify total values of digits up to ten thousand.",
+    "in groups read numbers up to 10,000 in symbols in real life situations.",
+    "in groups/ individually to read and write numbers up to 1,000 in words from a number chart.",
+    "in pairs arrange numbers up to 1,000 from smallest to largest and largest to smallest using number cards and share with others.",
+    "in pairs or groups or individually round off numbers up to 1,000 to the nearest ten and share with others.",
+    "in groups identify factors/divisors of numbers up to 50 and share with others.",
+    "in groups identify multiples of numbers up to 100 and share with others.",
+    "in groups identify even and odd numbers up to 100 and share with others.",
+    "in pairs use number cards to make patterns involving even and odd numbers.",
+    "in groups write Hindu Arabic numerals using Roman numerals up to ‘X’ using number charts.",
+    "in groups use digital devices to play digital games involving whole numbers."
+   ],
+   "key_inquiry_questions": [
+    "What do you consider when writing numbers in words?",
+    "Why do we determine the place value of a digit in a number?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure in the table.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     10,
+     11,
+     12
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.a",
+     "letter": "a",
+     "text": "use place value and total value of digits up to tens of thousands in daily in daily life situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.b",
+     "letter": "b",
+     "text": "read and write numbers up to 10,000 in symbols in real life situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.c",
+     "letter": "c",
+     "text": "read and write numbers up to 1,000 in words in day to day activities",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.d",
+     "letter": "d",
+     "text": "order numbers up to 1,000 in different situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.e",
+     "letter": "e",
+     "text": "round off numbers up to 1,000 to the nearest ten in different situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.f",
+     "letter": "f",
+     "text": "identify factors of numbers up to 50 in different contexts",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.g",
+     "letter": "g",
+     "text": "identify multiples of numbers up to 100 in different situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.h",
+     "letter": "h",
+     "text": "use even and odd numbers up to 100 in different situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.i",
+     "letter": "i",
+     "text": "make patterns involving even and odd numbers in real life situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.j",
+     "letter": "j",
+     "text": "represent Hindu Arabic numerals using Roman numerals up to ‘X’ in different situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.k",
+     "letter": "k",
+     "text": "appreciate use of whole numbers in real life situations",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.NUMBER.ADDITION",
+   "number": "1.2",
+   "strand": "Numbers",
+   "sub_strand": "Addition",
+   "sequence": 102,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups add up to two 4-digit numbers with single regrouping up to a sum of 10,000 using number cards, charts or place value apparatus.",
+    "in groups add up to two 4-digit numbers with double regrouping up to a sum of 10,000 in real life situations.",
+    "in groups discuss and estimate sum by rounding off numbers to the nearest ten in different situations.",
+    "in pairs generate patterns involving addition of numbers up to a sum of 10,000.",
+    "in pairs/groups play digital games involving addition."
+   ],
+   "key_inquiry_questions": [
+    "When do you use addition in real life?",
+    "How do you make number patterns involving addition?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.a",
+     "letter": "a",
+     "text": "add up to two 4-digit numbers with single regrouping up to a sum of 10,000 in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.b",
+     "letter": "b",
+     "text": "add up to two 4-digit numbers with double regrouping up to a sum of 10,000 in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.c",
+     "letter": "c",
+     "text": "estimate sum by rounding off numbers to the nearest ten in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.d",
+     "letter": "d",
+     "text": "create patterns involving addition up to a sum of 10,000 in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.e",
+     "letter": "e",
+     "text": "appreciate application of addition of numbers in real life situations",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.NUMBER.SUBTRACTION",
+   "number": "1.3",
+   "strand": "Numbers",
+   "sub_strand": "Subtraction",
+   "sequence": 103,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups subtract numbers up to 4-digit numbers without regrouping using place value apparatus prepared from locally available materials.",
+    "in pairs subtract up to 4- digit numbers with regrouping using number cards.",
+    "in groups approximate and work out difference by rounding off the numbers to the nearest ten in real life situations.",
+    "in groups generate patterns involving subtraction of numbers up to 10,000.",
+    "in pairs or groups play games involving subtraction using digital device or other resources."
+   ],
+   "key_inquiry_questions": [
+    "How do you estimate the difference of givennumbers?",
+    "How do you create patterns involving subtraction?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.a",
+     "letter": "a",
+     "text": "subtract up to 4-digit numbers without regrouping in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.b",
+     "letter": "b",
+     "text": "subtract up to 4-digit numbers with regrouping in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.c",
+     "letter": "c",
+     "text": "estimate difference by rounding off numbers to the nearest ten in different contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.d",
+     "letter": "d",
+     "text": "create patterns involving subtraction from up to 10,000",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.e",
+     "letter": "e",
+     "text": "appreciate application of subtraction of numbers in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.NUMBER.MULTIPLICATION",
+   "number": "1.4",
+   "strand": "Numbers",
+   "sub_strand": "Multiplication",
+   "sequence": 104,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs multiply 2-digit number by multiples of 10 using number cards,",
+    "in pairs or groups multiply up to a two-digit number by two-digit number with and without regrouping using counters and prepare a corresponding multiplication chart,",
+    "in groups estimate and work out product by rounding off numbers to the nearest ten with product not exceeding 1,000,",
+    "in groups generate patterns involving multiplication with products not exceeding 100 and prepare multiplication charts using locally available materials,",
+    "in groups play digital games on multiplication."
+   ],
+   "key_inquiry_questions": [
+    "When do you use multiplicati on in real life?",
+    "How do you create patterns involving multiplicati on?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.a",
+     "letter": "a",
+     "text": "multiply up to a two-digit number by multiples of 10 in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.b",
+     "letter": "b",
+     "text": "multiply up to a two-digit number by two-digit number with and without regrouping",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.c",
+     "letter": "c",
+     "text": "estimate products by rounding off numbers to the nearest 10 with product not exceeding 1,000",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.d",
+     "letter": "d",
+     "text": "create patterns involving multiplication with product not exceeding 100",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.e",
+     "letter": "e",
+     "text": "appreciate application of multiplication of numbers in real life situation",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.NUMBER.DIVISION",
+   "number": "1.5",
+   "strand": "Numbers",
+   "sub_strand": "Division",
+   "sequence": 105,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs and groups discuss and carry out division of up to a two-digit number by a one-digit number without remainder using number cards.",
+    "in groups carry out division up to a two-digit number by a one-digit number with remainder and prepare division charts.",
+    "in groups carry out division and multiplication of same numbers to establish relationship between multiplication and division. Discuss and share their results with other groups.",
+    "in pairs play games involving division using digital devices."
+   ],
+   "key_inquiry_questions": [
+    "When do you use division in real life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.a",
+     "letter": "a",
+     "text": "divide up to a two-digit number by a one-digit number with and without remainder",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.b",
+     "letter": "b",
+     "text": "relate multiplication of numbers to division of same numbers in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.c",
+     "letter": "c",
+     "text": "use digital resources to learn division of numbers",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.d",
+     "letter": "d",
+     "text": "appreciate the use of division in day to day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.NUMBER.FRACTIONS",
+   "number": "1.6",
+   "strand": "Numbers",
+   "sub_strand": "Fractions",
+   "sequence": 106,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss in groups the top (numerator) and bottom (denominator) numbers in a fraction and share with others.",
+    "illustrate in groups fractions as part of whole or part of a group.",
+    "illustrate in pairs/groups fractions as part of a whole or part of a group using cut outs, counters or clock face.",
+    "Workout in groups proper, improper and mixed fractions as part of a whole or as part of a group using paper cut outs or counters.",
+    "Discuss in groups changing of improper fractions to mixed fractions.",
+    "Discuss in groups changing of mixed fractions to improper fractions.",
+    "individually play digital games involving fractions."
+   ],
+   "key_inquiry_questions": [
+    "When do you use fractions in real life?",
+    "How can you represent fractions?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.a",
+     "letter": "a",
+     "text": "identify the numerator and denominator in a fraction in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.b",
+     "letter": "b",
+     "text": "represent a fraction with denominators not exceeding 12 as part of a whole and as part of a group",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.c",
+     "letter": "c",
+     "text": "identify different types of fractions in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.d",
+     "letter": "d",
+     "text": "convert improper fractions to mixed fractions in different situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.e",
+     "letter": "e",
+     "text": "convert mixed fractions to improper fractions in different contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.f",
+     "letter": "f",
+     "text": "use digital devices and other resources for learning more on fractions",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.g",
+     "letter": "g",
+     "text": "appreciate application of fractions in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.NUMBER.DECIMALS",
+   "number": "1.7",
+   "strand": "Numbers",
+   "sub_strand": "Decimals",
+   "sequence": 107,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss in pairs/groups where tenths and hundredths are used in real life situations.",
+    "illustrate in pairs/groups decimals using place value charts.",
+    "represent decimals using place value charts and reuse charts for other activities.",
+    "individually write tenths and hundredths using decimal notation on a place value chart.",
+    "in groups order given decimals in ascending and descending order.",
+    "in pairs play digital games involving decimals."
+   ],
+   "key_inquiry_questions": [
+    "How do you use decimals in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.a",
+     "letter": "a",
+     "text": "identify a tenth and a hundredth in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.b",
+     "letter": "b",
+     "text": "represent decimals using decimal notation in given situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.c",
+     "letter": "c",
+     "text": "identify place value of decimals up to hundredths in real life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.d",
+     "letter": "d",
+     "text": "order decimals up to hundredths in different contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.e",
+     "letter": "e",
+     "text": "use digital devices or other resources for learning about decimals different situation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.f",
+     "letter": "f",
+     "text": "appreciate use of decimals in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.NUMBER.USE_OF_LETTERS",
+   "number": "1.8",
+   "strand": "Numbers",
+   "sub_strand": "Use of letters",
+   "sequence": 108,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "represent various items from diverse geographical locations using letters.",
+    "in groups form expressions to illustrate real life situations.",
+    "in groups simplify expressions representing real life situations.",
+    "in pairs play digital games involving expressions."
+   ],
+   "key_inquiry_questions": [
+    "Why do we represent information using letters?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.a",
+     "letter": "a",
+     "text": "represent information using letters in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.b",
+     "letter": "b",
+     "text": "form simple expressions to represent real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.c",
+     "letter": "c",
+     "text": "simplify expressions representing real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.d",
+     "letter": "d",
+     "text": "appreciate the use of expressions",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.MEASUR.LENGTH",
+   "number": "2.1",
+   "strand": "Measurement",
+   "sub_strand": "Length",
+   "sequence": 201,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups identify the centimetre and mark out lengths of one centimetre using a ruler.",
+    "in pairs measure the length of a given object in centimetres using a metre ruler or a tape measure.",
+    "in groups estimate the length of a given object in centimetres.",
+    "measure actual length of the estimated length in centimetres.",
+    "in groups measure length of objects in classrooms in metres and centimetres and establish the relationship between the units.",
+    "in groups use the relationship between centimetres and metres.",
+    "in pairs convert metres into centimetres and centimetres into metres using whole numbers, decimals or fractions in real life situations.",
+    "in groups calculate perimeter of plane figures",
+    "in groups calculate addition and subtraction involving metres and centimetres",
+    "in groups work out multiplication involving metres and centimetres.",
+    "in pairs work out division involving metres and centimetres.",
+    "play digital games involving length."
+   ],
+   "key_inquiry_questions": [
+    "How can you measure distance ?",
+    "Why do we measure distance in real life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.a",
+     "letter": "a",
+     "text": "identify the centimetre as a unit of measuring length in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.b",
+     "letter": "b",
+     "text": "measure length in centimetres in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.c",
+     "letter": "c",
+     "text": "establish the relationship between metres and centimetres practically",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.d",
+     "letter": "d",
+     "text": "convert metres to centimetres and centimetres to metres in real life situation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.e",
+     "letter": "e",
+     "text": "work out perimeter of plane figures in different contexts",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.f",
+     "letter": "f",
+     "text": "work out addition involving length in metres and centimetres in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.g",
+     "letter": "g",
+     "text": "work out subtraction involving length in metres and centimetres in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.h",
+     "letter": "h",
+     "text": "carryout multiplication involving metres and centimetres in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.i",
+     "letter": "i",
+     "text": "carryout division involving metres and centimetres in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.j",
+     "letter": "j",
+     "text": "appreciate use of metres and centimetres in measuring distance in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.MEASUR.AREA",
+   "number": "2.2",
+   "strand": "Measurement",
+   "sub_strand": "Area",
+   "sequence": 202,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups compare area of two surfaces directly by placing one surface on the other.",
+    "in pairs use different unit square cut outs to cover a given surface.",
+    "in groups count the number of unit square cut outs prepared from locally available materials to cover the surface.",
+    "in pairs establish area of a rectangle or a square is same as number of rows multiplied by number of columns.",
+    "work out area of squares and rectangles by multiplying number of rows by number of columns, such as in tiled or paved floors.",
+    "in pairs play games involving area of rectangles and squares using digital devices and other resources."
+   ],
+   "key_inquiry_questions": [
+    "How do you work out area of different surfaces?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     33,
+     34
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.MEASUR.AREA.a",
+     "letter": "a",
+     "text": "compare the area of given surfaces by direct manipulation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.b",
+     "letter": "b",
+     "text": "calculate area of squares and rectangles by counting unit squares",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.c",
+     "letter": "c",
+     "text": "calculate area of squares and rectangles as a product of number of rows and columns",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.d",
+     "letter": "d",
+     "text": "appreciate use of rows and columns in calculating area of squares and rectangles in real life situations",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.MEASUR.VOLUME",
+   "number": "2.3",
+   "strand": "Measurement",
+   "sub_strand": "Volume",
+   "sequence": 203,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups discuss and carefully arrange blocks or objects on top of each other into cuboid and cube shape. practice stacking objects or blocks to form cubes and cuboids of different sizes.",
+    "in pairs count the number of objects in the pile that makes a cuboid to determine the volume.",
+    "in groups count the number of objects in the pile that makes a cube to determine the volume.",
+    "in pairs use digital devices or other resources to safely play games involving stacking blocks to form cubes and cuboids."
+   ],
+   "key_inquiry_questions": [
+    "Where do we apply the volume of cubes and cuboids in real life situations?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     35,
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.a",
+     "letter": "a",
+     "text": "pile objects into stacks of cubes and cuboids in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.b",
+     "letter": "b",
+     "text": "work out volume of cuboids by piling blocks to form a cuboid",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.c",
+     "letter": "c",
+     "text": "calculate the volume of cubes by piling blocks to form a cubes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.d",
+     "letter": "d",
+     "text": "appreciate use of pilling method in working out volume in real life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.MEASUR.CAPACITY",
+   "number": "2.4",
+   "strand": "Measurement",
+   "sub_strand": "Capacity",
+   "sequence": 204,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups measure capacity of containers using a one litre container in real life situations.",
+    "in pairs make litre containers from locally available materials through filling and emptying the container with substances such as water or sand using a 1 litre container.",
+    "make litre containers through filling and emptying using a 1 litre container.",
+    "in groups use litre and litre containers to measure capacity of other containers.",
+    "add capacity involving litres in real life situations.",
+    "subtract capacity involving litres in real life situations.",
+    "in pairs play games involving capacity using containers of different capacities or digital devices for digital games."
+   ],
+   "key_inquiry_questions": [
+    "How can you measure capacity using arbitrary units?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     37,
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.a",
+     "letter": "a",
+     "text": "measure capacity in litres in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.b",
+     "letter": "b",
+     "text": "measure capacity in litres and litres in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.c",
+     "letter": "c",
+     "text": "work out addition and subtraction of capacity in litres in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.d",
+     "letter": "d",
+     "text": "appreciate use of the litre as a unit of measuring capacity in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.MEASUR.MASS",
+   "number": "2.5",
+   "strand": "Measurement",
+   "sub_strand": "Mass",
+   "sequence": 205,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups use one kilogram masses to measure masses of given objects using a beam balance.",
+    "in pairs make a ½ kg mass and use it to measure mass of given objects using a beam balance.",
+    "in groups make a ¼ kg mass and use it to measure mass of given objects using a beam balance and an electronic balance.",
+    "add mass involving kilograms (kg) in real life situations.",
+    "subtract mass involving kilograms (kg).",
+    "in pairs play digital games involving mass."
+   ],
+   "key_inquiry_questions": [
+    "How do we measure mass in kilograms?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.MEASUR.MASS.a",
+     "letter": "a",
+     "text": "use a kilogram mass to measure masses of different objects practically",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.b",
+     "letter": "b",
+     "text": "use ½ kg and ¼ kg masses to measure masses of different objects practically",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.c",
+     "letter": "c",
+     "text": "add mass involving kilograms in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.d",
+     "letter": "d",
+     "text": "subtract mass involving kilograms in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.e",
+     "letter": "e",
+     "text": "appreciate kilogram as a unit of measuring mass",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.MEASUR.TIME",
+   "number": "2.6",
+   "strand": "Measurement",
+   "sub_strand": "Time",
+   "sequence": 206,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs read and tell time in a.m. and p.m. using digital and analogue clocks.",
+    "in groups estimate time of the day using the shadow of a building or a tree that is in a convenient location.",
+    "change hours to minutes and minutes to hours in real life situations.",
+    "change hours to days and days to hours in real life situations.",
+    "in pairs convert days to weeks and weeks to days in real life situations.",
+    "in groups measure and record duration of events in hours and minutes using digital and analogue clocks.",
+    "in groups work out addition involving units of time in real life situations.",
+    "in groups to work out subtraction involving units of time in real life situations.",
+    "in groups discuss, tell and record time using electronic clock."
+   ],
+   "key_inquiry_questions": [
+    "How do we estimate time?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.MEASUR.TIME.a",
+     "letter": "a",
+     "text": "read and tell time in a.m. and p.m. in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.b",
+     "letter": "b",
+     "text": "estimate time using a.m. and p.m. in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.c",
+     "letter": "c",
+     "text": "convert units of time in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.d",
+     "letter": "d",
+     "text": "record time durations in hours and minutes in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.e",
+     "letter": "e",
+     "text": "work out time duration in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.f",
+     "letter": "f",
+     "text": "use digital clock to tell and record time of different activities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.g",
+     "letter": "g",
+     "text": "appreciate time in day to day activities",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.MEASUR.MONEY",
+   "number": "3.7",
+   "strand": "Measurement",
+   "sub_strand": "Money",
+   "sequence": 207,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "learners in pairs/groups discuss and convert shillings into cents and cents into shillings using real/ imitation money in different contexts.",
+    "learners in pairs /groups are guided on how to come up with a shopping list of food items that they may require at school or at home.",
+    "learners in groups/individually calculate the total cost of items in the shopping list.",
+    "learners in groups are guided to come up with a class or school model shop and role play shopping activities as buyers and shopkeepers.",
+    "take video clips of their groups as they role shopping activities."
+   ],
+   "key_inquiry_questions": [
+    "Why do we prepare shopping list?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     43,
+     44
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.MEASUR.MONEY.a",
+     "letter": "a",
+     "text": "convert shillings into cents and cents into shillings in different contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.b",
+     "letter": "b",
+     "text": "prepare a shopping list of three items in real life situation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.c",
+     "letter": "c",
+     "text": "work out total cost of items in the shopping list for value not more ten thousand shillings",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.d",
+     "letter": "d",
+     "text": "appreciate the use of money in real life situation",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION",
+   "number": "3.1",
+   "strand": "Geometry",
+   "sub_strand": "Position and Direction",
+   "sequence": 301,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "make clockwise or anticlockwise turns in the environment.",
+    "in groups discuss and demonstrate a clockwise turn.",
+    "in pairs demonstrate an anti-clockwise turn.",
+    "in groups safely make quarter, half and full turns in the surrounding.",
+    "in pairs/ individually to demonstrate a quarter turn in both directions.",
+    "demonstrate a half turn from a point.",
+    "demonstrate a full turn from a point.",
+    "in pairs play digital games involving position and direction."
+   ],
+   "key_inquiry_questions": [
+    "How can you change your position?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     48,
+     49
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.a",
+     "letter": "a",
+     "text": "identify a clockwise and an anti-clockwise turn in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.b",
+     "letter": "b",
+     "text": "demonstrate a clockwise and an anti-clockwise turn in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.c",
+     "letter": "c",
+     "text": "identify quarter, half and full turns direction in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.d",
+     "letter": "d",
+     "text": "demonstrate a quarter turn, half turn and full turn direction in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.e",
+     "letter": "e",
+     "text": "appreciate use of position and direction in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.GEOMET.ANGLES",
+   "number": "3.2",
+   "strand": "Geometry",
+   "sub_strand": "Angles",
+   "sequence": 302,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and recognise angles that are made by 2 lines that meet at point using a chart with a different line.",
+    "in groups explore and identify angles from the objects such as cubes and cuboids in the environment.",
+    "make clockwise quarter and half turns, and relate the turns to angles.",
+    "in pairs play digital games and learn more about angles."
+   ],
+   "key_inquiry_questions": [
+    "How do we use angles in daily life?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     50
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.a",
+     "letter": "a",
+     "text": "identify an angle at a point in lines",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.b",
+     "letter": "b",
+     "text": "identify angles from the objects in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.c",
+     "letter": "c",
+     "text": "relate a turn to angles in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.d",
+     "letter": "d",
+     "text": "appreciate use of angles in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.GEOMET.PLANE_FIGURES",
+   "number": "3.3",
+   "strand": "Geometry",
+   "sub_strand": "Plane Figures",
+   "sequence": 303,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and recognise shapes of rectangles, squares, triangles, circles and ovals from common objects in the environment.",
+    "sketch the shapes of rectangles, squares, triangles, circles and ovals in their books or charts using objects in the environment.",
+    "in groups discuss and fold the shapes into two equal parts and recognise the fold line as the line of symmetry. discuss how many lines of symmetry can each shape possibly have, fold the shapes to confirm.",
+    "in pairs make patterns using squares, rectangles and triangles.",
+    "identify properties of a square practically.",
+    "in groups discuss properties of a rectangle practically.",
+    "identify properties of a triangle practically.",
+    "in groups use it devices to learn more about plane figures and make patterns."
+   ],
+   "key_inquiry_questions": [
+    "How can you make patterns using shapes?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     52,
+     53
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.a",
+     "letter": "a",
+     "text": "identify rectangles, squares, triangles, circles and ovals from objects in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.b",
+     "letter": "b",
+     "text": "draw the shapes of rectangles, squares, triangles, circles and ovals from objects in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.c",
+     "letter": "c",
+     "text": "identify lines of symmetry of different shapes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.d",
+     "letter": "d",
+     "text": "make patterns using squares, rectangles and triangles",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.e",
+     "letter": "e",
+     "text": "identify properties of plane figures in different situations",
+     "status": "kicd_read"
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.f",
+     "letter": "f",
+     "text": "appreciate using shapes in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "MATH.G4.DATA_H.DATA",
+   "number": "4.1",
+   "strand": "Data Handling",
+   "sub_strand": "Data",
+   "sequence": 401,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "name different materials that are used for data collection and recording such as chalkboard rulers, exercise books for drawing tables, and textbooks. resources from the immediate classroom environment can also be considered.",
+    "gather and share different items for purposes of recording data.",
+    "in pairs represent the raw data in simple tables",
+    "explain and interpret the raw data from the table.",
+    "in pairs use digital devices other resources and for data collection and recording."
+   ],
+   "key_inquiry_questions": [
+    "How can you represent data?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "KICD-Grade4-Mathematics-Curriculum-Design.pdf",
+    "version": "PDF on disk, text layer (read in place)",
+    "pages": [
+     54
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "MATH.G4.DATA_H.DATA.a",
+     "letter": "a",
+     "text": "identify materials for data collection and recording in real life situations",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.b",
+     "letter": "b",
+     "text": "collect data of at most 10 items within the school environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.c",
+     "letter": "c",
+     "text": "draw a table for recording data",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.d",
+     "letter": "d",
+     "text": "record data in the table",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.e",
+     "letter": "e",
+     "text": "interpret the raw data from the table",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.f",
+     "letter": "f",
+     "text": "appreciate use of tables in representing data in real life situations",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}
