@@ -23,13 +23,15 @@
 const NOVELTY = /^(albert|bad news|bahh|bells|boing|bubbles|cellos|deranged|good news|hysterical|jester|organ|superstar|trinoids|whisper|wobble|zarvox|ralph|fred|junior|kathy|princess|pipe organ|grandma|grandpa|rocko)\b/i;
 const LANG_RANK = { 'en-ke': 50, 'en-gb': 40, 'en-za': 38, 'en-ie': 32, 'en-au': 30, 'en-nz': 30, 'en-in': 28, 'en-us': 26 };
 
-/** English voices for a Kenyan child, best first: Kenyan, British, other English; local voices
+/** English voices for a Kenyan child, best first: natural-sounding downloads, then Kenyan, British, other English; local voices
  *  (they send word boundaries) ahead of network ones; never a novelty voice. */
 export function rankVoices(voices = []) {
   const score = (v) => {
     const lang = String(v.lang || '').toLowerCase().replace('_', '-');
     // A voice on the device always beats a network one (they speak at once and keep better time).
-    return (v.localService ? 100 : 0) + (LANG_RANK[lang] ?? 20) + (v.default ? 1 : 0);
+    // The natural-sounding downloads (macOS "Premium"/"Enhanced", Siri) beat the basic voice of any accent.
+    const natural = /premium|enhanced|siri|natural|neural/i.test(String(v.name || '')) ? 60 : 0;
+    return (v.localService ? 100 : 0) + natural + (LANG_RANK[lang] ?? 20) + (v.default ? 1 : 0);
   };
   return voices
     .filter((v) => String(v.lang || '').toLowerCase().startsWith('en') && !NOVELTY.test(String(v.name || '')))
