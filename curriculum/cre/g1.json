@@ -1,0 +1,942 @@
+{
+ "framework": "cbc",
+ "subject_key": "cre",
+ "grade": 1,
+ "source": "KICD Christian Religious Education Activities, First Published in 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 5,
+  "sub_strands": 17,
+  "outcomes": 45,
+  "lessons": 90,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "CRE.G1.CREATI.SELF_AWARENESS",
+   "number": "1.1",
+   "strand": "Creation",
+   "sub_strand": "Self-Awareness",
+   "sequence": 101,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs read Genesis 1:27,",
+    "say why they are a special creation,",
+    "sing songs related to their uniqueness,",
+    "state their gender as guided by Genesis 1:27,",
+    "draw and colour a picture of a boy and a girl,",
+    "in turns read Isaiah 43:1,",
+    "write their names on flashcards and display them in class,",
+    "sing songs related to their names,",
+    "watch a clip of a palm of a hand with a name on it,",
+    "draw the palm of a hand and write their names,",
+    "Sing the song, ‘I’ am fearfully and wonderfully made’,",
+    "memorise Isaiah 49:16."
+   ],
+   "key_inquiry_questions": [
+    "What makes you a special creation?"
+   ],
+   "core_competences": "Self-efficacy: learners identify who they are as they engage in activities such as mentioning their names and singing songs related to their names.\nCommunication: learners can speak clearly and effectively as they read the Bible verses and memorise the scriptures.",
+   "values": "Love is portrayed as learners sing songs and perform activities such as singing together.",
+   "pcis": "Gender issues: learners say their gender as guided by the Bible and in accordance with the Christian faith.",
+   "links": "Language Activities: they learn new vocabulary.\nCreative Activities: creative skills are enhanced as they sing and draw.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     6,
+     7
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.CREATI.SELF_AWARENESS.a",
+     "letter": "a",
+     "text": "identity their uniqueness as guided by the word of God",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G1.CREATI.SELF_AWARENESS.b",
+     "letter": "b",
+     "text": "state their gender according to Genesis 1:27",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G1.CREATI.SELF_AWARENESS.c",
+     "letter": "c",
+     "text": "appreciate that God knows them by their names",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.CREATI.MY_FAMILY",
+   "number": "1.2",
+   "strand": "Creation",
+   "sub_strand": "My Family",
+   "sequence": 102,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "list names of family members on flashcards,",
+    "draw and colour family members,",
+    "demonstrate how they pray at home,",
+    "list the number of times they pray at home as a family,",
+    "mention instances they lead prayers at home,",
+    "in groups or pairs, list items they share at home,",
+    "colour a picture of a family sharing a meal,",
+    "sing the song, ’Read your Bible pray every day’,",
+    "memorise Matthew 7:7."
+   ],
+   "key_inquiry_questions": [
+    "How do you relate with members of your family?"
+   ],
+   "core_competences": "Communication: the skill of speaking clearly and effectively is enhanced as learners lead prayers at home.\nLearning to Learn: learners work on their own in assigned tasks such as listing the number of times they lead prayers at home.",
+   "values": "Unity is enhanced as learners pray with family members.",
+   "pcis": "Social cohesion is portrayed as learners share items with family members and pray together.",
+   "links": "Mathematical Activities: learners list the number of times they pray.\nLanguage Activities: reading skills are applied as learners read the Bible.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     8,
+     9
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.CREATI.MY_FAMILY.a",
+     "letter": "a",
+     "text": "name members of their family",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G1.CREATI.MY_FAMILY.b",
+     "letter": "b",
+     "text": "pray with family members to foster unity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G1.CREATI.MY_FAMILY.c",
+     "letter": "c",
+     "text": "identify five items they share at home",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G1.CREATI.MY_FAMILY.d",
+     "letter": "d",
+     "text": "appreciate family members by praying with them",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.CREATI.CREATION_OF_PLANTS_AND_A",
+   "number": "1.3",
+   "strand": "Creation",
+   "sub_strand": "Creation of Plants and Animals",
+   "sequence": 103,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "picture-read Genesis 1:11, 24,",
+    "name various plants and animals created by God and write them on flashcards,",
+    "take a nature walk and identify different plants and animals in their environment,",
+    "draw and colour some plants and animals in the school environment,",
+    "say how they participate in keeping the home environment clean,",
+    "model some animals and display their work in class."
+   ],
+   "key_inquiry_questions": [
+    "Why should you take care of plants and animals?"
+   ],
+   "core_competences": "Learning to Learn: learners recreate learning experiences outside the class as they explore and discover more about plants and animals in their surroundings.\nImagination and Creativity: learners come up with new and unique ideas by modelling and drawing animals and plants.",
+   "values": "",
+   "pcis": "Environmental Awareness: learners identify plants and animals in the environment. Link to other Activity Areas: Environmental Activities: learners participate in keeping the home environment clean. LEVEL Exceeding Meeting Approaching Below Expectations INDICATOR Expectations Expectations Expectations Ability to identify their Identifies their Identifies their Identifies their Identifies their uniqueness as guided by uniqueness as uniqueness as uniqueness when uniqueness but with the Bible. guided by the Bible guided by the prompted. consistent guidance. and cites relevant Bible. examples. Ability to identify five Identifies five items Identifies five items Identifies four to three Identifies two to one items they share at home. they share at home they share at home. items they share at items they share at home illustratively. home. Ability to name six plants Names six plants Names six plants Names five to three Names two to one plants and animals in the and animals in the and animals in the plants and animals in and animals in the environment. environment using environment. the environment environment. illustrations. Ability to take part in Constantly takes Takes part in Sometimes takes part Takes part in keeping keeping the home part in keeping the keeping the home in keeping the home the home environment environment clean. home environment environment clean. environment clean clean but with consistent clean. guidance.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: pcis; values: heading on the page but no text read; links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     10,
+     11
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.CREATI.CREATION_OF_PLANTS_AND_A.a",
+     "letter": "a",
+     "text": "name plants and animals in the environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CREATI.CREATION_OF_PLANTS_AND_A.b",
+     "letter": "b",
+     "text": "take part in keeping the home environment clean",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CREATI.CREATION_OF_PLANTS_AND_A.c",
+     "letter": "c",
+     "text": "appreciate God’s creation by caring for plants and animals",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.THE_HO.THE_WORD_OF_GOD",
+   "number": "2.1",
+   "strand": "The Holy Bible",
+   "sub_strand": "The Word of God",
+   "sequence": 201,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "say how they take care of the Holy Bible,",
+    "tell why they should respect the Holy Bible,",
+    "role-play handling the Holy Bible with care and respect,",
+    "in small groups mention the two divisions of the Holy Bible (Old and New Testament),",
+    "name the first two Gospel books (Matthew and Mark),",
+    "listen to and sing a song about the Bible,",
+    "sing a song on ‘read your Bible pray every day’."
+   ],
+   "key_inquiry_questions": [
+    "Why should you handle the Holy Bible with respect?"
+   ],
+   "core_competences": "Digital Literacy: learners behave safely and ethically as they use digital devices.",
+   "values": "Responsibility: learners handle the Bible with care and respect. Link to other Activity Areas:\nMathematical Activities skills are reinforced through the aspect of division and the number of books in the Holy Bible.\nCreative Activities: creative skills are nurtured as learners role-play handling the Holy Bible with care and respect.",
+   "pcis": "Spiritual Awareness: learners mention the first two divisions of the Bible and name two Bible books.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     12
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.THE_HO.THE_WORD_OF_GOD.a",
+     "letter": "a",
+     "text": "identify five ways of handling the Holy Bible",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_HO.THE_WORD_OF_GOD.b",
+     "letter": "b",
+     "text": "mention the two divisions of the Holy Bible",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_HO.THE_WORD_OF_GOD.c",
+     "letter": "c",
+     "text": "name the first two books in the New Testament",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_HO.THE_WORD_OF_GOD.d",
+     "letter": "d",
+     "text": "desire to handle the Holy Bible with respect",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H",
+   "number": "2.2",
+   "strand": "The Holy Bible",
+   "sub_strand": "Bible Story: Joseph and his brothers",
+   "sequence": 202,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "watch a video on Joseph’s coat of many colours in Genesis 37:3-4,",
+    "draw a coat and colour it,",
+    "in turns, picture-read Joseph’s dream in Genesis 37:5-8,in groups, picture-read Genesis 37:9-11,",
+    "role-play the story of Joseph,",
+    "say why Joseph’s brothers hated him,",
+    "in groups, share experiences of how they should treat their brothers and sisters,",
+    "list values needed to live well with others,",
+    "sing a song about Joseph and his coat of many colours."
+   ],
+   "key_inquiry_questions": [
+    "How did Joseph relate with his brothers?"
+   ],
+   "core_competences": "Digital Literacy: the skill of interacting with digital technology is enhanced as learners watch a video about Joseph and his brothers.\nImagination and Creativity: the skill of imagining and coming up with original ideas is exhibited as learners draw and colour a coat.",
+   "values": "Love is nurtured as learners share experiences of how they should treat their brothers and sisters.",
+   "pcis": "Social Cohesion is nurtured as learners list values needed to live well with others.",
+   "links": "Language Activities: learners picture-read Bible texts.\nCreative Activities: learners draw, colour and role-play the story of Joseph.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.a",
+     "letter": "a",
+     "text": "narrate the story of Joseph and his brothers",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.b",
+     "letter": "b",
+     "text": "discuss ways they treat their siblings",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.c",
+     "letter": "c",
+     "text": "identify three values needed for peaceful co-existence",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G1.THE_HO.BIBLE_STORY_JOSEPH_AND_H.d",
+     "letter": "d",
+     "text": "desire to live harmoniously with family members",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_",
+   "number": "2.3",
+   "strand": "The Holy Bible",
+   "sub_strand": "Bible Story: The chariot of fire",
+   "sequence": 203,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "picture-read 2 Kings 2:1,11-12,",
+    "in groups draw and colour the chariot of fire,",
+    "watch a video clip of Elijah and the Chariot of fire,",
+    "in pairs, tell their friend three ways of pleasing God,",
+    "sing a song about Elijah and the Chariot of Fire,",
+    "write 2 Kings 2:12 on flashcards and display it in the Christian Religious Education learning corner,",
+    "in groups, tell ways they respect their parents or guardians at home."
+   ],
+   "key_inquiry_questions": [
+    "How did Elijah honour God?"
+   ],
+   "core_competences": "Imagination and Creativity: the skill of coming up with new ideas is enhanced as learners role-play the Bible story.\nCommunication: the skills of listening and speaking are demonstrated as learners in groups read the Bible text and retell the story.",
+   "values": "",
+   "pcis": "Social Cohesion: is nurtured as learners share ideas and work in groups or pairs. Link to Values: Love is portrayed as learners take turns to air their views and respect each other’s opinions",
+   "links": "Language Activities: they learn new words such as, ‘a chariot.’\nCreative Activities: learners sing about Elijah and the Chariot of Fire.",
+   "design_notes": "Second read left this for a person to confirm: values: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.a",
+     "letter": "a",
+     "text": "retell the story of Elijah and the chariot of fire",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.b",
+     "letter": "b",
+     "text": "list three ways of having a good relationship with God",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_HO.BIBLE_STORY_THE_CHARIOT_.c",
+     "letter": "c",
+     "text": "desire to respect God and their parents",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS",
+   "number": "3.1",
+   "strand": "The Early Life of Jesus Christ",
+   "sub_strand": "The Birth of Jesus Christ",
+   "sequence": 301,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "picture-read the birth of Jesus according to Luke 2:4-13 and retell the story,",
+    "role-play the birth of Jesus Christ,",
+    "listen and dance to a recorded Christmas carol ‘We wish you a Merry Christmas’,",
+    "sing a song related to Luke 2:13-14,",
+    "observe pictures of Jesus Christ’s parents and name each of them as they point at the pictures,",
+    "observe pictures or watch a video clip of angels worshipping Baby Jesus,",
+    "sing and dance to the song of the angels (Luke 2:13-14)."
+   ],
+   "key_inquiry_questions": [
+    "Why do we celebrate the birth of Jesus Christ?"
+   ],
+   "core_competences": "Communication is portrayed as learners listen actively and picture-read the birth of Jesus Christ.\nImagination and Creativity is demonstrated as learners come up with creative ways and role-play the birth of Jesus Christ.\nDigital Literacy is enhanced as learners interact with digital technology and watch a video clip of angels worshipping baby Jesus.",
+   "values": "Unity is exhibited as learners work together in groups. Link to other Activity Areas:\nCreative Activities: creative skills are reinforced as learners sing and role-play the birth of Jesus Christ.\nLanguage Activities: learner’s picture-read the Bible text and retell the story.",
+   "pcis": "Social cohesion is portrayed as learners in groups role play, sing, listen to, and dance to a recorded carol ‘We wish you a Merry Christmas.’",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.a",
+     "letter": "a",
+     "text": "retell the birth of Jesus Christ",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.b",
+     "letter": "b",
+     "text": "dramatise the birth of Jesus Christ",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.c",
+     "letter": "c",
+     "text": "express the joy of the angels through song and dance",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.d",
+     "letter": "d",
+     "text": "appreciate the birth of Jesus by participating in Christmas celebrations",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP",
+   "number": "3.2",
+   "strand": "The Early Life of Jesus Christ",
+   "sub_strand": "Jesus Christ in the Temple",
+   "sequence": 302,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "draw and colour the church,",
+    "in turns picture read Luke 2: 42-49,",
+    "observe pictures of Jesus Christ in the temple,",
+    "sequentially arrange flashcards on the events that took place when Jesus was left in the temple,",
+    "tell how Jesus Christ obeyed His parents,",
+    "share experiences of how they obey their parents at home,",
+    "list activities they engage in at Sunday or Sabbath School."
+   ],
+   "key_inquiry_questions": [
+    "Why did Jesus Christ visit the temple?"
+   ],
+   "core_competences": "Communication and Collaboration: the skill of speaking clearly and effectively is enhanced as learners picture read the Bible in turns.",
+   "values": "",
+   "pcis": "Peace Education is enhanced as learners share experiences of how they obey their parents at home. Link to Value: Peace: learners tell how Jesus obeyed His parents and share experiences of how they obey their parents at home. Link to other Activity Areas: Creative Activities: learners draw and colour the church.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: values: heading on the page but no text read; links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.a",
+     "letter": "a",
+     "text": "retell the story of Jesus Christ in the Temple",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.b",
+     "letter": "b",
+     "text": "obey their parents as portrayed by Jesus Christ",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.c",
+     "letter": "c",
+     "text": "take part in Sunday or Sabbath school activities",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.JESUS_CHRIST_IN_THE_TEMP.d",
+     "letter": "d",
+     "text": "desire to accompany their parents to church as portrayed by Jesus Christ",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST",
+   "number": "3.3",
+   "strand": "The Early Life of Jesus Christ",
+   "sub_strand": "Baptism of Jesus Christ",
+   "sequence": 303,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "mention occasions, they witnessed people being baptised in their churches,",
+    "in turns, picture-read Matthew 3:13-15,",
+    "watch a video clip on the Baptism of Jesus Christ,",
+    "mention the place where Jesus was baptised,",
+    "name the person who baptised Jesus Christ,",
+    "in groups draw and colour Jesus being baptised,",
+    "tell how Jesus showed humility during His baptism,",
+    "sing baptismal songs familiar to them."
+   ],
+   "key_inquiry_questions": [
+    "Why is the baptism of Jesus Christ important to Christians today?"
+   ],
+   "core_competences": "Digital Literacy: the skill of digital citizenship is demonstrated as learners act safely and responsibly in digital environments.",
+   "values": "Respect is nurtured as learners take turns to picture-read Matthew 3:13-15. Link to other Activity Areas: Creative Activities: learners draw, colour and sing baptismal songs familiar to them.",
+   "pcis": "Social Cohesion is portrayed as learners sing songs in different languages.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.a",
+     "letter": "a",
+     "text": "name the place where Jesus Christ was baptised",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.b",
+     "letter": "b",
+     "text": "identify the person who baptised Jesus Christ",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.BAPTISM_OF_JESUS_CHRIST.c",
+     "letter": "c",
+     "text": "practise humility in their interaction with others",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL",
+   "number": "3.4",
+   "strand": "The Early Life of Jesus Christ",
+   "sub_strand": "Wedding at Cana of Galilee",
+   "sequence": 304,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, tell a story of a wedding that they attended and what they liked most,",
+    "picture-read the story of changing water into wine; John 2:1-10,",
+    "watch a video clip on the miracle of changing water into wine,",
+    "tell how the servants responded to Jesus’ instructions in John 2:7-9,",
+    "sing a song related to this miracle,",
+    "share experiences of how they depend on God to provide for their needs,",
+    "in groups, role-play how they obey their parents and teachers, ,",
+    "draw and colour the six jars of water."
+   ],
+   "key_inquiry_questions": [
+    "What happened at Cana of Galilee?"
+   ],
+   "core_competences": "Imagination and Creativity: the skill of communicating ideas is enhanced as learners draw and colour the six jars of wine.\nSelf-efficacy: the skill of self-expression is demonstrated as learners confidently share experiences of how they depend on God to provide for their needs.",
+   "values": "Peace is exhibited as learners display tolerance and respect for each other as they engage in different activities. Link to other Activity Areas:\nCreative Activities: learners sing, draw, colour and role-play.\nMathematical Activities: learners draw six jars of water.\nLanguage Activities: learners read the Bible text and learn new words.",
+   "pcis": "Peace Education is enhanced as learners role-play how they obey their parents and teachers.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.a",
+     "letter": "a",
+     "text": "retell how Jesus changed water into wine",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.b",
+     "letter": "b",
+     "text": "obey instructions as portrayed in the wedding at Cana",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.WEDDING_AT_CANA_OF_GALIL.c",
+     "letter": "c",
+     "text": "desire to be obedient in their interaction with others",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I",
+   "number": "3.5",
+   "strand": "The Early Life of Jesus Christ",
+   "sub_strand": "Healing Simon’s mother-in-law",
+   "sequence": 305,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "share experiences of how they help learners in need,",
+    "role-play an instance where they helped a learner in need,",
+    "picture-read the miracle according to Luke 4:38- 39,",
+    "arrange pictures based on the miracle sequentially,",
+    "retell the miracle after watching a video clip,",
+    "role-play the healing of Simon’s mother-in-law,",
+    "write a thank you note to parents and others who help them in their daily lives,",
+    "sing thanksgiving songs to express gratitude to God."
+   ],
+   "key_inquiry_questions": [
+    "How did Simon’s mother-in-law express gratitude?"
+   ],
+   "core_competences": "Self-efficacy is enhanced as learners role-play an instance they helped a learner in need.",
+   "values": "Love is portrayed as learners write a, ‘thank you,’ note to parents and those who help them in their daily lives. Link to other Activity Areas: Creative Arts: creative skills are applied as learners role-play the healing of Simon’s mother-in-law. LEVEL Exceeding Meeting Expectations Approaching Below Expectations INDICATOR Expectations Expectations Ability to retell the birth Retells the birth of Retells the birth of Retells the birth of Jesus Retells the birth of of Jesus Christ. Jesus Christ in Jesus Christ. Christ but omits minor Jesus Christ but omits details. details. major details. Ability to take part in Frequently takes Takes part in Sunday Sometimes takes part in Takes part in Sunday Sunday school activities. part in Sunday school activities Sunday school activities school with continuous school activities. guidance. Ability to narrate the Narrates the Narrates the Miracles Narrates the Miracles of Narrates the Miracles Miracles of Jesus Christ. Miracles of Jesus of Jesus Christ. Jesus Christ but omits of Jesus Christ but Christ in details. minor details. omits major details. Ability to apply values Constantly applies Applies values Sometimes applies values Applies values acquired from the values acquired acquired from the acquired from the acquired from the miracles of Jesus Christ from the miracles miracles of Jesus miracles of Jesus Christ miracles of Jesus but to form harmonious of Jesus Christ to Christ to form to form harmonious with consistent relationships. form harmonious harmonious relationships. guidance. relationships. relationships.",
+   "pcis": "Problem-solving is demonstrated as learners share experiences of how they help those in need.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: values; links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.a",
+     "letter": "a",
+     "text": "retell the healing of Simon’s mother-in-law",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.b",
+     "letter": "b",
+     "text": "show gratitude to others as portrayed by Simon’s mother- in- law",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_EA.HEALING_SIMON_S_MOTHER_I.c",
+     "letter": "c",
+     "text": "appreciate Jesus’s power to heal the sick",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.CHRIST.SHARING",
+   "number": "4.1",
+   "strand": "Christian Values",
+   "sub_strand": "Sharing",
+   "sequence": 401,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "identify items that can be shared at home,"
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to share with others?"
+   ],
+   "core_competences": "Learning to Learn: the skill of developing relationships is enhanced as learners work in pairs and groups.\nImagination and Creativity: is exhibited as learners role-play the story of the little boy with two fish and five loaves.",
+   "values": "home as a family,\nin pairs mention items shared at b) practise the value of sharing home and school, at home and school,\nwatch or listen to the miracle in c) retell the story of the little John 6:1-14, boy with two fish and five\nrole-play the story of the little loaves, boy with two fish and five d) desire to keep the loaves, environment clean and avoid\ndraw and colour the two fish and five loaves, wastage.\nsing a song on sharing,\nkeep the environment clean (John 6:12-13). Unity is portrayed as learners work together in groups and take turns to perform different activities. Link to other Activity Areas: Creative Activities: learners sing a song on sharing. They also role-play the story of the little boy with two fish and five loaves.",
+   "pcis": "Social cohesion is portrayed as learners mention items shared at home and school, in pairs.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: values; links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.CHRIST.SHARING.a",
+     "letter": "a",
+     "text": "identify items they share at",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.CHRIST.OBEDIENCE",
+   "number": "4.2",
+   "strand": "Christian Values",
+   "sub_strand": "Obedience",
+   "sequence": 402,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs read Ephesians 6:1-3,"
+   ],
+   "key_inquiry_questions": [
+    "Why should you obey your"
+   ],
+   "core_competences": "Communication and Collaboration: is promoted as learners listen keenly to the song and speak clearly and effectively during Bible reading.\nLearning to Learn: is enhanced as learners share experiences on the benefits of obeying parents.",
+   "values": "(4 lessons) a) list the importance of\nin groups mention why they should parents? obeying parents, obey their parents, b) practise obedience at\nsay the benefits of obeying parents, home as guided by the\nin pairs tell how they obey their scriptures, parents at home, c) exercise obedience in\nlisten to and sing a song on obedience, day-to-day life.\nmemorise Ephesians 6:2-3. Respect is enhanced as learners appreciate each other’s opinions and take turns to share experiences. Link to other Activity Areas:\nCreative Activities are reinforced as learners listen and sing songs on obedience.\nLanguage Activities: speaking skills are enhanced as learners engage in activities such as mentioning why they should obey their parents.",
+   "pcis": "Social Cohesion: is enhanced as learners sing songs on obedience.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 4; no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     28
+    ]
+   },
+   "outcomes": [],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.CHRIST.HONESTY",
+   "number": "4.3",
+   "strand": "Christian Values",
+   "sub_strand": "Honesty",
+   "sequence": 403,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "game read Ephesians 4:25,"
+   ],
+   "key_inquiry_questions": [
+    "Why is it bad to lie?"
+   ],
+   "core_competences": "Citizenship: the skill of information and communication is enhanced as learners share stories on instances they practised punctuality.",
+   "values": "(4 lessons) a) state reasons for telling\nin groups say why they should the truth, always speak the truth, b) demonstrate honesty by\nsay why they should not steal or not stealing other pick items that do not belong to people’s items, them, c) practise punctuality at\nrole-play situations of honesty school and home, while dealing with other people’s d) desire to be truthful in items, their daily lives.\nsing a song on truthfulness,\nstory tell instances they took lost and found items to the teacher,\nmention reasons for getting home and school on time (punctuality).\nResponsibility is demonstrated as learners become accountable of their own actions and respect other people’s items.\nPeace is enhanced as learners avoid hurting others by not taking their items without permission. Link to other Activity Areas: Language Activities: learners speak clearly and effectively when telling stories on instances took lost and found items to the teacher.",
+   "pcis": "Social Cohesion: integrity is promoted as learners in groups say why they should speak the truth always.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 4; no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.CHRIST.THANKFULNESS",
+   "number": "4.4",
+   "strand": "Christian Values",
+   "sub_strand": "Thankfulness",
+   "sequence": 404,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "say why they should thank their parents,"
+   ],
+   "key_inquiry_questions": [
+    "Why should you thank your"
+   ],
+   "core_competences": "Imagination and Creativity: the skill of coming up with new ideas is exhibited as they compose poems and role-play how to thank parents.\nCommunication and Collaboration: the skill of speaking clearly and effectively is portrayed as learners say why they should thank their parents.",
+   "values": "a) mention three ways of\nin pairs share when to thank parents, parents or (4 lessons) expressing gratitude to\nrole-play how to thank parents, guardians? their parents or\ncompose and recite a poem on thanking guardians, their parents, b) practise thankfulness at\nsing a song about praising God for the gift home as guided by the of parents or guardians, Bible,\nwrite 1Thessalonians 5:18 on flashcards c) desire to be thankful in and recite it, daily life.\nwrite flashcards on why they should be thankful to their parents or guardians and display the cards in class. Respect is demonstrated as learners take turns to role-play and listen to each other’s opinions. Link to other Activity Areas: Language Activities: learners recite the Bible verses and learn new words.",
+   "pcis": "Social cohesion: the importance of having guiding values in life is enhanced as learners become thankful to their parents.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 4; no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     31,
+     32
+    ]
+   },
+   "outcomes": [],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.THE_CH.A_HOUSE_OF_GOD",
+   "number": "5.1",
+   "strand": "The Church",
+   "sub_strand": "A House of God",
+   "sequence": 501,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs mention ways they respect the church as a place of worship,",
+    "list the benefits of going to church,",
+    "list the number of times they go to church,",
+    "role-play activities they do in church (e.g. praying, reading the Bible, singing, dancing),",
+    "sing and dance to the song in Psalms 100:4 (I will enter His gates with thanksgiving........)."
+   ],
+   "key_inquiry_questions": [
+    "Why do you go to Church?",
+    "Why should you respect the Church?"
+   ],
+   "core_competences": "Imagination and Creativity: the skill of communication and self-expression is exhibited as learners role-play activities they do in church. Link to Pertinent and Contemporary Issues: Spiritual Awareness is enhanced as learners attend and participate in Sunday or Sabbath school activities. Link to Values: Responsibility is demonstrated as learners share roles during role-plays and take on different characters. Link to other Activity Areas:\nMathematical Activities: learners record the number of times they go to church.\nCreative Activities: learner’s role play, sing and dance to the song in Psalms 100:4.",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: values: heading on the page but no text read; pcis: heading on the page but no text read; links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     34
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.THE_CH.A_HOUSE_OF_GOD.a",
+     "letter": "a",
+     "text": "recognise the Church as a place of worship and respect it",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_CH.A_HOUSE_OF_GOD.b",
+     "letter": "b",
+     "text": "demonstrate responsibility by serving God in Church",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_CH.A_HOUSE_OF_GOD.c",
+     "letter": "c",
+     "text": "desire to grow in faith by attending Sunday or Sabbath School",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER",
+   "number": "5.2",
+   "strand": "The Church",
+   "sub_strand": "A House of Prayer",
+   "sequence": 502,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "picture-read Mathew 21:13,",
+    "in groups compose and recite simple prayers,",
+    "pray for family members,",
+    "list the number of times they pray at home or in Sunday or /Sabbath School,",
+    "say simple prayers before and after taking meals and before they leave for home."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to pray always?"
+   ],
+   "core_competences": "Communication and Collaboration: the skill of listening critically and understanding concepts is exhibited as learners compose and say simple prayers in groups.\nImagination and Creativity: the skill of exploration is portrayed as learners compose simple prayers.",
+   "values": "Love is demonstrated as learners say simple prayers for family members. Link to other Activity Areas:\nCreative Activities: creative skills are reinforced as learners compose simple prayers.\nMathematical Activities: learners record the number of times they pray at home or in Sunday school.",
+   "pcis": "Social Cohesion: living together in harmony is enhanced as learners in groups compose simple prayers and recite them.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
+    "design": "Grade 1-3 CRE - Revised.pdf",
+    "version": "First Published in 2017; Revised 2024",
+    "pages": [
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER.a",
+     "letter": "a",
+     "text": "recite simple thanksgiving prayers",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER.b",
+     "letter": "b",
+     "text": "practise saying simple prayers at different times of the day",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.THE_CH.A_HOUSE_OF_PRAYER.c",
+     "letter": "c",
+     "text": "desire to pray always as taught by Jesus Christ",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

@@ -13,6 +13,8 @@ outcomes, marked 'kicd_read' instead of 'kicd_verified', with the question in de
 """
 import json, re, sys, pathlib
 
+# Learning areas the owner chose not to load (11 Nov 2026: "dont do islamic and hindu"): read, but never built here.
+SKIP = {'ire', 'hre'}
 SRCS = [pathlib.Path(a) for a in (sys.argv[1:] or ['out'])]
 DST = pathlib.Path(__file__).resolve().parent.parent / 'curriculum'
 
@@ -25,7 +27,7 @@ def words(xs):
     return [re.sub(r'\s+', ' ', str(x)).strip() for x in (xs or []) if str(x).strip()]
 
 total = {'files': 0, 'sub_strands': 0, 'outcomes': 0, 'kicd_read': 0}
-for f in sorted(x for src in SRCS for x in src.glob('*/g*.json')):
+for f in sorted(x for src in SRCS for x in src.glob('*/g*.json') if x.parent.name not in SKIP):
     d = json.loads(f.read_text())
     subs = []; place = {}
     for s in d['sub_strands']:
@@ -46,6 +48,7 @@ for f in sorted(x for src in SRCS for x in src.glob('*/g*.json')):
         # outcomes, lettered a, b, c each time: the second set gets its own codes (".a_2").
         outs, used = [], {}
         for o in s['outcomes']:
+            if not clean_outcome(o.get('text') or ''): continue   # a blank line read as an outcome (Creative Activities G2)
             code = o['code']
             used[code] = used.get(code, 0) + 1
             if used[code] > 1: code = code.rstrip('_') + '_' + str(used[code])

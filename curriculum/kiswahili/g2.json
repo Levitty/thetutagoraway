@@ -1,0 +1,2557 @@
+{
+ "framework": "cbc",
+ "subject_key": "kiswahili",
+ "grade": 2,
+ "source": "KICD English Language, not printed (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 40,
+  "outcomes": 155,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO",
+   "number": "1.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Maamkuzi na Maagano (Theme 1: Shuleni)",
+   "sequence": 111,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua maneno yanayotumiwa katika maamkuzi mbalimbali ya nyakati za siku (habari ya asubuhi, habari ya mchana, Habari ya jioni, siku njema) kutoka kwenye chati, vitabu, kadi maneno, mti maneno, michoro, picha au vifaa vya kidijitali akishirikiana na wenzake,",
+    "kutazama picha za watu wakisalimiana na kuagana akishirikiana na wenzake kujadili picha hizo,",
+    "kutazama video inayoonyesha watu wakitumia maamkuzi na maagano ya nyakati za siku,",
+    "kuigiza na mwenzake maamkuzi na maagano mbalimbali."
+   ],
+   "key_inquiry_questions": [
+    "Tunaamkuana vipi wakati wa asubuhi, mchana na jioni?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki kikamilifu katika kazi ya kikundi na kujadiliana kuhusu maamkuzi na maagano ya nyakati za siku.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kutazama watu wakisalimiana na kuagana.\nKujiamini: mwanafunzi anapoigiza ipasavyo maamkuzi na maagano ya nyakati mbalimbali.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapojadili picha za watu wanaoamkuana na kuagana.",
+   "values": "Heshima: mwanafunzi anapowaamkua wengine kwa heshima.\nUpendo: mwanafunzi anapowaamkua na kuwaaga wenzake.\nAmani: mwanafunzi anapowaamkua na kuwaaga wenzake.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anapojumuika na wenzake katika kuigiza maamkuzi na maagano darasani, shuleni na katika mazingira yake.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya maamkuzi na maagano aliyojifunza katika somo la Kiwahili na ujifunzaji wa dhana hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     2,
+     3
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.a",
+     "letter": "a",
+     "text": "kutambua maamkuzi na maagano ya nyakati za siku",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.b",
+     "letter": "b",
+     "text": "kuamkua na kuitikia maamkuzi na maagano ya nyakati za siku",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T1_MAAMKUZI_NA_MAAGANO.c",
+     "letter": "c",
+     "text": "kufurahia kuamkua na kuagana ili kujenga mshikamano wa kijamii",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM",
+   "number": "1.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma Ufahamu Kusoma kifungu. (Theme 1: Shuleni)",
+   "sequence": 121,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusoma kifungu chepesi cha maneno 31 - 34 na kutambua msamiati wa suala lengwa akiwa peke yake, au na wenzake,",
+    "kutumia msamiati wa suala lengwa ipasavyo katika mawasiliano,",
+    "kutabiri ujumbe wa kifungu kwa kutazama picha kwenye kitabu, vifaa vya kidijitali au chati akiwa na wenzake,",
+    "kutabiri kitakachotokea katika hadithi akizingatia picha kwenye kifungu akishirikiana na wenzake,",
+    "kueleza ujumbe wa kifungu chepesi cha ufahamu akiwa na wenzake,",
+    "kuthibitisha utabiri wake kuhusu hadithi baada ya kuisoma,",
+    "kueleza mafunzo yanayotokana na kifungu chepesi cha ufahamu akishirikiana na wenzake,",
+    "kumsomea mzazi au mlezi kifungu kuhusu suala lengwa."
+   ],
+   "key_inquiry_questions": [
+    "Kusoma kifungu ili ufahamu ujumbe unafanya nini?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika shughuli za kikundi na kuchangia katika kutambua msamiati, kutabiri na kujibu maswali.\nUwazaji wa kina na utatuzi wa matatizo: mwanafunzi anapotoa utabiri kutokana na picha na kuchangia katika kujibu maswali.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kijiditali kusoma hadithi na kutazama picha.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake kwa kikundi kujadiliana.\nUpendo: mwanafunzi anaposhirikiana na wengine katika matumizi ya vifaa vya kidijitali darasani.\nUwajibikaji: mwanafunzi anapoeleza mafunzo kutokana na kifungu kuhusu suala lengwa.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika kusoma hadithi na pia kujadili picha ukakamavu wake unaimarika.\nUtunzaji na matumizi yafaayo ya vitu vinavyopatikana shuleni: mwanafunzi anaposoma kifungu kuhusu suala lengwa",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya kusoma kwa ufahamu na aliyojifunza katika somo hili na ujifunzaji wa dhana hiyo katika somo la English Language Activitie na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     4,
+     5
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.a",
+     "letter": "a",
+     "text": "kutambua msamiati kuhusu suala lengwa katika kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.b",
+     "letter": "b",
+     "text": "kutabiri yatakayotokea katika kifungu chepesi cha ufahamu kwa kuzingatia picha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.c",
+     "letter": "c",
+     "text": "kueleza ujumbe wa kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.d",
+     "letter": "d",
+     "text": "kueleza mafunzo yanayotokana na kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T1_KUSOMA_UFAHAMU_KUSOM.e",
+     "letter": "e",
+     "text": "kuchangamkia kusoma vifungu vya ufahamu ili kuimarisha stadi ya kusoma",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUANDI.T1_HATI_NADHIFU",
+   "number": "1.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Hati nadhifu: (Theme 1: Shuleni)",
+   "sequence": 131,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sentensi: Maumbo yanayofaa, kutoacha nafasi baina ya herufi katika neno, kuacha nafasi kati ya neno lingine),"
+   ],
+   "learning_experiences": [
+    "kutambua hati nadhifu kwenye kitabu, chati au kifaa cha kidijitali akiwa na wenzake,",
+    "kujadili na wenzake kuhusu hati nadhifu kwenye kitabu, chati au kifaa cha kidijitali,",
+    "kuandika sentensi fupi kuhusu suala lengwa akizingatia hati nadhifu,",
+    "kuwasilisha darasani sentensi zake ili wenzake wamtolee maoni,",
+    "kumwandikia mzazi au mlezi sentensi fupi kuhusu suala lengwa akizingatia hati nadhifu."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni mambo gani unayozingatia wakati wa kuandika?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapojadiliana na wenzake kuhusu hati nadhifu. Pia, anaposhiriki kikamilifu kuandika akiwa na wenzake katika kikundi.\nUjuzi wa kidijitali: mwanafunzi anapotambua hati nadhifu katika kifaa cha kidijitali.\nKujiamini: mwanafunzi anapoandika akizingatia hati nadhifu.",
+   "values": "Upendo: mwanafunzi anaposhirikiana na wenzake na kuheshimu maoni yao.\nHeshima: mwanafunzi anapowatambua na kuwathamini wenzake wakati wa kushiriki katika shughuli ya kuandika.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika kazi ya kikundi.",
+   "pcis": "Mahusiano ya kijamii: mwanafunzi anapojadili na wenzake kuhusu hati nadhifu uwezo wake wa uandishi bora unakuzwa.\nUsalama mtandaoni: mwanafunzi azingatie hatua za kiusalama anapotambua hati nadhifu kwenye kifaa cha kidijitali.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya kuandika kwa hati nadhifu anayojifunza katika somo hili na ujifunzaji wa dhana hiyo katika somo la English Language Activitie na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     6,
+     7
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUANDI.T1_HATI_NADHIFU.a",
+     "letter": "a",
+     "text": "kutambua hati nadhifu katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T1_HATI_NADHIFU.b",
+     "letter": "b",
+     "text": "kuandika sentensi akizingatia hati nadhifu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T1_HATI_NADHIFU.c",
+     "letter": "c",
+     "text": "kufurahia kuandika akizingatia hati nadhifu",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.SARUFI.T1_MATUMIZI_YA_WEWE_NA_",
+   "number": "1.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Matumizi ya Wewe na Nyinyi (Theme 1: Shuleni)",
+   "sequence": 141,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusikiliza kifungu au wimbo unaohusu nafsi ya pili (wewe na nyinyi), kutoka kwa mwalimu au kifaa cha kidijitali,",
+    "kusoma vifungu vilivyo na nafsi ya pili (wewe na nyinyi) akishirikiana na wenzake,",
+    "kutumia nafsi ya pili (wewe na nyinyi) umoja na wingi kwa kuigiza mazungumzo na wenzake katika kikundi (k.m: Wewe unasoma - Nyinyi mnasoma; Wewe ulienda shuleni - Nyinyi mlienda shuleni.),",
+    "kujaza nafasi kwa kutumia wewe na nyinyi,",
+    "kutaja zoezi la nafsi ya pili kwenye tarakilishi kwa kuburura majibu sahihi na kujaza nafasi akielekezwa na mwalimu,",
+    "kuwasiliana na mzazi au mlezi wake kwa kutumia nafsi ya pili (wewe na nyinyi)."
+   ],
+   "key_inquiry_questions": [
+    "Ni neno gani unaloweza kutumia kuwataja wenzako bila kutaja majina yao?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake na kutoa mifano kwa kutumia wewe na nyinyi.\nUbunifu: mwanafunzi anapoigiza matumizi ya wewe na nyinyi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kusikiliza matumizi ya wewe na nyinyi.\nKujiamini: mwanafunzi anapoweza kutumia wewe na nyinyi ifaavyo.",
+   "values": "Uwajibikaji: mwanafunzi anashirikiana na wenzake katika kuigiza matumizi ya wewe na mimi na kutekeleza majukumu yake ipasavyo.\nHeshima: mwanafunzi anapothamini maoni ya wenzake na kuwapatia nafasi kushiriki katika majadiliano.\nUpendo: mwanafunzi anapokuwa tayari kushirikiana na wenzake katika shughuli za ujifunzaji.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutoka jamii mbalimbali kuigiza mazungumzo ya nafsi ya pili wewe na nyinyi.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya matumizi ya wewe na nyinyi aliyojifunza katika somo hili na ujifunzaji wa dhana hiyo katika somo la English Language Activitie na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     8,
+     9
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.SARUFI.T1_MATUMIZI_YA_WEWE_NA_.a",
+     "letter": "a",
+     "text": "kutambua wewe na nyinyi katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T1_MATUMIZI_YA_WEWE_NA_.b",
+     "letter": "b",
+     "text": "kutumia wewe na nyinyi ipasavyo katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T1_MATUMIZI_YA_WEWE_NA_.c",
+     "letter": "c",
+     "text": "kufurahia kutumia wewe na nyinyi katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA",
+   "number": "2.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Matamshi Bora. (Theme 2: Haki zangu)",
+   "sequence": 211,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sauti: /p/, /f/, /v/"
+   ],
+   "learning_experiences": [
+    "kutambua silabi kwenye maneno yenye sauti lengwa katika sentensi akiwa na wenzake,",
+    "kusikiliza silabi lengwa zikitamkwa na mwalimu, mgeni mwalikwa au kifaa cha kidijitali,",
+    "kutamka silabi za sauti lengwa akiwa peke yake au na wenzake,",
+    "kusikiliza maneno yenye sauti lengwa yakitamkwa na mwalimu, mgeni mwalikwa au katika kifaa cha kidijitali,",
+    "kutamka maneno yenye sauti lengwa yaliyotamkwa na mwalimu, mgeni mwalikwa au kifaa cha kidijitali akiwa peke yake, au na wenzake akizingatia matamshi bora,",
+    "kusikiliza sentensi zenye sauti lengwa zikisomwa na mwalimu, mgeni mwalikwa au kifaa cha kidijitali,",
+    "kusoma sentensi za sauti lengwa zilizosomwa na mwalimu, mgeni mwalikwa au katika kifaa cha kidijitali akishirikiana na wenzake kwa kuzingatia matamshi bora,",
+    "kujirekodi kwa kutumia kifaa cha kidijitali akitamka sentensi za sauti lengwa na kuwatumia wenzake ili watazithmini,",
+    "kukariri mashairi na nyimbo katika tamasha za mziki au kwenye hafla shuleni ili kuboresha matamshi kwa kusaidiwa na mwalimu,",
+    "kuwasiliana na mzazi au mlezi wake kwa kutumia maneno yenye sauti lengwa."
+   ],
+   "key_inquiry_questions": [
+    "Je, kwa nini ni vizuri kutamka maneno vizuri tunapozungumza?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kutambua na kutamka maneno yenye sauti lengwa.\nUjuzi wa kidijitali: mwanafunzi anapojirekodi akisoma sentensi na kutambua jinsi alivyotamka sauti lengwa.\nKujiamini: mwanafunzi anapotamka sauti lengwa ipasavyo darasani.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika kikundi kutambua na kutamka sauti lengwa katika sentensi.\nHeshima: mwanafunzi anapoheshimu matamshi ya wenzake katika shughuli za kikundi na kuwakosoa kwa heshima.",
+   "pcis": "Usalama mtandaoni: mwanafunzi anapotumia kifaa cha kidijitali kujirekodi na kutumia wenzake azingatie hatua za kiusalama.\nMshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake darasani kutamka sauti lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya matamshi bora, stadi anayojifunza katika somo hili na ujifunzaji wa dhana hiyo katika somo la English Language Activitie na Indigenous Language Activities",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     10,
+     11,
+     12
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.a",
+     "letter": "a",
+     "text": "kutambua silabi za sauti lengwa katika maandishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.b",
+     "letter": "b",
+     "text": "kutamka ipasavyo silabi za sauti lengwa katika maandishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.c",
+     "letter": "c",
+     "text": "kutamka maneno mepesi yanayotokana na sauti lengwa katika maandishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.d",
+     "letter": "d",
+     "text": "kusoma ipasavyo sentensi nyepesi zenye sauti lengwa kwa matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T2_MATAMSHI_BORA.e",
+     "letter": "e",
+     "text": "kuchangamkia usomaji bora wa maneno yanayotumia sauti lengwa katika mawasiliano",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA",
+   "number": "2.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa ufasaha. (Theme 2: Haki zangu)",
+   "sequence": 221,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sauti: /p/, /f/, /v/"
+   ],
+   "learning_experiences": [
+    "kutambua maneno yenye sauti lengwa katika kifungu chepesi kuhusu suala lengwa akiwa peke yake, au na wenzake,",
+    "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kuhusu haki za mtoto (k.v. upendo, mavazi, makao, chakula) kwa kuzingatia matamshi bora akishirikiana na wenzake,",
+    "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa sauti inayosikika akiwa peke yake, au na wenzake,",
+    "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia kasi ifaayo (maneno 33 kwa dakika) na kwa kuzingatia viakifishi,",
+    "kusoma kifungu chepesi chenye sauti lengwa kwa kuzingatia ishara zifaazo akiwa peke yake, au na wenzake,",
+    "kusoma hadithi kutoka kwenye kitabu, kifaa cha kidijtali akiwa peke yake, au na wenzake, akizingatia sauti inayosikika, matamshi bora, kasi ifaayo na ishara zinazofaa,",
+    "kumsomea mzazi au mlezi kifungu chepesi chenye sauti lengwa akizingatia matamshi bora, sauti inayosikika, kasi na ishara zifaazo."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni mambo gani unayozingatia ili kusoma kwa ufasaha?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi na kuchangia kikamilifu kutambua sauti na kusoma maneno na sentensi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kusoma maneno na sentensi zenye sauti lengwa.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anaposhirikiana na wenzake katika shughuli za kikundi na kutoa mchango wao.",
+   "values": "Umoja: mwanafunzi anapotangamana na kushirikiana na wenzake katika shughuli za kikundi.\nHeshima: mwanafunzi anapoheshimu maoni ya wenzake katika shughuli za kikundi.\nUwajibikaji: mwanafunzi anapochukua majukumu mbalimbali katika kazi ya kikundi.",
+   "pcis": "Haki za watoto: mwanafunzi anaposoma kifungu chepesi kuhusu haki za watoto akizingatia matamshi bora, kasi ifaayo, sauti inayosikika na ishara zifaazo.\nAfya ya mtu binafsi: mwanafunzi anaposoma kifungu kinachuzungumzia suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma anayojifunza katika somo hili na ujifunzaji wa dhana hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.a",
+     "letter": "a",
+     "text": "kutambua maneno yenye sauti lengwa katika kifungu chepesi cha hadithi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.b",
+     "letter": "b",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.c",
+     "letter": "c",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa sauti inayosikika",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.d",
+     "letter": "d",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia kasi ifaayo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.e",
+     "letter": "e",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia ishara zifaazo",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T2_KUSOMA_KWA_UFASAHA.f",
+     "letter": "f",
+     "text": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUANDI.T2_HATI_NADHIFU_HERUFI_",
+   "number": "2.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Hati Nadhifu Herufi Kubwa (Theme 2: Haki zangu)",
+   "sequence": 231,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua mpangilio ufaao wa herufi kubwa katika matini (k.v. kadi maneno, mti maneno, picha, chati, kitabu, kifaa cha kidijitali, n.k.) akiwa peke yake, au na wenzake,",
+    "kunakili maneno na sentensi kuhusu mada lengwa (k.v upendo, kupata elimu, chakula, mavazi, makazi) kwa kuzingatia mpangilio ufaao wa herufi kubwa,",
+    "kutunga na kuandika sentensi fupi akizingatia mpangilio ufaao wa herufi kubwa,",
+    "kushirikiana na wenzake kutathmini sentensi walizotunga,",
+    "kumwandikia mzazi au mlezi maneno kwa kutumia mpangilio ufaao wa herufi kubwa na hati nadhifu."
+   ],
+   "key_inquiry_questions": [
+    "Je herufi kubwa huwa na sifa gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapofaulu kuwaonyesha wenzake herufi kubwa ilipotumiwa katika maneno na sentensi. Pia anaposhiriki kutambua na kuandika herufi kubwa katika kikundi.\nUjuzi wa kidijitali: mwanafunzi anapoandika herufi kubwa katika maneno na sentensi akitumia kifaa cha kidijitali.\nHamu ya ujifunzaji: mwanafunzi anapomwandikia mlezi au mzazi wake maneno kwa kutumia herufi kubwa ipasavyo.",
+   "values": "Upendo: mwanafunzi anaposhirikiana na wenzake katika kikundi na kuheshimu maoni yao.\nHeshima: mwanafunzi anapowatambua na kuwathamini wenzake wakati wa kushiriki katika shughuli za kuandika.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika kazi ya kikundi.\nMasuala mtambuko:\nUtunzi na usalama wa watoto: mwanafunzi anaponakili maneno na sentensi kuhusu haki za watoto kwa kuzingatia mpangilio ufaao wa herufi.",
+   "pcis": "",
+   "links": "Mwanafunzi anaweza kuhusisha matumizi ya herufi kubwa katika somo hili na anayojifunza katika somo hili na ujifunzaji wa dhana hiyo katika somo la English Language Activitie na Indigenous Language Activities.",
+   "design_notes": "Second read left this for a person to confirm: pcis: not in the design.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUANDI.T2_HATI_NADHIFU_HERUFI_.a",
+     "letter": "a",
+     "text": "kutambua mpangilio ufaao wa herufi kubwa katika matini",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T2_HATI_NADHIFU_HERUFI_.b",
+     "letter": "b",
+     "text": "kuandika herufi kubwa ipasavyo katika maneno na sentensi",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T2_HATI_NADHIFU_HERUFI_.c",
+     "letter": "c",
+     "text": "kufurahia kutumia herufi kubwa ipasavyo katika maneno na sentensi ili kuboresha mawasiliano",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI",
+   "number": "2.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Umoja na Wingi wa Vifungu (Theme 2: Haki zangu)",
+   "sequence": 241,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua vifungu vya maneno mawili katika umoja na wingi katika matini mbalimbali, kadi maneno, mti maneno, vifaa vya kidijitali,",
+    "kuandika vifungu vya maneno mawili katika umoja na wingi akishirikiana na wenzake. (k.v chakula changu-vyakula vyetu)",
+    "kujaza nafasi kwa kukamilisha vifungu vya maneno katika umoja na wingi akishirikiana na wenzake,",
+    "kushiriki katika mchezo wa kupanga kadi za vifungu vya maneno akiambatanisha umoja na wingi,",
+    "kumwonyesha mzazi au mlezi wake vifungu vya maneno alivyoviandika kwa umoja na wingi."
+   ],
+   "key_inquiry_questions": [
+    "Umoja na wingi wa vifungu huwa na sifa gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi kuandika vifungu vya maneno.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapotambua vifungu vya maneno katika umoja na wingi.\nKujiamini: mwanafunzi anapofaulu kuandika vifungu vya maneno katika umoja na wingi.",
+   "values": "Upendo: mwanafunzi anaposhirikiana na wenzake katika kikundi kuandika vifungu vya maneno katika umoja na wingi.\nUwajibikaji: mwanafunzi anapotumia na kutunza vifaa vya kidijitali ipasavyo.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli ya kuandika vifungu vya maneno mawili katika umoja na wingi.\nHaki za watoto: mwanafunzi anaposhiriki kuandika sentensi kuhusu haki za watoto.",
+   "links": "Mwanafunzi anaweza kuhusisha matumizi ya umoja na wingi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English Language Activitie na Indigenous Language Activities. .",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.a",
+     "letter": "a",
+     "text": "kutambua vifungu vya maneno mawili katika umoja na wingi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.b",
+     "letter": "b",
+     "text": "kuandika vifungu vya maneno mawili katika umoja na wingi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T2_UMOJA_NA_WINGI_WA_VI.c",
+     "letter": "c",
+     "text": "kuchangamkia kutumia vifungu vya maneno katika umoja na wingi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA",
+   "number": "3.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Maneno ya Heshima na Adabu (Theme 3: Lishe bora)",
+   "sequence": 311,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Hodi, karibu, tafadhali, ninaomba, nisamehe na nashukuru."
+   ],
+   "learning_experiences": [
+    "kutambua maneno ya heshima na adabu yanayotumiwa katika jamii,",
+    "kujadili ni lini maneno husika yanatumiwa katika mawasiliano akiwa na wenzake,",
+    "kutazama michoro mbalimbali na kujadili neno linalofaa kutumiwa katika miktadha husika,",
+    "kutazama video kuhusu matumizi ya maneno ya heshima na adabu,",
+    "kuambatanisha matumizi ya maneno ya heshima na adabu katika mazungumzo na hisia katika maigizo,",
+    "kuwasiliana na mzazi au mlezi kwa kutumia maneno ya adabu na heshima ifaavyo."
+   ],
+   "key_inquiry_questions": [
+    "Maneno ya adabu huwa na sifa gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki na kuchangia kikamilifu katika majadiliano kuhusu maneno ya heshima na adabu.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kutazama maigizo kuhusu vitendo vya heshima na adabu.\nUbunifu: mwanafunzi anapoigiza kuhusu matumizi ya maneno ya heshima na adabu.\nUraia: mwanafunzi anaposhirikiana na wenzake katika kikundi kujadili matumizi ya maneno ya heshima na adabu.",
+   "values": "Heshima: mwanafunzi anapotumia maneno ya heshima na adabu.\nUwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali anavyotumia kujifunzia.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anapowapa wenzake nafasi ya kutoa hoja zao katika kikundi na pia anapotumia maneno ya heshima na adabu katika mawasiliano.\nUsalama mtandaoni: mwanafunzi anapotazama video kuhusu matumizi ya maneno ya heshima na adabu azingatie hatua za kiusalama.",
+   "links": "Mwanafunzi anaweza kuhusisha matumizi ya maneno ya heshima na adabu katika somo hili na ujifunzaji wa dhana hiyo katika somo la English Language Activitie na Indigenous Language Activities.\nMwanafunzi anaweza kuhusisha suala hili la lishe bora na masuala yanayofunzwa katika somo la Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     19,
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA.a",
+     "letter": "a",
+     "text": "kutambua maneno ya heshima na adabu yanayotumiwa katika jamii",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA.b",
+     "letter": "b",
+     "text": "kutumia ipasavyo maneno ya heshima na adabu katika mawasiliano akiambatanisha na hisia zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T3_MANENO_YA_HESHIMA_NA.c",
+     "letter": "c",
+     "text": "kuthamini matumizi ya maneno ya heshima na adabu katika mawasiliano ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K",
+   "number": "3.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa ufahamu Kusoma kifungu (Theme 3: Lishe bora)",
+   "sequence": 321,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusoma kifungu chepesi cha maneno 35 -38 na kutambua msamiati wa suala lengwa (afya, nguvu, protini, wanga, vitamini) akishirikiana na wenzake,",
+    "kutabiri kitakachotokea katika hadithi akizingatia picha kwenye kifungu akishirikiana na wenzake,",
+    "kutabiri ujumbe wa kifungu cha hadithi kwa kutazama picha kwenye kitabu, vifaa vya kidijitali au chati akishirikiana na wenzake,",
+    "kueleza ujumbe wa kifungu chepesi cha hadithi akiwa na wenzake,",
+    "kuthibitisha utabiri wake kuhusu hadithi baada ya kuisoma,",
+    "kutumia msamiati wa suala lengwa ipasavyo katika mawasiliano,",
+    "kueleza mafunzo yanayotokana na kifungu chepesi cha ufahamu akiwa na wenzake,",
+    "kumsomea mzazi au mlezi kifungu chepesi cha hadithi kuhusu suala lengwa."
+   ],
+   "key_inquiry_questions": [
+    "Je unazingatia nini ilikupata ujumbe katika ufahamu?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika shughuli za kikundi na kuchangia kikamilifu katika kueleza ujumbe wa kifungu.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kijiditali kutazama picha na kusoma kifungu.\nHamu ya ujifunzaji: mwanafunzi anapomsomea mzazi au mlezi wake na kumweleza ujumbe katika kifungu chepesi.\nUwazaji kwa kina na utatuzi wa matatizo: mwanafunzi anapotabiri na kufikia uamuzi wa mafunzo anayopata kwenye kifungu cha ufahamu.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika kazi ya kikundi kujadili ujumbe na kutabiri kitakachotokea kwenye hadithi.\nUpendo: mwanafunzi anaposhirikiana na wenzake katika matumizi ya vifaa vya kidijitali darasani.\nUwajibikaji: mwanafunzi anapotunza kifaa cha kidijitali anachotumia kujifunzia.",
+   "pcis": "Elimu ya afya ya kujikinga: mwanafunzi anaposoma kifungu chepesi cha hadithi na kutumia msamiati kuhusu lishe bora, ujuzi wake wa kujikinga dhidi ya maradhi mbalimbali unapanuka.\nAfya ya mtu binafsi: mwanafunzi anaposoma matini kuhusu suala lengwa kuhusu lishe bora.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufahamu na katika somo hili na ujifunzaji wa dhana hiyo katika somo la English Language Activitie na Indigenous Language Activities. Mwanafunzi anaweza kuhusisha suala hili la lishe bora na masuala yanayofunzwa katika somo la Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.a",
+     "letter": "a",
+     "text": "kutambua msamiati kuhusu suala lengwa katika kifungu chepesi cha hadithi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.b",
+     "letter": "b",
+     "text": "kutabiri yatakayotokea katika kifungu chepesi cha hadithi kwa kuzingatia picha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.c",
+     "letter": "c",
+     "text": "kueleza ujumbe wa kifungu chepesi cha hadithi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.d",
+     "letter": "d",
+     "text": "kueleza mafunzo yanayotokana na kifungu chepesi cha hadithi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T3_KUSOMA_KWA_UFAHAMU_K.e",
+     "letter": "e",
+     "text": "kuchangamkia kusoma vifungu vya ufahamu ili kuimarisha stadi ya kusoma",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUANDI.T3_MPANGILIO_WA_HERUFI_",
+   "number": "3.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Mpangilio wa Herufi Ndogo (Theme 3: Lishe bora)",
+   "sequence": 331,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua mpangilio ufaao wa herufi ndogo katika maandishi kwenye kadi maneno, chati, daftari au kifaa cha kidijitali,",
+    "kuwaonyesha wenzake mpangilio ufaao wa herufi ndogo kwenye kadi maneno, kitabu, chati au kifaa cha kidijitali,",
+    "kunakili kifungu akizingatia mpangilio ufaao wa herufi ndogo akishirikiana na wenzake,",
+    "kutumia kifaa cha kidijitali kuandika kifungu akizingatia mpangilio ufaao wa herufi ndogo,",
+    "kutunga kifungu kuhusu suala lengwa akizingatia mpangilio unaofaa."
+   ],
+   "key_inquiry_questions": [
+    "Kwa nini ni vizuri kuandika herufi ndogo ipasavyo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi kutambua na kuandika akizingatia mpangilio ufaao wa herufi ndogo.\nUjuzi wa kidijitali: mwanafunzi anapofaulu kuandika kifungu cha maneno akitumia kifaa cha kidijitali.\nKujiamini: mwanafunzi anapofaulu kuandika akizingatia mpangilio ufaao wa herufu ndogo.",
+   "values": "Upendo: mwanafunzi anaposhirikiana na wenzake katika kazi za kikundi na kuheshimu maoni yao.\nHeshima: mwanafunzi anapowatambua na kuthamini maoni ya wenzake wakati wa kushiriki katika shughuli za kuandika.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika kazi za kikundi.",
+   "pcis": "Mahusiano ya kijamii: mwanafunzi anapowathamini wenzake kutoka jamii mbalimbali wanaposhirikiana kunakili kifungu wakizingatia mpangilio ufaao wa herufi ndogo.",
+   "links": "Mwanafunzi anaweza kuhusisha matumizi ya herufi ndogo katika uandishi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English Language Activitie na Indigenous Language Activities\nMwanafunzi anaweza kuhusisha suala hili la lishe bora na masuala yanayofunzwa katika somo la Environmental Activities",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUANDI.T3_MPANGILIO_WA_HERUFI_.a",
+     "letter": "a",
+     "text": "kutambua mpangilio ufaao wa herufi ndogo katika maandishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T3_MPANGILIO_WA_HERUFI_.b",
+     "letter": "b",
+     "text": "kuandika kifungu akizingatia mpangilio ufaao wa herufi ndogo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T3_MPANGILIO_WA_HERUFI_.c",
+     "letter": "c",
+     "text": "kuchangamkia kuandika vifungu kuhusu suala lengwa kwa kuzingatia mpangilio ufaao wa herufi ndogo ili kufanikisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_",
+   "number": "3.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Matumizi ya Huyo na Hao (Theme 3: Lishe bora)",
+   "sequence": 341,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua matumizi ya huyo na hao kwa kutumia nyenzo kama vile kadi maneno, mti maneno, kapu maneno au chati,",
+    "kusilikiliza kifungu au wimbo kuhusu matumizi ya huyo na hao katika kifaa cha kidijitali akishirikiana na wenzake,",
+    "kutambua huyo na hao katika kifungu au wimbo aliosikiliza kwa kuongozwa na mwalimu,",
+    "kusoma sentensi zenye kudhihirisha matumizi ya huyo na hao kama vile: mtoto huyo anakula chakula. Watoto hao wanakula chakula.",
+    "kuigiza vitendo vya kuwaashiria watu mbalimbali kwa kutumia huyo na hao,",
+    "kumtungia mwenzake katika kikundi sentensi kwa kutumia huyu na hao,",
+    "kuandika sentensi zinazodhihirisha matumizi ya huyo na hao kama vile: mtoto huyo anasoma watoto hao wanasoma",
+    "kujaza nafasi kwa kutumia huyo na hao akielekezwa na mwalimu."
+   ],
+   "key_inquiry_questions": [
+    "Ni maneno gani yatatumiwa kuonyesha mwenzako akiwa mbali kidogo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika kumtungia mwenzake sentensi akitumia huyo na hao.\nKujiamini: mwanafunzi anapoigiza matumizi ya huyo na hao akishirikiana na wenzake katika kikundi.\nUbunifu: mwanafunzi anapotunga sentensi sahihi akitumia huyo na hao kwa lugha fasaha.\nHamu ya ujifunzaji: mwanafunzi anaposhirikiana na mzazi au mlezi kurejelea watu wa familia yake kwa kutumia huyo na hao ipasavyo.",
+   "values": "Heshima: mwanafunzi anapoheshimu mchango wa wenzake katika kazi ya kikundi wanapotungiana sentensi kwa kutumia huyo na hao.\nUwajibikaji: mwanafunzi anapojitolea kumshirikisha mzazi au mlezi wake katika kurejelea watu wa familia yake kwa kutumia maneno huyu na hao.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kuigiza vitendo vya kuwaashiria watu wenye upungufu wa lishe bora kwa kutumia huyo na hao.",
+   "links": "Mwanafunzi anaweza kuhusisha matumizi ya vivumishi vya nafsi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English Language Activitie na Indigenous Language Activities.\nMwanafunzi anaweza kuhusisha suala hili la lishe bora na masuala yanayofunzwa katika somo la Environmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     26,
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.a",
+     "letter": "a",
+     "text": "kutambua matumizi ya huyo na hao katika kifungu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.b",
+     "letter": "b",
+     "text": "kutumia huyo na hao katika sentensi kwa usahihi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T3_MATUMIZI_YA_HUYO_NA_.c",
+     "letter": "c",
+     "text": "kuchangamkia matumizi ya huyo na hao katika mawasiliano ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_",
+   "number": "4.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Matamshi Bora Sauti; /ch/ na /dh/ (Theme 4: Usafiri)",
+   "sequence": 411,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua silabi za sauti lengwa (/ch/ na /dh/) katika maneno kwenye kadi maneno, chati, mti maneno, sentensi, au kifaa cha kidijitali akishirikiana na wenzake,",
+    "kushirikiana na kutumia kifaa cha kidijitali (k.v. kupitia Programu ya Papaya) kusikiliza matamshi bora ya silabi za sauti lengwa,",
+    "kusikiliza maneno yenye silabi za sauti lengwa yakisomwa na wenzake darasani kisha kutambua sauti hizo katika maneno hayo,",
+    "kutamka maneno yenye silabi za sauti lengwa ifaavyo akiwa peke yake, au na wenzake,",
+    "kusoma kifungu kifupi chenye maneno ya silabi za sauti lengwa kutoka kwa kitabu au kifaa cha kidijitali akiwa na wenzake,",
+    "kuimba wimbo akizingatia sauti lengwa kuhusu kuweka mazingira ya barabara safi. ."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni maneno gani unayojua yenye sauti /ch/ na /dh/?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kutambua na kutamka maneno yenye sauti lengwa.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali akisoma kifungu na kutamka sauti lengwa ipasavyo.\nKujiamini: mwanafunzi anapofaulu kutamka sauti lengwa ipasavyo.",
+   "values": "Umoja: mwanafunzi anaposhirikiana katika vikundi kutambua na kutamka maneno yenye silabi za sauti lengwa.\nHeshima: mwanafunzi anapothamini matamshi ya wenzake katika shughuli za vikundi.",
+   "pcis": "Usalama mtandaoni: mwanafunzi anapotumia kifaa cha kidijitali kusoma kifungu kifupi chenye maneno ya sauti lengwa azingatie hatua za kiusalama.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya matamshi bora na anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English Language Activities na Indigenous Language Activities.\nMwanafunzi anaweza kuhusisha suala la usafiri na suala la Evironmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.a",
+     "letter": "a",
+     "text": "kutambua silabi za sauti lengwa katika maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.b",
+     "letter": "b",
+     "text": "kutamka maneno yenye silabi za sauti lengwa kwa ufasaha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.c",
+     "letter": "c",
+     "text": "kusoma kifungu kifupi chenye maneno ya sauti lengwa akizingatia matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T4_MATAMSHI_BORA_SAUTI_.d",
+     "letter": "d",
+     "text": "kufurahia matamshi bora katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S",
+   "number": "4.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa ufasaha Sauti; /ch/, /dh/ (Theme 4: Usafiri)",
+   "sequence": 421,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua sauti /ch/na /dh/ katika kadi maneno, mti maneno au kifaa cha kidijitali akishirikiana na wenzake,",
+    "kusoma kifungu chepesi cha maneno au hadithi yenye sauti lengwa kwa kuzingatia ishara zifaazo, matamshi bora akishirikiana na wenzake,",
+    "kusoma kifungu chepesi cha maneno au hadithi yenye sauti lengwa kwa kuzingatia ishara zifaazo, sauti inayosikika akishirikiana na wenzake,",
+    "kusoma kifungu chepesi cha maneno au hadithi yenye sauti lengwa kwa kuzingatia ishara zifaazo, kasi ifaayo (maneno 36 kwa dakika na kwa kuzingatia viakifishi) akishirikiana na wenzake,",
+    "kusoma hadithi kutoka kwenye kitabu, kifaa cha kidijtali, n.k akishirikiana na wenzake na kuzingatia sauti inayosikika, matamshi bora, kasi na ishara zifaazo,",
+    "kusoma hadithi kutoka kwenye kitabu, kifaa cha kidijtali, n.k akishirikiana na wenzake akizingatia sauti inayosikika, matamshi bora, kasi na ishara zifaazo."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni mambo gani unazingatia kusoma kwa ufasaha?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake na kuchangia kikamilifu katika shughuli za kikundi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kujifunzia matamshi ya sauti lengwa.\nHamu ya ujifunzaji: mwanafunzi anapoendelea kusoma vifungu mbalimbali maishani.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika kikundi wakati wa shughuli za ujifunzaji.\nUwajibikaji: mwanafunzi anapowajibikia majukumu aliyopewa katika kikundi.\nHeshima: mwanafunzi anapowaheshimu wenzake wanaposoma kifungu chepesi kwa kutumia ishara zifaazo.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutoka sehemu mbalimbali kusoma kifungu cha hadithi kutoka kwenye kitabu au kifaa cha kidijaitali.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya kusoma kwa ufasaha anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English Language Activities na Indigenous Language Activities.\nMwanafunzi anaweza kuhusisha suala la usafiri na suala la Evironmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     31,
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.a",
+     "letter": "a",
+     "text": "kutambua sauti lengwa katika matini mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.b",
+     "letter": "b",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.c",
+     "letter": "c",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa sauti inayosikika",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.d",
+     "letter": "d",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia kasi ifaayo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.e",
+     "letter": "e",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia ishara zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T4_KUSOMA_KWA_UFASAHA_S.f",
+     "letter": "f",
+     "text": "kufurahia kusoma kifungu ipasvyo ili kufanikisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI",
+   "number": "4.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Nafasi katika maandishi. (Theme 4: Usafiri)",
+   "sequence": 431,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua nafasi kati ya maneno katika sentensi akishirikiana na wenzake,",
+    "kuwaonyesha wenzake nafasi kati ya maneno katika sentensi akishirikiana na wenzake, kuandika sentensi kuhusu suala lengwa akizingatia nafasi kati ya maneno,",
+    "kuwasomea wenzake sentensi alizoziandika kuhusu usafiri na usalama barabarani ili wazitolee maoni,",
+    "kutumia kifaa cha kidijitali kuandika sentensi akizingatia nafasi kati ya maneno."
+   ],
+   "key_inquiry_questions": [
+    "Je, kwa nini tunatumia nafasi kati ya maneno katika sentensi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi kuonyesha nafasi kati ya maneno katika sentensi.\nUjuzi wa kidijitali: mwanafunzi anapofaulu kuandika sentensi akizingatia nafasi kati ya maneno kwa kutumia kifaa cha kidijitali.\nHamu ya ujifunzaji: mwanafunzi anapofanya mazoezi ya ziada ya kuandika sentensi akizingatia nafasi kati ya maneno.",
+   "values": "Upendo: mwanafunzi anaposhirikiana na wenzake katika kikundi na kuheshimu maoni yao.\nHeshima: mwanafunzi anapowatambua na kuwathamini wenzake wakati wa kushiriki katika shughuli za kuandika.",
+   "pcis": "Usalama wa watoto barabarani: mwanafunzi anapotunga sentensi sahili zinazohusu mada lengwa ya usafiri hasa usalama barabarani.\nMasuala ya fedha: mwanafunzi anapoandika vifungu kuusu matumizi ya fedha katika usafiri.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.\nMwanafunzi anaweza kuhusisha suala la usafiri na suala la Evironmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     33,
+     34
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.a",
+     "letter": "a",
+     "text": "kutambua nafasi kati ya maneno katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.b",
+     "letter": "b",
+     "text": "kuandika sentensi akizingatia nafasi kati ya maneno katika sentensi kwa maandishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T4_NAFASI_KATIKA_MAANDI.c",
+     "letter": "c",
+     "text": "kufurahia kuandika akizingatia nafasi kati ya maneno katika sentensi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI",
+   "number": "4.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Umoja na Wingi: (Theme 4: Usafiri)",
+   "sequence": 441,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Vifungu vya maneno"
+   ],
+   "learning_experiences": [
+    "kutambua vifungu vya maneno katika umoja na wingi (k.m basi hili - mabasi haya; safari hii - safari hizi; ndege hii - ndege hizi; baiskeli yangu - baiskeli zetu),",
+    "kusoma vifungu vya maneno katika umoja na wingi akishirikiana na wenzake, kutoka kwenye kitabu au kifaa cha kidijitali akizingatia usafiri,",
+    "kuandika umoja na wingi wa vifungu vya maneno akishirikiana na wenzake,",
+    "kujaza nafasi zilizo wazi ili kukamilisha vifungu vya maneno katika umoja na wingi akishirikiana na wenzake,",
+    "kushiriki katika mchezo wa kupanga kadi za vifungu vya maneno akiambatanisha umoja na wingi."
+   ],
+   "key_inquiry_questions": [
+    "Je, unapozungumzia umoja na wingi wa maneno au sentensi unamaanisha nini?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika kuandika vifungu vya maneno akiwa na wenzake.\nHamu ya ujifunzaji: mwanafunzi anapoeleza kuhusu vitu katika mazingira yake katika umoja na wingi.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapotambua vifungu vya maneno katika umoja na wingi.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika kikundi na kuheshimu maoni yao.\nUwajibikaji: mwanafunzi anapowajibikia majukumu aliyopewa katika shughuli za kikundi.",
+   "pcis": "Usalama mtandaoni: mwanafunzi anaposoma kifungu na kutambua maneno ya umoja na wingi kuhusu suala lengwa kwenye kifaa cha kidijitali akizingatia hatua za kiusalama.\nUsalama wa watoto barabarani: wanapotunga sentensi kuhusu suala lengwa la usafiri.",
+   "links": "Mwanafunzi anaweza kuhusisha sarufi inayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English Language Activities na Indigenous Language Activities.\nMwanafunzi anaweza kuhusisha suala la usafiri na suala la Evironmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     35,
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.a",
+     "letter": "a",
+     "text": "kutambua vifungu vya maneno katika umoja na wingi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.b",
+     "letter": "b",
+     "text": "kusoma vifungu vya maneno katika umoja na wingi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.c",
+     "letter": "c",
+     "text": "kuandika umoja na wingi wa vifungu vya maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T4_UMOJA_NA_WINGI.d",
+     "letter": "d",
+     "text": "kuchangamkia kutumia vifungu vya maneno katika umoja na wingi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ",
+   "number": "5.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Ufahamu wa Kusikiliza Hadithi (Theme 5: Mnyama nimpendaye)",
+   "sequence": 511,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua picha kutoka kwenye kitabu, chati, vifaa vya kidijitali akishirikiana na wenzake,",
+    "kujadili picha kutoka kwenye kitabu, chati au kifaa cha kidijitali akishirikiana na wenzake,",
+    "kutabiri kitakachotokea kwenye hadithi,",
+    "kusikiliza ufahamu kutoka kwa mwalimu, mgeni mwalikwa au vyombo vya kidijitali,",
+    "kutambua msamiati uliotumika katika ufahamu aliousikiliza akishirikiana na wenzake,",
+    "kujibu maswali yanayohusiana na ufahamu aliousikiliza,",
+    "kueleza maudhui ya ufahamu aliousikiliza akishirikiana na wenzake,",
+    "kumsimulia mzazi au mlezi wake hadithi aliyoisikiliza kuhusu suala lengwa naye mzazi kumtolea maoni."
+   ],
+   "key_inquiry_questions": [
+    "Kusikiliza hadithi kwa makini kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika shughuli za kikundi kutambua picha na kujadili ujumbe katika kifungu cha ufahamu.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali katika kujifunzia.\nUbunifu: mwanafunzi anapotabiri yatakayotokea katika hadithi.",
+   "values": "Heshima: mwanafunzi anapowaheshimu wenzake wanaposhirikiana kusoma kifungu darasani.\nUpendo: mwanafunzi anapowashirikisha wengine katika matumizi ya vifaa vya kidijitali darasani.\nUwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali.",
+   "pcis": "Elimu ya utunzaji wa wanyama: mwanafunzi anapomsimulia mzazi au mlezi hadithi aliyoisikiliza kutoka kwa mwalimu au kifaa cha kidijitali kuhusu suala lengwa.\nElimu ya utunzaji wa wanyama: mwanafunzi anaposikiliza na kusikiliza ufahamu kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusikiliza na kuzungumza anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.\nMwanafunzi anaweza kuhusisha suala la mnyama nimpendaye na suala la Evironmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     37,
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.a",
+     "letter": "a",
+     "text": "kutambua picha kuhusu suala lengwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.b",
+     "letter": "b",
+     "text": "kutambua msamiati wa suala lengwa uliotumiwa katika hadithi aliyoisikiliza",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.c",
+     "letter": "c",
+     "text": "kujibu maswali kuhusu hadithi aliyoisikiliza",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.d",
+     "letter": "d",
+     "text": "kueleza ujumbe wa hadithi aliyoisikiliza",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.e",
+     "letter": "e",
+     "text": "kufurahia ufahamu wa kusikiliza",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU",
+   "number": "5.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma Kwa Ufahamu (Theme 5: Mnyama nimpendaye)",
+   "sequence": 521,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusoma kifungu chepesi cha maneno 39-42 na kutambua msamiati wa suala lengwa (kondoo, mbuzi, ng’ombe,) akishirikiana na wenzake,",
+    "kutabiri kitakachotokea katika hadithi akizingatia picha kwenye kifungu akishirikiana na wenzake,",
+    "kutabiri ujumbe wa kifungu cha hadithi kwa kutazama picha kwenye kitabu, vifaa vya kidijitali au chati akishirikiana na wenzake,",
+    "kueleza mafunzo yanyotokana na kifungu chepesi cha hadithi akiwa na wenzake,",
+    "kuthibitisha utabiri wake kuhusu hadithi baada ya kuisoma.",
+    "kutumia msamiati wa suala lengwa ipasavyo katika mawasiliano."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni mambo gani yanayokusaidia kupata ujumbe kwenye vifungu vya ufahamu?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake na kuchangia kikamilifu katika shughuli za kikundi.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kujifunzia.\nHamu ya ujifunzaji: mwanafunzi anapomshirikisha mzazi au mlezi kusoma na kujadili ujumbe katika kifungu kuhusu suala lengwa.",
+   "values": "Heshima: mwanafunzi anapowaheshimu wenzake wanaposhiriki katika shughuli za kikundi.\nUwajibikaji: mwanafunzi anapowajibikia majukumu aliyopewa katika kikundi.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli za kikundi.",
+   "pcis": "Elimu ya utunzaji wanyama: mwanafunzi anaposoma kifungu chepesi na kutambua msamiati kuhusu usalama wa wanyama.\nUmasikini: mwanafunzi anaposoma vifungu vinavyozungumzia kuhusu suala lengwa la mnyama nimpendaye.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufahamu anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.\nMwanafunzi anaweza kuhusisha suala la mnyama nimpendaye na suala la Evironmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a",
+     "letter": "a",
+     "text": "kutambua msamiati kuhusu suala lengwa katika kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b",
+     "letter": "b",
+     "text": "kutabiri yatakayotokea katika kifungu chepesi cha ufahamu kwa kuzingatia picha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.c",
+     "letter": "c",
+     "text": "kueleza ujumbe wa kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.d",
+     "letter": "d",
+     "text": "kueleza mafunzo yanayotokana na kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.e",
+     "letter": "e",
+     "text": "kuchangamkia kusoma vifungu vya ufahamu ili kuimarisha stadi ya kusoma",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUANDI.T5_UAKIFISHI",
+   "number": "5.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Uakifishi: (Theme 5: Mnyama nimpendaye)",
+   "sequence": 531,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Matumizi ya Kiulizi"
+   ],
+   "learning_experiences": [
+    "kutambua kiulizi katika maandishi kitabuni, kwenye kadi maneno, mti maneno na kifaa cha kidijitali akishirikiana na wenzake,",
+    "kuandika kiulizi ipasavyo akizingatia umbo lake,",
+    "kutumia kiulizi ipasavyo katika sentensi,",
+    "kutazama matumizi ya kiulizi kwenye vifaa vya kidijitali,",
+    "kuandika kiulizi akitumia kifaa cha kidijitali,",
+    "kuandika sentensi sahili akitumia kiulizi ipasavyo,",
+    "kumwonyesha mzazi au mlezi sentensi zenye matumizi yafaayo ya kiulizi alizotunga ili ampe maoni yake ."
+   ],
+   "key_inquiry_questions": [
+    "Je, alama ya kiulizi hutumika vipi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapowaeleza na kuwaonyesha wenzake kiulizi kilipotumiwa katika maneno na sentensi.\nUjuzi wa kidijitali: mwanafunzi anapofaulu kuandika kiulizi katika sentensi akitumia kifaa cha kidijitali.\nHamu ya ujifunzaji: mwanafunzi anapotamani kuendelea kuandika kiulizi ipasavyo.",
+   "values": "Upendo: mwanafunzi anaposhirikiana na wenzake na kuheshimu maoni yao.\nHeshima: mwanafunzi anapowatambua na kuwathamini wenzake wakati wanaposhiriki katika shughuli ya kuandika.",
+   "pcis": "Mshikamano wa kijamii na kitaifa: mwanafunzi anapowathamini wenzake kutoka jamii mbalimbali wanaposhirikiana kutambua na kutumia kiulizi ipasavyo.\nUsalama wa wanyama: mwanafunzi anapotunga sentensi kuhusu usalama wa mnyama nimpendaye.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya matumizi ya kiulizi anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English Language Activities na Indigenous Language Activities.\nMwanafunzi anaweza kuhusisha suala la mnyama nimpendaye na suala la Evironmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUANDI.T5_UAKIFISHI.a",
+     "letter": "a",
+     "text": "kutambua kiulizi katika maandishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T5_UAKIFISHI.b",
+     "letter": "b",
+     "text": "kuandika kiulizi ipasavyo akizingatia umbo lake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T5_UAKIFISHI.c",
+     "letter": "c",
+     "text": "kutumia kiulizi ipasavyo katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T5_UAKIFISHI.d",
+     "letter": "d",
+     "text": "kufurahia kutumia kiulizi katika maandishi ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E",
+   "number": "5.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Matumizi ya -ako na –enu (Theme 5: Mnyama nimpendaye)",
+   "sequence": 541,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusilikiliza kifungu au wimbo unaohusu matumizi ya –ako na –enu katika kifaa cha kidijitali,",
+    "kutambua matumizi ya -ako na -enu katika kadi za maneno, mti maneno, kapu maneno na vifaa halisi kwa kusaidiwa na mwalimu,",
+    "kumtungia mwenzake sentensi zenye matumizi ya -ako na –enu,",
+    "kusikiliza sentensi zinazotungwa na wenzake zenye matumizi ya -ako na -enu na kuzitolea maoni,",
+    "kuwasilisha sentensi zenye kutumia maneno -ako na –enu,",
+    "kuandika sentensi zenye -ako na –enu,",
+    "kujaza nafasi kwa kutumia -ako na -enu kwa kusaidiwa na mwalimu."
+   ],
+   "key_inquiry_questions": [
+    "Je,-ako na - enu hutumiwa wakati gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika kumtungia mwenzake sentensi akitumia –ako na -enu.\nKujiamini: mwanafunzi anapofaulu kutumia -ako na -enu akishirikiana na wenzake katika kikundi.\nUbunifu: mwanafunzi anapotunga sentensi sahihi akitumia -ako na -enu kwa lugha fasaha.",
+   "values": "Heshima: mwanafunzi anapoheshimu maoni ya wenzake katika kazi ya kikundi wanapotungiana sentensi.\nUwajibikaji: mwanafunzi anapojitolea kumtungia mwenzake sentensi akitumia –ako na -enu.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutoka maeneo tofauti tofauti kutunga sentensi zenye matumizi yafaayo ya -ako na –enu akizingatia mada lengwa.\nElimu ya utunzaji wa wanyama: mwanafunzi anapotunga sentensi kuhusu mnyama nimpendaye.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya matumizi ya -ako na -enu anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English Language Activities na Indigenous Language Activities.\nMwanafunzi anaweza kuhusisha suala la mnyama nimpendaye na suala la Evironmental Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     43,
+     44
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.a",
+     "letter": "a",
+     "text": "kutambua matumizi yafaayo ya -ako na -enu katika kifungu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.b",
+     "letter": "b",
+     "text": "kutumia -ako na - enu ipasavyo katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T5_MATUMIZI_YA_AKO_NA_E.c",
+     "letter": "c",
+     "text": "kuthamini matumizi ya - ako na -enu katika mawasiliano ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA",
+   "number": "6.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Matamshi Bora: (Theme 6: Ukoo)",
+   "sequence": 611,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sauti:/ny/ na /ng/"
+   ],
+   "learning_experiences": [
+    "kutambua silabi za sauti lengwa (/ny/ na /ng/) katika matini mbalimbali kama vile kadi za maneno, chati, mti maneno, au kifaa cha kidijitali,",
+    "kusikiliza maneno yenye silabi za sauti lengwa yakitamkwa na mwalimu, mgeni mwalikwa au katika kifaa cha kidijitali akizingatia suala lengwa,",
+    "kutamka maneno aliyosikiliza pamoja na mwalimu, kisha kuyatamka akishirikiana na mwenzake kuhusu suala lengwa,",
+    "kuambatanisha silabi ili kusoma maneno yanayotokana na sauti lengwa,",
+    "kusikiliza kwa makini sentensi zenye maneno yenye silabi za sauti lengwa zikitamkwa na mwalimu, mgeni mwalikwa au kutoka kifaa cha kidijitali na kutambua sauti lengwa kuhusu suala lengwa,",
+    "kujirekodi akisoma sentensi zilizo na maneno yenye sauti lengwa, akishirikiana na wenzake ajisikilize ili kutathmini matamshi bora,",
+    "kushiriki katika tamasha za mashairi na nyimbo au hafla shuleni ili aimarishe matamshi yake kwa kusaidiwa na mwalimu,",
+    "kutumia maneno ya silabi za sauti lengwa kuwasiliana na mzazi au mlezi wake."
+   ],
+   "key_inquiry_questions": [
+    "Je, unajua kutamka maneno yapi yenye sauti /ny/ na /ng/?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kutambua na kutamka maneno yenye sauti lengwa.\nUjuzi wa kidijitali: mwanafunzi anapojirekodi akisoma sentensi na kutambua jinsi alivyotamka sauti lengwa.\nKujiamini: mwanafunzi anapotamka sauti lengwa ipasavyo na anapojirekodi.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika vikundi kutambua na kutamka maneno yenye silabi za sauti lengwa.\nHeshima: mwanafunzi anapothamini matamshi ya wenzake katika shughuli za vikundi.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhiriki katika tamasha za muziki zenye asili ya jamii mbalimbali anakuza matamshi bora na talanta yake.\nHaki za kijamii: mwanafunzi anaposoma maneno yanayolenga suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya matamshi bora anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     45,
+     46,
+     47
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.a",
+     "letter": "a",
+     "text": "kutambua silabi za sauti lengwa ipasavyo katika maneno na sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.b",
+     "letter": "b",
+     "text": "kutamka maneno na sentensi zenye silabi za sauti lengwa kwa ufasaha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T6_MATAMSHI_BORA.c",
+     "letter": "c",
+     "text": "kufurahia matamshi bora katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA",
+   "number": "6.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Ufasaha (Theme 6: Ukoo)",
+   "sequence": 621,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sauti: /ny/ na /ng/"
+   ],
+   "learning_experiences": [
+    "kutambua sauti lengwa katika kifungu chepesi kuhusu suala lengwa akishirikiana na wenzake,",
+    "kusoma kifungu chepesi cha maneno chenye sauti lengwa kuhusu suala lengwa kwa kuzingatia matamshi bora akishirikiana na wenzake,",
+    "kusoma kifungu chepesi cha maneno chenye sauti lengwa kwa sauti inayosikika akishirikiana na wenzake,",
+    "kusoma kifungu chepesi cha maneno chenye sauti lengwa kwa kuzingatia kasi ifaayo (maneno 39 kwa dakika na kwa kuizingatia viakifishi) akishirikiana na wenzake,",
+    "kusoma kifungu chepesi chenye sauti lengwa kwa kuzingatia ishara zifaazo akishirikiana na wenzake kuhusu suala lengwa,",
+    "kusoma hadithi kutoka kwenye kitabu, kifaa cha kidijtali akishirikirikiana wenzake akizingatia sauti inayosikika, matamshi bora, kasi ifaayo na ishara zifaazo kuhusu suala lengwa,",
+    "kumsomea mzazi au mlezi kifungu chepesi chenye sauti lengwa akizingatia matamshi bora, sauti inayosikika, kasi ifaayo na ishara zifaazo."
+   ],
+   "key_inquiry_questions": [
+    "Je, unajua maneno yapi yaliyo na silabi za sauti /ny/,na /ng/?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi kutambua sauti lengwa na kusoma kifungu kwa ufasaha.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kujifunzia.\nHamu ya ujifunzaji: mwanafunzi anapomsomea mzazi au mlezi kifungu chepesi chenye sauti lengwa akizingatia matamshi bora, sauti inayosikika, kasi ifaayo na ishara zifaazo.",
+   "values": "Heshima: mwanafunzi anapoheshimu maoni ya wenzake kwenye kikundi.\nUwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali anavyotumia kujifunzia.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika kusoma darasani.",
+   "pcis": "Haki na majukumu ya kibinadamu: mwanafunzi anapotangamana na wenzake kusoma kifungu chepesi cha hadithi kuhusu suala lengwa akizingtia matamshi bora, kasi ifaayo, sauti inayosikika na ishara zifaazo.\nUtunzi na usalama wa watoto: mwanafunzi anaposoma matini kuhusu suala lengwa la ukoo.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufasaha anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     48,
+     49,
+     50
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.a",
+     "letter": "a",
+     "text": "kutambua sauti lengwa katika kifungu chepesi cha hadithi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.b",
+     "letter": "b",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.c",
+     "letter": "c",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa sauti inayosikika",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.d",
+     "letter": "d",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia kasi ifaayo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.e",
+     "letter": "e",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia ishara zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T6_KUSOMA_KWA_UFASAHA.f",
+     "letter": "f",
+     "text": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUANDI.T6_TAHAJIA_IMLA",
+   "number": "6.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Tahajia Imla (Theme 6: Ukoo)",
+   "sequence": 631,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sauti: /ny/ na /ng/"
+   ],
+   "learning_experiences": [
+    "kutambua maneno mepesi ya silabi tatu kwenye maandishi akizingatia sauti lengwa,",
+    "kuandika maneno mepesi ya imla ya silabi tatu kitabuni au katika kifaa cha kidijitali akizingatia sauti lengwa,",
+    "kushirikiana na wenzake kuandika maneno mepesi ya silabi tatu akizingatia sauti lengwa na suala lengwa,",
+    "kushiriki mchezo wa kuandika maneno na sentensi za imla na wenzake,",
+    "kuwasilishia wenzake maneno ya imla ili kuyaandika daftarini au kwenye kifaa cha kidijitali,",
+    "kuandika maneno atakayosomewa na wenzake daftarini au kwenye kifaa cha kidijitali,",
+    "kuandika daftarini sentensi sahili walizotunga na kumpa mwenzake ili azitolee maoni, kisha mwalimu azisahihishe,"
+   ],
+   "key_inquiry_questions": [
+    "Je, kwa nini tunahitaji kusikiliza kwa makini tunaposomewa maneno ya kuandika?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: competencies: not in the design; values: not in the design; pcis: not in the design; links: not in the design.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     51,
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUANDI.T6_TAHAJIA_IMLA.a",
+     "letter": "a",
+     "text": "kutambua maneno mepesi ya silabi tatu kwenye maandishi kwa kuzingatia sauti lengwa",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T6_TAHAJIA_IMLA.b",
+     "letter": "b",
+     "text": "kuandika maneno mepesi ya imla ya silabi tatu kwa kuzingatia silabi za sauti lengwa",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T6_TAHAJIA_IMLA.c",
+     "letter": "c",
+     "text": "kuandika sentensi sahili kwa kuzingatia silabi za sauti lengwa",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T6_TAHAJIA_IMLA.d",
+     "letter": "d",
+     "text": "kufurahia kuandika ipasavyo maneno na sentensi kutokana na imla",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB",
+   "number": "6.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Matumizi ya -refu, - kubwa, - tamu (Theme 6: Ukoo)",
+   "sequence": 641,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua matumizi ya -refu, - kubwa, -tamu kwa kurejelea vitu katika mazingira yake kutoka kwa kitabu, au vifaa vya kidijitali akishirikiana na wenzake kuhusu suala lengwa,",
+    "kusikiliza matumizi ya-refu, - kubwa, -tamu kutoka kwa mwalimu, mgeni mwalikwa, wenzake na kwa kifaa cha kidijitali,",
+    "kusoma sentensi zinazotumia maneno-refu, -kubwa, -tamu zinazolenga suala lengwa,",
+    "kutumia -refu, -kubwa, -tamu akiwa na wenzake katika kikundi kurejelea vitu katika mazingira yake kuhusu suala lengwa,",
+    "kukamilisha sentensi zenye matumizi ya-refu, -kubwa, - tamu,",
+    "kujaza nafasi zilizo wazi kwa kutumia -refu, -kubwa na - tamu katika sentensi kuhusu suala lengwa,",
+    "kuwasiliana na mlezi au mzazi kwa kutumia-refu , - kubwa na -tamu kuelezea vifaa kuhusu suala lengwa."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni maneno kama gani unayoweza kutumia kuelezea sifa za kitu?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapotumia -refu, -kubwa, -tamu akiwa na wenzake katika kikundi.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kusikiliza matumizi ya-refu, - kubwa, na - tamu.\nHamu ya ujifunzaji: mwanafunzi anapotumia -refu, -kubwa, -tamu akiwa na mzazi au mlezi nyumbani.\nUbunifu: mwanafunzi anapotunga sentensi akitumia -refu, -kubwa, na-tamu.",
+   "values": "Uwajibikaji: mwanafunzi anapotangamana na wenzake kwa heshima katika shughuli za kikundi.\nHeshima: mwanafunzi anapowatambua na kuwathamini wenzake wakati wa kushiriki katika shughuli za kikundi.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika kazi ya vikundi.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anapotunga sentensi akishirikiana na wenzake akizingatia mazingira ya nyumbani.\nHaki na majukumu ya kibinadamu: mwanafunzi anapotunga sentensi zinazolenga suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kutumia lugha usahihi kisarufi anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     53,
+     54
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.a",
+     "letter": "a",
+     "text": "kutambua matumizi ya -refu, -kubwa na - tamu katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.b",
+     "letter": "b",
+     "text": "kutumia-refu, - kubwa na-tamu katika sentensi ili kuimarisha mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T6_MATUMIZI_YA_REFU_KUB.c",
+     "letter": "c",
+     "text": "kufurahia kutumia-refu, -kubwa na - tamu – katika sentensi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSIKI.T7_MAAGIZO",
+   "number": "7.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Maagizo (Theme 7: Sebuleni)",
+   "sequence": 711,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Maagizo ya hatua mbili."
+   ],
+   "learning_experiences": [
+    "kutambua maagizo ya hatua mbili,",
+    "kutazama video ya jinsi ya kutoa na kufuata maagizo mepesi ya hatua mbili kwa kifaa cha kidijitali kuhusu suala lengwa,",
+    "kushiriki katika kutoa na kufuata maagizo mepesi ya hatua mbili,",
+    "kufafanua umuhimu wa maagizo,",
+    "kuimba nyimbo na kukariri mashairi yanayohusu maagizo kuhusu suala lengwa."
+   ],
+   "key_inquiry_questions": [
+    "Kufuata maagizo kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mjadala na wenzake wakati wa ujifunzaji katika kikundi.\nUwazaji kwa kina na utatuzi wa matatizo: mwanafunzi anapotoa na kufuata maagizo kulingana na yanavyotolewa.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kujifunzia.\nHamu ya ujifunzaji: mwanafunzi anaposhiriki kuimba nyimbo na pia kukariri mashairi kuhusu maagizo.",
+   "values": "Amani: mwanafunzi anapofanya maigizo katika kikundi na wenzake kwa utulivu.\nHaki za kijamii: mwanafunzi anapomtolea mwenzake maagizo yafaayo.\nUmoja: mwanafunzi anapofanya kazi na wenzake katika kikundi kwa upole na kuelewana.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika kutazama video ya jinsi ya kutoa na kufuata maagizo ya hatua mbili kwenye kifaa cha kidijitali kuhusu suala lengwa.\nUtunzi na usalama wa watoto: mwanafunzi anaposikiliza vifungu kuhusu sebuleni na vifaa vya sebuleni.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kufuata maagizo anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     55,
+     56
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSIKI.T7_MAAGIZO.a",
+     "letter": "a",
+     "text": "kutambua maagizo mepesi ya hatua mbili yanapotolewa katika miktadha mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T7_MAAGIZO.b",
+     "letter": "b",
+     "text": "kutoa na kufuata maagizo mepesi ya hatua mbili yanayotumiwa katika miktadha mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T7_MAAGIZO.c",
+     "letter": "c",
+     "text": "kuchangamkia maagizo katika maisha ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K",
+   "number": "7.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma Kwa Ufahamu: Kifungu (Theme 7: Sebuleni)",
+   "sequence": 721,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusoma kifungu chepesi cha maneno 43-46 na kutambua msamiati wa suala lengwa ( runinga, kochi, meza,radio ) akishirikiana na wenzake,",
+    "kutabiri kitakachotokea katika hadithi akizingatia picha kwenye kifungu akishirikiana na wenzake,",
+    "kutabiri ujumbe wa kifungu kwa kutazama picha kwenye kitabu, vifaa vya kidijitali au chati akishirikiana na wenzake kuhusu suala lengwa,",
+    "kueleza mafunzo yanayotokana na kifungu chepesi cha ufahamu akishirikiana na wenzake,",
+    "kuthibitisha utabiri wake kuhusu hadithi baada ya kuisoma.",
+    "kutumia msamiati wa suala lengwa ipasavyo katika mawasiliano."
+   ],
+   "key_inquiry_questions": [
+    "Je, tunawezaje kupata ujumbe katika ufahamu?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi na kuchangia kikamilifu.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kujifunzia.\nHamu ya ujifunzaji: mwanafunzi anapomtajia mzazi au mlezi vitu vinavyopatikana sebuleni mwao kwa kutumia msamiati aliojifunza.",
+   "values": "Heshima: mwanafunzi anapowaheshimu wenzake wanapotangamana katika shughuli za kikundi.\nUmoja: mwanafunzi anaposhirikiana na wenzake kwa upendo katika shughuli mbalimbali za kikundi.\nUwajibikaji: mwanafunzi anapoeleza wenzake kuhusu vitu vya sebuleni.",
+   "pcis": "Elimu ya afya ya kujikinga: mwanafunzi anaposoma kifungu chepesi na kutambua msamiati wa wa swala lengwa kama zulia, kochi, viti na jinsi ya kuviweka safi ili kuweza kujikinga na maradhi.\nHaki za watoto: mwanafunzi anaposoma ufahamu kuhusu sebuleni na vifaa vya sebuleni.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufasaha anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     57,
+     58
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.a",
+     "letter": "a",
+     "text": "kutambua msamiati kuhusu suala lengwa katika kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.b",
+     "letter": "b",
+     "text": "kutabiri yatakayotokea katika kifungu chepesi cha ufahamu kwa kuzingatia picha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.c",
+     "letter": "c",
+     "text": "kueleza ujumbe wa kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.d",
+     "letter": "d",
+     "text": "kueleza mafunzo yanayotokana na kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T7_KUSOMA_KWA_UFAHAMU_K.e",
+     "letter": "e",
+     "text": "kuchangamkia kusoma vifungu vya ufahamu ili kuimarisha stadi ya kusoma",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUANDI.T7_UHARIRI",
+   "number": "7.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Uhariri: (Theme 7: Sebuleni)",
+   "sequence": 731,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Vipengele katika Uhariri"
+   ],
+   "learning_experiences": [
+    "kutambua vipengele vya kuhariri katika maandishi kwenye kitabu, chati au kifaa cha kidijitali akishirikiana na wenzake,",
+    "kuandika kifungu cha maneno mawili au sentensi fupi daftarini au kwenye kifaa cha kidijitali,",
+    "kujadiliana na wenzake kuhusu vipengele vya kuzingatia katika uhariri,",
+    "kuipitia kazi yake baada ya kuiandika ili kuhariri tahajia, nafasi baina ya sauti na maneno pamoja na viakifishi kuhusu suala lengwa,",
+    "kushirikiana na wenzake kuhariri kazi aliyoandika,",
+    "kumwonyesha mzazi au mlezi kifungu alichohariri ili ampe maoni yake."
+   ],
+   "key_inquiry_questions": [
+    "Je, kwa nini ni vizuri kusoma kazi uliyoandika na kuirekebisha?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapofaulu kuwaonyesha wenzake nafasi baina ya maneno katika kifungu cha maneno mawili au sentensi fupi.\nUjuzi wa kidijitali: mwanafunzi anapofaulu kuandika kifungu cha maneno mawili au sentensi fupi akitumia kifaa cha kidijitali.\nHamu ya ujifunzaji: mwanafunzi anapofaulu kuhariri kifungu cha maneno mawili au sentensi fupi akizingatia nafasi ipasavyo.",
+   "values": "Upendo: mwanafunzi anaposhirikiana na wenzake na kuheshimu maoni yao.\nHeshima: mwanafunzi anapowatambua na kuwathamini wenzake wakati wa kushiriki katika shughuli ya kuhariri kifungu cha maneno mawili na sentensi fupi.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika kazi ya kikundi.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anapoandika kifungu kifupi kuhusu shughuli zinazofanywa na familia yao wanapojumuika sebuleni.\nHaki za watoto: mwanafunzi anapoandika kifungu kuhusu sebuleni na vifaa vya sebuleni.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuhariri anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     59,
+     60
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUANDI.T7_UHARIRI.a",
+     "letter": "a",
+     "text": "kutambua vipengele vya kuhariri katika maandishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T7_UHARIRI.b",
+     "letter": "b",
+     "text": "kuhariri maandishi yake baada ya kuyaandika",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T7_UHARIRI.c",
+     "letter": "c",
+     "text": "kufurahia kuhariri maandishi baada ya kuyaandika ili kuimarisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.SARUFI.T7_UKANUSHO_WA_NAFSI_YA",
+   "number": "7.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Ukanusho wa nafsi ya pili, umoja na wingi (Theme 7: Sebuleni)",
+   "sequence": 741,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua ukanusho wa nafsi ya pili, umoja na wingi, katika kadi maneno, mti maneno kuhusu suala lengwa,",
+    "kusikiliza kifungu au wimbo kuhusu ukanusho wa nafsi ya pili umoja na wingi kwenye kifaa cha kidijitali,",
+    "kushirikiana na wenzake katika kikundi kukanusha sentensi katika nafsi ya pili, umoja na wingi kuhusu suala lengwa, kwa mfano: wewe - ulisoma – wewe hukusoma,",
+    "kutunga sentensi zinazoashiria ukanusho wa nafsi ya pili umoja na wingi kuhusu suala lengwa kwa kusaidiwa na mwalimu,",
+    "kufanya zoezi la kujaza nafasi kwa kutumia nafsi ya pili, umoja na wingi, kwenye kifaa cha kidijitali,",
+    "kumsomea mzazi au mlezi sentensi alizokanusha katika nafsi ya pili, umoja na wingi ili ampe maoni."
+   ],
+   "key_inquiry_questions": [
+    "Ukanushaji wa sentensi katika umoja na wingi unahusu nini?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki kumtungia mwenzake sentensi katika kikundi kwa kutumia nafsi ya pili umoja na wingi.\nKujiamini: mwanafunzi anapoigiza vitendo vinavyoashiria nafsi ya pili umoja na wingi.\nUjuzi wa kidijitali: mwanafunzi anaposikiliza kifungu au wimbo kuhusu ukanusho wa nafsi ya pili umoja na wingi kwenye kifaa cha kidijitali.\nUbunifu: mwanafunzi anapotunga sentensi zinazoashiria ukanusho wa nafsi ya pili umoja na wingi.",
+   "values": "Heshima: mwanafunzi anapoheshimu mchango wa wenzake wanapotungiana sentensi kwenye kikundi kwa kutumia ukanusho wa nafsi ya pili umoja na wingi.\nUwajibikaji: mwanafunzi anaposhirikiana na wenzake katika kikundi kukanusha sentensi zilizo katika nafsi ya pili umoja na wingi.\nUmoja: mwanafunzi anaposhiriki katika shughuli za kikundi.",
+   "pcis": "Usalama mtandaoni: mwanafunzi anapofanya shughuli ya ukanusho wa nafsi ya pili katika umoja na wingi kuhusu suala lengwa akizingatia hatua za kiusalama katika mtandao.\nUtunzi na usalama watoto: mwanafunzi anapoandika sentensi kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya nafsi anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     61,
+     62
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.SARUFI.T7_UKANUSHO_WA_NAFSI_YA.a",
+     "letter": "a",
+     "text": "kutambua ukanusho wa nafsi ya pili, umoja na wingi katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T7_UKANUSHO_WA_NAFSI_YA.b",
+     "letter": "b",
+     "text": "kutumia ukanusho wa nafsi ya pili, umoja na wingi katika sentensi kwa usahihi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T7_UKANUSHO_WA_NAFSI_YA.c",
+     "letter": "c",
+     "text": "kuchangamkia matumizi ya ukanusho wa nafsi ya pili, umoja na wingi, katika mawasiliano ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA",
+   "number": "8.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Matamshi Bora (Theme 8: Usalama wangu)",
+   "sequence": 811,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sauti: /sh/, /th/"
+   ],
+   "learning_experiences": [
+    "kutambua silabi za sauti lengwa katika matini mbalimbali kama vile kadi maneno, chati, mti maneno, au kifaa cha kidijitali,",
+    "kusikiliza maneno yenye silabi za sauti lengwa yakitamkwa na mwalimu, mgeni mwalikwa au kifaa cha kidijitali,",
+    "kutamka maneno aliyosikiliza pamoja na mwalimu na mwishowe kutamka akishirikiana na wenzake kuhusu suala lengwa,",
+    "kusikiliza kwa makini sentensi zenye sauti lengwa na zinazolenga suala lengwa zikitamkwa na mwalimu, mgeni mwalikwa au kifaa cha kidijitali na kuzitambua,",
+    "kusikiliza na kusimulia kifungu cha hadithi kuhusu suala lengwa (k.v usalama wangu na jinsi ya kudumisha usalama barabaran),",
+    "kujirekodi akisoma hadithi zilizo na maneno na sentensi zenye sauti lengwa na kujisikiliza na wenzake ili kutathmini matamshi bora."
+   ],
+   "key_inquiry_questions": [
+    "Unajua kutamka maneno gani yenye sauti /sh/ na /th/?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kutambua na kutamka maneno yenye sauti lengwa.\nUjuzi wa kidijitali: mwanafunzi anapojirekodi akisimulia kifungu na kutambua jinsi alivyotamka sauti lengwa.\nKujiamini: mwanafunzi anapotamka sauti lengwa ipasavyo.",
+   "values": "Umoja: wanafunzi wanaposhirikiana katika vikundi kutambua na kutamka maneno yenye silabi za sauti lengwa.\nHeshima: mwanafunzi anapoheshimu matamshi ya wenzake katika shughuli za vikundi.",
+   "pcis": "Utunzi wa usalama wa watoto: mwanafunzi anaposikilia kifungu cha hadithi kinacholenga mada lengwa na kutambua maneno yenye sauti /sh/na /th/.\nMagonjwa yanayosababishwa na mitindo ya maisha: mwanafunzi anaposikiliza kifungu kinacholenga suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya matamshi bora anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     63,
+     64,
+     65
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.a",
+     "letter": "a",
+     "text": "kutambua maneno na sentensi zenye sauti lengwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.b",
+     "letter": "b",
+     "text": "kutamka maneno na sentensi za sauti lengwa kwa ufasaha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T8_MATAMSHI_BORA.c",
+     "letter": "c",
+     "text": "kufurahia matamshi bora katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA",
+   "number": "8.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa ufasaha (Theme 8: Usalama wangu)",
+   "sequence": 821,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sauti: /sh/ na /th/"
+   ],
+   "learning_experiences": [
+    "kutambua sauti katika kifungu chepesi kuhusu suala lengwa akishirikiana na wenzake,",
+    "kusoma kifungu chepesi cha maneno chenye sauti lengwa kwa kuzingatia matamshi bora akishirikiana na wenzake kuhusu suala lengwa,",
+    "kusoma kifungu chepesi cha maneno chenye sauti lengwa kwa sauti inayosikika akishirikiana na wenzake kuhusu suala lengwa,",
+    "kusoma kifungu chepesi cha maneno chenye sauti lengwa kwa kuzingatia kasi ifaayo (maneno 42 kwa dakika na kwa kuizingatia viakifishi) akishirikiana na wenzake,",
+    "kusoma kifungu cha hadithi kutoka kwenye kitabu au kifaa cha kidijtali, akishirikiana na wenzake kuhusu usalama wangu na jinsi ya kudumisha usalama barabarani, akizingatia sauti inayosikika, matamshi bora, kasi na ishara zifaazo."
+   ],
+   "key_inquiry_questions": [
+    "Je, unajua kusoma maneno gani yenye sauti /sh/ na /th/?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake na kuchangia kikamilifu katika shughuli za kikundi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali katika ujifunzaji.\nHamu ya ujifunzaji: mwanafunzi anapoendelea kusoma sentensi na vifungu mbalimbali vyenye sauti lengwa.",
+   "values": "Heshima: mwanafunzi anapoheshimu maoni ya wenzake kwenye kikundi.\nUwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali anavyotumia kujifunzia.",
+   "pcis": "Utunzi na usalama wa watoto: mwanafunzi anaposoma kifungu kinachohusu suala lengwa, anakuza ujuzi wake kuhusu masuala ya usalama.\nAfya ya mtu binafsi: mwanafunzi anaposoma vifungu kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma vifungu anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     66,
+     67
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.a",
+     "letter": "a",
+     "text": "kutambua sauti lengwa katika kifungu chepesi cha hadithi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.b",
+     "letter": "b",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.c",
+     "letter": "c",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa sauti inayosikika",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.d",
+     "letter": "d",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia kasi ifaayo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.e",
+     "letter": "e",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia ishara zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T8_KUSOMA_KWA_UFASAHA.f",
+     "letter": "f",
+     "text": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUANDI.T8_TAHAJIA",
+   "number": "8.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Tahajia (Theme 8: Usalama wangu)",
+   "sequence": 831,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua tahajia sahihi za maneno katika sentensi kwenye kitabu au kifaa cha kidijitali,",
+    "kushirikiana na wenzake kujadili kuhusu tahajia sahihi ya maneno kwenye kifungu kitabuni au kifaa cha kidijitali,",
+    "kuandika sentensi kuhusu suala lengwa akizingatia tahajia sahihi za maneno,",
+    "kurekebisha sentensi akizingatia tahajia sahihi,",
+    "kujaza nafasi kwenye kifungu akizingatia tahajia sahihi kuhusu suala lengwa,",
+    "kumsomea mzazi au mlezi sentensi alizotunga akizingatia tahajia sahihi ili ampe maoni."
+   ],
+   "key_inquiry_questions": [
+    "Je, kwa nini ni vizuri kuandika maneno kwa kuzingatia tahajia ifaayo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika shughuli za kikundi na kuchangia kikamilifu katika kutambua na kuandika akizingatia tahajia sahihi.\nUjuzi wa kidijitali: mwanafunzi anapofaulu kuandika sentensi zinazozingatia tahajia akitumia kifaa cha kidijitali.\nHamu ya ujifunzaji: mwanafunzi anapofaulu kutumia tahajia sahihi katika sentensi.",
+   "values": "Upendo: mwanafunzi anaposhirikiana na wenzake na kuheshimu maoni yao.\nHeshima: mwanafunzi anapowatambua na kuwathamini wenzake wakati wa kushiriki katika shughuli za kuandika.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika kazi za kikundi.",
+   "pcis": "Usalama wa watoto barabarani: mwanafunzi anapotambua tahajia sahihi za maneno katika sentensi kwenye kitabu au kifaa cha kidijitali akizingatia mada lengwa.\nHaki za watoto: mwanafunzi anapoandika sentensi kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya tahajia anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     68,
+     69
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUANDI.T8_TAHAJIA.a",
+     "letter": "a",
+     "text": "kutambua tahajia sahihi za maneno katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T8_TAHAJIA.b",
+     "letter": "b",
+     "text": "kuandika sentensi akizingatia tahajia sahihi za maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T8_TAHAJIA.c",
+     "letter": "c",
+     "text": "kufurahia kutumia tahajia sahihi katika maandishi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H",
+   "number": "8.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Matumizi ya huu na hii (Theme 8: Usalama wangu)",
+   "sequence": 841,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua maneno huu na hii kwa kutumia nyenzo kama vile kadi maneno, mti maneno, chati au kifaa cha kidijitali,",
+    "kusoma vifungu vinavyojumuisha huu na hii,",
+    "kuonyesha vitu mbalimbali kuhusu suala lengwa kama vile miti na kuvitungia sentensi katika kikundi (k.m Mti huu – miti hii,)",
+    "kukamilisha vifungu vyenye nafasi kwa kutumia huu na hii akishirikiana na wenzake,",
+    "kutunga sentensi akitumia huu na hii na zinazolenga suala lengwa, kuandika vifungu akitumia huu na hii kutokana na picha."
+   ],
+   "key_inquiry_questions": [
+    "Ni vitu gani unavyoweza kurejelea kwa kutumia maneno huu na hii?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: anaposhirikiana na wenzake katika kikundi kutambua maneno huu na hii na kutunga sentensi akiyatumia.\nHamu ya ujifunzaji: anapomshirikisha mzazi au mlezi wake kurejelea vitu vinavyopatikana nyumbani kwa kutumia maneno huu na hii ipasavyo.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kiteknolojia kujifunzia.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika kikundi kutunga sentensi.",
+   "pcis": "Magonjwa ya kuambukizwa na yasiyoambukizwa: mwanafunzi anapoandika kifungu chepesi kuhusu usalama wangu akitumia huu na hii kutokana na picha ipasavyo.\nHaki za watoto: mwanafunzi anapoandika sentensi kuhusu suala lengwa",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya sarufi kuhusu vionyeshi anavyojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "Second read left this for a person to confirm: outcome letters read as aab.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     70,
+     71
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.a",
+     "letter": "a",
+     "text": "kutambua huu na hii katika vifungu",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.a_2",
+     "letter": "a",
+     "text": "kutumia huu na hii kutajia vitu katika mazingira yake",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T8_MATUMIZI_YA_HUU_NA_H.b",
+     "letter": "b",
+     "text": "kuchangamkia matumizi ya huu na hii katika mawasiliano",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K",
+   "number": "9.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Mazungumzo ya papo kwa hapo. (Theme 9: Hospitalini)",
+   "sequence": 911,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kuonyesha ufahamu wa suala lengwa kwa kulieleza ipasavyo,",
+    "kusikiliza mgeni mwalikwa au mwalimu, wakizungumza,",
+    "kushirikiana na wenzake kusikiliza mazungumzo kwenye kifaa cha kidijitali kuhusu suala lengwa,",
+    "kuzungumza kwa kutamka ipasavyo sauti na maneno,",
+    "kujieleza kwa ufasaha anapozungumza kwa kutumia lugha inayoeleweka kuhusu suala lengwa, kutumia sauti ipasavyo kwa kuzingatia sauti inayosikika, kasi ya kuzungumza, toni pamoja na udhibiti wa upumuaji na viungo vya kutamka,",
+    "kuzungumza akitumia ipasavyo viziada lugha kama vile muktadha wa mazungumzo, ishara za uso, mikono mtuo, mkao wa mwili, utazamaji hadhira kuhusu suala lengwa,",
+    "kushirikiana na wenzake kuwasilisha mazungumzo ya papo kwa hapo wakiwa na wenzake, au wakati wa mazungumzo ya hadhara katika tamasha za muziki."
+   ],
+   "key_inquiry_questions": [
+    "Tunazingatia mambo gani tunapozungumza papo kwa hapo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika shughuli za kikundi na kuwasilisha hoja zake.\nKujiamini: mwanafunzi anapofanikiwa kuwasilisha mazungumzo yake ifaavyo mbele ya wenzake.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kijiditali kusikiliza mazungumzo kuhusu suala lengwa,\nUraia: mwanafunzi anapotangamana na wenzake katika shughuli za kikundi.",
+   "values": "Upendo: mwanafunzi anapowapatia wenzake nafasi kushiriki katika majadiliano.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli za kikundi.\nUwajibikaji: mwanafunzi anapotumia kifaa cha kidijitali na kukitunza ipasavyo.",
+   "pcis": "Elimu ya afya ya kujikinga: mwanafunzi anaposhirikiana na wenzake kusikiliza mazungumzo yanayohusu afya na jinsi ya kuepuka maradhi mbalimbali.\nHaki za watoto: mwanafunzi anaposikiliza mazungumzo kuhusu suala lengwa",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya mazungumzo ya papo kwaa hapo anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     72,
+     73
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.a",
+     "letter": "a",
+     "text": "kuonyesha ufahamu wa suala linalozungumziwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.b",
+     "letter": "b",
+     "text": "kuzingatia matamshi bora anapozungumza",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.c",
+     "letter": "c",
+     "text": "kujieleza kwa ufasaha wakati wa kuzungumza, kutumia viziada lugha ipasavyo wakati wa kuzungumza",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T9_MAZUNGUMZO_YA_PAPO_K.d",
+     "letter": "d",
+     "text": "kufurahia kutoa mazungumzo ya papo kwa hapo ili kujenga ufasaha wa kuzungumza",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU",
+   "number": "9.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa ufahamu (Theme 9: Hospitalini)",
+   "sequence": 921,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Kusoma kifungu"
+   ],
+   "learning_experiences": [
+    "kusoma kifungu chepesi cha maneno 47 - 50 na kutambua msamiati wa suala lengwa (dawa, sindano, kitanda) akishirikiana na wenzake,",
+    "kutabiri kitakachotokea katika hadithi akizingatia picha kwenye kifungu akiwa peke yake, au na wenzake,",
+    "kutabiri ujumbe wa kifungu kwa kutazama picha kwenye kitabu, vifaa vya kidijitali au chati akishirikiana na wenzake,",
+    "kueleza mafunzo yanayotokana na kifungu chepesi cha hadithi kuhusu suala lengwa akishirikiana na wenzake,",
+    "kuthibitisha utabiri wake kuhusu hadithi baada ya kuisoma,",
+    "kutumia msamiati wa suala lengwa ipasavyo katika mawasiliano."
+   ],
+   "key_inquiry_questions": [
+    "Je, ukitaka kupata ujumbe kwenye kifungu unazingatia nini?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi kujadili ujumbe na mafunzo katika kifungu cha ufahamu.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kujifunzia.\nHamu ya ujifunzaji: mwanafunzi anapomhadithia mzazi au mlezi kifungu alichokisoma shuleni kuhusu suala lengwa.",
+   "values": "Heshima: mwanafunzi anapoheshimu maoni ya wenzake wanaposhiriki katika shughuli za kikundi.\nUpendo: mwanafunzi anapowajali wenzake katika kikundi na kuwapa nafasi ya kushiriki.",
+   "pcis": "Elimu ya afya ya kujikinga: mwanafunzi anaposoma kifungu chepesi cha ufahamu kuhusu suala lengwa.\nAfya ya mtu binafsi: mwanafunzi anaposoma kifungu kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufahamu anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     74,
+     75
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.a",
+     "letter": "a",
+     "text": "kutambua msamiati kuhusu suala lengwa katika kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b",
+     "letter": "b",
+     "text": "kutabiri yatakayotokea katika kifungu chepesi cha ufahamu kwa kuzingatia picha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.c",
+     "letter": "c",
+     "text": "kueleza ujumbe wa kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.d",
+     "letter": "d",
+     "text": "kueleza mafunzo yanayotokana na kifungu chepesi cha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.e",
+     "letter": "e",
+     "text": "kuchangamkia kusoma vifungu vya ufahamu ili kuimarisha stadi ya kusoma",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUANDI.T9_KUANDIKA_KIFUNGU",
+   "number": "9.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Kuandika Kifungu (Theme 9: Hospitalini)",
+   "sequence": 931,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua suala la kuandikia kwa kulijadiliana na wenzake darasani,",
+    "kutazama picha kuhusu suala lengwa ili kupata habari za kuandikia,",
+    "kuwaelekeza wenzake kuhusu atakachoandikia akiwa na wenzake,",
+    "kusikiliza wenzake wakieleza kuhusu jambo au suala watakaloandikia kuhusu suala lengwa,",
+    "kuandika kifungu kifupi cha sentensi moja au zaidi chenye maelezo yanayoeleweka kuhusu suala lengwa,",
+    "kuwawasilishia wenzake kifungu alichoandika ili wakitolee maoni,",
+    "kumsomea mzazi au mlezi kifungu alichokiandika na kumweleza suala aliloandikia ili ampe maoni."
+   ],
+   "key_inquiry_questions": [
+    "Je, unaongozwa na mambo gani unapotaka kuandika kifungu?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kujadili kuhusu suala la kuandikia.\nUjuzi wa kidijitali: mwanafunzi anapofaulu kutumia kifaa cha kidijitali kuandika kifungu.\nHamu ya ujifunzaji: mwanafunzi anaposhiriki katika shughuli za kikundi na kujadili suala analoliandikia.",
+   "values": "Upendo: mwanafunzi anaposhirikiana na wenzake na kuheshimu maoni yao.\nHeshima: mwanafunzi anapowatambua na kuwathamini wenzake wakati wa kushiriki katika shughuli za kuandika.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli za kikundi.",
+   "pcis": "Elimu ya afya ya kujikinga: mwanafunzi anapoandika kifungu kifupi kutokana na mazingira yanayohusu suala lengwa.\nAfya ya mtu binafsi: mwanafunzi anapoandika kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika kifungu anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     76,
+     77
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUANDI.T9_KUANDIKA_KIFUNGU.a",
+     "letter": "a",
+     "text": "kutambua suala la kuandikia kifungu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T9_KUANDIKA_KIFUNGU.b",
+     "letter": "b",
+     "text": "kuandika kifungu kifupi kutokana na mazingira yake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T9_KUANDIKA_KIFUNGU.c",
+     "letter": "c",
+     "text": "kufurahia kuandika kifungu ili kujieleza",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N",
+   "number": "9.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Matumizi ya Vizuri na Vibaya, Polepole na Haraka. (Theme 9: Hospitalini)",
+   "sequence": 941,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua matumizi ya vizuri na vibaya, polepole na haraka katika nyenzo kama vile kadi za majina, kapu maneno, mti maneno au chati au kwenye kifaa cha kidijitali,",
+    "kuigiza vitendo mbalimbali kwa kutumia vizuri na vibaya, polepole na haraka,",
+    "kuandika sentensi zinazojumuisha vizuri na vibaya, polepole na haraka,",
+    "kujaza nafasi kwa kutumia vizuri na vibaya, polepole na haraka akizingatia suala lengwa kwa kusaidiwa na mwalimu."
+   ],
+   "key_inquiry_questions": [
+    "Unatumia maneno yapi kuelezea jinsi watu wanavyofanya vitendo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika kumtungia mwenzake sentensi akitumia vizuri na vibaya, polepole na haraka.\nKujiamini: mwanafunzi anapoigiza matumizi ya vizuri na vibaya, polepole na haraka akishirikiana na wenzake katika kikundi.\nUbunifu: mwanafunzi anapotunga sentensi sahihi akitumia vizuri na vibaya, polepole na haraka.\nHamu ya ujifunzaji: mwanafunzi anapowasiliana na mzazi au mlezi kwa kutumia vielezi vizuri na vibaya, polepole na haraka kurejelea vitendo anavyofanya nyumbani.",
+   "values": "Heshima: mwanafunzi anapoheshimu mchango wa wenzake katika kazi ya kikundi wanapotungiana sentensi kwa kutumia vizuri na vibaya, polepole na haraka.\nUwajibikaji: mwanafunzi anapojitolea kuwasiliana na mzazi au mlezi kwa kutumia vielezi vizuri na vibaya, polepole na haraka kurejelea vitendo anavyofanya nyumbani.",
+   "pcis": "Elimu ya afya ya kujikinga: mwanafunzi anapotumia vizuri na vibaya, polepole na haraka kutunga sentensi akizingatia suala lengwa.\nAfya ya mtu binafsi: mwanafunzi anapotunga sentensi kwa kuzingatia suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kutumia maneno ya sarufi anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     78,
+     79
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.a",
+     "letter": "a",
+     "text": "kutambua matumizi yafaayo ya vizuri na vibaya, polepole na haraka katika kifungu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.b",
+     "letter": "b",
+     "text": "kutumia vizuri na vibaya, polepole na haraka katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T9_MATUMIZI_YA_VIZURI_N.c",
+     "letter": "c",
+     "text": "kuchangamkia matumizi ya vizuri na vibaya katika kuimarisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA",
+   "number": "10.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Matamshi Bora (Theme 10: Hali ya anga)",
+   "sequence": 1011,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Alfabeti ya Kiswahili."
+   ],
+   "learning_experiences": [
+    "kutambua sauti za alfabeti ya Kiswahili katika matini mbalimbali au kifaa cha kidijitali,",
+    "kusikiliza maneno yenye silabi za sauti mbalimbali za Kiswahili yakitamkwa na mwalimu, mgeni mwalikwa au katika kifaa cha kidijitali yanayolenga suala lengwa,",
+    "kutamka pamoja na mwalimu maneno aliyosikiliza, kisha ayaseme akishirikiana na wenzake akilenga suala lengwa,",
+    "kuunganisha silabi ili kusoma maneno yanayotokana na sauti mbalimbali,",
+    "kujirekodi akisoma maneno yenye sauti mbalimbali za Kiswahili na kujisikiliza na wenzake ili kutathmini matamshi bora."
+   ],
+   "key_inquiry_questions": [
+    "Unazingatia nini kutamka sauti za Kiswahili kikamilifu?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kutambua na kutamka maneno yenye sauti mbalimbali.\nUjuzi wa kidijitali: mwanafunzi anapojirekodi akisoma kifungu na kutambua jinsi alivyotamka sauti mbalimbali.\nKujiamini: mwanafunzi anapotamka ipasavyo sauti mbalimbali za alfabeti ya Kiswahili.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika kikundi kutambua na kutamka maneno yenye silabi za sauti mbalimbali za alfabeti ya Kiswahili.\nHeshima: mwanafunzi anapoheshimu matamshi ya wenzake katika shughuli za kikundi.",
+   "pcis": "Elimu ya mazingira na tabia nchi: mwanafunzi anapotambua sauti za alfabeti ya Kiswahili katika matini mbalimbali kuhusu suala lengwa.\nHaki na majukumu ya kibinadamu: mwanafunzi anapotumia maneno yanayolenga suala mtambuko.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya matamshi bora anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     80,
+     81
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.a",
+     "letter": "a",
+     "text": "kutambua sauti mbalimbali za alfabeti ya Kiswahili",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.b",
+     "letter": "b",
+     "text": "kutamka maneno yenye silabi za sauti mbalimbali za Kiswahili kwa ufasaha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSIKI.T10_MATAMSHI_BORA.c",
+     "letter": "c",
+     "text": "kufurahia matamshi bora katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA",
+   "number": "10.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa ufasaha (Theme 10: Hali ya anga)",
+   "sequence": 1021,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Kusoma kifungu."
+   ],
+   "learning_experiences": [
+    "kutambua sauti mbalimbali za Kiswahili katika kifungu chepesi kuhusu suala lengwa akishirikiana na wenzake,",
+    "kusoma kifungu chepesi kwenye kifaa cha kidijitali kuhusu suala lengwa kwa kuzingatia matamshi bora akishirikiana na wenzake,",
+    "kusoma kifungu chepesi kuhusu suala lengwa kwa sauti inayosikika akishirikiana na wenzake,",
+    "kusoma kifungu chepesi kuhusu suala lengwa kwa kuzingatia kasi ifaayo (maneno 45 kwa dakika na kwa kuzingatia viakifishi) akishirikiana na wenzake,",
+    "kusoma kifungu chepesi kuhusu suala lengwa kwa kuzingatia ishara zifaazo akishirikiana na wenzake,",
+    "kuwawasilishia hadithi kutoka kwenye kitabu, kifaa cha kidijtali, n.k akishirikiana na wenzake akizingatia sauti inayosikika, matamshi bora, kasi na ishara zifaazo,",
+    "kumsomea mzazi au mlezi kifungu chepesi alichosoma shuleni kuhusu suala lengwa akizingatia matamshi bora, sauti inayosikika, kasi na ishara zifaazo."
+   ],
+   "key_inquiry_questions": [
+    "Kusoma kifungu kwa ufasaha unazingatia mambo gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi kutambua sauti lengwa na kusoma kifungu.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kuwasilisha kifungu cha hadithi.\nHamu ya ujifunzaji: mwanafunzi anapomsomea mzazi au mlezi kifungu chepesi walichosoma shuleni kuhusu suala lengwa akizingatia matamshi bora, sauti inayosikika, kasi na ishara zifaazo.",
+   "values": "Heshima: mwanafunzi anapoheshimu maoni ya wenzake katika shughuli za kikundi.\nUpendo: mwanafunzi anaposhirikiana na wenzake katika kikundi kutekeleza shughuli mbalimbali za ujifunzaji.",
+   "pcis": "Elimu ya mazingira na tabia nchi: mwanafunzi anaposoma kifungu chepesi kuhusu suala lengwa kwa kuzingatia matamshi bora, sauti inayosikika, kasi ifaayo na ishara zifaazo.\nHaki na majukumu ya kibinadamu: mwanafunzi anaposoma vifungu vinavyolenga suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufasaha anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     82,
+     83,
+     84
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.a",
+     "letter": "a",
+     "text": "kutambua sauti mbalimbali za alfabeti ya Kiswahili katika kifungu chepesi cha hadithi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.b",
+     "letter": "b",
+     "text": "kusoma kifungu chepesi cha hadithi kwa kuzingatia matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.c",
+     "letter": "c",
+     "text": "kusoma kifungu chepesi cha hadithi kwa kuzingatia sauti inayosikika",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.d",
+     "letter": "d",
+     "text": "kusoma kifungu chepesi cha hadithi kwa kuzingatia kasi ifaayo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.e",
+     "letter": "e",
+     "text": "kusoma kifungu chepesi cha hadithi chenye sauti lengwa kwa kuzingatia ishara zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUSOMA.T10_KUSOMA_KWA_UFASAHA.f",
+     "letter": "f",
+     "text": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI",
+   "number": "10.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Maneno Na Sentensi (Theme 10: Hali ya anga)",
+   "sequence": 1031,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua maneno mepesi ya silabi tatu kwenye matini mbalimbali,",
+    "kuandika maneno mepesi ya imla ya silabi tatu kitabuni au katika kifaa cha kidijitali,",
+    "kushirikiana na wenzake kuandika maneno mepesi ya silabi tatu,",
+    "kushiriki mchezo wa kuandika maneno na sentensi za imla zinayolenga suala lengwa akiwa na wenzake",
+    "kuwawasilishia wenzake maneno ya imla ili kuyaandika daftarini au kwenye kifaa cha kidijitali,",
+    "kuandika maneno atakayosomewa na wenzake daftarini au kwenye kifaa cha kidijitali,",
+    "kuandika daftarini sentensi sahili walizotunga zinazolenga suala lengwa."
+   ],
+   "key_inquiry_questions": [
+    "Sentensi sahili ni sentensi za aina gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi na kuchangia kikamilifu kutambua maneno ya silabi tatu katika sentensi.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kuandika maneno atakayosomewa na wenzake\nHamu ya ujifunzaji: mwanafunzi anapoandika sentensi za imla akishirikiana na mzazi au mlezi kwenye kifaa cha kidijitali na kuwatumia wenzake mtandaoni.\nUbunifu: mwanafunzi anaposhirikiana na wenzake kuunda sentensi nyepesi.",
+   "values": "Upendo: mwanafunzi anaposhirikiana na wenzake katika shughuli za kikundi na kuheshimu maoni yao.\nHeshima: mwanafunzi anapowatambua na kuwathamini wenzake wakati wa kushiriki katika shughuli za kuandika.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika ujifunzaji.",
+   "pcis": "Elimu ya mazingira na tabia nchi: mwanafunzi anapoandika maneno mepesi ya imla ya silabi tatu yanayohusu suala lengwa.\nMagonjwa ya kuambukizwa na yasiyoyakuambukizwa: mwanafunzi anapoandika sentensi na kifungu kuhusu suala lengwa",
+   "links": "Mwanafunzi anaweza kuhusisha stadi kuandika maneno na sentensi anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     85,
+     86
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.a",
+     "letter": "a",
+     "text": "kutambua maneno mepesi ya silabi tatu kwenye matini mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.b",
+     "letter": "b",
+     "text": "kuandika maneno mepesi ya imla ya silabi tatu yanayohusu suala lengwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.c",
+     "letter": "c",
+     "text": "kuandika sentensi fupi zinazohusu suala lengwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.KUANDI.T10_MANENO_NA_SENTENSI.d",
+     "letter": "d",
+     "text": "kufurahia kuandika ipasavyo maneno na sentensi kutokana na imla",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO",
+   "number": "10.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Vinyume vya Vitendo (Theme 10: Hali ya anga)",
+   "sequence": 1041,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua vinyume vya vitendo katika sentensi katika kadi maneno, kapu maneno, kifungu, chati, kitabu au kifaa cha kidijitali akishirikiana na wenzake akizingatia suala lengwa,",
+    "kusikiliza sentensi zenye vinyume vya vitendo zikisomwa na mwalimu, mgeni mwalikwa au kutoka kwa vifaa vya kidijitali akishirikiana na wenzake,",
+    "kusoma vinyume vya vitendo katika sentensi vinavyohusu suala lengwa akishirikiana na wenzake,",
+    "kuigiza vinyume vya vitendo vilivyotumiwa katika sentensi akiwa na wenzake,",
+    "kukamilisha sentensi akitumia vinyume vya vitendo akishirikiana na wenzake,",
+    "kutunga sentensi akitumia vinyume vya vitendo na kuzijadili na wenzake ili kuzitolea maoni,",
+    "kumsomea mzazi au mlezi sentensi alizotunga kwa kutumia vinyume vya vitendo ili ampe maoni."
+   ],
+   "key_inquiry_questions": [
+    "Je, vinyume vya vitendo huwa vinahusu nini?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi kuandika vinyume vya vitendo katika sentensi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya teknolojia kusikiliza matumizi ya vinyume vya vitendo.\nUbunifu: anapoigiza matumizi ya vinyume vya vitendo mbalimbali.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika shughuli za kikundi.\nHeshima: mwanafunzi anapowatambua na kuwathamini wenzake wakati wa kushiriki katika shughuli za kikundi.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutoka jamii mbalimbali kuigiza vinyume vya vitendo vilivyotumika katika sentensi\nElimu ya mazingira na tabia nchi: mwanafunzi anapotunga sentensi akitumia vinyume vya vitendo vinavyohusiana na hali ya anga.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vinyume anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English Language Activities na Indigenous Language Activities.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/lower-primary/",
+    "design": "Grade 1-3 Kiswahili - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     87,
+     88
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.a",
+     "letter": "a",
+     "text": "kutambua vinyume vya vitendo katika sentensi mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.b",
+     "letter": "b",
+     "text": "kutumia majina ya vinyume vya vitendo katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G2.SARUFI.T10_VINYUME_VYA_VITENDO.c",
+     "letter": "c",
+     "text": "kuchangamkia kutumia majina ya vinyume vya vitendo katika mawasiliano ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}
