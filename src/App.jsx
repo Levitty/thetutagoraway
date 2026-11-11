@@ -6108,7 +6108,7 @@ const AdminDashboard = ({ onBack }) => {
 // The one route table. A page that takes a parameter ('t/<token>') is matched
 // after it; anything else is the public home.
 const ROUTES = new Set(['consulting', 'tutors', 'teach', 'why', 'dashboard', 'ai', 'writing', 'horeb', 'horebhow', 'schools', 'clubs', 'spreadsheet', 'classroom', 'admin', 'handover', 'family-tablet', 'family', 'check', 'check-result', 'privacy', 'rocket',
-  // The HOREB live tutor prototype exists only in a build with VITE_VOICE_TUTOR=1 (test only).
+  // The HOREB live tutor prototype exists only in a build with VITE_VOICE_TUTOR=1 (.env.production sets it; admins and the server allowlist only).
   ...(import.meta.env.VITE_VOICE_TUTOR === '1' ? ['voice-tutor'] : [])]);
 const pageFromPath = (pathname) => {
   const path = String(pathname || '').replace(/^\//, '');
