@@ -21,6 +21,8 @@ export const MAX_STEPS = 12;
 export const MAX_BOARD_ITEMS = 30;
 export const PHASES = ['warmup', 'teach', 'guided', 'independent', 'wrapup'];
 export const COLOURS = ['ink', 'blue', 'red', 'green', 'orange', 'purple'];
+// What each colour name draws as. The child's ink (ink.js CHILD_INK) is kept apart from all of these.
+export const PALETTE = { ink: '#1D1D27', blue: '#3557D6', red: '#D2383A', green: '#1F7A47', orange: '#E08200', purple: '#6D3FD6' };
 export const SIZES = ['s', 'm', 'l'];
 export const ASK_FORMS = ['number', 'fraction', 'word', 'choice', 'draw'];
 export const EXPECTS = ['typed', 'spoken', 'drawn', 'any'];
@@ -59,7 +61,7 @@ const FIELDS = {
   clear: ['scope'],
   ask: ['id', 'prompt', 'form', 'choices', 'expected', 'accepts', 'wrong', 'skill', 'bank'],
   set_phase: ['phase'],
-  record_diagnosis: ['skill', 'misconception', 'confidence', 'evidence', 'next'],
+  record_diagnosis: ['skill', 'misconception', 'confidence', 'evidence', 'next', 'snapshot'],
   pause_for_child: ['expect', 'max_wait_s'],
   end_session: ['summary'],
 };
@@ -320,6 +322,13 @@ function checkStep(s, ctx, notes) {
       out.confidence = optEnum('confidence', CONFIDENCE);
       out.evidence = str(s.evidence, LIMITS.evidence, 'evidence', notes);
       out.next = optEnum('next', NEXT);
+      // The picture of the child's work this diagnosis rests on (milestone 2): one the
+      // page really took this session (ctx.snapshots is how many), never one made up.
+      if (s.snapshot !== undefined && s.snapshot !== null) {
+        need(typeof s.snapshot === 'string' && /^snap-[0-9]{1,3}$/.test(s.snapshot), 'record_diagnosis: bad snapshot id');
+        need(Number(s.snapshot.slice(5)) >= 1 && Number(s.snapshot.slice(5)) <= (ctx.snapshots || 0), `record_diagnosis: no picture ${s.snapshot} was taken`);
+        out.snapshot = s.snapshot;
+      }
       break;
     case 'pause_for_child':
       out.expect = optEnum('expect', EXPECTS);
@@ -366,7 +375,14 @@ export const partsOf = (item, bar) => {
  * the same width in reading order, else any free half. null when full.
  * `used` is a Set of cells (top_left, ...) already taken.
  */
-export const resolveSlot = (used, wanted) => {
+export const resolveSlot = (used, wanted, soft = null) => {
+  // `soft`: cells where the child has written. Kept clear while any other cell
+  // is free, so the tutor never draws over the child's work if it can help it.
+  if (soft && soft.size) {
+    const both = new Set([...used, ...soft]);
+    const s = resolveSlot(both, wanted);
+    if (s) return s;
+  }
   const free = (slot) => cellsOf(slot).every((c) => !used.has(c));
   if (free(wanted)) return wanted;
   const full = ROWS.includes(wanted);
@@ -383,18 +399,21 @@ export const resolveSlot = (used, wanted) => {
  * board as the turn would leave it, so an id must exist before it is pointed
  * at, a slot must be free, and the board never holds more than 30 items.
  *
+ * `inkCells`: cells where the child has written (tutor items avoid them when they can).
+ * `snapshots`: how many pictures of the child's work this session has taken.
  * `publicAsk`: the browser's check, where an ask has no hidden answer (it is
  * sealed on the server) and `seal` is not a command field.
  * Returns { steps, dropped: [{ index, cmd, reason }], notes }.
  */
-export function validateTurn(raw, { board = [], allowedMis = null, skills = null, publicAsk = false } = {}) {
+export function validateTurn(raw, { board = [], allowedMis = null, skills = null, publicAsk = false, snapshots = 0, inkCells = [] } = {}) {
   const dropped = [];
   const notes = [];
   const list = Array.isArray(raw?.steps) ? raw.steps : null;
   if (!list) return { steps: [], dropped: [{ index: -1, cmd: null, reason: 'the turn has no list of steps' }], notes };
   const items = new Map(board.map((b) => [b.id, b]));
   const used = new Set(board.flatMap((b) => (b.slot ? cellsOf(b.slot) : [])));
-  const ctx = { ids: new Set(items.keys()), items, allowedMis: allowedMis ? new Set(allowedMis) : null, skills: skills ? new Set(skills) : null, publicAsk };
+  const ctx = { ids: new Set(items.keys()), items, allowedMis: allowedMis ? new Set(allowedMis) : null, skills: skills ? new Set(skills) : null, publicAsk, snapshots };
+  const soft = new Set((Array.isArray(inkCells) ? inkCells : []).filter((c) => SLOTS.includes(c) && !ROWS.includes(c)));
   const steps = [];
   let closed = false;
   list.forEach((s, index) => {
@@ -405,7 +424,7 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
       const out = checkStep(s, ctx, notes);
       if (DRAWN.includes(out.cmd)) {
         if (items.size >= MAX_BOARD_ITEMS) bad('the board is full (30 items): clear first');
-        const slot = resolveSlot(used, out.slot);
+        const slot = resolveSlot(used, out.slot, soft);
         if (!slot) bad('no free slot on the board: erase or clear first');
         if (slot !== out.slot) notes.push(`${out.id}: moved from ${out.slot} to ${slot}`);
         out.slot = slot;
@@ -425,10 +444,15 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
   return { steps, dropped, notes };
 }
 
-/** A turn is usable when it says something and hands back to the child (or ends). */
-export const turnProblems = (steps) => {
+/**
+ * A turn is usable when it says something and hands back to the child (or ends).
+ * `nod`: after a picture taken because the child paused, the tutor may only nod
+ * (a turn that is just pause_for_child) and let them carry on.
+ */
+export const turnProblems = (steps, { nod = false } = {}) => {
   const out = [];
-  if (!steps.some((s) => s.cmd === 'say')) out.push('the turn says nothing');
+  const isNod = nod && steps.length >= 1 && steps.every((s) => s.cmd === 'pause_for_child' || s.cmd === 'set_phase' || s.cmd === 'record_diagnosis');
+  if (!isNod && !steps.some((s) => s.cmd === 'say')) out.push('the turn says nothing');
   const last = steps[steps.length - 1];
   if (!last || !['pause_for_child', 'end_session'].includes(last.cmd)) out.push('the turn does not end with pause_for_child or end_session');
   return out;
@@ -461,7 +485,7 @@ export const STEP_SCHEMAS = [
   C('clear', { scope: E(['tutor']), ...timing }, []),
   C('ask', { id: T, prompt: T, form: E(ASK_FORMS), choices: { type: 'array', items: T }, expected: T, accepts: { type: 'array', items: T }, wrong: { type: 'array', items: S({ answer: T, misconception: T }, ['answer', 'misconception']) }, skill: T, bank: T }, ['id', 'prompt', 'form']),
   C('set_phase', { phase: E(PHASES) }, ['phase']),
-  C('record_diagnosis', { skill: T, misconception: T, confidence: E(CONFIDENCE), evidence: T, next: E(NEXT) }, ['skill', 'misconception', 'confidence', 'evidence', 'next']),
+  C('record_diagnosis', { skill: T, misconception: T, confidence: E(CONFIDENCE), evidence: T, next: E(NEXT), snapshot: T }, ['skill', 'misconception', 'confidence', 'evidence', 'next']),
   C('pause_for_child', { expect: E(EXPECTS), max_wait_s: I }, ['expect', 'max_wait_s']),
   C('end_session', { summary: T }, ['summary']),
 ];

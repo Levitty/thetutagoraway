@@ -25,6 +25,7 @@ export const DEFAULT_SETTINGS = Object.freeze({
   dayCapUsd: 3,
   sessionMinutes: 20,
   maxTurns: 60,
+  maxSnapshots: 30,
 });
 
 const num = (v, d) => (Number.isFinite(Number(v)) && String(v ?? '').trim() !== '' ? Number(v) : d);
@@ -38,6 +39,7 @@ export const settingsFrom = (get = () => undefined) => ({
   dayCapUsd: num(get('VOICE_TUTOR_DAY_CAP_USD'), DEFAULT_SETTINGS.dayCapUsd),
   sessionMinutes: DEFAULT_SETTINGS.sessionMinutes,
   maxTurns: num(get('VOICE_TUTOR_MAX_TURNS'), DEFAULT_SETTINGS.maxTurns),
+  maxSnapshots: num(get('VOICE_TUTOR_MAX_SNAPSHOTS'), DEFAULT_SETTINGS.maxSnapshots),
 });
 
 /**
@@ -59,6 +61,7 @@ export const newSession = ({ id, mode = 'mock', child = null, target = null, pre
   status: 'ready', phase: null, phasesSeen: [],
   turns: 0, transcript: [], evidence: [], diagnoses: [], dropped: [],
   cost: { sessionUsd: 0, dayUsd: 0 }, interruptions: 0, ended: null, error: null,
+  snapshots: 0, looking: false,
 });
 
 const MAX_TRANSCRIPT = 200;
@@ -71,12 +74,16 @@ export function sessionReducer(s, ev) {
       return { ...s, status: 'thinking', error: null, transcript: push(s.transcript, { who: 'child', text: String(ev.text || '').slice(0, 300), at: ev.at, turn: s.turns }) };
     case 'request':
       return { ...s, status: 'thinking', error: null };
+    case 'looked':
+      // A picture of the child's work went to the tutor: the child sees that it did.
+      if (s.status === 'ended') return s;
+      return { ...s, status: 'thinking', looking: true, error: null, snapshots: s.snapshots + 1, transcript: push(s.transcript, { who: 'child', text: ev.text || 'A picture of my work on the board', snap: true, at: ev.at, turn: s.turns }) };
     case 'turn': {
       const steps = ev.steps || [];
       const phase = [...steps].reverse().find((x) => x.cmd === 'set_phase')?.phase || s.phase;
       const diagnoses = steps.filter((x) => x.cmd === 'record_diagnosis').map((d) => ({ ...d, turn: s.turns + 1, at: ev.at }));
       return {
-        ...s, status: 'speaking', turns: s.turns + 1, phase,
+        ...s, status: 'speaking', looking: false, turns: s.turns + 1, phase,
         phasesSeen: phase && !s.phasesSeen.includes(phase) ? [...s.phasesSeen, phase] : s.phasesSeen,
         diagnoses: [...s.diagnoses, ...diagnoses],
         dropped: [...s.dropped, ...(ev.dropped || []).map((d) => ({ ...d, turn: s.turns + 1 }))].slice(-100),
@@ -96,7 +103,7 @@ export function sessionReducer(s, ev) {
     case 'ended':
       return { ...s, status: 'ended', ended: { summary: ev.summary || '', reason: ev.reason || 'wrap-up', at: ev.at } };
     case 'error':
-      return { ...s, status: 'listening', error: ev.message || 'Something went wrong.' };
+      return { ...s, status: 'listening', looking: false, error: ev.message || 'Something went wrong.' };
     default:
       return s;
   }

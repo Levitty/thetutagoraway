@@ -29,7 +29,8 @@ import { screenChild, checkTurnText, MAX_CHILD_CHARS, ANSWER_REPLY } from './gua
 import { buildRequest, turnContext } from './prompt.js';
 import { probeBank, bankLines, markItem } from './probes.js';
 import { seal, unseal } from './seal.js';
-import { costOf } from '../rocket/guide.js';
+import { costOf, PRICES } from '../rocket/guide.js';
+import { validateSnapshot, imageTokens, CHECK_GAP_MS } from './snapshot.js';
 
 const reply = (status, body) => ({ status, body });
 const say = (text) => ({ cmd: 'say', text });
@@ -38,6 +39,9 @@ const handBack = { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 };
 export const OFF_REPLY = 'The live tutor is switched off.';
 export const ADULTS_ONLY = 'The live tutor is for adult test accounts only until parent consent is built (milestone 5).';
 export const DISCLOSURE = 'Hello. I am HOREB, an AI tutor. I am a computer program, not a person.';
+export const NO_PICTURE_TURN = [say('I cannot look at pictures just now.'), say('Please type your answer for me.'), { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }];
+// A rough price for one turn before it is made, so a picture is never sent past a cap.
+export const TURN_ESTIMATE_USD = 0.02;
 export const FALLBACK_TURN = [say('Let me think about that a different way.'), say('Tell me what you think the first step is.'), handBack];
 export const WIND_DOWN = [
   { cmd: 'set_phase', phase: 'wrapup' },
@@ -109,9 +113,14 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
   const skills = lessonSkills(pick.target);
   const allowedMis = allowedMisconceptions(skills);
   const board = Array.isArray(body?.board) ? body.board.slice(0, 40) : [];
+  // Pictures of the child's work this session (the page counts them); a diagnosis may name one.
+  const snapshots = Math.max(0, Math.min(999, Number(body?.snapshots_taken) || 0));
+  const inkCellsIn = Array.isArray(body?.ink_cells) ? body.ink_cells.slice(0, 6).map(String) : [];
+  const vopts = { board, allowedMis, skills, snapshots, inkCells: inkCellsIn };
+  let picture = null; // { id, reason, attached, note } for the reply and the context
   const out = async (steps, extra = {}) => {
-    const v = validateTurn({ steps }, { board, allowedMis, skills });
-    return reply(200, { steps: await sealAsks(v.steps, extra.bank || []), dropped: extra.dropped || v.dropped, notes: extra.notes || v.notes, marked, target: pick.target, prerequisite: pick.prerequisite, guard: extra.guard || [], cost_usd: extra.cost || 0, spent: extra.spent || null, model: extra.model || null });
+    const v = validateTurn({ steps }, vopts);
+    return reply(200, { steps: await sealAsks(v.steps, extra.bank || []), dropped: extra.dropped || v.dropped, notes: extra.notes || v.notes, marked, target: pick.target, prerequisite: pick.prerequisite, guard: extra.guard || [], cost_usd: extra.cost || 0, spent: extra.spent || null, model: extra.model || null, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null } });
   };
   // 8 (shared). The hidden half of each question is sealed; the browser gets the public half.
   const sealAsks = async (steps, bank) => Promise.all(steps.map(async (s) => {
@@ -135,9 +144,24 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
   try { spent = await db.spend({ sessionId: sid, childKey, since: dayStart(now) }); } catch (e) {
     return reply(503, { error: 'The tutor cannot check its spending (has the voice_tutor_usage migration been run?).' });
   }
-  const cap = capCheck({ sessionUsd: spent.session, dayUsd: spent.day, turns: turnIndex }, settings);
+
+  // The picture of the child's work, if one came: checked, throttled, and never past a cap.
+  let image = null;
+  if (body?.snapshot) {
+    const snap = validateSnapshot(body.snapshot);
+    const id = /^snap-[0-9]{1,3}$/.test(String(body.snapshot.id)) ? body.snapshot.id : null;
+    if (snap.error) picture = { id, reason: body.snapshot.reason, attached: false, why: snap.error, note: 'A picture of the child\'s work was taken but could not be read. Say you could not see it, and ask them to write it again, bigger, or to type it.' };
+    else if (!snap.strokes) picture = { id, reason: snap.reason, attached: false, why: 'no child writing', note: 'The child asked you to look, but there is no writing of theirs on the board yet. Ask them to write their working first.' };
+    else if ((spent.snapshots || 0) >= settings.maxSnapshots) picture = { id, reason: snap.reason, attached: false, why: 'snapshot-cap', note: 'No more pictures this lesson. Ask the child to type what they wrote.' };
+    else if (spent.lastSnapshotAt && now - Date.parse(spent.lastSnapshotAt) < CHECK_GAP_MS) picture = { id, reason: snap.reason, attached: false, why: 'snapshot-throttled', note: null };
+    else { image = snap; picture = { id: snap.id, reason: snap.reason, attached: true }; }
+  }
+  // Caps, counting what this turn will cost (its picture included) before it is made.
+  const imageUsd = image ? (imageTokens(image.w, image.h) * (PRICES[settings.model]?.input ?? 2)) / 1e6 : 0;
+  const est = TURN_ESTIMATE_USD + imageUsd;
+  const cap = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
   if (!cap.ok) return out(WIND_DOWN, { guard: [cap.reason], spent });
-  if (!callModel) return out(screen.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, { guard: ['offline'], spent });
+  if (!callModel) return out(image ? NO_PICTURE_TURN : screen.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, { guard: ['offline'], spent });
 
   // 6. The model.
   const bank = probeBank(skills, `${sid}:${turnIndex}`);
@@ -145,10 +169,12 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
   const context = turnContext({
     ...pick, elapsedMin: Math.max(0, Number(body?.elapsed_s) || 0) / 60, turnIndex, phase: body?.phase || null,
     board, marked, heard: typeof body?.heard === 'string' ? body.heard.slice(0, 400) : null, wantsAnswer: screen.wantsAnswer,
-    bankLines: bankLines(bank),
+    bankLines: bankLines(bank), picture,
   });
   const history = Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === 'string') : [];
-  const base = { model: settings.model, effort: settings.effort, lib, history, message, context, names };
+  const base = { model: settings.model, effort: settings.effort, lib, history, message, context, names, image };
+  // A picture taken because the child paused may get only a nod.
+  const nod = !!image && image.reason === 'idle' && !message;
 
   let cost = 0;
   const meter = { input_tokens: 0, output_tokens: 0, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 };
@@ -161,8 +187,8 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
     const text = (res?.content || []).filter((c) => c.type === 'text').map((c) => c.text).join('');
     let raw = null;
     try { raw = JSON.parse(text); } catch { return { text, reasons: ['the reply was not valid JSON'] }; }
-    const v = validateTurn(raw, { board, allowedMis, skills });
-    const reasons = [...v.dropped.map((d) => `step ${d.index} (${d.cmd}) dropped: ${d.reason}`), ...turnProblems(v.steps)];
+    const v = validateTurn(raw, vopts);
+    const reasons = [...v.dropped.map((d) => `step ${d.index} (${d.cmd}) dropped: ${d.reason}`), ...turnProblems(v.steps, { nod })];
     // 7. The answer guard: the open question, and any asked now.
     const hidden = [open, ...v.steps.filter((s) => s.cmd === 'ask').map((s) => itemFor(s, bank))].filter(Boolean);
     const leak = checkTurnText(v.steps, hidden);
@@ -172,7 +198,7 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
       if (v.steps.length < 12) v.steps.unshift(say(DISCLOSURE));
       else { const k = v.steps.findIndex((s) => s.cmd === 'say'); v.steps[k] = say(DISCLOSURE); }
     }
-    return { text, v, reasons, leaked: !leak.ok, fatal: !leak.ok || turnProblems(v.steps).length > 0 };
+    return { text, v, reasons, leaked: !leak.ok, fatal: !leak.ok || turnProblems(v.steps, { nod }).length > 0 };
   };
 
   let r;
@@ -186,14 +212,14 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
       r = again.refused ? again : (!again.fatal || r.fatal ? again : r);
     }
   } catch (e) {
-    await logUsage(db, { user, childKey, sid, settings, cost, meter, guard: [...guard, 'model-error'], dropped: 0 });
+    await logUsage(db, { user, childKey, sid, settings, cost, meter, guard: [...guard, 'model-error'], dropped: 0, image });
     return out(FALLBACK_TURN, { guard: [...guard, 'model-error'], cost, spent: addSpent(spent, cost) });
   }
   if (r.refused) guard.push('refusal');
   const usable = r.v && !r.fatal;
   if (!usable && !r.refused) guard.push(r.leaked ? 'answer-leak' : 'invalid-turn');
   const steps = usable ? r.v.steps : (screen.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN);
-  await logUsage(db, { user, childKey, sid, settings, cost, meter, guard, dropped: r.v?.dropped.length || 0 });
+  await logUsage(db, { user, childKey, sid, settings, cost, meter, guard, dropped: r.v?.dropped.length || 0, image });
   const body2 = await out(steps, { bank, guard, cost, spent: addSpent(spent, cost), model: settings.model, dropped: r.v?.dropped || [], notes: r.v?.notes || [] });
   return body2;
 }
@@ -201,11 +227,13 @@ export async function runTutorTurn({ user, body, db, callModel = null, safeguard
 const addSpent = (s, c) => ({ session: (s?.session || 0) + c, day: (s?.day || 0) + c });
 export const dayStart = (now) => { const d = new Date(now); d.setUTCHours(0, 0, 0, 0); return d.toISOString(); };
 
-const logUsage = (db, { user, childKey, sid, settings, cost, meter, guard, dropped }) => db.recordUsage({
+// The picture itself is never stored (milestone 4 decides storage); only that one was sent, and its size.
+const logUsage = (db, { user, childKey, sid, settings, cost, meter, guard, dropped, image = null }) => db.recordUsage({
   user_id: user.id, child_key: childKey, session_id: sid, model: settings.model, cost_usd: cost,
   input_tokens: meter.input_tokens, output_tokens: meter.output_tokens,
   cache_read_tokens: meter.cache_read_input_tokens, cache_write_tokens: meter.cache_creation_input_tokens,
   guard, dropped_steps: dropped,
+  snapshots: image ? 1 : 0, image_tokens: image ? imageTokens(image.w, image.h) : 0,
 });
 
 /** The hidden question an `ask` step stands for: a bank item, or one built from the model's own answer and wrong answers. */

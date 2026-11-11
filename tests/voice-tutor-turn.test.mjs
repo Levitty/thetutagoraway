@@ -216,3 +216,92 @@ test('the edge function in the repository is the build of this code', async () =
   assert.equal(fn, await buildVoiceTutorFn(), 'run: npm run build:voice-tutor-fn');
   assert.doesNotMatch(fn, /sk-ant-/);
 });
+
+// ---------------------------------------------------------------- milestone 2: pictures of the child's work
+const JPEG = `/9j/${'A'.repeat(6000)}`;
+const PIC = (o = {}) => ({ id: 'snap-1', media: 'image/jpeg', data: JPEG, w: 1000, h: 640, reason: 'check', strokes: 4, ...o });
+const SAY_BACK = reply([{ cmd: 'say', text: 'I see you wrote one third equals four sixths.' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }]);
+
+test('the turn carries the picture to the model, before the words, and meters it; the picture itself is not stored', async () => {
+  const db = world();
+  const callModel = model(SAY_BACK);
+  const r = await turn({ db, callModel, body: { snapshot: PIC(), snapshots_taken: 1 } });
+  const content = callModel.calls[0].messages[0].content;
+  assert.deepEqual(content[0], { type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: JPEG } });
+  assert.match(content[1].text, /A picture of the board is attached \(id snap-1\), taken because the child pressed "Check my work"/);
+  assert.match(content[1].text, /picture of the board shows their work/);
+  assert.match(systemPrompt(LIB), /Never claim to see something you cannot read/);
+  assert.deepEqual(r.body.picture, { id: 'snap-1', used: true, reason: 'check', why: null });
+  assert.equal(db.usage[0].snapshots, 1);
+  assert.equal(db.usage[0].image_tokens, 854);
+  assert.doesNotMatch(JSON.stringify(db.usage), /\/9j\//, 'no image data in what is stored');
+  // Only the latest picture is sent: no image in the history, and none without a snapshot.
+  const plain = model(SAY_BACK);
+  await turn({ db: world(), callModel: plain });
+  assert.equal(plain.calls[0].messages[0].content.length, 1);
+});
+
+test('an unreadable or empty picture is not sent; the tutor is told to ask for it again', async () => {
+  for (const [snap, why, note] of [
+    [PIC({ data: 'iVBORw0K' + 'A'.repeat(100) }), 'not really a jpeg', /could not be read.*write it again, bigger, or to type it/],
+    [PIC({ w: 5000 }), 'picture size out of range', /could not be read/],
+    [PIC({ strokes: 0 }), 'no child writing', /no writing of theirs on the board yet/],
+  ]) {
+    const callModel = model(SAY_BACK);
+    const r = await turn({ db: world(), callModel, body: { snapshot: snap, snapshots_taken: 1 } });
+    assert.equal(callModel.calls[0].messages[0].content.length, 1, why);
+    assert.match(callModel.calls[0].messages[0].content[0].text, note);
+    assert.equal(r.body.picture.used, false);
+    assert.equal(r.body.picture.why, why);
+  }
+});
+
+test('pictures are throttled on the server too: not within 3 s of the last, not past 30 a lesson', async () => {
+  const now = 1_800_000_000_000;
+  const recent = model(SAY_BACK);
+  const r = await turn({ db: world({ spent: { session: 0, day: 0, snapshots: 2, lastSnapshotAt: new Date(now - 1000).toISOString() } }), callModel: recent, body: { snapshot: PIC() } });
+  assert.equal(r.body.picture.why, 'snapshot-throttled');
+  assert.equal(recent.calls[0].messages[0].content.length, 1);
+  const full = await turn({ db: world({ spent: { session: 0, day: 0, snapshots: 30, lastSnapshotAt: null } }), callModel: model(SAY_BACK), body: { snapshot: PIC() } });
+  assert.equal(full.body.picture.why, 'snapshot-cap');
+});
+
+test('caps count the picture: a turn whose picture would pass the session cap winds down instead', async () => {
+  const spent = { session: 1.479, day: 1.479, snapshots: 0 };
+  const withPic = model(SAY_BACK);
+  const r = await turn({ db: world({ spent }), callModel: withPic, body: { snapshot: PIC() } });
+  assert.equal(withPic.calls.length, 0);
+  assert.deepEqual(r.body.steps.map((s) => s.cmd), WIND_DOWN.map((s) => s.cmd));
+  const noPic = model(SAY_BACK);
+  await turn({ db: world({ spent }), callModel: noPic });
+  assert.equal(noPic.calls.length, 1, 'the same spend without a picture still fits');
+});
+
+test('after an idle picture the tutor may just nod; after Check my work it must answer', async () => {
+  const nod = reply([{ cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }]);
+  const idle = await turn({ db: world(), callModel: model(nod), body: { snapshot: PIC({ reason: 'idle' }) } });
+  assert.deepEqual(idle.body.steps.map((s) => s.cmd), ['pause_for_child']);
+  assert.deepEqual(idle.body.guard, []);
+  const check = model(nod, nod);
+  const c = await turn({ db: world(), callModel: check, body: { snapshot: PIC({ reason: 'check' }) } });
+  assert.equal(check.calls.length, 2);
+  assert.ok(c.body.guard.includes('invalid-turn'));
+});
+
+test('the diagnosis names the picture it rests on, and only one that was taken', async () => {
+  const diag = (snap) => reply([
+    { cmd: 'record_diagnosis', skill: EQ, misconception: `${EQ}.M_EQUIV_ADDITIVE`, confidence: 'high', evidence: 'On the board: 1/3 = 4/6, added 3 to top and bottom.', next: 'reteach', snapshot: snap },
+    { cmd: 'say', text: 'In your working you added three to the top and the bottom.' },
+    { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 },
+  ]);
+  const ok = await turn({ db: world(), callModel: model(diag('snap-2')), body: { snapshot: PIC({ id: 'snap-2' }), snapshots_taken: 2 } });
+  assert.equal(ok.body.steps[0].snapshot, 'snap-2');
+  const made = await turn({ db: world(), callModel: model(diag('snap-9'), diag('snap-9')), body: { snapshot: PIC({ id: 'snap-2' }), snapshots_taken: 2 } });
+  assert.ok(made.body.dropped.some((d) => /no picture snap-9/.test(d.reason)));
+  assert.ok(!made.body.steps.some((s) => s.cmd === 'record_diagnosis'));
+});
+
+test('no key: a picture gets an honest authored line', async () => {
+  const r = await turn({ db: world(), callModel: null, body: { snapshot: PIC() } });
+  assert.match(r.body.steps.map((s) => s.text).join(' '), /cannot look at pictures just now/);
+});

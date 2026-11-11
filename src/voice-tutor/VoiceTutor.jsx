@@ -1,8 +1,10 @@
 // ============================================================================
-// THE LIVE TUTOR SESSION WINDOW (prototype, milestone 1): the board takes most
+// THE LIVE TUTOR SESSION WINDOW (prototype, milestones 1 and 2): the board takes most
 // of the screen, the HOREB robot sits in a corner box (listening, thinking,
 // speaking), a transcript strip shows the tutor's words at speaking pace, and
-// the child types.
+// the child types, or writes and draws on the board (a pen, an eraser for their
+// own ink, undo). "Check my work", or about 4 seconds without writing, sends a
+// picture of the board (never the camera) to the tutor with the next turn.
 //
 // Test only: behind VITE_VOICE_TUTOR=1 and an allowlist stub (the admin list,
 // or VITE_VOICE_TUTOR_ALLOWLIST). Adult test accounts only until consent
@@ -18,11 +20,15 @@ import { useHorebLook } from '../ai-tutor/horebLook.js';
 import { supabase } from '../supabase.js';
 import { Board, BOARD_H, BOARD_H_PORTRAIT } from './Board.jsx';
 import { emptyBoard, applyStep, boardSummary } from './board.js';
-import { validateTurn, PHASES } from './commands.js';
+import { validateTurn, PHASES, cellsOf } from './commands.js';
 import { buildTimeline, createPlayer, advance, interrupt } from './timeline.js';
 import { sessionReducer, newSession, mascotState } from './session.js';
 import { providersFor } from './providers.js';
-import { DEMO_ANSWERS } from './mockTutor.js';
+import { DEMO_SCRIPT } from './mockTutor.js';
+import { inkReducer, hasInk, writing, inkCells, CHILD_INK } from './ink.js';
+import { autoSnapDue, checkAllowed, imageTokens } from './snapshot.js';
+import { captureBoard } from './capture.js';
+import { EXAMPLES, exampleStrokes } from './examples.js';
 import { FRACTION_SKILLS, skillName } from './fractions.js';
 
 const ENV = import.meta.env || {};
@@ -53,6 +59,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   useHorebLook();
   const portrait = usePortrait();
   const boardH = portrait ? BOARD_H_PORTRAIT : BOARD_H;
+  const boardHRef = useRef(boardH);
+  boardHRef.current = boardH;
   const q = useMemo(params, []);
   const demo = q.get('demo') === 'auto';
   const email = String(user?.email || '').toLowerCase();
@@ -79,6 +87,12 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const sessionRef = useRef(session);
   sessionRef.current = session;
   const startedAt = useRef(0);
+  const svgRef = useRef(null);
+  const [tool, setTool] = useState('pen');
+  // Pictures of the child's work: how many, when, of which ink version (refs: read by the idle timer).
+  const snap = useRef({ count: 0, lastAt: null, version: 0 });
+  const [pics, setPics] = useState([]);   // { id, reason, w, h, bytes, tokens, thumb } kept in memory only, never stored
+  const [snapNote, setSnapNote] = useState('');
   const transcriptEnd = useRef(null);
 
   useEffect(() => { boardRef.current = board; }, [board]);
@@ -126,7 +140,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
 
   const fire = (b, step, at) => {
     if (!step) return b;
-    const next = applyStep(b, step, at);
+    const next = applyStep(b, step, at, boardHRef.current);
     if (step.cmd === 'ask') setAsk(next.ask);
     if (step.cmd === 'end_session') dispatch({ type: 'ended', summary: step.summary, at });
     return next;
@@ -136,7 +150,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const play = useCallback((res) => {
     // The browser checks every step again against its own board before drawing.
     const raw = res.steps || [];
-    const v = validateTurn({ steps: raw.map((s) => (s?.cmd === 'ask' ? (({ seal, ...p }) => p)(s) : s)) }, { board: boardSummary(boardRef.current), publicAsk: true });
+    const v = validateTurn({ steps: raw.map((s) => (s?.cmd === 'ask' ? (({ seal, ...p }) => p)(s) : s)) }, { board: boardSummary(boardRef.current), publicAsk: true, snapshots: snap.current.count, inkCells: inkCells(boardRef.current.childInk, boardHRef.current) });
     const dropped = [...(res.dropped || []), ...v.dropped.map((d) => ({ ...d, reason: `browser: ${d.reason}` }))];
     if (v.dropped.length) console.warn('voice-tutor: dropped', v.dropped);
     // The validator strips fields it does not know; the seal rides on the public ask.
@@ -144,12 +158,13 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     dispatch({ type: 'turn', steps, dropped, spent: res.spent, target: res.target, prerequisite: res.prerequisite, at: clock() });
     turnSteps.current = steps;
     saidK.current = new Set();
+    if (!steps.some((x) => x.cmd === 'say') && !steps.some((x) => x.cmd === 'end_session')) dispatch({ type: 'said', text: '(HOREB nods and lets you carry on)', at: clock() });
     const tl = buildTimeline(steps, { speech: providers.current.tts.speak });
     player.current = createPlayer(tl, clock());
     setLive({ sentences: tl.sentences, words: tl.sentences.map(() => 0) });
   }, []);
 
-  const request = useCallback(async ({ message = '', heard = null }) => {
+  const request = useCallback(async ({ message = '', heard = null, snapshot = null }) => {
     const s = sessionRef.current;
     const open = askRef.current;
     setAsk(null);
@@ -157,6 +172,10 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     const body = {
       session_id: s.id, child_id: childId || null, skill: skill || null,
       message, heard, answer: open?.seal && message ? { seal: open.seal, response: message } : null,
+      // The example name helps only the scripted tutor's stub; the server never gets it.
+      snapshot: snapshot ? (providers.current?.tutor?.name === 'remote' ? (({ example, ...x }) => x)(snapshot) : snapshot) : null,
+      snapshots_taken: snap.current.count,
+      ink_cells: inkCells(boardRef.current.childInk, boardHRef.current),
       board: boardSummary(boardRef.current),
       history: s.transcript.map((h) => ({ who: h.who, text: h.text })),
       elapsed_s: Math.round((clock() - startedAt.current) / 1000), turn_index: s.turns, phase: s.phase,
@@ -165,6 +184,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     try {
       const res = await providers.current.tutor.turn(body);
       if (res.marked) dispatch({ type: 'marked', skill: res.marked.skill, correct: res.marked.correct, misconception: res.marked.misconception, answer: res.marked.answer, askId: res.marked.ask, at: clock() });
+      if (res.picture && !res.picture.used) setPics((l) => l.map((x) => (x.id === res.picture.id ? { ...x, unused: res.picture.why || 'not used' } : x)));
       play(res);
     } catch (e) {
       dispatch({ type: 'error', message: e.message });
@@ -179,9 +199,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
 
   // The child types. Over the tutor, that is an interruption: strokes already
   // due are drawn at once, the rest are dropped, and the tutor is told what was heard.
-  const send = (text) => {
-    const msg = String(text ?? '').trim();
-    if (!msg || session.status === 'ended' || session.status === 'thinking' || !providers.current) return;
+  const stopTutor = () => {
     let heard = null;
     const pl = player.current;
     if (pl && !pl.stopped) {
@@ -199,10 +217,58 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       }
       player.current = null; setLive(null);
     }
+    return heard;
+  };
+  const send = (text) => {
+    const msg = String(text ?? '').trim();
+    if (!msg || session.status === 'ended' || session.status === 'thinking' || !providers.current) return;
+    const heard = stopTutor();
     dispatch({ type: 'child_said', text: msg, at: clock() });
     setInput('');
     request({ message: msg, heard });
   };
+
+  // ---------------------------------------------------------------- the child's ink
+  const onInk = useCallback((actions) => {
+    const t = clock();
+    let ink = boardRef.current.childInk;
+    for (const a of actions) ink = inkReducer(ink, { ...a, t });
+    if (ink === boardRef.current.childInk) return;
+    boardRef.current = { ...boardRef.current, childInk: ink };
+    setBoard(boardRef.current);
+  }, []);
+
+  const snapState = (now) => {
+    const ink = boardRef.current.childInk;
+    return { status: sessionRef.current.status, writing: writing(ink), hasInk: hasInk(ink), inkVersion: ink.version, snappedVersion: snap.current.version, lastInkAt: ink.lastAt, lastSnapAt: snap.current.lastAt, count: snap.current.count };
+  };
+
+  // A picture of the board goes to the tutor with the next turn.
+  const takePicture = useCallback(async (reason) => {
+    if (!providers.current) return;
+    const t = clock();
+    const st = snapState(t);
+    if (reason === 'check') {
+      const ok = checkAllowed(st, t);
+      if (!ok.ok) { setSnapNote(ok.reason); return; }
+    } else if (!autoSnapDue(st, t)) return;
+    setSnapNote('');
+    const ink = boardRef.current.childInk;
+    snap.current = { count: snap.current.count + 1, lastAt: t, version: ink.version };
+    const id = `snap-${snap.current.count}`;
+    let shot;
+    try { shot = await captureBoard(svgRef.current); } catch (e) { setSnapNote('The picture could not be taken.'); return; }
+    setPics((l) => [...l, { id, reason, w: shot.w, h: shot.h, bytes: shot.bytes, tokens: imageTokens(shot.w, shot.h), thumb: `data:${shot.media};base64,${shot.data}` }].slice(-6));
+    const heard = stopTutor();
+    dispatch({ type: 'looked', text: reason === 'check' ? 'Check my work (a picture of my board)' : 'A picture of my board', at: t });
+    request({ heard, snapshot: { id, media: shot.media, data: shot.data, w: shot.w, h: shot.h, reason, strokes: ink.strokes.length, example: ink.example } });
+  }, [request]);
+
+  // About 4 seconds after the child stops writing, on their turn: the idle picture.
+  useEffect(() => {
+    const id = setInterval(() => { if (autoSnapDue(snapState(clock()), clock())) takePicture('idle'); }, 500);
+    return () => clearInterval(id);
+  }, [takePicture]);
 
   // Silence: after 15 s on the child's turn, a gentle line under the box (no model call).
   useEffect(() => {
@@ -211,18 +277,37 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     return () => clearTimeout(id);
   }, [session.status, session.turns]);
 
-  // The demo plays itself: the demo child types each answer once the tutor hands over.
+  // The demo plays itself: once the tutor hands over, the demo child types an
+  // answer, or writes one on the board stroke by stroke and then presses Check
+  // my work or simply stops (and the idle picture is taken).
   const demoK = useRef(0);
   useEffect(() => {
     if (!demo) return undefined;
     if (session.status === 'ready' && !providers.current) { const id = setTimeout(start, 600); return () => clearTimeout(id); }
     if (session.status !== 'listening') return undefined;
-    const answer = DEMO_ANSWERS[demoK.current];
-    if (!answer) return undefined;
+    const item = DEMO_SCRIPT[demoK.current];
+    if (!item) return undefined;
     const timers = [];
-    const begin = 1100;
-    [...answer].forEach((_, i) => timers.push(setTimeout(() => setInput(answer.slice(0, i + 1)), begin + i * 55)));
-    timers.push(setTimeout(() => { demoK.current += 1; send(answer); }, begin + answer.length * 55 + 450));
+    const at = (ms, fn) => timers.push(setTimeout(fn, ms));
+    let t = 1100;
+    if (item.type === 'text') {
+      [...item.text].forEach((_, i) => at(t + i * 55, () => setInput(item.text.slice(0, i + 1))));
+      at(t + item.text.length * 55 + 450, () => { demoK.current += 1; send(item.text); });
+    } else {
+      if (item.clearFirst) { at(t, () => onInk([{ type: 'clear' }])); t += 400; }
+      // The demo child writes where the board is free, as a child would.
+      const taken = new Set(boardRef.current.order.flatMap((id) => cellsOf(boardRef.current.items[id].slot)));
+      const cell = ['bottom_right', 'bottom_left', 'middle_right', 'middle_left', 'top_right'].find((c) => !taken.has(c)) || 'bottom_right';
+      for (const stroke of exampleStrokes(item.example, boardH, cell)) {
+        at(t, () => onInk([{ type: 'down', x: stroke[0][0], y: stroke[0][1], tool: 'pen' }]));
+        stroke.slice(1).forEach(([x, y], i) => at(t + 12 * (i + 1), () => onInk([{ type: 'move', x, y }])));
+        t += 12 * stroke.length + 10;
+        at(t, () => onInk([{ type: 'up' }]));
+        t += 90;
+      }
+      at(t + 10, () => { onInk([{ type: 'tag', example: item.example }]); demoK.current += 1; });
+      if (item.then === 'check') at(t + 900, () => takePicture('check'));
+    }
     return () => timers.forEach(clearTimeout);
   }, [demo, session.status, session.turns]);
 
@@ -258,9 +343,9 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       </header>
 
       <main className="flex-1 min-h-0 flex flex-col landscape:flex-row gap-2 p-2">
-        <section className="relative min-h-0 portrait:shrink-0 landscape:flex-1 flex items-center justify-center">
-          <div className="vt-board relative w-full rounded-2xl overflow-hidden bg-white" style={{ aspectRatio: `1000 / ${boardH}`, maxHeight: '100%' }}>
-            <Board board={board} now={now} H={boardH} />
+        <section className="relative min-h-0 portrait:shrink-0 landscape:flex-1 flex flex-col items-center justify-center gap-1.5">
+          <div className="vt-board relative w-full rounded-2xl overflow-hidden bg-white min-h-0" style={{ aspectRatio: `1000 / ${boardH}`, maxHeight: started ? 'calc(100% - 46px)' : '100%' }}>
+            <Board ref={svgRef} board={board} now={now} H={boardH} inkOn={started && session.status !== 'ended'} tool={tool} onInk={onInk} />
             {!started ? (
               <div className="absolute inset-0 flex items-center justify-center bg-white/70 p-3">
                 <div className="w-full max-w-sm bg-white rounded-2xl p-4 border border-slate-200">
@@ -293,6 +378,11 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
               </div>
             ) : null}
           </div>
+          {started ? (
+            <InkBar tool={tool} setTool={setTool} canUndo={board.childInk.undo.length > 0} hasInk={hasInk(board.childInk)}
+              onUndo={() => onInk([{ type: 'undo' }])} onClear={() => onInk([{ type: 'clear' }])}
+              onCheck={() => takePicture('check')} checking={session.looking} note={snapNote} disabled={session.status === 'ended'} />
+          ) : null}
         </section>
 
         <aside className="min-h-0 flex-1 landscape:flex-none landscape:w-[300px] lg:landscape:w-[340px] flex flex-col gap-2">
@@ -300,14 +390,14 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
             <div className={`vt-mascot shrink-0 self-start landscape:self-stretch rounded-2xl bg-white border border-slate-200 flex flex-col items-center justify-center px-2 py-2 landscape:flex-row landscape:gap-3 landscape:justify-start landscape:px-3 landscape:py-1.5 vt-${mascot}`} aria-live="polite">
               <HorebBot size={56} mood={mascot} />
               <div className="text-center landscape:text-left">
-                <div className="text-[12px] font-extrabold text-violet-700 leading-tight">{MASCOT_LABEL[mascot]}</div>
+                <div className="text-[12px] font-extrabold text-violet-700 leading-tight">{session.looking ? 'Looking' : MASCOT_LABEL[mascot]}</div>
                 <div className="hidden landscape:block text-[11px] text-slate-500 leading-tight">{session.phase ? PHASE_LABEL[session.phase] : 'Ready'}</div>
               </div>
             </div>
             <div className="vt-strip min-h-0 flex-1 rounded-2xl bg-white border border-slate-200 overflow-y-auto px-3 py-2 text-[15px] leading-snug">
               <Phases phase={session.phase} />
               {pastLines.slice(-12).map((h, k) => (
-                <p key={k} className={h.who === 'child' ? 'vt-child' : 'vt-tutor'}>{h.text}</p>
+                <p key={k} className={h.snap ? 'vt-child vt-snap' : h.who === 'child' ? 'vt-child' : 'vt-tutor'}>{h.text}</p>
               ))}
               {live ? live.sentences.map((s, k) => (live.words[k] > 0 ? (
                 <p key={`l${k}`} className="vt-tutor vt-now">
@@ -340,7 +430,10 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
         </aside>
       </main>
 
-      {tester ? <TesterPanel session={session} board={board} mode={mode} onClose={() => setTester(false)} /> : null}
+      {tester ? (
+        <TesterPanel session={session} board={board} mode={mode} pics={pics} onClose={() => setTester(false)}
+          onExample={mode === 'mock' && started ? (key) => { onInk([{ type: 'clear' }, { type: 'add', strokes: exampleStrokes(key, boardH), example: key }]); setTester(false); } : null} />
+      ) : null}
     </div>
   );
 }
@@ -356,11 +449,31 @@ function Phases({ phase }) {
 
 // What the tester (an adult) sees: the target, the diagnosis and its evidence,
 // the evidence gathered, and every dropped command. Never shown to a child.
-function TesterPanel({ session, board, mode, onClose }) {
+// The child's tools, under the board: pen, eraser (their own ink only), undo,
+// clear their ink, and Check my work. Big enough for a finger.
+function InkBar({ tool, setTool, canUndo, hasInk: any, onUndo, onClear, onCheck, checking, note, disabled }) {
+  const btn = 'h-10 min-w-10 px-3 rounded-full border text-[13px] font-bold flex items-center gap-1.5 disabled:opacity-40';
+  return (
+    <div className="vt-inkbar w-full shrink-0 flex items-center gap-1.5 flex-wrap" role="toolbar" aria-label="Your tools">
+      <button type="button" aria-pressed={tool === 'pen'} disabled={disabled} onClick={() => setTool('pen')} className={`${btn} ${tool === 'pen' ? 'bg-white border-2' : 'bg-white/60 border-slate-300'}`} style={tool === 'pen' ? { borderColor: CHILD_INK, color: CHILD_INK } : undefined}>
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 14l1-4 8-8 3 3-8 8z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /></svg>Pen
+      </button>
+      <button type="button" aria-pressed={tool === 'eraser'} disabled={disabled} onClick={() => setTool('eraser')} className={`${btn} ${tool === 'eraser' ? 'bg-white border-2 border-slate-700' : 'bg-white/60 border-slate-300'}`}>
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 14h8M3 10l6-7 5 5-5 6H6z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /></svg>Eraser
+      </button>
+      <button type="button" disabled={disabled || !canUndo} onClick={onUndo} className={`${btn} bg-white border-slate-300`}>Undo</button>
+      <button type="button" disabled={disabled || !any} onClick={onClear} className={`${btn} bg-white border-slate-300 hidden sm:flex`}>Clear mine</button>
+      {note ? <span className="text-[12px] text-slate-500">{note}</span> : null}
+      <button type="button" disabled={disabled || !any || checking} onClick={onCheck} className={`${btn} ml-auto bg-amber-400 border-amber-400 font-extrabold`}>{checking ? 'Looking...' : 'Check my work'}</button>
+    </div>
+  );
+}
+
+function TesterPanel({ session, board, mode, pics = [], onExample = null, onClose }) {
   return (
     <div className="fixed inset-x-2 bottom-2 top-12 sm:left-auto sm:w-[400px] z-50 bg-white rounded-2xl border border-slate-300 overflow-y-auto p-4 text-sm">
       <div className="flex items-center"><b className="text-base">Tester view</b><button type="button" className="ml-auto font-bold" onClick={onClose}>Close</button></div>
-      <p className="text-slate-500 mt-1">Mode: {mode === 'remote' ? 'live model' : 'scripted'}. Nothing is saved in milestone 1.</p>
+      <p className="text-slate-500 mt-1">Mode: {mode === 'remote' ? 'live model' : 'scripted'}. Nothing is saved yet (storage and review come in milestone 4).</p>
       <h3 className="font-extrabold mt-3">Lesson</h3>
       <p>Target: {session.target ? skillName(session.target) : 'not chosen yet'}</p>
       <p>Weakest prerequisite: {session.prerequisite ? skillName(session.prerequisite) : 'none'}</p>
@@ -369,7 +482,7 @@ function TesterPanel({ session, board, mode, onClose }) {
       <h3 className="font-extrabold mt-3">Diagnoses</h3>
       {session.diagnoses.length ? session.diagnoses.map((d, k) => (
         <div key={k} className="mt-1 rounded-lg bg-violet-50 p-2" style={{ background: '#ECE8FF' }}>
-          <div className="font-bold">{d.misconception.split('.').pop()} ({d.confidence})</div>
+          <div className="font-bold">{d.misconception.split('.').pop()} ({d.confidence}){d.snapshot ? `, from picture ${d.snapshot}` : ''}</div>
           <div>{d.evidence}</div>
           <div className="text-slate-500">Next: {d.next.replace('_', ' ')}</div>
         </div>
@@ -378,6 +491,19 @@ function TesterPanel({ session, board, mode, onClose }) {
       {session.evidence.length ? session.evidence.map((e, k) => (
         <p key={k}>{e.ask}: "{e.answer}" {e.correct ? 'right' : `wrong${e.misconception ? `, ${e.misconception.split('.').pop()}` : ''}`}</p>
       )) : <p className="text-slate-500">None yet.</p>}
+      <h3 className="font-extrabold mt-3">Pictures of the child's work ({session.snapshots}, kept in this page only, never stored)</h3>
+      {pics.length ? pics.map((p) => (
+        <div key={p.id} className="mt-1 flex gap-2 items-start">
+          <img src={p.thumb} alt={`Picture ${p.id}`} className="w-24 rounded border border-slate-200" />
+          <div className="text-[12px]">{p.id}, {p.reason === 'check' ? 'Check my work' : 'after a pause'}<br />{p.w} x {p.h}, {Math.round(p.bytes / 1024)} KB, about {p.tokens} tokens{p.unused ? <><br /><span className="text-red-700">not sent: {p.unused}</span></> : null}</div>
+        </div>
+      )) : <p className="text-slate-500">None yet.</p>}
+      {onExample ? (
+        <>
+          <h3 className="font-extrabold mt-3">Write an example on the board (scripted mode reads only these)</h3>
+          <div className="flex flex-wrap gap-1.5 mt-1">{Object.entries(EXAMPLES).map(([k, e]) => <button key={k} type="button" onClick={() => onExample(k)} className="px-2 py-1 rounded-full border border-slate-300 text-[12px] font-bold">{e.label}</button>)}</div>
+        </>
+      ) : null}
       <h3 className="font-extrabold mt-3">Dropped commands</h3>
       {session.dropped.length || board.log.length ? [...session.dropped, ...board.log].map((d, k) => <p key={k} className="text-red-700">{d.cmd || 'turn'}: {d.reason}</p>) : <p className="text-slate-500">None.</p>}
     </div>
@@ -389,6 +515,8 @@ const CSS = `
 .vt-tutor { margin: 0 0 .35rem; color: #1D1D27; font-weight: 600; }
 .vt-tutor.vt-now { color: #3B17B0; }
 .vt-child { margin: 0 0 .35rem auto; width: fit-content; max-width: 85%; background: #FFF0D4; color: #6B3D00; border-radius: 14px; padding: .2rem .65rem; font-weight: 700; }
+.vt-snap { background: #E0F2F1; color: #0E5F66; }
+.vt-snap::before { content: ''; display: inline-block; width: .7em; height: .7em; margin-right: .35em; border: 2px solid currentColor; border-radius: 2px; vertical-align: -.05em; }
 .vt-word { background: linear-gradient(transparent 62%, #FFC93C 62%); }
 .vt-speaking .hb-talk { transform-box: fill-box; transform-origin: center; animation: vt-talk .32s ease-in-out infinite alternate; }
 .vt-listening .hb-listen { animation: vt-glow 1.6s ease-in-out infinite; }

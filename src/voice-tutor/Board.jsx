@@ -7,22 +7,24 @@
 // The board is 1000 units wide in a 2 x 3 grid of slots and scales to fit:
 // 640 high on a wide screen, 1050 high on a phone held upright (taller rows,
 // the same slots), so the board takes most of either screen.
-// The child's ink layer (milestone 2) sits on top and no command reaches it.
+// The child's ink layer sits on top, in its own colour, and no command reaches
+// it. The child draws with a finger, stylus or mouse (pointer events, one
+// pointer at a time, coalesced points for smooth lines); what they draw goes
+// through ink.js, which can only add or remove the child's own strokes.
 // ============================================================================
-import React, { useRef } from 'react';
+import React, { forwardRef, useRef } from 'react';
+import { strokePath } from './ink.js';
 import { parseMath, layoutMath } from './mathExpr.js';
 import { drawMs } from './timeline.js';
 import { drawProgress } from './board.js';
-import { cellsOf } from './commands.js';
+import { cellsOf, PALETTE } from './commands.js';
 
 export const BOARD_W = 1000;
 export const BOARD_H = 640;
 export const BOARD_H_PORTRAIT = 1050;
 const PAD = 16;
 
-export const INK = {
-  ink: '#1D1D27', blue: '#3557D6', red: '#D2383A', green: '#1F7A47', orange: '#E08200', purple: '#6D3FD6',
-};
+export const INK = PALETTE;
 const FONT = '"Figtree Variable", -apple-system, "Segoe UI", Roboto, sans-serif';
 const TEXT_SIZE = { s: 30, m: 42, l: 56 };
 const MATH_SIZE = { s: 36, m: 48, l: 62 };
@@ -398,7 +400,51 @@ function Pointer({ pointer, items, now, from, H }) {
   );
 }
 
-export function Board({ board, now, label = 'Whiteboard', H = BOARD_H }) {
+function ChildInk({ ink }) {
+  const line = (s, key) => <path key={key} d={strokePath(s.points)} fill="none" stroke={s.color} strokeWidth={s.width} strokeLinecap="round" strokeLinejoin="round" />;
+  return (
+    <>
+      {(ink?.strokes || []).map((s) => line(s, s.id))}
+      {ink?.live?.tool === 'pen' ? line(ink.live, 'live') : null}
+    </>
+  );
+}
+
+/**
+ * onInk(actions) receives ink.js actions ({ type:'down'|'move'|'up'|'cancel', x, y, tool })
+ * in board units; `tool` is 'pen' or 'eraser'; inkOn turns drawing on.
+ */
+export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard', H = BOARD_H, inkOn = false, tool = 'pen', onInk = null }, ref) {
+  const active = useRef(null);
+  const toBoard = (svg, e) => {
+    const m = svg.getScreenCTM();
+    if (!m) return null;
+    const pt = svg.createSVGPoint();
+    pt.x = e.clientX; pt.y = e.clientY;
+    const p = pt.matrixTransform(m.inverse());
+    return { x: Math.max(0, Math.min(BOARD_W, p.x)), y: Math.max(0, Math.min(H, p.y)) };
+  };
+  const down = (e) => {
+    if (!inkOn || !onInk || active.current != null) return;
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    const p = toBoard(e.currentTarget, e);
+    if (!p) return;
+    e.preventDefault();
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+    active.current = e.pointerId;
+    onInk([{ type: 'down', ...p, tool }]);
+  };
+  const move = (e) => {
+    if (e.pointerId !== active.current) return;
+    const svg = e.currentTarget;
+    const evs = e.nativeEvent.getCoalescedEvents?.() || [e];
+    onInk(evs.map((ev) => toBoard(svg, ev)).filter(Boolean).map((p) => ({ type: 'move', ...p })));
+  };
+  const up = (cancel) => (e) => {
+    if (e.pointerId !== active.current) return;
+    active.current = null;
+    onInk([{ type: cancel ? 'cancel' : 'up' }]);
+  };
   const lastPointer = useRef({ key: null, pos: null, prev: null });
   const ptr = board.pointer;
   if (ptr) {
@@ -411,7 +457,9 @@ export function Board({ board, now, label = 'Whiteboard', H = BOARD_H }) {
     if (b) lastPointer.current.pos = ptr.part ? { x: b.cx, y: b.cy } : { x: b.cx, y: b.y + b.h + 4 };
   }
   return (
-    <svg viewBox={`0 0 ${BOARD_W} ${H}`} className="block w-full h-full" role="img" aria-label={label} preserveAspectRatio="xMidYMid meet">
+    <svg ref={ref} xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${BOARD_W} ${H}`} className="block w-full h-full" role="img" aria-label={label} preserveAspectRatio="xMidYMid meet"
+      style={inkOn ? { touchAction: 'none', cursor: tool === 'eraser' ? 'cell' : 'crosshair', userSelect: 'none', WebkitUserSelect: 'none' } : undefined}
+      onPointerDown={down} onPointerMove={move} onPointerUp={up(false)} onPointerCancel={up(true)} onLostPointerCapture={up(false)}>
       <defs>
         <pattern id="vt-grid" width="40" height="40" patternUnits="userSpaceOnUse">
           <path d="M40 0H0V40" fill="none" stroke="#E9E6DA" strokeWidth="1" />
@@ -429,10 +477,10 @@ export function Board({ board, now, label = 'Whiteboard', H = BOARD_H }) {
         {board.marks.map((m, k) => (board.items[m.target] ? <Mark key={k} m={m} item={board.items[m.target]} now={now} H={H} /> : null))}
         {ptr ? <Pointer pointer={ptr} items={board.items} now={now} from={lastPointer.current.prev} H={H} /> : null}
       </g>
-      {/* The child's ink (milestone 2). No board command can reach this layer. */}
-      <g data-layer="child" />
+      {/* The child's ink. No board command can reach this layer. */}
+      <g data-layer="child"><ChildInk ink={board.childInk} /></g>
     </svg>
   );
-}
+});
 
 export default Board;

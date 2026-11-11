@@ -190,7 +190,7 @@ var FIELDS = {
   clear: ["scope"],
   ask: ["id", "prompt", "form", "choices", "expected", "accepts", "wrong", "skill", "bank"],
   set_phase: ["phase"],
-  record_diagnosis: ["skill", "misconception", "confidence", "evidence", "next"],
+  record_diagnosis: ["skill", "misconception", "confidence", "evidence", "next", "snapshot"],
   pause_for_child: ["expect", "max_wait_s"],
   end_session: ["summary"]
 };
@@ -488,6 +488,11 @@ function checkStep(s, ctx, notes) {
       out.confidence = optEnum("confidence", CONFIDENCE);
       out.evidence = str(s.evidence, LIMITS.evidence, "evidence", notes);
       out.next = optEnum("next", NEXT);
+      if (s.snapshot !== void 0 && s.snapshot !== null) {
+        need(typeof s.snapshot === "string" && /^snap-[0-9]{1,3}$/.test(s.snapshot), "record_diagnosis: bad snapshot id");
+        need(Number(s.snapshot.slice(5)) >= 1 && Number(s.snapshot.slice(5)) <= (ctx.snapshots || 0), `record_diagnosis: no picture ${s.snapshot} was taken`);
+        out.snapshot = s.snapshot;
+      }
       break;
     case "pause_for_child":
       out.expect = optEnum("expect", EXPECTS);
@@ -524,7 +529,12 @@ var partsOf = (item, bar) => {
   if (item.cmd === "plot_points") return (item.points || []).length;
   return 0;
 };
-var resolveSlot = (used, wanted) => {
+var resolveSlot = (used, wanted, soft = null) => {
+  if (soft && soft.size) {
+    const both = /* @__PURE__ */ new Set([...used, ...soft]);
+    const s = resolveSlot(both, wanted);
+    if (s) return s;
+  }
   const free = (slot) => cellsOf(slot).every((c) => !used.has(c));
   if (free(wanted)) return wanted;
   const full = ROWS.includes(wanted);
@@ -535,14 +545,15 @@ var resolveSlot = (used, wanted) => {
   }
   return null;
 };
-function validateTurn(raw, { board = [], allowedMis = null, skills = null, publicAsk = false } = {}) {
+function validateTurn(raw, { board = [], allowedMis = null, skills = null, publicAsk = false, snapshots = 0, inkCells = [] } = {}) {
   const dropped = [];
   const notes = [];
   const list = Array.isArray(raw?.steps) ? raw.steps : null;
   if (!list) return { steps: [], dropped: [{ index: -1, cmd: null, reason: "the turn has no list of steps" }], notes };
   const items = new Map(board.map((b) => [b.id, b]));
   const used = new Set(board.flatMap((b) => b.slot ? cellsOf(b.slot) : []));
-  const ctx = { ids: new Set(items.keys()), items, allowedMis: allowedMis ? new Set(allowedMis) : null, skills: skills ? new Set(skills) : null, publicAsk };
+  const ctx = { ids: new Set(items.keys()), items, allowedMis: allowedMis ? new Set(allowedMis) : null, skills: skills ? new Set(skills) : null, publicAsk, snapshots };
+  const soft = new Set((Array.isArray(inkCells) ? inkCells : []).filter((c) => SLOTS.includes(c) && !ROWS.includes(c)));
   const steps = [];
   let closed = false;
   list.forEach((s, index) => {
@@ -559,7 +570,7 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
       const out = checkStep(s, ctx, notes);
       if (DRAWN.includes(out.cmd)) {
         if (items.size >= MAX_BOARD_ITEMS) bad("the board is full (30 items): clear first");
-        const slot = resolveSlot(used, out.slot);
+        const slot = resolveSlot(used, out.slot, soft);
         if (!slot) bad("no free slot on the board: erase or clear first");
         if (slot !== out.slot) notes.push(`${out.id}: moved from ${out.slot} to ${slot}`);
         out.slot = slot;
@@ -588,9 +599,10 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
   });
   return { steps, dropped, notes };
 }
-var turnProblems = (steps) => {
+var turnProblems = (steps, { nod = false } = {}) => {
   const out = [];
-  if (!steps.some((s) => s.cmd === "say")) out.push("the turn says nothing");
+  const isNod = nod && steps.length >= 1 && steps.every((s) => s.cmd === "pause_for_child" || s.cmd === "set_phase" || s.cmd === "record_diagnosis");
+  if (!isNod && !steps.some((s) => s.cmd === "say")) out.push("the turn says nothing");
   const last = steps[steps.length - 1];
   if (!last || !["pause_for_child", "end_session"].includes(last.cmd)) out.push("the turn does not end with pause_for_child or end_session");
   return out;
@@ -619,7 +631,7 @@ var STEP_SCHEMAS = [
   C("clear", { scope: E(["tutor"]), ...timing }, []),
   C("ask", { id: T, prompt: T, form: E(ASK_FORMS), choices: { type: "array", items: T }, expected: T, accepts: { type: "array", items: T }, wrong: { type: "array", items: S({ answer: T, misconception: T }, ["answer", "misconception"]) }, skill: T, bank: T }, ["id", "prompt", "form"]),
   C("set_phase", { phase: E(PHASES) }, ["phase"]),
-  C("record_diagnosis", { skill: T, misconception: T, confidence: E(CONFIDENCE), evidence: T, next: E(NEXT) }, ["skill", "misconception", "confidence", "evidence", "next"]),
+  C("record_diagnosis", { skill: T, misconception: T, confidence: E(CONFIDENCE), evidence: T, next: E(NEXT), snapshot: T }, ["skill", "misconception", "confidence", "evidence", "next"]),
   C("pause_for_child", { expect: E(EXPECTS), max_wait_s: I }, ["expect", "max_wait_s"]),
   C("end_session", { summary: T }, ["summary"])
 ];
@@ -4447,7 +4459,8 @@ var DEFAULT_SETTINGS = Object.freeze({
   sessionCapUsd: 1.5,
   dayCapUsd: 3,
   sessionMinutes: 20,
-  maxTurns: 60
+  maxTurns: 60,
+  maxSnapshots: 30
 });
 var num = (v, d) => Number.isFinite(Number(v)) && String(v ?? "").trim() !== "" ? Number(v) : d;
 var settingsFrom = (get = () => void 0) => ({
@@ -4458,7 +4471,8 @@ var settingsFrom = (get = () => void 0) => ({
   sessionCapUsd: num(get("VOICE_TUTOR_SESSION_CAP_USD"), DEFAULT_SETTINGS.sessionCapUsd),
   dayCapUsd: num(get("VOICE_TUTOR_DAY_CAP_USD"), DEFAULT_SETTINGS.dayCapUsd),
   sessionMinutes: DEFAULT_SETTINGS.sessionMinutes,
-  maxTurns: num(get("VOICE_TUTOR_MAX_TURNS"), DEFAULT_SETTINGS.maxTurns)
+  maxTurns: num(get("VOICE_TUTOR_MAX_TURNS"), DEFAULT_SETTINGS.maxTurns),
+  maxSnapshots: num(get("VOICE_TUTOR_MAX_SNAPSHOTS"), DEFAULT_SETTINGS.maxSnapshots)
 });
 var capCheck = ({ sessionUsd = 0, dayUsd = 0, turns = 0 } = {}, s = DEFAULT_SETTINGS) => {
   if (sessionUsd >= s.sessionCapUsd) return { ok: false, reason: "session-cap" };
@@ -4955,13 +4969,21 @@ THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app d
 - pause_for_child ends every turn (expect typed while there is no voice; max_wait_s 5 to 60), except the last, which ends with end_session.
 - Phases: ${PHASES.join(", ")}.
 
+THE CHILD'S WORK ON THE BOARD:
+- The child writes on the board too. Their ink is teal; everything in other colours is yours. A picture of the board is sometimes attached to the turn: when they press "Check my work", or when they stop writing for a few seconds.
+- First say what you see in their teal ink, in words ("I see you wrote one third equals four sixths"), then respond to it. Refer to their actual working ("you added the tops and the bottoms").
+- Never claim to see something you cannot read. If the writing is unclear, too small or cut off, say so and ask them to write it again, bigger, or to type it. Do not guess.
+- If the picture was taken because they paused and they are still working, you may just nod: a turn with only pause_for_child.
+- When their written work is the evidence for a diagnosis, quote what they wrote in evidence and set snapshot to the picture's id from the context.
+- Never ask the child to write names, places, phone numbers or anything personal on the board.
+
 Example of a teaching turn (shape only):
 {"steps":[{"cmd":"say","text":"Here is a chapati cut into four equal pieces."},{"cmd":"fraction_bar","id":"bar1","parts":4,"shaded":0,"slot":"top","on":"four"},{"cmd":"say","text":"You ate three of them. That is three quarters."},{"cmd":"highlight","target":"bar1","part":3,"style":"glow","on":"three"},{"cmd":"write_math","id":"m1","expr":"frac(3,4)","slot":"middle_left","on":"three quarters"},{"cmd":"say","text":"How many quarters are left?"},{"cmd":"pause_for_child","expect":"typed","max_wait_s":30}]}
 
 GRADE 5 FRACTIONS: the skills, what each builds on, and the misconceptions you may name (use the full code):
 ${mapText(lib)}`;
 var pct = (x) => x == null ? "no attempts" : `${Math.round(x * 100)}% right`;
-function turnContext({ target, prerequisite, profile = [], reason = "", elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines: bankLines2 = [], capNote = null }) {
+function turnContext({ target, prerequisite, profile = [], reason = "", elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines: bankLines2 = [], capNote = null, picture = null }) {
   const lines = [
     `Turn ${turnIndex + 1}. Time used: ${Math.round(elapsedMin)} of about 20 minutes. Part of the lesson so far: ${phase || "not started"}.`,
     `Target skill: ${target} (${skillName(target)}), ${reason}.`,
@@ -4972,6 +4994,8 @@ function turnContext({ target, prerequisite, profile = [], reason = "", elapsedM
   if (marked) {
     lines.push(marked.correct ? `The child answered your question ${marked.ask} with "${marked.answer}": right.` : `The child answered your question ${marked.ask} with "${marked.answer}": not right.${marked.misconception ? ` The library reads this answer as ${marked.misconception}.` : " No misconception in the library matches this answer."} Diagnose before you teach.`);
   }
+  if (picture?.attached) lines.push(`A picture of the board is attached (id ${picture.id}), taken because ${picture.reason === "check" ? 'the child pressed "Check my work"' : "the child stopped writing for a few seconds"}. Read only the teal ink.`);
+  else if (picture?.note) lines.push(picture.note);
   if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Do not repeat everything; answer them.`);
   if (wantsAnswer) lines.push("The child is asking to be given the answer. Do not give it.");
   if (capNote) lines.push(capNote);
@@ -4980,7 +5004,7 @@ function turnContext({ target, prerequisite, profile = [], reason = "", elapsedM
 ${lines.join("\n")}
 </context>`;
 }
-function buildRequest({ model, effort = "low", lib, history = [], message = "", context = "", names = [], retry: retry2 = null }) {
+function buildRequest({ model, effort = "low", lib, history = [], message = "", context = "", names = [], retry: retry2 = null, image = null }) {
   const scrub = (s) => scrubNames(s, names);
   const transcript = history.slice(-HISTORY_LINES).map((h) => h.who === "child" ? `Child: ${fenceTeamText(scrub(h.text)).slice(0, 300)}` : `HOREB: ${scrub(String(h.text || "")).slice(0, 400)}`).join("\n");
   const now = [
@@ -4988,9 +5012,10 @@ function buildRequest({ model, effort = "low", lib, history = [], message = "", 
     transcript ? `<transcript>
 ${transcript}
 </transcript>` : "<transcript>(the lesson is starting)</transcript>",
-    message ? `<child>${fenceTeamText(scrub(message)).slice(0, 300)}</child>` : "<child>(nothing yet: the child has just opened the lesson; greet them)</child>"
+    message ? `<child>${fenceTeamText(scrub(message)).slice(0, 300)}</child>` : image ? "<child>(no words: the picture of the board shows their work)</child>" : "<child>(nothing yet: the child has just opened the lesson; greet them)</child>"
   ].join("\n");
-  const messages = [{ role: "user", content: [{ type: "text", text: now }] }];
+  const content = image ? [{ type: "image", source: { type: "base64", media_type: image.media, data: image.data } }, { type: "text", text: now }] : [{ type: "text", text: now }];
+  const messages = [{ role: "user", content }];
   if (retry2) {
     messages.push({ role: "assistant", content: [{ type: "text", text: retry2.previous }] });
     messages.push({ role: "user", content: [{ type: "text", text: `That turn could not be used: ${retry2.reasons.join("; ")}. Send the whole turn again with these fixed.` }] });
@@ -33347,6 +33372,30 @@ var costOf = (model, usage = {}) => {
   return ((usage.input_tokens || 0) * p.input + (usage.output_tokens || 0) * p.output + (usage.cache_read_input_tokens || 0) * p.cacheRead + (usage.cache_creation_input_tokens || 0) * p.cacheWrite) / m;
 };
 
+// src/voice-tutor/snapshot.js
+var CHECK_GAP_MS = 3e3;
+var MAX_WIDTH = 1e3;
+var MAX_HEIGHT = 1100;
+var MAX_BYTES = 300 * 1024;
+var TARGET_BYTES = 150 * 1024;
+var SNAP_ID = /^snap-[0-9]{1,3}$/;
+var imageTokens = (w, h) => Math.ceil(Math.max(0, w) * Math.max(0, h) / 750);
+function validateSnapshot(x) {
+  if (!x || typeof x !== "object") return { error: "no picture" };
+  if (!SNAP_ID.test(String(x.id || ""))) return { error: "bad picture id" };
+  if (!["image/jpeg", "image/png"].includes(x.media)) return { error: "not a jpeg or png" };
+  const data = String(x.data || "");
+  if (!data || data.length > MAX_BYTES) return { error: data ? "picture too large" : "empty picture" };
+  if (!/^[A-Za-z0-9+/]+={0,2}$/.test(data)) return { error: "not base64" };
+  const w = Number(x.w);
+  const h = Number(x.h);
+  if (!Number.isInteger(w) || !Number.isInteger(h) || w < 50 || h < 50 || w > MAX_WIDTH || h > MAX_HEIGHT) return { error: "picture size out of range" };
+  const head = data.slice(0, 8);
+  if (x.media === "image/jpeg" && !head.startsWith("/9j/")) return { error: "not really a jpeg" };
+  if (x.media === "image/png" && !head.startsWith("iVBORw0K")) return { error: "not really a png" };
+  return { id: x.id, media: x.media, data, w, h, reason: x.reason === "check" ? "check" : "idle", strokes: Math.max(0, Number(x.strokes) || 0) };
+}
+
 // src/voice-tutor/tutorTurn.js
 var reply = (status, body) => ({ status, body });
 var say = (text) => ({ cmd: "say", text });
@@ -33354,6 +33403,8 @@ var handBack = { cmd: "pause_for_child", expect: "typed", max_wait_s: 30 };
 var OFF_REPLY = "The live tutor is switched off.";
 var ADULTS_ONLY = "The live tutor is for adult test accounts only until parent consent is built (milestone 5).";
 var DISCLOSURE = "Hello. I am HOREB, an AI tutor. I am a computer program, not a person.";
+var NO_PICTURE_TURN = [say("I cannot look at pictures just now."), say("Please type your answer for me."), { cmd: "pause_for_child", expect: "typed", max_wait_s: 30 }];
+var TURN_ESTIMATE_USD = 0.02;
 var FALLBACK_TURN = [say("Let me think about that a different way."), say("Tell me what you think the first step is."), handBack];
 var WIND_DOWN = [
   { cmd: "set_phase", phase: "wrapup" },
@@ -33410,9 +33461,13 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
   const skills = lessonSkills(pick2.target);
   const allowedMis = allowedMisconceptions(skills);
   const board = Array.isArray(body?.board) ? body.board.slice(0, 40) : [];
+  const snapshots = Math.max(0, Math.min(999, Number(body?.snapshots_taken) || 0));
+  const inkCellsIn = Array.isArray(body?.ink_cells) ? body.ink_cells.slice(0, 6).map(String) : [];
+  const vopts = { board, allowedMis, skills, snapshots, inkCells: inkCellsIn };
+  let picture = null;
   const out = async (steps2, extra = {}) => {
-    const v = validateTurn({ steps: steps2 }, { board, allowedMis, skills });
-    return reply(200, { steps: await sealAsks(v.steps, extra.bank || []), dropped: extra.dropped || v.dropped, notes: extra.notes || v.notes, marked, target: pick2.target, prerequisite: pick2.prerequisite, guard: extra.guard || [], cost_usd: extra.cost || 0, spent: extra.spent || null, model: extra.model || null });
+    const v = validateTurn({ steps: steps2 }, vopts);
+    return reply(200, { steps: await sealAsks(v.steps, extra.bank || []), dropped: extra.dropped || v.dropped, notes: extra.notes || v.notes, marked, target: pick2.target, prerequisite: pick2.prerequisite, guard: extra.guard || [], cost_usd: extra.cost || 0, spent: extra.spent || null, model: extra.model || null, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null } });
   };
   const sealAsks = async (steps2, bank2) => Promise.all(steps2.map(async (s) => {
     if (s.cmd !== "ask") return s;
@@ -33437,9 +33492,24 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
   } catch (e) {
     return reply(503, { error: "The tutor cannot check its spending (has the voice_tutor_usage migration been run?)." });
   }
-  const cap2 = capCheck({ sessionUsd: spent.session, dayUsd: spent.day, turns: turnIndex }, settings);
+  let image = null;
+  if (body?.snapshot) {
+    const snap = validateSnapshot(body.snapshot);
+    const id = /^snap-[0-9]{1,3}$/.test(String(body.snapshot.id)) ? body.snapshot.id : null;
+    if (snap.error) picture = { id, reason: body.snapshot.reason, attached: false, why: snap.error, note: "A picture of the child's work was taken but could not be read. Say you could not see it, and ask them to write it again, bigger, or to type it." };
+    else if (!snap.strokes) picture = { id, reason: snap.reason, attached: false, why: "no child writing", note: "The child asked you to look, but there is no writing of theirs on the board yet. Ask them to write their working first." };
+    else if ((spent.snapshots || 0) >= settings.maxSnapshots) picture = { id, reason: snap.reason, attached: false, why: "snapshot-cap", note: "No more pictures this lesson. Ask the child to type what they wrote." };
+    else if (spent.lastSnapshotAt && now - Date.parse(spent.lastSnapshotAt) < CHECK_GAP_MS) picture = { id, reason: snap.reason, attached: false, why: "snapshot-throttled", note: null };
+    else {
+      image = snap;
+      picture = { id: snap.id, reason: snap.reason, attached: true };
+    }
+  }
+  const imageUsd = image ? imageTokens(image.w, image.h) * (PRICES2[settings.model]?.input ?? 2) / 1e6 : 0;
+  const est = TURN_ESTIMATE_USD + imageUsd;
+  const cap2 = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
   if (!cap2.ok) return out(WIND_DOWN, { guard: [cap2.reason], spent });
-  if (!callModel) return out(screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, { guard: ["offline"], spent });
+  if (!callModel) return out(image ? NO_PICTURE_TURN : screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, { guard: ["offline"], spent });
   const bank = probeBank(skills, `${sid}:${turnIndex}`);
   const names = child?.name ? [{ name: child.name, as: "the child" }] : [];
   const context = turnContext({
@@ -33451,10 +33521,12 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
     marked,
     heard: typeof body?.heard === "string" ? body.heard.slice(0, 400) : null,
     wantsAnswer: screen2.wantsAnswer,
-    bankLines: bankLines(bank)
+    bankLines: bankLines(bank),
+    picture
   });
   const history = Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === "string") : [];
-  const base = { model: settings.model, effort: settings.effort, lib, history, message, context, names };
+  const base = { model: settings.model, effort: settings.effort, lib, history, message, context, names, image };
+  const nod = !!image && image.reason === "idle" && !message;
   let cost = 0;
   const meter = { input_tokens: 0, output_tokens: 0, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 };
   const attempt = async (retry2) => {
@@ -33470,8 +33542,8 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
     } catch {
       return { text, reasons: ["the reply was not valid JSON"] };
     }
-    const v = validateTurn(raw, { board, allowedMis, skills });
-    const reasons = [...v.dropped.map((d) => `step ${d.index} (${d.cmd}) dropped: ${d.reason}`), ...turnProblems(v.steps)];
+    const v = validateTurn(raw, vopts);
+    const reasons = [...v.dropped.map((d) => `step ${d.index} (${d.cmd}) dropped: ${d.reason}`), ...turnProblems(v.steps, { nod })];
     const hidden = [open, ...v.steps.filter((s) => s.cmd === "ask").map((s) => itemFor(s, bank))].filter(Boolean);
     const leak = checkTurnText(v.steps, hidden);
     if (!leak.ok) reasons.push(...leak.reasons.map((r2) => `${r2}: never give the answer`));
@@ -33482,7 +33554,7 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
         v.steps[k] = say(DISCLOSURE);
       }
     }
-    return { text, v, reasons, leaked: !leak.ok, fatal: !leak.ok || turnProblems(v.steps).length > 0 };
+    return { text, v, reasons, leaked: !leak.ok, fatal: !leak.ok || turnProblems(v.steps, { nod }).length > 0 };
   };
   let r;
   const guard = [];
@@ -33494,14 +33566,14 @@ async function runTutorTurn({ user, body, db, callModel = null, safeguard = null
       r = again.refused ? again : !again.fatal || r.fatal ? again : r;
     }
   } catch (e) {
-    await logUsage(db, { user, childKey, sid, settings, cost, meter, guard: [...guard, "model-error"], dropped: 0 });
+    await logUsage(db, { user, childKey, sid, settings, cost, meter, guard: [...guard, "model-error"], dropped: 0, image });
     return out(FALLBACK_TURN, { guard: [...guard, "model-error"], cost, spent: addSpent(spent, cost) });
   }
   if (r.refused) guard.push("refusal");
   const usable2 = r.v && !r.fatal;
   if (!usable2 && !r.refused) guard.push(r.leaked ? "answer-leak" : "invalid-turn");
   const steps = usable2 ? r.v.steps : screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN;
-  await logUsage(db, { user, childKey, sid, settings, cost, meter, guard, dropped: r.v?.dropped.length || 0 });
+  await logUsage(db, { user, childKey, sid, settings, cost, meter, guard, dropped: r.v?.dropped.length || 0, image });
   const body2 = await out(steps, { bank, guard, cost, spent: addSpent(spent, cost), model: settings.model, dropped: r.v?.dropped || [], notes: r.v?.notes || [] });
   return body2;
 }
@@ -33511,7 +33583,7 @@ var dayStart = (now) => {
   d.setUTCHours(0, 0, 0, 0);
   return d.toISOString();
 };
-var logUsage = (db, { user, childKey, sid, settings, cost, meter, guard, dropped }) => db.recordUsage({
+var logUsage = (db, { user, childKey, sid, settings, cost, meter, guard, dropped, image = null }) => db.recordUsage({
   user_id: user.id,
   child_key: childKey,
   session_id: sid,
@@ -33522,7 +33594,9 @@ var logUsage = (db, { user, childKey, sid, settings, cost, meter, guard, dropped
   cache_read_tokens: meter.cache_read_input_tokens,
   cache_write_tokens: meter.cache_creation_input_tokens,
   guard,
-  dropped_steps: dropped
+  dropped_steps: dropped,
+  snapshots: image ? 1 : 0,
+  image_tokens: image ? imageTokens(image.w, image.h) : 0
 });
 function itemFor(s, bank = []) {
   if (s.bank) {
@@ -39122,12 +39196,18 @@ var dbFor = (admin) => ({
   },
   async spend({ sessionId, childKey, since }) {
     const [a, b] = await Promise.all([
-      admin.from("voice_tutor_usage").select("cost_usd").eq("session_id", sessionId),
+      admin.from("voice_tutor_usage").select("cost_usd, snapshots, created_at").eq("session_id", sessionId),
       admin.from("voice_tutor_usage").select("cost_usd").eq("child_key", childKey).gte("created_at", since)
     ]);
     if (a.error || b.error) throw new Error((a.error || b.error).message);
     const sum3 = (r) => (r.data || []).reduce((s, x) => s + Number(x.cost_usd || 0), 0);
-    return { session: sum3(a), day: sum3(b) };
+    const pics = (a.data || []).filter((x) => Number(x.snapshots) > 0);
+    return {
+      session: sum3(a),
+      day: sum3(b),
+      snapshots: pics.reduce((s, x) => s + Number(x.snapshots), 0),
+      lastSnapshotAt: pics.map((x) => x.created_at).sort().pop() || null
+    };
   },
   async recordUsage(row) {
     const { error } = await admin.from("voice_tutor_usage").insert(row);
@@ -39169,7 +39249,7 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
   try {
     const text = await req.text();
-    if (text.length > 6e4) return json({ error: "Too large." }, 413);
+    if (text.length > 4e5) return json({ error: "Too large." }, 413);
     const asUser = createClient(Deno.env.get("SUPABASE_URL"), Deno.env.get("SUPABASE_ANON_KEY"), {
       global: { headers: { Authorization: req.headers.get("Authorization") ?? "" } }
     });

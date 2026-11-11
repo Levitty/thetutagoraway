@@ -11,9 +11,16 @@
 // suspected misconceptions, then record_diagnosis with the evidence.
 //
 // The hidden answers stay inside this closure, as the server keeps them sealed.
+//
+// Pictures (milestone 2): the scripted tutor cannot read handwriting. stubVision
+// gives a canned "what I see" for the prepared example drawings (examples.js)
+// and, for anything else, says honestly that it cannot read it. A clear
+// reading of a written answer counts as the answer, and the diagnosis names
+// the picture as its evidence, as the real tutor does.
 // ============================================================================
 import { validateTurn } from './commands.js';
 import { markItem } from '../school/homeworkSitting.js';
+import { EXAMPLES } from './examples.js';
 
 const EQ = 'MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS';
 const ADD = `${EQ}.M_EQUIV_ADDITIVE`;
@@ -71,22 +78,23 @@ const BEATS = {
     ],
     hidden: { g1: typed('2', [['4', ADD], ['1', ONE], ['6', ONE]]) },
   }),
-  probe: (answer) => ({
+  probe: ({ answer, seen }) => ({
     // Diagnose first: 4 for 1/3 = ?/6 could be adding 3 to both, or a slip.
     // In 2/4 = ?/8, adding gives 6 and changing only the bottom gives 2.
     steps: [
-      say(`You wrote ${answer}. Let us try one more before we check.`),
-      { cmd: 'write_math', id: 'p1m', expr: 'frac(2,4) = frac(?,8)', slot: 'bottom_right', size: 'l', on: 'one more' },
+      say(seen ? `I see you wrote ${seen}. Let us try one more before we check.` : `You wrote ${answer}. Let us try one more before we check.`),
+      { cmd: 'clear', on: 'one more', delay_ms: -200 },
+      { cmd: 'write_math', id: 'p1m', expr: 'frac(2,4) = frac(?,8)', slot: 'top_left', size: 'l', on: 'one more' },
       { cmd: 'underline', target: 'p1m', on: 'check' },
       { cmd: 'ask', id: 'p1', prompt: 'Two quarters is how many eighths?', form: 'number', expected: '4' },
       pause(),
     ],
     hidden: { p1: typed('4', [['6', ADD], ['2', ONE], ['8', ONE]]) },
   }),
-  reteach: (evidence) => ({
+  reteach: ({ evidence, snapshot, seen }) => ({
     steps: [
-      { cmd: 'record_diagnosis', skill: EQ, misconception: ADD, confidence: 'high', evidence, next: 'reteach' },
-      say('Thank you. I think you added the same number to the top and the bottom.'),
+      { cmd: 'record_diagnosis', skill: EQ, misconception: ADD, confidence: 'high', evidence, next: 'reteach', ...(snapshot ? { snapshot } : {}) },
+      say(seen ? `Thank you. In ${seen} you added the same number to the top and the bottom.` : 'Thank you. I think you added the same number to the top and the bottom.'),
       say('Adding changes the amount. Look at two thirds and five sixths.'),
       { cmd: 'clear', on: 'Look', delay_ms: -200 },
       { cmd: 'fraction_bar', id: 'cmp', parts: 3, shaded: 2, second_bar: { parts: 6, shaded: 5 }, label: true, slot: 'top', on: 'two thirds' },
@@ -136,6 +144,8 @@ export function createMockTutor() {
   let hidden = {};
   const evidence = [];
   let last = null; // the beat last played, to go back over it when interrupted
+  let snapshots = 0;
+  let inkAt = [];
   const respond = (key, arg, board, again = false) => {
     last = { key, arg };
     const b = BEATS[key](arg);
@@ -147,51 +157,106 @@ export function createMockTutor() {
       const k = steps.findIndex((s) => s.cmd === 'say');
       steps[k] = say('Thank you for stopping me. Let me show that again, slowly.');
     }
-    const v = validateTurn({ steps }, { board });
+    const v = validateTurn({ steps }, { board, snapshots, inkCells: inkAt });
     // Public half only, as the server sends it: the answer stays here.
     const pub = v.steps.map((s) => (s.cmd === 'ask' ? (({ expected, accepts, wrong, ...p }) => ({ ...p, seal: `mock:${s.id}`, skill: EQ }))(s) : s));
     return { steps: pub, dropped: v.dropped, notes: v.notes };
   };
-  const mark = (answer) => {
+  const mark = (answer, pic = null) => {
     if (!answer?.seal) return null;
     const id = String(answer.seal).replace(/^mock:/, '');
     const it = hidden[id];
     if (!it) return null;
     const r = markItem(it, answer.response);
-    const m = { ask: id, skill: EQ, correct: r.correct, misconception: r.mis && r.mis !== 'other' ? r.mis : null, answer: String(answer.response ?? '') };
+    const m = { ask: id, skill: EQ, correct: r.correct, misconception: r.mis && r.mis !== 'other' ? r.mis : null, answer: String(answer.response ?? ''), ...(pic ? { snapshot: pic.id, seen: pic.seen } : {}) };
     evidence.push(m);
     return m;
   };
   return {
     name: 'scripted',
-    async turn({ message = '', answer = null, board = [], heard = null } = {}) {
+    async turn({ message = '', answer = null, board = [], heard = null, snapshot = null, snapshots_taken: taken = 0, ink_cells: cells = [] } = {}) {
+      inkAt = cells;
+      snapshots = Math.max(snapshots, Number(taken) || 0);
+      const meta = { target: EQ, prerequisite: null, cost_usd: 0, spent: { session: 0, day: 0 } };
       // Spoken over (typed over, in milestone 1): go back over the same beat; the lesson does not move on.
-      if (heard != null && last) return { ...respond(last.key, last.arg, board, true), marked: null, target: EQ, prerequisite: null, cost_usd: 0, spent: { session: 0, day: 0 }, guard: ['scripted', 'interrupted'] };
-      const marked = mark(answer);
+      if (heard != null && last) return { ...respond(last.key, last.arg, board, true), marked: null, ...meta, guard: ['scripted', 'interrupted'] };
+      // A picture of the child's work: what the stub "sees".
+      let pic = null;
+      if (snapshot) {
+        const seen = stubVision(snapshot);
+        const picture = { id: snapshot.id, used: true, reason: snapshot.reason };
+        const open = Object.keys(hidden)[0];
+        if (!seen.clear) {
+          // Never claim to see what cannot be read: say so, ask again; the lesson waits.
+          const v = validateTurn({ steps: seen.blank
+            ? [say('I cannot see any writing of yours on the board yet.'), say('Write your working, then press Check my work.'), pause()]
+            : seen.freehand
+              ? [say('I can see you wrote something, but in this practice mode I can only read the example drawings.'), say('Please type your answer for me too.'), pause()]
+              : [say('I can see some writing, but I cannot read it clearly.'), say('Please write it again, bigger, or type your answer.'), pause()] }, { board, snapshots });
+          return { steps: v.steps, dropped: v.dropped, notes: v.notes, marked: null, ...meta, picture, guard: ['scripted', 'unclear'] };
+        }
+        if (!open) {
+          const v = validateTurn({ steps: [say(`I see you wrote ${seen.text}.`), say('Tell me about it when you are ready.'), pause()] }, { board, snapshots });
+          return { steps: v.steps, dropped: v.dropped, notes: v.notes, marked: null, ...meta, picture, guard: ['scripted'] };
+        }
+        pic = { id: snapshot.id, seen: seen.text };
+        answer = { seal: `mock:${open}`, response: seen.answer };
+        message = seen.answer;
+      }
+      const marked = mark(answer, pic);
       let out;
       switch (beat) {
         case 'open': out = respond('open', null, board); beat = 'teach'; break;
         case 'teach': out = respond('teach', marked?.correct, board); beat = 'guided'; break;
         case 'guided': out = respond('guided', NOTICED.test(message), board); beat = 'g1'; break;
         case 'g1':
-          if (marked && !marked.correct) { out = respond('probe', marked.answer, board); beat = 'p1'; } else { out = respond('independent', true, board); beat = 'i1'; }
+          if (marked && !marked.correct) { out = respond('probe', { answer: marked.answer, seen: marked.seen }, board); beat = 'p1'; } else { out = respond('independent', true, board); beat = 'i1'; }
           break;
         case 'p1': {
           const first = evidence.find((e) => e.ask === 'g1');
-          const ev = `Wrote ${first?.answer} for 1/3 = ?/6 and ${marked?.answer} for 2/4 = ?/8${marked?.misconception === ADD ? ': added the same number to top and bottom both times.' : '.'}`;
-          if (marked && !marked.correct) { out = respond('reteach', ev, board); beat = 'g2'; } else { out = respond('independent', true, board); beat = 'i1'; }
+          const how = (e) => (e?.snapshot ? ` (on the board, picture ${e.snapshot})` : '');
+          const ev = `Wrote ${first?.answer} for 1/3 = ?/6${how(first)} and ${marked?.answer} for 2/4 = ?/8${how(marked)}${marked?.misconception === ADD ? ': added the same number to top and bottom both times.' : '.'}`;
+          const snap = marked?.snapshot || first?.snapshot || null;
+          if (marked && !marked.correct) { out = respond('reteach', { evidence: ev, snapshot: snap, seen: marked.seen || null }, board); beat = 'g2'; } else { out = respond('independent', true, board); beat = 'i1'; }
           break;
         }
         case 'g2': out = respond('independent', !!marked?.correct, board); beat = 'i1'; break;
         case 'i1': out = respond('wrapup', !!marked?.correct, board); beat = 'done'; break;
         default: out = { steps: [say('Our lesson is finished. Well done.'), { cmd: 'end_session', summary: 'Finished.' }], dropped: [], notes: [] };
       }
-      return { ...out, marked, target: EQ, prerequisite: null, cost_usd: 0, spent: { session: 0, day: 0 }, guard: ['scripted'] };
+      return { ...out, marked, ...meta, ...(snapshot ? { picture: { id: snapshot.id, used: true, reason: snapshot.reason } } : {}), guard: ['scripted'] };
     },
   };
+}
+
+/**
+ * The stub's "what I see". `snapshot.example` names a prepared drawing
+ * (examples.js) when the board shows exactly one; `strokes` is how many
+ * strokes of the child's are on the board.
+ */
+export function stubVision(snapshot) {
+  if (!snapshot?.strokes) return { clear: false, blank: true };
+  const e = EXAMPLES[snapshot.example];
+  if (!e) return { clear: false, freehand: true };
+  if (!e.clear) return { clear: false };
+  return { clear: true, text: e.text, read: e.read, answer: e.answer };
 }
 
 // What the demo child types, in order, when the page runs itself (?demo=auto).
 export const DEMO_ANSWERS = ['3/4', 'The bottom doubled and the top doubled', '4', '6', '3', '9'];
 
-export default { createMockTutor, DEMO_ANSWERS };
+// Milestone 2's demo: the child also writes on the board. Each entry is one turn of the child's:
+//   { type: 'text', text }                       types it
+//   { type: 'draw', example, then: 'check'|'wait', clearFirst }   writes a prepared example, then
+//                                                 presses Check my work, or stops and waits (the idle picture)
+export const DEMO_SCRIPT = [
+  { type: 'text', text: '3/4' },
+  { type: 'text', text: 'The bottom doubled and the top doubled' },
+  { type: 'draw', example: 'scribble', then: 'check' },
+  { type: 'draw', example: 'adds', then: 'wait', clearFirst: true },
+  { type: 'draw', example: 'probe', then: 'check', clearFirst: true },
+  { type: 'text', text: '3' },
+  { type: 'text', text: '9' },
+];
+
+export default { createMockTutor, stubVision, DEMO_ANSWERS, DEMO_SCRIPT };

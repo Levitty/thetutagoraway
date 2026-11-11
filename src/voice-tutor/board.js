@@ -6,16 +6,17 @@
 // again against the board as it really is (an id must exist, a slot must be
 // free, 30 items at most), because the browser's board is the truth.
 //
-// The child's ink (milestone 2) is `board.childInk` and nothing here touches
+// The child's ink is `board.childInk` (ink.js changes it) and nothing here touches
 // it: `clear` removes tutor items only, after saving a snapshot.
 // Pure: no React, no clock. `at` is the speech clock's time the stroke began,
 // which Board.jsx uses to draw it on.
 // ============================================================================
 import { DRAWN, MAX_BOARD_ITEMS, cellsOf, resolveSlot, partsOf } from './commands.js';
+import { emptyInk, inkCells } from './ink.js';
 
 export const emptyBoard = () => ({
   items: {}, order: [], marks: [], pointer: null, ask: null, phase: null,
-  diagnoses: [], snapshots: [], childInk: [], ended: null, log: [],
+  diagnoses: [], snapshots: [], childInk: emptyInk(), ended: null, log: [],
 });
 
 const usedCells = (board) => new Set(board.order.flatMap((id) => cellsOf(board.items[id].slot)));
@@ -26,13 +27,13 @@ export const boardSummary = (board) => board.order.map((id) => {
   return rest;
 });
 
-export function applyStep(board, step, at = 0) {
+export function applyStep(board, step, at = 0, H = 640) {
   const b = { ...board, log: board.log };
   const refuse = (reason) => ({ ...b, log: [...b.log, { at, cmd: step.cmd, reason }] });
   if (DRAWN.includes(step.cmd)) {
     if (b.items[step.id]) return refuse(`id ${step.id} is already on the board`);
     if (b.order.length >= MAX_BOARD_ITEMS) return refuse('the board is full');
-    const slot = resolveSlot(usedCells(b), step.slot);
+    const slot = resolveSlot(usedCells(b), step.slot, new Set(inkCells(b.childInk, H)));
     if (!slot) return refuse('no free slot');
     return { ...b, items: { ...b.items, [step.id]: { ...step, slot, at } }, order: [...b.order, step.id] };
   }

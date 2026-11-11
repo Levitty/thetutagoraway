@@ -19,6 +19,8 @@
 //          VOICE_TUTOR_MODEL=claude-sonnet-5-5         (optional; default)
 //          VOICE_TUTOR_EFFORT=low                      (optional: low | medium | high)
 //          VOICE_TUTOR_SESSION_CAP_USD=1.5  VOICE_TUTOR_DAY_CAP_USD=3   (optional; defaults)
+//          VOICE_TUTOR_MAX_SNAPSHOTS=30                (optional; pictures of the child's work a session)
+// A picture of the child's work arrives with a turn and goes to the model; it is never stored.
 
 // @ts-nocheck
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
@@ -64,12 +66,17 @@ const dbFor = (admin) => ({
   },
   async spend({ sessionId, childKey, since }) {
     const [a, b] = await Promise.all([
-      admin.from("voice_tutor_usage").select("cost_usd").eq("session_id", sessionId),
+      admin.from("voice_tutor_usage").select("cost_usd, snapshots, created_at").eq("session_id", sessionId),
       admin.from("voice_tutor_usage").select("cost_usd").eq("child_key", childKey).gte("created_at", since),
     ]);
     if (a.error || b.error) throw new Error((a.error || b.error).message);
     const sum = (r) => (r.data || []).reduce((s, x) => s + Number(x.cost_usd || 0), 0);
-    return { session: sum(a), day: sum(b) };
+    const pics = (a.data || []).filter((x) => Number(x.snapshots) > 0);
+    return {
+      session: sum(a), day: sum(b),
+      snapshots: pics.reduce((s, x) => s + Number(x.snapshots), 0),
+      lastSnapshotAt: pics.map((x) => x.created_at).sort().pop() || null,
+    };
   },
   async recordUsage(row) {
     const { error } = await admin.from("voice_tutor_usage").insert(row);
@@ -110,7 +117,7 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
   try {
     const text = await req.text();
-    if (text.length > 60000) return json({ error: "Too large." }, 413);
+    if (text.length > 400000) return json({ error: "Too large." }, 413);
     const asUser = createClient(Deno.env.get("SUPABASE_URL"), Deno.env.get("SUPABASE_ANON_KEY"), {
       global: { headers: { Authorization: req.headers.get("Authorization") ?? "" } },
     });

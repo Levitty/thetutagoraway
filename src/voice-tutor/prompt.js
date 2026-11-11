@@ -61,6 +61,14 @@ THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app d
 - pause_for_child ends every turn (expect typed while there is no voice; max_wait_s 5 to 60), except the last, which ends with end_session.
 - Phases: ${PHASES.join(', ')}.
 
+THE CHILD'S WORK ON THE BOARD:
+- The child writes on the board too. Their ink is teal; everything in other colours is yours. A picture of the board is sometimes attached to the turn: when they press "Check my work", or when they stop writing for a few seconds.
+- First say what you see in their teal ink, in words ("I see you wrote one third equals four sixths"), then respond to it. Refer to their actual working ("you added the tops and the bottoms").
+- Never claim to see something you cannot read. If the writing is unclear, too small or cut off, say so and ask them to write it again, bigger, or to type it. Do not guess.
+- If the picture was taken because they paused and they are still working, you may just nod: a turn with only pause_for_child.
+- When their written work is the evidence for a diagnosis, quote what they wrote in evidence and set snapshot to the picture's id from the context.
+- Never ask the child to write names, places, phone numbers or anything personal on the board.
+
 Example of a teaching turn (shape only):
 {"steps":[{"cmd":"say","text":"Here is a chapati cut into four equal pieces."},{"cmd":"fraction_bar","id":"bar1","parts":4,"shaded":0,"slot":"top","on":"four"},{"cmd":"say","text":"You ate three of them. That is three quarters."},{"cmd":"highlight","target":"bar1","part":3,"style":"glow","on":"three"},{"cmd":"write_math","id":"m1","expr":"frac(3,4)","slot":"middle_left","on":"three quarters"},{"cmd":"say","text":"How many quarters are left?"},{"cmd":"pause_for_child","expect":"typed","max_wait_s":30}]}
 
@@ -70,7 +78,7 @@ ${mapText(lib)}`;
 const pct = (x) => (x == null ? 'no attempts' : `${Math.round(x * 100)}% right`);
 
 /** The volatile part of a turn: who, where in the lesson, what just happened. */
-export function turnContext({ target, prerequisite, profile = [], reason = '', elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines = [], capNote = null }) {
+export function turnContext({ target, prerequisite, profile = [], reason = '', elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines = [], capNote = null, picture = null }) {
   const lines = [
     `Turn ${turnIndex + 1}. Time used: ${Math.round(elapsedMin)} of about 20 minutes. Part of the lesson so far: ${phase || 'not started'}.`,
     `Target skill: ${target} (${skillName(target)}), ${reason}.`,
@@ -83,6 +91,8 @@ export function turnContext({ target, prerequisite, profile = [], reason = '', e
       ? `The child answered your question ${marked.ask} with "${marked.answer}": right.`
       : `The child answered your question ${marked.ask} with "${marked.answer}": not right.${marked.misconception ? ` The library reads this answer as ${marked.misconception}.` : ' No misconception in the library matches this answer.'} Diagnose before you teach.`);
   }
+  if (picture?.attached) lines.push(`A picture of the board is attached (id ${picture.id}), taken because ${picture.reason === 'check' ? 'the child pressed "Check my work"' : 'the child stopped writing for a few seconds'}. Read only the teal ink.`);
+  else if (picture?.note) lines.push(picture.note);
   if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Do not repeat everything; answer them.`);
   if (wantsAnswer) lines.push('The child is asking to be given the answer. Do not give it.');
   if (capNote) lines.push(capNote);
@@ -94,16 +104,20 @@ export function turnContext({ target, prerequisite, profile = [], reason = '', e
  * history: [{ who:'tutor'|'child', text }] from the browser (the transcript).
  * names: [{ name, as }] scrubbed from everything sent.
  */
-export function buildRequest({ model, effort = 'low', lib, history = [], message = '', context = '', names = [], retry = null }) {
+export function buildRequest({ model, effort = 'low', lib, history = [], message = '', context = '', names = [], retry = null, image = null }) {
   const scrub = (s) => scrubNames(s, names);
   const transcript = history.slice(-HISTORY_LINES)
     .map((h) => (h.who === 'child' ? `Child: ${fenceTeamText(scrub(h.text)).slice(0, 300)}` : `HOREB: ${scrub(String(h.text || '')).slice(0, 400)}`)).join('\n');
   const now = [
     scrub(context),
     transcript ? `<transcript>\n${transcript}\n</transcript>` : '<transcript>(the lesson is starting)</transcript>',
-    message ? `<child>${fenceTeamText(scrub(message)).slice(0, 300)}</child>` : '<child>(nothing yet: the child has just opened the lesson; greet them)</child>',
+    message ? `<child>${fenceTeamText(scrub(message)).slice(0, 300)}</child>`
+      : image ? '<child>(no words: the picture of the board shows their work)</child>'
+        : '<child>(nothing yet: the child has just opened the lesson; greet them)</child>',
   ].join('\n');
-  const messages = [{ role: 'user', content: [{ type: 'text', text: now }] }];
+  // The picture (only the latest; earlier ones are never re-sent) goes before the words.
+  const content = image ? [{ type: 'image', source: { type: 'base64', media_type: image.media, data: image.data } }, { type: 'text', text: now }] : [{ type: 'text', text: now }];
+  const messages = [{ role: 'user', content }];
   if (retry) {
     messages.push({ role: 'assistant', content: [{ type: 'text', text: retry.previous }] });
     messages.push({ role: 'user', content: [{ type: 'text', text: `That turn could not be used: ${retry.reasons.join('; ')}. Send the whole turn again with these fixed.` }] });
