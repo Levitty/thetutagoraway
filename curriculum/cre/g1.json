@@ -7,7 +7,7 @@
  "totals": {
   "strands": 5,
   "sub_strands": 17,
-  "outcomes": 45,
+  "outcomes": 58,
   "lessons": 90,
   "skills": 0,
   "prerequisites": 0,
@@ -699,16 +699,22 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "identify items that can be shared at home,"
+    "identify items that can be shared at home,",
+    "in pairs mention items shared at home and school,",
+    "watch or listen to the miracle in John 6:1-14,",
+    "role-play the story of the little boy with two fish and five loaves,",
+    "draw and colour the two fish and five loaves,",
+    "sing a song on sharing,",
+    "keep the environment clean (John 6:12-13)."
    ],
    "key_inquiry_questions": [
     "Why is it important to share with others?"
    ],
    "core_competences": "Learning to Learn: the skill of developing relationships is enhanced as learners work in pairs and groups.\nImagination and Creativity: is exhibited as learners role-play the story of the little boy with two fish and five loaves.",
-   "values": "home as a family,\nin pairs mention items shared at b) practise the value of sharing home and school, at home and school,\nwatch or listen to the miracle in c) retell the story of the little John 6:1-14, boy with two fish and five\nrole-play the story of the little loaves, boy with two fish and five d) desire to keep the loaves, environment clean and avoid\ndraw and colour the two fish and five loaves, wastage.\nsing a song on sharing,\nkeep the environment clean (John 6:12-13). Unity is portrayed as learners work together in groups and take turns to perform different activities. Link to other Activity Areas: Creative Activities: learners sing a song on sharing. They also role-play the story of the little boy with two fish and five loaves.",
+   "values": "Unity is portrayed as learners work together in groups and take turns to perform different activities. Link to other Activity Areas: Creative Activities: learners sing a song on sharing. They also role-play the story of the little boy with two fish and five loaves.",
    "pcis": "Social cohesion is portrayed as learners mention items shared at home and school, in pairs.",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: not found in the second read: values; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -722,7 +728,25 @@
     {
      "code": "CRE.G1.CHRIST.SHARING.a",
      "letter": "a",
-     "text": "identify items they share at",
+     "text": "identify items they share at home as a family",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CHRIST.SHARING.b",
+     "letter": "b",
+     "text": "practise the value of sharing at home and school",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CHRIST.SHARING.c",
+     "letter": "c",
+     "text": "retell the story of the little boy with two fish and five loaves",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CHRIST.SHARING.d",
+     "letter": "d",
+     "text": "desire to keep the environment clean and avoid wastage",
      "status": "kicd_read"
     }
    ],
@@ -739,16 +763,21 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "in pairs read Ephesians 6:1-3,"
+    "in pairs read Ephesians 6:1-3,",
+    "in groups mention why they should obey their parents,",
+    "say the benefits of obeying parents,",
+    "in pairs tell how they obey their parents at home,",
+    "listen to and sing a song on obedience,",
+    "memorise Ephesians 6:2-3."
    ],
    "key_inquiry_questions": [
-    "Why should you obey your"
+    "Why should you obey your parents?"
    ],
    "core_competences": "Communication and Collaboration: is promoted as learners listen keenly to the song and speak clearly and effectively during Bible reading.\nLearning to Learn: is enhanced as learners share experiences on the benefits of obeying parents.",
-   "values": "(4 lessons) a) list the importance of\nin groups mention why they should parents? obeying parents, obey their parents, b) practise obedience at\nsay the benefits of obeying parents, home as guided by the\nin pairs tell how they obey their scriptures, parents at home, c) exercise obedience in\nlisten to and sing a song on obedience, day-to-day life.\nmemorise Ephesians 6:2-3. Respect is enhanced as learners appreciate each other’s opinions and take turns to share experiences. Link to other Activity Areas:\nCreative Activities are reinforced as learners listen and sing songs on obedience.\nLanguage Activities: speaking skills are enhanced as learners engage in activities such as mentioning why they should obey their parents.",
+   "values": "Respect is enhanced as learners appreciate each other’s opinions and take turns to share experiences. Link to other Activity Areas:\nCreative Activities are reinforced as learners listen and sing songs on obedience.\nLanguage Activities: speaking skills are enhanced as learners engage in activities such as mentioning why they should obey their parents.",
    "pcis": "Social Cohesion: is enhanced as learners sing songs on obedience.",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 4; no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -757,7 +786,26 @@
      28
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G1.CHRIST.OBEDIENCE.a",
+     "letter": "a",
+     "text": "list the importance of obeying parents",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CHRIST.OBEDIENCE.b",
+     "letter": "b",
+     "text": "practise obedience at home as guided by the scriptures",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CHRIST.OBEDIENCE.c",
+     "letter": "c",
+     "text": "exercise obedience in day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },
@@ -771,16 +819,22 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "game read Ephesians 4:25,"
+    "game read Ephesians 4:25,",
+    "in groups say why they should always speak the truth,",
+    "say why they should not steal or pick items that do not belong to them,",
+    "role-play situations of honesty while dealing with other people’s items,",
+    "sing a song on truthfulness,",
+    "story tell instances they took lost and found items to the teacher,",
+    "mention reasons for getting home and school on time (punctuality)."
    ],
    "key_inquiry_questions": [
     "Why is it bad to lie?"
    ],
    "core_competences": "Citizenship: the skill of information and communication is enhanced as learners share stories on instances they practised punctuality.",
-   "values": "(4 lessons) a) state reasons for telling\nin groups say why they should the truth, always speak the truth, b) demonstrate honesty by\nsay why they should not steal or not stealing other pick items that do not belong to people’s items, them, c) practise punctuality at\nrole-play situations of honesty school and home, while dealing with other people’s d) desire to be truthful in items, their daily lives.\nsing a song on truthfulness,\nstory tell instances they took lost and found items to the teacher,\nmention reasons for getting home and school on time (punctuality).\nResponsibility is demonstrated as learners become accountable of their own actions and respect other people’s items.\nPeace is enhanced as learners avoid hurting others by not taking their items without permission. Link to other Activity Areas: Language Activities: learners speak clearly and effectively when telling stories on instances took lost and found items to the teacher.",
+   "values": "Responsibility is demonstrated as learners become accountable of their own actions and respect other people’s items.\nPeace is enhanced as learners avoid hurting others by not taking their items without permission. Link to other Activity Areas: Language Activities: learners speak clearly and effectively when telling stories on instances took lost and found items to the teacher.",
    "pcis": "Social Cohesion: integrity is promoted as learners in groups say why they should speak the truth always.",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 4; no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -790,7 +844,32 @@
      30
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G1.CHRIST.HONESTY.a",
+     "letter": "a",
+     "text": "state reasons for telling the truth",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CHRIST.HONESTY.b",
+     "letter": "b",
+     "text": "demonstrate honesty by not stealing other people’s items",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CHRIST.HONESTY.c",
+     "letter": "c",
+     "text": "practise punctuality at school and home",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CHRIST.HONESTY.d",
+     "letter": "d",
+     "text": "desire to be truthful in their daily lives",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },
@@ -804,16 +883,22 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "say why they should thank their parents,"
+    "say why they should thank their parents,",
+    "in pairs share when to thank parents,",
+    "role-play how to thank parents,",
+    "compose and recite a poem on thanking their parents,",
+    "sing a song about praising God for the gift of parents or guardians,",
+    "write 1Thessalonians 5:18 on flashcards and recite it,",
+    "write flashcards on why they should be thankful to their parents or guardians and display the cards in class."
    ],
    "key_inquiry_questions": [
-    "Why should you thank your"
+    "Why should you thank your parents or guardians?"
    ],
    "core_competences": "Imagination and Creativity: the skill of coming up with new ideas is exhibited as they compose poems and role-play how to thank parents.\nCommunication and Collaboration: the skill of speaking clearly and effectively is portrayed as learners say why they should thank their parents.",
-   "values": "a) mention three ways of\nin pairs share when to thank parents, parents or (4 lessons) expressing gratitude to\nrole-play how to thank parents, guardians? their parents or\ncompose and recite a poem on thanking guardians, their parents, b) practise thankfulness at\nsing a song about praising God for the gift home as guided by the of parents or guardians, Bible,\nwrite 1Thessalonians 5:18 on flashcards c) desire to be thankful in and recite it, daily life.\nwrite flashcards on why they should be thankful to their parents or guardians and display the cards in class. Respect is demonstrated as learners take turns to role-play and listen to each other’s opinions. Link to other Activity Areas: Language Activities: learners recite the Bible verses and learn new words.",
+   "values": "Respect is demonstrated as learners take turns to role-play and listen to each other’s opinions. Link to other Activity Areas: Language Activities: learners recite the Bible verses and learn new words.",
    "pcis": "Social cohesion: the importance of having guiding values in life is enhanced as learners become thankful to their parents.",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 4; no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -823,7 +908,26 @@
      32
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G1.CHRIST.THANKFULNESS.a",
+     "letter": "a",
+     "text": "mention three ways of expressing gratitude to their parents or guardians",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CHRIST.THANKFULNESS.b",
+     "letter": "b",
+     "text": "practise thankfulness at home as guided by the Bible",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G1.CHRIST.THANKFULNESS.c",
+     "letter": "c",
+     "text": "desire to be thankful in daily life",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },

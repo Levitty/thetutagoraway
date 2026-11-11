@@ -7,7 +7,7 @@
  "totals": {
   "strands": 5,
   "sub_strands": 22,
-  "outcomes": 54,
+  "outcomes": 74,
   "lessons": 87,
   "skills": 0,
   "prerequisites": 0,
@@ -819,16 +819,22 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "in pairs list various items that can be shared at school,"
+    "in pairs list various items that can be shared at school,",
+    "in groups draw and colour items they share at school,",
+    "in pairs talk about instances they have shared items with those in need,",
+    "list the importance of sharing with others,",
+    "role-play sharing items in class,",
+    "sing a song on sharing,",
+    "write Hebrews 13:16 on flashcards and read aloud."
    ],
    "key_inquiry_questions": [
-    "Why is it important to share with"
+    "Why is it important to share with others?"
    ],
    "core_competences": "Collaboration: the skill of teamwork is portrayed as learners role-play sharing in class,\nLearning to Learn: the skill of developing relations is enhanced as learners carry out activities with peers. Link to PCIs: Social Cohesion: the importance of living together is exhibited as learners role-play sharing items in class.",
-   "values": "a) identify five items\nin groups draw and colour items they share others? shared at school, at school, b) demonstrate\nin pairs talk about instances they have kindness by sharing shared items with those in need, items with others,\nlist the importance of sharing with others, c) desire to share items\nrole-play sharing items in class,\nsing a song on sharing, to promote harmonious living.\nwrite Hebrews 13:16 on flashcards and read aloud. Unity is portrayed as learners work in pairs and talk about instances they shared items with those in need. Link to other Activity Areas: Environmental Activities: learners list various items that can be shared at school.",
+   "values": "Unity is portrayed as learners work in pairs and talk about instances they shared items with those in need. Link to other Activity Areas: Environmental Activities: learners list various items that can be shared at school.",
    "pcis": "",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: not found in the second read: values; pcis: heading on the page but no text read; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: pcis: heading on the page but no text read; links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -837,7 +843,26 @@
      30
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G2.CHRIST.SHARING.a",
+     "letter": "a",
+     "text": "identify five items shared at school",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.SHARING.b",
+     "letter": "b",
+     "text": "demonstrate kindness by sharing items with others",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.SHARING.c",
+     "letter": "c",
+     "text": "desire to share items to promote harmonious living",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },
@@ -851,16 +876,21 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "write Hebrews 13:17 on flashcards"
+    "write Hebrews 13:17 on flashcards and read aloud,",
+    "share experiences of how they obey teachers,",
+    "tell why they should obey teachers and the children’s government,",
+    "compose a poem on obedience,",
+    "discuss how disobedience affects them negatively,",
+    "sing a song on obedience “trust and obey for there’s no other way.................’’."
    ],
    "key_inquiry_questions": [
-    "Why should you obey teachers and"
+    "Why should you obey teachers and other leaders at school?"
    ],
    "core_competences": "Citizenship: the skill of information and communication is enhanced as learners tell why they should obey teachers and the children’s government.",
-   "values": "a) list five ways they obey and read aloud, other leaders at teachers and the\nshare experiences of how they obey school? (3 lessons) children’s government, teachers, b) discuss reasons for\ntell why they should obey teachers obeying teachers and the and the children’s government, children’s government,\ncompose a poem on obedience, c) practise obedience in\ndiscuss how disobedience affects their day-to-day lives. them negatively,\nsing a song on obedience “trust and obey for there’s no other way.................’’. Patriotism is enhanced as learners obey teachers and the children’s government. Link to other Activity Areas: Environmental Education: learners share experiences of how they obey their teachers and the importance of obedience in day-to-day life.",
+   "values": "Patriotism is enhanced as learners obey teachers and the children’s government. Link to other Activity Areas: Environmental Education: learners share experiences of how they obey their teachers and the importance of obedience in day-to-day life.",
    "pcis": "Peace Education is nurtured as learners obey rules and regulations.",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 3; no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -869,7 +899,26 @@
      31
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G2.CHRIST.OBEDIENCE.a",
+     "letter": "a",
+     "text": "list five ways they obey teachers and the children’s government",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.OBEDIENCE.b",
+     "letter": "b",
+     "text": "discuss reasons for obeying teachers and the children’s government",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.OBEDIENCE.c",
+     "letter": "c",
+     "text": "practise obedience in their day-to-day lives",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },
@@ -884,16 +933,23 @@
    "content_topics": [],
    "learning_experiences": [
     "read in groups Proverbs 12:17,19,",
-    "say why they should tell the truth always,"
+    "say why they should tell the truth always,",
+    "in groups tell why they should complete their homework on time,",
+    "list the negative results of copying other pupils’ work,",
+    "tell why they should not take other people’s property without permission,",
+    "role-play taking lost and found items to the teacher,",
+    "write Proverbs 12:19 on flashcards and read aloud,",
+    "sing a song on telling the truth."
    ],
    "key_inquiry_questions": [
-    "Why should you tell the truth always?"
+    "Why should you tell the truth always?",
+    "Why is it wrong to copy other pupils’ work?"
    ],
    "core_competences": "Learning to Learn: the skill of learning independently is nurtured as learners tell why they should complete their homework on time,\nSelf-efficacy: is nurtured as learners avoid taking other people’s property without permission.",
-   "values": "truth in their interaction\nin groups tell why they should complete 2. Why is it with others, their homework on time, wrong to b) demonstrate responsibility\nlist the negative results of copying other copy other by completing their pupils’ work, pupils’ work? homework on time,\ntell why they should not take other c) practise honesty by taking people’s property without permission, lost and found items to the\nrole-play taking lost and found items to teacher or parent, the teacher, d) desire to be honest by not\nwrite Proverbs 12:19 on flashcards and copying other pupils’ read aloud, work.\nsing a song on telling the truth. Integrity: learners display honesty by taking lost and found items to the teacher. Link to other Activity Areas: Environmental Activities learners practise honesty by not taking other people’s items.",
+   "values": "Integrity: learners display honesty by taking lost and found items to the teacher. Link to other Activity Areas: Environmental Activities learners practise honesty by not taking other people’s items.",
    "pcis": "Social cohesion is nurtured as they learn ways of showing integrity by telling the truth always.",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: not found in the second read: values; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -906,7 +962,25 @@
     {
      "code": "CRE.G2.CHRIST.HONESTY.a",
      "letter": "a",
-     "text": "tell reasons for telling the",
+     "text": "tell reasons for telling the truth in their interaction with others",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.HONESTY.b",
+     "letter": "b",
+     "text": "demonstrate responsibility by completing their homework on time",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.HONESTY.c",
+     "letter": "c",
+     "text": "practise honesty by taking lost and found items to the teacher or parent",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.HONESTY.d",
+     "letter": "d",
+     "text": "desire to be honest by not copying other pupils’ work",
      "status": "kicd_read"
     }
    ],
@@ -923,16 +997,21 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "mention why they should thank other people,"
+    "mention why they should thank other people,",
+    "role-play situations that require thankfulness,",
+    "in pairs exchange gifts and practise saying, ‘Thank you’,",
+    "in groups write 1Thessalonians 5:18 on flashcards and read aloud,",
+    "compose poems to thank parents for taking good care of them,",
+    "sing a song on thanksgiving."
    ],
    "key_inquiry_questions": [
     "Why should you be thankful?"
    ],
    "core_competences": "Imagination and Creativity: the skill of originality is enhanced as learners role-play and compose a poem.",
-   "values": "should be able to:\nrole-play situations that require thankfulness, (3 lessons) a) list the importance\nin pairs exchange gifts and practise saying, ‘Thank you’, of thanking others, b) demonstrate\nin groups write 1Thessalonians 5:18 on thankfulness in flashcards and read aloud, day-to-day life,\ncompose poems to thank parents for taking c) appreciate God by good care of them, thanking Him\nsing a song on thanksgiving. always. Social Justice is nurtured as learners live harmoniously with others. Link to other Activity Areas:\nLanguage Activities: speaking skills are applied as learners use polite language (etiquette) like, ‘thank you’.\nCreative Activities: learners role-play and compose poems.",
+   "values": "Social Justice is nurtured as learners live harmoniously with others. Link to other Activity Areas:\nLanguage Activities: speaking skills are applied as learners use polite language (etiquette) like, ‘thank you’.\nCreative Activities: learners role-play and compose poems.",
    "pcis": "Social Cohesion is enhanced as they learn the importance of thanking those who show them kindness.",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 3; no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -941,7 +1020,26 @@
      33
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G2.CHRIST.THANKFULNESS.a",
+     "letter": "a",
+     "text": "list the importance of thanking others",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.THANKFULNESS.b",
+     "letter": "b",
+     "text": "demonstrate thankfulness in day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.THANKFULNESS.c",
+     "letter": "c",
+     "text": "appreciate God by thanking Him always",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },
@@ -955,16 +1053,20 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "watch a video clip about the prodigal son (Luke 15:11-22,"
+    "watch a video clip about the prodigal son (Luke 15:11-22,",
+    "role-play the story of the prodigal son,",
+    "write Matthew 18:21-22 on flashcards and read aloud,",
+    "tell a friend how to avoid hurting others,",
+    "sing a song on forgiveness."
    ],
    "key_inquiry_questions": [
     "Why should you forgive others?"
    ],
    "core_competences": "Learning to Learn: the skill of developing healthy relationships is nurtured as learners forgive each other.\nDigital Literacy: the skill of observing safety precautions is enhanced as learners interact with digital devices.",
-   "values": "(4 lessons) foster harmonious living,\nrole-play the story of the b) dramatise the story of the prodigal son, prodigal son,\nwrite Matthew 18:21-22 on c) desire to forgive others in flashcards and read aloud, their day-to-day lives.\ntell a friend how to avoid hurting others,\nsing a song on forgiveness. Love: learners learn to forgive each other just as the prodigal son was forgiven by his father. Link to Other Activity Areas:\nCreative Activities: learners role-play the story of the prodigal son,\nMathematical Activities: the skill of multiplication is applied as they learn to forgive 70 x 7 times.",
+   "values": "Love: learners learn to forgive each other just as the prodigal son was forgiven by his father. Link to Other Activity Areas:\nCreative Activities: learners role-play the story of the prodigal son,\nMathematical Activities: the skill of multiplication is applied as they learn to forgive 70 x 7 times.",
    "pcis": "Safety and Security: learners exercise precaution in an environment where they are interacting with digital devices.",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 4; no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -977,7 +1079,19 @@
     {
      "code": "CRE.G2.CHRIST.FORGIVENESS.a",
      "letter": "a",
-     "text": "practise forgiveness to",
+     "text": "practise forgiveness to foster harmonious living",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.FORGIVENESS.b",
+     "letter": "b",
+     "text": "dramatise the story of the prodigal son",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.FORGIVENESS.c",
+     "letter": "c",
+     "text": "desire to forgive others in their day-to-day lives",
      "status": "kicd_read"
     }
    ],
@@ -994,16 +1108,22 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "read Colossians 3:23,"
+    "read Colossians 3:23,",
+    "display and count the items they carry to school,",
+    "in pairs list the use of each item,",
+    "say and show others how they take care of items they use at school,",
+    "sing a song about items they carry to school,",
+    "draw and colour items they carry to school,",
+    "say why they should not forget school items at home."
    ],
    "key_inquiry_questions": [
-    "How do you take care of your"
+    "How do you take care of your school items?"
    ],
    "core_competences": "Self-efficacy: the skill of using resources responsibly is exhibited as learners take care of their items,\nLearning to Learn: the skill of self-reflection is nurtured as learners say why they should not forget school items at home. Link to Pertinent and Contemporary Issues: Social cohesion: learners show integrity by being responsible as they take care of their personal property. Link to Values: Responsibility is nurtured as learners care for their own property. Link to Other Activity Areas: Creative Activities: learners sing songs, draw, and colour items.",
-   "values": "should be able to:\ndisplay and count the items they carry to school items? (4 lessons) a) mention items they school, carry to school,\nin pairs list the use of each item, b) take care of the items\nsay and show others how they take care of they use in school, items they use at school, c) desire to be\nsing a song about items they carry to responsible by school, taking care of their\ndraw and colour items they carry to school, items.\nsay why they should not forget school items at home.",
+   "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 4; no lessons figure in the table; not found in the second read: values; pcis: heading on the page but no text read; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: values: heading on the page but no text read; pcis: heading on the page but no text read; links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -1012,7 +1132,26 @@
      35
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G2.CHRIST.RESPONSIBILITY.a",
+     "letter": "a",
+     "text": "mention items they carry to school",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.RESPONSIBILITY.b",
+     "letter": "b",
+     "text": "take care of the items they use in school",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.RESPONSIBILITY.c",
+     "letter": "c",
+     "text": "desire to be responsible by taking care of their items",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },
@@ -1026,16 +1165,19 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "in pairs say how they help"
+    "in pairs say how they help parents at home,",
+    "list the simple chores they do at home,",
+    "write a poem on “hard work’’,",
+    "keep their home, class, and compound clean."
    ],
    "key_inquiry_questions": [
     "Why is it important to work?"
    ],
    "core_competences": "Learning to Learn: is enhanced as learners exercise self-discipline and help their parents with simple chores at home.\nCommunication and Collaboration: the skill of speaking clearly and effectively is nurtured as learners say how they help their parents at home. Link to Pertinent and Contemporary Issues: Environmental Awareness: is portrayed as learners show responsibility by keeping the compound clean.",
-   "values": "(3 lessons) a) mention how they help parents at home, parents at home,\nlist the simple chores they do at b) take part in doing simple home,\nwrite a poem on “hard work’’, chores at school and in Church,\nkeep their home, class, and c) appreciate work by doing compound clean. simple chores. Patriotism learners assist with chores at home, in class and keep the compound clean. Link to other learning activity areas:\nEnvironmental Activities: learners keep the compound clean.\nLanguage Activities: writing skills are applied as learners write a poem about work.",
+   "values": "Patriotism learners assist with chores at home, in class and keep the compound clean. Link to other learning activity areas:\nEnvironmental Activities: learners keep the compound clean.\nLanguage Activities: writing skills are applied as learners write a poem about work.",
    "pcis": "",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 3; no lessons figure in the table; not found in the second read: values; pcis: heading on the page but no text read; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: pcis: heading on the page but no text read; links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -1044,7 +1186,26 @@
      36
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G2.CHRIST.WORK.a",
+     "letter": "a",
+     "text": "mention how they help parents at home",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.WORK.b",
+     "letter": "b",
+     "text": "take part in doing simple chores at school and in Church",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G2.CHRIST.WORK.c",
+     "letter": "c",
+     "text": "appreciate work by doing simple chores",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },

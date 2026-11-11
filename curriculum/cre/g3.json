@@ -7,7 +7,7 @@
  "totals": {
   "strands": 5,
   "sub_strands": 22,
-  "outcomes": 55,
+  "outcomes": 72,
   "lessons": 90,
   "skills": 0,
   "prerequisites": 0,
@@ -897,16 +897,22 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "picture-read the story of Ananias and"
+    "picture-read the story of Ananias and Sapphira in Acts 5:1-11,",
+    "watch a video clip about Ananias and Sapphira,",
+    "mention lessons learnt from the story of Ananias and Sapphira,",
+    "in groups sing a song on honesty,",
+    "say why they should not use church offerings for other purposes,",
+    "in groups, role-play ways of respecting other people’s properties."
    ],
    "key_inquiry_questions": [
-    "Why should you practise"
+    "Why should you practise honesty as a Christian?",
+    "Why should you respect other people’s property?"
    ],
    "core_competences": "Communication and Collaboration: the skill of teamwork is exhibited as learners discuss in groups and pairs.\nCitizenship: the skill of showing integrity is nurtured as learners say why they should not use church offerings for other purposes.",
-   "values": "a) narrate the story of Sapphira in Acts 5:1-11, honesty as a (5 lessons) Ananias and Sapphira,\nwatch a video clip about Ananias and Christian? b) practise honesty by taking Sapphira, 2. Why should offerings given by parents\nmention lessons learnt from the story of you respect to church, Ananias and Sapphira, other people’s c) explain the importance of\nin groups sing a song on honesty, property? respecting other people’s\nsay why they should not use church offerings for other purposes, property, d) desire to exercise honesty\nin groups, role-play ways of respecting in day-to-day life. other people’s properties.",
+   "values": "",
    "pcis": "Social Cohesion the importance of having guiding principles in life is exhibited as learners practise honesty in day-to-day life. Link to Values: Integrity is inculcated as learners say why they should not use church offerings for other purposes. Link to other Activity Areas: Creative Activities: learners sing and role-play ways of respecting other people’s property in groups.",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 5; no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read; a line on this page ran across two columns and was cut by position.",
+   "design_notes": "Second read left this for a person to confirm: values: heading on the page but no text read; links: heading on the page but no text read; a line on this page ran across two columns and was cut by position.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -915,7 +921,32 @@
      31
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G3.CHRIST.HONESTY.a",
+     "letter": "a",
+     "text": "narrate the story of Ananias and Sapphira",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.HONESTY.b",
+     "letter": "b",
+     "text": "practise honesty by taking offerings given by parents to church",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.HONESTY.c",
+     "letter": "c",
+     "text": "explain the importance of respecting other people’s property",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.HONESTY.d",
+     "letter": "d",
+     "text": "desire to exercise honesty in day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },
@@ -929,16 +960,22 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "write Psalms 136:1 on flashcards and"
+    "write Psalms 136:1 on flashcards and read it aloud in class,",
+    "in pairs tell why they should thank God,",
+    "write on flashcards reasons for thanking God, family, friends, and teachers,",
+    "make cards to thank God and mount them at the CRE learning corner,",
+    "role-play in groups various ways of thanking God for family, friends, and teachers,",
+    "participate in singing games with a theme, ‘thank you God’,",
+    "say a simple, ‘Thank you’ prayer to God."
    ],
    "key_inquiry_questions": [
-    "Why should you thank God for"
+    "Why should you thank God for your family, friends and teachers?"
    ],
    "core_competences": "Imagination and Creativity: the skill of originality is nurtured as learners make cards with messages to thank God. Link to PCIs: Social Cohesion is nurtured as learners write reasons for thanking God, friends, teachers, and family members on flashcards.",
-   "values": "able to: read it aloud in class, your family, (3 lessons) a) list ways they thank God\nin pairs tell why they should thank God, friends and in day-to-day life,\nwrite on flashcards reasons for thanking teachers? b) state five reasons for God, family, friends, and teachers, thanking God for their\nmake cards to thank God and mount family, friends, and them at the CRE learning corner, teachers,\nrole-play in groups various ways of c) desire to thank God in thanking God for family, friends, and day-to-day life. teachers,\nparticipate in singing games with a theme, ‘thank you God’,\nsay a simple, ‘Thank you’ prayer to God. Unity is inculcated as learners role-play and sing in groups. Link to other Activity Areas: Creative Activities: learners sing, dance, and role play.",
+   "values": "Unity is inculcated as learners role-play and sing in groups. Link to other Activity Areas: Creative Activities: learners sing, dance, and role play.",
    "pcis": "",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 3; no lessons figure in the table; not found in the second read: values; pcis: heading on the page but no text read; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: pcis: heading on the page but no text read; links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -947,7 +984,26 @@
      32
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G3.CHRIST.THANKFULNESS.a",
+     "letter": "a",
+     "text": "list ways they thank God in day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.THANKFULNESS.b",
+     "letter": "b",
+     "text": "state five reasons for thanking God for their family, friends, and teachers",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.THANKFULNESS.c",
+     "letter": "c",
+     "text": "desire to thank God in day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },
@@ -961,16 +1017,22 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "observe and read pictures of the"
+    "observe and read pictures of the unforgiving servant (Matthew 18:21-31),",
+    "watch a video on the unforgiving servant,",
+    "role-play the story of the unforgiving servant,",
+    "always say, ‘Sorry’ when they wrong others,",
+    "write Colossians 3:13 on flashcards and read aloud in turns,",
+    "say what to do when wronged by others; Colossians 3:13,",
+    "play a game on forgiveness."
    ],
    "key_inquiry_questions": [
     "Why should you forgive others?"
    ],
    "core_competences": "Digital Literacy: the skill of interacting with digital devices is enhanced as learners watch a video on the unforgiving servant.\nLearning to Learn: the skill of self-discipline is nurtured as learners learn how to forgive others.",
-   "values": "should be able to: unforgiving servant (Matthew 18:21-31), (4 lessons) a) retell the story of\nwatch a video on the unforgiving servant, the unforgiving\nrole-play the story of the unforgiving servant, servant, b) dramatise the story\nalways say, ‘Sorry’ when they wrong of the unforgiving others,\nwrite Colossians 3:13 on flashcards and servant, c) desire to forgive read aloud in turns, others in their day-to-day lives.\nsay what to do when wronged by others; Colossians 3:13,\nplay a game on forgiveness. Love is inculcated as learners forgive others when wronged. Link to other Activity Areas: Creative Activities: learners role-play the story of the unforgiving servant.",
+   "values": "Love is inculcated as learners forgive others when wronged. Link to other Activity Areas: Creative Activities: learners role-play the story of the unforgiving servant.",
    "pcis": "Peace Education: reconciliation and forgiveness is nurtured as they learn to always say, ‘Sorry’ when they wrong others.",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 4; no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -979,7 +1041,26 @@
      33
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G3.CHRIST.FORGIVENESS.a",
+     "letter": "a",
+     "text": "retell the story of the unforgiving servant",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.FORGIVENESS.b",
+     "letter": "b",
+     "text": "dramatise the story of the unforgiving servant",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.FORGIVENESS.c",
+     "letter": "c",
+     "text": "desire to forgive others in their day-to-day lives",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },
@@ -993,16 +1074,20 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "list people they can trust for their own"
+    "list people they can trust for their own safety,",
+    "mention the people to report to in case they are molested or touched inappropriately,",
+    "role-play how to behave when confronted by a stranger,",
+    "sing the song, “Trust and obey.............”,",
+    "read and recite Proverbs 11:13."
    ],
    "key_inquiry_questions": [
-    "How do you ensure personal"
+    "How do you ensure personal safety?"
    ],
    "core_competences": "Self-efficacy: the skill of saying their needs to get help is inculcated as learners mention the people to report to in case they are molested or touched inappropriately.\nCommunication and Collaboration: the skill of speaking clearly and effectively is enhanced as learners list people they can trust for their own safety. Link to Pertinent and Contemporary Issues: Safety and Security: situation awareness; the safety of learners is enhanced as they know whom to trust and where to report cases of molestation.",
-   "values": "(4 lessons) a) identify people they can safety, safety? trust for their own safety,\nmention the people to report to in case b) mention three people to they are molested or touched report to when molested or inappropriately, touched inappropriately,\nrole-play how to behave when confronted c) stay safe by reporting by a stranger, people who molest them.\nsing the song, “Trust and obey.............”,\nread and recite Proverbs 11:13. Responsibility: learners observe safety precautions by knowing whom to trust and how to behave when confronted by a stranger. Link to Environmental Activities: learners mention the people to report to, in case they are molested or touched inappropriately.",
+   "values": "Responsibility: learners observe safety precautions by knowing whom to trust and how to behave when confronted by a stranger. Link to Environmental Activities: learners mention the people to report to, in case they are molested or touched inappropriately.",
    "pcis": "",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 4; no lessons figure in the table; not found in the second read: values; pcis: heading on the page but no text read; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: pcis: heading on the page but no text read; links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -1011,7 +1096,26 @@
      34
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G3.CHRIST.TRUST.a",
+     "letter": "a",
+     "text": "identify people they can trust for their own safety",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.TRUST.b",
+     "letter": "b",
+     "text": "mention three people to report to when molested or touched inappropriately",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.TRUST.c",
+     "letter": "c",
+     "text": "stay safe by reporting people who molest them",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },
@@ -1025,16 +1129,21 @@
    "optional": false,
    "content_topics": [],
    "learning_experiences": [
-    "mention the importance"
+    "mention the importance of personal hygiene and good grooming,",
+    "report students who play mischief,",
+    "mention chores they do at home,",
+    "say why they should not expect rewards after doing chores at home,",
+    "recite Philippians 2:4."
    ],
    "key_inquiry_questions": [
-    "Why is personal hygiene important?"
+    "Why is personal hygiene important?",
+    "How do show responsibility at home?"
    ],
    "core_competences": "Citizenship: the skill of active family life is exhibited as learners participate in family activities by doing chores at home.\nSelf-efficacy: the skill of knowing who I ‘am is developed as learners practise good grooming and cleanliness. Link to Pertinent and Contemporary Issues: Health Promotion is inculcated as learners talk about personal hygiene and good grooming.",
-   "values": "a) practise cleanliness at home of personal hygiene and 2. How do show (4 lessons) and school, good grooming, responsibility at b) demonstrate responsibility\nreport students who play home? by correcting those in the mischief,\nmention chores they do at wrong, c) carry out chores at home home, without expecting a reward,\nsay why they should not d) desire to be responsible in expect rewards after day-to-day life. doing chores at home,\nrecite Philippians 2:4. Responsibility is enhanced as learners engage in chores at home and ensure that they maintain personal hygiene and practise good grooming. Link to other Activity Areas: Environmental Activities: learners observe personal hygiene and cleanliness. LEVEL Exceeding Meeting Approaching Below Expectations INDICATOR Expectations Expectations Expectations Ability to narrate the Learner narrates the Learner narrates the Learner narrates the Learner narrates the story of Ananias and story of Ananias and story of Ananias and story of Ananias and story of Ananias and Sapphira. Sapphira in details. Sapphira. Sapphira but omits Sapphira but omits minor details. major details. Ability to practise Learner constantly Learner practises Learner sometimes Learner practises honesty by taking practises honesty by honesty by taking practise honesty by honesty by taking offerings given by taking offerings given offerings given by taking offerings given offerings given by parents to church. by parents to church. parents to church. by parents to church. parents to church with constant guidance. Ability to explain the Learner explains the Learner explains the Learner makes an Learner explains the importance of importance of respecting importance of effort to explain the importance of respecting other other people’s property respecting other importance of respecting other people’s property. citing relevant people’s property. respecting other people’s property with examples. people’s property. support. Ability to state five Learner states five Learner states five Learner states three to Learner states one to reasons for thanking reasons for thanking reasons for thanking four reasons for two reasons for God for their family, God for their family, God for their family, thanking God for their thanking God for their friends, and teachers. friends, and teachers friends, and teachers. family, friends, and family, friends, and citing relevant teachers. teachers. examples. Ability to dramatise Learner creatively Learner dramatises the Learner makes effort Learner dramatises the the story of the dramatises the story of story of the to dramatise the story story of the unforgiving unforgiving servant. the unforgiving servant. unforgiving servant of the unforgiving servant with guidance. servant. Ability to identify Leaners identifies Learner identifies Learner makes an Learner identifies people they can trust people they can trust for people they can trust effort to identify people they can trust for their own safety. their safety and cites for their safety. people they can trust for their safety with relevant examples. for their safety. guidance. Ability to mention Learner constantly Learner mentions Learner mentions two Learner mentions only three people to report mentions three people to three people to report people to report to one person to report to to when molested or report to when molested to when molested or when molested or when molested or touched or touched touched touched touched inappropriately. inappropriately. inappropriately. inappropriately. inappropriately. Ability to practise Learner practises Learner practises Learner practises Learner practises cleanliness at home cleanliness at home and cleanliness at home cleanliness at home cleanliness at home and and school. school and encourages and school. and school when school with consistent peers to do so. prompted. guidance. Ability to demonstrate Learner constantly Learner demonstrates Learner partly Learner demonstrates responsibility by demonstrates responsibility by demonstrates responsibility by correcting those in the responsibility by correcting those in the responsibility by correcting those in the correcting those in the correcting those in the wrong with prompts. wrong. wrong. wrong. wrong. Ability to perform Learner performs chores Learner performs Learner makes an Learner performs chores at home at home without chores at home effort to perform chores at home without without expecting a expecting a reward and without expecting a chores at home expecting a reward reward. encourages peers to do reward. without expecting a with continuous reward. guidance. so.",
+   "values": "Responsibility is enhanced as learners engage in chores at home and ensure that they maintain personal hygiene and practise good grooming. Link to other Activity Areas: Environmental Activities: learners observe personal hygiene and cleanliness. LEVEL Exceeding Meeting Approaching Below Expectations INDICATOR Expectations Expectations Expectations Ability to narrate the Learner narrates the Learner narrates the Learner narrates the Learner narrates the story of Ananias and story of Ananias and story of Ananias and story of Ananias and story of Ananias and Sapphira. Sapphira in details. Sapphira. Sapphira but omits Sapphira but omits minor details. major details. Ability to practise Learner constantly Learner practises Learner sometimes Learner practises honesty by taking practises honesty by honesty by taking practise honesty by honesty by taking offerings given by taking offerings given offerings given by taking offerings given offerings given by parents to church. by parents to church. parents to church. by parents to church. parents to church with constant guidance. Ability to explain the Learner explains the Learner explains the Learner makes an Learner explains the importance of importance of respecting importance of effort to explain the importance of respecting other other people’s property respecting other importance of respecting other people’s property. citing relevant people’s property. respecting other people’s property with examples. people’s property. support. Ability to state five Learner states five Learner states five Learner states three to Learner states one to reasons for thanking reasons for thanking reasons for thanking four reasons for two reasons for God for their family, God for their family, God for their family, thanking God for their thanking God for their friends, and teachers. friends, and teachers friends, and teachers. family, friends, and family, friends, and citing relevant teachers. teachers. examples. Ability to dramatise Learner creatively Learner dramatises the Learner makes effort Learner dramatises the the story of the dramatises the story of story of the to dramatise the story story of the unforgiving unforgiving servant. the unforgiving servant. unforgiving servant of the unforgiving servant with guidance. servant. Ability to identify Leaners identifies Learner identifies Learner makes an Learner identifies people they can trust people they can trust for people they can trust effort to identify people they can trust for their own safety. their safety and cites for their safety. people they can trust for their safety with relevant examples. for their safety. guidance. Ability to mention Learner constantly Learner mentions Learner mentions two Learner mentions only three people to report mentions three people to three people to report people to report to one person to report to to when molested or report to when molested to when molested or when molested or when molested or touched or touched touched touched touched inappropriately. inappropriately. inappropriately. inappropriately. inappropriately. Ability to practise Learner practises Learner practises Learner practises Learner practises cleanliness at home cleanliness at home and cleanliness at home cleanliness at home cleanliness at home and and school. school and encourages and school. and school when school with consistent peers to do so. prompted. guidance. Ability to demonstrate Learner constantly Learner demonstrates Learner partly Learner demonstrates responsibility by demonstrates responsibility by demonstrates responsibility by correcting those in the responsibility by correcting those in the responsibility by correcting those in the correcting those in the correcting those in the wrong with prompts. wrong. wrong. wrong. wrong. Ability to perform Learner performs chores Learner performs Learner makes an Learner performs chores at home at home without chores at home effort to perform chores at home without without expecting a expecting a reward and without expecting a chores at home expecting a reward reward. encourages peers to do reward. without expecting a with continuous reward. guidance. so.",
    "pcis": "",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: lessons: table says None, summary says 4; no lessons figure in the table; not found in the second read: values; pcis: heading on the page but no text read; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: values; pcis: heading on the page but no text read; links: heading on the page but no text read.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 CRE - Revised.pdf",
@@ -1045,7 +1154,32 @@
      37
     ]
    },
-   "outcomes": [],
+   "outcomes": [
+    {
+     "code": "CRE.G3.CHRIST.RESPONSIBILITY.a",
+     "letter": "a",
+     "text": "practise cleanliness at home and school",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.RESPONSIBILITY.b",
+     "letter": "b",
+     "text": "demonstrate responsibility by correcting those in the wrong",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.RESPONSIBILITY.c",
+     "letter": "c",
+     "text": "carry out chores at home without expecting a reward",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G3.CHRIST.RESPONSIBILITY.d",
+     "letter": "d",
+     "text": "desire to be responsible in day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
    "skills": [],
    "misconceptions": []
   },
