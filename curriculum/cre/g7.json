@@ -1,0 +1,1385 @@
+{
+ "framework": "cbc",
+ "subject_key": "cre",
+ "grade": 7,
+ "source": "KICD Christian Religious Education, First Published in 2022; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 6,
+  "sub_strands": 19,
+  "outcomes": 94,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C",
+   "number": "1.1",
+   "strand": "Overview of Christian Religious Education",
+   "sub_strand": "Importance of Studying Christian Religious Education",
+   "sequence": 101,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm in small groups the meaning of Christian Religious Education,",
+    "search the meaning of Christian Religious Education using a digital device or print materials and make short notes,",
+    "discuss in teams the importance of studying Christian Religious Education and note key points,",
+    "write a personal reflection journal on how learning CRE has changed his or her behaviour,",
+    "list and share five values they need, to live a morally upright life,",
+    "use charts, posters, or flashcards to write messages that promote sound moral and religious values,",
+    "compose a poem on how Christian Religious Education promotes sound moral and religious values."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to study Christian Religious Education?"
+   ],
+   "core_competences": "Learning to Learn: is enhanced as learners brainstorm and explain the meaning of Christian Religious Education.\nSelf-efficacy: is nurtured as learners list and share values they need to live harmoniously with others.\nDigital Literacy: is enhanced as learners search for the meaning of Christian Religious Education using digital devices.\nImagination and Creativity: is exhibited as learners compose a poem on how Christian Religious Education promotes sound moral and religious values.",
+   "values": "Respect for one another: the learners list and share values they need to live harmoniously with others.\nResponsibility: the learners use charts/ posters/flashcards to write messages that promote sound moral and religious values.",
+   "pcis": "Effective Communication: learners brainstorm in small groups the meaning of Christian Religious Education and make a presentation in class.\nCreative thinking: learners compose a poem on how Christian Religious Education promotes sound moral and religious values.\nSelf-awareness: learners write a personal reflection journal on how learning CRE has changed their behaviour.",
+   "links": "English: learners debate and discuss in groups.\nPre-technical Studies: learners use digital devices to search for information on the meaning of Christian Religious Education.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     14,
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.a",
+     "letter": "a",
+     "text": "analyse the importance of learning Christian Religious Education",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.b",
+     "letter": "b",
+     "text": "discuss how Christian Religious Education promotes sound moral and religious values",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.c",
+     "letter": "c",
+     "text": "compile five values needed to foster responsible living",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.d",
+     "letter": "d",
+     "text": "apply the values acquired in their daily interactions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.e",
+     "letter": "e",
+     "text": "appreciate the learning of Christian Religious Education by living responsibly",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.CREATI.ACCOUNTS_OF_CREATION",
+   "number": "2.1",
+   "strand": "Creation",
+   "sub_strand": "Accounts of Creation",
+   "sequence": 201,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "name features found in the natural environment,",
+    "take a nature walk and appreciate God’s creation in the school compound or the surrounding area,",
+    "read Genesis 1:1-50 & 2:1-2:4A on first creation account and Genesis 2:4B-25 on second creation account,",
+    "watch a video clip on the two biblical accounts of creation,",
+    "summarise the main points on the first and second creation accounts,",
+    "discuss the similarities and differences between the two accounts of creation and write short notes,",
+    "in teams, use digital devices or print media to research on the attributes of God and write them on a chart,",
+    "practice environmental conservation measures, such as, planting trees or volunteer for clean ups in the community,",
+    "compose and sing a song on the second creation account."
+   ],
+   "key_inquiry_questions": [
+    "How is the first account of creation different from the second account?",
+    "Why is it important to learn about the creation accounts?"
+   ],
+   "core_competences": "",
+   "values": "Responsibility: learners conserve the environment by planting trees. Integrity: learners avoid littering the compound/environment even when no one is watching.",
+   "pcis": "Gender Mainstreaming: learners recognise that God created human beings as male and female to complement each other.\nEnvironmental issues in education: learners take a nature walk and explore features in their environment.",
+   "links": "Social Studies: learners interact with the environment during the nature walk.\nEnglish: learners read Bible texts on the biblical accounts of creation.\nCreative Arts and Sports: learners compose and sing a song on the second account of creation.\nPre-technical Studies: learners conduct an online search using digital devices on the attributes of God.",
+   "design_notes": "Second read left this for a person to confirm: competencies: heading on the page but no text read; a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.a",
+     "letter": "a",
+     "text": "narrate the biblical accounts of creation",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.b",
+     "letter": "b",
+     "text": "discuss the similarities and differences between the two accounts of creation",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.c",
+     "letter": "c",
+     "text": "identify five attributes of God from the creation accounts",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.d",
+     "letter": "d",
+     "text": "value God’s creation by conserving the environment",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO",
+   "number": "2.2",
+   "strand": "Creation",
+   "sub_strand": "Stewardship over Creation",
+   "sequence": 202,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on how they care for animals, fish, and birds and make summary notes,",
+    "read Genesis 2:15-20, James 3: 7 and discuss the responsibilities given to human beings by God,",
+    "discuss ways they can protect animals, fish, and birds,",
+    "visit a zoo, animal park or farm and observe how animals, fish, and birds are taken care of, and write a report for presentation in class,",
+    "write sensitisation messages on charts or posters on the importance of good stewardship over animals, fish, and birds,",
+    "display the poster or chart in class or on the school notice boards,",
+    "compose a poem on how they take care of animals, fish and birds in their environment."
+   ],
+   "key_inquiry_questions": [
+    "Why should you care for animals, fish, and birds?",
+    "How can you reduce conflicts between human beings and wild animals?"
+   ],
+   "core_competences": "Critical thinking and problem-solving: learners discuss ways they protect animals, fish, and birds.\nLearning to Learn: learners write sensitisation messages on charts/posters on the importance of good stewardship.\nCreativity and Imagination: learners compose a poem on how they take care of animals, fish, and birds.\nCommunication and Collaboration: learners brainstorm on how they take care of animals, fish, and birds.",
+   "values": "Responsibility: learners take care of animals, fish, and birds.\nSocial Justice: learners advocate for animal rights and welfare.\nPatriotism: learners show love for their country as they visit a zoo, animal park or farm and observe how animals, fish, and birds are taken care of.",
+   "pcis": "Animal rights and welfare issues in education: learners visit the nearest animal orphanage or national park and write a report on lessons learnt for presentation in class.\nEnvironmental issues in education: learners discuss different ways of taking care of animals, fish, and birds.",
+   "links": "English: learners write sensitisation messages on charts or posters on the importance of good stewardship over animals, fish and birds.\nAgriculture: learners brainstorm on how they take care of animals, fish, and birds.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     19,
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.a",
+     "letter": "a",
+     "text": "explain the biblical responsibilities given to human beings over creation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.b",
+     "letter": "b",
+     "text": "discuss ways they can protect animals, fish, and birds",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.c",
+     "letter": "c",
+     "text": "practise good stewardship by taking care of animals, fish, and birds",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.d",
+     "letter": "d",
+     "text": "appreciate God’s creation by conserving the environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN",
+   "number": "2.3",
+   "strand": "Creation",
+   "sub_strand": "Responsibility over Plants",
+   "sequence": 203,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "list different types of plants found in the environment and how they take care of them,",
+    "take a nature walk in the environment, observe different plants, draw them on charts, and display them in class,",
+    "read Genesis 1:29: Genesis 2:15 and Psalm 104:14, summarise the teachings on charts and make a presentation,",
+    "buzz on how they care for plants in their environment,",
+    "brainstorm how responsible use of plants contributes to economic growth,",
+    "interact with a resource person (environmentalist/ forest officer/any other relevant person) and interview them on the economic benefits of plants,",
+    "plant an income-generating crop either at home or school,",
+    "take care of the plant until you get results."
+   ],
+   "key_inquiry_questions": [
+    "Why should you take care of plants?",
+    "How do you care for plants in your environment?"
+   ],
+   "core_competences": "Learning to Learn: learners interview a resource person and ask questions on responsible ways of using plants.\nCommunication and collaboration: learners buzz on how they care for plants in their environment.\nSelf-efficacy: learners interact with a resource person (environmentalist, forest office or any other relevant person) and interview them on the economic benefits of plants.\nCritical thinking and Problem-solving: learners plant an income-generating crop either at home or school.",
+   "values": "Responsibility: learners plant an income-generating crop either at home or school.\nSocial Justice: learners advocate for environmental conservation by taking good care of plants in their environment.\nUnity: learners take turns to read Genesis 1:29: Genesis 2:15 and Psalm 104:14 and summarise the biblical teachings on charts.",
+   "pcis": "Learner support programmes: learners participate in environmental club activities.\nEducation for Sustainable Development (ESD): learners explain different ways they care for plants and animals.\nFinancial Literacy: learners discuss how responsible use of plants contribute to economic growth, they also plant an income-generating crop.\nParental Engagement-Resource mobilization: learners involve parents who may assist them with resources to plant an income generation crop.",
+   "links": "Social Studies: learners buzz on how they care for plants.\nAgriculture: learners plant a crop at school or at home and care for it.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     21,
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.a",
+     "letter": "a",
+     "text": "describe the biblical responsibilities given to human beings over plants",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.b",
+     "letter": "b",
+     "text": "apply the biblical teachings acquired to conserve the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.c",
+     "letter": "c",
+     "text": "discuss how responsible use of plants contribute to economic growth",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.d",
+     "letter": "d",
+     "text": "choose an income generating crop and plant it at home or school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.e",
+     "letter": "e",
+     "text": "desire to contribute to a healthy ecosystem",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES",
+   "number": "2.4",
+   "strand": "Creation",
+   "sub_strand": "Use of Natural Resources",
+   "sequence": 204,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on how their communities use natural resources,",
+    "discuss how their communities have misused natural resources; write the points on charts and present them to the class,",
+    "conduct an online or library research on how human beings have used and misused natural resources and make a PowerPoint presentation or use a chart,",
+    "debate on the effects of destroying the environment,",
+    "read Genesis 2:15, Exodus 23:10-11, and Deuteronomy 20:19 and discuss the biblical teachings on good use of natural resources/God’s creation,",
+    "write the points from the Biblical teachings on charts and present them to the class,",
+    "jointly compose songs on the beauty of God’s creation,",
+    "engage in cleaning the school, as a way of conserving the environment."
+   ],
+   "key_inquiry_questions": [
+    "Why should you conserve the environment?",
+    "How do human beings benefit from natural resources?"
+   ],
+   "core_competences": "Learning to Learn: learners brainstorm on how human beings use and misuse natural resources/God’s creation.\nCritical thinking: learners discuss the effects of misusing natural resources.\nDigital Literacy: learners use online resources to search for ways in which human beings use and misuse natural resources.\nCreativity and Imagination: learners compose songs on the beauty of God’s creation.",
+   "values": "Responsibility: learners engage in cleaning the school compound as a way of conserving the environment.\nRespect: learners take turns to air their views and respect each other’s opinion.",
+   "pcis": "Environmental Issues in Education: learners engage in environmental conservation activities.\nSocial Justice: learners use God’s creation responsibly.",
+   "links": "Agriculture: learners participate in responsible use of God’s creation/environment.\nPre-technical Studies: learners conduct an online search and make a presentation using PowerPoint slides.\nEnglish: learners compose a song and debate on the effects of destroying the environment.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.a",
+     "letter": "a",
+     "text": "explain ways in which human beings use and misuse natural resources",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.b",
+     "letter": "b",
+     "text": "explore the effects of misusing natural resources",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.c",
+     "letter": "c",
+     "text": "discuss Biblical teachings on good use of natural resources",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.d",
+     "letter": "d",
+     "text": "conserve the environment as responsible citizens",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE",
+   "number": "3.1",
+   "strand": "The Bible",
+   "sub_strand": "Functions of the Bible",
+   "sequence": 301,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on how the Bible is used in the society today and write the main points,",
+    "read 2 Timothy 3:16-17, Hebrews 4:12 and outline lessons learnt,",
+    "in teams prepare PowerPoint slides or charts on the importance of the Bible and make a presentation in class,",
+    "write summary points on how the Bible is used in spreading the Word of God,",
+    "discuss how the Bible promotes the spiritual, moral, social, emotional, and intellectual growth of a person,",
+    "list different services offered by Christians in the local communities,",
+    "make a presentation on how God’s word inspires different services among Christians today,",
+    "participate in different services in their local community and write a journal,",
+    "compose a song about the Bible."
+   ],
+   "key_inquiry_questions": [
+    "Why is the Bible important in the life of a Christian?"
+   ],
+   "core_competences": "Creativity and Imagination: learners compose a song about the Bible.\nCritical thinking: learners prepare a presentation on how God’s word inspires different services among Christians today.\nLearning to Learn: learners discuss how the Bible promotes the spiritual, moral, social, emotional, and intellectual growth of a person.\nDigital Literacy: learners prepare PowerPoint slides on the importance of the Bible in the society today.",
+   "values": "Unity: learners work in groups and prepare PowerPoint slides or charts on the importance of the Bible.\nRespect: learners take turns to read the Bible texts.\nResponsibility: learners engage in different services in their local community.\nPeace: learners put into practise the Word of God and live harmoniously with each other.",
+   "pcis": "Effective Communication: learners use the Bible to evangelise/ spread the Word of God to others.\nDecision-making: learners read the Word of God and offer service to God and humanity in different ways.",
+   "links": "English: learners read and discuss the Bible texts provided.\nPre-technical Studies: learners use digital devices to prepare PowerPoint slides and make presentations.\nCreative Arts and Sports: learners compose and sing a song about the Bible.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     28,
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.a",
+     "letter": "a",
+     "text": "explain the importance of the Bible in the society today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.b",
+     "letter": "b",
+     "text": "describe how the Bible promotes holistic growth",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.c",
+     "letter": "c",
+     "text": "analyse how God’s Word inspires different services among Christians today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.d",
+     "letter": "d",
+     "text": "appreciate the Bible as the inspired Word of God",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE",
+   "number": "3.2",
+   "strand": "The Bible",
+   "sub_strand": "Divisions of the Bible",
+   "sequence": 302,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm in pairs the two major divisions of the Bible,",
+    "use flashcards to sort and arrange books of the Bible sequentially,",
+    "use a digital device or the Bible to read out Books in the Old and New Testament,",
+    "jointly, outline the four major categories of books in the Old Testament,",
+    "team up to outline the four major categories of books in the New Testament,",
+    "share tasks to design a bookmark on the books of the Bible and place it in your Bible story Book or the Bible."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to know the books of the Bible?"
+   ],
+   "core_competences": "Learning to Learn: learners in pairs outline the four major categories of books in the Old Testament.\nCommunication and Collaboration: learners brainstorm on the two major divisions of the Bible.\nCreativity and Imagination: learners design a bookmark on the books of the Bible.",
+   "values": "Unity: learners work in groups to sort and arrange books of the Bible in order using flashcards.\nResponsibility: learners in pairs design a bookmark on the books of the Bible and place it in their books/Bible.",
+   "pcis": "Effective Communication: learners in pairs brainstorm on the books in the Old and New Testament.\nCreative and Critical thinking: learners in groups design a bookmark on the books of the Bible.",
+   "links": "Mathematics: learners sort and arrange sequentially books of the Old and New Testament.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.a",
+     "letter": "a",
+     "text": "identify the two divisions of the Bible",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.b",
+     "letter": "b",
+     "text": "categorize the books in the Old and New Testament",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.c",
+     "letter": "c",
+     "text": "appreciate the Bible for reflective learning and living",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.THE_BI.BIBLE_TRANSLATION",
+   "number": "3.3",
+   "strand": "The Bible",
+   "sub_strand": "Bible Translation",
+   "sequence": 303,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "mention versions of the Bible used in Kenya today ,",
+    "buzz on the reasons that led to the translation of the Bible into local languages,",
+    "discuss Bible translation from the original languages (Hebrew, Greek) to local languages,",
+    "brainstorm on the benefits of Bible translation,",
+    "interview a resource person on the social and economic effects of translating the Bible to local languages,",
+    "debate on the topic, ‘Bible translation is still necessary today.’"
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to translate the Bible into different languages?"
+   ],
+   "core_competences": "Learning to Learn: learners discuss reasons that led to translating the Bible into local languages.\nCritical thinking and Problem-solving: the learner’s debate on the topic, ‘Bible translation is still necessary in our society today.’",
+   "values": "Unity: learners work in groups to discuss, brainstorm, and appreciate the importance of Bible translation.\nRespect: learners take turns and respect each other’s views and ideas.",
+   "pcis": "Digital Citizenship: learners use digital devices to search for different Bible versions.",
+   "links": "English: learners interview resource persons on the social and economic effects of translating the Bible into local languages",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.THE_BI.BIBLE_TRANSLATION.a",
+     "letter": "a",
+     "text": "identify versions of the Bible used today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_BI.BIBLE_TRANSLATION.b",
+     "letter": "b",
+     "text": "discuss reasons for translating the Bible into local languages",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_BI.BIBLE_TRANSLATION.c",
+     "letter": "c",
+     "text": "describe the translation of the Bible from the original languages to local languages",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_BI.BIBLE_TRANSLATION.d",
+     "letter": "d",
+     "text": "examine the social and economic effects of translating the Bible into local languages",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_BI.BIBLE_TRANSLATION.e",
+     "letter": "e",
+     "text": "appreciate the work of Bible translation in Kenya",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL",
+   "number": "3.4",
+   "strand": "The Bible",
+   "sub_strand": "Leadership in Israel",
+   "sequence": 304,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [
+    "Moses"
+   ],
+   "learning_experiences": [
+    "discuss in groups characteristics of a good leader,",
+    "brainstorm on qualities they consider when choosing leaders at school or church,",
+    "read Exodus 2:11-13, 3:1-2, 11-12, and 6:12, and list ways God prepared Moses for leadership,",
+    "read Exodus 14:13-16, 21, 15:22-25, 18:5-10, 18:17-24; Deuteronomy 4:1-3, 5,6, and discuss roles performed by Moses during the Exodus,",
+    "conduct an online or library research on leadership qualities portrayed by Moses and summarise them on a chart,",
+    "write a journal on how to be a good leader at school, church, and in the community,",
+    "debate on the advantages of choosing leaders of integrity in today’s society."
+   ],
+   "key_inquiry_questions": [
+    "Why was leadership in Israel important?"
+   ],
+   "core_competences": "Self-efficacy: learners apply leadership qualities portrayed by Moses in their interaction with others.\nCitizenship: learners explore how Moses effectively carried out his responsibilities and apply them in their lives.\nImagination and Creativity: learners write a journal on how to be a good leader at school, church, and in the community.",
+   "values": "Responsibility: learners debate on the advantages of choosing leaders of integrity in the society today.\nSocial Justice: learners choose leaders of integrity at school and in the Church.",
+   "pcis": "Human Rights: learners emulate Moses by respecting the rights of other learners.\nGood Governance: learners apply leadership qualities learnt from Moses in daily life.\nDecision-making: learners choose leaders of integrity at school and in church.\nEffective Communication: learners discuss in groups the characteristics of good leaders.",
+   "links": "Social Studies: learners research and make notes on leadership qualities portrayed by Moses.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 6, summary says 7.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.a",
+     "letter": "a",
+     "text": "describe how God prepared Moses for leadership in Israel",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.b",
+     "letter": "b",
+     "text": "identify the roles played by Moses during the Exodus",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.c",
+     "letter": "c",
+     "text": "outline leadership qualities they can emulate from Moses",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.d",
+     "letter": "d",
+     "text": "apply leadership qualities learnt from Moses in their daily lives",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.e",
+     "letter": "e",
+     "text": "choose leaders of integrity to foster stable governments",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.f",
+     "letter": "f",
+     "text": "value responsibility by choosing credible leaders",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES",
+   "number": "4.1",
+   "strand": "The Early Life of Jesus Christ",
+   "sub_strand": "Prophecies about the Messiah",
+   "sequence": 401,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning of the word prophecy and share findings with the class,",
+    "buzz on the meaning of the word, ‘Messiah’",
+    "write the meaning of the word, Messiah on flashcards,",
+    "read Isaiah 7:13-14, 9:6-7, and Jeremiah 23:5-6, and list the prophecies about the coming of the Messiah,",
+    "write the Bible texts on the coming of the Messiah on flashcards and place them in their note books for reference/revision,",
+    "watch a video clip on prophecies about the Messiah,",
+    "conduct an online or library research on fulfilment of prophecies about the Messiah and present the points in class,",
+    "team up to read Matthew 1:18-23 and Luke 1: 26-3 and summarise the fulfillment of the Old Testament prophecies."
+   ],
+   "key_inquiry_questions": [
+    "How were the Old Testament prophecies about the Messiah fulfilled?"
+   ],
+   "core_competences": "Digital Literacy: learners carry out internet search on the prophecies about the coming of the Messiah.\nCommunication and Collaboration: learners team up to read Matthew 1:18-23, Luke 1: 26-3 and summarise how Jesus Christ fulfilled the Old Testament prophecies.",
+   "values": "Unity: learners work in groups and pairs and take turns to air their views.\nResponsibility: learners perform and complete various assignments on time.",
+   "pcis": "Effective Communication: learners articulate issues confidently during brainstorming sessions.\nInformation Technology: learners observe cyber security rules as they research on the prophecies about the Messiah.",
+   "links": "English: learners read Bible texts and brainstorm on the meaning of the term, ‘Prophecy.’\nSocial Studies: learners discuss the message about peace in relation to the coming of the Messiah, the prince of Peace.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     38,
+     39
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.a",
+     "letter": "a",
+     "text": "outline the Old Testament prophecies about the Messiah",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.b",
+     "letter": "b",
+     "text": "elaborate the fulfilment of the Old Testament prophecies about the Messiah",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.c",
+     "letter": "c",
+     "text": "value the fulfillment of the Old Testament prophecies",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.THE_EA.JOHN_THE_BAPTIST",
+   "number": "4.2",
+   "strand": "The Early Life of Jesus Christ",
+   "sub_strand": "John the Baptist",
+   "sequence": 402,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [
+    "A Precursor to the Messiah"
+   ],
+   "learning_experiences": [
+    "read Luke 1:5-25 on the annunciation of the birth of John the Baptist and retell the story,",
+    "read Luke 1:57-66 and make short notes on the birth of John the Baptist,",
+    "role-play the annunciation of John the Baptist and record it using a digital device,",
+    "read Luke 3:16 and John 1:29-30 and write the main points on flash cards,",
+    "compose a poem on how the birth of John the Baptist prepared the way for the coming of the Messiah,",
+    "read Luke 3:7-18 and discuss the message of John the Baptist,",
+    "list the values outlined in the message of John the Baptist,",
+    "dramatize ways of applying values acquired from the message of John the Baptist in daily life,",
+    "sing a song related to the mission of John the Baptist."
+   ],
+   "key_inquiry_questions": [
+    "How is John the Baptist a precursor to the Messiah?"
+   ],
+   "core_competences": "Imagination and Creativity: learners compose a poem on how the birth of John the Baptist relates to the coming of the Messiah.\nCritical thinking: learners discuss the relevance of the message of John the Baptist to Christians today.\nCitizenship: learners brainstorm on values needed by Christians to avoid social evils in the society today.\nCommunication and Collaboration: learners role-play the annunciation of John the Baptist and record it using a digital device.",
+   "values": "Love: learners practise the teachings of John the Baptist by sharing what they have with the needy.\nUnity: learners work in groups and pairs and take turns to air their views.\nSocial Justice: learners brainstorm on how they can apply the message of John the Baptist in their lives.",
+   "pcis": "Social Cohesion: learners brainstorm on how to avoid evils condemned by John the Baptist.\nDecision-making: learners apply the message of John the Baptist in their lives by practising empathy and social justice.\nHuman Rights: the learners brainstorm on the values they need to avoid evils such as accusing others falsely.",
+   "links": "English: learners read Bible texts and brainstorm on the meaning of the term, ‘Prophecy.’\nSocial Studies: learners discuss the message about social justice and responsibility.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     40,
+     41
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.THE_EA.JOHN_THE_BAPTIST.a",
+     "letter": "a",
+     "text": "elaborate the annunciation and birth of John the Baptist",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.JOHN_THE_BAPTIST.b",
+     "letter": "b",
+     "text": "relate the birth of John the Baptist to the coming of the Messiah",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.JOHN_THE_BAPTIST.c",
+     "letter": "c",
+     "text": "interpret John’s description of the Messiah in Luke 3:16 and John 1:29-30",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.JOHN_THE_BAPTIST.d",
+     "letter": "d",
+     "text": "discuss the message of John the Baptist in Luke 3:7-18",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.JOHN_THE_BAPTIST.e",
+     "letter": "e",
+     "text": "apply values acquired from the teachings of John the Baptist in daily life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.JOHN_THE_BAPTIST.f",
+     "letter": "f",
+     "text": "desire to live a morally upright life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_",
+   "number": "4.3",
+   "strand": "The Early Life of Jesus Christ",
+   "sub_strand": "The Birth and Childhood of Jesus Christ",
+   "sequence": 403,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read Luke 1:26-38 and Luke 2:1- 20 in turns,",
+    "brainstorm on the events that took place during the annunciation of the birth of Jesus Christ,",
+    "collaboratively, make a presentation on the annunciation of the Birth of Jesus Christ using PowerPoint slides or charts,",
+    "watch a video clip on the birth of Jesus Christ and write the key points on a chart,",
+    "share experiences of how children are dedicated in church today,",
+    "mention the importance of dedicating babies in church today,",
+    "read Luke 2:22-38 in turns and make short notes,",
+    "in groups discuss the importance of the dedication of baby Jesus,",
+    "read Luke 2:41-52 and retell the story of Jesus Christ in the Temple,",
+    "create a mind map on the story of Jesus Christ with the elders in the Temple,",
+    "in pairs write on flashcards values that Christians learn from the birth and childhood of Jesus Christ."
+   ],
+   "key_inquiry_questions": [
+    "Why do Christians celebrate the birth of Jesus Christ?"
+   ],
+   "core_competences": "Learning to Learn: learners discuss the mission of Jesus Christ based on his interaction with the elders in the Temple.\nCommunication and Collaboration: learners in groups discuss the importance of the dedication of baby Jesus.",
+   "values": "Love: is exhibited as learners respect each other’s opinions and take turns airing their views during group discussions.\nPeace: learners acquire values like peace, sharing, and kindness from the early life of Jesus Christ hence they co-exist with others peacefully.",
+   "pcis": "Children rights and protection: the parents of Jesus were concerned with the welfare of Jesus when he got lost in the Temple.\nEffective Communication: learners share experiences of how children are dedicated in church today.",
+   "links": "Social Studies: Jesus’s parents were concerned about His welfare.\nEnglish: learners make presentations in class on the annunciation and the birth of Jesus Christ.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     42,
+     43,
+     44
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.a",
+     "letter": "a",
+     "text": "elaborate the annunciation and birth of Jesus Christ",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.b",
+     "letter": "b",
+     "text": "describe the dedication of baby Jesus",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.c",
+     "letter": "c",
+     "text": "relate the dedication of Jesus to similar practises in the church today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.d",
+     "letter": "d",
+     "text": "narrate the story of Jesus Christ in the Temple",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.e",
+     "letter": "e",
+     "text": "identify values learnt from the birth and childhood of Jesus Christ",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.f",
+     "letter": "f",
+     "text": "acknowledge the gift of our Saviour by celebrating His birth",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI",
+   "number": "5.1",
+   "strand": "The church in Action",
+   "sub_strand": "Selected Forms of Worship",
+   "sequence": 501,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "define the word, “Worship.”",
+    "share experiences of how worship is done in his or her church,",
+    "jointly read Exodus 15:20-21, Psalm 30:11-12; 96:1-2, 150:1-5, Ephesians 5:19; and outline the teachings on praise and thanksgiving,",
+    "brainstorm, in groups, why prayer and fasting is an important form of worship,",
+    "use a digital device or a poster to summarise points on the importance of prayer and fasting,",
+    "team up to read Luke 4:1-2, Act 13:1-3, Matthew 6:9-13, 1 Thessalonians 5:16-18,",
+    "outline lessons learnt from the Bible texts and make a presentation using a digital device or a chart,",
+    "read Matthew 6:16 and discuss how one should conduct himself or herself when fasting,",
+    "journal how they practise different forms of worship,",
+    "participate in worship at home, church and in school and write a report for presentation in class",
+    "brainstorm on the topic, “we were created to worship God.’’",
+    "in collaboration, read and compose a song based on Psalms 150:1-5,",
+    "sing a song on the Lord's prayer."
+   ],
+   "key_inquiry_questions": [
+    "Why is prayer and fasting important in the life of a Christian?"
+   ],
+   "core_competences": "Creativity and Imagination: learners compose a song based on Psalm 150:1-5.\nLearning to Learn: learners discuss the importance of prayer and fasting.\nSelf-efficacy: learners write a journal on how they practise different forms of worship.\nCritical thinking: learner’s brainstorm on the topic, “We were created to worship God”.\nRespect: learners take turns as they share experiences of how worship is done in their churches.\nUnity: learners work in groups as they read and compose a song based on the scriptures provided.",
+   "values": "",
+   "pcis": "Self-awareness: learners write a journal on how they practise different forms of worship.\nEffective Communication: learners brainstorm, in groups, why prayer and fasting is an important form of worship.",
+   "links": "Creative Arts and Sports: learners sing a song on the Lord's Prayer.\nPre-technical Studies: learners make a presentation using a digital device.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     47,
+     48
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.a",
+     "letter": "a",
+     "text": "outline the teachings on praise and thanks giving from the scriptures provided",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.b",
+     "letter": "b",
+     "text": "discuss the importance of prayer and fasting",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.c",
+     "letter": "c",
+     "text": "explain teachings on prayer and fasting from the scriptures provided",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.d",
+     "letter": "d",
+     "text": "practise the teachings of Jesus Christ on prayer and fasting",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.e",
+     "letter": "e",
+     "text": "take part in different forms of worship at home, church and in school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.f",
+     "letter": "f",
+     "text": "pray to God always to grow spiritually",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED",
+   "number": "5.2",
+   "strand": "The church in Action",
+   "sub_strand": "Role of the Church in Education and Health",
+   "sequence": 502,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on healthcare facilities established by churches in their communities,",
+    "use google maps/County maps to identify healthcare facilities established by the church in Kenya today,",
+    "carry out an online research on the role of the church in education and health and present the findings in class,",
+    "discuss and summarise on charts, barriers to effective church mission work,",
+    "discuss solutions to barriers hindering effective mission work in Kenya today,",
+    "interview vetted resource persons on the contribution of the Church to education and health in Kenya today."
+   ],
+   "key_inquiry_questions": [
+    "How does the church support education and health?"
+   ],
+   "core_competences": "Digital Literacy: learners use google maps to identify, schools and healthcare facilities established by the church.\nCitizenship: learners recommend solutions to challenges facing effective church mission work in Kenya today.",
+   "values": "Unity: learners in groups brainstorm on healthcare facilities established by churches in their communities.\nLove: learners appreciate the role-played by the church in establishing schools and health facilities.",
+   "pcis": "Health issues in education: the learners use google maps or County maps to identify healthcare facilities established by the church in Kenya today.\nHuman Rights: they learn about human rights issues which involves the contribution of the Church in education and health.",
+   "links": "English: learners’ interview vetted resource persons on the contribution of the Church in education and health in Kenya today.\nSocial Studies: learners use google maps to identify, the schools and healthcare facilities established by the church in Kenya.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     49,
+     50
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.a",
+     "letter": "a",
+     "text": "appraise the contribution of the Church towards education and health",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.b",
+     "letter": "b",
+     "text": "identify barriers to effective Church mission work in Kenya today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.c",
+     "letter": "c",
+     "text": "recommend solutions to barriers hindering effective mission work",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.d",
+     "letter": "d",
+     "text": "appreciate the contribution of the Church in education and health",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY",
+   "number": "6.1",
+   "strand": "Christian Living Today",
+   "sub_strand": "Human Sexuality",
+   "sequence": 601,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning of human sexuality,",
+    "discuss the meaning of healthy and unhealthy relationships,",
+    "outline the teachings in 1Corinthians 6:9 and 18 and summarise lessons learnt,",
+    "read Philippians 4:8-9 and Galatians 5:23 reflect on it and write a journal on values and life skills they apply as they relate with others,",
+    "write 1Thessalonians 4:3 on a flash card and recite it,",
+    "discuss circumstances that can lead to sexual temptations,",
+    "brainstorm on how to avoid temptations/tempting places,",
+    "role-play on how to overcome a tempting situation,",
+    "list/mention the negative effects of engaging in sex before marriage,",
+    "listen to and engage a resource person on values and life skills guiding good morals and summarise key points,",
+    "reflect on their relationships and journal their resolve to remain chaste until marriage as they depend on God’s strength/prayer,",
+    "carry out a debate in class on, ‘it is possible for a young person to remain chaste until marriage’.",
+    "compose and recite a poem titled, ‘Lord help me overcome temptations.’"
+   ],
+   "key_inquiry_questions": [
+    "How can you maintain sexual purity as a youth?"
+   ],
+   "core_competences": "Learning to Learn: learners brainstorm on how to avoid temptations/tempting places.\nSelf-efficacy: learners journal their resolve to remain chaste until marriage as they depend on God’s strength/prayer.\nCommunication and Collaboration: learners debate on, ‘it is possible for a young person to remain chaste until marriage’.",
+   "values": "Respect for one another: learners brainstorm on the meaning of, ‘healthy and unhealthy male-female relationships’.\nResponsibility: learners make decisions to avoid temptations/tempting places as they depend on God.\nIntegrity: learners journal their resolve to remain chaste until marriage as they depend on God’s strength/prayer.\nPeace: learners resolve to form healthy relationships.",
+   "pcis": "Effective communication: learners in groups discuss circumstances that can lead to sexual temptations.\nSelf-awareness and assertiveness: learners reflect and keep a journal on values and life skills they apply as they relate with others.\nPeer pressure resistance: learners brainstorm on how to avoid negative peer influence.",
+   "links": "English: learners read scriptures, debate and express themselves confidently.\nCreative Arts and Sports: learners compose and sing a poem titled, ‘Lord help me overcome temptations’.\nIntegrated Science: learners list or mention the negative effects of engaging in sex before marriage.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     53,
+     54,
+     55
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY.a",
+     "letter": "a",
+     "text": "explain the meaning of human sexuality for holistic development",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY.b",
+     "letter": "b",
+     "text": "discuss healthy and unhealthy relationships for responsible living",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY.c",
+     "letter": "c",
+     "text": "discuss the circumstances that lead to unhealthy relationships",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY.d",
+     "letter": "d",
+     "text": "outline the consequences of engaging in sex before marriage",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY.e",
+     "letter": "e",
+     "text": "compile values and life skills needed to avoid irresponsible sexual behaviour",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY.f",
+     "letter": "f",
+     "text": "utilize values and life skills acquired to form healthy relationships",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F",
+   "number": "6.2",
+   "strand": "Christian Living Today",
+   "sub_strand": "Christian Marriage and Family",
+   "sequence": 602,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read Genesis 2:23-24: and Ephesians 5:22-33 in turns and summarise the main biblical teachings about marriage,",
+    "read Exodus 20:12, Psalm 127:3-5, Ephesians 6:4 and note the key points,",
+    "list values needed by young people before they enter into marriage,",
+    "interact with a religious leader or a resource person and interview them on how the church promotes values among young people before marriage,",
+    "carry out an online or library research on values needed to contribute towards stable families,",
+    "write key messages on charts or flashcards on values needed to contribute towards stable families,",
+    "role-play a stable Christian family,",
+    "compose and recite poems on ‘God is the centre of stable families’."
+   ],
+   "key_inquiry_questions": [
+    "How does a good marriage contribute to stability in the society?"
+   ],
+   "core_competences": "Critical thinking and Problem-solving: learners write key messages on values required to sustain and support stable families in the society today.\nCitizenship: learners discuss the biblical teachings on values required to contribute to stable families.\nLearning to Learn: learners interact with a religious leader to find out strategies used by the Church to promote values among young people before marriage.\nDigital Literacy: learners carry out an online search on values required to sustain and support stable families.\nCreativity and Imagination: the learners compose and recite poems on ‘God is the centre of stable families.",
+   "values": "Unity: learners respect each other’s ideas and take turns during group discussions.\nLove: learners list values needed to contribute to stable families.\nResponsibility: learners write key messages on charts or flashcards on values required to have stable families.",
+   "pcis": "Decision-making: learners evaluate and make decisions on the values required to contribute to stable families.\nSocial Cohesion: learners in groups, prepare a presentation on strategies used by the church to promote values among young people before marriage.",
+   "links": "Social Studies: learners appreciate marriage and families as important institutions necessary for stability in the society.\nEnglish: learners compose and recite poems on ‘God is the centre of stable families’.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     56,
+     57
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.a",
+     "letter": "a",
+     "text": "discuss the biblical teachings on marriage and family",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.b",
+     "letter": "b",
+     "text": "explain ways the church promotes values among young people before marriage",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.c",
+     "letter": "c",
+     "text": "identify values needed to maintain stability in families",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.d",
+     "letter": "d",
+     "text": "appreciate the family as a sacred institution ordained by God",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA",
+   "number": "6.3",
+   "strand": "Christian Living Today",
+   "sub_strand": "Alcohol, Drugs and Substance use",
+   "sequence": 603,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning of alcohol, drug and substance abuse and share findings with the class,",
+    "list drugs commonly abused by youths in Kenya today,",
+    "discuss the causes of alcohol, drugs and substance abuse today,",
+    "research on persons who abused drugs and the effects it had on them,",
+    "conduct an internet or library research on the effects of alcohol, drugs and substance abuse and make a presentation in class,",
+    "read 1Corinthians 3:17, 1Corinthians 6:10, Ephesians 5:18, Proverbs 20:1, Proverbs 23:29-35,Proverbs 31:6 and Isaiah 5:11",
+    "share lessons learnt from the scriptures and make notes,",
+    "debate on life skills and values needed to avoid alcohol, drug and substance abuse,",
+    "listen to a resource person sharing success stories on overcoming alcohol, drug and substance abuse as a youth,",
+    "reflect and write a journal on ways to avoid alcohol, drugs and substance abuse as a Christian youth."
+   ],
+   "key_inquiry_questions": [
+    "Why do young people abuse drugs and alcohol today?"
+   ],
+   "core_competences": "Digital Literacy: learners conduct an internet search on the effects of using alcohol, drugs and other substances and make a presentation in class.\nLearning to Learn: learners discuss the causes of alcohol, drugs and substance abuse today.\nCitizenship: learners desire to live a life free of alcohol, drug and substance abuse.\nCommunication and Collaboration: in groups, learners discuss the causes of alcohol, drugs and substance abuse today.",
+   "values": "Responsibility: learners make the right decisions and avoid alcohol drug and substance abuse.\nRespect: learners respect themselves by avoiding alcohol, drugs and substance abuse.\nPatriotism: learners decide to live responsibly by not engaging in alcohol, drug and substance abuse. Pertinent Contemporary Issues (PCIs)\nCritical and Creative thinking: learners critically assess and avoid situations that can lead to alcohol, drug and substance use and abuse.\nAssertiveness: learners say ‘no’ to alcohol, drugs and substance abuse.\nDecision-making: learners make the right decisions of not engaging in alcohol, drugs and substance abuse.\nGuidance and Counselling: learners are guided on skills and values needed to avoid alcohol, drugs and substance abuse.",
+   "pcis": "",
+   "links": "Integrated Science: learners learn the negative effects of alcohol, drug and substance abuse.\nPre-technical Studies: learners conduct an online or library research on the causes and effects of alcohol, drugs and substance abuse.\nSocial Studies: learners brainstorm on the causes of alcohol, drug and substance abuse and the values and life- skills needed for responsible living.",
+   "design_notes": "Second read left this for a person to confirm: pcis: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     58,
+     59,
+     60
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.a",
+     "letter": "a",
+     "text": "identify drugs commonly abused by youths in Kenya today",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.b",
+     "letter": "b",
+     "text": "discuss reasons why young people abuse drugs today",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c",
+     "letter": "c",
+     "text": "explore the effects of alcohol, drugs and substance abuse on an individual and the family",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.d",
+     "letter": "d",
+     "text": "read the scriptures provided on the effects of alcohol, drug and substance abuse",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.e",
+     "letter": "e",
+     "text": "recommend values and life skills needed to stay free from alcohol, drug and substance abuse",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.f",
+     "letter": "f",
+     "text": "utilise values and life- skills acquired to live an alcohol, drug and substance-free life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.CHRIST.GAMBLING",
+   "number": "6.4",
+   "strand": "Christian Living Today",
+   "sub_strand": "Gambling",
+   "sequence": 604,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "share collaboratively what they know about gambling,",
+    "brainstorm on the meaning and types of gambling,",
+    "jointly use digital devices or read relevant textbooks on the causes of gambling today,",
+    "share with classmates, how to avoid negative peer influence that can lead to gambling,",
+    "listen to and engage a resource person on how to avoid gambling,",
+    "read 1Timothy 6:10, Proverbs 13:11 and Proverbs 28:20-22, Ephesians 4:28 and summarise the key points on charts for presentation in class,",
+    "role-play the effects of gambling on individuals and families,",
+    "read, Matthew 6:19-21, Hebrew 13:5, 1Timothy 6:17-19 and outline lessons learnt on true riches,",
+    "conduct an online or library research on values and life skills needed to avoid gambling,",
+    "debate on, “skills and values needed to avoid gambling.”",
+    "Memory verse; recite1Corinthians 6:12 and explain the meaning."
+   ],
+   "key_inquiry_questions": [
+    "Why do young people engage in gambling today?"
+   ],
+   "core_competences": "Learning to Learn: learners summarise the biblical teachings on charts and make a presentation in class.\nCommunication and Collaboration: learners’ debate on, ‘Skills and values needed to avoid gambling.’\nCritical thinking and Problem-solving: learners role-play the effects of gambling on individuals and families.",
+   "values": "Responsibility: learners make the right decisions and avoid gambling.\nRespect for self and others: learners utilize values and life skills acquired to avoid and overcome gambling. Pertinent Contemporary Issues (PCIs)\nSelf-efficacy: learners recognise their worth and say ‘No!’ to any enticement to gamble.\nDecision-making: learners make decisions and avoid gambling.\nLearner support programmes: guidance and counselling: learners interview a resource person on how to avoid gambling.\nHealth Issues: learners advocate for mental wellness as they brainstorm on skills and values needed to avoid gambling.",
+   "pcis": "",
+   "links": "Integrated Science: they learn the effects of gambling on an individual and families.\nCreative Arts and Sports: learners role-play the effects of gambling on individuals and families.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 7, summary says 6; pcis: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     61,
+     62
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.CHRIST.GAMBLING.a",
+     "letter": "a",
+     "text": "identify types of gambling in Kenya today",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CHRIST.GAMBLING.b",
+     "letter": "b",
+     "text": "discuss five causes of gambling",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CHRIST.GAMBLING.c",
+     "letter": "c",
+     "text": "outline teachings on money and wealth from the scriptures provided",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CHRIST.GAMBLING.d",
+     "letter": "d",
+     "text": "examine the effects of gambling on individuals and families",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CHRIST.GAMBLING.e",
+     "letter": "e",
+     "text": "outline teachings on true riches from the scriptures provided",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G7.CHRIST.GAMBLING.f",
+     "letter": "f",
+     "text": "utilize acquired skills and moral values to live a gambling free life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G7.CHRIST.SOCIAL_MEDIA",
+   "number": "6.5",
+   "strand": "Christian Living Today",
+   "sub_strand": "Social Media",
+   "sequence": 605,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "list different social media platforms they interact with,",
+    "brainstorm on the dangers of chatting or meeting with online strangers,",
+    "list precautions they need to exercise whenever they use social media,",
+    "discuss how social media is misused today and make PowerPoint slides for presentation in class,",
+    "brainstorm on cyberbullying and how to respond,",
+    "write sensitisation messages on charts or posters on values and life-skills needed when using social media platforms,",
+    "interview a resource person on responsible use of social media,",
+    "write personal reflections on how to use social media responsibly."
+   ],
+   "key_inquiry_questions": [
+    "Why should you be cautious when using social media?"
+   ],
+   "core_competences": "Learning to Learn: learners interview a resource person on responsible use of social media.\nSelf-efficacy: learners write sensitisation messages on charts or posters on values they need as they engage on social media platforms.",
+   "values": "Integrity: learners decide to use social media appropriately even when no one is watching.\nResponsibility: learners in pairs share precautions they need to exercise as they engage on social media platforms.\nRespect: learners respect themselves while using social but not engaging in inappropriate chats. They also regulate time spent on social media.",
+   "pcis": "Self-awareness and Self-esteem: learners make decisions to use social media responsibly.\nDecision-making: learners make a decision not to visit sites that can corrupt their morals.\nAssertiveness: learners in pairs brainstorm on how to respond to cyberbullying.",
+   "links": "English: learners interview a resource person on responsible use of social media.\nPre-technical Studies: learners in groups discuss how social media is misused today and make a PowerPoint presentation in class.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+    "design": "CRE Grade 7 - Revised.pdf",
+    "version": "First Published in 2022; Revised 2024",
+    "pages": [
+     63,
+     64
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G7.CHRIST.SOCIAL_MEDIA.a",
+     "letter": "a",
+     "text": "identify different social media platforms used by young people today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.SOCIAL_MEDIA.b",
+     "letter": "b",
+     "text": "describe ways of using social media responsibly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.SOCIAL_MEDIA.c",
+     "letter": "c",
+     "text": "examine ways in which social media is misused today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.SOCIAL_MEDIA.d",
+     "letter": "d",
+     "text": "discuss ways they should respond to cyberbullying",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.SOCIAL_MEDIA.e",
+     "letter": "e",
+     "text": "recommend values and life skills needed for responsible use of social media",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.SOCIAL_MEDIA.f",
+     "letter": "f",
+     "text": "apply Christian values as they use different social media platforms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.CHRIST.SOCIAL_MEDIA.g",
+     "letter": "g",
+     "text": "desire to use social media responsibly",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

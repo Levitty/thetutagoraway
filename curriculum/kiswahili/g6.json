@@ -1,0 +1,3273 @@
+{
+ "framework": "cbc",
+ "subject_key": "kiswahili",
+ "grade": 6,
+ "source": "KICD English Language, not printed (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 53,
+  "outcomes": 193,
+  "lessons": 117,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "KISW.G6.KUSIKI.T1_MATAMSHI_BORA",
+   "number": "1.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Matamshi Bora (Theme 1: Viungo vya mwili vya ndani)",
+   "sequence": 111,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "d/nd,ch/sh,j/nj na g/ng"
+   ],
+   "learning_experiences": [
+    "kutambua silabi za sauti, d/nd, ch/sh, j/nj na g/ng (k.v. doa/ndoa, choka/shoka, jaa/njaa, goma/ngoma) kutokana na maneno kwenye vitabu, ubaoni au kwa kutumia vifaa vya kidijitali,",
+    "kusikiliza silabi za sauti lengwa zikitamkwa na mwalimu, mgeni mwalikwa au kutoka kwa vifaa vya kidijitali (k.v. kinasasauti),",
+    "kutamka silabi za sauti lengwa akishirikiana na wenzake,",
+    "kusikiliza vitanzandimi vinavyoundwa kutokana na maneno yenye sauti lengwa vikikaririwa (k.v.Mkunjo ulikunjwa na waja wenye njaa kukicha),",
+    "kuunda vitanzandimi vinavyotokana na vitate husika akishirikiana na wenzake,",
+    "kuwasilisha vitanzandimi alivyounda darasani ili wenzake wamtolee maoni,",
+    "kutoa maoni kuhusu vitanzandimi vya wenzake kwa upendo na heshima,",
+    "kuunda vitanzandimi kwenye vifaa vya kidijitali kwa kushirikiana na wenzake mitamboni na kuvirekebisha."
+   ],
+   "key_inquiry_questions": [
+    "Je, unajua maneno gani yenye silabi za sauti d/nd, ch/sh, j/nj na g/ng? 2.Je, Unajua vitanzandimi gani vyenye silabi za sauti d/nd, ch/sh, j/nj na g/ng?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala kuhusu vitanzandimi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kusikiliza sauti na kuunda vitanzandimi.\nKujiamini: mwanafunzi anapounda vitanzandimi vyenye maana kutokana na sauti zinazokaribiana kimatamshi.\nUbunifu: mwanafunzi anaposhiriki katika kuunda vitanzandimi vyenye maana.",
+   "values": "Heshima: mwanafunzi anapoheshimu maoni ya wenzake katika shughuli za ujifunzaji.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nAfya ya mtu binafsi: mwanafunzi anapounda vitanzandimi kutokama na suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kutamka vitanzandimi anayojifunza katika somo la Kiswahili na ujifunzaji stadi hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.a",
+     "letter": "a",
+     "text": "kutambua silabi zinazotokana na sauti d/nd, ch/sh, j/nj na g/ng katika maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.b",
+     "letter": "b",
+     "text": "kutamka silabi zinazotokana na sauti zinazokaribiana kimatamshi ili kuimarisha matamshi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.c",
+     "letter": "c",
+     "text": "kutamka vitanzandimi vinavyoundwa kwa silabi za sauti zinazokaribiana kimatamshi ili kuimarisha matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.d",
+     "letter": "d",
+     "text": "kuchangamkia kukariri vitanzandimi vinavyoundwa kwa silabi za sauti zinazokaribiana kimatamshi ili kuimarisha matamshi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
+   "number": "1.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Ufahamu (Theme 1: Viungo vya mwili vya ndani)",
+   "sequence": 121,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua viungo vya mwili vya ndani (k.v. moyo, mapafu, ini, kibofu, wengu, figo, ubongo, mifupa na mishipa) kutokana na picha, chati au kwenye tarakilishi,",
+    "kueleza maana za msamiati alioutambua,",
+    "kusoma kifungu kuhusu suala lengwa kwenye kitabu au kwenye tarakilishi akishirikiana na wenzake,",
+    "kujibu maswali kutokana na kifungu husika,",
+    "kutoa muhtasari wa kifungu alichosoma,",
+    "kutunga sentensi akitumia msamiati wa suala lengwa uliotumiwa katika kifungu, akishirikiana na wenzake,",
+    "kusoma vifungu mtandaoni kuhususuala lengwa akisaidiwa na mzazi au mlezi wake,",
+    "kuwasilisha kwa wenzake ujumbe alioupata katika vifungu alivyovisoma."
+   ],
+   "key_inquiry_questions": [
+    "Unazingatia nini unaposoma kifungu cha hadithi?",
+    "Kusoma kuhusu viungo vya mwili vya ndani kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kutambua viungo vya mwili vya ndani. Vilevile, anapotunga sentensi akishirikiana na wenzake.\nKujiamini: mwanafunzi anapotunga sentensi sahihi akitumia msamiati wa suala lengwa uliotumiwa katika kifungu.\nUjuzi wa kidijitali: mwanafunzi anaposoma vifungu mtandaoni.",
+   "values": "Heshima: mwanafunzi anaposikiliza wenzake wakisoma kifungu na kuheshimu maoni yao katika shughuli za ujifunzaji.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUwajibikaji: mwanafunzi anaposoma vifungu mtandaoni na kuwasilisha ujumbe uliomo kwa wenzake.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nAfya ya mtu binafsi: mwanafunzi anaposoma kifungu kuhusu suala lengwa.\nUsalama wa mtandaoni: mwanafunzi anaposoma vifungu mtandaoni kuhusu suala lengwa akisaidiwa na mzazi au mlezi wake.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kutamka vitanzandimi anayojifunza katika somo la Kiswahili na ujifunzaji stadi hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a",
+     "letter": "a",
+     "text": "kutambua msamiati wa suala lengwa uliotumika katika kifungu ili kuimarisha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b",
+     "letter": "b",
+     "text": "kueleza maana ya msamiati lengwa ili kuubainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.c",
+     "letter": "c",
+     "text": "kuonyesha ufahamu wakifungu kwa kujibu maswali na kutoa muhtasari",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.d",
+     "letter": "d",
+     "text": "kuchangamkia usomaji ili kuimarisha ufahamu",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUANDI.T1_INSHA_YA_WASIFU",
+   "number": "1.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha ya Wasifu (Theme 1: Viungo vya mwili vya ndani)",
+   "sequence": 131,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusoma vielelezo vya insha ya wasifu vilivyoandikwa katika matini mbalimbali au tarakilishi huku akitambua maudhui,",
+    "kujadili mada na muundo wa insha ya wasifu,",
+    "kubainisha na kujadili vidokezo vifaavyo vya mada lengwa,",
+    "kujadili maudhui ya insha ya wasifu kwa kurejelea mada,",
+    "kuandika insha ya wasifu isiyopungua maneno 200 inayohusu mada lengwa (k.m: Daktari nimpendaye) kwa kuzingatia, anwani, mpangilio mzuri wa mawazo, hati safi, kanuni za kisarufi (k.v. uakifishaji mwafaka na tahajia) na kwa lugha ya kiubunifu inayojumuisha methali, tashbihi na nahau alizojifunza awali,",
+    "kukuza umilisi wa ujuzi wa kidijitali kwa kuandika insha ya wasifu mtandaoni na kuisambaza kwa wenzake na mwalimu ili kuisoma na kuitathmini,",
+    "kuwawasilishia wenzake insha aliyoandika ili wampe maoni yao."
+   ],
+   "key_inquiry_questions": [
+    "Je, wasifu hueleza kuhusu nini?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala na wenzake.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kiteknolojia katika kuandika insha mtandaoni na kurejelea kielelezo cha insha ya wasifu.\nUbunifu: mwanafunzi anapoandika insha ya wasifu.",
+   "values": "Heshima: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji\nMaadili mbalimbali kutegemea sifa za wahusika katika insha",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika Shughuli mbalimbali za ujifunzaji\nKujiendeleza kibnafsi: mwanafunzi anapokuza ujuzi wa kidijitali kwa kuandika insha ya wasifu mtandaoni na kuisambaza kwa wenzake na mwalimu ili waitathmini.\nAfya ya mtu binafsi: mwanafunzi anapoandika insha kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUANDI.T1_INSHA_YA_WASIFU.a",
+     "letter": "a",
+     "text": "kujadili maudhui ya inshaya wasifu kwa kuzingatia mada ili kukuza ubunifu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T1_INSHA_YA_WASIFU.b",
+     "letter": "b",
+     "text": "kuandika insha ya wasifu kwa ubunifu ili kujenga maelezo yenye kutoa picha dhahiri",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T1_INSHA_YA_WASIFU.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi wa insha ya wasifu ili kujenga ubunifu",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA",
+   "number": "1.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Vivumishi vya Sifa (Theme 1: Viungo vya mwili vya ndani)",
+   "sequence": 141,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kueleza maana ya vivumishi lengwa kwa kurejelea vitu au watu katika mazingira yake (k.m.: Mwalimu mzuri, njia ndefu, kijiko kichafu),",
+    "kutambua vivumishi vya sifa (k.v. –zuri, - baya, -refu, -fupi, -ekundu, hodari) katika tarakilishi, kapu la maneno au mti wa maneno akishirikiana na wenzake,,",
+    "kutambua vivumishi vya sifa katika sentensi,",
+    "kutambua vivumishi vya sifa katika kifungu,",
+    "kuandika sentensi kwa usahihi akitumia vivumishi lengwa akishirikiana na wenzake,",
+    "kujaza nafasi kwenye sentensi au vifungu vya maneno kwa kutumia vivumishi lengwa kwenye daftari au kwenye tarakilishi."
+   ],
+   "key_inquiry_questions": [
+    "Ni maneno gani unayotumia kuelezea sifa za watu au kitu?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapojadiliana na wenzake.\nUbunifu: mwanafunzi anapotunga sentensi akitumia vivumishi vya sifa.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kutambua vivumishi vya sifa.",
+   "values": "Heshima: mwanafunzi anaposikiliza wenzake wakitoa mchango wao darasani.\nUwajibikaji: mwanafunzi anapofuata maelekezo ya mwalimu na wenzake darasani. Pia anapotunga sentensi kama alivyoagizwa.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji darasani.\nAfya ya mtu binafsi: mwanafunzi anapotumia msamiati wa suala lengwa kutunga sentensi akitumia vivumishi vya sifa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vivumishi anayojifunza katika somo la Kiswahili na ujifunzaji stadi hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.a",
+     "letter": "a",
+     "text": "kueleza maana ya vivumishi vya sifa ili kuvitofautisha na aina zingine za maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.b",
+     "letter": "b",
+     "text": "kutambua vivumishi vya sifa katika matini mbalimbali ili kuvibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.c",
+     "letter": "c",
+     "text": "kutumia vivumishi vya sifa kutunga sentensi au vifungu vya maneno kwa usahihi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.d",
+     "letter": "d",
+     "text": "kufurahia kutumia vivumishi vya sifa katika sentensi au vifungu vya maneno",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA",
+   "number": "1.4.2",
+   "strand": "Sarufi",
+   "sub_strand": "Vivumishi Viashiria (Theme 1: Viungo vya mwili vya ndani)",
+   "sequence": 142,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kueleza maana ya vivumishi lengwa kwa kurejelea vitu vilivyo karibu naye, mbali naye na mbali kabisa (k.m: Kitabu hiki/hicho/kile),",
+    "kutambua vivumishi viashiria (k.v. huyu, huyo, yule, hivi, hivyo, vile) katika tarakilishi, kapu la maneno au mti wa maneno ili kukuza hamu ya ujifunzaji,",
+    "kutambua vivumishi viashiria katika sentensi",
+    "kutambua vivumishi viashiria katika ifungu,",
+    "kuandika sentensi akitumia vivumishi lengwa kwa usahihi akishirikiana na wenzake,",
+    "kujaza mapengo kwenye sentensi au vifungu vya maneno kwa kutumia vivumishi lengwa,",
+    "kutunga sentensi sahihi au vifungu vya maneno katika kifaa cha kidijitali akitumia vivumishi lengwa."
+   ],
+   "key_inquiry_questions": [
+    "Ni maneno gani unayoweza kutumia kuonyesha umbali wa mtu aukitu?"
+   ],
+   "core_competences": "Hamu ya ujifunzaji: mwanafunzi anapotambua vivumishi viashiria katika matini mbalimbali.\nMawasiliano na ushirikiano: mwanafunzi anapojadiliana na wenzake.\nUbunifu: mwanafunzi anapotunga sentensi akitumia vivumishi viashiria.\nUjuzi wa kidijitali: mwanafunzi anapotunga sentensi akitumia kifaa cha kidijitali.",
+   "values": "Heshima: mwanafunzi anaposikiliza wenzake wakitoa mchango wao darasani.\nUwajibikaji: mwanafunzi anapofuata maelekezo ya mwalimu na wenzake darasani.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.",
+   "pcis": "Afya ya mtu binafsi: mwanafunzi anapotumia msamiati wa suala lengwa kutunga sentensi akitumia vivumishi vya sifa",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vivumishi anayojifunza katika somo la Kiswahili na ujifunzaji dhana hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.a",
+     "letter": "a",
+     "text": "kueleza maana ya vivumishi viashiria ipasavyo ili kuvibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.b",
+     "letter": "b",
+     "text": "kutambua vivumishi viashiria katika matini mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.c",
+     "letter": "c",
+     "text": "kutumia vivumishi viashiria katika sentensi au vifungu vya maneno kwa usahihi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.d",
+     "letter": "d",
+     "text": "kufurahia kutumia vivumishi viashiria katika sentensi au vifungu vya maneno",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH",
+   "number": "1.4.3",
+   "strand": "Sarufi",
+   "sub_strand": "Vivumishi Vimilikishi (Theme 1: Viungo vya mwili vya ndani)",
+   "sequence": 143,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kueleze maana ya vivumishi vimilikishi ili kuibainisha,",
+    "kutambua vivumishi vimilikishi (k.v –angu, - ako, -ake, -etu, -ao n.k.) katika tarakilishi, kapu maneno au mti maneno,",
+    "kutambua vivumishi vimilikishi katika sentensi,",
+    "kutambua vivumishi vimilikishi katika kifungu,",
+    "kujadili maana ya vivumishi vimilikishi huku akitoa mifano,",
+    "kutumia vivumishi vimilikishi katika sentensi kwa kuigiza umiliki wa vitu mbalimbali,",
+    "kutunga sentensi akitumia vivumishi vimilikishi,",
+    "kukuza ujuzi wa kidijitali kwa kutumia vifaa vya kidijitali,",
+    "kutunga sentensi akitumia vivumishi vimilikishi na kuzituma mtandaoni ili wenzake wazisome na kuzisahihisha,",
+    "kujaza mapengo kwa kutumia vivumishi vimilikishi ili kukamilisha sentensi kwenye daftari au katika tarakilishi kwa kuburura viwakilishi vimilikishi mwafaka"
+   ],
+   "key_inquiry_questions": [
+    "Je, unajua maneno yapi yanayotumika kuonyesha kitu ni cha nani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika majadiliano kuhusu matumizi ya vivumishi vimilikishi.\nHamu ya ujifunzaji: mwanafunzi anapojibu swali dadisi lililopendekezwa.\nUjuzi wa kidijital: mwanafunzi anapotumia vifaa vya kidijitali kutambua vivumishi lengwa.\nKujiamini: mwanafunzi anapofaulu kutumia vivumishi vimilikishi kwa ufasaha katika sentensi.",
+   "values": "Heshima: mwanafunzi anapofanya kazi kwa zamu. Pia mwanafunzi anapoheshimu maoni ya wenzake.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUwajibikaji: mwanafunzi anapokamilisha kazi yake kwa wakati ufaao.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nAfya ya mtu binafsi: mwanafunzi anapotumia msamiati wa suala lengwa kutunga sentensi akitumia vivumishi vya sifa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vivumishi anayojifunza katika somo la Kiswahili na ujifunzaji dhana hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.a",
+     "letter": "a",
+     "text": "kuelezea maana ya vivumishi vimilikishiili kuvitofautisha na aina zingine za vivumishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.b",
+     "letter": "b",
+     "text": "kutambua vivumishi vimilikishi katika matini mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.c",
+     "letter": "c",
+     "text": "kutumia vivumishi vimilikishi katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya vivumishi vimilikishi katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO",
+   "number": "2.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Maamkuzi na Maagano (Theme 2: Michezo)",
+   "sequence": 211,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kujadili na wenzake umuhimu wa maamkuzi na maagano,",
+    "kutambua maamkuzi mbalimbali (k.v. Waambaje? Salam Aleikum? Unaendeleaje?) na maagano mbalimbali (k.v. mchana mwema, buriani, baki salama) kutoka kwenye chati, ubao, michoro,picha au vifaa vya kidijitali,",
+    "kujadili maamkuzi na maagano yanayolengwa na matumizi yake,",
+    "kutazama watu wakiamkuana na kuagana katika vifaa vya kidijitali,",
+    "kuigiza maamkuzi na maagano lengwa na kuheshimu nafasi ya kila mmoja katika maigizo haya."
+   ],
+   "key_inquiry_questions": [
+    "Kwa nini watu huamkuana?",
+    "Kuagana kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kuigiza maamkuzi na maagano.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali katika mchakato wa ujifunza.\nKujiamini: mwanafunzi anapotumia na kuigiza maamkuzi na maagano ipasavyo.",
+   "values": "Heshima: mwanafunzi anapoheshimu nafasi za wenzake katika maigizo.\nUpendo: mwanafunzi anapotumia maamkuzi na maagano huashiria upendo.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anapojumuika katika shughulli za ujifunzaji na wenzake darasani.\nMahusiano ya kijamii: mwanafunzi anapochangamkia maamkuzi na maagano katika mawasiliano yake ya kawaida.\nUsalama wa mtandaoni: mwanafunzi anapotazama watu wakiamkuana na kuagana katika vifaa vya kidijitali.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya adabu anayojifunza katika somo la Kiswahili na ujifunzaji dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la michezo na somo la Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     28,
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.a",
+     "letter": "a",
+     "text": "kujadili umuhimu wa maamkuzi na maagano katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.b",
+     "letter": "b",
+     "text": "kujadili maamkuzi na maagano yanayotumika katika miktadha mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.c",
+     "letter": "c",
+     "text": "kutumia aina mbalimbali za maamkuzi na maagano katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.d",
+     "letter": "d",
+     "text": "kuchangamkia maamkuzi na maagano katika mahusiano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA",
+   "number": "2.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Kina (Theme 2: Michezo)",
+   "sequence": 221,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kushiriki katika mjadala na wenzake kuhusu jinsi ya kutumia kamusi kutambua maana, tahajia, ngeli, aina za maneno na maana za maneno hayo,",
+    "kusikiliza msamiati wa suala lengwa (k.v. kambumbu, gori, hoki, Jugwe) ukisomwa na mwalimu, mgeni mwalikwa au katika kifaa cha kidijitali na kutambua tahajia yake kwa kutumia kamusi akishirikiana na wenzake,",
+    "kuchagua maneno kutoka kapu maneno, mti maneno, kadi maneno au kifaa cha kidijitali na kutambua ngeli, aina na maana za maneno hayo kwa kurejelea kamusi akishirikiana na wenzake,",
+    "kutumia kamusi kutafuta maana za maneno mbalimbali akishirikiana na wenzake,",
+    "kutumia mtandao kutafuta maana za maneno,",
+    "kutumia mtandao kusikiliza na kusoma maelezo kuhusu msamiati anaotafutia maana."
+   ],
+   "key_inquiry_questions": [
+    "Unatafutaje maana ya maneno kwenye kamusi?",
+    "Kwa nini tunatumia kamusi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kutumia kamusi.\nUjuzi wa kidijitali: mwanafunzi anapotumia mtandao kutafuta maana za maneno.\nHamu ya ujifunzaji: mwanafunzi anapoanza kutumia kamusi kutafuta maana za maneno.",
+   "values": "Uzalendo: mwanafunzi anapotumia msamiati ili kuweza kutumia lugha ya Kiswahili ipasavyo kama lugha ya taifa.\nUpendo: mwanafunzi anapotumia kamusi pamoja na wenzake.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anapofanya shughuli za ujifunzaji na wenzake.\nHaki za watoto: mwanafunzi anaposikiliza na kutumia msamiati wa suala lengwa katika kufahamu michezo tofauti inayomhusu.\nUsalama wa mtandaoni: mwanafunzi anapotumia mtandao kutafuta maana ya maneno.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa mapana anayojifunza katika somo la Kiswahili na ujifunzaji stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la michezo na somo la Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.a",
+     "letter": "a",
+     "text": "kutambua maana, tahajia, ngeli na aina za maneno kwa kutumia kamusi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.b",
+     "letter": "b",
+     "text": "kutumia kamusi ipasavyo kutafuta maana za maneno mageni yaliyo katika matini aliyosoma ili kukuza msamiati wake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.c",
+     "letter": "c",
+     "text": "kuchangamkia umuhimu wa kamusi katika kukuza msamiati na sarufi ya Kiswahili",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUANDI.T2_INSHA_ZA_MASIMULIZI",
+   "number": "2.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha za Masimulizi (Theme 2: Michezo)",
+   "sequence": 231,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kubainisha na kujadili vidokezo vifaavyo vya mada lengwa,",
+    "kujadili mada na muundo wa insha ya masimulizi na kukuza umilisi wa mawasiliano na ushirikiano,",
+    "kutambua insha ya masimulizi kwa kurejelea vielelezo vya insha zilizoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kuandika insha isiyopungua maneno 200 inayosimulia kisa cha tukio linalohusiana na michezo kwa kuzingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa lughaya kiubunifu. Katika kufanya hivi, atakuza ubunifu,",
+    "kukuza ujuzi wa kidijitali kwa kuandika insha ya masimulizi mtandaoni na kuisambaza kwa wenzake na mwalimu ili kuisoma na kuitathmini,",
+    "kuwawasilishia wenzake insha aliyoandika ili waitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Je, unazingatia nini ili kuandika insha nzuri ya masimulizi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala na wenzake.\nUjuzi wa kidijitali: wakati vifaa vya kidijitali vinapotumiwa kuandika insha mtandaoni na kurejelea kielelezo cha insha ya masimulizi.\nUbunifu: mwanafunzi anapoandika insha ya masimulizi.\nHamu ya ujifunzaji: mwanafunzi anapoyatafakari maswali dadisi yaliyopendekezwa na anapoimarisha ujuzi wake wa kutumia tarakilishi.",
+   "values": "Heshima : mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji\nMaadili mbalimbali kutegea tabia za wahusika wa insha.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anapofanya shughuli za ujifunzaji pamoja na wenzake.\nUsalama wa mtandaoni: mwanafunzi anapotumia kifaa cha kidijitali kuandika insha ya masimulizi na kuisambaza mtandaoni.\nAfya ya mtu binafsi: mwanafunzi anapoandika insha kuhusu suala lengwa.\nHaki ya watoto: mwanafunzi anapoandika insha ya masimulizi kuhusu michezo inayomhusu.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika insha za masimulizi anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la michezo na somo la Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUANDI.T2_INSHA_ZA_MASIMULIZI.a",
+     "letter": "a",
+     "text": "kubainisha vidokezo vya kutumia katika kuandika insha ya masimulizi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T2_INSHA_ZA_MASIMULIZI.b",
+     "letter": "b",
+     "text": "kuandika insha ya masimulizi kwa kuzingatia mtindo na muundo wake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T2_INSHA_ZA_MASIMULIZI.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi wa insha ya masimulizi ili kujenga ubunifu",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI",
+   "number": "2.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Vivumishi vya Idadi (Theme 2: Michezo)",
+   "sequence": 241,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua vivumishi vya idadi (k.v. moja, ishirini, chache, nyingi) katika tarakilishi, kapu la maneno au mti wa maneno,",
+    "kutambua vivumishi vya idadi katika sentensi,",
+    "kutambua vivumishi vya idadi katika kifungu,",
+    "kueleza maana ya vivumishi lengwa kwa kurejelea vitu vilivyo katika mazingira yao (k.m. Kitabu kimoja, kalamu nyingi),",
+    "kuandika sentensi akitumia vivumishi lengwa kwa usahihi akishirikiana na wenzake,",
+    "kujaza nafasi kwenye sentensi au vifungu vya maneno kwa kutumia vivumishi lengwa,",
+    "kutunga sentensi sahihi au vifungu vya maneno akitumia vivumishi lengwa."
+   ],
+   "key_inquiry_questions": [
+    "Ni maneno gani unayotumia kutajia idadi ya vitu?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapojadiliana na wenzake.\nUbunifu: mwanafunzi anapotunga sentensi akitumia vivumishi vya idadi.",
+   "values": "Heshima: mwanafunzi anaposikiliza wenzake wakitoa mchango wao darasani.\nUwajibikaji: mwanafunzi anapofuata maelekezo ya mwalimu na wenzake darasani.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhirirki katika shughuli za darasani.\nUsalama wa mtandaoni: mwanafunzi anapotambua vivumishi vya idadi kwenye kifaa cha kidijitali.\nElimu ya mazingira: mwanafunzi anapoeleza maana ya vivumishi vya idadi kwa kurejelea vitu vilivyo katika mazingira yake.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vivumishi anayojifunza katika somo la Kiswahili na ujifunzaji dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la michezo na somo la Creative Arts. .",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.a",
+     "letter": "a",
+     "text": "kueleza maana ya vivumishi vya idadi ili kuvitofautisha na aina nyingine za vivumishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.b",
+     "letter": "b",
+     "text": "kutambua vivumishi vya idadi katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.c",
+     "letter": "c",
+     "text": "kutumia vivumishi vya idadi katika sentensi au vifungu vya maneno kwa usahihi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.d",
+     "letter": "d",
+     "text": "kufurahia kutumia vivumishi vya idadi katika sentensi au vifungu vya maneno",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI",
+   "number": "2.4.2",
+   "strand": "Sarufi",
+   "sub_strand": "Vivumishi Viulizi (Theme 2: Michezo)",
+   "sequence": 242,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kueleza maana ya vivumishi viulizi,",
+    "kutambua vivumishi viulizi (k.v. –pi?gani?) katika tarakilishi, kapu la maneno au mti wa maneno,",
+    "kutambua vivumishi viulizi katika sentensi,",
+    "kutambua vivumishi viulizi katika kifungu kifupi,",
+    "kueleza maana ya vivumishi lengwa kwa kurejelea vitu vilivyo katika mazingira yake (k.m: Kitabu kipi? Nguo gani?),",
+    "kujaza nafasi kwenye sentensi au vifungu vya maneno kwa kutumia vivumishi lengwa,",
+    "kutunga sentensi sahihi au vifungu vya maneno akitumia vivumishi lengwa katika daftari lake au katika kifaa cha kidijitali,",
+    "kuwasilisha sentensi zake darasani ili mwalimu na wenzake wazisahihishe."
+   ],
+   "key_inquiry_questions": [
+    "Ni maneno gani unayotumia kuulizia swali?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapojadiliana na wenzake.\nUbunifu: mwanafunzi anapotunga sentensi akitumia vivumishi viulizi.\nHamu ya ujifunzaji: mwanafunzi anapotambua vivumishi viulizi katika matini mbalimbali.",
+   "values": "Heshima: mwanafunzi anaposikiliza wenzake wakitoa mchango wao darasani.\nUwajibikaji: mwanafunzi anapofuata maelekezo ya mwalimu na wenzake darasani.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhiriki katika shughuli za darasani.\nUsalama wa mtandaoni: mwanafunzi anapotambua vivumishi vya idadi kwenye kifaa cha kidijitali.\nElimu ya mazingira: mwanafunzi anapoeleza maana ya vivumishi vya idadi kwa kurejelea vitu vilivyo katika mazingira yake.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vivumishi anayojifunza katika somo la Kiswahili na ujifunzaji dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la michezo na somo la Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     36,
+     37
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.a",
+     "letter": "a",
+     "text": "kueleza maana ya vivumishi viulizi ili kuvitofautisha na aina nyingine za vivumishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.b",
+     "letter": "b",
+     "text": "kutambua vivumishi viulizi katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.c",
+     "letter": "c",
+     "text": "kutumia vivumishi viulizi katika sentensi au vifungu vya maneno kwa usahihi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.d",
+     "letter": "d",
+     "text": "kufurahia kutumia vivumishi viulizi katika sentensi au vifungu vya maneno",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_",
+   "number": "2.4.3",
+   "strand": "Sarufi",
+   "sub_strand": "Kivumishi Kirejeshi (amba-) (Theme 2: Michezo)",
+   "sequence": 243,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "(Vipindi 2)"
+   ],
+   "learning_experiences": [
+    "kueleza matumizi ya kivumishi kirejeshi amba- ipasavyo,",
+    "kutambua kivumishi kirejeshi amba-(k.v. ambaye, ambao, ambacho, ambalo n.k) katika tarakilishi, kapu maneno au mti maneno,",
+    "kutambua kivumishi kirejeshi amba-katika sentensi,",
+    "kutambua kivumishi kirejeshi amba-katika kifungu,",
+    "kueleza maana ya kivumishi lengwa kwa kurejelea vitu vilivyo katika mazingira yake (k.m: mgeni ambaye,mlango ambao, kiatu ambacho),",
+    "kuandika sentensi akitumia kivumishi lengwa kwa usahihi akishirikiana na wenzake,",
+    "kujaza mapengo kwenye sentensi au vifungu vya maneno kwa kutumia kivumishi lengwa,",
+    "kutunga sentensi sahihi au vifungu vya maneno akitumia kivumishi lengwa."
+   ],
+   "key_inquiry_questions": [
+    "Je, unakumbuka aina gani za vivumishi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapojadiliana na wenzake.\nUbunifu: mwanafunzi anapotunga sentensi akitumia kivumishi kirejeshi amba-.",
+   "values": "Heshima: mwanafunzi anaposikiliza wenzake wakitoa mchango wao darasani.\nUwajibikaji: mwanafunzi anapofuata maelekezo ya mwalimu na wenzake darasani.",
+   "pcis": "Mshikamano wa kijamii: anaposhiriki katika shughuli za ujifunzaji darasani.\nElimu ya mazingira: mwanafunzi anapoeleza maana ya kivumishi kirejeshi amba- kwa kurejelea vitu vilivyo katika mazingira yake.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vivumishi amba anayojifunza katika somo la Kiswahili na ujifunzaji dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la michezo na somo la Creative Arts.",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     38,
+     39
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.a",
+     "letter": "a",
+     "text": "kueleza matumizi ya kivumishi kirejeshi amba- ili kuyabainisha",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.b",
+     "letter": "b",
+     "text": "kutambua kivumishi kirejeshi amba- katika matini",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.c",
+     "letter": "c",
+     "text": "kutumia kivumishi kirejeshi amba- katika sentensi au vifungu vya maneno kwa usahihi",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.d",
+     "letter": "d",
+     "text": "kufurahia kutumia kivumishi kirejeshi amba- katika sentensi au vifungu vya maneno",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA",
+   "number": "3.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Matamshi Bora (Theme 3: Mahusiano)",
+   "sequence": 311,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "(Vipindi 2)"
+   ],
+   "learning_experiences": [
+    "kutambua vitendawili katika chati, ubao au katika vifaa vya kidijitali (k.m. Adui mpenzi (Moto); Wanangu watatu daima wako pamoja (mafiga); kuku wangu watagia mibani (Nanasi),",
+    "kusikiliza vitendawili vikitegwa na kuteguliwa kupitia vyombo vya kidijitali,",
+    "kushiriki katika kutega na kutegua vitendawili akiwa na wenzake,",
+    "kujadiliana na mzazi au mlezi wake kuhusu vitendawili vinavyotegwa katika jamii yao."
+   ],
+   "key_inquiry_questions": [
+    "Je, vitendawili vina umuhimu gani katika jamii?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika kutega na kutegua vitendawili kwa kushirikiana na wenzake.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapofikiria kuhusu majibu ya vitendawili.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kusikiliza vitendawili vikitegwa na kuteguliwa.\nKujiamini: mwanafunzi anapoweza kutega na kutegua vitendawili.",
+   "values": "Heshima: mwanafunzi anapoheshimu utegaji na uteguzi wa vitendawili wa wenzake.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.",
+   "pcis": "Mshikamano wa kijami: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya matumizi ya vitendawili na anayojifunza katika somo la Kiswahili na ujifunzaji stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mahusiano na yanayofundishwa katika somo la Social Studies.",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     40,
+     41
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.a",
+     "letter": "a",
+     "text": "kutambua vitendawili kwenye matini mbalimbali",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.b",
+     "letter": "b",
+     "text": "kutega na kutegua vitendawili ili kujenga matamshi bora",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.c",
+     "letter": "c",
+     "text": "kuchangamkia matumizi ya vitendawili katika mawasiliano",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA",
+   "number": "3.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Ufasaha (Theme 3: Mahusiano)",
+   "sequence": 321,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "(Vipindi 2)"
+   ],
+   "learning_experiences": [
+    "kujadiliana na wenzake vipengele vya kuzingatia katika kusoma makala kwa ufasaha,",
+    "kutazama vielelezo vya video vinavyoonyesha usomaji fasaha wa makala (k.v. hotuba, habari,) au na wenzake,",
+    "kusoma kifungu kuhusu suala lengwa la mahusiano kati ya watu katika jamii (k.v. sahibu /rafiki/ mwandani, mpenzi, mwana, ndugu, jirani, mwenza) katika matini andishi au ya kidijitali akizingatia matamshi bora,",
+    "kusoma kifungu cha hadithi kuhusu suala lengwa kwa kuzingatia kasi ifaayo (maneno sahihi yasiyopungua 80 kwa dakika) ili wenzake wamtolee maoni,",
+    "kusoma kifungu akizingatia sauti ifaayo (k.v. kiwango cha sauti na kiimbo),",
+    "kusoma kifungu kwa kuambatanisha ishara zifaazo panapofaa (k.v. ishara za uso na mikono zinazozingatia tamaduni),",
+    "kushirikiana na mzazi au mlezi kusoma makala akizingatia vipengele vya usomaji bora."
+   ],
+   "key_inquiry_questions": [
+    "Unaposoma kifungu ni mambo yapi unayozingatia ili kusoma ifaavyo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake na kujadiliana kuhusu vipengele vya kusoma kwa ufasaha.\nKujiamini: mwanafunzi anaposoma kifungu kwa ufasaha.\nUbunifu: mwanafunzi anapotumia ishara zifaazo wakati wa kusoma kifungu.\nHamu ya ujifunzaji: mwanafunzi anaposhiriki katika shughuli ya kusoma.",
+   "values": "Heshima: mwanafunzi anapothamini maoni ya wenzake katika shughuli za ujifunzaji wanapojadili vipengele vya usomaji bora.\nUpendo: mwanafunzi anapowapa wenzake nafasi ya kushiriki katika mjadala wakati wa shughuli ya ujifunzaji.\nUwajibikaji: mwanafunzi anapojitolea kuwasomea wenzake kifungu.\nUmoja: mwanafunzi anapotangamana na wenzake kujadili vipengele vya usomaji bora.",
+   "pcis": "Mshikamano wa kijamii na wa kitaifa: mwanafunzi anaposoma kifungu kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufasaha na anayojifunza katika somo la Kiswahili na ujifunzaji stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mahusiano na yanayofundishwa katika somo la Social Studies.",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     42,
+     43
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.a",
+     "letter": "a",
+     "text": "kutambua vipengele vya kuzingatia katika kusoma kwa ufasaha",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.b",
+     "letter": "b",
+     "text": "kusoma kifungu kwa kuzingatia matamshi bora",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.c",
+     "letter": "c",
+     "text": "kusoma kifungu kwa kasi ifaayo",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.d",
+     "letter": "d",
+     "text": "kusoma kifungu kwa kutumia sauti ipasavyo",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.e",
+     "letter": "e",
+     "text": "kusoma kifungu kwa kuambatanisha ishara zifaazo",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.f",
+     "letter": "f",
+     "text": "kuchangamkia kusoma kifungu kwa kuzingatia vipengele vya usomaji",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL",
+   "number": "3.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Kuandika kwa Tarakilishi (Theme 3: Mahusiano)",
+   "sequence": 331,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua aina mbalimbali za maandishi ya tarakilishi (k.v. chapa koza, italiki na maandishi yaliyopigiwa mstari) akishirikiana na wenzake.",
+    "kutambua ishara zinazotumiwa kutofautisha maandishi akishirikiana na wenzake,",
+    "kuandika kwa ubunifu kwenye tarakilishi kifungu cha aya moja ya maneno yasiyopungua 50 kuhusu mahusiano kati ya watu katika jamii,",
+    "kutumia kipanya kuchagua sehemu ya maandishi anayolenga kutofautisha,",
+    "kutumia kipanya kuteua ishara anayotaka kutumia kutofautisha maandishi kama vile ishara ya chapa koza, italiki na kupigia mistari,.",
+    "kuonyesha ujuzi wa kidijitali kwa kuwatumia wenzake kifungu alichoandika mtandaoni ili wamtolee maoni."
+   ],
+   "key_inquiry_questions": [
+    "Je, unajua maandishi ya aina gani yanayotumika katika tarakilishi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapotunga vifungu vya maneno na kuviandika kwenye tarakilishi.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kuandika.\nUbunifu: mwanafunzi anapotunga na kuandika kifungu.",
+   "values": "Heshima: mwanafunzi anapowapatia wenzake nafasi ya kutambua ishara zinazotumiwa kutofautisha maandishi kwenye tarakilishi katika kazi ya vikundi.\nUpendo: mwanafunzi anapowaelekeza wenzake katika matumizi ya tarakilishi.\nUwajibikaji: mwanafunzi anapotunza tarakilishi anapoitumia.",
+   "pcis": "Kujiendeleza kibinafsi: mwanafunzi anapofaulu kutumia vifaa vya kidijitali katika shughuli mbalimbali za ujifunzaji\nUsalama wa mtandaoni: mwanafunzi anapotumia ujuzi wa kidijitali kuwatumia wenzake kifungu alichoandika mtandaoni ili wamtolee maoni.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika kwa vifaa vya kidijitali na anayojifunza katika somo la Kiswahili na ujifunzaji stadi hiyo katika somo la English.\nShughuli za Ujifunzaji Zilizopendekezwa Swali Dadisi",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     44,
+     45,
+     46
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.a",
+     "letter": "a",
+     "text": "kutambua aina mbalimbali za maandishi ya tarakilishi na ishara zinazotumiwa katika maandishi ya tarakilishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.b",
+     "letter": "b",
+     "text": "kuandika kifungu kifupi kuhusu suala lengwa kwa kutumia maandishi mbalimbali yaliyotofautishwa katika tarakilishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.c",
+     "letter": "c",
+     "text": "ufurahia utumiaji wa tarakilishi katika kuandika",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS",
+   "number": "3.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Viwakilishi vya Nafsi (Theme 3: Mahusiano)",
+   "sequence": 341,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "(Vipindi 2)"
+   ],
+   "learning_experiences": [
+    "kujadili maana ya viwakilishi vya nafsi huku akitoa mifano,",
+    "kutambua viwakilishi vya nafsi (k.v. mimi, wewe, yeye, sisi, nyinyi, wao, n.k.) katika ubao, tarakilishi, kapu maneno au mti maneno,",
+    "kutambua viwakilishi vya nafsi katika sentensi,",
+    "kutambua viwakilishi vya nafsi katika kifungu kifupi,",
+    "kutumia viwakilishi vya nafsi kutunga sentensi kwenye daftari au tarakilishi,",
+    "kujaza nafasi kwa kutumia viwakilishi vya nafsi ili kukamilisha sentensi kwenye daftari au katika tarakilishi."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni maneno yapi yanayotumika kuwakilisha nafsi mbalimbali?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika majadiliano kuhusu matumizi ya viwakilishi vya nafsi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kutunga sentensi au kujaza mapengo.\nKujiamini: mwanafunzi anapofaulu kutumia viwakilishi vya nafsi.",
+   "values": "Heshima: wanafunzi wanapofanya kazi kwa zamu.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUwajibikaji: wanafunzi wanapokamilisha kazi yao.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji\nMahusiano ya kijamii: mwanafunzi anapotunga sentensi akitumia viwakilishi nafsi kwa kurejelea suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya viwakilishi vya nafsi na anayojifunza katika somo la Kiswahili na ujifunzaji dhana hiyo katika somo la English.",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     46,
+     47
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.a",
+     "letter": "a",
+     "text": "kueleza maana ya viwakilishi vya nafsi ili kuvitofautisha na viwakilishi vingine",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.b",
+     "letter": "b",
+     "text": "kutambua viwakilishi vya nafsi katika matini mbalimbali",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.c",
+     "letter": "c",
+     "text": "kutumia viwakilishi vya nafsi kwa usahihi katika sentensi",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya viwakilishi vya nafsi katika mawasiliano",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI",
+   "number": "3.4.2",
+   "strand": "Sarufi",
+   "sub_strand": "Viwakilishi Viashiria (Theme 3: Mahusiano)",
+   "sequence": 342,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kujadili na wenzake maana ya viwakilishi viashiria huku akitoa mifano mwafaka,",
+    "kutambua viwakilishi viashiria (k.v. hapa/hapo/pale, huku/huko/kule) katika ubao, kifaa cha kidijitali, chati, mti wa maneno au kadi za maneno,",
+    "kutambua viwakilishi viashiria katika sentensi,",
+    "kutambua viwakilishi viashiria katika kifungu kifupi,",
+    "kutunga sentensi akitumia viwakilishi viashiria,",
+    "kujaza nafasi kwa kutumia viwakilishi viashiria ili kukamilisha sentensi kwenye daftari au katika tarakilishi."
+   ],
+   "key_inquiry_questions": [
+    "Je, unajua maneno yapi yanayotumika kuonyesha umbali wa kitu?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anashiriki katika majadiliano kuhusu matumizi ya viwakilishi viashiria.\nHamu ya ujifunzaji: mwanafunzi anapotafuta jibu la Swali Dadisi Lililopendekezwa.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kutunga sentensi au kujaza mapengo.\nKujiamini: mwanafunzi anapofaulu kutumia viwakilishi viashiria katika sentensi.",
+   "values": "Heshima: wanafunzi wanapofanya kazi kwa zamu.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUwajibikaji: wanafunzi wanapokamilisha kazi yao.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhiriki katika shughuli za ujifunzaji na wenzake.\nMahusiano ya kijamii: mwanafunzi anapotunga sentensi akitumia viwakilishi viashiria kwa kurejelea suala lengwa",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya viashiria na anayojifunza katika somo la Kiswahili na ujifunzaji dhana hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     48,
+     49
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.a",
+     "letter": "a",
+     "text": "kueleza maana ya viwakilishi viashiria ili kuvibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.b",
+     "letter": "b",
+     "text": "kutambua viwakilishi viashiria katika matini mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.c",
+     "letter": "c",
+     "text": "kutumia viwakilishi viashiria kwa usahihi katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya viwakilishi viashiria katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD",
+   "number": "3.4.3",
+   "strand": "Sarufi",
+   "sub_strand": "Viwakilishi vya Idadi (Theme 3: Mahusiano)",
+   "sequence": 343,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kujadili na wenzake maana ya viwakilishi vya idadi huku akitoa mifano mwafaka,",
+    "kutambua viwakilishi vya idadi (k.v. chache, nyingi, tatu, kumi n.k.) katika ubao, kadi za maneno, mti wa maneno, chati au kifaa cha kidijitali,",
+    "kutambua viwakilishi vya idadi katika sentensi,",
+    "kutambua viwakilishi vya idadi katika kifungu kifupi,",
+    "kutumia viwakilishi vya idadi kutunga sentensi daftarini au katika kifaa cha kidijitali,",
+    "kujaza nafasi kwa kutumia viwakilishi viashiria ili kukamilisha sentensi kwenye daftari au katika kifaa cha kidijitali."
+   ],
+   "key_inquiry_questions": [
+    "Je, unajua maneno yapi yanayotumika kuonyesha idadi ya vitu?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anashiriki katika majadiliano kuhusu matumizi ya viwakilishi vya idadi.\nHamu ya ujifunzaji: mwanafunzi anapojibu swali dadisi lililopendekezwa.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kutunga sentensi au kujazia mapengo\nKujiamini: mwanafunzi anapofaulu kutumia viwakilishi vya idadi.",
+   "values": "Heshima: mwanafunzi anapofanya kazi kwa zamu.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUwajibikaji: mwanafunzi anapokamilisha shughuli za ujifunzaji.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhiriki katika shughuli za ujifunzaji na wenzake.\nMahusiano ya kijamii: mwanafunzi anapotunga sentensi akitumia viwakilishi vya idadi kwa kurejelea suala lengwa",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya viwakilishi vya nafsi na anayojifunza katika somo la Kiswahili na ujifunzaji dhana hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     50,
+     51
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.a",
+     "letter": "a",
+     "text": "kueleza maana ya viwakilishi vya idadi ili kuvitofautisha na viwakilishi vingine",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.b",
+     "letter": "b",
+     "text": "kutambua viwakilishi vya idadi katika matini mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.c",
+     "letter": "c",
+     "text": "kutumia viwakilishi vya idadi kwa usahihi katika sentensi ili kuboresha mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya viwakilishi vya idadi katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T3_UAKIFISHI",
+   "number": "3.4.4",
+   "strand": "Sarufi",
+   "sub_strand": "Uakifishi (Theme 3: Mahusiano)",
+   "sequence": 344,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua alama ya hisi, ritifaa na koloni katika maandishi,",
+    "kuakifisha sentensi akitumia alama ya hisi, ritifaa na koloni,",
+    "kuakifisha kifungu kifupi akitumia alama ya hisi, ritifaa na koloni,",
+    "kuandika sentensi akitumia alama ya hisi, ritifaa na koloni ifaavyo katika daftari lake,",
+    "kuandika sentensi zenye alama ya hisi, ritifaa na koloni akitumia kifaa cha kidijitali."
+   ],
+   "key_inquiry_questions": [
+    "Kwa nini alama za kuakifisha hutumiwa katika maandishi?",
+    "Ni alama gani za uakifishi unazoweza kuzitumia kwa usahihi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: wanafunzi wanaposhiriki mijadala kuhusu uakifishi.\nUbunifu: wanapotunga sentensi wakitumia viakifishi.\nKujiamini: mwanafunzi anapoweza kuakifisha sentensi au vifungu ifaavyo.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nHeshima: mwanafunzi anapoheshimu mchango wa wenzake.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji\nMahusiano ya kijamii: mwanafunzi anapotunga sentensi akitumia alama ya hisi, ritifaa na koloni akirejelea suala lengwa.\nMawasiliano faafu: mwanafunzi anapotumia alama ya hisi, ritifaa na koloni katika maandishi ili kuwasiliana ipasavyo.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya uakifishaji na anayojifunza katika somo la Kiswahili na ujifunzaji dhana hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T3_UAKIFISHI.a",
+     "letter": "a",
+     "text": "kutambua alama ya hisi, ritifaa na koloni katika maandishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_UAKIFISHI.b",
+     "letter": "b",
+     "text": "kutumia alama ya hisi, ritifaa na koloni ifaavyo katika maandishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_UAKIFISHI.c",
+     "letter": "c",
+     "text": "kufurahia matumizi ya alama ya hisi, ritifaa na koloni katika maandishi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE",
+   "number": "4.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Heshima, Adabu na Vyeo (Theme 4: Misimu)",
+   "sequence": 411,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua maneno ya heshima (k.v. shehe, kasisi, padre, mwadhini, mheshimiwa, rais, mtawa) kwenye ubao, mti maneno, tarakilishi au kapu maneno,",
+    "kueleza maana ya maneno lengwa kama yanavyotumiwa katika mahusiano ya kila siku kati ya watu,",
+    "kutunga sentensi kwa kutumia maneno lengwa kwa usahihi,",
+    "kutazama maigizo ya watu wakitumia maneno ya heshima kwenye tarakilishi na video,",
+    "kuigiza mazungumzo mafupi akiwa na wenzake huku akitumia msamiati wa heshima."
+   ],
+   "key_inquiry_questions": [
+    "Ni maneno yapi ya heshima unayoyajua na unayoweza kutumia kurejelea watu tofauti?",
+    "Kutumia maneno ya heshima kuna umuhimu gani katika jamii?"
+   ],
+   "core_competences": "Ujuzi wa kidijitali: mwanafunzi anapotumia tarakilishi, video na projekta kutazama maigizo mafupi.\nMawasiliano na ushirikiano: mwanafunzi anaposhiriki katika maigizo na mijadala.\nKujiamini: mwanafunzi anapoigiza ipasavyo mazungumzo akitumia msamiati wa heshima.",
+   "values": "Heshima: mwanafunzi anapotumia maneno ya udugu. Pia anapoheshimu nafasi za wenzake katika maigizo.\nUpendo: mwanafunzi anapotumia maneno ya udugu kwa wenzake na kwa wakubwa wake.\nUwajibikaji: mwanafunzi anapotumia maneno ya heshima kuwarejelea watu maalum.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhiriki katika maigizo mafupi akiwa na wenzake.\nMasuala ya kiuana na jinsia: mwanafunzi anapotumia maneno yanayorejelea uana na jinsia mahususi katika mawasiliano.\nElimu ya mazingira na tabia nchi: mwanafunzi anapotunga sentensi kwa kuejelea suala lengwa.\nKujiendeleza kibinafsi: mwanafunzi anapotambua maneno ya heshima yanayotumika katika jamii yake kutoka kwa mzazi au mlezi.",
+   "links": "Mwanafunzi anaweza kuhusisha matumizi ya maneno ya heshima, adabu na vyeo na anayojifunza katika somo la Kiswahili na ujifunzaji stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la misimu na yanayofundishwa katika somo la Enviromental Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     53,
+     54
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.a",
+     "letter": "a",
+     "text": "kutambua maneno ya heshima yanayotumiwa katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.b",
+     "letter": "b",
+     "text": "kuonyesha uelewa wa maneno ya heshima kwa kuyatumia kwa usahihi katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.c",
+     "letter": "c",
+     "text": "kuthamini kutumia maneno ya heshima katika mawasiliano ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA",
+   "number": "4.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Mapana (Theme 4: Misimu)",
+   "sequence": 421,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kujadili na wenzake kuhusu hatua za kiusalama na maadili anayofaa kuzingatia anapotafuta na kusoma matini ya kidijitali,",
+    "kujadili na wenzake kuhusu utunzaji wa vifaa vya kidijitali anavyotumia katika usomaji,",
+    "kuzingatia hatua za kiusalama katika kutumia vifaa vya kidijitali (k.v. kufungua mitandao ifaayo),",
+    "kutambua jina la faili lengwa kwenye tarakilishi na kufanya mazoezi ya kufungua na kufunga faili,",
+    "kutambua mitandao salama yenye matini inayoafiki kiwango na mahitaji yake,",
+    "kutambua umuhimu wa kutoa habari kwa mwalimu, mzazi au mlezi wake endapo atapata ujumbe kutoka kwa watu asiowajua mtandaoni na kutowasiliana nao,",
+    "kusoma matini yanayojumuisha msamiati wa misimu kwa kutumia vifaa vya kidijitali,",
+    "kutafuta maana za maneno mapyakwenye kamusi mtandaoni,",
+    "kusikiliza matamshi na maelezo kuhusu anachokisoma mtandaoni panapowezekana,",
+    "kutoa habari kwa muhtasari kuhusu matini aliyosoma na kujibu maswali katika maandishi au mazungumzo na wenzake."
+   ],
+   "key_inquiry_questions": [
+    "Kusoma matini ya kidijitali kuna manufaa gani?"
+   ],
+   "core_competences": "Ujuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kiteknolojia katika kutafuta, kusakura na kusoma.\nHamu ya ujifunzaji: mwanafunzi atapata hamu ya kutafuta matini za kusoma kwenye tarakilishi na mitandaoni.",
+   "values": "Uwajibikaji: mwanafunzi anapotunzaji vifaa vya kidijitali na kuzingatia mitandao salama.\nUmoja: mwanafunzi anapojumuika na wenzake katika shughuli mbalimbali za ujifunzaji.\nHeshima: mwanafunzi anapowaruhusu wenzake kutoa maoni na kuheshimu maoni wanayotoa.",
+   "pcis": "Usalama wa mitandaoni: mwanafunzi anapozingatia hatua za kiusalama katika kutumia vifaa vya kidijitali.\nKujiendeleza kibinafsi: mwanafunzi anapotafuta maana za maneno mapya kwenye kamusi mtandaoni.\nElimu ya mazingira na tabia nchi: mwanafunzi anaposoma matini kuhusu misimu.\nUdhibiti wa uwezo wa kutokea maafa: mwanafunzi anaposoma vifungu kuhusu mazingira na tabia nchi na namna yanavyoweza kusababisha maafa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa mapana na anayojifunza katika somo la Kiswahili na ujifunzaji stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la misimu na yanayofundishwa katika somo la Enviromental Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     55,
+     56
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.a",
+     "letter": "a",
+     "text": "kutambua hatua za kiusalama katika matumiziya vifaa vya kidijitali anaposoma",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.b",
+     "letter": "b",
+     "text": "kusakura matini kwenye tovuti salama ili kupata vifungu vya kusoma vyenye mada lengwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.c",
+     "letter": "c",
+     "text": "kutumia vifaa ya kidijitali kwa urahisi ili kupata matini yanayolengwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.d",
+     "letter": "d",
+     "text": "kuchangamkia matumizi ya vifaa vya kidijitali katika kutafuta na kusoma ujumbe ili kuimarisha maarifa yake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUANDI.T4_BARUA_RASMI",
+   "number": "4.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Barua Rasmi (Theme 4: Misimu)",
+   "sequence": 431,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua barua rasmi kwenye kielelezo cha barua rasmi iliyochapishwa au kwenye tarakilishi,",
+    "kujadili vipengele vya barua rasmi (k.v. anwani ya mwandishi [jina, sanduku la posta, tarehe], anwani ya mpokeaji [cheo, sanduku la posta], mtajo, mada ya barua, mwili, hitimisho, sahihi na jina la mwandishi),",
+    "kuandika barua rasmi kwa mwalimu akiomba kujiunga na klabu shuleni(k.v. vile skauti, mazingira,kilimo na muziki), akishirikiana na wenzake darasani, kwa hati za mkono au kwa kutumia kifaa cha kidijitali akizingatia muundowa uandishi wa barua rasmi,",
+    "kuandika barua rasmi katika daftariakiwa peke yake,",
+    "kujadiliana na wenzake kuhusu umuhimu wa barua rasmi katikamawasiliano."
+   ],
+   "key_inquiry_questions": [
+    "Barua rasmi ni barua ya aina gani",
+    "Unazingatia nini unapoandika baruarasmi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kujadili barua rasmi.\nUbunifu: mwanafunzi anapotunga na kuandika barua rasmi.\nUjuzi wa kidijitali: mwanafunzi anapoandika barua kwa kutumia kifaa cha kidijitali.\nUwazaji kina na utatuzi wa matatizo: anapowaza kuhusu kanuni za barua rasmi na kupanga aya.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji kama kujadili vipengele vya barua rasmi.\nHeshima: mwanafunzi anapozingatia maoni ya wenzake wakati wa mijadala.\nUwajibikaji: mwanafunzi anapoandika barua rasmi kama anavyoagizwa.",
+   "pcis": "Mawasiliano faafu: mwanafunzi anapotumia barua rasmi kuwasiliana.\nElimu ya mazingira na tabia nchi: mwanafunzi anapoandika insha ya barua rasmi kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anapotekeleza shughuli za ujifunzaji na wenzake darasani.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika barua rasmi na anayojifunza katika somo la Kiswahili na ujifunzaji stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la misimu na yanayofundishwa katika somo la Enviromental Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     57,
+     58
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.a",
+     "letter": "a",
+     "text": "kutambua barua rasmi kwa kuzingatia muundo wake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.b",
+     "letter": "b",
+     "text": "kutambua vipengele vya barua rasmi ili kuvizingatia katika uandishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.c",
+     "letter": "c",
+     "text": "kuandika barua rasmi kwa kufuata kanuni zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.d",
+     "letter": "d",
+     "text": "kuchangamkia umuhimu wa barua rasmi katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA",
+   "number": "4.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Ngeli ya YA-YA (Theme 4: Misimu)",
+   "sequence": 441,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua viambishi vya ngeli ya YA-YA katika sentensi kwa kuvipigia mstari au kuvikoleza rangi katika tarakilishi,",
+    "kutambua nomino katika ngeli ya YA-YA kutokana na upatanisho wa kisarufi kwenye sentensi (k.m. maji, maziwa, mate, marashi na maskani),",
+    "kuandika nomino katika ngeli ya YA-YA katika umoja na wingi akishirikiana na wenzake,",
+    "kutunga sentensi sahihi kwa kutumia nomino za ngeli ya YA-YA kwa kushirikiana na wenzake."
+   ],
+   "key_inquiry_questions": [
+    "Je, unajua majina gani ya vitu visivyohesabika?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anashirikiana na wenzake.\nKujiamini: mwanafunzi anapotumia nomino za ngeli ya YA-YA ipasavyo.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kutambua nomino na ngeli zake.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali anavyotumia.\nUmoja: mwanafunzi anapofanya kazi na wenzake kwa kushirikiana na wenzake",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji.\nMawasiliano faafu: mwanafunzi anapowasiliana kwa kutumia nomino za ngeli ya YA- YA katika umoja na wingi ifaavyo.\nElimu ya mazingira na tabia nchi: mwanafunzi anapotunga sentensi kwa kutumia nomino za ngeli ya YA- YA katika umoja na wingi ifaavyo zinazohusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya sarufi na anayojifunza katika somo la Kiswahili na ujifunzaji stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la misimu na yanayofundishwa katika somo la Enviromental Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     59,
+     60
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya upatanisho wa kisarufi vya ngeli ya YA – YA katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.b",
+     "letter": "b",
+     "text": "kutambua nomino katika ngeli ya YA-YA kutokana na upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.c",
+     "letter": "c",
+     "text": "kutumia nomino za ngeli ya YA –YA katika umoja na wingi akizingatia upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.d",
+     "letter": "d",
+     "text": "kuchangamkia kutumia nomino za ngeli ya YA-YA katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS",
+   "number": "5.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Methali Kufikia mwisho wa (Theme 5: Mshikamano wa kitaifa)",
+   "sequence": 511,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua methali zinazohusu umoja na ushirikiano (kama vile; umoja ni nguvu utengano ni udhaifu, jifya moja haliinjikichungu, kidole kimoja hakivunji chawa, kinga na kinga ndio moto huwaka n.k.) katika chati, ubao na vyombo vyakidijitali,",
+    "kutoa mifano ya methali zinazohusu umoja na ushirikiano katika jamii,",
+    "kusikiliza methali za umoja na ushirikiano zikitumiwa kupitia vyombo vya kidijitali,",
+    "kujadili na wenzake maana na matumizi ya methali mbalimbali zinazohusu umoja na ushirikiano,",
+    "kulinganisha methali na maana yake,",
+    "kukamilisha methali mbalimbali zinazohusu umoja na ushirikiano katika mazungumzo akishirikiana na wenzake, kwenye daftari au kwa kutumia vyombo vya kidijitali,",
+    "kusakura mtandaoni kwa kusaidiwa na mzazi au mlezi wake ili kupata methali zaidi zinazohusu umoja na ushirikiano na matumizi ya methali hizo,",
+    "kujadili na wenzake kuhusu methali alizozipata mtandaoni ili wajengane kimaarifa."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni nini umuhimu wa methali katika jamii?",
+    "Ni methali gani unazozijua kuhusu umoja na ushirikiano?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika kujadili methali kwa kushirikiana na wenzake.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapofikiria kuhusu matumizi ya methali.\nUbunifu: mwanafunzi anapotumia methali kujieleza.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kutambua methali.",
+   "values": "Heshima: mwanafunzi anachangamkia maoni ya wenzake.\nUmoja: wanafunzi wanapofanya kazi katika vikundi.",
+   "pcis": "Mshikamano wa kijamii na utaifa: mwanafunzi anapokamilisha methali mbalimbali zinazohusu umoja na ushirikiano katika mazungumzo akishirikiana na wenzake.\nUtangamano wa kijamii: mwanafunzi anaposhiriki katika shughuli za ujifunzaji na wenzake.\nUsalama mtandaoni: mwanafunzi anaposikiliza methali za umoja na ushirikiano zikitumiwa kupitia vyombo vya kidijitali",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya matumizi ya methali na anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mshikamano wa kitaifa na yanayofundishwa katika somo la Socia Studies. Shughuli za Ujifunzaji Zilizopendekezwa Swali Dadisi",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     61,
+     62,
+     63
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.a",
+     "letter": "a",
+     "text": "kutambua methali zinazohusu umoja na ushirikiano katika matini",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.b",
+     "letter": "b",
+     "text": "kueleza maana na matumizi ya methali mbalimbali zinazohusu umoja naushirikiano katika jamii",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.c",
+     "letter": "c",
+     "text": "kutumia methali zinazohusu umoja na ushirikiano katika mawasiliano",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.d",
+     "letter": "d",
+     "text": "kuchangamkia matumizi ya methalizinazohimiza umoja na ushirikiano",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU",
+   "number": "5.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Ufahamu (Theme 5: Mshikamano wa kitaifa)",
+   "sequence": 521,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kujadili ukwapi na utao katika shairi,",
+    "kutambua ukwapi na utao katika shairi kwenye ubao, chati, vitabu au vyombo vya kidijitali,",
+    "kusoma shairi akizingatia ukwapi na utao,",
+    "kujirekodi akisoma aina za mashairi lengwa akitumia vyombo vya kidijitali ili kuweza kujirekebisha anakokosea,",
+    "kutofautisha mashairi ya tathnia, tathlitha na tarbia kwenye ubao, chati, vitabu au vifaa vya kidijitali,",
+    "kutambua mashairi ya tathnia, tathlitha na tarbia katika matini mbalimbali,",
+    "kusoma mashairi ya tathnia, tathlitha na tarbia kwa mahadhi mbalimbali,",
+    "kujadili ujumbe kwenye shairi waliyoyasoma,",
+    "kujibu maswali yanayotokana na mashairi aliyoyasoma,",
+    "kuandika ujumbe alioupata katika mojawapo ya mashairi aliyoyasoma na kuujadili na wenzake darasani."
+   ],
+   "key_inquiry_questions": [
+    "Je, kuna tofauti gani kati ya mashairi mbalimbali?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kujadili aina lengwa za mashairi.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapotafakari kuhusu ujumbe wa mashairi aliyosoma mtandaoni.\nKujiamini: mwanafunzi anapoweza kusoma mashairi kwa mahadhi yafaayo. Pia anapoweza kufafanua ipasavyo ujumbe wa shairi alilolisoma.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kutambua aina za shairi.",
+   "values": "Heshima: mwanafunzi anachangamkia maoni ya wenzake.\nUmoja: wanafunzi wanapofanya kazi katika vikundi.",
+   "pcis": "Mshikamano wa kijamii na utaifa: mwanafunzi anaposhiriki katika shughuli za ujifunzaji na wenzake.\nUsalama mtandaoni: mwanafunzi anaposakura mtandaoni ili kusoma mashairi ya tathnia, tathlitha na tarbia katika matini mbalimbali akisaidiana na mzazi au mlezi.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufahamu na anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mshikamano wa kitaifa na yanayofundishwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     63,
+     64
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a",
+     "letter": "a",
+     "text": "kujadili dhana za ukwapi na utao katika shairi ili kuzibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b",
+     "letter": "b",
+     "text": "kutambua mashairi ya tathnia, tathlitha na tarbia kwa kuzingatia muundo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.c",
+     "letter": "c",
+     "text": "kusoma mashairi ya tathnia, tathlitha na tarbia ili kupata ujumbe",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.d",
+     "letter": "d",
+     "text": "kuchangamkia usomaji wa mashairi ili kuyathamini",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO",
+   "number": "5.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha za Maelezo (Theme 5: Mshikamano wa kitaifa)",
+   "sequence": 531,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua vifungu vya maelezo vilivyoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kujadili vidokezo vya insha ya maelezo atakavyovitumia katika kuandika insha yake,",
+    "kuonyesha umilisi wa ubunifu kwa kuandika insha ya maelezo (k.v. Siku ya sherehe ya kitaifa, Siku ya michezo ya kitaifa, Nchi yetu, n.k) isiyopungua maneno 200 akizingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na lugha ya kiubunifu inayojumuisha methali na nahau alizojifunza awali ili kutoa picha dhahiri kuhusu anachokielezea,",
+    "kukuza umilisi wa ujuzi wa kidijitali kwa kuandika insha ya maelezo na kuisambaza kwa wenzake na mwalimu ili kuisoma na kuitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Insha ya maelezo ina sifa gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: wanafunzi wanaposhiriki katika mijadala na wenzake.\nUjuzi wa kidijitali: wakati vifaa vya kiteknolojia vinapotumiwa kuandika na kurejelea kielelezo cha insha ya maelezo\nUbunifu: mwanafunzi anapoandika insha ya maelezo.\nHamu ya ujifunzaji: mwanafunzi anapoyatafakari maswali dadisi yaliyopendekezwa na anapoimarisha ujuzi wake wa kutumia tarakilishi.",
+   "values": "Heshima: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji.\nUwajibikaji: mwanafunzi anapowajibika kuandika insha ifaavyo.\nUmoja: mwanafunzi anapojadiliana na wenzake.",
+   "pcis": "Mshikamano wa kijamii na utaifa: mwanafunzi anapoandika insha ya maelezo kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kujadili vigezo na kuandika insha ya maelezo kuhusu suala lengwa na kutekeleza shughuli zingine za ujifunzaji.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika insha za maelezo na anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mshikamano wa kitaifa na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     65,
+     66
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.a",
+     "letter": "a",
+     "text": "kutambua insha za maelezo katika matini mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.b",
+     "letter": "b",
+     "text": "kuandika insha ya maelezo kwa kufuata kanuni zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi bora maishani",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T5_NGELI_YA_U_U",
+   "number": "5.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Ngeli ya U-U (Theme 5: Mshikamano wa kitaifa)",
+   "sequence": 541,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua viambishi vya ngeli ya U-U katika sentensi kwa kuvipigia mstari au kuvikoleza rangi katika tarakilishi,",
+    "kutambua nomino katika ngeli ya U-U kutokana na upatanisho wa kisarufi kwenye sentensi (k.m: uji, ugali, uhuru, ujanja, urafiki),",
+    "kuandika nomino katika ngeli ya U-U katika umoja na wingi akishirikiana na wenzake,",
+    "kutunga sentensi sahihi kwa kutumia nomino za ngeli ya U-U kwa kushirikiana na wenzake."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni nomino zipi hupatikana katika ngeli ya U-U?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anashirikiana na wenzake.\nKujiamini: mwanafunzi anapotambua nomino za ngeli ya U-U ipasavyo.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kutambua nomino za ngeli ya U-U.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali anavyotumia.\nUzalendo: mwanafunzi anapofanya kazi na wenzake kwa kushirikiana na wenzake.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutekeleza shughuli mbalimbali za ujifunzaji.\nMshikamano wa kijamii na utaifa: mwanafunzi anapoandika mafungu ya maneno yenye nomino za ngeli ya U-U katika umoja na wingi kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya nomino na anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mshikamano wa kitaifa na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     67,
+     68
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya upatanisho wa kisarufi vya ngeli ya U - U katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.b",
+     "letter": "b",
+     "text": "kutambua nomino katika ngeli ya U - U kutokana na upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.c",
+     "letter": "c",
+     "text": "kutumia nomino za ngeli ya U - U katika umoja na wingi akizingatia upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.d",
+     "letter": "d",
+     "text": "kuchangamkia kutumia nomino za ngeli ya U-U katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA",
+   "number": "6.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Matamshi Bora (Theme 6: Usawa wa kijinsia)",
+   "sequence": 611,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusikiliza shairi kuhusu suala lengwa na lenye maneno yenye sauti lengwa (d/nd, ch/sh, j/nj na g/ng) likikaririwa na mwalimu, mgeni mwalikwa au kifaa cha kidijitali,",
+    "kukariri akishirikiana na wenzake, shairi kuhusu suala lengwa kwa kuzingatia matamshi ya maneno yenye sauti lengwa na mahadhi mbalimbali,",
+    "kutamka maneno yaliyoundwa kutokana na sauti d/nd, ch/sh, j/nj na g/ng katika shairi,",
+    "kutambua msamiati uliotumika katika ushairi kuhusu usawa wa kijinsia (k.m. jinsia, ubaguzi, mtoto wa kiume, mtoto wa kike, usawa, heshima na uwajibikaji),",
+    "kutumia msamiati uliotumika katika shairi kutunga sentensi sahihi akishirikiana na wenzake,",
+    "kusakura mtandaoni, akishirikiana na wenzake, ili kukariri au kuimba shairi kwa mahadhi mbalimbali,",
+    "kujadili ujumbe katika shairi waliloliimba,",
+    "kujibu maswali yanayotokana na shairi alilosikiliza, aliloimba au kukariri,",
+    "kusoma mashairi katika vitabu na mtandaoni ili kukuza hamu ya ujifunzaji."
+   ],
+   "key_inquiry_questions": [
+    "Kwa nini ni muhimu kuwa na matamshi bora?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anashirikiana na wenzake.\nUjuzi wa kidijitali: mwanafunzi anasikiliza shairi lililorekodiwa likikaririwa. Pia, anaposakura mtandaoni kupata mashairi zaidi na kuyakariri.\nKujiamini: mwanafunzi anapokariri shairi kwa kuzingatia matamshi bora na mahadhi mbalimbali.\nHamu ya ujifunzaji: mwanafunzi anapoendelea kusoma mashairi katika vitabu na mtandaoni.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali anavyotumia.\nUzalendo: mwanafunzi anapofanya kazi na wenzake kwa kushirikiana.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutekeleza shughuli mbalimbali za ujifunzaji.\nUsawa wa kijinsia: mwanafunzi anapotambua msamiati uliotumika katika ushairi kuhusu usawa wa kijinsia.\nUsalama wa mtandaoni: mwanafunzi anaposakura mtandaoni, akishirikiana na wenzake, ili kukariri au kuimba shairi kwa mahadhi mbalimbali.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kukariri mashairi na anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la usawa wa kijinsia na yanayofundishwa katika somo la Socia Studie. Mapendekezo ya Shughuli za Ujifunzaji Maswali Dadisi",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     69,
+     70,
+     71
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.a",
+     "letter": "a",
+     "text": "kukariri au kuimba shairi kuhusu suala lengwa kwa kuzingatia, matamshi ya maneno yenye sauti lengwa na mahadhi mbalimbali ili kukuza matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.b",
+     "letter": "b",
+     "text": "kueleza maana ya maneno yenye sauti lengwa yaliyotumika katika shairi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.c",
+     "letter": "c",
+     "text": "kutumia kwa usahihi msamiati uliotumiwa katika shairi ili kuboresha mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.d",
+     "letter": "d",
+     "text": "kuonyesha ufahamu wa ujumbe katika shairi kwa kujibu maswali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.e",
+     "letter": "e",
+     "text": "kuchangamkia mahadhi mbalimbali katika ushairi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA",
+   "number": "6.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Kina (Theme 6: Usawa wa kijinsia)",
+   "sequence": 621,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kueleza umuhimu wa kusoma kwa kina, kujadili mambo ya kuzingatia anapochagua matini za kusoma katika maktaba (k.v. makala yanayoambatana na umri, ukubwa wa maandishi, ujumbe anaotaka kuupata),",
+    "kuchagua makala mbalimbali kuhusu suala lengwa katika maktaba (makala yaliyochapishwa au katika kifaa cha kidijitali),",
+    "kusoma makala ya aina mbalimbali aliyoyachagua,",
+    "kujadiliana kwa heshima na wenzake kuhusu ujumbe alioupata katika makala aliyoyasoma kutumia kamusi kupata maana za msamiati uliotumika katika makala."
+   ],
+   "key_inquiry_questions": [
+    "Je, kwa nini ni muhimu kuwa na mazoea ya kusoma makala au hadithi?",
+    "Kusoma makala kuhusu usawa wa kijinsia kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapojadiliana na wenzake.\nUjuzi wa kidijitali: mwanafunzi anaposoma makala katika vifaa vya kidijitali.\nKujiamini: mwanafunzi anaposoma makala mbalimbali na kuweza kueleza ujumbe uliomo.",
+   "values": "Heshima: mwanafunzi anapojadiliana na wenzake kuhusu ujumbe uliokatika makala.\nUmoja: mwanafunzi anaposhirikiana na wenzake.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutekeleza shughuli mbalimbali za ujifunzaji\nUsawa wa kijinsia: mwanafunzi anapochagua makala mbalimbali kuhusu suala lengwa katika maktaba (makala yaliyochapishwa au katika kifaa cha kidijitali).\nMahusiano ya kijamii: mwanafunzi anapojadiliana kwa heshima na wenzake kuhusu ujumbe alioupata katika makala aliyoyasoma.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa mapana na anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la usawa wa kijinsia na yanayofundishwa katika somo la Socia Studie.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     71,
+     72
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.a",
+     "letter": "a",
+     "text": "kujadili mambo ya kuzingatia katika kuchagua makala ya kusoma katika maktaba",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.b",
+     "letter": "b",
+     "text": "kutambua makala atakayosoma katika maktaba",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.c",
+     "letter": "c",
+     "text": "kusoma makala mbalimbali ili kupata ujumbe",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.d",
+     "letter": "d",
+     "text": "kufurahia kusoma makala mbalimbali ilikujenga ufasaha wa lugha",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU",
+   "number": "6.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha ya Wasifu (Theme 6: Usawa wa kijinsia)",
+   "sequence": 631,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kukuza hamu ya ujifunzaji kwa kutazama nakala za insha ya wasifu kwenye chapa au kwenyetarakilishi,",
+    "kutambua vipengele muhimu vya kimuundo (k.v. kichwa, mwili, hitimisho) katika uandishi wa insha ya wasifu,",
+    "kukuza umilisi wa mawasiliano na ushirikiano kwa kujadili na wenzake kuhusu mada mbalimbalizinazoweza kutungiwa insha za wasifu,",
+    "kuandika kwenye kitabu chake au kwenye tarakilishi insha ya wasifu isiyopungua maneno 200 kwa kuzingatia msamiati na ujumbe unaohusu suala lengwa. Pia azingatie ujumbe, tahajia, anwani,muundo na mtindo,",
+    "kuwawasilishia wenzake insha aliyoiandika ili wampe maoni yao."
+   ],
+   "key_inquiry_questions": [
+    "Insha ya wasifu ina sifa gani?"
+   ],
+   "core_competences": "Hamu ya ujifunzaji: mwanafunzi anaposoma nakala mbalimbali za insha ya wasifu.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi katika utungaji wa insha ya wasifu.\nUbunifu: mwanafunzi anapotunga insha ya wasifu.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapofikiria kuhusu hoja za insha atakayoandika.",
+   "values": "Heshima: mwanafunzi anapoheshimu maoni ya wenzake wanapojadili.\nUwajibikaji: mwanafunzi anapoandika insha na kuikamilisha kwa wakati.",
+   "pcis": "Usawa wa kijinsia: mwanafunzi anapotunga insha ya wasifu kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika insha ya wasifu na anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la usawa wa kijinsia na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     73,
+     74
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.a",
+     "letter": "a",
+     "text": "kutambua vipengele vya kimuundo vya insha za wasifu ili kuibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.b",
+     "letter": "b",
+     "text": "kuandika insha ya wasifu kwa kuzingatia sifa zake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.c",
+     "letter": "c",
+     "text": "kufurahia uandishi wa insha za wasifu kwa kueleza sifa za mtu, kitu, mnyama au mahali",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T6_NGELI_YA_I_I",
+   "number": "6.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Ngeli ya I-I (Theme 6: Usawa wa kijinsia)",
+   "sequence": 641,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua viambishi vya ngeli ya I-I katika sentensi kwa kuvipigia mstari au kuvikoleza rangi katika tarakilishi,",
+    "kutambua nomino katika ngeli ya I-I kutokana na upatanisho wa kisarufi kwenye sentensi (k.v. chumvi, miwani na sukari, chai, kahawa, mirathi, asali, sharubati),",
+    "kuandika nomino katika ngeli ya I-I katika umoja na wingi akishirikiana na wenzake,",
+    "kutunga sentensi sahihi kwa kutumia nomino za ngeli ya I-I kwa kushirikiana na wenzake."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni nomino zipihupatikana katikangeli ya I-I?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anashirikiana na wenzake.\nUbunifu: mwanafunzi anapoandika nomino katika ngeli ya I-I.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kutambua nomino na ngeli zake.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza vipakatalishi anavyotumia.\nUzalendo: mwanafunzi anapofanya kazi na wenzake kwa kushirikiana na wenzake.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutekeleza shughuli mbalimbali za ujifunzaji.\nUsawa wa kijinsia: mwanafunzi anapoandika mafungu ya maneno yenye nomino za ngeli ya I-I katika umoja na wingi kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya nomino na anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la usawa wa kijinsia na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     75,
+     76
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya upatanisho wa kisarufi vya ngeli ya I - I katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.b",
+     "letter": "b",
+     "text": "kutambua nomino katika ngeli ya I - I katika sentensi ili kuzibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.c",
+     "letter": "c",
+     "text": "kutumia nomino za ngeli ya I - I katika umoja na wingi akizingatia upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.d",
+     "letter": "d",
+     "text": "kuchangamkia kutumia nomino za ngeli ya I-I katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSIKI.T7_NAHAU",
+   "number": "7.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Nahau (Theme 7: Majanga na jinsi ya kuyazuia)",
+   "sequence": 711,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua nahau za kazi na ushirikiano (k.v. chapa kazi, kunja jamvi, changa bia, sema kwa sauti moja, fanya itifaki) katika chati, michoro, picha, vikapu maneno, mti maneno, chati, kamusi na katika vyombo vya kidijitali,",
+    "kujadili na wenzake maana za nahau za kazi na ushirikiano kwa kutoa mifano,",
+    "kuambatanisha nahau na maana yake,",
+    "kutumia nahau za kazi na ushirikiano katika sentensi akiwa peke yake au kwa kushirikiana na wenzake,",
+    "kusakura mtandaoni ili kupata nahau zaidi za kazi na ushirikiano na maana zake na kuziandika,",
+    "kujadili na wenzake nahau alizozipata ili kuelimishana."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni nahau zipi zinazohimiza watu kufanya mambo mbalimbali?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali.\nHamu ya ujifunzaji: mwanafunzi anapotafuta maana za nahau na kuzitumia kwa ufasaha katika mawasiliano.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapofikiria kuhusu maana za nahau na matumizi yake.",
+   "values": "Umoja: mwanafunzi anapofanya kazi pamoja na wenzake.\nHeshima: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji.",
+   "pcis": "Mshikamano wa kijamii na utaifa: mwanafunzi anapotambua na kutumia nahau za kazi na ushirikiano.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUsalama wa mtandaoni: mwanafunzi anaposakura mtandaoni ili kupata nahau zaidi za kazi na ushirikiano na maana zake na kuziandika.\nUhusianona Masomo Mengine:\nMwanafunzi anaweza kuhusisha dhana ya nahau anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la majanga na jinsi ya kuyazuia na yanayofundishwa katika somo la Socia Studies.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: links: not in the design.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     77,
+     78
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSIKI.T7_NAHAU.a",
+     "letter": "a",
+     "text": "kutambua nahau za kazi na ushirikiano katika matini mbalimbali",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T7_NAHAU.b",
+     "letter": "b",
+     "text": "kujadili maana ya nahau mbalimbali za kazi na ushirikiano ili kuzitofautisha",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T7_NAHAU.c",
+     "letter": "c",
+     "text": "kutumia nahau za kazi na ushirikiano katika mawasiliano",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T7_NAHAU.d",
+     "letter": "d",
+     "text": "kuthamini matumizi ya nahau za kazi na ushirikiano katika mawasiliano",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA",
+   "number": "7.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Mapana (Theme 7: Majanga na jinsi ya kuyazuia)",
+   "sequence": 721,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua aina mbalimbali za matini (k.v. vitabu, magazeti, na majarida) kwenye tarakilishi au kadi za katalogi,",
+    "kuchagua matini atakayoisoma,",
+    "kusoma matini kimyakimya ili kupata ujumbe uliopo na kufaidi matumizi ya lugha,",
+    "kusimulia ujumbe kutokana na matini alizosoma kwa wenzake,",
+    "kujadiliana na wenzake matini alizosoma ili kuchochea hamu ya usomaji wa mapana miongoni mwao."
+   ],
+   "key_inquiry_questions": [
+    "Unapendakusoma matini ya aina gani?",
+    "Ni vipi unavyoweza kupata matini ya kusoma?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposoma na kusimulia ujumbe aliosoma kutokana na matini za aina mbalimbali.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anaposoma matini mbalimbali kuhusu majanga na jinsi ya kuyazuia ili kupata ujumbe.",
+   "values": "Heshima: mwanafunzi anaposhirikiana na wenzake na kuzingatia maoni katika mijadala.\nUwajibikaji: mwanafunzi anapoazima, kutunza na kurudisha vitabu maktabani",
+   "pcis": "Majanga na jinsi ya kuzuia: mwanafunzi anapotambue aina mbalimbali za matini (k.v. vitabu, magazeti, na majarida) kwenye tarakilishi au kadi za katalogi kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa mapana na anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la majanga na jinsi ya kuyazuia na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     79,
+     80
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA.a",
+     "letter": "a",
+     "text": "kutambua matini anazotaka kusoma kwenye maktaba",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA.b",
+     "letter": "b",
+     "text": "kuchagua matini anazotaka kusoma kwenye maktaba",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA.c",
+     "letter": "c",
+     "text": "kusoma matini ili kufaidika na ujumbe na lugha inayotumiwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA.d",
+     "letter": "d",
+     "text": "kufurahia usomaji wa matini za aina mbalimbali ili kujenga utamaduni wa kusoma",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUANDI.T7_INSHA_ZA_MAELEZO",
+   "number": "7.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha za Maelezo (Theme 7: Majanga na jinsi ya kuyazuia)",
+   "sequence": 731,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua vifungu vya insha za maelezo vilivyoandikwa kwenye matini mbalimbali au tarakilishi (k.v. maelezo kuhusu kuzuia mmomonyoko wa udongo, mafuriko, mitetemeko ya ardhi, mkurupuko wa magonjwa kama vile kipindupindu),",
+    "kujadili mada na vidokezo vya insha atakayoiandika,",
+    "kuandika insha ya maelezo isiyopungua maneno 200 akizingatia kategoria za maneno kama vile aina mbalimbali za viwakilishi ifaavyo ili kuuwasilisha ujumbe lengwa, anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa lugha ya kiubunifu unaojumuisha methali na nahau alizojifunza awali,",
+    "kutunga insha ya maelezo mtandaoni na kuisambaza kwa wenzake na mwalimu ili kuisoma na kuitathmini,",
+    "kuwawasilishia wenzake insha aliyoandika ili waitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Unazingatia nini unapoandika insha ya maelezo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala na wenzake.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kiteknolojia vinapotumiwa kuandika insha mtandaoni na kurejelea kielelezo cha insha ya maelezo.\nUbunifu: mwanafunzi anapoandika insha ya maelezo.\nKujiamini: mwanafunzi anapofanikiwa kutunga insha ya maelezo.",
+   "values": "Heshima: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji.\nUmoja: mwanafunzi anapotekeleza shughuli kwa kushirikiana na wenzake.",
+   "pcis": "Majanga na jinsi ya kuyazuia: mwanafunzi anapotunga insha ya maelezo kuhusu suala lengwa (k.v. maelezo kuhusu kuzuia mmomonyoko wa udongo, mafuriko, mitetemeko ya ardhi, mkurupuko wa magonjwa kama vile kipindupindu).\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUsalama mtandaoni: mwanafunzi anapotunga insha ya maelezo mtandaoni na kuisambaza kwa wenzake na mwalimu ili kuisoma na kuitathmini.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika insha na anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la majanga na jinsi ya kuyazuia na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     81,
+     82
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUANDI.T7_INSHA_ZA_MAELEZO.a",
+     "letter": "a",
+     "text": "kujadili maudhui ya insha ya maelezo ili kukuza ubunifu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T7_INSHA_ZA_MAELEZO.b",
+     "letter": "b",
+     "text": "kuandika insha ya maelezo kwa kuzingatia mada, mtiririko, sarufi, muundo na mtindo ufaao",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T7_INSHA_ZA_MAELEZO.c",
+     "letter": "c",
+     "text": "kuchangamkia utungaji wa insha za maelezo ili kukuza hali ya kujiamini",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU",
+   "number": "7.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Ngeli ya PA-KU-MU (Theme 7: Majanga na jinsi ya kuyazuia)",
+   "sequence": 741,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "(Kipindi 1)"
+   ],
+   "learning_experiences": [
+    "kutambua viambishi vya ngeli ya PA-KU-MU katika matini,",
+    "kuandika nomino katika ngeli ya PA-KU-MU katika umoja na wingi akishirikiana na wenzake,,",
+    "kubadilisha sentensi kuzingatia viambishi vya ngeli ya PA-KU-MU katika umoja na wingi,",
+    "kutunga sentensi kwa kutumia viambishi vya ngeli ya PA-KU-MU akiwa peke yake au kwa kushirikiana na wenzake,",
+    "kujaza mapengo kwa kutumia viambishi vya ngeli ya PA-KU- MU kwa maandishi ya mkono au kwa tarakilishi."
+   ],
+   "key_inquiry_questions": [
+    "Tunawezaje kutambua nomino katika ngeli ya PA-KU-MU?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anashirikiana na wenzake.\nUbunifu: mwanafunzi anapotunga sentensi.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kutambua nomino na ngeli ya PA-KU-MU.",
+   "values": "Uwajibikaji: mwanafunzi kutunza vipakatalishi anavyotumia.\nUzalendo: mwanafunzi anapofanya kazi na wenzake kwa kushirikiana.",
+   "pcis": "Majanga na jinsi ya kuyazuia: mwanafunzi anapoandika nomino katika ngeli ya PA-KU-MU katika umoja na wingi kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya nomino na anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la majanga na jinsi ya kuyazuia na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     83,
+     84
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya upatanisho wa kisarufi vya ngeli ya PA-KU-MU katika matini",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.b",
+     "letter": "b",
+     "text": "kutumia ipasavyo upatanisho wa kisarufi wa ngeli ya PA- KU-MU katika matini",
+     "status": "kicd_read"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.c",
+     "letter": "c",
+     "text": "kuchangamkia kutumia nomino za ngeli ya PA-KU-MU katika mawasiliano",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSIKI.T8_VISAWE",
+   "number": "8.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Visawe (Theme 8: Wanyama wa majini)",
+   "sequence": 811,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua maneno zaidi ya matatu yenye maana sawa (k.v. mwizi- luja, mkupuzi, pwagu, pwaguzi, mkwepuzi; hongo, rushwa, chai, kadhongo, mvugulio; pesa - njenje, ngwenje, fedha, hela; lengo - dhamira, nia, azma, kusudi; maskini, mlalahoi, fukara, mkata, fakiri) kwa kutumia kapu la maneno, kadi za maneno, mti wa maneno, tarakilishi,",
+    "kueleza maana ya maneno zaidi yamatatu yenye maana sawa kwa kujadiliana na wenzake,",
+    "kuambatanisha maneno zaidi ya matatu yaliyo na maana sawa katika kapu maneno, mti maneno, ubao, chati, vyombo vya kidijitali na kadi za maneno,",
+    "kuhusisha visawe na vifaa halisi,picha, michoro kwenye chati, kitabu au katika vyombo vya kidijitali,",
+    "kujadili visawe mbalimbali akiwa na wenzake,",
+    "kutumia kisawe kimoja kuchukua nafasi ya kingine katika sentensi."
+   ],
+   "key_inquiry_questions": [
+    "Unajua maneno gani ya Kiswahili yaliyo na maana sawa?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapofanya kazi na wenzake\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapofikiria kuhusu visawe mwafaka.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kutambua visawe.",
+   "values": "Umoja: mwanafunzi anaposhiriki kutunga sentensi zinazojumuisha maadili mbalimbali k.v. umoja, uzalendo, uwajibikaji na upendo.",
+   "pcis": "Elimu ya utunzaji wa wanyama: mwanafunzi anapohusisha visawe na vifaa halisi, picha, michoro kwenye chati akirejelea suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya visawe anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la wanyama wa majini na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     85,
+     86
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSIKI.T8_VISAWE.a",
+     "letter": "a",
+     "text": "kutambua maneno zaidi ya matatu yenye maana sawa katika kundi la maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T8_VISAWE.b",
+     "letter": "b",
+     "text": "kutumia visawe ifaavyo katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T8_VISAWE.c",
+     "letter": "c",
+     "text": "kuthamini matumizi ya maneno zaidi ya matatu yenye maana sawa katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU",
+   "number": "8.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Ufahamu (Theme 8: Wanyama wa majini)",
+   "sequence": 821,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kueleza maana ya mchezo wa kuigiza akishirikiana na wenzake,",
+    "kujadili na wenzake sifa za mchezo wa kuigiza (k.v. huwa na wahusika, kuna mazungumzo, maelekezo),",
+    "kusoma mchezo wa kuigiza akizingatia wahusika, maelekezo na ujumbe,",
+    "kutambua msamiati wa suala lengwa uliotumiwa katika mchezo wa kuigiza (k.v. kiboko, samaki, mamba, chura, kasa),",
+    "kushiriki katika majadiliano kuhusu msamiati uliotumiwa katika mchezo wa kuigiza,",
+    "kujibu maswali kutokana na mchezo aliousoma,",
+    "kutoa muhtasari wa ujumbe ulio katika mchezo wa kuigiza,",
+    "kutazama mchezo mfupi wa kuigiza shuleni au kwenye vifaa vya kidijitali,",
+    "kushiriki katika mjadala kuhusu ujumbe unaojitokeza kwenye mchezo wa kuigiza."
+   ],
+   "key_inquiry_questions": [
+    "Je, mchezo wa kuigiza una sifa gani?",
+    "Umewahi kushiriki katika mchezo gani wa kuigiza?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki shughuli za ujifunzaji na wenzake.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali katika mchakato wa ujifunzaji.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapofikiri kuhusu ujumbe uliomo kwenye mchezo wa kuigiza.\nKujiamini: mwanafunzi anapong’amua ujumbe uliomo kwenye mchezo wa kuigiza.",
+   "values": "Heshima: mwanafunzi anapoheshimu uigizaji wa wenzake.\nUmoja: wanaposhirikiana kuigiza mchezo kuhusu suala lengwa.",
+   "pcis": "Elimu ya utunzaji wa wanyama: mwanafunzi anapotambua msamiati wa suala lengwa uliotumiwa katika mchezo wa kuigiza.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nMshikamano wa kijamii na utaifa: mwanafunzi anaposhirikiana na wenzake katika kuigiza suala lengwa na masuala mengine yanayohusiana na jamii.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufahamu anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la wanyama wa majini na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     87,
+     88
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.a",
+     "letter": "a",
+     "text": "kujadili sifa za mchezo wa kuigiza ili kuzibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.b",
+     "letter": "b",
+     "text": "kusoma mchezo mfupi wa kuigiza kwa ufasaha kwa kuzingatia ujumbe na msamiati wa suala lengwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.c",
+     "letter": "c",
+     "text": "kuonyesha ufahamu wa mchezo wa kuigiza kwa kujibu maswali na kutoa muhtasari",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.d",
+     "letter": "d",
+     "text": "kuonea fahari nafasi ya mchezo wa kuigiza katika jamii",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUANDI.T8_INSHA_ZA_MASIMULIZI",
+   "number": "8.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha za Masimulizi (Theme 8: Wanyama wa majini)",
+   "sequence": 831,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kujadili mtiririko wa hoja katika insha ya masimulizi kwa kurejelea vielelezo vya insha zilizoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kujadili muundo wa insha ya masimulizi,",
+    "kuonyesha ubunifu kwa kuandika insha isiyopungua maneno 200 inayosimulia tukio linalohusiana na wanyama wa porini akizingatia nomino na vivumishi mbalimbali, mnyambuliko wa vitenzi, anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka, lugha ya kiubunifu na urefu unaotarajiwa,",
+    "kukuza ujuzi wa kidijitali kwa kuandika insha ya masimuizi katika vifaa vya kidijitali na kuisambaza kwa wenzake na mwalimu ili kuisoma na kuitathmini,",
+    "kuwawasilishia wenzake insha aliyoandika ili waitathmini na kumwelekeza"
+   ],
+   "key_inquiry_questions": [
+    "Ni nini unachoweza kufanya ili uwe mwandishi bora wa insha?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala akiwa na wenzake.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kiteknolojia vinapotumiwa kuandika insha mtandaoni na kurejelea kielelezo cha insha ya masimuizi.\nUbunifu: mwanafunzi anapoandika insha ya masimuizi.\nHamu ya ujifunzaji: mwanafunzi anapoyatafakari maswali dadisi yaliyopendekezwa na anapoimarisha ujuzi wake wa kutumia tarakilishi.",
+   "values": "Heshima: mwanafunzi anaposhirikiana na wenzake.\nUwajibikaji: mwanafunzi kuandika Insha za wasifu zinazolenga watu ambao wanajulikana kwa uaminifu, uwajibikaji, wenye mapenzi na wazalendo.",
+   "pcis": "Elimu ya utunzaji wa wanyama: mwanafunzi anapoandika insha ya masimulizi kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUsalama wa mtandaoni: mwanafunzi anapotumia vifaa vya kidijitali kuandika insha ya masimulizi katika vifaa vya kidijitali na kuisambaza kwa wenzake na mwalimu ili kuisoma na kuitathmini",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika insha ya masimulizi anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la wanyama wa majini na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     89,
+     90
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUANDI.T8_INSHA_ZA_MASIMULIZI.a",
+     "letter": "a",
+     "text": "kujadili mtiririko wa hoja katika insha ya masimulizi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T8_INSHA_ZA_MASIMULIZI.b",
+     "letter": "b",
+     "text": "kuandika insha ya masimulizi kwa kufuata kanuni zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T8_INSHA_ZA_MASIMULIZI.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi mzuri katika uandishi wa insha ya masimulizi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA",
+   "number": "8.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Mnyambuliko wa (Theme 8: Wanyama wa majini)",
+   "sequence": 841,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua vitenzi katika hali za kutendeana, kutendesha na kutendua katika chati, jedwali, kapu maneno, mti maneno, ubao na vyombo vya kidijitali,",
+    "kunyambua vitenzi katika hali lengwa akiwa peke yake, akishirikiana na wenzake,",
+    "kutumia vitenzi katika hali lengwa kwenye sentensi,",
+    "kujaza mapengo katika jedwali la mnyambuliko wa vitenzi kwenye daftari au kwa kutumia tarakilishi,",
+    "kuandika sentensi upya kwa kutumia vitenzi katika hali mbalimbali."
+   ],
+   "key_inquiry_questions": [
+    "Je, vitenzi vinaweza kubadilika vipi mwishoni ili kuleta maana mbalimbali?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapofanya kazi kwa kushirikiana na wenzake.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anaponyambua vitenzi katika hali mbalimbali.\nKujiamini: mwanafunzi anapotoa majibu na kushiriki katika shughuli mbalimbali.",
+   "values": "mbalimbali k.v. upendo, umoja, heshima, uzalendo n.k. kutokana na sentensi zilizotungwa.",
+   "pcis": "Elimu ya utunzaji wa wanyama: mwanafunzi anaponyambua vitenzi kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nMahusiano ya kijamii: mwanafunzi anapotumia vitenzi katika hali mbalimbali ipasavyo kuonyesha na kuendeleza mahusiano katika jamii.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya mnyambuliko wa vitenzi anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la wanyama wa majini na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     91,
+     92
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.a",
+     "letter": "a",
+     "text": "kutambua vitenzi katika hali ya kutendeana, kutendesha, kutendua katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.b",
+     "letter": "b",
+     "text": "kutumia vitenzi katika hali za kutendeana, kutendesha, kutendua ipasavyo katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.c",
+     "letter": "c",
+     "text": "kuchangamkia matumizi ya vitenzi katika hali ya kutendeana, kutendesha, kutendua katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT",
+   "number": "9.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Mazungumzo ya Kimuktadha (Theme 9: Afya ya akili)",
+   "sequence": 911,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua miktadha mbalimbali kunakotumiwa lugha rasmi na isiyo rasmi (k.v. ofisini, hospitalini, nyumbani, sokoni),",
+    "kusikiliza mazungumzo rasmi na yasiyo rasmi kwa kutazama maigizo kwenye vyombo vya kidijitali (k.v. video, rununu, runinga, tarakilishi),",
+    "kushiriki katika maigizo ya mazungumzo ya miktadha rasmi na yasiyo rasmi akishirikiana na wenzake,",
+    "kushiriki katika mazungumzo rasmi na yasiyo rasmi kuhusu suala lengwa (k.v, mambo yanayosababisha msongo wa mawazo unao sababishwa na ajali za barabarani n.k),",
+    "kutambua nidhamu ya lugha inayozingatiwa katika mazingira rasmi (k.m lugha ya heshima na adabu anapowasiliana)."
+   ],
+   "key_inquiry_questions": [
+    "Ni wapi katika shughuli zetu za kila siku tunaitumia lugha rasmi na isiyo rasmi?",
+    "Ni nini kinachofanya mazungumzo yawe rasmi au yasiyo rasmi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake darasani.\nUbunifu: mwanafunzi anapobuni na kushiriki katika mazungumzo.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kusikiliza na kutazama mazungumzo.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali.\nHeshima: mwanafunzi anapoheshimu wenzake wakati wa kuigiza na kushiriki katika mazungumzo.",
+   "pcis": "Afya ya akili: mwanafunzi anapotambua miktadha tofauti ya matumizi ya lugha rasmi na isiyo rasmi kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nMahusiano ya kijamii: mwanafunzi anapotumia lugha rasmi na isiyo rasmi katika miktadha faafu ili kuimarisha mahusiano ya kijamii.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusikiliza anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la afya ya akili na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     93,
+     94
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.a",
+     "letter": "a",
+     "text": "kutambua miktadha rasmi na isiyo rasmi katika mawasiliano ili kuitofautisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.b",
+     "letter": "b",
+     "text": "kutumia lugha katika miktadha rasmi na isiyo rasmi ili kufanikisha mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.c",
+     "letter": "c",
+     "text": "kuchangamkia matumizi ya lugha katika miktadha rasmi na isiyo rasmi kuimarisha maadili yafaayo",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSOMA.T9_KUSOMA_KWA_MAPANA",
+   "number": "9.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Mapana (Theme 9: Afya ya akili)",
+   "sequence": 921,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua matini zinazomvutia maktabani na mtandaoni,",
+    "kusoma matini alizochagua ili kufaidi ujumbe na lugha iliyotumiwa,",
+    "kutolea wenzake muhtasari wa kile alichosoma kwenye matini ili kupashana ujumbe na kuchocheana kusoma zaidi kwa ajili ya kujifurahisha,",
+    "kujadiliana na wenzake matini ambazo wamesoma kwa kuzingatia ukuzaji wa msamiati."
+   ],
+   "key_inquiry_questions": [
+    "Ni habari zipi unazopenda kusoma kwenye matini?",
+    "Unazingatia nini unapochagua matini za kusoma?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposimulia na kujadiliana na wenzake.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi na mtandao kupata matini za kusoma.\nHamu ya ujifunzaji: mwanafunzi anapojichagulia matini na kuzisoma.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza matini anazosoma.\nHeshima: mwanafunzi anapojadiliana na wenzake kuhusu alichosoma.",
+   "pcis": "Afya ya akili: mwanafunzi anapotambua na kusoma matini zinazomvutia maktabani na mtandaoni kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUsalama wa mtandaoni: mwanafunzi anapotambua matini zinazomvutia mtandaoni na kuzisoma.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa mapana anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la afya ya akili na yanayofundishwa katika somo la Socia Studies. Shughuli za Ujifunzaji Zilizopendekezwa Swali Dadisi",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     95,
+     96,
+     97
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSOMA.T9_KUSOMA_KWA_MAPANA.a",
+     "letter": "a",
+     "text": "kutambua aina mbalimbali za matini ili kuchagua inayomvutia",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T9_KUSOMA_KWA_MAPANA.b",
+     "letter": "b",
+     "text": "kusoma matini aliyochagua ili kufaidika na ujumbe na lugha iliyotumiwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T9_KUSOMA_KWA_MAPANA.c",
+     "letter": "c",
+     "text": "kufurahia usomaji wa aina mbalimbali za matini ili kupanua mawazo yake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUANDI.T9_INSHA_ZA_MAELEZO",
+   "number": "9.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha za Maelezo (Theme 9: Afya ya akili)",
+   "sequence": 931,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kueleza maudhui kutokana na mada ya insha ya maelezo,",
+    "kujadili mada ya insha na muundo wa insha ya maelezo,",
+    "kuandika insha ya maelezo akitumia vivumishi na vielezi vifaavyo kutoa picha dhahiri kuhusu anachokielezea. Pia akizingatie anwani, mpangilio mzuri wa mawazo, hati safi, kanuni za kisarufi, uakifishaji mwafaka na lugha ya kiubunifu inayojumuisha methali na nahau alizojifunza awali,",
+    "kuandika insha ya maelezo akitumia kifaa cha kidijitali kuhusu suala lengwa (k.v athari za msongo wa mawazo kwa sababu ya ajali za barabarani na kuisambaza kwa wenzake na mwalimu ili kuisoma na kuitathmini),",
+    "kuwawasilishia wenzake insha aliyoandika ili waitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni mambo gani unayoweza kuwasilisha unapoandika insha ya maelezo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala na wenzake.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kiteknolojia wakati wa kuandika insha ya maelezo mtandaoni na kurejelea kielelezo cha insha ya maelezo.\nUbunifu: mwanafunzi anapoandika insha ya maelezo.\nHamu ya ujifunzaji: mwanafunzi anapoyatafakari maswali dadisi yaliyopendekezwa na anapoimarisha ujuzi wake wa kutumia tarakilishi",
+   "values": "Heshima: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji\nUpendo: mwanafunzi anapofanya kazi pamoja.",
+   "pcis": "Afya ya akili: mwanafunzi anapoandika insha ya maelezo kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUsalama wa mtandaoni: mwanafunzi anapotumia ujuzi wa kidijitali kuandika insha ya maelezo.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la afya ya akili na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     97,
+     98
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUANDI.T9_INSHA_ZA_MAELEZO.a",
+     "letter": "a",
+     "text": "kueleza maudhui ya insha ya maelezo kwa kuzingatia mada",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T9_INSHA_ZA_MAELEZO.b",
+     "letter": "b",
+     "text": "kuandika insha ya maelezo kwa kufuata kanuni zifaazo ili kufanikisha, mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T9_INSHA_ZA_MAELEZO.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi mzuri wenye mapambo ya lugha",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH",
+   "number": "9.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Vinyume vya Vivumishi (Theme 9: Afya ya akili)",
+   "sequence": 941,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua vinyume vya vivumishi(k.v. zuri- baya, kali-butu, refu- fupi) katika chati, kadi za maneno, kapu maneno, mti maneno au vifaa vya kidijitali,",
+    "kutafuta vinyume vya vivumishi kwa kurejelea orodha ya vivumishi alivyopewa,",
+    "kutalii mazingira yake na kuunda orodha ya vinyume vya vivumishi,",
+    "kutunga sentensi kwa kutumia vinyume vya vivumishi kwa kuzingatia upatanisho wa kisarufi."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni vivumishi vipi unavyoweza kutambua vinyume vyake?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki kazi ya vikundi.\nUbunifu: mwanafunzi anapotunga sentensi sahihi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali.\nHeshima: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji.",
+   "pcis": "Elimu ya mazingira: mwanafunzi anapotalii mazingira yake na kuunda orodha ya vinyume vya vivumishi.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vinyume vya maneno anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la afya ya akili na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     99,
+     100
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.a",
+     "letter": "a",
+     "text": "kutambua vinyume vya vivumishi katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.b",
+     "letter": "b",
+     "text": "kutunga sentensi kwa kutumia vinyume vya vivumishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.c",
+     "letter": "c",
+     "text": "kuchangamkia matumizi ya vinyume vya vivumishi katika mawasiliano ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA",
+   "number": "10.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Sitiari za Tabia (Theme 10: Kukabiliana na ugaidi)",
+   "sequence": 1011,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kujadili na wenzake maana ya sitiari,",
+    "kutambua sitiari za tabia (k.v. yeye ni sungura, yeye ni fisi, yeye ni kasuku, mimi ni kobe safarini) katika vitabu, matini, chati na vyombo vya kidijitali akishirikiana na wenzake,",
+    "kutoa mifano ya sitiari za tabia akisaidiana na mwenzake,",
+    "kueleza maana ya sitiari mbalimbali,",
+    "kutumia sitiari katika sentensi ."
+   ],
+   "key_inquiry_questions": [
+    "Ni maneno gani unayoweza kutumia kulinganisha kitu na kingine kwa njia ya moja kwa moja?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika kazi ya vikundi.\nHamu ya ujifunzaji: mwanafunzi anapotambua sitiari katika matini.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali katika kutambua sitiari.",
+   "values": "Heshima: anapoheshimu maoni ya wenzake.\nUmoja: anaposhirikiana na wenzake.",
+   "pcis": "Kukabiliana na ugaidi: mwanafunzi anapotoa mifano ya stiari akirejelea suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nMtazamo wa ukuaji wa binadamu: mwanafunzi anaposaidiwa na mzazi au mlezi, kutunga sentensi mbalimbali akitumia sitiari za tabia na anapotambua sitiari za tabia katika matini.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusikiliza na kuzungumza anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la kukabiliana na ugaidi na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     101,
+     102
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.a",
+     "letter": "a",
+     "text": "kujadili dhana ya sitiari ili kuitofautisha na dhana zingine za lugha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.b",
+     "letter": "b",
+     "text": "kutambua sitiari za tabia katika matini mbalimbali ili kuzibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.c",
+     "letter": "c",
+     "text": "kutumia sitiari za tabia kwa usahihi katika sentensi ili kuimarisha mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.d",
+     "letter": "d",
+     "text": "kufurahia matumizi ya sitiari katika mawasiliano ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSOMA.T10_KUSOMA_KWA_MAPANA",
+   "number": "10.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Mapana (Theme 10: Kukabiliana na ugaidi)",
+   "sequence": 1021,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua mambo ya kuzingatia anaposoma matini zilizohifadhiwa katika kifaa cha kidijitali (k.v. kutofuta kazi za wenzake zilizohifadhiwa katika vifaa vya kidijitali) akishirikiana na wenzake,",
+    "kutambua mambo ya kuzingatia anaposoma matini za mtandaoni (k.v. kufungua mitandao ifaayo, kutowasiliana na watu usiowajua, kutofichua nywila yako kwa wenzake),",
+    "kutambua jina la faili lengwa kwenye tarakilishi na kufanya mazoezi ya kufungua na kufunga,",
+    "kutambua mitandao salama yenye matini inayoafiki kiwango na mahitaji yake,",
+    "kutambua umuhimu wa kutoa habari kwa mwalimu, mzazi au mlezi wake endapo atapata ujumbe kutoka kwa watu asiowajua mtandaoni na kutowasiliana nao,",
+    "kutafuta maana za maneno mapya kwenye kamusi mtandaoni, kusimulia wenzake habari alizosoma."
+   ],
+   "key_inquiry_questions": [
+    "Unakumbuka habari gani uliyoisoma mtandaoni?",
+    "Ni hatua gani za kiusalama unazozingatia unapotafuta habari mtandaoni?"
+   ],
+   "core_competences": "Ujuzi wa kidijitali: mwanafunzi atapata hamu ya kutafuta matini za kusoma kwenye tarakilishi na mitandaoni.",
+   "values": "Uwajibikaji: katika utunzaji wa vifaa vya kidijitali na kuzingatia mitandao salama.",
+   "pcis": "Usalama wa mitandaoni: mwanafunzi anapotambua mambo ya kuzingatia anaposoma matini za mtandaoni na anapotambua mitandao salama yenye matini inayoafiki kiwango na mahitaji yake.\nUsalama na ulinzi: mwanafunzi anapofahamu namna anavyoweza kujizuia na ulaghai wa mtandaoni kwa kutowasiliana na watu asiowajua na kutoa habari kwa mwalimu au mzazi endapo atapata ujumbe kutoka kwa watu asiowajua mtandaoni.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa mapana anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la kukabiliana na ugaidi na yanayofundishwa katika somo la Socia Studies.\nMasomo yote kwa vile yanatakiwa kuzingatia ujuzi wa kidijitali.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     103,
+     104
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSOMA.T10_KUSOMA_KWA_MAPANA.a",
+     "letter": "a",
+     "text": "kutambua na kufungua faili iliyo na kifungu cha kusoma ili kuimarisha umilisi wake wa kutumia tarakilishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T10_KUSOMA_KWA_MAPANA.b",
+     "letter": "b",
+     "text": "kuonyesha uelewa wa hatua za kiusalama kwa kusakura matini kwenye tovuti salama ili kupata vifungu vya kusoma kutumia vyombo vya kidijitali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T10_KUSOMA_KWA_MAPANA.c",
+     "letter": "c",
+     "text": "kuchangamkia matumizi ya vifaa vya kidijitali katika kutafuta na kusoma ujumbe ili kuimarisha maarifa yake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUANDI.T10_INSHA_ZA_MASIMULIZI",
+   "number": "10.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha za Masimulizi (Theme 10: Kukabiliana na ugaidi)",
+   "sequence": 1031,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua insha ya masimulizi kwa kurejelea vielelezo vya insha zilizoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kujadili mada na vidokezo vya insha ili kuvitumia katika kuandika insha yake,",
+    "kuelezea maudhui atakayotumia kuandikia insha ya masimulizi,",
+    "kuandika insha ya masimulizi (k.v. kuhusu ugaidi, uhalifu, ajali, safari n.k) isiyopungua maneno 200 akizingatia mada, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka, lugha ya kiubunifu na urefu unaotarajiwa. Pia azingatie aina mbalimbali za maneno, mnyambuliko wa vitenzi, na nyakati ili kejenga picha dhahiri ya anachokiandikia daftarini,",
+    "kuandika insha ya masimulizi katika vifaa vya kidijitali na kuisambaza kwa wenzake na mwalimu ili kuisoma na kuitathmini,",
+    "kuwawasilishia wenzake insha aliyoandika ili waitathmini na kumwelekeza."
+   ],
+   "key_inquiry_questions": [
+    "Insha ya masimulizi ina sifa gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala na wenzake.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kuandika insha mtandaoni na kurejelea kielelezo cha insha ya mawasiliano.\nUbunifu: mwanafunzi anapoandika insha ya masimulizi.\nHamu ya ujifunzaji: mwanafunzi anapoyatafakari maswali dadisi yaliyopendekezwa na anapoimarisha ujuzi wake wa kutumia tarakilishi.",
+   "values": "Heshima: mwanafunzi anaposhirikiana na wenzake katika shughuli za ujifunzaji.\nUwajibikaji: mwanafunzi anapowajibika katika matumizi ya vifaa vya kidijitali.",
+   "pcis": "Kukabiliana na ugaidi: mwanafunzi anapoandika insha ya masimulizi kuhusu suala lengwa (k.v. kuhusu ugaidi, uhalifu)\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUsalama wa mtandaoni: mwanafunzi anapoandika insha ya masimulizi katika vifaa vya kidijitali na kuisambaza kwa wenzake na mwalimu ili kuisoma na kuitathmini.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la kukabiliana na ugaidi na yanayofundishwa katika somo la Socia Studies. Shughuli za Ujifunzaji Zilizopendekezwa Swali Dadisi",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     105,
+     106,
+     107
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUANDI.T10_INSHA_ZA_MASIMULIZI.a",
+     "letter": "a",
+     "text": "kueleza maudhui ya insha ya masimulizi ili kuandika ifaavyo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T10_INSHA_ZA_MASIMULIZI.b",
+     "letter": "b",
+     "text": "kuandika insha ya masimulizi kwa kufuata kanuni zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T10_INSHA_ZA_MASIMULIZI.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi mzuri ili kuimarisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE",
+   "number": "10.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Hali ya Masharti (nge,ngali na ki) (Theme 10: Kukabiliana na ugaidi)",
+   "sequence": 1041,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua viambishi vya hali ya masharti (nge, ngali, ki) kwenye vitenzi katika chati, ubao au kwa kutumia vifaa vya kidijitali,",
+    "kutumia vitenzi vya hali ya masharti katika sentensi kwa kuandika daftarini au kupiga chapa kwenye tarakilishi/kipakatalishi,",
+    "kubadilisha sentensi kutoka hali moja hadi nyingine,",
+    "kutunga sentensi katika hali ya mazoea na hali ya masharti mtandaoni na kuwatumia wenzake waweze kuzisoma na kutathmini usahihi wake."
+   ],
+   "key_inquiry_questions": [
+    "Je, unajua viambishi vipi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika shughuli za ujifunzaji na wenzake darasani na mtandaoni.\nUbunifu: mwanafunzi anapotunga sentensi sahihi.\nHamu ya ujifunzaji: mwanafunzi anapoendelea kutunga sentensi.\nUjuzi wa kidijitali: mwanafunzi anapotumia kipakatalishi au tarakilishi kutunga sentensi na vile vile kuzisambaza mtandaoni.",
+   "values": "Heshima: mwanafunzi anapojifunza kuthamini maoni ya wenzake.\nUpendo: mwanafunzi anaposhirikiana na wenzake katika kikundi.",
+   "pcis": "Kukabiliana na ugaidi: mwanafunzi anapotunga sentensi katika hali ya mazoea na hali ya masharti kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUsalama wa mtandaoni: mwanafunzi anapotunga sentensi katika hali ya mazoea na hali ya masharti mtandaoni na kuwatumia wenzake waweze kuzisoma na kutathmini usahihi wake.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya hali ya masharti anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la kukabiliana na ugaidi na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     107,
+     108
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya hali ya masharti kwenye kitenzi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.b",
+     "letter": "b",
+     "text": "kutumia vitenzi katika hali ya masharti kwenye sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.c",
+     "letter": "c",
+     "text": "kufurahia matumizi ya hali ya masharti katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH",
+   "number": "11.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Kujieleza kwa Ufasaha (Theme 11: Ushuru)",
+   "sequence": 1111,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kujadiliana na wenzake kuhusu mada mbalimbali ambazo huweza kusimuliwa kuhusiana na mambo na hali za maisha (k.v. hadithi za mashujaa, shughuli za sikukuu za kitaifa, usomaji wa bajeti, ulipaji wa ushuru, hekaya),",
+    "kusikiliza kisa cha kisimulizi kuhusu mada lengwa kutoka kwa mgeni mwalikwa, tepurekoda, video na tarakilishi ili kupata sifa za usimulizi mzuri,",
+    "kusimulia kisa kuhusiana na mada fulani akizingatia mtiririko wa matukio, kanuni za kisarufi, kupanda na kushuka kwa sauti, ishara za uso, viziada lugha, tasfida, na wakati ili kuufanya utungo wake uvutie,",
+    "wa mawazo, mfuatano wa kuuliza na kujibu maswali kutokana na visa vilivyosimuliwa darasani."
+   ],
+   "key_inquiry_questions": [
+    "Masimulizi kuhusu ushuru yana umuhimu gani?"
+   ],
+   "core_competences": "Ubunifu: mwanafunzi anapotunga na kusimulia kisa kuhusu mambo mbalimbali katika jamii.\nKujiamini: mwanafunzi anaposimama mbele ya hadhira na kusimulia kisa.\nUjuzi wa kidijitali: mwanafunzi anaposikiliza masimulizi kupitia vifaa vya kielektroniki.",
+   "values": "Uwajibikaji: mwanafunzi anapojitahidi kusimulia.\nUmoja: mwanafunzi anaposhirikiana na wenzake kutoa masimulizi.",
+   "pcis": "Elimu ya kifedha: mwanafunzi anapojadiliana na wenzake kuhusu mada mbalimbali ambazo huweza kusimuliwa kuhusiana na mambo na hali za maisha ikiwemo ulipaji wa ushuru.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nMahusiano ya kijamii: mwanafunzi anaposhirikisha hadhira kupitia uimbaji, kupiga makofi, kucheza, kuitikia ili kuupa usimulizi wake uhai zaidi na kuteka makini ya wasikilizaji.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kutoa masimulizi na anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la ushuru na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     109,
+     110
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.a",
+     "letter": "a",
+     "text": "kubuni na kusimulia kisa mbele ya wenzake akizingatia mada lengwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.b",
+     "letter": "b",
+     "text": "kutumia ishara zifaazo kuimarisha masimulizi yake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.c",
+     "letter": "c",
+     "text": "kufurahia usimulizi wa visa mbalimbali kuhusu maisha",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA",
+   "number": "11.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Ufasaha (Theme 11: Ushuru)",
+   "sequence": 1121,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kujadiliana na wenzake vipengele vya kuzingatia katika kusoma makala kwa ufasaha,",
+    "kusoma kifungu kuhusu suala lengwa katika matini andishi au ya kidijitali akizingatia matamshi bora,",
+    "kusoma kifungu cha hadithi kuhusu suala lengwa kwa kuzingatia kasi ifaayo (maneno sahihi yasiyopungua 85 kwa dakika) ili wenzake wamtolee maoni,",
+    "kusoma kifungu akizingatia sauti ifaayo (k.v. kiwango cha sauti na kiimbo),",
+    "kusoma kifungu kwa kuambatanisha ishara zifaazo panapofaa (k.v. ishara za uso na mikono zinazozingatia tamaduni),",
+    "kushirikiana na mzazi au mlezi kusoma makala akizingatia vipengele vya usomaji bora."
+   ],
+   "key_inquiry_questions": [
+    "Je, kusoma kwa ufasaha kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake na kujadiliana kuhusu vipengele vya kusoma kwa ufasaha.\nKujiamini: mwanafunzi anaposoma kifungu kwa ufasaha.\nUbunifu: mwanafunzi anapotumia ishara zifaazo wakati wa kusoma kifungu.\nHamu ya ujifunzaji: mwanafunzi anaposhiriki katika shughuli ya kusoma.",
+   "values": "Heshima: mwanafunzi anapothamini maoni ya wenzake katika shughuli za ujifunzaji wanapojadili vipengele vya usomaji bora.\nUpendo: mwanafunzi anapowapa wenzake nafasi ya kushiriki katika mjadala wakati wa shughuli ya ujifunzaji.\nUwajibikaji: mwanafunzi anapojitolea kuwasomea wenzake kifungu.\nUmoja: mwanafunzi anapotangamana na wenzake kujadili vipengele vya usomaji bora.",
+   "pcis": "Mshikamano wa kijamii na kitaifa: mwanafunzi anaposoma kifungu kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufasaha na anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la ushuru na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     111,
+     112
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.a",
+     "letter": "a",
+     "text": "kutambua vipengele vya kuzingatia katika kusoma kwa ufasaha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.b",
+     "letter": "b",
+     "text": "kusoma kifungu kwa kuzingatia matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.c",
+     "letter": "c",
+     "text": "kusoma kifungu kwa kasi ifaayo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.d",
+     "letter": "d",
+     "text": "kusoma kifungu kwa kutumia sauti ipasavyo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.e",
+     "letter": "e",
+     "text": "kusoma kifungu kwa kuambatanisha ishara zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.f",
+     "letter": "f",
+     "text": "kuchangamkia kusoma kifungu kwa kuzingatia vipengele vya usomaji kwa ufasaha",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.KUANDI.T11_BARUA_RASMI",
+   "number": "11.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Barua Rasmi (Theme 11: Ushuru)",
+   "sequence": 1131,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua mada ya kuandikia barua rasmi,",
+    "kujadili na wenzake maudhui yafaayo kulingana na mada ya insha ya barua rasmi,",
+    "kuandika vidokezo vya kumwongoza,",
+    "kujadili na wenzake vipengele vya aya,",
+    "kuandika barua rasmi kwa mwalimu daftarini kuomba msamaha na kuiwasilisha kila hoja katika aya yake,",
+    "kutumia sentensi inayobeba wazo kuu mwanzoni mwa kila aya,",
+    "kuandika kwa hati safi au kwa kutumia tarakilishi huku akizingatia kanuni zifaazo,.",
+    "kujadiliana na wenzake kuhusu umuhimu wa barua rasmi katika mawasiliano."
+   ],
+   "key_inquiry_questions": [
+    "Uandishi wa barua rasmi huzingatia vipengele gani?",
+    "Unazingatia nini ili kuunda aya nzuri?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kazi ya kikundi.\nUbunifu: mwanafunzi anapotunga na kuandika barua rasmi kwa mwalimu.\nUjuzi wa kidijitali: mwanafunzi anapoandika barua kwa kutumia tarakilishi.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake kujadili maudhui ya barua rasmi.\nHeshima: mwanafunzi anapozingatia maoni ya wenzake wakati wa mijadala.\nUwajibikaji: mwanafunzi anapoandika barua rasmi kuomba msamaha.",
+   "pcis": "Elimu ya kifedha: mwanafunzi anapoandika barua rasmi kuhusu suala lengwa.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika barua rasmi na anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la ushuru na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     113,
+     114
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.KUANDI.T11_BARUA_RASMI.a",
+     "letter": "a",
+     "text": "kujadili maudhui ili kuandika barua rasmi inayozingatia mada",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T11_BARUA_RASMI.b",
+     "letter": "b",
+     "text": "kuandika barua rasmi inayozingatia mada, hati safi, muundo na mtindo ufaao ili kuwasiliana ipasavyo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.KUANDI.T11_BARUA_RASMI.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi wa barua rasmi katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO",
+   "number": "11.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Ukanushaji wa Maneno (Theme 11: Ushuru)",
+   "sequence": 1141,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua viambishi vya hali ya masharti (nge, ngali, ki) katika vitenzi kwa kuvipigia mistari kwenye vitabu au kuvikolezea wino kwenye tarakilishi,",
+    "kutambua viambishi vya hali ya masharti katika hali kanushi (k.v.singe, singali, sipo),",
+    "kusoma sentensi zenye viambishi lengwa kwenye vitabu au tarakilishi katika hali yakinishi na kanushi,",
+    "kukanusha maneno na sentensi akizingatia hali ya masharti kwenye daftari au kwa kutumia tarakilishi,",
+    "kutunga sentensi sahihi zenye viambishi vya hali ya masharti na kuzikanusha,",
+    "kusikiliza au kutazama vipindi vya ukanushaji wa hali ya masharti kupitia vifaa vya kidijitali."
+   ],
+   "key_inquiry_questions": [
+    "Viambishi vya hali ya mashartikatika vitenzi nivipi?",
+    "Viambishi vya hali ya mashartikatika ukanushaji ni vipi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika vikundi ili kujadili kuhusu ukanushaji.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapojaribu kukanusha maneno na sentensi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali katika somo.",
+   "values": "Heshima: mwanafunzi anapoheshimu maoni ya wenzake.\nUmoja: mwanafunzi anaposhiriki na wenazake katika kazi ya vikundi.",
+   "pcis": "Elimu ya kifedha: mwanafunzi anapotambua viambishi vya hali ya masharti kuhusu suala lengwa na kutunga sentensi. .\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nUsalama wa mtandaoni: mwanafunzi anaposikiliza au kutazama vipindi vya ukanushaji wa hali ya masharti kupitia vifaa vya kidijitali.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya ukanushaji wa maneno na anayojifunza katika somo la Kiswahili na ujifunzaji wa stadi hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la ushuru na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     115,
+     116
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya hali ya masharti katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.b",
+     "letter": "b",
+     "text": "kukanusha viambishi vya hali ya masharti katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.c",
+     "letter": "c",
+     "text": "kufurahia ukanushaji wa viambishi hali ya masharti katika sentensi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N",
+   "number": "11.4.2",
+   "strand": "Sarufi",
+   "sub_strand": "Ukubwa na Udogo wa Nomino (Theme 11: Ushuru)",
+   "sequence": 1142,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua nomino zinazoanza kwa kiambishi Ki- (k.v. kiti, kitabu, kitanda) kwa kutumia kadi za maneno, mti wa maneno, chati au vifaa vya kidijitali,",
+    "kushiriki kwenye mjadala wa kutambua viambishi vinavyotumika kudhihirisha ukubwa na udogo wa nomino,",
+    "kushiriki katika vikundi kubadilisha nomino kutoka hali ya wastani hadi hali ya ukubwa na udogo,",
+    "kushiriki katika mchezo wa vikundi ambapo kikundi kimoja kitataja wastani wa nomino na kingine kutaja ukubwa na udogo wa nomino hiyo,",
+    "kutunga sentensi kwa kutumia nomino hizo katika hali ya ukubwa na udogo kwa kuzingatia upatanisho wa kisarufi."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni nomino gani zinazoanza kwa kiambishi ki-unazozijua?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki mijadala kuhusu mada ya ukubwa na udogo wa nomino.\nUbunifu: mwanafunzi anapotunga sentensi sahihi katika hali ya ukubwa na udogo.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kutambua na kuambatanisha nomino katika hali ya wastani, ukubwa na udogo.",
+   "values": "Heshima: mwanafunzi anapoheshimu maoni ya wenzake wanapojadili.\nUmoja: mwanafunzi anapofanya kazi kwa kushirikiana na wenzake.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nMahusiano ya kijamii: mwanafunzi anapoashiriki katika mchezo wa vikundi ambapo kikundi kimoja kitataja wastani wa nomino na kingine kutaja ukubwa na udogo wa nomino hiyo.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya ukubwa na udogo wa nomino na anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la ushuru na yanayofundishwa katika somo la Socia Studies. Shughuli za Ujifunzaji Swali Dadisi",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     117,
+     118,
+     119
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.a",
+     "letter": "a",
+     "text": "kutambua nomino zinazoanza kwa kiambishi ki- katika kundi la maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.b",
+     "letter": "b",
+     "text": "kubadilisha nomino, zinazoanza kwa ki- katika hali wastani kuwa katika hali ya ukubwa na udogo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.c",
+     "letter": "c",
+     "text": "kutunga sentensi sahihi akitumia nomino zinazoanza kwa ki- katika hali ya ukubwa na udogo huku akizingatia upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.d",
+     "letter": "d",
+     "text": "kufurahia kutumia nomino zinazoanza kwa ki- kwa usahihi katika hali ya ukubwa na udogo ili kuimarisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2",
+   "number": "11.4.3",
+   "strand": "Sarufi",
+   "sub_strand": "Ukubwa na Udogo wa Nomino (Theme 11: Ushuru)",
+   "sequence": 1143,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutaja nomino zinazoanza kwa kiambishi ji- katika hali ya ukubwa na udogo kwa kutumia kadi maneno, mti maneno, chati au vifaa vya kidijitali k.v. jani (jijani - kijani), jiko (jijiko -kijijiko),",
+    "kushiriki kwenye mjadala wa kutambua viambishi vinavyotumika kudhihirisha ukubwa na udogo wa nomino zinazoanza kwa kiambishi Ji-,",
+    "kubadilisha nomino kutoka hali ya wastani hadi hali ya ukubwa na udogo,",
+    "kutunga sentensi kwa kutumia nomino hizo katika hali ya ukubwa na udogo kwa kuzingatia upatanisho wa kisarufi."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni nomino gani zinazoanza kwa kiambishi ji-unazozijua?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki mijadala kuhusu mada hii.\nUbunifu: mwanafunzi anapotunga sentensi katika hali ya udogo.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kutambua na kuambatanisha nomino katika hali ya wastani na udogo.",
+   "values": "Heshima: mwanafunzi anapoheshimu maoni ya wenzake wanapojadili.\nUmoja: mwanafunzi anapofanya kazi kwa kushirikiana na wenzake.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika shughuli mbalimbali za ujifunzaji.\nElimu ya kifedha: mwanafunzi anapotunga sentensi akitumia udogo na ukubwa kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya ukubwa na udogo wa nomino na anayojifunza katika somo la Kiswahili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la ushuru na yanayofundishwa katika somo la Socia Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "LATEST 6.8.2024 KISWAHILI GRADE 6 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     119,
+     120
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.a",
+     "letter": "a",
+     "text": "kutambua nomino zinazoanza kwa kiambishi ji- ili kuzibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.b",
+     "letter": "b",
+     "text": "kubadilisha nomino zinazoanza kwa kiambishi ji- katika hali wastani kuwa katika hali ya ukubwa na udogo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.c",
+     "letter": "c",
+     "text": "kutunga sentensi sahihi akitumia nomino zinazoanza kwa kiambishi ji- katika hali ya ukubwa na udogo huku akizingatia upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.d",
+     "letter": "d",
+     "text": "kufurahia kutumia nomino zinazoanza kwa kiambishi Ji- kwa usahihi katika hali ya ukubwa na udogo ili kuimarisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

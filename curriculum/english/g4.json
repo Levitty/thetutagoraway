@@ -1,0 +1,3310 @@
+{
+ "framework": "cbc",
+ "subject_key": "english",
+ "grade": 4,
+ "source": "KICD English Language, First Published 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 52,
+  "outcomes": 177,
+  "lessons": 148,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO",
+   "number": "1.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 1: The family)",
+   "sequence": 111,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Listening Comprehension"
+   ],
+   "learning_experiences": [
+    "say tongue twisters with words containing the sounds; /t/ /d/ /f/ /v/ and the digraph /tw/,",
+    "repeat saying minimal pairs with the sounds /t/ /d/ /f/ /v/ and the digraph /tw/ from the teacher or an audio recording,",
+    "find out the correct pronunciation of words and sentences from electronic or print dictionaries,",
+    "match words that have the same sounds and use them to construct sentences collaboratively,",
+    "work jointly to search for words related to the theme on the internet and use them in sentences,",
+    "listen to an audio text and answer comprehension questions,",
+    "play a language game with words containing the sounds /t/ /d/ /f/ /v/ and the digraph /tw/."
+   ],
+   "key_inquiry_questions": [
+    "Why should we pronounce sounds and words correctly?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced as the learner pronounces words correctly and accurately with others.\nDigital Literacy: It is enhanced as the learner uses digital devices to listen to sounds and search for correct pronunciation of words.",
+   "values": "Unity: This is developed as the learner works collaboratively during group tasks such as playing a language game.\nRespect: This is enhanced as the learner appreciates individual differences in pronunciation and articulation of sounds.",
+   "pcis": "Social Cohesion: This is promoted as learners interact with texts on the theme of family to get the vocabulary.",
+   "links": "The learner is able to connect the concept of correct pronunciation and articulation to their learning in Kiswahili and Indigenous languages.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "pronounce sounds and words correctly for effective oral communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "use vocabulary in sentences for effective oral communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "listen attentively to an oral text for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "appreciate the importance of accurate pronunciation in oral texts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING",
+   "number": "1.2.1",
+   "strand": "Reading",
+   "sub_strand": "Extensive Reading (Theme 1: The family)",
+   "sequence": 121,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Reference Materials"
+   ],
+   "learning_experiences": [
+    "arrange words alphabetically or according to related thematic areas,",
+    "discuss with peers how words are organised in a dictionary,",
+    "collaboratively identify the spelling and meaning of words from electronic or print dictionaries,",
+    "read grade appropriate texts, write down unfamiliar words and check their meaning,",
+    "select a topic and obtain information from references such as a junior encyclopaedia."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to spell words correctly?",
+    "How does a dictionary help us to learn?"
+   ],
+   "core_competences": "Learning to Learn: This is developed as the learner acquires skills necessary to properly utilise reference materials.\nDigital Literacy: This is promoted as the learner interacts with digital devices to search for meaning of words and information from the online dictionaries.",
+   "values": "Responsibility: This is enhanced as the learner collaborates with peers to perform various roles as they search for spelling and meaning of words.\nIntegrity: This is developed as the learner focuses on specific information from relevant sites when searching on online platforms.",
+   "pcis": "Citizenship: This is promoted as the learner is exposed to content on the theme of the family as a basic unit of the society.",
+   "links": "The learner is able to relate the concept of reading for information to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING.a",
+     "letter": "a",
+     "text": "identify the spelling and meaning of words from the dictionary",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING.b",
+     "letter": "b",
+     "text": "read the junior encyclopaedia to obtain information for lifelong learning",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING.c",
+     "letter": "c",
+     "text": "promote the use of reference materials to obtain information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI",
+   "number": "1.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Classes: Determiners (Theme 1: The family)",
+   "sequence": 131,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Definite articles",
+    "Indefinite articles"
+   ],
+   "learning_experiences": [
+    "read aloud the articles a, an and the with peers,",
+    "identify definite and indefinite articles (a, an, and the) from a paragraph,",
+    "collaborate to match definite and indefinite articles with a list of nouns,",
+    "complete blanks in sentences using correct articles,",
+    "construct sentences with peers using definite and indefinite articles,",
+    "type sentences on a digital device and share with friends or family via mobile phone, email, computer printouts, among others,",
+    "view a video related to the theme in which the definite and indefinite articles are used,",
+    "cooperate with others to search for sentences with articles from a selected newspaper, magazine or internet."
+   ],
+   "key_inquiry_questions": [
+    "How are articles used with nouns?"
+   ],
+   "core_competences": "Creativity and Imagination: This is developed as the learner creates sentences containing articles and shares the content via digital device.\nCritical thinking and problem solving: This is promoted as the learner completes blanks in sentences using correct articles.",
+   "values": "Tolerance: This is developed as the learner is able to accommodate diverse views from peers when searching for sentences with articles from a selected newspaper, magazine or internet.\nLove: It is cultivated as the learner is able to show empathy and take initiative to assist others as they use technology to share their work.",
+   "pcis": "Digital Safety: This is promoted as the learner observes discipline and cyber safety as they share their work through mobile phones, emails or online platforms.",
+   "links": "The learner is able to relate the concept of definite and indefinite articles to their learning of similar concepts in Foreign Langauges.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.a",
+     "letter": "a",
+     "text": "identify definite and indefinite articles in a written text for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.b",
+     "letter": "b",
+     "text": "use definite and indefinite articles in sentences for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.c",
+     "letter": "c",
+     "text": "acknowledge the use of articles in oral and written contexts for self-expression",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING",
+   "number": "1.4.1",
+   "strand": "Writing",
+   "sub_strand": "Functional writing (Theme 1: The family)",
+   "sequence": 141,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Filling forms"
+   ],
+   "learning_experiences": [
+    "fill forms provided by the teacher with specific details such as: Personal details Name ______ Grade _______ Date of Birth _________ School Details Name _______ Address ______ Name of Class Teacher _______ Name of Head teacher ________,",
+    "read instructions on filling in forms collaboratively,",
+    "record the required information related to the theme in the forms with peers,",
+    "team up to fill in forms in print format and display them,",
+    "download online forms and fill in information with guidance from the teacher,",
+    "create a form, and type it on a computer, laptop or tablet."
+   ],
+   "key_inquiry_questions": [
+    "Why should one be careful when filling in forms?",
+    "What information do we fill in forms?"
+   ],
+   "core_competences": "Creativity and Imagination: This is promoted as the learner generates ideas and uses them to create a form and shares it with peers.\nDigital Literacy: It is enhanced as the learner manipulates digital devices to download, create and fill in forms.",
+   "values": "Love: This is promoted as the learner accommodates other’s contributions as they work jointly to fill in forms.\nIntegrity : This is promoted as the learner willingly displays their forms for peer review and feedback.",
+   "pcis": "Gender Education: This is promoted as the learner interacts with content about the various people and genders in the theme of family.",
+   "links": "The learner is able to relate the concept of filling in forms to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     19,
+     20
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.a",
+     "letter": "a",
+     "text": "identify the required information to be filled in forms for different purposes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.b",
+     "letter": "b",
+     "text": "fill information in forms correctly for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.c",
+     "letter": "c",
+     "text": "realise the importance of filling forms correctly for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO",
+   "number": "2.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 2: Family celebrations)",
+   "sequence": 211,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Target sounds"
+   ],
+   "learning_experiences": [
+    "listen to a variety of audio materials and identify sounds (/ɜː/ /ɑː/ /ɔɪ/ /aɪ/ / l/ /r/), words and expressions related to the theme,",
+    "listen to a passage or dialogue read by the teacher and identify the sounds /ɜː/ /ɑː/ /ɔɪ/ /aɪ/ / l/ /r/,",
+    "use vocabulary related to the theme to construct a variety of sentences,",
+    "team up to use word wheels with sounds /ɜː/ /ɑː/ /ɔɪ/ /aɪ/ / l/ /r/ to form new words such as load, road, boy, toy,",
+    "watch a video together from the web offline or online and identify target sounds and words,",
+    "role play and create a video collaboratively using the learnt sounds and words."
+   ],
+   "key_inquiry_questions": [
+    "Why should you pronounce sounds and words correctly?",
+    "Which words are used as subjects in a sentence?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced as the learner role-plays and creates a video collaboratively using learnt sounds and words.\nDigital Literacy: The skills are developed as the learner watches a video and identifies words with target sounds.",
+   "values": "Unity: This is enhanced as the learner cooperates with peers to use word wheels to form new words with target sounds.\nLove: It is developed as the learner displays an attitude of care for others as they work together.",
+   "pcis": "Social cohesion: This is developed as the learner works together with peers harmoniously to complete tasks.",
+   "links": "The learner is able to relate the concept of pronunciation to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "discriminate sounds and words for listening, comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "pronounce words containing target sounds accurately for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "appreciate the importance of accurate pronunciation for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T2_INTENSIVE_READING",
+   "number": "2.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading (Theme 2: Family celebrations)",
+   "sequence": 221,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Poems",
+    "Stories",
+    "Similes and sayings",
+    "Reading techniques"
+   ],
+   "learning_experiences": [
+    "talk about pictures and the title of a poem and story (featuring similes and sayings) together,",
+    "read a poem or story (featuring similes and sayings) in print and non-print texts related to the theme for comprehension,",
+    "identify events in a poem or a story for logical and fluent flow,",
+    "find new words and similes in a poem or story with peers,",
+    "recite the poem and answer oral questions from poems and stories (featuring similes and sayings),",
+    "participate in a readers’ theatre collaboratively to read a story,",
+    "discuss and role-play events in a text based on the theme,",
+    "watch a video related to the theme for specific information."
+   ],
+   "key_inquiry_questions": [
+    "Why should we read the title and pictures in a story?",
+    "What is your favourite poem or story?"
+   ],
+   "core_competences": "Self-efficacy: This is developed as the learner is able to identify and talk about events in a story logically and fluently.\nLearning to learn: It is enhanced as the learner uses appropriate reading techniques to answer questions appropriately.",
+   "values": "Social justice: This is promoted as the learner fosters fairness by allowing equal opportunities to peers when participating in a readers' theatre.\nResponsibility: This is enhanced as the learner engages in assigned roles and duties diligently.",
+   "pcis": "Self-esteem: It is developed as the learner gains confidence as they recite poems or stories with peers.",
+   "links": "The learner is able to link the concept of reading poems and songs to their learning in Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     23,
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "read poems or stories related to the theme for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "apply appropriate reading techniques to answer direct and indirect questions based on a poem or story for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "realise the importance of reading comprehension for lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS",
+   "number": "2.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Classes: Nouns (Theme 2: Family celebrations)",
+   "sequence": 231,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Regular Nouns",
+    "Irregular Nouns"
+   ],
+   "learning_experiences": [
+    "give examples of regular and irregular nouns,",
+    "work jointly to discuss the difference between regular and irregular nouns,",
+    "pick out and write plurals of regular and irregular nouns from an audio recording,",
+    "construct sentences using regular and irregular nouns in their plural forms,",
+    "look up regular and irregular nouns on the internet and write them down,",
+    "create a puzzle using a list of regular and irregular nouns and solve with peers."
+   ],
+   "key_inquiry_questions": [
+    "How do you show the number of things you have?",
+    "Which things do we have in our classroom?"
+   ],
+   "core_competences": "Critical thinking and problem solving: This is enhanced as the learner creates a puzzle using a list of regular and irregular nouns with peers.\nLearning to Learn: It is developed as the learner gains knowledge on nouns and applies it in making sentences as well as creating puzzles.",
+   "values": "Peace: This is cultivated as the learners work harmoniously to discuss the difference between regular and irregular nouns.\nUnity: This is developed as the learner collaborates with others to use digital devices to learn about nouns.",
+   "pcis": "Peace Education: This is developed as the learner appreciates the need to coexist with peers while working together in group tasks.",
+   "links": "The learner is able to connect the concept of plural forms of nouns to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     25,
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.a",
+     "letter": "a",
+     "text": "identify plurals of regular and irregular nouns for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.b",
+     "letter": "b",
+     "text": "use plurals of regular and irregular nouns in spoken and written language for communication clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.c",
+     "letter": "c",
+     "text": "promote the use of regular and irregular nouns in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING",
+   "number": "2.4.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Writing (Theme 2: Family celebrations)",
+   "sequence": 241,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Open ended Compositions"
+   ],
+   "learning_experiences": [
+    "discuss how to write a story on a given topic together,",
+    "talk about the possible order of events in a given story with peers,",
+    "write the first paragraph of a composition while observing the correct punctuation and spelling,",
+    "write the whole composition legibly, neatly, and independently,",
+    "proof-read compositions with peers,",
+    "collaborate with peers to share their completed stories,",
+    "search and read written compositions online or offline."
+   ],
+   "key_inquiry_questions": [
+    "Why is it necessary to express thoughts and feelings clearly?",
+    "How can you make your story interesting?"
+   ],
+   "core_competences": "Creativity and Imagination: This is nurtured as the learner explores creative ideas to talk about the possible order of events in a given story with peers.\nDigital Literacy: This is developed as the learner interacts with digital devices to search for resources on guided compositions online.",
+   "values": "Integrity: This is developed as the learner puts in effort to complete own compositions independently.\nResponsibility: This is enhanced as the learner takes up allocated tasks to search and read written compositions online or offline .",
+   "pcis": "Social Cohesion: This is developed as the learner fosters tolerance and respect for one another during group activities.",
+   "links": "The learner is able to connect the aspect of guided composition writing to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.a",
+     "letter": "a",
+     "text": "express relevant ideas on a given topic for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.b",
+     "letter": "b",
+     "text": "write an open ended composition creatively for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.c",
+     "letter": "c",
+     "text": "realise the importance of creativity in writing for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO",
+   "number": "3.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 3: Etiquette)",
+   "sequence": 311,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Polite words and phrases",
+    "Target sounds"
+   ],
+   "learning_experiences": [
+    "use tongue twisters to practise the sounds /e/, /eɪ/, /p/ and /b/,",
+    "listen to correct pronunciation of words and phrases related to the theme containing sounds /e/, /eɪ/, /p/ and /b/ from a digital device,",
+    "practise saying words and phrases containing the sounds /e/, /eɪ/, /p/ and /b/,",
+    "write words containing the sounds /e/, /eɪ/, /p/ and /b/ from a dictation,",
+    "solve a word puzzle by finding words and phrases with polite words learnt collaboratively,",
+    "construct simple sentences using polite words and phrases related to the theme,",
+    "team up to recite a poem featuring polite words and phrases."
+   ],
+   "key_inquiry_questions": [
+    "Why should we pronounce sounds and words clearly?",
+    "Which words do we use to show politeness?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner works with peers to practise saying words and phrases containing the sounds.\nLearning to Learn: It is enhanced as the learner builds onto their learning experience by using polite words and phrases in different contexts.",
+   "values": "Unity: This promoted as the learner teams up with peers to recite a poem featuring polite words and phrases.\nRespect: The value is developed as the learner appreciates individual differences and accommodates diverse views when solving word puzzles.",
+   "pcis": "Social Cohesion: This is developed as the learner appreciates the use of etiquette to promote harmonious co-existence and interpersonal relationships.",
+   "links": "The learner is able to link the concept of pronunciation and vocabulary to their learning in Kiswahili.",
+   "design_notes": "Second read left this for a person to confirm: outcome letters read as bcde.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "identify polite words and phrases in a conversation for communication",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "pronounce words and phrases containing target sounds accurately for effective communication",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "use appropriate words and phrases to show politeness in different contexts",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.e",
+     "letter": "e",
+     "text": "promote the use of using polite words and phrases in different contexts",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T3_INTENSIVE_READING_CO",
+   "number": "3.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading: Comprehension (Theme 3: Etiquette)",
+   "sequence": 321,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Text (300 words)",
+    "Factual information",
+    "Inferential information"
+   ],
+   "learning_experiences": [
+    "read a variety of print and non-print texts of about 300 words,",
+    "identify events in a story or a passage of about 300 words with logical and fluent flow,",
+    "answer factual and inferential questions from a text of about 300 words,",
+    "work together to infer the meaning of vocabulary from contexts,",
+    "skim through a digital text of about 300 words focusing mainly on the title and illustrations,",
+    "scan for information such as vocabulary words and answer questions from print or digital text,",
+    "skim or scan a comic, magazine, newspaper or age-appropriate reader,",
+    "discuss and role-play events in texts based on the theme."
+   ],
+   "key_inquiry_questions": [
+    "Why do we read?",
+    "How can we read faster?"
+   ],
+   "core_competences": "Critical thinking and problem solving: This is developed as the learner uses logical thinking to answer factual and inferential questions from a text of about 300 words.\nDigital Literacy: It is promoted as the learner is able to interact with digital devices to skim through digital texts focusing on the title and illustrations.",
+   "values": "Social Justice: This is promoted as the learner accords peers equal opportunities to infer the meaning of vocabulary from contexts.\nRespect: This is developed as the learner is able to demonstrate etiquette when dealing with peers in class during common tasks.",
+   "pcis": "Citizenship: This is fostered as the learner works with peers peacefully during group activities.",
+   "links": "The learner is able to connect the concept of etiquette and politeness to their daily interactions and in all other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     31,
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T3_INTENSIVE_READING_CO.a",
+     "letter": "a",
+     "text": "read a text of about 300 words for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T3_INTENSIVE_READING_CO.b",
+     "letter": "b",
+     "text": "apply appropriate reading skills to obtain both factual and inferential information from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T3_INTENSIVE_READING_CO.c",
+     "letter": "c",
+     "text": "recommend intensive reading in their day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN",
+   "number": "3.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Language pattern (Theme 3: Etiquette)",
+   "sequence": 331,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Enough + Nominal + Infinitive",
+    "A lot/a lot of..."
+   ],
+   "learning_experiences": [
+    "recite a poem with the pattern enough + nominal + infinitive and a lot/a lot of... related to the theme with peers,",
+    "identify lines from the poem that have the language patterns enough + nominal + infinitive and a lot/a lot of....,",
+    "construct sentences using the language patterns enough + nominal + infinitive and a lot/a lot of... with peers,",
+    "complete a written exercise based on the language patterns enough + nominal + infinitive and a lot/a lot of...."
+   ],
+   "key_inquiry_questions": [
+    "Why should we use correct sentences in our speech or writing?",
+    "How can we write sentences correctly?"
+   ],
+   "core_competences": "Communication and Collaboration: This is promoted as the learner is able to make own sentences using appropriate language patterns correctly.\nSelf-efficacy: This is enhanced as the learner gains confidence to recite poems before peers.",
+   "values": "Respect: This is promoted as the learner is able to appreciates other’s contributions when working to identify lines from the poem that have language patterns.\nIntegrity: This is enhanced as the learner is able to demonstrate commitment to tasks both individually and when working with peers.",
+   "pcis": "Peaceful coexistence: It is promoted as the learner is able to interact and socialise with peers harmoniously when working on tasks.",
+   "links": "The learner is able to relate the concept of language structures with their learning of similar concepts in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     33,
+     34
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.a",
+     "letter": "a",
+     "text": "use the target language pattern in sentences correctly for fluency in speech",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.b",
+     "letter": "b",
+     "text": "respond to questions on the language patterns in written communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.c",
+     "letter": "c",
+     "text": "adopt the use of language structures for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING",
+   "number": "3.4.1",
+   "strand": "Writing",
+   "sub_strand": "Mechanics of Writing: Handwriting (Theme 3: Etiquette)",
+   "sequence": 341,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Legibility",
+    "Neatness",
+    "Spelling"
+   ],
+   "learning_experiences": [
+    "use appropriate writing instruments (pencil first and then a pen) to copy a simple text,",
+    "print lower and upper case letters neatly and legibly,",
+    "pay attention to consistent letter size and height, direction of strokes such as dots, tails, crossbars, curves and differences in letter orientation like ‘d and ‘b,",
+    "write silent letters in words and phrases such as ‘please listen’ ‘I beg your pardon’, ‘may I borrow your watch’,",
+    "look up words and find the correct spelling from a digital device with peers,",
+    "consistently use the correct spelling of words with blends and double consonants."
+   ],
+   "key_inquiry_questions": [
+    "How does being unable to read other people’s work make you feel?",
+    "Why should you ensure your written work is easy to read?"
+   ],
+   "core_competences": "Self-efficacy: This is enhanced as the learner writes words legibly, neatly and spells them correctly.\nLearning to learn: This is developed as the learner builds on their writing skills by paying attention to consistent letter size and height, direction of strokes such as dots, tails, crossbars, curves and differences in letter orientation.",
+   "values": "Love: It is shown as the learners work harmoniously with peers to look up words and find the correct spelling from a digital device.\nResponsibility: It is enhanced as the learner uses the digital devices appropriately to look up words and find correct spelling.",
+   "pcis": "Self-esteem: This is developed as learner gains confidence in writing legibly and neatly.",
+   "links": "The learner is able to relate the concept of writing legibly and neatly in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     35,
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.a",
+     "letter": "a",
+     "text": "write legibly and neatly in print script for clarity of communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.b",
+     "letter": "b",
+     "text": "apply accurate and consistent spelling in print script for writing fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.c",
+     "letter": "c",
+     "text": "adopt the use of accurate and consistent spelling in a variety of print scripts for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO",
+   "number": "4.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 4: Accidents- first aid)",
+   "sequence": 411,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Word Stress",
+    "Vocabulary building"
+   ],
+   "learning_experiences": [
+    "listen to and recite short rhythmic poems featuring the vocabulary words e.g. bandage, treatment, hospital, injury, cycling lane,",
+    "say tongue twisters to practise the sounds /ɒ/ eɪ/ /aɪ/ and the consonant clusters ‘sn’ ‘tr’ ‘st’ collaboratively,",
+    "identify words containing the sounds / ɒ/ /eɪ//aɪ/ and the consonant clusters ‘sn’ ‘tr’ ‘st’,",
+    "say words related to the theme using the correct stress with peers, (’object, ob’ject)",
+    "construct sentences with words whose meaning may be distinguished through word stress,",
+    "construct sentences using vocabulary related to the theme collaboratively,",
+    "record themselves practising word stress and present the recording to the whole class."
+   ],
+   "key_inquiry_questions": [
+    "Why should we learn new words?",
+    "How can we say sounds and words correctly?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner is able to say sentences containing words whose meaning is contrasted by stress.\nLearning to learn: This is enhanced as the learner is able to learn applying correct stress in words from digital devices and platforms.",
+   "values": "Love: It is enhanced as the learner is able to assist peers to pronounce words accurately and record themselves.\nResponsibility: It is promoted as the learner takes up specific role as they participate in recording activities.",
+   "pcis": "Safety and Security Education: This is promoted as the learner is exposed to texts on potential causes of accidents and handling first aid.",
+   "links": "The learner is able to connect the concept of pronunciation and stress to their learning of Kiswahili.",
+   "design_notes": "Second read left this for a person to confirm: outcome letters read as bcd.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     37,
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "pronounce words related to the theme using the correct stress for effective communication",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use vocabulary related to the theme in a variety of contexts for speech clarity",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "promote appropriate use of stress in a variety of contexts for effective communication",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI",
+   "number": "4.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading: Visuals (Theme 4: Accidents- first aid)",
+   "sequence": 421,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Interpreting visuals"
+   ],
+   "learning_experiences": [
+    "read age-appropriate digital texts in different formats such as audio, video and animated stories,",
+    "view cartoons, mimes, pictures, photographs, comics showing an underpass, foot bridge, luggage rack, roundabout, railway crossing,",
+    "work together to interpret and discuss visuals,",
+    "predict happenings in cartoons or comics and write down their thoughts.",
+    "conduct virtual tours on google maps and find the direction of various places on the map,",
+    "use google maps, digital maps and printed maps to give directions,",
+    "locate information from a simple map and make short sentences using terms like north, south, east and west. For example, ‘The sun rises in the east.’"
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to interpret visuals correctly?",
+    "How do visuals like photos and videos enhance our understanding of a text?"
+   ],
+   "core_competences": "Digital Literacy: This is enhanced as the learner uses technology to conduct virtual tours on google maps and find the direction of various places on the map.\nLearning to Learn: The is developed as the learner builds on their learning experience by locating information from a simple map and make short sentences.",
+   "values": "Unity: It is developed as the learner works together with peers as they discuss and interpret visuals.\nLove: This is enhanced as the learner appreciates views from peers when viewing and interpreting visuals.",
+   "pcis": "Self-esteem: This is developed as the learner is able to interpret visuals independently for information and directions in their daily experiences.",
+   "links": "The learner relates the concept of interpreting visuals with their learning of concepts such as map reading in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.a",
+     "letter": "a",
+     "text": "read visuals in print and digital formats for information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.b",
+     "letter": "b",
+     "text": "interpret visual media appropriately for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.c",
+     "letter": "c",
+     "text": "acknowledge the importance of visual media for lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN",
+   "number": "4.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word classes: Pronouns (Theme 4: Accidents- first aid)",
+   "sequence": 431,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Personal pronouns",
+    "Possessive pronouns"
+   ],
+   "learning_experiences": [
+    "identify personal and possessive pronouns used as subjects and objects in sentences,",
+    "discuss pictures on the theme using personal and possessive pronouns collaboratively,",
+    "look at pictures and/or flash cards of a car near a bridge showing parts such as, wiper, bridge, head lights, signal lights, fog lights, and interpret the visuals,",
+    "make sentences using the vocabulary words such as wiper, bridge, head lights, signal, fog lights, and use personal and possessive pronouns,",
+    "construct sentences about the theme using personal and possessive pronouns as subjects and objects,",
+    "work jointly to read a newspaper, magazine or poem among others, to identify personal and possessive pronouns,",
+    "type personal and possessive pronouns on a word processor, mobile device or tablet."
+   ],
+   "key_inquiry_questions": [
+    "Which words replace names of people or things in sentences?",
+    "Which words do we use to show that something belongs to us?"
+   ],
+   "core_competences": "Communication and Collaboration: This is promoted as the learner is able to construct sentences orally with peers.\nSelf-efficacy: It is developed as the learner gains confidence and high self-esteem when working individually to type personal and possessive pronouns on a word processor, mobile device or tablet",
+   "values": "Responsibility: It is developed as the learner takes up assigned tasks when discuss pictures on the theme using personal and possessive pronouns collaboratively.\nUnity: It is promoted as learners work jointly to read a newspaper, magazine or poem among others, to identify personal and possessive pronouns",
+   "pcis": "ICT: This is promoted as the learner is able to use digital devices to access information online during research on personal and possessive pronouns.",
+   "links": "The learner is able to connect the concept of personal safety and first aid to their learning of similar concepts in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.a",
+     "letter": "a",
+     "text": "identify personal and possessive pronouns used as subjects and objects for communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.b",
+     "letter": "b",
+     "text": "use personal and possessive pronouns as subject and object correctly for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.c",
+     "letter": "c",
+     "text": "adopt the use of personal and possessive pronouns in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING",
+   "number": "4.4.1",
+   "strand": "Writing",
+   "sub_strand": "Functional Writing (Theme 4: Accidents- first aid)",
+   "sequence": 441,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Friendly Letter",
+    "SMS"
+   ],
+   "learning_experiences": [
+    "discuss the correct format of a friendly letter with peers (such as address, date, salutation, body, ending),",
+    "write friendly letters using the correct format - such as letters to siblings, parents and friends,",
+    "brainstorm with peers on the components of an SMS (such as telephone numbers, message, sender, receiver)",
+    "practise writing SMS with peers,",
+    "write a letter to a friend in another school telling them about the new words on road safety they have learnt, for example, u turn, cycling lane, roundabout, railway crossing, number plates among others,",
+    "use mobile phones to write an SMS to one another on the theme."
+   ],
+   "key_inquiry_questions": [
+    "Why do you pass information to others?",
+    "How do you pass information to your friends?",
+    "What kind of information do you share with your friends?"
+   ],
+   "core_competences": "Communication and Collaboration. These are developed as the learner discusses with peers how to write an SMS using the correct format.\nSelf-efficacy: This is enhanced as the learner gains confidence in learning to express themselves through writing letters and SMS.",
+   "values": "Unity: This is developed as the learner cooperates when brainstorming with peers on the components of an SMS.\nIntegrity: This is developed as the learner displays honesty as they use a mobile phone to write an SMS.",
+   "pcis": "Safety and Security: This is promoted as the learner interacts with texts related to the theme on Accidents.",
+   "links": "The learner is able to relate the skill of letter writing to similar skills in learning Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     43,
+     44
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.a",
+     "letter": "a",
+     "text": "identify the key parts of a friendly letter in preparation for writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.b",
+     "letter": "b",
+     "text": "write a friendly letter using the correct format for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.c",
+     "letter": "c",
+     "text": "send an SMS correctly for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.d",
+     "letter": "d",
+     "text": "promote the use of friendly letters and SMS in a variety of communication contexts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO",
+   "number": "5.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary: (Theme 5: Nutrition – balanced diet)",
+   "sequence": 511,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Listening Comprehension",
+    "Language Pattern (noun phrase + would like to be ...)"
+   ],
+   "learning_experiences": [
+    "listen to audio-visual recordings of songs, stories and passages featuring the sounds /ʊ/ /uː/ /æ/ /f/ /v/,",
+    "respond to questions from the listening text,",
+    "construct sentences related to a story or listening comprehension using the language pattern, (noun phrase + would like to be ...),",
+    "retell a story he or she has listened to accurately,",
+    "respond correctly to questions based on the text,",
+    "dramatise sections of a story in groups for comprehension,",
+    "discuss with peers the lesson learnt from a story."
+   ],
+   "key_inquiry_questions": [
+    "Why should we listen carefully?",
+    "How can we improve our pronunciatio n?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced as the learner participates in sharing their thoughts as they discuss collaboratively.\nCritical Thinking and Problem Solving: This is cultivated as the learner is able to draw conclusions from the listening text.",
+   "values": "Love: This is cultivated as the learner is able to portray a caring attitude to special groups of people that require meals with diverse nutritional value.",
+   "pcis": "Prevention of lifestyle or non-communicable diseases: This is promoted as the learner is informed on a balanced diet for varied nutritional needs.",
+   "links": "The learner is able to relate the theme of nutrition to their learning in Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     45,
+     46
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "listen actively to a variety of texts to gain information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "apply vocabulary related to the theme in a variety of contexts for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use the language pattern correctly for effective oral communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "promote listening to a variety of texts for information and enjoyment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING",
+   "number": "5.2.1",
+   "strand": "Reading",
+   "sub_strand": "Extensive Reading (Theme 5: Nutrition – balanced diet)",
+   "sequence": 521,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Independent Reading"
+   ],
+   "learning_experiences": [
+    "select age-appropriate and high-interest reading materials such as narratives, poems, newspapers and magazines in print or electronic format,",
+    "set up an after-school club where they meet on a regular basis and read varied texts,",
+    "retell the stories they have read collaboratively,",
+    "share opinions and reflections on the texts they have read,",
+    "use materials in the classroom to read extensively,",
+    "read texts quietly or silently for pleasure."
+   ],
+   "key_inquiry_questions": [
+    "Why should we read widely?",
+    "What materials do you enjoy reading?"
+   ],
+   "core_competences": "Digital Literacy: This is developed as the learner uses selected reading materials from electronic sources.\nLearning to Learn: It is enhanced as the learner develops extensive reading strategies in their language clubs.",
+   "values": "Responsibility: This is cultivated as the learner engages diligently in assigned tasks on independent.\nLove: This is enhanced as the learner respects other learners' opinions when reading.",
+   "pcis": "Life skills : Effective communication is demonstrated as the learner reads a variety of materials to build speed and fluency.",
+   "links": "The learner is able to link the concept of independent reading to Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     47,
+     48
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.a",
+     "letter": "a",
+     "text": "select appropriate reading materials for lifelong learning",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.b",
+     "letter": "b",
+     "text": "read a variety of familiar materials independently to build reading speed and fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.c",
+     "letter": "c",
+     "text": "apply appropriate strategies to read independently for information and enjoyment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.d",
+     "letter": "d",
+     "text": "realise the importance of independent reading in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI",
+   "number": "5.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Classes: Adjectives (Theme 5: Nutrition – balanced diet)",
+   "sequence": 531,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Regular adjectives",
+    "Irregular Adjectives"
+   ],
+   "learning_experiences": [
+    "identify adjectives from an audio or written text,",
+    "collaboratively talk about various items in the classroom using adjectives,",
+    "describe items using the comparative forms of regular and irregular adjectives with peers,",
+    "use adjectives in the correct order in sentences collaboratively,",
+    "write correct sentences using comparative forms of adjectives in the right order,",
+    "write sentences on tablets, computers and other digital resources using adjectives,",
+    "use adjectives to talk about scenes, pictures or comics based on the themes with peers."
+   ],
+   "key_inquiry_questions": [
+    "Why should we say the correct shape and size of things?",
+    "Which are some of the words you use to talk about how someone feels or looks?",
+    "How do we describe things?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner uses adjectives correctly in sentences as they interact with peers.\nSelf-efficacy is developed as the learner is able to gain confidence as they use adjectives accurately in their day-to-day communication.",
+   "values": "Unity: It is promoted as learners cohesively relate with each other to perform activities such as identifying and discussing adjectives.\nResponsibility: This is cultivated as the learner takes personal initiative to complete assigned roles.",
+   "pcis": "Health Education: This is promoted as the learner gets information on lifestyle diseases through the theme of balanced diet .",
+   "links": "The learner is able to connect the concept of comparative adjectives to the learning of adjectives in English and Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     49,
+     50
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.a",
+     "letter": "a",
+     "text": "By the end of the Sub Strand, the learner should be able to: communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.b",
+     "letter": "b",
+     "text": "use adjectives of size and shape in the right order for clarity of communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.c",
+     "letter": "c",
+     "text": "adopt the use of adjectives for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING",
+   "number": "5.4.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Writing (Theme 5: Nutrition – balanced diet)",
+   "sequence": 541,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Narrative Compositions"
+   ],
+   "learning_experiences": [
+    "plan a composition with peers, then write a draft and present it to the whole class,",
+    "use similes to make their compositions interesting,",
+    "create their own similes and use them in their composition,",
+    "write a narrative composition of about 60-80 words and incorporate similes,",
+    "rearrange jumbled up sentences from an oral narrative into coherent paragraphs,",
+    "listen to a narrative on radio or television and rewrite it in their own words,",
+    "watch and dramatise a story related to the theme (could be from a digital device),",
+    "visit a supermarket, food store or grocery store in the school neighbourhood and write a narrative composition based on that experience."
+   ],
+   "key_inquiry_questions": [
+    "Why do you enjoy listening to stories?",
+    "Why is it important to plan our composition?",
+    "How can you write an interesting composition?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner works with peers in writing a composition and presenting it in class.\nDigital Literacy: It is developed as the learner is able to use digital devices to access and share information online.",
+   "values": "Love: This is enhanced as the learner interacts when working collaboratively.\nResponsibility: This is developed as the learners takes a positive initiative in writing a composition.",
+   "pcis": "Lifestyle and Communicable Diseases: Sensitisation on this issue is achieved as the learner writes compositions based on the theme Balance Diet.",
+   "links": "The learner is able to relate the concept of writing a narrative to their learning in Kiswahili and French.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     51,
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.a",
+     "letter": "a",
+     "text": "describe the parts of a narrative composition in preparation for writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.b",
+     "letter": "b",
+     "text": "organise thoughts fluently, clearly and precisely in a coherent paragraph for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.c",
+     "letter": "c",
+     "text": "create a narrative composition of about 60-80 words for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.d",
+     "letter": "d",
+     "text": "realise the role of creativity in writing for different purposes",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO",
+   "number": "6.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 6: Internet-email)",
+   "sequence": 611,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Stress and Intonation"
+   ],
+   "learning_experiences": [
+    "listen to an audio-visual recording of words featuring the sounds /ʊ/ /uː/ /f/ /v/",
+    "listen to correct stress in words such as address, increase among others (whether noun or verb),",
+    "listen to correct intonation in questions and statements to identify a speaker’s feelings,",
+    "recite a poem featuring ‘WH’ questions and declaratives collaboratively,",
+    "vary intonation when uttering questions and statements,",
+    "construct sentences orally with peers using vocabulary related to the theme."
+   ],
+   "key_inquiry_questions": [
+    "Why do we vary our voice when asking questions?",
+    "How does good pronunciation of words and sounds help us?",
+    "How do we find out what we do not know?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced as the learner is able to recite poems collaboratively.\nSelf-efficacy: This is developed as the learner achieves correct stress and intonation in speech.",
+   "values": "Responsibility: This is enhanced as the learner is able to take initiative of creating sentences using vocabulary individually.\nLove: It is promoted as the learner is able to show care as they assist peers to use correct stress and intonation in sentences.",
+   "pcis": "Digital Literacy: This is promoted as the learner is able to use and manipulate digital devices to learn correct stress and intonation.",
+   "links": "The learner is able to connect the concept of articulation with the learning in Kiswahili and Music.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     53,
+     54
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify correct stress and intonation in ‘WH’ questions, other questions and statements for clarity in speech",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "use correct stress and intonation in questions and statements to communicate clearly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use vocabulary related to the theme in a variety of contexts for effective oral communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "adopt the use of varying intonation for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T6_INTENSIVE_READING",
+   "number": "6.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading (Theme 6: Internet-email)",
+   "sequence": 621,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Dialogue"
+   ],
+   "learning_experiences": [
+    "locate new words and sentence structures in a dialogue,",
+    "read a variety of dialogues related to the theme in print and non-print formats,",
+    "answer factual and inferential questions individually and collaboratively,",
+    "identify events in a dialogue for logical flow."
+   ],
+   "key_inquiry_questions": [
+    "How can we obtain information from texts?",
+    "What stories or books have you read?"
+   ],
+   "core_competences": "Self-efficacy: This is developed as the learner uses appropriate intensive reading skills to obtain factual and inferential information.\nLearning to Learn: This is enhanced as the learner locates new words and sentences individually from a dialogue.",
+   "values": "Responsibility: It is enhanced as the learner takes up specific roles assigned such as identifying events in a dialogue for logical flow.",
+   "pcis": "Safety and Security: This is inculcated as the learner is guided on how to take precautions when using the internet.",
+   "links": "The learner is able to relate the concept on internet to their learning in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     55,
+     56
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T6_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "read a variety of dialogues related to email and the internet for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T6_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "apply appropriate intensive reading skills to obtain specific factual and inferential information for lifelong learning",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T6_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "adopt reading for purposes of comprehension and information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE",
+   "number": "6.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Class: Determiners (Theme 6: Internet-email)",
+   "sequence": 631,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Quantifiers"
+   ],
+   "learning_experiences": [
+    "select countable and uncountable nouns from a list provided by the teacher,",
+    "use the quantifiers (much, many, some and any) correctly with nouns and construct sentences with peers,",
+    "recite poems and rhymes containing the quantifiers (much, many, some and any) in small groups,",
+    "fill in blank spaces using correct quantifiers,",
+    "use digital devices to compose a short poem or a paragraph featuring the quantifiers (much, many, some and any),",
+    "use the quantifiers (much, many, some and any) in a role-play or a dialogue with peers."
+   ],
+   "key_inquiry_questions": [
+    "How can we quantify nouns we cannot count?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: This is enhanced as the learner composes poems and paragraphs using own ideas.\nDigital Literacy is manifested as the learners manipulates digital devices while downloading and composing poems.",
+   "values": "Unity: This is promoted as the learner is able to cooperate with peers as they recite poems and role-play dialogues.\nLove: This is developed as the learner demonstrates care to peers when assisting them to recite a poem.",
+   "pcis": "Citizenship: Social cohesion is enhanced as the learner harmoniously interacts and use quantifiers in sentences during group tasks.",
+   "links": "The learner is able to relate the concept of quantifiers to their learning in Mathematics.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     57,
+     58
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.a",
+     "letter": "a",
+     "text": "identify quantifiers and nouns used with them appropriately for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.b",
+     "letter": "b",
+     "text": "use quantifiers in sentences correctly for communication clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.c",
+     "letter": "c",
+     "text": "adopt the correct use of quantifiers in everyday communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING",
+   "number": "6.4.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Writing (Theme 6: Internet-email)",
+   "sequence": 641,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Pictorial Compositions"
+   ],
+   "learning_experiences": [
+    "identify pictures from online and offline sources collaboratively,",
+    "use pictures from online and offline sources to write a pictorial composition of 60 - 80 words based on the theme,",
+    "discuss pictures collaboratively and write pictorial compositions of about 60 - 80 words,",
+    "watch a variety of videos related to the theme and write pictorial compositions collaboratively,",
+    "generate a wide range of pictures from the internet and write pictorial composition."
+   ],
+   "key_inquiry_questions": [
+    "How do pictures make you feel?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner collaboratively discusses and uses pictures to write composition.\nDigital Literacy: This is enhanced as the learner uses digital devices to view pictures online and write compositions.",
+   "values": "Unity: This is promoted as the learner collaborates harmoniously with peers in groups to discuss pictures and watch videos related to the theme.\nRespect: This is cultivated as the learner engages with peers mutually and accommodates others opinion on varied issues.",
+   "pcis": "Cyber Safety: It is promoted as the learners use internet responsibly to access pictures and visuals for composition writing.",
+   "links": "The learner is able to relate the concept of pictorial compositions to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     59,
+     60
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.a",
+     "letter": "a",
+     "text": "organise pictures in a logical sequence to write pictorial compositions of about 60-80 words on the theme",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.b",
+     "letter": "b",
+     "text": "write a pictorial composition of about 60 - 80 words on the theme for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.c",
+     "letter": "c",
+     "text": "adopt the use of a wide range of pictures to write pictorial compositions on different topics for communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO",
+   "number": "7.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 7: Technology- cyber safety)",
+   "sequence": 711,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Interactive",
+    "Listening",
+    "Turn taking",
+    "Vocabulary building"
+   ],
+   "learning_experiences": [
+    "listen for the sounds /ɛə/ /j/ /ʤ//ʒ/ from an audio text and then say them aloud,",
+    "act out a dialogue featuring vocabulary with the sounds /ɛə/ /j/ /ʤ//ʒ/ collaboratively,",
+    "apply facial expressions and gestures appropriately while reciting choral verses with peers,",
+    "record one another when performing a choral verse or short dialogues,",
+    "watch audio-visual recordings of short interviews and then conduct a role play with others,",
+    "take turns during an oral interview, discussion or debate,",
+    "participate in a debate, interview or discussion on social media."
+   ],
+   "key_inquiry_questions": [
+    "Why should you listen to others when they are speaking?",
+    "Why should we wait for our turn to speak?",
+    "How do we show when an action took place?"
+   ],
+   "core_competences": "Communication and Collaboration: These are enhanced as the learner is able to participate effectively in a two-way conversation with peers.\nDigital Literacy: This is developed as the learner uses social media to share views on debates and watch interviews.",
+   "values": "Unity: This is enhanced as the learner is able to collaborate with peers to perform task such as debates, interviews and role playing a dialogue.\nRespect: This is promoted as the learner is able to accommodate the views of others during debates or interviews.",
+   "pcis": "Cyber Safety: It is promoted as the learner uses the internet responsibly and with integrity to watch an interview.",
+   "links": "The learner is able to relate the theme of technology to their learning in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     61,
+     62
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "participate actively in a two-way conversation (turn-taking) in various settings for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "apply vocabulary related to the theme in different settings for clarity of speech",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use the present and past tense correctly in a two-way dialogue for communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "realise the importance of turn taking in oral communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN",
+   "number": "7.2.1",
+   "strand": "Reading",
+   "sub_strand": "Extensive Reading: Independent Reading (Theme 7: Technology- cyber safety)",
+   "sequence": 721,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Narratives/Poems"
+   ],
+   "learning_experiences": [
+    "select appropriate and high-interest reading print and electronic materials related to the theme such as narratives, poems and graded readers,",
+    "set up an after school club where they meet on a regular basis to read extensively,",
+    "retell the stories they have read in pairs or groups,",
+    "share opinions and reflections on the texts they have read,",
+    "identify and discuss proverbs used in graded readers."
+   ],
+   "key_inquiry_questions": [
+    "Why should we read different types of materials?",
+    "What kind of materials do you enjoy reading?",
+    "What can you do to remember what you read?"
+   ],
+   "core_competences": "Communication and Collaboration: This is developed as the learner exchanges ideas during school reading clubs.\nLearning to Learn: This is enhanced as the learner sources for information on their own.",
+   "values": "Respect: It is developed as the learner appreciates opinions of others when sharing reflections on the text\nIntegrity: It is portrayed as the learner displays honesty when selecting appropriate reading material.",
+   "pcis": "Safety and Security education: It is inculcated through the theme of cyber safety\nSelf-awareness: This is developed when learners acquire ability to describe themselves through interactive language tasks",
+   "links": "The learner is able to relate the theme of cyber safety to their learning in Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     63,
+     64
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN.a",
+     "letter": "a",
+     "text": "read a variety of materials (narratives, poems, graded readers) for lifelong learning",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN.b",
+     "letter": "b",
+     "text": "demonstrate independent reading of a variety of materials (narratives, poems, graded readers) for information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN.c",
+     "letter": "c",
+     "text": "realise the importance of independent reading in a variety of contexts for enjoyment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS",
+   "number": "7.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word classes: verb aspect (Theme 7: Technology- cyber safety)",
+   "sequence": 731,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Present Progressive Aspect",
+    "Past Progressive Aspect"
+   ],
+   "learning_experiences": [
+    "listen to a radio or TV programme and identify the present and past progressive forms,",
+    "give examples of actions in the present and past progressive aspect,",
+    "use a given list of verbs to form sentences in the present and past progressive aspect collaboratively,",
+    "watch a video and write examples of the present and past progressive aspect in a notebook,",
+    "role-play or simulate an event in which they use the present and past progressive forms forms,",
+    "complete a sentences using words in their present and past progressive aspect correctly."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to show when something happened?",
+    "How do we tell an action is or was happening?"
+   ],
+   "core_competences": "Self-efficacy: This is promoted as the learner confidently uses present and past continuous forms in sentences correctly.\nLearning to Learn: It is developed as the learner identifies present and past continuous forms from newspaper and magazine articles.",
+   "values": "Responsibility is cultivated as the learner takes up roles during role play and simulation activities with peers.\nIntegrity: It is enhanced as the learner observes honesty when searching for information in newspaper or magazines articles.",
+   "pcis": "Digital Literacy: It is enhanced as the learner uses and manipulates digital devices to watch a video or listen to programmes featuring aspect.",
+   "links": "The learner can connect the concept of past and present progressive aspect to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     65,
+     66
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.a",
+     "letter": "a",
+     "text": "identify the present and past progressive forms of the verb in oral and written texts for communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.b",
+     "letter": "b",
+     "text": "use the present and past progressive aspect correctly in oral and written contexts for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.c",
+     "letter": "c",
+     "text": "adopt the use of the present and past progressive aspect in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING",
+   "number": "7.4.1",
+   "strand": "Writing",
+   "sub_strand": "Mechanics of writing: Punctuation (Theme 7: Technology- cyber safety)",
+   "sequence": 741,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Full stop",
+    "Capital letters"
+   ],
+   "learning_experiences": [
+    "identify proper nouns such as names of people, places and features like mountains and rivers,",
+    "form sentences with peers using proper nouns,",
+    "write abbreviations of their school, names among others with peers and punctuate them correctly,",
+    "use punctuation cards to arrange or make coherent sentences and paragraphs collaboratively,",
+    "write well-punctuated sentences dictated by a teacher, peer or digital device,",
+    "make stickers with sentences punctuated with full stops and capital letters and stick them to a central place for everyone to see,",
+    "use digital resources to play games such as punctuation ladder and punctuation posters,",
+    "type sentences on a digital device, with the help of parents, siblings and guardians and share with teacher and friends."
+   ],
+   "key_inquiry_questions": [
+    "Why do you use punctuation marks?",
+    "Which punctuation marks do you use when writing?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced as learners work together in groups forming sentences using proper nouns.\nDigital Literacy: This is developed as the learner uses digital devices to type sentences and text.",
+   "values": "Unity: It is developed as the learner work together and make coherent sentences.\nResponsibility: It is promoted as the learner makes a list of abbreviations and punctuates them.",
+   "pcis": "Social Cohesion: This is enhanced as the learner work in group activities and make stickers with punctuated sentences.",
+   "links": "The learner is able to relate the concept of punctuation with their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     67,
+     68
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.a",
+     "letter": "a",
+     "text": "identify commonly used punctuation marks in written texts for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.b",
+     "letter": "b",
+     "text": "use full stops and capital letters correctly in written texts for communication clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.c",
+     "letter": "c",
+     "text": "promote the use of punctuation marks in various contexts for writing fluency",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO",
+   "number": "8.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary: (Theme 8: The farm)",
+   "sequence": 811,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sounds",
+    "Tongue Twisters"
+   ],
+   "learning_experiences": [
+    "recognise the (sounds /ʊə/ /v/ /w/ /s//ʧ/) from audio materials,",
+    "articulate vowels and consonants as the teacher models,",
+    "create a tongue twister using words with the target sounds in small groups,",
+    "say tongue twisters with the (words containing the sounds /ʊə/ /v/ /w/ /s//ʧ/) individually and collaboratively,",
+    "select words containing vowels and diphthongs and consonants from a tongue twister, passage, a poem, a song or a story,",
+    "practise clear pronunciation by listening to a video, online dictionaries and recordings,",
+    "say vocabulary items correctly and match them with their meanings."
+   ],
+   "key_inquiry_questions": [
+    "Why should you say words clearly?",
+    "What should you do to say words correctly?"
+   ],
+   "core_competences": "Communication and Collaboration: This is achieved as the learner says the tongue twisters with peers. Self-efficacy: This is realised as the learner develops know-how on proper enunciation of the targeted sounds.",
+   "values": "Peace: This is enhanced as the learner shows respect for diversity in enunciation of sounds among peers.",
+   "pcis": "Integration: Ethnic, race and social integration is fostered through group work and video conferencing.\nHealth Education: Sensitisation on lifestyle and non-communicable diseases is achieved as the learner learns how to eat nutritious and healthy meals and how they are grown through the theme of the farm.",
+   "links": "A learner can relate the proper articulation of sounds to pronunciation concepts when learning Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     69,
+     70
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "articulate sounds accurately for clarity of speech",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "select sounds correctly from a language sample to improve listening comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use vocabulary items related to the theme in a variety of contexts for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "realise the role of correct pronunciation in speech for communication clarity",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T8_READING_FLUENCY",
+   "number": "8.2.1",
+   "strand": "Reading",
+   "sub_strand": "Reading Fluency (Theme 8: The farm)",
+   "sequence": 821,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "perform a reader’s theatre by taking turns reading their parts from a script and bring the text alive through their voices (a reader’s theatre does not need any set or costumes and it is excellent for building fluency),",
+    "read digital or non-digital texts of about 300 words related to the theme in small groups,",
+    "respond to oral questions that require inferences in pairs and small groups from a text of about 300 words,",
+    "write correct answers to direct and indirect questions that require inferences,",
+    "listen to audio-visual recordings of songs and poems, and repeat them,",
+    "read and sing lyrics of relevant English songs,",
+    "read poems and rhymes while paying attention to rhythm."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to read at a reasonable speed? 2.How can you read a text fast?"
+   ],
+   "core_competences": "Self-efficacy: This is enhanced as the learner acquires fluency in reading when they read fast and with appropriate expressions.\nDigital Literacy: It is developed as the learner manipulates the digital device as they read from it or listen to an audio recording.",
+   "values": "Responsibility: This is enhanced as the learner reads from a digital text while observing online safety precautions.",
+   "pcis": "Assertiveness: This is nurtured as the learner develops fluency in reading and expressing themselves without fear.",
+   "links": "The learner applies the knowledge gained in reading fluently to reading which is an aspect in all other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     71,
+     72
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T8_READING_FLUENCY.a",
+     "letter": "a",
+     "text": "read a text of about 300 words accurately, at the right speed and with expression for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T8_READING_FLUENCY.b",
+     "letter": "b",
+     "text": "use fluency strategies to read a text of about 300 words related to the theme to enhance comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T8_READING_FLUENCY.c",
+     "letter": "c",
+     "text": "realise the importance of fluency in reading for comprehension",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES",
+   "number": "8.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Classes (Theme 8: The farm)",
+   "sequence": 831,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Contracted Verb Forms",
+    "Positive and Negative Statements"
+   ],
+   "learning_experiences": [
+    "identify contracted forms from an audio or written text,",
+    "categorise sample sentences into negative or positive statements in small groups then display the work on a chart,",
+    "write contracted forms of verbs and use them in sentences correctly,",
+    "change positive statements to negative statements and vice versa,",
+    "ask each other questions that elicit both positive and negative answers,",
+    "make and display charts containing contracted forms of verbs,",
+    "use digital devices to search for online resources on contracted verbs."
+   ],
+   "key_inquiry_questions": [
+    "Why do we shorten words like cannot to can’t?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced when the learner asks peers questions that elicit both positive and negative answer.\nDigital Literacy: It is developed when the learner uses digital devices to search for online resources on contracted verbs.",
+   "values": "Unity: This is achieved as the learner interact collaboratively while asking each other questions.\nResponsibility: It is nurtured as the learner carries out duties allocated to them such as categorising sentences and displaying them on a chart.",
+   "pcis": "Effective Communication: These skills are developed as the learner ably constructs either positive or negative sentences effectively on their daily interactions.\nEnvironmental Conservation and knowledge on lifestyle diseases: These are fostered through learning about the theme of ‘the farm’.",
+   "links": "The learner is able to relate their learning of positive and negative statements to their learning of sentence construction in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     73,
+     74
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES.a",
+     "letter": "a",
+     "text": "form appropriate contracted forms of verbs in varied texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES.b",
+     "letter": "b",
+     "text": "use positive and negative statements in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES.c",
+     "letter": "c",
+     "text": "realise the importance of correct sentence structures in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T8_CREATIVE_WRITING",
+   "number": "8.4.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Writing (Theme 8: The farm)",
+   "sequence": 841,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Narrative compositions"
+   ],
+   "learning_experiences": [
+    "re-arrange jumbled up sentences from an oral narrative into a coherent paragraph,",
+    "listen to a narrative on radio and rewrite it in their own words,",
+    "plan a narrative composition collaboratively,",
+    "use similes to make the narrative interesting,",
+    "write a narrative composition for self-expression,",
+    "watch and dramatise a story from a digital device,",
+    "visit a farm and write a narrative composition about their experience."
+   ],
+   "key_inquiry_questions": [
+    "Why do you enjoy listening to and reading stories?",
+    "How do you make a story interesting?"
+   ],
+   "core_competences": "Communication and Collaboration. This is enhanced as the learner plans a narrative composition with peers.\nSelf-efficacy: This is developed as the learner creates, watches and dramatises a narrative composition.",
+   "values": "Responsibility: It is nurtured as the learner observes safety precautions as they visit a farm and write a narrative composition about their experience.",
+   "pcis": "Environmental Education: This is enhanced as the learner learns about crops and animals found in the farm as well as their welfare.\nSocial Cohesion: This inculcated as the learner interacts with peers while performing activities like visiting the farm with peers.",
+   "links": "The learner can relate the concept of writing a narrative composition for self-expression to composition writing in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     75,
+     76
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T8_CREATIVE_WRITING.a",
+     "letter": "a",
+     "text": "describe the parts of a narrative composition in preparation for writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T8_CREATIVE_WRITING.b",
+     "letter": "b",
+     "text": "organise thoughts fluently, clearly and precisely in a coherent paragraph for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T8_CREATIVE_WRITING.c",
+     "letter": "c",
+     "text": "create a narrative composition of about 60- 80 words for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T8_CREATIVE_WRITING.d",
+     "letter": "d",
+     "text": "promote the role of creativity in writing for different purposes",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO",
+   "number": "9.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 9: Hiv and aids)",
+   "sequence": 911,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Speaking Fluency"
+   ],
+   "learning_experiences": [
+    "listen to oral presentations such as poems and topical issues from audio recordings with words containing the sounds /s/ /z/ /h/ /f/ and digraph ‘gh’ and pick out the words with sounds /s/ /z/ /h/ /f/ in ‘gh’ from the text,",
+    "repeat words with target sounds /s/ /z/ /h/ /f/ and digraph ‘gh’ from the teacher or an audio recording accurately,",
+    "speak expressively on a familiar text within a specified time,",
+    "recite poems related to the theme at an appropriate pace,",
+    "fill gaps in sentences using the vocabulary learnt,",
+    "repeat oral texts without hesitation and at a reasonable speed,",
+    "use nonverbal cues when speaking."
+   ],
+   "key_inquiry_questions": [
+    "Why should you speak accurately?",
+    "How can you speak without unnecessar y pauses?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced when the learner recites poems related to the theme at an appropriate pace.\nSelf-efficacy: It is developed as the learner develops confidence in speaking when they repeat oral texts without hesitation and at a reasonable speed.",
+   "values": "Peace: It is enhanced as the learner respects self and others when they repeat words with target sounds inaccurately.",
+   "pcis": "HIV and AIDs Education: This is promoted through the learner’s engagement in oral language tasks like listening comprehension, poems and songs related to HIV and AIDs.\nClubs and societies: Engaging in activities of clubs and societies is encouraged as the learner makes speeches featuring moral values.",
+   "links": "The learner can apply the skill of speaking fluency when making presentation in all learning areas including Religious Education.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     77,
+     78
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "speak fluently and confidently on a given topic to enhance oral skills",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "articulate sounds accurately for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "promote the importance of speaking at a reasonable speed and without hesitation in daily life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T9_INTENSIVE_READING",
+   "number": "9.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading (Theme 9: Hiv and aids)",
+   "sequence": 921,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Narratives"
+   ],
+   "learning_experiences": [
+    "read a passage in print or non-print format and answer questions,",
+    "discuss vocabulary from the passage and use them to construct simple sentences,",
+    "answer factual and inferential questions from a passage collaboratively,",
+    "give the sequence of events in a given story or passage,",
+    "read a digital text online or offline and collaborate in answering questions with peers."
+   ],
+   "key_inquiry_questions": [
+    "Why do we read narratives?",
+    "What makes you enjoy reading a narrative?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced as the learner answers factual and inferential questions in groups.\nSelf-efficacy: This is achieved when the learner answers inferential and factual questions correctly.",
+   "values": "Love: It is nurtured when the learner respects others as they read texts online or offline and answer questions.",
+   "pcis": "Clubs and Societies: Reading clubs, writing clubs, journalism clubs among others build the learner’s self-esteem to become more confident readers as they manoeuvre to give the sequence of events in a story.",
+   "links": "The learner can link the content obtained from the theme of HIV and AIDS to concepts taught in Agriculture and,Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     79,
+     80
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T9_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "read a short narrative of about 320 words for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T9_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "apply appropriate reading strategies to read a narrative of about 320 words for information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T9_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "appreciate reading for purposes of comprehension and information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS",
+   "number": "9.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Classes: Adverbs (Theme 9: Hiv and aids)",
+   "sequence": 931,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Adverbs of time",
+    "Adverbs of place",
+    "Adverbs of manner"
+   ],
+   "learning_experiences": [
+    "play games that involve grouping adverbs of manner, time and place,",
+    "recite poems containing adverbs of manner, time and place,",
+    "construct sentences using adverbs,",
+    "listen to a story or poem read by the teacher or from audio recordings and respond to questions,",
+    "create word lists of adverbs and use them to construct sentences on a word processor or a web page."
+   ],
+   "key_inquiry_questions": [
+    "Where do you live?",
+    "How do you do your work?",
+    "When do we come to school?"
+   ],
+   "core_competences": "Communication and Collaboration: This is manifested when the learner play games involving categorising different types of adverbs collaboratively.\nSelf-efficacy: This is gained when learner constructs sentences using adverbs for daily communication.",
+   "values": "Integrity: This is nurtured when the learner displays honesty as they create a list of adverbs and construct sentences individually.",
+   "pcis": "HIV and AIDS Education, Communicable and Non-communicable Diseases: These issues are enhanced as the learner interacts with the theme in various activities and makes sentences with adverbs that are derived from the theme of HIV and AIDS.",
+   "links": "The learner applies the knowledge gained from studying adverbs to their learning of word classes in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     81,
+     82
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.a",
+     "letter": "a",
+     "text": "distinguish adverbs of manner, time and place for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.b",
+     "letter": "b",
+     "text": "use adverbs of manner, time and place correctly in both oral and written sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.c",
+     "letter": "c",
+     "text": "realise the importance of adverbs in oral and written communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T9_PUNCTUATION",
+   "number": "9.4.1",
+   "strand": "Writing",
+   "sub_strand": "Punctuation (Theme 9: Hiv and aids)",
+   "sequence": 941,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Comma,",
+    "Question Mark"
+   ],
+   "learning_experiences": [
+    "use commas and question marks correctly to write well punctuated sentences,",
+    "draw the comma and question marks on cards and display them in the classroom,",
+    "use punctuation cards to arrange or make coherent sentences and paragraphs featuring the comma and question marks in pairs,",
+    "make stickers with correctly punctuated sentences and display them at a central place for everyone to see,",
+    "type sentences on a word processor, tablet or mobile phone and send the work to the teacher or friends,",
+    "play games such as punctuation ladder and punctuation posters."
+   ],
+   "key_inquiry_questions": [
+    "Why should we punctuate written work? 2.How do we use these punctuation marks: comma and full stop?"
+   ],
+   "core_competences": "Self-efficacy: This is developed as the learner plays punctuation games and punctuates sentences.\nDigital Literacy: It is enhanced as the learner uses digital devices to type sentences and text, as well as access and play online and offline games.",
+   "values": "Responsibility: This is encouraged as the learner engages in assigned roles of typing sentences, making stickers and drawing commas and question marks to display in the classroom.\nLove: It is nurtured as the learner displays trustworthiness by portraying a caring attitude when appreciating peers’ work displayed in the classroom.",
+   "pcis": "Personal Safety and Security Education: These aspects are learnt as the learner is taught HIV prevention and the need for balanced meals for those suffering from AIDs.\nAssertiveness: This is enhanced as the learner understands mechanics of proper punctuation in writing which boosts their self-esteem for self-expression.",
+   "links": "The learner applies the skill of proper punctuation and in particular the use of the comma and question mark to all other learning areas as they write essays and other written assignments.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     83,
+     84
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T9_PUNCTUATION.a",
+     "letter": "a",
+     "text": "identify commonly used punctuation marks in written texts for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T9_PUNCTUATION.b",
+     "letter": "b",
+     "text": "use commas and question marks correctly in written texts for clarity of writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T9_PUNCTUATION.c",
+     "letter": "c",
+     "text": "adopt the use of punctuation marks for clarity in writing",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO",
+   "number": "10.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 10: Hygiene and sanitation)",
+   "sequence": 1011,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Sounds",
+    "Oral presentation s",
+    "Interrupting politely"
+   ],
+   "learning_experiences": [
+    "repeat words with the sounds /ɪ/, /iː/, /s/, /ʃ/ and /əʊ/ after the teacher or audio recordings accurately,",
+    "tell riddles with words containing the sounds /ɪ/, /iː/, /s/, /ʃ/ and /əʊ/ with peers,",
+    "interact with a speaker or presenter through verbal and non-verbal cues,",
+    "engage the audience when making an oral presentation,",
+    "watch a video recorded riddling session or listen to an audio recording,",
+    "interview one another on a topical issue,",
+    "listen to a poem, a story or a song based on the theme and answer questions orally,",
+    "use digital devices to record solo or choral poetry performances."
+   ],
+   "key_inquiry_questions": [
+    "Why should we listen to others?",
+    "What do you do when you want to talk and your friend is still talking?"
+   ],
+   "core_competences": "Communication and Collaboration: This competence are developed when the learner says the words correctly and when working with peers.\nSelf-efficacy: It is developed when the learner communicates accurately thereby enhancing their confidence.",
+   "values": "Love: It is nurtured when the learner puts the interest of others before their own interests during collaborative activities.\nResponsibility: This is encouraged as the learner solves the given problems proactively by making oral presentations as assigned.",
+   "pcis": "The learner’s self-esteem is enhanced as they acquire better self-expression and pronunciation ability through engaging in various activities for interactive listening and turn-taking.",
+   "links": "The learner applies the skills of interactive listening to all learning areas as listening is a key skill for effective learning.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     85,
+     86
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "articulate sounds /ɪ/, /iː/, /s/, /ʃ/ and /əʊ/ accurately for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "interact with a speaker actively during an oral presentation, speech or narration for listening fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "interrupt a speaker appropriately for politeness in conversation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "use vocabulary related to the theme in a variety of contexts for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.e",
+     "letter": "e",
+     "text": "promote the importance of turn taking in oral interviews or debates for effective oral communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T10_INTENSIVE_READING",
+   "number": "10.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading (Theme 10: Hygiene and sanitation)",
+   "sequence": 1021,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Factual Texts"
+   ],
+   "learning_experiences": [
+    "read factual texts in print and non-print formats,",
+    "infer the meaning of vocabulary in a text,",
+    "answer factual and inferential questions from a variety of texts,",
+    "discuss and role play events in a story with peers,",
+    "watch a video related to the theme and pick out specific information,",
+    "use the encyclopaedia to get more information related to the theme."
+   ],
+   "key_inquiry_questions": [
+    "Why should we read at the right speed?",
+    "What should we do to remember what we read?"
+   ],
+   "core_competences": "Digital Literacy: This is enhanced as the learner manipulates electronic devices to read factual information based on the theme of hygiene and sanitation.\nLearning to Learn: It is developed as the learner uses resource materials like the encyclopaedia to obtain relevant information.",
+   "values": "Respect: This is developed as the learner displays open mindedness to the factual information read from different sources.\nUnity: This is achieved as the learner shares resources amicably with other learners during the activities that require the use of electronic devices.",
+   "pcis": "Personal Hygiene: It is enhanced as the learner reads stories on hygiene and watches a video on how to take care of oneself by focusing on personal hygiene and sanitation.",
+   "links": "The learner applies the knowledge of reading for factual information to all other areas of learning as they require this skill.\nThe learner also uses the skills gained in using the dictionary and other reference materials to other learning areas like Kiswahili which require them to use dictionaries as well.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     87,
+     88
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T10_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "read factual texts of about 320 words related to the theme for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T10_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "apply appropriate reading habits in reading factual texts of about 320 words for information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T10_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "realise the importance of reading for comprehension and information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI",
+   "number": "10.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Class: Conjunctions (Theme 10: Hygiene and sanitation)",
+   "sequence": 1031,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Coordinating conjunctions"
+   ],
+   "learning_experiences": [
+    "use the conjunctions (and, but, or, yet, so, for, nor) to talk about topics related to the theme,",
+    "construct sentences using the conjunctions (and, but, or, yet, so, for, nor) and type them on a digital device,",
+    "listen to a short dialogue containing the conjunctions (and, but, or, yet, so, for, nor) and discuss their usage with peers,",
+    "answer and ask questions involving conjunctions correctly."
+   ],
+   "key_inquiry_questions": [
+    "Why do we join sentences?",
+    "Which words do we use to join sentences?"
+   ],
+   "core_competences": "Communication and Collaboration: This competence are realised as the learner engages in assigned activities collaboratively.\nDigital Literacy: This is enhanced as the learner interacts with technology while typing their sentences on a digital device.",
+   "values": "Responsibility: It is seen as the learner engages in assigned roles and duties in different activities while learning conjunctions.\nUnity: This is achieved as the learner shares the available resources like the digital devices so that peers can as well type their sentences on the device.",
+   "pcis": "Personal Hygiene: This is promoted as the learner listens to short dialogues on sanitation and how to take care of oneself.",
+   "links": "The learner relates the knowledge on conjunctions to similar concepts taught in Kiswahili.\nThe learner relates content learnt from the theme of hygiene and sanitation to what is learnt in Agriculture and Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     89,
+     90
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.a",
+     "letter": "a",
+     "text": "identify conjunctions correctly in oral and written texts for fluency in speech",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.b",
+     "letter": "b",
+     "text": "engage in short dialogues featuring conjunctions for fluency in speech",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.c",
+     "letter": "c",
+     "text": "use conjunctions in a variety of contexts for effective oral and written communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.d",
+     "letter": "d",
+     "text": "realise the importance of conjunctions in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING",
+   "number": "10.4.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Writing (Theme 10: Hygiene and sanitation)",
+   "sequence": 1041,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Descriptive Compositions"
+   ],
+   "learning_experiences": [
+    "read a sample descriptive composition of about 80-100 words with peers and identify the paragraphs,",
+    "talk about different activities they engage in such as ‘how we clean our house’ in pairs,",
+    "write four descriptive sentences on a given topic about personal hygiene,",
+    "write a descriptive composition of about 80 -100 (2 – 3 coherent paragraphs),",
+    "proofread and display their composition,",
+    "type their compositions on a digital device."
+   ],
+   "key_inquiry_questions": [
+    "Why should you organise your thoughts in clear sentences and paragraphs?",
+    "How can you tell others about yourself?"
+   ],
+   "core_competences": "Self-efficacy: This is achieved as the learner writes descriptive compositions for effective communication.\nLearning to learn: It is enhanced as the learner works with peers to discover how to write descriptive compositions.",
+   "values": "Responsibility: This is nurtured as the learner engages in assigned roles and duties in different activities of planning and writing a descriptive composition.\nUnity: It is achieved as the learner shares the available resources like the digital devices so that peers can as well type their descriptive compositions on the device.",
+   "pcis": "Proper Sanitation: This is achieved as the learner talks about ‘how to clean a house’ before peers making them learn sanitation from each other.",
+   "links": "The learner relates the skill of descriptive writing to writing skills taught in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     91,
+     92
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.a",
+     "letter": "a",
+     "text": "describe the parts of a descriptive composition for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.b",
+     "letter": "b",
+     "text": "organise thoughts clearly, precisely and creatively into a coherent paragraph for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.c",
+     "letter": "c",
+     "text": "create a descriptive composition of about 80- 100 words on various topics for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.d",
+     "letter": "d",
+     "text": "promote the role of creativity in descriptive writing for effective communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO",
+   "number": "11.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 11: Sports: my favourite game)",
+   "sequence": 1111,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Listening Fluency"
+   ],
+   "learning_experiences": [
+    "listen attentively to an audio recording with the sounds /aʊ/ /ð/ /θ/ and consonant cluster ‘sk’,",
+    "repeat words with the sounds /aʊ/ /ð/ /θ/ and consonant cluster ‘sk’ after the teacher or audio recordings accurately,",
+    "make a three-minute speech using vocabulary related to the theme,",
+    "recite poems about games,",
+    "watch videos on speeches related to sports and then make similar speeches collaboratively with peers,",
+    "use and interpret nonverbal cues in oral contexts correctly."
+   ],
+   "key_inquiry_questions": [
+    "How do facial expressions and gestures help us to communicate well?",
+    "Why should we listen actively to what others are saying?",
+    "What should we do to make people enjoy listening to us?"
+   ],
+   "core_competences": "Creativity and Imagination: This is enhanced when the learner engages in activities such as giving a speech using non-verbal cues.\nSelf-efficacy: This is realised when the learner ably interprets the nonverbal cues used by peers in communication.",
+   "values": "Social Justice is encouraged as the learner accords equal opportunities and shares resources equitably while they watch and give a speech about sports.",
+   "pcis": "Effective Communication skills: These skills are developed as the learner engages in activities such as giving brief speeches.\nPeer Education and Career Guidance: These are enhanced as the learner participates in making speeches in club meetings as well as sporting activities.",
+   "links": "The learner applies the skill of listening in all learning areas.\nThe learner also relates the content gained in listening to speeches on sports in learning of similar content in Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     93,
+     94
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "listen to short speeches related to the theme for listening fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "apply vocabulary related to the theme in a variety of contexts for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "distinguish sounds /ð/ and /θ/ and words from an oral text for listening fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "interpret nonverbal cues correctly for listening fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.e",
+     "letter": "e",
+     "text": "realise the importance of listening fluency in oral comprehension",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T11_INTENSIVE_READING",
+   "number": "11.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading (Theme 11: Sports: my favourite game)",
+   "sequence": 1121,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Reading digital texts"
+   ],
+   "learning_experiences": [
+    "read animated stories, comics and cartoons interpretively, individually and collaboratively with peers,",
+    "watch videos or mimes and answer questions,",
+    "interpret visual representations such as mind maps,",
+    "carry out simple online research on topics related to the theme,",
+    "create simple crossword puzzles based on animated stories,",
+    "read a poem or story expressively to bring out varying emotions."
+   ],
+   "key_inquiry_questions": [
+    "Why should we read using technology?",
+    "How do you search for information using technology?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: This is developed when the learner engages in watching and interpreting mimes and visuals.\nDigital Literacy: This is enhanced when the learner uses digital devices to read on issues or topics online and offline.",
+   "values": "Unity: This is developed as the learner works together with peers as they discuss and interpret visuals and mimes collaboratively.\nLove: This is enhanced as the learner appreciates each other’s opinions in viewing and interpreting visuals collaboratively.",
+   "pcis": "Self-esteem is achieved as the learner’s confidence level is nurtured when they watch videos or mimes and answer questions, interpret visual representations such as mind maps and carry out simple online research on how to play their favourite game.",
+   "links": "The learner is able to apply research skills to look for information in all learning areas that they engage in.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     95,
+     96
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T11_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "read grade- appropriate digital poems and narratives of about 300- 320 words interpretively for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T11_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "access grade appropriate online materials of about 300-320 words for lifelong learning",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T11_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "promote reading digital resources for information",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS",
+   "number": "11.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Language Patterns (Theme 11: Sports: my favourite game)",
+   "sequence": 1131,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Interrogatives"
+   ],
+   "learning_experiences": [
+    "answer questions based on interrogatives (when, where, whose, who and what),",
+    "identify the interrogatives when, where, whose, who and what in a variety of texts,",
+    "construct sentences with interrogatives (when, where, whose, who and what) with peers,",
+    "view videos, cartoons or pictures and ask one another questions,",
+    "read a newspaper, magazine, brochure or any other authentic texts and identify the interrogative (when, where, whose, who and what) sentences,",
+    "write sentences in their exercise books or type them on a word processor collaboratively."
+   ],
+   "key_inquiry_questions": [
+    "Why do we ask questions?",
+    "Which words do we use to ask questions?"
+   ],
+   "core_competences": "Learning to Learn: This is enhanced as the learner uses appropriate interrogatives to ask questions.\nDigital Literacy: The learner interacts with digital devices to watch videos and type sentences.",
+   "values": "Unity: The learner collaborates with peers to perform task such as watching videos and typing sentences on a digital device.\nRespect: This is promoted as the learner is able to accommodate the views of others during the discussion.",
+   "pcis": "Self-esteem: This is built in the learner as they ask and answer questions using interrogatives about their favourite sports making them discover their talents.",
+   "links": "The learner can relate the concept of interrogatives to question and answer sessions in Religious Education among other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     97,
+     98
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.a",
+     "letter": "a",
+     "text": "identify interrogatives in a variety of texts for communication clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.b",
+     "letter": "b",
+     "text": "use interrogatives in a variety of contexts for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.c",
+     "letter": "c",
+     "text": "respond to a variety of questions based on interrogatives for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.d",
+     "letter": "d",
+     "text": "realise the importance of interrogatives in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING",
+   "number": "11.4.1",
+   "strand": "Writing",
+   "sub_strand": "Mechanics of writing: Spelling (Theme 11: Sports: my favourite game)",
+   "sequence": 1141,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Commonly Misspelt Words"
+   ],
+   "learning_experiences": [
+    "listen to and write commonly misspelt words,",
+    "listen to a dictation and spell selected words and sentences,",
+    "search for commonly misspelt words and create a word puzzle with peers,",
+    "copy the words correctly in their vocabulary book,",
+    "construct sentences using commonly misspelt words,",
+    "form commonly misspelt words from jumbled up letters."
+   ],
+   "key_inquiry_questions": [
+    "Why is it difficult to spell some words correctly?",
+    "How can we become better at spelling words?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: This is nurtured as the learner makes words from jumbled up letters.\nLearning to learn: This is enhanced as the learner learns how to spell commonly misspelt words through learner centred-activities.",
+   "values": "Responsibility is encouraged as the learner engages in assigned roles of searching for commonly misspelt words and creating puzzles.",
+   "pcis": "Effective Communication: The learner learns how to spell words correctly and can therefore communicate by writing effectively.\nSelf-esteem is developed as the learner engages in games-related activities such as creating a puzzle with commonly misspelt words.",
+   "links": "The learner is able to apply knowledge on proper spelling skills to all learning areas as they all insist on correct spelling.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     99,
+     100
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.a",
+     "letter": "a",
+     "text": "identify commonly misspelt words in oral and written contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.b",
+     "letter": "b",
+     "text": "write commonly misspelt words correctly for communication clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.c",
+     "letter": "c",
+     "text": "adopt the skill of writing words clearly and correctly in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO",
+   "number": "12.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 12: Clean environment)",
+   "sequence": 1211,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Speaking Fluency"
+   ],
+   "learning_experiences": [
+    "say words containing the sounds /ʌ/ /ɔː/ and the consonant clusters ‘br’ ‘sw’ ‘pr’ ‘cl’ ‘gr’ correctly,",
+    "select words with the sounds /ʌ/ /ɔː/ and the consonant clusters ‘br’ ‘sw’ ‘pr’ ‘cl’ ‘gr’ from an oral text,",
+    "construct sentences that require a yes or no response using the vocabulary,",
+    "repeat oral texts from the teacher or an audio recording without hesitations,",
+    "make short speeches on the environment accurately, at the right speed and with expression,",
+    "recite poems related to the theme collaboratively with peers."
+   ],
+   "key_inquiry_questions": [
+    "Why should you speak at the right speed?",
+    "How can one pass a message without using words?"
+   ],
+   "core_competences": "Communication and Collaboration: This iss achieved as the learner makes short speeches in collaboration with peers.\nCreativity and Imagination: The learner creatively composes a speech on clean environment and delivers it fluently to the peers.",
+   "values": "Respect is nurtured as the learner respects the peers’ opinions when reciting poems collaboratively.",
+   "pcis": "Social Cohesion and integrity are enhanced as the learner engages with peers in doing activities such as reciting poems and making short speeches.",
+   "links": "The learner is able to link fluency in speaking to all learning areas as fluency is required when making presentations.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     101,
+     102
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "speak accurately, with expression and at the right speed (minimal hesitation) for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "use nonverbal cues appropriately for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use vocabulary related to the theme in a variety of contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "promote the importance of fluency in speech",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T12_1_INTENSIVE_READING",
+   "number": "12.2.1",
+   "strand": "Reading",
+   "sub_strand": "1 Intensive Reading (Theme 12: Clean environment)",
+   "sequence": 1221,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Poem",
+    "Song",
+    "Passage",
+    "Proverbs"
+   ],
+   "learning_experiences": [
+    "read a poem, song or passage that incorporates proverbs related to the theme and answer questions,",
+    "apply stress and rhythm when reciting a poem, reading a passage or singing a song that incorporates proverbs,",
+    "answer factual and inferential questions from a given poem, song or passage,",
+    "discuss and role play events in a passage containing proverbs, poem or a song based on the theme,",
+    "watch a recitation of a poem on video and identify specific details,",
+    "identify proverbs used in a passage, then give their meaning."
+   ],
+   "key_inquiry_questions": [
+    "Why do we enjoy reading poems?",
+    "How are poems different from stories?"
+   ],
+   "core_competences": "Communication and Collaboration: The learner discusses and role plays with peers events in the passage or in the song.\nSelf-efficacy: This is achieved as the learner answers questions from songs and poems, and takes part in the role play confidently.",
+   "values": "Responsibility: It is inculcated in the learner as they take upon assigned duties of reading the poems, discussing the events and identifying the proverbs in the passage.",
+   "pcis": "Online Safety: The learner’s knowledge on personal safety is emphasised when accessing internet resources to watch a video on how people recite poems.",
+   "links": "The learner applies the skills acquired in reading intensively to their learning of reading skills in other areas such as Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     103,
+     104
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "read a poem, song or passage containing proverbs with expression for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "apply basic stress and rhythm when reading a poem, song or passage containing proverbs for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "respond to questions based on a poem, song or passage containing proverbs for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.d",
+     "letter": "d",
+     "text": "adopt intensive reading in day-to-day communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS",
+   "number": "12.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word classes: verb aspect (Theme 12: Clean environment)",
+   "sequence": 1231,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Present Perfect Aspect",
+    "Past Perfect Aspect"
+   ],
+   "learning_experiences": [
+    "respond to questions on activities they have just completed depicting the present and past perfect aspects with peers,",
+    "identify present perfect and past perfect aspect in sentences,",
+    "use games to form sentences in the present perfect and past perfect aspect with given verbs,",
+    "repeat sentences containing present perfect and past perfect aspect from a story or poem heard,",
+    "create a list of sentences in the present perfect and past perfect aspect on a computer or tablet,",
+    "sing songs containing the present perfect and past perfect aspect."
+   ],
+   "key_inquiry_questions": [
+    "How do we show the time if an action has just taken place?",
+    "How do we show that an action has been completed?"
+   ],
+   "core_competences": "Communication and Collaboration: The learner engages in responding to questions on activities they have just completed collaboratively with peers.\nSelf-efficacy: This is developed when the learner confidently makes correct sentences while creating a list of sentences in present and past perfect aspect.",
+   "values": "Love: This is nurtured as the learner puts the interest of others before own interest when engaging in language games featuring sentences in present and past perfect aspect.",
+   "pcis": "Effective Communication Skills: These skills are perfected as the learner uses the present and past perfect aspects correctly in sentences and learns how to communicate with clarity.",
+   "links": "The learner can apply the knowledge of present and past perfect aspect in learning similar concepts in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     105,
+     106
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.a",
+     "letter": "a",
+     "text": "identify the present and past perfect aspect in varied texts for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.b",
+     "letter": "b",
+     "text": "use the present perfect and past perfect aspect correctly in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.c",
+     "letter": "c",
+     "text": "realise the importance of correct use of aspect in everyday communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION",
+   "number": "12.4.1",
+   "strand": "Writing",
+   "sub_strand": "Guided Composition (Theme 12: Clean environment)",
+   "sequence": 1241,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Diary"
+   ],
+   "learning_experiences": [
+    "identify components of a diary individually,",
+    "view samples of diaries and discuss them with peers,",
+    "search for information on how to write personal diaries from electronic devices or printed sources,",
+    "write a diary with peers and display it to the rest of the class members."
+   ],
+   "key_inquiry_questions": [
+    "Why should we keep a record of what we do?",
+    "What information do we record?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: These competencies are manifested when the learner comes up with their own diary and displays it for the rest of the class members.\nDigital Literacy: This is achieved as learner ably manipulates digital devices when searching for information on how to write a diary from electronic resources.",
+   "values": "Responsibility: This is inculcated as the learner applies their diary in their day-to-day operations.",
+   "pcis": "Self-esteem: The learner’s self-esteem is enhanced as they search for information on how to write a diary and apply it in their writing of a diary.",
+   "links": "The learner applies the knowledge of writing a diary to learning of the same concept in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     107,
+     108
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.a",
+     "letter": "a",
+     "text": "identify the components of a diary for effective writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.b",
+     "letter": "b",
+     "text": "write a diary in the right format for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.c",
+     "letter": "c",
+     "text": "adopt the use of diaries in our day-today lives",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO",
+   "number": "13.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 13: Money)",
+   "sequence": 1311,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Language Pattern ‘very...but...’",
+    "Silent letters"
+   ],
+   "learning_experiences": [
+    "identify the sounds /k/ in letter x as well as the sounds /m/ /n/ /ŋ// from an oral text,",
+    "identify the silent letters in words such as honest, park, debt among others,",
+    "listen to stories related to the theme from a teacher or audio recordings,",
+    "play the telephone game with peers,",
+    "make sentneces with the target language pattern ‘very...but...’."
+   ],
+   "key_inquiry_questions": [
+    "Why should we listen carefully?",
+    "How can we learn a new word?"
+   ],
+   "core_competences": "Communication and collaboration: This is enhanced as the learner plays with peers the telephone game.",
+   "values": "Respect: This is enhanced as the learner displays humility while playing the telephone game with peers.\nResponsibility: The learner offers leadership and guidance to others while preparing to play the telephone game.",
+   "pcis": "Financial Literacy: It is developed as the learner listens to stories about money either recorded or from the teacher.",
+   "links": "The learner applies the skill of intensive listening to all other learning areas. The learner can also relate the stories listened to about money to the same concept in Mathematics.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     109,
+     110
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "listen intensively for specific sounds, words, phrases or sentences for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "select silent letters in words from an oral text for listening fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use the language pattern ‘very...but...’ correctly for effective oral communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "use vocabulary to construct sentences for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.e",
+     "letter": "e",
+     "text": "promote the skill of listening intensively to a variety of texts for information and enjoyment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.READIN.T13_EXTENSIVE_READING_IN",
+   "number": "13.2.1",
+   "strand": "Reading",
+   "sub_strand": "Extensive Reading: Independent Reading (Theme 13: Money)",
+   "sequence": 1321,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Newspapers and Magazines"
+   ],
+   "learning_experiences": [
+    "read newspapers, magazines and articles,",
+    "select and read age-appropriate and high-interest materials from print and electronic sources related to the theme,",
+    "infer the meaning of words related to the theme,",
+    "retell the stories they have read in groups,",
+    "share opinions and reflect on the materials they have read,",
+    "set up an after-school club offline or online where they meet on a regular basis to read books and do extensive reading activities."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to read newspapers and magazines?",
+    "How do we choose the materials we read?",
+    "When do we read?"
+   ],
+   "core_competences": "Communication and Collaboration: This is enhanced when the learner sets up after-school clubs for reading purposes.\nLearning to Learn: This is achieved as the learner develops independent reading skills that enable them to look for information on their own.",
+   "values": "Responsibility: This is nurtured as the learner offers leadership and guidance to others while preparing to play the telephone game.",
+   "pcis": "Financial Literacy: It is nurtured as the learner interacts with reading materials on money.\nProblem solving skills for better living: The learner reads stories on how people handle money and the consequences of that.",
+   "links": "The learner can ably link extensive reading to other subjects such as Kiswahili which have such concepts taught and encouraged.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     111,
+     112
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.READIN.T13_EXTENSIVE_READING_IN.a",
+     "letter": "a",
+     "text": "read a variety of grade-appropriate digital and print texts such as newspapers and magazines for lifelong learning",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T13_EXTENSIVE_READING_IN.b",
+     "letter": "b",
+     "text": "demonstrate independent reading of grade-appropriate digital and print texts such as newspapers, magazines and articles for information and enjoyment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.READIN.T13_EXTENSIVE_READING_IN.c",
+     "letter": "c",
+     "text": "adopt independent reading in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI",
+   "number": "13.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Class: Prepositions (Theme 13: Money)",
+   "sequence": 1331,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Prepositions"
+   ],
+   "learning_experiences": [
+    "identify prepositions in samples of oral or written texts,",
+    "play grade-appropriate preposition games online or offline,",
+    "construct sentences using prepositions,",
+    "complete gaps in sentences, as well as match prepositions with pictures,",
+    "complete substitution exercises using prepositions,",
+    "watch videos, visit web pages and other online resources and pick out prepositions collaboratively,",
+    "create and display preposition charts."
+   ],
+   "key_inquiry_questions": [
+    "Why should we tell others exactly where people and things are?",
+    "How do we show the position of people and things?"
+   ],
+   "core_competences": "Self-efficacy: The learner develops confidence and self-esteem when using prepositions correctly.\nDigital Literacy: The learner interacts with technology through watching videos and television programmes and seeing how people use prepositions in conversation.\nLearning to Learn: This is enhanced as the learner creates and displays charts featuring prepositions in the classroom.",
+   "values": "Love: It is achieved as the learner respects others’ work as created and displayed on preposition charts.\nResponsibility: The learner offers leadership and guidance to others while preparing to play appropriate preposition online and offline games.",
+   "pcis": "Financial Literacy: This is realised when the learner interacts with materials about money as they watch videos about how people use money in their daily lives.\nCitizenship: This is nurtured as the learner learns about money and the importance of paying taxes to foster patriotism.",
+   "links": "The learner can link the content taught here to Social Studies where as a concept patriotism is promoted through sensitising learners about money and payment of tax.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     113,
+     114
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.a",
+     "letter": "a",
+     "text": "identify prepositions of position and direction in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.b",
+     "letter": "b",
+     "text": "use prepositions correctly in oral and written contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.c",
+     "letter": "c",
+     "text": "promote the use of prepositions for clarity in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G4.WRITIN.T13_SPELLING",
+   "number": "13.4.1",
+   "strand": "Writing",
+   "sub_strand": "Spelling (Theme 13: Money)",
+   "sequence": 1341,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Double Word Consonants"
+   ],
+   "learning_experiences": [
+    "listen to the teacher or an audio recording and write words with double consonants,",
+    "construct sentences using words with double consonants,",
+    "watch a video and write various words with peers,",
+    "use jigsaw puzzle to form words with double consonants,",
+    "make words with double consonants from jumbled up letters,",
+    "write words and sentences as dictated by a peer."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to write words correctly?",
+    "How can we improve our spelling?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: The learner forms words with double consonants from jumbled up letters.\nLearning to Learn: This is encouraged as the learner learns how to spell words through learner centred activities such as peer dictation, jigsaw puzzles and watching video as they write words learnt from peers.",
+   "values": "Unity: It is portrayed as the learner takes turns while watching a video with peers and also shares the resources amicably to watch videos.\nIntegrity: This is achieved as the learner displays self-discipline and honesty when watching videos online and writing down words with double consonants used in the video.",
+   "pcis": "Effective Communication: This is enhanced as the learner learns how to spell words correctly thereby effectively communicating especially in written form.\nFinancial Literacy: The learner listens to audio recordings and watches videos about the theme of money to pick out words on double consonants.",
+   "links": "The learner ably transfers the knowledge on proper spelling to all other learning areas as they all emphasise on correct spelling in written work.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "ENGLISH GRADE 4 Updated- Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     115,
+     116
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G4.WRITIN.T13_SPELLING.a",
+     "letter": "a",
+     "text": "spell words with double consonants correctly for clarity of writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T13_SPELLING.b",
+     "letter": "b",
+     "text": "construct correct sentences using words with double consonants for cohesive writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T13_SPELLING.c",
+     "letter": "c",
+     "text": "realise the importance of writing words clearly and correctly in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

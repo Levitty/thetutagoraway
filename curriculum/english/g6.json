@@ -1,0 +1,3369 @@
+{
+ "framework": "cbc",
+ "subject_key": "english",
+ "grade": 6,
+ "source": "KICD English Language, First Published 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 52,
+  "outcomes": 194,
+  "lessons": 150,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI",
+   "number": "1.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Listening (Theme 1: Child labour)",
+   "sequence": 111,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "listen to an oral narrative from a digital device or a text read by the teacher,",
+    "listen for specific information such as sounds: /ɪə/ as in tear, appear, rear, clear and severe from a text,",
+    "listen for the main idea from a text and practise saying words with the sound /ɪə/,",
+    "infer the meaning of vocabulary and phrases using contextual clues, answer oral questions based on listening comprehension,",
+    "use digital and print resources to look up the meaning and spelling of words,",
+    "retell a story and record the narration on a digital device,",
+    "use expressions such as fixed phrases: play games, far away, believe it or not, do your best, burst into tears; similes: as hungry as a wolf, as greedy as a hyena; metaphors: The thief was a hyena, he was so greedy; idioms: work like a dog, dog tired, work for peanuts, donkey work; proverbs: all work and no play makes Jack a dull boy, phrasal verbs: beat up, agree with, put up with, cope with."
+   ],
+   "key_inquiry_questions": [
+    "Why should you listen keenly?",
+    "Why should you pronounce words accurately?"
+   ],
+   "core_competences": "Digital Literacy: The learner manipulates digital devices when listening to an oral narrative.\nLearning to Learn: The learner carries out activities with peers as they practise pronunciation of words.",
+   "values": "Respect: The learner interacts with information on equity as they listen to texts related to child labour.\nResponsibility: The learner shows accountability when listening to an oral narrative from a digital device.",
+   "pcis": "Child Rights: This is addressed as the learner interacts with texts on child labour.",
+   "links": "Vocabulary learnt on the theme of child labour can be applied to the learning of child rights in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     13,
+     14,
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.a",
+     "letter": "a",
+     "text": "select words with the target sound /ɪə/ from an oral narrative",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.b",
+     "letter": "b",
+     "text": "use vocabulary related to the theme in sentences correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.c",
+     "letter": "c",
+     "text": "use proverbs, fixed phrases, idioms, and metaphors with straightforward meanings in oral communication",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.d",
+     "letter": "d",
+     "text": "listen for the main idea and specific details from an oral text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.e",
+     "letter": "e",
+     "text": "value the importance of listening attentively",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING",
+   "number": "1.2.1",
+   "strand": "Reading",
+   "sub_strand": "Extensive Reading (Theme 1: Child labour)",
+   "sequence": 121,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "select age-appropriate reference materials from print and non-print sources,",
+    "read selected reference materials independently,",
+    "search for information on child labour from reference materials,",
+    "compile a list of new words and their meaning,",
+    "create a crossword puzzle from the list of new words,",
+    "make notes on the information they have obtained."
+   ],
+   "key_inquiry_questions": [
+    "How do you select the books you read?",
+    "Why do you read books?"
+   ],
+   "core_competences": "Digital Literacy: The learner uses digital technology as they select age-appropriate reference materials from digital sources.\nCommunication and Collaboration: The learner recognises the values of others’ ideas when selecting appropriate reading materials in collaboration with peers.",
+   "values": "Unity. The learner displays team spirit while obtaining information about child labour and shares it with peers.\nRespect: The learner appreciates diverse opinions as they collaborate in material selection.",
+   "pcis": "",
+   "links": "The learner is able to relate the skills acquired in listening comprehension to the acquisition of listening skills in Kiswahili.",
+   "design_notes": "Second read left this for a person to confirm: pcis: not in the design.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.a",
+     "letter": "a",
+     "text": "select appropriate reading materials in collaboration with peers",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.b",
+     "letter": "b",
+     "text": "read a variety of materials independently for information and pleasure",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.c",
+     "letter": "c",
+     "text": "use reference materials to find the required information",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.d",
+     "letter": "d",
+     "text": "judge the suitability of sample extensive reading materials",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T1_WORD_CLASSES",
+   "number": "1.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Classes (Theme 1: Child labour)",
+   "sequence": 131,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Determiners - some, enough, each, and a lot of"
+   ],
+   "learning_experiences": [
+    "identify the determiners some, enough, each and a lot of in sentences,",
+    "complete online quizzes and exercises involving the use of some, enough, each, and a lot of,",
+    "construct sentences using determiners,",
+    "make sentences using determiners from substitution tables,",
+    "correct the sentences constructed by a peer,",
+    "work in groups and determine the correctness of a sample of sentences."
+   ],
+   "key_inquiry_questions": [
+    "How do we express the quantity or amount of something?",
+    "Why should we give the exact amount of something?"
+   ],
+   "core_competences": "Communication and Collaboration: The learner contributes to group decision making when identifying sentences featuring determiners from a print or digital text.\nDigital Literacy: The learner interacts with technology when completing online quizzes and exercises involving the use of determiners.",
+   "values": "Social justice: The learner fosters fairness by reviewing the sentences constructed by a peer. Responsibility: The learner engages in assigned roles as they construct sentences using determiners.",
+   "pcis": "Peace Education: The learner nurtures social cohesion as they work in groups to determine the correctness of a sample of sentences.",
+   "links": "The learner is able to relate the concept of determiners when editing their written work in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T1_WORD_CLASSES.a",
+     "letter": "a",
+     "text": "identify determiners some, enough, each, and a lot of, in texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T1_WORD_CLASSES.b",
+     "letter": "b",
+     "text": "use determiners some, enough, each, and a lot of, in sentences correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T1_WORD_CLASSES.c",
+     "letter": "c",
+     "text": "collaborate with peers to judge the correct use of determiners in sentences",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T1_GUIDED_WRITING",
+   "number": "1.4.1",
+   "strand": "Writing",
+   "sub_strand": "Guided Writing (Theme 1: Child labour)",
+   "sequence": 141,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Fill in forms"
+   ],
+   "learning_experiences": [
+    "discuss different types of forms they have filled in groups,",
+    "work jointly to search for relevant sample forms from the internet,",
+    "download relevant forms and fill them,",
+    "fill in the basic details, personal information, and the why details in a form,",
+    "design a form with basic, personal, and why details in small groups."
+   ],
+   "key_inquiry_questions": [
+    "Why do we fill forms?",
+    "Why is it important to fill forms accurately and correctly?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner gains new perspectives on how to undertake a task as they design forms.\nDigital Literacy: The learner manipulates digital devices as they search, download, and fill in the relevant information in forms.",
+   "values": "Social Justice: The learner fosters fairness by according equal opportunities to peers when searching for relevant sample forms from the internet.",
+   "pcis": "Social cohesion: The learner nurtures social cohesion as they design a form with basic, personal, and why details in small groups.",
+   "links": "The learner is able to relate the concept of filling forms to the learning of the same concept in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.a",
+     "letter": "a",
+     "text": "record specific details on forms to convey information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.b",
+     "letter": "b",
+     "text": "design a form to provide the required information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.c",
+     "letter": "c",
+     "text": "advocate the importance of filling forms correctly",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI",
+   "number": "2.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Listening Comprehension (Theme 2: Cultural and religious celebrations)",
+   "sequence": 211,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "listen to a comprehension passage of about 150 words,",
+    "pronounce words containing the sounds /l/ and /r/,",
+    "say tongue twisters with the target sounds after the teacher,",
+    "work jointly to give the meaning of new words and use them in sentences,",
+    "use expressions correctly, for example, - metaphor: Peter is a giraffe- he is so tall. - idiom: a red letter day, kill two birds with one stone, feel at home - proverbs: charity begins at home, - phrasal verb: pass by, look forward to, look for, look at, - use the expressions to create a paragraph."
+   ],
+   "key_inquiry_questions": [
+    "Why should you pronounce words correctly?",
+    "Why do we use proverbs?"
+   ],
+   "core_competences": "Self-efficacy: The learner expresses themselves clearly as they practise pronouncing words containing the sounds /l/ and /r/.\nCreativity and Imagination: The learner undertakes group tasks as they use proverbs to create a paragraph in pairs or groups.",
+   "values": "Unity is enhanced as the learner works jointly with peers to give the meaning of new words and use them in sentence",
+   "pcis": "Cultural awareness: this is enhanced as the learner interacts with common sayings and expressions from different cultures.",
+   "links": "The learner is able to link the concept of usinf expressions to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     22,
+     23,
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.a",
+     "letter": "a",
+     "text": "identify proverbs from a text for effective communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.b",
+     "letter": "b",
+     "text": "listen for the main idea and specific details from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.c",
+     "letter": "c",
+     "text": "use words and expressions such as similes, metaphors and proverbs containing selected sounds correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.d",
+     "letter": "d",
+     "text": "value the importance of attentive listening in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T2_INTENSIVE_READING",
+   "number": "2.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading (Theme 2: Cultural and religious celebrations)",
+   "sequence": 221,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Comprehension strategies"
+   ],
+   "learning_experiences": [
+    "read a poem or story and identify the characters and events,",
+    "read a story of about 500 words and predict the events,",
+    "answer factual and inferential questions,",
+    "collaborate with peers to recite a poem,",
+    "summarise events in a story by retelling it in small groups,",
+    "create crossword puzzles using learnt vocabulary,",
+    "collaborate with peers to describe characters or places in poems or stories."
+   ],
+   "key_inquiry_questions": [
+    "Why do we enjoy reading stories and poems?",
+    "Which stories and poems have you read?"
+   ],
+   "core_competences": "Communication and Collaboration: The learner recognises the value of others’ opinions as they work with peers to describe characters or events in poems and stories.\nCreativity and Imagination: The learner undertakes tasks that encourage artistic expression of ideas while creating crossword puzzles using learnt vocabulary.",
+   "values": "Respect: The learner respects the opinion of others as they collaborate with peers to recite a poem.\nLove: The learner shows a caring attitude as they collaborate with peers to describe characters or places in poems or stories.",
+   "pcis": "Life Skills: Effective communication is enhanced as the learner becomes more proficient in reading.",
+   "links": "The skill of predicting events in a story is relevant to the concept of storytelling in Religious Education.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     25,
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "identify characters and events in a text for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "predict events in a text accurately",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "answer factual and inferential questions correctly for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.d",
+     "letter": "d",
+     "text": "create mental images from the events in poems and stories",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.e",
+     "letter": "e",
+     "text": "judge the characters or events in a story in collaboration with peers",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T2_WORD_CLASSES",
+   "number": "2.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Classes (Theme 2: Cultural and religious celebrations)",
+   "sequence": 231,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Concrete Nouns",
+    "Abstract Nouns"
+   ],
+   "learning_experiences": [
+    "listen to a story, conversation or poem containing abstract nouns and concrete nouns,",
+    "collaborate to pick out concrete and abstract nouns from a story, conversation or poem,",
+    "work with peers to construct sentences using concrete and abstract nouns,",
+    "make sentences from a substitution table featuring concrete and abstract nouns,",
+    "use a laptop, tablet, computer, manila paper, notebook, among others and create a crossword puzzle or a word search, with peers,",
+    "share the puzzle or word search through, email, other social media platforms, posters or the school notice board."
+   ],
+   "key_inquiry_questions": [
+    "Which things can you see and touch in the classroom?",
+    "Which things cannot be seen or touched?"
+   ],
+   "core_competences": "Communication and Collaboration: The learner recognises the value of others’ views as they make sentences using nouns.\nDigital Literacy: The learner interacts with digital devices to create a crossword puzzle or a word search in pairs or groups.",
+   "values": "Love: The learner portrays a caring attitude as they collaborate to pick out concrete and abstract nouns from a story, conversation or poem.\nPeace: The learner appreciates the importance of peers as they create a crossword puzzle or a word search.",
+   "pcis": "Life Skills: Effective communication is enhanced as the learner practises using nouns in communication.",
+   "links": "The skill of correct use of concrete and abstract nouns in a variety of contexts relates to the learning of nouns in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T2_WORD_CLASSES.a",
+     "letter": "a",
+     "text": "identify concrete and abstract nouns from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T2_WORD_CLASSES.b",
+     "letter": "b",
+     "text": "use concrete and abstract nouns correctly in a variety of contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T2_WORD_CLASSES.c",
+     "letter": "c",
+     "text": "appreciate the role of concrete and abstract nouns in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING",
+   "number": "2.4.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Writing (Theme 2: Cultural and religious celebrations)",
+   "sequence": 241,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Narrative Compositions"
+   ],
+   "learning_experiences": [
+    "list topics and possible ideas for open-ended compositions,",
+    "discuss in groups ideas and experiences on a given topic,",
+    "write down points to guide them in the writing of an open-ended composition on cultural and religious celebrations of about 160-200 words,",
+    "collaborate to create the first paragraph,",
+    "use expressions, proverbs, idioms fixed phrases, similes and metaphors appropriately in a composition,",
+    "complete the composition individually,",
+    "Proofread the composition and make necessary corrections,",
+    "work with peers to critique an open-ended composition while focusing on: - organisation of ideas (coherence) - creativity - relevance of topic - accuracy of language - (grammar, choice of words, spelling)",
+    "grade a composition written by peers."
+   ],
+   "key_inquiry_questions": [
+    "How can you make your composition interesting to read?",
+    "Why is it important to proofread your composition?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner organises ideas as they create compositions based on a variety of themes.\nLearning to Learn: The learner carries out activities with peers as they brainstorm, research and list topics and possible ideas for open-ended compositions in pairs or groups.",
+   "values": "Social Justice: The learner fosters inclusivity and non-discrimination as they grade a composition written by peers.\nIntegrity: The learner follows laid-down procedures when grading peer ́s composition.",
+   "pcis": "Cultural Awareness: The learner interacts with information on culture as they plan and write an open-ended composition on cultural and religious celebrations.",
+   "links": "The skills acquired in composition writing are relevant to the writing of essays in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     29,
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.a",
+     "letter": "a",
+     "text": "identify topics and possible ideas for open-ended compositions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.b",
+     "letter": "b",
+     "text": "organise ideas in a paragraph logically",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.c",
+     "letter": "c",
+     "text": "create an open-ended composition on a variety of themes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.d",
+     "letter": "d",
+     "text": "judge a narrative composition for correctness of language and relevance of topic",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO",
+   "number": "3.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 3: Etiquette - telephone)",
+   "sequence": 311,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sounds /æ/ and /ɜː/"
+   ],
+   "learning_experiences": [
+    "say words containing the sounds /æ/ and /ɜː/,",
+    "assess your peers as they pronounce words with the target sound,",
+    "identify polite words and phrases used in a telephone conversation,",
+    "role-play a telephone conversation, with peers,",
+    "work with peers to use polite language to interrupt politely in sentences,",
+    "practise using expressions such as: - fixed phrase: make friends, - simile: as proud as a peacock - metaphor: Peter is a giraffe; he is so tall - idiom: feel at home - proverbs: charity begins at home - phrasal verb: pass by, look for, look at."
+   ],
+   "key_inquiry_questions": [
+    "Why should we use polite words and phrases in a conversation?"
+   ],
+   "core_competences": "Communication: The learner’s ability to communicate effectively is developed as they practise clarity in speech through pronunciation of words with the target sounds.",
+   "values": "Responsibility: Accountability is enhanced as the learner demonstrates dependability when role-playing a telephone conversation, with peers.",
+   "pcis": "Life Skills: Effective communication is promoted as the learner practises pronouncing words and using polite language in communication.",
+   "links": "The skill of using polite language in a variety of contexts is relevant in the learning of harmonious living in Religious Education.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     32,
+     33,
+     34
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "pronounce words with target sounds correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "use polite words and phrases in a variety of contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use a variety of similes, proverbs, idioms and fixed phrases in oral communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "collaborate with peers to judge whether words or phrases have been used politely in a text",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T3_INTENSIVE_READING",
+   "number": "3.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading (Theme 3: Etiquette - telephone)",
+   "sequence": 321,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "skim and scan a text for specific information,",
+    "read a text of up to 500 words on etiquette,",
+    "answer direct and inferential questions,",
+    "use contextual clues such as synonyms and antonyms as well as neighbouring words to infer the meaning of fixed phrases, similes, metaphors, idioms, proverbs and phrasal verbs,",
+    "use a dictionary to check the meaning of unfamiliar words,",
+    "collaborate to create a crossword puzzle using vocabulary from the text in groups."
+   ],
+   "key_inquiry_questions": [
+    "How do you obtain information from a text?",
+    "Why do you need to infer the meaning of unfamiliar words?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s ability to learn on their own is encouraged as they complete tasks and infer the meaning of words using contextual clues.\nCreativity and Imagination: The learner’s artistic prowess is enriched as they generate ideas when creating a crossword puzzle using vocabulary from the text read.",
+   "values": "Unity: Cooperation is cultivated as the learner displays team spirit while creating a crossword puzzle using vocabulary from the text read.",
+   "pcis": "Social cohesion: The learner acquires the skills of living harmoniously with others by reading texts on etiquette.",
+   "links": "The skill of intensive reading is a critical study skill as learners interact with varied texts in Pre-Technical Studies and Religious Education",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     35,
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T3_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "identify new words in a text for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T3_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "answer direct and inferential questions for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T3_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "infer the meaning of words, similes, proverbs, metaphors and idioms with straight forward meanings using contextual clues",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T3_INTENSIVE_READING.d",
+     "letter": "d",
+     "text": "advocate the need to read intensively for lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT",
+   "number": "3.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Correlative Conjunctions (Theme 3: Etiquette - telephone)",
+   "sequence": 331,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Indicate content"
+   ],
+   "learning_experiences": [
+    "identify the pattern: use of show... nominal... how/where/who in a text,",
+    "use correlative conjunctions either...or/neither...nor in sentences,",
+    "construct sentences using show... nominal... how/where/who,",
+    "fill in blanks in provided sentences to practise the use of the pattern how/where/who,",
+    "search for instances in which correlative conjunctions either...or/neither are used in newspapers or magazines or the internet."
+   ],
+   "key_inquiry_questions": [
+    "Which words do we use when making a choice between two things?"
+   ],
+   "core_competences": "Digital Literacy: The learner’s ability to use technology for learning is enhanced as they search from online sources for instances in which correlative conjunctions either...or/neither are used in newspapers or magazines.\nCreativity and Imagination: The learner’s ability to create is developed as they create short dialogues using sentence patterns.",
+   "values": "Responsibility: This is inculcated as the learner observes safety precautions when searching on the internet for instances in which correlative conjunctions either...or/neither...nor are used.",
+   "pcis": "Life skills: Effective communication is enhanced as the learner practises the use of correlative conjunctions in a variety of sentences and contexts.",
+   "links": "The concept of correlative conjunctions is relevant in the learning and use of conjunctions in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     37,
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.a",
+     "letter": "a",
+     "text": "identify correlative conjunctions in an oral or written text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.b",
+     "letter": "b",
+     "text": "use correlative conjunctions correctly in oral and written communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.c",
+     "letter": "c",
+     "text": "use the pattern show... nominal... how/where/who in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.d",
+     "letter": "d",
+     "text": "acknowledge the importance of using well-formed sentences in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING",
+   "number": "3.4.1",
+   "strand": "Writing",
+   "sub_strand": "Mechanics of Writing (Theme 3: Etiquette - telephone)",
+   "sequence": 341,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Acronyms",
+    "Abbreviations",
+    "Numerals"
+   ],
+   "learning_experiences": [
+    "search for numerals, common abbreviations and acronyms from the internet,",
+    "create a crossword puzzle featuring numerals, common abbreviations and acronyms in groups,",
+    "display the crossword puzzles in class for peer review,",
+    "use expressions such as idioms, similes and metaphors correctly,",
+    "compose a story of about (150-200 words) incorporating common acronyms, abbreviations, numerals."
+   ],
+   "key_inquiry_questions": [
+    "Why do we use abbreviations and acronyms?",
+    "How do we write numerals?"
+   ],
+   "core_competences": "Communication: The learner’s ability to write clearly and correctly is improved as they write a story incorporating common acronyms, abbreviations, numerals.\nDigital Literacy: The learner’s use of technology is enriched as they manipulate digital devices to search for common abbreviations and acronyms from the internet.",
+   "values": "Love: This is displayed as the learner portrays a caring attitude when peer reviewing the crossword puzzles displayed in class.",
+   "pcis": "Peaceful co-existence: Harmonious living is promoted by the learner while engaging in collaborative writing tasks and displaying of their work.",
+   "links": "The use of acronyms, abbreviations, numerals is critical in learning of Mathematics and Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.a",
+     "letter": "a",
+     "text": "identify numerals, common abbreviations and acronyms from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.b",
+     "letter": "b",
+     "text": "compose a story incorporating acronyms, abbreviations and numerals",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.c",
+     "letter": "c",
+     "text": "use similes, proverbs, metaphors and idioms with straight forward meanings in a composition",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.d",
+     "letter": "d",
+     "text": "judge correctness of abbreviations, numerals and acronyms used in a text",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO",
+   "number": "4.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 4: Emergency rescue services)",
+   "sequence": 411,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "pronounce words containing the sound /ʊə/,",
+    "say words with same spelling but different meanings,",
+    "work with peers to distinguish verbs, nouns and adjectives on the basis of stress, for example, extract/extract, perfect /perfect,",
+    "listen to a story related to an emergency and pick out words such as red cross, ambulance, emergency, flying doctors, rescue, security, epidemic, amputate, aid, stroke,",
+    "use the identified words in sentences,",
+    "work with peers to make a recording of a poetry recitation,",
+    "sing a song on emergency rescue services and lay emphasis on content words,",
+    "view a video of a recitation of a poem and identify the stressed words,",
+    "make recordings as they pronounce words and read sentences while applying the stress correctly,",
+    "use expressions such as similes, metaphors, idioms, fixed phrases and proverbs in a written text. Expressions may include: fixed phrases: Catch fire, on fire, cause for alarm, in time, on time, lose control, all day long, all day similes: As fast as lightning, as light as a feather, as helpless as a baby, as cunning as a fox, metaphors: The boy was a fox, he was so cunning. proverb: Prevention is better than cure, There is no smoke without fire, A stitch in time saves nine, All is well that ends well, idioms: Face the music, play with fire, in the nick of time, get into hot water, breakneck speed phrasal verb: Care for, disagree with, end in tears, put out."
+   ],
+   "key_inquiry_questions": [
+    "Which words have the same spelling but different meanings?",
+    "Why is it important to pronounce words accurately?"
+   ],
+   "core_competences": "Communication: The learner’s ability to speak effectively is improved as they pronounce words containing the target sound.\nDigital Literacy: The learner’s ability to interact with technology is enchanced as they make recordings of songs and poetry recitations.",
+   "values": "Unity: The learner strives to achieve a common goal while working with peers to distinguish verbs, nouns and adjectives on the basis of stress.",
+   "pcis": "Health Education: This is enhanced as learner interacts with content related to emergency rescue services.",
+   "links": "The learner is able to relate the skill of pronouncing words correctly when learning sounds in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     41,
+     42,
+     43
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "select words with the target sound /ʊə/ from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "use appropriate words, similes and proverbs with straight forward meanings in day-to-day communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "distinguish nouns, verbs and adjectives by stressing syllables correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "apply stress on content words and helping verbs for speech clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.e",
+     "letter": "e",
+     "text": "advocate the correct use of stress in oral communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T4_INTENSIVE_READING",
+   "number": "4.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading (Theme 4: Emergency rescue services)",
+   "sequence": 421,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Visuals"
+   ],
+   "learning_experiences": [
+    "read a variety of visuals related to the emergency rescue services,",
+    "infer the meaning of words such as unconscious, casualty, oxygen mask, hazard, precaution, prepare, critical, escape, care, intensive care unit, watch out, from the passage,",
+    "make predictions about a story based on the visuals.",
+    "create a story from visuals and retell it,",
+    "collaborate with peers to judge the relevance of visuals,",
+    "watch videos, mimes or cartoons and answer questions based on the texts."
+   ],
+   "key_inquiry_questions": [
+    "How can we communicate without using words?",
+    "What information can we obtain from pictures?"
+   ],
+   "core_competences": "Collaboration: The learner’s ability to work harmoniously with others is developed as they recognise the rules of engagement and collaborate with peers to judge the relevance of visuals.\nDigital Literacy: The learner’s ability to interact with digital technology is improved as they watch videos, mimes or cartoons and answer questions based on the texts.",
+   "values": "Responsibility: This is inculcated in the learner as they proactively learn to solve problems by working with peers to interpret visuals related to the theme.",
+   "pcis": "Safety and security: The learner’s sense of safety is enhanced as they interact with information and texts on emergency rescue services.",
+   "links": "The skills required in creating stories from visuals relates to skills of creating in Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     44,
+     45
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T4_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "predict events from visuals",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T4_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "create images from viewed, read or heard texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T4_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "answer direct and inferential questions correctly for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T4_INTENSIVE_READING.d",
+     "letter": "d",
+     "text": "assess the relevance of visuals in a text",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES",
+   "number": "4.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Classes (Theme 4: Emergency rescue services)",
+   "sequence": 431,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Relative Pronouns",
+    "Indefinite Pronouns"
+   ],
+   "learning_experiences": [
+    "identify relative pronouns such as ‘that,’ ‘which’ ‘who,’ ‘whom,’ and ‘whose’ from a text,",
+    "construct sentences using relative pronouns,",
+    "complete sentences on emergency rescue services featuring relative pronouns,",
+    "use indefinite pronouns such as anyone, anything, everybody, everyone, everything, nobody, somebody, and someone from a text,",
+    "complete a crossword puzzle featuring the words: red cross, ambulance, emergency, flying doctors one way, two way, dual carriage way, guard rails, culverts,",
+    "form sentences using indefinite pronouns, nouns and the words red cross, ambulance, emergency, flying doctors one way, two way, dual carriage way, guard rails, culverts,",
+    "collaborate with others to judge the correctness of sentences from a sample text,",
+    "create posters, crossword puzzles or charts featuring relative and indefinite pronouns and share in class."
+   ],
+   "key_inquiry_questions": [
+    "Which words do we use to refer to people or things without saying who or what they are exactly?"
+   ],
+   "core_competences": "Communication: The learner’s speaking and writing skills are sharpened as they use relative and indefinite pronouns to construct sentences.\nSelf-efficacy: The learner’s confidence in themselves is enhanced as they plan efficiently and create posters, crossword puzzles or charts featuring relative and indefinite pronouns.",
+   "values": "Love: This is cultivated in the learner as they put the interest of others before own during the display of their work and appreciation of the projects accomplished by their peers.",
+   "pcis": "Health Education: The learner gains knowledge and skills on health education as they interact and write sentences related to emergency rescue services, featuring relative pronouns.",
+   "links": "Correct use of relative and indefinite pronouns is relevant in the learning of Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     46,
+     47
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.a",
+     "letter": "a",
+     "text": "identify relative and indefinite pronouns in a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.b",
+     "letter": "b",
+     "text": "use relative and indefinite pronouns correctly in oral and written texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.c",
+     "letter": "c",
+     "text": "judge the correctness of sentences featuring relative and indefinite pronouns from various texts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING",
+   "number": "4.4.1",
+   "strand": "Writing",
+   "sub_strand": "Functional Writing (Theme 4: Emergency rescue services)",
+   "sequence": 441,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Formal letter"
+   ],
+   "learning_experiences": [
+    "go through a sample formal letter and identify its components,",
+    "search and download samples of formal letters online,",
+    "collaborate to plan a formal invitation letter,",
+    "write the formal letter individually,",
+    "proofread the letter and make corrections,",
+    "display the letter in the classroom, noticeboard or posters,",
+    "upload the invitation letter online or send through email, WhatsApp, among others, to peers,",
+    "write an invitation letter to the County NTSA Officer, Red Cross or St. John Ambulance representative and requesting for a talk on emergency response to your schools, scouts movement, Red Cross or St. John Ambulance club."
+   ],
+   "key_inquiry_questions": [
+    "Why do you write letters?",
+    "Which kinds of letters do you write?"
+   ],
+   "core_competences": "Collaboration: The learner’s ability to work with others is enhanced as they collaborate to plan a formal invitation letter.\nDigital Literacy: The learner’s ability to interact with technological devices is enhanced as they access learning materials in digital platforms by searching for sample letters online and downloading them.",
+   "values": "Responsibility: This is enhanced as the learner engages in assigned roles when proofreading the letter and making corrections.",
+   "pcis": "Health and Safety (Online Safety): The learner observes online safety as they upload the invitation letter online or send through email, WhatsApp, among others, to peers.",
+   "links": "The skill of writing invitation letters is related to the writing of letters in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     48,
+     49
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.a",
+     "letter": "a",
+     "text": "identify the key features of a formal letter",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.b",
+     "letter": "b",
+     "text": "create a formal invitation letter using the correct format",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.c",
+     "letter": "c",
+     "text": "judge a formal letter for correctness of language and relevance",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO",
+   "number": "5.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 5: Our tourist attractions)",
+   "sequence": 511,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Listening for main idea",
+    "Listening for specific information",
+    "Sounds /ð / and /θ /"
+   ],
+   "learning_experiences": [
+    "listen to correct pronunciation of sounds, words, and phrases from the teacher, audio-visual recordings among others,",
+    "work with peers to say words and phrases with the sounds /ð / and /θ / and assist one another,",
+    "listen to a poem on tourist attraction sites in Kenya and recite it.",
+    "respond to questions on the poem,",
+    "use the following expressions in sentences: fixed phrases: make friends, be careful, fall asleep, in future, in a hurry simile: as brave as a lion; as blind as a bat metaphor: She is a lion. She is so brave proverbs: Prevention is better than cure, seeing is believing, the early bird catches the worm idioms: Sick as a dog, you are what you eat, kick the habit, let the cat out of the bag, would not hurt a fly phrasal verbs: Go away, go back, pick up, get away...the antelope got away from the lion."
+   ],
+   "key_inquiry_questions": [
+    "Why should we pronounce sounds correctly?",
+    "What information do we obtain when we listen keenly?"
+   ],
+   "core_competences": "Citizenship: The learner’s sense of patriotism is enhanced as they develop interest in socio-cultural and economic activities by interacting with poems on Kenya’s tourist attraction sites.\nSelf-efficacy: The learner’s ability to pay attention to detail is brought out as they use varied expressions in sentences to express themselves.",
+   "values": "Social Justice: This is inculcated as the learner assists others to say words and phrases with the sounds /ð / and /θ/ without discrimination.",
+   "pcis": "Wildlife and tourism: This is promoted as the learners are exposed to information on our tourist attraction sites by listening to poems on the theme.",
+   "links": "The learner is able to relate the vocabulary learnt to similar content in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     50,
+     51,
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "listen for specific information and the main idea for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "respond to oral questions based on the theme",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use expressions such as similes, metaphors and proverbs in oral communication",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "advocate the importance of listening comprehension",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T5_EXTENSIVE_READING",
+   "number": "5.2.1",
+   "strand": "Reading",
+   "sub_strand": "Extensive Reading (Theme 5: Our tourist attractions)",
+   "sequence": 521,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Fiction/ Non-Fiction (1251- 1500 words)"
+   ],
+   "learning_experiences": [
+    "preview a text by focusing on the title, author, among others (fiction/ non-fiction) 1251- 1500 words),",
+    "collaborate to determine the appropriateness of a reading text,",
+    "skim texts on the theme of tourist attraction sites in Kenya to find out the general idea,",
+    "scan a text to find specific details such as key words,",
+    "select and read an appropriate reading material based on their interest."
+   ],
+   "key_inquiry_questions": [
+    "Why should we read a variety of materials?",
+    "How do you identify the book you want to read?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s ability to grasp information is enhanced as they interact with a variety of texts.\nCritical Thinking and Problem Solving: The learner’s ability to solve simple problems is developed through selection and reading of appropriate texts based on their interest.",
+   "values": "Responsibility: This is cultivated in the learner as they undertake assigned roles when selecting and reading an appropriate reading material based on their interest.",
+   "pcis": "Patriotism: This is advocated for as the learner is exposed to information on our tourist attraction sites by reading texts on the said theme.",
+   "links": "The skill of extensive reading is appropriate in the learning and study of Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     53,
+     54
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T5_EXTENSIVE_READING.a",
+     "letter": "a",
+     "text": "select appropriate reading materials from varied texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T5_EXTENSIVE_READING.b",
+     "letter": "b",
+     "text": "read a variety of texts for enjoyment and general understanding",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T5_EXTENSIVE_READING.c",
+     "letter": "c",
+     "text": "assess a text for appropriateness and relevance",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T5_ADJECTIVES",
+   "number": "5.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Adjectives (Theme 5: Our tourist attractions)",
+   "sequence": 531,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Comparative forms of adjectives",
+    "Superlative forms of adjectives"
+   ],
+   "learning_experiences": [
+    "identify adjectives in print and digital texts,",
+    "compare items using simple, comparative and superlative forms of adjectives,",
+    "collaborate with peers to make a list of regular and irregular adjectives,",
+    "create a crossword puzzle and a word search, using comparative and superlative adjectives,",
+    "display the completed crossword puzzle and word search on posters or charts."
+   ],
+   "key_inquiry_questions": [
+    "Which words do we use to describe people, things, and places?",
+    "How do we compare people, things, and events?"
+   ],
+   "core_competences": "Self-efficacy: The learner’s ability to plan efficiently is developed as they create and display the crossword puzzles and word search.\nDigital Literacy: The learner’s ability to manipulate digital devices is improved as they share work accomplished (crossword puzzles and word search) on posters and charts.",
+   "values": "Respect: This is inculcated as the learner collaborates with peers to make a list of regular and irregular adjectives while respecting diverse opinions.",
+   "pcis": "Safety and Security: The learner’s sense of security is promoted as the he/she learns about safety when interacting with animals and when they visit various tourist attraction sites.",
+   "links": "The learner is able to apply the knowledge of adjectives which are a key aspect in the grammar lessons in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     55,
+     56
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T5_ADJECTIVES.a",
+     "letter": "a",
+     "text": "identify simple, comparative and superlative forms of adjectives in print and digital texts correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T5_ADJECTIVES.b",
+     "letter": "b",
+     "text": "use simple, comparative and superlative forms of adjectives in oral and written texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T5_ADJECTIVES.c",
+     "letter": "c",
+     "text": "acknowledge the importance of using adjectives correctly in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING",
+   "number": "5.4.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Writing (Theme 5: Our tourist attractions)",
+   "sequence": 541,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Narrative Compositions (160 – 200 words)"
+   ],
+   "learning_experiences": [
+    "identify the parts of a narrative composition,",
+    "work with peers to plan a narrative composition of about 160-200 words,",
+    "read sample narrative compositions with peers and critique them for: - correctness of language - flow or organisation of ideas - relevance to the topic - creativity",
+    "use the steps of the writing process to create a narrative composition of about (160 - 200 words), on tourist attraction sites,",
+    "use appropriate fixed phrases such as: catch fire; similes such as: as fast as lightning; metaphors such as: the boy was a fox. He was so cunning; proverbs such as: prevention is better than cure; idioms such as get into hot water; and phrasal verbs such as care for."
+   ],
+   "key_inquiry_questions": [
+    "Why should we organise ideas in our compositions?",
+    "How can you make your writing interesting?"
+   ],
+   "core_competences": "Communication: The learner’s ability to communicate effectively is developed as they practise the skills of writing clearly by following the stages of the writing process and creating a narrative composition.\nCreativity and Imagination: The learner’s artistic skills are enhanced as they create and write narrative compositions.",
+   "values": "Unity: Cooperation is displayed as the learner collaborates with peers to plan a narrative composition.",
+   "pcis": "Environmental Education: The learner interacts with information on tourist attraction sites when creating a narrative composition using the steps of the writing process thereby grasping knowledge on the environment.",
+   "links": "The learner is able to relate the concept of the writing process to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     57,
+     58
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.a",
+     "letter": "a",
+     "text": "plan a narrative composition collaboratively",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.b",
+     "letter": "b",
+     "text": "organise ideas coherently, clearly, and logically for writing fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.c",
+     "letter": "c",
+     "text": "create a narrative composition on a variety of topics",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.d",
+     "letter": "d",
+     "text": "judge a narrative composition for correctness of language, relevance of the topic and organisation of ideas",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO",
+   "number": "6.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 6: Jobs and occupation - work ethics)",
+   "sequence": 611,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sounds /f/, /v/ and /cab",
+    "Vocabulary",
+    "Intonation and stress"
+   ],
+   "learning_experiences": [
+    "say sounds, words, phrases, and sentences with the sounds /f/, /v/ and /əʊ/,",
+    "say tongue twisters with the sounds /f/ and /v/ and /əʊ/,",
+    "watch a video of a dialogue on work ethics and imitate the use of stress and intonation by the speakers,",
+    "recite a choral verse, with peers,",
+    "sing songs featuring stress and intonation,",
+    "form sentences using the following expressions: fixed phrases: Take care of, have no idea, you never know simile: As happy as king, as busy as a bee, work like a horse metaphor: Wambui is a bee. She is so busy. idioms: Lay off, hand in, take over, deal with, strike while the iron is hot, go the extra mile proverbs: Make hay while the sun shines. The sun does not wait for a king, Honesty is the best policy, Slow but sure wins the race, Jack of all trades, master of none phrasal verbs: grow up, take over, deal with, give up, go on."
+   ],
+   "key_inquiry_questions": [
+    "Why do we put emphasis on some words and not others?",
+    "How can you vary your voice to convey different meanings?"
+   ],
+   "core_competences": "Communication: The learner’s ability to speak clearly and effectively is enhanced through practice and saying tongue twisters with the sounds /f/, /v/ and /əʊ/.\nSelf-efficacy: The learner’s ability to analyse is developed when they give their views as they form sentences using the given expressions.",
+   "values": "Integrity: This is enhanced as the learner practises accountability through watching a video of a dialogue on work ethics and imitating the use of stress and intonation by the speakers.",
+   "pcis": "Career Guidance: The learner’s grasp of careers is enhanced as they interact with information on work ethics by watching a dialogue.",
+   "links": "The learner is able to relate the concept of stress and intonation to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     59,
+     60,
+     61
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify words and phrases with the sounds /f/, /v/ and /əʊ/",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "use vocabulary related to the theme in sentences correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "apply stress and intonation in questions, statements, and exclamatory sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "value the importance of stress and intonation in sentences",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T6_INTENSIVE_READING",
+   "number": "6.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading (Theme 6: Jobs and occupation - work ethics)",
+   "sequence": 621,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Dialogue"
+   ],
+   "learning_experiences": [
+    "relate the title and illustrations/pictures with their personal experiences.",
+    "skim a text to obtain a general idea (dialogue of about 500 words),",
+    "scan a text on work ethics for specific details,",
+    "observe the cover, pictures, and read the title to make predictions,",
+    "infer the meaning of unknown words, similes, metaphors and fixed phrases from context,",
+    "create mental images (visualise) from read, viewed, or heard text,",
+    "retell events in a story/dialogue in their own words,",
+    "work with peers to make posters featuring the new words he or she has learnt,",
+    "answer literal and inferential questions."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to relate events in a story to our own experience?",
+    "How can you predict what will happen in a story or passage?"
+   ],
+   "core_competences": "Communication and Collaboration: The learner’s ability to reason and express own opinion is enhanced as they work with peers to make posters featuring the new words learnt.\nSelf-efficacy: The learner’s confidence is enhanced as they display posters made featuring new words learnt through concerted attention to detail.",
+   "values": "Responsibility: This is developed as the learner displays dependability while scanning a text on work ethics for specific details.",
+   "pcis": "Life Skills: Effective communication is developed as learners retell the events in the story in their own words.",
+   "links": "The learner is able to relate the skills of intensive reading to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     62,
+     63
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T6_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "make connections between events in the text and prior experiences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T6_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "use contextual clues to infer the meaning of vocabulary such as words, proverbs, fixed phrases, similes, and phrasal verbs",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T6_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "respond to a reading text for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T6_INTENSIVE_READING.d",
+     "letter": "d",
+     "text": "acknowledge the role of reading comprehension in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS",
+   "number": "6.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Phrasal Quantifiers (Theme 6: Jobs and occupation - work ethics)",
+   "sequence": 631,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "work with peers to view a video or listen to an audio text on work ethics featuring phrasal quantifiers and identify them,",
+    "make sentences using phrasal quantifiers such as a lot of..., a pinch of... plenty of..., a number of, a crate of ...,",
+    "create charts and posters using phrasal quantifiers and share them on the school notice board or social media,",
+    "form sentences from a substitution table."
+   ],
+   "key_inquiry_questions": [
+    "How do we tell countable nouns from uncountable ones?",
+    "Which words are used to show the amount of something?"
+   ],
+   "core_competences": "Communication: The learner’s ability for self-expression is developed through creating posters using phrasal quantifiers.\nDigital Literacy: The learner’s ability to manipulate technology for learning is improved as they view videos featuring phrasal quantifiers or display charts on social media.",
+   "values": "Integrity: This is inculcated in the learner as they interact with information on choosing to do the right thing by reading material/texts on work ethics.",
+   "pcis": "Career exploration: The learner’s knowledge on careers is enhanced as they interact with information on the theme when working with peers to view a video or listen to an audio text on work ethics featuring phrasal quantifiers.",
+   "links": "The correct use of phrasal quantifiers is relevant when handling food and nutrition in Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     64,
+     65
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.a",
+     "letter": "a",
+     "text": "recognise phrasal quantifiers in oral and written contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.b",
+     "letter": "b",
+     "text": "use phrasal quantifiers with countable and uncountable nouns correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.c",
+     "letter": "c",
+     "text": "judge the correctness of phrasal quantifiers in sentences",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING",
+   "number": "6.4.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Writing (Theme 6: Jobs and occupation - work ethics)",
+   "sequence": 641,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Pictorial Compositions"
+   ],
+   "learning_experiences": [
+    "collaborate to view a variety of pictures, illustrations, and other visuals in print and digital texts and discuss what is happening,",
+    "view comic strips from newspapers and magazine columns,",
+    "use relevant fixed phrases, similes, metaphors, idioms, proverb and phrasal verbs in a composition,",
+    "collaborate to use visuals to compose a story of about (160-200 words),",
+    "organise ideas logically, coherently, and clearly,",
+    "revise their composition by incorporating suggestions given by peers,",
+    "publish the composition by displaying it on the wall, charts, online, posters, and social media platforms, among others."
+   ],
+   "key_inquiry_questions": [
+    "How can you make others want to read your composition?",
+    "What information do we obtain from pictures or visuals?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner’s ability to undertakes tasks that encourage artistic expression is enhanced by creating a story from a collection of visuals provided by the teacher.\nSelf-efficacy: The learner’s ability to confidently express themselves is developed as they publish compositions by displaying them on the wall, charts, online, posters, and social media platforms, among others.",
+   "values": "Respect: This is emphasised as the learner appreciates diverse opinions while viewing a variety of visuals.",
+   "pcis": "Life Skills: Effective communication is developed as the learner organises ideas logically, coherently and clearly while writing their compositions.",
+   "links": "The skills acquired by learners as they create pictorial compositions are related to learning of composition writing in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     66,
+     67
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.a",
+     "letter": "a",
+     "text": "plan a composition in preparation for writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.b",
+     "letter": "b",
+     "text": "use appropriate words and expressions such as similes, metaphors, fixed phrases, phrasal verbs and idioms in written communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.c",
+     "letter": "c",
+     "text": "create a pictorial composition from visuals",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.d",
+     "letter": "d",
+     "text": "judge a pictorial composition for relevance of topic, correctness of language, and creativity",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN",
+   "number": "7.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Interactive Listening (Theme 7: Technology: scientific innovations)",
+   "sequence": 711,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Sounds /ou and /ɔː/",
+    "Seeking clarification",
+    "Interrupting appropriately"
+   ],
+   "learning_experiences": [
+    "practise saying the sounds: /ɒ/ as in, of, on, from, lot; hot, /ɔː/ as in door, sort, short, ball, call, or among others,",
+    "show moods such as happiness, surprise, sadness, regret, and pain, among others, when seeking clarification,",
+    "take turns and interrupt appropriately during conversations,",
+    "role play short interviews,",
+    "watch partial dialogues on video, the computer, tablets, and other devices and respond to questions appropriately,",
+    "practise using expressions such as: fixed phrases: good at, be familiar with, little by little, long ago, a long time ago similes: work like magic, as easy as ABC., like a sea of knowledge, as slow as a snail, as quick as silver metaphors: The internet is a sea of knowledge. It has a lot of information idioms: To make headway, apple of my eye proverbs: Practise makes perfect, Necessity is the mother of invention, Live and learn, Little learning is a dangerous thing, phrasal Verbs: Start over, key in, leave behind, look for, come up with."
+   ],
+   "key_inquiry_questions": [
+    "How do you interrupt a speaker politely during a conversation?",
+    "What emotions or feelings do we show on our faces when talking?"
+   ],
+   "core_competences": "Digital Literacy: The learner’s ability to use digital devices is enhanced while watching partial dialogues on video, computer, tablets and other devices and responding to questions appropriately.\nCommunication and Collaboration: The learner’s ability to speak clearly and effectively is developed as they take turns during a conversation.",
+   "values": "Peace: This is cultivated as the learner avoids hurting others by practising the skills of turn taking and interrupting appropriately during conversations.",
+   "pcis": "Life Skills (Self-esteem): The learner’s self-esteem is promoted as they practise effective communication while engaging in the role-play and retelling the events in the story.",
+   "links": "The skill of interactive listening is relevant to the learning of listening skills in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     68,
+     69,
+     70
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.a",
+     "letter": "a",
+     "text": "articulate sounds correctly for communication clarity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.b",
+     "letter": "b",
+     "text": "seek clarification during a two-way conversation to express different moods in oral contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.c",
+     "letter": "c",
+     "text": "interrupt appropriately during a conversation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.d",
+     "letter": "d",
+     "text": "use appropriate words and expressions such as similes, metaphors, proverbs among others",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.e",
+     "letter": "e",
+     "text": "advocate the importance of interactive listening",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T7_EXTENSIVE_READING",
+   "number": "7.2.1",
+   "strand": "Reading",
+   "sub_strand": "Extensive Reading (Theme 7: Technology: scientific innovations)",
+   "sequence": 721,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Fictional and Non-Fictional (1251-1500 words)"
+   ],
+   "learning_experiences": [
+    "select a reading text from a varied collection of materials or library,",
+    "preview the table of contents from a book, find the required information, and answer oral questions,",
+    "skim a text to obtain the gist or general idea,",
+    "scan a text to obtain specific information,",
+    "select a reading text (1251-1500 words),",
+    "use a dictionary to look up the meaning of unfamiliar words,",
+    "write a summary of a text he or she has read and share it with peers."
+   ],
+   "key_inquiry_questions": [
+    "How can you obtain the general idea of what a text is about?",
+    "Why is it important to read many books?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s ability to acquire the skill of selecting and reading a variety of texts is enhanced as they select, read and summarise texts.\nCollaboration: The learner’s ability to work with others harmoniously is boosted as they observe the rules of engagement while sharing a summary of the text he or she has read.",
+   "values": "Respect: This is inculcated in the learner as they display patience while writing a summary of a text he or she has read and sharing it with peers.",
+   "pcis": "Critical Thinking: The learner acquires the skills of critical thinking while skimming a text to obtain the gist or general idea.",
+   "links": "Extensive reading is necessary as learners carry out research while doing assignments and general reading in Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     71,
+     72
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T7_EXTENSIVE_READING.a",
+     "letter": "a",
+     "text": "select appropriate reading texts from a library",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T7_EXTENSIVE_READING.b",
+     "letter": "b",
+     "text": "read a variety of texts for general information and enjoyment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T7_EXTENSIVE_READING.c",
+     "letter": "c",
+     "text": "acknowledge the importance of reading widely for lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T7_TENSE",
+   "number": "7.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Tense: (Theme 7: Technology: scientific innovations)",
+   "sequence": 731,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Future Continuous Aspect"
+   ],
+   "learning_experiences": [
+    "ask the following questions to peers: What are you doing? What were you doing yesterday? What will you be doing tomorrow?",
+    "view a map, globe, list of time zones, video or pictures of animals, plants, or people and describe what will probably happen the next day starting with the words, they, he, and she, among others,",
+    "talk about activities in the past, present, and future time,",
+    "search the internet for examples of sentences expressing continuous aspect,",
+    "collaborate with peers to determine the correctness of aspect in sample sentences."
+   ],
+   "key_inquiry_questions": [
+    "How do you show an action will take place tomorrow or at a later time?"
+   ],
+   "core_competences": "Communication and Collaboration: The learner’s ability to speak clearly is enhanced as they talk about activities in the past, present, and future time by recognising the value of others.\nSelf-efficacy: The learner states what they find difficult to do as they talk about activities in the past, present, and future time.",
+   "values": "Love: It is cultivated as the learner learns to resolve conflicts while collaborating with peers to determine the correctness of aspect in sample sentences.",
+   "pcis": "Life skills: Effective communication is achieved as learners engage in role play and retell the events in the story.",
+   "links": "The skill of correct use of aspect is critical in Kiswahili and communication in all the learning areas as they make presentations.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     73,
+     74
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T7_TENSE.a",
+     "letter": "a",
+     "text": "identify sentences featuring future continuous tense in print and digital texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T7_TENSE.b",
+     "letter": "b",
+     "text": "use future continuous tense in oral and written contexts correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T7_TENSE.c",
+     "letter": "c",
+     "text": "assess sentences for correctness and appropriateness of tense",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING",
+   "number": "7.4.1",
+   "strand": "Writing",
+   "sub_strand": "Mechanics of writing (Theme 7: Technology: scientific innovations)",
+   "sequence": 741,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Punctuation Comma and Double",
+    "Quotation Marks"
+   ],
+   "learning_experiences": [
+    "collaborate to identify sentences in which the comma and the double quotation marks have been used,",
+    "recite a poem on scientific innovations paying attention to the use of the comma and the double quotation marks,",
+    "listen to an oral presentation and answer questions,",
+    "form sentences from a substitution table,",
+    "work with peers to construct and punctuate sentences correctly,",
+    "create a poster or power point presentation and display the work to another group,",
+    "listen to a dictation of sentences, write the sentences and punctuate them appropriately."
+   ],
+   "key_inquiry_questions": [
+    "Why should we punctuate our speech or writing correctly?",
+    "Which punctuation marks do you use frequently?"
+   ],
+   "core_competences": "Collaboration: The learner’s ability to collaborate and carry out activities with peers is enhanced as they create a poster or PowerPoint presentation and display the work to another group.\nCreativity: The learner’s artistic prowess is developed as they make posters or PowerPoint presentations and document successes made during recitations.",
+   "values": "Love: It is cultivated as the learner learns to resolve conflicts while collaborating with peers to determine the correctness of tense in sample sentences.",
+   "pcis": "Information Technology: The learner interacts with technology and learns more about emerging trends as they recite poems on scientific innovations paying attention to the use of the comma and the double quotation marks.",
+   "links": "The skill of correct use of punctuation marks is critical when writing essays in other learning areas such as Kiswahili and Religious Education.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     75,
+     76
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.a",
+     "letter": "a",
+     "text": "identify the comma and double quotation marks in a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.b",
+     "letter": "b",
+     "text": "use the comma and the double quotation marks correctly in oral and written texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.c",
+     "letter": "c",
+     "text": "collaborate with peers to determine the correct use of the comma and the double quotation marks",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO",
+   "number": "8.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 8: The farm – animal safety and care)",
+   "sequence": 811,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Riddles and proverbs",
+    "Fixed phrases",
+    "Phrasal verbs"
+   ],
+   "learning_experiences": [
+    "search from online sources for information on the differences between riddles and proverbs and share with peers,",
+    "participate in a riddling session,",
+    "say sounds, words, idioms, and proverbs with the sounds /ʃ / and /ʧ / accurately,",
+    "create own riddles and share them their peers,",
+    "find and use words and expressions such as: fixed phrases: in good shape, at the moment, make money, one by one, simile: as mischievous as a monkey, as helpless as a baby, as gentle as lamb, as white as wool, metaphor: the girl is a lamb. she is so gentle. idioms: would not hurt a fly, curiosity killed the cat, let the cat out of the bag, kill two birds with one stone, proverbs: a bad workman quarrels with his tools, put all your eggs in one basket, it is no use crying over spilt milk, a barking dog never bites, a dog is a man's best friend, phrasal verbs: die out, care for, care about, look after, rely on.",
+    "use words, phrases, and proverbs in a conversation."
+   ],
+   "key_inquiry_questions": [
+    "Why do we tell riddles and proverbs?",
+    "Which are some of the proverbs you know?"
+   ],
+   "core_competences": "Digital Literacy: The learner’s ability to make use of digital devices is improved as they search for information on the differences between riddles and proverbs from online sources.\nLearning to Learn: The learner’s ability to grasp concepts is enhanced as they share ideas with peers on the differences between riddles and proverbs.",
+   "values": "Respect: This is enhanced as the learner keeps an open mind with regard to the opinions of others as they share ideas with peers on the differences between riddles and proverbs.\nPeace: It is inculcated as the learner displays tolerance during the riddling session.",
+   "pcis": "Life skills: Critical thinking and effective communication skills are emphasised as learners unravel the meaning of proverbs, idioms and riddles.",
+   "links": "The concept of riddles and tongue twisters is related to the use of these genres to learn pronunciation of sounds in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     77,
+     78,
+     79
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "explain the difference between riddles and proverbs",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "pronounce sounds, words, and phrases related to the theme accurately",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use words and expressions such as idioms, fixed phrases, phrasal verbs and proverbs in varied contexts",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "acknowledge the importance of proverbs, riddles, and idioms in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T8_FLUENCY",
+   "number": "8.2.1",
+   "strand": "Reading",
+   "sub_strand": "Fluency (Theme 8: The farm – animal safety and care)",
+   "sequence": 821,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Selecting materials",
+    "Reading speed",
+    "Reading with expression"
+   ],
+   "learning_experiences": [
+    "obtain specific information from a text,",
+    "practise reading at the right speed, with peers,",
+    "read a text on animal safety, while observing punctuation marks correctly,",
+    "watch a video on reading fluency and practise the various aspects of fluency,",
+    "collaborate in reading a choral verse,",
+    "read a paragraph, a passage, or story in turns."
+   ],
+   "key_inquiry_questions": [
+    "How can you improve your reading speed?",
+    "What are some of the feelings you show when reading a story or poem?"
+   ],
+   "core_competences": "Self-efficacy: The learner’s ability to read fluently builds confidence as the learner reads a text on animal safety.\nDigital Literacy: The learner’s ability to manipulate devices is enhanced as they access a video and practise various aspects of reading fluency.",
+   "values": "Social Justice: This is developed in the learner as they share resources equitably with peers while watching a video on reading fluency.\nUnity: It is displayed as the learner displays team spirit while reciting the choral verse with peers.",
+   "pcis": "Animal Welfare: The learner develops a sense of responsibility and care for animals as they interact with information on animal safety while reading a text.",
+   "links": "Reading fluency is critical when reading and appreciating reading texts in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     80,
+     81
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T8_FLUENCY.a",
+     "letter": "a",
+     "text": "select a reading text from a collection of materials or the library",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T8_FLUENCY.b",
+     "letter": "b",
+     "text": "read a text at a reasonable speed for fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T8_FLUENCY.c",
+     "letter": "c",
+     "text": "read a text accurately and with expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T8_FLUENCY.d",
+     "letter": "d",
+     "text": "acknowledge the importance of reading fluency in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS",
+   "number": "8.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Sentence Patterns (Theme 8: The farm – animal safety and care)",
+   "sequence": 831,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Active voice",
+    "Passive voice"
+   ],
+   "learning_experiences": [
+    "identify sentences in the active and passive voice from a text,",
+    "change sentences from active to passive voice and vice-versa,",
+    "sort pairs of sentences and classify them into either active or passive voice,",
+    "construct sentences, related to animal safety, in the active and passive voice, type them on a computer, laptop, tablet, or mobile phone and share them through, email or other web platforms,",
+    "search for more examples of sentences in the active and passive voice from the internet,",
+    "collaborate with peers to determine the correctness of sentences."
+   ],
+   "key_inquiry_questions": [
+    "How do we change a sentence from active to passive form?"
+   ],
+   "core_competences": "Digital Literacy: The learner’s ability to interact with technology is developed as they search the Web for more examples of active and passive sentences.\nCritical Thinking and Problem-Solving: The learner’s ability to reason clearly is cultivated while changing sentences from active to passive voice and vice-versa.",
+   "values": "Social Justice: This is enhanced in the learner as they gain knowledge about animals during their interaction with information on animal safety.",
+   "pcis": "Animal Welfare: The learner improves their grasp on animal conservation and care as they construct sentences related to animal safety, in the active and passive voice.",
+   "links": "The skill of using active and passive sentences correctly is key to the writing of minutes in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     82,
+     83
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.a",
+     "letter": "a",
+     "text": "distinguish the active and passive voice in a sample text correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.b",
+     "letter": "b",
+     "text": "contrast the use of some given words in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.c",
+     "letter": "c",
+     "text": "use active and passive voice correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.d",
+     "letter": "d",
+     "text": "assess sentences for correctness on the use of active and passive voice",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T8_CREATIVE_WRITING",
+   "number": "8.4.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Writing (Theme 8: The farm – animal safety and care)",
+   "sequence": 841,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Narrative Compositions (160-200)"
+   ],
+   "learning_experiences": [
+    "collaborate to use the writing process (planning, drafting, editing, revising, and publishing) and create a narrative composition of about (160-200 words),",
+    "identify idioms, proverbs, and similes from an oral or written text,",
+    "use appropriate words and expressions such as fixed phrases: similes, idioms phrasal verbs and metaphors in their writing,",
+    "display their compositions in class, on charts, school magazine, noticeboard and blogs, among others,",
+    "complete a gap-filling exercise involving similes, proverbs, and idioms."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to plan your composition?",
+    "What makes a composition interesting?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner’s ability to come up with new ideas is enhanced while creating narrative compositions.\nDigital Literacy: The learner’s ability to use digital devices to communicate effectively is improved while displaying his or her composition on blogs and other social media platforms.",
+   "values": "Love: This is inculcated as the learner cares for others and collaborates with peers to use the writing process to create a narrative composition.",
+   "pcis": "Animal Welfare: The learner’s grasp on Animal safety is promoted through the theme of taking care of animals.",
+   "links": "Writing of narrative compositions entails skills of planning, drafting, editing, revising and publishing which are critical in essay writing in Creative Arts and Pre-Technical Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     84,
+     85
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T8_CREATIVE_WRITING.a",
+     "letter": "a",
+     "text": "plan a narrative composition in preparation for writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T8_CREATIVE_WRITING.b",
+     "letter": "b",
+     "text": "use proverbs, phrasal verbs and idiomatic expressions in writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T8_CREATIVE_WRITING.c",
+     "letter": "c",
+     "text": "create a narrative composition based on a given theme for self-expression",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T8_CREATIVE_WRITING.d",
+     "letter": "d",
+     "text": "judge a narrative composition for creativity, organisation of ideas, relevance of topic, and correctness",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP",
+   "number": "9.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Speaking: Fluency (Theme 9: Lifestyle diseases)",
+   "sequence": 911,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Target sounds",
+    "Expressions",
+    "Oral presentation"
+   ],
+   "learning_experiences": [
+    "say words and phrases with the sounds /eə/, /aʊ/ and /h / correctly,",
+    "practise saying tongue twisters with the selected sounds,",
+    "recite poems on lifestyle diseases with words which have the sounds /eə/ /aʊ/ and /h/,",
+    "speak at the right speed,",
+    "make short speeches on lifestyle diseases expressively, accurately and without hesitations,",
+    "recite choral and oral verses poems and show the right facial expressions through readers’ theatres,",
+    "use fixed phrases such as fall sick; similes... as right as rain; metaphor, for example, Kadzo is a lark. She is always happy. Idioms such as fit as a fiddle, sick like a dog, proverbs such as an apple a day keeps the doctor away, prevention is better than cure, phrasal verbs such as pass out,",
+    "Make short videos of the poetry recitation or narrations and share them with friends or peers."
+   ],
+   "key_inquiry_questions": [
+    "Why should you speak accurately and without hesitations?",
+    "What is the importance of showing the right feelings when reciting a poem or telling a story?"
+   ],
+   "core_competences": "Communication and Collaboration: The learner’s ability to speak engagingly is enhanced as they make short videos of the poetry recitation or narration and share them with friends or peers.\nSelf-efficacy: The learner’s ability to speak more fluently and with confidence is developed as they make short speeches expressively, accurately and without hesitations.",
+   "values": "Responsibility: This is cultivated in the learner as they undertake assigned roles while delivering speeches on lifestyle diseases.\nPeace is enhanced as the learner displays tolerance while reciting choral verses with peers",
+   "pcis": "Lifestyle diseases: The learner’s grasp of health issues is enhanced as they make short speeches on lifestyle diseases expressively, accurately and without hesitations.",
+   "links": "Effective use of fixed expressions, proverbs and similes is related to use of these expressions in public speaking in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     86,
+     87,
+     88
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.a",
+     "letter": "a",
+     "text": "identify words, phrases and sentences with the target sounds",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.b",
+     "letter": "b",
+     "text": "use words and expressions such as idioms, proverbs and similes related to the theme in sentences correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.c",
+     "letter": "c",
+     "text": "make an oral presentation related to the theme fluently",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.d",
+     "letter": "d",
+     "text": "acknowledge the importance of fluency in oral communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI",
+   "number": "9.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading - Fictional and Non-fictional (Theme 9: Lifestyle diseases)",
+   "sequence": 921,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Making connections",
+    "Visualizing information",
+    "Responding to questions"
+   ],
+   "learning_experiences": [
+    "predict events by studying the title, cover or pictures in a text on lifestyle diseases,",
+    "picture events, characters or places in their minds,",
+    "read texts of up to 500 words related to the selected theme,",
+    "connect events in a text with an occurrence in their own life or real world events,",
+    "use the image on the front cover to predict events in the text,",
+    "infer the meaning of unfamiliar words and expressions such as fixed phrases, idioms, proverbs and phrasal verbs,",
+    "retell the events depicted in a text in their own words.",
+    "answer direct and inferential questions from a variety of texts,",
+    "create a mind map using words in a text."
+   ],
+   "key_inquiry_questions": [
+    "Why should we relate events in a text with real life, people or places?",
+    "How can we predict what will happen in a text or story?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s ability to be self-driven and perform tasks on their own is enhanced as they engage in self-driven tasks by inferring the meaning of unfamiliar words and phrases.\nCreativity and Imagination: The learner comes up with unique and new ideas through creation of mind maps using words in a text.",
+   "values": "Responsibility: The learner proactively solves problems by connecting events in a text with an occurrence in their own life or real world events.",
+   "pcis": "Lifestyle diseases: The learner is able to make life changing decisions on health as they interact with information on lifestyle diseases by reading texts on the themes.",
+   "links": "The learner is able to relate the concept of creating mental images from viewed, heard or read text to the concept of drama techniques in Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     89,
+     90
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.a",
+     "letter": "a",
+     "text": "make connections between events in the text and real life experiences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.b",
+     "letter": "b",
+     "text": "create mental images from viewed, heard or read text for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.c",
+     "letter": "c",
+     "text": "respond to texts correctly for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.d",
+     "letter": "d",
+     "text": "acknowledge the importance of reading comprehension in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T9_ADVERBS",
+   "number": "9.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Adverbs (Theme 9: Lifestyle diseases)",
+   "sequence": 931,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "identify the adverbs of manner, time place and frequency in a text on lifestyle diseases,",
+    "underline the adverbs in a passage,",
+    "pick out different adverbs from print texts or the internet in small groups,",
+    "collaborate with peers to judge the correctness of sentences featuring adverbs.",
+    "form sentences using adverbs,",
+    "create a poem or story using different types of adverbs,",
+    "create and solve crossword puzzles using adverbs."
+   ],
+   "key_inquiry_questions": [
+    "How do we show where, how, when and how many times an action occurs?",
+    "What are some of the words you could use to talk more about an action?"
+   ],
+   "core_competences": "Digital Literacy: The learner’s ability to use digital devices is improved as they search for adverbs on the internet.\nCreativity and Imagination: The learner’s ability to come up with new ideas is enhanced while creating crossword puzzles using adverbs.",
+   "values": "Unity: It is cultivated in the learner strives to achieve common goals by collaborating with peers to judge the correctness of sentences featuring adverbs.\nResponsibility: It is emphasised as the learner interacts with texts on lifestyle diseases and learns how to reduce the risk of contracting these diseases.",
+   "pcis": "Life Skills (Self-esteem): The learner gains confidence as they practise identifying the adverbs of manner, time place and frequency in a text.",
+   "links": "The learner is able to relate the correct use of adverbs to the learning of word classes in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     91,
+     92
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T9_ADVERBS.a",
+     "letter": "a",
+     "text": "identify adverbs in oral and written texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T9_ADVERBS.b",
+     "letter": "b",
+     "text": "use adverbs to express different meanings correctly",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T9_ADVERBS.c",
+     "letter": "c",
+     "text": "judge the appropriateness of adverbs used in oral and written texts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING",
+   "number": "9.4.1",
+   "strand": "Writing",
+   "sub_strand": "Mechanics of writing (Theme 9: Lifestyle diseases)",
+   "sequence": 941,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "The Hyphen"
+   ],
+   "learning_experiences": [
+    "search for and share with peers hyphenated and unhyphenated words such as dark-blue shirt, good-looking, goodhearted, fast-moving, anticlockwise from the internet, magazines, newspapers, textbooks or brochures,",
+    "listen to a dictation of the following words: mother-in-law, father-in-law, sister-in-law, brother-in law and write them down,",
+    "listen to an audio recording of the words mother-in-law, father-in-law, sister-in-law, brother-in-law and anti-clockwise and create a list,",
+    "use words such as fast-flowing, slow-moving, open-mouthed, big-eyed, sugar-free among others in sentences,",
+    "hyphenate words which refer to age such as five- year-old girl, two-year-old and middle-aged man,",
+    "use the hyphen correctly when writing numbers 21 through 99: for example, twenty-one; ninety-nine",
+    "work with peers to create a poster on lifestyle diseases featuring the words learnt, Note: The learner should only be exposed to simple and common hyphenated words."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to punctuate texts appropriately?"
+   ],
+   "core_competences": "Communication: The learner’s ability to write clearly and efficiently is promoted as the learner punctuates and hyphenates words correctly.\nDigital Literacy: The learner’s ability to interact with technological devices is enhanced as they view videos on the internet and explain how the hyphen is used.",
+   "values": "Social Justice: This is fostered in the learner as non-discrimination is encouraged while searching for, and sharing with peers on hyphenated words.\nUnity: This is displayed in the team spirit that is inculcated in the learner as they work with peers to create a poster on lifestyle diseases.",
+   "pcis": "Lifestyle Diseases: The learner’s general health and wellbeing is improved as they interact with, and gain knowledge on lifestyle diseases while creating posters featuring the target words.",
+   "links": "The learner is able to relate the learning of punctuation marks (the hyphen) to correct punctuation of texts in Agriculture.",
+   "design_notes": "Second read left this for a person to confirm: a Project/Note line may be glued to an experience.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     93,
+     94,
+     95
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.a",
+     "letter": "a",
+     "text": "identify grade appropriate hyphenated words from a written text",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.b",
+     "letter": "b",
+     "text": "use grade appropriate hyphenated words correctly for clarity of meaning",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.c",
+     "letter": "c",
+     "text": "judge sentences for correctness of language, and use of the hyphen",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO",
+   "number": "10.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary: Interactive Listening (Theme 10: Proper use of leisure time)",
+   "sequence": 1011,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "pick out the sound /h/ as in holiday, /j/ as in yam and /eə/ as in air, from an audio text,",
+    "listen to a text on proper use of leisure time and say words and phrases with the sound /h/,",
+    "take turns during short interviews, debates and discussions on grade appropriate topics,",
+    "interrupt appropriately during a class discussion, interview or debate,",
+    "perform a choral verse (about six stanzas) or conversational poem in a reader’s theatre, and display various moods,",
+    "practise using expressions such as fixed phrase: kill time; simile: sleep like a log; metaphor: My mother is hawk eyed. She sees everything; proverbs: There is no time like the present, idioms: day dream, phrasal verbs: good at."
+   ],
+   "key_inquiry_questions": [
+    "Why should we take turns in a conversation?",
+    "What are some of the moods/feelings we can show during a conversation?"
+   ],
+   "core_competences": "Collaboration: The learner’s ability to contribute to group decision making is enhanced by reciting choral poems with peers.\nSelf-efficacy: The learner’s ability to confidently share what they have learnt is developed as they take turns and interrupt effectively in conversations.",
+   "values": "Responsibility: This is inculcated in the learner as they engage in assigned tasks and pick out the sound /h/, /j/ and /eə/ from an audio text.",
+   "pcis": "Life Skills: The learner is able to communicate effectively through acquisition of interactive listening skills.",
+   "links": "The learner is able to relate the skills of interactive listening to group interactions in the learning of Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     96,
+     97
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "identify words with the sound /h/ in an oral text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "use turn taking and polite interruption during a conversation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "express appropriate moods during a conversation",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "advocate the importance of polite interruption",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.e",
+     "letter": "e",
+     "text": "and turn taking in oral communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T10_INTENSIVE_READING",
+   "number": "10.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading (Theme 10: Proper use of leisure time)",
+   "sequence": 1021,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "preview a text on proper use of leisure time for general understanding,",
+    "make predictions about events in a text,",
+    "infer the meaning of unfamiliar words and expressions using prior knowledge and contextual clues,",
+    "answer direct and inferential questions orally and in writing,",
+    "summarise the events in the text through retelling,",
+    "create a password puzzle using the learnt vocabulary."
+   ],
+   "key_inquiry_questions": [
+    "Why should we relate events in a book to our own life experiences?",
+    "How can you predict the information in a book even before you read it?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s ability to learn on their own and complete tasks is developed as they engage in self-driven tasks by creating a crossword puzzle using the learnt vocabulary.\nCritical Thinking and Problem-Solving: This is developed as the learner creates a crossword puzzle using the learnt vocabulary.",
+   "values": "Integrity: This is enhanced as the learner acquires discipline by interacting with information from a reading text on proper use of leisure time.",
+   "pcis": "Life Skills (Decision making): The learner is equipped with decision making skills as they preview a text on proper use of leisure time.",
+   "links": "The learner is able to relate the skills of reading comprehension to the learning of reading skills in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     98,
+     99
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T10_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "make connections between events in a text and real life experiences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T10_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "respond to a text correctly for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T10_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "use contextual clues to infer the meaning of unfamiliar words and expressions such as proverbs, similes among others",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T10_INTENSIVE_READING.d",
+     "letter": "d",
+     "text": "acknowledge the role of reading comprehension in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T10_CONJUNCTIONS",
+   "number": "10.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Conjunctions (Theme 10: Proper use of leisure time)",
+   "sequence": 1031,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "identify the conjunctions since, so, nor, yet, for, unless, although, though, in a text,",
+    "construct sentences on proper use of leisure time using conjunctions,",
+    "fill in blanks in sentences using conjunctions,",
+    "collaborate with peers to construct sentences using conjunctions,",
+    "create a crossword puzzle using conjunctions and share it with peers through posters, charts or social media."
+   ],
+   "key_inquiry_questions": [
+    "How do you join two or more sentences?"
+   ],
+   "core_competences": "Self-efficacy: The learner’s ability to focus on achieving the set tasks is enhanced as they identify and use conjunctions in sentences.\nDigital Literacy: The learner’s ability to interact with technological devices is developed as they observe safety precautions and share their crossword puzzles on various social media platforms.",
+   "values": "Love: This is inculcated in the learner as they portray a caring attitude while collaborating with peers to construct sentences using conjunctions.",
+   "pcis": "Life Skills (Effective Communication): The learner develops better communication skills through correct use of conjunctions.\nLife Skills (Decision making): The learner is equipped with decision making skills as they construct sentences on proper use of leisure time using conjunctions.",
+   "links": "The learner is able to relate the concept of conjunctions to their learning of similar concepts in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     100,
+     101
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.a",
+     "letter": "a",
+     "text": "identify conjunctions in a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.b",
+     "letter": "b",
+     "text": "use conjunctions correctly in varied contexts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.c",
+     "letter": "c",
+     "text": "judge the appropriateness of conjunctions used in sentences",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING",
+   "number": "10.4.1",
+   "strand": "Writing",
+   "sub_strand": "Creative Writing (Theme 10: Proper use of leisure time)",
+   "sequence": 1041,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Descriptive Compositions"
+   ],
+   "learning_experiences": [
+    "identify key points about an event such as a wedding ceremony, football match and dance, among others,",
+    "suggest people, events, places or objects that can be described in pairs,",
+    "plan a descriptive composition of about 160-200 words,",
+    "select and use appropriate expressions such as proverbs and idioms in a composition,",
+    "collaborate to write the introductory paragraph of the descriptive composition,",
+    "complete the descriptive composition."
+   ],
+   "key_inquiry_questions": [
+    "What words do we use to describe objects, people or events?",
+    "How can we make our descriptions more interesting?"
+   ],
+   "core_competences": "Creativity and imagination: The learner’s ability to improve their prowess in art is enhanced as the he/she undertakes tasks that require artistic expression of ideas while writing and editing their compositions.\nDigital Literacy: The learner’s ability to make use of digital devices is developed as they share the corrected compositions through the internet, email or social media.",
+   "values": "Integrity: This is emphasised as the learner demonstrates reliability while working with peers to write the introductory paragraph of the descriptive composition.",
+   "pcis": "Life skills (Effective communication): Learner is able to communicate with clarity as they follow the writing process while writing a descriptive composition.",
+   "links": "The learner is able to apply the concept of paragraph and descriptive writing to their writing of texts in all other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     102,
+     103
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.a",
+     "letter": "a",
+     "text": "use appropriate adjectives to describe a person, object or a place",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.b",
+     "letter": "b",
+     "text": "plan a descriptive composition in preparation for writing",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.c",
+     "letter": "c",
+     "text": "create a descriptive composition on a variety of topics",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.d",
+     "letter": "d",
+     "text": "judge a descriptive composition for correctness of language, relevance to the topic, creativity and organisation of ideas",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO",
+   "number": "11.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 11: Sports – indoor games)",
+   "sequence": 1111,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "listen to audio stories and pick put specific sounds, words, phrases or sentences,",
+    "say words with the sounds /ʊ/ and /uː/ correctly,",
+    "say tongue twisters with the target sounds,",
+    "collaborate to listen to choral poems with the sounds /ʊ/ and /uː/ and pick out words with the selected sounds,",
+    "interpret non-verbal cues correctly during conversations,",
+    "practise using expressions such as fixed phrases: out of breath; similes: as bright as day; metaphor: Lodunga is a deer. He runs very fast. ; idioms: get a head start; proverbs: look before you leap and phrasal verbs such as pass round."
+   ],
+   "key_inquiry_questions": [
+    "Why should we look at the face of people as they speak?",
+    "How are audio stories different from a written story?"
+   ],
+   "core_competences": "Communication: The learner’s ability to speak fluently and clearly is enhanced as they say tongue twisters that contain the target sounds.\nDigital Literacy: The learner’s ability to manipulate digital devices is developed while listening to audio stories and picking out specific sounds, words, phrases or sentences.",
+   "values": "Unity: This is cultivated as the learner collaborates with peers by listening to choral poems and picking out words with the selected sounds.\nSocial justice: It is displayed by the learner as they foster fairness while working with peers to listen to choral poems.",
+   "pcis": "Life Skills (Effective communication): The learner’s clarity in communication is developed as they engage in role-play and retell the events in the story.",
+   "links": "The learner is able to relate the correct use of words and expressions to the completing of written assignments correctly in Religious Education.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     104,
+     105
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "select sounds, words and phrases from a text for listening fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "use words and expressions such as proverbs, phrasal verbs, among others in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "listen for specific details and main idea from audio recordings, internet, radio or television programmes",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "appreciate the importance of effective listening in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T11_INTENSIVE_READING_DI",
+   "number": "11.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading: Digital Stories (Theme 11: Sports – indoor games)",
+   "sequence": 1121,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "participate in a reader’s theatre and read solo or choral poems on indoor games,",
+    "make predictions about a text by observing the cover or title,",
+    "make connections between the pictures in a text and real life situations,",
+    "summarise important ideas and restate them in own words,",
+    "retell events in a poem chronologically,",
+    "use contextual clues to infer the meaning of expressions similes, metaphors, idioms, proverbs and phrasal verbs.",
+    "summarise events in a text through retelling."
+   ],
+   "key_inquiry_questions": [
+    "What role do pictures in a book or cover play in a story?",
+    "How are digital stories different from story books?"
+   ],
+   "core_competences": "Self-efficacy: The learner’s ability to engage in self-driven tasks is enhanced while participating in a reader’s theatre and reading solo or choral poems on indoor games.\nCreativity and Imagination: The learner’s ability to create mental images is developed through the tasks on creation of mental images from viewed, heard or read texts.",
+   "values": "Unity: This is inculcated in the learner while collaborating with peers and retelling events in a poem chronologically.",
+   "pcis": "Learner Support Programmes: The learner is able to provide support to each other as they interact with reading texts related to indoor sports and games.",
+   "links": "The learner is able to relate intensive reading to reading of passages and other texts on Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     106,
+     107
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T11_INTENSIVE_READING_DI.a",
+     "letter": "a",
+     "text": "identify words, phrases and proverbs from a digital text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T11_INTENSIVE_READING_DI.b",
+     "letter": "b",
+     "text": "create mental images from viewed, heard or read text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T11_INTENSIVE_READING_DI.c",
+     "letter": "c",
+     "text": "answer direct and inferential questions correctly for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T11_INTENSIVE_READING_DI.d",
+     "letter": "d",
+     "text": "acknowledge the role of reading comprehension in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T11_INTERROGATIVES",
+   "number": "11.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Interrogatives (Theme 11: Sports – indoor games)",
+   "sequence": 1131,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss in pairs or groups which among the following words are not interrogatives: whip, how, what, when, whom, why, which, whisper, where and whole,",
+    "practise using when clauses with present tense to show the future, for example, ‘When are you going to school?",
+    "collaborate with peers to use interrogatives in sentences correctly,",
+    "create lists of interrogative sentences using words related to the theme,",
+    "type the list using a computer, laptop or tablet in groups and display his or her work to peers."
+   ],
+   "key_inquiry_questions": [
+    "How do you form questions?",
+    "Why do we ask questions?"
+   ],
+   "core_competences": "Communication: The learner’s ability to clearly communicate with others is improved as they use clauses with present tense to show the future.\nCreativity and Imagination: The learner’s ability to come up with new ideas is enhanced as they create lists of interrogative sentences using words related to the theme.",
+   "values": "Responsibility: This is inculcated in the learner as they engage in assigned tasks and collaborate with peers to use interrogatives in sentences.",
+   "pcis": "Life Skills: Self-esteem is nurtured as the learner practises using interrogatives in sentences.",
+   "links": "The learner is able to relate the concept of interrogatives to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     108,
+     109
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T11_INTERROGATIVES.a",
+     "letter": "a",
+     "text": "identify interrogatives in print or digital texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T11_INTERROGATIVES.b",
+     "letter": "b",
+     "text": "use interrogatives correctly to express different meanings",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T11_INTERROGATIVES.c",
+     "letter": "c",
+     "text": "assess the appropriateness of interrogatives used in print and digital texts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING",
+   "number": "11.4.1",
+   "strand": "Writing",
+   "sub_strand": "Mechanics of writing (Theme 11: Sports – indoor games)",
+   "sequence": 1141,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Synonyms and Antonyms"
+   ],
+   "learning_experiences": [
+    "listen/watch a video recording on in-door games and identify words with synonyms and antonyms,",
+    "form sentences using synonyms and antonyms,",
+    "identify synonyms and antonyms from newspapers, magazines or the internet and create a crossword puzzle,",
+    "display their work on posters."
+   ],
+   "key_inquiry_questions": [
+    "How do you tell the meaning of unfamiliar words?",
+    "Which are some of the words with same or opposite meaning?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s ability to learn on their own is enhanced as they engage in self-driven tasks such as identifying synonyms and antonyms from newspapers, magazines or the internet.",
+   "values": "Love: The learner considers the interests of others as they display their work on posters.",
+   "pcis": "Career opportunities in sports: The learner acquires more information on careers as they listen/watch a video recording on in-door games and identify words with synonyms and antonyms.",
+   "links": "The learner is able to relate the concept of spelling (synonyms and antonyms) to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     110,
+     111
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.a",
+     "letter": "a",
+     "text": "identify synonyms and antonyms correctly for writing fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.b",
+     "letter": "b",
+     "text": "use synonyms and antonyms correctly in sentences",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.c",
+     "letter": "c",
+     "text": "advocate the use of a rich vocabulary in writing",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO",
+   "number": "12.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Vocabulary (Theme 12: Environment conservation)",
+   "sequence": 1211,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "say words and phrases with the sounds / ʒ/ / ʤ/ correctly,",
+    "recite poems with words that have the sounds /ʒ/ / ʤ/,",
+    "Listen for specific details such as: fixed phrases: as long as, all the time, set on fire, from time to time, too bad, be in trouble; simile: as wide as the sky, as brave as a lion, as green as grass, as clear as crystal, as clear as day, as black as soot, as pure as snow; metaphor: The man is a tortoise. He walks so slowly! Sanaipei is a lion. She is very brave; idioms: A drop in the ocean, add fuel to the fire, beat about the bush, the grass is always greener on the other side of the fence; proverbs: Prevention is better than cure; The best things in life are free, An apple never falls far from the tree; If you want to be happy for a year, plant a garden; If you want to be happy for life, plant a tree; phrasal Verbs: clean up, cut down, die out, dry up, cut down, die out",
+    "speak on topics based on environmental conservation or content from other areas in class,",
+    "participate in mock interviews in small groups,",
+    "recite choral and solo verses related to the theme."
+   ],
+   "key_inquiry_questions": [
+    "Why should you speak at the right speed, accurately, and with expression?",
+    "How do our faces, hands, and eyes help us communicate better?"
+   ],
+   "core_competences": "Communication: The learner’s ability to speak clearly and correctly is developed as they practise saying words and phrases with the sounds / ʒ/ / ʤ/.\nSelf-efficacy: The learner’s ability to confidently communicate is enhanced as they master the art of speaking fluently while practising correct articulation of sounds.",
+   "values": "Peace: This is enhanced as the learner avoids hurting others while speaking on environmental conservation or content from other areas in class.\nUnity: This is inculcated in the learner through collaboration with peers as they make presentations in class.",
+   "pcis": "Environmental Conservation: The learner is more informed on matters about the environment as they interact with information on environmental conservation and speak on topics based on the same.",
+   "links": "The learner is able to relate the concept of making oral presentations to their learning in Social Studies and other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     112,
+     113,
+     114,
+     115
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+     "letter": "a",
+     "text": "listen for specific details such as sounds words and expressions for effective oral communication",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.b",
+     "letter": "b",
+     "text": "make oral presentations such as speeches accurately, with minimal hesitations and with expressions",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+     "letter": "c",
+     "text": "use non-verbal cues appropriately to enhance fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.d",
+     "letter": "d",
+     "text": "judge the appropriateness of non-verbal cues in a conversation or video recordings",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T12_INTENSIVE_READING",
+   "number": "12.2.1",
+   "strand": "Reading",
+   "sub_strand": "Intensive Reading (Theme 12: Environment conservation)",
+   "sequence": 1221,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "participate in a reader’s theatre and read solo or choral poems, using correct stress,",
+    "sing along as a video of poetry recitation or song plays with the lyrics provided, using the correct rhythm,",
+    "identify words, phrases, and proverbs used in the song or poem,",
+    "make predictions about events in a poem on environmental conservation by observing the picture or title,",
+    "answer direct and inferential questions from a comprehension passage,",
+    "create mental images by viewing pictures or events in a poem or song and comparing them to real-life situations,",
+    "infer the meaning of new words and expressions such as fixed phrases, proverbs, idioms, phrasal verbs and similes from the way they have been used in a text."
+   ],
+   "key_inquiry_questions": [
+    "Why are songs and poems more enjoyable than reading a book?",
+    "How can we make a poem or song more interesting?"
+   ],
+   "core_competences": "Self-efficacy: The learner’s ability to confidently plan and carry out tasks independently is enhanced as they engage in the reader`s theatre activity with peers.\nLearning to Learn: The learner’s ability to grasp concepts on their own is developed as they share what they have learnt by participating in a reader’s theatre.",
+   "values": "Patriotism: is fostered as the learner acquires knowledge about his or her county’s environment and how to conserve it for future generations as they interact with texts on environmental conservation.",
+   "pcis": "Environmental Conservation: The learner’s knowledge on preservation of the environment is enhanced as they make predictions about events in a poem on environmental conservation.\nLife Skills (Creative Thinking): The learner is able to think creatively as they engage in the task of giving the meaning of new words in the poem from the way they have been used in the text.",
+   "links": "The learner is able to relate the skill of intensive reading to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     116,
+     117
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T12_INTENSIVE_READING.a",
+     "letter": "a",
+     "text": "identify words, phrases, and proverbs used in a song or poem",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T12_INTENSIVE_READING.b",
+     "letter": "b",
+     "text": "uses stress and rhythm correctly while reading lines and words in a poem or song",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T12_INTENSIVE_READING.c",
+     "letter": "c",
+     "text": "respond to a reading text for comprehension",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T12_INTENSIVE_READING.d",
+     "letter": "d",
+     "text": "advocate the importance of correct stress and rhythm in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS",
+   "number": "12.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Question Tags (Theme 12: Environment conservation)",
+   "sequence": 1231,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "identify the verbs to be, verbs to have, verbs to do and modals,",
+    "form question tags using verbs to be, verbs to have, verbs to do and modals,",
+    "apply rules when forming question tags, for example, a positive statement results in a negative tag question and vice versa,",
+    "search for examples of question tags on the web, with peers,",
+    "practise using question tags in dialogues and conversations,",
+    "make posters featuring question tags and display them in class."
+   ],
+   "key_inquiry_questions": [
+    "What is a question tag?",
+    "How do we form question tags?"
+   ],
+   "core_competences": "Collaboration: The learner’s ability to work with peers is enhanced as they practice using tag questions in dialogues and conversations.\nDigital Literacy: The learner’s ability to manipulate digital devices is improved as they search for more examples of question tags on the internet.",
+   "values": "Love: This is fostered as the learner portrays a caring attitude while collaborating with peers to display posters on tag questions in class.\nRespect: This is inculcated as the learner displays patience while searching for examples of question tags on the web, with peers.",
+   "pcis": "Environmental Conservation (Environment Education): The learner is able to communicate to others about environmental conservation practices using tag questions in dialogues and conversations.\nLife Skills (Creativity): The learner displays creativity as they form tag questions using verbs to be, verbs to have verbs to do and modals.",
+   "links": "The learner is able to relate the skills of using question tags to the learning of interrogatives in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     118,
+     119
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.a",
+     "letter": "a",
+     "text": "identify question tags from a print or digital text for information",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.b",
+     "letter": "b",
+     "text": "form question tags from verbs to be, verbs to have, verbs to do and modals",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.c",
+     "letter": "c",
+     "text": "use question tags correctly in oral and written texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.d",
+     "letter": "d",
+     "text": "appreciate the importance of well-formed sentences in communication",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING",
+   "number": "12.4.1",
+   "strand": "Writing",
+   "sub_strand": "Functional Writing (Theme 12: Environment conservation)",
+   "sequence": 1241,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Personal journal"
+   ],
+   "learning_experiences": [
+    "identify all the components of a personal journal,",
+    "read a sample personal journal,",
+    "create a personal journal for seven days,",
+    "peer-edit the personal journals, different pairs exchange their journals for editing,",
+    "revise personal journals,",
+    "display the personal journals in class."
+   ],
+   "key_inquiry_questions": [
+    "Why do we keep journals and diaries?",
+    "How do you record important occasions or dates in your life?"
+   ],
+   "core_competences": "Creativity and Imagination: The learner’s ability to undertake tasks that require artistic expression is enhanced as they create a personal journal for seven days.\nSelf-efficacy: The learner’s ability to confidently communicate is developed as they become more adept at creating personal journals.",
+   "values": "Responsibility: This is fostered as the learner carries out assigned tasks as they create personal journals and share them with peers.\nSocial justice: It is displayed as the learner acquires a sense of sharing resources equitably as they interact with information on environmental conservation.",
+   "pcis": "Life Skills (Effective communication): The learner is able to communicate clearly as they practise creating a personal journal for seven days.",
+   "links": "The learner is able to relate the concept of making and keeping a journal to self-assessment when learning Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     120,
+     121
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.a",
+     "letter": "a",
+     "text": "identify all the components of a personal journal",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.b",
+     "letter": "b",
+     "text": "use the correct format to create a personal journal",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.c",
+     "letter": "c",
+     "text": "judge the correctness, relevance to the topic and the format of a personal journal",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN",
+   "number": "13.1.1",
+   "strand": "Listening and Speaking",
+   "sub_strand": "Pronunciation and Intensive Listening (Theme 13: Money – trade)",
+   "sequence": 1311,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "dictate a story featuring proverbs and similes, pick them out and list them in pairs,",
+    "say the sounds: /ᴧ / as in but, / ʊ / as in put, [ ʊə] as in tour and [ eı] as in gate,",
+    "rewrite a short text in his or her own words accurately, read a written version of what they have listened to,",
+    "predict the likely outcome of events in a listening text,",
+    "pick out information such as amounts, dates, time, facts, characters, and the sequence of events from an oral text,",
+    "use expressions such as fixed phrases: at once, no entry, similes such as: sell like hot cakes, as happy as a hippo; metaphors such as - Chebet is a hare. She is so clever. proverbs such as A stitch in time saves nine, grow on trees, idioms such as back to square one, to cut corners and phrasal verbs such as count on, give in and give back."
+   ],
+   "key_inquiry_questions": [
+    "Why should we listen carefully?",
+    "What is the function of similes and proverbs in communication?"
+   ],
+   "core_competences": "Communication and Collaboration: The learner’s ability to express themselves well is enhanced as they make suggestions on improvements to be made and rewrite the short text in their own words accurately.\nCreativity and Imagination: The learner’s ability to artistically communicate is developed as they rewrite the short text in own words accurately.",
+   "values": "Unity: This is fostered in the learner as they collaborate with peers and interact with grade-appropriate texts featuring similes and metaphors.\nIntegrity: This is enhanced as the learner interacts with materials on the theme of trade which enhances a sense of financial responsibility and informs them on fair trade practices.",
+   "pcis": "Life skills (Critical Thinking): The learner develops critical thinking by predicting the likely outcome of events in a listening text.",
+   "links": "The learner is able to relate the skill of proper pronunciation and intensive reading to the reading of texts in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     122,
+     123,
+     124
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.a",
+     "letter": "a",
+     "text": "identify specific sounds, words, phrases, and sentences from a text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.b",
+     "letter": "b",
+     "text": "listen to a short text and rewrite it accurately",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.c",
+     "letter": "c",
+     "text": "use expressions such as similes, proverbs, fixed phrases idioms and metaphors in oral contexts correctly",
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.d",
+     "letter": "d",
+     "text": "advocate the need for attentive listening during oral comprehension",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.READIN.T13_EXTENSIVE_READING",
+   "number": "13.2.1",
+   "strand": "Reading",
+   "sub_strand": "Extensive Reading (Theme 13: Money – trade)",
+   "sequence": 1321,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "skim various texts to find out the general idea,",
+    "scan a text to find specific details such as key words,",
+    "read a variety of texts of about 1251 to 1500 words from newspaper, magazines, grade-appropriate digital/print texts, as well as articles,",
+    "collaborate with peers to establish a class library,",
+    "read print and non-print materials (websites and blogs) independently,",
+    "read newspapers, magazines poems, and class readers on trade,",
+    "read digital versions of newspapers and magazines for information."
+   ],
+   "key_inquiry_questions": [
+    "Why do we enjoy reading some materials but not others?",
+    "How do you obtain information from a newspaper, book, or magazine quickly?"
+   ],
+   "core_competences": "Self-efficacy: The learner’s ability to confidently express themselves is boosted as they practise reading increasingly difficult texts.\nDigital Literacy: The learner’s ability to manipulate digital devices is improved as they read online versions of newspapers.",
+   "values": "Respect: It is fostered as the learner appreciates diverse opinions and collaborate with peers to establish a class library.",
+   "pcis": "Financial Literacy: The learner’s knowledge on financial management is enhanced through the theme of money.",
+   "links": "The learner is able to relate the skill of reading extensively for information to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     125,
+     126
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.READIN.T13_EXTENSIVE_READING.a",
+     "letter": "a",
+     "text": "select appropriate reading texts from print or digital collections",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T13_EXTENSIVE_READING.b",
+     "letter": "b",
+     "text": "read a variety of print or digital texts for enjoyment and general understanding",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.READIN.T13_EXTENSIVE_READING.c",
+     "letter": "c",
+     "text": "appreciate the importance of extensive reading in lifelong learning",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.LANGUA.T13_WORD_CLASSES",
+   "number": "13.3.1",
+   "strand": "Language Use",
+   "sub_strand": "Word Classes (Theme 13: Money – trade)",
+   "sequence": 1331,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Prepositions"
+   ],
+   "learning_experiences": [
+    "identify prepositions of time such as since, before, until, about, during, past; directions such as above, across, below, after; agent such as by, and with; instrument such as with and by,",
+    "collaborate with peers to create visuals demonstrating the use of various prepositions,",
+    "construct sentences on money and trade using prepositions,",
+    "create crossword puzzles using prepositions in pairs or small groups,",
+    "create visuals to demonstrate the use of various prepositions in sentences,",
+    "work with peers to create charts or posters showing where objects are, for example, ‘the pupils are inside the classroom."
+   ],
+   "key_inquiry_questions": [
+    "What words do we use to describe the position of people or objects in relation to others?"
+   ],
+   "core_competences": "Learning to Learn: The learner’s ability to grasp concepts on their own is enhanced as they plan and manage time well and collaborate with peers to create and display charts featuring prepositions.\nDigital Literacy: The learner’s ability to interact with digital devices is developed as they search for examples of prepositions online.",
+   "values": "Social Justice: It is inculcated in the learners as they display fairness while work with peers to create charts or posters showing where objects are.\nIntegrity: It is fostered as the learner practises accountability by constructing sentences on money and trade using prepositions.",
+   "pcis": "Financial literacy: This is developed as the learner constructs sentences based on the theme of trade.",
+   "links": "The learner is able to relate the skill of correct use of prepositions to their learning in Kiswahili.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     127,
+     128
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.LANGUA.T13_WORD_CLASSES.a",
+     "letter": "a",
+     "text": "identify prepositions correctly in oral and written texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T13_WORD_CLASSES.b",
+     "letter": "b",
+     "text": "use prepositions correctly in varied texts",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T13_WORD_CLASSES.c",
+     "letter": "c",
+     "text": "judge the appropriateness of prepositions used in various texts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING",
+   "number": "13.4.1",
+   "strand": "Writing",
+   "sub_strand": "Mechanics of writing (Theme 13: Money – trade)",
+   "sequence": 1341,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Spelling: Affixes-prefixes and suffixes"
+   ],
+   "learning_experiences": [
+    "identify words with prefixes and suffixes and use them to create puzzles and share with peers,",
+    "form words using prefixes and affixes,",
+    "match words with their appropriate affixes (-un, -cian, sion, - tion),",
+    "use mind maps to generate a list of related words and change their form by adding affixes,",
+    "create a crossword puzzle using the words they have generated."
+   ],
+   "key_inquiry_questions": [
+    "Why is it difficult to spell some words?",
+    "How can we become better at spelling?"
+   ],
+   "core_competences": "Self-efficacy: The learner’s ability to confidently perform tasks is developed as they show concerted attention to detail while forming words using prefixes and affixes.\nCreativity and Imagination: The learner’s ability to create something new is improved as they generate ideas using mind maps and come up with a list of related words.",
+   "values": "Peace is promoted as the learner collaborates with peers to edit and display their journals.",
+   "pcis": "Financial Literacy: The learner is able to manage their finances better as they interact with the theme on money and trade to create mind maps and crossword puzzles.",
+   "links": "The learner is able to relate the skill of spelling words correctly to their editing of written work in Kiswahili and other learning areas.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+    "design": "ENGLISH GRADE 6 UPDATED - Revised Sept.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     129,
+     130
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.a",
+     "letter": "a",
+     "text": "recognise affixes used to change the form and meaning of words",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.b",
+     "letter": "b",
+     "text": "form new words using prefixes and suffixes",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.c",
+     "letter": "c",
+     "text": "spell words correctly for writing fluency",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.d",
+     "letter": "d",
+     "text": "determine the correctness and appropriateness of affixes used in various texts",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

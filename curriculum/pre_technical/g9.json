@@ -1,0 +1,864 @@
+{
+ "framework": "cbc",
+ "subject_key": "pre_technical",
+ "grade": 9,
+ "source": "KICD Pre-Technical Studies, First published 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 5,
+  "sub_strands": 13,
+  "outcomes": 55,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR",
+   "number": "1.1",
+   "strand": "Foundations of Pre-Technical Studies",
+   "sub_strand": "Safety on Raised Platforms",
+   "sequence": 101,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "walk around the school to explore types of raised platforms (ladders, trestles, steps, stands, mobile raised platforms, work benches, ramps),",
+    "brainstorm on the types of raised platforms used in day-to-day life,",
+    "use print or digital media to search for information on risks associated with working on raised platforms,",
+    "discuss ways of minimising risks related to working on raised platforms,",
+    "role-play safety practices for working on raised platforms,",
+    "visit the locality to observe safety precautions taken when working on raised platforms."
+   ],
+   "key_inquiry_questions": [
+    "What is the importance of observing safety when working on raised platforms?"
+   ],
+   "core_competences": "Communication and Collaboration: learner develops speaking, listening and teamwork skills when discussing ways of minimising risks and dangers related to working on raised platforms.\nDigital Literacy: learner acquires interacting with technology skills when using digital devices to search for information on risks associated with working on raised platforms.",
+   "values": "Unity: learner develops positive relationships as they discuss ways of minimising risks related to working on raised platforms.\nLove: learner cares for others to avoid injury as they role-play safety practices for working on raised platforms.\nResponsibility: learner cares for digital devices when using them to identify types of raised platforms.",
+   "pcis": "Disaster Risk Reduction: learner acquires skills for mitigating risks when working on raised platforms.\nSafe and Security: learner acquires knowledge on safe work practices as they discuss ways of minimising risks related to working on raised platforms.",
+   "links": "Integrated Science: learner enhances safety skills when role-playing safety practices for working on raised platforms.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.a",
+     "letter": "a",
+     "text": "identify types of raised platforms used in performing tasks",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.b",
+     "letter": "b",
+     "text": "describe risks associated with working on raised platforms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.c",
+     "letter": "c",
+     "text": "observe safety when working on raised platforms",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.d",
+     "letter": "d",
+     "text": "appreciate the need for observing safety while working on raised platforms",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST",
+   "number": "1.2",
+   "strand": "Foundations of Pre-Technical Studies",
+   "sub_strand": "Handling Hazardous Substances",
+   "sequence": 102,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use print or digital media to search for information on hazardous substances (poisonous, flammable, corrosive),",
+    "explore the environment to identify hazardous substances (poisonous, flammable, corrosive),",
+    "group hazardous substances into poisonous, flammable or corrosive,",
+    "discuss safe ways of handling hazardous substances in the environment,",
+    "read and interpret instructions on the conditions for use of hazardous substances,",
+    "visit the locality to learn about safe handling of poisonous, flammable and corrosive substances,",
+    "practise safe handling of poisonous, flammable and corrosive substances in the environment,",
+    "discuss the importance of observing safety when handling hazardous substances."
+   ],
+   "key_inquiry_questions": [
+    "Why are hazardous substances labelled?",
+    "How are hazardous substances handled?"
+   ],
+   "core_competences": "Communication and Collaboration: learner develops speaking, listening and self-expression skills when discussing safe ways of handling hazardous substances.\nLearning to Learn: learner develops the skill of sharing learnt knowledge when discussing safe ways of handling hazardous substances.",
+   "values": "Respect: learner appreciates diverse opinions when discussing safe ways of handling hazardous substances in the immediate environment.\nPatriotism: learner respects fellow citizens when visiting the locality to learn about safe handling of poisonous, flammable and corrosive substances.",
+   "pcis": "Disaster Risk Reduction: learner’s ability to identify hazards is enhanced when discussing safe ways of handling hazardous substances in the environment.",
+   "links": "Integrated Science: learner enhances knowledge on laboratory safety when practising safe handling of poisonous, flammable and corrosive substances in the environment.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.a",
+     "letter": "a",
+     "text": "identify hazardous substances found in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.b",
+     "letter": "b",
+     "text": "classify hazardous substances found in the locality",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.c",
+     "letter": "c",
+     "text": "describe safe ways of handling hazardous substances in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.d",
+     "letter": "d",
+     "text": "handle hazardous substances safely in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.e",
+     "letter": "e",
+     "text": "appreciate the importance of observing safety when handling hazardous substances",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR",
+   "number": "1.3",
+   "strand": "Foundations of Pre-Technical Studies",
+   "sub_strand": "Self-Exploration and Career Development",
+   "sequence": 103,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and present on ways of nurturing talents and abilities,",
+    "display talents and abilities through clubs and societies and other planned school activities,",
+    "make a list of talents and abilities and their corresponding career pathways,",
+    "engage with a resource person on career opportunities related to talents and abilities,",
+    "discuss a case scenario on ethical and unethical practices related to the use of talents and abilities,",
+    "make presentations on careers of choice based on talents and abilities."
+   ],
+   "key_inquiry_questions": [
+    "How are talents and abilities nurtured?",
+    "Why is self-exploration necessary for career development?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: learner acquire interpretation and inference skills when reading and analysing a case scenario on ethical and unethical practices.\nCreativity and Imagination: learner acquires networking skills when displaying talents and abilities through clubs, societies and other planned school activities.",
+   "values": "Integrity: learner develops a sense of accountability when analysing a case scenario on ethical and unethical practices related to the use of talents and abilities.\nRespect: learner shows open-mindedness when discussing and presenting on ways of nurturing talents and abilities.",
+   "pcis": "Social Cohesion: learner cooperates with others when demonstrating their talents and abilities during talent shows.\nPeer Education and Mentorship: learner exchanges ideas with others when displaying talents and abilities through clubs and societies.",
+   "links": "Creative Arts and Sports: learner enhances creativity when displaying talents and abilities through clubs and societies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.a",
+     "letter": "a",
+     "text": "explain ways of nurturing talents and abilities for self-development",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.b",
+     "letter": "b",
+     "text": "relate talents and abilities to career pathways",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.c",
+     "letter": "c",
+     "text": "analyse ethical and unethical practices related to the use of talents and abilities",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.d",
+     "letter": "d",
+     "text": "choose a career based on talents and abilities for self-development",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION",
+   "number": "2.1",
+   "strand": "Communication in Pre-Technical Studies",
+   "sub_strand": "Oblique Projection",
+   "sequence": 201,
+   "lessons": 14,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use print or digital media to search for information on the characteristic of oblique drawings,",
+    "brainstorm on the characteristic of oblique drawings,",
+    "discuss the steps for drawing shaped blocks in oblique projection,",
+    "draw given drawings in oblique projection without using instruments (cavalier and cabinet),",
+    "use geometrical set drawing instruments to draw shaped blocks in oblique projection (cabinet),",
+    "walk around the locality to observe the use of oblique drawings."
+   ],
+   "key_inquiry_questions": [
+    "How are oblique drawings used in technical fields?"
+   ],
+   "core_competences": "Communication and Collaboration: learner develops speaking, listening and self-expression skills when brainstorming on the characteristic of oblique drawings.\nCritical Thinking and Problem Solving: learner develops interpretation and inference skills when drawing oblique diagrams.",
+   "values": "Responsibility: learner cares for drawing instruments when drawing three dimensional objects in oblique projection.\nUnity: learner cooperates with others when using digital devices to search for information on the characteristics of oblique drawings.",
+   "pcis": "Social Cohesion: learner develops ability to relate well with others as they brainstorm on the characteristics of oblique drawings.",
+   "links": "Mathematics: learner enhances skills of solid geometry when drawing oblique diagrams.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.a",
+     "letter": "a",
+     "text": "explain the characteristics of oblique drawing in technical fields",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.b",
+     "letter": "b",
+     "text": "sketch given drawings in oblique projection",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.c",
+     "letter": "c",
+     "text": "draw shaped blocks in oblique projection",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.d",
+     "letter": "d",
+     "text": "appreciate the application of oblique projection in drawing",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING",
+   "number": "2.2",
+   "strand": "Communication in Pre-Technical Studies",
+   "sub_strand": "Visual Programming",
+   "sequence": 202,
+   "lessons": 15,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use print or digital media to search for information on the application areas of visual programming,",
+    "discuss the application areas of visual programming software,",
+    "watch a video on how to develop an application using visual programming software (games, stories and animations),",
+    "develop interactive stories, games and animations using visual programming software,",
+    "practise using visual programming applications to solve problems in day-to-day life."
+   ],
+   "key_inquiry_questions": [
+    "How are applications developed using visual programming software?"
+   ],
+   "core_competences": "Self-Efficacy: effective communication skills are developed as the learner discusses the application areas of visual programming with peers.\nCritical Thinking and Problem Solving: open-mindedness and creativity skills are enhanced as the learner develops an application using visual programming software.",
+   "values": "Social Justice: learner shares resources equitably with others when working in groups to develop applications.\nResponsibility: learner takes care of digital devices when developing interactive stories, games and animations using visual programming software.",
+   "pcis": "Peer Education and Mentorship: interpersonal relationships are enhanced as learner discusses the application areas of visual programming software.\nInternet Safety and Security: responsible online behaviour is enhanced as learner uses digital media to search for information on the application areas of visual programming.",
+   "links": "Creative Arts and Sports: learner enhances skills of animations when developing interactive stories and games.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     22,
+     23,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.a",
+     "letter": "a",
+     "text": "explain the application areas of visual programming software in solving problems",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.b",
+     "letter": "b",
+     "text": "create an application using visual programming software for solving problems in day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.c",
+     "letter": "c",
+     "text": "embrace the use of visual programming in the day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.MATERI.WOOD",
+   "number": "3.1",
+   "strand": "Materials for Production",
+   "sub_strand": "Wood",
+   "sequence": 301,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use print or digital media to search for information on types of wood,",
+    "discuss the physical characteristics of wood (soft and hard wood),",
+    "use a checklist to sort wood as either softwood or hardwood,",
+    "discuss methods of wood preparation (conversion and seasoning),",
+    "brainstorm on the uses of wood in different trades,",
+    "develop charts to match types of wood to their uses,",
+    "visit the locality to explore the uses of wood."
+   ],
+   "key_inquiry_questions": [
+    "Why is wood important in day-to– day life?"
+   ],
+   "core_competences": "Digital Literacy: learner develops interacting with technology skills when using digital devices to search for information on types of wood.\nLearning to Learn: learner acquires planning and time management skills when developing charts to match types of wood to their uses.",
+   "values": "Unity: learner cooperates with others when using print or digital media to search for information on types of wood.\nRespect: learner accepts diverse opinions when discussing the methods of wood preparation.",
+   "pcis": "Peer Education and Mentorship: interpersonal relationships are enhanced as learner discusses the methods of wood preparation.",
+   "links": "Social Studies: learner enhances knowledge of resource exploitation as they brainstorm on the uses of wood in different trades.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     25,
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.MATERI.WOOD.a",
+     "letter": "a",
+     "text": "classify wood according to physical characteristics",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G9.MATERI.WOOD.b",
+     "letter": "b",
+     "text": "describe the preparation of wood for use in the production of items",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G9.MATERI.WOOD.c",
+     "letter": "c",
+     "text": "relate types of wood to their uses in the community",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G9.MATERI.WOOD.d",
+     "letter": "d",
+     "text": "value the importance of wood in day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS",
+   "number": "3.2",
+   "strand": "Materials for Production",
+   "sub_strand": "Handling Waste Materials",
+   "sequence": 302,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "walk around the school compound to identify waste materials, (plastic, glass, metal, wood waste, electronic waste, construction waste),",
+    "use print or digital media to search for information on safe ways of handling waste materials,",
+    "discuss safe ways of handling waste materials (reduce, reuse, recycle, compost and burn),",
+    "practise safe disposal of waste materials (reduce, reuse, recycle, compost and burn),",
+    "visit the locality to observe handling of waste materials."
+   ],
+   "key_inquiry_questions": [
+    "How are waste materials handled in the locality?"
+   ],
+   "core_competences": "Self-Efficacy: effective communication skills are developed as the learner discusses safe ways of disposing waste materials.\nDigital Literacy: learner develops interacting with technology skills when using digital devices to search for information on safe ways of handling waste materials in the environment.",
+   "values": "Responsibility: learner engages in assigned roles when practicing safe disposal of waste materials.\nPatriotism: learner is conscious of belonging to the community as they visit the locality to observe handling of waste materials.",
+   "pcis": "Environmental Conservation: learner minimizes environmental pollution when reducing, reusing recycling waste materials.",
+   "links": "Agriculture: learner enhances skills on organic gardening when composting waste materials.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS.a",
+     "letter": "a",
+     "text": "identify waste materials found in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS.b",
+     "letter": "b",
+     "text": "describe ways of handling waste materials safely in the environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS.c",
+     "letter": "c",
+     "text": "dispose waste materials using appropriate methods",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS.d",
+     "letter": "d",
+     "text": "appreciate the need for proper handling of waste materials in the environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.TOOLS_.HOLDING_TOOLS",
+   "number": "4.1",
+   "strand": "Tools and Production",
+   "sub_strand": "Holding Tools",
+   "sequence": 401,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use visual aids or real objects to identify holding tools,",
+    "choose holding tools for different tasks,",
+    "discuss uses of different types of holding tools (pliers, clamps, tongs, clips, vice),",
+    "use print or digital media to search for information on safe use of holding tools,",
+    "demonstrate safe use of holding tools when performing different types of tasks,",
+    "clean and safely store holding tools,",
+    "share experiences on the use of holding tools."
+   ],
+   "key_inquiry_questions": [
+    "How are holding tools used in day-to-day life?"
+   ],
+   "core_competences": "Communication and Collaboration: learner develops listening and speaking skills when discussing the uses of different types of holding tools.\nLearning to Learn: learner reflects on own work when demonstrating safe use of holding tools.",
+   "values": "Unity: learner cooperates with others when discussing on the safe use of holding tools.\nResponsibility: learner exercises accountability as they clean and safely store holding tools.",
+   "pcis": "Personal Safety and Security: learner demonstrates basic safety skills as they safely use holding tools to perform tasks.",
+   "links": "Agriculture: learner enhances skills on use of farm tools during demonstration on the safe use of holding tools.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.TOOLS_.HOLDING_TOOLS.a",
+     "letter": "a",
+     "text": "identify holding tools used in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.TOOLS_.HOLDING_TOOLS.b",
+     "letter": "b",
+     "text": "select holding tools for performing given tasks",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.TOOLS_.HOLDING_TOOLS.c",
+     "letter": "c",
+     "text": "use holding tools to perform given tasks",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.TOOLS_.HOLDING_TOOLS.d",
+     "letter": "d",
+     "text": "care for holding tools used in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.TOOLS_.HOLDING_TOOLS.e",
+     "letter": "e",
+     "text": "appreciate the importance of holding tools in day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.TOOLS_.DRIVING_TOOLS",
+   "number": "4.2",
+   "strand": "Tools and Production",
+   "sub_strand": "Driving Tools",
+   "sequence": 402,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use visual aids or realia to identify driving tools in the community,",
+    "discuss uses of driving tools for different tasks (hammer, screwdriver, spanner, punches, mallets),",
+    "use print or digital devices to search and watch a video clip on the safe use of driving tools,",
+    "demonstrate safe use of driving tools to perform different types of tasks,",
+    "clean and safely store driving tools,",
+    "share experiences on the use of holding tools."
+   ],
+   "key_inquiry_questions": [
+    "How are driving tools used in day-to-day life?"
+   ],
+   "core_competences": "Self-Efficacy: learner acquires self-awareness skills when demonstrating safe use of driving tools to perform different types of tasks.\nDigital Literacy: learner enhances interacting with technology skills when searching for information on safe use of driving tools.",
+   "values": "Respect: learner accommodates diverse opinions when sharing experiences on the use of holding tools.\nPeace: learner follows laid down procedures when demonstrating safe use of driving tools.",
+   "pcis": "Personal Safety and Security: learner demonstrates basic safety skills when using driving tools safely to perform tasks.",
+   "links": "Agriculture: learner enhances the knowledge on use of farm tools during demonstration on how to use and care for driving tools.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.TOOLS_.DRIVING_TOOLS.a",
+     "letter": "a",
+     "text": "identify driving tools used in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.TOOLS_.DRIVING_TOOLS.b",
+     "letter": "b",
+     "text": "select driving tools for performing given tasks",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.TOOLS_.DRIVING_TOOLS.c",
+     "letter": "c",
+     "text": "use driving tools to perform given tasks",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.TOOLS_.DRIVING_TOOLS.d",
+     "letter": "d",
+     "text": "care for driving tools used in day-to-day life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.TOOLS_.DRIVING_TOOLS.e",
+     "letter": "e",
+     "text": "acknowledge the importance of driving tools in day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.TOOLS_.PROJECT",
+   "number": "4.3",
+   "strand": "Tools and Production",
+   "sub_strand": "Project",
+   "sequence": 403,
+   "lessons": 20,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "explore the locality to identify problems that can be solved using the skills acquired in Pre-Technical Studies,",
+    "brainstorm on the possible solutions to the identified problems,",
+    "use print or digital media to search for information on possible items to solve the identified problem,",
+    "discuss possible items that can be made to solve the identified problem,",
+    "select one item that can be made using the skills acquired to solve the identified problem,",
+    "sketch the item to be made using the skills acquired to solve the identified problem,",
+    "estimating the cost of materials for making the project item,",
+    "use locally available materials and tools to make the identified item,",
+    "estimate the cost to determine the price for the item,",
+    "present the finished items for feedback."
+   ],
+   "key_inquiry_questions": [
+    "How are skills acquired in Pre-Technical Studies used to solve problems in the community?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: learner develops evaluation and decision making skills when selecting an item that can be made using the skills acquired.\nCreativity and Imagination: learner experiments with ideas when discussing possible items that can be made to solve the identified problem.",
+   "values": "Responsibility: learner cares for tools and materials when making the item.\nRespect: learner appreciates diverse opinions when discussing possible items that can be made to solve the identified problem.",
+   "pcis": "Environmental Conservation: learner conserves natural resources when using locally available materials and tools to make the project item.\nFinancial Literacy: learner enhances budgeting skills when estimating the cost of materials for making the project item.",
+   "links": "Creative Arts and Sports: learner enhances drawing skills when sketching the project item.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.TOOLS_.PROJECT.a",
+     "letter": "a",
+     "text": "identify a problem in the locality that can be solved using the skills acquired in Pre-Technical Studies",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.TOOLS_.PROJECT.b",
+     "letter": "b",
+     "text": "select an item that can be made to solve the identified problem",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.TOOLS_.PROJECT.c",
+     "letter": "c",
+     "text": "make an item to solve the problem identified using locally available materials",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.TOOLS_.PROJECT.d",
+     "letter": "d",
+     "text": "utilise skills acquired in Pre-Technical Studies to solve problems in day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.ENTREP.FINANCIAL_SERVICES",
+   "number": "5.1",
+   "strand": "Entrepreneurship",
+   "sub_strand": "Financial Services",
+   "sequence": 501,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use print or digital media to search for information on financial institutions available in Kenya,",
+    "discuss and present the types of financial institutions in Kenya (banks, insurance, SACCOs, micro finance),",
+    "use print or digital media to search for information on services offered by financial institutions in Kenya,",
+    "use a case study to discuss services offered by financial institutions in Kenya,",
+    "engage in a discussion with a resource person on the utilisation of financial services for entrepreneurial development."
+   ],
+   "key_inquiry_questions": [
+    "What services are offered by different financial institutions in Kenya?"
+   ],
+   "core_competences": "Learning to Learn: learner acquires skills of organising self-learning when searching for information on services offered by financial institutions in Kenya.\nSelf-Efficacy: learner develops effective communication skills when discussing and presenting the types of financial institutions in Kenya.\nCritical Thinking and Problem-Solving: learner develops interpretation and inference skills when identifying financial services.",
+   "values": "Responsibility: learner cares for own property and those of others when handling digital devices when searching for information on financial services.\nUnity: learner displays team spirit and collaborates with others when discussing and presenting on the types of financial institutions in Kenya.",
+   "pcis": "Financial Literacy: learner’s financial knowledge is enhanced when discussing and presenting on the types of financial institutions in Kenya.",
+   "links": "Agriculture: learner enhances knowledge on investment when searching for information on services offered by financial institutions in Kenya.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     37,
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.ENTREP.FINANCIAL_SERVICES.a",
+     "letter": "a",
+     "text": "identify financial institutions available in Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.ENTREP.FINANCIAL_SERVICES.b",
+     "letter": "b",
+     "text": "classify financial institutions in Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.ENTREP.FINANCIAL_SERVICES.c",
+     "letter": "c",
+     "text": "analyse services offered by financial institutions in Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.ENTREP.FINANCIAL_SERVICES.d",
+     "letter": "d",
+     "text": "utilise financial services for entrepreneurial development",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS",
+   "number": "5.2",
+   "strand": "Entrepreneurship",
+   "sub_strand": "Government and Business",
+   "sequence": 502,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm and present on the reasons for government involvement in business in Kenya,",
+    "use print or digital media to search for information on ways of Government involvement in business,",
+    "discuss and present on the meaning and importance of paying taxes in Kenya,",
+    "discuss types of taxes in Kenya (income tax, VAT, corporate tax, fuel levy, excise duty) and present to peers,",
+    "discuss a case scenarios on e-Government services in business such as registration and licensing of motor vehicle business by NTSA, among others,",
+    "use digital devices to access and interact with e-Government platform in Kenya."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important for the Government to get involved in business?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving; learner develops evaluating and decision making skills when discussing a case scenario on e- Government services in business.\nDigital Literacy: learner develops the skill of interacting with technology when using digital devices to access and interact with the e- Government platform in Kenya.",
+   "values": "Responsibility: learner acquires accountability skills when using digital devices to access and interact with e- Government platform in Kenya taxes in Kenya.\nSocial justice: learner learns about the need for government involvement in business to promote fairness and equity across the society.",
+   "pcis": "Financial Literacy: learner enhances financial skills when discussing and presenting on types of taxes paid in Kenya.\nSocial Cohesion: learner enhances interpersonal relationships when brainstorming and presenting on the reasons for government involvement in business.",
+   "links": "Social Studies: learner enhances knowledge on taxation when discussing the types of taxes.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.a",
+     "letter": "a",
+     "text": "explain the reasons for government involvement in business",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.b",
+     "letter": "b",
+     "text": "describe ways of government involvement in business",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.c",
+     "letter": "c",
+     "text": "explore types of taxes in Kenya",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.d",
+     "letter": "d",
+     "text": "analyse e-Government services in business",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.e",
+     "letter": "e",
+     "text": "acknowledge the need to comply with Government regulations in business",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G9.ENTREP.BUSINESS_PLAN",
+   "number": "5.3",
+   "strand": "Entrepreneurship",
+   "sub_strand": "Business Plan",
+   "sequence": 503,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use print or digital media to search for information on the meaning and importance of a business plan,",
+    "discuss and present the meaning and importance of a business plan,",
+    "brainstorm and present on the components of a business plan (executive summary, business description, market/competitor analysis, product and services, marketing plan, financial projection),",
+    "analyse a case scenario on the components of a business plan,",
+    "complete a business plan template (executive summary, business description, market/competitor analysis, product and services, marketing plan, financial projection),",
+    "engage with a resource person on the use of a business plan."
+   ],
+   "key_inquiry_questions": [
+    "Why is a business plan important to an entrepreneur?",
+    "How is a business plan prepared?"
+   ],
+   "core_competences": "Learning to Learn: learner acquires the skill of organising own learning when completing a business plan template.\nCritical thinking and Problem Solving: learner acquires evaluation and decision-making skills when completing a business plan template.",
+   "values": "Respect: learner shows regard for the input of every member when brainstorming and presenting the meaning and importance of a business plan.\nLove: learner respects others when brainstorming and presenting the meaning and importance of a business plan.",
+   "pcis": "Social Cohesion: learner works and cooperates with others when brainstorming on the meaning and importance of a business plan.",
+   "links": "Agriculture: learner enhances knowledge on marketing of agricultural produce when discussing business plan.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+    "design": "Pre-Technical Studies Grade 9 - July 2024 - Revised.pdf",
+    "version": "First published 2024",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G9.ENTREP.BUSINESS_PLAN.a",
+     "letter": "a",
+     "text": "explain the importance of a business plan in entrepreneurship",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.ENTREP.BUSINESS_PLAN.b",
+     "letter": "b",
+     "text": "describe the components of a business plan in financial management",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.ENTREP.BUSINESS_PLAN.c",
+     "letter": "c",
+     "text": "fill in a business plan template for a given business project",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.ENTREP.BUSINESS_PLAN.d",
+     "letter": "d",
+     "text": "embrace the use of a business plan in entrepreneurship",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

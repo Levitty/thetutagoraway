@@ -1,0 +1,2069 @@
+{
+ "framework": "cbc",
+ "subject_key": "cre",
+ "grade": 4,
+ "source": "KICD Christian Religious Education, First Published 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 6,
+  "sub_strands": 32,
+  "outcomes": 126,
+  "lessons": 69,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "CRE.G4.CREATI.SELF_AWARENESS",
+   "number": "1.1",
+   "strand": "Creation",
+   "sub_strand": "Self-awareness",
+   "sequence": 101,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "feelings 3 lessons choices 3 lessons"
+   ],
+   "learning_experiences": [
+    "say their names,",
+    "state what is unique about them,",
+    "recite and meditate on Psalms 139:13 about being fearfully and wonderfully made,",
+    "read Genesis 1:27 about being, ‘created in the image and likeness of God’",
+    "sing a song related to their uniqueness. The learner is guided to:",
+    "sing a song related to good thoughts and feelings,",
+    "list good thoughts such as sharing with others, helping parents, being happy, being thankful, respecting others,",
+    "say why it is good to be joyful,",
+    "share experiences on how they cope with emotions such as anger or sadness,",
+    "use digital devices to draw and colour pictures of faces depicting various emotions,",
+    "role-play forgiving others when wronged,",
+    "read Ephesians 4:26 and write down lessons learnt",
+    "write Philippians 4:4 on flash cards and recite it,",
+    "sing songs related to rejoicing in the Lord always (Philippians 4:4). The learner is guided to:",
+    "in pairs, list choices they make in day-to-day life,",
+    "list results of choices that they make,",
+    "sing a song about good choices,",
+    "Role-play ‘making right choices that are acceptable to God.’"
+   ],
+   "key_inquiry_questions": [
+    "Why are you a special creation?",
+    "How do you control your thoughts and feelings?",
+    "How do you cope with anger or sadness? What are the effects of the choices you make?"
+   ],
+   "core_competences": "Self-efficacy: the skill of knowing self is exhibited as learners say their names for identification.\nLearning to learn: the skill of sharing experiences is nurtured as learners tell each other how they cope with emotions such as anger or sadness.",
+   "values": "Respect: learners portray positive regard for self and others.\nLove: is nurtured as learners role-play forgiving others when wronged.",
+   "pcis": "Social cohesion is nurtured as learners list good thoughts such as sharing with others, helping parents, being happy, being thankful and respecting others.",
+   "links": "Creative Arts: creative skills are applied as learners sing, dance, draw and colour pictures of faces depicting various emotions.\nEnglish: speaking skills are applied as learners recite Bible verses. ϯ",
+   "design_notes": "Second read left this for a person to confirm: outcome letters read as abcdabcdabcd; a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     12,
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.a",
+     "letter": "a",
+     "text": "mention his or her name for identification and self-awareness",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.b",
+     "letter": "b",
+     "text": "recognise his or her uniqueness as a creation of God",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.c",
+     "letter": "c",
+     "text": "acknowledge God as the creator",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.d",
+     "letter": "d",
+     "text": "appreciate his or her uniqueness as God’s special creation. By the end of the sub-strand, the learner should be able to",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.a_",
+     "letter": "a",
+     "text": "identify good thoughts and feelings",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.b_",
+     "letter": "b",
+     "text": "explain the importance of being joyful",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.c_",
+     "letter": "c",
+     "text": "list lessons learnt from Ephesians 4:26, ϭ",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.d_",
+     "letter": "d",
+     "text": "apply the lessons learnt to cope with emotions in day-to-day life. By the end of the sub-strand, the learner should be able to",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.a__",
+     "letter": "a",
+     "text": "list choices they make in day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.b__",
+     "letter": "b",
+     "text": "discuss results of choices they make in daily life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.c__",
+     "letter": "c",
+     "text": "make right choices guided by the word of God",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.SELF_AWARENESS.d__",
+     "letter": "d",
+     "text": "portray responsibility by making right choices. Ϯ",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS",
+   "number": "1.4",
+   "strand": "Creation",
+   "sub_strand": "My Family Family members",
+   "sequence": 102,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "sing a song related to family relationships,",
+    "name family members in the nuclear family,",
+    "name family members in the extended family (cousins, aunts, uncles, grandparents),",
+    "draw a family tree and write names of family members on it,",
+    "list ways of respecting family members,",
+    "type a poem using a digital device about respect for family members,",
+    "watch a video clip of family members eating or praying together,",
+    "recite Ephesians 6:1-3 on respecting parents. The learner is guided to:",
+    "sing a song related to respecting their bodies as the temple of the Holy Spirit,",
+    "in turns, read 2 Samuel 13:4-14,",
+    "say whom to report to if they are touched inappropriately or sexually abused,",
+    "in groups, tell how they should protect themselves from sexual abuse,",
+    "role-play ways of protecting themselves from sexual abuse,",
+    "write 1 Corinthians 6:19 on flash cards and meditate on it,",
+    "watch a video clip of children being tempted with gifts, but they say NO! to the strangers. )"
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to know members of your family?",
+    "Why are healthy family relationships important?"
+   ],
+   "core_competences": "Collaboration: the skill of team work is portrayed as learners carry out activities in groups.\nDigital literacy: the skill of digital citizenship is enhanced as learners act safely and responsibly while watching video clips.",
+   "values": "Unity: learners collaborate with each other as they read the Bible in turns.",
+   "pcis": "Gender awareness: is nurtured as they learn how to protect themselves from sexual abuse.\nHuman Sexuality-Abstinence: learners acquire the virtue of holiness as they say no to inappropriate touching or report cases of sexual abuse",
+   "links": "Creative Arts: creative skills are applied as learners sing songs and write poems.\nEnglish: the skill of writing is applied as learners write names of family members. ρ",
+   "design_notes": "Second read left this for a person to confirm: outcome letters read as abcdabcd; a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     15,
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.a",
+     "letter": "a",
+     "text": "name family members in the nuclear and extended family",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.b",
+     "letter": "b",
+     "text": "draw a family tree to understand relationships within the family",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.c",
+     "letter": "c",
+     "text": "explain why it is important to honour parents",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.d",
+     "letter": "d",
+     "text": "respect family members for harmonious co-existence",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.a_",
+     "letter": "a",
+     "text": "take care when alone with people of the opposite sex",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.b_",
+     "letter": "b",
+     "text": "mention ways of protecting oneself from sexual abuse",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.c_",
+     "letter": "c",
+     "text": "identify whom to report to if touched inappropriately or sexually abused",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.d_",
+     "letter": "d",
+     "text": "appreciate the body as a temple of the Holy Spirit and live a holy life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.CREATI.ATTRIBUTES_OF_GOD",
+   "number": "1.6",
+   "strand": "Creation",
+   "sub_strand": "Attributes of God",
+   "sequence": 103,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, picture-read 1 John 4:7-8, Genesis 1:1-25 and 1Samuel 2:2 in turns,",
+    "sort and match letters on attributes of God (Sole Creator, Loving Father, Holy Father),",
+    "join words about the attributes of God from a puzzle (sole creator, loving, holy),",
+    "compose a poem on, ‘God our loving Father,’",
+    "sing a song about the love of God."
+   ],
+   "key_inquiry_questions": [
+    "Why should you know the attributes of God?"
+   ],
+   "core_competences": "Self-Efficacy: the skill of expressing their needs clearly for help is nurtured as they say whom to report to if they are touched inappropriately or sexually abused.\nCollaboration: the skill of teamwork is portrayed as they sort and match letters.\nCreativity and Imagination: the skill of exploration is exhibited as learners compose a poem on, ‘God our loving Father.’",
+   "values": "Unity is nurtured as they work in groups and sing a song about the love of God.",
+   "pcis": "Social cohesion: is portrayed as learners interact with each other while working in groups to picture-read the Bible texts.",
+   "links": "English: writing skills are applied as learners write a poem.\nCreative Arts: creative skills are reinforced as learners sing a song about the love of God.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     17,
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.CREATI.ATTRIBUTES_OF_GOD.a",
+     "letter": "a",
+     "text": "read scriptures on the attributes of God",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.ATTRIBUTES_OF_GOD.b",
+     "letter": "b",
+     "text": "list three attributes of God and revere Him",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.CREATI.ATTRIBUTES_OF_GOD.c",
+     "letter": "c",
+     "text": "recognise God as a loving Father who knows them by their names",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD",
+   "number": "2.1",
+   "strand": "The Holy Bible",
+   "sub_strand": "The Inspired Word of God",
+   "sequence": 201,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Bible Stories:"
+   ],
+   "learning_experiences": [
+    "sing a song related to respecting the Holy Bible,",
+    "role-play ways of handling the Holy Bible with respect,",
+    "in pairs, observe and read charts containing books in the Old and New Testament,",
+    "play games on naming some books in the Old and the New Testament,",
+    "recite and meditate on Isaiah 49:16,",
+    "sing a song about the books in the Holy Bible. The learner is guided to:"
+   ],
+   "key_inquiry_questions": [
+    "Why should you respect the Holy Bible?",
+    "Why is it important to know the books in the Holy Bible? How did"
+   ],
+   "core_competences": "Collaboration: the skill of teamwork is enhanced as learners contribute to group discussions and take up different roles while singing and role playing.\nCreativity and imagination: the skill of originality is developed as learners come up with new ideas while playing games on naming some books in the Old and the New Testament.",
+   "values": "Responsibility: is enhanced as they learn how to care for the Holy Bible.",
+   "pcis": "Spiritual Awareness: is enhanced as learners recite Isaiah 49:16",
+   "links": "Mathematics: counting skills are applied as learners count the number of books in the Holy Bible\nCreative Arts: creative skills are applied as learners play games on naming some Books in the Old and the New Testament\nEnglish: reading skills are applied as learners read the Holy Bible",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     19,
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.a",
+     "letter": "a",
+     "text": "handle the Holy Bible with respect as the inspired word of God",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.b",
+     "letter": "b",
+     "text": "identify the books in the Old and New Testament",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.c",
+     "letter": "c",
+     "text": "role play naming some books in the Bible",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.d",
+     "letter": "d",
+     "text": "recite Isaiah 49:16 and desire to read the Holy Bible always. By the end of the sub-strand",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC",
+   "number": "2.2",
+   "strand": "The Holy Bible",
+   "sub_strand": "Zacchaeus the Tax Collector",
+   "sequence": 202,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read Luke19:2-10 in turns,",
+    "draw and colour Zacchaeus on a tree and share the drawings with peers,",
+    "retell the story of Zacchaeus,",
+    "tell a friend how to turn away from bad behaviour//sin,",
+    "state three lessons learnt from the story of Zacchaeus,",
+    "list ways of using money wisely,",
+    "sing a song related to Jesus Christ as the saviour."
+   ],
+   "key_inquiry_questions": [
+    "Zacchaeus’ encounter with Jesus Christ change his behaviour?"
+   ],
+   "core_competences": "Self-efficacy: the skill of expressing their emotions is exhibited as learners tell their friends how to turn away from bad behaviour/sin. ϭϬ",
+   "values": "Patriotism: they learn how Zacchaeus dedicated his life to serving his government regardless of the challenges his work posed to him and his family. He also pledged to give half his belongings to the poor and for anyone he had cheated he would pay back four times.",
+   "pcis": "Social Cohesion: learners carry out activities in groups such as singing.",
+   "links": "English: reading skills are applied as learners read the story of Zacchaeus.\nCreative Arts: creative skills are applied as learners draw, colour, role play and sing.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.a",
+     "letter": "a",
+     "text": "retell the story of Zacchaeus",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.b",
+     "letter": "b",
+     "text": "recount how Zacchaeus changed his behaviour positively",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.c",
+     "letter": "c",
+     "text": "demonstrate integrity when using money",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.d",
+     "letter": "d",
+     "text": "discuss why it is important to repent sins in order to be like Christ",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_HO.BALAAM_S_DONKEY",
+   "number": "2.3",
+   "strand": "The Holy Bible",
+   "sub_strand": "Balaam’s Donkey",
+   "sequence": 203,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, read Numbers 22:1-6, 20- 34,",
+    "in pairs, list the importance of obeying God and their seniors,",
+    "role-play the story of Balaam’s Donkey,",
+    "discuss why they should bless and not curse or speak ill about others according to Numbers 22:1-6, 20-34,",
+    "use a digital device or a pencil to draw the scenarios in this story,",
+    "sing a song related to obedience."
+   ],
+   "key_inquiry_questions": [
+    "Why did the donkey talk?"
+   ],
+   "core_competences": "Learning to Learn: the skill of self-discipline is nurtured as learners work collaboratively in groups.\nDigital Literacy: the skill of digital citizenship is enhanced as learners use a digital device and draw the scenarios based on the story.",
+   "values": "Social Justice: learners advocate for harmonious relationships in society as they discuss why they should bless and not curse or speak ill about others.",
+   "pcis": "Social Cohesion: learners discuss why they should bless and not curse or speak ill about others; Numbers 22:1-6, 20-34.\nAnimal Welfare Education: learners learn how to treat animals.",
+   "links": "English: the skill of reading is applied as learners read the Bible texts provided.\nCreative Arts: creative skills are applied as learners draw and role play.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     23,
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_HO.BALAAM_S_DONKEY.a",
+     "letter": "a",
+     "text": "retell the story of Balaam and his donkey",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BALAAM_S_DONKEY.b",
+     "letter": "b",
+     "text": "apply the story in their lives by obeying God’s instructions",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BALAAM_S_DONKEY.c",
+     "letter": "c",
+     "text": "acquire the value of love by speaking good things about others",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BALAAM_S_DONKEY.d",
+     "letter": "d",
+     "text": "acknowledge God’s greatness by revering Him",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_HO.SAMSON_KILLS_A_LION",
+   "number": "2.4",
+   "strand": "The Holy Bible",
+   "sub_strand": "Samson kills a Lion",
+   "sequence": 204,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in turns, read Judges 14:5-9,",
+    "model or draw a lion,",
+    "compose a poem on ‘Samson kills a lion’,",
+    "watch a video clip about Samson,",
+    "sing a song on God’s power,",
+    "draw pictures of Samson killing a lion."
+   ],
+   "key_inquiry_questions": [
+    "How does the story of Samson portray God’s power?"
+   ],
+   "core_competences": "Imagination and Creativity: the skill of originality is nurtured as learners model a lion and compose a poem.\nCommunication: the skill of speaking clearly and effectively is exhibited as they read in turns.",
+   "values": "Respect: learners take turns to read the Bible and listen to each other’s ideas.",
+   "pcis": "Social Cohesion: learners portray teamwork as they role-play the story of, ‘Samson kills a Lion.’",
+   "links": "English: reading and writing skills are applied as learners read and compose a poem.\nCreative Arts: learners draw, colour and model a lion.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.a",
+     "letter": "a",
+     "text": "retell the story of Samson; Judges 14: 5- 9",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.b",
+     "letter": "b",
+     "text": "acknowledge God’s power in his or her life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.c",
+     "letter": "c",
+     "text": "trust in God to cope with the challenges of life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS",
+   "number": "2.5",
+   "strand": "The Holy Bible",
+   "sub_strand": "Joseph Joseph interprets a interprets a Dream Dream",
+   "sequence": 205,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "3 lessons Joseph"
+   ],
+   "learning_experiences": [
+    "The learner is guided to:",
+    "read Genesis 41:14-24, 28-30 in turns",
+    "read Genesis 41:14-24, 28-30 in turns",
+    "share dreams they have dreamt about and",
+    "share dreams they have dreamt about and try to interpret them, try to interpret them,",
+    "dramatise Joseph interpreting the dream,",
+    "dramatise Joseph interpreting the dream,",
+    "draw a picture of Joseph before Pharaoh",
+    "draw a picture of Joseph before Pharaoh and colour it, and colour it,",
+    "mention three lessons learnt from the story,",
+    "mention three lessons learnt from the story,",
+    "sing a song related to this story,",
+    "sing a song related to this story,",
+    "recite Proverbs 1:7.",
+    "recite Proverbs 1:7."
+   ],
+   "key_inquiry_questions": [
+    "How was Joseph How was Joseph able to interpret able to interpret dreams?",
+    "dreams?"
+   ],
+   "core_competences": "Learning to learn: the skill of sharing experiences is nurtured as learners share dreams they have dreamt about. Learning to learn: the skill of sharing experiences is nurtured as learners share dreams they have dreamt about. Learning to learn: the skill of sharing experiences is nurtured as learners share dreams they have dreamt about.",
+   "values": "Love: is inculcated as they learn how Joseph loved God and his adopted country Egypt by ensuring they had food security. Love: is inculcated as they learn how Joseph loved God and his adopted country Egypt by ensuring they had food security. Love: is inculcated as they learn how Joseph loved God and his adopted country Egypt by ensuring they had food security.\nEnglish: speaking skills are applied as learners share different experiences. interprets a Dream 3 lessons b) apply lessons learnt by By the end of the sub-strand, the learner should be able to: a) retell the story of Joseph c) recognise that, ‘the fear of interpreting a dream, depending on God’s wisdom, God is the beginning of wisdom.’ The learner is guided to:\nread Genesis 41:14-24, 28-30 in turns\nshare dreams they have dreamt about and\ndramatise Joseph interpreting the dream,\ndraw a picture of Joseph before Pharaoh\nmention three lessons learnt from the story,\nsing a song related to this story,\nrecite Proverbs 1:7. try to interpret them, and colour it, How was Joseph able to interpret dreams?\nCreative Arts: creative skills are enhanced as learners draw, dramatise and sing songs. Strand Question(s) Strand Sub- Specific Learning Outcomes Suggested Learning Experiences Suggested Key Inquiry",
+   "pcis": "Leadership: is nurtured as they learn how Joseph exhibited good governance. Leadership: is nurtured as they learn how Joseph exhibited good governance. Leadership: is nurtured as they learn how Joseph exhibited good governance.",
+   "links": "English: speaking skills are applied as learners share different experiences.\nEnglish: speaking skills are applied as learners share different experiences.\nCreative Arts: creative skills are enhanced as learners draw, dramatise and sing songs.\nCreative Arts: creative skills are enhanced as learners draw, dramatise and sing songs. Strand Sub- Specific Learning Outcomes Suggested Learning Experiences Suggested Key Inquiry Strand Sub- Specific Learning Outcomes Suggested Learning Experiences Suggested Key Inquiry ϭρ ϭρ",
+   "design_notes": "Second read left this for a person to confirm: outcome letters read as aabbcc; not found in the second read: title, values; a line on this page ran across two columns and was cut by position; the text layer lost the vertical position of lines on page(s) 27; the order within columns follows the text layer.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.a",
+     "letter": "a",
+     "text": "retell the story of Joseph",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.a_",
+     "letter": "a",
+     "text": "retell the story of Joseph interpreting a dream, interpreting a dream",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.b",
+     "letter": "b",
+     "text": "apply lessons learnt by",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.b_",
+     "letter": "b",
+     "text": "apply lessons learnt by depending on God’s depending on God’s wisdom, wisdom",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.c",
+     "letter": "c",
+     "text": "recognise that, ‘the fear of",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.c_",
+     "letter": "c",
+     "text": "recognise that, ‘the fear of God is the beginning of God is the beginning of wisdom.’ wisdom.’",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_",
+   "number": "2.6",
+   "strand": "The Holy Bible",
+   "sub_strand": "Bible Strand Question(s) Patriarchs Bible Abraham Patriarchs",
+   "sequence": 206,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Abraham 2 lessons"
+   ],
+   "learning_experiences": [
+    "1. Why was Abram",
+    "sing the song about Abraham the ϭρ",
+    "2. How did The learner is guided to: father of faith,",
+    "1. Why show Abram",
+    "read Genesis 12:1-5 and retell",
+    "sing the song about Abraham the",
+    "2. How God? the call of Abraham, father of faith, show",
+    "role-play the call of Abraham,",
+    "read Genesis 12:1-5 and retell God? the call of Abraham,",
+    "tell what they like about their",
+    "role-play the call of Abraham, names,",
+    "read Genesis 17:1-5 on the",
+    "tell what they like about their change of Abraham’s name, names,",
+    "recite Genesis 12:3 and",
+    "read Genesis 17:1-5 on the appreciate God’s blessings in change of Abraham’s name, their lives.",
+    "recite Genesis 12:3 and"
+   ],
+   "key_inquiry_questions": [
+    "the name changed?",
+    "Abraham was the name changed?",
+    "obedience to did Abraham obedience to?"
+   ],
+   "core_competences": "appreciate God’s blessings in their lives.\nCollaboration: the skill of teamwork is nurtured as learners role-play the call of Abraham.\nCommunication: the skill of speaking clearly and effectively is enhanced as they retell the call of Abraham.\nCollaboration: the skill of teamwork is nurtured as learners role-play the call of Abraham.\nCommunication: the skill of speaking clearly and effectively is enhanced as they retell the call of Abraham. ϭς",
+   "values": "Respect: learners listen to and appreciate diverse opinions from peers.",
+   "pcis": "Patriotism: is nurtured as they learn about obedience to the law just like Abraham obeyed God’s command to leave his country to a land unknown to him.",
+   "links": "Creative Arts: creative skills are applied as learners role play, sing and draw.\nEnglish: speaking skills are applied as learners read and recite verses from the Holy Bible.",
+   "design_notes": "Second read left this for a person to confirm: outcome letters read as abacbdcede; not found in the second read: experiences, title; a line on this page ran across two columns and was cut by position; the text layer lost the vertical position of lines on page(s) 27; the order within columns follows the text layer.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.a",
+     "letter": "a",
+     "text": "recount the call of Abraham, By the end of the sub-strand, the",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.b",
+     "letter": "b",
+     "text": "obey God’s instructions in his learner should be able to",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.a_",
+     "letter": "a",
+     "text": "recount the call of Abraham, or her day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.c",
+     "letter": "c",
+     "text": "mention his or her name for",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.b_",
+     "letter": "b",
+     "text": "obey God’s instructions in his self-identity, or her day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.d",
+     "letter": "d",
+     "text": "discuss Abram’s change of",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.c_",
+     "letter": "c",
+     "text": "mention his or her name for name to Abraham, self-identity",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.e",
+     "letter": "e",
+     "text": "appreciate God’s blessings in",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.d_",
+     "letter": "d",
+     "text": "discuss Abram’s change of his or her life. name to Abraham",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.e_",
+     "letter": "e",
+     "text": "appreciate God’s blessings in his or her life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_LI.THE_ANNUNCIATION",
+   "number": "3.1",
+   "strand": "The Life Of Jesus Christ",
+   "sub_strand": "The Annunciation",
+   "sequence": 301,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in turns, read Luke 1:26-37,",
+    "role-play the annunciation of the birth of Jesus Christ,",
+    "watch a video clip on the annunciation of the birth of Jesus Christ,",
+    "in groups, sing a song about the annunciation of the birth of Jesus Christ,",
+    "say why sexual purity is important,",
+    "recite and meditate on Luke 1:37."
+   ],
+   "key_inquiry_questions": [
+    "Why is the birth of Jesus Christ unique?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: competencies: heading on the page but no text read; values: heading on the page but no text read; pcis: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_LI.THE_ANNUNCIATION.a",
+     "letter": "a",
+     "text": "narrate the annunciation of the Birth of Jesus Christ",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.THE_ANNUNCIATION.b",
+     "letter": "b",
+     "text": "acknowledge the uniqueness of the birth of Jesus Christ",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.THE_ANNUNCIATION.c",
+     "letter": "c",
+     "text": "recite Luke 1:37 and trust in God’s power",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.THE_ANNUNCIATION.d",
+     "letter": "d",
+     "text": "emulate Mary the mother of Jesus and lead a holy life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS",
+   "number": "3.2",
+   "strand": "The Life Of Jesus Christ",
+   "sub_strand": "Birth of John the Baptist",
+   "sequence": 302,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs, read Luke 1:5-13, 57,",
+    "role-play the angel’s appearance to Zechariah in the temple,",
+    "watch a video clip on the birth of John the Baptist,",
+    "read Luke 1:76-79 and tell how John the Baptist prepared the way for the Messiah,",
+    "sing a song about John the Baptist."
+   ],
+   "key_inquiry_questions": [
+    "How is John the Baptist a precursor of Jesus Christ?"
+   ],
+   "core_competences": "Imagination and Creativity: the skill of coming up with new ideas is exhibited as learners role-play the annunciation of the\nDigital Literacy: the skill of connecting using technology is portrayed as learners watch a video clip on the birth of John the birth of Jesus Christ. Baptist.",
+   "values": "Human Sexuality- Abstinence: learners emulate Mary the mother of Jesus Christ by leading holy lives and abstaining from sex Unity: learners work in pairs and groups to perform different tasks. before marriage.\nCreative Arts: creative skills are reinforced as learners sing and role play. Unity: learners work in pairs and groups to perform different tasks.\nEnglish: reading skills are applied as learners read the Holy Bible. Unity: learners work in pairs and groups to perform different tasks.",
+   "pcis": "Imagination and Creativity: the skill of coming up with new ideas is exhibited as learners role-play the annunciation of the Human Sexuality- Abstinence: learners emulate Mary the mother of Jesus Christ by leading holy lives and abstaining from sex birth of Jesus Christ. before marriage. Human Sexuality- Abstinence: learners emulate Mary the mother of Jesus Christ by leading holy lives and abstaining from sex before marriage.",
+   "links": "Creative Arts: creative skills are reinforced as learners sing and role play.\nEnglish: reading skills are applied as learners read the Holy Bible. ϮϬ ϮϬ\nDigital Literacy: the skill of connecting using technology is portrayed as learners watch a video clip on the birth of John the\nImagination and Creativity: the skill of coming up with new ideas is exhibited as learners role-play the annunciation of the\nCreative Arts: creative skills are reinforced as learners sing and role play.\nEnglish: reading skills are applied as learners read the Holy Bible. Baptist. birth of Jesus Christ.",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: competencies, pcis; a line on this page ran across two columns and was cut by position; the text layer lost the vertical position of lines on page(s) 32; the order within columns follows the text layer.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     30,
+     31,
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.a",
+     "letter": "a",
+     "text": "retell the Birth of John the Baptist",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.b",
+     "letter": "b",
+     "text": "discuss how John the Baptist prepared the way for the Messiah",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.c",
+     "letter": "c",
+     "text": "appreciate the need to live a righteous life by turning away from sins. ϭε",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA",
+   "number": "3.3",
+   "strand": "The Life Of Jesus Christ",
+   "sub_strand": "Healing of Blind Bartimaeus Healing of",
+   "sequence": 303,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Blind Bartimaeus 3 lessons"
+   ],
+   "learning_experiences": [
+    "sing a song about the healing power of God, The learner is guided to:",
+    "read Mark 10:46-52 and retell the",
+    "sing a song about the healing power of healing of blind Bartimaeus, ϮϬ God,",
+    "role-play the healing of blind",
+    "read Mark 10:46-52 and retell the Bartimaeus, healing of blind Bartimaeus,",
+    "record the role play using a digital",
+    "role-play the healing of blind device, Bartimaeus,",
+    "share an incident when they prayed to",
+    "record the role play using a digital God for healing. device,"
+   ],
+   "key_inquiry_questions": [
+    "How did Bartimaeus show faith in Jesus How did Christ?",
+    "Bartimaeus show faith in Jesus Christ?"
+   ],
+   "core_competences": "over sickness and\nshare an incident when they prayed to\nLearning to Learn: the skill of sharing experiences is enhanced as learners share an incident when they prayed to God for disease. God for healing. healing.\nCommunication: the skill of speaking clearly and effectively is portrayed as learners retell the healing of blind Bartimaeus.\nLearning to Learn: the skill of sharing experiences is enhanced as learners share an incident when they prayed to God for\nLearning to Learn: the skill of sharing experiences is enhanced as learners share an incident when they prayed to God for\nCommunication: the skill of speaking clearly and effectively is portrayed as learners retell the healing of blind Bartimaeus.",
+   "values": "English: reading skills are applied as they read and learn new vocabulary. Responsibility: learners engage in assigned roles and duties as they role-play the healing of blind Bartimaeus.\nCreative Arts: creative skills are applied as learners sing and role play. Responsibility: learners engage in assigned roles and duties as they role-play the healing of blind Bartimaeus. healing. Healing of Blind Bartimaeus 3 lessons b) recognise the healing By the end of the sub-strand, the learner should be able to: a) retell the healing of c) appreciate Jesus’ power blind Bartimaeus, power of Jesus Christ in their lives, over sickness and disease.\nsing a song about the healing power of\nread Mark 10:46-52 and retell the\nrole-play the healing of blind\nrecord the role play using a digital\nshare an incident when they prayed to The learner is guided to: God, healing of blind Bartimaeus, Bartimaeus, device, God for healing. How did Bartimaeus show faith in Jesus Christ?",
+   "pcis": "healing. Health Issues: non-communicable diseases- blindness: Bartimaeus was blind but he was healed.\nCommunication: the skill of speaking clearly and effectively is portrayed as learners retell the healing of blind Bartimaeus. Responsibility: learners engage in assigned roles and duties as they role-play the healing of blind Bartimaeus. Health Issues: non-communicable diseases- blindness: Bartimaeus was blind but he was healed. Health Issues: non-communicable diseases- blindness: Bartimaeus was blind but he was healed.",
+   "links": "Strand Sub-Strand Specific Learning\nEnglish: reading skills are applied as they read and learn new vocabulary. Outcomes Inquiry\nCreative Arts: creative skills are applied as learners sing and role play. Question(s)\nEnglish: reading skills are applied as they read and learn new vocabulary.\nCreative Arts: creative skills are applied as learners sing and role play. Life of the 10 Lepers strand, the learner should lepers portray\nin turns, read Luke 17:11-19, Jesus be able to: gratitude?\nrole-play the healing of the ten lepers, Christ 3 lessons a) narrate the story of the\ndraw the ten lepers using a digital device or a",
+   "design_notes": "Second read left this for a person to confirm: outcome letters read as ababcc; not found in the second read: competencies, experiences, links, pcis, values; a line on this page ran across two columns and was cut by position; the text layer lost the vertical position of lines on page(s) 32, 33; the order within columns follows the text layer.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.a",
+     "letter": "a",
+     "text": "retell the healing of blind Bartimaeus, able to",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.b",
+     "letter": "b",
+     "text": "recognise the healing",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.a_",
+     "letter": "a",
+     "text": "retell the healing of power of Jesus Christ in blind Bartimaeus, their lives",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.b_",
+     "letter": "b",
+     "text": "recognise the healing",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.c",
+     "letter": "c",
+     "text": "appreciate Jesus’ power power of Jesus Christ in over sickness and their lives, disease",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.c_",
+     "letter": "c",
+     "text": "appreciate Jesus’ power",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH",
+   "number": "3.4",
+   "strand": "The Life Of Jesus Christ",
+   "sub_strand": "Healing By the end of the sub- The learner is guided to: How did the 10 Healing By the end of the sub- The learner is guided to: How did the 10 Healing By the end of the sub- The learner is guided to: How did the 10 the 10 Lepers",
+   "sequence": 304,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in turns, read Luke 17:11-19,",
+    "tell how the 10 lepers showed faith in God, Ϯϭ",
+    "role-play the healing of the ten lepers,",
+    "mention how they exercise faith in God,",
+    "draw the ten lepers using a digital device or a",
+    "share instances when they prayed to God for pencil, healing,",
+    "tell how the 10 lepers showed faith in God,",
+    "in groups, list ways they express gratitude to",
+    "mention how they exercise faith in God, God,",
+    "write a ‘Thank you note’ to God for the gift",
+    "share instances when they prayed to God for healing, of life,",
+    "in groups, list ways they express gratitude to",
+    "list ways they express gratitude to others, God,",
+    "sing a song related to showing gratitude to",
+    "write a ‘Thank you note’ to God for the gift God. of life,",
+    "list ways they express gratitude to others,",
+    "sing a song related to showing gratitude to God. ϮϮ"
+   ],
+   "key_inquiry_questions": [
+    "Inquiry Question(s) lepers portray gratitude?"
+   ],
+   "core_competences": "Imagination and creativity: the skill of coming up with new ideas is portrayed as learners draw the 10 lepers using a digital\nImagination and creativity: the skill of coming up with new ideas is portrayed as learners draw the 10 lepers using a digital device or pencil. device or pencil.\nDigital Literacy: the skill of connecting using technology is portrayed as learners use a digital device to draw the 10 lepers.\nDigital Literacy: the skill of connecting using technology is portrayed as learners use a digital device to draw the 10 lepers.\nImagination and creativity: the skill of coming up with new ideas is portrayed as learners draw the 10 lepers using a digital\nDigital Literacy: the skill of connecting using technology is portrayed as learners use a digital device to draw the 10 lepers.",
+   "values": "Love: is nurtured as learners write a ‘Thank you note’ to God for the gift of life. Love: is nurtured as learners write a ‘Thank you note’ to God for the gift of life. Love: is nurtured as learners write a ‘Thank you note’ to God for the gift of life.",
+   "pcis": "Health Issues: Communicable diseases; they learn ways of managing contagious diseases like leprosy. Health Issues: Communicable diseases; they learn ways of managing contagious diseases like leprosy. Health Issues: Communicable diseases; they learn ways of managing contagious diseases like leprosy.",
+   "links": "English: the skills of speaking and reading are applied as learners speak, read and learn new vocabulary.\nEnglish: the skills of speaking and reading are applied as learners speak, read and learn new vocabulary.\nCreative Arts: creative skills are applied as they role play and sing different songs.\nCreative Arts: creative skills are applied as they role play and sing different songs.\nEnglish: the skills of speaking and reading are applied as learners speak, read and learn new vocabulary.\nCreative Arts: creative skills are applied as they role play and sing different songs. device or pencil. Question(s)",
+   "design_notes": "Second read left this for a person to confirm: outcome letters read as bacbdcd; not found in the second read: experiences, title; a line on this page ran across two columns and was cut by position; the text layer lost the vertical position of lines on page(s) 32, 33, 35; the order within columns follows the text layer.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     32,
+     33,
+     34,
+     35
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.b",
+     "letter": "b",
+     "text": "outline ways of strand, the learner should showing gratitude to be able to: God in day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.a",
+     "letter": "a",
+     "text": "narrate the story of the",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.c",
+     "letter": "c",
+     "text": "express gratitude to 10 lepers, those who show them",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.b_",
+     "letter": "b",
+     "text": "outline ways of kindness, showing gratitude to",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.d",
+     "letter": "d",
+     "text": "appreciate the miracle God in day-to-day life, by having faith in God",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.c_",
+     "letter": "c",
+     "text": "express gratitude to those who are kind tp them",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.d_",
+     "letter": "d",
+     "text": "appreciate the miracle by having faith in God",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S",
+   "number": "3.5",
+   "strand": "The Life Of Jesus Christ",
+   "sub_strand": "Jesus raises a Widow’s Son Jesus raises",
+   "sequence": 305,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "a Widow’s Son 2 lessons"
+   ],
+   "learning_experiences": [
+    "read Luke 7:11-16 and retell the Ϯϯ story, The learner is guided to:",
+    "list challenges they face in their lives",
+    "read Luke 7:11-16 and retell the and how they involve God, story,",
+    "tell how they show kindness to",
+    "list challenges they face in their lives others, and how they involve God,",
+    "say how Jesus showed compassion to",
+    "tell how they show kindness to the widow, others,",
+    "watch a video clip on raising the",
+    "say how Jesus showed compassion to widow’s son, the widow,",
+    "write John 11:25 on flash cards and",
+    "watch a video clip on raising the recite it, widow’s son,",
+    "sing a song about God’s power over",
+    "write John 11:25 on flash cards and life and death. recite it,"
+   ],
+   "key_inquiry_questions": [
+    "What do you learn from the miracle of raising the What do you learn widow’s son?",
+    "from the miracle of raising the widow’s son?"
+   ],
+   "core_competences": "sing a song about God’s power over challenges.\nDigital literacy: the skill of connecting parts of a digital device is exhibited as learners watch a video clip on raising the life and death. widow’s son.\nSelf-efficacy: the skill of expressing their needs clearly for help is portrayed as they list challenges they face in their lives\nDigital literacy: the skill of connecting parts of a digital device is exhibited as learners watch a video clip on raising the and how they depend on God to get solutions. widow’s son.\nSelf-efficacy: the skill of expressing their needs clearly for help is portrayed as they list challenges they face in their lives and how they depend on God to get solutions. Ϯκ",
+   "values": "Love: is nurtured as learners say how Jesus showed compassion to the widow.",
+   "pcis": "Social Justice: learners tell how they show kindness to others.",
+   "links": "English: reading skills are applied as learners read and learn new vocabulary.\nCreative Arts: creative skills are applied as learners sing a song about God’s power.",
+   "design_notes": "Second read left this for a person to confirm: outcome letters read as aabbccdd; not found in the second read: experiences; the text layer lost the vertical position of lines on page(s) 35; the order within columns follows the text layer.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     35,
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.a",
+     "letter": "a",
+     "text": "retell the story of raising the widow’s be able to: son",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.a_",
+     "letter": "a",
+     "text": "retell the story of",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.b",
+     "letter": "b",
+     "text": "recognise God’s raising the widow’s power over life and death, son",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.b_",
+     "letter": "b",
+     "text": "recognise God’s",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.c",
+     "letter": "c",
+     "text": "apply lessons learnt power over life and by showing death, compassion to others",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.c_",
+     "letter": "c",
+     "text": "apply lessons learnt",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.d",
+     "letter": "d",
+     "text": "pray to God when by showing faced with compassion to others, challenges",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.d_",
+     "letter": "d",
+     "text": "pray to God when faced with",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_LI.FORGIVENESS",
+   "number": "3.6",
+   "strand": "The Life Of Jesus Christ",
+   "sub_strand": "Forgiveness",
+   "sequence": 306,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read Matthew 5:39 and say why it is important to forgive others,",
+    "role-play acts of forgiveness,",
+    "say why they should not revenge when wronged,",
+    "sing a song about loving others,",
+    "write Mathew 5:39, display it in class and recite it."
+   ],
+   "key_inquiry_questions": [
+    "Why should you not pay evil for evil?"
+   ],
+   "core_competences": "",
+   "values": "",
+   "pcis": "",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: competencies: heading on the page but no text read; values: heading on the page but no text read; pcis: heading on the page but no text read; links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     37
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_LI.FORGIVENESS.a",
+     "letter": "a",
+     "text": "outline the importance of forgiving others",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.FORGIVENESS.b",
+     "letter": "b",
+     "text": "resist vengeance as outlined in Mathew 5:39",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.FORGIVENESS.c",
+     "letter": "c",
+     "text": "appreciate forgiveness by not repaying evil for evil",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_LI.HELPING_THE_NEEDY",
+   "number": "3.7",
+   "strand": "The Life Of Jesus Christ",
+   "sub_strand": "Helping the Needy",
+   "sequence": 307,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read Matthew 5:42 and tell what they have learnt,",
+    "mention instances they helped someone at school, home or in church e.g. they gave a pencil, rubber or shared lunch with another pupil,",
+    "role-play sharing items with those who do not have,",
+    "write Matthew 5:42 on flash cards and recite it."
+   ],
+   "key_inquiry_questions": [
+    "How do you help those in need?"
+   ],
+   "core_competences": "Citizenship: the skill of developing and showing compassion and empathy is portrayed as learners mention instances they helped someone at school, home or in church e.g. they gave a pencil, rubber or shared lunch with another pupil.\nCommunication: the skill of writing clearly and correctly is exhibited as learners write Matthew 5:42 on flash cards and recite it.",
+   "values": "Love: is portrayed as learners sing a song about loving others.\nPeace: is nurtured as learners say why they should not revenge when wronged.\nPatriotism: is portrayed as learners demonstrate kindness by sharing with those in need and as they mention instances they helped someone in need.",
+   "pcis": "Social Cohesion: learners sing a song about loving others.\nPeace Education: learners practise reconciliation by forgiving others when wronged.",
+   "links": "English: speaking skills are enhanced as learners read and learn new words.\nCreative Arts: creative skills are applied as learners role play and sing. Ϯϳ",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     37,
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_LI.HELPING_THE_NEEDY.a",
+     "letter": "a",
+     "text": "state the importance of helping the needy",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HELPING_THE_NEEDY.b",
+     "letter": "b",
+     "text": "demonstrate kindness by sharing with those in need",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_LI.HELPING_THE_NEEDY.c",
+     "letter": "c",
+     "text": "recite Mathew 5:42 and help those in need promptly. Ϯς",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN",
+   "number": "3.8.1",
+   "strand": "The Life Of Jesus Christ",
+   "sub_strand": "Parable of the lost coin",
+   "sequence": 308,
+   "lessons": 2,
+   "optional": true,
+   "content_topics": [],
+   "learning_experiences": [
+    "read Luke 15:8-10 and retell the parable of the lost coin,",
+    "role-play the parable of the lost coin,",
+    "share lessons learnt from the parable of the lost coin with a friend,",
+    "say how God loves them and how to lead a righteous life,",
+    "tell why it is important to live a holy life as a Christian,",
+    "sing a song about God’s willingness to save the lost."
+   ],
+   "key_inquiry_questions": [
+    "How does God show love for the sinner?"
+   ],
+   "core_competences": "Learning to learn: the skill of sharing what they have learnt is exhibited as they share lessons learnt from the parable of the lost coin.\nImagination and creativity: the skill of coming up with new ideas is exhibited as learners role-play the parable of the lost coin. ϮΘ",
+   "values": "",
+   "pcis": "Financial literacy: learners appreciate the value of currency or money as depicted by the woman’s persistence in search for her lost coin.\nCitizenship: desire to help and work for the salvation of the lost persons (sinners) in their society as an extension of good neighbourliness and care for one another in society. Link to Values: Love: is nurtured as learners say how God loves them and how to lead a righteous life.",
+   "links": "English: speaking skills are enhanced as learners read and learn new words.\nCreative Arts: creative skills are applied as learners sing and role play.",
+   "design_notes": "Second read left this for a person to confirm: values: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.a",
+     "letter": "a",
+     "text": "retell the parable of the lost coin",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.b",
+     "letter": "b",
+     "text": "list lessons learnt from the parable of the lost coin",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.c",
+     "letter": "c",
+     "text": "recognise God’s love for the sinner and the need to live a righteous life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.d",
+     "letter": "d",
+     "text": "appreciate God’s love and lead upright lives",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S",
+   "number": "3.8.2",
+   "strand": "The Life Of Jesus Christ",
+   "sub_strand": "Parable of the mustard seed",
+   "sequence": 309,
+   "lessons": 3,
+   "optional": true,
+   "content_topics": [],
+   "learning_experiences": [
+    "read Luke 13:18-19 and narrate the parable,",
+    "in groups, collect small seeds from the school compound,",
+    "plant the seeds, water them and observe as the seeds sprout and grow to a big tree,",
+    "draw a big tree with birds resting on its branches and compare it to the growth of God’s kingdom,",
+    "Role-play the activities they do in Church,",
+    "watch a video clip on a mustard seed,",
+    "say how they respond to salvation,",
+    "sing a song about the kingdom of God."
+   ],
+   "key_inquiry_questions": [
+    "How does the parable of the mustard seed relate to the kingdom of God?"
+   ],
+   "core_competences": "Creativity and Imagination: the skill of communicating new ideas is enhanced as learners draw a big tree and compare it to the growth of God’s kingdom.\nDigital Literacy: the skill of digital citizenship is portrayed as learners watch a video clip on a mustard seed.",
+   "values": "Unity: is enhanced as learners work in groups to collect small seeds from the school compound.\nResponsibility: is enhanced as learners plant the seeds, water them and observe as the seeds sprout and grow to a big tree.",
+   "pcis": "Socio Economic Issues: environmental education is nurtured as learners plant the seeds, water them and observe as the seeds sprout and grow to a big tree.",
+   "links": "Agriculture: is enhanced as learners collect seeds and plant them.\nCreative Arts: creative skills are applied as learners draw, sing and role play.\nEnglish: reading skills are enhanced as learners read the Bible. ϯϭ",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.a",
+     "letter": "a",
+     "text": "retell the parable of the mustard seed as guided by the Bible text",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.b",
+     "letter": "b",
+     "text": "describe how the kingdom of God grows from a small beginning",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.c",
+     "letter": "c",
+     "text": "explain how they contribute to the growth of the kingdom of God",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.d",
+     "letter": "d",
+     "text": "appreciate the growth of God’s kingdom by evangelising to others",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH",
+   "number": "3.9",
+   "strand": "The Life Of Jesus Christ",
+   "sub_strand": "Nicodemus’ encounter with Jesus Christ",
+   "sequence": 310,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read John 3:1-5 and say how they respond to Christ’s saving grace,",
+    "role-play the story of Nicodemus’ encounter with Jesus Christ,",
+    "discuss how repentance of sins can draw them to Christ,",
+    "watch a video on Nicodemus’ conversion,",
+    "say why baptism is important to Christians today,",
+    "sing a song on Nicodemus’ conversion,",
+    "tell how they respond to John 3:16."
+   ],
+   "key_inquiry_questions": [
+    "How did Nicodemus’ encounter with Jesus Christ change his life?"
+   ],
+   "core_competences": "Communication: speaking skills are portrayed as learners read the Bible and tell how they respond to Christ’s saving grace.\nLearning to learn: the skill of working collaboratively is enhanced as learners discuss how repentance of sins can draw them to Christ. ϯϮ",
+   "values": "Respect: learners display humility as they role-play the story of Nicodemus.",
+   "pcis": "Social Cohesion: learners demonstrate teamwork while carrying out various activities.",
+   "links": "English: speaking skills are enhanced as learners speak fluently and confidently.\nCreative Arts: creative skills are applied as learners role-play and sing a song on Nicodemus’ conversion.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     43,
+     44
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.a",
+     "letter": "a",
+     "text": "retell the story of Nicodemus’ encounter with Jesus Christ",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.b",
+     "letter": "b",
+     "text": "acknowledge that repentance of sins draws us close to Christ",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.c",
+     "letter": "c",
+     "text": "discuss the importance of baptism to Christians today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.d",
+     "letter": "d",
+     "text": "recite John 3:16 and believe in Jesus Christ to inherit eternal life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.CHRIST.TRUST",
+   "number": "4.1",
+   "strand": "Christian Values",
+   "sub_strand": "Trust:",
+   "sequence": 401,
+   "lessons": 0,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in turns, read Genesis 39:7-12 and"
+   ],
+   "key_inquiry_questions": [
+    "Whom do you trust at home and"
+   ],
+   "core_competences": "Self-efficacy: the skill of expressing their needs clearly for help is portrayed as learners list people they can trust at home, school and the community.\nSelf-efficacy: the skill of expressing their needs clearly for help is portrayed as learners list people they can trust at home,\nCreativity and Imagination: the skill of coming up with unique and new ideas is exhibited as learners role-play saying, No! to school and the community. strangers to avoid child abuse or kidnap.\nCreativity and Imagination: the skill of coming up with unique and new ideas is exhibited as learners role-play saying, No! to\nSelf-efficacy: the skill of expressing their needs clearly for help is portrayed as learners list people they can trust at home,\nCreativity and Imagination: the skill of coming up with unique and new ideas is exhibited as learners role-play saying, No! to",
+   "values": "3 lessons be able to: school? retell the story of Joseph and a) emulate Joseph by 2. Why should you Potiphar’s wife, resisting sexual avoid talking to\nlist lessons learnt from the story of temptations as young strangers? Joseph and Potiphar’s wife, people 3. Why should you\nlist people they can trust at home, b) exercise assertiveness put your trust in school and in the community, in the face of God?\nbrainstorm on how to escape/avoid temptations/tempting temptations/tempting situations, situations,\nin pairs, roleplay saying No! to sexual c) identify people he/she temptations, can trust for own safety,\nin groups, discuss whom to report to d) recite Psalm 125:1 and when in danger, trust in God always.\nwrite a poem on, ‘People I trust’\nrole-play saying, ‘No’ to strangers to avoid child abuse or kidnap,\nlist the importance of trusting God,\nsing a song about trusting God. ϯρ Developmental Perspective: learners learn how to detect, deter and escape from harmful strangers or relatives. Responsibility: learners observe safety precautions as they say No! to strangers. Responsibility: learners observe safety precautions as they say No! to strangers.",
+   "pcis": "strangers to avoid child abuse or kidnap. Developmental Perspective: learners learn how to detect, deter and escape from harmful strangers or relatives.\nEnglish: the skill of writing is applied as learners write a poem.\nCreative Arts: creative skills are applied as learners sing a song about trusting God. school and the community. strangers to avoid child abuse or kidnap. Outcomes Key Inquiry",
+   "links": "Responsibility: learners observe safety precautions as they say No! to strangers.\nEnglish: the skill of writing is applied as learners write a poem.\nCreative Arts: creative skills are applied as learners sing a song about trusting God.\nEnglish: the skill of writing is applied as learners write a poem.\nCreative Arts: creative skills are applied as learners sing a song about trusting God. Strand Sub-Strand Specific Learning Suggested Learning Experiences Suggested ϯς",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure in the table; not found in the second read: pcis, values; a line on this page ran across two columns and was cut by position; the text layer lost the vertical position of lines on page(s) 48; the order within columns follows the text layer.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     46,
+     47,
+     48
+    ]
+   },
+   "outcomes": [],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.CHRIST.TRUTHFULNESS",
+   "number": "4.2",
+   "strand": "Christian Values",
+   "sub_strand": "Truthfulness",
+   "sequence": 402,
+   "lessons": 0,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "ϯς",
+    "read Ephesians 4:25, The learner is guided to:"
+   ],
+   "key_inquiry_questions": [
+    "Why should you always tell Why should"
+   ],
+   "core_competences": "Ephesians 4:25. recite it.\nImagination and Creativity: the skill of coming up with new ideas and originality is enhanced as they write a poem on the importance of always telling the truth.\nImagination and Creativity: the skill of coming up with new ideas and originality is enhanced as they write a poem on the\nCommunication and collaboration: the skill of speaking clearly and effectively is enhanced as learners, in pairs, say when importance of always telling the truth. they did not tell the truth and how to overcome lies.\nCommunication and collaboration: the skill of speaking clearly and effectively is enhanced as learners, in pairs, say when\nImagination and Creativity: the skill of coming up with new ideas and originality is enhanced as they write a poem on the\nCommunication and collaboration: the skill of speaking clearly and effectively is enhanced as learners, in pairs, say when",
+   "values": "able to:\nsay why they should always tell the the truth? Christian Truthfulness\nread Ephesians 4:25, you always tell 3 lessons a) state the importance of truth, able to:\nsay why they should always tell the the truth? telling the truth,\nin pairs, say when they did not tell the 3 lessons a) state the importance of truth, b) resist lying as cited in truth and how to overcome lies, telling the truth,\nin pairs, say when they did not tell the Proverbs 12:19,\nwrite a poem on the importance of b) resist lying as cited in truth and how to overcome lies, c) desire to always speak always telling the truth, Proverbs 12:19,\nwrite a poem on the importance of the truth according to\nwrite Proverbs 12:19 on flash cards and c) desire to always speak always telling the truth, Ephesians 4:25. recite it. the truth according to\nwrite Proverbs 12:19 on flash cards and Social Cohesion is portrayed as learners resist lying by always telling the truth. Integrity: learners say why they should always tell the truth. 4.0 Christian",
+   "pcis": "they did not tell the truth and how to overcome lies. Social Cohesion is portrayed as learners resist lying by always telling the truth. Social Cohesion is portrayed as learners resist lying by always telling the truth. Integrity: learners say why they should always tell the truth.",
+   "links": "Integrity: learners say why they should always tell the truth.\nCreative Arts: creative skills are applied as learners write a poem.\nEnglish: speaking skills are enhanced as learners read and recite Bible texts.\nCreative Arts: creative skills are applied as learners write a poem.\nEnglish: speaking skills are enhanced as learners read and recite Bible texts. Strand Sub-Strand Specific Learning Outcomes Suggested Learning Suggested Key Strand Sub-Strand Specific Learning Outcomes Suggested Learning Suggested Key ϯϳ importance of always telling the truth. they did not tell the truth and how to overcome lies. Truthfulness 3 lessons Outcomes By the end of the sub-strand, the learner should be able to: a) state the importance of b) resist lying as cited in c) desire to always speak telling the truth, Proverbs 12:19, the truth according to Ephesians 4:25. The learner\nread\nsay\nin\nwrite truth, truth and how to overcome lies, always telling the truth, recite it. Key Inquiry is guided to: Ephesians 4:25, why they should always tell the pairs, say when they did not tell the write a poem on the importance of Proverbs 12:19 on flash cards and Question(s) Why should you always tell the truth?\nCreative Arts: creative skills are applied as learners write a poem.\nEnglish: speaking skills are enhanced as learners read and recite Bible texts. Experiences",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure in the table; not found in the second read: experiences, links, pcis, values; a line on this page ran across two columns and was cut by position; the text layer lost the vertical position of lines on page(s) 48, 49; the order within columns follows the text layer.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     48,
+     49
+    ]
+   },
+   "outcomes": [],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE",
+   "number": "4.3",
+   "strand": "Christian Values",
+   "sub_strand": "Obedience Obedience",
+   "sequence": 403,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "Why is obey?",
+    "read Exodus 20:12 and state The learner is guided to: Why is"
+   ],
+   "key_inquiry_questions": [
+    "it important to it important to"
+   ],
+   "core_competences": "of obedience.\nLearning to learn: the skill of carrying out activities with peers is portrayed as learners list the results of disobedience.\nCreativity and Imagination: the skill of coming up with new ideas is nurtured as learners compose a poem on the benefits of\nLearning to learn: the skill of carrying out activities with peers is portrayed as learners list the results of disobedience. obeying parents and teachers.\nCreativity and Imagination: the skill of coming up with new ideas is nurtured as learners compose a poem on the benefits of obeying parents and teachers. ϯΘ",
+   "values": "Christian learner should be able to: the benefit of honouring obey?\nread Exodus 20:12 and state the benefit of honouring 3 lessons a) read Exodus 20:12 and state parents, the benefit of honouring parents, the benefit of honouring\ncompose a poem on the parents, b) obey parents and teachers to benefits of obeying parents, parents,\ncompose a poem on the promote harmonious co-existence, b) obey parents and teachers to\ndiscuss the importance of benefits of obeying parents, promote harmonious co-existence, obeying teachers,\ndiscuss the importance of c) practise responsibility by\nsay why they should obey obeying teachers, obeying school rules, c) practise responsibility by school rules,\nsay why they should obey d) outline the results of obeying school rules,\nin groups, list the results of school rules, disobedience, d) outline the results of\nin groups, list the results of disobedience, e) desire to exercise obedience disobedience,\nsing a song on the benefits disobedience, in day-to-day life. e) desire to exercise obedience of obedience.\nsing a song on the benefits in day-to-day life. Responsibility: learners obey parents and teachers. Responsibility: learners obey parents and teachers. Responsibility: learners obey parents and teachers.",
+   "pcis": "Peace Education: learners contribute to peace at home by obeying their parents. Peace Education: learners contribute to peace at home by obeying their parents. Peace Education: learners contribute to peace at home by obeying their parents.",
+   "links": "English: speaking skills are enhanced as learners recite poems.\nEnglish: speaking skills are enhanced as learners recite poems.\nCreative Arts: creative skills are applied as learners sing a song on the benefits of obedience.\nCreative Arts: creative skills are applied as learners sing a song on the benefits of obedience.\nEnglish: speaking skills are enhanced as learners recite poems.\nCreative Arts: creative skills are applied as learners sing a song on the benefits of obedience. Strand Inquiry",
+   "design_notes": "Second read left this for a person to confirm: not found in the second read: experiences, values; a line on this page ran across two columns and was cut by position; the text layer lost the vertical position of lines on page(s) 49, 51; the order within columns follows the text layer.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     49,
+     50,
+     51
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.a",
+     "letter": "a",
+     "text": "read Exodus 20:12 and state",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.CHRIST.LOVE_LOVE",
+   "number": "4.4",
+   "strand": "Christian Values",
+   "sub_strand": "Love Love",
+   "sequence": 404,
+   "lessons": 0,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, retell Jesus Christ’s The learner is guided to:"
+   ],
+   "key_inquiry_questions": [
+    "How did Jesus Christ",
+    "How did"
+   ],
+   "core_competences": "by Jesus Christ.\nImagination and Creativity: the skill of coming up with unique and new ideas is exhibited as learners draw Jesus praying for children.\nImagination and Creativity: the skill of coming up with unique and new ideas is exhibited as learners draw Jesus praying for\nDigital Literacy: the skill of digital citizenship is portrayed as learners watch a video clip on Jesus Christ blessing children. children.",
+   "values": "3 lessons a) recognise that God loves children; show love love for children, should be able to: Jesus Christ Christian\nin groups, retell Jesus Christ’s Matthew 19:13-15, to children?\nrole-play Jesus blessing 3 lessons a) recognise that God loves children; show love love for children, b) demonstrate love by showing kindness 2. How do you Children (Mathew 19:13-15), Matthew 19:13-15, to children?\nrole-play Jesus blessing to others, show Godly\ndraw Jesus praying for b) demonstrate love by showing kindness 2. How do you Children (Mathew 19:13-15), c) appreciate God’s love by obeying His love to children, to others, show Godly\ndraw Jesus praying for teachings. others as a\nwatch a video clip on Jesus c) appreciate God’s love by obeying His love to children, Christian? Christ blessing children, teachings. others as a\nwatch a video clip on Jesus\nshow love to others as taught Christian? Christ blessing children, by Jesus Christ.\nshow love to others as taught Social cohesion: teamwork is portrayed as learners take up different roles in performing assigned tasks. Love: learners show love to others as taught by Jesus Christ.",
+   "pcis": "Digital Literacy: the skill of digital citizenship is portrayed as learners watch a video clip on Jesus Christ blessing children. Social cohesion: teamwork is portrayed as learners take up different roles in performing assigned tasks.",
+   "links": "Love: learners show love to others as taught by Jesus Christ.\nEnglish: reading skills are enhanced as learners read the Holy Bible.\nCreative Arts: creative skills are applied as learners draw and role play.\nEnglish: reading skills are enhanced as learners read the Holy Bible.\nCreative Arts: creative skills are applied as learners draw and role play. κϬ",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure in the table; not found in the second read: title, values; the text layer lost the vertical position of lines on page(s) 51; the order within columns follows the text layer.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     51
+    ]
+   },
+   "outcomes": [],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.CHRIST.RESPONSIBILITY",
+   "number": "4.5",
+   "strand": "Christian Values",
+   "sub_strand": "Responsibility",
+   "sequence": 405,
+   "lessons": 0,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [],
+   "key_inquiry_questions": [
+    "How do you"
+   ],
+   "core_competences": "Communication: the skill of communication and self-expression is exhibited as learners compose a poem.",
+   "values": "Personal and school take care of\ndisplay personal items e.g. items be able to: personal and pullover, pen, pencils, eraser, a) identify personal items exercise books, text books, school items? (2 lessons) and how they care for\nin pairs, list the use of each them, item, b) identify school\nsay why they should take good properties and how care of their personal and they care for them, school items, c) acquire responsibility\ncompose a poem on taking care by taking care of of personal and school personal and school properties. properties. Responsibility: learners care for personal and school items.",
+   "pcis": "Health Issues: Personal hygiene is portrayed as learners practise taking care of personal property.",
+   "links": "Creative Arts: creative skills are applied as learners compose a poem. κϭ",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure in the table; not found in the second read: values; experiences empty.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     52
+    ]
+   },
+   "outcomes": [],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.CHRIST.HOLINESS",
+   "number": "4.6",
+   "strand": "Christian Values",
+   "sub_strand": "Holiness",
+   "sequence": 406,
+   "lessons": 0,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs, read 1"
+   ],
+   "key_inquiry_questions": [
+    "Why should you lead holy lives as young"
+   ],
+   "core_competences": "Self-efficacy: the skill of knowing self is portrayed as learners discuss how to avoid situations that lead to sin.",
+   "values": "4 lessons a) describe ways of glorifying God Corinthians 6:19-20 and people? with their bodies, mention the lessons b) acquire the value of holiness by learnt, keeping away from situations\nin pairs, list sins that do that lead to sin, not please God, c) recite 1Corinthians 6:19 on the\nin groups, discuss how body as the temple of the Holy to avoid situations that Spirit, lead to sin, d) desire to lead holy lives free\nsing a song on holiness. from sin.",
+   "pcis": "Social cohesion: learners discuss how to avoid situations that lead to sin. Link to Values: Respect: learners practise humility and take turns to read the Bible and perform assigned tasks.",
+   "links": "",
+   "design_notes": "Second read left this for a person to confirm: no lessons figure in the table; not found in the second read: values; links: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     53
+    ]
+   },
+   "outcomes": [],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_CH.HOUSE_OF_GOD",
+   "number": "5.1",
+   "strand": "The Church",
+   "sub_strand": "House of God",
+   "sequence": 501,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read Matthew 21:12-13 and list lessons learnt from the Bible text,",
+    "read 1Corithinians 14:26 and list activities mentioned in the Bible text,",
+    "in groups, list the activities they do in church,",
+    "in pairs, list ways of respecting the church as a house of God,",
+    "write a poem about respecting the church,",
+    "sing a song related to serving God."
+   ],
+   "key_inquiry_questions": [
+    "Why is the church a holy place?"
+   ],
+   "core_competences": "Collaboration: the skill of teamwork is portrayed as learners mention ways they serve God in church.",
+   "values": "Responsibility is exhibited as learners list activities they do in church.",
+   "pcis": "Social Cohesion: learners live harmoniously as they interact with each other.",
+   "links": "Creative Arts: creative skills are applied as learners sing a song related to serving God.\nEnglish: reading skills are enhanced as learners read the scriptures.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     55
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_CH.HOUSE_OF_GOD.a",
+     "letter": "a",
+     "text": "outline lessons learnt from Matthew 21:12- 14",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.HOUSE_OF_GOD.b",
+     "letter": "b",
+     "text": "participate in church activities to grow spiritually",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.HOUSE_OF_GOD.c",
+     "letter": "c",
+     "text": "appreciate the church as a house of worship",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_CH.THE_EARLY_CHURCH",
+   "number": "5.2",
+   "strand": "The Church",
+   "sub_strand": "The Early Church",
+   "sequence": 502,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read Matthew 10:1-4 and list the disciples of Jesus Christ,",
+    "sort the names of the 12 disciples using flash cards,",
+    "search for the names of the disciples in a word puzzle,",
+    "watch a video clip on the twelve disciples,",
+    "read Acts 2:38-41 on how the early church was started,",
+    "Role-play how the early church was started,",
+    "repent their sins as guided in Acts 2:38. κρ"
+   ],
+   "key_inquiry_questions": [
+    "How was the early church started?"
+   ],
+   "core_competences": "Learning to learn: the skill of developing relationships is nurtured as learners carry out activities together such as sorting, searching and role playing.",
+   "values": "Responsibility: they learn how to take up assigned roles, by following the example of the disciples of Jesus Christ.",
+   "pcis": "Leadership skills are nurtured as they learn about the instructions given to the disciples in Matthew 10:1",
+   "links": "Mathematics: mathematical skills are applied as learners use flash cards to sort the names of the 12 disciples.\nEnglish: reading skills are enhanced as learners read the Holy Bible.\nCreative Arts: creative skills are applied as learners participate in a role play.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     56,
+     57
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_CH.THE_EARLY_CHURCH.a",
+     "letter": "a",
+     "text": "name the disciples of Jesus Christ",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.THE_EARLY_CHURCH.b",
+     "letter": "b",
+     "text": "describe how the early church was started",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.THE_EARLY_CHURCH.c",
+     "letter": "c",
+     "text": "desire to turn away from sins according to Acts 2:38",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH",
+   "number": "5.3",
+   "strand": "The Church",
+   "sub_strand": "Standing Firm in Faith",
+   "sequence": 503,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "sing a song related to standing firm in the Christian faith,",
+    "read Acts 11: 26 and say where believers were first called Christians,",
+    "identify Antioch, from a Bible map,",
+    "in groups, read Acts 7: 54-60 and retell the story of Stephen,",
+    "brainstorm on lessons learnt from the story of Stephen,",
+    "explain why they should not join ungodly groups; radicalised groups, groups that do not recognise Jesus Christ,",
+    "list ways they can stand firm in their Christian faith."
+   ],
+   "key_inquiry_questions": [
+    "Why should you stand firm in your Christian faith?",
+    "Why should you not join ungodly groups?"
+   ],
+   "core_competences": "Learning to learn: the skill of engaging in self-driven tasks is portrayed as learners identify Antioch from the map.",
+   "values": "Patriotism: learners explain why they should not join ungodly groups; radicalised groups and groups that do not recognise Jesus Christ.",
+   "pcis": "Safety and Security: learners explain why they should not join ungodly groups; radicalised groups, groups that do not recognise Jesus Christ as their Saviour.\nAssertiveness: learners say No! to ungodly groups by standing firm in their faith.",
+   "links": "Creative Arts: creative skills are applied as learners sing songs.\nEnglish: reading skills are enhanced as learners read the scriptures.\nSocial Studies skills are applied as learners locate Antioch from the map.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     58,
+     59
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.a",
+     "letter": "a",
+     "text": "name the city where believers were first called Christians",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.b",
+     "letter": "b",
+     "text": "retell how Stephen was stoned for standing firm in his faith",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.c",
+     "letter": "c",
+     "text": "list three lessons learnt from the stoning of Stephen",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.d",
+     "letter": "d",
+     "text": "explain why they should not join ungodly groups",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.e",
+     "letter": "e",
+     "text": "utilise the virtue of assertiveness and stand firm in faith",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_CH.THE_LORD_S_PRAYER",
+   "number": "5.4",
+   "strand": "The Church",
+   "sub_strand": "The Lord’s Prayer",
+   "sequence": 504,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "sing a song related to the Lord’s Prayer,",
+    "read Matthew 6:9-13,",
+    "discuss why it is important to pray every day,",
+    "pray for their parents/guardians, friends and relatives,",
+    "recite the Lord’s prayer daily,",
+    "list the number of times they pray and share with classmates."
+   ],
+   "key_inquiry_questions": [
+    "Why should you pray always as a Christian?"
+   ],
+   "core_competences": "Collaboration: learners develop the skill of teamwork as they discuss, sing and recite the Lord’s Prayer.",
+   "values": "Unity is enhanced as learners pray for their parents/guardians, friends and relatives.",
+   "pcis": "Developmental perspective: self-discipline is enhanced as learners recite the Lord’s Prayer daily.",
+   "links": "Creative Arts: creative skills are applied as learners sing.\nEnglish: reading skills are enhanced as learners read the Bible.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     60
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_CH.THE_LORD_S_PRAYER.a",
+     "letter": "a",
+     "text": "recite the Lord’s prayer",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.THE_LORD_S_PRAYER.b",
+     "letter": "b",
+     "text": "pray for parents, guardians and friends",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.THE_LORD_S_PRAYER.c",
+     "letter": "c",
+     "text": "say a prayer to God every day to grow spiritually",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT",
+   "number": "5.5",
+   "strand": "The Church",
+   "sub_strand": "Fruit of the Holy Spirit",
+   "sequence": 505,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs, read Galatians 5:22-23,",
+    "list the fruit of the Holy Spirit",
+    "write the fruit of the Holy Spirit on flash cards and display it in class,",
+    "in groups, list good things they should do to others as Christians,",
+    "discuss how they apply the fruit of the Holy Spirit in their daily lives,",
+    "compose and sing a song on the fruit of the Holy Spirit."
+   ],
+   "key_inquiry_questions": [
+    "Why should you have the fruit of the Holy Spirit?"
+   ],
+   "core_competences": "Creativity and imagination: the skill of originality is nurtured as learners compose a song on the fruit of the Holy Spirit.",
+   "values": "Peace is exhibited as learners practise the fruit of the Holy Spirit such as peace and live peacefully with others.",
+   "pcis": "Peace Education is enhanced as learners list good things they should do to others as Christians.",
+   "links": "English: reading skills are enhanced as learners read the Holy Bible.\nCreative Arts: creative skills are applied as learners compose and sing a song. ρϬ",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     61
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.a",
+     "letter": "a",
+     "text": "list the fruit of the Holy Spirit; Galatians 5:22- 23",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.b",
+     "letter": "b",
+     "text": "describe how they apply the fruit of the Holy Spirit in their lives",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.c",
+     "letter": "c",
+     "text": "desire to be led by the Holy Spirit in their daily activities",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.THE_CH.SELF_CONTROL",
+   "number": "5.6",
+   "strand": "The Church",
+   "sub_strand": "Self-control",
+   "sequence": 506,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read Galatians 5:23-25,",
+    "role-play ‘making decisions that portray self-control’",
+    "in groups, list choices they make in their day-to- day lives,",
+    "list things that can defile them e.g. engaging in sex, watching ungodly movies, drug use and abuse",
+    "say how they can avoid defiling their bodies,",
+    "compose a song on self-control: Galatians 5:23-25."
+   ],
+   "key_inquiry_questions": [
+    "Why should you practice self-control?"
+   ],
+   "core_competences": "Learning to learn: the skill of working collaboratively is portrayed as learners list choices they make in their day-to-day lives.\nImagination and creativity: the skill of originality is exhibited as learners role-play ‘making decisions that portray self-control.’ ρϭ",
+   "values": "Responsibility is inculcated as learners list and avoid things that can defile their bodies.\nIntegrity: learners exhibit self-discipline by not engaging in acts that can defile them e.g. watching ungodly movies.",
+   "pcis": "Human sexuality: learners list choices they make in their day-to-day lives concerning sexual purity.\nChild care and protection: learners are empowered to exercise self-control by not defiling their bodies.\nAlcohol and substance abuse: learners list things that can defile them e.g. drug use and abuse.",
+   "links": "Creative Arts: creative skills are applied as learners sing and role play.\nEnglish: reading skills are enhanced as learners read the scriptures.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     62,
+     63
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.THE_CH.SELF_CONTROL.a",
+     "letter": "a",
+     "text": "ractice self-control as guided in Galatians 5:23- 25",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.SELF_CONTROL.b",
+     "letter": "b",
+     "text": "make right decisions that are guided by the Holy Spirit",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.SELF_CONTROL.c",
+     "letter": "c",
+     "text": "demonstrate self-control by avoiding behaviour that defiles the body",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.THE_CH.SELF_CONTROL.d",
+     "letter": "d",
+     "text": "live Godly lives guided by the Holy Spirit",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA",
+   "number": "6.1",
+   "strand": "Morality And Social Media",
+   "sub_strand": "Use of Social Media",
+   "sequence": 601,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, list some digital devices that they know or use,",
+    "in pairs, discuss appropriate use of social media,",
+    "say why they should not chat with strangers online,",
+    "use a digital device to listen to a gospel song or watch a video clip based on the Bible."
+   ],
+   "key_inquiry_questions": [
+    "Why should you use social media appropriately?"
+   ],
+   "core_competences": "Communication: listening skills are enhanced as learners use social media devices to listen to a gospel song or watch a video clip based on the Bible.",
+   "values": "Responsibility: learners use social media responsibly.\nIntegrity: learners use social media appropriately even when no one is watching them.",
+   "pcis": "Patriotism: learners show responsibility by using social media responsibly.",
+   "links": "Science and technology skills are applied as learners manipulate digital devices.\nEnglish: communication skills are enhanced as learners engage in group discussions. ρκ",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "CRE Grade 4 Curriculum Design - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     65
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.a",
+     "letter": "a",
+     "text": "list digital devices used at home and school",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.b",
+     "letter": "b",
+     "text": "discuss appropriate ways of using social media",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.c",
+     "letter": "c",
+     "text": "apply the value of integrity when using social media",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.d",
+     "letter": "d",
+     "text": "desire to do the right thing always even when no one is watching",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

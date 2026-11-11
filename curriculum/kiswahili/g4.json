@@ -1,0 +1,3347 @@
+{
+ "framework": "cbc",
+ "subject_key": "kiswahili",
+ "grade": 4,
+ "source": "KICD English Language, not printed (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 4,
+  "sub_strands": 52,
+  "outcomes": 210,
+  "lessons": 122,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA",
+   "number": "1.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Matamshi Bora (Theme 1: Nyumbani)",
+   "sequence": 111,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [
+    "Sauti",
+    "p/b",
+    "t/d",
+    "k/g",
+    "ch/j"
+   ],
+   "learning_experiences": [
+    "kutambua silabi za sauti lengwa (p/b, t/d, k/g, ch/j) kutokana na maneno kwenye vitabu, ubaoni au kwa kutumia vifaa vya kidijitali,",
+    "kusikiliza silabi za sauti lengwa zikitamkwa na mwalimu, mgeni mwalikwa au kutoka kwa vifaa vya kidijitali kama vile kinasasauti na rununu,",
+    "kutamka silabi za sauti lengwa na vitanzandimi akiwa na wenzake,",
+    "kusikiliza vitanzandimi vilivyoundwa kutokana na maneno yenye sauti lengwa vikikaririwa na mwalimu, mgeni mwalikwa au katika vifaa vya kidijitali (kwa mfano. baba alivua papa katika bahari pana, kila Chacha akila hali chakula kikichacha),",
+    "kuunda vitanzandimi vyepesi vinavyotokana na vitate husika akiwa na wenzake,",
+    "kuunda vitanzandimi kwenye vifaa vya kidijitali na kushirikiana na wenzake mitamboni kuvirekebisha,",
+    "kushiriki majadiliano kuhusu sababu za kukariri vitanzandimi maishani mwake."
+   ],
+   "key_inquiry_questions": [
+    "Matamshi bora yana umuhimu gani katika mawasiliano?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala kuhusu matamshi bora.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kusikiliza sauti.\nHamu ya ujifunzaji: mwanafunzi anapoendelea kukariri vitanzandimi pia anapotoa muhtasari wa kifungu ili kupata kuelewa zaidi.\nUbunifu: mwanafunzi anaposhiriki katika kuunda vitanzandimi.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika kujadili maana na matumizi ya msamiati lengwa.\nUwajibikaji: mwanafunzi anapotumia kifaa cha kidijitali kuunda vitanzandimi pamoja na wenzake.\nUzalendo: mwanafunzu anapotangamana na wenzake kutoka jamii mbalimbali katika kutamka silabi za sauti lengwa na vitanzandimi.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutoa maneno tofautitofauti kuunda vitanzandimi kwenye kifaa cha kidijitali na kuvirekebisha.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya matamshi bora katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     16,
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.a",
+     "letter": "a",
+     "text": "kutambua silabi zinazotokana na sauti p/b, t/d, k/g, ch/j katika maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.b",
+     "letter": "b",
+     "text": "kutamka silabi zinazotokana na sauti p/b, t/d, k/g, ch/j",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.c",
+     "letter": "c",
+     "text": "kutamka vitanzandimi vinavyoundwa kwa silabi za sauti p/b, t/d, k/g, ch/j",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.d",
+     "letter": "d",
+     "text": "kuunda vitanzandimi kutokana na sauti p/b, t/d, k/g, ch/j",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.e",
+     "letter": "e",
+     "text": "kuchangamkia kukariri vitanzandimi vinavyoundwa kwa silabi za sauti zinazokaribiana kimatamshi katika kuboresha matamshi yake",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
+   "number": "1.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Ufahamu (Theme 1: Nyumbani)",
+   "sequence": 121,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua msamiati wa nyumbani (k.v. meza, sebule, balbu/globu, kizingiti, fremu, neti, tendegu, mtoto wa meza, mvungu, figa, kinu, tumbuu, kochi, kupiga deki) uliotumiwa katika kifungu cha hadithi,",
+    "kushirikiana na wenzake kujadili maana na matumizi ya msamiati lengwa katika sentensi,",
+    "kuimba nyimbo zinazolenga msamiati lengwa,",
+    "kusoma kifungu kinachohusiana na suala lengwa kwenye kitabu au kwenye tarakilishi akiwa na wenzake,",
+    "kujibu maswali kutokana na kifungu alichosoma,",
+    "kutoa muhtasari wa ujumbe wa kifungu alichokisoma,",
+    "kumweleza mzazi au mlezi wake ujumbe wa kifungu alichokisoma."
+   ],
+   "key_inquiry_questions": [
+    "Unazingatia nini ili kupata ujumbe katika kifungu cha hadithi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala na kazi za vikundi.\nKujiamini: mwanafunzi anapotoa muhtasari wa kifungu na kujibu maswali ipasavyo.",
+   "values": "Heshima: mwanafunzi anapothamini maoni ya wenzake wanapojadili maana na matumizi ya msamiati lengwa katika sentensi.\nUpendo: mwanafunzi anaposhirikiana na wenzake katika kikundi na kusaidiana.",
+   "pcis": "Usalama mtandaoni: mwanafunzi anapotumia tarakilishi au projekta kuchora vifaa vya nyumbani kwa uangalifu.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufahamu katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a",
+     "letter": "a",
+     "text": "kutambua msamiati wa suala lengwa uliotumika katika kifungu cha hadithi ili kuimarisha ufahamu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b",
+     "letter": "b",
+     "text": "kutumia msamiati lengwa kwa usahihi katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.c",
+     "letter": "c",
+     "text": "kutoa muhtasari wa ujumbe wa kifungu cha hadithi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.d",
+     "letter": "d",
+     "text": "kujenga mazoea ya usomaji bora katika maisha ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUANDI.T1_INSHA_YA_WASIFU",
+   "number": "1.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha ya Wasifu (Theme 1: Nyumbani)",
+   "sequence": 131,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kujadili na wenzake maana ya insha ya wasifu,",
+    "kutambua insha ya wasifu kwa kurejelea vielelezo vya insha vilivyoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kujadili na wenzake mada ya insha na muundo wa insha ya wasifu,",
+    "kuandaa vidokezo vitakavyomwongoza kuandika insha yake,",
+    "kuandika insha inayoeleza sifa za mtu kama vile mzazi au mlezi, rafiki, mwalimu au kiongozi yeyote kwa kuzingatia anwani, mpangilio mzuri wa mawazo, hati nadhifu, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa ubunifu,",
+    "kuandika insha ya wasifu mtandaoni na kuisambaza kwa wenzake na mwalimu ili waisome na kuitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Je, unazingatia mambo gani unapoandika insha nzuri ya wasifu?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala na kazi za vikundi kujadili mada na muundo wa insha ya wasifu.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kuandika na kusambaza insha ya wasifu mtandaoni.\nUbunifu: mwanafunzi anapoandika insha ya wasifu.\nKujiamini: mwanafunzi anapoweza kuandika insha ya wasifu kwa kuzingatia anwani, mpangilio mzuri wa mawazo, hati nadhifu, tahajia, kanuni za kisarufi, uakifishaji mwafaka.",
+   "values": "Heshima: mwanafunzi anaposhirikiana na wenzake kujadili mada na muundo wa insha ya wasifu.\nUwajibikaji: mwanafunzi anapotumia kifaa cha kidijitali kuandika insha na kukitunza.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anapofanya shughuli za kikundi pamoja na wenzake kwa amani.\nHaki za watoto: mwanafunzi anaposoma masuala kuhusu mambo ya nyumbani katika insha au kifungu.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika insha ya wasifu katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUANDI.T1_INSHA_YA_WASIFU.a",
+     "letter": "a",
+     "text": "kutambua insha ya wasifu kwa kuzingatia muundo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T1_INSHA_YA_WASIFU.b",
+     "letter": "b",
+     "text": "kuandika insha ya wasifu kwa kuzingatia ujumbe, mtindo na muundo ufaao",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T1_INSHA_YA_WASIFU.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi mzuri wa insha ya wasifu ili kujenga ubunifu wake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T1_NOMINO",
+   "number": "1.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Nomino (Theme 1: Nyumbani)",
+   "sequence": 141,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kushirikiana na wenzake kueleza maana ya nomino,",
+    "kutambua nomino katika matini mbalimbali,",
+    "kushirikiana na wenzake kutoa mifano ya nomino,",
+    "kuchagua nomino kwenye tarakilishi, kuziburura na kuzitia kapuni akiwa na wenzake,",
+    "kutumia nomino kujaza nafasi katika sentensi,",
+    "kutumia nomino kutunga sentensi kwenye daftari na mtandaoni ili wenzake wazisome na kuzisahihisha."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni vitu gani unavyoweza kupata katika mazingira yako?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala, kazi za vikundi na mawasiliano mtandaoni.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali katika kutambua nomino na kutunga sentensi mtandaoni.\nUbunifu: mwanafunzi anapotunga sentensi akitumia nomino.",
+   "values": "Uadilifu: mwanafunzi anaposahihisha sentensi zilizoandikwa na mwenzake kwa uaminifu.\nUpendo: mwanafunzi anaposhirikiana na wenzake katika kueleza maana ya nomino bila ubaguzi.\nUzalendo: mwanafunzi anapotangamana na wenzake kutoka jamii mbalimbali katika kutekeleza shughuli za kikundi.",
+   "pcis": "Mahusiano ya kijamii: mwanafunzi anapotunga sentensi kuhusu masuala ya nyumbani.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya nomino katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T1_NOMINO.a",
+     "letter": "a",
+     "text": "kueleza maana ya nomino ili kuitofautisha na aina nyingine za maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_NOMINO.b",
+     "letter": "b",
+     "text": "kutambua nomino katika kundi la maneno na sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_NOMINO.c",
+     "letter": "c",
+     "text": "kutumia nomino kwa njia sahihi katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_NOMINO.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya nomino katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T1_VITENZI",
+   "number": "1.4.2",
+   "strand": "Sarufi",
+   "sub_strand": "Vitenzi (Theme 1: Nyumbani)",
+   "sequence": 142,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kushirikiana na wenzake kwa amani kueleza maana ya vitenzi,",
+    "kushirikiana na wenzake kutoa mifano ya vitenzi katika kadi za maneno, kapu maneno, ubao, vifaa vya kidijitali n.k,",
+    "kutambua vitendo vinavyofanyika katika picha au michoro,",
+    "kuigiza vitenzi mbalimbali akishirikiana na wenzake,",
+    "kutumia vitenzi kujaza nafasi kwenye sentensi na kifungu kifupi,",
+    "kutumia vitenzi mbalimbali kutunga sentensi daftarini au mtandaoni kwa kuzingatia suala lengwa na masuala mtambuko mbalimbali,",
+    "kuwashirikisha wenzake katika kuzisahihisha sentensi zake na kumpa maoni kwa heshima."
+   ],
+   "key_inquiry_questions": [
+    "Nishughuli gani unazofanya kila siku?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala, kazi za vikundi na mawasiliano mtandaoni.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali katika kutambua vitenzi na kutunga sentensi mtandaoni.\nUbunifu: mwanafunzi anapotunga sentensi akitumia vitenzi.",
+   "values": "Amani: mwanafunzi anaposhirikiana na wenzake kueleza maana ya vitenzi.\nHeshima: mwanafunzi anapoheshimu wenzake wanaposhiriki katika kutoa mifano ya vitenzi na kuigiza vitenzi mbalimbali.\nUwajibikaji: mwanafunzi anapochukua nafasi mbalimbali katika maigizo ya vitenzi mbalimbali.",
+   "pcis": "Haki za watoto: mwanafunzi anaposikiliza na kutunga sentensi kuhusu nyumbani na masuala ya watoto.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vitenzi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     24,
+     25
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T1_VITENZI.a",
+     "letter": "a",
+     "text": "kueleza maana ya vitenzi ili kuvitofautisha na aina nyingine za maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VITENZI.b",
+     "letter": "b",
+     "text": "kutambua vitenzi katika kundi la maneno na sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VITENZI.c",
+     "letter": "c",
+     "text": "kutumia vitenzi ipasavyo katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VITENZI.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya vitenzi katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T1_VIVUMISHI",
+   "number": "1.4.3",
+   "strand": "Sarufi",
+   "sub_strand": "Vivumishi (Theme 1: Nyumbani)",
+   "sequence": 143,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kushirikiana na wenzake kueleza maana ya kivumishi,",
+    "kutambua vivumishi katika kundi la maneno aliyopewa (kwa mfano, -zuri, - baya, -refu, -fupi, -eusi, -eupe, n.k),",
+    "kuchagua vivumishi kwenye tarakilishi, kuviburura na kuvitia kapuni akiwa na wenzake,",
+    "kutumia vivumishi kujaza nafasi katika sentensi,",
+    "kutumia vivumishi kutunga sentensi daftarini na mtandaoni akizingatia masuala mtambuko mbalimbali yakiwemo masuala ya usalama wa mtandaoni, usawa wa kijinsia, usalama wa nyumbani, mahusiano ya kijamii, n.k,",
+    "kuandika aya fupi akitumia vivumishi mbalimbali,",
+    "kuwasomea au kuwasambazia wenzake kazi yake ili kuitolea maoni kwa heshima na upendo."
+   ],
+   "key_inquiry_questions": [
+    "Ni sifa zipi unazoweza kutambua katika nomino mbalimbali?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala, kazi za vikundi na mawasiliano mtandaoni.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali katika kutambua vivumishi na kutunga sentensi mtandaoni.\nKujiamini: mwanafunzi anapofaulu kutambua vivumishi na kuvitungia sentensi sahihi.",
+   "values": "Heshima: mwanafunzi anaposhiriki katika shughuli za vikundi.\nUpendo: mwanafunzi anapowatolea wenzake maoni kuhusu kazi zao.\nUmoja: mwanafunzi anaposhirikiana na wenzake kutambua vivumishi katika kundi la maneno.",
+   "pcis": "Utunzi na usalama wa watoto: mwanafunzi anapoingiliana na wenzake katika shughuli za ujifunzaji.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vivumishi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     26,
+     27
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T1_VIVUMISHI.a",
+     "letter": "a",
+     "text": "kueleza maana ya kivumishi ili kukitofautisha na aina nyingine za maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VIVUMISHI.b",
+     "letter": "b",
+     "text": "kutambua vivumishi katika kundi la maneno na sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VIVUMISHI.c",
+     "letter": "c",
+     "text": "kutumia vivumishi ipasavyo katika sentensi na kifungu",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VIVUMISHI.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya vivumishi katika sentensi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO",
+   "number": "2.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Maamkuzi na Maagano (Theme 2: Nidhamu mezani)",
+   "sequence": 211,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua maamkuzi (U mzima? U hali gani? Alamsiki, Lala unono, Siku njema) kutoka kwenye chati, ubao au vifaa vya kidijitali, michoro na picha,",
+    "kushiriki mjadala na mwenzake kuhusu maamkuzi na maagano yanayolengwa na matumizi yake,",
+    "kushirikiana na wenzake kuigiza maamkuzi na maagano lengwa,",
+    "kutazama watu wakiamkuana na kuagana katika vifaa vya kidijitali,",
+    "kuambatanisha maamkuzi na maagano na majibu sahihi daftarini au kwenye tarakilishi,",
+    "kujadiliana na mzazi au mlezi wake kuhusu maamkuzi na maagano yanayotumiwa katika jamii yao."
+   ],
+   "key_inquiry_questions": [
+    "Je, watu husalimiana na kuagana vipi katika jamii yako? 2.Kuamkua na kuaga watu kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kuigiza maamkuzi na maagano.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kujifunza maagano na maamkuzi.\nKujiamini: mwanafunzi anapotumia maamkuzi na maagano ipasavyo.",
+   "values": "Heshima: inaimarishwa anapoigiza maamkuzi na maagano.\nUpendo: anaposhiriki katika mjadala na wenzake kwa kutumia maamkuzi na maagano yafaayo.\nUmoja: unaimarisha uhusiano mwema baina yao wanapofanya shughuli za kikundi.",
+   "pcis": "Elimu ya amani: inakuzwa mwanafunzi anapoamkuana na kuagana na wenzake.\nUmoja wa kijamii: unakuzwa mwanafunzi anapomuamkua na kumuaga mwenzake kutoka jamii mbalimbali.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya maamkuzi na maagano katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la nidhamu mezani na masuala yanayofunzwa katika somo la Agriculture",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     28,
+     29
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.a",
+     "letter": "a",
+     "text": "kutambua aina mbalimbali za maamkuzi na maagano katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.b",
+     "letter": "b",
+     "text": "kueleza maamkuzi na maagano yanayotumika katika miktadha mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.c",
+     "letter": "c",
+     "text": "kutumia aina mbalimbali za maamkuzi na maagano katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.d",
+     "letter": "d",
+     "text": "kuchangamkia maamkuzi na maagano katika mahusiano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA",
+   "number": "2.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Kina (Theme 2: Nidhamu mezani)",
+   "sequence": 221,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kujadiliana na wenzake kuhusu maana na matumizi ya kamusi,",
+    "kujadiliana na wenzake kuhusu mpangilio wa maneno katika kamusi,",
+    "kutumia kamusi kutafuta maana za maneno mbalimbali akiwa na wenzake,",
+    "kutumia mtandao kusikiliza na kusoma maelezo kuhusu msamiati anaotafutia maana."
+   ],
+   "key_inquiry_questions": [
+    "Unazingatia nini unapotafuta maneno katika kamusi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: unakuzwa mwanafunzi anaposhirikiana na wenzake kutafuta maana za maneno.\nUjuzi wa kidijitali: unakuzwa mwanafunzi anapotumia mtandao kutafuta maana za maneno.\nHamu ya ujifunzaji: inakuzwa mwanafunzi anapoanza kutumia kamusi kutafuta maana za maneno.",
+   "values": "Uzalendo: unakuzwa mwanafunzi anapotangamana na wenzake kutoka sehemu mbalimbali katika kutekeleza shughuli za kikundi.",
+   "pcis": "Usalama mtandaoni: unakuzwa mwanafunzi anapotumia mtandao kusikiliza na kusoma maelezo kuhusu msamiati asioujua.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya matumizi ya kamusi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la nidhamu mezani na masuala yanayofunzwa katika somo la Agriculture",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.a",
+     "letter": "a",
+     "text": "kueleza maana ya kamusi ili kuitofautisha na vitabu vingine",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.b",
+     "letter": "b",
+     "text": "kutumia kamusi ipasavyo kutafuta maana za maneno asiyoyajua ili kukuza msamiati wake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.c",
+     "letter": "c",
+     "text": "kuchangamkia umuhimu wa kamusi katika kukuza msamiati wake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI",
+   "number": "2.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha ya Masimulizi (Theme 2: Nidhamu mezani)",
+   "sequence": 231,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua insha ya masimulizi kwa kurejelea vielelezo vya insha zilizoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kushiriki na wenzake kujadili mada ya insha na muundo wa insha ya masimulizi,",
+    "kuandaa vidokezo vitakavyomwongoza kuandika insha yake,",
+    "kuandika insha inayosimulia kisa kinachohusu nidhamu mezani kwa kuzingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa lugha ya kiubunifu,",
+    "kuwasomea wenzake insha aliyoandika ili waitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Insha ya masimulizi inahusu nini?",
+    "Je, unazingatia nini unapoandika insha ya masimulizi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala na kazi za vikundi.\nUbunifu: mwanafunzi anapoandika insha ya masimulizi.\nHamu ya ujifunzaji: mwanafunzi anapoyatafakari maswali dadisi na anapoimarisha ujuzi wake wa kutumia tarakilishi.",
+   "values": "Heshima: mwanafunzi anapothamini mchango wa wenzake katika kikundi.",
+   "pcis": "Mshikamano wa kijamii: mwanfunzi anapokuza uraia wema kwa kufanya shughuli ya kikundi na wenzake na kuthamini mchango wao.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya insha ya masimulizi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la nidhamu mezani na masuala yanayofunzwa katika somo la Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     31,
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.a",
+     "letter": "a",
+     "text": "kutambua insha ya masimulizi kwa kuzingatia muundo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.b",
+     "letter": "b",
+     "text": "kuandika insha ya masimulizi inayozingatia mada, ujumbe, mtindo na muundo ufaao",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi mzuri wa insha ya masimulizi ili kukuza ubunifu wake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T2_VIWAKILISHI",
+   "number": "2.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Viwakilishi (Theme 2: Nidhamu mezani)",
+   "sequence": 241,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kushirikiana na wenzake kueleza maana ya viwakilishi,",
+    "kutambua viwakilishi katika kundi la maneno aliyopewa,",
+    "kuchagua viwakilishi kwenye tarakilishi, kuviburura na kuvitia kapuni akiwa na wenzake,",
+    "kujaza nafasi katika sentensi kwa kutumia viwakilishi mwafaka (huyu, hao, huyo, hao),",
+    "kutumia viwakilishi kutunga sentensi daftarini au mtandaoni kwa kuzingatia suala lengwa na masuala mtambuko mbalimbali,",
+    "kuwasomea au kuwasambazia wenzake sentensi zake ili kuzitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Ni maneno gani yanayoweza kutumika badala ya nomino?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala, kazi za vikundi na mawasiliano mtandaoni.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali katika kutambua viwakilishi na kutunga sentensi mtandaoni.\nUbunifu: mwanafunzi anapotunga sentensi akitumia viwakilishi.\nKujiamini: mwanafunzi anapofaulu kutambua viwakilishi na kuvitungia sentensi sahihi.",
+   "values": "Amani: mwanafunzi anapotangamana na wenzake katika shughuli za kikundi.\nHeshima: mwanafunzi anapothamini mchango wa wenzake katika shughuli za kikundi.",
+   "pcis": "Elimu kwa maendeleo endelevu: anapotumia viwakilishi ipasavyo katika mawasiliano ya kila siku.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya viwakilishi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la nidhamu mezani na masuala yanayofunzwa katika somo la Agriculture",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     33,
+     34
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T2_VIWAKILISHI.a",
+     "letter": "a",
+     "text": "kueleza maana ya kiwakilishi ili kukibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIWAKILISHI.b",
+     "letter": "b",
+     "text": "kutambua viwakilishi katika kundi la maneno na sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIWAKILISHI.c",
+     "letter": "c",
+     "text": "kutumia viwakilishi ipasavyo katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIWAKILISHI.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya viwakilishi katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T2_VIELEZI",
+   "number": "2.4.2",
+   "strand": "Sarufi",
+   "sub_strand": "Vielezi (Theme 2: Nidhamu mezani)",
+   "sequence": 242,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kushirikiana na wenzake kueleza maana ya vielezi (k.v polepole, haraka, sana, vizuri, kisheria, jana, shuleni, uwanjani),",
+    "kutambua vielezi katika kundi la maneno aliyopewa katika kadi za maneno, chati, mti maneno, ubao, vifaa vya kidijitali n.k,",
+    "kuchagua vielezi kutoka kwenye kundi la maneno kwa kutumia tarakilishi kwa kuviburura na kuvitia kapuni akiwa na wenzake,",
+    "kuigiza vielezi mbalimbali panapofaa akishirikiana na wenzake,",
+    "kutumia vielezi mwafaka kujaza nafasi katika sentensi,",
+    "kutumia vielezi kutunga sentensi daftarini au kwenye kifaa cha kidijitali akizingatia suala lengwa na masuala mtambuko mbalimbali,",
+    "kuwasomea au kuwasambazia wenzake na mwalimu sentensi zake ili kuzitolea maoni."
+   ],
+   "key_inquiry_questions": [
+    "Unafanyaje shughuli zako za kila siku?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala, kazi za vikundi na mawasiliano mtandaoni.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali katika kutambua vielezi na kutunga sentensi mtandaoni.\nUbunifu: mwanafunzi anapotunga sentensi akitumia vielezi na kuviigiza.\nKujiamini: mwanafunzi anapofaulu kutambua vielezi na kuvitungia sentensi sahihi.",
+   "values": "Heshima: mwanafunzi anaposikiliza vielezi vinavyotolewa na wenzake kwa makini.\nUpendo: mwanafunzi anapoigiza akishirikiana na wenzake kwa zamu.",
+   "pcis": "Haki za watoto: mwanafunzi anapotunga sentensi kuhusu suala lengwa akizingatia vielezi.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vielezi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la nidhamu mezani na masuala yanayofunzwa katika somo la Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     35,
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T2_VIELEZI.a",
+     "letter": "a",
+     "text": "kueleza maana ya kielezi ili kukibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIELEZI.b",
+     "letter": "b",
+     "text": "kutambua vielezi katika kundi la maneno na sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIELEZI.c",
+     "letter": "c",
+     "text": "kutumia vielezi ipasavyo katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIELEZI.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya vielezi katika sentensi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSIKI.T3_VITENDAWILI",
+   "number": "3.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Vitendawili (Theme 3: Mavazi)",
+   "sequence": 311,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutafiti maana ya kitendawili kwenye kamusi, vitabuni au mtandaoni akiwa na wenzake,",
+    "kutambua vitendawili katika chati, ubao au katika vifaa vya kidijitali (k.m. Nifungue nikufunike (Mwavuli);",
+    "kusikiliza vitendawili vikitegwa na kuteguliwa kupitia vyombo vya kidijitali.",
+    "kushiriki katika kutega na kutegua vitendawili akiwa na wenzake,",
+    "kujadiliana na mzazi au mlezi wake kuhusu vitendawili vinavyotegwa katika jamii yao."
+   ],
+   "key_inquiry_questions": [
+    "Je, unazingatia nini unapotega na kutegua vitendawili?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika kutega na kutegua vitendawili kwenye vikundi.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapofikiria kuhusu majibu ya vitendawili.\nUjuzi wa kidijitali: mwanafunzi anapotumia vyombo vya kidijitali kusikiliza vitendawili vikitegwa na kuteguliwa.\nKujiamini: mwanafunzi anapotega na kutegua vitendawili ipasavyo.",
+   "values": "Heshima: mwanafunzi anachangamkia maoni ya wenzake darasani.\nUmoja: mwanafunzi anapofanya kazi ya kutega na kutegua vitendawili pamoja na wenzake kwa vikundi.",
+   "pcis": "Umoja wa kijamii: mwanafunzi anapofanya kazi ya kutega na kutegua vitendawili pamoja na wenzake katika kikundi.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vitendawili katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mavazi na masuala yanayofunzwa katika somo la Social Studies na Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     37,
+     38
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSIKI.T3_VITENDAWILI.a",
+     "letter": "a",
+     "text": "kutambua vitendawili kwenye matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T3_VITENDAWILI.b",
+     "letter": "b",
+     "text": "kutega na kutegua vitendawili ili kukuza uwazaji kina",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T3_VITENDAWILI.c",
+     "letter": "c",
+     "text": "kuchangamkia matumizi ya vitendawili maishani",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA",
+   "number": "3.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Ufasaha (Theme 3: Mavazi)",
+   "sequence": 321,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kushirikiana na wenzake kujadili vipengele vya kuzingatia katika kusoma makala kwa ufasaha,",
+    "kusikiliza na kutazama mwalimu, mgeni mwalikwa, mwanafunzi mwenzake au video za watu wanaosoma makala kwa ufasaha (k.v hotuba na habari),",
+    "kujadili na wenzake vipengele vya kuzingatia katika kusoma kwa ufasaha vilivyozingatiwa katika usomaji alioutazama,",
+    "kusoma kifungu cha hadithi kuhusu suala lengwa kwa kuzingatia matamshi bora akiwa na wenzake,",
+    "kusoma kifungu cha hadithi kuhusu suala lengwa kwa kuzingatia kiwango kifaacho cha sauti (k.v kiwango cha sauti na kiimbo),",
+    "kusoma kifungu cha hadithi kuhusu suala lengwa kwa kuzingatia kasi ifaayo (maneno sahihi yasiyopungua 60 kwa dakika) ili wenzake wamtolee maoni,",
+    "kusoma kifungu kwa kuambatanisha ishara zifaazo panapofaa anaposoma (k.v ishara za uso na mikono),",
+    "kusoma hadithi kuhusu masuala mtambuko mbalimbali kutoka kwenye vitabu, vifaa vya kidijitali, n.k akizingatia matamshi bora, kasi ifaayo na kiwango kifaacho cha sauti."
+   ],
+   "key_inquiry_questions": [
+    "Unazingatia nini ili kuweza kusoma kifungu cha hadithi ipasavyo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kusoma kifungu cha hadithi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kusoma vifungu cha hadithi kuhusu masuala mtambuko mbalimbali.\nHamu ya ujifunzaji: mwanafunzi anapotafuta hadithi mbalimbali na kuzisoma kwa kuzingatia matamshi bora, kasi ifaayo na kiwango kifaacho cha sauti.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake kusoma kifungu cha hadithi.\nUpendo: mwanafunzi anapowashirikisha wengine katika matumizi ya vifaa vya kidijitali darasani.\nUwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali.",
+   "pcis": "Stadi za maisha: mwanafunzi anapomudu kuzitumia sauti lengwa ipasavyo, ukakamavu wake unajengeka.\nUraia: mwanafunzi anapowathamini wenzake wanaposhirikiana kutamka sauti lengwa katika kikundi.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufasaha katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mavazi na masuala yanayofunzwa katika somo la Social Studies na Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.a",
+     "letter": "a",
+     "text": "kujadili vipengele vya kuzingatia katika kusoma kwa ufasaha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.b",
+     "letter": "b",
+     "text": "kusoma kifungu cha hadithi kwa kuzingatia matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.c",
+     "letter": "c",
+     "text": "kusoma kifungu cha hadithi kwa kuzingatia kiwango kifaacho cha sauti",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.d",
+     "letter": "d",
+     "text": "kusoma kifungu cha hadithi kwa kuzingatia kasi ifaayo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.e",
+     "letter": "e",
+     "text": "kusoma kifungu cha hadithi kwa kuambatanisha ishara zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.f",
+     "letter": "f",
+     "text": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL",
+   "number": "3.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Kuandika kwa Tarakilishi (Theme 3: Mavazi)",
+   "sequence": 331,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua sehemu za kimsingi za tarakilishi za kupigia chapa akiwa na wenzake (k.v kiibodi, kipanya, kiwambo, kitufe na faili),",
+    "kuzingatia hatua za kufungua na kufunga tarakilishi,",
+    "kuandika suala lengwa kwa kutumia tarakilishi akizingatia chapa koza, italiki na kupigia mistari panapofaa,",
+    "kuandika aya kuhusu mavazi katika tarakilishi na kuihariri,",
+    "kutumia mtandao kusambaza kazi aliyoandika ili wenzake na mwalimu waitathmini,",
+    "kuhifadhi kazi yake kwenye faili ya tarakilishi."
+   ],
+   "key_inquiry_questions": [
+    "Je, unazingatia nini unapoandika kwa kutumia tarakilishi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika vikundi.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kuandika na kuhifadhi kazi yake kwenye faili.\nHamu ya ujifunzaji: mwanafunzi anapotagusana na vyombo vya kidijitali kama vile kutumia tarakilishi na kipakatalishi.",
+   "values": "Ushirikiano: mwanafunzi anapotambua sehemu za kimsingi za tarakilishi za kupiga chapa akiwa na wenzake.\nUwajibikaji: mwanafunzi anaweza kutumia na kuhifadhi vifaa vya kidijitali ifaavyo.",
+   "pcis": "Usalama wa mtandaoni: mwanafunzi anapotumia vifaa vya kidijitali anazingatia kuingia mitandaoni iliyo salama.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya matumizi ya tarakilishi katika somo hili na ujifunzaji wa dhana hiyo katika somo la Science and Technology.\nMwanafunzi anaweza kuhusisha suala la mavazi na masuala yanayofunzwa katika somo la Social studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.a",
+     "letter": "a",
+     "text": "kutambua sehemu mbalimbali za tarakilishi zinazotumika kupigia chapa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.b",
+     "letter": "b",
+     "text": "kufungua na kufunga tarakilishi ili kuandika kazi na kuihifadhi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.c",
+     "letter": "c",
+     "text": "kuandika suala lengwa kwa kutumia tarakilishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.d",
+     "letter": "d",
+     "text": "kuhariri kazi yake kwa kuzingatia uakifishaji ufaao",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.e",
+     "letter": "e",
+     "text": "kuhifadhi kazi aliyoiandika kwenye tarakilishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.f",
+     "letter": "f",
+     "text": "kujenga mazoea ya kuandika kwa kutumia tarakilishi na kuhifadhi kazi yake ya maandishi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T3_VIUNGANISHI",
+   "number": "3.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Viunganishi (Theme 3: Mavazi)",
+   "sequence": 341,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kushirikiana na wenzake kueleza maana ya viunganishi,",
+    "kutambua viunganishi katika kundi la maneno aliyopewa (k.v na, pia, kwa sababu, lakini),",
+    "kutafiti vitabuni au mtandaoni ili kutoa mifano mbalimbali ya viunganishi,",
+    "kutumia viunganishi kujaza nafasi katika sentensi,",
+    "kutumia viunganishi kutunga sentensi daftarini au mtandaoni kwa kuzingatia suala lengwa na masuala mtambuko mbalimbali,",
+    "kumsomea mzazi au mlezi wake sentensi alizozitunga."
+   ],
+   "key_inquiry_questions": [
+    "Je, kwa nini ni muhimu kutumia viunganishi katika mawasiliano?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala, kazi za vikundi na mawasiliano mtandaoni.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali katika kutambua viunganishi na kutunga sentensi mtandaoni.\nKujiamini: mwanafunzi anapofaulu kutambua viunganishi na kuvitungia sentensi sahihi.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake kueleza maana ya viunganishi na kuvitungia sentensi.\nUadilifu: mwanafunzi anapotumia vifaa vya kidijitali kuchagua viunganishi kutoka kwenye kundi la maneno na kuvitia kapuni.",
+   "pcis": "Umoja wa kijamii: mwanafunzi anapofanya shughuli ya kikundi pamoja na wenzake wa jamii tofauti.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya viunganishi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mavazi na masuala yanayofunzwa katika somo la Social Studies na Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     43,
+     44
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T3_VIUNGANISHI.a",
+     "letter": "a",
+     "text": "kueleza maana ya kiunganishi ili kukibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIUNGANISHI.b",
+     "letter": "b",
+     "text": "kutambua viunganishi katika kundi la maneno na sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIUNGANISHI.c",
+     "letter": "c",
+     "text": "kutumia viunganishi kwa njia sahihi katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIUNGANISHI.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya viunganishi katika sentensi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T3_VIHUSISHI",
+   "number": "3.4.2",
+   "strand": "Sarufi",
+   "sub_strand": "Vihusishi (Theme 3: Mavazi)",
+   "sequence": 342,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kushirikiana na wenzake kueleza maana ya vihusishi na kuvitolea mifano (k.m karibu na, mbali na, juu ya, chini ya, nje ya na ndani ya),",
+    "kutambua vihusishi katika kundi la maneno aliyopewa,",
+    "kuchagua vihusishi kwenye kundi la maneno katika tarakilishi, kuviburura na kuvitia kapuni akiwa peke yake au kwenye vikundi,",
+    "kutumia vihusishi kutunga sentensi daftarini au mtandaoni kwa kuzingatia suala lengwa na masuala mtambuko mbalimbali,",
+    "kuwasomea au kuwasambazia wenzake na mwalimu sentensi alizotunga ili kuzitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Vihusishi vina umuhimu gani katika mawasiliano?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala, kazi za vikundi na mawasiliano mtandaoni.\nUjuzi wa kidijitali: wanafunzi anapotumia kifaa cha kidijitali katika kutambua vihusishi na kutunga sentensi mtandaoni.\nUbunifu: mwanafunzi anapotunga sentensi akitumia vihusishi.\nKujiamini: mwanafunzi anapofaulu kutambua vihusishi na kuvitungia sentensi sahihi.",
+   "values": "Heshima: mwanafunzi anapothamini mchango wa wenzake katika kikundi.\nUwajibikaji: mwanafunzi anapotumia kifaa cha kidijitali katika kutambua vihusishi na kuvitungia sentensi mtandaoni.",
+   "pcis": "Umoja wa kijamii: mwanafunzi anapofanya shughuli ya kikundi pamoja na wenzake wa jamii tofauti.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vihusishi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English\nMwanafunzi anaweza kuhusisha suala la mavazi na masuala yanayofunzwa katika somo la Social Studies na Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     45,
+     46
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHUSISHI.a",
+     "letter": "a",
+     "text": "kueleza maana ya kihusishi ili kukibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHUSISHI.b",
+     "letter": "b",
+     "text": "kutambua vihusishi katika kundi la maneno na sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHUSISHI.c",
+     "letter": "c",
+     "text": "kutumia vihusishi ipasavyo katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHUSISHI.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya vihusishi katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T3_VIHISISHI",
+   "number": "3.4.3",
+   "strand": "Sarufi",
+   "sub_strand": "Vihisishi (Theme 3: Mavazi)",
+   "sequence": 343,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kueleza maana ya vihisishi na kuvitolea mifano (k.m Lo!, Ala!, Salalee!, Mama ee!, Oyee! na Aha!) akishirikiana na wenzake,",
+    "kutambua vihisishi katika kundi la maneno,",
+    "kutambua alama ya hisi (!) inayoambatanishwa na vihisishi,",
+    "kutumia vihisishi kujaza nafasi katika sentensi,",
+    "kutumia vihisishi kutunga sentensi kwenye daftari akizingatia suala lengwa na masuala mtambuko mbalimbali,",
+    "kutumia vihisishi kutunga kifungu kifupi daftarini au mtandaoni ili wenzake wakisome na kukitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Kutumia vihisishi katika mawasiliano kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala, kazi za vikundi na mawasiliano mtandaoni.\nUjuzi wa kidijitali: mwanafunzi unapotumia vifaa vya kidijitali katika kutambua vihisishi na kutunga sentensi.\nUbunifu: mwanafunzi anapotunga sentensi akitumia vihisishi.\nKujiamini: mwanafunzi anapofaulu kutambua vihisishi na kuvitungia sentensi sahihi.",
+   "values": "Uwajibikaji: mwanafunzi anapochagua vihisishi kwenye kundi la maneno katika tarakilishi na kuvitia kapuni.\nUmoja:mwanafunzi anaposhirikiana na wenzake kueleza maana ya vihisishi na kuvitolea mifano.",
+   "pcis": "Umoja wa kijamii: mwanafunzi anapofanya shughuli ya kikundi pamoja na wenzake wa jamii tofauti.\nUwazaji wa kina: mwanafunzi anapotumia vihisishi kutunga sentensi mtandaoni ili wenzake wazitathmini.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vihisishi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mavazi na masuala yanayofunzwa katika somo la Social Studies na Creative Arts.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     47,
+     48
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHISISHI.a",
+     "letter": "a",
+     "text": "kueleza maana ya kihisishi ili kukibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHISISHI.b",
+     "letter": "b",
+     "text": "kutambua vihisishi katika kundi la maneno na sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHISISHI.c",
+     "letter": "c",
+     "text": "kutumia vihisishi ipasavyo katika sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHISISHI.d",
+     "letter": "d",
+     "text": "kuonea fahari matumizi ya vihisishi katika miktadha mbalimbali",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE",
+   "number": "4.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Maneno ya Upole (Theme 4: Dira)",
+   "sequence": 411,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua na kueleza maana ya maneno ya upole (k.m kwenda msalani, kwenda haja kubwa, kwenda haja ndogo, kuendesha na kujifungua) katika chati, mti maneno, kapu maneno, ubao, vyombo vya kidijitali,",
+    "kushiriki katika kujadili maneno ya upole akiwa na wenzake,",
+    "kutazama maigizo kuhusu matumizi ya maneno ya upole katika video na mitandaoni,",
+    "kushiriki katika maigizo yanayohusu matumizi ya maneno ya upole,",
+    "kutumia maneno ya upole katika sentensi."
+   ],
+   "key_inquiry_questions": [
+    "Kutumia maneno ya upole kuna umuhimu gani katika mawasiliano?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapojadiliana na kuigiza katika kikundi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vyombo vya kidijitali katika ujifunzaji.\nKujiamini: mwanafunzi anapofaulu kutambua maneno ya upole na kuyatumia katika kutunga sentensi.",
+   "values": "Heshima: mwanafunzi anapotambua nakutumia maneno ya upole katika chati maneno.\nUpendo: mwanafunzi anaposhirikiana na wenzake katika vikundi kwa amani.",
+   "pcis": "Umoja wa kijamii: mwanafunzi anapojadiliana na kushirikiana na wenzake katika shughuli za vikundi kwa upole na amani.",
+   "links": "Mwanafunzi anaweza kuhusisha lugha ya upole katika somo hili na ujifunzaji wa dhana hiyo katika somo la English na Religious Education.\nMwanafunzi anaweza kuhusisha suala la dira na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     49,
+     50
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.a",
+     "letter": "a",
+     "text": "kutambua maneno ya upole yanayotumiwa katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.b",
+     "letter": "b",
+     "text": "kutumia maneno ya upole katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.c",
+     "letter": "c",
+     "text": "kuthamini matumizi ya maneno ya upole katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA",
+   "number": "4.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Mapana (Theme 4: Dira)",
+   "sequence": 421,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua na kuzingatia hatua za kiusalama (k.m. kutowasiliana na watu asiowajua, kuwajibika anaposakura tovuti mbalimbali) kutoka kwenye chati au kwenye tarakilishi na mitandao,",
+    "kutambua jina la faili lengwa kwenye tarakilishi na kufanya mazoezi ya kufungua na kufunga,",
+    "kutambua mitandao salama yenye matini inayoafiki kiwango na mahitaji yake,",
+    "kutambua umuhimu wa kutoa habari kwa mwalimu, mzazi au mlezi wake endapo atapata ujumbe kutoka kwa watu asiowajua mtandaoni na kutowasiliana nao,",
+    "kutafuta maana za maneno kuhusu suala lengwa kwenye kamusi au mtandaoni,",
+    "asikilize matamshi na maelezo kuhusu anachokisoma mtandaoni panapowezekana,",
+    "kutoa habari kuhusu matini aliyosoma kwa muhtasari na kujibu maswali katika maandishi au mazungumzo na wenzake."
+   ],
+   "key_inquiry_questions": [
+    "Ni hatua zipi za kiusalama unazofaa kuzingatia unapotumia mtandao?"
+   ],
+   "core_competences": "Ujuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali katika kutafuta, kusakura na kusoma.\nHamu ya ujifunzaji: mwanafunzi anapotafuta matini ya kusoma kwenye tarakilishi na mitandaoni.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali na kuzingatia mitandao salama.\nUadilifu: mwanafunzi anapotoa habari kwa mwalimu au mlezi apatapo ujumbe kutoka kwa watu asiowajua mtandoni.",
+   "pcis": "Usalama mtandaoni: mwanafunzi anapotambua mitandao salama yenye matini inayoafiki kiwango na mahitaji yake.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa mapana katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la dira na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     51,
+     52
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.a",
+     "letter": "a",
+     "text": "kutambua na kufungua faili iliyo na kifungu cha kusoma",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.b",
+     "letter": "b",
+     "text": "kutambua na kuzingatia hatua za kiusalama katika matumizi ya vifaa vya kidijitali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.c",
+     "letter": "c",
+     "text": "kusakura matini kwenye tovuti salama ili kupata vifungu vya kusoma vyenye suala lengwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.d",
+     "letter": "d",
+     "text": "kutumia vifaa vya kidijitali kwa urahisi kupata matini yanayolengwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.e",
+     "letter": "e",
+     "text": "kuchangamkia matumizi ya vifaa vya kidijitali katika kutafuta na kusoma ujumbe ili kuimarisha maarifa yake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI",
+   "number": "4.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Barua ya Kirafiki (Theme 4: Dira)",
+   "sequence": 431,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua barua ya kirafiki kwa kurejelea vielelezo vya barua za kirafiki zilizoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kujadiliana na wenzake kuhusu umuhimu wa barua za kirafiki katika mawasiliano,",
+    "kujadili na wenzake mada ya barua ya kirafiki na vipengele vyake/ yale yanayofaa kujumuishwa,",
+    "kuandaa vidokezo vitakavyomwongoza kuandika insha yake,",
+    "kuandika barua ya kirafiki kwa rafiki, ndugu, mzazi, n.k kwa kuzingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa lugha ya kiubunifu,",
+    "kuwasomea wenzake na mwalimu barua yake ili waitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Je, unazingatia nini ili kuandika barua nzuri ya kirafiki?",
+    "Barua za kirafiki inashughulikia masuala gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala na kazi za vikundi.\nUbunifu: mwanafunzi anapoandika barua ya kirafiki.\nKujiamini: mwanafunzi anapoweza kuandika barua ya kirafiki kwa kuzingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa lugha ya kiubunifu.",
+   "values": "Upendo: mwanafunzi anapoitathmini kazi ya wenzake.\nHeshima: mwanafunzi anapojadili umuhimu wa kuandika barua za kirafiki.",
+   "pcis": "Mahusiano ya kijamii: mwanafunzi anaposhirikiana na wenzake wa jamii tofautitofauti kujadili umuhimu wa barua za kirafiki katika mawasiliano.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika barua ya kirafiki katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la dira na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     53,
+     54
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.a",
+     "letter": "a",
+     "text": "kutambua barua ya kirafiki kwa kuzingatia muundo wake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.b",
+     "letter": "b",
+     "text": "kujadili umuhimu wa barua ya kirafiki katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.c",
+     "letter": "c",
+     "text": "kuandika barua ya kirafiki inayozingatia mada kwa kufuata kanuni zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.d",
+     "letter": "d",
+     "text": "kuchangamkia utunzi wa barua ya kirafiki katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T4_NGELI_YA_A_WA",
+   "number": "4.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Ngeli ya A-WA (Theme 4: Dira)",
+   "sequence": 441,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kueleza maana ya ngeli za nomino akiwa na wenzake,",
+    "kutaja mifano ya nomino akiwa na wenzake,",
+    "kusoma sentensi zilizoundwa kutokana na nomino za ngeli ya A - WA katika umoja na wingi,",
+    "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya A-WA kwenye sentensi alizosoma,",
+    "kushiriki katika mchezo wa kuchopoa kadi za sentensi zenye nomino za ngeli ya A-WA kutoka kwenye kikapu au boksi na kisha kuzisoma,",
+    "kutambua nomino za ngeli ya A-WA katika umoja na wingi katika matini,",
+    "kujaza nafasi katika sentensi kwa kutumia viambishi vya umoja na wingi wa nomino katika ngeli ya A-WA,",
+    "kuunda sentensi sahihi daftarini au kwenye kifaa cha kidijitali akitumia nomino za ngeli ya A-WA katika umoja na wingi akizingatia upatanisho wa kisarufi,",
+    "kuwasomea au kuwasambazia wenzake na mwalimu sentensi alizozitunga ili kuzitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Ni nini kinakuwezesha kutambua nomino za ngeli ya A-WA?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake na kuandika nomino za ngeli ya A-WA katika umoja na wingi. Pia anaposhirikiana na wenzake katika mchezo wa kuchopoa kadi za sentensi zenye nomino za ngeli ya A-WA kutoka kikapuni.\nUbunifu: mwanafunzi anapotunga sentensi sahihi akitumia nomino za ngeli ya A-WA katika umoja na wingi.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kutambua nomino.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza kifaa cha kidijitali anachotumia.\nHeshima: mwanafunzi anapothamini mchango wa wenzake katika kuandika maneno ya ngeli ya A-WA.\nAmani: mwanafunzi anapowasiliana na wenzake kutoka sehemu mbalimbali kwa kuonyesha upendo akitumia nomino za ngeli ya A-WA.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anapofanya shughuli ya kuandika umoja na wingi wa nomino pamoja na wenzake.\nUsalama mtandaoni: mwanafunzi anapotumia kifaa cha kidijitali kusoma sentensi zilizotungwa kutokana na nomino za ngeli ya A-WA kwa kuzingatia hatua za kiusalama.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya ngeli za nomino katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la dira na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     55,
+     56
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya A-WA",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.b",
+     "letter": "b",
+     "text": "kutambua nomino katika ngeli ya A-WA ili kuzitofautisha na nomino katika ngeli nyingine",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.c",
+     "letter": "c",
+     "text": "kutunga sentensi akitumia nomino za ngeli ya A-WA katika umoja na wingi akizingatia upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.d",
+     "letter": "d",
+     "text": "kuchangamkia kutumia nomino za ngeli ya A-WA katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSIKI.T5_METHALI",
+   "number": "5.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Methali (Theme 5: Ushauri-nasaha)",
+   "sequence": 511,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua methali kuhusu malezi (k.v mtoto umleavyo ndivyo akuavyo, mtoto wa nyoka ni nyoka na mtoto hutazama kisogo cha nina) kutoka kwa orodha ya methali, chati au mtandaoni,",
+    "kueleza maana za methali kuhusu malezi akiwa na wenzake,",
+    "kukamilisha methali kuhusu ushauri nasaha,",
+    "kutumia methali kuhusu ushauri nasaha katika kifungu kifupi na masimulizi akiwa na wenzake",
+    "kushirikiana na mzazi au mlezi wake kutambua methali kuhusu malezi katika jamii yao."
+   ],
+   "key_inquiry_questions": [
+    "Ni methali gani zinazohusu malezi?",
+    "Methali hutumiwa kufanya nini?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapohusishwa katika kazi ya vikundi.\nUjuzi wa kidijitali: mwanafunzi anapotumia mtandao kutambua methali.\nKujiamini: mwanafunzi anapotumia methali kujieleza.",
+   "values": "Heshima: mwanafunzi anaposhirikiana na wenzake kutaja na kueleza maana za methali na kuthamini mchango wao.\nUwajibikaji: anapowasiliana na mzazi au mlezi akitumia methali zinazohusu malezi katika miktadha mbalimbali.\nUzalendo: mwanafunzi anapotambua methali kuhusu malezi katika jamii yake na za wenzake.",
+   "pcis": "Ushauri nasaha: mwanafunzi anaposoma methali zinazohusu malezi mema.\nMshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake wa sehemu mbalimbali kueleza maana za methali kuhusu malezi kwa amani.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya methali katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la ushauri nasaha na masuala yanayofunzwa katika somo la Religious Education.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     57,
+     58
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSIKI.T5_METHALI.a",
+     "letter": "a",
+     "text": "kutambua methali zinazohusu malezi katika matini tofautitofauti",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T5_METHALI.b",
+     "letter": "b",
+     "text": "kueleza maana za methali kuhusu malezi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T5_METHALI.c",
+     "letter": "c",
+     "text": "kutumia methali zinazohusu malezi katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T5_METHALI.d",
+     "letter": "d",
+     "text": "kuchangamkia matumizi ya methali katika miktadha mbalimbali",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU",
+   "number": "5.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Ufahamu (Theme 5: Ushauri-nasaha)",
+   "sequence": 521,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Shairi"
+   ],
+   "learning_experiences": [
+    "kutambua shairi, beti na mishororo katika matini mbalimbali kama vile vitabu, chati na vilevile kwa kutumia tarakilishi,",
+    "kushiriki katika majadiliano kuhusu maana za shairi, ubeti na mishororo,",
+    "kusoma akizingatia msamiati wa suala lengwa,",
+    "kusikiliza mashairi yanayokaririwa kwenye vifaa vya kidijitali,",
+    "kusoma au kukariri shairi kwa mahadhi mbalimbali akizingatia ujumbe,",
+    "kushiriki mjadala kuhusu ujumbe unaojitokeza kwenye shairi,",
+    "kusoma mashairi kwenye mitandao."
+   ],
+   "key_inquiry_questions": [
+    "Unaufahamu msamiati gani wa ushairi?",
+    "Mashairi yanaweza kuwasilisha ujumbe gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika kazi za vikundi.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kufanikisha somo.\nKujiamini: mwanafunzi anapoimba au kukariri shairi.",
+   "values": "Umoja: mwanafunzi anaposhirikikiana na wenzake katika majadiliano yanayohusu shairi bila ubaguzi. Uwajibikaji: mwanafunzi anapotumia vifaa vya kidijitali kufanikisha somo kwa uangalifu.",
+   "pcis": "Masuala ya kijinsia: mwanafunzi anaposhiriki na wenzake kusoma na kukariri mashairi kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya nyimbo na ushairi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English, Creative Arts na Religious Education.\nMwanafunzi anaweza kuhusisha suala la ushauri nasaha na masuala yanayofunzwa katika somo la Religious Education.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     59,
+     60
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a",
+     "letter": "a",
+     "text": "kueleza maana ya shairi, ubeti na mshororo ili kuvibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b",
+     "letter": "b",
+     "text": "kusoma shairi kwa ufasaha kwa kuzingatia ujumbe",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.c",
+     "letter": "c",
+     "text": "kutambua beti na mishororo katika shairi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.d",
+     "letter": "d",
+     "text": "kutambua shairi kutokana na umbo lake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.e",
+     "letter": "e",
+     "text": "kufurahia kutumia lugha ya ushairi anapozungumzia ushairi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUANDI.T5_INSHA_YA_MAELEZO",
+   "number": "5.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha ya Maelezo (Theme 5: Ushauri-nasaha)",
+   "sequence": 531,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua vifungu vya maelezo vilivyoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kuandaa vidokezo vitakavyomwongoza kuandika insha yake,",
+    "kuandika insha ya maelezo kuhusu suala lengwa (ushauri-nasaha) akitumia vivumishi na vielezi vifaavyo, kutoa picha dhahiri kuhusu anachokielezea akizingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa lugha ya kiubunifu,",
+    "kushiriki na wenzake kujadili mada ya insha na muundo wa insha ya maelezo,",
+    "kuandika insha ya maelezo daftarini au kwenye kifaa cha kidijitali na kuwasomea au kuwasambazia wenzake na mwalimu ili kuitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Insha ya maelezo inahusu nini?",
+    "Unazingatia nini unapoandika insha ya maelezo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi wanaposhiriki katika mijadala na kazi za vikundi.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kusambaza insha mtandaoni.\nUbunifu: mwanafunzi anapoandika insha ya maelezo.",
+   "values": "Uadilifu: mwanafunzi anapotumia kifaa cha kidijitali kuandika na kusambaza kazi yake mtandaoni kwa uangalifu.\nUpendo: mwanafunzi anapojitolea kuwasomea wenzake insha aliyoiandika ili kuitathmini.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anapofanya shughuli ya kujadili mada na muundo wa insha ya maelezo pamoja na wenzake.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya uandishi wa insha ya maelezo katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la ushauri nasaha na masuala yanayofunzwa katika somo la Religious Education.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     61,
+     62
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUANDI.T5_INSHA_YA_MAELEZO.a",
+     "letter": "a",
+     "text": "kutambua vifungu vya maelezo katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T5_INSHA_YA_MAELEZO.b",
+     "letter": "b",
+     "text": "kuandika insha ya maelezo kwa kufuata kanuni zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T5_INSHA_YA_MAELEZO.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi mzuri wa insha ya maelezo ili kujenga ubunifu wake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T5_NGELI_YA_U_I",
+   "number": "5.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Ngeli ya U-I (Theme 5: Ushauri-nasaha)",
+   "sequence": 541,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusoma sentensi zilizoundwa kutokana na nomino za ngeli ya U-I katika umoja na wingi,",
+    "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya U-I kwenye sentensi alizosoma,",
+    "kushiriki katika mchezo wa kuchopoa kadi za sentensi zenye nomino za ngeli ya U-I kutoka kwenye kikapu au boksi na kisha kuzisoma,",
+    "kutambua nomino katika ngeli ya U-I kwenye kadi, mti maneno, tarakilishi au kapu maneno,",
+    "kujaza nafasi katika sentensi kwa kutumia viambishi vya umoja na wingi wa nomino katika ngeli ya U-I,",
+    "kuunda sentensi sahihi daftarini au kwenye kifaa cha kidijitali akitumia nomino za ngeli ya U-I katika umoja na wingi akizingatia upatanisho wa kisarufi,",
+    "kuwasomea au kuwasambazia wenzake na mwalimu sentensi alizozitunga ili kuzitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Nomino zinazorejelea mimea na vitu vya kimaumbile ni zipi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika vikundi kuandika nomino za ngeli ya U-I katika umoja na wingi.\nUbunifu: mwanafunzi anapotunga sentensi sahihi kwa kutumia nomino za ngeli ya U-I katika umoja na wingi.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapowaza kwa kina kuhusu nomino zilizo katika ngeli ya U-I.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza tarakilishi na vifaa vingine anavyotumia.\nUpendo: mwanafunzi anaposhirikiana na wenzake katika kuorodhesha nomino kuhusu suala lengwa.\nHeshima: mwanafunzi anapothamini maoni ya wenzake katika shughuli za kikundi.",
+   "pcis": "Usalama mtandaoni: mwanafunzi anapozingatia hatua za kiusalama kutambua nomino za ngeli ya U-I kwenye tarakilishi.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya ngeli za nomino katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la ushauri nasaha na masuala yanayofunzwa katika somo la Religious Education.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     63,
+     64
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T5_NGELI_YA_U_I.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya U-I",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T5_NGELI_YA_U_I.b",
+     "letter": "b",
+     "text": "kutambua nomino katika ngeli ya U-I ili kuzitofautisha na nomino katika ngeli nyingine",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T5_NGELI_YA_U_I.c",
+     "letter": "c",
+     "text": "kuunda sentensi akitumia nomino za ngeli ya U-I, katika umoja na wingi akizingatia upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T5_NGELI_YA_U_I.d",
+     "letter": "d",
+     "text": "kuchangamkia kutumia nomino za ngeli ya U-I katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSIKI.T6_SHAIRI",
+   "number": "6.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Shairi (Theme 6: Bendera ya taifa)",
+   "sequence": 611,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kukariri shairi kuhusu suala lengwa kwa kuzingatia matamshi na mahadhi mbalimbali,",
+    "kusikiliza shairi kuhusu suala lengwa likikaririwa au kuimbwa na mwalimu, mgeni mwalikwa (mghani) au kupitia vifaa vya kidijitali,",
+    "kushirikiana na wenzake kukariri au kuimba shairi kwa mahadhi mbalimbali,",
+    "kutambua msamiati uliotumika katika ushairi kuhusu maadili (k.v. uhuru, bendera, rangi za bendera, kupandisha na kushukisha bendera) na kuueleza akiwa peke yake au kwa kushirikiana na wenzake,",
+    "kushirikiana na wenzake kujadili ujumbe katika shairi,",
+    "kujibu maswali yanayotokana na shairi alilosikiliza, aliloimba au kukariri."
+   ],
+   "key_inquiry_questions": [
+    "Mashairi yana umuhimu gani katika jamii?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika shughuli za vikundi kukariri na kuimba shairi.\nUjuzi wa kidijitali: mwanafunzi anaposikiliza shairi lililorekodiwa likikaririwa kupitia vyombo vya kidijitali.\nKujiamini: mwanafunzi anapojenga umilisi huu anapokariri shairi.",
+   "values": "Umoja: mwanafunzi anaposhirikiana na wenzake katika kujadili ujumbe na matukio katika shairi na kuheshimu mchango wao.\nUwajibikaji: mwanafunzi anaposhiriki majukumu tofautitofauti katika vikundi na kufuata mafunzo katika shairi.",
+   "pcis": "Mshikamano wa kitaifa: mwanafunzi anaposhirikiana na wenzake kukariri shairi kuhusu bendera ya taifa kwa mahadhi na kutambua msamiati uliotumika.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya ushairi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la bendera ya taifa na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     65,
+     66
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSIKI.T6_SHAIRI.a",
+     "letter": "a",
+     "text": "kukariri au kuimba shairi kwa kuzingatia matamshi na mahadhi mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T6_SHAIRI.b",
+     "letter": "b",
+     "text": "kueleza maana ya msamiati uliotumiwa katika shairi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T6_SHAIRI.c",
+     "letter": "c",
+     "text": "kutumia msamiati uliotumiwa katika shairi ili kuboresha mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T6_SHAIRI.d",
+     "letter": "d",
+     "text": "kueleza ujumbe wa shairi ili kudhihirisha ufahamu wake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T6_SHAIRI.e",
+     "letter": "e",
+     "text": "kuchangamkia ushairi kama njia ya kujieleza kwa ufasaha",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA",
+   "number": "6.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Kina (Theme 6: Bendera ya taifa)",
+   "sequence": 621,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusoma makala ya aina mbalimbali (k.m hadithi fupi, michezo mifupi, mashairi mafupi) akizingatia vipengele kama vile tahajia, sarufi, wahusika na ujumbe kutoka kwa kitabu, gazeti au blogi,",
+    "kujadiliana na wenzake kuhusu makala aliyoyasoma na umuhimu wake,",
+    "kutumia kamusi kupata maana za msamiati uliotumika katika makala."
+   ],
+   "key_inquiry_questions": [
+    "Kusoma hadithi kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapojadiliana na wenzake katika vikundi.\nUjuzi wa kidijitali: mwanafunzi anaposoma makala katika blogi.\nHamu ya ujifunzaji: mwanafunzi anapotumia kamusi kupata maana za msamiati mpya uliotumika katika Makala.",
+   "values": "Heshima: mwanafunzi anapojadiliana na wenzake kuhusu makala aliyoyasoma na umuhimu wake.\nUzalendo: mwanafunzi anaposoma makala kuhusu jamii mbalimbali na kuheshimu mafunzo yanayojitokeza.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake katika kujadili kuhusu makala aliyoyasoma na umuhimu wake.\nUsalama mtandaoni: mwanafunzi anapozingatia hatua za kiusalama anaposoma makala ya blogi mtandaoni.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa kina katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la uraia mwema na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     67,
+     68
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.a",
+     "letter": "a",
+     "text": "kusoma makala kwa kuzingatia vipengele mbalimbali vinavyoyajenga",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.b",
+     "letter": "b",
+     "text": "kusoma na kutambua umuhimu wa ujumbe wa makala husika",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.c",
+     "letter": "c",
+     "text": "kufurahia kusoma makala mbalimbali ili kukuza ufahamu",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU",
+   "number": "6.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha ya Wasifu (Theme 6: Bendera ya taifa)",
+   "sequence": 631,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua insha ya wasifu kwa kurejelea vielelezo vya insha zilizoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kuandaa vidokezo vitakavyomwongoza kuandika insha yake,",
+    "kuandika insha inayoeleza sifa za mtu kama vile mzazi au mlezi, rafiki, mwalimu au kiongozi yeyote (kwa kutumia vivumishi na vielezi ili kujenga picha dhahiri ya anachokiandikia) daftarini kwa kuzingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa lugha ya kiubunifu,",
+    "kushirikiana na wenzake kujadili mada ya insha na muundo wa insha ya wasifu,",
+    "kuandika insha ya wasifu mtandaoni na kuisambaza kwa wenzake na mwalimu ili waisome na kuitathmini,",
+    "kuwasomea wenzake insha aliyoandika ili waitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Insha ya wasifu inahusu nini?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: wanafunzi wanaposhiriki katika mijadala na kazi za vikundi.\nUbunifu: mwanafunzi anapoandika insha ya wasifu.\nHamu ya ujifunzaji: mwanafunzi anapotafakari swali dadisi na anapoimarisha ujuzi wake wa kutumia",
+   "values": "tarakilishi.\nHeshima: mwanfunzi anaposhirikiana na wenzake katika kufanikisha shughuli za kikundi kwa kuthamini maoni yao.\nUpendo: mwanafunzi anapojitolea kuisambaza insha yake mtandaoni ili mwalimu au wenzake waitathmini.\nUwajibikaji: mwanafunzi anapotumia kifaa cha kidijitali kuandika insha mtandaoni.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anapoandika insha yake mtandaoni na kujitolea kuisambaza kwa wenzake na mwalimu ili waisome na kuitathmini.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya uandishi wa insha katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la bendera na uraia na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     69,
+     70
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.a",
+     "letter": "a",
+     "text": "kutambua insha ya wasifu kwa kuzingatia muundo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.b",
+     "letter": "b",
+     "text": "kuandika insha ya wasifu kwa kufuata kanuni zifaazo akizingatia vivumishi na vielezi kujenga picha dhahiri ya anachokielezea",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi mzuri wa insha ya wasifu ili kukuza ubunifu",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA",
+   "number": "6.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Ngeli ya LI- YA (Theme 6: Bendera ya taifa)",
+   "sequence": 641,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusoma sentensi zilizoundwa kutokana na nomino za ngeli ya LI-YA katika umoja na wingi,",
+    "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya LI-YA kwenye sentensi alizosoma,",
+    "kushiriki katika mchezo wa kuchopoa kadi za sentensi zenye nomino za ngeli ya LI-YA kutoka kwenye kikapu au boksi na kisha kuzisoma,",
+    "kutambua nomino katika ngeli ya LI-YA kwenye kadi, mti maneno, tarakilishi au kapu maneno,",
+    "kujaza nafasi katika sentensi kwa kutumia viambishi vya umoja na wingi wa nomino katika ngeli ya LI-YA,",
+    "kuunda sentensi sahihi daftarini au kwenye kifaa cha kidijitali akitumia nomino za ngeli ya LI-YA katika umoja na wingi akizingatia upatanisho wa kisarufi,",
+    "kuwasomea au kuwasambazia wenzake na mwalimu sentensi alizozitunga ili kuzitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Unazingatia nini ili kuweza kutambua na kutumia nomino katika ngeli ya LI-YA?"
+   ],
+   "core_competences": "Ubunifu: mwanafunzi anapotunga mafungu ya maneno.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapowaza kwa kina kuhusu atakachoandika.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kutambua nomino na katika kusikiliza mafungu kwenye tepurekoda.",
+   "values": "Upendo: mwanafunzi anapothamini maoni ya wenzake katika shughuli za vikundi.\nUwajibikaji: mwanafunzi anapotunza kipakatalishi anachotumia.\nUzalendo: mwanafunzi anapofanya kazi na wengine kwenye vikundi bila ubaguzi wa kijamii.\nHeshima: mwanafunzi anapotangamana na wenzake kutoka jamii mbalimbali ili kutekeleza kazi ya",
+   "pcis": "kikundi.\nUmoja na wenzake: mwanafunzi anaposhirikiana na wenzake kutambua na kuandika nomino za ngeli ya LI-YA.\nUsalama mtandaoni: mwanafunzi anapozingatia hatua za kiusalama anapotumia kifaa cha kidijitali kuandika insha ya wasifu.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya ngeli za nomino katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la uraia na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     71,
+     72
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya LI-YA",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.b",
+     "letter": "b",
+     "text": "kutambua nomino katika ngeli ya LI -YA ili kuzitofautisha na nomino katika ngeli nyingine",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.c",
+     "letter": "c",
+     "text": "kuunda sentensi akitumia nomino za ngeli ya LI-YA, katika umoja na wingi akizingatia upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.d",
+     "letter": "d",
+     "text": "kuchangamkia kutumia nomino za ngeli ya LI-YA katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSIKI.T7_NAHAU",
+   "number": "7.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Nahau (Theme 7: Matunda na mimea)",
+   "sequence": 711,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua nahau za maadili na uraia (k.v fanya haki, omba kibali, omba ruhusa, piga hodi na taka idhini) katika chati, michoro, picha, kapu maneno, mti maneno, chati na katika vyombo vya kidijitali,",
+    "kushiriki katika kujadili na wenzake maana za nahau za maadili na uraia,",
+    "kutumia nahau za maadili na uraia kutunga sentensi akiwa pekee yake au kwa kushirikiana na wenzake,",
+    "kutazama vibonzo vikijibizana kuhusu nahau na maana zake,",
+    "kushirikiana na wenzake kuteua nahau za maadili na uraia kutoka kwenye kundi la nahau."
+   ],
+   "key_inquiry_questions": [
+    "Je, nahau huchangia vipi katika kukuza maadili na uraia?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapojadili maana za nahau za maadili na uraia akiwa na wenzake.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kutambua nahau za maadili na uraia.\nHamu ya ujifunzaji: mwanafunzi anapotafuta maana za nahau na kuzitumia kwa ufasaha katika mawasiliano.\nUraia: mwanafunzi anaposhiriki kujadili masuala ya uraia na yanayolenga suala lengwa.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali anavyotumia katika kutambua nahau za maadili na za uraia.\nHeshima: mwanafunzi anaposhirikiana na wenzake kufanikisha kazi ya kikundi na kuheshimu maoni yao.",
+   "pcis": "Umoja wa kijamii: mwanafunzi anaposhiriki katika majadiliano kwa vikundi wanapotunga sentensi kwa kutumia nahau za maadili na uraia.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya nahau katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la matunda na mimea na masuala yanayofunzwa katika somo la Agriculture",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     73,
+     74
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSIKI.T7_NAHAU.a",
+     "letter": "a",
+     "text": "kutambua nahau za maadili na uraia katika matini mbalimbali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T7_NAHAU.b",
+     "letter": "b",
+     "text": "kutambua maana za nahau mbalimbali za maadili na uraia katika mazungumzo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T7_NAHAU.c",
+     "letter": "c",
+     "text": "kutumia nahau za maadili na uraia katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T7_NAHAU.d",
+     "letter": "d",
+     "text": "kuthamini matumizi ya nahau za maadili na uraia katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSOMA.T7_KUSOMA_KWA_MAPANA",
+   "number": "7.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Mapana (Theme 7: Matunda na mimea)",
+   "sequence": 721,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Matini"
+   ],
+   "learning_experiences": [
+    "kutambua matini (k.v vitabu, majarida, magazeti) yanayomvutia maktabani na mtandaoni,",
+    "kusoma matini aliyochagua ili kufaidi ujumbe na lugha iliyotumiwa,",
+    "kuwasimulia wenzake kuhusu matini aliyosoma ili kupashana ujumbe na kuchocheana kusoma zaidi kwa ajili ya kujifurahisha,",
+    "kujadiliana na wenzake matini ambayo wamesoma."
+   ],
+   "key_inquiry_questions": [
+    "Kusoma matini mbalimbali kunachangia vipi ukuzaji wa lugha?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposimulia wenzake kuhusu matini aliyoisoma ili kupasha ujumbe na kuchocheana kusoma zaidi kwa ajili ya kujifurahisha\nUjuzi wa kidijitali: mwanafunzi anapotumia mtandao kupata matini ya kusoma.\nHamu ya ujifunzaji: mwanafunzi anapojichagulia matini na kuyasoma.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anaposimulia wenzake kuhusu matini aliyosoma na kupasha ujumbe uliotumiwa.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza tarakilishi anayoitumia katika kutambua matini.\nHeshima: mwanafunzi anapojadiliana na wenzake kuhusu alichokisoma na kusikiliza maoni ya kila mmoja wao.",
+   "pcis": "Elimu ya afya ya kujikinga: mwanafunzi anapotambua na kusoma matini yanayomvutia maktabani akizingatia suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa mapana katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la matunda na mimea na masuala yanayofunzwa katika somo la Agriculture",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     75,
+     76
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSOMA.T7_KUSOMA_KWA_MAPANA.a",
+     "letter": "a",
+     "text": "kutambua matini ya aina mbalimbali ya kusoma na kuchagua yanayomvutia",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T7_KUSOMA_KWA_MAPANA.b",
+     "letter": "b",
+     "text": "kusoma matini aliyochagua ili kufaidi ujumbe na lugha iliyotumiwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T7_KUSOMA_KWA_MAPANA.c",
+     "letter": "c",
+     "text": "kufurahia usomaji wa aina mbalimbali za matini",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUANDI.T7_INSHA_YA_MAELEZO",
+   "number": "7.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha ya Maelezo (Theme 7: Matunda na mimea)",
+   "sequence": 731,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua vifungu vya maelezo vilivyoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kushiriki na wenzake kujadili mada na muundo wa insha ya maelezo,",
+    "kuandaa vidokezo vitakavyomwongoza kuandika insha yake,",
+    "kuandika insha ya maelezo akizingatia suala lengwa (k.v upanzi wa miti na mimea, utunzaji wa mimea, shamba la matunda n.k) hasa akizingatia vivumishi na vielezi vifaavyo kutoa picha dhahiri kuhusu anachokielezea,",
+    "kuandika insha ya maelezo akizingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa lugha ya kiubunifu inayojumuisha methali na nahau alizojifunza awali,",
+    "kuandika insha ya maelezo mtandaoni na kuisambaza kwa wenzake na mwalimu ili waisome na kuitathmini,",
+    "kuwasomea wenzake insha aliyoandika ili waisikilize na kuitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni vitu gani vinavyoweza kuandikiwa insha ya maelezo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mjadala wa kujadili mada na muundo wa insha ya maelezo.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kuandika insha mtandaoni na kurejelea kielelezo cha insha ya maelezo.\nUbunifu: mwanafunzi anapoandika insha ya maelezo akizingatia suala lengwa.\nHamu ya ujifunzaji: mwanafunzi anapotafakari kuhusu swali dadisi na anapoimarisha ujuzi wake wa kutumia tarakilishi.",
+   "values": "Heshima: mwanafunzi anaposhirikiana na wenzake katika kujadili mada na muundo wa insha ya maelezo.\nUwajibikaji: mwanafunzi anapotumia kifaa cha kidijitali kuandika insha na kuwasambazia wenzake waitathmini.",
+   "pcis": "Elimu ya mazingira na tabia nchi: mwanafunzi anapoandika insha ya maelezo akizingatia suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika insha ya maelezo katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la matunda na mimea na masuala yanayofunzwa katika somo la Agriculture",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     77,
+     78
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUANDI.T7_INSHA_YA_MAELEZO.a",
+     "letter": "a",
+     "text": "kutambua insha ya maelezo katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T7_INSHA_YA_MAELEZO.b",
+     "letter": "b",
+     "text": "kuandika insha ya maelezo kwa kufuata kanuni zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T7_INSHA_YA_MAELEZO.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi mzuri wa insha ya maelezo ili kukuza ubunifu",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI",
+   "number": "7.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Ngeli ya KI-VI (Theme 7: Matunda na mimea)",
+   "sequence": 741,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusoma sentensi zilizoundwa kutokana na nomino za ngeli ya KI-VI katika umoja na wingi,",
+    "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya KI-VI kwenye sentensi alizosoma,",
+    "kushiriki katika mchezo wa kuchopoa kadi za sentensi zenye nomino za ngeli ya KI-VI kutoka kwenye kikapu au boksi na kisha kuzisoma,",
+    "kutambua nomino katika ngeli ya KI-VI (k.m kitabu, kikombe, kisu, chakula, choo) kwenye kadi, mti maneno, tarakilishi au kapu maneno,",
+    "kujaza nafasi katika sentensi kwa kutumia viambishi vya umoja na wingi wa nomino katika ngeli ya KI-VI,",
+    "kuunda sentensi sahihi daftarini au kwenye kifaa cha kidijitali akitumia nomino za ngeli ya KI-VI katika umoja na wingi akizingatia upatanisho wa kisarufi,",
+    "kuwasomea au kuwasambazia wenzake na mwalimu sentensi alizozitunga ili kuzitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Unazingatia nini ili kuweza kutambua na kutumia nomino katika ngeli ya KI-VI?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapotaja nomino za ngeli ya KI-VI katika umoja na wingi akishirikiana na wenzake katika vikundi.\nUbunifu: mwanafunzi anaposhiriki katika kutunga sentensi akitumia nomino za ngeli ya KI-VI katika umoja na wingi.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kusoma sentensi zilizoundwa kutokana na nomino za ngeli ya KI-VI katika umoja na wingi.",
+   "values": "Uwajibikaji: mwanafunzi anapotumia na kutunza tarakilishi anaposoma sentensi zilizotungwa kutokana na nomino za KI-VI.\nHeshima: mwanafunzi anapotaja nomino za ngeli ya KI-VI katika umoja na wingi akishirikiana na wenzake kwa vikundi.",
+   "pcis": "Elimu ya mazingira na tabia nchi: mwanafunzi anapotunga sentensi kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya ngeli za nomino katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la matunda na mimea na masuala yanayofunzwa katika somo la Agriculture",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     79,
+     80
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya KI-VI",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.b",
+     "letter": "b",
+     "text": "kutambua nomino katika ngeli ya KI-VI ili kuzitofautisha na nomino katika ngeli nyingine",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.c",
+     "letter": "c",
+     "text": "kutumia nomino za ngeli ya KI-VI katika umoja na wingi akizingatia upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.d",
+     "letter": "d",
+     "text": "kuchangamkia kutumia nomino za ngeli ya KI-VI katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI",
+   "number": "7.4.2",
+   "strand": "Sarufi",
+   "sub_strand": "Ngeli ya LI-LI (Theme 7: Matunda na mimea)",
+   "sequence": 742,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusoma sentensi zilizoundwa kutokana na nomino za ngeli ya LI-LI katika umoja na wingi,",
+    "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya LI-LI kwenye sentensi alizosoma,",
+    "kushiriki katika mchezo wa kuchopoa kadi za sentensi zenye nomino za ngeli ya LI-LI kutoka kwenye kikapu au boksi na kisha kuzisoma,",
+    "kutambua nomino katika ngeli ya LI-LI (k.m jua- jua, giza-giza) kwenye kadi maneno, mti maneno, tarakilishi au kapu maneno,",
+    "kuandika nomino za ngeli ya LI-LI katika umoja na wingi,",
+    "kujaza nafasi katika sentensi kwa kutumia viambishi vya umoja na wingi wa nomino katika ngeli ya LI-LI,",
+    "kuunda sentensi sahihi daftarini au kwenye kifaa cha kidijitali akitumia nomino za ngeli ya LI-LI katika umoja na wingi akizingatia upatanisho wa kisarufi,",
+    "kuwasomea au kuwasambazia wenzake na mwalimu sentensi alizozitunga ili kuzitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Unazingatia nini ili kuweza kutambua na kutumia nomino katika ngeli ya LI-LI?"
+   ],
+   "core_competences": "Ubunifu: mwanafunzi anapotunga mafungu ya maneno kutokana na ngeli ya LI-LI katika umoja na wingi.\nKufikiri kwa kina: mwanafunzi anapowaza kwa kina kuhusu atakachoandika.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kutambua nomino katika kusikiliza mafungu ya maneno yakisomwa.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza kipakatalishi anachokitumia.\nUzalendo: mwanafunzi anapofanya kazi na wengine kwenye vikundi.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anapoandika nomino za ngeli ya LI-LI katika umoja na wingi na wenzake bila ubaguzi.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya ngeli za nomino katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la matunda na mimea na masuala yanayofunzwa katika somo la Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     81,
+     82
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya LI-LI",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.b",
+     "letter": "b",
+     "text": "kutambua nomino katika ngeli ya LI-LI ili kuzitofautisha na nomino katika ngeli nyingine",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.c",
+     "letter": "c",
+     "text": "kuunda sentensi akitumia nomino za ngeli ya LI-LI, katika umoja na wingi akizingatia upatanisho wa kisarufi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.d",
+     "letter": "d",
+     "text": "kuchangamkia kutumia nomino za ngeli ya LI-LI katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSIKI.T8_VISAWE",
+   "number": "8.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Visawe (Theme 8: Wanyama wa porini)",
+   "sequence": 811,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kueleza maana ya neno kisawe akiwa na wenzake,",
+    "kutambua maneno mawili ya kiwango chake yenye maana sawa (k.v tembo, ndovu; kinyonga, lumbwi; adui, hasimu; siri, faragha; barua, waraka; ami, amu; televisheni, runinga) kwa kurejelea kapu maneno, kadi maneno na mti maneno,",
+    "kuambatanisha visawe kutoka kwenye kapu maneno, mti maneno, orodha ya maneno, chati, vyombo vya kidijitali au kadi maneno,",
+    "kutumia kisawe kimoja kuchukua nafasi ya kingine katika sentensi,",
+    "kutumia kisawe kimoja kuchukua nafasi ya kingine katika kifungu kifupi."
+   ],
+   "key_inquiry_questions": [
+    "Maneno yenye maana sawa yanasaidia vipi katika mawasiliano?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wengine kueleza maana ya neno kisawe kwa kujadiliana.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapofikiria kuhusu visawe mwafaka na uhusiano wa visawe na vifaa halisi\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kama nyenzo za kufaulisha mada.",
+   "values": "Umoja: mwanafunzi anaposhiriki na wenzake kujadili visawe mbalimbali katika vikundi.\nUwajibikaji: mwanafunzi anapotekeleza majukumu yao katika vikundi vilevile kutunza vifaa anavyotumia katika somo.",
+   "pcis": "Umoja wa kijamii: mwanafunzi anaposhirikiana na wenzake kujadili visawe mbalimbali darasani.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya visawe katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la wanyama wa porini na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     83,
+     84
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSIKI.T8_VISAWE.a",
+     "letter": "a",
+     "text": "kueleza maana ya kisawe ili kukibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T8_VISAWE.b",
+     "letter": "b",
+     "text": "kutambua maneno mawili yenye maana sawa katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T8_VISAWE.c",
+     "letter": "c",
+     "text": "kutumia visawe ifaavyo katika mawasiliano",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T8_VISAWE.d",
+     "letter": "d",
+     "text": "kuthamini matumizi ya visawe katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU",
+   "number": "8.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Ufahamu (Theme 8: Wanyama wa porini)",
+   "sequence": 821,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Mchezo wa kuigiza"
+   ],
+   "learning_experiences": [
+    "kushiriki katika majadiliano kuhusu maana za mchezo wa kuigiza, mhusika na maelekezo akiwa na wenzake,",
+    "kutambua mchezo wa kuigiza, wahusika na maelekezo katika matini mbalimbali kama vile vitabu, chati na vilevile kwa kutumia tarakilishi,",
+    "kutazama mchezo mfupi wa kuigiza ukiigizwa darasani au kwenye vifaa vya kidijitali kuhusu suala lengwa (k.v usalama wa wanyama wa porini, kuzingatia mbio ya uendeshaji wa pikipiki, baiskeli na vyombo vingine vya barabara),",
+    "kusoma mchezo wa kuigiza akizingatia maelekezo na ujumbe,",
+    "kushiriki mjadala kuhusu ujumbe unaojitokeza kwenye mchezo wa kuigiza,",
+    "kusoma mchezo wa kuigiza kwenye mtandao,",
+    "kujibu maswali yanayotokana na mchezo wa kuigiza aliosoma."
+   ],
+   "key_inquiry_questions": [
+    "Je, wahusika huchangia nini katika mchezo wa kuigiza?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika majadiliano kuhusu maana za mchezo wa kuigiza na wenzake.\nUjuzi wa kidijitali: mwanafunzi anapotazama mchezo mfupi wa kuigiza kwenye kifaa cha kidijitali.\nUwazaji kina: mwanafunzi anapong’amua ujumbe uliomo kwenye mchezo.\nKujiamini: mwanafunzi anaposhiriki katika kusoma na kushiriki mjadala kuhusu ujumbe unaojitokeza kwenye mchezo wa kuigiza.",
+   "values": "Heshima: mwanafunzi anaposhiriki katika majadiliano kuhusu maana ya mchezo wa kuigiza akiwa na wenzake na kuthamini mchango wao.",
+   "pcis": "Elimu ya mazingira na tabia nchi: mwanafunzi anapotunga sentensi kuhusu utunzaji wa wanyama wa porini na elimu ya mazingira.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya michezo ya kuigiza katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la wanyama wa porini na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     85,
+     86
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.a",
+     "letter": "a",
+     "text": "kueleza maana ya mchezo wa kuigiza, mhusika na maelekezo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.b",
+     "letter": "b",
+     "text": "kutambua mchezo wa kuigiza katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.c",
+     "letter": "c",
+     "text": "kutambua wahusika na maelekezo katika mchezo mfupi wa kuigiza",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.d",
+     "letter": "d",
+     "text": "kusoma mchezo mfupi wa kuigiza kwa ufasaha kwa kuzingatia ujumbe",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.e",
+     "letter": "e",
+     "text": "kufurahia kusoma michezo na kuiigiza",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUANDI.T8_INSHA_YA_MASIMULIZI",
+   "number": "8.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha ya Masimulizi (Theme 8: Wanyama wa porini)",
+   "sequence": 831,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua insha ya masimulizi kwa kurejelea vielelezo vya insha zilizoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kuandaa vidokezo vitakavyomwongoza kuandika insha yake,",
+    "kuandika insha inayosimulia kisa cha tukio linalohusiana na wanyama wa porini kwa kuzingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa lugha ya kiubunifu,",
+    "kushiriki na wenzake kujadili mada ya insha na muundo wa insha ya masimulizi,",
+    "kuandika insha ya masimulizi mtandaoni na kuisambaza kwa wenzake na mwalimu ili waisome na kuitathmini,",
+    "kuwasomea wenzake insha aliyoandika ili waisikilize na kuitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Insha ya masimulizi inahusu nini?",
+    "Je, unazingatia nini ili kuandika insha nzuri ya masimulizi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapojadili mada ya insha na muundo wa insha ya masimulizi na wenzake.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kuandika insha mtandaoni na kurejelea kielelezo cha insha ya masimulizi.\nUbunifu: mwanafunzi anapobuni na kuandika insha ya masimulizi.",
+   "values": "Upendo: mwanafunzi anapojitolea kuisambaza insha aliyoiandika mtandaoni kwa wenzake na mwalimu ili waisome na waitathmini.\nUwajibikaji: mwanafunzi anapoandika insha inayosimulia kisa cha tukio linalohusiana na wanyama porini kwa kuzingatia mpangilio ufaao.",
+   "pcis": "Elimu ya utunzaji wa wanyama: mwanafunzi anapoandika insha inayosimulia kisa cha tukio linalohusiana na wanyama wa porini.\nElimu ya fedha: mwanafunzi anapotunga sentensi akizingatia umuhimu wa wanyama pori.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya uandishi wa insha za masimulizi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la wanyama wa porini na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     87,
+     88
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUANDI.T8_INSHA_YA_MASIMULIZI.a",
+     "letter": "a",
+     "text": "kutambua insha ya masimulizi kwa kuzingatia muundo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T8_INSHA_YA_MASIMULIZI.b",
+     "letter": "b",
+     "text": "kuandika insha ya masimulizi kwa kufuata kanuni zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T8_INSHA_YA_MASIMULIZI.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi mzuri wa insha ya masimulizi ili kujenga ubunifu wake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN",
+   "number": "8.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Mnyambuliko wa Vitenzi (Theme 8: Wanyama wa porini)",
+   "sequence": 841,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Kauli ya kutenda,",
+    "Kauli ya kutendea",
+    "Kauli ya kutendwa"
+   ],
+   "learning_experiences": [
+    "kushirikiana na wenzake kueleza maana za mnyambuliko wa vitenzi, kauli ya kutenda, kauli ya kutendea na kauli ya kutendwa,",
+    "kutambua vitenzi katika kauli za kutenda, kutendea na kutendwa katika chati, jedwali, kapu maneno, mti maneno, ubao na vyombo vya kidijitali,",
+    "kunyambua vitenzi katika kauli lengwa akiwa na wenzake,",
+    "kutumia vitenzi katika kauli lengwa kwenye sentensi,",
+    "kushirikiana na wenzake kujaza nafasi katika jedwali la mnyambuliko wa vitenzi kwenye daftari au kwa kutumia tarakilishi,",
+    "kuandika sentensi upya kwa kutumia vitenzi katika kauli mbalimbali akizingatia suala lengwa na pia kuhusu kuendesha vyombo vya usafiri kama baiskeli."
+   ],
+   "key_inquiry_questions": [
+    "Je, vitenzi vinaweza kubadilika vipi mwishoni ili kuleta maana mbalimbali?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kueleza maana ya mnyambuliko wa vitenzi.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anaponyambua vitenzi katika kauli mbalimbali.\nKujiamini: mwanafunzi anapotoa majibu na kuandika sentensi upya kwa kutumia vitenzi katika kauli mbalimbali.",
+   "values": "Ushirikiano: unajitokeza mwanafunzi anaposhirikiana na wenzake kujaza nafasi katika jedwali la mnyambuliko wa vitenzi kwenye daftari,\nUmoja: unajidhihirisha mwanafunzi anaponyambua vitenzi katika kauli lengwa akiwa na wenzake.",
+   "pcis": "Umoja wa kijamii: mwanafunzi anaponyambua vitenzi katika kauli lengwa akiwa na wenzake.\nElimu ya utunzaji wanyama: mwanafunzi anyambue vitenzi vya kauli lengwa kwa sentensi akizingatia suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vitenzi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la wanyama wa porini na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     89,
+     90
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.a",
+     "letter": "a",
+     "text": "kueleza maana ya mnyambuliko wa vitenzi ili kuubainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.b",
+     "letter": "b",
+     "text": "kueleza maana ya kauli za kutenda, kutendea na kutendwa ili kuzitofautisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.c",
+     "letter": "c",
+     "text": "kutambua vitenzi katika kauli za kutenda, kutendea na kutendwa katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.d",
+     "letter": "d",
+     "text": "kutumia vitenzi katika kauli za kutenda, kutendea na kutendwa ipasavyo anapowasiliana",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.e",
+     "letter": "e",
+     "text": "kuchangamkia matumizi ya vitenzi katika kauli za kutenda, kutendea na kutendwa kwenye mawasiliano",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT",
+   "number": "9.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Mazungumzo ya Kimuktadha (Theme 9: Afya bora)",
+   "sequence": 911,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Miktadha isiyo rasmi"
+   ],
+   "learning_experiences": [
+    "kushirikiana na wenzake kutaja miktadha ya mazungumzo yasiyo rasmi (k.v wanapocheza, wanapozungumza na marafiki, wakiwa nyumbani, n.k),",
+    "kutambua mazungumzo yasiyo rasmi kwa kutazama maigizo ya mazungumzo lengwa kwenye video na tarakilishi,",
+    "kutambua umuhimu wa nidhamu ya lugha katika mazingira yasiyo rasmi (k.m kutumia lugha ya upole, heshima na kumpa mwenzake nafasi ya kuzungumza na kusikiliza kwa makini anaposhiriki katika mazungumzo),",
+    "kuigiza mazungumzo katika miktadha isiyo rasmi (k.m akicheza na wenzake, akizungumza na wazazi, ndugu, nyanya au babu nyumbani) akiwa na wenzake."
+   ],
+   "key_inquiry_questions": [
+    "Ni lini tunatumia lugha isiyo rasmi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kutaja miktadha ya mazungumzo yasiyo rasmi.\nHamu ya ujifunzaji: mwanafunzi anaposikiliza mazungumzo yaliyorekodiwa kwa kutumia kifaa cha kidijitali ili kukuza msamiati wa lugha.\nUbunifu: mwanafunzi anaposhirikiana na wenzake kuigiza mazungumzo katika miktadha mbalimbali.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kusikiliza na kutazama mazungumzo.",
+   "values": "Haki za kijamii: mwanafunzi anaposhirikiana na wenzake wa jamii mbalimbali na kuheshimu mchango wao katika mazungumzo yasiyo rasmi.",
+   "pcis": "Afya ya mtu binafsi: mwanafunzi anaposhirikiana na wenzake kuigiza mazungumzo yanayolenga masuala makuu ya lishe bora na mazingira.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya mazungumzo katika miktadha mbalimbali katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la afya bora na masuala yanayofunzwa katika somo la Agriculture.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     91,
+     92
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.a",
+     "letter": "a",
+     "text": "kutambua miktadha ya mawasiliano isiyo rasmi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.b",
+     "letter": "b",
+     "text": "kutumia lugha ipasavyo katika miktadha isiyo rasmi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.c",
+     "letter": "c",
+     "text": "kuchangamkia matumizi ya lugha katika miktadha isiyo rasmi",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSOMA.T9_KUSOMA_KWA_MAPANA",
+   "number": "9.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Mapana (Theme 9: Afya bora)",
+   "sequence": 921,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Matini ya kujichagulia"
+   ],
+   "learning_experiences": [
+    "kutambua matini (k.v vitabu, majarida, magazeti) zinazomvutia maktabani au mtandaoni,",
+    "kusoma matini aliyochagua (akizingatia suala lengwa) ili kufaidi ujumbe na lugha iliyotumiwa,",
+    "kuwasimulia wenzake kuhusu matini aliyosoma ili kupashana ujumbe na kuchocheana kusoma zaidi kwa ajili ya kujifurahisha,",
+    "kujadiliana na wenzake matini ambayo wamesoma."
+   ],
+   "key_inquiry_questions": [
+    "Kusoma matini mbalimbali kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposimulia na kujadiliana na wenzake matini aliyoisoma ili kupashana ujumbe na kuchocheana kusoma zaidi kwa ajili ya kujifurahisha.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kupata matini ya kusoma.\nHamu ya ujifunzaji: mwanafunzi anapojichagulia matini na kusoma kwa mapana.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza matini anayosoma pamoja na nyenzo zingine.\nUmoja: mwanafunzi anaposhirikiana na wenzake kuhusu matini aliyosoma ili kujifurahisha na kupanua mawazo yake.",
+   "pcis": "Afya ya mtu binafsi: mwanafunzi anaposoma matini yanayojumuisha mada ya afya bora ili kufaidi ujumbe uliotumiwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa mapana katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la afya bora na masuala yanayofunzwa katika somo la Agriculture",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     93,
+     94
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSOMA.T9_KUSOMA_KWA_MAPANA.a",
+     "letter": "a",
+     "text": "kutambua matini za kusoma za aina mbalimbali na kuchagua zinazomvutia",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T9_KUSOMA_KWA_MAPANA.b",
+     "letter": "b",
+     "text": "kusoma matini aliyochagua ili kufaidi ujumbe na lugha iliyotumiwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T9_KUSOMA_KWA_MAPANA.c",
+     "letter": "c",
+     "text": "kufurahia usomaji wa aina mbalimbali za matini ili kupanua mawazo yake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUANDI.T9_INSHA_YA_MAELEZO",
+   "number": "9.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha ya Maelezo (Theme 9: Afya bora)",
+   "sequence": 931,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua vifungu vya maelezo vilivyoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kuandaa vidokezo vitakavyomwongoza kuandika insha yake,",
+    "kuandika insha ya maelezo akitumia lugha ifaayo kutoa picha dhahiri kuhusu anachokieleza,",
+    "kuandika insha ya maelezo akizingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na lugha ya kiubunifu inayojumuisha methali na nahau alizojifunza awali,",
+    "kushiriki na wenzake kujadili mada ya insha (ihusiane na mada ya afya bora) na muundo wa insha ya maelezo,",
+    "kuandika insha ya maelezo kwa kutumia kifaa cha kidijitali na kuisambaza mtandaoni kwa wenzake na mwalimu ili waisome na kuitathmini,",
+    "kuwasomea wenzake insha aliyoandika ili waisikilize na kuitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni vitu gani vinavyoweza kutungiwa insha ya maelezo?",
+    "Ni mambo gani unayostahili kuzingatia unapoandika insha ya maelezo?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapowasambazia wenzake insha ya maelezo aliyoiandika ili waisome na kuitathmini.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kuandika insha mtandaoni na kurejelea kielelezo cha insha ya maelezo.\nUbunifu: mwanafunzi anapoandika insha ya maelezo kwa kutumia kifaa cha kidijitali na kuisambaza kwa wenzake na mwalimu ili waisome na kuitathmini.\nHamu ya ujifunzaji: mwanafunzi anapoyatafakari maswali dadisi na anapoimarisha ujuzi wake wa kutumia tarakilishi.",
+   "values": "Heshima: mwanafunzi anapojadiliana na wenzake kuhusu mada ya insha inayohusu afya bora na muundo wake katika kikundi.\nUwajibikaji: mwanafunzi anapotumia kifaa cha kidijitali kufanikisha kazi yake na kusambazia wenzake mtandaoni.",
+   "pcis": "Umoja wa kijamii: mwanafunzi anaposhirikiana na wenzake kutoka maeneo mbalimbali katika shughuli za kikundi.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kuandika insha ya maelezo katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la afya bora na masuala yanayofunzwa katika somo la Agriculture",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     95,
+     96
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUANDI.T9_INSHA_YA_MAELEZO.a",
+     "letter": "a",
+     "text": "kutambua insha ya maelezo katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T9_INSHA_YA_MAELEZO.b",
+     "letter": "b",
+     "text": "kuandika insha ya maelezo kwa kufuata kanuni zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T9_INSHA_YA_MAELEZO.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi wa insha ya maelezo ili kujenga ubunifu wake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO",
+   "number": "9.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Vinyume vya Nomino (Theme 9: Afya bora)",
+   "sequence": 941,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kueleza maana ya kinyume cha nomino akishirikiana na wenzake,",
+    "kutambua vinyume vya nomino (k.v rafiki – adui, mgeni – mwenyeji, furaha – huzuni, mfalme- malkia, usiku – mchana, tajiri – maskini, n.k) katika chati, kadi maneno, kapu maneno, mti maneno au vifaa vya kidijitali,",
+    "kushirikiana na wenzake kutafuta vinyume vya nomino kwa kurejelea orodha ya nomino alizopewa,",
+    "kujaza nafasi katika sentensi kwa kutumia vinyume vya nomino,",
+    "kutunga sentensi kwa kutumia vinyume vya nomino kwa kuzingatia upatanisho wa kisarufi."
+   ],
+   "key_inquiry_questions": [
+    "Matumizi ya vinyume vya nomino huchangia vipi katika ukuzaji wa lugha?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake darasani kutafuta vinyume vya nomino.\nUbunifu: mwanafunzi anapotunga sentensi kwa kutumia vinyume vya nomino ipasavyo.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kutambua vinyume vya nomino.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapotafuta vinyume vya nomino akirejelea orodha aliyopea ipasavyo.",
+   "values": "Uwajibikaji: mwanafunzi anapotunza kifaa cha kidijitali na nyenzo zingine anazotumia katika kufanikisha kazi yake.\nHeshima: mwanafunzi anaposhirikiana na wenzake katika shughuli ya kikundi na kuthamini maoni yao.",
+   "pcis": "Elimu ya mazingira: mwanafunzi anapotalii mazingira yake na kuunda orodha ya vinyume anavyoweza kutambua.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya vinyume katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la afya bora na masuala yanayofunzwa katika somo la Agriculture",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     97,
+     98
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.a",
+     "letter": "a",
+     "text": "kueleza maana ya kinyume cha nomino ili kukibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.b",
+     "letter": "b",
+     "text": "kutambua vinyume vya nomino katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.c",
+     "letter": "c",
+     "text": "kutumia vinyume vya nomino ipasavyo katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.d",
+     "letter": "d",
+     "text": "kuchangamkia matumizi ya vinyume vya nomino katika mawasiliano ya kila siku",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSIKI.T10_TASHBIHI",
+   "number": "10.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Tashbihi (Theme 10: Kukabiliana na uhalifu)",
+   "sequence": 1011,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [
+    "Tashbihi za kimo",
+    "Tashbihi za umbo"
+   ],
+   "learning_experiences": [
+    "kushirikiana na wenzake kueleza maana ya tashbihi,",
+    "kutambua tashbihi za kimo na umbo (k.v mrefu kama twiga, mfupi kama nyundo, mwembamba kama sindano, konda kama ng’onda) katika vitabu, chati na vyombo vya kidijitali,",
+    "kurejelea picha au michoro kwenye chati au tarakilishi ili kutumia tashbihi zifaazo kutolea maelezo,",
+    "kujaza nafasi katika sentensi au kifungu kwa kutumia tashbihi za kimo na umbo,",
+    "kutunga sentensi akitumia tashbihi za kimo na umbo,",
+    "kuwasilisha sentensi zake darasani ili wenzake wazitolee maoni."
+   ],
+   "key_inquiry_questions": [
+    "Matumizi ya tashbihi yana umuhimu gani katika mawasiliano?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika kazi ya vikundi kueleza maana ya tashbihi za kimo na umbo.\nHamu ya ujifunzaji: mwanafunzi anapojaribu kukamilisha kazi ya ziada anayopewa kuhusu tashbihi za kimo na umbo.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali katika kujifunza tashbihi za kimo na umbo.",
+   "values": "Heshima: mwanafunzi anapotangamana na wenzake na kuelezea maana za tashbihi mbalimbali.\nUwajibikaji: mwanafunzi anapotumia kifaa cha kidijitali kutunga sentensi akirejelea picha na michoro kwenye tarakilishi.",
+   "pcis": "Elimu ya mazingira: mwanafunzi anarejelea mifano ya vitu na viumbe katika mazingira yake.\nMshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutoka maeneo mbalimbali kuelezea maana ya tashbihi za umbo na kimo.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya tashbihi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la kukabiliana na uhalifu na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     99,
+     100
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSIKI.T10_TASHBIHI.a",
+     "letter": "a",
+     "text": "kueleza maana ya tashbihi ili kuibainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T10_TASHBIHI.b",
+     "letter": "b",
+     "text": "kutambua tashbihi za kimo na umbo katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T10_TASHBIHI.c",
+     "letter": "c",
+     "text": "kutumia tashbihi za kimo na umbo kwa usahihi katika matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T10_TASHBIHI.d",
+     "letter": "d",
+     "text": "kufurahia matumizi ya tashbihi za kimo na umbo katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI",
+   "number": "10.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma Kidijitali (Theme 10: Kukabiliana na uhalifu)",
+   "sequence": 1021,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua na kuzingatia hatua za kiusalama kutoka kwenye chati au kwenye tarakilishi na mitandao,",
+    "kutambua jina la faili lengwa kwenye tarakilishi na kufanya mazoezi ya kuifungua na kuifunga,",
+    "kutambua mitandao salama yenye matini yanayoafiki kiwango na mahitaji yake,",
+    "kutambua umuhimu wa kutoa habari kwa mwalimu, mzazi au mlezi wake endapo atapata ujumbe kutoka kwa watu asiowajua mtandaoni na kutowasiliana nao,",
+    "kutafuta maana za maneno mapya kwenye kamusi mtandaoni,",
+    "kusoma matini kwenye tovuti salama,",
+    "kusikiliza matamshi na maelezo kuhusu anachokisoma mtandaoni panapowezekana,",
+    "kutoa habari kuhusu matini aliyosoma kwa muhtasari na kujibu maswali katika maandishi au mazungumzo na wenzake."
+   ],
+   "key_inquiry_questions": [
+    "Unazingatia nini unaposoma matini ya kidijitali?",
+    "Kusoma matini ya kidijitali kuna umuhimu gani?"
+   ],
+   "core_competences": "Ujuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali katika kutafuta, kusakura na kusoma matini.\nHamu ya ujifunzaji: mwanafunzi anapopata hamu ya kutafuta matini ya kusoma kwenye tarakilishi na mitandaoni.",
+   "values": "Uwajibikaji: mwanafunzi anapokitunza kifaa cha kidijitali na kuzingatia mitandao salama.\nUmoja: mwanafunzi anaposhirikiana na wenzake katika kutoa habari kwa muhtasari kuhusu matini aliyoisoma ili waiboreshe.",
+   "pcis": "Usalama wa mtandaoni: mwanafunzi anapozingatia hatua za kiusalama anaposakura matini kwenye tovuti.\nMshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutoka jamii tofauti tofauti kufanya shughuli ya kikundi.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya matumizi ya vifaa vya kidijitali katika somo hili na ujifunzaji wa dhana hiyo katika somo la Science and Technology.\nMwanafunzi anaweza kuhusisha suala la kukabiliana na uhalifu na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     101,
+     102
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI.a",
+     "letter": "a",
+     "text": "kutambua na kuzingatia hatua za kiusalama katika matumizi ya vifaa vya kidijitali",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI.b",
+     "letter": "b",
+     "text": "kutambua na kufungua faili iliyo na kifungu cha kusoma ili kuimarisha umilisi wake wa kutumia tarakilishi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI.c",
+     "letter": "c",
+     "text": "kusakura matini kwenye tovuti salama ili kupata vifungu vya kusoma vyenye suala lengwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI.d",
+     "letter": "d",
+     "text": "kusoma matini lengwa ili kupata ujumbe",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI.e",
+     "letter": "e",
+     "text": "kuchangamkia matumizi ya vifaa vya kidijitali katika kutafuta na kusoma ujumbe ili kuimarisha maarifa yake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUANDI.T10_INSHA_YA_MASIMULIZI",
+   "number": "10.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Insha ya Masimulizi (Theme 10: Kukabiliana na uhalifu)",
+   "sequence": 1031,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua insha ya masimulizi kwa kurejelea vielelezo vya insha zilizoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kuandaa vidokezo vitakavyomwongoza kuandika insha yake,",
+    "kushirikiana na wenzake kujadili mada ya insha na muundo wa insha ya masimulizi,",
+    "kuandika insha inayosimulia kisa cha tukio linalohusiana na uhalifu wa kawaida daftarini kwa kuzingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa lugha ya kiubunifu,",
+    "kuandika insha ya masimulizi mtandaoni na kuisambaza kwa wenzake na mwalimu ili waisome na kuitathmini,",
+    "kuwasomea wenzake insha aliyoandika ili waitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Je, unazingatia nini ili kuandika insha nzuri ya masimulizi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala na kazi ya kikundi kujadili mada na muundo wa insha ya masimulizi.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kuandika insha mtandaoni kwa kurejelea kielelezo cha insha ya masimulizi.\nUbunifu: mwanafunzi anapoandika insha ya masimulizi kwa kufuata kanuni zifaazo.",
+   "values": "Heshima: mwanafunzi anaposhirikiana na wenzake katika kujadili mada na muundo wa insha ya masimulizi na kuthamini mchango wao.\nAmani: mwanafunzi anapojitolea kuwasomea wenzake insha aliyoandika kwa upendo.",
+   "pcis": "Kukabiliana na uhalifu: mwanafunzi anapoandika kisa cha tukio linalohusiana na uhalifu wa kawaida.\nUtangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kujadili mada na muundo wa insha ya masimulizi.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya uandishi wa insha ya masimulizi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la kukabiliana na uhalifu na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     103,
+     104
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUANDI.T10_INSHA_YA_MASIMULIZI.a",
+     "letter": "a",
+     "text": "kutambua insha ya masimulizi kwa kuzingatia ujumbe, mtindo na muundo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T10_INSHA_YA_MASIMULIZI.b",
+     "letter": "b",
+     "text": "kuandika insha ya masimulizi kwa kufuata kanuni zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T10_INSHA_YA_MASIMULIZI.c",
+     "letter": "c",
+     "text": "kuchangamkia utunzi mzuri wa insha ya masimulizi ili kujenga ubunifu wake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI",
+   "number": "10.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Nyakati na hali. (Theme 10: Kukabiliana na uhalifu)",
+   "sequence": 1041,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Wakati uliopita",
+    "Wakati uliopo",
+    "Wakati ujao"
+   ],
+   "learning_experiences": [
+    "kutambua viambishi vinavyobainisha nyakati mbalimbali (uliopita, uliopo na ujao) kwenye sentensi zilizoonyeshwa kwenye chati, ubao au kwa kutumia vifaa vya kidijitali k.v. tarakilishi na projekta,",
+    "kujaza nafasi kwenye sentensi kwa kutumia vitenzi katika nyakati mbalimbali,",
+    "kutambua vitenzi katika wakati uliopita, uliopo na ujao kwenye matini akishirikiana na wenzake,",
+    "kutunga sentensi akitumia vitenzi katika wakati uliopita, uliopo na ujao kwa kuziandika daftarini au kuzipiga chapa kwenye tarakilishi/ kipakatalishi,",
+    "kushirikiana na wenzake katika vikundi kutaja sentensi katika wakati fulani na kuzibadilisha katika wakati tofauti,",
+    "kuandika upya sentensi kutoka wakati mmoja ziwe katika nyakati tofauti daftarini au katika kifaa cha kidijitali,"
+   ],
+   "key_inquiry_questions": [
+    "Ni viambishi vipi hutumika kuwakilisha nyakati mbalimbali katika vitenzi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika shughuli za vikundi darasani na mtandaoni.\nUbunifu: mwanafunzi anapotunga sentensi akitumia nyakati mbalimbali.\nHamu ya ujifunzaji: mwanafunzi anapofaulu kutunga sentensi sahihi katika nyakati mbalimbali hali ya kuendelea.\nUjuzi wa kidijitali: mwanafunzi anapotumia kipakatalishi au tarakilishi kutunga sentensi na vilevile kuzisambaza mtandaoni.",
+   "values": "Heshima: mwanafunzi anapojifunza kuthamini maoni ya wenzake katika shughuli ya kikundi.\nUwajibikaji: mwanafunzi anapotumia kifaa cha kidijitali na nyenzo zingine kufanikisha kazi yake.",
+   "pcis": "Usalama mtandaoni: mwanafunzi anapotumia kifaa cha kidijitali kubainisha nyakati mbalimbali.\nKupambana na ufundishaji wa misimamo mikali: mwanafunzi anapotunga sentensi kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya nyakati katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la kukabiliana na uhalifu na masuala yanayofunzwa katika somo la Social Studies.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     105,
+     106
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.a",
+     "letter": "a",
+     "text": "kutambua viambishi vya wakati uliopita, uliopo na ujao kwenye vitenzi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.b",
+     "letter": "b",
+     "text": "kutambua vitenzi katika wakati uliopita, uliopo na ujao kwenye matini",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.c",
+     "letter": "c",
+     "text": "kutunga sentensi akitumia vitenzi katika wakati uliopita, uliopo na ujao",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.d",
+     "letter": "d",
+     "text": "kufurahia zoezi la kutunga sentensi akiwa na wenzake",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSIKI.T11_MASIMULIZI",
+   "number": "11.1.1",
+   "strand": "Kusikiliza na Kuzungumza",
+   "sub_strand": "Masimulizi (Theme 11: Mapato)",
+   "sequence": 1111,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kusikiliza masimulizi yanayohusiana na suala lengwa yakitolewa na mgeni mwalikwa, mwalimu, mwanafunzi mwenzake au kutokana na vifaa vya kidijitali,",
+    "kujibu maswali kutokana na masimulizi aliyosikiliza,",
+    "kutambua msamiati wa suala lengwa uliotumiwa katika masimulizi aliyosikiliza,",
+    "kubuni simulizi linalohusiana na mada husika kwa kutazama picha, michoro au kujadiliana na wenzake,",
+    "kutoa maelezo kuhusu suala lengwa (k.v jinsi ya kujipatia riziki, Jinsi ya kutumia mapato yake, n.k.),",
+    "kutumia ishara za mwili zifaazo k.v ishara za uso, za mikono, mabega kuimarisha masimulizi yake,",
+    "kujadiliana na wenzake kuhusu ubora wa masimulizi aliyosikiliza."
+   ],
+   "key_inquiry_questions": [
+    "Je, ni nini unachozingatia unapotoa simulizi?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anapojadiliana na wenzake kuhusu ubora wa masimulizi.\nUbunifu: mwanafunzi anapotunga simulizi linalohusiana na mada husika kwa kutazama picha au michoro.\nKujiamini: mwanafunzi anaposimulia kisa mbele ya wenzake.",
+   "values": "Heshima: mwanafunzi anapoheshimu mchango wa wenzake katika mjadala kuhusu ubora wa masimulizi.",
+   "pcis": "Elimu ya fedha: mwanafunzi anaposimulia kisa kuhusu ujuzi wa matumizi ya fedha na mapato.\nUmaskini: mwanafunzi anaposikiliza na kuzungumzia kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusikiliza na kutoa masimulizi katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mapato na masuala yanayofunzwa katika somo la Social Studies, Creative Arts na Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     107,
+     108
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSIKI.T11_MASIMULIZI.a",
+     "letter": "a",
+     "text": "kusikiliza masimulizi kwa kuzingatia ujumbe",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T11_MASIMULIZI.b",
+     "letter": "b",
+     "text": "kusimulia tungo kwa kuzingatia mada, ubunifu na usanifu wa lugha mbele ya wenzake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T11_MASIMULIZI.c",
+     "letter": "c",
+     "text": "kutumia ishara zifaazo ili kuimarisha masimulizi yake",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T11_MASIMULIZI.d",
+     "letter": "d",
+     "text": "kuchangamkia masimulizi katika mazingira mbalimbali",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA",
+   "number": "11.2.1",
+   "strand": "Kusoma",
+   "sub_strand": "Kusoma kwa Ufasaha (Theme 11: Mapato)",
+   "sequence": 1121,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua vipengele vya kuzingatia katika kusoma makala kwa ufasaha,",
+    "kusoma kifungu cha hadithi kuhusu suala lengwa kwa kuzingatia matamshi bora akiwa na wenzake,",
+    "kusoma kifungu cha hadithi kuhusu suala lengwa kwa kuzingatia kiwango kifaacho cha sauti (k.v kiwango cha sauti na kiimbo),",
+    "kusoma kifungu cha hadithi kuhusu suala lengwa kwa kuzingatia kasi ifaayo (maneno sahihi yasiyopungua 65 kwa dakika ) ili wenzake wamtolee maoni,",
+    "kusoma kifungu kwa kuambatanisha ishara zifaazo panapofaa anaposoma (k.v ishara za uso na mikono),",
+    "kusoma hadithi kuhusu masuala mtambuko mbalimbali kutoka kwenye vitabu, vifaa vya kidijtali, n.k akizingatia matamshi bora, kasi ifaayo na kiwango kifaacho cha sauti."
+   ],
+   "key_inquiry_questions": [
+    "Kusoma kwa ufasaha kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kusoma kifungu cha hadithi.\nUjuzi wa kidijitali: mwanafunzi anapotumia vifaa vya kidijitali kusoma vifungu cha hadithi kuhusu masuala mtambuko mbalimbali.\nHamu ya ujifunzaji: mwanafunzi anapotafuta hadithi mbalimbali na kuzisoma kwa kuzingatia matamshi bora, kasi ifaayo na kiwango kifaacho cha sauti.\nKujiamini: mwanafunzi anapoweza kusoma kifungu cha hadithi kwa kuzingatia matamshi bora, kasi ifaayo na kiwango kifaacho cha sauti.",
+   "values": "Upendo: mwanafunzi anapowashirikisha wengine katika matumizi ya vifaa vya kidijitali darasani.\nUwajibikaji: mwanafunzi anapotunza vifaa vya kidijitali.",
+   "pcis": "Uraia: mwanafunzi anapowathamini wenzake wanaposhirikiana kutamka sauti lengwa katika kikundi.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya kusoma kwa ufasaha katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mapato na masuala yanayofunzwa katika somo la Social Studies, Creative Arts na Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     109,
+     110
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.a",
+     "letter": "a",
+     "text": "kutambua vipengele vya kuzingatia katika kusoma kwa ufasaha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.b",
+     "letter": "b",
+     "text": "kusoma kifungu cha hadithi kwa kuzingatia matamshi bora",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.c",
+     "letter": "c",
+     "text": "kusoma kifungu cha hadithi kwa kuzingatia kiwango kifaacho cha sauti",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.d",
+     "letter": "d",
+     "text": "kusoma kifungu cha hadithi kwa kuzingatia kasi ifaayo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.e",
+     "letter": "e",
+     "text": "kusoma kifungu cha hadithi kwa kuambatanisha ishara zifaazo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.f",
+     "letter": "f",
+     "text": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI",
+   "number": "11.3.1",
+   "strand": "Kuandika",
+   "sub_strand": "Barua ya Kirafiki (Theme 11: Mapato)",
+   "sequence": 1131,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua barua ya kirafiki kwa kurejelea vielelezo vya barua za kirafiki zilizoandikwa kwenye matini mbalimbali au tarakilishi,",
+    "kuandaa vidokezo vitakavyomwongoza kuandika insha yake,",
+    "kushirikiana na wenzake kujadili mada ya barua ya kirafiki na vipengele vyake,",
+    "kuandika barua ya kirafiki daftarini yenye kuzingatia mada ya mapato kwa rafiki, ndugu, mzazi n.k kwa kuzingatia anwani, mpangilio mzuri wa mawazo, hati safi, tahajia, kanuni za kisarufi, uakifishaji mwafaka na kwa lugha ya kiubunifu,",
+    "kutumia kifaa cha kidijitali kuandika insha ya barua kuhusu kupigana na umaskini,",
+    "kuandika barua ya kirafiki mtandaoni na kuisambaza kwa wenzake na mwalimu ili waisome na kuitathmini,",
+    "kuwasomea wenzake barua ya kirafiki aliyoandika ili waitathmini,",
+    "kushirikiana na wenzake katika vikundi kujadili kuhusu umuhimu wa barua za kirafiki katika mawasiliano."
+   ],
+   "key_inquiry_questions": [
+    "Je, unazingatia nini ili kuandika barua nzuri ya kirafiki?",
+    "Barua za kirafiki zina umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki katika mijadala na kazi ya kikundi kujadili mada ya barua ya kirafiki na vipengele vyake.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kuandika insha mtandaoni na kurejelea vielelezo vya barua za kirafiki.\nUbunifu: mwanafunzi anapoandaa vidokezo na kuandika barua za kirafiki kwa ubunifu.\nHamu ya ujifunzaji: mwanafunzi anapoyatafakari maswali dadisi na anapoimarisha ujuzi wake wa kutumia tarakilishi.",
+   "values": "Upendo: mwanafunzi anaposhiriki katika mjadala na wenzake na kuthamini maoni yao.\nUwajibikaji: mwanafunzi anapotumia kifaa cha kidijitali kuandika barua kuhusu kupigana na umaskini.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutoka jamii mbalimbali kujadili mada ya barua ya kirafiki.\nUmaskini: mwanafunzi anapoandika kuhusu jinsi ya kupigana na umaskini.",
+   "links": "Mwanafunzi anaweza kuhusisha stadi ya uandishi wa barua ya kirafiki katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mapato na masuala yanayofunzwa katika somo la Social Studies, Creative Arts na Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     111,
+     112
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.a",
+     "letter": "a",
+     "text": "kutambua barua ya kirafiki kwa kuzingatia muundo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.b",
+     "letter": "b",
+     "text": "kuandika barua ya kirafiki kwa kuzingatia ujumbe, mtindo na muundo ufaao",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.c",
+     "letter": "c",
+     "text": "kuchangamkia umuhimu wa barua katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T11_UKANUSHAJI",
+   "number": "11.4.1",
+   "strand": "Sarufi",
+   "sub_strand": "Ukanushaji (Theme 11: Mapato)",
+   "sequence": 1141,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [
+    "Wakati uliopita",
+    "Wakati uliopo",
+    "Wakati ujao"
+   ],
+   "learning_experiences": [
+    "kushirikiana na wenzake kueleza maana ya ukanushaji,",
+    "kutambua maneno yaliyokanushwa kwenye chati, ubao, kapu maneno, mti maneno na vyombo vya kidijitali,",
+    "kutambua viambishi vya nafsi na wakati katika maneno akishirikiana na wenzake,",
+    "kukanusha sentensi akizingatia nafsi na nyakati kwenye daftari au kwa kutumia tarakilishi,",
+    "kuwasilisha sentensi zake darasani ili wenzake wazitathmini."
+   ],
+   "key_inquiry_questions": [
+    "Unazingatia nini unapokanusha sentensi kwa kuzingatia nafsi na wakati?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake kujadili mada kwenye vikundi.\nUwazaji kina na utatuzi wa matatizo: mwanafunzi anapojaribu kukanusha maneno na sentensi.\nUjuzi wa kidijitali: mwanafunzi anapotumia kifaa cha kidijitali kukanusha maneno na sentensi za nafsi na nyakati.",
+   "values": "Heshima: mwanafunzi anaposhiriki katika kazi za kikundi na kuthamini mchango wa wenzake.\nUadilifu: mwanafunzi anaposikiliza au kutazama vipindi vya ukanushaji katika vyombo vya kidijitali.",
+   "pcis": "Utunzi na usalama wa Watoto: mwanafunzi anapokuza uwezo wa kukubali au kukataa mambo mbalimbali kupitia kipindi cha ukanushaji wa nafsi.\nUmaskini: mwanafunzi anapotunga sentensi mbalimbali kuhusu suala lengwa.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya ukanushaji katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mapato na masuala yanayofunzwa katika somo la Social Studies, Creative Arts na Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     113,
+     114
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T11_UKANUSHAJI.a",
+     "letter": "a",
+     "text": "kueleza maana ya ukanushaji ili kuubainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKANUSHAJI.b",
+     "letter": "b",
+     "text": "kutambua maneno yaliyokanushwa katika wakati uliopita, uliopo na ujao",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKANUSHAJI.c",
+     "letter": "c",
+     "text": "kutambua viambishi vya nafsi na wakati uliopita, uliopo na ujao katika maneno",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKANUSHAJI.d",
+     "letter": "d",
+     "text": "kukanusha sentensi kwa kuzingatia nafsi na wakati uliopita, uliopo na ujao",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKANUSHAJI.e",
+     "letter": "e",
+     "text": "kuchangamkia ukanushaji wa vitenzi katika mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO",
+   "number": "11.4.2",
+   "strand": "Sarufi",
+   "sub_strand": "Ukubwa wa Nomino (Theme 11: Mapato)",
+   "sequence": 1142,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua nomino zinazoanza kwa herufi m- na zenye mzizi wa silabi moja (k.m mti, mto, mji) kwenye chati, ubao, mti maneno, kapu maneno au kifaa cha kidijitali,",
+    "kushiriki katika vikundi kubadilisha nomino kutoka hali ya wastani hadi hali ya ukubwa,",
+    "kushiriki katika mchezo wa vikundi; kikundi kimoja kitaje wastani wa nomino na kingine kitaje ukubwa wa nomino hiyo,",
+    "kuburura na kuambatanisha orodha ya nomino katika hali ya ukubwa na orodha nyingine ya nomino katika hali ya wastani kwenye tarakilishi,",
+    "kutunga sentensi zinazorejelea nomino lengwa katika ukubwa akiwa peke yake au kwenye vikundi."
+   ],
+   "key_inquiry_questions": [
+    "Kutaja nomino katika ukubwa wake kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhiriki mijadala kuhusu ukubwa wa nomino.\nUbunifu: mwanafunzi anapotunga sentensi katika hali ya ukubwa ipasavyo.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kutambua na kuambatanisha nomino katika hali ya wastani na ukubwa.",
+   "values": "Ushirikiano: mwanafunzi anapothamini maoni ya wenzake katika kazi ya kikundi.\nHaki za kijamii: mwanafunzi anaposhirikiana na wenzake kutoka jamii mbalimbali katika kutunga sentensi zinazohusu nomino lengwa.",
+   "pcis": "Utangamano wa kijamii: mwanafunzi anapokuza uraia wema kwa kutangamana na wenzake kutoka maeneo tofautitofauti.\nUsalama mtandaoni: mwanafunzi anapotumia kifaa cha kidijitali kutambua ukubwa wa nomino.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya ukubwa wa nomino katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mapato na masuala yanayofunzwa katika somo la Social Studies, Creative Arts na Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     115,
+     116
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.a",
+     "letter": "a",
+     "text": "kueleza maana ya ukubwa wa nomino ili kuubainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.b",
+     "letter": "b",
+     "text": "kutambua nomino zinazoanza kwa herufi m- na zenye mzizi wa silabi moja",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.c",
+     "letter": "c",
+     "text": "kutambua nomino katika hali ya ukubwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.d",
+     "letter": "d",
+     "text": "kubadilisha nomino kutoka hali wastani kuwa katika hali ya ukubwa",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.e",
+     "letter": "e",
+     "text": "kutumia nomino katika hali ya ukubwa kwenye sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.f",
+     "letter": "f",
+     "text": "kufurahia kutumia nomino katika hali ya ukubwa kwa usahihi ili kuimarisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO",
+   "number": "11.4.3",
+   "strand": "Sarufi",
+   "sub_strand": "Udogo wa Nomino (Theme 11: Mapato)",
+   "sequence": 1143,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "kutambua nomino zinazoanza kwa herufi m- na zenye mzizi wa silabi moja (k.m mti, mto, mji) kwenye chati, ubao, mti maneno, kapu maneno au kifaa cha kidijitali,",
+    "kushiriki katika vikundi kubadilisha nomino kutoka hali ya wastani hadi hali ya udogo,",
+    "kushiriki katika mchezo wa vikundi; kikundi kimoja kitaje wastani wa nomino na kingine kitaje udogo wa nomino husika,",
+    "kuburura na kuambatanisha orodha ya nomino katika hali ya udogo na orodha nyingine ya nomino katika hali ya wastani kwenye tarakilishi,",
+    "kutunga sentensi zinazorejelea nomino lengwa katika udogo akiwa peke yake au kwenye vikundi."
+   ],
+   "key_inquiry_questions": [
+    "Kutaja nomino katika udogo wake kuna umuhimu gani?"
+   ],
+   "core_competences": "Mawasiliano na ushirikiano: mwanafunzi anaposhirikiana na wenzake katika kikundi kubadilisha nomino kutoka hali ya wastani hadi ya udogo.\nUbunifu: mwanafunzi anapotunga sentensi zinazorejelea nomino lengwa katika hali ya wastani na udogo.\nUjuzi wa kidijitali: mwanafunzi anapotumia tarakilishi kutambua na kuambatanisha nomino katika hali ya wastani na udogo.",
+   "values": "Ushirikiano: mwanafunzi anaposhirikiana na wenzake kufanya kazi katika kikundi.\nUpendo: mwanafunzi anaposhirikiana na wenzake katika shughuli ya kikundi kwa heshima.",
+   "pcis": "Mshikamano wa kijamii: mwanafunzi anaposhirikiana na wenzake kutunga sentensi zinazorejelea nomino lengwa katika ukubwa na udogo.",
+   "links": "Mwanafunzi anaweza kuhusisha dhana ya udogo wa nomino katika somo hili na ujifunzaji wa dhana hiyo katika somo la English.\nMwanafunzi anaweza kuhusisha suala la mapato na masuala yanayofunzwa katika somo la Social Studies, Creative Arts na Science and Technology.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+    "design": "Kiswahili Gredi ya 4 - Revised.pdf",
+    "version": "not printed",
+    "pages": [
+     117,
+     118
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.a",
+     "letter": "a",
+     "text": "kueleza maana ya udogo wa nomino ili kuubainisha",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.b",
+     "letter": "b",
+     "text": "kutambua nomino zinazoanza kwa herufi m- na zenye mzizi wa silabi moja",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.c",
+     "letter": "c",
+     "text": "kutambua nomino katika hali ya udogo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.d",
+     "letter": "d",
+     "text": "kubadilisha nomino katika hali ya wastani kuwa katika hali ya udogo",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.e",
+     "letter": "e",
+     "text": "kutumia nomino katika hali ya udogo kwenye sentensi",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.f",
+     "letter": "f",
+     "text": "kufurahia kutumia nomino katika hali ya udogo ili kuimarisha mawasiliano",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

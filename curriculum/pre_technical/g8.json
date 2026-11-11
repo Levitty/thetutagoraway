@@ -1,0 +1,926 @@
+{
+ "framework": "cbc",
+ "subject_key": "pre_technical",
+ "grade": 8,
+ "source": "KICD Pre-Technical Studies, First published 2023; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 5,
+  "sub_strands": 14,
+  "outcomes": 60,
+  "lessons": 120,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "PRE_.G8.FOUNDA.FIRE_SAFETY",
+   "number": "1.1",
+   "strand": "Foundations of Pre-Technical Studies",
+   "sub_strand": "Fire Safety",
+   "sequence": 101,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning and importance of fire,",
+    "discuss the possible causes of fire outbreaks in the environment (flammable substances, electrical faults, combustible materials),",
+    "share experiences on ways of preventing fire outbreaks in the environment,",
+    "discuss firefighting techniques in the work environment, (cooling, smothering, starving, interrupting),",
+    "role play fire fighting techniques for extinguishing fire."
+   ],
+   "key_inquiry_questions": [
+    "Why is fire safety important?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: learner acquires active listening and communication skills when following simple instructions to complete tasks while role-playing firefighting techniques in the work environment.\nCreativity and Imagination: learner acquires networking skills by undertaking group activities and exchanging new ideas that inspire creative thinking skills during the role-play on firefighting techniques for extinguishing fire.",
+   "values": "Responsibility: learner engages in assigned roles and duties when role-playing firefighting techniques.\nRespect: learner appreciates diverse opinions when brainstorming on the possible causes of fire outbreaks in the environment.",
+   "pcis": "Safety: learner enhances safety awareness when sharing experiences on ways of preventing fire outbreaks in the environment.",
+   "links": "Integrated Science: learner relates fire safety to fire control measures in Integrated Science.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 6, summary says 7.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     13,
+     14
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.FOUNDA.FIRE_SAFETY.a",
+     "letter": "a",
+     "text": "identify possible causes of fire outbreaks in the environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.FOUNDA.FIRE_SAFETY.b",
+     "letter": "b",
+     "text": "explain ways of preventing fire outbreaks in the environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.FOUNDA.FIRE_SAFETY.c",
+     "letter": "c",
+     "text": "extinguish fires in the environment using appropriate methods",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.FOUNDA.FIRE_SAFETY.d",
+     "letter": "d",
+     "text": "acknowledge the need for fire safety in day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.FOUNDA.DATA_SAFETY",
+   "number": "1.2",
+   "strand": "Foundations of Pre-Technical Studies",
+   "sub_strand": "Data Safety",
+   "sequence": 102,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning of data and information in an electronic device,",
+    "use available resources to search for the importance of data in electronic devices,",
+    "discuss threats to data in electronic devices (virus and unauthorised access),",
+    "discuss techniques of securing data in an electronic device (use passwords; and scan electronic devices using antivirus),",
+    "use appropriate techniques to secure data in an electronic device against possible threats."
+   ],
+   "key_inquiry_questions": [
+    "How is data protected in an electronic device?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: learner acquires active listening and communication skills when discussing threats to data in electronic devices\nDigital Literacy: learner acquires skills of interacting with technology when using digital devices to secure electronic data in a user environment.",
+   "values": "Responsibility: learner engages in assigned roles and duties when securing electronic data in the workplace against possible threats.\nRespect: learner appreciates diverse opinions when brainstorming on the threats of electronic data in the work environment.",
+   "pcis": "Cyber Security: learner enhances online safety when practising how to secure electronic data in the user environment.",
+   "links": "Mathematics: learner relates data safety to data handling in mathematics.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 4, summary says 11.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.FOUNDA.DATA_SAFETY.a",
+     "letter": "a",
+     "text": "outline the importance of data in an electronic device",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.FOUNDA.DATA_SAFETY.b",
+     "letter": "b",
+     "text": "identify threats to data in an electronic device",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.FOUNDA.DATA_SAFETY.c",
+     "letter": "c",
+     "text": "describe ways of protecting data in an electronic device",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.FOUNDA.DATA_SAFETY.d",
+     "letter": "d",
+     "text": "secure data in an electronic device",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.FOUNDA.DATA_SAFETY.e",
+     "letter": "e",
+     "text": "acknowledge the need for data safety in day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.COMMUN.PLANE_GEOMETRY",
+   "number": "2.1",
+   "strand": "Communication",
+   "sub_strand": "Plane Geometry",
+   "sequence": 201,
+   "lessons": 8,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss the instruments used in drawing (set squares, drawing set, straight edges and pencils),",
+    "use print and digital resources to search for information on setup of drawing paper (drawing surface, margins, title page),",
+    "discuss how to draw combined shapes,",
+    "use available resources to construct combined shapes."
+   ],
+   "key_inquiry_questions": [
+    "How are combined shapes applied in day-to-day life?"
+   ],
+   "core_competences": "Communication and Collaboration: learner acquires team working skills when discussing how to draw combined shapes.\nLearning to learn: learner develops organising skills when using available resources to construct combined shapes.",
+   "values": "Respect: learner appreciates diverse opinions when discussing how to draw combined shapes.",
+   "pcis": "Social cohesion: learners work together harmoniously when discussing how to draw combined shapes.",
+   "links": "Mathematics: learner relates drawing skills to geometrical construction in Mathematics.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 8, summary says 4.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     18
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.COMMUN.PLANE_GEOMETRY.a",
+     "letter": "a",
+     "text": "identify instruments used in drawing",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.PLANE_GEOMETRY.b",
+     "letter": "b",
+     "text": "explain the layout of a drawing environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.PLANE_GEOMETRY.c",
+     "letter": "c",
+     "text": "construct combined shapes applied in drawing",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.PLANE_GEOMETRY.d",
+     "letter": "d",
+     "text": "embrace the use of plane geometry in drawing",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.COMMUN.DIMENSIONING",
+   "number": "2.2",
+   "strand": "Communication",
+   "sub_strand": "Dimensioning",
+   "sequence": 202,
+   "lessons": 10,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss the term dimensioning as used in drawing,",
+    "use visual aids to categorise the types of dimensioning in drawing (linear, radial, angular, arc),",
+    "draw types of lines used in dimensioning,",
+    "discuss the forms of dimensioning as used in drawing (parallel, chain and combined),",
+    "use appropriate techniques to dimension given shapes in drawings,",
+    "develop a portfolio of the various dimensioned drawings."
+   ],
+   "key_inquiry_questions": [
+    "Why is dimensioning applied in drawings?"
+   ],
+   "core_competences": "Communication and Collaboration: learner acquires team working skills when discussing how to dimension drawings.\nLearning to learn: learner develops organising skills when dimensioning shapes.",
+   "values": "Responsibility: learner engages in assigned roles and duties when dimensioning shapes.\nRespect: learner appreciates diverse opinions when discussing how to draw dimension lines.",
+   "pcis": "Social cohesion: learners work together harmoniously when discussing how to dimension drawings.",
+   "links": "Mathematics: learner relates dimensioning skills to measurement in Mathematics.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 10, summary says 7; a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     19,
+     20,
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.COMMUN.DIMENSIONING.a",
+     "letter": "a",
+     "text": "identify the types of dimensioning in drawing",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.DIMENSIONING.b",
+     "letter": "b",
+     "text": "draw lines used for dimensioning in drawing",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.DIMENSIONING.c",
+     "letter": "c",
+     "text": "dimension given shapes in drawings",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.DIMENSIONING.d",
+     "letter": "d",
+     "text": "embrace the importance of dimensioning in drawing",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING",
+   "number": "2.3",
+   "strand": "Communication",
+   "sub_strand": "Plain Scale Drawing",
+   "sequence": 203,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use print or digital media to search for information on plain scales,",
+    "discuss the features of a plain scale,",
+    "use drawing instruments to construct a plain scale,",
+    "discuss how to read plain scales,",
+    "use visual aids to identify drawings drawn to different scales,",
+    "practice drawing plane figures to a given plain scale."
+   ],
+   "key_inquiry_questions": [
+    "What is the importance of drawing figures to scale?",
+    "How are plane figures drawn to scale?"
+   ],
+   "core_competences": "Learning to Learn: learner acquires the skill to reflect on own work when practicing drawing of plane figures to a given plain scale.\nSelf-efficacy: learner acquires intrinsic self-motivation when drawing plane figures to scale.",
+   "values": "Unity: learner enhances cooperation with peers when discussing how to read plain scales.\nResponsibility: learner demonstrates self-drive when practicing drawing plane figures to a given plain scale.",
+   "pcis": "Peer education and mentorship: learner develops inter-personal relationship and group dynamics skills while discussing how to read plain scales.",
+   "links": "Mathematics: learner relates skills of scale drawing to linear scale in Mathematics.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     21
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.a",
+     "letter": "a",
+     "text": "describe the features of a plain scale used in drawing",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.b",
+     "letter": "b",
+     "text": "interpret a plain scale used in drawing",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.c",
+     "letter": "c",
+     "text": "draw plane figures to a given scale",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.d",
+     "letter": "d",
+     "text": "appreciate the use of plain scale drawing in the work environment",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.COMMUN.VISUAL_PROGRAMMING",
+   "number": "2.4",
+   "strand": "Communication",
+   "sub_strand": "Visual Programming",
+   "sequence": 204,
+   "lessons": 13,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning of the terms ‘visual programming’ and ‘visual programming application,",
+    "use available resources to search for information on types of visual programming applications (Educational, Multimedia, Video games),",
+    "brainstorm on examples of visual programming applications (Microsoft MakeCode, Scratch, Sprite box),",
+    "launch and discuss the different features of visual programming applications (input, processing, output, effects such as sound, animations and background),",
+    "use available resources to search for information on terminologies used in visual programming (syntax, variables, input output statements, coding, coding blocks, sequence statement repeating statement, selection statement, variable declarations) and discuss with peers,",
+    "use visual programming software to create sequential instructions."
+   ],
+   "key_inquiry_questions": [
+    "How are computer programs used in day-to-day life?"
+   ],
+   "core_competences": "Communication and Collaboration: learner develops speaking, listening and team working skills when discussing the features of a visual programming application.\nCritical Thinking and Problem Solving: learner develops open mindedness and creativity skills when applying effects such as sound, animations, and background in a program.",
+   "values": "Responsibility: learner engages in assigned roles and duties when using visual programming software to create instructions in the work environment.",
+   "pcis": "Peer Education: learner enhances healthy inter and intra-personal relationships with others when searching for information on terminologies used in visual programming and discussing with peers.",
+   "links": "Creative Arts: learner relates visual programming skills to drawing of animations in creative arts.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 13, summary says 14.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     22,
+     23
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.a",
+     "letter": "a",
+     "text": "identify types of visual programming applications used in day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.b",
+     "letter": "b",
+     "text": "explore the features of visual programming applications in a user environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.c",
+     "letter": "c",
+     "text": "create instructions to solve problems using visual programming application",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.d",
+     "letter": "d",
+     "text": "value the importance of visual programming in day-to-day life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.MATERI.COMPOSITE_MATERIALS",
+   "number": "3.1",
+   "strand": "Materials for production",
+   "sub_strand": "Composite Materials",
+   "sequence": 301,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss the meaning of composite materials,",
+    "use visual aids and realia to identify materials made of composites (concrete, bricks, manufactured boards, stone, paper-mâché and plastic-coated paper) and share with the peers,",
+    "use print or digital media to search for information on the composition of composite materials and share with peers,",
+    "discuss the constituent materials of composites,",
+    "visit the locality to explore the uses of composite materials,",
+    "match composite materials to their uses in the work environment."
+   ],
+   "key_inquiry_questions": [
+    "How can composite materials be identified?",
+    "Why are composite materials used in day-to-day life?"
+   ],
+   "core_competences": "Communication and Collaboration: learner acquires speaking, listening and team working skills when discussing the constituent materials of composites.\nDigital Literacy: learner acquires interacting with technology skills when using digital devices to search for information on the composition of composite materials.",
+   "values": "Peace: learner portrays respect for diversity when visiting locality to explore the uses of composite materials.",
+   "pcis": "Online Safety: learner avoids harmful or illegal content when using digital media to search for information on the composition of composite materials.",
+   "links": "Integrated Science: learner relates the concepts of composite materials to properties of materials in Integrated Science.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 6, summary says 7.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     25,
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.MATERI.COMPOSITE_MATERIALS.a",
+     "letter": "a",
+     "text": "identify composite materials in the locality",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.MATERI.COMPOSITE_MATERIALS.b",
+     "letter": "b",
+     "text": "describe the composition of composite materials in the locality",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.MATERI.COMPOSITE_MATERIALS.c",
+     "letter": "c",
+     "text": "relate composite materials to their use in a work environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.MATERI.COMPOSITE_MATERIALS.d",
+     "letter": "d",
+     "text": "acknowledge the importance of composite materials used in the locality",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.MATERI.CERAMIC_MATERIALS",
+   "number": "3.2",
+   "strand": "Materials for production",
+   "sub_strand": "Ceramic Materials",
+   "sequence": 302,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss the meaning of ceramic materials,",
+    "use visual aids and realia to identify items made of ceramic materials (pottery, ceramic utensils, glass, shells),",
+    "collect items made of ceramic materials in the locality,",
+    "investigate the physical properties of ceramic materials (brittleness, fire resistance, heat resistance, water resistance, corrosion resistance),",
+    "visit the locality to explore the uses of ceramic materials,",
+    "use a chart to match ceramic materials to their uses in the work environment."
+   ],
+   "key_inquiry_questions": [
+    "How are ceramic materials used in day-to-day life?"
+   ],
+   "core_competences": "Critical Thinking and Problem Solving: learner acquires evaluation and decision-making skills when collecting items made of ceramic materials in the locality.\nCitizenship: learner demonstrates socio-cultural sensitivity and awareness when visiting the locality to explore the uses of ceramic materials.",
+   "values": "Responsibility: learner engages in assigned roles and duties when collecting items made of ceramic materials in the locality.\nUnity: learner collaborates with others when using a chart to match ceramic materials with their use in the work environment.",
+   "pcis": "Safety: learner observes safety precautions when investigating the physical properties of ceramic materials.",
+   "links": "Creative Arts: learner enhances skills of pottery when identifying items made of ceramic materials.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 6, summary says 7.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.MATERI.CERAMIC_MATERIALS.a",
+     "letter": "a",
+     "text": "identify common ceramic materials in the locality",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.MATERI.CERAMIC_MATERIALS.b",
+     "letter": "b",
+     "text": "describe the physical properties of ceramic materials in the locality",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.MATERI.CERAMIC_MATERIALS.c",
+     "letter": "c",
+     "text": "relate ceramic materials to their use in a work environment",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.MATERI.CERAMIC_MATERIALS.d",
+     "letter": "d",
+     "text": "acknowledge the importance of ceramic materials used in the locality",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.TOOLS_.CUTTING_TOOLS",
+   "number": "4.1",
+   "strand": "Tools and Production",
+   "sub_strand": "Cutting Tools",
+   "sequence": 401,
+   "lessons": 15,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "use available resources to identify cutting tools in the work environment (snips, chisels, handsaws, planes, hacksaws, scrappers, knives, strippers, cutters),",
+    "discuss the use of cutting tools in the work environment,",
+    "use audio visual aids to observe the use of cutting tools in the work environment,",
+    "demonstrate safe use of cutting tools to perform specific tasks,",
+    "carry out given tasks using cutting tools,",
+    "maintain and store cutting tools in the work environment."
+   ],
+   "key_inquiry_questions": [
+    "Why are cutting tools cared for?"
+   ],
+   "core_competences": "Learning to Learn: learner acquires the skill of working collaboratively with others when discussing the use of cutting tools in the work environment.\nCritical Thinking and Problem Solving: learner acquires evaluation and decision-making skills when demonstrating safe use of cutting tools in performing specific tasks.",
+   "values": "Responsibility: learner observes safety precautions when using cutting tools available to perform given tasks.\nUnity: learner respects other people’s opinions when discussing the use of cutting tools in the work environment.",
+   "pcis": "Safety: learner observes safety when demonstrating safe use of cutting tools to perform specific tasks.",
+   "links": "Agriculture: learner relates the use of cutting tools to farm and kitchen tools.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     30,
+     31
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.TOOLS_.CUTTING_TOOLS.a",
+     "letter": "a",
+     "text": "identify cutting tools used in the work environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G8.TOOLS_.CUTTING_TOOLS.b",
+     "letter": "b",
+     "text": "select cutting tools for given tasks in a workplace",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G8.TOOLS_.CUTTING_TOOLS.c",
+     "letter": "c",
+     "text": "use cutting tools to perform a given task",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G8.TOOLS_.CUTTING_TOOLS.d",
+     "letter": "d",
+     "text": "care for cutting tools in the work environment",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G8.TOOLS_.CUTTING_TOOLS.e",
+     "letter": "e",
+     "text": "recognise the importance of cutting tools in the work environment",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE",
+   "number": "4.2",
+   "strand": "Tools and Production",
+   "sub_strand": "Computer Software",
+   "sequence": 402,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning of the term ‘computer software’ and present to peers,",
+    "use available resources to search for information about different computer software,",
+    "discuss categories of computer software (system software, application software),",
+    "brainstorm on the functions of different application software (word processing, presentation, spreadsheets),",
+    "perform tasks using different application software (word processing, presentation, spreadsheet)."
+   ],
+   "key_inquiry_questions": [
+    "How is computer software used in day-to-day life?",
+    "Why is computer software important?"
+   ],
+   "core_competences": "Digital Literacy: learner develops technology skills when performing tasks using different application software.\nLearning to Learn: learner develops relationships by sharing what they have learnt with peers when discussing categories of computer software.",
+   "values": "Integrity: learner exhibits fairness by giving equal opportunities to peers when brainstorming functions of application software.",
+   "pcis": "Peer Education and Mentorship: learner develops interpersonal relationships while they brainstorm on the functions of different application software.",
+   "links": "English: the learner uses application software to edit documents.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 12, summary says 6.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     32,
+     33
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.a",
+     "letter": "a",
+     "text": "identify the categories of computer software used in a workplace",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.b",
+     "letter": "b",
+     "text": "explain the functions of different application software in the workplace",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.c",
+     "letter": "c",
+     "text": "use computer software to perform tasks in day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.d",
+     "letter": "d",
+     "text": "acknowledge the importance of application software in the workplace",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.ENTREP.BOOKKEEPING",
+   "number": "5.1",
+   "strand": "Entrepreneurship",
+   "sub_strand": "Bookkeeping",
+   "sequence": 501,
+   "lessons": 12,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm and present the meaning of basic terms used in bookkeeping,",
+    "discuss the importance of bookkeeping for a business,",
+    "calculate assets, liabilities and capital using the bookkeeping equation,",
+    "read and analyse a case study on cash and credit transactions,",
+    "determine the cost and price of a given product to calculate profit and loss,",
+    "discuss the components of a statement of financial position, cash flow and income statement,",
+    "draw and present simple statements of financial position, cash flow and income statement for a business."
+   ],
+   "key_inquiry_questions": [
+    "Why is bookkeeping important to a business?",
+    "How are the statements of financial position, cash flow and income statement prepared?"
+   ],
+   "core_competences": "Critical Thinking and Problem-Solving: learner acquires evaluation and decision-making skills when calculating assets, liabilities and capital using the bookkeeping equation.\nSelf-efficacy: learner develops effective communication skills when discussing, presenting and preparing statements of financial position, cash flow and income.",
+   "values": "Peace: learner works harmoniously with members of the team when brainstorming and presenting the meaning of basic terms used in bookkeeping.\nResponsibility: learner performs tasks assigned when calculating assets, liabilities and capital using the bookkeeping equation.\nRespect: learner shows regard for the input of every member of the team when discussing the components of a statement of financial position, cash flow and income statement.",
+   "pcis": "Financial Literacy: learner enhances bookkeeping skills when drawing and presenting simple statements of financial position, cash flow and income statement for a business.",
+   "links": "Mathematics: learner enhances skills of mathematical operations when calculating values for assets, liabilities and capital.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     35,
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.ENTREP.BOOKKEEPING.a",
+     "letter": "a",
+     "text": "explain the importance of bookkeeping in entrepreneurship",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.BOOKKEEPING.b",
+     "letter": "b",
+     "text": "classify business transactions in bookkeeping",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.BOOKKEEPING.c",
+     "letter": "c",
+     "text": "prepare simple financial statements for a business",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.BOOKKEEPING.d",
+     "letter": "d",
+     "text": "appreciate the importance of financial records in day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING",
+   "number": "5.2",
+   "strand": "Entrepreneurship",
+   "sub_strand": "Income and Budgeting",
+   "sequence": 502,
+   "lessons": 9,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "share experiences on the meaning and sources of income for an individual,",
+    "brainstorm and present on the importance of budgeting,",
+    "discuss and present on ways of spending money wisely,",
+    "prepare a simple personal budget,",
+    "brainstorm and present on the ethical and unethical practices on income and budgeting. The learner is guided to:"
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to prepare a personal budget?",
+    "What are the ethical issues in income and budgeting?",
+    "How is the"
+   ],
+   "core_competences": "Communication and Collaboration: learner acquires writing, speaking, listening and team-working skills when sharing experiences, brainstorming, and presenting on the sources of income and importance of budgeting.\nCritical Thinking and Problem Solving: learner acquires evaluation skills when preparing a simple personal budget.",
+   "values": "Integrity: learner develops ethical practices when budgeting and spending money.\nResponsibility: learner performs tasks assigned when brainstorming and presenting on the importance of budgeting.\nRespect: learner appreciates diverse opinions of others when sharing experiences on the meaning and sources of income for an individual.",
+   "pcis": "Financial Literacy: learner enhances financial skills when preparing a personal budget and wise spending of money.",
+   "links": "Mathematics: learner enhances mathematical operation skills when preparing a simple personal budget.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     37,
+     38,
+     39
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.a",
+     "letter": "a",
+     "text": "identify sources of income for an individual",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.b",
+     "letter": "b",
+     "text": "explain the importance of budgeting in day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.c",
+     "letter": "c",
+     "text": "prepare a simple budget for personal financial management",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.d",
+     "letter": "d",
+     "text": "explore ethical and unethical practices in budgeting",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.e",
+     "letter": "e",
+     "text": "appreciate the importance of financial planning in income management. By the end of the sub",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES",
+   "number": "5.3",
+   "strand": "Entrepreneurship",
+   "sub_strand": "of Goods and Services",
+   "sequence": 503,
+   "lessons": 6,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and present the meaning and importance of marketing,",
+    "interact with available resources on sources of information about the market and its potential customers,",
+    "discuss factors considered when selecting a suitable market for goods and services,",
+    "brainstorm on the enabling conditions to market goods and services (type of roads, quality of vehicles, communication networks among others)",
+    "use print or digital media to search and present information on ICT applications used in marketing of goods and services."
+   ],
+   "key_inquiry_questions": [
+    "market of goods and services selected?",
+    "Where can information about the market and its potential customers be sourced from?"
+   ],
+   "core_competences": "Communication and Collaboration: learner acquires writing, speaking, listening and team-working skills when discussing and presenting on the meaning and importance of marketing.\nDigital Literacy: learner acquires skills of interacting with digital technology when searching and presenting information on ICT applications used in marketing of goods and services.\nCritical Thinking and Problem Solving: learner acquires research and explanation skills when brainstorming and presenting information on the conditions to market goods and services.",
+   "values": "Respect: learner shows regard for self and others when discussing and presenting on the meaning and importance of marketing.\nResponsibility: learner shows accountability when searching and presenting information on ICT applications used in marketing of goods and services.",
+   "pcis": "Safety: learner observes online safety when using print or digital media to search for information on ICT applications used in marketing of goods and services\nSafety and security: learner acquires road safety awareness when brainstorming and presenting information on types of roads and safe vehicles required to market goods and services",
+   "links": "Social Studies: learner enhances knowledge of trade when discussing marketing of goods and services.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 6, summary says 8; a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.a",
+     "letter": "a",
+     "text": "explain the importance of marketing to a business",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.b",
+     "letter": "b",
+     "text": "analyse the sources of information about the market for its potential customers",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.c",
+     "letter": "c",
+     "text": "explore factors considered when selecting a suitable market for goods and services",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.d",
+     "letter": "d",
+     "text": "select tools to market goods and services",
+     "status": "kicd_read"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.e",
+     "letter": "e",
+     "text": "recognise suitable markets for goods and services",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN",
+   "number": "5.4",
+   "strand": "Entrepreneurship",
+   "sub_strand": "Distribution of Goods and Services",
+   "sequence": 504,
+   "lessons": 7,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss and present the meaning of channels of distribution and role of intermediaries in distribution of goods and services,",
+    "search from available resources the role of intermediaries in distribution of goods and services to the consumer,",
+    "search and watch video clips on channels for distributing different goods and services,",
+    "prepare a chart on channels for distribution of different goods and services,",
+    "read and discuss stories on different distribution channels for goods and services,",
+    "debate on ethical and unethical practices on distribution of goods and services."
+   ],
+   "key_inquiry_questions": [
+    "How is the distribution of goods and services carried out in day-to-day life?",
+    "Which ethical issues influence distribution of goods and services?"
+   ],
+   "core_competences": "Digital Literacy: learner acquires the skills of interacting with digital devices when watching and listening to video clips on channels for distributing goods and services.\nCritical Thinking and Problem Solving: learner acquires interpretation and inference skills when debating on ethical issues in distribution of goods and services.",
+   "values": "Respect: learner develops regard for self and others when discussing the meaning of channels of distribution and role of intermediaries in the distribution of goods and services.\nPeace: learner displays tolerance and respect for others when debating on ethical issues on distribution of goods and services.",
+   "pcis": "Social Cohesion: learner improves on their interpersonal relationships when debating on ethical issues on distribution of goods and services.",
+   "links": "Social Studies: learner enhances knowledge on trade when learning about distribution of goods and services.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+    "design": "Pre-Technical Studies Grade 8 - July 2024 - Revised.pdf",
+    "version": "First published 2023; Revised 2024",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.a",
+     "letter": "a",
+     "text": "explain the role of intermediaries in the distribution of goods and services",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.b",
+     "letter": "b",
+     "text": "illustrate the channels for distributing different goods and services in business",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.c",
+     "letter": "c",
+     "text": "analyse ethics in distribution of goods and services",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.d",
+     "letter": "d",
+     "text": "value the need for distribution of goods and services in the community",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}

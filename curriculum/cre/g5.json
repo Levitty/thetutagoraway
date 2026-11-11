@@ -1,0 +1,1925 @@
+{
+ "framework": "cbc",
+ "subject_key": "cre",
+ "grade": 5,
+ "source": "KICD Christian Religious Education, First Published 2017; Revised 2024 (text layer)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "totals": {
+  "strands": 5,
+  "sub_strands": 30,
+  "outcomes": 115,
+  "lessons": 94,
+  "skills": 0,
+  "prerequisites": 0,
+  "misconceptions": 0
+ },
+ "sub_strands": [
+  {
+   "code": "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A",
+   "number": "1.1",
+   "strand": "Creation",
+   "sub_strand": "My purpose Talents and abilities",
+   "sequence": 101,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm. in small groups, the meaning of talents, gifts and abilities,",
+    "write on flash cards activities they like doing at home, school and in church,",
+    "in groups, discuss how the activities they have listed aid in nurturing their talents, gifts and abilities,",
+    "discuss God’s purpose for his or her life; Jeremiah 29:11,",
+    "in pairs, list what they want to become in future,",
+    "discuss why it is important to live a purposeful life,",
+    "in turns, read Matthew 25:14-30 on the parable of the talents and narrate how different talents were used,",
+    "watch a video clip on the parable of the talents and list lessons learnt,",
+    "read James 1:17A and say what they have learnt,",
+    "write 1Peter 4:10 on flash cards and recite it,",
+    "compose songs or poems on how they nurture their talents, gifts and abilities."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to know your talents, gifts and abilities?",
+    "How do you nurture your talents, gifts and abilities?"
+   ],
+   "core_competences": "Self-efficacy: the skill of knowing ‘who I am, is nurtured as learners share about their God-given gifts, talents and abilities.\nDigital literacy: the skill of connecting with digital devices is enhanced as learners watch a video clip on the parable of talents.",
+   "values": "",
+   "pcis": "Human rights and responsibilities: learners brainstorm on God’s purpose for their lives and why it is important to live a purposeful life. Link to Values: Responsibility: learners share how they nurture their talents.",
+   "links": "Social Studies: social interactions skills are applied as they learn about their God-given talents and abilities.\nEnglish: reading skills are applied as they read Bible texts.\nCreative Arts: the skill of performing is enhanced as they compose and sing songs.",
+   "design_notes": "Second read left this for a person to confirm: values: heading on the page but no text read; a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     13,
+     14,
+     15
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.a",
+     "letter": "a",
+     "text": "identify God’s purpose for his or her life to live meaningfully",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.b",
+     "letter": "b",
+     "text": "narrate the parable of the talents",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.c",
+     "letter": "c",
+     "text": "apply lessons learnt from the parable in their day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.d",
+     "letter": "d",
+     "text": "participate in different activities to nurture their talents, gifts and abilities. Specific Learning Outcomes Suggested Learning Experiences Suggested",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.CREATI.WORK",
+   "number": "1.2",
+   "strand": "Creation",
+   "sub_strand": "Work",
+   "sequence": 102,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read Genesis 1:26 and Genesis 2:15 and list responsibilities given to human beings by God,",
+    "list chores they do at home, school and in the community,",
+    "buzz on how they take care of the environment at home and at school,",
+    "come up with different projects at school or home e.g. plant trees/ vegetables, rear chicken and nurture the projects until they get results/harvest,",
+    "brainstorm on the meaning of ‘child labour’,",
+    "outline the causes of child labour today,",
+    "list the negative effects of child labour,",
+    "mention whom to report to if forced into child labour,",
+    "list age-appropriate tasks or chores they should engage in."
+   ],
+   "key_inquiry_questions": [
+    "Why should you work?",
+    "Why is child labour an abuse of the rights of a child?"
+   ],
+   "core_competences": "Citizenship: family life skills are demonstrated as learners identify their roles at home, school and church.\nCritical thinking and problem solving: the skill of interpretation and inference is exhibited as learners identify causes of child labour and ways of eliminating the vice.",
+   "values": "Social justice: learners identify forms of child labour and how to report the vice.",
+   "pcis": "Children Rights: learners know their rights and where to report if forced into child labour.",
+   "links": "Agriculture: the skill of farming is nurtured as learners start different projects at school or home e.g. plant trees/ vegetables and nurture the projects until they get results/harvest.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     15,
+     16
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.CREATI.WORK.a",
+     "letter": "a",
+     "text": "identify three responsibilities given to human beings by God",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CREATI.WORK.b",
+     "letter": "b",
+     "text": "demonstrate good stewardship by taking care of God’s creation",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CREATI.WORK.c",
+     "letter": "c",
+     "text": "outline their roles at home, school and church",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CREATI.WORK.d",
+     "letter": "d",
+     "text": "explain the causes of child labour today",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CREATI.WORK.e",
+     "letter": "e",
+     "text": "explain the effects of child labour for protection of self and others",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CREATI.WORK.f",
+     "letter": "f",
+     "text": "desire to engage in age-appropriate tasks/chores",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.CREATI.THE_FALL_OF_MAN",
+   "number": "1.3",
+   "strand": "Creation",
+   "sub_strand": "The Fall of Man",
+   "sequence": 103,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, brainstorm on the importance of obedience,",
+    "share experiences on how they obey their parents and teachers,",
+    "read Genesis 3:1-11 in turns and explain the fall of man,",
+    "brainstorm on why they should obey rules and regulations,",
+    "discuss lessons learnt from the fall of man (Adam and Eve),",
+    "discuss the benefits of being an obedient person."
+   ],
+   "key_inquiry_questions": [
+    "Why is it important to obey God?"
+   ],
+   "core_competences": "Learning to learn: the skill of self-discipline is exhibited as learners obey parents and teachers.",
+   "values": "Responsibility: learners obey rules and regulation at home and school.",
+   "pcis": "Human rights and responsibilities: learners brainstorm on the benefits of being an obedient person.",
+   "links": "Social Studies: interpersonal skills are nurtured as learners brainstorm on factors that brought the fall of the first human beings and the benefits of obedience.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     17
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.CREATI.THE_FALL_OF_MAN.a",
+     "letter": "a",
+     "text": "describe the fall of man according to Genesis 3:1-11",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CREATI.THE_FALL_OF_MAN.b",
+     "letter": "b",
+     "text": "outline five lessons learnt from the fall of man",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CREATI.THE_FALL_OF_MAN.c",
+     "letter": "c",
+     "text": "desire to be obedient in day-to- day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.CREATI.FAMILY_UNITY",
+   "number": "1.4",
+   "strand": "Creation",
+   "sub_strand": "Family Unity",
+   "sequence": 104,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "list factors that promote family unity and share with the class,",
+    "explain the importance of family unity,",
+    "read Colossians 3:13-14 and share lessons learnt,",
+    "list the challenges they face as a family,",
+    "in pairs, discuss ways in which they overcome challenges faced in their families,",
+    "say how they can make their family happy as young people,",
+    "sing a song about family unity."
+   ],
+   "key_inquiry_questions": [
+    "Why is family unity important?",
+    "How can family unity be maintained?"
+   ],
+   "core_competences": "Critical thinking and problem solving: the skill of evaluation and decision making is applied as learners identify challenges faced by families and how to overcome them.\nCitizenship: the skill of information and communication is enhanced as learners list ways of making the family happy.",
+   "values": "Unity: learners list factors that promote family unity.",
+   "pcis": "Social cohesion: learners discuss ways of contributing to a happy family.",
+   "links": "Social Studies: interpersonal skills are enhanced as they learn about family relationships.\nEnglish: reading, writing and listening skills are nurtured as learners discuss ways of promoting a happy family.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     18,
+     19
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.CREATI.FAMILY_UNITY.a",
+     "letter": "a",
+     "text": "describe the importance of family unity",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CREATI.FAMILY_UNITY.b",
+     "letter": "b",
+     "text": "identify challenges faced by families today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CREATI.FAMILY_UNITY.c",
+     "letter": "c",
+     "text": "outline ways he/she can contribute to a happy family",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CREATI.FAMILY_UNITY.d",
+     "letter": "d",
+     "text": "take part in doing simple chores at home",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_BI.THE_BIBLE_AS_A_GUIDE",
+   "number": "2.1",
+   "strand": "The Bible",
+   "sub_strand": "The Bible as a Guide",
+   "sequence": 201,
+   "lessons": 2,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "list different uses of the Bible in society today,",
+    "brainstorm on the benefits of reading the Bible,",
+    "write summary points on how the word of God guides him or her in daily life,",
+    "write Joshua 1:8, and Psalms 1:1-3 on flash cards and state the benefits of reading the Bible,",
+    "find out from parents or guardians the importance of reading the Bible and make notes,",
+    "share how the Bible helps them to relate well with others at school, home, church and in the community,",
+    "sing relevant songs about the word of God."
+   ],
+   "key_inquiry_questions": [
+    "Why should the Bible guide us in daily life?"
+   ],
+   "core_competences": "Communication: writing skills are enhanced as learners write messages from the Bible on flash cards.\nLearning to learn: the skill of reflection on own learning is enhanced as learners find out from their parents or guardians the importance of reading the Bible.",
+   "values": "Love: learners respect each other during group discussions.",
+   "pcis": "Unity is nurtured as learners share how the Bible guides them to relate with others in class, school, home and in the community.",
+   "links": "Creative Arts: creative skills are applied as they sing.\nEnglish: the skill of reading is applied as they read the Bible.\nSocial Studies: interpersonal skills are enhanced as learners live in harmony with others.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 2, summary says 3.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     21,
+     22
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.a",
+     "letter": "a",
+     "text": "outline different uses of the Bible in society today",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.b",
+     "letter": "b",
+     "text": "identify the benefits of reading the Bible",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.c",
+     "letter": "c",
+     "text": "read the Bible always to grow spiritually",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_",
+   "number": "2.2",
+   "strand": "The Bible",
+   "sub_strand": "Bible Stories: Peter and John in the Temple",
+   "sequence": 202,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in groups, brainstorm on occasions they demonstrated faith in God,",
+    "in turns, read Acts 4:1-5, 7-13 and outline lessons learnt from the story of Peter and John,",
+    "read Acts 4:12 and state how they respond to salvation call,",
+    "watch a video clip on the story of Peter and John,",
+    "brainstorm on how and why Christians should stand firm in their faith,",
+    "compose a poem on faith,",
+    "sing a relevant song on having faith in God."
+   ],
+   "key_inquiry_questions": [
+    "How did Peter and John demonstrate faith in God?"
+   ],
+   "core_competences": "Digital literacy: the skill of using and interacting with technology is enhanced as learners watch a video clip on the story of Peter and John.\nCommunication: the skills of listening and speaking are enhanced as learners brainstorm on occasions when they demonstrated faith in God.",
+   "values": "Unity: learners take turns to read scriptures and respect each other’s opinion during group discussions.",
+   "pcis": "Leadership: learners outline and emulate good qualities learnt from the story of Peter and John in the Temple.",
+   "links": "Social Studies: learners defend what is right and just.\nEnglish: learners develop language skills as they compose a poem.\nCreative arts: learners nurture performing skills as they compose and sing a song.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     23,
+     24
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_.a",
+     "letter": "a",
+     "text": "narrate the story of Peter and John in the Temple",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_.b",
+     "letter": "b",
+     "text": "outline lessons learnt from the story of Peter and John",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_.c",
+     "letter": "c",
+     "text": "discuss why Christians should stand firm in their faith",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_.d",
+     "letter": "d",
+     "text": "desire to stand firm in their Christian faith",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU",
+   "number": "2.3",
+   "strand": "The Bible",
+   "sub_strand": "King Solomon the wise ruler",
+   "sequence": 203,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss how they solve disputes in class,",
+    "in turns, read 1Kings 3:16-28 and retell the story of King Solomon,",
+    "watch a video clip on Solomon and the two women in dispute,",
+    "narrate situations/scenarios when they used wisdom to solve a problem,",
+    "list lessons learnt from the story of King Solomon,",
+    "read Proverbs 9:10 and share with classmates what they have learnt,",
+    "write Proverbs 9:10 on a flash card and recite it."
+   ],
+   "key_inquiry_questions": [
+    "How did Solomon demonstrate wisdom in his judgement?"
+   ],
+   "core_competences": "Communication and Collaboration: the skills of listening, speaking and teamwork are enhanced as learners discuss how they solve disputes in class.\nSelf-efficacy: the skill of saying their needs is nurtured as learners narrate situations/scenarios when they used wisdom to solve a problem.",
+   "values": "Peace: learners narrate situations/scenarios when they used wisdom to solve a problem.\nSocial justice is inculcated as learners learn about fairness from the story of King Solomon.",
+   "pcis": "Leadership and good governance: learners discuss how they solve disputes and narrate situations/scenarios where they used wisdom to solve a problem.",
+   "links": "English: reading skills are enhanced as learners read and discuss in groups.\nScience and Technology: the skill of interacting and using technology is nurtured as learners use a digital device to watch a video clip.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     25,
+     26
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.a",
+     "letter": "a",
+     "text": "narrate the story of King Solomon",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.b",
+     "letter": "b",
+     "text": "outline lessons learnt from the story of King Solomon",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.c",
+     "letter": "c",
+     "text": "apply lessons learnt from the story of King Solomon in daily life",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.d",
+     "letter": "d",
+     "text": "make wise decisions in daily life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_BI.NOAH_AND_HIS_SONS",
+   "number": "2.4",
+   "strand": "The Bible",
+   "sub_strand": "Noah and his sons",
+   "sequence": 204,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in turns, read Genesis 9:18-23 about Noah and his sons,",
+    "in groups, discuss lessons learnt from the story of Noah,",
+    "write the names of Noah’s sons on a paper or use a digital device,",
+    "list the benefits of respecting the elderly,",
+    "role-play how to show respect to the elderly at home and in public places,",
+    "explain the importance of respecting the elderly in today’s society",
+    "compose a poem titled, ‘respect the elderly.’"
+   ],
+   "key_inquiry_questions": [
+    "Why is the story of Noah still relevant in today’s society?"
+   ],
+   "core_competences": "Imagination and Creativity: the skill of originality is nurtured as learners role-play how to show respect to the elderly.\nCritical thinking and problem solving: active listening and communication skills are nurtured as learners list the benefits of respecting the elderly.",
+   "values": "",
+   "pcis": "Social cohesion: learners role-play how to show respect to the elderly in public places. Links to Values:\nRespect: learners treat the elderly with respect.",
+   "links": "English: the skill of writing is nurtured as learners compose a poem.\nScience and Technology: the skill of using and interacting with technology is enhanced as learners use a digital device to write the names of Noah’s sons.",
+   "design_notes": "Second read left this for a person to confirm: values: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     27,
+     28
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_BI.NOAH_AND_HIS_SONS.a",
+     "letter": "a",
+     "text": "narrate the story of Noah and his sons",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_BI.NOAH_AND_HIS_SONS.b",
+     "letter": "b",
+     "text": "explain five ways of showing respect to the elderly",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_BI.NOAH_AND_HIS_SONS.c",
+     "letter": "c",
+     "text": "respect the elderly at home, church and in the community",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL",
+   "number": "2.5",
+   "strand": "The Bible",
+   "sub_strand": "A hand writes on the wall",
+   "sequence": 205,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning of the word, ‘humility’,",
+    "list sacred vessels used in their churches,",
+    "in turns, read Daniel 5:1-13; 25- 28 and narrate the story,",
+    "list the holy vessels mentioned in the story,",
+    "watch a video clip on the story and outline lessons learnt,",
+    "outline qualities portrayed by Daniel from the story,",
+    "debate on the advantages of humility,",
+    "list ways in which they can show excellence in whatever they do at home, school and in church."
+   ],
+   "key_inquiry_questions": [
+    "Why did the hand appear on the wall?"
+   ],
+   "core_competences": "Learning to learn: the skill of learning independently is nurtured as learners list vessels used in their churches.\nCritical thinking and problem solving: the skill of interpretation and inference is nurtured as learners outline qualities portrayed by Daniel in the story.",
+   "values": "Unity: learners work in pairs and groups and take turns to air their views.",
+   "pcis": "Leadership and good governance: learners outline and emulate leadership qualities portrayed by Daniel in the story.",
+   "links": "English: the skills of reading and speaking are applied as they read the Bible.\nScience and Technology: the skill of using and interacting with technology is nurtured as they watch a video clip.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     29,
+     30
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.a",
+     "letter": "a",
+     "text": "explain the story of a hand writing on the wall",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.b",
+     "letter": "b",
+     "text": "outline lessons learnt from the story",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.c",
+     "letter": "c",
+     "text": "list five benefits of humility as guided by the story",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.d",
+     "letter": "d",
+     "text": "emulate Daniel’s example by being faithful to God",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST",
+   "number": "2.6",
+   "strand": "The Bible",
+   "sub_strand": "Mount Carmel Contest",
+   "sequence": 206,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on reasons that lead to the worship of idol gods today,",
+    "state why idol worship is against the Ten Commandments and avoid being lured into it,",
+    "in turns, read 1Kings 18:22-39 and narrate the story of Mount Carmel contest,",
+    "watch a video clip on Mount Carmel contest,",
+    "list the differences between the true and false gods from the contest,",
+    "describe lessons learnt from Mount Carmel Contest,",
+    "discuss why Elijah defended the worship of the true God,",
+    "explain why it is good to worship the true God alone,",
+    "list false religions, cults, idol worship, devil worship, radicalised groups in today’s society and how to avoid joining such groups,",
+    "pray to God for guidance to overcome and avoid ungodly groups/idol worship."
+   ],
+   "key_inquiry_questions": [
+    "How was God’s power demonstrated in this story?"
+   ],
+   "core_competences": "Learning to learn: the skill of learning independently is enhanced as learners list false religions, cults, devil worship and radicalised groups in today’s society and how to avoid joining such groups.\nCritical thinking and problem solving: the skill of evaluation and decision making is enhanced as learners avoid idol worship/devil worship/radicalised groups/cults/illuminati.",
+   "values": "Love is nurtured as learners discuss why Elijah defended the worship of the true God.",
+   "pcis": "Leadership and good governance: learners discuss why Elijah defended the worship of the true God.",
+   "links": "Science and Technology: the skill of using technology is nurtured as learners use digital devices.\nSocial Studies: they learn about natural features, that is, Mount Carmel.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     31,
+     32
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST.a",
+     "letter": "a",
+     "text": "narrate the story of Mount Carmel contest",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST.b",
+     "letter": "b",
+     "text": "distinguish between true and false gods",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST.c",
+     "letter": "c",
+     "text": "outline lessons learnt from Mount Carmel contest",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST.d",
+     "letter": "d",
+     "text": "emulate prophet Elijah by worshipping the true God",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES",
+   "number": "2.7",
+   "strand": "The Bible",
+   "sub_strand": "The Birth of Moses",
+   "sequence": 207,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "share experiences of when and how God protected them from danger,",
+    "read Exodus 2:1-10 in turns and narrate the story,",
+    "watch a video clip about Moses,",
+    "discuss lessons learnt from the story and write summary points,",
+    "state values learnt from the story of Moses,",
+    "sing a song related to the birth of Moses."
+   ],
+   "key_inquiry_questions": [
+    "How was Moses protected by God?"
+   ],
+   "core_competences": "Digital literacy: the skill of using and interacting with technology is enhanced as learners watch a video clip about Moses.\nCitizenship: the skill of active community service is enhanced as they learn how Pharaoh’s daughter though an Egyptian rescued an Israelite (Moses).",
+   "values": "Love is nurtured as they brainstorm on caring for others.\nSocial justice is portrayed as they state values they h a v e learnt from the story. Links to other learning activity areas:\nCreative Arts: the skill of pitch and rhythm is enhanced as learners sing a relevant song.\nSocial Studies: the skill of care and protection is enhanced as learners learn about children rights.\nAgriculture: the skill of homemaking and family life is nurtured as they learn that Pharaoh’s daughter hired a care taker for Moses.",
+   "pcis": "Child care and protection and children rights are exhibited as learners discuss values learnt from the story.",
+   "links": "",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     33,
+     34
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES.a",
+     "letter": "a",
+     "text": "narrate the story of Moses according to the scriptures",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES.b",
+     "letter": "b",
+     "text": "outline lessons learnt from the story of Moses",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES.c",
+     "letter": "c",
+     "text": "desire to depend on God’s guidance and protection",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_BI.THE_CALL_OF_MOSES",
+   "number": "2.8",
+   "strand": "The Bible",
+   "sub_strand": "The call of Moses",
+   "sequence": 208,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on why they should participate in church activities,",
+    "in groups, read Exodus 3:1-10 and narrate the call of Moses,",
+    "watch a video clip on the call of Moses,",
+    "role-play the call of Moses,",
+    "discuss lessons learnt from the call of Moses,",
+    "discuss with parents or guardians how Christian leaders obey God’s instructions today,",
+    "list values learnt from Moses and write them on a chart."
+   ],
+   "key_inquiry_questions": [
+    "Why did God call Moses?",
+    "How did Moses portray obedience to God?"
+   ],
+   "core_competences": "Learning to learn: the skill of learning independently is nurtured as learners discuss with parents/guardians how Christian leaders obey God’s instructions in the society today.\nImagination and creativity: the skills of originality and experimentation are enhanced as learners role-play the call of Moses.",
+   "values": "Responsibility: learners list values demonstrated by Moses and summarise them on a chart.",
+   "pcis": "Nationalism: learners discuss with parents/guardians how Christian leaders obey God’s instructions in society today.",
+   "links": "Agriculture: the skill of animal husbandry is nurtured as learners learn how Moses took care of his father-in-law’s flock.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     35,
+     36
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_BI.THE_CALL_OF_MOSES.a",
+     "letter": "a",
+     "text": "narrate the call of Moses in Exodus 3:1-10",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.THE_CALL_OF_MOSES.b",
+     "letter": "b",
+     "text": "outline lessons learnt from the call of Moses",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.THE_CALL_OF_MOSES.c",
+     "letter": "c",
+     "text": "explain ways Christian leaders obey God’s instructions today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_BI.THE_CALL_OF_MOSES.d",
+     "letter": "d",
+     "text": "desire to obey God in day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_LI.JOHN_THE_BAPTIST",
+   "number": "3.1",
+   "strand": "The Life of Jesus Christ",
+   "sub_strand": "John the Baptist",
+   "sequence": 301,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "list the causes of social injustices in the society today,",
+    "brainstorm on the meaning of repentance,",
+    "read and respond to the repentance call in Luke 3:3,",
+    "read Luke 3:9-14 and make notes on the teachings of John the Baptist,",
+    "state lessons learnt from the teachings of John the Baptist",
+    "list values learnt from the teachings of John the Baptist,",
+    "say how they practise the values mentioned in the Bible text."
+   ],
+   "key_inquiry_questions": [
+    "Why is the message of John the Baptist still relevant today?"
+   ],
+   "core_competences": "Critical thinking and problem solving: the skill of explanation and reflection is enhanced as learners brainstorm on the meaning and causes of social injustices in society today.\nSelf-efficacy: the skill of saying ‘my needs’ is enhanced as learners say how they practise the values mentioned in the Bible texts.",
+   "values": "Respect is portrayed as they learn the importance of having positive regard towards self and others without prejudice.\nSocial justice is portrayed as they learn how to promote fairness and justice among members of the community.",
+   "pcis": "Social cohesion is nurtured as they learn the need to practise justice in their daily interactions.",
+   "links": "Social Studies: the skill of justice and mercy is nurtured as they brainstorm on the importance of a just society where people repent their sins.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     39,
+     40
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_LI.JOHN_THE_BAPTIST.a",
+     "letter": "a",
+     "text": "explain the teachings of John the Baptist",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.JOHN_THE_BAPTIST.b",
+     "letter": "b",
+     "text": "outline four lessons learnt from the teachings of John the Baptist",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.JOHN_THE_BAPTIST.c",
+     "letter": "c",
+     "text": "practise the values learnt from the teachings of John the Baptist",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.JOHN_THE_BAPTIST.d",
+     "letter": "d",
+     "text": "desire to be a God-fearing Christian as exemplified by John the Baptist",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR",
+   "number": "3.2",
+   "strand": "The Life of Jesus Christ",
+   "sub_strand": "The Baptism of Jesus Christ",
+   "sequence": 302,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "explain the meaning of baptism,",
+    "in pairs, read Luke 3:21-22,",
+    "in groups, identify the key events that took place during the baptism of Jesus Christ,",
+    "draw pictures on the events that took place during the baptism of Jesus Christ,",
+    "in groups, discuss the importance of baptism in the life of a Christian."
+   ],
+   "key_inquiry_questions": [
+    "Why was Jesus Christ baptised?",
+    "What is the importance of baptism in the life of a Christian?"
+   ],
+   "core_competences": "Communication and Collaboration: the skills of reading, speaking and listening are enhanced as learners conduct group discussions.\nImagination and creativity: the skill of originality and exploration is enhanced as learners draw pictures on the events that took place during the baptism of Jesus Christ.\nCritical thinking and problem solving: the skills of communication and active listening are enhanced as learners discuss the importance of baptism in the life of a Christian.",
+   "values": "Respect: learners respect each other’s views during group discussions and as they take turns to air their views.",
+   "pcis": "Social Cohesion: learners work in pairs and groups hence appreciate and embrace their diversity.",
+   "links": "Social Studies: the skill of equity is nurtured as learners reflect on the value of sharing.\nEnglish: the skill of reading and speaking is enhanced as learners read the Bible.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     41,
+     42
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.a",
+     "letter": "a",
+     "text": "outline the events that took place during the baptism of Jesus Christ",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.b",
+     "letter": "b",
+     "text": "state the importance of baptism in the life of a Christian",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.c",
+     "letter": "c",
+     "text": "emulate Jesus Christ by exercising humility in day-to-day life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_LI.CALMING_THE_STORM",
+   "number": "3.3",
+   "strand": "The Life of Jesus Christ",
+   "sub_strand": "Calming the Storm",
+   "sequence": 303,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs, brainstorm on challenges they face in day-to-day life,",
+    "read and narrate the miracle according to Mark 4:35-39,",
+    "watch a video clip on Jesus calming the storm,",
+    "discuss how Jesus Christ showed power over nature,",
+    "list lessons learnt from the miracle of calming the storm,",
+    "sing a song about Jesus calming the storm,",
+    "discuss challenges facing Christians today,",
+    "say how they depend on God to overcome challenges,",
+    "write a poem on God’s power over nature."
+   ],
+   "key_inquiry_questions": [
+    "How is God’s power over nature portrayed in calming the storm?"
+   ],
+   "core_competences": "Self-efficacy: the skill of ‘knowing who I am’ is enhanced as learners say how they depend on God’s power to overcome challenges.\nCritical thinking and problem solving: the skill of evaluation and decision making is enhanced as learners discuss how Jesus demonstrated His power over nature.",
+   "values": "",
+   "pcis": "Safety and security: learners brainstorm on life-threatening situations people face in life as they watch a video clip on Jesus calming the storm. Values,\nPeace is inculcated as learners discuss lessons learnt from the miracle of Jesus calming the storm.",
+   "links": "Creative Arts: the skills of dancing and movement are nurtured as learners sing songs and compose poems.\nSocial Studies: the skill of interpreting maps and locations are exhibited as they identify the sea of Galilee on a map.",
+   "design_notes": "Second read left this for a person to confirm: values: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     43,
+     44
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_LI.CALMING_THE_STORM.a",
+     "letter": "a",
+     "text": "narrate the miracle of calming the storm",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_LI.CALMING_THE_STORM.b",
+     "letter": "b",
+     "text": "discuss lessons learnt from the miracle of calming the storm",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_LI.CALMING_THE_STORM.c",
+     "letter": "c",
+     "text": "explain challenges faced by Christians today",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_LI.CALMING_THE_STORM.d",
+     "letter": "d",
+     "text": "desire to depend on God to overcome daily challenges",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN",
+   "number": "3.4",
+   "strand": "The Life of Jesus Christ",
+   "sub_strand": "Feeding the four thousand",
+   "sequence": 304,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "helped a person or persons in need,",
+    "in groups, list ways of helping the needy in society,",
+    "in pairs, read Matthew 15:32-38 and retell the story of feeding the four thousand men,",
+    "draw pictures about the miracle of feeding the four thousand men,",
+    "watch a video clip on the feeding of the four thousand men,",
+    "in groups, discuss and summarise lessons learnt from miracle of feeding the four thousand men,",
+    "write a reflection journal on how to help those in need."
+   ],
+   "key_inquiry_questions": [
+    "How did Jesus Christ show compassion?",
+    "Why should Christians help the needy?"
+   ],
+   "core_competences": "Creativity and imagination: the skills of communication and self-expression are enhanced as learners role-play the feeding of the four thousand.\nCritical thinking and problem solving: the skill of reflection is enhanced as learners discuss ways of showing kindness to those in need.",
+   "values": "Love: learners discuss why showing kindness to others is important as demonstrated by Jesus Christ when He fed the four thousand men.",
+   "pcis": "Social awareness skills: empathy is exhibited as learners write a reflection journal on how to help those in need.",
+   "links": "Agriculture: Jesus was concerned that those listening to Him were hungry hence provided them with food.\nEnglish: the skills of reading, speaking and listening are exhibited as learners engage in activities and learn new words.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     45,
+     46
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.a",
+     "letter": "a",
+     "text": "list f o u r ways of helping the needy in today’s society",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.b",
+     "letter": "b",
+     "text": "describe the miracle of feeding the four thousand",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.c",
+     "letter": "c",
+     "text": "outline lessons learnt from the feeding of the four thousand",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.d",
+     "letter": "d",
+     "text": "practise the value of love by helping the needy",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA",
+   "number": "3.5",
+   "strand": "The Life of Jesus Christ",
+   "sub_strand": "Healing the Paralysed Man",
+   "sequence": 305,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "share experiences of challenges they face in life,",
+    "brainstorm on the importance of depending on God when faced with challenges such as sickness or disease,",
+    "in pairs, read and retell the miracle in Mark 2:1-5,",
+    "watch a video clip on Jesus healing the paralysed man,",
+    "in groups, discuss lessons learnt from the healing of the paralysed man,",
+    "compose and sing a song on the healing power of God."
+   ],
+   "key_inquiry_questions": [
+    "Why is the healing of the paralysed man significant to Christians today?"
+   ],
+   "core_competences": "Learning to learn: the skill of learning independently is enhanced as learners appreciate the miracle of healing the paralytic.\nDigital literacy: the skill of using and interacting with technology is enhanced as learners watch a video clip on the healing of the paralytic.",
+   "values": "Love: compassion is nurtured as learners show concern for the needy in their communities.\nSocial justice: learners show empathy as they identify and attend to those who are suffering in their families, school and church.",
+   "pcis": "Non-communicable diseases: learners become aware of the causes and effects of paralysis.\nHuman rights and responsibilities: learners discuss different ways people solve their problems.",
+   "links": "Agriculture: the skill of health and hygiene is enhanced as learners learn about paralysis.\nEnglish: the skill of reading is nurtured as learners learn new vocabulary and as they read the Holy Bible.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     47,
+     48
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA.a",
+     "letter": "a",
+     "text": "describe the healing of the paralysed man",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA.b",
+     "letter": "b",
+     "text": "outline lessons learnt from the healing of the paralysed man",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA.c",
+     "letter": "c",
+     "text": "desire to pray to God when faced with challenges in life",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE",
+   "number": "3.6",
+   "strand": "The Life of Jesus Christ",
+   "sub_strand": "Parable of the Lost Sheep",
+   "sequence": 306,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on ways they evangelise to the lost/sinners,",
+    "in pairs, read Luke 15:1-7 and narrate the parable of the lost sheep,",
+    "role-play the parable of the lost sheep,",
+    "in groups, list lessons learnt from the parable of the lost sheep,",
+    "read Luke 15:7 and say how they respond to repentance,",
+    "compose a poem on God’s love for the lost."
+   ],
+   "key_inquiry_questions": [
+    "Why is the parable of the lost sheep significant to Christians today?"
+   ],
+   "core_competences": "Imagination and creativity: the skills of originality and exploration are enhanced as learners role-play the parable of the lost sheep.\nLearning to learn: the skill of learning independently is enhanced as learners list lessons learnt from the parable.",
+   "values": "Responsibility: learners reach out to the lost through evangelisation.",
+   "pcis": "Leadership and good governance are enhanced as different learners take on different roles to perform tasks.",
+   "links": "English: the skills of reading and speaking are nurtured as learners read and recite Bible verses.\nCreative Arts: the skill of composing is enhanced as learners compose a poem on God’s love for the lost.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     49
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.a",
+     "letter": "a",
+     "text": "narrate the parable of the lost sheep",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.b",
+     "letter": "b",
+     "text": "outline five lessons learnt from the parable of the lost sheep",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.c",
+     "letter": "c",
+     "text": "reach out to the lost as taught by Jesus Christ",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_LI.SERMON_ON_THE_MOUNT",
+   "number": "3.7",
+   "strand": "The Life of Jesus Christ",
+   "sub_strand": "Sermon on the Mount",
+   "sequence": 307,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss how they should relate with their peers during interclass competitions,",
+    "list the values that can enhance good relations during inter-class competitions,",
+    "use flash cards to list and display the values",
+    "discuss how they apply the virtues in Matthew 5:7-9 in their daily lives,",
+    "in pairs, brainstorm how they demonstrate mercy and peace while dealing with others,",
+    "reflect on the meaning of a ‘pure heart,’ and write their reflections in a journal."
+   ],
+   "key_inquiry_questions": [
+    "How does the Sermon on the Mount foster harmonious co-existence?"
+   ],
+   "core_competences": "Self-efficacy: the skill of ‘knowing who I am’ is enhanced as learners share incidences when they demonstrated different virtues (mercy, purity of heart, peace).\nCitizenship: active community life skills are enhanced as learners list the values that can enhance good interpersonal relationships during inter-class competitions.",
+   "values": "Peace: learners live harmoniously with each other.\nSocial justice: learners promote peace by treating each other with dignity.",
+   "pcis": "Social cohesion: human rights and responsibilities are exhibited as they treat each other well without prejudice.",
+   "links": "Social Studies: the skill of social cohesion is enhanced as they learn how to live peacefully with each other.\nEnglish: the skill of reading and speaking is nurtured as learners read and discuss various assignments.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     50,
+     51
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_LI.SERMON_ON_THE_MOUNT.a",
+     "letter": "a",
+     "text": "list virtues outlined in the Sermon on the Mountain",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.SERMON_ON_THE_MOUNT.b",
+     "letter": "b",
+     "text": "apply the virtues in their interaction with others",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.SERMON_ON_THE_MOUNT.c",
+     "letter": "c",
+     "text": "desire to live harmoniously with others",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN",
+   "number": "3.8",
+   "strand": "The Life of Jesus Christ",
+   "sub_strand": "The Rich Young Man",
+   "sequence": 308,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on why it is important to share items/resources with others,",
+    "discuss, in pairs, how they share what they have with the less fortunate",
+    "in pairs, read Matthew19:16-22 and retell the story,",
+    "role-play the story of the rich young man,",
+    "list lessons learnt form the story of the rich young man,",
+    "brainstorm on the meaning of, ‘eternal life’ and share findings in class,",
+    "read Matthew19:16-21 and list what one should do to inherit eternal life,",
+    "compose a poem on how to inherit eternal life."
+   ],
+   "key_inquiry_questions": [
+    "Why was the rich young man unable to share his wealth?"
+   ],
+   "core_competences": "Imagination and creativity: learners role-play the story of the rich young man.",
+   "values": "Social justice: learners have equal opportunities when role-playing the story of the rich young man.",
+   "pcis": "Citizenship: social cohesion is exhibited as learners carry out activities together as a team.",
+   "links": "English: the skills of reading and speaking are nurtured as learners read Bible texts.\nCreative Arts: the skill of creativity is nurtured as learners compose a poem.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     52,
+     53
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.a",
+     "letter": "a",
+     "text": "retell the story of the rich young man",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.b",
+     "letter": "b",
+     "text": "outline lessons learnt from the story of the rich young man",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.c",
+     "letter": "c",
+     "text": "apply lessons learnt from the story in their day-to-day lives",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.d",
+     "letter": "d",
+     "text": "share resources with others as guided in the story",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT",
+   "number": "3.9",
+   "strand": "The Life of Jesus Christ",
+   "sub_strand": "A friend at Midnight",
+   "sequence": 309,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning of the word, ‘parable’,",
+    "in turns, read Luke 11:5-10 and narrate the parable,",
+    "watch a video clip on the parable of a friend at midnight,",
+    "dramatise the story of a friend at midnight,",
+    "outline lessons learnt from the parable,",
+    "in groups, discuss the importance of praying persistently,",
+    "sing a relevant song about a friend at midnight."
+   ],
+   "key_inquiry_questions": [
+    "How does the parable of a friend at midnight relate to Christians today?"
+   ],
+   "core_competences": "Communication and collaboration: learners will develop the skills of listening, speaking and teamwork as they role-play the story of a friend at midnight.",
+   "values": "Respect: learners work in groups and respect each other’s opinions.",
+   "pcis": "Citizenship: nationalism is enhanced as learners desire to treat their neighbours well.",
+   "links": "English: the skills of reading, listening and speaking are exhibited as learners read the scriptures.\nScience and Technology: the skill of using and interacting with technology is exhibited as learners utilise technology to watch a video clip on the parable of a friend at midnight.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 5, summary says 3; a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     54,
+     55,
+     58
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.a",
+     "letter": "a",
+     "text": "narrate the story of a friend at midnight",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.b",
+     "letter": "b",
+     "text": "outline lessons learnt from the story of a friend at midnight",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.c",
+     "letter": "c",
+     "text": "apply lessons learnt from the parable in day-to-day life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.d",
+     "letter": "d",
+     "text": "desire to be persistent in prayers. Specific Learning Outcomes Suggested Learning Experiences Suggested",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_CH.THE_EARLY_CHURCH",
+   "number": "4.1",
+   "strand": "The Church",
+   "sub_strand": "The Early Church",
+   "sequence": 401,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "discuss, in groups t h e importance of Church unity today,",
+    "in pairs, read Acts 2:42-47 and list activities which promoted unity in the early Church,",
+    "brainstorm on values needed to promote Church unity today,",
+    "compose a song on Church unity."
+   ],
+   "key_inquiry_questions": [
+    "Why is church unity important?"
+   ],
+   "core_competences": "Communication and collaboration: the skills of listening, speaking and teamwork are enhanced as learners discuss t h e importance of Church unity today.",
+   "values": "Social justice: learners brainstorm on values needed to promote Church unity today.",
+   "pcis": "Citizenship: leadership and good governance are reinforced as learners brainstorm on values needed to promote Church unity today.",
+   "links": "English: the skills of reading and speaking are enhanced as learners read the Holy Bible.",
+   "design_notes": "Second read left this for a person to confirm: a line on this page ran across two columns and was cut by position.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     58
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_CH.THE_EARLY_CHURCH.a",
+     "letter": "a",
+     "text": "outline the importance of Church unity today",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_CH.THE_EARLY_CHURCH.b",
+     "letter": "b",
+     "text": "list activities which promoted unity in the early Church",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_CH.THE_EARLY_CHURCH.c",
+     "letter": "c",
+     "text": "identify five values needed by Christians to promote Church unity",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_CH.THE_EARLY_CHURCH.d",
+     "letter": "d",
+     "text": "appreciate unity in Church today",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_CH.THE_LORD_S_SUPPER",
+   "number": "4.2",
+   "strand": "The Church",
+   "sub_strand": "The Lord’s Supper",
+   "sequence": 402,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "share how the Lord’s Table/Eucharist/Sacrament / Holy Communion is organised in their churches,",
+    "sing a relevant song about the Lord’s Table,",
+    "read Luke 22:14-20, in turns, and describe the events that took place,",
+    "watch a video clip on the Lord’s Supper,",
+    "say the importance of the Lord’s Table/Eucharist to Christians today,",
+    "discuss with their parents/guardians the importance of celebrating the Lord’s Supper and report to the class.",
+    "list valuesrequired when partaking the Eucharist/Lord’s Table/Sacrament /Holy Communion."
+   ],
+   "key_inquiry_questions": [
+    "Why do Christians celebrate the Lord’s Table/Eucharist/Sacra ment/Holy Communion today?"
+   ],
+   "core_competences": "Creativity and imagination: learners will develop the skill of making connections and explore attitudes/values required when partaking of the Eucharist/Lord’s Table,\nDigital literacy: the skill of interacting with technology as well as digital citizenship is developed as learners watch a video clip on the Lord’s Supper.",
+   "values": "Unity is enhanced as learners work in groups to perform different activities.",
+   "pcis": "Citizenship: social cohesion is enhanced as learners explain the significance of the Lord’s Supper to Christians today.",
+   "links": "Agriculture: the skill of hygiene is exhibited as learners discuss how the Lord’s Supper is organised in their churches.\nEnglish: the skills of reading and speaking are exhibited as learners read the Bible.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     59,
+     60
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_CH.THE_LORD_S_SUPPER.a",
+     "letter": "a",
+     "text": "describe the events that took place during the Lord’s Supper",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_CH.THE_LORD_S_SUPPER.b",
+     "letter": "b",
+     "text": "explain the significance of the Lord’s Supper to Christians today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_CH.THE_LORD_S_SUPPER.c",
+     "letter": "c",
+     "text": "identify the values required during the celebration of Lord’s Table/Eucharist today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.THE_CH.THE_LORD_S_SUPPER.d",
+     "letter": "d",
+     "text": "desire to participate in the Lords’ Supper/Lord’s Table",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_CH.THE_HOLY_SPIRIT",
+   "number": "4.3",
+   "strand": "The Church",
+   "sub_strand": "The Holy Spirit",
+   "sequence": 403,
+   "lessons": 4,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "read 1 Corinthians 12:1-11 in turns and list the nine gifts of the Holy Spirit,",
+    "list the fruit of the Holy Spirit outlined in Galatians 5:22-23",
+    "read Galatians 5:22-23 and explain how the fruit of the Holy Spirit promotes good relationships among Christians today,",
+    "in pairs, share how they practise values learnt from the fruit of the Holy Spirit,",
+    "compose a song about the fruit of the Holy Spirit."
+   ],
+   "key_inquiry_questions": [
+    "How does the Holy Spirit inspire people to offer service to God?"
+   ],
+   "core_competences": "Critical thinking and problem solving: learners will develop the skill of evaluation and decision making as they explain how the fruit of the Holy Spirit promotes good relationships among Christians today.",
+   "values": "Unity: cooperation is portrayed as learners share how they practise values learnt from the fruit of the Holy Spirit.",
+   "pcis": "Citizenship: social cohesion is portrayed as learners live harmoniously with others as they utilise the fruit of the Holy Spirit that is, love, joy, peace, patience, kindness, goodness, faithfulness, humility, and self-control.",
+   "links": "Social Studies: social cohesion is nurtured as learners learn that the fruit of the Holy Spirit should promote peaceful co-existence.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 4, summary says 3.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     61,
+     62
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_CH.THE_HOLY_SPIRIT.a",
+     "letter": "a",
+     "text": "list the nine gifts of the Holy Spirit",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_CH.THE_HOLY_SPIRIT.b",
+     "letter": "b",
+     "text": "outline the fruit of the Holy Spirit from the scriptures provided",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_CH.THE_HOLY_SPIRIT.c",
+     "letter": "c",
+     "text": "explain how the fruit of the Holy Spirit promotes harmony among Christians",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_CH.THE_HOLY_SPIRIT.d",
+     "letter": "d",
+     "text": "appreciate the role of the Holy Spirit in his or her life",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.THE_CH.PETER_S_MIRACULOUS_RESCU",
+   "number": "4.4",
+   "strand": "The Church",
+   "sub_strand": "Peter’s miraculous rescue",
+   "sequence": 404,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs, discuss the importance of praying,",
+    "read Acts 12:3-17 and retell the story,",
+    "watch a video on Peter’s miraculous rescue,",
+    "in pairs, list lessons learnt from this story,",
+    "discuss what inspires them about Peter’s rescue from prison,",
+    "engage in activities that strengthen their faith in Christ,",
+    "sing a song related to standing firm in their faith."
+   ],
+   "key_inquiry_questions": [
+    "How was Apostle Peter rescued from prison?"
+   ],
+   "core_competences": "Learning to learn: is enhanced as learners discuss what inspires them about Peter’s rescue from prison.",
+   "values": "",
+   "pcis": "Citizenship: human rights and responsibilities; they learn how Peter was rescued from prison after the church prayed for him persistenty. Link to Values: Respect: learners take turns to read the Bible texts and respect each other’s opinion.",
+   "links": "Creative Arts: creative skills are applied as learners sing a song.\nEnglish: the skills of reading and speaking are applied as learners read the Holy Bible and air their views confidently.",
+   "design_notes": "Second read left this for a person to confirm: values: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     63,
+     64
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.a",
+     "letter": "a",
+     "text": "retell the story of Peter’s miraculous rescue from prison",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.b",
+     "letter": "b",
+     "text": "list lessons learnt from the story of Peter’s rescue",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.c",
+     "letter": "c",
+     "text": "have faith in God as exemplified by Apostle Peter",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.CHRIST.FRIENDSHIP_FORMATION",
+   "number": "5.1",
+   "strand": "Christian Living",
+   "sub_strand": "Friendship formation",
+   "sequence": 501,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "make a list of qualities to consider when choosing good friends,",
+    "share whether their friends possess the qualities listed,",
+    "in pairs, brainstorm on how to avoid negative behaviour/ peer influence,",
+    "write Proverbs 22:24-25 on flash cards and say the type of friends to avoid,",
+    "in groups, read Proverbs 12:26 and state the kind of a friend to have,",
+    "write a reflection journal on how to choose good friends."
+   ],
+   "key_inquiry_questions": [
+    "How do you choose your friends?"
+   ],
+   "core_competences": "Self-efficacy: learners will develop the skill of knowing and saying their needs as they brainstorm on the importance of desirable friendship which pleases God.\nCritical thinking and problem solving: learners will develop the skills of interpretation, inference and reflection as they list what they consider as negative influence from friends and peers and discuss ways of avoiding negative peer influence.",
+   "values": "Respect: learners list qualities /values they consider in choosing friends.\nIntegrity: learner displays self-discipline as they avoid bad company and vices associated with negative peer influence.",
+   "pcis": "Citizenship: peace education; learners brainstorm on avoiding hot tempered friends..",
+   "links": "English: they learn new vocabularies.\nSocial Studies: they learn about healthy relationships.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     66,
+     67
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.CHRIST.FRIENDSHIP_FORMATION.a",
+     "letter": "a",
+     "text": "identify five qualities/values to consider in choosing good friends",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CHRIST.FRIENDSHIP_FORMATION.b",
+     "letter": "b",
+     "text": "discuss ways of avoiding negative peer influence",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CHRIST.FRIENDSHIP_FORMATION.c",
+     "letter": "c",
+     "text": "choose friends with good moral character",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY",
+   "number": "5.2",
+   "strand": "Christian Living",
+   "sub_strand": "Human Sexuality",
+   "sequence": 502,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "list changes that take place in their bodies at adolescence stage,",
+    "brainstorm on how they cope with changes in their bodies at this stage,",
+    "in groups, brainstorm on why some sources of information about this age are ungodly and misleading,",
+    "in pairs, state why they should get the right information about their bodies as they grow up,",
+    "in pairs, read 1 Corinthians 6:18-19 and explain lessons learnt from the Bible text,",
+    "discuss Christian teachings on how to cope with challenges associated with adolescence stage,",
+    "in groups, discuss the meaning of healthy boy-girl relationship,",
+    "discuss the meaning of unhealthy boy-girl relationship",
+    "brainstorm on the negative effects of engaging in unhealthy boy-girl relationships,",
+    "in pairs, discuss how to avoid unhealthy boy-girl relationships,",
+    "compose a poem on the need to lead a holy life and not to engage in sex before marriage."
+   ],
+   "key_inquiry_questions": [
+    "How do you cope with changes in adolescence?",
+    "Why is it important to have healthy boy-girl relationships?"
+   ],
+   "core_competences": "Self-efficacy: learners practise self-drive by being assertive and determined to cope with challenges associated with adolescence stage.\nCritical thinking and problem solving: learners develop active listening and communication skills as they debate on why some sources of information on bodily changes are misleading.",
+   "values": "Respect: human dignity; learners develop positive regard for self and others and appreciate the physical and psyo-social changes taking place in their bodies.",
+   "pcis": "Socio-economic issues: Gender issues; learners discuss why they should take the developmental changes in their bodies positively.",
+   "links": "English: speaking skills are applied as learners debate and discuss in groups.\nSocial Studies: they learn about healthy relationships.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     68,
+     69,
+     70
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY.a",
+     "letter": "a",
+     "text": "identify changes associated with adolescence",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY.b",
+     "letter": "b",
+     "text": "outline how they cope with changes in their bodies",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY.c",
+     "letter": "c",
+     "text": "distinguish between healthy and unhealthy boy-girl relationships",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY.d",
+     "letter": "d",
+     "text": "explain the consequences of engaging in unhealthy boy-girl relationships",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY.e",
+     "letter": "e",
+     "text": "discuss how to overcome unhealthy boy-girl relationships",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY.f",
+     "letter": "f",
+     "text": "desire to behave responsibly as a young person",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.CHRIST.SANCTITY_OF_LIFE",
+   "number": "5.3",
+   "strand": "Christian Living",
+   "sub_strand": "Sanctity of Life",
+   "sequence": 503,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "brainstorm on the meaning of sanctity of human life,",
+    "read Genesis 1:27, Genesis 9:6, Psalms 49:7-8 and Exodus 20:13 and list Christian teachings on sacredness of life,",
+    "brainstorm on the meaning of right to life,",
+    "share examples of violation of right to life today,",
+    "debate on the causes of violation of the right to life,",
+    "discuss emotions that can lead to violation of one’s life,",
+    "in pairs, discuss how to cope with negative emotions,",
+    "discuss the consequences of violating right to life,",
+    "compose a poem on the sacredness/sanctity of life."
+   ],
+   "key_inquiry_questions": [
+    "Why is human life Sacred?",
+    "How will you encourage your classmates to respect right to life?"
+   ],
+   "core_competences": "Critical thinking and problem solving: Active listening and communication skills are developed as learners brainstorm on the importance of safety and security of human life and debate on the causes of violation of the right to life. Link to PCIs: Socio-economic issues: safety and security are nurtured as they debate on the causes of violation of the right to life and how to cope with negative emotions. Link to Values:\nRespect: learners brainstorm on the meaning of right to life and why it should be upheld by all and not be violated.\nResponsibility: learners discuss the consequences of violating right to life.",
+   "values": "",
+   "pcis": "",
+   "links": "English: speaking skills are applied as they learn new vocabularies.\nSocial Studies: the concept of right to life is similar to human rights in Social Studies.",
+   "design_notes": "Second read left this for a person to confirm: values: heading on the page but no text read.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     71,
+     72
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.CHRIST.SANCTITY_OF_LIFE.a",
+     "letter": "a",
+     "text": "discuss Christian teachings on God as the only source of life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CHRIST.SANCTITY_OF_LIFE.b",
+     "letter": "b",
+     "text": "identify causes of violation of the right to life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CHRIST.SANCTITY_OF_LIFE.c",
+     "letter": "c",
+     "text": "explain how to cope with difficult emotions to avoid violation of right to life",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CHRIST.SANCTITY_OF_LIFE.d",
+     "letter": "d",
+     "text": "acknowledge that life is sacred and a gift from God",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA",
+   "number": "5.4",
+   "strand": "Christian Living",
+   "sub_strand": "Alcohol, Drugs and Substance Abuse",
+   "sequence": 504,
+   "lessons": 5,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "in pairs, give examples of drugs commonly abused in Kenya today,",
+    "read Proverbs 20:1, Proverbs 31:6 and Ephesians 5:18,",
+    "brainstorm on lessons learnt from the Bible texts,",
+    "discuss reasons that lead to alcohol, drugs and substance abuse among young people today,",
+    "explain the dangers of alcohol, drugs and substance abuse,",
+    "watch a video clip on the dangers of alcohol, drugs and substance abuse,",
+    "in groups, discuss five values needed to avoid alcohol, drugs and substance abuse,",
+    "use flashcards to write sensitisation messages of saying No! to alcohol, drugs and substance abuse,",
+    "display the messages on the school notice board,",
+    "give a brief talk at the school assembly on the effects of alcohol, drugs and substance abuse."
+   ],
+   "key_inquiry_questions": [
+    "How can you avoid alcohol, drugs and substance abuse?"
+   ],
+   "core_competences": "Critical thinking and problem solving: the skill of researching is enhanced as learners research and write a report on prevention of alcohol, drugs and substance abuse.\nLearning to learn: the skill of ‘knowing who I am’ is enhanced as learners discuss effects of alcohol, drugs and substance abuse.\nCitizenship: the skill of information and communication is enhanced as learners write sensitization messages of saying No! to alcohol, drugs, and substance abuse.",
+   "values": "Responsibility: learners utilise values acquired to avoid use and abuse of alcohol and drugs.\nIntegrity is enhanced as they do what is acceptable before God and the law.\nObedience: learners obey the laws discouraging alcohol, drugs and substance abuse.",
+   "pcis": "Citizenship: learners discuss the effects of alcohol, drugs and substance abuse on health.\nHealth education: they learn the causes, effects and solutions to alcohol, drugs and substance abuse.",
+   "links": "Creative Arts: creative skills are applied as they compose a poem and as they engage in activities that promote physical, and mental health.",
+   "design_notes": "Second read left this for a person to confirm: lessons: table says 5, summary says 3.",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     73,
+     74
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.a",
+     "letter": "a",
+     "text": "list drugs abused by young people today",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.b",
+     "letter": "b",
+     "text": "state why young people engage in alcohol, drugs and substance abuse",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c",
+     "letter": "c",
+     "text": "outline the effects of alcohol, drugs and substance abuse",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.d",
+     "letter": "d",
+     "text": "identify five values needed to avoid alcohol, drugs and substance abuse",
+     "status": "kicd_read"
+    },
+    {
+     "code": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.e",
+     "letter": "e",
+     "text": "avoid alcohol, drugs and substance abuse",
+     "status": "kicd_read"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  },
+  {
+   "code": "CRE.G5.CHRIST.SOCIAL_MEDIA",
+   "number": "5.5",
+   "strand": "Christian Living",
+   "sub_strand": "Social Media",
+   "sequence": 505,
+   "lessons": 3,
+   "optional": false,
+   "content_topics": [],
+   "learning_experiences": [
+    "list social media platforms commonly used today,",
+    "list the advantages and disadvantages of social media,",
+    "discuss safety precautions to observe when using social media,",
+    "brainstorm on the value of intergrity when using social media,",
+    "avoid visiting inappropriate sites as they use social media,",
+    "debate on the motion “Social media is ruining children and the youth”,",
+    "use digital devices to watch educative documentaries e.g. Bible stories."
+   ],
+   "key_inquiry_questions": [
+    "Why should you use social media responsibly?"
+   ],
+   "core_competences": "Communication and collaboration: the skills of reading, listening and speaking are enhanced as learners discuss safety precautions to observe when using social media.\nCritical thinking and problem solving: the skills of evaluation and decision making are enhanced as learners debate on the motion, “social media is ruining children and the youth.”.",
+   "values": "Respect: learners respect self and others and avoid obsession with social media platforms.\nIntegrity: learners use social media ethically and responsibly.\nResponsibility: learners encourage each other to use social media responsibly.",
+   "pcis": "Citizenship: learners embrace positive use of social media/avoid addiction.\nPeer pressure resistance: learners avoid peer influence and wrong use of social media.\nPatriotism: learners discuss safety measures, regarding cyber security.",
+   "links": "English: speaking skills are enhanced as they learn new vocabularies.\nScience and Technology: learners interact with digital technology as they use digital devices.",
+   "design_notes": "",
+   "source": {
+    "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+    "design": "CRE GRADE 5 DESIGN - Revised.pdf",
+    "version": "First Published 2017; Revised 2024",
+    "pages": [
+     75,
+     76
+    ]
+   },
+   "outcomes": [
+    {
+     "code": "CRE.G5.CHRIST.SOCIAL_MEDIA.a",
+     "letter": "a",
+     "text": "list social media platforms commonly used today",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CHRIST.SOCIAL_MEDIA.b",
+     "letter": "b",
+     "text": "debate on the advantages and disadvantages of social media",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CHRIST.SOCIAL_MEDIA.c",
+     "letter": "c",
+     "text": "discuss safety measures to observe when using social media",
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.CHRIST.SOCIAL_MEDIA.d",
+     "letter": "d",
+     "text": "use social media responsibly as God-fearing Christians",
+     "status": "kicd_verified"
+    }
+   ],
+   "skills": [],
+   "misconceptions": []
+  }
+ ]
+}
