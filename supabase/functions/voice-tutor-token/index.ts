@@ -441,7 +441,7 @@ var drawn = { ...timing, pace: E(PACES) };
 var shadedSchema = { anyOf: [I, { type: "array", items: I }] };
 var C = (cmd, props, required) => S({ cmd: { type: "string", const: cmd }, ...props }, ["cmd", ...required]);
 var STEP_SCHEMAS = [
-  C("say", { text: T }, ["text"]),
+  C("say", { text: T, move: T }, ["text"]),
   C("write_text", { id: T, text: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ["id", "text", "slot"]),
   C("write_math", { id: T, expr: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ["id", "expr", "slot"]),
   C("fraction_bar", { id: T, parts: I, shaded: shadedSchema, second_bar: S({ parts: I, shaded: shadedSchema }, ["parts", "shaded"]), label: B, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ["id", "parts", "shaded", "slot"]),
