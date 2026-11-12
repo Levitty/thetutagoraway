@@ -3,15 +3,15 @@
  "subject_key": "creative_arts",
  "grade": 5,
  "source": "KICD Creative Arts, First Published 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g5-non-question-outcomes-2026-11-12.md",
  "totals": {
   "strands": 3,
   "sub_strands": 13,
   "outcomes": 67,
   "lessons": 178,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 40,
+  "prerequisites": 45,
+  "misconceptions": 127
  },
  "sub_strands": [
   {
@@ -102,8 +102,364 @@
      "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY",
+     "name": "Identify indigenous wind instruments and say how they are played",
+     "outcomes": [
+      "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.a"
+     ],
+     "mastery": "The child names the nzumari and the siwa (Swahili coast) and the animal horn, flute and whistle as wind instruments, knows a wind instrument makes its sound when the player blows air into it, and does not put the nyatiti, orutu, litungu or ngoma in the wind group. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the wind instrument from a list",
+      "say how an instrument is played",
+      "match an instrument to its community",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.a",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS",
+     "name": "Explain the role of the parts of a wind instrument in making sound",
+     "outcomes": [
+      "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.b"
+     ],
+     "mastery": "The child says the mouthpiece is where the player blows in, the air inside the tube is what vibrates to make the sound, the finger holes change the length of the vibrating air (more holes covered gives a lower sound, fewer covered a higher sound) and the open end lets the sound out. The child does not say the wood itself sings. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the part from its job",
+      "say what blowing, the tube and the finger holes each do",
+      "say why uncovering holes raises the sound",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.SOUND_ENERGY.a",
+       "kind": "outcome",
+       "reason": "Another subject taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE",
+     "name": "Care for and store a wind instrument",
+     "outcomes": [
+      "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.d"
+     ],
+     "mastery": "The child cleans the mouthpiece before another player uses the instrument, keeps the instrument dry and away from rain and hot sun, stores it in a safe place, and handles it gently, and gives the reason for each step. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right way to clean or store it",
+      "say why a care step matters",
+      "choose the careful action in a story",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING",
+     "name": "Describe cross-hatching and the crayon etching steps",
+     "outcomes": [
+      "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.e"
+     ],
+     "mastery": "The child says cross-hatching is lines that cross each other to make texture and dark areas, and puts the etching steps in order: colour the paper with bright crayons, cover with dark crayon, scratch the picture through the dark layer with a pointed tool so the bright colours show. This is the knowledge half of outcome e; drawing it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what cross-hatching is for",
+      "put the etching steps in order",
+      "pick the tool that scratches",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.b",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY.M_WI_STRING_AS_WIND",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY",
+     "error": "Puts a string instrument (nyatiti, orutu, litungu) in the wind group.",
+     "example": {
+      "question": "Which of these is a wind instrument?",
+      "wrong_answer": "The nyatiti",
+      "correct_answer": "The nzumari"
+     },
+     "cause": "The child knows it is an indigenous instrument and does not ask how the sound is made.",
+     "reveals": "Offer \"The nyatiti\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: what do you do to make the sound? Blow, pluck, or hit? Sort five instruments by that one question.",
+     "feedback": "A wind instrument makes its sound when the player blows air into it. The nyatiti is a string instrument: its strings are plucked.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY.M_WI_DRUM_AS_WIND",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY",
+     "error": "Says a drum (ngoma) is a wind instrument because the sound travels through the air.",
+     "example": {
+      "question": "Which of these is a wind instrument?",
+      "wrong_answer": "The ngoma drum",
+      "correct_answer": "The siwa horn"
+     },
+     "cause": "The child links \"wind\" to air and sound, not to blowing.",
+     "reveals": "Offer \"The ngoma drum\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask who makes the sound happen: the player's breath, or the player's hand on a skin?",
+     "feedback": "A drum is a percussion instrument: it is hit. A wind instrument is blown.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY.M_WI_PLAY_PLUCK",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY",
+     "error": "Says a wind instrument is played by plucking or hitting.",
+     "example": {
+      "question": "How is the nzumari played?",
+      "wrong_answer": "By plucking its strings",
+      "correct_answer": "By blowing into it"
+     },
+     "cause": "The child mixes up the three ways of making sound.",
+     "reveals": "Offer \"By plucking its strings\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort pictures into blow, pluck and hit, then ask again.",
+     "feedback": "The nzumari is a wind instrument, so it is played by blowing air into it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY.M_WI_COMMUNITY_MIX",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY",
+     "error": "Gives a wind instrument to the wrong community (the nzumari to the Luo or Maasai).",
+     "example": {
+      "question": "The nzumari is a wind instrument played mainly by which people?",
+      "wrong_answer": "The Luo of Nyanza",
+      "correct_answer": "The Swahili of the coast"
+     },
+     "cause": "The child has not met the instrument or the place it belongs to.",
+     "reveals": "Offer \"The Luo of Nyanza\" next to the right answer and ask the question again in a new context.",
+     "help": "Use a map of Kenya: find the coast and say which instruments come from there.",
+     "feedback": "The nzumari and the siwa are wind instruments of the Swahili people of the Kenyan coast. The nyatiti belongs to the Luo.",
+     "source": "To confirm by a teacher: communities named in the KICD teacher guide and local practice.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS.M_WI_WOOD_SINGS",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS",
+     "error": "Thinks the sound comes from the wood or horn itself shaking.",
+     "example": {
+      "question": "What vibrates to make the sound in a wind instrument?",
+      "wrong_answer": "The wood of the instrument",
+      "correct_answer": "The air inside the tube"
+     },
+     "cause": "The child can feel the instrument tingle and thinks that is the sound.",
+     "reveals": "Offer \"The wood of the instrument\" next to the right answer and ask the question again in a new context.",
+     "help": "Block the end of a pipe with a finger and blow: no sound. The air inside is the singer.",
+     "feedback": "The sound comes from the air inside the tube vibrating. The wood only holds the air in a shape.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS.M_WI_MORE_HOLES_HIGHER",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS",
+     "error": "Thinks covering more finger holes makes a higher sound.",
+     "example": {
+      "question": "A player covers more finger holes. What happens to the sound?",
+      "wrong_answer": "It gets higher",
+      "correct_answer": "It gets lower"
+     },
+     "cause": "The child thinks \"more\" means \"higher\".",
+     "reveals": "Offer \"It gets higher\" next to the right answer and ask the question again in a new context.",
+     "help": "Cover holes one by one on a bottle-top whistle or recorder and listen to each step go lower.",
+     "feedback": "Covering more holes makes the vibrating air longer, so the sound gets lower. Opening holes makes it shorter and higher.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS.M_WI_MOUTHPIECE_OUT",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS",
+     "error": "Thinks the mouthpiece is where the sound comes out.",
+     "example": {
+      "question": "Which part of a wind instrument does the player blow into?",
+      "wrong_answer": "The open end at the bottom",
+      "correct_answer": "The mouthpiece"
+     },
+     "cause": "The child links the part by the mouth with the sound, not with the breath going in.",
+     "reveals": "Offer \"The open end at the bottom\" next to the right answer and ask the question again in a new context.",
+     "help": "Point to where the air goes in and where the sound goes out, using a flute or straw.",
+     "feedback": "The player blows into the mouthpiece. The sound leaves through the open end and the holes.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS.M_WI_HOLES_FOR_AIR",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS",
+     "error": "Says the finger holes are only there to let air out.",
+     "example": {
+      "question": "What do the finger holes of a flute do?",
+      "wrong_answer": "They let the air out so the player can breathe",
+      "correct_answer": "They change how long the vibrating air is, so the sound changes"
+     },
+     "cause": "The child sees holes as gaps and not as controls.",
+     "reveals": "Offer \"They let the air out so the player can breathe\" next to the right answer and ask the question again in a new context.",
+     "help": "Play three notes by covering holes in turn and ask what changed.",
+     "feedback": "Finger holes change the length of the vibrating air, which changes the sound. They are not breathing holes.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE.M_WI_SHARE_UNCLEANED",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE",
+     "error": "Thinks it is fine to pass the instrument to a friend without cleaning the mouthpiece.",
+     "example": {
+      "question": "Zawadi has just played the flute. Wanjiru wants a turn. What should happen first?",
+      "wrong_answer": "Zawadi hands it over at once",
+      "correct_answer": "The mouthpiece is wiped or cleaned"
+     },
+     "cause": "The child sees it as sharing, not as a hygiene matter.",
+     "reveals": "Offer \"Zawadi hands it over at once\" next to the right answer and ask the question again in a new context.",
+     "help": "Link to sharing a cup: germs travel by mouth.",
+     "feedback": "Clean the mouthpiece before another player uses it, so that germs are not passed on.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE.M_WI_STORE_DAMP",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE",
+     "error": "Thinks a wind instrument is best stored damp or in a wet cloth.",
+     "example": {
+      "question": "Where should a wooden flute be kept after use?",
+      "wrong_answer": "In a wet cloth so it stays fresh",
+      "correct_answer": "In a clean, dry safe place"
+     },
+     "cause": "The child confuses keeping clean with keeping wet.",
+     "reveals": "Offer \"In a wet cloth so it stays fresh\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a damp wooden stick with mould beside a dry one.",
+     "feedback": "A damp instrument can crack or grow mould. Keep it dry, clean and safe.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE.M_WI_ROUGH_HANDLING",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE",
+     "error": "Thinks a hard wooden or horn instrument can be dropped or tapped on things because it is strong.",
+     "example": {
+      "question": "Baraka taps the flute on the desk to the beat. Is this good care?",
+      "wrong_answer": "Yes, wood is strong",
+      "correct_answer": "No, handle it gently"
+     },
+     "cause": "The child equates hard with unbreakable.",
+     "reveals": "Offer \"Yes, wood is strong\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens to a clay pot or a gourd when it is knocked.",
+     "feedback": "Handle an instrument gently. Knocks can crack it or change its sound.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING.M_WI_HATCH_ONE_DIRECTION",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING",
+     "error": "Thinks cross-hatching is lines drawn in one direction only.",
+     "example": {
+      "question": "What is cross-hatching?",
+      "wrong_answer": "Lines drawn side by side in one direction",
+      "correct_answer": "Lines that cross each other"
+     },
+     "cause": "The child has seen shading with parallel lines.",
+     "reveals": "Offer \"Lines drawn side by side in one direction\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw one set of lines, then add a second set across it, and compare the dark.",
+     "feedback": "Cross-hatching is sets of lines that cross each other. The more crossing, the darker and more textured the area looks.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING.M_WI_ETCH_DRAW_ON",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING",
+     "error": "Thinks etching means drawing the picture on top with a pen.",
+     "example": {
+      "question": "How do you make the picture in crayon etching?",
+      "wrong_answer": "Draw it on top with a pen",
+      "correct_answer": "Scratch it through the dark crayon layer"
+     },
+     "cause": "The child thinks every drawing is made by adding lines.",
+     "reveals": "Offer \"Draw it on top with a pen\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a scratched dark layer with bright colour underneath.",
+     "feedback": "In crayon etching you scratch the dark layer away with a pointed tool so the bright colours below show.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING.M_WI_ETCH_ORDER",
+     "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING",
+     "error": "Puts the dark crayon first and the bright colours on top.",
+     "example": {
+      "question": "What goes on the paper first in crayon etching?",
+      "wrong_answer": "The dark crayon",
+      "correct_answer": "The bright crayon colours"
+     },
+     "cause": "The child does not see that scratching must uncover something.",
+     "reveals": "Offer \"The dark crayon\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: what do we want to see after we scratch? It must already be there.",
+     "feedback": "The bright colours go on first and the dark crayon covers them. Scratching uncovers the bright colours.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.1.1"
    ]
@@ -187,8 +543,165 @@
      "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.SKILLS",
+     "name": "Name the part of the foot used for each football skill",
+     "outcomes": [
+      "CREA.G5.CREATI.FOOTBALL.a"
+     ],
+     "mastery": "The child says an instep kick uses the laces (top) of the foot, an outside-of-the-foot kick uses the outer side of the foot, stopping uses the inside of the foot, a step trap puts the sole on top of the ball, and a straight dribble pushes the ball forward in small touches with the head up. This is the knowledge half of outcome a; doing it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the part of the foot for a kick or stop",
+      "say how a straight dribble is done",
+      "pick the careful action in a story",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.CREATI.NETBALL.a",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE",
+     "name": "Put the steps of making papier mâché cones in order",
+     "outcomes": [
+      "CREA.G5.CREATI.FOOTBALL.b",
+      "CREA.G5.CREATI.FOOTBALL.c"
+     ],
+     "mastery": "The child puts the steps in order: shred paper, soak it in water, pound it to a pulp, mix the pulp with an adhesive such as flour paste, press it onto the cone mould, let it dry fully, then remove it. The child knows each step has a reason. This is the knowledge half of outcomes b and c; making the cones is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the steps in order",
+      "say why a step is needed",
+      "pick the material for a step",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.FOOTBALL.SKILLS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.SKILLS.M_FB_TOE_POKE",
+     "skill": "CREA.G5.CREATI.FOOTBALL.SKILLS",
+     "error": "Thinks a strong kick uses the toes.",
+     "example": {
+      "question": "Which part of the foot do you use for an instep kick?",
+      "wrong_answer": "The toes",
+      "correct_answer": "The laces, on top of the foot"
+     },
+     "cause": "The child pictures a hard \"toe poke\" from the playground.",
+     "reveals": "Offer \"The toes\" next to the right answer and ask the question again in a new context.",
+     "help": "Kick a ball gently with toes and then with laces and compare control.",
+     "feedback": "An instep kick uses the laces, the top of the foot. Toes hurt and send the ball in an uncontrolled direction.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.SKILLS.M_FB_TRAP_SWAP",
+     "skill": "CREA.G5.CREATI.FOOTBALL.SKILLS",
+     "error": "Mixes up stopping with the inside of the foot and the step trap.",
+     "example": {
+      "question": "In a step trap, which part of the foot stops the ball?",
+      "wrong_answer": "The inside of the foot",
+      "correct_answer": "The sole, placed on top of the ball"
+     },
+     "cause": "Both are called stopping and the child treats them as one.",
+     "reveals": "Offer \"The inside of the foot\" next to the right answer and ask the question again in a new context.",
+     "help": "Show both slowly: side-on for the inside stop, and from above for the step trap.",
+     "feedback": "In a step trap the sole goes on top of the ball. The inside-of-the-foot stop meets the ball with the side of the foot.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.SKILLS.M_FB_DRIBBLE_FAR",
+     "skill": "CREA.G5.CREATI.FOOTBALL.SKILLS",
+     "error": "Thinks a straight dribble means kicking the ball far ahead and running after it.",
+     "example": {
+      "question": "How is a straight dribble done?",
+      "wrong_answer": "Kick the ball far ahead and chase it",
+      "correct_answer": "Push the ball forward in small touches and keep it close"
+     },
+     "cause": "The child mixes up dribbling with a long pass.",
+     "reveals": "Offer \"Kick the ball far ahead and chase it\" next to the right answer and ask the question again in a new context.",
+     "help": "Dribble around cones with small touches and then with big kicks, and compare how often the ball is lost.",
+     "feedback": "In a straight dribble you push the ball in small touches and keep it close, so you stay in control.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE.M_FB_PM_GLUE_FIRST",
+     "skill": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE",
+     "error": "Mixes the adhesive in before soaking and pounding the paper.",
+     "example": {
+      "question": "Which step comes straight after soaking the paper?",
+      "wrong_answer": "Mix it with paste",
+      "correct_answer": "Pound it into a pulp"
+     },
+     "cause": "The child thinks glue is what turns paper into pulp.",
+     "reveals": "Offer \"Mix it with paste\" next to the right answer and ask the question again in a new context.",
+     "help": "Soak and pound without glue first, then add paste, and compare.",
+     "feedback": "Soak, then pound to a soft pulp, and only then mix in the adhesive.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE.M_FB_PM_SKIP_SOAK",
+     "skill": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE",
+     "error": "Skips the soaking and pounds dry paper.",
+     "example": {
+      "question": "Why is the paper soaked in water?",
+      "wrong_answer": "To make it heavier",
+      "correct_answer": "To make it soft enough to pound into pulp"
+     },
+     "cause": "The child does not see the use of the step.",
+     "reveals": "Offer \"To make it heavier\" next to the right answer and ask the question again in a new context.",
+     "help": "Try to pound dry paper and wet paper and feel the difference.",
+     "feedback": "Soaking softens the paper so that it can be pounded into a smooth pulp.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE.M_FB_PM_REMOVE_WET",
+     "skill": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE",
+     "error": "Takes the cone off the mould while it is still wet.",
+     "example": {
+      "question": "When can the cone be taken off the mould?",
+      "wrong_answer": "Straight after pressing",
+      "correct_answer": "When it is completely dry"
+     },
+     "cause": "The child is in a hurry to see the result.",
+     "reveals": "Offer \"Straight after pressing\" next to the right answer and ask the question again in a new context.",
+     "help": "Remove one wet and one dry cone and compare their shape.",
+     "feedback": "A wet cone loses its shape. Wait until it is completely dry before taking it off the mould.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.1.1"
    ]
@@ -290,8 +803,271 @@
      "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.VALUES",
+     "name": "Say how many beats each note and rest lasts",
+     "outcomes": [
+      "CREA.G5.CREATI.RHYTHM.a"
+     ],
+     "mastery": "The child says a minim lasts two beats, a crotchet one beat, a pair of quavers one beat together (half a beat each), and each rest is silent for as long as its note. Questions describe shapes, signs and holes in words, because the phone question has no staff or picture. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say the beats of a note or rest",
+      "say how a note looks in words",
+      "add the beats of a short pattern",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.CREATI.RHYTHM.a",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.NUMBER.FRACTIONS.b",
+       "kind": "outcome",
+       "reason": "Another subject taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.NAMES",
+     "name": "Match French rhythm names to the note symbols and rests",
+     "outcomes": [
+      "CREA.G5.CREATI.RHYTHM.a"
+     ],
+     "mastery": "The child matches taa-aa to the minim (two beats), taa to the crotchet (one beat) and ta-te to a pair of quavers (two sounds in one beat), and knows a rest is silent: it is counted but not sounded. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "match a French name to a note",
+      "say how many sounds a name has",
+      "pick the name for a described symbol",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.RHYTHM.VALUES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.TWO_BEAT",
+     "name": "Recognise a two-beat rhythm pattern",
+     "outcomes": [
+      "CREA.G5.CREATI.RHYTHM.f"
+     ],
+     "mastery": "The child counts beats and not sounds, so ta-te ta-te is two beats (four sounds), knows a two-beat pattern is counted 1 2 with the strong beat on 1, and picks patterns whose notes add up to two beats. This is the knowledge half of outcomes e and f; clapping and composing are practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the pattern that fills two beats",
+      "say which beat is strong",
+      "count beats and not sounds",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.RHYTHM.VALUES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G5.CREATI.RHYTHM.NAMES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.VALUES.M_RH_MINIM_ONE",
+     "skill": "CREA.G5.CREATI.RHYTHM.VALUES",
+     "error": "Thinks a minim lasts one beat.",
+     "example": {
+      "question": "How many beats does a minim last?",
+      "wrong_answer": "One beat",
+      "correct_answer": "Two beats"
+     },
+     "cause": "The child gives every note one beat.",
+     "reveals": "Offer \"One beat\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap and count \"1, 2\" while holding a minim, then \"1\" for a crotchet.",
+     "feedback": "A minim lasts two beats. A crotchet lasts one beat.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.VALUES.M_RH_PAIR_TWO_BEATS",
+     "skill": "CREA.G5.CREATI.RHYTHM.VALUES",
+     "error": "Thinks a pair of quavers lasts two beats.",
+     "example": {
+      "question": "How many beats do a pair of quavers last together?",
+      "wrong_answer": "Two beats",
+      "correct_answer": "One beat"
+     },
+     "cause": "The child counts two notes as two beats.",
+     "reveals": "Offer \"Two beats\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap \"ta-te\" in the time of one clap and say \"two sounds, one beat\".",
+     "feedback": "A pair of quavers together lasts one beat. Each quaver is half a beat.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.VALUES.M_RH_REST_NO_TIME",
+     "skill": "CREA.G5.CREATI.RHYTHM.VALUES",
+     "error": "Thinks a rest takes no time.",
+     "example": {
+      "question": "How long is a crotchet rest?",
+      "wrong_answer": "It takes no time",
+      "correct_answer": "One beat of silence"
+     },
+     "cause": "The child thinks silence is not part of the music.",
+     "reveals": "Offer \"It takes no time\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap a pattern and hold hands apart on the rest while counting.",
+     "feedback": "A rest is silence that lasts as long as its note. A crotchet rest is one beat of silence.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.VALUES.M_RH_QUAVER_ONE_BEAT_EACH",
+     "skill": "CREA.G5.CREATI.RHYTHM.VALUES",
+     "error": "Gives each quaver a whole beat.",
+     "example": {
+      "question": "How long does one quaver last?",
+      "wrong_answer": "One beat",
+      "correct_answer": "Half a beat"
+     },
+     "cause": "The child gives every note one beat and ignores the tail.",
+     "reveals": "Offer \"One beat\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare \"taa\" (one clap) with \"ta-te\" (two claps in the same beat).",
+     "feedback": "One quaver is half a beat. It takes two quavers to fill one beat.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.NAMES.M_RH_NAME_TAA_AA_SHORT",
+     "skill": "CREA.G5.CREATI.RHYTHM.NAMES",
+     "error": "Gives the French name taa-aa to the crotchet and taa to the minim.",
+     "example": {
+      "question": "Which French name is the minim?",
+      "wrong_answer": "Taa",
+      "correct_answer": "Taa-aa"
+     },
+     "cause": "The child thinks the longer name belongs to the note with more beats.",
+     "reveals": "Offer \"Taa\" next to the right answer and ask the question again in a new context.",
+     "help": "Say taa-aa while holding a long clap and ask how many beats it fills.",
+     "feedback": "Taa-aa is the minim (two beats). Taa is the crotchet (one beat).",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.NAMES.M_RH_NAME_TATE_ONE",
+     "skill": "CREA.G5.CREATI.RHYTHM.NAMES",
+     "error": "Thinks ta-te is one sound lasting one beat, like taa.",
+     "example": {
+      "question": "How many sounds does ta-te have?",
+      "wrong_answer": "One sound",
+      "correct_answer": "Two sounds"
+     },
+     "cause": "The child hears it as one word.",
+     "reveals": "Offer \"One sound\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap each syllable: \"ta\" then \"te\" in one beat.",
+     "feedback": "Ta-te is two quick sounds in one beat. It stands for a pair of quavers.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.NAMES.M_RH_REST_SOUNDED",
+     "skill": "CREA.G5.CREATI.RHYTHM.NAMES",
+     "error": "Claps or says a name on a rest.",
+     "example": {
+      "question": "What do you do on a rest in a rhythm pattern?",
+      "wrong_answer": "Clap it quietly",
+      "correct_answer": "Stay silent for its beats"
+     },
+     "cause": "The child fills the silence.",
+     "reveals": "Offer \"Clap it quietly\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap a pattern with a crotchet rest and hold the hands apart.",
+     "feedback": "On a rest you make no sound but you still count its beats.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.TWO_BEAT.M_RH_COUNT_SOUNDS",
+     "skill": "CREA.G5.CREATI.RHYTHM.TWO_BEAT",
+     "error": "Counts sounds instead of beats, so ta-te ta-te seems like four beats.",
+     "example": {
+      "question": "How many beats are in ta-te ta-te?",
+      "wrong_answer": "Four beats",
+      "correct_answer": "Two beats"
+     },
+     "cause": "The child counts every syllable.",
+     "reveals": "Offer \"Four beats\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap the pattern while walking one step for each beat.",
+     "feedback": "Count beats, not sounds. Each ta-te is one beat, so ta-te ta-te is two beats.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.TWO_BEAT.M_RH_STRONG_SECOND",
+     "skill": "CREA.G5.CREATI.RHYTHM.TWO_BEAT",
+     "error": "Puts the strong beat on the second beat.",
+     "example": {
+      "question": "In a two-beat pattern, which beat is strong?",
+      "wrong_answer": "The second beat",
+      "correct_answer": "The first beat"
+     },
+     "cause": "The child stresses the end of a phrase.",
+     "reveals": "Offer \"The second beat\" next to the right answer and ask the question again in a new context.",
+     "help": "Count \"ONE two, ONE two\" and stamp on the strong beat.",
+     "feedback": "In a two-beat pattern the first beat is strong and the second is weak.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.TWO_BEAT.M_RH_TWO_BEAT_THREE",
+     "skill": "CREA.G5.CREATI.RHYTHM.TWO_BEAT",
+     "error": "Accepts a pattern with three beats as a two-beat pattern.",
+     "example": {
+      "question": "Which pattern fills two beats?",
+      "wrong_answer": "Taa taa taa",
+      "correct_answer": "Taa ta-te"
+     },
+     "cause": "The child counts the number of names, not the length.",
+     "reveals": "Offer \"Taa taa taa\" next to the right answer and ask the question again in a new context.",
+     "help": "Add the beats one by one: taa = 1, ta-te = 1.",
+     "feedback": "Add the beats. Taa and ta-te make 1 plus 1, which is two beats. Taa taa taa is three.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.1.1"
    ]
@@ -376,8 +1152,335 @@
      "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL",
+     "name": "Name the primary and secondary colours on the colour wheel",
+     "outcomes": [
+      "CREA.G5.CREATI.PAINTING_AND_MOSAIC.a"
+     ],
+     "mastery": "The child names red, yellow and blue as the primary colours (not made by mixing) and orange, green and purple as the secondary colours (made by mixing two primaries), and does not call green, black or white primary. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the primary colours",
+      "pick the secondary colours",
+      "say whether a colour is primary or secondary",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.a",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING",
+     "name": "Say which two primary colours make each secondary colour",
+     "outcomes": [
+      "CREA.G5.CREATI.PAINTING_AND_MOSAIC.a"
+     ],
+     "mastery": "The child says red and yellow make orange, blue and yellow make green, and red and blue make purple, and picks the right pair when a painter needs one of them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what two colours make a secondary",
+      "say what a mix of two primaries makes",
+      "pick the pair for a needed colour",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH",
+     "name": "Describe the wash technique for painting scenery",
+     "outcomes": [
+      "CREA.G5.CREATI.PAINTING_AND_MOSAIC.b"
+     ],
+     "mastery": "The child says a wash uses thin, watery paint spread in broad strokes with a large brush, light colours go on first (the sky) and darker colours and small details go on last, after the wash has dried. This is the knowledge half of outcome b; painting is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say how a wash is painted",
+      "put the steps of a scenery in order",
+      "say which brush and paint suit a wash",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC",
+     "name": "Describe the materials and steps of a mosaic picture",
+     "outcomes": [
+      "CREA.G5.CREATI.PAINTING_AND_MOSAIC.c",
+      "CREA.G5.CREATI.PAINTING_AND_MOSAIC.d"
+     ],
+     "mastery": "The child says a mosaic picture is made by sticking many small pieces (coloured paper, seeds, bottle tops, small stones or tile pieces) close together on a surface with small gaps, after drawing the design first, and glues a small area at a time. This is the knowledge half of outcomes c and d; making it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a mosaic is made of",
+      "put the mosaic steps in order",
+      "pick a material that suits a mosaic",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL.M_PM_GREEN_PRIMARY",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL",
+     "error": "Calls green a primary colour.",
+     "example": {
+      "question": "Which of these is a primary colour?",
+      "wrong_answer": "Green",
+      "correct_answer": "Blue"
+     },
+     "cause": "Grass and leaves are so green that the child treats it as basic.",
+     "reveals": "Offer \"Green\" next to the right answer and ask the question again in a new context.",
+     "help": "Mix blue and yellow to make green, so green is made and not basic.",
+     "feedback": "Green is a secondary colour: it is made by mixing blue and yellow. The primary colours are red, yellow and blue.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL.M_PM_BLACK_WHITE_PRIMARY",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL",
+     "error": "Calls black or white a primary colour.",
+     "example": {
+      "question": "Which colours are the primary colours?",
+      "wrong_answer": "Black, white and red",
+      "correct_answer": "Red, yellow and blue"
+     },
+     "cause": "The child counts the colours used most in school.",
+     "reveals": "Offer \"Black, white and red\" next to the right answer and ask the question again in a new context.",
+     "help": "Show that black and white are not on the colour wheel.",
+     "feedback": "The primary colours are red, yellow and blue. Black and white are not on the colour wheel.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL.M_PM_SECONDARY_MAKES_PRIMARY",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL",
+     "error": "Thinks a primary colour can be made by mixing.",
+     "example": {
+      "question": "Which statement is true?",
+      "wrong_answer": "Red can be made by mixing orange and yellow",
+      "correct_answer": "Red cannot be made by mixing other colours"
+     },
+     "cause": "The child believes any colour can be made.",
+     "reveals": "Offer \"Red can be made by mixing orange and yellow\" next to the right answer and ask the question again in a new context.",
+     "help": "Try to mix red from every pair on the wheel.",
+     "feedback": "Primary colours cannot be made by mixing other colours. All the other colours are made from them.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL.M_PM_ORANGE_PRIMARY",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL",
+     "error": "Calls orange or purple a primary colour.",
+     "example": {
+      "question": "Which of these is a secondary colour?",
+      "wrong_answer": "Yellow",
+      "correct_answer": "Orange"
+     },
+     "cause": "The child knows orange as a basic fruit colour.",
+     "reveals": "Offer \"Yellow\" next to the right answer and ask the question again in a new context.",
+     "help": "Mix red and yellow to make orange, then say \"made, so secondary\".",
+     "feedback": "Orange is a secondary colour. It is made from red and yellow.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING.M_PM_MIX_RY_GREEN",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING",
+     "error": "Says red and yellow make green.",
+     "example": {
+      "question": "Which two colours make orange?",
+      "wrong_answer": "Blue and yellow",
+      "correct_answer": "Red and yellow"
+     },
+     "cause": "The child mixes up the three pairs.",
+     "reveals": "Offer \"Blue and yellow\" next to the right answer and ask the question again in a new context.",
+     "help": "Paint each pair on a strip and label the result.",
+     "feedback": "Red and yellow make orange. Blue and yellow make green.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING.M_PM_MIX_BY_PURPLE",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING",
+     "error": "Says blue and yellow make purple.",
+     "example": {
+      "question": "Which two colours make purple?",
+      "wrong_answer": "Blue and yellow",
+      "correct_answer": "Red and blue"
+     },
+     "cause": "The child mixes up the three pairs.",
+     "reveals": "Offer \"Blue and yellow\" next to the right answer and ask the question again in a new context.",
+     "help": "Paint each pair on a strip and label the result.",
+     "feedback": "Red and blue make purple. Blue and yellow make green.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING.M_PM_MIX_BROWN",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING",
+     "error": "Says every mix makes brown.",
+     "example": {
+      "question": "What colour do red and blue make?",
+      "wrong_answer": "Brown",
+      "correct_answer": "Purple"
+     },
+     "cause": "The child has made brown when mixing many colours together.",
+     "reveals": "Offer \"Brown\" next to the right answer and ask the question again in a new context.",
+     "help": "Mix only two primaries and watch the clean secondary colour appear.",
+     "feedback": "Mixing just two primary colours gives a clean secondary colour. Red and blue make purple. Brown comes from mixing many colours.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH.M_PM_WASH_THICK",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH",
+     "error": "Thinks a wash is painted with thick paint.",
+     "example": {
+      "question": "What kind of paint is used for a wash?",
+      "wrong_answer": "Thick paint straight from the tube",
+      "correct_answer": "Thin, watery paint"
+     },
+     "cause": "The child thinks strong colour is best.",
+     "reveals": "Offer \"Thick paint straight from the tube\" next to the right answer and ask the question again in a new context.",
+     "help": "Paint a strip with thick paint and one with water-thinned paint and compare.",
+     "feedback": "A wash uses thin, watery paint so that the colour spreads smoothly and softly.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH.M_PM_WASH_DETAIL_FIRST",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH",
+     "error": "Paints the small details first and the large areas last.",
+     "example": {
+      "question": "In a wash scenery, what is painted last?",
+      "wrong_answer": "The sky",
+      "correct_answer": "The small details"
+     },
+     "cause": "The child starts with what is easiest to draw.",
+     "reveals": "Offer \"The sky\" next to the right answer and ask the question again in a new context.",
+     "help": "Paint the sky first on one page and the details first on another and compare.",
+     "feedback": "Paint light, large areas first and add small, dark details last, after the wash is dry.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH.M_PM_WASH_SMALL_BRUSH",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH",
+     "error": "Uses the smallest brush for a wash.",
+     "example": {
+      "question": "Which brush suits a wash over a large area?",
+      "wrong_answer": "The smallest, thin brush",
+      "correct_answer": "A large, soft brush"
+     },
+     "cause": "The child thinks a thin brush is more careful.",
+     "reveals": "Offer \"The smallest, thin brush\" next to the right answer and ask the question again in a new context.",
+     "help": "Cover a page with a thin brush and a large brush and time both.",
+     "feedback": "A large, soft brush spreads a wash quickly and evenly. Thin brushes are for details.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC.M_PM_MOSAIC_PAINTED",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC",
+     "error": "Thinks a mosaic is painted in tiny dots.",
+     "example": {
+      "question": "How is a mosaic picture made?",
+      "wrong_answer": "By painting tiny dots",
+      "correct_answer": "By sticking small pieces of material close together"
+     },
+     "cause": "The child has seen dotted pictures and thinks of paint.",
+     "reveals": "Offer \"By painting tiny dots\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a mosaic made of paper bits and seeds.",
+     "feedback": "A mosaic is made by sticking many small pieces of material, such as paper, seeds or tile pieces, onto a surface.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC.M_PM_MOSAIC_OVERLAP",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC",
+     "error": "Thinks mosaic pieces should overlap or be stacked.",
+     "example": {
+      "question": "How should the pieces be placed in a mosaic?",
+      "wrong_answer": "On top of each other",
+      "correct_answer": "Close together with small gaps"
+     },
+     "cause": "The child wants to cover the gaps.",
+     "reveals": "Offer \"On top of each other\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare one mosaic with stacked pieces and one with small gaps.",
+     "feedback": "Mosaic pieces sit close together side by side, leaving small gaps.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC.M_PM_MOSAIC_NO_PLAN",
+     "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC",
+     "error": "Starts sticking pieces without drawing the design first.",
+     "example": {
+      "question": "What should be done before sticking the pieces?",
+      "wrong_answer": "Glue the whole board at once",
+      "correct_answer": "Draw the design on the board"
+     },
+     "cause": "The child is eager to begin.",
+     "reveals": "Offer \"Glue the whole board at once\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a mosaic with and without an outline.",
+     "feedback": "Draw the design first. Then glue a small area at a time so the glue does not dry before the pieces are placed.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.1.1"
    ]
@@ -465,8 +1568,248 @@
      "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.CREATI.MELODY.SOLFA",
+     "name": "Put the sol-fa syllables d r m f s in order of pitch",
+     "outcomes": [
+      "CREA.G5.CREATI.MELODY.a"
+     ],
+     "mastery": "The child puts d r m f s in order from the lowest sound to the highest (d lowest, s highest), says the order backwards for going down, and does not treat the first syllable sung as the highest. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the next syllable going up or down",
+      "say which syllable is highest or lowest",
+      "put the five syllables in order",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.CREATI.MELODY.a",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SIGNS",
+     "name": "Interpret the Kodaly hand signs for d r m f s",
+     "outcomes": [
+      "CREA.G5.CREATI.MELODY.b"
+     ],
+     "mastery": "The child says d is a closed fist held low, r is a hand sloping upward, m is a flat hand with the palm down, f is the thumb pointing down, s is a flat hand with the palm facing sideways, and that the hands are held higher as the pitch gets higher. Questions describe shapes, signs and holes in words, because the phone question has no staff or picture. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which syllable a described sign shows",
+      "say how a syllable's sign looks",
+      "say how the height of the hand changes",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.MELODY.SOLFA",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G4.CREATI.MELODY.b",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.TECHNIQUES",
+     "name": "Name the techniques used in a short melody",
+     "outcomes": [
+      "CREA.G5.CREATI.MELODY.c"
+     ],
+     "mastery": "The child reads a melody written as d r m f s letters and names stepwise motion (to the next syllable), a narrow leap (skipping one syllable), repetition of a pitch, variation of a pitch, and an ending on a long note. This is the knowledge half of outcome c; composing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the technique used in a short melody",
+      "say what a technique means",
+      "pick the melody that uses a technique",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.MELODY.SOLFA",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.MELODY.SOLFA.M_ML_FIRST_HIGHEST",
+     "skill": "CREA.G5.CREATI.MELODY.SOLFA",
+     "error": "Thinks d is the highest sound because it comes first.",
+     "example": {
+      "question": "Which of d r m f s is the highest sound?",
+      "wrong_answer": "d",
+      "correct_answer": "s"
+     },
+     "cause": "The child links first with top.",
+     "reveals": "Offer \"d\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing d r m f s as steps climbing up a ladder.",
+     "feedback": "The sounds go up from d to s. d is the lowest and s is the highest.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SOLFA.M_ML_ORDER_SCRAMBLED",
+     "skill": "CREA.G5.CREATI.MELODY.SOLFA",
+     "error": "Mixes the order of the syllables (d m r f s or d r f m s).",
+     "example": {
+      "question": "Which is the right order going up?",
+      "wrong_answer": "d m r f s",
+      "correct_answer": "d r m f s"
+     },
+     "cause": "The child has learned the names but not the steps.",
+     "reveals": "Offer \"d m r f s\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing and show with the hand going up step by step.",
+     "feedback": "Going up the order is d r m f s.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SOLFA.M_ML_DOWN_UP_SAME",
+     "skill": "CREA.G5.CREATI.MELODY.SOLFA",
+     "error": "Says the order going down is the same as going up.",
+     "example": {
+      "question": "Which is the order going down from s?",
+      "wrong_answer": "s f m r d",
+      "correct_answer": "d r m f s"
+     },
+     "cause": "The child recites the same order every time.",
+     "reveals": "Offer \"s f m r d\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk down steps while singing the syllables backwards.",
+     "feedback": "Going down from s the order is s f m r d.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SIGNS.M_ML_SIGN_FA_UP",
+     "skill": "CREA.G5.CREATI.MELODY.SIGNS",
+     "error": "Says the sign for f is a thumb pointing up.",
+     "example": {
+      "question": "Which sol-fa syllable is shown by the thumb pointing down?",
+      "wrong_answer": "m",
+      "correct_answer": "f"
+     },
+     "cause": "The child links thumbs with \"up\".",
+     "reveals": "Offer \"m\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the sign and say \"fa\" with the thumb down.",
+     "feedback": "The thumb pointing down is the sign for f.",
+     "source": "To confirm by a teacher: hand signs as taught locally (Kodaly/Curwen).",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SIGNS.M_ML_SIGN_D_OPEN",
+     "skill": "CREA.G5.CREATI.MELODY.SIGNS",
+     "error": "Thinks the sign for d is an open hand.",
+     "example": {
+      "question": "How does the hand look for the syllable d?",
+      "wrong_answer": "An open, flat hand",
+      "correct_answer": "A closed fist, held low"
+     },
+     "cause": "The child links the first note with the \"start\" of a greeting.",
+     "reveals": "Offer \"An open, flat hand\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a fist for d at waist height, then show how the hand opens as notes rise.",
+     "feedback": "The sign for d is a closed fist held low.",
+     "source": "To confirm by a teacher: hand signs as taught locally (Kodaly/Curwen).",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SIGNS.M_ML_SIGN_SAME_HEIGHT",
+     "skill": "CREA.G5.CREATI.MELODY.SIGNS",
+     "error": "Thinks all the signs are shown at the same height.",
+     "example": {
+      "question": "As you go from d to s, how does the hand height change?",
+      "wrong_answer": "It stays the same",
+      "correct_answer": "It goes higher as the pitch goes higher"
+     },
+     "cause": "The child focuses on the shape and not the height.",
+     "reveals": "Offer \"It stays the same\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing d r m f s while the hand rises step by step.",
+     "feedback": "The hand rises as the sound rises, so the sign for s is held higher than the sign for d.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.TECHNIQUES.M_ML_STEP_LEAP",
+     "skill": "CREA.G5.CREATI.MELODY.TECHNIQUES",
+     "error": "Calls a jump from d to m a step.",
+     "example": {
+      "question": "The melody goes d m. What is this?",
+      "wrong_answer": "Stepwise motion",
+      "correct_answer": "A narrow leap"
+     },
+     "cause": "The child counts the syllables, not the gap.",
+     "reveals": "Offer \"Stepwise motion\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing d r m and d m and show the missing r.",
+     "feedback": "A step moves to the next syllable (d to r). Skipping one syllable (d to m) is a narrow leap.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.TECHNIQUES.M_ML_REPEAT_NEW",
+     "skill": "CREA.G5.CREATI.MELODY.TECHNIQUES",
+     "error": "Thinks repeating a pitch means moving to a new pitch.",
+     "example": {
+      "question": "The melody goes m m m. What technique is used?",
+      "wrong_answer": "Stepwise motion",
+      "correct_answer": "Repetition of a pitch"
+     },
+     "cause": "The child thinks each note must be different.",
+     "reveals": "Offer \"Stepwise motion\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing the same note three times and clap each.",
+     "feedback": "When the same pitch is sung again, this is repetition of a pitch.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.TECHNIQUES.M_ML_END_SHORT",
+     "skill": "CREA.G5.CREATI.MELODY.TECHNIQUES",
+     "error": "Thinks a melody should end on a short, quick note.",
+     "example": {
+      "question": "How does a good melody usually end?",
+      "wrong_answer": "On a short, quick note",
+      "correct_answer": "On a long note"
+     },
+     "cause": "The child wants to finish quickly.",
+     "reveals": "Offer \"On a short, quick note\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing a tune ending short and again ending long and ask which feels finished.",
+     "feedback": "A melody sounds finished when it ends on a long note.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.1.1"
    ]
@@ -549,8 +1892,241 @@
      "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.BAT",
+     "name": "Name the features of a rounders bat",
+     "outcomes": [
+      "CREA.G5.CREATI.ROUNDERS.a"
+     ],
+     "mastery": "The child names the knob (the end that stops the bat slipping from the hand), the handle and grip (where it is held), and the head (the rounded, thicker hitting part), and knows a rounders bat is smooth and rounded, not flat like a cricket bat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the part from its job",
+      "say which part hits the ball",
+      "pick the feature of a good rounders bat",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.CREATI.NETBALL.a",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.CARVING",
+     "name": "Choose the tools, wood and safe steps for carving a bat",
+     "outcomes": [
+      "CREA.G5.CREATI.ROUNDERS.b"
+     ],
+     "mastery": "The child pairs the saw with cutting the wood to length, the knife or rasp with shaping, and sandpaper with smoothing, says dry hardwood suits a bat, and cuts away from the body with the wood held steady and an adult watching. This is the knowledge half of outcomes b and c; carving is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the tool for a carving job",
+      "pick the wood that suits",
+      "pick the safe carving action",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.ROUNDERS.BAT",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.SAFETY",
+     "name": "Keep safe when batting and fielding in rounders",
+     "outcomes": [
+      "CREA.G5.CREATI.ROUNDERS.e"
+     ],
+     "mastery": "The child stands well away from the batter, does not swing the bat when others are near, puts the bat down and never throws it, bowls underarm to the batter and not at a person, and says each rule protects someone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the safe action at the batting post",
+      "say why a safety rule matters",
+      "say what to do in a game story",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.ROUNDERS.BAT",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.BAT.M_RD_HEAD_HANDLE",
+     "skill": "CREA.G5.CREATI.ROUNDERS.BAT",
+     "error": "Says the head of the bat is the part you hold.",
+     "example": {
+      "question": "Which part of a rounders bat hits the ball?",
+      "wrong_answer": "The handle",
+      "correct_answer": "The head"
+     },
+     "cause": "The child links \"head\" with the top and \"hold\" with the top.",
+     "reveals": "Offer \"The handle\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold the bat and point to the part that touches the ball.",
+     "feedback": "The head is the thicker, rounded part that hits the ball. The handle is held.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.BAT.M_RD_KNOB_HITS",
+     "skill": "CREA.G5.CREATI.ROUNDERS.BAT",
+     "error": "Thinks the knob is for hitting the ball.",
+     "example": {
+      "question": "What does the knob at the end of the handle do?",
+      "wrong_answer": "It hits the ball",
+      "correct_answer": "It stops the bat slipping out of the hand"
+     },
+     "cause": "The child sees the knob as a hard end.",
+     "reveals": "Offer \"It hits the ball\" next to the right answer and ask the question again in a new context.",
+     "help": "Swing a bat with and without a knob grip.",
+     "feedback": "The knob stops the bat slipping from the hand. The head hits the ball.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.BAT.M_RD_CRICKET_FLAT",
+     "skill": "CREA.G5.CREATI.ROUNDERS.BAT",
+     "error": "Thinks a rounders bat is flat like a cricket bat.",
+     "example": {
+      "question": "What shape is the head of a rounders bat?",
+      "wrong_answer": "Flat on one side like a cricket bat",
+      "correct_answer": "Rounded and smooth"
+     },
+     "cause": "The child knows only cricket.",
+     "reveals": "Offer \"Flat on one side like a cricket bat\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a rounders bat and a cricket bat side by side.",
+     "feedback": "A rounders bat is rounded and smooth all round. A cricket bat is flat.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.CARVING.M_RD_SANDPAPER_CUTS",
+     "skill": "CREA.G5.CREATI.ROUNDERS.CARVING",
+     "error": "Says sandpaper is used to cut the wood to length.",
+     "example": {
+      "question": "Which tool makes the carved bat smooth?",
+      "wrong_answer": "The saw",
+      "correct_answer": "Sandpaper"
+     },
+     "cause": "The child ties every tool to cutting.",
+     "reveals": "Offer \"The saw\" next to the right answer and ask the question again in a new context.",
+     "help": "Match each tool with a finished sample.",
+     "feedback": "Sandpaper smooths the wood. A saw cuts it to length.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.CARVING.M_RD_CUT_TOWARD_BODY",
+     "skill": "CREA.G5.CREATI.ROUNDERS.CARVING",
+     "error": "Cuts or carves towards the body.",
+     "example": {
+      "question": "Which is the safe way to carve?",
+      "wrong_answer": "Cut towards your body for control",
+      "correct_answer": "Cut away from your body"
+     },
+     "cause": "The child holds the knife close to see better.",
+     "reveals": "Offer \"Cut towards your body for control\" next to the right answer and ask the question again in a new context.",
+     "help": "Show where the knife goes if it slips.",
+     "feedback": "Always cut away from your body so a slip does not injure you.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.CARVING.M_RD_FRESH_WOOD",
+     "skill": "CREA.G5.CREATI.ROUNDERS.CARVING",
+     "error": "Thinks fresh, wet wood is best for a bat.",
+     "example": {
+      "question": "Which wood suits a bat?",
+      "wrong_answer": "Fresh wood just cut from a tree",
+      "correct_answer": "Dry hardwood"
+     },
+     "cause": "The child thinks fresh is better.",
+     "reveals": "Offer \"Fresh wood just cut from a tree\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a dry stick and a fresh stick: bend, split and weigh.",
+     "feedback": "Dry hardwood is strong and does not crack. Fresh wood bends and splits as it dries.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.SAFETY.M_RD_THROW_BAT",
+     "skill": "CREA.G5.CREATI.ROUNDERS.SAFETY",
+     "error": "Thinks it is fine to throw the bat after hitting.",
+     "example": {
+      "question": "What should a batter do with the bat after hitting the ball?",
+      "wrong_answer": "Throw it away and run",
+      "correct_answer": "Put it down and run"
+     },
+     "cause": "The child hurries to run.",
+     "reveals": "Offer \"Throw it away and run\" next to the right answer and ask the question again in a new context.",
+     "help": "Set a target zone for dropped bats and practise.",
+     "feedback": "Never throw the bat. Put it down so no one is hit.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.SAFETY.M_RD_STAND_CLOSE",
+     "skill": "CREA.G5.CREATI.ROUNDERS.SAFETY",
+     "error": "Stands close to the batter to watch.",
+     "example": {
+      "question": "Where should fielders and waiting players stand?",
+      "wrong_answer": "Close beside the batter to see better",
+      "correct_answer": "Well away from the batter"
+     },
+     "cause": "The child wants a good view.",
+     "reveals": "Offer \"Close beside the batter to see better\" next to the right answer and ask the question again in a new context.",
+     "help": "Mark a line to stand behind.",
+     "feedback": "Stay well away from the batter so you are not hit by the swing.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.SAFETY.M_RD_BOWL_AT_PERSON",
+     "skill": "CREA.G5.CREATI.ROUNDERS.SAFETY",
+     "error": "Thinks the ball may be thrown hard at a player to get them out.",
+     "example": {
+      "question": "How should the ball be bowled to the batter?",
+      "wrong_answer": "Hard at the batter's body",
+      "correct_answer": "Underarm to the batter"
+     },
+     "cause": "The child mixes it up with another game.",
+     "reveals": "Offer \"Hard at the batter's body\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise underarm bowling at a target.",
+     "feedback": "Bowl underarm to the batter. Never throw the ball hard at a person.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.1.1"
    ]
@@ -634,8 +2210,258 @@
      "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.BATON",
+     "name": "Tell the visual and non-visual baton changes and the upsweep and downsweep apart",
+     "outcomes": [
+      "CREA.G5.PERFOR.ATHLETICS.c",
+      "CREA.G5.PERFOR.ATHLETICS.d"
+     ],
+     "mastery": "The child says that in a visual change the receiver looks back and watches the baton come into the hand, in a non-visual change the receiver keeps looking ahead and puts the hand back on a signal, an upsweep moves the baton upward into the hand and a downsweep moves it downward, and that both keep the receiver running without slowing. This is the knowledge half of outcomes c and d. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what the receiver does in each change",
+      "say which way the baton moves into the hand",
+      "say why a baton change method matters",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.PERFOR.ATHLETICS.a",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.RELAY",
+     "name": "Follow the rules and safety of a relay race",
+     "outcomes": [
+      "CREA.G5.PERFOR.ATHLETICS.c"
+     ],
+     "mastery": "The child says the baton is passed inside the exchange zone and carried by hand, never thrown, the runner who drops it picks it up, runners keep to their lane, and the team wins when its last runner crosses the line with the baton. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say where the baton must be passed",
+      "say what to do when a baton is dropped",
+      "pick the safe action in a race story",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.PERFOR.ATHLETICS.BATON",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.PLAITING",
+     "name": "Describe how a three-strand rope is plaited",
+     "outcomes": [
+      "CREA.G5.PERFOR.ATHLETICS.b"
+     ],
+     "mastery": "The child says a plait uses three strands of equal length, fixed together at the top, with the outer strand crossed over the middle strand from the right and then from the left in turn, pulled to an even tightness and tied off at the end. Sisal, leather strips and strips of old fabric are plaiting materials. This is the knowledge half of outcome b. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the plaiting steps in order",
+      "say how many strands and why",
+      "pick a plaiting material",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.CREATI.NETBALL.b",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.BATON.M_AT_VISUAL_LOOK_AHEAD",
+     "skill": "CREA.G5.PERFOR.ATHLETICS.BATON",
+     "error": "Thinks a visual baton change means the receiver looks ahead.",
+     "example": {
+      "question": "In a visual baton change, where does the receiver look?",
+      "wrong_answer": "Straight ahead",
+      "correct_answer": "Back at the baton"
+     },
+     "cause": "The child thinks runners always look forward.",
+     "reveals": "Offer \"Straight ahead\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk through a change slowly and ask where the eyes go.",
+     "feedback": "In a visual change the receiver looks back and sees the baton come into the hand.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.BATON.M_AT_NON_VISUAL_STOP",
+     "skill": "CREA.G5.PERFOR.ATHLETICS.BATON",
+     "error": "Thinks a non-visual change means the runner stops to take the baton.",
+     "example": {
+      "question": "In a non-visual change, what does the receiver do?",
+      "wrong_answer": "Stops and turns round",
+      "correct_answer": "Keeps looking ahead and puts a hand back on a signal"
+     },
+     "cause": "The child links \"non-visual\" with \"not seeing, so not moving\".",
+     "reveals": "Offer \"Stops and turns round\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise at walking speed with eyes ahead.",
+     "feedback": "In a non-visual change the receiver keeps running, looking ahead, and puts the hand back when called.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.BATON.M_AT_UP_DOWN_SWAP",
+     "skill": "CREA.G5.PERFOR.ATHLETICS.BATON",
+     "error": "Swaps upsweep and downsweep.",
+     "example": {
+      "question": "In an upsweep, which way does the baton move into the hand?",
+      "wrong_answer": "Downward",
+      "correct_answer": "Upward"
+     },
+     "cause": "The child mixes up the names.",
+     "reveals": "Offer \"Downward\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a baton swinging up into a palm and then pressed down.",
+     "feedback": "In an upsweep the baton moves upward into the hand. In a downsweep it moves downward.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.BATON.M_AT_THROW_BATON",
+     "skill": "CREA.G5.PERFOR.ATHLETICS.BATON",
+     "error": "Thinks the baton can be thrown to the next runner.",
+     "example": {
+      "question": "How is the baton passed?",
+      "wrong_answer": "Thrown to the next runner",
+      "correct_answer": "Placed in the next runner's hand"
+     },
+     "cause": "The child wants to save time.",
+     "reveals": "Offer \"Thrown to the next runner\" next to the right answer and ask the question again in a new context.",
+     "help": "Pass at walking pace and then at a jog.",
+     "feedback": "The baton is handed over, never thrown.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.RELAY.M_AT_PASS_ANYWHERE",
+     "skill": "CREA.G5.PERFOR.ATHLETICS.RELAY",
+     "error": "Thinks the baton can be passed anywhere on the track.",
+     "example": {
+      "question": "Where must the baton be passed in a relay?",
+      "wrong_answer": "Anywhere on the track",
+      "correct_answer": "Inside the exchange zone"
+     },
+     "cause": "The child does not know the zone.",
+     "reveals": "Offer \"Anywhere on the track\" next to the right answer and ask the question again in a new context.",
+     "help": "Mark the zone with cones and practise.",
+     "feedback": "The baton must be passed inside the exchange zone.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.RELAY.M_AT_DROP_LEAVE_IT",
+     "skill": "CREA.G5.PERFOR.ATHLETICS.RELAY",
+     "error": "Thinks someone else picks up a dropped baton.",
+     "example": {
+      "question": "The baton is dropped. Who picks it up?",
+      "wrong_answer": "The nearest teammate",
+      "correct_answer": "The runner who dropped it"
+     },
+     "cause": "The child wants to save time.",
+     "reveals": "Offer \"The nearest teammate\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise a drop and pick up.",
+     "feedback": "The runner who dropped the baton picks it up and carries on.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.RELAY.M_AT_FINISH_ANY",
+     "skill": "CREA.G5.PERFOR.ATHLETICS.RELAY",
+     "error": "Thinks the team has finished when the first of its runners crosses the line.",
+     "example": {
+      "question": "When has a relay team finished?",
+      "wrong_answer": "When any runner crosses the line",
+      "correct_answer": "When the last runner crosses the line with the baton"
+     },
+     "cause": "The child thinks of a normal race.",
+     "reveals": "Offer \"When any runner crosses the line\" next to the right answer and ask the question again in a new context.",
+     "help": "Run a relay with the team lined up at the end.",
+     "feedback": "A team finishes when its last runner crosses the line with the baton.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.PLAITING.M_AT_PLAIT_TWO",
+     "skill": "CREA.G5.PERFOR.ATHLETICS.PLAITING",
+     "error": "Says a plait uses two strands.",
+     "example": {
+      "question": "How many strands are in a plaited rope?",
+      "wrong_answer": "Two",
+      "correct_answer": "Three"
+     },
+     "cause": "The child thinks of twisting two strands.",
+     "reveals": "Offer \"Two\" next to the right answer and ask the question again in a new context.",
+     "help": "Plait with two and three strands and compare.",
+     "feedback": "A plait uses three strands.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.PLAITING.M_AT_PLAIT_SAME_STRAND",
+     "skill": "CREA.G5.PERFOR.ATHLETICS.PLAITING",
+     "error": "Always moves the same strand.",
+     "example": {
+      "question": "In a plait, how do the strands cross?",
+      "wrong_answer": "The same strand goes over each time",
+      "correct_answer": "The outer strands cross over the middle one in turn"
+     },
+     "cause": "The child does not see the pattern.",
+     "reveals": "Offer \"The same strand goes over each time\" next to the right answer and ask the question again in a new context.",
+     "help": "Colour the three strands differently and plait slowly.",
+     "feedback": "The outer strand crosses over the middle one, first from the right, then from the left.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.PLAITING.M_AT_PLAIT_UNEQUAL",
+     "skill": "CREA.G5.PERFOR.ATHLETICS.PLAITING",
+     "error": "Thinks the strands may be of different lengths.",
+     "example": {
+      "question": "What should the three strands be like at the start?",
+      "wrong_answer": "Different lengths",
+      "correct_answer": "Equal in length"
+     },
+     "cause": "The child cuts without measuring.",
+     "reveals": "Offer \"Different lengths\" next to the right answer and ask the question again in a new context.",
+     "help": "Plait with equal and unequal strands and compare the ends.",
+     "feedback": "Cut the three strands to the same length so the plait is neat.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.2.1"
    ]
@@ -711,8 +2537,241 @@
      "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES",
+     "name": "Identify techniques used to decorate fabric",
+     "outcomes": [
+      "CREA.G5.PERFOR.FABRIC_DECORATION.a"
+     ],
+     "mastery": "The child says tie and dye makes a pattern by tying parts of the cloth so the dye cannot reach them, appliqué sews or sticks cut shapes of one fabric onto another, batik uses wax to keep dye out, and embroidery uses thread stitches, and does not swap tie and dye with appliqué. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the technique from how it is done",
+      "say how a technique makes its pattern",
+      "pick the technique that suits a job",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.a",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE",
+     "name": "Put the steps of tie and dye in order and say why",
+     "outcomes": [
+      "CREA.G5.PERFOR.FABRIC_DECORATION.b"
+     ],
+     "mastery": "The child puts the steps in order: wet the cloth, pinch and tie it tightly, dye it, rinse, untie, then dry in the shade. The child knows the tied parts keep the cloth's own colour, dye is fixed with a fastener such as salt, and gloves and an adult are needed with dye. This is the knowledge half of outcome b. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the steps in order",
+      "say what the tied part looks like after dyeing",
+      "say how to keep safe with dye",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE",
+     "name": "Describe the steps and materials of appliqué",
+     "outcomes": [
+      "CREA.G5.PERFOR.FABRIC_DECORATION.c"
+     ],
+     "mastery": "The child says appliqué means cutting shapes from another fabric, placing them on a background cloth (pinned or tacked first), and sewing or sticking round the edges so they stay on, and that the background cloth is not cut away. This is the knowledge half of outcome c. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the appliqué steps in order",
+      "pick the material for a step",
+      "say what holds the shape on",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES.M_FD_TD_APPLIQUE_SWAP",
+     "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES",
+     "error": "Swaps tie and dye with appliqué.",
+     "example": {
+      "question": "Which technique sews cut shapes of cloth onto another cloth?",
+      "wrong_answer": "Tie and dye",
+      "correct_answer": "Appliqué"
+     },
+     "cause": "The child has met both words together.",
+     "reveals": "Offer \"Tie and dye\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a sample of each.",
+     "feedback": "Appliqué sews or sticks cut shapes of cloth onto another cloth. Tie and dye uses tied cloth and dye.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES.M_FD_APPLIQUE_PAINT",
+     "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES",
+     "error": "Thinks appliqué is painting on cloth.",
+     "example": {
+      "question": "What is appliqué?",
+      "wrong_answer": "Painting a pattern on cloth",
+      "correct_answer": "Sewing or sticking cut shapes onto cloth"
+     },
+     "cause": "The child links decoration with paint.",
+     "reveals": "Offer \"Painting a pattern on cloth\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold up a painted cloth and an appliqué cloth.",
+     "feedback": "Appliqué is not painting. It is sewing or sticking cut shapes onto cloth.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES.M_FD_TIE_DYE_WAX",
+     "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES",
+     "error": "Thinks tie and dye uses wax.",
+     "example": {
+      "question": "Which technique uses tying to keep dye out?",
+      "wrong_answer": "Batik",
+      "correct_answer": "Tie and dye"
+     },
+     "cause": "The child mixes tie and dye with batik.",
+     "reveals": "Offer \"Batik\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a tied cloth and a wax cloth.",
+     "feedback": "Tie and dye uses tying to keep dye out. Batik uses wax.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE.M_FD_TD_UNTIE_FIRST",
+     "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE",
+     "error": "Puts the untying before dyeing.",
+     "example": {
+      "question": "When is the cloth untied in tie and dye?",
+      "wrong_answer": "Before dyeing",
+      "correct_answer": "After dyeing and rinsing"
+     },
+     "cause": "The child wants to see the pattern.",
+     "reveals": "Offer \"Before dyeing\" next to the right answer and ask the question again in a new context.",
+     "help": "Untie too early on a sample.",
+     "feedback": "Untie after dyeing and rinsing. The tied parts keep the cloth's colour.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE.M_FD_TD_TIED_DARK",
+     "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE",
+     "error": "Thinks the tied parts take the most dye.",
+     "example": {
+      "question": "What colour are the tied parts after dyeing?",
+      "wrong_answer": "The darkest dye colour",
+      "correct_answer": "Still the cloth's own colour"
+     },
+     "cause": "The child thinks tied means squeezed with dye.",
+     "reveals": "Offer \"The darkest dye colour\" next to the right answer and ask the question again in a new context.",
+     "help": "Dye a tied sample and open it.",
+     "feedback": "The tied parts stay the cloth's own colour because the dye cannot reach them.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE.M_FD_TD_NO_FIXER",
+     "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE",
+     "error": "Skips the dye fastener.",
+     "example": {
+      "question": "Why is a fastener such as salt used?",
+      "wrong_answer": "It is not needed",
+      "correct_answer": "It helps the dye to stay in the cloth"
+     },
+     "cause": "The child thinks the colour will stay anyway.",
+     "reveals": "Offer \"It is not needed\" next to the right answer and ask the question again in a new context.",
+     "help": "Wash a fixed and an unfixed sample.",
+     "feedback": "A fastener helps the dye to stay in the cloth after washing.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE.M_FD_APP_CUT_BACKGROUND",
+     "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE",
+     "error": "Cuts the shape out of the background cloth.",
+     "example": {
+      "question": "What happens to the background cloth in appliqué?",
+      "wrong_answer": "Shapes are cut out of it",
+      "correct_answer": "It stays whole and the shapes go on top"
+     },
+     "cause": "The child thinks of cutting and sewing.",
+     "reveals": "Offer \"Shapes are cut out of it\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a finished appliqué from the back.",
+     "feedback": "The background cloth stays whole. The shapes are placed on top.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE.M_FD_APP_LOOSE",
+     "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE",
+     "error": "Leaves the shapes unattached.",
+     "example": {
+      "question": "How are the shapes held on?",
+      "wrong_answer": "They stay loose",
+      "correct_answer": "Sewn or stuck round the edges"
+     },
+     "cause": "The child forgets that cloth slips.",
+     "reveals": "Offer \"They stay loose\" next to the right answer and ask the question again in a new context.",
+     "help": "Shake a loose and a stitched sample.",
+     "feedback": "Sew or stick round the edges so the shapes stay on.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE.M_FD_APP_NO_PIN",
+     "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE",
+     "error": "Sews without placing or pinning the shapes first.",
+     "example": {
+      "question": "What should be done before sewing the shapes?",
+      "wrong_answer": "Nothing, start sewing",
+      "correct_answer": "Pin or tack them in place"
+     },
+     "cause": "The child is eager to start.",
+     "reveals": "Offer \"Nothing, start sewing\" next to the right answer and ask the question again in a new context.",
+     "help": "Sew with and without pinning.",
+     "feedback": "Pin or tack the shapes where they belong before sewing.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.2.1"
    ]
@@ -801,8 +2860,318 @@
      "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND",
+     "name": "Give the background of a Kenyan folk dance",
+     "outcomes": [
+      "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.a"
+     ],
+     "mastery": "The child matches isukuti to the Luhya, adumu to the Maasai, mwomboko to the Kikuyu, chakacha to the Swahili of the coast and ohangla to the Luo, gives an occasion for each, and says the soloist leads the song, the chorus answers, instrumentalists play and dancers dance. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the community of a dance",
+      "pick the occasion of a dance",
+      "say who does what in a performance",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.PERFOR.SONGS.c",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS",
+     "name": "Name the components of a Kenyan folk dance",
+     "outcomes": [
+      "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.b"
+     ],
+     "mastery": "The child names songs, body movements, costumes (clothes worn), ornaments (beads, anklets), body adornment (paint, hairstyle), formations (circle, line), props (things held) and instruments (drums, horns), and does not swap ornament with costume or prop with instrument. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the component from a described example",
+      "sort examples into components",
+      "say what a component adds to the dance",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES",
+     "name": "Explain the roles of folk dance in the community",
+     "outcomes": [
+      "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.c"
+     ],
+     "mastery": "The child gives roles such as entertainment, handing down culture and values, bringing people together, marking events like weddings and harvests, and earning an income for performers, and does not say a folk dance is only for fun or only for old people. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a role of folk dance",
+      "pick the statement that is not a role",
+      "say which role fits a story",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY",
+     "name": "Keep safe and show respect when performing a folk dance",
+     "outcomes": [
+      "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.e"
+     ],
+     "mastery": "The child warms up before dancing, clears stones and sharp things from the space, keeps ornaments secure, waits for a turn, listens to the leader, and respects the dances of other communities and does not laugh at them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the safe action before dancing",
+      "pick the respectful action",
+      "say what to do in a rehearsal story",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND.M_FN_COMMUNITY_MIX",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND",
+     "error": "Gives a dance to the wrong community.",
+     "example": {
+      "question": "The isukuti is a dance of which community?",
+      "wrong_answer": "The Maasai",
+      "correct_answer": "The Luhya"
+     },
+     "cause": "The child has not met the dance.",
+     "reveals": "Offer \"The Maasai\" next to the right answer and ask the question again in a new context.",
+     "help": "Place each dance on a map of Kenya.",
+     "feedback": "Isukuti is a dance of the Luhya. Adumu is a Maasai dance.",
+     "source": "To confirm by a teacher: dance and community pairs.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND.M_FN_SOLOIST_CHORUS_SWAP",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND",
+     "error": "Swaps the soloist and the chorus.",
+     "example": {
+      "question": "Who leads the song in a call-and-response dance?",
+      "wrong_answer": "The chorus",
+      "correct_answer": "The soloist"
+     },
+     "cause": "The child thinks the largest group leads.",
+     "reveals": "Offer \"The chorus\" next to the right answer and ask the question again in a new context.",
+     "help": "Perform a call-and-response song.",
+     "feedback": "The soloist leads and the chorus answers.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND.M_FN_OCCASION_SAME",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND",
+     "error": "Says every dance is performed at the same occasion.",
+     "example": {
+      "question": "Chakacha is danced mostly at which occasion?",
+      "wrong_answer": "Only funerals",
+      "correct_answer": "Weddings and celebrations"
+     },
+     "cause": "The child thinks all dances share one use.",
+     "reveals": "Offer \"Only funerals\" next to the right answer and ask the question again in a new context.",
+     "help": "List an occasion for each dance.",
+     "feedback": "Chakacha is danced at weddings and celebrations.",
+     "source": "To confirm by a teacher: occasion of each dance.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS.M_FN_ORNAMENT_COSTUME",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS",
+     "error": "Mixes up costume and ornament.",
+     "example": {
+      "question": "Beads worn on the neck are which component?",
+      "wrong_answer": "Costume",
+      "correct_answer": "Ornaments"
+     },
+     "cause": "The child treats everything worn as costume.",
+     "reveals": "Offer \"Costume\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort pictures into clothes and beads.",
+     "feedback": "Beads and anklets are ornaments. Costume means the clothes worn.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS.M_FN_PROP_INSTRUMENT",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS",
+     "error": "Calls a drum a prop.",
+     "example": {
+      "question": "A drum belongs to which component?",
+      "wrong_answer": "Props",
+      "correct_answer": "Instruments"
+     },
+     "cause": "The child thinks anything held or used is a prop.",
+     "reveals": "Offer \"Props\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort items into those that make music and those that are carried.",
+     "feedback": "A drum makes music, so it is an instrument. A prop is something carried, like a shield.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS.M_FN_FORMATION_WORN",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS",
+     "error": "Thinks a formation is something worn.",
+     "example": {
+      "question": "What is a formation in a dance?",
+      "wrong_answer": "A costume worn by dancers",
+      "correct_answer": "The shape the dancers make"
+     },
+     "cause": "The child hears a similar word to \"uniform\".",
+     "reveals": "Offer \"A costume worn by dancers\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask the class to stand in a circle and a line.",
+     "feedback": "A formation is the shape dancers make, such as a circle or a line.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES.M_FN_ROLE_FUN_ONLY",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES",
+     "error": "Says a folk dance is only for fun.",
+     "example": {
+      "question": "Which is a role of folk dance?",
+      "wrong_answer": "Only to pass time",
+      "correct_answer": "To hand down culture and values"
+     },
+     "cause": "The child sees only the performance.",
+     "reveals": "Offer \"Only to pass time\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask a grandparent why a dance is done.",
+     "feedback": "Folk dances also hand down culture and values, bring people together and mark events.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES.M_FN_ROLE_OLD_ONLY",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES",
+     "error": "Says folk dances are only for old people.",
+     "example": {
+      "question": "Who takes part in folk dances?",
+      "wrong_answer": "Only old people",
+      "correct_answer": "People of different ages"
+     },
+     "cause": "The child links tradition with age.",
+     "reveals": "Offer \"Only old people\" next to the right answer and ask the question again in a new context.",
+     "help": "List who dances in each folk dance.",
+     "feedback": "People of all ages take part in many folk dances.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES.M_FN_ROLE_NO_WORK",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES",
+     "error": "Thinks performing earns no income.",
+     "example": {
+      "question": "How can folk dance help a community economically?",
+      "wrong_answer": "It cannot",
+      "correct_answer": "Performers can be paid at events"
+     },
+     "cause": "The child sees dance as free.",
+     "reveals": "Offer \"It cannot\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask about paid cultural groups.",
+     "feedback": "Performers may be paid at weddings and cultural events, so dance can earn an income.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY.M_FN_NO_WARMUP",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY",
+     "error": "Thinks warming up is not needed.",
+     "example": {
+      "question": "What should dancers do before dancing?",
+      "wrong_answer": "Start straight away",
+      "correct_answer": "Warm up"
+     },
+     "cause": "The child is eager to dance.",
+     "reveals": "Offer \"Start straight away\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare stretched and unstretched dancers.",
+     "feedback": "Warm up first so your muscles are ready and do not get hurt.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY.M_FN_MOCK_OTHER",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY",
+     "error": "Laughs at the dance of another community.",
+     "example": {
+      "question": "A group performs a dance of another community. What is the respectful action?",
+      "wrong_answer": "Laugh at the steps",
+      "correct_answer": "Watch politely and clap"
+     },
+     "cause": "The child finds unfamiliar things funny.",
+     "reveals": "Offer \"Laugh at the steps\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask how it feels when people laugh at your culture.",
+     "feedback": "Respect the dances of all communities and do not laugh at them.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY.M_FN_CROWDED_SPACE",
+     "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY",
+     "error": "Thinks stones and sharp things in the space do not matter.",
+     "example": {
+      "question": "What should be done to the dancing space?",
+      "wrong_answer": "Nothing",
+      "correct_answer": "Clear stones and sharp things"
+     },
+     "cause": "The child ignores the ground.",
+     "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk the space together before dancing.",
+     "feedback": "Clear the space of stones and sharp things before dancing.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.2.1"
    ]
@@ -865,8 +3234,241 @@
      "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.TYPES",
+     "name": "Identify a glove puppet and tell it from other puppets",
+     "outcomes": [
+      "CREA.G5.PERFOR.PUPPETRY.a"
+     ],
+     "mastery": "The child says a glove puppet is worn over the hand with the fingers moving the head and arms, a finger puppet fits on one finger, a string puppet hangs on strings, a rod puppet moves on sticks, and a shadow puppet is a flat shape seen behind a lit screen. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the glove puppet from a description",
+      "say how a puppet is moved",
+      "say what a puppet type is called",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.PERFOR.PHOTOGRAPHY.a",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.MAKE",
+     "name": "Choose recyclable materials and the right size for a glove puppet",
+     "outcomes": [
+      "CREA.G5.PERFOR.PUPPETRY.b"
+     ],
+     "mastery": "The child says recyclable materials are things already used that can be used again (old socks, paper bags, cardboard, bottle tops, cloth scraps), picks one for a part such as eyes or hair, and says the puppet must fit the hand so the fingers can move the head and arms. This is the knowledge half of outcome b. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the recyclable material",
+      "say what to use for a part",
+      "say why the size must fit the hand",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.PERFOR.PUPPETRY.TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.SHOW",
+     "name": "Say how to put on a puppet show with a topical song",
+     "outcomes": [
+      "CREA.G5.PERFOR.PUPPETRY.c"
+     ],
+     "mastery": "The child says a puppet show needs a screen that hides the puppeteers, a story, a different voice for each character, and only the speaking puppet moving, and that a topical song is about an issue the community is talking about, such as hygiene, road safety or looking after trees. This is the knowledge half of outcome c. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a puppet show needs",
+      "say what a topical song is",
+      "pick the right action in a show story",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.PERFOR.PUPPETRY.TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.TYPES.M_PP_GLOVE_STRING",
+     "skill": "CREA.G5.PERFOR.PUPPETRY.TYPES",
+     "error": "Says a glove puppet hangs on strings.",
+     "example": {
+      "question": "How is a glove puppet moved?",
+      "wrong_answer": "By strings from above",
+      "correct_answer": "By the hand and fingers inside it"
+     },
+     "cause": "The child mixes up the puppet types.",
+     "reveals": "Offer \"By strings from above\" next to the right answer and ask the question again in a new context.",
+     "help": "Show both types.",
+     "feedback": "A glove puppet is worn on the hand. A string puppet hangs on strings.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.TYPES.M_PP_GLOVE_FINGER",
+     "skill": "CREA.G5.PERFOR.PUPPETRY.TYPES",
+     "error": "Thinks a glove puppet fits on one finger only.",
+     "example": {
+      "question": "Which puppet fits on a single finger?",
+      "wrong_answer": "A glove puppet",
+      "correct_answer": "A finger puppet"
+     },
+     "cause": "The child mixes up the two names.",
+     "reveals": "Offer \"A glove puppet\" next to the right answer and ask the question again in a new context.",
+     "help": "Put each on your hand.",
+     "feedback": "A finger puppet fits on one finger. A glove puppet covers the hand.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.TYPES.M_PP_SHADOW_GLOVE",
+     "skill": "CREA.G5.PERFOR.PUPPETRY.TYPES",
+     "error": "Calls a shadow puppet a glove puppet.",
+     "example": {
+      "question": "Which puppet is seen as a shadow behind a lit screen?",
+      "wrong_answer": "A glove puppet",
+      "correct_answer": "A shadow puppet"
+     },
+     "cause": "The child thinks every puppet is moved the same way.",
+     "reveals": "Offer \"A glove puppet\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a shadow puppet with a torch.",
+     "feedback": "A shadow puppet is a flat shape that is seen as a shadow on a lit screen.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.MAKE.M_PP_RECYCLE_NEW",
+     "skill": "CREA.G5.PERFOR.PUPPETRY.MAKE",
+     "error": "Thinks buying new materials counts as recyclable.",
+     "example": {
+      "question": "Which is a recyclable material for a puppet?",
+      "wrong_answer": "A new, store-bought cloth",
+      "correct_answer": "An old sock"
+     },
+     "cause": "The child thinks recyclable means any material.",
+     "reveals": "Offer \"A new, store-bought cloth\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort items into used and new.",
+     "feedback": "Recyclable materials are used things that can be used again, like an old sock.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.MAKE.M_PP_SIZE_NO_FIT",
+     "skill": "CREA.G5.PERFOR.PUPPETRY.MAKE",
+     "error": "Thinks the puppet need not fit the hand.",
+     "example": {
+      "question": "Why must a glove puppet fit the hand?",
+      "wrong_answer": "It does not need to fit",
+      "correct_answer": "So the fingers can move the head and arms"
+     },
+     "cause": "The child focuses on how it looks.",
+     "reveals": "Offer \"It does not need to fit\" next to the right answer and ask the question again in a new context.",
+     "help": "Try a puppet that is too big.",
+     "feedback": "The puppet must fit the hand so the fingers can move the head and arms.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.MAKE.M_PP_SHARP_UNSUPERVISED",
+     "skill": "CREA.G5.PERFOR.PUPPETRY.MAKE",
+     "error": "Uses sharp tools without supervision.",
+     "example": {
+      "question": "How should scissors or a knife be used while making a puppet?",
+      "wrong_answer": "Freely, without help",
+      "correct_answer": "Carefully, with an adult watching"
+     },
+     "cause": "The child feels capable.",
+     "reveals": "Offer \"Freely, without help\" next to the right answer and ask the question again in a new context.",
+     "help": "Set rules for cutting.",
+     "feedback": "Use sharp tools carefully, with an adult watching.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.SHOW.M_PP_ALL_MOVE",
+     "skill": "CREA.G5.PERFOR.PUPPETRY.SHOW",
+     "error": "Moves all puppets at once.",
+     "example": {
+      "question": "Which puppet moves when it speaks?",
+      "wrong_answer": "All puppets move at once",
+      "correct_answer": "Only the speaking puppet"
+     },
+     "cause": "The child is excited.",
+     "reveals": "Offer \"All puppets move at once\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise with two puppets.",
+     "feedback": "Only the puppet that is speaking moves.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.SHOW.M_PP_SHOW_FACE",
+     "skill": "CREA.G5.PERFOR.PUPPETRY.SHOW",
+     "error": "Thinks the puppeteers should be seen.",
+     "example": {
+      "question": "Where do the puppeteers stand?",
+      "wrong_answer": "In front of the screen",
+      "correct_answer": "Behind the screen"
+     },
+     "cause": "The child wants the audience to see them.",
+     "reveals": "Offer \"In front of the screen\" next to the right answer and ask the question again in a new context.",
+     "help": "Watch a show with and without a screen.",
+     "feedback": "The puppeteers hide behind a screen so the audience watches the puppets.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.SHOW.M_PP_TOPICAL_ANY",
+     "skill": "CREA.G5.PERFOR.PUPPETRY.SHOW",
+     "error": "Thinks a topical song is any song.",
+     "example": {
+      "question": "What is a topical song?",
+      "wrong_answer": "Any song we like",
+      "correct_answer": "A song about an issue in the community"
+     },
+     "cause": "The child mixes up topical and popular.",
+     "reveals": "Offer \"Any song we like\" next to the right answer and ask the question again in a new context.",
+     "help": "List current community issues.",
+     "feedback": "A topical song is about an issue people are talking about now, such as hygiene or road safety.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.2.1"
    ]
@@ -940,8 +3542,164 @@
      "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES",
+     "name": "Order the recorder notes G A B C D and say how many holes each covers",
+     "outcomes": [
+      "CREA.G5.PERFOR.DESCANT_RECORDER.a"
+     ],
+     "mastery": "The child puts the notes in order from the lowest, G, A, B, then the higher C and D (C1 and D1), says B covers the thumb hole and one finger, A the thumb and two fingers, G the thumb and three fingers, and that covering more holes gives a lower note. This is the knowledge half of outcome a; playing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the notes in order of pitch",
+      "say how many fingers G, A or B needs",
+      "say whether a note is higher or lower",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.PERFOR.DESCANT_RECORDER.a",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+     "name": "Describe good recorder technique: fingering, breath, tonguing and tone",
+     "outcomes": [
+      "CREA.G5.PERFOR.DESCANT_RECORDER.b"
+     ],
+     "mastery": "The child covers each hole fully with the soft pad of the finger, blows a gentle steady breath (too hard gives a shrill squeak), starts each note by tonguing softly with a \"too\" sound, and knows a good tone is clear and smooth. This is the knowledge half of outcome b. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the way to hold and finger the recorder",
+      "say how to blow for a good tone",
+      "say what tonguing does",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES.M_DR_ALPHABET_ORDER",
+     "skill": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES",
+     "error": "Puts the notes in alphabet order for pitch.",
+     "example": {
+      "question": "Which is the lowest of G, A and B?",
+      "wrong_answer": "A",
+      "correct_answer": "G"
+     },
+     "cause": "The child orders by letter.",
+     "reveals": "Offer \"A\" next to the right answer and ask the question again in a new context.",
+     "help": "Play the notes and listen.",
+     "feedback": "G is the lowest of the three. The order going up is G, A, B.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES.M_DR_MORE_HOLES_HIGHER",
+     "skill": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES",
+     "error": "Thinks covering more holes gives a higher note.",
+     "example": {
+      "question": "Which of G, A and B covers the most holes?",
+      "wrong_answer": "B",
+      "correct_answer": "G"
+     },
+     "cause": "The child thinks more is higher.",
+     "reveals": "Offer \"B\" next to the right answer and ask the question again in a new context.",
+     "help": "Cover and uncover holes and listen.",
+     "feedback": "G covers the most holes and is the lowest. B covers fewer and is higher.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES.M_DR_HIGH_C_LOW",
+     "skill": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES",
+     "error": "Thinks C1 and D1 are lower than G.",
+     "example": {
+      "question": "Which note is higher than B?",
+      "wrong_answer": "G",
+      "correct_answer": "C1"
+     },
+     "cause": "The child does not see the prime mark.",
+     "reveals": "Offer \"G\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing G A B C D going up.",
+     "feedback": "C1 and D1 are higher notes than G, A and B.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_DR_BLOW_HARD",
+     "skill": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+     "error": "Thinks a good tone needs a hard blow.",
+     "example": {
+      "question": "How should you blow into the recorder?",
+      "wrong_answer": "As hard as you can",
+      "correct_answer": "Gently and steadily"
+     },
+     "cause": "The child wants a loud sound.",
+     "reveals": "Offer \"As hard as you can\" next to the right answer and ask the question again in a new context.",
+     "help": "Blow hard and gently and compare.",
+     "feedback": "Blow gently and steadily. A hard blow gives a shrill squeak.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_DR_FINGER_TIPS",
+     "skill": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+     "error": "Covers the holes with the tips of the fingers.",
+     "example": {
+      "question": "How should the holes be covered?",
+      "wrong_answer": "With the tip of the finger",
+      "correct_answer": "With the soft pad of the finger"
+     },
+     "cause": "The child thinks tips are more precise.",
+     "reveals": "Offer \"With the tip of the finger\" next to the right answer and ask the question again in a new context.",
+     "help": "Cover the hole with each and listen.",
+     "feedback": "Cover each hole fully with the soft pad of the finger.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_DR_NO_TONGUE",
+     "skill": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+     "error": "Thinks tonguing is not needed.",
+     "example": {
+      "question": "What does tonguing do?",
+      "wrong_answer": "Nothing",
+      "correct_answer": "It starts each note clearly"
+     },
+     "cause": "The child blows without breaks.",
+     "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+     "help": "Play with and without tonguing.",
+     "feedback": "Tonguing starts each note clearly, using a soft \"too\".",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.2.1"
    ]
@@ -1046,8 +3804,273 @@
      "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.CRAWL",
+     "name": "Describe the parts of the front crawl",
+     "outcomes": [
+      "CREA.G5.PERFOR.SWIMMING.a_"
+     ],
+     "mastery": "The child says the body lies flat on the front with the face in the water, the arms pull one after the other (one under the water while the other swings over it), the legs kick up and down in small quick flutter kicks from the hips, and the swimmer breathes out in the water and turns the head to the side to breathe in. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what the arms do",
+      "say what the legs do",
+      "say how to breathe",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.PERFOR.SWIMMING.a_",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY",
+     "name": "Keep clean and safe in the swimming pool",
+     "outcomes": [
+      "CREA.G5.PERFOR.SWIMMING.c_"
+     ],
+     "mastery": "The child showers before getting in, never swims alone and swims only when a teacher or lifeguard is watching, does not run on the pool side, does not push, and checks the depth and enters feet first when not sure. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the safe or clean action",
+      "say why a pool rule matters",
+      "say what to do in a pool story",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.PERFOR.SWIMMING.a_",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES",
+     "name": "Identify indigenous counting games and what they build",
+     "outcomes": [
+      "CREA.G5.PERFOR.SWIMMING.a_2"
+     ],
+     "mastery": "The child names bao (a board game of pits and seeds) and counting rhymes, skipping and clapping games as counting games, says that counting games train counting, planning and teamwork and the moving ones build fitness, and that rhythm means counting and moving to the beat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a counting game",
+      "say what a counting game trains",
+      "say how rhythm joins a counting game",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.PERFOR.SWIMMING.CRAWL",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.CRAWL.M_SW_ARMS_TOGETHER",
+     "skill": "CREA.G5.PERFOR.SWIMMING.CRAWL",
+     "error": "Thinks both arms pull at the same time.",
+     "example": {
+      "question": "In front crawl, how do the arms move?",
+      "wrong_answer": "Both together",
+      "correct_answer": "One after the other"
+     },
+     "cause": "The child mixes it with breaststroke.",
+     "reveals": "Offer \"Both together\" next to the right answer and ask the question again in a new context.",
+     "help": "Show on land.",
+     "feedback": "In front crawl the arms pull one after the other.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.CRAWL.M_SW_FROG_KICK",
+     "skill": "CREA.G5.PERFOR.SWIMMING.CRAWL",
+     "error": "Thinks the legs kick like a frog.",
+     "example": {
+      "question": "How do the legs kick in front crawl?",
+      "wrong_answer": "Like a frog",
+      "correct_answer": "Small quick up-and-down kicks"
+     },
+     "cause": "The child mixes it with breaststroke.",
+     "reveals": "Offer \"Like a frog\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise on the pool edge.",
+     "feedback": "In front crawl the legs make small quick up-and-down flutter kicks.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.CRAWL.M_SW_LIFT_HEAD",
+     "skill": "CREA.G5.PERFOR.SWIMMING.CRAWL",
+     "error": "Lifts the head forward to breathe.",
+     "example": {
+      "question": "How does the swimmer breathe in?",
+      "wrong_answer": "Lifts the head forward",
+      "correct_answer": "Turns the head to the side"
+     },
+     "cause": "The child wants to see ahead.",
+     "reveals": "Offer \"Lifts the head forward\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise on the pool edge.",
+     "feedback": "Turn the head to the side to breathe in.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.CRAWL.M_SW_HOLD_BREATH",
+     "skill": "CREA.G5.PERFOR.SWIMMING.CRAWL",
+     "error": "Holds the breath all the time.",
+     "example": {
+      "question": "What does the swimmer do with the breath under water?",
+      "wrong_answer": "Holds it",
+      "correct_answer": "Breathes out"
+     },
+     "cause": "The child is afraid of water.",
+     "reveals": "Offer \"Holds it\" next to the right answer and ask the question again in a new context.",
+     "help": "Blow bubbles.",
+     "feedback": "Breathe out in the water and breathe in when the head turns.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY.M_SW_RUN_POOL",
+     "skill": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY",
+     "error": "Thinks running on the pool side is fine.",
+     "example": {
+      "question": "What should you not do on the pool side?",
+      "wrong_answer": "Walk",
+      "correct_answer": "Run"
+     },
+     "cause": "The child is excited.",
+     "reveals": "Offer \"Walk\" next to the right answer and ask the question again in a new context.",
+     "help": "Set rules.",
+     "feedback": "Walk on the pool side. Running can make you slip.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY.M_SW_SWIM_ALONE",
+     "skill": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY",
+     "error": "Thinks swimming alone is fine for a good swimmer.",
+     "example": {
+      "question": "When should a learner swim?",
+      "wrong_answer": "Alone, if a good swimmer",
+      "correct_answer": "Only when a teacher or lifeguard is watching"
+     },
+     "cause": "The child is confident.",
+     "reveals": "Offer \"Alone, if a good swimmer\" next to the right answer and ask the question again in a new context.",
+     "help": "Discuss why.",
+     "feedback": "Swim only when an adult is watching.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY.M_SW_NO_SHOWER",
+     "skill": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY",
+     "error": "Thinks showering before swimming is not needed.",
+     "example": {
+      "question": "What should you do before getting into the pool?",
+      "wrong_answer": "Jump in",
+      "correct_answer": "Shower"
+     },
+     "cause": "The child sees no reason.",
+     "reveals": "Offer \"Jump in\" next to the right answer and ask the question again in a new context.",
+     "help": "Talk about keeping the water clean.",
+     "feedback": "Shower first so the pool water stays clean.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY.M_SW_DIVE_SHALLOW",
+     "skill": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY",
+     "error": "Thinks diving in shallow water is fine.",
+     "example": {
+      "question": "How should you enter water of unknown depth?",
+      "wrong_answer": "Dive in",
+      "correct_answer": "Feet first"
+     },
+     "cause": "The child has seen others dive.",
+     "reveals": "Offer \"Dive in\" next to the right answer and ask the question again in a new context.",
+     "help": "Discuss injuries.",
+     "feedback": "Enter feet first when you do not know the depth.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES.M_SW_CG_ONLY_BOARD",
+     "skill": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES",
+     "error": "Thinks all counting games are sit-down and give no exercise.",
+     "example": {
+      "question": "Which counting game is a moving game?",
+      "wrong_answer": "Bao only",
+      "correct_answer": "Skipping with counting"
+     },
+     "cause": "The child knows only bao.",
+     "reveals": "Offer \"Bao only\" next to the right answer and ask the question again in a new context.",
+     "help": "List counting games that move.",
+     "feedback": "Some counting games, like skipping while counting, move the whole body and build fitness.",
+     "source": "To confirm by a teacher: counting games named in local practice.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES.M_SW_CG_NO_COUNT",
+     "skill": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES",
+     "error": "Thinks counting is not part of a counting game.",
+     "example": {
+      "question": "What do players do in a counting game?",
+      "wrong_answer": "No counting",
+      "correct_answer": "Count seeds, steps or turns"
+     },
+     "cause": "The child thinks of just playing.",
+     "reveals": "Offer \"No counting\" next to the right answer and ask the question again in a new context.",
+     "help": "Play one and watch.",
+     "feedback": "Players count as part of the game.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES.M_SW_CG_RHYTHM_FAST",
+     "skill": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES",
+     "error": "Thinks counting to rhythm means counting as fast as you can.",
+     "example": {
+      "question": "What does counting to a rhythm mean?",
+      "wrong_answer": "Counting as fast as possible",
+      "correct_answer": "Counting and moving to the beat"
+     },
+     "cause": "The child mixes rhythm with speed.",
+     "reveals": "Offer \"Counting as fast as possible\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap the beat.",
+     "feedback": "Count and move together to the beat.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.2.1"
    ]
@@ -1128,8 +4151,241 @@
      "indicator": "CREA.G5.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+     "name": "Give a kind, specific comment about a work of art",
+     "outcomes": [
+      "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.a"
+     ],
+     "mastery": "The child comments on the type of art, the materials and what stands out (colour, line, shape, texture), says what they like and why, offers one polite idea to improve, and does not touch other people's work or use rude words. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the helpful, respectful comment",
+      "say what to look at in an artwork",
+      "say what to do in a gallery walk",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.a",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS",
+     "name": "Use the right word to discuss a folk dance",
+     "outcomes": [
+      "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.b"
+     ],
+     "mastery": "The child uses formation (the shape the dancers make), costume (clothes worn), ornament (beads and anklets), response (the chorus answering the soloist), occasion (when it is performed) and community (the people it comes from) correctly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the word that fits a description",
+      "say what a word means",
+      "fill the word into a sentence",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+     "name": "Say the message, values and etiquette of the East African Community Anthem",
+     "outcomes": [
+      "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.c"
+     ],
+     "mastery": "The child says the East African Community Anthem is the song of the East African Community, a group of countries working together, that it asks for peace, unity and co-operation, that it is not Kenya's national anthem, and that everyone stands still and straight and sings or listens in respectful silence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what the anthem is for",
+      "pick a value in the anthem",
+      "pick the right behaviour when it is sung",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.c",
+       "kind": "outcome",
+       "reason": "Grade 4 Creative Arts introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_AP_CRIT_VAGUE",
+     "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+     "error": "Says only \"nice\" without a reason.",
+     "example": {
+      "question": "Which comment is the most helpful?",
+      "wrong_answer": "It is nice.",
+      "correct_answer": "I like the bright colours in the sky because they show a sunny day."
+     },
+     "cause": "The child does not know what to look at.",
+     "reveals": "Offer \"It is nice.\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise with a sentence starter.",
+     "feedback": "A helpful comment says what you see and why you like it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_AP_CRIT_RUDE",
+     "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+     "error": "Uses rude words about someone else's work.",
+     "example": {
+      "question": "Which comment is polite?",
+      "wrong_answer": "This is ugly.",
+      "correct_answer": "I think more colour in the corner would make it stronger."
+     },
+     "cause": "The child thinks honest means harsh.",
+     "reveals": "Offer \"This is ugly.\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise kind wording.",
+     "feedback": "Say what could be better in a polite way.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_AP_CRIT_TOUCH",
+     "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+     "error": "Touches the artworks on display.",
+     "example": {
+      "question": "What should you do with a display piece?",
+      "wrong_answer": "Touch it to feel it",
+      "correct_answer": "Look carefully without touching"
+     },
+     "cause": "The child is curious.",
+     "reveals": "Offer \"Touch it to feel it\" next to the right answer and ask the question again in a new context.",
+     "help": "Set gallery rules.",
+     "feedback": "Look carefully and do not touch other people's work.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS.M_AP_TERM_FORMATION_COSTUME",
+     "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS",
+     "error": "Mixes up formation and costume.",
+     "example": {
+      "question": "Which word means the shape the dancers make?",
+      "wrong_answer": "Costume",
+      "correct_answer": "Formation"
+     },
+     "cause": "The child mixes up similar words.",
+     "reveals": "Offer \"Costume\" next to the right answer and ask the question again in a new context.",
+     "help": "Use each word in a sentence.",
+     "feedback": "Formation is the shape the dancers make. Costume is what they wear.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS.M_AP_TERM_SOLOIST_CHORUS",
+     "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS",
+     "error": "Mixes up soloist and chorus.",
+     "example": {
+      "question": "Which word means the group that answers the leader?",
+      "wrong_answer": "Soloist",
+      "correct_answer": "Chorus"
+     },
+     "cause": "The child mixes up who leads.",
+     "reveals": "Offer \"Soloist\" next to the right answer and ask the question again in a new context.",
+     "help": "Role-play call and response.",
+     "feedback": "The chorus answers. The soloist leads.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS.M_AP_TERM_OCCASION_COMMUNITY",
+     "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS",
+     "error": "Mixes up occasion and community.",
+     "example": {
+      "question": "Which word means when a dance is performed?",
+      "wrong_answer": "Community",
+      "correct_answer": "Occasion"
+     },
+     "cause": "The child mixes up when and who.",
+     "reveals": "Offer \"Community\" next to the right answer and ask the question again in a new context.",
+     "help": "Use each in a sentence.",
+     "feedback": "The occasion is when it is performed. The community is the people it comes from.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_AP_ANTHEM_NATIONAL",
+     "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+     "error": "Thinks the EAC anthem is Kenya's national anthem.",
+     "example": {
+      "question": "The East African Community Anthem is the anthem of which group?",
+      "wrong_answer": "Kenya only",
+      "correct_answer": "The East African Community, a group of countries"
+     },
+     "cause": "The child knows only one anthem.",
+     "reveals": "Offer \"Kenya only\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing both and say who each belongs to.",
+     "feedback": "The East African Community Anthem belongs to the East African Community. Kenya's national anthem is Ee Mungu Nguvu Yetu.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_AP_ANTHEM_SIT",
+     "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+     "error": "Thinks you may sit while the anthem is played.",
+     "example": {
+      "question": "What should you do while the anthem is sung?",
+      "wrong_answer": "Sit and talk",
+      "correct_answer": "Stand still and straight"
+     },
+     "cause": "The child does not know the etiquette.",
+     "reveals": "Offer \"Sit and talk\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise standing.",
+     "feedback": "Stand still and straight and sing or listen in silence.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_AP_ANTHEM_VALUE",
+     "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+     "error": "Names a wrong value for the anthem (competition, rivalry).",
+     "example": {
+      "question": "Which value does the anthem ask for?",
+      "wrong_answer": "Rivalry between countries",
+      "correct_answer": "Unity and peace"
+     },
+     "cause": "The child thinks of sports teams.",
+     "reveals": "Offer \"Rivalry between countries\" next to the right answer and ask the question again in a new context.",
+     "help": "Read the words together.",
+     "feedback": "The anthem asks for unity, peace and co-operation.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G5.RUBRIC.3.1"
    ]
