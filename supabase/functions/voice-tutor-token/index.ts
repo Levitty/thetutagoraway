@@ -432,6 +432,7 @@ var MARKS = ["highlight", "underline", "point"];
 var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "note_interest", "note_what_helped", "assess", "pause_for_child", "end_session"];
 var TIMED = [...DRAWN, ...MARKS, "erase", "clear"];
 var PACES = ["slow"];
+var VALUE_WORD = new Set("zero nought one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen twenty hundred half halves third thirds quarter quarters fourth fourths fifth fifths sixth sixths seventh sevenths eighth eighths ninth ninths tenth tenths twelfth twelfths nusu robo theluthi moja mbili tatu nne tano sita saba nane tisa kumi whole wholes over out of numerator numerators denominator denominators fraction fractions multiply times divide add plus minus same equal equivalent bigger larger greater more smaller less fewer longer shorter top bottom middle left right first second last both neither".split(" "));
 var S = (props, required) => ({ type: "object", properties: props, required, additionalProperties: false });
 var T = { type: "string" };
 var I = { type: "integer" };

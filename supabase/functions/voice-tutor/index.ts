@@ -819,6 +819,21 @@ var clip = (v, max, name, notes) => {
   return (sp > max / 2 ? head.slice(0, sp) : head).replace(/[,;:\s]+$/, "");
 };
 var readsAsNumber = (v) => /^\s*\d+(\s*\/\s*\d+)?\s*$/.test(String(v));
+var OFFER_Q = /^\W*(do|would) you (want|like)\b|\bshall (i|we)\b|\bshould i\b|\bare you ready\b|\bcan you (see|hear)( it| me| that| this)?\s*\?|\bis that (ok|okay|all right)\b|\bwho (should|will|wants to)\b|\b(you|me) or (me|you|i)\b|\bor (shall|should|can) i\b/i;
+var YES_NO_Q = /^\W*(is|are|does|do|did|can|could|will|would|was|were|has|have|should)\b/i;
+var VALUE_WORD = new Set("zero nought one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen twenty hundred half halves third thirds quarter quarters fourth fourths fifth fifths sixth sixths seventh sevenths eighth eighths ninth ninths tenth tenths twelfth twelfths nusu robo theluthi moja mbili tatu nne tano sita saba nane tisa kumi whole wholes over out of numerator numerators denominator denominators fraction fractions multiply times divide add plus minus same equal equivalent bigger larger greater more smaller less fewer longer shorter top bottom middle left right first second last both neither".split(" "));
+var VALUE_SKIP = /* @__PURE__ */ new Set(["over", "out", "of", "first", "second", "last", "right", "left"]);
+var hasValueWord = (e) => String(e).toLowerCase().replace(/[^a-z0-9/ ]+/g, " ").split(/\s+/).filter(Boolean).some((x) => /^\d+(\/\d+)?$/.test(x) || VALUE_WORD.has(x) && !VALUE_SKIP.has(x));
+function sealable(prompt, expected, choices = null) {
+  const p = String(prompt || "");
+  const e = String(expected ?? "").trim();
+  if (!e || OFFER_Q.test(p)) return false;
+  if (Array.isArray(choices) && choices.some((c) => String(c).trim().toLowerCase() === e.toLowerCase())) return true;
+  if (/^(yes|no)$/i.test(e)) return YES_NO_Q.test(p);
+  if (readsAsNumber(e) || hasValueWord(e) || /^[<>=]$/.test(e)) return true;
+  const words5 = (t) => ` ${String(t).toLowerCase().replace(/[^a-z0-9/ ]+/g, " ").replace(/\s+/g, " ").trim()} `;
+  return words5(p).includes(words5(e));
+}
 var shadedOf = (v, parts) => {
   if (isInt(v)) {
     need(v >= 0 && v <= parts, "shaded: count out of range");
@@ -1099,14 +1114,20 @@ function checkStep(s0, ctx, notes) {
         out.bank = s.bank;
       }
       if (s.expected !== void 0 && s.expected !== null) out.expected = str(String(s.expected), LIMITS.expected, "expected", notes);
-      if (out.form !== "draw" && !ctx.publicAsk) need(out.expected || out.bank, "ask: expected answer missing");
+      let social = false;
+      if (out.expected && !out.bank && !ctx.publicAsk && (out.form === "choice" ? OFFER_Q.test(out.prompt) : !sealable(out.prompt, out.expected, s.choices))) {
+        notes.push(`ask: "${out.expected}" is not a value nor one of the question's own options, so the question is asked without a sealed answer`);
+        delete out.expected;
+        social = true;
+      } else if (!out.expected && !out.bank && !ctx.publicAsk && out.form !== "draw" && OFFER_Q.test(out.prompt)) social = true;
+      if (out.form !== "draw" && !ctx.publicAsk && !social) need(out.expected || out.bank, "ask: expected answer missing");
       if (out.form === "choice" && out.expected) need(out.choices.some((c) => c.toLowerCase() === out.expected.toLowerCase()), "ask: the expected answer is not one of the choices");
-      if (s.accepts != null) {
+      if (s.accepts != null && !social) {
         need(Array.isArray(s.accepts), "ask: accepts is not a list");
         if (s.accepts.length > LIMITS.accepts) notes.push(`ask: ${s.accepts.length} accepts, the first ${LIMITS.accepts} kept`);
         out.accepts = s.accepts.slice(0, LIMITS.accepts).map((a) => str(String(a), LIMITS.expected, "accepts", notes));
       }
-      if (s.wrong != null) {
+      if (s.wrong != null && !social) {
         need(Array.isArray(s.wrong), "ask: wrong is not a list");
         if (s.wrong.length > LIMITS.wrong) notes.push(`ask: ${s.wrong.length} wrong answers, the first ${LIMITS.wrong} kept`);
         out.wrong = s.wrong.slice(0, LIMITS.wrong).map((w) => {
@@ -1330,7 +1351,7 @@ function describeItem(b) {
     case "fraction_bar":
       return `${b.id}: a bar${at}, ${b.parts} equal part${b.parts === 1 ? "" : "s"}, ${shadedText(b.shaded, b.parts)}${b.second_bar ? `; under it a second bar, ${b.second_bar.parts} parts, ${shadedText(b.second_bar.shaded, b.second_bar.parts)}` : ""}`;
     case "shape":
-      return `${b.id}: a ${b.kind || "shape"}${at}, ${b.parts} equal parts, ${shadedText(b.shaded, b.parts)}`;
+      return Number(b.parts) <= 1 ? `${b.id}: a whole ${b.kind || "shape"}${at}, not cut into parts, nothing shaded` : `${b.id}: a ${b.kind || "shape"}${at}, ${b.parts} equal parts, ${shadedText(b.shaded, b.parts)}`;
     case "number_line":
       return `${b.id}: a number line${at} from ${b.from} to ${b.to}, ${b.divisions} step${b.divisions === 1 ? "" : "s"} to each whole${(b.marks || []).length ? `, marks at ${b.marks.map((m) => m.label || m.value).join(", ")}` : ""}`;
     case "plot_points":
@@ -5268,12 +5289,6 @@ function handoverMoves(rule) {
   return ["prerequisite", "change"].includes(rule) ? [...HANDOVER_MOVES, "Smaller-question hint"] : [...HANDOVER_MOVES];
 }
 var HANDOVER_RULES = ["stage", "reteach", "prerequisite", "change"];
-function pacingFlags(step2, ctx = {}, sofar = []) {
-  if (!step2 || step2.cmd !== "say" || !ctx.talk?.low) return [];
-  const limit = overtalkLimit(ctx.talk.lastChildWords);
-  const words5 = [...sofar.filter((x) => x.cmd === "say"), step2].reduce((n, x) => n + wordsIn(x.text), 0);
-  return words5 > limit ? [{ habit: "overtalk", reason: `the child has spoken under ${Math.round(SHARE_FLOOR * 100)}% of the words and their last reply was ${ctx.talk.lastChildWords} words: the turn is ${words5} words, over ${limit} (twice their reply plus ${OVERTALK_BASE})` }] : [];
-}
 var FOUNDATIONS = {
   EQUIVALENT_FRACTIONS: { name: "equal parts and what a half is", re: /\b(half|halves|equal|same size|fair|share[sd]?|how many (equal )?(parts|pieces)|what fraction)\b/i },
   COMPARE_LIKE_FRACTIONS: { name: "what a fraction names, parts of a whole", re: /\b(what fraction|how many (equal )?(parts|pieces)|shaded|top number|bottom number|numerator|denominator|half|quarter)\b/i }
@@ -6571,7 +6586,7 @@ var DEN = {
 var SINGLE = /* @__PURE__ */ new Set(["half", "third", "quarter", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"]);
 var SW_DEN = { nusu: 2, robo: 4, theluthi: 3 };
 var NEGATE = /* @__PURE__ */ new Set(["not", "isnt", "isn't", "arent", "aren't", "never", "nor"]);
-var FILLERS = /* @__PURE__ */ new Set(["um", "umm", "ummm", "uh", "uhh", "uhm", "hmm", "hmmm", "mm", "mmm", "er", "erm", "ah", "ahh", "eh", "ehh", "so", "like", "well", "wait", "oh", "aaa", "eee", "mmh", "let", "me", "think"]);
+var FILLERS = /* @__PURE__ */ new Set(["um", "umm", "ummm", "uh", "uhh", "uhm", "hmm", "hmmm", "mm", "mmm", "er", "erm", "ah", "ahh", "aah", "aahh", "eh", "ehh", "ehhh", "so", "like", "well", "wait", "oh", "aaa", "eee", "mmh", "let", "me", "think"]);
 var LOST = /\b(i (do ?n[o']?t|dont) know|idk|no idea|not sure|i'?m (lost|confused)|confus\w*|sijui|sielewi|sijaelewa|i give up|i (can'?t|cannot|can not) do (it|this|that))\b/i;
 var AGAIN = /\b((say|show|do|read|ask|tell|explain|draw|see|hear|go over|play)\b[^.?!]{0,24}\bagain|again,? please|one more time|repeat|didn'?t hear|did not hear|can'?t hear|cannot hear|can'?t see|cannot see|did not see|didn'?t see|what did you say|sorry\?)\b/i;
 var QUESTION_START = /^(why|how|what|which|where|when|who|can (you|i|we)|could (you|i|we)|do (you|i|we)|does|did you|is it|is that|is this|are they|are these|so is|but why|but how)\b/i;
@@ -6885,6 +6900,19 @@ function markSpoken(item, text) {
   }
   return no(exact.mis, "wrong");
 }
+var SOUND_ALIKE = { too: "two", to: "two", tu: "two", tree: "three", for: "four", fore: "four", fife: "five", ate: "eight", won: "one" };
+var ANSWER_LEAD = /^(?:[\s,.!?…'"-]*(?:um+|uh+|hmm+|mm+|er+m?|eh+|a+h+|so|well|oh|ok(?:ay)?|maybe|perhaps|probably|i think|i guess|is it|it is|it'?s|its|i'?m not sure|not sure)\b)*[\s,.!?…'"-]*/i;
+var SOUND_ALIKE_ANSWER = new RegExp(`^(${Object.keys(SOUND_ALIKE).join("|")})(\\s+(?:equal\\s+)?(?:pieces?|parts?|slices?|bits?|halves|quarters|thirds|sixths|eighths))?[\\s.?!\u2026'"-]*$`, "i");
+function hearNumbers(text, { numberOpen = true } = {}) {
+  const raw = String(text ?? "");
+  if (!numberOpen || !raw.trim()) return raw;
+  const lead = ANSWER_LEAD.exec(raw)?.[0] || "";
+  const rest = raw.slice(lead.length);
+  const m = SOUND_ALIKE_ANSWER.exec(rest);
+  if (!m) return raw;
+  return `${lead}${SOUND_ALIKE[m[1].toLowerCase()]}${rest.slice(m[1].length)}`;
+}
+var asksForNumber = (q) => /\b(how many|what number|count (them|the|how)|which number)\b/i.test(String(q || ""));
 function childMove(text) {
   const r = readAnswer(text);
   if (!String(text || "").trim()) return null;
@@ -7882,7 +7910,7 @@ THE LESSON PLAN IS RUN BY THE APP:
 
 JUDGING THE CHILD'S ANSWER (assess, silent):
 - Whenever the child has just answered (in words, on the board or with a figure), first emit assess: class is one of ${ANSWER_CLASSES.join(", ")}; misconception (the full code from the list below) only with class misconception; evidence quotes the child's own words or work in a short phrase; ask is the question's id if it was one of yours.
-- understood means right AND with a reason in the child's own words or drawing. A bare right answer is right_unexplained. Right with a shaky or wrong reason is partly_right. missing_prerequisite means an earlier skill is not there (for example they cannot yet make equal parts). guess_or_no_attempt is a guess, "I don't know", or no real try. The app marks right and wrong itself from the sealed question; you judge the reasoning. Never mention assess to the child.
+- understood means right AND with a reason in the child's own words or drawing. A bare right answer is right_unexplained. Right with a shaky or wrong reason is partly_right. missing_prerequisite means an earlier skill is not there (for example they cannot yet make equal parts). guess_or_no_attempt is only "I don't know", silence or no real try. An answer said unsure ("one half?", "maybe two", "I think three") is still an answer: right is right_unexplained, wrong is partly_right or misconception. The app marks right and wrong itself from the sealed question; you judge the reasoning. Never mention assess to the child.
 
 THE LESSON (15 to 20 minutes; the context tells you the time used):
 1. warmup: after the hello, one quick question on the weakest prerequisite named in the context (or the target's foundation if none).
@@ -7924,7 +7952,7 @@ THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app d
 - Slots: ${SLOTS.join(", ")}. top, middle and bottom are full width; the others are half. Colours: ${COLOURS.join(", ")}.
 - One colour per scene (a scene is your drawing between two clears): ink, plus one colour. The first colour you use in a scene is its colour, and the board draws every other colour in that scene, and every mark, in it. So pick one and keep to it; to count shaded parts with rings, shade them in ink so the rings stand out.
 - highlight (circle, box or glow, optionally one part), underline (text or maths), point (the teacher's finger; optionally one part) need an id already on the board. erase removes items; clear wipes your ink (never the child's). The board holds 30 items at most; clear between ideas.
-- ask: one question a turn. Give expected (the right answer) and, for your own questions, the wrong answers you expect with their misconception codes, or set bank to a probe bank id and the app uses that question's answers. The child never sees expected. Write expected as the answer's core: a number (4), a fraction (1/2) or one or two words (same, yes, the top one); never a sentence. The app hears spoken answers ("one half", "nusu", "two quarters") itself.
+- ask: one question a turn. Give expected (the right answer) and, for your own questions, the wrong answers you expect with their misconception codes, or set bank to a probe bank id and the app uses that question's answers. The child never sees expected. Write expected as the answer's core: a number (4), a fraction (1/2) or one or two words (same, yes, the top one); never a sentence. Use ask only for a maths question with one right answer; an offer or a choice about what to do ("Shall I shade it, or will you?") is a say, never an ask. The app hears spoken answers ("one half", "nusu", "two quarters") itself.
 - The context says what each board item really shows (its parts, which are shaded, its words) and which slots are free. Ask only about what is really there: never ask about shaded parts when none are shaded. When no slot is free, a new drawing erases the oldest items you have not used this turn (whatever is in the slot you name first); erase or clear yourself to choose.
 - pause_for_child ends every turn (expect: spoken when you want them to say it, drawn for the board, any otherwise; max_wait_s 5 to 60; doing as above), except the last, which ends with end_session.
 - Phases: ${PHASES.join(", ")}.
@@ -28790,17 +28818,17 @@ var FAMILIES18 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const [nw, old] = pick([[5, 6], [4, 5], [3, 4], [7, 8], [9, 10]]), rent = old * pick([500, 1e3, 1500, 2e3]);
-      return rent >= 6e3 && rent <= 3e4 ? { nw, old, rent } : null;
+      const [nw2, old] = pick([[5, 6], [4, 5], [3, 4], [7, 8], [9, 10]]), rent = old * pick([500, 1e3, 1500, 2e3]);
+      return rent >= 6e3 && rent <= 3e4 ? { nw: nw2, old, rent } : null;
     },
-    make: ({ nw, old, rent }) => ({
-      question: `A landlord decreases a rent of ${sh(rent)} a month in the ratio ${nw}:${old}. This is the new rent to the old rent. What is the new rent, in shillings?`,
-      answer: rent * nw / old,
-      wrong: [[rent * old / nw, "That would make the rent go up. A decrease means the new rent is smaller."], [rent / old, `That is the value of 1 part. The new rent is ${nw} parts.`], [rent - (old - nw), "The ratio does not take shillings away. It says how many parts of the old rent are left."]],
-      hints: [`The old rent is ${old} parts.`, `The new rent is ${nw} of those parts.`],
-      steps: [`1 part = ${commas(rent)} \xF7 ${old} = ${commas(rent / old)}.`, `New rent = ${nw} \xD7 ${commas(rent / old)} = ${commas(rent * nw / old)}.`]
+    make: ({ nw: nw2, old, rent }) => ({
+      question: `A landlord decreases a rent of ${sh(rent)} a month in the ratio ${nw2}:${old}. This is the new rent to the old rent. What is the new rent, in shillings?`,
+      answer: rent * nw2 / old,
+      wrong: [[rent * old / nw2, "That would make the rent go up. A decrease means the new rent is smaller."], [rent / old, `That is the value of 1 part. The new rent is ${nw2} parts.`], [rent - (old - nw2), "The ratio does not take shillings away. It says how many parts of the old rent are left."]],
+      hints: [`The old rent is ${old} parts.`, `The new rent is ${nw2} of those parts.`],
+      steps: [`1 part = ${commas(rent)} \xF7 ${old} = ${commas(rent / old)}.`, `New rent = ${nw2} \xD7 ${commas(rent / old)} = ${commas(rent * nw2 / old)}.`]
     }),
-    check: ({ rent, nw, old }, a) => a * old === rent * nw
+    check: ({ rent, nw: nw2, old }, a) => a * old === rent * nw2
   }),
   fam10({
     id: "g8.ratio.fare-steps",
@@ -28854,18 +28882,18 @@ var FAMILIES18 = [
     form: "word",
     draw: () => {
       const old = pick([80, 120, 160, 200, 240, 300, 400]), pc = pick([10, 15, 20, 25, 30, 40, 50]), up = Math.random() < 0.5;
-      const nw = old * (up ? 100 + pc : 100 - pc) / 100;
-      const diff = Math.abs(nw - old);
-      return distinct5(pc, diff, round(diff / nw * 100, 1), round(nw / old * 100, 1)) ? { old, nw, pc, up, diff, p: person() } : null;
+      const nw2 = old * (up ? 100 + pc : 100 - pc) / 100;
+      const diff = Math.abs(nw2 - old);
+      return distinct5(pc, diff, round(diff / nw2 * 100, 1), round(nw2 / old * 100, 1)) ? { old, nw: nw2, pc, up, diff, p: person() } : null;
     },
-    make: ({ old, nw, pc, up, diff }) => ({
-      question: `A matatu fare from Nairobi to Thika ${up ? "goes up" : "comes down"} from ${sh(old)} to ${sh(nw)}. What is the percentage ${up ? "increase" : "decrease"}?`,
+    make: ({ old, nw: nw2, pc, up, diff }) => ({
+      question: `A matatu fare from Nairobi to Thika ${up ? "goes up" : "comes down"} from ${sh(old)} to ${sh(nw2)}. What is the percentage ${up ? "increase" : "decrease"}?`,
       answer: pc,
-      wrong: [[diff, `That is the change in shillings. A percentage compares the change with the old fare, out of 100.`], [round(diff / nw * 100, 1), "A percentage change is measured against the fare you started with, not the new one."], [round(nw / old * 100, 1), "That is the new fare as a percentage of the old fare. Take 100% away to get the change."]],
+      wrong: [[diff, `That is the change in shillings. A percentage compares the change with the old fare, out of 100.`], [round(diff / nw2 * 100, 1), "A percentage change is measured against the fare you started with, not the new one."], [round(nw2 / old * 100, 1), "That is the new fare as a percentage of the old fare. Take 100% away to get the change."]],
       hints: ["First find the change in shillings.", "Divide the change by the fare you started with, then multiply by 100."],
-      steps: [`Change: ${Math.abs(nw - old)} shillings.`, `${Math.abs(nw - old)} \xF7 ${old} \xD7 100 = ${pc}%.`]
+      steps: [`Change: ${Math.abs(nw2 - old)} shillings.`, `${Math.abs(nw2 - old)} \xF7 ${old} \xD7 100 = ${pc}%.`]
     }),
-    check: ({ old, nw, up }, a) => Math.abs(old * (up ? 1 + a / 100 : 1 - a / 100) - nw) < 1e-9
+    check: ({ old, nw: nw2, up }, a) => Math.abs(old * (up ? 1 + a / 100 : 1 - a / 100) - nw2) < 1e-9
   }),
   fam10({
     id: "g8.pct.before-change",
@@ -36256,7 +36284,7 @@ async function finishLesson({ db, user, child, sid, target, summary = "", lib = 
 
 // src/voice-tutor/silence.js
 var SILENCE = Object.freeze({
-  answer: { firstMs: 6e3, secondTotalMs: 15e3, secondQuietMs: 6e3 },
+  answer: { firstMs: 8e3, secondTotalMs: 2e4, secondQuietMs: 8e3 },
   talk: { firstMs: 12e3, secondTotalMs: 3e4, secondQuietMs: 1e4 },
   task: { checkinMs: 45e3 }
 });
@@ -36737,6 +36765,24 @@ function habitContext({ message = "", marked = null, cls = null, history = [], h
     childSoFar
   };
 }
+var SHADE_CLAIM = /\b(the shaded|which (part|piece|one) is shaded|(is|are|that'?s|that is) shaded|shaded (part|half|piece|bit)s?)\b/i;
+var SHADE_NONE = /\b(not|none|nothing|no part|no piece|isn'?t|aren'?t|yet to)\b[^.?!]{0,24}\bshaded\b|\bshaded yet\b/i;
+var CUT_CLAIM = /\b(the (two )?(pieces|parts|halves)|the half (on|in|of) the|(chapati|circle|bar) pieces|cut in(to)? (halves|two|pieces|two pieces)|on one side|the line (in|down))\b/i;
+var CUT_FUTURE = /\b(not cut|is whole|whole,? or|or cut|(would|will|could|can|shall|to|let me|let us|i'?ll|if you|where|how) (you |we |i )?cut|cut it\b)/i;
+function boardClaimOf(text, board = []) {
+  const figs = (board || []).filter((b) => b && FIGS.includes(b.cmd));
+  const shaded = figs.some((b) => (shadedOf2(b) || 0) > 0);
+  const cut = figs.some((b) => (partsOf2(b) || 1) > 1);
+  const bar = figs.some((b) => b.cmd === "fraction_bar" || b.cmd === "figure" && (b.params?.shape || "bar") === "bar");
+  const line = (board || []).some((b) => b && (b.cmd === "number_line" || b.cmd === "figure" && b.type === "numberline"));
+  for (const s of sentencesOf3(text)) {
+    if (!shaded && SHADE_CLAIM.test(s) && !SHADE_NONE.test(s)) return `shading that is not on the board ("${s.slice(0, 70)}")`;
+    if (figs.length && !cut && CUT_CLAIM.test(s) && !CUT_FUTURE.test(s)) return `pieces or halves on a figure that is not cut ("${s.slice(0, 70)}")`;
+    if (!figs.length && !line && /\b(look at the (circle|picture|bar|board)|the (circle|picture|bar)|(pieces|parts|halves) on the (board|picture))\b/i.test(s) && !/\b(draw|let me|i will|here is)\b/i.test(s)) return `a picture when nothing is drawn ("${s.slice(0, 70)}")`;
+    if (!bar && figs.length && /\bthe bar\b/i.test(s)) return `a bar that is not on the board ("${s.slice(0, 70)}")`;
+  }
+  return null;
+}
 
 // src/voice-tutor/orchestrator.js
 var WORKED_EXAMPLE_AFTER = 2;
@@ -36795,7 +36841,11 @@ var newLesson = () => ({
   tw: 0,
   lastCw: 0,
   explain: 0,
-  pre: null
+  pre: null,
+  fillers: 0,
+  tyt: false,
+  lastProbe: false,
+  slow: false
 });
 var PRE_STATES = ["ask", "asked", "done"];
 var PRE_GIVE_UP_TURNS = 5;
@@ -36832,6 +36882,10 @@ function cleanLesson(raw) {
   s.lastCw = int(raw.lastCw, 0, 500);
   s.explain = int(raw.explain, 0, 50);
   if (PRE_STATES.includes(raw.pre)) s.pre = raw.pre;
+  s.fillers = int(raw.fillers, 0, 20);
+  s.tyt = raw.tyt === true;
+  s.lastProbe = raw.lastProbe === true;
+  s.slow = raw.slow === true;
   s.diagnosing = raw.diagnosing === true;
   if (typeof raw.seal === "string" && SEAL_RE.test(raw.seal)) s.seal = raw.seal;
   if (Array.isArray(raw.asked)) s.asked = [...new Set(raw.asked.filter((x) => typeof x === "string" && ID_RE2.test(x)))].slice(-MAX_ASKED);
@@ -36858,6 +36912,10 @@ function finalClass({ assessment = null, marked = null, message = "" } = {}) {
     note = `assess said ${cls}, but the seal marked the answer wrong: read as ${to}`;
     cls = to;
     mis = to === "misconception" ? marked.misconception : null;
+  } else if (marked && marked.correct && cls === "guess_or_no_attempt") {
+    note = `assess said guess_or_no_attempt, but the seal marked the answer right${marked.tentative ? " (said unsure)" : ""}: read as right_unexplained`;
+    cls = "right_unexplained";
+    mis = null;
   } else if (marked && marked.correct && (cls === "misconception" || cls === "missing_prerequisite")) {
     note = `assess said ${cls}, but the seal marked the answer right: read as partly_right (right answer, shaky reason)`;
     cls = "partly_right";
@@ -36881,7 +36939,7 @@ function decideCore(s, ctx = {}) {
   const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = "", probe = null, prerequisite = null, question = null } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, ack: extra.ack ?? (extra.must?.includes("Name what was right") ? "yes" : null) });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes("Name what was right") ? "yes" : null) });
   if (turnIndex === 0) return out("open", ["Open the lesson"], "the first turn: greet, say what you will learn today, one easy friendly question", { with: [], stageMax: "warmup" });
   if (s.care === "paused") {
     if (probe) return out("care-wait", ["Wait and nudge"], "the child is quiet after a care reply: an authored line that you are there, no maths and no question about what they said", { with: [], authored: true, stageMax: s.stage || "warmup" });
@@ -36907,7 +36965,11 @@ function decideCore(s, ctx = {}) {
     return out("probe", PROBE_MOVES[probe.kind], why, { with: [] });
   }
   if (move === "lost" || soundsLost(message) && !marked) return out("lost", ["Recover a lost child", "Smaller-question hint"], "the child says they do not know: lower the question, go back to the last thing they got right");
-  if (move === "filler") return out("thinking", ["Wait and nudge"], 'the child is still thinking aloud ("umm"): one short line such as "Take your time", no new question and no answer, then hand back with the same doing', { with: [] });
+  if (move === "filler") {
+    const n = (s.fillers || 0) + 1;
+    const line = n >= 2 && !s.tyt ? "Take your time." : null;
+    return out("thinking", ["Wait and nudge"], `the child is thinking aloud (filler ${n} in a row): the app waits${line ? ', with one "Take your time"' : " with no words"}`, { with: [], authored: true, line, stageMax: s.stage || "warmup" });
+  }
   if (move === "tentative") return out("tentative", ["Revoice and build", "Press for reasoning", "Name what was right"], 'the child gave an answer, said as a question ("maybe four?"): it is an answer, not a question to you. Say back what they said in a few words; if it is right, say so; then ask how sure they are, or how they know. Do not answer it for them', { with: ["Celebrate the strategy"] });
   if (move === "question") return out("question", ["Revoice and build", "Smaller-question hint", "Show then hand over"], "the child asked you a question (it is not an answer, and not wrong): answer it first, briefly and honestly, without giving the answer to your own question; then hand your question back to them", { with: ["Name what was right"] });
   if (marked && WRONG.includes(prelim)) {
@@ -37004,13 +37066,14 @@ function judgeTurn(decision, steps2 = [], { fromModel = null, authored = false }
   }
   return notes;
 }
-function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null, childWords = 0, preNeeded = false } = {}) {
+var SLOW_THINK_S = 8;
+function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null, childWords = 0, preNeeded = false, thinkS = null } = {}) {
   const s = { ...s0, tried: [...s0.tried], classes: [...s0.classes], found: [...s0.found || []] };
   s.turns += 1;
   s.cw = Math.min(5e4, (s0.cw || 0) + (probe ? 0 : childWords));
   s.tw = Math.min(5e4, (s0.tw || 0) + steps2.filter((x) => x.cmd === "say").reduce((n, x) => n + wordsIn(x.text), 0));
   s.lastCw = Math.min(500, childWords);
-  if (!probe && steps2.some((x) => x.cmd === "say") && !["care", "care-wait", "care-return", "close", "stop", "open"].includes(decision?.rule)) s.explain = explainedTurn(steps2) ? Math.min(50, (s0.explain || 0) + 1) : 0;
+  if (!probe && steps2.some((x) => x.cmd === "say") && !["care", "care-wait", "care-return", "close", "stop", "open", "thinking"].includes(decision?.rule)) s.explain = explainedTurn(steps2) ? Math.min(50, (s0.explain || 0) + 1) : 0;
   if (s0.turns === 0 && preNeeded && s.pre == null) s.pre = "ask";
   if (s.pre === "asked" && marked) {
     s.pre = "done";
@@ -37022,9 +37085,23 @@ function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, 
   if (decision?.rule === "care-return") s.care = null;
   if (decision?.rule === "bored") s.stops += 1;
   if (decision?.rule === "example") s.examples = (s.examples || 0) + 1;
-  if (!probe) s.diagnosing = decision?.rule === "diagnose";
+  if (!probe && decision?.rule !== "thinking") s.diagnosing = decision?.rule === "diagnose";
   s.seal = keepSeal || null;
   if (probe) s.probes += 1;
+  if (decision?.rule === "thinking") {
+    s.fillers = Math.min(20, (s0.fillers || 0) + 1);
+    if (decision.line) s.tyt = true;
+  } else if (!probe && childWords > 0) {
+    s.fillers = 0;
+    s.tyt = false;
+  }
+  const slowReply = !!s0.lastProbe || Number.isFinite(thinkS) && thinkS >= SLOW_THINK_S;
+  const rightNow = !!marked?.correct || !marked && ["understood", "right_unexplained"].includes(judged?.class);
+  if (!probe && decision?.rule !== "thinking") {
+    if (marked && !marked.correct) s.slow = false;
+    else if (rightNow && slowReply) s.slow = true;
+  }
+  s.lastProbe = probe ? true : decision?.rule === "thinking" ? !!s0.lastProbe : false;
   s.min = Math.round(Math.max(0, elapsedMin) * 10) / 10;
   if (marked && s.question && marked.ask === s.question.id) s.question = { ...s.question, attempts: s.question.attempts + 1 };
   const cls = judged?.class || null;
@@ -37407,18 +37484,20 @@ var MAX_AUDIO_S = 300;
 var LESSON_TITLE_LINE = "Today we will find fractions that are the same amount.";
 var ENDED_TURN = [say("Our lesson has stopped for today."), say("Please go and find a grown-up you trust now."), { cmd: "end_session", summary: "The lesson stopped early." }];
 var CARE_WAIT = [say("I am here, and there is no hurry."), say("Say when you want to carry on, or we can stop for today."), { cmd: "pause_for_child", expect: "any", max_wait_s: 60, doing: "talk" }];
-function recoverLines({ rule = null, probe = null, marked = null, openPrompt = null, saidAny = false, doing = null, message = "", board = [], turnIndex = 0, found = [], ack = "yes" } = {}) {
+function recoverLines({ rule = null, probe = null, marked = null, openPrompt = null, lastQuestion = null, saidAny = false, doing = null, message = "", board = [], turnIndex = 0, found = [], ack = "yes", safe = () => true } = {}) {
   const said = marked?.correct ? marked.said || null : null;
   const yes = marked?.correct && !saidAny ? [said ? ack === "revoice" ? `${cap2(said)}, you said.` : `Yes, ${said}.` : "Yes, that is right."] : [];
-  const again = openPrompt && /\?\s*$/.test(openPrompt) ? openPrompt : null;
-  const fig = figureName(board);
+  const q = [marked?.correct ? null : openPrompt, marked?.correct ? null : lastQuestion].find((x) => x && /\?\s*$/.test(String(x).trim()) && !boardClaimOf(x, board)) || null;
+  const facts = boardFacts(board);
   const pick2 = (xs) => xs[Math.abs(Number(turnIndex) || 0) % xs.length];
   const theirs = childBit(message);
+  const fact = factLine(facts, { q, safe });
+  const ask3 = q || "What do you think?";
   if (probe) {
     const k = probe.kind;
-    if (k === "task_checkin") return { lines: pick2([["I can see you are working.", "Say a word if you want help."], [fig ? `Take your time with the ${fig}.` : "Take your time.", "Tell me when you are done."], ["No hurry at all.", "Tell me when you are done."]]), doing: doing || "task" };
-    if (k === "answer_smaller" || k === "talk_again") return { lines: [pick2(["That is okay.", "Here is a smaller step.", "Let us make it easier."]), smallerQuestion(openPrompt, fig)], doing: doing || "answer" };
-    return { lines: pick2([["Take your time.", "What is your guess?"], ["There is no hurry.", "What do you think?"], [fig ? `Look at the ${fig} again.` : "Think about it for a moment.", "What do you think?"]]).filter(Boolean), doing: doing || "answer" };
+    if (k === "task_checkin") return { lines: pick2([["I can see you are working.", "Say a word if you want help."], ["Take your time.", "Tell me when you are done."], ["No hurry at all.", "Tell me when you are done."]]), doing: doing || "task" };
+    if (k === "answer_smaller" || k === "talk_again") return { lines: [pick2(["That is okay.", "Here is a smaller step.", "Let us make it smaller."]), smallerQuestion(facts, q)], doing: doing || "answer" };
+    return { lines: [pick2(["Take your time.", "There is no hurry.", "I am listening."]), ask3], doing: doing || "answer" };
   }
   switch (rule) {
     case "open":
@@ -37427,7 +37506,7 @@ function recoverLines({ rule = null, probe = null, marked = null, openPrompt = n
     case "care":
       return { lines: ["I am listening.", "Do you want to carry on with our fractions, or stop for today?"], doing: "talk" };
     case "care-return":
-      return { lines: ["I am glad you are here.", `Let us carry on gently.${fig ? ` Look at the ${fig}.` : ""} What do you see?`], doing: "answer" };
+      return { lines: ["I am glad you are here.", q ? `Let us carry on gently. ${q}` : "Shall we carry on gently?"], doing: "answer" };
     case "stop":
       return { lines: [found.length ? `Today you found ${foundList(found)}. Thank you for working with me.` : "Thank you for working with me today."], doing: "talk", end: { cmd: "end_session", summary: "The child asked to stop, and the lesson closed early." } };
     case "bored":
@@ -37444,41 +37523,82 @@ function recoverLines({ rule = null, probe = null, marked = null, openPrompt = n
     case "change":
       return { lines: [...saidAny || !theirs ? [] : [`You said ${theirs}.`], theirs ? "Tell me how you got that." : "How did you work it out?"], doing: "answer" };
     case "thinking":
-      return { lines: [pick2(["Take your time.", "Go on, I am listening.", "Keep thinking out loud."])], doing: doing || "answer" };
+      return { lines: ["Take your time."], doing: doing || "answer" };
     case "lost":
-      return { lines: ["That is okay.", smallerQuestion(openPrompt, fig)], doing: "answer" };
-    case "question":
-      return { lines: [...theirs && !saidAny ? [`You asked ${theirs}.`] : [], fig ? `Point at the part of the ${fig} you mean.` : "Say a little more about what you mean."], doing: fig ? "task" : "answer" };
+      return { lines: ["That is okay.", smallerQuestion(facts, q)], doing: "answer" };
     default:
-      return again ? { lines: [...yes, again], doing: "answer" } : { lines: [...yes, "What do you think?"], doing: "answer" };
+      return { lines: [...yes, ...fact ? [fact] : [], ask3], doing: "answer" };
   }
 }
 var cap2 = (t) => String(t || "").replace(/^./, (c) => c.toUpperCase());
-var figureName = (board = []) => {
-  const f = [...board || []].reverse().find((b) => b && ["shape", "fraction_bar", "figure", "number_line"].includes(b.cmd));
+function boardFacts(board = []) {
+  const f = [...board || []].reverse().find((b) => b && (["shape", "fraction_bar", "number_line"].includes(b.cmd) || b.cmd === "figure" && ["fraction", "numberline"].includes(b.type)));
   if (!f) return null;
-  if (f.cmd === "number_line" || f.cmd === "figure" && f.type === "numberline") return "number line";
-  if (f.cmd === "shape") return f.kind === "circle" ? "circle" : f.kind || "shape";
-  if (f.cmd === "figure") return f.params?.shape === "circle" ? "circle" : f.params?.shape === "grid" ? "grid" : "bar";
-  return "bar";
+  if (f.cmd === "number_line" || f.type === "numberline") return { id: f.id, name: "number line", line: true };
+  const p = f.cmd === "figure" ? f.params || {} : f;
+  const name = f.cmd === "shape" ? f.kind === "circle" ? "circle" : f.kind || "shape" : f.cmd === "fraction_bar" ? "bar" : p.shape === "circle" ? "circle" : p.shape === "grid" ? "grid" : "bar";
+  const parts = name === "grid" ? (Number(p.rows) || 0) * (Number(p.cols) || 0) || 1 : Math.max(1, Number(p.parts) || 1);
+  const sh2 = Array.isArray(p.shaded) ? p.shaded.length : Number(p.shaded) || 0;
+  return { id: f.id, name, parts, shaded: Math.max(0, Math.min(sh2, parts)) };
+}
+var nw = (n) => inWords(String(n)) || String(n);
+var factLine = (facts, { q = null, safe = () => true } = {}) => {
+  if (!facts) return null;
+  if (facts.line) return "Look at the number line.";
+  const countsOk = !/\b(how many|what fraction|which fraction|how much|count)\b/i.test(String(q || ""));
+  let line;
+  if (facts.parts <= 1) line = `The ${facts.name} is whole: it is not cut yet.`;
+  else if (!countsOk) line = facts.shaded ? `Look at the ${facts.name}.` : `Look at the ${facts.name}: none of it is shaded yet.`;
+  else if (!facts.shaded) line = `The ${facts.name} is cut into ${nw(facts.parts)} parts, and none is shaded yet.`;
+  else line = `The ${facts.name} has ${nw(facts.parts)} parts, and ${nw(facts.shaded)} ${facts.shaded === 1 ? "is" : "are"} shaded.`;
+  return safe(line) ? line : `Look at the ${facts.name}.`;
 };
 var childBit = (message) => {
   const w = String(message || "").replace(/[?!.]+\s*$/, "").replace(/\s+/g, " ").trim().split(" ");
   const t = w.slice(0, 6).join(" ").replace(/^(umm*|uh+|hmm+|so|well|oh)[,.\s]+/i, "").toLowerCase();
   return /^[a-z0-9/' ,-]{1,48}$/.test(t) && !/\b(i|you|my|me)\b/.test(t) ? t : null;
 };
-var smallerQuestion = (openPrompt, fig) => {
-  const q = String(openPrompt || "").toLowerCase();
-  if (fig && /\bwhat fraction|how much of\b/.test(q)) return `How many equal parts is the ${fig} cut into?`;
-  if (fig && /\bhow many\b/.test(q)) return `Put your finger on the ${fig}. Which part will you count first?`;
-  if (fig) return `Look at the ${fig}. Which part is shaded?`;
-  return "Which part of it do you know already?";
+var smallerQuestion = (facts, q) => {
+  if (!facts) return q && /\?\s*$/.test(q) ? q : "Which part of it do you know already?";
+  if (facts.line) return "Where does the number line start?";
+  if (facts.parts <= 1) return `Is the ${facts.name} whole, or is it cut into pieces?`;
+  if (!facts.shaded) return `Can you put your finger on one part of the ${facts.name}?`;
+  return "Can you put your finger on a shaded part?";
 };
 var foundList = (found) => {
   const w = found.map((f) => inWords(f) || f).slice(-3);
   return w.length > 1 ? `${w.slice(0, -1).join(", ")} and ${w[w.length - 1]}` : w[0];
 };
 var recoverSteps = (r) => [...r.lines.map(say), r.end || { ...handBack, doing: r.doing }];
+function lastTutorQuestion(history) {
+  const h = Array.isArray(history) ? history : [];
+  let i = h.length - 1;
+  while (i >= 0 && h[i]?.who !== "tutor") i -= 1;
+  for (; i >= 0 && h[i]?.who === "tutor"; i -= 1) {
+    const qs = String(h[i].text || "").split(/(?<=[.!?])\s+/).filter((x) => /\?\s*$/.test(x));
+    if (qs.length) return qs[qs.length - 1].trim();
+  }
+  return null;
+}
+function recentTutorQuestions(history, n = 3) {
+  const h = Array.isArray(history) ? history : [];
+  const out = [];
+  let turns = 0;
+  let inTutor = false;
+  for (let i = h.length - 1; i >= 0 && turns <= n; i -= 1) {
+    if (h[i]?.who !== "tutor") {
+      inTutor = false;
+      continue;
+    }
+    if (!inTutor) {
+      turns += 1;
+      inTutor = true;
+      if (turns > n) break;
+    }
+    out.push(...String(h[i].text || "").split(/(?<=[.!?])\s+/).filter((x) => /\?\s*$/.test(x)).reverse());
+  }
+  return out;
+}
 var WIND_DOWN = [
   { cmd: "set_phase", phase: "wrapup" },
   say("We have done a lot of good thinking today."),
@@ -37499,7 +37619,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     if (!child || child.parent_id !== user.id) return reply(403, { error: "That child is not on this account." });
   }
   const childKey = child ? `${user.id}_c${child.id}` : user.id;
-  const message = String(body?.message ?? "").trim().slice(0, MAX_CHILD_CHARS);
+  let message = String(body?.message ?? "").trim().slice(0, MAX_CHILD_CHARS);
   const turnIndex = Math.max(0, Number(body?.turn_index) || 0);
   const answerText = String(body?.answer?.response ?? "").slice(0, MAX_CHILD_CHARS);
   let concern = null;
@@ -37528,20 +37648,23 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   let question = null;
   let unanswered = null;
   const sealToken = body?.answer?.seal || message && lesson0.seal || null;
-  const response = String((body?.answer?.seal ? body.answer.response : message) ?? "").slice(0, MAX_CHILD_CHARS);
-  if (sealToken && !concern) {
-    const q = await unseal(sealToken, secret, { session: sid, child: childKey, now });
-    if (q) {
-      question = q.item;
-      let r = markSpoken(q.item, response);
-      if (r.attempt && !r.correct && askedOther(body?.history, q.item.question)) r = { ...r, attempt: false, why: "answered the tutor's newer spoken question" };
-      if (r.attempt) {
-        marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: response.slice(0, 60), said: r.correct ? speakAnswer(r.said) : null, canon: r.correct ? canonAnswer(q.item.answer) : null, tentative: !!r.tentative };
-        if (!r.correct) open = q.item;
-      } else {
-        open = q.item;
-        unanswered = { seal: sealToken, why: r.why };
-      }
+  const sealed = sealToken && !concern ? await unseal(sealToken, secret, { session: sid, child: childKey, now }) : null;
+  const lastSpokenQ = lastTutorQuestion(body?.history);
+  const numberOpen = !concern && (recentTutorQuestions(body?.history, 3).some(asksForNumber) || !!sealed && /^\d+(\/\d+)?$/.test(canonAnswer(sealed.item?.answer)));
+  const heardFrom = numberOpen && hearNumbers(message) !== message ? message : null;
+  if (heardFrom) message = hearNumbers(message);
+  const response = hearNumbers(String((body?.answer?.seal ? body.answer.response : message) ?? "").slice(0, MAX_CHILD_CHARS), { numberOpen });
+  if (sealed) {
+    const q = sealed;
+    question = q.item;
+    let r = markSpoken(q.item, response);
+    if (r.attempt && !r.correct && askedOther(body?.history, q.item.question)) r = { ...r, attempt: false, why: "answered the tutor's newer spoken question" };
+    if (r.attempt) {
+      marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: response.slice(0, 60), said: r.correct ? speakAnswer(r.said) : null, canon: r.correct ? canonAnswer(q.item.answer) : null, tentative: !!r.tentative };
+      if (!r.correct) open = q.item;
+    } else {
+      open = q.item;
+      unanswered = { seal: sealToken, why: r.why };
     }
   }
   const recordJudged = async (judged) => {
@@ -37588,7 +37711,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     await recordJudged(judged);
     const asks = steps2.some((x) => x.cmd === "ask");
     const keepSeal = asks ? null : unanswered ? unanswered.seal : probe ? lesson0.seal : null;
-    const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? "ended" : "paused", seal: null } : updateLesson(lesson0, { decision, steps: steps2, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre });
+    const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? "ended" : "paused", seal: null } : updateLesson(lesson0, { decision, steps: steps2, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre, thinkS: Number.isFinite(Number(body?.think_s)) && body?.think_s != null ? Number(body.think_s) : null });
     const evidence = judged?.evidence && checkTurnText([{ cmd: "say", text: judged.evidence }], hidden).ok ? judged.evidence : "";
     const tester = {
       rule: decision?.rule || null,
@@ -37599,7 +37722,8 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       judged: judged ? { class: judged.class, misconception: judged.misconception, source: judged.source, note: judged.note, evidence } : null,
       kept: [...judgeTurn(decision, steps2, { fromModel, authored: !fromModel }), ...codeNotes],
       probe,
-      unanswered: unanswered ? unanswered.why : null
+      unanswered: unanswered ? unanswered.why : null,
+      ...heardFrom ? { heard: `"${heardFrom.slice(0, 40)}" read as "${message.slice(0, 40)}": a number was asked for` } : {}
     };
     return { lesson, tester };
   };
@@ -37641,7 +37765,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     return authored(care.steps, [care.ends ? "safeguarding-crisis" : "safeguarding"], null);
   }
   if (lesson0.care === "ended") return authored(ENDED_TURN, ["lesson-ended"], null);
-  if (decision?.authored) return authored(CARE_WAIT, [decision.rule], null);
+  if (decision?.authored) return authored(decision.rule === "thinking" ? [...decision.line ? [say(decision.line)] : [], { ...handBack, doing: lesson0.doing || "answer" }] : CARE_WAIT, [decision.rule], null);
   const screen2 = message ? screenChild(message) : { ok: true, wantsAnswer: false };
   if (!screen2.ok) {
     if (screen2.record) {
@@ -37694,8 +37818,9 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   const cap3 = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
   if (!cap3.ok) return authored(WIND_DOWN, [cap3.reason], spent);
   const openPrompt = open?.question || null;
-  const recoverFacts = { message, board, turnIndex, found: [...found], ack: decision?.ack || "yes" };
-  const recoverFor = (saidAny) => recoverSteps(recoverLines({ rule: decision?.rule, probe, marked, openPrompt, saidAny, doing: probe ? lesson0.doing : null, ...recoverFacts }));
+  const safeLine = (line) => checkTurnText([say(line)], [open].filter(hiddenOk)).ok;
+  const recoverFacts = (steps2 = []) => ({ message, board: boardAfter2(board, steps2), turnIndex, found: [...found], ack: decision?.ack || "yes", lastQuestion: lastSpokenQ, safe: safeLine });
+  const recoverFor = (saidAny, steps2 = []) => recoverSteps(recoverLines({ rule: decision?.rule, probe, marked, openPrompt, saidAny, doing: probe ? lesson0.doing : null, ...recoverFacts(steps2) }));
   if (!callModel) return authored(image ? NO_PICTURE_TURN : screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : recoverFor(false), ["offline"], spent);
   const bank = probeBank(skills, `${sid}:${turnIndex}`);
   const names = child?.name ? [{ name: child.name, as: "the child" }] : [];
@@ -37747,8 +37872,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     closing: ["close", "stop"].includes(decision?.rule) || lesson0.stage === "wrapup",
     example: decision?.rule === "example"
   });
-  const pctx = { talk: { low: shareLow(lesson0), lastChildWords: lesson0.lastCw || 0 } };
-  const flagsOf = (st, sofar, extra) => [...stepFlags(st, hctx, sofar, { extra }), ...pacingFlags(st, pctx, sofar)];
+  const flagsOf = (st, sofar, extra) => stepFlags(st, hctx, sofar, { extra });
   return { status: 200, go: async (emit) => {
     emit(meta());
     const sent = [];
@@ -37815,7 +37939,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
         await send(handBackAs(doingNow() || "answer", sent));
         return;
       }
-      const steps2 = recoverFor(saidAny);
+      const steps2 = recoverFor(saidAny, sent);
       closed = true;
       for (const st of steps2) await (st.cmd === "say" ? speak(st) : send(st));
     };
@@ -37840,11 +37964,11 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
         const ask3 = sent.find((x) => x.cmd === "ask");
         if (ask3 && /\?\s*$/.test(ask3.prompt)) await speak(say(ask3.prompt));
         else if (probe) {
-          const r = recoverLines({ probe, openPrompt, doing: lesson0.doing, ...recoverFacts });
+          const r = recoverLines({ probe, openPrompt, doing: lesson0.doing, ...recoverFacts(sent) });
           for (const l of saidAny ? r.lines.filter((x) => /\?\s*$/.test(x)).slice(-1) : r.lines) await speak(say(l));
         } else if (!nod || saidAny) {
-          const r = recoverLines({ rule: decision?.rule, marked, openPrompt, saidAny, ...recoverFacts });
-          for (const l of r.lines) await speak(say(l));
+          const r = recoverLines({ rule: decision?.rule, marked, openPrompt, saidAny, ...recoverFacts(sent) });
+          for (const l of saidAny ? r.lines.filter((x) => /\?\s*$/.test(x)).slice(-1) : r.lines) await speak(say(l));
         }
       }
       closed = true;
@@ -37871,15 +37995,14 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       const req = rewriteRequest({ model: settings.model, text: st.text, reasons: flags, child: message, brief, names, before: sent.filter((x) => x.cmd === "say").map((x) => x.text) });
       const r = await rewriteOnce(callModel, req);
       gateUsage = addUsage(gateUsage, r.usage);
-      rewrites.push({ habits: [...new Set(flags.map((f) => f.habit))], ok: false, ms: r.ms, why: r.why });
+      const rec = { habits: [...new Set(flags.map((f) => f.habit))], ok: false, ms: r.ms, why: r.why };
+      rewrites.push(rec);
       if (!r.text) return null;
       const st2 = { ...st, text: r.text };
-      if (flagsOf(st2, sent, extra).length) {
-        rewrites[rewrites.length - 1].why = "the rewrite failed its checks too";
-        return null;
-      }
-      rewrites[rewrites.length - 1].ok = true;
-      return st2;
+      const flags2 = flagsOf(st2, sent, extra);
+      if (flags2.length) rec.why = "the rewrite failed its checks too";
+      else rec.ok = true;
+      return { st: st2, flags: flags2 };
     };
     const FIGS2 = ["shape", "fraction_bar", "figure"];
     const gate = async (st, extra) => {
@@ -37888,18 +38011,28 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       const why = flags.map((f) => `${f.habit}: ${f.reason}`).join("; ").slice(0, 300);
       if (st.cmd === "say") {
         const fixed = await rewrite(st, flags, extra);
-        if (fixed) {
+        if (fixed && !fixed.flags.length) {
           codeNotes.push(`gate: rewritten (${why})`);
           if (flags.some((f) => f.habit === "level_jump")) levelHeld = true;
-          return fixed;
+          return fixed.st;
         }
-        if (flags.some((f) => f.habit === "giveaway" && /hidden answer/.test(f.reason))) {
-          await stop("answer-leak");
+        if (hardOf(flags).length) {
+          if (fixed && !hardOf(fixed.flags).length) {
+            codeNotes.push(`gate: rewritten (${why}); the rewrite still ${fixed.flags.map((f) => f.habit).join("+")}, kept`);
+            if (flags.some((f) => f.habit === "level_jump")) levelHeld = true;
+            return fixed.st;
+          }
+          if (flags.some((f) => f.habit === "giveaway" && /hidden answer/.test(f.reason))) {
+            await stop("answer-leak");
+            return null;
+          }
+          if (flags.some((f) => f.habit === "level_jump")) levelHeld = true;
+          drop(st, `gate: ${why}`, flags.some((f) => /inside its own question/.test(f.reason)) ? "answer-in-question" : "gate-dropped");
           return null;
         }
-        if (flags.some((f) => f.habit === "level_jump")) levelHeld = true;
-        drop(st, `gate: ${why}`, flags.some((f) => /inside its own question/.test(f.reason)) ? "answer-in-question" : "gate-dropped");
-        return null;
+        const pickRewrite = !!fixed && !hardOf(fixed.flags).length && softScore(fixed) < softScore({ st, flags });
+        codeNotes.push(`gate: kept the ${pickRewrite ? "rewrite" : "model's sentence"} (${why})${fixed ? "" : "; no rewrite was made"}`);
+        return pickRewrite ? fixed.st : st;
       }
       if (FIGS2.includes(st.cmd) && flags.some((f) => f.habit === "giveaway")) {
         codeNotes.push(`gate: ${why}; the label was taken off`);
@@ -38211,6 +38344,9 @@ function trimToWords(text, budget, { mustSay = false } = {}) {
   const comma = cut.map((x) => /,$/.test(x)).lastIndexOf(true);
   return `${(comma >= 1 ? cut.slice(0, comma + 1) : cut).join(" ").replace(/[,;:]$/, "")}.`;
 }
+var HARD_HABITS = ["giveaway", "level_jump"];
+var hardOf = (flags = []) => flags.filter((f) => HARD_HABITS.includes(f.habit));
+var softScore = ({ st, flags = [] }) => (flags.some((f) => f.habit === "repeat") ? 100 : 0) + 10 * flags.length + Math.min(9, wordsIn(st?.text || "") / 10);
 var addSpent = (s, c) => ({ session: (s?.session || 0) + c, day: (s?.day || 0) + c });
 var dayStart = (now) => {
   const d = new Date(now);
