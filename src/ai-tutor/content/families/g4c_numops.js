@@ -63,7 +63,8 @@ export const FAMILIES = [
   // ------------------------------------------------------------ SUB_NO_REGROUP
   fam({ id: 'g4c.sub.noreg.sold', cs: `${S}SUB_NO_REGROUP`, form: 'word', rung: 1,
     gen: () => {
-      const a = randInt(2000, 9999), b = randInt(1000, 4999), t = a - b, p = person(), th = pick(THINGS);
+      const bd = [randInt(1, 4), randInt(0, 8), randInt(0, 8), randInt(0, 8)], ad = bd.map((d, i) => randInt(i === 0 ? Math.max(d, 2) : Math.max(d, 1), 9));
+      const a = Number(ad.join('')), b = Number(bd.join('')), t = a - b, p = person(), th = pick(THINGS);
       if (borrows(a, b) !== 0 || t < 100 || !noZero(a)) return null;
       return { question: `A shop had ${commas(a)} ${th}. It sold ${commas(b)} of them. How many ${th} are left?`, answer: t,
         wrong: [[a + b, 'The question asks how many are left, so take away. Do not add.', 'M_SUB_ADDS'], [subSmaller(a, b), 'Take the lower number from the upper number in every column.', 'M_SUB_ADDS'], [Number(String(t).replace(/0/g, '')), 'A zero in the answer must be written: it holds a place.', 'M_SUB_ZERO_RESULT_DROPPED'], [t + 100, 'Check each column again.', 'M_SUB_COLUMNS_MISALIGNED']],

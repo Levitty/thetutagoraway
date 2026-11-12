@@ -99,8 +99,7 @@ export const FAMILIES = [
   // ------------------------------------------------------------ LENGTH_ADD
   fam({ id: 'g4c.len.add.pieces', cs: `${Le}LENGTH_ADD`, form: 'word', rung: 2,
     gen: () => {
-      const m1 = randInt(1, 6), m2 = randInt(1, 6), c1 = randInt(51, 95), c2 = randInt(51, 95), tc = c1 + c2 - 100, th = pick(CLOTH), pe = person();
-      if (c1 % 5 || c2 % 5) return null;
+      const m1 = randInt(1, 6), m2 = randInt(1, 6), c1 = 5 * randInt(11, 19), c2 = 5 * randInt(11, 19), tc = c1 + c2 - 100, th = pick(CLOTH), pe = person();
       const options = mc(L(m1 + m2 + 1, tc), [[`${m1 + m2} m ${c1 + c2} cm`, '100 cm make 1 m. Change the extra 100 cm into a metre.', 'M_LADD_NO_REGROUP'], [L(m1 + m2, tc), 'You forgot to add the extra metre from the 100 cm.', 'M_LADD_NO_REGROUP'], [`${m1 + m2 + c1 + c2} m`, 'Add metres to metres and centimetres to centimetres. Do not add them together.', 'M_LADD_ADDS_ACROSS']]);
       if (!options || tc === 0) return null;
       return { question: `${pe.name} joins a piece of ${th} ${L(m1, c1)} long to another piece ${L(m2, c2)} long. How long is the joined ${th}?`, options, instruction: 'Choose the correct length.',
