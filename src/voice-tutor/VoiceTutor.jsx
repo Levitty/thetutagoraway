@@ -443,7 +443,12 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
         setPauseNote(false);
         audioIn.current += Number(seconds) || 0;
         vdispatch({ type: 'heard' });
-        if (!said) { setSnapNote('HOREB did not hear anything. Tap Talk and try again, or type.'); return; }
+        if (!said) {
+          // Hands-free: the microphone stays open a little longer before giving up (a child should not have to keep tapping).
+          if (autoTries.current < 2 && sessionRef.current.status === 'listening') { autoTries.current += 1; setTimeout(() => { if (!listenRef.current && sessionRef.current.status === 'listening') talk(); }, 200); return; }
+          setSnapNote('HOREB did not hear anything. Tap Talk and try again, or type.'); return;
+        }
+        autoTries.current = 0;
         // Not worth marking (a hum, one stray letter, a word made up from silence): ask again kindly, mark nothing, send nothing.
         const q = fake ? { ok: true } : assessTranscript(said, seconds);
         if (!q.ok) {
@@ -514,6 +519,17 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
     if (session.status !== 'speaking' || voice.mode !== 'voice' || !p?.stt?.watch || listenRef.current) return undefined;
     const w = p.stt.watch({ onSpeech: () => { if (!listenRef.current) talk(); } });
     return () => w.stop();
+  }, [session.status, session.turns, voice.mode]);
+
+  // Hands-free (owner, 12 Nov 2026: "if I have to click on and off when speaking that's not manageable for a child"):
+  // when HOREB hands over, the microphone opens by itself; the child just speaks. Talk stays as a way to stop or retry.
+  const autoTries = useRef(0);
+  useEffect(() => {
+    const p = providers.current;
+    if (session.status !== 'listening' || listenRef.current || !p?.stt || p.stt.name === 'typed-as-speech' || !canListen(voice) || voice.mode !== 'voice') return undefined;
+    autoTries.current = 0;
+    const id = setTimeout(() => { if (!listenRef.current && sessionRef.current.status === 'listening') talk(); }, 350); // past the echo of HOREB's last word
+    return () => clearTimeout(id);
   }, [session.status, session.turns, voice.mode]);
 
   // Silence: after 15 s on the child's turn, a gentle line under the box (no model call).

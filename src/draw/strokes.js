@@ -326,6 +326,8 @@ export function markStrokes(m, item, H = BOARD_H) {
       stroke(`M ${P(tx + 28, ty + 9)} L ${P(tx + 8, ty + 7)} L ${P(tx + 10, ty + 27)}`, 'mark', red),
     ];
   }
+  // A highlighter only suits words and maths; on a shape its swept box covered the picture (12 Nov 2026), so it rings instead.
+  if (m.style === 'glow' && item && !['write_text', 'write_math'].includes(item.cmd)) m = { ...m, style: 'circle' };
   if (m.style === 'glow') {
     // A highlighter, swept across in passes, top to bottom, back and forth.
     const gp = m.part ? 3 : pad;   // over one part it stays on that part

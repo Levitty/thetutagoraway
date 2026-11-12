@@ -160,8 +160,10 @@ test('the marks: a ring, a box, a highlighter, an underline and a drawn arrow', 
   assert.equal(ring.length, 1);
   assert.ok(ring[0].kind === 'mark' && ring[0].colour === '#D2383A');
   assert.equal(markStrokes({ cmd: 'highlight', target: 'b1', part: 2, style: 'box' }, bar, 640).length, 1);
-  const glow = markStrokes({ cmd: 'highlight', target: 'b1', style: 'glow' }, bar, 640);
+  // The highlighter is for words and maths; on a shape it rings instead (its swept box covered the picture, 12 Nov 2026).
+  const glow = markStrokes({ cmd: 'highlight', target: 'm1', style: 'glow' }, ITEMS.write_math, 640);
   assert.ok(glow.length >= 2 && glow.every((s) => s.highlighter && !s.cap));
+  assert.equal(markStrokes({ cmd: 'highlight', target: 'b1', style: 'glow' }, bar, 640).length, 1);
   assert.equal(markStrokes({ cmd: 'underline', target: 'm1' }, ITEMS.write_math, 640).length, 1);
   const arrow = markStrokes({ cmd: 'point', target: 'b1', part: 3 }, bar, 640);
   assert.equal(arrow.length, 2);

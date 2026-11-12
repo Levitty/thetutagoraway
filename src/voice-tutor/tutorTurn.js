@@ -68,7 +68,8 @@ export const TURN_ESTIMATE_USD = 0.02;
 // With voice: the tutor's words (about 250 characters a turn) are spoken, and the child's speech heard.
 export const VOICE_TURN_CHARS_ESTIMATE = 250;
 export const MAX_AUDIO_S = 90;
-export const FALLBACK_TURN = [say('Let me think about that a different way.'), say('Tell me what you think the first step is.'), handBack];
+// When a turn has to be stopped. It must make sense after anything (12 Nov 2026: the old line asked for "the first step" in the middle of a greeting).
+export const FALLBACK_TURN = [say('Sorry, I lost my words for a moment.'), say('Can you say that again?'), handBack];
 // When a sentence fails its check mid-turn: what has been said stays said, and the tutor turns it back to the child.
 export const RECOVER_TURN = [say('Let me stop there.'), say('Tell me what you think the next step is.'), handBack];
 export const WIND_DOWN = [

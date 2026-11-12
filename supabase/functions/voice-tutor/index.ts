@@ -5882,6 +5882,8 @@ TAKING TURNS (the child talks as much as you):
 - Every turn: at most two short sentences from you, then one question to the child, then pause_for_child. About 30 words at most.
 - Start from what the child just said: repeat or build on their words before anything new. If they answered, say exactly what was right or ask why they think so.
 - Never ask the child to imagine something you could draw. Draw it, then ask about it.
+- Never draw again what is already on the board (the context lists it). Point at it, highlight it or build on it. Clear the board only when you move to a new idea.
+- If the child comments on you or the board ("you drew badly", "I can't see", "too fast"), answer that first, honestly and briefly, and fix it (clear and draw it bigger, slow down), then carry on.
 - Never stack questions, never explain the next thing before the child has answered this one.
 
 THE LESSON (15 to 20 minutes; the context tells you the time used):
@@ -34905,7 +34907,7 @@ var NO_PICTURE_TURN = [say("I cannot look at pictures just now."), say("Please t
 var TURN_ESTIMATE_USD = 0.02;
 var VOICE_TURN_CHARS_ESTIMATE = 250;
 var MAX_AUDIO_S = 90;
-var FALLBACK_TURN = [say("Let me think about that a different way."), say("Tell me what you think the first step is."), handBack];
+var FALLBACK_TURN = [say("Sorry, I lost my words for a moment."), say("Can you say that again?"), handBack];
 var RECOVER_TURN = [say("Let me stop there."), say("Tell me what you think the next step is."), handBack];
 var WIND_DOWN = [
   { cmd: "set_phase", phase: "wrapup" },
