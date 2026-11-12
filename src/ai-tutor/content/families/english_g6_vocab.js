@@ -62,7 +62,7 @@ const RID_ANS = [
   I('I have hands but I cannot clap. What am I.', 'a clock', [['a baby', 'M_RID_LITERAL'], ['a monkey', 'M_RID_LITERAL'], ['a gorilla', 'M_RID_LITERAL']], 'A clock has hands that point to the time and cannot clap.'),
   I('I run all day but I never walk. What am I.', 'a river', [['a cheetah', 'M_RID_LITERAL'], ['a runner', 'M_RID_LITERAL'], ['a car', 'M_RID_LITERAL']], 'A river runs but has no legs to walk.'),
   I('The more you take from me, the more I leave behind. What am I.', 'footsteps', [['money', 'M_RID_LITERAL'], ['water', 'M_RID_LITERAL'], ['food', 'M_RID_LITERAL']], 'The more steps you take, the more footsteps you leave behind.'),
-  I('I have a mouth but I never eat, and I have a bed but I never sleep. What am I.', 'a river', [['a baby', 'M_RID_LITERAL'], ['a lion', 'M_RID_LITERAL'], ['a house', 'M_RID_LITERAL']], 'A river has a mouth where it meets the sea and a bed, the ground it flows over.'),
+  I('I have a mouth that cannot eat, and a bed that cannot sleep. What am I.', 'a river', [['a baby', 'M_RID_LITERAL'], ['a lion', 'M_RID_LITERAL'], ['a house', 'M_RID_LITERAL']], 'A river has a mouth where it meets the sea and a bed, the ground it flows over.'),
 ];
 // ---------------------------------------------------------------- idioms
 const IDM_MEAN = [

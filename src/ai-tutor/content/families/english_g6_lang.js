@@ -188,7 +188,7 @@ const ADV_KIND = [
   I('What does the adverb "yesterday" tell us in "We visited Mombasa yesterday".', 'when', [['where', 'M_ADV_KIND_MIXED'], ['how', 'M_ADV_KIND_MIXED'], ['how often', 'M_ADV_KIND_MIXED']], 'Yesterday tells when: an adverb of time.'),
   I('What does the adverb "slowly" tell us in "The tortoise walked slowly".', 'how', [['when', 'M_ADV_KIND_MIXED'], ['where', 'M_ADV_KIND_MIXED'], ['how often', 'M_ADV_KIND_MIXED']], 'Slowly tells how the tortoise walked: an adverb of manner.'),
   I('What does the adverb "outside" tell us in "The children are playing outside".', 'where', [['when', 'M_ADV_KIND_MIXED'], ['how', 'M_ADV_KIND_MIXED'], ['how often', 'M_ADV_KIND_MIXED']], 'Outside tells where: an adverb of place.'),
-  I('What does the adverb "never" tell us in "Otieno never arrives late".', 'how often', [['when', 'M_ADV_KIND_MIXED'], ['where', 'M_ADV_KIND_MIXED'], ['how', 'M_ADV_KIND_MIXED']], 'Never tells how often: an adverb of frequency.'),
+  I('What does the adverb "always" tell us in "Otieno always arrives early".', 'how often', [['when', 'M_ADV_KIND_MIXED'], ['where', 'M_ADV_KIND_MIXED'], ['how', 'M_ADV_KIND_MIXED']], 'Always tells how often: an adverb of frequency.'),
   I('What does the adverb "very" tell us in "The soup is very hot".', 'how much', [['when', 'M_ADV_KIND_MIXED'], ['where', 'M_ADV_KIND_MIXED'], ['how often', 'M_ADV_KIND_MIXED']], 'Very tells how much: an adverb of degree.'),
 ];
 // ---------------------------------------------------------------- conjunctions
@@ -239,7 +239,7 @@ const PREP = [
 ];
 
 export const FAMILIES = [
-  ...P('det', 'LANGUA.T1.DETERMINERS', DET, { topic: 'with each, some, enough and a lot of', hints: ['Think about the noun that comes next and the verb that follows.', 'Each is one at a time. A lot of is many or much.'] }),
+  ...P('det', 'LANGUA.T1.DETERMINERS', DET, { topic: 'with the words that tell how many', hints: ['Think about the noun that comes next and the verb that follows.', 'Each is one at a time. A lot of is many or much.'] }),
   eng({ id: 'english6.noun.abstract', kind: 'choose-kind', cs: 'LANGUA.T2.CONCRETE_ABSTRACT', oc: 'a', form: 'direct', rung: 1, gen: choose(CA_ID, { stem: 'Which noun fits.', hints: ['Ask: can I see it or touch it? If yes it is concrete.', 'Ideas, feelings and qualities are abstract.'] }) }),
   eng({ id: 'english6.noun.gap', cs: 'LANGUA.T2.CONCRETE_ABSTRACT', oc: 'b', form: 'direct', rung: 2, gen: gap(CA, { stem: 'Type the noun that completes the sentence: {what}.', hints: GH }) }),
   eng({ id: 'english6.noun.spot', cs: 'LANGUA.T2.CONCRETE_ABSTRACT', oc: 'b', form: 'spot', rung: 3, gen: spot(CA, { topic: 'with abstract nouns', hints: ['An abstract noun names an idea or a quality.', 'After her, his or great a noun is needed, not an adjective.'] }) }),
@@ -258,7 +258,7 @@ export const FAMILIES = [
   ...P('adv', 'LANGUA.T9.ADVERBS_USE', ADV, { topic: 'with adverbs', hints: ['An adverb tells how, when, where, how often or how much.', 'Frequency adverbs come before the main verb.'] }),
   eng({ id: 'english6.adv.kind', kind: 'choose-kind', cs: 'LANGUA.T9.ADVERBS_USE', oc: 'a', form: 'word', rung: 1, gen: choose(ADV_KIND, { stem: 'Choose.', hints: ['Ask the question: how, when, where, how often or how much?', 'Manner: how. Time: when. Place: where. Frequency: how often. Degree: how much.'] }) }),
   ...P('conj', 'LANGUA.T10.CONJUNCTIONS_USE', CJ, { stem: 'Choose the word that joins the ideas.', topic: 'with although, unless, while and until', hints: ['What is the link between the two ideas: contrast, condition, purpose or time?', 'Use one joining word only.'] }),
-  ...P('interr', 'LANGUA.T11.INTERROGATIVES_USE', INTERR, { stem: 'Choose the question word.', topic: 'with whose, which, how many, how much, how far and how often', hints: ['Read the answer. What kind of answer is it: an owner, a choice, a number, a distance, a time?', 'Match the question word to the answer.'] }),
+  ...P('interr', 'LANGUA.T11.INTERROGATIVES_USE', INTERR, { stem: 'Choose the question word.', topic: 'with question words', hints: ['Read the answer. What kind of answer is it: an owner, a choice, a number, a distance, a time?', 'Match the question word to the answer.'] }),
   ...P('tag', 'LANGUA.T12.QUESTION_TAGS_USE', TAGS, { stem: 'Choose the question tag.', topic: 'with question tags', hints: ['Use the helper verb of the statement, the opposite sign and a pronoun.', 'No helper verb? Use do, does or did.'] }),
   ...P('prep', 'LANGUA.T13.PREPOSITIONS_USE', PREP, { topic: 'with prepositions', hints: ['Think about the meaning: two or many, a start or a length, a doer or a tool.', 'Some words take a fixed preposition: interested in, afraid of.'] }),
 ];
