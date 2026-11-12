@@ -13,6 +13,8 @@
 //           -> { success: true, status: { [practice_ref]: { [learner_ref]: { linked, mastered, mastered_at, practised } } } }
 //   class_rechecks { learner_refs: [...], max? } -> { success: true, learners, with_evidence, rechecks: [{ cskill, due, of, overdue }] }
 //           skills at least 25% of the class (and 3 children) are due to re-check, counts only (12 Nov 2026), see src/school/recheckDoor.js
+//   learner_states { learner_refs: [...] } -> { success: true, learners, with_evidence, states: { [learner_ref]: { skills, outcomes } } }
+//           the five mastery states per skill and outcome, in words, counts only (12 Nov 2026), see src/school/statesDoor.js
 //   evidence { items: [{ learner_ref, question_id, outcome_code, substrand_code, marks, max_marks, ... }] }
 //           -> { success: true, received, saved, updated, same, skipped }   exam marks into the learner's evidence log
 //           (12 Nov 2026), see src/school/evidenceDoor.js
@@ -30,6 +32,7 @@ import { verifyCall, cleanAssign, practiceStatus, childProfileKey } from "../src
 import { doorHomework, makeCodeFrom } from "../src/school/homeworkDoor.js";
 import { doorEvidence } from "../src/school/evidenceDoor.js";
 import { doorClassRechecks } from "../src/school/recheckDoor.js";
+import { doorLearnerStates } from "../src/school/statesDoor.js";
 import { supabaseStore } from "../src/school/homeworkStore.js";
 
 // The child's link: HOREB's own page, keyed by the sitting's code (public/hw/index.html).
@@ -88,6 +91,11 @@ Deno.serve(async (req) => {
 
   if (p.action === "class_rechecks") {
     const r = await doorClassRechecks(door, p, { store: supabaseStore(admin), now: () => Date.now() }).catch(() => ({ status: 500, body: { success: false, error: "Not read" } }));
+    return json(r.status, r.body);
+  }
+
+  if (p.action === "learner_states") {
+    const r = await doorLearnerStates(door, p, { store: supabaseStore(admin), now: () => Date.now() }).catch(() => ({ status: 500, body: { success: false, error: "Not read" } }));
     return json(r.status, r.body);
   }
 
